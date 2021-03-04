@@ -2,12 +2,12 @@
 keywords: Experience Platform ; accueil ; IAB ; IAB 2.0 ; consentement ; consentement
 solution: Experience Platform
 title: Création de jeux de données pour la capture de données de consentement IAB TCF 2.0
-topic: privacy events
+topic: événements de confidentialité
 description: Ce document décrit les étapes à suivre pour configurer les deux jeux de données nécessaires à la collecte des données de consentement IAB TCF 2.0.
 translation-type: tm+mt
-source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
+source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1647'
 ht-degree: 4%
 
 ---
@@ -105,7 +105,7 @@ Les deux versions du mixin [!UICONTROL Détails de confidentialité] nécessiten
 | `xdm:consentStandard` | Cadre de consentement auquel s’appliquent les données. Pour la conformité TCF, la valeur doit être `IAB TCF`. |
 | `xdm:consentStandardVersion` | Numéro de version du cadre de consentement indiqué par `xdm:consentStandard`. Pour la conformité à la norme TCF 2.0, la valeur doit être `2.0`. |
 | `xdm:consentStringValue` | Chaîne de consentement générée par la plateforme de gestion des autorisations (CMP) en fonction des paramètres sélectionnés par le client. |
-| `xdm:gdprApplies` | Valeur booléenne indiquant si le RGPD s’applique ou non à ce client. La valeur doit être définie sur `true` pour que l’application de TCF 2.0 se produise. La valeur par défaut est `false` si elle n’est pas incluse. |
+| `xdm:gdprApplies` | Valeur booléenne indiquant si le RGPD s’applique ou non à ce client. La valeur doit être définie sur `true` pour que l’application de TCF 2.0 se produise. La valeur par défaut est `true` si elle n’est pas incluse. |
 | `xdm:containsPersonalData` | Valeur booléenne indiquant si la mise à jour du consentement contient ou non des données personnelles. La valeur par défaut est `false` si elle n’est pas incluse. |
 
 ## Créer des schémas de consentement client {#create-schemas}
