@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: notes de mise à jour;
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '841'
 ht-degree: 60%
 
 ---
