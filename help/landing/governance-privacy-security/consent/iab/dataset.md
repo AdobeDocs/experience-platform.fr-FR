@@ -5,9 +5,9 @@ title: Création de jeux de données pour la capture de données de consentement
 topic: événements de confidentialité
 description: Ce document décrit les étapes à suivre pour configurer les deux jeux de données nécessaires à la collecte des données de consentement IAB TCF 2.0.
 translation-type: tm+mt
-source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1648'
 ht-degree: 4%
 
 ---
@@ -32,7 +32,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [Bases de la composition du schéma](../../../../xdm/schema/composition.md) : en savoir plus sur les blocs de création de base des schémas XDM.
 * [Service](../../../../identity-service/home.md) d&#39;identité Adobe Experience Platform : Vous permet de relier les identités des clients à partir de vos sources de données disparates entre différents périphériques et systèmes.
    * [Espaces de nommage](../../../../identity-service/namespaces.md) d&#39;identité : Les données d&#39;identité du client doivent être fournies sous un espace de nommage d&#39;identité spécifique reconnu par Identity Service.
-* [Profil](../../../../profile/home.md) client en temps réel : Exploite  [!DNL Identity Service] cette fonction pour vous permettre de créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-time Customer Profile] Profile extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
+* [Profil](../../../../profile/home.md) client en temps réel : Exploite  [!DNL Identity Service] cette fonction pour vous permettre de créer des profils clients détaillés à partir de vos jeux de données en temps réel. [!DNL Real-time Customer Profile] Profile extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
 
 ## [!UICONTROL Confidentialité ] Détails Structure de mixin  {#structure}
 
