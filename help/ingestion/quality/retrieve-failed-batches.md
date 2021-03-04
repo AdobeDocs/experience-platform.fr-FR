@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; récupérer les lots en échec ; lots en échec ; assimiler des lots ; assimiler des lots ; lots en échec ; obtenir des lots en échec ; obtenir des lots en échec ; télécharger des lots en échec ; télécharger des lots en échec ;
 solution: Experience Platform
 title: Récupération de lots ayant échoué à l’aide de l’API d’accès aux données
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des informations sur un lot en échec à l’aide des API Data Ingestion.
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '655'
 ht-degree: 76%
 
 ---
