@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Application de la conformité de l’utilisation des données aux segments ciblés
 topic: didacticiel
 translation-type: tm+mt
-source-git-commit: 2ca0768c951cf67a775fdfc2c1f9440596d118bf
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 12%
+source-wordcount: '640'
+ht-degree: 10%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platform prend en charge la possibilité d’importer de l’au
 - [Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 - [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
 - [Jeu de données](../../catalog/datasets/overview.md) : la structure de stockage et de gestion pour la persistance des données dans Experience Platform.
-- [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md) : méthode d’ingestion et de stockage de données en temps réel dans Experience Platform à partir de périphériques côté client et côté serveur.
+- [Prise en charge](../../ingestion/streaming-ingestion/overview.md) en flux continu : Comment l’Experience Platform ingère et stocke les données des périphériques client et serveur en temps réel.
 
 ## Créer un espace de nommage d&#39;identité pour l&#39;audience externe
 
