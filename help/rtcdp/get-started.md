@@ -3,10 +3,10 @@ keywords: RTCDP ; CDP ; Plate-forme de données client en temps réel ; plate-fo
 title: Prise en main de la plateforme de données clientes en temps réel
 description: Utilisez ce scénario type comme exemple lors de la configuration de votre implémentation de la plateforme de données clients en temps réel.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '2326'
-ht-degree: 84%
+source-wordcount: '2328'
+ht-degree: 82%
 
 ---
 
@@ -66,7 +66,7 @@ Lorsque les clients consultent votre site pour la première fois, vous ignorez t
 
 ![image](assets/luma-site.png)
 
-Pendant leur navigation, des données sont capturées en temps réel et envoyées non seulement à une suite de rapports dans Adobe Analytics, mais également directement à Adobe Experience Platform. À mesure que les données sont collectées, vous commencez à former une vue unique du consommateur, en fonction des données comportementales de [!DNL Experience Platform's real-time customer profile].
+Lors de leur navigation, les données sont capturées en temps réel et envoyées non seulement à une suite de rapports en Adobe Analytics, mais également directement à Adobe Experience Platform. À mesure que les données sont collectées, vous commencez à former une vue unique du consommateur, en fonction des données comportementales de [!DNL Experience Platform's real-time customer profile].
 
 De nombreux visiteurs du site web sont probablement des clients réguliers qui ont déjà effectué des achats chez Luma.  Il est important que Luma personnalise les messages et les offres pour s’adresser aux nouveaux visiteurs, aux visiteurs réguliers, ainsi qu’aux clients connus.
 
@@ -261,7 +261,7 @@ Vous pouvez également choisir un moment précis pour planifier le début ou la 
 
 Sélectionnez **[!UICONTROL Enregistrer]** pour accéder à la page suivante.
 
-Lorsqu’un client de cette audience effectue un achat, son appartenance à cette audience est supprimée en temps réel. Il n’est plus qualifié, puisque son statut a changé.
+Lorsqu’un client de cette audience fait un achat, son adhésion à cette audience est supprimée en temps réel. Il n’est plus qualifié, puisque son statut a changé.
 
 Le responsable de l’équipe des médias de Luma peut ainsi économiser des centaines de milliers d’euros en n’utilisant pas l’inventaire pour une audience qui n’est pas qualifiée.
 
