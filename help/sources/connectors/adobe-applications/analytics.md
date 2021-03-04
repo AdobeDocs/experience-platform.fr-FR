@@ -2,12 +2,12 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Connecteur de données Analytics ; analyses ; Analytics
 solution: Experience Platform
 title: Connecteur de source Adobe Analytics pour les données d’une suite de rapports
-topic: overview
+topic: aperçu
 description: Ce document fournit un aperçu d’Analytics et décrit les cas d’utilisation des données Analytics.
 translation-type: tm+mt
-source-git-commit: e480ce789c849db24713da312345ea3162e617a6
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '504'
 ht-degree: 46%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 46%
 
 # Connecteur Adobe Analytics pour les données de suite de rapports
 
-Adobe Experience Platform vous permet d’ingérer des données Adobe Analytics par le biais du connecteur de données Analytics (ADC, Analytics Data Connector). ADC diffuse les données collectées par [!DNL Analytics] en [!DNL Platform] en temps réel, en convertissant des données [!DNL Analytics] au format SCDS dans des champs [!DNL Experience Data Model] (XDM) pour consommation par [!DNL Platform].
+Adobe Experience Platform vous permet d’ingérer des données Adobe Analytics par le biais du connecteur de données Analytics (ADC, Analytics Data Connector). ADC diffuse les données collectées par [!DNL Analytics] en [!DNL Platform] en temps réel, en convertissant les données [!DNL Analytics] au format SCDS en champs [!DNL Experience Data Model] (XDM) pour les utiliser par [!DNL Platform].
 
 Ce document présente un aperçu de [!DNL Analytics] et décrit les cas d&#39;utilisation des données [!DNL Analytics].
 
