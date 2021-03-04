@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; exclusion ; Segmentation ; service de segmentation ; service de segmentation ; exclusions d’abonnement ; opt-out ; exclusions ;
 solution: Experience Platform
 title: Respect des demandes d’exclusion dans les segments
-topic: overview
+topic: aperçu
 description: 'Adobe Experience Platform permet à vos clients d’envoyer des demandes d’exclusion concernant l’utilisation et l’enregistrement de leurs données dans le Profil client en temps réel]. Ces demandes d’opposition entrent dans le cadre du California Consumer Privacy Act (CCPA) qui donne aux personnes résidant en Californie le droit d’accéder à leurs données personnelles et de les supprimer, mais aussi de savoir si celles-ci sont vendues ou divulguées (et si oui, à qui). '
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 64%
+source-wordcount: '1033'
+ht-degree: 62%
 
 ---
 
@@ -23,7 +23,7 @@ Lorsqu’un client fait valoir son droit d’opposition, il est important que vo
 
 Le respect des demandes d&#39;exclusion nécessite une compréhension des différents services [!DNL Adobe Experience Platform] impliqués. Avant de travailler sur les demandes d’opposition, consultez la documentation des services suivants :
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [[!DNL Real-time Customer Profile]](../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permet de créer des segments d’audience à partir de  [!DNL Real-time Customer Profile] données.
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Aide les entreprises à automatiser la conformité aux règles de confidentialité des données impliquant les données des clients au sein  [!DNL Platform]de.
