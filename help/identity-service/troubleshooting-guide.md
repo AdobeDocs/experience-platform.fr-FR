@@ -5,10 +5,10 @@ title: Guide de dépannage d'Identity Service
 topic: troubleshooting
 description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Identity Service, ainsi qu’un guide de dépannage pour les erreurs courantes.
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '2188'
-ht-degree: 85%
+source-wordcount: '2190'
+ht-degree: 84%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 85%
 
 Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform [!DNL Identity Service], ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question et dépannage concernant les API [!DNL Platform] en général, consultez le [Guide de dépannage de l&#39;API Adobe Experience Platform](../landing/troubleshooting.md).
 
-Les données qui identifient un client unique sont souvent fragmentées sur les différents appareils et systèmes qu’il utilise pour interagir avec votre marque. [!DNL Identity Service] rassemble ces identités fragmentées, ce qui permet une compréhension complète du comportement des clients afin que vous puissiez offrir des expériences numériques percutantes en temps réel. Pour plus d’informations, voir la [Présentation d’Identity Service](./home.md).
+Les données qui identifient un client unique sont souvent fragmentées sur les différents appareils et systèmes qu’il utilise pour interagir avec votre marque. [!DNL Identity Service] rassemble ces identités fragmentées, ce qui vous permet de comprendre parfaitement le comportement des clients et de proposer des expériences numériques impactées en temps réel. Pour plus d’informations, voir la [Présentation d’Identity Service](./home.md).
 
 ## FAQ
 
