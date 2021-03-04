@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; segmentation ; service de segments ; segments ; segments ; plusieurs entités ; segmentation multientités ; segments multientités ; segments multientités ;
 solution: Experience Platform
 title: Présentation de la segmentation multientité
-topic: overview
+topic: aperçu
 description: La segmentation d’entités multiples est la capacité à élargir les données de profil grâce à des données supplémentaires basées sur les produits, les magasins et d’autres classes hors profil. Une fois connectées, les données des classes supplémentaires deviennent disponibles comme si elles étaient des données natives du schéma Profile.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '674'
-ht-degree: 15%
+source-wordcount: '676'
+ht-degree: 13%
 
 ---
 
@@ -21,7 +21,7 @@ La segmentation multientité est une fonction avancée disponible dans le cadre 
 
 La segmentation multientité nécessite une compréhension pratique des différents services Adobe Experience Platform impliqués dans la segmentation. Avant de poursuivre avec ce guide, veuillez consulter la documentation suivante :
 
-* [[!DNL Real-time Customer Profile]](../profile/home.md) : fournit un profil de consommateur en temps réel unifié sur base des données agrégées provenant de plusieurs sources.
+* [[!DNL Real-time Customer Profile]](../profile/home.md): Fournit un profil unifié pour les consommateurs en temps réel, basé sur des données agrégées provenant de plusieurs sources.
    * [Gardiens](../profile/guardrails.md) de profil : Meilleures pratiques pour la création de modèles de données pris en charge par  [!DNL Profile].
 * [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permet de créer des segments à partir de  [!DNL Real-time Customer Profile] données.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
