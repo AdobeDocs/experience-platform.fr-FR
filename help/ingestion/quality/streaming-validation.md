@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Validation de l'envoi en flux continu
 topic: didacticiel
 type: Tutoriel
-description: 'L’ingestion par flux vous permet de charger vos données dans Adobe Experience Platform à l’aide de points de terminaison en continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.'
+description: 'L’assimilation en flux continu vous permet de transférer vos données vers Adobe Experience Platform à l’aide de points de terminaison en flux continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.'
 translation-type: tm+mt
-source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 85%
+source-wordcount: '900'
+ht-degree: 81%
 
 ---
 
 
 # Validation de l’ingestion par flux
 
-L’ingestion par flux vous permet de charger vos données dans Adobe Experience Platform à l’aide de points de terminaison en continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.
+L’assimilation en flux continu vous permet de transférer vos données vers Adobe Experience Platform à l’aide de points de terminaison en flux continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.
 
 ## Prise en main
 
