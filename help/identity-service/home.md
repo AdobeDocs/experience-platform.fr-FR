@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; identité ; identité ; graphiques XDM ; service d'identité ; service d'identité
 solution: Experience Platform
 title: Présentation du service d’identité
-topic: overview
-description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+topic: aperçu
+description: Adobe Experience Platform Identity Service vous permet d'obtenir une meilleure vue de vos clients et de leur comportement en rapprochant les identités entre les périphériques et les systèmes, ce qui vous permet de fournir des expériences numériques personnelles et impactées en temps réel.
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1730'
-ht-degree: 74%
+source-wordcount: '1733'
+ht-degree: 72%
 
 ---
 
