@@ -5,17 +5,17 @@ topic: guide
 type: Documentation
 description: Adobe Experience Platform vous permet de proposer des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, en rendant les données appropriées facilement disponibles et mises à jour en continu au fur et à mesure des changements. Pour ce faire, il utilise des arêtes, un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications.
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1961'
-ht-degree: 83%
+source-wordcount: '1966'
+ht-degree: 80%
 
 ---
 
 
 # Configurations de projection Edge et points de terminaison de destination
 
-Afin d’offrir à vos clients des expériences coordonnées, cohérentes et personnalisées sur plusieurs canaux en temps réel, les bonnes données doivent être facilement disponibles et mises à jour en continu, au fur et à mesure des changements. Adobe Experience Platform permet cet accès aux données en temps réel grâce à l’utilisation de ce que l’on appelle les périphéries. Une périphérie est un serveur réparti géographiquement qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles qu’Adobe Target et Adobe Campaign utilisent des périphéries afin d’offrir des expériences client personnalisées en temps réel. Les données sont acheminées vers une périphérie par projection, une destination de projection définissant la périphérie vers laquelle les données sont envoyées, et une configuration de projection définissant les informations spécifiques rendues disponibles dans la périphérie. Ce guide fournit des instructions détaillées sur l&#39;utilisation de l&#39;API [!DNL Real-time Customer Profile] pour utiliser les projections de bord, y compris les destinations et les configurations.
+Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en continu au fur et à mesure des changements. Adobe Experience Platform permet cet accès aux données en temps réel grâce à l’utilisation de ce que l’on appelle les périphéries. Une périphérie est un serveur réparti géographiquement qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications d’Adobe telles que Adobe Target et Adobe Campaign utilisent des bords afin de fournir des expériences client personnalisées en temps réel. Les données sont acheminées vers une périphérie par projection, une destination de projection définissant la périphérie vers laquelle les données sont envoyées, et une configuration de projection définissant les informations spécifiques rendues disponibles dans la périphérie. Ce guide fournit des instructions détaillées sur l&#39;utilisation de l&#39;API [!DNL Real-time Customer Profile] pour utiliser les projections de bord, y compris les destinations et les configurations.
 
 ## Prise en main
 
