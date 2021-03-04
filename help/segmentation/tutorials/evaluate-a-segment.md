@@ -2,14 +2,14 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; évaluation des segments ; service de segmentation ; segmentation ; segmentation ; évaluation d’un segment ; résultats du segment d’accès ; évaluation et segment d’accès ;
 solution: Experience Platform
 title: Évaluer et accéder aux résultats des segments
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 description: Suivez ce didacticiel pour savoir comment évaluer les segments et accéder aux résultats des segments à l’aide de l’API Adobe Experience Platform Segmentation Service.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 65%
+source-wordcount: '1570'
+ht-degree: 64%
 
 ---
 
@@ -22,7 +22,7 @@ Ce document fournit un didacticiel pour évaluer les segments et accéder aux r�
 
 Ce didacticiel nécessite une bonne compréhension des différents services [!DNL Adobe Experience Platform] impliqués dans la création de segments d&#39;audience. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permet de créer des segments d’audience à partir de  [!DNL Real-time Customer Profile] données.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
 - [Sandbox](../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
