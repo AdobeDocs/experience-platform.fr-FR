@@ -6,10 +6,10 @@ topic: didacticiel
 type: Tutoriel
 description: Ce document décrit les étapes à suivre et fournit des liens vers des tutoriels pour effectuer chaque workflow séparément.
 translation-type: tm+mt
-source-git-commit: 0aa59a5375757f81d63ac43d778ff2c7179d449b
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 29%
+source-wordcount: '796'
+ht-degree: 25%
 
 ---
 
@@ -75,7 +75,7 @@ Pour utiliser les stratégies de fusion dans l&#39;interface utilisateur [!DNL P
 
 ## Configuration des projections de périphérie
 
-Afin d’offrir à vos clients des expériences coordonnées, cohérentes et personnalisées sur plusieurs canaux en temps réel, les bonnes données doivent être facilement disponibles et mises à jour en continu, au fur et à mesure des changements. L&#39;Adobe [!DNL Experience Platform] permet cet accès en temps réel aux données grâce à l&#39;utilisation de ce que l&#39;on appelle les contours. Une périphérie est un serveur réparti géographiquement qui stocke les données et les rend facilement accessibles aux applications. Les données sont acheminées vers une périphérie par projection, une destination de projection définissant la périphérie vers laquelle les données sont envoyées, et une configuration de projection définissant les informations spécifiques rendues disponibles dans la périphérie.
+Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en continu au fur et à mesure des changements. L&#39;Adobe [!DNL Experience Platform] permet cet accès en temps réel aux données grâce à l&#39;utilisation de ce que l&#39;on appelle les contours. Une périphérie est un serveur réparti géographiquement qui stocke les données et les rend facilement accessibles aux applications. Les données sont acheminées vers une périphérie par projection, une destination de projection définissant la périphérie vers laquelle les données sont envoyées, et une configuration de projection définissant les informations spécifiques rendues disponibles dans la périphérie.
 
 **Ce guide vous aidera à :**
 - Liste, création, vue, mise à jour et suppression d&#39;une destination de projection de bord.
