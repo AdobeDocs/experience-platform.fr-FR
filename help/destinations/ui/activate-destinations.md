@@ -6,9 +6,9 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: efb66b6374f8c0579d90f63452528353f4d1418d
+source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
 workflow-type: tm+mt
-source-wordcount: '2164'
+source-wordcount: '2184'
 ht-degree: 15%
 
 ---
@@ -147,6 +147,9 @@ S&#39;applique à : Destinations marketing par courriel et destinations d’enre
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] sépare automatiquement les fichiers d’exportation à 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil.
+>
+>Les noms de fichier fractionnés sont ajoutés avec un nombre indiquant que le fichier fait partie d’une exportation plus importante, en tant que tel : `filename.csv`, `filename_2.csv`, `filename_3.csv`.
+
 
 Pour ajouter une planification pour le segment, sélectionnez **[!UICONTROL Créer une planification]**.
 
