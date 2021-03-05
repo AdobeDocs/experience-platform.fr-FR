@@ -7,10 +7,10 @@ landing-page-description: Trouvez des réponses aux questions fréquemment posé
 topic: démarrage
 type: Documentation
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 83cc3ddbf067f413cb524a3a685d985d5853eafd
 workflow-type: tm+mt
-source-wordcount: '1997'
-ht-degree: 73%
+source-wordcount: '1718'
+ht-degree: 68%
 
 ---
 
@@ -31,63 +31,7 @@ Vous trouverez ci-dessous une liste de réponses aux questions les plus fréquem
 
 Les formats de requête varient en fonction de l’API [!DNL Platform] utilisée. La meilleure façon de structurer vos appels d&#39;API est de suivre les exemples fournis dans la documentation du service [!DNL Platform] particulier que vous utilisez.
 
-### Lecture d’exemples d’appels API
-
-La documentation de [!DNL Experience Platform] présente des exemples d&#39;appels d&#39;API de deux manières différentes. Tout d’abord, l’appel est présenté dans son **format d’API**, qui consiste en une représentation de modèle affichant uniquement l’opération (GET, POST, PUT, PATCH, DELETE) et le point de terminaison utilisé (par exemple `/global/classes`). Certains modèles indiquent également l’emplacement des variables pour mieux illustrer la manière dont un appel doit être formulé, comme par exemple `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
-
-Les appels sont ensuite affichés sous forme de commandes cURL dans une **Requête**, qui comprend les en-têtes nécessaires et le « chemin racine » complet indispensable pour que l’interaction avec l’API soit réussie. Le chemin racine doit être ajouté à tous les points de terminaison. Par exemple, le point de terminaison `/global/classes` cité plus haut devient `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. Le format d’API/modèle de requête est visible dans toute la documentation, et vous devrez utiliser le chemin d’accès complet illustré dans la Requête de l’exemple lors de vos propres appels vers les API de Platform.
-
-### Exemple de requête API
-
-Voici un exemple de requête API illustrant le format que vous rencontrerez dans la documentation.
-
-**Format d’API**
-
-Le format d’API affiche l’opération (GET) et le point de terminaison utilisé. Les variables sont indiquées par des accolades (ici `{CONTAINER_ID}`).
-
-```http
-GET /{CONTAINER_ID}/classes
-```
-
-**Requête**
-
-Dans cet exemple de requête, les variables du format API reçoivent des valeurs réelles dans le chemin de la requête. Tous les en-têtes requis sont également affichés sous la forme d’échantillons de valeurs d’en-tête ou de variables dans lesquels des informations sensibles (telles que des jetons de sécurité et des identifiants d’accès) doivent être incluses.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/global/classes \
-  -H 'Accept: application/vnd.adobe.xed-id+json' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Réponse**
-
-La réponse illustre ce que vous vous attendez à recevoir après un appel réussi vers l’API en fonction de la requête envoyée. Parfois, la réponse est tronquée en raison d’un espace insuffisant, il est donc possible que vous voyiez plus d’informations ou des informations supplémentaires par rapport à ce qui est affiché dans l’échantillon.
-
-```json
-{
-    "results": [
-        {
-            "title": "XDM ExperienceEvent",
-            "$id": "https://ns.adobe.com/xdm/context/experienceevent",
-            "meta:altId": "_xdm.context.experienceevent",
-            "version": "1"
-        },
-        {
-            "title": "XDM Individual Profile",
-            "$id": "https://ns.adobe.com/xdm/context/profile",
-            "meta:altId": "_xdm.context.profile",
-            "version": "1"
-        }
-    ],
-    "_links": {}
-}
-```
-
-Pour plus d’informations sur un point de terminaison en particulier dans les API de Platform, y compris sur les en-têtes nécessaires et les corps de requêtes, consultez la [documentation de référence sur l’API](http://www.adobe.com/go/platform-api-reference-en).
+Pour plus d&#39;informations sur le formatage des demandes d&#39;API, consultez le guide de prise en main de l&#39;API de plate-forme [lecture des exemples d&#39;appels d&#39;API](./api-guide.md#sample-api).
 
 ## Quelle est mon organisation IMS ? {#what-is-my-ims-organization}
 
@@ -121,7 +65,7 @@ De nombreuses opérations de PATCH dans les API [!DNL Platform] utilisent des ch
 
 ## Puis-je utiliser Postman pour appeler les API [!DNL Platform] ? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.postman.com/) est un outil utile pour visualiser les appels vers les API RESTful. Cette [publication moyenne](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) décrit comment vous pouvez configurer Postman pour qu&#39;il exécute automatiquement l&#39;authentification et l&#39;utilise pour consommer les API [!DNL Experience Platform].
+[Postman](https://www.postman.com/) est un outil utile pour visualiser les appels vers les API RESTful. Le guide de prise en main de l&#39;API de plateforme [](api-guide.md) contient une vidéo et des instructions sur l&#39;importation de collections Postman. De plus, une liste de collections Postman pour chaque service est fournie.
 
 ## Quelle est la configuration requise pour [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
