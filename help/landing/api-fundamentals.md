@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Principes de base de l’API Experience Platform
-topic: getting started
+topic: démarrage
 description: Ce document donne un bref aperçu de certaines technologies et syntaxes sous-jacentes impliquées dans les API Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8c98632b67ddae4fb7800e80fb8c83aca9bfa291
+source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 54%
+source-wordcount: '513'
+ht-degree: 53%
 
 ---
 
@@ -126,4 +126,4 @@ Le schéma JSON est un format utilisé pour décrire et valider la structure des
 
 ## Étapes suivantes
 
-Ce document a présenté certaines des technologies et syntaxes impliquées dans la gestion des ressources basées sur JSON pour [!DNL Experience Platform]. Pour plus d&#39;informations sur l&#39;utilisation des API [!DNL Platform], y compris les meilleures pratiques et les réponses aux questions fréquentes, consultez le [Guide de dépannage de la plate-forme](troubleshooting.md).
+Ce document a présenté certaines des technologies et syntaxes impliquées dans la gestion des ressources basées sur JSON pour [!DNL Experience Platform]. Consultez le [guide de prise en main](api-guide.md) pour plus d&#39;informations sur l&#39;utilisation des API de plateformes, y compris les meilleures pratiques. Pour obtenir des réponses aux questions fréquentes, consultez le [Guide de dépannage de la plate-forme](troubleshooting.md).
