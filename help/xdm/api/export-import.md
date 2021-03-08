@@ -3,12 +3,12 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Points de terminaison de l’API d’exportation/d’importation
 description: Les points de terminaison /export et /import de l'API Schéma Registry vous permettent de partager des ressources XDM entre les organisations IMS et les sandbox.
-topic: developer guide
+topic: guide du développeur
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 2%
+source-wordcount: '502'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ Toutes les ressources du [!DNL Schema Library] sont contenues dans un sandbox sp
 
 ## Prise en main
 
-Les points de terminaison utilisés dans ce guide font partie de l&#39;[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+Les points de terminaison utilisés dans ce guide font partie de l&#39;[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
 
 Les points de terminaison export/import font partie des appels de procédure distante (RPC) pris en charge par [!DNL Schema Registry]. Contrairement aux autres points de terminaison de l&#39;API [!DNL Schema Registry], les points de terminaison RPC ne nécessitent pas d&#39;en-têtes supplémentaires tels que `Accept` ou `Content-Type` et n&#39;utilisent pas de `CONTAINER_ID`. Ils doivent plutôt utiliser l&#39;espace de nommage `/rpc`, comme indiqué dans les appels d&#39;API ci-dessous.
 
