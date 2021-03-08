@@ -3,12 +3,12 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Point de terminaison de l’API Mixins
 description: Le point de terminaison /mixins de l’API de registre de Schéma vous permet de gérer par programmation les mixins XDM dans votre application d’expérience.
-topic: developer guide
+topic: guide du développeur
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 12%
+source-wordcount: '1136'
+ht-degree: 13%
 
 ---
 
@@ -19,7 +19,7 @@ Les mixins sont des composants réutilisables qui définissent un ou plusieurs c
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l&#39;[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+Le point de terminaison utilisé dans ce guide fait partie de l&#39;[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
 
 ## Récupérer une liste de mixins {#list}
 
@@ -211,7 +211,7 @@ Une réponse réussie renvoie les détails du mixin. Les champs renvoyés dépen
 
 ## Création d’un mixin {#create}
 
-Vous pouvez définir un mixin personnalisé sous le conteneur `tenant` en effectuant une demande de POST.
+Vous pouvez définir un mixin personnalisé sous le conteneur `tenant` en faisant une demande de POST.
 
 **Format d’API**
 
@@ -221,7 +221,7 @@ POST /tenant/mixins
 
 **Requête**
 
-Si vous définissez un nouveau mixin, celui-ci doit inclure un attribut `meta:intendedToExtend`, répertoriant le `$id` des classes avec lesquelles le mixin est compatible. Dans cet exemple, le mixin est compatible avec une classe `Property` définie précédemment. Les champs personnalisés doivent être imbriqués sous `_{TENANT_ID}` (comme illustré dans l&#39;exemple) pour éviter toute collision avec des champs similaires fournis par des classes et d&#39;autres mixins.
+Si vous définissez un nouveau mixin, celui-ci doit inclure un attribut `meta:intendedToExtend`, répertoriant le `$id` des classes avec lesquelles le mixin est compatible. Dans cet exemple, le mixin est compatible avec une classe `Property` définie précédemment. Les champs personnalisés doivent être imbriqués sous `_{TENANT_ID}` (comme indiqué dans l&#39;exemple) pour éviter toute collision avec des champs similaires fournis par des classes et d&#39;autres mixins.
 
 >[!NOTE]
 >
@@ -380,9 +380,9 @@ Une réponse réussie renvoie un état HTTP 201 (Créé) et un payload qui cont
 
 L’exécution d’une demande de GET à [liste de tous les mixins](#list) dans le conteneur du client inclut désormais le mixin Détails de la propriété, ou vous pouvez [exécuter une demande de recherche (GET)](#lookup) à l’aide de l’URI `$id` codé en URL pour vue directement le nouveau mixin.
 
-## Mettre à jour un mixage {#put}
+## Mettre à jour un mixin {#put}
 
-Vous pouvez remplacer un mixin entier par une opération de PUT, ce qui revient essentiellement à réécrire la ressource. Lors de la mise à jour d’un mixin via une demande de PUT, le corps doit inclure tous les champs requis lors de la création d’un mixin](#create) dans une demande de POST.[
+Vous pouvez remplacer un mixin entier par une opération de PUT, en réécrivant essentiellement la ressource. Lors de la mise à jour d’un mixin via une requête de PUT, le corps doit inclure tous les champs requis lors de la création d’un mixin](#create) dans une requête de POST.[
 
 >[!NOTE]
 >
@@ -396,11 +396,11 @@ PUT /tenant/mixins/{MIXIN_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{MIXIN_ID}` | `meta:altId` ou `$id` encodé en URL du mixin que vous souhaitez réécrire. |
+| `{MIXIN_ID}` | `meta:altId` ou codé URL `$id` du mixin que vous souhaitez réécrire. |
 
 **Requête**
 
-La demande suivante réécrit un mixin existant, en ajoutant un nouveau champ `propertyCountry`.
+La requête suivante réécrit un mixin existant, en ajoutant un nouveau champ `propertyCountry`.
 
 ```SHELL
 curl -X PUT \
@@ -565,7 +565,7 @@ Une réponse réussie renvoie les détails du mixin mis à jour.
 
 ## Mettre à jour une partie d&#39;un mixin {#patch}
 
-Vous pouvez mettre à jour une partie d’un mixin à l’aide d’une demande de PATCH. [!DNL Schema Registry] prend en charge toutes les opérations JSON Patch standard, y compris `add`, `remove` et `replace`. Pour plus d’informations sur le correctif JSON, consultez le [guide des fondamentaux de l’API](../../landing/api-fundamentals.md#json-patch).
+Vous pouvez mettre à jour une partie d’un mixin à l’aide d’une requête de PATCH. [!DNL Schema Registry] prend en charge toutes les opérations de correctif JSON standard, y compris `add`, `remove` et `replace`. Pour plus d’informations sur le correctif JSON, consultez le [guide des fondamentaux de l’API](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
@@ -583,7 +583,7 @@ PATCH /tenant/mixin/{MIXIN_ID}
 
 **Requête**
 
-L’exemple de demande ci-dessous met à jour `description` d’un mixin existant et ajoute un nouveau champ `propertyCity`.
+L&#39;exemple de requête ci-dessous met à jour `description` d&#39;un mixin existant et ajoute un nouveau champ `propertyCity`.
 
 Le corps de la requête prend la forme d&#39;un tableau, chaque objet répertorié représentant une modification spécifique à un champ individuel. Chaque objet comprend l’opération à exécuter (`op`), le champ sur lequel l’opération doit être exécutée (`path`) et les informations à inclure dans cette opération (`value`).
 
