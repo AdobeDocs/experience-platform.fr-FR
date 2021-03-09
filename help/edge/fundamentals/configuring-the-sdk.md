@@ -4,10 +4,10 @@ description: Découvrez comment configurer le SDK Web de Adobe Experience Platfo
 seo-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
 keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environnement;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinations Activé ; idMigrationEnabled ; thirdPartyCookiesEnabled ;
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: f78da58ba7a593d9c161030833d9b69e2ba57c9a
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 69%
+source-wordcount: '793'
+ht-degree: 64%
 
 ---
 
@@ -103,7 +103,11 @@ Définissez cette option pour configurer un rappel appelé pour chaque événeme
 | -------- | ------------ | ----------------- |
 | Objet | Non | `"in"` |
 
-Définit le consentement par défaut de l’utilisateur. Cette option est utilisée lorsqu’aucune préférence de consentement n’est déjà enregistrée pour l’utilisateur. L’autre valeur valide est `"pending"`. Lorsque cette option est définie, le travail est mis en file d’attente jusqu’à ce que l’utilisateur indique ses préférences de consentement. Une fois les préférences de l’utilisateur fournies, le travail se poursuit ou est abandonné en fonction de celles-ci. Pour plus d’informations, voir [Prise en charge du consentement](../consent/supporting-consent.md).
+Définit le consentement par défaut de l’utilisateur. Cette option est utilisée lorsqu’aucune préférence de consentement n’est déjà enregistrée pour l’utilisateur. Les autres valeurs valides sont `"pending"` et `"out"`. Cette valeur par défaut n’est pas conservée au profil de l’utilisateur. Le profil de l’utilisateur n’est mis à jour que lorsque setConsent est appelé.
+* `"in"`: Lorsque cette valeur est définie ou qu’aucune valeur n’est fournie, le travail se poursuit sans les préférences de consentement de l’utilisateur.
+* `"pending"`: Lorsque cette option est définie, le travail est mis en file d’attente jusqu’à ce que l’utilisateur indique ses préférences de consentement.
+* `"out"`: Lorsque cette option est définie, le travail est ignoré jusqu’à ce que l’utilisateur donne ses préférences de consentement.
+Une fois les préférences de l’utilisateur fournies, le travail se poursuit ou est abandonné en fonction de celles-ci. Pour plus d’informations, voir [Prise en charge du consentement](../consent/supporting-consent.md).
 
 ## Options de personnalisation
 
