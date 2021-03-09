@@ -4,9 +4,9 @@ description: Découvrez comment récupérer des identifiants Adobe Experience Cl
 seo-description: Découvrez comment obtenir l’identifiant Adobe Experience Cloud.
 keywords: Identité ; Identité propriétaire ; Service d'identité ; Identité tierce ; Migration d'identifiants ; Identifiant Visiteur ; Identité tierce ; Cookies tiersEnabled ; idMigrationEnabled ; getIdentity ; Identité de synchronisation ; Identité de synchronisation ; IdentitéSynchronisée ; EnvoiEvent ; IdentitéMap ; Principal ; Identité Espace de nommage ; Identifiant espace de nommage ; AuthentificationState ; HashEnabled ;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 882bcd2f9aa7a104270865783eed82089862dea3
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '963'
 ht-degree: 3%
 
 ---
@@ -40,19 +40,20 @@ Lorsque des données au format XDM sont envoyées en Audience Manager, ces donn�
 
 Si le transfert côté serveur est actuellement activé et que vous utilisez `appmeasurement.js`. et `visitor.js` vous pouvez conserver la fonction de transfert côté serveur activée, ce qui ne provoquera aucun problème. Dans le serveur principal, l’Adobe récupère les segments AAM et les ajoute à l’appel à Analytics. Si l’appel à Analytics contient ces segments, Analytics n’appelle aucune Audience Manager pour transférer des données. Il n’y a donc aucune collecte de données de doublon. Il n’est pas non plus nécessaire d’avoir des conseils sur l’emplacement lors de l’utilisation du SDK Web, car les mêmes points de terminaison de segmentation sont appelés dans le serveur principal.
 
-## Récupération de l’ID de Visiteur
+## Récupération de l’ID de visiteur et de l’ID de région
 
-Si vous souhaitez utiliser cet identifiant unique, utilisez la commande `getIdentity`. `getIdentity` renvoie l&#39;ECID existant pour le visiteur actuel. Pour les nouveaux visiteurs qui n&#39;ont pas encore d&#39;ECID, cette commande génère un nouvel ECID.
+Si vous souhaitez utiliser l&#39;identifiant de visiteur unique, utilisez la commande `getIdentity`. `getIdentity` renvoie l&#39;ECID existant pour le visiteur actuel. Pour les nouveaux visiteurs qui n&#39;ont pas encore d&#39;ECID, cette commande génère un nouvel ECID. `getIdentity` renvoie également l’identifiant de région du visiteur. Pour plus d’informations, consultez le [Guide de l’utilisateur de Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html).
 
 >[!NOTE]
 >
->Cette méthode est généralement utilisée avec les solutions personnalisées qui nécessitent la lecture de l&#39;ID [!DNL Experience Cloud]. Elle n’est pas utilisée par une mise en œuvre standard.
+>Cette méthode est généralement utilisée avec les solutions personnalisées qui nécessitent la lecture de l&#39;ID [!DNL Experience Cloud] ou l&#39;indication d&#39;emplacement Adobe Audience Manager. Elle n’est pas utilisée par une mise en œuvre standard.
 
 ```javascript
 alloy("getIdentity")
   .then(function(result) {
     // The command succeeded.
-    console.log(result.identity.ECID);
+    console.log("ECID:", result.identity.ECID);
+    console.log("RegionId:", result.edge.regionId);
   })
   .catch(function(error) {
     // The command failed.
