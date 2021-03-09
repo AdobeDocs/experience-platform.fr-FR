@@ -2,10 +2,10 @@
 title: Extension SDK Web Adobe Experience Platform Présentation
 description: En savoir plus sur Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 14%
+source-wordcount: '584'
+ht-degree: 13%
 
 ---
 
@@ -56,10 +56,13 @@ Pour plus d&#39;informations, consultez le guide sur les [configurations des ar�
 
 ## [!UICONTROL Confidentialité]
 
-La section [!UICONTROL Confidentialité] permet de configurer la manière dont le SDK traite les signaux de consentement des clients à partir de votre site Web. En particulier, il vous permet de sélectionner le niveau de consentement par défaut supposé d’un client si aucune autre préférence explicite de consentement n’a été fournie. Le tableau suivant ventile ce que chaque option implique :
+La section [!UICONTROL Confidentialité] permet de configurer la manière dont le SDK traite les signaux de consentement des utilisateurs de votre site Web. En particulier, il vous permet de sélectionner le niveau de consentement par défaut supposé d’un utilisateur si aucune autre préférence explicite de consentement n’a été fournie. Le niveau de consentement par défaut n’est pas enregistré au profil de l’utilisateur. Le tableau suivant ventile ce que chaque option implique :
 
 | [!UICONTROL Niveau de consentement par défaut] | Description |
 | --- | --- |
-| [!UICONTROL In] | Inscription. Utilisez cette option si vous supposez que le consentement du client est donné par défaut et que vous n’acceptez que les signaux d’exclusion. |
-| [!UICONTROL En attente] | Les clients avec le consentement &quot;en attente&quot; sont désactivés jusqu’à ce qu’un signal d’inclusion soit envoyé. Utilisez cette option si vous avez besoin du consentement explicite du client pour vos activités commerciales. |
+| [!UICONTROL In] | Collectez les événements qui surviennent avant que l’utilisateur ne donne ses préférences de consentement. |
+| [!UICONTROL Sortie] | Ignorer les événements qui surviennent avant que l’utilisateur ne donne ses préférences de consentement. |
+| [!UICONTROL En attente] | Événements de file d’attente qui surviennent avant que l’utilisateur ne donne ses préférences de consentement. Lorsque les préférences de consentement sont fournies, les événements seront collectés ou rejetés selon les préférences fournies. |
 | [!UICONTROL Fourni par l’élément de données] | Le niveau de consentement par défaut est déterminé par un élément de données distinct que vous définissez. Lorsque vous utilisez cette option, vous devez spécifier l’élément de données à l’aide du menu déroulant fourni. |
+
+Utilisez l’option Sortie ou En attente si vous avez besoin du consentement explicite de l’utilisateur pour vos activités commerciales.
