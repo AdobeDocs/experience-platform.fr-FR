@@ -3,9 +3,9 @@ title: Intégration de la prise en charge d’IAB TCF 2.0 à l’aide du SDK Web
 description: Découvrez comment configurer la prise en charge d’IAB TCF 2.0 pour votre site Web sans utiliser Adobe Experience Platform Launch.
 seo-description: Découvrez comment configurer le consentement IAB TCF 2.0 avec le SDK Web Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ En outre, ce guide vous demande de bien comprendre le SDK Web de Adobe Experienc
 
 ## Activation du consentement par défaut
 
-Si vous souhaitez traiter tous les utilisateurs inconnus de la même manière, vous pouvez définir le consentement par défaut sur `pending`. Cette option met en file d’attente les Événements d’expérience jusqu’à ce que les préférences de consentement soient reçues.
+Si vous souhaitez traiter tous les utilisateurs inconnus de la même manière, vous pouvez définir le consentement par défaut sur `pending` ou `out`. Cette méthode met en file d’attente ou ignore les Événements d’expérience jusqu’à ce que les préférences de consentement soient reçues.
 
 Pour plus d&#39;informations sur le consentement par défaut, consultez la section [consentement par défaut](../../fundamentals/configuring-the-sdk.md#default-consent) de la documentation de configuration du SDK Web de la plate-forme.
 
