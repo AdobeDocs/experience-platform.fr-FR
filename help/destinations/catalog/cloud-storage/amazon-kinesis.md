@@ -3,7 +3,7 @@ keywords: Amazon Kinesis ; destination de la kinesis ; kinesis
 title: Connexion Amazon
 description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser les données de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 6%
@@ -22,7 +22,7 @@ Le service [!DNL Kinesis Data Streams] de [!DNL Amazon Web Services] vous permet
 Vous pouvez créer une connexion sortante en temps réel à votre [!DNL Amazon Kinesis] enregistrement de diffusion de données à partir de Adobe Experience Platform.
 
 * Pour plus d&#39;informations sur [!DNL Amazon Kinesis], consultez la [documentation Amazon](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* Pour vous connecter à [!DNL Amazon Kinesis] à l&#39;aide d&#39;appels d&#39;API, consultez le [didacticiel sur l&#39;API de destinations de diffusion en continu](../../api/streaming-destinations.md).
+* Pour vous connecter à [!DNL Amazon Kinesis] par programmation, consultez le [didacticiel sur l&#39;API de destinations de diffusion en continu](../../api/streaming-destinations.md).
 * Pour vous connecter à [!DNL Amazon Kinesis] à l&#39;aide de l&#39;interface utilisateur de la plate-forme, consultez les sections ci-dessous.
 
 ![Amazon dans l’interface utilisateur](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
@@ -117,7 +117,7 @@ Vos données [!DNL Experience Platform] exportées atterrissent dans [!DNL Amazo
 
 >[!MORELIKETHIS]
 >
->* [Se connecter à Amazon Kinesis et activer des données à l’aide d’appels d’API](../../api/streaming-destinations.md)
+>* [Connexion à Amazon Kinesis et activation des données à l’aide de l’API du service de flux](../../api/streaming-destinations.md)
 >* [Destination des centres de Événement Azure](./azure-event-hubs.md)
 >* [Types et catégories de destination](../../destination-types.md)
 
