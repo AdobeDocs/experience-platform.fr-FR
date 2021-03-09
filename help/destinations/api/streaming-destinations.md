@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; Didacticiels d’API ; API de destinations de diffusion en continu ; Plateforme
 solution: Experience Platform
-title: Se connecter à des destinations de diffusion en continu et activer des données à l’aide d’appels d’API dans Adobe Experience Platform
+title: Connectez-vous aux destinations de diffusion en continu et activez les données à l’aide de l’API du service de flux dans Adobe Experience Platform.
 description: Ce document couvre la création de destinations de diffusion en continu à l’aide de l’API Adobe Experience Platform.
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '2021'
+source-wordcount: '2029'
 ht-degree: 54%
 
 ---
 
 
-# Se connecter aux destinations de diffusion en continu et activer les données à l’aide d’appels d’API
+# Se connecter aux destinations de diffusion en continu et activer les données à l’aide de l’API du service de flux
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ### Documentation Swagger  {#swagger-docs}
 
-Ce tutoriel vous permet de trouver dans Swagger la documentation de référence relative à tous les appels API. Consultez la [documentation de l’API du service de flux sur Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Nous vous recommandons de consulter ce tutoriel et la page de documentation de Swagger en parallèle.
+Ce tutoriel vous permet de trouver dans Swagger la documentation de référence relative à tous les appels API. Consultez la [documentation de l’API du service de flux sur Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Nous vous recommandons de consulter ce tutoriel et la page de documentation de Swagger en parallèle.
 
 ## Obtenir la liste des destinations de diffusion en continu disponibles {#get-the-list-of-available-streaming-destinations}
 
