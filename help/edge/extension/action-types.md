@@ -2,10 +2,10 @@
 title: Types d’action dans l’extension Adobe Experience Platform Web SDK
 description: Découvrez les différents types d'action fournis par l'extension Adobe Experience Platform Web SDK à Adobe Experience Platform Launch.
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 18%
+source-wordcount: '341'
+ht-degree: 6%
 
 ---
 
@@ -24,9 +24,9 @@ Toutes les données que vous souhaitez envoyer peuvent être envoyées dans le c
 
 ## Définir le consentement
 
-Une fois que vous avez reçu le consentement de votre utilisateur, ce consentement doit être communiqué au Adobe Experience Platform Web SDK en utilisant le type d’action &quot;Définir le consentement&quot;. Actuellement, deux types de standards sont pris en charge : « Adobe » et « IAB TCF ». Si vous utilisez le standard Adobe, vous pouvez actuellement définir le consentement sur « Entrée », « Sortie » ou vous pouvez le fournir à l’aide d’un élément de données. Si vous utilisez le standard IAB TCF, indiquez la version et la valeur que vous souhaitez utiliser, ainsi que des informations supplémentaires concernant le RGPD.
+Une fois que vous avez reçu le consentement de votre utilisateur, ce consentement doit être communiqué au Adobe Experience Platform Web SDK en utilisant le type d’action &quot;Définir le consentement&quot;. Actuellement, deux types de standards sont pris en charge : « Adobe » et « IAB TCF ». Voir [Prise en charge des préférences de consentement du client](../consent/supporting-consent.md). Lorsque vous utilisez Adobe version 2.0, seule une valeur d’élément de données est prise en charge. Vous devez créer un élément de données qui se résout à l’objet de consentement.
 
-Dans cette action, un champ facultatif vous est également fourni pour inclure une carte d’identité afin que les identités puissent être synchronisées une fois le consentement reçu. La synchronisation est utile lorsque le consentement est configuré comme &quot;En attente&quot;, car l’appel de consentement est probablement le premier appel à se déclencher.
+Dans cette action, un champ facultatif vous est également fourni pour inclure une carte d’identité afin que les identités puissent être synchronisées une fois le consentement reçu. La synchronisation est utile lorsque le consentement est configuré comme &quot;En attente&quot; ou &quot;Sortie&quot;, car l’appel de consentement est probablement le premier appel à se déclencher.
 
 ## Réinitialiser l’identifiant de fusion d’événements
 
