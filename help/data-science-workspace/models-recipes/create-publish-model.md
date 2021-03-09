@@ -2,14 +2,14 @@
 keywords: Experience Platform ; modèle d’apprentissage automatique ; Espace de travail des données ; rubriques populaires ; créer et publier un modèle
 solution: Experience Platform
 title: Créer et publier un modèle d'apprentissage automatique
-topic: tutorial
-type: Tutorial
-description: Adobe Experience Platform Data Science Workspace vous donne les moyens d’atteindre votre objectif à l’aide de la recette des recommandations de produits prédéfinie. Suivez ce tutoriel pour découvrir comment accéder à vos données de vente au détail et les comprendre, créer et optimiser un modèle d’apprentissage automatique et générer des insights dans Data Science Workspace.
+topic: didacticiel
+type: Tutoriel
+description: Adobe Experience Platform Data Science Workspace vous donne les moyens d’atteindre votre objectif à l’aide de la recette des recommandations de produits prédéfinie. Suivez ce didacticiel pour découvrir comment accéder à vos données de vente au détail et les comprendre, créer et optimiser un modèle d’apprentissage automatique et générer des informations dans Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: b5d42c6a38a50d39e1ca46e18623dde59c33833b
 workflow-type: tm+mt
-source-wordcount: '1602'
-ht-degree: 80%
+source-wordcount: '1580'
+ht-degree: 41%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 80%
 
 Imaginons que vous possédez un site web de vente en ligne. Lorsque vos clients achètent sur votre site web de vente en ligne, vous souhaitez leur présenter des recommandations de produits personnalisées afin d’exposer une variété d’autres produits proposés par votre entreprise. Au cours de l’existence de votre site web, vous avez continuellement rassemblé des données clients et souhaitez utiliser ces données d’une manière ou d’une autre pour générer des recommandations de produits personnalisées.
 
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] fournit les moyens d&#39;atteindre votre objectif à l&#39;aide de la Recette [ ](../pre-built-recipes/product-recommendations.md)du produit prédéfinie Recommendations. Suivez ce tutoriel pour découvrir comment accéder à vos données de vente au détail et les comprendre, créer et optimiser un modèle d’apprentissage automatique et générer des insights dans [!DNL Data Science Workspace].
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] fournit les moyens d&#39;atteindre votre objectif à l&#39;aide de la Recette [ ](../pre-built-recipes/product-recommendations.md)du produit prédéfinie Recommendations. Suivez ce didacticiel pour découvrir comment accéder à vos données de vente au détail et les comprendre, créer et optimiser un modèle d&#39;apprentissage automatique et générer des informations dans [!DNL Data Science Workspace].
 
 Ce didacticiel reflète le flux de travail de [!DNL Data Science Workspace] et décrit les étapes suivantes pour créer un modèle d’apprentissage automatique :
 
@@ -33,24 +33,24 @@ Ce didacticiel reflète le flux de travail de [!DNL Data Science Workspace] et d
 
 Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
-* Accès à [!DNL Adobe Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
+- Accès à [!DNL Adobe Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 
-* Ressources d’activation. Contactez le représentant de votre compte pour que les éléments suivants soient mis en service.
-   * Recette des recommandations
-   * Jeu de données d’entrée des recommandations
-   * Schéma d’entrée des recommandations
-   * Jeu de données de sortie des recommandations
-   * Schéma de sortie des recommandations
-   * Valeurs de publication du jeu de données favori
-   * Schéma du jeu de données favori
+- Ressources d’activation. Contactez le représentant de votre compte pour que les éléments suivants soient mis en service.
+   - Recette des recommandations
+   - Jeu de données d’entrée des recommandations
+   - Schéma d’entrée des recommandations
+   - Jeu de données de sortie des recommandations
+   - Schéma de sortie des recommandations
+   - Valeurs de publication du jeu de données favori
+   - Schéma du jeu de données favori
 
-* Téléchargez les trois fichiers [!DNL Jupyter Notebook] requis à partir du [référentiel  [!DNL Git] public d&#39;Adobe](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs), qui seront utilisés pour démontrer le flux de travaux [!DNL JupyterLab] dans [!DNL Data Science Workspace].
+- Téléchargez les trois fichiers [!DNL Jupyter Notebook] requis à partir du [référentiel  [!DNL Git] public d&#39;Adobe](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs), qui seront utilisés pour démontrer le flux de travaux [!DNL JupyterLab] dans [!DNL Data Science Workspace].
 
-* Une connaissance concrète des concepts clés suivants employés dans ce tutoriel :
-   * [[!DNL Experience Data Model]](../../xdm/home.md): L’effort de normalisation conduit par l’Adobe pour définir des schémas standard tels que  [!DNL Profile] et ExperienceEvent, pour la gestion de l’expérience client.
-   * Jeux de données : construction de stockage et de gestion pour les données réelles. Instance instanciée physique d’un [schéma XDM](../../xdm/schema/field-dictionary.md).
-   * Lots : les jeux de données sont constitués de lots. Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble comme une seule unité.
-   * [!DNL JupyterLab]:  [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est une interface web open-source pour Project  [!DNL Jupyter] et est étroitement intégrée dans  [!DNL Experience Platform].
+Une connaissance concrète des concepts clés suivants employés dans ce tutoriel :
+- [[!DNL Experience Data Model]](../../xdm/home.md): L’effort de normalisation conduit par l’Adobe pour définir des schémas standard tels que  [!DNL Profile] et ExperienceEvent, pour la gestion de l’expérience client.
+- Jeux de données : construction de stockage et de gestion pour les données réelles. Instance instanciée physique d’un [schéma XDM](../../xdm/schema/field-dictionary.md).
+- Lots : les jeux de données sont constitués de lots. Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble comme une seule unité.
+- [!DNL JupyterLab]:  [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est une interface web open-source pour Project  [!DNL Jupyter] et est étroitement intégrée dans  [!DNL Experience Platform].
 
 ## Préparation de vos données {#prepare-your-data}
 
@@ -58,12 +58,16 @@ Pour créer un modèle d’apprentissage automatique qui recommande des produits
 
 ### Exploration des données et compréhension des schémas
 
-1. Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com/) et cliquez sur **[!UICONTROL Jeux de données]** pour faire la liste de tous les jeux de données existants et sélectionnez le jeu de données à explorer. Dans ce cas, le jeu de données [!DNL Analytics] **Golden Data Set postValues**.
-   ![](../images/models-recipes/model-walkthrough/datasets_110.png)
-2. Cliquez sur **[!UICONTROL Prévisualiser le jeu de données]** près du coin supérieur droit pour examiner les enregistrements d’exemples, puis cliquez sur **[!UICONTROL Fermer]**.
-   ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
-3. Cliquez sur le lien sous Schéma dans le rail de droite pour afficher le schéma pour le jeu de données, puis revenez à la page des détails du jeu de données.
-   ![](../images/models-recipes/model-walkthrough/golden_schema_110.png)
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Datasets]** pour liste à tous les jeux de données existants et sélectionnez le jeu de données que vous souhaitez explorer. Dans ce cas, le jeu de données [!DNL Analytics] **Golden Data Set postValues**.
+
+![](../images/models-recipes/model-walkthrough/dataset-browse.png)
+
+La page d&#39;activité des jeux de données s&#39;ouvre et répertorie les informations relatives à votre jeu de données. Vous pouvez sélectionner **[!UICONTROL Jeu de données de Prévisualisation]** en haut à droite pour examiner les enregistrements d’échantillons. Vous pouvez également vue le schéma du jeu de données sélectionné. Sélectionnez le lien du schéma dans le rail droit. Une fenêtre contextuelle s’affiche, où vous sélectionnez le lien sous **[!UICONTROL nom du schéma]** pour ouvrir le schéma dans un nouvel onglet.
+
+![](../images/models-recipes/model-walkthrough/dataset-activity.png)
+
+
+![](../images/models-recipes/model-walkthrough/schema-view.png)
 
 Les autres jeux de données ont été préremplis avec des lots à des fins d’aperçu. Vous pouvez afficher ces jeux de données en répétant les étapes ci-dessus.
 
@@ -81,61 +85,83 @@ Les recettes sont la base d’un modèle puisqu’elles contiennent des algorith
 
 ### Exploration de la recette des recommandations de produits
 
-1. Dans [!DNL Adobe Experience Platform], accédez à **[!UICONTROL Modèles]** dans la colonne de navigation de gauche, puis cliquez sur **[!UICONTROL Recettes]** dans la partie supérieure pour vue une liste de recettes disponibles pour votre organisation.
-   ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Recherchez et ouvrez la **[!UICONTROL recette de recommandations]** fournie en cliquant sur son nom.
-   ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Dans le rail de droite, cliquez sur **[!UICONTROL Schéma d’entrée des recommandations]** pour afficher le schéma qui alimente la recette. Les champs de schéma &quot;[!UICONTROL itemId]&quot; et &quot;[!UICONTROL userId]&quot; correspondent à un produit acheté ([!UICONTROL interactionType]) par ce client à un moment spécifique ([!UICONTROL horodatage]). Suivez les mêmes étapes pour consulter le **[!UICONTROL Schéma de sortie des recommandations]**.
-   ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
+Dans Experience Platform, accédez à **[!UICONTROL Modèles]** dans la colonne de navigation de gauche, puis sélectionnez **[!UICONTROL Recettes]** dans la barre de navigation supérieure pour vue une liste de recettes disponibles pour votre organisation.
 
-Vous avez maintenant examiné les schémas d’entrée et de sortie requis par la recette des recommandations de produits. Vous pouvez maintenant passer à la section suivante pour savoir comment créer, entraîner et évaluer un modèle de recommandations de produits.
+![](../images/models-recipes/model-walkthrough/recipe-tab.png)
 
-## Formation et évaluation de votre modèle  {#train-and-evaluate-your-model}
+Ensuite, recherchez et ouvrez la **[!UICONTROL Recette de Recommendations]** fournie en sélectionnant son nom. La page d&#39;aperçu de la recette s&#39;affiche.
 
-Maintenant que vos données sont préparées et que la recette est prête à être utilisée, vous pouvez créer, entraîner et évaluer votre modèle d’apprentissage automatique.
+![](../images/models-recipes/model-walkthrough/Recipe-view.png)
+
+Puis, dans le rail de droite, sélectionnez **[!UICONTROL Schéma d&#39;entrée Recommendations]** pour vue au schéma qui alimente la recette. Les champs de schéma &quot;[!UICONTROL itemId]&quot; et &quot;[!UICONTROL userId]&quot; correspondent à un produit acheté ([!UICONTROL interactionType]) par ce client à un moment spécifique ([!UICONTROL horodatage]). Suivez les mêmes étapes pour consulter le **[!UICONTROL Schéma de sortie des recommandations]**.
+
+![](../images/models-recipes/model-walkthrough/input-output.png)
+
+Vous avez maintenant examiné les schémas d’entrée et de sortie requis par la recette des recommandations de produits. Passez à la section suivante pour découvrir comment créer, former et évaluer un modèle Recommendations de produit.
+
+## Formation et évaluation de votre modèle {#train-and-evaluate-your-model}
+
+Maintenant que vos données sont préparées et que la Recette est prête, vous pouvez créer, former et évaluer votre modèle d&#39;apprentissage automatique.
 
 ### Création d’un modèle
 
 Un modèle est une instance de recette qui permet l’entraînement et l’évaluation de données à grande échelle.
 
-1. Dans [!DNL Adobe Experience Platform], accédez à **[!UICONTROL Modèles]** dans la colonne de navigation de gauche, puis cliquez sur **[!UICONTROL Recettes]** en haut de la page pour afficher une liste de toutes les recettes disponibles pour votre organisation.
-   ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Recherchez et ouvrez la **[!UICONTROL recette de recommandations]** fournie en cliquant sur son nom, en entrant sur la page de présentation de la recette. Cliquez sur **[!UICONTROL Créer un modèle]**, soit à partir du centre (s’il n’existe aucun modèle), soit en haut à droite de la page de présentation de la recette.
-   ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Une liste de jeux de données d’entrée disponibles pour l’entraînement s’affiche. Sélectionnez **[!UICONTROL Jeu de données d’entrée des recommandations]** et cliquez sur **[!UICONTROL Suivant]**.
-   ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4. Donnez un nom au modèle, par exemple « Modèle de recommandations de produits ». Les configurations disponibles pour le modèle sont répertoriées, contenant les paramètres des comportements de formation et de notation par défaut du modèle. Aucune modification n’est nécessaire, car ces configurations sont propres à votre organisation. Vérifiez les configurations et cliquez sur **[!UICONTROL Terminer]**.
-   ![](../images/models-recipes/model-walkthrough/configure_model.png)
-5. Le modèle a maintenant été créé et la page de *présentation* du modèle s’affiche dans une nouvelle session d’entraînement. Une session d’entraînement est générée par défaut lors de la création d’un modèle.
-   ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
+Dans l’Experience Platform, accédez à **[!UICONTROL Modèles]** dans la colonne de navigation de gauche, puis sélectionnez **[!UICONTROL Recettes]** dans la barre de navigation supérieure. Il affiche une liste de recettes disponibles pour votre organisation.Sélectionnez la recette de recommandation de produit.
+
+![](../images/models-recipes/model-walkthrough/recipe-tab.png)
+
+Dans la page de recette, sélectionnez **[!UICONTROL Créer un modèle]**.
+
+![créer un modèle](../images/models-recipes/model-walkthrough/create-model-recipe.png)
+
+Le processus de création de modèle commence par sélectionner une recette. Sélectionnez **[!UICONTROL Recommendations Recipe]**, puis **[!UICONTROL Next]** dans le coin supérieur droit.
+
+![](../images/models-recipes/model-walkthrough/create-model.png)
+
+Indiquez ensuite un nom de modèle. Les configurations disponibles pour le modèle sont répertoriées avec les paramètres des comportements de formation et de notation par défaut du modèle. Vérifiez les configurations et sélectionnez **[!UICONTROL Terminer]**.
+
+![](../images/models-recipes/model-walkthrough/configure-model.png)
+
+Vous êtes redirigé vers la page d’aperçu des modèles avec une nouvelle série de formations générée. Une session d’entraînement est générée par défaut lors de la création d’un modèle.
+
+![](../images/models-recipes/model-walkthrough/model-overview.png)
 
 Vous pouvez choisir d’attendre la fin de la session d’entraînement ou continuer à créer une session d’entraînement dans la section suivante.
 
 ### Entraînement du modèle à l’aide d’hyperparamètres personnalisés
 
-1. Sur la page de **présentation du modèle**, cliquez sur **[!UICONTROL Entraîner]** près du coin supérieur droit pour créer une session d’entraînement. Sélectionnez le même jeu de données d’entrée que celui utilisé lors de la création du modèle, puis cliquez sur **[!UICONTROL Suivant]**.
-   ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. La page de **configuration** s’affiche. Vous pouvez ici configurer la valeur &quot;[!UICONTROL num_recommendations]&quot; de la série de formations, également appelée Hyperparamètre. Un modèle entraîné et optimisé utilisera les hyperparamètres les plus performants en fonction des résultats de la session d’entraînement.
+Sur la page **Présentation du modèle**, sélectionnez **[!UICONTROL Train]** en haut à droite pour créer une nouvelle session de formation. Sélectionnez le même jeu de données d’entrée que celui utilisé lors de la création du modèle et sélectionnez **[!UICONTROL Suivant]**.
 
-   Les hyperparamètres ne peuvent pas être appris. Par conséquent, ils doivent être attribués avant les sessions d’entraînement. L’ajustement d’hyperparamètres peut modifier la précision du modèle entraîné. L’optimisation d’un modèle étant un processus itératif, il peut être nécessaire de procéder à plusieurs sessions d’entraînement avant d’effectuer une évaluation satisfaisante.
+![](../images/models-recipes/model-walkthrough/select-train.png)
 
-   >[!TIP]
-   >
-   >Définissez **[!UICONTROL num_recommendations]** sur 10.
+La page de **[!UICONTROL configuration]** s’affiche. Vous pouvez configurer ici la valeur d&#39;exécution de la formation `num_recommendations`, également appelée hyperparamètre. Un modèle formé et optimisé utilisera les hyperparamètres les plus performants en fonction des résultats de l&#39;entraînement.
 
-   ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
-3. Un point de données supplémentaire apparaîtra sur le graphique d’évaluation du modèle une fois la nouvelle session d’entraînement terminée, ce qui peut prendre plusieurs minutes.
-   ![](../images/models-recipes/model-walkthrough/post_training_run.png)
+Les hyperparamètres ne peuvent pas être appris. Par conséquent, ils doivent être attribués avant les sessions d’entraînement. Le réglage des hyperparamètres peut modifier la précision du modèle entraîné. Comme l&#39;optimisation d&#39;un modèle est un processus itératif, il peut s&#39;avérer nécessaire de procéder à plusieurs exercices de formation avant d&#39;effectuer une évaluation satisfaisante.
+
+>[!TIP]
+>
+>Définissez `num_recommendations` sur 10.
+
+![](../images/models-recipes/model-walkthrough/training-configuration.png)
+
+D’autres points de données apparaissent sur le graphique d’évaluation du modèle. Cette opération peut prendre plusieurs minutes une fois l’exécution terminée.
+
+![](../images/models-recipes/model-walkthrough/training-graphs.png)
 
 ### Évaluation du modèle
 
 Chaque fois qu’une session d’entraînement se termine, vous pouvez afficher les mesures d’évaluation qui en résultent pour déterminer l’efficacité du modèle.
 
-1. Vérifiez les mesures d’évaluation (précision et rappel) pour chaque session d’entraînement terminée en cliquant sur la session d’entraînement.
-2. Explorez les informations fournies pour chaque mesure d’évaluation. Plus ces mesures sont élevées, plus le modèle est performant.
-   ![](../images/models-recipes/model-walkthrough/evaluation_metrics.png)
-3. Vous pouvez voir le jeu de données, les schémas et les paramètres de configuration utilisés pour chaque session d’entraînement sur le rail droit.
-4. Revenez à la page Modèle et identifiez les sessions d’entraînement les plus performantes en observant leurs mesures d’évaluation.
+Pour passer en revue les mesures d&#39;évaluation (Précision et rappel) pour chaque période de formation terminée, sélectionnez la période de formation.
+
+![](../images/models-recipes/model-walkthrough/select-training-run.png)
+
+Vous pouvez explorer les informations fournies pour chaque mesure d’évaluation. Plus ces mesures sont élevées, meilleure est la performance du modèle.
+
+![](../images/models-recipes/model-walkthrough/metrics.png)
+
+Vous pouvez voir le jeu de données, les schémas et les paramètres de configuration utilisés pour chaque session d’entraînement sur le rail droit. Revenez à la page Modèle et identifiez les sessions d’entraînement les plus performantes en observant leurs mesures d’évaluation.
 
 ## Exploitation de votre modèle  {#operationalize-your-model}
 
@@ -143,27 +169,38 @@ La dernière étape du workflow Data Science consiste à rendre opérationnel vo
 
 ### Évaluation et génération d’insights
 
-1. Sur la page de *présentation* du modèle de recommandations de produits, cliquez sur le nom de la session d’entraînement la plus performante, avec les valeurs de rappel et de précision les plus élevées.
-2. Dans la partie supérieure droite de la page des détails de la session d’entraînement, cliquez sur **[!UICONTROL Évaluer]**.
-3. Sélectionnez le **[!UICONTROL jeu de données d’entrée des recommandations]** comme jeu de données d’entrée de notation, qui est le même jeu de données que celui utilisé lors de la création du modèle et de l’exécution de ses sessions d’entraînement. Cliquez ensuite sur **[!UICONTROL Suivant]**.
-   ![](../images/models-recipes/model-walkthrough/scoring_input.png)
-4. Sélectionnez le **[!UICONTROL jeu de données de sortie des recommandations]** comme jeu de données de sortie de notation. Les résultats de notation seront stockés dans ce jeu de données sous la forme d’un lot.
-   ![](../images/models-recipes/model-walkthrough/scoring_output.png)
-5. Vérifiez les configurations de notation. Ces paramètres contiennent les jeux de données d’entrée et de sortie sélectionnés plus tôt, ainsi que les schémas appropriés. Cliquez sur **[!UICONTROL Terminer]** pour lancer l’opération de notation. Cela peut prendre plusieurs minutes.
-   ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
+Sur la page d’aperçu du modèle de recommandations de produits, sélectionnez le nom de la série de formations la plus performante, avec les valeurs de rappel et de précision les plus élevées.
 
+![marquer la meilleure exécution](../images/models-recipes/model-walkthrough/select-training-run.png)
+
+Puis, dans l’angle supérieur droit de la page des détails de la série de formations, sélectionnez **[!UICONTROL Score]**.
+
+![sélectionner un score](../images/models-recipes/model-walkthrough/select-score.png)
+
+Ensuite, sélectionnez le **[!UICONTROL jeu de données d&#39;entrée Recommendations]** comme jeu de données d&#39;entrée de score, qui est le même jeu de données que celui que vous avez utilisé lorsque vous avez créé le modèle et exécuté ses exécutions de formation. Sélectionnez ensuite **[!UICONTROL Suivant]**.
+
+![](../images/models-recipes/model-walkthrough/score-input.png)
+
+Une fois que vous disposez de votre jeu de données d’entrée, sélectionnez **[!UICONTROL Recommendations Output Dataset]** comme jeu de données de sortie de score. Les résultats de score sont stockés par lot dans ce jeu de données.
+
+![](../images/models-recipes/model-walkthrough/score-output.png)
+
+Enfin, passez en revue les configurations de notation. Ces paramètres contiennent les jeux de données d’entrée et de sortie que vous avez sélectionnés précédemment, ainsi que les schémas appropriés. Sélectionnez **[!UICONTROL Terminer]** pour commencer l’exécution de score. Cela peut prendre plusieurs minutes.
+
+![](../images/models-recipes/model-walkthrough/score-finish.png)
 
 ### Affichage des insights évalués
 
-Une fois l’opération de notation terminée, vous serez en mesure de prévisualiser les résultats et d’afficher les insights générés.
+Une fois l’exécution de score terminée, vous pouvez prévisualisation les résultats et vue les informations générées.
 
-1. Sur la page des opérations de notation, cliquez sur l’opération de notation terminée, puis cliquez sur **[!UICONTROL Aperçu du jeu de données des résultats de la notation]** sur le rail de droite.
-   ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. Dans le tableau de prévisualisation, chaque ligne contient des recommandations de produits pour un client en particulier, respectivement libellés [!UICONTROL recommendations] et [!UICONTROL userId]. Puisque l’hyperparamètre [!UICONTROL num_recommendations] a été défini sur 10 dans les exemples de captures d’écran, chaque ligne de recommandations peut contenir jusqu’à 10 identités de produit délimitées par un signe dièse (#).
-   ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
+Sur la page d’exécutions de score, sélectionnez l’exécution de score terminée, puis sélectionnez **[!UICONTROL Jeu de données de résultats de score de Prévisualisation]** dans le rail de droite.
+
+![](../images/models-recipes/model-walkthrough/preview-scores.png)
+
+Dans le tableau de prévisualisation, chaque ligne contient des recommandations de produits pour un client en particulier, respectivement libellés [!UICONTROL recommendations] et [!UICONTROL userId]. Puisque l’hyperparamètre [!UICONTROL num_recommendations] a été défini sur 10 dans les exemples de captures d’écran, chaque ligne de recommandations peut contenir jusqu’à 10 identités de produit délimitées par un signe dièse (#).
+
+![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## Étapes suivantes {#next-steps}
-
-Bien joué, vous avez généré avec succès des recommandations de produits.
 
 Ce didacticiel vous a présenté le flux de travail de [!DNL Data Science Workspace], qui montre comment les données brutes non traitées peuvent être transformées en informations utiles par l&#39;apprentissage automatique. Pour en savoir plus sur l&#39;utilisation du [!DNL Data Science Workspace], consultez le guide suivant sur la création du [schéma de vente au détail et du jeu de données](./create-retails-sales-dataset.md).
