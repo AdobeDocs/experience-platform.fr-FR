@@ -6,9 +6,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document liste la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '460'
 ht-degree: 61%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 61%
 * [Présentation des destinations](./home.md)
 * [Types et catégories de destination](./destination-types.md)
 * Tutoriels sur les API {#api}
-   * [Se connecter aux destinations de diffusion en continu et activer les données à l’aide d’appels d’API](./api/streaming-destinations.md)
-   * [Se connecter aux destinations de marketing par courrier électronique et activer les données à l’aide d’appels d’API](./api/email-marketing.md)
+   * [Se connecter aux destinations de diffusion en continu et activer les données à l’aide de l’API du service de flux](./api/streaming-destinations.md)
+   * [Connectez-vous aux destinations de marketing par courrier électronique et activez les données à l’aide de l’API du service de flux.](./api/email-marketing.md)
 * Guides d&#39;interface {#ui}
    * [Présentation de l’espace de travail Destinations](./ui/destinations-workspace.md)
    * [Détails de la destination de la vue](./ui/destination-details-page.md)
