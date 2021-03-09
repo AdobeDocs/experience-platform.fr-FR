@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Se connecter aux destinations de marketing par courrier électronique et activer les données à l’aide d’appels d’API
+title: Connectez-vous aux destinations de marketing par courrier électronique et activez les données à l’aide de l’API du service de flux.
 description: Ce document couvre la création de destinations de marketing par courrier électronique à l’aide de l’API Adobe Experience Platform.
 topic: didacticiel
 type: Tutoriel
 translation-type: tm+mt
-source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '1701'
+source-wordcount: '1707'
 ht-degree: 71%
 
 ---
 
 
-# Se connecter aux destinations de marketing par courrier électronique et activer les données à l’aide d’appels d’API
+# Connectez-vous aux destinations de marketing par courrier électronique et activez les données à l’aide de l’API du service de flux.
 
 Ce tutoriel explique comment utiliser les appels API pour accéder à vos données Adobe Experience Platform, créer une [destination de marketing par e-mail](../catalog/email-marketing/overview.md), créer un flux de données vers votre nouvelle destination et activer les données vers cette dernière.
 
@@ -67,7 +67,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ### Documentation Swagger
 
-Ce tutoriel vous permet de trouver dans Swagger la documentation de référence relative à tous les appels API. Consultez la [documentation de l’API du service de flux sur Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Nous vous recommandons de consulter ce tutoriel et la page de documentation de Swagger en parallèle.
+Ce tutoriel vous permet de trouver dans Swagger la documentation de référence relative à tous les appels API. Consultez la [documentation de l’API du service de flux sur Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Nous vous recommandons de consulter ce tutoriel et la page de documentation de Swagger en parallèle.
 
 ## Obtention de la liste des destinations disponibles {#get-the-list-of-available-destinations}
 
