@@ -3,10 +3,10 @@ title: Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
 description: SDK Web Adobe Experience Platform dans Adobe Experience Platform Launch
 seo-description: SDK Web Adobe Experience Platform dans Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 14cf62084c88956906cd9454176619ed08081a0e
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 89%
+source-wordcount: '1134'
+ht-degree: 79%
 
 ---
 
@@ -14,6 +14,19 @@ ht-degree: 89%
 # Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
 
 Ce document couvre les notes de mise à jour de l’extension Adobe Experience Platform Web SDK pour Adobe Experience Platform Launch. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, consultez les [Notes de mise à jour du SDK Web de plate-forme](https://docs.adobe.com/content/help/fr-FR/experience-platform/edge/release-notes.html).
+
+## 9 mars 2020
+
+### SDK web 2.4.0 Adobe Experience Platform
+
+Contient la version 2.4.0 de la bibliothèque SDK Web Adobe Experience Platform.
+
+* Case à cocher [&quot;Déchargement de document&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) Ajoutée à l’interface utilisateur de l’action Envoyer le Événement.
+* Prise en charge Ajoutée d&#39;une option `out` lorsque [la configuration du consentement par défaut](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) supprime tous les événements jusqu&#39;à ce que le consentement soit reçu (l&#39;option `pending` existante met les événements en file d&#39;attente et les envoie une fois le consentement reçu).
+* Ajoute une info-bulle au champ de consentement par défaut.
+* Prise en charge Ajoutée de [le Adobe Confort a envoyé la norme 2.0](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* Une meilleure erreur s’affiche désormais dans l’interface utilisateur de l’élément de données de l’objet XDM si le jeton d&#39;accès de l’utilisateur n’est pas valide ou n’est pas correctement configuré.
+* Correction d’une erreur entre origines (qui n’affecte pas le fonctionnement de l’extension) qui s’affichait sur la console de développement du navigateur lors de l’affichage d’un élément de données d’objet XDM.
 
 ## 4 novembre 2020
 
