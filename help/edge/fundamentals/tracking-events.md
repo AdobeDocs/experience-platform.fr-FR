@@ -1,12 +1,12 @@
 ---
 title: Suivi des Événements à l’aide du SDK Web Adobe Experience Platform
-seo-description: Découvrez comment effectuer le suivi des événements du SDK Web Adobe Experience Platform.
+description: Découvrez comment effectuer le suivi des événements du SDK Web Adobe Experience Platform.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 25cf425df92528cec88ea027f3890abfa9cd9b41
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 56%
+source-wordcount: '1397'
+ht-degree: 46%
 
 ---
 
@@ -79,7 +79,7 @@ Dans cet exemple, la couche de données est clonée en la sérialisant sur JSON,
 
 Actuellement, l’envoi de données qui ne correspondent pas à un schéma XDM n’est pas pris en charge. La prise en charge est prévue pour une date ultérieure.
 
-### Définition de `eventType`
+### Définition de `eventType` {#event-types}
 
 Dans un événement d’expérience XDM, il existe un champ `eventType` facultatif. Il contient le type d’événement principal pour l’enregistrement. Définir un type d&#39;événement peut vous aider à différencier les différents événements que vous allez envoyer. XDM fournit plusieurs types d&#39;événement prédéfinis que vous pouvez utiliser ou vous créez toujours vos propres types d&#39;événement personnalisés pour vos cas d&#39;utilisation. Vous trouverez ci-dessous une liste de tous les types d&#39;événement prédéfinis fournis par XDM. [Pour en savoir plus, consultez le rapport](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values) public XDM.
 
@@ -211,20 +211,20 @@ alloy("sendEvent", {
 
 ## Modification globale des événements {#modifying-events-globally}
 
-Si vous souhaitez ajouter, supprimer ou modifier des champs d’événements globalement, vous pouvez configurer un rappel `onBeforeEventSend`.  Ce rappel est appelé chaque fois qu’un événement est envoyé.  Il est transmis dans un objet d’événement avec un champ `xdm`.  Modifiez `event.xdm` pour changer les données envoyées dans l’événement.
+Si vous souhaitez ajouter, supprimer ou modifier des champs d’événements globalement, vous pouvez configurer un rappel `onBeforeEventSend`.  Ce rappel est appelé chaque fois qu’un événement est envoyé.  Il est transmis dans un objet d’événement avec un champ `xdm`.  Modifiez `content.xdm` pour modifier les données envoyées avec le événement.
 
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(event) {
+  "onBeforeEventSend": function(content) {
     // Change existing values
-    event.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
+    content.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
     // Remove existing values
-    delete event.xdm.web.webReferrer.URL;
+    delete content.xdm.web.webReferrer.URL;
     // Or add new values
-    event.xdm._adb3lettersandnumbers.mycustomkey = "value";
+    content.xdm._adb3lettersandnumbers.mycustomkey = "value";
   }
 });
 ```
@@ -235,10 +235,54 @@ Les champs `xdm` sont définis dans l’ordre suivant :
 2. Valeurs collectées automatiquement  (voir [Informations automatiques](../data-collection/automatic-information.md))
 3. Modifications apportées dans le rappel `onBeforeEventSend`
 
-Si le rappel `onBeforeEventSend` renvoie une exception, l’événement est toujours envoyé ; toutefois, aucune des modifications apportées dans le rappel n’est appliquée à l’événement final.
+Quelques remarques sur le rappel `onBeforeEventSend` :
+
+* Le événement XDM peut être modifié lors du rappel. Une fois le rappel renvoyé, tous les champs et valeurs modifiés de
+les objets content.xdm et content.data sont envoyés avec le événement.
+
+   ```javascript
+   onBeforeEventSend: function(content){
+     //sets a query parameter in XDM
+     const queryString = window.location.search;
+     const urlParams = new URLSearchParams(queryString);
+     content.xdm.marketing.trackingCode = urlParams.get('cid')
+   }
+   ```
+
+* Si le rappel renvoie une exception, le traitement du événement s’arrête et le événement n’est pas envoyé.
+* Si le rappel renvoie la valeur booléenne `false`, le traitement du événement s’interrompt,
+sans erreur et le événement n’est pas envoyé. Ce mécanisme permet à certains événements d&#39;être facilement ignorés par
+examiner les données du événement et renvoyer `false` si le événement ne doit pas être envoyé.
+
+   >[!NOTE]
+   >Veillez à ne pas renvoyer la valeur false le premier événement d’une page. Le renvoi de la valeur false au premier événement peut avoir un impact négatif sur la personnalisation.
+
+```javascript
+   onBeforeEventSend: function(content) {
+     // ignores events from bots
+     if (MyBotDetector.isABot()) {
+       return false;
+     }
+   }
+```
+
+Toute valeur de retour autre que la valeur booléenne `false` permet au événement de traiter et d&#39;envoyer après le rappel.
+
+* Les événements peuvent être filtrés en examinant le type d&#39;événement (voir [Types d&#39;événement](#event-types).) :
+
+```javascript
+    onBeforeEventSend: function(content) {  
+      // augments XDM if link click event is to a partner website
+      if (
+        content.xdm.eventType === "web.webinteraction.linkClicks" &&
+        content.xdm.web.webInteraction.URL ===
+          "http://example.com/partner-page.html"
+      ) {
+        content.xdm.partnerWebsiteClick = true;
+      }
+   }
+```
 
 ## Erreurs potentielles
 
 Lors de l’envoi d’un événement, une erreur peut être générée si les données envoyées sont trop volumineuses (plus de 32 Ko pour la requête complète). Dans ce cas, vous devez réduire la quantité de données envoyées.
-
-Lorsque le débogage est activé, le serveur valide de manière synchrone les données d’événement envoyées par rapport au schéma XDM configuré. Si les données ne correspondent pas au schéma, les détails sur la discordance sont renvoyés par le serveur et une erreur est générée. Dans ce cas, modifiez les données pour qu’elles correspondent au schéma. Lorsque le débogage n’est pas activé, le serveur valide les données de manière asynchrone et, par conséquent, aucune erreur correspondante n’est générée.
