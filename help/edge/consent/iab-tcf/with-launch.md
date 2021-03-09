@@ -2,9 +2,9 @@
 title: Intégration de la prise en charge d’IAB TCF 2.0 à l’aide de Platform launch et de la plate-forme Web SDK Extension
 description: Découvrez comment configurer le consentement IAB TCF 2.0 avec Adobe Experience Platform Launch et l’extension Adobe Experience Platform Web SDK.
 translation-type: tm+mt
-source-git-commit: 1a51ce92eb5c41ff65ebcf4c652640dd0782487f
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ En outre, ce guide vous demande de bien comprendre le SDK Web de Adobe Experienc
 
 ## Définition du consentement par défaut
 
-Dans la configuration de l&#39;extension, il existe un paramètre pour le consentement par défaut. Cela contrôle le comportement des clients qui n’ont pas de cookie de consentement. Si vous souhaitez mettre en file d’attente les Événements d’expérience pour les clients qui n’ont pas de cookie de consentement, définissez ce paramètre sur `pending`. Vous pouvez également utiliser un élément de données pour définir dynamiquement la valeur de consentement par défaut.
+Dans la configuration de l&#39;extension, il existe un paramètre pour le consentement par défaut. Cela contrôle le comportement des clients qui n’ont pas de cookie de consentement. Si vous souhaitez mettre en file d’attente les Événements d’expérience pour les clients qui n’ont pas de cookie de consentement, définissez ce paramètre sur `pending`. Si vous souhaitez ignorer les Événements d’expérience pour les clients qui n’ont pas de cookie de consentement, définissez cette variable sur `out`. Vous pouvez également utiliser un élément de données pour définir dynamiquement la valeur de consentement par défaut.
 
 Pour plus d’informations sur la configuration du consentement par défaut, consultez la section [consentement par défaut](../../fundamentals/configuring-the-sdk.md#default-consent) du guide de configuration du SDK.
 
