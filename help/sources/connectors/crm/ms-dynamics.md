@@ -2,13 +2,13 @@
 keywords: Experience Platform;accueil;rubriques populaires;Microsoft Dynamics;microsoft dynamic;dynamic;Dynamics;Dynamics
 solution: Experience Platform
 title: Présentation de Microsoft Dynamics Source Connector
-topic: overview
+topic: aperçu
 description: Découvrez comment connecter Microsoft Dynamics à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 10%
+source-wordcount: '270'
+ht-degree: 8%
 
 ---
 
@@ -22,6 +22,10 @@ Adobe Experience Platform permet l’assimilation de données à partir de sourc
 ## LISTE AUTORISÉE d&#39;adresse IP
 
 Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources. Pour plus d&#39;informations, consultez la page [liste autorisée d&#39;adresse IP](../../ip-address-allow-list.md).
+
+>[!IMPORTANT]
+>
+>Le connecteur source [!DNL Microsoft Dynamics] ne prend actuellement pas en charge la connectivité de la même région à la plate-forme. Cela signifie que si votre instance Azure utilise la même région réseau que Platform, une connexion aux sources de la plateforme ne peut pas être établie. Actuellement, seule la connectivité inter-régions est prise en charge. Pour plus d&#39;informations, contactez votre gestionnaire de compte d&#39;Adobe.
 
 La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Microsoft Dynamics] à [!DNL Platform] à l&#39;aide d&#39;API ou de l&#39;interface utilisateur :
 
