@@ -3,7 +3,7 @@ keywords: Destination du hub de événement Azure ; hub de événement azure ; e
 title: (bêta) Connexion Azure Événement Hubs
 description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser les données de l'Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 6%
@@ -22,7 +22,7 @@ ht-degree: 6%
 Vous pouvez créer une connexion sortante en temps réel à votre [!DNL Azure Event Hubs] enregistrement de diffusion de données à partir de Adobe Experience Platform.
 
 * Pour plus d&#39;informations sur [!DNL Azure Event Hubs], consultez la [documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
-* Pour vous connecter à [!DNL Azure Event Hubs] à l&#39;aide d&#39;appels d&#39;API, consultez le [didacticiel sur l&#39;API de destinations de diffusion en continu](../../api/streaming-destinations.md).
+* Pour vous connecter à [!DNL Azure Event Hubs] par programmation, consultez le [didacticiel sur l&#39;API de destinations de diffusion en continu](../../api/streaming-destinations.md).
 * Pour vous connecter à [!DNL Azure Event Hubs] à l&#39;aide de l&#39;interface utilisateur de la plate-forme, consultez les sections ci-dessous.
 
 ![Kinesis AWS dans l’interface utilisateur](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
@@ -108,6 +108,6 @@ Vos données [!DNL Experience Platform] exportées atterrissent dans [!DNL Azure
 
 >[!MORELIKETHIS]
 >
->* [Se connecter à Azure Événement Hubs et activer des données à l&#39;aide d&#39;appels d&#39;API](../../api/streaming-destinations.md)
+>* [Se connecter aux concentrateurs de Événement Azure et activer les données à l&#39;aide de l&#39;API Flow Service](../../api/streaming-destinations.md)
 >* [Destination AWS Kinesis](./amazon-kinesis.md)
 >* [Types et catégories de destination](../../destination-types.md)
