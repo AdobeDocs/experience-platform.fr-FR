@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement de fichiers Azure ; enregistrement de fichiers azurés
 solution: Experience Platform
 title: Présentation du connecteur source d'Enregistrement de fichiers Azure
-topic: overview
+topic: aperçu
 description: Découvrez comment connecter Azure File Enregistrement à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 3%
+source-wordcount: '470'
+ht-degree: 2%
 
 ---
 
@@ -26,6 +26,10 @@ Les sources d’enregistrement Cloud peuvent importer vos propres données dans 
 ## LISTE AUTORISÉE d&#39;adresse IP
 
 Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources. Pour plus d&#39;informations, consultez la page [liste autorisée d&#39;adresse IP](../../ip-address-allow-list.md).
+
+>[!IMPORTANT]
+>
+>Le connecteur source [!DNL Azure File Storage] ne prend actuellement pas en charge la connectivité de la même région à la plate-forme. Cela signifie que si votre instance Azure utilise la même région réseau que Platform, une connexion aux sources de la plateforme ne peut pas être établie. Actuellement, seule la connectivité inter-régions est prise en charge. Pour plus d&#39;informations, contactez votre gestionnaire de compte d&#39;Adobe.
 
 ## Contraintes de nommage pour les fichiers et répertoires
 
