@@ -4,10 +4,10 @@ title: Présentation de l’espace de travail Destinations
 description: 'L’espace de travail Destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système, décrites dans les sections ci-dessous.'
 seo-description: Dans Adobe Experience Platform, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 translation-type: tm+mt
-source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 41%
+source-wordcount: '1017'
+ht-degree: 37%
 
 ---
 
@@ -87,15 +87,19 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 
 >[!TIP]
 >
->Utilisez le bouton ![Ajouter les données](../assets/ui/workspace/add-data-symbol.png) de la colonne **[!UICONTROL Nom]** pour activer des segments supplémentaires vers cette destination.
+> * Utilisez le bouton ![Ajouter les segments](../assets/ui/workspace/add-data-symbol.png) de la colonne **[!UICONTROL Nom]** pour activer des segments supplémentaires vers cette destination.
+> * Utilisez le bouton ![Supprimer les destinations](../assets/ui/workspace/delete-destination-symbol.png) de la colonne **[!UICONTROL Nom]** pour supprimer une connexion existante à une destination.
+
 
 ![Onglet Parcourir](../assets/ui/workspace/browse-tab.png)
 
 | Élément | Description |
 ---------|----------
-| Nom | Le nom que vous avez fourni pour votre flux d’activation vers cette destination. |
+| Nom | Le nom que vous avez fourni pour votre flux d’activation vers cette destination. La même colonne comprend deux contrôles : [!UICONTROL Activer ] et [!UICONTROL Supprimer la destination]. |
+| État de la dernière exécution du flux | Statut de la dernière exécution de flux de données. Voir [détails de destination de la Vue](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
+| Date d&#39;exécution du dernier flux | Heure et date de la dernière exécution du flux de données. Voir [détails de destination de la Vue](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
 | [!UICONTROL Destination] | La plateforme de destination que vous avez sélectionnée pour votre flux d’activation. |
-| [!UICONTROL Type de connexion] | Représente le type de connexion à votre compartiment de stockage ou à votre destination. <ul><li>Pour les destinations de marketing par e-mail : peut être S3 ou FTP.</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur</li></ul> |
+| [!UICONTROL Type de connexion] | Représente le type de connexion à votre compartiment de stockage ou à votre destination. <ul><li>Pour les destinations de marketing par courriel : Peut être S3, FTP ou [!DNL Azure Blob].</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur.</li><li>Pour les destinations de diffusion en continu : Peut être [!DNL Azure Event Hubs] ou [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Nom d’utilisateur] | Les informations d’identification de compte que vous avez sélectionnées pour le flux de destination. |
 | [!UICONTROL Données d’Activation] | Indique le nombre de segments activés pour cette destination. Sélectionnez ce contrôle pour en savoir plus sur les segments activés. Pour plus d’informations sur les segments activés, voir [Données d’Activation](/help/destinations/ui/destination-details-page.md#activation-data) dans la page des détails de destination. |
 | [!UICONTROL Créé] | La date et l’heure (UTC) de création du flux d’activation vers la destination. |
