@@ -2,14 +2,14 @@
 keywords: Experience Platform ; JupyterLab ; blocs-notes ; Espace de travail des données ; rubriques populaires ; analyser les blocs-notes de données
 solution: Experience Platform
 title: Analyse de vos données à l'aide de portables
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 description: Ce didacticiel se concentre sur l’utilisation des ordinateurs portables Jupyter, construits dans Data Science Workspace, pour accéder à vos données, les explorer et les visualiser.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 6908c582cb7e0d60b82112dbc0854411d76b4fd4
 workflow-type: tm+mt
-source-wordcount: '1735'
-ht-degree: 79%
+source-wordcount: '1733'
+ht-degree: 76%
 
 ---
 
@@ -80,11 +80,11 @@ Nous allons maintenant passer en revue l&#39;accès aux données [!DNL Experienc
 
 Pour cette section, nous utilisons le jeu de données Ventes au détail, le même que celui utilisé dans le notebook d’exemple Ventes au détail.
 
-Dans notre notebook Jupyter, nous pouvons accéder à nos données à partir de l’onglet **Données** sur la gauche. Lorsque vous cliquez sur l’onglet, une liste des jeux de données s’affiche.
+Dans Jupyter Notebook, vous pouvez accéder à vos données à partir de l&#39;onglet **Data** ![data](../images/jupyterlab/analyze-data/dataset-tab.png) sur la gauche. Deux dossiers sont fournis lors de la sélection de l’onglet. Sélectionnez le dossier **[!UICONTROL Datasets]**.
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
-Dans le répertoire Jeux de données, nous pourrons alors consulter tous les jeux de données ingérés. Remarque : le chargement de toutes les entrées peut prendre quelques instants si de nombreux jeux de données sont présents dans votre répertoire.
+Désormais, dans le répertoire Datasets, vous pouvez voir tous les jeux de données assimilés. Remarque : le chargement de toutes les entrées peut prendre quelques instants si de nombreux jeux de données sont présents dans votre répertoire.
 
 Puisque le jeu de données est le même, nous voulons remplacer les données chargées au cours de la section précédente qui utilise des données externes. Sélectionnez le bloc de code sous **Charger les données** et appuyez deux fois sur la touche **« D »** de votre clavier. Assurez-vous que vous avez bien sélectionné le bloc et non le texte. Vous pouvez appuyer sur **« Echap »** pour désélectionner le texte avant d’appuyer deux fois sur **« D »**.
 
