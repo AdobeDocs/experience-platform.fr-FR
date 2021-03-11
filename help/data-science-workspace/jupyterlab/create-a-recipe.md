@@ -2,14 +2,14 @@
 keywords: Experience Platform ; JupyterLab ; recette ; cahiers ; Espace de travail des sciences de données ; rubriques populaires ; créer une recette
 solution: Experience Platform
 title: Créer une recette à l'aide de portables Jupyter
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 description: Ce tutoriel se déroulera en deux temps. Tout d’abord, vous créerez un modèle d’apprentissage automatique à l’aide d’un modèle dans JupyterLab Notebook. Ensuite, vous utiliserez le notebook pour recevoir le workflow dans JupyterLab afin de créer une recette dans Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '2362'
-ht-degree: 82%
+source-wordcount: '2366'
+ht-degree: 81%
 
 ---
 
@@ -92,9 +92,9 @@ Les utilisateurs doivent renseigner les variables suivantes avant d’exécuter 
 - `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA`
 - `scoringResultsDataSetId`
 
-Pour rechercher les identifiants du jeu de données et du schéma, accédez dans les notebooks à l’onglet Données de la barre de navigation de gauche (sous l’icône de dossier).
+Pour trouver le jeu de données et les ID de schéma, accédez à l&#39;onglet de données ![Data tab](../images/jupyterlab/create-recipe/dataset-tab.png) dans les blocs-notes de la barre de navigation de gauche (sous l&#39;icône de dossier).
 
-![](../images/jupyterlab/create-recipe/datasets.png)
+![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
 Vous trouverez les mêmes informations sur [Adobe Experience Platform](https://platform.adobe.com/) sous les onglets **[Schéma](https://platform.adobe.com/schema)** et **[Jeu de données](https://platform.adobe.com/dataset/overview)**.
 
