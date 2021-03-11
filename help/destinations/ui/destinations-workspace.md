@@ -4,10 +4,10 @@ title: Présentation de l’espace de travail Destinations
 description: 'L’espace de travail Destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système, décrites dans les sections ci-dessous.'
 seo-description: Dans Adobe Experience Platform, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 translation-type: tm+mt
-source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
+source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
 workflow-type: tm+mt
 source-wordcount: '1017'
-ht-degree: 37%
+ht-degree: 34%
 
 ---
 
@@ -117,6 +117,6 @@ L&#39;onglet **[!UICONTROL Vue système]** affiche une représentation graphique
 
 ![Flux de données 1](../assets/ui/workspace/data-flows1.png)
 
-Sélectionnez l’une des destinations affichées sur la page et appuyez sur **[!UICONTROL Afficher les flux]** pour afficher les informations sur toutes les connexions que vous avez configurées pour chaque destination.
+Sélectionnez l’une des destinations affichées sur la page et cliquez sur **[!UICONTROL Flux de Vue]** pour afficher des informations sur toutes les connexions que vous avez configurées pour chaque destination.
 
 ![Flux de données 2](../assets/ui/workspace/data-flows2.png)
