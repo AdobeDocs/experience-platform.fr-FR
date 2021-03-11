@@ -6,9 +6,9 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: 6c8bf05285dcfc3e631ae5a41dcf40f90217320a
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2151'
 ht-degree: 15%
 
 ---
@@ -30,19 +30,11 @@ Les étapes du processus d’activation varient légèrement d’un type de dest
 
 S&#39;applique à : Toutes les destinations
 
-Dans l’interface utilisateur de Adobe Experience Platform, accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]**, puis sélectionnez la destination à laquelle vous souhaitez activer vos segments.
+Dans l’interface utilisateur de Adobe Experience Platform, accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]**, puis appuyez sur le bouton **[!UICONTROL Activer]** correspondant à la destination à laquelle vous souhaitez activer vos segments, comme illustré dans l’image ci-dessous.
 
-![naviguer jusqu’à la destination](../assets/ui/activate-destinations/connect.png)
+![activer vers la destination](../assets/ui/activate-destinations/browse-tab-activate.png)
 
-Sélectionnez le nom de la destination pour accéder au processus d’activation.
-
-![activate-flow](../assets/ui/activate-destinations/activate-flow.png)
-
->[!NOTE]
->
->Si un processus d’activation existe déjà pour une destination, vous pouvez voir les segments qui sont actuellement activés pour la destination. Sélectionnez **[!UICONTROL Modifier l’activation]** dans le rail de droite et suivez les étapes ci-dessous pour modifier les informations sur l’activation.
-
-Une fois que vous avez sélectionné une destination, sélectionnez **[!UICONTROL Activer]**.
+Suivez les étapes de la section suivante pour sélectionner les segments à activer.
 
 ### [!UICONTROL Sélectionner les ] segments, étape  {#select-segments}
 
