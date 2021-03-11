@@ -2,14 +2,14 @@
 keywords: Experience Platform ; JupyterLab ; blocs-notes ; Espace de travail des données ; sujets populaires ; service de requête
 solution: Experience Platform
 title: Service de requête sur ordinateur portable Jupyter
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 description: Adobe Experience Platform vous permet d’utiliser le langage de requête structuré (SQL) dans Data Science Workspace en intégrant Query Service à JupyterLab en tant que fonctionnalité standard. Ce didacticiel présente des exemples de requêtes SQL pour des cas d'utilisation courants afin d'explorer, de transformer et d'analyser les données Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '818'
-ht-degree: 66%
+source-wordcount: '824'
+ht-degree: 60%
 
 ---
 
@@ -98,15 +98,13 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
 ## Interrogation de vos données {#query-your-data}
 
-Entrez les requêtes SQL suivantes dans des cellules de notebook distinctes. Exécutez une requête en cliquant sur sa cellule, puis sur le bouton de **[!UICONTROL lecture]**. Les résultats des requêtes réussies ou les journaux d’erreurs sont affichés sous la cellule exécutée.
+Entrez les requêtes SQL suivantes dans des cellules de notebook distinctes. Exécutez une requête en la sélectionnant dans sa cellule, puis en sélectionnant le bouton **[!UICONTROL play]**. Les résultats des requêtes réussies ou les journaux d’erreurs sont affichés sous la cellule exécutée.
 
-Lorsqu&#39;un bloc-notes est inactif pendant une longue période, la connexion entre le bloc-notes et [!DNL Query Service] peut se rompre. Dans ce cas, redémarrez [!DNL JupyterLab] en cliquant sur le bouton **[!UICONTROL Alimentation]** situé dans le coin supérieur droit.
+Lorsqu&#39;un bloc-notes est inactif pendant une longue période, la connexion entre le bloc-notes et [!DNL Query Service] peut se rompre. Dans ce cas, redémarrez [!DNL JupyterLab] en sélectionnant le bouton **Redémarrer** ![Redémarrer](../images/jupyterlab/user-guide/restart_button.png) situé dans le coin supérieur droit à côté du bouton d&#39;alimentation.
 
-![](../images/jupyterlab/query/restart_button.png)
+Le noyau du bloc-notes se réinitialise mais les cellules resteront, réexécutez toutes les cellules pour continuer là où vous l&#39;aviez laissé.
 
-Le noyau du notebook sera réinitialisé, mais les cellules seront conservées. Exécutez de nouveau **toutes** les cellules pour reprendre là où vous vous étiez arrêté.
-
-### Décompte horaire de visiteurs  {#hourly-visitor-count}
+### Décompte horaire de visiteurs {#hourly-visitor-count}
 
 La requête suivante renvoie le décompte horaire de visiteurs pour une date spécifique :
 
@@ -188,7 +186,7 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-L’exécution de la requête modifiée stockera les résultats dans `hourly_actions_date_range` en tant que cadre de données. Exécutez la fonction suivante dans une nouvelle cellule pour prévisualiser les résultats :
+L&#39;exécution de la requête modifiée stocke les résultats dans `hourly_actions_date_range` en tant que base de données. Exécutez la fonction suivante dans une nouvelle cellule pour prévisualiser les résultats :
 
 ```python
 hourly_actions_date_rage.head()
