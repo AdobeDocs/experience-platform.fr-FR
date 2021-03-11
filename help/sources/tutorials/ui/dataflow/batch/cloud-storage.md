@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; flux de données ; flux de données
 solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de lot d’Enregistrements Cloud dans l’interface utilisateur
-topic: overview
-type: Tutorial
+topic: aperçu
+type: Tutoriel
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit la procédure à suivre pour configurer un nouveau flux de données à l’aide de votre compte d’enregistrement cloud.
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 115442a90ab56a93748bf161aa2e7ed680980f6e
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1874'
 ht-degree: 3%
 
 ---
@@ -33,7 +33,7 @@ De plus, ce didacticiel nécessite que vous disposiez d’un compte d’enregist
 
 [!DNL Experience Platform] prend en charge les formats de fichier suivants à ingérer à partir d’enregistrements externes :
 
-* Valeurs séparées par des délimiteurs (DSV) : La prise en charge des fichiers de données au format DSV est actuellement limitée aux valeurs séparées par des virgules. La valeur des en-têtes de champ des fichiers au format DSV ne doit être composée que de caractères alphanumériques et de traits de soulignement. La prise en charge des fichiers DSV généraux sera assurée à l’avenir.
+* Valeurs séparées par des délimiteurs (DSV) : Toute valeur à caractère unique peut être utilisée comme délimiteur pour les fichiers de données au format DSV.
 * [!DNL JavaScript Object Notation] (JSON) : Les fichiers de données au format JSON doivent être compatibles XDM.
 * [!DNL Apache Parquet]: Les fichiers de données au format Parquet doivent être compatibles XDM.
 
