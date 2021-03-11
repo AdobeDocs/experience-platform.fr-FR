@@ -6,7 +6,7 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
+source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
 workflow-type: tm+mt
 source-wordcount: '2151'
 ht-degree: 15%
@@ -30,7 +30,7 @@ Les étapes du processus d’activation varient légèrement d’un type de dest
 
 S&#39;applique à : Toutes les destinations
 
-Dans l’interface utilisateur de Adobe Experience Platform, accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]**, puis appuyez sur le bouton **[!UICONTROL Activer]** correspondant à la destination à laquelle vous souhaitez activer vos segments, comme illustré dans l’image ci-dessous.
+Dans l’interface utilisateur de Adobe Experience Platform, accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]**, puis cliquez sur le bouton **[!UICONTROL Activer]** correspondant à la destination à laquelle vous souhaitez activer vos segments, comme illustré dans l’image ci-dessous.
 
 ![activer vers la destination](../assets/ui/activate-destinations/browse-tab-activate.png)
 
