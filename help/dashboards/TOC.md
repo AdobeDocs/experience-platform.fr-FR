@@ -6,10 +6,10 @@ breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Visualisez les données dʼExperience Platform sur des tableaux de bord personnalisables.
 feature: Gestion des données
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 4b087685f065d05894fb45c19fce453346448614
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 63%
+source-wordcount: '40'
+ht-degree: 57%
 
 ---
 
@@ -22,4 +22,6 @@ ht-degree: 63%
    * [Segments](guides/segments.md)
    * [Destinations](guides/destinations.md)
    * [Utilisation des licences](guides/license-usage.md)
+* [Modifier les tableaux de bord](modify.md)
+* [Bibliothèque de widgets](widget-library.md)
 * [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
