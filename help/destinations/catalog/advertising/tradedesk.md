@@ -1,11 +1,11 @@
 ---
 keywords: publicité ; le bureau de commerce ;
 title: Connexion au bureau de commerce
-description: 'Le Trade Desk est une plate-forme en libre-service permettant aux acheteurs d''annonces publicitaires d''exécuter des reciblages et d''audience de campagnes numériques ciblées à l''échelle de l''affichage, de la vidéo et des sources d''inventaire mobiles. '
+description: 'Le Trade Desk est une plate-forme en libre-service permettant aux acheteurs d’annonces publicitaires d’exécuter des reciblages et d’audience de campagnes numériques ciblées à l’échelle de l’affichage, de la vidéo et des sources d’inventaire mobiles. '
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '609'
 ht-degree: 5%
 
 ---
@@ -17,13 +17,17 @@ ht-degree: 5%
 
 [!DNL The Trade Desk] est une plateforme en libre-service permettant aux acheteurs d’annonces publicitaires d’exécuter des reciblages et d’audience de campagnes numériques ciblées sur l’affichage, la vidéo et les sources d’inventaire mobiles.
 
-Pour envoyer des données de profil à [!DNL The Trade Desk], vous devez d&#39;abord vous connecter à la destination.
+Pour envoyer des données de profil à [!DNL Trade Desk], vous devez d&#39;abord vous connecter à la destination.
 
 ## Spécifications de la destination {#destination-specs}
 
-Notez les détails suivants spécifiques à la destination [!DNL The Trade Desk] :
+Notez les détails suivants spécifiques à la destination [!DNL Trade Desk] :
 
 * Vous pouvez envoyer les [identités](../../../identity-service/namespaces.md) suivantes à [!DNL The Trade Desk] destinations : [!DNL The Trade Desk ID], [!DNL IDFA], [!DNL GAID].
+
+>[!IMPORTANT]
+>
+>Si vous souhaitez créer votre première destination avec [!DNL The Trade Desk] et que vous n’avez pas activé la fonctionnalité de synchronisation des identifiants [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) dans le service d’identification des Experience Cloud par le passé (avec Adobe Audience Manager ou d’autres applications), contactez le service de conseil en Adobe ou le service à la clientèle pour activer la synchronisation des identifiants. Si vous aviez précédemment configuré des intégrations [!DNL The Trade Desk] dans l&#39;Audience Manager, les synchronisations d&#39;ID que vous avez configurées sont transférées à Platform.
 
 ## Cas d’utilisation {#use-cases}
 
@@ -50,7 +54,7 @@ Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez 
 * **[!UICONTROL Nom]** : Nom par lequel vous reconnaîtrez cette destination dans le futur.
 * **[!UICONTROL Description]** : Description qui vous aidera à identifier cette destination dans le futur.
 * **[!UICONTROL ID]** du compte : Votre ID [!DNL Trade Desk] de compte.
-* **[!UICONTROL Emplacement]** du serveur : Demandez à votre  [!DNL The Trade Desk] représentant quel serveur régional vous devriez utiliser. Voici les serveurs régionaux disponibles :
+* **[!UICONTROL Emplacement]** du serveur : Demandez à votre  [!DNL Trade Desk] représentant quel serveur régional vous devriez utiliser. Voici les serveurs régionaux disponibles :
 
    * **[!UICONTROL Europe]**
    * **[!UICONTROL Singapour]**
@@ -79,4 +83,4 @@ Si vous utilisez plusieurs mappages de périphériques (identifiants de cookie, 
 
 ## Données exportées {#exported-data}
 
-Pour vérifier si les données ont bien été exportées vers la destination [!DNL The Trade Desk], vérifiez votre compte [!DNL The Trade Desk]. Si l’activation a réussi, les audiences sont renseignées dans votre compte.
+Pour vérifier si les données ont bien été exportées vers la destination [!DNL The Trade Desk], vérifiez votre compte [!DNL Trade Desk]. Si l’activation a réussi, les audiences sont renseignées dans votre compte.
