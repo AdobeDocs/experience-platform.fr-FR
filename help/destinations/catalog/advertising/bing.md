@@ -3,10 +3,10 @@ keywords: 'publicité ; bing; '
 title: Connexion Microsoft Bing
 description: Avec la destination de la connexion Microsoft Bing, vous pouvez exécuter le reciblage et l'audience de campagnes numériques ciblées dans Microsoft Display Advertising.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 6%
+source-wordcount: '527'
+ht-degree: 5%
 
 ---
 
@@ -22,6 +22,10 @@ Pour envoyer des données de profil à [!DNL Microsoft Bing], vous devez d&#39;a
 Notez les détails suivants spécifiques à la destination [!DNL Microsoft Bing] :
 
 * Vous pouvez envoyer les [identités](../../../identity-service/namespaces.md) suivantes à [!DNL Microsoft Bing] destinations : [!DNL Microsoft ID].
+
+>[!IMPORTANT]
+>
+>Si vous souhaitez créer votre première destination avec [!DNL Microsoft Bing] et que vous n’avez pas activé la fonctionnalité de synchronisation des identifiants [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) dans le service d’identification des Experience Cloud par le passé (avec Adobe Audience Manager ou d’autres applications), contactez le service de conseil en Adobe ou le service à la clientèle pour activer la synchronisation des identifiants. Si vous aviez précédemment configuré des intégrations [!DNL Microsoft Bing] dans l&#39;Audience Manager, les synchronisations d&#39;ID que vous avez configurées sont transférées à Platform.
 
 ## Cas d’utilisation {#use-cases}
 
