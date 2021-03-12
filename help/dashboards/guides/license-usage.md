@@ -5,15 +5,15 @@ description: Adobe Experience Platform fournit un tableau de bord par lequel vou
 topic: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 084aaa315f694d696abee7f078be3a121111f6cc
+source-git-commit: 3908011b31dd24b13a58a2bc5ad5137dd3af5f63
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 1%
+source-wordcount: '656'
+ht-degree: 4%
 
 ---
 
 
-# (Bêta) [!UICONTROL Utilisation de la licence] tableau de bord {#license-usage-dashboard}
+# (bêta) tableau de bord d&#39;utilisation de la licence {#license-usage-dashboard}
 
 >[!IMPORTANT]
 >
@@ -43,7 +43,7 @@ Pour choisir un sandbox à vue dans le tableau de bord, sélectionnez [!UICONTRO
 
 >[!NOTE]
 >
->Le rapports de consommation des sandbox est cumulé pour tous les sandbox du même type. En d’autres termes, la sélection de [!UICONTROL Production] ou [!UICONTROL Développement] rendra compte de tous les sandbox de production ou de développement, respectivement.
+>Le rapports de consommation des sandbox est cumulé pour tous les sandbox du même type. En d’autres termes, la sélection de [!UICONTROL Production] ou [!UICONTROL Développement] fournit des rapports de consommation pour tous les sandbox de production ou de développement, respectivement.
 
 ![](../images/license-usage/select-sandbox.png)
 
@@ -53,26 +53,35 @@ Après avoir sélectionné un sandbox, vous pouvez utiliser la liste déroulante
 
 ![](../images/license-usage/select-date-range.png)
 
-### Widgets et mesures
+## Widgets
 
-Le tableau de bord d’utilisation des licences est composé de widgets qui affichent des mesures en lecture seule fournissant des informations importantes sur l’utilisation des licences de votre entreprise. Pour en savoir plus sur ces widgets, voir la section des widgets disponibles dans ce guide.
+Le tableau de bord d’utilisation des licences est composé de widgets qui affichent des mesures en lecture seule fournissant des informations importantes sur l’utilisation des licences de votre entreprise. Les mesures visibles dépendent de la licence spécifique de votre entreprise (voir la section [mesures disponibles](#available-metrics) pour plus de détails).
 
-## Widgets disponibles {#available-widgets}
+Chaque widget affiche un graphique linéaire qui compare les chiffres réels de votre entreprise au total disponible avec les licences de votre entreprise et fournit un pourcentage de l’utilisation totale.
 
-Experience Platform fournit actuellement un widget que vous pouvez utiliser pour visualiser l’utilisation des licences, avec d’autres widgets bientôt disponibles.
+![](../images/license-usage/widgets.png)
 
-### [!UICONTROL Audiences adressables] {#addressable-audiences}
+## Mesures disponibles
 
-Le widget **[!UICONTROL audiences adressables]** affiche le nombre total de profils fusionnés au sein de la banque de données de Profil, après avoir appliqué une stratégie de fusion générée par le système pour combiner des fragments de profil de tous les jeux de données actuels à l&#39;aide d&#39;un algorithme de graphique déterministe (privé).
+Le tableau de bord d’utilisation des licences comprend actuellement quatre mesures :
 
-Pour plus d&#39;informations sur les fragments et les profils fusionnés, veuillez commencer par lire la section *fragments de Profil par rapport aux profils fusionnés* de la [vue d&#39;ensemble du Profil](../../profile/home.md).
+* [!UICONTROL Audience]  adressable (mesurée par le nombre de profils)
+* [!UICONTROL Richesse moyenne du profil]
+* [!UICONTROL Enregistrement total consommé]
+* [!UICONTROL Taux de segmentation des données analysées]
 
->[!NOTE]
->
->La stratégie de fusion utilisée pour calculer cette mesure est générée par un Experience Platform et ne peut pas être modifiée, pas plus qu’une autre stratégie de fusion ne peut être sélectionnée. Cette stratégie de fusion générée par le système n&#39;est pas identique à la stratégie de fusion par défaut utilisée pour calculer [!UICONTROL la taille d&#39;Audience] dans le tableau de bord [!DNL Profile]. Par conséquent, le nombre d&#39;audiences dans les tableaux de bord [!UICONTROL Utilisation de la licence] et [!DNL Profile] ne sera probablement pas exactement identique.
+La définition de chacune de ces mesures varie en fonction des licences achetées par votre entreprise. Pour obtenir des définitions détaillées de chaque mesure, veuillez consulter la documentation appropriée sur la description du produit :
 
-![](../images/license-usage/addressable-audiences.png)
+| Licence | Description du produit |
+|---|---|
+| <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD LOURD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>Adobe Experience Platform:OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>RT CLIENT DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL À 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL À 50M</li></ul> | [Plateforme de données clients en temps réel](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL to 10M</li><li>AEP:OD ACTIVATION PRFL JUSQU’À 50 M</li></ul> | [activation Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:INTELLIGENCE OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 
 ## Étapes suivantes
 
-En suivant ce document, vous devriez maintenant pouvoir localiser le tableau de bord d&#39;utilisation de la licence et sélectionner un sandbox à vue. Vous devez également comprendre les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’interface utilisateur Experience Platform, consultez le [Guide de l’interface utilisateur de la plate-forme](../../landing/ui-guide.md).
+Après avoir lu ce document, vous pouvez localiser le tableau de bord d&#39;utilisation de la licence et sélectionner un sandbox à vue. Vous pouvez également trouver d’autres informations sur les mesures disponibles pour votre entreprise, en fonction des licences achetées par votre entreprise.
+
+Pour en savoir plus sur les autres fonctionnalités disponibles dans l’interface utilisateur de l’Experience Platform, consultez le [Guide de l’interface utilisateur de la plate-forme](../../landing/ui-guide.md).
