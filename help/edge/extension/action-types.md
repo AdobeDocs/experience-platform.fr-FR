@@ -1,11 +1,13 @@
 ---
 title: Types d’action dans l’extension Adobe Experience Platform Web SDK
 description: Découvrez les différents types d'action fournis par l'extension Adobe Experience Platform Web SDK à Adobe Experience Platform Launch.
+solution: Experience Platform
+feature: SDK Web
 translation-type: tm+mt
-source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
+source-git-commit: 9ce6dd5a290b55da04f4ae185cab96c120777775
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 6%
+source-wordcount: '548'
+ht-degree: 4%
 
 ---
 
@@ -18,9 +20,15 @@ Cette page décrit les types d&#39;action disponibles.
 
 ## Envoyer un événement
 
-Envoie un événement à l&#39;Adobe [!DNL Experience Platform] afin que Adobe Experience Platform puisse collecter les données que vous envoyez et agir en conséquence. Sélectionnez une instance (si vous en avez plusieurs). Si le événement se produit au début d’un chargement de page ou lors d’un changement de vue dans une application d’une seule page, sélectionnez **[!UICONTROL Se produit au début d’une vue]**.
+Envoie un événement à l&#39;Adobe [!DNL Experience Platform] afin que Adobe Experience Platform puisse collecter les données que vous envoyez et agir en conséquence. Sélectionnez une instance (si vous en avez plusieurs). Toutes les données que vous souhaitez envoyer peuvent être envoyées dans le champ **[!UICONTROL Données XDM]**. Utilisez un objet JSON conforme à la structure de votre schéma XDM. Cet objet peut être créé sur votre page ou via un **[!UICONTROL Code personnalisé]** **[!UICONTROL élément de données]**.
 
-Toutes les données que vous souhaitez envoyer peuvent être envoyées dans le champ **[!UICONTROL Données XDM]**. Utilisez un objet JSON conforme à la structure de votre schéma XDM. Cet objet peut être créé sur votre page ou via un **[!UICONTROL Code personnalisé]** **[!UICONTROL élément de données]**.
+D’autres champs du type d’action Envoyer le Événement peuvent également s’avérer utiles en fonction de votre implémentation. Veuillez noter que ces champs sont tous facultatifs.
+
+- **Type :** ce champ vous permet de spécifier un type d&#39;événement qui sera enregistré dans votre schéma XDM. Pour plus d’informations sur les types d&#39;événement par défaut, consultez la [documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api).
+- **Fusionner l’ID :** si vous souhaitez spécifier un  [ID ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) de fusion pour votre événement, vous pouvez le faire dans ce champ. Veuillez noter que les solutions en aval ne peuvent pas fusionner vos données de événement pour le moment.
+- **ID de jeu de données :** si vous devez envoyer des données à un jeu de données autre que celui que vous avez spécifié dans votre configuration de périphérie, vous pouvez spécifier cet ID de jeu de données ici.
+- **Le document se décharge :** si vous souhaitez vous assurer que les événements atteignent le serveur même si l’utilisateur quitte la page, cochez la case  **[!UICONTROL Document qui]** se décharge. Cela permet aux événements d&#39;atteindre le serveur mais les réponses sont ignorées.
+- **Rendu des décisions de personnalisation visuelle :** si vous souhaitez rendre du contenu personnalisé sur votre page, cochez la case  **[!UICONTROL Rendu des]** décisions de personnalisation visuelle. Vous pouvez également spécifier des étendues de décision si nécessaire. Voir la [documentation sur la personnalisation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) pour plus d’informations sur le rendu du contenu personnalisé.
 
 ## Définir le consentement
 
@@ -34,4 +42,4 @@ Si vous souhaitez réinitialiser l’ID de fusion de événement sur votre page,
 
 ## Eléments à suivre
 
-Après avoir défini les types d&#39;action, [configurez vos types d&#39;élément de données](data-element-types.md).
+Après avoir défini vos actions, [configurez vos types d’éléments de données](data-element-types.md).
