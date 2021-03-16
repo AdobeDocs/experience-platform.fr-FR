@@ -6,9 +6,9 @@ topic: aperçu
 type: Tutoriel
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit la procédure à suivre pour configurer un nouveau flux de données à l’aide de votre compte d’enregistrement cloud.
 translation-type: tm+mt
-source-git-commit: 115442a90ab56a93748bf161aa2e7ed680980f6e
+source-git-commit: 1fb4a272a914bf4ce7653f3f4f7fff63f36f9a48
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1924'
 ht-degree: 3%
 
 ---
@@ -41,38 +41,52 @@ De plus, ce didacticiel nécessite que vous disposiez d’un compte d’enregist
 
 Après avoir créé votre compte d’enregistrement cloud, l’étape **[!UICONTROL Sélectionner les données]** s’affiche, ce qui vous permet d’explorer la hiérarchie des fichiers d’enregistrement cloud.
 
-* La moitié gauche de l&#39;interface est un navigateur d&#39;annuaire qui affiche les fichiers et répertoires de votre serveur.
-* La moitié droite de l&#39;interface vous permet de prévisualisation jusqu&#39;à 100 lignes de données à partir d&#39;un fichier compatible.
+* La partie gauche de l’interface est un navigateur d’annuaire qui affiche vos fichiers et répertoires d’enregistrement cloud.
+* La partie droite de l&#39;interface vous permet de prévisualisation jusqu&#39;à 100 lignes de données à partir d&#39;un fichier compatible.
 
-La sélection d’un dossier répertorié vous permet de parcourir la hiérarchie de dossiers en dossiers plus profonds. Une fois que vous avez sélectionné un fichier ou un dossier compatible, la liste déroulante **[!UICONTROL Sélectionner le format de données]** s&#39;affiche, dans laquelle vous pouvez choisir un format pour afficher les données dans la fenêtre de prévisualisation.
+![interface](../../../../images/tutorials/dataflow/cloud-storage/batch/interface.png)
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+La sélection d’un dossier répertorié vous permet de parcourir la hiérarchie de dossiers en dossiers plus profonds. Vous pouvez sélectionner un seul dossier pour ingérer tous les fichiers de manière récursive dans le dossier. Lors de l’importation d’un dossier entier, vous devez vous assurer que tous les fichiers qu’il contient partagent le même schéma.
 
-Sélectionnez le format de données approprié pour le fichier à importer et laissez la fenêtre de prévisualisation s’ouvrir pendant quelques secondes.
+Une fois que vous avez sélectionné un fichier ou un dossier compatible, sélectionnez le format de données correspondant dans le menu déroulant [!UICONTROL Sélectionner le format de données].
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/data-format.png)
+Le tableau suivant affiche le format de données approprié pour les types de fichiers pris en charge :
 
-Vous pouvez définir un délimiteur personnalisé lors de l’importation de fichiers délimités. Sélectionnez l&#39;option **[!UICONTROL Délimiteur]**, puis sélectionnez un délimiteur dans le menu déroulant. Le menu affiche les options les plus fréquemment utilisées pour les délimiteurs, notamment une virgule (`,`), une tabulation (`\t`) et une barre verticale (`|`). Vous pouvez également sélectionner **[!UICONTROL Personnalisé]** et saisir un délimiteur personnalisé de votre choix dans la barre d’entrée contextuelle.
+| Type de fichier | Sur le format des données saisies |
+| --- | --- |
+| CSV | [!UICONTROL Délimité] |
+| JSON | [!UICONTROL JSON] |
+| Parquet | [!UICONTROL Parquet XDM] |
+
+Sélectionnez **[!UICONTROL JSON]** et attendez quelques secondes que l’interface de prévisualisation soit renseignée.
+
+![select-data](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+
+>[!NOTE]
+>
+>Contrairement aux types de fichiers délimités et JSON, les fichiers au format Parquet ne sont pas disponibles pour la prévisualisation.
+
+L&#39;interface de prévisualisation vous permet d&#39;examiner le contenu et la structure d&#39;un fichier. Par défaut, l’interface de prévisualisation affiche le premier fichier du dossier sélectionné.
+
+Pour prévisualisation à un autre fichier, sélectionnez l&#39;icône de prévisualisation en regard du nom du fichier à inspecter.
+
+![prévisualisation par défaut](../../../../images/tutorials/dataflow/cloud-storage/batch/default-preview.png)
+
+Une fois que vous avez examiné le contenu et la structure des fichiers de votre dossier, sélectionnez **[!UICONTROL Suivant]** pour importer tous les fichiers du dossier de manière récursive.
+
+![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
+
+Si vous préférez sélectionner un fichier spécifique, sélectionnez le fichier à importer, puis sélectionnez **[!UICONTROL Suivant]**.
+
+![select-file](../../../../images/tutorials/dataflow/cloud-storage/batch/select-file.png)
+
+### Définition d’un délimiteur personnalisé pour les fichiers délimités
+
+Vous pouvez définir un délimiteur personnalisé lors de l’importation de fichiers délimités. Sélectionnez l&#39;option **[!UICONTROL Délimiteur]**, puis sélectionnez un délimiteur dans le menu déroulant. Le menu affiche les options les plus fréquemment utilisées pour les délimiteurs, notamment une virgule (`,`), une tabulation (`\t`) et une barre verticale (`|`). Si vous préférez utiliser un délimiteur personnalisé, sélectionnez **[!UICONTROL Personnalisé]** et entrez un délimiteur à un caractère dans la barre d’entrée contextuelle.
 
 Une fois que vous avez sélectionné le format de données et défini votre délimiteur, sélectionnez **[!UICONTROL Suivant]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
-
-### Invitation de fichiers Parquet ou JSON
-
-Les comptes d’enregistrement Cloud prennent également en charge les fichiers JSON et Parquet. Les fichiers de parquets doivent être compatibles XDM, tandis que les fichiers JSON ne doivent pas nécessairement faire l’objet d’une plainte XDM. Pour importer des fichiers JSON ou Parquet, sélectionnez le format de fichier approprié dans le navigateur d’annuaire et appliquez un format de données compatible à partir de l’interface de droite.
-
-Si le format de données est JSON, une prévisualisation s’affiche, avec des informations sur les données contenues dans le fichier. Dans l’écran prévisualisation, vous pouvez indiquer si le fichier JSON est compatible XDM en utilisant la liste déroulante **[!UICONTROL compatible XDM]**.
-
-Sélectionnez **[!UICONTROL Suivant]** pour continuer.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
-
->[!IMPORTANT]
->
->Contrairement aux types de fichiers délimités et JSON, les fichiers au format Parquet ne sont pas disponibles pour la prévisualisation.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Mappage des champs de données à un schéma XDM
 
