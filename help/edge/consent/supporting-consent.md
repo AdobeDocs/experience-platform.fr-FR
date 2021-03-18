@@ -3,10 +3,10 @@ title: Prise en charge des préférences de consentement des clients à l’aide
 description: Découvrez comment prendre en charge les préférences de consentement avec le Adobe Experience Platform Web SDK.
 keywords: consentement ; defaultConsent ; consentement par défaut ; setConsent ; mélange de confidentialité des Profils ; mélange de confidentialité des Événements d’expérience ; mélange de confidentialité ;
 translation-type: tm+mt
-source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
+source-git-commit: dd9101079a1093c109f43b268a78c07770221156
 workflow-type: tm+mt
-source-wordcount: '964'
-ht-degree: 33%
+source-wordcount: '977'
+ht-degree: 32%
 
 ---
 
@@ -66,13 +66,16 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     }]
 });
 ```
 
-Si l’utilisateur choisit de opt-out, exécutez la commande `setConsent` avec la préférence de collecte définie sur `n` comme suit :
+Le champ d’heure doit indiquer quand l’utilisateur a mis à jour pour la dernière fois ses préférences de consentement. Si l’utilisateur choisit de opt-out, exécutez la commande `setConsent` avec la préférence de collecte définie sur `n` comme suit :
 
 ```javascript
 alloy("setConsent", {
@@ -82,6 +85,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "n"
+        },
+        metadata: {
+          time: "2021-03-17T15:51:30-07:00"
         }
       }
     }]
@@ -155,6 +161,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     },{
