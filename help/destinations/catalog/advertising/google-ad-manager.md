@@ -3,10 +3,10 @@ keywords: gestionnaire de publicités Google ; publicité Google ; doubleclick ;
 title: Connexion à Google Ad Manager
 description: 'Google Ad Manager, anciennement appelé DoubleClick for Publishers ou DoubleClick AdX, est une plateforme de service publicitaire de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, par le biais de vidéos et dans des applications mobiles.  '
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 34%
+source-wordcount: '754'
+ht-degree: 31%
 
 ---
 
@@ -19,8 +19,6 @@ ht-degree: 34%
 
 Notez les détails suivants spécifiques aux destinations [!DNL Google Ad Manager] :
 
-* Vous pouvez envoyer les [identités](../../../identity-service/namespaces.md) suivantes à [!DNL Google Ads] destinations : [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en), ID de cookie Google, IDFA, GAID, ID de Roku, ID Microsoft et ID TV Amazon Fire.
-   * Google utilisera [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) pour les utilisateurs de la cible en Californie, ainsi que l’ID de cookie Google pour tous les autres utilisateurs.
 * Les audiences activées sont créées par programmation dans la plate-forme [!DNL Google].
 * La plate-forme n’inclut pas actuellement de mesure pour valider l’activation réussie. Consultez le nombre d’audiences dans Google pour valider l’intégration et comprendre la taille de ciblage des audiences.
 
@@ -28,7 +26,21 @@ Notez les détails suivants spécifiques aux destinations [!DNL Google Ad Manage
 >
 >Si vous souhaitez créer votre première destination avec [!DNL Google Ad Manager] et que vous n’avez pas activé la fonctionnalité de synchronisation des identifiants [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) dans le service d’identification des Experience Cloud par le passé (avec Audience Manager ou d’autres applications), contactez le service de conseil en Adobe ou le service à la clientèle pour activer la synchronisation des identifiants. Si vous aviez précédemment configuré des intégrations [!DNL Google] dans l&#39;Audience Manager, les synchronisations d&#39;ID que vous avez configurées sont transférées à Platform.
 
-### Type d&#39;exportation {#export-type}
+## Identités prises en charge {#supported-identities}
+
+[!DNL Google Ad Manager] prend en charge l&#39;activation des identités décrites dans le tableau ci-dessous.
+
+| Identité de cible | Description | Considérations |
+|---|---|---|
+| GAID | [!DNL Google Advertising ID] | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage GAID. |
+| IDFA | [!DNL Apple ID for Advertisers] | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage IDFA. |
+| UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), également appelé  [!DNL Device ID]. Identifiant numérique à 38 chiffres associé par l’Audience Manager à chaque périphérique avec lequel elle interagit. | Google utilise [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) pour les utilisateurs de la cible en Californie et l’ID de cookie Google pour tous les autres utilisateurs. |
+| [!DNL Google] identifiant de cookie | [!DNL Google] identifiant de cookie | [!DNL Google] utilise cet identifiant pour les utilisateurs de cible en dehors de la Californie. |
+| RIDA | Identifiant Roku pour la publicité. Cet identifiant identifie de manière unique les périphériques Roku. |  |
+| MAID | ID de publicité Microsoft. Cet identifiant identifie de manière unique les périphériques exécutant Windows 10. |  |
+| ID TV Amazon Fire | Cet identifiant identifie de manière unique les téléviseurs Amazon Fire. |  |
+
+## Type d&#39;exportation {#export-type}
 
 **Exportation**  de segment : vous exportez tous les membres d’un segment (audience) vers la destination Google.
 
