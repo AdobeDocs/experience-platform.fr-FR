@@ -3,10 +3,10 @@ keywords: connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 12%
+source-wordcount: '1141'
+ht-degree: 11%
 
 ---
 
@@ -35,19 +35,29 @@ Pour les cible sur les réseaux sociaux, ils peuvent intégrer les données clie
 
 Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les ID d&#39;adhésion et les niveaux de clients associés, pour créer de nouveaux segments d&#39;audience qu&#39;ils peuvent cible via la destination [!DNL Facebook].
 
-## Caractéristiques de la destination {#destination-specs}
-
-### Gouvernance des données pour les destinations [!DNL Facebook] {#data-governance}
+## Gouvernance des données pour les destinations [!DNL Facebook] {#data-governance}
 
 >[!IMPORTANT]
 >
 >Les données envoyées à [!DNL Facebook] ne doivent pas inclure d’identités assemblées. Vous êtes responsable du respect de cette obligation et pouvez le faire en vous assurant que les segments sélectionnés pour l’activation n’utilisent pas d’option de raccordement dans leur stratégie de fusion. En savoir plus sur [les stratégies de fusion](/help/profile/ui/merge-policies.md).
 
-### Type d&#39;exportation {#export-type}
+## Identités prises en charge {#supported-identities}
+
+[!DNL Facebook Custom Audiences] prend en charge l&#39;activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+
+| Identité de cible | Description | Considérations |
+|---|---|---|
+| GAID | Identifiant Google Advertising | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage GAID. |
+| IDFA | Identifiant Apple pour les annonceurs | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage IDFA. |
+| phone_sha256 | Numéros de téléphone hachés avec l&#39;algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les numéros de téléphone hachés SHA256. Suivez les instructions de la section [Exigences de correspondance d&#39;ID](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de nommage appropriés pour les numéros de téléphone en texte brut et hachés, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hachage automatiquement les données sur l’activation. |
+| email_lc_sha256 | Adresses électroniques hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA256. Suivez les instructions de la section [Exigences de correspondance d&#39;ID](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de nommage appropriés pour les adresses électroniques en texte brut et hachées, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hachage automatiquement les données sur l’activation. |
+| extern_id | ID utilisateur personnalisés | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage personnalisé. |
+
+## Type d&#39;exportation {#export-type}
 
 **Exportation**  de segment : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone, etc.) utilisé dans la destination Facebook.
 
-### Conditions préalables du compte Facebook {#facebook-account-prerequisites}
+## Conditions préalables du compte Facebook {#facebook-account-prerequisites}
 
 Avant d’envoyer vos segments ciblés à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
 
@@ -58,13 +68,13 @@ Avant d’envoyer vos segments ciblés à [!DNL Facebook], assurez-vous de respe
    > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. Ceci est obligatoire pour l’intégration de la [!DNL Adobe Experience Platform].
 - Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, où `accountID` est votre [!DNL Facebook Ad Account ID].
 
-### Exigences de correspondance d&#39;ID {#id-matching-requirements}
+## Exigences de correspondance d&#39;ID {#id-matching-requirements}
 
 [!DNL Facebook] exige qu’aucune information d’identification personnelle (identification personnelle) ne soit envoyée en clair. Par conséquent, les audiences activées pour [!DNL Facebook] peuvent être masquées par des identifiants *hachés*, tels que des adresses électroniques ou des numéros de téléphone.
 
 En fonction du type d’ID que vous saisissez dans Adobe Experience Platform, vous devez respecter les exigences correspondantes.
 
-#### Exigences de hachage des numéros de téléphone {#phone-number-hashing-requirements}
+### Exigences de hachage des numéros de téléphone {#phone-number-hashing-requirements}
 
 Il existe deux méthodes pour activer les numéros de téléphone dans [!DNL Facebook] :
 
@@ -76,7 +86,7 @@ Il existe deux méthodes pour activer les numéros de téléphone dans [!DNL Fac
 >Les numéros de téléphone saisis dans l&#39;espace de nommage `Phone` ne peuvent pas être activés dans [!DNL Facebook].
 
 
-#### Conditions requises pour le hachage des courriels {#email-hashing-requirements}
+### Conditions requises pour le hachage des courriels {#email-hashing-requirements}
 
 Vous pouvez choisir de hacher les adresses électroniques avant de les importer dans Adobe Experience Platform, ou vous pouvez choisir de travailler avec les adresses électroniques en clair dans l&#39;Experience Platform et de faire en sorte que notre algorithme les hache sur l&#39;activation.
 
@@ -99,7 +109,7 @@ Si vous choisissez de hacher vous-même les adresses électroniques, veillez à 
 
 ![Transformation du mappage des identités](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-#### Utilisation d’espaces de nommage personnalisés {#custom-namespaces}
+### Utilisation d’espaces de nommage personnalisés {#custom-namespaces}
 
 Avant de pouvoir utiliser l&#39;espace de nommage `Extern_ID` pour envoyer des données à [!DNL Facebook], veillez à synchroniser vos propres identifiants à l&#39;aide de [!DNL Facebook Pixel]. Consultez la [documentation officielle](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) pour obtenir des informations détaillées.
 
