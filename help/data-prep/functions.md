@@ -5,7 +5,7 @@ title: Fonctions de mappage des préférences de données
 topic: aperçu
 description: Ce document présente les fonctions de mappage utilisées avec l’API de données.
 translation-type: tm+mt
-source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
+source-git-commit: 85a99171a6786b47bf50d4579a3ebc88af3c82f6
 workflow-type: tm+mt
 source-wordcount: '3719'
 ht-degree: 18%
@@ -35,7 +35,7 @@ Les données des sous-champs sont accessibles à l’aide de la notation point. 
 
 Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, y compris les exemples d’expressions et les résultats obtenus.
 
-### Fonctions de chaîne
+### Fonctions de chaîne {#string}
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 | extract_regex | Extrait les groupes de la chaîne d’entrée, en fonction d’une expression régulière. | <ul><li>CHAÎNE : **Obligatoire** Chaîne à partir de laquelle vous extrayez les groupes.</li><li>REGEX : **Obligatoire** expression régulière que vous souhaitez que le groupe corresponde.</li></ul> | extract_regex(STRING, REGEX) | extract_regex &#x200B;(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | correspond_regex | Vérifie si la chaîne correspond à l’expression régulière saisie. | <ul><li>CHAÎNE : **Obligatoire** La chaîne que vous vérifiez correspond à l&#39;expression normale.</li><li>REGEX : **Obligatoire** expression régulière par rapport à laquelle vous comparez.</li></ul> | correspond_regex(STRING, REGEX) | correspond_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | vrai |
 
-### Fonctions de hachage
+### Fonctions de hachage {#hashing}
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 | md5 | Récupère une entrée et produit une valeur de hachage à l’aide de MD5. | <ul><li>ENTRÉE : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | Prend une entrée à l’aide d’un algorithme de contrôle de redondance cyclique (CRC) pour produire un code cyclique de 32 bits. | <ul><li>ENTRÉE : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-### Fonctions URL
+### Fonctions URL {#url}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 | get_url_path | Renvoie le chemin d’accès de l’URL donnée. Par défaut, le chemin complet est renvoyé. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le chemin d’accès doit être extrait.</li><li>FULL_PATH : *Facultatif* Valeur booléenne qui détermine si le chemin complet est renvoyé. Si la valeur est définie sur false, seule la fin du chemin est renvoyée.</li></ul> | get_url_path &#x200B;(URL, FULL_PATH) | get_url_path &#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
 | get_url_requête_str | Renvoie la chaîne de requête d’une URL donnée. | <ul><li>URL : **Obligatoire** URL à partir de laquelle vous essayez d’obtenir la chaîne de requête.</li><li>ANCRAGE : **Obligatoire** Détermine ce qui sera fait avec l&#39;ancrage dans la chaîne de requête. Il peut s’agir de l’une des trois valeurs suivantes : &quot;preserve&quot;, &quot;remove&quot; ou &quot;append&quot;.<br><br>Si la valeur est &quot;preserve&quot;, l’ancre est attachée à la valeur renvoyée.<br>Si la valeur est &quot;remove&quot;, l’ancre est supprimée de la valeur renvoyée.<br>Si la valeur est &quot;append&quot;, l’ancre est renvoyée sous forme de valeur distincte.</li></ul> | get_url_requête_str &#x200B;(URL, ANCHOR) | get_url_requête_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; furet#nose&quot;, &quot;keep&quot;)<br>get_url_requête_str (&quot;foo://example.com:8042 /over/there?name=  furet#nose&quot;, &quot;remove&quot;)<br>get_url_requête_str (&quot;foo://example.com :8042/over?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
-### Fonctions de date et d’heure
+### Fonctions de date et d’heure {#date-and-time}
 
 >[!NOTE]
 >
@@ -122,7 +122,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 
 &#x200B;
 
-### Hiérarchies - Objets
+### Hiérarchies - Objets {#objects}
 
 >[!NOTE]
 >
@@ -138,7 +138,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 | is_set | Vérifie si l’objet existe dans les données source. | <ul><li>ENTRÉE : **Obligatoire** Chemin à vérifier s&#39;il existe dans les données source.</li></ul> | is_set(INPUT) | is_set &#x200B;(&quot;evars.evar.field1&quot;) | vrai |
 | nullify | Définit la valeur de l&#39;attribut sur `null`. Il doit être utilisé lorsque vous ne souhaitez pas copier le champ dans le schéma de cible. |  | nullify() | nullify() | `null` |
 
-### Hiérarchies - Tableaux
+### Hiérarchies - Tableaux {#arrays}
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 | join_array | Combine les tableaux les uns avec les autres. | <ul><li>ARRAY : **Obligatoire** Tableau auquel vous ajoutez des éléments.</li><li>VALEURS : La ou les baies à ajouter à la baie parent.</li></ul> | join_array &#x200B;(ARRAY, VALUES) | join_array &#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Prend une liste d&#39;entrées et la convertit en tableau. | <ul><li>INCLUDE_NULLS : **Obligatoire** Valeur booléenne pour indiquer s&#39;il faut inclure ou non des valeurs NULL dans le tableau de réponses.</li><li>VALEURS : **Obligatoire** Éléments à convertir en tableau.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
-### Opérateurs logiques
+### Opérateurs logiques {#logical-operators}
 
 >[!NOTE]
 >
@@ -164,7 +164,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 | decode | Étant donné qu’une clé et une liste de paires clé-valeur sont aplaties dans un tableau, la fonction renvoie la valeur si la clé est trouvée ou renvoie une valeur par défaut si elle est présente dans le tableau. | <ul><li>CLÉ : **Obligatoire** Clé à mettre en correspondance.</li><li>OPTIONS : **Obligatoire** Tableau aplati de paires clé/valeur. Une valeur par défaut peut éventuellement être placée à la fin.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Si le code d&#39;état donné est &quot;ca&quot;, &quot;California&quot;.<br>Si le code d&#39;état donné est &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Si le code d’état ne correspond pas à ce qui suit, &quot;S/O&quot;. |
 | iif | Évalue une expression booléenne donnée et renvoie la valeur spécifiée en fonction du résultat. | <ul><li>EXPRESSION : **Obligatoire** expression booléenne en cours d’évaluation.</li><li>TRUE_VALUE : **Obligatoire** Valeur renvoyée si l’expression est évaluée sur true.</li><li>FALSE_VALUE : **Obligatoire** Valeur renvoyée si l’expression est évaluée sur false.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
-### Agrégation
+### Agrégation {#aggregation}
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 | min | Renvoie le minimum des arguments donnés. Utilise l’ordre naturel. | <ul><li>OPTIONS : **Obligatoire** Un ou plusieurs objets qui peuvent être comparés les uns aux autres.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Renvoie le maximum des arguments donnés. Utilise l’ordre naturel. | <ul><li>OPTIONS : **Obligatoire** Un ou plusieurs objets qui peuvent être comparés les uns aux autres.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-### Conversions de type
+### Conversions de type {#type-conversions}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 | to_float | Convertit une chaîne en une chaîne flottante. | <ul><li>CHAÎNE : **Obligatoire** Chaîne à convertir en Chaîne flottante.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12,34566 |
 | to_integer | Convertit une chaîne en entier. | <ul><li>CHAÎNE : **Obligatoire** Chaîne à convertir en entier.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-### Fonctions JSON
+### Fonctions JSON {#json}
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | Désérialisez le contenu JSON à partir de la chaîne donnée. | <ul><li>CHAÎNE : **Obligatoire** Chaîne JSON à désérialiser.</li></ul> | json_to_object &#x200B;(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; : &quot;Doe&quot;}}) | Objet représentant le fichier JSON. |
 
-### Opérations spéciales
+### Opérations spéciales {#special-operations}
 
 >[!NOTE]
 >
@@ -208,7 +208,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | Génère un identifiant pseudo-aléatoire. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-### Fonctions de l&#39;agent utilisateur
+### Fonctions de l&#39;agent utilisateur {#user-agent}
 
 >[!NOTE]
 >
