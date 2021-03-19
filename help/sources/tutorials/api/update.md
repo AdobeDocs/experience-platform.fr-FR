@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; service de flux ; connexions de mise à jour
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de flux ; comptes de mise à jour
 solution: Experience Platform
-title: Mise à jour des connexions à l’aide de l’API du service de flux
+title: Mise à jour des comptes à l’aide de l’API du service de flux
 topic: aperçu
 type: Tutoriel
-description: Ce didacticiel décrit les étapes de mise à jour des détails et des informations d’identification d’une connexion à l’aide de l’API de service de flux.
+description: Ce didacticiel décrit les étapes de mise à jour des détails et des informations d’identification d’un compte à l’aide de l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: 5187647dfcf82a476bc776bf2b606db228ca70a4
+source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 31%
@@ -14,7 +14,7 @@ ht-degree: 31%
 ---
 
 
-# Mise à jour des connexions à l’aide de l’API du service de flux
+# Mise à jour des comptes à l’aide de l’API du service de flux
 
 Dans certains cas, il peut être nécessaire de mettre à jour les détails d&#39;une connexion source existante. [!DNL Flow Service] permet d’ajouter, de modifier et de supprimer des détails d’une connexion existante par lot ou en flux continu, y compris son nom, sa description et ses informations d’identification.
 
