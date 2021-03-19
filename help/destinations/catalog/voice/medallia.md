@@ -1,9 +1,9 @@
 ---
 keywords: Medallia ; médailla
-title: Étendue de Medallia
+title: Extension Medallia
 description: L'extension Medallia est une voix de la destination client à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 205382b68bd8dde8d40a290c4c4825f851216ce2
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 23%
