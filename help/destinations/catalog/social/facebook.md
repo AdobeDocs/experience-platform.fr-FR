@@ -1,19 +1,19 @@
 ---
 keywords: connexion facebook;connexion facebook;destinations facebook;facebook;instagram;messenger;facebook messenger Messenger
 title: Connexion Facebook
-description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
+description: Activez des profils pour vos campagnes Facebook pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 translation-type: tm+mt
-source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
+source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
 workflow-type: tm+mt
-source-wordcount: '1141'
-ht-degree: 11%
+source-wordcount: '1131'
+ht-degree: 8%
 
 ---
 
 
 # [!DNL Facebook] connexion
 
-Activez les profils de vos campagnes [!DNL Facebook] pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
+Activez des profils pour vos campagnes [!DNL Facebook] pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 
 Vous pouvez utiliser cette destination pour le ciblage des audiences dans la famille [!DNL Facebook’s] d’applications prises en charge par [!DNL Custom Audiences], y compris [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] et [!DNL Messenger]. La sélection de l’application sur laquelle vous souhaitez exécuter la campagne est indiquée au niveau de l’emplacement dans [!DNL Facebook Ads Manager].
 
@@ -39,7 +39,7 @@ Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les ID d&#39;
 
 >[!IMPORTANT]
 >
->Les données envoyées à [!DNL Facebook] ne doivent pas inclure d’identités assemblées. Vous êtes responsable du respect de cette obligation et pouvez le faire en vous assurant que les segments sélectionnés pour l’activation n’utilisent pas d’option de raccordement dans leur stratégie de fusion. En savoir plus sur [les stratégies de fusion](/help/profile/ui/merge-policies.md).
+>Les données envoyées à [!DNL Facebook] ne peuvent pas inclure d’identités assemblées. Vous êtes responsable du respect de cette obligation et pouvez le faire en vous assurant que les segments sélectionnés pour l’activation n’utilisent pas d’option de raccordement dans leur stratégie de fusion. En savoir plus sur [les stratégies de fusion](/help/profile/ui/merge-policies.md).
 
 ## Identités prises en charge {#supported-identities}
 
@@ -47,15 +47,15 @@ Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les ID d&#39;
 
 | Identité de cible | Description | Considérations |
 |---|---|---|
-| GAID | Identifiant Google Advertising | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage GAID. |
-| IDFA | Identifiant Apple pour les annonceurs | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage IDFA. |
+| GAID | Identifiant Google Advertising | Sélectionnez l&#39;identité de la cible GAID lorsque votre identité source est un espace de nommage GAID. |
+| IDFA | Identifiant Apple pour les annonceurs | Sélectionnez l’identité de la cible IDFA lorsque votre identité source est un espace de nommage IDFA. |
 | phone_sha256 | Numéros de téléphone hachés avec l&#39;algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les numéros de téléphone hachés SHA256. Suivez les instructions de la section [Exigences de correspondance d&#39;ID](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de nommage appropriés pour les numéros de téléphone en texte brut et hachés, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hachage automatiquement les données sur l’activation. |
 | email_lc_sha256 | Adresses électroniques hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA256. Suivez les instructions de la section [Exigences de correspondance d&#39;ID](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de nommage appropriés pour les adresses électroniques en texte brut et hachées, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hachage automatiquement les données sur l’activation. |
 | extern_id | ID utilisateur personnalisés | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage personnalisé. |
 
 ## Type d&#39;exportation {#export-type}
 
-**Exportation**  de segment : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone, etc.) utilisé dans la destination Facebook.
+**Exportation**  de segment : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination Facebook.
 
 ## Conditions préalables du compte Facebook {#facebook-account-prerequisites}
 
@@ -65,8 +65,8 @@ Avant d’envoyer vos segments ciblés à [!DNL Facebook], assurez-vous de respe
 - Le compte commercial **Adobe Experience Cloud** doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Pour plus d&#39;informations, consultez [Ajouter des partenaires à votre gestionnaire d&#39;entreprise](https://www.facebook.com/business/help/1717412048538897) dans la documentation Facebook.
    >[!IMPORTANT]
    >
-   > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. Ceci est obligatoire pour l’intégration de la [!DNL Adobe Experience Platform].
-- Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, où `accountID` est votre [!DNL Facebook Ad Account ID].
+   > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. L&#39;autorisation est requise pour l&#39;intégration [!DNL Adobe Experience Platform].
+- Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, où `accountID` correspond à votre [!DNL Facebook Ad Account ID].
 
 ## Exigences de correspondance d&#39;ID {#id-matching-requirements}
 
@@ -78,7 +78,7 @@ En fonction du type d’ID que vous saisissez dans Adobe Experience Platform, vo
 
 Il existe deux méthodes pour activer les numéros de téléphone dans [!DNL Facebook] :
 
-- **Incorporation de numéros** de téléphone bruts : vous pouvez ingérer des numéros de téléphone bruts au  [!DNL E.164] format  [!DNL Platform], qui seront automatiquement hachés à l&#39;activation. Si vous choisissez cette option, veillez à toujours intégrer vos numéros de téléphone bruts dans l&#39;espace de nommage `Phone_E.164`.
+- **Incorporation de numéros** de téléphone bruts : vous pouvez ingérer des numéros de téléphone bruts au  [!DNL E.164] format  [!DNL Platform]. Ils se sont automatiquement heurtés à l&#39;activation. Si vous choisissez cette option, veillez à toujours intégrer vos numéros de téléphone bruts dans l&#39;espace de nommage `Phone_E.164`.
 - **Invitation de numéros** de téléphone hachés : vous pouvez pré-hacher vos numéros de téléphone avant l&#39;assimilation dans  [!DNL Platform]. Si vous choisissez cette option, veillez à toujours intégrer vos numéros de téléphone hachés dans l&#39;espace de nommage `Phone_SHA256`.
 
 >[!NOTE]
@@ -88,7 +88,7 @@ Il existe deux méthodes pour activer les numéros de téléphone dans [!DNL Fac
 
 ### Conditions requises pour le hachage des courriels {#email-hashing-requirements}
 
-Vous pouvez choisir de hacher les adresses électroniques avant de les importer dans Adobe Experience Platform, ou vous pouvez choisir de travailler avec les adresses électroniques en clair dans l&#39;Experience Platform et de faire en sorte que notre algorithme les hache sur l&#39;activation.
+Vous pouvez hacher des adresses électroniques avant de les importer dans Adobe Experience Platform ou utiliser des adresses électroniques en clair dans l’Experience Platform et les faire [!DNL Platform] hacher sur l’activation.
 
 Pour en savoir plus sur l’assimilation d’adresses électroniques dans l’Experience Platform, consultez les sections [présentation de l’assimilation par lots](/help/ingestion/batch-ingestion/overview.md) et [présentation de l’assimilation en flux continu](/help/ingestion/streaming-ingestion/overview.md).
 
