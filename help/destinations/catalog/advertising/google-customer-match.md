@@ -3,9 +3,9 @@ keywords: correspondance client Google ; correspondance client Google ; correspo
 title: Connexion Google Customer Match
 description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 translation-type: tm+mt
-source-git-commit: 494b41265a0eec71ec15c7896eb8c652b3164e18
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1608'
 ht-degree: 4%
 
 ---
@@ -31,19 +31,27 @@ Une importante société technologique vient de sortir un nouveau téléphone. A
 
 Pour promouvoir cette version, ils téléchargent les adresses électroniques de leur base de données de gestion de la relation client vers l’Experience Platform, en utilisant les adresses électroniques comme identifiants. Les segments sont créés en fonction des clients qui possèdent des modèles de téléphone plus anciens et envoyés à [!DNL Google Customer Match] afin de pouvoir cible les clients actuels, les clients qui possèdent des modèles de téléphone plus anciens, ainsi que les clients similaires sur [!DNL YouTube].
 
-## Caractéristiques de la destination {#destination-specs}
-
-### Gouvernance des données pour les destinations [!DNL Google Customer Match] {#data-governance}
+## Gouvernance des données pour les destinations [!DNL Google Customer Match] {#data-governance}
 
 Les destinations dans l’Experience Platform peuvent avoir certaines règles et obligations pour les données envoyées à la plateforme de destination ou reçues de celle-ci. Il vous incombe de comprendre les limites et les obligations de vos données et de comprendre comment vous les utilisez dans Adobe Experience Platform et la plateforme de destination. Adobe Experience Platform fournit des outils de gouvernance des données pour vous aider à gérer certaines de ces obligations d’utilisation des données. [En savoir ](../../..//data-governance/labels/overview.md) plus sur les outils et les stratégies de gouvernance des données.
 
-### Type et identités d&#39;exportation {#export-type}
+## Identités prises en charge {#supported-identities}
+
+[!DNL Google Customer Match] prend en charge l&#39;activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+
+| Identité de cible | Description | Considérations |
+|---|---|---|
+| GAID | Identifiant Google Advertising | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage GAID. |
+| IDFA | Identifiant Apple pour les annonceurs | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage IDFA. |
+| phone_sha256_e.164 | Numéros de téléphone au format E164, hachés avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les numéros de téléphone hachés SHA256. Suivez les instructions de la section [Exigences de correspondance d&#39;ID](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de nommage appropriés pour les numéros de téléphone en texte brut et hachés, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hachage automatiquement les données sur l’activation. |
+| email_lc_sha256 | Adresses électroniques hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA256. Suivez les instructions de la section [Exigences de correspondance d&#39;ID](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de nommage appropriés pour les adresses électroniques en texte brut et hachées, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hachage automatiquement les données sur l’activation. |
+| user_id | ID utilisateur personnalisés | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage personnalisé. |
+
+## Type d&#39;exportation {#export-type}
 
 **Exportation**  de segment : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone, etc.) utilisé dans la destination [!DNL Google Customer Match].
 
-**Identités**  : vous pouvez utiliser des courriers électroniques bruts ou hachés comme ID de client dans Google.
-
-### [!DNL Google Customer Match] conditions préalables du compte  {#google-account-prerequisites}
+## [!DNL Google Customer Match] conditions préalables du compte  {#google-account-prerequisites}
 
 Avant de configurer une destination [!DNL Google Customer Match] dans l&#39;Experience Platform, veillez à lire et à respecter la politique de Google concernant l&#39;utilisation de [!DNL Customer Match], décrite dans la [documentation d&#39;assistance de Google](https://support.google.com/google-ads/answer/6299717).
 
