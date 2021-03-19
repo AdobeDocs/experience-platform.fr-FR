@@ -6,10 +6,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document liste la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 648be489aa77870f67564ee350c4d85885673832
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 61%
+source-wordcount: '464'
+ht-degree: 60%
 
 ---
 
@@ -82,6 +82,7 @@ ht-degree: 61%
       * [Connexion Blob Azure](./catalog/cloud-storage/azure-blob.md)
       * [(bêta) Connexion Azure Événement Hubs](./catalog/cloud-storage/azure-event-hubs.md)
       * [Connexion SFTP](./catalog/cloud-storage/sftp.md)
+      * [LISTE AUTORISÉE d&#39;adresse IP](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinations de la plateforme de data Management {#data-management}
       * [Présentation des destinations DMP (data Management Platform)](./catalog/data-management/overview.md)
       * [Extension Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
