@@ -6,10 +6,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document liste la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
 translation-type: tm+mt
-source-git-commit: 648be489aa77870f67564ee350c4d85885673832
+source-git-commit: 3ae5efca9744e5f5edde56038beab93be5157de3
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 60%
+ht-degree: 61%
 
 ---
 
@@ -130,6 +130,6 @@ ht-degree: 60%
       * [Présentation de la voix des destinations du client](./catalog/voice/overview.md)
       * [Extension Confirmit Digital Feedback](./catalog/voice/confirmit-digital-feedback.md)
       * [Extension Invoca Tags](./catalog/voice/invoca.md)
-      * [Étendue de Medallia](./catalog/voice/medallia.md)
+      * [Extension Medallia](./catalog/voice/medallia.md)
       * [Extension Talk URL Inbox](./catalog/voice/talkurl.md)
 * [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
