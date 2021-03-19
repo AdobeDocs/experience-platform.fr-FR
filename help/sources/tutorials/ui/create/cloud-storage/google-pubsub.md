@@ -6,10 +6,10 @@ topic: aperçu
 type: Tutoriel
 description: Découvrez comment créer un connecteur de source Google PubSub à l’aide de l’interface utilisateur de la plate-forme.
 translation-type: tm+mt
-source-git-commit: 0af90253f04377149986aedf2e9d3012ca06d4f8
+source-git-commit: b5358ce206888c413035b46fe751520fd9aefb14
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 11%
+source-wordcount: '511'
+ht-degree: 9%
 
 ---
 
@@ -33,16 +33,20 @@ Si vous disposez déjà d&#39;une connexion [!DNL PubSub] valide, vous pouvez ig
 
 ### Collecte des informations d’identification requises
 
-Pour connecter [!DNL PubSub] à la plate-forme, vous devez fournir une valeur valide pour les informations d’identification suivantes :
+Pour connecter [!DNL PubSub] à la plate-forme, vous devez fournir une valeur valide pour les informations d&#39;identification suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
 | `projectId` | ID de projet requis pour authentifier [!DNL PubSub]. |
-| `credentials` | Informations d’identification ou clé requises pour authentifier [!DNL PubSub]. |
+| `credentials` | Identifiant d’identification ou de clé privée requis pour authentifier [!DNL PubSub]. |
 
-Pour plus d’informations sur ces valeurs, voir le document [Authentification PubSub](https://cloud.google.com/pubsub/docs/authentication) suivant.
+Pour plus d’informations sur ces valeurs, voir le document [Authentification PubSub](https://cloud.google.com/pubsub/docs/authentication) suivant. Si vous utilisez l’authentification basée sur un compte de service, consultez le [Guide PubSub](https://cloud.google.com/docs/authentication/production#create_service_account) suivant pour savoir comment générer vos informations d’identification.
 
-Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL Blob] à la plateforme.
+>[!TIP]
+>
+>Si vous utilisez l’authentification basée sur un compte de service, assurez-vous que vous avez accordé un accès utilisateur suffisant à votre compte de service et qu’aucun espace blanc supplémentaire ne figure dans le fichier JSON lors de la copie et du collage de vos informations d’identification.
+
+Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL PubSub] à la plateforme.
 
 ## Connectez votre compte [!DNL PubSub]
 
