@@ -3,9 +3,9 @@ keywords: linkedin connection;linkedin connection;linkedin destinations;linkedin
 title: Connexion des Audiences mises en correspondance Linkedin
 description: Activez des profils pour vos campagnes LinkedIn pour le ciblage, la personnalisation et la suppression des audiences, en fonction des courriers électroniques hachés.
 translation-type: tm+mt
-source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
+source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '675'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ Activez des profils pour vos campagnes [!DNL LinkedIn] pour le ciblage, la perso
 
 Pour vous aider à mieux comprendre comment et quand utiliser la destination [!DNL LinkedIn Matched Audiences], voici un cas d&#39;utilisation que les clients de Adobe Experience Platform peuvent résoudre en utilisant cette fonctionnalité.
 
-Une société logicielle organise une conférence et veut garder le contact avec les participants et leur montrer des offres personnalisées en fonction de leur statut de présence à la conférence. La société peut assimiler des adresses électroniques ou des identifiants de périphérique mobile de leur propre [!DNL CRM] à Adobe Experience Platform, créer des segments à partir de leurs propres données hors ligne et envoyer ces segments à la plateforme sociale [!DNL LinkedIn], optimisant ainsi leurs dépenses publicitaires.
+Une société logicielle organise une conférence et veut garder le contact avec les participants et leur montrer des offres personnalisées en fonction de leur statut de présence à la conférence. La société peut assimiler des adresses électroniques ou des ID de périphérique mobile de leur propre [!DNL CRM] à Adobe Experience Platform. Ils peuvent ensuite créer des segments à partir de leurs propres données hors ligne et les envoyer vers la [!DNL LinkedIn] plate-forme sociale, en optimisant leurs dépenses publicitaires.
 
 ## Caractéristiques de la destination {#destination-specs}
 
@@ -40,7 +40,7 @@ Une société logicielle organise une conférence et veut garder le contact avec
 
 ### Type d&#39;exportation {#export-type}
 
-**Exportation**  de segment : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone, etc.) utilisé dans la destination [!DNL LinkedIn Matched Audiences].
+**Exportation**  de segment : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone et autres) utilisés dans la  [!DNL LinkedIn Matched Audiences] destination.
 
 ### Conditions préalables du compte LinkedIn {#LinkedIn-account-prerequisites}
 
@@ -56,7 +56,7 @@ En fonction du type d’ID que vous saisissez dans Adobe Experience Platform, vo
 
 #### Conditions requises pour le hachage des courriels {#email-hashing-requirements}
 
-Vous pouvez choisir de hacher les adresses électroniques avant de les importer dans Adobe Experience Platform, ou vous pouvez choisir de travailler avec les adresses électroniques en clair dans l&#39;Experience Platform et de faire en sorte que notre algorithme les hache sur l&#39;activation.
+Vous pouvez hacher des adresses électroniques avant de les importer dans Adobe Experience Platform ou utiliser des adresses électroniques en clair dans l’Experience Platform et les faire [!DNL Platform] hacher sur l’activation.
 
 Pour en savoir plus sur l’assimilation d’adresses électroniques dans l’Experience Platform, consultez les sections [présentation de l’assimilation par lots](/help/ingestion/batch-ingestion/overview.md) et [présentation de l’assimilation en flux continu](/help/ingestion/streaming-ingestion/overview.md).
 
