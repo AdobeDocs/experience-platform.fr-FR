@@ -3,9 +3,9 @@ keywords: linkedin connection;linkedin connection;linkedin destinations;linkedin
 title: Connexion des Audiences mises en correspondance Linkedin
 description: Activez des profils pour vos campagnes LinkedIn pour le ciblage, la personnalisation et la suppression des audiences, en fonction des courriers électroniques hachés.
 translation-type: tm+mt
-source-git-commit: 6d64bc362aa8c85e354f5c02cc2acbe6f1405c99
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '682'
 ht-degree: 4%
 
 ---
@@ -26,6 +26,17 @@ Une société logicielle organise une conférence et veut garder le contact avec
 ## Caractéristiques de la destination {#destination-specs}
 
 [!DNL LinkedIn Matched Audiences] prend en charge l’activation des identités suivantes : courriers électroniques hachés,  [!DNL GAID]et  [!DNL IDFA].
+
+### Identités prises en charge {#supported-identities}
+
+[!DNL LinkedIn Matched Audiences] prend en charge l&#39;activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+
+| Identité de cible | Description | Considérations |
+|---|---|---|
+| GAID | Identifiant Google Advertising | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage GAID. |
+| IDFA | Identifiant Apple pour les annonceurs | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage IDFA. |
+| email_lc_sha256 | Adresses électroniques hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA256. Suivez les instructions de la section [Exigences de correspondance d&#39;ID](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de nommage appropriés pour le texte brut et les courriers électroniques hachés, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hachage automatiquement les données sur l’activation. |
+
 
 ### Type d&#39;exportation {#export-type}
 
