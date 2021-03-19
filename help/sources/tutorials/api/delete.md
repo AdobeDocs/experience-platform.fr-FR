@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; service de flux ; supprimer des connexions ; supprimer ; api
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de flux ; supprimer des comptes ; supprimer ; api
 solution: Experience Platform
-title: Suppression d’une connexion à l’aide de l’API du service de flux
-topic: overview
-type: Tutorial
-description: Découvrez comment supprimer une connexion à l’aide de l’API du service de flux.
+title: Suppression d’un compte à l’aide de l’API du service de flux
+topic: aperçu
+type: Tutoriel
+description: Découvrez comment supprimer un compte à l’aide de l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '594'
 ht-degree: 27%
 
 ---
 
 
-# Suppression d’une connexion à l’aide de l’API du service de flux
+# Suppression d’un compte à l’aide de l’API du service de flux
 
 Adobe Experience Platform permet l’assimilation de données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
