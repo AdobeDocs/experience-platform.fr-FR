@@ -3,9 +3,9 @@ keywords: mobile ; braquer; messagerie ;
 title: Connexion au frein
 description: Braze est une plate-forme d'engagement client complète qui permet d'offrir des expériences pertinentes et mémorables entre les clients et les marques qu'ils aiment.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '951'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,6 @@ Pour envoyer des données de profil à [!DNL Braze], vous devez d&#39;abord vous
 
 Notez les détails suivants spécifiques à la destination [!DNL Braze] :
 
-* Vous pouvez envoyer toute [identité](../../../identity-service/namespaces.md) à la destination [!DNL Braze], à condition de la mapper à [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation).
 * [!DNL Adobe Experience Platform] sont exportés vers  [!DNL Braze] sous l’ `AdobeExperiencePlatformSegments` attribut.
 
 >[!NOTE]
@@ -37,6 +36,14 @@ Notez les détails suivants spécifiques à la destination [!DNL Braze] :
 ## Cas d’utilisation {#use-cases}
 
 En tant que spécialiste du marketing, je souhaite cible les utilisateurs dans une destination d’engagement mobile, avec des segments créés dans [!DNL Adobe Experience Platform]. En outre, je souhaite leur proposer des expériences personnalisées, basées sur des attributs de leurs [!DNL Adobe Experience Platform] profils, dès que les segments et les profils sont mis à jour dans [!DNL Adobe Experience Platform].
+
+### Identités prises en charge {#supported-identities}
+
+[!DNL Google Ad Manager] prend en charge l&#39;activation des identités décrites dans le tableau ci-dessous.
+
+| Identité de cible | Description | Considérations |
+|---|---|---|
+| external_id | Identificateur [!DNL Braze] personnalisé qui prend en charge le mappage de toute identité. | Vous pouvez envoyer toute [identité](../../../identity-service/namespaces.md) à la destination [!DNL Braze], à condition de la mapper à [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
 ## Type d&#39;exportation {#export-type}
 
