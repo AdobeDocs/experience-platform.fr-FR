@@ -6,10 +6,10 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Ingestion des données, sources
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 17%
+source-wordcount: '579'
+ht-degree: 16%
 
 ---
 
@@ -148,9 +148,9 @@ ht-degree: 17%
    - [Envoi de données de parquet à partir d’un système d’enregistrement cloud tiers](tutorials/api/cloud-storage-parquet.md)
    - [Créer une connexion à un jeu de données](tutorials/api/create-dataset-base-connection.md)
    - [Surveiller les flux de données](tutorials/api/monitor.md)
-   - [Mettre à jour les connexions](tutorials/api/update.md)
+   - [Mettre à jour les comptes](tutorials/api/update.md)
    - [Mettre à jour les flux de données](tutorials/api/update-dataflows.md)
-   - [Suppression des connexions](tutorials/api/delete.md)
+   - [Suppression de comptes](tutorials/api/delete.md)
    - [Supprimer des flux de données](tutorials/api/delete-dataflows.md)
 - Didacticiels d’interface utilisateur {#ui-tutorials}
    - Créer une connexion source {#create}
@@ -222,6 +222,7 @@ ht-degree: 17%
    - [Activer les données entrantes pour renseigner les profils client](tutorials/ui/profile.md)
    - [Surveiller les flux de données](tutorials/ui/monitor.md)
    - [Mettre à jour les comptes](tutorials/ui/update.md)
+   - [Mettre à jour les flux de données](tutorials/ui/update-dataflows.md)
    - [Suppression de comptes](tutorials/ui/delete-accounts.md)
    - [Supprimer des flux de données](tutorials/ui/delete.md)
 - [Notifications d’exécution de flux](notifications.md)
