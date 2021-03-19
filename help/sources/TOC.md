@@ -6,10 +6,10 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Ingestion des données, sources
 translation-type: tm+mt
-source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
+source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 16%
+source-wordcount: '582'
+ht-degree: 17%
 
 ---
 
@@ -227,4 +227,5 @@ ht-degree: 16%
    - [Supprimer des flux de données](tutorials/ui/delete.md)
 - [Notifications d’exécution de flux](notifications.md)
 - [LISTE AUTORISÉE d&#39;adresse IP](ip-address-allow-list.md)
+- [Questions fréquentes](./troubleshooting.md)
 - [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
