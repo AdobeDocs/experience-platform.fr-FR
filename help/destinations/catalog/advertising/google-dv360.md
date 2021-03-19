@@ -3,10 +3,10 @@ keywords: DoubleClick Bid Manager ; DoubleClick bid manager ; DoubleClick ; Disp
 title: Connexion Google Display & Video 360
 description: Display & Video 360, anciennement appelé DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et des campagnes numériques ciblées dans des sources d’inventaire Display, Video et Mobile.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
 workflow-type: tm+mt
-source-wordcount: '704'
-ht-degree: 43%
+source-wordcount: '788'
+ht-degree: 39%
 
 ---
 
@@ -19,14 +19,26 @@ ht-degree: 43%
 
 Notez les détails suivants spécifiques aux destinations [!DNL Google Display & Video 360] :
 
-* Vous pouvez envoyer les [identités](../../../identity-service/namespaces.md) suivantes à [!DNL Google Ads] destinations : [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en), ID de cookie Google, IDFA, GAID, ID de Roku, ID Microsoft et ID TV Amazon Fire.
-   * Google utilisera [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) pour les utilisateurs de la cible en Californie, ainsi que l’ID de cookie Google pour tous les autres utilisateurs.
 * Les audiences activées sont créées par programmation dans la plateforme Google.
 * La plate-forme n’inclut pas actuellement de mesure pour valider l’activation réussie. Consultez le nombre d’audiences dans Google pour valider l’intégration et comprendre la taille de ciblage des audiences.
 
 >[!IMPORTANT]
 >
 >Si vous cherchez à créer votre première destination avec Google Display &amp; Video 360 et que vous n’avez pas activé la [fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) dans le service Experience Cloud ID par le passé (dans Adobe Audience Manager ou dans d’autres applications), veuillez contacter Adobe Consulting ou l’assistance clientèle pour activer les synchronisations des identifiants. Si vous aviez précédemment configuré des intégrations Google dans l’Audience Manager, les synchronisations d’ID que vous avez configurées sont transférées à la plateforme.
+
+### Identités prises en charge {#supported-identities}
+
+[!DNL Google Ad Manager] prend en charge l&#39;activation des identités décrites dans le tableau ci-dessous.
+
+| Identité de cible | Description | Considérations |
+|---|---|---|
+| GAID | [!DNL Google Advertising ID] | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage GAID. |
+| IDFA | [!DNL Apple ID for Advertisers] | Sélectionnez cette identité de cible lorsque votre identité source est un espace de nommage IDFA. |
+| UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), également appelé  [!DNL Device ID]. Identifiant numérique à 38 chiffres associé par l’Audience Manager à chaque périphérique avec lequel elle interagit. | Google utilise [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) pour les utilisateurs de la cible en Californie et l’ID de cookie Google pour tous les autres utilisateurs. |
+| [!DNL Google] identifiant de cookie | [!DNL Google] identifiant de cookie | [!DNL Google] utilise cet identifiant pour les utilisateurs de cible en dehors de la Californie. |
+| RIDA | Identifiant Roku pour la publicité. Cet identifiant identifie de manière unique les périphériques Roku. |  |
+| MAID | ID de publicité Microsoft. Cet identifiant identifie de manière unique les périphériques exécutant Windows 10. |  |
+| ID TV Amazon Fire | Cet identifiant identifie de manière unique les téléviseurs Amazon Fire. |  |
 
 ### Type d&#39;exportation {#export-type}
 
