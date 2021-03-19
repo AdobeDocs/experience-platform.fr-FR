@@ -5,7 +5,7 @@ title: Présentation du connecteur source Azure Data Lake Enregistrement Gen2
 topic: aperçu
 description: Découvrez comment connecter Azure Data Lake Enregistrement Gen2 à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5c6539d45df91369c3608965fd887c013d528b98
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 3%
@@ -48,7 +48,7 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 - [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
 - [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
-## Utilisation de l’interface utilisateur
+### Utilisation de l’interface utilisateur
 
 - [Création d’une connexion source ADLS-Gen2 dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
 - [Configuration d’un flux de données pour une connexion d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
