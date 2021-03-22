@@ -3,9 +3,9 @@ keywords: mobile ; braquer; messagerie ;
 title: Connexion au frein
 description: Braze est une plate-forme d'engagement client complète qui permet d'offrir des expériences pertinentes et mémorables entre les clients et les marques qu'ils aiment.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '953'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 5%
 >[!IMPORTANT]
 >
 >La destination du braze à Adobe Experience Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+
+## Présentation {#overview}
 
 La destination [!DNL Braze] vous aide à envoyer des données de profil à [!DNL Braze].
 
