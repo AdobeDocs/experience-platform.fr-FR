@@ -3,15 +3,17 @@ keywords: SFTP;sftp
 title: Connexion SFTP
 description: Créez une connexion sortante en direct vers votre serveur SFTP pour exporter périodiquement des fichiers de données délimités à partir de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4f0047e7ac4c83e3e17ea0a077bbeb09c86d1db6
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 7%
+source-wordcount: '232'
+ht-degree: 8%
 
 ---
 
 
 # Connexion SFTP
+
+## Présentation {#overview}
 
 Créez une connexion sortante en direct vers votre serveur SFTP pour exporter périodiquement des fichiers de données délimités à partir de Adobe Experience Platform.
 
