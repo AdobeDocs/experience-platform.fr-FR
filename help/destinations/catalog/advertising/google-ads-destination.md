@@ -3,9 +3,9 @@ keywords: Publicités Google ; publicités Google ; mots-clés Google ; mots-cl�
 title: Connexion aux publicités Google
 description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '738'
 ht-degree: 24%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 24%
 Notez les détails suivants spécifiques aux destinations [!DNL Google Ads] :
 
 * Les audiences activées sont créées par programmation dans la plate-forme [!DNL Google].
-* La plate-forme n’inclut pas actuellement de mesure pour valider l’activation réussie. Consultez le nombre d’audiences dans Google pour valider l’intégration et comprendre la taille de ciblage des audiences.
+* [!DNL Platform] n’inclut pas actuellement de mesure pour valider une activation réussie. Consultez le nombre d’audiences dans Google pour valider l’intégration et comprendre la taille de ciblage des audiences.
 
 >[!IMPORTANT]
 >
