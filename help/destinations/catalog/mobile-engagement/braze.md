@@ -3,9 +3,9 @@ keywords: mobile ; braquer; messagerie ;
 title: Connexion au frein
 description: Braze est une plate-forme d'engagement client complète qui permet d'offrir des expériences pertinentes et mémorables entre les clients et les marques qu'ils aiment.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '952'
 ht-degree: 5%
 
 ---
@@ -37,7 +37,7 @@ Notez les détails suivants spécifiques à la destination [!DNL Braze] :
 
 En tant que spécialiste du marketing, je souhaite cible les utilisateurs dans une destination d’engagement mobile, avec des segments créés dans [!DNL Adobe Experience Platform]. En outre, je souhaite leur proposer des expériences personnalisées, basées sur des attributs de leurs [!DNL Adobe Experience Platform] profils, dès que les segments et les profils sont mis à jour dans [!DNL Adobe Experience Platform].
 
-### Identités prises en charge {#supported-identities}
+## Identités prises en charge {#supported-identities}
 
 [!DNL Google Ad Manager] prend en charge l&#39;activation des identités décrites dans le tableau ci-dessous.
 
@@ -49,7 +49,6 @@ En tant que spécialiste du marketing, je souhaite cible les utilisateurs dans u
 
 **[!DNL Profile-based]** - vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom) et/ou identités, selon votre mappage de champs.
 [!DNL Adobe Experience Platform] sont exportés vers  [!DNL Braze] sous l’ `AdobeExperiencePlatformSegments` attribut.
-
 
 ## Se connecter à la destination {#connect-destination}
 
@@ -128,7 +127,7 @@ Vous devriez maintenant voir votre mappage de champs dans la liste.
 
 Pour ajouter d’autres mappages, répétez les étapes précédentes.
 
-### Exemple {#mapping-example}
+## Exemple de mappage {#mapping-example}
 
 Supposons que votre schéma de profil XDM et votre instance [!DNL Braze] contiennent les attributs et identités suivants :
 
