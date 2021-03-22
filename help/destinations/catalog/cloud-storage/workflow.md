@@ -5,15 +5,17 @@ type: Tutoriel
 description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 seo-description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '535'
 ht-degree: 50%
 
 ---
 
 
 # Création d’une destination d’enregistrement cloud
+
+## Présentation {#overview}
 
 Cette page explique comment vous pouvez vous connecter à des emplacements d’enregistrement cloud dans Adobe Experience Platform.
 
@@ -25,6 +27,8 @@ Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez 
 >
 >Si une connexion avec cette destination existe déjà, vous pouvez voir un bouton **[!UICONTROL Activer]** sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../../ui/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
 
+## Étape d&#39;authentification {#authentication}
+
 À l’étape **[!UICONTROL Authentification]**, si vous avez auparavant configuré une connexion à votre destination de stockage dans le cloud, sélectionnez **[!UICONTROL Compte existant]**, puis la connexion existante. Vous pouvez également sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à votre destination de stockage dans le cloud. Renseignez les informations d’authentification de votre compte et sélectionnez **[!UICONTROL Se connecter à la destination]**. Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Notez que cette clé publique **doit** être écrite en tant que chaîne codée Base64.
 
 Voir [destination Amazon S3](./amazon-s3.md), destination [[!DNL Amazon Kinesis]](./amazon-kinesis.md), destination [[!DNL Azure Event Hubs]](./azure-event-hubs.md) et destination [SFTP](./sftp.md) pour plus de détails sur les informations d’identification entrées à l’étape **Authentification**.
@@ -34,6 +38,8 @@ Voir [destination Amazon S3](./amazon-s3.md), destination [[!DNL Amazon Kinesis]
 >La plate-forme prend en charge la validation des informations d’identification dans le processus d’authentification et affiche un message d’erreur si vous saisissez des informations d’identification incorrectes à l’emplacement de votre enregistrement cloud. Ainsi, vous n’effectuez pas le workflow avec des informations d’identification incorrectes.
 
 ![Connexion à la destination de stockage dans le cloud - étape d’authentification](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+
+## Étape de configuration {#setup}
 
 À l’étape **[!UICONTROL Configuration]**, saisissez un **[!UICONTROL Nom]** et une **[!UICONTROL Description]** pour votre flux d’activation.
 
