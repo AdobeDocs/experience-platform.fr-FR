@@ -2,14 +2,14 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement Google Cloud ; enregistrement Google Cloud ; google ; Google ; Google
 solution: Experience Platform
 title: Création d’une connexion à la source d’Enregistrement Google Cloud à l’aide de l’API du service de flux
-topic: overview
-type: Tutorial
+topic: aperçu
+type: Tutoriel
 description: Découvrez comment connecter Adobe Experience Platform à un compte d’Enregistrement Google Cloud à l’aide de l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 26%
+source-wordcount: '597'
+ht-degree: 24%
 
 ---
 
@@ -35,10 +35,10 @@ Pour que [!DNL Flow Service] puisse se connecter à votre compte [!DNL Google Cl
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `accessKeyId` | ID de clé d&#39;accès pour votre compte [!DNL Google Cloud Storage]. |
-| `secretAccessKey` | Clé d&#39;accès secrète pour votre compte [!DNL Google Cloud Storage]. |
+| ID de clé d&#39;accès | Chaîne alphanumérique de 61 caractères utilisée pour authentifier votre compte [!DNL Google Cloud Storage] sur la plateforme. |
+| Clé d&#39;accès secrète | Chaîne codée en base de 40 caractères utilisée pour authentifier votre compte [!DNL Google Cloud Storage] sur Plateforme. |
 
-Pour plus d’informations sur la prise en main, consultez [ce document Google Cloud](https://cloud.google.com/docs/authentication).
+Pour plus d’informations sur ces valeurs, voir le guide [Cloud Enregistrement HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Pour obtenir des instructions sur la génération de votre propre ID de clé d&#39;accès et de votre clé d&#39;accès secret, consultez la section [[!DNL Google Cloud Storage] présentation](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
 ### Lecture d’exemples d’appels API
 
