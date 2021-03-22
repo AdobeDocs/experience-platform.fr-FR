@@ -6,7 +6,7 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '2151'
 ht-degree: 15%
@@ -26,7 +26,7 @@ Pour activer des données vers des destinations, vous devez avoir réussi à vou
 
 Les étapes du processus d’activation varient légèrement d’un type de destination à l’autre. Le processus complet pour tous les types de destination est décrit ci-dessous.
 
-### Sélectionnez la destination pour laquelle activer les données dans {#select-destination}.
+## Sélectionnez la destination pour laquelle activer les données dans {#select-destination}.
 
 S&#39;applique à : Toutes les destinations
 
@@ -36,7 +36,7 @@ Dans l’interface utilisateur de Adobe Experience Platform, accédez à **[!UIC
 
 Suivez les étapes de la section suivante pour sélectionner les segments à activer.
 
-### [!UICONTROL Sélectionner les ] segments, étape  {#select-segments}
+## [!UICONTROL Sélectionner les ] segments, étape  {#select-segments}
 
 S&#39;applique à : Toutes les destinations
 
@@ -46,7 +46,7 @@ Dans le flux de travaux **[!UICONTROL Activer la destination]**, sur la page **[
 
 ![segments-to-destination](../assets/ui/activate-destinations/email-select-segments.png)
 
-### [!UICONTROL Etape de ] mappage d’identité  {#identity-mapping}
+## [!UICONTROL Etape de ] mappage d’identité  {#identity-mapping}
 
 S&#39;applique à : destinations sociales et destination publicitaire Google Customer Match
 
@@ -54,7 +54,7 @@ S&#39;applique à : destinations sociales et destination publicitaire Google Cus
 
 Pour les destinations sociales, vous devez sélectionner des attributs source ou des espaces de nommage d’identité à mapper en tant qu’identités de cible dans la destination.
 
-#### Exemple : activation des données d&#39;audience dans [!DNL Facebook Custom Audience] {#example-facebook}
+## Exemple : activation des données d&#39;audience dans [!DNL Facebook Custom Audience] {#example-facebook}
 
 Vous trouverez ci-dessous un exemple de mappage d&#39;identité correct lors de l&#39;activation des données d&#39;audience dans [!DNL Facebook].
 
@@ -84,7 +84,7 @@ Les données de la source d’attributs ne sont pas automatiquement hachées. Lo
 
  
 
-#### Exemple : activation des données d&#39;audience dans [!DNL Google Customer Match] {#example-gcm}
+## Exemple : activation des données d&#39;audience dans [!DNL Google Customer Match] {#example-gcm}
 
 Il s&#39;agit d&#39;un exemple de mappage d&#39;identité correct lors de l&#39;activation des données d&#39;audience dans [!DNL Google Customer Match].
 
@@ -112,23 +112,7 @@ Les données des espaces de nommage non hachés sont automatiquement hachées pa
 Les données de la source d’attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hachage automatiquement les données sur l’activation.
 ![Transformation du mappage des identités](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
 
-<!-- 
-`IDFA` IDs will be mapped to:
-
-* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
-
-Select `GAID` as target identity if your data consists of Android device IDs. `GAID` IDs will be mapped to:
-
-* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
-
-If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to map it to the following target identities:
-
-* [EXTERN_ID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#external_identifiers) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [USER_ID](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#userid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md). -->
-
-### **** Configurestep  {#configure}
+## **** Configurestep  {#configure}
 
 S&#39;applique à : Destinations marketing par courriel et destinations d’enregistrement par cloud
 
@@ -177,7 +161,7 @@ Sélectionnez **[!UICONTROL Appliquer les modifications]** pour confirmer votre 
 
 Une fois que vous avez terminé de configurer tous vos segments, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
-### **[!UICONTROL Procédure de]** planification des segments  {#segment-schedule}
+## **[!UICONTROL Procédure de]** planification des segments  {#segment-schedule}
 
 S&#39;applique à : destinations publicitaires, destinations sociales
 
@@ -197,7 +181,7 @@ Sur la page **[!UICONTROL Planification du segment]**, vous pouvez définir la d
 
 ![enter app id](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-### **** Etape de planification  {#scheduling}
+## **** Etape de planification  {#scheduling}
 
 S&#39;applique à : destinations de marketing par courrier électronique et destinations d’enregistrement dans le cloud
 
@@ -205,7 +189,7 @@ S&#39;applique à : destinations de marketing par courrier électronique et dest
 
 Sur la page **[!UICONTROL Planification]**, vous pouvez voir la date de début d’envoi des données vers la destination ainsi que la fréquence d’envoi des données vers la destination. Ces valeurs ne peuvent pas être modifiées.
 
-### **[!UICONTROL Sélectionner]** attribut, étape  {#select-attributes}
+## **[!UICONTROL Sélectionner]** attribut, étape  {#select-attributes}
 
 S&#39;applique à : destinations de marketing par courrier électronique et destinations d’enregistrement dans le cloud
 
@@ -237,7 +221,7 @@ Il est recommandé que l’un des attributs soit un [identifiant unique](../../d
 > 
 Par exemple, si le champ `person.name.firstName` contient certains libellés d&#39;utilisation des données qui entrent en conflit avec l&#39;action marketing de la destination, une violation de la stratégie d&#39;utilisation des données s&#39;affichera à l&#39;étape de révision. Pour plus d’informations, voir [Gouvernance des données à Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
-### **** Révision  {#review}
+## **** Révision  {#review}
 
 S&#39;applique à : toutes les destinations
 
@@ -281,11 +265,11 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 La présence de ces fichiers dans votre emplacement de stockage est la confirmation de la réussite de l’activation. Pour comprendre comment les fichiers exportés sont structurés, vous pouvez [télécharger un exemple de fichier .csv](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). Cet exemple de fichier comprend les attributs de profil `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear` et `personalEmail.address`.
 
-### Destinations publicitaires
+## Destinations publicitaires
 
 Vérifiez votre compte dans la destination publicitaire vers laquelle vous activez vos données. Si l’activation a réussi, les audiences sont renseignées dans votre plateforme publicitaire.
 
-### Destinations de réseau social
+## Destinations de réseau social
 
 Pour [!DNL Facebook], une activation réussie signifie qu’une [!DNL Facebook] audience personnalisée serait créée par programmation dans [[!UICONTROL le Gestionnaire d’annonces Facebook]](https://www.facebook.com/adsmanager/manage/). L’adhésion au segment dans l’audience est ajoutée ou supprimée selon que les utilisateurs sont qualifiés ou disqualifiés pour les segments activés.
 
