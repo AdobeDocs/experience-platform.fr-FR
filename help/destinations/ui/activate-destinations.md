@@ -6,15 +6,17 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '2151'
+source-wordcount: '2152'
 ht-degree: 15%
 
 ---
 
 
 # Activation de profils et de segments vers une destination
+
+## Présentation {#overview}
 
 Activez les données que vous avez dans [!DNL Adobe Experience Platform] en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 
