@@ -3,15 +3,17 @@ keywords: Amazon Kinesis ; destination de la kinesis ; kinesis
 title: Connexion Amazon
 description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser les données de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '507'
 ht-degree: 6%
 
 ---
 
 
 # (Beta) [!DNL Amazon Kinesis] connexion
+
+## Présentation {#overview}
 
 >[!IMPORTANT]
 >
