@@ -3,15 +3,17 @@ keywords: Extension de balise de conversion Awin Advertiser ; balise de conversi
 title: Extension Awin Advertiser Conversion Tag
 description: L’extension de balise de conversion Awin Advertiser est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '529'
 ht-degree: 45%
 
 ---
 
 
 # Extension Awin Advertiser Conversion Tag {#awin-conversiontag-extension}
+
+## Présentation {#overview}
 
 Conversion Tag est la déclaration de l’objet JavaScript AWIN.Tracking.Sale qui est réalisé sur la page de confirmation pour informer le Mastertag qu’une conversion a eu lieu. À la suite de cela, les requêtes de suivi nécessaires seront réalisées.
 
@@ -37,7 +39,7 @@ Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
 Cliquez sur la destination pour la mettre en évidence, puis sélectionnez **[!UICONTROL Configurer]** dans le rail de droite. Si le contrôle **[!UICONTROL Configure]** est grisé, l&#39;autorisation **[!UICONTROL manage_properties]** vous manque. Voir les [Conditions préalables](#prerequisites).
 
-Dans la fenêtre **[!UICONTROL Sélectionner la propriété de lancement de plateforme disponible]**, sélectionnez la propriété [!DNL Platform Launch] dans laquelle vous souhaitez installer l&#39;extension. Vous pouvez aussi créer une nouvelle propriété dans [!DNL Platform Launch]. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Pour en savoir plus sur les propriétés, consultez la [section de la page Propriétés](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) de la documentation de [!DNL Launch]
+Dans la fenêtre **[!UICONTROL Sélectionner la propriété de Platform launch disponible]**, sélectionnez la propriété [!DNL Platform Launch] dans laquelle vous souhaitez installer l&#39;extension. Vous pouvez aussi créer une nouvelle propriété dans [!DNL Platform Launch]. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Pour en savoir plus sur les propriétés, consultez la [section de la page Propriétés](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) de la documentation de [!DNL Launch]
 
 Le flux de travail vous conduit à [!DNL Platform Launch] pour terminer l&#39;installation.
 
