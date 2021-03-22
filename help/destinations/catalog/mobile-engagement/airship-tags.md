@@ -3,9 +3,9 @@ keywords: balises d'avion ; destination du navire
 title: Connexion aux balises d'avion
 description: Transmettez en toute transparence les données d'Audience d'Adobe au navire de transport aérien en tant que balises d'Audience pour le ciblage au sein du navire de transport aérien.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1194'
 ht-degree: 13%
 
 ---
@@ -41,7 +41,7 @@ Avant de pouvoir envoyer vos segments Adobe Experience Platform à [!DNL Airship
 > 
 >Créez un compte [!DNL Airship] via [ce lien d&#39;inscription](https://go.airship.eu/accounts/register/plan/starter/) si vous n&#39;en avez pas déjà créé.
 
-### Groupes de balises
+## Groupes de balises
 
 Le concept de segments dans Adobe Experience Platorm est similaire à [Balises](https://docs.airship.com/guides/audience/tags/) dans Airship, avec de légères différences d’implémentation. Cette intégration mappe l’état de l’appartenance [d’un utilisateur à un segment d’Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins) à la présence ou à l’absence d’une balise [!DNL Airship]. Par exemple, dans un segment de plateforme où `xdm:status` devient `realized`, la balise est ajoutée au canal [!DNL Airship] ou est nommée utilisateur auquel ce profil est associé. Si `xdm:status` devient `exited`, la balise est supprimée.
 
@@ -53,7 +53,7 @@ Pour activer cette intégration, créez un *groupe de balises* dans [!DNL Airshi
 
 Voir [Gérer les groupes de balises](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) pour obtenir des instructions sur la création du groupe de balises.
 
-### Jeton de porteur
+## Générer un jeton porteur
 
 Accédez à **[!UICONTROL Paramètres]**&quot; **[!UICONTROL APIs &amp; Integrations]** dans le [tableau de bord Airship](https://go.airship.com) et sélectionnez **[!UICONTROL Tokens]** dans le menu de gauche.
 
