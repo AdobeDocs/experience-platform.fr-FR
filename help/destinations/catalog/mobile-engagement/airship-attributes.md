@@ -3,9 +3,9 @@ keywords: attributs du navire de transport aérien ; destination du navire de tr
 title: Connexion aux attributs du navire
 description: Transmettre en toute transparence les données d'Audience d'Adobe au navire de transport aérien en tant qu'attributs d'Audience pour le ciblage au sein du navire de transport aérien.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1202'
 ht-degree: 13%
 
 ---
@@ -39,13 +39,13 @@ Avant de pouvoir envoyer vos segments d&#39;audience à [!DNL Airship], vous dev
 >
 >Créez un compte [!DNL Airship] via [ce lien d&#39;inscription](https://go.airship.eu/accounts/register/plan/starter/) si vous n&#39;en avez pas déjà créé.
 
-### Activer les attributs {#enable-attributes}
+## Activer les attributs {#enable-attributes}
 
 Les attributs de profil Adobe Experience Platform sont similaires aux attributs [!DNL Airship] et peuvent être facilement mappés les uns aux autres dans Platform à l&#39;aide de l&#39;outil de mappage présenté plus loin dans cette page.
 
 [!DNL Airship] les projets comportent plusieurs attributs prédéfinis et par défaut. Si vous disposez d’un attribut personnalisé, vous devez d’abord le définir dans [!DNL Airship]. Voir [Configuration et gestion des attributs](https://docs.airship.com/tutorials/audience/attributes/) pour plus d’informations.
 
-### Jeton de porteur {#bearer-token}
+## Générer un jeton porteur {#bearer-token}
 
 Accédez à **[!UICONTROL Paramètres]**&quot; **[!UICONTROL APIs &amp; Integrations]** dans le [tableau de bord Airship](https://go.airship.com) et sélectionnez **[!UICONTROL Tokens]** dans le menu de gauche.
 
