@@ -3,10 +3,10 @@ keywords: diffusion en continu ;
 title: Connexion HTTP
 description: La destination HTTP dans Adobe Experience Platform vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
 translation-type: tm+mt
-source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 7%
+source-wordcount: '543'
+ht-degree: 8%
 
 ---
 
@@ -16,6 +16,8 @@ ht-degree: 7%
 >[!IMPORTANT]
 >
 >La destination [!DNL HTTP] dans Platform est actuellement en alpha. La documentation et les fonctionnalités peuvent changer.
+
+## Présentation {#overview}
 
 La destination [!DNL HTTP] est une destination de diffusion en flux continu [!DNL Adobe Experience Platform] qui vous permet d’envoyer des données de profil à des points de terminaison tiers [!DNL HTTP].
 
@@ -33,11 +35,9 @@ Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez 
 
 ![Activer la destination HTTP](../assets/catalog/http/activate.png)
 
->[!NOTE]
->
->Si une connexion avec cette destination existe déjà, vous pouvez voir un bouton **[!UICONTROL Activer]** sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../ui/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
->
->![Activer la destination HTTP](../assets/catalog/http/connect.png)
+Si une connexion avec cette destination existe déjà, vous pouvez voir un bouton **[!UICONTROL Activer]** sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../ui/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
+
+![Activer la destination HTTP](../assets/catalog/http/connect.png)
 
 À l’étape [!UICONTROL Compte], vous devez définir les détails de la connexion du point de terminaison HTTP. Sélectionnez **[!UICONTROL Nouveau compte]** et saisissez les détails de la connexion pour le point de terminaison HTTP auquel vous souhaitez vous connecter.
 - **[!UICONTROL httpEndpoint]** : la fin complète  [!DNL URL] du point de terminaison HTTP auquel vous souhaitez envoyer les données du profil.
