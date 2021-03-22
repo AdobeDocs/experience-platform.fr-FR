@@ -3,15 +3,17 @@ keywords: Destination du hub de événement Azure ; hub de événement azure ; e
 title: (bêta) Connexion Azure Événement Hubs
 description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser les données de l'Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '543'
 ht-degree: 6%
 
 ---
 
 
 # (Beta) [!DNL Azure Event Hubs] connexion
+
+## Présentation {#overview}
 
 >[!IMPORTANT]
 >
