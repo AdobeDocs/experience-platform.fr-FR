@@ -3,7 +3,7 @@ keywords: Blob Azure ; Blob destination;s3;azure blob destination
 title: Connexion Blob Azure
 description: Créez une connexion sortante en direct à votre enregistrement Azure Blob pour exporter périodiquement des fichiers de données CSV ou délimités par des tabulations à partir de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6d1960be886d12475603aeb79fe6283a1fd3030e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 10%
@@ -26,7 +26,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 Si vous disposez déjà d’une destination Blob valide, vous pouvez ignorer le reste de ce document et passer au didacticiel sur [l’activation des segments vers votre destination](../../ui/activate-destinations.md).
 
-### Formats de fichiers pris en charge
+## Formats de fichiers pris en charge {#file-formats}
 
 [!DNL Experience Platform] prend en charge le format de fichier suivant à exporter vers  [!DNL Blob]:
 
@@ -48,7 +48,7 @@ Sous la catégorie **[!UICONTROL Enregistrement de cloud]**, sélectionnez **[!U
 
 La page **[!UICONTROL Se connecter à l&#39;Enregistrement Blob Azure]** s&#39;affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
-### Nouveau compte {#new-account}
+## Nouveau compte {#new-account}
 
 Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Sur le formulaire d’entrée qui s’affiche, indiquez la chaîne de connexion. La chaîne de connexion est requise pour accéder aux données de votre enregistrement Blob. Le modèle de chaîne de connexion [!DNL Blob] s&#39;début avec : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
 
@@ -58,7 +58,7 @@ Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajout
 
 ![Nouveau compte](../../assets/catalog/cloud-storage/blob/new.png)
 
-### Compte existant
+## Compte existant {#existing-account}
 
 Pour connecter un compte existant, sélectionnez le compte [!DNL Blob] auquel vous souhaitez vous connecter, puis sélectionnez **Suivant** pour continuer.
 
