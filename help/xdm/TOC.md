@@ -6,10 +6,10 @@ breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes et les mixins d’Experience Data Model (XDM) pour normaliser les données d’expérience.
 feature: Schémas
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: b99af98c99a75863ed8e8408841d93aa17d61ae0
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 59%
+source-wordcount: '260'
+ht-degree: 54%
 
 ---
 
@@ -22,6 +22,12 @@ ht-degree: 59%
    * [Meilleures pratiques pour la modélisation des données](schema/best-practices.md)
    * [Contraintes de type de champ XDM](schema/field-constraints.md)
    * [Dictionnaire des champs XDM](schema/field-dictionary.md)
+   * Modèles de données du secteur {#industries}
+      * [Présentation](./schema/industries/overview.md)
+      * [ERD du modèle de données de vente au détail](./schema/industries/retail.md)
+      * [ERD, modèle de données des services financiers](./schema/industries/financial.md)
+      * [Modèle de données sur les voyages et l&#39;accueil ERD](./schema/industries/travel-hospitality.md)
+      * [ERD, modèle de données de télécommunications](./schema/industries/telecom.md)
 * Classes {#classes}
    * [XDM Individual Profile](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
