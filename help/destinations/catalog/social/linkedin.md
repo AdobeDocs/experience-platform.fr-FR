@@ -3,9 +3,9 @@ keywords: linkedin connection;linkedin connection;linkedin destinations;linkedin
 title: Connexion des Audiences mises en correspondance Linkedin
 description: Activez des profils pour vos campagnes LinkedIn pour le ciblage, la personnalisation et la suppression des audiences, en fonction des courriers électroniques hachés.
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '663'
 ht-degree: 4%
 
 ---
@@ -23,11 +23,7 @@ Pour vous aider à mieux comprendre comment et quand utiliser la destination [!D
 
 Une société logicielle organise une conférence et veut garder le contact avec les participants et leur montrer des offres personnalisées en fonction de leur statut de présence à la conférence. La société peut assimiler des adresses électroniques ou des ID de périphérique mobile de leur propre [!DNL CRM] à Adobe Experience Platform. Ils peuvent ensuite créer des segments à partir de leurs propres données hors ligne et les envoyer vers la [!DNL LinkedIn] plate-forme sociale, en optimisant leurs dépenses publicitaires.
 
-## Caractéristiques de la destination {#destination-specs}
-
-[!DNL LinkedIn Matched Audiences] prend en charge l’activation des identités suivantes : courriers électroniques hachés,  [!DNL GAID]et  [!DNL IDFA].
-
-### Identités prises en charge {#supported-identities}
+## Identités prises en charge {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] prend en charge l&#39;activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
 
@@ -38,23 +34,23 @@ Une société logicielle organise une conférence et veut garder le contact avec
 | email_lc_sha256 | Adresses électroniques hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA256. Suivez les instructions de la section [Exigences de correspondance d&#39;ID](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de nommage appropriés pour le texte brut et les courriers électroniques hachés, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hachage automatiquement les données sur l’activation. |
 
 
-### Type d&#39;exportation {#export-type}
+## Type d&#39;exportation {#export-type}
 
 **Exportation**  de segment : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone et autres) utilisés dans la  [!DNL LinkedIn Matched Audiences] destination.
 
-### Conditions préalables du compte LinkedIn {#LinkedIn-account-prerequisites}
+## Conditions préalables du compte LinkedIn {#LinkedIn-account-prerequisites}
 
 Avant d’utiliser la destination [!UICONTROL Audience à correspondance LinkedIn], assurez-vous que votre compte [!DNL LinkedIn Campaign Manager] a le niveau d’autorisation [!DNL Creative Manager] ou supérieur.
 
 Pour savoir comment modifier vos [!DNL LinkedIn Campaign Manager] autorisations d’utilisateur, voir [Ajouter, modifier et supprimer des autorisations d’utilisateur sur des comptes de publicité](https://www.linkedin.com/help/lms/answer/5753) dans la documentation LinkedIn.
 
-### Exigences de correspondance d&#39;ID {#id-matching-requirements}
+## Exigences de correspondance d&#39;ID {#id-matching-requirements}
 
 [!DNL LinkedIn Matched Audiences] exige qu’aucune information d’identification personnelle (identification personnelle) ne soit envoyée en clair. Par conséquent, les audiences activées pour [!DNL LinkedIn Matched Audiences] peuvent être masquées par des identifiants *hachés*, tels que des adresses électroniques ou des identifiants de périphérique mobile.
 
 En fonction du type d’ID que vous saisissez dans Adobe Experience Platform, vous devez respecter les exigences correspondantes.
 
-#### Conditions requises pour le hachage des courriels {#email-hashing-requirements}
+## Conditions requises pour le hachage des courriels {#email-hashing-requirements}
 
 Vous pouvez hacher des adresses électroniques avant de les importer dans Adobe Experience Platform ou utiliser des adresses électroniques en clair dans l’Experience Platform et les faire [!DNL Platform] hacher sur l’activation.
 
