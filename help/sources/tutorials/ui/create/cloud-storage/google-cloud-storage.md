@@ -2,14 +2,14 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement Google Cloud ; enregistrement Google Cloud ; GCS ; gcs
 solution: Experience Platform
 title: Création d’une connexion à la source d’Enregistrement Google Cloud dans l’interface utilisateur
-topic: overview
-type: Tutorial
+topic: aperçu
+type: Tutoriel
 description: Découvrez comment créer une connexion à la source de l’Enregistrement Google Cloud à l’aide de l’interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 11%
+source-wordcount: '596'
+ht-degree: 10%
 
 ---
 
@@ -43,10 +43,10 @@ Pour accéder à vos données GCS sur [!DNL Platform], vous devez fournir les va
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| ID de clé d&#39;accès | ID de clé d&#39;accès du compte [!DNL Google Cloud Storage]. |
-| Clé d&#39;accès secrète | Le secret client du compte [!DNL Google Cloud Storage]. |
+| ID de clé d&#39;accès | Chaîne alphanumérique de 61 caractères utilisée pour authentifier votre compte [!DNL Google Cloud Storage] sur la plateforme. |
+| Clé d&#39;accès secrète | Chaîne codée en base de 40 caractères utilisée pour authentifier votre compte [!DNL Google Cloud Storage] sur Plateforme. |
 
-Pour plus d&#39;informations sur la prise en main, consultez le [guide d&#39;authentification serveur à serveur](https://cloud.google.com/docs/authentication/production) pour [!DNL Google Cloud Storage].
+Pour plus d’informations sur ces valeurs, voir le guide [Cloud Enregistrement HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Pour obtenir des instructions sur la génération de votre propre ID de clé d&#39;accès et de votre clé d&#39;accès secret, consultez la section [[!DNL Google Cloud Storage] présentation](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
 ## Connectez votre compte [!DNL Google Cloud Storage]
 
