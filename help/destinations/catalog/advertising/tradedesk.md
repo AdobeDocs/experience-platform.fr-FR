@@ -3,15 +3,17 @@ keywords: publicité ; le bureau de commerce ;
 title: Connexion au bureau de commerce
 description: 'Le Trade Desk est une plate-forme en libre-service permettant aux acheteurs d’annonces publicitaires d’exécuter des reciblages et d’audience de campagnes numériques ciblées à l’échelle de l’affichage, de la vidéo et des sources d’inventaire mobiles. '
 translation-type: tm+mt
-source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '610'
 ht-degree: 5%
 
 ---
 
 
 # [!DNL The Trade Desk] connexion
+
+## Présentation {#overview}
 
 [!DNL The Trade Desk] destination vous aide à envoyer des données de profil à  [!DNL The Trade Desk].
 
