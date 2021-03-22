@@ -3,10 +3,10 @@ keywords: Publicités Google ; publicités Google ; mots-clés Google ; mots-cl�
 title: Connexion aux publicités Google
 description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '738'
-ht-degree: 24%
+ht-degree: 23%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 24%
 
 [!DNL Google Ads], appelé auparavant , est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos et des affichages mobiles in-app.[!DNL Google AdWords][!DNL YouTube]
 
-## Spécifications de la destination
+## Caractéristiques de la destination {#specifics}
 
 Notez les détails suivants spécifiques aux destinations [!DNL Google Ads] :
 
@@ -26,7 +26,7 @@ Notez les détails suivants spécifiques aux destinations [!DNL Google Ads] :
 >
 >Si vous souhaitez créer votre première destination avec [!DNL Google Ads] et que vous n’avez pas activé la fonctionnalité de synchronisation des identifiants [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) dans le service d’identification des Experience Cloud par le passé (avec Audience Manager ou d’autres applications), contactez le service de conseil en Adobe ou le service à la clientèle pour activer la synchronisation des identifiants. Si vous aviez précédemment configuré des intégrations Google dans l’Audience Manager, les synchronisations d’ID que vous avez configurées sont transférées à la plateforme.
 
-### Identités prises en charge {#supported-identities}
+## Identités prises en charge {#supported-identities}
 
 [!DNL Google Ad Manager] prend en charge l&#39;activation des identités décrites dans le tableau ci-dessous.
 
@@ -40,7 +40,7 @@ Notez les détails suivants spécifiques aux destinations [!DNL Google Ads] :
 | MAID | ID de publicité Microsoft. Cet identifiant identifie de manière unique les périphériques exécutant Windows 10. |  |
 | ID TV Amazon Fire | Cet identifiant identifie de manière unique les téléviseurs Amazon Fire. |  |
 
-### Type d&#39;exportation {#export-type}
+## Type d&#39;exportation {#export-type}
 
 **Exportation**  de segment : vous exportez tous les membres d’un segment (audience) vers la destination Google.
 
