@@ -4,7 +4,7 @@ title: Présentation des destinations du marketing par email
 type: Tutoriel
 description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 33%
@@ -30,7 +30,7 @@ Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez 
 
 À l’étape **[!UICONTROL Authentification]**, si vous aviez précédemment configuré une connexion à votre destination marketing par courriel, sélectionnez **[!UICONTROL Compte existant]** et sélectionnez votre connexion existante. Vous pouvez également sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à votre destination marketing par courrier électronique. Dans le sélecteur **[!UICONTROL Type de connexion]**, vous pouvez choisir entre Amazon S3, SFTP avec mot de passe ou SFTP avec clé SSH. Renseignez les informations ci-dessous, en fonction du type de connexion, puis sélectionnez **[!UICONTROL Se connecter]**.
 
-- Pour les connexions **S3**, vous devez fournir votre identifiant de clé d&#39;accès Amazon et votre clé d&#39;accès secrète.
+- Pour les connexions **S3**, vous devez fournir votre identifiant de clé d&#39;accès Amazon et votre clé d&#39;accès secret.
 - Pour les connexions **SFTP avec mot de passe**, vous devez fournir le domaine, le port, le nom d’utilisateur et le mot de passe pour votre serveur SFTP.
 - Pour les connexions **SFTP avec la clé SSH**, vous devez fournir le domaine, le port, le nom d&#39;utilisateur et la clé SSH pour votre serveur SFTP.
 
@@ -62,7 +62,7 @@ Au cours de cette étape, vous sélectionnez les champs à exporter vers les des
 
 Pour plus d&#39;informations sur cette étape, consultez l&#39;étape [Sélectionner des attributs](../../ui/activate-destinations.md#select-attributes) du didacticiel Activer les destinations.
 
-### Identité {#identity}
+## Identité {#identity}
 
 Nous vous recommandons de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Il s’agit du champ dans lequel les identités de vos utilisateurs sont déclenchées. Généralement, ce champ correspond à l’adresse électronique, mais il peut également s’agir d’un identifiant du programme de fidélité ou d’un numéro de téléphone. Consultez le tableau ci-dessous pour connaître les identifiants uniques les plus courants et leur champ XDM dans le schéma.
 
@@ -72,7 +72,7 @@ Nous vous recommandons de sélectionner un identifiant unique dans votre [schém
 | Téléphone | `mobilePhone.number` |
 | Identifiant du programme de fidélité | `Customer-defined XDM field` |
 
-### Autres attributs de destination
+## Autres attributs de destination
 
 Dans le sélecteur de champ Schéma, choisissez les autres champs à exporter vers la destination de courriel. Voici quelques options recommandées :
 
