@@ -6,9 +6,9 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 0992b223a96b77446a9f9c2823f5195541dd93fa
 workflow-type: tm+mt
-source-wordcount: '2152'
+source-wordcount: '2150'
 ht-degree: 15%
 
 ---
@@ -102,7 +102,7 @@ Sélection des champs source :
 
 Sélection de champs de cible :
 
-* Sélectionnez l&#39;espace de nommage `Email_LC_SHA256` en tant qu&#39;identité de cible lorsque vos espaces de nommage sources sont soit `Email`, soit `Email_LC_SHA256`.
+* Sélectionnez l&#39;espace de nommage `Email_LC_SHA256` comme identité de cible lorsque vos espaces de nommage sources sont `Email` ou `Email_LC_SHA256`.
 * Sélectionnez l&#39;espace de nommage `Phone_SHA256_E.164` comme identité de cible lorsque vos espaces de nommage sources sont `PHONE_E.164` ou `Phone_SHA256_E.164`.
 * Sélectionnez les espaces de nommage `IDFA` ou `GAID` comme identité de cible lorsque vos espaces de nommage sources sont `IDFA` ou `GAID`.
 * Sélectionnez l&#39;espace de nommage `User_ID` comme identité de cible lorsque votre espace de nommage source est personnalisé.
@@ -143,7 +143,7 @@ Une boîte de dialogue s’affiche, présentant les options permettant de créer
 
 Les noms de fichier par défaut se composent du nom de destination, de l’ID de segment et d’un indicateur de date et d’heure. Vous pouvez, par exemple, modifier les noms de fichiers exportés pour faire la distinction entre les différentes campagnes ou pour que le temps d’exportation des données soit annexé aux fichiers.
 
-Sélectionnez l&#39;icône représentant un crayon pour ouvrir une fenêtre modale et modifier les noms de fichier. Notez que les noms de fichier sont limités à 255 caractères.
+Sélectionnez l&#39;icône représentant un crayon pour ouvrir une fenêtre modale et modifier les noms de fichier. Les noms de fichier sont limités à 255 caractères.
 
 ![configurer le nom de fichier](../assets/ui/activate-destinations/configure-name.png)
 
@@ -161,7 +161,7 @@ Sélectionnez **[!UICONTROL Appliquer les modifications]** pour confirmer votre 
 
 ![modifier les options de nom de fichier](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
 
-Une fois que vous avez terminé de configurer tous vos segments, sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Une fois tous les segments configurés, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ## **[!UICONTROL Procédure de]** planification des segments  {#segment-schedule}
 
