@@ -4,15 +4,17 @@ title: Créer une destination de réseau social
 type: Tutoriel
 description: Découvrez comment vous connecter à vos comptes publicitaires de réseaux sociaux à Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 19e38faa84d365682e97c2ec1c6352d127c0ac29
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '465'
 ht-degree: 52%
 
 ---
 
 
 # Créer une destination de réseau social {#social-network-destinations-workflow}
+
+## Présentation {#overview}
 
 Ce didacticiel utilise [!DNL Facebook] comme exemple, mais le processus Adobe Experience Platform est le même pour toutes les destinations de réseau social.
 
@@ -23,6 +25,8 @@ Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**, faites défiler
 >[!NOTE]
 >
 >Si une connexion avec cette destination existe déjà, vous pouvez voir un bouton **[!UICONTROL Activer]** sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../../ui/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
+
+## Étape d&#39;authentification {#authentication}
 
 À l’étape **Authentification**, si vous avez auparavant configuré une connexion à votre destination de réseau social, sélectionnez **[!UICONTROL Compte existant]**, puis sélectionnez la connexion existante. Vous pouvez aussi sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à votre destination de réseau social. Sélectionnez **[!UICONTROL Se connecter à la destination]** pour atteindre la destination de réseau social sélectionnée afin de vous identifier et de connecter Adobe Experience Cloud à votre compte publicitaire sur le réseau social.
 
@@ -35,6 +39,8 @@ Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**, faites défiler
 Une fois vos informations d’identification confirmées et la connexion d’Adobe Experience Cloud à votre réseau social établie, vous pouvez sélectionner **[!UICONTROL Suivant]** pour passer à l’étape de **[!UICONTROL Configuration]**.
 
 ![Informations d’identification confirmées](../../assets/catalog/social/workflow/post-connect.png)
+
+## Étape de configuration {#setup}
 
 À l’étape **[!UICONTROL Configuration]**, saisissez un [!UICONTROL Nom] et une [!UICONTROL Description] pour votre flux d’activation et saisissez l’[!UICONTROL identifiant de compte] de votre compte publicitaire sur le réseau social.
 
