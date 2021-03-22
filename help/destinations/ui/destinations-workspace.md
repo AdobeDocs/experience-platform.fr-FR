@@ -1,18 +1,20 @@
 ---
 keywords: plate-forme;destinations;destinations workspace;workspace;ui;destinations ui;catalog;destinations catalog;destinations catalog;destinations catalog;
-title: Présentation de l’espace de travail Destinations
+title: Espace de travail des destinations
 description: 'L’espace de travail Destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système, décrites dans les sections ci-dessous.'
 seo-description: Dans Adobe Experience Platform, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 translation-type: tm+mt
-source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 34%
+source-wordcount: '1016'
+ht-degree: 35%
 
 ---
 
 
-# Présentation de l&#39;espace de travail Destinations {#destinations-workspace}
+# Espace de travail des destinations {#destinations-workspace}
+
+## Présentation {#overview}
 
 Dans Adobe Experience Platform, sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche pour accéder à l&#39;espace de travail [!UICONTROL Destinations].
 
