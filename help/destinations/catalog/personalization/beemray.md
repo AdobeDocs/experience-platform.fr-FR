@@ -3,15 +3,17 @@ keywords: beemray,beemray extension
 title: Extension Beemray
 description: L'extension Beemray est une destination de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '522'
 ht-degree: 45%
 
 ---
 
 
 # [!DNL Beemray] Extension {#beemray-extension}
+
+## Présentation {#overview}
 
 [!DNL Beemray] permet d’accélérer votre produit dans un contexte situationnel. Elle permet d’obtenir des informations, de créer de nouvelles expériences, de favoriser les interactions et de vous impliquer dans les moments importants. Beemray automatise l’intelligence contextuelle à l’aide de l’apprentissage automatique. Beemray se connecte à Adobe Experience Cloud et au reste de vos partenaires technologiques. Tout se passe en temps réel. Cette extension installe [!DNL Beemray] SDK sur votre site.
 
