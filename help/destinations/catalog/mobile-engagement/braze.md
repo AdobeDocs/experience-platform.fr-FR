@@ -3,10 +3,10 @@ keywords: mobile ; braquer; messagerie ;
 title: Connexion au frein
 description: Braze est une plate-forme d'engagement client complète qui permet d'offrir des expériences pertinentes et mémorables entre les clients et les marques qu'ils aiment.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
 source-wordcount: '953'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -25,7 +25,7 @@ La destination [!DNL Braze] vous aide à envoyer des données de profil à [!DNL
 
 Pour envoyer des données de profil à [!DNL Braze], vous devez d&#39;abord vous connecter à la destination.
 
-## Spécifications de la destination {#destination-specs}
+## Caractéristiques de la destination {#specifics}
 
 Notez les détails suivants spécifiques à la destination [!DNL Braze] :
 
