@@ -3,15 +3,17 @@ keywords: 'publicité ; bing; '
 title: Connexion Microsoft Bing
 description: Avec la destination de la connexion Microsoft Bing, vous pouvez exécuter le reciblage et l'audience de campagnes numériques ciblées dans Microsoft Display Advertising.
 translation-type: tm+mt
-source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '528'
 ht-degree: 5%
 
 ---
 
 
 # [!DNL Microsoft Bing] connexion  {#bing-destination}
+
+## Présentation {#overview}
 
 La destination [!DNL Microsoft Bing] vous aide à envoyer des données de profil à [!DNL Microsoft Display Advertising].
 
