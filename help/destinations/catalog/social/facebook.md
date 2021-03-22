@@ -3,7 +3,7 @@ keywords: connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez des profils pour vos campagnes Facebook pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '1131'
 ht-degree: 8%
@@ -74,7 +74,7 @@ Avant d’envoyer vos segments ciblés à [!DNL Facebook], assurez-vous de respe
 
 En fonction du type d’ID que vous saisissez dans Adobe Experience Platform, vous devez respecter les exigences correspondantes.
 
-### Exigences de hachage des numéros de téléphone {#phone-number-hashing-requirements}
+## Exigences de hachage des numéros de téléphone {#phone-number-hashing-requirements}
 
 Il existe deux méthodes pour activer les numéros de téléphone dans [!DNL Facebook] :
 
@@ -86,7 +86,7 @@ Il existe deux méthodes pour activer les numéros de téléphone dans [!DNL Fac
 >Les numéros de téléphone saisis dans l&#39;espace de nommage `Phone` ne peuvent pas être activés dans [!DNL Facebook].
 
 
-### Conditions requises pour le hachage des courriels {#email-hashing-requirements}
+## Conditions requises pour le hachage des courriels {#email-hashing-requirements}
 
 Vous pouvez hacher des adresses électroniques avant de les importer dans Adobe Experience Platform ou utiliser des adresses électroniques en clair dans l’Experience Platform et les faire [!DNL Platform] hacher sur l’activation.
 
@@ -109,7 +109,7 @@ Si vous choisissez de hacher vous-même les adresses électroniques, veillez à 
 
 ![Transformation du mappage des identités](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-### Utilisation d’espaces de nommage personnalisés {#custom-namespaces}
+## Utilisation d’espaces de nommage personnalisés {#custom-namespaces}
 
 Avant de pouvoir utiliser l&#39;espace de nommage `Extern_ID` pour envoyer des données à [!DNL Facebook], veillez à synchroniser vos propres identifiants à l&#39;aide de [!DNL Facebook Pixel]. Consultez la [documentation officielle](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) pour obtenir des informations détaillées.
 
