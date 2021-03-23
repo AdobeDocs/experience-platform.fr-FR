@@ -4,10 +4,10 @@ title: Espace de travail des destinations
 description: 'L’espace de travail Destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système, décrites dans les sections ci-dessous.'
 seo-description: Dans Adobe Experience Platform, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 35%
+source-wordcount: '1012'
+ht-degree: 32%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 35%
 
 Dans Adobe Experience Platform, sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche pour accéder à l&#39;espace de travail [!UICONTROL Destinations].
 
-L’espace de travail [!UICONTROL Destinations] se compose de quatre sections : [!UICONTROL Catalogue], [!UICONTROL Parcourir], [!UICONTROL Comptes] et [!UICONTROL Vue du système], décrites dans les sections ci-dessous.
+L&#39;espace de travail [!UICONTROL Destinations] comprend quatre sections, [!UICONTROL Catalogue], [!UICONTROL Parcourir], [!UICONTROL Comptes] et [!UICONTROL Vue système], décrites dans les sections ci-dessous.
 
 ![Présentation des destinations](../assets/ui/workspace/destinations-overview.png)
 
@@ -26,7 +26,7 @@ L’espace de travail [!UICONTROL Destinations] se compose de quatre sections :
 
 L&#39;onglet **[!UICONTROL Catalogue]** affiche une liste de toutes les destinations disponibles dans Plateforme, à laquelle vous pouvez envoyer des données.
 
-L’interface utilisateur de la plate-forme fournit un certain nombre d’options de recherche et de filtrage sur la page de catalogue des destinations :
+L’interface utilisateur de la plate-forme fournit plusieurs options de recherche et de filtrage sur la page de catalogue des destinations :
 
 * Utilisez la fonctionnalité de recherche de la page pour localiser une destination spécifique.
 * Filtrez les destinations à l&#39;aide du contrôle [!UICONTROL Catégories].
@@ -35,7 +35,7 @@ L’interface utilisateur de la plate-forme fournit un certain nombre d’option
 
 ![destinations filtrage et démonstration de recherche](../assets/ui/workspace/destinations-search-and-filter.gif)
 
-Les cartes de destination contiennent soit un contrôle **[!UICONTROL Configurer]**, soit un contrôle **[!UICONTROL Activer]** et un contrôle secondaire qui affiche plus d&#39;options. Ils sont tous décrits ci-dessous :
+Les cartes de destination contiennent soit un contrôle **[!UICONTROL Configurer]**, soit un contrôle **[!UICONTROL Activer]** et un contrôle secondaire qui affiche plus d&#39;options. Ces contrôles sont décrits ci-dessous :
 
 | Contrôle | Description |
 ---------|----------
@@ -47,7 +47,7 @@ Les cartes de destination contiennent soit un contrôle **[!UICONTROL Configurer
 
 ![Contrôles sur la carte de destination](../assets/ui/workspace/destination-card-options.png)
 
-Sélectionnez une carte de destination dans le catalogue pour ouvrir le rail de droite.  Vous pouvez voir ici une description de la destination. Le rail droit fournit les mêmes commandes que celles décrites dans le tableau ci-dessus, ainsi qu&#39;une description de la destination et une indication de la catégorie et du type de destination.
+Sélectionnez une carte de destination dans le catalogue pour ouvrir le rail de droite. Vous pouvez voir ici une description de la destination. Le rail droit fournit les mêmes commandes que celles décrites dans le tableau ci-dessus, ainsi qu&#39;une description de la destination et une indication de la catégorie et du type de destination.
 
 ![Options du catalogue des destinations](../assets/ui/workspace/destination-right-rail.png)
 
@@ -98,14 +98,14 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 | Élément | Description |
 ---------|----------
 | Nom | Le nom que vous avez fourni pour votre flux d’activation vers cette destination. La même colonne comprend deux contrôles : [!UICONTROL Activer ] et [!UICONTROL Supprimer la destination]. |
-| État de la dernière exécution du flux | Statut de la dernière exécution de flux de données. Voir [détails de destination de la Vue](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
-| Date d&#39;exécution du dernier flux | Heure et date de la dernière exécution du flux de données. Voir [détails de destination de la Vue](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
+| [!UICONTROL État de la dernière exécution du flux] | Statut de la dernière exécution de flux de données. Voir [détails de destination de la Vue](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
+| [!UICONTROL Date d&#39;exécution du dernier flux] | Heure et date de la dernière exécution du flux de données. Voir [détails de destination de la Vue](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
 | [!UICONTROL Destination] | La plateforme de destination que vous avez sélectionnée pour votre flux d’activation. |
 | [!UICONTROL Type de connexion] | Représente le type de connexion à votre compartiment de stockage ou à votre destination. <ul><li>Pour les destinations de marketing par courriel : Peut être S3, FTP ou [!DNL Azure Blob].</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur.</li><li>Pour les destinations de diffusion en continu : Peut être [!DNL Azure Event Hubs] ou [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Nom d’utilisateur] | Les informations d’identification de compte que vous avez sélectionnées pour le flux de destination. |
 | [!UICONTROL Données d’Activation] | Indique le nombre de segments activés pour cette destination. Sélectionnez ce contrôle pour en savoir plus sur les segments activés. Pour plus d’informations sur les segments activés, voir [Données d’Activation](/help/destinations/ui/destination-details-page.md#activation-data) dans la page des détails de destination. |
 | [!UICONTROL Créé] | La date et l’heure (UTC) de création du flux d’activation vers la destination. |
-| [!UICONTROL État] | `Active` ou `Inactive`. Indique si les données sont actuellement activées vers cette destination. Pour modifier le statut, consultez [Désactiver l’activation](./activate-destinations.md#disable-activation). |
+| [!UICONTROL État] | `Active` ou `Inactive`. Indique si les données sont activées pour cette destination. Pour modifier le statut, consultez [Désactiver l’activation](./activate-destinations.md#disable-activation). |
 
 Cliquez sur une ligne de destination pour afficher plus d’informations sur la destination dans le rail de droite.
 
