@@ -1,13 +1,13 @@
 ---
 keywords: destinations ; destination ; page des détails des destinations ; page des détails des destinations ; page des détails des destinations
 title: Détails de la destination de la vue
-description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
-seo-description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
+description: 'La page de détails d’une destination individuelle fournit un aperçu des détails de la destination. Les détails de destination incluent le nom de destination, l’identifiant, les segments mappés à la destination et les contrôles permettant de modifier l’activation et d’activer et de désactiver le flux de données. '
+seo-description: 'La page de détails d’une destination individuelle fournit un aperçu des détails de la destination. Les détails de destination incluent le nom de destination, l’identifiant, les segments mappés à la destination et les contrôles permettant de modifier l’activation et d’activer et de désactiver le flux de données. '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 15%
+source-wordcount: '742'
+ht-degree: 5%
 
 ---
 
@@ -30,7 +30,7 @@ La page de détails de la destination s’affiche, avec les commandes disponible
 
 ![](../assets/ui/details-page/details.png)
 
-De plus, dans l’onglet Parcourir, vous pouvez choisir de supprimer le flux de données sélectionné en sélectionnant l’icône ![corbeille](../assets/ui/details-page/trash-icon.png). Tout segment activé sur une destination est démappé avant la suppression du flux de données.
+De plus, dans l’onglet Parcourir, vous pouvez choisir de supprimer le flux de données sélectionné en sélectionnant l’icône ![corbeille](../assets/ui/details-page/trash-icon.png). Les segments activés pour les destinations sont démappés avant la suppression du flux de données.
 
 ![](../assets/ui/details-page/delete-flow.png)
 
@@ -45,7 +45,7 @@ Le tableau suivant couvre les contrôles et les détails fournis par le rail dro
 | Article de rail droit | Description |
 | --- | --- |
 | [!UICONTROL Activer] | Sélectionnez ce contrôle pour modifier les segments mappés à la destination. Pour plus d&#39;informations, consultez le guide sur l&#39;[activation de segments vers une destination](./activate-destinations.md). |
-| [!UICONTROL Supprimer] | Vous permet de supprimer ce flux de données et de démapper les segments qui ont été activés auparavant, le cas échéant. |
+| [!UICONTROL Supprimer] | Vous permet de supprimer ce flux de données et de démapper les segments précédemment activés, le cas échéant. |
 | [!UICONTROL Nom de destination] | Ce champ peut être modifié afin de mettre à jour le nom de la destination. |
 | [!UICONTROL Description] | Ce champ peut être modifié pour mettre à jour ou ajouter une description facultative à la destination. |
 | [!UICONTROL Destination] | Représente la plateforme de destination vers laquelle les audiences sont envoyées. Pour plus d&#39;informations, consultez le [catalogue de destinations](../catalog/overview.md). |
