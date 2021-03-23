@@ -3,9 +3,9 @@ keywords: Blob Azure ; Blob destination;s3;azure blob destination
 title: Connexion Blob Azure
 description: Créez une connexion sortante en direct à votre enregistrement Azure Blob pour exporter périodiquement des fichiers de données CSV ou délimités par des tabulations à partir de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '600'
 ht-degree: 10%
 
 ---
@@ -56,7 +56,7 @@ Si vous utilisez de nouvelles informations d’identification, sélectionnez **[
 
 Pour plus d&#39;informations sur la configuration de votre chaîne de connexion [!DNL Blob], voir [Configurer une chaîne de connexion pour un compte d&#39;enregistrement Azure](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) dans la documentation Microsoft.
 
-Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Notez que cette clé publique **doit** être écrite en tant que chaîne codée Base64.
+Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que chaîne codée [!DNL Base64].
 
 ![Nouveau compte](../../assets/catalog/cloud-storage/blob/new.png)
 
