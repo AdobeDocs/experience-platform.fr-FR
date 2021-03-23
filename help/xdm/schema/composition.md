@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; enum ; mixin ; Mixin ; mixins ; mixins ; type de données ; types de données ; types de données ; type de données ; identité Principale ; identité Principale ; profil individuel XDM ; champs XDM ; type de données enum ; événement d'expérience XDM ; Expérience XDM ; événement d'expérience ; événement d'expérience ; événement d'expérience ; événement XDM événement;schéma conception;classe;classe;classes;classes;classes;classes;classes;type de données;type de données;type de données;type de données;schéma de données;Schéma ; Événements;carte d'identité;carte d'identité;carte d'identité;carte d'identité;carte d';carte d'; d'
 solution: Experience Platform
-tiTle: Basics of Schema Composition
-topic: overview
+title: Principes de base de la composition des Schémas
+topic: aperçu
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 8448b5dcedc42898d8a403aae1e044841bc2734c
 workflow-type: tm+mt
-source-wordcount: '3161'
-ht-degree: 47%
+source-wordcount: '3166'
+ht-degree: 46%
 
 ---
 
