@@ -4,7 +4,7 @@ title: 'LISTE AUTORISÉE d’adresses IP pour les destinations d’enregistremen
 type: Documentation
 description: Cette page fournit des plages d'adresses IP que vous pouvez ajouter à votre liste autorisée, afin d'exporter en toute sécurité des données de l'Experience Platform vers votre serveur SFTP, Amazon S3 ou votre enregistrement Azure Blob.
 translation-type: tm+mt
-source-git-commit: 7d7568de57cf79843a833a05b9bdfa6eb048bdbc
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # LISTE AUTORISÉE d&#39;adresse IP pour les destinations d&#39;enregistrement cloud {#ip-address-allow-list}
 
-## Présentation {#overview}
-
 >[!IMPORTANT]
 >
 > * Adobe vous recommande de mettre cette page en signet et de la consulter de nouveau tous les trois mois afin de rechercher les adresses IP les plus récentes. Adobe ne fournit pas de notification sur les nouvelles plages d’adresses IP.
 > * Bien que l’Adobe prenne en charge les exportations de données vers les serveurs SFTP, les emplacements d’enregistrement de cloud recommandés pour exporter les données sont [!DNL Amazon S3] et [!DNL Azure Blob].
 
+
+## Présentation {#overview}
 
 Cette page fournit des plages d&#39;adresses IP que vous pouvez ajouter à votre liste autorisée, pour exporter en toute sécurité des données de l&#39;Experience Platform vers votre enregistrement [serveur SFTP](./sftp.md), [Amazon S3](./amazon-s3.md) ou [Blob Azure](./azure-blob.md).
 
