@@ -2,12 +2,12 @@
 keywords: informations ; attribution ai ; attribution ai ; informations d’identification Ai ; service de requête AAI ; requêtes d’attribution ; scores d’attribution
 solution: Intelligent Services, Experience Platform
 title: Analyse des scores d’attribution à l’aide de Requête Service
-topic: Attribution AI queries
+topic: Attribution AI requêtes
 description: Découvrez comment utiliser Adobe Experience Platform Requête Service pour analyser les scores Attribution AI.
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ Les requêtes ci-dessous peuvent être utilisées comme modèle pour différents
         conversionName
 ```
 
-### Exemples d’analyse des tendances
+### Exemple d&#39;analyse des tendances
 
 **Nombre de conversions par jour**
 
@@ -129,7 +129,7 @@ Les requêtes ci-dessous peuvent être utilisées comme modèle pour différents
     LIMIT 20
 ```
 
-### Exemples d’analyse de distribution
+### Exemple d&#39;analyse de distribution
 
 **Nombre de points de contact sur les chemins de conversion par type défini (dans une fenêtre de conversion)**
 
@@ -299,4 +299,58 @@ Obtenez la distribution du nombre de points de contact distincts sur un chemin d
         conversionName, num_dist_tp
     ORDER BY
         conversionName, num_dist_tp
+```
+
+### Exemple d&#39;aplatissement de schéma et d&#39;explosion
+
+Cette requête aplatit la colonne struct en plusieurs colonnes uniques et explose les tableaux en plusieurs lignes. Cela permet de transformer les scores d’attribution en un format CSV. La sortie de cette requête comporte une conversion et l’un des points de contact correspondant à cette conversion dans chaque ligne.
+
+>[!TIP]
+>
+> Dans cet exemple, vous devez remplacer `{COLUMN_NAME}` en plus de `_tenantId` et `your_score_output_dataset`. La variable `COLUMN_NAME` peut prendre les valeurs des noms de colonnes de transmission facultatifs (colonnes de rapports) qui ont été ajoutées lors de la configuration de votre instance Attribution AI. Consultez votre schéma de sortie de score pour trouver les valeurs `{COLUMN_NAME}` nécessaires pour terminer cette requête.
+
+```sql
+SELECT 
+  segmentation,
+  conversionName,
+  scoreCreatedTime,
+  aaid, _id, eventMergeId,
+  conversion.eventType as conversion_eventType,
+  conversion.quantity as conversion_quantity,
+  conversion.eventSource as conversion_eventSource,
+  conversion.priceTotal as conversion_priceTotal,
+  conversion.timestamp as conversion_timestamp,
+  conversion.geo as conversion_geo,
+  conversion.receivedTimestamp as conversion_receivedTimestamp,
+  conversion.dataSource as conversion_dataSource,
+  conversion.productType as conversion_productType,
+  conversion.passThrough.{COLUMN_NAME} as conversion_passThru_column,
+  conversion.skuId as conversion_skuId,
+  conversion.product as conversion_product,
+  touchpointName,
+  touchPoint.campaignGroup as tp_campaignGroup, 
+  touchPoint.mediaType as tp_mediaType,
+  touchPoint.campaignTag as tp_campaignTag,
+  touchPoint.timestamp as tp_timestamp,
+  touchPoint.geo as tp_geo,
+  touchPoint.receivedTimestamp as tp_receivedTimestamp,
+  touchPoint.passThrough.{COLUMN_NAME} as tp_passThru_column,
+  touchPoint.campaignName as tp_campaignName,
+  touchPoint.mediaAction as tp_mediaAction,
+  touchPoint.mediaChannel as tp_mediaChannel,
+  touchPoint.eventid as tp_eventid,
+  scores.*
+FROM (
+  SELECT
+        _tenantId.your_score_output_dataset.segmentation,
+        _tenantId.your_score_output_dataset.conversionName,
+        _tenantId.your_score_output_dataset.scoreCreatedTime,
+        _tenantId.your_score_output_dataset.conversion,
+        _id,
+        eventMergeId,
+        map_values(identityMap)[0][0].id as aaid,
+        inline(_tenantId.your_score_output_dataset.touchpointsDetail)
+  FROM
+        your_score_output_dataset
+)
 ```
