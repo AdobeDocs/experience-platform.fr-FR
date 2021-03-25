@@ -1,13 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Application de la conformité de l’utilisation des données aux segments ciblés
+title: Importation et utilisation d’audiences externes
+description: Suivez ce tutoriel pour apprendre à utiliser les audiences externes avec Adobe Experience Platform.
 topic: didacticiel
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 400e4d9007212ed2693d031ae912a4f1cca97c57
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 10%
+source-wordcount: '652'
+ht-degree: 9%
 
 ---
 
