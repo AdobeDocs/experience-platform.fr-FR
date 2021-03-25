@@ -5,10 +5,10 @@ type: Tutoriel
 description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 seo-description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 632003773100ec8ef0389840695a1c75a1aa663d
 workflow-type: tm+mt
 source-wordcount: '532'
-ht-degree: 50%
+ht-degree: 43%
 
 ---
 
@@ -27,9 +27,9 @@ Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez 
 >
 >Si une connexion avec cette destination existe déjà, vous pouvez voir un bouton **[!UICONTROL Activer]** sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../../ui/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
 
-## Étape d&#39;authentification {#authentication}
+## Étape du compte {#account}
 
-À l’étape **[!UICONTROL Authentification]**, si vous avez auparavant configuré une connexion à votre destination de stockage dans le cloud, sélectionnez **[!UICONTROL Compte existant]**, puis la connexion existante. Vous pouvez également sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à votre destination de stockage dans le cloud. Renseignez les informations d’authentification de votre compte et sélectionnez **[!UICONTROL Se connecter à la destination]**. Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que chaîne codée [!DNL Base64].
+À l’étape **[!UICONTROL Compte]**, si vous aviez précédemment configuré une connexion à la destination de votre enregistrement cloud, sélectionnez **[!UICONTROL Compte existant]** et sélectionnez votre connexion existante. Vous pouvez également sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à votre destination de stockage dans le cloud. Renseignez les informations d’authentification de votre compte et sélectionnez **[!UICONTROL Se connecter à la destination]**. Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que chaîne codée [!DNL Base64].
 
 Voir [destination Amazon S3](./amazon-s3.md), destination [[!DNL Amazon Kinesis]](./amazon-kinesis.md), destination [[!DNL Azure Event Hubs]](./azure-event-hubs.md) et destination [SFTP](./sftp.md) pour plus de détails sur les informations d’identification entrées à l’étape **Authentification**.
 
@@ -39,9 +39,9 @@ Voir [destination Amazon S3](./amazon-s3.md), destination [[!DNL Amazon Kinesis]
 
 ![Connexion à la destination de stockage dans le cloud - étape d’authentification](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
-## Étape de configuration {#setup}
+## Étape d&#39;authentification {#authentication}
 
-À l’étape **[!UICONTROL Configuration]**, saisissez un **[!UICONTROL Nom]** et une **[!UICONTROL Description]** pour votre flux d’activation.
+À l&#39;étape **[!UICONTROL Authentification]**, entrez **[!UICONTROL Nom]** et **[!UICONTROL Description]** pour votre flux d&#39;activation.
 
 À cette étape, vous pouvez également sélectionner toute **[!UICONTROL action marketing]** qui doit s’appliquer à cette destination. Les actions marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des actions marketing définies par Adobe ou créer votre propre action marketing. Pour plus d&#39;informations sur les actions marketing, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
 
