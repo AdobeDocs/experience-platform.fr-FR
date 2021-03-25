@@ -5,10 +5,10 @@ title: Présentation du service d’identité
 topic: aperçu
 description: Adobe Experience Platform Identity Service vous permet d'obtenir une meilleure vue de vos clients et de leur comportement en rapprochant les identités entre les périphériques et les systèmes, ce qui vous permet de fournir des expériences numériques personnelles et impactées en temps réel.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: bb218fc0cca6fe74693e99747963058bd0dc962a
 workflow-type: tm+mt
-source-wordcount: '1733'
-ht-degree: 72%
+source-wordcount: '1718'
+ht-degree: 73%
 
 ---
 
@@ -63,10 +63,6 @@ Vos clients peuvent interagir avec votre marque par le biais d’une combinaison
 [!DNL Experience Platform] relève ce défi grâce à deux concepts : [espaces de noms d’identité](#identity-namespaces) et [graphiques d’identités](#identity-graphs).
 
 La vidéo suivante est destinée à vous aider à comprendre les identités et les graphiques d&#39;identité. La vidéo suivante couvre les trois fonctionnalités de la collecte d’identité, des graphiques d’identité et des API. Il décrit également comment les algorithmes déterministes et probabilistes sont utilisés pour construire des graphiques d&#39;identité privés et traite du rôle des graphiques d&#39;identité privés, des graphiques Co-op du service d&#39;identité de Adobe Experience Platform et des graphiques tiers.
-
->[!IMPORTANT]
->
-> Des graphiques privés probabilistes sont encore en cours d&#39;élaboration et devraient être publiés ultérieurement.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
