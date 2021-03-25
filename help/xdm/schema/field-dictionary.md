@@ -5,9 +5,9 @@ title: Dictionnaire de champs Modèle de données d’expérience (XDM)
 topic: aperçus
 description: Le modèle de données d’expérience (XDM) définit un ensemble de champs standard qui peuvent être utilisés lors de la composition de schémas Adobe Experience Platform. L’utilisation de ces champs entraîne un comportement cohérent entre les services de Platform, car tous les services qui utilisent XDM comprendront explicitement les définitions spécifiques fournies par ces champs.
 translation-type: tm+mt
-source-git-commit: 027f3335b406ea526a07e1b3894e4d50c850d5d6
+source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
 workflow-type: tm+mt
-source-wordcount: '25236'
+source-wordcount: '25239'
 ht-degree: 98%
 
 ---
@@ -530,3 +530,5 @@ Vous pouvez utiliser la fonctionnalité de recherche de [!DNL Schema Editor] pou
 | xdm:workPhone | Téléphone professionnel | Numéro de téléphone professionnel. | objet |  | objet | https://ns.adobe.com/experience/campaign/experienceevent-profile-work-details, https://ns.adobe.com/xdm/context/profile-work-details |
 | xdm:xid | Identifiant d’expérience | Lorsqu’elle est présente, cette valeur représente un identifiant d’espace de noms croisé unique pour tous les identifiants d’espace de noms inclus dans tous les espaces de noms. | chaîne |  | chaîne | https://ns.adobe.com/experience/aam-experienceevent, https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-profile-segmentation, https://ns.adobe.com/experience/profile/profile-all, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/experience/target/activity/activityevent/segmentevent, https://ns.adobe.com/experience/target/experienceevent-all, https://ns.adobe.com/xdm/context/experienceevent-enduserids, https://ns.adobe.com/xdm/context/experienceevent-enduserids-deprecated, https://ns.adobe.com/xdm/context/experienceevent-profile-stitch, https://ns.adobe.com/xdm/context/experienceevent-segmentmembership, https://ns.adobe.com/xdm/context/profile-identities-deprecated, https://ns.adobe.com/xdm/context/profile-segmentation,,,,,,,,,, |
 | xmpDM:duration | Longueur/durée du chapitre | Durée du chapitre, en secondes. | entier |  | ent | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising-timed-asset-reference, https://ns.adobe.com/xdm/context/experienceevent-advertising, https://ns.adobe.com/xdm/context/experienceevent-media |
+
+{style=&quot;table-layout:auto&quot;}
