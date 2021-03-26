@@ -5,9 +5,9 @@ title: Contraintes de type de champ XDM
 topic: aperçu
 description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels elles peuvent être associées et comment définir vos propres types de champ dans l’API.
 translation-type: tm+mt
-source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
+source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1080'
 ht-degree: 18%
 
 ---
@@ -212,7 +212,7 @@ Le tableau suivant décrit la mise en forme appropriée pour définir différent
 
 Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de code fourni pour générer votre demande d’API pour [créer un mixin](../api/mixins.md#create) ou [créer un type de données](../api/data-types.md#create).
 
-<table>
+<table style="table-layout:auto">
   <tr>
     <th>Type XDM</th>
     <th>Propriétés facultatives</th>
@@ -448,5 +448,3 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
     </td>
   </tr>
 </table>
-
-{style=&quot;table-layout:auto&quot;}
