@@ -4,9 +4,9 @@ title: Détails de la destination de la vue
 description: 'La page de détails d’une destination individuelle fournit un aperçu des détails de la destination. Les détails de destination incluent le nom de destination, l’identifiant, les segments mappés à la destination et les contrôles permettant de modifier l’activation et d’activer et de désactiver le flux de données. '
 seo-description: 'La page de détails d’une destination individuelle fournit un aperçu des détails de la destination. Les détails de destination incluent le nom de destination, l’identifiant, les segments mappés à la destination et les contrôles permettant de modifier l’activation et d’activer et de désactiver le flux de données. '
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '745'
 ht-degree: 5%
 
 ---
@@ -57,6 +57,8 @@ Le tableau suivant couvre les contrôles et les détails fournis par le rail dro
 | [!UICONTROL Identité] | Représente l’espace de nommage d’identité accepté par la destination, par exemple `GAID`, `IDFA` ou `email`. Pour plus d&#39;informations sur les espaces de nommage d&#39;identité acceptés, consultez la [présentation de l&#39;espace de nommage d&#39;identité](../../identity-service/namespaces.md). |
 | [!UICONTROL Créé par] | Indique l’utilisateur qui a créé cette destination. |
 | [!UICONTROL Créé] | Indique la date UTC au moment de la création de cette destination. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL Activé]/ Désactivé
 
