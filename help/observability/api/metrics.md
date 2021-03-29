@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Point de terminaison de l’API de mesures
-topic: developer guide
+topic: guide du développeur
 description: Découvrez comment récupérer les mesures d’observabilité dans l’Experience Platform à l’aide de l’API Observability Insights.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 136c75f56c2ba4d61fef7981ff8a7889a0ade3d1
 workflow-type: tm+mt
-source-wordcount: '2027'
-ht-degree: 44%
+source-wordcount: '2056'
+ht-degree: 43%
 
 ---
 
@@ -178,6 +178,8 @@ curl -X POST \
 | `aggregator` | Spécifie la fonction d&#39;agrégation qui doit être utilisée pour regrouper plusieurs enregistrements de séries chronologiques en résultats uniques. Pour obtenir des informations détaillées sur les agrégateurs disponibles, consultez la [documentation OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
 | `downsample` | Champ facultatif qui vous permet de spécifier une fonction d’agrégation pour réduire le taux d’échantillonnage des données de mesure en triant les champs en intervalles (ou &quot;intervalles&quot;). L’intervalle de sous-échantillonnage est déterminé par la propriété `granularity`. Pour des informations détaillées sur le sous-échantillonnage, consultez la [documentation d’OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Réponse**
 
 Une réponse réussie renvoie les points de données résultants pour les mesures et les filtres spécifiés dans la requête.
@@ -270,6 +272,8 @@ Une réponse réussie renvoie les points de données résultants pour les mesure
 | `groupBy` | Si plusieurs jeux de données ont été spécifiés dans la propriété `filter` pour une mesure et que l&#39;option `groupBy` a été définie sur true dans la requête, cet objet contient l&#39;identifiant du jeu de données auquel s&#39;applique la propriété `dps` correspondante.<br><br>Si cet objet apparaît vide dans la réponse, la  `dps` propriété correspondante s&#39;applique à tous les jeux de données fournis dans le  `filters` tableau (ou à tous les jeux de données  [!DNL Platform] si aucun filtres n&#39;a été fourni). |
 | `dps` | Données renvoyées pour la mesure, le filtre et la période donnés. Chaque clé de cet objet représente un horodatage avec une valeur correspondante pour la mesure spécifiée. La période entre chaque point de données dépend de la valeur `granularity` spécifiée dans la requête. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Annexe
 
 La section suivante contient des informations supplémentaires sur l&#39;utilisation du point de terminaison `/metrics`.
@@ -310,6 +314,8 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Data
 | **timeseries.data.collection.inlet.success** | Nombre total d’appels HTTP réussis à un inlet de données ou tous les inlets de données. | ID d’entrée |
 | **timeseries.data.collection.inlet.failure** | Nombre total d’appels HTTP échoués à un inlet de données ou tous les inlets de données. | ID d’entrée |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### [!DNL Identity Service] {#identity}
 
 Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Identity Service].
@@ -326,6 +332,8 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Iden
 | timeseries.identity.graph.imsorg.numidgraphs.count | Nombre d’identités de graphique uniques stockées dans le graphique d’identités de votre organisation IMS. | S/O |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités de votre organisation IMS pour une force de graphique spécifique (« inconnu », « faible » ou « fort »). | Force de graphique (**obligatoire**) |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### [!DNL Privacy Service] {#privacy}
 
 Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Privacy Service].
@@ -335,6 +343,8 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Priv
 | timeseries.gdpr.jobs.totaljobs.count | Nombre total de tâches créées issues du RGPD. | ENV (**obligatoire**) |
 | timeseries.gdpr.jobs.completedjobs.count | Nombre total de tâches terminées issues du RGPD. | ENV (**obligatoire**) |
 | timeseries.gdpr.jobs.errorjobs.count | Nombre total de tâches d’erreur issues du RGPD. | ENV (**obligatoire**) |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### [!DNL Query Service] {#query}
 
@@ -348,6 +358,8 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Quer
 | timeseries.queryservice.query.scheduledquery.count | Nombre total de requêtes planifiées exécutées. | S/O |
 | timeseries.queryservice.query.interactivequery.count | Nombre total de requêtes interactives exécutées. | S/O |
 | timeseries.queryservice.query.batchfrompsqlquery.count | Nombre total de requêtes en lot exécutées à partir de PSQL. | S/O |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### [!DNL Real-time Customer Profile] {#profile}
 
@@ -369,6 +381,8 @@ Le tableau suivant présente les mesures pour [!DNL Real-time Customer Profile].
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Horodatage de la dernière requête d’enregistrement de mise à jour pour un jeu de données. | Identifiant du jeu de données (**Obligatoire**) |
 | platform.ups.ingest.streaming.record.size.m1_rate | Taille moyenne des enregistrements. | Organisation IMS (**Obligatoire**) |
 | platform.ups.ingest.streaming.records.updated.m15_rate | Taux de requêtes de mise à jour pour les enregistrements ingérés pour un jeu de données. | Identifiant du jeu de données (**Obligatoire**) |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Messages d’erreur
 
@@ -403,6 +417,8 @@ Les réponses du point de terminaison `/metrics` peuvent renvoyer des messages d
 | `title` | Chaîne contenant le message d’erreur et la raison potentielle pour laquelle il s’est produit. |
 | `report` | Contient des informations contextuelles sur l’erreur, y compris le sandbox et l’organisation IMS utilisées dans l’opération qui l’a déclenchée. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Le tableau suivant liste les différents codes d’erreur qui peuvent être renvoyés par l’API :
 
 | Code erreur | Titre | Description |
@@ -412,3 +428,5 @@ Le tableau suivant liste les différents codes d’erreur qui peuvent être renv
 | `INSGHT-1001-500` | Échec de la requête des mesures | Une erreur s&#39;est produite lors de la tentative de requête de la base de données de mesures, en raison d&#39;une erreur du serveur. Réessayez la demande, et si le problème persiste, contactez l’assistance Adobe. |
 | `INSGHT-1002-500` | Erreur de service | La demande n&#39;a pas pu être traitée en raison d&#39;une erreur interne. Réessayez la demande, et si le problème persiste, contactez l’assistance Adobe. |
 | `INSGHT-1003-401` | Erreur de validation Sandbox | La demande n&#39;a pas pu être traitée en raison d&#39;une erreur de validation de sandbox. Assurez-vous que le nom de sandbox que vous avez indiqué dans l&#39;en-tête `x-sandbox-name` représente un sandbox valide et activé pour votre organisation IMS avant de réessayer la requête. |
+
+{style=&quot;table-layout:auto&quot;}
