@@ -5,9 +5,9 @@ title: Contraintes de type de champ XDM
 topic: aperçu
 description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels elles peuvent être associées et comment définir vos propres types de champ dans l’API.
 translation-type: tm+mt
-source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
+source-git-commit: 456e595e66436c35c7d081ddf4699263e9c87234
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1086'
 ht-degree: 18%
 
 ---
@@ -33,7 +33,7 @@ XDM est créé sur le Schéma JSON et les champs XDM héritent donc d’une synt
 
 Le tableau suivant décrit comment chaque type XDM est représenté dans le Schéma JSON, ainsi qu’un exemple de valeur conforme au type :
 
-<table>
+<table style="table-layout:auto">
   <thead>
     <tr>
       <th>Type XDM</th>
@@ -185,6 +185,8 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 | [!UICONTROL Booléen] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Carte] | `Map` | (N/A) | `object` |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### MongoDB, Aerospike et Protobuf 2 {#mongo}
 
 | Type XDM | MongoDB | Aerospike | Protobuf 2 |
@@ -199,6 +201,8 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix millisecondes) | `int64`<br>(Unix millisecondes) |
 | [!UICONTROL Booléen] | `bool` | `Integer`<br>(binaire 0/1) | `bool` |
 | [!UICONTROL Carte] | `object` | `map` | `map<key_type, value_type>` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Définition des types de champ XDM dans l’API {#define-fields}
 
