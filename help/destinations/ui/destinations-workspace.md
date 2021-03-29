@@ -4,9 +4,9 @@ title: Espace de travail des destinations
 description: 'L’espace de travail Destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système, décrites dans les sections ci-dessous.'
 seo-description: Dans Adobe Experience Platform, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1018'
 ht-degree: 32%
 
 ---
@@ -45,6 +45,8 @@ Les cartes de destination contiennent soit un contrôle **[!UICONTROL Configurer
 | [!UICONTROL Flux de données de vue] | Vue des flux d’activation de données qui existent pour une destination. |
 | [!UICONTROL Documentation sur la vue] | Ouvre un lien vers la page de documentation de cette destination spécifique, pour plus d’informations et pour vous aider à la configurer. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ![Contrôles sur la carte de destination](../assets/ui/workspace/destination-card-options.png)
 
 Sélectionnez une carte de destination dans le catalogue pour ouvrir le rail de droite. Vous pouvez voir ici une description de la destination. Le rail droit fournit les mêmes commandes que celles décrites dans le tableau ci-dessus, ainsi qu&#39;une description de la destination et une indication de la catégorie et du type de destination.
@@ -70,6 +72,8 @@ Dans l’onglet **[!UICONTROL Comptes]**, vous pouvez en savoir plus sur les con
 | [!UICONTROL Nom d’utilisateur] | Le nom d’utilisateur que vous avez sélectionné dans l’[assistant de connexion à la destination](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Destinations] | Représente le nombre de flux de destination réussis uniques et connectés avec des informations de base créées pour une destination. |
 | [!UICONTROL Autorisé] | La date à laquelle la connexion à cette destination a été autorisée. |
+
+{style=&quot;table-layout:auto&quot;}
 
 De plus, vous pouvez modifier ou mettre à jour les informations de votre compte. Sélectionnez le bouton ![Modifier le compte](../assets/ui/workspace/pencil-icon.png) dans la colonne **[!UICONTROL Plateforme]** pour modifier les informations du compte.
 
