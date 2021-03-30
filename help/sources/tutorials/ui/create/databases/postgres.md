@@ -2,23 +2,19 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; PSQL ; psql ; PostgreSQL
 solution: Experience Platform
 title: Création d’une connexion source PostgreSQL dans l’interface utilisateur
-topic: overview
-type: Tutorial
+topic: aperçu
+type: Tutoriel
 description: Découvrez comment créer une connexion source PostgreSQL à l'aide de l'interface utilisateur Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 13%
+source-wordcount: '457'
+ht-degree: 14%
 
 ---
 
 
 # Créer une connexion source [!DNL PostgreSQL] dans l’interface utilisateur
-
->[!NOTE]
->
-> Le connecteur [!DNL PostgreSQL] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../../../home.md#terms-and-conditions).
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source [!DNL PostgreSQL] (ci-après dénommé &quot;PSQL&quot;) à l&#39;aide de l&#39;interface utilisateur [!DNL Platform].
 
