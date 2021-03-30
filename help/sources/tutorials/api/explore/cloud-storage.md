@@ -5,17 +5,17 @@ title: Exploration d’un système d’Enregistrements à forte intensité à l�
 topic: aperçu
 description: Ce didacticiel utilise l’API Flow Service pour explorer un système d’enregistrement cloud tiers.
 translation-type: tm+mt
-source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
+source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 20%
+source-wordcount: '821'
+ht-degree: 18%
 
 ---
 
 
 # Explorez un système d’enregistrement cloud à l’aide de l’API [!DNL Flow Service]
 
-Ce didacticiel utilise l&#39;[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) pour explorer un système d&#39;enregistrement cloud tiers.
+Ce didacticiel utilise l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) pour explorer un système d’enregistrement cloud tiers.
 
 ## Prise en main
 
@@ -101,14 +101,25 @@ Une réponse réussie renvoie un tableau de fichiers et de dossiers trouvés dan
 ```json
 [
     {
-        "type": "File",
-        "name": "data.csv",
-        "path": "/some/path/data.csv"
+        "type": "file",
+        "name": "account.csv",
+        "path": "/test-connectors/testFolder-fileIngestion/account.csv",
+        "canPreview": true,
+        "canFetchSchema": true
     },
     {
-        "type": "Folder",
-        "name": "foobar",
-        "path": "/some/path/foobar"
+        "type": "file",
+        "name": "profileData.json",
+        "path": "/test-connectors/testFolder-fileIngestion/profileData.json",
+        "canPreview": true,
+        "canFetchSchema": true
+    },
+    {
+        "type": "file",
+        "name": "sampleprofile--3.parquet",
+        "path": "/test-connectors/testFolder-fileIngestion/sampleprofile--3.parquet",
+        "canPreview": true,
+        "canFetchSchema": true
     }
 ]
 ```
@@ -117,14 +128,14 @@ Une réponse réussie renvoie un tableau de fichiers et de dossiers trouvés dan
 
 Pour inspecter la structure du fichier de données à partir de votre enregistrement cloud, effectuez une demande de GET tout en indiquant le chemin d’accès du fichier et saisissez-le comme paramètre de requête.
 
-Vous pouvez inspecter la structure d’un fichier CSV ou TSV en spécifiant un délimiteur personnalisé comme périmètre de requête. Toute valeur de caractère unique est un délimiteur de colonne autorisé. Si elle n’est pas fournie, une virgule `(,)` est utilisée comme valeur par défaut.
+Vous pouvez inspecter la structure d’un fichier de données à partir de votre source d’enregistrement cloud en exécutant une demande de GET tout en indiquant le chemin d’accès et le type du fichier. Vous pouvez également examiner différents types de fichiers tels que CSV, TSV ou JSON compressé et les fichiers délimités en spécifiant leurs types de fichiers dans le cadre des paramètres de requête.
 
 **Format d’API**
 
 ```http
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=;
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=\t
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
 ```
 
 | Paramètre | Description |
@@ -132,13 +143,13 @@ GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&file
 | `{CONNECTION_ID}` | ID de connexion de votre connecteur source d’enregistrement cloud. |
 | `{FILE_PATH}` | Chemin d&#39;accès au fichier que vous souhaitez inspecter. |
 | `{FILE_TYPE}` | Type du fichier. Les types de fichiers pris en charge sont les suivants :<ul><li>DELIMITED</code> : Valeur séparée par des délimiteurs. Les fichiers DSV doivent être séparés par des virgules.</li><li>JSON</code> : Notation d’objet JavaScript. Les fichiers JSON doivent être compatibles XDM</li><li>PARQUET</code> : Parquet Apache. Les fichiers de parquets doivent être conformes à XDM.</li></ul> |
-| `columnDelimiter` | Valeur d’un caractère unique que vous avez spécifiée comme délimiteur de colonne pour inspecter les fichiers CSV ou TSV. Si le paramètre n&#39;est pas fourni, la valeur est par défaut une virgule `(,)`. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pouvant être utilisés pour filtrer les résultats. Pour plus d&#39;informations, consultez la section [Paramètres de requête](#query). |
 
 **Requête**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/aep-bootcamp/Adobe%20Pets%20Customer%2020190801%20EXP.json&fileType=json&preview=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -173,6 +184,15 @@ Une réponse réussie renvoie la structure du fichier interrogé, y compris les 
     }
 ]
 ```
+
+## Utilisation des paramètres de requête {#query}
+
+L&#39;[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) prend en charge l&#39;utilisation de paramètres de requête pour la prévisualisation et l&#39;inspection de différents types de fichiers.
+
+| Paramètre | Description |
+| --------- | ----------- |
+| `columnDelimiter` | Valeur d’un caractère unique que vous avez spécifiée comme délimiteur de colonne pour inspecter les fichiers CSV ou TSV. Si le paramètre n&#39;est pas fourni, la valeur est par défaut une virgule `(,)`. |
+| `compressionType` | Paramètre de requête requis pour l’aperçu d’un fichier délimité compressé ou d’un fichier JSON. Les fichiers compressés pris en charge sont les suivants : <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
 
 ## Étapes suivantes
 
