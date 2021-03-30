@@ -2,14 +2,14 @@
 keywords: Experience Platform ; publier un modèle ; Espace de travail des données ; rubriques populaires ; noter un service
 solution: Experience Platform
 title: Publication d’un modèle en tant que service dans l’interface utilisateur de Data Science Workspace
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 description: Adobe Experience Platform Data Science Workspace vous permet de publier un modèle formé et noté en tant que service et permet ainsi aux utilisateurs de votre organisation IMS de noter des données sans avoir besoin de créer leurs propres modèles.
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 85%
+source-wordcount: '504'
+ht-degree: 50%
 
 ---
 
@@ -28,29 +28,47 @@ Si vous préférez publier un modèle à l’aide des API Sensei Machine Learnin
 
 ## Publication d’un modèle {#publish-a-model}
 
-1. Dans Adobe Experience Platform, cliquez sur le lien **[!UICONTROL Modèles]** situé dans la colonne de navigation de gauche pour tous les modèles existants. Recherchez le modèle à publier en tant que service et cliquez sur son nom.
-   ![](../images/models-recipes/publish-model/1_browse_model.png)
-2. Cliquez sur **[!UICONTROL Publier]** dans la partie supérieure droite de la page de présentation du modèle pour lancer le processus de création de service.
-   ![](../images/models-recipes/publish-model/2_view_training_runs.png)
-3. Saisissez un nom pour le service et éventuellement une description du service, puis cliquez sur **[!UICONTROL Suivant]** quand vous avez terminé.
-   ![](../images/models-recipes/publish-model/3_configure_service.png)
-4. Toutes les opérations de formation réussies du modèle sont répertoriées. Le nouveau service héritera des configurations de formation et de notation de l’opération de formation sélectionnée.
-   ![](../images/models-recipes/publish-model/4_select_training_run.png)
-5. Cliquez sur **[!UICONTROL Terminer]** pour créer le service et revenez à la **[!UICONTROL Galerie de services]** afin d’afficher tous les services disponibles, y compris le service nouvellement créé.
-   ![](../images/models-recipes/publish-model/service_gallery.png)
+Dans Adobe Experience Platform, sélectionnez **[!UICONTROL Modèles]** dans la colonne de navigation de gauche, puis sélectionnez l&#39;onglet **[!UICONTROL Parcourir]** pour liste tous les modèles existants. Sélectionnez le nom du modèle que vous souhaitez publier en tant que service.
 
-## Notation à l’aide d’un service  {#access-a-service}
+![](../images/models-recipes/publish-model/browse_model.png)
 
-1. Dans Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Services]** situé dans la colonne de navigation de gauche pour accéder à la **[!UICONTROL Galerie de services]**. Recherchez le service à utiliser, puis cliquez sur **[!UICONTROL Noter]**.
-   ![](../images/models-recipes/publish-model/click_to_score.png)
-2. Sélectionnez un jeu de données d’entrée approprié pour l’opération de notation, puis cliquez sur **[!UICONTROL Suivant]**.
-   ![](../images/models-recipes/publish-model/6_scoring_input.png)
-3. Sélectionnez un jeu de données de sortie approprié pour les résultats de la notation, puis cliquez sur **[!UICONTROL Suivant]**.
-   ![](../images/models-recipes/publish-model/7_scoring_output.png)
-4. Lorsqu’un service est créé, il hérite des configurations de notation par défaut. Vous pouvez revoir ces configurations et les ajuster selon les besoins en double-cliquant sur les valeurs. Lorsque vous trouvez les configurations satisfaisantes, cliquez sur **[!UICONTROL Terminer]** pour lancer l’opération de notation.
-   ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-5. Sur la page **Présentation** du service, vous retrouvez les détails de la nouvelle tâche de notation et sa progression. Une fois la tâche terminée, l’en-tête **[!UICONTROL Le plus récent]** du conteneur **[!UICONTROL Scoring]** sera mis à jour.
-   ![](../images/models-recipes/publish-model/score_pending.png)
+Sélectionnez **[!UICONTROL Publier]** en haut à droite de la page d&#39;aperçu du modèle pour début d&#39;un processus de création de service.
+
+![](../images/models-recipes/publish-model/view_training.png)
+
+Saisissez un nom pour le Service et éventuellement une description du Service, sélectionnez **[!UICONTROL Suivant]** une fois terminé.
+
+![](../images/models-recipes/publish-model/configure_training.png)
+
+Toutes les opérations de formation réussies du modèle sont répertoriées. Le nouveau service héritera des configurations de formation et de notation de l’opération de formation sélectionnée.
+
+![](../images/models-recipes/publish-model/select_training_run.png)
+
+Sélectionnez **[!UICONTROL Terminer]** pour créer le Service et rediriger vers la **[!UICONTROL Galerie de services]** pour afficher tous les Services disponibles, y compris le Service nouvellement créé.
+
+![](../images/models-recipes/publish-model/service_gallery.png)
+
+## Notation à l’aide d’un service {#access-a-service}
+
+Dans Adobe Experience Platform, sélectionnez l&#39;onglet **[!UICONTROL Services]** situé dans la colonne de navigation de gauche pour accéder à la **[!UICONTROL Galerie de services]**. Recherchez le service que vous souhaitez utiliser et sélectionnez **[!UICONTROL Ouvrir]**.
+
+![](../images/models-recipes/publish-model/open_service.png)
+
+Dans la page d’aperçu du service, sélectionnez **[!UICONTROL Score]**.
+
+![](../images/models-recipes/publish-model/score_service.png)
+
+Sélectionnez un jeu de données d’entrée approprié pour l’exécution de score, puis **[!UICONTROL Suivant]**. Vous êtes invité à effectuer la même étape pour le jeu de données de score. Une fois que vous avez sélectionné le jeu de données d’entrée et de sortie, vous pouvez mettre à jour les configurations.
+
+![](../images/models-recipes/publish-model/select_datasets.png)
+
+Lorsqu’un service est créé, il hérite des configurations de notation par défaut. Vous pouvez revoir ces configurations et les ajuster selon les besoins en double-cliquant sur les valeurs. Une fois que vous êtes satisfait des configurations, sélectionnez **[!UICONTROL Terminer]** pour commencer l’exécution de score.
+
+![](../images/models-recipes/publish-model/scoring_configs.png)
+
+Sur la page **Présentation** du service, vous retrouvez les détails de la nouvelle tâche de notation et sa progression. Une fois la tâche terminée, l’en-tête **[!UICONTROL Le plus récent]** du conteneur **[!UICONTROL Scoring]** est mis à jour.
+
+![](../images/models-recipes/publish-model/pending_scoring.png)
 
 ## Étapes suivantes {#next-steps}
 
