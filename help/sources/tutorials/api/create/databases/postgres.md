@@ -2,23 +2,19 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; PostgreSQL ; postgresql ; PSQL ; psql
 solution: Experience Platform
 title: Création d’une connexion source PostgreSQL à l’aide de l’API du service de flux
-topic: overview
-type: Tutorial
+topic: aperçu
+type: Tutoriel
 description: Découvrez comment connecter Adobe Experience Platform à PostgreSQL à l’aide de l’API Flow Service.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 26%
+source-wordcount: '562'
+ht-degree: 27%
 
 ---
 
 
 # Créez une connexion source [!DNL PostgreSQL] à l’aide de l’API [!DNL Flow Service].
-
->[!NOTE]
->
->Le connecteur [!DNL PostgreSQL] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../../../home.md#terms-and-conditions).
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
