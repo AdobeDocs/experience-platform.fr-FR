@@ -2,22 +2,18 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; shopify ; Shopify ;
 solution: Experience Platform
 title: Présentation du connecteur source Shopify
-topic: overview
+topic: aperçu
 description: Découvrez comment connecter Shopify à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 10%
+source-wordcount: '158'
+ht-degree: 12%
 
 ---
 
 
-# (Bêta) [!DNL Shopify] connecteur
-
->[!NOTE]
->
->Le connecteur [!DNL Shopify] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation des connecteurs portant une étiquette bêta, consultez l&#39;[aperçu des sources](../../home.md#terms-and-conditions).
+# [!DNL Shopify] connecteur
 
 Adobe Experience Platform permet l’assimilation de données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
