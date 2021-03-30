@@ -6,10 +6,10 @@ topic: aperçu
 type: Tutoriel
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un enregistrement cloud tiers et les amener sur la plate-forme à l’aide des connecteurs et des API source.
 translation-type: tm+mt
-source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
+source-git-commit: 8b85b25112ee16b09b1411c5d001bf13fb7fbcaa
 workflow-type: tm+mt
-source-wordcount: '1639'
-ht-degree: 21%
+source-wordcount: '1768'
+ht-degree: 19%
 
 ---
 
@@ -58,7 +58,7 @@ Vous pouvez créer une connexion source en adressant une requête de POST à l&#
 
 Pour créer une connexion source, vous devez également définir une valeur d’énumération pour l’attribut de format de données.
 
-Utilisez les valeurs d’énumération suivantes pour les connecteurs basés sur des fichiers :
+Utilisez les valeurs d’énumération suivantes pour les sources basées sur des fichiers :
 
 | Sur le format des données saisies | Valeur maximale |
 | ----------- | ---------- |
@@ -66,11 +66,10 @@ Utilisez les valeurs d’énumération suivantes pour les connecteurs basés sur
 | JSON | `json` |
 | Parquet | `parquet` |
 
-Pour tous les connecteurs basés sur une table, définissez la valeur sur `tabular`.
+Pour toutes les sources basées sur des tables, définissez la valeur sur `tabular`.
 
->[!NOTE]
->
->Vous pouvez assimiler des fichiers CSV et TSV à l’aide d’un connecteur source d’enregistrement cloud en spécifiant un délimiteur de colonne comme propriété. Toute valeur de caractère unique est un délimiteur de colonne autorisé. Si elle n’est pas fournie, une virgule `(,)` est utilisée comme valeur par défaut.
+- [Création d’une connexion source à l’aide de fichiers délimités personnalisés](#using-custom-delimited-files)
+- [Création d’une connexion source à l’aide de fichiers compressés](#using-compressed-files)
 
 **Format d’API**
 
@@ -78,7 +77,13 @@ Pour tous les connecteurs basés sur une table, définissez la valeur sur `tabul
 POST /sourceConnections
 ```
 
+### Créer une connexion source à l’aide de fichiers délimités personnalisés {#using-custom-delimited-files}
+
 **Requête**
+
+Vous pouvez assimiler un fichier délimité à l’aide d’un délimiteur personnalisé en spécifiant une propriété `columnDelimiter`. Toute valeur de caractère unique est un délimiteur de colonne autorisé. Si elle n’est pas fournie, une virgule `(,)` est utilisée comme valeur par défaut.
+
+L’exemple de requête suivant crée une connexion source pour un type de fichier délimité à l’aide de valeurs séparées par des tabulations.
 
 ```shell
 curl -X POST \
@@ -89,9 +94,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "name": "Cloud storage source connection for delimited files",
         "description": "Cloud storage source connector",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "data": {
             "format": "delimited",
             "columnDelimiter": "\t"
@@ -100,7 +105,7 @@ curl -X POST \
             "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
-            "connectionSpec": {
+        "connectionSpec": {
             "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
             "version": "1.0"
         }
@@ -114,6 +119,64 @@ curl -X POST \
 | `data.columnDelimiter` | Vous pouvez utiliser n’importe quel délimiteur de colonne à caractère unique pour collecter des fichiers plats. Cette propriété n’est requise que lors de l’assimilation de fichiers CSV ou TSV. |
 | `params.path` | Chemin d’accès au fichier source auquel vous accédez. |
 | `connectionSpec.id` | Identifiant de spécification de connexion associé à votre système d’enregistrement Cloud tiers spécifique. Voir l&#39;[annexe](#appendix) pour une liste d&#39;ID de spécification de connexion. |
+
+**Réponse**
+
+Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la connexion source nouvellement créée. Cet identifiant est nécessaire à une étape ultérieure pour créer un flux de données.
+
+```json
+{
+    "id": "26b53912-1005-49f0-b539-12100559f0e2",
+    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
+}
+```
+
+### Créer une connexion source à l’aide de fichiers compressés {#using-compressed-files}
+
+**Requête**
+
+Vous pouvez également assimiler des fichiers JSON compressés ou délimités en spécifiant sa propriété `compressionType`. La liste des types de fichiers compressés pris en charge est la suivante :
+
+- `bzip2`
+- `gzip`
+- `deflate`
+- `zipDeflate`
+- `tarGzip`
+- `tar`
+
+L’exemple de requête suivant crée une connexion source pour un fichier délimité compressé à l’aide d’un type de fichier `gzip`.
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Cloud storage source connection for compressed files",
+        "description": "Cloud storage source connection for compressed files",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "data": {
+            "format": "delimited",
+            "properties": {
+                "compressionType" : "gzip"
+            }
+        },
+        "params": {
+            "path": "/compressed/files.gzip"
+        },
+        "connectionSpec": {
+            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+            "version": "1.0"
+        }
+     }'
+```
+
+| Propriété | Description |
+| --- | --- |
+| `data.properties.compressionType` | Détermine le type de fichier compressé à assimiler. Cette propriété n’est requise que lors de l’assimilation de fichiers JSON compressés ou délimités. |
 
 **Réponse**
 
