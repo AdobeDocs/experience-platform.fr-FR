@@ -2,14 +2,14 @@
 keywords: Experience Platform ; importer la recette emballée ; Espace de travail des sciences de données ; rubriques populaires ; recettes ; ui ; créer un moteur
 solution: Experience Platform
 title: Importer une recette compressée dans l’interface utilisateur de l’espace de travail Data Science Workspace
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 description: Ce tutoriel explique comment configurer et importer une recette empaquetée à l’aide de l’exemple de ventes au détail fourni. Après avoir terminé ce tutoriel, vous serez prêt à créer, à former et à évaluer un modèle dans Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 41%
+source-wordcount: '1835'
+ht-degree: 39%
 
 ---
 
@@ -124,7 +124,7 @@ Pour les besoins de ce didacticiel, vous pouvez laisser les fichiers de configur
 
 ### Importation d’une recette Docker - [!DNL Python] {#python}
 
-Début en naviguant et en sélectionnant **[!UICONTROL Workflows]** dans le coin supérieur gauche de l&#39;interface utilisateur [!DNL Platform]. Ensuite, sélectionnez **Importer la recette** et cliquez sur **[!UICONTROL Lancer]**.
+Début en naviguant et en sélectionnant **[!UICONTROL Workflows]** dans le coin supérieur gauche de l&#39;interface utilisateur [!DNL Platform]. Ensuite, sélectionnez **Importer la recette** et sélectionnez **[!UICONTROL Lancer]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -136,7 +136,7 @@ La page **Configurer** du flux de travaux **Importer la recette** s&#39;affiche.
 >
 > Dans le tutoriel [Former une recette empaquetée à partir de fichiers source](./package-source-files-recipe.md), une URL Docker a été fournie à la fin de la création de la recette Ventes au détail à l’aide de fichiers source Python.
 
-Une fois que vous êtes sur la page **Sélectionner la source**, collez l&#39;URL du Docker correspondant à la recette assemblée générée à l&#39;aide des fichiers source [!DNL Python] dans le champ **[!UICONTROL URL de la source]**. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **Navigateur** du système de fichiers. Le fichier de configuration fourni se trouve ici : `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Sélectionnez **[!UICONTROL Python]** dans la liste déroulante **Runtime** et **[!UICONTROL Classification]** dans la liste déroulante **Type**. Une fois que tout a été complété, cliquez sur **[!UICONTROL Suivant]** dans le coin supérieur droit pour accéder à **Gérer les schémas**.
+Une fois que vous êtes sur la page **Sélectionner la source**, collez l&#39;URL du Docker correspondant à la recette assemblée générée à l&#39;aide des fichiers source [!DNL Python] dans le champ **[!UICONTROL URL de la source]**. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **Navigateur** du système de fichiers. Le fichier de configuration fourni se trouve ici : `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Sélectionnez **[!UICONTROL Python]** dans la liste déroulante **Runtime** et **[!UICONTROL Classification]** dans la liste déroulante **Type**. Une fois que tout a été rempli, sélectionnez **[!UICONTROL Suivant]** dans le coin supérieur droit pour passer à **Gérer les schémas**.
 
 >[!NOTE]
 >
@@ -148,9 +148,9 @@ Ensuite, sélectionnez les schémas d&#39;entrée et de sortie des ventes au dé
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Sous la section **Gestion des fonctionnalités**, cliquez sur votre identification de client dans le lecteur de schéma pour développer le schéma d’entrée Ventes au détail. Sélectionnez les fonctionnalités d’entrée et de sortie en mettant en surbrillance la fonctionnalité souhaitée, puis sélectionnez **[!UICONTROL Fonctionnalité d’entrée]** ou **[!UICONTROL Fonctionnalité cible]** dans la fenêtre **[!UICONTROL Propriétés du champ]** à droite. Pour les besoins de ce tutoriel, définissez **[!UICONTROL weeklySales]** en tant que **[!UICONTROL Fonctionnalité cible]** et tout le reste en tant que **[!UICONTROL Fonctionnalité d’entrée]**. Cliquez sur **[!UICONTROL Suivant]** pour consulter votre nouvelle recette configurée.
+Dans la section **Gestion des fonctionnalités**, sélectionnez sur votre identification de client dans le lecteur de schéma pour développer le schéma d’entrée Ventes au détail. Sélectionnez les fonctionnalités d’entrée et de sortie en mettant en surbrillance la fonctionnalité souhaitée, puis sélectionnez **[!UICONTROL Fonctionnalité d’entrée]** ou **[!UICONTROL Fonctionnalité cible]** dans la fenêtre **[!UICONTROL Propriétés du champ]** à droite. Pour les besoins de ce tutoriel, définissez **[!UICONTROL weeklySales]** en tant que **[!UICONTROL Fonctionnalité cible]** et tout le reste en tant que **[!UICONTROL Fonctionnalité d’entrée]**. Sélectionnez **[!UICONTROL Suivant]** pour examiner votre nouvelle recette configurée.
 
-Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations si nécessaire. Cliquez sur **[!UICONTROL Terminer]** pour créer la recette.
+Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations si nécessaire. Sélectionnez **[!UICONTROL Finish]** pour créer la recette.
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -158,7 +158,7 @@ Passez aux [étapes suivantes](#next-steps) pour savoir comment créer un modèl
 
 ### Importation d’une recette Docker - R {#r}
 
-Début en naviguant et en sélectionnant **[!UICONTROL Workflows]** dans le coin supérieur gauche de l&#39;interface utilisateur [!DNL Platform]. Ensuite, sélectionnez **Importer la recette** et cliquez sur **[!UICONTROL Lancer]**.
+Début en naviguant et en sélectionnant **[!UICONTROL Workflows]** dans le coin supérieur gauche de l&#39;interface utilisateur [!DNL Platform]. Ensuite, sélectionnez **Importer la recette** et sélectionnez **[!UICONTROL Lancer]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -170,7 +170,7 @@ La page **Configurer** du flux de travaux **Importer la recette** s&#39;affiche.
 >
 > Dans le tutoriel [Former une recette empaquetée à partir de fichiers source](./package-source-files-recipe.md), une URL Docker a été fournie à la fin de la création de la recette Ventes au détail à l’aide de fichiers source R.
 
-Une fois que vous êtes sur la page **Sélectionner la source**, collez l&#39;URL du Docker correspondant à la recette assemblée générée à l&#39;aide des fichiers source R dans le champ **[!UICONTROL URL source]**. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **Navigateur** du système de fichiers. Le fichier de configuration fourni se trouve ici : `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Sélectionnez **[!UICONTROL R]** dans la liste déroulante **Exécution** et **[!UICONTROL Classification]** dans la liste déroulante **Type**. Une fois que tout a été complété, cliquez sur **[!UICONTROL Suivant]** dans le coin supérieur droit pour accéder à **Gérer les schémas**.
+Une fois que vous êtes sur la page **Sélectionner la source**, collez l&#39;URL du Docker correspondant à la recette assemblée générée à l&#39;aide des fichiers source R dans le champ **[!UICONTROL URL source]**. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **Navigateur** du système de fichiers. Le fichier de configuration fourni se trouve ici : `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Sélectionnez **[!UICONTROL R]** dans la liste déroulante **Exécution** et **[!UICONTROL Classification]** dans la liste déroulante **Type**. Une fois que tout a été rempli, sélectionnez **[!UICONTROL Suivant]** dans le coin supérieur droit pour passer à **Gérer les schémas**.
 
 >[!NOTE]
 >
@@ -182,9 +182,9 @@ Ensuite, sélectionnez les schémas d&#39;entrée et de sortie des ventes au dé
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Sous la section *Gestion des fonctionnalités*, cliquez sur votre identification de client dans le lecteur de schéma pour développer le schéma d’entrée Ventes au détail. Sélectionnez les fonctionnalités d’entrée et de sortie en mettant en surbrillance la fonctionnalité souhaitée, puis sélectionnez **[!UICONTROL Fonctionnalité d’entrée]** ou **[!UICONTROL Fonctionnalité cible]** dans la fenêtre **[!UICONTROL Propriétés du champ]** à droite. Pour les besoins de ce tutoriel, définissez **[!UICONTROL weeklySales]** en tant que **[!UICONTROL Fonctionnalité cible]** et tout le reste en tant que **[!UICONTROL Fonctionnalité d’entrée]**. Cliquez sur **[!UICONTROL Suivant]** pour passer en revue votre nouvelle recette configurée.
+Dans la section *Gestion des fonctionnalités*, sélectionnez sur votre identification de client dans le lecteur de schéma pour développer le schéma d’entrée Ventes au détail. Sélectionnez les fonctionnalités d’entrée et de sortie en mettant en surbrillance la fonctionnalité souhaitée, puis sélectionnez **[!UICONTROL Fonctionnalité d’entrée]** ou **[!UICONTROL Fonctionnalité cible]** dans la fenêtre **[!UICONTROL Propriétés du champ]** à droite. Pour les besoins de ce tutoriel, définissez **[!UICONTROL weeklySales]** en tant que **[!UICONTROL Fonctionnalité cible]** et tout le reste en tant que **[!UICONTROL Fonctionnalité d’entrée]**. Sélectionnez **[!UICONTROL Suivant]** pour examiner votre nouvelle recette configurée.
 
-Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations si nécessaire. Cliquez sur **Terminer** pour créer la recette.
+Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations si nécessaire. Sélectionnez **Finish** pour créer la recette.
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -192,7 +192,7 @@ Passez aux [étapes suivantes](#next-steps) pour savoir comment créer un modèl
 
 ### Recette basée sur un Docker d&#39;importation - PySpark {#pyspark}
 
-Début en naviguant et en sélectionnant **[!UICONTROL Workflows]** dans le coin supérieur gauche de l&#39;interface utilisateur [!DNL Platform]. Ensuite, sélectionnez **Importer la recette** et cliquez sur **[!UICONTROL Lancer]**.
+Début en naviguant et en sélectionnant **[!UICONTROL Workflows]** dans le coin supérieur gauche de l&#39;interface utilisateur [!DNL Platform]. Ensuite, sélectionnez **Importer la recette** et sélectionnez **[!UICONTROL Lancer]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -204,7 +204,7 @@ La page **Configurer** du flux de travaux **Importer la recette** s&#39;affiche.
 >
 > Dans le [didacticiel Package des fichiers source dans une recette](./package-source-files-recipe.md), une URL Docker a été fournie à la fin de la création de la recette Ventes au détail à l’aide des fichiers source PySpark.
 
-Une fois que vous êtes sur la page **Sélectionner la source**, collez l&#39;URL du Docker correspondant à la recette assemblée générée à l&#39;aide des fichiers source PySpark dans le champ **[!UICONTROL URL de la source]**. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **Navigateur** du système de fichiers. Le fichier de configuration fourni se trouve ici : `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Sélectionnez **[!UICONTROL PySpark]** dans la liste déroulante **Runtime**. Une fois que le runtime PySpark est sélectionné, l&#39;artefact par défaut est automatiquement renseigné sur **[!UICONTROL Docker]**. Ensuite, sélectionnez **[!UICONTROL Classification]** dans la liste déroulante **Type**. Une fois que tout a été complété, cliquez sur **[!UICONTROL Suivant]** dans le coin supérieur droit pour accéder à **Gérer les schémas**.
+Une fois que vous êtes sur la page **Sélectionner la source**, collez l&#39;URL du Docker correspondant à la recette assemblée générée à l&#39;aide des fichiers source PySpark dans le champ **[!UICONTROL URL de la source]**. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **Navigateur** du système de fichiers. Le fichier de configuration fourni se trouve ici : `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Sélectionnez **[!UICONTROL PySpark]** dans la liste déroulante **Runtime**. Une fois que le runtime PySpark est sélectionné, l&#39;artefact par défaut est automatiquement renseigné sur **[!UICONTROL Docker]**. Ensuite, sélectionnez **[!UICONTROL Classification]** dans la liste déroulante **Type**. Une fois que tout a été rempli, sélectionnez **[!UICONTROL Suivant]** dans le coin supérieur droit pour passer à **Gérer les schémas**.
 
 >[!NOTE]
 >
@@ -212,13 +212,15 @@ Une fois que vous êtes sur la page **Sélectionner la source**, collez l&#39;UR
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
-Ensuite, sélectionnez les schémas d&#39;entrée et de sortie des ventes au détail sous la section **Gérer les Schémas**, ils ont été créés à l&#39;aide du script d&#39;amorçage fourni dans le didacticiel [créer le schéma de vente au détail et le jeu de données](../models-recipes/create-retails-sales-dataset.md).
+Ensuite, sélectionnez les schémas d&#39;entrée et de sortie des ventes au détail à l&#39;aide du sélecteur **Gérer les Schémas**, les schémas ont été créés à l&#39;aide du script d&#39;amorçage fourni dans le didacticiel [créer le schéma de vente au détail et le jeu de données](../models-recipes/create-retails-sales-dataset.md).
+
+![gérer les schémas](../images/models-recipes/import-package-ui/manage-schemas.png)
+
+Dans la section **Gestion des fonctionnalités**, sélectionnez sur votre identification de client dans le lecteur de schéma pour développer le schéma d’entrée Ventes au détail. Sélectionnez les fonctionnalités d’entrée et de sortie en mettant en surbrillance la fonctionnalité souhaitée, puis sélectionnez **[!UICONTROL Fonctionnalité d’entrée]** ou **[!UICONTROL Fonctionnalité cible]** dans la fenêtre **[!UICONTROL Propriétés du champ]** à droite. Pour les besoins de ce tutoriel, définissez **[!UICONTROL weeklySales]** en tant que **[!UICONTROL Fonctionnalité cible]** et tout le reste en tant que **[!UICONTROL Fonctionnalité d’entrée]**. Sélectionnez **[!UICONTROL Suivant]** pour examiner votre nouvelle recette configurée.
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Sous la section **Gestion des fonctionnalités**, cliquez sur votre identification de client dans le lecteur de schéma pour développer le schéma d’entrée Ventes au détail. Sélectionnez les fonctionnalités d’entrée et de sortie en mettant en surbrillance la fonctionnalité souhaitée, puis sélectionnez **[!UICONTROL Fonctionnalité d’entrée]** ou **[!UICONTROL Fonctionnalité cible]** dans la fenêtre **[!UICONTROL Propriétés du champ]** à droite. Pour les besoins de ce tutoriel, définissez **[!UICONTROL weeklySales]** en tant que **[!UICONTROL Fonctionnalité cible]** et tout le reste en tant que **[!UICONTROL Fonctionnalité d’entrée]**. Cliquez sur **[!UICONTROL Suivant]** pour consulter votre nouvelle recette configurée.
-
-Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations si nécessaire. Cliquez sur **[!UICONTROL Terminer]** pour créer la recette.
+Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations si nécessaire. Sélectionnez **[!UICONTROL Finish]** pour créer la recette.
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -226,7 +228,7 @@ Passez aux [étapes suivantes](#next-steps) pour savoir comment créer un modèl
 
 ### Recette basée sur un Docker d&#39;importation - Scala {#scala}
 
-Début en naviguant et en sélectionnant **[!UICONTROL Workflows]** dans le coin supérieur gauche de l&#39;interface utilisateur [!DNL Platform]. Ensuite, sélectionnez **Importer la recette** et cliquez sur **[!UICONTROL Lancer]**.
+Début en naviguant et en sélectionnant **[!UICONTROL Workflows]** dans le coin supérieur gauche de l&#39;interface utilisateur [!DNL Platform]. Ensuite, sélectionnez **Importer la recette** et sélectionnez **[!UICONTROL Lancer]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -238,7 +240,7 @@ La page **Configurer** du flux de travaux **Importer la recette** s&#39;affiche.
 >
 > Dans le didacticiel [compresser les fichiers source dans une recette](./package-source-files-recipe.md), une URL Docker a été fournie à la fin de la création de la recette de vente au détail à l’aide des fichiers source Scala ([!DNL Spark]).
 
-Une fois que vous êtes sur la page **Sélectionner la source**, collez l&#39;URL du Docker correspondant à la recette assemblée générée à l&#39;aide des fichiers source Scala dans le champ URL source. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le Navigateur du système de fichiers. Le fichier de configuration fourni se trouve ici : `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Sélectionnez **[!UICONTROL Spark]** dans la liste déroulante **Exécution**. Une fois l&#39;exécution [!DNL Spark] sélectionnée, l&#39;artefact par défaut est automatiquement renseigné en **[!UICONTROL Docker]**. Ensuite, sélectionnez **[!UICONTROL Régression]** dans la liste déroulante **Type**. Une fois que tout a été complété, cliquez sur **[!UICONTROL Suivant]** dans le coin supérieur droit pour accéder à **Gérer les schémas**.
+Une fois que vous êtes sur la page **Sélectionner la source**, collez l&#39;URL du Docker correspondant à la recette assemblée générée à l&#39;aide des fichiers source Scala dans le champ URL source. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le Navigateur du système de fichiers. Le fichier de configuration fourni se trouve ici : `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Sélectionnez **[!UICONTROL Spark]** dans la liste déroulante **Exécution**. Une fois l&#39;exécution [!DNL Spark] sélectionnée, l&#39;artefact par défaut est automatiquement renseigné en **[!UICONTROL Docker]**. Ensuite, sélectionnez **[!UICONTROL Régression]** dans la liste déroulante **Type**. Une fois que tout a été rempli, sélectionnez **[!UICONTROL Suivant]** dans le coin supérieur droit pour passer à **Gérer les schémas**.
 
 >[!NOTE]
 >
@@ -246,13 +248,15 @@ Une fois que vous êtes sur la page **Sélectionner la source**, collez l&#39;UR
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
-Ensuite, sélectionnez les schémas d&#39;entrée et de sortie des ventes au détail sous la section **Gérer les Schémas**, ils ont été créés à l&#39;aide du script d&#39;amorçage fourni dans le didacticiel [créer le schéma de vente au détail et le jeu de données](../models-recipes/create-retails-sales-dataset.md).
+Ensuite, sélectionnez les schémas d&#39;entrée et de sortie des ventes au détail à l&#39;aide du sélecteur **Gérer les Schémas**, les schémas ont été créés à l&#39;aide du script d&#39;amorçage fourni dans le didacticiel [créer le schéma de vente au détail et le jeu de données](../models-recipes/create-retails-sales-dataset.md).
+
+![gérer les schémas](../images/models-recipes/import-package-ui/manage-schemas.png)
+
+Dans la section **Gestion des fonctionnalités**, sélectionnez sur votre identification de client dans le lecteur de schéma pour développer le schéma d’entrée Ventes au détail. Sélectionnez les fonctionnalités d’entrée et de sortie en mettant en surbrillance la fonctionnalité souhaitée, puis sélectionnez **[!UICONTROL Fonctionnalité d’entrée]** ou **[!UICONTROL Fonctionnalité cible]** dans la fenêtre **[!UICONTROL Propriétés du champ]** à droite. Pour les besoins de ce didacticiel, définissez &quot;[!UICONTROL weeklySales]&quot; comme **[!UICONTROL Fonction de Cible]** et tout le reste comme **[!UICONTROL Fonction d&#39;entrée]**. Sélectionnez **[!UICONTROL Suivant]** pour examiner votre nouvelle recette configurée.
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Sous la section **Gestion des fonctionnalités**, cliquez sur votre identification de client dans le lecteur de schéma pour développer le schéma d’entrée Ventes au détail. Sélectionnez les fonctionnalités d’entrée et de sortie en mettant en surbrillance la fonctionnalité souhaitée, puis sélectionnez **[!UICONTROL Fonctionnalité d’entrée]** ou **[!UICONTROL Fonctionnalité cible]** dans la fenêtre **[!UICONTROL Propriétés du champ]** à droite. Pour les besoins de ce didacticiel, définissez &quot;[!UICONTROL weeklySales]&quot; comme **[!UICONTROL Fonction de Cible]** et tout le reste comme **[!UICONTROL Fonction d&#39;entrée]**. Cliquez sur **[!UICONTROL Suivant]** pour consulter votre nouvelle recette configurée.
-
-Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations si nécessaire. Cliquez sur **[!UICONTROL Terminer]** pour créer la recette.
+Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations si nécessaire. Sélectionnez **[!UICONTROL Finish]** pour créer la recette.
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
