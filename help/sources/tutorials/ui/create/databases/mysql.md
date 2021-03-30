@@ -2,23 +2,19 @@
 keywords: Experience Platform;accueil;rubriques populaires;mysql;MySQL
 solution: Experience Platform
 title: Création d’une connexion à la source MySQL dans l’interface utilisateur
-topic: overview
-type: Tutorial
+topic: aperçu
+type: Tutoriel
 description: Découvrez comment créer une connexion source MySQL à l’aide de l’interface utilisateur Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '433'
-ht-degree: 13%
+source-wordcount: '419'
+ht-degree: 14%
 
 ---
 
 
 # Créer une connexion source [!DNL MySQL] dans l’interface utilisateur
-
->[!NOTE]
->
-> Le connecteur [!DNL MySQL] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../../../home.md#terms-and-conditions).
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer une connexion à la source [!DNL MySQL] à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
