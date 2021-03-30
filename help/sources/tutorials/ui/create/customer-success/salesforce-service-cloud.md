@@ -2,23 +2,19 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Salesforce Service Cloud ; salesforce service cloud
 solution: Experience Platform
 title: Création d’une connexion à la source du cloud de service Salesforce dans l’interface utilisateur
-topic: overview
-type: Tutorial
+topic: aperçu
+type: Tutoriel
 description: Découvrez comment créer une connexion source Salesforce Service Cloud à l’aide de l’interface utilisateur Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 11%
+source-wordcount: '484'
+ht-degree: 12%
 
 ---
 
 
 # Créer une connexion source [!DNL Salesforce Service Cloud] dans l’interface utilisateur
-
->[!NOTE]
->
->Le connecteur [!DNL Salesforce Service Cloud] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../../../home.md#terms-and-conditions).
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source [!DNL Salesforce Service Cloud] (ci-après dénommé &quot;SSC&quot;) à l&#39;aide de l&#39;interface utilisateur [!DNL Platform].
 
