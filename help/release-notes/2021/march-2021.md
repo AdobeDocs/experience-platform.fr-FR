@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 58382528cc787e8d2005c8c322904266880ad0b9
+source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 47%
+source-wordcount: '422'
+ht-degree: 43%
 
 ---
 
@@ -20,7 +20,6 @@ ht-degree: 47%
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [[!DNL Data Prep]](#data-prep)
-- [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -34,18 +33,6 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 | `to_array` fonction | Mise à jour de la fonctionnalité de prise en charge des objets en tant que paramètre. |
 
 Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation des ](../../data-prep/home.md).
-
-## [!DNL Sandboxes] {#sandboxes}
-
-Adobe Experience Platform est conçu pour enrichir les applications d’expérience numérique à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience numérique en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle.
-
-Pour répondre à ce besoin, Experience Platform fournit des environnements de test qui divisent une instance unique de Platform en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
-
-| Fonctionnalité | Description |
-| ------- | ----------- |
-| (bêta) plusieurs sandbox de production | Vous pouvez désormais créer et gérer plusieurs sandbox de production dans votre organisation IMS et dédier des sandbox de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Pour plus d’informations, consultez les didacticiels relatifs à la création d’un sandbox de production [dans l’interface utilisateur](../../sandboxes/ui/user-guide.md) ou [à l’aide de l’API](../../sandboxes/api/create-sandbox.md). |
-
-Pour plus d’informations sur les environnements de test, consultez la [présentation des environnements de test](../../sandboxes/home.md).
 
 ## Segmentation Service {#segmentation}
 
