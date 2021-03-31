@@ -2,12 +2,12 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; trouver un sandbox ; rechercher un sandbox
 solution: Experience Platform
 title: Recherche d’un sandbox dans l’API
-topic: developer guide
+topic: guide du développeur
 description: Vous pouvez rechercher un sandbox individuel en effectuant une requête de GET qui inclut la propriété name du sandbox dans le chemin de la requête.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '245'
 ht-degree: 80%
 
 ---
@@ -37,7 +37,6 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
