@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 8d4270d9168a570fcf92ba60d70dbc8e9af98136
+source-git-commit: 0192c951a288cc1e0891a12ba9eff32aea120518
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 50%
+source-wordcount: '436'
+ht-degree: 41%
 
 ---
 
@@ -19,7 +19,35 @@ ht-degree: 50%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] permet aux ingénieurs de données de mapper, de transformer et de valider des données à partir du modèle de données d’expérience (XDM).
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| `add_to_array` fonction | Mise à jour de la fonctionnalité de prise en charge des tableaux en tant que paramètre. |
+| `to_array` fonction | Mise à jour de la fonctionnalité de prise en charge des objets en tant que paramètre. |
+
+Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation des ](../../data-prep/home.md).
+
+## Segmentation Service {#segmentation}
+
+Adobe Experience Platform Segmentation Service fournit une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données [!DNL Real-time Customer Profile]. Ces segments sont configurés et gérés de manière centralisée sur [!DNL Platform], ce qui les rend facilement accessibles par toute application d&#39;Adobe.
+
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| (bêta) Segmentation Edge | La segmentation Edge évalue les segments en temps réel, ce qui permet d’utiliser les mêmes cas de personnalisation de page et de page suivante. Vous trouverez plus d’informations sur la segmentation des arêtes dans le [Présentation de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md). |
+| (bêta) Segmentation incrémentielle | Augmente la fraîcheur des définitions de segment existantes évaluées dans la segmentation par lots jusqu’à une heure. |
+
+Pour plus d&#39;informations sur [!DNL Segmentation Service], consultez l&#39;[Présentation de la segmentation](../../segmentation/home.md).
 
 ## [!DNL Sources] {#sources}
 
