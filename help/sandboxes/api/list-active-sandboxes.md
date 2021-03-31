@@ -2,12 +2,12 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; liste principal sandbox ; liste sandbox
 solution: Experience Platform
 title: Liste Principale de sandbox pour l’utilisateur actuel dans l’API
-topic: developer guide
+topic: guide du développeur
 description: Vous pouvez liste les sandbox principaux pour l’utilisateur actuel en adressant une demande de GET au point de terminaison racine.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '363'
 ht-degree: 63%
 
 ---
@@ -39,7 +39,6 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
