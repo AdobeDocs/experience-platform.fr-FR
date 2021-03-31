@@ -2,13 +2,13 @@
 keywords: Experience Platform;accueil;rubriques populaires;sandbox;Sandbox;testing;Testing
 solution: Experience Platform
 title: Présentation des sandbox
-topic: overview
+topic: aperçu
 description: Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ee2fb54ba59f22a1ace56a6afd78277baba5271e
 workflow-type: tm+mt
-source-wordcount: '755'
-ht-degree: 88%
+source-wordcount: '779'
+ht-degree: 78%
 
 ---
 
@@ -23,9 +23,13 @@ Ce document présente de manière générale les environnements de test dans Exp
 
 ## Fonctionnement des environnements de test
 
-Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique. Une instance d’Experience Platform prend en charge un environnement de test de production et plusieurs environnements de test hors production. Chaque environnement de test conserve sa propre bibliothèque indépendante de ressources Platform (y compris les schémas, les jeux de données, les profils, etc.).  Tout le contenu et les actions réalisés dans un environnement de test sont limités à celui-ci et n’en affectent aucun autre.
+>[!NOTE]
+>
+>La fonctionnalité de sandbox de production multiple est en version bêta.
 
-Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de test de production. En outre, les environnements de test hors production disposent d’une fonctionnalité de réinitialisation supprimant de l’environnement de test toutes les ressources créées par les clients. Les environnements de test hors production ne peuvent pas être convertis en environnements de test de production. Une licence d’Experience Platform par défaut vous accorde cinq sandbox (une production et quatre non-production). Vous pouvez ajouter des packs de dix sandbox hors production jusqu’à un maximum de 75 sandbox au total. Veuillez contacter votre administrateur d&#39;entreprise IMS ou votre représentant commercial d&#39;Adobe pour plus de détails.
+Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique. Une instance d’Experience Platform prend en charge plusieurs sandbox de production et non de production, chaque sandbox conservant sa propre bibliothèque indépendante de ressources de plateforme (y compris les schémas, les jeux de données, les profils, etc.). Tout le contenu et les actions réalisés dans un environnement de test sont limités à celui-ci et n’en affectent aucun autre.
+
+Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de test de production. En outre, les sandbox de production et les sandbox hors production disposent d’une fonction de réinitialisation qui supprime toutes les ressources créées par les clients du sandbox. Les environnements de test hors production ne peuvent pas être convertis en environnements de test de production. Une licence d’Experience Platform par défaut vous accorde cinq sandbox (une production et quatre non-production). Vous pouvez ajouter des paquets de dix sandbox jusqu’à un maximum de 75 sandbox au total. Ces sandbox supplémentaires peuvent être utilisés pour créer des sandbox de production et non-production. Veuillez contacter votre administrateur d&#39;entreprise IMS ou votre représentant commercial d&#39;Adobe pour plus de détails.
 
 >[!NOTE]
 >
@@ -41,7 +45,7 @@ Pour résumer, les environnements de test offrent les avantages suivants :
 
 Par défaut, tous les utilisateurs d’une organisation ont accès à un environnement de test de production. L’accès aux environnements de test hors production doit être autorisé par un administrateur système, un administrateur de produit ou un administrateur de profil de produit au moyen d’[Adobe Admin Console](https://adminconsole.adobe.com).
 
-Pour pouvoir visualiser, créer, mettre à jour ou supprimer des environnements de test hors production, les utilisateurs doivent également disposer de droits d’administration pour les environnements de test.
+Pour vue, créer, mettre à jour ou supprimer des sandbox de production et non-production, les utilisateurs doivent également disposer des autorisations d’administration de sandbox.
 
 Pour plus d’informations sur la gestion des rôles et des autorisations pour les environnements de test, reportez-vous à la [présentation du contrôle d’accès](../access-control/home.md).
 
