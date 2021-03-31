@@ -5,7 +5,7 @@ title: Sandbox de liste dans l’API
 topic: guide du développeur
 description: Pour liste de tous les sandbox appartenant à votre organisation IMS (principal ou non), envoyez une demande de GET au point de terminaison /sandbox.
 translation-type: tm+mt
-source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 62%
@@ -35,6 +35,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
