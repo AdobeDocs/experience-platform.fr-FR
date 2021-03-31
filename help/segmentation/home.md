@@ -5,10 +5,10 @@ title: Présentation du service de segmentation
 topic: aperçu
 description: Découvrez le service de segmentation Adobe Experience Platform et le rôle qu’il joue dans l’écosystème de plateformes.
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 738256021fb583e7dc14fd33f5df193813a6e0bb
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 69%
+source-wordcount: '1499'
+ht-degree: 63%
 
 ---
 
@@ -59,6 +59,8 @@ Pour plus d’informations sur la segmentation par flux, consultez la [documenta
 
 Au lieu d’un processus en continu de sélection de données, la segmentation par lots déplace toutes les données de profil à la fois dans les définitions de segment afin de produire des audiences correspondantes. Une fois créé, ce segment est enregistré et stocké afin que vous puissiez l’exporter pour l’utiliser.
 
+Les segments évalués à l’aide de la segmentation par lot sont évalués toutes les 24 heures. Cependant, pour les segments existants, la segmentation incrémentielle permet de maintenir les segments évalués à l’aide de la segmentation par lot à jour pendant une heure. Tout segment nouveau ou récemment modifié devra attendre que la prochaine tâche de segmentation par lot complète ait été exécutée pour tirer parti de la segmentation incrémentielle.
+
 Pour savoir comment évaluer les segments, consultez le [tutoriel sur l’évaluation des segments](./tutorials/evaluate-a-segment.md).
 
 ### Segmentation Edge
@@ -79,7 +81,7 @@ La composition de vos segments (via l&#39;API ou [!DNL Segment Builder]) nécess
 
 ### Noms de segment
 
-Lors de la création d’un segment, vous devez fournir un nom de segment. Le nom de segment permet d’identifier un segment particulier dans la collection créée [!DNL Segmentation Service]. Les noms de segment doivent donc être explicites, concis et uniques.
+Lors de la création d’un segment, vous devez fournir un nom de segment. Le nom du segment est utilisé pour identifier un segment particulier dans la collection créée par [!DNL Segmentation Service]. Les noms de segment doivent donc être explicites, concis et uniques.
 
 >[!NOTE]
 >
@@ -111,7 +113,7 @@ Ces fonctionnalités avancées sont décrites plus en détail dans les sections 
 
 ## Segmentation séquentielle {#sequential}
 
-Un parcours utilisateur standard est séquentiel par nature. Adobe Experience Platform vous permet de définir une série ordonnée de segments afin de refléter ce parcours, capturant ainsi des séquences d’événements au fur et à mesure qu’elles se produisent. Vous pouvez classer les événements dans l’ordre souhaité en utilisant la chronologie du événement visuel dans le [!DNL Segment Builder].
+Un parcours utilisateur standard est séquentiel par nature. Adobe Experience Platform vous permet de définir une série ordonnée de segments afin de refléter ce parcours, capturant ainsi des séquences de événements au fur et à mesure de leur apparition. Vous pouvez classer les événements dans l’ordre souhaité en utilisant la chronologie du événement visuel dans le [!DNL Segment Builder].
 
 Un exemple de parcours client qui nécessiterait une segmentation séquentielle serait consultation produit > ajout du produit > passage en caisse > pas d’achat.
 
@@ -137,7 +139,7 @@ En attribuant une variable à l’attribut de l’État d’achat, votre segment
 
 ## Segmentation d’entités multiples {#multi-entity}
 
-Grâce à la fonction de segmentation multi-entités avancée, vous pouvez étendre les données [!DNL Real-time Customer Profile] avec des données supplémentaires basées sur des produits, des magasins ou d&#39;autres entités non-personnelles, également connues sous le nom d&#39;entités de &quot;dimension&quot;. Par conséquent, [!DNL Segmentation Service] peut accéder à d’autres champs pendant la définition de segment comme s’ils étaient natifs de la banque de données [!DNL Profile]. La segmentation multientité offre une certaine souplesse lors de l’identification des audiences en fonction de données pertinentes pour vos besoins commerciaux uniques. Pour plus d&#39;informations, y compris les cas d&#39;utilisation et les workflows, consultez le [guide de segmentation multientité](multi-entity-segmentation.md).
+Grâce à la fonction de segmentation multi-entités avancée, vous pouvez étendre les données [!DNL Real-time Customer Profile] à l&#39;aide de données supplémentaires basées sur des produits, des magasins ou d&#39;autres entités autres que des personnes, également connues sous le nom d&#39;entités de &quot;dimension&quot;. Par conséquent, [!DNL Segmentation Service] peut accéder à d’autres champs pendant la définition de segment comme s’ils étaient natifs de la banque de données [!DNL Profile]. La segmentation multientité offre une certaine souplesse lors de l’identification des audiences en fonction de données pertinentes pour vos besoins commerciaux uniques. Pour plus d&#39;informations, y compris les cas d&#39;utilisation et les workflows, consultez le [guide de segmentation multientité](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] types de données
 
