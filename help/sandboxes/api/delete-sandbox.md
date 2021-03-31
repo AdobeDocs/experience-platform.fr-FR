@@ -5,7 +5,7 @@ title: Suppression d’un sandbox dans l’API
 topic: guide du développeur
 description: Vous pouvez supprimer un sandbox en effectuant une requête DELETE qui inclut le nom du sandbox dans le chemin de la requête.
 translation-type: tm+mt
-source-git-commit: e7a80dbfdd2d59e4997f6e227b5c2cf336e5a0f6
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 66%
@@ -41,6 +41,7 @@ curl -X DELETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
