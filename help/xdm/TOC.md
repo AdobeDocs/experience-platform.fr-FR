@@ -6,10 +6,10 @@ breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes et les mixins d’Experience Data Model (XDM) pour normaliser les données d’expérience.
 feature: Schémas
 translation-type: tm+mt
-source-git-commit: 27cdb65c846293d7edce340e1cb5a360c0e40604
+source-git-commit: 4a67bcbd2a1458ae47ba64fe2647da442fdf4695
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 59%
+source-wordcount: '239'
+ht-degree: 58%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 59%
 * Classes {#classes}
    * [XDM Individual Profile](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
+   * [Définition de segment](./classes/segment-definition.md)
 * Mixins {#mixins}
    * Mélins de profil {#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
