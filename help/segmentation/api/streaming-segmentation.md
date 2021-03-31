@@ -5,10 +5,10 @@ title: 'Évaluer les Événements en temps quasi réel avec la segmentation en f
 topic: guide du développeur
 description: Ce document contient des exemples d’utilisation de la segmentation en flux continu avec l’API Adobe Experience Platform Segmentation Service.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: bb7edcaccca87918c56d00e092e4b7154d7c5d6e
 workflow-type: tm+mt
-source-wordcount: '1341'
-ht-degree: 48%
+source-wordcount: '1342'
+ht-degree: 45%
 
 ---
 
@@ -403,6 +403,6 @@ La même opération peut être utilisée pour désactiver un planning en rempla�
 
 ## Étapes suivantes
 
-Maintenant que vous avez activé la segmentation par flux pour les nouveaux segments et les segments existants, et que vous avez activé la segmentation planifiée pour développer une ligne de base et effectuer des évaluations récurrentes, vous pouvez commencer à créer des segments pour votre organisation.
+Maintenant que vous avez activé à la fois les segments nouveaux et existants pour la segmentation en flux continu et activé la segmentation planifiée pour développer une planification initiale et effectuer des évaluations périodiques, vous pouvez commencer à créer des segments en flux continu pour votre entreprise.
 
 Pour savoir comment effectuer des actions similaires et utiliser des segments à l’aide de l’interface utilisateur d’Adobe Experience Platform, consultez le [guide d’utilisation du créateur de segments](../ui/segment-builder.md).
