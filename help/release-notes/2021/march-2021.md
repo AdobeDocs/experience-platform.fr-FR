@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 523e09b9af19b1deb01a69be0673b9a17084b7e4
+source-git-commit: 58382528cc787e8d2005c8c322904266880ad0b9
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '550'
 ht-degree: 47%
 
 ---
@@ -43,7 +43,7 @@ Pour répondre à ce besoin, Experience Platform fournit des environnements de t
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| (bêta) plusieurs sandbox de production | Vous pouvez désormais créer et gérer plusieurs sandbox de production dans votre organisation IMS et dédier des sandbox de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Pour plus d’informations, voir les didacticiels sur la création d’un sandbox de production [dans l’interface utilisateur](../../sandboxes/ui/user-guide.md) ou [à l’aide de l’API](../../sandboxes/api/create-sandbox.md) pour plus d’informations. |
+| (bêta) plusieurs sandbox de production | Vous pouvez désormais créer et gérer plusieurs sandbox de production dans votre organisation IMS et dédier des sandbox de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Pour plus d’informations, consultez les didacticiels relatifs à la création d’un sandbox de production [dans l’interface utilisateur](../../sandboxes/ui/user-guide.md) ou [à l’aide de l’API](../../sandboxes/api/create-sandbox.md). |
 
 Pour plus d’informations sur les environnements de test, consultez la [présentation des environnements de test](../../sandboxes/home.md).
 
