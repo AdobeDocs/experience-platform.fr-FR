@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; guide de l’utilisateur sandbox ; guide sandbox
 solution: Experience Platform
 title: Guide de l’interface utilisateur Sandbox
-topic: user guide
+topic: Guide de l’utilisateur
 description: Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux environnements de test dans l’interface utilisateur d’Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ee2fb54ba59f22a1ace56a6afd78277baba5271e
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 48%
+source-wordcount: '621'
+ht-degree: 28%
 
 ---
 
@@ -45,65 +45,67 @@ Vous pouvez naviguer dans la liste des sandbox à votre disposition en utilisant
 
 ## Création d’un nouvel environnement de test
 
+>[!NOTE]
+>
+>La fonctionnalité de sandbox de production multiple est en version bêta.
+
 La vidéo suivante présente un aperçu rapide de l’utilisation des sandbox dans l’Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-Pour créer un sandbox dans l’interface utilisateur, sélectionnez le bouton **[!UICONTROL Créer un sandbox]** dans la partie supérieure droite de l’écran.
+Pour créer un nouveau sandbox, sélectionnez le bouton **[!UICONTROL Créer un sandbox]** dans la partie supérieure droite de l’écran.
 
 ![](../images/ui/create-sandbox.png)
 
-La boîte de dialogue **[!UICONTROL Créer un environnement de test]** s’affiche et vous invite à fournir un titre et un nom d’affichage à votre environnement de test. Le **titre d’affichage** est prévu pour être lu par un utilisateur et doit être suffisamment descriptif pour permettre son identification rapide. Le sandbox **[!UICONTROL Name]** est un identifiant en minuscules qui doit être utilisé dans les appels d&#39;API et doit donc être unique et concis. Le sandbox **[!UICONTROL Name]** ne doit être composé que de caractères alphanumériques et de tirets **(-)**, il doit commencer par une lettre et comporter au maximum 256 caractères.
+La boîte de dialogue **[!UICONTROL Créer un sandbox]** s&#39;affiche, vous invitant à fournir un type, un titre et un nom pour le sandbox. Si vous créez un sandbox de développement, sélectionnez **[!UICONTROL Développement]** dans le panneau déroulant qui s’affiche. Si vous créez un sandbox de production, sélectionnez **[!UICONTROL Production]**.
+
+Le titre est destiné à être lisible par l&#39;homme et doit être suffisamment descriptif pour être facilement identifiable. Le nom du sandbox est un identifiant en minuscules utilisé dans les appels d’API et doit donc être unique et concis. Le nom du sandbox ne doit contenir que des caractères alphanumériques et des tirets (`-`), il doit commencer par une lettre et comporter au maximum 256 caractères.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer]**.
 
 ![](../images/ui/create-dialog.png)
 
->[!NOTE]
->
->Étant donné que vous êtes limité à la création d’environnement de test de type hors production, l’option **[!UICONTROL type]** est verrouillée sur « hors production » et ne peut pas être modifiée.
-
 Une fois le sandbox créé, actualisez la page et le nouveau sandbox apparaît dans le tableau de bord **[!UICONTROL Sandbox]** avec l’état &quot;[!UICONTROL Création]&quot;. Les nouveaux sandbox prennent environ 15 minutes pour être approvisionnés par le système, après quoi leur état passe à &quot;[!UICONTROL Principal]&quot;.
-
-![](../images/ui/creating.png)
 
 ## Réinitialisation d’un environnement de test
 
 >[!NOTE]
 >
->Cette fonctionnalité est disponible uniquement pour les environnements de test hors production. Il n’est pas possible de réinitialiser les environnements de test de production.
+>Vous pouvez réinitialiser n’importe quel sandbox de production ou de développement de votre entreprise, à l’exception du sandbox de production par défaut.
 
-La réinitialisation d’un environnement de test hors production supprime toutes les ressources associées à cet environnement de test (schémas, jeux de données, etc.) tout en conservant le nom et les autorisations associés de l’environnement de test. Cet environnement de test « propre » reste disponible avec le même nom auprès des utilisateurs qui y ont accès.
+La réinitialisation d’un sandbox de production ou de développement supprime toutes les ressources associées à ce sandbox (schémas, jeux de données, etc.), tout en conservant le nom du sandbox et les autorisations associées. Cet environnement de test « propre » reste disponible avec le même nom auprès des utilisateurs qui y ont accès.
 
-Pour réinitialiser un sandbox dans l’interface utilisateur, sélectionnez **[!UICONTROL Sandbox]** dans le volet de navigation de gauche, puis sélectionnez le sandbox à réinitialiser. Dans la boîte de dialogue qui s’affiche sur le côté droit de l’écran, sélectionnez **[!UICONTROL Réinitialiser Sandbox]**.
+Sélectionnez le sandbox à réinitialiser à partir de la liste des sandbox. Dans le panneau de navigation de droite qui s’affiche, sélectionnez **[!UICONTROL Sandbox reset]**.
 
 ![](../images/ui/reset-sandbox.png)
 
-Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Sélectionnez **[!UICONTROL Réinitialiser]** pour continuer.
+Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Sélectionnez **[!UICONTROL Continuer]** pour continuer.
 
 ![](../images/ui/reset-confirm.png)
 
-Un message de confirmation s’affiche et l’état du sandbox passe à &quot;**[!UICONTROL Réinitialisation]&quot;**. Une fois que le système l&#39;a configuré, son état est mis à jour vers **&quot;[!UICONTROL Principal]&quot;** ou **&quot;[!UICONTROL Échec]&quot;**.
+Dans la fenêtre de confirmation finale, saisissez le nom du sandbox dans la boîte de dialogue et sélectionnez **[!UICONTROL Réinitialiser]**.
 
-![](../images/ui/resetting.png)
+![](../images/ui/reset-final-confirm.png)
 
 ## Suppression d’un environnement de test
 
 >[!NOTE]
 >
->Cette fonctionnalité est disponible uniquement pour les environnements de test hors production. Il n’est pas possible de supprimer les environnements de test de production.
+>Vous pouvez supprimer n’importe quel sandbox de production ou de développement de votre entreprise, à l’exception du sandbox de production par défaut.
 
-La suppression d’un environnement de test hors production supprime définitivement toutes les ressources associées à cet environnement de test, y compris les autorisations.
+La suppression d’un sandbox de production ou de développement supprime définitivement toutes les ressources associées à ce sandbox, y compris les autorisations.
 
-Pour supprimer un sandbox dans l’interface utilisateur, sélectionnez **[!UICONTROL Sandbox]** dans le volet de navigation de gauche, puis sélectionnez le sandbox à supprimer. Dans la boîte de dialogue qui s’affiche sur le côté droit de l’écran, sélectionnez **[!UICONTROL Supprimer le sandbox]**.
+Sélectionnez le sandbox à supprimer de la liste des sandbox. Dans le panneau de navigation de droite qui s’affiche, sélectionnez **[!UICONTROL Supprimer]**.
 
 ![](../images/ui/delete-sandbox.png)
 
-Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Sélectionnez **[!UICONTROL Supprimer]** pour continuer.
+Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Sélectionnez **[!UICONTROL Continuer]** pour continuer.
 
 ![](../images/ui/delete-confirm.png)
 
-Un message de confirmation s’affiche et l’environnement de test est supprimé de l’espace de travail **[!UICONTROL Environnements de test]**.
+Dans la fenêtre de confirmation finale, saisissez le nom du sandbox dans la boîte de dialogue et sélectionnez **[!UICONTROL Supprimer]**.
+
+![](../images/ui/delete-final-confirm.png)
 
 ## Étapes suivantes
 
