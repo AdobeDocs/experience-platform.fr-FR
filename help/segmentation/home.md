@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; service de segments ; segment ; Segment ; Segments ; segments
 solution: Experience Platform
 title: Présentation du service de segmentation
-topic: overview
+topic: aperçu
 description: Découvrez le service de segmentation Adobe Experience Platform et le rôle qu’il joue dans l’écosystème de plateformes.
 translation-type: tm+mt
-source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
+source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
 workflow-type: tm+mt
-source-wordcount: '1407'
-ht-degree: 71%
+source-wordcount: '1449'
+ht-degree: 69%
 
 ---
 
@@ -60,6 +60,12 @@ Pour plus d’informations sur la segmentation par flux, consultez la [documenta
 Au lieu d’un processus en continu de sélection de données, la segmentation par lots déplace toutes les données de profil à la fois dans les définitions de segment afin de produire des audiences correspondantes. Une fois créé, ce segment est enregistré et stocké afin que vous puissiez l’exporter pour l’utiliser.
 
 Pour savoir comment évaluer les segments, consultez le [tutoriel sur l’évaluation des segments](./tutorials/evaluate-a-segment.md).
+
+### Segmentation Edge
+
+La segmentation Edge permet d’évaluer instantanément les segments dans la plate-forme, ce qui permet d’utiliser les mêmes cas de personnalisation de page et de page suivante.
+
+Pour en savoir plus sur la segmentation des arêtes, consultez la [documentation de l&#39;API](./api/edge-segmentation.md) ou la [documentation de l&#39;interface utilisateur](./ui/edge-segmentation.md).
 
 ## Accès aux résultats de la segmentation
 
