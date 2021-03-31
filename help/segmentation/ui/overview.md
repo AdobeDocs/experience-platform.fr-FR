@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur du service de segmentation
 topic: ui guide
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 1634466d3a1d8eadc4c98bb93214d8772b6a47a3
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1514'
 ht-degree: 26%
 
 ---
@@ -167,6 +167,12 @@ Pour plus d’informations sur la segmentation en flux continu, consultez le [gu
 >[!NOTE]
 >
 >Pour que la segmentation en flux continu fonctionne, vous devez activer la segmentation planifiée pour l’entreprise. Pour plus d’informations sur l’activation de la segmentation planifiée, consultez la section [de la segmentation en flux continu dans ce guide d’utilisateur](#scheduled-segmentation).
+
+## Segmentation Edge {#edge-segmentation}
+
+La segmentation Edge permet d’évaluer instantanément les segments dans la plate-forme, ce qui permet d’utiliser les mêmes cas de personnalisation de page et de page suivante.
+
+Pour plus d&#39;informations sur la segmentation des arêtes, consultez le [guide de l&#39;interface utilisateur de segmentation des arêtes](./edge-segmentation.md).
 
 ## Violations de stratégie
 
