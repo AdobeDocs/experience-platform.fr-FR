@@ -5,10 +5,10 @@ title: Principes de base de la composition des Schémas
 topic: aperçu
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8448b5dcedc42898d8a403aae1e044841bc2734c
+source-git-commit: 9a5618674946f67528de1b40609596dbb75ced0c
 workflow-type: tm+mt
-source-wordcount: '3166'
-ht-degree: 46%
+source-wordcount: '3502'
+ht-degree: 41%
 
 ---
 
@@ -23,19 +23,9 @@ Un schéma est un jeu de règles qui représente et valide la structure et le fo
 
 Outre la description de la structure des données, les schémas appliquent des contraintes et des attentes aux données de manière à ce qu’elles puissent être validées lorsqu’elles sont déplacées d’un système à l’autre. Ces définitions standard permettent d’interpréter les données de manière cohérente, quelle que soit leur origine, et éliminent la nécessité d’une traduction entre les applications.
 
-[!DNL Experience Platform] maintient cette normalisation sémantique grâce à l’utilisation de schémas. Les schémas sont la manière standard de décrire les données dans [!DNL Experience Platform], ce qui permet à toutes les données conformes aux schémas d&#39;être réutilisables sans conflit au sein d&#39;une organisation et même d&#39;être partagées entre plusieurs organisations.
+[!DNL Experience Platform] maintient cette normalisation sémantique en utilisant des schémas. Les schémas sont la manière standard de décrire les données dans [!DNL Experience Platform], ce qui permet à toutes les données conformes aux schémas d&#39;être réutilisées dans une organisation sans conflit, voire partagées entre plusieurs organisations.
 
-### Tableaux relationnels et objets intégrés
-
-Lorsque vous travaillez avec des bases de données relationnelles, les bonnes pratiques consistent à normaliser les données ou à prendre une entité et à la diviser en éléments individuels qui sont ensuite affichés sur plusieurs tableaux. Pour pouvoir lire les données dans leur ensemble ou mettre à jour l’entité, des opérations de lecture et d’écriture doivent être effectuées sur plusieurs tableaux individuels à l’aide de la fonction REJOINDRE.
-
-Grâce aux objets incorporés, les schémas XDM peuvent représenter directement des données complexes et les stocker dans des documents autonomes avec une structure hiérarchique. L’un des principaux avantages de cette structure est qu’elle vous permet d’effectuer des requêtes sur des données sans avoir à reconstruire l’entité par des liaisons onéreuses sur plusieurs tableaux dénormalisés. Il n&#39;existe aucune restriction stricte quant au nombre de niveaux de hiérarchie de votre schéma.
-
-### Schémas et Big Data
-
-Les systèmes numériques modernes génèrent une grande quantité de signaux comportementaux (données de transaction, journaux web, Internet des objets, affichage, etc.). Le Big Data offre des opportunités extraordinaires d’optimiser des expériences, mais les utiliser représente un véritable défi en raison de leur échelle et de la diversité des données. Pour tirer parti des données, vous devez normaliser leur structure, leur format et leurs définitions afin de les traiter de manière cohérente et efficace.
-
-Les schémas permettent de résoudre ce problème en permettant l’intégration des données à partir de diverses sources, l’uniformisation au moyen de structures et de définitions communes et le partage entre les solutions. Cela permet aux processus et aux services suivants de répondre à tout type de questions posées sur les données, en s’éloignant de l’approche traditionnelle de la modélisation des données dans laquelle toutes les questions posées sur les données sont connues à l’avance et les données sont modélisées pour être conformes à ces attentes.
+Les schémas XDM sont idéaux pour stocker de grandes quantités de données complexes dans un format autonome. Pour plus d&#39;informations sur la façon dont XDM effectue cette opération, consultez les sections [objets incorporés](#embedded) et [big data](#big-data) dans l&#39;annexe du présent document.
 
 ### Workflows basés sur le schéma dans [!DNL Experience Platform]
 
@@ -68,9 +58,9 @@ Pour faciliter ce processus, les champs clés de vos schémas peuvent être marq
 
 Les champs généralement marqués comme &quot;[!UICONTROL Identité]&quot; sont les suivants : adresse électronique, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID de gestion de la relation client ou autres champs d’ID uniques. Vous devez également tenir compte de tous les identifiants uniques propres à votre organisation, car ils peuvent également être de bons champs &quot;[!UICONTROL Identité]&quot;.
 
-Il est important de réfléchir aux identités client au cours de la phase de planification des schémas afin de vous assurer que les données sont rassemblées pour créer le profil le plus complet possible. Consultez la présentation du [Service d&#39;identité de Adobe Experience Platform](../../identity-service/home.md) pour en savoir plus sur la manière dont les informations d&#39;identité peuvent vous aider à fournir des expériences numériques à vos clients.
+Il est important de réfléchir à l&#39;identité des clients au cours de la phase de planification du schéma afin de veiller à ce que les données soient rassemblées pour créer le profil le plus robuste possible. Consultez la présentation du [Service d&#39;identité de Adobe Experience Platform](../../identity-service/home.md) pour en savoir plus sur la manière dont les informations d&#39;identité peuvent vous aider à fournir des expériences numériques à vos clients.
 
-#### xdm:identityMap {#identityMap}
+#### `xdm:identityMap` {#identityMap}
 
 `xdm:identityMap` est un champ de type carte qui décrit les différentes valeurs d’identité d’un individu, ainsi que les espaces de nommage qui lui sont associés. Ce champ peut être utilisé pour fournir des informations d&#39;identité à vos schémas, au lieu de définir des valeurs d&#39;identité dans la structure du schéma lui-même.
 
@@ -107,7 +97,7 @@ Comme l&#39;exemple ci-dessus le montre, chaque clé de l&#39;objet `identityMap
 
 >[!NOTE]
 >
->Une valeur booléenne indique si la valeur est ou non une identité Principale (`primary`) peut également être fournie pour chaque valeur d&#39;identité. Les identités Principal doivent uniquement être définies pour les schémas destinés à être utilisés dans [!DNL Real-time Customer Profile]. Pour plus d&#39;informations, consultez la section [schémas d&#39;union](#union).
+>Une valeur booléenne indique si la valeur est une identité Principale (`primary`) peut également être fournie pour chaque valeur d&#39;identité. Les identités Principal doivent uniquement être définies pour les schémas destinés à être utilisés dans [!DNL Real-time Customer Profile]. Pour plus d&#39;informations, consultez la section [schémas d&#39;union](#union).
 
 ### Principes d’évolution des schémas {#evolution}
 
@@ -143,7 +133,13 @@ La composition d’un schéma commence par l’attribution d’une classe. Les c
 
 Une classe de schéma détermine quels mixins seront admissibles à l&#39;utilisation dans ce schéma. Cette question est traitée plus en détail dans la section [suivante](#mixin).
 
-Adobe fournit deux classes XDM standard (&quot;core&quot;) : [!DNL XDM Individual Profile] et [!DNL XDM ExperienceEvent]. Outre ces classes de base, vous pouvez également créer vos propres classes personnalisées afin de décrire des cas d’utilisation plus spécifiques pour votre entreprise. Les classes personnalisées sont définies par une organisation lorsqu&#39;il n&#39;existe aucune classe de base définie par Adobe disponible pour décrire un cas d&#39;utilisation unique.
+Adobe fournit plusieurs classes XDM standard (&quot;core&quot;). Deux de ces classes, [!DNL XDM Individual Profile] et [!DNL XDM ExperienceEvent], sont requises pour presque tous les processus de plateforme en aval. Outre ces classes de base, vous pouvez également créer vos propres classes personnalisées afin de décrire des cas d’utilisation plus spécifiques pour votre entreprise. Les classes personnalisées sont définies par une organisation lorsqu&#39;il n&#39;existe aucune classe de base définie par Adobe disponible pour décrire un cas d&#39;utilisation unique.
+
+La capture d’écran suivante montre comment les classes sont représentées dans l’interface utilisateur de la plate-forme. Comme l&#39;exemple de schéma illustré ne contient aucun mixin, tous les champs affichés sont fournis par la classe de schéma ([!UICONTROL Profil individuel XDM]).
+
+![](../images/schema-composition/class.png)
+
+Pour obtenir la liste la plus récente des classes XDM standard disponibles, consultez le [référentiel XDM officiel](https://github.com/adobe/xdm/tree/master/components/classes). Vous pouvez également vous reporter au guide sur [l&#39;exploration des composants XDM](../ui/explore.md) si vous préférez vue des ressources dans l&#39;interface utilisateur.
 
 ### Mixin {#mixin}
 
@@ -157,17 +153,23 @@ Par exemple, pour capturer des détails tels que &quot;[!UICONTROL Prénom]&quot
 
 N’oubliez pas que les schémas sont composés de « zéro, un ou plusieurs » mixins, ce qui signifie que vous pouvez composer un schéma valide sans utiliser de mixins du tout.
 
-Pour une liste de tous les mixins standard actuels, consultez le [référentiel XDM officiel](https://github.com/adobe/xdm/tree/master/components/mixins).
+La capture d’écran suivante montre comment les mixins sont représentés dans l’interface utilisateur de la plate-forme. Un mixin unique ([!UICONTROL Détails démographiques]) est ajouté à un schéma dans cet exemple, qui fournit un regroupement de champs à la structure du schéma.
+
+![](../images/schema-composition/mixin.png)
+
+Pour obtenir la liste la plus récente des mixins XDM standard disponibles, consultez le [référentiel XDM officiel](https://github.com/adobe/xdm/tree/master/components/mixins). Vous pouvez également vous reporter au guide sur [l&#39;exploration des composants XDM](../ui/explore.md) si vous préférez vue des ressources dans l&#39;interface utilisateur.
 
 ### Type de données {#data-type}
 
 Les types de données sont utilisés comme types de champ de référence dans des classes ou des schémas de la même manière que des champs littéraux de base. La principale différence réside dans le fait que les types de données peuvent définir plusieurs sous-champs. Tout comme un mixin, un type de données permet l’utilisation cohérente d’une structure à champs multiples, mais avec plus de flexibilité qu’un mixin, car un type de données peut être inclus n’importe où dans un schéma en l’ajoutant comme « type de données » d’un champ.
 
->[!NOTE]
->
->Voir l&#39;[annexe](#mixins-v-datatypes) pour plus d&#39;informations sur les différences entre les mixins et les types de données, ainsi que sur les avantages et les inconvénients de l&#39;utilisation de l&#39;un par rapport à l&#39;autre pour des cas d&#39;utilisation similaires.
+[!DNL Experience Platform] fournit un certain nombre de types de données courants dans le  [!DNL Schema Registry] cadre de la prise en charge de l’utilisation de modèles standard pour décrire des structures de données communes. Vous trouverez des informations plus détaillées à ce sujet dans les didacticiels [!DNL Schema Registry], qui s&#39;affichent plus clairement lorsque vous parcourez les étapes de définition des types de données.
 
-[!DNL Experience Platform] fournit un certain nombre de types de données courants dans le  [!DNL Schema Registry] cadre de la prise en charge de l’utilisation de modèles standard pour décrire des structures de données communes. Vous trouverez des informations plus détaillées à ce sujet dans les didacticiels [!DNL Schema Registry], qui s&#39;afficheront plus clairement lorsque vous passerez en revue les étapes de définition des types de données.
+La capture d’écran suivante montre comment les types de données sont représentés dans l’interface utilisateur de la plate-forme. L’un des champs fournis par le mixin ([!UICONTROL Détails démographiques]) utilise le type de données &quot;[!UICONTROL Nom de personne]&quot;, comme indiqué par le texte qui suit le caractère de barre verticale (`|`) en regard du nom du champ. Ce type de données fournit plusieurs sous-champs relatifs au nom d&#39;une personne, concept qui peut être réutilisé pour d&#39;autres champs où le nom d&#39;une personne doit être capturé.
+
+![](../images/schema-composition/data-type.png)
+
+Pour obtenir la liste la plus récente des types de données XDM standard disponibles, consultez le [référentiel XDM officiel](https://github.com/adobe/xdm/tree/master/components/datatypes). Vous pouvez également vous reporter au guide sur [l&#39;exploration des composants XDM](../ui/explore.md) si vous préférez vue des ressources dans l&#39;interface utilisateur.
 
 ### Champ
 
@@ -242,6 +244,13 @@ Pour plus d&#39;informations sur l&#39;utilisation de [!DNL Profile], consultez 
 
 Tous les fichiers de données assimilés à [!DNL Experience Platform] doivent être conformes à la structure d&#39;un schéma XDM. Pour plus d’informations sur la manière de formater les fichiers de données pour se conformer aux hiérarchies XDM (ainsi que des fichiers d’exemple), consultez le document sur les [exemples de transformations ETL](../../etl/transformations.md). Pour obtenir des informations générales sur l&#39;assimilation de fichiers de données dans [!DNL Experience Platform], consultez la [présentation de l&#39;assimilation par lot](../../ingestion/batch-ingestion/overview.md).
 
+## Schémas pour les segments externes
+
+Si vous amenez des segments à partir de systèmes externes dans la plate-forme, vous devez utiliser les composants suivants pour les capturer dans vos schémas :
+
+* [[!UICONTROL Classe]  de ](../classes/segment-definition.md)définition de segment: Utilisez cette classe standard pour capturer les attributs clés d&#39;une définition de segment externe.
+* [[!UICONTROL Segmenter le ] mixin](../mixins/profile/segmentation.md) des détails de l&#39;adhésion : Ajoutez ce mixin à votre  [!UICONTROL schéma de profil individuel ] XDM afin d’associer des profils clients à des segments spécifiques.
+
 ## Étapes suivantes
 
 Maintenant que vous comprenez les bases de la composition des schémas, vous êtes prêt à commencer à explorer et à construire des schémas à l&#39;aide du [!DNL Schema Registry].
@@ -259,7 +268,19 @@ Pour commencer à utiliser l&#39;API [!DNL Schema Registry], début en lisant le
 
 ## Annexe
 
-La section suivante contient des renseignements supplémentaires sur les principes de la composition des schémas.
+Les sections suivantes contiennent des informations complémentaires sur les principes de la composition des schémas.
+
+### Tableaux relationnels et objets intégrés {#embedded}
+
+Lorsque vous travaillez avec des bases de données relationnelles, les bonnes pratiques consistent à normaliser les données ou à prendre une entité et à la diviser en éléments individuels qui sont ensuite affichés sur plusieurs tableaux. Pour pouvoir lire les données dans leur ensemble ou mettre à jour l’entité, des opérations de lecture et d’écriture doivent être effectuées sur plusieurs tableaux individuels à l’aide de la fonction REJOINDRE.
+
+Grâce aux objets incorporés, les schémas XDM peuvent représenter directement des données complexes et les stocker dans des documents autonomes avec une structure hiérarchique. L’un des principaux avantages de cette structure est qu’elle vous permet d’effectuer des requêtes sur des données sans avoir à reconstruire l’entité par des liaisons onéreuses sur plusieurs tableaux dénormalisés. Il n&#39;existe aucune restriction stricte quant au nombre de niveaux de hiérarchie de votre schéma.
+
+### Schémas et Big Data {#big-data}
+
+Les systèmes numériques modernes génèrent une grande quantité de signaux comportementaux (données de transaction, journaux web, Internet des objets, affichage, etc.). Le Big Data offre des opportunités extraordinaires d’optimiser des expériences, mais les utiliser représente un véritable défi en raison de leur échelle et de la diversité des données. Pour tirer parti des données, vous devez normaliser leur structure, leur format et leurs définitions afin de les traiter de manière cohérente et efficace.
+
+Les schémas permettent de résoudre ce problème en permettant l’intégration des données à partir de diverses sources, l’uniformisation au moyen de structures et de définitions communes et le partage entre les solutions. Cela permet aux processus et aux services suivants de répondre à tout type de questions posées sur les données, en s’éloignant de l’approche traditionnelle de la modélisation des données dans laquelle toutes les questions posées sur les données sont connues à l’avance et les données sont modélisées pour être conformes à ces attentes.
 
 ### Objets versus champs de forme libre {#objects-v-freeform}
 
