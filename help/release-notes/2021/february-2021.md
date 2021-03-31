@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 398e55f442a2c8ecab0c3d9315fbdd5c02946e45
 workflow-type: tm+mt
 source-wordcount: '1138'
 ht-degree: 34%
@@ -75,7 +75,7 @@ Pour des informations plus générales sur les flux de données, consultez l&#39
 
 | Destination | Description |
 | ----------- | ----------- |
-| [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | La connexion [!DNL LinkedIn Matched Audiences] vous permet d’activer des audiences dans la plateforme sociale [!DNL LinkedIn]. |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | La connexion [!DNL LinkedIn Matched Audiences] vous permet d’activer des audiences dans la plateforme sociale [!DNL LinkedIn]. |
 
 Pour plus d&#39;informations générales sur les destinations, consultez l&#39;[aperçu des destinations](../../destinations/home.md).
 
