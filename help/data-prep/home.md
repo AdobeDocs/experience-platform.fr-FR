@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; ui guide ; mapper ; mapper ; prép de données ; préparation des données ; préparation des données ; préparation des données ;
 solution: Experience Platform
 title: Aperçu de l’aperçu de l’aperçu des données d’aperçu
-topic: overview
+topic: aperçu
 description: Ce document présente l’aperçu des données dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 0%
+source-wordcount: '352'
+ht-degree: 1%
 
 ---
 
@@ -37,4 +37,4 @@ Un ensemble de mappages qui transforment un schéma en un autre est collectiveme
 
 ## Étapes suivantes
 
-Ce document couvrait les bases de la préparation des données à Adobe Experience Platform. Pour en savoir plus sur les différentes fonctions de mappage, consultez le [guide des fonctions de mappage](./functions.md). Pour en savoir plus sur les différentes chaînes datetime, consultez le [guide des chaînes de date](./dates.md).
+Ce document couvrait les bases de la préparation des données à Adobe Experience Platform. Pour en savoir plus sur les différentes fonctions de mappage, consultez le [guide des fonctions de mappage](./functions.md). Pour en savoir plus sur les différentes chaînes datetime, consultez le [guide des chaînes de date](./dates.md). Pour savoir comment utiliser l’API d’aperçu des données, consultez le [Guide du développeur d’API d’aperçu des données](api/overview.md).
