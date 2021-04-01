@@ -5,7 +5,7 @@ title: Principes de base de la composition des Schémas
 topic: aperçu
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9a5618674946f67528de1b40609596dbb75ced0c
+source-git-commit: ae2c5f9fa4e732fefe55a8536894844986aea1e2
 workflow-type: tm+mt
 source-wordcount: '3502'
 ht-degree: 41%
@@ -165,7 +165,7 @@ Les types de données sont utilisés comme types de champ de référence dans de
 
 [!DNL Experience Platform] fournit un certain nombre de types de données courants dans le  [!DNL Schema Registry] cadre de la prise en charge de l’utilisation de modèles standard pour décrire des structures de données communes. Vous trouverez des informations plus détaillées à ce sujet dans les didacticiels [!DNL Schema Registry], qui s&#39;affichent plus clairement lorsque vous parcourez les étapes de définition des types de données.
 
-La capture d’écran suivante montre comment les types de données sont représentés dans l’interface utilisateur de la plate-forme. L’un des champs fournis par le mixin ([!UICONTROL Détails démographiques]) utilise le type de données &quot;[!UICONTROL Nom de personne]&quot;, comme indiqué par le texte qui suit le caractère de barre verticale (`|`) en regard du nom du champ. Ce type de données fournit plusieurs sous-champs relatifs au nom d&#39;une personne, concept qui peut être réutilisé pour d&#39;autres champs où le nom d&#39;une personne doit être capturé.
+La capture d’écran suivante montre comment les types de données sont représentés dans l’interface utilisateur de la plate-forme. L&#39;un des champs fournis par le mixin [!UICONTROL Détails démographiques] utilise le type de données &quot;[!UICONTROL Nom de personne]&quot;, comme indiqué par le texte qui suit le caractère de barre verticale (`|`) en regard du nom du champ. Ce type de données fournit plusieurs sous-champs relatifs au nom d&#39;une personne, concept qui peut être réutilisé pour d&#39;autres champs où le nom d&#39;une personne doit être capturé.
 
 ![](../images/schema-composition/data-type.png)
 
