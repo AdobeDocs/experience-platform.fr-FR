@@ -5,10 +5,10 @@ title: Présentation du service de segmentation
 topic: aperçu
 description: Découvrez le service de segmentation Adobe Experience Platform et le rôle qu’il joue dans l’écosystème de plateformes.
 translation-type: tm+mt
-source-git-commit: 738256021fb583e7dc14fd33f5df193813a6e0bb
+source-git-commit: eff833f20eba4e51579a43fbb98c1e2333e326ef
 workflow-type: tm+mt
-source-wordcount: '1499'
-ht-degree: 63%
+source-wordcount: '1581'
+ht-degree: 60%
 
 ---
 
@@ -47,7 +47,7 @@ Pour plus d’informations sur la création de définitions de segment à l’ai
 
 ## Évaluation de segments
 
-La plate-forme prend actuellement en charge deux méthodes d’évaluation des segments : segmentation en flux continu et segmentation par lot.
+La plate-forme prend actuellement en charge trois méthodes d’évaluation des segments : segmentation en flux continu, segmentation par lots et segmentation par arête.
 
 ### Segmentation par flux
 
@@ -59,7 +59,15 @@ Pour plus d’informations sur la segmentation par flux, consultez la [documenta
 
 Au lieu d’un processus en continu de sélection de données, la segmentation par lots déplace toutes les données de profil à la fois dans les définitions de segment afin de produire des audiences correspondantes. Une fois créé, ce segment est enregistré et stocké afin que vous puissiez l’exporter pour l’utiliser.
 
-Les segments évalués à l’aide de la segmentation par lot sont évalués toutes les 24 heures. Cependant, pour les segments existants, la segmentation incrémentielle permet de maintenir les segments évalués à l’aide de la segmentation par lot à jour pendant une heure. Tout segment nouveau ou récemment modifié devra attendre que la prochaine tâche de segmentation par lot complète ait été exécutée pour tirer parti de la segmentation incrémentielle.
+**Segmentation incrémentielle (bêta)**
+
+Les segments de lot sont évalués toutes les 24 heures. Cependant, pour les segments existants, la segmentation incrémentielle maintient les segments à jour jusqu’à une heure.
+
+La segmentation incrémentielle s’exécute sur les nouvelles données arrivant dans le magasin de profils. Toutefois, les avertissements suivants s’appliquent à la segmentation incrémentielle :
+
+- Pour tous les segments nouveaux ou récemment modifiés, les profils contenant de nouvelles données début être qualifiés au cours de la prochaine exécution incrémentielle. Toutefois, les profils sans modification seront rattrapés dans la prochaine tâche de segmentation par lot complète.
+- Les segments à plusieurs entités seront actualisés dans la segmentation incrémentielle. S’il existe des mises à jour d’entité, tous les profils contenant de nouvelles données début de les utiliser au cours de la prochaine exécution incrémentielle. Cependant, les profils sans modification seront rattrapés dans la prochaine tâche de segmentation par lots complète.
+- Les événements qui abandonnent la fenêtre de temps d’un segment seront rapprochés dans la tâche de segmentation par lots complète suivante.
 
 Pour savoir comment évaluer les segments, consultez le [tutoriel sur l’évaluation des segments](./tutorials/evaluate-a-segment.md).
 
