@@ -3,14 +3,14 @@ title: Variables Adobe Analytics mappées automatiquement dans le kit de dévelo
 description: Découvrez quelles variables sont automatiquement mises en correspondance en Adobe Analytics avec le SDK Web Experience Platform
 seo-description: Découvrez quelles variables sont automatiquement mises en correspondance en Adobe Analytics avec le kit de développement Web Adobe Experience Platform.
 keywords: adobe analytics ; variables ; analytics ; carte automatique ; mappage automatique ;
+exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 7a6a9f1ee764ab614fa163f90a2051bd35b76b7f
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '684'
 ht-degree: 35%
 
 ---
-
 
 # Les variables sont automatiquement mises en correspondance dans [!DNL Analytics]
 
@@ -103,3 +103,5 @@ Vous trouverez ci-dessous une liste de variables que Adobe Experience Platform E
 | `web.webPageDetails.server` | `sv` | Mappage du paramètre de requête USER_SERVER AppMeasurement. |
 | `web.webPageDetails.siteSection` | `ch` | Mappage du CANAL des paramètres de la requête AppMeasurement. |
 | `web.webReferrer.URL` | `r` | Mappage du paramètre de requête REFERRER AppMeasurement. |
+
+{style=&quot;table-layout:auto&quot;}
