@@ -6,10 +6,10 @@ description: Instructions pour se connecter aux emplacements de stockage dans le
 seo-description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 7bb862c4c6c52c42e45d5e736fa6d239e812ac2c
+source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 33%
+source-wordcount: '631'
+ht-degree: 32%
 
 ---
 
@@ -64,6 +64,10 @@ Pour les destinations [!DNL Azure Event Hubs], indiquez le nom de votre flux de 
 Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement. Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le workflow et choisir les segments à activer. Lisez la section [Activer les segments](#activate-segments) pour le reste du flux de travaux d’exportation des données.
 
 ## Utilisez les macros pour créer un dossier à l’emplacement de votre enregistrement{#use-macros}
+
+>[!NOTE]
+>
+> La fonctionnalité décrite dans cette section est actuellement disponible uniquement pour les destinations [Amazon S3](./amazon-s3.md).
 
 Pour créer un dossier personnalisé par fichier de segment à l’emplacement de votre enregistrement, vous pouvez utiliser des macros dans le champ d’entrée du chemin d’accès au dossier. Insérez les macros à la fin du champ d’entrée, comme illustré ci-dessous.
 
