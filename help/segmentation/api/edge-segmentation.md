@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; segmentation des arêtes ; Segmentation des arêtes ; Segmentation des arêtes ; arête de diffusion ;
 solution: Experience Platform
 title: 'Segmentation Edge à l’aide de l’API '
-topic: guide du développeur
+topic: guide de développement
 description: Ce document contient des exemples d’utilisation de la segmentation des arêtes avec l’API Adobe Experience Platform Segmentation Service.
+exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 0c4625ec0728c8c94b72e3e16e7ecf45ea2d0c0b
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '636'
 ht-degree: 12%
 
 ---
-
 
 # Segmentation Edge
 
@@ -39,8 +39,8 @@ Pour qu’un segment soit évalué à l’aide de la segmentation Edge, la requ�
 | ---------- | ------- |
 | Accès entrant | Toute définition de segment faisant référence à un seul événement entrant sans restriction de temps. |
 | Accès entrant faisant référence à un profil | Toute définition de segment faisant référence à un seul événement entrant, sans restriction de temps, et à un ou plusieurs attributs de profil. |
-| Requête de fréquence | Toute définition de segment faisant référence à un événement survenant un certain nombre de fois. |
-| Requête de fréquence faisant référence à un profil | Toute définition de segment faisant référence à un événement survenant un certain nombre de fois et ayant un ou plusieurs attributs de profil. |
+| Requête de fréquence | Toute définition de segment faisant référence à un événement survenant au moins un certain nombre de fois. |
+| Requête de fréquence faisant référence à un profil | Toute définition de segment faisant référence à un événement survenant au moins un certain nombre de fois et ayant un ou plusieurs attributs de profil. |
 
 {style=&quot;table-layout:auto&quot;}
 
