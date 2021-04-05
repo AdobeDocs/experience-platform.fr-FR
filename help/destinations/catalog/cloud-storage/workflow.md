@@ -6,7 +6,7 @@ description: Instructions pour se connecter aux emplacements de stockage dans le
 seo-description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 1e33a7b48e20d7afe9f10b206a6fd68433b205db
+source-git-commit: 7bb862c4c6c52c42e45d5e736fa6d239e812ac2c
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 33%
@@ -71,22 +71,19 @@ Pour créer un dossier personnalisé par fichier de segment à l’emplacement d
 
 Les exemples ci-dessous référencent un exemple de segment `Luxury Audience` avec l’ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
 
-### Macro 1 - `%SEGMENT_NAME%`
+**Macro 1 :`%SEGMENT_NAME%`**
 
 Input : `acme/campaigns/2021/%SEGMENT_NAME%`
-
 Chemin d’accès au dossier à l’emplacement de votre enregistrement : `acme/campaigns/2021/Luxury Audience`
 
-### Macro 2 - `%SEGMENT_ID%`
+**Macro 2 :`%SEGMENT_ID%`**
 
 Input : `acme/campaigns/2021/%SEGMENT_ID%`
-
 Chemin d’accès au dossier à l’emplacement de votre enregistrement : `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
 
-### Macro 3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+**Macro 3 :`%SEGMENT_NAME%/%SEGMENT_ID%`**
 
 Input : `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
-
 Chemin d’accès au dossier à l’emplacement de votre enregistrement : `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
 
 
