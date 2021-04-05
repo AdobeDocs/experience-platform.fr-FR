@@ -4,14 +4,14 @@ title: Création d’une destination d’enregistrement cloud
 type: Tutoriel
 description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 seo-description: Instructions pour se connecter aux emplacements de stockage dans le cloud
+exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 632003773100ec8ef0389840695a1c75a1aa663d
+source-git-commit: 1e33a7b48e20d7afe9f10b206a6fd68433b205db
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 43%
+source-wordcount: '617'
+ht-degree: 33%
 
 ---
-
 
 # Création d’une destination d’enregistrement cloud
 
@@ -37,7 +37,7 @@ Voir [destination Amazon S3](./amazon-s3.md), destination [[!DNL Amazon Kinesis]
 >
 >La plate-forme prend en charge la validation des informations d’identification dans le processus d’authentification et affiche un message d’erreur si vous saisissez des informations d’identification incorrectes à l’emplacement de votre enregistrement cloud. Ainsi, vous n’effectuez pas le workflow avec des informations d’identification incorrectes.
 
-![Connexion à la destination de stockage dans le cloud - étape d’authentification](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+![Connexion à la destination de l’enregistrement cloud - étape du compte](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
 ## Étape d&#39;authentification {#authentication}
 
@@ -61,7 +61,35 @@ Pour les destinations [!DNL Azure Event Hubs], indiquez le nom de votre flux de 
 
 ![Connexion à la destination de l&#39;enregistrement cloud des concentrateurs de Événement - étape d&#39;authentification](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)
 
-Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement. Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le workflow et choisir les segments à activer. Dans les deux cas, consultez la section suivante, [Activation des segments](#activate-segments), pour le reste du processus d’exportation des données.
+Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement. Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le workflow et choisir les segments à activer. Lisez la section [Activer les segments](#activate-segments) pour le reste du flux de travaux d’exportation des données.
+
+## Utilisez les macros pour créer un dossier à l’emplacement de votre enregistrement{#use-macros}
+
+Pour créer un dossier personnalisé par fichier de segment à l’emplacement de votre enregistrement, vous pouvez utiliser des macros dans le champ d’entrée du chemin d’accès au dossier. Insérez les macros à la fin du champ d’entrée, comme illustré ci-dessous.
+
+![Utilisation de macros pour créer un dossier dans votre enregistrement](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
+
+Les exemples ci-dessous référencent un exemple de segment `Luxury Audience` avec l’ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+
+### Macro 1 - `%SEGMENT_NAME%`
+
+Input : `acme/campaigns/2021/%SEGMENT_NAME%`
+
+Chemin d’accès au dossier à l’emplacement de votre enregistrement : `acme/campaigns/2021/Luxury Audience`
+
+### Macro 2 - `%SEGMENT_ID%`
+
+Input : `acme/campaigns/2021/%SEGMENT_ID%`
+
+Chemin d’accès au dossier à l’emplacement de votre enregistrement : `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+### Macro 3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+
+Input : `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
+
+Chemin d’accès au dossier à l’emplacement de votre enregistrement : `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+
 
 ## Activation des segments {#activate-segments}
 
