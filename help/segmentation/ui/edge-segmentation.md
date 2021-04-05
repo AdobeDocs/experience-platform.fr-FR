@@ -3,15 +3,15 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation de
 solution: Experience Platform
 title: Guide de l’interface utilisateur de segmentation Edge
 topic: ui guide
-description: 'La segmentation Edge permet d’évaluer instantanément les segments dans la plate-forme, ce qui permet d’utiliser des cas de personnalisation de la même page et de la page suivante. '
+description: La segmentation Edge permet d’évaluer instantanément les segments dans la plate-forme, ce qui permet d’utiliser les mêmes cas de personnalisation de page et de page suivante.
+exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '339'
 ht-degree: 2%
 
 ---
-
 
 # Guide de l’interface utilisateur de segmentation Edge
 
@@ -25,8 +25,8 @@ Une requête peut être évaluée avec la segmentation des arêtes si elle répo
 | ---------- | ------- | ------- |
 | Accès entrant | Toute définition de segment faisant référence à un seul événement entrant sans restriction de temps. | ![](../images/ui/edge-segmentation/incoming-hit.png) |
 | Accès entrant faisant référence à un profil | Toute définition de segment faisant référence à un seul événement entrant, sans restriction de temps, et à un ou plusieurs attributs de profil. | ![](../images/ui/edge-segmentation/profile-hit.png) |
-| Requête de fréquence | Toute définition de segment faisant référence à un événement survenant un certain nombre de fois. |  |
-| Requête de fréquence faisant référence à un profil | Toute définition de segment faisant référence à un événement survenant un certain nombre de fois et ayant un ou plusieurs attributs de profil. |  |
+| Requête de fréquence | Toute définition de segment faisant référence à un événement survenant au moins un certain nombre de fois. |  |
+| Requête de fréquence faisant référence à un profil | Toute définition de segment faisant référence à un événement survenant au moins un certain nombre de fois et ayant un ou plusieurs attributs de profil. |  |
 
 Si la requête correspond à l’un des types de requête ci-dessus, vous pouvez l’activer pour la segmentation des arêtes en activant l’option **[!UICONTROL Évaluer en tant que segment de diffusion en continu sur le bord]**.
 
