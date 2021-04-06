@@ -3,14 +3,14 @@ keywords: mettre à jour le compte de destination;comptes de destination;comment
 title: Mettre à jour les comptes de destination
 type: Tutoriel
 description: Ce didacticiel liste les étapes de mise à jour des comptes de destination dans l’interface utilisateur de Adobe Experience Platform.
+exl-id: afb41878-4205-4c64-af4d-e2740f852785
 translation-type: tm+mt
-source-git-commit: ebe2a35e66b78acf6a9ffa20664877913cd35648
+source-git-commit: e436d7147c613dad5b2ff596a412759fd60d228c
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 36%
 
 ---
-
 
 # Mettre à jour les comptes de destination
 
