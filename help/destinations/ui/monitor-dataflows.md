@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; comptes de surveillance ; flux de données de surveillance ; flux de données ; destinations
+keywords: Experience Platform, Accueil, Rubriques populaires, Analyser les comptes, Surveiller les flux de données, Flux de données, Destinations
 description: Les destinations sont des intégrations préétablies avec des plateformes de destination qui permettent une activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 solution: Experience Platform
 title: Surveiller les flux de données
 topic: aperçu
 type: Tutoriel
+exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 translation-type: tm+mt
-source-git-commit: c7f01ce5667ad92e95f1576ff466b2a13338b54b
+source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 27%
 
 ---
-
 
 # Surveiller les flux de données
 
