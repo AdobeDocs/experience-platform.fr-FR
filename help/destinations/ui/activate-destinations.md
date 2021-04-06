@@ -5,14 +5,14 @@ type: Tutoriel
 seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
+exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 translation-type: tm+mt
-source-git-commit: 0992b223a96b77446a9f9c2823f5195541dd93fa
+source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
 workflow-type: tm+mt
-source-wordcount: '2150'
-ht-degree: 15%
+source-wordcount: '2102'
+ht-degree: 13%
 
 ---
-
 
 # Activation de profils et de segments vers une destination
 
@@ -240,13 +240,6 @@ Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre s�
 Si aucune violation de stratégie n&#39;a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer votre sélection et l&#39;envoi de données par début vers la destination.
 
 ![confirm-selection](../assets/ui/activate-destinations/confirm-selection.png)
-
-## Modification de l’activation {#edit-activation}
-
-Suivez les étapes ci-dessous pour modifier les flux d’activation existants dans Adobe Experience Platform :
-
-1. Sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche, cliquez sur l’onglet **[!UICONTROL Parcourir]**, puis sur le nom de la destination.
-2. Sélectionnez **[!UICONTROL Modifier l’activation]** dans le rail de droite pour modifier les segments à envoyer à la destination.
 
 ## Vérification de la réussite de l’activation du segment {#verify-activation}
 
