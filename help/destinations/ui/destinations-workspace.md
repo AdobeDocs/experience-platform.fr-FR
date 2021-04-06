@@ -1,16 +1,16 @@
 ---
 keywords: plate-forme;destinations;destinations workspace;workspace;ui;destinations ui;catalog;destinations catalog;destinations catalog;destinations catalog;
 title: Espace de travail des destinations
-description: 'L’espace de travail Destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système, décrites dans les sections ci-dessous.'
+description: 'L’espace de travail Destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue système. Ils sont décrits dans les sections ci-dessous.'
 seo-description: Dans Adobe Experience Platform, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
+exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 translation-type: tm+mt
-source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
+source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 32%
+source-wordcount: '810'
+ht-degree: 22%
 
 ---
-
 
 # Espace de travail des destinations {#destinations-workspace}
 
@@ -20,17 +20,17 @@ Dans Adobe Experience Platform, sélectionnez **[!UICONTROL Destinations]** dans
 
 L&#39;espace de travail [!UICONTROL Destinations] comprend quatre sections, [!UICONTROL Catalogue], [!UICONTROL Parcourir], [!UICONTROL Comptes] et [!UICONTROL Vue système], décrites dans les sections ci-dessous.
 
-![Présentation des destinations](../assets/ui/workspace/destinations-overview.png)
+![Présentation des destinations](../assets/ui/workspace/destinations-workspace.png)
 
 ## [!UICONTROL Catalogue] {#catalog}
 
-L&#39;onglet **[!UICONTROL Catalogue]** affiche une liste de toutes les destinations disponibles dans Plateforme, à laquelle vous pouvez envoyer des données.
+L&#39;onglet **[!UICONTROL Catalogue]** affiche une liste de toutes les destinations disponibles dans [!DNL Platform], à laquelle vous pouvez envoyer des données.
 
-L’interface utilisateur de la plate-forme fournit plusieurs options de recherche et de filtrage sur la page de catalogue des destinations :
+L&#39;interface utilisateur [!DNL Platform] fournit plusieurs options de recherche et de filtrage sur la page de catalogue de destinations :
 
 * Utilisez la fonctionnalité de recherche de la page pour localiser une destination spécifique.
 * Filtrez les destinations à l&#39;aide du contrôle [!UICONTROL Catégories].
-* Basculez entre [!UICONTROL Toutes les destinations] et [!UICONTROL Mes destinations]. Lorsque **[!UICONTROL Toutes les destinations]** est sélectionné, toutes les destinations de plateforme disponibles s&#39;affichent. Lorsque **[!UICONTROL Mes destinations]** est sélectionné, vous ne pouvez voir que les destinations avec lesquelles vous avez établi une connexion.
+* Basculez entre [!UICONTROL Toutes les destinations] et [!UICONTROL Mes destinations]. Lorsque vous sélectionnez **[!UICONTROL Toutes les destinations]**, toutes les destinations [!DNL Platform] disponibles s’affichent. Lorsque vous sélectionnez **[!UICONTROL Mes destinations]**, vous ne pouvez afficher que les destinations avec lesquelles vous avez établi une connexion.
 * Sélectionnez **[!UICONTROL Connexions]** et/ou **[!UICONTROL Extensions]** pour la vue. Pour comprendre la différence entre les deux catégories, voir [Types et Catégories de destination](../destination-types.md).
 
 ![destinations filtrage et démonstration de recherche](../assets/ui/workspace/destinations-search-and-filter.gif)
@@ -49,52 +49,24 @@ Les cartes de destination contiennent soit un contrôle **[!UICONTROL Configurer
 
 ![Contrôles sur la carte de destination](../assets/ui/workspace/destination-card-options.png)
 
-Sélectionnez une carte de destination dans le catalogue pour ouvrir le rail de droite. Vous pouvez voir ici une description de la destination. Le rail droit fournit les mêmes commandes que celles décrites dans le tableau ci-dessus, ainsi qu&#39;une description de la destination et une indication de la catégorie et du type de destination.
+Sélectionnez une carte de destination dans le catalogue pour ouvrir le rail de droite. Vous pouvez voir ici une description de la destination. Le rail droit fournit les mêmes commandes que celles décrites dans le tableau ci-dessus, y compris une description de la destination et une indication de la catégorie et du type de destination.
 
 ![Options du catalogue des destinations](../assets/ui/workspace/destination-right-rail.png)
 
-Pour plus d&#39;informations sur les catégories de destination et les informations sur chaque destination, consultez les [Catalogue de destination](../catalog/overview.md) et [Types et Catégories de destination](../destination-types.md).
+Pour plus d&#39;informations sur les catégories de destination et les informations sur chaque destination, consultez les [Catalogue de destination](../catalog/overview.md) et [Types et catégories de destination](../destination-types.md).
 
 ## [!UICONTROL Comptes] {#accounts}
 
-Dans l’onglet **[!UICONTROL Comptes]**, vous pouvez en savoir plus sur les connexions que vous avez établies avec différentes destinations. Consultez le tableau ci-dessous pour obtenir toutes les informations disponibles sur chaque destination :
-
->[!TIP]
->
->Utilisez le bouton ![Ajouter les données](../assets/ui/workspace/add-data-symbol.png) de la colonne **[!UICONTROL Plateforme]** pour créer une nouvelle connexion de destination pour ce compte.
-
-![Onglet Comptes](../assets/ui/workspace/edit-account-destinations.png)
-
-| Élément | Description |
----------|----------
-| [!UICONTROL Plateforme] | La destination pour laquelle vous avez configuré la connexion. |
-| [!UICONTROL Type de connexion] | Représente le type de connexion à votre compartiment de stockage ou à votre destination. <ul><li>Pour les destinations de marketing par e-mail : peut être S3 ou FTP.</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur</li><li>Pour les destinations de stockage dans le cloud Amazon S3 : clé d’accès </li><li>Pour les destinations de stockage dans le cloud SFTP : authentification de base pour SFTP</li></ul> |
-| [!UICONTROL Nom d’utilisateur] | Le nom d’utilisateur que vous avez sélectionné dans l’[assistant de connexion à la destination](../catalog/email-marketing/overview.md#connect-destination). |
-| [!UICONTROL Destinations] | Représente le nombre de flux de destination réussis uniques et connectés avec des informations de base créées pour une destination. |
-| [!UICONTROL Autorisé] | La date à laquelle la connexion à cette destination a été autorisée. |
-
-{style=&quot;table-layout:auto&quot;}
-
-De plus, vous pouvez modifier ou mettre à jour les informations de votre compte. Sélectionnez le bouton ![Modifier le compte](../assets/ui/workspace/pencil-icon.png) dans la colonne **[!UICONTROL Plateforme]** pour modifier les informations du compte.
-
-Pour les comptes qui utilisent un type de connexion `OAuth2`, vous pouvez sélectionner **[!UICONTROL Reconnecter OAuth]** pour renouveler les informations d&#39;identification de votre compte.
-
-![Image Oauth](../assets/ui/workspace/reconnect-oauth.png)
-
-Pour les comptes qui utilisent un type de connexion `Access Key` ou `ConnectionString`, vous pouvez modifier les informations d&#39;authentification de votre compte, y compris les informations telles que l&#39;ID d&#39;accès, les clés secrètes ou les chaînes de connexion.
-
-![Image d’informations du compte](../assets/ui/workspace/edit-account-details.png)
-
-Une fois que vous avez terminé de modifier les détails de votre compte, sélectionnez **[!UICONTROL Enregistrer]** pour terminer la mise à jour.
+L&#39;onglet **[!UICONTROL Comptes]** affiche des détails sur les connexions que vous avez établies avec différentes destinations et vous permet de mettre à jour les détails de connexion existants. Voir [Mettre à jour les comptes](update-accounts.md) pour obtenir des instructions détaillées.
 
 ## [!UICONTROL Parcourir] {#browse}
 
-L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles vous avez établi une connexion. Les destinations avec la bascule **[!UICONTROL Activé]** activée permettent de définir la destination sur principal et vice versa. Vous pouvez également vue les destinations vers lesquelles vos données circulent en sélectionnant **[!UICONTROL Segments]** > **[!UICONTROL Parcourir]** et en sélectionnant un segment à inspecter. Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet Parcourir :
+L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles vous avez établi une connexion. Les destinations avec la bascule **[!UICONTROL Activé/Désactivé]** activée ont pour effet de définir la destination sur principal ou inactif, respectivement. Vous pouvez également vue les destinations vers lesquelles vos données circulent en sélectionnant **[!UICONTROL Segments]** > **[!UICONTROL Parcourir]** et en sélectionnant un segment à inspecter. Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet Parcourir :
 
 >[!TIP]
 >
-> * Utilisez le bouton ![Ajouter les segments](../assets/ui/workspace/add-data-symbol.png) de la colonne **[!UICONTROL Nom]** pour activer des segments supplémentaires vers cette destination.
-> * Utilisez le bouton ![Supprimer les destinations](../assets/ui/workspace/delete-destination-symbol.png) de la colonne **[!UICONTROL Nom]** pour supprimer une connexion existante à une destination.
+> * Utilisez le bouton ![Ajouter les segments](../assets/ui/workspace/add-data-symbol.png) de la colonne **[!UICONTROL Nom]** pour [activer](activate-destinations.md) d&#39;autres segments vers cette destination.
+> * Utilisez le bouton ![Supprimer les destinations](../assets/ui/workspace/delete-destination-symbol.png) de la colonne **[!UICONTROL Nom]** pour [supprimer](delete-destinations.md) une connexion existante à une destination.
 
 
 ![Onglet Parcourir](../assets/ui/workspace/browse-tab.png)
