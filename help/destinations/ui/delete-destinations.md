@@ -1,16 +1,16 @@
 ---
-keywords: supprimer des destinations ; comment supprimer des destinations
+keywords: Suppression de destinations
 title: Supprimer les destinations
 type: Tutoriel
 description: Ce didacticiel liste les étapes de suppression d’une destination existante dans l’interface utilisateur Adobe Experience Platform.
+exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 translation-type: tm+mt
-source-git-commit: c7f01ce5667ad92e95f1576ff466b2a13338b54b
+source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 1%
+source-wordcount: '401'
+ht-degree: 2%
 
 ---
-
 
 # Supprimer des destinations {#delete-destinations}
 
