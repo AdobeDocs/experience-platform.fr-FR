@@ -4,7 +4,7 @@ title: Mettre à jour les comptes de destination
 type: Tutoriel
 description: Ce didacticiel liste les étapes de mise à jour des comptes de destination dans l’interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6fd980b486c4a330f9188065bac55c624af584a1
+source-git-commit: e4afbdd6ff8f45ea8d5506f0228f0a80b44eee51
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 36%
@@ -21,7 +21,7 @@ L&#39;onglet **[!UICONTROL Comptes]** affiche des détails sur les connexions qu
 ![Onglet Comptes](../assets/ui/update-accounts/destination-accounts.png)
 
 | Élément | Description |
----------|----------
+|---|---|
 | [!UICONTROL Plateforme] | La destination pour laquelle vous avez configuré la connexion. |
 | [!UICONTROL Type de connexion] | Représente le type de connexion à votre compartiment de stockage ou à votre destination. <ul><li>Pour les destinations de marketing par e-mail : peut être S3 ou FTP.</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur</li><li>Pour les destinations de stockage dans le cloud Amazon S3 : clé d’accès </li><li>Pour les destinations de stockage dans le cloud SFTP : authentification de base pour SFTP</li></ul> |
 | [!UICONTROL Nom d’utilisateur] | Le nom d’utilisateur que vous avez sélectionné dans l’[assistant de connexion à la destination](../catalog/email-marketing/overview.md#connect-destination). |
