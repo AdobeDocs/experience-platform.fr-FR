@@ -6,10 +6,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document liste la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 61%
+source-wordcount: '473'
+ht-degree: 60%
 
 ---
 
@@ -23,9 +23,13 @@ ht-degree: 61%
    * [Connectez-vous aux destinations de marketing par courrier électronique et activez les données à l’aide de l’API du service de flux.](./api/email-marketing.md)
 * Guides d&#39;interface {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
-   * [Détails de la destination de la vue](./ui/destination-details-page.md)
    * [Connexion à une destination](./ui/connect-destination.md)
+   * [Détails de la destination de la vue](./ui/destination-details-page.md)
    * [Activation de profils et de segments vers une destination](./ui/activate-destinations.md)
+   * [Mettre à jour les comptes de destination](./ui/update-accounts.md)
+   * [Modifier les flux d&#39;activation](./ui/edit-activation.md)
+   * [Supprimer les destinations](./ui/delete-destinations.md)
+   * [Surveiller les flux de données](./ui/monitor-dataflows.md)
 * Catalogue des destinations {#catalog}
    * [Présentation du catalogue des destinations](./catalog/overview.md)
    * [ (Alpha) Connexion HTTP](./catalog/http-destination.md)
