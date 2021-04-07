@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Collecte des données de paiement ; données de paiement
 solution: Experience Platform
 title: Collecte des données de paiement à l'aide des connecteurs et des API d'origine
-topic: overview
-type: Tutorial
+topic: aperçu
+type: Tutoriel
 description: Ce didacticiel décrit les étapes à suivre pour récupérer des données d'une application de paiement et les intégrer à la plate-forme à l'aide de connecteurs et d'API source.
+exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1600'
 ht-degree: 21%
 
 ---
-
 
 # Collecte de données de paiement à l’aide des connecteurs et des API source
 
@@ -299,6 +299,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `schemaRef.id` | `$id` du schéma XDM de cible. |
+| `schemaRef.contentType` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full-notext+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
 
 **Réponse**
 
@@ -338,7 +339,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -354,6 +355,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `data.schema.id` | `$id` du schéma XDM de cible. |
+| `data.schema.version` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
 | `params.dataSetId` | ID du jeu de données de cible. |
 | `connectionSpec.id` | ID de spécification de connexion utilisé pour la connexion au lac Data. Cet ID est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
