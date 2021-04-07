@@ -2,17 +2,17 @@
 keywords: Experience Platform;accueil;rubriques populaires;crm;CRM
 solution: Experience Platform
 title: Collecte de données de gestion de la relation client via des connecteurs et des API source
-topic: overview
-type: Tutorial
+topic: aperçu
+type: Tutoriel
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système de gestion de la relation client tiers et les amener sur la plate-forme à l’aide des connecteurs et des API source.
+exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1592'
 ht-degree: 21%
 
 ---
-
 
 # Collecte de données de gestion de la relation client à l’aide des connecteurs et des API source
 
@@ -260,6 +260,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `schemaRef.id` | ID du schéma XDM de cible. |
+| `schemaRef.contentType` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full-notext+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
 
 **Réponse**
 
@@ -299,7 +300,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -315,6 +316,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `data.schema.id` | `$id` du schéma XDM de cible. |
+| `data.schema.version` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
 | `params.dataSetId` | ID du jeu de données de cible. |
 | `connectionSpec.id` | ID de spécification de connexion utilisé pour la connexion au lac Data. Cet ID est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
