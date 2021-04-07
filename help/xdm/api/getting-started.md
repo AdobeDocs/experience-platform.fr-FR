@@ -3,15 +3,15 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Prise en main de l’API Schéma Registry
 description: Ce document présente les concepts de base que vous devez connaître avant de tenter d'appeler l'API de registre du Schéma.
-topic: developer guide
+topic: guide de développement
+exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1163'
-ht-degree: 49%
+source-wordcount: '1365'
+ht-degree: 40%
 
 ---
-
 
 # Prise en main de l’API [!DNL Schema Registry]
 
@@ -22,7 +22,7 @@ L’API [!DNL Schema Registry] vous permet de créer et de gérer diverses resso
 L’utilisation du guide du développeur nécessite une compréhension pratique des composants suivants de Adobe Experience Platform :
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
-   * [Bases de la composition du schéma](../schema/composition.md) : en savoir plus sur les blocs de création de base des schémas XDM.
+   * [Notions de base de la composition du schéma](../schema/composition.md) : en savoir plus sur les blocs de création de base des schémas XDM.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
 
@@ -32,7 +32,7 @@ XDM utilise le formatage de Schéma JSON pour décrire et valider la structure d
 
 La documentation de l&#39;API [!DNL Schema Registry] fournit des exemples d&#39;appels d&#39;API pour montrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
 
-## Collecte des valeurs des en-têtes requis
+## Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
@@ -207,21 +207,38 @@ Le tableau suivant liste des valeurs d&#39;en-tête `Accept` compatibles, y comp
 | ------- | ------------ |
 | `application/vnd.adobe.xed-id+json` | Renvoie uniquement une liste d’identifiants. Il s’agit de l’en-tête le plus souvent utilisé pour répertorier des ressources. |
 | `application/vnd.adobe.xed+json` | Renvoie une liste de schémas JSON complets qui incluent le `$ref` et le `allOf` d’origine. Cet en-tête est utilisé pour renvoyer une liste de ressources complètes. |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | XDM brut avec `$ref` et `allOf`. Contient des titres et des descriptions. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | Attributs `$ref` et `allOf` résolus. Contient des titres et des descriptions. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | XDM brut avec `$ref` et `allOf`. Aucun titre ni description. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | Attributs `$ref` et `allOf` résolus. Aucun titre ni description. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | Attributs `$ref` et `allOf` résolus. Les descripteurs sont inclus. |
+| `application/vnd.adobe.xed+json; version=1` | XDM brut avec `$ref` et `allOf`. Contient des titres et des descriptions. |
+| `application/vnd.adobe.xed-full+json; version=1` | Attributs `$ref` et `allOf` résolus. Contient des titres et des descriptions. |
+| `application/vnd.adobe.xed-notext+json; version=1` | XDM brut avec `$ref` et `allOf`. Aucun titre ni description. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | Attributs `$ref` et `allOf` résolus. Aucun titre ni description. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | Attributs `$ref` et `allOf` résolus. Les descripteurs sont inclus. |
 
 >[!NOTE]
 >
->Si vous fournissez la version principale seulement (p. ex. 1, 2, 3), le registre retournera la dernière version mineure (p. ex. .1, .2, .3) automatiquement.
+>La plate-forme ne prend actuellement en charge qu&#39;une seule version majeure pour chaque schéma (`1`). Par conséquent, la valeur de `version` doit toujours être `1` lorsque vous exécutez des requêtes de recherche pour renvoyer la dernière version mineure du schéma. Consultez la sous-section ci-dessous pour plus d&#39;informations sur le contrôle de version des schémas.
+
+### Version du schéma {#versioning}
+
+Les versions de schéma sont référencées par des en-têtes `Accept` dans l&#39;API de registre de Schéma et dans les propriétés `schemaRef.contentType` dans les charges d&#39;API de service de plateforme en aval.
+
+Actuellement, Platform ne prend en charge qu&#39;une seule version majeure (`1`) pour chaque schéma. Selon les [règles d&#39;évolution du schéma](../schema/composition.md#evolution), chaque mise à jour d&#39;un schéma doit être non destructive, ce qui signifie que de nouvelles versions mineures d&#39;un schéma (`1.2`, `1.3`, etc.) sont toujours rétrocompatibles avec les versions mineures précédentes. Par conséquent, lors de la spécification de `version=1`, le Registre de Schéma renvoie toujours la **dernière** version principale `1` d&#39;un schéma, ce qui signifie que les versions mineures précédentes ne sont pas renvoyées.
+
+>[!NOTE]
+>
+>L&#39;exigence non destructive pour l&#39;évolution des schémas n&#39;est appliquée qu&#39;après que le schéma a été référencé par un jeu de données et l&#39;un des cas suivants est vrai :
+>
+>* Les données ont été ingérées dans le jeu de données.
+>* Le jeu de données a été activé pour une utilisation dans le Profil client en temps réel (même si aucune donnée n’a été ingérée).
+
+>
+>
+Si le schéma n&#39;a pas été associé à un jeu de données qui répond à l&#39;un des critères ci-dessus, tout changement peut être apporté à celui-ci. Cependant, dans tous les cas, le composant `version` reste à `1`.
 
 ## Contraintes de champ XDM et bonnes pratiques
 
 Les champs d’un schéma sont répertoriés dans son objet `properties`. Chaque champ est lui-même un objet et contient des attributs pour décrire et contraindre les données que le champ peut contenir.
 
-Vous trouverez plus d’informations sur la définition des types de champ dans l’API dans l’[annexe](appendix.md) de ce guide, notamment des exemples de code et des contraintes optionnelles pour les types de données les plus couramment utilisés.
+Pour plus d&#39;informations sur la définition des types de champ dans l&#39;API, consultez le [guide des contraintes de champ](../schema/field-constraints.md) pour ce guide, y compris des exemples de code et des contraintes facultatives pour les types de données les plus couramment utilisés.
 
 Le champ d’exemple suivant illustre un champ XDM formaté correctement avec de plus amples détails sur les contraintes de dénomination et les bonnes pratiques fournies ci-dessous. Ces pratiques peuvent également s’appliquer lorsque vous définissez les autres ressources pouvant contenir des attributs similaires.
 
