@@ -5,14 +5,14 @@ title: Diffusion en continu des données d'enregistrement à l'aide des API d'im
 topic: didacticiel
 type: Tutoriel
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
+exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1166'
 ht-degree: 75%
 
 ---
-
 
 # Diffusion en continu des données d&#39;enregistrement à l&#39;aide des API d&#39;importation en flux continu
 
@@ -34,7 +34,7 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
@@ -245,7 +245,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
     "description": "Dataset description",
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID},
-        "contentType": "application/vnd.adobe.xed-full+json;version=1.0"
+        "contentType": "application/vnd.adobe.xed-full+json;version=1"
     },
     "tags": {
         "unifiedIdentity": ["enabled:true"],
@@ -297,7 +297,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}"
@@ -306,7 +306,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
         "xdmMeta": {
             "schemaRef": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-                "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "xdmEntity": {
@@ -336,7 +336,7 @@ Si vous souhaitez inclure un nom source, l’exemple suivant montre comment l’
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}",
@@ -456,5 +456,3 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails des entités 
 En lisant ce document, vous comprenez maintenant comment ingérer des données d&#39;enregistrement dans [!DNL Platform] à l&#39;aide de connexions en flux continu. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. De plus, vous pouvez début à surveiller vos données imbriquées par le biais de l&#39;interface utilisateur [!DNL Platform]. Pour plus d’informations, consultez le guide de [surveillance de l’ingestion des données](../quality/monitor-data-ingestion.md).
 
 Pour plus d’informations sur l’ingestion par flux en général, consultez la [présentation de l’ingestion par flux](../streaming-ingestion/overview.md).
-
-
