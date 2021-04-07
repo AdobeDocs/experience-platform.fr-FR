@@ -3,15 +3,15 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Point de terminaison de l’API Mixins
 description: Le point de terminaison /mixins de l’API de registre de Schéma vous permet de gérer par programmation les mixins XDM dans votre application d’expérience.
-topic: guide du développeur
+topic: guide de développement
+exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1136'
 ht-degree: 13%
 
 ---
-
 
 # Point de terminaison Mixins
 
@@ -140,11 +140,11 @@ Le format de réponse dépend de l&#39;en-tête `Accept` envoyé dans la demande
 
 | En-tête `Accept` | Description |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Brut avec `$ref` et `allOf`, contient des titres et des descriptions. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolus, contient des titres et des descriptions. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Brut avec `$ref` et `allOf`, ne contient aucun titre ni aucune description. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolus, ne contient aucun titre ni aucune description. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolus, contient des descripteurs. |
+| `application/vnd.adobe.xed+json; version=1` | Brut avec `$ref` et `allOf`, contient des titres et des descriptions. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` et `allOf` résolus, contient des titres et des descriptions. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Brut avec `$ref` et `allOf`, ne contient aucun titre ni aucune description. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` et `allOf` résolus, ne contient aucun titre ni aucune description. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` et `allOf` résolus, contient des descripteurs. |
 
 **Réponse**
 
