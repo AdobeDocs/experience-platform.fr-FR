@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Collecte de données de protocole ; données de protocole
 solution: Experience Platform
 title: Collecte de données de protocoles à l’aide de connecteurs et d’API source
-topic: overview
-type: Tutorial
+topic: aperçu
+type: Tutoriel
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d'une application de protocoles et les intégrer à la plate-forme à l'aide des connecteurs et des API source.
+exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1549'
 ht-degree: 22%
 
 ---
-
 
 # Collecte de données de protocoles à l’aide des connecteurs et des API source
 
@@ -300,6 +300,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `schemaRef.id` | `$id` du schéma XDM de cible. |
+| `schemaRef.contentType` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full-notext+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
 
 **Réponse**
 
