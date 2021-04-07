@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; base de données ; base de données ; base de données tierce
 solution: Experience Platform
 title: Collecte de données à partir d’une base de données à l’aide des connecteurs et des API source
-topic: overview
-type: Tutorial
+topic: aperçu
+type: Tutoriel
 description: Ce didacticiel décrit les étapes à suivre pour récupérer des données d’une base de données et les importer dans la plate-forme à l’aide des connecteurs et des API source.
+exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1611'
-ht-degree: 21%
+source-wordcount: '1651'
+ht-degree: 20%
 
 ---
-
 
 # Collecte de données à partir d’une base de données à l’aide des connecteurs et des API source
 
@@ -286,6 +286,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `schemaRef.id` | ID du schéma XDM de cible. |
+| `schemaRef.contentType` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full-notext+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
 
 **Réponse**
 
@@ -325,7 +326,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -341,6 +342,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `data.schema.id` | `$id` du schéma XDM de cible. |
+| `data.schema.version` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
 | `params.dataSetId` | ID du jeu de données de cible rassemblé à l’étape précédente. |
 | `connectionSpec.id` | ID de spécification de connexion utilisé pour la connexion au lac Data. Cet ID est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
@@ -791,8 +793,8 @@ La section suivante liste les différents connecteurs source d’enregistrement 
 | Nom du connecteur | Identifiant de la spécification de connexion |
 | -------------- | --------------- |
 | [!DNL Amazon Redshift] | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
-| [!DNL Apache Hive] on [!DNL Azure HDInsights] | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
-| [!DNL Apache Spark] on  [!DNL Azure HDInsights] | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| [!DNL Apache Hive] à [!DNL Azure HDInsights] | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| [!DNL Apache Spark] à [!DNL Azure HDInsights] | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
 | [!DNL Azure Data Explorer] | `0479cc14-7651-4354-b233-7480606c2ac3` |
 | [!DNL Azure Synapse Analytics] | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 | [!DNL Azure Table Storage] | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
