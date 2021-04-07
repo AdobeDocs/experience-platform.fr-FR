@@ -3,15 +3,15 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Point de terminaison de l'API Unions
 description: Le point de terminaison /unions de l'API Schéma Registry vous permet de gérer par programmation les schémas d'union XDM dans votre application d'expérience.
-topic: developer guide
+topic: guide de développement
+exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 51%
+source-wordcount: '902'
+ht-degree: 50%
 
 ---
-
 
 # Point de terminaison des Unions
 
@@ -126,8 +126,8 @@ Les en-têtes Accept suivants sont disponibles pour les recherches de schémas d
 
 | Accept | Description |
 | -------|------------ |
-| application/vnd.adobe.xed+json; version={MAJOR_VERSION} | Raw avec `$ref` et `allOf`. Contient des titres et des descriptions. |
-| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | Attributs `$ref` et `allOf` résolus. Contient des titres et des descriptions. |
+| `application/vnd.adobe.xed+json; version=1` | Raw avec `$ref` et `allOf`. Contient des titres et des descriptions. |
+| `application/vnd.adobe.xed-full+json; version=1` | Attributs `$ref` et `allOf` résolus. Contient des titres et des descriptions. |
 
 **Réponse**
 
