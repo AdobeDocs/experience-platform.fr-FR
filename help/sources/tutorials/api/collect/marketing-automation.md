@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; thèmes populaires ; système d'automatisation marketing ; collecte de données d'automatisation marketing
 solution: Experience Platform
 title: Collecte de données d’automatisation du marketing à l’aide des connecteurs et des API source
-topic: overview
-type: Tutorial
+topic: aperçu
+type: Tutoriel
 description: Ce didacticiel décrit les étapes à suivre pour récupérer des données d’un système d’automatisation marketing et les importer dans Adobe Experience Platform à l’aide de connecteurs et d’API source.
+exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1538'
-ht-degree: 22%
+source-wordcount: '1578'
+ht-degree: 21%
 
 ---
-
 
 # Collecte de données d’automatisation marketing à l’aide des connecteurs et des API source
 
@@ -259,6 +259,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `schemaRef.id` | `$id` du schéma XDM de cible. |
+| `schemaRef.contentType` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full-notext+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
 
 **Réponse**
 
@@ -298,7 +299,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/da411446eec78026c28d9fafd9e406e304b771d55b07b91b",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -314,6 +315,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `data.schema.id` | `$id` du schéma XDM de cible. |
+| `data.schema.version` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
 | `params.dataSetId` | ID du jeu de données de cible. |
 | `connectionSpec.id` | ID de spécification de connexion utilisé pour la connexion au lac Data. Cet ID est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
