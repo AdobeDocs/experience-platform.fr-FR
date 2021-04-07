@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;dataset;Dataset;create dataset;create dataset;create dataset;enable dataset
 solution: Experience Platform
 title: Création d’un jeu de données dans l’API
-topic: developer guide
+topic: guide de développement
 description: Ce document explique comment créer un objet de jeu de données dans l’API du service de catalogue.
+exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 53%
+source-wordcount: '256'
+ht-degree: 48%
 
 ---
-
 
 # Création d’un jeu de données dans l’API
 
@@ -57,6 +57,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom du jeu de données à créer. |
 | `schemaRef.id` | La valeur `$id` de l’URI pour le schéma XDM sur lequel sera basé le jeu de données. |
+| `schemaRef.contentType` | Indique le format et la version du schéma. Pour plus d&#39;informations, consultez la section [versioning de schéma](../../xdm/api/getting-started.md#versioning) du guide de l&#39;API XDM. |
 
 >[!NOTE]
 >
