@@ -5,14 +5,14 @@ title: Collecte de données d’Enregistrement Cloud à l’aide des connecteurs
 topic: aperçu
 type: Tutoriel
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un enregistrement cloud tiers et les amener sur la plate-forme à l’aide des connecteurs et des API source.
+exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 translation-type: tm+mt
-source-git-commit: 8b85b25112ee16b09b1411c5d001bf13fb7fbcaa
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1806'
 ht-degree: 19%
 
 ---
-
 
 # Collecte de données d’enregistrement cloud à l’aide des connecteurs et des API source
 
@@ -332,6 +332,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `schemaRef.id` | ID du schéma XDM de cible. |
+| `schemaRef.contentType` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full-notext+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
 
 **Réponse**
 
@@ -371,7 +372,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -387,6 +388,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `data.schema.id` | `$id` du schéma XDM de cible. |
+| `data.schema.version` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
 | `params.dataSetId` | ID du jeu de données de cible. |
 | `connectionSpec.id` | ID de spécification de connexion fixe au lac Data. Cet ID est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
