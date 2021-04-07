@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; filtre ; Filtrer ; Filtrer les données ; Filtrer les données ; Filtrer les données ; Période
 solution: Experience Platform
 title: Filtrage des données du catalogue à l’aide des paramètres de Requête
-topic: developer guide
+topic: guide de développement
 description: L’API Catalog Service permet de filtrer les données de réponse à l’aide de paramètres de requête de demande. En ce qui concerne le catalogue, l’une des bonnes pratiques consiste à utiliser des filtres dans tous les appels API, réduisant ainsi la charge de l’API et contribuant à améliorer les performances globales.
+exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '2090'
-ht-degree: 88%
+source-wordcount: '2123'
+ht-degree: 87%
 
 ---
-
 
 # Filtrage des données [!DNL Catalog] à l’aide de paramètres de requête
 
@@ -155,6 +155,10 @@ En fonction de la réponse ci-dessus, vous pouvez en déduire ce qui suit :
 * Si un objet n’inclut aucune des propriétés demandées, il apparaîtra comme un objet vide. (`Dataset2`)
 * Un jeu de données peut renvoyer une propriété demandée en tant qu’objet vide s’il contient la propriété, mais sans aucune valeur. (`Dataset3`)
 * Sinon, le jeu de données affichera la valeur complète de toutes les propriétés demandées. (`Dataset4`)
+
+>[!NOTE]
+>
+>Dans la propriété `schemaRef` de chaque jeu de données, le numéro de version indique la dernière version mineure du schéma. Pour plus d&#39;informations, consultez la section [versioning de schéma](../../xdm/api/getting-started.md#versioning) du guide de l&#39;API XDM.
 
 ## Décalage de l’index de départ de la liste de réponses
 
