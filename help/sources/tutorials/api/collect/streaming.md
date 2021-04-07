@@ -5,14 +5,14 @@ title: Collecte de données en flux continu à l’aide des connecteurs et des A
 topic: aperçu
 type: Tutoriel
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données en flux continu et les amener sur la plate-forme à l’aide des connecteurs et des API source.
+exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1306'
-ht-degree: 20%
+source-wordcount: '1325'
+ht-degree: 19%
 
 ---
-
 
 # Collecte de données en flux continu à l’aide des connecteurs et des API source
 
@@ -44,7 +44,7 @@ Les sections suivantes fournissent des informations supplémentaires dont vous a
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
@@ -257,7 +257,7 @@ curl -X POST \
     -d '{
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
-            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.1"
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         },
         "fileDescription": {
             "format": "parquet"
@@ -277,6 +277,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `schemaRef.id` | ID du schéma XDM de cible. |
+| `schemaRef.contentType` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full-notext+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
 
 **Réponse**
 
