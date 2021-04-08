@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; Segmentation en flux continu ; Segmentation en flux continu ; Segmentation en flux continu ; Évaluation continue ;
 solution: Experience Platform
 title: 'Évaluer les Événements en temps quasi réel avec la segmentation en flux continu '
-topic: guide du développeur
+topic: guide de développement
 description: Ce document contient des exemples d’utilisation de la segmentation en flux continu avec l’API Adobe Experience Platform Segmentation Service.
+exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 translation-type: tm+mt
-source-git-commit: bb7edcaccca87918c56d00e092e4b7154d7c5d6e
+source-git-commit: e1ae20412f449c991f53fdd0f095d0c3a6de262c
 workflow-type: tm+mt
-source-wordcount: '1342'
-ht-degree: 45%
+source-wordcount: '1377'
+ht-degree: 44%
 
 ---
-
 
 # Évaluer les événements en temps quasi réel avec la segmentation en flux continu
 
@@ -41,7 +41,7 @@ Les sections suivantes fournissent des informations supplémentaires dont vous a
 
 Ce guide de développement fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
@@ -75,9 +75,11 @@ Pour qu’un segment soit évalué à l’aide de la segmentation en flux contin
 | ---------- | ------- |
 | Accès entrant | Toute définition de segment faisant référence à un seul événement entrant sans restriction de temps. |
 | Accès entrant dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant. |
+| Accès entrant avec une fenêtre de temps | Toute définition de segment faisant référence à un seul événement entrant avec une fenêtre de temps. |
 | Profil uniquement | Toute définition de segment faisant référence uniquement à un attribut de profil. |
 | Accès entrant faisant référence à un profil | Toute définition de segment faisant référence à un seul événement entrant, sans restriction de temps, et à un ou plusieurs attributs de profil. |
 | Accès entrant faisant référence à un profil dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant et à un ou plusieurs attributs de profil. |
+| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lot ou en flux continu. |
 | Plusieurs événements faisant référence à un profil | Toute définition de segment faisant référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. |
 
 Une définition de segment **ne sera pas** activée pour la segmentation en flux continu dans les scénarios suivants :
