@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de segmentation en flux continu
 topic: ui guide
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer la segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données arrivent dans la plate-forme, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à la plate-forme, ce qui signifie que l’appartenance à un segment est tenue à jour sans exécuter les tâches de segmentation planifiées.
+exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 translation-type: tm+mt
-source-git-commit: 405b7eb0c95ebef0b05d2b10ef92f28a37b7cc86
+source-git-commit: e1ae20412f449c991f53fdd0f095d0c3a6de262c
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
-
 
 # Segmentation par flux
 
@@ -39,9 +39,11 @@ Une requête sera automatiquement évaluée avec la segmentation en flux continu
 | ---------- | ------- | ------- |
 | Accès entrant | Toute définition de segment faisant référence à un seul événement entrant sans restriction de temps. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
 | Accès entrant dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Accès entrant avec une fenêtre de temps | Toute définition de segment faisant référence à un seul événement entrant avec une fenêtre de temps. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Profil uniquement | Toute définition de segment faisant référence uniquement à un attribut de profil. |  |
 | Accès entrant faisant référence à un profil | Toute définition de segment faisant référence à un seul événement entrant, sans restriction de temps, et à un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | Accès entrant faisant référence à un profil dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant et à un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lot ou en flux continu. | ![](../images/ui/streaming-segmentation/two-batches.png) |
 | Plusieurs événements faisant référence à un profil | Toute définition de segment faisant référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 Une définition de segment **ne sera pas** activée pour la segmentation en flux continu dans les scénarios suivants :
