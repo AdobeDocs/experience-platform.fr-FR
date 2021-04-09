@@ -6,18 +6,18 @@ topic: guide de développement
 description: Ce document contient des exemples d’utilisation de la segmentation des arêtes avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
+source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 12%
+source-wordcount: '653'
+ht-degree: 13%
 
 ---
 
-# Segmentation Edge
+# Segmentation Edge (bêta)
 
 >[!NOTE]
 >
->Le document suivant indique comment effectuer la segmentation des arêtes à l’aide de l’API. Pour plus d&#39;informations sur la segmentation des arêtes à l&#39;aide de l&#39;interface utilisateur, consultez le [guide de l&#39;interface utilisateur de la segmentation des arêtes](../ui/edge-segmentation.md).
+>Le document suivant indique comment effectuer la segmentation des arêtes à l’aide de l’API. Pour plus d&#39;informations sur la segmentation des arêtes à l&#39;aide de l&#39;interface utilisateur, consultez le [guide de l&#39;interface utilisateur de la segmentation des arêtes](../ui/edge-segmentation.md). De plus, la segmentation des arêtes est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
 La segmentation Edge permet d’évaluer instantanément les segments dans Adobe Experience Platform en périphérie, ce qui permet d’utiliser les mêmes cas de personnalisation de page et de page suivante.
 
