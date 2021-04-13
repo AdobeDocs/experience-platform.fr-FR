@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Aperçu de l’aperçu de l’aperçu des données d’aperçu
 topic: aperçu
 description: Ce document présente l’aperçu des données dans Adobe Experience Platform.
+exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '389'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,10 @@ Pour en savoir plus sur les différentes fonctions de mappage, consultez le [gui
 
 Un ensemble de mappages qui transforment un schéma en un autre est collectivement appelé jeu de mappages. Un jeu de mappages unique est créé dans le cadre de chaque flux de données. Un jeu de mappages fait partie intégrante des flux de données et est créé, modifié et surveillé dans le cadre des flux de données.
 
+## Gestion du format de données
+
+La fonction d’élaboration des données peut gérer de manière robuste différents formats de données ingérées dans la plate-forme. Pour en savoir plus sur la façon dont l’API traite les différents types de données, consultez la [présentation de la gestion du format de données](./data-handling.md).
+
 ## Étapes suivantes
 
-Ce document couvrait les bases de la préparation des données à Adobe Experience Platform. Pour en savoir plus sur les différentes fonctions de mappage, consultez le [guide des fonctions de mappage](./functions.md). Pour en savoir plus sur les différentes chaînes datetime, consultez le [guide des chaînes de date](./dates.md). Pour savoir comment utiliser l’API d’aperçu des données, consultez le [Guide du développeur d’API d’aperçu des données](api/overview.md).
+Ce document couvrait les bases de la préparation des données à Adobe Experience Platform. Pour en savoir plus sur les différentes fonctions de mappage, consultez le [guide des fonctions de mappage](./functions.md). Pour en savoir plus sur la façon dont l’API traite les différents types de données, consultez le [guide de gestion du format de données](./data-handling.md#dates). Pour savoir comment utiliser l’API d’aperçu des données, consultez le [Guide du développeur d’API d’aperçu des données](api/overview.md).
