@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Dépannage des sources
 topic: troubleshooting
 description: Ce document fournit des réponses aux questions fréquentes sur les sources de Adobe Experience Platform.
+exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '663'
 ht-degree: 2%
 
 ---
-
 
 # (Bêta) Guide de dépannage des sources
 
@@ -57,7 +57,7 @@ Les types de données pris en charge sont les entiers, les chaînes, les boolée
 
 ### Quels formats de date et d’heure sont pris en charge ?
 
-Les sources prennent en charge une grande variété de formats de date et heure lors de l’importation de données. Pour plus d&#39;informations sur les formats de date et heure pris en charge, consultez le [guide des fonctions de date de préparation des données](../data-prep/dates.md).
+Les sources prennent en charge une grande variété de formats de date et heure lors de l’importation de données. Vous trouverez plus d’informations sur les formats de date et heure pris en charge dans la section des dates du [guide de gestion du format de données](../data-prep/data-handling.md#dates) de la documentation de l’API.
 
 ### Comment formater des tableaux dans des fichiers CSV, JSON et Parquet ?
 
