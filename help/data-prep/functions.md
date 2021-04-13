@@ -6,9 +6,9 @@ topic: aperçu
 description: Ce document présente les fonctions de mappage utilisées avec l’API de données.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 8b74cf5f54ddf56486d7b947b38bef58823c3684
+source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt
-source-wordcount: '3793'
+source-wordcount: '3798'
 ht-degree: 17%
 
 ---
@@ -109,7 +109,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 
 >[!NOTE]
 >
->Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau. Pour plus d&#39;informations sur la fonction `date`, consultez le [guide de la fonction de date](./dates.md).
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau. Vous trouverez plus d&#39;informations sur la fonction `date` dans la section des dates du [guide de gestion du format de données ](./data-handling.md#dates).
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
