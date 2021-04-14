@@ -6,10 +6,10 @@ breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes et les mixins d’Experience Data Model (XDM) pour normaliser les données d’expérience.
 feature: Schémas
 translation-type: tm+mt
-source-git-commit: 3e1005aa11b648bd633ee4f64d527cae56cca620
+source-git-commit: 8b88a828f8680ac4d064f7f84e0db9e315526833
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 55%
+source-wordcount: '280'
+ht-degree: 50%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 55%
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [Détails démographiques](./mixins/profile/person-details.md)
       * [Coordonnées personnelles](./mixins/profile/personal-details.md)
+      * [Préférences de confidentialité/personnalisation/marketing (Contenus)](./mixins/profile/consents.md)
       * [Détails de l’abonnement au segment](./mixins/profile/segmentation.md)
       * [Détails du contact de travail](./mixins/profile/work-details.md)
    * Mélins de événement {#event}
@@ -51,6 +52,10 @@ ht-degree: 55%
    * [Appareil](./data-types/device.md)
    * [Adresse électronique](./data-types/email-address.md)
    * [Environnement](./data-types/environment.md)
+   * [Champ de consentement générique](./data-types/consent-field.md)
+   * [Champ de préférence marketing générique](./data-types/marketing-field.md)
+   * [Champ de préférence marketing générique avec Abonnements](./data-types/marketing-field-subscriptions.md)
+   * [Champ de préférence Personnalisation générique](./data-types/personalization-field.md)
    * [Géo](./data-types/geo.md)
    * [Cercle géographique](./data-types/geo-circle.md)
    * [Coordonnées géographiques](./data-types/geo-coordinates.md)
