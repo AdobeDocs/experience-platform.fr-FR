@@ -3,15 +3,15 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Création et modification de Schémas dans l’interface utilisateur
 description: Découvrez les bases de la création et de la modification de schémas dans l’interface utilisateur de l’Experience Platform.
-topic: user guide
+topic: Guide de l’utilisateur
+exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: 90a0c4e8d47d9bce38c9e13272e4f41f78f46e35
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1380'
 ht-degree: 1%
 
 ---
-
 
 # Création et modification de schémas dans l’interface utilisateur
 
@@ -69,7 +69,15 @@ Une boîte de dialogue s’affiche, présentant une liste de mixins que vous pou
 
 ![](../../images/ui/resources/schemas/mixin-popularity.png)
 
-Vous pouvez utiliser la barre de recherche pour localiser le mixin souhaité. Les mixins dont le nom correspond à la requête apparaissent en haut de la liste. Sous **[!UICONTROL Champs standard]**, des mixins contenant des champs qui décrivent les attributs de données souhaités s’affichent.
+Si vous connaissez l’activité générale ou le secteur d’activité des champs de mixin que vous souhaitez ajouter, sélectionnez une ou plusieurs catégories verticales du secteur dans le rail de gauche pour filtrer la liste affichée des mixins.
+
+![](../../images/ui/resources/schemas/industry-filter.png)
+
+>[!NOTE]
+>
+>Pour plus d’informations sur les meilleures pratiques de modélisation des données spécifiques au secteur d’activité dans XDM, voir la documentation sur [les modèles de données du secteur](../../schema/industries/overview.md).
+
+Vous pouvez également utiliser la barre de recherche pour localiser le mixin souhaité. Les mixins dont le nom correspond à la requête apparaissent en haut de la liste. Sous **[!UICONTROL Champs standard]**, des mixins contenant des champs qui décrivent les attributs de données souhaités s’affichent.
 
 ![](../../images/ui/resources/schemas/mixin-search.png)
 
