@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; services intelligents ; sujets populaires ; service intelligent ; service intelligent
 solution: Experience Platform, Intelligent Services
 title: Préparation des données en vue de leur utilisation dans les services intelligents
-topic: Intelligent Services
-description: 'Pour que les services intelligents puissent découvrir des informations issues de vos données de événement marketing, les données doivent être enrichies et conservées de manière sémantique dans une structure standard. Les services intelligents tirent parti des schémas du modèle de données d’expérience (XDM) pour y parvenir. Plus précisément, tous les jeux de données utilisés dans Intelligent Services] doivent être conformes au schéma XDM Consumer ExperienceEvent (CEE). '
+topic: Intelligent Services
+description: Pour que les services intelligents puissent découvrir des informations issues de vos données de événement marketing, les données doivent être enrichies et conservées de manière sémantique dans une structure standard. Les services intelligents tirent parti des schémas du modèle de données d’expérience (XDM) pour y parvenir. Plus précisément, tous les jeux de données utilisés dans Intelligent Services] doivent être conformes au schéma XDM Consumer ExperienceEvent (CEE).
+exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: b311a5970a121a3277bdb72f5a1285216444b339
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '2033'
 ht-degree: 2%
 
 ---
-
 
 # Préparer les données à utiliser dans [!DNL Intelligent Services]
 
@@ -75,7 +75,28 @@ Vous devez déterminer le meilleur champ à utiliser comme identité Principale 
 * &quot;mcid&quot; (pour les Adobe Audience Manager ID)
 * &quot;aid&quot; (pour les identifiants Adobe Analytics)
 
-Si vous ne savez pas quel champ vous devez utiliser comme Principale identité, contactez les Services de conseil en Adobe pour déterminer la meilleure solution.
+Si vous ne savez pas quel champ vous devez utiliser comme Principale identité, contactez les Services de conseil en Adobe pour déterminer la meilleure solution. Si aucune identité Principale n&#39;est définie, l&#39;application Intelligent Service utilise le comportement par défaut suivant :
+
+| Par défaut | Attribution AI | Customer AI |
+| --- | --- | --- |
+| Colonne d&#39;identité | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
+| Espace de noms | AAID | ECID |
+
+Pour définir une identité Principale, accédez à votre schéma à partir de l&#39;onglet **[!UICONTROL Schémas]** et sélectionnez l&#39;hyperlien du nom de schéma pour ouvrir **[!DNL Schema Editor]**.
+
+![Accéder au schéma](./images/data-preparation/navigate_schema.png)
+
+Accédez ensuite au champ que vous souhaitez utiliser comme Principale identité et sélectionnez-le. Le menu **[!UICONTROL Propriétés du champ]** s&#39;ouvre pour ce champ.
+
+![Sélectionner le champ](./images/data-preparation/find_field.png)
+
+Dans le menu **[!UICONTROL Propriétés du champ]**, faites défiler l’écran jusqu’à ce que vous trouviez la case **[!UICONTROL Identité]**. Après avoir coché la case, l&#39;option permettant de définir l&#39;identité sélectionnée comme **[!UICONTROL identité Principal]** s&#39;affiche. Sélectionnez également cette zone.
+
+![Sélectionner une case à cocher](./images/data-preparation/set_primary_identity.png)
+
+Ensuite, vous devez fournir un **[!UICONTROL espace de nommage d&#39;identité]** à partir de la liste d&#39;espaces de nommage prédéfinis dans la liste déroulante. Dans cet exemple, l’espace de noms ECID est sélectionné car un identifiant Adobe Audience Manager `mcid.id` est utilisé. Sélectionnez **[!UICONTROL Appliquer]** pour confirmer les mises à jour, puis **[!UICONTROL Enregistrer]** dans le coin supérieur droit pour enregistrer les modifications dans votre schéma.
+
+![Enregistrez les modifications](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
@@ -104,11 +125,11 @@ Ce champ représente le canal marketing associé à ExperienceEvent. Ce champ co
 
 Pour obtenir des informations complètes sur chacun des sous-champs requis pour `xdm:channel`, consultez la section [schéma du canal d’expérience](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md). Pour obtenir des exemples de mappages, voir le [tableau ci-dessous](#example-channels).
 
-##### Exemple de mappages de canal {#example-channels}
+#### Exemple de mappages de canal {#example-channels}
 
 Le tableau suivant fournit quelques exemples de canaux marketing mappés au schéma `xdm:channel` :
 
-| Channel | `@type` | `mediaType` | `mediaAction` |
+| Canal | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | Recherche payante | https:/<span>/ns.adobe.com/xdm/canal-types/search | payé | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/canal-types/social | gagné | clics |
