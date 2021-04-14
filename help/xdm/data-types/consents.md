@@ -3,14 +3,14 @@ keywords: Experience Platform ; profil ; profil client en temps réel ; résolut
 title: Type de données Contenus et Préférences
 description: Le type de données Consentement pour la confidentialité, la personnalisation et les préférences marketing est destiné à prendre en charge la collecte des autorisations et préférences des clients générées par les plates-formes de gestion du consentement (CMP) et d’autres sources issues de vos opérations de données.
 topic: guide
+exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
 translation-type: tm+mt
-source-git-commit: 865379292985037b184d92e5d3fc1abc1873e962
+source-git-commit: 4e9395b4551842cf75b0d1a4ec36c85930c42da5
 workflow-type: tm+mt
-source-wordcount: '2067'
-ht-degree: 1%
+source-wordcount: '1845'
+ht-degree: 2%
 
 ---
-
 
 # [!DNL Consents & Preferences] type de données
 
@@ -80,17 +80,6 @@ Le fichier JSON suivant présente un exemple du type de données que le type de 
     },
     "metadata": {
       "time": "2019-01-01T15:52:25+00:00"
-    },
-    "idSpecific": {
-      "email": {
-        "jdoe@example.com": {
-          "marketing": {
-            "email": {
-              "val": "n"
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -250,36 +239,6 @@ Le fichier JSON suivant présente un exemple du type de données que le type de 
 | Propriété | Description |
 | --- | --- |
 | `time` | Un horodatage ISO 8601 pour la dernière fois que l&#39;un des consentements et préférences du client a été mis à jour. Ce champ peut être utilisé au lieu d’appliquer des horodatages à des préférences individuelles afin de réduire la charge et la complexité. La valeur `time` sous une préférence individuelle remplace l&#39;horodatage `metadata` de cette préférence particulière. |
-
-### `idSpecific`
-
-`idSpecific` peut être utilisé lorsqu’un consentement ou une préférence particulier ne s’applique pas universellement à un client, mais est limité à un seul appareil ou à un seul ID. Par exemple, un client peut opt-out recevoir des courriers électroniques vers une adresse, tout en autorisant potentiellement les courriers électroniques vers une autre.
-
->[!IMPORTANT]
->
->Les consentements et préférences au niveau du canal (c&#39;est-à-dire ceux fournis en vertu de `consents` en dehors de `idSpecific`) s&#39;appliquent aux identifiants dans ce canal. Par conséquent, tous les consentements et préférences au niveau du canal ont un effet direct sur le respect de paramètres équivalents d’ID ou spécifiques au périphérique :
->
->* Si le client s&#39;est désabonné au niveau du canal, tous les consentements ou préférences équivalents dans `idSpecific` sont ignorés.
->* Si le consentement ou la préférence au niveau du canal n&#39;est pas défini, ou si le client a opté pour, les consentements ou préférences équivalents dans `idSpecific` sont respectés.
-
-
-Chaque clé de l&#39;objet `idSpecific` représente un espace de nommage d&#39;identité spécifique reconnu par Adobe Experience Platform Identity Service. Bien que vous puissiez définir vos propres espaces de nommage personnalisés pour classer les différents identifiants, il est recommandé d&#39;utiliser l&#39;un des espaces de nommage standard fournis par Identity Service pour réduire la taille des enregistrements pour le Profil client en temps réel. Pour plus d&#39;informations sur les espaces de nommage d&#39;identité, consultez l&#39;[aperçu de l&#39;espace de nommage d&#39;identité](../../identity-service/namespaces.md) dans la documentation Identity Service.
-
-Les clés de chaque objet d&#39;espace de nommage représentent les valeurs d&#39;identité uniques pour lesquelles le client a défini des préférences. Chaque valeur d&#39;identité peut contenir un ensemble complet de consentements et de préférences, formaté de la même manière que `consents`.
-
-```json
-"idSpecific": {
-  "email": {
-    "jdoe@example.com": {
-      "marketing": {
-        "email": {
-          "val": "n"
-        }
-      }
-    }
-  }
-}
-```
 
 ## Invitation de données à l’aide du type de données {#ingest}
 
