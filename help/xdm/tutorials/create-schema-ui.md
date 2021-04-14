@@ -3,16 +3,16 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; ui ; IU ; XDM ;
 solution: Experience Platform
 title: Création d’un Schéma à l’aide de l’éditeur de Schéma
 topic: didacticiel
-type: Tutoriel
+type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
+exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 53bf2ad757b24ad294af32101124e8047580807a
 workflow-type: tm+mt
-source-wordcount: '3602'
-ht-degree: 18%
+source-wordcount: '3683'
+ht-degree: 17%
 
 ---
-
 
 # Créez un schéma à l’aide de l’[!DNL Schema Editor]
 
@@ -48,7 +48,11 @@ Pour les besoins de ce didacticiel, sélectionnez **[!UICONTROL Profil individue
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-Le [!DNL Schema Editor] apparaît. C’est le canevas sur lequel vous allez composer votre schéma. Puisque vous avez choisi une classe XDM standard pour baser le schéma, un schéma sans titre est automatiquement créé dans la section **[!UICONTROL Structure]** du canevas lorsque vous arrivez dans l&#39;éditeur, avec les champs standard inclus dans tous les schémas en fonction de cette classe. La classe affectée au schéma est également répertoriée sous **[!UICONTROL Classe]** dans la section **[!UICONTROL Composition]**.
+Puisque vous avez choisi une classe XDM standard pour baser le schéma, la boîte de dialogue **[!UICONTROL Ajouter mixin]** s&#39;affiche, ce qui vous permet de immédiatement début en ajoutant des champs au schéma. Pour l’instant, sélectionnez **[!UICONTROL Annuler]** pour quitter la boîte de dialogue.
+
+![](../images/tutorials/create-schema/cancel-mixin.png)
+
+Le [!DNL Schema Editor] apparaît. C’est le canevas sur lequel vous allez composer votre schéma. Un schéma sans titre est automatiquement créé dans la section **[!UICONTROL Structure]** du canevas lorsque vous arrivez dans l’éditeur, avec les champs standard inclus dans tous les schémas en fonction de cette classe. La classe affectée au schéma est également répertoriée sous **[!UICONTROL Classe]** dans la section **[!UICONTROL Composition]**.
 
 ![](../images/tutorials/create-schema/schema_editor.png)
 
@@ -120,11 +124,13 @@ Tout comme le champ `name`, les champs que vous venez d’ajouter représentent 
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
-## Définition d’un nouveau mixin {#define-mixin}
+## Définir un mixin personnalisé {#define-mixin}
 
-Le schéma &quot;[!UICONTROL Membres de fidélité]&quot; est destiné à capturer les données relatives aux membres d&#39;un programme de fidélité. Il nécessite donc certains champs spécifiques liés à la fidélité. Il n’existe pas de mixins standard qui contiennent les champs nécessaires. Vous devrez donc définir un nouveau mixin.
+Le schéma &quot;[!UICONTROL Membres de fidélité]&quot; est destiné à capturer les données relatives aux membres d&#39;un programme de fidélité. Il nécessite donc certains champs spécifiques liés à la fidélité.
 
-Cette fois, lorsque vous ouvrez la boîte de dialogue **[!UICONTROL Ajouter un mixin]**, sélectionnez **[!UICONTROL Créer un mixin]**. Vous serez alors invité à fournir un nom d’affichage et une description pour votre mixin.
+Il existe un mixin [!UICONTROL Détails de fidélité] standard que vous pouvez ajouter au schéma pour capturer des champs communs liés à un programme de fidélité. Bien que vous soyez fortement encouragé à utiliser des mixins standard pour représenter des concepts capturés par vos schémas, la structure du mixin de fidélité standard peut ne pas être en mesure de capturer toutes les données pertinentes pour votre programme de fidélité particulier. Dans ce scénario, vous pouvez choisir de définir un nouveau mixin personnalisé pour capturer ces champs à la place.
+
+Ouvrez à nouveau la boîte de dialogue **[!UICONTROL Ajouter le mixin]**, mais cette fois, sélectionnez **[!UICONTROL Créer un nouveau mixin]** près du haut. Vous êtes alors invité à fournir un nom d’affichage et une description pour votre mixin.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
@@ -270,7 +276,7 @@ Dans la section **[!UICONTROL Structure]** de l’éditeur, sélectionnez le cha
 >
 >Chaque schéma ne peut contenir qu’un seul champ d’identité principal. Une fois qu&#39;un champ de schéma a été défini comme identité Principale, vous recevrez un message d&#39;erreur si vous tentez par la suite de définir un autre champ d&#39;identité dans le schéma comme Principal.
 
-Ensuite, vous devez fournir un **[!UICONTROL espace de nommage d&#39;identité]** à partir de la liste des espaces de nommage prédéfinis dans la liste déroulante. `loyaltyId` étant l’adresse électronique du client, sélectionnez &quot;[!UICONTROL Courriel]&quot; dans la liste déroulante. Sélectionnez **[!UICONTROL Appliquer]** pour confirmer les mises à jour du champ `loyaltyId`.
+Ensuite, vous devez fournir un **[!UICONTROL espace de nommage d&#39;identité]** à partir de la liste d&#39;espaces de nommage prédéfinis dans la liste déroulante. `loyaltyId` étant l’adresse électronique du client, sélectionnez &quot;[!UICONTROL Courriel]&quot; dans la liste déroulante. Sélectionnez **[!UICONTROL Appliquer]** pour confirmer les mises à jour du champ `loyaltyId`.
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
