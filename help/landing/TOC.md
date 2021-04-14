@@ -3,12 +3,12 @@ product: experience-platform
 audience: user
 user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
-user-guide-description: Découvrez comment l’Experience Platform permet de fournir des expériences personnalisées à vos clients en temps réel.
+user-guide-description: Découvrez comment Experience Platform permet de fournir des expériences personnalisées à vos clients en temps réel.
 translation-type: tm+mt
-source-git-commit: 36b85bee308fdcf599c9b7913cf94774404f06d2
+source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 24%
+source-wordcount: '193'
+ht-degree: 30%
 
 ---
 
@@ -45,6 +45,10 @@ ht-degree: 24%
 * Gouvernance, confidentialité et sécurité {#governance-privacy-security}
    * [Présentation](./governance-privacy-security/overview.md)
    * Gestion du consentement {#consent}
+      * Adobe standard {#adobe}
+         * [Présentation](./governance-privacy-security/consent/adobe/overview.md)
+         * [Configurer un jeu de données pour capturer les données de consentement et de préférence](./governance-privacy-security/consent/adobe/dataset.md)
+         * [Intégration du SDK Web de la plate-forme pour traiter les données de consentement et de préférence](./governance-privacy-security/consent/adobe/sdk.md)
       * IAB TCF 2.0 {#iab}
          * [Présentation](./governance-privacy-security/consent/iab/overview.md)
          * [Configurer un jeu de données pour capturer les données de consentement et de préférence](./governance-privacy-security/consent/iab/dataset.md)
