@@ -3,13 +3,14 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; connexion en fl
 solution: Experience Platform
 title: Création d’une connexion de diffusion en continu à l’aide de l’API
 topic: didacticiel
-type: Tutoriel
+type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
+exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 69abc982c4a820b850096d83761552ca526bca29
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 42%
+source-wordcount: '884'
+ht-degree: 41%
 
 ---
 
@@ -33,7 +34,7 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
