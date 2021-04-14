@@ -4,9 +4,9 @@ title: Présentation des modèles de données du secteur
 topic: aperçu
 description: Découvrez les modèles de données normalisés pour divers secteurs verticaux qui peuvent être créés à l’aide de composants standard du modèle de données d’expérience (XDM).
 translation-type: tm+mt
-source-git-commit: 6a7aebb64a533158f7ab17af0cd28243aeda0eca
+source-git-commit: 9862cbcb8d8c74c96dd6bf44c5fa416f4f42fe64
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,6 @@ Les ERD sont fournis pour les secteurs verticaux suivants :
 * [[!UICONTROL Vente au détail]](./retail.md)
 * [[!UICONTROL Services financiers]](./financial.md)
 * [[!UICONTROL Voyages et hospitalité]](./travel-hospitality.md)
-* [[!UICONTROL Télécommunications]](./telecom.md)
 
 ## Étapes suivantes
 
