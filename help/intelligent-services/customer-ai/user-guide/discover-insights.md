@@ -2,16 +2,16 @@
 keywords: Experience Platform ; informations ; assistance client ; rubriques populaires ; informations client
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Découvrez des informations sur l'intelligence artificielle des clients
-topic: Discovering insights
+topic: Découverte des insights
 description: Ce document sert de guide pour interagir avec les insights d’instance de service dans l’interface utilisateur d’Intelligent Services Customer AI.
+exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: ff953cf0aed2b9122b78126a87625e88f1ca4506
 workflow-type: tm+mt
-source-wordcount: '1399'
-ht-degree: 54%
+source-wordcount: '1634'
+ht-degree: 45%
 
 ---
-
 
 # Découvrez des informations sur l&#39;intelligence artificielle des clients
 
@@ -37,14 +37,15 @@ La page de service de Customer AI s’affiche. Cette page répertorie les instan
 
 ![Création d’une instance](../images/insights/dashboard.png)
 
-Cliquez sur le nom d’une instance de service pour commencer.
+Sélectionnez un nom d’instance de service à commencer.
 
 ![Création d’une instance](../images/insights/click-the-name.png)
 
-Ensuite, la page d’insights de cette instance de service apparaît, proposant des visualisations de vos données. Les visualisations et ce que vous pouvez faire avec ces données sont expliqués plus en détail dans ce guide.
+Ensuite, la page d’informations de cette instance de service s’affiche avec l’option de sélectionner **[!UICONTROL scores les plus récents]** ou **[!UICONTROL Résumé des performances]**. L’onglet par défaut **[!UICONTROL Derniers scores]** fournit des visualisations de vos données. Les visualisations et ce que vous pouvez faire avec ces données sont expliqués plus en détail dans ce guide.
 
-![page de configuration](../images/insights/landing-page.png)
+L&#39;onglet **[!UICONTROL Récapitulatif des performances]** affiche le ou les taux de conversion réels de chaque intervalle de propension. Pour en savoir plus, consultez la section [mesures récapitulatives de performances](#performance-metrics).
 
+![page de configuration](../images/insights/landing_page_insights.png)
 
 ### Détails des instances de service
 
@@ -155,6 +156,30 @@ Le créateur de segments permet de définir un segment. Lors de la sélection de
 Pour afficher le nouveau segment dans l’interface utilisateur de Platform, cliquez sur **[!UICONTROL Segments]** dans le volet de navigation de gauche. La page **[!UICONTROL Parcourir]** apparaît et affiche tous les segments disponibles.
 
 ![Tous vos segments](../images/insights/Segments-dashboard.png)
+
+## Mesures de synthèse des performances {#performance-metrics}
+
+L&#39;onglet **[!UICONTROL Résumé des performances]** affiche le ou les taux de conversion réels, séparés en chacun des intervalles de propension notés par l&#39;IA du client.
+
+![Onglet Résumé des performances](../images/insights/summary_tab.png)
+
+Au départ, seuls les taux prévus (lignes en pointillé) s’affichent. Les taux attendus s’affichent lorsqu’une série de notes n’a pas eu lieu et que les données ne sont pas encore disponibles. Cependant, une fois qu&#39;une fenêtre de résultats est passée, le taux attendu est remplacé par un taux réel (ligne solide).
+
+Le survol des lignes affiche la date et le taux réel/attendu pour cette journée dans cette corbeille.
+
+![Exemple de compartiment](../images/insights/churn_tab.png)
+
+Vous pouvez filtrer la période pour les taux prévus et réels affichés. Sélectionnez l&#39;icône **calendrier** ![icône](../images/insights/calendar_icon.png)puis sélectionnez une nouvelle plage de dates. Les résultats de chacun des intervalles sont mis à jour pour s’afficher dans la nouvelle plage de dates.
+
+![Sélecteur de date](../images/insights/date_selector.png)
+
+### Taux d&#39;exécution de notation individuels
+
+La moitié inférieure de l&#39;onglet **[!UICONTROL Résumé des performances]** affiche les résultats de chaque série de notes individuelle. Sélectionnez la date de liste déroulante dans l’angle supérieur droit pour afficher les résultats d’une autre série de scores.
+
+Selon que vous prédites une génération ou une conversion, le graphique [!UICONTROL Répartition des scores] affiche la distribution des profils générés/convertis et non générés/non convertis à chaque incrément.
+
+![score individuel](../images/insights/scoring_tab.png)
 
 ## Étapes suivantes
 
