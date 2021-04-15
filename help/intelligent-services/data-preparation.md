@@ -3,21 +3,21 @@ keywords: Experience Platform ; accueil ; services intelligents ; sujets populai
 solution: Experience Platform, Intelligent Services
 title: Préparation des données en vue de leur utilisation dans les services intelligents
 topic: Intelligent Services
-description: Pour que les services intelligents puissent découvrir des informations issues de vos données de événement marketing, les données doivent être enrichies et conservées de manière sémantique dans une structure standard. Les services intelligents tirent parti des schémas du modèle de données d’expérience (XDM) pour y parvenir. Plus précisément, tous les jeux de données utilisés dans Intelligent Services] doivent être conformes au schéma XDM Consumer ExperienceEvent (CEE).
+description: Pour que les services intelligents puissent découvrir des informations issues de vos données de événement marketing, les données doivent être enrichies et conservées de manière sémantique dans une structure standard. Pour ce faire, les services intelligents utilisent les schémas de modèle de données d’expérience (XDM).
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: b311a5970a121a3277bdb72f5a1285216444b339
+source-git-commit: 867c97d58f3496cb9e9e437712f81bd8929ba99f
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2400'
 ht-degree: 2%
 
 ---
 
 # Préparer les données à utiliser dans [!DNL Intelligent Services]
 
-Pour que [!DNL Intelligent Services] puisse découvrir des informations issues des données de vos événements marketing, les données doivent être enrichies et conservées sémantiquement dans une structure standard. [!DNL Intelligent Services] exploiter  [!DNL Experience Data Model] (XDM) les schémas pour y parvenir. En particulier, tous les jeux de données utilisés dans [!DNL Intelligent Services] doivent être conformes au schéma XDM de Consumer ExperienceEvent (CEE).
+Pour que [!DNL Intelligent Services] puisse découvrir des informations issues des données de vos événements marketing, les données doivent être enrichies et conservées sémantiquement dans une structure standard. [!DNL Intelligent Services] exploiter  [!DNL Experience Data Model] (XDM) les schémas pour y parvenir. En particulier, tous les jeux de données utilisés dans [!DNL Intelligent Services] doivent être conformes au schéma XDM de Consumer ExperienceEvent (CEE) ou utiliser le connecteur Adobe Analytics. En outre, l’API du client prend en charge le connecteur Adobe Audience Manager.
 
-Ce document fournit des conseils généraux sur le mappage des données de vos événements marketing de plusieurs canaux à ce schéma, en décrivant les informations sur les champs importants du schéma afin de vous aider à déterminer comment mapper efficacement vos données à leur structure.
+Ce document fournit des conseils généraux sur le mappage des données de vos événements marketing de plusieurs canaux au schéma CEE, en décrivant les informations sur les champs importants du schéma afin de vous aider à déterminer comment mapper efficacement vos données à leur structure. Si vous prévoyez d&#39;utiliser les données Adobe Analytics, veuillez vue la section pour [préparation des données Adobe Analytics](#analytics-data). Si vous prévoyez d’utiliser les données Adobe Audience Manager (Customer AI uniquement), veuillez vue la section pour la préparation des données [Adobe Audience Manager](#AAM-data).
 
 ## Résumé du flux de travail
 
@@ -31,12 +31,32 @@ Si vos données sont stockées en dehors de [!DNL Experience Platform], procéde
 1. A l’aide de vos informations d’identification d’accès, téléchargez vos données vers le conteneur Blob.
 1. Travaillez avec les services de conseil en Adobe pour faire correspondre vos données au [schéma Consumer ExperienceEvent](#cee-schema) et les assimiler à [!DNL Intelligent Services].
 
+### Préparation des données Adobe Analytics {#analytics-data}
+
+L’API du client et l’Attribution AI prennent en charge les données Adobe Analytics de manière native. Pour utiliser les données Adobe Analytics, suivez les étapes décrites dans la documentation pour configurer un [connecteur source Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
+
+Une fois que le connecteur source diffuse vos données dans l’Experience Platform, vous pouvez sélectionner Adobe Analytics comme source de données, suivi d’un jeu de données lors de la configuration de votre instance. Tous les champs et mixins de schéma requis sont automatiquement créés lors de la configuration de la connexion. Vous n’avez pas besoin d’ETL (Extraction, Transformation, Chargement) pour les jeux de données au format CEE.
+
+>[!IMPORTANT]
+>
+>Le connecteur Adobe Analytics met jusqu’à quatre semaines pour renvoyer les données. Si vous avez récemment configuré une connexion, vous devez vérifier que le jeu de données contient la longueur minimale de données requise pour le client ou l’Attribution AI. Veuillez consulter les sections de données historiques dans [l&#39;API client](./customer-ai/input-output.md#data-requirements) ou [Attribution AI](./attribution-ai/input-output.md#data-requirements) et vérifier que vous disposez de suffisamment de données pour atteindre votre objectif de prévision.
+
+### Préparation des données Adobe Audience Manager (Customer AI uniquement) {#AAM-data}
+
+L’API du client prend en charge de manière native les données Adobe Audience Manager. Pour utiliser les données d&#39;Audience Manager, suivez les étapes décrites dans la documentation pour configurer un [connecteur de source d&#39;Audience Manager](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
+
+Une fois que le connecteur source diffuse vos données dans l’Experience Platform, vous pouvez sélectionner Adobe Audience Manager en tant que source de données suivie d’un jeu de données lors de la configuration de l’API client. Tous les champs et mixins de schéma requis sont automatiquement créés lors de la configuration de la connexion. Vous n’avez pas besoin d’ETL (Extraction, Transformation, Chargement) pour les jeux de données au format CEE.
+
+>[!IMPORTANT]
+>
+>Si vous avez récemment configuré un connecteur, vous devez vérifier que le jeu de données contient la longueur minimale de données requise. Consultez la section des données historiques de la [documentation d&#39;entrée/sortie](./customer-ai/input-output.md) pour l&#39;IA du client et vérifiez que vous disposez de suffisamment de données pour atteindre votre objectif de prévision.
+
 ### [!DNL Experience Platform] préparation des données
 
-Si vos données sont déjà stockées dans [!DNL Platform], procédez comme suit :
+Si vos données sont déjà stockées dans [!DNL Platform] et qu’elles ne sont pas diffusées en flux continu via les connecteurs source Adobe Analytics ou Adobe Audience Manager (Customer AI only), suivez les étapes ci-dessous. Il est toujours recommandé de comprendre le schéma CEE si vous prévoyez de travailler avec l’IA du client.
 
 1. Examinez la structure du [schéma Consumer ExperienceEvent](#cee-schema) et déterminez si vos données peuvent être mises en correspondance avec ses champs.
-1. Contactez les Services de conseil en Adobe pour vous aider à mapper vos données au schéma et à les intégrer dans [!DNL Intelligent Services], ou [suivez les étapes décrites dans ce guide](#mapping) si vous souhaitez mapper les données vous-même.
+2. Contactez les Services de conseil en Adobe pour vous aider à mapper vos données au schéma et à les intégrer dans [!DNL Intelligent Services], ou [suivez les étapes décrites dans ce guide](#mapping) si vous souhaitez mapper les données vous-même.
 
 ## Comprendre le schéma CEE {#cee-schema}
 
@@ -48,7 +68,7 @@ Le schéma CEE, comme tous les schémas XDM ExperienceEvent, capture l’état d
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-Comme tous les schémas XDM, le mixin CEE est extensible. En d’autres termes, des champs supplémentaires peuvent être ajoutés au mixin CEE et différentes variantes peuvent être incluses dans plusieurs schémas si nécessaire.
+Comme tous les schémas XDM, le mixin CEE est extensible. En d’autres termes, des champs supplémentaires peuvent être ajoutés au mixin CEE et différentes variations peuvent être incluses dans plusieurs schémas si nécessaire.
 
 Vous trouverez un exemple complet du mixin dans le [référentiel XDM public](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). En outre, vous pouvez vue et copier le [fichier JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) suivant pour obtenir un exemple de la manière dont les données peuvent être structurées pour se conformer au schéma CEE. Reportez-vous à ces deux exemples au fur et à mesure que vous découvrirez les champs clés décrits dans la section ci-dessous, afin de déterminer comment mapper vos propres données au schéma.
 
