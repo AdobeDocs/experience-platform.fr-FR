@@ -3,15 +3,15 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; Service de segm
 solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 topic: ui guide
-description: 'Le créateur de segments de l’interface utilisateur Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de Profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données. '
+description: Le créateur de segments de l’interface utilisateur Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de Profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
+exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt
-source-git-commit: 354b756e53b360f31c1832c2b0f946b67099a87f
+source-git-commit: bad293cf25b955496897d895169ec494416e9787
 workflow-type: tm+mt
-source-wordcount: '1896'
-ht-degree: 48%
+source-wordcount: '2002'
+ht-degree: 45%
 
 ---
-
 
 # [!DNL Segment Builder] Guide de l’interface
 
@@ -116,6 +116,22 @@ Après avoir placé le événement dans le conteneur des Événements, sélectio
 L’agrégation est maintenant ajoutée. Vous pouvez désormais sélectionner la fonction d’agrégation, choisir l’attribut à agrégat, la fonction d’égalité, ainsi que la valeur. Pour l’exemple ci-dessous, ce segment peut être inclus dans tout profil dont la somme des valeurs achetées est supérieure à 100 USD, même si chaque achat individuel est inférieur à 100 USD.
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
+
+### Fonctions de comptage
+
+Les fonctions de décompte dans le créateur de segments permettent de rechercher des événements spécifiés et de comptabiliser le nombre de fois où ils ont été effectués. Les fonctions de décompte prises en charge dans le créateur de segments sont &quot;Au moins&quot;, &quot;Au plus&quot;, &quot;Exactement&quot;, &quot;Entre&quot; et &quot;Tous&quot;.
+
+Pour créer une fonction count, sélectionnez un événement dans le rail de gauche et insérez-le dans le conteneur [!UICONTROL Événements].
+
+![](../images/ui/segment-builder/add-event.png)
+
+Après avoir placé le événement dans le conteneur Événements, sélectionnez le bouton [!UICONTROL Au moins 1].
+
+![](../images/ui/segment-builder/add-count.png)
+
+La fonction count est maintenant ajoutée. Vous pouvez désormais sélectionner la fonction count et la valeur de la fonction. L’exemple ci-dessous consiste à inclure tout événement comportant au moins un clic.
+
+![](../images/ui/segment-builder/select-count.png)
 
 ## Conteneurs
 
