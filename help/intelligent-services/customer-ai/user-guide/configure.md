@@ -2,16 +2,16 @@
 keywords: Experience Platform ; guide de l’utilisateur ; assistance client ; rubriques populaires ; configurer l’instance ; créer l’instance ;
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Configuration d’une instance d’API client
-topic: Instance creation
+topic: Création d’instances
 description: Intelligent Services fournit Customer AI en tant que service Adobe Sensei simple d’emploi pouvant être configuré pour de multiples cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
+exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
 workflow-type: tm+mt
-source-wordcount: '1296'
-ht-degree: 35%
+source-wordcount: '1304'
+ht-degree: 34%
 
 ---
-
 
 # Configuration d’une instance d’API client
 
@@ -54,7 +54,7 @@ Vous trouverez ci-dessous des informations importantes sur les valeurs que vous 
 
 - Le type de propension détermine l’intention de score et de polarité des mesures. Vous pouvez choisir **[!UICONTROL Attrition]** ou **[!UICONTROL Conversion]**. Pour plus d’informations sur l’impact du type de propension sur votre instance, consultez la note située sous [résumé de notation](./discover-insights.md#scoring-summary) dans le document d’informations sur les découvertes.
 
-- La source de données désigne l’endroit où se trouvent les données. Le jeu de données est le jeu de données d’entrée utilisé pour prévoir les scores. Par conception, Customer AI utilise des données d’événement d’expérience client pour calculer les scores de propension. Lors de la sélection d’un jeu de données à partir du sélecteur de liste déroulante, seuls les jeux compatibles avec Customer AI sont répertoriés.
+- La source de données désigne l’endroit où se trouvent les données. Le jeu de données est le jeu de données d’entrée utilisé pour prévoir les scores. Par conception, l’IA du client utilise les données du Événement d’expérience du client, Adobe Analytics et Adobe Audience Manager pour calculer les scores de propension. Lors de la sélection d’un jeu de données à partir du sélecteur de liste déroulante, seuls les jeux compatibles avec Customer AI sont répertoriés.
 
 - Par défaut, les scores de propension sont générés pour tous les profils, sauf si une population éligible est spécifiée. Vous pouvez spécifier une population éligible en définissant des conditions pour inclure ou exclure des profils en fonction des événements.
 
@@ -133,4 +133,3 @@ En suivant ce didacticiel, vous avez correctement configuré une instance de l�
 La vidéo suivante est conçue pour vous aider à comprendre le processus de configuration de l’API client. En outre, les meilleures pratiques et les exemples d’utilisation sont fournis.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
-
