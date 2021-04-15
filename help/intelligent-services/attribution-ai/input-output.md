@@ -2,16 +2,16 @@
 keywords: 'Experience Platform ; prise en main ; attribution ; rubriques populaires ; attribution : entrée d’ai ; attribution : sortie d’ai ;'
 solution: Experience Platform, Intelligent Services
 title: Entrée et sortie dans Attribution AI
-topic: Input and Output data for Attribution AI
+topic: Données d’entrée et de sortie pour Attribution AI
 description: Le document suivant décrit les différents apports et extrants utilisés dans l'Attribution AI.
+exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2098'
 ht-degree: 16%
 
 ---
-
 
 # Entrée et sortie dans [!DNL Attribution AI]
 
@@ -31,7 +31,7 @@ Toutes les colonnes du schéma [!DNL Consumer Experience Event] (CEE) ne sont pa
 | --- | --- |
 | Champ d&#39;identité Principal | Point de contact / Conversion |
 | Horodatage | Point de contact / Conversion |
-| Channel._type | Point de contact |
+| Canal._type | Point de contact |
 | Channel.mediaAction | Point de contact |
 | Channel.mediaType | Point de contact |
 | Marketing.trackingCode | Point de contact |
@@ -49,7 +49,7 @@ Les colonnes ci-dessous ne sont pas obligatoires, mais il est recommandé de les
 - web.webPageDetails
 - xdm:productListItems
 
-### Données historiques
+### Données historiques {#data-requirements}
 
 >[!IMPORTANT]
 >
