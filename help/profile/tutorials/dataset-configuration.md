@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API ; activer le jeu de données
 title: Configuration d’un jeu de données pour Profil et Identity Service à l’aide d’API
-topic: tutorial
+topic: didacticiel
 type: Tutorial
 description: Ce didacticiel explique comment activer un jeu de données à utiliser avec le Profil client en temps réel et le service d’identité à l’aide des API Adobe Experience Platform.
+exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1058'
 ht-degree: 62%
 
 ---
-
 
 # Configurez un jeu de données pour [!DNL Profile] et [!DNL Identity Service] à l’aide d’API.
 
@@ -39,7 +39,7 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
@@ -79,9 +79,7 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "fileDescription" : {
-    "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
+        "persisted": true
     },
     "fields":[],
     "schemaRef" : {
@@ -175,9 +173,7 @@ curl -X GET \
         "viewId": "5b020a27e7040801dedbf46f",
         "status": "enabled",
         "fileDescription": {
-            "persisted": true,
-            "containerFormat": "parquet",
-            "format": "parquet"
+            "persisted": true
         },
         "transforms": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/transforms",
         "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
