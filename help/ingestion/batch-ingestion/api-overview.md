@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation par lots ; assimilation par lots ; assimilation ; guide du développeur ; guide de l’api ; téléchargement ; ingest Parquet ; ingest json ;
 solution: Experience Platform
 title: Guide de l'API d'importation par lot
-topic: developer guide
+topic: guide de développement
 description: Ce document présente de manière exhaustive l’utilisation des API d’ingestion par lots.
+exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
-source-wordcount: '2698'
+source-wordcount: '2558'
 ht-degree: 89%
 
 ---
-
 
 # Guide de l&#39;API d&#39;assimilation de lot
 
@@ -35,7 +35,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
@@ -608,15 +608,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
       "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
           "contentType": "application/vnd.adobe.xed+json;version=1"
-      },
-      "fileDescription": {
-          "format": "parquet",
-          "delimiters": [","], 
-          "quotes": ["\""],
-          "escapes": ["\\"],
-          "header": true,
-          "charset": "UTF-8"
-      }      
+      }
   }'
 ```
 
@@ -624,32 +616,6 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 | --------- | ----------- |
 | `{TENANT_ID}` | Cet identifiant est utilisé pour assurer que les espaces de noms des ressources que vous créez sont corrects et contenus dans votre organisation IMS. |
 | `{SCHEMA_ID}` | L’identifiant du schéma que vous avez créé. |
-
-Vous trouverez ci-dessous une explication des différentes parties de la section « fileDescription » du corps JSON :
-
-```json
-{
-    "fileDescription": {
-        "format": "parquet",
-        "delimiters": [","],
-        "quotes": ["\""],
-        "escapes": ["\\"],
-        "header": true,
-        "charset": "UTF-8"
-    }
-}
-```
-
-| Paramètre | Description |
-| --------- | ----------- |
-| `format` | Le format du fichier maître et non pas celui du fichier d’entrée. |
-| `delimiters` | Le caractère à utiliser comme délimiteur. |
-| `quotes` | Le caractère à utiliser pour les citations. |
-| `escapes` | Le caractère à utiliser comme caractère d’échappement. |
-| `header` | Le fichier chargé **doit** contenir des en-têtes. La validation du schéma étant effectuée, cette valeur doit être définie sur « true ». En outre, les en-têtes ne doivent contenir **aucune** espace. Si votre en-tête comprend des espaces, remplacez-les par des traits de soulignement. |
-| `charset` | Un champ facultatif. Les jeux de caractères « US-ASCII » et « ISO-8869-1 » sont aussi pris en charge. Si ce paramètre n’est pas renseigné, le codage UTF-8 est sélectionné par défaut. |
-
-Le jeu de données référencé doit comporter le bloc de description de fichier mentionné ci-dessus et doit pointer vers un schéma valide dans le registre. Sinon, le fichier ne sera pas masqué dans Parquet.
 
 ### Création d’un lot
 
