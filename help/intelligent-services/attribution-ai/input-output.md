@@ -6,10 +6,10 @@ topic: Données d’entrée et de sortie pour Attribution AI
 description: Le document suivant décrit les différents apports et extrants utilisés dans l'Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 35b3994287d4f556fab8ee75c3bf242ff2690aef
 workflow-type: tm+mt
-source-wordcount: '2098'
-ht-degree: 16%
+source-wordcount: '2189'
+ht-degree: 15%
 
 ---
 
@@ -19,7 +19,16 @@ Le document suivant décrit les différentes entrées et sorties utilisées dans
 
 ## [!DNL Attribution AI] données d’entrée
 
-[!DNL Attribution AI] utilise  [!DNL Consumer Experience Event] les données pour calculer les scores algorithmiques. Pour plus d&#39;informations sur [!DNL Consumer Experience Event], reportez-vous à la section [Préparer les données à utiliser dans la documentation des services intelligents](../data-preparation.md).
+Attribution AI fonctionne en analysant l’un des jeux de données suivants pour calculer les scores algorithmiques :
+
+- Jeu de données du Événement d’expérience de consommation (CEE)
+- Données Adobe Analytics utilisant les [connecteurs source Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+
+>[!IMPORTANT]
+>
+>Le connecteur source Adobe Analytics peut prendre jusqu’à quatre semaines pour renvoyer les données. Si vous avez récemment configuré un connecteur, vous devez vérifier que le jeu de données contient la longueur minimale de données requise pour Attribution AI. Consultez la section [données historiques](#data-requirements) pour vérifier que vous disposez de suffisamment de données pour calculer des scores algorithmiques précis.
+
+Pour plus d&#39;informations sur la configuration du schéma [!DNL Consumer Experience Event] (CEE), consultez le [guide de préparation des données des services intelligents](../data-preparation.md). Pour plus d’informations sur le mappage des données Adobe Analytics, consultez la documentation [Mappages de champs Analytics](../../sources/connectors/adobe-applications/analytics.md).
 
 Toutes les colonnes du schéma [!DNL Consumer Experience Event] (CEE) ne sont pas obligatoires pour l’Attribution AI.
 
