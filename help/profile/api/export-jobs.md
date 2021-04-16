@@ -4,14 +4,14 @@ title: Exporter le point de terminaison de l’API Tâches
 topic: guide
 type: Documentation
 description: Le Profil client en temps réel vous permet de créer une vue unique de clients individuels au sein de Adobe Experience Platform en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées dans un jeu de données pour un traitement ultérieur.
+exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1543'
 ht-degree: 65%
 
 ---
-
 
 # Exporter le point de terminaison des tâches
 
@@ -68,9 +68,7 @@ curl -X POST \
           "contentType": "application/vnd.adobe.xed+json;version=1"
         },
         "fileDescription": {
-          "persisted": true,
-          "containerFormat": "parquet",
-          "format": "parquet"
+          "persisted": true
         }
       }'
 ```
