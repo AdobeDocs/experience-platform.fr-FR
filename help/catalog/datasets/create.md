@@ -6,7 +6,7 @@ topic: datasets
 description: Ce document décrit les étapes générales pour créer un jeu de données à l’aide des API d’Adobe Experience Platform et pour renseigner le jeu de données à l’aide d’un fichier.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 81%
@@ -204,11 +204,6 @@ curl -X POST \
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/719c4e19184402c27595e65b931a142b",
         "contentType": "application/vnd.adobe.xed+json;version=1"
-    },
-    "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
     }
 }'
 ```
