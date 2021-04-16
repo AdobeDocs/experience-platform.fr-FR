@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 2736b81ae32eebe4cbc997e106315be2529c0d15
+source-git-commit: fff9e6455c6eae5f9903e1d28ab365cddfd51ef8
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 24%
+source-wordcount: '331'
+ht-degree: 31%
 
 ---
 
@@ -38,6 +38,8 @@ L’IA du client disponible dans la plate-forme de données client en temps rée
 Pour plus d&#39;informations sur les jeux de données pris en charge, consultez la [[!DNL Intelligent Services] documentation sur la préparation des données](../../intelligent-services/data-preparation.md).
 
 ### Attribution AI
+
+Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
