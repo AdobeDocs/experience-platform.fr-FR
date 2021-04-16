@@ -2,16 +2,16 @@
 keywords: Experience Platform ; guide de l’utilisateur ; attribution ai ; rubriques populaires ; région
 solution: Experience Platform, Intelligent Services
 title: Guide de l’interface utilisateur Attribution AI
-topic: User guide
+topic: 'Guide de l’utilisateur '
 description: Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
+exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 013f8d99fc394477177fdbf7eb9dd9b8ce94b88f
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1767'
 ht-degree: 78%
 
 ---
-
 
 # Guide de l’interface utilisateur Attribution AI
 
@@ -65,7 +65,11 @@ Sous **[!UICONTROL Informations de base]**, donnez un nom et une description fac
 
 Après avoir renseigné les informations de base, cliquez sur le menu déroulant intitulé **Sélectionner le jeu de données** pour sélectionner votre jeu de données. Le jeu de données est utilisé pour former le modèle et noter les données ultérieures qui en résultent. Lors de la sélection d’un jeu de données à partir du sélecteur du menu déroulant, seuls les jeux compatibles avec Attribution AI et conformes au schéma de modèle de données d’expérience (XDM) sont répertoriés. Une fois qu’un jeu de données est sélectionné, cliquez sur **Suivant** dans le coin supérieur droit pour accéder à la page de définition des événements.
 
-![page de configuration](./images/user-guide/initial_creation_attribution.png)
+>[!TIP]
+>
+>Les jeux de données Adobe Analytics sont pris en charge par le biais d’Analytics Source Connector.
+
+![page de configuration](./images/user-guide/dataset_selector.png)
 
 ## Définition des événements
 
