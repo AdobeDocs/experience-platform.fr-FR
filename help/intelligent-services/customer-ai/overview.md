@@ -5,14 +5,14 @@ title: Présentation de Customer AI
 topic: Présentation de l’API du client
 description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
 landing-page-description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle.
+exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 85%
 
 ---
-
 
 # Présentation de Customer AI
 
