@@ -1,15 +1,14 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
-feature: Data Ingestion, Sources
+feature: Ingestion des données, sources
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 17%
+source-wordcount: '602'
+ht-degree: 16%
 
 ---
 
@@ -27,6 +26,11 @@ ht-degree: 17%
          - [Mappages de champs Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Mappages des champs d’Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mappages des champs de cible](connectors/adobe-applications/mapping/target.md)
+         - [Mappages de champs Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
+      - Marketo Engage {#marketo}
+         - [Connecteur Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
+         - [Guide d&#39;authentification des Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
+         - [espaces de nommage et schémas Marketo Engage](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Publicité {#advertising}
       - [Connecteur Google AdWords](connectors/advertising/ads.md)
    - Enregistrement cloud {#cloud-storage}
@@ -159,6 +163,7 @@ ht-degree: 17%
          - [Adobe Analytics (données de classification)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Attributs du client](tutorials/ui/create/adobe-applications/customer-attributes.md)
+         - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Publicité {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - Enregistrement cloud {#cloud-storage}
