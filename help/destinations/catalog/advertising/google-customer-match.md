@@ -2,14 +2,14 @@
 keywords: correspondance client Google ; correspondance client Google ; correspondance client Google ; correspondance client Google
 title: Connexion Google Customer Match
 description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
+exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '1589'
-ht-degree: 4%
+source-wordcount: '1617'
+ht-degree: 3%
 
 ---
-
 
 # [!DNL Google Customer Match] connexion
 
@@ -108,6 +108,12 @@ Avant de pouvoir utiliser l&#39;espace de nommage `User_ID` pour envoyer des don
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
+
+## Configurer destination - Présentation vidéo {#video}
+
+La vidéo ci-dessous présente les étapes de configuration d&#39;une destination [!DNL Google Customer Match] et d&#39;activation de segments. Les étapes sont également présentées de manière séquentielle dans les sections suivantes.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Se connecter à la destination {#connect-destination}
 
