@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; champs de mappage Analytics ; mappage Analytics
 solution: Experience Platform
 title: Mappage de champs pour le connecteur source Adobe Analytics
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform vous permet d’ingérer des données Adobe Analytics par le biais du connecteur de données Analytics (ADC, Analytics Data Connector). Certaines données ingérées par ADC peuvent être mappées directement des champs Analytics aux champs du modèle de données d’expérience (XDM), tandis que d’autres nécessitent des transformations et des fonctions spécifiques pour être mappées avec succès.
+exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '3393'
+source-wordcount: '3405'
 ht-degree: 99%
 
 ---
-
 
 # Mappages de champs Analytics
 
@@ -124,6 +124,8 @@ Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics
 | videopausetime | media.mediaTimed.pauseTime | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
 | videosecondssincelastcall | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | entier |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Champs de mappage fractionné.
 
 Ces champs ont une source unique, mais ils sont mappés à **plusieurs** emplacements XDM.
@@ -133,6 +135,8 @@ Ces champs ont une source unique, mais ils sont mappés à **plusieurs** emplace
 | s_resolution | device.screenWidth, device.screenHeight | entier | Identifiant numérique représentant la résolution du moniteur. |
 | mobileosversion | environment.operatingSystem, environment.operatingSystemVersion | chaîne | Version du système d’exploitation mobile. |
 | videoadlength | advertising.adAssetReference._xmpDM.duration | entier | Durée de la publicité vidéo. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Champs de mappage générés
 
@@ -191,6 +195,8 @@ Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | chaîne | Proximité du relais Mobile Services. |
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | entier | Nom de chapitre vidéo. |
 | videolength | media.mediaTimed.primaryAssetReference._xmpDM.duration | entier | Durée de la vidéo. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Champs de mappage avancé
 
@@ -269,3 +275,5 @@ Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics
 | visit_ref_type | _experience.analytics.session.web.webReferrer.type | chaîne | Identifiant numérique, représentant le type de référent du premier référent du visiteur. |
 | visit_search_engine | _experience.analytics.session.search.searchEngine | chaîne | Identifiant numérique du premier moteur de recherche de la visite. |
 | visit_start_time_gmt | _experience.analytics.session.timestamp | entier | Horodatage du premier accès de la visite (heure Unix). |
+
+{style=&quot;table-layout:auto&quot;}
