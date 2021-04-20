@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Traitement du consentement dans Adobe Experience Platform
 topic: démarrage
 description: Découvrez comment traiter les signaux de consentement des clients à Adobe Experience Platform en utilisant la norme Adobe 2.0.
+exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt
-source-git-commit: f7fde2cb6828ebdd1763171008858fdd7242c784
+source-git-commit: a0f585e4aaeecb968a9fc9f408630946e1c30b2b
 workflow-type: tm+mt
-source-wordcount: '1453'
+source-wordcount: '1570'
 ht-degree: 0%
 
 ---
-
 
 # Traitement du consentement dans Adobe Experience Platform
 
@@ -83,13 +83,19 @@ Pour plus d&#39;informations sur la façon d&#39;utiliser les stratégies de fus
 
 Une fois que vous disposez de vos jeux de données et que vous fusionnez des stratégies pour représenter les champs de consentement requis dans vos profils clients, l’étape suivante consiste à importer les données de consentement elles-mêmes dans Plateforme.
 
-En premier lieu, vous devez utiliser le Adobe Experience Platform Web SDK pour envoyer des données de consentement à la plateforme chaque fois que des événements de changement de consentement sont détectés par votre CMP. Cependant, si vous disposez déjà de données de consentement stockées ailleurs, vous pouvez également choisir d&#39;assimiler directement vos données de consentement collectées en les mappant au schéma XDM de votre jeu de données de consentement et en les envoyant à Plateforme par ingestion par lot.
+En premier lieu, vous devez utiliser le Adobe Experience Platform Web SDK pour envoyer des données de consentement à la plateforme chaque fois que des événements de changement de consentement sont détectés par votre CMP. Si vous collectez des données de consentement sur une plateforme mobile, vous devez utiliser le Adobe Experience Platform Mobile SDK. Vous pouvez également choisir d&#39;assimiler directement vos données de consentement collectées en les mappant au schéma XDM de votre jeu de données de consentement et en les envoyant à Plateforme par assimilation par lot.
 
 Les détails de chacune de ces méthodes sont présentés dans les sous-sections ci-dessous.
 
-### Intégrer le SDK Web Experience Platform pour traiter les données de consentement des clients {#sdk}
+### Configurez le SDK Web Experience Platform pour traiter les données de consentement {#web-sdk}
 
-Une fois que vous avez configuré votre CMP pour qu’elle écoute les événements de changement de consentement sur votre site Web, vous pouvez intégrer le SDK Web Experience Platform pour qu’il reçoive les paramètres de consentement mis à jour et les envoie à la plate-forme chaque fois qu’un événement de changement de consentement se produit. Suivez le guide [Configuration du SDK pour traiter les données de consentement client](./sdk.md) pour plus d’informations.
+Une fois que vous avez configuré votre CMP pour qu’elle écoute les événements de changement de consentement sur votre site Web, vous pouvez intégrer le SDK Web Experience Platform pour recevoir les paramètres de consentement mis à jour et les envoyer à la plateforme à chaque chargement de page et chaque fois que des événements de changement de consentement se produisent. Pour plus d&#39;informations, consultez le guide [Configuration du SDK Web pour traiter les données de consentement des clients](./sdk.md).
+
+### Configurez le SDK mobile Experience Platform pour traiter les données de consentement {#mobile-sdk}
+
+Si des préférences de consentement client sont requises dans votre application mobile, vous pouvez intégrer le SDK mobile Experience Platform pour récupérer et mettre à jour les paramètres de consentement, en les envoyant à la plate-forme chaque fois que l’API de consentement est appelée.
+
+Consultez la documentation du kit SDK Mobile pour [configurer l’extension mobile Consent](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent) et [à l’aide de l’API Consent](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent/edge-consent-api-reference). Pour plus d&#39;informations sur la façon de gérer les problèmes de confidentialité à l&#39;aide du kit SDK Mobile, consultez la section [Confidentialité et RMPD](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/resources/privacy-and-gdpr).
 
 ### Envoi direct des données de consentement conformes à XDM {#batch}
 
