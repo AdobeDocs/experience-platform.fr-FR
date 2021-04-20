@@ -5,10 +5,10 @@ type: Tutorial
 description: Découvrez comment vous connecter à vos comptes d’annonces sociales dans Adobe Experience Platform.
 exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: e2af4fcfe232889f3f928c00c9f9b37cf9754ca1
 workflow-type: tm+mt
 source-wordcount: '489'
-ht-degree: 19%
+ht-degree: 11%
 
 ---
 
@@ -64,8 +64,8 @@ Au cours de cette étape, vous pouvez également sélectionner toute **[!UICONTR
 
 Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
 
-Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement. Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le workflow et choisir les segments à activer. Dans les deux cas, consultez la section suivante, [Activation des segments vers les réseaux sociaux](#activate-segments), pour le reste du workflow.
+Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement. Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le workflow et choisir les segments à activer. Dans les deux cas, voir la section suivante, [Activer les segments vers les destinations sociales](#activate-segments), pour le reste du flux de travail.
 
-## Activation des segments vers les réseaux sociaux {#activate-segments}
+## Activer les segments vers les destinations sociales {#activate-segments}
 
-Pour des instructions sur l’activation des segments vers les réseaux sociaux, consultez [Activation des données vers les destinations](../../ui/activate-destinations.md).
+Pour savoir comment activer des segments vers des destinations sociales, voir [Activer les données vers les destinations](../../ui/activate-destinations.md).
