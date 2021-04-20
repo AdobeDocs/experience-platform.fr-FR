@@ -6,10 +6,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document liste la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 60%
+source-wordcount: '470'
+ht-degree: 59%
 
 ---
 
@@ -118,11 +118,11 @@ ht-degree: 60%
       * [Extension Gainsight](./catalog/personalization/gainsight.md)
       * [Extension KickFire](./catalog/personalization/kickfire.md)
       * [Extension Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
-   * Destinations de réseau social {#social}
-      * [Présentation des destinations de réseau social](./catalog/social/overview.md)
-      * [Créer une destination de réseau social](./catalog/social/workflow.md)
+   * Destinations sociales{#social}
+      * [Présentation des destinations sociales](./catalog/social/overview.md)
+      * [Créer une destination sociale](./catalog/social/workflow.md)
       * [Extension Adobe Livefyre](./catalog/social/adobe-livefyre.md)
-      * [Connexion Facebook](./catalog/social/facebook.md)
+      * [Connexion facebook](./catalog/social/facebook.md)
       * [Connexion des Audiences mises en correspondance Linkedin](./catalog/social/linkedin.md)
    * Destinations d’enquête {#survey}
       * [Présentation des destinations d’enquête](./catalog/survey/overview.md)
