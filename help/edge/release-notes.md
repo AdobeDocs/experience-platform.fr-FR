@@ -2,18 +2,18 @@
 title: Notes de mise à jour du SDK web Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK Web Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK ; Platform Web SDK ; Web SDK ; notes de mise à jour ;
+exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 translation-type: tm+mt
-source-git-commit: b0e6d1f7cf7302bb3a7403bb18dfd8b7489d583e
+source-git-commit: d4ed6c8fa9c86eb2beec829ab24c381b665c2f03
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '500'
 ht-degree: 4%
 
 ---
 
-
 # Notes de mise à jour
 
-## Version 2.4.0
+## Version 2.4.0, mars 2021
 
 * Le SDK peut désormais être [installé en tant que package npm](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html).
 * Prise en charge Ajoutée d&#39;une option `out` lorsque [la configuration du consentement par défaut](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), qui abandonne tous les événements jusqu&#39;à ce que le consentement soit reçu (l&#39;option `pending` existante met en file d&#39;attente les événements et les envoie une fois le consentement reçu).
@@ -27,7 +27,7 @@ ht-degree: 4%
 * Correctif : Les événements de notification d’interaction de personnalisation contiennent des informations de duplicata sur la même activité lorsqu’un utilisateur accède à une nouvelle vue d’application d’une seule page, revient à la vue d’origine et clique sur un élément pouvant faire l’objet d’une conversion.
 * Correctif : Si le premier événement envoyé par le SDK avait `documentUnloading` défini sur `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) serait utilisé pour envoyer le événement, ce qui provoquerait une erreur concernant l&#39;absence d&#39;identification d&#39;une identité.
 
-## Version 2.3.0
+## Version 2.3.0, novembre 2020
 
 * Prise en charge des nonce Ajoutée pour permettre des stratégies de sécurité du contenu plus strictes.
 * Prise en charge de la personnalisation Ajoutée pour les applications d’une seule page.
@@ -37,12 +37,12 @@ ht-degree: 4%
 * Correctif : Certaines erreurs de navigateur contenant une propriété `message` en lecture seule n&#39;ont pas été gérées correctement, ce qui a provoqué une autre erreur exposée au client.
 * Correctif : L’exécution du SDK dans un iframe provoquerait une erreur si la page HTML de l’iframe provenait d’un sous-domaine différent de celui de la page HTML de la fenêtre parent.
 
-## Version 2.2.0
+## Version 2.2.0, octobre 2020
 
 * Correctif : L’objet d’inclusion empêchait Alloy d’effectuer des appels lorsque `idMigrationEnabled` est `true`.
 * Correctif : Sensibilisez Alloy aux demandes qui doivent renvoyer des offres de personnalisation afin d’éviter un problème de scintillement.
 
-## Version 2.1.0
+## Version 2.1.0, août 2020
 
 * Supprimez la commande `syncIdentity` et prenez en charge la transmission de ces identifiants dans la commande `sendEvent`.
 * Prise en charge de la norme de consentement IAB 2.0.
