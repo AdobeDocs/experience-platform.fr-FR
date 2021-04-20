@@ -4,16 +4,16 @@ solution: Experience Platform
 title: FAQ et guide de dépannage d’Adobe Experience Platform
 description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
 landing-page-description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
-topic: getting started
+topic: démarrage
 type: Documentation
+exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: 83cc3ddbf067f413cb524a3a685d985d5853eafd
+source-git-commit: e722d7598a558bcbc5c48d237d394f91c0803352
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1717'
 ht-degree: 68%
 
 ---
-
 
 # [!DNL Platform] FAQ et guide de dépannage
 
@@ -88,7 +88,7 @@ Voici une liste d&#39;erreurs que vous pouvez rencontrer lors de l&#39;utilisati
 Les codes d&#39;état suivants peuvent être rencontrés sur toute API [!DNL Experience Platform]. Chacun d’entre eux pouvant être causé par un grand nombre d’éléments, les explications données dans cette section sont générales. Pour plus d&#39;informations sur les erreurs spécifiques dans les services [!DNL Platform] individuels, consultez le [répertoire de dépannage du service](#service-troubleshooting-directory) ci-dessous.
 
 | Code d’état | Description | Causes possibles |
---- | --- | ---
+|--- | --- | ---|
 | 400 | Mauvaise requête | La requête a été mal construite, des informations de clé étaient absentes et/ou sa syntaxe était incorrecte. |
 | 401 | Échec de l’authentification | La requête n’a pas pu être authentifiée. Votre jeton d’accès est peut-être absent ou non valide. Pour plus d’informations, reportez-vous à la section [erreurs de jeton OAuth](#oauth-token-is-missing) ci-dessous. |
 | 403 | Interdit | La ressource a été trouvée, mais vous ne possédez pas les informations d’identification appropriées pour la consulter. |
@@ -198,4 +198,3 @@ Voici une liste de guides de dépannage et de documentation de référence d&#39
 | [!DNL Flow Service] ([!DNL Sources] et [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] guide de dépannage](../profile/troubleshooting.md) |
 | Environnements de test | [API Sandbox](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Guide de dépannage des environnements de test](../sandboxes/troubleshooting-guide.md) |
-
