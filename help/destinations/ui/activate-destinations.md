@@ -1,15 +1,15 @@
 ---
 keywords: activer la destination ; activer les destinations ; activer les données
 title: Activation de profils et de segments vers une destination
-type: Tutoriel
+type: Tutorial
 seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2100'
 ht-degree: 13%
 
 ---
@@ -175,7 +175,7 @@ Sur la page **[!UICONTROL Planification du segment]**, vous pouvez définir la d
 >
 >Pour les destinations sociales, vous devez sélectionner l’origine de votre audience à cette étape. Vous ne pouvez passer à l’étape suivante qu’après avoir sélectionné l’une des options de l’image ci-dessous.
 
-![Origine Facebook de l&#39;Audience](../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Origine facebook d&#39;Audience](../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 >[!IMPORTANT]
 >
@@ -264,9 +264,9 @@ La présence de ces fichiers dans votre emplacement de stockage est la confirmat
 
 Vérifiez votre compte dans la destination publicitaire vers laquelle vous activez vos données. Si l’activation a réussi, les audiences sont renseignées dans votre plateforme publicitaire.
 
-## Destinations de réseau social
+## Destinations sociales
 
-Pour [!DNL Facebook], une activation réussie signifie qu’une [!DNL Facebook] audience personnalisée serait créée par programmation dans [[!UICONTROL le Gestionnaire d’annonces Facebook]](https://www.facebook.com/adsmanager/manage/). L’adhésion au segment dans l’audience est ajoutée ou supprimée selon que les utilisateurs sont qualifiés ou disqualifiés pour les segments activés.
+Pour [!DNL Facebook], une activation réussie signifie qu&#39;une audience personnalisée [!DNL Facebook] serait créée par programmation dans [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). L’adhésion au segment dans l’audience est ajoutée ou supprimée selon que les utilisateurs sont qualifiés ou disqualifiés pour les segments activés.
 
 >[!TIP]
 >
