@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; connecteurs source ; connecteur source ; sources ; sources de données ; source de données ; connexion à la source de données
 solution: Experience Platform
 title: Présentation des connecteurs source
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 58%
+source-wordcount: '951'
+ht-degree: 57%
 
 ---
-
 
 # Présentation des connecteurs source
 
@@ -36,6 +36,8 @@ Experience Platform permet d’ingérer des données provenant d’autres applic
 - [Présentation du connecteur de données Adobe Analytics](connectors/adobe-applications/analytics.md)
 - [Création d’une connexion source Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Création d’une connexion source Attributs du client dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [[!DNL Marketo Engage] présentation du connecteur](connectors/adobe-applications/marketo/marketo.md)
+- [Créer une connexion  [!DNL Marketo Engage] source dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Publicité
 
