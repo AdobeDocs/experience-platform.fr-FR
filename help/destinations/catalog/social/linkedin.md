@@ -4,9 +4,9 @@ title: Connexion des Audiences mises en correspondance Linkedin
 description: Activez des profils pour vos campagnes LinkedIn pour le ciblage, la personnalisation et la suppression des audiences, en fonction des courriers électroniques hachés.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 translation-type: tm+mt
-source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '677'
 ht-degree: 5%
 
 ---
@@ -80,7 +80,7 @@ Si vous choisissez de hacher vous-même les adresses électroniques, veillez à 
 
 ## Se connecter à la destination {#connect-destination}
 
-Pour vous connecter à la destination [!DNL LinkedIn Matched Audiences], voir le [Processus d’authentification des destinations de réseau social](./workflow.md).
+Pour vous connecter à la destination [!DNL LinkedIn Matched Audiences], voir le [Processus d’authentification des destinations sociales](./workflow.md).
 
 La vidéo ci-dessous présente également les étapes de configuration d&#39;une destination [!DNL LinkedIn Matched Audiences] et d&#39;activation de segments.
 
