@@ -1,16 +1,16 @@
 ---
-keywords: Adresse IP, plage d’adresses IP, destinations de liste autorisée
+keywords: Adresse IP, plage d’adresses IP, destinations de liste autorisée, liste autorisée
 title: 'LISTE AUTORISÉE d’adresses IP pour les destinations d’enregistrement cloud '
 type: Documentation
 description: Cette page fournit des plages d'adresses IP que vous pouvez ajouter à votre liste autorisée, afin d'exporter en toute sécurité des données de l'Experience Platform vers votre serveur SFTP, Amazon S3 ou votre enregistrement Azure Blob.
+exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: ac62ebcc7b00a96f718a3c39725bcf21ce3d56cf
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
 
 ---
-
 
 # LISTE AUTORISÉE d&#39;adresse IP pour les destinations d&#39;enregistrement cloud {#ip-address-allow-list}
 
