@@ -4,14 +4,14 @@ title: Présentation des destinations
 seo-title: Présentation des destinations
 description: Découvrez comment activer les données Adobe Experience Platform vers des destinations pour des campagnes marketing inter-canaux, des courriels, des publicités ciblées, etc.
 seo-description: Les destinations sont des intégrations préétablies avec des plateformes de destination qui permettent une activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les Destinations dans la Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing par canal, les campagnes par courriel, les publicités ciblées et de nombreux autres cas d’utilisation.
+exl-id: afd07ddc-652e-4e22-b298-feba27332462
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '488'
 ht-degree: 35%
 
 ---
-
 
 # [!DNL Destinations] aperçu {#overview}
 
@@ -65,6 +65,6 @@ Pour plus d&#39;informations sur la sélection des actions marketing dans le flu
 * [Destinations publicitaires - Google Display &amp; Video 360  ](./catalog/advertising/google-dv360.md)
 * [Destinations de stockage dans le cloud](./catalog/cloud-storage/workflow.md)
 * [Destinations de marketing par e-mail](./catalog/email-marketing/overview.md)
-* [Destinations de réseau social](./catalog/social/workflow.md)
+* [Destinations sociales](./catalog/social/workflow.md)
 
 Pour plus d&#39;informations sur les violations de la stratégie de données dans le processus d&#39;activation des segments, voir l&#39;étape de révision dans [Activation des profils et des segments vers une destination](./ui/activate-destinations.md#review).
