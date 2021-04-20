@@ -2,21 +2,22 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; connexion en flux continu ; créer une connexion en flux continu ; guide ui ; didacticiel ; créer une connexion en flux continu ; assimilation en flux continu ; assimilation ;
 solution: Experience Platform
 title: Création d’une connexion de diffusion en continu à l’aide de l’interface utilisateur
-topic: tutorial
+topic: didacticiel
 type: Tutorial
 description: Ce guide de l’interface utilisateur vous aidera à créer une connexion en continu à l’aide d’Adobe Experience Platform.
+exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
 translation-type: tm+mt
-source-git-commit: a4019227abaddd9dbe143899d273580ebf21849e
+source-git-commit: 3b71f1399a770e097cf75827e626d6d4e289ab77
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 18%
+source-wordcount: '1061'
+ht-degree: 10%
 
 ---
 
 
 # Création d’une connexion en continu à l’aide de l’interface utilisateur
 
-Ce guide de l’interface utilisateur vous aidera à créer une connexion en continu à l’aide d’Adobe Experience Platform.
+Ce didacticiel décrit les étapes à suivre pour créer une connexion source de flux continu à l’aide de l’espace de travail [!UICONTROL Sources].
 
 ## Prise en main
 
@@ -29,48 +30,92 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 ## Création d’une connexion en continu
 
-Après vous être connecté à l&#39;interface utilisateur [!DNL Experience Platform], sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l&#39;espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur de la plate-forme, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
-Sous la catégorie **[!UICONTROL Diffusion en flux continu]**, sélectionnez **[!UICONTROL API HTTP]**. Si vous utilisez ce connecteur pour la première fois, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter les données]** pour créer un connecteur de flux continu HTTP.
+Sous la catégorie **[!UICONTROL Diffusion en flux continu]**, sélectionnez **[!UICONTROL API HTTP]**, puis **[!UICONTROL Ajouter les données]**.
 
-![](../../../../images/tutorials/create/http/catalog.png)
+![catalogue](../../../../images/tutorials/create/http/catalog.png)
 
 La page **[!UICONTROL Connect HTTP API account]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
+### Compte existant
+
+Pour utiliser un compte existant, sélectionnez le compte d’API HTTP avec lequel vous souhaitez créer un nouveau flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+
+![compte existant](../../../../images/tutorials/create/http/existing.png)
+
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire d’entrée qui s’affiche, indiquez un nom de compte et une description facultative. Vous aurez également la possibilité de fournir les propriétés de configuration suivantes :
+Si vous créez un nouveau compte, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire d’entrée qui s’affiche, indiquez un nom de compte et une description facultative. Vous aurez également la possibilité de fournir les propriétés de configuration suivantes :
 
 - **[!UICONTROL Authentification] :** cette propriété détermine si la connexion en flux continu nécessite ou non une authentification. L’authentification garantit que les données sont collectées auprès de sources approuvées. Si vous utilisez des informations d’identification personnelle, cette propriété doit être activée. Par défaut, cette propriété est désactivée.
-- **[!UICONTROL Compatibilité] des Schémas XDM :** cette propriété indique si cette connexion en flux continu envoie des événements compatibles avec les schémas XDM. Par défaut, cette propriété est activée.
+- **[!UICONTROL Compatible] XDM :** cette propriété indique si cette connexion en flux continu envoie des événements compatibles avec les schémas XDM. Par défaut, cette propriété est désactivée.
 
 Une fois terminé, sélectionnez **[!UICONTROL Se connecter à la source]**, puis **[!UICONTROL Suivant]** pour continuer.
 
-![](../../../../images/tutorials/create/http/new-account.png)
-
-### Compte existant
-
-Pour vous connecter à l’aide des informations d’identification existantes, sélectionnez la connexion de l’API HTTP que vous souhaitez utiliser, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
-
-![](../../../../images/tutorials/create/http/existing-account.png)
+![nouveau compte](../../../../images/tutorials/create/http/new.png)
 
 ## Sélectionner des données
 
-Après avoir créé la connexion à l&#39;API HTTP, l&#39;étape **[!UICONTROL Sélectionner les données]** s&#39;affiche, fournissant une interface pour choisir le jeu de données auquel se connecter. Vous avez la possibilité de créer un nouveau jeu de données ou de vous connecter à un jeu de données existant.
+Après avoir créé la connexion à l&#39;API HTTP, l&#39;étape **[!UICONTROL Sélectionner les données]** s&#39;affiche, vous offrant une interface pour télécharger et prévisualisation vos données.
+
+Sélectionnez **[!UICONTROL Télécharger les fichiers]** pour télécharger vos données. Vous pouvez également faire glisser et déposer vos données dans la section [!UICONTROL Glisser et déposer des fichiers] de l’interface.
+
+![add-data](../../../../images/tutorials/create/http/add-data.png)
+
+Une fois vos données téléchargées, vous pouvez utiliser le côté droit de l’interface pour prévisualisation la hiérarchie des fichiers. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
+
+![prévisualisation-exemple-données](../../../../images/tutorials/create/http/preview-sample-data.png)
+
+## Mappage des champs de données à un schéma XDM
+
+L’étape [!UICONTROL Mappage] s’affiche, fournissant une interface permettant de mapper les données source à un jeu de données de plateforme.
+
+Les fichiers de parquet doivent être conformes à XDM et ne nécessitent pas de configuration manuelle du mappage, tandis que les fichiers CSV nécessitent de configurer explicitement le mappage, mais vous permettent de sélectionner les champs de données source à mapper. Les fichiers JSON, s’ils sont marqués comme plainte XDM, ne nécessitent pas de configuration manuelle. Cependant, si elle n’est pas marquée comme compatible XDM, vous devrez configurer explicitement le mappage.
+
+Choisissez un jeu de données dans lequel les données entrantes doivent être assimilées. Vous pouvez soit utiliser un jeu de données existant, soit en créer un nouveau.
 
 ### Création d’un nouveau jeu de données
 
-Pour créer un jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]**. Dans le formulaire qui s’affiche, indiquez le nom, une description facultative, ainsi que le schéma de cible du jeu de données. Si vous sélectionnez un schéma activé par Profil, vous pouvez choisir si le jeu de données doit également être activé par Profil.
+Pour créer un jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]**. Dans le formulaire qui s’affiche, indiquez le nom, une description facultative, ainsi que le schéma de cible du jeu de données. Si vous sélectionnez un schéma activé [!DNL Profile], vous pouvez choisir si le jeu de données doit également être activé [!DNL Profile].
 
-![](../../../../images/tutorials/create/http/new-dataset.png)
+![nouveau jeu de données](../../../../images/tutorials/create/http/new-dataset.png)
 
 ### Utilisation d’un jeu de données existant
 
-Pour utiliser un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]**. Dans le formulaire qui s&#39;affiche, sélectionnez le jeu de données à utiliser. Une fois que vous avez sélectionné un jeu de données, vous pouvez choisir si le jeu de données doit être activé par Profil.
+Pour utiliser un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]**. Dans le formulaire qui s&#39;affiche, sélectionnez le jeu de données à utiliser. Une fois que vous avez sélectionné un jeu de données, vous pouvez choisir si le jeu de données doit être activé [!DNL Profile].
 
-![](../../../../images/tutorials/create/http/existing-dataset.png)
+![existing-dataset](../../../../images/tutorials/create/http/existing-dataset.png)
+
+### Mise en correspondance des champs standard
+
+En fonction de vos besoins, vous pouvez choisir de mapper directement les champs ou utiliser les fonctions de prép de données pour transformer les données source afin de dériver des valeurs calculées ou calculées. Pour plus d&#39;informations sur les fonctions de mappage et de mappage de données, consultez le didacticiel [mappage des données CSV aux champs de schéma XDM](../../../../../ingestion/tutorials/map-a-csv-file.md).
+
+Pour ajouter un nouveau champ source, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**.
+
+![add-new-mapping](../../../../images/tutorials/create/http/add-new-mapping.png)
+
+Un nouveau couplage des champs source et de cible s’affiche. Pour ajouter un nouveau champ source, sélectionnez l’icône en forme de flèche en regard de la barre d’entrée [!UICONTROL Sélectionner le champ source].
+
+![select-source-field](../../../../images/tutorials/create/http/select-source-field.png)
+
+Le panneau [!UICONTROL Sélectionner des attributs] vous permet d&#39;explorer la hiérarchie de fichiers et de sélectionner un champ source spécifique à mapper à un champ XDM de cible. Une fois que vous avez sélectionné le champ source à mapper, sélectionnez **[!UICONTROL Sélectionner]** pour continuer.
+
+![select-attributes](../../../../images/tutorials/create/http/select-attributes.png)
+
+Avec un champ source sélectionné, vous pouvez maintenant identifier le champ XDM de cible à mapper. Sélectionnez l’icône de schéma sous la section Champ de cible.
+
+![sélectionner-cible-champ](../../../../images/tutorials/create/http/select-target-field.png)
+
+La fenêtre [!UICONTROL Faire correspondre le champ source au champ de cible] s&#39;affiche, vous offrant ainsi une interface pour explorer le schéma de votre jeu de données de cible. Sélectionnez le champ de cible correspondant à votre champ source, puis sélectionnez **[!UICONTROL Sélectionner]** pour continuer.
+
+![zone de mappage à cible](../../../../images/tutorials/create/http/map-to-target-field.png)
+
+Une fois que vos champs source sont tous mappés à leurs champs XDM de cible appropriés, sélectionnez **[!UICONTROL Suivant]**.
+
+![data-prep-complete](../../../../images/tutorials/create/http/data-prep-complete.png)
 
 ## Détails du flux de données
 
@@ -78,7 +123,7 @@ L&#39;étape **[!UICONTROL Détails du flux de données]** s&#39;affiche. Sur ce
 
 Après avoir fourni des détails pour le flux de données, sélectionnez **[!UICONTROL Suivant]**.
 
-![](../../../../images/tutorials/create/http/dataflow-detail.png)
+![détails du flux de données](../../../../images/tutorials/create/http/dataflow-detail.png)
 
 ## Révision
 
@@ -89,13 +134,13 @@ L&#39;étape **[!UICONTROL Réviser]** s&#39;affiche, vous permettant de vérifi
 
 Après avoir confirmé que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]**.
 
-![](../../../../images/tutorials/create/http/review.png)
+![examiner](../../../../images/tutorials/create/http/review.png)
 
 ## Obtenir l’URL du point de terminaison de flux continu
 
 Une fois la connexion créée, la page des détails des sources s&#39;affiche. Cette page présente les détails de votre nouvelle connexion, notamment les flux de données, l’ID et l’URL du point de terminaison de diffusion en continu précédemment exécutés.
 
-![](../../../../images/tutorials/create/http/get-streaming-url.png)
+![point de terminaison](../../../../images/tutorials/create/http/endpoint.png)
 
 ## Étapes suivantes
 
