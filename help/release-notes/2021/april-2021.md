@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: fff9e6455c6eae5f9903e1d28ab365cddfd51ef8
+source-git-commit: 73ecf6e6f9796088e2d14f9dc3d9667104b22a8e
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 31%
+source-wordcount: '586'
+ht-degree: 37%
 
 ---
 
@@ -19,7 +19,22 @@ ht-degree: 31%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Intelligent Services]](#intelligent-services)
+- [[!DNL Sources]](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] permet aux ingénieurs de données de mapper, de transformer et de valider des données à partir du modèle de données d’expérience (XDM).
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Prise en charge de la modification du mappage pour les flux de données existants | Vous pouvez maintenant mettre à jour les jeux de correspondances d’un flux de données existant. Vous ne pouvez pas mettre à jour les jeux de mappages pour les flux de données planifiés pour une assimilation unique. Cette fonctionnalité n’est pas prise en charge pour les API HTTP, Adobe Analytics, Adobe Audience Manager et [!DNL Marketo Engage]. Pour plus d&#39;informations, consultez le didacticiel sur la [mise à jour des flux de données sources dans l&#39;interface utilisateur](../../sources/tutorials/ui/update-dataflows.md). |
+| Prise en charge de l’assimilation en flux continu | Vous pouvez désormais utiliser les fonctions de prép de données lors de la création d’une connexion source de flux continu. Pour plus d’informations, voir le didacticiel sur la [création d’une connexion source de flux continu dans l’interface utilisateur](../../sources/tutorials/ui/create/streaming/http.md). |
+
+Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation des ](../../data-prep/home.md).
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
@@ -47,3 +62,14 @@ Attribution AI est utilisé pour attribuer des crédits aux points de contact qu
 
 Pour plus d&#39;informations sur les jeux de données pris en charge, consultez la [[!DNL Intelligent Services] documentation sur la préparation des données](../../intelligent-services/data-preparation.md).
 
+## [!DNL Sources] {#sources}
+
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| [!DNL Marketo Engage] (bêta) | Vous pouvez désormais créer une connexion source [!DNL Marketo Engage] à l’aide de l’interface utilisateur pour apporter des données B2B à la plate-forme et garder ces données à jour à l’aide d’applications connectées à la plate-forme. Pour plus d&#39;informations, consultez la [[!DNL Marketo Engage] documentation du connecteur source](../../sources/connectors/adobe-applications/marketo/marketo.md). |
+
+Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
