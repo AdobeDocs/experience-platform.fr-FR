@@ -2,14 +2,14 @@
 title: Création d’une configuration Edge pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 keywords: configuration;edge;edge configuration id;Environnement Settings;edgeConfigId;identity;id sync enabled;ID Sync Conteneur ID;Sandbox;Streaming Inlet;Événement Dataset;cible;code client;jeton de propriété;ID d'Environnement de Cible;Destinations de cookies;URL Destinations;Analytics Settings Blockreport suite id;
+exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: d4ed6c8fa9c86eb2beec829ab24c381b665c2f03
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '928'
 ht-degree: 2%
 
 ---
-
 
 # Création d’une configuration de bord
 
@@ -35,17 +35,17 @@ L’ID utilisé dans le SDK en tant que `edgeConfigId` est un ID composite qui s
 
 Vous trouverez ci-dessous les paramètres disponibles pour chaque environnement de configuration. La plupart des sections peuvent être activées ou désactivées. Lorsque cette option est désactivée, vos paramètres sont enregistrés mais ne sont pas principaux.
 
-##  IdentitySettings
+## [!UICONTROL Paramètres ] IDSettings tiers
 
-La section d&#39;identité est la seule qui est toujours activée. Deux paramètres sont disponibles : &quot;[!UICONTROL ID Syncs Enabled]&quot; et &quot;[!UICONTROL ID du Conteneur de synchronisation des identifiants]&quot;.
+La section d’identifiant tiers est la seule qui est toujours activée. Deux paramètres sont disponibles : &quot;[!UICONTROL Synchronisation des identifiants tiers activée]&quot; et &quot;[!UICONTROL ID de Conteneur de synchronisation des identifiants tiers]&quot;.
 
 ![Section Identité de l’interface utilisateur de configuration](../../assets/edge_configuration_identity.png)
 
-### [!UICONTROL Synchronisation des identifiants activée]
+### [!UICONTROL Synchronisation des identifiants tiers activée]
 
 Contrôle si le SDK effectue ou non des synchronisations d’identité avec des partenaires tiers.
 
-### [!UICONTROL ID Conteneur de synchronisation]
+### [!UICONTROL ID de Conteneur de synchronisation des identifiants tiers]
 
 Les synchronisations d’identifiants peuvent être regroupées en conteneurs pour permettre l’exécution de différentes synchronisations d’identifiants à des moments différents. Cela contrôle quel conteneur d’ID synchronisé est exécuté pour un ID de configuration donné.
 
