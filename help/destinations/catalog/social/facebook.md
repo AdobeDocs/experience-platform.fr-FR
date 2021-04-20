@@ -1,15 +1,15 @@
 ---
-keywords: connexion facebook;connexion facebook;destinations facebook;facebook;instagram;messenger;facebook messenger Messenger
-title: Connexion Facebook
+keywords: Connexion facebook ; connexion facebook ; destinations facebook ; facebook ; instagram ; messenger ; messenger ; facebook Messenger
+title: Connexion facebook
 description: Activez des profils pour vos campagnes Facebook pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
+exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 01aed33913b5334263090aea17f75ce181717c50
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1147'
 ht-degree: 8%
 
 ---
-
 
 # [!DNL Facebook] connexion
 
@@ -19,7 +19,7 @@ Activez des profils pour vos campagnes [!DNL Facebook] pour le ciblage, la perso
 
 Vous pouvez utiliser cette destination pour le ciblage des audiences dans la famille [!DNL Facebook’s] d’applications prises en charge par [!DNL Custom Audiences], y compris [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] et [!DNL Messenger]. La sélection de l’application sur laquelle vous souhaitez exécuter la campagne est indiquée au niveau de l’emplacement dans [!DNL Facebook Ads Manager].
 
-![Destination Facebook dans l’interface utilisateur Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
+![Destination facebook dans l’interface utilisateur Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
 
 ## Cas d’utilisation
 
@@ -59,12 +59,12 @@ Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les ID d&#39;
 
 **Exportation**  de segment : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination Facebook.
 
-## Conditions préalables du compte Facebook {#facebook-account-prerequisites}
+## Configuration requise pour le compte facebook {#facebook-account-prerequisites}
 
 Avant d’envoyer vos segments ciblés à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
 
 - L&#39;autorisation **[!DNL Manage campaigns]** doit être activée pour votre compte d&#39;utilisateur [!DNL Facebook] pour le compte d&#39;annonce que vous prévoyez d&#39;utiliser.
-- Le compte commercial **Adobe Experience Cloud** doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Pour plus d&#39;informations, consultez [Ajouter des partenaires à votre gestionnaire d&#39;entreprise](https://www.facebook.com/business/help/1717412048538897) dans la documentation Facebook.
+- Le compte commercial **Adobe Experience Cloud** doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Pour plus d&#39;informations, consultez [Ajouter des partenaires à votre gestionnaire d&#39;entreprise](https://www.facebook.com/business/help/1717412048538897) dans la documentation de Facebook.
    >[!IMPORTANT]
    >
    > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. L&#39;autorisation est requise pour l&#39;intégration [!DNL Adobe Experience Platform].
@@ -113,11 +113,15 @@ Si vous choisissez de hacher vous-même les adresses électroniques, veillez à 
 
 ## Utilisation d’espaces de nommage personnalisés {#custom-namespaces}
 
-Avant de pouvoir utiliser l&#39;espace de nommage `Extern_ID` pour envoyer des données à [!DNL Facebook], veillez à synchroniser vos propres identifiants à l&#39;aide de [!DNL Facebook Pixel]. Consultez la [documentation officielle](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) pour obtenir des informations détaillées.
+Avant de pouvoir utiliser l&#39;espace de nommage `Extern_ID` pour envoyer des données à [!DNL Facebook], veillez à synchroniser vos propres identifiants à l&#39;aide de [!DNL Facebook Pixel]. Consultez la [documentation officielle de Facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) pour obtenir des informations détaillées.
 
 ## Se connecter à la destination {#connect-destination}
 
 Pour vous connecter à la destination [!DNL Facebook], voir le [Processus d’authentification des destinations de réseau social](./workflow.md).
+
+La vidéo ci-dessous présente également les étapes de configuration d&#39;une destination [!DNL Facebook] et d&#39;activation de segments.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Activer les segments dans [!DNL Facebook] {#activate-segments}
 
@@ -125,7 +129,7 @@ Pour savoir comment activer des segments dans [!DNL Facebook], voir [Activer les
 
 À l&#39;étape **[!UICONTROL Planification des segments]**, vous devez fournir l&#39;[!UICONTROL Origine d&#39;audience] lors de l&#39;envoi de segments à [!DNL Facebook Custom Audiences].
 
-![Origine Facebook de l&#39;Audience](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Origine facebook d&#39;Audience](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ## Données exportées {#exported-data}
 
