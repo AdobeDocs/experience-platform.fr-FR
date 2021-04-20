@@ -3,7 +3,7 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Point de terminaison de l'API Unions
 description: Le point de terminaison /unions de l'API Schéma Registry vous permet de gérer par programmation les schémas d'union XDM dans votre application d'expérience.
-topic: guide de développement
+topic: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 translation-type: tm+mt
 source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27

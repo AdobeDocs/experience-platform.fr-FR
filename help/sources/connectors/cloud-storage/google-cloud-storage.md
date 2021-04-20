@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement Google Cloud ; enregistrement Google Cloud
 solution: Experience Platform
 title: Présentation du connecteur de source d’Enregistrement Google Cloud
-topic: aperçu
+topic: overview
 description: Découvrez comment connecter Google Cloud Enregistrement à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 translation-type: tm+mt
 source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca

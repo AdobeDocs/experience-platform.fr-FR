@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; collecter le succès client ; succès client
 solution: Experience Platform
 title: Collecte de données à partir d’un système de réussite client à l’aide de connecteurs et d’API source
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système de succès client et les intégrer à la plate-forme à l’aide des connecteurs et des API source.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;prise en main;content ai;commerce ai;content and commerce ai
 solution: Experience Platform, Intelligent Services
 title: Prise en main de Content and Commerce AI
-topic: Getting started
+topic: Getting started 
 description: Content and Commerce AI utilise les API Adobe I/O. Pour appeler les API Adobe I/O et l'intégration de la console d'E/S, vous devez d'abord suivre le didacticiel d'authentification.
 translation-type: tm+mt
 source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f

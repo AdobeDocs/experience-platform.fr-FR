@@ -2,8 +2,8 @@
 keywords: Experience Platform;accueil;rubriques populaires;crm;CRM
 solution: Experience Platform
 title: Collecte de données de gestion de la relation client via des connecteurs et des API source
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système de gestion de la relation client tiers et les amener sur la plate-forme à l’aide des connecteurs et des API source.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 translation-type: tm+mt

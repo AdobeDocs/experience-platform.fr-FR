@@ -4,7 +4,7 @@ solution: Experience Platform
 title: FAQ et guide de dépannage d’Adobe Experience Platform
 description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
 landing-page-description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
-topic: démarrage
+topic: getting started
 type: Documentation
 translation-type: tm+mt
 source-git-commit: 83cc3ddbf067f413cb524a3a685d985d5853eafd

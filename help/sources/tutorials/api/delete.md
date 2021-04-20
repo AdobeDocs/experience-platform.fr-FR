@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de flux ; supprimer des comptes ; supprimer ; api
 solution: Experience Platform
 title: Suppression d’un compte à l’aide de l’API du service de flux
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Découvrez comment supprimer un compte à l’aide de l’API de service de flux.
 translation-type: tm+mt
 source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb

@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Collecte de données de protocole ; données de protocole
 solution: Experience Platform
 title: Collecte de données de protocoles à l’aide de connecteurs et d’API source
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d'une application de protocoles et les intégrer à la plate-forme à l'aide des connecteurs et des API source.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
 translation-type: tm+mt

@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; Kinesis ; kinesis ; Amazon Kinesis ; amazon kinesis
 solution: Experience Platform
 title: Création d’une connexion à la source Amazon à l’aide de l’API du service de flux
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à un compte Kinesis à l’aide de l’API de service de flux.
 translation-type: tm+mt
 source-git-commit: ed14fe464a4dc82f54902c8dc92fe00bc2a5381e

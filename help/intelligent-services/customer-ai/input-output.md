@@ -2,7 +2,7 @@
 keywords: Experience Platform ; prise en main ; assistance client ; rubriques populaires ; entrée d’assistance client ; sortie d’assistance client
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Entrée et sortie dans l’API client
-topic: Prise en main
+topic: Getting started
 description: En savoir plus sur les événements, les intrants et les extrants requis utilisés par l’API client.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt

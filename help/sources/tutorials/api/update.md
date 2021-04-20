@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de flux ; comptes de mise à jour
 solution: Experience Platform
 title: Mise à jour des comptes à l’aide de l’API du service de flux
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Ce didacticiel décrit les étapes de mise à jour des détails et des informations d’identification d’un compte à l’aide de l’API de service de flux.
 translation-type: tm+mt
 source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb

@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Configurer un jeu de données pour capturer les données de consentement et de préférence
-topic: démarrage
+topic: getting started
 description: Découvrez comment configurer un schéma et un jeu de données de modèle de données d’expérience (XDM) pour capturer les données de consentement et de préférence dans Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: 980bff169659d3ffc92a0678f8a0b153b3189906

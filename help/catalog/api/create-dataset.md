@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques populaires;dataset;Dataset;create dataset;create dataset;create dataset;enable dataset
 solution: Experience Platform
 title: Création d’un jeu de données dans l’API
-topic: guide de développement
+topic: developer guide
 description: Ce document explique comment créer un objet de jeu de données dans l’API du service de catalogue.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques populaires;schéma;Schéma;champs;champs;champs;champs standard;champs standard;champs standard;dictionnaire;dictionnaire;mappage;mappage
 solution: Experience Platform
 title: Dictionnaire de champs Modèle de données d’expérience (XDM)
-topic: aperçus
+topic: overviews
 description: Le modèle de données d’expérience (XDM) définit un ensemble de champs standard qui peuvent être utilisés lors de la composition de schémas Adobe Experience Platform. L’utilisation de ces champs entraîne un comportement cohérent entre les services de Platform, car tous les services qui utilisent XDM comprendront explicitement les définitions spécifiques fournies par ces champs.
 translation-type: tm+mt
 source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941

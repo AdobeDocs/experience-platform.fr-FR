@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; connexion en flux continu ; créer une connexion en flux continu ; guide d’API ; didacticiel ; créer une connexion en flux continu ; assimilation en flux continu ; assimilation ;
 solution: Experience Platform
 title: Création d’une connexion de diffusion en continu à l’aide de l’API
-topic: didacticiel
+topic: tutorial
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34

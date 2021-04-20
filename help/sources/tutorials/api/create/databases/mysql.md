@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; MySQL ; mysql
 solution: Experience Platform
 title: Création d’une connexion à la source MySQL à l’aide de l’API du service de flux
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à MySQL à l’aide de l’API de service de flux.
 translation-type: tm+mt
 source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18

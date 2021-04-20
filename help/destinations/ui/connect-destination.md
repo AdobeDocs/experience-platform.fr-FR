@@ -1,7 +1,7 @@
 ---
 keywords: connexion à la destination ; connexion à la destination ; connexion à la destination
 title: Connexion à une destination
-type: Tutoriel
+type: Tutorial
 description: Ce didacticiel liste les étapes de connexion d'une destination dans Adobe Experience Platform.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 translation-type: tm+mt

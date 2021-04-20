@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Guide des insights d’observabilité
 user-guide-description: Surveillez les activités dans Platform grâce aux mesures statistiques et aux notifications d’événements.
-feature: Gestion des données
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

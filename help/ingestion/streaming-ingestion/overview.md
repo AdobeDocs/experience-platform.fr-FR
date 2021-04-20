@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation de données ; données assimilées ; diffusion en continu ; présentation ; assimilation en flux continu ; latence ; latence en flux continu ;
 solution: Experience Platform
 title: Présentation de la gestion en flux continu
-topic: aperçu
+topic: overview
 description: L’assimilation en flux continu pour Adobe Experience Platform permet aux utilisateurs d’envoyer en temps réel des données en provenance de périphériques client et serveur à l’Experience Platform.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

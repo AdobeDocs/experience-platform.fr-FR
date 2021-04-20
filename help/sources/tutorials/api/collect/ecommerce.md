@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Collecte de données eCommerce ; Données eCommerce
 solution: Experience Platform
 title: Collecte de données eCommerce à l’aide des connecteurs source et des API
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer des données d’un système de commerce électronique tiers et les importer dans la plate-forme à l’aide des connecteurs et des API source.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 translation-type: tm+mt

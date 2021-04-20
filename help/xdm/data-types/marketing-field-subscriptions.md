@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Champ de préférence marketing générique avec type de données Abonnements
-topic: aperçu
+topic: overview
 description: Ce document présente un aperçu du champ de préférence marketing générique avec le type de données XDM Abonnements.
 translation-type: tm+mt
 source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa

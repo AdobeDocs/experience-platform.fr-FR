@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques populaires;Sandbox;sandbox
 solution: Experience Platform
 title: Création d’un sandbox dans l’API
-topic: guide du développeur
+topic: developer guide
 description: Vous pouvez créer un nouveau sandbox en envoyant une requête POST au point de terminaison `/sandbox`.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

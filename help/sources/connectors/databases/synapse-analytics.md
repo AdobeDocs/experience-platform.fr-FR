@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Analyses d’Azure synapse ; Analyses d’azure synapse ; Synapse ; synapse
 solution: Experience Platform
 title: Présentation du connecteur source Analytics d’Azure synapse
-topic: aperçu
+topic: overview
 description: Découvrez comment connecter Azure synapse Analytics à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 translation-type: tm+mt
 source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30

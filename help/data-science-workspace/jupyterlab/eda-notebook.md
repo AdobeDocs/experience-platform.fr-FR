@@ -2,8 +2,8 @@
 keywords: Experience Platform ; JupyterLab ; blocs-notes ; Espace de travail de données ; sujets populaires ; analyser les blocs-données ; eda ; analyse de données exploratoires ; données scientifiques
 solution: Experience Platform
 title: Ordinateur portable d'Analyse de données exploratoires (EDA)
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Ce guide se concentre sur la façon d'utiliser le carnet d'analyse des données exploratoires (EDA) pour découvrir des schémas dans les données Web, les événements d'agrégats avec un objectif de prédiction, de nettoyer les données agrégées et de comprendre la relation entre les prédicteurs et un objectif.
 translation-type: tm+mt
 source-git-commit: 1d1a19c75d2972a6fce0d39aa508cca91fb4becd

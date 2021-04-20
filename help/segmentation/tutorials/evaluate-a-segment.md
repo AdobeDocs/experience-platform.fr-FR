@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; évaluation des segments ; service de segmentation ; segmentation ; segmentation ; évaluation d’un segment ; résultats du segment d’accès ; évaluation et segment d’accès ;
 solution: Experience Platform
 title: Évaluer et accéder aux résultats des segments
-topic: didacticiel
+topic: tutorial
 type: Tutorial
 description: Suivez ce didacticiel pour savoir comment évaluer les segments et accéder aux résultats des segments à l’aide de l’API Adobe Experience Platform Segmentation Service.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98

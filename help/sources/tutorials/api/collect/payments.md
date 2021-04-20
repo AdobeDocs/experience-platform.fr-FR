@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Collecte des données de paiement ; données de paiement
 solution: Experience Platform
 title: Collecte des données de paiement à l'aide des connecteurs et des API d'origine
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer des données d'une application de paiement et les intégrer à la plate-forme à l'aide de connecteurs et d'API source.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
 translation-type: tm+mt

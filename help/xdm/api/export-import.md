@@ -3,7 +3,7 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Points de terminaison de l’API d’exportation/d’importation
 description: Les points de terminaison /export et /import de l'API Schéma Registry vous permettent de partager des ressources XDM entre les organisations IMS et les sandbox.
-topic: guide du développeur
+topic: developer guide
 translation-type: tm+mt
 source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt

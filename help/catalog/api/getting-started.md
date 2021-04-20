@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service catalogue ; catalogue ; service catalogue ; Catalogue
 solution: Experience Platform
 title: Guide de l’API du service de catalogue
-topic: guide du développeur
+topic: developer guide
 description: L’API Catalog Service permet aux développeurs de gérer les métadonnées de jeux de données dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

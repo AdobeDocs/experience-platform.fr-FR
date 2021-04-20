@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de flux ; publicité ; mots-clés Google ; publicité
 solution: Experience Platform
 title: Collecte de données publicitaires à l’aide des connecteurs et des API source
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’une application publicitaire tierce et les intégrer à la plate-forme à l’aide des connecteurs source et de l’API Flow Service.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
 translation-type: tm+mt

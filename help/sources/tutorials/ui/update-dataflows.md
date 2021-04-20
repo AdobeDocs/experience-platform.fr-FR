@@ -3,7 +3,7 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; mettre à jour 
 description: Ce didacticiel décrit les étapes de mise à jour d'un calendrier de flux de données, y compris sa fréquence d'assimilation et son taux d'intervalle, à l'aide de l'espace de travail Sources.
 solution: Experience Platform
 title: Mise à jour d’un flux de données de connexion source dans l’interface utilisateur
-topic: aperçu
+topic: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 translation-type: tm+mt

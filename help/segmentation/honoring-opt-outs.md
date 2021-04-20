@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; exclusion ; Segmentation ; service de segmentation ; service de segmentation ; exclusions d’abonnement ; opt-out ; exclusions ;
 solution: Experience Platform
 title: Respect des demandes d’exclusion dans les segments
-topic: aperçu
+topic: overview
 description: 'Adobe Experience Platform permet à vos clients d’envoyer des demandes d’exclusion concernant l’utilisation et l’enregistrement de leurs données dans le Profil client en temps réel]. Ces demandes d’opposition entrent dans le cadre du California Consumer Privacy Act (CCPA) qui donne aux personnes résidant en Californie le droit d’accéder à leurs données personnelles et de les supprimer, mais aussi de savoir si celles-ci sont vendues ou divulguées (et si oui, à qui). '
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

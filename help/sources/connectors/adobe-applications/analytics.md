@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Connecteur de données Analytics ; analyses ; Analytics
 solution: Experience Platform
 title: Connecteur de source Adobe Analytics pour les données d’une suite de rapports
-topic: aperçu
+topic: overview
 description: Ce document fournit un aperçu d’Analytics et décrit les cas d’utilisation des données Analytics.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

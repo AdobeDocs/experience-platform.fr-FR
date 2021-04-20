@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; connecteurs source ; connecteur source ; sources ; sources de données ; source de données ; connexion à la source de données
 solution: Experience Platform
 title: Présentation des connecteurs source
-topic: aperçu
+topic: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 translation-type: tm+mt
 source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070

@@ -13,7 +13,7 @@ git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.fr-FR
 solution: Experience Platform
 type: Documentation
 index: true
-role: Architecte, développeur, architecte de données, ingénieur de données, professionnel, administrateur, leader
+role: Architect, Developer, Data Architect, Data Engineer, Business Practitioner, Administrator, Leader
 translation-type: tm+mt
 source-git-commit: b3ab087a9cae13d2ff270916d88b8086a4122af6
 workflow-type: tm+mt

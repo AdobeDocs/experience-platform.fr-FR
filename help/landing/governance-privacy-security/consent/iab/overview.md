@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; IAB ; IAB 2.0 ; consentement ; consentement
 solution: Experience Platform
 title: Prise en charge d’IAB TCF 2.0 dans l’Experience Platform
-topic: événements de confidentialité
+topic: privacy events
 description: Découvrez comment configurer vos opérations de données et vos schémas pour transmettre les choix de consentement des clients lors de l’activation de segments vers des destinations dans Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7

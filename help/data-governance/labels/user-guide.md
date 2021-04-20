@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; gouvernance des données ; étiquette d’utilisation des données ; service de stratégie ; étiquettes d’utilisation des données guide d’utilisateur
 solution: Experience Platform
 title: Gérer les étiquettes d’utilisation des données dans l’interface utilisateur
-topic: étiquettes
+topic: labels
 description: Ce guide décrit les étapes à suivre pour utiliser les étiquettes d’utilisation des données dans l’interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: 41d01b3aec0afa60dd602716a30cc94402702a70

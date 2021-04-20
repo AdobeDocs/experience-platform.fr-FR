@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; PostgreSQL ; postgresql
 solution: Experience Platform
 title: Présentation du connecteur source PostgreSQL
-topic: aperçu
+topic: overview
 description: Découvrez comment connecter PostgreSQL à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
 source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18

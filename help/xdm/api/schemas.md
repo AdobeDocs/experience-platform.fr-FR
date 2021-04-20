@@ -3,7 +3,7 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Point de terminaison de l'API schémas
 description: Le point de terminaison /schémas de l'API Schéma Registry vous permet de gérer par programmation les schémas XDM dans votre application d'expérience.
-topic: guide de développement
+topic: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 translation-type: tm+mt
 source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27

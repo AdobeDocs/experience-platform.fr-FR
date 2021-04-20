@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; segmentation des arêtes ; Segmentation des arêtes ; Segmentation des arêtes ; arête de diffusion ;
 solution: Experience Platform
 title: 'Segmentation Edge à l’aide de l’API '
-topic: guide de développement
+topic: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation des arêtes avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt

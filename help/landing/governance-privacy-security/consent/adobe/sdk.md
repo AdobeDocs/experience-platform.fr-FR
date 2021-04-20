@@ -1,6 +1,6 @@
 ---
 title: Traiter les données de consentement du client à l’aide du SDK Web Adobe Experience Platform
-topic: démarrage
+topic: getting started
 description: Découvrez comment intégrer le Adobe Experience Platform Web SDK pour traiter les données de consentement des clients dans Adobe Experience Platform à l’aide de la norme Adobe 2.0.
 translation-type: tm+mt
 source-git-commit: fee3f005ca3679f8639cea45c16150090b2a1e0f

@@ -3,8 +3,8 @@ keywords: Experience Platform ; accueil ; sujets populaires ; Didacticiels d’A
 solution: Experience Platform
 title: Connectez-vous aux destinations de diffusion en continu et activez les données à l’aide de l’API du service de flux dans Adobe Experience Platform.
 description: Ce document couvre la création de destinations de diffusion en continu à l’aide de l’API Adobe Experience Platform.
-topic: didacticiel
-type: Tutoriel
+topic: tutorial
+type: Tutorial
 translation-type: tm+mt
 source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt

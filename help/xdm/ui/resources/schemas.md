@@ -3,7 +3,7 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Création et modification de Schémas dans l’interface utilisateur
 description: Découvrez les bases de la création et de la modification de schémas dans l’interface utilisateur de l’Experience Platform.
-topic: Guide de l’utilisateur
+topic: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 translation-type: tm+mt
 source-git-commit: 90a0c4e8d47d9bce38c9e13272e4f41f78f46e35

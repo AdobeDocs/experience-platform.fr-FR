@@ -1,7 +1,7 @@
 ---
 keywords: e-mail ; e-mail ; e-mail ; destinations de courriel
 title: Présentation des destinations du marketing par email
-type: Tutoriel
+type: Tutorial
 description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 translation-type: tm+mt
 source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c

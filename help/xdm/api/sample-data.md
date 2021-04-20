@@ -3,7 +3,7 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Exemple de point de terminaison de l’API de données
 description: Le point de terminaison /sampledata de l'API de registre de Schéma vous permet de générer des données d'exemple mappées à la structure de tout schéma XDM existant.
-topic: guide du développeur
+topic: developer guide
 translation-type: tm+mt
 source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques populaires;Microsoft Dynamics;microsoft dynamic;dynamic;Dynamics;Dynamics
 solution: Experience Platform
 title: Présentation de Microsoft Dynamics Source Connector
-topic: aperçu
+topic: overview
 description: Découvrez comment connecter Microsoft Dynamics à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
 source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30

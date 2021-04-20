@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; segmentation ; service de segments ; segments ; segments ; plusieurs entités ; segmentation multientités ; segments multientités ; segments multientités ;
 solution: Experience Platform
 title: Présentation de la segmentation multientité
-topic: aperçu
+topic: overview
 description: La segmentation d’entités multiples est la capacité à élargir les données de profil grâce à des données supplémentaires basées sur les produits, les magasins et d’autres classes hors profil. Une fois connectées, les données des classes supplémentaires deviennent disponibles comme si elles étaient des données natives du schéma Profile.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

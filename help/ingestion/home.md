@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation des données ; emplacement des données ; emplacement des données ; Data Management ; data Management ; lignage ; lignage ; lot ; lot ; données assimilées
 solution: Experience Platform
 title: Présentation de l'importation de données
-topic: aperçu
+topic: overview
 description: Ce document présente les trois principales manières dont les données sont ingérées dans Platform, avec des liens vers leur documentation de présentation respectives pour plus d’informations.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

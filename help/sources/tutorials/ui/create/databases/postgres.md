@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; PSQL ; psql ; PostgreSQL
 solution: Experience Platform
 title: Création d’une connexion source PostgreSQL dans l’interface utilisateur
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Découvrez comment créer une connexion source PostgreSQL à l'aide de l'interface utilisateur Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18

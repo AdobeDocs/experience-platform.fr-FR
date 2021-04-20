@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; sandbox de liste
 solution: Experience Platform
 title: Sandbox de liste dans l’API
-topic: guide du développeur
+topic: developer guide
 description: Pour liste de tous les sandbox appartenant à votre organisation IMS (principal ou non), envoyez une demande de GET au point de terminaison /sandbox.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

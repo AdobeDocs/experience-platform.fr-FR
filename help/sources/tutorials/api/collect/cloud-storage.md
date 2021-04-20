@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; données d’enregistrement cloud
 solution: Experience Platform
 title: Collecte de données d’Enregistrement Cloud à l’aide des connecteurs et des API source
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un enregistrement cloud tiers et les amener sur la plate-forme à l’aide des connecteurs et des API source.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 translation-type: tm+mt

@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement d'objet Oracle ; enregistrement d'objet oracle
 solution: Experience Platform
 title: Création d’une connexion à la source de l’Enregistrement d’objets d’Oracle à l’aide de l’API du service de flux
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à l’Enregistrement d’objet d’Oracle à l’aide de l’API de service de flux.
 translation-type: tm+mt
 source-git-commit: c1453a9f0be42f834d35af871051324df8dadf80

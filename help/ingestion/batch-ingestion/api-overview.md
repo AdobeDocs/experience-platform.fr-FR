@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation par lots ; assimilation par lots ; assimilation ; guide du développeur ; guide de l’api ; téléchargement ; ingest Parquet ; ingest json ;
 solution: Experience Platform
 title: Guide de l'API d'importation par lot
-topic: guide de développement
+topic: developer guide
 description: Ce document présente de manière exhaustive l’utilisation des API d’ingestion par lots.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 translation-type: tm+mt

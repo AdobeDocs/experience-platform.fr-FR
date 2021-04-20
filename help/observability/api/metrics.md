@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Point de terminaison de l’API de mesures
-topic: guide du développeur
+topic: developer guide
 description: Découvrez comment récupérer les mesures d’observabilité dans l’Experience Platform à l’aide de l’API Observability Insights.
 translation-type: tm+mt
 source-git-commit: 136c75f56c2ba4d61fef7981ff8a7889a0ade3d1

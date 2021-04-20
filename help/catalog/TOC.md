@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Guide des catalogues et des jeux de données
 user-guide-description: Découvrez le lignage de données, les métadonnées, les descriptions de fichiers, les répertoires et les jeux de données dans le lac de données.
-feature: Gestion des données
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

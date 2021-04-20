@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: ERD du modèle de données du secteur de vente au détail
-topic: aperçu
+topic: overview
 description: Vue d’un diagramme de relations d’entité (ERD) qui décrit un modèle de données normalisé pour le secteur de la vente au détail, compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: ffc113c0c85c76e6645fb4276c174779682f2b60

@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; mixin ; Mixin ; mixins ; mixins ; type de données ; types de données ; types de données ; type de données ; type de données ; conception de schéma ; type de données ; type de données ; type de données ; type de données ; schémas ; Schémas ; conception de Schéma ; carte ; carte ;
 solution: Experience Platform
 title: Contraintes de type de champ XDM
-topic: aperçu
+topic: overview
 description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels elles peuvent être associées et comment définir vos propres types de champ dans l’API.
 translation-type: tm+mt
 source-git-commit: 456e595e66436c35c7d081ddf4699263e9c87234

@@ -2,7 +2,7 @@
 keywords: Experience Platform ; guide du développeur ; Espace de travail des données ; sujets populaires ; apprentissage automatique en temps réel ;
 solution: Experience Platform
 title: Présentation de l'apprentissage automatique en temps réel
-topic: Présentation
+topic: Overview
 description: L'apprentissage automatique en temps réel peut considérablement améliorer la pertinence de votre contenu d'expérience numérique pour vos utilisateurs finaux. Cela est rendu possible en tirant parti des référencements en temps réel et de l’apprentissage continu sur le bord de l’expérience.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Présentation des modèles de données du secteur
-topic: aperçu
+topic: overview
 description: Découvrez les modèles de données normalisés pour divers secteurs verticaux qui peuvent être créés à l’aide de composants standard du modèle de données d’expérience (XDM).
 translation-type: tm+mt
 source-git-commit: 9862cbcb8d8c74c96dd6bf44c5fa416f4f42fe64

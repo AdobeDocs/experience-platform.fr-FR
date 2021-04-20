@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement Google Cloud ; enregistrement Google Cloud ; GCS ; gcs
 solution: Experience Platform
 title: Création d’une connexion à la source d’Enregistrement Google Cloud dans l’interface utilisateur
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Découvrez comment créer une connexion à la source de l’Enregistrement Google Cloud à l’aide de l’interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4

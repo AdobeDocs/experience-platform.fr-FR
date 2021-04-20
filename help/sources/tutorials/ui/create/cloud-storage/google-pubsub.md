@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Google PubSub ; google pubsub
 solution: Experience Platform
 title: Création d’une connexion Google PubSub Source dans l’interface utilisateur
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Découvrez comment créer un connecteur de source Google PubSub à l’aide de l’interface utilisateur de la plate-forme.
 translation-type: tm+mt
 source-git-commit: b5358ce206888c413035b46fe751520fd9aefb14

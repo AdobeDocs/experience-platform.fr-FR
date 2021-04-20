@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; enregistrement cloud ; enregistrement Cloud
 solution: Experience Platform
 title: Exploration d’un système d’Enregistrements à forte intensité à l’aide de l’API du service de flux
-topic: aperçu
+topic: overview
 description: Ce didacticiel utilise l’API Flow Service pour explorer un système d’enregistrement cloud tiers.
 translation-type: tm+mt
 source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8

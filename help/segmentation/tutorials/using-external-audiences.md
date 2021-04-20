@@ -3,7 +3,7 @@ keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Importation et utilisation d’audiences externes
 description: Suivez ce tutoriel pour apprendre à utiliser les audiences externes avec Adobe Experience Platform.
-topic: didacticiel
+topic: tutorial
 translation-type: tm+mt
 source-git-commit: 400e4d9007212ed2693d031ae912a4f1cca97c57
 workflow-type: tm+mt

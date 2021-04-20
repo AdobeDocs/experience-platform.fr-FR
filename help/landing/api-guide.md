@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Adobe Experience Platform ; guide d’api ; guide d’api de la plate-forme ; présentation de la plate-forme ; guide du développeur
 solution: Experience Platform
 title: Prise en main des API Adobe Experience Platform
-topic: guide api
+topic: api guide
 description: Adobe Experience Platform fournit des services d’API étroitement liés les uns aux autres. Ce guide contient des informations sur les services disponibles, les en-têtes requis pour les opérations CRUD, les messages d’erreur, les collections Postman et les exemples d’appels d’API.
 translation-type: tm+mt
 source-git-commit: 85d2ae5ccf1b27baaafe839f1d3f00d588abe4fc

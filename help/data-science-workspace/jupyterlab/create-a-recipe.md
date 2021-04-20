@@ -2,8 +2,8 @@
 keywords: Experience Platform ; JupyterLab ; recette ; cahiers ; Espace de travail des sciences de données ; rubriques populaires ; créer une recette
 solution: Experience Platform
 title: Créer une recette à l'aide de portables Jupyter
-topic: didacticiel
-type: Tutoriel
+topic: tutorial
+type: Tutorial
 description: Ce tutoriel se déroulera en deux temps. Tout d’abord, vous créerez un modèle d’apprentissage automatique à l’aide d’un modèle dans JupyterLab Notebook. Ensuite, vous utiliserez le notebook pour recevoir le workflow dans JupyterLab afin de créer une recette dans Data Science Workspace.
 translation-type: tm+mt
 source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de

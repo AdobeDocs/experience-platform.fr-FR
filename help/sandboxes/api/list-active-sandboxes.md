@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; liste principal sandbox ; liste sandbox
 solution: Experience Platform
 title: Liste Principale de sandbox pour l’utilisateur actuel dans l’API
-topic: guide du développeur
+topic: developer guide
 description: Vous pouvez liste les sandbox principaux pour l’utilisateur actuel en adressant une demande de GET au point de terminaison racine.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

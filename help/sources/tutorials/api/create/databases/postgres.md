@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; PostgreSQL ; postgresql ; PSQL ; psql
 solution: Experience Platform
 title: Création d’une connexion source PostgreSQL à l’aide de l’API du service de flux
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à PostgreSQL à l’aide de l’API Flow Service.
 translation-type: tm+mt
 source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18

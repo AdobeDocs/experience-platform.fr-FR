@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; sandbox de liste
 solution: Experience Platform
 title: Types de sandbox pris en charge par la liste dans l’API
-topic: guide du développeur
+topic: developer guide
 description: Vous pouvez récupérer une liste de types de sandbox pris en charge pour votre organisation en adressant une demande de GET au point de terminaison /sandboxTypes.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

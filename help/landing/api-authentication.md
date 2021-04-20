@@ -2,8 +2,8 @@
 keywords: Experience Platform;accueil;rubriques populaires;Authentification;accès
 solution: Experience Platform
 title: Authentification et accès aux API Experience Platform
-topic: didacticiel
-type: Tutoriel
+topic: tutorial
+type: Tutorial
 description: 'Ce document fournit un tutoriel détaillé pour accéder à un compte de développeur Adobe Experience Platform afin d’effectuer des appels API Experience Platform. '
 translation-type: tm+mt
 source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42

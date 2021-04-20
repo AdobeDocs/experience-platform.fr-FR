@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; Azure Data Lake Enregistrement Gen2 ; ADLS-Gen2 ; adls gen2 ; ADLS Gen2
 solution: Experience Platform
 title: Présentation du connecteur source Azure Data Lake Enregistrement Gen2
-topic: aperçu
+topic: overview
 description: Découvrez comment connecter Azure Data Lake Enregistrement Gen2 à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
 source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca

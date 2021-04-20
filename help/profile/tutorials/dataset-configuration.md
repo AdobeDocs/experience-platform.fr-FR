@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API ; activer le jeu de données
 title: Configuration d’un jeu de données pour Profil et Identity Service à l’aide d’API
-topic: didacticiel
+topic: tutorial
 type: Tutorial
 description: Ce didacticiel explique comment activer un jeu de données à utiliser avec le Profil client en temps réel et le service d’identité à l’aide des API Adobe Experience Platform.
 exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312

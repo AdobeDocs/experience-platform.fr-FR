@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Guide des flux de données
 user-guide-description: Les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform.
-feature: data Management, Ingestion des données
+feature: Data Management, Data Ingestion
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

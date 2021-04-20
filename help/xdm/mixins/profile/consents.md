@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Mélange Confidentialité/Personnalisation/Préférences marketing (Contenus)
-topic: aperçu
+topic: overview
 description: Ce document fournit une vue d’ensemble du mixin Confidentialité/Personnalisation/Préférences marketing (Contenus).
 translation-type: tm+mt
 source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa

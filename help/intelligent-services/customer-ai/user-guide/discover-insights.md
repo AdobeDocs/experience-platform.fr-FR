@@ -2,7 +2,7 @@
 keywords: Experience Platform ; informations ; assistance client ; rubriques populaires ; informations client
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Découvrez des informations sur l'intelligence artificielle des clients
-topic: Découverte des insights
+topic: Discovering insights
 description: Ce document sert de guide pour interagir avec les insights d’instance de service dans l’interface utilisateur d’Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 translation-type: tm+mt

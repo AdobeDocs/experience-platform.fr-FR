@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
-feature: Ingestion des données, sources
+feature: Data Ingestion, Sources
 translation-type: tm+mt
 source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
 workflow-type: tm+mt

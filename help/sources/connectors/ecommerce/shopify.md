@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; shopify ; Shopify ;
 solution: Experience Platform
 title: Présentation du connecteur source Shopify
-topic: aperçu
+topic: overview
 description: Découvrez comment connecter Shopify à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
 source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3

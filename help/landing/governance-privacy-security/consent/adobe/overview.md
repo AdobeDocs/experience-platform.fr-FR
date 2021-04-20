@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Traitement du consentement dans Adobe Experience Platform
-topic: démarrage
+topic: getting started
 description: Découvrez comment traiter les signaux de consentement des clients à Adobe Experience Platform en utilisant la norme Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt

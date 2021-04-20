@@ -2,8 +2,8 @@
 keywords: Experience Platform;accueil;rubriques populaires;ssc;SSC;Salesforce Service Cloud;salesforce service cloud
 solution: Experience Platform
 title: Création d’une connexion à la source du service Salesforce Cloud à l’aide de l’API du service de flux
-topic: aperçu
-type: Tutoriel
+topic: overview
+type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Salesforce Service Cloud à l’aide de l’API de service de flux.
 translation-type: tm+mt
 source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127

@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; surveillance ; surveillance ; flux de données ; surveillance ; analyse ; assimilation de données ; assimilation de données ; enregistrements de vues ; lots de vues ;
 solution: Experience Platform
 title: Analyse de l'importation des données
-topic: aperçu
+topic: overview
 description: Ce guide d’utilisation fournit des étapes détaillées sur la manière de surveiller vos données au sein de l’interface utilisateur d’Adobe Experience Platform. Ce guide nécessite que vous possédiez déjà un Adobe ID et un accès à Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

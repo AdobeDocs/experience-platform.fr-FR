@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; Amazon ; amazon kinesis ; Kinesis ; kinesis
 solution: Experience Platform
 title: Présentation du connecteur source Amazon
-topic: aperçu
+topic: overview
 description: Découvrez comment connecter Amazon Kinesis à Adobe Experience Platform à à l’aide des API ou de l’interface utilisateur.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

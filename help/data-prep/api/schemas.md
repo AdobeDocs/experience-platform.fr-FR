@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; prép. de données ; api guide ; schémas ;
 solution: Experience Platform
 title: Point de terminaison de l'API schémas
-topic: schémas
+topic: schemas
 description: 'Vous pouvez utiliser le point de terminaison `/schémas’ dans l’API Adobe Experience Platform pour récupérer, créer et mettre à jour des schémas par programmation en vue de les utiliser avec Mapper dans la plate-forme. '
 translation-type: tm+mt
 source-git-commit: 435d27f7187074c78209948c0e57b610b63d2055

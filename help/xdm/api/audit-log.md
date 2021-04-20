@@ -3,7 +3,7 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Point de terminaison de l’API du journal d’audit
 description: Le point de terminaison /auditlog de l'API de registre de Schéma vous permet de récupérer une liste chronologique des modifications apportées à une ressource XDM existante.
-topic: guide du développeur
+topic: developer guide
 translation-type: tm+mt
 source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt

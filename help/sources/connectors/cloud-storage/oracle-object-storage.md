@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement d'objet Oracle ; enregistrement d'objet oracle
 solution: Experience Platform
 title: Présentation du connecteur de source d'Enregistrement d'objets d'Oracle
-topic: aperçu
+topic: overview
 description: Découvrez comment connecter l’Enregistrement d’objet d’Oracle à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 translation-type: tm+mt
 source-git-commit: 04c605aedd4c52b54d0f075c169ce919650cdee9

@@ -2,7 +2,7 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation en flux continu ; assimilation ; données de séries chronologiques ; données de séries chronologiques de flux ;
 solution: Experience Platform
 title: Diffusion en continu des données de série chronologique à l’aide des API d’importation en flux continu
-topic: didacticiel
+topic: tutorial
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500

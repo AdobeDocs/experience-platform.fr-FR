@@ -2,7 +2,7 @@
 keywords: 'Experience Platform ; prise en main ; attribution ; rubriques populaires ; attribution : entrée d’ai ; attribution : sortie d’ai ;'
 solution: Experience Platform, Intelligent Services
 title: Entrée et sortie dans Attribution AI
-topic: Données d’entrée et de sortie pour Attribution AI
+topic: Input and Output data for Attribution AI
 description: Le document suivant décrit les différents apports et extrants utilisés dans l'Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt

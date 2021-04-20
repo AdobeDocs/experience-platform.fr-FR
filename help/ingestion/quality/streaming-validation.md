@@ -2,8 +2,8 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; diffusion en continu ; assimilation en flux continu ; validation de l’assimilation en flux continu ; validation de l’assimilation en flux continu ; validation ; validation synchrone ; validation synchrone ; validation asynchrone ; validation asynchrone ;
 solution: Experience Platform
 title: Validation de l'envoi en flux continu
-topic: didacticiel
-type: Tutoriel
+topic: tutorial
+type: Tutorial
 description: 'L’assimilation en flux continu vous permet de transférer vos données vers Adobe Experience Platform à l’aide de points de terminaison en flux continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.'
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
