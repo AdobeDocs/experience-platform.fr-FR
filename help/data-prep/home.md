@@ -2,14 +2,14 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; ui guide ; mapper ; mapper ; prép de données ; préparation des données ; préparation des données ; préparation des données ;
 solution: Experience Platform
 title: Aperçu de l’aperçu de l’aperçu des données d’aperçu
-topic: overview
+topic-legacy: overview
 description: Ce document présente l’aperçu des données dans Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 1%
+source-wordcount: '388'
+ht-degree: 0%
 
 ---
 
