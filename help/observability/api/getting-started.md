@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; plage de dates
 solution: Experience Platform
 title: Prise en main de l’API Observability Insights
-topic: developer guide
+topic-legacy: developer guide
 description: L’API Observability Insights vous permet de récupérer des données de mesure pour différentes fonctionnalités Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant de tenter d'appeler l'API Observability Insights.
+exl-id: 3b120bd6-155d-467e-b98e-05478f8a4cc5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 24%
 
 ---
-
 
 # Prise en main de l’API [!DNL Observability Insights]
 
