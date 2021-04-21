@@ -1,12 +1,11 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Access
 breadcrumb-title: Guide d’accès aux données
 user-guide-description: Découvrez les jeux de données ingérés et accédez à ces derniers dans Platform.
-feature: Data Management, Data Ingestion
+feature: data Management, Ingestion des données
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 68%
