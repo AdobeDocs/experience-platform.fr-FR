@@ -2,16 +2,16 @@
 keywords: Experience Cloud ; prise en main ; contenu et commerce ; rubriques populaires ; Services intelligents ; cai
 solution: Experience Cloud, Intelligent Services, Experience Platform
 title: Présentation de l’API de contenu et de commerce
-topic: Content and Commerce AI
+topic-legacy: Content and Commerce AI
 description: Content and Commerce AI est un ensemble de services d’IA qui vous permet d’extraire des fonctions intelligentes de votre contenu, d’organiser, de rationaliser le flux de contenu et de fournir à vos clients des expériences personnalisées plus efficaces.
+exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%
 
 ---
-
 
 # Présentation de Content and Commerce AI
 
@@ -54,4 +54,3 @@ La vision globale de l’API Content and Commerce est divisée en trois étapes 
 - Utilisez le profil du client pour offrir des expériences améliorées et personnalisées, en session et pour les expériences suivantes.
 - Utilisez les fonctionnalités de contenu pour mieux comprendre les comportements des clients qui génèrent des IPC.
 - Utilisez des informations sur le contenu pour améliorer la création, la création et la sélection de contenu.
-
