@@ -2,16 +2,16 @@
 keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; rubriques populaires ; mlservices ; api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Point de terminaison de l'API MLServices
-topic: Developer guide
+topic-legacy: Developer guide
 description: Un MLService est un modèle formé publié qui permet à votre organisation d’accéder aux modèles précédemment développés et de les réutiliser. L’une des principales caractéristiques de MLServices est sa capacité d’automatiser la formation et la notation selon un calendrier précis. Les exécutions de formation planifiées peuvent contribuer à préserver l’efficacité et la précision d’un modèle, tandis que les exécutions de notation planifiées peuvent garantir que de nouvelles informations sont générées de manière cohérente.
+exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 97%
 
 ---
-
 
 # Point de terminaison MLServices
 
