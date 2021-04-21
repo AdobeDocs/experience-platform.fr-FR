@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: Mélange Confidentialité/Personnalisation/Préférences marketing (Contenus)
-topic: overview
+topic-legacy: overview
 description: Ce document fournit une vue d’ensemble du mixin Confidentialité/Personnalisation/Préférences marketing (Contenus).
+exl-id: ec592102-a9d3-4cac-8b94-58296a138573
 translation-type: tm+mt
-source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2256'
+source-wordcount: '2255'
 ht-degree: 1%
 
 ---
-
 
 # [!UICONTROL Confidentialité/Personnalisation/Préférences marketing (Contenus)] mixin
 
