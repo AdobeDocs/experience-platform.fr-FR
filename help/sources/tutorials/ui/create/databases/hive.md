@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; Apache Hive ; Azure HDInsights ; Astuces d'azure
 solution: Experience Platform
 title: Création d'un Apache Hive sur Azure HDInsights Source Connection dans l'interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une Apache Hive sur une connexion source Azure HDInsights à l'aide de l'interface utilisateur de Adobe Experience Platform.
+exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 12%
 
 ---
-
 
 # Créez une connexion source [!DNL Apache Hive] sur [!DNL Azure HDInsights] dans l’interface utilisateur.
 
