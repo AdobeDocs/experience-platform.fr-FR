@@ -2,16 +2,16 @@
 keywords: Experience Platform ; prise en main ; contenu ai ; commerce ai ; contenu et commerce ai ; extraction de mots-clés ; extraction de mots-clés
 solution: Experience Platform, Intelligent Services
 title: Extraction de mots-clés dans l’API d’API Content and Commerce
-topic: Developer guide
+topic-legacy: Developer guide
 description: Le service d'extraction de mots-clés, lorsqu'il reçoit un document de texte, extrait automatiquement les mots-clés ou les expressions-clés qui décrivent le mieux le sujet du document. Afin d'extraire des mots-clés, une combinaison d'algorithmes de reconnaissance d'entité nommée (NER) et d'extraction de mot-clé non supervisée est utilisée.
+exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 translation-type: tm+mt
-source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 4%
 
 ---
-
 
 # Extraction des mots-clés
 
