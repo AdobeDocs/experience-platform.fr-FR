@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; accès aux sources de données ; accès aux données ; spark sdk ; python sdk
 solution: Experience Platform
 title: Tutoriels sur l’accès aux données
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform permet aux utilisateurs de découvrir les jeux de données ingérés et d’y accéder dans Experience Platform à l’aide de l’API Data Access.
+exl-id: c0b6eb7d-8874-4f3a-927e-9ff51e3c0cc9
 translation-type: tm+mt
-source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 52%
 
 ---
-
 
 # Tutoriels sur l’accès aux données
 
