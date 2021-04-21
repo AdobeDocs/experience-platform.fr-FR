@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; prévisualisations ; estimations ; prévisualisations et estimations ; estimations et prévisualisations ; api ; API ;
 solution: Experience Platform
 title: Points de terminaison de l'API prévisualisations et estimations
-topic: developer guide
+topic-legacy: developer guide
 description: Au fur et à mesure que la définition de segment est développée, vous pouvez utiliser les outils d’estimation et de prévisualisation dans Adobe Experience Platform pour vue les informations de synthèse afin de vous assurer que vous isolez l’audience attendue.
+exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
 translation-type: tm+mt
-source-git-commit: eba6de210dcbc12b829b09ba6e7083d342517ba2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '949'
 ht-degree: 18%
 
 ---
-
 
 # Prévisualisations et estimations des points de terminaison
 
@@ -46,7 +46,7 @@ La taille d’échantillon de l’analyse dépend du nombre total d’entités p
 
 >[!NOTE]
 >
->Les estimations prennent généralement entre 10 et 15 secondes à s&#39;exécuter, en commençant par une estimation approximative et à être affinées au fur et à mesure que les enregistrements sont lus.
+>L&#39;exécution des estimations prend généralement 10 à 15 secondes, en commençant par une estimation approximative et en les affinant au fur et à mesure que les enregistrements sont lus.
 
 ## Création d’une nouvelle prévisualisation {#create-preview}
 
