@@ -1,25 +1,27 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour de l’Experience Platform pour le 31 mars 2021.
+description: Notes de mise à jour de l’Experience Platform pour le 21 avril 2021.
 doc-type: release notes
 last-update: March 31, 2021
 author: ens70167
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
+source-git-commit: 0c9b60fe0777286819841c520a41007634622578
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 43%
+source-wordcount: '729'
+ht-degree: 38%
 
 ---
 
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de lancement : 31 mars 2021**
+**Date de publication : 21 avril 2021**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -27,16 +29,44 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 [!DNL Data Prep] permet aux ingénieurs de données de mapper, de transformer et de valider des données à partir du modèle de données d’expérience (XDM).
 
+**Nouvelles fonctionnalités**
+
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| `add_to_array` fonction | Mise à jour de la fonctionnalité de prise en charge des tableaux en tant que paramètre. |
-| `to_array` fonction | Mise à jour de la fonctionnalité de prise en charge des objets en tant que paramètre. |
+| Prise en charge de la modification du mappage pour les flux de données existants | Vous pouvez maintenant mettre à jour les jeux de correspondances d’un flux de données existant. Vous ne pouvez pas mettre à jour les jeux de mappages pour les flux de données planifiés pour une assimilation unique. Cette fonctionnalité n’est pas prise en charge pour les API HTTP, Adobe Analytics, Adobe Audience Manager et [!DNL Marketo Engage]. Pour plus d&#39;informations, consultez le didacticiel sur la [mise à jour des flux de données sources dans l&#39;interface utilisateur](../../sources/tutorials/ui/update-dataflows.md). |
+| Prise en charge de l’assimilation en flux continu | Vous pouvez désormais utiliser les fonctions de prép de données lors de la création d’une connexion source de flux continu. Pour plus d’informations, voir le didacticiel sur la [création d’une connexion source de flux continu dans l’interface utilisateur](../../sources/tutorials/ui/create/streaming/http.md). |
 
 Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation des ](../../data-prep/home.md).
 
+## [!DNL Intelligent Services] {#intelligent-services}
+
+Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Cela permet aux analystes marketing de configurer des prédictions spécifiques aux besoins d’une société en utilisant des configurations de niveau professionnel sans avoir besoin d’une expertise en sciences des données.
+
+### Customer AI
+
+L’IA du client disponible dans la plate-forme de données client en temps réel est utilisée pour générer des scores de propension personnalisés tels que l’évolution et la conversion pour des profils individuels à l’échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Prise en charge des données Adobe Analytics | Mise à jour de la fonctionnalité de prise en charge des jeux de données Adobe Analytics via le connecteur source Analytics sans avoir à traiter vos données de manière à les rendre conformes au schéma CEE (Consumer Experience Événement). |
+| Prise en charge des données Adobe Audience Manager | Mise à jour de la fonctionnalité de prise en charge des jeux de données Adobe Audience Manager via le connecteur de source d’Audience Manager, sans qu’il soit nécessaire d’ETL pour vos données afin de les rendre conformes au schéma CEE (Consumer Experience Événement). |
+| Résumé des performances du modèle | L’IA du client dispose désormais d’un [onglet de résumé des performances du modèle](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) dans la page d’informations de l’instance de service. L&#39;onglet de performances du modèle affiche tous les taux de conversion et d&#39;exécution réels. Cela vous permet de déchiffrer et de comprendre ce qui se passe dans chacun de vos groupes de propension. |
+
+Pour plus d&#39;informations sur les jeux de données pris en charge, consultez la [[!DNL Intelligent Services] documentation sur la préparation des données](../../intelligent-services/data-preparation.md).
+
+### Attribution AI
+
+Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client.
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Prise en charge des données Adobe Analytics | Mise à jour de la fonctionnalité de prise en charge des jeux de données Adobe Analytics via le connecteur source Analytics sans avoir à traiter vos données de manière à les rendre conformes au schéma CEE (Consumer Experience Événement). |
+
+Pour plus d&#39;informations sur les jeux de données pris en charge, consultez la [[!DNL Intelligent Services] documentation sur la préparation des données](../../intelligent-services/data-preparation.md).
+
 ## Segmentation Service {#segmentation}
 
-Adobe Experience Platform Segmentation Service fournit une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données [!DNL Real-time Customer Profile]. Ces segments sont configurés et gérés de manière centralisée sur [!DNL Platform], ce qui les rend facilement accessibles par toute application d&#39;Adobe.
+Adobe Experience Platform Segmentation Service fournit une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données [!DNL Real-time Customer Profile]. Ces segments sont configurés et conservés de manière centralisée sur Platform, ce qui les rend facilement accessibles depuis n’importe quelle application Adobe.
 
 [!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
 
@@ -44,8 +74,7 @@ Adobe Experience Platform Segmentation Service fournit une interface utilisateur
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| (bêta) Segmentation Edge | La segmentation Edge évalue les segments en temps réel, ce qui permet d’utiliser les mêmes cas de personnalisation de page et de page suivante. Vous trouverez plus d’informations sur la segmentation des arêtes dans le [Présentation de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md). |
-| (bêta) Segmentation incrémentielle | Augmente la fraîcheur des définitions de segment existantes évaluées dans la segmentation par lots jusqu’à une heure. |
+| Fonctions d&#39;agrégation supplémentaires | Des fonctions de décompte ont été ajoutées dans le créateur de segments. Les fonctions Compter vous permettent de comptabiliser le nombre de fois où le événement spécifié a été exécuté. Pour plus d&#39;informations sur les fonctions de décompte, consultez la section des fonctions de décompte du [guide du Créateur de segments](../../segmentation/ui/segment-builder.md#count-functions). |
 
 Pour plus d&#39;informations sur [!DNL Segmentation Service], consultez l&#39;[Présentation de la segmentation](../../segmentation/home.md).
 
@@ -57,8 +86,6 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Sources bêta passant à GA | Les sources suivantes ont été promues de la version bêta à la version GA : <ul><li>[[!DNL MySQL]](../../sources/connectors/databases/mysql.md)</li><li>[[!DNL PostGres]](../../sources/connectors/databases/postgres.md)</li><li>[[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL SFTP]](../../sources/connectors/cloud-storage/sftp.md)</li><li>[[!DNL Shopify]](../../sources/connectors/ecommerce/shopify.md)</li></ul> |
-| Prise en charge des API pour l’assimilation de fichiers compressés | Vous pouvez désormais prévisualisation et assimiler des fichiers JSON compressés ou délimités à l’aide de sources d’enregistrement cloud. Pour plus d&#39;informations, consultez le didacticiel sur la [collecte de données d&#39;enregistrement cloud à l&#39;aide d&#39;API](../../sources/tutorials/api/collect/cloud-storage.md). |
-| Prise en charge de l’interface utilisateur pour le téléchargement de fichiers récursif | Vous pouvez désormais ingérer des dossiers entiers de manière récursive lors de l’utilisation d’une source d’enregistrement Cloud. Lors de l’importation d’un dossier entier, vous devez vous assurer que son contenu partage le même schéma. Pour plus d’informations, voir le didacticiel sur la [configuration d’un flux de données pour les connecteurs d’enregistrement cloud dans l’interface utilisateur](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| [!DNL Marketo Engage] (bêta) | Vous pouvez désormais créer une connexion source [!DNL Marketo Engage] à l’aide de l’interface utilisateur pour apporter des données B2B à la plate-forme et garder ces données à jour à l’aide d’applications connectées à la plate-forme. Pour plus d&#39;informations, consultez la [[!DNL Marketo Engage] documentation du connecteur source](../../sources/connectors/adobe-applications/marketo/marketo.md). |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
