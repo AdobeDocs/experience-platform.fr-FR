@@ -2,15 +2,15 @@
 solution: Experience Platform
 title: Générer des exemples de données pour un Schéma XDM dans l’interface utilisateur
 description: Découvrez comment générer des données JSON d’exemple en fonction d’un schéma existant dans l’interface utilisateur de Adobe Experience Platform.
-topic: user guide
+topic-legacy: user guide
+exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
 translation-type: tm+mt
-source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
 
 ---
-
 
 # Générer des données d’exemple pour un schéma XDM dans l’interface utilisateur
 
