@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma crm ; crm ; CRM ; flux de données ; flux de données
 solution: Experience Platform
 title: Configuration d’un flux de données pour une connexion à la source CRM dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte CRM.
+exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1522'
 ht-degree: 4%
 
 ---
-
 
 # Configuration d’un flux de données pour une connexion CRM dans l’interface utilisateur
 
@@ -40,7 +40,7 @@ Vous pouvez utiliser l&#39;option **[!UICONTROL Rechercher]** en haut de la page
 
 >[!NOTE]
 >
->L’option de données de source de recherche est disponible pour tous les connecteurs de source basés sur des tabulations, à l’exception des connecteurs Analytics, Classifications, Événements centraux et Kinesis.
+>L’option de données de source de recherche est disponible pour tous les connecteurs de source basés sur des tabulations, à l’exception des connecteurs Analytics, Classifications, Événements Hubs et Kinesis.
 
 Une fois que vous avez trouvé les données source, sélectionnez le répertoire, puis cliquez sur **[!UICONTROL Suivant]**.
 
