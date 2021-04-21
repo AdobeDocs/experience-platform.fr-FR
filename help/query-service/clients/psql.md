@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; PSQL ; psqlconnect to requête service ; Requête service ; requête service ;
 solution: Experience Platform
 title: Connecter PSQL à Requête Service
-topic: connect
-description: 'PSQL est une interface de ligne de commande qui vient lorsque vous installez PostgreSQL sur votre machine. Vous pouvez l’installer en suivant ces instructions. '
+topic-legacy: connect
+description: PSQL est une interface de ligne de commande qui vient lorsque vous installez PostgreSQL sur votre machine. Vous pouvez l’installer en suivant ces instructions.
+exl-id: ceb07128-409e-42be-8143-0cf681d435de
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 13%
 
 ---
-
 
 # Connecter PSQL à Requête Service
 
