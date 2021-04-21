@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; gouvernance des données ; api de l’étiquette d’utilisation des données ; api du service de stratégie ; étiquettes d’utilisation des données présentation
 solution: Experience Platform
 title: Présentation des étiquettes d’utilisation des données
-topic: labels
+topic-legacy: labels
 description: La gouvernance des données Adobe Experience Platform vous permet d’appliquer des étiquettes d’utilisation des données aux jeux de données et aux champs, en les classant par catégorie selon les stratégies d’utilisation des données associées. Ce document présente un aperçu des étiquettes d’utilisation des données dans l’Experience Platform.
+exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 14%
 
 ---
-
 
 # Présentation des libellés d’utilisation des données
 
