@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; flux de données ; flux de données ; données ; surveillance ; flux de données ; surveillance ; flux de données ; surveillance ; flux de données ; surveillance ; flux de données ; surveillance ; flux de données ; flux ; service de flux ;
 solution: Experience Platform
 title: Présentation des flux de données
-topic: overview
+topic-legacy: overview
 description: Ce document introduit les flux de données, en exprimant leur utilisation dans Adobe Experience Platform.
+exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
 translation-type: tm+mt
-source-git-commit: 185c9c953a6ce923359e221d6f0f91b0f6614f05
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 5%
 
 ---
-
 
 # Présentation des flux de données
 
@@ -32,4 +32,3 @@ Pour en savoir plus sur la préparation des données après leur assimilation, c
 ## Surveillance des flux de données
 
 Les flux de données de surveillance peuvent être effectués à l’aide des API de plateforme ou de l’interface utilisateur de plate-forme. Pour savoir comment surveiller les flux de données à l&#39;aide de l&#39;API, consultez le [didacticiel sur l&#39;API de surveillance des flux de données](./api/monitor.md). Pour savoir comment surveiller les flux de données dans l&#39;interface utilisateur de la plate-forme, consultez les didacticiels [surveillance des flux de données pour les sources](./ui/monitor-sources.md) et [surveillance des flux de données pour les destinations](./ui/monitor-destinations.md).
-
