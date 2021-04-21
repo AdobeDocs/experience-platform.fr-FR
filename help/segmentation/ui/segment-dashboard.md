@@ -2,16 +2,16 @@
 keywords: Experience Platform ; profil ; segment ; segments ; segmentation ; interface utilisateur ; interface utilisateur ; personnalisation ; tableau de bord de segment ; tableau de bord
 title: Tableau de bord de segments
 description: 'L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez vue des mesures importantes liées aux segments créés et conservés par votre organisation. '
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 4a45bc3a-be5e-42b5-abd1-f0fb5795f5f4
 translation-type: tm+mt
-source-git-commit: 77c94fb4654f7dcb0eb4ba9af6972be439eca55e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 6%
 
 ---
-
 
 # (Bêta) [!UICONTROL Segments] tableau de bord {#segment-dashboard}
 
