@@ -2,12 +2,12 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Marketo Engage ; marketing à engager ; marketing
 solution: Experience Platform
 title: Connecteur Marketo Engage
-topic: aperçu
+topic-legacy: overview
 description: Ce document présente un aperçu du connecteur source du Marketo Engage, y compris des informations sur son authentification, son mappage et sa latence des données.
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '479'
 ht-degree: 13%
 
 ---
