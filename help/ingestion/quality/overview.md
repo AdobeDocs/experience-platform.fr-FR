@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Qualité des données ; Qualité ; Qualité ; Validation prise en charge ; Validation ; Validation prise en charge ;
 solution: Experience Platform
 title: Qualité des données
-topic: overview
+topic-legacy: overview
 description: Le document suivant fournit un résumé des contrôles et des comportements de validation pris en charge pour l’assimilation par lots et en flux continu dans Adobe Experience Platform.
+exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 76%
 
 ---
-
 
 # Qualité des données dans Adobe Experience Platform
 
