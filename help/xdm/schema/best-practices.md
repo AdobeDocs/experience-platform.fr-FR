@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; schéma ; Schéma ; enum ; Principale identity ; Principale identité ; profil individuel XDM ; événement d’expérience ; Événement d’expérience XDM ; XDM ExperienceEvent ; experienceEvent ; experienceEvent ; événement d’expérience ; XDM Experienceevenet;schéma conception de  ; meilleures pratiques
 solution: Experience Platform
 title: Bonnes Pratiques Pour La Modélisation Des Données
-topic: overview
+topic-legacy: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
+exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2507'
 ht-degree: 2%
 
 ---
-
 
 # Meilleures pratiques pour la modélisation des données
 
