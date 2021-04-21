@@ -2,16 +2,16 @@
 keywords: Experience Platform ; prise en main ; attribution de l’aide ; rubriques populaires
 solution: Experience Platform, Intelligent Services
 title: Prise en main dans Attribution AI
-topic: Getting started
+topic-legacy: Getting started
 description: Les guides ci-dessous nécessitent une compréhension des différents services impliqués dans l’utilisation d’Attribution AI. Avant de commencer les didacticiels, veuillez consulter les documents suivants.
+exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 79%
 
 ---
-
 
 # Prise en main d’Attribution AI
 
