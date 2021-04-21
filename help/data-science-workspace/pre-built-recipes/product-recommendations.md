@@ -2,16 +2,16 @@
 keywords: Experience Platform ; recette de recommandation de produit ; Espace de travail des données ; rubriques populaires ; recettes ; recette de précréation
 solution: Experience Platform
 title: Recette de recommandation de produit
-topic: overview
+topic-legacy: overview
 description: La recette des recommandations de produits vous permet d’apporter à vos clients des recommandations de produits personnalisées et adaptées à leurs besoins et à leurs intérêts. Grâce à une modélisation prédictive précise, l’historique des achats d’un client peut vous fournir des informations sur les produits susceptibles de l’intéresser.
+exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 96%
 
 ---
-
 
 # Recette des recommandations de produits
 
