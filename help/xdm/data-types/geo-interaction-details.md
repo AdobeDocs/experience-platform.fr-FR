@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; balise ; détails de l'interaction ; type de données ; type de données ; type de données ;
 solution: Experience Platform
 title: Type de données Détails de l’interaction géographique
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM Détails de l’interaction géographique.
+exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 5%
 
 ---
-
 
 # [!UICONTROL Type de données ] détaillé de l’interaction géographique
 
