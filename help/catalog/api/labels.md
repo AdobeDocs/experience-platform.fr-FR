@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; étiquettes d’utilisation des données ; service de catalogue
 solution: Experience Platform
 title: Étiquettes d’utilisation des données dans l’API du service de jeux de données
-topic: developer guide
+topic-legacy: developer guide
 description: L’API Service de dataset fournit des points de terminaison pour gérer les étiquettes d’utilisation des données pour les jeux de données.
+exl-id: 2451e5b0-b117-4465-8e58-70fc341c0748
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
 
 ---
-
 
 # Étiquettes d’utilisation des données dans l’API du service de jeux de données
 
