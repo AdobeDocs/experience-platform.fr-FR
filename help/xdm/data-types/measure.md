@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; mesure ; type de données ; type de données ; type de données ;
 solution: Experience Platform
 title: Type de données de mesure
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du type de données du modèle de données d’expérience de mesure (XDM).
+exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 5%
 
 ---
-
 
 # [!UICONTROL Type ] de données de mesure
 
