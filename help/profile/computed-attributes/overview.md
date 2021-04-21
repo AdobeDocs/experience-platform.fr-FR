@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API
 title: Présentation des attributs calculés
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Les attributs calculés sont des fonctions permettant d'agrégat des données au niveau du événement dans des attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées pour la segmentation, l’activation et la personnalisation.
+exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 translation-type: tm+mt
-source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '728'
 ht-degree: 41%
 
 ---
-
 
 # (Alpha) Présentation des attributs calculés
 
