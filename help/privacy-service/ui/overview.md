@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Présentation de l’interface utilisateur du Privacy Service
-topic: UI guide
+topic-legacy: UI guide
 description: Commencez à utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes de confidentialité dans diverses applications Experience Cloud.
+exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 31%
 
 ---
-
 
 # [!DNL Privacy Service] Présentation de l’interface utilisateur
 
