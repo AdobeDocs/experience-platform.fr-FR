@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Guide de dépannage des Privacy Service
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: Ce document fournit des réponses aux questions fréquentes sur le Privacy Service, ainsi que des informations sur les erreurs courantes de l’API.
+exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 44%
 
 ---
-
 
 # [!DNL Privacy Service] guide de dépannage
 
