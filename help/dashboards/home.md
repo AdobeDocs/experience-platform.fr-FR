@@ -1,17 +1,17 @@
 ---
 solution: Experience Platform
 title: Présentation des Tableaux de bord Experience Platform
-topic: overview
+topic-legacy: overview
 type: Documentation
-description: 'Explorez plusieurs tableaux de bord dans Adobe Experience Platform pour vue des informations importantes sur les données de votre entreprise, telles qu''elles sont capturées lors de captures d''écran quotidiennes. '
+description: Explorez plusieurs tableaux de bord dans Adobe Experience Platform pour vue des informations importantes sur les données de votre entreprise, telles qu'elles sont capturées lors de captures d'écran quotidiennes.
+exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
 translation-type: tm+mt
-source-git-commit: d97fd09b382877608edf665d7559a684be00c0bb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 3%
 
 ---
-
 
 # (bêta) Présentation des Tableaux de bord {#dashboards}
 
