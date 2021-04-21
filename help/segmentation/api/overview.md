@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; API ; api ;
 title: Guide de l’API du service de segmentation
-topic: guide
+topic-legacy: guide
 description: L’API Segmentation Service permet aux développeurs de gérer par programmation les opérations de segmentation dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
+exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 6%
 
 ---
-
 
 # Guide de l’API du service de segmentation
 
