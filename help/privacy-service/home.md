@@ -2,22 +2,22 @@
 keywords: 'Experience Platform ; accueil ; sujets populaires ; GDPR ; gdpr ; ccpa : CCPA ; pdpa ; PDPA ; pdpa_that ; PDPA_THA ; lgpd ; LGPD ; lgpd_bra ; LGPD_BRA ;'
 solution: Experience Platform
 title: Présentation du Privacy Service
-topic: overview
+topic-legacy: overview
 description: Privacy Service vous permet de faciliter la conformité automatisée aux règles de confidentialité légales dans vos opérations de données Experience Cloud.
+exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1394'
 ht-degree: 10%
 
 ---
 
-
 # [!DNL Privacy Service] présentation
 
 Pour offrir de meilleures expériences client, vous devez collecter et stocker les données personnelles de vos clients. Lorsque vous utilisez ces données, il est important de comprendre et de respecter la confidentialité de vos clients. Les nouvelles réglementations légales et organisationnelles donnent aux utilisateurs le droit d’accéder à leurs données personnelles et de les supprimer de vos banques de données sur demande.
 
-Adobe Experience Platform [!DNL Privacy Service] a été développé en réponse à un changement fondamental dans la façon dont les entreprises sont tenues de gérer les données personnelles de leurs clients. [!DNL Privacy Service] a pour principal objectif d&#39;automatiser le respect des règles de confidentialité des données, ce qui, en cas de violation, peut entraîner des amendes importantes et perturber les opérations de données de votre entreprise.
+Adobe Experience Platform [!DNL Privacy Service] a été développé en réponse à un changement fondamental dans la façon dont les entreprises sont tenues de gérer les données personnelles de leurs clients. [!DNL Privacy Service] a pour principal objectif d&#39;automatiser le respect des règles de confidentialité des données, ce qui, en cas de violation, peut entraîner des amendes importantes et perturber les opérations de données pour votre entreprise.
 
 [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur pour vous aider à gérer les requêtes de données client. Avec [!DNL Privacy Service], vous pouvez envoyer des demandes d&#39;accès et de suppression de données personnelles sur les clients des applications Adobe Experience Cloud, ce qui facilite la conformité automatisée aux réglementations légales et de confidentialité de l&#39;entreprise.
 
@@ -90,9 +90,9 @@ Une fois que vous avez effectué des tâches de confidentialité, vous disposez 
 
 | Méthode de surveillance | Description |
 | --- | --- |
-| [!DNL Privacy Service] L’nterface utilisateur | L&#39;interface utilisateur [!DNL Privacy Service] fournit un tableau de bord de surveillance qui vous permet de vue une représentation visuelle de l&#39;état de toutes les demandes principales. Pour plus d’informations, consultez le [guide de l’utilisateur Privacy Service](ui/overview.md). |
+| [!DNL Privacy Service] Interface utilisateur | L&#39;interface utilisateur [!DNL Privacy Service] fournit un tableau de bord de surveillance qui vous permet de vue une représentation visuelle de l&#39;état de toutes les demandes principales. Pour plus d’informations, consultez le [guide de l’utilisateur Privacy Service](ui/overview.md). |
 | [!DNL Privacy Service] API | Vous pouvez contrôler par programmation l’état des tâches de confidentialité en utilisant les points de terminaison de recherche fournis par l’API [!DNL Privacy Service]. Consultez le [guide du développeur Privacy Service](./api/getting-started.md) pour obtenir des instructions détaillées sur l&#39;utilisation de l&#39;API. |
-| [!DNL Privacy Events] | [!DNL Privacy Events] tirer parti des Événements Adobe I/O envoyés à un webhook configuré afin de faciliter l’automatisation des demandes de travaux. Elles réduisent ou éliminent la nécessité de consulter l&#39;API [!DNL Privacy Service] afin de vérifier si une tâche est terminée ou si un certain jalon dans un flux de travail a été atteint. Pour plus d&#39;informations, consultez le didacticiel sur [l&#39;abonnement aux Événements de confidentialité](./privacy-events.md). |
+| [!DNL Privacy Events] | [!DNL Privacy Events] tirer parti des Événements d’Adobe I/O envoyés à un webhook configuré afin de faciliter l’automatisation des demandes d’emploi. Elles réduisent ou éliminent la nécessité de consulter l&#39;API [!DNL Privacy Service] afin de vérifier si une tâche est terminée ou si un certain jalon dans un flux de travail a été atteint. Pour plus d&#39;informations, consultez le didacticiel sur [l&#39;abonnement aux Événements de confidentialité](./privacy-events.md). |
 
 ## Étapes suivantes
 
