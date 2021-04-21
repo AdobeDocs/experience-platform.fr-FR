@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Traitement des demandes de confidentialité dans le Profil client en temps réel
-topic: overview
+topic-legacy: overview
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles, conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels associés au traitement des demandes d’accès à des informations personnelles pour Real-time Customer Profile.
+exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1102'
 ht-degree: 25%
 
 ---
-
 
 # Traitement de la demande de confidentialité dans [!DNL Real-time Customer Profile]
 
@@ -109,7 +109,7 @@ Lors de la création de requêtes de tâche dans l’interface utilisateur, veil
 
 ## Fragments de profil dans les demandes de confidentialité {#fragments}
 
-Dans le magasin de données [!DNL Profile], les données personnelles d&#39;un client individuel se composent souvent de fragments de profil multiples, qui sont associés à la personne via le graphique d&#39;identité. Lors de l’envoi de demandes de confidentialité au magasin [!DNL Profile], il est important de noter que les demandes sont traitées uniquement au niveau du fragment de profil, plutôt que sur l’ensemble du profil.
+Dans le magasin de données [!DNL Profile], les données personnelles d&#39;un client individuel sont souvent constituées de plusieurs fragments de profil, qui sont associés à la personne par le biais du graphique d&#39;identité. Lors de l’envoi de demandes de confidentialité au magasin [!DNL Profile], il est important de noter que les demandes sont traitées uniquement au niveau du fragment de profil, plutôt que sur l’ensemble du profil.
 
 Prenons l’exemple d’un cas où vous stockez des données d’attributs du client dans trois jeux de données distincts, qui utilisent des identifiants différents pour associer ces données à des clients individuels :
 
