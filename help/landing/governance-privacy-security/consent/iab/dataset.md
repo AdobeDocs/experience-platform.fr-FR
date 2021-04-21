@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; IAB ; IAB 2.0 ; consentement ; consentement
 solution: Experience Platform
 title: Création de jeux de données pour la capture de données de consentement IAB TCF 2.0
-topic: privacy events
+topic-legacy: privacy events
 description: Ce document décrit les étapes à suivre pour configurer les deux jeux de données nécessaires à la collecte des données de consentement IAB TCF 2.0.
+exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1646'
 ht-degree: 4%
 
 ---
-
 
 # Créer des jeux de données pour capturer les données de consentement IAB TCF 2.0
 
@@ -29,7 +29,7 @@ Ce document décrit les étapes à suivre pour configurer ces deux ensembles de 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Modèle de données d’expérience (XDM)](../../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel Experience organise les données d’expérience client.
-   * [Bases de la composition du schéma](../../../../xdm/schema/composition.md) : en savoir plus sur les blocs de création de base des schémas XDM.
+   * [Notions de base de la composition du schéma](../../../../xdm/schema/composition.md) : en savoir plus sur les blocs de création de base des schémas XDM.
 * [Service](../../../../identity-service/home.md) d&#39;identité Adobe Experience Platform : Vous permet de relier les identités des clients à partir de vos sources de données disparates entre différents périphériques et systèmes.
    * [Espaces de nommage](../../../../identity-service/namespaces.md) d&#39;identité : Les données d&#39;identité du client doivent être fournies sous un espace de nommage d&#39;identité spécifique reconnu par Identity Service.
 * [Profil](../../../../profile/home.md) client en temps réel : Exploite  [!DNL Identity Service] cette fonction pour vous permettre de créer des profils clients détaillés à partir de vos jeux de données en temps réel. [!DNL Real-time Customer Profile] Profile extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
