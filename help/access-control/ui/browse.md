@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Sélectionner un Profil de produits pour modifier les autorisations de Contrôle d'accès
-topic: user guide
+topic-legacy: user guide
 description: Ce document décrit les étapes nécessaires pour parcourir l’espace de travail contrôle d'accès. Afin de configurer le contrôle d’accès à Experience Platform via Adobe Admin Console, vous devez être administrateur d’une organisation IMS disposant d’un abonnement à Experience Platform.
+exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 70%
 
 ---
-
 
 # Sélectionner un profil de produits pour gérer ses autorisations de contrôle d&#39;accès
 
