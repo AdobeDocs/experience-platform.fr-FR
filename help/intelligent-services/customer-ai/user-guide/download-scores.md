@@ -2,16 +2,16 @@
 keywords: Experience Platform ; téléchargez des scores ; assistance client ; rubriques populaires ; Exporter ; exporter ; téléchargement de l’assistance client ; scores de l’assistance client
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Téléchargement de scores dans l’IA du client
-topic: Downloading scores
+topic-legacy: Downloading scores
 description: L’IA du client vous permet de télécharger des scores au format de fichier Parquet.
+exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 87%
 
 ---
-
 
 # Téléchargement de scores dans l’API client
 
