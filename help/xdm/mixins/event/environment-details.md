@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; ExperienceEvent ; champs ; schémas ; Schémas ; Schéma design ; mixin ; mixin ; environnement ; détails environnement ;
 solution: Experience Platform
 title: Mélange des détails de l'Environnement
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du mixin Détails de l’Environnement ExperienceEvent.
+exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 4%
 
 ---
-
 
 # [!UICONTROL Environnement ] Detailsmixin
 
