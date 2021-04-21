@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; Google Big Requête ; google big requête ; GBQ ; gbq
 solution: Experience Platform
 title: Création d’une connexion à une source de Requête Google Big dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion à la source Google Big Requête à l’aide de l’interface utilisateur de Adobe Experience Platform.
+exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 11%
 
 ---
-
 
 # Créer une connexion source [!DNL Google Big Query] dans l’interface utilisateur
 
