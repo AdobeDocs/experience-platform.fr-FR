@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; requête
 solution: Experience Platform
 title: Guide de démarrage rapide de Adobe Experience Platform Requête Service
-topic: quickstart
+topic-legacy: quickstart
 description: Guide de démarrage rapide de Adobe Experience Platform Requête Service.
+exl-id: 77941755-8292-43ee-8ae3-09065f39ace7
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 53%
 
 ---
-
 
 # Guide de démarrage rapide
 
@@ -21,4 +21,3 @@ ht-degree: 53%
 
 
 [!DNL Query Service] fournit également un moyen de connecter des outils externes pour émettre des requêtes. Pour obtenir des instructions sur la connexion d’un outil tel que Business Intelligence ou une interface de ligne de commande, veuillez lire la section [Connexion d’un outil](clients/overview.md).
-
