@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; supprimer un sandbox
 solution: Experience Platform
 title: Suppression d’un sandbox dans l’API
-topic: developer guide
+topic-legacy: developer guide
 description: Vous pouvez supprimer un sandbox en effectuant une requête DELETE qui inclut le nom du sandbox dans le chemin de la requête.
+exl-id: c900325e-bc28-42f1-bc9a-eecb33fa9be4
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 66%
+source-wordcount: '116'
+ht-degree: 67%
 
 ---
-
 
 # Suppression d’un sandbox dans l’API
 
