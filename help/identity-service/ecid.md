@@ -2,14 +2,14 @@
 keywords: Experience Platform;accueil;rubriques populaires;ECID;ecid
 solution: Experience Platform
 title: Présentation de l'ECID
-topic: overview
+topic-legacy: overview
 description: L'identificateur d'Experience Cloud (ECID) est le module côté client qui permet d'accéder à la gestion des identités et qui remplit trois fonctions Principales.
 exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
 translation-type: tm+mt
-source-git-commit: 441c9b520bf163f989ad6a8a683174957e08a6f2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 10%
+source-wordcount: '286'
+ht-degree: 9%
 
 ---
 
