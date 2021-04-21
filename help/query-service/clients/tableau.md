@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; tableau ; Tableau ; service de requête ; service de Requête ; connexion au service de requête ;
 solution: Experience Platform
 title: Connexion de Tableau à Requête Service
-topic: connect
+topic-legacy: connect
 description: Ce document passe en revue les étapes de connexion de Tableau à Adobe Experience Platform Requête Service.
+exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 11%
 
 ---
-
 
 # Connecter [!DNL Tableau] au service de Requête
 
