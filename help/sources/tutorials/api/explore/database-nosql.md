@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; base de données tierce ; service de flux de base de données
 solution: Experience Platform
 title: Exploration d’une base de données à l’aide de l’API du service de flux
-topic: overview
+topic-legacy: overview
 description: Ce didacticiel utilise l’API Flow Service pour explorer le contenu et la structure de fichiers d’une base de données tierce.
+exl-id: 94935492-a7be-48dc-8089-18476590bf98
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 22%
 
 ---
-
 
 # Explorez une base de données à l’aide de l’API [!DNL Flow Service]
 
@@ -34,7 +34,7 @@ Ce didacticiel vous oblige à établir une connexion valide avec la base de donn
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le didacticiel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API E[!DNL xperience Platform], comme indiqué ci-dessous :
 
