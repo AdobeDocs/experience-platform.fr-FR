@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;ECID;ecid
 solution: Experience Platform
 title: Données d’identité pour les demandes de confidentialité
-topic: overview
+topic-legacy: overview
 description: Ce document fournit des instructions générales expliquant comment configurer vos opérations de données et tirer parti des technologies Adobe pour récupérer efficacement les informations d’identité appropriées pour les demandes d’accès à des informations personnelles des clients.
+exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 44%
 
 ---
-
 
 # Données d’identité pour les demandes d’accès à des informations personnelles
 
