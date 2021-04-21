@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; concentrateurs de Événement Azure ; concentrateurs de événements azurés ; concentrateurs de Événements ; concentrateurs de événements
 solution: Experience Platform
 title: Présentation du connecteur source Azure Événement Hubs
-topic: overview
+topic-legacy: overview
 description: Apprenez à connecter Azure Événement Hubs à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
+exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '249'
 ht-degree: 1%
 
 ---
-
 
 # (bêta) Connecteur Azure Événement Hubs
 
