@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API
 title: Prise en main de l’API Profil client en temps réel
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Le guide de prise en main de l’API de Profil décrit les concepts clés et les fonctionnalités de base que vous devez connaître pour utiliser les points de terminaison de l’API de Profil client en temps réel afin d’effectuer des opérations CRUD de base sur les données de Profil.
+exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '411'
 ht-degree: 28%
 
 ---
-
 
 # Prise en main de l’API [!DNL Real-time Customer Profile] {#getting-started}
 
