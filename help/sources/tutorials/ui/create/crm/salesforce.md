@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Salesforce ; salesforce
 solution: Experience Platform
 title: Création d’une connexion à la source Salesforce dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Salesforce à l’aide de l’interface utilisateur Adobe Experience Platform.
+exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 13%
 
 ---
-
 
 # Créer une connexion source [!DNL Salesforce] dans l’interface utilisateur
 
