@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Application des stratégies ; Application automatique ; Application basée sur les API ; gouvernance des données
 solution: Experience Platform
 title: Application automatique de la stratégie
-topic: guide
+topic-legacy: guide
 description: Ce document décrit comment les stratégies d’utilisation des données sont automatiquement appliquées lors de l’activation de segments vers des destinations dans l’Experience Platform.
+exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1128'
 ht-degree: 19%
 
 ---
-
 
 # Application automatique des stratégies
 
