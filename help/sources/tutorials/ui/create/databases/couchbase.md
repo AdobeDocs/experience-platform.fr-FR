@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Couchbase ; couchbase
 solution: Experience Platform
 title: Création d’une connexion à la source Couchbase dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion à la source Couchbase à l’aide de l’interface utilisateur de Adobe Experience Platform.
+exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 9%
 
 ---
-
 
 # Créer une connexion source [!DNL Couchbase] dans l’interface utilisateur
 
