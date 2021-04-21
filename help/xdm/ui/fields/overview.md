@@ -3,15 +3,15 @@ keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;XDM syste
 solution: Experience Platform
 title: Définition de champs XDM dans l’interface utilisateur
 description: Découvrez comment définir des champs XDM dans l’interface utilisateur de l’Experience Platform.
-topic: user guide
+topic-legacy: user guide
+exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 4%
 
 ---
-
 
 # Définition des champs XDM dans l’interface utilisateur
 
