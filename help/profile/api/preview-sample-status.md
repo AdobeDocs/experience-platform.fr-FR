@@ -2,15 +2,15 @@
 keywords: Experience Platform ; profil ; profil client en temps réel ; résolution des problèmes ; API ; prévisualisation ; exemple
 title: Point de terminaison de l’API de l’exemple de statut de prévisualisation (Prévisualisation de Profil)
 description: À l’aide de l’exemple de point de terminaison d’état de la prévisualisation, qui fait partie de l’API Profil client en temps réel, vous pouvez prévisualisation le dernier échantillon réussi de vos données de Profil, ainsi que la distribution des profils de liste par jeu de données et par espace de nommage d’identité dans Adobe Experience Platform.
-topic: guide
+topic-legacy: guide
+exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 translation-type: tm+mt
-source-git-commit: 5266c393b034d1744134522cf1769304f39733da
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1655'
 ht-degree: 4%
 
 ---
-
 
 # Point de terminaison d’état de l’exemple de prévisualisation (prévisualisation de Profil)
 
