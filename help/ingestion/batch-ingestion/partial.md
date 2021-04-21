@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation par lots ; assimilation par lots ; assimilation partielle ; assimilation partielle ; extraction de l'erreur ; extraction de l'erreur ; assimilation par lots partielle ; assimilation par lots partielle ; assimilation partielle ; assimilation ; assimilation ;
 solution: Experience Platform
 title: Présentation partielle de l'importation par lots
-topic: overview
+topic-legacy: overview
 description: Ce document fournit un tutoriel pour la gestion de l’ingestion par lots partielle.
+exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 42%
 
 ---
-
 
 # Ingestion par lots partielle
 
@@ -32,7 +32,7 @@ Les sections suivantes fournissent des informations supplémentaires dont vous a
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
