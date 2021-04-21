@@ -2,17 +2,17 @@
 keywords: Experience Platform ; modèle d’apprentissage automatique ; Espace de travail des données ; Profil client en temps réel ; rubriques populaires ; informations d’apprentissage automatique
 solution: Experience Platform
 title: Enrichir le Profil client en temps réel grâce à des connaissances d'apprentissage automatique
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Ce document fournit un guide sur la manière d’enrichir le Profil client en temps réel avec des informations d’apprentissage automatique.
+exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '640'
 ht-degree: 27%
 
 ---
-
 
 # Enrichir [!DNL Real-time Customer Profile] avec des informations d’apprentissage automatique
 
