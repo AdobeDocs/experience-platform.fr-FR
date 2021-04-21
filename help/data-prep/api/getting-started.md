@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform ; prép. données ; api. prép. données ; dépannage ; API
 title: Prise en main de l’API d’aperçu des données
-topic: guide
+topic-legacy: guide
 description: Découvrez les concepts clés et les fonctionnalités de base que vous devez connaître afin d’utiliser les points de terminaison de l’API d’aperçu des données pour effectuer des opérations CRUD de base à utiliser avec Mapper.
+exl-id: 027e6fbe-9a0d-420b-8d67-659ca7f5ec22
 translation-type: tm+mt
-source-git-commit: a3ea7a6b68c81ee91a338735009ae0fa63884ded
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '186'
 ht-degree: 5%
 
 ---
