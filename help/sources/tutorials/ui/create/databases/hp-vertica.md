@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; HP Vertica
 solution: Experience Platform
 title: Création d’une connexion source HP Vertica dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source HP Vertica à l’aide de l’interface utilisateur de Adobe Experience Platform.
+exl-id: d7315ad4-9250-4e66-be33-016efabb512e
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 11%
 
 ---
-
 
 # Créer une connexion source HP [!DNL Vertica] dans l’interface utilisateur
 
