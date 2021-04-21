@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 73ecf6e6f9796088e2d14f9dc3d9667104b22a8e
+source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 37%
+source-wordcount: '728'
+ht-degree: 36%
 
 ---
 
@@ -21,6 +21,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Intelligent Services]](#intelligent-services)
+- [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -61,6 +62,21 @@ Attribution AI est utilisé pour attribuer des crédits aux points de contact qu
 | Prise en charge des données Adobe Analytics | Mise à jour de la fonctionnalité de prise en charge des jeux de données Adobe Analytics via le connecteur source Analytics sans avoir à traiter vos données de manière à les rendre conformes au schéma CEE (Consumer Experience Événement). |
 
 Pour plus d&#39;informations sur les jeux de données pris en charge, consultez la [[!DNL Intelligent Services] documentation sur la préparation des données](../../intelligent-services/data-preparation.md).
+
+## Segmentation Service {#segmentation}
+
+Adobe Experience Platform Segmentation Service fournit une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données [!DNL Real-time Customer Profile]. Ces segments sont configurés et gérés de manière centralisée sur [!DNL Platform], ce qui les rend facilement accessibles par toute application d&#39;Adobe.
+
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Fonctions d&#39;agrégation supplémentaires | Des fonctions de décompte ont été ajoutées dans le créateur de segments. Les fonctions Compter vous permettent de comptabiliser le nombre de fois où le événement spécifié a été exécuté. Pour plus d&#39;informations sur les fonctions de décompte, consultez la section des fonctions de décompte du [guide du Créateur de segments](../../segmentation/ui/segment-builder.md#count-functions). |
+
+Pour plus d&#39;informations sur [!DNL Segmentation Service], consultez l&#39;[Présentation de la segmentation](../../segmentation/home.md).
+
 
 ## [!DNL Sources] {#sources}
 
