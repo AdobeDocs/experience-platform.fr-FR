@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API ; activer le profil ; Activer le profil
 title: Ajouter les données au Profil client en temps réel
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel décrit les étapes nécessaires à l’ajout de données dans Real-time Customer Profile.
+exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 54%
+source-wordcount: '380'
+ht-degree: 55%
 
 ---
-
 
 # Ajouter les données à [!DNL Real-time Customer Profile]
 
@@ -25,7 +25,7 @@ Vous pouvez activer un schéma à utiliser dans [!DNL Real-time Customer Profile
 
 ## Ajouter des données à l’aide de l’ingestion par lots
 
-Toutes les données transférées vers [!DNL Platform] à l&#39;aide de l&#39;assimilation par lot sont transférées vers des jeux de données individuels. Pour que [!DNL Real-time Customer Profile] puisse utiliser ces données, le jeu de données en question doit être configuré spécifiquement. Pour obtenir des instructions complètes, reportez-vous au tutoriel sur la [Configuration d’un jeu de données pour Profile et Identity Service](dataset-configuration.md).
+Toutes les données téléchargées dans [!DNL Platform] à l&#39;aide de l&#39;assimilation par lot sont téléchargées dans des jeux de données individuels. Pour que [!DNL Real-time Customer Profile] puisse utiliser ces données, le jeu de données en question doit être configuré spécifiquement. Pour obtenir des instructions complètes, reportez-vous au tutoriel sur la [Configuration d’un jeu de données pour Profile et Identity Service](dataset-configuration.md).
 
 Une fois que le jeu de données a été configuré, vous pouvez commencer l’ingestion de données. Pour obtenir des instructions détaillées sur la manière de charger des fichiers dans différents formats, reportez-vous au [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md).
 
