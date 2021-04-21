@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; CJA ; analyse de parcours ; analyse de parcours client ; orchestration de campagne ; orchestration ; parcours client ; parcours ; orchestration de parcours ; capacité ; workflow
 title: Documentation des services d’application
-topic: overview
+topic-legacy: overview
 description: La documentation Adobe Experience Platform est fournie dans plusieurs formats, notamment des présentations, des tutoriels et des guides de l’interface utilisateur et de l’API. Voici une brève description des types de documentation les plus courants disponibles pour les services Experience Platform.
+exl-id: 24fdb183-f75b-40e0-828e-9dd49422a7b1
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 21%
 
 ---
-
 
 # Documentation des services d’application
 
