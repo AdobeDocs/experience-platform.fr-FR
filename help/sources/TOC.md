@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Ingestion des données, sources
 translation-type: tm+mt
-source-git-commit: fb24f7cf82038a38c2861bd84404531062e47485
+source-git-commit: 121e2f410acdcd6de3953c6063a15901c853dd07
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '610'
 ht-degree: 16%
 
 ---
@@ -79,6 +79,8 @@ ht-degree: 16%
       - [Connecteur PayPal](connectors/payments/paypal.md)
    - Protocoles {#protocols}
       - [Connecteur OData générique](connectors/protocols/odata.md)
+   - Diffusion en continu {#streaming}
+      - [Connecteur d’API HTTP](connectors/streaming/http.md)
 - Tutoriels sur les API {#api-tutorials}
    - Créer une connexion source {#create}
       - Publicité {#advertising}
