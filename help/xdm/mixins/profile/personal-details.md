@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; schéma ; Schéma ; XDM ; profil individuel ; champs ; schémas ; Schémas ; détails personnels ; conception de Schéma ; mixin ; Mixin ;
 solution: Experience Platform
 title: Mixage des coordonnées personnelles
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du mixin Coordonnées personnelles.
+exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 9%
 
 ---
-
 
 # [!UICONTROL Coordonnées personnelles ] Détailsmixin
 
