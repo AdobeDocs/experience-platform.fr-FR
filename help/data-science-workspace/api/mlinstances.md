@@ -2,16 +2,16 @@
 keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; rubriques populaires ; mlinstances ; api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Point de terminaison de l'API MLInstances
-topic: Developer guide
+topic-legacy: Developer guide
 description: Une instance MLInstance correspond à l’association d’un moteur existant avec un ensemble approprié de configurations qui définit les paramètres de formation, les paramètres de notation ou les configurations de ressources matérielles.
+exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 96%
 
 ---
-
 
 # Point de terminaison MLInstances
 
