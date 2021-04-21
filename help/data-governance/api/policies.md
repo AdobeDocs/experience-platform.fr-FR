@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Application des stratégies ; Application basée sur les API ; gouvernance des données
 solution: Experience Platform
 title: Point de terminaison de l’API Stratégies
-topic: developer guide
+topic-legacy: developer guide
 description: Les stratégies d’utilisation des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données au sein d’Experience Platform. Le point de terminaison /policies est utilisé pour tous les appels d’API liés à l’affichage, la création, la mise à jour ou la suppression des stratégies d’utilisation des données.
+exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 9%
 
 ---
-
 
 # Point de terminaison des stratégies
 
