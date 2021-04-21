@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; flux de données de surveillance ; api du service de flux ; service de flux
 solution: Experience Platform
 title: Surveillance des flux de données à l’aide de l’API du service de flux
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes de surveillance des données d’exécution de flux afin de vérifier l’exhaustivité, les erreurs et les mesures à l’aide de l’API de service de flux.
+exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 23%
 
 ---
-
 
 # Surveillance des flux de données à l’aide de l’API du service de flux
 
@@ -37,7 +37,7 @@ Les sections suivantes fournissent des informations supplémentaires dont vous a
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
