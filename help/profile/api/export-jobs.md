@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API
 title: Exporter le point de terminaison de l’API Tâches
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Le Profil client en temps réel vous permet de créer une vue unique de clients individuels au sein de Adobe Experience Platform en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées dans un jeu de données pour un traitement ultérieur.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 translation-type: tm+mt
-source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1542'
 ht-degree: 65%
 
 ---
