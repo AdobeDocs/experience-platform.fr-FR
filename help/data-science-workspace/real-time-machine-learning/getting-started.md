@@ -2,16 +2,16 @@
 keywords: Experience Platform ; guide du développeur ; Espace de travail des données ; sujets populaires ; apprentissage automatique en temps réel ;
 solution: Experience Platform
 title: Prise en main de l'apprentissage automatique en temps réel
-topic: Getting started
+topic-legacy: Getting started
 description: Le document suivant décrit les étapes requises pour créer un modèle d’apprentissage automatique en temps réel dans Adobe Experience Platform.
+exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 1%
 
 ---
-
 
 # Prise en main de l’apprentissage automatique en temps réel (Alpha)
 
@@ -52,4 +52,3 @@ Pour créer un nouveau jeu de données destiné à l&#39;apprentissage automatiq
 ## Étapes suivantes {#next-steps}
 
 Une fois que vous avez préparé vos données pour l&#39;apprentissage automatique en temps réel, début en suivant le [Guide d&#39;utilisation du bloc-notes d&#39;apprentissage automatique en temps réel](./rtml-authoring-notebook.md) pour savoir comment créer et télécharger un modèle ONNX dans le magasin de modèles d&#39;apprentissage automatique en temps réel.
-
