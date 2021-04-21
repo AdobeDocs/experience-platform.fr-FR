@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; connecteur eCommerce ; commerce électronique
 solution: Experience Platform
 title: Configuration d’un flux de données pour une connexion à la source de commerce électronique dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source dans un  [!DNL Platform] jeu de données. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte de commerce électronique.
+exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1317'
 ht-degree: 4%
 
 ---
-
 
 # Configuration d’un flux de données pour une connexion eCommerce dans l’interface utilisateur
 
