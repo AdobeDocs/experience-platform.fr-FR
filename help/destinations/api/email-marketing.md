@@ -3,16 +3,16 @@ keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Connectez-vous aux destinations de marketing par courrier électronique et activez les données à l’aide de l’API du service de flux.
 description: Ce document couvre la création de destinations de marketing par courrier électronique à l’aide de l’API Adobe Experience Platform.
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1705'
 ht-degree: 71%
 
 ---
-
 
 # Connectez-vous aux destinations de marketing par courrier électronique et activez les données à l’aide de l’API du service de flux.
 
