@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; accès aux données ; spark sdk ; api d’accès aux données ; recette d’étincelles ; lire spark ; écrire spark
 solution: Experience Platform
 title: Accès aux données à l’aide de Spark dans Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Le document suivant contient des exemples d’accès aux données à l’aide de Spark en vue de les utiliser dans Data Science Workspace.
+exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 0%
 
 ---
-
 
 # Accès aux données à l’aide de Spark dans Data Science Workspace
 
