@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; accès aux données ; api d’accès aux données ; accès aux données de requête
 solution: Experience Platform
 title: Données des ensembles de données de vue à l’aide de l’API d’accès aux données
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Découvrez comment localiser, accéder et télécharger des données stockées dans un jeu de données à l’aide de l’API d’accès aux données de Adobe Experience Platform. Certaines des fonctionnalités uniques de l’API Data Access vous seront également présentées comme la pagination et les téléchargements partiels.
+exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1398'
 ht-degree: 72%
 
 ---
-
 
 # Données du jeu de données de vue à l’aide de l’API [!DNL Data Access]
 
@@ -28,7 +28,7 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
