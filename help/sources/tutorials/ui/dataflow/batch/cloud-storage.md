@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; flux de données ; flux de données
 solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de lot d’Enregistrements Cloud dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit la procédure à suivre pour configurer un nouveau flux de données à l’aide de votre compte d’enregistrement cloud.
+exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
 translation-type: tm+mt
-source-git-commit: 1fb4a272a914bf4ce7653f3f4f7fff63f36f9a48
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1922'
 ht-degree: 3%
 
 ---
-
 
 # Configuration d’un flux de données pour une connexion par lots à un enregistrement cloud dans l’interface utilisateur
 
