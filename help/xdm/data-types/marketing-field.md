@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: Type de données de champ de préférence marketing générique
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM du champ de préférence marketing générique.
+exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
 translation-type: tm+mt
-source-git-commit: f5ec59e609fda66d379847dca068d19d4cce8228
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '534'
 ht-degree: 2%
 
 ---
-
 
 # [!UICONTROL Type de données ] champ de préférence marketing générique
 
