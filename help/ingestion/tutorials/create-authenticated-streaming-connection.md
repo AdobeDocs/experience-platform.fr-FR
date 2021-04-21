@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; connexion en flux continu authentifiée ; connexion en flux continu ; créer une connexion en flux continu ; créer une connexion en flux continu authentifiée ; assimilation en flux continu ; assimilation ;
 solution: Experience Platform
 title: Créer une connexion de diffusion en continu authentifiée
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: La collecte de données authentifiées permet aux services Adobe Experience Platform, tels que le Profil client et l’identité en temps réel, de faire la distinction entre les enregistrements provenant de sources approuvées et les sources non approuvées.
+exl-id: 14228cd9-4508-4605-8f50-04a74f1c6236
 translation-type: tm+mt
-source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 23%
 
 ---
-
 
 # Créer une connexion en continu authentifiée
 
