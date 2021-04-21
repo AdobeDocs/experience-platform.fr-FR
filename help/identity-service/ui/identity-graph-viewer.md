@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; visualiseur de graphiques d'identité ; visualiseur de graphiques d'identité ; visionneuse de graphiques ; visionneuse de graphiques ; espace de nommage d'identité ; espace de nommage d'identité ; identité ; identité ; service d'identité ; service d'identité
 solution: Experience Platform
 title: Présentation de la visionneuse de graphiques d’identité
-topic: tutorial
+topic-legacy: tutorial
 description: Un graphique d'identité est une carte des relations entre différentes identités pour un client particulier, qui vous permet de visualiser comment votre client interagit avec votre marque sur différents canaux.
+exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
 translation-type: tm+mt
-source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1037'
 ht-degree: 3%
 
 ---
-
 
 # Présentation du lecteur de graphique d’identité
 
