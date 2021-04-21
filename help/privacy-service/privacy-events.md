@@ -2,20 +2,20 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: S'abonner aux Événements Privacy Service
-topic: privacy events
+topic-legacy: privacy events
 description: Découvrez comment vous abonner à des événements Privacy Service à l’aide d’un crochet Web préconfiguré.
+exl-id: 9bd34313-3042-46e7-b670-7a330654b178
 translation-type: tm+mt
-source-git-commit: 2b919a3b6cbbd59521874cfd2d11e20de3077740
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 7%
 
 ---
 
-
 # S&#39;abonner à [!DNL Privacy Service Events]
 
-[!DNL Privacy Service Events] sont des messages fournis par Adobe Experience Platform  [!DNL Privacy Service], qui tirent parti des Événements Adobe I/O envoyés à un webhook configuré pour faciliter l&#39;automatisation efficace des demandes d&#39;emploi. Elles réduisent ou éliminent la nécessité de consulter l&#39;API [!DNL Privacy Service] afin de vérifier si une tâche est terminée ou si un certain jalon dans un flux de travail a été atteint.
+[!DNL Privacy Service Events] sont des messages fournis par Adobe Experience Platform  [!DNL Privacy Service], qui tirent parti des Événements d&#39;Adobe I/O envoyés à un webhook configuré pour faciliter l&#39;automatisation efficace des demandes d&#39;emploi. Elles réduisent ou éliminent la nécessité de consulter l&#39;API [!DNL Privacy Service] afin de vérifier si une tâche est terminée ou si un certain jalon dans un flux de travail a été atteint.
 
 Il existe actuellement quatre types de notifications liées au cycle de vie de la tâche de demande d’accès à des informations personnelles :
 
