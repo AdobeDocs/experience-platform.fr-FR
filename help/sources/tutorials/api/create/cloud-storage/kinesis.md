@@ -7,18 +7,14 @@ type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à un compte Kinesis à l’aide de l’API de service de flux.
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 26%
+source-wordcount: '543'
+ht-degree: 27%
 
 ---
 
 # Créer une connexion source [!DNL Amazon Kinesis] à l’aide de l’API du service de flux
-
->[!NOTE]
->
->Le connecteur [!DNL Amazon Kineses] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../../../home.md#terms-and-conditions).
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
