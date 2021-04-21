@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; diffusion en continu ; assimilation en flux continu ; validation de l’assimilation en flux continu ; validation de l’assimilation en flux continu ; validation ; validation synchrone ; validation synchrone ; validation asynchrone ; validation asynchrone ;
 solution: Experience Platform
 title: Validation de l'envoi en flux continu
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 'L’assimilation en flux continu vous permet de transférer vos données vers Adobe Experience Platform à l’aide de points de terminaison en flux continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.'
+exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '898'
 ht-degree: 81%
 
 ---
-
 
 # Validation de l’ingestion par flux
 
@@ -29,7 +29,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
