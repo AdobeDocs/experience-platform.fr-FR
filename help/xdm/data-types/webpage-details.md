@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; Détails de la page Web ; type de données ; type de données ; type de données ; page Web
 solution: Experience Platform
 title: Type de données Détails de la page Web
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM (Experience Data Model) des détails de la page Web.
+exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 10%
 
 ---
-
 
 # [!UICONTROL Type de données ] détaillé de la page Web
 
