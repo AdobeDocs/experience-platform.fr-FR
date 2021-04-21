@@ -7,18 +7,14 @@ type: Tutorial
 description: Découvrez comment connecter un Oracle à un Experience Platform à l’aide de l’API de service de flux.
 exl-id: b1cea714-93ff-425f-8e12-6061da97d094
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '536'
-ht-degree: 26%
+source-wordcount: '520'
+ht-degree: 27%
 
 ---
 
 # Créez une connexion source [!DNL Oracle] à l’aide de l’API [!DNL Flow Service].
-
->[!NOTE]
->
->Le connecteur [!DNL Oracle] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../../../home.md#terms-and-conditions).
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
