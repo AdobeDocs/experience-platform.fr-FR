@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Glossaire de Adobe Experience Platform
-topic: getting started
+topic-legacy: getting started
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
+exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '7139'
+source-wordcount: '7137'
 ht-degree: 12%
 
 ---
-
 
 # Glossaire Adobe Experience Platform {#adobe-experience-platform-glossary}
 
@@ -23,7 +23,7 @@ ht-degree: 12%
 
 **Action** : Dans  [!DNL Platform Launch]le cas présent, une action est un type spécifique de composant de règle qui définit ce qui doit se produire une fois qu’un événement s’est produit et que les conditions ont été évaluées et transmises.
 
-**Activer** : Activer est l’action effectuée par un utilisateur pour mapper un segment ou des profils à une destination telle que  [!DNL Oracle Eloqua],  [!DNL Google] ou  [!DNL Salesforce Marketing Cloud].
+**Activer** : Activer est l’action entreprise par un utilisateur pour mapper un segment ou des profils à une destination telle que  [!DNL Oracle Eloqua],  [!DNL Google] ou  [!DNL Salesforce Marketing Cloud].
 
 **Activité** : Dans  [!DNL Offer Decisioning], une activité contient la logique qui sous-tend la sélection d’une offre.
 
