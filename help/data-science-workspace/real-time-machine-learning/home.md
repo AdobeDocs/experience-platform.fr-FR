@@ -2,16 +2,16 @@
 keywords: Experience Platform ; guide du développeur ; Espace de travail des données ; sujets populaires ; apprentissage automatique en temps réel ;
 solution: Experience Platform
 title: Présentation de l'apprentissage automatique en temps réel
-topic: Overview
+topic-legacy: Overview
 description: L'apprentissage automatique en temps réel peut considérablement améliorer la pertinence de votre contenu d'expérience numérique pour vos utilisateurs finaux. Cela est rendu possible en tirant parti des référencements en temps réel et de l’apprentissage continu sur le bord de l’expérience.
+exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '549'
 ht-degree: 5%
 
 ---
-
 
 # Présentation de l&#39;apprentissage automatique en temps réel (Alpha)
 
@@ -73,7 +73,7 @@ L&#39;apprentissage automatique en temps réel est actuellement en alpha. Les fo
 
 |  | Alpha (mai) |
 | --- | --- |
-| **Fonctionnalités** | - Utilisation du modèle de bloc-notes RTML, création, test et déploiement d&#39;un modèle d&#39;apprentissage automatique personnalisé. <br> - Appui à l&#39;importation de modèles d&#39;apprentissage automatique préformés. <br> - SDK d&#39;apprentissage automatique en temps réel. <br> - Ensemble de noeuds de création de départ. <br> - Déployé sur Adobe Experience Platform Hub. |
+| **Fonctionnalités** | - Utilisation du modèle de bloc-notes RTML, création, test et déploiement d&#39;un modèle d&#39;apprentissage automatique personnalisé. <br> - Soutien à l&#39;importation de modèles d&#39;apprentissage automatique préformés. <br> - SDK d&#39;apprentissage automatique en temps réel. <br> - Ensemble de noeuds de création de départ. <br> - Déployé sur Adobe Experience Platform Hub. |
 | **Disponibilité** | Amérique du Nord |
 | **Noeuds de création** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
 | **Score des durées d’exécution** | ONNX |
@@ -81,4 +81,3 @@ L&#39;apprentissage automatique en temps réel est actuellement en alpha. Les fo
 ## Étapes suivantes
 
 Vous pouvez commencer par suivre le [guide de prise en main](./getting-started.md). Ce guide vous guide tout au long de la configuration de toutes les conditions préalables requises pour créer un modèle d’apprentissage automatique en temps réel.
-
