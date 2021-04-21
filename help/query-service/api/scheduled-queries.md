@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; requêtes planifiées ; requête planifiée ;
 solution: Experience Platform
 title: Point de terminaison de l'API Requêtes planifiées
-topic: scheduled queries
+topic-legacy: scheduled queries
 description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour les requêtes planifiées avec l’API Requête Service.
+exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 92%
 
 ---
-
 
 # Point de terminaison des requêtes planifiées
 
