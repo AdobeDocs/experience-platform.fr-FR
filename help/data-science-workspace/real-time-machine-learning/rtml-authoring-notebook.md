@@ -2,16 +2,16 @@
 keywords: Experience Platform ; guide du développeur ; Espace de travail des données ; sujets populaires ; apprentissage automatique en temps réel ; référence au noeud ;
 solution: Experience Platform
 title: Gérer les ordinateurs portables d'apprentissage en temps réel
-topic: Training and scoring a ML model
+topic-legacy: Training and scoring a ML model
 description: Le guide suivant décrit les étapes nécessaires à la création d'une application d'apprentissage automatique en temps réel dans Adobe Experience Platform JupyterLab.
+exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 0%
 
 ---
-
 
 # Gérer les ordinateurs portables d&#39;apprentissage en temps réel (Alpha)
 
