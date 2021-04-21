@@ -2,17 +2,17 @@
 keywords: Experience Platform ; JupyterLab ; blocs-notes ; Espace de travail des données ; rubriques populaires ; analyser les blocs-notes de données
 solution: Experience Platform
 title: Analyse de vos données à l'aide de portables
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Ce didacticiel se concentre sur l’utilisation des ordinateurs portables Jupyter, construits dans Data Science Workspace, pour accéder à vos données, les explorer et les visualiser.
+exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
 translation-type: tm+mt
-source-git-commit: 6908c582cb7e0d60b82112dbc0854411d76b4fd4
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1731'
 ht-degree: 76%
 
 ---
-
 
 # Analyse de vos données à l’aide de notebooks
 
