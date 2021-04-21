@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement de fichiers Azure ; connecteur d'Enregistrement de fichiers Azure
 solution: Experience Platform
 title: Créer une connexion à la source d'Enregistrement de fichiers Azure dans l'interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source d'Enregistrement de fichiers Azure à l'aide de l'interface utilisateur de Adobe Experience Platform.
+exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 12%
 
 ---
-
 
 # Créer une connexion source [!DNL Azure File Storage] dans l’interface utilisateur
 
