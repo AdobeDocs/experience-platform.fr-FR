@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service catalogue ; catalogue ; service catalogue ; emplacement des données ; emplacement des données ; Data Management ; data Management ; lignée ; lignée ; catalogue ; activer le jeu de données
 solution: Experience Platform
 title: Présentation du service de catalogue
-topic: overview
+topic-legacy: overview
 description: Le service de catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
+exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 45%
 
 ---
-
 
 # [!DNL Catalog Service] présentation
 
