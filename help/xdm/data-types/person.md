@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; personne ; type de données ; type de données ; type de données ;
 solution: Experience Platform
 title: Type de données de personne
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM (Person Experience Data Model).
+exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
 translation-type: tm+mt
-source-git-commit: 194b604d4b23f2acfaa4243155b04a6793fb0727
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 16%
 
 ---
-
 
 # [!UICONTROL Type ] de données personnelles
 
