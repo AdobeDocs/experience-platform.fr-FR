@@ -2,16 +2,16 @@
 keywords: Experience Platform ; profil ; profil client en temps réel ; interface utilisateur ; interface utilisateur ; personnalisation ; tableau de bord profil ; tableau de bord
 title: Tableau de bord Destinations
 description: Adobe Experience Platform fournit un tableau de bord par lequel vous pouvez vue des informations importantes sur les principales destinations de votre entreprise.
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 6a34a796-24a1-450a-af39-60113928873e
 translation-type: tm+mt
-source-git-commit: 2f2459c1c88c97a3ab322b08ee178463fbb4a592
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 1%
 
 ---
-
 
 # (bêta) [!UICONTROL tableau de bord Destinations]
 
