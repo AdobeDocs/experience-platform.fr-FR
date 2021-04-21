@@ -2,17 +2,17 @@
 keywords: Experience Platform;accueil;rubriques populaires;Microsoft Dynamics;microsoft dynamic;dynamic;Dynamics;Dynamics
 solution: Experience Platform
 title: Création d'une connexion Microsoft Dynamics Source à l'aide de l'API du service de flux
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter la plate-forme à un compte Microsoft Dynamics à l'aide de l'API de service de flux.
+exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 27%
 
 ---
-
 
 # Créez une connexion source [!DNL Microsoft Dynamics] à l’aide de l’API [!DNL Flow Service].
 
