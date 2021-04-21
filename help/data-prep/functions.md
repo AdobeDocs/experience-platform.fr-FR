@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; ui guide ; mapper ; mapper ; champs de mappage ; fonctions de mappage ;
 solution: Experience Platform
 title: Fonctions de mappage des préférences de données
-topic: overview
+topic-legacy: overview
 description: Ce document présente les fonctions de mappage utilisées avec l’API de données.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '3798'
+source-wordcount: '3797'
 ht-degree: 17%
 
 ---
