@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service Catalogue ; api catalogue ; appendice
 solution: Experience Platform
 title: Annexe du Guide de l’API du service de catalogue
-topic: developer guide
+topic-legacy: developer guide
 description: Ce document contient des informations supplémentaires pour vous aider à utiliser l’API Catalogue de Adobe Experience Platform.
+exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 75%
 
 ---
-
 
 # [!DNL Catalog Service] Annexe du guide d’API
 
