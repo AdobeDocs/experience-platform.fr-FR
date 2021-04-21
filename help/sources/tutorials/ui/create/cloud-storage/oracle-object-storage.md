@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement d'objet Oracle ; enregistrement d'objet oracle
 solution: Experience Platform
 title: Création d’une connexion à la source de l’Enregistrement d’objet d’Oracle dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion à la source de l’Enregistrement d’objets d’Oracle à l’aide de l’interface utilisateur Adobe Experience Platform.
+exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
 translation-type: tm+mt
-source-git-commit: c1453a9f0be42f834d35af871051324df8dadf80
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '462'
 ht-degree: 10%
 
 ---
-
 
 # Créer une connexion à la source [!DNL Oracle Object Storage] dans l&#39;interface utilisateur
 
