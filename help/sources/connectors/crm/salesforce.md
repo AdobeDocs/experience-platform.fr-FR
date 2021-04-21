@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;schéma crm;crm;CRM;salesforce;Salesforce
 solution: Experience Platform
 title: Présentation du connecteur source Salesforce
-topic: overview
+topic-legacy: overview
 description: Découvrez comment connecter Salesforce à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
+exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 8%
 
 ---
-
 
 # [!DNL Salesforce] connecteur
 
