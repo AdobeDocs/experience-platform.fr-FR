@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Connecteur d’attributs du client
 solution: Experience Platform
 title: Présentation du connecteur source des attributs du client
-topic: overview
+topic-legacy: overview
 description: Découvrez comment connecter les attributs du client à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur
+exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 35%
 
 ---
-
 
 # Connecteur Attributs du client
 
