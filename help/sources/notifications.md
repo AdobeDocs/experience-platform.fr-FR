@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; notifications
-description: En vous abonnant aux Événements Adobe I/O, vous pouvez utiliser des hameçons Web pour recevoir des notifications concernant les états de flux de vos connexions source. Ces notifications contiennent des informations sur la réussite de l'exécution de flux ou les erreurs qui ont contribué à l'échec de l'exécution.
+description: En vous abonnant à des Événements d’Adobe I/O, vous pouvez utiliser des hameçons Web pour recevoir des notifications concernant les états de flux de vos connexions source. Ces notifications contiennent des informations sur la réussite de l'exécution de flux ou les erreurs qui ont contribué à l'échec de l'exécution.
 solution: Experience Platform
 title: Notifications d'exécution de flux
-topic: overview
+topic-legacy: overview
+exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 5%
 
 ---
-
 
 # Notifications d’exécution de flux
 
@@ -19,7 +19,7 @@ Adobe Experience Platform permet l’assimilation de données à partir de sourc
 
 [[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de  [!DNL Platform]. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Avec Adobe I/O Événements, vous pouvez vous abonner à des événements et utiliser des hameçons Web pour recevoir des notifications concernant l’état de vos exécutions de flux. Ces notifications contiennent des informations sur la réussite de l&#39;exécution de flux ou les erreurs qui ont contribué à l&#39;échec de l&#39;exécution.
+Avec les Événements d’Adobe I/O, vous pouvez vous abonner aux événements et utiliser des hameçons Web pour recevoir des notifications concernant l’état de vos exécutions de flux. Ces notifications contiennent des informations sur la réussite de l&#39;exécution de flux ou les erreurs qui ont contribué à l&#39;échec de l&#39;exécution.
 
 Ce document décrit la procédure à suivre pour s’abonner à des événements, enregistrer des hameçons Web et recevoir des notifications contenant des informations sur l’état de vos exécutions de flux.
 
