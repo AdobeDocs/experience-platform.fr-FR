@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; Apache Hive ; Hive ; ruche ; Vie HDI Azure ; Vues HDInsights ; Vignettes azures ;
 solution: Experience Platform
 title: Présentation d'Apache Hive sur Azure HDInsights Source Connector
-topic: overview
+topic-legacy: overview
 description: Découvrez comment connecter Apache Hive sur Azure HDInsights à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
+exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 10%
 
 ---
-
 
 # (Bêta) [!DNL Apache Hive] sur le connecteur [!DNL Azure HDInsights]
 
