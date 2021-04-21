@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; pql ; PQL ; Langage de Requête de Profil ; quantificateurs logiques ; quantificateur logique ;
 solution: Experience Platform
 title: Quantificateurs logiques PQL
-topic: developer guide
+topic-legacy: developer guide
 description: Les quantificateurs logiques peuvent être utilisés pour insérer des conditions dans des tableaux dans le langage de requête de profil (PQL).
+exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 79%
 
 ---
-
 
 # Fonctions de quantificateur logique
 
