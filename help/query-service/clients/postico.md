@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de Requête ; service de requête ; postico ; Postico ; connexion au service de requête ;
 solution: Experience Platform
 title: Connecter Postico au service de Requête
-topic: connect
+topic-legacy: connect
 description: Ce document contient le lien permettant d’installer le client de sauvegarde Postico pour Adobe Experience Platform Requête Service.
+exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 16%
 
 ---
-
 
 # Connectez [!DNL Postico] à Requête Service (Mac)
 
