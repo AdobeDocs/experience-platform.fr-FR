@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; commerce ; type de données ; type de données ; type de données ;
 solution: Experience Platform
 title: Type de données Commerce
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM (Commerce Experience Data Model).
+exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 translation-type: tm+mt
-source-git-commit: 8bbb062df47b6e94630626d0a89a179d759d922d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 4%
 
 ---
-
 
 # [!UICONTROL Type ] de données commerciales
 
