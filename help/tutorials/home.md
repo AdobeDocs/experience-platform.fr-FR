@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;workflow
 solution: Experience Platform
 title: Adobe Experience Platform Query Service
-topic: overview
+topic-legacy: overview
 description: Ces tutoriels ont été conçus pour compléter les informations contenues dans la documentation d’Experience Platform. Pour obtenir de meilleurs résultats, gardez les documents à portée de main pendant que vous suivez les tutoriels.
+exl-id: dc4d02a2-ab76-47fc-8875-951cbdbd796e
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 76%
 
 ---
-
 
 # Présentation des tutoriels d’Adobe Experience Platform
 
