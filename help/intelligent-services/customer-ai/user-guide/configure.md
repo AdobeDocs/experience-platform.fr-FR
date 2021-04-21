@@ -2,13 +2,13 @@
 keywords: Experience Platform ; guide de l’utilisateur ; assistance client ; rubriques populaires ; configurer l’instance ; créer l’instance ;
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Configuration d’une instance d’API client
-topic: Instance creation
+topic-legacy: Instance creation
 description: Intelligent Services fournit Customer AI en tant que service Adobe Sensei simple d’emploi pouvant être configuré pour de multiples cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1302'
 ht-degree: 34%
 
 ---
