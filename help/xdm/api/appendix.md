@@ -3,15 +3,15 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Annexe du Guide de l'API du registre des schémas
 description: Ce document fournit des informations supplémentaires relatives au travail avec l’API Schema Registry.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 48%
 
 ---
-
 
 # Annexe du guide de l&#39;API du registre de schémas
 
@@ -33,7 +33,7 @@ Les paramètres de requête les plus courants pour la pagination sont les suivan
 | --- | --- |
 | `start` | Indiquez où doivent commencer les résultats répertoriés. Cette valeur peut être obtenue à partir de l&#39;attribut `_page.next` d&#39;une réponse de liste et utilisée pour accéder à la page de résultats suivante. Si la valeur `_page.next` est nulle, aucune page supplémentaire n’est disponible. |
 | `limit` | Limite le nombre de ressources renvoyé. Exemple : `limit=5` renverra une liste de cinq ressources. |
-| `orderby` | Trie les résultats en fonction d’une propriété spécifique. Exemple : `orderby=title` triera les résultats par titre dans l’ordre croissant (A-Z). Si vous Ajoutez un `-` avant la valeur du paramètre (`orderby=-title`), les éléments sont triés par titre dans l’ordre décroissant (Z-A). |
+| `orderby` | Triez les résultats en fonction d’une propriété spécifique. Exemple : `orderby=title` triera les résultats par titre dans l’ordre croissant (A-Z). Si vous Ajoutez un `-` avant la valeur du paramètre (`orderby=-title`), les éléments sont triés par titre dans l’ordre décroissant (Z-A). |
 
 ### Filtrage {#filtering}
 
