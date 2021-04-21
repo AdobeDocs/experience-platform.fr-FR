@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; RGD ; RGD ; RGD ; APCCP ; APC ; APP ; APP ; Pdpa ; LGPD ; lgpd ; faq ; FAQ ; réglementation ; réglementation ; réglementation ; réglementation ; réglementation ; respect de la vie privée ; confidentialité ; confidentialité ;
 solution: Experience Platform
 title: FAQ sur le Règlement sur la confidentialité
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: Ce document fournit des réponses aux questions les plus fréquemment posées sur les réglementations en matière de protection des renseignements personnels et leur mise en oeuvre à Adobe Experience Cloud.
+exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 35%
 
 ---
-
 
 # FAQ sur les règles de confidentialité
 
