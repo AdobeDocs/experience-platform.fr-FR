@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; PSQL ; psql ; service de Requête ; service de requête ; métadonnées ; commandes ; commandes de métadonnées ;
 solution: Experience Platform
 title: Commandes PostgreSQL de métadonnées dans Requête Service
-topic: metadata
+topic-legacy: metadata
 description: Liste de commandes PostgreSQL actuellement prises en charge pour interroger des métadonnées dans Adobe Experience Platform Requête Service.
+exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 82%
 
 ---
-
 
 # Commandes PostgreSQL de métadonnées dans Requête Service
 
@@ -45,4 +45,3 @@ Pour les métadonnées de votre jeu de données, les commandes PostgreSQL suivan
 Toutes les commandes qui commencent par `\d` peuvent être combinées. Par exemple, vous pouvez émettre `\dtsn` pour afficher une liste de tous les tableaux, les séquences et les schémas. `\d` en elle-même affiche toutes les tables visibles, les vues, les vues matérialisées et les séquences.
 
 Pour plus d’informations sur les commandes énumérées ci-dessus, consultez la documentation à l’adresse [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Toutefois, sachez que toutes les options présentées dans la documentation PostgreSQL ne sont pas prises en charge par [!DNL Experience Platform].
-
