@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;PQL;pql;profil requête language
 solution: Experience Platform
 title: Présentation du langage PQL (profil Requête Language)
-topic: developer guide
+topic-legacy: developer guide
 description: Ce guide présente un aperçu général de PQL, couvre les instructions de formatage et apporte des exemples d’expressions PQL.
+exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 89%
 
 ---
-
 
 # [!DNL Profile Query Language] Présentation (PQL)
 
