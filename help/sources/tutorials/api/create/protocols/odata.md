@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; OData générique ; données génériques
 solution: Experience Platform
 title: Création d’une connexion source OData générique à l’aide de l’API du service de flux
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter des OData génériques à Adobe Experience Platform à l’aide de l’API de service de flux.
+exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 27%
 
 ---
-
 
 # Créez une connexion source [!DNL Generic OData] à l’aide de l’API [!DNL Flow Service].
 
@@ -48,7 +48,7 @@ Pour plus d&#39;informations sur la prise en main, consultez [ce document OData]
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
