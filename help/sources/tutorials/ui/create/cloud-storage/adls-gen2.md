@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; Azure Data Lake Enregistrement Gen2 ; ADLS Gen2 ; adls gen2 ; adls connector
 solution: Experience Platform
 title: Créer une connexion source Azure Data Lake Enregistrement Gen2 dans l'interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Azure Data Lake Enregistrement Gen2 à l'aide de l'interface utilisateur de Adobe Experience Platform.
+exl-id: d81b7593-08a3-43f8-a8bc-f5547a6cd55a
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 12%
 
 ---
-
 
 # Créer une connexion source [!DNL Azure Data Lake Storage Gen2] dans l’interface utilisateur
 
