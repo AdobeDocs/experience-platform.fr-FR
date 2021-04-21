@@ -6,7 +6,7 @@ topic-legacy: ui guide
 description: Le créateur de segments de l’interface utilisateur Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de Profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
 workflow-type: tm+mt
 source-wordcount: '2000'
 ht-degree: 45%
@@ -117,7 +117,7 @@ L’agrégation est maintenant ajoutée. Vous pouvez désormais sélectionner la
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
 
-### Fonctions de comptage
+### Compter les fonctions {#count-functions}
 
 Les fonctions de décompte dans le créateur de segments permettent de rechercher des événements spécifiés et de comptabiliser le nombre de fois où ils ont été effectués. Les fonctions de décompte prises en charge dans le créateur de segments sont &quot;Au moins&quot;, &quot;Au plus&quot;, &quot;Exactement&quot;, &quot;Entre&quot; et &quot;Tous&quot;.
 
