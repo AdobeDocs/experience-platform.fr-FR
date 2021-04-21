@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation des données ; lot ; lot ; activer le jeu de données ; aperçu de l'assimilation par lot ; aperçu de l'assimilation par lot ;
 solution: Experience Platform
 title: Présentation de l'importation par lots
-topic: overview
+topic-legacy: overview
 description: L'API d'assimilation des données Adobe Experience Platform vous permet d'assimiler des données dans la plate-forme sous forme de fichiers de commandes. Les données ingérées peuvent être les données de profil provenant d’un fichier plat dans un système de gestion de la relation client (tel qu’un fichier Parquet) ou les données conformes à un schéma connu dans le registre du modèle de données d’expérience (XDM).
+exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 77%
 
 ---
-
 
 # Présentation de l&#39;assimilation par lots
 
@@ -50,7 +50,7 @@ Pour charger un fichier de plus de 512 Mo, vous devez le diviser en petits bloc
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
