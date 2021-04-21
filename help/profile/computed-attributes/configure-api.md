@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API
 title: Configuration d’un champ d’attribut calculé
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Les attributs calculés sont des fonctions utilisées pour agrégat des données au niveau du événement en attributs au niveau du profil. Pour configurer un attribut calculé, vous devez d’abord identifier le champ dans lequel la valeur d’attribut calculé sera conservée. Ce champ peut être créé à l'aide de l'API de registre de Schéma pour définir un schéma et un mixin personnalisé qui contiendra le champ d'attribut calculé.
+exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
 translation-type: tm+mt
-source-git-commit: 2a4fb8af8cd29254c499bfa6bfb8b316a4834526
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '713'
 ht-degree: 18%
 
 ---
-
 
 # (Alpha) Configurez un champ d&#39;attribut calculé à l&#39;aide de l&#39;API de registre de Schéma
 
