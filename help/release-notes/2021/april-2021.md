@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 0c9b60fe0777286819841c520a41007634622578
+source-git-commit: 1072b95469fac19a2e03ca4eacaae05250e11be8
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 38%
+source-wordcount: '868'
+ht-degree: 37%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 38%
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
@@ -36,6 +37,14 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 | Prise en charge de l’assimilation en flux continu | Vous pouvez désormais utiliser les fonctions de prép de données lors de la création d’une connexion source de flux continu. Pour plus d’informations, voir le didacticiel sur la [création d’une connexion source de flux continu dans l’interface utilisateur](../../sources/tutorials/ui/create/streaming/http.md). |
 
 Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation des ](../../data-prep/home.md).
+
+## [!DNL Experience Data Model (XDM)] {#xdm}
+
+Le modèle de données d’expérience (XDM) est une spécification open source conçue pour améliorer la puissance des expériences numériques. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En respectant les normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Recommandations schémas par secteur | Lors de la sélection de classes et de mixins dans l’interface utilisateur de l’éditeur de Schémas, vous pouvez utiliser un nouveau filtre pour vue des composants standard recommandés en fonction de votre secteur d’activité spécifique. Voir la documentation sur [les modèles de données du secteur](https://www.adobe.com/go/xdm-industry-erds-en) pour plus d&#39;informations sur la façon dont ces composants se connectent les uns aux autres pour différents cas d&#39;utilisation du secteur. |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
