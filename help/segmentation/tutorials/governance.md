@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; conformité à l’utilisation des données ; appliquer ; appliquer la conformité à l’utilisation des données ; Service de segmentation ; segmentation ; Segmentation ;
 solution: Experience Platform
 title: Appliquer la conformité à l’utilisation des données pour un segment d’Audience à l’aide d’API
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour appliquer la conformité de l’utilisation des données pour les segments ciblés de profils client en temps réel à l’aide d’API.
+exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1362'
 ht-degree: 50%
 
 ---
-
 
 # Application de la conformité de l’utilisation des données à un segment ciblé à l’aide d’API
 
@@ -37,7 +37,7 @@ Les sections suivantes contiennent des informations supplémentaires que vous de
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
