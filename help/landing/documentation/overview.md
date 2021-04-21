@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; CJA ; analyse de parcours ; analyse de parcours client ; orchestration de campagne ; orchestration ; parcours client ; parcours ; orchestration de parcours ; capacité ; workflow
 solution: Experience Platform
 title: Présentation de la documentation de l’Experience Platform
-topic: overview
+topic-legacy: overview
 description: La documentation Adobe Experience Platform est fournie dans plusieurs formats, notamment des présentations, des tutoriels et des guides de l’interface utilisateur et de l’API. Voici une brève description des types de documentation les plus courants disponibles pour les services Experience Platform.
+exl-id: 1c201d42-4a53-4076-9363-a89dddbd0ba5
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 55%
 
 ---
-
 
 # Présentation de la documentation Experience Platform
 
@@ -36,4 +36,3 @@ La documentation de l’Experience Platform est disponible dans plusieurs format
 * **Tutoriel** : un tutoriel est un guide détaillé de l’interface utilisateur, ou de l’API, ou un mélange des deux, qui permet d’obtenir un résultat spécifique. Contrairement à un guide de développement, un tutoriel d’API ne porte que sur un ou deux points de terminaison et n’est pas une ressource d’API exhaustive. De même, les tutoriels de l’interface utilisateur ne portent que sur des étapes spécifiques et non sur l’interface utilisateur complète disponible pour ce service. Les tutoriels font souvent partie d’un workflow plus large et présentent, dans des « étapes suivantes », d’autres tutoriels que vous pourriez souhaiter tester.
 
 * **Guide de l’interface utilisateur :** un guide de l’interface utilisateur décrit les actions disponibles dans l’interface  [!DNL Platform] utilisateur pour un service spécifique. Ces documents contiennent des captures d’écran et des étapes axées sur l’interaction avec Platform via l’interface utilisateur. Tout comme un guide destiné aux développeurs, le guide de l’interface utilisateur décrit toutes les actions et options disponibles, y compris les &quot;pièges&quot; à éviter. Il s’agit de la ressource d’utilisation de l’interface utilisateur la plus détaillée.
-
