@@ -2,16 +2,16 @@
 keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; rubriques populaires ; modèles ; api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Point de terminaison de l'API Modèles
-topic: Developer guide
+topic-legacy: Developer guide
 description: Un modèle est une instance d’une recette d’apprentissage automatique formée à l’aide de données historiques et de configurations dans le but de résoudre un cas d’usage commercial.
+exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 65%
 
 ---
-
 
 # Point de terminaison des modèles
 
@@ -434,7 +434,7 @@ Une réponse réussie renvoie une charge utile contenant un objet json avec une 
 
 ## Récupérer un modèle transcodé spécifique {#retrieve-transcoded-model}
 
-Vous pouvez récupérer un modèle transcodé spécifique en effectuant une demande de GET avec votre `{MODEL_ID}` et l&#39;ID d&#39;un modèle transcodé.
+Vous pouvez récupérer un modèle transcodé spécifique en exécutant une demande de GET avec votre `{MODEL_ID}` et l&#39;id d&#39;un modèle transcodé.
 
 **Format d’API**
 
@@ -474,5 +474,3 @@ Une réponse réussie renvoie une charge utile contenant un objet JSON avec les 
     "deprecated": false
 }
 ```
-
-
