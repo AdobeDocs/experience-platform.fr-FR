@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;catalogue;api;update an object
 solution: Experience Platform
 title: Mettre à jour un objet de catalogue
-topic: developer guide
-description: 'Vous pouvez mettre à jour un objet Catalogue en incluant son identifiant dans le chemin d’accès d’une requête PATCH. Ce document couvre l’utilisation des champs et l’utilisation de la notation de correctif JSON pour effectuer des opérations de PATCH sur des objets de catalogue. '
+topic-legacy: developer guide
+description: Vous pouvez mettre à jour un objet Catalogue en incluant son identifiant dans le chemin d’accès d’une requête PATCH. Ce document couvre l’utilisation des champs et l’utilisation de la notation de correctif JSON pour effectuer des opérations de PATCH sur des objets de catalogue.
+exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 81%
 
 ---
-
 
 # Mise à jour d’un objet Catalogue
 
