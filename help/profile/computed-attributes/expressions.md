@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API
 title: Exemples d’Expressions PQL pour les attributs calculés
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Les attributs calculés sont des fonctions utilisées pour agrégat des données au niveau du événement en attributs au niveau du profil. Ces fonctions nécessitent l’utilisation d’expressions PQL (Profil Requête Language) valides. Ce guide décrit certaines des expressions PQL les plus couramment utilisées pour les attributs calculés.
+exl-id: 7c80e2d3-919a-47f9-a59f-833a70f02a8f
 translation-type: tm+mt
-source-git-commit: 92533f732cc14b57d2a0a34ce9afe99554f9af04
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '965'
 ht-degree: 2%
 
 ---
-
 
 # (Alpha) Exemples d’expressions PQL pour les attributs calculés
 
@@ -34,7 +34,7 @@ Le tableau suivant fournit des détails sur les expressions de requête couramme
 | Nombre de téléchargements d’images au cours des 7 derniers jours. | xEvent[(l&#39;horodatage a lieu &lt; 7 jours auparavant) et eventType=&quot;download&quot; et contentType = &quot;image&quot;].count() | Profil et EE[] | Entier |
 | Somme des clients dépensés pour des articles de sport au cours des 7 derniers jours. | xEvent[(l’horodatage a lieu &lt; 7 jours auparavant) et eventType=&quot;transaction&quot; et catégorie = &quot;biens sportifs&quot;].sum(commerce.order.priceTotal) | Profil et EE[] | Entier ou Doublon |
 | Les clients dépensent en moyenne pour les articles de sport au cours des 7 derniers jours.<br/><br/>**Remarque :** Nécessite la création de trois attributs calculés. | **ca1:** xEvent[(l’horodatage survient  &lt; 7=&quot;&quot; days=&quot;&quot; before=&quot;&quot; now=&quot;&quot;>.sum(commerce.order.priceTotal)<br/><br/>**ca2:** xEvent[(l’horodatage survient  &lt; 7=&quot;&quot; days=&quot;&quot; before=&quot;&quot; now=&quot;&quot;>.count()ca3:ca1 / ca2]]<br/><br/>**** | Profil et EE[] | Double |
-| Le client a-t-il dépensé plus de 100 $ en biens sportifs au cours des 7 derniers jours ?<br/><br/>**Remarque :** Nécessite la création de deux attributs calculés. | **ca1:** xEvent[(l’horodatage survient  &lt; 7=&quot;&quot; days=&quot;&quot; before=&quot;&quot; now=&quot;&quot;>.sum(commerce.order.priceTotal)<br/><br/>**ca2:** ca1 > 100] | Profil et EE[] | Booléen |
+| Le client a-t-il dépensé plus de 100 $ en biens sportifs au cours des 7 derniers jours ?<br/><br/>**Remarque :** Nécessite la création de deux attributs calculés. | **ca1:** xEvent[(l’horodatage se produit  &lt; 7=&quot;&quot; days=&quot;&quot; before=&quot;&quot; now=&quot;&quot;>.sum(commerce.order.priceTotal)<br/><br/>**ca2:** ca1 > 100] | Profil et EE[] | Booléen |
 | Le client a-t-il effectué un achat au cours des 7 derniers jours ? | chain(xEvent, horodatage, [A: WHAT(eventType = &quot;transaction&quot;) WHEN(&lt; 7 jours auparavant)]) | Profil et EE[] | Booléen |
 | Les dépenses les plus faibles des utilisateurs pour les articles de sport au cours des 7 derniers jours. | xEvent[(l’horodatage a lieu &lt; 7 jours auparavant) et eventType=&quot;transaction&quot; et catégorie = &quot;biens sportifs&quot;].min(commerce.order.priceTotal) | Profil et EE[] | Entier ou Doublon |
 | Les plus gros consommateurs dépensent dans les produits sportifs au cours des 7 derniers jours. | xEvent[(l’horodatage a lieu &lt; 7 jours auparavant) et eventType=&quot;transaction&quot; et catégorie = &quot;biens sportifs&quot;].max(commerce.order.priceTotal) | Profil et EE[] | Entier ou Doublon |
