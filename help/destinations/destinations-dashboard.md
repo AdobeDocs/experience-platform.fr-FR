@@ -2,10 +2,10 @@
 keywords: Experience Platform ; interface utilisateur ; interface utilisateur ; personnalisation ; tableau de bord d’utilisation des licences ; tableau de bord ; utilisation des licences ; droits ; consommation
 title: Tableau de bord Destinations
 description: 'L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez vue des informations importantes sur les principales destinations de votre entreprise. '
-topic: guide
+topic-legacy: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: ecce042332fed790bbcf8b8a554217842f63a647
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 6%
