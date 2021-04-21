@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; ui guide ;
 solution: Experience Platform
 title: Mappage d’un fichier CSV à un Schéma XDM
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Ce didacticiel explique comment mapper un fichier CSV à un schéma XDM à l’aide de l’interface utilisateur de Adobe Experience Platform.
+exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 16%
 
 ---
-
 
 # Mappage d’un fichier CSV à un schéma XDM
 
