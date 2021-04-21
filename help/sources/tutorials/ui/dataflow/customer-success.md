@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; configurer le flux de données ; connecteur de succès client
 solution: Experience Platform
 title: Configuration d’un flux de données pour une connexion à la source de succès client dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source dans un  [!DNL Platform] jeu de données. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte de réussite client.
+exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 4%
 
 ---
-
 
 # Configuration d’un flux de données pour une connexion de succès client dans l’interface utilisateur
 
