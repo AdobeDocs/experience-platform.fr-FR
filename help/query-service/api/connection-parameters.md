@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; guide d'api ; paramètres de connexion ; service de Requête ;
 solution: Experience Platform
 title: Point de terminaison de l’API Paramètres de connexion
-topic: connection parameters
+topic-legacy: connection parameters
 description: Vous pouvez récupérer vos paramètres de connexion pour utiliser le service interactif en faisant une demande de GET au point de terminaison /connection_parameters.
+exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 38%
 
 ---
-
 
 # Point de terminaison des paramètres de connexion
 
