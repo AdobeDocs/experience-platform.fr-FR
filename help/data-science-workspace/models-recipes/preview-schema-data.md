@@ -2,17 +2,17 @@
 keywords: Experience Platform ; données de schéma de prévisualisation ; Espace de travail des sciences de données ; sujets populaires
 solution: Experience Platform
 title: Prévisualisation du Schéma de vente au détail et du jeu de données
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Le document suivant décrit la prévisualisation des schémas et des jeux de données sur Adobe Experience Platform.
+exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
 translation-type: tm+mt
-source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '236'
 ht-degree: 25%
 
 ---
-
 
 # Prévisualisation du schéma de vente au détail et du jeu de données
 
@@ -32,7 +32,7 @@ Sélectionnez **[!UICONTROL Prévisualisation Dataset]** situé en haut à droit
 
 ## Étapes suivantes
 
-Vous avez maintenant saisi avec succès des données d&#39;exemple Ventes au détail dans [!DNL Experience Platform] à l&#39;aide du script d&#39;amorçage fourni.
+Vous avez maintenant assimilé avec succès des données d&#39;exemple Ventes au détail dans [!DNL Experience Platform] à l&#39;aide du script d&#39;amorçage fourni.
 
 Pour continuer à travailler sur les données ingérées, procédez de la façon suivante :
 - [Analyse de vos données à l’aide des ordinateurs portables Jupyter](../jupyterlab/analyze-your-data.md)
