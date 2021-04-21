@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; connecteur source Marketo ; espaces de nommage ; schémas
 solution: Experience Platform
 title: 'Espaces de nommage Marketo '
-topic: aperçu
+topic-legacy: overview
 description: Ce document présente un aperçu des espaces de nommage personnalisés requis lors de la création d'un connecteur source Marketo Engage.
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 16%
+source-wordcount: '1176'
+ht-degree: 15%
 
 ---
 
