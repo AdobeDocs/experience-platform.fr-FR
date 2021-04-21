@@ -2,12 +2,12 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; prép. de données ; guide d’api ; données d’exemple ;
 solution: Experience Platform
 title: Exemple de point de terminaison de l’API de données
-topic: sample data
+topic-legacy: sample data
 description: 'Vous pouvez utiliser le point de terminaison `/samples’ dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation les données d’exemple de mappage. '
 translation-type: tm+mt
-source-git-commit: a2c966ae2401faa572cbba974ce6f572d5280a8f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '401'
 ht-degree: 8%
 
 ---
