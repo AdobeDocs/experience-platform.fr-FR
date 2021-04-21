@@ -2,12 +2,12 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Marketo Engage ; marketing à engager ; Marketo ; mappage
 solution: Experience Platform
 title: Mappage de champs pour la source du Marketo Engage
-topic: aperçu
+topic-legacy: overview
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '425'
 ht-degree: 3%
 
 ---
