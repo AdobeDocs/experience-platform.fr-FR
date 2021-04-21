@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Data Explorer Azure ; explorateur de données azur ; explorateur de données ; Data Explorer
 solution: Experience Platform
 title: Création d'une connexion à la source du Data Explorer Azure dans l'interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Azure Data Explorer à l'aide de l'interface utilisateur de Adobe Experience Platform.
+exl-id: 561bf948-fc92-4401-8631-e2a408667507
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 11%
 
 ---
-
 
 # Créer une connexion source [!DNL Azure Data Explorer] dans l’interface utilisateur
 
