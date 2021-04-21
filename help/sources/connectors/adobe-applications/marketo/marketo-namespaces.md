@@ -5,10 +5,10 @@ title: 'Espaces de nommage Marketo '
 topic-legacy: overview
 description: Ce document présente un aperçu des espaces de nommage personnalisés requis lors de la création d'un connecteur source Marketo Engage.
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: bea6b35627b0e913c894c38ba9553085ba0aa26f
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 15%
+source-wordcount: '1215'
+ht-degree: 18%
 
 ---
 
@@ -50,6 +50,10 @@ L&#39;espace de nommage [!DNL Marketo] est utilisé dans l&#39;identité Princip
 
 Le tableau suivant contient des informations sur la configuration sous-jacente des espaces de nommage [!DNL Marketo].
 
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+
 | Nom d’affichage | Symbole d’identité | Type d’identité | Type d’émetteur | Type d&#39;entité émetteur | Exemple d&#39;identifiant Munchkin |
 | --- | --- | --- | --- | --- | --- |
 | `marketo_person_{MUNCHKIN_ID}` | généré automatiquement | `CROSS_DEVICE` | [!DNL Marketo] | `person` | `123-ABC-789` |
@@ -70,6 +74,10 @@ Si vous êtes abonné à l&#39;intégration [!DNL Salesforce], l&#39;espace de n
 
 Le tableau suivant contient des informations sur la configuration sous-jacente des espaces de nommage [!DNL Salesforce].
 
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+
 | Nom d’affichage | Symbole d’identité | Type d’identité | Type d’émetteur | Type d&#39;entité émetteur | [!DNL Salesforce] Exemple d’identifiant d’organisation d’abonnement |
 | --- | --- | --- | --- | --- | --- |
 | `salesforce_person_{SALESFORCE_ORGANIZATION_ID}` | généré automatiquement | `CROSS_DEVICE` | [!DNL Salesforce] | `person` | `00DA0000000Hz79` |
@@ -87,6 +95,10 @@ Si vous êtes abonné à l&#39;intégration [!DNL Dynamics], l&#39;espace de nom
 
 Le tableau suivant contient des informations sur la configuration sous-jacente des espaces de nommage [!DNL Dynamics].
 
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+
 | Nom d’affichage | Symbole d’identité | Type d’identité | Type d’émetteur | Type d&#39;entité émetteur | [!DNL Salesforce] Exemple d’identifiant d’organisation d’abonnement |
 | --- | --- | --- | --- | --- | --- |
 | `microsoft_person_{DYNAMICS_ID}` | généré automatiquement | `CROSS_DEVICE` | [!DNL Microsoft] | `person` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
@@ -95,6 +107,8 @@ Le tableau suivant contient des informations sur la configuration sous-jacente d
 | `microsoft_opportunity_contact_connection_{DYNAMICS_ID}` | généré automatiquement | `B2B_OPPORTUNITY_PERSON` | [!DNL Microsoft] | `opportunity relationship` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_campaign_{DYNAMICS_ID}` | généré automatiquement | `B2B_CAMPAIGN` | [!DNL Microsoft] | `campaign` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_campaign_member_{DYNAMICS_ID}` | généré automatiquement | `B2B_CAMPAIGN_MEMBER` | [!DNL Microsoft] | `campaign member` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!DNL Marketo] schémas
 
