@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; Amazon Redshift ; Amazon redshift ; redshift ; redshift ; Redshift ; Redshift
 solution: Experience Platform
 title: Présentation du connecteur source de redirection Amazon
-topic: overview
+topic-legacy: overview
 description: Découvrez comment connecter Amazon Redshift à Adobe Experience Platform à l'aide des API ou de l'interface utilisateur.
+exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 11%
 
 ---
-
 
 # (Bêta) [!DNL Amazon Redshift] connecteur
 
