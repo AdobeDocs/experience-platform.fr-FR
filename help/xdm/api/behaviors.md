@@ -3,15 +3,15 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Point de terminaison de l'API Comportements
 description: Le point de terminaison /comportements de l'API de registre de Schéma vous permet de récupérer tous les comportements disponibles dans le conteneur global.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 5%
 
 ---
-
 
 # Point de terminaison des comportements
 
