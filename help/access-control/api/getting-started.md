@@ -2,18 +2,18 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; contrôle d'accès ; api ; prise en main
 solution: Experience Platform
 title: Guide de l'API contrôle d'accès
-topic: developer guide
+topic-legacy: developer guide
 description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Les sections suivantes fournissent des informations supplémentaires que les développeurs devront connaître pour pouvoir invoquer l'API de registre du Schéma.
+exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '389'
-ht-degree: 66%
+ht-degree: 67%
 
 ---
 
-
-# [!DNL Access Control] Guide de l’API
+# [!DNL Access Control] Guide des API
 
 [!DNL Access control] car  [!DNL Experience Platform] est administré par le  [Adobe Admin Console](https://adminconsole.adobe.com). Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../home.md).
 
@@ -30,7 +30,7 @@ Les sections suivantes contiennent des informations supplémentaires que vous de
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
