@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; flux continu ; assimilation en flux continu ; dépannage ; dépannage de l’assimilation en flux continu ; flux d’assimilation faq ; faq ;
 solution: Experience Platform
 title: Guide de dépannage des encombrements en flux continu
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: Ce document répond aux questions les plus fréquentes sur l’ingestion par flux sur Adobe Experience Platform.
+exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 69%
 
 ---
-
 
 # Guide de dépannage de l’ingestion par flux
 
