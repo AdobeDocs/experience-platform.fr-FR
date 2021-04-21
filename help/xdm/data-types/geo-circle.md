@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;schéma;Schéma;XDM;champs;schémas;Schémas;geo;circle;datatype;data-type;data type;data type;
 solution: Experience Platform
 title: Type de données du cercle géographique
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM du cercle géographique.
+exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 23%
 
 ---
-
 
 # [!UICONTROL Type de données Geo ] Circledata
 
