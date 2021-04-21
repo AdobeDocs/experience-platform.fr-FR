@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; tâches de segment ; tâche de segment ; API ; api ;
 solution: Experience Platform
 title: Point de terminaison de l’API Tâches de segment
-topic: developer guide
+topic-legacy: developer guide
 description: Le point de terminaison des tâches de segment dans l’API Service de segmentation Adobe Experience Platform vous permet de gérer par programmation les tâches de segment pour votre entreprise.
+exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 32%
 
 ---
-
 
 # Point de terminaison des tâches de segment
 
