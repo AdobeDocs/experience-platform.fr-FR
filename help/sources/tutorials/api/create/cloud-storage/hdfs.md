@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform ; accueil ; sujets populaires ; Système de fichiers distribué Apache Hadoop ; Apache hadoop ; hdfs ; HDFS
+keywords: Experience Platform ; accueil ; sujets populaires ; Apache Hadoop Distributed File System ; Apache hadoop ; hdfs ; HDFS
 solution: Experience Platform
 title: Création d’une connexion source Apache HDFS à l’aide de l’API du service de flux
-topic: overview
+topic-legacy: overview
 type: Tutorial
-description: Découvrez comment connecter un système de fichiers distribué Apache Hadoop à Adobe Experience Platform à l’aide de l’API Flow Service.
+description: Découvrez comment connecter un système de fichiers distribué d'Hadoop Apache à Adobe Experience Platform à l'aide de l'API de service de flux.
+exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 26%
 
 ---
-
 
 # Créez une connexion source [!DNL Apache] HDFS à l&#39;aide de l&#39;API [!DNL Flow Service]
 
@@ -22,7 +22,7 @@ ht-degree: 26%
 
 [!DNL Flow Service] sert à collecter et à centraliser les données client provenant de diverses sources disparates pour les importer dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel utilise l&#39;API [!DNL Flow Service] pour vous guider dans les étapes de connexion d&#39;un système de fichiers distribué Apache Hadoop (ci-après appelé &quot;HDFS&quot;) à [!DNL Experience Platform].
+Ce didacticiel utilise l&#39;API [!DNL Flow Service] pour vous guider dans les étapes de connexion d&#39;un système de fichiers distribué d&#39;Hadoop Apache (ci-après appelé &quot;HDFS&quot;) à [!DNL Experience Platform].
 
 ## Prise en main
 
@@ -44,7 +44,7 @@ Les sections suivantes fournissent des informations supplémentaires que vous de
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
