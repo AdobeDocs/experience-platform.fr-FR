@@ -2,16 +2,16 @@
 keywords: informations ; attribution ai ; attribution ai ; informations d’identification Ai ; service de requête AAI ; requêtes d’attribution ; scores d’attribution
 solution: Intelligent Services, Experience Platform
 title: Analyse des scores d’attribution à l’aide de Requête Service
-topic: Attribution AI queries
+topic-legacy: Attribution AI queries
 description: Découvrez comment utiliser Adobe Experience Platform Requête Service pour analyser les scores Attribution AI.
+exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
 translation-type: tm+mt
-source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
-
 
 # Analyse des scores d’attribution à l’aide de Requête Service
 
