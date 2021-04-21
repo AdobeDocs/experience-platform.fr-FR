@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Oracle DB ; oracle db
 solution: Experience Platform
-title: Création d’une connexion à la source de la base de données Oracle dans l’interface utilisateur
-topic: overview
+title: Création d'une connexion à la source de la base de données d'Oracle dans l'interface utilisateur
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Oracle DB à l’aide de l’interface utilisateur de Adobe Experience Platform.
+exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 12%
 
 ---
-
 
 # Créer une connexion source [!DNL Oracle DB] dans l’interface utilisateur
 
@@ -42,7 +42,7 @@ Pour accéder à votre compte [!DNL Oracle DB] sur [!DNL Platform], vous devez f
 | `connectionString` | Chaîne de connexion utilisée pour la connexion à [!DNL Oracle DB]. Le modèle de chaîne de connexion [!DNL Oracle DB] est le suivant : `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Identificateur unique nécessaire pour créer une connexion. L&#39;ID de spécification de connexion pour [!DNL Oracle DB] est `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-Pour plus d&#39;informations sur la prise en main, consultez [ce document Oracle](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
+Pour plus d&#39;informations sur la prise en main, consultez [ce document d&#39;Oracle](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
 
 ## Connectez votre compte [!DNL Oracle DB]
 
@@ -56,7 +56,7 @@ Sous la catégorie **[!UICONTROL Bases de données]**, sélectionnez **[!UICONTR
 
 ![catalogue](../../../../images/tutorials/create/oracle/catalog.png)
 
-La page **[!UICONTROL Se connecter à Oracle DB]** s&#39;affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter à la base de données d&#39;Oracle]** s&#39;affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
