@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; Azure synapse Analytics ; Synapse ; synapse ; azure synapse Analytics
+keywords: Experience Platform ; accueil ; rubriques populaires ; Analyses d’Azure synapse ; Synapse ; synapse ; Analyses d’azure synapse
 solution: Experience Platform
-title: Création d’une connexion à la source Azure synapse Analytics dans l’interface utilisateur
-topic: overview
+title: Création d’une connexion à la source Analytics d’Azure synapse dans l’interface utilisateur
+topic-legacy: overview
 type: Tutorial
-description: Découvrez comment créer une connexion source Azure synapse Analytics (ci-après appelée "Synapse") à l’aide de l’interface utilisateur de Adobe Experience Platform.
+description: Découvrez comment créer une connexion source Analytics d’Azure synapse (ci-après appelée "Synapse") à l’aide de l’interface utilisateur de Adobe Experience Platform.
+exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 12%
 
 ---
-
 
 # Créer une connexion source [!DNL Azure Synapse Analytics] dans l’interface utilisateur
 
@@ -51,11 +51,11 @@ Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com), puis 
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
-Sous la catégorie **[!UICONTROL Bases de données]**, sélectionnez **[!UICONTROL Azure synapse Analytics]**. Si vous utilisez ce connecteur pour la première fois, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter les données]** pour créer un connecteur [!DNL Synapse].
+Sous la catégorie **[!UICONTROL Bases de données]**, sélectionnez **[!UICONTROL Analyses d’Azure synapse]**. Si vous utilisez ce connecteur pour la première fois, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter les données]** pour créer un connecteur [!DNL Synapse].
 
 ![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
-La page **[!UICONTROL Se connecter à Azure synapse Analytics]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter à Analyses d’Azure synapse]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
