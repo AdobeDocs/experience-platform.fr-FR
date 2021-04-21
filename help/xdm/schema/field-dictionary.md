@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;schéma;Schéma;champs;champs;champs;champs standard;champs standard;champs standard;dictionnaire;dictionnaire;mappage;mappage
 solution: Experience Platform
 title: Dictionnaire de champs Modèle de données d’expérience (XDM)
-topic: overviews
+topic-legacy: overviews
 description: Le modèle de données d’expérience (XDM) définit un ensemble de champs standard qui peuvent être utilisés lors de la composition de schémas Adobe Experience Platform. L’utilisation de ces champs entraîne un comportement cohérent entre les services de Platform, car tous les services qui utilisent XDM comprendront explicitement les définitions spécifiques fournies par ces champs.
+exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 translation-type: tm+mt
-source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '25239'
+source-wordcount: '25238'
 ht-degree: 98%
 
 ---
-
 
 # Dictionnaire des champs XDM
 
@@ -466,7 +466,7 @@ Vous pouvez utiliser la fonctionnalité de recherche de [!DNL Schema Editor] pou
 | xdm:subscriptionDate | Date d’abonnement | Date et heure auxquelles l’utilisateur final s’est abonné à un sujet de notification. Un utilisateur final est abonné si une date d’abonnement lui est associée, et si `unsubscriptiondetails/unsubscriptionDate` est vide. | chaîne | date-heure | date-heure | https://ns.adobe.com/experience/campaign/notificationsubscription, https://ns.adobe.com/experience/campaign/profile-all |
 | xdm:subscriptions | Abonnements | Abonnements auxquels ce profil est associé, ce qui inclut les abonnements terminés, expirés ou épuisés. | tableau |  | tableau | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions |
 | xdm:supplierName | Nom du fournisseur | Distributeur du produit. | chaîne |  | chaîne | https://ns.adobe.com/xdm/context/product |
-| xdm:syncedRemarketingAudiences | Segments synchronisés | Liste des entités de reciblage de recherche qui ont été synchronisées avec le partenaire [!DNL adCloud] pour créer des audiences sur la plateforme, telles que RLSA pour [!DNL Google] ou WCA pour Facebook | tableau |  | tableau | https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/adcloud/profile-all |
+| xdm:syncedRemarketingAudiences | Segments synchronisés | Liste des entités de reciblage de recherche synchronisées avec le partenaire [!DNL adCloud] pour créer des audiences sur la plateforme, telles que RLSA pour [!DNL Google] ou WCA pour Facebook | tableau |  | tableau | https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/adcloud/profile-all |
 | xdm:tags | Balises | Les balises sont utilisées pour indiquer comment les alias représentés par une source de données doivent être interprétés par les applications utilisant ces alias. Exemples : * `isAVID` : sources de données représentant les identifiants de visiteurs [!DNL Analytics]* `isCRSKey` : sources de données représentant des alias qui doivent être utilisés comme clés dans CRS. Les balises sont définies lors de la création de la source de données, mais elles sont également incluses dans les messages de pipeline lors du référencement d’une source de données. | tableau |  | tableau | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/offer-detail, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-technical-details |
 | xdm:templateID | Identifiant du modèle | Identifiant du modèle de diffusion utilisé pour initialiser cette diffusion. Le type du modèle utilisé dans Adobe Campaign peut être identifié à l’aide de `messageClass`.* `messageClass` = `oneTime` : le modèle est un modèle de diffusion standard.* `messageClass` = `continuous` : le modèle est un modèle de diffusion récurrente.* `messageClass` = `transactional` : le modèle est un modèle de message transactionnel. | entier |  | ent | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
 | xdm:templateName | Nom interne du modèle de diffusion | Identifiant convivial de l’entité parent (dans le cas d’une classe de message basée sur un événement ou continu) de l’activité de campagne à l’origine de ce message. | chaîne |  | chaîne | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
