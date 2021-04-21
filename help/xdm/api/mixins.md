@@ -3,12 +3,12 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Point de terminaison de l’API Mixins
 description: Le point de terminaison /mixins de l’API de registre de Schéma vous permet de gérer par programmation les mixins XDM dans votre application d’expérience.
-topic: developer guide
+topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1134'
 ht-degree: 13%
 
 ---
