@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; guide de l’utilisateur sandbox ; guide sandbox
 solution: Experience Platform
 title: Guide de l’interface utilisateur Sandbox
-topic: user guide
+topic-legacy: user guide
 description: Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux environnements de test dans l’interface utilisateur d’Adobe Experience Platform.
+exl-id: b258c822-5182-4217-9d1b-8196d889740f
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '633'
 ht-degree: 48%
 
 ---
-
 
 # Guide de l’interface utilisateur Sandbox
 
