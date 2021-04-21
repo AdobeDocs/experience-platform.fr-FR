@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; données imbriquées ; dépannage ; faq ; Ingestion ; assimilation par lots ; assimilation par lots ;
 solution: Experience Platform
 title: Guide de dépannage de l'ingestion par lot
-topic: troubleshooting
-description: 'Cette documentation vous aidera à répondre aux questions fréquentes sur les API Batch Data Ingestion d’Adobe Experience Platform. '
+topic-legacy: troubleshooting
+description: Cette documentation vous aidera à répondre aux questions fréquentes sur les API Batch Data Ingestion d’Adobe Experience Platform.
+exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 87%
 
 ---
-
 
 # Guide de dépannage de l’ingestion par lots
 
