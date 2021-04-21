@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; requêtes d’événement d’expérience ; requête d’événement d’expérience ; requête de Événement d’expérience ;
 solution: Experience Platform
 title: Exemples de Requêtes pour les Événements d’expérience
-topic: queries
+topic-legacy: queries
 type: Tutorial
 description: Le document suivant fournit des exemples de requêtes impliquant des Événements d’expérience dans Adobe Experience Platform Requête Service.
+exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 58%
 
 ---
-
 
 # Exemples de requêtes pour [!DNL Experience Events]
 
@@ -190,4 +190,3 @@ ORDER BY pageViews DESC;
 ## Étapes suivantes
 
 Pour plus d’informations et des exemples de requête avec des fonctions définies par Adobe, consultez le guide des fonctions définies par Adobe. Pour des directives générales sur l’exécution de requêtes, consultez le [guide sur l’exécution de requêtes dans Query Service](./writing-queries.md).
-
