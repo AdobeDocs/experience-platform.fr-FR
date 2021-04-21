@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; résolution des problèmes ; API ; profil unifié ; Profil unifié ; unifié ; Profil ; rtcp ; activer le profil ; Activer le profil ; Union schéma d' ; UNION d' ;  d'
 title: Guide de l’interface utilisateur du Profil client en temps réel
-topic: guide
+topic-legacy: guide
 description: Real-time Customer Profile offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur d’Adobe Experience Platform.
+exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 11%
 
 ---
-
 
 # [!DNL Real-time Customer Profile] Guide de l’interface
 
