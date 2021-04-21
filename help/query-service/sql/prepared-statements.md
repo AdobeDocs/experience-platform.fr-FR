@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; instructions préparées ; préparé ; sql ;
 solution: Experience Platform
 title: Déclarations préparées dans Requête Service
-topic: prepared statements
+topic-legacy: prepared statements
 description: Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform Query Service prend en charge les instructions préparées à l’aide d’une requête paramétrée.
+exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 89%
 
 ---
-
 
 # Instructions préparées
 
