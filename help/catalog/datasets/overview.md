@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; emplacement des données ; emplacement des données ; Data Management ; data Management ; lignage ; lignée ; type de données ; types de données ; type de données ; type de données
 solution: Experience Platform
 title: Présentation des jeux de données
-topic: datasets
+topic-legacy: datasets
 description: Ce document présente de manière générale les jeux de données dans Experience Platform.
+exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '707'
 ht-degree: 43%
 
 ---
-
 
 # Présentation des jeux de données
 
