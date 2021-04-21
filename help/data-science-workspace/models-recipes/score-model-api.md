@@ -2,17 +2,17 @@
 keywords: Experience Platform ; Score a model ; Data Science Workspace ; sujets populaires ; api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Score d'un modèle à l'aide de l'API d'apprentissage automatique Sensei
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Ce didacticiel vous montrera comment tirer parti des API d'apprentissage automatique Sensei pour créer une expérience et une exécution d'expérience.
+exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 91%
 
 ---
-
 
 # Score d’un modèle à l’aide de [!DNL Sensei Machine Learning API]
 
