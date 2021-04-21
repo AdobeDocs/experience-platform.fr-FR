@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; guide de dépannage ; faq ; dépannage ;
 solution: Experience Platform
 title: Guide de dépannage de requête Service
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: Ce document contient des informations sur les codes d'erreur courants que vous rencontrez et les causes possibles.
+exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 82%
 
 ---
-
 
 # [!DNL Query Service] Guide de dépannage
 
