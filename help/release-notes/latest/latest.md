@@ -6,10 +6,10 @@ last-update: April 21, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: 9b63a47a8da07830313c0a8e690c7247dc3fbe6b
+source-git-commit: f0350be580394516016373b1754a49951b58e846
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 37%
+source-wordcount: '883'
+ht-degree: 36%
 
 ---
 
@@ -96,5 +96,6 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | [!DNL Marketo Engage] (bêta) | Vous pouvez désormais créer une connexion source [!DNL Marketo Engage] à l’aide de l’interface utilisateur pour apporter des données B2B à la plate-forme et garder ces données à jour à l’aide d’applications connectées à la plate-forme. Pour plus d&#39;informations, consultez la [[!DNL Marketo Engage] documentation du connecteur source](../../sources/connectors/adobe-applications/marketo/marketo.md). |
+| Sources bêta passant à GA | Les sources suivantes ont été promues de la version bêta à la version GA : <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
