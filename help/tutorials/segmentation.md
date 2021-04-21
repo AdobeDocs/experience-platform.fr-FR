@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Tutoriels de segmentation
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform Segmentation Service propose une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir des données Real-time Customer Profile. Ces segments sont configurés et conservés de manière centralisée sur Platform et sont facilement accessibles depuis n’importe quelle solution Adobe.
+exl-id: e45de6b5-ff71-4908-ad79-898084763704
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 55%
 
 ---
-
 
 # Tutoriels de segmentation
 
