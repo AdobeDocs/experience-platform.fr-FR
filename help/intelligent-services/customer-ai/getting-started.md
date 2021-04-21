@@ -2,16 +2,16 @@
 keywords: Experience Platform ; prise en main ; assistance client ; rubriques populaires
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Prise en main dans l’API client
-topic: Getting started
+topic-legacy: Getting started
 description: Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés.
+exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 75%
 
 ---
-
 
 # Prise en main de Customer AI
 
