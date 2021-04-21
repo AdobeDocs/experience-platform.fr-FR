@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; éditeur de Requêtes ; éditeur de requêtes ; service de Requête ; service de requête ;
 solution: Experience Platform
 title: Guide de l’interface utilisateur de l’éditeur de requêtes
-topic: query editor
+topic-legacy: query editor
 description: L’éditeur de Requêtes est un outil interactif fourni par Adobe Experience Platform Requête Service, qui vous permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
+exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 68%
 
 ---
-
 
 # [!DNL Query Editor] Guide de l’interface
 
