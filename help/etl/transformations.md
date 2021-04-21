@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;etl;ETL;etl transformations;ETL
 solution: Experience Platform
 title: Exemple de transformations ETL
-topic: overview
+topic-legacy: overview
 description: Cet article présente les exemples de transformations qu’un développeur ETL (extraction, transformation et chargement) peut rencontrer.
+exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 88%
 
 ---
-
 
 # Exemple de transformations ETL
 
@@ -307,4 +307,3 @@ Ci-dessous, le tableau des identités transformées en XDM :
       }]
    }
 ```
-
