@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Principes de base de l’API Experience Platform
-topic: getting started
+topic-legacy: getting started
 description: Ce document donne un bref aperçu de certaines technologies et syntaxes sous-jacentes impliquées dans les API Experience Platform.
+exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 translation-type: tm+mt
-source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 53%
+source-wordcount: '511'
+ht-degree: 54%
 
 ---
-
 
 # Principes de base de l’API Experience Platform
 
