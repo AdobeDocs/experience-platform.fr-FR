@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Tutoriels sur la gouvernance et la confidentialité des données
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Ce document présente un aperçu des différents didacticiels disponibles relatifs à la gouvernance des données Adobe Experience Platform et au Adobe Experience Platform Privacy Service.
+exl-id: c3cef447-b343-445b-a3ed-54f873f6dfb9
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 50%
 
 ---
-
 
 # [!DNL Data Governance] et  [!DNL Privacy] Tutorials
 
@@ -36,6 +36,6 @@ Une fois que vous avez ajouté des étiquettes d’utilisation pour vos données
 
 Les segments qui sont activés pour une utilisation dans [!DNL Real-time Customer Profile] contiennent un ID de stratégie de fusion dans leur définition de segment. Cette stratégie de fusion contient des informations sur les jeux de données à inclure dans le segment, qui à leur tour contiennent les libellés d’utilisation de données applicables. Pour connaître les étapes spécifiques à l’application de la conformité de l’utilisation des données pour un segment ciblé, suivez le [tutoriel sur l’application de la conformité de l’utilisation des données pour les segments](../segmentation/tutorials/governance.md).
 
-## Prise en main d’[!DNL Privacy Service] 
+## Prise en main d’[!DNL Privacy Service]
 
 [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur qui vous permettent de gérer les données personnelles de vos titulaires de données (clients) dans les applications Adobe Experience Cloud. [!DNL Privacy Service] fournit aussi un mécanisme central d’audit et de connexion qui vous permet d’accéder à l’état et aux résultats des tâches impliquant des applications [!DNL Experience Cloud] Pour obtenir des instructions sur la création et le suivi des tâches [!DNL Privacy Service], suivez les étapes fournies dans le [guide du développeur Privacy Service](../privacy-service/api/getting-started.md) ou le [guide de l&#39;utilisateur Privacy Service](../privacy-service/ui/overview.md).
