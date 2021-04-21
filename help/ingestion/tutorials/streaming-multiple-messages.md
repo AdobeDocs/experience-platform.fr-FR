@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; flux continu ; assimilation ; flux multiple de messages ; messages multiples ;
 solution: Experience Platform
 title: Envoyer plusieurs messages dans une seule requête HTTP
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Ce document fournit un didacticiel pour l’envoi de plusieurs messages à Adobe Experience Platform dans une seule requête HTTP à l’aide de l’assimilation en flux continu.
+exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 75%
 
 ---
-
 
 # Envoyer plusieurs messages dans une seule requête HTTP
 
