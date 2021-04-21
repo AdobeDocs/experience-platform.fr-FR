@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; abonnement ; type de données ; type de données ; type de données ;
 solution: Experience Platform
 title: Type de données d'Abonnement
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM (Abonnement Experience Data Model).
+exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 translation-type: tm+mt
-source-git-commit: 8ccf0a53f231c9f59cd87735126b180c6b678e51
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 27%
 
 ---
-
 
 # [!UICONTROL Type ] Subscriptiondata
 
