@@ -3,15 +3,15 @@ keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;XDM syste
 solution: Experience Platform
 title: Définition des champs d'un tableau dans l'interface utilisateur
 description: Découvrez comment définir un champ de tableau dans l'interface utilisateur de l'Experience Platform.
-topic: user guide
+topic-legacy: user guide
+exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 1%
 
 ---
-
 
 # Définition des champs de tableau dans l’interface utilisateur
 
