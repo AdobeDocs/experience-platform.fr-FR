@@ -3,17 +3,17 @@ keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Guide de l’API Privacy Service
 description: L’API du Privacy Service permet aux développeurs de créer et de gérer les demandes de clients d’accéder à leurs données personnelles ou de les supprimer dans des applications Experience Cloud, conformément aux règles légales de confidentialité. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '795'
-ht-degree: 26%
+ht-degree: 27%
 
 ---
 
-
-# [!DNL Privacy Service] Guide de l’API
+# [!DNL Privacy Service] Guide des API
 
 Adobe Experience Platform [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur qui vous permettent de gérer (d&#39;accéder et de supprimer) les données personnelles de vos personnes de données (clients) à travers les applications Adobe Experience Cloud. [!DNL Privacy Service] fournit aussi un mécanisme central d’audit et de connexion qui vous permet d’accéder à l’état et aux résultats des tâches impliquant des applications [!DNL Experience Cloud]
 
@@ -31,7 +31,7 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md) dans le guide de dépannage[!DNL Experience Platform].
 
-## Collecte des valeurs des en-têtes requis
+## Collecter des valeurs pour les en-têtes requis
 
 Pour appeler l&#39;API [!DNL Privacy Service], vous devez d&#39;abord rassembler vos informations d&#39;identification d&#39;accès à utiliser dans les en-têtes requis :
 
