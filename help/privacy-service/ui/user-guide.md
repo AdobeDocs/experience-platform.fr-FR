@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; exportation ; Exporter
 solution: Experience Platform
 title: Gérer les tâches liées à la confidentialité dans l’interface utilisateur du Privacy Service
-topic: UI guide
+topic-legacy: UI guide
 description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes de confidentialité dans diverses applications Experience Cloud.
+exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 61%
 
 ---
-
 
 # Gérer les tâches de confidentialité dans l’interface utilisateur du Privacy Service
 
