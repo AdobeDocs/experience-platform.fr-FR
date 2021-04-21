@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Salesforce Service Cloud ; salesforce service cloud
 solution: Experience Platform
 title: Création d’une connexion à la source du cloud de service Salesforce dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Salesforce Service Cloud à l’aide de l’interface utilisateur Adobe Experience Platform.
+exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
 translation-type: tm+mt
-source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '482'
 ht-degree: 12%
 
 ---
-
 
 # Créer une connexion source [!DNL Salesforce Service Cloud] dans l’interface utilisateur
 
