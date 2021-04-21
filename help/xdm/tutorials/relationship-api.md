@@ -3,16 +3,16 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Définir une relation entre deux Schémas à l'aide de l'API de registre de Schéma
 description: Ce document fournit un tutoriel indiquant comment définir une relation un-à-un entre deux schémas définis par votre organisation à l’aide de l’API Schema Registry.
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1337'
 ht-degree: 52%
 
 ---
-
 
 # Définissez une relation entre deux schémas à l’aide de l’API [!DNL Schema Registry]
 
