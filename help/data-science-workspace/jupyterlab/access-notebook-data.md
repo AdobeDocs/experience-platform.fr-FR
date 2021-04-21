@@ -2,16 +2,16 @@
 keywords: Experience Platform ; JupyterLab ; blocs-notes ; Espace de travail de données ; rubriques populaires ; %dataset ; mode interactif ; mode batch ; Spark sdk ; python sdk ; accès aux données ; accès aux données du bloc-notes
 solution: Experience Platform
 title: Accès aux données dans les portables Jupyterlab
-topic: Developer Guide
+topic-legacy: Developer Guide
 description: Ce guide porte sur l'utilisation des portables Jupyter, conçus dans Data Science Workspace pour accéder à vos données.
+exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '3101'
 ht-degree: 26%
 
 ---
-
 
 # Accès aux données dans les blocs-notes [!DNL Jupyterlab]
 
@@ -45,14 +45,14 @@ Lors de la lecture de jeux de données avec des ordinateurs portables PySpark et
 
 **Schéma XDM ExperienceEvent :** vous devez être en mesure de lire un maximum de 2 millions de lignes (environ 6,1 Go de données sur le disque) de données XDM en moins de 22 minutes. L’Ajoute de lignes supplémentaires peut entraîner des erreurs.
 
-| Nombre de lignes | 1 K | 10 000 | 100 K | 1 M | 2M |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M | 2M |
 | ----------------------- | ------ | ------ | ----- | ----- | ----- |
 | Taille sur le disque (Mo) | 18,73 | 187,5 | 308 | 3 000 | 6050 |
 | SDK (en secondes) | 20,3 | 86,8 | 63 | 659 | 1315 |
 
 **schéma ad hoc :** vous devez être en mesure de lire un maximum de 5 millions de lignes (environ 5,6 Go de données sur le disque) de données non XDM (ad hoc) en moins de 14 minutes. L’Ajoute de lignes supplémentaires peut entraîner des erreurs.
 
-| Nombre de lignes | 1 K | 10 000 | 100 K | 1 M | 2M | 3M | 5M |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M | 2M | 3M | 5M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
 | Taille sur le disque (en Mo) | 1,21 | 11,72 | 115 | 1120 | 2250 | 3 380 | 5630 |
 | SDK (en secondes) | 7,27 | 9,04 | 27,3 | 180 | 346 | 487 | 819 |
@@ -61,61 +61,61 @@ Lors de la lecture de jeux de données avec des ordinateurs portables PySpark et
 
 **Schéma XDM ExperienceEvent :** vous devriez être en mesure de lire un maximum de 1 million de lignes de données XDM (données de 3 Go sur le disque) en moins de 13 minutes.
 
-| Nombre de lignes | 1 K | 10 000 | 100 K | 1 M |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M |
 | ----------------------- | ------ | ------ | ----- | ----- |
 | Taille sur le disque (Mo) | 18,73 | 187,5 | 308 | 3 000 |
 | Noyau R (en secondes) | 14,03 | 69,6 | 86,8 | 775 |
 
-**schéma ad hoc :** vous devriez être en mesure de lire un maximum de 3 millions de lignes de données ad hoc (293 Mo de données sur le disque) en environ 10 minutes.
+**schéma ad hoc :** vous devriez être en mesure de lire un maximum de 3 millions de lignes de données ad hoc (293 Mo de données sur le disque) en 10 minutes environ.
 
-| Nombre de lignes | 1 K | 10 000 | 100 K | 1 M | 2M | 3M |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M | 2M | 3M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
 | Taille sur le disque (en Mo) | 0,082 | 0,612 | 9.0 | 91 | 188 | 293 |
-| SDK R (en secondes) | 7,7 | 4,58 | 35,9 | 233 | 470,5 | 603 |
+| SDK R (en s) | 7,7 | 4,58 | 35,9 | 233 | 470,5 | 603 |
 
-### Limites de données du bloc-notes PySpark ([!DNL Python] noyau) : {#pyspark-data-limits}
+### Limites des données du bloc-notes PySpark ([!DNL Python] kernel) : {#pyspark-data-limits}
 
-**Schéma XDM ExperienceEvent :** En mode interactif, vous devriez pouvoir lire un maximum de 5 millions de lignes (environ 13,42 Go de données sur disque) de données XDM en 20 minutes environ. Le mode interactif ne prend en charge que 5 millions de lignes. Si vous souhaitez lire des ensembles de données plus volumineux, il est conseillé de passer en mode batch. En mode batch, vous devriez être en mesure de lire un maximum de 500 millions de lignes (environ 1,31 To de données sur disque) de données XDM en 14 heures environ.
+**Schéma XDM ExperienceEvent :** en mode interactif, vous devriez être en mesure de lire un maximum de 5 millions de lignes (environ 13,42 Go de données sur disque) de données XDM en 20 minutes environ. Le mode interactif ne prend en charge que jusqu’à 5 millions de lignes. Si vous souhaitez lire des jeux de données plus volumineux, il est conseillé de passer en mode batch. En mode batch, vous devriez pouvoir lire un maximum de 500 millions de lignes (environ 1,31 To de données sur disque) de données XDM en 14 heures environ.
 
-| Nombre de lignes | 1 K | 10 000 | 100 K | 1 M | 2M | 3M | 5M | 10 millions | 50 M | 100 millions | 500 millions |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M | 2M | 3M | 5M | 10 millions | 50 M | 100 millions | 500 millions |
 |-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
 | Taille du disque | 2,93 Mo | 4,38 Mo | 29,02 | 2.69 Go | 5.39 Go | 8.09 Go | 13.42 Go | 26.82 Go | 134.24 Go | 268.39 Go | 1,31 To |
 | SDK (mode interactif) | 33 s | 32,4 s | 55,1 s | 253,5 s | 489,2 s | 729,6 s | 1 206,8 s | - | - | - | - |
-| SDK (mode Traitement par lots) | 815,8 s | 492,8 s | 379,1 s | 637,4 s | 624,5 s | 869,2 s | 1104,1 s | 1786 s | 5 387,2 s | 1 0624,6 s | 50547s |
+| SDK (mode Batch) | 815,8 s | 492,8 s | 379,1 s | 637,4 s | 624,5 s | 869,2 s | 1104,1 s | 1786 s | 5 387,2 s | 1 0624,6 s | 50547s |
 
-**schéma ad-hoc :** En mode interactif, vous devriez être en mesure de lire un maximum de 5 millions de lignes (environ 5,36 Go de données sur le disque) de données non XDM en moins de 3 minutes. En mode Traitement par lots, vous devriez pouvoir lire un maximum de 1 milliard de lignes (environ 1,05 To de données sur disque) de données non XDM en 18 minutes environ.
+**schéma ad hoc :** en mode interactif, vous devriez être en mesure de lire un maximum de 5 millions de lignes (environ 5,36 Go de données sur le disque) de données non XDM en moins de 3 minutes. En mode Batch, vous devriez être en mesure de lire un maximum de 1 milliard de lignes (environ 1,05 To de données sur disque) de données non-XDM en 18 minutes environ.
 
-| Nombre de lignes | 1 K | 10 000 | 100 K | 1 M | 2M | 3M | 5M | 10 millions | 50 M | 100 millions | 500 millions | 1B |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M | 2M | 3M | 5M | 10 millions | 50 M | 100 millions | 500 millions | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
 | Taille du disque | 1,12 Mo | 11,24 Mo | 109,48 Mo | 2.69 Go | 2.14 Go | 3.21 Go | 5.36 Go | 10.71 Go | 53.58 Go | 107.52 Go | 535.88 Go | 1,05 To |
 | Mode interactif SDK (en secondes) | 28,2 s | 18,6 s | 20,8 s | 20,9 s | 23,8 s | 21,7 s | 24,7 s | - | - | - | - | - |
-| Mode Lot SDK (en secondes) | 428,8 s | 578,8 s | 641,4 s | 538,5 s | 630,9 s | 467,3 s | 411 s | 675 s | 702 s | 719,2 s | 1022,1 s | 1122,3 s |
+| Mode de traitement par lots du SDK (en secondes) | 428,8 s | 578,8 s | 641,4 s | 538,5 s | 630,9 s | 467,3 s | 411 s | 675 s | 702 s | 719,2 s | 1022,1 s | 1122,3 s |
 
-### [!DNL Spark] Limites des données des ordinateurs portables (noyau Scala) :  {#scala-data-limits}
+### [!DNL Spark] Limites des données des blocs-notes (noyau Scala) :  {#scala-data-limits}
 
-**Schéma XDM ExperienceEvent :** En mode interactif, vous devriez pouvoir lire un maximum de 5 millions de lignes (environ 13,42 Go de données sur disque) de données XDM en 18 minutes environ. Le mode interactif ne prend en charge que 5 millions de lignes. Si vous souhaitez lire des ensembles de données plus volumineux, il est conseillé de passer en mode batch. En mode batch, vous devriez être en mesure de lire un maximum de 500 millions de lignes (environ 1,31 To de données sur disque) de données XDM en 14 heures environ.
+**Schéma XDM ExperienceEvent :** en mode interactif, vous devriez être en mesure de lire un maximum de 5 millions de lignes (environ 13,42 Go de données sur disque) de données XDM en 18 minutes environ. Le mode interactif ne prend en charge que jusqu’à 5 millions de lignes. Si vous souhaitez lire des jeux de données plus volumineux, il est conseillé de passer en mode batch. En mode batch, vous devriez pouvoir lire un maximum de 500 millions de lignes (environ 1,31 To de données sur disque) de données XDM en 14 heures environ.
 
-| Nombre de lignes | 1 K | 10 000 | 100 K | 1 M | 2M | 3M | 5M | 10 millions | 50 M | 100 millions | 500 millions |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M | 2M | 3M | 5M | 10 millions | 50 M | 100 millions | 500 millions |
 |---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
 | Taille du disque | 2,93 Mo | 4,38 Mo | 29,02 | 2.69 Go | 5.39 Go | 8.09 Go | 13.42 Go | 26.82 Go | 134.24 Go | 268.39 Go | 1,31 To |
 | Mode interactif SDK (en secondes) | 37,9 s | 22,7 s | 45,6 s | 231,7 s | 444,7 s | 660,6 s | 1100 s | - | - | - | - |
-| Mode Lot SDK (en secondes) | 374,4 s | 398,5 s | 527 s | 487,9 s | 588,9 s | 829 s | 939,1 s | 1 441 s | 5 473,2 s | 10 118,8 | 49 207,6 |
+| Mode de traitement par lots du SDK (en secondes) | 374,4 s | 398,5 s | 527 s | 487,9 s | 588,9 s | 829 s | 939,1 s | 1 441 s | 5 473,2 s | 10 118,8 | 49 207,6 |
 
-**schéma ad-hoc :** en mode interactif, vous devriez pouvoir lire un maximum de 5 millions de lignes (environ 5,36 Go de données sur disque) de données non XDM en moins de 3 minutes. En mode batch, vous devriez être en mesure de lire un maximum de 1 milliard de lignes (environ 1,05 To de données sur disque) de données non XDM en environ 16 minutes.
+**schéma ad hoc :** en mode interactif, vous devriez être en mesure de lire un maximum de 5 millions de lignes (environ 5,36 Go de données sur le disque) de données non XDM en moins de 3 minutes. En mode batch, vous devriez être en mesure de lire un maximum de 1 milliard de lignes (~1,05 To de données sur disque) de données non-XDM en 16 minutes environ.
 
-| Nombre de lignes | 1 K | 10 000 | 100 K | 1 M | 2M | 3M | 5M | 10 millions | 50 M | 100 millions | 500 millions | 1B |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M | 2M | 3M | 5M | 10 millions | 50 M | 100 millions | 500 millions | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
 | Taille du disque | 1,12 Mo | 11,24 Mo | 109,48 Mo | 2.69 Go | 2.14 Go | 3.21 Go | 5.36 Go | 10.71 Go | 53.58 Go | 107.52 Go | 535.88 Go | 1,05 To |
 | Mode interactif SDK (en secondes) | 35,7 s | 31 s | 19,5 s | 25,3 s | 23 s | 33,2 s | 25,5 s | - | - | - | - | - |
-| Mode Lot SDK (en secondes) | 448,8 s | 459,7 s | 519 s | 475,8 s | 599,9 s | 347,6 s | 407,8 s | 397 s | 518,8 s | 487,9 s | 760,2 s | 975,4 s |
+| Mode de traitement par lots du SDK (en secondes) | 448,8 s | 459,7 s | 519 s | 475,8 s | 599,9 s | 347,6 s | 407,8 s | 397 s | 518,8 s | 487,9 s | 760,2 s | 975,4 s |
 
 ## Ordinateurs portables Python {#python-notebook}
 
-[!DNL Python] les ordinateurs portables vous permettent de paginer les données lors de l&#39;accès aux ensembles de données. Vous trouverez ci-dessous un exemple de code pour lire des données avec et sans pagination. Pour plus d&#39;informations sur les portables Python de démarrage disponibles, consultez la section [[!DNL JupyterLab] Lanceur](./overview.md#launcher) du guide de l&#39;utilisateur JupyterLab.
+[!DNL Python] les portables vous permettent de paginer les données lors de l&#39;accès aux jeux de données. Vous trouverez ci-dessous un exemple de code pour lire des données avec et sans pagination. Pour plus d&#39;informations sur les blocs-notes Python de démarrage disponibles, consultez la section [[!DNL JupyterLab] Lanceur](./overview.md#launcher) du guide d&#39;utilisation de JupyterLab.
 
 La documentation Python ci-dessous décrit les concepts suivants :
 
-- [Lire à partir d&#39;un ensemble de données](#python-read-dataset)
+- [Lecture à partir d’un jeu de données](#python-read-dataset)
 - [Écrire dans un jeu de données](#write-python)
 - [Données de requête](#query-data-python)
 - [Filtrage des données ExperienceEvent](#python-filter)
@@ -619,4 +619,3 @@ Ce tableau décrit les indicateurs SQL facultatifs qui peuvent être utilisés p
 | `-n`,  `--notify` | Option d’activation et de désactivation pour la notification des résultats de la requête. |
 | `-a`,  `--async` | L’utilisation de cet indicateur permet d’exécuter la requête de manière asynchrone et de libérer le noyau pendant l’exécution de la requête. Soyez prudent lorsque vous attribuez les résultats de la requête à des variables, car il se peut qu’ils ne soient pas définis si la requête n’est pas terminée. |
 | `-d`,  `--display` | L’utilisation de cet indicateur empêche l’affichage des résultats. |
-
