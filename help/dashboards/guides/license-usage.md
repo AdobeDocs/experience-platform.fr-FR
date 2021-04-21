@@ -2,16 +2,16 @@
 keywords: Experience Platform ; interface utilisateur ; interface utilisateur ; personnalisation ; tableau de bord d’utilisation des licences ; tableau de bord ; utilisation des licences ; droits ; consommation
 title: Tableau de bord d'utilisation des licences
 description: Adobe Experience Platform fournit un tableau de bord par lequel vous pouvez vue des informations importantes sur l’utilisation des licences de votre entreprise.
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 translation-type: tm+mt
-source-git-commit: 6baf1fbff20a02cd599d9ad9102d56db5a9004c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '658'
 ht-degree: 3%
 
 ---
-
 
 # (bêta) tableau de bord d&#39;utilisation de la licence {#license-usage-dashboard}
 
