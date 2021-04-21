@@ -7,18 +7,15 @@ type: Tutorial
 description: Découvrez comment créer une connexion source Azure Événement Hubs à l'aide de l'interface utilisateur Adobe Experience Platform.
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 11%
+source-wordcount: '480'
+ht-degree: 12%
 
 ---
 
-# Créer une connexion source [!DNL Azure Event Hubs] dans l’interface utilisateur
 
->[!NOTE]
->
-> Le connecteur [!DNL Azure Event Hubs] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../../../home.md#terms-and-conditions).
+# Créer une connexion source [!DNL Azure Event Hubs] dans l’interface utilisateur
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour authentifier un connecteur source [!DNL Azure Event Hubs] (ci-après dénommé &quot;[!DNL Event Hubs]&quot;) à l&#39;aide de l&#39;interface utilisateur [!DNL Platform].
 
