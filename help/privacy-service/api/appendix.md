@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Annexe du Guide de l’API Privacy Service
-topic: developer guide
+topic-legacy: developer guide
 description: Ce document contient des informations supplémentaires sur l’utilisation de l’API du Privacy Service.
+exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 80%
 
 ---
-
 
 # Annexe du guide de l’API Privacy Service
 
