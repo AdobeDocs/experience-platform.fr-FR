@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; ui guide ; mapper ; mapper ; prép de données ; préparation des données ; préparation des données ; préparation des données ;
 solution: Experience Platform
 title: Gestion des formats de données à l’aide de l’API de données
-topic: overview
+topic-legacy: overview
 description: Ce document donne un aperçu de la façon dont les différents types de données sont traités dans la préparation des données.
+exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 translation-type: tm+mt
-source-git-commit: 41656d204f7227388ee1a0a7cad01f737fb96c4f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '567'
 ht-degree: 13%
 
 ---
-
 
 # Gestion des formats de données à l’aide de l’API de données
 
