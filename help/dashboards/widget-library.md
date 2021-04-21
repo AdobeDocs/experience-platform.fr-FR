@@ -2,15 +2,15 @@
 keywords: Experience Platform ; interface utilisateur ; interface utilisateur ; tableaux de bord ; tableau de bord ; profils ; segments ; destinations ; utilisation de la licence
 title: Utilisation de la bibliothèque de widgets pour Ajouter et créer des widgets de Tableau de bord
 description: 'Ce guide fournit des instructions détaillées sur l’ajout de widgets standard et la création de widgets personnalisés pour la visualisation des données de tableau de bord dans Adobe Experience Platform. '
-topic: guide
+topic-legacy: guide
+exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
 translation-type: tm+mt
-source-git-commit: 27444a0106eacbd69149168d7439773ebbb26119
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1029'
 ht-degree: 1%
 
 ---
-
 
 # (bêta) Bibliothèque de widgets {#widget-library}
 
