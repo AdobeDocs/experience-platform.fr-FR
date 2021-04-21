@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; recherche ; type de données ; type de données ; type de données ;
 solution: Experience Platform
 title: Type de données de recherche
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM (Search Experience Data Model).
+exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 16%
 
 ---
-
 
 # [!UICONTROL Type ] de données de recherche
 
