@@ -3,16 +3,16 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; comptes de surv
 description: Ce didacticiel décrit les étapes à suivre pour surveiller votre flux de données, en utilisant à la fois la vue de surveillance agrégée et la surveillance interservices.
 solution: Experience Platform
 title: Surveillance des flux de données pour les sources dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 translation-type: tm+mt
-source-git-commit: 4c668a47e62ba7736dd2d7afe4e71fd015198356
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1644'
 ht-degree: 6%
 
 ---
-
 
 # Surveiller les flux de données pour les sources dans l’interface utilisateur
 
