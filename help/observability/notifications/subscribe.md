@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; plage de dates
 solution: Experience Platform
-title: S’abonner aux notifications de Événement Adobe I/O
-topic: developer guide
-description: Ce document décrit la procédure à suivre pour s’abonner aux notifications Adobe I/O événement pour les services Adobe Experience Platform. Des informations de référence sur les types d'événement disponibles sont également fournies, ainsi que des liens vers d'autres documents sur la façon d'interpréter les données de événement renvoyées pour chaque  [!DNL Platform] service applicable.
+title: S'abonner aux notifications de Événement d'Adobe I/O
+topic-legacy: developer guide
+description: Ce document décrit la procédure à suivre pour s'abonner aux notifications événement Adobe I/O pour les services Adobe Experience Platform. Des informations de référence sur les types d'événement disponibles sont également fournies, ainsi que des liens vers d'autres documents sur la façon d'interpréter les données de événement renvoyées pour chaque  [!DNL Platform] service applicable.
+exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 4%
 
 ---
 
+# S’abonner aux notifications de Événement d’Adobe I/O
 
-# S’abonner aux notifications Événement Adobe I/O
+[!DNL Observability Insights] vous permet de vous abonner à des notifications Adobe I/O Événement concernant les activités Adobe Experience Platform. Ces événements sont envoyés à un crochet Web configuré pour faciliter l&#39;automatisation efficace de la surveillance des activités.
 
-[!DNL Observability Insights] vous permet de vous abonner aux notifications Événement Adobe I/O concernant les activités Adobe Experience Platform. Ces événements sont envoyés à un crochet Web configuré pour faciliter l&#39;automatisation efficace de la surveillance des activités.
-
-Ce document décrit la procédure à suivre pour s’abonner aux notifications Adobe I/O événement pour les services Adobe Experience Platform. Des informations de référence sur les types d&#39;événement disponibles sont également fournies, ainsi que des liens vers d&#39;autres documents sur la façon d&#39;interpréter les données de événement renvoyées pour chaque service [!DNL Platform] applicable.
+Ce document décrit la procédure à suivre pour s&#39;abonner aux notifications événement Adobe I/O pour les services Adobe Experience Platform. Des informations de référence sur les types d&#39;événement disponibles sont également fournies, ainsi que des liens vers d&#39;autres documents sur la façon d&#39;interpréter les données de événement renvoyées pour chaque service [!DNL Platform] applicable.
 
 ## Prise en main
 
