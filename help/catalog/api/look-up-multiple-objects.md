@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; catalogue ; recherche d’objets multiples ; api
 solution: Experience Platform
 title: Rechercher plusieurs objets de catalogue
-topic: developer guide
+topic-legacy: developer guide
 description: Si vous souhaitez afficher plusieurs objets spécifiques au lieu d’effectuer une requête par objet, le catalogue fournit un raccourci simple pour demander plusieurs objets du même type. Vous pouvez utiliser une requête GET unique pour renvoyer plusieurs objets spécifiques en incluant une liste d’identifiants séparés par des virgules.
+exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 54%
 
 ---
-
 
 # Recherche de plusieurs objets Catalogue
 
