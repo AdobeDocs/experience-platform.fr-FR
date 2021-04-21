@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de Requête ; service de requête ; observateur ; observateur ; connexion au service de requête ;
 solution: Experience Platform
 title: Connexion de l'outil de recherche au service de Requête
-topic: connect
+topic-legacy: connect
 description: Ce document passe par les étapes de connexion de Looker à Adobe Experience Platform Requête Service.
+exl-id: 806e9077-533a-4546-b5ca-8124751957f5
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 23%
 
 ---
-
 
 # Connecter [!DNL Looker] au service de Requête
 
