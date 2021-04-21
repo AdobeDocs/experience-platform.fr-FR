@@ -6,19 +6,15 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Maria DB à l’aide de l’interface utilisateur Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '416'
 ht-degree: 14%
 
 ---
 
 
 # Créer une connexion source [!DNL MariaDB] dans l’interface utilisateur
-
->[!NOTE]
->
-> Le connecteur [!DNL MariaDB] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../../../home.md#terms-and-conditions).
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Maria DB à l’aide de l’[!DNL Platform] interface utilisateur.
 
