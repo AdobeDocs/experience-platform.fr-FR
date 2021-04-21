@@ -2,16 +2,16 @@
 keywords: Experience Platform ; recette de vente au détail ; Espace de travail des sciences de données ; rubriques populaires ; recettes ; recette de précréation
 solution: Experience Platform
 title: Recette vente au détail
-topic: overview
+topic-legacy: overview
 description: La recette Ventes au détail vous fournit des prévisions de ventes pour tous les magasins contrôlés pour une période donnée. Avec un modèle de prévision précis, le détaillant serait en mesure d’identifier la relation entre les politiques de demande et de prix, mais aussi de prendre des décisions optimisées concernant le prix afin de maximiser les ventes et le chiffre d’affaires.
+exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 92%
 
 ---
-
 
 # Recette Ventes au détail
 
