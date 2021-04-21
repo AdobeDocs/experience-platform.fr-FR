@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; thèmes populaires ; schéma ; Schéma ; XDM ; profil individuel ; champs ; schémas ; Schémas ; conception de Schéma ; mixin ; personne ; détails de la personne ; détails de la personne profil ; personne ; personne ;
 solution: Experience Platform
 title: Mélange de détails démographiques
-topic: overview
+topic-legacy: overview
 description: Ce document donne un aperçu du mixin Détails démographiques.
+exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 22%
 
 ---
-
 
 # [!UICONTROL Données démographiques ] mixin
 
