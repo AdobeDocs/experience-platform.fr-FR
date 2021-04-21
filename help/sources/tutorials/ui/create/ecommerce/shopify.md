@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; shopify ; Shopify
 solution: Experience Platform
 title: Création d’une connexion à la source Shopify dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Shopify à l’aide de l’interface utilisateur de Adobe Experience Platform.
+exl-id: 527cac95-3d9a-4089-98e4-66d746641b85
 translation-type: tm+mt
-source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '450'
 ht-degree: 16%
 
 ---
-
 
 # Créer une connexion source [!DNL Shopify] dans l’interface utilisateur
 
