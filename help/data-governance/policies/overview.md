@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; calendrier ; DUL
 solution: Experience Platform
 title: Présentation des stratégies d’utilisation des données
-topic: policies
+topic-legacy: policies
 description: Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’Experience Platform.
+exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 17%
 
 ---
-
 
 # Présentation des stratégies d’utilisation des données
 
