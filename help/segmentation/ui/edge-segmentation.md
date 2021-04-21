@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation des arêtes ; Segmentation ; Service de segmentation ; service de segmentation ; guide ui ; arête de diffusion ;
 solution: Experience Platform
 title: Guide de l’interface utilisateur de segmentation Edge
-topic: ui guide
-description: La segmentation Edge permet d’évaluer instantanément les segments dans la plate-forme, ce qui permet d’utiliser les mêmes cas de personnalisation de page et de page suivante.
+topic-legacy: ui guide
+description: La segmentation Edge permet d’évaluer instantanément les segments dans la plate-forme, ce qui permet d’utiliser des cas de personnalisation de la même page et de la page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '353'
 ht-degree: 5%
 
 ---
