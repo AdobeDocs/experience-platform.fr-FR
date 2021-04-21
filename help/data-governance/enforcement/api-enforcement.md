@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Application des stratégies ; Application automatique ; Application basée sur les API ; gouvernance des données ; test
 solution: Experience Platform
 title: Appliquer les stratégies d’utilisation des données à l’aide de l’API Policy Service
-topic: guide
+topic-legacy: guide
 type: Tutorial
 description: Une fois que vous avez créé des libellés d’utilisation pour vos données et des stratégies d’utilisation pour les actions marketing en fonction de ces libellés, vous pouvez utiliser l’API Policy Service pour évaluer si une action marketing effectuée sur un jeu de données ou sur un groupe arbitraire de libellés constitue une violation de la stratégie. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de stratégie en fonction de la réponse de l’API.
+exl-id: 093db807-c49d-4086-a676-1426426b43fd
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 58%
 
 ---
-
 
 # Appliquer les stratégies d&#39;utilisation des données à l&#39;aide de l&#39;API [!DNL Policy Service]
 
