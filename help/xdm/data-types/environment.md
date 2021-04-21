@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; environnement ; type de données ; type de données ; type de données ;
 solution: Experience Platform
 title: Type de données d'Environnement
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM Environnement.
+exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 14%
 
 ---
-
 
 # [!UICONTROL Type de données ] Environment
 
