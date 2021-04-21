@@ -1,21 +1,19 @@
 ---
 title: Visite guidée de l’interface utilisateur Experience Platform
 description: Cette vidéo présente un aperçu rapide de l'interface utilisateur Adobe Experience Platform pour vous montrer comment accéder à l'Experience Platform à partir de l'Experience Cloud, du tableau de bord de la page d'accueil, des fonctionnalités d'activation de l'interface, du sélecteur de sandbox et des éléments de navigation.
-feature: interface
-topics: null
 kt: 4821
 audience: all
 doc-type: video
 activity: understand
 thumbnail: 32792.jpg
+exl-id: 514b73cd-d1f1-472d-8021-ecfb2abeb411
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
 
 ---
-
 
 # Visite de l’interface utilisateur Experience Platform
 
