@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: Type de données de champ de consentement générique
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM du champ de consentement générique.
+exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
 translation-type: tm+mt
-source-git-commit: ebcd8900687b6e91d3f06690a9db0e118bbc3b58
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '473'
 ht-degree: 2%
 
 ---
-
 
 # [!UICONTROL Type de données de ] champ de consentement générique
 
