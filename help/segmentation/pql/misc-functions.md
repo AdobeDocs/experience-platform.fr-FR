@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; pql ; PQL ; Profil Requête Language ; diverses fonctions ; divers ; divers ;
 solution: Experience Platform
 title: Fonctions diverses PQL
-topic: developer guide
+topic-legacy: developer guide
 description: La fonction suivante est une fonction diverse pour le langage de requête de profil (PQL).
+exl-id: a6ed31a2-a649-4dc8-89b1-48c1170b7f16
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 68%
 
 ---
-
 
 # Fonctions diverses
 
