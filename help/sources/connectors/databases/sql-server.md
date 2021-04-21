@@ -6,14 +6,14 @@ topic-legacy: overview
 description: Découvrez comment connecter Microsoft SQL Server à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 8a77f108-7e82-4e14-a470-a4ea97def89d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '297'
 ht-degree: 9%
 
 ---
 
-# (Bêta) [!DNL Microsoft] Connecteur SQL Server
+# [!DNL Microsoft] Connecteur SQL Server
 
 Adobe Experience Platform permet l’assimilation de données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
