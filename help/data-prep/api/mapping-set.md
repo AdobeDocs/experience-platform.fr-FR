@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; prép de données ; guide d’api ; jeux de mappage ;
 solution: Experience Platform
 title: Point de terminaison de l’API Jeux de mappage
-topic: mapping sets
-description: 'Vous pouvez utiliser le point de terminaison `/mappingSets’ dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider des jeux de mappage par programmation. '
+topic-legacy: mapping sets
+description: Vous pouvez utiliser le point de terminaison `/mappingSets’ dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider des jeux de mappage par programmation.
+exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '807'
 ht-degree: 6%
 
 ---
-
 
 # Point de terminaison des jeux de mappage
 
