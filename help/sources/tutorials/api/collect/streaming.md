@@ -2,14 +2,14 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; données d’enregistrement en mode cloud ; données en flux continu ; flux continu
 solution: Experience Platform
 title: Collecte de données en flux continu à l’aide des connecteurs et des API source
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données en flux continu et les amener sur la plate-forme à l’aide des connecteurs et des API source.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1498'
 ht-degree: 22%
 
 ---
