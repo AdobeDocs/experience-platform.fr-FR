@@ -2,17 +2,17 @@
 keywords: Experience Platform ; publier un modèle ; Espace de travail des sciences de données ; sujets populaires ; api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Publication d'un modèle en tant que service à l'aide de l'API d'apprentissage automatique Sensei
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Ce didacticiel porte sur le processus de publication d'un modèle en tant que service à l'aide de l'API d'apprentissage automatique Sensei.
+exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 47%
 
 ---
-
 
 # Publiez un modèle en tant que service en utilisant [!DNL Sensei Machine Learning API]
 
