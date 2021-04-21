@@ -2,18 +2,18 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; api du service d'identité ; guide du développeur du service d'identité ; région
 solution: Experience Platform
 title: Guide de l'API du service d'identité
-topic: API guide
+topic-legacy: API guide
 description: L'API Identity Service permet aux développeurs de gérer l'identification inter-périphériques, entre canaux et quasi en temps réel de vos clients à l'aide de graphiques d'identité dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
+exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
 translation-type: tm+mt
-source-git-commit: 69c3106070e31377ea8571cd14dc33aa9b6f7037
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '771'
 ht-degree: 67%
 
 ---
 
-
-# [!DNL Identity Service] Guide de l’API
+# [!DNL Identity Service] Guide des API
 
 Adobe Experience Platform [!DNL Identity Service] gère l&#39;identification inter-périphériques, entre canaux et quasi en temps réel de vos clients dans ce qu&#39;on appelle un graphique d&#39;identité au sein de Adobe Experience Platform.
 
@@ -31,7 +31,7 @@ Les sections suivantes contiennent des informations supplémentaires que vous de
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
