@@ -2,14 +2,14 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; base de données ; base de données ; base de données tierce
 solution: Experience Platform
 title: Collecte de données à partir d’une base de données à l’aide des connecteurs et des API source
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer des données d’une base de données et les importer dans la plate-forme à l’aide des connecteurs et des API source.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1649'
 ht-degree: 20%
 
 ---
