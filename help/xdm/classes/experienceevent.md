@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; schéma ; Schéma ; XDM ; profil individuel ; champs ; schémas ; Schémas ; IdentityMap ; IdentityMap ; IdentityMap ; IdentityMap ; IdentityMap ; IdentityMap ; Schéma design ; map ; Map ; union schéma ; union
 solution: Experience Platform
 title: XDM ExperienceEvent, classe
-topic: overview
+topic-legacy: overview
 description: Ce document fournit un aperçu de la classe XDM ExperienceEvent.
+exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 6%
 
 ---
-
 
 # [!DNL XDM ExperienceEvent] class
 
