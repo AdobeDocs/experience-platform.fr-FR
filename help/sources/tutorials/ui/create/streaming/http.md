@@ -2,14 +2,14 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; connexion en flux continu ; créer une connexion en flux continu ; guide ui ; didacticiel ; créer une connexion en flux continu ; assimilation en flux continu ; assimilation ;
 solution: Experience Platform
 title: Création d’une connexion de diffusion en continu à l’aide de l’interface utilisateur
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Ce guide de l’interface utilisateur vous aidera à créer une connexion en continu à l’aide d’Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
 translation-type: tm+mt
-source-git-commit: 3b71f1399a770e097cf75827e626d6d4e289ab77
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1060'
 ht-degree: 10%
 
 ---
