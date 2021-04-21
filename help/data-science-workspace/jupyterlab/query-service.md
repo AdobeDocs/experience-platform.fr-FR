@@ -2,17 +2,17 @@
 keywords: Experience Platform ; JupyterLab ; blocs-notes ; Espace de travail des données ; sujets populaires ; service de requête
 solution: Experience Platform
 title: Service de requête sur ordinateur portable Jupyter
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform vous permet d’utiliser le langage de requête structuré (SQL) dans Data Science Workspace en intégrant Query Service à JupyterLab en tant que fonctionnalité standard. Ce didacticiel présente des exemples de requêtes SQL pour des cas d'utilisation courants afin d'explorer, de transformer et d'analyser les données Adobe Analytics.
+exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '822'
 ht-degree: 60%
 
 ---
-
 
 # Service de requête sur ordinateur portable Jupyter
 
