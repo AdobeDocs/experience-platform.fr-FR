@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement de table Azure ; enregistrement de table azur ; ATS ; ats
 solution: Experience Platform
 title: Présentation du connecteur source d'Enregistrement Azure Table
-topic: overview
+topic-legacy: overview
 description: Découvrez comment connecter Azure Table Enregistrement à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
+exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '305'
 ht-degree: 9%
 
 ---
-
 
 # (Bêta) [!DNL Azure Table Storage] connecteur
 
