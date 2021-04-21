@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; commande ; type de données ; type de données ; type de données ;
 solution: Experience Platform
 title: Type de données de commande
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du type de données du modèle de données d’expérience de commande (XDM).
+exl-id: abfc6d53-ffe6-4692-ad65-03d556831fa0
 translation-type: tm+mt
-source-git-commit: 8bbb062df47b6e94630626d0a89a179d759d922d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 22%
 
 ---
-
 
 # [!UICONTROL Type ] Orderdata
 
