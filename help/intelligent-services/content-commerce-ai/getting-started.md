@@ -2,16 +2,16 @@
 keywords: Experience Platform;prise en main;content ai;commerce ai;content and commerce ai
 solution: Experience Platform, Intelligent Services
 title: Prise en main de Content and Commerce AI
-topic: Getting started 
-description: Content and Commerce AI utilise les API Adobe I/O. Pour appeler les API Adobe I/O et l'intégration de la console d'E/S, vous devez d'abord suivre le didacticiel d'authentification.
+topic-legacy: Getting started
+description: Content and Commerce AI utilise des API d’Adobe I/O. Pour appeler les API d'Adobe I/O et l'intégration de la console d'E/S, vous devez d'abord suivre le didacticiel d'authentification.
+exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 13%
 
 ---
-
 
 # Prise en main de Content and Commerce AI
 
@@ -19,13 +19,13 @@ ht-degree: 13%
 >
 >Content and Commerce AI est en version bêta. La documentation peut être modifiée.
 
-[!DNL Content and Commerce AI] utilise les API Adobe I/O. Pour appeler les API Adobe I/O et l&#39;intégration de la console d&#39;E/S, vous devez d&#39;abord suivre le didacticiel d&#39;authentification [](https://www.adobe.com/go/platform-api-authentication-en).
+[!DNL Content and Commerce AI] utilise les API d’Adobe I/O. Pour appeler les API d&#39;Adobe I/O et l&#39;intégration de la console d&#39;E/S, vous devez d&#39;abord suivre le didacticiel d&#39;authentification [](https://www.adobe.com/go/platform-api-authentication-en).
 
 Cependant, lorsque vous atteignez l’étape **Ajouter API**, l’API se trouve sous Experience Cloud au lieu de Adobe Experience Platform, comme indiqué dans la capture d’écran suivante :
 
 ![ajout d’une API de contenu et de commerce](./images/add-api.png)
 
-Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Adobe I/O, comme illustré ci-dessous :
+Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API d’Adobe I/O, comme indiqué ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -63,7 +63,7 @@ Vous pouvez désormais sélectionner votre environnement dans le menu déroulant
 
 ![example](./images/select-environment.png)
 
-Pour plus d&#39;informations sur l&#39;utilisation des API Adobe I/O avec Postman, consultez la publication Medium sur [Utilisation de Postman pour l&#39;authentification JWT sur Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
+Pour plus d&#39;informations sur l&#39;utilisation d&#39;API d&#39;Adobe I/O avec Postman, consultez la publication Medium sur [Utilisation de Postman pour l&#39;authentification JWT sur Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
 
 ## Lecture d’exemples d’appels API
 
