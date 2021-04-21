@@ -3,14 +3,14 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; comptes de surv
 description: Les destinations sont des intégrations préétablies avec des plateformes de destination qui permettent une activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 solution: Experience Platform
 title: Surveiller les flux de données
-topic: overview
+topic-legacy: overview
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 translation-type: tm+mt
-source-git-commit: e436d7147c613dad5b2ff596a412759fd60d228c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 27%
+source-wordcount: '132'
+ht-degree: 26%
 
 ---
 
