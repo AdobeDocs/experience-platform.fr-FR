@@ -2,16 +2,16 @@
 keywords: Experience Platform ; attribution ai ; notes d’accès ; rubriques populaires ; téléchargements ; scores d’attribution ai ; exportation ; Exporter
 solution: Experience Platform, Intelligent Services
 title: Téléchargement de scores dans Attribution AI
-topic: Downloading scores
+topic-legacy: Downloading scores
 description: Ce document sert de guide pour le téléchargement de scores pour Attribution AI.
+exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 68%
 
 ---
-
 
 # Téléchargement de scores dans Attribution AI
 
