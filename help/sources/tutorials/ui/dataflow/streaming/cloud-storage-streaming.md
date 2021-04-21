@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; connecteur d’enregistrement cloud ; enregistrement cloud
 solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de diffusion en continu d’Enregistrement de cloud dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre connecteur de base d’enregistrements de cloud.
+exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 8%
 
 ---
-
 
 # Configuration d’un flux de données pour une connexion de flux continu d’enregistrement cloud dans l’interface utilisateur
 
