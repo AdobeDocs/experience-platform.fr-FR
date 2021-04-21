@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;pql;PQL;Profil Requête Language;string fonctions;string;
 solution: Experience Platform
 title: Fonctions de chaîne PQL
-topic: developer guide
+topic-legacy: developer guide
 description: Le langage de requête de profil (PQL) offre des fonctions pour faciliter l’interaction avec les chaînes.
+exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 94%
 
 ---
-
 
 # Fonctions de chaîne
 
@@ -269,4 +269,3 @@ emailAddress.regexGroup("@(\w+)", 1)
 ## Étapes suivantes
 
 Maintenant que vous en savez plus sur les fonctions de chaîne, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d’informations sur les autres fonctions PQL, consultez la [présentation du langage de requête de profil](./overview.md).
-
