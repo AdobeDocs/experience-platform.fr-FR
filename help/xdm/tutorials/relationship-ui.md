@@ -3,16 +3,16 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; ui ; IU ; XDM ;
 solution: Experience Platform
 title: Définir une relation entre deux Schémas à l’aide de l’éditeur de Schéma
 description: Ce document fournit un didacticiel pour la définition d'une relation entre deux schémas à l'aide de l'éditeur de Schémas dans l'interface utilisateur de l'Experience Platform.
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 32%
 
 ---
-
 
 # Définissez une relation entre deux schémas à l&#39;aide de [!DNL Schema Editor]
 
