@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; profil individuel ; champs ; schémas ; Schémas ; segment ; adhésion à un segment ; adhésion à un segment ; conception de Schéma ; carte ; carte ;
 solution: Experience Platform
 title: Mélange de détails d'adhésion de segment
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du mixin Détails de l’appartenance au segment.
+exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 1%
 
 ---
-
 
 # [!UICONTROL Segmenter les ] détails de l&#39;adhésion mixin
 
