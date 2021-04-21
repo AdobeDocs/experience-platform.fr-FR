@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; Synapse ; synapse ; Azure synapse Analytics
+keywords: Experience Platform;accueil;rubriques populaires;Synapse;synapse;synapse;Azure synapse Analytics
 solution: Experience Platform
-title: Création d’une connexion à la source Azure synapse Analytics à l’aide de l’API du service de flux
-topic: overview
+title: Création d’une connexion à la source Analytics d’Azure synapse à l’aide de l’API du service de flux
+topic-legacy: overview
 type: Tutorial
-description: Découvrez comment connecter Azure synapse Analytics à Adobe Experience Platform à l’aide de l’API du service de flux.
+description: Découvrez comment connecter Azure synapse Analytics à Adobe Experience Platform à l’aide de l’API de service de flux.
+exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 25%
 
 ---
 
-
 # Créez une connexion source [!DNL Azure Synapse Analytics] à l’aide de l’API [!DNL Flow Service].
 
 >[!NOTE]
 >
->Le connecteur Azure synapse Analytics est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../../../home.md#terms-and-conditions).
+>Le connecteur Analytics d’Azure synapse est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../../../home.md#terms-and-conditions).
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
@@ -48,7 +48,7 @@ Pour plus d&#39;informations sur l&#39;obtention d&#39;une chaîne de connexion,
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
