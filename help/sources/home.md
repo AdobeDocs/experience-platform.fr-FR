@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: 412d7c247353bfd30e134656140ba13f55d2ca07
+source-git-commit: 8edcb3697337edd0043f26553b92c31e52d3c87c
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '975'
 ht-degree: 57%
 
 ---
@@ -115,6 +115,13 @@ Experience Platform prend en charge l’ingestion de données provenant d’un s
 L’Experience Platform prend en charge l’assimilation de données à partir d’un système de paiement tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL PayPal] connecteur](connectors/payments/paypal.md)
+
+### Diffusion en continu
+
+L’Experience Platform prend en charge l’assimilation de données à partir de sources de diffusion en continu. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+
+- [[!DNL HTTP API]](connectors/streaming/http.md)
+
 
 ### Protocoles
 
