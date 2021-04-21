@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de flux ; flux de données de mise à jour
 solution: Experience Platform
 title: Mise à jour des flux de données à l’aide de l’API du service de flux
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes de mise à jour d’un flux de données, y compris son nom, sa description et sa planification, à l’aide de l’API du service de flux.
+exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 translation-type: tm+mt
-source-git-commit: e19b5b905a38c63b7dc47904c5af30dc2ed21e22
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '615'
 ht-degree: 33%
 
 ---
-
 
 # Mise à jour des flux de données à l’aide de l’API du service de flux
 
