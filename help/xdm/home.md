@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; XDM ; système XDM ; profil individuel XDM ; XDM ExperienceEvent ; XDM Experience Événement ; experienceEvent ; experience événement ; mixins ; mixins ; mixin ; Mixin ; Experience événement ; XDM Experience Événement ; XDM ExperienceEvent ; experienceEvent ; experience;XDM ExperienceEvent;XDM Experienceevenet;Experience data model ; Experience data model;modèle de données;modèle de données;registre de schémas;registre de Schémas;bibliothèque de ;bibliothèque de Schéma;schéma bibliothèque de ;schéma ; enregistrement de données;série de temps;série de temps
 solution: Experience Platform
 title: Présentation du système XDM
-topic: overview
-description: 'La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. Le modèle de données d’expérience (XDM), optimisé par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client. '
+topic-legacy: overview
+description: La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. Le modèle de données d’expérience (XDM), optimisé par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
+exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 57%
 
 ---
-
 
 # Présentation du système XDM
 
@@ -70,7 +70,7 @@ Bien qu’il ne soit pas facile de classer tous les événements de toutes les s
 
 [!DNL Experience Platform] est indépendante du schéma, ce qui signifie que tout schéma conforme à la norme XDM est disponible pour être utilisé par  [!DNL Platform] les services. Les modalités d&#39;utilisation des schémas des différents services [!DNL Platform] sont décrites plus en détail ci-dessous.
 
-### [!DNL Catalog Service],  [!DNL Data Ingestion] &amp;  [!DNL Data Lake]
+### [!DNL Catalog Service], [!DNL Data Ingestion] &amp; [!DNL Data Lake]
 
 [!DNL Catalog Service] est le système d&#39;enregistrement des  [!DNL Experience Platform] actifs et de leurs schémas connexes. [!DNL Catalog] ne correspond pas aux fichiers ou répertoires contenant des données, mais aux métadonnées et descriptions de ces fichiers et répertoires.
 
@@ -119,4 +119,3 @@ Pour découvrir les principes de conception et les meilleures pratiques de compo
 Pour mieux comprendre [!DNL XDM System] dans [!DNL Experience Platform], regardez la vidéo suivante :
 
 >[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
-
