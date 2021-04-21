@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Connecteurs source
-topic: overview
+topic-legacy: overview
 description: Les connexions source vous permettent d’authentifier vos systèmes d’enregistrement et vos services de gestion de la relation client, de définir les heures d’exécution pour l’assimilation et de gérer le débit d’assimilation des données.
+exl-id: 6e4f1688-6fe8-4ee7-996e-bcdf942cea17
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 59%
 
 ---
-
 
 # Connecteurs source
 
