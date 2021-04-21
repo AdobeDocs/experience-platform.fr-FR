@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Présentation de la bibliothèque JavaScript de confidentialité des Adobes
-topic: overview
+topic-legacy: overview
 description: La bibliothèque JavaScript de confidentialité des Adobes vous permet de récupérer les identités des personnes concernées en vue de les utiliser dans le Privacy Service.
+exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 70%
 
 ---
-
 
 # Présentation de la bibliothèque JavaScript d’Adobe Privacy
 
