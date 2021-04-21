@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; interaction Web ; type de données ; type de données ; type de données ;
 solution: Experience Platform
 title: Type de données d'interaction Web
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM (Experience Data Model) d’interaction Web.
+exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 4%
 
 ---
-
 
 # [!UICONTROL Type de données ] d&#39;interaction Web
 
