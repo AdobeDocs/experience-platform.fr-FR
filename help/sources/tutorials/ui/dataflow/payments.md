@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; connecteur de paiement
 solution: Experience Platform
 title: Configurer un flux de données pour une connexion à la source de paiement dans l'interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source dans un jeu de données Adobe Experience Platform. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte de paiement.
+exl-id: 7355435b-c038-4310-b04a-8ac6b6723b9b
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1463'
 ht-degree: 4%
 
 ---
-
 
 # Configuration d’un flux de données pour une connexion de paiement dans l’interface utilisateur
 
