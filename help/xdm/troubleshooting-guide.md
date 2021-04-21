@@ -3,15 +3,15 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; XDM ; système 
 solution: Experience Platform
 title: Guide de dépannage du système XDM
 description: Ce document fournit des réponses aux questions fréquentes sur le modèle de données d’expérience (XDM) et le système XDM à Adobe Experience Platform, ainsi qu’un guide de dépannage pour les erreurs courantes.
-topic: troubleshooting
+topic-legacy: troubleshooting
+exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1879'
 ht-degree: 67%
 
 ---
-
 
 # Guide de dépannage de XDM System
 
