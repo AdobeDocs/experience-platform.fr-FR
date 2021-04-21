@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Microsoft SQL Server ; SQL Server ; sql server
 solution: Experience Platform
 title: Création d’une connexion à la source Microsoft SQL Server dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Microsoft SQL Server à l’aide de l’interface utilisateur Adobe Experience Platform.
+exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 12%
 
 ---
-
 
 # Créer une connexion source [!DNL Microsoft SQL Server] dans l’interface utilisateur
 
