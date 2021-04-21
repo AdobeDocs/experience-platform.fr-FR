@@ -3,15 +3,15 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM
 solution: Experience Platform
 title: Point de terminaison de l'API descripteurs
 description: Le point de terminaison /descriptors de l'API de registre de Schéma vous permet de gérer par programmation les descripteurs XDM dans votre application d'expérience.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1613'
 ht-degree: 56%
 
 ---
-
 
 # Point de terminaison des descripteurs
 
