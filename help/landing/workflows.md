@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Adobe Experience Platform ; guide de l'utilisateur ; guide de l'interface utilisateur ; guide de l'interface utilisateur des workflows ; workflows ; guide de l'utilisateur des workflows ;
 solution: Experience Platform
 title: Guide de l’interface utilisateur des workflows
-topic: ui guide
+topic-legacy: ui guide
 description: Découvrez comment suivre des workflows à plusieurs étapes pour effectuer des opérations courantes dans l’interface utilisateur de Adobe Experience Platform.
+exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 1%
 
 ---
-
 
 # [!UICONTROL Guide ] WorkflowsUI
 
