@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; confidentialité des données sur les lacs ; espaces de nommage d'identité ; confidentialité ; données sur le lac
 solution: Experience Platform
 title: Traitement des demandes de confidentialité dans Data Lake
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform Privacy Service traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts fondamentaux liés au traitement des demandes d’accès à des informations personnelles concernant les données clients stockées dans le lac de données.
+exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 35%
 
 ---
-
 
 # Traitement de la demande de confidentialité dans [!DNL Data Lake]
 
