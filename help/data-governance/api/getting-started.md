@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;DULE;dule
 solution: Experience Platform
 title: Prise en main de l’API Policy Service
-topic: developer guide
+topic-legacy: developer guide
 description: L’API Policy Service vous permet de créer et de gérer diverses ressources liées à la gouvernance des données Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels à l’API Policy Service.
+exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 36%
 
 ---
-
 
 # Prise en main de l’API [!DNL Policy Service]
 
@@ -46,7 +46,7 @@ Toutes les ressources de [!DNL Experience Platform], y compris celles appartenan
 >
 >Pour plus d&#39;informations sur les sandbox dans [!DNL Platform], consultez la [documentation d&#39;aperçu de sandbox](../../sandboxes/home.md).
 
-Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
+Toutes les requêtes contenant une payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
 * `Content-Type: application/json`
 
