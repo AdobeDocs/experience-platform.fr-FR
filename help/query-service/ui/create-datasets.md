@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; générer des jeux de données ; générer un jeu de données ; créer un jeu de données ;
 solution: Experience Platform
 title: Générer des jeux de données à partir des résultats dans Requête Service
-topic: queries
+topic-legacy: queries
 type: Tutorial
-description: 'Adobe Experience Platform Requête Service permet la création de jeux de données à partir de l’interface utilisateur. Une fois un jeu de données créé, il est accessible comme tout autre jeu de données du lac Data et utilisé pour divers cas d''utilisation. '
+description: Adobe Experience Platform Requête Service permet la création de jeux de données à partir de l’interface utilisateur. Une fois un jeu de données créé, il est accessible comme tout autre jeu de données du lac Data et utilisé pour divers cas d'utilisation.
+exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 43%
 
 ---
-
 
 # Générer des jeux de données à partir des résultats dans Requête Service
 
