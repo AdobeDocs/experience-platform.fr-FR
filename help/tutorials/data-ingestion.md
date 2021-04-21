@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Tutoriels sur l’ingestion de données
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Data Ingestion comprend l’ingestion par lots, l’ingestion par flux et l’ingestion à l’aide de connecteurs de sources.
+exl-id: 51627acf-e90b-4911-aa54-4a59f3b6a8f9
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 49%
 
 ---
-
 
 # Envoi de données dans [!DNL Experience Platform]
 
@@ -45,6 +45,3 @@ Avec un jeu de données et des connexions en continu en place, vous pouvez diffu
 ## Diffusion de plusieurs messages en continu dans une même requête HTTP
 
 Lorsque vous diffusez des données en continu vers Adobe Experience Platform, effectuer de nombreux appels HTTP peut vous coûter cher. Par exemple, au lieu de créer 200 requêtes HTTP contenant des payloads de 1 Ko chacun, il est plus efficace de créer une requête HTTP contenant 200 messages de 1 Ko chacun avec un payload unique de 200 Ko. Lorsque cette fonctionnalité est utilisée correctement, regrouper plusieurs messages au sein d’une requête unique est une excellente manière d’optimiser les données envoyées vers [!DNL Experience Platform]. Pour savoir comment envoyer plusieurs messages à [!DNL Experience Platform] dans une seule requête HTTP à l&#39;aide de l&#39;assimilation en flux continu, suivez le [didacticiel sur l&#39;envoi de plusieurs messages](../ingestion/tutorials/streaming-multiple-messages.md).
-
-
-
