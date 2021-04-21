@@ -2,16 +2,16 @@
 keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; sujets populaires ; expériences ; api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Point de terminaison de l’API d’expériences
-topic: Developer guide
+topic-legacy: Developer guide
 description: Le développement et la formation de modèle se déroulent au niveau de l’expérience qui se compose d’une instance MLInstance ainsi que d’exécutions de formation et de notation.
+exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 97%
 
 ---
-
 
 # Point de terminaison des expériences
 
