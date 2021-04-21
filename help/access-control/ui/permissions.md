@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; profil de produits ; gérer les autorisations
 solution: Experience Platform
 title: Gérer Les Autorisations Pour Un Profil De Produits
-topic: user guide
+topic-legacy: user guide
 description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Ce document sert de guide pour la gestion des autorisations pour un profil de produits pour la plate-forme.
+exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 64%
 
 ---
-
 
 # Gestion des autorisations d’un profil de produit
 
