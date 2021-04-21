@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; notifications d'assimilation de données ; notifications ; événements d'abonnement ; événements d'état d'assimilation de données ; événements d'état ; abonnement ; notifications d'état ;
 solution: Experience Platform
 title: Notifications d'importation de données
-topic: overview
+topic-legacy: overview
 description: Pour faciliter le suivi du processus d'assimilation, Adobe Experience Platform permet de s'abonner à un ensemble de événements publiés à chaque étape du processus, en vous informant de l'état des données ingérées et de toute erreur éventuelle.
+exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 29%
 
 ---
-
 
 # Notifications d’ingestion de données
 
@@ -73,7 +73,7 @@ Pour vue le schéma complet des notifications de événement, consultez le [réf
 
 ## Étapes suivantes
 
-Une fois que vous avez enregistré des notifications [!DNL Platform] à votre projet, vous pouvez vue les événements reçus de l&#39;[!UICONTROL Aperçu du projet]. Consultez le guide [traçage des Événements Adobe I/O](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) pour obtenir des instructions détaillées sur la façon de suivre vos événements.
+Une fois que vous avez enregistré des notifications [!DNL Platform] à votre projet, vous pouvez vue les événements reçus de l&#39;[!UICONTROL Aperçu du projet]. Pour obtenir des instructions détaillées sur la façon de tracer vos événements, consultez le guide sur les [Événements de suivi des Adobes I/O](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md).
 
 ## Annexe
 
