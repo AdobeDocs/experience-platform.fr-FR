@@ -2,15 +2,15 @@
 keywords: Experience Platform ; profil ; profil client en temps réel ; interface utilisateur ; interface utilisateur ; personnalisation ; détails du profil ; détails
 title: Personnalisation des détails du profil dans l’interface utilisateur
 description: 'Ce guide fournit des instructions détaillées pour personnaliser la manière dont les données du Profil client en temps réel sont affichées dans l’interface utilisateur de Adobe Experience Platform. '
-topic: guide
+topic-legacy: guide
+exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
 translation-type: tm+mt
-source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Real-time Customer Profile] personnalisation détaillée  {#profile-detail-customization}
 
