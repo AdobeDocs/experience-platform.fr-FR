@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; connecteur source du gestionnaire d’Audiences ; Audience Manager ; connecteur du gestionnaire d’audiences
 solution: Experience Platform
 title: Création d’une connexion à la source Adobe Audience Manager dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Ce didacticiel vous guide tout au long des étapes nécessaires pour créer des connecteurs source pour Adobe Audience Manager afin d’importer les données du Événement d’expérience de consommation dans la plate-forme à l’aide de l’interface utilisateur.
+exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 2%
 
 ---
-
 
 # Création d’une connexion source Adobe Audience Manager dans l’interface utilisateur
 
