@@ -2,17 +2,17 @@
 keywords: Experience Platform ; score d’un modèle ; Espace de travail des données ; rubriques populaires ; ui ; exécution de score ; résultats de score
 solution: Experience Platform
 title: Score d’un modèle dans l’interface utilisateur de Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 'La notation dans Adobe Experience Platform Data Science Workspace peut être réalisée en alimentant un modèle formé existant avec des données d’entrée. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot. '
+description: La notation dans Adobe Experience Platform Data Science Workspace peut être réalisée en alimentant un modèle formé existant avec des données d’entrée. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
+exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
 translation-type: tm+mt
-source-git-commit: 7feda18351061600b05dc7be8afbbfb9a0fa7ec1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '648'
 ht-degree: 35%
 
 ---
-
 
 # Score d’un modèle dans l’interface utilisateur de Data Science Workspace
 
