@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;Google AdWords;google adwords
 solution: Experience Platform
 title: Présentation du connecteur de source Google AdWords
-topic: overview
+topic-legacy: overview
 description: Découvrez comment connecter Google AdWords à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
+exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 9%
 
 ---
-
 
 # [!DNL Google AdWords] connecteur
 
