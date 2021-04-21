@@ -3,16 +3,16 @@ keywords: Experience Platform ; accueil ; sujets populaires ; supprimer des flux
 description: L’espace de travail sources vous permet de supprimer les flux de données par lot et en flux continu existants qui contiennent des erreurs ou qui sont devenus obsolètes.
 solution: Experience Platform
 title: Suppression de flux de données dans l’interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 5%
 
 ---
-
 
 # Suppression de flux de données dans l’interface utilisateur
 
