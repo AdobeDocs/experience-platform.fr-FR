@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; mettre à jour sandbox
 solution: Experience Platform
 title: Mise à jour d’un sandbox dans l’API
-topic: developer guide
+topic-legacy: developer guide
 description: Vous pouvez mettre à jour un ou plusieurs champs d’un sandbox en exécutant une requête de PATCH qui inclut le nom du sandbox dans le chemin de la requête et la propriété à mettre à jour dans la charge utile de la requête.
+exl-id: a8ef4305-5e0c-4d8f-8663-1933c957f122
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '133'
 ht-degree: 60%
 
 ---
-
 
 # Mise à jour d’un sandbox dans l’API
 
