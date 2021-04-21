@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de Requête;sql;sql reference;
 solution: Experience Platform
 title: Référence SQL requête Service
-topic: reference
+topic-legacy: reference
 description: Adobe Experience Platform Requête Service permet d'utiliser le SQL ANSI standard pour les instructions SELECT et d'autres commandes limitées.
+exl-id: 81d7d440-c51b-46a8-8690-0c0637826077
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 32%
 
 ---
-
 
 # Référence SQL requête Service
 
