@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; plage de dates
 solution: Experience Platform
 title: Présentation des statistiques d'observabilité
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform Observability Insights est une API RESTful qui vous permet d’exposer les mesures clés sur les activités de plateformes. Ces mesures fournissent des insights sur les statistiques d’utilisation de Platform, les contrôles d’intégrité des services Platform, les tendances historiques et les indicateurs de performance pour diverses fonctionnalités de Platform.
+exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 10%
 
 ---
-
 
 # [!DNL Observability Insights] présentation
 
