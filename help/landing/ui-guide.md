@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; Adobe Experience Platform ; guide de l'utilisateur ; guide de l'interface utilisateur ; guide de l'interface utilisateur de la plate-forme ; introduction à la plate-forme ; tableau de bord ;
 solution: Experience Platform
 title: Présentation de l’interface utilisateur Experience Platform
-topic: ui guide
-description: 'Adobe Experience Platform '
+topic-legacy: ui guide
+description: Adobe Experience Platform
+exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1755'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # Guide de l’interface utilisateur Adobe Experience Platform
 
@@ -153,11 +153,11 @@ La section **[!UICONTROL Surveillance]** permet de surveiller l’assimilation p
 
 ### [!UICONTROL Prise de décision]
 
-Offer Decisioning est un service d’application intégré à Adobe Experience Platform. Il vous permet de tirer parti de l’Experience Platform pour offrir à vos clients la meilleure offre et la meilleure expérience possible sur tous les points de contact au bon moment. Pour en savoir plus sur Offer Decisioning, y compris sur l&#39;utilisation des [!UICONTROL Offres] et [!UICONTROL Activités], consultez la [documentation de Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html).
+Offer Decisioning est un service applicatif intégré à Adobe Experience Platform. Il vous permet de tirer parti de l’Experience Platform pour offrir à vos clients la meilleure offre et la meilleure expérience possible sur tous les points de contact au bon moment. Pour en savoir plus sur l&#39;Offer decisioning, y compris l&#39;utilisation des [!UICONTROL Offres] et [!UICONTROL Activités], consultez la [documentation sur l&#39;Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html).
 
 ### [!UICONTROL Administration]
 
-L’interface utilisateur de la plate-forme fournit un tableau de bord grâce auquel vous pouvez vue des informations importantes sur l’utilisation des licences de votre entreprise, telles qu’elles sont capturées au cours d’un instantané quotidien. Pour y accéder, sélectionnez **[!UICONTROL Utilisation de la licence]** dans la barre de navigation. Pour en savoir plus sur le tableau de bord d&#39;utilisation des licences, consultez le [guide du tableau de bord d&#39;utilisation des licences](license-usage-dashboard.md).
+L’interface utilisateur de la plate-forme fournit un tableau de bord par lequel vous pouvez vue des informations importantes sur l’utilisation des licences de votre entreprise, telles qu’elles sont capturées au cours d’un instantané quotidien. Pour y accéder, sélectionnez **[!UICONTROL Utilisation de la licence]** dans la barre de navigation. Pour en savoir plus sur le tableau de bord d&#39;utilisation des licences, consultez le [guide du tableau de bord d&#39;utilisation des licences](license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >
