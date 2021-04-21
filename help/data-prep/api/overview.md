@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform ; prép. données ; api. prép. données ; dépannage ; API
 title: Présentation de l’API d’aperçu des données d’étape
-topic: guide
+topic-legacy: guide
 description: L’API Prép de données vous permet de créer par programmation des jeux de correspondances et des fonctions, ce qui vous permet de transformer vos données entre les schémas source et cible.
+exl-id: 740944ae-93ba-4099-a65e-18d6b384c307
 translation-type: tm+mt
-source-git-commit: cae6dc80d0394db51dc97478b92459be64c64498
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '258'
 ht-degree: 1%
 
 ---
-
 
 # Guide de l’API du service de mappage
 
 La préparation des données permet aux ingénieurs de données de mapper, de transformer et de valider les données à partir du modèle de données d’expérience (XDM). L’aperçu des données s’affiche sous la forme d’une étape de &quot;mappage&quot; dans les processus d’importation de données, y compris le processus d’importation CSV.
 
-L’API du service de mappage, également appelée API d’aperçu des données, comprend plusieurs points de terminaison décrits ci-dessous. Consultez les guides des points de terminaison individuels pour plus de détails et consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture d&#39;exemples d&#39;appels d&#39;API, etc.
+L’API du service de mappage, également appelée API d’aperçu des données, comprend plusieurs points de terminaison décrits ci-dessous. Consultez les guides individuels des points de terminaison pour plus de détails et consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture d&#39;exemples d&#39;appels d&#39;API, etc.
 
 ## Fonctions
 
