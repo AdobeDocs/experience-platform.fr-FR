@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement de table Azure ; enregistrement de table azur ; ats ; ATS
 solution: Experience Platform
 title: Créer une connexion à la source d'Enregistrement de table Azure dans l'interface utilisateur
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source d'Enregistrement Azure Table à l'aide de l'interface utilisateur Adobe Experience Platform.
+exl-id: 045cb954-e3e1-439d-a3cd-170d688dfbc8
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 11%
 
 ---
-
 
 # Créer une connexion source [!DNL Azure Table Storage] dans l’interface utilisateur
 
