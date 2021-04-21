@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; autorisations de contrôle d'accès ; types de ressources de contrôle d'accès ; api de contrôle d'accès
 solution: Experience Platform
 title: Point de terminaison de l’API de référence
-topic: developer guide
+topic-legacy: developer guide
 description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Vous pouvez liste les noms de tous les types d'autorisations et de ressources en faisant une demande de GET au point de terminaison /acl/reference dans l'API de Contrôle d'accès. Ces noms peuvent ensuite être utilisés dans les appels API pour afficher des stratégies efficaces pour l’utilisateur actuel.
+exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 63%
 
 ---
-
 
 # Point de terminaison de référence
 
