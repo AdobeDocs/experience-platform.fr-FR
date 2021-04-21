@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; exemples de requêtes ; exemple de requête ; adobe cible ;
 solution: Experience Platform
 title: Exemples de Requêtes pour les données Adobe Target
-topic: queries
+topic-legacy: queries
 description: Les données issues d’Adobe Target sont transformées en schéma de modèle de données d’expérience et ingérées dans Experience Platform en tant que jeux de données. Ce document contient des exemples de requêtes pour l’utilisation de Requête Service avec vos ensembles de données Adobe Target.
+exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 51%
 
 ---
-
 
 # Exemples de requêtes pour les données d’Adobe Target
 
