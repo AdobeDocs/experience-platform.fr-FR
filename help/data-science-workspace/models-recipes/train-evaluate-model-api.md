@@ -2,17 +2,17 @@
 keywords: Experience Platform ; formation et évaluation ; Espace de travail de données ; sujets populaires ; API d’apprentissage automatique Sensei
 solution: Experience Platform
 title: Formation et évaluation d'un modèle à l'aide de l'API d'apprentissage automatique Sensei
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Ce didacticiel vous montrera comment créer, former et évaluer un modèle à l'aide d'appels d'API d'apprentissage automatique Sensei.
+exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 94%
 
 ---
-
 
 # Former et évaluer un modèle à l&#39;aide de l&#39;API [!DNL Sensei Machine Learning]
 
