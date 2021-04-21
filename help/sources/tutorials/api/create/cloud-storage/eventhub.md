@@ -2,17 +2,17 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; événement hub ; Azure événement hub ; Événement hub
 solution: Experience Platform
 title: Création d'une connexion à la source des concentrateurs de Événement Azure à l'aide de l'API du service de flux
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à un compte Azure Événement Hubs à l'aide de l'API Flow Service.
+exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
 translation-type: tm+mt
-source-git-commit: 643da0981b3c955a9f66b6542ddaf2bda7398a2e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 26%
+source-wordcount: '566'
+ht-degree: 25%
 
 ---
-
 
 # Créez une connexion source [!DNL Azure Event Hubs] à l’aide de l’API [!DNL Flow Service].
 
@@ -50,7 +50,7 @@ Pour plus d&#39;informations sur ces valeurs, consultez [ce document Événement
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
