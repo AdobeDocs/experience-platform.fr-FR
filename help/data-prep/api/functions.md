@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; prép. de données ; api guide ; schémas ;
 solution: Experience Platform
 title: Point de terminaison de l'API schémas
-topic: schemas
-description: 'Vous pouvez utiliser le point de terminaison `/fonctions` dans l’API Adobe Experience Platform pour valider vos expressions de mappage et les fonctions de jeu de mappage disponibles de liste. '
+topic-legacy: schemas
+description: Vous pouvez utiliser le point de terminaison `/fonctions` dans l’API Adobe Experience Platform pour valider vos expressions de mappage et les fonctions de jeu de mappage disponibles de liste.
+exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 translation-type: tm+mt
-source-git-commit: 60c80a73deb8c77f19d5963cc3319d46143fb4c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '210'
 ht-degree: 12%
 
 ---
-
 
 # Points de terminaison des fonctions
 
