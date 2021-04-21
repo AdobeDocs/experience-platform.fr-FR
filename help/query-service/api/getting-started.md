@@ -2,18 +2,18 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; requête
 solution: Experience Platform
 title: Guide de l'API requête Service
-topic: query templates
+topic-legacy: query templates
 description: L’API Requête Service permet aux développeurs de requête de leurs données Adobe Experience Platform à l’aide de SQL standard. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
+exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '395'
-ht-degree: 38%
+ht-degree: 39%
 
 ---
 
-
-# [!DNL Query Service] Guide de l’API
+# [!DNL Query Service] Guide des API
 
 Ce guide du développeur décrit les étapes à suivre pour effectuer diverses opérations dans l&#39;API Adobe Experience Platform [!DNL Query Service].
 
@@ -31,7 +31,7 @@ Les sections suivantes contiennent des informations supplémentaires que vous de
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans cette documentation pour les exemples d&#39;appels d&#39;API, consultez la section [comment lire des exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
-### Collecte des valeurs des en-têtes requis
+### Collecter des valeurs pour les en-têtes requis
 
 Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Platform], comme indiqué ci-dessous :
 
