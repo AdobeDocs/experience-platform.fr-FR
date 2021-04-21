@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API
 title: Point de terminaison de l'API Attributs calculés
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Dans Adobe Experience Platform, les attributs calculés sont des fonctions utilisées pour agrégat des données au niveau du événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées pour la segmentation, l’activation et la personnalisation. Ce guide explique comment créer, vue, mettre à jour et supprimer des attributs calculés à l’aide de l’API Profil client en temps réel.
+exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
 translation-type: tm+mt
-source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2279'
+source-wordcount: '2277'
 ht-degree: 62%
 
 ---
-
 
 # (Alpha) Point de terminaison API des attributs calculés
 
