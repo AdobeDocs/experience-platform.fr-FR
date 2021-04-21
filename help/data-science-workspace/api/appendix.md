@@ -2,16 +2,16 @@
 keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; sujets populaires ;
 solution: Experience Platform
 title: Guide de l'API d'apprentissage automatique Sensei Annexe
-topic: Developer guide
+topic-legacy: Developer guide
 description: Les sections suivantes fournissent des informations de référence pour différentes fonctionnalités de l’API Sensei Machine Learning.
+exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 80%
 
 ---
-
 
 # [!DNL Sensei Machine Learning] Annexe du guide d’API
 
