@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de Requête;syntaxe sql;sql;ctas;CTAS;Créer une table comme sélectionner
 solution: Experience Platform
 title: Syntaxe SQL dans Requête Service
-topic: syntax
+topic-legacy: syntax
 description: Ce document affiche la syntaxe SQL prise en charge par Adobe Experience Platform Requête Service.
+exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
 translation-type: tm+mt
-source-git-commit: 78707257c179101b29e68036bf9173d74f01e03a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1981'
 ht-degree: 14%
 
 ---
-
 
 # Syntaxe SQL dans Requête Service
 
