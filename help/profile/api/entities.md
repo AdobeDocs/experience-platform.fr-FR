@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API
 title: Point de terminaison de l'API Entités (Accès au Profil)
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform vous permet d’accéder aux données Real-time Customer Profile à l’aide des API RESTful ou de l’interface utilisateur. Ce guide décrit comment accéder aux entités, plus communément appelées "profils", à l’aide de l’API de Profil.
+exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1737'
 ht-degree: 87%
 
 ---
-
 
 # Point de terminaison Entités (accès Profil)
 
