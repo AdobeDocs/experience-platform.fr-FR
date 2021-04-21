@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; CJA ; analyse de parcours ; analyse de parcours client ; orchestration de campagne ; orchestration ; parcours client ; parcours ; orchestration de parcours ; capacité ; région
 solution: Experience Platform
 title: Prise en charge du navigateur et de la langue pour l’interface utilisateur de l’Experience Platform
-topic: getting started
+topic-legacy: getting started
 description: Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexibles et performants du marché permettant de créer et de gérer des solutions complètes qui optimisent l’expérience client. Experience Platform permet aux entreprises de centraliser et de normaliser les données et le contenu des clients à partir de n’importe quel système et d’appliquer la science des données et l’apprentissage automatique afin d’améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées.
+exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 29%
 
 ---
-
 
 # Prise en charge du navigateur et de la langue pour l’interface utilisateur Experience Platform
 
