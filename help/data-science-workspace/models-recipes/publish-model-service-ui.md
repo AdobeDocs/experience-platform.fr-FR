@@ -2,17 +2,17 @@
 keywords: Experience Platform ; publier un modèle ; Espace de travail des données ; rubriques populaires ; noter un service
 solution: Experience Platform
 title: Publication d’un modèle en tant que service dans l’interface utilisateur de Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace vous permet de publier un modèle formé et noté en tant que service et permet ainsi aux utilisateurs de votre organisation IMS de noter des données sans avoir besoin de créer leurs propres modèles.
+exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 translation-type: tm+mt
-source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '502'
 ht-degree: 50%
 
 ---
-
 
 # Publication d’un modèle en tant que service dans l’interface utilisateur de Data Science Workspace
 
