@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; thèmes populaires ; service de Requête ; service de requête ; RStudio ; studio ; connexion au service de requête ;
 solution: Experience Platform
 title: Connexion de RStudio au service de Requête
-topic: connect
+topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter RStudio à Adobe Experience Platform Query Service.
+exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
 translation-type: tm+mt
-source-git-commit: f1b2fd7efd43f317a85c831cd64c09be29688f7a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '367'
 ht-degree: 18%
 
 ---
-
 
 # Connecter [!DNL RStudio] au service de Requête
 
