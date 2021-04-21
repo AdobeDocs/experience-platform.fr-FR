@@ -2,16 +2,16 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de Requête;fonctions définies par adobe;sql;
 solution: Experience Platform
 title: Fonctions SQL définies par Adobe dans Requête Service
-topic: functions
+topic-legacy: functions
 description: Ce document fournit des informations sur les fonctions définies par Adobe disponibles dans Adobe Experience Platform Requête Service.
+exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2913'
 ht-degree: 26%
 
 ---
-
 
 # Fonctions SQL définies par Adobe dans Requête Service
 
