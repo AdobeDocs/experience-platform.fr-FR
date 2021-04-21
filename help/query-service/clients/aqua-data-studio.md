@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; service de requête ; service de Requête ; Aqua Data Studio ; studio de données Aqua ; connexion au service de requête ;
 solution: Experience Platform
 title: Connecter Aqua Data Studio au service de Requête
-topic: connect
+topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter Aqua Data Studio à Adobe Experience Platform Query Service.
+exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 28%
 
 ---
-
 
 # Connecter [!DNL Aqua Data Studio] au service de Requête
 
