@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; api de dataset ; gérer l’utilisation des données ; api d’utilisation des données
 solution: Experience Platform
 title: 'Gestion des étiquettes d’utilisation des données pour les jeux de données à l’aide d’API '
-topic: developer guide
+topic-legacy: developer guide
 description: L’API Service de dataset vous permet d’appliquer et de modifier des étiquettes d’utilisation pour les jeux de données. Il fait partie des fonctionnalités de catalogue de données Adobe Experience Platform, mais est distinct de l’API Catalog Service qui gère les métadonnées des jeux de données.
+exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 6%
 
 ---
-
 
 # Gérer les étiquettes d’utilisation des données pour les jeux de données à l’aide d’API
 
