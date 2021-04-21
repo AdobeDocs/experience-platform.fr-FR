@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API
 title: Point de terminaison de l’API Tâches du système de profil
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform vous permet de supprimer un jeu de données ou un lot du magasin de Profils afin de supprimer les données du Profil client en temps réel qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Pour ce faire, vous devez utiliser l’API Profil pour créer une tâche système de Profil ou supprimer une requête.
+exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
 translation-type: tm+mt
-source-git-commit: d2ace7cadb06f77bdf14b6a4ef83e879c4ca88fd
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 64%
 
 ---
-
 
 # Point de terminaison des tâches du système de profil (supprimer des requêtes)
 
