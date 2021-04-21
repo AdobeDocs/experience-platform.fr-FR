@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Oracle ; oracle
 solution: Experience Platform
 title: Présentation du connecteur source Oracle
-topic: overview
-description: Découvrez comment connecter Oracle à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
+topic-legacy: overview
+description: Découvrez comment connecter un Oracle à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
+exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
-
 
 # (Bêta) [!DNL Oracle] connecteur
 
@@ -31,11 +31,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ## Connectez [!DNL Oracle] à [!DNL Platform] à l’aide d’API.
 
-- [Création d’une connexion source Oracle à l’aide de l’API du service de flux](../../tutorials/api/create/databases/oracle.md)
+- [Création d’une connexion à la source d’Oracle à l’aide de l’API du service de flux](../../tutorials/api/create/databases/oracle.md)
 - [Exploration d’un système de base de données à l’aide de l’API du service de flux](../../tutorials/api/explore/database-nosql.md)
 - [Collecte de données à partir d’une base de données à l’aide de l’API du service de flux](../../tutorials/api/collect/database-nosql.md)
 
 ## Connectez [!DNL Oracle] à [!DNL Platform] à l’aide de l’interface utilisateur.
 
-- [Création d’une connexion source Oracle dans l’interface utilisateur](../../tutorials/ui/create/databases/oracle.md)
+- [Création d’une connexion à la source d’Oracle dans l’interface utilisateur](../../tutorials/ui/create/databases/oracle.md)
 - [Configuration d’un flux de données pour une connexion à une base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
