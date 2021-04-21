@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; élément de paiement ; type de données ; type de données ; type de données ;
 solution: Experience Platform
 title: Type de données de l'élément de paiement
-topic: overview
+topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM (Payment Item Experience Data Model).
+exl-id: d25a358b-73c1-468b-a9c5-808385689932
 translation-type: tm+mt
-source-git-commit: 8bbb062df47b6e94630626d0a89a179d759d922d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 24%
 
 ---
-
 
 # [!UICONTROL Type ] d&#39;élément de paiement
 
