@@ -2,16 +2,16 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; guide d'api ; requêtes ; requête ; service de Requête ;
 solution: Experience Platform
 title: Point de terminaison de l'API requêtes
-topic: queries
+topic-legacy: queries
 description: Les sections suivantes décrivent les appels que vous pouvez effectuer à l’aide du point de terminaison /requêtes de l’API Requête Service.
+exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 94%
 
 ---
-
 
 # Point de terminaison des requêtes
 
