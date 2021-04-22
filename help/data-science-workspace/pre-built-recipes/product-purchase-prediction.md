@@ -6,7 +6,7 @@ topic-legacy: overview
 description: La recette de prédiction d’achat de produit vous permet de prévoir la probabilité d’un certain type d’événement d’achat de client, un achat de produit, par exemple.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 94%
@@ -36,7 +36,7 @@ La recette de prédiction d’achat de produit utilise l’apprentissage automat
 Cette recette utilise les [schémas XDM](../../xdm/home.md) pour modéliser les données. Le schéma utilisé pour cette recette est illustré ci-dessous :
 
 | Nom du champ | Type |
---- | ---
+| --- | --- |
 | userId | Chaîne |
 | genderRatio | Nombre |
 | ageY | Nombre |
