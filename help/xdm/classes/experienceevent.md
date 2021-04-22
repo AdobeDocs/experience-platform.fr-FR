@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Ce document fournit un aperçu de la classe XDM ExperienceEvent.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9b63b38e664e5776ca638f8ed407896f185bcab0
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '869'
 ht-degree: 6%
 
 ---
@@ -29,7 +29,7 @@ La classe [!DNL XDM ExperienceEvent] fournit elle-même plusieurs champs relatif
 | `eventMergeId` | ID du lot assimilé à l&#39;origine de la création de l&#39;enregistrement. Ce champ est automatiquement renseigné par le système lors de l’assimilation des données. |
 | `eventType` | Chaîne indiquant le Principal type d&#39;événement de l’enregistrement. Les valeurs acceptées et leurs définitions figurent dans la section [appendice](#eventType). |
 | `identityMap` | Champ de mappage contenant un ensemble d’identités d’espacement de noms pour la personne à laquelle le événement s’applique. Ce champ est automatiquement mis à jour par le système lorsque des données d&#39;identité sont saisies. Afin d’utiliser correctement ce champ pour [Profil client en temps réel](../../profile/home.md), n’essayez pas de mettre à jour manuellement le contenu du champ dans vos opérations de données.<br /><br />Consultez la section sur les cartes d&#39;identité dans les  [bases de la ](../schema/composition.md#identityMap) composition de schémas pour plus d&#39;informations sur leur cas d&#39;utilisation. |
-| `timestamp` | Heure à laquelle le événement ou l&#39;observation a eu lieu, formatée selon [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)). |
+| `timestamp` | Horodatage ISO 8601 indiquant le moment où le événement s’est produit, formaté selon la section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) du [RFC 339.<br><br>Cet horodatage ne peut  **** représenter que l&#39;observation de l&#39;événement lui-même et doit se produire dans le passé. Si les cas d’utilisation de votre segmentation nécessitent l’utilisation d’horodatages qui peuvent se produire dans le futur (par exemple, une date de départ), ces valeurs doivent être limitées ailleurs dans votre schéma de Événement d’expérience. |
 
 ## mixins compatibles {#mixins}
 
