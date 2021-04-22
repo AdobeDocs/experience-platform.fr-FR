@@ -6,10 +6,10 @@ description: L’API du Privacy Service permet aux développeurs de créer et de
 topic-legacy: developer guide
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 27%
+source-wordcount: '791'
+ht-degree: 26%
 
 ---
 
@@ -35,9 +35,9 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 Pour appeler l&#39;API [!DNL Privacy Service], vous devez d&#39;abord rassembler vos informations d&#39;identification d&#39;accès à utiliser dans les en-têtes requis :
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Cela implique d&#39;obtenir des autorisations de développeur pour [!DNL Experience Platform] dans Adobe Admin Console, puis de générer les informations d&#39;identification dans Adobe Developer Console.
 
