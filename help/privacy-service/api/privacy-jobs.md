@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: Découvrez comment gérer les tâches de confidentialité pour les applications Experience Cloud à l’aide de l’API Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '1344'
-ht-degree: 68%
+source-wordcount: '1362'
+ht-degree: 67%
 
 ---
 
@@ -41,6 +41,8 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont les suivantes : <ul><li>`gdpr` (Union européenne)</li><li>`ccpa` (Californie)</li><li>`lgpd_bra` (Brésil)</li><li>`nzpa_nzl` (New Zealand)</li><li>`pdpa_tha` (Thaïlande)</li></ul> |
 | `{PAGE}` | La page de données à afficher à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0`. |
 | `{SIZE}` | Le nombre de résultats à afficher sur chaque page. `1` est la valeur par défaut et `100` est le maximum. Dépasser le maximum entraîne le code d’erreur 400 dans l’API. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
@@ -160,6 +162,8 @@ curl -X POST \
 | `analyticsDeleteMethod` | Une propriété facultative qui précise la façon dont Adobe Analytics doit traiter les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize` : toutes les données référencées par la collection donnée des identifiants d’utilisateur sont anonymes. Il s’agit du comportement par défaut si `analyticsDeleteMethod` est omis.</li><li>`purge` : l’ensemble des données est complètement supprimé.</li></ul> |
 | `regulation` **(Obligatoire)** | La réglementation du travail de protection de la vie privée. Les valeurs suivantes sont acceptées : <ul><li>`gdpr` (Union européenne)</li><li>`ccpa` (Californie)</li><li>`lgpd_bra` (Brésil)</li><li>`nzpa_nzl` (Nouvelle-Zélande)</li><li>`pdpa_tha` (Thaïlande)</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Réponse**
 
 Une réponse réussie renvoie les détails des tâches créées.
@@ -210,6 +214,8 @@ Une réponse réussie renvoie les détails des tâches créées.
 | --- | --- |
 | `jobId` | Un identifiant généré par le système unique et en lecture seule pour une tâche. Cette valeur est utilisée à l’étape suivante pour rechercher une tâche spécifique. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Lorsque vous avez réussi à soumettre la requête de tâche, vous pouvez passer à l’étape suivante de [vérification de l’état de la tâche](#check-status).
 
 ## Vérification de l’état d’une tâche {#check-status}
@@ -229,6 +235,8 @@ GET /jobs/{JOB_ID}
 | Paramètre | Description |
 | --- | --- |
 | `{JOB_ID}` | ID de la tâche que vous souhaitez rechercher. Cet ID est renvoyé sous `jobId` dans les réponses d&#39;API réussies pour [créer une tâche](#create-job) et [répertorier toutes les tâches](#list). |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
@@ -326,6 +334,8 @@ Une réponse réussie renvoie les détails de la tâche spécifiée.
 | `productStatusResponse.results` | Pour certains états, certains produits peuvent renvoyer un objet `results` qui fournit des informations supplémentaires non couvertes par `responseMsgDetail`. |
 | `downloadURL` | Si l’état de la tâche est `complete`, cet attribut fournit une URL pour télécharger les résultats de la tâche sous la forme d’un fichier ZIP. Vous pouvez télécharger ce fichier pendant 60 jours à compter de l’achèvement de la tâche. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Catégories d&#39;état de la tâche {#status-categories}
 
 Le tableau suivant liste les différentes catégories possibles de statut professionnel et leur signification correspondante :
@@ -336,6 +346,8 @@ Le tableau suivant liste les différentes catégories possibles de statut profes
 | `processing` | Les applications ont reconnu la tâche et sont actuellement en train de la traiter. |
 | `submitted` | La tâche est envoyée vers chaque application nécessaire. |
 | `error` | Une erreur s’est produite lors du traitement de la tâche. Vous pouvez obtenir de plus amples informations en récupérant les détails individuels de la tâche. |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
