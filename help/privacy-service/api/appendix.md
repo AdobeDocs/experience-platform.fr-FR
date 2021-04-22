@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: Ce document contient des informations supplémentaires sur l’utilisation de l’API du Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 545ac984d9f9f540fc9121214d40719f9a254379
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 80%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -60,13 +60,13 @@ Lors de la spécification d’une valeur `namespace`[!DNL Privacy Service] dans 
 Le tableau suivant indique les valeurs acceptées pour la spécification d’un produit Adobe dans l’attribut `include` d’une requête de création de tâche.
 
 | Produit | Valeur à utiliser dans l’attribut `include` |
---- | ---
-| Adobe Advertizing Cloud | « AdCloud » |
-| Adobe Analytics | « Analytics » |
-| Adobe Audience Manager | « AudienceManager » |
-| Adobe Campaign | « Campaign » |
-| Adobe Experience Platform | « aepDataLake » |
-| Adobe Primetime Authentication | « primetimeAuthentication » |
-| Adobe Target | « Target » |
-| Customer Record Service | « CRS » |
-| Real-time Customer Profile | « ProfileService » |
+| --- | --- |
+| Adobe Advertising Cloud | `AdCloud` |
+| Adobe Analytics | `Analytics` |
+| Adobe Audience Manager | `AudienceManager` |
+| Adobe Campaign | `Campaign` |
+| Adobe Experience Platform | `aepDataLake` |
+| Adobe Primetime Authentication | `primetimeAuthentication` |
+| Adobe Target | `Target` |
+| Customer Record Service | `CRS` |
+| Profil client en temps réel | `ProfileService` |
