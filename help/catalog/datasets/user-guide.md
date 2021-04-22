@@ -6,10 +6,10 @@ topic-legacy: datasets
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d2f19cc97082f75e66cf38e54b5bdb89482930ed
 workflow-type: tm+mt
-source-wordcount: '1140'
-ht-degree: 73%
+source-wordcount: '1139'
+ht-degree: 71%
 
 ---
 
@@ -32,22 +32,22 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 
 Dans l&#39;interface utilisateur [!DNL Experience Platform], cliquez sur **[!UICONTROL Datasets]** dans le volet de navigation de gauche pour ouvrir le tableau de bord **[!UICONTROL Datasets]**. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et l’état de l’exécution d’ingestion la plus récente.
 
-![](../images/datasets/user-guide/browse_datasets.png)
+![](../images/datasets/user-guide/browse-datasets.png)
 
 Cliquez sur le nom d’un jeu de données pour accéder à l’écran **[!UICONTROL Activité du jeu de données]** et consulter les détails du jeu de données que vous avez sélectionné. L’onglet activité contient un graphique qui permet de visualiser le taux de messages consommé ainsi qu’une liste des lots réussis et en échec.
 
-![](../images/datasets/user-guide/dataset_activity_1.png)
-![](../images/datasets/user-guide/dataset_activity_2.png)
+![](../images/datasets/user-guide/dataset-activity-1.png)
+![](../images/datasets/user-guide/dataset-activity-2.png)
 
 ## Prévisualisation d’un jeu de données
 
 À l’écran **[!UICONTROL Activité du jeu de données]**, cliquez sur **[!UICONTROL Prévisualiser le jeu de données]** près du coin supérieur droit de votre écran pour prévisualiser jusqu’à 100 lignes de données. Si le jeu de données est vide, le lien de la prévisualisation est désactivé et indique que la prévisualisation n&#39;est pas disponible.
 
-![](../images/datasets/user-guide/click_to_preview.png)
+![](../images/datasets/user-guide/click-to-preview.png)
 
 Dans la fenêtre de prévisualisation, l’affichage hiérarchique du schéma pour le jeu de données s’affiche sur la droite.
 
-![](../images/datasets/user-guide/preview_dataset.png)
+![](../images/datasets/user-guide/preview-dataset.png)
 
 Pour des méthodes plus robustes d&#39;accès à vos données, [!DNL Experience Platform] fournit des services en aval tels que [!DNL Query Service] et [!DNL JupyterLab] pour explorer et analyser les données. Consultez les documents suivants pour plus d’informations :
 
@@ -58,7 +58,7 @@ Pour des méthodes plus robustes d&#39;accès à vos données, [!DNL Experience 
 
 Pour créer un nouveau jeu de données, commencez par cliquer sur **[!UICONTROL Créer un jeu de données]** dans le tableau de bord **[!UICONTROL Jeux de données]**.
 
-![](../images/datasets/user-guide/click_to_create.png)
+![](../images/datasets/user-guide/click-to-create.png)
 
 Sur l’écran suivant, les deux options de création d’un nouveau jeu de données suivantes vous sont proposées :
 
@@ -69,25 +69,25 @@ Sur l’écran suivant, les deux options de création d’un nouveau jeu de donn
 
 Sur l’écran **[!UICONTROL Créer un jeu de données]**, cliquez sur **[!UICONTROL Créer un jeu de données à partir d’un schéma]** pour créer un nouveau jeu de données vide.
 
-![](../images/datasets/user-guide/create_dataset_schema.png)
+![](../images/datasets/user-guide/create-dataset-schema.png)
 
 L’étape **[!UICONTROL Sélectionner un schéma]** apparaît. Parcourez la liste des schémas et sélectionnez le schéma auquel le jeu de données doit s’adapter avant de cliquer sur **[!UICONTROL Suivant]**.
 
-![](../images/datasets/user-guide/select_schema.png)
+![](../images/datasets/user-guide/select-schema.png)
 
 L’étape **[!UICONTROL Configurer le jeu de données]** apparaît. Ajoutez un nom et une description facultative au jeu de données, puis cliquez sur **[!UICONTROL Terminer]** pour créer le jeu de données.
 
-![](../images/datasets/user-guide/configure_dataset_schema.png)
+![](../images/datasets/user-guide/configure-dataset-schema.png)
 
 ### Création d’un jeu de données à partir d’un fichier CSV  {#csv}
 
 Lorsque vous créez un jeu de données à l’aide d’un fichier CSV, un schéma ad hoc est créé pour fournir une structure au jeu de données qui correspond au fichier CSV fourni. Sur l’écran **[!UICONTROL Créer un jeu de données]**, cliquez sur la case intitulée **[!UICONTROL Créer un jeu de données à partir d’un fichier CSV]**.
 
-![](../images/datasets/user-guide/create_dataset_csv.png)
+![](../images/datasets/user-guide/create-dataset-csv.png)
 
 L’étape **[!UICONTROL Configurer]** apparaît. Ajoutez un nom et une description facultative au jeu de données, puis cliquez sur **[!UICONTROL Suivant]**.
 
-![](../images/datasets/user-guide/configure_dataset_csv.png)
+![](../images/datasets/user-guide/configure-dataset-csv.png)
 
 L’étape **[!UICONTROL Ajouter les données]** apparaît. Chargez le fichier CSV soit en le faisant glisser et en le déposant au centre de votre écran, soit en cliquant sur **[!UICONTROL Parcourir]** pour explorer votre répertoire de fichiers. La taille du fichier peut aller jusqu’à 10 gigaoctets. Une fois le fichier CSV chargé, cliquez sur **[!UICONTROL Enregistrer]** pour créer le jeu de données.
 
@@ -95,7 +95,7 @@ L’étape **[!UICONTROL Ajouter les données]** apparaît. Chargez le fichier C
 >
 >Les noms de colonne CSV doivent commencer par des caractères alphanumériques et ne peuvent contenir que des lettres, des chiffres et des traits de soulignement.
 
-![](../images/datasets/user-guide/add_csv_data.png)
+![](../images/datasets/user-guide/add-csv-data.png)
 
 ## Activation d’un jeu de données pour Real-time Customer Profile {#enable-profile}
 
@@ -112,7 +112,7 @@ Pour activer un jeu de données dans Profile, accédez à son écran **[!UICONTR
 >
 >Si un jeu de données contient déjà des données et est ensuite activé pour [!DNL Profile], les données existantes ne sont pas automatiquement utilisées par [!DNL Profile]. Une fois qu&#39;un jeu de données est activé pour [!DNL Profile], il est recommandé de réassimiler toutes les données existantes pour qu&#39;elles contribuent aux profils du client.
 
-![](../images/datasets/user-guide/enable_dataset_profiles.png)
+![](../images/datasets/user-guide/enable-dataset-profiles.png)
 
 ## Gestion et application de la gouvernance des données sur un jeu de données
 
@@ -126,11 +126,11 @@ Vous pouvez supprimer un jeu de données en accédant d’abord à son écran **
 >
 >Les jeux de données créés et utilisés par les applications et services d&#39;Adobe (tels que Adobe Analytics, Adobe Audience Manager ou [!DNL Offer Decisioning]) ne peuvent pas être supprimés.
 
-![](../images/datasets/user-guide/delete_dataset.png)
+![](../images/datasets/user-guide/delete-dataset.png)
 
 Une boîte de confirmation s’affiche alors. Cliquez sur **[!UICONTROL Supprimer]** pour confirmer la suppression du jeu de données.
 
-![](../images/datasets/user-guide/confirm_delete.png)
+![](../images/datasets/user-guide/confirm-delete.png)
 
 ## Suppression d’un jeu de données activé par Profile
 
@@ -140,17 +140,17 @@ Vous pouvez supprimer un jeu de données du magasin [!DNL Profile] uniquement (e
 
 ## Surveillance de l’ingestion des données
 
-Dans l&#39;interface utilisateur [!DNL Experience Platform], cliquez sur **[!UICONTROL Surveillance]** dans le volet de navigation de gauche. Le tableau de bord **[!UICONTROL Surveillance]** vous permet de consulter les états des données entrantes soit depuis le lot soit depuis l’ingestion par flux. Pour afficher les états de lots individuels, cliquez sur **[!UICONTROL Lot de bout en bout]** ou sur **[!UICONTROL Diffusion en continu de bout en bout]**. Le tableau de bord répertorie toutes les exécutions de lot ou d’ingestion par flux, notamment celles réussies, en échec ou toujours en cours. Chaque liste fournit des détails sur le lot, notamment l’identifiant de lot, le nom du jeu de données cibles et le nombre d’enregistrements ingérés. Si le jeu de données de cible est activé pour [!DNL Profile], le nombre d&#39;enregistrements d&#39;identité et de profil assimilés s&#39;affiche également.
+Dans l&#39;interface utilisateur [!DNL Experience Platform], cliquez sur **[!UICONTROL Surveillance]** dans le volet de navigation de gauche. Le tableau de bord **[!UICONTROL Surveillance]** vous permet de consulter les états des données entrantes soit depuis le lot soit depuis l’ingestion par flux. Pour afficher les états de lots individuels, cliquez sur **[!UICONTROL Lot de bout en bout]** ou sur **[!UICONTROL Diffusion en continu de bout en bout]**. Les tableaux de bord listes s’exécutent pour l’assimilation en lot ou en flux continu, y compris ceux qui réussissent, échouent ou sont toujours en cours d’exécution. Chaque liste fournit des détails sur le lot, notamment l’identifiant de lot, le nom du jeu de données cibles et le nombre d’enregistrements ingérés. Si le jeu de données de cible est activé pour [!DNL Profile], le nombre d&#39;enregistrements d&#39;identité et de profil assimilés s&#39;affiche également.
 
-![](../images/datasets/user-guide/batch_listing.png)
+![](../images/datasets/user-guide/batch-listing.png)
 
 Vous pouvez cliquer sur un **[!UICONTROL identifiant de lot]** individuel pour accéder au tableau de bord **[!UICONTROL Présentation du lot]** et afficher les détails pour le lot et notamment les journaux d’erreurs dans le cas de l’échec de l’ingestion du lot.
 
-![](../images/datasets/user-guide/batch_overview.png)
+![](../images/datasets/user-guide/batch-overview.png)
 
 Si vous souhaitez supprimer le lot, vous pouvez le faire en cliquant sur **[!UICONTROL Supprimer le lot]** situé près du coin supérieur droit du tableau de bord. Cette opération supprimera également les enregistrements du jeu de données pour lequel le lot a été ingéré à l’origine.
 
-![](../images/datasets/user-guide/delete_batch.png)
+![](../images/datasets/user-guide/delete-batch.png)
 
 ## Étapes suivantes
 
