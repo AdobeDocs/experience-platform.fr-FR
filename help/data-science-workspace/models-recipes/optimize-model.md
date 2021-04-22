@@ -7,7 +7,7 @@ type: Tutorial
 description: Model Insights Framework fournit aux analystes de données des outils dans Data Science Workspace pour prendre des décisions rapides et éclairées afin d’optimiser les modèles d’apprentissage automatique basés sur des expériences.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 88%
@@ -77,7 +77,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 Le tableau suivant indique les mesures par défaut pour chaque classe. Un utilisateur peut également utiliser les valeurs de la colonne `evaluation.metric` pour activer une mesure spécifique.
 
 | `evaluator.class` | Mesures par défaut | `evaluation.metric` |
---- | --- | ---
+| --- | --- | --- |
 | `DefaultBinaryClassificationEvaluator` | -Précision <br>-Rappel <br>-Matrice de confusion <br>-F-Score <br>-Exactitude <br>-Caractéristiques de fonctionnement du récepteur <br>-Aire sous les caractéristiques de fonctionnement du récepteur | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `DefaultMultiClassificationEvaluator` | -Précision <br>-Rappel <br>-Matrice de confusion <br>-F-Score <br>-Exactitude <br>-Caractéristiques de fonctionnement du récepteur <br>-Aire sous les caractéristiques de fonctionnement du récepteur | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `RecommendationsEvaluator` | -Précision moyenne (MAP) <br>-Gain cumulatif actualisé normalisé <br>-Rang réciproque moyen <br>-Mesure K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
@@ -161,7 +161,7 @@ Les données sont d’abord chargées dans un jeu de données à partir d’une 
 [!DNL Sensei Model Insights Framework] prend en charge un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique. Le tableau ci-dessous présente les classes d’algorithme d’apprentissage automatique de haut niveau courantes et les mesures d’évaluation et visualisations correspondantes.
 
 | Type d’algorithme de ML | Mesures d’évaluation | Visualisations |
---- | --- | ---
+| --- | --- | --- |
 | Régression | - RMSE<br>- MAPE<br>- MASE<br>- MAE | Courbe de recouvrement des valeurs prédites et réelles |
 | Classification binaire | - Matrice de confusion<br>- Précision-rappel<br>- Exactitude<br>- F-score (en particulier F1 et F2)<br>- AUC<br>- ROC | Courbe ROC et matrice de confusion |
 | Classification multi-classe | -Matrice de confusion <br>- Pour chaque classe : <br>- précision-rappel exactitude <br>- F-score (en particulier F1 et F2) | Courbe ROC et matrice de confusion |
