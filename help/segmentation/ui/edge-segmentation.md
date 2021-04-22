@@ -6,9 +6,9 @@ topic-legacy: ui guide
 description: La segmentation Edge permet d’évaluer instantanément les segments dans la plate-forme, ce qui permet d’utiliser des cas de personnalisation de la même page et de la page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5256c2a13fc75f7d46911f2ad368188d9e818921
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '356'
 ht-degree: 5%
 
 ---
@@ -41,7 +41,7 @@ Les types de requête suivants sont **non** actuellement pris en charge pour la 
 | Type de requête | Détails |
 | ---------- | ------- |
 | Fenêtre relative | Si une requête fait référence à une fenêtre temporelle, elle ne peut pas être évaluée à l’aide de la segmentation des arêtes. |
-| Négation | Si une requête contient une négation, elle ne peut pas être évaluée à l’aide de la segmentation des arêtes. |
+| Négation | Si une requête contient une négation ou un événement `not`, elle ne peut pas être évaluée à l’aide de la segmentation des arêtes. |
 | Plusieurs événements | Si une requête contient plusieurs événements, elle ne peut pas être évaluée à l’aide de la segmentation des arêtes. |
 
 ## Étapes suivantes
