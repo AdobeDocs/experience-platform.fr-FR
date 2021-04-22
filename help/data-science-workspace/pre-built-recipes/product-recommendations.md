@@ -6,7 +6,7 @@ topic-legacy: overview
 description: La recette des recommandations de produits vous permet d’apporter à vos clients des recommandations de produits personnalisées et adaptées à leurs besoins et à leurs intérêts. Grâce à une modélisation prédictive précise, l’historique des achats d’un client peut vous fournir des informations sur les produits susceptibles de l’intéresser.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 96%
@@ -39,7 +39,7 @@ Cette recette utilise des schémas [XDM](../../xdm/schema/field-dictionary.md) p
 ### Schéma des données d’entrée
 
 | Nom du champ | Type |
---- | ---
+| --- | --- |
 | itemId | Chaîne |
 | interactionType | Chaîne |
 | timestamp | Chaîne |
@@ -48,7 +48,7 @@ Cette recette utilise des schémas [XDM](../../xdm/schema/field-dictionary.md) p
 ### Schéma des données de sortie
 
 | Nom du champ | Type |
---- | ---
+| --- | --- |
 | recommendations | Chaîne |
 | userId | Entier |
 
