@@ -6,7 +6,7 @@ topic-legacy: overview
 description: La recette Ventes au détail vous fournit des prévisions de ventes pour tous les magasins contrôlés pour une période donnée. Avec un modèle de prévision précis, le détaillant serait en mesure d’identifier la relation entre les politiques de demande et de prix, mais aussi de prendre des décisions optimisées concernant le prix afin de maximiser les ventes et le chiffre d’affaires.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 92%
@@ -41,7 +41,7 @@ Ce didacticiel porte sur la création de la recette Ventes au détail dans un bl
 Cette recette utilise les [schémas XDM](../../xdm/schema/field-dictionary.md) pour modéliser les données. Le schéma utilisé pour cette recette est illustré ci-dessous :
 
 | Nom du champ | Type |
---- | ---
+| --- | --- |
 | date | Chaîne |
 | store | Entier |
 | storeType | Chaîne |
