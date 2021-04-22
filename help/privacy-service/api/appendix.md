@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: Ce document contient des informations supplémentaires sur l’utilisation de l’API du Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: 545ac984d9f9f540fc9121214d40719f9a254379
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '476'
+ht-degree: 77%
 
 ---
 
@@ -25,15 +25,17 @@ Le tableau suivant présente plusieurs types d&#39;identité prédéfinis couram
 
 | Type d’identité | `namespace` | `namespaceId` |
 | --- | --- | --- |
-| E-mail | E-mail | 6 |
-| Téléphone | Téléphone | 7 |
-| Identifiant Adobe Advertising Cloud | AdCloud | 411 |
-| UUID Adobe Audience Manager | CORE | 0 |
-| Adobe Experience Cloud ID | ECID | 4 |
-| Identifiant Adobe Target | TNTID | 9 |
-| [!DNL Apple] Identifiant pour les annonceurs | IDFA | 20915 |
-| [!DNL Google] Identifiant de publicité | GAID | 20914 |
-| [!DNL Windows] AIDE | WAID | 8 |
+| E-mail | `Email` | `6` |
+| Téléphone | `Phone` | `7` |
+| Identifiant Adobe Advertising Cloud | `AdCloud` | `411` |
+| UUID Adobe Audience Manager | `CORE` | `0` |
+| Adobe Experience Cloud ID | `ECID` | `4` |
+| Identifiant Adobe Target | `TNTID` | `9` |
+| [!DNL Apple] Identifiant pour les annonceurs | `IDFA` | `20915` |
+| [!DNL Google] Identifiant de publicité | `GAID` | `20914` |
+| [!DNL Windows] AIDE | `WAID` | `8` |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
@@ -47,13 +49,15 @@ Lors de la spécification d’une valeur `namespace`[!DNL Privacy Service] dans 
 
 | Qualificateur | Définition |
 | --------- | ---------- |
-| standard | Un des espaces de noms standard définis globalement, non lié à un jeu de données d’une organisation individuelle (par exemple, e-mail, numéro de téléphone, etc.). L’identifiant d’espace de noms est fourni. |
-| custom | Espace de noms unique créé dans le contexte d’une organisation et non partagé dans [!DNL Experience Cloud]. La valeur représente le nom convivial (champ « nom ») à rechercher. L’identifiant d’espace de noms est fourni. |
-| integrationCode | Code d’intégration, similaire à « custom », mais spécifiquement défini comme le code d’intégration d’une source de données à rechercher. L’identifiant d’espace de noms est fourni. |
-| namespaceId | Indique que la valeur correspond à l’identifiant réel de l’espace de noms créé ou mappé via le service d’espace de noms. |
-| unregistered | Chaîne de forme libre non définie dans le service d’espace de noms et prise « en l’état ». Toute application qui gère ces types d’espaces de noms les compare et les traite en fonction du contexte de l’entreprise et du jeu de données. Aucun identifiant d’espace de noms n’est fourni. |
-| analytics | Espace de nommage personnalisé mappé en interne dans [!DNL Analytics], et non dans le service d’espace de nommage. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
-| target | Espace de nommage personnalisé compris en interne par [!DNL Target], et non dans le service d’espace de nommage. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
+| `standard` | Un des espaces de noms standard définis globalement, non lié à un jeu de données d’une organisation individuelle (par exemple, e-mail, numéro de téléphone, etc.). L’identifiant d’espace de noms est fourni. |
+| `custom` | Espace de noms unique créé dans le contexte d’une organisation et non partagé dans [!DNL Experience Cloud]. La valeur représente le nom convivial (champ « nom ») à rechercher. L’identifiant d’espace de noms est fourni. |
+| `integrationCode` | Code d’intégration, similaire à « custom », mais spécifiquement défini comme le code d’intégration d’une source de données à rechercher. L’identifiant d’espace de noms est fourni. |
+| `namespaceId` | Indique que la valeur correspond à l’identifiant réel de l’espace de noms créé ou mappé via le service d’espace de noms. |
+| `unregistered` | Chaîne de forme libre non définie dans le service d’espace de noms et prise « en l’état ». Toute application qui gère ces types d’espaces de noms les compare et les traite en fonction du contexte de l’entreprise et du jeu de données. Aucun identifiant d’espace de noms n’est fourni. |
+| `analytics` | Espace de nommage personnalisé mappé en interne dans [!DNL Analytics], et non dans le service d’espace de nommage. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
+| `target` | Espace de nommage personnalisé compris en interne par [!DNL Target], et non dans le service d’espace de nommage. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Valeurs de produit acceptées
 
@@ -70,3 +74,5 @@ Le tableau suivant indique les valeurs acceptées pour la spécification d’un 
 | Adobe Target | `Target` |
 | Customer Record Service | `CRS` |
 | Profil client en temps réel | `ProfileService` |
+
+{style=&quot;table-layout:auto&quot;}
