@@ -7,10 +7,10 @@ type: Tutorial
 description: Ce didacticiel vous montrera comment créer, former et évaluer un modèle à l'aide d'appels d'API d'apprentissage automatique Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
-source-wordcount: '1237'
-ht-degree: 94%
+source-wordcount: '1235'
+ht-degree: 92%
 
 ---
 
@@ -41,16 +41,14 @@ Nous utiliserons les API pour créer une exécution d’expérience pour la form
 
 >[!NOTE]
 >
->Les termes « Engine », « MLInstance », « MLService », « Experiment » et « Model »* ne sont pas désignés de la même façon dans l’interface utilisateur. Si vous venez de l’interface utilisateur, le tableau suivant fait correspondre les différents termes.
-> 
-> | Terme de l’interface utilisateur | Terme de l’API |
-> --- | ---
-> | Recette | Engine |
-> | Modèle | MLInstance |
-> | Exécutions de formation | Experiment |
-> | Service | MLService |
+>Les termes « Engine », « MLInstance », « MLService », « Experiment » et « Model »* ne sont pas désignés de la même façon dans l’interface utilisateur. Si vous venez de l’interface utilisateur, le tableau ci-dessous mappe les différences.
 
-
+| Terme de l’interface utilisateur | Terme de l’API |
+| --- | --- |
+| Recette | Engine |
+| Modèle | MLInstance |
+| Exécutions de formation | Experiment |
+| Service | MLService |
 
 ### Création d’une instance MLInstance
 
@@ -128,7 +126,7 @@ curl -X POST \
 >
 > Dans la `{JSON_PAYLOAD}`, nous définissons les paramètres utilisés pour la formation et la notation dans le tableau `tasks`. `{ENGINE_ID}` représente l’identifiant du moteur que vous souhaitez utiliser et le champ `tag` est un paramètre facultatif utilisé pour identifier l’instance.
 
-La réponse contient le `{INSTANCE_ID}` qui représente l’instance MLInstance créée. Vous pouvez créer plusieurs MLInstances de modèle avec des configurations différentes.
+La réponse contient le `{INSTANCE_ID}` qui représente l&#39;instance MLInstance créée. Vous pouvez créer plusieurs MLInstances de modèle avec des configurations différentes.
 
 **Réponse**
 
