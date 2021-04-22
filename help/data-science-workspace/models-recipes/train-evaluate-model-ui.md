@@ -7,9 +7,9 @@ type: Tutorial
 description: Dans Adobe Experience Platform Data Science Workspace, un modèle d’apprentissage automatique est créé en incorporant une recette existante adéquate au but du modèle. Le modèle est ensuite formé et évalué afin d’optimiser son efficience et son efficacité opérationnelles en affinant ses hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques à l’aide d’une seule recette.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1092'
 ht-degree: 66%
 
 ---
@@ -110,10 +110,10 @@ Ce tutoriel vous a guidé tout au long des étapes de création, de formation et
 Les hyperparamètres déterminent le comportement de formation du modèle : les modifier aura une incidence sur l’exactitude et la précision du modèle.
 
 | Hyperparamètre | Description | Plage recommandée |
---- | --- | ---
-| learning_rate | Le taux d’apprentissage réduit la contribution de chaque arborescence par learning_rate. Un compromis est fait entre le taux d’apprentissage et le nombre d’estimateurs. | 0.1 | [2 - 10] / nombre d’estimateurs |
-| n_estimators | Le nombre d’étapes d’amplification à exécuter. Une amplification progressive est assez résistante au surajustement, de sorte qu’un nombre important donne généralement une meilleure performance. | 100 | 100 - 1000 |
-| max_depth | Profondeur maximale des estimateurs de régression individuels. La profondeur maximale limite le nombre de nœuds dans l’arborescence. Ajustez ce paramètre pour obtenir une meilleure performance. La meilleure valeur dépend de l’interaction des variables d’entrée. | 3 | 4 - 10 |
+| --- | --- | --- |
+| learning_rate | Le taux d’apprentissage réduit la contribution de chaque arborescence par learning_rate. Un compromis est fait entre le taux d’apprentissage et le nombre d’estimateurs. | 0.1 |
+| n_estimators | Le nombre d’étapes d’amplification à exécuter. Une amplification progressive est assez résistante au surajustement, de sorte qu’un nombre important donne généralement une meilleure performance. | 100 |
+| max_depth | Profondeur maximale des estimateurs de régression individuels. La profondeur maximale limite le nombre de nœuds dans l’arborescence. Ajustez ce paramètre pour obtenir une meilleure performance. La meilleure valeur dépend de l’interaction des variables d’entrée. | 3 |
 
 Des paramètres supplémentaires déterminent les propriétés techniques du modèle :
 
