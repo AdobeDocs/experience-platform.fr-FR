@@ -6,10 +6,10 @@ topic-legacy: query editor
 description: L’éditeur de Requêtes est un outil interactif fourni par Adobe Experience Platform Requête Service, qui vous permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d2f19cc97082f75e66cf38e54b5bdb89482930ed
 workflow-type: tm+mt
 source-wordcount: '1082'
-ht-degree: 68%
+ht-degree: 64%
 
 ---
 
@@ -27,7 +27,7 @@ Pour plus d&#39;informations sur les concepts et les fonctionnalités de [!DNL Q
 
 [!DNL Query Editor] prend quelques secondes pour initialiser et se connecter à  [!DNL Query Service] quand il est ouvert. La console vous indique qu’il est connecté, comme illustré ci-dessous. Si vous tentez d’exécuter une requête avant que l’éditeur ne soit connecté, l’exécution est retardée jusqu’à ce que la connexion soit établie.
 
-![Image](../images/queries/query-editor-overview/initializing-connection.png)
+![Image](../images/ui/query-editor/connect.png)
 
 ### Exécution des requêtes à partir de [!DNL Query Editor]
 
@@ -39,15 +39,15 @@ Les requêtes exécutées à partir de [!DNL Query Editor] s’exécutent de man
 
 ### Accéder aux [!DNL Query Editor]
 
-Dans l&#39;interface utilisateur [!DNL Experience Platform], cliquez sur **[!UICONTROL Requêtes]** dans le menu de navigation de gauche pour ouvrir l&#39;espace de travail [!DNL Query Service]. Cliquez ensuite sur **[!UICONTROL Créer une requête]** dans la partie supérieure droite de l’écran pour commencer à écrire des requêtes. Ce lien est disponible à partir de n&#39;importe quelle page de l&#39;espace de travail [!DNL Query Service].
+Dans l&#39;interface utilisateur [!DNL Experience Platform], sélectionnez **[!UICONTROL Requêtes]** dans le menu de navigation de gauche pour ouvrir l&#39;espace de travail [!DNL Query Service]. Ensuite, sélectionnez **[!UICONTROL Créer une Requête]** en haut à droite de l&#39;écran pour afficher les requêtes d&#39;écriture de début. Ce lien est disponible à partir de n&#39;importe quelle page de l&#39;espace de travail [!DNL Query Service].
 
-![Image](../images/queries/query-editor-overview/create-query.png)
+![Image](../images/ui/query-editor/create-query.png)
 
 ### Rédaction de requêtes
 
 [!UICONTROL Query Editor est organisé de façon à rendre l’écriture de requête aussi facile que possible. ] La capture d’écran ci-dessous présente l’affichage de l’éditeur dans l’interface utilisateur. Le bouton **Lire** et le champ d’entrée SQL sont mis en surbrillance.
 
-![Image](../images/queries/query-editor-overview/editor.png)
+![Image](../images/ui/query-editor/editor.png)
 
 Pour réduire le temps de développement, nous vous recommandons de développer vos requêtes en fixant des limites sur les lignes renvoyées. Par exemple : `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Une fois que vous avez vérifié que votre requête produit la sortie attendue, supprimez les limites et exécutez la requête avec `CREATE TABLE tablename AS SELECT`, afin de générer un jeu de données avec la sortie.
 
@@ -55,37 +55,37 @@ Pour réduire le temps de développement, nous vous recommandons de développer 
 
 - **Mise en surbrillance automatique de la syntaxe :** facilite la lecture et l’organisation SQL.
 
-![Image](../images/queries/query-editor-overview/syntax-highlight.png)
+![Image](../images/ui/query-editor/syntax-highlight.png)
 
 - **Saisie automatique de mot-clé SQL :** commencez à saisir votre requête, puis utiliser les touches fléchées pour accéder au terme souhaité et appuyez sur **Entrée**.
 
-![Image](../images/queries/query-editor-overview/syntax-auto.png)
+![Image](../images/ui/query-editor/syntax-auto.png)
 
 - **Saisie automatique de tableau et de champ :** commencez à saisir le nom du tableau auquel vous souhaitez appliquer `SELECT`, puis utilisez les touches fléchées pour accéder au tableau recherché et appuyez sur **Entrée**. Une fois le tableau sélectionné, la saisie automatique reconnaît les champs de ce tableau.
 
-![Image](../images/queries/query-editor-overview/tables-auto.png)
+![Image](../images/ui/query-editor/tables-auto.png)
 
 ### Détection des erreurs
 
 [!DNL Query Editor] valide automatiquement la requête au fur et à mesure que vous l’écrivez grâce à une validation SQL générique et une validation d’exécution spécifique. Si un trait de soulignement rouge apparaît sous la requête (comme illustré dans l’image ci-dessous), il indique une erreur dans la requête.
 
-![Image](../images/queries/query-editor-overview/syntax-error-highlight.png)
+![Image](../images/ui/query-editor/syntax-error-highlight.png)
 
 Lorsque des erreurs sont détectées, vous pouvez afficher les messages d’erreur spécifiques en survolant le code SQL avec la souris.
 
-![Image](../images/queries/query-editor-overview/linting-error.png)
+![Image](../images/ui/query-editor/linting-error.png)
 
 ### Détails de la requête
 
 Lorsque vous consultez une requête dans [!DNL Query Editor], le panneau **[!UICONTROL Détails de la Requête]** fournit des outils pour gérer la requête sélectionnée.
 
-![Image](../images/queries/query-editor-overview/query-details.png)
+![Image](../images/ui/query-editor/query-details.png)
 
-Ce panneau vous permet de générer un jeu de données de sortie directement depuis l’interface utilisateur, de supprimer ou de nommer la requête affichée, et d’afficher le code SQL dans un format facile à copier dans l’onglet **[!UICONTROL Requête SQL]**. Ce panneau présente également des métadonnées utiles, telles que la dernière fois où la requête a été modifiée et qui l’a modifiée, le cas échéant. Pour générer un jeu de données, cliquez sur **[!UICONTROL Jeu de données de sortie]**. La boîte de dialogue **[!UICONTROL Jeu de données de sortie]** s’affiche. Saisissez un nom et une description, puis cliquez sur **[!UICONTROL Exécuter la requête]**. Le nouveau jeu de données s’affiche dans l’onglet **[!UICONTROL Jeux de données]**[!DNL Query Service] de l’interface utilisateur de dans [!DNL Platform].
+Ce panneau vous permet de générer un jeu de données de sortie directement depuis l’interface utilisateur, de supprimer ou de nommer la requête affichée, et d’afficher le code SQL dans un format facile à copier dans l’onglet **[!UICONTROL Requête SQL]**. Ce panneau présente également des métadonnées utiles, telles que la dernière fois où la requête a été modifiée et qui l’a modifiée, le cas échéant. Pour générer un jeu de données, sélectionnez **[!UICONTROL Output Dataset]**. La boîte de dialogue **[!UICONTROL Jeu de données de sortie]** s’affiche. Saisissez un nom et une description, puis sélectionnez **[!UICONTROL Exécuter la Requête]**. Le nouveau jeu de données s’affiche dans l’onglet **[!UICONTROL Jeux de données]**[!DNL Query Service] de l’interface utilisateur de dans [!DNL Platform].
 
 ### Enregistrement des requêtes
 
-[!DNL Query Editor] dispose d’une fonction d’enregistrement qui vous permet d’enregistrer une requête et d’y revenir ultérieurement. Pour enregistrer une requête, cliquez sur **[!UICONTROL Enregistrer]** dans le coin supérieur droit de [!DNL Query Editor]. Avant de pouvoir enregistrer une requête, vous devez lui donner un nom à l’aide du panneau **[!UICONTROL Détails]**.
+[!DNL Query Editor] dispose d’une fonction d’enregistrement qui vous permet d’enregistrer une requête et d’y revenir ultérieurement. Pour enregistrer une requête, sélectionnez **[!UICONTROL Enregistrer]** dans le coin supérieur droit de [!DNL Query Editor]. Avant de pouvoir enregistrer une requête, vous devez lui donner un nom à l’aide du panneau **[!UICONTROL Détails]**.
 
 ### Accès aux requêtes précédentes
 
@@ -99,13 +99,13 @@ Pour plus d’informations, reportez-vous à la [Présentation de l’interface 
 
 ## Exécution de requête à l’aide de Query Editor
 
-Pour exécuter une requête dans [!DNL Query Editor], vous pouvez entrer SQL dans l&#39;éditeur ou charger une requête précédente à partir de l&#39;onglet **[!UICONTROL Journal]** ou **[!UICONTROL Parcourir]**, puis cliquer sur **Lecture**. L’état de l’exécution de la requête s’affiche dans l’onglet **[!UICONTROL Console]** ci-dessous et les données de sortie s’affichent dans l’onglet **[!UICONTROL Résultats]**.
+Pour exécuter une requête dans [!DNL Query Editor], vous pouvez entrer SQL dans l&#39;éditeur ou charger une requête précédente à partir de l&#39;onglet **[!UICONTROL Journal]** ou **[!UICONTROL Parcourir]**, puis sélectionner **Lecture**. L’état de l’exécution de la requête s’affiche dans l’onglet **[!UICONTROL Console]** ci-dessous et les données de sortie s’affichent dans l’onglet **[!UICONTROL Résultats]**.
 
 ### Console
 
 La console fournit des informations sur l’état et le fonctionnement de [!DNL Query Service]. La console affiche l&#39;état de la connexion à [!DNL Query Service], les opérations de requête en cours d&#39;exécution et les messages d&#39;erreur qui en résultent.
 
-![Image](../images/queries/query-editor-overview/console.png)
+![Image](../images/ui/query-editor/console.png)
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ La console fournit des informations sur l’état et le fonctionnement de [!DNL 
 
 Une fois la requête terminée, les résultats s’affichent dans l’onglet **[!UICONTROL Résultats]**, en regard de l’onglet **[!UICONTROL Console]**. Cet affichage indique la sortie tabulaire de votre requête (jusqu’à 100 lignes). Il vous permet de vérifier que votre requête produit la sortie attendue. Pour générer un jeu de données avec votre requête, supprimez les limites sur les lignes renvoyées, puis exécutez la requête avec `CREATE TABLE tablename AS SELECT` pour générer un jeu de données avec la sortie. Consultez le [tutoriel sur la génération de jeux de données][query-service-create-datasets] pour apprendre à générer un jeu de données à partir des résultats de requête dans [!DNL Query Editor].
 
-![Image](../images/queries/query-editor-overview/query-results.png)
+![Image](../images/ui/query-editor/query-results.png)
 
 ## Exécuter des requêtes avec [!DNL Query Service] vidéo didacticiel
 
