@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Ce document fournit une référence pour la configuration de différentes applications Experience Cloud pour les opérations liées à la confidentialité.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '582'
 ht-degree: 58%
 
 ---
@@ -29,7 +29,7 @@ Consultez la documentation de vos applications [!DNL Experience Cloud] pour savo
 Vous trouverez ci-dessous une liste d&#39;applications [!DNL Experience Cloud] intégrées à [!DNL Privacy Service], y compris les fonctionnalités [!DNL Privacy Service] avec lesquelles elles sont compatibles, et des liens vers la documentation pour plus d&#39;informations.
 
 | Application | Accès/suppression | Opposition | Documentation et considérations |
---- | :---: | :---: | ---
+| --- | :---: | :---: | --- |
 | Adobe Advertising Cloud | ✓ | obj | <ul><li>[Accès/suppression de la documentation pour GDPR](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Accès/suppression de la documentation de l’ACPCP](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Documentation sur l’exclusion de la vente pour l’ACFPC](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | obj | obj | <ul><li>[Documentation sur l’accès et la suppression](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>[!DNL Analytics] gère les requêtes d’opposition à l’aide de [variables de reporting sur la confidentialité](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/consent-variables.html).</li></ul> |
 | Adobe Audience Manager | obj | obj | <ul><li>[Documentation sur l’accès et la suppression](https://docs.adobe.com/content/help/fr-FR/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentation sur l’opposition](https://docs.adobe.com/content/help/fr-FR/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
@@ -39,6 +39,7 @@ Vous trouverez ci-dessous une liste d&#39;applications [!DNL Experience Cloud] i
 | Adobe Primetime Authentication | obj | S/O | <ul><li>[Documentation sur l’accès et la suppression](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] n’a pas la capacité de transférer des données. Par conséquent, les requêtes d’opposition ne sont pas applicables.</li></ul> |
 | Adobe Target | obj | S/O | <ul><li>[Documentation sur l’accès et la suppression](https://docs.adobe.com/content/help/fr-FR/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target] n’a pas la capacité de transférer des données. Par conséquent, les requêtes d’opposition ne sont pas applicables.</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Applications en libre-service {#self-serve}
 
@@ -51,3 +52,5 @@ Vous trouverez ci-dessous une liste d&#39;applications [!DNL Experience Cloud] q
 | [Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-4/managing/using/gdpr-compliance.html) | Présentation de la gestion des requêtes RGPD par l’administrateur de la confidentialité client ou l’administrateur AEM. |
 | [Adobe Experience Manager Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Étapes pour créer des requêtes RGPD d’accès et de suppression à l’aide de Livefyre. |
 | [Adobe Experience Platform Launch](https://docs.adobelaunch.com/client-side-information/deploy-javascript-tags-to-opt-in-to-launch) | Comment les développeurs peuvent-ils utiliser les extensions et le créateur de règles pour définir les solutions d’accords préalables et de droits d’opposition ? |
+
+{style=&quot;table-layout:auto&quot;}
