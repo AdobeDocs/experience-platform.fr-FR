@@ -7,7 +7,7 @@ type: Tutorial
 description: Ce didacticiel explique comment mapper un fichier CSV à un schéma XDM à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0e79d339ddc0301486ea3e53a3fd52877ff6a2c8
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 16%
@@ -85,7 +85,7 @@ La fenêtre contextuelle **[!UICONTROL Associer la source au champ de cible]** s
 
 Si vous souhaitez supprimer l’un des mappages, passez la souris sur ce mappage, puis sélectionnez l’icône Moins.
 
-### Ajouter le champ calculé
+### Ajouter le champ calculé {#add-calculated-field}
 
 Les champs calculés permettent de créer des valeurs en fonction des attributs du schéma d’entrée. Ces valeurs peuvent ensuite être attribuées à des attributs dans le schéma de cible et recevoir un nom et une description pour faciliter la référence.
 
