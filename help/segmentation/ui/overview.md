@@ -6,7 +6,7 @@ topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: fa2f4e046c6210137aa3e98d9f18010c1058275a
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 26%
@@ -32,7 +32,7 @@ Il est également important de connaître deux termes clés utilisés dans ce do
 
 ## Présentation
 
-Dans l’[[!DNL Experience Platform] interface utilisateur](http://platform.adobe.com/), sélectionnez **[!UICONTROL Segments]** dans le volet de navigation de gauche pour ouvrir l’onglet **[!UICONTROL Aperçu]**. Cet onglet fournit des liens vers la documentation et les vidéos pour vous aider à comprendre et à commencer à travailler avec les segments.
+Dans l’[[!DNL Experience Platform] interface utilisateur](https://platform.adobe.com/), sélectionnez **[!UICONTROL Segments]** dans le volet de navigation de gauche pour ouvrir l’onglet **[!UICONTROL Aperçu]**. Cet onglet fournit des liens vers la documentation et les vidéos pour vous aider à comprendre et à commencer à travailler avec les segments.
 
 ![](../images/ui/overview/segment-overview.png)
 
@@ -44,14 +44,14 @@ Sélectionnez l&#39;onglet **[!UICONTROL Parcourir]** pour afficher une liste de
 
 Cette vue liste des informations sur la définition de segment, y compris la ventilation, l’exécution, le nombre de profils, la méthode d’évaluation, la date de création et la date de dernière modification.
 
-La ventilation présente un graphique à barres indiquant le pourcentage de profils appartenant à chacun des états suivants : [!UICONTROL Entré], [!UICONTROL Réalisé] et [!UICONTROL Sortie].
+La ventilation présente un graphique à barres indiquant le pourcentage de profils appartenant à chacun des états suivants : [!UICONTROL Réalisé], [!UICONTROL Existant] et [!UICONTROL Sortie].
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
 | État | Description |
 | ------ | ----------- |
-| Entrés | Un nouveau profil dans le segment. |
-| Réalisé | Profil existant qui est resté dans le segment. |
+| Réalisé | Un nouveau profil dans le segment. |
+| Existant | Profil existant qui est resté dans le segment. |
 | Fermeture | Profil existant qui quitte le segment. |
 
 L’événement représente le pourcentage de profils qui changent au sein d’une définition de segment par rapport à la dernière exécution de la tâche de segment, tandis que le nombre de profils représente le nombre total de profils admissibles pour le segment.
@@ -170,7 +170,7 @@ Pour plus d’informations sur la segmentation en flux continu, consultez le [gu
 
 ## Segmentation Edge {#edge-segmentation}
 
-La segmentation Edge permet d’évaluer instantanément les segments dans la plate-forme, ce qui permet d’utiliser les mêmes cas de personnalisation de page et de page suivante.
+La segmentation Edge permet d’évaluer instantanément les segments dans la plate-forme, ce qui permet d’utiliser des cas de personnalisation de la même page et de la page suivante.
 
 Pour plus d&#39;informations sur la segmentation des arêtes, consultez le [guide de l&#39;interface utilisateur de segmentation des arêtes](./edge-segmentation.md).
 
