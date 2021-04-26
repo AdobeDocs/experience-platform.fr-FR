@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Mappage de champs pour la source du Marketo Engage
 topic-legacy: overview
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
+exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '456'
 ht-degree: 3%
 
 ---
-
 
 # (bêta) [!DNL Marketo Engage] mappages de champs
 
@@ -158,6 +158,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
+| `mktoCdpParentOrgId` | `accountParentID` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -177,8 +178,8 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 
 | Jeu de données source | Champ de cible XDM | Notes |
 | -------------- | ---------------- | ----- |
-| `marketingListMemberID` | `staticListMemberID` | Identité Principal |
-| `marketingListID` | `staticListID` | Relation |
+| `staticListMemberID` | `marketingListMemberID` | Identité Principal |
+| `staticListID` | `marketingListID` | Relation |
 | `personID` | `personID` | Relation |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
@@ -234,7 +235,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `Campaign-ID` | `campaignID` | Recommandé uniquement si vous utilisez l’intégration Salesforce. |
+| `mktoCdpSourceCampaignId` | `campaignID` | Recommandé uniquement si vous utilisez l’intégration Salesforce. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -279,7 +280,7 @@ Pour pallier ce problème, vous pouvez mettre à jour le champ d’assemblage d�
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcId` | `extSourceSystemAudit.externalID` | Identité Secondaire |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Identité Secondaire |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -308,8 +309,13 @@ Pour pallier ce problème, vous pouvez mettre à jour le champ d’assemblage d�
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
+| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>Le champ source `to_object('ECID',arrays_to_objects('id',explode(ecids)))` est un champ calculé qui doit être ajouté à l&#39;aide de l&#39;option [!UICONTROL Ajouter champ calculé] dans l&#39;interface utilisateur de la plate-forme. Pour plus d&#39;informations, consultez le didacticiel sur l&#39;[ajout de champs calculés](../../../../ingestion/tutorials/map-a-csv-file.md).
 
 ## Étapes suivantes
 
