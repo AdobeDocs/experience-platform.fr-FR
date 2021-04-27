@@ -8,10 +8,10 @@ topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a03d851f3e0037b8241ca1f1de890903b08feac4
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 68%
+source-wordcount: '1768'
+ht-degree: 66%
 
 ---
 
@@ -179,6 +179,16 @@ Ce message d’erreur s’affiche lorsque l’intégration d’utilisateur ou d�
 
 Ce message d’erreur s’affiche lorsqu’une requête POST, PUT ou PATCH comporte un en-tête `Content-Type` non valide ou n’en comporte pas. Assurez-vous que l’en-tête est inclus dans la requête et que sa valeur est bien `application/json`.
 
+### La région utilisateur est absente
+
+```json
+{
+    "error_code": "403027",
+    "message": "User region is missing"
+}
+```
+
+Ce message d’erreur s’affiche lorsque votre compte (représenté par les informations d’identification d’authentification fournies) n’est pas associé à un profil de produit pour l’Experience Platform. Suivez les étapes de [génération des informations d’identification d’accès](./api-authentication.md#authentication-for-each-session) dans le didacticiel d’authentification de l’API de plate-forme pour ajouter Plateforme à votre compte et mettre à jour vos informations d’identification d’authentification en conséquence.
 
 ## Répertoire de dépannage des services {#service-troubleshooting-directory}
 
