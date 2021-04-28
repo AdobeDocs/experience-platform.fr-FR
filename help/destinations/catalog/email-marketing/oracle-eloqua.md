@@ -2,14 +2,14 @@
 keywords: e-mail ; e-mail ; e-mail ; destinations e-mail ; oracle eloqua ; oracle
 title: Oracle Eloqua
 description: Oracle Eloqua est une plateforme de logiciel en tant que service (SaaS, Software as a service) pour l’automatisation du marketing proposée par Oracle, qui vise à aider les spécialistes marketing et les entreprises B2B à gérer les campagnes marketing et la génération de pistes commerciales.
+exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 33%
+source-wordcount: '674'
+ht-degree: 30%
 
 ---
-
 
 # [!DNL Oracle Eloqua] connexion
 
@@ -20,6 +20,12 @@ Pour envoyer des données de segment à [!DNL Oracle Eloqua], vous devez tout d&
 ## Type d&#39;exportation {#export-type}
 
 **Basé sur**  le profil : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom de famille), tel que choisi dans l’écran de sélection des attributs du processus [ d’activation de ](../../ui/activate-destinations.md#select-attributes)destination.
+
+## LISTE AUTORISÉE d&#39;adresse IP {#allow-list}
+
+Lors de la configuration de destinations de marketing par courriel avec l’enregistrement SFTP, l’Adobe vous recommande d’ajouter certaines plages d’adresses IP à votre liste autorisée.
+
+Reportez-vous à la [liste autorisée d&#39;adresse IP pour les destinations d&#39;enregistrement cloud](../cloud-storage/ip-address-allow-list.md) si vous devez ajouter des adresses IP d&#39;Adobe à votre liste autorisée.
 
 ## Se connecter à la destination {#connect-destination}
 
