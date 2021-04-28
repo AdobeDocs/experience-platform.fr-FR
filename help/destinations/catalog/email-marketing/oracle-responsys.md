@@ -2,14 +2,14 @@
 keywords: e-mail ; e-mail ; e-mail ; destination de l'e-mail ; destination de la réponse à l'oracle
 title: Oracle Connexion Responsys
 description: Responsys est un outil de marketing par e-mail d’entreprise proposé par Oracle dans le cadre de campagnes marketing sur plusieurs canaux. Il permet de personnaliser les interactions entre e-mails, terminaux mobiles, écrans et réseaux sociaux.
+exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 31%
+source-wordcount: '618'
+ht-degree: 28%
 
 ---
-
 
 # [!DNL Oracle Responsys] connexion
 
@@ -22,6 +22,12 @@ Pour envoyer des données de segment à [!DNL Oracle Responsys], vous devez d&#3
 ## Type d&#39;exportation {#export-type}
 
 **Basé sur**  le profil : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom de famille), tel que choisi dans l’écran de sélection des attributs du processus [ d’activation de ](../../ui/activate-destinations.md#select-attributes)destination.
+
+## LISTE AUTORISÉE d&#39;adresse IP {#allow-list}
+
+Lors de la configuration de destinations de marketing par courriel avec l’enregistrement SFTP, l’Adobe vous recommande d’ajouter certaines plages d’adresses IP à votre liste autorisée.
+
+Reportez-vous à la [liste autorisée d&#39;adresse IP pour les destinations d&#39;enregistrement cloud](../cloud-storage/ip-address-allow-list.md) si vous devez ajouter des adresses IP d&#39;Adobe à votre liste autorisée.
 
 ## Connexion à la destination {#connect-destination}
 
