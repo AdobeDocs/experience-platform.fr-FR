@@ -2,14 +2,14 @@
 keywords: e-mail ; e-mail ; e-mail ; destinations e-mail ; salesforce ; destination salesforce
 title: Connexion Marketing Cloud Salesforce
 seo-description: Salesforce Marketing Cloud est une suite de marketing numérique anciennement connue sous le nom d’ExactTarget qui vous permet de créer et de personnaliser les parcours des visiteurs et des clients afin d’offrir une expérience personnalisée.
+exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 33%
+source-wordcount: '631'
+ht-degree: 30%
 
 ---
-
 
 # [!DNL Salesforce Marketing Cloud] connexion
 
@@ -22,6 +22,12 @@ Pour envoyer des données de segment à [!DNL Salesforce Marketing Cloud], vous 
 ## Type d&#39;exportation {#export-type}
 
 **Basé sur**  le profil : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom de famille), tel que choisi dans l’écran de sélection des attributs du processus [ d’activation de ](../../ui/activate-destinations.md#select-attributes)destination.
+
+## LISTE AUTORISÉE d&#39;adresse IP {#allow-list}
+
+Lors de la configuration de destinations de marketing par courriel avec l’enregistrement SFTP, l’Adobe vous recommande d’ajouter certaines plages d’adresses IP à votre liste autorisée.
+
+Reportez-vous à la [liste autorisée d&#39;adresse IP pour les destinations d&#39;enregistrement cloud](../cloud-storage/ip-address-allow-list.md) si vous devez ajouter des adresses IP d&#39;Adobe à votre liste autorisée.
 
 ## Connexion à la destination {#connect-destination}
 
