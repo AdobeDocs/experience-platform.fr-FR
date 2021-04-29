@@ -4,9 +4,9 @@ title: Connexion facebook
 description: Activez des profils pour vos campagnes Facebook pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 1e9e5831b19738285affeb0337985c7cb0d45ebf
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1102'
 ht-degree: 8%
 
 ---
@@ -36,12 +36,6 @@ Une compagnie aérienne a différents niveaux de clients (Bronze, Argent et Or) 
 Pour les cible sur les réseaux sociaux, ils peuvent intégrer les données client de leur gestion de la relation client dans Adobe Experience Platform, en utilisant les adresses électroniques comme identifiants.
 
 Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les ID d&#39;adhésion et les niveaux de clients associés, pour créer de nouveaux segments d&#39;audience qu&#39;ils peuvent cible via la destination [!DNL Facebook].
-
-## Gouvernance des données pour les destinations [!DNL Facebook] {#data-governance}
-
->[!IMPORTANT]
->
->Les données envoyées à [!DNL Facebook] ne peuvent pas inclure d’identités assemblées. Vous êtes responsable du respect de cette obligation et pouvez le faire en vous assurant que les segments sélectionnés pour l’activation n’utilisent pas d’option de raccordement dans leur stratégie de fusion. En savoir plus sur [les stratégies de fusion](/help/profile/ui/merge-policies.md).
 
 ## Identités prises en charge {#supported-identities}
 
