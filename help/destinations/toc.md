@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document liste la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '471'
 ht-degree: 59%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 59%
    * Destinations de stockage dans le cloud {#cloud-storage}
       * [Présentation des destinations d’Enregistrement dans le cloud](./catalog/cloud-storage/overview.md)
       * [Création d’une destination d’enregistrement cloud](./catalog/cloud-storage/workflow.md)
-      * [Connexion Amazon](./catalog/cloud-storage/amazon-kinesis.md)
+      * [(bêta) Connexion Amazon](./catalog/cloud-storage/amazon-kinesis.md)
       * [Connexion Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Connexion Blob Azure](./catalog/cloud-storage/azure-blob.md)
       * [(bêta) Connexion Azure Événement Hubs](./catalog/cloud-storage/azure-event-hubs.md)
@@ -122,7 +122,7 @@ ht-degree: 59%
       * [Créer une destination sociale](./catalog/social/workflow.md)
       * [Extension Adobe Livefyre](./catalog/social/adobe-livefyre.md)
       * [Connexion facebook](./catalog/social/facebook.md)
-      * [Connexion des Audiences mises en correspondance Linkedin](./catalog/social/linkedin.md)
+      * [Connexion aux Audiences linkedIn Matched](./catalog/social/linkedin.md)
    * Destinations d’enquête {#survey}
       * [Présentation des destinations d’enquête](./catalog/survey/overview.md)
       * [Destination de l&#39;extension Foresee](./catalog/survey/foresee.md)
