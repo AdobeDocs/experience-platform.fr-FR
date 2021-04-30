@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation en flux continu avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4a04b52ff9a2b7a36fda58d70a2286fea600ff1
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1389'
 ht-degree: 44%
 
 ---
@@ -63,7 +63,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 Des en-têtes supplémentaires peuvent être nécessaires pour effectuer des requêtes spécifiques. Les en-têtes corrects sont présentés dans chacun des exemples de ce document. Accordez une attention particulière aux exemples de requêtes afin de vous assurer que tous les en-têtes requis sont inclus.
 
-### Types de requête permettant la segmentation par flux {#streaming-segmentation-query-types}
+### Types de requête permettant la segmentation par flux  {#streaming-segmentation-query-types}
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Pour qu’un segment soit évalué à l’aide de la segmentation en flux contin
 | Profil uniquement | Toute définition de segment faisant référence uniquement à un attribut de profil. |
 | Accès entrant faisant référence à un profil | Toute définition de segment faisant référence à un seul événement entrant, sans restriction de temps, et à un ou plusieurs attributs de profil. |
 | Accès entrant faisant référence à un profil dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant et à un ou plusieurs attributs de profil. |
-| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lot ou en flux continu. |
+| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lot ou en flux continu. **Remarque :** si un segment de segments est utilisé, la disqualification du profil se produit  **toutes les 24 heures**. |
 | Plusieurs événements faisant référence à un profil | Toute définition de segment faisant référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. |
 
 Une définition de segment **ne sera pas** activée pour la segmentation en flux continu dans les scénarios suivants :
