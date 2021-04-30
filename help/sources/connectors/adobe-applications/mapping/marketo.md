@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
+source-git-commit: 5d37c9664f60e9d962e866c6d480d2ef2e0bfff3
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 3%
+source-wordcount: '333'
+ht-degree: 4%
 
 ---
 
@@ -259,10 +259,6 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 
 ## Personnes {#persons}
 
-Dans le tableau de bord [!DNL Profiles] de l&#39;interface utilisateur de la plate-forme, si la valeur de l&#39;assemblage d&#39;ID dans la stratégie de fusion que vous avez utilisée pour naviguer est définie sur `None`, la fenêtre des identités liées n&#39;affichera que l&#39;attribut d&#39;identité Principal.
-
-Pour pallier ce problème, vous pouvez mettre à jour le champ d’assemblage d’ID de `None` en `Private graph` afin d’afficher toutes les identités liées à un [!DNL Profile]. Vous pouvez également créer une nouvelle stratégie de fusion ou utiliser une autre stratégie de fusion qui contient une valeur d&#39;assemblage d&#39;ID définie sur `Private graph`. Si vous choisissez de créer une nouvelle stratégie de fusion ou d&#39;utiliser une autre stratégie de fusion, vous devez vous assurer que la stratégie contient le même type de schéma que celui utilisé pour le jeu de correspondances [!DNL Marketo] Personnes. Pour plus d&#39;informations, consultez le [guide de l&#39;interface utilisateur des stratégies de fusion](../../../../profile/ui/merge-policies.md).
-
 | Jeu de données source | Champ de cible XDM | Notes |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Identité Principal |
@@ -313,7 +309,7 @@ Pour pallier ce problème, vous pouvez mettre à jour le champ d’assemblage d�
 
 {style=&quot;table-layout:auto&quot;}
 
->[!TIP]
+>[!NOTE]
 >
 >Le champ source `to_object('ECID',arrays_to_objects('id',explode(ecids)))` est un champ calculé qui doit être ajouté à l&#39;aide de l&#39;option [!UICONTROL Ajouter champ calculé] dans l&#39;interface utilisateur de la plate-forme. Pour plus d&#39;informations, consultez le didacticiel sur l&#39;[ajout de champs calculés](../../../../ingestion/tutorials/map-a-csv-file.md).
 
