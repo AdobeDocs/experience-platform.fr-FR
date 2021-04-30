@@ -2,12 +2,11 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Traitement des demandes de confidentialité dans le Profil client en temps réel
-topic-legacy: overview
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles, conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels associés au traitement des demandes d’accès à des informations personnelles pour Real-time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8d16a3030c663d40daed6c5105af07b2d2d5c7bf
 workflow-type: tm+mt
 source-wordcount: '1102'
 ht-degree: 25%
@@ -24,9 +23,9 @@ Ce document couvre les concepts essentiels liés au traitement des demandes de c
 
 Il est recommandé de bien comprendre les services [!DNL Experience Platform] suivants avant de lire ce guide :
 
-* [[!DNL Privacy Service]](home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
+* [[!DNL Privacy Service]](../privacy-service/home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
 * [[!DNL Identity Service]](../identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
-* [[!DNL Real-time Customer Profile]](../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [[!DNL Real-time Customer Profile]](home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 ## Compréhension des espaces de noms d’identité {#namespaces}
 
