@@ -6,9 +6,9 @@ topic-legacy: ui guide
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer la segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données arrivent dans la plate-forme, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à la plate-forme, ce qui signifie que l’appartenance à un segment est tenue à jour sans exécuter les tâches de segmentation planifiées.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4a04b52ff9a2b7a36fda58d70a2286fea600ff1
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '818'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ Une requête sera automatiquement évaluée avec la segmentation en flux continu
 | Profil uniquement | Toute définition de segment faisant référence uniquement à un attribut de profil. |  |
 | Accès entrant faisant référence à un profil | Toute définition de segment faisant référence à un seul événement entrant, sans restriction de temps, et à un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | Accès entrant faisant référence à un profil dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant et à un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lot ou en flux continu. | ![](../images/ui/streaming-segmentation/two-batches.png) |
+| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lot ou en flux continu. **Remarque :** si un segment de segments est utilisé, la disqualification du profil se produit  **toutes les 24 heures**. | ![](../images/ui/streaming-segmentation/two-batches.png) |
 | Plusieurs événements faisant référence à un profil | Toute définition de segment faisant référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 Une définition de segment **ne sera pas** activée pour la segmentation en flux continu dans les scénarios suivants :
