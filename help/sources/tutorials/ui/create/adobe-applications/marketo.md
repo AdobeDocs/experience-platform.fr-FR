@@ -5,14 +5,14 @@ title: Création d’un connecteur source Marketo Engage dans l’interface util
 topic-legacy: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Marketo Engage dans l’interface utilisateur afin d’importer des données B2B dans Adobe Experience Platform.
+exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 5322adb4b3a244de92300e7ce9d942ad4b968454
 workflow-type: tm+mt
-source-wordcount: '1383'
+source-wordcount: '1388'
 ht-degree: 5%
 
 ---
-
 
 # (bêta) Créez un connecteur source [!DNL Marketo Engage] dans l’interface utilisateur.
 
@@ -75,7 +75,7 @@ Pour créer un flux de données avec un compte existant, sélectionnez **[!UICON
 
 Après avoir créé votre compte [!DNL Marketo], l&#39;étape suivante fournit une interface vous permettant d&#39;explorer les jeux de données [!DNL Marketo].
 
-La moitié gauche de l&#39;interface est un navigateur d&#39;annuaire qui affiche les jeux de données 10 [!DNL Marketo]. Une connexion source [!DNL Marketo] pleinement opérationnelle nécessite l&#39;assimilation des neuf jeux de données différents. Si vous utilisez également la fonction [!DNL Marketo's] marketing basé sur le compte (ABM), vous devez également créer un 10e flux de données pour assimiler le jeu de données [!UICONTROL Comptes nommés].
+La moitié gauche de l&#39;interface est un navigateur d&#39;annuaire qui affiche les jeux de données 10 [!DNL Marketo]. Une connexion source [!DNL Marketo] pleinement opérationnelle nécessite l&#39;assimilation des neuf jeux de données différents. Si vous utilisez également la fonction [!DNL Marketo] marketing basé sur le compte (ABM), vous devez également créer un 10e flux de données pour assimiler le jeu de données [!UICONTROL Comptes nommés].
 
 >[!NOTE]
 >
@@ -85,15 +85,15 @@ Sélectionnez le jeu de données à importer en premier, puis **[!UICONTROL Suiv
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## Mappage des champs de données à un schéma XDM
+## Mettre en correspondance les schémas [!DNL Marketo] avec la plateforme
 
-L&#39;étape [!UICONTROL Mappage] s&#39;affiche, fournissant une interface permettant de mapper le jeu de données [!DNL Marketo] à un jeu de données de plateforme.
+L&#39;étape [!UICONTROL Mappage] s&#39;affiche, fournissant une interface pour mapper [!DNL Marketo] schémas à la plate-forme.
 
 Choisissez un jeu de données dans lequel les données entrantes doivent être assimilées. Vous pouvez utiliser un jeu de données existant ou en créer un nouveau.
 
 ### Utilisation d’un jeu de données existant
 
-Pour importer des données dans un jeu de données existant, sélectionnez **[!UICONTROL Utiliser un jeu de données existant]**, puis sélectionnez l&#39;icône du jeu de données.
+Pour importer des données dans un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]**, puis sélectionnez l&#39;icône Jeu de données.
 
 ![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
@@ -103,7 +103,7 @@ La boîte de dialogue **[!UICONTROL Sélectionner un jeu de données]** s&#39;af
 
 ### Utiliser un nouveau jeu de données
 
-Pour importer des données dans un nouveau jeu de données, sélectionnez **[!UICONTROL Créer un nouveau jeu de données]** et entrez un nom et une description pour le jeu de données dans les champs fournis.
+Pour importer des données dans un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]** et saisissez un nom et une description pour le jeu de données dans les champs fournis.
 
 Vous pouvez rechercher un schéma en entrant son nom dans la barre de recherche **[!UICONTROL Sélectionner un schéma]**. Vous pouvez également sélectionner l’icône de liste déroulante pour afficher une liste de schémas existants. Vous pouvez également sélectionner **[!UICONTROL Recherche avancée]** pour accéder à la page des schémas existants, y compris leurs détails respectifs.
 
@@ -144,7 +144,7 @@ L&#39;étape [!UICONTROL Détails du flux de données] s&#39;affiche, vous perme
 
 ![détails du flux de données](../../../../images/tutorials/create/marketo/dataflow-detail.png)
 
-Activez la bascule **[!UICONTROL Diagnostics d&#39;erreur]** pour permettre la génération de messages d&#39;erreur détaillés pour les lots nouvellement assimilés, que vous pouvez télécharger à l&#39;aide de l&#39;API.
+Activez la bascule **[!UICONTROL Diagnostics d&#39;erreur]** pour permettre la génération de messages d&#39;erreur détaillés pour les lots nouvellement assimilés, que vous pouvez télécharger à l&#39;aide de l&#39;API. Pour plus d&#39;informations, consultez le didacticiel sur [la récupération des diagnostics d&#39;erreur d&#39;assimilation de données](../../../../../ingestion/quality/error-diagnostics.md).
 
 ![erreurs](../../../../images/tutorials/create/marketo/errors.png)
 
@@ -160,7 +160,7 @@ Une fois que vous avez fourni les détails de votre flux de données et défini 
 
 L&#39;étape **[!UICONTROL Réviser]** s&#39;affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connexion]** : Indique le type de source, le chemin d’accès approprié du fichier source choisi et le nombre de colonnes qu’il contient.
+* **[!UICONTROL Connexion]** : Affiche le type de source, le chemin d&#39;accès approprié de l&#39;entité source choisie et le nombre de colonnes au sein de cette entité source.
 * **[!UICONTROL Attribuer des champs]** de jeu de données et de mappage : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
 
 Une fois que vous avez passé en revue votre flux de données, sélectionnez **[!UICONTROL Terminer]** et attendez un certain temps pour que le flux de données soit créé.
