@@ -7,9 +7,9 @@ type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données en flux continu et les amener sur la plate-forme à l’aide des connecteurs et des API source.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f35c59843451267d0a054cfd594aea3e5d5ea8c6
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1526'
 ht-degree: 22%
 
 ---
@@ -202,7 +202,6 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 }
 ```
 
-
 ## Créer un schéma XDM de cible {#target-schema}
 
 Pour que les données source soient utilisées dans [!DNL Platform], un schéma de cible doit être créé pour structurer les données source en fonction de vos besoins. Le schéma de cible est ensuite utilisé pour créer un jeu de données [!DNL Platform] contenant les données source. Ce schéma XDM de cible étend également la classe XDM [!DNL Individual Profile].
@@ -334,6 +333,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
+        "name": "Test streaming dataset",
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -345,15 +345,15 @@ curl -X POST \
             "profile": [
             "enabled:true"
             ]
-        },
-        "name": "Test streaming dataset"
+        }
     }'
 ```
 
 | Propriété | Description |
 | --- | --- |
-| `schemaRef.id` | ID du schéma XDM de cible. |
-| `schemaRef.contentType` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full-notext+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
+| `name` | Nom du jeu de données à créer. |
+| `schemaRef.id` | URI `$id` pour le schéma XDM sur lequel le jeu de données sera basé. |
+| `schemaRef.contentType` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full-notext+json;version=1`, ce qui renvoie la dernière version mineure du schéma. Pour plus d&#39;informations, consultez la section [versioning de schéma](../../../../xdm/api/getting-started.md#versioning) du guide de l&#39;API XDM. |
 
 **Réponse**
 
