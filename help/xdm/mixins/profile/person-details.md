@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Ce document donne un aperçu du mixin Détails démographiques.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 87b638df8a3b27fb6df5dee60b57d817d5e34a80
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '264'
 ht-degree: 22%
 
 ---
@@ -37,5 +37,4 @@ ht-degree: 22%
 Pour plus d’informations sur le mixin, consultez le référentiel XDM public :
 
 * [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
-* [Schéma complet ](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
-å
+* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
