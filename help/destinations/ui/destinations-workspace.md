@@ -5,7 +5,7 @@ description: 'L’espace de travail Destinations se compose de quatre sections :
 seo-description: Dans Adobe Experience Platform, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 translation-type: tm+mt
-source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
+source-git-commit: eaa4a7efc248104d823267eca574f2eca16edc3f
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 22%
@@ -38,7 +38,7 @@ L&#39;interface utilisateur [!DNL Platform] fournit plusieurs options de recherc
 Les cartes de destination contiennent soit un contrôle **[!UICONTROL Configurer]**, soit un contrôle **[!UICONTROL Activer]** et un contrôle secondaire qui affiche plus d&#39;options. Ces contrôles sont décrits ci-dessous :
 
 | Contrôle | Description |
----------|----------
+|---------|----------|
 | [!UICONTROL Configuration] | Permet de créer une connexion à la destination. |
 | [!UICONTROL Activer] | Une fois que vous avez établi une connexion à la destination, vous pouvez activer des segments. |
 | [!UICONTROL Compte vue] | Vue des comptes que vous avez connectés pour une destination. |
@@ -72,7 +72,7 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 ![Onglet Parcourir](../assets/ui/workspace/browse-tab.png)
 
 | Élément | Description |
----------|----------
+|---------|----------|
 | Nom | Le nom que vous avez fourni pour votre flux d’activation vers cette destination. La même colonne comprend deux contrôles : [!UICONTROL Activer ] et [!UICONTROL Supprimer la destination]. |
 | [!UICONTROL État de la dernière exécution du flux] | Statut de la dernière exécution de flux de données. Voir [détails de destination de la Vue](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
 | [!UICONTROL Date d&#39;exécution du dernier flux] | Heure et date de la dernière exécution du flux de données. Voir [détails de destination de la Vue](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
