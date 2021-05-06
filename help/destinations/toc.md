@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document liste la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
 translation-type: tm+mt
-source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
+source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '474'
 ht-degree: 59%
 
 ---
@@ -104,9 +104,9 @@ ht-degree: 59%
       * [Présentation de l’extension Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md)
    * Destinations d’engagement mobile {#mobile-engagement}
       * [Présentation des destinations d’engagement mobiles](./catalog/mobile-engagement/overview.md)
-      * [Connexion aux attributs du navire](./catalog/mobile-engagement/airship-attributes.md)
-      * [Connexion aux balises d&#39;avion](./catalog/mobile-engagement/airship-tags.md)
-      * [Connexion au frein](./catalog/mobile-engagement/braze.md)
+      * [(bêta) Connexion aux attributs du navire](./catalog/mobile-engagement/airship-attributes.md)
+      * [(Bêta) Connexion aux balises d&#39;Airship](./catalog/mobile-engagement/airship-tags.md)
+      * [(Bêta) Connexion au frein](./catalog/mobile-engagement/braze.md)
    * Destinations de personnalisation {#personalization}
       * [Présentation des destinations de personnalisation](./catalog/personalization/overview.md)
       * [Extension Adobe Target](./catalog/personalization/adobe-target.md)
