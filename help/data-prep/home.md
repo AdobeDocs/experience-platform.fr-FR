@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Ce document présente l’aperçu des données dans Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,8 @@ Pour en savoir plus sur les différentes fonctions de mappage, consultez le [gui
 ## Jeu de mappages
 
 Un ensemble de mappages qui transforment un schéma en un autre est collectivement appelé jeu de mappages. Un jeu de mappages unique est créé dans le cadre de chaque flux de données. Un jeu de mappages fait partie intégrante des flux de données et est créé, modifié et surveillé dans le cadre des flux de données.
+
+Pour en savoir plus sur les jeux de mappages, y compris sur l&#39;utilisation des champs dans un jeu de mappages, consultez le [guide des jeux de mappages](./mapping-set.md). Pour savoir comment créer une visionneuse de mappages et utiliser d&#39;autres appels d&#39;API liés aux visionneuses de mappages, consultez la section jeu de mappages du [guide du développeur](./api/mapping-set.md).
 
 ## Gestion du format de données
 
