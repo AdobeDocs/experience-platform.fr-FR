@@ -7,10 +7,10 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 32%
+source-wordcount: '956'
+ht-degree: 27%
 
 ---
 
@@ -54,23 +54,23 @@ Le schéma de destination &quot;[!DNL Hotels]&quot; est basé sur une classe per
 
 ![](../images/tutorials/relationship/hotels.png)
 
-## Création d’une relation mixin
+## Créer un groupe de champs de schéma de relation
 
 >[!NOTE]
 >
 >Cette étape n’est requise que si votre schéma source ne dispose pas d’un champ de type chaîne dédié à utiliser comme référence au schéma de destination. Si ce champ est déjà défini dans votre schéma source, passez à l’étape suivante de la [définition d’un champ de relation](#relationship-field).
 
-Pour définir une relation entre deux schémas, le schéma source doit disposer d’un champ dédié à utiliser comme référence au schéma de destination. Vous pouvez ajouter ce champ au schéma source en créant un nouveau mixin.
+Pour définir une relation entre deux schémas, le schéma source doit disposer d’un champ dédié à utiliser comme référence au schéma de destination. Vous pouvez ajouter ce champ au schéma source en créant un nouveau groupe de champs de schéma.
 
-Début en sélectionnant **[!UICONTROL Ajouter]** dans la section **[!UICONTROL Mixins]**.
+Début en sélectionnant **[!UICONTROL Ajouter]** dans la section **[!UICONTROL Groupes de champs]**.
 
-![](../images/tutorials/relationship/loyalty-add-mixin.png)
+![](../images/tutorials/relationship/loyalty-add-field-group.png)
 
-La boîte de dialogue [!UICONTROL Ajouter un mixin] s’affiche. À partir de là, sélectionnez **[!UICONTROL Créer un nouveau mixin]**. Dans les champs de texte qui s’affichent, saisissez le nom d’affichage et la description du nouveau mixin. Sélectionnez **[!UICONTROL Ajouter le mixin]** une fois terminé.
+La boîte de dialogue [!UICONTROL Ajouter le groupe de champs] s&#39;affiche. À partir de là, sélectionnez **[!UICONTROL Créer un nouveau groupe de champs]**. Dans les champs de texte qui s’affichent, entrez le nom d’affichage et la description du nouveau groupe de champs. Sélectionnez **[!UICONTROL Ajouter des groupes de champs]** une fois terminé.
 
-<img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
+![](../images/tutorials/relationship/create-field-group.png)
 
-Le canevas réapparaît avec &quot;[!DNL Favorite Hotel]&quot; apparaissant dans la section **[!UICONTROL Mixins]**. Sélectionnez le nom du mixin, puis **[!UICONTROL Ajouter le champ]** en regard du champ racine `Loyalty Members`.
+Le canevas réapparaît avec &quot;[!DNL Favorite Hotel]&quot; apparaissant dans la section **[!UICONTROL Groupes de champs]**. Sélectionnez le nom du groupe de champs, puis **[!UICONTROL Ajouter le champ]** en regard du champ racine `Loyalty Members`.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
