@@ -6,16 +6,16 @@ description: Le point de terminaison /classes de l'API Schéma Registry vous per
 topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 23%
+source-wordcount: '1512'
+ht-degree: 17%
 
 ---
 
 # Point de terminaison des classes
 
-Tous les schémas de modèle de données d’expérience (XDM) doivent être basés sur une classe. Une classe détermine la structure de base des propriétés communes que tous les schémas basés sur cette classe doivent contenir, ainsi que les mixins qui peuvent être utilisés dans ces schémas. En outre, une classe de schéma détermine les aspects comportementaux des données qu&#39;un schéma contiendra, dont il existe deux types :
+Tous les schémas de modèle de données d’expérience (XDM) doivent être basés sur une classe. Une classe détermine la structure de base des propriétés communes que tous les schémas basés sur cette classe doivent contenir, ainsi que les groupes de champs de schéma qui peuvent être utilisés dans ces schémas. En outre, une classe de schéma détermine les aspects comportementaux des données qu&#39;un schéma contiendra, dont il existe deux types :
 
 * **[!UICONTROL Enregistrer]** : Fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
 * **[!UICONTROL Série]** chronologique : Fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un sujet d&#39;enregistrement.
@@ -246,7 +246,7 @@ Vous pouvez définir une classe personnalisée sous le conteneur `tenant` en fai
 
 >[!IMPORTANT]
 >
->Lors de la composition d’un schéma basé sur une classe personnalisée que vous définissez, vous ne pourrez pas utiliser de mixins standard. Chaque mixin définit les classes avec lesquelles il est compatible dans l’attribut `meta:intendedToExtend`. Lorsque vous commencez à définir des mixins compatibles avec votre nouvelle classe (en utilisant le `$id` de votre nouvelle classe dans le champ `meta:intendedToExtend` du mixin), vous pourrez réutiliser ces mixins chaque fois que vous définissez un schéma qui met en œuvre la classe que vous avez définie. Pour plus d’informations, consultez les sections [création de mixins](./mixins.md#create) et [création de schémas](./schemas.md#create) dans leurs guides de points de terminaison respectifs.
+>Lors de la composition d’un schéma basé sur une classe personnalisée que vous définissez, vous ne pourrez pas utiliser de groupes de champs standard. Chaque groupe de champs définit les classes avec lesquelles ils sont compatibles dans leur attribut `meta:intendedToExtend`. Une fois que vous commencez à définir des groupes de champs compatibles avec votre nouvelle classe (en utilisant `$id` de votre nouvelle classe dans le champ `meta:intendedToExtend` du groupe de champs), vous pourrez réutiliser ces groupes de champs chaque fois que vous définissez un schéma qui implémente la classe que vous avez définie. Pour plus d’informations, consultez les sections [création de groupes de champs](./field-groups.md#create) et [création de schémas](./schemas.md#create) dans leurs guides de points de terminaison respectifs.
 >
 >Si vous prévoyez d’utiliser des schémas basés sur des classes personnalisées dans le Profil client en temps réel, il est également important de garder à l’esprit que les schémas d’union ne sont construits que sur la base de schémas partageant la même classe. Si vous souhaitez inclure un schéma de classe personnalisée dans l&#39;union pour une autre classe telle que [!UICONTROL XDM Profil individuel] ou [!UICONTROL XDM ExperienceEvent], vous devez établir une relation avec un autre schéma qui emploie cette classe. Pour plus d&#39;informations, consultez le didacticiel [établissant une relation entre deux schémas dans l&#39;API](../tutorials/relationship-api.md).
 
@@ -260,7 +260,7 @@ POST /tenant/classes
 
 La requête de création (POST) d’une classe doit inclure un attribut `allOf` contenant un `$ref` d’une de ces deux valeurs : `https://ns.adobe.com/xdm/data/record` ou `https://ns.adobe.com/xdm/data/time-series`. Ces valeurs représentent le comportement sur lequel la classe est basée (enregistrement ou série temporelle, respectivement). Pour plus d’informations sur les différences entre les données d’enregistrement et les données de série temporelle, consultez la section sur les types de comportements dans les [principes de base de la composition des schémas](../schema/composition.md).
 
-Lorsque vous définissez une classe, vous pouvez également inclure des mixins ou des champs personnalisés au sein de la définition de la classe. De cette manière, les mixins et les champs ajoutés seront inclus dans tous les schémas qui mettent en œuvre la classe. L’exemple de requête suivant définit une classe intitulée « Propriété » qui capture les informations concernant différentes propriétés détenues et exploitées par une société. Elle inclut un champ `propertyId` à ajouter chaque fois que la classe est utilisée.
+Lorsque vous définissez une classe, vous pouvez également inclure des groupes de champs ou des champs personnalisés dans la définition de classe. Les groupes de champs et les champs ajoutés seraient alors inclus dans tous les schémas qui implémentent la classe. L’exemple de requête suivant définit une classe intitulée « Propriété » qui capture les informations concernant différentes propriétés détenues et exploitées par une société. Elle inclut un champ `propertyId` à ajouter chaque fois que la classe est utilisée.
 
 ```SHELL
 curl -X POST \
