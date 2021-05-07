@@ -6,9 +6,9 @@ type: Documentation
 description: Adobe Experience Platform vous permet de rassembler des fragments de données provenant de plusieurs sources et de les combiner afin d’obtenir une vue complète de chacun de vos clients. Lorsque ces données sont regroupées, les stratégies de fusion sont les règles utilisées par Plateforme pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer une vue unifiée.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3017'
+source-wordcount: '3021'
 ht-degree: 8%
 
 ---
@@ -49,15 +49,15 @@ Comme les enregistrements de profil sont ingérés dans l&#39;Experience Platfor
 
 Parfois, il peut être nécessaire de fournir un horodatage personnalisé et de faire en sorte que la stratégie de fusion respecte l’horodatage personnalisé plutôt que l’horodatage système. Par exemple, le renvoi de données ou la vérification de l’ordre correct des événements en cas d’assimilation irrégulière d’enregistrements.
 
-Pour utiliser un horodatage personnalisé, le **[!UICONTROL Mixin des détails de l&#39;audit du système source externe]** doit être ajouté à votre schéma de Profil. Une fois ajouté, l’horodatage personnalisé peut être renseigné à l’aide du champ `lastUpdatedDate`. Lorsqu&#39;un enregistrement est assimilé au champ `lastUpdatedDate` renseigné, l&#39;Experience Platform utilise ce champ pour fusionner des enregistrements dans des jeux de données. Si `lastUpdatedDate` n&#39;est pas présent ou n&#39;est pas renseigné, Platform continuera à utiliser l&#39;horodatage système.
+Pour utiliser un horodatage personnalisé, le groupe de champs **[!UICONTROL Détails de l&#39;audit du système source externe] schéma** doit être ajouté à votre schéma de Profil. Une fois ajouté, l’horodatage personnalisé peut être renseigné à l’aide du champ `lastUpdatedDate`. Lorsqu&#39;un enregistrement est assimilé au champ `lastUpdatedDate` renseigné, l&#39;Experience Platform utilise ce champ pour fusionner des enregistrements dans des jeux de données. Si `lastUpdatedDate` n&#39;est pas présent ou n&#39;est pas renseigné, Platform continuera à utiliser l&#39;horodatage système.
 
 >[!NOTE]
 >
 >Vous devez vous assurer que l&#39;horodatage `lastUpdatedDate` est renseigné lors de l&#39;importation d&#39;une mise à jour sur le même enregistrement.
 
-La capture d&#39;écran suivante affiche les champs du [!UICONTROL Mixin des détails de l&#39;audit du système source externe ]. Pour obtenir des instructions détaillées sur l’utilisation des schémas à l’aide de l’interface utilisateur de la plate-forme, y compris sur la façon d’ajouter des mixins aux schémas, consultez le [didacticiel sur la création d’un schéma à l’aide de l’interface utilisateur](../../xdm/tutorials/create-schema-ui.md).
+La capture d&#39;écran suivante affiche les champs du groupe de champs [!UICONTROL Détails de l&#39;audit du système source externe]. Pour obtenir des instructions détaillées sur l’utilisation des schémas à l’aide de l’interface utilisateur de la plate-forme, y compris sur la façon d’ajouter des groupes de champs aux schémas, consultez le [didacticiel sur la création d’un schéma à l’aide de l’interface utilisateur](../../xdm/tutorials/create-schema-ui.md).
 
-![](../images/merge-policies/custom-timestamp-mixin.png)
+![](../images/merge-policies/custom-timestamp-field-group.png)
 
 Pour utiliser des horodatages personnalisés à l’aide de l’API, reportez-vous à la section [du guide des points de terminaison des stratégies de fusion sur l’utilisation des horodatages personnalisés](../api/merge-policies.md#custom-timestamps).
 
