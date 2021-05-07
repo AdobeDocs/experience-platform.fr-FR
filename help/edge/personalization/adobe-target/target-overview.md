@@ -2,14 +2,14 @@
 title: Utilisation de Adobe Target avec la plate-forme Web SDK
 description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 keywords: cible;adobe cible;activité.id;experience.id;renderDecision;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;audiences;Decision;scope;schéma;
+exl-id: 021171ab-0490-4b27-b350-c37d2a569245
 translation-type: tm+mt
-source-git-commit: 98db5b92ea0f51c8641651eb14e3fe6cecf7027c
+source-git-commit: e12b1337c44095ee8731f99c5829ab83bba14889
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '659'
 ht-degree: 5%
 
 ---
-
 
 # Utilisation de Adobe Target avec la plate-forme Web SDK
 
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 ## Audiences dans XDM
 
-Lors de la définition d’Audiences pour vos activités de Cible fournies par le SDK Web Adobe Experience Platform, [XDM](https://docs.adobe.com/content/help/fr-FR/experience-platform/xdm/home.html) doit être défini et utilisé. Après avoir défini des schémas XDM, des classes et des mixins, vous pouvez créer une règle d’audience de Cible définie par les données XDM pour le ciblage. Dans la Cible, les données XDM s’affichent dans le créateur d’Audiences sous la forme d’un paramètre personnalisé. Le XDM est sérialisé à l’aide de la notation par point (par exemple, `web.webPageDetails.name`).
+Lors de la définition d’Audiences pour vos activités de Cible fournies par le SDK Web Adobe Experience Platform, [XDM](https://docs.adobe.com/content/help/fr-FR/experience-platform/xdm/home.html) doit être défini et utilisé. Après avoir défini des schémas XDM, des classes et des groupes de champs de schéma, vous pouvez créer une règle d&#39;audience de Cible définie par les données XDM pour le ciblage. Dans la Cible, les données XDM s’affichent dans le créateur d’Audiences sous la forme d’un paramètre personnalisé. Le XDM est sérialisé à l’aide de la notation par point (par exemple, `web.webPageDetails.name`).
 
 Si vous disposez d’activités de Cible avec des audiences prédéfinies qui utilisent des paramètres personnalisés ou un profil utilisateur, elles ne sont pas correctement distribuées par le biais du SDK. Au lieu d&#39;utiliser des paramètres personnalisés ou le profil utilisateur, vous devez utiliser XDM à la place. Cependant, il existe des champs de ciblage d’audience prêts à l’emploi pris en charge par le SDK Web Adobe Experience Platform qui ne nécessitent pas XDM. Ces champs sont disponibles dans l’interface utilisateur de la Cible et ne nécessitent pas XDM :
 
