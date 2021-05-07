@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Adobe Experience Platform permet à vos clients d’envoyer des demandes d’exclusion concernant l’utilisation et l’enregistrement de leurs données dans le Profil client en temps réel]. Ces demandes d’opposition entrent dans le cadre du California Consumer Privacy Act (CCPA) qui donne aux personnes résidant en Californie le droit d’accéder à leurs données personnelles et de les supprimer, mais aussi de savoir si celles-ci sont vendues ou divulguées (et si oui, à qui).
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 62%
+source-wordcount: '1049'
+ht-degree: 48%
 
 ---
 
@@ -28,33 +28,33 @@ Le respect des demandes d&#39;exclusion nécessite une compréhension des diffé
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Aide les entreprises à automatiser la conformité aux règles de confidentialité des données impliquant les données des clients au sein  [!DNL Platform]de.
 
-## Mixins d’exclusion
+## Groupes de champs de schéma d’exclusion
 
-Afin d’honorer les demandes d’exclusion de l’ACCP, l’un des schémas qui fait partie du schéma d’union doit contenir les champs d’exclusion [!DNL Experience Data Model] (XDM) nécessaires. Deux mixins sont mis à votre disposition pour ajouter des champs d’opposition à un schéma. Ces deux mixins sont présentés en détail dans les sections qui suivent :
+Afin d’honorer les demandes d’exclusion de l’ACCP, l’un des schémas qui fait partie du schéma d’union doit contenir les champs d’exclusion [!DNL Experience Data Model] (XDM) nécessaires. Il existe deux groupes de champs de schéma qui peuvent être utilisés pour ajouter des champs d’exclusion à un schéma. Chacun d’eux est traité plus en détail dans les sections suivantes :
 
 - [Confidentialité du profil](#profile-privacy) : utilisé pour capturer différents types d’opposition (générale ou ventes/partage).
 - [Détails des préférences du profil](#profile-preferences-details) : utilisé pour capturer des demandes d’opposition pour des canaux XDM spécifiques.
 
-Pour obtenir des instructions détaillées sur la manière dont ajouter un mixin au schéma, reportez-vous à la section « Ajout d’un mixin » dans la documentation XDM suivante :
+Pour obtenir des instructions détaillées sur la façon d’ajouter un groupe de champs à un schéma, reportez-vous à la section &quot;Ajouter un groupe de champs&quot; de la documentation XDM suivante :
 - [Tutoriel sur l’API Schema Registry](../xdm/api/getting-started.md): création d’un schéma à l’aide de l’API Schema Registry.
 - [Tutoriel de l’éditeur de schéma](../xdm/tutorials/create-schema-ui.md) : création d’un schéma à l’aide de l’interface utilisateur de Platform.
 
-Voici un exemple d’image montant les mixins d’opposition ajoutés à un schéma dans l’interface utilisateur :
+Voici un exemple d’image montrant les groupes de champs d’exclusion ajoutés à un schéma dans l’interface utilisateur :
 
-![](images/opt-outs/opt-out-mixins-user-interface.png)
+![](images/opt-outs/opt-out-field-groups-user-interface.png)
 
-La structure de chaque mixin, ainsi qu’une description des champs auxquels ils contribuent au schéma, est présentée plus en détail dans les sections suivantes.
+La structure de chaque groupe de champs, ainsi qu&#39;une description des champs qu&#39;ils contribuent au schéma, sont décrits plus en détail dans les sections suivantes.
 
 ### [!DNL Profile Privacy] {#profile-privacy}
 
-Le mixin [!DNL Profile Privacy] permet de capturer deux types de demandes d’exclusion de l’ACCP de la part des clients :
+Le groupe de champs [!DNL Profile Privacy] vous permet de capturer deux types de demandes d’exclusion CCPA de la part des clients :
 
 1. Opposition générale
 2. Opposition de vente/partage
 
 ![](images/opt-outs/profile-privacy.png)
 
-Le mixin [!DNL Profile Privacy] contient les champs suivants :
+Le groupe de champs [!DNL Profile Privacy] contient les champs suivants :
 
 - Oppositions de confidentialité (`privacyOptOuts`) : un tableau contenant une liste d’objets d’opposition.
 - Type d’opposition (`optOutType`) : le type d’opposition. Ce champ est une énumération de deux valeurs possibles :
@@ -67,15 +67,15 @@ Le mixin [!DNL Profile Privacy] contient les champs suivants :
    - Accord préalable (`in`) : le client a donné son accord préalable.
 - Date et heure de l’opposition (`timestamp`) : date et heure du signal d’opposition reçu.
 
-Pour vue la structure complète du mixin [!DNL Profile Privacy], veuillez vous référer au [référentiel GitHub public XDM](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) ou à la prévisualisation du mixin à l&#39;aide de l&#39;interface utilisateur de la plate-forme.
+Pour vue la structure complète du groupe de champs [!DNL Profile Privacy], reportez-vous au [référentiel GitHub public XDM](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) ou à la prévisualisation du groupe de champs à l&#39;aide de l&#39;interface utilisateur de la plate-forme.
 
 ### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
-Le mixin [!DNL Profile Preferences Details] fournit plusieurs champs qui représentent les préférences des profils clients (format d&#39;un email, langue préférée et fuseau horaire, par exemple). L’un des champs inclus dans ce mixin, OptInOut (`optInOut`), permet de définir des valeurs d’opposition pour chaque canal individuel.
+Le groupe de champs [!DNL Profile Preferences Details] fournit plusieurs champs qui représentent les préférences des profils clients (format d&#39;un email, langue préférée et fuseau horaire, par exemple). L’un des champs inclus dans ce groupe de champs, OptInOut (`optInOut`), permet de définir des valeurs d’exclusion pour des canaux individuels.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-Le mixin [!DNL Profile Preferences Details] contient les champs suivants relatifs aux exclusions :
+Le groupe de champs [!DNL Profile Preferences Details] contient les champs suivants liés aux exclusions :
 
 - OptInOut (`optInOut`) : un objet sur lequel chaque clé représente un URI valide et connu pour un canal de communication et l’état actif d’opposition pour chaque canal. Chaque canal peut avoir l’une des quatre valeurs possibles :
    - Non fourni (`not_provided`) : aucune demande d’opposition n’a été fournie pour ce canal.
@@ -100,7 +100,7 @@ L’exemple JSON ci-dessous souligne la manière dont l’objet OptInOut peut ca
 }
 ```
 
-Pour consulter la structure complète du mixin Détails sur les préférences du profil, reportez-vous au [référentiel XDM GitHub public](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) ou prévisualisez le mixin à l’aide de l’interface utilisateur de [!DNL Platform]
+Pour vue la structure complète du groupe de champs Détails des préférences de Profil, consultez le [référentiel GitHub public XDM](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) ou prévisualisation le groupe de champs à l&#39;aide de l&#39;interface utilisateur [!DNL Platform].
 
 ## Gestion des oppositions dans la segmentation
 
