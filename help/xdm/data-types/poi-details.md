@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM Point Of Interest Details.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 14%
+source-wordcount: '201'
+ht-degree: 13%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 14%
 | `poiID` | Chaîne | Identificateur unique de l’API. |
 | `type` | Chaîne | Type général du point ciblé qui utilise un schéma de saisie sélectionné par l’administrateur des définitions des points ciblés. |
 
-Pour plus d’informations sur le mixin, consultez le référentiel XDM public :
+Pour plus d&#39;informations sur le type de données, consultez le référentiel XDM public :
 
 * [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json)
