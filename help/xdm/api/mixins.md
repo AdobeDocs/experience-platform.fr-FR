@@ -6,14 +6,21 @@ description: Le point de terminaison /mixins de l’API de registre de Schéma v
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 13%
+source-wordcount: '1193'
+ht-degree: 12%
 
 ---
 
-# Point de terminaison Mixins
+
+# Point de terminaison Mixins (obsolète)
+
+>[!IMPORTANT]
+>
+>Les mixins ont été renommés en groupes de champs de schéma et, par conséquent, le point de terminaison `/mixins` a été abandonné en faveur du point de terminaison `/fieldgroups`.
+>
+>Bien que `/mixins` continue à être conservé en tant que point de terminaison hérité, il est vivement recommandé d&#39;utiliser `/fieldgroups` pour les nouvelles implémentations de l&#39;API de registre de Schéma dans vos applications d&#39;expérience. Pour plus d&#39;informations, consultez le [guide du point de terminaison des groupes de champs](./field-groups.md).
 
 Les mixins sont des composants réutilisables qui définissent un ou plusieurs champs qui représentent un concept particulier, tel qu’une personne individuelle, une adresse postale ou un environnement de navigateur Web. Les mixins sont destinés à être inclus dans un schéma qui implémente une classe compatible, en fonction du comportement des données qu&#39;ils représentent (enregistrement ou séries chronologiques). Le point de terminaison `/mixins` de l&#39;API [!DNL Schema Registry] vous permet de gérer par programmation les mixins dans votre application d&#39;expérience.
 
@@ -154,7 +161,7 @@ Une réponse réussie renvoie les détails du mixin. Les champs renvoyés dépen
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Favorite Hotel",
   "type": "object",
@@ -300,7 +307,7 @@ Une réponse réussie renvoie un état HTTP 201 (Créé) et un payload qui cont
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -480,7 +487,7 @@ Une réponse réussie renvoie les détails du mixin mis à jour.
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -621,7 +628,7 @@ La réponse montre que les deux opérations ont été réalisées avec succès. 
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
