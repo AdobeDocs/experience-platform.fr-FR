@@ -7,22 +7,22 @@ type: Tutorial
 description: Découvrez comment créer et modifier des types de données dans l’interface utilisateur de l’Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
 
 # Création et modification de types de données à l’aide de l’interface utilisateur
 
-Dans le modèle de données d’expérience (XDM), les types de données sont utilisés comme champs de type référence dans les classes ou les mixins de la même manière que les champs littéraux de base, la différence majeure étant que les types de données peuvent définir plusieurs sous-champs. Bien que semblables aux mixins en ce qu&#39;ils permettent l&#39;utilisation cohérente d&#39;une structure à champs multiples, les types de données sont plus flexibles parce qu&#39;ils peuvent être inclus n&#39;importe où dans la structure de schéma alors que les mixins ne peuvent être ajoutés qu&#39;au niveau racine.
+Dans le modèle de données d’expérience (XDM), les types de données sont utilisés comme champs de type référence dans les classes ou les groupes de champs de schéma de la même manière que les champs littéraux de base, la différence majeure étant que les types de données peuvent définir plusieurs sous-champs. Bien que semblables aux groupes de champs en ce qu’ils permettent l’utilisation cohérente d’une structure à champs multiples, les types de données sont plus flexibles car ils peuvent être inclus n’importe où dans la structure de schéma alors que les groupes de champs ne peuvent être ajoutés qu’au niveau racine.
 
 Adobe Experience Platform fournit de nombreux types de données standard qui peuvent être utilisés pour couvrir un large éventail de cas d’utilisation courants de la gestion de l’expérience. Cependant, vous pouvez également définir vos propres types de données personnalisées afin de répondre à vos besoins spécifiques.
 
 Ce didacticiel décrit les étapes de création et de modification des types de données personnalisées dans l’interface utilisateur de la plate-forme.
 
-## Conditions préalables
+## Conditions préalables  
 
 Ce guide nécessite une bonne compréhension de XDM System. Pour une présentation du rôle de XDM dans l&#39;écosystème Experience Platform, voir [Présentation de XDM](../../home.md) et les [bases de la composition du schéma](../../schema/composition.md) pour savoir comment les types de données contribuent aux schémas de XDM.
 
@@ -85,21 +85,21 @@ Cela montre à quel point les types de données peuvent être flexibles en terme
 
 Une fois les champs ajoutés au type de données, sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer vos modifications et ajouter le type de données à [!DNL Schema Library].
 
-## Ajouter le type de données à une classe ou un mixin
+## Ajouter le type de données à une classe ou un groupe de champs
 
-Une fois que vous avez créé un type de données, vous pouvez le début dans vos schémas. Les schémas XDM étant composés d&#39;une classe et de zéro ou plusieurs mixins, les champs fournis par un type de données ne peuvent pas être ajoutés directement à un schéma. Ils doivent être inclus dans une classe ou un mixin.
+Une fois que vous avez créé un type de données, vous pouvez le début dans vos schémas. Les schémas XDM étant composés d&#39;une classe et de zéro ou de plusieurs groupes de champs, les champs fournis par un type de données ne peuvent pas être ajoutés directement à un schéma. Ils doivent être inclus dans une classe ou un groupe de champs.
 
-Début en suivant les étapes nécessaires pour ajouter [un champ à une classe](./classes.md#add-fields) ou [ajouter un champ à un mixin](./mixins.md#add-fields). Lorsque vous choisissez **[!UICONTROL Type]** pour le nouveau champ, sélectionnez le nom de votre type de données dans le menu déroulant.
+Début en suivant les étapes nécessaires pour ajouter [un champ à une classe](./classes.md#add-fields) ou [ajouter un champ à un groupe de champs](./field-groups.md#add-fields). Lorsque vous choisissez **[!UICONTROL Type]** pour le nouveau champ, sélectionnez le nom de votre type de données dans le menu déroulant.
 
 ## Conversion d’un objet à plusieurs champs en un type de données {#convert}
 
-Lorsque vous créez un champ de type objet avec plusieurs sous-champs dans [!DNL Schema Editor], vous pouvez convertir ce champ en un type de données afin d’utiliser la même structure de champ dans une autre classe ou mixin.
+Lorsque vous créez un champ de type objet avec plusieurs sous-champs dans [!DNL Schema Editor], vous pouvez convertir ce champ en un type de données afin d’utiliser la même structure de champ dans une classe ou un groupe de champs différent.
 
 Pour convertir un champ de type objet en type de données, sélectionnez le champ dans la trame. Avant de convertir le champ, assurez-vous que le **[!UICONTROL nom d’affichage]** est descriptif des données que l’objet contiendra, car il deviendra le nom du type de données. Lorsque vous êtes prêt à convertir le champ, sélectionnez **[!UICONTROL Convertir en nouveau type de données]** dans le rail de droite.
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-Le canevas met à jour le type de données du champ de &quot;[!UICONTROL Objet]&quot; vers le nouveau type de données. Les sous-champs comportent également de petites icônes de verrouillage indiquant qu’il ne s’agit plus de champs individuels mais d’un type de données à champs multiples. Cette structure peut désormais être réutilisée dans d&#39;autres classes et mixins en sélectionnant ce type de données dans la liste déroulante **[!UICONTROL Type]** lors de la définition d&#39;un nouveau champ.
+Le canevas met à jour le type de données du champ de &quot;[!UICONTROL Objet]&quot; vers le nouveau type de données. Les sous-champs comportent également de petites icônes de verrouillage indiquant qu’il ne s’agit plus de champs individuels mais d’un type de données à champs multiples. Cette structure peut désormais être réutilisée dans d&#39;autres classes et groupes de champs en sélectionnant ce type de données dans la liste déroulante **[!UICONTROL Type]** lors de la définition d&#39;un nouveau champ.
 
 ![](../../images/ui/resources/data-types/converted.png)
 
