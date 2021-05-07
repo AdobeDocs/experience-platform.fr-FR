@@ -6,10 +6,10 @@ description: Ce document fournit des réponses aux questions fréquentes sur le 
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1879'
-ht-degree: 67%
+source-wordcount: '1898'
+ht-degree: 55%
 
 ---
 
@@ -25,19 +25,19 @@ Vous trouverez ci-dessous une liste de réponses aux questions fréquentes sur X
 
 ### Comment ajouter des champs à un schéma ?
 
-Vous pouvez ajouter des champs à un schéma à l’aide d’un mixin. Chaque mixin est compatible avec une ou plusieurs classes, ce qui permet de l’utiliser dans n’importe quel schéma qui met en œuvre une de ces classes compatibles. Bien qu’Adobe Experience Platform fournisse plusieurs mixins de secteur avec leurs propres champs prédéfinis, vous pouvez ajouter vos propres champs à un schéma en créant de nouveaux mixins à l’aide de l’API ou de l’interface utilisateur.
+Vous pouvez ajouter des champs à un schéma en utilisant un groupe de champs de schéma. Chaque groupe de champs est compatible avec une ou plusieurs classes, ce qui permet au groupe de champs d&#39;être utilisé dans n&#39;importe quel schéma qui implémente l&#39;une de ces classes compatibles. Bien que Adobe Experience Platform fournisse plusieurs groupes de champs du secteur avec leurs propres champs prédéfinis, vous pouvez ajouter vos propres champs à un schéma en créant de nouveaux groupes de champs à l’aide de l’API ou de l’interface utilisateur.
 
-Pour plus d&#39;informations sur la création de mixins dans l&#39;API [!DNL Schema Registry], consultez le [guide du point de terminaison de mixin](api/mixins.md#create). Si vous utilisez l’interface utilisateur, consultez le [tutoriel de l’éditeur de schémas](./tutorials/create-schema-ui.md).
+Pour plus d&#39;informations sur la création de groupes de champs dans l&#39;API [!DNL Schema Registry], consultez le [guide du point de terminaison du groupe de champs](api/field-groups.md#create). Si vous utilisez l’interface utilisateur, consultez le [tutoriel de l’éditeur de schémas](./tutorials/create-schema-ui.md).
 
-### Quelles sont les meilleures utilisations des mixins par rapport aux types de données ?
+### Quelles sont les meilleures utilisations pour les groupes de champs par rapport aux types de données ?
 
-Les [mixins](./schema/composition.md#mixin) sont des composants qui définissent un ou plusieurs champs dans un schéma. Les mixins imposent la manière dont leurs champs apparaissent dans la hiérarchie du schéma, et présentent donc la même structure dans chaque schéma dans lequel ils sont inclus. Les mixins ne sont compatibles qu’avec des classes spécifiques, identifiées par leur attribut `meta:intendedToExtend`.
+[Les ](./schema/composition.md#field-group) groupes de champs sont des composants qui définissent un ou plusieurs champs d’un schéma. Les groupes de champs appliquent la manière dont leurs champs apparaissent dans la hiérarchie du schéma et présentent donc la même structure dans chaque schéma dans lequel ils sont inclus. Les groupes de champs ne sont compatibles qu&#39;avec des classes spécifiques, identifiées par leur attribut `meta:intendedToExtend`.
 
-Les [types de données](./schema/composition.md#data-type) peuvent également fournir un ou plusieurs champs pour un schéma. Toutefois, contrairement aux mixins, les types de données ne sont pas limités à une classe particulière. Ainsi, les types de données constituent une option plus souple pour décrire des structures de données communes réutilisables sur plusieurs schémas avec des classes potentiellement différentes.
+Les [types de données](./schema/composition.md#data-type) peuvent également fournir un ou plusieurs champs pour un schéma. Cependant, contrairement aux groupes de champs, les types de données ne sont pas limités à une classe particulière. Ainsi, les types de données constituent une option plus souple pour décrire des structures de données communes réutilisables sur plusieurs schémas avec des classes potentiellement différentes.
 
 ### Qu’est-ce que l’ID unique d’un schéma ?
 
-Toutes les ressources [!DNL Schema Registry] (schémas, mixins, types de données, classes) ont un URI qui agit comme un identifiant unique à des fins de référence et de recherche. Lorsqu’un schéma est affiché dans l’API, il se trouve dans les attributs `$id` et `meta:altId` de niveau supérieur.
+Toutes les ressources [!DNL Schema Registry] (schémas, groupes de champs, types de données, classes) ont un URI qui agit comme un identifiant unique à des fins de référence et de recherche. Lorsqu’un schéma est affiché dans l’API, il se trouve dans les attributs `$id` et `meta:altId` de niveau supérieur.
 
 Pour plus d&#39;informations, consultez la section [identification des ressources](api/getting-started.md#resource-identification) du guide du développeur d&#39;API [!DNL Schema Registry].
 
@@ -135,7 +135,7 @@ Pour plus d&#39;informations sur la construction de chemins de recherche dans l&
 }
 ```
 
-Ce message d’erreur s’affiche lorsque vous tentez de créer une ressource avec un titre déjà utilisé par une autre ressource. Les titres doivent être uniques pour tous les types de ressources. Par exemple, si vous essayez de créer un mixin avec un titre déjà utilisé par un schéma, vous obtiendrez cette erreur.
+Ce message d’erreur s’affiche lorsque vous tentez de créer une ressource avec un titre déjà utilisé par une autre ressource. Les titres doivent être uniques pour tous les types de ressources. Par exemple, si vous essayez de créer un groupe de champs avec un titre déjà utilisé par un schéma, cette erreur s’affichera.
 
 ### Les champs personnalisés doivent utiliser un champ de niveau supérieur
 
@@ -149,7 +149,7 @@ Ce message d’erreur s’affiche lorsque vous tentez de créer une ressource av
 }
 ```
 
-Ce message d’erreur s’affiche lorsque vous essayez de créer un nouveau mixin avec des champs dont l’espace de noms est incorrect. Les mixins définis par votre organisation IMS doivent être dotés d’un espace de noms avec un `TENANT_ID` afin d’éviter tout conflit avec d’autres ressources du secteur et des fournisseurs. Vous trouverez des exemples détaillés de structures de données appropriées pour les mixins dans le [guide du point de terminaison des mixins](./api/mixins.md#create).
+Ce message d’erreur s’affiche lorsque vous tentez de créer un groupe de champs avec des espaces de noms incorrects. Les groupes de champs définis par votre organisation IMS doivent espace de nommage leurs champs avec un `TENANT_ID` afin d&#39;éviter les conflits avec d&#39;autres ressources du secteur et du fournisseur. Vous trouverez des exemples détaillés de structures de données appropriées pour les groupes de champs dans le [guide du point de terminaison des groupes de champs](./api/field-groups.md#create).
 
 
 ### [!DNL Real-time Customer Profile] erreurs
