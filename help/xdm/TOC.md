@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
-user-guide-description: Utilisez les classes et les mixins d’Experience Data Model (XDM) pour normaliser les données d’expérience.
+user-guide-description: Utilisez les classes de modèle de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schémas
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 50%
+source-wordcount: '292'
+ht-degree: 45%
 
 ---
 
@@ -30,18 +30,18 @@ ht-degree: 50%
    * [XDM Individual Profile](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Définition de segment](./classes/segment-definition.md)
-* Mixins {#mixins}
-   * Mélins de profil {#profile}
-      * [IdentityMap](./mixins/profile/identitymap.md)
-      * [Détails démographiques](./mixins/profile/person-details.md)
-      * [Coordonnées personnelles](./mixins/profile/personal-details.md)
-      * [Préférences de confidentialité/personnalisation/marketing (Contenus)](./mixins/profile/consents.md)
-      * [Détails de l’abonnement au segment](./mixins/profile/segmentation.md)
-      * [Détails du contact de travail](./mixins/profile/work-details.md)
-   * Mélins de événement {#event}
-      * [Détails de l’ID d’utilisateur final](./mixins/event/enduserids.md)
-      * [Détails de l&#39;Environnement](./mixins/event/environment-details.md)
-   * [Mises à jour des noms mixtes](./mixins/name-updates.md)
+* Groupes de champs de schéma {#field-groups}
+   * Groupes de champs de profil {#profile}
+      * [IdentityMap](./field-groups/profile/identitymap.md)
+      * [Détails démographiques](./field-groups/profile/demographic-details.md)
+      * [Coordonnées personnelles](./field-groups/profile/personal-contact-details.md)
+      * [Détails de l’abonnement au segment](./field-groups/profile/segmentation.md)
+      * [Détails du contact de travail](./field-groups/profile/work-contact-details.md)
+      * [Préférences de confidentialité/personnalisation/marketing (Contenus)](./field-groups/profile/consents.md)
+   * Groupes de champs de événement {#event}
+      * [Détails de l’ID d’utilisateur final](./field-groups/event/enduserids.md)
+      * [Détails de l&#39;Environnement](./field-groups/event/environment-details.md)
+   * [Mises à jour du nom du groupe de champs](./field-groups/name-updates.md)
 * Types des données {#data-types}
    * [Application](./data-types/application.md)
    * [Balise](./data-types/beacon.md)
@@ -77,11 +77,11 @@ ht-degree: 50%
    * [Détails de la page Web](./data-types/webpage-details.md)
 *  SchemasUI  {#ui}
    * [Présentation](./ui/overview.md)
-   * [Explorez les ressources XDM](./ui/explore.md)
+   * [Explorer les ressources XDM](./ui/explore.md)
    * Créer et modifier des ressources {#resources}
       * [Schémas](./ui/resources/schemas.md)
       * [Classes](./ui/resources/classes.md)
-      * [Mixins](./ui/resources/mixins.md)
+      * [Groupes de champs](./ui/resources/field-groups.md)
       * [Types des données](./ui/resources/data-types.md)
    * Définir des champs {#fields}
       * [Présentation](./ui/fields/overview.md)
@@ -99,7 +99,7 @@ ht-degree: 50%
    * [Schémas](api/schemas.md)
    * [Comportements](api/behaviors.md)
    * [Classes](api/classes.md)
-   * [Mélanges](api/mixins.md)
+   * [Groupes de champs de schéma](api/field-groups.md)
    * [Types des données](api/data-types.md)
    * [Descripteurs](api/descriptors.md)
    * [Unions](api/unions.md)
@@ -107,6 +107,7 @@ ht-degree: 50%
    * [Sample data](api/sample-data.md)
    * [Journal d’audit](api/audit-log.md)
    * [Schémas ad hoc](api/ad-hoc.md)
+   * [Mélanges (obsolète)](api/mixins.md)
    * [Annexe](api/appendix.md)
 * Tutoriels {#tutorials}
    * [Création d’un schéma (IU)](tutorials/create-schema-ui.md)
