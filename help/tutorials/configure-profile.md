@@ -7,9 +7,9 @@ type: Tutorial
 description: Ce document décrit les étapes à suivre et fournit des liens vers des tutoriels pour effectuer chaque workflow séparément.
 exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '796'
 ht-degree: 25%
 
 ---
@@ -43,7 +43,7 @@ Avant que les données puissent être ingérées dans Adobe Experience Platform 
 **Ce guide vous aidera à :**
 - Parcourir les schémas existants.
 - Création et attribution d’un nom à un schéma.
-- Ajoutez et définissez des mixins XDM.
+- Ajoutez et définissez des groupes de champs de schéma XDM.
 - Définissez vos champs de schéma comme champs d’identité.
 - Activez le Profil pour votre schéma.
 
