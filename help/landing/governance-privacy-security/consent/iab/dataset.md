@@ -6,9 +6,9 @@ topic-legacy: privacy events
 description: Ce document décrit les étapes à suivre pour configurer les deux jeux de données nécessaires à la collecte des données de consentement IAB TCF 2.0.
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1670'
 ht-degree: 4%
 
 ---
@@ -24,7 +24,7 @@ Plus précisément, deux jeux de données sont nécessaires pour capturer les do
 
 Ce document décrit les étapes à suivre pour configurer ces deux ensembles de données afin de collecter les données de consentement IAB TCF 2.0. Pour un aperçu du flux de travail complet de configuration des opérations de données de votre plateforme pour TCF 2.0, consultez la [présentation de la conformité à la norme TCF 2.0 de l&#39;IAB ](./overview.md).
 
-## Conditions préalables
+## Conditions préalables  
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
@@ -34,15 +34,15 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [Espaces de nommage](../../../../identity-service/namespaces.md) d&#39;identité : Les données d&#39;identité du client doivent être fournies sous un espace de nommage d&#39;identité spécifique reconnu par Identity Service.
 * [Profil](../../../../profile/home.md) client en temps réel : Exploite  [!DNL Identity Service] cette fonction pour vous permettre de créer des profils clients détaillés à partir de vos jeux de données en temps réel. [!DNL Real-time Customer Profile] Profile extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
 
-## [!UICONTROL Confidentialité ] Détails Structure de mixin  {#structure}
+## [!UICONTROL Structure du groupe ] Détails de la confidentialité  {#structure}
 
-Le mixin [!UICONTROL Détails de la confidentialité] fournit les champs de consentement client requis pour la prise en charge de TCF 2.0. Il existe deux versions de ce mixin : l&#39;une est compatible avec la classe [!DNL XDM Individual Profile] et l&#39;autre avec la classe [!DNL XDM ExperienceEvent].
+Le groupe de champs [!UICONTROL Détails de la confidentialité] schéma fournit les champs de consentement client requis pour la prise en charge de TCF 2.0. Il existe deux versions de ce groupe de champs : l&#39;une est compatible avec la classe [!DNL XDM Individual Profile] et l&#39;autre avec la classe [!DNL XDM ExperienceEvent].
 
-Les sections ci-dessous expliquent la structure de chacun de ces mixins, y compris les données attendues lors de l&#39;ingestion.
+Les sections ci-dessous expliquent la structure de chacun de ces groupes de champs, y compris les données attendues lors de l&#39;assimilation.
 
-### Mélin de profil {#profile-mixin}
+### Groupe de champs de profil {#profile-field-group}
 
-Pour les schémas basés sur [!DNL XDM Individual Profile], le mixin [!UICONTROL Détails de confidentialité] fournit un champ de type de carte unique, `xdm:identityPrivacyInfo`, qui mappe les identités des clients à leurs préférences de consentement TCF. Le fichier JSON suivant est un exemple du type de données `xdm:identityPrivacyInfo` attendu lors de l’assimilation des données :
+Pour les schémas basés sur [!DNL XDM Individual Profile], le groupe de champs [!UICONTROL Détails de la confidentialité] fournit un champ de type de carte unique, `xdm:identityPrivacyInfo`, qui mappe les identités des clients à leurs préférences de consentement TCF. Le fichier JSON suivant est un exemple du type de données `xdm:identityPrivacyInfo` attendu lors de l’assimilation des données :
 
 ```json
 {
@@ -78,9 +78,9 @@ L&#39;objet de valeur d&#39;identité contient un seul champ, `xdm:identityIABCo
 | `xdm:consentTimestamp` | Un horodatage [ISO 8601](https://www.ietf.org/rfc/rfc3339.txt) de la modification des valeurs de consentement TCF. |
 | `xdm:consentString` | Objet contenant les données de consentement mises à jour du client et d’autres informations contextuelles. Pour en savoir plus sur les sous-propriétés requises de cet objet, consultez la section [propriétés de chaîne de consentement](#consent-string). |
 
-### Mélin de événement {#event-mixin}
+### Groupe de champs de événement {#event-field-group}
 
-Pour les schémas basés sur [!DNL XDM ExperienceEvent], le mixin [!UICONTROL Privacy Details] fournit un champ de type tableau unique : `xdm:consentStrings`. Chaque élément de ce tableau doit être un objet qui contient les propriétés nécessaires pour une chaîne de consentement TCF, similaire au champ `xdm:consentString` du mixin de profil. Pour plus d’informations sur ces sous-propriétés, voir la section [suivante](#consent-string).
+Pour les schémas basés sur [!DNL XDM ExperienceEvent], le groupe de champs [!UICONTROL Détails de confidentialité] fournit un champ de type tableau unique : `xdm:consentStrings`. Chaque élément de ce tableau doit être un objet qui contient les propriétés nécessaires pour une chaîne de consentement TCF, similaire au champ `xdm:consentString` du groupe de champs de profil. Pour plus d’informations sur ces sous-propriétés, voir la section [suivante](#consent-string).
 
 ```json
 {
@@ -98,7 +98,7 @@ Pour les schémas basés sur [!DNL XDM ExperienceEvent], le mixin [!UICONTROL Pr
 
 ### Propriétés de chaîne de consentement {#consent-string}
 
-Les deux versions du mixin [!UICONTROL Détails de confidentialité] nécessitent au moins un objet qui capture les champs nécessaires qui décrivent la chaîne de consentement TCF pour le client. Ces propriétés sont expliquées ci-dessous :
+Les deux versions du groupe de champs [!UICONTROL Détails de la confidentialité] nécessitent au moins un objet qui capture les champs nécessaires qui décrivent la chaîne de consentement TCF pour le client. Ces propriétés sont expliquées ci-dessous :
 
 | Propriété | Description |
 | --- | --- |
@@ -126,11 +126,11 @@ Dans l&#39;espace de travail **[!UICONTROL Schémas]**, sélectionnez **[!UICONT
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-Le [!DNL Schema Editor] apparaît, indiquant la structure du schéma dans la trame. Utilisez le rail de droite pour fournir un nom et une description pour le schéma, puis sélectionnez **[!UICONTROL Ajouter]** sous la section **[!UICONTROL Mixins]** sur le côté gauche du canevas.
+Le [!DNL Schema Editor] apparaît, indiquant la structure du schéma dans la trame. Utilisez le rail de droite pour fournir un nom et une description pour le schéma, puis sélectionnez **[!UICONTROL Ajouter]** sous la section **[!UICONTROL Groupes de champs]** sur le côté gauche du canevas.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-profile.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
 
-La boîte de dialogue **[!UICONTROL Ajouter le mixin]** s&#39;affiche. À partir de là, sélectionnez **[!UICONTROL Détails de la confidentialité]** dans la liste. Vous pouvez également utiliser la barre de recherche pour affiner les résultats afin de localiser plus facilement le mixin. Une fois le mixin sélectionné, sélectionnez **[!UICONTROL Ajouter le mixin]**.
+La boîte de dialogue **[!UICONTROL Ajouter les groupes de champs]** s&#39;affiche. À partir de là, sélectionnez **[!UICONTROL Détails de la confidentialité]** dans la liste. Vous pouvez éventuellement utiliser la barre de recherche pour restreindre les résultats afin de faciliter la localisation du groupe de champs. Une fois le groupe de champs sélectionné, sélectionnez **[!UICONTROL Ajouter les groupes de champs]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
@@ -138,14 +138,14 @@ Le canevas réapparaît, indiquant que le champ `identityPrivacyInfo` a été aj
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-privacy-structure.png)
 
-À partir de là, répétez les étapes ci-dessus pour ajouter les mixins supplémentaires suivants au schéma :
+À partir de là, répétez les étapes ci-dessus pour ajouter les groupes de champs supplémentaires suivants au schéma :
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL Zone de capture de données pour le Profil]
 * [!UICONTROL Détails démographiques]
 * [!UICONTROL Coordonnées personnelles]
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-mixins.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-field-groups.png)
 
 Si vous modifiez un schéma existant qui a déjà été activé pour une utilisation dans [!DNL Real-time Customer Profile], sélectionnez **[!UICONTROL Enregistrer]** pour confirmer vos modifications avant de passer à la section [en créant un jeu de données basé sur votre schéma de consentement](#dataset). Si vous créez un nouveau schéma, suivez les étapes décrites dans la sous-section ci-dessous.
 
@@ -177,11 +177,11 @@ Dans l&#39;espace de travail **[!UICONTROL Schémas]**, sélectionnez **[!UICONT
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-Le [!DNL Schema Editor] apparaît, indiquant la structure du schéma dans la trame. Utilisez le rail de droite pour fournir un nom et une description pour le schéma, puis sélectionnez **[!UICONTROL Ajouter]** sous la section **[!UICONTROL Mixins]** sur le côté gauche du canevas.
+Le [!DNL Schema Editor] apparaît, indiquant la structure du schéma dans la trame. Utilisez le rail de droite pour fournir un nom et une description pour le schéma, puis sélectionnez **[!UICONTROL Ajouter]** sous la section **[!UICONTROL Groupes de champs]** sur le côté gauche du canevas.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-event.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-event.png)
 
-La boîte de dialogue **[!UICONTROL Ajouter le mixin]** s&#39;affiche. À partir de là, sélectionnez **[!UICONTROL Détails de la confidentialité]** dans la liste. Vous pouvez également utiliser la barre de recherche pour affiner les résultats afin de localiser plus facilement le mixin. Une fois que vous avez choisi un mixin, sélectionnez **[!UICONTROL Ajouter le mixin]**.
+La boîte de dialogue **[!UICONTROL Ajouter les groupes de champs]** s&#39;affiche. À partir de là, sélectionnez **[!UICONTROL Détails de la confidentialité]** dans la liste. Vous pouvez éventuellement utiliser la barre de recherche pour restreindre les résultats afin de faciliter la localisation du groupe de champs. Une fois que vous avez choisi un groupe de champs, sélectionnez **[!UICONTROL Ajouter des groupes de champs]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
@@ -189,16 +189,16 @@ Le canevas réapparaît, indiquant que le tableau `consentStrings` a été ajout
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-privacy-structure.png)
 
-À partir de là, répétez les étapes ci-dessus pour ajouter les mixins supplémentaires suivants au schéma :
+À partir de là, répétez les étapes ci-dessus pour ajouter les groupes de champs supplémentaires suivants au schéma :
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL Détails de l&#39;Environnement]
 * [!UICONTROL Détails Web]
 * [!UICONTROL Détails de mise en œuvre]
 
-Une fois les mixins ajoutés, terminez en sélectionnant **[!UICONTROL Enregistrer]**.
+Une fois les groupes de champs ajoutés, terminez en sélectionnant **[!UICONTROL Enregistrer]**.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-mixins.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-field-groups.png)
 
 ## Créer des jeux de données basés sur vos schémas de consentement {#datasets}
 
