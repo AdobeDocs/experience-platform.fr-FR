@@ -7,10 +7,10 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1337'
-ht-degree: 52%
+source-wordcount: '1354'
+ht-degree: 40%
 
 ---
 
@@ -111,35 +111,35 @@ Enregistrez les valeurs `$id` des deux schémas entre lesquels que vous souhaite
 
 ## Définir un champ de référence pour le schéma source
 
-Dans [!DNL Schema Registry], les descripteurs de relation fonctionnent de la même manière que les clés étrangères dans les tables de base de données relationnelles : un champ de l&#39;schéma source fait référence au champ d&#39;identité Principal d&#39;un schéma de destination. Si votre schéma source n’a pas de champ à cette fin, vous devrez peut-être créer un mixin avec le nouveau champ et l’ajouter au schéma. Ce nouveau champ doit avoir la valeur `type` &quot;[!DNL string]&quot;.
+Dans [!DNL Schema Registry], les descripteurs de relation fonctionnent de la même manière que les clés étrangères dans les tables de base de données relationnelles : un champ de l&#39;schéma source fait référence au champ d&#39;identité Principal d&#39;un schéma de destination. Si votre schéma source n’a pas de champ à cet effet, vous devrez peut-être créer un groupe de champs de schéma avec le nouveau champ et l’ajouter au schéma. Ce nouveau champ doit avoir la valeur `type` &quot;[!DNL string]&quot;.
 
 >[!IMPORTANT]
 >
 >Contrairement au schéma de destination, l&#39;schéma source ne peut pas utiliser son Principale identité comme champ de référence.
 
-Dans ce didacticiel, le schéma de destination &quot;[!DNL Hotels]&quot; contient un champ `hotelId` qui sert d&#39;identité Principale du schéma et servira donc également de champ de référence. Cependant, le schéma source &quot;[!DNL Loyalty Members]&quot; ne dispose pas d’un champ dédié à utiliser comme référence et doit recevoir un nouveau mixin qui ajoute un nouveau champ au schéma : `favoriteHotel`.
+Dans ce didacticiel, le schéma de destination &quot;[!DNL Hotels]&quot; contient un champ `hotelId` qui sert d&#39;identité Principale du schéma et servira donc également de champ de référence. Cependant, le schéma source &quot;[!DNL Loyalty Members]&quot; ne comporte pas de champ dédié à utiliser comme référence et doit recevoir un nouveau groupe de champs qui ajoute un nouveau champ au schéma : `favoriteHotel`.
 
 >[!NOTE]
 >
 >Si votre schéma source comporte déjà un champ dédié que vous prévoyez d’utiliser comme champ de référence, vous pouvez passer à l’étape suivante : [création d’un descripteur de référence](#reference-identity).
 
-### Création d’un nouveau mixin
+### Créer un groupe de champs
 
-Pour ajouter un nouveau champ à un schéma, ce champ doit d’abord être défini dans un mixin. Vous pouvez créer un mixin en envoyant une requête POST au point de terminaison `/tenant/mixins`.
+Pour ajouter un nouveau champ à un schéma, il doit d&#39;abord être défini dans un groupe de champs. Vous pouvez créer un groupe de champs en adressant une requête de POST au point de terminaison `/tenant/fieldgroups`.
 
 **Format d’API**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Requête**
 
-La requête suivante crée un mixin ajoutant un champ `favoriteHotel` sous l’espace de noms `_{TENANT_ID}` de tout schéma auquel il est ajouté.
+La requête suivante crée un nouveau groupe de champs qui ajoute un champ `favoriteHotel` sous l&#39;espace de nommage `_{TENANT_ID}` de tout schéma auquel il est ajouté.
 
 ```shell
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -149,7 +149,7 @@ curl -X POST\
         "type": "object",
         "title": "Favorite Hotel",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Favorite hotel mixin for the Loyalty Members schema.",
+        "description": "Favorite hotel field group for the Loyalty Members schema.",
         "definitions": {
             "favoriteHotel": {
               "properties": {
@@ -176,20 +176,20 @@ curl -X POST\
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du nouveau mixin.
+Une réponse réussie renvoie les détails du nouveau groupe de champs.
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220",
-    "meta:altId": "_{TENANT_ID}.mixins.3387945212ad76ee59b6d2b964afb220",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.3387945212ad76ee59b6d2b964afb220",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "type": "object",
     "title": "Favorite Hotel",
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Favorite hotel mixin for the Loyalty Members schema.",
+    "description": "Favorite hotel field group for the Loyalty Members schema.",
     "definitions": {
         "favoriteHotel": {
             "properties": {
@@ -229,13 +229,13 @@ Une réponse réussie renvoie les détails du nouveau mixin.
 
 | Propriété | Description |
 | --- | --- |
-| `$id` | L’identifiant unique, généré par le système et en lecture seule du nouveau mixin. Il prend la forme d’un URI. |
+| `$id` | Le système générait un identifiant unique en lecture seule pour le nouveau groupe de champs. Il prend la forme d’un URI. |
 
-Enregistrez l’URI `$id` du mixin à utiliser dans l’étape suivante de l’ajout du mixin au schéma source.
+Enregistrez l&#39;URI `$id` du groupe de champs à utiliser à l&#39;étape suivante de l&#39;ajout du groupe de champs au schéma source.
 
-### Ajout du mixin au schéma source
+### Ajouter le groupe de champs au schéma source
 
-Une fois que vous avez créé un mixin, vous pouvez l’ajouter au schéma source en envoyant une requête PATCH au point de terminaison `/tenant/schemas/{SCHEMA_ID}`.
+Une fois que vous avez créé un groupe de champs, vous pouvez l&#39;ajouter au schéma source en envoyant une demande de PATCH au point de terminaison `/tenant/schemas/{SCHEMA_ID}`.
 
 **Format d’API**
 
@@ -249,7 +249,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Requête**
 
-La demande suivante ajoute le mixin &quot;[!DNL Favorite Hotel]&quot; au schéma &quot;[!DNL Loyalty Members]&quot;.
+La demande suivante ajoute le groupe de champs &quot;[!DNL Favorite Hotel]&quot; au schéma &quot;[!DNL Loyalty Members]&quot;.
 
 ```shell
 curl -X PATCH \
@@ -264,7 +264,7 @@ curl -X PATCH \
       "op": "add", 
       "path": "/allOf/-", 
       "value":  {
-        "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+        "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
       }
     }
   ]'
@@ -273,12 +273,12 @@ curl -X PATCH \
 | Propriété | Description |
 | --- | --- |
 | `op` | Opération PATCH à effectuer. Cette requête utilise l’opération `add`. |
-| `path` | Le chemin d’accès au champ de schéma où la nouvelle ressource sera ajoutée. Lors de l’ajout de mixins aux schémas, la valeur doit être &quot;/allOf/-&quot;. |
-| `value.$ref` | Le `$id` du mixin à ajouter. |
+| `path` | Le chemin d’accès au champ de schéma où la nouvelle ressource sera ajoutée. Lors de l’ajout de groupes de champs aux schémas, la valeur doit être &quot;/allOf/-&quot;. |
+| `value.$ref` | `$id` du groupe de champs à ajouter. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du schéma mis à jour, qui inclut désormais la valeur `$ref` du mixin ajouté sous son tableau `allOf`.
+Une réponse réussie renvoie les détails du schéma mis à jour, qui inclut désormais la valeur `$ref` du groupe de champs ajouté sous son `allOf` tableau.
 
 ```json
 {
@@ -300,13 +300,13 @@ Une réponse réussie renvoie les détails du schéma mis à jour, qui inclut d�
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
         }
     ],
     "meta:containerId": "tenant",
@@ -323,8 +323,8 @@ Une réponse réussie renvoie les détails du schéma mis à jour, qui inclut d�
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/61969bc646b66a6230a7e8840f4a4d33"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3",
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/61969bc646b66a6230a7e8840f4a4d33"
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
