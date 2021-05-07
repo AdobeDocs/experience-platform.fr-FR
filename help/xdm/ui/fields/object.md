@@ -6,16 +6,16 @@ description: Découvrez comment définir un champ de type objet dans l’interfa
 topic-legacy: user guide
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
 
 # Définition des champs d’objet dans l’interface utilisateur
 
-Adobe Experience Platform vous permet de personnaliser entièrement la structure de vos classes, mixins et types de données de modèle de données d’expérience (XDM) personnalisés. Pour organiser et imbriquer des champs associés dans des ressources XDM personnalisées, vous pouvez définir des champs de type objet qui peuvent contenir des sous-champs supplémentaires.
+Adobe Experience Platform vous permet de personnaliser entièrement la structure de vos classes de modèle de données d’expérience (XDM), groupes de champs de schéma et types de données personnalisés. Pour organiser et imbriquer des champs associés dans des ressources XDM personnalisées, vous pouvez définir des champs de type objet qui peuvent contenir des sous-champs supplémentaires.
 
 Lorsque [vous définissez un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform, utilisez la liste déroulante **[!UICONTROL Type]** et sélectionnez &quot;[!UICONTROL Objet]&quot; dans la liste.
 
@@ -33,7 +33,7 @@ Une fois que vous avez configuré le sous-champ et sélectionné **[!UICONTROL A
 
 ![](../../images/ui/fields/special/object-nested.png)
 
-Une fois la construction de l’objet terminée, vous pouvez réutiliser sa structure dans différentes classes et mixins. Dans ce cas, vous pouvez choisir de convertir l’objet en type de données. Pour plus d&#39;informations, consultez la section [conversion d&#39;objets en types de données](../resources/data-types.md#convert) du guide d&#39;interface utilisateur des types de données.
+Une fois la construction de l’objet terminée, vous pouvez réutiliser sa structure dans différentes classes et groupes de champs. Dans ce cas, vous pouvez choisir de convertir l’objet en type de données. Pour plus d&#39;informations, consultez la section [conversion d&#39;objets en types de données](../resources/data-types.md#convert) du guide d&#39;interface utilisateur des types de données.
 
 ## Étapes suivantes
 
