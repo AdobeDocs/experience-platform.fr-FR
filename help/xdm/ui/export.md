@@ -6,9 +6,9 @@ topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ Pour répondre à ce besoin, l’espace de travail [!UICONTROL Schémas] de l’
 
 >[!NOTE]
 >
->Vous pouvez également utiliser l&#39;API Schéma Registry pour exporter d&#39;autres ressources en plus des schémas, notamment des classes, des mixins et des types de données. Pour plus d&#39;informations, consultez le guide des [points de terminaison export/import](../api/export-import.md).
+>Vous pouvez également utiliser l&#39;API Schéma Registry pour exporter d&#39;autres ressources en plus des schémas, notamment des classes, des groupes de champs de schéma et des types de données. Pour plus d&#39;informations, consultez le guide des [points de terminaison export/import](../api/export-import.md).
 
-## Conditions préalables
+## Conditions préalables  
 
 Bien que l’interface utilisateur de la plate-forme vous permette d’exporter des ressources XDM, vous devez utiliser l’API Schéma Registry pour importer ces ressources dans d’autres sandbox ou des organisations IMS afin de terminer le processus. Pour obtenir des informations importantes sur les en-têtes d&#39;authentification requis avant de suivre ce guide, reportez-vous au guide [Prise en main de l&#39;API de registre des Schémas](../api/getting-started.md).
 
@@ -44,9 +44,9 @@ Cette opération copie une charge JSON dans le Presse-papiers, générée en fon
 ```json
 [
   {
-    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "title": "Loyalty details",
     "type": "object",
@@ -171,12 +171,12 @@ Cette opération copie une charge JSON dans le Presse-papiers, générée en fon
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
         "type": "object",
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/xdm/mixins/profile-consents",
+        "$ref": "https://ns.adobe.com/xdm/fieldgroups/profile-consents",
         "type": "object",
         "meta:xdmType": "object"
       }
@@ -189,8 +189,8 @@ Cette opération copie une charge JSON dans le Presse-papiers, générée en fon
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile",
-      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-      "https://ns.adobe.com/xdm/mixins/profile-consents"
+      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+      "https://ns.adobe.com/xdm/fieldgroups/profile-consents"
     ],
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -203,7 +203,7 @@ Cette opération copie une charge JSON dans le Presse-papiers, générée en fon
 ]
 ```
 
-La charge utile prend la forme d&#39;un tableau, chaque élément de tableau étant un objet qui représente une ressource XDM personnalisée à exporter. Dans l’exemple ci-dessus, le mixin personnalisé &quot;[!DNL Loyalty details]&quot; et le schéma &quot;[!DNL Loyalty Members]&quot; sont inclus. Les ressources de base utilisées par le schéma ne sont pas incluses dans l&#39;exportation, car elles sont disponibles dans tous les sandbox et les organismes IMS.
+La charge utile prend la forme d&#39;un tableau, chaque élément de tableau étant un objet qui représente une ressource XDM personnalisée à exporter. Dans l’exemple ci-dessus, le groupe de champs personnalisés &quot;[!DNL Loyalty details]&quot; et le schéma &quot;[!DNL Loyalty Members]&quot; sont inclus. Les ressources de base utilisées par le schéma ne sont pas incluses dans l&#39;exportation, car elles sont disponibles dans tous les sandbox et les organismes IMS.
 
 Notez que chaque instance de l’ID de client de votre organisation s’affiche sous la forme `<XDM_TENANTID_PLACEHOLDER>` dans la charge utile. Ces espaces réservés seront automatiquement remplacés par la valeur d&#39;ID de locataire appropriée en fonction de l&#39;endroit où vous importez le schéma à l&#39;étape suivante.
 
