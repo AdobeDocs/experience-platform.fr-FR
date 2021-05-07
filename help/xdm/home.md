@@ -1,19 +1,23 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; XDM ; système XDM ; profil individuel XDM ; XDM ExperienceEvent ; XDM Experience Événement ; experienceEvent ; experience événement ; mixins ; mixins ; mixin ; Mixin ; Experience événement ; XDM Experience Événement ; XDM ExperienceEvent ; experienceEvent ; experience;XDM ExperienceEvent;XDM Experienceevenet;Experience data model ; Experience data model;modèle de données;modèle de données;registre de schémas;registre de Schémas;bibliothèque de ;bibliothèque de Schéma;schéma bibliothèque de ;schéma ; enregistrement de données;série de temps;série de temps
+keywords: Experience Platform ; accueil ; rubriques populaires ; XDM ; système XDM ; profil individuel XDM ; XDM ExperienceEvent ; XDM Experience Événement ; experienceEvent ; experience événement ; Field groups ; field group ; field group ; Field group ; Experience événement ; XDM ExperienceEvent ; experienceEvent ; experienceEvent ; XDM ExperienceEvent ; XDM ExperienceEvent ; ExpérienceEvent ; ExpérienceEvent ; modèle de données ; Expérience modèle ; modèle de données ; registre des schémas ; registre des Schémas ; bibliothèque de Événements ; bibliothèque de Schéma ; schéma ; données d’enregistrement ; séries chronologiques ; séries chronologiques
 solution: Experience Platform
 title: Présentation du système XDM
 topic-legacy: overview
 description: La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. Le modèle de données d’expérience (XDM), optimisé par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
 workflow-type: tm+mt
-source-wordcount: '1642'
-ht-degree: 57%
+source-wordcount: '1694'
+ht-degree: 55%
 
 ---
 
 # Présentation du système XDM
+
+>[!NOTE]
+>
+>Le terme &quot; mixin &quot; a été remplacé par &quot; groupe de schémas sur le terrain &quot; afin de promouvoir la compréhension. Les groupes de champs sont des ensembles de champs réutilisables pour prendre en charge les cas d’utilisation commerciale. Cette modification est désormais répercutée dans l’API de registre de Schéma, l’interface utilisateur de Adobe Experience Platform et dans toute la documentation de la plate-forme.
 
 La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. [!DNL Experience Data Model] (XDM), piloté par l’Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
@@ -27,7 +31,7 @@ Ce document offre une vue d’ensemble du rôle du système XDM dans [!DNL Exper
 
 [!DNL Experience Platform] utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. En définissant les données de manière cohérente sur l’ensemble des systèmes, il est plus simple de leur donner du sens et donc d’en tirer profit.
 
-Avant que les données puissent être ingérées dans [!DNL Platform], un schéma doit être composé pour décrire la structure des données et fournir des contraintes au type de données pouvant être contenu dans chaque champ. Les schémas se composent d’une classe de base et de zéro ou plusieurs mixins.
+Avant que les données puissent être ingérées dans [!DNL Platform], un schéma doit être composé pour décrire la structure des données et fournir des contraintes au type de données pouvant être contenu dans chaque champ. Les schémas se composent d&#39;une classe de base et de groupes de champs de schéma nuls ou plus.
 
 Pour plus d’informations sur le modèle de composition de schémas, y compris sur les principes de conception et les bonnes pratiques, consultez les [bases de la composition de schémas](schema/composition.md).
 
