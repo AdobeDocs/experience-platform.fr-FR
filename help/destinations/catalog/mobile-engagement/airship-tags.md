@@ -2,14 +2,14 @@
 keywords: balises d'avion ; destination du navire
 title: Connexion aux balises d'avion
 description: Transmettez en toute transparence les données d'Audience d'Adobe au navire de transport aérien en tant que balises d'Audience pour le ciblage au sein du navire de transport aérien.
+exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1183'
 ht-degree: 13%
 
 ---
-
 
 # (Bêta) [!DNL Airship Tags] connexion {#airship-tags-destination}
 
@@ -30,7 +30,7 @@ Pour en savoir plus sur [!DNL Airship], consultez les [Aéronefs Docs](https://d
 >
 >Cette page de documentation a été créée par l&#39;équipe [!DNL Airship]. Pour toute demande de renseignements ou de mise à jour, contactez-les directement à [support.airship.com](https://support.airship.com/).
 
-## Conditions préalables
+## Conditions préalables  
 
 Avant de pouvoir envoyer vos segments Adobe Experience Platform à [!DNL Airship], vous devez :
 
@@ -43,7 +43,7 @@ Avant de pouvoir envoyer vos segments Adobe Experience Platform à [!DNL Airship
 
 ## Groupes de balises
 
-Le concept de segments dans Adobe Experience Platorm est similaire à [Balises](https://docs.airship.com/guides/audience/tags/) dans Airship, avec de légères différences d’implémentation. Cette intégration mappe l’état de l’appartenance [d’un utilisateur à un segment d’Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins) à la présence ou à l’absence d’une balise [!DNL Airship]. Par exemple, dans un segment de plateforme où `xdm:status` devient `realized`, la balise est ajoutée au canal [!DNL Airship] ou est nommée utilisateur auquel ce profil est associé. Si `xdm:status` devient `exited`, la balise est supprimée.
+Le concept de segments dans Adobe Experience Platorm est similaire à [Balises](https://docs.airship.com/guides/audience/tags/) dans Airship, avec de légères différences d’implémentation. Cette intégration mappe l’état de l’appartenance [d’un utilisateur à un segment d’Experience Platform](../../../xdm/field-groups/profile/segmentation.md) à la présence ou à l’absence d’une balise [!DNL Airship]. Par exemple, dans un segment de plateforme où `xdm:status` devient `realized`, la balise est ajoutée au canal [!DNL Airship] ou est nommée utilisateur auquel ce profil est associé. Si `xdm:status` devient `exited`, la balise est supprimée.
 
 Pour activer cette intégration, créez un *groupe de balises* dans [!DNL Airship] nommé `adobe-segments`.
 
@@ -157,4 +157,3 @@ Si aucune violation de stratégie n&#39;a été détectée, sélectionnez **[!UI
 ## Utilisation des données et gouvernance {#data-usage-governance}
 
 Toutes les destinations [!DNL Adobe Experience Platform] sont conformes aux règles d&#39;utilisation des données lors de la gestion de vos données. Pour obtenir des informations détaillées sur la façon dont [!DNL Adobe Experience Platform] applique la gouvernance des données, voir [Présentation de la gouvernance des données](../../../data-governance/home.md).
-
