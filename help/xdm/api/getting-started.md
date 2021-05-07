@@ -6,9 +6,9 @@ description: Ce document présente les concepts de base que vous devez connaîtr
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1367'
 ht-degree: 39%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 39%
 
 L’API [!DNL Schema Registry] vous permet de créer et de gérer diverses ressources de modèle de données d’expérience (XDM). Ce document présente les concepts de base que vous devez connaître avant de tenter d&#39;appeler l&#39;API [!DNL Schema Registry].
 
-## Conditions préalables
+## Conditions préalables  
 
 L’utilisation du guide du développeur nécessite une compréhension pratique des composants suivants de Adobe Experience Platform :
 
@@ -85,16 +85,16 @@ Une réponse positive renvoie des informations concernant l&#39;utilisation de [
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
-    "mixins": 3,
+    "fieldgroups": 3,
     "datatypes": 1,
     "classes": 2,
     "unions": 0,
   },
   "recentlyCreatedResources": [ 
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -109,9 +109,9 @@ Une réponse positive renvoie des informations concernant l&#39;utilisation de [
   ],
   "recentlyUpdatedResources": [
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -160,7 +160,7 @@ Les appels à l&#39;API [!DNL Schema Registry] nécessitent l&#39;utilisation d&
 
 ### Conteneur mondial
 
-Le conteneur `global` contient tous les Adobes standard et le partenaire [!DNL Experience Platform] ont fourni des classes, des mixins, des types de données et des schémas. Vous ne pouvez exécuter que des requêtes de liste et de recherche (GET) sur le conteneur `global`.
+Le conteneur `global` contient tous les Adobes standard et [!DNL Experience Platform] partenaires ont fourni des classes, des groupes de champs de schéma, des types de données et des schémas. Vous ne pouvez exécuter que des requêtes de liste et de recherche (GET) sur le conteneur `global`.
 
 Voici un exemple d&#39;appel qui utilise le conteneur `global` :
 
@@ -170,15 +170,15 @@ GET /global/classes
 
 ### Conteneur client
 
-À ne pas confondre avec votre `TENANT_ID` unique, le conteneur `tenant` contient toutes les classes, mixins, types de données, schémas et descripteurs définis par une organisation IMS. Ils sont spécifiques à chaque organisation, ce qui signifie qu’ils ne sont pas visibles ou gérables par d’autres organisations IMS. Vous pouvez exécuter toutes les opérations CRUD (GET, POST, PUT, PATCH, DELETE) par rapport aux ressources que vous créez dans le conteneur `tenant`.
+À ne pas confondre avec votre `TENANT_ID` unique, le conteneur `tenant` contient toutes les classes, les groupes de champs, les types de données, les schémas et les descripteurs définis par une organisation IMS. Ils sont spécifiques à chaque organisation, ce qui signifie qu’ils ne sont pas visibles ou gérables par d’autres organisations IMS. Vous pouvez exécuter toutes les opérations CRUD (GET, POST, PUT, PATCH, DELETE) par rapport aux ressources que vous créez dans le conteneur `tenant`.
 
 Voici un exemple d&#39;appel qui utilise le conteneur `tenant` :
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
-Lorsque vous créez une classe, un mixin, un schéma ou un type de données dans le conteneur `tenant`, il est enregistré dans [!DNL Schema Registry] et un URI `$id` doté de votre `TENANT_ID` est affecté. Cet `$id` est utilisé sur l’ensemble de l’API pour faire référence à des ressources spécifiques. Des exemples de valeurs `$id` sont fournis à la section suivante.
+Lorsque vous créez une classe, un groupe de champs, un schéma ou un type de données dans le conteneur `tenant`, il est enregistré dans [!DNL Schema Registry] et un URI `$id` doté de votre `TENANT_ID` est affecté. Cet `$id` est utilisé sur l’ensemble de l’API pour faire référence à des ressources spécifiques. Des exemples de valeurs `$id` sont fournis à la section suivante.
 
 ## Identification des ressources {#resource-identification}
 
