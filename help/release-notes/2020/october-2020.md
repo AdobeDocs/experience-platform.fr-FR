@@ -4,14 +4,14 @@ description: Notes de mise à jour des Experience Platform Octobre 2020
 doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
+exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
 translation-type: tm+mt
-source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1009'
-ht-degree: 19%
+source-wordcount: '1012'
+ht-degree: 18%
 
 ---
-
 
 # Notes de mise à jour d’Adobe Experience Platform
 
@@ -89,8 +89,8 @@ Adobe Experience Platform permet aux équipes d’opérations marketing de crée
 Met à niveau la convivialité et le flux de travail et fournit des informations prêtes à l&#39;emploi, la normalisation et la transparence des champs clés dans les compositions de schéma. Expose la lignée de données pour la combinaison de modèles de données individuels représentés sous le nom de &quot;schéma d’union&quot;, fournissant des informations sur la structure et les ingrédients du Profil client en temps réel.
 
 - Mise à niveau du processus de schéma
-   - Utilisez des raccourcis pour le type de schéma XDM le plus courant, avec des paramètres automatisés dans l&#39;éditeur de schéma et des recommandations de mixin basés sur vos objectifs.
-   - Augmenter l&#39;efficacité du processus grâce à plusieurs options de sélection et de prévisualisation de mixage
+   - Utilisez des raccourcis pour le type de schéma XDM le plus courant, avec des paramètres automatisés dans l&#39;éditeur de schéma et des recommandations de groupe de champs de schéma en fonction de vos objectifs.
+   - Augmenter l&#39;efficacité du processus grâce à la sélection et à la prévisualisation de plusieurs groupes de champs
    - Fournir une transparence sur les attributs clés de la composition du schéma, y compris l&#39;identité, la relation et les champs obligatoires et obsolètes
 - Transparence du lien entre les données du Schéma d&#39;Union et les attributs clés
 
