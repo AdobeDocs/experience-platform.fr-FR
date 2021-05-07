@@ -6,16 +6,16 @@ description: Les points de terminaison /export et /import de l'API Schéma Regis
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '507'
 ht-degree: 4%
 
 ---
 
 # Points de fin d’exportation/importation
 
-Toutes les ressources du [!DNL Schema Library] sont contenues dans un sandbox spécifique au sein d&#39;une organisation IMS. Dans certains cas, vous pouvez partager des ressources de modèle de données d’expérience (XDM) entre des sandbox et des organisations IMS. L&#39;API [!DNL Schema Registry] fournit deux points de terminaison qui vous permettent de générer une charge utile d&#39;exportation pour tout type de schéma, de mixin ou de données dans le [!DNL  Schema Library], puis d&#39;utiliser cette charge pour importer cette ressource (et toutes les ressources dépendantes) dans un sandbox de cible et une organisation IMS.
+Toutes les ressources du [!DNL Schema Library] sont contenues dans un sandbox spécifique au sein d&#39;une organisation IMS. Dans certains cas, vous pouvez partager des ressources de modèle de données d’expérience (XDM) entre des sandbox et des organisations IMS. L&#39;API [!DNL Schema Registry] fournit deux points de terminaison qui vous permettent de générer une charge utile d&#39;exportation pour n&#39;importe quel schéma, groupe de champs de schéma ou type de données dans le [!DNL  Schema Library], puis d&#39;utiliser cette charge pour importer cette ressource (et toutes les ressources dépendantes) dans un sandbox de cible et une organisation IMS.
 
 ## Prise en main
 
@@ -25,7 +25,7 @@ Les points de terminaison export/import font partie des appels de procédure dis
 
 ## Récupérer une charge utile d&#39;exportation pour une ressource {#export}
 
-Pour tout type de schéma, de mixin ou de données existant dans [!DNL Schema Library], vous pouvez générer une charge utile d&#39;exportation en adressant une demande de GET au point de terminaison `/export`, en indiquant l&#39;ID de la ressource dans le chemin d&#39;accès.
+Pour tout schéma, groupe de champs ou type de données existant dans [!DNL Schema Library], vous pouvez générer une charge utile d&#39;exportation en adressant une demande de GET au point de terminaison `/export`, en indiquant l&#39;ID de la ressource dans le chemin d&#39;accès.
 
 **Format d’API**
 
@@ -39,11 +39,11 @@ GET /rpc/export/{RESOURCE_ID}
 
 **Requête**
 
-La requête suivante récupère une charge utile d&#39;exportation pour un mixin `Restaurant`.
+La requête suivante récupère une charge utile d&#39;exportation pour un groupe de champs `Restaurant`.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -53,7 +53,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau d&#39;objets, qui représente la ressource XDM de cible et toutes ses ressources dépendantes. Dans cet exemple, le premier objet du tableau est un type de données `Property` créé par le client et utilisé par le mixin `Restaurant`, tandis que le second objet est le mixin `Restaurant` lui-même. Cette charge utile peut ensuite être utilisée pour [importer la ressource](#import) dans un sandbox différent ou une organisation IMS différente.
+Une réponse réussie renvoie un tableau d&#39;objets, qui représente la ressource XDM de cible et toutes ses ressources dépendantes. Dans cet exemple, le premier objet du tableau est un type de données `Property` créé par le client et utilisé par le groupe de champs `Restaurant`, tandis que le second objet est le groupe de champs `Restaurant` lui-même. Cette charge utile peut ensuite être utilisée pour [importer la ressource](#import) dans un sandbox différent ou une organisation IMS différente.
 
 Notez que toutes les instances de l&#39;ID de client de la ressource sont remplacées par `<XDM_TENANTID_PLACEHOLDER>`. Cela permet au Registre des Schémas d&#39;appliquer automatiquement l&#39;ID de client correct aux ressources en fonction de l&#39;emplacement où elles sont envoyées lors de l&#39;appel d&#39;importation suivant.
 
@@ -129,9 +129,9 @@ Notez que toutes les instances de l&#39;ID de client de la ressource sont rempla
         "meta:sandboxType": "production"
     },
     {
-        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
@@ -207,7 +207,7 @@ POST /rpc/import
 
 **Requête**
 
-La requête suivante utilise la charge utile renvoyée dans l&#39;exemple d&#39;exportation [précédent](#export) pour importer le mixin `Restaurant` dans une nouvelle organisation IMS et un sandbox, comme déterminé par les en-têtes `x-gw-ims-org-id` et `x-sandbox-name`, respectivement.
+La requête suivante utilise la charge utile renvoyée dans l&#39;exemple d&#39;exportation [précédent](#export) pour importer le groupe de champs `Restaurant` dans une nouvelle organisation IMS et un sandbox, comme déterminé par les en-têtes `x-gw-ims-org-id` et `x-sandbox-name`, respectivement.
 
 ```shell
 curl -X POST \
@@ -288,9 +288,9 @@ curl -X POST \
           "meta:sandboxType": "production"
         },
         {
-          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:resourceType": "mixins",
+          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:resourceType": "fieldgroups",
           "version": "1.0",
           "title": "Restaurant",
           "type": "object",
@@ -446,9 +446,9 @@ Une réponse réussie renvoie une liste des ressources importées, avec l&#39;ID
         "meta:tenantNamespace": "_{TENANT_ID}"
     },
     {
-        "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
