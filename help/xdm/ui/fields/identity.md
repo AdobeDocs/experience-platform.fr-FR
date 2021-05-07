@@ -6,9 +6,9 @@ description: Découvrez comment définir un champ d'identité dans l'interface u
 topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '575'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 Dans le modèle de données d’expérience (XDM), un champ d’identité représente un champ qui peut être utilisé pour identifier une personne liée à un enregistrement ou un événement de séries chronologiques. Ce document explique comment définir un champ d’identité dans l’interface utilisateur de Adobe Experience Platform.
 
-## Conditions préalables
+## Conditions préalables  
 
 Les champs d’identité constituent un composant essentiel de la manière dont les graphiques d’identité du client sont créés dans Platform, ce qui affecte en fin de compte la manière dont le Profil client en temps réel fusionne des fragments de données disparates afin d’obtenir une vue complète du client. Avant de définir des champs d&#39;identité dans vos schémas, reportez-vous à la documentation suivante pour en savoir plus sur les services et concepts clés liés aux champs d&#39;identité :
 
@@ -43,7 +43,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliq
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-Le canevas se met à jour pour refléter les modifications, le champ sélectionné gagnant un symbole d&#39;empreinte digitale (![](../../images/ui/fields/special/identity-symbol.png)) pour le désigner comme une identité. Dans le rail de gauche, le champ d&#39;identité est désormais répertorié sous le nom de la classe ou du mixin qui fournit le champ au schéma.
+Le canevas se met à jour pour refléter les modifications, le champ sélectionné gagnant un symbole d&#39;empreinte digitale (![](../../images/ui/fields/special/identity-symbol.png)) pour le désigner comme une identité. Dans le rail de gauche, le champ d&#39;identité est désormais répertorié sous le nom de la classe ou du groupe de champs de schéma qui fournit le champ au schéma.
 
 Comme tous les champs d&#39;identité sont obligatoires par défaut, le champ est désormais répertorié sous **[!UICONTROL Champs obligatoires]** dans le rail de gauche. Si le champ d&#39;identité est imbriqué dans la structure du schéma, tous les champs parents sont également répertoriés comme requis.
 
