@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM des détails du navigateur.
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '263'
 ht-degree: 19%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 19%
 | `viewportHeight` | Entier | Taille verticale en pixels de la fenêtre dans laquelle le événement s’affichait. Pour un événement de vue Web, il s’agit de la hauteur de fenêtre d’affichage du navigateur. |
 | `viewportWidth` | Entier | Taille horizontale en pixels de la fenêtre dans laquelle le événement s’affichait. Pour un événement de vue Web, il s’agit de la largeur de fenêtre d’affichage du navigateur. |
 
-Pour plus d’informations sur le mixin, consultez le référentiel XDM public :
+Pour plus d&#39;informations sur le type de données, consultez le référentiel XDM public :
 
 * [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.schema.json)
