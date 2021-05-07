@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; ui ; interface utilisateur ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; explorer ; classe ; mixin ; type de données ; schéma ;
+keywords: Experience Platform ; accueil ; rubriques populaires ; ui ; IU ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; explorer ; classe ; groupe de champs ; type de données ; schéma ;
 solution: Experience Platform
 title: Explorer les ressources XDM dans l’interface utilisateur
-description: Découvrez comment explorer les schémas, classes, mixins et types de données existants dans l’interface utilisateur de l’Experience Platform.
+description: Découvrez comment explorer les schémas, classes, groupes de champs de schéma et types de données existants dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
 
 # Explorez les ressources XDM dans l’interface utilisateur.
 
-Dans Adobe Experience Platform, toutes les ressources du modèle de données d’expérience (XDM) sont stockées dans [!DNL Schema Library], y compris les ressources standard fournies par l’Adobe et les ressources personnalisées définies par votre organisation. Dans l&#39;interface utilisateur de l&#39;Experience Platform, vous pouvez vue la structure et les champs de tout schéma, classe, mixin ou type de données existant dans [!DNL Schema Library]. Cela s&#39;avère particulièrement utile lors de la planification et de la préparation de l&#39;assimilation de données, car l&#39;interface utilisateur fournit des informations sur les types de données attendus et les cas d&#39;utilisation de chaque champ fourni par ces ressources XDM.
+Dans Adobe Experience Platform, toutes les ressources du modèle de données d’expérience (XDM) sont stockées dans [!DNL Schema Library], y compris les ressources standard fournies par l’Adobe et les ressources personnalisées définies par votre organisation. Dans l&#39;interface utilisateur de l&#39;Experience Platform, vous pouvez vue la structure et les champs de tout schéma, classe, groupe de champs de schéma ou type de données existant dans [!DNL Schema Library]. Cela s&#39;avère particulièrement utile lors de la planification et de la préparation de l&#39;assimilation de données, car l&#39;interface utilisateur fournit des informations sur les types de données attendus et les cas d&#39;utilisation de chaque champ fourni par ces ressources XDM.
 
-Ce didacticiel décrit les étapes à suivre pour explorer les schémas, classes, mixins et types de données existants dans l’interface utilisateur de l’Experience Platform.
+Ce didacticiel décrit les étapes à suivre pour explorer les schémas, classes, groupes de champs et types de données existants dans l’interface utilisateur de l’Experience Platform.
 
 ## Rechercher une ressource XDM {#lookup}
 
-Dans l’interface utilisateur de la plate-forme, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. L&#39;espace de travail [!UICONTROL Schémas] fournit un onglet **[!UICONTROL Parcourir]** pour explorer toutes les ressources XDM existantes de votre organisation, ainsi que d&#39;autres onglets dédiés pour explorer **[!UICONTROL Classes]**, **[!UICONTROL Mélanges]** et **[!UICONTROL Types de données]** spécifiquement.
+Dans l’interface utilisateur de la plate-forme, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. L&#39;espace de travail [!UICONTROL Schémas] fournit un onglet **[!UICONTROL Parcourir]** pour explorer toutes les ressources XDM existantes de votre organisation, ainsi que d&#39;autres onglets dédiés pour explorer **[!UICONTROL Classes]**, **[!UICONTROL Groupes de champs]** et **[!UICONTROL Types de données]** spécifiquement.
 
 ![](../images/ui/explore/tabs.png)
 
@@ -80,7 +80,7 @@ Si le champ que vous inspectez est un champ enum, le rail droit affiche égaleme
 
 ### Champs d&#39;identité {#identity}
 
-Lors de l’inspection des schémas qui contiennent des champs d’identité, ces champs sont répertoriés dans le rail de gauche sous la classe ou le mixin qui les fournit au schéma. Sélectionnez le nom du champ d’identité dans le rail de gauche pour afficher le champ dans la trame, quelle que soit la profondeur de son imbrication.
+Lors de l’inspection des schémas qui contiennent des champs d’identité, ces champs sont répertoriés dans le rail de gauche sous la classe ou le groupe de champs qui les fournit au schéma. Sélectionnez le nom du champ d’identité dans le rail de gauche pour afficher le champ dans la trame, quelle que soit la profondeur de son imbrication.
 
 Les champs d’identité sont surlignés dans la trame avec une icône d’empreinte digitale (![Image d’icône d’empreinte digitale](../images/ui/explore/identity-symbol.png)). Si vous sélectionnez le nom du champ d&#39;identité, vous pouvez vue des informations supplémentaires telles que l&#39;[espace de nommage d&#39;identité](../../identity-service/namespaces.md) et indiquer si le champ est ou non l&#39;identité Principale du schéma.
 
