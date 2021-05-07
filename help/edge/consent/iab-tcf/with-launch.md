@@ -1,14 +1,14 @@
 ---
 title: Intégration de la prise en charge d’IAB TCF 2.0 à l’aide de Platform launch et de la plate-forme Web SDK Extension
 description: Découvrez comment configurer le consentement IAB TCF 2.0 avec Adobe Experience Platform Launch et l’extension Adobe Experience Platform Web SDK.
+exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
 translation-type: tm+mt
-source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
-
 
 # Intégration de la prise en charge d’IAB TCF 2.0 à l’aide de Platform launch et de l’extension Platform Web SDK
 
@@ -73,7 +73,7 @@ Ce code personnalisé effectue deux opérations :
 
 ## Création d’un élément de données XDM pour les Événements d’expérience
 
-La chaîne de consentement doit être incluse dans le Événement d’expérience XDM. Pour ce faire, utilisez l’élément de données Objet XDM. Début en créant un nouvel élément de données d’objet XDM ou en utilisant un élément déjà créé pour l’envoi de événements. Si vous avez ajouté le mixin Confidentialité d’Experience Événement à votre schéma, vous devez disposer d’une clé `consentStrings` dans l’objet XDM.
+La chaîne de consentement doit être incluse dans le Événement d’expérience XDM. Pour ce faire, utilisez l’élément de données Objet XDM. Début en créant un nouvel élément de données d’objet XDM ou en utilisant un élément déjà créé pour l’envoi de événements. Si vous avez ajouté le groupe de champs schéma de confidentialité d’Experience Événement à votre schéma, vous devez disposer d’une clé `consentStrings` dans l’objet XDM.
 
 1. Sélectionnez **[!UICONTROL consentStrings]**.
 
