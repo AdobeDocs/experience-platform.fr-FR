@@ -2,20 +2,20 @@
 title: Collecte d’informations commerciales et de produits à l’aide du SDK Web Adobe Experience Platform
 description: Découvrez comment ajouter des données liées à des produits ou à un panier à l’aide du Adobe Experience Platform Web SDK.
 keywords: produits;commerce;mesures;mesure;order;cartAbandons;passages en caisse;productListAdds;productListOpen;productListRemovals;productListReouvertures;productListViews;productViews;purchase;saveForLaters;currencyCode;paiements;paiementAmount;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
+exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 95%
+source-wordcount: '1324'
+ht-degree: 93%
 
 ---
-
 
 # Collecte d’informations sur le commerce et les produits
 
 Si votre site contient des produits, il s’agit d’un ensemble par défaut d’éléments que vous souhaiterez peut-être envoyer pour activer les fonctionnalités essentielles d’Adobe. Bien qu’il s’agisse d’une suggestion, un ensemble très solide de données est fourni dès le départ.
 
-Ce document utilise le mixin [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md). Le mixin `commerce` est divisé en deux parties : l’objet `commerce`et le tableau `productListItems`. L’objet `commerce` vous permet d’indiquer les actions qui se produisent dans le tableau `productListItems`.
+Ce document utilise le groupe de champs [Détails commerciaux d’ExperienceEvent](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) schéma. Le groupe de champs `commerce` est divisé en deux parties : l&#39;objet `commerce` et le tableau `productListItems`. L’objet `commerce` vous permet d’indiquer les actions qui se produisent dans le tableau `productListItems`.
 
 >[!TIP]
 >
