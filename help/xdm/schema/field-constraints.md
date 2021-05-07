@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; mixin ; Mixin ; mixins ; mixins ; type de données ; types de données ; types de données ; type de données ; type de données ; conception de schéma ; type de données ; type de données ; type de données ; type de données ; schémas ; Schémas ; conception de Schéma ; carte ; carte ;
+keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; groupe de champs ; groupe de champs ; groupes de champs ; groupes de champs ; type de données ; types de données ; types de données ; type de données ; type de schéma ; type de données ; type de données ; type de données ; type de données ; schémas ; Schémas ; conception de Schéma ; carte ;
 solution: Experience Platform
 title: Contraintes de type de champ XDM
 topic-legacy: overview
 description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels elles peuvent être associées et comment définir vos propres types de champ dans l’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1094'
 ht-degree: 18%
 
 ---
@@ -19,9 +19,9 @@ Dans les schémas du modèle de données d’expérience (XDM), le type d’un c
 
 ## Prise en main
 
-Avant d&#39;utiliser ce guide, veuillez consulter les [bases de la composition des schémas](./composition.md) pour une introduction aux schémas, classes et mixins XDM.
+Avant d&#39;utiliser ce guide, veuillez consulter les [bases de la composition des schémas](./composition.md) pour une introduction aux schémas, classes et groupes de champs de schéma XDM.
 
-Si vous prévoyez de définir vos propres types de champs dans l&#39;API, il est vivement recommandé de début avec le [guide du développeur du registre de Schémas](../api/getting-started.md) pour savoir comment créer des mixins et des types de données pour inclure vos champs personnalisés dans. Si vous utilisez l’interface utilisateur de l’Experience Platform pour créer vos schémas, consultez le guide [Définition des champs dans l’interface utilisateur](../ui/fields/overview.md) pour savoir comment implémenter des contraintes sur les champs que vous définissez dans les mixins et types de données personnalisés.
+Si vous prévoyez de définir vos propres types de champs dans l&#39;API, il est vivement recommandé de début avec le [guide du développeur du registre de Schémas](../api/getting-started.md) pour savoir comment créer des groupes de champs et des types de données pour inclure vos champs personnalisés dans. Si vous utilisez l’interface utilisateur de l’Experience Platform pour créer vos schémas, consultez le guide sur la [définition des champs dans l’interface utilisateur](../ui/fields/overview.md) pour savoir comment implémenter des contraintes sur les champs que vous définissez dans les groupes de champs et les types de données personnalisés.
 
 ## Structure de base et exemples
 
@@ -214,7 +214,7 @@ Tous les champs XDM sont définis à l&#39;aide des contraintes [Schéma JSON](h
 
 Le tableau suivant décrit la mise en forme appropriée pour définir différents types de champs, y compris ceux qui présentent des propriétés facultatives. Pour plus d’informations sur les propriétés facultatives et les mots-clés spécifiques au type, consultez la [documentation des schémas JSON](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de code fourni pour générer votre demande d’API pour [créer un mixin](../api/mixins.md#create) ou [créer un type de données](../api/data-types.md#create).
+Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de code fourni pour générer votre demande d’API pour [créer un groupe de champs](../api/field-groups.md#create) ou [créer un type de données](../api/data-types.md#create).
 
 <table style="table-layout:auto">
   <tr>
