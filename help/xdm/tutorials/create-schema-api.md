@@ -7,10 +7,10 @@ type: Tutorial
 description: Ce tutoriel utilise l’API Schema Registry pour vous guider tout au long des étapes de composition d’un schéma à l’aide d’une classe standard.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2373'
-ht-degree: 83%
+source-wordcount: '2426'
+ht-degree: 52%
 
 ---
 
@@ -35,7 +35,7 @@ Ce tutoriel passe en revue les étapes de la composition d’un schéma Loyalty 
 
 ## Composition d’un schéma avec une classe standard
 
-Un schéma peut être considéré comme le plan directeur des données que vous souhaitez ingérer dans [!DNL Experience Platform]. Chaque schéma est composé d’une classe et de zéro ou plusieurs mixins. En d’autres termes, il n’est pas nécessaire d’ajouter un mixin pour définir un schéma, mais dans la plupart des cas, au moins un mixin est utilisé.
+Un schéma peut être considéré comme le plan directeur des données que vous souhaitez ingérer dans [!DNL Experience Platform]. Chaque schéma est composé d&#39;une classe et de zéro ou plusieurs groupes de champs de schéma. En d’autres termes, il n’est pas nécessaire d’ajouter un groupe de champs pour définir un schéma, mais dans la plupart des cas, au moins un groupe de champs est utilisé.
 
 ### Attribution d’une classe
 
@@ -177,13 +177,13 @@ Le format de la réponse dépend de l’en-tête Accept envoyé avec la requête
 }
 ```
 
-### Ajout d’un mixin {#add-a-mixin}
+### Ajouter un groupe de champs {#add-a-field-group}
 
-Maintenant que le schéma Loyalty Members a été créé et confirmé, des mixins peuvent être ajoutés.
+Maintenant que le schéma Membres Fidélité a été créé et confirmé, des groupes de terrain peuvent y être ajoutés.
 
-Différents mixins standard sont disponibles, selon la classe de schéma sélectionnée. Chaque mixin contient un champ `intendedToExtend` qui définit la ou les classes avec lesquelles ce mixin est compatible.
+Différents groupes de champs standard peuvent être utilisés, selon la classe de schéma sélectionnée. Chaque groupe de champs contient un champ `intendedToExtend` qui définit la ou les classes avec lesquelles ce groupe de champs est compatible.
 
-Les mixins définissent des concepts, tels que le « nom » ou l’« adresse », qui peuvent être réutilisés dans n’importe quel schéma qui doit saisir ces mêmes informations.
+Les groupes de champs définissent des concepts, tels que &quot;nom&quot; ou &quot;adresse&quot;, qui peuvent être réutilisés dans n’importe quel schéma devant capturer les mêmes informations.
 
 **Format d’API**
 
@@ -193,9 +193,9 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Requête**
 
-Cette requête met à jour (PATCH) le schéma Loyalty Members pour inclure les champs dans le mixin « profile-person-details ».
+Cette demande met à jour (PATCH) le schéma Membres de fidélité afin d’inclure les champs dans le groupe de champs &quot;Détails de la personne-profil&quot;.
 
-En ajoutant le mixin « profile-person-details », le schéma Loyalty Members recueille désormais des informations sur les membres du programme de fidélité telles que leur prénom, leur nom et leur date de naissance.
+En ajoutant le groupe de champs &quot;Détails de la personne-profil&quot;, le schéma Membres de fidélité capture maintenant les informations sur les membres du programme de fidélité, telles que leur prénom, leur nom et leur anniversaire.
 
 ```SHELL
 curl -X PATCH \
@@ -212,7 +212,7 @@ curl -X PATCH \
 
 **Réponse**
 
-La réponse affiche le mixin nouvellement ajouté dans le tableau `meta:extends` et contient une `$ref` au mixin dans l’attribut `allOf`.
+La réponse affiche le groupe de champs nouvellement ajouté dans le tableau `meta:extends` et contient un `$ref` au groupe de champs dans l&#39;attribut `allOf`.
 
 ```JSON
 {
@@ -254,17 +254,17 @@ La réponse affiche le mixin nouvellement ajouté dans le tableau `meta:extends`
 }
 ```
 
-### Ajout d’un autre mixin
+### Ajouter un autre groupe de champs
 
-Vous pouvez désormais ajouter un autre mixin standard en répétant les étapes à l’aide d’un autre mixin.
+Vous pouvez maintenant ajouter un autre groupe de champs standard en répétant les étapes à l’aide d’un autre groupe de champs.
 
 >[!TIP]
 >
->Il est utile de passer en revue tous les mixins disponibles afin de mieux connaître les champs inclus dans chacun d’entre eux. Vous pouvez répertorier (GET) tous les mixins disponibles pour une classe particulière en exécutant une requête sur chacun des conteneurs « global » et « client », en ne renvoyant que les mixins dont le champ « meta:intendedToExtend » correspond à la classe que vous utilisez. Dans ce cas, il s’agit de la classe [!DNL XDM Individual Profile], de sorte que [!DNL XDM Individual Profile] `$id` est utilisé :
+>Il vaut la peine d&#39;examiner tous les groupes de terrain disponibles afin de se familiariser avec les champs inclus dans chacun d&#39;eux. Vous pouvez liste (GET) tous les groupes de champs disponibles pour une classe particulière en exécutant une requête sur chacun des conteneurs &quot;global&quot; et &quot;locataire&quot;, en renvoyant uniquement les groupes de champs dont le champ &quot;meta:intentToExtend&quot; correspond à la classe que vous utilisez. Dans ce cas, il s’agit de la classe [!DNL XDM Individual Profile], de sorte que [!DNL XDM Individual Profile] `$id` est utilisé :
 
 ```http
-GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
-GET /tenant/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
+GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
+GET /tenant/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 ```
 
 **Format d’API**
@@ -275,7 +275,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Requête**
 
-Cette requête met à jour (PATCH) le schéma Loyalty Members pour inclure les champs dans le mixin « profile-person-details », en ajoutant au schéma les champs « home address », « email address » et « home phone ».
+Cette demande met à jour (PATCH) le schéma Membres de fidélité afin d’inclure les champs dans le groupe de champs &quot;profil-détails-personnels&quot;, en ajoutant les champs &quot;adresse de domicile&quot;, &quot;adresse électronique&quot; et &quot;téléphone d’accueil&quot; au schéma.
 
 ```SHELL
 curl -X PATCH \
@@ -292,7 +292,7 @@ curl -X PATCH \
 
 **Réponse**
 
-La réponse affiche le mixin nouvellement ajouté dans le tableau `meta:extends` et contient une `$ref` au mixin dans l’attribut `allOf`.
+La réponse affiche le groupe de champs nouvellement ajouté dans le tableau `meta:extends` et contient un `$ref` au groupe de champs dans l&#39;attribut `allOf`.
 
 Le schéma Loyalty Members doit désormais contenir trois valeurs `$ref` dans le tableau `allOf` : « profile », « profile-person-details », et « profile-personal-details », comme illustré ci-dessous.
 
@@ -340,29 +340,29 @@ Le schéma Loyalty Members doit désormais contenir trois valeurs `$ref` dans le
 }
 ```
 
-### Définition d’un nouveau mixin
+### Définir un nouveau groupe de champs
 
-Le schéma Loyalty Members doit saisir les informations propres au programme de fidélité. Ces informations ne figurent dans aucun des mixins standard.
+Le schéma Loyalty Members doit saisir les informations propres au programme de fidélité. Ces informations ne sont incluses dans aucun des groupes de champs standard.
 
-Le [!DNL Schema Registry] en tient compte en vous permettant de définir vos propres mixins dans le conteneur locataire. Ces mixins sont propres à votre organisation et ne sont ni visibles ni modifiables par quiconque en dehors de votre organisation IMS.
+Le [!DNL Schema Registry] en tient compte en vous permettant de définir vos propres groupes de champs dans le conteneur locataire. Ces groupes de champs sont propres à votre organisation et ne sont ni visibles ni modifiables par quiconque en dehors de votre organisation IMS.
 
-Afin de créer (POST) un nouveau mixin, votre requête doit inclure un champ `meta:intendedToExtend` contenant la clé `$id` de la ou des classes de base avec lesquelles le mixin est compatible, ainsi que les propriétés que le mixin va inclure.
+Pour créer (POST) un nouveau groupe de champs, votre requête doit inclure un champ `meta:intendedToExtend` contenant le `$id` pour la ou les classes de base avec lesquelles le groupe de champs est compatible, ainsi que les propriétés que le groupe de champs va inclure.
 
-Toutes les propriétés personnalisées doivent être imbriquées sous votre `TENANT_ID` afin d’éviter les collisions avec d’autres mixins ou champs.
+Toutes les propriétés personnalisées doivent être imbriquées sous votre `TENANT_ID` pour éviter les collisions avec d&#39;autres groupes de champs ou champs.
 
 **Format d’API**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Requête**
 
-Cette requête crée un nouveau mixin qui comporte un objet « loyalty » contenant quatre champs spécifiques aux programmes de fidélité : « loyaltyId », « loyaltyLevel », « loyaltyPoints », et « memberSince ».
+Cette requête crée un nouveau groupe de champs dont l’objet &quot;fidélité&quot; contient quatre champs spécifiques au programme de fidélité : &quot;loyaltyId&quot;, &quot;loyaltyLevel&quot;, &quot;loyaltyPoints&quot; et &quot;MemberSince&quot;.
 
 ```SHELL
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -372,7 +372,7 @@ curl -X POST\
         "type": "object",
         "title": "Loyalty Member Details",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Loyalty Program Mixin.",
+        "description": "Loyalty Program Field Group.",
         "definitions": {
             "loyalty": {
               "properties": {
@@ -419,7 +419,7 @@ curl -X POST\
 
 **Réponse**
 
-Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau mixin, y compris les clés `$id`, `meta:altIt`, et `version`. Ces valeurs sont en lecture seule et sont affectées par [!DNL Schema Registry].
+Une requête réussie renvoie HTTP Response Status 201 (Créé) avec un corps de réponse contenant les détails du nouveau groupe de champs, y compris `$id`, `meta:altIt` et `version`. Ces valeurs sont en lecture seule et sont affectées par [!DNL Schema Registry].
 
 ```JSON
 {
@@ -428,7 +428,7 @@ Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un c
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Loyalty Program Mixin.",
+    "description": "Loyalty Program Field Group.",
     "definitions": {
         "loyalty": {
             "properties": {
@@ -482,11 +482,11 @@ Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un c
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
     "version": "1.1",
-    "meta:resourceType": "mixins",
+    "meta:resourceType": "fieldgroups",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552078296885,
@@ -496,9 +496,9 @@ Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un c
 }
 ```
 
-### Ajout d’un mixin personnalisé au schéma
+### Ajouter le groupe de champs personnalisés au schéma
 
-Vous pouvez maintenant suivre les mêmes étapes que pour [l’ajout d’un mixin standard](#add-a-mixin) afin d’ajouter ce nouveau mixin à votre schéma.
+Vous pouvez maintenant suivre les mêmes étapes pour [ajouter un groupe de champs standard](#add-a-field-group) pour ajouter ce nouveau groupe de champs à votre schéma.
 
 **Format d’API**
 
@@ -508,7 +508,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Requête**
 
-Cette requête met à jour (PATCH) le schéma Loyalty Members pour inclure les champs dans le nouveau mixin « Loyalty Member Details ».
+Cette demande met à jour (PATCH) le schéma Membres de fidélité afin d’inclure les champs dans le nouveau groupe de champs Détails du membre de fidélité.
 
 ```SHELL
 curl -X PATCH \
@@ -519,13 +519,13 @@ curl -X PATCH \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"}}
+        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"}}
       ]'
 ```
 
 **Réponse**
 
-Vous pouvez constater que le mixin a bien été ajouté, car la réponse affiche maintenant ce nouveau mixin dans le tableau `meta:extends` et contient une `$ref` au mixin dans l’attribut `allOf`.
+Vous pouvez voir que le groupe de champs a été ajouté avec succès car la réponse affiche maintenant le groupe de champs nouvellement ajouté dans le tableau `meta:extends` et contient un `$ref` au groupe de champs dans l&#39;attribut `allOf`.
 
 ```JSON
 {
@@ -543,7 +543,7 @@ Vous pouvez constater que le mixin a bien été ajouté, car la réponse affiche
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -557,7 +557,7 @@ Vous pouvez constater que le mixin a bien été ajouté, car la réponse affiche
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -577,7 +577,7 @@ Vous pouvez constater que le mixin a bien été ajouté, car la réponse affiche
 
 ### Affichage du schéma actuel
 
-Vous pouvez maintenant effectuer une requête GET pour afficher le schéma actuel et voir comment les mixins ajoutés ont contribué à la structure globale du schéma.
+Vous pouvez désormais exécuter une demande de GET pour vue du schéma actuel et voir comment les groupes de champs ajoutés ont contribué à la structure globale du schéma.
 
 **Format d’API**
 
@@ -599,9 +599,9 @@ curl -X GET \
 
 **Réponse**
 
-En utilisant l’en-tête Accept `application/vnd.adobe.xed-full+json; version=1`, vous pouvez voir le schéma complet indiquant toutes les propriétés. Ces propriétés sont les champs fournis par la classe et les mixins utilisés pour composer le schéma. Dans cet exemple de réponse, les attributs des propriétés individuelles ont été minimisés pour l’espace. Vous pouvez consulter le schéma dans son intégralité, y compris toutes les propriétés et leurs attributs, dans l’[annexe](#appendix) à la fin de ce document.
+En utilisant l’en-tête Accept `application/vnd.adobe.xed-full+json; version=1`, vous pouvez voir le schéma complet indiquant toutes les propriétés. Ces propriétés sont les champs fournis par la classe et les groupes de champs qui ont été utilisés pour composer le schéma. Dans cet exemple de réponse, les attributs des propriétés individuelles ont été minimisés pour l’espace. Vous pouvez consulter le schéma dans son intégralité, y compris toutes les propriétés et leurs attributs, dans l’[annexe](#appendix) à la fin de ce document.
 
-Sous `"properties"`, vous pouvez voir l’espace de noms `_{TENANT_ID}` créé au moment de l’ajout du mixin personnalisé. Dans cet espace de noms se trouvent l’objet « loyalty » et les champs définis lors de la création du mixin.
+Sous `"properties"`, vous pouvez voir l&#39;espace de nommage `_{TENANT_ID}` créé lors de l&#39;ajout du groupe de champs personnalisés. Au sein de cet espace de nommage se trouvent l’objet &quot;fidélité&quot; et les champs définis lors de la création du groupe de champs.
 
 ```JSON
 {
@@ -619,7 +619,7 @@ Sous `"properties"`, vous pouvez voir l’espace de noms `_{TENANT_ID}` créé a
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -691,11 +691,11 @@ Sous `"properties"`, vous pouvez voir l’espace de noms `_{TENANT_ID}` créé a
 
 ### Création d’un type de données
 
-Le mixin Loyalty que vous avez créé contient des propriétés de fidélité spécifiques qui pourraient être utiles dans d’autres schémas. Par exemple, les données peuvent être ingérées dans le cadre d’un événement d’expérience ou utilisées par un schéma qui met en œuvre une autre classe. Dans ce cas, il est logique d’enregistrer la hiérarchie d’objets en tant que type de données afin de faciliter la réutilisation de la définition ailleurs.
+Le groupe de champs Fidélité que vous avez créé contient des propriétés de fidélité spécifiques qui peuvent s’avérer utiles dans d’autres schémas. Par exemple, les données peuvent être ingérées dans le cadre d’un événement d’expérience ou utilisées par un schéma qui met en œuvre une autre classe. Dans ce cas, il est logique d’enregistrer la hiérarchie d’objets en tant que type de données afin de faciliter la réutilisation de la définition ailleurs.
 
 Les types de données vous permettent de définir une hiérarchie d’objets une seule fois, et d’y faire référence dans un champ comme vous le feriez pour tout autre type scalaire.
 
-En d’autres termes, les types de données permettent l’utilisation cohérente de structures à champs multiples, avec plus de flexibilité que les mixins, car ils peuvent être inclus n’importe où dans un schéma en les ajoutant comme « type » d’un champ.
+En d’autres termes, les types de données permettent l’utilisation cohérente de structures à champs multiples, avec plus de souplesse que les groupes de champs, car ils peuvent être inclus n’importe où dans un schéma en les ajoutant comme &quot;type&quot; d’un champ.
 
 **Format d’API**
 
@@ -822,19 +822,19 @@ Vous pouvez effectuer une requête de recherche (GET) à l’aide de l’URI `$i
 
 ### Utilisation du type de données dans le schéma
 
-Maintenant que le type de données Loyalty Details a été créé, vous pouvez mettre à jour (PATCH) le champ « loyalty » dans le mixin que vous avez créé pour référencer le type de données à la place des champs qui s’y trouvaient auparavant.
+Maintenant que le type de données Détails de fidélité a été créé, vous pouvez mettre à jour (PATCH) le champ &quot;fidélité&quot; dans le groupe de champs que vous avez créé pour référencer le type de données à la place des champs qui y étaient précédemment.
 
 **Format d’API**
 
 ```http
-PATCH /tenant/mixins/{mixin meta:altId or URL encoded $id URI}
+PATCH /tenant/fieldgroups/{field group meta:altId or URL encoded $id URI}
 ```
 
 **Requête**
 
 ```SHELL
 curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62 \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -867,7 +867,7 @@ La réponse comprend maintenant une référence (`$ref`) au type de données dan
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Loyalty Program Mixin.",
+    "description": "Loyalty Program Field Group.",
     "definitions": {
         "loyalty": {
             "properties": {
@@ -896,11 +896,11 @@ La réponse comprend maintenant une référence (`$ref`) au type de données dan
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
     "version": "1.2",
-    "meta:resourceType": "mixins",
+    "meta:resourceType": "fieldgroups",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552080570051,
@@ -1068,7 +1068,7 @@ La réponse indique que l’opération a été effectuée correctement, et que l
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -1082,7 +1082,7 @@ La réponse indique que l’opération a été effectuée correctement, et que l
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -1171,9 +1171,9 @@ La réponse est une liste filtrée de schémas, contenant uniquement ceux qui r�
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez réussi à composer un schéma en utilisant à la fois des mixins standard et un mixin que vous avez défini. Vous pouvez maintenant utiliser ce schéma pour créer un ensemble de données et ingérer des données d’enregistrement dans Adobe Experience Platform.
+En suivant ce didacticiel, vous avez réussi à composer un schéma en utilisant à la fois des groupes de champs standard et un groupe de champs que vous avez défini. Vous pouvez maintenant utiliser ce schéma pour créer un ensemble de données et ingérer des données d’enregistrement dans Adobe Experience Platform.
 
-L’intégralité du schéma Loyalty Members, tel que créé tout au long de ce tutoriel, est disponible dans l’annexe suivante. En regardant le schéma, vous pouvez voir comment les mixins contribuent à la structure globale et quels sont les champs disponibles pour l’ingestion de données.
+L’intégralité du schéma Loyalty Members, tel que créé tout au long de ce tutoriel, est disponible dans l’annexe suivante. Lorsque vous observez le schéma, vous pouvez voir comment les groupes de champs contribuent à la structure globale et quels champs sont disponibles pour l’assimilation de données.
 
 Une fois que vous avez créé plusieurs schémas, vous pouvez définir leurs relations en utilisant des descripteurs de relations. Pour plus d’informations, consultez le tutoriel sur [la définition d’une relation entre deux schémas](relationship-api.md). Pour obtenir des exemples détaillés sur la manière d’effectuer toutes les opérations (GET, POST, PUT, PATCH et DELETE) dans le registre, veuillez vous référer au [guide de développement du registre des schémas](../api/getting-started.md) lorsque vous utilisez l’API.
 
@@ -1185,7 +1185,7 @@ Les informations suivantes complètent le tutoriel sur l’API.
 
 Dans ce tutoriel, un schéma est composé pour décrire les membres d’un programme de fidélité dans la vente au détail.
 
-Le schéma implémente la classe [!DNL XDM Individual Profile] et combine plusieurs mixins ; l’introduction d’informations sur les membres de fidélité à l’aide des mixins &quot;Détails de la personne&quot; et &quot;Détails personnels&quot; standard, ainsi qu’à l’aide d’un mixin &quot;Détails de fidélité&quot; défini dans le didacticiel.
+Le schéma implémente la classe [!DNL XDM Individual Profile] et combine plusieurs groupes de champs ; l’introduction d’informations sur les membres de fidélité à l’aide des groupes de champs &quot;Détails de la personne&quot; et &quot;Détails personnels&quot; standard, ainsi que d’un groupe de champs &quot;Détails de fidélité&quot; défini au cours du didacticiel.
 
 Vous trouverez ci-dessous le schéma Loyalty Members au format JSON :
 
@@ -1205,7 +1205,7 @@ Vous trouverez ci-dessous le schéma Loyalty Members au format JSON :
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
