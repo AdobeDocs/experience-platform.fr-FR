@@ -1,15 +1,15 @@
 ---
 title: Prise en charge d’IAB TCF 2.0 dans le SDK Web Adobe Experience Platform
 description: Découvrez comment prendre en charge les préférences de consentement IAB TCF 2.0 à l’aide du Adobe Experience Platform Web SDK
-keywords: consentement ; setConsent ; Mélange de confidentialité des Profils ; Mélange de confidentialité des Événements d’expérience ; Mélange de confidentialité ; IAB TCF 2.0 ; CDP en temps réel ; Profil de données client en temps réel
+keywords: consentement ; setConsent ; Profil Privacy Field group ; Experience Événement Privacy Field group ; Privacy Field group ; IAB TCF 2.0 ; Real-time CDP ; Real-time Customer Data Profil
+exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
 translation-type: tm+mt
-source-git-commit: 1c6238a0cf72230e019fd10d9a72f30444bd9fb9
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '883'
 ht-degree: 2%
 
 ---
-
 
 # Prise en charge d’IAB TCF 2.0 dans le SDK Web Adobe Experience Platform
 
@@ -49,7 +49,7 @@ Alors que les audiences CDP et d’Audience Manager en temps réel suivent les p
 
 Pour recueillir des renseignements sur le consentement des événements, il faut :
 
-- Jeu de données basé sur la classe [!DNL XDM Experience Event], avec le mixin de confidentialité [!DNL Experience Event].
+- Jeu de données basé sur la classe [!DNL XDM Experience Event], avec le groupe de champs de schéma de confidentialité [!DNL Experience Event].
 - Une configuration de bord configurée avec le jeu de données [!DNL XDM Experience Event] ci-dessus.
 
 Pour plus d’informations sur la conversion d’un Événement d’expérience XDM en accès Analytics, début en lisant la documentation [Présentation d’Analytics](../../data-collection/adobe-analytics/analytics-overview.md).
