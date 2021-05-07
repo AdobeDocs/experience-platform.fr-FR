@@ -6,10 +6,10 @@ description: Découvrez les bases de la création et de la modification de sché
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1378'
-ht-degree: 1%
+source-wordcount: '1410'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +19,11 @@ Ce guide présente une vue d’ensemble de la création, de la modification et d
 
 >[!IMPORTANT]
 >
->Les schémas XDM sont extrêmement personnalisables. Par conséquent, les étapes de création d&#39;un schéma peuvent varier en fonction du type de données que le schéma doit capturer. En conséquence, ce document ne couvre que les interactions de base que vous pouvez effectuer avec les schémas dans l’interface utilisateur et exclut les étapes connexes telles que la personnalisation des classes, des mixins, des types de données et des champs.
+>Les schémas XDM sont extrêmement personnalisables. Par conséquent, les étapes de création d&#39;un schéma peuvent varier en fonction du type de données que le schéma doit capturer. En conséquence, ce document ne couvre que les interactions de base que vous pouvez effectuer avec les schémas dans l’interface utilisateur et exclut les étapes connexes telles que la personnalisation des classes, des groupes de champs de schéma, des types de données et des champs.
 >
 >Pour une visite complète du processus de création de schéma, suivez le [tutoriel de création de schéma](../../tutorials/create-schema-ui.md) afin de créer un schéma d&#39;exemple complet et de vous familiariser avec les nombreuses fonctionnalités du [!DNL Schema Editor].
 
-## Conditions préalables
+## Conditions préalables  
 
 Ce guide nécessite une bonne compréhension de XDM System. Pour une présentation du rôle de XDM dans l&#39;écosystème Experience Platform, voir [Présentation de XDM](../../home.md) et les [bases de la composition du schéma](../../schema/composition.md) pour un aperçu de la façon dont les schémas sont construits.
 
@@ -37,7 +37,7 @@ Une fois que vous avez sélectionné une classe, [!DNL Schema Editor] s&#39;affi
 
 ![](../../images/ui/resources/schemas/schema-details.png)
 
-Vous pouvez désormais début de la construction de la structure du schéma en [ajoutant des mixins](#add-mixins).
+Vous pouvez maintenant début de créer la structure du schéma en [ajoutant des groupes de champs de schéma](#add-field-groups).
 
 ## Modifier un schéma existant {#edit}
 
@@ -53,23 +53,23 @@ Pour modifier un schéma existant, sélectionnez l&#39;onglet **[!UICONTROL Parc
 >
 >Vous pouvez utiliser les fonctionnalités de recherche et de filtrage de l’espace de travail pour faciliter la recherche du schéma. Pour plus d&#39;informations, consultez le guide [exploration des ressources XDM](../explore.md).
 
-Une fois que vous avez sélectionné un schéma, le [!DNL Schema Editor] apparaît avec la structure du schéma affichée dans la trame. Vous pouvez désormais [ajouter des mixins](#add-mixins) au schéma, [modifier les noms d’affichage des champs](#display-names) ou [modifier les mixins personnalisés existants](./mixins.md#edit) si le schéma en utilise un.
+Une fois que vous avez sélectionné un schéma, le [!DNL Schema Editor] apparaît avec la structure du schéma affichée dans la trame. Vous pouvez maintenant [ajouter des groupes de champs](#add-field-groups) au schéma, [modifier les noms d&#39;affichage des champs](#display-names) ou [modifier les groupes de champs personnalisés existants](./field-groups.md#edit) si le schéma en utilise un.
 
-## Ajout de mixins à un schéma {#add-mixins}
+## Ajouter des groupes de champs à un schéma {#add-field-groups}
 
 >[!NOTE]
 >
->Cette section explique comment ajouter des mixins existants à un schéma. Si vous souhaitez créer un mixin personnalisé, reportez-vous au guide intitulé [Création et modification de mixins](./mixins.md#create) à la place.
+>Cette section explique comment ajouter des groupes de champs existants à un schéma. Si vous souhaitez créer un groupe de champs personnalisés, reportez-vous au guide intitulé &lt; a0/>Création et modification de groupes de champs](./field-groups.md#create) à la place.[
 
-Une fois que vous avez ouvert un schéma dans [!DNL Schema Editor], vous pouvez ajouter des champs au schéma en utilisant des mixins. Pour début, sélectionnez **[!UICONTROL Ajouter]** en regard de **[!UICONTROL Mixins]** dans le rail de gauche.
+Une fois que vous avez ouvert un schéma dans [!DNL Schema Editor], vous pouvez ajouter des champs au schéma en utilisant des groupes de champs. Pour début, sélectionnez **[!UICONTROL Ajouter]** en regard de **[!UICONTROL Groupes de champs]** dans le rail de gauche.
 
-![](../../images/ui/resources/schemas/add-mixin-button.png)
+![](../../images/ui/resources/schemas/add-field-group-button.png)
 
-Une boîte de dialogue s’affiche, présentant une liste de mixins que vous pouvez sélectionner pour le schéma. Puisque les mixins ne sont compatibles qu&#39;avec une seule classe, seuls les mixins associés à la classe sélectionnée par le schéma sont répertoriés. Par défaut, les mixins répertoriés sont triés en fonction de leur popularité d’utilisation au sein de votre entreprise.
+Une boîte de dialogue s’affiche, présentant une liste de groupes de champs que vous pouvez sélectionner pour le schéma. Puisque les groupes de champs ne sont compatibles qu&#39;avec une seule classe, seuls les groupes de champs associés à la classe sélectionnée du schéma sont répertoriés. Par défaut, les groupes de champs répertoriés sont triés en fonction de leur popularité d’utilisation au sein de votre organisation.
 
-![](../../images/ui/resources/schemas/mixin-popularity.png)
+![](../../images/ui/resources/schemas/field-group-popularity.png)
 
-Si vous connaissez l’activité générale ou le secteur d’activité des champs de mixin que vous souhaitez ajouter, sélectionnez une ou plusieurs catégories verticales du secteur dans le rail de gauche pour filtrer la liste affichée des mixins.
+Si vous connaissez l&#39;activité générale ou le secteur d&#39;activité des champs à ajouter, sélectionnez une ou plusieurs catégories verticales du secteur dans le rail de gauche pour filtrer la liste affichée des groupes de champs.
 
 ![](../../images/ui/resources/schemas/industry-filter.png)
 
@@ -77,25 +77,25 @@ Si vous connaissez l’activité générale ou le secteur d’activité des cham
 >
 >Pour plus d’informations sur les meilleures pratiques de modélisation des données spécifiques au secteur d’activité dans XDM, voir la documentation sur [les modèles de données du secteur](../../schema/industries/overview.md).
 
-Vous pouvez également utiliser la barre de recherche pour localiser le mixin souhaité. Les mixins dont le nom correspond à la requête apparaissent en haut de la liste. Sous **[!UICONTROL Champs standard]**, des mixins contenant des champs qui décrivent les attributs de données souhaités s’affichent.
+Vous pouvez également utiliser la barre de recherche pour localiser le groupe de champs de votre choix. Les groupes de champs dont le nom correspond à la requête s’affichent en haut de la liste. Sous **[!UICONTROL Champs standard]**, les groupes de champs contenant les champs qui décrivent les attributs de données souhaités sont affichés.
 
-![](../../images/ui/resources/schemas/mixin-search.png)
+![](../../images/ui/resources/schemas/field-group-search.png)
 
-Cochez la case en regard du nom du mixin à ajouter au schéma. Vous pouvez sélectionner plusieurs mixins dans la liste, chaque mixin sélectionné apparaissant dans le rail de droite.
+Cochez la case en regard du nom du groupe de champs à ajouter au schéma. Vous pouvez sélectionner plusieurs groupes de champs dans la liste, chaque groupe de champs sélectionné apparaissant dans le rail de droite.
 
-![](../../images/ui/resources/schemas/add-mixin.png)
+![](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
->Pour tout mixin répertorié, vous pouvez pointer ou vous concentrer sur l’icône d’informations (![](../../images/ui/resources/schemas/info-icon.png)) pour vue une brève description du type de données capturées par le mixin. Vous pouvez également sélectionner l’icône de prévisualisation (![](../../images/ui/resources/schemas/preview-icon.png)) pour vue de la structure des champs fournis par le mixin avant de décider de l’ajouter au schéma.
+>Pour tout groupe de champs répertorié, vous pouvez pointer ou vous concentrer sur l’icône d’informations (![](../../images/ui/resources/schemas/info-icon.png)) pour vue une brève description du type de données que le groupe de champs capture. Vous pouvez également sélectionner l’icône de prévisualisation (![](../../images/ui/resources/schemas/preview-icon.png)) pour vue de la structure des champs fournis par le groupe de champs avant de décider de l’ajouter au schéma.
 
-Une fois que vous avez choisi vos mixins, sélectionnez **[!UICONTROL Ajouter le mixin]** pour les ajouter au schéma.
+Une fois que vous avez choisi vos groupes de champs, sélectionnez **[!UICONTROL Ajouter les groupes de champs]** pour les ajouter au schéma.
 
-![](../../images/ui/resources/schemas/add-mixin-finish.png)
+![](../../images/ui/resources/schemas/add-field-group-finish.png)
 
-Le [!DNL Schema Editor] réapparaît avec les champs fournis par le mixin représentés dans la trame.
+Le [!DNL Schema Editor] réapparaît avec les champs fournis par le groupe de champs représentés dans le canevas.
 
-![](../../images/ui/resources/schemas/mixins-added.png)
+![](../../images/ui/resources/schemas/field-groups-added.png)
 
 ## Activation d’un schéma pour Real-time Customer Profile {#profile}
 
@@ -127,11 +127,11 @@ Le schéma est désormais activé pour une utilisation dans le Profil client en 
 
 ## Modifier les noms d&#39;affichage des champs de schéma {#display-names}
 
-Une fois que vous avez affecté une classe et ajouté des mixins à un schéma, vous pouvez modifier les noms d&#39;affichage de n&#39;importe quel champ de schéma, que ces champs aient été fournis par des ressources XDM standard ou personnalisées.
+Une fois que vous avez affecté une classe et ajouté des groupes de champs à un schéma, vous pouvez modifier les noms d&#39;affichage de n&#39;importe quel champ de schéma, que ces champs aient été fournis par des ressources XDM standard ou personnalisées.
 
 >[!NOTE]
 >
->N’oubliez pas que les noms d’affichage des champs appartenant à des classes standard ou des mixins ne peuvent être modifiés que dans le contexte d’un schéma spécifique. En d’autres termes, la modification du nom d’affichage d’un champ standard dans un schéma n’affecte pas les autres schémas qui utilisent la même classe ou mixin associée.
+>N’oubliez pas que les noms d’affichage des champs appartenant à des classes standard ou à des groupes de champs ne peuvent être modifiés que dans le contexte d’un schéma spécifique. En d’autres termes, la modification du nom d’affichage d’un champ standard dans un schéma n’affecte pas les autres schémas qui utilisent la même classe ou groupe de champs associés.
 
 Pour modifier le nom d’affichage d’un champ de schéma, sélectionnez le champ dans la trame. Dans le rail de droite, indiquez le nouveau nom sous **[!UICONTROL Nom d’affichage]**.
 
@@ -147,7 +147,7 @@ Vous pouvez modifier la classe d&#39;un schéma à tout moment pendant le proces
 
 >[!WARNING]
 >
->Réassigner la classe à un schéma doit être fait avec une extrême prudence. Les mixins ne sont compatibles qu&#39;avec certaines classes. Par conséquent, modifier la classe réinitialise le canevas et les champs que vous avez ajoutés.
+>Réassigner la classe à un schéma doit être fait avec une extrême prudence. Les groupes de champs ne sont compatibles qu&#39;avec certaines classes. Par conséquent, la modification de la classe réinitialise le canevas et les champs que vous avez ajoutés.
 
 Pour réaffecter une classe, sélectionnez **[!UICONTROL Attribuer]** dans la partie gauche du canevas.
 
@@ -167,7 +167,7 @@ Après avoir confirmé le changement de classe, le canevas sera réinitialisé e
 
 ## Étapes suivantes
 
-Ce document couvrait les bases de la création et de la modification de schémas dans l’interface utilisateur de la plate-forme. Il est vivement recommandé de consulter le [didacticiel de création de schéma](../../tutorials/create-schema-ui.md) pour un flux de travail complet permettant de créer un schéma complet dans l’interface utilisateur, y compris la création de mixins personnalisés et de types de données pour des cas d’utilisation uniques.
+Ce document couvrait les bases de la création et de la modification de schémas dans l’interface utilisateur de la plate-forme. Il est vivement recommandé de consulter le [didacticiel de création de schéma](../../tutorials/create-schema-ui.md) pour un flux de travail complet permettant de créer un schéma complet dans l’interface utilisateur, y compris la création de groupes de champs personnalisés et de types de données pour des cas d’utilisation uniques.
 
 Pour plus d&#39;informations sur les fonctionnalités de l&#39;espace de travail [!UICONTROL Schémas], consultez la présentation de l&#39;espace de travail [[!UICONTROL Schémas]](../overview.md).
 
