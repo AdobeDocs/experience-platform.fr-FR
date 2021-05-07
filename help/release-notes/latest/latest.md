@@ -6,9 +6,9 @@ last-update: April 21, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: f0350be580394516016373b1754a49951b58e846
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '885'
 ht-degree: 36%
 
 ---
@@ -45,7 +45,7 @@ Le modèle de données d’expérience (XDM) est une spécification open source 
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Recommandations schémas par secteur | Lors de la sélection de classes et de mixins dans l’interface utilisateur de l’éditeur de Schémas, vous pouvez utiliser un nouveau filtre pour vue des composants standard recommandés en fonction de votre secteur d’activité spécifique. Voir la documentation sur [les modèles de données du secteur](https://www.adobe.com/go/xdm-industry-erds-en) pour plus d&#39;informations sur la façon dont ces composants se connectent les uns aux autres pour différents cas d&#39;utilisation du secteur. |
+| Recommandations schémas par secteur | Lors de la sélection de classes et de groupes de champs de schéma dans l’interface utilisateur de l’éditeur de Schémas, vous pouvez utiliser un nouveau filtre pour vue des composants standard recommandés en fonction de votre secteur d’activité spécifique. Voir la documentation sur [les modèles de données du secteur](https://www.adobe.com/go/xdm-industry-erds-en) pour plus d&#39;informations sur la façon dont ces composants se connectent les uns aux autres pour différents cas d&#39;utilisation du secteur. |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
