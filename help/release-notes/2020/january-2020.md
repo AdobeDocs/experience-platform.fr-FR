@@ -4,14 +4,14 @@ description: Notes de mise à jour d’Experience Platform, 15 janvier 2020
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
+exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '880'
-ht-degree: 70%
+source-wordcount: '884'
+ht-degree: 66%
 
 ---
-
 
 # Notes de mise à jour d’Adobe Experience Platform
 
@@ -34,7 +34,7 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 
 | Fonctionnalité | Description |
 |--- | ---|
-| Restrictions liées au type de champ pour les champs de hiérarchie égale | Une fois qu’un champ XDM a été défini comme un certain type, tous les autres champs du même nom et de la même hiérarchie doivent utiliser le même type de champ, quelles que soient les classes ou les mixins dans lesquels ils sont utilisés. Par exemple, si un mixin pour la classe XDM [!DNL Profile] contient un champ `profile.age` de type &quot;integer&quot;, un mixin similaire pour XDM [!DNL ExperienceEvent] ne peut pas avoir de champ `profile.age` de type &quot;string&quot;. Pour utiliser un type de champ différent, le champ doit appartenir à une hiérarchie différente de celle précédemment définie (par exemple, `profile.person.age`). Cette fonctionnalité est destinée à prévenir les conflits lorsque les schémas sont rassemblés dans une union. Bien que la contrainte n’affecte pas les schémas existants de façon rétroactive, il est vivement recommandé de vérifier vos schémas à la recherche d’éventuels conflits de type de champ et de les modifier si nécessaire. |
+| Restrictions liées au type de champ pour les champs de hiérarchie égale | Une fois qu&#39;un champ XDM a été défini comme un certain type, tous les autres champs du même nom et de la même hiérarchie doivent utiliser le même type de champ, indépendamment des classes ou des groupes de champs de schéma dans lesquels ils sont utilisés. Par exemple, si un groupe de champs pour la classe XDM [!DNL Profile] contient un champ `profile.age` de type &quot;integer&quot;, un groupe de champs similaire pour XDM [!DNL ExperienceEvent] ne peut pas avoir un champ `profile.age` de type &quot;string&quot;. Pour utiliser un type de champ différent, le champ doit appartenir à une hiérarchie différente de celle précédemment définie (par exemple, `profile.person.age`). Cette fonctionnalité est destinée à prévenir les conflits lorsque les schémas sont rassemblés dans une union. Bien que la contrainte n’affecte pas les schémas existants de façon rétroactive, il est vivement recommandé de vérifier vos schémas à la recherche d’éventuels conflits de type de champ et de les modifier si nécessaire. |
 | Validation de champ sensible à la casse | Les champs personnalisés de même niveau doivent porter des noms différents, indépendamment de la casse. Par exemple, si vous ajoutez un champ personnalisé nommé « E-mail », vous ne pouvez pas ajouter au même niveau un autre champ personnalisé nommé « e-mail ». |
 
 **Problèmes connus**
@@ -90,7 +90,7 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 
 Pour plus d’informations sur les sources, consultez la [présentation des sources](../../sources/home.md).
 
-## Destinations {#destinations}
+## Destinations  {#destinations}
 
 Dans [CDP en temps réel](../../rtcdp/overview.md), les destinations sont des intégrations préétablies avec les plateformes de destination qui activent les données à ces partenaires de manière transparente.
 
