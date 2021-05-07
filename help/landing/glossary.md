@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '7137'
+source-wordcount: '7153'
 ht-degree: 12%
 
 ---
@@ -239,6 +239,8 @@ ht-degree: 12%
 
 **Champ** : Un champ est l&#39;élément de niveau le plus bas d&#39;un jeu de données, tel que défini par le schéma XDM du jeu de données. Chaque champ a un nom à des fins de référence et un type pour indiquer le type de données qu’il contient. Les types de champ peuvent inclure (sans s’y limiter) des entiers, des nombres, des chaînes, des booléens et des objets.
 
+**Groupe** de champs : Voir &quot;Groupe de champs de Schéma&quot;.
+
 **Libellés** des champs : Les libellés de champ sont des libellés de gouvernance des données hérités d’un jeu de données ou appliqués directement à un champ.
 
 **Nom** du champ : Un nom de champ est utilisé pour référencer la valeur d’un champ dans les requêtes et les services en aval.
@@ -323,7 +325,7 @@ ht-degree: 12%
 
 **Fusionner la stratégie** : Les stratégies de fusion sont des règles que l’Experience Platform utilise pour déterminer comment les fragments de données client provenant de plusieurs sources seront combinés afin de créer un profil individuel. Lorsqu’un conflit de données se produit, la stratégie de fusion détermine quelles données doivent être prioritaires pour l’inclusion dans le profil.
 
-**Mixin** : Dans le modèle de données d’expérience (XDM), un mixin permet aux utilisateurs d’étendre les champs réutilisables pour définir un ou plusieurs attributs destinés à être inclus dans un schéma.
+**Mixin** : Voir &quot;Groupe de champs de Schéma&quot;.
 
 **Module** : Dans  [!DNL Platform Launch], un module est un fragment de code JavaScript exécutable fourni par une extension, qui exécute des actions dans un environnement client sans avoir à créer de règle.
 
@@ -437,7 +439,9 @@ ht-degree: 12%
 
 **Scoring** : Le score est le processus de génération d’informations à partir de données à l’aide d’un modèle formé.
 
-**Schéma** : Un schéma est un ensemble de règles qui représentent et valident la structure et le format des données. Un schéma est constitué d&#39;une classe et d&#39;un ou de plusieurs mixins facultatifs et est utilisé pour créer des jeux de données et des séries de données. Un schéma peut inclure des attributs comportementaux, des horodatages, des identités, des définitions d’attributs, des relations, etc.
+**Schéma** : Un schéma est un ensemble de règles qui représentent et valident la structure et le format des données. Un schéma est constitué d&#39;une classe et d&#39;un ou de plusieurs groupes de champs facultatifs et est utilisé pour créer des jeux de données et des séries de données. Un schéma peut inclure des attributs comportementaux, des horodatages, des identités, des définitions d’attributs, des relations, etc.
+
+**Groupe** de champs de schéma : Dans le modèle de données d’expérience (XDM), un groupe de champs de schéma permet aux utilisateurs d’étendre les champs réutilisables pour définir un ou plusieurs attributs destinés à être inclus dans un schéma.
 
 **Bibliothèque** de schémas : La bibliothèque de Schémas contient des ressources XDM standard mises à disposition par Adobe, ainsi que des ressources personnalisées définies par votre organisation.
 
