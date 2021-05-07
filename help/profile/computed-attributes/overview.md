@@ -6,9 +6,9 @@ type: Documentation
 description: Les attributs calculés sont des fonctions permettant d'agrégat des données au niveau du événement dans des attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées pour la segmentation, l’activation et la personnalisation.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '730'
 ht-degree: 41%
 
 ---
@@ -55,4 +55,4 @@ Les attributs de schéma qui ont déjà été utilisés dans une expression de d
 
 En raison du fait qu’aucune dépendance n’a été détectée, l’Experience Platform n’évaluera pas automatiquement l’attribut calculé associé chaque fois que la définition de segment est évaluée.
 
-Vous pouvez également gérer la création d’attributs calculés au moyen d’un mixin spécifique qui ajoute de nouveaux attributs calculés qui ne sont pas en conflit avec les attributs existants. Une autre solution consiste à simplement recréer le segment avec le suivi des dépendances correct pour les nouveaux attributs calculés.
+Vous pouvez également gérer la création d’attributs calculés au moyen d’un groupe de champs de schéma spécifique qui ajoute de nouveaux attributs calculés qui ne sont pas en conflit avec les attributs existants. Une autre solution consiste à simplement recréer le segment avec le suivi des dépendances correct pour les nouveaux attributs calculés.
