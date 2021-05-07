@@ -6,20 +6,20 @@ description: Découvrez comment définir des champs XDM dans l’interface utili
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1325'
 ht-degree: 4%
 
 ---
 
 # Définition des champs XDM dans l’interface utilisateur
 
-Le [!DNL Schema Editor] de l’interface utilisateur Adobe Experience Platform vous permet de définir vos propres champs dans les classes et mixins de modèle de données d’expérience personnalisés (XDM). Ce guide décrit les étapes de définition des champs XDM dans l’interface utilisateur, y compris les options de configuration disponibles pour chaque type de champ.
+Le [!DNL Schema Editor] de l’interface utilisateur Adobe Experience Platform vous permet de définir vos propres champs dans les classes de modèle de données d’expérience (XDM) personnalisées et les groupes de champs de schéma. Ce guide décrit les étapes de définition des champs XDM dans l’interface utilisateur, y compris les options de configuration disponibles pour chaque type de champ.
 
-## Conditions préalables
+## Conditions préalables  
 
-Ce guide nécessite une bonne compréhension de XDM System. Pour une présentation du rôle de XDM dans l&#39;écosystème Experience Platform, voir [Présentation de XDM](../../home.md) et les [bases de la composition du schéma](../../schema/composition.md) pour savoir comment les classes et les mixins contribuent aux schémas XDM.
+Ce guide nécessite une bonne compréhension de XDM System. Pour une présentation du rôle de XDM au sein de l&#39;écosystème Experience Platform, voir [Présentation de XDM](../../home.md) et les [bases de la composition des schémas](../../schema/composition.md) pour savoir comment les classes et les groupes de champs contribuent aux schémas XDM.
 
 Bien que ce guide ne soit pas obligatoire, il est recommandé de suivre également le tutoriel sur [la composition d&#39;un schéma dans l&#39;interface utilisateur](../../tutorials/create-schema-ui.md) pour vous familiariser avec les diverses fonctionnalités du [!DNL Schema Editor].
 
@@ -27,13 +27,13 @@ Bien que ce guide ne soit pas obligatoire, il est recommandé de suivre égaleme
 
 Pour définir de nouveaux champs XDM dans l&#39;interface utilisateur, vous devez d&#39;abord ouvrir un schéma dans [!DNL Schema Editor]. Selon les schémas actuellement disponibles dans [!DNL Schema Library], vous pouvez choisir de [créer un nouveau schéma](../resources/schemas.md#create) ou [sélectionner un schéma existant à modifier](../resources/schemas.md#edit).
 
-Une fois que [!DNL Schema Editor] est ouvert, utilisez le rail de gauche pour sélectionner la classe ou le mixin pour lequel vous souhaitez définir des champs. Si la ressource est une ressource personnalisée définie par votre organisation, les contrôles permettant d’ajouter ou de modifier des champs s’affichent dans la trame. Ces commandes s’affichent en regard du nom du schéma, ainsi que des champs de type objet définis sous la classe ou le mixin sélectionnés.
+Une fois que [!DNL Schema Editor] est ouvert, utilisez le rail de gauche pour sélectionner la classe ou le groupe de champs pour lesquels vous souhaitez définir des champs. Si la ressource est une ressource personnalisée définie par votre organisation, les contrôles permettant d’ajouter ou de modifier des champs s’affichent dans la trame. Ces contrôles s&#39;affichent en regard du nom du schéma, ainsi que des champs de type objet définis sous la classe ou le groupe de champs sélectionné.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
 >[!NOTE]
 >
->Si la classe ou le mixin que vous sélectionnez est une ressource principale fournie par Adobe, il ne peut pas être modifié et les commandes affichées ci-dessus ne s&#39;affichent donc pas. Si le schéma auquel vous souhaitez ajouter des champs est basé sur une classe XDM de base et ne contient aucun mixin personnalisé, vous pouvez [créer un mixin](../resources/mixins.md#create) à ajouter au schéma.
+>Si la classe ou le groupe de champs que vous sélectionnez est une ressource principale fournie par Adobe, il ne peut pas être modifié et les contrôles affichés ci-dessus n&#39;apparaîtront donc pas. Si le schéma auquel vous souhaitez ajouter des champs est basé sur une classe XDM de base et ne contient aucun groupe de champs personnalisé, vous pouvez [créer un nouveau groupe de champs](../resources/field-groups.md#create) à ajouter au schéma.
 
 Pour ajouter un nouveau champ à la ressource, sélectionnez l&#39;icône **plus (+)** en regard du nom du schéma dans le canevas ou en regard du champ de type d&#39;objet sous lequel vous souhaitez définir le champ.
 
@@ -41,7 +41,7 @@ Pour ajouter un nouveau champ à la ressource, sélectionnez l&#39;icône **plus
 
 ## Définir un champ pour une ressource {#define}
 
-Après avoir sélectionné l&#39;icône **plus (+)**, un **[!UICONTROL nouveau champ]** apparaît dans le canevas, situé dans un objet de niveau racine qui porte l&#39;espace de noms de votre ID de client unique (comme `_tenantId` dans l&#39;exemple ci-dessous). Tous les champs ajoutés à un schéma par le biais de classes personnalisées et de mixins sont automatiquement placés dans cet espace de nommage afin d’éviter les conflits avec d’autres champs à partir des classes et mixins fournis par l’Adobe.
+Après avoir sélectionné l&#39;icône **plus (+)**, un **[!UICONTROL nouveau champ]** apparaît dans le canevas, situé dans un objet de niveau racine qui porte l&#39;espace de noms de votre ID de client unique (comme `_tenantId` dans l&#39;exemple ci-dessous). Tous les champs ajoutés à un schéma par le biais de classes personnalisées et de groupes de champs sont automatiquement placés dans cet espace de nommage afin d’éviter les conflits avec d’autres champs provenant de classes et de groupes de champs fournis par l’Adobe.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -69,11 +69,11 @@ Le canevas se met à jour pour afficher le nom et le type du champ. Le rail droi
 
 ![](../../images/ui/fields/overview/field-added.png)
 
-Vous pouvez continuer à suivre les étapes ci-dessus pour ajouter d’autres champs au schéma. Une fois le schéma enregistré, sa classe de base et ses mixins sont également enregistrés si des modifications ont été apportées.
+Vous pouvez continuer à suivre les étapes ci-dessus pour ajouter d’autres champs au schéma. Une fois le schéma enregistré, sa classe de base et ses groupes de champs sont également enregistrés si des modifications ont été apportées.
 
 >[!NOTE]
 >
->Toute modification apportée aux mixins ou à la classe d&#39;un schéma sera répercutée dans tous les autres schémas qui les utilisent.
+>Toute modification apportée aux groupes de champs ou à la classe d&#39;un schéma sera répercutée dans tous les autres schémas qui les utilisent.
 
 ## Propriétés de champ spécifiques au type {#type-specific-properties}
 
@@ -107,6 +107,6 @@ Bien que techniquement non un type de champ spécial, il est également recomman
 
 ## Étapes suivantes
 
-Ce guide fournit un aperçu de la manière de définir les champs XDM dans l’interface utilisateur. Rappelez-vous que les champs ne peuvent être ajoutés aux schémas qu&#39;à l&#39;aide de classes et de mixins. Pour en savoir plus sur la gestion de ces ressources dans l’interface utilisateur, consultez les guides sur la création et la modification de [classes](../resources/classes.md) et [mixins](../resources/mixins.md).
+Ce guide fournit un aperçu de la manière de définir les champs XDM dans l’interface utilisateur. N&#39;oubliez pas que les champs ne peuvent être ajoutés aux schémas qu&#39;à l&#39;aide de classes et de groupes de champs. Pour en savoir plus sur la gestion de ces ressources dans l’interface utilisateur, consultez les guides sur la création et la modification de [classes](../resources/classes.md) et de [groupes de champs](../resources/field-groups.md).
 
 Pour plus d&#39;informations sur les fonctionnalités de l&#39;espace de travail [!UICONTROL Schémas], consultez la présentation de l&#39;espace de travail [[!UICONTROL Schémas]](../overview.md).
