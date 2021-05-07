@@ -6,9 +6,9 @@ topic-legacy: privacy events
 description: Découvrez comment configurer vos opérations de données et vos schémas pour transmettre les choix de consentement des clients lors de l’activation de segments vers des destinations dans Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2470'
+source-wordcount: '2477'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Adobe Experience Platform fait partie de la liste [fournisseur IAB TCF 2.0 ](htt
 
 Ce document fournit une vue d’ensemble de la configuration de vos opérations de données et de vos schémas de profil pour accepter les données de consentement des clients générées par votre CMP, ainsi que de la manière dont Plateforme transmet les choix de consentement des utilisateurs lors de l’exportation de segments.
 
-## Conditions préalables
+## Conditions préalables  
 
 Afin de suivre ce guide, vous devez utiliser une plateforme de gestion du consentement (CMP), commerciale ou la vôtre, qui est intégrée et conforme au TCF de l&#39;IAB. Pour plus d&#39;informations, consultez la [liste des CMP conformes](https://iabeurope.eu/cmp-list/).
 
@@ -104,7 +104,7 @@ Les données de consentement du client doivent être envoyées à des jeux de do
 
 Une fois que vous avez créé un jeu de données [!DNL Profile] activé pour collecter les données de consentement, vous devez vous assurer que vos stratégies de fusion ont été configurées pour inclure systématiquement les champs de consentement TCF dans vos profils clients. Cela implique de définir la priorité des jeux de données afin que votre jeu de données de consentement soit hiérarchisé par rapport à d&#39;autres jeux de données potentiellement conflictuels.
 
-Pour plus d&#39;informations sur la façon d&#39;utiliser les stratégies de fusion, consultez le [guide de l&#39;utilisateur des stratégies de fusion](../../../../profile/ui/merge-policies.md). Lors de la configuration de vos stratégies de fusion, vous devez vous assurer que vos segments incluent tous les attributs de consentement requis fournis par le [mixin de confidentialité XDM](./dataset.md#privacy-mixin), comme indiqué dans le guide de préparation des jeux de données.
+Pour plus d&#39;informations sur la façon d&#39;utiliser les stratégies de fusion, consultez le [guide de l&#39;utilisateur des stratégies de fusion](../../../../profile/ui/merge-policies.md). Lors de la configuration de vos stratégies de fusion, vous devez vous assurer que vos segments incluent tous les attributs de consentement requis fournis par le [groupe de champs de schéma de confidentialité XDM](./dataset.md#privacy-field-group), comme indiqué dans le guide de préparation des jeux de données.
 
 ## Intégrer le SDK Web Experience Platform pour collecter les données de consentement des clients {#sdk}
 
@@ -196,7 +196,7 @@ Vous pouvez également collecter des données de consentement TCF 2.0 sur chaque
 
 >[!NOTE]
 >
->Pour utiliser cette méthode, vous devez avoir ajouté [!DNL Experience Event Privacy mixin] à votre schéma [!DNL Profile] [!DNL XDM ExperienceEvent] activé. Consultez la section [mise à jour du schéma ExperienceEvent](./dataset.md#event-schema) dans le guide de préparation des jeux de données pour connaître les étapes de configuration de ce paramètre.
+>Pour utiliser cette méthode, vous devez avoir ajouté le groupe de champs Confidentialité d’Experience Événement à votre schéma [!DNL Profile] activé [!DNL XDM ExperienceEvent]. Consultez la section [mise à jour du schéma ExperienceEvent](./dataset.md#event-schema) dans le guide de préparation des jeux de données pour connaître les étapes de configuration de ce paramètre.
 
 La commande `sendEvent` doit être utilisée comme rappel dans les écouteurs de événement appropriés de votre site Web. La commande attend deux arguments : (1) une chaîne qui indique le type de commande (dans ce cas, `sendEvent`) et (2) une charge utile contenant un objet `xdm` qui fournit les champs de consentement requis sous la forme JSON :
 
