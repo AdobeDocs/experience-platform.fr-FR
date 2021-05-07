@@ -6,16 +6,16 @@ description: Le point de terminaison /auditlog de l'API de registre de Schéma v
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '400'
 ht-degree: 4%
 
 ---
 
 # Point de terminaison du journal d&#39;audit
 
-Pour chaque ressource de modèle de données d’expérience (XDM), [!DNL Schema Registry] conserve un journal de toutes les modifications survenues entre différentes mises à jour. Le point de terminaison `/auditlog` de l&#39;API [!DNL Schema Registry] vous permet de récupérer un journal d&#39;audit pour toute classe, mixin, type de données ou schéma spécifié par l&#39;ID.
+Pour chaque ressource de modèle de données d’expérience (XDM), [!DNL Schema Registry] conserve un journal de toutes les modifications survenues entre différentes mises à jour. Le point de terminaison `/auditlog` de l&#39;API [!DNL Schema Registry] vous permet de récupérer un journal d&#39;audit pour toute classe, groupe de champs de schéma, type de données ou schéma spécifié par l&#39;ID.
 
 ## Prise en main
 
@@ -25,7 +25,7 @@ Le point de terminaison `/auditlog` fait partie des appels de procédure distant
 
 ## Récupérer un journal d&#39;audit pour une ressource
 
-Vous pouvez récupérer un journal d&#39;audit pour n&#39;importe quelle classe, mixin, type de données ou schéma dans la bibliothèque de Schémas en spécifiant l&#39;identifiant de la ressource dans le chemin d&#39;accès d&#39;une demande de GET au point de terminaison `/auditlog`.
+Vous pouvez récupérer un journal d&#39;audit pour toute classe, groupe de champs, type de données ou schéma dans la bibliothèque de Schémas en spécifiant l&#39;identifiant de la ressource dans le chemin d&#39;accès d&#39;une demande de GET au point de terminaison `/auditlog`.
 
 **Format d’API**
 
@@ -39,11 +39,11 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 **Requête**
 
-La requête suivante récupère le journal d&#39;audit pour un mixin `Restaurant`.
+La requête suivante récupère le journal d&#39;audit pour un groupe de champs `Restaurant`.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -57,11 +57,11 @@ Une réponse positive renvoie une liste chronologique des changements apportés 
 ```json
 [
   {
-    "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+    "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
     "auditTrails": [
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
+        "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "xdmType": "fieldgroups",
         "action": "add",
         "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/brand",
         "value": {
@@ -73,8 +73,8 @@ Une réponse positive renvoie une liste chronologique des changements apportés 
         }
       },
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
+        "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "xdmType": "fieldgroups",
         "action": "add",
         "path": "/meta:usageCount",
         "value": 0
