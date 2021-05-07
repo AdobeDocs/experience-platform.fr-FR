@@ -7,10 +7,10 @@ type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3682'
-ht-degree: 17%
+source-wordcount: '3751'
+ht-degree: 12%
 
 ---
 
@@ -29,7 +29,7 @@ Si vous préférez composer un schéma à l&#39;aide de l&#39;API [!DNL Schema R
 Ce tutoriel exige une compréhension pratique des différents aspects de Adobe Experience Platform impliqués dans la création de schémas. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux concepts suivants :
 
 * [[!DNL Experience Data Model (XDM)]](../home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
-   * [Principes de base de la composition des schémas](../schema/composition.md) : présentation des schémas XDM et de leurs blocs de création, notamment les classes, les mixins, les types de données et les champs.
+   * [Principes de base de la composition](../schema/composition.md) des schémas : Présentation des schémas XDM et de leurs blocs de création, y compris les classes, les groupes de champs de schéma, les types de données et les champs individuels.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 ## Ouvrez l&#39;espace de travail [!UICONTROL Schémas] {#browse}.
@@ -48,9 +48,9 @@ Pour les besoins de ce didacticiel, sélectionnez **[!UICONTROL Profil individue
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-Puisque vous avez choisi une classe XDM standard pour baser le schéma, la boîte de dialogue **[!UICONTROL Ajouter mixin]** s&#39;affiche, ce qui vous permet de immédiatement début en ajoutant des champs au schéma. Pour l’instant, sélectionnez **[!UICONTROL Annuler]** pour quitter la boîte de dialogue.
+Puisque vous avez choisi une classe XDM standard pour la base du schéma, la boîte de dialogue **[!UICONTROL Ajouter le groupe de champs]** s&#39;affiche, vous permettant de immédiatement début l&#39;ajout de champs au schéma. Pour l’instant, sélectionnez **[!UICONTROL Annuler]** pour quitter la boîte de dialogue.
 
-![](../images/tutorials/create-schema/cancel-mixin.png)
+![](../images/tutorials/create-schema/cancel-field-group.png)
 
 Le [!DNL Schema Editor] apparaît. C’est le canevas sur lequel vous allez composer votre schéma. Un schéma sans titre est automatiquement créé dans la section **[!UICONTROL Structure]** du canevas lorsque vous arrivez dans l’éditeur, avec les champs standard inclus dans tous les schémas en fonction de cette classe. La classe affectée au schéma est également répertoriée sous **[!UICONTROL Classe]** dans la section **[!UICONTROL Composition]**.
 
@@ -58,7 +58,7 @@ Le [!DNL Schema Editor] apparaît. C’est le canevas sur lequel vous allez comp
 
 >[!NOTE]
 >
->Vous pouvez [modifier la classe d’un schéma](#change-class) à tout moment au cours du processus de composition initial avant que le schéma ne soit enregistré, mais cela doit être fait avec la plus grande prudence. Les mixins ne sont compatibles qu&#39;avec certaines classes. Par conséquent, modifier la classe réinitialise le canevas et les champs que vous avez ajoutés.
+>Vous pouvez [modifier la classe d’un schéma](#change-class) à tout moment au cours du processus de composition initial avant que le schéma ne soit enregistré, mais cela doit être fait avec la plus grande prudence. Les groupes de champs ne sont compatibles qu&#39;avec certaines classes. Par conséquent, la modification de la classe réinitialise le canevas et les champs que vous avez ajoutés.
 
 Utilisez les champs situés à droite de l’éditeur pour fournir un nom d’affichage et une description facultative du schéma. Une fois qu’un nom est saisi, le canevas se met à jour pour tenir compte du nouveau nom du schéma.
 
@@ -72,35 +72,35 @@ Plusieurs éléments importants doivent être pris en compte lors du choix d’u
 
 Ce didacticiel compose un schéma d’assimilation de données relatives aux membres d’un programme de fidélité. Par conséquent, le schéma est nommé &quot;Membres de fidélité&quot;.
 
-## Ajout d’un mixin {#mixin}
+## Ajouter un groupe de champs {#field-group}
 
-Vous pouvez maintenant commencer à ajouter des champs à votre schéma grâce à l’ajout de mixins. Un mixin est un groupe d’un ou de plusieurs champs qui sont souvent utilisés ensemble pour décrire un concept particulier. Ce tutoriel utilise des mixins pour décrire les membres du programme de fidélité et recueillir des informations clés telles que le nom, la date d’anniversaire, le numéro de téléphone, l’adresse, etc.
+Vous pouvez maintenant commencer à ajouter des champs à votre schéma en ajoutant des groupes de champs. Un groupe de champs est un groupe de champs qui sont souvent utilisés ensemble pour décrire un concept particulier. Ce didacticiel utilise des groupes de champs pour décrire les membres du programme de fidélité et capturer des informations clés telles que le nom, l’anniversaire, le numéro de téléphone, l’adresse, etc.
 
-Pour ajouter un mixin, sélectionnez **[!UICONTROL Ajouter]** dans la sous-section **[!UICONTROL Mixins]**.
+Pour ajouter un groupe de champs, sélectionnez **[!UICONTROL Ajouter]** dans la sous-section **[!UICONTROL Groupes de champs]**.
 
-![](../images/tutorials/create-schema/add_mixin_button.png)
+![](../images/tutorials/create-schema/add-field-group-button.png)
 
-Une nouvelle boîte de dialogue s’affiche, affichant une liste de mixins disponibles. Chaque mixin n&#39;est destiné qu&#39;à une classe spécifique. Par conséquent, la boîte de dialogue ne liste que les mixins compatibles avec la classe que vous avez sélectionnée (dans ce cas, la classe [!DNL XDM Individual Profile]). Si vous utilisez une classe XDM standard, la liste des mixins sera triée intelligemment en fonction de la popularité de l’utilisation.
+Une nouvelle boîte de dialogue s’affiche, affichant une liste de groupes de champs disponibles. Chaque groupe de champs n&#39;est destiné qu&#39;à une classe spécifique. Par conséquent, la boîte de dialogue ne liste que les groupes de champs compatibles avec la classe que vous avez sélectionnée (dans ce cas, la classe [!DNL XDM Individual Profile]). Si vous utilisez une classe XDM standard, la liste des groupes de champs sera triée intelligemment en fonction de la popularité de l’utilisation.
 
-![](../images/tutorials/create-schema/mixin-popularity.png)
+![](../images/tutorials/create-schema/field-group-popularity.png)
 
-Si vous sélectionnez un mixin dans la liste, il apparaît dans le rail de droite. Vous pouvez sélectionner plusieurs mixins si vous le souhaitez, en ajoutant chacun à la liste dans le rail de droite avant de confirmer. En outre, une icône s’affiche sur le côté droit du mixin actuellement sélectionné, ce qui vous permet de prévisualisation de la structure des champs fournis.
+Si vous sélectionnez un groupe de champs dans la liste, il apparaît dans le rail de droite. Vous pouvez sélectionner plusieurs groupes de champs si vous le souhaitez, en ajoutant chacun à la liste dans le rail de droite avant de confirmer. En outre, une icône s’affiche sur le côté droit du groupe de champs actuellement sélectionné, ce qui vous permet de prévisualisation la structure des champs fournis.
 
-![](../images/tutorials/create-schema/preview-mixin-button.png)
+![](../images/tutorials/create-schema/preview-field-group-button.png)
 
-Lors de la prévisualisation d&#39;un mixin, une description détaillée du schéma du mixin est fournie dans le rail droit. Vous pouvez également parcourir les champs du mixin dans la trame fournie. Lorsque vous sélectionnez différents champs, le rail de droite se met à jour pour afficher des détails sur le champ en question. Sélectionnez **[!UICONTROL Précédent]** lorsque vous avez terminé de prévisualiser pour revenir à la boîte de dialogue de sélection du mixin.
+Lors de la prévisualisation d’un groupe de champs, une description détaillée de l’schéma du groupe de champs est fournie dans le rail de droite. Vous pouvez également parcourir les champs du groupe de champs dans le canevas fourni. Lorsque vous sélectionnez différents champs, le rail de droite se met à jour pour afficher des détails sur le champ en question. Sélectionnez **[!UICONTROL Précédent]** lorsque vous avez terminé de prévisualiser pour revenir à la boîte de dialogue de sélection de groupe de champs.
 
-![](../images/tutorials/create-schema/preview-mixin.png)
+![](../images/tutorials/create-schema/preview-field-group.png)
 
-Pour ce didacticiel, sélectionnez le mixin **[!UICONTROL Détails démographiques]**, puis **[!UICONTROL Ajouter le mixin]**.
+Pour ce didacticiel, sélectionnez le groupe de champs **[!UICONTROL Détails démographiques]**, puis **[!UICONTROL Ajouter le groupe de champs]**.
 
-![](../images/tutorials/create-schema/add_mixin_person_details.png)
+![](../images/tutorials/create-schema/demographic-details.png)
 
-Le canevas du schéma réapparaît. La section **[!UICONTROL Mixins]** liste désormais &quot;[!UICONTROL Détails démographiques]&quot; et la section **[!UICONTROL Structure]** comprend les champs fournis par le mixin. Vous pouvez sélectionner le nom du mixin sous la section **[!UICONTROL Mixins]** pour mettre en surbrillance les champs spécifiques qu’il fournit dans la trame.
+Le canevas du schéma réapparaît. La section **[!UICONTROL Groupes de champs]** liste désormais &quot;[!UICONTROL Détails démographiques]&quot; et la section **[!UICONTROL Structure]** comprend les champs fournis par le groupe de champs. Vous pouvez sélectionner le nom du groupe de champs sous la section **[!UICONTROL Groupes de champs]** pour mettre en surbrillance les champs spécifiques qu’il fournit dans la trame.
 
-![](../images/tutorials/create-schema/person_details_structure.png)
+![](../images/tutorials/create-schema/demographic-details-structure.png)
 
-Ce mixin fournit plusieurs champs sous le nom de niveau supérieur `person` avec le type de données &quot;[!UICONTROL Personne]&quot;. Ce groupe de champs décrit les informations sur un individu, notamment son nom, sa date de naissance et son genre.
+Ce groupe de champs fournit plusieurs champs sous le nom de niveau supérieur `person` avec le type de données &quot;[!UICONTROL Personne]&quot;. Ce groupe de champs décrit les informations sur un individu, notamment son nom, sa date de naissance et son genre.
 
 >[!NOTE]
 >
@@ -110,49 +110,49 @@ Notez que le champ `name` possède un type de données &quot;[!UICONTROL Nom de 
 
 Sélectionnez les différents champs de la zone de travail pour afficher les champs supplémentaires qui contribuent à la structure du schéma.
 
-## Ajout d’un autre mixin {#mixin-2}
+## Ajouter un autre groupe de champs {#field-group-2}
 
-Vous pouvez maintenant répéter les mêmes étapes pour ajouter un autre mixin. Lorsque vous vue cette fois la boîte de dialogue **[!UICONTROL Ajouter le mixin]**, notez que le mixin &quot;[!UICONTROL Détails démographiques]&quot; a été grisé et que la case à cocher située en regard de celui-ci ne peut pas être sélectionnée. Cela vous évite de dupliquer accidentellement des mixins que vous avez déjà inclus dans le schéma actuel.
+Vous pouvez maintenant répéter les mêmes étapes pour ajouter un autre groupe de champs. Lorsque vous vue cette fois la boîte de dialogue **[!UICONTROL Ajouter le groupe de champs]**, notez que le groupe de champs &quot;[!UICONTROL Détails démographiques]&quot; a été grisé et que la case à cocher située en regard de celui-ci ne peut pas être sélectionnée. Cela vous évite de dupliquer accidentellement des groupes de champs que vous avez déjà inclus dans le schéma actuel.
 
-Pour ce didacticiel, sélectionnez le mixin &quot;[!DNL Personal Contact Details]&quot; dans la boîte de dialogue, puis sélectionnez **[!UICONTROL Ajouter le mixin]** pour l’ajouter au schéma.
+Pour ce didacticiel, sélectionnez le groupe de champs &quot;[!DNL Personal Contact Details]&quot; dans la boîte de dialogue, puis sélectionnez **[!UICONTROL Ajouter le groupe de champs]** pour l&#39;ajouter au schéma.
 
-![](../images/tutorials/create-schema/add_mixin_personal_details.png)
+![](../images/tutorials/create-schema/personal-contact-details.png)
 
-Une fois ajouté, le canevas réapparaît. &quot;[!UICONTROL Détails du contact personnel]&quot; est maintenant répertorié sous **[!UICONTROL Mixins]** dans la section **[!UICONTROL Composition]**, et les champs pour l&#39;adresse de domicile, le téléphone portable, et plus ont été ajoutés sous **[!UICONTROL Structure]**.
+Une fois ajouté, le canevas réapparaît. &quot;[!UICONTROL Détails du contact personnel]&quot; est maintenant répertorié sous **[!UICONTROL Groupes de champs]** dans la section **[!UICONTROL Composition]**, et les champs pour l&#39;adresse de domicile, le téléphone portable, et plus ont été ajoutés sous **[!UICONTROL Structure]**.
 
 Tout comme le champ `name`, les champs que vous venez d’ajouter représentent des concepts à plusieurs champs. Par exemple, `homeAddress` possède un type de données &quot;[!UICONTROL Adresse postale]&quot; et `mobilePhone` un type de données &quot;[!UICONTROL Numéro de téléphone]&quot;. Vous pouvez sélectionner chacun de ces champs pour les développer et afficher les champs supplémentaires inclus dans le type de données.
 
-![](../images/tutorials/create-schema/personal_details_structure.png)
+![](../images/tutorials/create-schema/personal-contact-details-structure.png)
 
-## Définir un mixin personnalisé {#define-mixin}
+## Définir un groupe de champs personnalisé {#define-field-group}
 
 Le schéma &quot;[!UICONTROL Membres de fidélité]&quot; est destiné à capturer les données relatives aux membres d&#39;un programme de fidélité. Il nécessite donc certains champs spécifiques liés à la fidélité.
 
-Il existe un mixin [!UICONTROL Détails de fidélité] standard que vous pouvez ajouter au schéma pour capturer des champs communs liés à un programme de fidélité. Bien que vous soyez fortement encouragé à utiliser des mixins standard pour représenter des concepts capturés par vos schémas, la structure du mixin de fidélité standard peut ne pas être en mesure de capturer toutes les données pertinentes pour votre programme de fidélité particulier. Dans ce scénario, vous pouvez choisir de définir un nouveau mixin personnalisé pour capturer ces champs à la place.
+Il existe un groupe de champs [!UICONTROL Détails de fidélité] standard que vous pouvez ajouter au schéma pour capturer des champs communs liés à un programme de fidélité. Bien que vous soyez fortement encouragé à utiliser des groupes de champs standard pour représenter des concepts capturés par vos schémas, la structure du groupe de champs de fidélité standard peut ne pas être en mesure de capturer toutes les données pertinentes pour votre programme de fidélité particulier. Dans ce scénario, vous pouvez choisir de définir un nouveau groupe de champs personnalisé pour capturer ces champs à la place.
 
-Ouvrez à nouveau la boîte de dialogue **[!UICONTROL Ajouter le mixin]**, mais cette fois, sélectionnez **[!UICONTROL Créer un nouveau mixin]** près du haut. Vous êtes alors invité à fournir un nom d’affichage et une description pour votre mixin.
+Ouvrez à nouveau la boîte de dialogue **[!UICONTROL Ajouter le groupe de champs]**, mais cette fois, sélectionnez **[!UICONTROL Créer un groupe de champs]** près du haut. Vous êtes alors invité à fournir un nom d’affichage et une description pour votre groupe de champs.
 
-![](../images/tutorials/create-schema/mixin_create_new.png)
+![](../images/tutorials/create-schema/create-new-field-group.png)
 
-Comme pour les noms de classe, le nom du mixin doit être court et simple, décrivant ce que le mixin va apporter au schéma. Ces noms sont également uniques. Vous ne pourrez donc pas réutiliser le nom et devrez donc veiller à ce qu’il soit suffisamment spécifique.
+Comme pour les noms de classe, le nom du groupe de champs doit être court et simple, décrivant ce que le groupe de champs contribuera au schéma. Ces noms sont également uniques. Vous ne pourrez donc pas réutiliser le nom et devrez donc veiller à ce qu’il soit suffisamment spécifique.
 
-Pour ce tutoriel, nommez le nouveau mixin « Loyalty Details ».
+Pour ce didacticiel, nommez le nouveau groupe de champs &quot;Détails de fidélité&quot;.
 
-Sélectionnez **[!UICONTROL Ajouter le mixin]** pour revenir au [!DNL Schema Editor]. &quot;[!UICONTROL Les détails de fidélité]&quot; doivent maintenant apparaître sous **[!UICONTROL Mixins]** à gauche du canevas, mais aucun champ n&#39;y est associé pour le moment et, par conséquent, aucun nouveau champ n&#39;apparaît sous **[!UICONTROL Structure]**.
+Sélectionnez **[!UICONTROL Ajouter le groupe de champs]** pour revenir à [!DNL Schema Editor]. &quot;[!UICONTROL Les détails de fidélité]&quot; doivent maintenant apparaître sous **[!UICONTROL Groupes de champs]** à gauche du canevas, mais aucun champ n&#39;y est associé pour le moment et, par conséquent, aucun nouveau champ n&#39;apparaît sous **[!UICONTROL Structure]**.
 
-## Ajout de champs au mixin {#mixin-fields}
+## Ajouter des champs au groupe de champs {#field-group-fields}
 
-Maintenant que vous avez créé le mixin « Loyalty Details », il est temps de définir les champs que le mixin va ajouter au schéma.
+Maintenant que vous avez créé le groupe de champs &quot;Détails de fidélité&quot;, il est temps de définir les champs que le groupe de champs contribuera au schéma.
 
-Pour commencer, sélectionnez le nom du mixin dans la section **[!UICONTROL Mixins]**. Une fois que vous avez effectué cette opération, les propriétés du mixin s’affichent sur le côté droit de l’éditeur et une icône **plus (+)** apparaît en regard du nom du schéma sous **[!UICONTROL Structure]**.
+Pour commencer, sélectionnez le nom du groupe de champs dans la section **[!UICONTROL Groupes de champs]**. Une fois que vous avez effectué cette opération, les propriétés du groupe de champs s’affichent sur le côté droit de l’éditeur et une icône **plus (+)** apparaît en regard du nom du schéma sous **[!UICONTROL Structure]**.
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
 Sélectionnez l&#39;icône **plus (+)** en regard de &quot;[!DNL Loyalty Members]&quot; pour créer un nouveau noeud dans la structure. Ce noeud (appelé `_tenantId` dans cet exemple) représente l’ID de client de votre organisation IMS, précédé d’un trait de soulignement. La présence de l’identifiant du client indique que les champs que vous ajoutez sont contenus dans l’espace de noms de votre organisation.
 
-En d’autres termes, les champs que vous ajoutez sont propres à votre organisation et seront enregistrés dans [!DNL Schema Registry] dans une zone spécifique accessible uniquement à votre organisation. Les champs que vous définissez doivent toujours être ajoutés à votre espace de nommage locataire afin d’éviter les collisions avec des noms provenant d’autres classes standard, mixins, types de données et champs.
+En d’autres termes, les champs que vous ajoutez sont propres à votre organisation et seront enregistrés dans [!DNL Schema Registry] dans une zone spécifique accessible uniquement à votre organisation. Les champs que vous définissez doivent toujours être ajoutés à votre espace de nommage locataire afin d’éviter les collisions avec des noms provenant d’autres classes standard, groupes de champs, types de données et champs.
 
-À l’intérieur de ce noeud, l’espace de noms est un &quot;[!UICONTROL Nouveau champ]&quot;. Il s’agit du début du mixin &quot;[!UICONTROL Détails de fidélité]&quot;.
+À l’intérieur de ce noeud, l’espace de noms est un &quot;[!UICONTROL Nouveau champ]&quot;. Il s’agit du début du groupe de champs &quot;[!UICONTROL Détails de fidélité]&quot;.
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
@@ -179,7 +179,7 @@ Différentes options de contraintes sont disponibles selon le type de données s
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Ajouter plus de champs au mixin {#mixin-fields-2}
+## Ajouter plus de champs au groupe de champs {#field-group-fields-2}
 
 Maintenant que vous avez ajouté le champ `loyaltyId`, vous pouvez ajouter d’autres champs pour capturer des informations relatives à la fidélité, telles que :
 
@@ -192,7 +192,7 @@ Une fois terminé, l’objet Fidélité contient des champs pour l’identifiant
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## Ajouter un champ enum au mixin {#enum}
+## Ajouter un champ enum au groupe de champs {#enum}
 
 Lors de la définition de champs dans [!DNL Schema Editor], vous pouvez appliquer d&#39;autres options aux types de champs de base afin de limiter davantage les données que le champ peut contenir. Les cas d’utilisation de ces contraintes sont expliqués dans le tableau suivant :
 
@@ -226,7 +226,7 @@ Une fois toutes les propriétés de champ remplies, sélectionnez **[!UICONTROL 
 
 L&#39;objet `loyalty` contient désormais plusieurs champs spécifiques à la fidélité et représente une structure de données commune qui peut s&#39;avérer utile dans d&#39;autres schémas. Le [!DNL Schema Editor] permet d&#39;appliquer facilement des objets multichamps réutilisables en convertissant la structure de ces objets en types de données.
 
-Les types de données permettent l’utilisation cohérente de structures à champs multiples, avec plus de flexibilité que les mixins, car ils peuvent être utilisés n’importe où dans un schéma. Pour ce faire, définissez la valeur **[!UICONTROL Type]** du champ sur celle de tout type de données défini dans [!DNL Schema Registry].
+Les types de données permettent l’utilisation cohérente de structures à champs multiples et offrent plus de flexibilité qu’un groupe de champs, car ils peuvent être utilisés n’importe où dans un schéma. Pour ce faire, définissez la valeur **[!UICONTROL Type]** du champ sur celle de tout type de données défini dans [!DNL Schema Registry].
 
 Pour convertir l&#39;objet `loyalty` en type de données, sélectionnez le champ `loyalty` sous **[!UICONTROL Structure]**, puis sélectionnez **[!UICONTROL Convertir en nouveau type de données]** sur le côté droit de l&#39;éditeur sous **[!UICONTROL Propriétés du champ]**. Une fenêtre contextuelle verte s’affiche, confirmant que l’objet a bien été converti.
 
@@ -244,17 +244,17 @@ Dans un schéma ultérieur, vous pouvez désormais attribuer un champ sous la fo
 
 ## Rechercher et filtrer les champs de schéma
 
-Votre schéma contient désormais plusieurs mixins en plus des champs fournis par sa classe de base. Lorsque vous travaillez avec des schémas plus volumineux, vous pouvez cocher les cases en regard des noms de mixin dans le rail de gauche pour filtrer les champs affichés uniquement ceux fournis par les mixins qui vous intéressent.
+Votre schéma contient désormais plusieurs groupes de champs en plus des champs fournis par sa classe de base. Lorsque vous travaillez avec des schémas plus volumineux, vous pouvez cocher les cases en regard des noms des groupes de champs dans le rail de gauche pour filtrer les champs affichés uniquement ceux fournis par les groupes de champs qui vous intéressent.
 
-![](../images/tutorials/create-schema/filter-by-mixin.png)
+![](../images/tutorials/create-schema/filter-by-field-group.png)
 
-Si vous recherchez un champ spécifique dans votre schéma, vous pouvez également utiliser la barre de recherche pour filtrer les champs affichés par nom, quel que soit le mixin sous lequel ils sont fournis.
+Si vous recherchez un champ spécifique dans votre schéma, vous pouvez également utiliser la barre de recherche pour filtrer les champs affichés par nom, quel que soit le groupe de champs sous lequel ils sont fournis.
 
 ![](../images/tutorials/create-schema/search.png)
 
 >[!IMPORTANT]
 >
->La fonction de recherche tient compte des filtres de mixin sélectionnés lors de l’affichage des champs correspondants. Si une requête de recherche n’affiche pas les résultats attendus, vous devrez peut-être vérifier par doublon que vous ne filtrez aucun mixin pertinent.
+>La fonction de recherche tient compte des filtres de groupes de champs sélectionnés lors de l’affichage des champs correspondants. Si une requête de recherche n&#39;affiche pas les résultats attendus, vous devrez peut-être vérifier par doublon que vous n&#39;excluez aucun groupe de champs approprié.
 
 ## Définition d’un champ de schéma comme champ d’identité {#identity-field}
 
@@ -334,7 +334,7 @@ La vidéo suivante montre comment créer un schéma simple dans l&#39;[!DNL Plat
 
 >[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
-La vidéo ci-dessous est destinée à vous aider à mieux comprendre comment travailler avec des mixins et des classes.
+La vidéo suivante vise à vous aider à mieux comprendre comment travailler avec des groupes et des classes de terrain.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
@@ -352,6 +352,6 @@ Vous pouvez modifier la classe d&#39;un schéma à tout moment pendant le proces
 
 >[!WARNING]
 >
->Réassigner la classe à un schéma doit être fait avec une extrême prudence. Les mixins ne sont compatibles qu&#39;avec certaines classes. Par conséquent, modifier la classe réinitialise le canevas et les champs que vous avez ajoutés.
+>Réassigner la classe à un schéma doit être fait avec une extrême prudence. Les groupes de champs ne sont compatibles qu&#39;avec certaines classes. Par conséquent, la modification de la classe réinitialise le canevas et les champs que vous avez ajoutés.
 
 Pour savoir comment modifier la classe d&#39;un schéma, consultez le guide intitulé [gestion des schémas dans l&#39;interface utilisateur](../ui/resources/schemas.md).
