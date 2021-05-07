@@ -6,10 +6,10 @@ topic-legacy: Getting started
 description: En savoir plus sur les événements, les intrants et les extrants requis utilisés par l’API client.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2876'
-ht-degree: 17%
+source-wordcount: '2890'
+ht-degree: 16%
 
 ---
 
@@ -36,10 +36,10 @@ Le tableau ci-dessous présente la terminologie commune utilisée dans ce docume
 | Terme | Définition |
 | --- | --- |
 | [Modèle de données d’expérience (XDM)](../../xdm/home.md) | XDM est le cadre fondateur qui permet à Adobe Experience Cloud, soutenu par Adobe Experience Platform, de transmettre le bon message à la bonne personne, sur le bon canal, exactement au bon moment. La méthodologie sur laquelle Experience Platform repose, à savoir le système XDM, rend les schémas de modèles de données d’expérience opérationnels pour qu’ils soient utilisés par les services de Platform. |
-| Schéma XDM | Experience Platform utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. En définissant les données de manière cohérente sur l’ensemble des systèmes, il est plus simple de leur donner du sens et donc d’en tirer profit. Avant que les données puissent être ingérées dans la plate-forme, un schéma doit être composé pour décrire la structure des données et fournir des contraintes au type de données pouvant être contenu dans chaque champ. Les schémas se composent d&#39;une classe XDM de base et de mixins nuls ou plus. |
+| Schéma XDM | Experience Platform utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. En définissant les données de manière cohérente sur l’ensemble des systèmes, il est plus simple de leur donner du sens et donc d’en tirer profit. Avant que les données puissent être ingérées dans la plate-forme, un schéma doit être composé pour décrire la structure des données et fournir des contraintes au type de données pouvant être contenu dans chaque champ. Les schémas se composent d&#39;une classe XDM de base et de zéro ou plusieurs groupes de champs de schéma. |
 | Classe XDM | Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma, qui est affectée à un schéma lors de sa création. Les classes XDM décrivent le plus petit nombre de propriétés qu’un schéma doit contenir pour représenter un comportement de données spécifique. |
-| [Mixins](../../xdm/schema/composition.md) | Composant qui définit un ou plusieurs champs d’un schéma. Les mixins appliquent la manière dont leurs champs apparaissent dans la hiérarchie de l’schéma et présentent donc la même structure dans chaque schéma dans lequel ils sont inclus. Les mixins ne sont compatibles qu’avec des classes spécifiques, identifiées par leur attribut `meta:intendedToExtend`. |
-| [Type de données](../../xdm/schema/composition.md) | Composant pouvant également fournir un ou plusieurs champs pour un schéma. Toutefois, contrairement aux mixins, les types de données ne sont pas limités à une classe particulière. Ainsi, les types de données constituent une option plus souple pour décrire des structures de données communes réutilisables sur plusieurs schémas avec des classes potentiellement différentes. Les types de données décrits dans le présent document sont pris en charge par les schémas CEE et Adobe Analytics. |
+| [Groupes de champs](../../xdm/schema/composition.md) | Composant qui définit un ou plusieurs champs d’un schéma. Les groupes de champs appliquent la manière dont leurs champs apparaissent dans la hiérarchie de l’schéma et présentent donc la même structure dans chaque schéma dans lequel ils sont inclus. Les groupes de champs ne sont compatibles qu&#39;avec des classes spécifiques, identifiées par leur attribut `meta:intendedToExtend`. |
+| [Type de données](../../xdm/schema/composition.md) | Composant pouvant également fournir un ou plusieurs champs pour un schéma. Cependant, contrairement aux groupes de champs, les types de données ne sont pas limités à une classe particulière. Ainsi, les types de données constituent une option plus souple pour décrire des structures de données communes réutilisables sur plusieurs schémas avec des classes potentiellement différentes. Les types de données décrits dans le présent document sont pris en charge par les schémas CEE et Adobe Analytics. |
 | Churn | Mesure du pourcentage de comptes qui annulent ou choisissent de ne pas renouveler leurs abonnements. Un taux de rendement élevé peut avoir une incidence négative sur les recettes périodiques mensuelles (RMR) et peut également indiquer un mécontentement à l’égard d’un produit ou d’un service. |
 | [Real-time Customer Profile](../../profile/home.md) | Real-time Customer Profile fournit un profil de consommateur centralisé pour une gestion d’expérience ciblée et personnalisée. Chaque profil contient des données agrégées sur tous les systèmes ainsi que des comptes horodatés exploitables d’événements impliquant les personnes concernées par l’un des systèmes que vous utilisez avec Experience Platform. |
 
@@ -49,7 +49,7 @@ Le tableau ci-dessous présente la terminologie commune utilisée dans ce docume
 >
 > L’IA du client détermine automatiquement quels événements sont utiles pour les prédictions et déclenche un avertissement si les données disponibles ne sont pas suffisantes pour générer des prédictions de qualité.
 
-L’IA du client prend en charge les données CEE, Adobe Analytics et Adobe Audience Manager. Le schéma CEE exige que vous ajoutiez des mixins pendant le processus de création du schéma. Si vous utilisez des jeux de données Adobe Analytics ou Adobe Audience Manager, le connecteur source mappe directement les événements standard (Commerce, Détails de la page Web, Application et Recherche) répertoriés ci-dessous pendant le processus de connexion.
+L’IA du client prend en charge les données CEE, Adobe Analytics et Adobe Audience Manager. Le schéma CEE exige que vous ajoutiez des groupes de champs au cours du processus de création de schéma. Si vous utilisez des jeux de données Adobe Analytics ou Adobe Audience Manager, le connecteur source mappe directement les événements standard (Commerce, Détails de la page Web, Application et Recherche) répertoriés ci-dessous pendant le processus de connexion.
 
 Pour plus d’informations sur le mappage des données Adobe Analytics ou des données d’Audience Manager, consultez le guide [Mappages de champs Analytics](../../sources/connectors/adobe-applications/analytics.md) ou [Mappages de champs d’Audience Manager](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
 
@@ -57,18 +57,17 @@ Pour plus d’informations sur le mappage des données Adobe Analytics ou des do
 
 Les Événements d’expérience XDM sont utilisés pour déterminer divers comportements de client. Selon la structure de vos données, les types d&#39;événement répertoriés ci-dessous peuvent ne pas englober tous les comportements de vos clients. Il vous appartient de déterminer quels champs disposent des données nécessaires pour identifier clairement et sans ambiguïté l’activité des utilisateurs Web. En fonction de l’objectif de prédiction, les champs nécessaires peuvent changer.
 
-L’IA du client repose sur différents types d&#39;événement pour la création de fonctionnalités de modèle. Ces types d&#39;événement sont automatiquement ajoutés à votre schéma à l’aide de plusieurs mixins XDM.
+L’IA du client repose sur différents types d&#39;événement pour la création de fonctionnalités de modèle. Ces types d&#39;événement sont automatiquement ajoutés à votre schéma à l’aide de plusieurs groupes de champs XDM.
 
 >[!NOTE]
 >
->Si vous utilisez des données Adobe Analytics ou Adobe Audience Manager, le schéma est automatiquement créé avec les événements standard requis pour capturer vos données. Si vous créez votre propre schéma CEE personnalisé pour capturer des données, vous devez tenir compte des mixins nécessaires pour capturer vos données.
+>Si vous utilisez des données Adobe Analytics ou Adobe Audience Manager, le schéma est automatiquement créé avec les événements standard requis pour capturer vos données. Si vous créez votre propre schéma CEE personnalisé pour capturer des données, vous devez tenir compte des groupes de champs nécessaires pour capturer vos données.
 
 Il n&#39;est pas nécessaire de disposer de données pour chacun des événements standard énumérés ci-dessous, mais certains événements sont requis pour certains scénarios. Si vous disposez de l’une des données de événement standard, il est recommandé de l’inclure dans votre schéma. Par exemple, si vous souhaitez créer une application d’API client pour prédire les événements d’achat, il serait utile d’avoir des données des types de données `Commerce` et `Web page details`.
 
-Pour vue d’un mixin dans l’interface utilisateur de la plateforme, sélectionnez l’onglet **[!UICONTROL Schémas]** dans le rail de gauche, puis sélectionnez l’onglet **[!UICONTROL Mixins]**.
+Pour vue d’un groupe de champs dans l’interface utilisateur de la plateforme, sélectionnez l’onglet **[!UICONTROL Schémas]** dans le rail de gauche, puis sélectionnez l’onglet **[!UICONTROL Groupes de champs]**.
 
-
-| Mixin | Type d&#39;événement | Chemin du champ XDM |
+| Groupe de champs | Type d&#39;événement | Chemin du champ XDM |
 | --- | --- | --- |
 | [!UICONTROL Détails du commerce] | order | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
 |  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li> |
@@ -118,7 +117,7 @@ Outre les données minimales requises, l’API du client fonctionne également m
 
 ### Exemples de scénarios
 
-Dans cette section, différents scénarios pour les instances d’API client sont décrits ainsi que les types d&#39;événement requis et recommandés. Pour plus d&#39;informations sur le mixin et son chemin de champ, consultez le [tableau de événements standard](#standard-events) ci-dessus.
+Dans cette section, différents scénarios pour les instances d’API client sont décrits ainsi que les types d&#39;événement requis et recommandés. Consultez le [tableau de événements standard](#standard-events) ci-dessus pour plus d&#39;informations sur le groupe de champs et son chemin d&#39;accès.
 
 >[!NOTE]
 >
@@ -249,7 +248,7 @@ Tout des [types d&#39;événement](#standard-events) restants peut être requis 
 
 **Types d&#39;événement standard requis :**
 
-Pour utiliser les caractéristiques de Adobe Audience Manager, vous devez créer une connexion source à l&#39;aide du [connecteur source d&#39;Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). Le connecteur source crée automatiquement le schéma avec les mixins appropriés. Il n’est pas nécessaire d’ajouter manuellement des types d&#39;événement supplémentaires pour que le schéma fonctionne avec l’IA du client.
+Pour utiliser les caractéristiques de Adobe Audience Manager, vous devez créer une connexion source à l&#39;aide du [connecteur source d&#39;Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). Le connecteur source crée automatiquement le schéma avec le ou les groupes de champs appropriés. Il n’est pas nécessaire d’ajouter manuellement des types d&#39;événement supplémentaires pour que le schéma fonctionne avec l’IA du client.
 
 Lorsque vous configurez une nouvelle instance d’IA client, `audienceName` et `audienceID` peuvent être utilisés pour sélectionner une caractéristique particulière à évaluer lors de la définition de votre objectif.
 
