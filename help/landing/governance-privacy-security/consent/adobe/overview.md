@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Découvrez comment traiter les signaux de consentement des clients à Adobe Experience Platform en utilisant la norme Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1570'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Ce document fournit un aperçu de la manière de configurer les opérations de d
 >
 >Ce document se concentre sur le traitement des données de consentement en utilisant la norme Adobe. Si vous traitez les données de consentement conformément à la norme IAB Transparency and Consent Framework (TCF) 2.0, consultez le guide sur la [prise en charge de TCF 2.0 dans la plate-forme de données client en temps réel](../iab/overview.md).
 
-## Conditions préalables
+## Conditions préalables  
 
 Ce guide exige une compréhension pratique des divers services Experience Platform impliqués dans le traitement des données de consentement :
 
@@ -77,7 +77,7 @@ Une fois que vous avez créé un jeu de données [!DNL Profile] activé pour le 
 >
 >Si vous n’avez pas de jeux de données conflictuels, vous devez définir la priorité de l’horodatage pour votre stratégie de fusion. Cela permet de s’assurer que le dernier consentement spécifié par un client correspond au paramètre de consentement utilisé.
 
-Pour plus d&#39;informations sur la façon d&#39;utiliser les stratégies de fusion, consultez le [guide de l&#39;utilisateur des stratégies de fusion](../../../../profile/ui/merge-policies.md). Lors de la configuration de vos stratégies de fusion, vous devez vous assurer que vos profils incluent tous les attributs de consentement requis fournis par le mixin Contenus et Préférences, comme indiqué dans le guide sur la préparation des jeux de données [](./dataset.md).
+Pour plus d&#39;informations sur la façon d&#39;utiliser les stratégies de fusion, consultez le [guide de l&#39;utilisateur des stratégies de fusion](../../../../profile/ui/merge-policies.md). Lors de la configuration de vos stratégies de fusion, vous devez vous assurer que vos profils incluent tous les attributs de consentement requis fournis par le groupe de champs de schéma Contenus et préférences, comme indiqué dans le guide de [préparation des jeux de données](./dataset.md).
 
 ## Intégration des données de consentement dans la plate-forme
 
