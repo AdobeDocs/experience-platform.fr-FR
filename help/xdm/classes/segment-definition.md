@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Ce document fournit un aperçu de la classe de définition de segment dans le modèle de données d’expérience (XDM).
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Cette classe ne doit être utilisée que pour capturer des informations sur les définitions de segment elles-mêmes. Afin de capturer les informations d’appartenance aux segments dans vos données de profil, vous devez utiliser le [mixin Détails d’appartenance aux segments](../mixins/profile/segmentation.md) dans votre schéma [!UICONTROL Profil individuel XDM].
+>Cette classe ne doit être utilisée que pour capturer des informations sur les définitions de segment elles-mêmes. Afin de capturer les informations d&#39;appartenance aux segments dans vos données de profil, vous devez utiliser le [groupe de champs Détails d&#39;appartenance aux segments](../field-groups/profile/segmentation.md) dans votre schéma [!UICONTROL Profil individuel XDM].
 
 ![](../images/classes/segment-definition.png)
 
