@@ -6,16 +6,16 @@ description: Le point de terminaison /schémas de l'API Schéma Registry vous pe
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1418'
-ht-degree: 19%
+source-wordcount: '1431'
+ht-degree: 17%
 
 ---
 
 # Point de terminaison des schémas
 
-Un schéma peut être considéré comme le schéma directeur des données que vous souhaitez intégrer à Adobe Experience Platform. Chaque schéma est composé d’une classe et de zéro ou plusieurs mixins. Le point de terminaison `/schemas` de l&#39;API [!DNL Schema Registry] vous permet de gérer par programmation les schémas dans votre application d&#39;expérience.
+Un schéma peut être considéré comme le schéma directeur des données que vous souhaitez intégrer à Adobe Experience Platform. Chaque schéma est composé d&#39;une classe et de zéro ou plusieurs groupes de champs de schéma. Le point de terminaison `/schemas` de l&#39;API [!DNL Schema Registry] vous permet de gérer par programmation les schémas dans votre application d&#39;expérience.
 
 ## Prise en main
 
@@ -154,7 +154,7 @@ Une réponse réussie renvoie les détails du schéma. Les champs renvoyés dép
           "meta:xdmType": "object"
       },
       {
-          "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+          "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
           "type": "object",
           "meta:xdmType": "object"
       }
@@ -163,7 +163,7 @@ Une réponse réussie renvoie les détails du schéma. Les champs renvoyés dép
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
-      "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+      "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile"
@@ -193,7 +193,7 @@ Le processus de composition d’un schéma commence par l’affectation d’une 
 
 >[!NOTE]
 >
->L&#39;exemple d&#39;appel ci-dessous n&#39;est qu&#39;un exemple de base de la façon de créer un schéma dans l&#39;API, avec les exigences minimales de composition d&#39;une classe et pas de mixins. Pour obtenir des instructions complètes sur la création d’un schéma dans l’API, y compris sur l’affectation de champs à l’aide de mixins et de types de données, consultez le [didacticiel sur la création de schéma](../tutorials/create-schema-api.md).
+>L&#39;exemple d&#39;appel ci-dessous n&#39;est qu&#39;un exemple de base de la création d&#39;un schéma dans l&#39;API, avec les exigences minimales de composition d&#39;une classe et aucun groupe de champs. Pour obtenir des instructions complètes sur la création d’un schéma dans l’API, y compris sur l’affectation de champs à l’aide de groupes de champs et de types de données, consultez le [didacticiel sur la création de schémas](../tutorials/create-schema-api.md).
 
 **Format d’API**
 
@@ -227,7 +227,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `allOf` | Tableau d’objets, chaque objet faisant référence à une classe ou à un mixin dont les champs sont implémentés par le schéma. Chaque objet contient une propriété unique (`$ref`) dont la valeur représente `$id` de la classe ou du mixin que le nouveau schéma implémentera. Une classe doit être fournie, avec zéro ou plusieurs mixins supplémentaires. Dans l&#39;exemple ci-dessus, l&#39;objet unique du tableau `allOf` est la classe de schéma. |
+| `allOf` | Tableau d’objets, chaque objet faisant référence à une classe ou un groupe de champs dont les champs sont implémentés par le schéma. Chaque objet contient une propriété unique (`$ref`) dont la valeur représente `$id` de la classe ou du groupe de champs que le nouveau schéma implémentera. Une classe doit être fournie, avec zéro ou plusieurs groupes de champs supplémentaires. Dans l&#39;exemple ci-dessus, l&#39;objet unique du tableau `allOf` est la classe de schéma. |
 
 **Réponse**
 
@@ -268,7 +268,7 @@ Une réponse réussie renvoie un état HTTP 201 (Créé) et un payload qui cont
 
 L&#39;exécution d&#39;une demande de GET à [liste de tous les schémas](#list) dans le conteneur locataire inclurait désormais le nouveau schéma. Vous pouvez exécuter une requête de recherche [recherche (GET)](#lookup) à l’aide de l’URI `$id` codé en URL pour vue directement le nouveau schéma.
 
-Pour ajouter des champs supplémentaires à un schéma, vous pouvez effectuer une opération [PATCH](#patch) pour ajouter des mixins aux tableaux `allOf` et `meta:extends` du schéma.
+Pour ajouter des champs supplémentaires à un schéma, vous pouvez exécuter une opération [PATCH](#patch) pour ajouter des groupes de champs aux tableaux de schéma `allOf` et `meta:extends`.
 
 ## Mettre à jour un schéma {#put}
 
@@ -357,7 +357,7 @@ Vous pouvez mettre à jour une partie d’un schéma à l’aide d’une requêt
 >
 >Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, reportez-vous à la section [remplacement d&#39;un schéma à l&#39;aide d&#39;une opération de PUT](#put).
 
-L&#39;une des opérations de PATCH les plus courantes consiste à ajouter des mixins précédemment définis à un schéma, comme le montre l&#39;exemple ci-dessous.
+L&#39;une des opérations de PATCH les plus courantes consiste à ajouter des groupes de champs précédemment définis à un schéma, comme le montre l&#39;exemple ci-dessous.
 
 **Format d’API**
 
@@ -371,7 +371,7 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 **Requête**
 
-L&#39;exemple de demande ci-dessous ajoute un nouveau mixin à un schéma en ajoutant la valeur `$id` du mixin aux deux tableaux `meta:extends` et `allOf`.
+L&#39;exemple de requête ci-dessous ajoute un nouveau groupe de champs à un schéma en ajoutant la valeur `$id` de ce groupe de champs aux tableaux `meta:extends` et `allOf`.
 
 Le corps de la requête prend la forme d&#39;un tableau, chaque objet répertorié représentant une modification spécifique à un champ individuel. Chaque objet comprend l’opération à exécuter (`op`), le champ sur lequel l’opération doit être exécutée (`path`) et les informations à inclure dans cette opération (`value`).
 
@@ -387,13 +387,13 @@ curl -X PATCH\
         { 
           "op": "add",
           "path": "/meta:extends/-",
-          "value":  "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+          "value":  "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         },
         {
           "op": "add",
           "path": "/allOf/-",
           "value":  {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
           }
         }
       ]'
@@ -401,7 +401,7 @@ curl -X PATCH\
 
 **Réponse**
 
-La réponse montre que les deux opérations ont été réalisées avec succès. Le mixin `$id` a été ajouté au tableau `meta:extends` et une référence (`$ref`) au mixin `$id` apparaît désormais dans le tableau `allOf`.
+La réponse montre que les deux opérations ont été réalisées avec succès. Le groupe de champs `$id` a été ajouté au tableau `meta:extends` et une référence (`$ref`) au groupe de champs `$id` apparaît désormais dans le tableau `allOf`.
 
 ```JSON
 {
@@ -413,7 +413,7 @@ La réponse montre que les deux opérations ont été réalisées avec succès. 
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -422,7 +422,7 @@ La réponse montre que les deux opérations ont été réalisées avec succès. 
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -493,7 +493,7 @@ Une réponse réussie renvoie les détails du schéma mis à jour, indiquant que
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -502,7 +502,7 @@ Une réponse réussie renvoie les détails du schéma mis à jour, indiquant que
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
