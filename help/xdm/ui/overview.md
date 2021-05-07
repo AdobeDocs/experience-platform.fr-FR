@@ -6,16 +6,16 @@ description: Cette présentation porte sur les principales fonctionnalités de l
 topic-legacy: user guide
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '296'
 ht-degree: 3%
 
 ---
 
 # [!UICONTROL Présentation de ] SchemasUI
 
-L’espace de travail [!UICONTROL Schémas] de l’interface utilisateur de Adobe Experience Platform vous permet de gérer les ressources du modèle de données d’expérience (XDM), y compris les schémas, les classes, les mixins et les types de données. Vous pouvez vue et explorer les ressources de base fournies par Adobe, et créer des ressources et des schémas personnalisés pour votre organisation.
+L’espace de travail [!UICONTROL Schémas] de l’interface utilisateur de Adobe Experience Platform vous permet de gérer les ressources du modèle de données d’expérience (XDM), y compris les schémas, les classes, les groupes de champs de schéma et les types de données. Vous pouvez vue et explorer les ressources de base fournies par Adobe, et créer des ressources et des schémas personnalisés pour votre organisation.
 
 Pour accéder à l’espace de travail dans l’interface utilisateur de la plate-forme, sélectionnez **[!UICONTROL Schémas]** dans le rail de gauche.
 
@@ -33,12 +33,12 @@ L&#39;espace de travail [!UICONTROL Schémas] fournit des outils puissants pour 
 
 * [Schémas](./resources/schemas.md)
 * [Classes](./resources/classes.md)
-* [Mixins](./resources/mixins.md)
+* [Groupes de champs](./resources/field-groups.md)
 * [Types des données](./resources/data-types.md)
 
 ## Définition des champs XDM
 
-Les classes, les mixins et les types de données contribuent tous à la création de champs dans un schéma. Vous pouvez choisir parmi une liste de types de champs standard lors de l&#39;ajout de champs à ces ressources et vous pouvez également définir des champs spécialisés pour certains cas d&#39;utilisation. Pour plus d&#39;informations, consultez le guide sur la [définition des champs XDM dans l&#39;interface utilisateur](./fields/overview.md).
+Les classes, les groupes de champs et les types de données contribuent tous à la création de champs dans un schéma. Vous pouvez choisir parmi une liste de types de champs standard lors de l&#39;ajout de champs à ces ressources et vous pouvez également définir des champs spécialisés pour certains cas d&#39;utilisation. Pour plus d&#39;informations, consultez le guide sur la [définition des champs XDM dans l&#39;interface utilisateur](./fields/overview.md).
 
 ## Étapes suivantes
 
