@@ -6,9 +6,9 @@ type: Documentation
 description: Adobe Experience Platform vous permet de rassembler des fragments de données provenant de plusieurs sources et de les combiner afin d’obtenir une vue complète de chacun de vos clients. Lorsque ces données sont regroupées, les stratégies de fusion sont les règles utilisées par Plateforme pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer une vue unifiée.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2560'
+source-wordcount: '2569'
 ht-degree: 54%
 
 ---
@@ -534,7 +534,7 @@ Une réponse réussie renvoie les détails de la stratégie de fusion créée.
 
 Pour en savoir plus sur chacun des éléments qui constituent une stratégie de fusion, reportez-vous à la section [Composants des stratégies de fusion](#components-of-merge-policies) au début de ce document.
 
-## Mise à jour d’une stratégie de fusion {#update}
+## Mise à jour d’une stratégie de fusion  {#update}
 
 Vous pouvez modifier une stratégie de fusion existante en changeant les attributs individuels (PATCH) ou en remplaçant la stratégie de fusion complète par de nouveaux attributs (PUT). Vous en trouverez des exemples ci-dessous.
 
@@ -752,19 +752,19 @@ Comme les enregistrements sont ingérés dans l&#39;Experience Platform, un horo
 
 Il peut arriver, par exemple, que des données soient renvoyées ou que l’ordre des événements soit correct si les enregistrements sont ingérés dans l’ordre, lorsqu’il est nécessaire de fournir un horodatage personnalisé et que la stratégie de fusion respecte l’horodatage personnalisé plutôt que l’horodatage système.
 
-Pour utiliser un horodatage personnalisé, [[!DNL External Source System Audit Details Mixin]](#mixin-details) doit être ajouté à votre schéma de Profil. Une fois ajouté, l’horodatage personnalisé peut être renseigné à l’aide du champ `xdm:lastUpdatedDate`. Lorsqu&#39;un enregistrement est assimilé au champ `xdm:lastUpdatedDate` renseigné, l&#39;Experience Platform utilise ce champ pour fusionner des enregistrements ou des fragments de profil dans et entre des jeux de données. Si `xdm:lastUpdatedDate` n&#39;est pas présent ou n&#39;est pas renseigné, Platform continuera à utiliser l&#39;horodatage système.
+Pour utiliser un horodatage personnalisé, le [[!DNL External Source System Audit Details] groupe de champs de schéma](#field-group-details) doit être ajouté à votre schéma de Profil. Une fois ajouté, l’horodatage personnalisé peut être renseigné à l’aide du champ `xdm:lastUpdatedDate`. Lorsqu&#39;un enregistrement est assimilé au champ `xdm:lastUpdatedDate` renseigné, l&#39;Experience Platform utilise ce champ pour fusionner des enregistrements ou des fragments de profil dans et entre des jeux de données. Si `xdm:lastUpdatedDate` n&#39;est pas présent ou n&#39;est pas renseigné, Platform continuera à utiliser l&#39;horodatage système.
 
 >[!NOTE]
 >
 >Vous devez vous assurer que l&#39;horodatage `xdm:lastUpdatedDate` est renseigné lors de l&#39;envoi d&#39;un PATCH sur le même enregistrement.
 
-Pour obtenir des instructions détaillées sur l&#39;utilisation des schémas à l&#39;aide de l&#39;API Schéma Registry, y compris sur la façon d&#39;ajouter des mixins aux schémas, consultez le [didacticiel de création d&#39;un schéma à l&#39;aide de l&#39;API](../../xdm/tutorials/create-schema-api.md).
+Pour obtenir des instructions détaillées sur l&#39;utilisation des schémas à l&#39;aide de l&#39;API Schéma Registry, y compris sur la façon d&#39;ajouter des groupes de champs aux schémas, consultez le [didacticiel de création d&#39;un schéma à l&#39;aide de l&#39;API](../../xdm/tutorials/create-schema-api.md).
 
 Pour utiliser des horodatages personnalisés à l’aide de l’interface utilisateur, reportez-vous à la section [en utilisant des horodatages personnalisés](../ui/merge-policies.md#custom-timestamps) dans le [guide de l’utilisateur des stratégies de fusion](../ui/merge-policies.md).
 
-#### [!DNL External Source System Audit Details Mixin] détails  {#mixin-details}
+#### [!DNL External Source System Audit Details] détails du groupe de champs  {#field-group-details}
 
-L&#39;exemple suivant montre les champs correctement renseignés dans [!DNL External Source System Audit Details Mixin]. Le mixin JSON complet peut également être visualisé dans le rapport [Modèle de données d’expérience publique (XDM)](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) sur GitHub.
+L&#39;exemple suivant montre les champs correctement renseignés dans le groupe de champs [!DNL External Source System Audit Details]. Le groupe de champs complet JSON peut également être affiché dans le rapport [Modèle de données d’expérience publique (XDM)](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) sur GitHub.
 
 ```json
 {
