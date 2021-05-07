@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM de contexte d’emplacement.
 exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '183'
 ht-degree: 6%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 6%
 | `localTime` | DateTime | Horodatage au format [RFC 3339](https://tools.ietf.org/html/rfc3339), indiquant l’heure locale utilisée avec un décalage de fuseau horaire indiqué. Le modèle de formatage est `yyyy-MM-dd'T'HH:mm:ssXXX` (par exemple, `2001-07-04T12:08:56-07:00`). |
 | `localTimezoneOffset` | Entier | Décalage actuel du fuseau horaire local en minutes par rapport à l&#39;heure UTC pour la valeur `localTime`. Cela devrait inclure le décalage actuel de l’heure d’été, le cas échéant. |
 
-Pour plus d’informations sur le mixin, consultez le référentiel XDM public :
+Pour plus d&#39;informations sur le type de données, consultez le référentiel XDM public :
 
 * [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.schema.json)
