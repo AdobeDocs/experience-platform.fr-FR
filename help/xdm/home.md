@@ -6,7 +6,7 @@ topic-legacy: overview
 description: La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. Le modèle de données d’expérience (XDM), optimisé par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
+source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 55%
@@ -17,7 +17,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->Le terme &quot; mixin &quot; a été remplacé par &quot; groupe de schémas sur le terrain &quot; afin de promouvoir la compréhension. Les groupes de champs sont des ensembles de champs réutilisables pour prendre en charge les cas d’utilisation commerciale. Cette modification est désormais répercutée dans l’API de registre de Schéma, l’interface utilisateur de Adobe Experience Platform et dans toute la documentation de la plate-forme.
+>Le terme &quot; mixin &quot; a été mis à jour en schéma &quot; groupe de terrain &quot; afin de promouvoir la compréhension. Les groupes de champs sont des ensembles de champs réutilisables pour prendre en charge les cas d’utilisation commerciale. Cette modification est désormais répercutée dans l’API de registre de Schéma, l’interface utilisateur de Adobe Experience Platform et dans toute la documentation de la plate-forme.
 
 La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. [!DNL Experience Data Model] (XDM), piloté par l’Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
