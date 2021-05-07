@@ -6,10 +6,10 @@ description: Ce document fournit des informations supplémentaires relatives au 
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '772'
-ht-degree: 48%
+source-wordcount: '775'
+ht-degree: 47%
 
 ---
 
@@ -52,7 +52,7 @@ Vous pouvez filtrer les résultats en utilisant le paramètre `property`, qui es
 
 >[!TIP]
 >
->Vous pouvez utiliser le paramètre `property` pour filtrer les mixins selon leur classe compatible. Par exemple, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` renvoie uniquement les mixins compatibles avec la classe [!DNL XDM Individual Profile].
+>Vous pouvez utiliser le paramètre `property` pour filtrer les groupes de champs de schéma selon leur classe compatible. Par exemple, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` renvoie uniquement les groupes de champs compatibles avec la classe [!DNL XDM Individual Profile].
 
 ## Mode de compatibilité
 
