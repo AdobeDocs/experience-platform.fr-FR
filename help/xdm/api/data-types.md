@@ -5,16 +5,16 @@ title: Point de terminaison de l’API Types de données
 description: Le point de terminaison /datatypes de l'API Schéma Registry vous permet de gérer par programmation les types de données XDM dans votre application d'expérience.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1151'
 ht-degree: 13%
 
 ---
 
 # Point de terminaison des types de données
 
-Les types de données sont utilisés comme champs de type référence dans les classes ou les mixins de la même manière que les champs littéraux de base, la différence majeure étant que les types de données peuvent définir plusieurs sous-champs. Bien que semblables aux mixins en ce qu&#39;ils permettent l&#39;utilisation cohérente d&#39;une structure à champs multiples, les types de données sont plus flexibles parce qu&#39;ils peuvent être inclus n&#39;importe où dans la structure de schéma alors que les mixins ne peuvent être ajoutés qu&#39;au niveau racine. Le point de terminaison `/datatypes` de l&#39;API [!DNL Schema Registry] vous permet de gérer par programmation les types de données dans votre application d&#39;expérience.
+Les types de données sont utilisés comme champs de type référence dans les classes ou les groupes de champs de schéma de la même manière que les champs littéraux de base, la différence majeure étant que les types de données peuvent définir plusieurs sous-champs. Bien que semblables aux groupes de champs en ce qu’ils permettent l’utilisation cohérente d’une structure à champs multiples, les types de données sont plus flexibles car ils peuvent être inclus n’importe où dans la structure de schéma alors que les groupes de champs ne peuvent être ajoutés qu’au niveau racine. Le point de terminaison `/datatypes` de l&#39;API [!DNL Schema Registry] vous permet de gérer par programmation les types de données dans votre application d&#39;expérience.
 
 ## Prise en main
 
