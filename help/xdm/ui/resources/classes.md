@@ -6,10 +6,10 @@ description: Découvrez comment créer et modifier des classes dans l’interfac
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '886'
-ht-degree: 7%
+source-wordcount: '893'
+ht-degree: 5%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe fournit plusieurs classes XDM standard (&quot;core&quot;), dont [!DNL XDM 
 
 Ce document fournit un aperçu de la création, de la modification et de la gestion des classes personnalisées dans l’interface utilisateur de Adobe Experience Platform.
 
-## Conditions préalables
+## Conditions préalables  
 
 Ce guide nécessite une bonne compréhension de XDM System. Pour une présentation du rôle de XDM dans l&#39;écosystème Experience Platform, voir [Présentation de XDM](../../home.md) et les [bases de la composition du schéma](../../schema/composition.md) pour savoir comment les classes contribuent aux schémas de XDM.
 
@@ -45,7 +45,7 @@ Le [!DNL Schema Editor] s&#39;affiche, affichant un nouveau schéma dans la tram
 
 >[!IMPORTANT]
 >
->Lors de la création d’un schéma qui met en œuvre une classe définie par votre organisation, n’oubliez pas que les mixins ne peuvent être utilisés qu’avec des classes compatibles. Puisque la classe que vous avez définie est nouvelle, il n’existe aucun mixin compatible répertorié dans la boîte de dialogue **[!UICONTROL Ajouter mixin]**. Vous devez à la place [créer de nouveaux mixins](./mixins.md#create) pour les utiliser avec cette classe. La prochaine fois que vous composez un schéma qui implémente la nouvelle classe, les mixins que vous avez définis seront répertoriés et disponibles pour utilisation.
+>Lors de la création d&#39;un schéma qui implémente une classe définie par votre organisation, n&#39;oubliez pas que les groupes de champs de schéma ne sont disponibles que pour une utilisation avec des classes compatibles. La classe que vous avez définie étant nouvelle, aucun groupe de champs compatible n&#39;est répertorié dans la boîte de dialogue **[!UICONTROL Ajouter le groupe de champs]**. Vous devez à la place [créer de nouveaux groupes de champs](./field-groups.md#create) pour les utiliser avec cette classe. La prochaine fois que vous composez un schéma qui implémente la nouvelle classe, les groupes de champs que vous avez définis seront répertoriés et disponibles pour utilisation.
 
 Vous pouvez désormais début [l&#39;ajout de champs à la classe](#add-fields), qui sera partagée par tous les schémas qui utilisent la classe.
 
@@ -77,7 +77,7 @@ Une fois que vous disposez d&#39;un schéma qui utilise une classe personnalisé
 
 >[!IMPORTANT]
 >
->N&#39;oubliez pas que tous les champs que vous ajoutez à une classe seront utilisés dans tous les schémas qui utilisent cette classe. Vous devez donc examiner attentivement les champs qui seront utiles dans tous les cas d&#39;utilisation de schéma. Si vous envisagez d&#39;ajouter un champ qui ne peut être utilisé que dans certains schémas sous cette classe, vous pouvez envisager de l&#39;ajouter à ces schémas en créant [un mixin](./mixins.md#create) à la place.
+>N&#39;oubliez pas que tous les champs que vous ajoutez à une classe seront utilisés dans tous les schémas qui utilisent cette classe. Vous devez donc examiner attentivement les champs qui seront utiles dans tous les cas d&#39;utilisation de schéma. Si vous envisagez d&#39;ajouter un champ qui ne peut être utilisé que dans certains schémas sous cette classe, vous pouvez envisager de l&#39;ajouter à ces schémas en créant à la place [un groupe de champs](./field-groups.md#create).
 
 Un **[!UICONTROL nouveau champ]** apparaît dans le canevas et le rail de droite se met à jour pour afficher les commandes permettant de configurer les propriétés du champ. Consultez le guide sur la [définition des champs dans l&#39;interface utilisateur](../fields/overview.md#define) pour connaître les étapes spécifiques de configuration et d&#39;ajout du champ à la classe.
 
