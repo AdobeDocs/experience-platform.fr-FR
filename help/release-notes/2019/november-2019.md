@@ -4,14 +4,14 @@ description: Notes de mise à jour d’Experience Platform, 18 novembre 2019
 doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
+exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1878'
-ht-degree: 74%
+source-wordcount: '1883'
+ht-degree: 72%
 
 ---
-
 
 # Notes de mise à jour d’Adobe Experience Platform
 
@@ -83,7 +83,7 @@ Consultez le [catalogue des destinations](../../destinations/catalog/overview.md
 * Aucune validation n’est actuellement en place pour les détails, le chemin ou les informations d’identification du compte lors de la connexion à votre compte de destination ou de stockage. Assurez-vous de saisir les informations d’identification correctes et vérifiez qu’il n’y a pas de fautes d’orthographe ou de frappe.
 * La version initiale n’offre aucun renouvellement des informations d’identification. Une fois qu’un compte a expiré ou doit être actualisé, vous devez créer une nouvelle connexion de destination et remapper les segments précédemment mappés.
 
-## Sources {#sources}
+## Sources  {#sources}
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les solutions Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
 
@@ -128,8 +128,8 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 | ---------- | ------------ |
 | Schéma de notification | Un nouveau schéma qui représente les données de notification envoyées pendant le processus d’ingestion des données. |
 | Schémas DSP d’Adobe AdCloud | Cinq nouveaux schémas ont été ajoutés pour représenter les métadonnées de la plateforme DSP (Demand Side Platform) Adobe Advertising Cloud : positionnement, campagne, package, annonceur, compte. |
-| Mixin des détails de la mise en œuvre d’ExperienceEvent | Nouveau mixin d’ExperienceEvent qui ajoute un champ standard pour stocker des informations sur le logiciel utilisé pour collecter l’événement. |
-| [!DNL Profile Privacy] mixin | Nouveau mixin du profil qui ajoute des champs pour accepter les signaux d’opposition généraux et d’opposition de vente/partage de [!DNL Real-time Customer Profile]. |
+| Groupes de champs du schéma Détails de l’implémentation d’ExperienceEvent | Le nouveau champ ExperienceEvent regroupe les groupes de champs qui ajoutent un champ standard pour stocker des informations sur le logiciel utilisé pour collecter le événement. |
+| [!DNL Profile Privacy] groupes de champs | Nouveaux groupes de champs de profil qui ajoutent des champs pour accepter les signaux généraux d&#39;exclusion et d&#39;exclusion de vente/partage pour [!DNL Real-time Customer Profile]. |
 | Contraintes de format de `xdm:alternateDisplayInfo` | Les champs « Titre » et « Description » de `xdm:alternateDisplayInfo` doivent tous deux être des chaînes pour être validés. |
 | Modification du nom : XDM [!DNL Individual Profile] | Le &quot;titre&quot; de la classe &quot;XDM [!DNL Profile]&quot; a été mis à jour en &quot;XDM [!DNL Individual Profile]&quot;. Le format `$id` de la classe n’a pas changé. |
 
