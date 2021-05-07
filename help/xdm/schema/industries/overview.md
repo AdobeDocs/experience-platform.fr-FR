@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Découvrez les modèles de données normalisés pour divers secteurs verticaux qui peuvent être créés à l’aide de composants standard du modèle de données d’expérience (XDM).
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
@@ -24,12 +24,12 @@ Selon le secteur d&#39;activité de votre entreprise, certains composants XDM se
 
 Afin de vous aider à orienter votre stratégie de modélisation des données en fonction de votre secteur particulier, ce guide fournit une référence de diagrammes de relations d’entité (ERD) pour plusieurs secteurs verticaux pris en charge.
 
-## Conditions préalables
+## Conditions préalables  
 
 Pour lire les ERD référencées dans ce guide, vous devez avoir une bonne compréhension de la façon dont les composants XDM interagissent avec les schémas de formulaire et du fonctionnement des schémas XDM dans l&#39;Experience Platform dans son ensemble. Assurez-vous d’avoir lu la documentation d’aperçu suivante avant de continuer :
 
 * [Présentation](../../home.md) du système XDM : Découvrez comment XDM fonctionne dans l’écosystème de la plate-forme.
-* [Principes de base de la composition](../../schema/composition.md) des schémas : Découvrez comment les composants XDM (tels que les mixins, les classes et les types de données) contribuent à la structure d&#39;un schéma, ainsi qu&#39;au rôle des champs d&#39;identité.
+* [Principes de base de la composition](../../schema/composition.md) des schémas : Découvrez comment les composants XDM (tels que les groupes de champs de schéma, les classes et les types de données) contribuent à la structure d&#39;un schéma, ainsi qu&#39;au rôle des champs d&#39;identité.
 
 Il est également recommandé de consulter le [guide des meilleures pratiques de modélisation des données](../../schema/best-practices.md) pour obtenir des instructions générales sur la façon de mapper vos données à XDM.
 
@@ -37,7 +37,7 @@ Il est également recommandé de consulter le [guide des meilleures pratiques de
 
 Les modèles verticaux de l&#39;industrie représentés par les ERD ci-dessous sont créés intentionnellement de façon dénormalisée et en tenant compte de la façon dont les données sont stockées dans la plate-forme.
 
-Pour une ERD donnée, chaque entité affichée dans est basée sur une classe XDM sous-jacente. Pour une entité donnée, chaque ligne indiquée dans **bold** représente un mixin ou un type de données, avec les champs correspondants qu&#39;elle fournit ci-dessous en texte non gras. Les champs les plus importants pour une entité donnée sont surlignés en rouge.
+Pour une ERD donnée, chaque entité affichée dans est basée sur une classe XDM sous-jacente. Pour une entité donnée, chaque ligne indiquée dans **bold** représente un groupe de champs ou un type de données, avec les champs correspondants qu&#39;elle fournit ci-dessous dans du texte non gras. Les champs les plus importants pour une entité donnée sont surlignés en rouge.
 
 >[!NOTE]
 >
