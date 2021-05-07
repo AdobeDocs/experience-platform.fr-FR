@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM du périphérique.
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '326'
 ht-degree: 18%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 18%
 | `typeID` | Chaîne | Identifiant de l’appareil. Il peut s&#39;agir d&#39;un identifiant de DeviceAtlas ou d&#39;un autre service qui identifie le matériel utilisé. |
 | `typeIDService` | Chaîne | Espace de noms du service utilisé pour identifier le type d’appareil. Voir l&#39;[annexe](#typeIDService) pour plus d&#39;informations sur les valeurs acceptées. |
 
-Pour plus d’informations sur le mixin, consultez le référentiel XDM public :
+Pour plus d&#39;informations sur le groupe de champs, consultez le référentiel XDM public :
 
 * [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/device.schema.json)
