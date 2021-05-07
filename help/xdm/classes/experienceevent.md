@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Ce document fournit un aperçu de la classe XDM ExperienceEvent.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: 9b63b38e664e5776ca638f8ed407896f185bcab0
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '875'
 ht-degree: 6%
 
 ---
@@ -31,16 +31,16 @@ La classe [!DNL XDM ExperienceEvent] fournit elle-même plusieurs champs relatif
 | `identityMap` | Champ de mappage contenant un ensemble d’identités d’espacement de noms pour la personne à laquelle le événement s’applique. Ce champ est automatiquement mis à jour par le système lorsque des données d&#39;identité sont saisies. Afin d’utiliser correctement ce champ pour [Profil client en temps réel](../../profile/home.md), n’essayez pas de mettre à jour manuellement le contenu du champ dans vos opérations de données.<br /><br />Consultez la section sur les cartes d&#39;identité dans les  [bases de la ](../schema/composition.md#identityMap) composition de schémas pour plus d&#39;informations sur leur cas d&#39;utilisation. |
 | `timestamp` | Horodatage ISO 8601 indiquant le moment où le événement s’est produit, formaté selon la section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) du [RFC 339.<br><br>Cet horodatage ne peut  **** représenter que l&#39;observation de l&#39;événement lui-même et doit se produire dans le passé. Si les cas d’utilisation de votre segmentation nécessitent l’utilisation d’horodatages qui peuvent se produire dans le futur (par exemple, une date de départ), ces valeurs doivent être limitées ailleurs dans votre schéma de Événement d’expérience. |
 
-## mixins compatibles {#mixins}
+## Groupes de champs de schéma compatibles {#field-groups}
 
 >[!NOTE]
 >
->Les noms de plusieurs mixins ont changé. Pour plus d’informations, consultez le document [Mises à jour du nom de mixin](../mixins/name-updates.md).
+>Les noms de plusieurs groupes de champs ont changé. Pour plus d’informations, consultez le document [mise à jour du nom du groupe de champs](../field-groups/name-updates.md).
 
-Adobe fournit plusieurs mixins standard à utiliser avec la classe [!DNL XDM ExperienceEvent]. Voici une liste de certains mixins couramment utilisés pour la classe :
+Adobe fournit plusieurs groupes de champs standard à utiliser avec la classe [!DNL XDM ExperienceEvent]. Voici une liste de certains groupes de champs couramment utilisés pour la classe :
 
-* [[!UICONTROL Détails de l’ID d’utilisateur final]](../mixins/event/enduserids.md)
-* [[!UICONTROL Détails de l&#39;Environnement]](../mixins/event/environment-details.md)
+* [[!UICONTROL Détails de l’ID d’utilisateur final]](../field-groups/event/enduserids.md)
+* [[!UICONTROL Détails de l&#39;Environnement]](../field-groups/event/environment-details.md)
 
 ## Annexe
 
