@@ -6,9 +6,9 @@ topic-legacy: overviews
 description: Le modèle de données d’expérience (XDM) définit un ensemble de champs standard qui peuvent être utilisés lors de la composition de schémas Adobe Experience Platform. L’utilisation de ces champs entraîne un comportement cohérent entre les services de Platform, car tous les services qui utilisent XDM comprendront explicitement les définitions spécifiques fournies par ces champs.
 exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '25238'
+source-wordcount: '25240'
 ht-degree: 98%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 98%
 
 Voir les [bases de la composition des schémas](composition.md) pour plus d&#39;informations sur les éléments constitutifs des schémas, y compris les principes et les meilleures pratiques de définition des schémas pour [!DNL Experience Platform].
 
-Le tableau ci-dessous inclut le nom du champ (les espaces de noms des champs XDM ne sont pas tous construits avec « xdm »), ainsi que son titre, sa description, son type et son format, si nécessaire, ainsi que le type XDM correspondant et les ressources (mixins, types de données et schémas) dans lesquelles le champ peut apparaître.
+Le tableau ci-dessous inclut le nom du champ (tous les champs XDM ne sont pas nommés espacement à l’aide de &quot;xdm&quot;), ainsi que son titre et sa description, son type et son format si nécessaire, ainsi que son type XDM correspondant et les ressources (schémas, groupes de champs de schéma et types de données) dans lesquels le champ est accessible.
 
 Vous pouvez utiliser la fonctionnalité de recherche de [!DNL Schema Editor] pour vue les détails de ces ressources, comme le montre le [didacticiel de l&#39;éditeur de Schémas](../tutorials/create-schema-ui.md#browse).
 
