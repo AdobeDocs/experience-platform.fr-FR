@@ -6,10 +6,10 @@ topic-legacy: getting started
 description: Ce document donne un bref aperçu de certaines technologies et syntaxes sous-jacentes impliquées dans les API Experience Platform.
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 54%
+source-wordcount: '516'
+ht-degree: 53%
 
 ---
 
@@ -23,7 +23,7 @@ JSON Pointer est une syntaxe de chaîne normalisée ([RFC 6901](https://tools.i
 
 ### Exemple d’objet de schéma JSON
 
-Le fichier JSON suivant représente un schéma XDM simplifié dont les champs peuvent être référencés à l’aide de chaînes de pointeur JSON. Notez que tous les champs qui ont été ajoutés à l’aide de mixins personnalisés (tels que `loyaltyLevel`) sont espacés par nom sous un objet `_{TENANT_ID}`, contrairement aux champs qui ont été ajoutés à l’aide de mixins principaux (tels que `fullName`).
+Le fichier JSON suivant représente un schéma XDM simplifié dont les champs peuvent être référencés à l’aide de chaînes de pointeur JSON. Notez que tous les champs qui ont été ajoutés à l’aide de groupes de champs de schéma personnalisés (tels que `loyaltyLevel`) sont espacés dans le nom d’un objet `_{TENANT_ID}`, contrairement aux champs qui ont été ajoutés à l’aide de groupes de champs de base (tels que `fullName`).
 
 ```json
 {
@@ -87,8 +87,8 @@ Le fichier JSON suivant représente un schéma XDM simplifié dont les champs pe
 | JSON Pointer | Est résolu sur |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | (Renvoie une référence au champ `fullName`, fourni par un mixin principal.) |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Renvoie une référence au champ `loyaltyLevel`, fourni par un mixin personnalisé.) |
+| `"/properties/person/properties/name/properties/fullName"` | (Renvoie une référence au champ `fullName`, fourni par un groupe de champs principal.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Renvoie une référence au champ `loyaltyLevel`, fourni par un groupe de champs personnalisé.) |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
@@ -120,7 +120,7 @@ De nombreuses opérations de PATCH pour les API [!DNL Platform] acceptent les ob
 
 En fonction du type d’opération indiqué dans `op`, l’objet du correctif JSON peut nécessiter des propriétés supplémentaires. Pour plus d’informations sur les différentes opérations de correctif JSON et leur syntaxe obligatoire, reportez-vous à la [documentation du correctif JSON](http://jsonpatch.com/).
 
-## Schéma JSON {#json-schema}
+## Schéma JSON  {#json-schema}
 
 Le schéma JSON est un format utilisé pour décrire et valider la structure des données JSON. [Le modèle de données d’expérience (XDM)](../xdm/home.md) tire parti des fonctionnalités du schéma JSON pour imposer des contraintes sur la structure et le format des données d’expérience client ingérées. Pour plus d’informations sur le schéma JSON, consultez la [documentation officielle](https://json-schema.org/).
 
