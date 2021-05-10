@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Les espaces de noms d’identité sont des composants d’Identity Service qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent la valeur "name@email.com" en tant qu’adresse électronique ou "443522" en tant qu’identifiant CRM numérique.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ca092af61ac26fcfb6839b7ba0887178c899f89f
 workflow-type: tm+mt
-source-wordcount: '1474'
-ht-degree: 21%
+source-wordcount: '1550'
+ht-degree: 20%
 
 ---
 
@@ -35,7 +35,7 @@ Par exemple, deux fragments de profil peuvent contenir des identifiants Principa
 
 ### Types d’identité
 
-Les données peuvent être identifiées par plusieurs types d’identité différents. Le type d’identité est spécifié au moment de la création de l’espace de noms d’identité et contrôle la conservation ou non des données dans le graphique d’identités, ainsi que toutes les instructions spéciales concernant la manière dont ces données doivent être traitées.
+Les données peuvent être identifiées par plusieurs types d’identité différents. Le type d’identité est spécifié au moment de la création de l’espace de noms d’identité et contrôle la conservation ou non des données dans le graphique d’identités, ainsi que toutes les instructions spéciales concernant la manière dont ces données doivent être traitées. Tous les types d&#39;identité, à l&#39;exception de **Identificateur de non-personnes**, suivent le même comportement que lors de l&#39;assemblage d&#39;un espace de nommage et de sa valeur d&#39;ID correspondante à un cluster de graphiques d&#39;identité. Les données ne sont pas assemblées ensemble lors de l’utilisation de **l’identificateur d’un non-utilisateur**.
 
 Les types d’identité suivants sont disponibles dans [!DNL Platform]:
 
@@ -58,7 +58,7 @@ Les espaces de nommage standard suivants sont fournis pour être utilisés par t
 | ------------ | ----------- |
 | AdCloud | Espace de nommage représentant l’Adobe AdCloud. |
 | Adobe Analytics (ID hérité) | Espace de nommage qui représente Adobe Analytics. Pour plus d&#39;informations, consultez le document suivant sur [espaces de nommage Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces). |
-| Apple IDFA (ID pour les annonceurs) | Espace de nommage qui représente un ID Apple pour les annonceurs. Pour plus d&#39;informations, consultez le document suivant sur [les publicités basées sur des intérêts](https://support.apple.com/en-us/HT202074). |
+| Apple IDFA (ID pour les annonceurs) | Espace de nommage qui représente un ID Apple pour les annonceurs. Pour plus d&#39;informations, consultez le document suivant sur [les publicités basées sur des intérêts](https://support.apple.com/fr-fr/HT202074). |
 | Service de notifications Push Apple | Espace de nommage qui représente les identités collectées à l’aide du service de notifications Push Apple. Pour plus d’informations, consultez le document suivant sur [service de notifications Push Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1). |
 | CORE | Espace de nommage qui représente Adobe Audience Manager. Cet espace de nommage peut également être référencé par son nom hérité : &quot;Adobe AudienceManager&quot;. Pour plus d’informations, consultez le document suivant sur [ID d’Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids). |
 | ECID | Espace de nommage qui représente l’ECID. Cet espace de nommage peut également être référencé par les alias suivants : &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Pour plus d&#39;informations, consultez le document suivant sur [ECID](./ecid.md). |
@@ -92,7 +92,9 @@ Pour créer un espace de nommage personnalisé à l’aide de l’interface util
 
 ![](./images/create.png)
 
-La boîte de dialogue **[!UICONTROL Créer un espace de nommage d&#39;identité]** s&#39;affiche. Indiquez un **[!UICONTROL nom d’affichage]** unique et **[!UICONTROL symbole d’identité]**, puis sélectionnez le type d’identité que vous souhaitez créer. Vous pouvez également ajouter une description facultative à d’autres informations sur l’espace de nommage. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer]**.
+La boîte de dialogue **[!UICONTROL Créer un espace de nommage d&#39;identité]** s&#39;affiche. Indiquez un **[!UICONTROL nom d’affichage]** unique et **[!UICONTROL symbole d’identité]**, puis sélectionnez le type d’identité que vous souhaitez créer. Vous pouvez également ajouter une description facultative à d’autres informations sur l’espace de nommage. Tous les types d&#39;identité, à l&#39;exception de **Identificateur de non-personne**, suivent le même comportement de raccordement. Si vous sélectionnez **Identificateur de non-personnes** comme type d&#39;identité lors de la création d&#39;un espace de nommage, l&#39;assemblage ne se produit pas. Pour des informations spécifiques sur chaque type d&#39;identité, consultez le tableau [types d&#39;identité](#identity-types).
+
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer]**.
 
 >[!IMPORTANT]
 >
