@@ -2,14 +2,14 @@
 title: Utilisation de l'Offer decisioning avec le SDK Web de la plate-forme
 description: Le Adobe Experience Platform Web SDK peut fournir et générer des offres personnalisées gérées dans l’Offer decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API de l’Offer decisioning.
 keywords: offer decisioning ; prise de décision ; SDK Web ; Platform Web SDK ; offres personnalisées ; diffuser des offres ; diffusion d'offre ; personnalisation des offres ;
+exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 2113eb265020b1d1c2e73dba95554c8bf97acf13
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 16%
 
 ---
-
 
 # Utilisation de l&#39;Offer decisioning avec le SDK Web de la plate-forme
 
@@ -19,7 +19,7 @@ ht-degree: 16%
 
 Adobe Experience Platform [!DNL Web SDK] peut fournir et générer des offres personnalisées qui sont gérées dans l’Offer decisioning. Vous pouvez créer vos offres et autres objets associés à l’aide de l’interface utilisateur (interface utilisateur) ou des API de l’Offer decisioning.
 
-## Conditions préalables
+## Conditions préalables  
 
 * L&#39;organisation IMS est activée pour la prise de décision d&#39;arête
 * Offres, Activités créées
@@ -78,6 +78,7 @@ Pour activer l’Offer decisioning, vous devez effectuer les étapes suivantes :
           ]
       })
       ```
+
    * SDK platform launch installé
       1. [Création d’une propriété de Platform launch](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/companies-and-properties.html)
       2. [Ajouter le code incorporé du Platform launch](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
@@ -93,6 +94,7 @@ Pour activer l’Offer decisioning, vous devez effectuer les étapes suivantes :
          * Ajouter une action Envoyer le Événement d&#39;un SDK Web de plate-forme et ajouter le `decisionScopes` correspondant à la configuration de cette action
             ![send-événement-action-décisionScopes](./assets/send-event-action-decisionScopes.png)
       6. [Créez et publiez une ](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/publish/libraries.html) bibliothèque contenant toutes les règles, éléments de données et extensions appropriés que vous avez configurés.
+
 
 
 ## Exemples de demandes et de réponses
