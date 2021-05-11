@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: ddf66ab277e5882afe7ffbdd87ee5df958c3e7b0
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,12 @@ La bascule **[!UICONTROL Inclus dans le Profil]** vous permet de filtrer les ré
 Vous pouvez également utiliser la barre de recherche pour affiner davantage les résultats. Lorsque vous recherchez un terme, les principaux éléments représentent des ressources dont les noms correspondent à la requête de recherche. Sous ces éléments, sous **[!UICONTROL Champs standard]**, toute ressource contenant des champs qui correspondent à la requête sera répertoriée. Cela vous permet de rechercher des ressources XDM en fonction du type de données qu&#39;elles contiennent, sans connaître au préalable le nom de la ressource.
 
 ![](../images/ui/explore/search.png)
+
+Les ressources affichées dans les résultats de la recherche sont triées d’abord par correspondance de titre, puis par correspondance de description. En retour, plus le mot correspond dans l&#39;une de ces catégories, plus la ressource apparaît dans la liste.
+
+>[!NOTE]
+>
+>Pour les ressources XDM standard, la fonction de recherche renvoie uniquement des champs individuels contenant un espace de nommage `xdm`. Les champs situés sous un autre espace de nommage (tel que votre ID de client) ne sont renvoyés que s’ils sont contenus dans une ressource personnalisée.
 
 Une fois que vous avez trouvé la ressource que vous souhaitez explorer, sélectionnez son nom dans la liste pour la vue de sa structure dans le canevas.
 
@@ -100,7 +106,7 @@ Les champs de relation sont également surlignés de manière unique dans la tra
 
 >[!NOTE]
 >
->Pour plus d&#39;informations sur l&#39;utilisation des relations dans les schémas XDM, consultez le didacticiel [Création d&#39;une relation dans l&#39;interface utilisateur](../tutorials/create-schema-ui.md).
+>Pour plus d&#39;informations sur l&#39;utilisation des relations dans les schémas XDM, consultez le didacticiel [Création d&#39;une relation dans l&#39;interface utilisateur](../tutorials/relationship-ui.md).
 
 ## Étapes suivantes
 
