@@ -5,8 +5,7 @@ title: Présentation de la collecte de données
 topic-legacy: overview
 description: Découvrez les différentes technologies impliquées dans la collecte de données sur les expériences client à Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a150c23dffde9431953a019509e9554159052d21
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 6%
@@ -38,7 +37,7 @@ Les kits SDK Web et Mobile de Adobe Experience Platform s’effondrent et compre
 
 ## Processus de basculement pour déployer la technologie de l&#39;Adobe
 
-Platform Edge Network est un réseau de serveurs mondialement distribué, rapide et fiable, capable de recevoir et de traiter des données à une grande échelle. Grâce à Platform launch, vous pouvez configurer des configurations [edge](../edge/fundamentals/edge-configuration.md) pour des produits tels que Adobe Target, Adobe Audience Manager et Adobe Analytics, qui vous permettent d&#39;activer ces produits côté serveur sans modifier le code côté client.
+Platform Edge Network est un réseau de serveurs mondialement distribué, rapide et fiable, capable de recevoir et de traiter des données à une grande échelle. Grâce à Platform launch, vous pouvez configurer des configurations [edge](../edge/fundamentals/datastreams.md) pour des produits tels que Adobe Target, Adobe Audience Manager et Adobe Analytics, qui vous permettent d&#39;activer ces produits côté serveur sans modifier le code côté client.
 
 ![](./images/deploy.png)
 
