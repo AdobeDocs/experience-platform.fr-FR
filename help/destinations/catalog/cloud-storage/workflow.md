@@ -5,10 +5,9 @@ type: Tutorial
 description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 seo-description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
-translation-type: tm+mt
-source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
+source-git-commit: 4dff8a95af79d14cf0c79fa1468df36f040ab1ad
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '630'
 ht-degree: 32%
 
 ---
@@ -39,7 +38,7 @@ Voir [destination Amazon S3](./amazon-s3.md), destination [[!DNL Amazon Kinesis]
 
 ![Connexion à la destination de l’enregistrement cloud - étape du compte](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
-## Étape d&#39;authentification {#authentication}
+## Étape d’authentification {#authentication}
 
 À l&#39;étape **[!UICONTROL Authentification]**, entrez **[!UICONTROL Nom]** et **[!UICONTROL Description]** pour votre flux d&#39;activation.
 
@@ -63,7 +62,7 @@ Pour les destinations [!DNL Azure Event Hubs], indiquez le nom de votre flux de 
 
 Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement. Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le workflow et choisir les segments à activer. Lisez la section [Activer les segments](#activate-segments) pour le reste du flux de travaux d’exportation des données.
 
-## Utilisez les macros pour créer un dossier à l’emplacement de votre enregistrement{#use-macros}
+## Utilisez les macros pour créer un dossier à l&#39;emplacement de votre enregistrement {#use-macros}
 
 >[!NOTE]
 >
