@@ -2,15 +2,14 @@
 title: Types d’action dans l’extension Adobe Experience Platform Web SDK
 description: Découvrez les différents types d'action fournis par l'extension Adobe Experience Platform Web SDK à Adobe Experience Platform Launch.
 solution: Experience Platform
-feature: Web SDK
-translation-type: tm+mt
-source-git-commit: 9ce6dd5a290b55da04f4ae185cab96c120777775
+feature: SDK Web
+exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
+source-git-commit: 7e87f5b29d388b34681217e392c3f1ae8f2b67ee
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '547'
 ht-degree: 4%
 
 ---
-
 
 # Types d’actions
 
@@ -26,7 +25,7 @@ D’autres champs du type d’action Envoyer le Événement peuvent également s
 
 - **Type :** ce champ vous permet de spécifier un type d&#39;événement qui sera enregistré dans votre schéma XDM. Pour plus d’informations sur les types d&#39;événement par défaut, consultez la [documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api).
 - **Fusionner l’ID :** si vous souhaitez spécifier un  [ID ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) de fusion pour votre événement, vous pouvez le faire dans ce champ. Veuillez noter que les solutions en aval ne peuvent pas fusionner vos données de événement pour le moment.
-- **ID de jeu de données :** si vous devez envoyer des données à un jeu de données autre que celui que vous avez spécifié dans votre configuration de périphérie, vous pouvez spécifier cet ID de jeu de données ici.
+- **ID de jeu de données :** si vous devez envoyer des données à un jeu de données autre que celui que vous avez spécifié dans votre flux de données, vous pouvez spécifier cet ID de jeu de données ici.
 - **Le document se décharge :** si vous souhaitez vous assurer que les événements atteignent le serveur même si l’utilisateur quitte la page, cochez la case  **[!UICONTROL Document qui]** se décharge. Cela permet aux événements d&#39;atteindre le serveur mais les réponses sont ignorées.
 - **Rendu des décisions de personnalisation visuelle :** si vous souhaitez rendre du contenu personnalisé sur votre page, cochez la case  **[!UICONTROL Rendu des]** décisions de personnalisation visuelle. Vous pouvez également spécifier des étendues de décision si nécessaire. Voir la [documentation sur la personnalisation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) pour plus d’informations sur le rendu du contenu personnalisé.
 
