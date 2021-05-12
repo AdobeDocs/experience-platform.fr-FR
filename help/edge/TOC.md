@@ -5,11 +5,10 @@ user-guide-title: Aide du SDK web d’Adobe Experience Platform
 breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Gestion des données
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4ed738b2b71332db1602d5571797ed61214afc2d
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 37%
+source-wordcount: '149'
+ht-degree: 36%
 
 ---
 
@@ -18,8 +17,8 @@ ht-degree: 37%
 
 * [Présentation du SDK Web de plate-forme](home.md)
 * Notions fondamentales {#fundamentals}
-   * [Conditions préalables](fundamentals/prerequisite.md)
-   * [Création d’une configuration de bord](fundamentals/edge-configuration.md)
+   * [Conditions préalables  ](fundamentals/prerequisite.md)
+   * [Configuration d’une chaîne de données](fundamentals/datastreams.md)
    * [Installation du SDK](fundamentals/installing-the-sdk.md)
    * [Configuration du SDK](fundamentals/configuring-the-sdk.md)
    * [Exécuter les commandes](fundamentals/executing-commands.md)
@@ -57,6 +56,7 @@ ht-degree: 37%
    * [Extension SDK Web](extension/web-sdk-extension.md)
    * [Types d’actions](extension/action-types.md)
    * [Types d’éléments de données](extension/data-element-types.md)
+   * [Accès à l&#39;ECID](extension/accessing-the-ecid.md)
    * [Notes de mise à jour de l’extension SDK Web](extension/web-sdk-ext-release-notes.md)
 * [Notes de mise à jour](release-notes.md)
 * [Questions fréquentes](web-sdk-faq.md)
