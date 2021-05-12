@@ -3,10 +3,9 @@ title: Utilisation de l'Offer decisioning avec le SDK Web de la plate-forme
 description: Le Adobe Experience Platform Web SDK peut fournir et générer des offres personnalisées gérées dans l’Offer decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API de l’Offer decisioning.
 keywords: offer decisioning ; prise de décision ; SDK Web ; Platform Web SDK ; offres personnalisées ; diffuser des offres ; diffusion d'offre ; personnalisation des offres ;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-translation-type: tm+mt
-source-git-commit: 2113eb265020b1d1c2e73dba95554c8bf97acf13
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '842'
 ht-degree: 16%
 
 ---
@@ -23,7 +22,7 @@ Adobe Experience Platform [!DNL Web SDK] peut fournir et générer des offres pe
 
 * L&#39;organisation IMS est activée pour la prise de décision d&#39;arête
 * Offres, Activités créées
-* Edge config est publié
+* Datastream est publié
 
 ## Terminologie
 
@@ -54,7 +53,7 @@ Il est important de comprendre la terminologie suivante lorsque vous travaillez 
 
    ![](assets/decision-scope-copy.png)
 
-* **Configuration Edge :** pour plus d’informations, consultez la documentation sur la  [configuration ](../../fundamentals/edge-configuration.md) Edge.
+* **Datastreams :** Pour plus d&#39;informations, veuillez lire la  [](../../fundamentals/datastreams.md) documentation datastreamsdocumentation.
 
 * **Identité** : Pour plus d&#39;informations, veuillez lire cette documentation décrivant comment  [Platform Web SDK exploite Identity Service](../../identity/overview.md).
 
@@ -62,7 +61,7 @@ Il est important de comprendre la terminologie suivante lorsque vous travaillez 
 
 Pour activer l’Offer decisioning, vous devez effectuer les étapes suivantes :
 
-1. Activation de Adobe Experience Platform dans votre configuration de bord [](../../fundamentals/edge-configuration.md) et cochez la case &quot;Offer decisioning&quot;
+1. Activation de Adobe Experience Platform dans votre fichier de données [datastream](../../fundamentals/datastreams.md) et cochez la case &quot;Offer decisioning&quot;
    ![offre-prise de décision-edge-config](./assets/offer-decisioning-edge-config.png)
 2. Suivez les instructions pour [installer le SDK](../../fundamentals/installing-the-sdk.md) (le SDK peut être installé seul ou via [Adobe Experience Platform Launch](http://launch.adobe.com/fr). Voici un [guide de début rapide sur le Platform launch](https://docs.adobe.com/content/help/fr-FR/launch/using/intro/get-started/quick-start.html).
 3. [Configurez le ](../../fundamentals/configuring-the-sdk.md) SDK pour l’Offer decisioning. D&#39;autres étapes spécifiques à l&#39;Offer decisioning sont présentées ci-dessous.
@@ -82,11 +81,11 @@ Pour activer l’Offer decisioning, vous devez effectuer les étapes suivantes :
    * SDK platform launch installé
       1. [Création d’une propriété de Platform launch](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/companies-and-properties.html)
       2. [Ajouter le code incorporé du Platform launch](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Installez et configurez l&#39;extension Platform Web SDK avec la configuration Edge que vous venez de créer en sélectionnant la configuration dans la liste déroulante &quot;Edge Configuration&quot;. Documentation utile sur les [extensions](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/extensions/overview.html).
+      3. Installez et configurez l&#39;extension Platform Web SDK avec le Datastream que vous venez de créer en sélectionnant la configuration dans la liste déroulante &quot;Datastream&quot;. Consultez la documentation relative aux [extensions](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. Créez les [éléments de données](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/data-elements.translate.html) nécessaires. Au minimum, vous devrez créer une carte d&#39;identité du SDK Web de plate-forme et un élément de données d&#39;objet XDM SDK de plate-forme Web.
+      4. Créez les [éléments de données](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/data-elements.translate.html) nécessaires. Au minimum, vous devez créer un mappage d’identité du SDK Web de plate-forme et un élément de données XDM du SDK Web de plate-forme.
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
