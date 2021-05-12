@@ -5,8 +5,7 @@ title: Prise en charge d’IAB TCF 2.0 dans l’Experience Platform
 topic-legacy: privacy events
 description: Découvrez comment configurer vos opérations de données et vos schémas pour transmettre les choix de consentement des clients lors de l’activation de segments vers des destinations dans Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
 source-wordcount: '2477'
 ht-degree: 1%
@@ -120,7 +119,7 @@ Une fois que vous avez configuré votre CMP pour générer des chaînes de conse
 
 ### Créer une configuration de bord
 
-Pour que le SDK envoie des données à l&#39;Experience Platform, vous devez d&#39;abord créer une nouvelle configuration de périphérie pour Platform dans [!DNL Adobe Experience Platform Launch]. Des étapes spécifiques pour créer une nouvelle configuration sont fournies dans la [documentation du SDK](../../../../edge/fundamentals/edge-configuration.md).
+Pour que le SDK envoie des données à l&#39;Experience Platform, vous devez d&#39;abord créer une nouvelle configuration de périphérie pour Platform dans [!DNL Adobe Experience Platform Launch]. Des étapes spécifiques pour créer une nouvelle configuration sont fournies dans la [documentation du SDK](../../../../edge/fundamentals/datastreams.md).
 
 Après avoir fourni un nom unique pour la configuration, sélectionnez le bouton bascule en regard de **[!UICONTROL Adobe Experience Platform]**. Ensuite, utilisez les valeurs suivantes pour compléter le reste du formulaire :
 
@@ -225,7 +224,7 @@ alloy("sendEvent", {
 
 Toutes les commandes [!DNL Platform SDK] renvoient des promesses indiquant si l&#39;appel a réussi ou échoué. Vous pouvez ensuite utiliser ces réponses pour une logique supplémentaire, telle que l’affichage de messages de confirmation à l’intention du client. Pour obtenir des exemples spécifiques, reportez-vous à la section [gestion des réussites ou des échecs](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) du guide sur l’exécution des commandes du SDK.
 
-## Exporter des segments {#export}
+## Exportation de segments {#export}
 
 >[!NOTE]
 >
