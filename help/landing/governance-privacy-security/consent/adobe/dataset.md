@@ -5,8 +5,7 @@ title: Configurer un jeu de données pour capturer les données de consentement 
 topic-legacy: getting started
 description: Découvrez comment configurer un schéma et un jeu de données de modèle de données d’expérience (XDM) pour capturer les données de consentement et de préférence dans Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-translation-type: tm+mt
-source-git-commit: 30a2ddb875b035b4509b4be3692b95d0d3ef50b3
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
 source-wordcount: '1503'
 ht-degree: 3%
@@ -42,7 +41,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 >
 >Ce didacticiel suppose que vous connaissez le schéma [!DNL Profile] de la plate-forme que vous souhaitez utiliser pour capturer les informations d’attributs du client. Quelle que soit la méthode utilisée pour collecter les données de consentement, ce schéma doit être [activé pour le Profil client en temps réel](../../../../xdm/ui/resources/schemas.md#profile). En outre, l&#39;identité Principale du schéma ne peut pas être un champ directement identifiable qui ne peut pas être utilisé dans la publicité basée sur des intérêts, comme une adresse électronique. Consultez votre conseiller juridique si vous ne savez pas quels champs sont restreints.
 
-## Structure de groupe de champs Contenus et Préférences {#structure}
+## Structure du groupe de champs Contenus et Préférences {#structure}
 
 Le groupe de champs [!UICONTROL Préférences de confidentialité/personnalisation/marketing (Consentements)] (ci-après dénommé &quot;groupe de champs Contenus et préférences&quot;) fournit des champs de consentement normalisés à un schéma. Actuellement, ce groupe de champs n&#39;est compatible qu&#39;avec les schémas basés sur la classe [!DNL XDM Individual Profile].
 
@@ -121,7 +120,7 @@ Si le schéma que vous avez modifié est utilisé par le [!UICONTROL jeu de donn
 
 Si vous n&#39;avez pas créé de jeu de données pour ce schéma, suivez les étapes de la section suivante.
 
-## Créez un jeu de données basé sur votre schéma de consentement {#dataset}
+## Créer un jeu de données basé sur votre schéma de consentement {#dataset}
 
 Une fois que vous avez créé un schéma avec des champs de consentement, vous devez créer un jeu de données qui, en fin de compte, assimilera les données de consentement de vos clients. Ce jeu de données doit être activé pour [!DNL Real-time Customer Profile].
 
@@ -151,7 +150,7 @@ Enfin, sélectionnez **[!UICONTROL Activer]** dans la fenêtre contextuelle de c
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-Le jeu de données est maintenant enregistré et activé pour une utilisation dans [!DNL Profile]. Si vous envisagez d&#39;utiliser le SDK Web de la plate-forme pour envoyer des données de consentement au Profil, vous devez sélectionner ce jeu de données comme [!UICONTROL jeu de données de Profil] lors de la configuration de votre configuration de bord [Edge](../../../../edge/fundamentals/edge-configuration.md).
+Le jeu de données est maintenant enregistré et activé pour une utilisation dans [!DNL Profile]. Si vous envisagez d&#39;utiliser le SDK Web de la plate-forme pour envoyer des données de consentement au Profil, vous devez sélectionner ce jeu de données comme [!UICONTROL jeu de données de Profil] lors de la configuration de votre configuration de bord [Edge](../../../../edge/fundamentals/datastreams.md).
 
 ## Étapes suivantes
 
