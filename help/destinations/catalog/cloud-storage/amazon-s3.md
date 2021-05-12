@@ -3,11 +3,10 @@ keywords: Amazon S3;S3 destination;s3;amazon s3
 title: Connexion Amazon S3
 description: Créez une connexion sortante active vers votre stockage Amazon Web Services (AWS) S3 pour exporter régulièrement des fichiers de données CSV ou séparés par des tabulations depuis Adobe Experience Platform vers vos propres compartiments S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-translation-type: tm+mt
-source-git-commit: 7780a2b3b518ab976ec14531892e0734a6342e4c
+source-git-commit: 49a59e5b081243679f5d94b03a63d30df22cdc6a
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 14%
+source-wordcount: '270'
+ht-degree: 12%
 
 ---
 
@@ -31,9 +30,13 @@ Pour les destinations [!DNL Amazon S3], saisissez les informations suivantes dan
 
 * **[!DNL Amazon S3]clé d&#39;accès et clé [!DNL Amazon S3]** secrète : Dans  [!DNL Amazon S3], générez une  `access key - secret access key` paire pour accorder l’accès à la plate-forme à votre  [!DNL Amazon S3] compte. Pour en savoir plus, consultez la [documentation Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
+>[!TIP]
+>
+>Dans le processus de connexion à la destination, vous pouvez créer un dossier personnalisé dans votre enregistrement Amazon S3 par fichier de segment exporté. Lisez [Utilisez les macros pour créer un dossier à l&#39;emplacement de votre enregistrement](./workflow.md#use-macros) pour obtenir des instructions.
+
 ## Autorisations [!DNL Amazon S3] requises {#required-s3-permission}
 
-Pour connecter et exporter des données vers votre emplacement d&#39;enregistrement [!DNL Amazon S3], créez un utilisateur IAM pour [!DNL Platform] dans [!DNL Amazon S3] et attribuez des autorisations pour les actions suivantes :
+Pour connecter et exporter des données vers votre emplacement d&#39;enregistrement [!DNL Amazon S3], créez un utilisateur IAM pour [!DNL Platform] dans [!DNL Amazon S3] et affectez des autorisations pour les actions suivantes :
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
