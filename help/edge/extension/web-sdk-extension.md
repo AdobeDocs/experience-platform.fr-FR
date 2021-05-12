@@ -1,16 +1,15 @@
 ---
-title: Extension SDK Web Adobe Experience Platform Présentation
+title: Présentation de l’extension SDK Web Adobe Experience Platform
 description: En savoir plus sur Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
-translation-type: tm+mt
-source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
+exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
+source-git-commit: b70fe5f3a4de2501730cc799125a7181b61186c0
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '581'
 ht-degree: 13%
 
 ---
 
-
-# Présentation de l’extension SDK Web Adobe Experience Platform
+# Présentation de l’extension SDK Web d’Adobe Experience Platform
 
 L’extension Adobe Experience Platform Web SDK envoie des données à Adobe Experience Cloud à partir de propriétés web via Adobe Experience Platform Edge Network. L’extension vous permet de diffuser des données dans la plate-forme, de synchroniser les identités, de traiter les signaux de consentement des clients et de collecter automatiquement des données contextuelles.
 
@@ -48,11 +47,12 @@ Le nom de l&#39;extension est par défaut &quot;[!DNL alloy]&quot;. Vous pouvez 
 
 Le [!UICONTROL domaine Edge] est le domaine à partir duquel l&#39;extension Adobe Experience Platform envoie et reçoit des données. L’extension exige l’utilisation d’un CNAME propriétaire pour le trafic de production. Le domaine tiers par défaut fonctionne pour les environnements de développement, mais ne convient pas aux environnements de production. Les instructions de configuration d’un CNAME propriétaire sont répertoriées [ici](https://docs.adobe.com/content/help/fr-FR/core-services/interface/ec-cookies/cookies-first-party.html).
 
-## [!UICONTROL Configurations Edge]
+## [!UICONTROL Datastreams]
 
-Lorsqu’une requête est envoyée au réseau Edge de Adobe Experience Platform, un ID de configuration Edge est utilisé pour référencer la configuration côté serveur. Vous pouvez mettre à jour la configuration sans avoir à modifier le code de votre site Web.
+Lorsqu’une requête est envoyée au réseau Edge de Adobe Experience Platform, un ID de flux de données est utilisé pour référencer la configuration côté serveur. Vous pouvez mettre à jour la configuration sans avoir à modifier le code de votre site Web.
 
-Pour plus d&#39;informations, consultez le guide sur les [configurations des arêtes](../fundamentals/edge-configuration.md).
+Pour plus d&#39;informations, consultez le guide [datastreams](../fundamentals/datastreams.md).
+
 
 ## [!UICONTROL Confidentialité]
 
