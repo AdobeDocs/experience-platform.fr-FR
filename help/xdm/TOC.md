@@ -4,11 +4,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes de modèle de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schémas
-translation-type: tm+mt
-source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
+source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 45%
+source-wordcount: '295'
+ht-degree: 44%
 
 ---
 
@@ -20,6 +19,7 @@ ht-degree: 45%
    * [Principes de base de la composition des schémas](schema/composition.md)
    * [Meilleures pratiques pour la modélisation des données](schema/best-practices.md)
    * [Contraintes de type de champ XDM](schema/field-constraints.md)
+   * [Espace de noms dans XDM](./schema/namespaces.md)
    * [Dictionnaire des champs XDM](schema/field-dictionary.md)
    * Modèles de données du secteur {#industries}
       * [Présentation](./schema/industries/overview.md)
@@ -82,7 +82,7 @@ ht-degree: 45%
       * [Schémas](./ui/resources/schemas.md)
       * [Classes](./ui/resources/classes.md)
       * [Groupes de champs](./ui/resources/field-groups.md)
-      * [Types des données](./ui/resources/data-types.md)
+      * [Types de données](./ui/resources/data-types.md)
    * Définir des champs {#fields}
       * [Présentation](./ui/fields/overview.md)
       * [Champs obligatoires](./ui/fields/required.md)
@@ -100,13 +100,13 @@ ht-degree: 45%
    * [Comportements](api/behaviors.md)
    * [Classes](api/classes.md)
    * [Groupes de champs de schéma](api/field-groups.md)
-   * [Types des données](api/data-types.md)
+   * [Types de données](api/data-types.md)
    * [Descripteurs](api/descriptors.md)
    * [Unions](api/unions.md)
    * [Exporter/Importer](api/export-import.md)
    * [Sample data](api/sample-data.md)
    * [Journal d’audit](api/audit-log.md)
-   * [Schémas ad hoc](api/ad-hoc.md)
+   * [Schémas ad hoc](api/ad-hoc.md)
    * [Mélanges (obsolète)](api/mixins.md)
    * [Annexe](api/appendix.md)
 * Tutoriels {#tutorials}
