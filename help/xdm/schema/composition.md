@@ -5,11 +5,10 @@ title: Principes de base de la composition des Schémas
 topic-legacy: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 632ea4e2a94bfcad098a5fc5a5ed8985c0f41e0e
 workflow-type: tm+mt
-source-wordcount: '3538'
-ht-degree: 34%
+source-wordcount: '3621'
+ht-degree: 33%
 
 ---
 
@@ -60,9 +59,13 @@ Les champs généralement marqués comme &quot;[!UICONTROL Identité]&quot; sont
 
 Il est important de réfléchir à l&#39;identité des clients au cours de la phase de planification du schéma afin de veiller à ce que les données soient rassemblées pour créer le profil le plus robuste possible. Consultez la présentation du [Service d&#39;identité de Adobe Experience Platform](../../identity-service/home.md) pour en savoir plus sur la manière dont les informations d&#39;identité peuvent vous aider à fournir des expériences numériques à vos clients.
 
-#### `xdm:identityMap` {#identityMap}
+#### `identityMap` {#identityMap}
 
-`xdm:identityMap` est un champ de type carte qui décrit les différentes valeurs d’identité d’un individu, ainsi que les espaces de nommage qui lui sont associés. Ce champ peut être utilisé pour fournir des informations d&#39;identité à vos schémas, au lieu de définir des valeurs d&#39;identité dans la structure du schéma lui-même.
+`identityMap` est un champ de type carte qui décrit les différentes valeurs d’identité d’un individu, ainsi que les espaces de nommage qui lui sont associés. Ce champ peut être utilisé pour fournir des informations d&#39;identité à vos schémas, au lieu de définir des valeurs d&#39;identité dans la structure du schéma lui-même.
+
+Le principal inconvénient de l&#39;utilisation de `identityMap` est que les identités sont incorporées dans les données et deviennent ainsi moins visibles. Si vous importez des données brutes, vous devez plutôt définir des champs d&#39;identité individuels dans la structure de schéma réelle.
+
+Cependant, les cartes d’identité peuvent s’avérer particulièrement utiles si vous intégrez des données provenant de sources qui stockent des identités ensemble, telles que [!DNL Airship] ou Adobe Audience Manager. En outre, des mappages d’identité sont requis si vous utilisez le [SDK mobile de Adobe Experience Platform](https://aep-sdks.gitbook.io/docs/).
 
 Voici un exemple de carte d’identité simple :
 
