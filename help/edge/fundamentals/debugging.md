@@ -2,14 +2,13 @@
 title: Débogage dans le SDK Web Adobe Experience Platform
 description: Découvrez comment activer/désactiver les fonctionnalités de débogage dans le SDK Web Experience Platform.
 keywords: débogage du sdk Web ; débogage ; configuration ; commande ; configuration ; commande de débogage ; edgeConfigId ; setDebug ; debugEnabled ; debug ;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
+source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 84%
+source-wordcount: '446'
+ht-degree: 73%
 
 ---
-
 
 # Débogage
 
@@ -79,4 +78,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 Actuellement, l’objet `libraryInfo` fourni contient les propriétés suivantes :
 
-* `version` Il s’agit de la version de la bibliothèque chargée. Par exemple, si la version de la bibliothèque chargée est 1.0.0, la valeur est `1.0.0`.
+* `version` Il s’agit de la version de la bibliothèque chargée. Par exemple, si la version de la bibliothèque chargée est 1.0.0, la valeur est `1.0.0`. Lorsque la bibliothèque est exécutée dans l’extension Adobe Experience Platform Launch (appelée &quot;AEP Web SDK&quot;), la version correspond à la version de la bibliothèque et la version de l’extension de Platform launch associée à un signe &quot;+&quot;. Par exemple, si la version de la bibliothèque était 1.0.0 et la version de l’extension de Platform launch 1.2.0, la valeur serait `1.0.0+1.2.0`.
