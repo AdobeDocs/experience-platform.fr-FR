@@ -4,10 +4,9 @@ title: Classe de définition de segment
 topic-legacy: overview
 description: Ce document fournit un aperçu de la classe de définition de segment dans le modèle de données d’expérience (XDM).
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 632ea4e2a94bfcad098a5fc5a5ed8985c0f41e0e
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -28,7 +27,7 @@ ht-degree: 0%
 | `_id` | Identificateur de chaîne unique généré par le système pour l’enregistrement. Ce champ permet de suivre l&#39;unicité d&#39;un enregistrement individuel, d&#39;éviter la duplication des données et de rechercher cet enregistrement dans les services en aval.<br><br>Ce champ étant généré par le système, il ne reçoit pas de valeur explicite lors de l’assimilation des données. Cependant, vous pouvez toujours choisir de fournir vos propres valeurs d’ID uniques si vous le souhaitez.<br><br>Il est important de distinguer que ce champ  **ne** représente pas une identité liée à une personne, mais plutôt l&#39;enregistrement des données. Les données d&#39;identité relatives à une personne doivent être reléguées à [champs d&#39;identité](../schema/composition.md#identity). |
 | `createdByBatchID` | ID du lot assimilé à l&#39;origine de la création de l&#39;enregistrement. |
 | `description` | Description de la définition de segment. |
-| `identityMap` | Champ de mappage contenant un ensemble d’identités d’espacement de noms pour les individus auxquels s’applique le segment. Ce champ est automatiquement mis à jour par le système lorsque des données d&#39;identité sont saisies.<br /><br />Consultez la section sur les cartes d&#39;identité dans les  [bases de la ](../schema/composition.md#identityMap) composition de schémas pour plus d&#39;informations sur leur cas d&#39;utilisation. |
+| `identityMap` | Champ de mappage contenant un ensemble d’identités d’espacement de noms pour les individus auxquels s’applique le segment. Consultez la section sur les cartes d&#39;identité dans les [bases de la composition des schémas](../schema/composition.md#identityMap) pour plus d&#39;informations sur leur cas d&#39;utilisation. |
 | `modifiedByBatchID` | ID du dernier lot assimilé qui a provoqué la mise à jour de l&#39;enregistrement. |
 | `repositoryCreatedBy` | ID de l’utilisateur qui a créé l’enregistrement. |
 | `repositoryLastModifiedBy` | ID de l’utilisateur qui a modifié l’enregistrement pour la dernière fois. |
