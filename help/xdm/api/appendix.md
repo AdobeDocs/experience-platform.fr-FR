@@ -5,8 +5,7 @@ title: Annexe du Guide de l'API du registre des schémas
 description: Ce document fournit des informations supplémentaires relatives au travail avec l’API Schema Registry.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 47%
@@ -54,7 +53,7 @@ Vous pouvez filtrer les résultats en utilisant le paramètre `property`, qui es
 >
 >Vous pouvez utiliser le paramètre `property` pour filtrer les groupes de champs de schéma selon leur classe compatible. Par exemple, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` renvoie uniquement les groupes de champs compatibles avec la classe [!DNL XDM Individual Profile].
 
-## Mode de compatibilité
+## Mode de compatibilité {#compatibility}
 
 [!DNL Experience Data Model] (XDM) est une spécification documentée publiquement, pilotée par l&#39;Adobe pour améliorer l&#39;interopérabilité, l&#39;expressivité et la puissance des expériences numériques. Adobe conserve le code source et les définitions formelles XDM dans un [projet open source sur GitHub](https://github.com/adobe/xdm/). Ces définitions sont écrites dans la notation standard XDM, et utilisent JSON-LD (JavaScript Object Notation for Linked Data) et le schéma JSON comme grammaire de définition des schémas XDM.
 
