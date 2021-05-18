@@ -5,11 +5,10 @@ title: Espaces de nommage Marketo
 topic-legacy: overview
 description: Ce document présente un aperçu des espaces de nommage personnalisés requis lors de la création d'un connecteur source Marketo Engage.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-translation-type: tm+mt
-source-git-commit: 8dd7b1724f3de12bf6a3a1b77ee8050fd1a9eaf3
+source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
 workflow-type: tm+mt
-source-wordcount: '1602'
-ht-degree: 14%
+source-wordcount: '1670'
+ht-degree: 13%
 
 ---
 
@@ -56,6 +55,20 @@ Le tableau suivant contient des exemples de valeurs ainsi que des informations s
 | `has_msi` | Valeur booléenne qui indique si vous êtes abonné à [!DNL Marketo Sales Insight]. | `false` |
 
 {style=&quot;table-layout:auto&quot;}
+
+### Exécution des scripts
+
+Une fois votre collection et votre environnement [!DNL Postman] configurés, vous pouvez désormais exécuter le script via l&#39;interface [!DNL Postman].
+
+Dans l&#39;interface [!DNL Postman], sélectionnez le dossier racine de l&#39;utilitaire de génération automatique, puis sélectionnez **[!DNL Run]** dans l&#39;en-tête supérieur.
+
+![dossier racine](../images/marketo/root-folder.png)
+
+L&#39;interface [!DNL Runner] s&#39;affiche. A partir de là, assurez-vous que toutes les cases à cocher sont sélectionnées, puis sélectionnez **[!DNL Run Adobe I/O Access Token Generation + Automate Namespace creation]**.
+
+![générateur de courant](../images/marketo/run-generator.png)
+
+Une demande réussie crée les espaces de nommage et schémas B2B selon les spécifications bêta.
 
 ## [!DNL Marketo] espaces de nommage
 
