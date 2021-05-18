@@ -5,9 +5,9 @@ title: Espaces de nommage Marketo
 topic-legacy: overview
 description: Ce document présente un aperçu des espaces de nommage personnalisés requis lors de la création d'un connecteur source Marketo Engage.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
+source-git-commit: 609b951cbde880a9f354b343adb1796def0a812c
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1677'
 ht-degree: 13%
 
 ---
@@ -24,7 +24,7 @@ Le présent document fournit des informations sur la configuration sous-jacente 
 
 La première étape de l&#39;utilisation de l&#39;utilitaire de génération automatique d&#39;espace de nommage et de schéma [!DNL Marketo] consiste à configurer votre console de développement de plate-forme et votre environnement [!DNL Postman].
 
-- Vous pouvez télécharger la collecte et l&#39;environnement des utilitaires de génération automatique d&#39;espace de nommage et de schéma à partir de ce [référentiel GitHub](https://git.corp.adobe.com/marketo-engineering/namespace_schema_utility).
+- Vous pouvez télécharger la collecte et l&#39;environnement des utilitaires de génération automatique d&#39;espace de nommage et de schéma à partir de ce [référentiel GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
 - Pour plus d&#39;informations sur l&#39;utilisation des API de plateforme, y compris sur la manière de collecter des valeurs pour les en-têtes requis et de lire des exemples d&#39;appels d&#39;API, consultez le guide [Prise en main des API de plateforme](../../../../landing/api-guide.md).
 - Pour plus d&#39;informations sur la génération de vos informations d&#39;identification pour les API de plateformes, consultez le didacticiel [authentification et accès aux API d&#39;Experience Platform](../../../../landing/api-authentication.md).
 - Pour plus d&#39;informations sur la configuration de [!DNL Postman] pour les API de plateformes, consultez le didacticiel sur [la configuration de la console de développement et  [!DNL Postman]](../../../../landing/postman.md).
