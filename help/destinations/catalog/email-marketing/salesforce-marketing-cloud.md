@@ -3,10 +3,9 @@ keywords: e-mail ; e-mail ; e-mail ; destinations e-mail ; salesforce ; destinat
 title: Connexion Marketing Cloud Salesforce
 seo-description: Salesforce Marketing Cloud est une suite de marketing numérique anciennement connue sous le nom d’ExactTarget qui vous permet de créer et de personnaliser les parcours des visiteurs et des clients afin d’offrir une expérience personnalisée.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '629'
 ht-degree: 30%
 
 ---
@@ -77,8 +76,8 @@ Lorsque [active des segments](../../ui/activate-destinations.md) vers la destina
 
 ## Données exportées {#exported-data}
 
-Pour les destinations [!DNL Salesforce Marketing Cloud], Platform crée un fichier délimité par des tabulations `.txt` ou `.csv` à l&#39;emplacement de l&#39;enregistrement que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Destinations du marketing par courriel et Destinations de l’enregistrement Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) dans le didacticiel sur l’activation des segments.
+Pour les destinations [!DNL Salesforce Marketing Cloud], Platform crée un fichier `.csv` délimité par des tabulations à l’emplacement de l’enregistrement que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Destinations du marketing par courriel et Destinations de l’enregistrement Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) dans le didacticiel sur l’activation des segments.
 
 ## Configurez l&#39;importation des données dans [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-Après avoir connecté [!DNL Platform] à votre enregistrement SFTP, vous devez configurer l&#39;importation des données à partir de votre emplacement d&#39;enregistrement dans [!DNL Salesforce Marketing Cloud]. Pour savoir comment y parvenir, voir [Importation d&#39;abonnés dans un Marketing Cloud à partir d&#39;un fichier ](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) dans le [!DNL Salesforce Help Center].
+Après avoir connecté [!DNL Platform] à votre enregistrement [!DNL SFTP], vous devez configurer l&#39;importation des données depuis votre emplacement d&#39;enregistrement dans [!DNL Salesforce Marketing Cloud]. Pour savoir comment y parvenir, voir [Importation d&#39;abonnés dans un Marketing Cloud à partir d&#39;un fichier ](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) dans le [!DNL Salesforce Help Center].
