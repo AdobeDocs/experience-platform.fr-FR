@@ -3,8 +3,7 @@ keywords: Destination du hub de événement Azure ; hub de événement azure ; e
 title: (bêta) Connexion à !DNL Azure Événement Hubs]
 description: Créez une connexion sortante en temps réel à votre enregistrement !DNL Azure Événement Hubs] pour diffuser des données à partir de l'Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-translation-type: tm+mt
-source-git-commit: ce5001d0a1c95901089915ae9836fdd436f12297
+source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 6%
@@ -45,21 +44,21 @@ Voir [Flux de travaux de destination des enregistrements cloud ](./workflow.md)p
 
 Pour les destinations [!DNL Azure Event Hubs], saisissez les informations suivantes dans le processus de création de destination :
 
-## Étape d&#39;authentification {#authentication-step}
+## Étape du compte {#account-step}
 
 * **[!UICONTROL Clé]** de clé SAS et Clé **** SAS : Renseignez votre clé et votre nom de clé SAS. Découvrez comment vous authentifier auprès de [!DNL Azure Event Hubs] avec des clés SAS dans la [documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Espace de nommage]** : Remplissez votre  [!DNL Azure Event Hubs] espace de nommage. Découvrez les espaces de nommage [!DNL Azure Event Hubs] dans la [documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
-![Entrée requise dans l’étape d’authentification](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
+![Entrée requise dans l’étape du compte](../../assets/catalog/cloud-storage/event-hubs/account.png)
 
-## Étape de configuration {#setup-step}
+## Étape d&#39;authentification {#authentication-step}
 
 * **[!UICONTROL Nom]** : Renseignez le nom de la connexion à  [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]** : Fournissez une description de la connexion.  Exemples : &quot;Clients Premium&quot;, &quot;Hommes intéressés par le kitesurf&quot;.
 * **[!UICONTROL eventHubName]** : Attribuez un nom au flux jusqu’à votre  [!DNL Azure Event Hubs] destination.
 * **[!UICONTROL Actions]** marketing : Les actions marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des actions marketing définies par Adobe ou créer votre propre action marketing. Pour plus d’informations sur les actions marketing, voir la page [Gouvernance des données dans Adobe Experience Platform](../../../data-governance/policies/overview.md). Pour plus d&#39;informations sur les actions marketing définies par l&#39;Adobe, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
 
-![Données requises à l’étape de configuration](../../assets/catalog/cloud-storage/event-hubs/setup.png)
+![Données requises à l’étape de l’authentification](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
 
 ## Activation des segments {#activate-segments}
 
@@ -111,6 +110,6 @@ Vos données [!DNL Experience Platform] exportées atterrissent dans [!DNL Azure
 >[!MORELIKETHIS]
 >
 >* [Se connecter aux concentrateurs de Événement Azure et activer les données à l&#39;aide de l&#39;API Flow Service](../../api/streaming-destinations.md)
->* [Destination AWS Kinesis](./amazon-kinesis.md)
->* [Types et catégories de destination](../../destination-types.md)
+* [Destination AWS Kinesis](./amazon-kinesis.md)
+* [Types et catégories de destination](../../destination-types.md)
 
