@@ -3,14 +3,13 @@ keywords: e-mail ; e-mail ; e-mail ; destinations de courriel
 title: Présentation des destinations du marketing par email
 type: Tutorial
 description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
-translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
+source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 23%
+source-wordcount: '790'
+ht-degree: 21%
 
 ---
-
 
 # Présentation des destinations du marketing par email {#email-marketing-destinations}
 
@@ -20,7 +19,7 @@ Pour envoyer des segments aux destinations de marketing par courriel pour vos ca
 
 La connexion aux destinations de marketing par courriel est un processus en trois étapes ([configurer destination](#connect-destination), [activer les segments](#select-segments), [importer les données de l&#39;emplacement de l&#39;enregistrement dans la destination](#import-data-into-destination)). Chaque étape est décrite plus loin dans cette page.
 
-Dans le flux de connexion à la destination, décrit dans la section ci-dessous, connectez-vous à Amazon S3 ou SFTP. La plate-forme exporte vos segments sous la forme de fichiers `.csv` ou `.txt` et les diffuse à l’emplacement souhaité. Planifiez l’importation de vos données dans votre plateforme de marketing par courrier électronique à partir de l’emplacement d’enregistrement activé dans la plate-forme. Le processus d’importation des données varie pour chaque partenaire. Pour plus d’informations, consultez les articles sur les destinations.
+Dans le flux de destination de la connexion, décrit dans la section ci-dessous, connectez-vous à [!DNL Amazon S3] ou [!DNL SFTP]. La plate-forme exporte vos segments sous la forme de fichiers `.csv` et les diffuse à l’emplacement souhaité. Planifiez l&#39;importation de vos données dans votre plateforme de marketing par courriel à partir de l&#39;emplacement d&#39;enregistrement activé dans [!DNL Platform]. Le processus d’importation des données varie pour chaque partenaire. Pour plus d’informations, consultez les articles sur les destinations.
 
 ## Configurer la destination {#connect-destination}
 
@@ -30,7 +29,7 @@ Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez 
 
 À l’étape **[!UICONTROL Compte]**, si vous aviez précédemment configuré une connexion à votre destination marketing par courriel, sélectionnez **[!UICONTROL Compte existant]** et sélectionnez votre connexion existante. Vous pouvez également sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à votre destination marketing par courrier électronique. Dans le sélecteur **[!UICONTROL Type de connexion]**, vous pouvez sélectionner [!UICONTROL Amazon S3], [!UICONTROL Azure Blob], [!UICONTROL SFTP avec mot de passe] ou [!UICONTROL SFTP avec clé SSH]. Renseignez les informations ci-dessous, en fonction du type de connexion, puis sélectionnez **[!UICONTROL Se connecter]**.
 
-- Pour les connexions **S3**, vous devez fournir votre identifiant de clé d&#39;accès Amazon et votre clé d&#39;accès secret.
+- Pour les connexions **S3**, vous devez fournir votre identifiant de clé d&#39;accès Amazon et votre clé d&#39;accès secrète.
 - Pour les connexions **SFTP avec mot de passe**, vous devez fournir le domaine, le port, le nom d’utilisateur et le mot de passe pour votre serveur SFTP.
 - Pour les connexions **SFTP avec la clé SSH**, vous devez fournir le domaine, le port, le nom d&#39;utilisateur et la clé SSH pour votre serveur SFTP.
 
@@ -88,7 +87,7 @@ Dans le sélecteur de champ Schéma, choisissez les autres champs à exporter ve
 
 Lisez les articles sur les destinations de marketing par courrier électronique pour savoir comment importer des données de votre emplacement d’enregistrement vers des destinations :
 
-- [Adobe Campaign](./adobe-campaign.md#import-data-into-campaign)
+- [Adobe Campaign](./adobe-campaign.md#import-data-into-campaign)
 - [Oracle Eloqua](./oracle-eloqua.md#import-data-into-eloqua)
 - [Oracle Responsys](./oracle-responsys.md#import-data-into-responsys)
 - [Salesforce Marketing Cloud](./salesforce-marketing-cloud.md#import-data-into-salesforce)
