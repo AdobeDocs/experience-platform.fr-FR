@@ -3,11 +3,10 @@ keywords: e-mail ; e-mail ; e-mail ; destination de l'e-mail ; destination de la
 title: Oracle Connexion Responsys
 description: Responsys est un outil de marketing par e-mail d’entreprise proposé par Oracle dans le cadre de campagnes marketing sur plusieurs canaux. Il permet de personnaliser les interactions entre e-mails, terminaux mobiles, écrans et réseaux sociaux.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 28%
+source-wordcount: '616'
+ht-degree: 29%
 
 ---
 
@@ -77,8 +76,8 @@ Lorsque [active des segments](../../ui/activate-destinations.md) vers la destina
 
 ## Données exportées {#exported-data}
 
-Pour les destinations [!DNL Oracle Responsys], Platform crée un fichier délimité par des tabulations `.txt` ou `.csv` à l&#39;emplacement de l&#39;enregistrement que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Destinations du marketing par courriel et Destinations de l’enregistrement Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) dans le didacticiel sur l’activation des segments.
+Pour les destinations [!DNL Oracle Responsys], Platform crée un fichier `.csv` délimité par des tabulations à l’emplacement de l’enregistrement que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Destinations du marketing par courriel et Destinations de l’enregistrement Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) dans le didacticiel sur l’activation des segments.
 
 ## Configurez l&#39;importation des données dans [!DNL Oracle Responsys] {#import-data-into-responsys}
 
-Après avoir connecté [!DNL Platform] à votre enregistrement SFTP, vous devez configurer l&#39;importation des données à partir de votre emplacement d&#39;enregistrement dans [!DNL Oracle Responsys]. Pour savoir comment y parvenir, voir [Importation de contacts ou de comptes](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) dans le [!DNL Oracle Responsys Help Center].
+Après avoir connecté [!DNL Platform] à votre enregistrement [!DNL SFTP], vous devez configurer l&#39;importation des données depuis votre emplacement d&#39;enregistrement dans [!DNL Oracle Responsys]. Pour savoir comment y parvenir, voir [Importation de contacts ou de comptes](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) dans le [!DNL Oracle Responsys Help Center].
