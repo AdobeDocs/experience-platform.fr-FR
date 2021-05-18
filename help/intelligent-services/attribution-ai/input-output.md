@@ -5,10 +5,9 @@ title: Entrée et sortie dans Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Le document suivant décrit les différents apports et extrants utilisés dans l'Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 91f586746c8d1db4e9219b261d7be36e572f1b50
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2230'
 ht-degree: 15%
 
 ---
@@ -48,7 +47,11 @@ Toutes les colonnes du schéma [!DNL Consumer Experience Event] (CEE) ne sont pa
 | Marketing.campaigngroup | Point de contact |
 | Commerce | Conversion |
 
-En règle générale, l’attribution est exécutée sur les colonnes de conversion telles que la commande, les achats et les passages en caisse sous &quot;commerce&quot;. Les colonnes &quot;canal&quot; et &quot;marketing&quot; sont fortement conseillées pour définir des points de contact pour obtenir de bonnes informations. Cependant, vous pouvez inclure toute autre colonne supplémentaire ainsi que les colonnes ci-dessus à configurer comme une conversion ou une définition de point de contact.
+En règle générale, l’attribution est exécutée sur les colonnes de conversion telles que la commande, les achats et les passages en caisse sous &quot;commerce&quot;. Les colonnes &quot;canal&quot; et &quot;marketing&quot; servent à définir des points de contact pour l’Attribution AI (par exemple, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Pour obtenir des résultats et des informations optimaux, il est vivement recommandé d’inclure autant de colonnes de conversion et de points de contact que possible. De plus, vous n&#39;êtes pas limité aux colonnes ci-dessus. Vous pouvez inclure n’importe quelle autre colonne recommandée ou personnalisée en tant que conversion ou définition de point de contact.
+
+>[!TIP]
+>
+>Si vous utilisez des données Adobe Analytics dans votre schéma CEE, les informations de point de contact pour Analytics sont généralement stockées dans `channel.typeAtSource` (par exemple, `channel.typeAtSource = 'email'`).
 
 Les colonnes ci-dessous ne sont pas obligatoires, mais il est recommandé de les inclure dans votre schéma CEE si vous disposez des informations disponibles.
 
@@ -58,7 +61,7 @@ Les colonnes ci-dessous ne sont pas obligatoires, mais il est recommandé de les
 - web.webPageDetails
 - xdm:productListItems
 
-### Données historiques {#data-requirements}
+## Données historiques {#data-requirements}
 
 >[!IMPORTANT]
 >
