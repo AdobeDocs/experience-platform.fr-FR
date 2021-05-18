@@ -2,14 +2,13 @@
 keywords: Amazon Kinesis ; destination de la kinesis ; kinesis
 title: Connexion Amazon
 description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser les données de Adobe Experience Platform.
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
+source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 6%
 
 ---
-
 
 # (Beta) [!DNL Amazon Kinesis] connexion
 
@@ -45,21 +44,21 @@ Voir [Flux de travaux de destination des enregistrements cloud ](./workflow.md)p
 
 Pour les destinations [!DNL Amazon Kinesis], saisissez les informations suivantes dans le processus de création de destination :
 
-## Étape d&#39;authentification {#authentication-step}
+## Étape du compte {#account-step}
 
 * **[!DNL Amazon Web Services]clé d&#39;accès et clé** secrète : Dans  [!DNL Amazon Web Services], générez une  `access key - secret access key` paire pour accorder l’accès à la plate-forme à votre  [!DNL Amazon Kinesis] compte. Pour en savoir plus, consultez la [documentation Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **region** : Indiquez la  [!DNL Amazon Web Services] région à laquelle diffuser les données.
 
 ![Champs d’entrée dans l’étape du compte](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-## Étape de configuration {#setup-step}
+## Étape d&#39;authentification {#authentication-step}
 
 * **Nom** : Attribuez un nom à votre connexion.  [!DNL Amazon Kinesis]
 * **Description** : Fournissez une description de votre connexion à  [!DNL Amazon Kinesis].
 * **stream** : Indiquez le nom d’un flux de données existant dans votre  [!DNL Amazon Kinesis] compte. La plate-forme exportera les données vers ce flux.
 * **[!UICONTROL Actions]** marketing : Les actions marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des actions marketing définies par Adobe ou créer votre propre action marketing. Pour plus d’informations sur les actions marketing, voir la page [Gouvernance des données dans Adobe Experience Platform](../../../data-governance/policies/overview.md). Pour plus d&#39;informations sur les actions marketing définies par l&#39;Adobe, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
 
-![Champs d’entrée dans l’étape d’authentification](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
+![Champs d’entrée dans l’étape d’authentification](../../assets/catalog/cloud-storage/amazon-kinesis/authentication.png)
 
 <!--
 
@@ -120,6 +119,6 @@ Vos données [!DNL Experience Platform] exportées atterrissent dans [!DNL Amazo
 >[!MORELIKETHIS]
 >
 >* [Connexion à Amazon Kinesis et activation des données à l’aide de l’API du service de flux](../../api/streaming-destinations.md)
->* [Destination des centres de Événement Azure](./azure-event-hubs.md)
->* [Types et catégories de destination](../../destination-types.md)
+* [Destination des centres de Événement Azure](./azure-event-hubs.md)
+* [Types et catégories de destination](../../destination-types.md)
 
