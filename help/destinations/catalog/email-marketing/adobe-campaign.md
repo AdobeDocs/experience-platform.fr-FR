@@ -3,11 +3,10 @@ keywords: e-mail ; e-mail ; e-mail ; destinations e-mail ; adobe campaign ; camp
 title: Connexion Adobe Campaign
 description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 21%
+source-wordcount: '871'
+ht-degree: 18%
 
 ---
 
@@ -76,13 +75,13 @@ Lorsque [active des segments](../../ui/activate-destinations.md) vers la destina
 
 ## Données exportées {#exported-data}
 
-Pour les destinations [!DNL Adobe Campaign], [!DNL Platform] crée un fichier délimité par des tabulations `.txt` ou `.csv` à l&#39;emplacement d&#39;enregistrement que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Destinations du marketing par courriel et Destinations de l’enregistrement Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) dans le didacticiel sur l’activation des segments.
+Pour les destinations [!DNL Adobe Campaign], [!DNL Platform] crée un fichier `.csv` délimité par des tabulations à l’emplacement de l’enregistrement que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Destinations du marketing par courriel et Destinations de l’enregistrement Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) dans le didacticiel sur l’activation des segments.
 
 ## Configurer l’importation des données dans Adobe Campaign {#import-data-into-campaign}
 
 >[!IMPORTANT]
 >
->- Lorsque vous effectuez cette intégration, gardez à l’esprit les limites du stockage SFTP, du stockage en base de données et des profils actifs selon votre contrat Adobe Campaign.
+>- Gardez à l&#39;esprit les limites d&#39;enregistrement [!DNL SFTP], les limites d&#39;enregistrement de base de données et les limites de profil principal conformément à votre contrat Adobe Campaign lors de l&#39;exécution de cette intégration.
 >- Vous devez planifier, importer et mapper vos segments exportés en Adobe Campaign à l’aide de [!DNL Campaign] workflows. Reportez-vous à [Configuration d’une importation périodique](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) dans la documentation Adobe Campaign Classic et [À propos des activités de data Management](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) dans la documentation Adobe Campaign Standard.
 >- La méthode préférée pour envoyer des données à Adobe Campaign est [!DNL Amazon S3] ou [!DNL Azure Blob].
 
