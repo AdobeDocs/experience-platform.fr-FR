@@ -3,18 +3,17 @@ audience: user
 user-guide-title: Guide du profil client en temps réel
 user-guide-description: Fusionnez les données client pour créer une vue unifiée des interactions client entre les canaux.
 feature: Profils
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 167407a8103acecb9846a6e0f8e38c66f3f3292d
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 41%
+source-wordcount: '128'
+ht-degree: 39%
 
 ---
 
 
 # [!DNL Real-time Customer Profile] {#profile}
 
-* [[!DNL Profile] aperçu](home.md)
+* [[!DNL Profile] présentation](home.md)
 * [Présentation du profil (vidéo)](video/profile-overview.md)
 * [[!DNL Profile] garde](guardrails.md)
 * [!DNL Profile] API {#api}
@@ -24,7 +23,7 @@ ht-degree: 41%
    * [Entités ([!DNL Profile] accès)](api/entities.md)
    * [Tâches d’exportation ([!DNL Profile] exportation)](api/export-jobs.md)
    * [Stratégies de fusion](api/merge-policies.md)
-   * [État de l’exemple de prévisualisation ([!DNL Profile] prévisualisation)](api/preview-sample-status.md)
+   * [Etat de l&#39;exemple de prévisualisation ([!DNL Profile] prévisualisation)](api/preview-sample-status.md)
    * [[!DNL Profile] tâches système (supprimer des requêtes)](api/profile-system-jobs.md)
 * Guides de l’interface utilisateur du profil {#ui}
    * [[!DNL Profile] Guide de l’interface](ui/user-guide.md)
@@ -40,8 +39,9 @@ ht-degree: 41%
    * [Configuration d’un champ d’attribut calculé](computed-attributes/configure-api.md)
    * [Exemples d’expressions](computed-attributes/expressions.md)
 * Tutoriels {#tutorials}
-   * [Ajouter les données à [!DNL Profile]](tutorials/add-profile-data.md)
-   * [Configuration d’un jeu de données  [!DNL Profile] & [!DNL Identity] pour le service](tutorials/dataset-configuration.md)
+   * [Ajouter les données à  [!DNL Profile]](tutorials/add-profile-data.md)
+   * [Configurer un jeu de données pour le service [!DNL Profile] & [!DNL Identity] ](tutorials/dataset-configuration.md)
+   * [Générer l&#39;état de chevauchement des jeux de données](tutorials/dataset-overlap-report.md)
    * [Plus de tutoriels](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Traitement des demandes d’accès à des informations personnelles](privacy.md)
 * [[!DNL Profile] guide de dépannage](troubleshooting.md)
