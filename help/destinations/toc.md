@@ -4,10 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document liste la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-translation-type: tm+mt
-source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
+source-git-commit: d62b2df54357449f35894f9c8ab45f87d97363d2
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '476'
 ht-degree: 59%
 
 ---
@@ -17,6 +16,7 @@ ht-degree: 59%
 
 * [Présentation des destinations](./home.md)
 * [Types et catégories de destination](./destination-types.md)
+* [FAQ sur les destinations](./destinations-faq.md)
 * Tutoriels sur les API {#api}
    * [Se connecter aux destinations de diffusion en continu et activer les données à l’aide de l’API du service de flux](./api/streaming-destinations.md)
    * [Connectez-vous aux destinations de marketing par courrier électronique et activez les données à l’aide de l’API du service de flux.](./api/email-marketing.md)
@@ -40,10 +40,10 @@ ht-degree: 59%
       * [Extension Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
       * [Extension Awin Advertiser Conversion Tag](./catalog/advertising/awin-conversiontag.md)
       * [Extension Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
-      * [Extension Bing Ads Universal Event Tracking (UET) ](./catalog/advertising/bing-ads.md)
+      * [Extension Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
       * [Extension Branch](./catalog/advertising/branch.md)
       * [Extension DoubleClick Floodlight (bêta)](./catalog/advertising/doubleclick-floodlight.md)
-      * [Extension Facebook Pixel](./catalog/advertising/facebook-pixel.md)
+      * [Extension Pixel Facebook](./catalog/advertising/facebook-pixel.md)
       * [Extension Flashtalking OneTag](./catalog/advertising/flashtalking.md)
       * [Connexion aux publicités Google](./catalog/advertising/google-ads-destination.md)
       * [Extension Google Ads](./catalog/advertising/google-ads-extension.md)
@@ -60,7 +60,7 @@ ht-degree: 59%
       * [Présentation des destinations d’analyse](./catalog/analytics/overview.md)
       * [Extension Adform Website Tracking](./catalog/analytics/adform.md)
       * [Extension Adobe Analytics](./catalog/analytics/adobe-analytics.md)
-      * [Extension Adobe Media Analytics for Audio and Vidéo](./catalog/analytics/adobe-video-analytics.md)
+      * [Extension Adobe Media Analytics for Audio and Video](./catalog/analytics/adobe-video-analytics.md)
       * [Extension Clicktale](./catalog/analytics/clicktale.md)
       * [Extension Contentsquare](./catalog/analytics/contentsquare.md)
       * [Extension Decibel](./catalog/analytics/decibel.md)
@@ -113,7 +113,7 @@ ht-degree: 59%
       * [Extension Adobe Target v2](./catalog/personalization/adobe-target-v2.md)
       * [Extension Beemray](./catalog/personalization/beemray.md)
       * [Extension D&amp;B Visitor Intelligence](./catalog/personalization/dnb.md)
-      * [Extension du service Experience Cloud ID](./catalog/personalization/adobe-ecid.md)
+      * [Extension du service Experience Cloud ID](./catalog/personalization/adobe-ecid.md)
       * [Extension Gainsight](./catalog/personalization/gainsight.md)
       * [Extension KickFire](./catalog/personalization/kickfire.md)
       * [Extension Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
