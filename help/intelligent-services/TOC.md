@@ -5,18 +5,17 @@ user-guide-title: Aide d’Intelligent Services
 breadcrumb-title: Guide des services intelligents
 user-guide-description: Utilisez les services intelligents d’IA pour générer des scores, découvrir des insights et créer des segments à partir des données de vos événements marketing.
 feature: Data Science Workspace
-translation-type: tm+mt
-source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
+source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 50%
+source-wordcount: '124'
+ht-degree: 49%
 
 ---
 
 
 # Adobe Intelligent Services {#intelligent-services}
 
-- [Présentation d’Intelligent Services](home.md)
+- [Présentation des services intelligents](home.md)
 - [Préparation des données en vue de leur utilisation dans les services intelligents](data-preparation.md)
 - Attribution AI {#attribution-ai}
    - [Présentation](attribution-ai/overview.md)
@@ -44,4 +43,5 @@ ht-degree: 50%
       - [Découvrir les informations](customer-ai/user-guide/discover-insights.md)
       - [Création de segments à l’aide de scores AI client](customer-ai/user-guide/create-segment.md)
       - [Télécharger des scores](customer-ai/user-guide/download-scores.md)
+   - [Résolution des problèmes](customer-ai/troubleshooting.md)
 - [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
