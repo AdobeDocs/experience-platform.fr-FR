@@ -5,10 +5,9 @@ title: Importation et utilisation d’audiences externes
 description: Suivez ce tutoriel pour apprendre à utiliser les audiences externes avec Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 82aa38c7bce05faeea5a9f42d0d86776737e04be
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '785'
 ht-degree: 9%
 
 ---
@@ -19,11 +18,25 @@ Adobe Experience Platform prend en charge la possibilité d’importer de l’au
 
 ## Prise en main
 
+Ce didacticiel nécessite une bonne compréhension des différents services [!DNL Adobe Experience Platform] impliqués dans la création de segments d&#39;audience. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
+
 - [Segmentation Service](../home.md) : vous permet de créer des segments ciblés depuis des données de Real-time Customer Profile.
 - [Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 - [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
 - [Jeu de données](../../catalog/datasets/overview.md) : la structure de stockage et de gestion pour la persistance des données dans Experience Platform.
 - [Prise en charge](../../ingestion/streaming-ingestion/overview.md) en flux continu : Comment l’Experience Platform ingère et stocke les données des périphériques client et serveur en temps réel.
+
+### Données de segment et métadonnées de segment
+
+Avant de début l’importation et l’utilisation d’audiences externes, il est important de comprendre la différence entre les données de segment et les métadonnées de segment.
+
+Les données de segment font référence aux profils qui répondent aux critères de qualification de segment et qui font donc partie de l’audience.
+
+Les métadonnées de segment sont des informations sur le segment lui-même, qui comprennent le nom, la description, l’expression (le cas échéant), la date de création, la date de la dernière modification et un identifiant. L’ID lie les métadonnées du segment aux profils individuels qui satisfont à la qualification du segment et qui font partie de l’audience résultante.
+
+| Données de segment | Métadonnées de segment |
+| ------------ | ---------------- |
+| Profils répondant aux critères de qualification des segments | Informations sur le segment lui-même |
 
 ## Créer un espace de nommage d&#39;identité pour l&#39;audience externe
 
