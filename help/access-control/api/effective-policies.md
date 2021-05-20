@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform ; accueil ; thèmes populaires ; stratégies efficaces ; api contrôle d'accès
+keywords: Experience Platform;accueil;rubriques populaires;stratégies effectives;api contrôle dʼaccès
 solution: Experience Platform
-title: Point de terminaison de l’API Stratégies efficaces
+title: Point d’entrée de lʼAPI Effective Policies
 topic-legacy: developer guide
-description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Ce document sert de guide pour la vue de stratégies efficaces à l’aide de l’API contrôle d'accès pour Adobe Experience Platform.
+description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Ce document sert de guide sur la manière dʼafficher des stratégies effectives à lʼaide de lʼAPI Access Control pour Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '320'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
-# Point final des politiques efficaces
+# Point d’entrée des stratégies effectives
 
 Pour afficher des stratégies efficaces pour l’utilisateur actuel, envoyez une requête POST au point de terminaison `/acl/effective-policies` dans l’API [!DNL Access Control] Les autorisations et les types de ressources que vous souhaitez récupérer doivent être fournis dans le payload de la requête sous la forme de tableau. Ceci est illustré dans l’exemple d’appel API ci-dessous.
 
@@ -25,7 +24,7 @@ POST /acl/effective-policies
 
 **Requête**
 
-Les requêtes suivantes récupèrent des informations sur l&#39;autorisation &quot;[!UICONTROL Gérer les jeux de données]&quot; et l&#39;accès au type de ressource &quot;[!UICONTROL schémas]&quot; pour l&#39;utilisateur actuel.
+Les requêtes suivantes récupèrent des informations sur lʼautorisation « [!UICONTROL Gérer des jeux de données] » et lʼaccès au type de ressource « [!UICONTROL schémas] » pour lʼutilisateur actuel.
 
 ```shell
 curl -X POST \
@@ -66,11 +65,11 @@ Une réponse réussie renvoie des informations sur les autorisations et les type
 
 ## Étapes suivantes
 
-Ce document décrit comment appeler l&#39;API [!DNL Access Control] pour renvoyer des informations sur les autorisations principales et les stratégies associées pour les types de ressources. Pour plus d&#39;informations sur le contrôle d&#39;accès pour [!DNL Experience Platform], consultez la [présentation du contrôle d&#39;accès](../home.md).
+Ce document décrit comment passer des appels à lʼAPI [!DNL Access Control] pour renvoyer des informations sur les autorisations actives et les stratégies associées pour les types de ressources. Pour plus dʼinformations sur le contrôle dʼaccès dʼ[!DNL Experience Platform], consultez la [présentation du contrôle dʼaccès](../home.md).
 
 ## Annexe
 
-Cette section fournit des informations supplémentaires sur l&#39;utilisation de l&#39;API [!DNL Access Control].
+Cette section fournit des informations supplémentaires sur lʼutilisation de lʼAPI [!DNL Access Control].
 
 ### Autorisations et types de ressources acceptés
 
