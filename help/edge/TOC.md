@@ -8,23 +8,23 @@ feature: Gestion des données
 source-git-commit: 4ed738b2b71332db1602d5571797ed61214afc2d
 workflow-type: tm+mt
 source-wordcount: '149'
-ht-degree: 36%
+ht-degree: 95%
 
 ---
 
 
 # SDK web Adobe Experience Platform {#edge}
 
-* [Présentation du SDK Web de plate-forme](home.md)
+* [Présentation du SDK web de Platform](home.md)
 * Notions fondamentales {#fundamentals}
-   * [Conditions préalables  ](fundamentals/prerequisite.md)
-   * [Configuration d’une chaîne de données](fundamentals/datastreams.md)
+   * [Conditions préalables](fundamentals/prerequisite.md)
+   * [Configuration d’un flux de données](fundamentals/datastreams.md)
    * [Installation du SDK](fundamentals/installing-the-sdk.md)
    * [Configuration du SDK](fundamentals/configuring-the-sdk.md)
-   * [Exécuter les commandes](fundamentals/executing-commands.md)
+   * [Exécution des commandes](fundamentals/executing-commands.md)
    * [Suivi des événements](fundamentals/tracking-events.md)
    * [Débogage](fundamentals/debugging.md)
-   * [Fusionner les données de événement](fundamentals/merging-event-data.md)
+   * [Fusion des données d’événement](fundamentals/merging-event-data.md)
    * [Configuration d’un fichier CSP](fundamentals/configuring-a-csp.md)
    * [Interaction avec plusieurs propriétés](fundamentals/interacting-with-multiple-properties.md)
 * Identité {#identity}
@@ -32,7 +32,7 @@ ht-degree: 36%
 * Collecte de données {#data-collection}
    * [Informations collectées automatiquement](data-collection/automatic-information.md)
    * [Suivi des liens](data-collection/track-links.md)
-   * [Collecte de données sur le commerce et les produits](data-collection/collect-commerce-data.md)
+   * [Collecte de données sur les produits et le commerce](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
       * [Présentation](data-collection/adobe-analytics/analytics-overview.md)
       * [Mappage des variables Analytics](data-collection/adobe-analytics/manually-mapping-variables.md)
@@ -48,16 +48,16 @@ ht-degree: 36%
       * [Présentation](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consentement {#consent}
    * [Prise en charge du consentement](consent/supporting-consent.md)
-   * Cadre de transparence et de consentement du CCI 2.0 {#iab-tcf}
+   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
       * [Présentation](consent/iab-tcf/overview.md)
       * [Intégration avec Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
-      * [Intégrer sans Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
-* Extension du SDK Web pour Adobe Experience Platform Launch {#extension}
-   * [Extension SDK Web](extension/web-sdk-extension.md)
+      * [Intégration sans Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
+* Extension SDK web pour Adobe Experience Platform Launch {#extension}
+   * [Extension SDK web](extension/web-sdk-extension.md)
    * [Types d’actions](extension/action-types.md)
    * [Types d’éléments de données](extension/data-element-types.md)
-   * [Accès à l&#39;ECID](extension/accessing-the-ecid.md)
-   * [Notes de mise à jour de l’extension SDK Web](extension/web-sdk-ext-release-notes.md)
+   * [Accès à l’ECID](extension/accessing-the-ecid.md)
+   * [Notes de mise à jour de l’extension SDK web](extension/web-sdk-ext-release-notes.md)
 * [Notes de mise à jour](release-notes.md)
 * [Questions fréquentes](web-sdk-faq.md)
-* [Publications de blog](blog-posts.md)
+* [Publications du blog](blog-posts.md)
