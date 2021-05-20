@@ -4,11 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez SQL standard pour créer des requêtes de données dans le lac de données de Platform.
 feature: Requêtes
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +30,7 @@ ht-degree: 88%
 - Bonnes pratiques {#best-practices}
    - [Directives générales pour l’exécution des requêtes](best-practices/writing-queries.md)
    - [Dédoublonnage des données](best-practices/deduplication.md)
-   - [Exemples de requêtes de Événement d’expérience](best-practices/experience-event-queries.md)
+   - [Exemples de requêtes dʼévénements dʼexpérience](best-practices/experience-event-queries.md)
    - [Exemples de requêtes Adobe Analytics](best-practices/adobe-analytics.md)
    - [Exemples de requêtes Adobe Target](best-practices/adobe-target.md)
 - Référence SQL {#sql}
@@ -39,7 +38,7 @@ ht-degree: 88%
    - [Syntaxe SQL](sql/syntax.md)
    - [Fonctions définies par Adobe](sql/adobe-defined-functions.md)
    - [Fonctions Spark SQL](sql/spark-sql-functions.md)
-   - [Commandes des métadonnées](sql/metadata.md)
+   - [Commandes de métadonnées](sql/metadata.md)
    - [Instructions préparées](sql/prepared-statements.md)
 - Connexion des clients à Query Service {#clients}
    - [Présentation de la connexion des clients](clients/overview.md)
@@ -52,4 +51,4 @@ ht-degree: 88%
    - [Tableau](clients/tableau.md)
 - [Guide de dépannage](troubleshooting-guide.md)
 - [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
-- [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+- [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
