@@ -4,16 +4,15 @@ user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: Guide de Platform Identity Service
 user-guide-description: Associez les identités des clients, quel que soit l’appareil ou le système utilisé, afin d’offrir des expériences numériques personnalisées.
 feature: Identités
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '97'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
 
-# Adobe Experience Platform Identity Service {#identity}
+# Service Adobe Experience Platform Identity {#identity}
 
 - [Présentation d’Identity Service](home.md)
 - [Présentation des espaces de noms d’identité](namespaces.md)
@@ -26,9 +25,9 @@ ht-degree: 90%
    - [Répertorier les espaces de noms disponibles](api/list-namespaces.md)
    - [Création d’un espace de noms personnalisé](api/create-custom-namespace.md)
    - [Répertorier l’identifiant natif d’une identité](api/list-native-id.md)
-- Interface utilisateur du service d&#39;identité {#ui}
-   - [Visionneuse de graphiques d’identité](ui/identity-graph-viewer.md)
+- Interface utilisateur dʼIdentity Service {#ui}
+   - [Graphique d’identités  observateur](ui/identity-graph-viewer.md)
 - [Présentation d’ECID](ecid.md)
 - [Guide de dépannage](troubleshooting-guide.md)
 - [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)
-- [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+- [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
