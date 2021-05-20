@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires
+keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
-title: Point de terminaison de l’API Libellés
+title: Point d’entrée de lʼAPI Labels
 topic-legacy: developer guide
-description: Découvrez comment gérer les étiquettes d’utilisation des données dans l’Experience Platform à l’aide de l’API Policy Service.
+description: Découvrez la façon de gérer les libellés dʼutilisation des données dans Experience Platform à lʼaide de lʼAPI Policy Service.
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '510'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Point de terminaison des étiquettes
+# Point d’entrée des libellés
 
-Les étiquettes d’utilisation des données vous permettent de classer les données en fonction des stratégies d’utilisation qui peuvent s’appliquer à ces données. Le point de terminaison `/labels` dans [!DNL Policy Service API] vous permet de gérer par programmation les étiquettes d’utilisation des données dans votre application d’expérience.
+Les libellés dʼutilisation des données vous permettent de classer les données en fonction des stratégies dʼutilisation qui peuvent sʼappliquer à ces données. Le point d’entrée `/labels` dans [!DNL Policy Service API] vous permet de gérer par programme les libellés dʼutilisation des données dans votre application Experience.
 
 >[!NOTE]
 >
->Le point de terminaison `/labels` n&#39;est utilisé que pour récupérer, créer et mettre à jour des étiquettes d&#39;utilisation des données. Pour savoir comment ajouter des libellés aux jeux de données et aux champs à l’aide d’appels d’API, consultez le guide [gestion des libellés de jeux de données](../labels/dataset-api.md).
+>Le point d’entrée `/labels` nʼest utilisé que pour la récupération, la création et la mise à jour des étiquettes dʼutilisation des données. Pour obtenir des instructions détaillées sur lʼajout dʼétiquettes aux jeux de données et aux champs à lʼaide dʼappels API, consultez le guide de [gestion des étiquettes des jeux de données](../labels/dataset-api.md).
 
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie du [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API [!DNL Experience Platform].
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
-## Récupérer une liste d&#39;étiquettes {#list}
+## Récupération dʼune liste dʼétiquettes {#list}
 
-Vous pouvez liste toutes les étiquettes `core` ou `custom` en adressant une demande de GET à `/labels/core` ou `/labels/custom`, respectivement.
+Vous pouvez répertorier toutes les étiquettes `core` ou `custom` en réalisant une requête GET à `/labels/core` ou `/labels/custom`, respectivement.
 
 **Format d’API**
 
@@ -38,7 +37,7 @@ GET /labels/custom
 
 **Requête**
 
-La requête suivante liste tous les libellés personnalisés créés dans votre organisation.
+La requête suivante répertorie toutes les étiquettes personnalisées créées dans votre organisation.
 
 ```shell
 curl -X GET \
@@ -51,7 +50,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste d&#39;étiquettes personnalisées récupérées du système. Comme l&#39;exemple de demande ci-dessus a été envoyé à `/labels/custom`, la réponse ci-dessous n&#39;affiche que les étiquettes personnalisées.
+Une réponse réussie renvoie une liste dʼétiquettes personnalisées récupérées du système. Étant donné que lʼexemple de requête ci-dessus a été envoyé à `/labels/custom`, la réponse ci-dessous nʼaffiche que les étiquettes personnalisées.
 
 ```json
 {
@@ -107,9 +106,9 @@ Une réponse réussie renvoie une liste d&#39;étiquettes personnalisées récup
 }
 ```
 
-## Rechercher une étiquette {#look-up}
+## Recherche dʼune étiquette {#look-up}
 
-Vous pouvez rechercher une étiquette spécifique en incluant la propriété `name` de cette étiquette dans le chemin d&#39;une demande de GET à l&#39;API [!DNL Policy Service].
+Vous pouvez rechercher une étiquette spécifique en incluant la propriété `name` de cette étiquette dans le chemin dʼune requête GET à lʼAPI [!DNL Policy Service].
 
 **Format d’API**
 
@@ -120,11 +119,11 @@ GET /labels/custom/{LABEL_NAME}
 
 | Paramètre | Description |
 | --- | --- |
-| `{LABEL_NAME}` | La propriété `name` du libellé personnalisé que vous souhaitez rechercher. |
+| `{LABEL_NAME}` | La propriété `name` de lʼétiquette personnalisée que vous souhaitez rechercher. |
 
 **Requête**
 
-La requête suivante récupère le libellé personnalisé `L2`, comme indiqué dans le chemin d’accès.
+La requête suivante récupère lʼétiquette personnalisée `L2`, comme indiqué dans le chemin.
 
 ```shell
 curl -X GET \
@@ -137,7 +136,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’étiquette personnalisée.
+Une réponse réussie renvoie les détails de lʼétiquette personnalisée.
 
 ```json
 {
@@ -161,9 +160,9 @@ Une réponse réussie renvoie les détails de l’étiquette personnalisée.
 }
 ```
 
-## Créer ou mettre à jour une étiquette personnalisée {#create-update}
+## Création ou mise à jour dʼune étiquette personnalisée {#create-update}
 
-Pour créer ou mettre à jour une étiquette personnalisée, vous devez envoyer une requête de PUT à l&#39;API [!DNL Policy Service].
+Pour créer ou mettre à jour une étiquette personnalisée, vous devez envoyer une requête PUT à lʼAPI [!DNL Policy Service].
 
 **Format d’API**
 
@@ -173,11 +172,11 @@ PUT /labels/custom/{LABEL_NAME}
 
 | Paramètre | Description |
 | --- | --- |
-| `{LABEL_NAME}` | Propriété `name` d’une étiquette personnalisée. Si aucune étiquette personnalisée portant ce nom n’existe, une nouvelle étiquette est créée. S&#39;il en existe un, cette étiquette sera mise à jour. |
+| `{LABEL_NAME}` | Propriété `name` dʼune étiquette personnalisée. Si aucune étiquette personnalisée portant ce nom nʼexiste, une nouvelle étiquette est créée. Sʼil en existe une, cette étiquette sera mise à jour. |
 
 **Requête**
 
-La demande suivante crée une nouvelle étiquette, `L3`, qui vise à décrire les données contenant des informations relatives aux plans de paiement sélectionnés par les clients.
+La requête suivante crée une nouvelle étiquette, `L3`, qui vise à décrire les données contenant des informations relatives aux plans de paiement choisis par les clients.
 
 ```shell
 curl -X PUT \
@@ -196,14 +195,14 @@ curl -X PUT \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Identifiant de chaîne unique pour l’étiquette. Cette valeur est utilisée à des fins de recherche et d’application de l’étiquette aux jeux de données et aux champs. Il est donc recommandé qu’elle soit courte et concise. |
-| `category` | Catégorie de l&#39;étiquette. Bien que vous puissiez créer vos propres catégories pour les étiquettes personnalisées, il est vivement recommandé d’utiliser `Custom` si vous souhaitez que le libellé apparaisse dans l’interface utilisateur. |
-| `friendlyName` | Nom convivial de l’étiquette, utilisé à des fins d’affichage. |
-| `description` | (Facultatif) Description de l’étiquette afin de fournir un contexte plus poussé. |
+| `name` | Identifiant de chaîne unique pour lʼétiquette. Cette valeur est utilisée à des fins de recherche et dʼapplication de lʼétiquette aux jeux de données et aux champs. Il est donc recommandé quʼelle soit courte et concise. |
+| `category` | Catégorie de lʼétiquette. Bien que vous puissiez créer vos propres catégories pour les étiquettes personnalisées, il est vivement recommandé dʼutiliser `Custom` si vous souhaitez que lʼétiquette apparaisse dans lʼinterface utilisateur. |
+| `friendlyName` | Nom convivial de lʼétiquette, utilisé pour lʼaffichage. |
+| `description` | (Facultatif) Description de lʼétiquette afin de fournir un contexte plus détaillé. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails d&#39;une étiquette personnalisée, avec le code HTTP 200 (OK) si une étiquette existante a été mise à jour, ou 201 (Créée) si une nouvelle étiquette a été créée.
+Une réponse réussie renvoie les détails de lʼétiquette personnalisée, avec le code HTTP 200 (OK) si une étiquette existante a été mise à jour, ou 201 (Created) si une nouvelle étiquette a été créée.
 
 ```json
 {
@@ -229,4 +228,4 @@ Une réponse réussie renvoie les détails d&#39;une étiquette personnalisée, 
 
 ## Étapes suivantes
 
-Ce guide traite de l&#39;utilisation du point de terminaison `/labels` dans l&#39;API Policy Service. Pour savoir comment appliquer des libellés aux jeux de données et aux champs, consultez le [guide de l&#39;API des libellés de jeux de données](../labels/dataset-api.md).
+Ce guide couvre lʼutilisation du point d’entrée `/labels` dans lʼAPI Policy Service. Pour obtenir des instructions détaillées sur lʼapplication dʼétiquettes aux jeux de données et aux champs, consultez le [guide de lʼAPI des étiquettes des jeux de données](../labels/dataset-api.md).
