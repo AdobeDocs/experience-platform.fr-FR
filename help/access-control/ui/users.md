@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; profil de produit
+keywords: Experience Platform;accueil;rubriques populaires;profil produit
 solution: Experience Platform
-title: Gestion des utilisateurs d’un Profil de produits
+title: Gestion des utilisateurs pour un profil de produit
 topic-legacy: user guide
-description: Ce document vous montre comment gérer les utilisateurs d’un profil de produits dans l’interface utilisateur de Adobe Experience Platform.
+description: Ce document vous explique comment gérer les utilisateurs dʼun profil de produit dans lʼinterface utilisateur dʼAdobe Experience Platform.
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '206'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
-# Gestion des utilisateurs pour un profil de produits
+# Gestion des utilisateurs pour un profil de produit
 
 Pour attribuer ou supprimer des utilisateurs d’un profil de produits, ouvrez la page des détails du profil et accédez à l’onglet **[!UICONTROL Utilisateurs]**. À partir de là, cliquez sur **[!UICONTROL Ajouter un utilisateur]**.
 
@@ -37,4 +36,4 @@ L’onglet **[!UICONTROL Utilisateurs]** du profil de produit réapparaît, et l
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris à contrôler l&#39;accès aux fonctionnalités [!DNL Platform] par l&#39;intermédiaire de [!DNL Admin Console], reportez-vous à la section de l&#39;annexe [Présentation du contrôle d&#39;accès](../home.md) pour en savoir plus sur chaque autorisation individuelle et les fonctionnalités [!DNL Platform] auxquelles ils donnent accès.
+Maintenant que vous avez appris à contrôler lʼaccès aux fonctionnalités de [!DNL Platform] à lʼaide dʼ[!DNL Admin Console], consultez la section de lʼannexe de la [présentation du contrôle dʼaccès](../home.md) pour en savoir plus sur chaque autorisation individuelle et sur les fonctionnalités de [!DNL Platform] auxquelles elles donnent accès.
