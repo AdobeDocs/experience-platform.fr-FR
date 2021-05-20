@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; profil de produit
+keywords: Experience Platform;accueil;rubriques populaires;profil produit
 solution: Experience Platform
-title: Créer un nouveau Profil de produits dans Adobe Admin Console
+title: Création d’un profil produit dans Adobe Admin Console
 topic-legacy: user guide
-description: Ce document couvre les étapes nécessaires à la création d'un nouveau profil de produits dans le Adobe Admin Console. Pour commencer la création d’un profil, accédez à l’onglet Profil de produits et cliquez sur Nouveau profil.
+description: Ce document reprend toutes les étapes nécessaires à la création d’un profil produit dans la console Adobe Admin Console. Pour commencer la création d’un profil, accédez à l’onglet Profil de produits et cliquez sur Nouveau profil.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '261'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
-# Créer un nouveau profil de produits dans Adobe Admin Console
+# Création d’un profil produit dans Adobe Admin Console
 
 Pour commencer la création d’un profil, accédez à l’onglet **[!UICONTROL Profil de produits]** et cliquez sur **[!UICONTROL Nouveau profil]**.
 
 ![new-profile-button](../images/new-profile-button.png)
 
-La boîte de dialogue **[!UICONTROL Créer un nouveau Profil]** s&#39;affiche, vous invitant à entrer un nom de profil et une description pour le nouveau profil. Si vous souhaitez que le nom d’affichage du profil soit différent, désélectionnez l’option **[!UICONTROL Identique au nom de profil]** et saisissez le nom d’affichage dans la zone de texte qui s’affiche. Sous **[!UICONTROL Notifications utilisateur]**, vous pouvez activer ou désactiver la notification par courrier électronique des utilisateurs lorsqu’ils sont ajoutés ou supprimés du profil.
+La boîte de dialogue **[!UICONTROL Créer un profil]** apparaît, vous invitant à saisir un nom de profil ainsi qu’une description pour ce nouveau profil. Si vous souhaitez que le nom d’affichage du profil soit différent, désélectionnez l’option **[!UICONTROL Identique au nom de profil]** et saisissez le nom d’affichage dans la zone de texte qui s’affiche. Sous **[!UICONTROL Notifications utilisateur]**, vous pouvez activer ou désactiver la notification par courrier électronique des utilisateurs lorsqu’ils sont ajoutés ou supprimés du profil.
 
 Lorsque vous avez terminé, cliquez sur **[!UICONTROL Suivant]**.
 
