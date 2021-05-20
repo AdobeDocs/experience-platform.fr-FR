@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; gouvernance des données ; étiquette d’utilisation des données ; service de stratégie ; étiquettes d’utilisation des données guide d’utilisateur
+keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;libellé d’utilisation des données;policy service;guide de l’utilisateur des libellés d’utilisation des données
 solution: Experience Platform
-title: Gérer les étiquettes d’utilisation des données dans l’interface utilisateur
+title: Gestion des libellés d’utilisation des données dans l’interface utilisateur
 topic-legacy: labels
-description: Ce guide décrit les étapes à suivre pour utiliser les étiquettes d’utilisation des données dans l’interface utilisateur de Adobe Experience Platform.
+description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1134'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
-# Gérer les étiquettes d’utilisation des données dans l’interface utilisateur
+# Gestion des libellés d’utilisation des données dans l’interface utilisateur
 
-Ce guide d&#39;utilisation décrit les étapes à suivre pour utiliser les libellés d&#39;utilisation des données dans l&#39;interface utilisateur [!DNL Experience Platform]. Avant d&#39;utiliser le guide, consultez la section [[!DNL Data Governance] présentation](../home.md) pour une présentation plus précise de la structure [!DNL Data Governance].
+Ce guide d’utilisation détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur [!DNL Experience Platform]. Avant d’utiliser ce guide, consultez la présentation de la [[!DNL Data Governance] ](../home.md) pour une introduction plus détaillée du cadre de la [!DNL Data Governance].
 
-## Gérer les étiquettes au niveau du jeu de données
+## Gestion des libellés au niveau du jeu de données
 
 Pour gérer les libellés d’utilisation des données au niveau du jeu de données, vous devez sélectionner un jeu de données existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Jeux de données]**. Cette page répertorie tous les jeux de données créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque jeu de données.
 
@@ -29,21 +28,21 @@ La section suivante décrit les étapes à suivre pour créer un jeu de données
 
 >[!NOTE]
 >
->Dans cet exemple, un jeu de données est créé à l’aide d’un schéma préconfiguré [!DNL Experience Data Model] (XDM). Pour plus d’informations sur les schémas XDM, consultez la [présentation du système XDM](../../xdm/home.md) et les [principes de base de la composition de schémas](../../xdm/schema/composition.md).
+>Dans cet exemple, un jeu de données est créé à l’aide d’un schéma de [!DNL Experience Data Model] (XDM) préconfiguré. Pour plus d’informations sur les schémas XDM, consultez la [présentation du système XDM](../../xdm/home.md) et les [principes de base de la composition de schémas](../../xdm/schema/composition.md).
 
-Pour créer un nouveau jeu de données, sélectionnez **[!UICONTROL Créer un jeu de données]** dans le coin supérieur droit de l&#39;espace de travail **[!UICONTROL Datasets]**.
+Pour créer un jeu de données, cliquez sur **[!UICONTROL Créer un jeu de données]** dans le coin supérieur droit de l’espace de travail **[!UICONTROL Jeux de données]**.
 
 ![](../images/labels/create-dataset.png)
 
-L’écran **[!UICONTROL Créer un jeu de données]** s’affiche. À partir de là, sélectionnez **[!UICONTROL Créer un jeu de données à partir du Schéma]**.
+L’écran **[!UICONTROL Créer un jeu de données]** s’affiche. À partir de là, cliquez sur **[!UICONTROL Créer un jeu de données à partir d’un schéma]**.
 
 ![Créer un jeu de données à partir d’un schéma](../images/labels/create-from-dataset.png)
 
-L’écran **[!UICONTROL Sélectionner un schéma]** s’affiche, répertoriant tous les schémas disponibles que vous pouvez utiliser pour créer un jeu de données. Sélectionnez le bouton radio en regard d’un schéma pour le sélectionner. La section **[!UICONTROL Schémas]** sur le côté droit affiche des détails supplémentaires sur le schéma sélectionné. Une fois que vous avez sélectionné un schéma, sélectionnez **[!UICONTROL Suivant]**.
+L’écran **[!UICONTROL Sélectionner un schéma]** s’affiche, répertoriant tous les schémas disponibles que vous pouvez utiliser pour créer un jeu de données. Cliquez sur le bouton radio en regard d’un schéma pour le sélectionner. La section **[!UICONTROL Schémas]** sur le côté droit affiche des détails supplémentaires sur le schéma sélectionné. Une fois le schéma sélectionné, cliquez sur **[!UICONTROL Suivant]**.
 
 ![Sélectionner le schéma d’un jeu de données](../images/labels/select-schema.png)
 
-L’écran **[!UICONTROL Configurer le jeu de données]** s’affiche. Indiquez un nom (obligatoire) et une description (facultatif, mais recommandé) pour votre nouveau jeu de données, puis sélectionnez **[!UICONTROL Terminer]**.
+L’écran **[!UICONTROL Configurer le jeu de données]** s’affiche. Indiquez un nom (obligatoire) et une description (facultative, mais recommandée) pour votre nouveau jeu de données, puis cliquez sur **[!UICONTROL Terminer]**.
 
 ![Configurer un jeu de données avec le nom et la description](../images/labels/configure-dataset.png)
 
@@ -53,15 +52,15 @@ La page **[!UICONTROL Activité du jeu de données]** apparaît, affichant des i
 
 ### Ajout de libellés d’utilisation des données au jeu de données {#add-labels}
 
-Après avoir créé un nouveau jeu de données ou sélectionné un jeu de données existant dans la liste **[!UICONTROL Datasets]** de l&#39;espace de travail, sélectionnez **[!UICONTROL Data Governance]** pour ouvrir l&#39;espace de travail **[!UICONTROL Data Governance]**. L’espace de travail vous permet de gérer les libellés d’utilisation des données aux niveaux du jeu de données et du champ.
+Une fois que vous avez créé un jeu de données ou sélectionné un jeu de données existant dans la liste de l’espace de travail **[!UICONTROL Jeux de données]**, cliquez sur **[!UICONTROL Gouvernance des données]** pour ouvrir l’espace de travail **[!UICONTROL Gouvernance des données]**. L’espace de travail vous permet de gérer les libellés d’utilisation des données aux niveaux du jeu de données et du champ.
 
 ![Onglet Gouvernance des données du jeu de données](../images/labels/dataset-governance.png)
 
-Pour modifier les libellés d’utilisation des données au niveau du jeu de données, début en sélectionnant l’icône représentant un crayon en regard du nom du jeu de données.
+Pour modifier les libellés d’utilisation des données au niveau du jeu de données, commencez par cliquer sur l’icône représentant un crayon en regard du nom du jeu de données.
 
 ![Modifier les libellés au niveau du jeu de données](../images/labels/dataset-level-edit.png)
 
-La boîte de dialogue **[!UICONTROL Modifier les libellés de gouvernance]** s’ouvre. Dans la boîte de dialogue, cochez les cases en regard des libellés que vous souhaitez appliquer au jeu de données. Souvenez-vous que ces libellés seront hérités par tous les champs du jeu de données. L’en-tête **[!UICONTROL Libellés appliqués]** est mis à jour lorsque vous cochez chaque case, affichant les libellés que vous avez choisis. Une fois que vous avez sélectionné les étiquettes de votre choix, sélectionnez **[!UICONTROL Enregistrer les modifications]**.
+La boîte de dialogue **[!UICONTROL Modifier les libellés de gouvernance]** s’ouvre. Dans la boîte de dialogue, cochez les cases en regard des libellés que vous souhaitez appliquer au jeu de données. Souvenez-vous que ces libellés seront hérités par tous les champs du jeu de données. L’en-tête **[!UICONTROL Libellés appliqués]** est mis à jour lorsque vous cochez chaque case, affichant les libellés que vous avez choisis. Une fois que vous avez sélectionné les libellés de votre choix, cliquez sur **[!UICONTROL Enregistrer les modifications]**.
 
 ![Application de libellés de gouvernance au niveau du jeu de données](../images/labels/apply-labels-dataset.png)
 
@@ -75,11 +74,11 @@ L’option **[!UICONTROL Afficher les libellés hérités]** est activée par d�
 
 ![Masquer les libellés hérités](../images/labels/inherited-labels.png)
 
-## Gérer les étiquettes au niveau des champs
+## Gestion des libellés au niveau du champ
 
 En poursuivant le processus d’[ajout et de modification des libellés d’utilisation des données au niveau du jeu de données](#add-labels), vous pouvez également gérer les libellés au niveau du champ dans l’espace de travail **[!UICONTROL Gouvernance des données]** pour ce jeu de données.
 
-Pour appliquer des étiquettes d&#39;utilisation de données à un champ individuel, cochez la case en regard du nom du champ, puis sélectionnez **[!UICONTROL Modifier les étiquettes de gouvernance]**.
+Pour appliquer des libellés d’utilisation des données à un champ individuel, cochez la case en regard du nom du champ, puis cliquez sur **[!UICONTROL Modifier les libellés de gouvernance]**.
 
 ![Modifier les libellés de champ](../images/labels/field-label-edit.png)
 
@@ -87,7 +86,7 @@ La boîte de dialogue **[!UICONTROL Modifier les libellés de gouvernance]** app
 
 ![Modification des libellés de gouvernance d’un champ individuel](../images/labels/field-label-inheritance.png)
 
-Sélectionnez des étiquettes de niveau champ en cochant la case en regard de chaque étiquette que vous souhaitez utiliser. Lorsque vous sélectionnez des libellés, l’en-tête **[!UICONTROL Libellés appliqués]** est mis à jour pour afficher les libellés appliqués aux champs figurant dans l’en-tête **[!UICONTROL Champs sélectionnés]**. Une fois que vous avez terminé de sélectionner des étiquettes de niveau champ, sélectionnez **[!UICONTROL Enregistrer les modifications]**.
+Sélectionnez des libellés au niveau du champ en cochant la case en regard de chaque libellé que vous souhaitez utiliser. Lorsque vous sélectionnez des libellés, l’en-tête **[!UICONTROL Libellés appliqués]** est mis à jour pour afficher les libellés appliqués aux champs figurant dans l’en-tête **[!UICONTROL Champs sélectionnés]**. Une fois que vous avez terminé de sélectionner les libellés au niveau du champ, cliquez sur **[!UICONTROL Enregistrer les modifications]**.
 
 ![Application de libellés au niveau du champ](../images/labels/apply-labels-field.png)
 
@@ -101,27 +100,27 @@ Vous pouvez répéter ces étapes pour continuer à ajouter et à modifier des l
 
 Il est important de se rappeler que l’héritage se déplace uniquement du niveau supérieur vers le niveau inférieur (jeu de données → champs), ce qui signifie que les libellés appliqués au niveau du champ ne sont pas propagés à d’autres champs ou jeux de données.
 
-## Gestion des étiquettes personnalisées
+## Gestion des libellés personnalisés
 
-Vous pouvez créer vos propres étiquettes d’utilisation personnalisée dans l’espace de travail **[!UICONTROL Stratégies]** de l’interface utilisateur [!DNL Experience Platform]. Sélectionnez **[!UICONTROL Stratégies]** dans le volet de navigation de gauche, puis **[!UICONTROL Étiquettes]** pour vue une liste d&#39;étiquettes existantes. À partir de là, sélectionnez **[!UICONTROL Créer une étiquette]**.
+Vous pouvez créer vos propres libellés d’utilisation personnalisés dans l’espace de travail **[!UICONTROL Stratégies]** de l’interface utilisateur [!DNL Experience Platform]. Sélectionnez **[!UICONTROL Stratégies]** dans le volet de navigation de gauche, puis cliquez sur **[!UICONTROL Libellés]** pour afficher une liste des libellés existants. À partir de là, cliquez sur **[!UICONTROL Créer un libellé]**.
 
 ![](../images/labels/create-label-btn.png)
 
-La boîte de dialogue **[!UICONTROL Créer une étiquette]** s&#39;affiche. À partir de là, fournissez les informations suivantes pour la nouvelle étiquette :
+La boîte de dialogue **[!UICONTROL Créer un libellé]** apparaît. À partir de là, renseignez les informations suivantes pour le nouveau libellé :
 
-* **[!UICONTROL Identificateur]** : Identificateur unique de l’étiquette. Cette valeur est utilisée à des fins de recherche et doit donc être courte et concise.
-* **[!UICONTROL Nom]** : Nom d’affichage convivial de l’étiquette.
-* **[!UICONTROL Description]** : (Facultatif) Description de l’étiquette pour fournir un contexte plus poussé.
+* **[!UICONTROL Identifiant]** : un identifiant unique pour ce libellé. Cette valeur est utilisée à des fins de recherche et doit donc être courte et concise.
+* **[!UICONTROL Nom]** : un nom d’affichage convivial pour ce libellé.
+* **[!UICONTROL Description]** : une description permettant de fournir davantage de contexte pour ce libellé (facultative).
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer]**.
+Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
 
 ![](../images/labels/create-label.png)
 
-La boîte de dialogue se ferme et le nouveau libellé personnalisé s’affiche dans la liste sous l’onglet **[!UICONTROL Étiquettes]**.
+La boîte de dialogue se ferme et le nouveau libellé personnalisé apparaît dans la liste, sous l’onglet **[!UICONTROL Libellés]**.
 
 ![](../images/labels/label-created.png)
 
-L&#39;étiquette peut désormais être sélectionnée sous **[!UICONTROL Libellés personnalisés]** lors de la modification des libellés d&#39;utilisation des jeux de données et des champs ou lors de la création de stratégies d&#39;utilisation des données.
+Le libellé peut désormais être sélectionné sous **[!UICONTROL Libellés personnalisés]** lors de la modification des libellés d’utilisation des jeux de données et des champs ou lors de la création de stratégies d’utilisation des données.
 
 <img src="../images/labels/add-custom-label.png" width="600" /><br>
 
@@ -133,6 +132,6 @@ Désormais, vous pouvez également définir des stratégies d’utilisation des 
 
 ## Ressources supplémentaires
 
-La vidéo suivante est destinée à vous aider à comprendre [!DNL Data Governance] et explique comment appliquer des étiquettes à un jeu de données et à des champs individuels.
+La vidéo suivante a pour but de vous aider à comprendre la [!DNL Data Governance] et explique comment appliquer des libellés à un jeu de données et à des champs individuels.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)
