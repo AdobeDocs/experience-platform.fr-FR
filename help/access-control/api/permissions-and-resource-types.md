@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; autorisations de contrôle d'accès ; types de ressources de contrôle d'accès ; api de contrôle d'accès
+keywords: Experience Platform;accueil;rubriques populaires;autorisations de contrôle d’accès;types de ressources de contrôle d’accès;api de contrôle d’accès
 solution: Experience Platform
-title: Point de terminaison de l’API de référence
+title: Point d’entrée de l’API de référence
 topic-legacy: developer guide
-description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Vous pouvez liste les noms de tous les types d'autorisations et de ressources en faisant une demande de GET au point de terminaison /acl/reference dans l'API de Contrôle d'accès. Ces noms peuvent ensuite être utilisés dans les appels API pour afficher des stratégies efficaces pour l’utilisateur actuel.
+description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Vous pouvez répertorier les noms de tous les types de ressources et autorisations en effectuant une requête GET au point d’entrée /acl/reference dans l’API Access Control. Ces noms peuvent ensuite être utilisés dans les appels API pour afficher des stratégies efficaces pour l’utilisateur actuel.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '195'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
-# Point de terminaison de référence
+# Point d’entrée de référence
 
 Vous pouvez répertorier les noms de tous les types d’autorisations et de ressources en envoyant une requête GET au point de terminaison `/acl/reference`. Ces noms peuvent ensuite être utilisés dans les appels API pour [afficher des stratégies efficaces](./effective-policies.md) pour l’utilisateur actuel.
 
-Une autorisation est une stratégie gérée à l’aide d’Adobe Admin Console et mettant en correspondance zéro, une ou plusieurs stratégies de type ressource. Un type de ressource est une stratégie qui active des fonctionnalités de lecture, d&#39;écriture et/ou de suppression pour un type spécifique de ressource [!DNL Platform] (par exemple, des jeux de données ou des schémas).
+Une autorisation est une stratégie gérée à l’aide d’Adobe Admin Console et mettant en correspondance zéro, une ou plusieurs stratégies de type ressource. Un type de ressource est une stratégie activant des fonctionnalités de lecture, d’écriture et/ou de suppression pour un type spécifique de ressources de [!DNL Platform] (comme des jeux de données ou des schémas).
 
 **Format d’API**
 
