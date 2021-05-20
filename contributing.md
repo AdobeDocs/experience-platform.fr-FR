@@ -1,9 +1,9 @@
 ---
 source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: tm+mt
-translation-type: tm+mt
+workflow-type: ht
+translation-type: ht
 source-wordcount: '296'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 # Contribution
@@ -20,7 +20,7 @@ Veuillez signaler tout comportement inacceptable à [Grp-opensourceoffice@adobe.
 
 ## Guide du contributeur pour la documentation
 
-Consultez le [Guide du contributeur](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en).
+Consultez le [Guide du contributeur](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=fr).
 
 ## Une question ?
 
@@ -36,7 +36,7 @@ Vous ne devez envoyer un contrat de licence du contributeur Adobe qu’une seule
 
 ## Révisions du code
 
-Toutes les soumissions doivent être effectuées sous la forme de requêtes de tirage et doivent être examinées par les responsables du projet. Lisez la [documentation sur la requête de tirage de GitHub](https://help.github.com/articles/about-pull-requests/) pour en savoir plus sur l’envoi de requêtes de tirage.
+Toutes les soumissions doivent être effectuées sous la forme de requêtes de tirage et doivent être examinées par les responsables du projet. Lisez la [documentation sur la requête de tirage de GitHub](https://help.github.com/fr/articles/about-pull-requests/) pour en savoir plus sur l’envoi de requêtes de tirage.
 
 <!--
 Lastly, please follow the [pull request template](PULL_REQUEST_TEMPLATE.md) when
