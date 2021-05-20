@@ -1,12 +1,12 @@
 ---
 source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: tm+mt
-translation-type: tm+mt
+workflow-type: ht
+translation-type: ht
 source-wordcount: '508'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
-# Contribution de contenu
+# Contribuer au contenu
 
 Nous invitons notre communauté et les employés d’Adobe ne faisant pas partie des équipes de documentation à nous faire part de leurs contributions au contenu.
 
@@ -14,13 +14,13 @@ Nous invitons notre communauté et les employés d’Adobe ne faisant pas partie
 
 Ce projet a adopté le [code de conduite Adobe Open Source](code-of-conduct.md) ou le [code de conduite de la Fondation .NET](https://dotnetfoundation.org/code-of-conduct). Pour plus d’informations, reportez-vous à l’article [Contribution](contributing.md).
 
-## Méthodes pour contribuer au contenu des Adobes
+## Comment contribuer au contenu Adobe
 
-Consultez le [Guide du contributeur de documents Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en).
+Consultez le [Guide du contributeur de documents Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=fr).
 
 Votre contribution dépend de qui vous êtes et du type de modifications auxquelles vous souhaitez contribuer :
 
-### Modifications mineures ou demandes mineures
+### Modifications mineures  ou demandes mineures
 
 Pour envoyer une requête, cliquez sur le lien **Signaler une issue** dans un article, ce qui ouvre un problème dans GitHub. Saisissez un titre et une description, puis cliquez sur **Envoyer une nouvelle issue**.
 
@@ -36,15 +36,15 @@ Si vous faites partie de la communauté Adobe et si vous souhaitez créer un art
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### Modifications majeures ou nouveaux articles des employés d&#39;Adobe
+### Modifications majeures ou nouveaux articles des employés Adobe
 
-Si vous êtes rédacteur technique, chef de programme ou développeur de l’équipe de produits en charge d’une solution Adobe Experience Cloud, et que votre travail implique de créer ou de contribuer à des articles techniques, utilisez le référentiel privé à l’adresse `https://git.corp.adobe.com/AdobeDocs`. Pour plus d&#39;informations, consultez le [Guide de collaboration interne](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en).
+Si vous êtes rédacteur technique, chef de programme ou développeur de l’équipe de produits en charge d’une solution Adobe Experience Cloud, et que votre travail implique de créer ou de contribuer à des articles techniques, utilisez le référentiel privé à l’adresse `https://git.corp.adobe.com/AdobeDocs`. Pour plus dʼinformations, voir le [guide de collaboration interne](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en).
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
-## Contacter l’équipe de documentation Experience Platform
+## Contacter lʼéquipe de documentation Experience Platform
 
-Comme nous l&#39;avons indiqué plus haut, les membres de la communauté des Adobes peuvent soumettre une question qui sera confiée à l&#39;auteur compétent. Si vous êtes un employé d’Adobe, vous pouvez envoyer un problème ou contacter directement l’équipe de documentation Experience Platform. Pour trouver le rédacteur en chef pour une zone de plateforme spécifique, consultez le [wiki de documentation de Adobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+Comme nous lʼavons indiqué plus haut, les membres de la communauté Adobe peuvent soumettre une question qui sera confiée au rédacteur approprié. Si vous êtes un employé Adobe, vous pouvez soumettre une question ou contacter directement lʼéquipe de documentation Experience Platform. Pour trouver le rédacteur principal concernant une section spécifique de Platform, consultez le [wiki de documentation dʼAdobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Outils et configuration
 
@@ -52,7 +52,7 @@ Comme nous l&#39;avons indiqué plus haut, les membres de la communauté des Ado
 
 Les contributeurs de la communauté peuvent utiliser l’interface utilisateur de GitHub pour toute modification de base ou dupliquer le référentiel pour apporter des contributions importantes.
 
-Consultez le [Guide du contributeur de documents Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) pour plus de détails.
+Consultez le [Guide du contributeur de documents Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=fr) pour plus de détails.
 
 ### Texte (Markdown)
 
