@@ -1,37 +1,36 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; Application des stratégies ; Application automatique ; Application basée sur les API ; gouvernance des données
+keywords: Experience Platform;accueil;rubriques populaires;Application des stratégies;Application automatique;Application basée sur les API;gouvernance des données
 solution: Experience Platform
-title: Points de terminaison de l’API d’évaluation des stratégies
+title: Points d’entrée de l’API Policy Evaluation
 topic-legacy: developer guide
 description: Une fois les actions marketing créées et les stratégies définies, vous pouvez utiliser l’API Policy Service pour déterminer si certaines actions ne respectent pas les stratégies. Les contraintes renvoyées prennent la forme d’un ensemble de stratégies qui seraient enfreintes si l’action marketing était appliquée aux données spécifiées contenant les libellés d’utilisation des données.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1544'
-ht-degree: 17%
+ht-degree: 100%
 
 ---
 
-# Points de terminaison de l&#39;évaluation des politiques
+# Points d’entrée de l’évaluation des stratégies
 
-Une fois les actions marketing créées et les stratégies définies, vous pouvez utiliser l&#39;API [!DNL Policy Service] pour déterminer si des stratégies sont violées par certaines actions. Les contraintes renvoyées prennent la forme d’un ensemble de stratégies qui seraient enfreintes si l’action marketing était appliquée aux données spécifiées contenant les libellés d’utilisation des données.
+Une fois les actions marketing créées et les stratégies définies, vous pouvez utiliser l’API [!DNL Policy Service] pour déterminer si certaines actions ne respectent pas les stratégies. Les contraintes renvoyées prennent la forme d’un ensemble de stratégies qui seraient enfreintes si l’action marketing était appliquée aux données spécifiées contenant les libellés d’utilisation des données.
 
-Par défaut, seules les stratégies dont l’état est défini sur `ENABLED` participent à l’évaluation. Cependant, vous pouvez utiliser le paramètre de requête `?includeDraft=true` pour inclure des stratégies `DRAFT` dans l&#39;évaluation.
+Par défaut, seules les stratégies dont l’état est défini sur `ENABLED` participent à l’évaluation. Vous pouvez cependant utiliser le paramètre de requête `?includeDraft=true` pour inclure des stratégies `DRAFT` dans l’évaluation.
 
 Les requêtes d’évaluation peuvent être effectuées de trois façons :
 
-1. Compte tenu d’une action marketing et d’un ensemble d’étiquettes d’utilisation des données, l’action enfreint-elle des stratégies ?
-1. Compte tenu d’une action marketing et d’un ou de plusieurs jeux de données, l’action enfreint-elle des stratégies ?
-1. Compte tenu d’une action marketing, d’un ou de plusieurs jeux de données et d’un sous-ensemble d’un ou de plusieurs champs de chacun de ces jeux de données, l’action est-elle contraire à des stratégies ?
+1. Étant donné une action marketing et un ensemble de libellés d’utilisation des données, l’action enfreint-elle des stratégies ?
+1. Étant donné une action marketing et un ou plusieurs jeux de données, l’action enfreint-elle des stratégies ?
+1. Étant donné une action marketing, un ou plusieurs jeux de données et un sous-ensemble comprenant un ou plusieurs champs dans chaque jeu de données, l’action enfreint-elle des stratégies ?
 
 ## Prise en main
 
-Les points de terminaison API utilisés dans ce guide font partie de l&#39;[[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API [!DNL Experience Platform].
+Les points d’entrée d’API utilisés dans ce guide font partie de l’API [[!DNL Policy Service] ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
-## Evaluer les violations de stratégie à l’aide de libellés d’utilisation des données {#labels}
+## Évaluation des violations de stratégie à l’aide de libellés d’utilisation des données {#labels}
 
-Vous pouvez évaluer les violations de stratégie en fonction de la présence d&#39;un ensemble spécifique d&#39;étiquettes d&#39;utilisation des données en utilisant le paramètre de requête `duleLabels` dans une demande de GET.
+Vous pouvez évaluer les violations de stratégie en fonction de la présence d’un ensemble spécifique de libellés d’utilisation des données à l’aide du paramètre de requête `duleLabels` dans une requête GET.
 
 **Format d’API**
 
@@ -42,8 +41,8 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Paramètre | Description |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nom de l’action marketing à tester par rapport à un ensemble d’étiquettes d’utilisation des données. Vous pouvez récupérer une liste d’actions marketing disponibles en adressant une demande de GET [au point de terminaison des actions marketing](./marketing-actions.md#list). |
-| `{LABELS_LIST}` | Liste de noms d’utilisation des données séparés par des virgules pour tester l’action marketing. Par exemple : `duleLabels=C1,C2,C3`<br><br>Notez que les noms d’étiquette sont sensibles à la casse. Assurez-vous d’utiliser la bonne casse lorsque vous les répertoriez dans le paramètre `duleLabels`. |
+| `{MARKETING_ACTION_NAME}` | Nom de l’action marketing à tester en fonction d’un ensemble de libellés d’utilisation des données. Vous pouvez récupérer une liste d’actions marketing disponibles en effectuant une [requête GET au point d’entrée des actions marketing](./marketing-actions.md#list). |
+| `{LABELS_LIST}` | Liste de noms de libellés d’utilisation des données séparés par des virgules en fonction desquels tester l’action marketing. Par exemple : `duleLabels=C1,C2,C3`<br><br>Notez que les noms de libellés sont sensibles à la casse. Assurez-vous d’utiliser la casse appropriée lorsque vous les répertoriez dans le paramètre `duleLabels`. |
 
 **Requête**
 
@@ -51,7 +50,7 @@ L’exemple de requête ci-dessous évalue une action marketing en fonction des 
 
 >[!IMPORTANT]
 >
->Tenez compte des opérateurs `AND` et `OR` dans l’expression des stratégies. Dans l’exemple ci-dessous, si l’étiquette (`C1` ou `C3`) s’était présentée seule dans la demande, l’action marketing n’aurait pas enfreint cette stratégie. Il faut à la fois des libellés (`C1` et `C3`) pour renvoyer la stratégie violée. Assurez-vous d’évaluer soigneusement les stratégies et de bien définir l’expression des stratégies.
+>Tenez compte des opérateurs `AND` et `OR` dans l’expression des stratégies. Dans l’exemple ci-dessous, si l’un des libellés (`C1` ou `C3`) était apparu seul dans la requête, l’action marketing n’aurait pas enfreint cette stratégie. Les deux libellés (`C1` et `C3`) sont nécessaires pour renvoyer la stratégie enfreinte. Assurez-vous d’évaluer soigneusement les stratégies et de bien définir l’expression des stratégies.
 
 ```shell
 curl -X GET \
@@ -64,7 +63,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie comprend un tableau `violatedPolicies`, qui contient les détails des stratégies violées suite à l&#39;exécution de l&#39;action marketing par rapport aux étiquettes fournies. Si aucune stratégie n&#39;est violée, le tableau `violatedPolicies` est vide.
+Une réponse réussie comprend un tableau `violatedPolicies`, qui contient les détails des stratégies enfreintes suite à l’exécution de l’action marketing par rapport aux libellés fournis. Si aucune stratégie n’est enfreinte, le tableau `violatedPolicies` apparaît vide.
 
 ```JSON
 {
@@ -122,9 +121,9 @@ Une réponse réussie comprend un tableau `violatedPolicies`, qui contient les d
 }
 ```
 
-## Evaluer les violations de stratégie à l&#39;aide de jeux de données {#datasets}
+## Évaluation des violations de stratégie à l’aide de jeux de données {#datasets}
 
-Vous pouvez évaluer les violations de stratégie en fonction d’un ensemble de jeux de données à partir desquels des étiquettes d’utilisation de données peuvent être collectées. Pour ce faire, il exécute une requête de POST au point de terminaison `/constraints` pour une action marketing spécifique et fournit une liste d&#39;ID de jeu de données dans le corps de la requête.
+Vous pouvez évaluer les violations de stratégie en fonction d’un ensemble constitué d’un ou de plusieurs jeux de données à partir desquels collecter les libellés d’utilisation des données. Pour ce faire, une requête POST est exécutée au point d’entrée `/constraints` pour une action marketing spécifique et une liste d’ID de jeu de données est fournie dans le corps de la requête.
 
 **Format d’API**
 
@@ -135,11 +134,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Paramètre | Description |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nom de l’action marketing à tester par rapport à un ou plusieurs jeux de données. Vous pouvez récupérer une liste d’actions marketing disponibles en adressant une demande de GET [au point de terminaison des actions marketing](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | Nom de l’action marketing en fonction de laquelle tester un ou plusieurs jeux de données. Vous pouvez récupérer une liste d’actions marketing disponibles en effectuant une [requête GET au point d’entrée des actions marketing](./marketing-actions.md#list). |
 
 **Requête**
 
-La requête suivante exécute l&#39;action `crossSiteTargeting` marketing sur un ensemble de trois jeux de données afin d&#39;évaluer les violations de stratégie éventuelles.
+La requête suivante exécute l’action marketing `crossSiteTargeting` par rapport à un ensemble de trois jeux de données. Cela permet d’évaluer les violations de stratégie.
 
 ```shell
 curl -X POST \
@@ -167,12 +166,12 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `entityType` | Type d&#39;entité dont l&#39;ID est indiqué dans la propriété `entityId` frère. Actuellement, la seule valeur acceptée est `dataSet`. |
-| `entityId` | ID d’un jeu de données par rapport auquel tester l’action marketing. Une liste de jeux de données et de leurs identifiants correspondants peut être obtenue en adressant une demande de GET au point de terminaison `/dataSets` de l&#39;API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide [répertorier [!DNL Catalog] objets](../../catalog/api/list-objects.md). |
+| `entityType` | Type d’entité dont l’ID est indiqué dans la propriété `entityId` voisine. Actuellement, la seule valeur acceptée est `dataSet`. |
+| `entityId` | ID d’un jeu de données en fonction duquel tester l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] ](../../catalog/api/list-objects.md). |
 
 **Réponse**
 
-Une réponse réussie comprend un tableau `violatedPolicies`, qui contient les détails des stratégies violées suite à l&#39;exécution de l&#39;action marketing par rapport aux jeux de données fournis. Si aucune stratégie n&#39;est violée, le tableau `violatedPolicies` est vide.
+Une réponse réussie comprend un tableau `violatedPolicies`, qui contient les détails des stratégies enfreintes suite à l’exécution de l’action marketing par rapport aux jeux de données fournis. Si aucune stratégie n’est enfreinte, le tableau `violatedPolicies` apparaît vide.
 
 ```JSON
 {
@@ -348,14 +347,14 @@ Une réponse réussie comprend un tableau `violatedPolicies`, qui contient les d
 | `duleLabels` | L’objet de la réponse comprend un tableau `duleLabels` qui contient une liste consolidée de tous les libellés trouvés dans les jeux de données spécifiés. Cette liste inclut des libellés de jeu de données et de champ pour tous les champs du jeu de données. |
 | `discoveredLabels` | La réponse comprend également un tableau `discoveredLabels` contenant des objets pour chaque jeu de données, divisant les `datasetLabels` entre les libellés de jeu de données et les libellés de champ. Chaque libellé de champ indique le chemin d’accès au champ spécifique portant ce libellé. |
 
-## Evaluer les violations de stratégie à l&#39;aide de champs de jeux de données spécifiques {#fields}
+## Évaluation des violations de stratégie à l’aide de champs de jeux de données spécifiques {#fields}
 
 Vous pouvez évaluer les violations de stratégie en fonction d’un sous-ensemble de champs d’un ou de plusieurs jeux de données, de sorte que seuls les libellés d’utilisation des données appliqués à ces champs soient évalués.
 
 Lors de l’évaluation des stratégies à l’aide de champs de jeu de données, considérez les points suivants :
 
-* **Les noms de champ respectent** la casse : Lorsque vous fournissez des champs, ils doivent être écrits exactement comme ils apparaissent dans le jeu de données (par exemple,  `firstName` vs  `firstname`).
-* **Héritage** d&#39;étiquette du jeu de données : Les champs individuels d’un jeu de données héritent des étiquettes qui ont été appliquées au niveau du jeu de données. Si vos évaluations de stratégie ne reviennent pas comme prévu, veillez à rechercher les étiquettes qui ont pu être héritées du niveau des jeux de données vers les champs, en plus de celles appliquées au niveau des champs.
+* **Les noms des champs sont sensibles à la casse** : lorsque vous spécifiez des champs, ils doivent être écrits exactement comme ils apparaissent dans le jeu de données (par exemple, `firstName` contre `firstname`).
+* **Héritage des libellés des jeux de données** : les champs individuels d’un jeu de données héritent des libellés qui ont été appliqués au niveau du jeu de données. Si le retour de vos évaluations de stratégie ne s’effectue pas comme prévu, recherchez les libellés qui ont pu être hérités depuis le niveau des jeux de données vers les champs, en plus de ceux appliqués au niveau des champs.
 
 **Format d’API**
 
@@ -366,11 +365,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Paramètre | Description |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nom de l’action marketing à tester par rapport à un sous-ensemble de champs de jeux de données. Vous pouvez récupérer une liste d’actions marketing disponibles en adressant une demande de GET [au point de terminaison des actions marketing](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | Nom de l’action marketing à tester par rapport à un sous-ensemble de champs de jeux de données. Vous pouvez récupérer une liste d’actions marketing disponibles en effectuant une [requête GET au point d’entrée des actions marketing](./marketing-actions.md#list). |
 
 **Requête**
 
-La requête suivante teste l&#39;action marketing `crossSiteTargeting` sur un ensemble spécifique de champs appartenant à trois jeux de données. La charge utile est similaire à une demande d’évaluation [impliquant uniquement des jeux de données](#datasets), ajoutant des champs spécifiques pour chaque jeu de données à partir desquels collecter les étiquettes.
+La requête suivante teste l’action marketing `crossSiteTargeting` sur un ensemble spécifique de champs appartenant à trois jeux de données. La payload est similaire à une [demande d’évaluation impliquant uniquement des jeux de données](#datasets), ajoutant des champs spécifiques pour chaque jeu de données où collecter les libellés.
 
 ```shell
 curl -X POST \
@@ -415,15 +414,15 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `entityType` | Type d&#39;entité dont l&#39;ID est indiqué dans la propriété `entityId` frère. Actuellement, la seule valeur acceptée est `dataSet`. |
-| `entityId` | ID d’un jeu de données dont les champs doivent être évalués par rapport à l’action marketing. Une liste de jeux de données et de leurs identifiants correspondants peut être obtenue en adressant une demande de GET au point de terminaison `/dataSets` de l&#39;API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide [répertorier [!DNL Catalog] objets](../../catalog/api/list-objects.md). |
-| `entityMeta.fields` | Tableau de chemins d’accès à des champs spécifiques dans le schéma du jeu de données, fourni sous la forme de chaînes de pointeur JSON. Consultez la section sur [Pointeur JSON](../../landing/api-fundamentals.md#json-pointer) dans le guide des fondamentaux de l’API pour plus d’informations sur la syntaxe acceptée pour ces chaînes. |
+| `entityType` | Type d’entité dont l’ID est indiqué dans la propriété `entityId` voisine. Actuellement, la seule valeur acceptée est `dataSet`. |
+| `entityId` | ID d’un jeu de données dont les champs doivent être évalués par rapport à l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] ](../../catalog/api/list-objects.md). |
+| `entityMeta.fields` | Tableau de chemins d’accès à des champs spécifiques dans le schéma du jeu de données, fourni sous la forme de chaînes de pointeurs JSON. Consultez la section sur les [pointeurs JSON](../../landing/api-fundamentals.md#json-pointer) dans le guide des principes de base de l’API pour obtenir plus d’informations sur la syntaxe acceptée pour ces chaînes. |
 
 **Réponse**
 
-Une réponse réussie comprend un tableau `violatedPolicies`, qui contient les détails des stratégies qui ont été violées suite à l&#39;exécution de l&#39;action marketing par rapport aux champs du jeu de données fournis. Si aucune stratégie n&#39;est violée, le tableau `violatedPolicies` est vide.
+Une réponse réussie comprend un tableau `violatedPolicies`, qui contient les détails des stratégies qui ont été enfreintes suite à l’exécution de l’action marketing par rapport aux champs du jeu de données fournis. Si aucune stratégie n’est enfreinte, le tableau `violatedPolicies` apparaît vide.
 
-En comparant l&#39;exemple de réponse ci-dessous à la réponse [impliquant uniquement des jeux de données](#datasets), notez que la liste des étiquettes collectées est plus courte. La valeur `discoveredLabels` pour chaque jeu de données a également été réduite, car elle inclut uniquement les champs spécifiés dans le corps de la demande. En outre, la stratégie `Targeting Ads or Content` précédemment violée exige que les deux étiquettes `C4 AND C6` soient présentes et n&#39;est donc plus violée comme indiqué par le tableau `violatedPolicies` vide.
+En comparant l’exemple de réponse ci-dessous à la [réponse impliquant uniquement des jeux de données](#datasets), notez que la liste des libellés collectés est plus courte. La valeur `discoveredLabels` pour chaque jeu de données a également été réduite, car elle inclut uniquement les champs spécifiés dans le corps de la requête. En outre, la stratégie `Targeting Ads or Content` précédemment enfreinte nécessite la présentation des deux libellés `C4 AND C6`. Elle n’est donc plus enfreinte, comme indiqué par le tableau `violatedPolicies` vide.
 
 ```JSON
 {
@@ -523,9 +522,9 @@ En comparant l&#39;exemple de réponse ci-dessous à la réponse [impliquant uni
 }
 ```
 
-## Évaluer les stratégies en bloc {#bulk}
+## Évaluation des stratégies en bloc {#bulk}
 
-Le point de terminaison `/bulk-eval` vous permet d’exécuter plusieurs tâches d’évaluation dans un seul appel d’API.
+Le point d’entrée `/bulk-eval` vous permet d’exécuter plusieurs traitements d’évaluation dans un seul appel API.
 
 **Format d’API**
 
@@ -535,11 +534,11 @@ POST /bulk-eval
 
 **Requête**
 
-La charge utile d&#39;une demande d&#39;évaluation en masse doit être un tableau d&#39;objets ; un pour chaque tâche d&#39;évaluation à exécuter. Pour les tâches qui sont évaluées en fonction de jeux de données et de champs, un tableau `entityList` doit être fourni. Pour les tâches qui sont évaluées en fonction des étiquettes d’utilisation des données, un tableau `labels` doit être fourni.
+La payload d’une demande d’évaluation en bloc doit être un tableau d’objets, où chacun représente un traitement d’évaluation à exécuter. Pour les traitements d’évaluation basés sur les jeux de données et les champs, un tableau `entityList` doit être fourni. Pour les traitements d’évaluation basés sur les libellés d’utilisation des données, un tableau `labels` doit être fourni.
 
 >[!WARNING]
 >
->Si une tâche d’évaluation répertoriée contient à la fois un tableau `entityList` et un tableau `labels`, une erreur se produit. Si vous souhaitez évaluer la même action marketing en fonction des jeux de données et des étiquettes, vous devez inclure des tâches d’évaluation distinctes pour cette action marketing.
+>Si un traitement d’évaluation répertorié contient à la fois un tableau `entityList` et un tableau `labels`, une erreur se produit. Si vous souhaitez évaluer la même action marketing en fonction des jeux de données et des libellés, vous devez inclure des traitements d’évaluation distincts pour cette action marketing.
 
 ```shell
 curl -X POST \
@@ -579,17 +578,17 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `evalRef` | URI de l’action marketing à tester par rapport aux étiquettes ou aux jeux de données en cas de violation de stratégie. |
-| `includeDraft` | Par défaut, seules les stratégies activées participent à l’évaluation. Si `includeDraft` est défini sur `true`, les stratégies dont l’état est `DRAFT` y participent également. |
-| `labels` | Tableau d’étiquettes d’utilisation des données pour tester l’action marketing.<br><br>**IMPORTANT** : Lors de l’utilisation de cette propriété, une  `entityList` propriété ne doit PAS être incluse dans le même objet. Pour évaluer la même action marketing à l’aide de jeux de données et/ou de champs, vous devez inclure un objet distinct dans la charge utile de requête qui contient un tableau `entityList`. |
-| `entityList` | Tableau de jeux de données et de champs (facultatifs) spécifiques à ces jeux de données pour tester l’action marketing.<br><br>**IMPORTANT** : Lors de l’utilisation de cette propriété, une  `labels` propriété ne doit PAS être incluse dans le même objet. Pour évaluer la même action marketing à l’aide de libellés d’utilisation de données spécifiques, vous devez inclure un objet distinct dans la charge utile de requête qui contient un tableau `labels`. |
-| `entityType` | Type d&#39;entité par lequel tester l&#39;action marketing. Actuellement, seul `dataSet` est pris en charge. |
-| `entityId` | ID d’un jeu de données par rapport auquel tester l’action marketing. |
-| `entityMeta.fields` | (Facultatif) liste de champs spécifiques dans le jeu de données pour tester l’action marketing. |
+| `evalRef` | URI de l’action marketing à tester par rapport aux libellés ou aux jeux de données en cas de violations de stratégie. |
+| `includeDraft` | Par défaut, seules les stratégies activées participent à l’évaluation. Si la valeur `includeDraft` est définie sur `true`, les stratégies dont l’état est défini sur `DRAFT` participent également. |
+| `labels` | Tableau de libellés d’utilisation des données en fonction desquels tester l’action marketing.<br><br>**IMPORTANT** : lors de l’utilisation de cette propriété, une propriété `entityList` ne doit PAS être incluse dans le même objet. Pour évaluer la même action marketing à l’aide de jeux de données et/ou de champs, vous devez inclure un objet distinct dans la payload de requête qui contient un tableau `entityList`. |
+| `entityList` | Tableau de jeux de données et de champs spécifiques (facultatifs) à ces jeux de données en fonction desquels tester l’action marketing.<br><br>**IMPORTANT** : lors de l’utilisation de cette propriété, une propriété `labels` ne doit PAS être incluse dans le même objet. Pour évaluer la même action marketing à l’aide de libellés d’utilisation de données spécifiques, vous devez inclure un objet distinct dans la payload de requête qui contient un tableau `labels`. |
+| `entityType` | Type d’entité en fonction de laquelle tester l’action marketing. Actuellement, seul `dataSet` est pris en charge. |
+| `entityId` | ID d’un jeu de données en fonction duquel tester l’action marketing. |
+| `entityMeta.fields` | (Facultatif) Liste de champs spécifiques dans le jeu de données en fonction desquels tester l’action marketing. |
 
 **Réponse**
 
-Une réponse positive renvoie un ensemble de résultats d&#39;évaluation ; une pour chaque tâche d’évaluation de stratégie envoyée dans la demande.
+Une réponse réussie renvoie un tableau reprenant les résultats de l’évaluation, où chaque résultat représente un traitement d’évaluation de stratégie envoyé dans la requête.
 
 ```json
 [
@@ -683,6 +682,6 @@ Une réponse positive renvoie un ensemble de résultats d&#39;évaluation ; une 
 ]
 ```
 
-## Évaluation des politiques pour [!DNL Real-time Customer Profile]
+## Évaluation des stratégies pour [!DNL Real-time Customer Profile]
 
-L&#39;API [!DNL Policy Service] peut également être utilisée pour vérifier les violations de stratégie impliquant l&#39;utilisation de segments [!DNL Real-time Customer Profile]. Pour plus d’informations, consultez le tutoriel sur l’[application de la conformité à l’utilisation des données pour les segments d’audience](../../segmentation/tutorials/governance.md).
+L’API [!DNL Policy Service] peut également servir à vérifier les violations de stratégie impliquant l’utilisation de segments de [!DNL Real-time Customer Profile]. Pour plus d’informations, consultez le tutoriel sur l’[application de la conformité à l’utilisation des données pour les segments d’audience](../../segmentation/tutorials/governance.md).
