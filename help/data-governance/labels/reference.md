@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; gouvernance des données ; api de l’étiquette d’utilisation des données ; api du service de stratégie ; étiquettes d’utilisation des données prises en charge ; étiquettes de contrat ; étiquettes d’identité ; étiquettes sensibles
+keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;api étiquette dʼutilisation des données;api service de stratégie;étiquettes dʼutilisation des données prises en charge;étiquettes contrat;étiquettes identité;étiquettes sensibles
 solution: Experience Platform
-title: Glossaire des étiquettes d’utilisation des données
+title: Glossaire des étiquettes dʼutilisation des données
 topic-legacy: labels
-description: Ce document décrit toutes les étiquettes d’utilisation des données actuellement prises en charge par Adobe Experience Platform.
+description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1904'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
-# Libellés d’utilisation des données
+# Glossaire des étiquettes dʼutilisation des données
 
-Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. La gouvernance des données de Adobe Experience Platform fournit plusieurs étiquettes d’utilisation des données de base prêtes à l’emploi que vous pouvez utiliser pour début de catégoriser vos données.
+Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Adobe Experience Platform Data Governance fournit de multiples étiquettes dʼutilisation des données de base prêtes à lʼemploi que vous pouvez utiliser pour commencer à classer vos données.
 
-Ce document décrit les étiquettes d&#39;utilisation des données de base actuellement fournies par [!DNL Experience Platform]. Vous trouverez plus d&#39;informations sur [!DNL Data Governance] dans le [Data Governance overview](../home.md).
+Ce document décrit les étiquettes dʼutilisation des données de base actuellement fournies par [!DNL Experience Platform]. Vous trouverez plus dʼinformations sur [!DNL Data Governance] dans la [présentation de la gouvernance des données](../home.md).
 
 ## Étiquettes Contrat
 
@@ -34,7 +33,7 @@ Les étiquettes Contrat « C » sont utilisées pour catégoriser des données
 | **C7** | Les données ne peuvent pas être utilisées pour le ciblage de contenu sur site. [Plus d’informations...](#c7) |
 | **C8** | Les données ne peuvent pas être utilisées pour mesurer les sites web ou les applications de votre organisation. [Plus d’informations...](#c8) |
 | **C9** | Les données ne peuvent pas être utilisées dans les workflows Data Science. [Plus d’informations...](#c9) |
-| **C10** | Les données ne peuvent pas être utilisées pour l&#39;activation d&#39;identité avec couture. [Plus d’informations...](#c10) |
+| **C10** | Les données ne peuvent pas être utilisées pour lʼactivation de lʼidentité assemblée. [Plus d’informations...](#c10) |
 
 ## Étiquettes Identité
 
@@ -45,7 +44,7 @@ Les étiquettes Identité « I » sont utilisées pour catégoriser des donné
 | **I1** | Données directement identifiables qui permettent d’identifier ou de contacter une personne spécifique, plutôt qu’un appareil. |
 | **I2** | Données indirectement identifiables pouvant être utilisées en combinaison avec toute autre donnée pour identifier ou contacter une personne spécifique. |
 
-## Libellés sensibles
+## Étiquettes Sensibles
 
 Les étiquettes Sensibles « S » sont utilisées pour catégoriser les données que vous et votre entreprise considérez comme sensibles.
 
@@ -58,11 +57,11 @@ Différents types de données géographiques peuvent être considérés comme se
 
 ## Annexe
 
-Les sections ci-dessous fournissent des informations supplémentaires sur les étiquettes d’utilisation des données disponibles.
+Les sections ci-dessous fournissent des informations supplémentaires sur les étiquettes dʼutilisation des données disponibles.
 
-### Détails du libellé du contrat
+### Détails des étiquettes Contrat
 
-Les sections suivantes contiennent des informations détaillées sur la mise en oeuvre de libellés spécifiques du contrat &quot;C&quot;.
+Les sections suivantes contiennent des informations détaillées sur la mise en œuvre dʼétiquettes Contrat « C » spécifiques.
 
 #### C1 {#c1}
 
@@ -98,21 +97,21 @@ DAA : publicité comportementale en ligne. Collecte de données à partir d’u
 
 #### C6 {#c6}
 
-Les publicités sont des messages ou des notifications, y compris des textes et des images, apparaissant sur un site web ou une application, qui sont principalement destinés à promouvoir la vente de biens ou de services. C’est à vous de déterminer l’objectif de ces messages ou notifications. Les publicités sont séparées du contenu sur site, couvert par une étiquette [C7](#c7). Les données avec une étiquette C6 ne peuvent pas être utilisées pour le ciblage de publicités sur site, y compris la sélection et la diffusion des publicités sur les sites web ou les applications de votre organisation, ou pour mesurer la diffusion et l’efficacité de ces publicités. Cela inclut l’utilisation des données collectées sur site concernant les intérêts des utilisateurs pour sélectionner des publicités, traiter les données sur les publicités affichées, leur moment et leur emplacement d’affichage et déterminer si les utilisateurs ont pris des mesures en rapport avec la publicité, comme la sélection d’une publicité ou la réalisation d’un achat. En règle générale, établir des inférences sur les préférences d’un utilisateur en fonction de ses activités sur site et utiliser ensuite ces préférences dans le ciblage de publicités sur site ne peut pas être considéré comme un ciblage en fonction des intérêts (également appelé personnalisation), car cela ne répond pas aux trois conditions nécessaires pour ce type de ciblage. *[Voir l’étiquette C5 pour ces exigences.](#c5)*
+Les publicités sont des messages ou des notifications, y compris des textes et des images, apparaissant sur un site web ou une application, qui sont principalement destinés à promouvoir la vente de biens ou de services. C’est à vous de déterminer l’objectif de ces messages ou notifications. Les publicités sont séparées du contenu sur site, couvert par une étiquette [C7](#c7). Les données avec une étiquette C6 ne peuvent pas être utilisées pour le ciblage de publicités sur site, y compris la sélection et la diffusion des publicités sur les sites web ou les applications de votre organisation, ou pour mesurer la diffusion et l’efficacité de ces publicités. Cela inclut lʼutilisation de données précédemment collectées sur site concernant les intérêts des utilisateurs pour sélectionner les publicités, le traitement des données concernant les publicités diffusées, le moment et le lieu de leur diffusion, et le fait de savoir si les utilisateurs ont pris des mesures en rapport avec la publicité, par exemple en sélectionnant une publicité ou en effectuant un achat. En règle générale, établir des inférences sur les préférences d’un utilisateur en fonction de ses activités sur site et utiliser ensuite ces préférences dans le ciblage de publicités sur site ne peut pas être considéré comme un ciblage en fonction des intérêts (également appelé personnalisation), car cela ne répond pas aux trois conditions nécessaires pour ce type de ciblage. *[Voir l’étiquette C5 pour ces exigences.](#c5)*
 
 En fin de compte, l’interprétation de l’étiquette et la manière dont l’utilisation des données avec cette étiquette est appliquée dépendent de vous. À titre de référence, les cadres IAB et DAA sont fournis ci-dessous :
 
-IAB : 3. Sélection, diffusion, création de rapports sur les publicités : collecte d’informations, et leur combinaison avec des informations précédemment recueillies, pour sélectionner et diffuser des publicités pour vous, et pour mesurer la diffusion et l’efficacité de ces publicités. Cela comprend l’utilisation d’informations collectées précédemment sur vos centres d’intérêt pour sélectionner des publicités, le traitement de données sur les publicités affichées, leur fréquence, leur date et leur lieu d’affichage, ainsi que le fait que vous ayez pris des mesures relatives à la publicité, notamment en sélectionnant une publicité ou en faisant un achat. Cela n’inclut pas la personnalisation, qui est la collecte et le traitement d’informations sur votre utilisation de ce service afin de personnaliser ultérieurement la publicité et/ou le contenu pour vous dans d’autres contextes, tels que des sites web ou des applications, dans la durée.
+IAB : 3. Sélection, diffusion, création de rapports sur les publicités : collecte d’informations, et leur combinaison avec des informations précédemment recueillies, pour sélectionner et diffuser des publicités pour vous, et pour mesurer la diffusion et l’efficacité de ces publicités. Cela inclut lʼutilisation dʼinformations précédemment collectées sur vos centres dʼintérêt pour sélectionner des publicités, le traitement de données sur les publicités diffusées, la fréquence de leur diffusion, le moment et le lieu de leur diffusion, et le fait de savoir si vous avez pris une mesure quelconque en rapport avec la publicité, par exemple en sélectionnant une publicité ou en effectuant un achat. Cela n’inclut pas la personnalisation, qui est la collecte et le traitement d’informations sur votre utilisation de ce service afin de personnaliser ultérieurement la publicité et/ou le contenu pour vous dans d’autres contextes, tels que des sites web ou des applications, dans la durée.
 
 DAA : la publicité comportementale en ligne n’inclut pas les activités des Premières parties, la diffusion ou la création de rapports sur les publicités, ni la publicité contextuelle (c’est-à-dire la publicité basée sur le contenu de la page web visitée, la visite actuelle d’un client sur une page web ou une requête de recherche).
 
 #### C7 {#c7}
 
-Le contenu sur site est constitué de textes et d’images conçus pour informer, apprendre ou divertir, et non pour promouvoir la vente de biens ou de services. C’est à vous de déterminer l’objectif du contenu, notamment si celui-ci peut être qualifié de publicité native. L’étiquette C7 n’est pas destinée à couvrir les publicités sur site, qui sont couvertes par l’étiquette [C6](#c6). Les données avec une étiquette C7 ne peuvent pas être utilisées pour le ciblage de contenu sur site, y compris la sélection et la diffusion de contenu sur les sites web ou les applications de votre organisation, ou pour mesurer la diffusion et l’efficacité de ce contenu. Cela inclut les informations collectées précédemment sur les intérêts des utilisateurs dans un contenu sélectionné, le traitement des données sur le contenu affiché, la fréquence ou la durée d’affichage, le moment et l’emplacement d’affichage, et si les utilisateurs ont entrepris des actions liées au contenu, notamment la sélection de contenu. En règle générale, établir des inférences sur les préférences d’un utilisateur en fonction de ses activités sur site et utiliser ensuite ces préférences dans le ciblage de contenu sur site ne peut pas être considéré comme un ciblage en fonction des intérêts (également appelé personnalisation), car cela ne répond pas aux trois conditions nécessaires pour ce type de ciblage. *[Voir l’étiquette C5 pour ces exigences.](#c5)*
+Le contenu sur site est constitué de textes et d’images conçus pour informer, apprendre ou divertir, et non pour promouvoir la vente de biens ou de services. C’est à vous de déterminer l’objectif du contenu, notamment si celui-ci peut être qualifié de publicité native. L’étiquette C7 n’est pas destinée à couvrir les publicités sur site, qui sont couvertes par l’étiquette [C6](#c6). Les données avec une étiquette C7 ne peuvent pas être utilisées pour le ciblage de contenu sur site, y compris la sélection et la diffusion de contenu sur les sites web ou les applications de votre organisation, ou pour mesurer la diffusion et l’efficacité de ce contenu. Cela inclut les informations précédemment collectées sur les intérêts des utilisateurs pour sélectionner du contenu, le traitement des données concernant le contenu diffusé, la fréquence ou la durée de sa diffusion, le moment et le lieu de sa diffusion, et le fait de savoir si les utilisateurs ont pris des mesures en rapport avec le contenu, par exemple en sélectionnant le contenu. En règle générale, établir des inférences sur les préférences d’un utilisateur en fonction de ses activités sur site et utiliser ensuite ces préférences dans le ciblage de contenu sur site ne peut pas être considéré comme un ciblage en fonction des intérêts (également appelé personnalisation), car cela ne répond pas aux trois conditions nécessaires pour ce type de ciblage. *[Voir l’étiquette C5 pour ces exigences.](#c5)*
 
 En fin de compte, l’interprétation de l’étiquette et la manière dont l’utilisation des données avec cette étiquette est appliquée dépendent de vous. À titre de référence, les cadres IAB et DAA sont fournis ci-dessous :
 
-IAB : 4. Sélection du contenu, diffusion, création de rapports : collecte d’informations, et leur combinaison avec des informations précédemment recueillies, pour sélectionner et diffuser du contenu pour vous, et pour mesurer la diffusion et l’efficacité de ce contenu. Cela comprend l’utilisation d’informations collectées précédemment sur vos centres d’intérêt pour sélectionner du contenu, le traitement des données sur le contenu affiché, la fréquence ou la durée d’affichage, le moment et l’emplacement d’affichage, ainsi que la question de savoir si vous avez effectué une action liée au contenu, notamment en sélectionnant du contenu. Cela n’inclut pas la personnalisation, qui est la collecte et le traitement d’informations sur votre utilisation de ce service afin de personnaliser ultérieurement le contenu et/ou la publicité pour vous dans d’autres contextes, tels que des sites web ou des applications, dans la durée.
+IAB : 4. Sélection du contenu, diffusion, création de rapports : collecte d’informations, et leur combinaison avec des informations précédemment recueillies, pour sélectionner et diffuser du contenu pour vous, et pour mesurer la diffusion et l’efficacité de ce contenu. Cela inclut lʼutilisation dʼinformations précédemment collectées sur vos intérêts pour sélectionner du contenu, le traitement des données concernant le contenu diffusé, la fréquence ou la durée de sa diffusion, le moment et le lieu de sa diffusion, et le fait de savoir si vous avez pris des mesures en rapport avec le contenu, par exemple en sélectionnant le contenu. Cela n’inclut pas la personnalisation, qui est la collecte et le traitement d’informations sur votre utilisation de ce service afin de personnaliser ultérieurement le contenu et/ou la publicité pour vous dans d’autres contextes, tels que des sites web ou des applications, dans la durée.
 
 DAA : la publicité comportementale en ligne n’inclut pas les activités des Premières parties, la diffusion ou la création de rapports sur les publicités, ni la publicité contextuelle (c’est-à-dire la publicité basée sur le contenu de la page web visitée, la visite actuelle d’un client sur une page web ou une requête de recherche).
 
@@ -126,4 +125,4 @@ Certains contrats prévoient des interdictions explicites sur l’utilisation de
 
 #### C10 {#c10}
 
-Certaines stratégies d’utilisation des données limitent l’utilisation de données d’identité assemblées pour la personnalisation. Le libellé C10 est automatiquement appliqué aux segments si leurs stratégies de fusion utilisent l’option &quot;graphique privé&quot;.
+Certaines stratégies dʼutilisation des données limitent lʼutilisation de données dʼidentité assemblées pour la personnalisation. Lʼétiquette C10 est automatiquement appliquée aux segments si leurs stratégies de fusion utilisent lʼoption « graphique privé ».
