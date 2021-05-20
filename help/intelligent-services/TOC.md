@@ -8,7 +8,7 @@ feature: Data Science Workspace
 source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 49%
+ht-degree: 98%
 
 ---
 
@@ -22,26 +22,26 @@ ht-degree: 49%
    - [Prise en main d’Attribution AI](attribution-ai/getting-started.md)
    - [Entrée et sortie](attribution-ai/input-output.md)
    - [Guide de l’interface utilisateur](attribution-ai/user-guide.md)
-   - [Découvrir les informations](attribution-ai/discover-insights.md)
-   - [Télécharger des scores](attribution-ai/download-scores.md)
-   - [Analyser des scores à l’aide de Requête Service](attribution-ai/aai-query-service.md)
-- IA du contenu et du commerce (bêta) {#content-commerce-ai}
+   - [Découvrez des informations](attribution-ai/discover-insights.md)
+   - [Téléchargez des scores](attribution-ai/download-scores.md)
+   - [Analysez des scores à lʼaide de Query Service](attribution-ai/aai-query-service.md)
+- IA dédiée au contenu et au commerce (bêta) {#content-commerce-ai}
    - [Présentation](content-commerce-ai/overview.md)
    - [Prise en main](content-commerce-ai/getting-started.md)
-   - API IA de contenu et de commerce{#api}
+   - API IA dédiée au contenu et au commerce {#api}
       - [Extraction des couleurs](content-commerce-ai/api/color-extraction.md)
       - [Extraction des mots-clés](content-commerce-ai/api/keyword-extraction.md)
       - [Classification de texte](content-commerce-ai/api/text-classification.md)
-      - [similarité visuelle](content-commerce-ai/api/visual-similarity.md)
-      - [Présence de texte et reconnaissance de caractères optiques](content-commerce-ai/api/optical-character-recognition.md)
+      - [Similarité visuelle](content-commerce-ai/api/visual-similarity.md)
+      - [Détection de texte et reconnaissance optique de caractères](content-commerce-ai/api/optical-character-recognition.md)
 - Customer AI {#customer-ai}
    - [Présentation](customer-ai/overview.md)
    - [Prise en main de Customer AI](customer-ai/getting-started.md)
    - [Entrée et sortie](customer-ai/input-output.md)
-   - Guides d&#39;interface{#user-guide}
+   - Guides de lʼinterface utilisateur {#user-guide}
       - [Configuration d’une instance](customer-ai/user-guide/configure.md)
-      - [Découvrir les informations](customer-ai/user-guide/discover-insights.md)
-      - [Création de segments à l’aide de scores AI client](customer-ai/user-guide/create-segment.md)
-      - [Télécharger des scores](customer-ai/user-guide/download-scores.md)
+      - [Découvrez des informations](customer-ai/user-guide/discover-insights.md)
+      - [Créez des segments à lʼaide de lʼIA dédiée aux clients](customer-ai/user-guide/create-segment.md)
+      - [Téléchargez des scores](customer-ai/user-guide/download-scores.md)
    - [Résolution des problèmes](customer-ai/troubleshooting.md)
-- [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+- [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
