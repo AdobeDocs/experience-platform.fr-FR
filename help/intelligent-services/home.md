@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform ; accueil ; services intelligents ; sujets populaires ; service intelligent ; service intelligent
+keywords: Experience Platform;accueil;services intelligents;rubriques populaires;service intelligent;Service intelligent
 solution: Experience Platform, Intelligent Services
 title: Présentation des services intelligents
 topic-legacy: Intelligent Services overview
 description: Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données. De plus, les spécialistes du marketing peuvent activer les prédictions dans Adobe Experience Cloud, Adobe Experience Platform et les applications tierces.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '502'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
 # Présentation des services intelligents
 
-Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données. En outre, les spécialistes du marketing peuvent activer les prédictions dans les applications [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform] et tierces.
+Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données. De plus, les spécialistes du marketing peuvent activer les prédictions dans [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform] et les applications tierces.
 
-La vidéo suivante est conçue pour vous aider à comprendre les services intelligents. À l’aide d’exemples d’utilisation commerciale, cette vidéo explique un flux de travail de haut niveau et décrit les fonctionnalités d’Attribution AI et d’IA du client.
+La vidéo suivante est conçue pour vous aider à comprendre les services intelligents. À lʼaide dʼexemples de cas dʼutilisation opérationnelle, cette vidéo explique un processus de haut niveau et décrit les fonctionnalités de lʼIA dédiée à lʼattribution (Attribution AI) et de lʼIA dédiée aux clients (Customer AI).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
 ## Avantages des services intelligents
 
-Les services intelligents, construits sur [!DNL Adobe Experience Platform], permettent aux spécialistes du marketing responsables de l&#39;expérience client d&#39;accéder à l&#39;IA en tant que service, ce qui permet à n&#39;importe qui de prédire le comportement des clients, de mesurer l&#39;impact d&#39;une campagne ou d&#39;assurer un meilleur retour sur investissement. Certains des avantages des services intelligents sont répertoriés ci-dessous.
+Les services intelligents sont basés sur [!DNL Adobe Experience Platform] et permettent aux responsables du marketing chargés de lʼexpérience client dʼaccéder à lʼIA en tant que service afin de prédire plus facilement le comportement des clients, de mesurer lʼimpact dʼune campagne ou dʼoptimiser chaque retour sur investissement. Certains des avantages des services intelligents sont répertoriés ci-dessous.
 
 ### Une vitesse de mise sur le marché rentable
 
@@ -53,7 +52,7 @@ Une fois que la formation et la notation avec les modèles sont terminées, les 
 
 ### Actions
 
-Enfin, vous pouvez décider des actions à entreprendre avec les prédictions, telles que la consommation d’informations, l’activation d’applications dans [!DNL Adobe Experience Cloud] et la création de tableaux de bord personnalisés.
+Enfin, les prédictions permettent de décider des actions à prendre, comme utiliser des informations, activer des applications dans [!DNL Adobe Experience Cloud] et créer des tableaux de bord personnalisés.
 
 ## Étapes suivantes
 
