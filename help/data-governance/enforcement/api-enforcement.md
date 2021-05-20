@@ -1,43 +1,42 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; Application des stratégies ; Application automatique ; Application basée sur les API ; gouvernance des données ; test
+keywords: Experience Platform;accueil;rubriques populaires;Application des stratégies;Application automatique;Application basée sur les API;gouvernance des données;test
 solution: Experience Platform
-title: Appliquer les stratégies d’utilisation des données à l’aide de l’API Policy Service
+title: Application des stratégies d’utilisation des données à l’aide de l’API Policy Service
 topic-legacy: guide
 type: Tutorial
 description: Une fois que vous avez créé des libellés d’utilisation pour vos données et des stratégies d’utilisation pour les actions marketing en fonction de ces libellés, vous pouvez utiliser l’API Policy Service pour évaluer si une action marketing effectuée sur un jeu de données ou sur un groupe arbitraire de libellés constitue une violation de la stratégie. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de stratégie en fonction de la réponse de l’API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1006'
-ht-degree: 58%
+ht-degree: 100%
 
 ---
 
-# Appliquer les stratégies d&#39;utilisation des données à l&#39;aide de l&#39;API [!DNL Policy Service]
+# Application des stratégies d’utilisation des données à l’aide de l’API [!DNL Policy Service]
 
-Une fois que vous avez créé des étiquettes d&#39;utilisation des données pour vos données et créé des stratégies d&#39;utilisation pour les actions marketing à l&#39;égard de ces étiquettes, vous pouvez utiliser [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) pour évaluer si une action marketing effectuée sur un jeu de données ou un groupe arbitraire d&#39;étiquettes constitue une violation de stratégie. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de stratégie en fonction de la réponse de l’API.
+Une fois que vous avez créé des libellés d’utilisation pour vos données et des stratégies d’utilisation pour les actions marketing en fonction de ces libellés, vous pouvez utiliser l’[[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) pour évaluer si une action marketing effectuée sur un jeu de données ou sur un groupe arbitraire de libellés constitue une violation de la stratégie. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de stratégie en fonction de la réponse de l’API.
 
 >[!NOTE]
 >
 >Par défaut, seules les stratégies dont l’état est défini sur `ENABLED` peuvent participer à l’évaluation. Pour autoriser les stratégies `DRAFT` à participer à l’évaluation, vous devez inclure le paramètre de requête `includeDraft=true` au chemin d’accès de la requête.
 
-Ce document décrit la procédure à suivre pour utiliser l&#39;API [!DNL Policy Service] afin de rechercher les violations de stratégie dans différents scénarios.
+Ce document décrit les étapes à suivre pour utiliser l’API [!DNL Policy Service] afin de vérifier les violations de stratégie dans différents scénarios.
 
 ## Prise en main
 
-Ce didacticiel nécessite une bonne compréhension des concepts clés suivants liés à l’application des stratégies d’utilisation des données :
+Ce tutoriel nécessite une compréhension pratique des concepts clés suivants, qui sont impliqués dans l’application des stratégies d’utilisation des données :
 
-* [Gouvernance des données](../home.md)[!DNL Platform] : cadre selon lequel applique la conformité d’utilisation des données.
+* [Gouvernance des données](../home.md) : cadre selon lequel [!DNL Platform] applique la conformité d’utilisation des données.
    * [Libellés d’utilisation des données](../labels/overview.md) : les libellés d’utilisation des données sont appliqués aux jeux de données (et/ou aux champs individuels de ces jeux de données), spécifiant les restrictions d’utilisation de ces données.
-   * [Stratégies](../policies/overview.md) d’utilisation des données : Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing qui sont autorisées ou restreintes pour certains jeux d’étiquettes d’utilisation des données.
-* [Sandbox](../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
+   * [stratégies d’utilisation des données](../policies/overview.md) : les stratégies d’utilisation des données sont des règles décrivant les types d’actions marketing autorisées ou non pour certains ensembles de libellés d’utilisation des données.
+* [Environnements de test](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Avant de commencer ce tutoriel, consultez le [guide de développement](../api/getting-started.md) pour obtenir les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API , y compris les en-têtes requis et la méthode de lecture d’exemples d’appels API.[!DNL Policy Service]
+Avant de commencer ce tutoriel, consultez le [guide de développement](../api/getting-started.md) pour obtenir les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Policy Service], y compris les en-têtes requis et la méthode de lecture d’exemples d’appels API.
 
 ## Évaluation à l’aide de libellés et d’une action marketing
 
-Vous pouvez évaluer une stratégie en testant une action marketing par rapport à un ensemble d’étiquettes d’utilisation de données qui seraient éventuellement présentes dans un jeu de données. Pour cela, vous devez utiliser des paramètres de requête `duleLabels` où les libellés sont fournis sous la forme d’une liste de valeurs séparées par des virgules, comme indiqué dans l’exemple ci-dessous.
+Vous pouvez évaluer une stratégie en testant une action marketing en fonction d’un ensemble de libellés d’utilisation des données éventuellement présents dans un jeu de données. Pour cela, vous devez utiliser des paramètres de requête `duleLabels` où les libellés sont fournis sous la forme d’une liste de valeurs séparées par des virgules, comme indiqué dans l’exemple ci-dessous.
 
 **Format d’API**
 
@@ -70,7 +69,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse positive renvoie l’URL de l’action marketing, les étiquettes d’utilisation sur lesquelles elle a été testée et une liste de toute stratégie violée suite au test de l’action par rapport à ces étiquettes. Dans cet exemple, la stratégie « Export Data to Third Party » s’affiche dans le tableau `violatedPolicies`, indiquant que l’action marketing a déclenché la violation de stratégie attendue.
+Une réponse réussie renvoie l’URL de l’action marketing, les libellés en fonction desquels ont été réalisés les tests et une liste de toute stratégie enfreinte résultant du test de l’action en fonction de ces libellés. Dans cet exemple, la stratégie « Export Data to Third Party » s’affiche dans le tableau `violatedPolicies`, indiquant que l’action marketing a déclenché la violation de stratégie attendue.
 
 ```json
 {
@@ -134,7 +133,7 @@ Une réponse positive renvoie l’URL de l’action marketing, les étiquettes d
 
 ## Évaluation à l’aide de jeux de données
 
-Vous pouvez évaluer une stratégie d’utilisation des données en testant une action marketing par rapport à un ou plusieurs jeux de données à partir desquels des étiquettes peuvent être collectées. Pour ce faire, vous devez envoyer une requête POST à `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` et fournir des identifiants de jeux de données dans le corps de la requête, comme indiqué dans l’exemple ci-dessous.
+Vous pouvez évaluer une stratégie d’utilisation des données en testant une action marketing en fonction d’un ou de plusieurs jeux de données à partir desquels il est possible de collecter les libellés. Pour ce faire, vous devez envoyer une requête POST à `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` et fournir des identifiants de jeux de données dans le corps de la requête, comme indiqué dans l’exemple ci-dessous.
 
 **Format d’API**
 
@@ -185,11 +184,11 @@ curl -X POST \
 | --- | --- |
 | `entityType` | Chaque élément du tableau de payload doit indiquer le type d’entité en cours de définition. Dans ce cas d’utilisation, la valeur sera toujours « dataSet ». |
 | `entityId` | Chaque élément du tableau de payload doit fournir l’ID unique d’un jeu de données. |
-| `entityMeta.fields` | (Facultatif) Tableau de chaînes [JSON Pointer](../../landing/api-fundamentals.md#json-pointer), référençant des champs spécifiques dans le schéma du jeu de données. Si ce tableau est inclus, seuls les champs contenus dans le tableau participent à l&#39;évaluation. Les champs de schéma qui ne sont pas inclus dans la baie ne participent pas à l&#39;évaluation.<br><br>Si ce champ n&#39;est pas inclus, tous les champs du schéma de jeux de données seront inclus dans l&#39;évaluation. |
+| `entityMeta.fields` | (Facultatif) Tableau de chaînes de type [pointeurs JSON](../../landing/api-fundamentals.md#json-pointer), référençant des champs spécifiques dans le schéma du jeu de données. Si ce tableau est inclus, seuls les champs contenus dans ce dernier participent à l’évaluation. Les champs de schéma qui ne sont pas inclus dans le tableau ne participent pas à l’évaluation.<br><br>Si ce champ n’est pas inclus, tous les champs qui se trouvent dans le schéma du jeu de données sont inclus dans l’évaluation. |
 
 **Réponse**
 
-Une réponse positive renvoie l’URL de l’action marketing, les étiquettes d’utilisation collectées à partir des jeux de données fournis et une liste de toute stratégie violée suite au test de l’action par rapport à ces étiquettes. Dans cet exemple, la stratégie « Export Data to Third Party » s’affiche dans le tableau `violatedPolicies`, indiquant que l’action marketing a déclenché la violation de stratégie attendue.
+Une réponse réussie renvoie l’URL de l’action marketing, les libellés collectés à partir des jeux de données fournis et une liste de toute stratégie enfreinte résultant du test de l’action en fonction de ces libellés. Dans cet exemple, la stratégie « Export Data to Third Party » s’affiche dans le tableau `violatedPolicies`, indiquant que l’action marketing a déclenché la violation de stratégie attendue.
 
 ```json
 {
@@ -370,12 +369,12 @@ Une réponse positive renvoie l’URL de l’action marketing, les étiquettes d
 
 | Propriété | Description |
 | --- | --- |
-| `duleLabels` | Liste d’étiquettes d’utilisation des données extraites des jeux de données fournis dans la charge utile de la demande. |
+| `duleLabels` | Liste des libellés d’utilisation des données extraits des jeux de données fournis dans la payload de la requête. |
 | `discoveredLabels` | Liste des jeux de données fournis dans le payload de la requête affichant les libellés au niveau du jeu de données et au niveau du champ trouvées dans chaque jeu. |
 | `violatedPolicies` | Un tableau répertoriant toutes les stratégies violées lors du test de l’action marketing (spécifiée dans `marketingActionRef`) en fonction des `duleLabels` fournies. |
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez réussi à rechercher des violations de stratégie lors de l’exécution d’une action marketing sur un jeu de données ou un ensemble d’étiquettes d’utilisation des données. En utilisant les données renvoyées dans les réponses de l’API, vous pouvez configurer des protocoles dans votre application d’expérience de façon à appliquer les violations de stratégie lorsque celles-ci se produisent.
+La lecture de ce document vous a permis de comprendre comment identifier les violations de stratégie lors de l’exécution d’une action marketing sur un jeu de données ou sur un ensemble de libellés d’utilisation des données. En utilisant les données renvoyées dans les réponses de l’API, vous pouvez configurer des protocoles dans votre application d’expérience de façon à appliquer les violations de stratégie lorsque celles-ci se produisent.
 
-Pour plus d&#39;informations sur la façon dont Platform fournit automatiquement l&#39;application de stratégies pour les segments activés, consultez le guide sur [l&#39;application automatique](./auto-enforcement.md).
+Pour plus d’informations sur la façon dont Platform fournit automatiquement l’application des stratégies pour les segments activés, consultez le guide sur l’[application automatique](./auto-enforcement.md).
