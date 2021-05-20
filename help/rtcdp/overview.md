@@ -1,40 +1,40 @@
 ---
-keywords: RTCDP ; CDP ; Plate-forme de données client en temps réel ; plate-forme de données client en temps réel ; cdp en temps réel ; cdp ; Customer AI
+keywords: RTCDP;CDP;Plateforme de données client en temps réel;plateforme de données client en temps réel;real time cdp;cdp;IA dédiée aux clients
 title: Présentation de la plateforme de données client en temps réel
 seo-title: Présentation de la plateforme de données client en temps réel
 description: Présentation de la plateforme de données client en temps réel
 seo-description: Présentation de la plateforme de données client en temps réel
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 9f20f8bfeefb5bc427a72a11ac1f01816cdbc4b2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '306'
-ht-degree: 27%
+ht-degree: 100%
 
 ---
 
 
 # Présentation de la plateforme de données client en temps réel 
 
-Basée sur Adobe Experience Platform, la plateforme de données client en temps réel (CDP en temps réel) permet aux sociétés de rassembler des données connues et anonymes provenant de plusieurs sources d’entreprise afin de créer des profils clients qui peuvent être utilisés pour fournir des expériences client personnalisées sur tous les canaux et périphériques en temps réel.
+Basée sur Adobe Experience Platform, la plateforme de données client en temps réel (Real-time CDP) permet aux entreprises de rassembler des données connues et anonymes provenant de plusieurs sources dʼentreprise afin de créer des profils clients qui peuvent être utilisés pour fournir des expériences client personnalisées sur tous les canaux et appareils en temps réel.
 
-Le CDP en temps réel comprend des outils de gouvernance des données, de gestion des identités, de segmentation avancée et de science des données, de sorte que vous puissiez créer des profils et définir des audiences, et en tirer de riches informations tout en étant en mesure d&#39;appliquer des politiques de gouvernance des données strictes.
+La plateforme de données client en temps réel comprend des outils de gouvernance des données, de gestion des identités, de segmentation avancée et de science des données, qui vous permettent de créer des profils et de définir des audiences, mais également dʼobtenir des informations précieuses tout en étant en mesure dʼappliquer des stratégies de gouvernance des données strictes.
 
-La plate-forme de données client en temps réel se connecte à un vaste écosystème de partenaires, sans parler des intégrations natives avec Adobe Experience Cloud, afin que vous puissiez activer ces audiences en toute transparence et offrir de superbes expériences client sur tous les canaux, de la personnalisation sur site ou dans l’application à l’e-mail, aux médias payants, aux centres d’appels, aux périphériques connectés, etc.
+La plateforme de données client en temps réel se connecte à un vaste écosystème de partenaires, sans oublier les intégrations natives à Adobe Experience Cloud. Vous pouvez ainsi activer ces audiences en toute simplicité et proposer de superbes expériences client sur tous les canaux, de la personnalisation sur site ou in-app aux e-mails, médias achetés, centres dʼappel, appareils connectés, etc.
 
-Avec la plateforme de données client en temps réel, vous pouvez :
+La plateforme de données client en temps réel vous permet :
 
-* Réalisez une vue unique de votre client en combinant des données provenant de l’ensemble de l’entreprise.
-* Gérez de manière responsable les profils dotés de contrôles de gouvernance et de confidentialité fiables pour les identifiants connus et anonymes.
+* dʼobtenir une vue unique de votre client en combinant les données de toute lʼentreprise.
+* de gérer de manière responsable les profils avec des contrôles de confidentialité et de gouvernance fiables pour les identifiants connus et anonymes.
 * de générer des informations exploitables et d’adapter les audiences grâce à l’IA et à l’apprentissage automatique optimisés par Adobe Sensei et conçus pour les spécialistes marketing ;
 * de proposer des expériences personnalisées en temps réel sur l’ensemble des canaux et des destinations.
 
 ## Informations supplémentaires
 
-Pour en savoir plus sur Adobe Experience Platform, lisez tout d&#39;abord l&#39;[aperçu Experience Platform](../landing/home.md).
+Pour en savoir plus sur Adobe Experience Platform, commencez par lire la [présentation dʼExperience Platform](../landing/home.md).
 
-La documentation suivante est recommandée pour vous aider à commencer à utiliser la plateforme de données clientes en temps réel :
+La documentation suivante est recommandée pour débuter avec la plateforme de données clients en temps réel :
 
-* [Initiation au CDP en temps réel](get-started.md)
+* [Prise en main de la plateforme de données clients en temps réel](get-started.md)
 * [Envoi de données](sources/sources-overview.md)
 * [Accès aux profils](profile/profile-overview.md)
 * [Création de segments](segmentation/segmentation-overview.md)
