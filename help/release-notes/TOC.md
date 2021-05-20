@@ -3,11 +3,10 @@ audience: user
 user-guide-title: Notes de mise à jour d’Adobe Experience Platform
 breadcrumb-title: Notes de mise à jour de Platform
 user-guide-description: Notes de mise à jour mensuelles pour Adobe Experience Platform.
-translation-type: tm+mt
 source-git-commit: 8f38e009adcae6d045b8353c6d2276a2c3bd0213
 workflow-type: tm+mt
 source-wordcount: '49'
-ht-degree: 89%
+ht-degree: 91%
 
 ---
 
@@ -21,7 +20,7 @@ ht-degree: 89%
    * [Février 2021](2021/february-2021.md)
    * [Janvier 2021](2021/january-2021.md)
 * 2020 {#2020}
-   * [Décembre 2020](2020/december-2020.md)
+   * [Décembre 2020](2020/december-2020.md)
    * [Novembre 2020](2020/november-2020.md)
    * [Octobre 2020](2020/october-2020.md)
    * [Septembre 2020](2020/september-2020.md)
@@ -34,7 +33,7 @@ ht-degree: 89%
    * [Février 2020](2020/february-2020.md)
    * [Janvier 2020](2020/january-2020.md)
 * 2019 {#2019}
-   * [Décembre 2019](2019/december-2019.md)
+   * [2019 décembre](2019/december-2019.md)
    * [Novembre 2019](2019/november-2019.md)
    * [Septembre 2019](2019/september-2019.md)
    * [Juillet 2019](2019/july-2019.md)
