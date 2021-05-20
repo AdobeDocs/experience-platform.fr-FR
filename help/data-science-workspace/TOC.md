@@ -5,11 +5,11 @@ breadcrumb-title: Guide de Data Science Workspace
 user-guide-description: Utilisez le machine learning pour développer, entraîner et évaluer des modèles et des recettes avec des ordinateurs portables équipés d’Adobe Sensei et de JupyterLab.
 feature: Data Science Workspace
 solution: Experience Platform, Intelligent Services
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '240'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -17,16 +17,16 @@ ht-degree: 78%
 # Data Science Workspace {#data-science-workspace}
 
 * [Présentation de Data Science Workspace](home.md)
-* [Accès et fonctionnalités à l’espace de travail Data Science](access-features-dsw.md)
+* [Accès à Data Science Workspace et fonctionnalités](access-features-dsw.md)
 * [Présentation détaillée de Data Science Workspace](walkthrough.md)
 * Notebooks JupyterLab {#jupyterlab}
    * [Présentation](jupyterlab/overview.md)
    * [Accès aux données](jupyterlab/access-notebook-data.md)
    * [Analyse de vos données](jupyterlab/analyze-your-data.md)
-   * [Service de requête](jupyterlab/query-service.md)
-   * [Analyse de données exploratoires (EDA)](jupyterlab/eda-notebook.md)
+   * [Query Service](jupyterlab/query-service.md)
+   * [Analyse exploratoire des données (AED)](jupyterlab/eda-notebook.md)
    * [Création d’une recette](jupyterlab/create-a-recipe.md)
-   * [Collaboration dans JupyterLab à l&#39;aide de Git](jupyterlab/using-git-for-collaboration.md)
+   * [Collaboration dans JupyterLab à l’aide de Git](jupyterlab/using-git-for-collaboration.md)
 * API Sensei Machine Learning {#api}
    * [Prise en main](api/getting-started.md)
    * [Moteurs](api/engines.md)
@@ -36,11 +36,11 @@ ht-degree: 78%
    * [MLServices](api/mlservices.md)
    * [Insights](api/insights.md)
    * [Annexe](api/appendix.md)
-* Apprentissage automatique en temps réel (Alpha) {#real-time-machine-learning}
+* Machine learning en temps réel (Alpha) {#real-time-machine-learning}
    * [Présentation](real-time-machine-learning/home.md)
    * [Prise en main](real-time-machine-learning/getting-started.md)
-   * [Gérer les blocs-notes](real-time-machine-learning/rtml-authoring-notebook.md)
-   * [Guide de référence du noeud](real-time-machine-learning/node-reference.md)
+   * [Gestion des notebooks](real-time-machine-learning/rtml-authoring-notebook.md)
+   * [Guide de référence du nœud](real-time-machine-learning/node-reference.md)
 * Recettes préconfigurées {#pre-built-recipes}
    * [Recette des recommandations de produits](pre-built-recipes/product-recommendations.md)
    * [Prédiction d’achat de produit](pre-built-recipes/product-purchase-prediction.md)
@@ -48,11 +48,11 @@ ht-degree: 78%
 * Création de modèles {#authoring}
    * [SDK de création de modèles](authoring/sdk.md)
    * [Création d’un pipeline de fonctionnalités](authoring/feature-pipeline.md)
-   * [Création de modèles à l’aide du SDK de plate-forme (Python)](authoring/platform-sdk.md)
+   * [Création de modèles à l’aide du SDK Platform (Python)](authoring/platform-sdk.md)
    * [Accès aux données Python](authoring/python.md)
    * [Accès aux données Spark](authoring/spark.md)
 * Tutoriels sur les modèles et les recettes {#models-recipes}
-   * [Création et publication d’un modèle d’apprentissage automatique](models-recipes/create-publish-model.md)
+   * [Création et publication d’un modèle de machine learning](models-recipes/create-publish-model.md)
    * [Création de jeux de données et de schéma de ventes au détail](models-recipes/create-retails-sales-dataset.md)
    * [Prévisualisation des schémas et des jeux de données](models-recipes/preview-schema-data.md)
    * [Regroupement des fichiers source dans une recette](models-recipes/package-source-files-recipe.md)
@@ -69,4 +69,4 @@ ht-degree: 78%
    * [Planification de la formation et de la notation automatisée d’un service (interface utilisateur)](models-recipes/schedule-models-ui.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+* [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
