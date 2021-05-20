@@ -1,41 +1,40 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; gouvernance des données ; stratégie d’utilisation des données
+keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;stratégie d’utilisation des données
 solution: Experience Platform
 title: Création d’une stratégie d’utilisation des données dans l’API
 topic-legacy: policies
 type: Tutorial
-description: L’API Policy Service vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer les actions marketing à entreprendre par rapport aux données qui contiennent certains libellés d’utilisation des données. Ce document fournit un tutoriel détaillé sur la création d’une stratégie à l’aide de l’API Policy Service.
+description: L’API Policy Service vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés d’utilisation. Ce document fournit un tutoriel détaillé sur la création d’une stratégie à l’aide de l’API Policy Service.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1219'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
 # Création d’une stratégie d’utilisation des données dans l’API
 
-L&#39;[API Policy Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) vous permet de créer et de gérer des stratégies d&#39;utilisation des données afin de déterminer quelles actions marketing peuvent être entreprises par rapport aux données qui contiennent certains libellés d&#39;utilisation des données.
+L’[API Policy Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés d’utilisation.
 
-Ce document fournit un didacticiel détaillé pour la création d’une stratégie à l’aide de l’API [!DNL Policy Service]. Pour consulter un guide plus complet sur les différentes opérations disponibles dans l’API, référez-vous au [guide de développement de Policy Service](../api/getting-started.md).
+Ce document fournit un tutoriel détaillé sur la création d’une stratégie à l’aide de l’API [!DNL Policy Service]. Pour consulter un guide plus complet sur les différentes opérations disponibles dans l’API, référez-vous au [guide de développement de Policy Service](../api/getting-started.md).
 
 ## Prise en main
 
 Ce tutoriel nécessite une compréhension pratique des concepts clés suivants, qui sont impliqués dans la création et l’évaluation des stratégies 
 
-* [Gouvernance](../home.md) des données Adobe Experience Platform : Cadre selon lequel  [!DNL Platform] applique la conformité à l’utilisation des données.
+* [Adobe Experience Platform Data Governance](../home.md) : cadre en fonction duquel [!DNL Platform] applique la conformité d’utilisation des données.
    * [Libellés d’utilisation des données](../labels/overview.md) : les libellés d’utilisation des données sont appliqués aux champs de données XDM, spécifiant les restrictions d’accès à ces données.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
-* [Sandbox](../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
+* [Environnements de test](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Avant de commencer ce tutoriel, consultez le [guide de développement](../api/getting-started.md) pour obtenir les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API , y compris les en-têtes requis et la méthode de lecture d’exemples d’appels API.[!DNL Policy Service]
+Avant de commencer ce tutoriel, consultez le [guide de développement](../api/getting-started.md) pour obtenir les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Policy Service], y compris les en-têtes requis et la méthode de lecture d’exemples d’appels API.
 
 ## Définition d’une action marketing {#define-action}
 
-Dans la structure [!DNL Data Governance], une action marketing est une action entreprise par un utilisateur de données [!DNL Experience Platform], pour laquelle il est nécessaire de vérifier les violations des stratégies d&#39;utilisation des données.
+Dans le cadre de la [!DNL Data Governance], une action marketing est une action entreprise par un utilisateur de données [!DNL Experience Platform] pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
 
-La première étape de la création d’une stratégie d’utilisation des données consiste à déterminer l’action marketing qu’elle évaluera. Pour ce faire, utilisez l’une des options suivantes :
+La première étape de la création d’une stratégie d’utilisation des données consiste à déterminer l’action marketing évaluée par la stratégie. Pour ce faire, utilisez l’une des options suivantes :
 
 * [Recherche d’une action marketing existante](#look-up)
 * [Création d’une action marketing](#create-new)
@@ -46,7 +45,7 @@ Vous pouvez rechercher des actions marketing existantes à évaluer par votre st
 
 **Format d’API**
 
-Selon que vous recherchez une action marketing fournie par [!DNL Experience Platform] ou une action marketing personnalisée créée par votre organisation, utilisez les points de terminaison `marketingActions/core` ou `marketingActions/custom`, respectivement.
+Selon que vous recherchiez une action marketing fournie par [!DNL Experience Platform] ou une action marketing personnalisée créée par votre organisation, utilisez respectivement les points d’entrée `marketingActions/core` ou `marketingActions/custom`.
 
 ```http
 GET /marketingActions/core
@@ -193,9 +192,9 @@ Enregistrez l’identifiant d’URI de l’action marketing nouvellement créée
 
 ## Création d’une stratégie {#create-policy}
 
-Pour créer une nouvelle stratégie, vous devez fournir l’ID URI d’une action marketing avec une expression des étiquettes d’utilisation qui interdisent cette action marketing.
+Pour créer une stratégie, vous devez fournir l’identifiant d’URI d’une action marketing avec l’expression des libellés d’utilisation qui interdisent cette action marketing.
 
-Cette expression, appelée expression de stratégie, est un objet contenant soit (a) un libellé , soit (b) un opérateur et des opérandes, mais pas les deux. De même, chaque opérande est également un objet d’expression de stratégie. Par exemple, une stratégie relative à l’exportation de données vers un tiers peut être interdite en présence de libellés`C1 OR (C3 AND C7)`. Cette expression serait spécifiée comme suit :
+Cette expression, appelée expression de stratégie, est un objet contenant soit (a) un libellé, soit (b) un opérateur et des opérandes, mais pas les deux. De même, chaque opérande est également un objet d’expression de stratégie. Par exemple, une stratégie relative à l’exportation de données vers un tiers peut être interdite en présence de libellés`C1 OR (C3 AND C7)`. Cette expression serait spécifiée comme suit :
 
 ```json
 "deny": {
@@ -269,7 +268,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `marketingActionRefs` | Tableau contenant la valeur `href` d’une action marketing, obtenue à l’[étape précédente](#define-action). Bien que l’exemple ci-dessus ne liste qu’une action marketing, il est possible de fournir plusieurs actions. |
-| `deny` | Objet de l’expression de stratégie. Définit les étiquettes d&#39;utilisation et les conditions qui provoqueraient le rejet par la stratégie de l&#39;action marketing référencée dans `marketingActionRefs`. |
+| `deny` | Objet de l’expression de stratégie. Définit les conditions et les libellés d’utilisation qui entraîneraient le rejet par la stratégie de l’action marketing référencée dans `marketingActionRefs`. |
 
 **Réponse**
 
@@ -324,11 +323,11 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et les détails de la
 
 Enregistrez l’identifiant d’URI de la stratégie nouvellement créée, car il est utilisé à l’étape suivante pour activer la stratégie.
 
-## Activer la stratégie
+## Activation de la stratégie
 
 >[!NOTE]
 >
->Bien que cette étape soit facultative si vous souhaitez laisser votre stratégie à l’état `DRAFT`, veuillez noter que, par défaut, une stratégie doit avoir l’état `ENABLED` pour participer à l’évaluation. Consultez le guide sur l&#39;[application des stratégies](../enforcement/api-enforcement.md) pour savoir comment faire des exceptions pour les stratégies dans `DRAFT` état.
+>Bien que cette étape soit facultative si vous souhaitez laisser votre stratégie à l’état `DRAFT`, veuillez noter que, par défaut, une stratégie doit avoir l’état `ENABLED` pour participer à l’évaluation. Consultez le guide sur l’[application des stratégies](../enforcement/api-enforcement.md) pour apprendre à créer des exceptions pour les stratégies dont l’état est défini sur `DRAFT`.
 
 Par défaut, les stratégies dont la propriété `status` est définie sur `DRAFT` ne participent pas à l’évaluation. Vous pouvez activer votre stratégie pour l’évaluation à l’aide d’une requête PATCH envoyée au point de terminaison `/policies/custom/` et en fournissant l’identifiant unique de la stratégie à la fin du chemin d’accès de la requête.
 
@@ -344,7 +343,7 @@ PATCH /policies/custom/{POLICY_ID}
 
 **Requête**
 
-La requête suivante effectue une opération PATCH sur la propriété `status` de la stratégie , changeant la valeur `DRAFT` en `ENABLED`.
+La requête suivante effectue une opération PATCH sur la propriété `status` de la stratégie, changeant la valeur `DRAFT` en `ENABLED`.
 
 ```shell
 curl -X PATCH \
@@ -420,6 +419,6 @@ Une réponse réussie renvoie un état HTTP 200 (OK) et les détails de la stra
 
 En suivant ce tutoriel, vous avez créé une stratégie d’utilisation des données pour une action marketing. Vous pouvez maintenant continuer avec le tutoriel sur l’[application des stratégies d’utilisation des données](../enforcement/api-enforcement.md) afin d’apprendre à rechercher les violations de stratégie et à les traiter dans votre application d’expérience.
 
-Pour plus d&#39;informations sur les différentes opérations disponibles dans l&#39;API [!DNL Policy Service], consultez le [Guide du développeur de Policy Service](../api/getting-started.md). Pour plus d&#39;informations sur la manière d&#39;appliquer des stratégies pour les données [!DNL Real-time Customer Profile], consultez le didacticiel [sur l&#39;application de la conformité d&#39;utilisation des données pour les segments d&#39;audience](../../segmentation/tutorials/governance.md).
+Pour plus d’informations sur les différentes opérations disponibles dans l’API [!DNL Policy Service], consultez le [guide de développement de Policy Service](../api/getting-started.md). Pour plus d’informations sur l’application des stratégies pour les données du [!DNL Real-time Customer Profile], consultez le tutoriel sur l’[application de la conformité de l’utilisation des données aux segments d’audience](../../segmentation/tutorials/governance.md).
 
-Pour savoir comment gérer les stratégies d&#39;utilisation dans l&#39;interface utilisateur [!DNL Experience Platform], consultez le [guide de l&#39;utilisateur des stratégies](user-guide.md).
+Pour découvrir comment gérer les stratégies d’utilisation dans l’interface utilisateur [!DNL Experience Platform], consultez le [guide d’utilisation des stratégies](user-guide.md).
