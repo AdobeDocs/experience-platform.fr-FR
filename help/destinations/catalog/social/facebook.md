@@ -3,7 +3,7 @@ keywords: Connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion facebook
 description: Activez les profils de vos campagnes Facebook pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: d82eb1a839518dbd9831808485d9d5029e3dcaf5
+source-git-commit: 41cfa5b30d8816baf55b8b4e1609ca724e9efe24
 workflow-type: tm+mt
 source-wordcount: '1160'
 ht-degree: 8%
@@ -134,7 +134,7 @@ Pour [!DNL Facebook], une activation réussie signifie qu’une audience personn
 
 ## Dépannage {#troubleshooting}
 
-### 400 Message d’erreur de requête incorrect {#bad-request}
+### Message d’erreur 400 Bad Request {#bad-request}
 
 Lors de l’activation de segments vers [!DNL Facebook], vous pouvez recevoir l’erreur suivante :
 
