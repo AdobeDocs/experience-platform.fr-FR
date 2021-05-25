@@ -4,10 +4,10 @@ title: Présentation du profil client en temps réel
 topic-legacy: guide
 description: Real-time Customer Profile est une banque d’entités de recherche générique qui fusionne les données de différentes ressources de données d’entreprise, puis fournit un accès à ces données sous la forme de profils client individuels et d’événements de série temporelle connexes. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 598f86188bcd9bde22333ccafb85f3f566aaae44
 workflow-type: tm+mt
-source-wordcount: '1826'
-ht-degree: 100%
+source-wordcount: '1813'
+ht-degree: 96%
 
 ---
 
@@ -63,9 +63,11 @@ Toutes les entreprises souhaitent s’adresser à leurs clients de manière pers
 
 ### Stratégies de fusion
 
-Lorsque vous rassemblez des fragments de données provenant de plusieurs sources et les combinez pour obtenir une vue complète de chaque client, les stratégies de fusion sont les règles utilisées par [!DNL Platform] pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer le profil client. En cas de conflit de données provenant de plusieurs jeux de données, la stratégie de fusion détermine comment ces données doivent être traitées et quelle valeur doit être utilisée. À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation dans l’interface utilisateur.
+Lorsque vous rassemblez des fragments de données provenant de plusieurs sources et les combinez pour obtenir une vue complète de chaque client, les stratégies de fusion sont les règles utilisées par [!DNL Platform] pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer le profil client.
 
-Pour plus d’informations sur l’utilisation des stratégies de fusion à l’aide de l’API du [!DNL Real-time Customer Profile], consultez le [guide de point d’entrée des stratégies de fusion](api/merge-policies.md). Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur [!DNL Experience Platform], reportez-vous au [guide de l’interface utilisateur des stratégies de fusion](ui/merge-policies.md).
+En cas de conflit de données provenant de plusieurs jeux de données, la stratégie de fusion détermine comment ces données doivent être traitées et quelle valeur doit être utilisée. Grâce aux API RESTful ou à l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation.
+
+Pour en savoir plus sur les stratégies de fusion et leur rôle dans Experience Platform, commencez par lire la [présentation des stratégies de fusion](merge-policies/overview.md).
 
 ### Schémas d’union {#profile-fragments-and-union-schemas}
 
