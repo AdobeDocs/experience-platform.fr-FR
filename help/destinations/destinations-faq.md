@@ -1,27 +1,31 @@
 ---
-keywords: destinations ; questions ; questions fréquentes; faq; faq destinations
-title: FAQ sur les destinations
-seo-title: FAQ sur les destinations
-description: Réponses aux questions les plus fréquentes sur les destinations Adobe Experience Platform
-seo-description: Réponses aux questions les plus fréquentes sur les destinations Adobe Experience Platform
-source-git-commit: 61678c5a62980cdb81714420016b7c4b2093f5c6
+keywords: les destinations ; questions; aux questions fréquentes; faq; faq sur les destinations
+title: Questions fréquentes
+seo-title: 'Questions fréquemment posées '
+description: Réponses aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform
+seo-description: Réponses aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform
+source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '636'
 ht-degree: 12%
 
 ---
 
 
-# FAQ sur les destinations {#faq}
+# Questions fréquemment posées  {#faq}
+
+## Présentation {#overview}
+
+Ce document répond aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform. Pour toute question ou dépannage concernant d’autres services [!DNL Platform], y compris ceux rencontrés sur toutes les API [!DNL Platform], reportez-vous au [guide de dépannage Experience Platform](../landing/troubleshooting.md).
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
-**Que dois-je faire avant de pouvoir activer les audiences dans  [!DNL Facebook Custom Audiences]?**
+**Que dois-je faire avant d’activer les audiences dans  [!DNL Facebook Custom Audiences] ?**
 
 Avant d’envoyer vos segments ciblés à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
 
-* L&#39;autorisation **[!DNL Manage campaigns]** doit être activée pour votre compte d&#39;utilisateur [!DNL Facebook] pour le compte d&#39;annonce que vous prévoyez d&#39;utiliser.
-* Le compte commercial **Adobe Experience Cloud** doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Pour plus d&#39;informations, consultez [Ajouter des partenaires à votre gestionnaire d&#39;entreprise](https://www.facebook.com/business/help/1717412048538897) dans la documentation de Facebook.
+* L’autorisation [!DNL Facebook] doit être activée pour votre compte utilisateur **[!DNL Manage campaigns]** pour le compte publicitaire que vous prévoyez d’utiliser.
+* Le compte commercial **Adobe Experience Cloud** doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Pour plus d’informations, voir [Ajout de partenaires à votre compte Business Manager](https://www.facebook.com/business/help/1717412048538897) dans la documentation Facebook.
    >[!IMPORTANT]
    >
    > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. Ceci est obligatoire pour l’intégration de la [!DNL Adobe Experience Platform].
@@ -29,54 +33,54 @@ Avant d’envoyer vos segments ciblés à [!DNL Facebook], assurez-vous de respe
 
 **Dois-je ajouter des applications ou des pixels à mon compte  [!DNL Facebook] publicitaire ?**
 
-Non. Comme il ne s’agit pas d’une intégration basée sur les pixels, il n’est pas nécessaire d’ajouter des pixels à votre compte publicitaire.
+Non. Puisqu’il ne s’agit pas d’une intégration basée sur les pixels, il n’est pas nécessaire d’ajouter des pixels à votre compte publicitaire.
 
-**Combien de temps Facebook prend-il pour traiter les informations de Adobe Experience Platform ?**
+**Combien de temps prend Facebook pour traiter les informations de Adobe Experience Platform ?**
 
-En mars 2021, [!DNL Facebook Custom Audiences] a besoin d&#39;une heure pour traiter les informations reçues de [!DNL Platform].
+En mars 2021, [!DNL Facebook Custom Audiences] doit prendre jusqu’à une heure pour traiter les informations reçues de [!DNL Platform].
 
-**Puis-je utiliser  [!DNL Facebook Custom Audiences] le ciblage des audiences dans d’autres  [!DNL Facebook] applications, par exemple  [!DNL Instagram]?**
+**Puis-je utiliser  [!DNL Facebook Custom Audiences] pour le ciblage des audiences dans d’autres  [!DNL Facebook] applications, par exemple  [!DNL Instagram]?**
 
-Vous pouvez utiliser la destination [!DNL Facebook Custom Audiences] pour le ciblage des audiences dans la famille Facebook d’applications prises en charge par [!DNL Facebook Custom Audiences], y compris [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] et [!DNL Messenger]. La sélection de l&#39;application sur laquelle les annonceurs souhaitent exécuter des campagnes est indiquée au niveau de l&#39;emplacement dans [!DNL Facebook Ads Manager].
+Vous pouvez utiliser la destination [!DNL Facebook Custom Audiences] pour le ciblage des audiences dans la famille Facebook d’applications prises en charge par [!DNL Facebook Custom Audiences], y compris [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] et [!DNL Messenger]. La sélection de l’application sur laquelle les annonceurs souhaitent exécuter des campagnes est indiquée au niveau de l’emplacement dans [!DNL Facebook Ads Manager].
 
-**Quelle est la différence entre la  [!DNL Facebook Custom Audiences] connexion et l&#39; [!DNL Facebook Pixel] extension ?**
+**Quelle est la différence entre la  [!DNL Facebook Custom Audiences] connexion et l’ [!DNL Facebook Pixel] extension ?**
 
-La connexion [!DNL Facebook Custom Audiences] utilise les identités [!DNL Platform] lors de l&#39;envoi d&#39;audiences à [!DNL Facebook], tandis que la connexion [[!DNL Facebook Pixel] ](../destinations/catalog/advertising/facebook-pixel.md) utilise le pixel [!DNL Facebook] intégré dans un site Web.
+La connexion [!DNL Facebook Custom Audiences] utilise les identités [!DNL Platform] lors de l’envoi d’audiences à [!DNL Facebook], tandis que la connexion [[!DNL Facebook Pixel] a4/> utilise le pixel [!DNL Facebook] intégré à un site web.](../destinations/catalog/advertising/facebook-pixel.md)
 
-Ces deux intégrations sont complémentaires ; vous pouvez utiliser les deux pour assurer une meilleure couverture d’audience. Par exemple, vous pouvez utiliser l&#39;extension [!DNL Facebook Pixel] pour la prospection de visiteurs de site Web qui n&#39;ont pas créé de compte, alors que [!DNL Facebook Custom Audiences] peut vous aider à cible des clients existants, en fonction d&#39;identités [!DNL Platform].
+Ces deux intégrations sont complémentaires ; vous pouvez utiliser les deux pour assurer une meilleure couverture d’audience. À titre d’exemple, vous pouvez utiliser l’extension [!DNL Facebook Pixel] pour la prospection des visiteurs d’un site web qui n’ont pas créé de compte, tandis que [!DNL Facebook Custom Audiences] peut vous aider à cibler les clients existants, en fonction des identités [!DNL Platform].
 
-**L&#39;intégration Adobe Experience Platform avec  [!DNL Facebook Custom Audiences] prise en charge exclut-elle les utilisateurs d&#39;une audience alors qu&#39;ils ne sont plus éligibles ?**
+**L’intégration de Adobe Experience Platform avec la  [!DNL Facebook Custom Audiences] prise en charge disqualifie-t-elle les utilisateurs d’une audience lorsqu’ils ne remplissent plus les critères ?**
 
-Oui, l’intégration prend en charge la suppression des utilisateurs de [!DNL Facebook Custom Audiences] lorsqu’ils ne sont plus éligibles.
+Oui, l’intégration prend en charge la suppression des utilisateurs de [!DNL Facebook Custom Audiences] lorsqu’ils ne remplissent plus les critères.
 
-**Comment puis-je hacher les données d&#39;audience avant de les envoyer à  [!DNL Facebook]?**
+**Comment dois-je hacher les données d’audience avant de les envoyer à  [!DNL Facebook]?**
 
-[!DNL Facebook] exige qu’aucune information d’identification personnelle (identification personnelle) ne soit envoyée en clair. Par conséquent, les audiences activées pour [!DNL Facebook] peuvent être masquées par des identifiants *hachés*, tels que des adresses électroniques ou des numéros de téléphone.
+[!DNL Facebook] exige qu’aucune information d’identification personnelle (PII) ne soit envoyée clairement. Par conséquent, les audiences activées vers [!DNL Facebook] peuvent être masquées à partir des identifiants *hachés*, tels que les adresses électroniques ou les numéros de téléphone.
 
-Pour obtenir des explications détaillées sur les exigences de correspondance d’ID, voir [Exigences de correspondance d’ID](catalog/social/facebook.md#id-matching-requirements).
+Pour obtenir des explications détaillées sur les exigences de correspondance des ID, voir [Exigences de correspondance des ID](catalog/social/facebook.md#id-matching-requirements).
 
-**Dans quel type d&#39;identité puis-je activer  [!DNL Facebook Custom Audiences]?**
+**Dans quel type d’identités puis-je activer  [!DNL Facebook Custom Audiences]?**
 
-[!DNL Facebook Custom Audiences] prend en charge l’activation des identités suivantes : e-mails hachés, numéros de téléphone hachés,  [!DNL GAID] [!DNL IDFA]et identifiants externes personnalisés.
+[!DNL Facebook Custom Audiences] prend en charge l’activation des identités suivantes : e-mails hachés, numéros de téléphone hachés,  [!DNL GAID],  [!DNL IDFA] et identifiants externes personnalisés.
 
-## audiences linkedIn Matched {#linkedin}
+## Audiences mappées linkedIn {#linkedin}
 
 **Dois-je ajouter des applications ou des pixels à mon compte  [!DNL LinkedIn] publicitaire ?**
 
-Non. Comme il ne s’agit pas d’une intégration basée sur les pixels, il n’est pas nécessaire d’ajouter des pixels à votre compte publicitaire.
+Non. Puisqu’il ne s’agit pas d’une intégration basée sur les pixels, il n’est pas nécessaire d’ajouter des pixels à votre compte publicitaire.
 
-**Que dois-je faire avant de pouvoir activer les audiences dans  [!DNL LinkedIn Matched Audiences]?**
+**Que dois-je faire avant d’activer les audiences dans  [!DNL LinkedIn Matched Audiences] ?**
 
-Avant d’utiliser la destination [!UICONTROL Audience LinkedIn Matched], assurez-vous que votre compte [!DNL LinkedIn Campaign Manager] a le niveau d’autorisation [!DNL Creative Manager] ou supérieur.
+Avant de pouvoir utiliser la destination [!UICONTROL Audience mise en correspondance LinkedIn], assurez-vous que votre compte [!DNL LinkedIn Campaign Manager] a le niveau d’autorisation [!DNL Creative Manager] ou supérieur.
 
-Pour savoir comment modifier vos [!DNL LinkedIn Campaign Manager] autorisations d&#39;utilisateur, voir [Ajouter, modifier et supprimer des autorisations d&#39;utilisateur sur des comptes de publicité](https://www.linkedin.com/help/lms/answer/5753) dans la documentation LinkedIn.
+Pour savoir comment modifier vos [!DNL LinkedIn Campaign Manager] autorisations d’utilisateur, voir [Ajout, modification et suppression des autorisations d’utilisateur sur les comptes Advertising](https://www.linkedin.com/help/lms/answer/5753) dans la documentation LinkedIn.
 
-**Comment puis-je hacher les données d&#39;audience avant de les envoyer à  [!DNL LinkedIn]?**
+**Comment dois-je hacher les données d’audience avant de les envoyer à  [!DNL LinkedIn]?**
 
-[!DNL LinkedIn] exige qu’aucune information d’identification personnelle (identification personnelle) ne soit envoyée en clair. Par conséquent, les audiences activées pour [!DNL LinkedIn] peuvent être masquées par des identifiants *hachés*, tels que des adresses électroniques ou des numéros de téléphone.
+[!DNL LinkedIn] exige qu’aucune information d’identification personnelle (PII) ne soit envoyée clairement. Par conséquent, les audiences activées vers [!DNL LinkedIn] peuvent être masquées à partir des identifiants *hachés*, tels que les adresses électroniques ou les numéros de téléphone.
 
-Pour obtenir des explications détaillées sur les exigences de correspondance d’ID, voir [Exigences de correspondance d’ID](catalog/social/linkedin.md#id-matching-requirements).
+Pour obtenir des explications détaillées sur les exigences de correspondance des ID, voir [Exigences de correspondance des ID](catalog/social/linkedin.md#id-matching-requirements).
 
-**Dans quel type d&#39;identité puis-je activer  [!DNL LinkedIn]?**
+**Dans quel type d’identités puis-je activer  [!DNL LinkedIn]?**
 
-[!DNL LinkedIn Matched Audiences] prend en charge l’activation des identités suivantes : courriers électroniques hachés,  [!DNL GAID]et  [!DNL IDFA].
+[!DNL LinkedIn Matched Audiences] prend en charge l’activation des identités suivantes : e-mails hachés,  [!DNL GAID] et  [!DNL IDFA].
