@@ -1,6 +1,6 @@
 ---
 title: Création d’une stratégie de fusion dans Adobe Experience Platform
-description: Cette vidéo présente une compréhension de base des stratégies de fusion dans Adobe Experience Platform et explique comment définir des stratégies de fusion à l’aide de l’interface utilisateur de la plate-forme.
+description: Cette vidéo fournit une compréhension de base des stratégies de fusion dans Adobe Experience Platform et explique comment définir des stratégies de fusion à l’aide de l’interface utilisateur de Platform.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -9,23 +9,20 @@ audience: all
 doc-type: video
 activity: understand
 thumbnail: null
-translation-type: tm+mt
-source-git-commit: cab7ba65cc62d8cab402bc23ea38c17d77841363
+exl-id: 4bb804f5-1ad7-47b0-bc38-ba22877490d4
+source-git-commit: 7283fcb2edde4598b1ef8e0ee1f1b002434ba492
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
-
 # Création d’une stratégie de fusion dans l’interface utilisateur de l’Experience Platform
 
-Cette vidéo fournit une compréhension de base des stratégies de fusion dans Adobe Experience Platform et décrit comment définir des stratégies de fusion à l’aide de l’interface utilisateur de la plate-forme. Pour en savoir plus sur les stratégies de fusion et comment les créer à l’aide de l’interface utilisateur de la plate-forme, consultez le [guide d’interface utilisateur des stratégies de fusion](../ui/merge-policies.md).
-
-Si vous souhaitez utiliser des stratégies de fusion à l’aide de l’API Profil client en temps réel, consultez le [guide de point de terminaison des stratégies de fusion](../api/merge-policies.md).
+Cette vidéo fournit une compréhension de base des stratégies de fusion dans Adobe Experience Platform et explique comment définir des stratégies de fusion à l’aide de l’interface utilisateur de Platform. Pour en savoir plus sur les stratégies de fusion, commencez par lire la [présentation des stratégies de fusion](../merge-policies/overview.md).
 
 >[!NOTE]
 >
->L&#39;interface utilisateur de l&#39;Experience Platform est fréquemment mise à jour et peut avoir changé depuis l&#39;enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, consultez le [guide de l&#39;interface utilisateur des stratégies de fusion](../ui/merge-policies.md).
+>L’interface utilisateur de l’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir des informations à jour, reportez-vous au [guide de l’interface utilisateur des stratégies de fusion](../merge-policies/ui-guide.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/330433?quality=12&learn=on&captions=eng)
