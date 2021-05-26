@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: d78f2d0fc8d1117614b0d8add0cada21619d8357
+source-git-commit: 91f75f5b6a8e5adb251455f65bc2b693934ef8e2
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 37%
+source-wordcount: '1070'
+ht-degree: 34%
 
 ---
 
@@ -62,6 +62,8 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Amélioration de la surveillance (version bêta) | Amélioration des fonctionnalités de surveillance des destinations, y compris des informations pour les destinations par lots et en flux continu |
+| [Exportation incrémentielle plus rapide des fichiers (bêta)](../../destinations/ui/activate-destinations.md#export-incremental-files) | Ajout de la capacité d’exporter des fichiers incrémentiels vers des destinations toutes les 3, 6, 8 ou 12 heures. <br> <br>Cette fonctionnalité est actuellement en version bêta et n’est disponible que pour un certain nombre de clients. Les clients non bêta peuvent exporter des fichiers incrémentiels une fois par jour. |
+| [Prise en charge des clés de déduplication (version bêta)](../../destinations/ui/activate-destinations.md#deduplication-keys) | Ajout de la possibilité de définir des espaces de noms d’identité ou des attributs de profil comme clés de déduplication. Les clés de déduplication éliminent la possibilité d’avoir plusieurs enregistrements du même profil dans un fichier d’exportation. <br> <br>Cette fonctionnalité est actuellement en version bêta et n’est disponible que pour un certain nombre de clients. |
 
 Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
 
