@@ -1,92 +1,107 @@
 ---
-keywords: Experience Platform ; profil ; segment ; segments ; segmentation ; interface utilisateur ; interface utilisateur ; personnalisation ; tableau de bord de segment ; tableau de bord
-title: Tableau de bord de segments
-description: 'Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez vue des informations importantes sur les segments créés par votre entreprise. '
-topic-legacy: guide
+keywords: Experience Platform;profil;segment;segments;segmentation;interface utilisateur;interface utilisateur;personnalisation;tableau de bord des segments;tableau de bord
+title: Tableau de bord Segments
+description: 'Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments que votre entreprise a créés. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 1%
+source-wordcount: '900'
+ht-degree: 3%
 
 ---
 
-# (Bêta) tableau de bord de segments {#segment-dashboard}
+# Tableau de bord des segments {#segment-dashboard}
 
->[!IMPORTANT]
->
->La fonctionnalité de tableau de bord décrite dans ce document est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos segments, telles qu’elles sont capturées lors d’un instantané quotidien. Ce guide explique comment accéder au tableau de bord des segments et l’utiliser dans l’interface utilisateur. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
-L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez vue des informations importantes sur vos segments, telles qu’elles sont capturées au cours d’un instantané quotidien. Ce guide décrit comment accéder aux segments et les utiliser dans le tableau de bord d’interface utilisateur et fournit plus d’informations sur les visualisations affichées dans le tableau de bord.
+Pour un aperçu de toutes les fonctionnalités du service de segmentation Adobe Experience Platform dans l’interface utilisateur de Platform, consultez le [guide de l’interface utilisateur de Segmentation Service](../../segmentation/ui/overview.md).
 
-Pour un aperçu de toutes les fonctionnalités du service de segmentation Adobe Experience Platform dans l’interface utilisateur de la plate-forme, consultez le [Guide de l’interface utilisateur du service de segmentation](../../segmentation/ui/overview.md).
+## Données du tableau de bord de segment
 
-## Données du tableau de bord de segments
+Le tableau de bord des segments affiche un instantané des données d’attribut (enregistrement) dont votre organisation dispose dans la banque de profils en Experience Platform. L’instantané n’inclut aucune donnée d’événement (série temporelle).
 
-Le tableau de bord de segments affiche un instantané des données d’attribut (enregistrement) que votre organisation possède dans le magasin de Profils de l’Experience Platform. L&#39;instantané n&#39;inclut aucune donnée de événement (série chronologique).
-
-Les données d&#39;attribut de l&#39;instantané affichent les données exactement telles qu&#39;elles apparaissent au moment précis où l&#39;instantané a été pris. En d’autres termes, l’instantané n’est pas une approximation ou un échantillon des données et le tableau de bord de segments n’est pas mis à jour en temps réel.
+Les données d’attribut de l’instantané affichent les données exactement telles qu’elles apparaissent au moment précis où l’instantané a été pris. En d’autres termes, l’instantané n’est pas une approximation ou un échantillon des données et le tableau de bord du segment ne se met pas à jour en temps réel.
 
 >[!NOTE]
 >
->Les modifications ou mises à jour apportées aux données depuis l&#39;instantané ne seront pas répercutées dans le tableau de bord tant que l&#39;instantané suivant n&#39;aura pas été pris.
+>Les modifications ou mises à jour apportées aux données depuis la prise dʼun instantané ne seront pas reflétées dans le tableau de bord avant la prise de lʼinstantané suivant.
 
-## Exploration du tableau de bord de segments
+## Exploration du tableau de bord des segments
 
-Pour accéder au tableau de bord de segments dans l’interface utilisateur de la plateforme, sélectionnez **[!UICONTROL Segments]** dans le rail de gauche, puis sélectionnez l’onglet **[!UICONTROL Aperçu]** pour afficher le tableau de bord.
+Pour accéder au tableau de bord des segments dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Segments]** dans le rail de gauche, puis sélectionnez l’onglet **[!UICONTROL Aperçu]** pour afficher le tableau de bord.
 
 ![](../images/segments/dashboard-overview.png)
 
-### Sélectionner un segment
+### Modification du tableau de bord [!UICONTROL Segments]
 
-Le tableau de bord sélectionne automatiquement un segment à afficher, mais vous pouvez modifier le segment affiché à l’aide du menu déroulant. Pour choisir un autre segment, sélectionnez la liste déroulante en regard du nom du segment, puis sélectionnez le segment à vue.
+Vous pouvez modifier l’aspect du tableau de bord [!UICONTROL Segments] en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Cela vous permet de déplacer, d’ajouter et de supprimer des widgets du tableau de bord, ainsi que d’accéder à la [!UICONTROL bibliothèque de widgets] pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
 
->[!NOTE]
->
->Le menu déroulant affiche tous les segments créés jusqu’à présent par votre organisation. Cela signifie peut-être que vous devrez faire défiler la page pour vue de la liste complète des segments disponibles.
+Pour en savoir plus, consultez la documentation [Modification des tableaux de bord](../modify.md) et [bibliothèque de widgets](../widget-library.md) .
+
+## Sélection d’un segment
+
+Le tableau de bord sélectionne automatiquement un segment à afficher. Vous pouvez toutefois le modifier à l’aide du menu déroulant ou du sélecteur de segments.
+
+Pour choisir un autre segment, sélectionnez la liste déroulante en regard du nom du segment ou utilisez le sélecteur de segments pour ouvrir la boîte de dialogue de sélection de segment.
 
 ![](../images/segments/change-segment.png)
 
-### Widgets et mesures
+![](../images/segments/select-segment-dialog.png)
 
-Le tableau de bord de segments est composé de widgets, qui sont des mesures en lecture seule fournissant des informations importantes sur le segment sélectionné. La date et l’heure de la &quot;dernière mise à jour&quot; du widget indiquent le moment où le dernier instantané des données a été effectué.
+## Widgets et mesures
+
+Le tableau de bord des segments est constitué de widgets, qui sont des mesures en lecture seule fournissant des informations importantes sur le segment sélectionné.
+
+La date et l’heure de la &quot;dernière mise à jour&quot; d’un widget indique le moment où le dernier instantané des données a été pris. La date et l’heure de l’instantané sont indiquées en UTC ; il ne se trouve pas dans le fuseau horaire de l’utilisateur individuel ou de l’organisation IMS.
 
 ![](../images/segments/widget-timestamp.png)
 
 ## Widgets disponibles
 
-Experience Platform fournit plusieurs widgets que vous pouvez utiliser pour visualiser différentes mesures liées à votre segment. Sélectionnez le nom d’un widget ci-dessous pour en savoir plus :
+Experience Platform fournit plusieurs widgets que vous pouvez utiliser pour visualiser différentes mesures liées à votre segment. Pour en savoir plus, sélectionnez le nom d’un widget ci-dessous :
 
-* [[!UICONTROL Taille du segment]](#segment-size)
-* [[!UICONTROL Profils ajoutés au fil du temps]](#profiles-added-over-time)
-* [[!UICONTROL Profils par espace de nommage]](#profiles-by-namespace)
+* [[!UICONTROL Taille de l’audience]](#audience-size)
+* [[!UICONTROL Tendance de la taille de l’audience]](#audience-size-trend)
+* [[!UICONTROL Superposition des identités]](#identity-overlap)
+* [[!UICONTROL Profils par identité]](#profiles-by-identity)
 
-### [!UICONTROL Taille du segment] {#segment-size}
+### [!UICONTROL Taille de l’audience] {#audience-size}
 
-Le widget **[!UICONTROL Taille du segment]** affiche le nombre total de profils fusionnés dans le segment sélectionné au moment où l&#39;instantané a été pris. Ce nombre est le résultat de l’application de la stratégie de fusion de segments à vos données de Profil afin de fusionner des fragments de profil pour former un seul profil pour chaque individu du segment.
+Le widget **[!UICONTROL Taille de l’audience]** affiche le nombre total de profils fusionnés dans le segment sélectionné au moment de l’instantané. Ce nombre est le résultat de l’application de la stratégie de fusion de segments à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu du segment.
 
-Pour plus d’informations sur les fragments et les profils fusionnés, veuillez commencer par lire la [Présentation du Profil client en temps réel](../../profile/home.md).
+Pour plus d’informations sur les fragments et les profils fusionnés, commencez par lire la [présentation de Real-time Customer Profile](../../profile/home.md).
 
-![](../images/segments/segment-size.png)
+![](../images/segments/audience-size.png)
 
-### [!UICONTROL Profils ajoutés au fil du temps] {#profiles-added-over-time}
+### [!UICONTROL Tendance de la taille de l’audience] {#audience-size-trend}
 
-Le widget **[!UICONTROL Profils ajoutés au fil du temps]** fournit des informations sur le nombre total de profils du segment capturés au cours de l&#39;instantané quotidien, au cours des 30 derniers jours. Ce widget montre comment la taille du segment a pu varier sur une période de 30 jours, à mesure que de nouveaux profils sont inclus ou sortent du segment.
+Le widget **[!UICONTROL Tendance de la taille de l’audience]** fournit des informations concernant le nombre total de profils dans le segment, tel qu’il a été capturé pendant l’instantané quotidien, pendant les 30 derniers jours, 90 ou 12 mois. Ce widget affiche la manière dont la taille du segment a pu varier au fil du temps, à mesure que les nouveaux profils remplissent les critères ou quittent le segment.
 
-Pour en savoir plus sur l’évaluation des segments et sur la façon dont les profils sont qualifiés et quittent les segments, consultez la [documentation du service de segmentation](../../segmentation/home.md).
+Pour en savoir plus sur l’évaluation des segments et sur la façon dont les profils sont qualifiés et sortent des segments, consultez la [documentation du service de segmentation](../../segmentation/home.md).
 
-![](../images/segments/profiles-added-over-time.png)
+![](../images/segments/audience-size-trend.png)
 
-### [!UICONTROL Profils par espace de nommage] {#profiles-by-namespace}
+### [!UICONTROL Superposition des identités] {#identity-overlap}
 
-Le widget **[!UICONTROL Profils par espace de nommage]** affiche la ventilation des espaces de nommage sur tous les profils fusionnés du segment sélectionné. Le nombre total de profils par espace de nommage d’identité ([!UICONTROL espace de nommage d’ID] dans le widget) peut être supérieur au nombre total de profils dans le segment, car un profil peut être associé à plusieurs espaces de nommage. En d’autres termes, l’ajout des valeurs affichées pour chaque espace de nommage peut être supérieur au total des profils du segment, car si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de nommage peuvent être associés à ce client.
+Le widget **[!UICONTROL chevauchement des identités]** affiche un diagramme de Venn, ou un diagramme de définition, qui montre le chevauchement des profils de votre segment contenant plusieurs identités.
 
-Pour en savoir plus sur les espaces de nommage d&#39;identité, consultez la [documentation du service d&#39;identité Adobe Experience Platform](../../identity-service/home.md).
+Après avoir utilisé les menus déroulants du widget pour sélectionner les identités à comparer, les cercles s’affichent avec la taille relative de chaque identité, le nombre de profils contenant les deux espaces de noms étant représenté par la taille du chevauchement entre les cercles.
 
-![](../images/segments/profiles-by-namespace.png)
+Si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités seront associées à ce client individuel. Par conséquent, il est probable que votre organisation dispose de plusieurs profils contenant des fragments provenant de plusieurs identités.
+
+Pour en savoir plus sur les identités, consultez la [documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
+
+![](../images/segments/identity-overlap.png)
+
+### [!UICONTROL Profils par identité] {#profiles-by-identity}
+
+Le widget **[!UICONTROL Profils par identité]** affiche la ventilation des identités entre tous les profils fusionnés de votre segment sélectionné. Le nombre total de profils par identité peut être supérieur au nombre total de profils dans le segment, car plusieurs identités peuvent y être associées pour un profil. En d’autres termes, le fait de cumuler les valeurs affichées pour chaque identité peut être supérieur à la taille totale de l’audience dans le segment, car si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités peuvent être associées à ce client individuel.
+
+Pour en savoir plus sur les identités, consultez la [documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
+
+![](../images/segments/profiles-by-identity.png)
 
 ## Étapes suivantes
 
-En suivant ce document, vous devez maintenant pouvoir localiser le tableau de bord de segments et sélectionner un segment à vue. Vous devez également comprendre les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des segments dans l’interface utilisateur de l’Experience Platform, consultez le [Guide de l’interface utilisateur du service de segmentation](../../segmentation/ui/overview.md).
+En suivant ce document, vous devriez maintenant pouvoir localiser le tableau de bord des segments et sélectionner un segment à afficher. Vous devez également comprendre les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des segments dans l’interface utilisateur de l’Experience Platform, consultez le [guide de l’interface utilisateur de Segmentation Service](../../segmentation/ui/overview.md).
