@@ -1,28 +1,22 @@
 ---
-keywords: Experience Platform ; interface utilisateur ; interface utilisateur ; personnalisation ; tableau de bord d’utilisation des licences ; tableau de bord ; utilisation des licences ; droits ; consommation
-title: Tableau de bord d'utilisation des licences
-description: 'L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez vue des informations importantes sur l’utilisation des licences de votre entreprise. '
-topic-legacy: guide
+keywords: Experience Platform;interface utilisateur;interface utilisateur;personnalisation;tableau de bord d’utilisation des licences;tableau de bord;utilisation des licences;droits;consommation
+title: Tableau de bord de l’utilisation des licences
+description: 'L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise. '
 type: Documentation
 exl-id: 8cf34653-acf6-4af3-af7b-6c07e68bbc03
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5b5acd22f2dbdeef704b3e790ca603901ebc882a
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 6%
+source-wordcount: '125'
+ht-degree: 2%
 
 ---
 
-# (Bêta) [!UICONTROL Utilisation de la licence] tableau de bord {#license-usage-dashboard}
+# Tableau de bord d’utilisation de la licence {#license-usage-dashboard}
 
->[!IMPORTANT]
->
->La fonctionnalité de tableau de bord est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation de la licence de votre entreprise, telles qu’elles sont capturées pendant un instantané quotidien.
 
-L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez vue des informations importantes sur l’utilisation des licences de votre entreprise, telles qu’elles sont capturées au cours d’un instantané quotidien.
+Pour obtenir des instructions détaillées sur l’accès et l’interaction avec le tableau de bord de l’utilisation des licences dans l’interface utilisateur, ainsi que pour en savoir plus sur les mesures disponibles affichées dans le tableau de bord, consultez le [guide du tableau de bord de l’utilisation des licences](../dashboards/guides/license-usage.md).
 
-Pour obtenir des instructions détaillées sur la façon d’accéder au tableau de bord d’utilisation des licences et d’interagir avec celui-ci dans l’interface utilisateur, ainsi que pour en savoir plus sur les mesures disponibles affichées dans le tableau de bord, consultez le [guide du tableau de bord d’utilisation des licences](../dashboards/guides/license-usage.md).
+Pour une présentation de toutes les fonctionnalités du tableau de bord dans Experience Platform, commencez par lire la [présentation des tableaux de bord](../dashboards/home.md).
 
-Pour une vue d&#39;ensemble de toutes les fonctionnalités de tableau de bord de l&#39;Experience Platform, veuillez commencer par lire la [présentation des tableaux de bord](../dashboards/home.md).
-
-![](images/license-usage-dashboard/dashboard-overview.png)
+![](../dashboards/images/license-usage/dashboard-overview.png)
