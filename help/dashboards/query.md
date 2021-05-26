@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Exploration et traitement des jeux de données bruts optimisant les tableaux de bord des Experience Platform
 type: Documentation
 description: Découvrez comment utiliser Query Service pour explorer et traiter des jeux de données bruts alimentant les tableaux de bord de profil, de segment et de destination dans Experience Platform.
-source-git-commit: 743367431144e9714a967b0340c755bf2120559c
+source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
@@ -29,27 +29,27 @@ Vous pouvez utiliser Query Service pour interroger des jeux de données bruts po
 
 Pour chaque stratégie de fusion principale dans Real-time Customer Profile, un jeu de données d’attributs de profil est disponible dans le lac de données.
 
-La convention d’affectation des noms de ce jeu de données est **Attribut de profil** suivi d’une valeur numérique alphanumérique. Par exemple : `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+La convention d’affectation des noms de ces jeux de données est **Attribut de profil** suivi d’une valeur numérique alphanumérique. Par exemple : `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
 
-Pour comprendre le schéma complet du jeu de données, vous pouvez prévisualiser et explorer le schéma à l’aide de la visionneuse de jeux de données dans l’interface utilisateur de l’Experience Platform.
+Pour comprendre le schéma complet de chaque jeu de données, vous pouvez prévisualiser et explorer les jeux de données à l’aide de la visionneuse de jeux de données dans l’interface utilisateur de l’Experience Platform.
 
 ### Jeu de données de métadonnées de segment
 
-Un jeu de données de métadonnées de segment est disponible dans le lac de données pour chaque segment de votre entreprise.
+Un jeu de données de métadonnées de segment contenant des métadonnées pour chaque segment de votre entreprise est disponible dans le lac de données.
 
 La convention d’affectation des noms de ce jeu de données est **Définition de segment de profil** suivie d’une valeur numérique alphanumérique. Par exemple : `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
 
-L’image suivante montre le schéma du jeu de données de métadonnées de segment.
+Pour comprendre le schéma complet du jeu de données, vous pouvez prévisualiser et explorer le schéma à l’aide de la visionneuse de jeux de données dans l’interface utilisateur de l’Experience Platform.
 
 ![](images/query/segment-metadata.png)
 
 ### Jeu de données de métadonnées de destination
 
-Les métadonnées de vos destinations activées sont disponibles sous la forme d’un jeu de données brut dans le lac de données.
+Les métadonnées de toutes les destinations activées de votre organisation sont disponibles sous la forme d’un jeu de données brutes dans le lac de données.
 
 La convention d’affectation des noms de ce jeu de données est **DIM_Destination**.
 
-L’image suivante montre le schéma du jeu de données de métadonnées de destination.
+Pour comprendre le schéma complet du jeu de données, vous pouvez prévisualiser et explorer le schéma à l’aide de la visionneuse de jeux de données dans l’interface utilisateur de l’Experience Platform.
 
 ![](images/query/destinations-metadata.png)
 
@@ -102,8 +102,6 @@ Select
       group by
       segment_id
 ```
-
-### Nombre de segments activés par destination pour toutes les destinations
 
 ## Étapes suivantes
 
