@@ -4,10 +4,10 @@ title: Guide de l’interface utilisateur de Real-time Customer Profile
 topic-legacy: guide
 description: Real-time Customer Profile offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 2696dab922d9c1992b61ffefe50a4e3155793282
+source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
 workflow-type: tm+mt
-source-wordcount: '1327'
-ht-degree: 13%
+source-wordcount: '1303'
+ht-degree: 12%
 
 ---
 
@@ -29,11 +29,7 @@ Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UIC
 
 ![](../images/user-guide/profiles-overview.png)
 
-### (Alpha) Tableau de bord du profil
-
->[!IMPORTANT]
->
->La fonctionnalité du tableau de bord est actuellement en version alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+### Tableau de bord du profil
 
 Pour certains utilisateurs, la sélection de **[!UICONTROL Profils]** dans le volet de navigation de gauche et l’ouverture de l’onglet **[!UICONTROL Aperçu]** fournissent un tableau de bord décrivant les mesures clés liées aux données de votre profil.
 
