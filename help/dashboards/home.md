@@ -1,22 +1,18 @@
 ---
 solution: Experience Platform
 title: Présentation des tableaux de bord dʼExperience Platform
-topic-legacy: overview
 type: Documentation
 description: Explorez de nombreux tableaux de bord dans Adobe Experience Platform pour afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors des captures instantanées quotidiennes.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e927dbef8a3028155e907e0ca05c17c29fb74cf1
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 100%
+source-wordcount: '252'
+ht-degree: 90%
 
 ---
 
-# Présentation des tableaux de bord (version bêta)  {#dashboards}
 
->[!IMPORTANT]
->
->La fonctionnalité tableau de bord est actuellement en version bêta et nʼest pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+# Présentation des tableaux de bord {#dashboards}
 
 Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
 
@@ -38,4 +34,4 @@ Les données de lʼinstantané montrent les données exactement comme elles appa
 
 De nombreux tableaux de bord sont actuellement disponibles dans Experience Platform, chacun apportant une transparence sur les données client de votre entreprise.
 
-Pour en savoir plus sur ces tableaux de bord et leurs mesures disponibles, sélectionnez-les dans la liste des tableaux de bord disponibles dans la navigation de la documentation.
+Pour en savoir plus sur ces tableaux de bord et leurs mesures, sélectionnez un tableau de bord dans la liste des tableaux de bord disponibles dans le volet de navigation de la documentation.
