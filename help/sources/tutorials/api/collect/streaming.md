@@ -1,212 +1,50 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; données d’enregistrement en mode cloud ; données en flux continu ; flux continu
+keywords: Experience Platform;accueil;rubriques les plus consultées;données de stockage dans le cloud;données en continu;diffusion en continu
 solution: Experience Platform
-title: Collecte de données en flux continu à l’aide des connecteurs et des API source
+title: Création d’un flux de données en flux continu pour les données brutes à l’aide de l’API Flow Service
 topic-legacy: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour récupérer les données en flux continu et les amener sur la plate-forme à l’aide des connecteurs et des API source.
+description: Ce tutoriel décrit les étapes à suivre pour récupérer des données en continu et les introduire dans Platform à l’aide des connecteurs source et des API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-translation-type: tm+mt
-source-git-commit: c7cbf6812e2c600aa1e831b91f15982d7bf82cdb
+source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
 workflow-type: tm+mt
-source-wordcount: '1526'
-ht-degree: 22%
+source-wordcount: '1111'
+ht-degree: 17%
 
 ---
 
-# Collecte de données en flux continu à l’aide des connecteurs et des API source
+# Créez un flux de données en continu pour les données brutes à l’aide de l’API [!DNL Flow Service]
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
-
-Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un connecteur source de flux continu et les amener à [!DNL Experience Platform] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel décrit les étapes à suivre pour récupérer les données brutes d’un connecteur de source de diffusion en continu et les apporter à l’Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Prise en main
 
-Ce didacticiel nécessite que vous disposiez d’un ID de connexion valide pour un connecteur de flux continu. Si vous ne disposez pas de ces informations, consultez les didacticiels suivants sur la création d’une connexion source de flux continu avant de tenter ce didacticiel :
-
-- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
-- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
-- [[!DNL HTTP API]](../create/streaming/http.md)
-- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
-
-Ce didacticiel nécessite également une bonne compréhension des composants suivants de Adobe Experience Platform :
+Ce tutoriel nécessite une compréhension pratique des composants suivants de Adobe Experience Platform :
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   - [Guide](../../../../xdm/api/getting-started.md) du développeur du registre des schémas : Inclut des informations importantes que vous devez connaître pour pouvoir effectuer des appels à l&#39;API de registre du Schéma. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
-- [[!DNL Catalog Service]](../../../../catalog/home.md): Le catalogue est le système d’enregistrement pour l’emplacement et le lignage des données à l’intérieur  [!DNL Experience Platform].
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): L’assimilation en flux continu pour  [!DNL Platform] permet aux utilisateurs d’envoyer en temps réel des données depuis les périphériques client et serveur  [!DNL Experience Platform] en temps réel.
-- [Sandbox](../../../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
+   - [Guide](../../../../xdm/api/getting-started.md) de développement du registre des schémas : Inclut des informations importantes à connaître pour effectuer avec succès des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Le de catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Experience Platform.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): L’ingestion par flux pour Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données de périphériques côté client et côté serveur vers Experience Platform.
+- [Environnements de test](../../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour collecter avec succès des données de flux continu à l’aide de l’API [!DNL Flow Service].
+### Utilisation des API Platform
 
-### Lecture d’exemples d’appels API
+Pour plus d’informations sur la manière d’effectuer des appels avec succès vers les API Platform, consultez le guide de [prise en main des API Platform](../../../../landing/api-guide.md).
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+### Création d’une connexion source {#source}
 
-### Collecter des valeurs pour les en-têtes requis
+Ce tutoriel nécessite également que vous disposiez d’un identifiant de connexion source valide pour un connecteur de diffusion en continu. Si vous ne disposez pas de ces informations, consultez les tutoriels suivants sur la création d’une connexion source en continu avant de lancer ce tutoriel :
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
-- `Authorization: Bearer {ACCESS_TOKEN}`
-- `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+## Création d’un schéma XDM cible {#target-schema}
 
-Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
+Pour que les données source soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données source en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform dans lequel les données source sont contenues. Ce schéma XDM cible étend également la classe XDM [!DNL Individual Profile].
 
-- `x-sandbox-name: {SANDBOX_NAME}`
-
-Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
-
-- `Content-Type: application/json`
-
-## Créer une connexion source {#source}
-
-Vous pouvez créer une connexion source en adressant une requête de POST à l&#39;API [!DNL Flow Service]. Une connexion source se compose d’un identifiant de connexion, d’un chemin d’accès au fichier de données source et d’un identifiant de spécification de connexion.
-
-Pour créer une connexion source, vous devez également définir une valeur d’énumération pour l’attribut de format de données.
-
-Utilisez les valeurs d’énumération suivantes pour les connecteurs basés sur des fichiers :
-
-| Sur le format des données saisies | Valeur maximale |
-| ----------- | ---------- |
-| Délimité | `delimited` |
-| JSON | `json` |
-| Parquet | `parquet` |
-
-Pour tous les connecteurs basés sur une table, définissez la valeur sur `tabular`.
-
-**Format d’API**
-
-```http
-POST /sourceConnections
-```
-
-**Requête**
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Test source connector for streaming data",
-        "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
-        "connectionId": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
-        "description": "Test source connector for streaming data",
-        "data": {
-            "format": "delimited"
-        },
-            "connectionSpec": {
-            "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-            "version": "1.0"
-        }
-    }'
-```
-
-| Propriété | Description |
-| --- | --- |
-| `providerId` | ID de fournisseur de votre connecteur de diffusion en continu. |
-| `connectionId` | ID de connexion unique de votre connecteur de diffusion en continu. |
-| `connectionSpec.id` | Identifiant de spécification de connexion associé à votre connecteur de diffusion en continu spécifique. |
-
-**Réponse**
-
-Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la connexion source nouvellement créée. Cet identifiant est nécessaire à une étape ultérieure pour créer un flux de données.
-
-```json
-{
-    "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
-    "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
-}
-```
-
-## Obtenir l’URL du point de terminaison de diffusion {#get-endpoint}
-
-Une fois la connexion source créée, vous pouvez désormais récupérer votre URL de point de terminaison de diffusion en continu.
-
-**Format d’API**
-
-```http
-GET /flowservice/sourceConnections/{CONNECTION_ID}
-```
-
-| Paramètre | Description |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | Valeur `id` de la sourceConnections que vous avez créée précédemment. |
-
-**Requête**
-
-```shell
-curl -X GET https://platform.adobe.io/data/foundation/flowservice/sourceConnections/e96d6135-4b50-446e-922c-6dd66672b6b2 \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Réponse**
-
-Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la connexion demandée. L’URL du point de terminaison de diffusion en continu est automatiquement créée avec la connexion et peut être récupérée à l’aide de la valeur `inletUrl`.
-
-```json
-{
-    "items": [
-        {
-            "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
-            "createdAt": 1617743929826,
-            "updatedAt": 1617743930363,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{USER_ID}",
-            "updatedClient": "{USER_ID}",
-            "sandboxId": "d537df80-c5d7-11e9-aafb-87c71c35cac8",
-            "sandboxName": "prod",
-            "imsOrgId": "{IMS_ORG}",
-            "name": "Test source connector for streaming data",
-            "description": "Test source connector for streaming data",
-            "baseConnectionId": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
-            "state": "enabled",
-            "data": {
-                "format": "delimited",
-                "schema": null,
-                "properties": null
-            },
-            "connectionSpec": {
-                "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-                "version": "1.0"
-            },
-            "params": {
-                "sourceId": "Streaming raw data",
-                "inletUrl": "https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b",
-                "inletId": "2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b",
-                "dataType": "raw",
-                "name": "hgtest"
-            },
-            "version": "\"d6006bc1-0000-0200-0000-606cd03a0000\"",
-            "etag": "\"d6006bc1-0000-0200-0000-606cd03a0000\"",
-            "inheritedAttributes": {
-                "baseConnection": {
-                    "id": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
-                    "connectionSpec": {
-                        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-                        "version": "1.0"
-                    }
-                }
-            }
-        }
-    ]
-}
-```
-
-## Créer un schéma XDM de cible {#target-schema}
-
-Pour que les données source soient utilisées dans [!DNL Platform], un schéma de cible doit être créé pour structurer les données source en fonction de vos besoins. Le schéma de cible est ensuite utilisé pour créer un jeu de données [!DNL Platform] contenant les données source. Ce schéma XDM de cible étend également la classe XDM [!DNL Individual Profile].
-
-Un schéma XDM de cible peut être créé en exécutant une requête de POST à l&#39;[API de registre de Schéma](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Pour créer un schéma XDM cible, envoyez une requête de POST au point de terminaison `/schemas` de l’API [[!DNL Schema Registry] ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 **Format d’API**
 
@@ -216,7 +54,7 @@ POST /tenant/schemas
 
 **Requête**
 
-L&#39;exemple de demande suivant crée un schéma XDM qui étend la classe XDM [!DNL Individual Profile].
+L’exemple de requête suivant crée un schéma XDM qui étend la classe XDM [!DNL Individual Profile].
 
 ```shell
 curl -X POST \
@@ -250,7 +88,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du schéma nouvellement créé, y compris son identifiant unique (`$id`). Cet identifiant est requis dans les étapes suivantes pour créer un jeu de données de cible, un mappage et un flux de données.
+Une réponse réussie renvoie les détails du schéma nouvellement créé, y compris son identifiant unique (`$id`). Cet identifiant est requis lors des étapes suivantes pour créer un jeu de données cible, un mappage et un flux de données.
 
 ```json
 {
@@ -314,7 +152,7 @@ Une réponse réussie renvoie les détails du schéma nouvellement créé, y com
 
 ## Création d’un jeu de données cible
 
-Un jeu de données de cible peut être créé en exécutant une requête de POST à l&#39;[API du service de catalogue](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), en fournissant l&#39;identifiant du schéma de cible dans la charge utile.
+Avec un schéma XDM cible créé et son `$id` unique, vous pouvez maintenant créer un jeu de données cible contenant vos données source. Pour créer un jeu de données cible, envoyez une requête de POST au point de terminaison `dataSets` de l’API [Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), tout en fournissant l’identifiant du schéma cible dans la payload.
 
 **Format d’API**
 
@@ -353,11 +191,11 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom du jeu de données à créer. |
 | `schemaRef.id` | URI `$id` pour le schéma XDM sur lequel le jeu de données sera basé. |
-| `schemaRef.contentType` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full-notext+json;version=1`, ce qui renvoie la dernière version mineure du schéma. Pour plus d&#39;informations, consultez la section [versioning de schéma](../../../../xdm/api/getting-started.md#versioning) du guide de l&#39;API XDM. |
+| `schemaRef.contentType` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full-notext+json;version=1`, qui renvoie la dernière version mineure du schéma. Pour plus d’informations, reportez-vous à la section [contrôle de version des schémas](../../../../xdm/api/getting-started.md#versioning) du guide de l’API XDM. |
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l&#39;ID du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’identifiant du jeu de données est une chaîne en lecture seule générée par le système et utilisée pour référencer le jeu de données dans les appels API. L’ID du jeu de données de cible est requis dans les étapes suivantes pour créer une connexion à une cible et un flux de données.
+Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’identifiant du jeu de données est une chaîne en lecture seule générée par le système et utilisée pour référencer le jeu de données dans les appels API. L’identifiant du jeu de données cible est requis lors des étapes suivantes pour créer une connexion cible et un flux de données.
 
 ```json
 [
@@ -365,11 +203,11 @@ Une réponse réussie renvoie un tableau contenant l&#39;ID du jeu de données n
 ]
 ```
 
-## Créer une connexion de cible {#target-connection}
+## Créer une connexion cible {#target-connection}
 
-Une connexion de cible représente la connexion à la destination où se trouvent les données saisies. Pour créer une connexion de cible, vous devez fournir l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Les connexions Target créent et gèrent une connexion de destination à Platform ou à tout emplacement où les données transférées arriveront. Les connexions Target contiennent des informations concernant la destination des données, le format des données et l’identifiant de connexion cible requis pour créer un flux de données. Les instances de connexion Target sont spécifiques à une organisation client et IMS.
 
-Vous disposez désormais des identifiants uniques d’un schéma de cible d’un jeu de données de cible et de l’identifiant de spécification de connexion au lac de données. A l’aide de ces identifiants, vous pouvez créer une connexion de cible à l’aide de l’API [!DNL Flow Service] pour spécifier le jeu de données qui contiendra les données source entrantes.
+Pour créer une connexion cible, envoyez une requête de POST au point de terminaison `/targetConnections` de l’API [!DNL Flow Service]. Dans le cadre de la requête, vous devez fournir le format de données, la valeur `dataSetId` récupérée à l’étape précédente et l’identifiant de spécification de connexion fixe lié à [!DNL Data Lake]. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **Format d’API**
 
@@ -402,19 +240,20 @@ curl -X POST \
             }
         },
         "params": {
-        "dataSetId": "5f7187bac6d00f194fb937c0"
+            "dataSetId": "5f7187bac6d00f194fb937c0"
         }
     }'
 ```
 
 | Propriété | Description |
 | -------- | ----------- |
-| `params.dataSetId` | ID du jeu de données de cible. |
-| `connectionSpec.id` | ID de spécification de connexion utilisé pour la connexion au lac Data. Cet ID est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion utilisé pour se connecter à [!DNL Data Lake]. Cet identifiant est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | Le format spécifié des données que vous apportez à [!DNL Data Lake]. |
+| `params.dataSetId` | Identifiant du jeu de données cible récupéré à l’étape précédente. |
 
 **Réponse**
 
-Une réponse réussie renvoie l&#39;identifiant unique de la nouvelle connexion à la cible (`id`). Cet identifiant est requis par la suite.
+Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion cible (`id`). Cet identifiant est requis aux étapes suivantes.
 
 ```json
 {
@@ -423,21 +262,23 @@ Une réponse réussie renvoie l&#39;identifiant unique de la nouvelle connexion 
 }
 ```
 
-## Créer un mappage {#mapping}
+## Création d’un mappage {#mapping}
 
-Pour que les données source soient assimilées à un jeu de données de cible, elles doivent d’abord être mises en correspondance avec le schéma de cible auquel adhère le jeu de données de cible. Pour ce faire, il effectue une demande de POST au service de conversion avec des mappages de données définis dans la charge utile de la demande.
+Pour que les données source soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible adhère.
+
+Pour créer un jeu de mappages, envoyez une requête de POST au point de terminaison `mappingSets` de l’[[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) tout en fournissant votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
 
 **Format d’API**
 
 ```http
-POST /conversion/mappingSets
+POST /mappingSets
 ```
 
 **Requête**
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
+    'https://platform.adobe.io/data/foundation/mappingSets' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -466,11 +307,11 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `xdmSchema` | `$id` du schéma XDM de cible. |
+| `xdmSchema` | `$id` du schéma XDM cible. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du nouveau mappage, y compris son identifiant unique (`id`). Cet identifiant est nécessaire à une étape ultérieure pour créer un flux de données.
+Une réponse réussie renvoie les détails du nouveau mappage, y compris son identifiant unique (`id`). Cet identifiant est requis lors d’une étape ultérieure pour créer un flux de données.
 
 ```json
 {
@@ -483,20 +324,21 @@ Une réponse réussie renvoie les détails du nouveau mappage, y compris son ide
 }
 ```
 
-## Rechercher les spécifications de flux de données {#specs}
+## Récupération d’une liste de spécifications de flux de données {#specs}
 
-Un flux de données est chargé de collecter les données provenant de sources et de les intégrer à [!DNL Platform]. Pour créer un flux de données, vous devez d&#39;abord obtenir les spécifications du flux de données en exécutant une demande de GET à l&#39;API [!DNL Flow Service]. Les spécifications de flux de données sont responsables de la collecte de données à partir d&#39;un connecteur de flux continu.
+Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en adressant une demande de GET à l’API [!DNL Flow Service].
+
 **Format d’API**
 
 ```http
-GET /flowSpecs?property=name=="Steam data with transformation"
+GET /flowSpecs
 ```
 
 **Requête**
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/flowSpecs?property=name=="Steam data with transformation"' \
+    'https://platform.adobe.io/data/foundation/flowservice/flowSpecs' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
@@ -504,23 +346,26 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la spécification de flux de données responsable de l&#39;importation des données de votre connecteur de diffusion en continu dans [!DNL Platform]. Cet identifiant est requis à l’étape suivante pour créer un nouveau flux de données.
+Une réponse réussie renvoie une liste de spécifications de flux de données. L’identifiant de spécification de flux de données que vous devez récupérer pour créer un flux de données à l’aide de [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] ou [!DNL Google PubSub] est `d69717ba-71b4-4313-b654-49f9cf126d7a`.
 
 ```json
 {
     "items": [
         {
-            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
-            "name": "Steam data with transformation",
+            "id": "d69717ba-71b4-4313-b654-49f9cf126d7a",
+            "name": "Stream data with optional transformation",
             "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
             "version": "1.0",
             "sourceConnectionSpecIds": [
-                "d27d4907-7351-47dd-bbc2-05a04365703d",
-                "51ae16c2-bdad-42fd-9fce-8d5dfddaf140",
-                "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb"
+                "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+                "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+                "86043421-563b-46ec-8e6c-e23184711bf6",
+                "70116022-a743-464a-bbfe-e226a7f8210c"
             ],
             "targetConnectionSpecIds": [
-                "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+                "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+                "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+                "db4fe783-ef79-4a12-bda9-32b2b1bc3b2c"
             ],
             "transformationSpecs": [
                 {
@@ -528,23 +373,18 @@ Une réponse réussie renvoie les détails de la spécification de flux de donn�
                     "spec": {
                         "$schema": "http://json-schema.org/draft-07/schema#",
                         "type": "object",
-                        "description": "defines various params required for different mapping from Raw to XDM",
+                        "description": "defines various params required for different mapping from source to target",
                         "properties": {
                             "mappingId": {
                                 "type": "string"
                             }
-                        },
-                        "required": [
-                            "mappingId"
-                        ]
+                        }
                     }
                 }
             ],
             "attributes": {
                 "uiAttributes": {
                     "apiFeatures": {
-                        "deleteSupported": false,
-                        "updateSupported": false,
                         "flowRunsSupported": false
                     }
                 }
@@ -569,21 +409,21 @@ Une réponse réussie renvoie les détails de la spécification de flux de donn�
                     }
                 ]
             }
-        }
+        },
     ]
 }
 ```
 
 ## Création d’un flux de données
 
-La dernière étape de la collecte des données en flux continu consiste à créer un flux de données. A l’heure actuelle, les valeurs requises suivantes sont préparées :
+La dernière étape de la collecte de données en continu consiste à créer un flux de données. À l’heure actuelle, les valeurs requises suivantes sont préparées :
 
 - [ID de connexion source](#source)
-- [ID de connexion à la cible](#target)
+- [Identifiant de connexion Target](#target)
 - [ID de mappage](#mapping)
-- [ID de spécification du flux de données](#specs)
+- [Identifiant de spécification du flux de données](#specs)
 
-Un flux de données est responsable de la planification et de la collecte des données d’une source. Vous pouvez créer un flux de données en exécutant une requête de POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
+Un flux de données est chargé de planifier et de collecter les données d’une source. Vous pouvez créer un flux de données en exécutant une requête de POST tout en fournissant les valeurs mentionnées précédemment dans le payload.
 
 **Format d’API**
 
@@ -604,7 +444,7 @@ curl -X POST \
         "name": "Streaming dataflow",
         "description": "Streaming dataflow",
         "flowSpec": {
-            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
+            "id": "d69717ba-71b4-4313-b654-49f9cf126d7a",
             "version": "1.0"
         },
         "sourceConnectionIds": [
@@ -627,14 +467,14 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `flowSpec.id` | ID de la spécification de flux [](#specs) récupéré à l’étape précédente. |
-| `sourceConnectionIds` | L&#39;[identifiant de connexion source](#source) a été récupéré lors d&#39;une étape précédente. |
-| `targetConnectionIds` | L&#39;[ID de connexion de cible](#target-connection) a été récupéré lors d&#39;une étape précédente. |
-| `transformations.params.mappingId` | ID de mappage [](#mapping) récupéré lors d’une étape précédente. |
+| `flowSpec.id` | L’ [identifiant de spécification de flux](#specs) récupéré à l’étape précédente. |
+| `sourceConnectionIds` | [ID de connexion source](#source) récupéré à une étape précédente. |
+| `targetConnectionIds` | [Identifiant de connexion cible](#target-connection) récupéré à une étape précédente. |
+| `transformations.params.mappingId` | [ID de mappage](#mapping) récupéré à une étape précédente. |
 
 **Réponse**
 
-Une réponse réussie renvoie l&#39;identifiant (`id`) du flux de données nouvellement créé.
+Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données créé.
 
 ```json
 {
@@ -643,65 +483,9 @@ Une réponse réussie renvoie l&#39;identifiant (`id`) du flux de données nouve
 }
 ```
 
-## Affichage des données brutes à ingérer {#ingest-data}
-
-Maintenant que vous avez créé votre flux, vous pouvez envoyer votre message JSON au point de terminaison de diffusion que vous avez créé précédemment.
-
-**Format d’API**
-
-```http
-POST /collection/{CONNECTION_ID}
-```
-
-| Paramètre | Description |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | La valeur `id` de la connexion en continu que vous venez de créer. |
-
-**Requête**
-
-L’exemple de requête ingère des données brutes au point de terminaison de diffusion en continu qui a été créé précédemment.
-
-```shell
-curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
-  -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
-  -d '{
-      "name": "Johnson Smith",
-      "location": {
-          "city": "Seattle",
-          "country": "United State of America",
-          "address": "3692 Main Street"
-      },
-      "gender": "Male"
-      "birthday": {
-          "year": 1984
-          "month": 6
-          "day": 9
-      }
-  }'
-```
-
-**Réponse**
-
-Une réponse réussie renvoie l’état HTTP 200 avec les détails des informations nouvellement saisies.
-
-```json
-{
-    "inletId": "{CONNECTION_ID}",
-    "xactionId": "1584479347507:2153:240",
-    "receivedTimeMs": 1584479347507
-}
-```
-
-| Propriété | Description |
-| -------- | ----------- |
-| `{CONNECTION_ID}` | L’identifiant de la connexion en continu précédemment créée. |
-| `xactionId` | Un identifiant unique généré côté serveur pour l’enregistrement que vous venez d’envoyer. Cet identifiant aide Adobe à suivre le cycle de vie de cet enregistrement sur différents systèmes et en cas de débogage. |
-| `receivedTimeMs` : un horodatage (en millisecondes) indiquant l’heure de réception de la requête. |
-
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé un flux de données pour collecter des données en flux continu à partir de votre connecteur de diffusion en continu. Les données entrantes peuvent désormais être utilisées par les services [!DNL Platform] en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, voir les documents suivants :
+En suivant ce tutoriel, vous avez créé un flux de données pour collecter des données en continu à partir de votre connecteur de diffusion en continu. Les données entrantes peuvent désormais être utilisées par les services Platform en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, consultez les documents suivants :
 
-- [Présentation du profil client en temps réel](../../../../profile/home.md)
+- [Présentation de Real-time Customer Profile](../../../../profile/home.md)
 - [Présentation de Data Science Workspace](../../../../data-science-workspace/home.md)
