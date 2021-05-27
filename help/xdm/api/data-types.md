@@ -1,32 +1,31 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre de types de données ; Schéma d’enregistrement ; type de données ; type de données ; types de données ; créer
+keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;système XDM;modèle de données d’expérience;modèle de données d’expérience;modèle de données d’expérience;modèle de données;modèle de données;registre de type de données;type de données;type de données;types de données;types de données;créer
 solution: Experience Platform
-title: Point de terminaison de l’API Types de données
-description: Le point de terminaison /datatypes de l'API Schéma Registry vous permet de gérer par programmation les types de données XDM dans votre application d'expérience.
+title: Point de terminaison de l’API des types de données
+description: Le point d’entrée /datatypes de l’API Schema Registry vous permet de gérer par programmation les types de données XDM dans votre application d’expérience.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-translation-type: tm+mt
-source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1151'
-ht-degree: 13%
+source-wordcount: '1172'
+ht-degree: 14%
 
 ---
 
-# Point de terminaison des types de données
+# Point d’entrée des types de données
 
-Les types de données sont utilisés comme champs de type référence dans les classes ou les groupes de champs de schéma de la même manière que les champs littéraux de base, la différence majeure étant que les types de données peuvent définir plusieurs sous-champs. Bien que semblables aux groupes de champs en ce qu’ils permettent l’utilisation cohérente d’une structure à champs multiples, les types de données sont plus flexibles car ils peuvent être inclus n’importe où dans la structure de schéma alors que les groupes de champs ne peuvent être ajoutés qu’au niveau racine. Le point de terminaison `/datatypes` de l&#39;API [!DNL Schema Registry] vous permet de gérer par programmation les types de données dans votre application d&#39;expérience.
+Les types de données sont utilisés comme champs de type référence dans des classes ou des groupes de champs de schéma de la même manière que les champs littéraux de base. La différence majeure réside dans le fait que les types de données peuvent définir plusieurs sous-champs. Tout comme les groupes de champs dans le fait qu’ils permettent l’utilisation cohérente d’une structure à plusieurs champs, les types de données sont plus flexibles, car ils peuvent être inclus n’importe où dans la structure du schéma, tandis que les groupes de champs ne peuvent être ajoutés qu’au niveau racine. Le point de terminaison `/datatypes` de l’API [!DNL Schema Registry] vous permet de gérer par programmation les types de données dans votre application d’expérience.
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l&#39;[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+Le point de terminaison utilisé dans ce guide fait partie de l’[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
 
-## Récupérer une liste de types de données {#list}
+## Récupération d’une liste de types de données {#list}
 
-Vous pouvez liste tous les types de données sous le conteneur `global` ou `tenant` en adressant une demande de GET à `/global/datatypes` ou `/tenant/datatypes`, respectivement.
+Vous pouvez répertorier tous les types de données sous le conteneur `global` ou `tenant` en effectuant une requête de GET à `/global/datatypes` ou `/tenant/datatypes`, respectivement.
 
 >[!NOTE]
 >
->Lors de la mise en vente de ressources, le Registre des Schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres de pagination. Il est également recommandé d’utiliser des paramètres de requête supplémentaires pour filtrer les résultats et réduire le nombre de ressources renvoyées. Pour plus d&#39;informations, consultez la section [Paramètres de requête](./appendix.md#query) dans le document de l&#39;annexe.
+>Lors de l’énumération des ressources, le registre des schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres de pagination. Il est également recommandé d’utiliser des paramètres de requête supplémentaires pour filtrer les résultats et réduire le nombre de ressources renvoyées. Pour plus d’informations, reportez-vous à la section [Paramètres de requête](./appendix.md#query) du document de l’annexe.
 
 **Format d’API**
 
@@ -36,12 +35,14 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --- | --- |
-| `{CONTAINER_ID}` | Conteneur à partir duquel vous souhaitez récupérer les types de données : `global` pour les types de données créés par Adobe ou `tenant` pour les types de données appartenant à votre organisation. |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Pour obtenir une liste des paramètres disponibles, consultez l&#39;[document ](./appendix.md#query) de l&#39;appendice. |
+| `{CONTAINER_ID}` | Conteneur à partir duquel vous souhaitez récupérer les types de données : `global` pour les types de données créés par l’Adobe ou `tenant` pour les types de données appartenant à votre organisation. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Consultez le [document de l’annexe](./appendix.md#query) pour obtenir la liste des paramètres disponibles. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante récupère une liste de types de données du conteneur `tenant`, en utilisant un paramètre de requête `orderby` pour trier les types de données selon leur attribut `title`.
+La requête suivante récupère une liste de types de données à partir du conteneur `tenant`, à l’aide d’un paramètre de requête `orderby` pour trier les types de données selon leur attribut `title`.
 
 ```shell
 curl -X GET \
@@ -53,16 +54,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Le format de réponse dépend de l&#39;en-tête `Accept` envoyé dans la demande. Les en-têtes `Accept` suivants sont disponibles pour répertorier les types de données :
+Le format de la réponse dépend de l’en-tête `Accept` envoyé dans la requête. Les en-têtes `Accept` suivants sont disponibles pour répertorier les types de données :
 
 | En-tête `Accept` | Description |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | Renvoie un bref résumé de chaque ressource. Il s’agit de l’en-tête recommandé pour la liste des ressources. (Limite : 300) |
-| `application/vnd.adobe.xed+json` | Renvoie le type de données JSON complet pour chaque ressource, avec les valeurs d’origine `$ref` et `allOf` incluses. (Limite : 300) |
+| `application/vnd.adobe.xed-id+json` | Renvoie un court résumé de chaque ressource. Il s’agit de l’en-tête recommandé pour répertorier les ressources. (Limite : 300) |
+| `application/vnd.adobe.xed+json` | Renvoie le type de données JSON complet pour chaque ressource, en incluant les éléments `$ref` et `allOf` d’origine. (Limite : 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-La requête ci-dessus utilisait l&#39;en-tête `application/vnd.adobe.xed-id+json` `Accept`. Par conséquent, la réponse ne comprend que les attributs `title`, `$id`, `meta:altId` et `version` pour chaque type de données. L’utilisation de l’autre en-tête `Accept` (`application/vnd.adobe.xed+json`) renvoie tous les attributs de chaque type de données. Sélectionnez l&#39;en-tête `Accept` approprié en fonction des informations que vous souhaitez obtenir dans votre réponse.
+La requête ci-dessus utilisait l’en-tête `application/vnd.adobe.xed-id+json` `Accept`. Par conséquent, la réponse n’inclut que les attributs `title`, `$id`, `meta:altId` et `version` pour chaque type de données. L’utilisation de l’autre en-tête `Accept` (`application/vnd.adobe.xed+json`) renvoie tous les attributs de chaque type de données. Sélectionnez l’en-tête `Accept` approprié en fonction des informations dont vous avez besoin dans votre réponse.
 
 ```json
 {
@@ -94,9 +97,9 @@ La requête ci-dessus utilisait l&#39;en-tête `application/vnd.adobe.xed-id+jso
 }
 ```
 
-## Rechercher un type de données {#lookup}
+## Recherche d’un type de données {#lookup}
 
-Vous pouvez rechercher un type de données spécifique en incluant l’ID du type de données dans le chemin d’une demande de GET.
+Vous pouvez rechercher un type de données spécifique en incluant l’identifiant du type de données dans le chemin d’une requête de GET.
 
 **Format d’API**
 
@@ -106,12 +109,14 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{CONTAINER_ID}` | Conteneur qui contient le type de données à récupérer : `global` pour un type de données créé par un Adobe ou `tenant` pour un type de données appartenant à votre organisation. |
-| `{DATA_TYPE_ID}` | `meta:altId` ou encodé en URL `$id` du type de données à rechercher. |
+| `{CONTAINER_ID}` | Le conteneur qui contient le type de données que vous souhaitez récupérer : `global` pour un type de données créé par l’Adobe ou `tenant` pour un type de données détenu par votre organisation. |
+| `{DATA_TYPE_ID}` | `meta:altId` ou `$id` encodé URL du type de données que vous souhaitez rechercher. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante récupère un type de données en fonction de sa valeur `meta:altId` fournie dans le chemin d’accès.
+La requête suivante récupère un type de données en fonction de sa valeur `meta:altId` fournie dans le chemin.
 
 ```shell
 curl -X GET \
@@ -123,7 +128,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Le format de réponse dépend de l&#39;en-tête `Accept` envoyé dans la demande. Toutes les requêtes de recherche nécessitent l&#39;inclusion de `version` dans l&#39;en-tête `Accept`. Les en-têtes `Accept` suivants sont disponibles :
+Le format de la réponse dépend de l’en-tête `Accept` envoyé dans la requête. Toutes les requêtes de recherche nécessitent qu’une balise `version` soit incluse dans l’en-tête `Accept`. Les en-têtes `Accept` suivants sont disponibles :
 
 | En-tête `Accept` | Description |
 | ------- | ------------ |
@@ -133,9 +138,11 @@ Le format de réponse dépend de l&#39;en-tête `Accept` envoyé dans la demande
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` et `allOf` résolus, ne contient aucun titre ni aucune description. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` et `allOf` résolus, contient des descripteurs. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Réponse**
 
-Une réponse réussie renvoie les détails du type de données. Les champs renvoyés dépendent de l&#39;en-tête `Accept` envoyé dans la demande. Testez différents en-têtes `Accept` pour comparer les réponses et déterminer l&#39;en-tête qui convient le mieux à votre cas d&#39;utilisation.
+Une réponse réussie renvoie les détails du type de données. Les champs renvoyés dépendent de l’en-tête `Accept` envoyé dans la requête. Testez différents en-têtes `Accept` pour comparer les réponses et déterminer l’en-tête qui convient le mieux à votre cas d’utilisation.
 
 ```json
 {
@@ -216,7 +223,7 @@ Une réponse réussie renvoie les détails du type de données. Les champs renvo
 
 ## Création d’un type de données {#create}
 
-Vous pouvez définir un type de données personnalisé sous le conteneur `tenant` en faisant une demande de POST.
+Vous pouvez définir un type de données personnalisé sous le conteneur `tenant` en effectuant une requête de POST.
 
 **Format d’API**
 
@@ -267,7 +274,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 201 (Created) ainsi qu’un payload contenant les détails du type de données nouvellement créé, y compris `$id`, `meta:altId` et `version`. Ces trois valeurs sont en lecture seule et sont affectées par [!DNL Schema Registry].
+Une réponse réussie renvoie un état HTTP 201 (Created) ainsi qu’un payload contenant les détails du type de données nouvellement créé, y compris `$id`, `meta:altId` et `version`. Ces trois valeurs sont en lecture seule et sont affectées par la balise [!DNL Schema Registry].
 
 ```JSON
 {
@@ -324,15 +331,15 @@ Une réponse réussie renvoie un état HTTP 201 (Created) ainsi qu’un payload
 }
 ```
 
-L&#39;exécution d&#39;une demande de GET à [liste de tous les types de données](#list) dans le conteneur locataire inclut désormais le type de données Détails de la propriété, ou vous pouvez [exécuter une demande de recherche (GET)](#lookup) à l&#39;aide de l&#39;URI `$id` codé en URL pour vue directement le nouveau type de données.
+L’exécution d’une requête de GET pour [répertorier tous les types de données](#list) dans le conteneur client inclurait désormais le type de données Détails de la propriété. Vous pouvez également [effectuer une requête de recherche (GET)](#lookup) à l’aide de l’URI `$id` encodé par URL pour afficher directement le nouveau type de données.
 
-## Mettre à jour un type de données {#put}
+## Mise à jour d’un type de données {#put}
 
-Vous pouvez remplacer un type de données entier par le biais d’une opération de PUT, en réécrivant essentiellement la ressource. Lors de la mise à jour d&#39;un type de données par le biais d&#39;une requête de PUT, le corps doit inclure tous les champs requis lors de la création d&#39;un nouveau type de données [dans une requête de POST.](#create)
+Vous pouvez remplacer un type de données entier par le biais d’une opération de PUT, en réécrivant essentiellement la ressource. Lors de la mise à jour d’un type de données par le biais d’une requête de PUT, le corps doit inclure tous les champs requis lors de la [création d’un nouveau type de données](#create) dans une requête de POST.
 
 >[!NOTE]
 >
->Si vous souhaitez uniquement mettre à jour une partie d&#39;un type de données au lieu de la remplacer entièrement, reportez-vous à la section [mise à jour d&#39;une partie d&#39;un type de données](#patch).
+>Si vous souhaitez uniquement mettre à jour une partie d’un type de données au lieu de la remplacer entièrement, reportez-vous à la section [mise à jour d’une partie d’un type de données](#patch).
 
 **Format d’API**
 
@@ -342,7 +349,9 @@ PUT /tenant/datatypes/{DATA_TYPE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATA_TYPE_ID}` | `meta:altId` ou encodé URL `$id` du type de données à réécrire. |
+| `{DATA_TYPE_ID}` | `meta:altId` ou `$id` encodé URL du type de données que vous souhaitez réécrire. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
@@ -455,13 +464,13 @@ Une réponse réussie renvoie les détails du type de données mis à jour.
 }
 ```
 
-## Mettre à jour une partie d&#39;un type de données {#patch}
+## Mise à jour d’une partie d’un type de données {#patch}
 
-Vous pouvez mettre à jour une partie d’un type de données à l’aide d’une requête de PATCH. [!DNL Schema Registry] prend en charge toutes les opérations de correctif JSON standard, y compris `add`, `remove` et `replace`. Pour plus d’informations sur le correctif JSON, consultez le [guide des fondamentaux de l’API](../../landing/api-fundamentals.md#json-patch).
+Vous pouvez mettre à jour une partie d’un type de données à l’aide d’une requête PATCH. [!DNL Schema Registry] prend en charge toutes les opérations de correctif JSON standard, y compris `add`, `remove` et `replace`. Pour plus d’informations sur le correctif JSON, consultez le [guide de base de l’API](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, reportez-vous à la section [remplacement d&#39;un type de données à l&#39;aide d&#39;une opération de PUT](#put).
+>Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, reportez-vous à la section [Remplacement d’un type de données à l’aide d’une opération de PUT](#put).
 
 **Format d’API**
 
@@ -471,13 +480,15 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATA_TYPE_ID}` | URI `$id` ou `meta:altId` codés URL du type de données à mettre à jour. |
+| `{DATA_TYPE_ID}` | URI `$id` encodé URL ou `meta:altId` du type de données que vous souhaitez mettre à jour. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-L&#39;exemple de requête ci-dessous met à jour `description` d&#39;un type de données existant et ajoute un nouveau champ `floorSize`.
+L’exemple de requête ci-dessous met à jour `description` d’un type de données existant et ajoute un nouveau champ `floorSize`.
 
-Le corps de la requête prend la forme d&#39;un tableau, chaque objet répertorié représentant une modification spécifique à un champ individuel. Chaque objet comprend l’opération à exécuter (`op`), le champ sur lequel l’opération doit être exécutée (`path`) et les informations à inclure dans cette opération (`value`).
+Le corps de la requête se présente sous la forme d’un tableau, chaque objet répertorié représentant une modification spécifique à un champ individuel. Chaque objet comprend l’opération à effectuer (`op`), le champ sur lequel l’opération doit être effectuée (`path`) et les informations à inclure dans cette opération (`value`).
 
 ```SHELL
 curl -X PATCH \
@@ -596,9 +607,9 @@ La réponse montre que les deux opérations ont été réalisées avec succès. 
 }
 ```
 
-## Supprimer un type de données {#delete}
+## Suppression d’un type de données {#delete}
 
-Il peut parfois être nécessaire de supprimer un type de données du registre des Schémas. Pour ce faire, il effectue une demande de DELETE avec l’ID de type de données fourni dans le chemin d’accès.
+Il peut parfois être nécessaire de supprimer un type de données du registre des schémas. Pour ce faire, il vous suffit d’effectuer une requête de DELETE avec l’identifiant de type de données fourni dans le chemin d’accès.
 
 **Format d’API**
 
@@ -608,7 +619,9 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATA_TYPE_ID}` | URI `$id` ou `meta:altId` codés URL du type de données à supprimer. |
+| `{DATA_TYPE_ID}` | URI `$id` encodé URL ou `meta:altId` du type de données à supprimer. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
@@ -625,4 +638,4 @@ curl -X DELETE \
 
 Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
 
-Vous pouvez confirmer la suppression en tentant d&#39;envoyer une requête de recherche [de GET](#lookup) au type de données. Vous devez inclure un en-tête `Accept` dans la requête, mais vous devez recevoir l’état HTTP 404 (Non trouvé) car le type de données a été supprimé du registre de Schéma.
+Vous pouvez confirmer la suppression en tentant d’envoyer une requête [de recherche (GET)](#lookup) au type de données. Vous devez inclure un en-tête `Accept` dans la requête, mais vous devriez recevoir le statut HTTP 404 (Introuvable) car le type de données a été supprimé du registre des schémas.
