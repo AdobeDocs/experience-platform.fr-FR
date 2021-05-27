@@ -1,28 +1,27 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre de schémas ; registre de Schémas ; ad hoc ; ad hoc ; ad hoc ; ad hoc ; ad hoc ; ad hoc ; tutorial ; didacticiel ; créer ; créer ; schéma ; Schéma
+keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;système XDM;modèle de données d’expérience;modèle de données d’expérience;modèle de données d’expérience;modèle de données;modèle de données;registre des schémas;ad hoc;ad hoc;ad hoc;ad hoc;ad hoc;ad hoc;tutoriel;créer;créer;schéma;schéma;schéma
 solution: Experience Platform
-title: Création d’un Schéma ad hoc
+title: Création d’un schéma ad hoc
 description: Dans des cas spécifiques, il peut être nécessaire de créer un schéma de modèle de données d’expérience (XDM) avec des champs dont l’espace de noms n’est utilisé que par un seul jeu de données. On parle alors de schéma « ad hoc ». Les schémas ad hoc sont utilisés dans plusieurs workflows d’ingestion de données pour Experience Platform, notamment dans l’ingestion de fichiers CSV et dans la création de certains types de connexions sources.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 80%
+source-wordcount: '832'
+ht-degree: 81%
 
 ---
 
 # Création d’un schéma ad hoc
 
-Dans des circonstances spécifiques, il peut être nécessaire de créer un schéma [!DNL Experience Data Model] (XDM) avec des champs qui sont espacés de noms pour une utilisation uniquement par un seul jeu de données. On parle alors de schéma « ad hoc ». Les schémas ad hoc sont utilisés dans divers workflows d’assimilation de données pour [!DNL Experience Platform], y compris l’assimilation de fichiers CSV et la création de certains types de connexions source.
+Dans des cas spécifiques, il peut être nécessaire de créer un schéma [!DNL Experience Data Model] (XDM) avec des champs dont l’espace de noms est utilisé uniquement par un seul jeu de données. On parle alors de schéma « ad hoc ». Les schémas ad hoc sont utilisés dans divers workflows d’ingestion de données pour [!DNL Experience Platform], y compris l’ingestion de fichiers CSV et la création de certains types de connexions source.
 
-Ce document décrit les étapes générales de création d’un schéma ad hoc à l’aide de l’[API Schema Registry](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Il doit être utilisé conjointement avec d’autres didacticiels [!DNL Experience Platform] qui nécessitent la création d’un schéma ad hoc dans le cadre de leur processus. Chacun de ces documents fournit des informations détaillées sur la manière de configurer correctement un schéma ad hoc pour son cas d’utilisation spécifique.
+Ce document décrit les étapes générales de création d’un schéma ad hoc à l’aide de l’[API Schema Registry](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Il est destiné à être utilisé conjointement avec d’autres [!DNL Experience Platform] tutoriels qui nécessitent la création d’un schéma ad hoc dans le cadre de leur workflow. Chacun de ces documents fournit des informations détaillées sur la manière de configurer correctement un schéma ad hoc pour son cas d’utilisation spécifique.
 
 ## Prise en main
 
-Ce didacticiel nécessite une bonne compréhension du système [!DNL Experience Data Model] (XDM). Avant de commencer ce tutoriel, consultez la documentation XDM suivante :
+Ce tutoriel nécessite une compréhension pratique du système [!DNL Experience Data Model] (XDM). Avant de commencer ce tutoriel, consultez la documentation XDM suivante :
 
 - [Présentation du système XDM](../home.md) : présentation de XDM et de sa mise en œuvre dans [!DNL Experience Platform].
 - [Principes de base de la composition des schémas](../schema/composition.md) : présentation des composants de base des schémas XDM.
@@ -87,6 +86,8 @@ curl -X POST \
 | `$ref` | Comportement des données pour la nouvelle classe. Pour les classes ad hoc, cette valeur doit être définie sur `https://ns.adobe.com/xdm/data/adhoc`. |
 | `properties._adhoc` | Objet contenant les champs personnalisés de la classe, exprimés en paires clé-valeur des noms de champ et des types de données. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Réponse**
 
 Une réponse réussie renvoie les détails de la nouvelle classe, en remplaçant le nom de l’objet `properties._adhoc` par un GUID, qui est un identifiant unique généré par le système et en lecture seule pour la classe. L’attribut `meta:datasetNamespace` est également généré automatiquement et inclus dans la réponse.
@@ -147,6 +148,8 @@ Une réponse réussie renvoie les détails de la nouvelle classe, en remplaçant
 | Propriété | Description |
 | --- | --- |
 | `$id` | URI qui sert d’identifiant unique généré par le système et en lecture seule pour la nouvelle classe ad hoc. Cette valeur est utilisée à l’étape suivante de la création d’un schéma ad hoc. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Création d’un schéma ad hoc
 
@@ -239,9 +242,11 @@ GET /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URI `$id` encodé URL ou `meta:altId` du schéma ad hoc auquel vous souhaitez accéder. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Requête**
 
-La requête suivante utilise l’en-tête Accept `application/vnd.adobe.xed-full+json; version=1`, qui renvoie la forme développée du schéma. Notez que lors de la récupération d&#39;une ressource spécifique à partir de [!DNL Schema Registry], l&#39;en-tête Accepter de la demande doit inclure la version majeure de la ressource en question.
+La requête suivante utilise l’en-tête Accept `application/vnd.adobe.xed-full+json; version=1`, qui renvoie la forme développée du schéma. Notez que lors de la récupération d’une ressource spécifique à partir de [!DNL Schema Registry], l’en-tête Accept de la requête doit inclure la version majeure de la ressource en question.
 
 ```shell
 curl -X GET \
@@ -307,4 +312,4 @@ Une réponse réussie renvoie les détails du schéma, y compris tous les champs
 
 En suivant ce tutoriel, vous avez créé un schéma ad hoc. Si un autre tutoriel vous a renvoyé à ce document, vous pouvez désormais utiliser la propriété `$id` de votre schéma ad hoc pour terminer le workflow comme indiqué.
 
-Pour plus d&#39;informations sur l&#39;utilisation de l&#39;API [!DNL Schema Registry], consultez le [guide du développeur](../api/getting-started.md).
+Pour plus d’informations sur l’utilisation de l’API [!DNL Schema Registry], consultez le [guide de développement](../api/getting-started.md).
