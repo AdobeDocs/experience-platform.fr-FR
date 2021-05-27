@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 0cef5f1a0033bed987799c26b99e71145a85c1a9
+source-git-commit: c608ee8360fd07d6f98b31eed3b4691dc7124e12
 workflow-type: tm+mt
-source-wordcount: '1070'
-ht-degree: 34%
+source-wordcount: '1340'
+ht-degree: 33%
 
 ---
 
@@ -27,6 +27,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [Profil client en temps réel](#profile)
+- [Sandbox](#sandboxes)
 - [Sources](#sources)
 
 ## Tableaux de bord {#dashboards}
@@ -85,6 +86,22 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences co
 | Rapport de chevauchement de jeux de données | Le rapport de chevauchement des jeux de données offre une visibilité sur la composition de la banque de profils en exposant les jeux de données qui contribuent le plus à l’audience adressable. En plus de fournir des informations sur les données de profil, ce rapport permet aux utilisateurs d’agir pour optimiser l’utilisation de la licence, comme de définir une limite de durée de vie de certaines données. Pour en savoir plus, suivez le tutoriel sur la [génération du rapport de chevauchement de jeux de données](../../profile/tutorials/dataset-overlap-report.md). |
 
 Pour plus d’informations sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données de [!DNL Profile], consultez la [présentation du profil client en temps réel](../../profile/home.md).
+
+## [!DNL Sandboxes] {#sandboxes}
+
+Adobe Experience Platform est conçu pour enrichir les applications d’expérience numérique à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience numérique en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des environnements de test qui divisent une instance unique de Platform en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Environnements de test de production multiples | Vous pouvez désormais créer et gérer plusieurs environnements de test de production dans votre organisation IMS et dédier des environnements de test de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Pour plus d’informations, consultez les tutoriels sur la création d’un environnement de test de production [dans l’interface utilisateur](../../sandboxes/ui/user-guide.md) ou [à l’aide de l’API](../../sandboxes/api/overview.md) . |
+
+### Limites connues
+
+- Chaque organisation Experience Cloud est fournie avec un environnement de test de production par défaut précréé. Cet environnement de test agit comme une destination par défaut pour chaque requête envoyée à Platform à partir d’une autre application Adobe ou non Adobe qui n’est pas (encore) compatible avec l’environnement de test. L’environnement de test de production par défaut ne peut pas être réinitialisé si le graphique d’identités qui y est hébergé est également utilisé par Adobe Analytics pour la fonction [Analyses entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) ou si le graphique d’identités qui y est hébergé est également utilisé par Adobe Audience Manager pour la fonction [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
+- Les environnements de test de production utilisés pour le partage de segments bidirectionnel avec Adobe Audience Manager ou Audience Core Service ne peuvent ni être réinitialisés ni supprimés.
+- Tous les environnements de test de production et de développement créés par l’utilisateur peuvent être supprimés, à l’exception de l’environnement de test de production par défaut.
+
+Pour plus d’informations sur les environnements de test, consultez la [présentation des environnements de test](../../sandboxes/home.md).
 
 ## [!DNL Sources] {#sources}
 
