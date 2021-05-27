@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur des environnements de test
 topic-legacy: user guide
 description: Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux environnements de test dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 8c1c7b6b01b55bd15c492b0f62d280c1e9a98070
+source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 23%
+source-wordcount: '833'
+ht-degree: 20%
 
 ---
 
@@ -84,6 +84,28 @@ Dans la fenêtre de confirmation finale, saisissez le nom de l’environnement d
 
 ![reset-confirm](../images/ui/reset-confirm.png)
 
+Après quelques instants, une boîte de confirmation s’affiche en bas de l’écran pour confirmer la réinitialisation.
+
+![success](../images/ui/success.png)
+
+### Messages d’erreur
+
+Un environnement de test de production par défaut contenant les données des analyses entre appareils ne peut pas être réinitialisé et renvoie l’erreur suivante.
+
+![cda](../images/ui/cda.png)
+
+Un environnement de test de production par défaut contenant des données PBD ne peut pas non plus être réinitialisé et renvoie l’erreur suivante.
+
+![pbd](../images/ui/pbd.png)
+
+Un environnement de test de production par défaut contenant des données pour les analyses entre appareils et les PBD ne peut pas non plus être réinitialisé et renvoie l’erreur suivante.
+
+![both](../images/ui/both.png)
+
+Un environnement de test de production utilisé pour le partage de segments bidirectionnel avec Adobe Audience Manager ou Audience Core Service ne peut pas non plus être réinitialisé et renvoie l’erreur suivante.
+
+![seg](../images/ui/seg.png)
+
 ## Suppression d’un environnement de test
 
 >[!IMPORTANT]
@@ -103,6 +125,10 @@ Une boîte de dialogue s’affiche, vous invitant à confirmer votre choix. Sél
 Dans la fenêtre de confirmation finale, saisissez le nom de l’environnement de test dans la boîte de dialogue et sélectionnez **[!UICONTROL Continuer]**
 
 ![delete-confirm](../images/ui/delete-confirm.png)
+
+Un environnement de test de production utilisé pour le partage de segments bidirectionnel avec Adobe Audience Manager ou Audience Core Service ne peut pas être supprimé et renvoie l’erreur suivante.
+
+![seg](../images/ui/seg.png)
 
 ## Étapes suivantes
 
