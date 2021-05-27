@@ -5,9 +5,9 @@ title: Présentation d’Identity Namespace
 topic-legacy: overview
 description: Les espaces de noms d’identité sont des composants d’Identity Service qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name@email.com" comme adresse électronique ou "443522" comme identifiant CRM numérique.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c2db929a96883607ea99f08bffc92a5a9bafd01a
+source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1638'
 ht-degree: 19%
 
 ---
@@ -72,6 +72,8 @@ Les espaces de noms standard suivants sont fournis pour être utilisés par tout
 | Téléphone (SHA256_E.164) | Espace de noms qui représente les numéros de téléphone bruts qui doivent être hachés au format SHA256 et E.164. |
 | TNTID | Espace de noms représentant Adobe Target. Pour plus d’informations, voir le document suivant sur [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en). |
 | Windows AID | Espace de noms qui représente un identifiant Windows Advertising. Pour plus d’informations, consultez le document suivant sur [ID de publicité Windows](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041). |
+
+### Affichage des espaces de noms d’identité
 
 Pour afficher les espaces de noms d’identité dans l’interface utilisateur, sélectionnez **[!UICONTROL Identités]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Parcourir]**.
 
