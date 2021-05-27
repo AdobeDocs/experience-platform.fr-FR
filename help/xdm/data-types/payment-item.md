@@ -1,32 +1,33 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; élément de paiement ; type de données ; type de données ; type de données ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;élément de paiement;type de données;type de données;type de données
 solution: Experience Platform
-title: Type de données de l'élément de paiement
+title: Type de données de l’élément de paiement
 topic-legacy: overview
-description: Ce document présente un aperçu du type de données XDM (Payment Item Experience Data Model).
+description: Ce document fournit un aperçu du type de données XDM (modèle de données d’expérience d’élément de paiement).
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 24%
+source-wordcount: '164'
+ht-degree: 26%
 
 ---
 
-# [!UICONTROL Type ] d&#39;élément de paiement
+# [!UICONTROL Type ] d’élément de paiement
 
-[!UICONTROL Les ] éléments de paiement sont un type de données XDM (Experience Data Model) standard qui décrit un paiement associé à une commande qui définit le type de paiement, le montant et la devise associée.
+[!UICONTROL L’] élément de paiement est un type de données XDM (Experience Data Model) standard qui décrit un paiement associé à une commande qui définit le type de paiement, le montant et la devise associée.
 
 <img src="../images/data-types/payment-item.PNG" width="400" /><br />
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `currencyCode` | Chaîne | Code de devise ISO 4217 utilisé pour les totaux des commandes. Toutes les instances doivent se conformer à l&#39;expression régulière `^[A-Z]{3}$`. Par exemple `USD` et `EUR`. |
+| `currencyCode` | Chaîne | Code de devise ISO 4217 utilisé pour les totaux des commandes. Toutes les instances doivent se conformer à l’expression régulière `^[A-Z]{3}$`. Par exemple `USD` et `EUR`. |
 | `paymentAmount` | Double | Valeur du paiement. |
 | `paymentType` | Chaîne | Mode de paiement pour cette commande. Les valeurs d’énumération acceptées sont les suivantes : <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
 | `transactionID` | Chaîne | Identifiant de transaction unique pour cet élément de paiement. |
 
-Pour plus d&#39;informations sur le type de données, consultez le référentiel XDM public :
+{style=&quot;table-layout:auto&quot;}
 
-* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.example.1.json)
+Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+
+* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/data/paymentitem.schema.json)
