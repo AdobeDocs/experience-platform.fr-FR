@@ -4,31 +4,27 @@ user-guide-title: Aide aux environnements de test dans Adobe Experience Platform
 breadcrumb-title: Guide des environnements de test
 user-guide-description: Partitionnez une instance de Platform en environnements virtuels pour le développement, le test et le déploiement d’applications.
 feature: Gestion des données
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 96%
+source-wordcount: '66'
+ht-degree: 90%
 
 ---
 
 
-# Environnements de test {#sandbox}
+# Sandbox {#sandbox}
 
 * [Présentation des environnements de test](home.md)
 * Interface utilisateur des environnement de test {#ui}
    * [Présentation de l’interface utilisateur des environnements de test](ui/overview.md)
    * [Guide d’utilisation des environnements de test](ui/user-guide.md)
 * API Sandbox {#api}
+   * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
-   * [Liste des types d’environnements de test pris en charge](api/list-sandbox-types.md)
-   * [Liste de tous les environnements de test](api/list-all-sandboxes.md)
-   * [Liste des environnements de test actifs de l’utilisateur actuel](api/list-active-sandboxes.md)
-   * [Recherche d’un environnement de test](api/look-up-sandbox.md)
-   * [Création d’un environnement de test](api/create-sandbox.md)
-   * [Mise à jour d’un environnement de test](api/update-sandbox.md)
-   * [Réinitialisation d’un environnement de test](api/reset-sandbox.md)
-   * [Suppression d’un environnement de test](api/delete-sandbox.md)
+   * [Environnements de test disponibles](api/available.md)
+   * [Gestion des environnements de test](api/sandboxes.md)
+   * [Types de sandbox](api/types.md)
+   * [Annexe](api/appendix.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
-* [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+* [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
