@@ -1,41 +1,42 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; ExperienceEvent ; champs ; schémas ; Schémas ; conception de Schéma ; groupe de champs ; groupe de champs ; enduserids ; utilisateur final ; ids ; id ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;endserids;utilisateur final;id;
 solution: Experience Platform
-title: Groupe de champs Détails de l'ID d'utilisateur final
+title: Groupe de champs de schéma Détails de l’ID utilisateur final
 topic-legacy: overview
-description: Ce document présente un aperçu du groupe de champs Détails de l’ID d’utilisateur final.
+description: Ce document présente un aperçu du groupe de champs Détails de l’ID de l’utilisateur final.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 5%
+source-wordcount: '214'
+ht-degree: 7%
 
 ---
 
 
-# [!UICONTROL Groupe de champs ] Détails de l&#39;ID utilisateur final
+# [!UICONTROL Groupe de champs ] Détails de l’identifiant utilisateur final
 
 >[!NOTE]
 >
->Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document [mise à jour du nom du groupe de champs](../name-updates.md).
+>Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document [mises à jour des noms de groupe de champs](../name-updates.md) .
 
-[!UICONTROL ID utilisateur final ] Détail d&#39;un groupe de champs de schéma standard pour la  [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), utilisé pour décrire les informations d&#39;identité d&#39;une personne dans plusieurs applications d&#39;Adobe. Le groupe de champs fournit un objet de niveau racine `endUserIDs`, qui contient lui-même un champ `_experience` en lecture seule dont les valeurs sont automatiquement mises à jour au fur et à mesure que les données sont ingérées.
+[!UICONTROL Identifiant utilisateur final ] Détail d’un groupe de champs de schéma standard pour la  [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), utilisé pour décrire les informations d’identité d’une personne dans plusieurs applications d’Adobe. Le groupe de champs fournit un objet `endUserIDs` de niveau racine, qui contient lui-même un champ `_experience` en lecture seule dont les valeurs sont automatiquement mises à jour lors de l’ingestion des données.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `aacustomid` | [Identité](../../data-types/identity.md) | Identifiants d’utilisateur final personnalisés pour Adobe Analytics Cloud. |
-| `aaid` | [Identité](../../data-types/identity.md) | ID d’utilisateur final pour Adobe Analytics Cloud. |
-| `acid` | [Identité](../../data-types/identity.md) | ID d’utilisateur final pour Adobe Campaign. |
-| `adcloud` | [Identité](../../data-types/identity.md) | ID d’utilisateur final pour Adobe Advertising Cloud. |
+| `aaid` | [Identité](../../data-types/identity.md) | ID utilisateur final pour Adobe Analytics Cloud. |
+| `acid` | [Identité](../../data-types/identity.md) | ID utilisateur final pour Adobe Campaign. |
+| `adcloud` | [Identité](../../data-types/identity.md) | ID utilisateur final pour Adobe Advertising Cloud. |
 | `emailid` | [Identité](../../data-types/identity.md) | ID d’adresse électronique. |
-| `mcid` | [Identité](../../data-types/identity.md) | ID Adobe Marketing Cloud. |
+| `mcid` | [Identité](../../data-types/identity.md) | Adobe Marketing Cloud ID. |
 | `phonenumberid` | [Identité](../../data-types/identity.md) | ID de numéro de téléphone. |
-| `tntid` | [Identité](../../data-types/identity.md) | ID d’utilisateur final pour Adobe Target. |
+| `tntid` | [Identité](../../data-types/identity.md) | ID utilisateur final pour Adobe Target. |
 
-Pour plus d&#39;informations sur le groupe de champs, consultez le référentiel XDM public :
+{style=&quot;table-layout:auto&quot;}
 
-* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.example.1.json)
+Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
+
+* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.schema.json)
