@@ -1,34 +1,35 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; balise ; détails de l'interaction ; type de données ; type de données ; type de données ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;balise;détails d’interaction;type de données;type de données;type de données
 solution: Experience Platform
 title: Type de données de balise
 topic-legacy: overview
-description: Ce document fournit un aperçu de la classe de Profil XDM Individuel.
+description: Ce document présente la classe XDM Individual Profile.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 6%
+source-wordcount: '251'
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL Type ] Beacondata
+#  Type Beacondata
 
- Beaconis est un type de données XDM standard qui décrit le périphérique sans fil qui communique des informations d&#39;identité aux applications mobiles lorsque les périphériques mobiles sont compris dans la plage définie.
+ Beaconis est un type de données XDM standard qui décrit le périphérique sans fil qui communique des informations d’identité aux applications mobiles à mesure que les périphériques mobiles entrent en portée.
 
 <img src="../images/data-types/beacon.png" width="450" /><br />
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `beaconMajor` | Double | Les valeurs principales identifient et distinguent un groupe et des entiers non signés entre 1 et 65 535. |
-| `beaconMinor` | Doublon | Des valeurs mineures identifient et distinguent des valeurs entières individuelles et non signées comprises entre 1 et 65 535. |
-| `proximity` | Chaîne | Distance estimée de la balise. Voir l&#39;[annexe](#proximity) pour connaître les valeurs et les définitions acceptées. |
-| `proximityUUID` | Chaîne | Un UUID de proximité (Universally Unique Identifier) est un type spécial d&#39;identifiant utilisé pour distinguer les balises de votre réseau de toutes les autres balises des réseaux qui ne sont pas sous votre contrôle. L&#39;UUID de proximité est configuré dans une balise, qui doit être transmise aux périphériques mobiles dans la plage pour identifier les balises d&#39;une organisation. |
+| `beaconMajor` | Double | Les valeurs majeures identifient et distinguent un groupe et des valeurs entières non signées comprises entre 1 et 65 535. |
+| `beaconMinor` | Double | Les valeurs mineures identifient et distinguent une valeur entière individuelle et non signée entre 1 et 65 535. |
+| `proximity` | Chaîne | Distance estimée de la balise. Voir l’ [annexe](#proximity) pour connaître les valeurs et les définitions acceptées. |
+| `proximityUUID` | Chaîne | Un UUID de proximité (Universally Unique Identifier) est un type spécial d’identifiant utilisé pour distinguer les balises de votre réseau de toutes les autres balises des réseaux hors de votre contrôle. L’UUID de proximité est configuré dans une balise, à transmettre aux appareils mobiles à portée afin d’identifier les balises d’une organisation. |
 
-Pour plus d&#39;informations sur le type de données, consultez le référentiel XDM public :
+{style=&quot;table-layout:auto&quot;}
 
-* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.example.1.json)
+Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+
+* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.schema.json)
 
 ## Annexe
@@ -41,7 +42,7 @@ Le tableau suivant décrit les valeurs acceptées pour `proximity` et leur signi
 
 | Valeur | Description |
 | --- | --- |
-| `immediate` | En quelques centimètres. |
+| `immediate` | Dans quelques centimètres. |
 | `near` | À moins de 10 mètres. |
 | `far` | Plus de 10 mètres plus loin. |
-| `unknown` | La distance n&#39;a pas pu être déterminée, probablement en raison d&#39;un signal faible. |
+| `unknown` | La distance n&#39;a pas pu être établie, probablement à cause d&#39;un signal faible. |
