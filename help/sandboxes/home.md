@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;sandbox;Sandbox;testing;Testing
+keywords: Experience Platform;accueil;rubriques populaires;environnement de test;environnement de test;test
 solution: Experience Platform
-title: Présentation des sandbox
+title: Présentation des environnements de test
 topic-legacy: overview
 description: Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '755'
-ht-degree: 88%
+source-wordcount: '1009'
+ht-degree: 60%
 
 ---
 
@@ -23,9 +22,19 @@ Ce document présente de manière générale les environnements de test dans Exp
 
 ## Fonctionnement des environnements de test
 
-Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique. Une instance d’Experience Platform prend en charge un environnement de test de production et plusieurs environnements de test hors production. Chaque environnement de test conserve sa propre bibliothèque indépendante de ressources Platform (y compris les schémas, les jeux de données, les profils, etc.).  Tout le contenu et les actions réalisés dans un environnement de test sont limités à celui-ci et n’en affectent aucun autre.
+Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique. Tout le contenu et les actions réalisés dans un environnement de test sont limités à celui-ci et n’en affectent aucun autre. Deux types d’environnements de test sont pris en charge sur Experience Platform :
 
-Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de test de production. En outre, les environnements de test hors production disposent d’une fonctionnalité de réinitialisation supprimant de l’environnement de test toutes les ressources créées par les clients. Les environnements de test hors production ne peuvent pas être convertis en environnements de test de production. Une licence d’Experience Platform par défaut vous accorde cinq sandbox (une production et quatre non-production). Vous pouvez ajouter des packs de dix sandbox hors production jusqu’à un maximum de 75 sandbox au total. Veuillez contacter votre administrateur d&#39;entreprise IMS ou votre représentant commercial d&#39;Adobe pour plus de détails.
+* **Environnement de test** de production : Un environnement de test de production est conçu pour être utilisé avec des profils dans votre environnement de production. Platform vous permet de créer plusieurs environnements de test de production afin de fournir les fonctionnalités appropriées aux données tout en maintenant l’isolation opérationnelle. Cette fonctionnalité vous permet de dédier des environnements de test de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Les environnements de test de production prennent en charge un volume de profils de production allant jusqu’à votre engagement [!DNL Profile] autorisé (mesuré de manière cumulée sur tous vos environnements de test de production autorisés). Vous avez le droit d’utiliser un profil de moyenne sous licence par [!DNL Profile] autorisé (mesuré de manière cumulée sur tous vos environnements de test de production autorisés).
+* **Environnement de test de développement** : Un environnement de test de développement est un environnement de test qui peut être utilisé exclusivement à des fins de développement et de test avec des profils hors production. Les environnements de test de développement prennent en charge un volume de profils hors production allant jusqu’à 10 % de votre engagement [!DNL Profile] autorisé (mesuré de manière cumulative sur tous vos environnements de test de développement autorisés). Vous avez le droit de :
+   * une richesse moyenne de profil hors production de 75 kilo-octets par profil hors production autorisé (mesurée de manière cumulative sur tous vos environnements de test de développement autorisés) ;
+   * une tâche de segmentation par lots par jour, par environnement de test de développement ;
+   * Une moyenne de 120 [!DNL Profile] appels API par [!DNL Profile] par an (mesurés de manière cumulée sur tous vos environnements de développement autorisés).
+
+Une instance Experience Platform prend en charge plusieurs environnements de test de production et de développement, chaque environnement de test conservant sa propre bibliothèque indépendante de ressources Platform (y compris les schémas, les jeux de données, les profils, etc.). En outre, les environnements de test de production et de développement disposent d’une fonctionnalité de réinitialisation qui supprime de l’environnement de test toutes les ressources créées par les clients. Les environnements de test de développement ne peuvent pas être convertis en environnements de test de production.
+
+Une licence d’Experience Platform par défaut vous accorde un total de cinq environnements de test que vous pouvez classer en tant que production ou développement. Vous pouvez attribuer une licence à des modules supplémentaires de 10 environnements de test, jusqu’à 75 environnements de test au total. Ces environnements de test supplémentaires peuvent être utilisés pour créer des environnements de test de production et de développement. Contactez votre administrateur dʼorganisation IMS ou votre représentant commercial Adobe pour plus de détails.
+
+Enfin, l’environnement de test de production par défaut est le premier environnement de test de production créé lors de la première création d’une organisation IMS. L’environnement de test de production par défaut vous permet d’ingérer ou d’utiliser des données de Platform, ainsi que d’accepter des requêtes qui n’incluent pas de valeurs pour un nom d’environnement de test ou un ID d’environnement de test.
 
 >[!NOTE]
 >
@@ -51,7 +60,7 @@ Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.
 
 ## Environnements de test dans les API Experience Platform
 
-Lors d’appels aux API Experience Platform, un nom d’environnement de test doit être renseigné sous l’en-tête `x-sandbox-name`. Par exemple, lors d’un appel à [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) pour vue de tous les jeux de données dans le sandbox de production, le nom du sandbox (&quot;prod&quot;) est fourni comme en-tête dans la demande d’API :
+Lors d’appels aux API Experience Platform, un nom d’environnement de test doit être renseigné sous l’en-tête `x-sandbox-name`. Par exemple, lors d’un appel à [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) pour afficher tous les jeux de données dans l’environnement de test de production, le nom de l’environnement de test (&quot;prod&quot;) est fourni comme en-tête dans la requête API :
 
 ```shell
 curl -X GET \
@@ -66,7 +75,7 @@ Si `x-sandbox-name` n’est pas inclus dans un appel API, le système utilisera 
 
 ### API Sandbox
 
-L’API Sandbox vous permet de gérer les environnements de test à l’aide des opérations de l’API RESTful. Consultez le [guide de développement des environnements de test](api/getting-started.md) pour obtenir des informations détaillées sur l’utilisation de l’API, notamment des requêtes correctement formatées et des exemples de réponses.
+L’API Sandbox vous permet de gérer les environnements de test à l’aide des opérations de l’API RESTful. Consultez le [guide de développement des environnements de test](api/overview.md) pour obtenir des informations détaillées sur l’utilisation de l’API, notamment des requêtes correctement formatées et des exemples de réponses.
 
 ## Étapes suivantes
 
