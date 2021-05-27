@@ -1,21 +1,20 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;schéma;Schéma;XDM;champs;schémas;Schémas;adresse;xdm:address;datatype;data-type;data type;data type;
+keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;adresse;xdm:address;datatype;type de données;type de données;
 solution: Experience Platform
-title: Type de données d'adresse postale
+title: Type de données d’adresse postale
 topic-legacy: overview
-description: Ce document présente un aperçu du type de données XDM d’adresse postale.
+description: Ce document fournit un aperçu du type de données XDM Postal Address (Adresse postale).
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '336'
-ht-degree: 22%
+source-wordcount: '339'
+ht-degree: 23%
 
 ---
 
-# [!UICONTROL Type de données d&#39;] adresse postale
+# [!UICONTROL Type de données ] d’adresse postale
 
-[!UICONTROL L&#39;] adresse postale est un type de données XDM standard qui décrit les détails d&#39;une adresse postale.
+[!UICONTROL Les ] adresses postales constituent un type de données XDM standard qui décrit les détails d’une adresse postale.
 
 <img src="../images/data-types/postal-address.png" width="450" /><br />
 
@@ -24,24 +23,26 @@ ht-degree: 22%
 | `city` | Nom de la ville. |
 | `country` | Nom du territoire administré par un gouvernement. Il s’agit d’un champ de forme libre qui peut avoir le nom du pays dans n’importe quelle langue. |
 | `countryCode` | Code <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> à deux caractères pour le pays. |
-| `createdByBatchID` | ID du fichier de commandes assimilé qui a créé l&#39;enregistrement d&#39;adresse. |
-| `dmaID` | La recherche médiatique Nielsen a désigné zone de marché. |
+| `createdByBatchID` | L’identifiant du fichier de commandes ingéré qui a créé l’enregistrement d’adresse. |
+| `dmaID` | Zone de marché désignée pour la recherche sur les médias Nielsen. |
 | `label` | Nom de forme libre pour l’adresse. |
-| `lastVerifiedDate` | Date à laquelle l&#39;adresse a été vérifiée pour la dernière fois comme toujours associée à la personne. |
-| `modifiedByBatchID` | ID du fichier de commandes assimilé qui a modifié l&#39;enregistrement pour la dernière fois. |
-| `msaID` | Zone statistique métropolitaine aux États-Unis où l&#39;observation s&#39;est produite. |
-| `postOfficeBox` | Boîte postale de l&#39;adresse. |
+| `lastVerifiedDate` | Date à laquelle l’adresse a été vérifiée pour la dernière fois comme toujours associée à la personne. |
+| `modifiedByBatchID` | L’identifiant du fichier de commandes ingéré qui a modifié l’enregistrement pour la dernière fois. |
+| `msaID` | Zone statistique métropolitaine aux États-Unis où l’observation s’est produite. |
+| `postOfficeBox` | Boîte postale de l’adresse. |
 | `postalCode` | Code postal de l’emplacement. Les codes postaux ne sont pas disponibles pour tous les pays. Dans certains pays, ce champ ne contiendra qu’une partie du code postal. |
-| `primary` | Valeur booléenne qui indique s’il s’agit de l’adresse Principale de l’individu. Un profil ne peut avoir qu&#39;une seule adresse `primary` à un moment donné. |
+| `primary` | Valeur boolean qui indique s’il s’agit de l’adresse Principale de l’individu. Un profil ne peut avoir qu’une seule adresse `primary` à un moment donné. |
 | `region` | Partie de l’adresse qui indique la région, le département ou le district. |
-| `repositoryCreatedBy` | ID de l’utilisateur qui a créé l’enregistrement. |
-| `repositoryLastModifiedBy` | ID de l’utilisateur qui a modifié l’enregistrement pour la dernière fois. |
+| `repositoryCreatedBy` | L’identifiant de l’utilisateur qui a créé l’enregistrement. |
+| `repositoryLastModifiedBy` | L’identifiant de l’utilisateur qui a modifié l’enregistrement pour la dernière fois. |
 | `stateProvince` | Partie de l’état ou de la province de l’observation. Le format est conforme à la norme [ISO 3166-2 (pays et subdivisions)](http://www.unece.org/cefact/locode/subdivisions.html). |
-| `status` | Indique si l’adresse peut être utilisée actuellement. |
-| `statusReason` | Description du `status` actif. |
-| `street1` - `street4` | Ces quatre champs sont conçus pour contenir des renseignements Principaux sur la rue, le numéro d&#39;appartement, le numéro de rue et le nom de la rue. `street2` sont  `street4` facultatives. |
+| `status` | Indique si l’adresse peut être actuellement utilisée. |
+| `statusReason` | Description de la balise `status` actuelle. |
+| `street1` - `street4` | Ces quatre champs sont censés contenir des informations Principales sur les rues, le numéro d’appartement, le numéro de rue et le nom de la rue. `street2`  `street4` sont facultatifs. |
 
-Pour plus d&#39;informations sur le type de données d&#39;adresse postale, consultez le référentiel XDM public :
+{style=&quot;table-layout:auto&quot;}
 
-* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/address.example.1.json)
+Pour plus d’informations sur le type de données des adresses postales, reportez-vous au référentiel XDM public :
+
+* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/address.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/address.schema.json)
