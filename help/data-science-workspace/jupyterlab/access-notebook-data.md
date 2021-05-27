@@ -1,122 +1,121 @@
 ---
-keywords: Experience Platform ; JupyterLab ; blocs-notes ; Espace de travail de données ; rubriques populaires ; %dataset ; mode interactif ; mode batch ; Spark sdk ; python sdk ; accès aux données ; accès aux données du bloc-notes
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;rubriques populaires;%dataset;mode interactif;mode batch;Sdk Spark;sdk python;accès aux données;accès aux données du notebook
 solution: Experience Platform
-title: Accès aux données dans les portables Jupyterlab
+title: Accès aux données dans les notebooks Jupyterlab
 topic-legacy: Developer Guide
-description: Ce guide porte sur l'utilisation des portables Jupyter, conçus dans Data Science Workspace pour accéder à vos données.
+description: Ce guide porte sur l’utilisation des notebooks Jupyter, conçus dans Data Science Workspace pour accéder à vos données.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c2c2b1684e2c2c3c76dc23ad1df720abd6c4356c
 workflow-type: tm+mt
-source-wordcount: '3101'
-ht-degree: 26%
+source-wordcount: '3290'
+ht-degree: 24%
 
 ---
 
-# Accès aux données dans les blocs-notes [!DNL Jupyterlab]
+# Accès aux données dans les notebooks [!DNL Jupyterlab]
 
-Chaque noyau pris en charge fournit des fonctionnalités intégrées qui vous permettent de lire les données de Platform à partir d’un jeu de données dans un notebook. Actuellement, JupyterLab dans Adobe Experience Platform Data Science Workspace prend en charge les blocs-notes pour [!DNL Python], R, PySpark et Scala. Cependant, la prise en charge de la pagination des données est limitée aux blocs-notes [!DNL Python] et R. Ce guide se concentre sur l&#39;utilisation des portables JupyterLab pour accéder à vos données.
+Chaque noyau pris en charge fournit des fonctionnalités intégrées qui vous permettent de lire les données de Platform à partir d’un jeu de données dans un notebook. Actuellement, JupyterLab dans Adobe Experience Platform Data Science Workspace prend en charge les notebooks pour [!DNL Python], R, PySpark et Scala. Toutefois, la prise en charge de la pagination des données est limitée aux notebooks [!DNL Python] et R. Ce guide se concentre sur l’utilisation des notebooks JupyterLab pour accéder à vos données.
 
 ## Prise en main
 
-Avant de lire ce guide, consultez le [[!DNL JupyterLab] guide d&#39;utilisateur](./overview.md) pour une présentation de haut niveau de [!DNL JupyterLab] et de son rôle dans Data Science Workspace.
+Avant de lire ce guide, consultez le [[!DNL JupyterLab] guide de l’utilisateur](./overview.md) pour une présentation de haut niveau de [!DNL JupyterLab] et de son rôle dans Data Science Workspace.
 
-## Limites de données des ordinateurs portables {#notebook-data-limits}
+## Limites de données des notebooks {#notebook-data-limits}
 
 >[!IMPORTANT]
 >
->Pour les ordinateurs portables PySpark et Scala si vous recevez une erreur indiquant la raison pour laquelle le client RPC distant a été dissocié. Cela signifie généralement que le conducteur ou un exécuteur manque de mémoire. Essayez de passer en mode [&quot;batch&quot;](#mode) pour résoudre cette erreur.
+>Pour les notebooks PySpark et Scala si vous recevez une erreur expliquant que &quot;Client RPC distant dissocié&quot;. Cela signifie généralement que la mémoire du pilote ou de l’exécuteur est insuffisante. Essayez de passer en mode [&quot;batch&quot;](#mode) pour résoudre cette erreur.
 
-Les informations suivantes définissent la quantité maximale de données pouvant être lues, le type de données utilisé et la période estimée de lecture des données.
+Les informations suivantes définissent la quantité maximale de données pouvant être lues, le type de données utilisé et la période estimée nécessaire à la lecture des données.
 
-Pour [!DNL Python] et R, un serveur de bloc-notes configuré à 40 Go de RAM a été utilisé pour les tests. Pour PySpark et Scala, une grappe de serveurs de données configurée à 64 Go de RAM, 8 coeurs, 2 DBU avec un maximum de 4 travailleurs a été utilisée pour les bancs d’essai décrits ci-dessous.
+Pour [!DNL Python] et R, un serveur de notebook configuré à 40 Go de RAM a été utilisé pour les références. Pour PySpark et Scala, un cluster de données configuré à 64 Go de mémoire vive, 8 coeurs, 2 DBU avec un maximum de 4 programmes de travail a été utilisé pour les références décrites ci-dessous.
 
-Les données du schéma ExperienceEvent utilisées variaient en taille en commençant par un millier de lignes (1K) allant jusqu’à un milliard de lignes (1B). Notez que pour les mesures PySpark et [!DNL Spark], une période de 10 jours a été utilisée pour les données XDM.
+Les données de schéma ExperienceEvent utilisées ont une taille variable, allant de mille (1K) lignes allant jusqu’à un milliard (1B). Notez que pour les mesures PySpark et [!DNL Spark] , une période de 10 jours a été utilisée pour les données XDM.
 
-Les données de schéma ad hoc ont été prétraitées à l’aide de [!DNL Query Service] Create Table as Select (CTAS). Ces données varient également en taille en commençant par un millier (1K) de lignes allant jusqu&#39;à un milliard (1B) de lignes.
+Les données de schéma ad hoc ont été prétraitées à l’aide de [!DNL Query Service] Create Table as Select (CTAS). La taille de ces données varie également d’un millier de lignes (1K) allant jusqu’à un milliard de lignes (1B).
 
-### Quand utiliser le mode par lot par rapport au mode interactif {#mode}
+### Quand utiliser le mode batch ou le mode interactif ? {#mode}
 
-Lors de la lecture de jeux de données avec des ordinateurs portables PySpark et Scala, vous avez la possibilité d&#39;utiliser le mode interactif ou le mode batch pour lire le jeu de données. Interactive est effectué pour des résultats rapides alors que le mode batch est utilisé pour des jeux de données volumineux.
+Lors de la lecture de jeux de données avec des notebooks PySpark et Scala, vous avez la possibilité d’utiliser le mode interactif ou le mode batch pour lire le jeu de données. L’option interactive est faite pour des résultats rapides, tandis que le mode batch est appliqué aux jeux de données volumineux.
 
-- Pour les ordinateurs portables PySpark et Scala, le mode batch doit être utilisé lorsque 5 millions de lignes de données ou plus sont lues. Pour plus d’informations sur l’efficacité de chaque mode, voir les tableaux de limite de données [PySpark](#pyspark-data-limits) ou [Scala](#scala-data-limits) ci-dessous.
+- Pour les notebooks PySpark et Scala, le mode batch doit être utilisé lorsque 5 millions de lignes de données ou plus sont en cours de lecture. Pour plus d’informations sur l’efficacité de chaque mode, voir les tableaux de limite de données [PySpark](#pyspark-data-limits) ou [Scala](#scala-data-limits) ci-dessous.
 
-### [!DNL Python] limites de données des ordinateurs portables
+### [!DNL Python] limites de données des notebooks
 
-**Schéma XDM ExperienceEvent :** vous devez être en mesure de lire un maximum de 2 millions de lignes (environ 6,1 Go de données sur le disque) de données XDM en moins de 22 minutes. L’Ajoute de lignes supplémentaires peut entraîner des erreurs.
+**Schéma XDM ExperienceEvent :**  vous devriez être en mesure de lire un maximum de 2 millions de lignes (~6,1 Go de données sur le disque) de données XDM en moins de 22 minutes. L’ajout de lignes supplémentaires peut entraîner des erreurs.
 
-| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M | 2M |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M | 2M |
 | ----------------------- | ------ | ------ | ----- | ----- | ----- |
 | Taille sur le disque (Mo) | 18,73 | 187,5 | 308 | 3 000 | 6050 |
 | SDK (en secondes) | 20,3 | 86,8 | 63 | 659 | 1315 |
 
-**schéma ad hoc :** vous devez être en mesure de lire un maximum de 5 millions de lignes (environ 5,6 Go de données sur le disque) de données non XDM (ad hoc) en moins de 14 minutes. L’Ajoute de lignes supplémentaires peut entraîner des erreurs.
+**schéma ad hoc :** vous devriez pouvoir lire un maximum de 5 millions de lignes (~5,6 Go de données sur le disque) de données non XDM (ad hoc) en moins de 14 minutes. L’ajout de lignes supplémentaires peut entraîner des erreurs.
 
-| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M | 2M | 3M | 5M |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M | 2M | 3M | 5M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
-| Taille sur le disque (en Mo) | 1,21 | 11,72 | 115 | 1120 | 2250 | 3 380 | 5630 |
+| Taille sur le disque (en Mo) | 1,21 | 11,72 | 115 | 1120 | 2250 | 3380 | 5630 |
 | SDK (en secondes) | 7,27 | 9,04 | 27,3 | 180 | 346 | 487 | 819 |
 
-### Limites de données des ordinateurs portables R
+### Limites de données des notebooks R
 
-**Schéma XDM ExperienceEvent :** vous devriez être en mesure de lire un maximum de 1 million de lignes de données XDM (données de 3 Go sur le disque) en moins de 13 minutes.
+**Schéma XDM ExperienceEvent :**  vous devriez pouvoir lire un maximum de 1 million de lignes de données XDM (données de 3 Go sur le disque) en moins de 13 minutes.
 
-| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M |
 | ----------------------- | ------ | ------ | ----- | ----- |
 | Taille sur le disque (Mo) | 18,73 | 187,5 | 308 | 3 000 |
 | Noyau R (en secondes) | 14,03 | 69,6 | 86,8 | 775 |
 
-**schéma ad hoc :** vous devriez être en mesure de lire un maximum de 3 millions de lignes de données ad hoc (293 Mo de données sur le disque) en 10 minutes environ.
+**schéma ad hoc :** vous devriez pouvoir lire un maximum de 3 millions de lignes de données ad hoc (293 Mo de données sur le disque) en 10 minutes environ.
 
-| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M | 2M | 3M |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M | 2M | 3M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
 | Taille sur le disque (en Mo) | 0,082 | 0,612 | 9.0 | 91 | 188 | 293 |
-| SDK R (en s) | 7,7 | 4,58 | 35,9 | 233 | 470,5 | 603 |
+| SDK R (en secondes) | 7,7 | 4,58 | 35,9 | 233 | 470,5 | 603 |
 
-### Limites des données du bloc-notes PySpark ([!DNL Python] kernel) : {#pyspark-data-limits}
+### Limites des données du notebook PySpark ([!DNL Python] noyau) : {#pyspark-data-limits}
 
-**Schéma XDM ExperienceEvent :** en mode interactif, vous devriez être en mesure de lire un maximum de 5 millions de lignes (environ 13,42 Go de données sur disque) de données XDM en 20 minutes environ. Le mode interactif ne prend en charge que jusqu’à 5 millions de lignes. Si vous souhaitez lire des jeux de données plus volumineux, il est conseillé de passer en mode batch. En mode batch, vous devriez pouvoir lire un maximum de 500 millions de lignes (environ 1,31 To de données sur disque) de données XDM en 14 heures environ.
+**Schéma XDM ExperienceEvent :** en mode interactif, vous devriez pouvoir lire un maximum de 5 millions de lignes (~13,42 Go de données sur le disque) de données XDM en environ 20 minutes. Le mode interactif ne prend en charge que 5 millions de lignes au maximum. Si vous souhaitez lire des jeux de données plus volumineux, il est conseillé de passer en mode batch. En mode batch, vous devriez pouvoir lire un maximum de 500 millions de lignes (~1,31 To de données sur le disque) de données XDM en 14 heures environ.
 
-| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M | 2M | 3M | 5M | 10 millions | 50 M | 100 millions | 500 millions |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
 |-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
 | Taille du disque | 2,93 Mo | 4,38 Mo | 29,02 | 2.69 Go | 5.39 Go | 8.09 Go | 13.42 Go | 26.82 Go | 134.24 Go | 268.39 Go | 1,31 To |
-| SDK (mode interactif) | 33 s | 32,4 s | 55,1 s | 253,5 s | 489,2 s | 729,6 s | 1 206,8 s | - | - | - | - |
-| SDK (mode Batch) | 815,8 s | 492,8 s | 379,1 s | 637,4 s | 624,5 s | 869,2 s | 1104,1 s | 1786 s | 5 387,2 s | 1 0624,6 s | 50547s |
+| SDK (mode interactif) | 33s | 32,4 s | 55.1 s | 253.5s | 489.2s | 729.6s | 1206.8s | - | - | - | - |
+| SDK (mode batch) | 815.8s | 492.8s | 379.1s | 637,4 s | 624.5s | 869.2s | 1104.1s | 1 786 s | 5387.2s | 10624.6s | 50547s |
 
-**schéma ad hoc :** en mode interactif, vous devriez être en mesure de lire un maximum de 5 millions de lignes (environ 5,36 Go de données sur le disque) de données non XDM en moins de 3 minutes. En mode Batch, vous devriez être en mesure de lire un maximum de 1 milliard de lignes (environ 1,05 To de données sur disque) de données non-XDM en 18 minutes environ.
+**schéma ad hoc :** en mode interactif, vous devriez pouvoir lire un maximum de 5 millions de lignes (~5,36 Go de données sur le disque) de données non XDM en moins de 3 minutes. En mode Lot , vous devriez pouvoir lire un maximum de 1 milliard de lignes (~1,05 To de données sur le disque) de données non XDM en environ 18 minutes.
 
-| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M | 2M | 3M | 5M | 10 millions | 50 M | 100 millions | 500 millions | 1B |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
 | Taille du disque | 1,12 Mo | 11,24 Mo | 109,48 Mo | 2.69 Go | 2.14 Go | 3.21 Go | 5.36 Go | 10.71 Go | 53.58 Go | 107.52 Go | 535.88 Go | 1,05 To |
-| Mode interactif SDK (en secondes) | 28,2 s | 18,6 s | 20,8 s | 20,9 s | 23,8 s | 21,7 s | 24,7 s | - | - | - | - | - |
-| Mode de traitement par lots du SDK (en secondes) | 428,8 s | 578,8 s | 641,4 s | 538,5 s | 630,9 s | 467,3 s | 411 s | 675 s | 702 s | 719,2 s | 1022,1 s | 1122,3 s |
+| Mode interactif SDK (en secondes) | 28.2 s | 18.6s | 20,8 s | 20,9 s | 23,8 s | 21,7 s | 24,7 s | - | - | - | - | - |
+| Mode batch du SDK (en secondes) | 428.8s | 578.8s | 641.4 s | 538.5s | 630,9 s | 467.3s | 411s | 675s | 702s | 719.2s | 1022.1s | 1122.3s |
 
-### [!DNL Spark] Limites des données des blocs-notes (noyau Scala) :  {#scala-data-limits}
+### [!DNL Spark] Limites des données du notebook (noyau Scala) :  {#scala-data-limits}
 
-**Schéma XDM ExperienceEvent :** en mode interactif, vous devriez être en mesure de lire un maximum de 5 millions de lignes (environ 13,42 Go de données sur disque) de données XDM en 18 minutes environ. Le mode interactif ne prend en charge que jusqu’à 5 millions de lignes. Si vous souhaitez lire des jeux de données plus volumineux, il est conseillé de passer en mode batch. En mode batch, vous devriez pouvoir lire un maximum de 500 millions de lignes (environ 1,31 To de données sur disque) de données XDM en 14 heures environ.
+**Schéma XDM ExperienceEvent :** en mode interactif, vous devriez pouvoir lire un maximum de 5 millions de lignes (~13,42 Go de données sur le disque) de données XDM en environ 18 minutes. Le mode interactif ne prend en charge que 5 millions de lignes au maximum. Si vous souhaitez lire des jeux de données plus volumineux, il est conseillé de passer en mode batch. En mode batch, vous devriez pouvoir lire un maximum de 500 millions de lignes (~1,31 To de données sur le disque) de données XDM en 14 heures environ.
 
-| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M | 2M | 3M | 5M | 10 millions | 50 M | 100 millions | 500 millions |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
 |---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
 | Taille du disque | 2,93 Mo | 4,38 Mo | 29,02 | 2.69 Go | 5.39 Go | 8.09 Go | 13.42 Go | 26.82 Go | 134.24 Go | 268.39 Go | 1,31 To |
-| Mode interactif SDK (en secondes) | 37,9 s | 22,7 s | 45,6 s | 231,7 s | 444,7 s | 660,6 s | 1100 s | - | - | - | - |
-| Mode de traitement par lots du SDK (en secondes) | 374,4 s | 398,5 s | 527 s | 487,9 s | 588,9 s | 829 s | 939,1 s | 1 441 s | 5 473,2 s | 10 118,8 | 49 207,6 |
+| Mode interactif SDK (en secondes) | 37,9 s | 22,7 s | 45.6s | 231,7 s | 444,7 s | 660.6s | 1 100 s | - | - | - | - |
+| Mode batch du SDK (en secondes) | 374.4 s | 398.5s | 527s | 487.9s | 588.9s | 829 s | 939.1s | 1 441 s | 5473.2s | 10118.8 | 49207.6 |
 
-**schéma ad hoc :** en mode interactif, vous devriez être en mesure de lire un maximum de 5 millions de lignes (environ 5,36 Go de données sur le disque) de données non XDM en moins de 3 minutes. En mode batch, vous devriez être en mesure de lire un maximum de 1 milliard de lignes (~1,05 To de données sur disque) de données non-XDM en 16 minutes environ.
+**schéma ad hoc :** en mode interactif, vous devriez pouvoir lire un maximum de 5 millions de lignes (~5,36 Go de données sur le disque) de données non XDM en moins de 3 minutes. En mode batch, vous devriez pouvoir lire un maximum de 1 milliard de lignes (~1,05 To de données sur le disque) de données non XDM en environ 16 minutes.
 
-| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1 M | 2M | 3M | 5M | 10 millions | 50 M | 100 millions | 500 millions | 1B |
+| Nombre de lignes | 1 000 | 10 000 | 100 000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
 | Taille du disque | 1,12 Mo | 11,24 Mo | 109,48 Mo | 2.69 Go | 2.14 Go | 3.21 Go | 5.36 Go | 10.71 Go | 53.58 Go | 107.52 Go | 535.88 Go | 1,05 To |
-| Mode interactif SDK (en secondes) | 35,7 s | 31 s | 19,5 s | 25,3 s | 23 s | 33,2 s | 25,5 s | - | - | - | - | - |
-| Mode de traitement par lots du SDK (en secondes) | 448,8 s | 459,7 s | 519 s | 475,8 s | 599,9 s | 347,6 s | 407,8 s | 397 s | 518,8 s | 487,9 s | 760,2 s | 975,4 s |
+| Mode interactif SDK (en secondes) | 35,7 s | 31 s | 19.5s | 25.3 | 23 s | 33.2s | 25.5s | - | - | - | - | - |
+| Mode batch du SDK (en secondes) | 448.8s | 459,7 s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397 s | 518.8s | 487.9s | 760.2s | 975.4 s |
 
-## Ordinateurs portables Python {#python-notebook}
+## notebooks Python {#python-notebook}
 
-[!DNL Python] les portables vous permettent de paginer les données lors de l&#39;accès aux jeux de données. Vous trouverez ci-dessous un exemple de code pour lire des données avec et sans pagination. Pour plus d&#39;informations sur les blocs-notes Python de démarrage disponibles, consultez la section [[!DNL JupyterLab] Lanceur](./overview.md#launcher) du guide d&#39;utilisation de JupyterLab.
+[!DNL Python] les notebooks vous permettent de paginer les données lors de l’accès aux jeux de données. Vous trouverez ci-dessous un exemple de code pour lire des données avec et sans pagination. Pour plus d’informations sur les notebooks Python de démarrage disponibles, consultez la section [[!DNL JupyterLab] Lanceur](./overview.md#launcher) du guide d’utilisation de JupyterLab.
 
 La documentation Python ci-dessous décrit les concepts suivants :
 
 - [Lecture à partir d’un jeu de données](#python-read-dataset)
-- [Écrire dans un jeu de données](#write-python)
+- [Écriture dans un jeu de données](#write-python)
 - [Données de requête](#query-data-python)
 - [Filtrage des données ExperienceEvent](#python-filter)
 
@@ -148,17 +147,17 @@ dataset_reader = DatasetReader(get_platform_sdk_client_context(), dataset_id="{D
 df = dataset_reader.limit(100).offset(10).read()
 ```
 
-### Écrire dans un jeu de données en Python {#write-python}
+### Écrire un jeu de données en Python {#write-python}
 
-Pour écrire dans un jeu de données de votre bloc-notes JupyterLab, sélectionnez l&#39;onglet Icône de données (en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Datasets]** et **[!UICONTROL Schémas]** s&#39;affichent. Sélectionnez **[!UICONTROL Datasets]** et cliquez avec le bouton droit, puis sélectionnez l&#39;option **[!UICONTROL Écrire les données dans le bloc-notes]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s&#39;affiche au bas de votre bloc-notes.
+Pour écrire dans un jeu de données de votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en évidence ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** et cliquez avec le bouton droit, puis sélectionnez l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
-- Utilisez **[!UICONTROL Write Data in Notebook]** pour générer une cellule d&#39;écriture avec votre jeu de données sélectionné.
-- Utilisez **[!UICONTROL Explorer les données dans le bloc-notes]** pour générer une cellule lue avec votre jeu de données sélectionné.
-- Utilisez **[!UICONTROL Données de Requête dans le bloc-notes]** pour générer une cellule de requête de base avec votre jeu de données sélectionné.
+- Utilisez **[!UICONTROL Écrire des données dans Notebook]** pour générer une cellule d’écriture avec votre jeu de données sélectionné.
+- Utilisez **[!UICONTROL Explorer les données dans Notebook]** pour générer une cellule de lecture avec votre jeu de données sélectionné.
+- Utilisez **[!UICONTROL Données de requête dans Notebook]** pour générer une cellule de requête de base avec votre jeu de données sélectionné.
 
-Vous pouvez également copier et coller la cellule de code suivante. Remplacez à la fois `{DATASET_ID}` et `{PANDA_DATAFRAME}`.
+Vous pouvez également copier et coller la cellule de code suivante. Remplacez `{DATASET_ID}` et `{PANDA_DATAFRAME}`.
 
 ```python
 from platform_sdk.models import Dataset
@@ -171,15 +170,15 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 ### Données de requête utilisant [!DNL Query Service] dans [!DNL Python] {#query-data-python}
 
-[!DNL JupyterLab][!DNL Platform][!DNL Python] sur vous permet d’utiliser SQL dans un notebook pour accéder aux données via [Adobe Experience Platform Query Service](https://docs.adobe.com/content/help/fr-FR/experience-platform/query/home.html). L&#39;accès aux données via [!DNL Query Service] peut s&#39;avérer utile pour traiter des jeux de données volumineux en raison de ses délais d&#39;exécution supérieurs. Notez que l&#39;interrogation de données à l&#39;aide de [!DNL Query Service] a une durée de traitement limitée à dix minutes.
+[!DNL JupyterLab][!DNL Platform][!DNL Python] sur vous permet d’utiliser SQL dans un notebook pour accéder aux données via [Adobe Experience Platform Query Service](https://docs.adobe.com/content/help/fr-FR/experience-platform/query/home.html). L’accès aux données par l’intermédiaire de [!DNL Query Service] peut s’avérer utile pour traiter des jeux de données volumineux en raison de ses temps d’exécution supérieurs. Notez que l’interrogation de données à l’aide de [!DNL Query Service] a une durée de traitement de dix minutes.
 
-Avant d&#39;utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre la syntaxe [[!DNL Query Service] SQL](https://docs.adobe.com/content/help/fr-FR/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md).
+Avant d’utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre la [[!DNL Query Service] syntaxe SQL](https://docs.adobe.com/content/help/fr-FR/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md).
 
-Pour interroger des données à l&#39;aide de [!DNL Query Service], vous devez indiquer le nom du jeu de données de cible. Vous pouvez générer les cellules de code nécessaires en recherchant le jeu de données souhaité à l’aide de l’**[!UICONTROL explorateur de données]**. Cliquez avec le bouton droit sur la liste des jeux de données et cliquez sur **[!UICONTROL Données de Requête dans le bloc-notes]** pour générer deux cellules de code dans votre bloc-notes. Ces deux cellules sont décrites plus en détail ci-dessous.
+La requête de données à l’aide de [!DNL Query Service] nécessite que vous fournissiez le nom du jeu de données cible. Vous pouvez générer les cellules de code nécessaires en recherchant le jeu de données souhaité à l’aide de l’**[!UICONTROL explorateur de données]**. Cliquez avec le bouton droit sur la liste des jeux de données, puis cliquez sur **[!UICONTROL Query Data dans Notebook]** pour générer deux cellules de code dans votre notebook. Ces deux cellules sont décrites plus en détail ci-dessous.
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
-Pour utiliser [!DNL Query Service] dans [!DNL JupyterLab], vous devez d&#39;abord créer une connexion entre votre bloc-notes [!DNL Python] fonctionnel et [!DNL Query Service]. Pour ce faire, exécutez la première cellule générée.
+Pour utiliser [!DNL Query Service] dans [!DNL JupyterLab], vous devez d’abord créer une connexion entre votre [!DNL Python] notebook fonctionnel et [!DNL Query Service]. Pour ce faire, exécutez la première cellule générée.
 
 ```python
 qs_connect()
@@ -208,9 +207,9 @@ SELECT {table_columns}
 FROM {table_name}
 ```
 
-### Filtrer [!DNL ExperienceEvent] données {#python-filter}
+### Filtrer les [!DNL ExperienceEvent] données {#python-filter}
 
-Pour accéder à un jeu de données [!DNL ExperienceEvent] et le filtrer dans un bloc-notes [!DNL Python], vous devez indiquer l&#39;identifiant du jeu de données (`{DATASET_ID}`) ainsi que les règles de filtrage qui définissent une plage de temps spécifique à l&#39;aide d&#39;opérateurs logiques. Lorsqu’un intervalle de temps est défini, toute pagination spécifiée est ignorée et le jeu de données complet est pris en compte.
+Pour accéder à un jeu de données [!DNL ExperienceEvent] et le filtrer dans un notebook [!DNL Python], vous devez fournir l’identifiant du jeu de données (`{DATASET_ID}`) ainsi que les règles de filtrage qui définissent une période spécifique à l’aide d’opérateurs logiques. Lorsqu’un intervalle de temps est défini, toute pagination spécifiée est ignorée et le jeu de données complet est pris en compte.
 
 Une liste d’opérateurs de filtrage est décrite ci-dessous :
 
@@ -222,7 +221,7 @@ Une liste d’opérateurs de filtrage est décrite ci-dessous :
 - `And()` : opérateur ET logique
 - `Or()` : opérateur OU logique
 
-La cellule suivante filtres un jeu de données [!DNL ExperienceEvent] aux données qui existent exclusivement entre le 1er janvier 2019 et la fin du 31 décembre 2019.
+La cellule suivante filtre un jeu de données [!DNL ExperienceEvent] sur les données qui existent exclusivement entre le 1er janvier 2019 et la fin du 31 décembre 2019.
 
 ```python
 # Python
@@ -236,17 +235,17 @@ df = dataset_reader.\
 ).read()
 ```
 
-## Ordinateurs portables R {#r-notebooks}
+## notebooks R {#r-notebooks}
 
-Les portables R vous permettent de paginer les données lors de l&#39;accès aux jeux de données. Vous trouverez ci-dessous un exemple de code pour lire des données avec et sans pagination. Pour plus d&#39;informations sur les blocs-notes de démarrage R disponibles, consultez la section [[!DNL JupyterLab] Lanceur](./overview.md#launcher) du guide d&#39;utilisation de JupyterLab.
+Les notebooks R vous permettent de paginer les données lors de l’accès aux jeux de données. Vous trouverez ci-dessous un exemple de code pour lire des données avec et sans pagination. Pour plus d’informations sur les notebooks de démarrage R disponibles, consultez la section [[!DNL JupyterLab] Lanceur](./overview.md#launcher) du guide d’utilisation de JupyterLab.
 
 La documentation R ci-dessous décrit les concepts suivants :
 
 - [Lecture à partir d’un jeu de données](#r-read-dataset)
-- [Écrire dans un jeu de données](#write-r)
+- [Écriture dans un jeu de données](#write-r)
 - [Filtrage des données ExperienceEvent](#r-filter)
 
-### Lu à partir d&#39;un jeu de données dans R {#r-read-dataset}
+### Lecture à partir d’un jeu de données dans R {#r-read-dataset}
 
 **Sans pagination :**
 
@@ -284,14 +283,14 @@ dataset_reader <- DatasetReader(py$get_platform_sdk_client_context(), dataset_id
 df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 ```
 
-### Écrire dans un jeu de données dans R {#write-r}
+### Écrire dans un jeu de données en R {#write-r}
 
-Pour écrire dans un jeu de données de votre bloc-notes JupyterLab, sélectionnez l&#39;onglet Icône de données (en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Datasets]** et **[!UICONTROL Schémas]** s&#39;affichent. Sélectionnez **[!UICONTROL Datasets]** et cliquez avec le bouton droit, puis sélectionnez l&#39;option **[!UICONTROL Écrire les données dans le bloc-notes]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s&#39;affiche au bas de votre bloc-notes.
+Pour écrire dans un jeu de données de votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en évidence ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** et cliquez avec le bouton droit, puis sélectionnez l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
-- Utilisez **[!UICONTROL Write Data in Notebook]** pour générer une cellule d&#39;écriture avec votre jeu de données sélectionné.
-- Utilisez **[!UICONTROL Explorer les données dans le bloc-notes]** pour générer une cellule lue avec votre jeu de données sélectionné.
+- Utilisez **[!UICONTROL Écrire des données dans Notebook]** pour générer une cellule d’écriture avec votre jeu de données sélectionné.
+- Utilisez **[!UICONTROL Explorer les données dans Notebook]** pour générer une cellule de lecture avec votre jeu de données sélectionné.
 
 Vous pouvez également copier et coller la cellule de code suivante :
 
@@ -302,9 +301,9 @@ dataset_writer <- psdk$dataset_writer$DatasetWriter(py$get_platform_sdk_client_c
 write_tracker <- dataset_writer$write(df, file_format='json')
 ```
 
-### Filtrer [!DNL ExperienceEvent] données {#r-filter}
+### Filtrer les [!DNL ExperienceEvent] données {#r-filter}
 
-Pour accéder à un jeu de données [!DNL ExperienceEvent] et le filtrer dans un bloc-notes R, vous devez indiquer l&#39;identifiant du jeu de données (`{DATASET_ID}`) ainsi que les règles de filtrage qui définissent une plage de temps spécifique à l&#39;aide d&#39;opérateurs logiques. Lorsqu’un intervalle de temps est défini, toute pagination spécifiée est ignorée et le jeu de données complet est pris en compte.
+Pour accéder à un jeu de données [!DNL ExperienceEvent] et le filtrer dans un notebook R, vous devez fournir l’identifiant du jeu de données (`{DATASET_ID}`) ainsi que les règles de filtrage qui définissent un intervalle de temps spécifique à l’aide d’opérateurs logiques. Lorsqu’un intervalle de temps est défini, toute pagination spécifiée est ignorée et le jeu de données complet est pris en compte.
 
 Une liste d’opérateurs de filtrage est décrite ci-dessous :
 
@@ -316,7 +315,7 @@ Une liste d’opérateurs de filtrage est décrite ci-dessous :
 - `And()` : opérateur ET logique
 - `Or()` : opérateur OU logique
 
-La cellule suivante filtres un jeu de données [!DNL ExperienceEvent] aux données qui existent exclusivement entre le 1er janvier 2019 et la fin du 31 décembre 2019.
+La cellule suivante filtre un jeu de données [!DNL ExperienceEvent] sur les données qui existent exclusivement entre le 1er janvier 2019 et la fin du 31 décembre 2019.
 
 ```R
 # R
@@ -337,27 +336,27 @@ df0 <- dataset_reader$
 )$read()
 ```
 
-## Ordinateurs portables PySpark 3 {#pyspark-notebook}
+## notebooks PySpark 3 {#pyspark-notebook}
 
-La documentation de PySpark ci-dessous décrit les concepts suivants :
+La documentation PySpark ci-dessous décrit les concepts suivants :
 
-- [Initialiser sparkSession](#spark-initialize)
+- [Initialisation de sparkSession](#spark-initialize)
 - [Lecture et écriture de données](#magic)
 - [Création d’un cadre de données local](#pyspark-create-dataframe)
 - [Filtrage des données ExperienceEvent](#pyspark-filter-experienceevent)
 
 ### Initialisation de sparkSession {#spark-initialize}
 
-Tous les blocs-notes [!DNL Spark] 2.4 exigent que vous initialisiez la session avec le code standard suivant.
+Tous les notebooks [!DNL Spark] 2.4 requièrent l’initialisation de la session avec le code standard suivant.
 
 ```scala
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 ```
 
-### Utilisation de %dataset pour lire et écrire avec un bloc-notes PySpark 3 {#magic}
+### Utilisation de %dataset pour lire et écrire avec un notebook PySpark 3 {#magic}
 
-Avec l&#39;introduction de [!DNL Spark] 2.4, `%dataset` magie personnalisée est fournie pour être utilisée dans les portables PySpark 3 ([!DNL Spark] 2.4). Pour plus de détails sur les commandes magiques disponibles dans le noyau IPython, consultez la [documentation magique IPython](https://ipython.readthedocs.io/en/stable/interactive/magics.html).
+Avec l’introduction de [!DNL Spark] 2.4, la `%dataset` magie personnalisée est fournie pour une utilisation dans les notebooks PySpark 3 ([!DNL Spark] 2.4). Pour plus d’informations sur les commandes magiques disponibles dans le noyau IPython, consultez la [documentation magique IPython](https://ipython.readthedocs.io/en/stable/interactive/magics.html).
 
 
 **Utilisation**
@@ -368,36 +367,48 @@ Avec l&#39;introduction de [!DNL Spark] 2.4, `%dataset` magie personnalisée est
 
 **Description**
 
-Commande magique [!DNL Data Science Workspace] personnalisée pour lire ou écrire un jeu de données à partir d&#39;un bloc-notes [!DNL PySpark] ([!DNL Python] 3).
+Commande magique [!DNL Data Science Workspace] personnalisée pour lire ou écrire un jeu de données à partir d’un notebook [!DNL PySpark] ([!DNL Python] noyau 3).
 
 | Nom | Description | Obligatoire |
 | --- | --- | --- |
-| `{action}` | Type d’action à exécuter sur le jeu de données. Deux actions sont disponibles &quot;read&quot; ou &quot;write&quot;. | Oui |
-| `--datasetId {id}` | Utilisé pour fournir l&#39;ID du jeu de données à lire ou à écrire. | Oui |
-| `--dataFrame {df}` | La base de données des pandas. <ul><li> Lorsque l&#39;action est &quot;read&quot;, {df} est la variable où les résultats de l&#39;opération de lecture du jeu de données sont disponibles. </li><li> Lorsque l&#39;action est &quot;write&quot;, ce dataframe {df} est écrit dans le dataset. </li></ul> | Oui |
-| `--mode` | Paramètre supplémentaire qui modifie le mode de lecture des données. Les paramètres autorisés sont &quot;batch&quot; et &quot;interactive&quot;. Par défaut, le mode est défini sur &quot;interactif&quot;. Il est recommandé d’utiliser le mode &quot;batch&quot; lors de la lecture de grandes quantités de données. | Non |
+| `{action}` | Type d’action à effectuer sur le jeu de données. Deux actions sont disponibles &quot;read&quot; ou &quot;write&quot;. | Oui |
+| `--datasetId {id}` | Utilisé pour fournir l’identifiant du jeu de données à lire ou à écrire. | Oui |
+| `--dataFrame {df}` | Le cadre de données pandas. <ul><li> Lorsque l’action est &quot;read&quot;, {df} est la variable dans laquelle les résultats de l’opération de lecture du jeu de données sont disponibles. </li><li> Lorsque l’action est &quot;write&quot;, ce cadre de données {df} est écrit dans le jeu de données. </li></ul> | Oui |
+| `--mode` | Paramètre supplémentaire qui modifie la manière dont les données sont lues. Les paramètres autorisés sont &quot;batch&quot; et &quot;interactive&quot;. Par défaut, le mode est défini sur &quot;interactif&quot;. Il est recommandé d’utiliser le mode &quot;batch&quot; lors de la lecture de grandes quantités de données. | Non |
 
 >[!TIP]
 >
->Consultez les tables PySpark dans la section [limites de données du bloc-notes](#notebook-data-limits) pour déterminer si `mode` doit être défini sur `interactive` ou `batch`.
+>Consultez les tables PySpark dans la section [Limites de données des notebooks](#notebook-data-limits) pour déterminer si `mode` doit être défini sur `interactive` ou `batch`.
 
 **Exemples**
 
 - **Exemple** de lecture :  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
 - **Exemple** d&#39;écriture :  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
-Vous pouvez générer automatiquement les exemples ci-dessus dans JupyterLab buy à l’aide de la méthode suivante :
+>[!IMPORTANT]
+>
+> La mise en cache de données à l’aide de `df.cache()` avant l’écriture de données peut améliorer considérablement les performances des notebooks. Cela peut vous aider si vous recevez l’une des erreurs suivantes :
+> 
+> - Traitement abandonné en raison d’un échec de test... Peuvent uniquement compresser les RDD avec le même nombre d&#39;éléments dans chaque partition.
+> - Client RPC distant dissocié et autres erreurs de mémoire.
+> - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 
-Sélectionnez l&#39;onglet Icône Données (en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Datasets]** et **[!UICONTROL Schémas]** s&#39;affichent. Sélectionnez **[!UICONTROL Datasets]** et cliquez avec le bouton droit, puis sélectionnez l&#39;option **[!UICONTROL Écrire les données dans le bloc-notes]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s&#39;affiche au bas de votre bloc-notes.
+> 
+> 
+Pour plus d’informations, consultez le [guide de dépannage](../troubleshooting-guide.md) .
 
-- Utilisez **[!UICONTROL Explorer les données dans le bloc-notes]** pour générer une cellule lue.
-- Utilisez **[!UICONTROL Write Data in Notebook]** pour générer une cellule d’écriture.
+Vous pouvez générer automatiquement les exemples ci-dessus dans JupyterLab en achetant à l’aide de la méthode suivante :
+
+Sélectionnez l’onglet Icône de données (en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** et cliquez avec le bouton droit, puis sélectionnez l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+
+- Utilisez **[!UICONTROL Explorer les données dans Notebook]** pour générer une cellule de lecture.
+- Utilisez **[!UICONTROL Écrire des données dans Notebook]** pour générer une cellule d’écriture.
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
-### Créer une base de données locale {#pyspark-create-dataframe}
+### Créer un cadre de données local {#pyspark-create-dataframe}
 
-Pour créer une base de données locale à l&#39;aide de PySpark 3, utilisez des requêtes SQL. Par exemple :
+Pour créer un cadre de données local à l’aide de PySpark 3, utilisez des requêtes SQL. Par exemple :
 
 ```scala
 date_aggregation.createOrReplaceTempView("temp_df")
@@ -424,13 +435,13 @@ sample_df = df.sample(fraction)
 
 >[!TIP]
 >
->Vous pouvez également spécifier un échantillon de semences facultatif, tel qu’un booléen avec remplacement, une fraction de doublon ou une graine longue.
+>Vous pouvez également spécifier un échantillon de contrôle facultatif, tel qu’une valeur booléenne avecRemplacement, une double fraction ou une valeur de départ longue.
 
-### Filtrer [!DNL ExperienceEvent] données {#pyspark-filter-experienceevent}
+### Filtrer les [!DNL ExperienceEvent] données {#pyspark-filter-experienceevent}
 
-L&#39;accès et le filtrage d&#39;un jeu de données [!DNL ExperienceEvent] dans un bloc-notes PySpark nécessitent que vous fournissiez l&#39;identité du jeu de données (`{DATASET_ID}`), l&#39;identité IMS de votre entreprise et les règles de filtrage définissant une plage de temps spécifique. Une plage de temps de filtrage est définie à l&#39;aide de la fonction `spark.sql()`, où le paramètre de la fonction est une chaîne de requête SQL.
+Pour accéder à un jeu de données [!DNL ExperienceEvent] et le filtrer dans un notebook PySpark, vous devez fournir l’identité du jeu de données (`{DATASET_ID}`), l’identité IMS de votre organisation et les règles de filtrage définissant une période spécifique. Un intervalle de temps de filtrage est défini à l’aide de la fonction `spark.sql()`, où le paramètre de fonction est une chaîne de requête SQL.
 
-Les cellules suivantes filtrent un jeu de données [!DNL ExperienceEvent] sur les données qui existent exclusivement entre le 1er janvier 2019 et la fin du 31 décembre 2019.
+Les cellules suivantes filtrent un jeu de données [!DNL ExperienceEvent] par rapport aux données qui existent exclusivement entre le 1er janvier 2019 et la fin du 31 décembre 2019.
 
 ```python
 # PySpark 3 (Spark 2.4)
@@ -450,19 +461,19 @@ timepd = spark.sql("""
 timepd.show()
 ```
 
-## Ordinateurs portables Scala {#scala-notebook}
+## notebooks Scala0/>{#scala-notebook}
 
 La documentation ci-dessous contient des exemples des concepts suivants :
 
-- [Initialiser sparkSession](#scala-initialize)
+- [Initialisation de sparkSession](#scala-initialize)
 - [Lecture d’un jeu de données](#read-scala-dataset)
-- [Écrire dans un jeu de données](#scala-write-dataset)
+- [Écriture dans un jeu de données](#scala-write-dataset)
 - [Création d’un cadre de données local](#scala-create-dataframe)
 - [Filtrage des données ExperienceEvent](#scala-experienceevent)
 
 ### Initialisation de SparkSession {#scala-initialize}
 
-Tous les ordinateurs portables Scala nécessitent que vous initialisiez la session avec le code standard suivant :
+Tous les notebooks Scala nécessitent que vous initialisiez la session avec le code standard suivant :
 
 ```scala
 import org.apache.spark.sql.{ SparkSession }
@@ -474,7 +485,19 @@ val spark = SparkSession
 
 ### Lire un jeu de données {#read-scala-dataset}
 
-Dans Scala, vous pouvez importer `clientContext` pour obtenir et renvoyer des valeurs de plate-forme, ce qui évite de définir des variables telles que `var userToken`. Dans l&#39;exemple Scala ci-dessous, `clientContext` est utilisé pour obtenir et renvoyer toutes les valeurs requises pour lire un jeu de données.
+Dans Scala, vous pouvez importer `clientContext` pour obtenir et renvoyer des valeurs Platform, ce qui élimine la nécessité de définir des variables telles que `var userToken`. Dans l’exemple Scala ci-dessous, `clientContext` est utilisé pour obtenir et renvoyer toutes les valeurs requises pour lire un jeu de données.
+
+>[!IMPORTANT]
+>
+> La mise en cache de données à l’aide de `df.cache()` avant l’écriture de données peut améliorer considérablement les performances des notebooks. Cela peut vous aider si vous recevez l’une des erreurs suivantes :
+> 
+> - Traitement abandonné en raison d’un échec de test... Peuvent uniquement compresser les RDD avec le même nombre d&#39;éléments dans chaque partition.
+> - Client RPC distant dissocié et autres erreurs de mémoire.
+> - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
+
+> 
+> 
+Pour plus d’informations, consultez le [guide de dépannage](../troubleshooting-guide.md) .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -498,28 +521,40 @@ df1.show(10)
 
 | Élément | Description |
 | ------- | ----------- |
-| df1 | Variable qui représente la base de données Pandas utilisée pour lire et écrire des données. |
+| df1 | Variable qui représente le cadre de données pandas utilisé pour lire et écrire des données. |
 | user-token | Votre jeton utilisateur qui est automatiquement récupéré à l’aide de `clientContext.getUserToken()`. |
-| service-token | Votre jeton de service automatiquement récupéré à l’aide de `clientContext.getServiceToken()`. |
-| ims-org | Votre ID d&#39;organisation IMS automatiquement récupéré à l&#39;aide de `clientContext.getOrgId()`. |
-| api-key | Votre clé d&#39;API automatiquement récupérée à l&#39;aide de `clientContext.getApiKey()`. |
+| service-token | Votre jeton de service qui est automatiquement récupéré à l’aide de `clientContext.getServiceToken()`. |
+| ims-org | Votre identifiant de l’organisation IMS qui est automatiquement récupéré à l’aide de `clientContext.getOrgId()`. |
+| api-key | Votre clé API automatiquement récupérée à l’aide de `clientContext.getApiKey()`. |
 
 >[!TIP]
 >
->Consultez les tables Scala dans la section [limites de données du bloc-notes](#notebook-data-limits) pour déterminer si `mode` doit être défini sur `interactive` ou `batch`.
+>Consultez les tables Scala dans la section [Limites de données des notebooks](#notebook-data-limits) pour déterminer si `mode` doit être défini sur `interactive` ou `batch`.
 
-Vous pouvez générer automatiquement l’exemple ci-dessus dans JupyterLab buy à l’aide de la méthode suivante :
+Vous pouvez générer automatiquement l’exemple ci-dessus dans JupyterLab en achetant à l’aide de la méthode suivante :
 
-Sélectionnez l&#39;onglet Icône Données (en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Datasets]** et **[!UICONTROL Schémas]** s&#39;affichent. Sélectionnez **[!UICONTROL Datasets]** et cliquez avec le bouton droit de la souris, puis sélectionnez l&#39;option **[!UICONTROL Explorer les données dans le bloc-notes]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s&#39;affiche au bas de votre bloc-notes.
+Sélectionnez l’onglet Icône de données (en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** et cliquez avec le bouton droit, puis sélectionnez l’option **[!UICONTROL Explorer les données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 And
-- Utilisez **[!UICONTROL Explorer les données dans le bloc-notes]** pour générer une cellule lue.
-- Utilisez **[!UICONTROL Write Data in Notebook]** pour générer une cellule d’écriture.
+- Utilisez **[!UICONTROL Explorer les données dans Notebook]** pour générer une cellule de lecture.
+- Utilisez **[!UICONTROL Écrire des données dans Notebook]** pour générer une cellule d’écriture.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 
 ### Écrire dans un jeu de données {#scala-write-dataset}
 
-Dans Scala, vous pouvez importer `clientContext` pour obtenir et renvoyer des valeurs de plate-forme, ce qui évite de définir des variables telles que `var userToken`. Dans l&#39;exemple Scala ci-dessous, `clientContext` est utilisé pour définir et renvoyer toutes les valeurs requises pour l&#39;écriture dans un jeu de données.
+Dans Scala, vous pouvez importer `clientContext` pour obtenir et renvoyer des valeurs Platform, ce qui élimine la nécessité de définir des variables telles que `var userToken`. Dans l’exemple Scala ci-dessous, `clientContext` est utilisé pour définir et renvoyer toutes les valeurs requises pour l’écriture dans un jeu de données.
+
+>[!IMPORTANT]
+>
+> La mise en cache de données à l’aide de `df.cache()` avant l’écriture de données peut améliorer considérablement les performances des notebooks. Cela peut vous aider si vous recevez l’une des erreurs suivantes :
+> 
+> - Traitement abandonné en raison d’un échec de test... Peuvent uniquement compresser les RDD avec le même nombre d&#39;éléments dans chaque partition.
+> - Client RPC distant dissocié et autres erreurs de mémoire.
+> - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
+
+> 
+> 
+Pour plus d’informations, consultez le [guide de dépannage](../troubleshooting-guide.md) .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -540,19 +575,19 @@ df1.write.format("com.adobe.platform.query")
 
 | element   | description |
 | ------- | ----------- |
-| df1 | Variable qui représente la base de données Pandas utilisée pour lire et écrire des données. |
+| df1 | Variable qui représente le cadre de données pandas utilisé pour lire et écrire des données. |
 | user-token | Votre jeton utilisateur qui est automatiquement récupéré à l’aide de `clientContext.getUserToken()`. |
-| service-token | Votre jeton de service automatiquement récupéré à l’aide de `clientContext.getServiceToken()`. |
-| ims-org | Votre ID d&#39;organisation IMS automatiquement récupéré à l&#39;aide de `clientContext.getOrgId()`. |
-| api-key | Votre clé d&#39;API automatiquement récupérée à l&#39;aide de `clientContext.getApiKey()`. |
+| service-token | Votre jeton de service qui est automatiquement récupéré à l’aide de `clientContext.getServiceToken()`. |
+| ims-org | Votre identifiant de l’organisation IMS qui est automatiquement récupéré à l’aide de `clientContext.getOrgId()`. |
+| api-key | Votre clé API automatiquement récupérée à l’aide de `clientContext.getApiKey()`. |
 
 >[!TIP]
 >
->Consultez les tables Scala dans la section [limites de données du bloc-notes](#notebook-data-limits) pour déterminer si `mode` doit être défini sur `interactive` ou `batch`.
+>Consultez les tables Scala dans la section [Limites de données des notebooks](#notebook-data-limits) pour déterminer si `mode` doit être défini sur `interactive` ou `batch`.
 
-### créer une base de données locale {#scala-create-dataframe}
+### créer un cadre de données local {#scala-create-dataframe}
 
-Pour créer une base de données locale à l&#39;aide de Scala, des requêtes SQL sont requises. Par exemple :
+Pour créer un cadre de données local à l’aide de Scala, des requêtes SQL sont requises. Par exemple :
 
 ```scala
 sparkdf.createOrReplaceTempView("sparkdf")
@@ -560,11 +595,11 @@ sparkdf.createOrReplaceTempView("sparkdf")
 val localdf = spark.sql("SELECT * FROM sparkdf LIMIT 1)
 ```
 
-### Filtrer [!DNL ExperienceEvent] données {#scala-experienceevent}
+### Filtrer les [!DNL ExperienceEvent] données {#scala-experienceevent}
 
-L&#39;accès et le filtrage d&#39;un jeu de données [!DNL ExperienceEvent] dans un bloc-notes Scala nécessitent que vous fournissiez l&#39;identité du jeu de données (`{DATASET_ID}`), l&#39;identité IMS de votre organisation et les règles de filtrage définissant une plage de temps spécifique. Un intervalle de temps de filtrage est défini à l’aide de la fonction `spark.sql()`, où le paramètre de fonction est une chaîne de requête SQL.
+Pour accéder à un jeu de données [!DNL ExperienceEvent] et le filtrer dans un notebook Scala, vous devez fournir l’identité du jeu de données (`{DATASET_ID}`), l’identité IMS de votre organisation et les règles de filtrage définissant une période spécifique. Un intervalle de temps de filtrage est défini à l’aide de la fonction `spark.sql()`, où le paramètre de fonction est une chaîne de requête SQL.
 
-Les cellules suivantes filtrent un jeu de données [!DNL ExperienceEvent] sur les données qui existent exclusivement entre le 1er janvier 2019 et la fin du 31 décembre 2019.
+Les cellules suivantes filtrent un jeu de données [!DNL ExperienceEvent] par rapport aux données qui existent exclusivement entre le 1er janvier 2019 et la fin du 31 décembre 2019.
 
 ```scala
 // Spark (Spark 2.4)
@@ -607,7 +642,7 @@ timedf.show()
 
 ## Étapes suivantes
 
-Ce document portait sur les directives générales pour l&#39;accès aux jeux de données à l&#39;aide de portables JupyterLab. Pour obtenir des exemples plus détaillés sur l’interrogation de jeux de données, consultez la documentation de [Requête Service dans les cahiers de travail JupyterLab](./query-service.md). Pour plus d&#39;informations sur la façon d&#39;explorer et de visualiser vos jeux de données, consultez le document [sur l&#39;analyse de vos données à l&#39;aide de carnets](./analyze-your-data.md).
+Ce document couvrait les instructions générales d’accès aux jeux de données à l’aide de notebooks JupyterLab. Pour obtenir des exemples plus détaillés sur l’interrogation des jeux de données, consultez la documentation [Query Service dans les notebooks JupyterLab](./query-service.md). Pour plus d’informations sur la manière d’explorer et de visualiser vos jeux de données, consultez le document sur l’[analyse de vos données à l’aide de notebooks](./analyze-your-data.md).
 
 ## Indicateurs SQL facultatifs pour [!DNL Query Service] {#optional-sql-flags-for-query-service}
 
