@@ -1,37 +1,36 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; groupe de champs ; groupe de champs ; groupes de champs ; groupes de champs ; type de données ; types de données ; types de données ; type de données ; type de schéma ; type de données ; type de données ; type de données ; type de données ; schémas ; Schémas ; conception de Schéma ; carte ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;groupe de champs;groupe de champs;groupes de champs;groupes de champs;type de données;types de données;types de données;type de données;conception de schéma;type de données;type de données;type de données;schémas;schémas;conception de schémas;mappage;carte;carte
 solution: Experience Platform
 title: Contraintes de type de champ XDM
 topic-legacy: overview
-description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels elles peuvent être associées et comment définir vos propres types de champ dans l’API.
+description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels elles peuvent être mappées et comment définir vos propres types de champ dans l’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+source-git-commit: 61025ada3a900a5bd7682e3bb7d4f6cd23347231
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1097'
 ht-degree: 18%
 
 ---
 
 # Contraintes de type de champ XDM
 
-Dans les schémas du modèle de données d’expérience (XDM), le type d’un champ limite le type de données que le champ peut contenir. Ce document fournit une vue d’ensemble de chaque type de champ principal, y compris les autres formats de sérialisation auxquels ils peuvent être mappés et comment définir vos propres types de champ dans l’API afin d’appliquer différentes contraintes.
+Dans les schémas de modèle de données d’expérience (XDM), le type d’un champ restreint le type de données que le champ peut contenir. Ce document fournit un aperçu de chaque type de champ principal, y compris les autres formats de sérialisation auxquels ils peuvent être mappés et comment définir vos propres types de champ dans l’API afin d’appliquer différentes contraintes.
 
 ## Prise en main
 
-Avant d&#39;utiliser ce guide, veuillez consulter les [bases de la composition des schémas](./composition.md) pour une introduction aux schémas, classes et groupes de champs de schéma XDM.
+Avant d’utiliser ce guide, consultez les [bases de la composition des schémas](./composition.md) pour une introduction aux schémas XDM, aux classes et aux groupes de champs de schéma.
 
-Si vous prévoyez de définir vos propres types de champs dans l&#39;API, il est vivement recommandé de début avec le [guide du développeur du registre de Schémas](../api/getting-started.md) pour savoir comment créer des groupes de champs et des types de données pour inclure vos champs personnalisés dans. Si vous utilisez l’interface utilisateur de l’Experience Platform pour créer vos schémas, consultez le guide sur la [définition des champs dans l’interface utilisateur](../ui/fields/overview.md) pour savoir comment implémenter des contraintes sur les champs que vous définissez dans les groupes de champs et les types de données personnalisés.
+Si vous envisagez de définir vos propres types de champs dans l’API, il est vivement recommandé de commencer par le [guide de développement du registre des schémas](../api/getting-started.md) pour apprendre à créer des groupes de champs et des types de données afin d’inclure vos champs personnalisés dans . Si vous utilisez l’interface utilisateur de l’Experience Platform pour créer vos schémas, consultez le guide sur la [définition des champs dans l’interface utilisateur](../ui/fields/overview.md) pour savoir comment implémenter des contraintes sur les champs que vous définissez dans les groupes de champs et les types de données personnalisés.
 
 ## Structure de base et exemples
 
-XDM est créé sur le Schéma JSON et les champs XDM héritent donc d’une syntaxe similaire lors de la définition de leur type. Comprendre comment les différents types de champs sont représentés dans le Schéma JSON peut aider à indiquer les contraintes de base de chaque type.
+XDM repose sur le schéma JSON. Par conséquent, les champs XDM héritent d’une syntaxe similaire lors de la définition de leur type. La compréhension de la manière dont différents types de champ sont représentés dans le schéma JSON peut aider à indiquer les contraintes de base de chaque type.
 
 >[!NOTE]
 >
->Pour plus d&#39;informations sur le Schéma JSON et d&#39;autres technologies sous-jacentes dans les API de plateformes, consultez le [guide des fondamentaux de l&#39;API](../../landing/api-fundamentals.md#json-schema).
+>Pour plus d’informations sur le schéma JSON et d’autres technologies sous-jacentes dans les API Platform, consultez le [guide de base de l’API](../../landing/api-fundamentals.md#json-schema) .
 
-Le tableau suivant décrit comment chaque type XDM est représenté dans le Schéma JSON, ainsi qu’un exemple de valeur conforme au type :
+Le tableau suivant décrit la représentation de chaque type XDM dans le schéma JSON, ainsi qu’un exemple de valeur conforme au type :
 
 <table style="table-layout:auto">
   <thead>
@@ -51,7 +50,7 @@ Le tableau suivant décrit comment chaque type XDM est représenté dans le Sch�
       <td><code>"Platinum"</code></td>
     </tr>
     <tr>
-      <td>[!Doublon UICONTROL]</td>
+      <td>[!UICONTROL Double]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "number"}</pre>
@@ -63,32 +62,32 @@ Le tableau suivant décrit comment chaque type XDM est représenté dans le Sch�
       <td>
         <pre class="JSON language-JSON hljs">
 {
-  "type" : "integer",
-  "maximum" : 9007199254740991,
+  "type": "integer",
+  "maximum": 9007199254740991,
   "minimum" : -9007199254740991
 }</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
     <tr>
-      <td>[ ! Entier UICONTROL]</td>
+      <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {
-  "type" : "integer",
-  "maximum" : 2147483648,
+  "type": "integer",
+  "maximum": 2147483648,
   "minimum" : -2147483648
 }</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Short]</td>
+      <td>[!UICONTROL Court]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {
-  "type" : "integer",
-  "maximum" : 32768,
+  "type": "integer",
+  "maximum": 32768,
   "minimum" : -32768
 }</pre>
       </td>
@@ -99,8 +98,8 @@ Le tableau suivant décrit comment chaque type XDM est représenté dans le Sch�
       <td>
         <pre class="JSON language-JSON hljs">
 {
-  "type" : "integer",
-  "maximum" : 128,
+  "type": "integer",
+  "maximum": 128,
   "minimum" : -128
 }</pre>
       </td>
@@ -111,8 +110,8 @@ Le tableau suivant décrit comment chaque type XDM est représenté dans le Sch�
       <td>
         <pre class="JSON language-JSON hljs">
 {
-  "type" : "string",
-  "format" : "date"
+  "type": "string",
+  "format": "date"
 }</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
@@ -122,14 +121,14 @@ Le tableau suivant décrit comment chaque type XDM est représenté dans le Sch�
       <td>
         <pre class="JSON language-JSON hljs">
 {
-  "type" : "string",
-  "format" : "date-time"
+  "type": "string",
+  "format": "date-time"
 }</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Boolean]</td>
+      <td>[!UICONTROL Booléen]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "string"}</pre>
@@ -151,9 +150,9 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 
 >[!IMPORTANT]
 >
->Parmi les types XDM standard répertoriés dans les tableaux ci-dessous, le type [!UICONTROL Map] est également inclus. Les cartes sont utilisées dans les schémas standard lorsque les données sont représentées sous la forme de clés qui correspondent à certaines valeurs ou lorsque les clés ne peuvent pas raisonnablement être incluses dans un schéma statique et doivent être traitées comme des valeurs de données.
+>Parmi les types XDM standard répertoriés dans les tableaux ci-dessous, le type [!UICONTROL Map] est également inclus. Les cartes sont utilisées dans les schémas standard lorsque les données sont représentées sous la forme de clés qui mappent à certaines valeurs ou lorsque les clés ne peuvent pas raisonnablement être incluses dans un schéma statique et doivent être traitées comme des valeurs de données.
 >
->Les champs de type de carte sont réservés à l’utilisation des schémas du secteur industriel et du fournisseur et ne peuvent donc pas être utilisés dans les ressources personnalisées que vous définissez. L’inclusion du type de mappage dans les tableaux ci-dessous ne vise qu’à vous aider à déterminer comment mapper vos données existantes à XDM si elles sont actuellement stockées dans l’un des formats répertoriés ci-dessous.
+>Les champs de type map sont réservés à l’utilisation des schémas du secteur et des fournisseurs et ne peuvent donc pas être utilisés dans les ressources personnalisées que vous définissez. L’inclusion du type de mappage dans les tableaux ci-dessous est uniquement destinée à vous aider à déterminer comment mapper vos données existantes à XDM si elles sont actuellement stockées dans l’un des formats répertoriés ci-dessous.
 
 ### Parquet, Spark SQL et Java {#parquet}
 
@@ -168,14 +167,16 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 | [!UICONTROL Date] | Type : `INT32`<br>Annotation : `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Type : `INT64`<br>Annotation : `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
 | [!UICONTROL Booléen] | Type : `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Carte] | `MAP`-groupe<br><br> annoté(`<key-type>` doit être  `STRING`) | `MapType`<br><br>(`keyType` doit être  `StringType`) | `java.util.Map` |
+| [!UICONTROL Carte] | `MAP`-groupe annoté<br><br> (`<key-type>` doit être  `STRING`) | `MapType`<br><br>(`keyType` doit être  `StringType`) | `java.util.Map` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Scala, .NET et CosmosDB {#scala}
 
 | Type XDM | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL Chaîne] | `String` | `System.String` | `String` |
-| [!UICONTROL Doublon] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
 | [!UICONTROL Entier] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Court] | `Short` | `System.Int16` | `Number` |
@@ -192,13 +193,13 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 | Type XDM | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL Chaîne] | `string` | `String` | `string` |
-| [!UICONTROL Doublon] | `double` | `Double` | `double` |
+| [!UICONTROL Double] | `double` | `Double` | `double` |
 | [!UICONTROL Long] | `long` | `Integer` | `int64` |
 | [!UICONTROL Entier] | `int` | `Integer` | `int32` |
 | [!UICONTROL Court] | `int` | `Integer` | `int32` |
 | [!UICONTROL Octet] | `int` | `Integer` | `int32` |
-| [!UICONTROL Date] | `date` | `Integer`<br>(Unix millisecondes) | `int64`<br>(Unix millisecondes) |
-| [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix millisecondes) | `int64`<br>(Unix millisecondes) |
+| [!UICONTROL Date] | `date` | `Integer`<br>(millisecondes Unix) | `int64`<br>(millisecondes Unix) |
+| [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(millisecondes Unix) | `int64`<br>(millisecondes Unix) |
 | [!UICONTROL Booléen] | `bool` | `Integer`<br>(binaire 0/1) | `bool` |
 | [!UICONTROL Carte] | `object` | `map` | `map<key_type, value_type>` |
 
@@ -206,15 +207,15 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 
 ## Définition des types de champ XDM dans l’API {#define-fields}
 
-Tous les champs XDM sont définis à l&#39;aide des contraintes [Schéma JSON](https://json-schema.org/) standard qui s&#39;appliquent à leur type de champ, avec des contraintes supplémentaires pour les noms de champ qui sont appliqués par [!DNL Experience Platform]. L&#39;API Schéma Registry vous permet de définir d&#39;autres types de champs en utilisant des formats et des contraintes facultatives. Les types de champ XDM sont exposés par l&#39;attribut de niveau champ, `meta:xdmType`.
+Tous les champs XDM sont définis à l’aide des contraintes [Schéma JSON](https://json-schema.org/) standard qui s’appliquent à leur type de champ, avec des contraintes supplémentaires pour les noms de champ qui sont appliqués par [!DNL Experience Platform]. L’API Schema Registry vous permet de définir des types de champ supplémentaires à l’aide de formats et de contraintes facultatives. Les types de champ XDM sont exposés par l’attribut field-level, `meta:xdmType`.
 
 >[!NOTE]
 >
->`meta:xdmType` est une valeur générée par le système. Par conséquent, vous n’êtes pas tenu d’ajouter cette propriété au fichier JSON pour votre champ lors de l’utilisation de l’API. Il est recommandé d’utiliser des types de Schéma JSON (tels que `string` et `integer`) avec les contraintes min/max appropriées, comme défini dans le tableau ci-dessous.
+>`meta:xdmType` est une valeur générée par le système. Par conséquent, vous n’êtes pas obligé d’ajouter cette propriété au fichier JSON de votre champ lors de l’utilisation de l’API. La bonne pratique consiste à utiliser des types de schémas JSON (tels que `string` et `integer`) avec les contraintes min/max appropriées telles que définies dans le tableau ci-dessous.
 
-Le tableau suivant décrit la mise en forme appropriée pour définir différents types de champs, y compris ceux qui présentent des propriétés facultatives. Pour plus d’informations sur les propriétés facultatives et les mots-clés spécifiques au type, consultez la [documentation des schémas JSON](https://json-schema.org/understanding-json-schema/reference/type.html).
+Le tableau suivant décrit la mise en forme appropriée pour définir différents types de champs, y compris ceux avec des propriétés facultatives. Pour plus d’informations sur les propriétés facultatives et les mots-clés spécifiques au type, consultez la [documentation des schémas JSON](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de code fourni pour générer votre demande d’API pour [créer un groupe de champs](../api/field-groups.md#create) ou [créer un type de données](../api/data-types.md#create).
+Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de code fourni pour créer votre requête API afin de [créer un groupe de champs](../api/field-groups.md#create) ou [créer un type de données](../api/data-types.md#create).
 
 <table style="table-layout:auto">
   <tr>
@@ -259,7 +260,7 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
         <li><code>meta:enum</code></li>
       </ul>
     </td>
-    <td>Les valeurs d'énumération contraintes sont fournies sous la baie <code>enum</code>, tandis que les étiquettes facultatives destinées aux clients pour chaque valeur peuvent être fournies sous <code>meta:enum</code> :
+    <td>Les valeurs d’énumération contraintes sont fournies sous le tableau <code>enum</code>, tandis que les étiquettes facultatives destinées aux clients pour chaque valeur peuvent être fournies sous <code>meta:enum</code> :
       <pre class="JSON language-JSON hljs">
 "sampleField": {
           "type": "string",
@@ -300,7 +301,7 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
     </td>
   </tr>
   <tr>
-    <td>[ ! Entier UICONTROL]</td>
+    <td>[!UICONTROL Integer]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
@@ -312,7 +313,7 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL Short]</td>
+    <td>[!UICONTROL Court]</td>
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
@@ -336,7 +337,7 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL Boolean]</td>
+    <td>[!UICONTROL Booléen]</td>
     <td>
       <ul>
         <li><code>default</code></li>
@@ -377,7 +378,7 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
   <tr>
     <td>[!UICONTROL Array]</td>
     <td></td>
-    <td>Tableau de types scalaires de base (chaînes, par exemple) :
+    <td>Tableau de types scalaires de base (par exemple, chaînes) :
       <pre class="JSON language-JSON hljs">
 "sampleField": {
           "type": "array",
@@ -385,18 +386,18 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
             "type": "string"
   }
 }</pre>
-      Tableau d'objets défini par un autre schéma :<br/>
+      Un tableau d’objets défini par un autre schéma :<br/>
       <pre class="JSON language-JSON hljs">
-"sampleField" : {
-  "type" : "array",
-  "items" : {
+"sampleField": {
+  "type": "array",
+  "items": {
     "$ref" : "https://ns.adobe.com/xdm/data/paymentitem"
   }
 }</pre>
     </td>
   </tr>
   <tr>
-    <td>[!UICONTROL, objet]</td>
+    <td>[!UICONTROL Object]</td>
     <td></td>
     <td>L'attribut <code>type</code> de chaque sous-champ défini sous <code>properties</code> peut être défini à l'aide de n'importe quel type scalaire :
       <pre class="JSON language-JSON hljs">
@@ -411,10 +412,10 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
     }
   }
 }</pre>
-      Les champs de type objet peuvent être définis en référençant le <code>$id</code> d'un type de données :
+      Les champs de type objet peuvent être définis en référençant la balise <code>$id</code> d’un type de données :
       <pre class="JSON language-JSON hljs">
-"sampleField" : {
-  "type" : "object",
+"sampleField": {
+  "type": "object",
   "$ref" : "https://ns.adobe.com/xdm/common/phoneinteraction"
 }</pre>
     </td>
@@ -422,7 +423,7 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
   <tr>
     <td>[!UICONTROL Map]</td>
     <td></td>
-    <td>Un mappage <strong>ne doit pas </strong> définir de propriétés. Il <strong>doit </strong> définir un seul schéma <code>additionalProperties</code> pour décrire le type de valeurs contenues dans le mappage (chaque mappage ne peut contenir qu’un seul type de données). Les valeurs peuvent être n'importe quel attribut XDM <code>type</code> valide ou une référence à un autre schéma à l'aide d'un attribut <code>$ref</code>.<br/><br/>Un champ de mappage avec des valeurs de type chaîne :
+    <td>Une carte <strong>ne doit pas</strong> définir de propriétés. Elle <strong>doit</strong> définir un seul schéma <code>additionalProperties</code> pour décrire le type de valeurs contenu dans la carte (chaque carte ne peut contenir qu’un seul type de données). Les valeurs peuvent être n’importe quel attribut XDM <code>type</code> valide ou une référence à un autre schéma à l’aide d’un attribut <code>$ref</code>.<br/><br/>Un champ map avec des valeurs de type chaîne :
       <pre class="JSON language-JSON hljs">
 "sampleField": {
           "type": "object",
@@ -430,7 +431,7 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
             "type": "string"
   }
 }</pre>
-    Un champ de mappage avec des tableaux de chaînes pour les valeurs :
+    Un champ map avec des tableaux de chaînes pour les valeurs :
       <pre class="JSON language-JSON hljs">
 "sampleField": {
           "type": "object",
@@ -441,10 +442,10 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
     }
   }
 }</pre>
-    Un champ de mappage qui référence un autre type de données :
+    Un champ map qui fait référence à un autre type de données :
       <pre class="JSON language-JSON hljs">
-"sampleField" : {
-  "type" : "object",
+"sampleField": {
+  "type": "object",
   "additionalProperties":{
     "$ref" : "https://ns.adobe.com/xdm/data/paymentitem"
   }
