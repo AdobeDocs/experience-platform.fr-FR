@@ -1,52 +1,53 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; abonnement ; type de données ; type de données ; type de données ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;abonnement;type de données;type de données;type de données
 solution: Experience Platform
-title: Type de données d'Abonnement
+title: Type de données d’abonnement
 topic-legacy: overview
-description: Ce document présente un aperçu du type de données XDM (Abonnement Experience Data Model).
+description: Ce document présente un aperçu du type de données XDM (Subscription Experience Data Model).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '419'
 ht-degree: 27%
 
 ---
 
-# [!UICONTROL Type ] Subscriptiondata
+#  Type Subscriptiondata
 
-[!UICONTROL L’] abonnement est un type de données XDM (Experience Data Model) standard qui décrit les droits sous licence aux logiciels, services ou biens utilisés en fonction du temps ou de l’utilisation.
+ L’abonnement est un type de données XDM (Experience Data Model) standard qui décrit les droits sous licence aux logiciels, services ou produits utilisés en fonction du temps ou de l’utilisation.
 
 <img src="../images/data-types/subscription-data-type.png" width="500" /><br />
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `device` | [[!UICONTROL Appareil]](./device.md) | Décrit les détails sur le périphérique lié à l’abonnement. |
-| `environment` | [[!UICONTROL Environnement]](./environment.md) | Contient des informations sur la situation environnante dans laquelle l&#39;observation du événement s&#39;est produite, en particulier des informations transitoires telles que les versions du réseau ou des logiciels. |
-| `subscriber` | [[!UICONTROL Personne]](./person.md) | Décrit une personne individuelle. Il peut également représenter une personne jouant divers rôles, par exemple un client, un contact ou un propriétaire. |
-| `SKU` | Chaîne | Unité de gestion des stocks (SKU), identifiant unique d’un produit. |
+| `device` | [[!UICONTROL Appareil]](./device.md) | Décrit les détails de l’appareil associé à l’abonnement. |
+| `environment` | [[!UICONTROL Environnement]](./environment.md) | Contient des informations sur la situation autour de laquelle l’observation de l’événement s’est produite, en particulier des informations transitoires telles que les versions du réseau ou des logiciels. |
+| `subscriber` | [[!UICONTROL Personne]](./person.md) | Décrit une personne. Cela peut également représenter une personne qui joue différents rôles, comme un client, un contact ou un propriétaire. |
+| `SKU` | Chaîne | L’unité de gestion des stocks (SKU), un identifiant unique d’un produit. |
 | `billingPeriod` | Chaîne | Durée entre deux facturations. |
 | `billingStartDate` | Date | Date d’exigibilité de la première facture. Le format de date (sans heure) doit respecter la norme [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |
-| `category` | Chaîne | La catégorisation principale, de niveau supérieur, de ce type d&#39;abonnement. |
+| `category` | Chaîne | La catégorisation principale de niveau supérieur de ce type d’abonnement. |
 | `chargeMethod` | Chaîne | Configuration de la facturation au client. |
-| `contractID` | Chaîne | ID unique du contrat qui régit cet abonnement. |
-| `country` | Chaîne | Le pays dans lequel les clauses contractuelles et contractuelles de l&#39;abonnement trouvent leur origine. |
+| `contractID` | Chaîne | L’identifiant unique du contrat qui régit cet abonnement. |
+| `country` | Chaîne | Pays dans lequel les termes du contrat et de l’accord d’abonnement trouvent leur origine. |
 | `endDate` | Date | Date à laquelle l’abonnement actuel se termine. Le format de date (sans heure) doit respecter la norme [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |
 | `paymentMethod` | Chaîne | Mode de paiement des paiements récurrents. |
-| `paymentStatus` | Chaîne | Statut de paiement du compte. |
-| `planName` | Chaîne | Nom lisible par l&#39;homme de l&#39;abonnement. |
-| `reason` | Chaîne | L&#39;intention générale du membre pour l&#39;utilisation de l&#39;abonnement. |
+| `paymentStatus` | Chaîne | État du paiement du compte. |
+| `planName` | Chaîne | Nom lisible par l’utilisateur de l’abonnement. |
+| `reason` | Chaîne | L’intention générale du membre concernant l’utilisation de l’abonnement. |
 | `renew` | Chaîne | La manière dont l’abonnement peut continuer après la date de fin. |
 | `revision` | Chaîne | Identification entre abonnements du même nom et de la même hiérarchie de catégories. |
 | `startDate` | Date | Date du début de l’abonnement. Le format de date (sans heure) doit respecter la norme [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |
-| `status` | Chaîne | Statut actuel de l&#39;abonnement. |
-| `subCategory` | Chaîne | Sous-catégorisation spécifique de l&#39;abonnement. |
-| `term` | Entier | Valeur numérique du terme de l’abonnement. |
+| `status` | Chaîne | État actuel de l’abonnement. |
+| `subCategory` | Chaîne | Sous-catégorie spécifique de l’abonnement. |
+| `term` | Entier | Valeur numérique du terme d’abonnement. |
 | `termUnitOfTime` | Chaîne | Unité de temps pour la période du terme. |
-| `topUp` | Chaîne | Décrit les termes convenus sur la façon dont les aspects consommables d&#39;un abonnement sont rachetés au cours d&#39;une période de facturation. |
-| `type` | Chaîne | L&#39;étendue des droits par rapport au nombre de personnes couvertes par l&#39;abonnement. |
+| `topUp` | Chaîne | Décrit les conditions convenues concernant la manière dont les aspects consommables d’un abonnement sont rachetés au cours d’une période de facturation. |
+| `type` | Chaîne | La portée du droit par rapport au nombre de personnes couvertes par l’abonnement. |
 
-Pour plus d&#39;informations sur le type de données, consultez le référentiel XDM public :
+{style=&quot;table-layout:auto&quot;}
 
-* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.example.1.json)
+Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+
+* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.schema.json)
