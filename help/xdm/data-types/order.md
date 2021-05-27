@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; commande ; type de données ; type de données ; type de données ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;commande;type de données;type de données;type de données
 solution: Experience Platform
 title: Type de données de commande
 topic-legacy: overview
-description: Ce document présente un aperçu du type de données du modèle de données d’expérience de commande (XDM).
+description: Ce document fournit un aperçu du type de données du modèle de données d’expérience de commande (XDM).
 exl-id: abfc6d53-ffe6-4692-ad65-03d556831fa0
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 22%
+source-wordcount: '189'
+ht-degree: 23%
 
 ---
 
-# [!UICONTROL Type ] Orderdata
+#  Type Orderdata
 
  Orderest un type de données XDM (Experience Data Model) standard qui décrit la commande passée pour une liste de produits.
 
@@ -21,13 +20,15 @@ ht-degree: 22%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `payments` | Tableau des [[!UICONTROL éléments de paiement]](./payment-item.md) | Liste des paiements pour cette commande. |
-| `currencyCode` | Chaîne | Code de devise ISO 4217 utilisé pour les totaux des commandes. Toutes les instances doivent se conformer à l&#39;expression régulière `^[A-Z]{3}$`. Par exemple `USD` et `EUR`. |
+| `payments` | Tableau de [[!UICONTROL Éléments de paiement]](./payment-item.md) | Liste des paiements pour cette commande. |
+| `currencyCode` | Chaîne | Code de devise ISO 4217 utilisé pour les totaux des commandes. Toutes les instances doivent se conformer à l’expression régulière `^[A-Z]{3}$`. Par exemple `USD` et `EUR`. |
 | `priceTotal` | Double | Prix total de cette commande une fois toutes les remises et taxes appliquées. |
-| `purchaseID` | Chaîne | Identificateur unique attribué par le vendeur pour cet achat ou ce contrat. Étant donné que cette valeur est définie par le vendeur, il n’y a aucune garantie que l’ID est unique. |
-| `purchaseOrderNumber` | Chaîne | Identificateur unique attribué par l&#39;acheteur pour cet achat ou ce contrat. |
+| `purchaseID` | Chaîne | Identifiant unique attribué par le vendeur pour cet achat ou ce contrat. Étant donné que cet identifiant est défini par le vendeur, il n’y a aucune garantie que l’identifiant est unique. |
+| `purchaseOrderNumber` | Chaîne | Identifiant unique attribué par l’acheteur pour cet achat ou ce contrat. |
 
-Pour plus d&#39;informations sur le type de données, consultez le référentiel XDM public :
+{style=&quot;table-layout:auto&quot;}
 
-* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/data/order.example.1.json)
+Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+
+* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/data/order.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/data/order.schema.json)
