@@ -1,31 +1,30 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; exportation ; importation ; rpc ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;api;API;XDM;système XDM;modèle de données d’expérience;modèle de données d’expérience;modèle de données d’expérience;modèle de données;modèle de données;exportation;import;rpc;
 solution: Experience Platform
-title: Points de terminaison de l’API d’exportation/d’importation
-description: Les points de terminaison /export et /import de l'API Schéma Registry vous permettent de partager des ressources XDM entre les organisations IMS et les sandbox.
+title: Points de terminaison de l’API d’exportation/importation
+description: Les points de terminaison /export et /import de l’API Schema Registry vous permettent de partager des ressources XDM entre les organisations IMS et les environnements de test.
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '510'
 ht-degree: 4%
 
 ---
 
 # Points de fin d’exportation/importation
 
-Toutes les ressources du [!DNL Schema Library] sont contenues dans un sandbox spécifique au sein d&#39;une organisation IMS. Dans certains cas, vous pouvez partager des ressources de modèle de données d’expérience (XDM) entre des sandbox et des organisations IMS. L&#39;API [!DNL Schema Registry] fournit deux points de terminaison qui vous permettent de générer une charge utile d&#39;exportation pour n&#39;importe quel schéma, groupe de champs de schéma ou type de données dans le [!DNL  Schema Library], puis d&#39;utiliser cette charge pour importer cette ressource (et toutes les ressources dépendantes) dans un sandbox de cible et une organisation IMS.
+Toutes les ressources de [!DNL Schema Library] sont contenues dans un environnement de test spécifique au sein d’une organisation IMS. Dans certains cas, vous souhaiterez peut-être partager des ressources du modèle de données d’expérience (XDM) entre les environnements de test et les organisations IMS. L’API [!DNL Schema Registry] fournit deux points de terminaison qui vous permettent de générer une payload d’exportation pour n’importe quel schéma, groupe de champs de schéma ou type de données dans le [!DNL  Schema Library], puis d’utiliser cette payload pour importer cette ressource (et toutes les ressources dépendantes) dans un environnement de test cible et une organisation IMS.
 
 ## Prise en main
 
-Les points de terminaison utilisés dans ce guide font partie de l&#39;[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+Les points de terminaison utilisés dans ce guide font partie de l’[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
 
-Les points de terminaison export/import font partie des appels de procédure distante (RPC) pris en charge par [!DNL Schema Registry]. Contrairement aux autres points de terminaison de l&#39;API [!DNL Schema Registry], les points de terminaison RPC ne nécessitent pas d&#39;en-têtes supplémentaires tels que `Accept` ou `Content-Type` et n&#39;utilisent pas de `CONTAINER_ID`. Ils doivent plutôt utiliser l&#39;espace de nommage `/rpc`, comme indiqué dans les appels d&#39;API ci-dessous.
+Les points de terminaison export/import font partie des appels de procédure distants (RPC) pris en charge par [!DNL Schema Registry]. Contrairement aux autres points de terminaison de l’API [!DNL Schema Registry], les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires tels que `Accept` ou `Content-Type` et n’utilisent pas de `CONTAINER_ID`. Ils doivent plutôt utiliser l’espace de noms `/rpc`, comme illustré dans les appels API ci-dessous.
 
-## Récupérer une charge utile d&#39;exportation pour une ressource {#export}
+## Récupération d’une payload d’exportation pour une ressource {#export}
 
-Pour tout schéma, groupe de champs ou type de données existant dans [!DNL Schema Library], vous pouvez générer une charge utile d&#39;exportation en adressant une demande de GET au point de terminaison `/export`, en indiquant l&#39;ID de la ressource dans le chemin d&#39;accès.
+Pour tout schéma, groupe de champs ou type de données existant dans [!DNL Schema Library], vous pouvez générer une payload d’exportation en effectuant une requête GET sur le point de terminaison `/export`, en fournissant l’identifiant de la ressource dans le chemin d’accès.
 
 **Format d’API**
 
@@ -35,11 +34,13 @@ GET /rpc/export/{RESOURCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{RESOURCE_ID}` | `meta:altId` ou `$id` codé URL de la ressource XDM que vous souhaitez exporter. |
+| `{RESOURCE_ID}` | `meta:altId` ou `$id` encodé URL de la ressource XDM que vous souhaitez exporter. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante récupère une charge utile d&#39;exportation pour un groupe de champs `Restaurant`.
+La requête suivante récupère une payload d’exportation pour un groupe de champs `Restaurant`.
 
 ```shell
 curl -X GET \
@@ -53,9 +54,9 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau d&#39;objets, qui représente la ressource XDM de cible et toutes ses ressources dépendantes. Dans cet exemple, le premier objet du tableau est un type de données `Property` créé par le client et utilisé par le groupe de champs `Restaurant`, tandis que le second objet est le groupe de champs `Restaurant` lui-même. Cette charge utile peut ensuite être utilisée pour [importer la ressource](#import) dans un sandbox différent ou une organisation IMS différente.
+Une réponse réussie renvoie un tableau d’objets, qui représente la ressource XDM cible et toutes ses ressources dépendantes. Dans cet exemple, le premier objet du tableau est un type de données `Property` créé par le client et utilisé par le groupe de champs `Restaurant`, tandis que le second objet est le groupe de champs `Restaurant` lui-même. Cette payload peut ensuite être utilisée pour [importer la ressource](#import) dans un autre environnement de test ou une organisation IMS différente.
 
-Notez que toutes les instances de l&#39;ID de client de la ressource sont remplacées par `<XDM_TENANTID_PLACEHOLDER>`. Cela permet au Registre des Schémas d&#39;appliquer automatiquement l&#39;ID de client correct aux ressources en fonction de l&#39;emplacement où elles sont envoyées lors de l&#39;appel d&#39;importation suivant.
+Notez que toutes les instances de l’identifiant du client de la ressource sont remplacées par `<XDM_TENANTID_PLACEHOLDER>`. Cela permet au registre des schémas d’appliquer automatiquement l’identifiant client correct aux ressources en fonction de l’emplacement où ils sont envoyés dans l’appel d’importation suivant.
 
 ```json
 [
@@ -197,7 +198,7 @@ Notez que toutes les instances de l&#39;ID de client de la ressource sont rempla
 
 ## Importer une ressource {#import}
 
-Une fois que vous avez [généré une charge utile d&#39;exportation](#export) pour une ressource XDM, vous pouvez utiliser cette charge dans une requête de POST au point de terminaison `/import` pour importer cette ressource dans une cible IMS Org et sandbox.
+Une fois que vous avez [généré une payload d’exportation](#export) pour une ressource XDM, vous pouvez utiliser cette payload dans une requête de POST sur le point de terminaison `/import` pour importer cette ressource dans une organisation IMS cible et un environnement de test.
 
 **Format d’API**
 
@@ -207,7 +208,7 @@ POST /rpc/import
 
 **Requête**
 
-La requête suivante utilise la charge utile renvoyée dans l&#39;exemple d&#39;exportation [précédent](#export) pour importer le groupe de champs `Restaurant` dans une nouvelle organisation IMS et un sandbox, comme déterminé par les en-têtes `x-gw-ims-org-id` et `x-sandbox-name`, respectivement.
+La requête suivante utilise la payload renvoyée dans l’exemple [d’exportation précédent](#export) pour importer le groupe de champs `Restaurant` dans une nouvelle organisation IMS et un nouvel environnement de test, comme déterminé par les en-têtes `x-gw-ims-org-id` et `x-sandbox-name` respectivement.
 
 ```shell
 curl -X POST \
@@ -358,7 +359,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste des ressources importées, avec l&#39;ID de client approprié et les valeurs d&#39;organisation IMS appliquées.
+Une réponse réussie renvoie une liste des ressources importées, avec les valeurs d’identifiant du client et d’organisation IMS appropriées appliquées.
 
 ```json
 [
