@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; guide du développeur sandbox
+keywords: Experience Platform;accueil;rubriques les plus consultées;guide de développement des environnements de test
 solution: Experience Platform
 title: Guide de l’API Sandbox
 topic-legacy: developer guide
-description: L’API Sandbox permet aux développeurs de gérer par programmation les sandbox à Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
+description: L’API Sandbox permet aux développeurs de gérer par programmation les environnements de test dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 88%
+source-wordcount: '375'
+ht-degree: 87%
 
 ---
 
@@ -21,7 +20,7 @@ Ce guide de développement décrit les étapes à suivre pour utiliser l’API S
 
 ## Prise en main de l’API Sandbox
 
-Pour gérer les environnements de test de votre organisation IMS, vous devez disposer des droits d’administration pour les environnements de test. Les utilisateurs ne disposant pas d’autorisations d’accès peuvent uniquement utiliser le point de terminaison pour [répertorier les environnements de test actifs de l’utilisateur actuel](./list-active-sandboxes.md). Pour plus d’informations sur l’attribution des autorisations Sandbox pour Experience Platform, reportez-vous à la [présentation du contrôle d’accès](../../access-control/home.md).
+Pour gérer les environnements de test de votre organisation IMS, vous devez disposer des droits d’administration pour les environnements de test. Les utilisateurs ne disposant pas d’autorisations d’accès peuvent uniquement utiliser le [point de terminaison sandbox disponible](./available.md) pour répertorier les environnements de test principaux pour l’utilisateur actuel. Pour plus d’informations sur l’attribution des autorisations Sandbox pour Experience Platform, reportez-vous à la [présentation du contrôle d’accès](../../access-control/home.md).
 
 ### Lecture d’exemples d’appels API
 
@@ -29,10 +28,10 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ### Collecte des valeurs des en-têtes requis
 
-Ce guide nécessite que vous ayez suivi le [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en) afin d’effectuer des appels aux API de Platform avec succès. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Ce guide nécessite que vous ayez suivi le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis) afin d’effectuer des appels aux API de Platform avec succès. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
+* x-api-key : `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
 Outre les en-têtes d’authentification, toutes les requêtes nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération aura lieu :
