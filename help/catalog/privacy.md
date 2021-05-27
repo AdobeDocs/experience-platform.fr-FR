@@ -5,10 +5,10 @@ title: Traitement des demandes dʼaccès à des informations personnelles dans l
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service traite les demandes des clients dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts fondamentaux liés au traitement des demandes d’accès à des informations personnelles concernant les données clients stockées dans le lac de données.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 100%
+source-wordcount: '1351'
+ht-degree: 95%
 
 ---
 
@@ -17,6 +17,12 @@ ht-degree: 100%
 Adobe Experience Platform [!DNL Privacy Service] traite les demandes des clients dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité.
 
 Ce document couvre les concepts fondamentaux liés au traitement des demandes dʼaccès à des informations personnelles concernant les données clients stockées dans [!DNL Data Lake].
+
+>[!NOTE]
+>
+>Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour le lac de données en Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour la banque de données de Real-time Customer Profile, reportez-vous au guide sur le [traitement des demandes d’accès à des informations personnelles pour Profile](../profile/privacy.md) en plus de ce tutoriel.
+>
+>Pour savoir comment effectuer des demandes d’accès à des informations personnelles pour d’autres applications Adobe Experience Cloud, reportez-vous à la [documentation du Privacy Service](../privacy-service/experience-cloud-apps.md).
 
 ## Prise en main
 
