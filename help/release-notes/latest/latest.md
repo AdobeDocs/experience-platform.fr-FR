@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: c608ee8360fd07d6f98b31eed3b4691dc7124e12
+source-git-commit: fb5d5e7ecb36d1caa70d5c2d2a4f467e3067de4a
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1355'
 ht-degree: 33%
 
 ---
@@ -112,5 +112,6 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Prise en charge de l’interface utilisateur pour l’ingestion de fichiers compressés | Vous pouvez désormais prévisualiser et ingérer des fichiers JSON compressés ou délimités à l’aide de sources de stockage dans le cloud dans l’interface utilisateur. Pour plus d’informations, consultez le tutoriel sur la [configuration d’un flux de données pour une connexion à une source de stockage dans le cloud dans l’interface utilisateur](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| Sources bêta passant à la disponibilité générale | Les sources suivantes ont été promues de la version bêta à la version GA : <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
