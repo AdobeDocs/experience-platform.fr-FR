@@ -2,7 +2,7 @@
 title: Cas d’utilisation pris en charge avec le SDK Web de Adobe Experience Platform
 description: Découvrez les cas d’utilisation pris en charge avec le SDK Web de Adobe Experience Platform.
 keywords: sdk web;cas d’utilisation
-source-git-commit: 245983363571bdc63ead992771c01b405c067b8a
+source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 17%
