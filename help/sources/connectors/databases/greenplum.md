@@ -1,41 +1,36 @@
 ---
-keywords: Experience Platform ; accueil ; sujets populaires ; greenplum ; GreenPlum
+keywords: Experience Platform;accueil;rubriques les plus consultées;greenplum;GreenPlum
 solution: Experience Platform
-title: Présentation du connecteur de source GreenPlum
+title: Présentation du connecteur source GreenPlum
 topic-legacy: overview
-description: Découvrez comment connecter GreenPlum à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
+description: Découvrez comment connecter GreenPlum à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 41757062-9ac8-42d3-91f6-a00866195882
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
-# (Bêta) [!DNL GreenPlum] connecteur
+# [!DNL GreenPlum] connector
 
->[!NOTE]
->
->Le connecteur [!DNL GreenPlum] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../home.md#terms-and-conditions).
+Adobe Experience Platform fournit une connectivité native pour les fournisseurs de base de données tels que [!DNL Microsoft], MySQL et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Platform].
 
-Adobe Experience Platform fournit une connectivité native aux fournisseurs de base de données tels que [!DNL Microsoft], MySQL et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Platform].
+Différents types de bases de données tierces sont pris en charge, y compris les entrepôts de données relationnels, NoSQL ou de données. La prise en charge des fournisseurs de base de données inclut [!DNL GreenPlum].
 
-Différents types de bases de données tierces sont pris en charge, y compris les entrepôts de données relationnels, NoSQL ou Data Warehouse. La prise en charge des fournisseurs de base de données inclut [!DNL GreenPlum].
+## LISTE AUTORISÉE d’adresses IP
 
-## LISTE AUTORISÉE d&#39;adresse IP
+Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou des performances peuvent se produire lors de l’utilisation de sources. Pour plus d’informations, consultez la page [liste autorisée d’adresses IP](../../ip-address-allow-list.md) .
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources. Pour plus d&#39;informations, consultez la page [liste autorisée d&#39;adresse IP](../../ip-address-allow-list.md).
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL GreenPlum] à [!DNL Platform] à l’aide des API ou de l’interface utilisateur :
 
-La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL GreenPlum] à [!DNL Platform] à l&#39;aide d&#39;API ou de l&#39;interface utilisateur :
+## Connectez [!DNL GreenPlum] à [!DNL Platform] à l’aide des API
 
-## Connectez [!DNL GreenPlum] à [!DNL Platform] à l’aide d’API.
-
-- [Création d’une connexion source GreenPlum à l’aide de l’API du service de flux](../../tutorials/api/create/databases/greenplum.md)
-- [Exploration d’un système de base de données à l’aide de l’API du service de flux](../../tutorials/api/explore/database-nosql.md)
-- [Collecte de données à partir d’une base de données à l’aide de l’API du service de flux](../../tutorials/api/collect/database-nosql.md)
+- [Création d’une connexion source GreenPlum à l’aide de l’API Flow Service](../../tutorials/api/create/databases/greenplum.md)
+- [Exploration d’un système de base de données à l’aide de l’API Flow Service](../../tutorials/api/explore/database-nosql.md)
+- [Collecte de données à partir d’une base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
 
 ## Connectez [!DNL GreenPlum] à [!DNL Platform] à l’aide de l’interface utilisateur.
 
-- [Création d’une connexion à la source GreenPlum dans l’interface utilisateur](../../tutorials/ui/create/databases/greenplum.md)
-- [Configuration d’un flux de données pour une connexion à une base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Création d’une connexion source GreenPlum dans l’interface utilisateur](../../tutorials/ui/create/databases/greenplum.md)
+- [Configuration d’un flux de données pour une connexion à la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
