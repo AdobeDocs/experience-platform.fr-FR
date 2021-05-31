@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform;prise en main;content ai;commerce ai;content and commerce ai
+keywords: Experience Platform;prise en main;contenu;commerce ai;contenu et commerce ai
 solution: Experience Platform, Intelligent Services
 title: Prise en main de Content and Commerce AI
 topic-legacy: Getting started
-description: Content and Commerce AI utilise des API d’Adobe I/O. Pour appeler les API d'Adobe I/O et l'intégration de la console d'E/S, vous devez d'abord suivre le didacticiel d'authentification.
+description: Content and Commerce AI utilise des API d’Adobe I/O. Pour lancer des appels aux API Adobe I/O et à l’intégration de la console I/O, vous devez d’abord suivre le tutoriel sur l’authentification.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 13%
+source-wordcount: '592'
+ht-degree: 14%
 
 ---
 
@@ -19,29 +18,29 @@ ht-degree: 13%
 >
 >Content and Commerce AI est en version bêta. La documentation peut être modifiée.
 
-[!DNL Content and Commerce AI] utilise les API d’Adobe I/O. Pour appeler les API d&#39;Adobe I/O et l&#39;intégration de la console d&#39;E/S, vous devez d&#39;abord suivre le didacticiel d&#39;authentification [](https://www.adobe.com/go/platform-api-authentication-en).
+[!DNL Content and Commerce AI] utilise les API d’Adobe I/O. Pour passer des appels aux API Adobe I/O et à l’intégration de la console I/O, vous devez d’abord suivre le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis).
 
-Cependant, lorsque vous atteignez l’étape **Ajouter API**, l’API se trouve sous Experience Cloud au lieu de Adobe Experience Platform, comme indiqué dans la capture d’écran suivante :
+Cependant, lorsque vous atteignez l’étape **Ajouter une API**, l’API se trouve sous Experience Cloud au lieu de Adobe Experience Platform, comme illustré dans la capture d’écran suivante :
 
-![ajout d’une API de contenu et de commerce](./images/add-api.png)
+![Ajout de Content and Commerce AI](./images/add-api.png)
 
-Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API d’Adobe I/O, comme indiqué ci-dessous :
+Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API d’Adobe I/O, comme illustré ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-## Créer un environnement Postman (facultatif)
+## Création d’un environnement Postman (facultatif)
 
-Une fois que vous avez configuré votre projet et votre API dans Adobe Developer Console, vous avez la possibilité de télécharger un fichier d&#39;environnement pour Postman. Sous **[!UICONTROL API]** le rail gauche de votre projet, sélectionnez **[!UICONTROL Contenu et commerce AI]**. Un nouvel onglet s’ouvre, contenant une carte intitulée &quot;[!DNL Try it out]&quot;. Sélectionnez **Télécharger pour Postman** pour télécharger un fichier JSON utilisé pour configurer votre environnement postman.
+Une fois que vous avez configuré votre projet et votre API dans Adobe Developer Console, vous avez la possibilité de télécharger un fichier d’environnement pour Postman. Sous **[!UICONTROL API]** dans le rail de gauche de votre projet, sélectionnez **[!UICONTROL Content and Commerce AI]**. Un nouvel onglet s’ouvre, contenant une carte intitulée &quot;[!DNL Try it out]&quot;. Sélectionnez **Télécharger pour Postman** pour télécharger un fichier JSON utilisé pour configurer votre environnement Postman.
 
 ![téléchargement pour postman](./images/add-to-postman.png)
 
-Après avoir téléchargé le fichier, ouvrez Postman et sélectionnez l&#39;icône **engrenage** en haut à droite pour ouvrir la boîte de dialogue **gérer les environnements**.
+Une fois le fichier téléchargé, ouvrez Postman et sélectionnez l’icône **engrenage** en haut à droite pour ouvrir la boîte de dialogue **gérer les environnements**.
 
-![icône d&#39;engrenage](./images/select-gear-icon.png)
+![icône d’engrenage](./images/select-gear-icon.png)
 
-Ensuite, sélectionnez **Importer** dans la boîte de dialogue **Gérer les environnements**.
+Sélectionnez ensuite **Importer** depuis la boîte de dialogue **Gérer les environnements**.
 
 ![import](./images/import.png)
 
@@ -51,19 +50,19 @@ Vous êtes redirigé et invité à sélectionner un fichier d’environnement su
 
 ![](./images/click-open.png)
 
-Vous êtes redirigé vers l&#39;onglet *Gérer les environnements* avec un nouveau nom d&#39;environnement renseigné. Sélectionnez le nom de l&#39;environnement à vue et modifiez les variables disponibles dans Postman. Vous devez toujours renseigner manuellement les éléments `JWT_TOKEN` et `ACCESS_TOKEN`. Ces valeurs auraient dû être obtenues lors de l&#39;exécution du didacticiel d&#39;authentification [](https://www.adobe.com/go/platform-api-authentication-en).
+Vous êtes redirigé vers l’onglet *Gérer les environnements* avec un nouveau nom d’environnement renseigné. Sélectionnez le nom de l’environnement pour afficher et modifier les variables disponibles dans Postman. Vous devez toujours renseigner manuellement les `JWT_TOKEN` et `ACCESS_TOKEN`. Ces valeurs doivent avoir été obtenues en suivant le [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en).
 
 ![](./images/re-direct.png)
 
-Une fois les variables terminées, elles doivent ressembler à la capture d’écran ci-dessous. Sélectionnez **Mettre à jour** pour terminer la configuration de votre environnement.
+Une fois que vous avez terminé, vos variables doivent ressembler à la capture d’écran ci-dessous. Sélectionnez **Mettre à jour** pour terminer la configuration de votre environnement.
 
 ![](./images/final-environment.png)
 
-Vous pouvez désormais sélectionner votre environnement dans le menu déroulant situé dans le coin supérieur droit et renseigner automatiquement toutes les valeurs enregistrées. Il vous suffit de modifier à tout moment les valeurs pour mettre à jour tous vos appels d’API.
+Vous pouvez désormais sélectionner votre environnement dans le menu déroulant dans le coin supérieur droit et renseigner automatiquement toutes les valeurs enregistrées. Il vous suffit de modifier à tout moment les valeurs pour mettre à jour tous vos appels d’API.
 
 ![example](./images/select-environment.png)
 
-Pour plus d&#39;informations sur l&#39;utilisation d&#39;API d&#39;Adobe I/O avec Postman, consultez la publication Medium sur [Utilisation de Postman pour l&#39;authentification JWT sur Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
+Pour plus d’informations sur l’utilisation des API Adobe I/O à l’aide de Postman, voir la publication Medium sur [Utilisation de Postman pour l’authentification JWT sur Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
 
 ## Lecture d’exemples d’appels API
 
@@ -71,8 +70,8 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ## Étapes suivantes {#next-steps}
 
-Une fois que vous disposez de toutes vos informations d’identification, vous êtes prêt à configurer un programme de travail personnalisé pour [!DNL Content and Commerce AI]. Les documents suivants aident à comprendre le cadre d&#39;extensibilité et la configuration des environnements.
+Une fois que vous disposez de toutes vos informations d’identification, vous êtes prêt à configurer un programme de travail personnalisé pour [!DNL Content and Commerce AI]. Les documents suivants aident à comprendre le framework d’extensibilité et la configuration de l’environnement.
 
-Pour en savoir plus sur le cadre d&#39;extensibilité, début en lisant le document [introduction à l&#39;extensibilité](https://docs.adobe.com/content/help/fr-FR/asset-compute/using/extend/understand-extensibility.html). Ce document décrit les conditions préalables et les exigences de mise en service.
+Pour en savoir plus sur Extensibility Framework, commencez par lire le document [introduction à l’extensibilité](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=fr) . Ce document décrit les conditions préalables et les exigences en matière de configuration.
 
-Pour en savoir plus sur la configuration d&#39;un environnement pour [!DNL Content and Commerce AI], début en lisant le guide de [configuration d&#39;un environnement développeur](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html). Ce document fournit des instructions de configuration qui vous permettent de développer pour Asset compute Service.
+Pour en savoir plus sur la configuration d’un environnement pour [!DNL Content and Commerce AI], commencez par lire le guide de [configuration d’un environnement de développement](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). Ce document fournit des instructions de configuration qui vous permettent de développer pour Asset compute Service.
