@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; type de données ; types de données ; types de données ; type de données ; type de données ; type de données de segmentation ; segmentation ; segmentation ; service de segmentation ; types de données du service de segmentation ;
+keywords: Experience Platform;accueil;rubriques populaires;type de données;types de données;types de données;type de données;types de données;types de données de segmentation;segmentation;segmentation;service de segmentation;types de données du service de segmentation ;
 solution: Experience Platform
-title: Types de données pris en charge dans le service de segmentation
+title: Types de données pris en charge dans Segmentation Service
 topic-legacy: overview
 description: Tous les types de données de modèle de données d’expérience (XDM) sont pris en charge dans Adobe Segmentation Service. Les règles qui constituent une définition de segment sont contextualisées par les types de données suivantes.
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '510'
 ht-degree: 61%
 
 ---
 
-# Types de données pris en charge dans le service de segmentation
+# Types de données pris en charge dans Segmentation Service
 
 Tous les types de données de modèle de données d’expérience (XDM) sont pris en charge dans Adobe Experience Platform Segmentation Service. Les règles qui constituent une définition de segment sont contextualisées par les types de données suivantes.
 
@@ -40,7 +39,7 @@ Les données de date vous permettent d’attribuer un contexte temporel à vos d
 
 ## Événements Experience
 
-En tant que schéma Adobe Experience Platform, [!DNL XDM ExperienceEvents] enregistre les interactions client explicites et implicites avec les applications intégrées [!DNL Platform], y compris un instantané du système au moment de l&#39;interaction. [!DNL ExperienceEvents] sont des dossiers de faits. Ainsi, il s’agit d’une source de données disponible lors de la définition de segment.
+En tant que schéma Adobe Experience Platform, [!DNL XDM ExperienceEvents] enregistre les interactions client explicites et implicites avec les applications intégrées [!DNL Platform], y compris un instantané du système au moment de l’interaction. [!DNL ExperienceEvents] sont des enregistrements factuels. Ainsi, il s’agit d’une source de données disponible lors de la définition de segment.
 
 Comme le montre le tableau ci-dessous, les données d’événement sont générées à l’aide de mots-clés qui aident à affiner le comportement des événements et à spécifier des attributs d’événement.
 
@@ -55,11 +54,11 @@ Comme le montre le tableau ci-dessous, les données d’événement sont génér
 
 Les audiences externes peuvent également être utilisées comme composants d’une nouvelle définition de segment, en ajoutant leurs règles d’attribut au nouveau segment.
 
-Actuellement, seule Adobe Audience Manager est prise en charge en tant qu’audience externe, les sources supplémentaires étant activées à l’avenir. Pour plus d&#39;informations sur l&#39;utilisation des audiences Adobe Audience Manager avec la plate-forme, consultez le [guide de partage d&#39;audiences dans la documentation Adobe Audience Manager](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+Actuellement, seule Adobe Audience Manager est prise en charge en tant qu’audience externe, avec des sources supplémentaires activées à l’avenir. Vous trouverez plus d’informations sur l’utilisation des audiences Adobe Audience Manager avec Platform dans le [guide de partage d’audience de la documentation de Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr).
 
 ### Partage de segments
 
-Les segments créés dans Platform peuvent être utilisés dans d’autres [services principaux de Adobe Experience Cloud](https://docs.adobe.com/content/help/fr-FR/core-services/interface/experience-cloud.html). Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
+Les segments créés dans Platform peuvent être utilisés dans d’autres [services principaux Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
 
 ## Autres types de données
 
