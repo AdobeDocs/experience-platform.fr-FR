@@ -1,43 +1,43 @@
 ---
-title: Configuration de la banque de données pour le SDK Web Experience Platform
+title: Configuration du flux de données pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer les flux de données. '
-keywords: configuration;datastreams;datastreamId;edge;edge configuration id;Environnement Settings;edgeConfigId;identity;id sync enabled;ID Sync Conteneur ID;Sandbox;Streaming Inlet;Événement Dataset;cible;code client;jeton de propriété;ID d'Environnement de Cible;destinations de cookie;URL Destinations;paramètres Analytics Blockreport suite id;
+keywords: configuration;datastreams;datastreamId;edge;id de configuration de périphérie;paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;ID de conteneur de synchronisation;sandbox;flux de données;jeu de données d’événement;cible;code client;jeton de propriété;ID d’environnement cible;destinations de cookie;destinations d’URL;ID de suite de rapports de paramètres Analytics;ID de boite
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5642fa155d487982f01d25fa765bb36ad5c3bb21
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '914'
-ht-degree: 2%
+source-wordcount: '904'
+ht-degree: 0%
 
 ---
 
 
-# Configuration d&#39;une chaîne de données
+# Configuration d’un flux de données
 
-La configuration du SDK Web Adobe Experience Platform est fractionnée en deux emplacements. La commande [configure](configuring-the-sdk.md) du SDK contrôle les éléments qui doivent être traités sur le client, comme la commande `edgeDomain`. Les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu&#39;une requête est envoyée au réseau Edge de Adobe Experience Platform, `edgeConfigId` est utilisé pour référencer la configuration côté serveur. Cela vous permet de mettre à jour la configuration sans avoir à modifier le code de votre site Web.
+La configuration du SDK Web Adobe Experience Platform est fractionnée en deux endroits. La [commande configure](configuring-the-sdk.md) du SDK contrôle les éléments qui doivent être gérés sur le client, comme la balise `edgeDomain`. Les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une demande est envoyée au réseau Adobe Experience Platform Edge, la valeur `edgeConfigId` est utilisée pour référencer la configuration côté serveur. Cela vous permet de mettre à jour la configuration sans avoir à apporter de modifications au code sur votre site web.
 
-Votre organisation doit être configurée pour cette fonctionnalité. Veuillez contacter votre responsable de succès client (CSM) pour être mis en liste autorisée.
+Votre entreprise doit être configurée pour cette fonctionnalité. Veuillez contacter votre responsable du succès client pour qu’il soit mis en liste autorisée.
 
 ## Création d’une configuration de flux de données
 
-Les données peuvent être créées dans l&#39;Adobe [!DNL Experience Platform Launch] à l&#39;aide de l&#39;outil de configuration Datastream.
+Les flux de données peuvent être créés dans Adobe [!DNL Experience Platform Launch] à l’aide de l’outil de configuration Datastream .
 
-![navigation de l&#39;outil datastreams](../../assets/datastreams_config.png)
+![navigation de l’outil datastreams](../../assets/datastreams_config.png)
 
 >[!NOTE]
 >
->L’outil de configuration des flux de données est disponible pour les clients sur la liste autorisée, qu’ils utilisent [!DNL Experience Platform Launch] comme gestionnaire de balises. De plus, les utilisateurs ont besoin des autorisations de développement dans [!DNL Experience Platform Launch]. Pour plus d&#39;informations, consultez l&#39;article [Autorisations d&#39;utilisateur](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/user-permissions.html) dans la documentation [!DNL Experience Platform Launch].
+>L’outil de configuration des flux de données est disponible pour les clients de la liste autorisée, qu’ils utilisent [!DNL Experience Platform Launch] comme gestionnaire de balises. En outre, les utilisateurs ont besoin des autorisations Développer dans [!DNL Experience Platform Launch]. Pour plus d’informations, reportez-vous à l’article [Autorisations utilisateur](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html) de la documentation [!DNL Experience Platform Launch] .
 
-Créez une banque de données en cliquant sur **[!UICONTROL Nouvelle banque de données]** dans la zone supérieure droite de l&#39;écran. Après avoir fourni un nom et une description, vous êtes invité à définir les paramètres par défaut de chaque environnement. Les paramètres disponibles sont détaillés ci-dessous.
+Créez un flux de données en cliquant sur **[!UICONTROL Nouvelle flux de données]** dans la zone supérieure droite de l’écran. Après avoir fourni un nom et une description, vous êtes invité à définir les paramètres par défaut de chaque environnement. Les paramètres disponibles sont présentés ci-dessous.
 
-Lors de la création d’une banque de données, trois environnements sont automatiquement créés avec des paramètres identiques. Ces trois environnements sont *dev*, *stage* et *prod*. Ils correspondent aux trois environnements par défaut dans [!DNL Experience Platform Launch]. Lorsque vous créez une bibliothèque [!DNL Experience Platform Launch] dans un environnement de développement, celle-ci utilise automatiquement l&#39;environnement de développement de votre configuration. Vous pouvez modifier les paramètres d’un environnement à votre convenance.
+Lors de la création d’un flux de données, trois environnements sont automatiquement créés avec des paramètres identiques. Ces trois environnements sont *dev*, *stage* et *prod*. Ils correspondent aux trois environnements par défaut dans [!DNL Experience Platform Launch]. Lorsque vous créez une bibliothèque [!DNL Experience Platform Launch] dans un environnement de développement, la bibliothèque utilise automatiquement l’environnement de développement de votre configuration. Vous pouvez modifier les paramètres dans des environnements individuels autant que vous le souhaitez.
 
-L’ID utilisé dans le SDK en tant que `edgeConfigId` est un ID composite qui spécifie la configuration et l’environnement (par exemple, `1c86778b-cdba-4684-9903-750e52912ad1:stage`). Si aucun environnement n’est présent dans l’ID composite (par exemple, `stage` dans l’exemple précédent), l’environnement de production est utilisé.
+L’ID utilisé dans le SDK comme `edgeConfigId` est un ID composite qui spécifie la configuration et l’environnement (par exemple, `1c86778b-cdba-4684-9903-750e52912ad1:stage`). Si aucun environnement n’est présent dans l’ID composite (par exemple, `stage` dans l’exemple précédent), l’environnement de production est utilisé.
 
-Vous trouverez ci-dessous les paramètres disponibles pour chaque environnement de configuration. La plupart des sections peuvent être activées ou désactivées. Lorsque cette option est désactivée, vos paramètres sont enregistrés mais ne sont pas principaux.
+Vous trouverez ci-dessous les paramètres disponibles pour chaque environnement de configuration. La plupart des sections peuvent être activées ou désactivées. Lorsque cette option est désactivée, vos paramètres sont enregistrés, mais ne sont pas principaux.
 
 ## [!UICONTROL Paramètres ] IDSettings tiers
 
-La section d’identifiant tiers est la seule qui est toujours activée. Deux paramètres sont disponibles : &quot;[!UICONTROL Synchronisation des identifiants tiers activée]&quot; et &quot;[!UICONTROL ID de Conteneur de synchronisation des identifiants tiers]&quot;.
+La section ID tiers est la seule section toujours active. Deux paramètres sont disponibles : &quot;[!UICONTROL Synchronisation des identifiants tiers activée]&quot; et &quot;[!UICONTROL ID de conteneur de synchronisation des identifiants tiers]&quot;.
 
 ![Section Identité de l’interface utilisateur de configuration](../../assets/edge_configuration_identity.png)
 
@@ -45,74 +45,74 @@ La section d’identifiant tiers est la seule qui est toujours activée. Deux pa
 
 Contrôle si le SDK effectue ou non des synchronisations d’identité avec des partenaires tiers.
 
-### [!UICONTROL ID de Conteneur de synchronisation des identifiants tiers]
+### [!UICONTROL ID de conteneur de synchronisation des identifiants tiers]
 
-Les synchronisations d’identifiants peuvent être regroupées en conteneurs pour permettre l’exécution de différentes synchronisations d’identifiants à des moments différents. Cela contrôle quel conteneur d’ID synchronisé est exécuté pour un ID de configuration donné.
+Les synchronisations des identifiants peuvent être regroupées en conteneurs afin de permettre l’exécution de différentes synchronisations des identifiants à différents moments. Cela contrôle le conteneur des synchronisations des identifiants exécuté pour un identifiant de configuration donné.
 
 ## Paramètres Adobe Experience Platform
 
-Les paramètres répertoriés ici vous permettent d&#39;envoyer des données à Adobe Experience Platform. Vous ne devez activer cette section que si vous avez acheté le Adobe Experience Platform.
+Les paramètres répertoriés ici vous permettent d’envoyer des données à Adobe Experience Platform. N’activez cette section que si vous avez acheté Adobe Experience Platform.
 
-![Bloc des paramètres Adobe Experience Platform](../../assets/edge_configuration_aep.png)
+![Bloc de paramètres Adobe Experience Platform](../../assets/edge_configuration_aep.png)
 
 ### [!UICONTROL Environnement de test]
 
-Les sandbox sont des emplacements de Adobe Experience Platform qui permettent aux clients d’isoler leurs données et leurs implémentations les unes des autres. Pour plus de détails sur leur fonctionnement, consultez la [documentation Sandbox](../../sandboxes/home.md).
+Les environnements de test sont des emplacements dans Adobe Experience Platform qui permettent aux clients d’isoler leurs données et implémentations les uns des autres. Pour plus d’informations sur leur fonctionnement, consultez la [documentation des environnements de test](../../sandboxes/home.md).
 
-### [!UICONTROL Entrée de diffusion en continu]
+### [!UICONTROL Inlet de diffusion en continu]
 
-Une entrée en flux continu est une source HTTP à Adobe Experience Platform. Elles sont créées sous l&#39;onglet &quot;[!UICONTROL Sources]&quot; dans Adobe Experience Platform sous la forme d&#39;une API HTTP.
+Un inlet de flux est une source HTTP dans Adobe Experience Platform. Elles sont créées sous l’onglet &quot;[!UICONTROL Sources]&quot; dans Adobe Experience Platform en tant qu’API HTTP.
 
-### [!UICONTROL Jeu de données événement]
+### [!UICONTROL Jeu de données d’événement]
 
-Les flux de données prennent en charge l’envoi de données à des jeux de données ayant un schéma de classe [!UICONTROL Événement d’expérience].
+Les flux de données prennent en charge l’envoi de données à des jeux de données qui ont un schéma de classe [!UICONTROL Événement d’expérience].
 
 ## Paramètres Adobe Target
 
 Pour configurer Adobe Target, vous devez fournir un code client. Les autres champs sont facultatifs.
 
-![Bloc des paramètres Adobe Target](../../assets/edge_configuration_target.png)
+![Bloc de paramètres Adobe Target](../../assets/edge_configuration_target.png)
 
 >[!NOTE]
 >
->L&#39;organisation associée au code client doit correspondre à l&#39;organisation dans laquelle l&#39;ID de configuration est créé.
+>L’organisation associée au code client doit correspondre à l’organisation dans laquelle l’ID de configuration est créé.
 
 ### [!UICONTROL Code client]
 
-ID unique d’un compte de cible. Pour ce faire, vous pouvez accéder à [!UICONTROL Adobe Target] > [!UICONTROL Configuration] [!UICONTROL Implémentation] > [!UICONTROL modifier les paramètres] en regard du bouton [!UICONTROL télécharger] pour [!UICONTROL at.js] ou &lt;a1 2/>mbox.js][!UICONTROL 
+Identifiant unique d’un compte cible. Pour le trouver, vous pouvez accéder à [!UICONTROL Adobe Target] > [!UICONTROL Configuration] [!UICONTROL Mise en oeuvre] > [!UICONTROL modifier les paramètres] en regard du bouton [!UICONTROL télécharger] pour [!UICONTROL at.js] ou &lt;a11 2/>mbox.js][!UICONTROL 
 
 ### [!UICONTROL Jeton de propriété]
 
-[!DNL Target] permet aux clients de contrôler les autorisations en utilisant les propriétés. Vous trouverez des détails dans la section [Autorisations d&#39;entreprise](https://docs.adobe.com/content/help/fr-FR/target/using/administer/manage-users/enterprise/properties-overview.html) de la documentation [!DNL Target].
+[!DNL Target] permet aux clients de contrôler les autorisations par l’utilisation des propriétés. Vous trouverez des détails dans la section [Autorisations d’entreprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) de la documentation [!DNL Target].
 
-Le jeton de propriété se trouve dans [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]
+Le jeton de propriété se trouve dans [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Propriétés]
 
-### [!UICONTROL ID d’Environnement cible]
+### [!UICONTROL Identifiant d’environnement de Target]
 
-[Les ](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) environnements d’Adobe Target vous aident à gérer votre implémentation à toutes les étapes de développement. Ce paramètre spécifie l’environnement que vous allez utiliser avec chaque environnement.
+[](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) Les environnements d’Adobe Target vous aident à gérer votre mise en oeuvre à toutes les étapes de développement. Ce paramètre spécifie l’environnement que vous allez utiliser avec chaque environnement.
 
-L’Adobe recommande de définir cette variable différemment pour chacun de vos environnements de données `dev`, `stage` et `prod` afin de garder les choses simples. Cependant, si vous avez déjà défini des environnements Adobe Target, vous pouvez les utiliser.
+Adobe recommande de définir cela différemment pour chacun de vos environnements de flux de données `dev`, `stage` et `prod` afin de garder les choses simples. Cependant, si des environnements Adobe Target sont déjà définis, vous pouvez les utiliser.
 
 ## Paramètres Adobe Audience Manager
 
-Pour envoyer des données à Adobe Audience Manager, il suffit d’activer cette section. Les autres paramètres sont facultatifs mais encouragés.
+Pour envoyer des données à Adobe Audience Manager, il suffit d’activer cette section. Les autres paramètres sont facultatifs, mais encouragés.
 
-![Audience d&#39;Adobe Gérer les paramètres Bloc](../../assets/edge_configuration_aam.png)
+![Bloc des paramètres d’Adobe Audience Manager](../../assets/edge_configuration_aam.png)
 
-### [!UICONTROL Destinations des cookies activées]
+### [!UICONTROL Destinations de cookie activées]
 
-Permet au SDK de partager des informations de segment via [Destinations de cookies](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) à partir de [!DNL Audience Manager].
+Permet au SDK de partager des informations sur les segments via [les destinations de cookie](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) à partir de [!DNL Audience Manager].
 
 ### [!UICONTROL Destinations d’URL activées]
 
-Permet au SDK de partager des informations de segment via [URL Destinations](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). Ils sont configurés dans [!DNL Audience Manager].
+Permet au SDK de partager les informations sur les segments via [les destinations d’URL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). Ils sont configurés dans [!DNL Audience Manager].
 
 ## Paramètres Adobe Analytics
 
-Contrôle si les données sont envoyées à Adobe Analytics. Pour plus d’informations, voir [Présentation d’Analytics](../data-collection/adobe-analytics/analytics-overview.md).
+Contrôle si les données sont envoyées à Adobe Analytics. Pour plus d’informations, reportez-vous à la section [Présentation d’Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
-![Bloc des paramètres Adobe Analytics](../../assets/edge_configuration_aa.png)
+![Bloc de paramètres Adobe Analytics](../../assets/edge_configuration_aa.png)
 
 ### [!UICONTROL Identifiant de Report Suite]
 
-La suite de rapports se trouve dans la section Admin Adobe Analytics sous [!UICONTROL Admin > ReportSuites]. Si plusieurs suites de rapports sont spécifiées, les données sont alors copiées dans chaque suite de rapports.
+La suite de rapports se trouve dans la section Admin d’Adobe Analytics sous [!UICONTROL Admin > ReportSuites]. Si plusieurs suites de rapports sont spécifiées, les données sont copiées dans chaque suite de rapports.
