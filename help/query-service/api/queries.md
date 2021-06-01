@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; guide d'api ; requêtes ; requête ; service de Requête ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;service de requête;guide api;requêtes;requête;service de requête ;
 solution: Experience Platform
-title: Point de terminaison de l'API requêtes
+title: Point de terminaison de l’API de requêtes
 topic-legacy: queries
-description: Les sections suivantes décrivent les appels que vous pouvez effectuer à l’aide du point de terminaison /requêtes de l’API Requête Service.
+description: Les sections suivantes passent en revue les appels que vous pouvez effectuer à l’aide du point de terminaison /query de l’API Query Service.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 536c2998f7d320dec0cb392465677dd30c8ea622
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 94%
@@ -142,7 +141,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -d '{
         "dbName": "prod:all",
         "sql": "SELECT * FROM accounts;",
-        "name": "Sample Query"
+        "name": "Sample Query",
         "description": "Sample Description"
     }  
 ```
