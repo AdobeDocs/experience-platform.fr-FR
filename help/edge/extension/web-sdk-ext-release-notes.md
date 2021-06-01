@@ -3,10 +3,10 @@ title: Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
 description: SDK Web Adobe Experience Platform dans Adobe Experience Platform Launch
 seo-description: SDK Web Adobe Experience Platform dans Adobe Experience Platform Launch
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: ec841a028d2a6acbdb1c1406026bbd4574cbc2ee
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 77%
+source-wordcount: '1232'
+ht-degree: 72%
 
 ---
 
@@ -14,7 +14,17 @@ ht-degree: 77%
 
 Ce document couvre les notes de mise à jour de l’extension SDK Web Adobe Experience Platform pour Adobe Experience Platform Launch. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, consultez les [Notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## 9 mars 2020
+## 1 juin 2021
+
+### SDK Web Adobe Experience Platform 2.5.0
+
+Contient la version 2.5.0 de la bibliothèque SDK Web Adobe Experience Platform.
+
+* Ajout d’un champ `data` à l’action Envoyer l’événement. La documentation à venir décrit l’utilisation de cette fonctionnalité dans certains scénarios.
+* Sur la vue d’élément de données d’objet XDM, un problème a été corrigé en raison duquel une erreur était générée si l’utilisateur avait accès aux environnements de test Adobe Experience Platform, mais pas à l’environnement de test configuré par défaut pour l’organisation.
+* Sur la vue d’élément de données Objet XDM, un problème a été résolu, en raison duquel un champ de schéma obligatoire était considéré comme non valide même si l’objet parent ne contenait aucune valeur.
+
+## 9 mars 2021
 
 ### SDK Web Adobe Experience Platform 2.4.0
 
