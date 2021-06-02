@@ -4,19 +4,31 @@ title: Questions fréquentes
 seo-title: 'Questions fréquemment posées '
 description: Réponses aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform
 seo-description: Réponses aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform
-source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
+source-git-commit: a01b53758f4ad42272c39f71a08021d30900e7af
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 12%
+source-wordcount: '733'
+ht-degree: 11%
 
 ---
 
 
-# Questions fréquemment posées  {#faq}
+# Questions fréquemment posées {#faq}
 
 ## Présentation {#overview}
 
 Ce document répond aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform. Pour toute question ou dépannage concernant d’autres services [!DNL Platform], y compris ceux rencontrés sur toutes les API [!DNL Platform], reportez-vous au [guide de dépannage Experience Platform](../landing/troubleshooting.md).
+
+## Questions générales sur les destinations {#general}
+
+**Pourquoi vois-je différents nombres de profils dans l’interface utilisateur de l’Experience Platform et dans les fichiers CSV exportés ?**
+
+Il s’agit d’un comportement normal en raison de la manière dont Experience Platform effectue la segmentation.
+
+La segmentation par flux met à jour le nombre de profils pour les segments en continu toute la journée, tandis que la segmentation par lots met à jour le nombre de profils pour les segments par lot une fois toutes les 24 heures.
+
+Lorsque le planning d’exportation de segments diffère du planning de segmentation, le nombre de profils entre l’interface utilisateur et le fichier [!DNL CSV] exporté sera différent, en particulier en ce qui concerne les segments en continu.
+
+Pour plus d’informations, voir la [documentation Segmentation Service](../segmentation/home.md) .
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
