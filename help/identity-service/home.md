@@ -5,10 +5,10 @@ title: Présentation dʼIdentity Service
 topic-legacy: overview
 description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 288f24351788ed4b8a0c68cffe5eb5c91ed01691
 workflow-type: tm+mt
-source-wordcount: '1717'
-ht-degree: 100%
+source-wordcount: '1734'
+ht-degree: 99%
 
 ---
 
@@ -113,6 +113,10 @@ Les schémas d’enregistrement et de série temporelle permettent d’inclure d
 ### Désignation des champs XDM comme identité
 
 Les champs de type `string` dans les schémas qui mettent en œuvre des classes XDM d’enregistrement ou de série temporelle peuvent être qualifiés de champs d’identité. Par conséquent, toutes les données ingérées dans ces champs seraient considérées comme des données d’identité.
+
+>[!NOTE]
+>
+>Les champs de type Tableau et Mappage ne sont pas pris en charge et ne peuvent pas être marqués et étiquetés comme champs d’identité.
 
 Les champs d’identité permettent également de lier des identités si elles partagent des données PII communes.
 Par exemple, en désignant les champs de numéro de téléphone comme des champs dʼidentité, [!DNL Identity Service] crée automatiquement un graphique des relations avec les autres personnes qui utilisent le même numéro de téléphone.
