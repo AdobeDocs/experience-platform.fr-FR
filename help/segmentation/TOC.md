@@ -4,25 +4,24 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des segments et générez des audiences à partir de vos données de profil client en temps réel.
 feature: Segments
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 48ef54759ff62efa84aac493af3a7799e1b6d141
 workflow-type: tm+mt
-source-wordcount: '162'
-ht-degree: 74%
+source-wordcount: '164'
+ht-degree: 79%
 
 ---
 
 
 # Adobe Experience Platform Segmentation Service {#segmentation}
 
-- [Présentation du service de segmentation](home.md)
+- [Présentation de Segmentation Service](home.md)
 - [Types de données de segmentation](data-types.md)
 - API Segmentation {#api}
    - [Présentation](api/overview.md)
    - [Prise en main](api/getting-started.md)
    - [Segmentation Edge](api/edge-segmentation.md)
    - [Tâches d’exportation](api/export-jobs.md)
-   - [Prévisualisations et estimations](api/previews-and-estimates.md)
+   - [Aperçus et estimations](api/previews-and-estimates.md)
    - [Plannings](api/schedules.md)
    - [Définitions de segment](api/segment-definitions.md)
    - [Tâches de segmentation](api/segment-jobs.md)
@@ -30,12 +29,13 @@ ht-degree: 74%
    - [Segmentation par flux](api/streaming-segmentation.md)
 - Interface utilisateur de segmentation {#ui}
    - [Présentation](ui/overview.md)
-   - [Tableau de bord de segment](ui/segment-dashboard.md)
+   - [Tableau de bord des segments](ui/segment-dashboard.md)
    - [Créateur de segments](ui/segment-builder.md)
+   - [Correspondance de segment](ui/segment-match.md)
    - [Segmentation Edge](ui/edge-segmentation.md)
    - [Segmentation par flux](ui/streaming-segmentation.md)
-   - [Segmentation en flux continu (vidéo)](video/streaming-segmentation-overview.md)
-   - [Réfactorisation des contraintes de temps](ui/segment-refactoring.md)
+   - [Segmentation par flux (Vidéo)](video/streaming-segmentation-overview.md)
+   - [Refactorisation des contraintes de temps](ui/segment-refactoring.md)
 - [Respect du droit d’opposition](honoring-opt-outs.md)
 - [Segmentation d’entités multiples](multi-entity-segmentation.md)
 - Langage de requête de profil {#pql}
@@ -54,12 +54,12 @@ ht-degree: 74%
    - [Fonctions diverses](pql/misc-functions.md)
 - Tutoriels {#tutorials}
    - [Création d’un segment](tutorials/create-a-segment.md)
-   - [Création d’un segment (vidéo)](video/create-segment.md)
+   - [Création d’un segment (Vidéo)](video/create-segment.md)
    - [Création d’un segment dynamique (vidéo)](video/create-a-dynamic-segment.md)
-   - [Création d’un segment à plusieurs entités (vidéo)](video/create-multi-entity-segments.md)
+   - [Création d’un segment d’entités multiples (vidéo)](video/create-multi-entity-segments.md)
    - [Évaluation d’un segment](tutorials/evaluate-a-segment.md)
-   - [Importation et utilisation d’audiences externes](tutorials/using-external-audiences.md)
+   - [Import et utilisation d&#39;audiences externes](tutorials/using-external-audiences.md)
    - [Création d’un jeu de données pour exporter des données](tutorials/create-dataset-export-segment.md)
    - [Application de la conformité à l’utilisation des données pour les segments](tutorials/governance.md)
 - [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
-- [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+- [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
