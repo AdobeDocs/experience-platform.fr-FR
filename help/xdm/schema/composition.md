@@ -5,9 +5,9 @@ title: Principes de base de la composition des schémas
 topic-legacy: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 9786b810d7b203300db49637039dc034a70f95a7
 workflow-type: tm+mt
-source-wordcount: '3624'
+source-wordcount: '3657'
 ht-degree: 33%
 
 ---
@@ -55,7 +55,7 @@ Les schémas sont utilisés pour ingérer des données dans [!DNL Experience Pla
 
 Pour faciliter ce processus, les champs clés de vos schémas peuvent être marqués comme identités. Lors de l’ingestion des données, les données de ces champs sont insérées dans le &quot;[!UICONTROL graphique d’identités]&quot; de cette personne. Les données du graphique peuvent ensuite être consultées par [[!DNL Real-time Customer Profile]](../../profile/home.md) et d’autres services [!DNL Experience Platform] afin de fournir une vue d’ensemble de chaque client.
 
-Les champs généralement marqués comme &quot;[!UICONTROL Identité]&quot; incluent : adresse électronique, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), identifiant CRM ou d’autres champs d’identifiant uniques. Vous devez également tenir compte de tous les identifiants uniques propres à votre organisation, car ils peuvent également représenter de bons champs &quot;[!UICONTROL Identité]&quot;.
+Les champs généralement marqués comme &quot;[!UICONTROL Identité]&quot; incluent : adresse électronique, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr), identifiant CRM ou d’autres champs d’identifiant uniques. Vous devez également tenir compte de tous les identifiants uniques propres à votre organisation, car ils peuvent également représenter de bons champs &quot;[!UICONTROL Identité]&quot;.
 
 Il est important de réfléchir aux identités client lors de la phase de planification du schéma afin de vous assurer que les données sont rassemblées pour créer le profil le plus robuste possible. Consultez la présentation de [Adobe Experience Platform Identity Service](../../identity-service/home.md) pour en savoir plus sur la manière dont les informations d’identité peuvent vous aider à fournir des expériences numériques à vos clients.
 
@@ -108,13 +108,15 @@ Comme l’exemple ci-dessus le montre, chaque clé de l’objet `identityMap` re
 
 Le maintien de la compatibilité descendante étant essentiel pour l’évolution du schéma, [!DNL Experience Platform] applique un principe de contrôle de version purement additif afin de s’assurer que toute révision du schéma n’entraîne que des mises à jour et des modifications non destructives. En d’autres termes, **les modifications entraînant des ruptures ne sont pas prises en charge.**
 
-| Modifications prises en charge | Modifications entraînant une rupture (non prises en charge) |
-|------------------------------------|---------------------------------|
-| <ul><li>Ajouter des nouveaux champs à un schéma existant</li><li>Rendre un champ obligatoire facultatif</li></ul> | <ul><li>Supprimer des champs définis précédemment</li><li>Introduire de nouveaux champs obligatoires</li><li>Renommer ou redéfinir des champs existants</li><li>Supprimer ou limiter des valeurs de champ précédemment prises en charge</li><li>Déplacer des attributs vers un autre emplacement de l’arborescence</li></ul> |
-
 >[!NOTE]
 >
->Si un schéma n’a pas encore été utilisé pour ingérer des données dans [!DNL Experience Platform], vous pouvez introduire une modification entraînant une rupture dans ce schéma. Cependant, une fois que le schéma a été utilisé dans [!DNL Platform], il doit respecter la politique de contrôle de version additif.
+>Si un schéma n’a pas encore été utilisé pour ingérer des données dans [!DNL Experience Platform] et n’a pas été activé pour une utilisation dans Real-time Customer Profile, vous pouvez introduire une modification entraînant une rupture dans ce schéma. Cependant, une fois que le schéma a été utilisé dans [!DNL Platform], il doit respecter la politique de contrôle de version additif.
+
+Le tableau suivant répertorie les modifications prises en charge lors de la modification des schémas, des groupes de champs et des types de données :
+
+| Modifications prises en charge | Modifications entraînant une rupture (non prises en charge) |
+| --- | --- |
+| <ul><li>Ajouter de nouveaux champs à la ressource</li><li>Rendre un champ obligatoire facultatif</li><li>Modification du nom d’affichage et de la description de la ressource</li></ul> | <ul><li>Supprimer des champs définis précédemment</li><li>Introduire de nouveaux champs obligatoires</li><li>Renommer ou redéfinir des champs existants</li><li>Supprimer ou limiter des valeurs de champ précédemment prises en charge</li><li>Déplacer des attributs vers un autre emplacement de l’arborescence</li></ul> |
 
 ### Schémas et ingestion de données
 
