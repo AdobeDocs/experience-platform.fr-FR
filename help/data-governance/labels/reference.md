@@ -5,10 +5,10 @@ title: Glossaire des étiquettes dʼutilisation des données
 topic-legacy: labels
 description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1ae0ce47381585b48020990a71493bbfc1504ec2
 workflow-type: tm+mt
-source-wordcount: '1904'
-ht-degree: 100%
+source-wordcount: '1982'
+ht-degree: 96%
 
 ---
 
@@ -23,7 +23,7 @@ Ce document décrit les étiquettes dʼutilisation des données de base actuelle
 Les étiquettes Contrat « C » sont utilisées pour catégoriser des données qui possèdent des obligations contractuelles ou qui sont liées aux politiques de gouvernance des données de votre organisation.
 
 | Étiquette | Définition |
-|---|---|
+| --- | --- |
 | **C1** | Les données ne peuvent être exportées depuis Adobe Experience Cloud que sous une forme agrégée, sans inclure d’identifiants individuels ou d’appareil. [Plus d’informations...](#c1) |
 | **C2** | Les données ne peuvent pas être exportées vers un tiers. [Plus d’informations...](#c2) |
 | **C3** | Les données ne peuvent être combinées ou autrement utilisées avec des informations directement identifiables. [Plus d’informations...](#c3) |
@@ -34,13 +34,14 @@ Les étiquettes Contrat « C » sont utilisées pour catégoriser des données
 | **C8** | Les données ne peuvent pas être utilisées pour mesurer les sites web ou les applications de votre organisation. [Plus d’informations...](#c8) |
 | **C9** | Les données ne peuvent pas être utilisées dans les workflows Data Science. [Plus d’informations...](#c9) |
 | **C10** | Les données ne peuvent pas être utilisées pour lʼactivation de lʼidentité assemblée. [Plus d’informations...](#c10) |
+| **C11** | Les données ne peuvent pas être partagées avec les partenaires de correspondance de segment. [Plus d’informations...](#c11) |
 
 ## Étiquettes Identité
 
 Les étiquettes Identité « I » sont utilisées pour catégoriser des données pouvant identifier ou contacter une personne en particulier.
 
 | Étiquette | Définition |
-|---|---|
+| --- | --- |
 | **I1** | Données directement identifiables qui permettent d’identifier ou de contacter une personne spécifique, plutôt qu’un appareil. |
 | **I2** | Données indirectement identifiables pouvant être utilisées en combinaison avec toute autre donnée pour identifier ou contacter une personne spécifique. |
 
@@ -51,7 +52,7 @@ Les étiquettes Sensibles « S » sont utilisées pour catégoriser les donné
 Différents types de données géographiques peuvent être considérés comme sensibles. Toutefois, cette catégorie ne se limite pas aux données géographiques.
 
 | Étiquette | Définition |
-|---|---|
+| --- | --- |
 | **S1** | Données spécifiant la latitude et la longitude pouvant être utilisées pour déterminer l’emplacement précis d’un appareil. |
 | **S2** | Données pouvant être utilisées pour déterminer une zone de géobarrière au sens large. |
 
@@ -126,3 +127,7 @@ Certains contrats prévoient des interdictions explicites sur l’utilisation de
 #### C10 {#c10}
 
 Certaines stratégies dʼutilisation des données limitent lʼutilisation de données dʼidentité assemblées pour la personnalisation. Lʼétiquette C10 est automatiquement appliquée aux segments si leurs stratégies de fusion utilisent lʼoption « graphique privé ».
+
+#### C11 {#c11}
+
+La correspondance de segments Adobe Experience Platform vous permet de faire correspondre des segments propriétaires avec des préférences de confidentialité et de consentement, ce qui facilite le profilage enrichi et les informations en aval. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de la correspondance de segment et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow Correspondance de segment .
