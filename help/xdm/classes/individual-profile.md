@@ -5,9 +5,9 @@ title: Classe XDM Individual Profile
 topic-legacy: overview
 description: Ce document présente la classe XDM Individual Profile.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: eddaa7090af2d2c947f154272bb219dc2e3bca08
+source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '568'
 ht-degree: 1%
 
 ---
@@ -42,10 +42,12 @@ La classe [!DNL XDM Individual Profile] fournit elle-même plusieurs valeurs gé
 
 Adobe fournit plusieurs groupes de champs standard à utiliser avec la classe [!DNL XDM Individual Profile]. Voici une liste de certains groupes de champs couramment utilisés pour la classe :
 
-* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Détails démographiques]](../field-groups/profile/demographic-details.md)
+* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
+* [[!UICONTROL Détails de fidélité]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL Détails du contact personnel]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL Détails du contact professionnel]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL Préférences marketing/confidentialité (consentement)]](../field-groups/profile/consents.md)
 * [[!UICONTROL Détails de l’adhésion au segment]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL Détails du contact professionnel]](../field-groups/profile/work-contact-details.md)
 
 Pour obtenir la liste complète de tous les groupes de champs compatibles pour [!DNL XDM Individual Profile], consultez le [référentiel XDM GitHub](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
