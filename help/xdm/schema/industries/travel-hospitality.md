@@ -1,23 +1,30 @@
 ---
 solution: Experience Platform
-title: Modèle de données de l'industrie des voyages et de l'accueil ERD
+title: Modèle de données du secteur du voyage et de l’hôtellerie ERD
 topic-legacy: overview
-description: Vue d’un diagramme de relations d’entité (ERD) qui décrit un modèle de données normalisé pour l’industrie du voyage et de l’accueil, compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
+description: Affichez un diagramme de relation d’entité (ERD) qui décrit un modèle de données normalisé pour le secteur du voyage et de l’hôtellerie, compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 88c17992a391b24a76c3e387d3033df4c75a6aa6
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL Modèle de données sur les voyages et l&#39;] hospitalité dans l&#39;industrie
+# [!UICONTROL Modèle de données de l’industrie des voyages et de l’] hospitalité ERD
 
-Le diagramme de relations d&#39;entité (DCE) suivant représente un modèle de données normalisé pour l&#39;industrie du voyage et de l&#39;accueil.
+Le diagramme de relation des entités ci-après représente un modèle de données normalisé pour le secteur du voyage et de l’hôtellerie. L’ERD est délibérément présenté de manière dénormalisée et en tenant compte de la manière dont les données sont stockées dans Adobe Experience Platform.
+
+Utilisez la légende suivante pour interpréter cet ERD :
+
+* Chaque entité affichée dans est basée sur une classe [Modèle de données d’expérience (XDM) ](../composition.md#class) sous-jacente.
+* Pour une entité donnée, chaque ligne marquée dans **bold** représente un groupe de champs ou un type de données, avec les champs pertinents qu’elle fournit ci-dessous dans le texte non en gras.
+* Les champs les plus importants pour une entité donnée sont surlignés en rouge.
+* Toutes les propriétés pouvant être utilisées pour identifier des clients individuels sont marquées comme &quot;identité&quot;, l’une de ces propriétés étant marquée comme &quot;identité Principale&quot;.
+* Les relations d’entité sont marquées comme étant non dépendantes, puisque les événements basés sur des cookies ne peuvent souvent pas déterminer la personne ou l’individu qui a effectué la transaction.
+
+![](../../images/industries/travel-hospitality.png)
 
 >[!NOTE]
 >
->Pour plus d&#39;informations sur les modèles de données du secteur et sur la façon d&#39;interpréter cette DRE, consultez la [présentation du modèle de données du secteur](./overview.md).
-
-![](../../images/industries/travel-hospitality.png)
+>L’entité Événement d’expérience comprend un champ &quot;_ID&quot;, qui représente l’attribut unique (`_id`) fourni par la classe XDM ExperienceEvent. Consultez le document de référence sur [XDM ExperienceEvent](../../classes/experienceevent.md) pour plus d’informations sur ce qui est attendu pour cette valeur.
