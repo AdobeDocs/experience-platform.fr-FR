@@ -5,7 +5,7 @@ title: Groupe de champs de schéma Détails de l’ID utilisateur final
 topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs Détails de l’ID de l’utilisateur final.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 7%
@@ -19,7 +19,7 @@ ht-degree: 7%
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document [mises à jour des noms de groupe de champs](../name-updates.md) .
 
-[!UICONTROL Identifiant utilisateur final ] Détail d’un groupe de champs de schéma standard pour la  [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), utilisé pour décrire les informations d’identité d’une personne dans plusieurs applications d’Adobe. Le groupe de champs fournit un objet `endUserIDs` de niveau racine, qui contient lui-même un champ `_experience` en lecture seule dont les valeurs sont automatiquement mises à jour lors de l’ingestion des données.
+[!UICONTROL Identifiant utilisateur final ] Détail d’un groupe de champs de schéma standard pour la  [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilisé pour décrire les informations d’identité d’une personne dans plusieurs applications d’Adobe. Le groupe de champs fournit un objet `endUserIDs` de niveau racine, qui contient lui-même un champ `_experience` en lecture seule dont les valeurs sont automatiquement mises à jour lors de l’ingestion des données.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
