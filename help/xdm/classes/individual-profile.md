@@ -5,9 +5,9 @@ title: Classe XDM Individual Profile
 topic-legacy: overview
 description: Ce document présente la classe XDM Individual Profile.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: eddaa7090af2d2c947f154272bb219dc2e3bca08
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '561'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ La classe [!DNL XDM Individual Profile] fournit elle-même plusieurs valeurs gé
 | Propriété | Description |
 | --- | --- |
 | `_repo` | Objet contenant les champs [!UICONTROL DateTime] suivants : <ul><li>`createDate`: Date et heure de création de la ressource dans l’entrepôt de données, par exemple, date de la première ingestion des données.</li><li>`modifyDate`: Date et heure de la dernière modification de la ressource.</li></ul> |
-| `_id` | Identifiant unique de l’enregistrement. Ce champ permet de suivre l’unicité d’un enregistrement individuel, d’éviter la duplication des données et de rechercher cet enregistrement dans les services en aval.<br><br>Il est important de distinguer que ce champ  **ne** représente pas une identité liée à une personne individuelle, mais plutôt l’enregistrement des données elles-mêmes. Les données d’identité relatives à une personne doivent être reléguées aux [champs d’identité](../schema/composition.md#identity) à la place. |
+| `_id` | Identifiant de chaîne unique pour l’enregistrement. Ce champ permet de suivre l’unicité d’un enregistrement individuel, d’éviter la duplication des données et de rechercher cet enregistrement dans les services en aval. Dans certains cas, `_id` peut être un [identifiant unique universel (UUID)](https://tools.ietf.org/html/rfc4122) ou [identifiant unique global (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>Si vous diffusez des données depuis une connexion source ou que vous ingérez directement à partir d’un fichier Parquet, vous devez générer cette valeur en concaténant une certaine combinaison de champs qui rend l’enregistrement unique, comme un identifiant Principal, un horodatage, un type d’enregistrement, etc. La valeur concaténée doit être une chaîne formatée `uri-reference`, ce qui signifie que tout caractère deux-points doit être supprimé. Par la suite, la valeur concaténée doit être hachée à l’aide de SHA-256 ou d’un autre algorithme de votre choix.<br><br>Il est important de distinguer que  **ce champ ne représente pas une identité liée à une personne** individuelle, mais plutôt l’enregistrement des données lui-même. Les données d’identité relatives à une personne doivent être reléguées aux [champs d’identité](../schema/composition.md#identity) fournis par des groupes de champs compatibles à la place. |
 | `createdByBatchID` | Identifiant du lot ingéré à l’origine de la création de l’enregistrement. |
 | `modifiedByBatchID` | L’identifiant du dernier lot ingéré à l’origine de la mise à jour de l’enregistrement. |
 | `personID` | Identifiant unique de la personne à laquelle cet enregistrement se rapporte. Ce champ ne représente pas nécessairement une identité liée à la personne, sauf s’il est également désigné comme [champ d’identité](../schema/composition.md#identity). |
