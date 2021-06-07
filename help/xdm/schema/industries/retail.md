@@ -1,17 +1,17 @@
 ---
 solution: Experience Platform
-title: ERD du modèle de données du secteur de vente au détail
+title: Modèle de données du secteur de la vente au détail
 topic-legacy: overview
-description: Affichez un diagramme de relation d’entité (ERD) qui décrit un modèle de données normalisé pour le secteur de la vente au détail, compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
+description: Affichez un modèle de données normalisé pour le secteur de la vente au détail, compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 629f47b934c59fe875a54cb13962033122097538
+source-git-commit: 9c5a4e064af0b46ff30b41afef71ca2fd3503a82
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 0%
+source-wordcount: '478'
+ht-degree: 6%
 
 ---
 
-#  ERD du modèle de données du secteur de la vente au détail
+#  Modèle de données du secteur de la vente au détail
 
 Le diagramme de relation d’entité suivant (ERD) représente un modèle de données normalisé pour le secteur de la vente au détail. L’ERD est délibérément présenté de manière dénormalisée et en tenant compte de la manière dont les données sont stockées dans Adobe Experience Platform.
 
@@ -28,3 +28,20 @@ Utilisez la légende suivante pour interpréter cet ERD :
 >[!NOTE]
 >
 >L’entité Événement d’expérience comprend un champ &quot;_ID&quot;, qui représente l’attribut unique (`_id`) fourni par la classe XDM ExperienceEvent. Consultez le document de référence sur [XDM ExperienceEvent](../../classes/experienceevent.md) pour plus d’informations sur ce qui est attendu pour cette valeur.
+
+##  Cas de vente au détail
+
+Le tableau suivant décrit les classes recommandées et les groupes de champs de schéma pour plusieurs cas pratiques courants de vente au détail.
+
+| Cas d’utilisation | Classes et groupes de champs recommandés |
+| --- | --- |
+| Combinez des sources de données en ligne et hors ligne et résolvez les identités inter-appareils et en ligne/hors ligne afin de fournir des rapports d’attribution cross-canal et inter-appareils holistiques. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Détails du commerce](../../field-groups/event/commerce-details.md)</li><li>[Détails web](../../field-groups/event/web-details.md)</li></ul></li><li>**Product**  (classe personnalisée)\* :<ul><li>Produit (groupe de champs personnalisé)\*</li></ul></li></ul> |
+| proposer des expériences ciblées et personnalisées à différents segments afin d’augmenter les recettes et d’augmenter la plate-forme dans l’orchestration omnicanal. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails du marketing de campagne](../../field-groups/event/campaign-marketing-details.md)</li><li>[Détails du canal](../../field-groups/event/channel-details.md)</li><li>[Détails du commerce](../../field-groups/event/commerce-details.md)</li><li>[Détails de l’environnement](../../field-groups/event/environment-details.md)</li><li>[Détails web](../../field-groups/event/web-details.md)</li></ul></li><li>**[XDM Individual Profile](../../classes/individual-profile.md)**:<ul><li>[Détails démographiques](../../field-groups/profile/demographic-details.md)</li><li>[Détails du contact personnel](../../field-groups/profile/personal-contact-details.md)</li><li>[Détails du contact professionnel](../../field-groups/profile/work-contact-details.md)</li></ul></li></ul> |
+| Analysez l’attribution multi-touch pour améliorer l’efficacité marketing. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails du marketing de campagne](../../field-groups/event/campaign-marketing-details.md)</li><li>[Détails du canal](../../field-groups/event/channel-details.md)</li><li>[Détails du commerce](../../field-groups/event/commerce-details.md)</li></ul></li><li>**[XDM Individual Profile](../../classes/individual-profile.md)** :<ul><li>[Détails démographiques](../../field-groups/profile/demographic-details.md)</li></ul></li></ul> |
+| Améliorez la pertinence des emails grâce à une meilleure segmentation masculine et féminine. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails du commerce](../../field-groups/event/commerce-details.md)</li></ul></li><li>**[XDM Individual Profile](../../classes/individual-profile.md)** :<ul><li>[Détails démographiques](../../field-groups/profile/demographic-details.md)</li></ul></li><li>**Product**  (classe personnalisée)\* :<ul><li>Produit (groupe de champs personnalisé)\*</li></ul></li></ul> |
+| Ingérez des données de fidélité (partenaire) afin d’augmenter les informations pertinentes sur les produits sur les canaux web, email et marketing numérique. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails web](../../field-groups/event/web-details.md)</li></ul></li><li>**[XDM Individual Profile](../../classes/individual-profile.md)** :<ul><li>[Détails démographiques](../../field-groups/profile/demographic-details.md)</li><li>[Détails de fidélité](../../field-groups/profile/loyalty-details.md)</li></ul></li><li>**Product**  (classe personnalisée)\* :<ul><li>Produit (groupe de champs personnalisé)\*</li></ul></li></ul> |
+| Reciblez les abandons de panier par le biais d’emails automatisés et personnalisés. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails du commerce](../../field-groups/event/commerce-details.md)</li><li>[Détails web](../../field-groups/event/web-details.md)</li></ul></li><li>**Product**  (classe personnalisée)\* :<ul><li>Produit (groupe de champs personnalisé)\*</li></ul></li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+*\*Bien qu’une classe de produits standard soit prévue pour une prochaine version, les schémas de produits doivent actuellement être créés à l’aide d’une classe personnalisée à la place. Vous devez donc créer manuellement la structure de la classe du schéma, ainsi que celle de tous les groupes de champs que vous lui ajoutez. Pour plus d’informations, reportez-vous à la section [Création d’une classe personnalisée](../../ui/resources/classes.md#create) dans le guide de l’interface utilisateur XDM.*
