@@ -5,7 +5,7 @@ title: Groupe de champs de schéma Détails de l’environnement
 topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs Détails de l’environnement ExperienceEvent .
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 5%
@@ -19,7 +19,7 @@ ht-degree: 5%
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document [mises à jour des noms de groupe de champs](../name-updates.md) .
 
-[!UICONTROL Détails de l’environnement ] Groupe de champs de schéma standard pour la  [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) classe afin de capturer des informations concernant les détails d’environnement liés à un événement d’expérience, tels que les détails du périphérique, les informations du navigateur, l’heure locale et d’autres informations géographiques.
+[!UICONTROL Détails de l’environnement ] Groupe de champs de schéma standard pour la  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) classe afin de capturer des informations concernant les détails d’environnement liés à un événement d’expérience, tels que les détails du périphérique, les informations du navigateur, l’heure locale et d’autres informations géographiques.
 
 <img src="../../images/field-groups/environment-details.png" width="500" /><br />
 
