@@ -5,7 +5,7 @@ title: Type de données Détails de la page web
 topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM (Experience Data Model) des détails de la page web.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 11%
@@ -16,7 +16,7 @@ ht-degree: 11%
 
 [!UICONTROL Les ] détails d’une page web correspondent à un type de données XDM (Experience Data Model) standard qui décrit les détails d’une page web qui vient d’être chargée et affichée, tel qu’enregistré par un ExperienceEvent.
 
-Le type de données est destiné aux détails complets de la page et aux chargements initiaux de pages des applications web d’une seule page (SPA). Pour les interactions qui se produisent sur une page chargée et qui ne déclenchent pas de nouveau chargement de page, voir le type de données [interaction web](./web-interactions.md) .
+Le type de données est destiné aux détails complets de la page et aux chargements initiaux de pages des applications web d’une seule page (SPA). Pour les interactions qui se produisent sur une page chargée et qui ne déclenchent pas de nouveau chargement de page, voir le type de données [interaction web](./web-interaction.md) .
 
 <img src="../images/data-types/web-page-details.PNG" width="500" /><br />
 
