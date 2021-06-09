@@ -5,9 +5,9 @@ title: Fonctions de mappage de prép de données
 topic-legacy: overview
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 8193045079bbd8a61c4bc2aee0bf9412e4e2ae31
+source-git-commit: 1133580d6d4d8df352ab901d5106f0bb6c1f2a08
 workflow-type: tm+mt
-source-wordcount: '3934'
+source-wordcount: '3935'
 ht-degree: 18%
 
 ---
@@ -115,7 +115,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | now | Récupère l’heure actuelle. |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | Récupère l’heure Unix actuelle. |  | timestamp() | timestamp() | 1571850624571 |
 | format | Formate la date d’entrée selon un format spécifié. | <ul><li>DATE : **Obligatoire** Date d’entrée, sous la forme d’un objet ZonedDateTime, que vous souhaitez mettre en forme.</li><li>FORMAT : **Obligatoire** Format dans lequel vous souhaitez que la date soit modifiée.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-jj HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| dformat | Convertit une date et une heure en chaîne de date selon un format spécifié. | <ul><li>TIMESTAMP : **Obligatoire** Horodatage que vous souhaitez mettre en forme. Il est écrit en millisecondes.</li><li>FORMAT : **Obligatoire** Format dans lequel vous souhaitez modifier l’horodatage.</li></ul> | dformat &#x200B;(TIMESTAMP, FORMAT) | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;23-Oct-2019 11:24&quot; |
+| dformat | Convertit une date et une heure en chaîne de date selon un format spécifié. | <ul><li>TIMESTAMP : **Obligatoire** Horodatage que vous souhaitez mettre en forme. Il est écrit en millisecondes.</li><li>FORMAT : **Obligatoire** Format dans lequel vous souhaitez modifier l’horodatage.</li></ul> | dformat &#x200B;(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;aaaa-MM-jj&#39;T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
 | date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** Chaîne représentant la date.</li><li>FORMAT : **Obligatoire** Chaîne représentant le format de la date.</li><li>DEFAULT_DATE : **Obligatoire** Date par défaut renvoyée, si la date fournie est nulle.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-jj HH:mm&quot;, now()) | &quot;2019-10-23T11:24Z&quot; |
 | date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** Chaîne représentant la date.</li><li>FORMAT : **Obligatoire** Chaîne représentant le format de la date.</li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-jj HH:mm&quot;) | &quot;2019-10-23T11:24Z&quot; |
 | date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** Chaîne représentant la date.</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24Z&quot; |
