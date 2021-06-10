@@ -6,10 +6,10 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 27aafcbfc8f52491387561514e3b34313cc5d943
+source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
 workflow-type: tm+mt
-source-wordcount: '2565'
-ht-degree: 13%
+source-wordcount: '2688'
+ht-degree: 12%
 
 ---
 
@@ -48,6 +48,11 @@ Dans le workflow **[!UICONTROL Activer la destination]**, sur la page **[!UICONT
 ![segments-to-destination](../assets/ui/activate-destinations/email-select-segments.png)
 
 ##  Etape de mappage {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Appliquer la transformation"
+>abstract="Cochez cette option lorsque vous utilisez des champs source non hachés afin que Adobe Experience Platform les hache automatiquement lors de l’activation."
 
 S’applique à : Destinations sociales et destination publicitaire de correspondance client Google
 
@@ -239,6 +244,12 @@ Les exportations de fichiers varient comme suit, selon que `segmentMembership.st
 
 ### Attributs obligatoires {#mandatory-attributes}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_mandatorykey"
+>title="A propos des attributs obligatoires"
+>abstract="Sélectionnez les attributs de schéma XDM que tous les profils exportés doivent inclure. Les profils sans clé obligatoire ne sont pas exportés vers la destination. Si vous ne sélectionnez pas de clé obligatoire, tous les profils qualifiés sont exportés, quels que soient leurs attributs."
+>additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="En savoir plus dans la documentation"
+
 Vous pouvez marquer les attributs comme obligatoires pour vous assurer que [!DNL Platform] exporte uniquement les profils qui incluent l’attribut spécifique. Par conséquent, il peut être utilisé comme une forme supplémentaire de filtrage. Le marquage d’un attribut comme obligatoire est **non** obligatoire.
 
 Si vous ne sélectionnez pas d’attribut obligatoire, tous les profils qualifiés sont exportés, quels que soient leurs attributs.
@@ -246,6 +257,12 @@ Si vous ne sélectionnez pas d’attribut obligatoire, tous les profils qualifi�
 Il est recommandé que l’un des attributs soit un [identifiant unique](../../destinations/catalog/email-marketing/overview.md#identity) de votre schéma. Pour plus d’informations sur les attributs obligatoires, consultez la section Identité de la documentation [Destinations de marketing par e-mail](../../destinations/catalog/email-marketing/overview.md#identity) .
 
 ### Clés de déduplication {#deduplication-keys}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_deduplicationkey"
+>title="A propos des clés de déduplication"
+>abstract="Éliminez plusieurs enregistrements du même profil dans les fichiers d&#39;export en sélectionnant une clé de déduplication. Sélectionnez un espace de noms unique ou jusqu’à deux attributs de schéma XDM comme clé de déduplication. Si vous ne sélectionnez pas de clé de déduplication, il se peut que des entrées de profil soient dupliquées dans les fichiers d’exportation."
+>additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="En savoir plus dans la documentation"
 
 >[!IMPORTANT]
 >
@@ -353,7 +370,7 @@ Sans dédoublonnage, le fichier d&#39;export contiendrait les entrées suivantes
 
 En supposant une déduplication par l’espace de noms [!DNL Email], le fichier d’exportation contiendra les entrées suivantes. Le profil B est le dernier qui a rempli les critères pour le segment. Il est donc le seul à être exporté.
 
-| E-mail* | personalEmail | firstName | lastName |
+| Email* | personalEmail | firstName | lastName |
 |---|---|---|---|
 | johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
