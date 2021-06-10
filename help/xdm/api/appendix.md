@@ -5,7 +5,7 @@ title: Annexe du guide de l’API Schema Registry
 description: Ce document fournit des informations supplémentaires relatives au travail avec l’API Schema Registry.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: d70f297130ec04dd799d60c70b95777ee79bbfef
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 48%
@@ -76,7 +76,7 @@ Le tableau ci-dessous contient une comparaison côte à côte affichant les cham
   <th>Mode de compatibilité</th>
   <tr>
   <td>
-  <pre class="JSON language-JSON hljs">
+  <pre class=" language-json">
         {
           "xdm:birthDate": {
               "title": "Birth Date",
@@ -97,7 +97,7 @@ Le tableau ci-dessous contient une comparaison côte à côte affichant les cham
   </pre>
   </td>
   <td>
-  <pre class="JSON language-JSON hljs">
+  <pre class=" language-json">
         {
           "birthDate": {
               "title": "Birth Date",
