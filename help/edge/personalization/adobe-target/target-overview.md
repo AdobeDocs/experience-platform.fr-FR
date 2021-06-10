@@ -3,10 +3,10 @@ title: Utilisation d’Adobe Target avec le SDK Web Platform
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;fragment de code de prémasquage;vec;compositeur d’expérience d’après les formulaires;xdm;audiences;décisions;portée;schéma;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 202a77e4f9e8c7d5515ea0a5004b1c339f1d58ba
+source-git-commit: e7f5074ef776fc6ccd4f9951722861d771a371de
 workflow-type: tm+mt
-source-wordcount: '822'
-ht-degree: 3%
+source-wordcount: '918'
+ht-degree: 5%
 
 ---
 
@@ -21,6 +21,7 @@ Les fonctionnalités suivantes ont été testées et sont actuellement prises en
 * [Activités Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Activités de ciblage d’expérience](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Tests multivariés (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [Les activités Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [Création de rapports d’impression et de conversion Target natifs](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [Prise en charge du compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
@@ -176,13 +177,42 @@ alloy("sendEvent", {
     __adobe: {
       target: {
         "profile.gender": "female",
-        "profile.age": 30
+        "profile.age": 30,
+	"entity.id" : "123",
+	"entity.genre" : "Drama"
       }
     }
   }
 }) 
 .then(console.log);
 ```
+
+## Demande de recommandations
+
+Le tableau suivant répertorie les attributs [!DNL Recommendations] et indique si chacun est pris en charge via [!DNL Platform Web SDK] :
+
+| Catégorie | Attribut | État de la prise en charge |
+| --- | --- | --- |
+| Recommendations - Attributs d’entité par défaut | entity.id | Pris en charge |
+|  | entity.name | Pris en charge |
+|  | entity.categoryId | Pris en charge |
+|  | entity.pageUrl | Pris en charge |
+|  | entity.thumbnailUrl | Pris en charge |
+|  | entity.message | Pris en charge |
+|  | entity.value | Pris en charge |
+|  | entity.inventory | Pris en charge |
+|  | entity.brand | Pris en charge |
+|  | entity.margin | Pris en charge |
+|  | entity.event.detailsOnly | Pris en charge |
+| Recommendations - Attributs d’entité personnalisés | entity.yourCustomAttributeName | Pris en charge |
+| Recommendations : paramètres de mbox/page réservés | excludedIds | Pris en charge |
+|  | cartIds | Pris en charge |
+|  | productPurchasedId | Pris en charge |
+| Page ou catégorie d’élément pour les affinités catégorielles | user.categoryId | Pris en charge |
+
+## Débogage
+
+mboxTrace et mboxDebug ont été abandonnés. Utilisez [[!DNL Platform Web SDK] le débogage](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html).
 
 ## Terminologie
 
