@@ -1,34 +1,33 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; prép. de données ; api guide ; schémas ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;préparation des données;guide de l’api;schémas;
 solution: Experience Platform
-title: Point de terminaison de l'API schémas
+title: Point d’entrée de l’API Schemas
 topic-legacy: schemas
-description: 'Vous pouvez utiliser le point de terminaison `/schémas’ dans l’API Adobe Experience Platform pour récupérer, créer et mettre à jour des schémas par programmation en vue de les utiliser avec Mapper dans la plate-forme. '
-translation-type: tm+mt
+description: 'Vous pouvez utiliser le point d’entrée `/schemas` dans l’API Adobe Experience Platform pour récupérer, créer et mettre à jour par programmation les schémas à utiliser avec le mappeur dans Platform. '
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '613'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
 
 
-# Point de terminaison des schémas
+# Point d’entrée des schémas
 
-Les schémas peuvent être utilisés avec Mapper pour vous assurer que les données que vous avez ingérées dans Adobe Experience Platform correspondent à ce que vous voulez ingérer. Vous pouvez utiliser le point de terminaison `/schemas` pour créer, liste et obtenir par programmation des schémas personnalisés à utiliser avec Mapper dans la plate-forme.
+Les schémas peuvent être utilisés avec le mappeur pour vous assurer que les données que vous avez ingérées dans Adobe Experience Platform correspondent à ce que vous souhaitez ingérer. Vous pouvez utiliser le point d’entrée `/schemas` pour créer, répertorier et obtenir par programmation des schémas personnalisés à utiliser avec le mappeur dans Platform.
 
 >[!NOTE]
 >
->Les schémas créés à l’aide de ce point de terminaison sont utilisés exclusivement avec Mapper et les jeux de mappages. Pour créer des schémas accessibles par d&#39;autres services de plateforme, veuillez lire le [Guide de développeur du registre des Schémas](../../xdm/api/schemas.md).
+>Les schémas créés à l’aide de ce point d’entrée sont utilisés exclusivement avec le mappeur et les jeux de mappages. Pour créer des schémas accessibles par d’autres services Platform, consultez le [guide de développement du registre des schémas](../../xdm/api/schemas.md).
 
-## Obtenir tous les schémas
+## Obtention de tous les schémas
 
-Vous pouvez récupérer une liste de tous les schémas Mapper disponibles pour votre organisation IMS en adressant une demande de GET au point de terminaison `/schemas`.
+Vous pouvez récupérer une liste de tous les schémas du mappeur pour votre organisation IMS en effectuant une requête GET sur le point d’entrée `/schemas`.
 
 **Format d’API**
 
-Le point de terminaison `/schemas` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que la plupart de ces paramètres soient facultatifs, leur utilisation est fortement recommandée pour réduire les frais généraux élevés. Cependant, vous devez inclure les paramètres `start` et `limit` dans votre requête. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+Le point d’entrée `/schemas` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que la plupart de ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. Cependant, vous devez inclure les paramètres `start` et `limit` dans votre requête. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 ```http
 GET /schemas?limit={LIMIT}&start={START}
@@ -40,12 +39,12 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 | --------- | ----------- |
 | `{LIMIT}` | **Obligatoire**. Indique le nombre de schémas renvoyés. |
 | `{START}` | **Obligatoire**. Indique le décalage des pages de résultats. Pour obtenir la première page de résultats, définissez la valeur sur `start=0`. |
-| `{NAME}` | Filtres le schéma en fonction du nom. |
-| `{ORDER_BY}` | Trie l’ordre des résultats. Les champs `modifiedDate` et `createdDate` sont pris en charge. Vous pouvez ajouter la propriété en préfixe `+` ou `-` pour la trier par ordre croissant ou décroissant, respectivement. |
+| `{NAME}` | Filtre le schéma en fonction du nom. |
+| `{ORDER_BY}` | Trie l’ordre des résultats. Les champs `modifiedDate` et `createdDate` sont pris en charge. Vous pouvez ajouter le préfixe `+` ou `-` à la propriété pour la trier par ordre croissant ou décroissant, respectivement. |
 
 **Requête**
 
-La requête suivante récupère les deux derniers schémas créés pour votre organisation IMS.
+La requête suivante renvoie les deux derniers schémas créées pour votre organisation IMS.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \
@@ -57,11 +56,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
 
 **Réponse**
 
-La réponse suivante renvoie l’état HTTP 200 avec une liste des schémas demandés.
+La réponse suivante renvoie un statut HTTP 200 avec une liste des schémas demandés.
 
 >[!NOTE]
 >
->La réponse suivante a été tronquée pour l’espace.
+>La réponse suivante a été tronquée pour des raisons de place.
 
 ```json
 {
@@ -134,7 +133,7 @@ La réponse suivante renvoie l’état HTTP 200 avec une liste des schémas dema
 
 ## Création d’un schéma
 
-Vous pouvez créer un schéma pour lequel effectuer la validation en adressant une requête de POST au point de terminaison `/schemas`. Il existe trois façons de créer un schéma : envoi d’un [Schéma JSON](https://json-schema.org/), à l’aide de données d’exemple ou en référençant un schéma XDM existant.
+Vous pouvez créer un schéma de validation en effectuant une requête POST sur le point d’entrée `/schemas`. Il existe trois façons de créer un schéma : envoi d’un [schéma JSON](https://json-schema.org/), utilisation de données d’exemple ou référencement d’un schéma XDM existant ;
 
 ```http
 POST /schemas
@@ -144,7 +143,7 @@ POST /schemas
 
 **Requête**
 
-La requête suivante vous permet de créer un schéma en envoyant un Schéma [JSON](https://json-schema.org/).
+La requête suivante vous permet de créer un schéma en envoyant un [schéma JSON](https://json-schema.org/).
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -165,7 +164,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations sur votre schéma nouvellement créé.
+Une réponse réussie renvoie un statut HTTP 200 avec des informations sur le schéma que vous venez de créer.
 
 ```json
 {
@@ -179,11 +178,11 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations sur votre
 }
 ```
 
-### Utilisation des données d’exemple
+### Utilisation de données d’exemple
 
 **Requête**
 
-La requête suivante vous permet de créer un schéma en utilisant des données d’exemple que vous avez précédemment téléchargées.
+La requête suivante vous permet de créer un schéma à l’aide des données d’exemple que vous avez précédemment chargées.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -200,11 +199,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `sampleId` | ID des données d’exemple sur lesquelles vous basez le schéma. |
+| `sampleId` | L’identifiant des données d’exemple sur lesquelles vous basez le schéma. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations sur votre schéma nouvellement créé.
+Une réponse réussie renvoie un statut HTTP 200 avec des informations sur le schéma que vous venez de créer.
 
 ```json
 {
@@ -244,11 +243,11 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations sur votre
 }
 ```
 
-### Reportez-vous à un schéma XDM
+### Référence à un schéma XDM
 
 **Requête**
 
-La requête suivante vous permet de créer un schéma en référençant un schéma XDM existant.
+La requête suivante vous permet de créer un schéma en référençant un schéma XDM.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -269,17 +268,17 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `name` | Nom du schéma à créer. |
-| `schemaRef.id` | ID du schéma référencé. |
-| `schemaRef.contentType` | Détermine le format de réponse du schéma référencé. Pour plus d&#39;informations sur ce champ, consultez le [schéma registry developer guide](../../xdm/api/schemas.md#lookup) |
+| `name` | Nom du schéma que vous souhaitez créer. |
+| `schemaRef.id` | Identifiant de du schéma auquel vous faites référence. |
+| `schemaRef.contentType` | Détermine le format de réponse du schéma référencé. Vous trouverez plus d’informations sur ce champ dans le [guide de développement du registre des schémas](../../xdm/api/schemas.md#lookup). |
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations sur votre schéma nouvellement créé.
+Une réponse réussie renvoie un statut HTTP 200 avec des informations sur le schéma que vous venez de créer.
 
 >[!NOTE]
 >
->La réponse suivante a été tronquée pour l’espace.
+>La réponse suivante a été tronquée pour des raisons de place.
 
 ```json
 {
@@ -294,7 +293,7 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations sur votre
 }
 ```
 
-## Création d’un schéma à l’aide du téléchargement de fichiers
+## Création d’un schéma à l’aide du téléchargement de fichier
 
 Vous pouvez créer un schéma en téléchargeant un fichier JSON à partir duquel effectuer la conversion.
 
@@ -320,7 +319,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations sur votre schéma nouvellement créé.
+Une réponse réussie renvoie un statut HTTP 200 avec des informations sur le schéma que vous venez de créer.
 
 ```json
 {
@@ -336,7 +335,7 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations sur votre
 
 ## Récupération d’un schéma spécifique
 
-Vous pouvez récupérer des informations sur un schéma spécifique en adressant une demande de GET au point de terminaison `/schemas` et en indiquant l’identifiant du schéma que vous souhaitez récupérer dans le chemin de requête.
+Vous pouvez récupérer des informations sur un schéma spécifique en envoyant une requête GET au point d’entrée `/schemas` et en fournissant l’identifiant du schéma que vous souhaitez récupérer dans le chemin de requête.
 
 **Format d’API**
 
@@ -346,7 +345,7 @@ GET /schemas/{SCHEMA_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEMA_ID}` | L&#39;identifiant du schéma que vous cherchez. |
+| `{SCHEMA_ID}` | Identifiant du schéma que vous recherchez. |
 
 **Requête**
 
@@ -362,7 +361,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations sur le schéma spécifié.
+Une réponse réussie renvoie un statut HTTP 200 avec des informations sur le schéma spécifié.
 
 ```json
 {
