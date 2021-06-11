@@ -5,9 +5,9 @@ title: 'Gestion des étiquettes dʼutilisation des données à lʼaide dʼAPI '
 topic-legacy: developer guide
 description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1145'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -279,11 +279,11 @@ Une réponse réussie renvoie les étiquettes dʼutilisation des données qui on
 | Propriété | Description |
 | --- | --- |
 | `labels` | Liste dʼétiquettes dʼutilisation des données qui ont été appliquées au jeu de données. |
-| `optionalLabels` | Liste de champs individuels au sein du jeu de données auxquels sont appliquées des étiquettes dʼutilisation de données. Les sous-propriétés suivantes sont requises :<br/><br/>`option` : Objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li>`id`: La  `$id` valeur URI du schéma associé au champ.</li><li>`contentType`: Indique le format et la version du schéma. Pour plus d’informations, reportez-vous à la section [contrôle de version des schémas](../../xdm/api/getting-started.md#versioning) du guide de l’API XDM.</li><li>`schemaPath`: Le chemin d’accès à la propriété de schéma en question, écrit en  [syntaxe ](../../landing/api-fundamentals.md#json-pointer) JSON.</li></ul>`labels`: liste dʼétiquettes dʼutilisation des données que vous souhaitez ajouter au champ. |
+| `optionalLabels` | Liste de champs individuels au sein du jeu de données auxquels sont appliquées des étiquettes dʼutilisation de données. Les sous-propriétés suivantes sont requises :<br/><br/>`option` : Objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li>`id` : valeur URI `$id` du schéma associé au champ.</li><li>`contentType` : indique le format et la version du schéma. Pour plus d’informations, reportez-vous à la section [contrôle de version des schémas](../../xdm/api/getting-started.md#versioning) du guide de l’API XDM.</li><li>`schemaPath` : le chemin d’accès à la propriété de schéma en question, écrit en syntaxe [JSON Pointer](../../landing/api-fundamentals.md#json-pointer).</li></ul>`labels` : liste dʼétiquettes dʼutilisation des données que vous souhaitez ajouter au champ. |
 
-- id: La valeur URI $id pour le schéma XDM sur lequel le jeu de données est basé.
-- contentType : Indique le format et la version du schéma. Pour plus d’informations, reportez-vous à la section [contrôle de version des schémas](../../xdm/api/getting-started.md#versioning) du guide de l’API XDM.
-- schemaPath : Le chemin d’accès à la propriété de schéma en question, écrit dans la syntaxe [JSON Pointer](../../landing/api-fundamentals.md#json-pointer).
+- id : la valeur URI $id pour le schéma XDM sur lequel le jeu de données est basé.
+- contentType : indique le format et la version du schéma. Pour plus d’informations, reportez-vous à la section [contrôle de version des schémas](../../xdm/api/getting-started.md#versioning) du guide de l’API XDM.
+- schemaPath : le chemin d’accès à la propriété de schéma en question, écrit dans la syntaxe [JSON Pointer](../../landing/api-fundamentals.md#json-pointer).
 
 ## Application dʼétiquettes à un jeu de données {#apply-dataset-labels}
 
@@ -330,7 +330,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `labels` | Liste dʼétiquettes dʼutilisation des données que vous souhaitez ajouter au jeu de données. |
-| `optionalLabels` | Liste de tous les champs individuels dans le jeu de données auxquels vous souhaitez ajouter des étiquettes. Chaque élément de ce tableau doit avoir les propriétés suivantes :<br/><br/>`option`objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li>`id`: La  `$id` valeur URI du schéma associé au champ.</li><li>`contentType`: Indique le format et la version du schéma. Pour plus d’informations, reportez-vous à la section [contrôle de version des schémas](../../xdm/api/getting-started.md#versioning) du guide de l’API XDM.</li><li>`schemaPath`: Le chemin d’accès à la propriété de schéma en question, écrit en  [syntaxe ](../../landing/api-fundamentals.md#json-pointer) JSON.</li></ul>`labels`: liste dʼétiquettes dʼutilisation des données que vous souhaitez ajouter au champ. |
+| `optionalLabels` | Liste de tous les champs individuels dans le jeu de données auxquels vous souhaitez ajouter des étiquettes. Chaque élément de ce tableau doit avoir les propriétés suivantes :<br/><br/>`option`objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li>`id` : valeur URI `$id` du schéma associé au champ.</li><li>`contentType` : indique le format et la version du schéma. Pour plus d’informations, reportez-vous à la section [contrôle de version des schémas](../../xdm/api/getting-started.md#versioning) du guide de l’API XDM.</li><li>`schemaPath` : le chemin d’accès à la propriété de schéma en question, écrit en syntaxe [JSON Pointer](../../landing/api-fundamentals.md#json-pointer).</li></ul>`labels` : liste dʼétiquettes dʼutilisation des données que vous souhaitez ajouter au champ. |
 
 **Réponse**
 
