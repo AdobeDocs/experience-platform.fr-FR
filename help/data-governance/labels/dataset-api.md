@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '961'
 ht-degree: 100%
 
@@ -127,7 +127,7 @@ curl -X PUT \
 | Propriété | Description |
 | --- | --- |
 | `labels` | Liste dʼétiquettes dʼutilisation des données que vous souhaitez ajouter au jeu de données. |
-| `optionalLabels` | Liste de tous les champs individuels dans le jeu de données auxquels vous souhaitez ajouter des étiquettes. Chaque élément de ce tableau doit avoir les propriétés suivantes :<br/><br/>`option`objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li>id</code>: valeur URI $id</code> du schéma associé au champ.</li><li>contentType</code>: type de contenu et numéro de version du schéma. Cela doit prendre la forme dʼun des <a href="../../xdm/api/getting-started.md#accept">en-têtes « Accept »</a> valides pour une demande de recherche XDM.</li><li>schemaPath</code>: chemin dʼaccès au champ dans le schéma du jeu de données.</li></ul>`labels`: liste dʼétiquettes dʼutilisation des données que vous souhaitez ajouter au champ. |
+| `optionalLabels` | Liste de tous les champs individuels dans le jeu de données auxquels vous souhaitez ajouter des étiquettes. Chaque élément de ce tableau doit avoir les propriétés suivantes :<br/><br/>`option`objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li>id</code>: valeur URI $id</code> du schéma associé au champ.</li><li>contentType</code>: type de contenu et numéro de version du schéma. Cela doit prendre la forme dʼun des <a href="../../xdm/api/getting-started.md#accept">en-têtes « Accept »</a> valides pour une demande de recherche XDM.</li><li>schemaPath</code>: chemin dʼaccès au champ dans le schéma du jeu de données.</li></ul>`labels` : liste dʼétiquettes dʼutilisation des données que vous souhaitez ajouter au champ. |
 
 **Réponse**
 
