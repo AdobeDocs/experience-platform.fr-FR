@@ -127,7 +127,7 @@ Par exemple, en désignant les champs de numéro de téléphone comme des champs
 
 ### Configuration dʼun jeu de données pour [!DNL Identity Service]
 
-Pendant le processus dʼingestion par flux, [!DNL Identity Service ] extrait automatiquement les données dʼidentité des données dʼenregistrement et de série temporelle. Cependant, les données doivent être activées pour [!DNL Identity Service] avant de pouvoir être ingérées. Pour plus d’informations, consultez le tutoriel sur la [configuration d’un jeu de données pour Real-time Customer Profile et Identity Service à l’aide des API](../profile/tutorials/dataset-configuration.md).
+Pendant le processus dʼingestion par flux, [!DNL Identity Service ]extrait automatiquement les données dʼidentité des données dʼenregistrement et de série temporelle. Cependant, les données doivent être activées pour [!DNL Identity Service] avant de pouvoir être ingérées. Pour plus d’informations, consultez le tutoriel sur la [configuration d’un jeu de données pour Real-time Customer Profile et Identity Service à l’aide des API](../profile/tutorials/dataset-configuration.md).
 
 ### Envoi de données à [!DNL Identity Service]
 
