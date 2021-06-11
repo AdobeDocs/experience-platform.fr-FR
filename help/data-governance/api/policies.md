@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: Les stratégies d’utilisation des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données au sein d’Experience Platform. Le point d’entrée « /policies » est utilisé pour tous les appels API liés à lʼaffichage, la création, la mise à jour ou la suppression des stratégies dʼutilisation des données.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1817'
 ht-degree: 100%
 
@@ -266,7 +266,7 @@ Par exemple, afin de définir une stratégie qui interdit lʼexécution dʼune a
 
 | Propriété | Description |
 | --- | --- |
-| `operator` | Indique la relation conditionnelle entre les étiquettes fournies dans le tableau `operands` frère. Les valeurs acceptées sont les suivantes : <ul><li>`OR`: lʼexpression est résolue en « true » si lʼune des étiquettes du tableau `operands` est présente.</li><li>`AND`: lʼexpression est résolue en « true » uniquement si toutes les étiquettes du tableau `operands` sont présentes.</li></ul> |
+| `operator` | Indique la relation conditionnelle entre les étiquettes fournies dans le tableau `operands` frère. Les valeurs acceptées sont les suivantes : <ul><li>`OR` : lʼexpression est résolue en « true » si lʼune des étiquettes du tableau `operands` est présente.</li><li>`AND` : lʼexpression est résolue en « true » uniquement si toutes les étiquettes du tableau `operands` sont présentes.</li></ul> |
 | `operands` | Tableau dʼobjets, chaque objet représentant soit une seule étiquette, soit une paire supplémentaire de propriétés `operator` et `operands`. La présence des étiquettes et/ou des opérations dans un tableau `operands` est résolue en « true » ou « false » en fonction de la valeur de sa propriété `operator` frère. |
 | `label` | Nom dʼune étiquette unique dʼutilisation des données qui sʼapplique à la stratégie. |
 
@@ -392,7 +392,7 @@ PUT /policies/custom/{POLICY_ID}
 
 **Requête**
 
-Dans cet exemple, les conditions d’exportation des données vers un tiers ont été modifiées. Vous devez définir la stratégie créée de sorte qu’elle rejette cette action marketing en présence d’étiquettes de données `C1 AND C5`. 
+Dans cet exemple, les conditions d’exportation des données vers un tiers ont été modifiées. Vous devez définir la stratégie créée de sorte qu’elle rejette cette action marketing en présence d’étiquettes de données `C1 AND C5`.
 
 La requête suivante met à jour la stratégie existante pour inclure la nouvelle expression de stratégie. Remarquez que puisque cette requête réécrit essentiellement la stratégie, tous les champs doivent être inclus dans la payload, même si certaines de leurs valeurs ne sont pas mises à jour.
 
