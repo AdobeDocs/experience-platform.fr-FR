@@ -4,14 +4,14 @@ user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform permet de fournir des expériences personnalisées à vos clients en temps réel.
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '193'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
 
-# Présentation d’Adobe Experience Platform {#landing}
+# Présentation d’Adobe Experience Platform {#landing}
 
 * [Présentation de Platform](home.md)
 * [Présentation de Platform (vidéo)](video/platform-overview.md)
@@ -22,12 +22,12 @@ ht-degree: 93%
    * [Cas d’utilisation clés (vidéo)](video/platform-use-cases.md)
    * [Architecture de Platform (vidéo)](video/platform-architecture.md)
    * [Rôles et phases du projet (vidéo)](video/roles-project-phases.md)
-* Interface utilisateur d’Experience Platform {#platform-ui}
+* Interface utilisateur d’Experience Platform {#platform-ui}
    * [Guide de l’interface utilisateur de Platform](ui-guide.md)
    * [Présentation de l’interface utilisateur de Platform (vidéo)](video/platform-ui.md)
    * [Guide de l’interface utilisateur des workflows](workflows.md)
    * [Prise en charge des navigateurs et des langues](browser-language-support.md)
-* Les API d’Experience Platform {#platform-apis}
+* Les API d’Experience Platform {#platform-apis}
    * [Prise en main des API Platform](api-guide.md)
    * [Authentification et accès aux API Platform](api-authentication.md)
    * [Principes fondamentaux des API](api-fundamentals.md)
@@ -39,7 +39,7 @@ ht-degree: 93%
 * Platform dans l’écosystème Adobe {#ecosystem}
    * [Services d’application](application-services.md)
    * [Application et services intelligents (vidéo)](video/application-intelligent-services.md)
-   * [Intégrations de Platform avec Experience Cloud (vidéo)](video/experience-cloud-integrations.md)
+   * [Intégrations de Platform avec Experience Cloud (vidéo)](video/experience-cloud-integrations.md)
 * Gouvernance, confidentialité et sécurité {#governance-privacy-security}
    * [Présentation](./governance-privacy-security/overview.md)
    * Gestion du consentement {#consent}
