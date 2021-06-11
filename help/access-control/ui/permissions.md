@@ -6,7 +6,7 @@ topic-legacy: user guide
 description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Ce document sert de guide pour gérer les autorisations dʼun profil de produit pour Platform.
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '328'
 ht-degree: 100%
 
