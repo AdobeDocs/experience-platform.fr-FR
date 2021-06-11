@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Vous pouvez répertorier les noms de tous les types de ressources et autorisations en effectuant une requête GET au point d’entrée /acl/reference dans l’API Access Control. Ces noms peuvent ensuite être utilisés dans les appels API pour afficher des stratégies efficaces pour l’utilisateur actuel.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '195'
 ht-degree: 100%
 
