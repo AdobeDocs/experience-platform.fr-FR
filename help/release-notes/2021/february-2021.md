@@ -6,9 +6,9 @@ last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
 source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1140'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 97%
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 
-- [Tableaux de bord (Beta) ](#dashboards)
+- [Tableaux de bord (Beta)](#dashboards)
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
@@ -30,7 +30,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
-## Tableaux de bord (Beta)  {#dashboards}
+## Tableaux de bord (Beta) {#dashboards}
 
 Adobe Experience Platform propose de nombreux tableaux de bord qui vous permettent d’afficher des informations importantes concernant les données de votre entreprise. Celles-ci sont présentées telles qu’elles sont capturées lors d’aperçus quotidiens.
 
@@ -88,7 +88,7 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mise à niveau de l’interface utilisateur de recherche | Les fonctionnalités de recherche améliorées sont désormais disponibles dans l’onglet [!UICONTROL Parcourir] de l’espace de travail [!UICONTROL Schémas] et dans la boîte de dialogue de sélection de groupe de champs de schéma dans la balise [!DNL Schema Editor].<br><br>Précédemment, lors d’une recherche de terme, les résultats n’incluaient que les ressources XDM dont le nom correspondait à la requête. Désormais, outre les ressources dont le nom correspond à la requête, les ressources contenant des attributs individuels qui correspondent au terme sont également incluses. Cela vous permet de rechercher des ressources XDM en fonction des attributs qu’elles contiennent plutôt que par le biais de leur nom.<br><br>Pour plus d’informations, consultez les documents sur l’[exploration des ressources XDM](../../xdm/ui/explore.md) et ceux sur la [gestion des schémas](../../xdm/ui/resources/schemas.md) dans l’interface utilisateur. |
+| Mise à niveau de l’interface utilisateur de recherche | Les fonctionnalités de recherche améliorées sont désormais disponibles dans l’onglet [!UICONTROL Parcourir] de l’espace de travail [!UICONTROL Schémas] et dans la boîte de dialogue de sélection des groupes de champs de schémas dans le [!DNL Schema Editor].<br><br>Précédemment, lors d’une recherche de terme, les résultats n’incluaient que les ressources XDM dont le nom correspondait à la requête. Désormais, outre les ressources dont le nom correspond à la requête, les ressources contenant des attributs individuels qui correspondent au terme sont également incluses. Cela vous permet de rechercher des ressources XDM en fonction des attributs qu’elles contiennent plutôt que par le biais de leur nom.<br><br>Pour plus d’informations, consultez les documents sur l’[exploration des ressources XDM](../../xdm/ui/explore.md) et ceux sur la [gestion des schémas](../../xdm/ui/resources/schemas.md) dans l’interface utilisateur. |
 
 Pour des informations plus générales sur XDM, reportez-vous à la [présentation du système XDM](../../xdm/home.md).
 
@@ -102,7 +102,7 @@ Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaîtr
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Graphique d’identités  observateur | L’observateur de graphique d’identités vous permet de valider et de visualiser les identités assemblées dans l’interface utilisateur, ce qui permet d’améliorer le débogage et la transparence. Pour plus d’informations, consultez le [document sur l’observateur de graphique d’identités](../../identity-service/ui/identity-graph-viewer.md). |
+| Graphique d’identités observateur | L’observateur de graphique d’identités vous permet de valider et de visualiser les identités assemblées dans l’interface utilisateur, ce qui permet d’améliorer le débogage et la transparence. Pour plus d’informations, consultez le [document sur l’observateur de graphique d’identités](../../identity-service/ui/identity-graph-viewer.md). |
 
 Pour des informations plus générales sur le [!DNL Identity Service], reportez-vous à la [présentation du service d’identités](../../identity-service/home.md).
 
