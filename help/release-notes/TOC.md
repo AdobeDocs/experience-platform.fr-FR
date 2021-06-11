@@ -6,14 +6,14 @@ user-guide-description: Notes de mise à jour mensuelles pour Adobe Experience P
 source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 
 # Notes de mise à jour d’Adobe Experience Platform {#release-notes}
 
-* [Notes de mise à jour de la plateforme actuelle](latest/latest.md)
+* [Notes de mise à jour actuelles de Platform](latest/latest.md)
 * 2021 {#2021}
    * [Mai 2021](2021/may-2021.md)
    * [Avril 2021](2021/april-2021.md)
@@ -34,7 +34,7 @@ ht-degree: 92%
    * [Février 2020](2020/february-2020.md)
    * [Janvier 2020](2020/january-2020.md)
 * 2019 {#2019}
-   * [2019 décembre](2019/december-2019.md)
+   * [Décembre 2019](2019/december-2019.md)
    * [Novembre 2019](2019/november-2019.md)
    * [Septembre 2019](2019/september-2019.md)
    * [Juillet 2019](2019/july-2019.md)
