@@ -8,7 +8,7 @@ feature: Gestion des données
 source-git-commit: bcb80d7d27ab88e56450ddd99102871db23fbca8
 workflow-type: tm+mt
 source-wordcount: '152'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 94%
    * [Informations collectées automatiquement](data-collection/automatic-information.md)
    * [Suivi des liens](data-collection/track-links.md)
    * [Collecte de données sur les produits et le commerce](data-collection/collect-commerce-data.md)
-   * Adobe Analytics {#adobe-analytics}
+   * Adobe Analytics {#adobe-analytics}
       * [Présentation](data-collection/adobe-analytics/analytics-overview.md)
       * [Mappage des variables Analytics](data-collection/adobe-analytics/manually-mapping-variables.md)
       * [Variables mappées automatiquement](data-collection/adobe-analytics/automatically-mapped-vars.md)
@@ -42,18 +42,18 @@ ht-degree: 94%
 * Personnalisation {#personalization}
    * [Rendu de contenu personnalisé](personalization/rendering-personalization-content.md)
    * [Gestion du scintillement](personalization/manage-flicker.md)
-   * Adobe Target {#adobe-target}
+   * Adobe Target {#adobe-target}
       * [Présentation](personalization/adobe-target/target-overview.md)
       * [Implémentation d’applications d’une seule page](personalization/adobe-target/spa-implementation.md)
-   * Offer Decisioning {#offer-decisioning}
+   * Offer Decisioning {#offer-decisioning}
       * [Présentation](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consentement {#consent}
    * [Prise en charge du consentement](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
       * [Présentation](consent/iab-tcf/overview.md)
-      * [Intégration avec Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
-      * [Intégration sans Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
-* Extension SDK web pour Adobe Experience Platform Launch {#extension}
+      * [Intégration avec Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
+      * [Intégration sans Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
+* Extension SDK web pour Adobe Experience Platform Launch {#extension}
    * [Extension SDK web](extension/web-sdk-extension.md)
    * [Types d’actions](extension/action-types.md)
    * [Types d’éléments de données](extension/data-element-types.md)
