@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; prép de données ; guide d’api ; jeux de mappage ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;préparation de données;guide d’api;jeux de mappages;
 solution: Experience Platform
-title: Point de terminaison de l’API Jeux de mappage
+title: Point d’entré de l’API Mapping Sets
 topic-legacy: mapping sets
-description: Vous pouvez utiliser le point de terminaison `/mappingSets’ dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider des jeux de mappage par programmation.
+description: Vous pouvez utiliser le point d’entrée `/mappingSets` dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation des jeux de mappage.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '807'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Point de terminaison des jeux de mappage
+# Point d’entrée des jeux de mappages
 
-Les jeux de mappage peuvent être utilisés pour définir comment les données d&#39;un schéma source sont mises en correspondance avec celles d&#39;un schéma de destination. Vous pouvez utiliser le point de terminaison `/mappingSets` dans l’API d’aperçu des données pour récupérer, créer, mettre à jour et valider des jeux de mappage par programmation.
+Les jeux de mappages peuvent être utilisés pour définir la façon dont les données d’un schéma source sont mappées à celui d’un schéma de destination. Vous pouvez utiliser le point d’entrée `/mappingSets` dans l’API Data Prep pour récupérer, créer, mettre à jour et valider des jeux de mappages par programmation.
 
-## Jeux de mappage de listes
+## Liste des jeux de mappages
 
-Vous pouvez récupérer une liste de tous les jeux de correspondances pour votre organisation IMS en adressant une demande de GET au point de terminaison `/mappingSets`.
+Vous pouvez récupérer une liste de tous les jeux de mappage pour votre organisation IMS en effectuant une requête GET sur le point d’entrée `/mappingSets`.
 
 **Format d’API**
 
-Le point de terminaison `/mappingSets` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que la plupart de ces paramètres soient facultatifs, leur utilisation est fortement recommandée pour réduire les frais généraux élevés. Cependant, vous devez inclure les paramètres `start` et `limit` dans votre requête. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+Le point d’entrée `/mappingSets` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que la plupart de ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. Cependant, vous devez inclure les paramètres `start` et `limit` dans votre requête. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 ```http
 GET /mappingSets?limit={LIMIT}&start={START}
@@ -34,15 +33,15 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{LIMIT}` | (**Obligatoire**) Spécifie le nombre de jeux de mappages renvoyés. |
-| `{START}` | (**Obligatoire**) Spécifie le décalage des pages de résultats. Pour obtenir la première page de résultats, définissez la valeur sur `start=0`. |
-| `{NAME}` | Filtres les jeux de mappages par nom. |
-| `{ORDER_BY}` | Trie l’ordre des résultats. Les seuls champs pris en charge sont `createdDate` et `updatedDate`. Vous pouvez ajouter la propriété en préfixe `+` ou `-` pour la trier par ordre croissant ou décroissant, respectivement. |
+| `{LIMIT}` | (**Obligatoire**) Indique le nombre de jeux de mappages renvoyés. |
+| `{START}` | (**Obligatoire**) Indique le décalage des pages de résultats. Pour obtenir la première page de résultats, définissez la valeur sur `start=0`. |
+| `{NAME}` | Filtre les jeux de mappages par nom. |
+| `{ORDER_BY}` | Trie l’ordre des résultats. Seuls les champs `createdDate` et `updatedDate` sont pris en charge. Vous pouvez ajouter le préfixe `+` ou `-` à la propriété pour la trier par ordre croissant ou décroissant, respectivement. |
 | `{EXPAND_SCHEMA}` | Valeur booléenne qui détermine si le schéma de sortie complet est renvoyé dans le cadre de la réponse. |
 
 **Requête**
 
-La requête suivante récupère les deux derniers jeux de correspondances au sein de votre organisation IMS.
+La requête suivante récupèrera les deux derniers jeux de de mappage de votre organisation IMS.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \
@@ -167,7 +166,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
 
 ## Création d’un jeu de mappages
 
-Vous pouvez créer un jeu de mappages en envoyant une requête de POST au point de terminaison `/mappingSets`.
+Vous pouvez créer un nouveau jeu de mappages en effectuant une requête POST vers le point d’entrée `/mappingSets`.
 
 **Format d’API**
 
@@ -177,7 +176,7 @@ POST /mappingSets
 
 **Requête**
 
-La requête suivante crée un jeu de mappages, configuré par les paramètres fournis dans la charge utile.
+La requête suivante crée un nouveau jeu de mappages configuré en fonction des paramètres fournis dans le payload.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
@@ -218,15 +217,15 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `outputSchema.schemaRef.id` | ID du schéma XDM référencé. |
-| `outputSchema.schemaRef.contentType` | Détermine le format de réponse du schéma référencé. Pour plus d&#39;informations sur ce champ, consultez le [Schéma Registry developer guide](../../xdm/api/schemas.md#lookup). |
+| `outputSchema.schemaRef.id` | Identifiant du schéma XDM auquel vous faites référence. |
+| `outputSchema.schemaRef.contentType` | Détermine le format de réponse du schéma référencé. Vous trouverez plus d’informations sur ce champ dans le [guide de développement du registre des schémas](../../xdm/api/schemas.md#lookup). |
 | `mappings.sourceType` | Le type de source décrit comment la valeur sera extraite de la source vers la destination. |
-| `mappings.source` | Emplacement à partir duquel vous souhaitez mapper les données. |
-| `mappings.destination` | Emplacement auquel vous souhaitez mapper les données. |
+| `mappings.source` | L’emplacement à partir duquel vous souhaitez mapper les données. |
+| `mappings.destination` | L’emplacement auquel vous souhaitez mapper les données. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations sur votre jeu de correspondances nouvellement créé.
+Une réponse réussie renvoie un statut HTTP 200 avec des informations sur le jeu de mappages que vous venez de créer.
 
 ```json
 {
@@ -239,9 +238,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations sur votre
 }
 ```
 
-## Valider les mappages
+## Validation des mappages
 
-Vous pouvez vérifier que vos mappages fonctionnent correctement en envoyant une requête de POST au point de terminaison `/mappingSets/validate`.
+Vous pouvez vérifier que vos mappages fonctionnent correctement en effectuant une requête POST vers le point d’entrée `/mappingSets/validate`.
 
 **Format d’API**
 
@@ -251,7 +250,7 @@ POST /mappingSets/validate
 
 **Requête**
 
-La requête suivante valide les mappages fournis dans la charge utile.
+La requête suivante valide les mappages fournis dans le payload.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/validate \
@@ -292,7 +291,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/va
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec les informations de validation pour le mappage proposé.
+Une réponse réussie renvoie un état HTTP 200 avec des informations de validation pour le mappage proposé.
 
 ```json
 {
@@ -313,9 +312,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec les informations de valida
 }
 ```
 
-## Données de prévisualisation pour les mappages
+## Aperçu des données pour les mappages
 
-Vous pouvez prévisualisation à quelles données vos données seront mappées en adressant une requête de POST au point de terminaison `/mappingSets/preview`.
+Vous pouvez prévisualiser les données qui seront mappées en envoyant une requête POST au point d’entrée `/mappingSets/preview`.
 
 **Format d’API**
 
@@ -373,7 +372,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/pr
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec une prévisualisation de vos données mappées.
+Une réponse réussie renvoie un statut HTTP 200 avec un aperçu de vos données mappées.
 
 ```json
 [
@@ -392,9 +391,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec une prévisualisation de v
 ]
 ```
 
-## Rechercher un jeu de mappages
+## Recherche d’un jeu de mappages
 
-Vous pouvez récupérer un jeu de correspondances spécifique en fournissant son ID dans le chemin d’une demande de GET au point de terminaison `/mappingSets`. Ce point de terminaison prend également en charge plusieurs paramètres de requête pour vous aider à récupérer des détails sur la version du jeu de mappages spécifié.
+Vous pouvez récupérer un jeu de mappages spécifique en fournissant son identifiant dans le chemin d’une requête GET vers le point d’entrée `/mappingSets`. Ce point d’entrée prend également en charge plusieurs paramètres de requête pour vous aider à récupérer les détails sur la version du jeu de mappages spécifié.
 
 **Format d’API**
 
@@ -406,9 +405,9 @@ GET /mappingSets/{MAPPING_SET_ID}?version={VERSION}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | (**Obligatoire**) ID du jeu de mappages que vous souhaitez récupérer. |
-| `{EXPAND_SCHEMA}` | Paramètre de requête booléen qui détermine si le schéma de sortie doit être renvoyé dans le cadre de la réponse. |
-| `{VERSION}` | Paramètre de requête entier qui détermine la version du jeu de correspondances à récupérer. |
+| `{MAPPING_SET_ID}` | (**Obligatoire**) Identifiant du jeu de mappages que vous souhaitez récupérer. |
+| `{EXPAND_SCHEMA}` | Un paramètre de requête booléen qui détermine s’il faut renvoyer le schéma de sortie dans le cadre de la réponse. |
+| `{VERSION}` | Paramètre de requête entier qui détermine la version du jeu de mappages à récupérer. |
 
 **Requête**
 
@@ -424,11 +423,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations détaillées sur le jeu de mappages que vous souhaitez récupérer.
+Une réponse réussie renvoie un statut HTTP 200 avec les informations détaillées sur le jeu de mappages que vous souhaitez récupérer.
 
 >[!NOTE]
 >
->La réponse suivante a été tronquée pour l’espace.
+>La réponse suivante a été tronquée pour des raisons de place.
 
 ```json
 {
@@ -585,7 +584,7 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations détaill�
 
 ## Mise à jour d’un jeu de mappages
 
-Vous pouvez mettre à jour un jeu de mappages en fournissant son ID dans le chemin d’une requête `PUT` au point de terminaison `mappingSets`.
+Vous pouvez mettre à jour un jeu de mappages en fournissant son identifiant dans le chemin d’accès d’une requête `PUT` au point d’entrée `mappingSets`.
 
 **Format d’API**
 
@@ -595,7 +594,7 @@ PUT /mappingSets/{MAPPING_SET_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | ID du jeu de mappages que vous souhaitez mettre à jour. |
+| `{MAPPING_SET_ID}` | L’identifiant du jeu de mappages que vous souhaitez mettre à jour. |
 
 **Requête**
 
@@ -643,11 +642,11 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations détaillées sur votre jeu de mappages récemment mis à jour.
+Une réponse réussie renvoie un statut HTTP 200 avec des informations détaillées sur le jeu de mappages que vous venez de mettre à jour.
 
 >[!NOTE]
 >
->La réponse suivante a été tronquée pour l’espace.
+>La réponse suivante a été tronquée pour des raisons de place.
 
 ```json
 {
@@ -810,9 +809,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations détaill�
 }
 ```
 
-## Liste des mappages pour un jeu de mappages
+## Liste des mappages d’un jeu de mappages
 
-Vous pouvez vue tous les mappages appartenant à un jeu de mappages spécifique en fournissant son ID dans le chemin d’une demande de GET au point de terminaison suivant.
+Vous pouvez afficher tous les mappages appartenant à un jeu de mappages spécifique en fournissant son identifiant dans le chemin d’accès d’une requête GET au point d’entrée suivant.
 
 **Format d’API**
 
@@ -822,7 +821,7 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | ID du jeu de mappages pour lequel vous souhaitez récupérer les mappages. |
+| `{MAPPING_SET_ID}` | L’identifiant du jeu de mappages pour lequel vous souhaitez récupérer les mappages. |
 
 **Requête**
 
@@ -913,9 +912,9 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 ]
 ```
 
-## Rechercher un mappage dans un jeu de mappages
+## Recherche d’un mappage dans un jeu de mappages
 
-Vous pouvez récupérer un mappage spécifique pour un jeu de mappages en fournissant leurs ID dans le chemin d’une demande de GET au point de terminaison suivant.
+Vous pouvez récupérer un mappage spécifique pour un jeu de mappages en fournissant leurs identifiants dans le chemin d’accès d’une requête GET au point d’entrée suivant.
 
 **Format d’API**
 
@@ -925,8 +924,8 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings/{MAPPING_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | ID du jeu de mappages dont vous souhaitez rechercher les informations de mappage. |
-| `{MAPPING_ID}` | ID du mappage que vous souhaitez rechercher. |
+| `{MAPPING_SET_ID}` | L’identifiant du jeu de mappages à propos duquel vous souhaitez rechercher les informations de mappage. |
+| `{MAPPING_ID}` | L’identifiant du mappage que vous souhaitez rechercher. |
 
 **Requête**
 
@@ -942,7 +941,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations détaillées sur le mappage spécifié.
+Une réponse réussie renvoie un statut HTTP 200 avec des informations détaillées sur le mappage spécifié.
 
 ```json
 {
