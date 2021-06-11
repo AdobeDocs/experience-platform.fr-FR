@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; prép. de données ; guide d’api ; données d’exemple ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;préparation de données;guide d’api;données d’exemple;
 solution: Experience Platform
-title: Exemple de point de terminaison de l’API de données
+title: Exemple de point d’entrée de l’API Data
 topic-legacy: sample data
-description: 'Vous pouvez utiliser le point de terminaison `/samples’ dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation les données d’exemple de mappage. '
-translation-type: tm+mt
+description: 'Vous pouvez utiliser le point d’entrée `/samples` dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation les donnée d’exemple de mappage. '
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '401'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
 
-# Exemple de point de terminaison de données
+# Exemple de point d’entrée de données
 
-Des exemples de données peuvent être utilisés lors de la création d’un schéma pour votre jeu de mappages. Vous pouvez utiliser le point de terminaison `/samples` dans l’API d’aperçu des données pour récupérer, créer et mettre à jour par programmation des données d’exemple.
+Des exemples de données peuvent être utilisés lors de la création d’un schéma pour votre jeu de mappages. Vous pouvez utiliser le point d’entrée `/samples` dans l’API Data Prep pour récupérer, créer et mettre à jour des données d’exemple par programmation.
 
-## Données d’exemple de liste
+## Liste des données d’exemple
 
-Vous pouvez récupérer une liste de toutes les données d’exemple de mappage pour votre organisation IMS en adressant une demande de GET au point de terminaison `/samples`.
+Vous pouvez récupérer une liste de toutes les données d’exemple de mappage pour votre organisation IMS en effectuant une requête GET sur le point d’entrée `/samples`.
 
 **Format d’API**
 
-Le point de terminaison `/samples` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Actuellement, vous devez inclure les paramètres `start` et `limit` dans votre requête.
+Le point d’entrée `/samples` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Actuellement, vous devez inclure les paramètres `start` et `limit` dans votre requête.
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -31,12 +30,12 @@ GET /samples?limit={LIMIT}&start={START}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{LIMIT}` | **Obligatoire**. Indique le nombre de données d’exemple renvoyées par le mappage. |
+| `{LIMIT}` | **Obligatoire**. Indique le nombre de données d’exemple de mappage renvoyées. |
 | `{START}` | **Obligatoire**. Indique le décalage des pages de résultats. Pour obtenir la première page de résultats, définissez la valeur sur `start=0`. |
 
 **Requête**
 
-La requête suivante récupère les deux dernières données d&#39;exemple de mappage au sein de votre organisation IMS.
+La requête suivante récupèrera les deux dernières données d’exemple de mappage de votre organisation IMS.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \
@@ -48,7 +47,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations sur les deux derniers objets de mappage des données d’exemple.
+Une réponse réussie renvoie un statut HTTP 200 avec des informations sur les deux derniers objets des données d’exemple de mappage.
 
 ```json
 {
@@ -86,9 +85,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations sur les d
 | `sampleData` |  |
 | `sampleType` |  |
 
-## Création de données d’exemple
+## Création de données d’exemples
 
-Vous pouvez créer des données d’exemple en adressant une requête de POST au point de terminaison `/samples`.
+Vous pouvez créer des données d’exemple en effectuant une requête POST sur le point d’entrée `/samples`.
 
 ```http
 POST /samples
@@ -112,7 +111,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations sur vos données d’exemple nouvellement créées.
+Une réponse réussie renvoie un statut HTTP 200 avec des informations sur les données d’exemples que vous venez de créer.
 
 ```json
 {
@@ -127,9 +126,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations sur vos d
 }
 ```
 
-## Créer des données d’exemple en téléchargeant un fichier
+## Création de données d’exemple en chargeant un fichier
 
-Vous pouvez créer des données d’exemple à l’aide d’un fichier en adressant une requête de POST au point de terminaison `/samples/upload`.
+Vous pouvez créer des données d’exemple à l’aide d’un fichier en effectuant une requête POST sur le point d’entrée `/samples/upload`.
 
 **Format d’API**
 
@@ -151,7 +150,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations sur vos données d’exemple nouvellement créées.
+Une réponse réussie renvoie un statut HTTP 200 avec des informations sur les données d’exemples que vous venez de créer.
 
 ```json
 {
@@ -166,9 +165,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations sur vos d
 }
 ```
 
-## Rechercher un objet de données d’exemple spécifique
+## Recherche d’un objet de données d’exemple spécifique
 
-Vous pouvez rechercher un objet spécifique de données d’exemple en fournissant son identifiant dans le chemin d’une demande de GET au point de terminaison `/samples`.
+Vous pouvez rechercher un objet spécifique de données d’exemple en fournissant son identifiant dans le chemin d’une requête GET vers le point d’entrée `/samples`.
 
 **Format d’API**
 
@@ -178,7 +177,7 @@ GET /samples/{SAMPLE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SAMPLE_ID}` | ID de l’objet de données d’exemple que vous souhaitez récupérer. |
+| `{SAMPLE_ID}` | L’identifiant de l’objet de données d’exemple que vous souhaitez récupérer. |
 
 **Requête**
 
@@ -192,7 +191,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec les informations de l’exemple de données que vous souhaitez récupérer.
+Une réponse réussie renvoie un statut HTTP 200 avec les informations de l’objet de données d’exemple que vous souhaitez récupérer.
 
 ```json
 {
@@ -209,7 +208,7 @@ Une réponse réussie renvoie l’état HTTP 200 avec les informations de l’ex
 
 ## Mise à jour des données d’exemple
 
-Vous pouvez mettre à jour un objet de données d’exemple spécifique en indiquant son identifiant dans le chemin d’une requête de PUT vers le point de terminaison `/samples`.
+Vous pouvez mettre à jour un objet spécifique de données d’exemple en fournissant son identifiant dans le chemin d’une requête PUT vers le point d’entrée `/samples`.
 
 **Format d’API**
 
@@ -219,11 +218,11 @@ PUT /samples/{SAMPLE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SAMPLE_ID}` | ID de l’objet de données d’exemple que vous souhaitez mettre à jour. |
+| `{SAMPLE_ID}` | L’identifiant de l’objet de données d’exemple que vous souhaitez mettre à jour. |
 
 **Requête**
 
-La requête suivante met à jour les données d’exemple spécifiées. Plus précisément, il met à jour le nom de famille de &quot;Smith&quot; en &quot;Lee&quot;.
+La requête suivante met à jour les données d’exemple spécifiées. Plus précisément, elle modifie le nom « Smith » en « Lee ».
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
@@ -240,7 +239,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations sur les données d’exemple mises à jour.
+Une réponse réussie renvoie un statut HTTP 200 avec des informations sur les données d’exemples mises à jour.
 
 ```json
 {
