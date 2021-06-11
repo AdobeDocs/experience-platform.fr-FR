@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Data Access prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la découverte et lʼaccessibilité des jeux de données Platform ingérés.
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '185'
 ht-degree: 100%
 
