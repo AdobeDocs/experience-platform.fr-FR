@@ -109,7 +109,7 @@ Une réponse réussie renvoie les détails de chaque action marketing récupér�
 
 Vous recherchez les détails d’une action marketing spécifique en incluant la propriété `name` de l’action marketing dans le chemin d’accès d’une requête GET.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 GET /marketingActions/core/{MARKETING_ACTION_NAME}
@@ -160,7 +160,7 @@ L’objet de réponse contient les détails de l’action marketing, y compris l
 
 Vous pouvez créer une action marketing personnalisée ou mettre à jour une action marketing existante en incluant le nom existant ou prévu de l’action marketing dans le chemin d’accès d’une requête PUT.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
@@ -224,7 +224,7 @@ Vous pouvez supprimer une action marketing personnalisée en incluant son nom da
 >
 >Les actions marketing référencées par des stratégies existantes ne peuvent pas être supprimées. Toute tentative de suppression de l’une de ces actions marketing provoquera une erreur HTTP 400 (Bad Request), ainsi qu’un message contenant les identifiants de toutes les stratégies qui font référence à l’action marketing.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
