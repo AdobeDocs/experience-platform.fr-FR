@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: a150c23dffde9431953a019509e9554159052d21
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '320'
 ht-degree: 100%
 
@@ -25,7 +25,7 @@ La collecte de données est prise en charge pour les sources côté client suiva
 Les technologies de collecte de données fournies par Experience Platform se concentrent sur le référencement et l’accessibilité des jeux de données ingérés. Ces technologies englobent les éléments suivants :
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=fr)
-* [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en)
+* [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=fr)
 * [SDK web Adobe Experience Platform](../edge/home.md)
 * [Modèle de données d’expérience (XDM)](../xdm/home.md)
 
@@ -37,7 +37,7 @@ Les SDK web et mobile d’Adobe Experience Platform réduisent et compressent to
 
 ## Processus de basculement afin de déployer la technologie Adobe
 
-Platform Edge Network est un réseau de serveurs distribué dans le monde entier. Rapide et fiable, il est capable de recevoir et de traiter des données à très grande échelle. Grâce à Platform launch, vous pouvez mettre en place des [configurations Edge](../edge/fundamentals/datastreams.md) pour des produits comme Adobe Target, Adobe Audience Manager et Adobe Analytics. Ces configurations vous permettent d‘activer les produits en question côté serveur sans modifier le code côté client.
+Platform Edge Network est un réseau de serveurs distribué dans le monde entier. Rapide et fiable, il est capable de recevoir et de traiter des données à très grande échelle. Grâce à Platform Launch, vous pouvez mettre en place des [configurations Edge](../edge/fundamentals/datastreams.md) pour des produits comme Adobe Target, Adobe Audience Manager et Adobe Analytics. Ces configurations vous permettent d‘activer les produits en question côté serveur sans modifier le code côté client.
 
 ![](./images/deploy.png)
 
