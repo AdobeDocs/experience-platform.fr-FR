@@ -6,7 +6,7 @@ topic-legacy: policies
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document offre un aperçu des actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur d’Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '772'
 ht-degree: 100%
 
@@ -55,7 +55,7 @@ L’étape **[!UICONTROL Sélectionner les actions marketing]** s’affiche. Sé
 
 >[!NOTE]
 >
-> Lors de la sélection de plusieurs actions marketing, la stratégie les interprète comme une règle « OU ». En d’autres termes, la stratégie s’applique si **l’une** des actions marketing sélectionnées est exécutée.
+>Lors de la sélection de plusieurs actions marketing, la stratégie les interprète comme une règle « OU ». En d’autres termes, la stratégie s’applique si **l’une** des actions marketing sélectionnées est exécutée.
 
 ![](../images/policies/add-marketing-actions.png)
 
