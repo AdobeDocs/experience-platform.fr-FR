@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Le service de catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '805'
 ht-degree: 100%
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 # Présentation d’[!DNL Catalog Service]
 
-Le [!DNL Catalog Service] est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans [!DNL Experience Platform] soient stockées dans le [!DNL Data Lake] sous forme de fichiers et de répertoires, le [!DNL Catalog] renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
+Le [!DNL Catalog Service]est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans [!DNL Experience Platform] soient stockées dans le [!DNL Data Lake] sous forme de fichiers et de répertoires, le [!DNL Catalog] renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 
 En d’autres termes, le [!DNL Catalog] fait office de banque de métadonnées ou de « catalogue » qui vous permet de trouver des informations sur vos données dans [!DNL Experience Platform]. Vous pouvez utiliser le [!DNL Catalog] pour répondre aux questions suivantes :
 
