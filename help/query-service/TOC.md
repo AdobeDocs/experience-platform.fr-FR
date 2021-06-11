@@ -5,7 +5,7 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez SQL standard pour créer des requêtes de données dans le lac de données de Platform.
 feature: Requêtes
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '136'
 ht-degree: 100%
 
@@ -16,36 +16,36 @@ ht-degree: 100%
 
 - [Présentation de Query Service](home.md)
 - [Guide de démarrage rapide](quickstart.md)
-- API Query Service {#api}
+- API Query Service {#api}
    - [Prise en main](api/getting-started.md)
    - [Requêtes](api/queries.md)
    - [Paramètres de connexion](api/connection-parameters.md)
    - [Requêtes planifiées](api/scheduled-queries.md)
    - [Exécutions pour les requêtes planifiées](api/runs-scheduled-queries.md)
    - [Modèles de requête](api/query-templates.md)
-- Interface utilisateur de Query Service {#ui}
+- UI Query Service {#ui}
    - [Présentation de l’interface utilisateur](ui/overview.md)
-   - [Guide d’utilisation de Query Editor](ui/user-guide.md)
-   - [Génératon des jeux de données à partir de résultats de requête](ui/create-datasets.md)
+   - [Guide d’utilisation de Query Editor](ui/user-guide.md)
+   - [Génération des jeux de données à partir de résultats de requête](ui/create-datasets.md)
 - Bonnes pratiques {#best-practices}
    - [Directives générales pour l’exécution des requêtes](best-practices/writing-queries.md)
    - [Dédoublonnage des données](best-practices/deduplication.md)
    - [Exemples de requêtes dʼévénements dʼexpérience](best-practices/experience-event-queries.md)
-   - [Exemples de requêtes Adobe Analytics](best-practices/adobe-analytics.md)
-   - [Exemples de requêtes Adobe Target](best-practices/adobe-target.md)
+   - [Exemples de requêtes Adobe Analytics](best-practices/adobe-analytics.md)
+   - [Exemples de requêtes Adobe Target](best-practices/adobe-target.md)
 - Référence SQL {#sql}
    - [Présentation de SQL](sql/overview.md)
    - [Syntaxe SQL](sql/syntax.md)
    - [Fonctions définies par Adobe](sql/adobe-defined-functions.md)
-   - [Fonctions Spark SQL](sql/spark-sql-functions.md)
+   - [Fonctions Spark SQL](sql/spark-sql-functions.md)
    - [Commandes de métadonnées](sql/metadata.md)
    - [Instructions préparées](sql/prepared-statements.md)
-- Connexion des clients à Query Service {#clients}
+- Connexion des clients à Query Service {#clients}
    - [Présentation de la connexion des clients](clients/overview.md)
-   - [Aqua Data Studio](clients/aqua-data-studio.md)
+   - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [Looker](clients/looker.md)
    - [Postico (Mac)](clients/postico.md)
-   - [Power BI (PC)](clients/power-bi.md)
+   - [Power BI (PC)](clients/power-bi.md)
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
