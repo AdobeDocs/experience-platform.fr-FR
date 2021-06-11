@@ -6,25 +6,25 @@ breadcrumb-title: Guide des services intelligents
 user-guide-description: Utilisez les services intelligents d’IA pour générer des scores, découvrir des insights et créer des segments à partir des données de vos événements marketing.
 feature: Data Science Workspace
 source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '124'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
 
-# Adobe Intelligent Services {#intelligent-services}
+# Adobe Intelligent Services {#intelligent-services}
 
 - [Présentation des services intelligents](home.md)
 - [Préparation des données en vue de leur utilisation dans les services intelligents](data-preparation.md)
-- Attribution AI {#attribution-ai}
+- Attribution AI {#attribution-ai}
    - [Présentation](attribution-ai/overview.md)
-   - [Prise en main d’Attribution AI](attribution-ai/getting-started.md)
+   - [Prise en main d’Attribution AI](attribution-ai/getting-started.md)
    - [Entrée et sortie](attribution-ai/input-output.md)
    - [Guide de l’interface utilisateur](attribution-ai/user-guide.md)
    - [Découvrez des informations](attribution-ai/discover-insights.md)
    - [Téléchargez des scores](attribution-ai/download-scores.md)
-   - [Analysez des scores à lʼaide de Query Service](attribution-ai/aai-query-service.md)
+   - [Analysez des scores à lʼaide de Query Service](attribution-ai/aai-query-service.md)
 - IA dédiée au contenu et au commerce (bêta) {#content-commerce-ai}
    - [Présentation](content-commerce-ai/overview.md)
    - [Prise en main](content-commerce-ai/getting-started.md)
@@ -34,9 +34,9 @@ ht-degree: 98%
       - [Classification de texte](content-commerce-ai/api/text-classification.md)
       - [Similarité visuelle](content-commerce-ai/api/visual-similarity.md)
       - [Détection de texte et reconnaissance optique de caractères](content-commerce-ai/api/optical-character-recognition.md)
-- Customer AI {#customer-ai}
+- Customer AI {#customer-ai}
    - [Présentation](customer-ai/overview.md)
-   - [Prise en main de Customer AI](customer-ai/getting-started.md)
+   - [Prise en main de Customer AI](customer-ai/getting-started.md)
    - [Entrée et sortie](customer-ai/input-output.md)
    - Guides de lʼinterface utilisateur {#user-guide}
       - [Configuration d’une instance](customer-ai/user-guide/configure.md)
