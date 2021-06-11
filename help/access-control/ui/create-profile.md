@@ -6,7 +6,7 @@ topic-legacy: user guide
 description: Ce document reprend toutes les étapes nécessaires à la création d’un profil produit dans la console Adobe Admin Console. Pour commencer la création d’un profil, accédez à l’onglet Profil de produits et cliquez sur Nouveau profil.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '261'
 ht-degree: 100%
 
