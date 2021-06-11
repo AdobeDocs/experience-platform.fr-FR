@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: L’API Policy Service permet aux développeurs de gérer les libellés et les stratégies d’utilisation des données dans Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '504'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -24,9 +24,9 @@ Pour afficher tous les points d’entrée et opérations CRUD disponibles, consu
 
 Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans [!DNL Experience Platform], ou dès que les données sont disponibles pour une utilisation dans [!DNL Platform]. Vous pouvez créer, afficher, modifier et supprimer des libellés à l’aide du point d’entrée `/labels`. Pour découvrir comment utiliser ce point d’entrée, consultez le [guide des points d’entrée des libellés](./labels.md).
 
-## Actions marketing 
+## Actions marketing
 
-Les actions marketing (également appelées cas d’utilisation marketing), dans le contexte de la structure [!DNL Data Governance], sont des actions qu’un utilisateur de données [!DNL Experience Platform] peut entreprendre, pour lesquelles votre entreprise souhaite limiter l’utilisation des données. Pour obtenir des informations détaillées sur l’utilisation des actions marketing, consultez le [guide des points d’entrée des actions marketing](./marketing-actions.md).
+Les actions marketing (également appelées cas d’utilisation marketing), dans le cadre de la [!DNL Data Governance], sont des actions qu’un utilisateur de données [!DNL Experience Platform] peut entreprendre et pour lesquelles votre entreprise souhaite limiter l’utilisation des données. Pour obtenir des informations détaillées sur l’utilisation des actions marketing, consultez le [guide des points d’entrée des actions marketing](./marketing-actions.md).
 
 ## Stratégies
 
