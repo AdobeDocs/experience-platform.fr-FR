@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; prép. de données ; api guide ; schémas ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;préparation des données;guide de l’api;schémas;
 solution: Experience Platform
-title: Point de terminaison de l'API schémas
+title: Point d’entrée de l’API Schemas
 topic-legacy: schemas
-description: Vous pouvez utiliser le point de terminaison `/fonctions` dans l’API Adobe Experience Platform pour valider vos expressions de mappage et les fonctions de jeu de mappage disponibles de liste.
+description: Vous pouvez utiliser le point d’entrée `/functions` dans l’API Adobe Experience Platform pour valider vos expressions de mappage et répertorier les fonctions de jeux de mappages disponibles.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '210'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
-# Points de terminaison des fonctions
+# Points d’entrée des fonctions
 
-Les fonctions d’ensemble de mappages vous permettent de transformer vos données entre les schémas source et de destination. Vous pouvez utiliser le point de terminaison `/languages/el` pour valider vos expressions et obtenir une liste de toutes les fonctions de jeu de mappages disponibles.
+Les fonctions de jeux de mappages vous permettent de transformer vos données entre les schémas source et de destination. Vous pouvez utiliser le point d’entrée `/languages/el` pour valider vos expressions et obtenir une liste de toutes les fonctions de jeux de mappages disponibles.
 
-## Valider les expressions
+## Validation des expressions
 
-Vous pouvez vérifier si votre expression actuelle est valide en adressant une requête de POST au point de terminaison `/languages/el/validate`.
+Vous pouvez vérifier si votre expression actuelle est valide en envoyant une requête POST au point d’entrée `/languages/el/validate`.
 
 **Format d’API**
 
@@ -44,7 +43,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec l’état de validation de l’expression.
+Une réponse réussie renvoie un statut HTTP 200 avec le statut de validation de l’expression.
 
 ```json
 {
@@ -53,9 +52,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec l’état de validation de
 }
 ```
 
-## Fonctions de jeu de mappage de listes
+## Liste des fonctions de jeux de mappages
 
-Vous pouvez récupérer une liste de toutes les fonctions de jeu de correspondances disponibles en adressant une demande de GET au point de terminaison `/languages/el/functions`.
+Vous pouvez récupérer une liste de toutes les fonctions de jeux de mappages disponibles en envoyant une requête GET au point d’entrée `/languages/el/functions`.
 
 **Format d’API**
 
@@ -75,11 +74,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec une liste de toutes les fonctions de jeu de correspondances disponibles.
+Une réponse réussie renvoie un statut HTTP 200 avec une liste de toutes les fonctions de jeux de mappages disponibles.
 
 >[!NOTE]
 >
->Cette réponse a été tronquée pour l’espace.
+>Cette réponse a été tronquée pour des raisons de place.
 
 ```json
 [
@@ -118,9 +117,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec une liste de toutes les fo
 ]
 ```
 
-## Opérateurs de jeu de mappage de listes
+## Liste des opérateurs de jeux de mappages
 
-Vous pouvez récupérer une liste de tous les opérateurs de jeux de correspondances disponibles en adressant une demande de GET au point de terminaison `/languages/el/operators`.
+Vous pouvez récupérer une liste de tous les opérateurs de jeux de mappages disponibles en effectuant une requête GET sur le point d’entrée `/languages/el/operators`.
 
 **Format d’API**
 
@@ -140,11 +139,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/op
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec une liste de tous les opérateurs de jeu de mappages disponibles.
+Une réponse réussie renvoie un statut HTTP 200 avec une liste de tous les opérateurs de jeux de mappages disponibles.
 
 >[!NOTE]
 >
->Cette réponse a été tronquée pour l’espace.
+>Cette réponse a été tronquée pour des raisons de place.
 
 ```json
 [
