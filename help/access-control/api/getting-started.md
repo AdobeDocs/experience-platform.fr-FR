@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Les sections suivantes apportent des informations supplémentaires aux développeurs, pour leur permettre de passer des appels avec succès à l’API Schema Registry.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '389'
 ht-degree: 100%
 
