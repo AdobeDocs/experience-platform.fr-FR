@@ -5,14 +5,14 @@ breadcrumb-title: Guide d’ETL
 user-guide-description: Découvrez les grandes lignes de la création de connecteurs sécurisés et performants pour l’ingestion de données dans Platform.
 feature: Gestion des données, Ingestion des données
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '47'
 ht-degree: 100%
 
 ---
 
 
-# Procédures d’extraction, de transformation et de chargement dans Experience Platform {#etl}
+# Procédures d’extraction, de transformation et de chargement dans Experience Platform {#etl}
 
 - [Développement des intégrations ETL](home.md)
 - [Transformation ETL](transformations.md)
