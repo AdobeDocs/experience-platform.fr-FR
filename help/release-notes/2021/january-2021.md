@@ -4,14 +4,13 @@ description: Notes de mise à jour d’Experience Platform, 27 janvier 2021
 doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
-translation-type: ht
-source-git-commit: 18712835b2408b24cd2735b19c94bf1b1fe50df1
+exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: ht
 source-wordcount: '712'
 ht-degree: 100%
 
 ---
-
 
 # Notes de mise à jour d’Adobe Experience Platform
 
@@ -34,7 +33,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 | ------- | ----------- |
 | Fonctions d’expressions régulières | Le mappeur de [!DNL Data Prep] prend désormais en charge la correspondance et l’extraction d’une partie du champ d’entrée en fonction des expressions régulières. |
 
-Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation des ](../../data-prep/home.md).
+Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation](../../data-prep/home.md).
 
 ## Destinations {#destinations}
 
@@ -79,7 +78,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 | ------- | ----------- |
 | Améliorations du connecteur source Adobe Audience Manager | Vous pouvez désormais filtrer et sélectionner des segments propriétaires individuels depuis Audience Manager pour les ingérer dans Platform, ainsi que filtrer les caractéristiques propriétaires. Pour plus d’informations, consultez le tutoriel sur la [création d’un connecteur source Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
 | Améliorations du connecteur source [!DNL Google BigQuery] | Vous pouvez désormais ingérer des fichiers de plus de 10 Go lors d’une seule exécution de flux à l’aide du connecteur source [!DNL BigQuery]. Pour plus d’informations, consultez la présentation du connecteur source [[!DNL BigQuery] ](../../sources/connectors/databases/bigquery.md). |
-| Prise en charge de types de données complexes pour le stockage sur le cloud | Vous pouvez désormais ingérer des types de données complexes, tels que des tableaux dans des fichiers JSON, lors de l’utilisation d’un connecteur source d’espace de stockage. Pour plus d’informations, consultez les tutoriels sur la création d’un flux de données d’espace de stockage [dans l’interface utilisateur](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) ou [à l’aide de l’API  [!DNL Flow Service] ](../../sources/tutorials/api/collect/cloud-storage.md). |
+| Prise en charge de types de données complexes pour le stockage sur le cloud | Vous pouvez désormais ingérer des types de données complexes, tels que des tableaux dans des fichiers JSON, lors de l’utilisation d’un connecteur source d’espace de stockage. Pour plus d’informations, consultez les tutoriels sur la création d’un flux de données d’espace de stockage [dans l’interface utilisateur](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) ou [à l’aide de  [!DNL Flow Service] l’API ](../../sources/tutorials/api/collect/cloud-storage.md). |
 | Prise en charge de l’authentification basée sur la clé de service principale pour la source [!DNL Microsoft Dynamics] | Vous pouvez désormais vous authentifier auprès de votre compte [!DNL Dynamics] à l’aide d’une clé de service principale. Cela représente une alternative à l’authentification par mot de passe. Pour plus d’informations, consultez la présentation du connecteur source [[!DNL Dynamics] ](../../sources/connectors/crm/ms-dynamics.md). |
 | Prise en charge de l’interface utilisateur pour les séparateurs personnalisés dans les sources d’espace de stockage | Vous pouvez désormais définir un délimiteur de colonne personnalisé, tel qu’une virgule (`,`), une tabulation (`\t`) ou une barre verticale (`|`) pour collecter les fichiers délimités dans l’interface utilisateur. Pour plus d’informations, consultez le tutoriel sur la [création d’un flux de données avec un connecteur source d’espace de stockage](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 
