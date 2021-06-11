@@ -12,7 +12,7 @@ ht-degree: 86%
 ---
 
 
-# Tableaux de bord dʼAdobe Experience Platform {#dashboards}
+# Tableaux de bord dʼAdobe Experience Platform {#dashboards}
 
 * [Présentation des tableaux de bord](home.md)
 * [Autorisations d’accès aux tableaux de bord](permissions.md)
