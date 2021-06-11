@@ -1,19 +1,18 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour de l’Experience Platform pour le 31 mars 2021.
+title: Notes de mise à jour d’Adobe Experience Platform
+description: Notes de mise à jour d’Experience Platform du 31 mars 2021.
 doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
-translation-type: tm+mt
-source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
-workflow-type: tm+mt
+exl-id: 027cd7b1-1651-4939-bc97-968a41824117
+source-git-commit: 0cbd5a933f8c67b26051012e9a5aa78cb06b055d
+workflow-type: ht
 source-wordcount: '422'
-ht-degree: 43%
+ht-degree: 100%
 
 ---
 
-
-# Notes de mise à jour d’Adobe Experience Platform
+# Notes de mise à jour d’Adobe Experience Platform
 
 **Date de lancement : 31 mars 2021**
 
@@ -25,18 +24,18 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## [!DNL Data Prep] {#data-prep}
 
-[!DNL Data Prep] permet aux ingénieurs de données de mapper, de transformer et de valider des données à partir du modèle de données d’expérience (XDM).
+[!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM).
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| `add_to_array` fonction | Mise à jour de la fonctionnalité de prise en charge des tableaux en tant que paramètre. |
-| `to_array` fonction | Mise à jour de la fonctionnalité de prise en charge des objets en tant que paramètre. |
+| fonction `add_to_array` | Mise à jour de la fonctionnalité pour la prise en charge des tableaux en tant que paramètre. |
+| fonction `to_array` | Mise à jour de la fonctionnalité pour la prise en charge des objets en tant que paramètre. |
 
-Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation des ](../../data-prep/home.md).
+Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation](../../data-prep/home.md).
 
 ## Segmentation Service {#segmentation}
 
-Adobe Experience Platform Segmentation Service fournit une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données [!DNL Real-time Customer Profile]. Ces segments sont configurés et gérés de manière centralisée sur [!DNL Platform], ce qui les rend facilement accessibles par toute application d&#39;Adobe.
+Adobe Experience Platform Segmentation Service propose une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir des données [!DNL Real-time Customer Profile]. Ces segments sont configurés et conservés de manière centralisée sur [!DNL Platform], ce qui les rend facilement accessibles depuis n’importe quelle application Adobe.
 
 [!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
 
@@ -44,10 +43,10 @@ Adobe Experience Platform Segmentation Service fournit une interface utilisateur
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| (bêta) Segmentation Edge | La segmentation Edge évalue les segments en temps réel, ce qui permet d’utiliser les mêmes cas de personnalisation de page et de page suivante. Vous trouverez plus d’informations sur la segmentation des arêtes dans le [Présentation de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md). |
-| (bêta) Segmentation incrémentielle | Augmente la fraîcheur des définitions de segment existantes évaluées dans la segmentation par lots jusqu’à une heure. |
+| (Version bêta) Segmentation Edge | La segmentation Edge évalue les segments en temps réel, ce qui permet d’utiliser les cas de personnalisation de la même page et de la page suivante. Vous trouverez plus d’informations sur la segmentation Edge dans la [présentation de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md). |
+| (Version bêta) Segmentation incrémentielle | Augmente jusqu’à une heure l’actualisation des définitions de segment existantes évaluées dans la segmentation par lots. |
 
-Pour plus d&#39;informations sur [!DNL Segmentation Service], consultez l&#39;[Présentation de la segmentation](../../segmentation/home.md).
+Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -57,8 +56,8 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Sources bêta passant à GA | Les sources suivantes ont été promues de la version bêta à la version GA : <ul><li>[[!DNL MySQL]](../../sources/connectors/databases/mysql.md)</li><li>[[!DNL PostGres]](../../sources/connectors/databases/postgres.md)</li><li>[[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL SFTP]](../../sources/connectors/cloud-storage/sftp.md)</li><li>[[!DNL Shopify]](../../sources/connectors/ecommerce/shopify.md)</li></ul> |
-| Prise en charge des API pour l’assimilation de fichiers compressés | Vous pouvez désormais prévisualisation et assimiler des fichiers JSON compressés ou délimités à l’aide de sources d’enregistrement cloud. Pour plus d&#39;informations, consultez le didacticiel sur la [collecte de données d&#39;enregistrement cloud à l&#39;aide d&#39;API](../../sources/tutorials/api/collect/cloud-storage.md). |
-| Prise en charge de l’interface utilisateur pour le téléchargement de fichiers récursif | Vous pouvez désormais ingérer des dossiers entiers de manière récursive lors de l’utilisation d’une source d’enregistrement Cloud. Lors de l’importation d’un dossier entier, vous devez vous assurer que son contenu partage le même schéma. Pour plus d’informations, voir le didacticiel sur la [configuration d’un flux de données pour les connecteurs d’enregistrement cloud dans l’interface utilisateur](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| Sources bêta passant à la version générale | Les sources suivantes ont été promues de la version bêta à la version générale : <ul><li>[[!DNL MySQL]](../../sources/connectors/databases/mysql.md)</li><li>[[!DNL PostGres]](../../sources/connectors/databases/postgres.md)</li><li>[[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL SFTP]](../../sources/connectors/cloud-storage/sftp.md)</li><li>[[!DNL Shopify]](../../sources/connectors/ecommerce/shopify.md)</li></ul> |
+| Prise en charge des API pour l’ingestion de fichiers compressés | Vous pouvez désormais prévisualiser et ingérer des fichiers JSON compressés ou délimités à l’aide de sources de stockage dans le cloud. Pour plus d’informations, consultez le tutoriel sur la [collecte de données de stockage dans le cloud à l’aide d’API](../../sources/tutorials/api/collect/cloud-storage.md). |
+| Prise en charge de l’interface utilisateur pour le téléchargement de fichiers récursifs | Vous pouvez désormais ingérer des dossiers entiers de manière récursive lors de l’utilisation d’une source de stockage dans le cloud. Lors de l’ingestion d’un dossier entier, vous devez vous assurer que son contenu partage le même schéma. Pour plus d’informations, consultez le tutoriel sur la [configuration d’un flux de données pour les connecteurs de stockage dans le cloud dans l’interface utilisateur](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
