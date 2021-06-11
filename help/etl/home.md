@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et l’ingestion de données dans Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4143'
 ht-degree: 100%
 
@@ -56,7 +56,7 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
