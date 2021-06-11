@@ -6,7 +6,7 @@ topic-legacy: troubleshooting guide
 description: Ce document répond aux questions fréquentes sur le contrôle d’accès dans Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '321'
 ht-degree: 100%
 
@@ -22,7 +22,7 @@ Ce document répond aux questions fréquentes sur le contrôle d’accès dans A
 
 Si vous êtes un administrateur système, un administrateur de produit ou un administrateur de profils de produit pour votre organisation IMS, vous pouvez afficher le profil de produit qui vous a été attribué et les autorisations qu’il accorde dans Adobe Admin Console. Consultez le [guide d’utilisation du contrôle d’accès](./ui/overview.md) pour obtenir des instructions sur la navigation dans afin d’afficher les autorisations d’un profil de produit[!DNL Admin Console].
 
-Si vous n’êtes pas un administrateur, vous pouvez tout de même consulter vos autorisations d’accès actuelles en envoyant une requête sur le point de terminaison `/acl/effective-policies` dans l’API Access Control. Pour plus d’informations, consultez la section « Affichage des stratégies efficaces » du [guide de développement du contrôle d’accès](./api/effective-policies.md).
+Si vous n’êtes pas un administrateur, vous pouvez tout de même consulter vos autorisations d’accès actuelles en envoyant une requête sur le point d’entrée `/acl/effective-policies` dans l’API Access Control. Pour plus d’informations, consultez la section « Affichage des stratégies efficaces » du [guide de développement du contrôle d’accès](./api/effective-policies.md).
 
 ## Certaines fonctionnalités de lʼinterface utilisateur de [!DNL Platform] ne sont pas disponibles. Comment les autorisations contrôlent-elles l’accès à ces fonctionnalités ?
 
