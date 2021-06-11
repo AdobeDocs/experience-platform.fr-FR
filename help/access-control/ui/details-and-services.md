@@ -6,7 +6,7 @@ topic-legacy: user guide
 description: Ce document reprend les étapes nécessaires à la gestion des détails et des services supplémentaires pour un profil de produit dans Adobe Admin Console. Vous pouvez configurer les détails d’un profil et accéder aux services supplémentaires à partir du menu Paramètres du profil.
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '213'
 ht-degree: 100%
 
