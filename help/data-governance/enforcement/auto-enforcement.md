@@ -68,7 +68,7 @@ Chaque étape de la chronologie ci-dessus représente une entité qui peut contr
 
 Lorsque des violations de stratégie se produisent, les messages qui s’affichent dans l’interface utilisateur fournissent des outils utiles à l’exploration de la parenté des données contribuant à la violation afin de résoudre le problème. Vous trouverez plus de détails dans la section suivante.
 
-## Messages de violation de politique   {#enforcement}
+## Messages de violation de politique {#enforcement}
 
 Si une violation de politique se produit lors de la tentative d’activation d’un segment (ou de la [modification d’un segment déjà activé](#policy-enforcement-for-activated-segments)), l’action est bloquée et une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs politiques ont été violées. Une fois qu’une violation a été déclenchée, le bouton **[!UICONTROL Enregistrer]** est désactivé pour l’entité à modifier jusqu’à ce que les composants appropriés soient mis à jour pour se conformer aux stratégies d’utilisation des données.
 
@@ -92,7 +92,7 @@ Sélectionnez **[!UICONTROL Mode Liste]** pour afficher la parenté des données
 
 ![](../images/enforcement/list-view.png)
 
-## Application des politiques pour les segments activés   {#policy-enforcement-for-activated-segments}
+## Application des politiques pour les segments activés {#policy-enforcement-for-activated-segments}
 
 L’application de la politique s’applique toujours aux segments une fois qu’ils ont été activés, ce qui limite toute modification apportée à un segment ou à sa destination qui entraînerait une violation de la politique. En raison du fonctionnement de la [parenté des données](#lineage) dans l’application des stratégies, l’une des actions suivantes peut potentiellement déclencher une violation :
 
