@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Ce document présente Data Prep dans Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '437'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
@@ -35,12 +35,12 @@ Pour en savoir plus sur les différentes fonctions de mappage, consultez le [gui
 
 Un ensemble de mappages qui transforme un schéma en un autre est collectivement appelé un jeu de mappages. Un seul jeu de mappages est créé dans le cadre de chaque flux de données. Un jeu de mappages fait partie intégrante des flux de données et est créé, modifié et surveillé dans le cadre des flux de données.
 
-Pour en savoir plus sur les ensembles de mappages, y compris sur l’utilisation des champs dans un ensemble de mappages, consultez le [guide du jeu de mappages](./mapping-set.md). Pour savoir comment créer un jeu de mappages et utiliser d’autres appels d’API liés aux jeux de mappages, consultez la section sur les jeux de mappages dans le [guide de développement](./api/mapping-set.md).
+Pour en savoir plus sur les jeux de mappages, y compris sur l’utilisation des champs dans un jeu de mappages, consultez le [guide des jeux de mappages](./mapping-set.md). Pour savoir comment créer un jeu de mappages et utiliser d’autres appels d’API liés aux jeux de mappages, consultez la section sur les jeux de mappages dans le [guide de développement](./api/mapping-set.md).
 
 ## Gestion des formats de données
 
-La préparation des données peut gérer de manière robuste différents formats de données ingérés dans Platform. Pour en savoir plus sur la façon dont Data Prep gère les différents types de données, consultez la [présentation de la gestion du format de données](./data-handling.md).
+La préparation des données peut gérer de manière robuste différents formats de données ingérés dans Platform. Pour en savoir plus sur la façon dont la préparation de données gère les différents types de données, consultez la [présentation de la gestion des formats de données](./data-handling.md).
 
 ## Étapes suivantes
 
-Ce document présentait les principes de base de Data Prep dans Adobe Experience Platform. Pour en savoir plus sur les différentes fonctions de mappage, consultez le [guide des fonctions de mappage](./functions.md). Pour en savoir plus sur la façon dont Data Prep gère les différents types de données, consultez le [guide de gestion du format de données](./data-handling.md#dates). Pour savoir comment utiliser l’API de préparation des données, consultez le [guide de développement de la préparation des données](api/overview.md).
+Ce document présentait les principes de base de Data Prep dans Adobe Experience Platform. Pour en savoir plus sur les différentes fonctions de mappage, consultez le [guide des fonctions de mappage](./functions.md). Pour en savoir plus sur la façon dont la préparation de données gère les différents types de données, consultez le [guide de la gestion des formats de données](./data-handling.md#dates). Pour savoir comment utiliser l’API Data Prep, consultez le [guide de développement de la préparation des données](api/overview.md).
