@@ -5,16 +5,16 @@ breadcrumb-title: Guide d’ingestion de données
 user-guide-description: Introduisez vos données dans Platform par lot ou en ingestion continue.
 feature: Data Ingestion
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '123'
 ht-degree: 100%
 
 ---
 
 
-# Adobe Experience Platform Data Ingestion {#ingestion}
+# Adobe Experience Platform Data Ingestion {#ingestion}
 
-- [Présentation de Data Ingestion](home.md)
+- [Présentation de Data Ingestion](home.md)
 - Ingestion par flux {#streaming}
    - [Présentation](streaming-ingestion/overview.md)
    - [Connecteur Kafka](streaming-ingestion/kafka.md)
