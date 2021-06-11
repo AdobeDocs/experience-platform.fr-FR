@@ -7,7 +7,7 @@ type: Tutorial
 description: L’API Policy Service vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés d’utilisation. Ce document fournit un tutoriel détaillé sur la création d’une stratégie à l’aide de l’API Policy Service.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1219'
 ht-degree: 100%
 
@@ -21,7 +21,7 @@ Ce document fournit un tutoriel détaillé sur la création d’une stratégie �
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique des concepts clés suivants, qui sont impliqués dans la création et l’évaluation des stratégies 
+Ce tutoriel nécessite une compréhension pratique des concepts clés suivants, qui sont impliqués dans la création et l’évaluation des stratégies
 
 * [Adobe Experience Platform Data Governance](../home.md) : cadre en fonction duquel [!DNL Platform] applique la conformité d’utilisation des données.
    * [Libellés d’utilisation des données](../labels/overview.md) : les libellés d’utilisation des données sont appliqués aux champs de données XDM, spécifiant les restrictions d’accès à ces données.
@@ -122,7 +122,7 @@ Une réponse réussie renvoie le nombre total d’actions marketing trouvées (`
 | --- | --- |
 | `_links.self.href` | Chaque élément du tableau `children` contient un identifiant d’URI pour l’action marketing listée. |
 
-Lorsque vous trouvez l’action marketing à utiliser, enregistrez la valeur de sa propriété `href`. Cette valeur est utilisée lors de l’étape suivante de la [création d’une stratégie ](#create-policy).
+Lorsque vous trouvez l’action marketing à utiliser, enregistrez la valeur de sa propriété `href`. Cette valeur est utilisée lors de l’étape suivante de la [création d’une stratégie](#create-policy).
 
 ### Création d’une action marketing {#create-new}
 
@@ -188,7 +188,7 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et les détails de l�
 | --- | --- |
 | `_links.self.href` | Identifiant d’URI de l’action marketing. |
 
-Enregistrez l’identifiant d’URI de l’action marketing nouvellement créée, car il sera utilisé à l’étape suivante de la création d’une stratégie 
+Enregistrez l’identifiant d’URI de l’action marketing nouvellement créée, car il sera utilisé à l’étape suivante de la création d’une stratégie
 
 ## Création d’une stratégie {#create-policy}
 
