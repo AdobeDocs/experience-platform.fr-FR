@@ -6,7 +6,7 @@ topic-legacy: data protection
 description: Toutes les données conservées dans le lac de données sont chiffrées, stockées et gérées dans un compte Microsoft Azure Data Lake isolé, propre à votre organisation. Le diagramme de flux des processus suivant illustre la manière dont les données sont ingérées, traitées, chiffrées et conservées par Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '187'
 ht-degree: 100%
 
