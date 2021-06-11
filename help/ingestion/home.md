@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;ingestion des données;emplacement des données;Emplacement Des Données;Gestion des données;gestion des données;Traçabilité;traçabilité;lot;Lot;données ingérées
 solution: Experience Platform
-title: Présentation de l’ingestion des données
+title: Présentation de Data Ingestion
 topic-legacy: overview
 description: Ce document présente les trois principales manières dont les données sont ingérées dans Platform, avec des liens vers leur documentation de présentation respectives pour plus d’informations.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '461'
 ht-degree: 100%
 
@@ -40,7 +40,7 @@ Les connexions source peuvent être configurées pour collecter les données dʼ
 
 Pour plus d’informations, consultez la [présentation des sources](../sources/home.md).
 
-## Étapes suivantes  et ressources supplémentaires
+## Étapes suivantes et ressources supplémentaires
 
 Ce document vous a présenté brièvement les différents aspects de [!DNL Data Ingestion] dans [!DNL Experience Platform]. Poursuivez votre lecture de la documentation de présentation de chaque méthode d’ingestion pour vous familiariser avec leurs différentes capacités, les cas d’utilisation et les bonnes pratiques. Vous pouvez également compléter votre apprentissage en regardant la vidéo de présentation de lʼingestion ci-dessous. Pour en savoir plus sur la manière dont [!DNL Experience Platform] suit les métadonnées pour les enregistrements ingérés, reportez-vous à la [présentation du service de catalogue](../catalog/home.md).
 
