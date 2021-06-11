@@ -5,7 +5,7 @@ breadcrumb-title: Guide du contrôle d’accès
 user-guide-description: Tirez parti des profils de produits d’Adobe Admin Console pour lier les utilisateurs aux autorisations et aux environnements de test.
 feature: Contrôle d’accès
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '100'
 ht-degree: 100%
 
@@ -22,7 +22,7 @@ ht-degree: 100%
    * [Gestion des détails et des services supplémentaires pour un profil de produit](ui/details-and-services.md)
    * [Création d’un profil de produits](ui/create-profile.md)
    * [Gestion des utilisateurs pour un profil de produit](ui/users.md)
-* API Access Control {#api}
+* API Access Control {#api}
    * [Prise en main](api/getting-started.md)
    * [Liste des noms des autorisations et des types de ressources](api/permissions-and-resource-types.md)
    * [Affichage des stratégies efficaces](api/effective-policies.md)
