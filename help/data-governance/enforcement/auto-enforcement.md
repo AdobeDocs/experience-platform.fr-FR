@@ -5,10 +5,10 @@ title: Application automatique des stratégies
 topic-legacy: guide
 description: Ce document présente l’application automatique des stratégies d’utilisation de données lors de l’activation de segments vers des destinations dans Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: 59edc19267913e5156caaa49d01a687d04cf1c6f
 workflow-type: tm+mt
-source-wordcount: '1127'
-ht-degree: 99%
+source-wordcount: '1229'
+ht-degree: 88%
 
 ---
 
@@ -23,7 +23,7 @@ Ce guide nécessite une compréhension pratique des divers services Platform imp
 * [Gouvernance des données d’Adobe Experience Platform](../home.md) : cadre en fonction duquel Platform applique la conformité de l’utilisation des données à l’aide des libellés et des stratégies.
 * [Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [Service de segmentation Adobe Experience Platform](../../segmentation/home.md) : moteur de segmentation de [!DNL Platform] utilisé pour créer des segments d’audience à partir de vos profils clients en fonction du comportement et des attributs des clients.
-* [Destinations](../../destinations/home.md) : les destinations sont des intégrations préconfigurées aux applications couramment utilisées. Elles permettent l’activation transparente des données de Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée, etc.
+* [Destinations](../../destinations/home.md) : Les destinations sont des intégrations préconfigurées aux applications courantes qui permettent l’activation transparente des données de Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée, etc.
 
 ## Flux d’application {#flow}
 
@@ -65,6 +65,12 @@ Chaque étape de la chronologie ci-dessus représente une entité qui peut contr
 | Stratégie de fusion | Les stratégies de fusion sont les règles utilisées par Platform pour déterminer le classement par priorité des données lors de la fusion de fragments provenant de plusieurs jeux de données. Des violations de stratégie se produisent si vos stratégies de fusion sont configurées de telle sorte que les jeux de données dotés de libellés limités sont activés pour une destination. Pour plus d’informations, consultez la [présentation des stratégies de fusion](../../profile/merge-policies/overview.md) . |
 | Segment | Les règles de segment définissent les attributs à inclure dans les profils clients. En fonction des champs inclus dans une définition de segment, le segment hérite des libellés d’utilisation appliqués pour ces champs. Des violations de stratégie se produisent si vous activez un segment dont les libellés hérités sont limités par les stratégies applicables de la destination cible, en fonction de son cas d’utilisation marketing. |
 | Destination | Lors de la configuration d’une destination, une action marketing (parfois appelée cas d’utilisation marketing) peut être définie. Ce cas d’utilisation correspond à une action marketing telle que définie dans une stratégie d’utilisation des données. En d’autres termes, le cas d’utilisation marketing que vous définissez pour une destination détermine les stratégies d’utilisation des données applicables à cette destination. Des violations de stratégie se produisent si vous activez un segment dont les libellés d’utilisation sont limités par les stratégies applicables de la destination cible. |
+
+>[!IMPORTANT]
+>
+>Certaines stratégies d’utilisation des données peuvent spécifier plusieurs libellés avec une relation ET. Par exemple, une stratégie peut restreindre une action marketing si des libellés `C1` ET `C2` sont tous deux présents, mais ne limite pas la même action si seulement l’un de ces libellés est présent.
+>
+>En ce qui concerne l’application automatique, la structure de gouvernance des données ne considère pas l’activation de segments distincts vers une destination comme une combinaison de données. Par conséquent, l’exemple de stratégie `C1 AND C2` n’est **PAS** appliqué si ces étiquettes sont incluses dans des segments distincts. Au lieu de cela, cette stratégie n’est appliquée que lorsque les deux libellés sont présents dans le même segment lors de l’activation.
 
 Lorsque des violations de stratégie se produisent, les messages qui s’affichent dans l’interface utilisateur fournissent des outils utiles à l’exploration de la parenté des données contribuant à la violation afin de résoudre le problème. Vous trouverez plus de détails dans la section suivante.
 
