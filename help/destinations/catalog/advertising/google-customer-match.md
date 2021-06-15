@@ -3,7 +3,7 @@ keywords: correspondance client Google;correspondance client Google;correspondan
 title: Connexion à la correspondance client Google
 description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 6c4e68e2f347cadaf3bf36de73c74e1240ed975b
+source-git-commit: da069c6c931bfd2af38b40fc061d5eb633aba9ea
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 4%
@@ -34,7 +34,7 @@ Pour promouvoir cette version, ils téléchargent les adresses électroniques de
 
 ## Gouvernance des données pour les destinations [!DNL Google Customer Match] {#data-governance}
 
-Certaines destinations en Experience Platform ont certaines règles et obligations pour les données envoyées ou reçues de la plateforme de destination. Il vous incombe de comprendre les limites et les obligations de vos données, ainsi que la manière dont vous utilisez ces données dans Adobe Experience Platform et la plateforme de destination. Adobe Experience Platform fournit des outils de gouvernance des données pour vous aider à gérer certaines de ces obligations en matière d’utilisation des données. [En savoir ](../../..//data-governance/labels/overview.md) plus sur les outils et les politiques de gouvernance des données.
+Certaines destinations en Experience Platform ont certaines règles et obligations pour les données envoyées ou reçues de la plateforme de destination. Il vous incombe de comprendre les limites et les obligations de vos données, ainsi que la manière dont vous utilisez ces données dans Adobe Experience Platform et la plateforme de destination. Adobe Experience Platform fournit des outils de gouvernance des données pour vous aider à gérer certaines de ces obligations en matière d’utilisation des données. [En savoir ](../../../data-governance/labels/overview.md) plus sur les outils et les politiques de gouvernance des données.
 
 ## Identités prises en charge {#supported-identities}
 
