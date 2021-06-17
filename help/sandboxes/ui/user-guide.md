@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur des environnements de test
 topic-legacy: user guide
 description: Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux environnements de test dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
+source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 20%
+source-wordcount: '779'
+ht-degree: 21%
 
 ---
 
@@ -68,7 +68,7 @@ Une fois la création de l’environnement de test terminée, actualisez la page
 
 >[!IMPORTANT]
 >
->L’environnement de test de production par défaut ne peut pas être réinitialisé si le graphique d’identités qui y est hébergé est également utilisé par Adobe Analytics pour la fonction [Analyses entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) ou si le graphique d’identités qui y est hébergé est également utilisé par Adobe Audience Manager pour la fonction [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html). Les environnements de test de production utilisés pour le partage de segments bidirectionnel avec Adobe Audience Manager ou Audience Core Service ne peuvent pas non plus être réinitialisés.
+>L’environnement de test de production par défaut ne peut pas être réinitialisé si le graphique d’identités qui y est hébergé est également utilisé par Adobe Analytics pour la fonction [Analyses entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) ou si le graphique d’identités qui y est hébergé est également utilisé par Adobe Audience Manager pour la fonction [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
 
 La réinitialisation d’un environnement de test de production ou de développement supprime toutes les ressources associées à cet environnement de test (schémas, jeux de données, etc.), tout en conservant le nom de l’environnement de test et les autorisations associées. Cet environnement de test « propre » reste disponible avec le même nom auprès des utilisateurs qui y ont accès.
 
@@ -88,29 +88,29 @@ Après quelques instants, une boîte de confirmation s’affiche en bas de l’�
 
 ![success](../images/ui/success.png)
 
-### Messages d’erreur
+### Avertissements
 
-Un environnement de test de production par défaut contenant les données des analyses entre appareils ne peut pas être réinitialisé et renvoie l’erreur suivante.
+Un environnement de test de production par défaut contenant les données des analyses entre appareils ne peut pas être réinitialisé et renvoie l’avertissement suivant.
 
 ![cda](../images/ui/cda.png)
 
-Un environnement de test de production par défaut contenant des données PBD ne peut pas non plus être réinitialisé et renvoie l’erreur suivante.
+Un environnement de test de production par défaut contenant des données PBD ne peut pas non plus être réinitialisé et renvoie l’avertissement suivant.
 
 ![pbd](../images/ui/pbd.png)
 
-Un environnement de test de production par défaut contenant des données pour les analyses entre appareils et les PBD ne peut pas non plus être réinitialisé et renvoie l’erreur suivante.
+Un environnement de test de production par défaut qui contient des données pour les analyses entre appareils et les PBD ne peut pas non plus être réinitialisé et renvoie l’avertissement suivant.
 
 ![both](../images/ui/both.png)
 
-Un environnement de test de production utilisé pour le partage de segments bidirectionnel avec Adobe Audience Manager ou Audience Core Service ne peut pas non plus être réinitialisé et renvoie l’erreur suivante.
+Vous pouvez réinitialiser un environnement de test de production utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service]. Sélectionnez [!UICONTROL Continuer] pour poursuivre la réinitialisation.
 
-![seg](../images/ui/seg.png)
+![both](../images/ui/seg.png)
 
 ## Suppression d’un environnement de test
 
 >[!IMPORTANT]
 >
->L’environnement de test de production par défaut ne peut pas être supprimé et les environnements de test de production utilisés pour le partage de segments bidirectionnel avec Adobe Audience Manager ou Audience Core Service ne peuvent pas non plus être supprimés.
+>L’environnement de test de production par défaut ne peut pas être supprimé.
 
 La suppression d’un environnement de test de production ou de développement supprime définitivement toutes les ressources associées à cet environnement de test, y compris les autorisations.
 
@@ -126,9 +126,9 @@ Dans la fenêtre de confirmation finale, saisissez le nom de l’environnement d
 
 ![delete-confirm](../images/ui/delete-confirm.png)
 
-Un environnement de test de production utilisé pour le partage de segments bidirectionnel avec Adobe Audience Manager ou Audience Core Service ne peut pas être supprimé et renvoie l’erreur suivante.
+Un environnement de test de production créé par l’utilisateur qui est utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service] peut toujours être supprimé après l’avertissement suivant.
 
-![seg](../images/ui/seg.png)
+![seg](../images/ui/delete-seg.png)
 
 ## Étapes suivantes
 
