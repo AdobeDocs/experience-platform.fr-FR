@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API de gestion des environnements de test
 topic-legacy: developer guide
 description: Le point de terminaison /sandbox dans l’API Sandbox vous permet de gérer par programmation les environnements de test dans Adobe Experience Platform.
-source-git-commit: f84898a87a8a86783220af7f74e17f464a780918
+source-git-commit: 1ec141fa5a13bb4ca6a4ec57f597f38802a92b3f
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 53%
+source-wordcount: '1440'
+ht-degree: 49%
 
 ---
 
@@ -23,7 +23,7 @@ Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼAPI [[!DNL 
 
 Vous pouvez répertorier tous les environnements de test appartenant à votre organisation IMS (principal ou non) en effectuant une requête GET sur le point de terminaison `/sandboxes` .
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 GET /sandboxes?{QUERY_PARAMS}
@@ -306,7 +306,7 @@ Vous pouvez mettre à jour un ou plusieurs champs d’un environnement de test e
 >
 >Actuellement, seule la propriété `title` d’un environnement de test peut être mise à jour.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 PATCH /sandboxes/{SANDBOX_NAME}
@@ -348,11 +348,7 @@ Une réponse réussie renvoie un état HTTP 200 (OK) avec les détails de l’e
 
 ## Réinitialisation d’un environnement de test {#reset}
 
->[!IMPORTANT]
->
->L’environnement de test de production par défaut ne peut pas être réinitialisé si le graphique d’identités qui y est hébergé est également utilisé par Adobe Analytics pour la fonction [Analyses entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) ou si le graphique d’identités qui y est hébergé est également utilisé par Adobe Audience Manager pour la fonction [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
-
-Les environnements de test de développement disposent d’une fonctionnalité de réinitialisation supprimant toutes les ressources de l’environnement de test autres que celles par défaut. Vous pouvez réinitialiser un environnement de test en effectuant une requête PUT comprenant le `name` de l’environnement de test dans le chemin d’accès de la requête.
+Les environnements de test disposent d’une fonctionnalité de &quot;réinitialisation d’usine&quot; qui supprime toutes les ressources autres que les ressources par défaut d’un environnement de test. Vous pouvez réinitialiser un environnement de test en effectuant une requête PUT comprenant le `name` de l’environnement de test dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -363,6 +359,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | Paramètre | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | La propriété `name` de l’environnement de test que vous souhaitez réinitialiser. |
+| `validationOnly` | Paramètre facultatif qui vous permet d’effectuer une vérification avant vol sur l’opération de réinitialisation de l’environnement de test sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si l’environnement de test que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segment. |
 
 **Requête**
 
@@ -370,7 +367,7 @@ La requête suivante réinitialise un environnement de test nommé &quot;acme-de
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev?validationOnly=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -386,6 +383,10 @@ curl -X PUT \
 
 **Réponse**
 
+>[!NOTE]
+>
+>Une fois qu’un environnement de test est réinitialisé, il faut compter environ 30 secondes pour qu’il soit configuré par le système.
+
 Une réponse réussie renvoie les détails de l’environnement de test mis à jour, indiquant que son `state` est « resetting ».
 
 ```json
@@ -399,18 +400,76 @@ Une réponse réussie renvoie les détails de l’environnement de test mis à j
 }
 ```
 
->[!NOTE]
->
->Une fois qu’un environnement de test est réinitialisé, il faut compter environ 30 secondes pour qu’il soit configuré par le système. Une fois la configuration effectuée, le `state` de l’environnement de test prend la valeur « active » ou « failed ».
+L’environnement de test de production par défaut et les environnements de test de production créés par l’utilisateur ne peuvent pas être réinitialisés si le graphique d’identités qui y est hébergé est également utilisé par Adobe Analytics pour la fonction [Analyse entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) ou si le graphique d’identités hébergé est également utilisé par Adobe Audience Manager pour la fonction [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)).
 
-Le tableau suivant contient des exceptions possibles qui peuvent empêcher la réinitialisation d’un environnement de test :
+Voici une liste d’exceptions possibles qui peuvent empêcher la réinitialisation d’un environnement de test :
 
-| Code erreur | Description |
+```json
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2074-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2075-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2076-400"
+},
+{
+    "status": 400,
+    "title": "Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2077-400"
+}
+```
+
+Vous pouvez procéder à la réinitialisation d’un environnement de test de production utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service] en ajoutant le paramètre `ignoreWarnings` à votre requête.
+
+**Format d&#39;API**
+
+```http
+PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
+```
+
+| Paramètre | Description |
 | --- | --- |
-| `2074-400` | Cet environnement de test ne peut pas être réinitialisé, car le graphique d’identités hébergé dans cet environnement de test est également utilisé par Adobe Analytics pour la fonctionnalité Analytics sur l’ensemble des appareils (CDA). |
-| `2075-400` | Cet environnement de test ne peut pas être réinitialisé, car le graphique d’identités hébergé dans cet environnement de test est également utilisé par Adobe Audience Manager pour la fonctionnalité Destinations basées sur les personnes (PBD) . |
-| `2076-400` | Cet environnement de test ne peut pas être réinitialisé, car le graphique d’identités hébergé dans cet environnement de test est également utilisé par Adobe Audience Manager pour la fonctionnalité Destinations basées sur les personnes (PBD) , ainsi que par Adobe Analytics pour la fonctionnalité Analyses entre appareils (CDA) . |
-| `2077-400` | Avertissement : L’environnement de test `{SANDBOX_NAME}` est utilisé pour le partage bidirectionnel de segments avec Adobe Audience Manager ou le service principal Audience. |
+| `{SANDBOX_NAME}` | La propriété `name` de l’environnement de test que vous souhaitez réinitialiser. |
+| `ignoreWarnings` | Paramètre facultatif qui vous permet d’ignorer la vérification de validation et de forcer la réinitialisation d’un environnement de test de production utilisé pour le partage de segments bidirectionnel avec [!DNL Audience Manager] ou [!DNL Audience Core Service]. Ce paramètre ne peut pas être appliqué à un environnement de test de production par défaut. |
+
+**Requête**
+
+La requête suivante réinitialise un environnement de test de production nommé &quot;acme&quot;.
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json'
+  -d '{
+    "action": "reset"
+  }'
+```
+
+**Réponse**
+
+Une réponse réussie renvoie les détails de l’environnement de test mis à jour, indiquant que son `state` est « resetting ».
+
+```json
+{
+    "id": "d8184350-dbf5-11e9-875f-6bf1873fec16",
+    "name": "acme",
+    "title": "Acme Business Group prod",
+    "state": "resetting",
+    "type": "production",
+    "region": "VA7"
+}
+```
 
 ## Suppression d’un environnement de test {#delete}
 
@@ -433,14 +492,16 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | Paramètre | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | `name` de l’environnement de test que vous souhaitez supprimer. |
+| `validationOnly` | Paramètre facultatif qui vous permet de vérifier en amont l’opération de suppression de l’environnement de test sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si l’environnement de test que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segment. |
+| `ignoreWarnings` | Paramètre facultatif qui vous permet d’ignorer la vérification de validation et de forcer la suppression d’un environnement de test de production créé par l’utilisateur qui est utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service]. Ce paramètre ne peut pas être appliqué à un environnement de test de production par défaut. |
 
 **Requête**
 
-La requête suivante supprime un environnement de test nommé &quot;acme-dev&quot;.
+La requête suivante supprime un environnement de test de production nommé &quot;acme&quot;.
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/dev-2 \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
@@ -452,8 +513,8 @@ Une réponse réussie renvoie les détails mis à jour de l’environnement de t
 
 ```json
 {
-    "name": "acme-dev",
-    "title": "Acme Business Group dev",
+    "name": "acme",
+    "title": "Acme Business Group prod",
     "state": "deleted",
     "type": "development",
     "region": "VA7"
