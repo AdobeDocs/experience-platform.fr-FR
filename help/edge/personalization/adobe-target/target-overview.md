@@ -3,9 +3,9 @@ title: Utilisation d’Adobe Target avec le SDK Web Platform
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;fragment de code de prémasquage;vec;compositeur d’expérience d’après les formulaires;xdm;audiences;décisions;portée;schéma;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: e7f5074ef776fc6ccd4f9951722861d771a371de
+source-git-commit: ed6f0891958670c3c5896c4c9cbefef2a245bc15
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '932'
 ht-degree: 5%
 
 ---
@@ -159,32 +159,24 @@ Le code [!DNL Platform Web SDK] type utilisant cette commande ressemble à ce qu
 alloy("sendEvent", {
    renderDecisions: true|false,
    xdm: { // Experience Event XDM data },
-   data: { // Freeform stuff (event & profile) }
+   data: { // Freeform data }
 });
 ```
 
-**Exemple de code**
+**Comment envoyer des attributs de profil à Adobe Target :**
 
 ```
 alloy("sendEvent", {
   renderDecisions: true,
-  xdm: {
-    device: {
-      screenWidth: 9999
-    }
-  },
   data: {
     __adobe: {
       target: {
         "profile.gender": "female",
-        "profile.age": 30,
-	"entity.id" : "123",
-	"entity.genre" : "Drama"
+        "profile.age": 30
       }
     }
   }
-}) 
-.then(console.log);
+});
 ```
 
 ## Demande de recommandations
@@ -209,6 +201,22 @@ Le tableau suivant répertorie les attributs [!DNL Recommendations] et indique s
 |  | cartIds | Pris en charge |
 |  | productPurchasedId | Pris en charge |
 | Page ou catégorie d’élément pour les affinités catégorielles | user.categoryId | Pris en charge |
+
+**Comment envoyer des attributs Recommendations à Adobe Target :**
+
+```
+alloy("sendEvent", {
+  renderDecisions: true,
+  data: {
+    __adobe: {
+      target: {
+        "entity.id" : "123",
+        "entity.genre" : "Drama"
+      }
+    }
+  }
+});
+```
 
 ## Débogage
 
