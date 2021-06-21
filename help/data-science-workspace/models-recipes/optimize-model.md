@@ -1,22 +1,21 @@
 ---
-keywords: Experience Platform ; optimize ; model ; Data Science Workspace ; sujets populaires ; informations sur les modèles
+keywords: Experience Platform;optimisation;modèle;Data Science Workspace;rubriques les plus consultées;informations sur les modèles
 solution: Experience Platform
-title: Optimisation d'un modèle à l'aide de la structure Model Insights
+title: Optimisation d’un modèle à l’aide de Model Insights Framework
 topic-legacy: tutorial
 type: Tutorial
 description: Model Insights Framework fournit aux analystes de données des outils dans Data Science Workspace pour prendre des décisions rapides et éclairées afin d’optimiser les modèles d’apprentissage automatique basés sur des expériences.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 88%
 
 ---
 
-# Optimisation d&#39;un modèle à l&#39;aide de la structure Model Insights
+# Optimisation d’un modèle à l’aide de la structure Model Insights
 
-Le cadre d&#39;analyse de modèle fournit aux scientifiques des données des outils [!DNL Data Science Workspace] pour faire des choix rapides et éclairés pour des modèles d&#39;apprentissage automatique optimaux basés sur des expériences. Le framework améliorera la vitesse et l’efficacité du processus d’apprentissage automatique et la facilité d’utilisation pour les analystes de données. Pour ce faire, un modèle par défaut est fourni pour chaque type d’algorithme d’apprentissage automatique afin de faciliter le réglage des modèles. Le résultat final permet aux analystes de données et aux analystes de données citoyens de prendre de meilleures décisions d’optimisation des modèles pour leurs clients finaux.
+Model Insights Framework fournit aux analystes de données des outils dans [!DNL Data Science Workspace] pour faire des choix rapides et éclairés pour des modèles d’apprentissage automatique optimaux basés sur des expériences. Le framework améliorera la vitesse et l’efficacité du processus d’apprentissage automatique et la facilité d’utilisation pour les analystes de données. Pour ce faire, un modèle par défaut est fourni pour chaque type d’algorithme d’apprentissage automatique afin de faciliter le réglage des modèles. Le résultat final permet aux analystes de données et aux analystes de données citoyens de prendre de meilleures décisions d’optimisation des modèles pour leurs clients finaux.
 
 ## Que sont les mesures ?
 
@@ -44,7 +43,7 @@ Il existe deux façons d’intégrer des mesures aux recettes. L’une consiste 
 Les évaluations par défaut sont calculées dans le cadre des algorithmes de classification. Voici quelques valeurs par défaut pour les évaluateurs actuellement mis en œuvre :
 
 | Classe d’évaluateur | `evaluation.class` |
---- | ---
+|--- | ---|
 | DefaultBinaryClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator` |
 | DefaultMultiClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator` |
 | RecommendationsEvaluator | `com.adobe.platform.ml.impl.RecommendationsEvaluator` |
@@ -101,19 +100,19 @@ Une fois définie dans la recette, l’étape suivante consiste à l’activer d
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-Dans le [!DNL Data Science Workspace], l&#39;utilisateur peut voir les informations de l&#39;onglet &quot;Mesures d&#39;évaluation&quot; de la page de l&#39;expérience.
+Dans la balise [!DNL Data Science Workspace], l’utilisateur peut voir les informations dans l’onglet &quot;Mesures d’évaluation&quot; de la page de l’expérience.
 
 ### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-À ce jour, il n’existe aucune mesure d’évaluation par défaut pour [!DNL Python] ou [!DNL Tensorflow]. Par conséquent, pour obtenir les mesures d’évaluation pour [!DNL Python] ou [!DNL Tensorflow], vous devez créer une mesure d’évaluation personnalisée. Pour ce faire, mettez en œuvre la classe `Evaluator`.
+Pour l’instant, il n’existe aucune mesure d’évaluation par défaut pour [!DNL Python] ou [!DNL Tensorflow]. Par conséquent, pour obtenir les mesures d’évaluation pour [!DNL Python] ou [!DNL Tensorflow], vous devez créer une mesure d’évaluation personnalisée. Pour ce faire, mettez en œuvre la classe `Evaluator`.
 
 #### Mesures d’évaluation personnalisées pour [!DNL Python]
 
 Pour les mesures d’évaluation personnalisées, deux méthodes principales doivent être mises en œuvre pour l’évaluateur : `split()` et `evaluate()`.
 
-Pour [!DNL Python], ces méthodes seraient définies dans [évaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour la classe `Evaluator`. Suivez le lien [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour obtenir un exemple de l’`Evaluator`.
+Pour [!DNL Python], ces méthodes sont définies dans [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour la classe `Evaluator`. Suivez le lien [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour obtenir un exemple de l’`Evaluator`.
 
-La création de mesures d&#39;évaluation dans [!DNL Python] exige que l&#39;utilisateur implémente les méthodes `evaluate()` et `split()`.
+Pour créer des mesures d’évaluation dans [!DNL Python], l’utilisateur doit mettre en oeuvre les méthodes `evaluate()` et `split()`.
 
 La méthode `evaluate()` renvoie l’objet de mesure qui contient un tableau d’objets de mesure avec les propriétés `name`, `value` et `valueType`.
 
