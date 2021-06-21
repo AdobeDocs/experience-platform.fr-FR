@@ -4,7 +4,7 @@ title: Présentation du profil client en temps réel
 topic-legacy: guide
 description: Real-time Customer Profile est une banque d’entités de recherche générique qui fusionne les données de différentes ressources de données d’entreprise, puis fournit un accès à ces données sous la forme de profils client individuels et d’événements de série temporelle connexes. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 598f86188bcd9bde22333ccafb85f3f566aaae44
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 96%
@@ -120,7 +120,7 @@ La [!DNL Data governance] est gérée à partir de plusieurs points. Il s’agit
 
 ### Gestion des demandes d’exclusion et de confidentialité des données
 
-[!DNL Experience Platform] permet à vos clients d’envoyer des demandes de désinscription associées à l’utilisation et au stockage de leurs données dans le [!DNL Real-time Customer Profile]. Pour plus d’informations sur la gestion des demandes d’exclusion, consultez la documentation sur le [respect des demandes d’exclusion](../segmentation/honoring-opt-outs.md).
+[!DNL Experience Platform] permet à vos clients d’envoyer des demandes de désinscription associées à l’utilisation et au stockage de leurs données dans le [!DNL Real-time Customer Profile]. Pour plus d’informations sur la gestion des demandes d’exclusion, consultez la documentation sur le [respect des demandes d’exclusion](../segmentation/consents.md).
 
 ## Étapes suivantes et ressources supplémentaires
 
