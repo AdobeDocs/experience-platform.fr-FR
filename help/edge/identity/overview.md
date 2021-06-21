@@ -4,20 +4,28 @@ description: Découvrez comment récupérer les Adobe Experience Cloud ID (ECID)
 seo-description: Découvrez comment obtenir l’identifiant Adobe Experience Cloud.
 keywords: Identité;identité propriétaire;service d’identité;identité tierce;migration des identifiants;identifiant visiteur;identité tierce;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;synchroniser les identités;syncIdentity;sendEvent;identityMap;Principal;ecid;espace de noms d’identité;idd’espace de noms;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: d753cfca6f518dfe2cafa1cb30ad26bd0b591c54
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 3%
+source-wordcount: '1217'
+ht-degree: 5%
 
 ---
 
-# Récupération des Adobe Experience Cloud ID
+# Adobe Experience Cloud ID
 
 Le SDK Web de Adobe Experience Platform exploite [Adobe Identity Service](../../identity-service/ecid.md). Cela permet de s’assurer que chaque appareil dispose d’un identifiant unique qui est conservé sur l’appareil afin que l’activité entre les pages puisse être liée.
 
 ## Identité propriétaire
 
-[!DNL Identity Service] stocke l’identité dans un cookie dans un domaine propriétaire. [!DNL Identity Service] tente de définir le cookie à l’aide d’un en-tête HTTP sur le domaine. Si cela échoue, la fonction [!DNL Identity Service] revient à définir des cookies via Javascript. Adobe vous recommande de configurer un CNAME pour vous assurer que vos cookies ne seront pas plafonnés par les restrictions ITP côté client.
+[!DNL Identity Service] stocke l’identité dans un cookie dans un domaine propriétaire. [!DNL Identity Service] tente de définir le cookie à l’aide d’un en-tête HTTP sur le domaine. Si cela échoue, la fonction [!DNL Identity Service] revient à définir des cookies avec JavaScript. Il est recommandé de configurer un CNAME pour votre [configuration de domaine Edge](../fundamentals/configuring-the-sdk.md#edgeConfigId).
+
+Chaque accès provenant du SDK Web Platform comporte un ECID ajouté par le service d’identité sur le réseau Edge. Pour les nouveaux visiteurs, l’ECID est généré et ajouté à la charge utile. Pour les visiteurs qui se répètent, l’ECID est récupéré du cookie `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` et ajouté à la charge utile.
+
+L’ECID est ajouté sous le champ `identityMap` dans votre `xdm`. À l’aide de l’outil de développement du navigateur, vous pouvez afficher l’ECID dans la réponse sous la charge utile avec le type : `identity:result`, mais vous ne pouvez pas voir l’ECID dans la requête.
+
+Les implémentations CNAME vous permettent de personnaliser le domaine de collecte utilisé par Adobe afin qu’il corresponde au vôtre. Cela permet à Adobe de définir des cookies internes côté serveur plutôt que côté client à l’aide de JavaScript. Auparavant, ces cookies propriétaires côté serveur n’étaient pas soumis aux limites imposées par la politique ITP (Intelligent Tracking Prevention) d’Apple sur les navigateurs Safari. Cependant, en novembre 2020, Apple a mis à jour ses politiques de sorte que ces limites soient également appliquées aux cookies définis via CNAME. Actuellement, les deux cookies définis côté serveur par CNAME et côté client par JavaScript sont limités à un délai d’expiration de sept jours ou 24 heures sous ITP. Pour plus d’informations sur la stratégie ITP, consultez ce document Apple sur la [prévention du suivi](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp).
+
+Bien qu’une mise en oeuvre CNAME ne fournisse aucun avantage en termes de durée de vie des cookies, d’autres avantages peuvent exister, tels que les bloqueurs d’annonces et les navigateurs moins courants, empêchant l’envoi de données aux domaines qu’ils classent comme outils de suivi. Dans ce cas, l’utilisation d’un CNAME peut empêcher que votre collecte de données ne soit interrompue pour les utilisateurs qui utilisent ces outils.
 
 ## Identité tierce
 
