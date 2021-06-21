@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des segments et générez des audiences à partir de vos données de profil client en temps réel.
 feature: Segments
-source-git-commit: 48ef54759ff62efa84aac493af3a7799e1b6d141
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 79%
+ht-degree: 78%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 79%
    - [Segmentation par flux](ui/streaming-segmentation.md)
    - [Segmentation par flux (Vidéo)](video/streaming-segmentation-overview.md)
    - [Refactorisation des contraintes de temps](ui/segment-refactoring.md)
-- [Respect du droit d’opposition](honoring-opt-outs.md)
+- [Respect du consentement](consents.md)
 - [Segmentation d’entités multiples](multi-entity-segmentation.md)
 - Langage de requête de profil {#pql}
    - [Présentation](pql/overview.md)
@@ -45,9 +45,9 @@ ht-degree: 79%
    - [Fonctions de tableau, de liste et d’ensemble](pql/array-functions.md)
    - [Fonctions de mappage](pql/map-functions.md)
    - [Fonctions de chaîne](pql/string-functions.md)
-   - [Fonctions d’objet](pql/object-functions.md)
+   - [Fonctions d&#39;objet](pql/object-functions.md)
    - [Fonctions arithmétiques](pql/arithmetic-functions.md)
-   - [Fonctions d’agrégation](pql/aggregation-functions.md)
+   - [Fonctions d&#39;agrégation](pql/aggregation-functions.md)
    - [Fonctions de date et d’heure](pql/datetime-functions.md)
    - [Fonctions de filtre](pql/filter-functions.md)
    - [Quantificateurs logiques](pql/logical-quantifiers.md)
