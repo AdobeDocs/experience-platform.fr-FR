@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;système XDM;modèle de données d’expérience;modèle de données d’expérience;modèle de données d’expérience;modèle de données;modèle de données;registre des schémas;schéma;schéma;schémas;schémas;schémas;créer
 solution: Experience Platform
-title: Point de terminaison de l’API Schema
+title: Point d’entrée de l’API Schemas
 description: Le point de terminaison /schemas de l’API Schema Registry vous permet de gérer par programmation les schémas XDM dans votre application d’expérience.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 19%
 
 ---
 
-# Point de terminaison des schémas
+# Point d’entrée des schémas
 
 Un schéma peut être considéré comme le plan directeur des données que vous souhaitez ingérer dans Adobe Experience Platform. Chaque schéma est composé d’une classe et de zéro ou plusieurs groupes de champs de schéma. Le point de terminaison `/schemas` de l’API [!DNL Schema Registry] vous permet de gérer par programmation les schémas dans votre application d’expérience.
 
@@ -28,7 +28,7 @@ Vous pouvez répertorier tous les schémas sous le conteneur `global` ou `tenant
 >
 >Lors de l’énumération des ressources, le registre des schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres de pagination. Il est également recommandé d’utiliser des paramètres de requête supplémentaires pour filtrer les résultats et réduire le nombre de ressources renvoyées. Pour plus d’informations, reportez-vous à la section [Paramètres de requête](./appendix.md#query) du document de l’annexe.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
@@ -102,7 +102,7 @@ La requête ci-dessus utilisait l’en-tête `application/vnd.adobe.xed-id+json`
 
 Vous pouvez rechercher un schéma spécifique en effectuant une requête de GET qui inclut l’identifiant du schéma dans le chemin d’accès.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
@@ -161,7 +161,7 @@ Une réponse réussie renvoie les détails du schéma. Les champs renvoyés dép
           "meta:xdmType": "object"
       },
       {
-          "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+          "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
           "type": "object",
           "meta:xdmType": "object"
       }
@@ -170,7 +170,7 @@ Une réponse réussie renvoie les détails du schéma. Les champs renvoyés dép
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
-      "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+      "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile"
@@ -287,7 +287,7 @@ Vous pouvez remplacer un schéma entier par le biais d’une opération de PUT, 
 >
 >Si vous souhaitez uniquement mettre à jour une partie d’un schéma au lieu de le remplacer entièrement, reportez-vous à la section [mise à jour d’une partie d’un schéma](#patch).
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 PUT /tenant/schemas/{SCHEMA_ID}
@@ -370,7 +370,7 @@ Vous pouvez mettre à jour une partie d’un schéma à l’aide d’une requêt
 
 L’une des opérations de PATCH les plus courantes consiste à ajouter des groupes de champs définis précédemment à un schéma, comme le montre l’exemple ci-dessous.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 PATCH /tenant/schema/{SCHEMA_ID} 
@@ -400,13 +400,13 @@ curl -X PATCH\
         { 
           "op": "add",
           "path": "/meta:extends/-",
-          "value":  "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
+          "value":  "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
         },
         {
           "op": "add",
           "path": "/allOf/-",
           "value":  {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
           }
         }
       ]'
@@ -426,7 +426,7 @@ La réponse montre que les deux opérations ont été réalisées avec succès. 
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -435,7 +435,7 @@ La réponse montre que les deux opérations ont été réalisées avec succès. 
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -461,7 +461,7 @@ Pour qu’un schéma participe à [Real-time Customer Profile](../../profile/hom
 >
 >Les balises immuables sont des balises destinées à être configurées, mais jamais supprimées.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 PATCH /tenant/schema/{SCHEMA_ID} 
@@ -508,7 +508,7 @@ Une réponse réussie renvoie les détails du schéma mis à jour, indiquant que
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -517,7 +517,7 @@ Une réponse réussie renvoie les détails du schéma mis à jour, indiquant que
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -544,7 +544,7 @@ Vous pouvez maintenant afficher l’union de la classe de ce schéma pour confir
 
 Il peut parfois être nécessaire de supprimer un schéma du registre des schémas. Pour ce faire, il vous suffit d’effectuer une requête de DELETE avec l’identifiant de schéma fourni dans le chemin d’accès.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 DELETE /tenant/schemas/{SCHEMA_ID}
