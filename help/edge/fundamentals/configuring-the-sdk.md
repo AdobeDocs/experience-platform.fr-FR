@@ -1,18 +1,17 @@
 ---
-title: Configuration du SDK Web Adobe Experience Platform
+title: Configuration du SDK Web de Adobe Experience Platform
 description: Découvrez comment configurer le SDK Web de Adobe Experience Platform.
 seo-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
-keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environnement;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinations Activé ; idMigrationEnabled ; thirdPartyCookiesEnabled ;
+keywords: configure;configuration;SDK;edge;SDK Web;configure;edgeConfigId;contexte;web;périphérique;environnement;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;paramètres du sdk web;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinations;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-translation-type: tm+mt
-source-git-commit: 2895975b9c103e6afba7db221223b4ef2116caf3
+source-git-commit: 4b04f02a7a8843e667ea05b000bc93ebb065babd
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 39%
+source-wordcount: '839'
+ht-degree: 43%
 
 ---
 
-# Configuration de Platform Web SDK
+# Configuration du SDK Web de Platform
 
 La configuration du SDK est effectuée à l’aide de la commande `configure`.
 
@@ -49,7 +48,7 @@ L’ID de configuration que vous avez attribué, qui lie le SDK aux comptes et �
 
 {style=&quot;table-layout:auto&quot;}
 
-Indique les catégories contextuelles à collecter automatiquement, comme décrit dans la section [Informations automatiques](../data-collection/automatic-information.md). Si cette configuration n’est pas spécifiée, toutes les catégories sont utilisées par défaut.
+Indique les catégories contextuelles à collecter automatiquement, comme décrit dans la section [Informations automatiques](../data-collection/automatic-information.md). Si cette configuration n&#39;est pas spécifiée, toutes les catégories sont utilisées par défaut.
 
 ### `debugEnabled`
 
@@ -70,9 +69,9 @@ Indique si le débogage est activé. La définition de cette configuration sur l
 
 ### `edgeDomain` {#edge-domain}
 
-Renseignez ce champ avec votre domaine propriétaire. Pour plus de détails, consultez la [documentation](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+Renseignez ce champ avec votre domaine propriétaire. Pour plus d’informations, consultez la [documentation](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=fr).
 
-Le domaine est similaire à `data.{customerdomain.com}` pour un site Web à l’adresse www.{customerdomain.com}.
+Le domaine est similaire à `data.{customerdomain.com}` pour un site web à l’adresse www.{customerdomain.com}.
 
 ### `orgId`
 
@@ -82,7 +81,7 @@ Le domaine est similaire à `data.{customerdomain.com}` pour un site Web à l’
 
 {style=&quot;table-layout:auto&quot;}
 
-ID d&#39;organisation [!DNL Experience Cloud] que vous avez attribué. Lors de la configuration de plusieurs instances dans une page, vous devez configurer un `orgId` différent pour chaque instance.
+ID d’organisation [!DNL Experience Cloud] que vous avez attribué. Lors de la configuration de plusieurs instances dans une page, vous devez configurer un `orgId` différent pour chaque instance.
 
 ## Collecte de données
 
@@ -94,7 +93,7 @@ ID d&#39;organisation [!DNL Experience Cloud] que vous avez attribué. Lors de l
 
 {style=&quot;table-layout:auto&quot;}
 
-Indique si les données associées aux clics sur les liens sont automatiquement collectées. Voir [Suivi automatique des liens](../data-collection/track-links.md#automaticLinkTracking) pour plus d’informations.
+Indique si les données associées aux clics sur les liens sont automatiquement collectées. Voir [Suivi automatique des liens](../data-collection/track-links.md#automaticLinkTracking) pour plus d’informations. Les liens sont également étiquetés comme liens de téléchargement s’ils incluent un attribut de téléchargement ou si le lien se termine par une extension de fichier. Les qualificateurs de lien de téléchargement peuvent être configurés avec une expression régulière. La valeur par défaut est `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
 
 ### `onBeforeEventSend`
 
@@ -104,7 +103,7 @@ Indique si les données associées aux clics sur les liens sont automatiquement 
 
 {style=&quot;table-layout:auto&quot;}
 
-Configurez un rappel appelé pour chaque événement juste avant son envoi. Un objet avec le champ `xdm` est envoyé dans le rappel. Pour modifier ce qui est envoyé, modifiez l&#39;objet `xdm`. Dans le rappel, l&#39;objet `xdm` contient déjà les données transmises dans la commande événement et les informations collectées automatiquement. Pour plus d’informations sur le minutage de ce rappel et pour obtenir un exemple, voir [Modification globale des événements](tracking-events.md#modifying-events-globally).
+Configurez un rappel appelé pour chaque événement juste avant son envoi. Un objet avec le champ `xdm` est envoyé dans le rappel. Pour modifier ce qui est envoyé, modifiez l’objet `xdm` . Dans le rappel, les données de l’objet `xdm` sont déjà transmises dans la commande d’événement et les informations collectées automatiquement. Pour plus d’informations sur le minutage de ce rappel et pour obtenir un exemple, voir [Modification globale des événements](tracking-events.md#modifying-events-globally).
 
 ## Options de confidentialité
 
@@ -116,10 +115,10 @@ Configurez un rappel appelé pour chaque événement juste avant son envoi. Un o
 
 {style=&quot;table-layout:auto&quot;}
 
-Définit le consentement par défaut de l’utilisateur. Utilisez ce paramètre lorsqu’aucune préférence de consentement n’est déjà enregistrée pour l’utilisateur. Les autres valeurs valides sont `"pending"` et `"out"`. Cette valeur par défaut n’est pas conservée au profil de l’utilisateur. Le profil de l’utilisateur n’est mis à jour que lorsque `setConsent` est appelé.
-* `"in"`: Lorsque ce paramètre est défini ou qu’aucune valeur n’est fournie, le travail se poursuit sans les préférences de consentement de l’utilisateur.
-* `"pending"`: Lorsque ce paramètre est défini, le travail est mis en file d’attente jusqu’à ce que l’utilisateur donne ses préférences de consentement.
-* `"out"`: Lorsque ce paramètre est défini, le travail est ignoré jusqu’à ce que l’utilisateur donne ses préférences de consentement.
+Définit le consentement par défaut de l’utilisateur. Utilisez ce paramètre lorsqu’aucune préférence de consentement n’est déjà enregistrée pour l’utilisateur. Les autres valeurs valides sont `"pending"` et `"out"`. Cette valeur par défaut n’est pas conservée dans le profil de l’utilisateur. Le profil de l’utilisateur n’est mis à jour que lors de l’appel de `setConsent`.
+* `"in"`: Lorsque ce paramètre est défini ou qu’aucune valeur n’est fournie, le travail se poursuit sans préférences de consentement de l’utilisateur.
+* `"pending"`: Lorsque ce paramètre est défini, le travail est mis en file d’attente jusqu’à ce que l’utilisateur fournisse les préférences de consentement.
+* `"out"`: Lorsque ce paramètre est défini, le travail est ignoré jusqu’à ce que l’utilisateur fournisse les préférences de consentement.
 Une fois les préférences de l’utilisateur fournies, le travail se poursuit ou est abandonné en fonction de celles-ci. Pour plus d’informations, voir [Prise en charge du consentement](../consent/supporting-consent.md).
 
 ## Options de personnalisation
@@ -134,7 +133,7 @@ Une fois les préférences de l’utilisateur fournies, le travail se poursuit o
 
 Permet de créer une définition de style CSS qui masque les zones de contenu de votre page web pendant le chargement du contenu personnalisé à partir du serveur. Si cette option n’est pas fournie, le SDK ne tente pas de masquer les zones de contenu pendant le chargement du contenu personnalisé, ce qui peut entraîner un &quot;scintillement&quot;.
 
-Par exemple, si un élément de votre page Web a l’identifiant `container`, dont vous souhaitez masquer le contenu par défaut pendant le chargement du contenu personnalisé à partir du serveur, utilisez le style de prémasquage suivant :
+Par exemple, si un élément de votre page web possède l’identifiant `container`, dont vous souhaitez masquer le contenu par défaut lorsque le contenu personnalisé est chargé à partir du serveur, utilisez le style de masquage préalable suivant :
 
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
@@ -150,7 +149,7 @@ Par exemple, si un élément de votre page Web a l’identifiant `container`, do
 
 {style=&quot;table-layout:auto&quot;}
 
-Active les destinations de cookie [!DNL Audience Manager], ce qui permet la définition de cookies en fonction de la qualification du segment.
+Active les destinations de cookie [!DNL Audience Manager], ce qui permet de définir des cookies en fonction de la qualification du segment.
 
 ### `urlDestinationsEnabled`
 
@@ -160,7 +159,7 @@ Active les destinations de cookie [!DNL Audience Manager], ce qui permet la déf
 
 {style=&quot;table-layout:auto&quot;}
 
-Active les destinations URL [!DNL Audience Manager], ce qui permet de déclencher des URL en fonction de la qualification des segments.
+Active les destinations d’URL [!DNL Audience Manager], ce qui permet de déclencher des URL en fonction de la qualification des segments.
 
 ## Options d’identité
 
@@ -172,7 +171,7 @@ Active les destinations URL [!DNL Audience Manager], ce qui permet de déclenche
 
 {style=&quot;table-layout:auto&quot;}
 
-Si la valeur est true, le SDK lit et définit les anciens cookies AMCV. Cette option permet de passer à l’utilisation du SDK Web Adobe Experience Platform, tandis que certaines parties du site peuvent toujours utiliser Visiteur.js. Si l’API du Visiteur est définie sur la page, l’API du Visiteur de requêtes du SDK pour l’ECID. Cette option vous permet de créer des pages à deux balises avec le SDK Web de Adobe Experience Platform et d’avoir toujours le même ECID.
+Si la valeur est true, le SDK lit et définit les anciens cookies AMCV. Cette option permet de passer à l’utilisation du SDK Web Adobe Experience Platform, tandis que certaines parties du site peuvent toujours utiliser Visitor.js. Si l’API visiteur est définie sur la page, le SDK interroge l’API visiteur pour l’ECID. Cette option vous permet de créer des pages à deux balises avec le SDK Web de Adobe Experience Platform et qui possèdent toujours le même ECID.
 
 ### `thirdPartyCookiesEnabled`
 
@@ -182,4 +181,4 @@ Si la valeur est true, le SDK lit et définit les anciens cookies AMCV. Cette op
 
 {style=&quot;table-layout:auto&quot;}
 
-Active le paramètre des cookies tiers Adobe. Le SDK peut conserver l’ID de visiteur dans un contexte tiers afin de permettre l’utilisation du même ID de visiteur sur plusieurs sites. Utilisez cette option si vous avez plusieurs sites ou si vous souhaitez partager des données avec des partenaires ; toutefois, cette option n&#39;est pas toujours souhaitée pour des raisons de confidentialité.
+Active le paramètre des cookies tiers Adobe. Le SDK peut conserver l’identifiant visiteur dans un contexte tiers afin de permettre l’utilisation du même identifiant visiteur sur plusieurs sites. Utilisez cette option si vous disposez de plusieurs sites ou si vous souhaitez partager des données avec des partenaires. cependant, cette option n’est parfois pas souhaitée pour des raisons de confidentialité.
