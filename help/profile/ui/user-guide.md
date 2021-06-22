@@ -4,9 +4,9 @@ title: Guide de l’interface utilisateur de Real-time Customer Profile
 topic-legacy: guide
 description: Real-time Customer Profile offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1319'
 ht-degree: 12%
 
 ---
@@ -21,19 +21,23 @@ Ce guide de l’interface utilisateur nécessite une compréhension des différe
 
 * [[!DNL Real-time Customer Profile]](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [[!DNL Identity Service]](../../identity-service/home.md): Permet  [!DNL Real-time Customer Profile] en rapprochant des identités de sources de données disparates lors de leur ingestion dans  [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
 ## Présentation
 
-Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche pour ouvrir l’onglet **[!UICONTROL Aperçu]**. Cet onglet fournit des liens vers la documentation et des vidéos pour vous aider à comprendre et à commencer à utiliser les profils.
+Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche pour ouvrir l’onglet **[!UICONTROL Aperçu]** affichant le tableau de bord [!UICONTROL Profils].
 
-![](../images/user-guide/profiles-overview.png)
+>[!NOTE]
+>
+>Si votre organisation est une nouvelle entreprise de Platform et qu’elle ne dispose pas encore de jeux de données ou de stratégies de fusion principaux, le tableau de bord [!UICONTROL Profils] n’est pas visible. L’onglet [!UICONTROL Aperçu] contient des liens et de la documentation pour vous aider à prendre en main Real-time Customer Profile.
 
-### Tableau de bord du profil
+###  Tableau de bord des profils  {#profile-dashboard}
 
-Pour certains utilisateurs, la sélection de **[!UICONTROL Profils]** dans le volet de navigation de gauche et l’ouverture de l’onglet **[!UICONTROL Aperçu]** fournissent un tableau de bord décrivant les mesures clés liées aux données de votre profil.
+Le tableau de bord **[!UICONTROL Profils]** décrit les mesures clés liées aux données de profil de votre entreprise.
 
-Pour en savoir plus, consultez le [Guide du tableau de bord du profil](profile-dashboard.md).
+Pour en savoir plus, consultez le [Guide du tableau de bord du profil](../../dashboards/guides/profiles.md).
+
+![](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## Parcourir
 
