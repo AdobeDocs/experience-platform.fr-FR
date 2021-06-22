@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Point de terminaison de l’API des groupes de champs
 description: Le point d’entrée /fieldgroups de l’API Schema Registry vous permet de gérer par programmation les groupes de champs de schéma XDM dans votre application d’expérience.
 topic: guide du développement
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1217'
 ht-degree: 10%
@@ -28,7 +28,7 @@ Vous pouvez répertorier tous les groupes de champs sous le conteneur `global` o
 >
 >Lors de l’énumération des ressources, le registre des schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres de pagination. Il est également recommandé d’utiliser des paramètres de requête supplémentaires pour filtrer les résultats et réduire le nombre de ressources renvoyées. Pour plus d’informations, reportez-vous à la section [Paramètres de requête](./appendix.md#query) du document de l’annexe.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
@@ -72,26 +72,26 @@ La requête ci-dessus utilisait l’en-tête `application/vnd.adobe.xed-id+json`
 {
   "results": [
     {
-      "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/6ece98e9842907c78c651f5b249d9f09",
-      "meta:altId": "_{TENANT_ID}.fieldgroups.6ece98e9842907c78c651f5b249d9f09",
+      "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/6ece98e9842907c78c651f5b249d9f09",
+      "meta:altId": "_{TENANT_ID}.mixins.6ece98e9842907c78c651f5b249d9f09",
       "version": "1.0",
       "title": "CRM Data"
     },
     {
-      "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/6386ee478a30914964c6e676ad55603c",
-      "meta:altId": "_{TENANT_ID}.fieldgroups.6386ee478a30914964c6e676ad55603c",
+      "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/6386ee478a30914964c6e676ad55603c",
+      "meta:altId": "_{TENANT_ID}.mixins.6386ee478a30914964c6e676ad55603c",
       "version": "1.9",
       "title": "Loyalty Member Details"
     },
     {
-      "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/67626b2830db3d3ea6c8f9d007aa5797",
-      "meta:altId": "_{TENANT_ID}.fieldgroups.67626b2830db3d3ea6c8f9d007aa5797",
+      "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/67626b2830db3d3ea6c8f9d007aa5797",
+      "meta:altId": "_{TENANT_ID}.mixins.67626b2830db3d3ea6c8f9d007aa5797",
       "version": "1.0",
       "title": "Restaurant"
     },
     {
-      "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/2583b25b613fec704da6ef70cf527688",
-      "meta:altId": "_{TENANT_ID}.fieldgroups.2583b25b613fec704da6ef70cf527688",
+      "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/2583b25b613fec704da6ef70cf527688",
+      "meta:altId": "_{TENANT_ID}.mixins.2583b25b613fec704da6ef70cf527688",
       "version": "1.1",
       "title": "Retail Customer Preferences"
     },
@@ -114,7 +114,7 @@ La requête ci-dessus utilisait l’en-tête `application/vnd.adobe.xed-id+json`
 
 Vous pouvez rechercher un groupe de champs spécifique en incluant l’identifiant du groupe de champs dans le chemin d’une requête de GET.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
@@ -133,7 +133,7 @@ La requête suivante récupère un groupe de champs en fonction de sa valeur `me
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Accept: application/vnd.adobe.xed+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -159,9 +159,9 @@ Une réponse réussie renvoie les détails du groupe de champs. Les champs renvo
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:altId": "_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Favorite Hotel",
   "type": "object",
@@ -305,9 +305,9 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et un payload contenan
 
 ```JSON
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:altId": "_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -395,7 +395,7 @@ Vous pouvez remplacer un groupe de champs entier par le biais d’une opération
 >
 >Si vous souhaitez uniquement mettre à jour une partie d’un groupe de champs au lieu de la remplacer entièrement, reportez-vous à la section [mise à jour d’une partie d’un groupe de champs](#patch).
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
@@ -413,7 +413,7 @@ La requête suivante réécrit un groupe de champs existant en ajoutant un nouve
 
 ```SHELL
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -487,9 +487,9 @@ Une réponse réussie renvoie les détails du groupe de champs mis à jour.
 
 ```JSON
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:altId": "_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -580,7 +580,7 @@ Vous pouvez mettre à jour une partie d’un groupe de champs à l’aide d’un
 >
 >Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, reportez-vous à la section [Remplacement d’un groupe de champs à l’aide d’une opération de PUT](#put).
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 PATCH /tenant/fieldgroups/{FIELD_GROUP_ID} 
@@ -600,7 +600,7 @@ Le corps de la requête se présente sous la forme d’un tableau, chaque objet 
 
 ```SHELL
 curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -630,9 +630,9 @@ La réponse montre que les deux opérations ont été réalisées avec succès. 
 
 ```JSON
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:altId": "_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -719,7 +719,7 @@ La réponse montre que les deux opérations ont été réalisées avec succès. 
 
 Il peut parfois être nécessaire de supprimer un groupe de champs du registre des schémas. Pour ce faire, il vous suffit d’effectuer une requête de DELETE avec l’identifiant de groupe de champs fourni dans le chemin d’accès.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
@@ -735,7 +735,7 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.d5cc04eb8d50190001287e4c869ebe67 \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.mixins.d5cc04eb8d50190001287e4c869ebe67 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
