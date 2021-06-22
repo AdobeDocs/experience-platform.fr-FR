@@ -2,10 +2,10 @@
 title: Cas d’utilisation pris en charge avec le SDK Web de Adobe Experience Platform
 description: Découvrez les cas d’utilisation pris en charge avec le SDK Web de Adobe Experience Platform.
 keywords: sdk web;cas d’utilisation
-source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
+source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 17%
+source-wordcount: '574'
+ht-degree: 16%
 
 ---
 
@@ -40,7 +40,7 @@ Cette page répertorie les cas d’utilisation pris en charge pour le SDK Web, a
 | --- | --- |
 | Envoi d’événements d’expérience |  |
 | Offer Decisioning | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
-| Envoi de données à Real-time Customer Data Profile avec une faible latence |
+| Si le jeu de données est activé pour le profil, possibilité d’envoyer des données à Real-time Customer Data Profile en temps réel |  |
 | Envoi de données à Customer Journey Analytics en temps réel |  |
 | Consentement en écriture sur le profil | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
 | Transfert des données côté serveur en temps réel vers des tiers | [Documentation](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
@@ -87,6 +87,10 @@ Cette page répertorie les cas d’utilisation pris en charge pour le SDK Web, a
 | Prise en charge des attributs du visiteur |  |
 | Scripts de profil |  |
 | XDM devient des paramètres de mbox |  |
+| Offres de redirection prises en charge par les rapports A4T | [Documentation](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
+| Mise à jour du profil Target | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| Recommandations |  |
+| Identifiant tiers mBox |  |
 
 {style=&quot;table-layout:auto&quot;}
 
