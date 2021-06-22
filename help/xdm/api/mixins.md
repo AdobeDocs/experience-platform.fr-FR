@@ -5,7 +5,7 @@ title: Point de terminaison de l’API Mixins
 description: Le point de terminaison /mixins de l’API Schema Registry vous permet de gérer par programmation les mixins XDM dans votre application d’expérience.
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 14%
@@ -35,7 +35,7 @@ Vous pouvez répertorier tous les mixins sous le conteneur `global` ou `tenant` 
 >
 >Lors de l’énumération des ressources, le registre des schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres de pagination. Il est également recommandé d’utiliser des paramètres de requête supplémentaires pour filtrer les résultats et réduire le nombre de ressources renvoyées. Pour plus d’informations, reportez-vous à la section [Paramètres de requête](./appendix.md#query) du document de l’annexe.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
@@ -121,7 +121,7 @@ La requête ci-dessus utilisait l’en-tête `application/vnd.adobe.xed-id+json`
 
 Vous pouvez rechercher un mixin spécifique en incluant l’identifiant du mixin dans le chemin d’une requête de GET.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
@@ -168,7 +168,7 @@ Une réponse réussie renvoie les détails du mixin. Les champs renvoyés dépen
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Favorite Hotel",
   "type": "object",
@@ -314,7 +314,7 @@ Une réponse réussie renvoie un état HTTP 201 (Créé) et un payload qui cont
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -402,7 +402,7 @@ Vous pouvez remplacer un mixin entier par le biais d’une opération de PUT, en
 >
 >Si vous souhaitez uniquement mettre à jour une partie d’un mixin au lieu de le remplacer entièrement, reportez-vous à la section sur la [mise à jour d’une partie d’un mixin](#patch).
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 PUT /tenant/mixins/{MIXIN_ID}
@@ -496,7 +496,7 @@ Une réponse réussie renvoie les détails du mixin mis à jour.
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -587,7 +587,7 @@ Vous pouvez mettre à jour une partie d’un mixin à l’aide d’une requête 
 >
 >Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, reportez-vous à la section [Remplacement d’un mixin à l’aide d’une opération de PUT](#put).
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 PATCH /tenant/mixin/{MIXIN_ID} 
@@ -639,7 +639,7 @@ La réponse montre que les deux opérations ont été réalisées avec succès. 
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -726,7 +726,7 @@ La réponse montre que les deux opérations ont été réalisées avec succès. 
 
 Il peut parfois être nécessaire de supprimer un mixin du registre des schémas. Pour ce faire, il vous suffit d’effectuer une requête de DELETE avec l’ID de mixin fourni dans le chemin d’accès.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 DELETE /tenant/mixins/{MIXIN_ID}
