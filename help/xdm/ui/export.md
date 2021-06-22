@@ -1,52 +1,51 @@
 ---
 solution: Experience Platform
-title: Exportation de Schémas XDM dans l’interface utilisateur
-description: Découvrez comment exporter un schéma existant vers un autre sandbox ou une organisation IMS dans l’interface utilisateur de Adobe Experience Platform.
+title: Exportation des schémas XDM dans l’interface utilisateur
+description: Découvrez comment exporter un schéma existant vers un autre environnement de test ou organisation IMS dans l’interface utilisateur de Adobe Experience Platform.
 topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 0%
 
 ---
 
-# Exportation de schémas XDM dans l’interface utilisateur
+# Exportation des schémas XDM dans l’interface utilisateur
 
-Toutes les ressources de la bibliothèque de Schémas sont contenues dans un sandbox spécifique au sein d’une organisation IMS. Dans certains cas, vous pouvez partager des ressources de modèle de données d’expérience (XDM) entre des sandbox et des organisations IMS.
+Toutes les ressources de la bibliothèque de schémas sont contenues dans un environnement de test spécifique au sein d’une organisation IMS. Dans certains cas, vous souhaiterez peut-être partager des ressources du modèle de données d’expérience (XDM) entre les environnements de test et les organisations IMS.
 
-Pour répondre à ce besoin, l’espace de travail [!UICONTROL Schémas] de l’interface utilisateur de Adobe Experience Platform vous permet de générer une charge utile d’exportation pour tout schéma de la bibliothèque de Schémas. Cette charge utile peut ensuite être utilisée dans un appel à l&#39;API de registre de Schéma pour importer le schéma (et toutes les ressources dépendantes) dans un sandbox de cible et une organisation IMS.
+Pour répondre à ce besoin, l’espace de travail [!UICONTROL Schémas] de l’interface utilisateur de Adobe Experience Platform vous permet de générer une payload d’exportation pour n’importe quel schéma dans la bibliothèque de schémas. Cette payload peut ensuite être utilisée dans un appel à l’API Schema Registry pour importer le schéma (et toutes les ressources dépendantes) dans un environnement de test cible et une organisation IMS.
 
 >[!NOTE]
 >
->Vous pouvez également utiliser l&#39;API Schéma Registry pour exporter d&#39;autres ressources en plus des schémas, notamment des classes, des groupes de champs de schéma et des types de données. Pour plus d&#39;informations, consultez le guide des [points de terminaison export/import](../api/export-import.md).
+>Vous pouvez également utiliser l’API Schema Registry pour exporter d’autres ressources en plus des schémas, notamment des classes, des groupes de champs de schéma et des types de données. Pour plus d’informations, consultez le guide sur les [points de terminaison export/import](../api/export-import.md) .
 
-## Conditions préalables  
+## Conditions préalables   
 
-Bien que l’interface utilisateur de la plate-forme vous permette d’exporter des ressources XDM, vous devez utiliser l’API Schéma Registry pour importer ces ressources dans d’autres sandbox ou des organisations IMS afin de terminer le processus. Pour obtenir des informations importantes sur les en-têtes d&#39;authentification requis avant de suivre ce guide, reportez-vous au guide [Prise en main de l&#39;API de registre des Schémas](../api/getting-started.md).
+Bien que l’interface utilisateur de Platform vous permette d’exporter des ressources XDM, vous devez utiliser l’API Schema Registry pour importer ces ressources dans d’autres environnements de test ou organisations IMS afin de terminer le workflow. Consultez le guide de [prise en main de l’API Schema Registry](../api/getting-started.md) pour obtenir des informations importantes sur les en-têtes d’authentification requis avant de suivre ce guide.
 
-## Générer une charge utile d’exportation
+## Génération d’une payload d’exportation
 
-Dans l’interface utilisateur de la plate-forme, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Dans l&#39;espace de travail [!UICONTROL Schémas], recherchez le schéma à exporter et ouvrez-le dans [!DNL Schema Editor].
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Dans l’espace de travail [!UICONTROL Schémas], recherchez le schéma que vous souhaitez exporter et ouvrez-le dans la balise [!DNL Schema Editor].
 
 >[!TIP]
 >
->Consultez le guide sur [l&#39;exploration des ressources XDM](./explore.md) pour plus d&#39;informations sur la manière de trouver la ressource XDM que vous recherchez.
+>Pour plus d’informations sur la manière de trouver la ressource XDM que vous recherchez, consultez le guide sur l’ [exploration des ressources XDM](./explore.md) .
 
-Une fois le schéma ouvert, sélectionnez l’icône **[!UICONTROL Copier JSON]** (![Copier l’icône](../images/ui/export/icon.png)) dans le coin supérieur droit de la trame.
+Une fois le schéma ouvert, sélectionnez l’icône **[!UICONTROL Copier JSON]** (![Copier l’icône](../images/ui/export/icon.png)) en haut à droite du canevas.
 
 ![](../images/ui/export/copy-json.png)
 
-Cette opération copie une charge JSON dans le Presse-papiers, générée en fonction de la structure du schéma. Pour le schéma &quot;[!DNL Loyalty Members]&quot; illustré ci-dessus, le fichier JSON suivant est généré :
+Cette opération copie une charge utile JSON dans le presse-papiers, générée en fonction de la structure du schéma. Pour le schéma &quot;[!DNL Loyalty Members]&quot; illustré ci-dessus, le fichier JSON suivant est généré :
 
 ```json
 [
   {
-    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:resourceType": "fieldgroups",
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:resourceType": "mixins",
     "version": "1.0",
     "title": "Loyalty details",
     "type": "object",
@@ -171,12 +170,12 @@ Cette opération copie une charge JSON dans le Presse-papiers, générée en fon
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
         "type": "object",
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/xdm/fieldgroups/profile-consents",
+        "$ref": "https://ns.adobe.com/xdm/mixins/profile-consents",
         "type": "object",
         "meta:xdmType": "object"
       }
@@ -189,8 +188,8 @@ Cette opération copie une charge JSON dans le Presse-papiers, générée en fon
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile",
-      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-      "https://ns.adobe.com/xdm/fieldgroups/profile-consents"
+      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+      "https://ns.adobe.com/xdm/mixins/profile-consents"
     ],
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -203,14 +202,14 @@ Cette opération copie une charge JSON dans le Presse-papiers, générée en fon
 ]
 ```
 
-La charge utile prend la forme d&#39;un tableau, chaque élément de tableau étant un objet qui représente une ressource XDM personnalisée à exporter. Dans l’exemple ci-dessus, le groupe de champs personnalisés &quot;[!DNL Loyalty details]&quot; et le schéma &quot;[!DNL Loyalty Members]&quot; sont inclus. Les ressources de base utilisées par le schéma ne sont pas incluses dans l&#39;exportation, car elles sont disponibles dans tous les sandbox et les organismes IMS.
+La charge utile prend la forme d’un tableau, chaque élément de tableau étant un objet qui représente une ressource XDM personnalisée à exporter. Dans l’exemple ci-dessus, le groupe de champs personnalisé &quot;[!DNL Loyalty details]&quot; et le schéma &quot;[!DNL Loyalty Members]&quot; sont inclus. Les ressources de base utilisées par le schéma ne sont pas incluses dans l’exportation, car elles sont disponibles dans tous les environnements de test et toutes les organisations IMS.
 
-Notez que chaque instance de l’ID de client de votre organisation s’affiche sous la forme `<XDM_TENANTID_PLACEHOLDER>` dans la charge utile. Ces espaces réservés seront automatiquement remplacés par la valeur d&#39;ID de locataire appropriée en fonction de l&#39;endroit où vous importez le schéma à l&#39;étape suivante.
+Notez que chaque instance de l’ID de tenant de votre organisation s’affiche sous la forme `<XDM_TENANTID_PLACEHOLDER>` dans la payload. Ces espaces réservés seront automatiquement remplacés par la valeur d’identifiant du client appropriée en fonction de l’endroit où vous importez le schéma à l’étape suivante.
 
-## Importer la ressource à l&#39;aide de l&#39;API
+## Importer la ressource à l’aide de l’API
 
-Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme charge utile pour une demande de POST au point de terminaison `/import` de l’API de registre de Schéma. Voir la section sur l&#39;[importation d&#39;une ressource XDM dans l&#39;API](../api/export-import.md#import) pour plus d&#39;informations sur la configuration de l&#39;appel pour envoyer le schéma à l&#39;organisation IMS et au sandbox de votre choix.
+Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme charge utile pour une requête de POST au point de terminaison `/import` dans l’API Schema Registry. Voir la section sur l’[importation d’une ressource XDM dans l’API](../api/export-import.md#import) pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation IMS et à l’environnement de test de votre choix.
 
 ## Étapes suivantes
 
-En suivant ce guide, vous avez exporté un schéma XDM vers une autre organisation IMS ou un autre sandbox. Pour plus d&#39;informations sur les fonctionnalités de l&#39;interface utilisateur [!UICONTROL Schémas], consultez la section [[!UICONTROL Schémas] présentation de l&#39;interface utilisateur](./overview.md).
+En suivant ce guide, vous avez correctement exporté un schéma XDM vers une organisation IMS ou un environnement de test différent. Pour plus d’informations sur les fonctionnalités de l’interface utilisateur des [!UICONTROL schémas], consultez la [[!UICONTROL présentation de l’interface utilisateur des ]](./overview.md).
