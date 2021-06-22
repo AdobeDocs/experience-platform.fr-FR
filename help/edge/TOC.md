@@ -5,7 +5,7 @@ user-guide-title: Aide du SDK web d’Adobe Experience Platform
 breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Gestion des données
-source-git-commit: bcb80d7d27ab88e56450ddd99102871db23fbca8
+source-git-commit: 8fd779d9fa73c178e8a8660a6cef01cfa112ecdc
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 98%
@@ -54,7 +54,7 @@ ht-degree: 98%
       * [Intégration avec Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
       * [Intégration sans Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
 * Extension SDK web pour Adobe Experience Platform Launch {#extension}
-   * [Extension SDK web](extension/web-sdk-extension.md)
+   * [Extension SDK web](extension/web-sdk-extension-configuration.md)
    * [Types d’actions](extension/action-types.md)
    * [Types d’éléments de données](extension/data-element-types.md)
    * [Accès à l’ECID](extension/accessing-the-ecid.md)
