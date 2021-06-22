@@ -5,7 +5,7 @@ title: Point de terminaison de l’API du journal d’audit
 description: Le point de terminaison /auditlog de l’API Schema Registry vous permet de récupérer une liste chronologique des modifications apportées à une ressource XDM existante.
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 6%
@@ -26,7 +26,7 @@ Le point de terminaison `/auditlog` fait partie des appels de procédure distant
 
 Vous pouvez récupérer un journal d’audit pour n’importe quelle classe, groupe de champs, type de données ou schéma dans la bibliothèque de schémas en spécifiant l’identifiant de la ressource dans le chemin d’accès d’une requête de GET au point de terminaison `/auditlog`.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 GET /rpc/auditlog/{RESOURCE_ID}
@@ -44,7 +44,7 @@ La requête suivante récupère le journal d’audit pour un groupe de champs `R
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -58,11 +58,11 @@ Une réponse réussie renvoie une liste chronologique des modifications apporté
 ```json
 [
   {
-    "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+    "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
     "auditTrails": [
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "fieldgroups",
+        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "xdmType": "mixins",
         "action": "add",
         "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/brand",
         "value": {
@@ -74,8 +74,8 @@ Une réponse réussie renvoie une liste chronologique des modifications apporté
         }
       },
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "fieldgroups",
+        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "xdmType": "mixins",
         "action": "add",
         "path": "/meta:usageCount",
         "value": 0
