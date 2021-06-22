@@ -4,9 +4,9 @@ title: Tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 8312d1523ab68dd0a4ba437dd826adde544838fe
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '792'
 ht-degree: 6%
 
 ---
@@ -28,6 +28,10 @@ Le tableau de bord [!UICONTROL Destinations] affiche un instantané des destinat
 ## Exploration du tableau de bord des destinations
 
 Pour accéder au tableau de bord des destinations dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Destinations]** dans le rail de gauche, puis sélectionnez l’onglet **[!UICONTROL Aperçu]** pour afficher le tableau de bord.
+
+>[!NOTE]
+>
+>Si votre entreprise est une nouvelle société Experience Platform qui ne possède pas encore de destinations principales, le tableau de bord [!UICONTROL Destinations] et l’onglet [!UICONTROL Aperçu] ne sont pas visibles. À la place, la sélection de [!UICONTROL Destinations] dans le volet de navigation de gauche affiche l’onglet [!UICONTROL Catalogue] . Pour en savoir plus sur l’onglet [!UICONTROL Catalogue], consultez le [[!UICONTROL Guide de l’espace de travail des ] ](../../destinations/ui/destinations-workspace.md).
 
 ![](../images/destinations/dashboard-overview.png)
 
