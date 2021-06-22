@@ -4,9 +4,9 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1192'
 ht-degree: 2%
 
 ---
@@ -30,6 +30,10 @@ Les données d’attribut de l’instantané affichent les données exactement t
 ## Exploration du tableau de bord [!UICONTROL Profils]
 
 Pour accéder au tableau de bord [!UICONTROL Profils] dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Profils]** dans le rail de gauche, puis sélectionnez l’onglet **[!UICONTROL Aperçu]** pour afficher le tableau de bord.
+
+>[!NOTE]
+>
+>Si votre organisation est une nouvelle entreprise de Platform et qu’elle ne dispose pas encore de jeux de données ou de stratégies de fusion principaux, le tableau de bord [!UICONTROL Profils] n’est pas visible. L’onglet [!UICONTROL Aperçu] contient des liens et de la documentation pour vous aider à prendre en main Real-time Customer Profile.
 
 ![](../images/profiles/dashboard-overview.png)
 
