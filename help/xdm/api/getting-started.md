@@ -5,10 +5,10 @@ title: Prise en main de l’API Schema Registry
 description: Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels vers l’API Schema Registry.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1370'
-ht-degree: 44%
+ht-degree: 45%
 
 ---
 
@@ -20,7 +20,7 @@ L’API [!DNL Schema Registry] vous permet de créer et de gérer diverses resso
 
 L’utilisation du guide de développement nécessite une compréhension pratique des composants suivants de Adobe Experience Platform :
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
+* [[!DNL Experience Data Model (XDM) System]](../home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Notions de base de la composition du schéma](../schema/composition.md) : en savoir plus sur les blocs de création de base des schémas XDM.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une  [!DNL Platform] instance unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
@@ -84,7 +84,7 @@ Une réponse réussie renvoie des informations concernant l’utilisation de [!D
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
-    "fieldgroups": 3,
+    "mixins": 3,
     "datatypes": 1,
     "classes": 2,
     "unions": 0,
@@ -93,7 +93,7 @@ Une réponse réussie renvoie des informations concernant l’utilisation de [!D
     {
       "title": "Sample Field Group",
       "description": "New Sample Field Group.",
-      "meta:resourceType": "fieldgroups",
+      "meta:resourceType": "mixins",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -110,7 +110,7 @@ Une réponse réussie renvoie des informations concernant l’utilisation de [!D
     {
       "title": "Sample Field Group",
       "description": "New Sample Field Group.",
-      "meta:resourceType": "fieldgroups",
+      "meta:resourceType": "mixins",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -270,4 +270,4 @@ Consultez le document sur les [contraintes de champ](../schema/field-constraints
 
 ## Étapes suivantes
 
-Pour commencer à lancer des appels à l’aide de l’API [!DNL Schema Registry], sélectionnez l’un des guides de point de terminaison disponibles.
+Pour commencer à effectuer des appels à l’aide de l’API [!DNL Schema Registry], sélectionnez l’un des guides de point d’entrée disponibles.
