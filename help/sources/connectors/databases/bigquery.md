@@ -1,41 +1,59 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; BigQuery ; bigquery ; Google BigQuery ; google bigquery
+keywords: Experience Platform;accueil;rubriques populaires;BigQuery;bigquery;Google BigQuery;google bigquery
 solution: Experience Platform
-title: Présentation du connecteur de source Google BigQuery
+title: Présentation du connecteur source Google BigQuery
 topic-legacy: overview
 description: Découvrez comment connecter Google BigQuery à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9d68e54baa894ebeff4603c7df01a1fe42aa217f
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 11%
+source-wordcount: '386'
+ht-degree: 16%
 
 ---
 
-# (Bêta) [!DNL Google BigQuery] connecteur
+# (Version bêta) Connecteur [!DNL Google BigQuery]
 
 >[!NOTE]
 >
->[!DNL Google BigQuery] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../home.md#terms-and-conditions).
+>[!DNL Google BigQuery] est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez la [Présentation des sources](../../home.md#terms-and-conditions) .
 
-Adobe Experience Platform permet l’assimilation de données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
-[!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une base de données tierce. [!DNL Platform] peut se connecter à différents types de bases de données, telles que relationnelles, NoSQL ou des entrepôts de données. Les fournisseurs de base de données prennent en charge [!DNL Google BigQuery].
+[!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une base de données tierce. Platform peut se connecter à différents types de bases de données comme les entrepôts relationnels, NoSQL ou de données. [!DNL Google BigQuery] est compatible avec les fournisseurs de base de données.
 
-## LISTE AUTORISÉE d&#39;adresse IP
+## LISTE AUTORISÉE d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources. Pour plus d&#39;informations, consultez la page [liste autorisée d&#39;adresse IP](../../ip-address-allow-list.md).
+Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou des performances peuvent se produire lors de l’utilisation de sources. Pour plus d’informations, consultez la page [liste autorisée d’adresses IP](../../ip-address-allow-list.md) .
 
-La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Google BigQuery] à [!DNL Platform] à l&#39;aide d&#39;API ou de l&#39;interface utilisateur :
+## Conditions préalables
 
-## Connectez [!DNL Google BigQuery] à [!DNL Platform] à l’aide d’API.
+La section suivante fournit des informations supplémentaires sur la configuration de prérequis requise pour pouvoir créer une connexion source [!DNL Google BigQuery].
 
-- [Création d’une connexion source Google BigQuery à l’aide de l’API du service de flux](../../tutorials/api/create/databases/bigquery.md)
-- [Exploration d’un système de base de données à l’aide de l’API du service de flux](../../tutorials/api/explore/database-nosql.md)
-- [Collecte de données à partir d’une base de données à l’aide de l’API du service de flux](../../tutorials/api/collect/database-nosql.md)
+### Générer vos [!DNL Google BigQuery] informations d’identification
 
-## Connectez [!DNL Google BigQuery] à [!DNL Platform] à l’aide de l’interface utilisateur.
+Pour connecter [!DNL Google BigQuery] à Platform, vous devez générer des valeurs pour les informations d’identification suivantes :
+
+| Credential | Description |
+| ---------- | ----------- |
+| `project` | Le projet est l’entité organisatrice de base pour vos ressources [!DNL Google Cloud], y compris [!DNL Google BigQuery]. |
+| `clientID` | L’ID client correspond à la moitié de vos [!DNL Google BigQuery] informations d’identification OAuth 2.0. |
+| `clientSecret` | Le secret client est l’autre moitié de vos informations d’identification OAuth 2.0 [!DNL Google BigQuery]. |
+| `refreshToken` | Le jeton d’actualisation vous permet d’obtenir de nouveaux jetons d’accès pour votre API. Les jetons d’accès ont des durées de vie limitées et peuvent expirer au cours du projet. Vous pouvez utiliser le jeton d’actualisation pour vous authentifier et demander des jetons d’accès ultérieurs pour votre projet, si nécessaire. |
+
+Pour obtenir des instructions détaillées sur la génération des informations d’identification OAuth 2.0 pour les API [!DNL Google], consultez le [[!DNL Google] guide d’authentification OAuth 2.0](https://developers.google.com/identity/protocols/oauth2) suivant.
+
+## Connecter [!DNL Google BigQuery] à Platform
+
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL Google BigQuery] à Platform à l’aide d’API ou de l’interface utilisateur :
+
+### Utilisation des API
+
+- [Création d’une connexion source Google BigQuery à l’aide de l’API Flow Service](../../tutorials/api/create/databases/bigquery.md)
+- [Exploration d’un système de base de données à l’aide de l’API Flow Service](../../tutorials/api/explore/database-nosql.md)
+- [Collecte de données à partir d’une base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
+
+### Utilisation de l’interface utilisateur
 
 - [Création d’une connexion source Google BigQuery dans l’interface utilisateur](../../tutorials/ui/create/databases/bigquery.md)
-- [Configuration d’un flux de données pour une connexion à une base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Configuration d’un flux de données pour une connexion à la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
