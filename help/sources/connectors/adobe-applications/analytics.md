@@ -5,10 +5,10 @@ title: Connecteur source Adobe Analytics pour les données d’une suite de rapp
 topic-legacy: overview
 description: Ce document présente Analytics et décrit les cas d’utilisation des données Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 9defe1c3087c2f1284ceedede9d274a51cf97b96
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 26%
+source-wordcount: '542'
+ht-degree: 28%
 
 ---
 
@@ -44,6 +44,8 @@ Pour plus d’informations sur le mappage des champs entre [!DNL Analytics] et l
 
 ## Quelle est la latence attendue sur Platform pour les données Analytics ?
 
+Le tableau ci-dessous décrit la latence attendue des données Analytics sur Platform. La latence varie selon la configuration client, les volumes de données et les applications clients. Par exemple, si l’implémentation d’Analytics est configurée avec `A4T`, la latence du pipeline passera à 5-10 minutes.
+
 | Données Analytics | Latence attendue |
 | -------------- | ---------------- |
 | Nouvelles données pour [!DNL Real-time Customer Profile] (A4T **not** activé) | &lt; 2 minutes |
@@ -53,7 +55,7 @@ Pour plus d’informations sur le mappage des champs entre [!DNL Analytics] et l
 
 >[!NOTE]
 >
->La latence varie selon la configuration client, les volumes de données et les applications clients. Par exemple, si l’implémentation de [!DNL Analytics] est configurée avec `A4T`, la latence du pipeline passera à 5-10 minutes.
+>Les données de renvoi Analytics ne sont pas ingérées dans [!DNL Profile] et ne sont donc pas prises en compte dans les profils de licence.
 
 ## Identifiants Principal dans les données [!DNL Analytics]
 
