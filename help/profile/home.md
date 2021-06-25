@@ -2,12 +2,12 @@
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;profil unifié;Profil unifié;unifié;Profil;rtcp;graphiques XDM
 title: Présentation du profil client en temps réel
 topic-legacy: guide
-description: Real-time Customer Profile est une banque d’entités de recherche générique qui fusionne les données de différentes ressources de données d’entreprise, puis fournit un accès à ces données sous la forme de profils client individuels et d’événements de série temporelle connexes. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
+description: Real-time Customer Profile fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils client individuels et d’événements de série temporelle associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
 workflow-type: tm+mt
-source-wordcount: '1813'
-ht-degree: 96%
+source-wordcount: '1779'
+ht-degree: 94%
 
 ---
 
@@ -35,11 +35,7 @@ Le magasin du profil utilise une infrastructure de base de données Microsoft Az
 
 Experience Platform propose une série de garde-fous pour vous aider à éviter de créer des [schémas de modèle de données d’expérience (XDM)](../xdm/home.md) qui ne peuvent pas être pris en charge par le profil client en temps réel. Cela inclut des limites souples qui entraîneront une dégradation des performances, ainsi que des limites strictes qui entraîneront des erreurs et des pannes système. Pour plus d’informations, dont une liste de directives et des cas d’utilisation, consultez la documentation sur les [Garde-fous de profil](guardrails.md).
 
-### Tableau de bord du profil (Beta) {#profile-dashboard}
-
->[!IMPORTANT]
->
->La fonctionnalité de tableau de bord est actuellement en version Beta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+### Tableau de bord du profil {#profile-dashboard}
 
 L’interface utilisateur d’Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos données de profil client en temps réel. Celles-ci sont présentées telles qu’elles sont capturées lors d’un aperçu quotidien. Pour découvrir comment accéder au tableau de bord du [!DNL Profile] et savoir comment l’utiliser dans l’interface utilisateur, ainsi que pour obtenir des informations détaillées sur les mesures affichées dans le tableau de bord, reportez-vous au [Guide de l’interface utilisateur du tableau de bord du profil](ui/profile-dashboard.md).
 
