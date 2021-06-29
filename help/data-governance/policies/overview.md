@@ -6,9 +6,9 @@ topic-legacy: policies
 description: Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: 4aeb12aec026ab2dc29133dd44e54b453fb71fe3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1077'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -77,7 +77,7 @@ Le tableau ci-dessous décrit les principales actions marketing prêtes à l’e
 
 | Action marketing | Description |
 | --- | --- |
-| Intégration    | Action qui utilise des données à des fins d’analyse, telles que la mesure, l’analyse et le compte rendu des performances de l’utilisation par les clients des sites ou applications de votre organisation. |
+| Intégration | Action qui utilise des données à des fins d’analyse, telles que la mesure, l’analyse et le compte rendu des performances de l’utilisation par les clients des sites ou applications de votre organisation. |
 | Combinaison avec des données directement identifiables | Action qui combine des informations d’identification personnelle (PII) avec des données anonymes. Les contrats relatifs aux données provenant de réseaux publicitaires, de serveurs de publicités et de fournisseurs de données tiers comportent souvent des interdictions contractuelles spécifiques concernant l’utilisation de ces données avec des données directement identifiables. |
 | Ciblage intersite | Action qui utilise des données pour le ciblage publicitaire intersite. La combinaison de données provenant de plusieurs sites, y compris une combinaison de données sur site et de données hors site ou une combinaison de données provenant de plusieurs sources hors site, est appelée données intersites. Les données intersites sont généralement collectées et traitées afin d’établir des inférences sur les intérêts des utilisateurs. |
 | Science des données | Action qui utilise les données pour les workflows relatifs à la science des données. Certains contrats prévoient des interdictions explicites sur l’utilisation des données pour la science des données. Parfois, elles sont formulées en des termes qui interdisent l’utilisation de données pour l’intelligence artificielle (AI), l’apprentissage automatique (ML) ou la modélisation. |
@@ -85,5 +85,5 @@ Le tableau ci-dessous décrit les principales actions marketing prêtes à l’e
 | Exportation vers un tiers | Action qui exporte des données vers des responsables du traitement et des entités qui n’ont pas de relations directes avec les clients. De nombreux fournisseurs de données ont des clauses dans leurs contrats qui interdisent l’exportation de données à partir de l’endroit où elles ont été collectées à l’origine. Par exemple, les contrats de réseau social limitent souvent le transfert des données que vous recevez de leur part. |
 | Publicités sur site | Action qui utilise des données pour les publicités sur site, notamment la sélection et la diffusion des publicités sur les sites web ou applications de votre organisation, ou pour mesurer la diffusion et l’efficacité de ces publicités. |
 | Personnalisation sur site | Action qui utilise des données pour la personnalisation du contenu sur site. La personnalisation sur site correspond à toutes les données utilisées pour faire des inférences sur les intérêts des utilisateurs et qui servent à sélectionner le contenu ou les publicités diffusés en fonction de ces inférences. |
-| Correspondance de segment | Action qui utilise les données pour la correspondance de segment Adobe Experience Platform, ce qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment. En activant les stratégies qui font référence à cette action, vous pouvez limiter les données utilisées pour la correspondance de segment. Par exemple, si la stratégie principale &quot;Limiter le partage des données&quot; est activée, les données avec une étiquette [C11](../labels/reference.md#c11) ne peuvent pas être utilisées pour la correspondance de segment. |
+| Correspondance de segments | Action qui utilise des données pour le service Correspondance de segments dʼAdobe Experience Platform et qui permet à deux ou plusieurs utilisateurs Platform dʼéchanger des données de segments. En activant les stratégies qui font référence à cette action, vous pouvez limiter les données utilisées pour la Correspondance de segments. Par exemple, si la stratégie de base « Limiter le partage des données » est activée, les données avec un [libellé C11](../labels/reference.md#c11) ne peuvent pas être utilisées pour la correspondance de segments. |
 | Personnalisation d’identité unique | Action qui nécessite l’utilisation d’une identité unique à des fins de personnalisation au lieu de regrouper des identités provenant de plusieurs sources. |
