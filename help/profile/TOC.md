@@ -4,19 +4,19 @@ user-guide-title: Guide du profil client en temps réel
 user-guide-description: Fusionnez les données client pour créer une vue unifiée des interactions client entre les canaux.
 feature: Profils
 source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '135'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
 
 # [!DNL Real-time Customer Profile] {#profile}
 
-* [Présentation d’[!DNL Profile]](home.md)
+* [Présentation du [!DNL Profile]](home.md)
 * [Présentation du profil (vidéo)](video/profile-overview.md)
 * [[!DNL Profile] et barrières de sécurité de la segmentation](guardrails.md)
-* [[!DNL Profile] Tableau de bord](ui/profile-dashboard.md)
+* [Tableau de bord [!DNL Profile]](ui/profile-dashboard.md)
 * [!DNL Profile] API {#api}
    * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
@@ -24,7 +24,7 @@ ht-degree: 91%
    * [Entités (accès au [!DNL Profile])](api/entities.md)
    * [Tâches d’exportation (exportation de [!DNL Profile])](api/export-jobs.md)
    * [Prévisualisation des exemples de statut (prévisualisation du [!DNL Profile])](api/preview-sample-status.md)
-   * [ Tâches de système du [!DNL Profile] (requêtes de suppression)](api/profile-system-jobs.md)
+   * [Tâches de système du [!DNL Profile] (requêtes de suppression)](api/profile-system-jobs.md)
 * Interface utilisateur de Profile {#ui}
    * [Guide de l’interface utilisateur du [!DNL Profile]](ui/user-guide.md)
    * [Personnalisation détaillée du [!DNL Profile]](ui/profile-customization.md)
