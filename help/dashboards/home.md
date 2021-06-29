@@ -7,7 +7,7 @@ exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
 source-git-commit: e927dbef8a3028155e907e0ca05c17c29fb74cf1
 workflow-type: tm+mt
 source-wordcount: '252'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -34,4 +34,4 @@ Les données de lʼinstantané montrent les données exactement comme elles appa
 
 De nombreux tableaux de bord sont actuellement disponibles dans Experience Platform, chacun apportant une transparence sur les données client de votre entreprise.
 
-Pour en savoir plus sur ces tableaux de bord et leurs mesures, sélectionnez un tableau de bord dans la liste des tableaux de bord disponibles dans le volet de navigation de la documentation.
+Pour en savoir plus sur ces tableaux de bord et leurs mesures, sélectionnez un tableau de bord dans la liste des tableaux de bord disponibles dans la navigation de la documentation.
