@@ -1,6 +1,6 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour des Experience Platform pour le 26 mai 2021.
+description: Notes de mise à jour dʼExperience Platform du 26 mai 2021.
 doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
@@ -8,7 +8,7 @@ exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 source-git-commit: 487d6dbef21459a7ce78cdc70215ad46e06ba892
 workflow-type: tm+mt
 source-wordcount: '1306'
-ht-degree: 38%
+ht-degree: 100%
 
 ---
 
@@ -32,18 +32,18 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## Tableaux de bord {#dashboards}
 
-Adobe Experience Platform fournit plusieurs tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre entreprise, telles qu’elles sont capturées lors d’instantanés quotidiens.
+Adobe Experience Platform propose de nombreux tableaux de bord qui vous permettent dʼafficher des informations importantes concernant les données de votre entreprise. Celles-ci sont présentées telles quʼelles sont capturées lors dʼaperçus quotidiens.
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Informations sur les profils | Le tableau de bord des profils fournit une vue d’ensemble quotidienne des mesures de Real-time Customer Profile pour chaque stratégie de fusion organisationnelle dans Experience Platform. Ces informations sur les profils sont disponibles pour tous les utilisateurs qui peuvent accéder aux données de profil et les afficher dans Platform. |
-| Informations sur les audiences | Le tableau de bord des segments fournit des informations relatives aux audiences à tous les utilisateurs qui ont accès à l’affichage des segments dans Platform. Le tableau de bord présente un aperçu quotidien des mesures d’audience pour les audiences créées avec l’interface utilisateur du créateur de segments ou importées depuis Adobe Audience Manager. |
-| Informations sur l’activation | Le tableau de bord des destinations est accessible à tous les utilisateurs qui peuvent accéder aux destinations et les afficher. Le tableau de bord fournit un aperçu quotidien des mesures d’activation pour les activations sur toutes les destinations. |
-| Informations spécifiques à l’utilisateur | L’aspect des tableaux de bord peut être personnalisé par chaque utilisateur, notamment la possibilité de modifier la mise en page du tableau de bord en ajoutant, supprimant, redimensionnant et réorganisant des widgets. |
-| Création et gestion de widgets | Tous les widgets standard et personnalisés sont accessibles aux spécialistes du marketing dans un référentiel centralisé pour démocratiser la création et le partage d’informations :<br/><ul><li>L’onglet standard contient des widgets fournis par Adobe, accessibles dans le contexte du tableau de bord. </li><li>L’onglet personnalisé contient des widgets personnalisés créés par l’organisation, y compris une option permettant de masquer les widgets de la vue.</li><li>Le workflow de création de widgets dans les insights Profils et Audience permet de modifier, de sélectionner, de prévisualiser et de publier des widgets personnalisés.</li></ul> |
-| Aperçu personnalisé | Les autorisations d’accès permettent aux ingénieurs de données et aux spécialistes du marketing de personnaliser les attributs de profil disponibles pour la création de widgets. |
+| Informations sur les profils | Le tableau de bord des profils offre un aperçu quotidien des mesures des profils client en temps réel pour chaque stratégie de fusion organisationnelle dans Experience Platform. Ces informations sur les profils sont disponibles pour tous les utilisateurs qui ont la possibilité dʼaccéder aux données de profil et de les visualiser dans Platform. |
+| Informations sur les audiences | Le tableau de bord des segments offre des informations relatives aux audiences à tous les utilisateurs qui ont accès à la visualisation des segments dans Platform. Le tableau de bord offre un aperçu quotidien des mesures dʼaudience pour les audiences créées avec lʼinterface utilisateur du créateur de segments ou importées à partir dʼAdobe Audience Manager. |
+| Informations sur lʼactivation | Le tableau de bord des destinations est accessible à tous les utilisateurs qui ont la possibilité dʼaccéder aux destinations et de les visualiser. Le tableau de bord offre un aperçu quotidien des mesures dʼactivation pour les activations sur toutes les destinations. |
+| Informations spécifiques à lʼutilisateur | Lʼaspect des tableaux de bord peut être personnalisé par chaque utilisateur, qui ont notamment la possibilité de modifier la disposition du tableau de bord en ajoutant, supprimant, redimensionnant et réorganisant les widgets. |
+| Création et gestion de widgets | Tous les widgets standard et personnalisés sont accessibles aux spécialistes du marketing dans un référentiel centralisé afin de démocratiser la création et le partage dʼinformations :<br/><ul><li>Lʼonglet standard contient des widgets fournis par Adobe qui sont accessibles dans le contexte du tableau de bord. </li><li>Lʼonglet personnalisé contient des widgets personnalisés créés par lʼorganisation, notamment une option permettant de masquer les widgets.</li><li>Le workflow de création de widgets dans les informations sur les Profils et les Audiences permet de modifier, de sélectionner, de prévisualiser et de publier des widgets personnalisés.</li></ul> |
+| Informations personnalisées | Les autorisations dʼaccès permettent aux ingénieurs des données et aux spécialistes du marketing de personnaliser les attributs de profil disponibles pour la création de widgets. |
 
-Pour plus d’informations sur les tableaux de bord, notamment sur la manière d’accorder des autorisations d’accès et de créer des widgets personnalisés, commencez par lire la [présentation des tableaux de bord](../../dashboards/home.md).
+Pour plus dʼinformations sur les tableaux de bord, notamment sur la manière dʼoctroyer des autorisations dʼaccès et de créer des widgets personnalisés, commencez par lire la [Présentation des tableaux de bord](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -51,8 +51,8 @@ Pour plus d’informations sur les tableaux de bord, notamment sur la manière d
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Avertissements d’erreur relatifs aux loupes | Les messages d’erreur de Data Prep Mapper seront désormais plus indulgents, en fournissant des avertissements au lieu d’erreurs, ainsi que des lignes partiellement transformées. |
-| Nouvelles fonctions | Ajout de fonctions pour obtenir des clés, ajouter des éléments à un tableau existant, ajouter des éléments de plusieurs tableaux à un tableau existant, utiliser des objets pour créer des tableaux et utiliser le nom de l’objet JSON comme littéral de chaîne. |
+| Avertissements dʼerreur plus souples | Les messages dʼerreur de Data Prep Mapper sont désormais plus souples, en affichant des avertissements au lieu dʼerreurs avec les lignes partiellement transformées. |
+| Nouvelles fonctionnalités | Ajout de fonctionnalités permettant dʼobtenir des clés, dʼajouter des éléments à un tableau existant, dʼajouter des éléments de plusieurs tableaux à un tableau existant, dʼutiliser des objets afin de créer des tableaux et dʼutiliser le nom de lʼobjet JSON en tant que littéral de chaîne. |
 
 Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation](../../data-prep/home.md).
 
@@ -63,8 +63,8 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Amélioration de la surveillance (version bêta) | Amélioration des fonctionnalités de surveillance des destinations, y compris des informations pour les destinations par lots et en flux continu |
-| [Exportation incrémentielle plus rapide des fichiers (bêta)](../../destinations/ui/activate-destinations.md#export-incremental-files) | Ajout de la capacité d’exporter des fichiers incrémentiels vers des destinations toutes les 3, 6, 8 ou 12 heures. <br> <br>Cette fonctionnalité est actuellement en version bêta et n’est disponible que pour un certain nombre de clients. Les clients non bêta peuvent exporter des fichiers incrémentiels une fois par jour. |
-| [Prise en charge des clés de déduplication (version bêta)](../../destinations/ui/activate-destinations.md#deduplication-keys) | Ajout de la possibilité de définir des espaces de noms d’identité ou des attributs de profil comme clés de déduplication. Les clés de déduplication éliminent la possibilité d’avoir plusieurs enregistrements du même profil dans un fichier d’exportation. <br> <br>Cette fonctionnalité est actuellement en version bêta et n’est disponible que pour un certain nombre de clients. |
+| [Exportation de fichiers incrémentiels plus rapide (version bêta)](../../destinations/ui/activate-destinations.md#export-incremental-files) | Ajout de la capacité dʼexporter des fichiers incrémentiels vers des destinations toutes les 3, 6, 8 ou 12 heures. <br> <br>Cette fonctionnalité est actuellement en version bêta et nʼest disponible que pour un nombre de clients limité. Les clients de la version non bêta peuvent exporter des fichiers incrémentiels une fois par jour. |
+| [Prise en charge des clés de déduplication (version bêta)](../../destinations/ui/activate-destinations.md#deduplication-keys) | Ajout de la possibilité de définir des espaces de noms dʼidentité ou des attributs de profil en tant que clés de déduplication. Les clés de déduplication éliminent la possibilité dʼavoir plusieurs enregistrements du même profil dans un fichier dʼexportation. <br> <br>Cette fonctionnalité est actuellement en version bêta et nʼest disponible que pour un nombre de clients limité. |
 
 Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
 
@@ -74,7 +74,7 @@ Le modèle de données d’expérience (XDM) est une spécification open source 
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Groupes de champs de schéma | Le terme &quot;mixin&quot; a été mis à jour en &quot;groupe de champs&quot;. Cette modification est répercutée dans l’ensemble de l’interface utilisateur de Adobe Experience Platform. En outre, l’API Schema Registry comporte un nouveau point de terminaison [de groupes de champs](../../xdm/api/field-groups.md), tandis que le point de terminaison mixins a été abandonné en tant que point de terminaison hérité. Pour plus d’informations, consultez la [documentation XDM](../../xdm/home.md). |
+| Groupes de champs de schéma | Le terme « mixin » a été remplacé par « groupe de champs ». Cette modification est reflétée dans lʼinterface utilisateur Adobe Experience Platform. De plus, lʼAPI Schema Registry comporte un nouveau [point dʼentrée de groupes de champs](../../xdm/api/field-groups.md) tandis que le point dʼentrée mixins est abandonné et considéré comme un point dʼentrée hérité. Pour plus d’informations, consultez la [documentation XDM](../../xdm/home.md). |
 
 ## Real-time Customer Profile {#profile}
 
@@ -82,7 +82,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences co
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Rapport de chevauchement de jeux de données | Le rapport de chevauchement des jeux de données offre une visibilité sur la composition de la banque de profils en exposant les jeux de données qui contribuent le plus à l’audience adressable. En plus de fournir des informations sur les données de profil, ce rapport permet aux utilisateurs d’agir pour optimiser l’utilisation de la licence, comme de définir une limite de durée de vie de certaines données. Pour en savoir plus, suivez le tutoriel sur la [génération du rapport de chevauchement de jeux de données](../../profile/tutorials/dataset-overlap-report.md). |
+| Rapport de chevauchement de jeux de données | Le rapport de chevauchement des jeux de données offre une visibilité sur la composition du magasin de profils en exposant les jeux de données qui contribuent le plus à l’audience adressable. En plus de fournir des informations sur les données de Profil, ce rapport permet aux utilisateurs de prendre des mesures afin dʼoptimiser les licences utilisées, par exemple en limitant la durée de vie de certaines données. Pour en savoir plus, suivez le tutoriel sur la [génération du rapport de chevauchement de jeux de données](../../profile/tutorials/dataset-overlap-report.md). |
 
 Pour plus d’informations sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données de [!DNL Profile], consultez la [présentation du profil client en temps réel](../../profile/home.md).
 
@@ -92,13 +92,13 @@ Adobe Experience Platform est conçu pour enrichir les applications d’expérie
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Environnements de test de production multiples | Vous pouvez désormais créer et gérer plusieurs environnements de test de production dans votre organisation IMS et dédier des environnements de test de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Pour plus d’informations, consultez les tutoriels sur la création d’un environnement de test de production [dans l’interface utilisateur](../../sandboxes/ui/user-guide.md) ou [à l’aide de l’API](../../sandboxes/api/overview.md) . |
+| Sandbox de production multiples | Vous pouvez désormais créer et gérer plusieurs sandbox de production dans votre organisation IMS et dédier des sandbox de production spécifiques à des secteurs dʼactivité, des marques, des projets ou des régions distincts. Pour plus dʼinformations, consultez les tutoriels sur la création dʼun sandbox de production [dans lʼinterface utilisateur](../../sandboxes/ui/user-guide.md) ou [à lʼaide de lʼAPI](../../sandboxes/api/overview.md). |
 
 ### Limites connues
 
-- Chaque organisation Experience Cloud est fournie avec un environnement de test de production par défaut précréé. Cet environnement de test agit comme une destination par défaut pour chaque requête envoyée à Platform à partir d’une autre application Adobe ou non Adobe qui n’est pas (encore) compatible avec l’environnement de test. L’environnement de test de production par défaut ne peut pas être réinitialisé si le graphique d’identités qui y est hébergé est également utilisé par Adobe Analytics pour la fonction [Analyses entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) ou si le graphique d’identités qui y est hébergé est également utilisé par Adobe Audience Manager pour la fonction [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
-- Les environnements de test de production utilisés pour le partage de segments bidirectionnel avec Adobe Audience Manager ou Audience Core Service ne peuvent ni être réinitialisés ni supprimés.
-- Tous les environnements de test de production et de développement créés par l’utilisateur peuvent être supprimés, à l’exception de l’environnement de test de production par défaut.
+- Chaque organisation Experience Cloud dispose dʼun sandbox de production par défaut précréé. Ce sandbox agit comme une destination par défaut pour chaque requête envoyée à Platform provenant dʼune autre application Adobe ou non Adobe qui nʼest pas (encore) compatible avec le sandbox. Le sandbox de production par défaut ne peut pas être réinitialisé si le graphique dʼidentités quʼil contient est également utilisé par Adobe Analytics pour la fonctionnalité [Analyses entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=fr) ou par Adobe Audience Manager pour la fonctionnalité [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr).
+- Les sandbox de production utilisés pour le partage de segments bidirectionnels avec Adobe Audience Manager ou Audience Core Service ne peuvent être ni réinitialisés, ni supprimés.
+- Tous les sandbox de production et de développement créés par l’utilisateur peuvent être supprimés, à l’exception du sandbox de production par défaut.
 
 Pour plus d’informations sur les environnements de test, consultez la [présentation des environnements de test](../../sandboxes/home.md).
 
@@ -110,7 +110,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge de l’interface utilisateur pour l’ingestion de fichiers compressés | Vous pouvez désormais prévisualiser et ingérer des fichiers JSON compressés ou délimités à l’aide de sources de stockage dans le cloud dans l’interface utilisateur. Pour plus d’informations, consultez le tutoriel sur la [configuration d’un flux de données pour une connexion à une source de stockage dans le cloud dans l’interface utilisateur](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| Prise en charge des API pour l’ingestion de fichiers compressés | Vous pouvez désormais prévisualiser et ingérer des fichiers JSON compressés ou délimités à l’aide de sources de stockage dans l’IU. Pour plus d’informations, consultez le tutoriel sur la [configuration d’un flux de données pour un lien de source de stockage sur le cloud dans l’IU](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 | Sources bêta passant à la version générale | Les sources suivantes ont été promues de la version bêta à la version générale : <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
