@@ -6,9 +6,9 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
+source-git-commit: 694a647b9f268b84d55a960b360ce28527c6c652
 workflow-type: tm+mt
-source-wordcount: '2688'
+source-wordcount: '2826'
 ht-degree: 12%
 
 ---
@@ -27,7 +27,7 @@ Pour activer des données vers des destinations, vous devez avoir réussi à vou
 
 Les étapes du workflow d’activation varient légèrement d’un type de destination à l’autre. Le workflow complet de tous les types de destination est présenté ci-dessous.
 
-## Sélectionnez la destination vers laquelle activer les données {#select-destination}
+## Sélectionner la destination vers laquelle activer les données {#select-destination}
 
 S’applique à : Toutes les destinations
 
@@ -37,7 +37,7 @@ Dans l’interface utilisateur de Adobe Experience Platform, accédez à **[!UIC
 
 Suivez les étapes de la section suivante pour sélectionner les segments que vous souhaitez activer.
 
-## [!UICONTROL Étape Sélectionner les ] segments  {#select-segments}
+## [!UICONTROL Étape Sélectionner les ] segments {#select-segments}
 
 S’applique à : Toutes les destinations
 
@@ -136,7 +136,7 @@ Sélectionnez le bouton **[!UICONTROL Créer un planning]** correspondant au seg
 
 ![Bouton Créer un planning](../assets/ui/activate-destinations/create-schedule-button.png)
 
-### Exporter des fichiers complets {#export-full-files}
+### Exporter les fichiers complets {#export-full-files}
 
 Sélectionnez **[!UICONTROL Exporter les fichiers complets]** pour que les fichiers exportés contiennent un instantané complet de tous les profils qui remplissent les critères pour ce segment.
 
@@ -149,10 +149,15 @@ Sélectionnez **[!UICONTROL Exporter les fichiers complets]** pour que les fichi
    >
    >L’option permettant d’exporter des fichiers à un certain moment de la journée est actuellement en version bêta et n’est disponible que pour un certain nombre de clients.
 
+   >[!IMPORTANT]
+   >
+   >Selon le moment où la tâche d’exportation de profil se termine et lorsque le service de destination démarre la tâche d’activation de segment, la première exportation incrémentielle ou complète de fichier peut ne pas contenir toutes les données de renvoi nécessaires. Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, nous vous recommandons de définir la première heure d’exportation du fichier après 12h GMT le jour suivant. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
+
 3. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir le jour ou l’intervalle au cours duquel l’exportation doit avoir lieu.
 4. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
 
-### Exporter les fichiers incrémentiels {#export-incremental-files}
+
+### Exportation de fichiers incrémentiels {#export-incremental-files}
 
 Sélectionnez **[!UICONTROL Exporter les fichiers incrémentiels]** pour que vos fichiers exportés ne contiennent que les profils qualifiés pour ce segment depuis le dernier export.
 
@@ -167,13 +172,17 @@ Sélectionnez **[!UICONTROL Exporter les fichiers incrémentiels]** pour que vos
 
       >[!IMPORTANT]
       >
-      >L’option permettant d’exporter des fichiers incrémentiels toutes les 3, 6, 8 ou 12 heures est actuellement en version bêta et n’est disponible que pour un nombre restreint de clients. Les clients non bêta peuvent exporter des fichiers incrémentiels une fois par jour.
+      >L’option permettant d’exporter des fichiers incrémentiels toutes les 3, 6, 8 ou 12 heures est actuellement en version bêta et n’est disponible que pour un nombre restreint de clients. Les clients de la version non bêta peuvent exporter des fichiers incrémentiels une fois par jour.
 
 2. Utilisez le sélecteur **[!UICONTROL Heure]** pour choisir l’heure de la journée, au format [!DNL UTC], où doit avoir lieu l’exportation.
 
    >[!IMPORTANT]
    >
-   >L&#39;option permettant de sélectionner l&#39;heure de la journée pour l&#39;export n&#39;est disponible que pour un nombre restreint de clients. Les clients non bêta peuvent exporter des fichiers incrémentiels une fois par jour, à 12h00 UTC (7h00 HNE).
+   >L&#39;option permettant de sélectionner l&#39;heure de la journée pour l&#39;export n&#39;est disponible que pour un nombre restreint de clients.
+
+   >[!IMPORTANT]
+   >
+   >Selon le moment où la tâche d’exportation de profil se termine et lorsque le service de destination démarre la tâche d’activation de segment, la première exportation incrémentielle ou complète de fichier peut ne pas contenir toutes les données de renvoi nécessaires. Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, nous vous recommandons de définir la première heure d’exportation du fichier après 12h GMT le jour suivant. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
 
 3. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir le jour ou l’intervalle au cours duquel l’exportation doit avoir lieu.
 4. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
@@ -204,7 +213,7 @@ Sélectionnez **[!UICONTROL Appliquer les modifications]** pour confirmer votre 
 
 Une fois la configuration de tous les segments terminée, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
-## **[!UICONTROL Étape]** Planifications de segment  {#segment-schedule}
+## **[!UICONTROL Étape]** Planifications de segment {#segment-schedule}
 
 S’applique à : destinations publicitaires, destinations sociales
 
@@ -224,7 +233,7 @@ Sur la page **[!UICONTROL Planification du segment]** , vous pouvez définir la 
 
 ![entrée de l’ID d’application](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-## **[!UICONTROL Sélectionner]** Attributesstep  {#select-attributes}
+## **[!UICONTROL Sélectionner]** Attributesstep {#select-attributes}
 
 S’applique à : destinations de marketing par e-mail et destinations de stockage dans le cloud
 
@@ -268,7 +277,7 @@ Il est recommandé que l’un des attributs soit un [identifiant unique](../../d
 >
 >L’option permettant d’utiliser les clés de déduplication est actuellement en version bêta et n’est disponible que pour un certain nombre de clients.
 
-Les clés de déduplication éliminent la possibilité d’avoir plusieurs enregistrements du même profil dans un fichier d’exportation.
+Les clés de déduplication éliminent la possibilité dʼavoir plusieurs enregistrements du même profil dans un fichier dʼexportation.
 
 Il existe trois façons d’utiliser les clés de déduplication dans [!DNL Platform] :
 
