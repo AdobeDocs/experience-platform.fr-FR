@@ -8,7 +8,7 @@ exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: 1ae0ce47381585b48020990a71493bbfc1504ec2
 workflow-type: tm+mt
 source-wordcount: '1982'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -130,4 +130,4 @@ Certaines stratégies dʼutilisation des données limitent lʼutilisation de don
 
 #### C11 {#c11}
 
-La correspondance de segments Adobe Experience Platform vous permet de faire correspondre des segments propriétaires avec des préférences de confidentialité et de consentement, ce qui facilite le profilage enrichi et les informations en aval. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de la correspondance de segment et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow Correspondance de segment .
+La correspondance de segments d’Adobe Experience Platform vous permet de faire correspondre des segments propriétaires avec des préférences de confidentialité et de consentement, ce qui facilite la création enrichie de profils utilisateurs et les insights en aval. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de la correspondance de segment et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow Correspondance de segment.
