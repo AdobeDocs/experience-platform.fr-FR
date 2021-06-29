@@ -5,7 +5,7 @@ title: Présentation des connecteurs source
 topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9c8f19e8b5259bcef526273addbd7711ef6082fb
+source-git-commit: 8236fb3a5786a6990fe85482c2fee0eda48bcf1f
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 57%
@@ -67,6 +67,7 @@ Les systèmes de gestion de la relation client (CRM) fournissent des données qu
 
 - [[!DNL Microsoft Dynamics] connector](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] connector](connectors/crm/salesforce.md)
+- [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 
 ### Succès des clients
 
