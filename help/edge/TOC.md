@@ -8,7 +8,7 @@ feature: Gestion des données
 source-git-commit: 8fd779d9fa73c178e8a8660a6cef01cfa112ecdc
 workflow-type: tm+mt
 source-wordcount: '152'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
