@@ -8,7 +8,7 @@ exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
 source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
 workflow-type: tm+mt
 source-wordcount: '1351'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ Ce document couvre les concepts fondamentaux liés au traitement des demandes d�
 
 >[!NOTE]
 >
->Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour le lac de données en Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour la banque de données de Real-time Customer Profile, reportez-vous au guide sur le [traitement des demandes d’accès à des informations personnelles pour Profile](../profile/privacy.md) en plus de ce tutoriel.
+>Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour le lac de données dans Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour la banque de données du profil client en temps réel, reportez-vous au guide sur le [traitement des demandes d’accès à des informations personnelles pour le profil](../profile/privacy.md) en plus de ce tutoriel.
 >
 >Pour savoir comment effectuer des demandes d’accès à des informations personnelles pour d’autres applications Adobe Experience Cloud, reportez-vous à la [documentation du Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -138,7 +138,7 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et les détails du no
 
 >[!NOTE]
 >
->Cette section explique la manière de formater les demandes dʼaccès à des informations personnelles destinées à [!DNL Data Lake]. Il est vivement recommandé de consulter lʼinterface utilisateur de [[!DNL Privacy Service] ](../privacy-service/ui/overview.md) ou la documentation de lʼAPI [[!DNL Privacy Service] ](../privacy-service/api/getting-started.md) pour obtenir des instructions complètes sur la manière dʼenvoyer une tâche concernant la confidentialité, y compris sur la manière de formater correctement les données dʼidentité utilisateur envoyées dans les payloads de requête.
+>Cette section explique la manière de formater les demandes dʼaccès à des informations personnelles destinées à [!DNL Data Lake]. Il est vivement recommandé de consulter la documentation de lʼ[[!DNL Privacy Service] interface utilisateur](../privacy-service/ui/overview.md) ou de lʼ[[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) pour obtenir des instructions complètes sur la manière dʼenvoyer une tâche concernant la confidentialité, y compris sur la manière de formater correctement les données dʼidentité utilisateur envoyées dans les payloads de requête.
 
 La section suivante décrit comment réaliser des demandes dʼaccès à des informations personnelles pour [!DNL Data Lake] à lʼaide de lʼinterface utilisateur ou de lʼAPI [!DNL Privacy Service].
 
