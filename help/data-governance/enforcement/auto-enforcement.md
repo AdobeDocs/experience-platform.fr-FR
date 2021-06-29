@@ -8,7 +8,7 @@ exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: 59edc19267913e5156caaa49d01a687d04cf1c6f
 workflow-type: tm+mt
 source-wordcount: '1229'
-ht-degree: 88%
+ht-degree: 89%
 
 ---
 
@@ -62,7 +62,7 @@ Chaque étape de la chronologie ci-dessus représente une entité qui peut contr
 | Étape relative à la parenté des données | Rôle dans l’application des stratégies |
 | --- | --- |
 | Jeu de données | Les jeux de données contiennent des libellés d’utilisation des données (appliquées au niveau du jeu de données ou du champ) qui définissent les cas d’utilisation pour lesquels l’intégralité du jeu de données ou des champs spécifiques peuvent être utilisés. Des violations de stratégie se produisent si un jeu de données ou un champ contenant certains libellés est utilisé à des fins limitées par une stratégie. |
-| Stratégie de fusion | Les stratégies de fusion sont les règles utilisées par Platform pour déterminer le classement par priorité des données lors de la fusion de fragments provenant de plusieurs jeux de données. Des violations de stratégie se produisent si vos stratégies de fusion sont configurées de telle sorte que les jeux de données dotés de libellés limités sont activés pour une destination. Pour plus d’informations, consultez la [présentation des stratégies de fusion](../../profile/merge-policies/overview.md) . |
+| Stratégie de fusion | Les stratégies de fusion sont les règles utilisées par Platform pour déterminer le classement par priorité des données lors de la fusion de fragments provenant de plusieurs jeux de données. Des violations de stratégie se produisent si vos stratégies de fusion sont configurées de telle sorte que les jeux de données dotés de libellés limités sont activés pour une destination. Pour plus d’informations, consultez la [présentation des stratégies de fusion](../../profile/merge-policies/overview.md). |
 | Segment | Les règles de segment définissent les attributs à inclure dans les profils clients. En fonction des champs inclus dans une définition de segment, le segment hérite des libellés d’utilisation appliqués pour ces champs. Des violations de stratégie se produisent si vous activez un segment dont les libellés hérités sont limités par les stratégies applicables de la destination cible, en fonction de son cas d’utilisation marketing. |
 | Destination | Lors de la configuration d’une destination, une action marketing (parfois appelée cas d’utilisation marketing) peut être définie. Ce cas d’utilisation correspond à une action marketing telle que définie dans une stratégie d’utilisation des données. En d’autres termes, le cas d’utilisation marketing que vous définissez pour une destination détermine les stratégies d’utilisation des données applicables à cette destination. Des violations de stratégie se produisent si vous activez un segment dont les libellés d’utilisation sont limités par les stratégies applicables de la destination cible. |
 
