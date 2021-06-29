@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Ingestion de données, sources
-source-git-commit: 6c78549860e54748f43cf0b41540ee441a09331e
+source-git-commit: 2b2dcf51098f8263044d56bf65a00d1d48ceddd8
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 18%
+source-wordcount: '623'
+ht-degree: 17%
 
 ---
 
@@ -49,6 +49,7 @@ ht-degree: 18%
    - CRM {#crm}
       - [Connecteur Microsoft Dynamics ](connectors/crm/ms-dynamics.md)
       - [Connecteur Salesforce](connectors/crm/salesforce.md)
+      - [Connecteur CRM Veeva](connectors/crm/veeva.md)
    - Succès du client {#customer-success}
       - [Connecteur Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md)
       - [Connecteur ServiceNow](connectors/customer-success/servicenow.md)
@@ -100,6 +101,7 @@ ht-degree: 18%
       - CRM {#crm}
          - [Microsoft Dynamics ](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
+         - [GRC de Veeva](tutorials/api/create/crm/veeva.md)
       - Succès du client {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -186,6 +188,7 @@ ht-degree: 18%
       - CRM {#crm}
          - [Microsoft Dynamics ](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+         - [GRC de Veeva](tutorials/ui/create/crm/veeva.md)
       - Succès client {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
