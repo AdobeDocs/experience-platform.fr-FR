@@ -7,7 +7,7 @@ exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
 workflow-type: tm+mt
 source-wordcount: '1779'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
@@ -61,7 +61,7 @@ Toutes les entreprises souhaitent s’adresser à leurs clients de manière pers
 
 Lorsque vous rassemblez des fragments de données provenant de plusieurs sources et les combinez pour obtenir une vue complète de chaque client, les stratégies de fusion sont les règles utilisées par [!DNL Platform] pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer le profil client.
 
-En cas de conflit de données provenant de plusieurs jeux de données, la stratégie de fusion détermine comment ces données doivent être traitées et quelle valeur doit être utilisée. Grâce aux API RESTful ou à l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation.
+En cas de conflit de données provenant de plusieurs jeux de données, la stratégie de fusion détermine comment ces données doivent être traitées et quelle valeur doit être utilisée. À lʼaide dʼAPI RESTful ou de lʼinterface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation.
 
 Pour en savoir plus sur les stratégies de fusion et leur rôle dans Experience Platform, commencez par lire la [présentation des stratégies de fusion](merge-policies/overview.md).
 
