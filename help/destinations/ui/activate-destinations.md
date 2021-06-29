@@ -6,10 +6,10 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 694a647b9f268b84d55a960b360ce28527c6c652
+source-git-commit: 0f0a71d8c1c3f36d6966ab37bd9749a59bc4aecf
 workflow-type: tm+mt
-source-wordcount: '2826'
-ht-degree: 12%
+source-wordcount: '2674'
+ht-degree: 13%
 
 ---
 
@@ -149,9 +149,9 @@ Sélectionnez **[!UICONTROL Exporter les fichiers complets]** pour que les fichi
    >
    >L’option permettant d’exporter des fichiers à un certain moment de la journée est actuellement en version bêta et n’est disponible que pour un certain nombre de clients.
 
-   >[!IMPORTANT]
-   >
-   >Selon le moment où la tâche d’exportation de profil se termine et lorsque le service de destination démarre la tâche d’activation de segment, la première exportation incrémentielle ou complète de fichier peut ne pas contenir toutes les données de renvoi nécessaires. Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, nous vous recommandons de définir la première heure d’exportation du fichier après 12h GMT le jour suivant. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
+   <!-- >[!IMPORTANT]
+      >
+      >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases. -->
 
 3. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir le jour ou l’intervalle au cours duquel l’exportation doit avoir lieu.
 4. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
@@ -180,9 +180,9 @@ Sélectionnez **[!UICONTROL Exporter les fichiers incrémentiels]** pour que vos
    >
    >L&#39;option permettant de sélectionner l&#39;heure de la journée pour l&#39;export n&#39;est disponible que pour un nombre restreint de clients.
 
-   >[!IMPORTANT]
-   >
-   >Selon le moment où la tâche d’exportation de profil se termine et lorsque le service de destination démarre la tâche d’activation de segment, la première exportation incrémentielle ou complète de fichier peut ne pas contenir toutes les données de renvoi nécessaires. Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, nous vous recommandons de définir la première heure d’exportation du fichier après 12h GMT le jour suivant. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
+   <!-- >[!IMPORTANT]
+     >
+     >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases. -->
 
 3. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir le jour ou l’intervalle au cours duquel l’exportation doit avoir lieu.
 4. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
