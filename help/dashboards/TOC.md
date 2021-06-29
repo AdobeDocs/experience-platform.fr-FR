@@ -7,7 +7,7 @@ feature: Gestion des données
 source-git-commit: a07658709f28783612cf9d53b2be65bc127c866e
 workflow-type: tm+mt
 source-wordcount: '46'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -23,5 +23,5 @@ ht-degree: 86%
    * [Utilisation des licences](guides/license-usage.md)
 * [Modification des tableaux de bord](modify.md)
 * [Bibliothèque de widgets](widget-library.md)
-* [Jeu de données de tableau de bord de requête](query.md)
+* [Jeux de données de tableau de bord des requêtes](query.md)
 * [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
