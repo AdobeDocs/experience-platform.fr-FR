@@ -8,7 +8,7 @@ exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: 288f24351788ed4b8a0c68cffe5eb5c91ed01691
 workflow-type: tm+mt
 source-wordcount: '1734'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -116,7 +116,7 @@ Les champs de type `string` dans les schémas qui mettent en œuvre des classes 
 
 >[!NOTE]
 >
->Les champs de type Tableau et Mappage ne sont pas pris en charge et ne peuvent pas être marqués et étiquetés comme champs d’identité.
+>Les champs de type tableau et mappage ne sont pas pris en charge et ne peuvent pas être marqués et libellés comme des champs dʼidentité.
 
 Les champs d’identité permettent également de lier des identités si elles partagent des données PII communes.
 Par exemple, en désignant les champs de numéro de téléphone comme des champs dʼidentité, [!DNL Identity Service] crée automatiquement un graphique des relations avec les autres personnes qui utilisent le même numéro de téléphone.
