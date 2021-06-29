@@ -11,7 +11,7 @@ ht-degree: 100%
 ---
 
 
-# Notes de mise à jour d’Adobe Experience Platform {#release-notes}
+# Notes de mise à jour d’Adobe Experience Platform {#release-notes}
 
 * [Notes de mise à jour actuelles de Platform](latest/latest.md)
 * 2021 {#2021}
