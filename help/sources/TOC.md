@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Ingestion de données, sources
-source-git-commit: 2b2dcf51098f8263044d56bf65a00d1d48ceddd8
+source-git-commit: e04df6e2ffabac6e70164dfccbad8440976b2755
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 17%
+source-wordcount: '619'
+ht-degree: 18%
 
 ---
 
@@ -82,7 +82,7 @@ ht-degree: 17%
    - Diffusion en continu {#streaming}
       - [Connecteur d’API HTTP](connectors/streaming/http.md)
 - Tutoriels sur les API {#api-tutorials}
-   - Créer une connexion source {#create}
+   - Créer une connexion de base {#create}
       - Publicité {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - Stockage dans le cloud {#cloud-storage}
@@ -138,7 +138,7 @@ ht-degree: 17%
       - [Explorer les données de stockage dans le cloud](tutorials/api/explore/cloud-storage.md)
       - [Explorer les données CRM](tutorials/api/explore/crm.md)
       - [Explorer les données de succès client](tutorials/api/explore/customer-success.md)
-      - [Explorer la base de données ou les données NoSQL](tutorials/api/explore/database-nosql.md)
+      - [Explorer les données de la base](tutorials/api/explore/database-nosql.md)
       - [Exploration des données eCommerce](tutorials/api/explore/ecommerce.md)
       - [Explorer les données d’automatisation du marketing](tutorials/api/explore/marketing-automation.md)
       - [Explorer les données de paiement](tutorials/api/explore/payments.md)
@@ -148,7 +148,7 @@ ht-degree: 17%
       - [Collecte des données de stockage dans le cloud](tutorials/api/collect/cloud-storage.md)
       - [Collecte de données CRM](tutorials/api/collect/crm.md)
       - [Collecte des données de succès client](tutorials/api/collect/customer-success.md)
-      - [Collecter des données de base de données ou NoSQL](tutorials/api/collect/database-nosql.md)
+      - [Collecter les données de la base](tutorials/api/collect/database-nosql.md)
       - [Collecte de données eCommerce](tutorials/api/collect/ecommerce.md)
       - [Collecte de données d’automatisation du marketing](tutorials/api/collect/marketing-automation.md)
       - [Collecter les données de paiement](tutorials/api/collect/payments.md)
