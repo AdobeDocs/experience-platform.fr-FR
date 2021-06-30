@@ -1,54 +1,53 @@
 ---
-keywords: Experience Platform ; accueil ; sujets populaires ; Azure Data Lake Enregistrement Gen2 ; ADLS-Gen2 ; adls gen2 ; ADLS Gen2
+keywords: Experience Platform;accueil;rubriques populaires;Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
-title: Présentation du connecteur source Azure Data Lake Enregistrement Gen2
+title: Présentation du connecteur source Azure Data Lake Storage Gen2
 topic-legacy: overview
-description: Découvrez comment connecter Azure Data Lake Enregistrement Gen2 à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
+description: Découvrez comment connecter Azure Data Lake Storage Gen2 à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 2%
+source-wordcount: '466'
+ht-degree: 3%
 
 ---
 
-# Connecteur Azure Data Lake Enregistrement Gen2
+# Connecteur Azure Data Lake Storage Gen2
 
-Adobe Experience Platform fournit une connectivité native aux fournisseurs de cloud tels que AWS, [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer vos données à partir de ces systèmes.
+Adobe Experience Platform fournit une connectivité native pour les fournisseurs de cloud tels que AWS, [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer vos données de ces systèmes.
 
-Les sources d’enregistrement Cloud peuvent importer vos propres données dans [!DNL Platform] sans avoir à télécharger, mettre en forme ou télécharger. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Platform] vous permet d’importer des données à partir  [!DNL Azure Data Lake Storage Gen2] (ADLS-Gen2) par lots.
+Les sources de stockage dans le cloud peuvent importer vos propres données dans [!DNL Platform] sans avoir à les télécharger, les formater ou les charger. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le workflow Sources . [!DNL Platform] vous permet d’importer des données depuis  [!DNL Azure Data Lake Storage Gen2] (ADLS-Gen2) par lots.
 
-## LISTE AUTORISÉE d&#39;adresse IP
+## LISTE AUTORISÉE d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources. Pour plus d&#39;informations, consultez la page [liste autorisée d&#39;adresse IP](../../ip-address-allow-list.md).
+Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou des performances peuvent se produire lors de l’utilisation de sources. Pour plus d’informations, consultez la page [liste autorisée d’adresses IP](../../ip-address-allow-list.md) .
 
 >[!IMPORTANT]
 >
->Le connecteur source [!DNL Azure Data Lake Storage Gen2] ne prend actuellement pas en charge la connectivité de la même région à la plate-forme. Cela signifie que si votre instance Azure utilise la même région réseau que Platform, une connexion aux sources de la plateforme ne peut pas être établie. Actuellement, seule la connectivité inter-régions est prise en charge. Pour plus d&#39;informations, contactez votre gestionnaire de compte d&#39;Adobe.
+>Le connecteur source [!DNL Azure Data Lake Storage Gen2] ne prend actuellement pas en charge la connectivité de la même région à Platform. Cela signifie que si votre instance Azure utilise la même région réseau que Platform, une connexion aux sources Platform ne peut pas être établie. Actuellement, seule la connectivité inter-régions est prise en charge. Pour plus d’informations, contactez votre gestionnaire de compte d’Adobe.
 
-## Contraintes de nommage pour les fichiers et répertoires
+## Contraintes de dénomination pour les fichiers et répertoires
 
-Voici une liste de contraintes dont vous devez tenir compte lorsque vous nommez votre fichier ou répertoire d’enregistrement cloud.
+Voici une liste des contraintes dont vous devez tenir compte lorsque vous nommez votre fichier ou répertoire de stockage dans le cloud.
 
-- Les noms des composants de répertoire et de fichier ne peuvent pas dépasser 255 caractères.
-- Les noms de répertoire et de fichier ne peuvent pas se terminer par une barre oblique (`/`). S&#39;il est fourni, il sera automatiquement supprimé.
-- Les caractères d’URL réservés suivants doivent être correctement placés en séquence d’échappement : `! ' ( ) ; @ & = + $ , % # [ ]`
+- Les noms des composants de répertoire et de fichier ne doivent pas dépasser 255 caractères.
+- Les noms de répertoire et de fichier ne peuvent pas se terminer par une barre oblique (`/`). S’il est fourni, il sera automatiquement supprimé.
+- Les caractères d’URL réservés suivants doivent être correctement précédés d’une séquence d’échappement : `! ' ( ) ; @ & = + $ , % # [ ]`
 - Les caractères suivants ne sont pas autorisés : `" \ / : | < > * ?`.
-- Caractères de chemin d’URL non autorisés. Les points de code tels que `\uE000`, bien qu&#39;ils soient valides dans les noms de fichier NTFS, ne sont pas des caractères Unicode valides. En outre, certains caractères ASCII ou Unicode, tels que les caractères de contrôle (0x00 à 0x1F, \u0081, etc.), ne sont pas non plus autorisés. Pour les règles régissant les chaînes Unicode dans HTTP/1.1, voir [RFC 2616, Section 2.2 : Règles de base](https://www.ietf.org/rfc/rfc2616.txt) et [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- Les noms de fichier suivants ne sont pas autorisés : LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caractère point (.) et deux caractères de point (.).
+- Caractères de chemin d’URL interdits. Les points de code tels que `\uE000`, bien qu’ils soient valides dans les noms de fichier NTFS, ne sont pas des caractères Unicode valides. En outre, certains caractères ASCII ou Unicode, tels que les caractères de contrôle (0x00 à 0x1F, \u0081, etc.), ne sont pas non plus autorisés. Pour les règles régissant les chaînes Unicode en HTTP/1.1, voir [RFC 2616, Section 2.2 : Règles de base](https://www.ietf.org/rfc/rfc2616.txt) et [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Les noms de fichier suivants ne sont pas autorisés : LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caractère point (..) et deux caractères de point (.).
 
-## Connecter [!DNL Azure Data Lake Storage Gen2] à [!DNL Platform]
+## Connectez [!DNL Azure Data Lake Storage Gen2] à [!DNL Platform]
 
-La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Azure Data Lake Storage Gen2] à [!DNL Platform] à l&#39;aide d&#39;API ou de l&#39;interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL Azure Data Lake Storage Gen2] à [!DNL Platform] à l’aide des API ou de l’interface utilisateur :
 
 ### Utilisation des API
 
-- [Création d’une connexion source ADLS-Gen2 à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/adls-gen2.md)
-- [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
-- [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
+- [Création d’une connexion de base ADLS-Gen2 à l’aide de l’API Flow Service](../../tutorials/api/create/cloud-storage/adls-gen2.md)
+- [Explorez la structure de données et le contenu d’une source de stockage dans le cloud à l’aide de l’API Flow Service](../../tutorials/api/explore/cloud-storage.md)
+- [Création d’un flux de données pour une source de stockage dans le cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilisation de l’interface utilisateur
 
 - [Création d’une connexion source ADLS-Gen2 dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
-- [Configuration d’un flux de données pour une connexion d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Création d’un flux de données pour une connexion de stockage dans le cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
