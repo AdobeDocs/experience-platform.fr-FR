@@ -5,10 +5,10 @@ title: Présentation du connecteur source Google BigQuery
 topic-legacy: overview
 description: Découvrez comment connecter Google BigQuery à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 9d68e54baa894ebeff4603c7df01a1fe42aa217f
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 16%
+source-wordcount: '395'
+ht-degree: 15%
 
 ---
 
@@ -30,7 +30,7 @@ Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’
 
 La section suivante fournit des informations supplémentaires sur la configuration de prérequis requise pour pouvoir créer une connexion source [!DNL Google BigQuery].
 
-### Générer vos [!DNL Google BigQuery] informations d’identification
+### Génération de vos [!DNL Google BigQuery] informations d’identification
 
 Pour connecter [!DNL Google BigQuery] à Platform, vous devez générer des valeurs pour les informations d’identification suivantes :
 
@@ -49,11 +49,11 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL G
 
 ### Utilisation des API
 
-- [Création d’une connexion source Google BigQuery à l’aide de l’API Flow Service](../../tutorials/api/create/databases/bigquery.md)
-- [Exploration d’un système de base de données à l’aide de l’API Flow Service](../../tutorials/api/explore/database-nosql.md)
-- [Collecte de données à partir d’une base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
+- [Création d’une connexion de base Google BigQuery à l’aide de l’API Flow Service](../../tutorials/api/create/databases/bigquery.md)
+- [Explorer la structure et le contenu des données d’une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/explore/database-nosql.md)
+- [Création d’un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
 
 ### Utilisation de l’interface utilisateur
 
 - [Création d’une connexion source Google BigQuery dans l’interface utilisateur](../../tutorials/ui/create/databases/bigquery.md)
-- [Configuration d’un flux de données pour une connexion à la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Création d’un flux de données pour une connexion à la source de la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
