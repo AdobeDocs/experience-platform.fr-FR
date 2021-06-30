@@ -5,9 +5,9 @@ title: Présentation du connecteur source ServiceNow
 topic-legacy: overview
 description: Découvrez comment connecter ServiceNow à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 4aed960fb3873e604efb36268887ac36a7331064
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '224'
 ht-degree: 8%
 
 ---
@@ -26,11 +26,11 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL S
 
 ## Connectez [!DNL ServiceNow] à [!DNL Platform] à l’aide des API
 
-- [Création d’une connexion source ServiceNow à l’aide de l’API Flow Service](../../tutorials/api/create/customer-success/servicenow.md)
-- [Exploration d’un système de succès client à l’aide de l’API Flow Service](../../tutorials/api/explore/customer-success.md)
-- [Collecte de données à partir d’un système de succès client à l’aide de l’API Flow Service](../../tutorials/api/collect/customer-success.md)
+- [Création d’une connexion de base ServiceNow à l’aide de l’API Flow Service](../../tutorials/api/create/customer-success/servicenow.md)
+- [Explorez la structure de données et le contenu d’une source de succès client à l’aide de l’API Flow Service](../../tutorials/api/explore/customer-success.md)
+- [Création d’un flux de données pour une source de succès client à l’aide de l’API Flow Service](../../tutorials/api/collect/customer-success.md)
 
 ## Connectez [!DNL ServiceNow] à [!DNL Platform] à l’aide de l’interface utilisateur.
 
 - [Création d’une connexion source ServiceNow dans l’interface utilisateur](../../tutorials/ui/create/customer-success/servicenow.md)
-- [Configuration du flux de données pour une connexion de succès client dans l’interface utilisateur](../../tutorials/ui/dataflow/customer-success.md)
+- [Création d’un flux de données pour une connexion à une source de succès client dans l’interface utilisateur](../../tutorials/ui/dataflow/customer-success.md)
