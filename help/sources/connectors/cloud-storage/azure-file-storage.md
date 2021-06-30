@@ -5,9 +5,9 @@ title: Présentation du connecteur source de stockage de fichiers Azure
 topic-legacy: overview
 description: Découvrez comment connecter le stockage de fichiers Azure à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '459'
 ht-degree: 3%
 
 ---
@@ -43,11 +43,11 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL A
 
 ### Utilisation des API
 
-- [Création d’une connexion source de stockage de fichiers Azure à l’aide de l’API Flow Service](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
-- [Exploration d’un système de stockage dans le cloud à l’aide de l’API Flow Service](../../tutorials/api/explore/cloud-storage.md)
-- [Collecte de données de stockage dans le cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
+- [Création d’une connexion de base de stockage de fichiers Azure à l’aide de l’API Flow Service](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [Explorez la structure de données et le contenu d’une source de stockage dans le cloud à l’aide de l’API Flow Service](../../tutorials/api/explore/cloud-storage.md)
+- [Création d’un flux de données pour une source de stockage dans le cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilisation de l’interface utilisateur
 
 - [Création d’une connexion source de stockage de fichiers Azure dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Configuration d’un flux de données pour une connexion de stockage dans le cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Création d’un flux de données pour une connexion de stockage dans le cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
