@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;système 
 solution: Experience Platform
 title: Point de terminaison de l’API des groupes de champs
 description: Le point d’entrée /fieldgroups de l’API Schema Registry vous permet de gérer par programmation les groupes de champs de schéma XDM dans votre application d’expérience.
-topic: guide du développement
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+topic-legacy: developer guide
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1215'
 ht-degree: 10%
 
 ---
