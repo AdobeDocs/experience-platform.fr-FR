@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Correspondance de segment;correspondance de segment
 solution: Experience Platform
 title: Présentation de la correspondance de segment
-topic: aperçu
+topic-legacy: overview
 description: La correspondance de segment est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment de manière sécurisée, gérée et respectueuse de la confidentialité.
-source-git-commit: 481160f83e82c80ea5b73e9b56003dc625a34b5e
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '1901'
-ht-degree: 5%
+source-wordcount: '1900'
+ht-degree: 6%
 
 ---
 
@@ -125,7 +125,7 @@ La configuration de base d’un flux comprend un nom, une description et des con
 * [!UICONTROL Exporter vers un tiers]
 * [!UICONTROL Publicité sur site]
 * [!UICONTROL Personnalisation Onsite]
-* [!UICONTROL Correspondance de segment]
+* [!UICONTROL Correspondance de segments]
 * [!UICONTROL Personnalisation d’une seule identité]
 
 Enfin, sélectionnez les espaces de noms d’identité appropriés pour votre flux. Pour plus d’informations sur les espaces de noms spécifiques pris en charge par [!DNL Segment Match], consultez la [table des données d’identité et des espaces de noms](#namespaces). Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
