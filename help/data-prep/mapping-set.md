@@ -2,11 +2,11 @@
 keywords: Experience Platform;accueil;mappeur;jeu de mappages;mappage;
 solution: Experience Platform
 title: Présentation des jeux de mappages
-topic: présentation
+topic-legacy: overview
 description: Découvrez comment utiliser les jeux de mappages avec la préparation de données Adobe Experience Platform.
-source-git-commit: 4c06f621eb6fba8daa6501d56255cddbbcfdbda2
-workflow-type: ht
-source-wordcount: '960'
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+workflow-type: tm+mt
+source-wordcount: '959'
 ht-degree: 100%
 
 ---
