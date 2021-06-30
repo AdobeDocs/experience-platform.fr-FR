@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;Azure;stockage de fichiers Azure;stockage de fichiers Azure
 solution: Experience Platform
-title: Création d’une connexion source de stockage de fichiers Azure à l’aide de l’API Flow Service
+title: Création d’une connexion de base de stockage de fichiers Azure à l’aide de l’API Flow Service
 topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Azure File Storage à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 35%
+source-wordcount: '477'
+ht-degree: 12%
 
 ---
 
-# Créez une connexion source [!DNL Azure File Storage] à l’aide de l’API [!DNL Flow Service]
+# Créez une connexion de base [!DNL Azure File Storage] à l’aide de l’API [!DNL Flow Service]
 
-[!DNL Flow Service] sert à collecter et à centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
+Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel utilise l’API [!DNL Flow Service] pour vous guider tout au long des étapes permettant de connecter [!DNL Azure File Storage] à [!DNL Experience Platform].
+Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Azure File Storage] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Prise en main
 
@@ -37,33 +37,19 @@ Pour que [!DNL Flow Service] se connecte à [!DNL Azure File Storage], vous deve
 | `host` | Point d’entrée de l’instance [!DNL Azure File Storag]à laquelle vous accédez. |
 | `userId` | L’utilisateur disposant d’un accès suffisant au point de terminaison [!DNL Azure File Storage]. |
 | `password` | Mot de passe de votre instance [!DNL Azure File Storage] |
-| Identifiant de spécification de connexion | Identifiant unique nécessaire pour créer une connexion. L’identifiant de spécification de connexion pour [!DNL Azure File Storage] est : `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions base et source. L’identifiant de spécification de connexion pour [!DNL Azure File Storage] est : `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
 Pour plus d’informations sur la prise en main, reportez-vous à [ce document Azure File Storage](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 
-### Lecture d’exemples d’appels API
+### Utilisation des API Platform
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Pour plus d’informations sur la manière d’effectuer des appels avec succès vers les API Platform, consultez le guide de [prise en main des API Platform](../../../../../landing/api-guide.md).
 
-### Collecte des valeurs des en-têtes requis
+## Création d’une connexion de base
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Une connexion de base conserve les informations entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Toutes les ressources qui se trouvent dans [!DNL Experience Platform], y compris celles liées à la [!DNL Flow Service], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
-
-* `Content-Type: application/json`
-
-## Création d’une connexion
-
-Une connexion spécifie une source et contient vos informations d’identification pour cette source. Une seule connexion est requise par compte [!DNL Azure File Storage], car elle peut être utilisée pour créer plusieurs connecteurs source afin d’importer différentes données.
+Pour créer un identifiant de connexion de base, envoyez une requête de POST au point de terminaison `/connections` tout en fournissant vos informations d’authentification [!DNL Azure File Storage] dans le cadre des paramètres de requête.
 
 **Format d’API**
 
@@ -73,7 +59,7 @@ POST /connections
 
 **Requête**
 
-Pour créer une connexion [!DNL Azure File Storage], son identifiant de spécification de connexion unique doit être fourni dans le cadre de la demande du POST. L’identifiant de spécification de connexion pour [!DNL Azure File Storage] est `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`.
+La requête suivante crée une connexion de base pour [!DNL Azure File Storage] :
 
 ```shell
 curl -X POST \
@@ -110,7 +96,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle connexion, y compris son identifiant unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
+Une réponse réussie renvoie les détails de la connexion de base que vous venez de créer, y compris son identifiant unique (`id`). Cet identifiant est requis à l’étape suivante pour créer une connexion source.
 
 ```json
 {
