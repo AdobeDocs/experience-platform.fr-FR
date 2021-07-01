@@ -4,10 +4,10 @@ description: Découvrez comment mapper manuellement des variables dans Adobe Ana
 seo-description: Mappage manuel de variables dans Adobe Analytics à l’aide de règles de traitement avec le SDK Web
 keywords: adobe analytics;analytics;variables;variables de mappage;variables map;contextData;données contextuelles;règles de traitement;règles;xdm;schéma;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: d67c8c0ada6dc4bf07b73547f9e571a8a7386b75
+source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 16%
+source-wordcount: '403'
+ht-degree: 15%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 16%
 
 Adobe Experience Platform [!DNL Web SDK] peut mapper certaines variables automatiquement, mais les variables personnalisées doivent être mappées manuellement.
 
-Pour les données XDM qui ne sont pas automatiquement mappées à [!DNL Analytics], vous pouvez utiliser [données contextuelles](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html) pour correspondre à votre [schéma](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html). Ensuite, il peut être mappé dans [!DNL Analytics] à l’aide des [règles de traitement](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) pour renseigner les variables [!DNL Analytics].
+Pour les données XDM qui ne sont pas automatiquement mappées à [!DNL Analytics], vous pouvez utiliser [données contextuelles](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html) pour correspondre à votre [schéma](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=fr). Ensuite, il peut être mappé dans [!DNL Analytics] à l’aide des [règles de traitement](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) pour renseigner les variables [!DNL Analytics].
 
 Vous pouvez également utiliser un ensemble d’actions et de listes de produits par défaut pour envoyer ou récupérer des données avec le SDK Web de Adobe Experience Platform. Pour ce faire, voir [Collecter les informations sur le commerce et les produits](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html).
 
 ## Données contextuelles
 
-Pour être utilisées par [!DNL Analytics], les données XDM sont aplaties à l’aide de la notation par points et mises à disposition sous la forme `contextData`. La liste suivante de paires de valeurs présente un exemple de `context data` :
+Pour être utilisées par [!DNL Analytics], les données XDM sont aplaties à l’aide de la notation par points et mises à disposition sous la forme `contextData`. La liste suivante de paires valeur présente un exemple de ce à quoi ressemble `context data` lorsqu’il est aplati :
 
 ```json
 {
