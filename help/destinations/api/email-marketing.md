@@ -1,20 +1,19 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires
+keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
-title: Connectez-vous aux destinations de marketing par courrier électronique et activez les données à l’aide de l’API du service de flux.
-description: Ce document couvre la création de destinations de marketing par courrier électronique à l’aide de l’API Adobe Experience Platform.
+title: Connexion aux destinations de marketing par e-mail et activation des données à l’aide de l’API Flow Service
+description: Ce document couvre la création de destinations de marketing par e-mail à l’aide de l’API Adobe Experience Platform.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
 workflow-type: tm+mt
-source-wordcount: '1705'
-ht-degree: 71%
+source-wordcount: '1704'
+ht-degree: 72%
 
 ---
 
-# Connectez-vous aux destinations de marketing par courrier électronique et activez les données à l’aide de l’API du service de flux.
+# Connexion aux destinations de marketing par e-mail et activation des données à l’aide de l’API Flow Service
 
 Ce tutoriel explique comment utiliser les appels API pour accéder à vos données Adobe Experience Platform, créer une [destination de marketing par e-mail](../catalog/email-marketing/overview.md), créer un flux de données vers votre nouvelle destination et activer les données vers cette dernière.
 
@@ -22,44 +21,44 @@ Ce tutoriel utilise la destination Adobe Campaign dans tous ses exemples, mais l
 
 ![Présentation : étapes de création d’une destination et d’activation de segments](../assets/api/email-marketing/overview.png)
 
-Si vous préférez utiliser l&#39;interface utilisateur de Platform pour connecter une destination et activer des données, consultez les didacticiels [Connecter une destination](../ui/connect-destination.md) et [Activer les profils et segments à une destination](../ui/activate-destinations.md).
+Si vous préférez utiliser l’interface utilisateur de Platform pour connecter une destination et activer des données, consultez les tutoriels [Connexion d’une destination](../ui/connect-destination.md) et [Activation des profils et des segments vers une destination](../ui/activate-destinations.md).
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
-* [[!DNL Catalog Service]](../../catalog/home.md):  [!DNL Catalog] est le système d’enregistrement pour l’emplacement et le lignage des données dans  [!DNL Experience Platform].
-* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
+* [[!DNL Catalog Service]](../../catalog/home.md):  [!DNL Catalog] est le système d’enregistrement de l’emplacement et de la traçabilité des données dans  [!DNL Experience Platform].
+* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une  [!DNL Platform] instance unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour activer les données vers les destinations de marketing par courrier électronique dans Platform.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour activer les données vers les destinations de marketing par e-mail dans Platform.
 
 ### Collecte des informations d’identification requises
 
 Pour suivre les étapes de ce tutoriel, vous devez disposer des informations d’identification suivantes, selon le type de destinations auxquelles vous vous connectez et activez des segments.
 
-* Pour les connexions [!DNL Amazon] S3 aux plateformes de marketing par courriel : `accessId`, `secretKey`
+* Pour les connexions [!DNL Amazon] S3 aux plateformes de marketing par e-mail : `accessId`, `secretKey`
 * Pour les connexions SFTP aux plateformes de marketing par e-mail : `domain`, `port`, `username`, `password` ou `ssh key` (selon la méthode de connexion à l’emplacement FTP)
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
 ### Collecte de valeurs pour les en-têtes requis et facultatifs
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-api-key : `{API_KEY}`
+* x-gw-ims-org-id : `{IMS_ORG}`
 
-Les ressources de [!DNL Experience Platform] peuvent être isolées dans des sandbox virtuels spécifiques. Dans les demandes aux API [!DNL Platform], vous pouvez spécifier le nom et l&#39;ID du sandbox dans lequel l&#39;opération aura lieu. Il s’agit de paramètres facultatifs.
+Les ressources de [!DNL Experience Platform] peuvent être isolées dans des environnements de test virtuels spécifiques. Dans les demandes aux API [!DNL Platform], vous pouvez spécifier le nom et l’identifiant de l’environnement de test dans lequel l’opération aura lieu. Il s’agit de paramètres facultatifs.
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name : `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d&#39;informations sur les sandbox dans [!DNL Experience Platform], consultez la [documentation d&#39;aperçu de sandbox](../../sandboxes/home.md).
+>Pour plus d’informations sur les environnements de test dans [!DNL Experience Platform], consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
 
 Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
@@ -67,7 +66,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ### Documentation Swagger
 
-Ce tutoriel vous permet de trouver dans Swagger la documentation de référence relative à tous les appels API. Consultez la [documentation de l’API du service de flux sur Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Nous vous recommandons de consulter ce tutoriel et la page de documentation de Swagger en parallèle.
+Ce tutoriel vous permet de trouver dans Swagger la documentation de référence relative à tous les appels API. Consultez la [documentation de l’API de service de flux sur Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Nous vous recommandons de consulter ce tutoriel et la page de documentation de Swagger en parallèle.
 
 ## Obtention de la liste des destinations disponibles {#get-the-list-of-available-destinations}
 
@@ -121,17 +120,17 @@ Une réponse réussie contient une liste des destinations disponibles et leurs i
 }
 ```
 
-## Se connecter à vos données [!DNL Experience Platform] {#connect-to-your-experience-platform-data}
+## Connexion à vos données [!DNL Experience Platform] {#connect-to-your-experience-platform-data}
 
 ![Présentation des étapes de la destination : étape 2](../assets/api/email-marketing/step2.png)
 
-Ensuite, vous devez vous connecter à vos données [!DNL Experience Platform] afin de pouvoir exporter des données de profil et les activer dans votre destination préférée. Il s’agit de deux sous-étapes présentées ci-dessous.
+Ensuite, vous devez vous connecter à vos données [!DNL Experience Platform] afin de pouvoir exporter les données de profil et les activer dans la destination de votre choix. Il s’agit de deux sous-étapes présentées ci-dessous.
 
-1. Tout d&#39;abord, vous devez effectuer un appel pour autoriser l&#39;accès à vos données dans [!DNL Experience Platform], en configurant une connexion de base.
-2. Ensuite, en utilisant l&#39;ID de connexion de base, vous effectuerez un autre appel dans lequel vous créez une connexion source, qui établit la connexion à vos données [!DNL Experience Platform].
+1. Tout d’abord, vous devez effectuer un appel pour autoriser l’accès à vos données dans [!DNL Experience Platform], en établissant une connexion de base.
+2. Ensuite, à l’aide de l’identifiant de connexion de base, vous passerez un autre appel au cours duquel vous créerez une connexion source, qui établira la connexion à vos données [!DNL Experience Platform].
 
 
-### Autoriser l&#39;accès à vos données dans [!DNL Experience Platform]
+### Autoriser l’accès à vos données dans [!DNL Experience Platform]
 
 **Format d’API**
 
@@ -183,7 +182,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}` : utilisez l’identifiant de spécification de connexion pour le service de profil unifié - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Utilisez l’identifiant de spécification de connexion pour le service de profil -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Réponse**
 
@@ -195,7 +194,7 @@ Une réponse réussie contient l’identifiant unique de la connexion de base (`
 }
 ```
 
-### Se connecter à vos données [!DNL Experience Platform] {#connect-to-platform-data}
+### Connexion à vos données [!DNL Experience Platform] {#connect-to-platform-data}
 
 **Format d’API**
 
@@ -217,7 +216,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d  '{
-  "name": "Connecting to Unified Profile Service",
+  "name": "Connecting to Profile Service",
   "description": "Optional",
   "baseConnectionId": "{BASE_CONNECTION_ID}",
   "connectionSpec": {
@@ -241,7 +240,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Unified Profile Service",
+            "name": "Connecting to Profile Service",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -257,11 +256,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}` : utilisez l’identifiant que vous avez obtenu à l’étape précédente.
-* `{CONNECTION_SPEC_ID}`: Utilisez l&#39;identifiant de spécification de connexion pour  [!DNL Unified Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Utilisez l’identifiant de spécification de connexion pour  [!DNL Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Réponse**
 
-Une réponse réussie renvoie l&#39;identifiant unique (`id`) pour la connexion source nouvellement créée à [!DNL Unified Profile Service]. Ceci confirme que vous êtes connecté avec succès à vos données [!DNL Experience Platform]. Conservez cette valeur car elle sera nécessaire lors d’une prochaine étape.
+Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion source à [!DNL Profile Service]. Cela confirme que vous avez réussi à vous connecter à vos données [!DNL Experience Platform]. Conservez cette valeur car elle sera nécessaire lors d’une prochaine étape.
 
 ```json
 {
@@ -361,13 +360,13 @@ Une réponse réussie contient l’identifiant unique de la connexion de base (`
 
 ### Indication de l’emplacement de stockage et du format des données
 
-[!DNL Adobe Experience Platform] exporte des données pour le marketing par courrier électronique et les destinations d’enregistrement cloud sous la forme de  [!DNL CSV] fichiers.
+[!DNL Adobe Experience Platform] exporte les données pour les destinations de marketing par e-mail et de stockage dans le cloud sous la forme de  [!DNL CSV] fichiers.
 
 >[!IMPORTANT]
 > 
->[!DNL Adobe Experience Platform] sépare automatiquement les fichiers d’exportation à 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil.
+>[!DNL Adobe Experience Platform] divise automatiquement les fichiers d’exportation à 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil.
 >
->Les noms de fichier fractionnés sont ajoutés avec un nombre indiquant que le fichier fait partie d’une exportation plus importante, en tant que tel : `filename.csv`, `filename_2.csv`, `filename_3.csv`.
+>Les noms de fichiers fractionnés sont ajoutés avec un nombre indiquant que le fichier fait partie d’un export plus important, en tant que tel : `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 **Format d’API**
 
@@ -443,8 +442,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}` : utilisez l’identifiant de connexion de base que vous avez obtenu à l’étape ci-dessus.
 * `{CONNECTION_SPEC_ID}` : utilisez la spécification de connexion que vous avez obtenue lors de l’étape [Obtention de la liste des destinations disponibles](#get-the-list-of-available-destinations).
-* `{BUCKETNAME}`: Votre compartiment  [!DNL Amazon] S3, où Platform dépose l&#39;exportation de données.
-* `{FILEPATH}`: Chemin d’accès dans votre répertoire de compartiment  [!DNL Amazon] S3 où Platform dépose l’exportation des données.
+* `{BUCKETNAME}`: Votre compartiment  [!DNL Amazon] S3, où Platform dépose les données exportées.
+* `{FILEPATH}`: Chemin d’accès dans votre répertoire de compartiment  [!DNL Amazon] S3 où Platform dépose les données exportées.
 
 **Réponse**
 
@@ -460,7 +459,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 
 ![Présentation des étapes de la destination : étape 4](../assets/api/email-marketing/step4.png)
 
-En utilisant les ID que vous avez obtenus lors des étapes précédentes, vous pouvez maintenant créer un flux de données entre vos données [!DNL Experience Platform] et la destination à laquelle vous allez activer les données. Considérez cette étape comme la construction du pipeline, à travers lequel les données seront acheminées ultérieurement, entre [!DNL Experience Platform] et la destination souhaitée.
+En utilisant les identifiants que vous avez obtenus lors des étapes précédentes, vous pouvez maintenant créer un flux de données entre vos données [!DNL Experience Platform] et la destination vers laquelle vous activerez les données. Considérez cette étape comme la création du pipeline, par lequel les données seront transmises ultérieurement, entre [!DNL Experience Platform] et la destination souhaitée.
 
 Pour créer un flux de données, effectuez une requête POST, comme indiqué ci-après, tout en fournissant les valeurs mentionnées ci-dessous dans le payload.
 
@@ -593,7 +592,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}` : utilisez le flux de données obtenu à l’étape précédente.
 * `{ETAG}` : utilisez l’etag obtenu à l’étape précédente.
-* `{SEGMENT_ID}` : indiquez l’identifiant du segment que vous souhaitez exporter vers cette destination. Pour récupérer les ID de segment pour les segments que vous souhaitez activer, accédez à **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, sélectionnez **[!UICONTROL Segmentation Service API]** dans le menu de navigation de gauche et recherchez l&#39;opération `GET /segment/definitions` dans **[!UICONTROL Segment Definitions]**.
+* `{SEGMENT_ID}` : indiquez l’identifiant du segment que vous souhaitez exporter vers cette destination. Pour récupérer les ID de segment pour les segments que vous souhaitez activer, accédez à **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, sélectionnez **[!UICONTROL API Segmentation Service]** dans le menu de navigation de gauche, puis recherchez l’opération `GET /segment/definitions` dans **[!UICONTROL Définitions de segment]**.
 * `{PROFILE_ATTRIBUTE}` : par exemple, `"person.lastName"`
 
 **Réponse**
@@ -660,7 +659,7 @@ La réponse renvoyée doit inclure dans le paramètre `transformations` les segm
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez réussi à connecter Plateforme à l’une de vos destinations de marketing par courriel préférées et à configurer un flux de données vers la destination correspondante. Les données sortantes peuvent désormais être utilisées dans la destination pour des campagnes par e-mail, de la publicité ciblée et de nombreux autres cas d’utilisation. Pour plus d’informations, consultez les pages suivantes :
+En suivant ce tutoriel, vous avez réussi à connecter Platform à l’une de vos destinations de marketing par e-mail préférées et à configurer un flux de données vers la destination correspondante. Les données sortantes peuvent désormais être utilisées dans la destination pour des campagnes par e-mail, de la publicité ciblée et de nombreux autres cas d’utilisation. Pour plus d’informations, consultez les pages suivantes :
 
 * [Présentation des destinations](../home.md)
 * [Présentation du catalogue des destinations](../catalog/overview.md)
