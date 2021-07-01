@@ -3,9 +3,9 @@ title: Suivi des événements à l’aide du SDK Web de Adobe Experience Platfor
 description: Découvrez comment effectuer le suivi des événements du SDK Web Adobe Experience Platform.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;envoyer la balise;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 3f5f17275e28ba35a302a42d66b151c4234bc79c
+source-git-commit: a6fca344e6b307e503e29ca7dda3534cdea62f53
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1460'
 ht-degree: 43%
 
 ---
@@ -17,7 +17,7 @@ Pour envoyer des données d’événement à Adobe Experience Cloud, utilisez la
 Les données envoyées à Adobe Experience Cloud entrent dans deux catégories :
 
 * Données XDM
-* Données autres que XDM (actuellement non prises en charge)
+* Données autres que XDM
 
 ## Envoi de données XDM
 
@@ -75,7 +75,7 @@ Dans cet exemple, la couche de données est clonée en la sérialisant au format
 >Les données pouvant être envoyées dans chaque événement du champ XDM sont limitées à 32 Ko.
 
 
-### Envoi de données autres que XDM
+## Envoi de données autres que XDM
 
 Les données qui ne correspondent pas à un schéma XDM doivent être envoyées à l’aide de l’option `data` de la commande `sendEvent`. Cette fonctionnalité est prise en charge dans les versions 2.5.0 et ultérieures du SDK Web.
 
@@ -85,7 +85,7 @@ Cela s’avère utile si vous devez mettre à jour un profil Adobe Target ou env
 
 **Comment envoyer des attributs Profile et Recommendations à Adobe Target :**
 
-```
+```javascript
 alloy("sendEvent", {
   data: {
     __adobe: {
@@ -101,7 +101,7 @@ alloy("sendEvent", {
 ```
 
 
-### Paramètre `eventType` {#event-types}
+### Définition de `eventType` {#event-types}
 
 Dans un événement d’expérience XDM, il existe un champ `eventType` facultatif. Il contient le type d’événement principal pour l’enregistrement. La définition d’un type d’événement peut vous aider à différencier les différents événements que vous enverrez. XDM fournit plusieurs types d’événements prédéfinis que vous pouvez utiliser ou vous créez toujours vos propres types d’événements personnalisés pour vos cas d’utilisation. Vous trouverez ci-dessous une liste de tous les types d’événements prédéfinis fournis par XDM. [Pour en savoir plus, consultez le référentiel](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values) public XDM.
 
