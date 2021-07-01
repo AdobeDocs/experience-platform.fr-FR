@@ -6,10 +6,10 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a670823139eab37d319e834de5e3025d44e9c9b4
+source-git-commit: 73a8d65255359de6cff6a9410310554ca419fe1c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2806'
+ht-degree: 13%
 
 ---
 
@@ -147,8 +147,7 @@ Sélectionnez **[!UICONTROL Exporter les fichiers complets]** pour que les fichi
 
    >[!IMPORTANT]
    >
-   >L’option permettant d’exporter des fichiers à un certain moment de la journée est actuellement en version bêta et n’est disponible que pour un certain nombre de clients.
-   ><br> <br> En raison de la configuration des processus internes de l’Experience Platform, la première exportation incrémentielle ou complète de fichier peut ne pas contenir toutes les données de renvoi nécessaires.  <br> <br> Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, nous vous recommandons de définir la première heure d’exportation du fichier après 12h GMT le jour suivant. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
+   >L’option permettant d’exporter des fichiers à un certain moment de la journée est actuellement en version bêta et n’est disponible que pour un certain nombre de clients.<br> <br> En raison de la configuration des processus Experience Platform internes, la première exportation incrémentielle ou complète de fichier peut ne pas contenir toutes les données de renvoi.  <br> <br> Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, Adobe recommande de définir l’heure d’exportation du premier fichier après 12h GMT le jour suivant. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
 
 3. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir le jour ou l’intervalle au cours duquel l’exportation doit avoir lieu.
 4. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
@@ -175,7 +174,7 @@ Sélectionnez **[!UICONTROL Exporter les fichiers incrémentiels]** pour que vos
 
    >[!IMPORTANT]
    >
-   >L&#39;option permettant de sélectionner l&#39;heure de la journée pour l&#39;export n&#39;est disponible que pour un nombre restreint de clients. <br> <br> En raison de la configuration des processus internes de l’Experience Platform, la première exportation incrémentielle ou complète de fichier peut ne pas contenir toutes les données de renvoi nécessaires.  <br> <br> Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, nous vous recommandons de définir la première heure d’exportation du fichier après 12h GMT le jour suivant. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
+   >L&#39;option permettant de sélectionner l&#39;heure de la journée pour l&#39;export n&#39;est disponible que pour un nombre restreint de clients. <br> <br> En raison de la configuration des processus Experience Platform internes, la première exportation incrémentielle ou complète de fichier peut ne pas contenir toutes les données de renvoi.  <br> <br> Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, Adobe recommande de définir l’heure d’exportation du premier fichier après 12h GMT le jour suivant. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
 
 3. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir le jour ou l’intervalle au cours duquel l’exportation doit avoir lieu.
 4. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
