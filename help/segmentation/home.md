@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; service de segments ; segment ; Segment ; Segments ; segments
+keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;segmentation;service de segments;segment;segment;segments;segments;segments
 solution: Experience Platform
-title: Présentation du service de segmentation
+title: Présentation de Segmentation Service
 topic-legacy: overview
-description: Découvrez le service de segmentation Adobe Experience Platform et le rôle qu’il joue dans l’écosystème de plateformes.
+description: Découvrez Adobe Experience Platform Segmentation Service et le rôle qu’il joue dans l’écosystème de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3e92494351e487468e6292c34763e5b2281fd6c5
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 60%
+source-wordcount: '1616'
+ht-degree: 59%
 
 ---
 
-# [!DNL Segmentation Service] présentation
+# Présentation d’[!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] fournit une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données [!DNL Real-time Customer Profile]. Ces segments sont configurés et maintenus de manière centralisée sur [!DNL Platform] et sont facilement accessibles par toute solution d&#39;Adobe.
+Adobe Experience Platform [!DNL Segmentation Service] fournit une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données [!DNL Real-time Customer Profile]. Ces segments sont configurés et conservés de manière centralisée sur [!DNL Platform] et sont facilement accessibles par toute solution d’Adobe.
 
-Ce document donne un aperçu de [!DNL Segmentation Service] et du rôle qu&#39;il joue dans Adobe Experience Platform.
+Ce document présente [!DNL Segmentation Service] et le rôle qu’il joue dans Adobe Experience Platform.
 
 ## Prise en main de [!DNL Segmentation Service]
 
@@ -35,19 +34,21 @@ Une fois qu’un segment a été défini sur le plan conceptuel, il est créé d
 
 ## Création de segments
 
-Qu’ils soient créés à l’aide de l’API ou en utilisant [!DNL Segment Builder], les segments sont en fin de compte définis à l’aide de [!DNL Profile Query Language] (PQL). C’est là que la définition conceptuelle du segment est décrite dans le langage conçu pour récupérer les profils répondant aux critères. Pour plus d’informations, voir la [présentation de PQL](./pql/overview.md).
+Qu’ils soient créés à l’aide de l’API ou de [!DNL Segment Builder], les segments sont définis à terme à l’aide de [!DNL Profile Query Language] (PQL). C’est là que la définition conceptuelle du segment est décrite dans le langage conçu pour récupérer les profils répondant aux critères. Pour plus d’informations, voir la [présentation de PQL](./pql/overview.md).
 
-Pour savoir comment créer et utiliser des segments dans [!DNL Segment Builder] (l&#39;implémentation de l&#39;interface utilisateur de [!DNL Segmentation Service]), consultez le [guide du créateur de segments](./ui/overview.md).
+Pour savoir comment créer et utiliser des segments dans [!DNL Segment Builder] (l’implémentation de l’interface utilisateur de [!DNL Segmentation Service]), consultez le [guide du créateur de segments](./ui/overview.md).
 
 Pour plus d’informations sur la création de définitions de segment à l’aide de l’API, consultez le tutoriel sur la [création de segments ciblés à l’aide de l’API](./tutorials/create-a-segment.md).
 
 >[!NOTE]
 >
->Dans l’éventualité où un schéma est étendu, tous les chargements ultérieurs doivent mettre à jour les nouveaux champs ajoutés en conséquence. Pour plus d&#39;informations sur la personnalisation de [!DNL Experience Data Model] (XDM), consultez le [Schéma Editor tutorial](../xdm/tutorials/create-schema-ui.md).
+>Dans l’éventualité où un schéma est étendu, tous les chargements ultérieurs doivent mettre à jour les nouveaux champs ajoutés en conséquence. Pour plus d’informations sur la personnalisation de [!DNL Experience Data Model] (XDM), consultez le [tutoriel de l’éditeur de schémas](../xdm/tutorials/create-schema-ui.md).
+>
+>En outre, si la durée de vie (TTL) est activée sur le jeu de données, cela peut affecter l’adhésion au segment créé. Pour plus d’informations sur la durée de vie et sur la manière dont elle peut affecter la segmentation, consultez le [guide TTL du service de profil](../profile/apply-ttl.md).
 
 ## Évaluation de segments
 
-La plate-forme prend actuellement en charge trois méthodes d’évaluation des segments : segmentation en flux continu, segmentation par lots et segmentation par arête.
+Platform prend actuellement en charge trois méthodes d’évaluation des segments : segmentation par flux, segmentation par lots et segmentation par périphérie.
 
 ### Segmentation par flux
 
@@ -59,23 +60,23 @@ Pour plus d’informations sur la segmentation par flux, consultez la [documenta
 
 Au lieu d’un processus en continu de sélection de données, la segmentation par lots déplace toutes les données de profil à la fois dans les définitions de segment afin de produire des audiences correspondantes. Une fois créé, ce segment est enregistré et stocké afin que vous puissiez l’exporter pour l’utiliser.
 
-**Segmentation incrémentielle (bêta)**
+**Segmentation incrémentale (version bêta)**
 
-Les segments de lot sont évalués toutes les 24 heures. Cependant, pour les segments existants, la segmentation incrémentielle maintient les segments à jour jusqu’à une heure.
+Les segments par lot sont évalués toutes les 24 heures. Toutefois, pour les segments existants, la segmentation incrémentielle maintient les segments à jour pendant une heure au maximum.
 
-La segmentation incrémentielle s’exécute sur les nouvelles données arrivant dans le magasin de profils. Toutefois, les avertissements suivants s’appliquent à la segmentation incrémentielle :
+La segmentation incrémentielle s’exécute sur les nouvelles données qui entrent dans la banque de profils. Toutefois, les avertissements suivants s’appliquent à la segmentation incrémentielle :
 
-- Pour tous les segments nouveaux ou récemment modifiés, les profils contenant de nouvelles données début être qualifiés au cours de la prochaine exécution incrémentielle. Toutefois, les profils sans modification seront rattrapés dans la prochaine tâche de segmentation par lot complète.
-- Les segments à plusieurs entités seront actualisés dans la segmentation incrémentielle. S’il existe des mises à jour d’entité, tous les profils contenant de nouvelles données début de les utiliser au cours de la prochaine exécution incrémentielle. Cependant, les profils sans modification seront rattrapés dans la prochaine tâche de segmentation par lots complète.
-- Les événements qui abandonnent la fenêtre de temps d’un segment seront rapprochés dans la tâche de segmentation par lots complète suivante.
+- Pour tout segment nouveau ou récemment modifié, les profils contenant de nouvelles données commenceront à être qualifiés lors de la prochaine exécution incrémentielle. Toutefois, les profils sans modification seront rattrapés lors de la prochaine tâche de segmentation par lots complète.
+- Les segments d’entités multiples seront actualisés dans la segmentation incrémentielle. S’il existe des mises à jour d’entité, tous les profils contenant de nouvelles données commenceront à les utiliser lors de l’exécution incrémentielle suivante. Toutefois, les profils sans modification seront rattrapés lors de la prochaine tâche de segmentation par lots complète.
+- Les événements qui abandonnent la fenêtre temporelle d’un segment seront réconciliés dans la prochaine tâche de segmentation par lots complète.
 
 Pour savoir comment évaluer les segments, consultez le [tutoriel sur l’évaluation des segments](./tutorials/evaluate-a-segment.md).
 
 ### Segmentation Edge
 
-La segmentation Edge permet d’évaluer instantanément les segments dans la plate-forme, ce qui permet d’utiliser les mêmes cas de personnalisation de page et de page suivante.
+La segmentation Edge permet d’évaluer instantanément les segments dans Platform, ce qui permet d’utiliser des cas de personnalisation de page et de page suivante.
 
-Pour en savoir plus sur la segmentation des arêtes, consultez la [documentation de l&#39;API](./api/edge-segmentation.md) ou la [documentation de l&#39;interface utilisateur](./ui/edge-segmentation.md).
+Pour en savoir plus sur la segmentation Edge, consultez la [documentation de l’API](./api/edge-segmentation.md) ou la [documentation de l’interface utilisateur](./ui/edge-segmentation.md).
 
 ## Accès aux résultats de la segmentation
 
@@ -85,11 +86,11 @@ Pour savoir comment accéder à un segment exporté, consultez le [tutoriel sur 
 
 Les métadonnées de segment facilitent l’indexation dans le cas où l’un de vos segments doit être réutilisé et/ou combiné.
 
-La composition de vos segments (via l&#39;API ou [!DNL Segment Builder]) nécessite de définir un nom de segment et une stratégie de fusion.
+La composition de vos segments (via l’API ou [!DNL Segment Builder]) nécessite de définir un nom de segment et une stratégie de fusion.
 
 ### Noms de segment
 
-Lors de la création d’un segment, vous devez fournir un nom de segment. Le nom du segment est utilisé pour identifier un segment particulier dans la collection créée par [!DNL Segmentation Service]. Les noms de segment doivent donc être explicites, concis et uniques.
+Lors de la création d’un segment, vous devez fournir un nom de segment. Le nom du segment permet d’identifier un segment particulier dans la collection créée par [!DNL Segmentation Service]. Les noms de segment doivent donc être explicites, concis et uniques.
 
 >[!NOTE]
 >
@@ -97,10 +98,10 @@ Lors de la création d’un segment, vous devez fournir un nom de segment. Le no
 
 ### Stratégies de fusion
 
-Les stratégies de fusion sont des règles utilisées par [!DNL Profile] pour déterminer comment les données seront hiérarchisées et combinées dans une vue unifiée dans certaines conditions.
-Si aucune stratégie de fusion n&#39;est définie, la stratégie de fusion [!DNL Platform] par défaut est utilisée. Si vous préférez utiliser une stratégie de fusion spécifique à votre organisation, vous pouvez créer la vôtre et la marquer comme valeur par défaut de votre organisation.
+Les stratégies de fusion sont des règles utilisées par [!DNL Profile] pour déterminer comment les données seront hiérarchisées et combinées dans une vue unifiée sous certaines conditions.
+Si aucune stratégie de fusion n’est définie, la stratégie de fusion [!DNL Platform] par défaut est utilisée. Si vous préférez utiliser une stratégie de fusion spécifique à votre organisation, vous pouvez créer la vôtre et la marquer comme valeur par défaut de votre organisation.
 
-Pour plus d&#39;informations sur les stratégies de fusion, consultez le [guide des stratégies de fusion](../profile/api/merge-policies.md).
+Vous trouverez plus d’informations sur les stratégies de fusion dans le [guide des stratégies de fusion](../profile/api/merge-policies.md).
 
 >[!NOTE]
 >
@@ -108,7 +109,7 @@ Pour plus d&#39;informations sur les stratégies de fusion, consultez le [guide 
 
 ### Autres métadonnées de segment
 
-Outre le nom du segment et la stratégie de fusion, [!DNL Segment Builder] vous offre un champ de métadonnées &quot;description du segment&quot; supplémentaire dans lequel vous pouvez résumer l’objectif de votre définition de segment.
+En plus du nom du segment et de la stratégie de fusion, [!DNL Segment Builder] vous offre un champ de métadonnées &quot;description du segment&quot; supplémentaire dans lequel vous pouvez résumer l’objectif de votre définition de segment.
 
 ## Fonctionnalités de segmentation avancées
 
@@ -121,7 +122,7 @@ Ces fonctionnalités avancées sont décrites plus en détail dans les sections 
 
 ## Segmentation séquentielle {#sequential}
 
-Un parcours utilisateur standard est séquentiel par nature. Adobe Experience Platform vous permet de définir une série ordonnée de segments afin de refléter ce parcours, capturant ainsi des séquences de événements au fur et à mesure de leur apparition. Vous pouvez classer les événements dans l’ordre souhaité en utilisant la chronologie du événement visuel dans le [!DNL Segment Builder].
+Un parcours utilisateur standard est séquentiel par nature. Adobe Experience Platform vous permet de définir une série ordonnée de segments pour refléter ce parcours, capturant ainsi des séquences d’événements au fur et à mesure qu’elles se produisent. Vous pouvez organiser les événements dans l’ordre souhaité à l’aide de la chronologie visuelle des événements dans la section [!DNL Segment Builder].
 
 Un exemple de parcours client qui nécessiterait une segmentation séquentielle serait consultation produit > ajout du produit > passage en caisse > pas d’achat.
 
@@ -147,11 +148,11 @@ En attribuant une variable à l’attribut de l’État d’achat, votre segment
 
 ## Segmentation d’entités multiples {#multi-entity}
 
-Grâce à la fonction de segmentation multi-entités avancée, vous pouvez étendre les données [!DNL Real-time Customer Profile] à l&#39;aide de données supplémentaires basées sur des produits, des magasins ou d&#39;autres entités autres que des personnes, également connues sous le nom d&#39;entités de &quot;dimension&quot;. Par conséquent, [!DNL Segmentation Service] peut accéder à d’autres champs pendant la définition de segment comme s’ils étaient natifs de la banque de données [!DNL Profile]. La segmentation multientité offre une certaine souplesse lors de l’identification des audiences en fonction de données pertinentes pour vos besoins commerciaux uniques. Pour plus d&#39;informations, y compris les cas d&#39;utilisation et les workflows, consultez le [guide de segmentation multientité](multi-entity-segmentation.md).
+Grâce à la fonction de segmentation d’entités multiples avancée, vous pouvez étendre les données [!DNL Real-time Customer Profile] avec des données supplémentaires basées sur des produits, des magasins ou d’autres entités non personnelles, également appelées entités de &quot;dimension&quot;. Par conséquent, [!DNL Segmentation Service] peut accéder à des champs supplémentaires lors de la définition de segment comme s’ils étaient natifs de l’entrepôt de données [!DNL Profile]. La segmentation d’entités multiples offre une certaine souplesse lors de l’identification des audiences en fonction de données pertinentes pour vos besoins commerciaux uniques. Pour plus d’informations, notamment sur les cas d’utilisation et les workflows, consultez le [guide de segmentation d’entités multiples](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] types de données
 
-[!DNL Segmentation Service] prend en charge divers types de données primitifs et complexes. Vous trouverez des informations détaillées, y compris une liste des types de données pris en charge, dans le [guide des types de données pris en charge](./data-types.md).
+[!DNL Segmentation Service] prend en charge divers types de données primitifs et complexes. Vous trouverez des informations détaillées, notamment une liste des types de données pris en charge, dans le [guide sur les types de données pris en charge](./data-types.md).
 
 ## Étapes suivantes
 
