@@ -3,9 +3,9 @@ keywords: correspondance client Google;correspondance client Google;correspondan
 title: Connexion à la correspondance client Google
 description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: da069c6c931bfd2af38b40fc061d5eb633aba9ea
+source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1548'
 ht-degree: 4%
 
 ---
@@ -48,13 +48,15 @@ Certaines destinations en Experience Platform ont certaines règles et obligatio
 | email_lc_sha256 | Adresses électroniques hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA256. Suivez les instructions de la section [Exigences de correspondance des ID](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour le texte brut et les adresses électroniques hachées, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l&#39;option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l&#39;activation. |
 | user_id | ID utilisateur personnalisés | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms personnalisé. |
 
-## Type d’exportation {#export-type}
+## Type d&#39;export {#export-type}
 
 **Exportation de segments**  : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone et autres) utilisés dans la  [!DNL Google Customer Match] destination.
 
-## [!DNL Google Customer Match] conditions préalables du compte  {#google-account-prerequisites}
+## [!DNL Google Customer Match] conditions préalables du compte {#google-account-prerequisites}
 
 Avant de configurer une destination [!DNL Google Customer Match] en Experience Platform, veillez à lire et à respecter la politique d’utilisation de [!DNL Customer Match] de Google, décrite dans la [documentation du support Google](https://support.google.com/google-ads/answer/6299717).
+
+Ensuite, assurez-vous que votre compte [!DNL Google] est configuré pour un niveau d’accès [!DNL Standard] ou supérieur. Pour plus d’informations, voir la [documentation Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) .
 
 ### Liste autorisée {#allowlist}
 
