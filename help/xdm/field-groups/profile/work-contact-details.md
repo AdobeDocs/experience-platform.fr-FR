@@ -5,7 +5,7 @@ title: Groupe de champs de schéma Détails du contact professionnel
 topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs de schéma Détails du contact du travail .
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 6%
@@ -34,5 +34,5 @@ ht-degree: 6%
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.example.1.json)
-* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.schema.json)
+* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.example.1.json)
+* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.schema.json)
