@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;profil individuel;champs;schémas;schéma;conception de schéma;groupe de champs;groupe de champs;personne;détails de personne de profil;personne;personne
 solution: Experience Platform
-title: Groupe de champs de schéma de détails démographiques
+title: Demographic Details Schema Field Group
 topic-legacy: overview
-description: Ce document fournit un aperçu du groupe de champs de schéma Détails démographiques .
+description: This document provides an overview of the Demographic Details schema field group.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 22%
@@ -26,17 +26,17 @@ ht-degree: 22%
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `person.name` | [Nom de la personne](../../data-types/person-name.md) | Objet dont les sous-champs décrivent les différents éléments du nom d’une personne. |
-| `person.birthDate` | Date | Date complète à laquelle une personne est née, sous la forme d’un horodatage ISO 8601. |
+| `person.birthDate` | Date | The full date a person was born on, in the form of an ISO 8601 timestamp. |
 | `person.birthDayAndMonth` | Chaîne | Jour et mois de naissance d’une personne, au format MM-JJ. Ce champ doit être utilisé lorsque le jour et le mois de naissance d’une personne sont connus, mais pas l’année. |
-| `person.birthYear` | Entier | L’année de naissance d’une personne, y compris le siècle (comme 1989). Ce champ doit être utilisé lorsque seul l’âge de la personne est connu, pas sa date de naissance complète. |
-| `person.gender` | Chaîne | Identité de genre de la personne. |
+| `person.birthYear` | Entier | The year a person was born, including the century (such as 1989). Ce champ doit être utilisé lorsque seul l’âge de la personne est connu, pas sa date de naissance complète. |
+| `person.gender` | Chaîne | The gender identity of the person. |
 | `person.martialStatus` | Chaîne | Décrit la relation d’une personne avec une autre significative. |
 | `person.nationality` | Chaîne | La relation juridique entre une personne et son état représentée à l’aide du code ISO 3166-1 Alpha-2. |
 | `person.taxId` | Chaîne | ID fiscal de la personne, comme le TIN aux États-Unis ou le CIF/NIF en Espagne. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
+For more details on the field group, refer to the public XDM repository:
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
-* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.schema.json)
