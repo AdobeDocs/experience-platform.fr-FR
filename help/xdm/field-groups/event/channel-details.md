@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Groupe de champs de schéma Détails du canal
 topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs de schéma Détails du canal .
-source-git-commit: b9168052174c250810e59e403cb77419d510df3b
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 4%
@@ -30,5 +30,5 @@ ht-degree: 4%
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-channel.example.1.json)
-* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-channel.schema.json)
+* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-channel.example.1.json)
+* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-channel.schema.json)
