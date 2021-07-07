@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Groupe de champs de schéma Détails du marketing de Campaign
 topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs Détails du marketing Campaign .
-source-git-commit: cb4afb0979bd65a9a82a6018323fa7beacdbf605
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 5%
@@ -30,5 +30,5 @@ ht-degree: 5%
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-marketing.example.1.json)
-* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-marketing.schema.json)
+* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.example.1.json)
+* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.schema.json)
