@@ -5,10 +5,10 @@ title: Principes de base de la composition des schémas
 topic-legacy: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 7d05b5d57ec4597b168be0261e75da5f243cb660
 workflow-type: tm+mt
-source-wordcount: '3726'
-ht-degree: 32%
+source-wordcount: '3629'
+ht-degree: 31%
 
 ---
 
@@ -32,7 +32,7 @@ La normalisation est un concept clé de [!DNL Experience Platform]. XDM, piloté
 
 L’infrastructure sur laquelle [!DNL Experience Platform] est construit, appelée [!DNL XDM System], facilite les workflows basés sur des schémas et inclut les [!DNL Schema Registry], [!DNL Schema Editor], les métadonnées de schéma et les modèles de consommation de service. Pour plus d’informations, consultez la [présentation du système XDM](../home.md).
 
-L’utilisation des schémas dans [!DNL Experience Platform] présente plusieurs avantages clés. First, schemas allow for better data governance and data minimization, which is especially important with privacy regulations. Ensuite, la création de schémas avec les composants standard d’Adobe permet d’obtenir des informations d’usine et d’utiliser les services AI/ML avec un minimum de personnalisations. Enfin, les schémas fournissent une infrastructure pour le partage de données et une orchestration efficace.
+L’utilisation des schémas dans [!DNL Experience Platform] présente plusieurs avantages clés. Tout d’abord, les schémas permettent une meilleure gouvernance des données et une réduction au minimum des données, ce qui est particulièrement important avec les réglementations de confidentialité. Ensuite, la création de schémas avec les composants standard d’Adobe permet d’obtenir des informations d’usine et d’utiliser les services AI/ML avec un minimum de personnalisations. Enfin, les schémas fournissent une infrastructure pour le partage de données et une orchestration efficace.
 
 ## Planification de votre schéma
 
@@ -40,7 +40,7 @@ La première étape de la conception d’un schéma consiste à déterminer le c
 
 ### Comportements de données dans [!DNL Experience Platform]
 
-Data intended for use in [!DNL Experience Platform] is grouped into two behavior types:
+Les données destinées à être utilisées dans [!DNL Experience Platform] sont regroupées en deux types de comportements :
 
 * **Enregistrer les données** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
 * **Données de série temporelle** : fournissent un instantané du système au moment où une action a été entreprise directement ou indirectement par un sujet enregistré.
@@ -62,13 +62,13 @@ Il est important de réfléchir aux identités client lors de la phase de planif
 Il existe deux manières d’envoyer des données d’identité à Platform :
 
 1. Ajout de descripteurs d’identité à des champs individuels, soit par l’intermédiaire de l’[interface utilisateur de l’éditeur de schémas](../ui/fields/identity.md), soit à l’aide de l’[API Schema Registry](../api/descriptors.md#create)
-1. Using an [`identityMap` field](#identityMap)
+1. Utilisation d’un champ [`identityMap`](#identityMap)
 
 #### `identityMap` {#identityMap}
 
-`identityMap` is a map-type field that describes the various identity values for an individual, along with their associated namespaces. Ce champ peut être utilisé pour fournir des informations d’identité pour vos schémas, au lieu de définir des valeurs d’identité dans la structure du schéma lui-même.
+`identityMap` est un champ de type map qui décrit les différentes valeurs d’identité d’un individu, ainsi que les espaces de noms qui lui sont associés. Ce champ peut être utilisé pour fournir des informations d’identité pour vos schémas, au lieu de définir des valeurs d’identité dans la structure du schéma lui-même.
 
-The main drawback of using `identityMap` is that identities become embedded in the data and become less visible as a result. Si vous ingérez des données brutes, vous devez définir des champs d’identité individuels dans la structure réelle du schéma à la place. Les schémas qui utilisent `identityMap` ne peuvent pas non plus participer aux relations.
+L’inconvénient principal de l’utilisation de `identityMap` est que les identités sont incorporées dans les données et deviennent par conséquent moins visibles. Si vous ingérez des données brutes, vous devez définir des champs d’identité individuels dans la structure réelle du schéma à la place. Les schémas qui utilisent `identityMap` ne peuvent pas non plus participer aux relations.
 
 Cependant, les mappages d’identité peuvent s’avérer particulièrement utiles si vous rentrez des données provenant de sources qui stockent les identités ensemble (comme [!DNL Airship] ou Adobe Audience Manager), ou s’il existe un nombre variable d’identités pour un schéma. En outre, les mappages d’identité sont requis si vous utilisez le [SDK Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/).
 
@@ -121,11 +121,11 @@ Le tableau suivant répertorie les modifications prises en charge lors de la mod
 
 | Modifications prises en charge | Modifications entraînant une rupture (non prises en charge) |
 | --- | --- |
-| <ul><li>Adding new fields to the resource</li><li>Rendre un champ obligatoire facultatif</li><li>Modification du nom d’affichage et de la description de la ressource</li><li>Activation du schéma pour participer à Profile</li></ul> | <ul><li>Supprimer des champs définis précédemment</li><li>Introduire de nouveaux champs obligatoires</li><li>Renommer ou redéfinir des champs existants</li><li>Supprimer ou limiter des valeurs de champ précédemment prises en charge</li><li>Déplacement de champs existants vers un autre emplacement de l’arborescence</li><li>Suppression du schéma</li><li>Désactivation de la participation du schéma dans Profile</li></ul> |
+| <ul><li>Ajouter de nouveaux champs à la ressource</li><li>Rendre un champ obligatoire facultatif</li><li>Modification du nom d’affichage et de la description de la ressource</li><li>Activation du schéma pour participer à Profile</li></ul> | <ul><li>Supprimer des champs définis précédemment</li><li>Introduire de nouveaux champs obligatoires</li><li>Renommer ou redéfinir des champs existants</li><li>Supprimer ou limiter des valeurs de champ précédemment prises en charge</li><li>Déplacement de champs existants vers un autre emplacement de l’arborescence</li><li>Suppression du schéma</li><li>Désactivation de la participation du schéma dans Profile</li></ul> |
 
 ### Schémas et ingestion de données
 
-In order to ingest data into [!DNL Experience Platform], a dataset must first be created. Les jeux de données sont les blocs de construction de la transformation et du suivi des données pour [[!DNL Catalog Service]](../../catalog/home.md) et représentent généralement des tableaux ou des fichiers qui contiennent des données ingérées. Tous les jeux de données sont basés sur des schémas XDM existants qui fournissent des contraintes sur ce que les données ingérées doivent contenir et sur la manière dont elles doivent être structurées. Pour plus d’informations, consultez la présentation d’[Adobe Experience Platform Data Ingestion](../../ingestion/home.md).
+Pour ingérer des données dans [!DNL Experience Platform], un jeu de données doit d’abord être créé. Les jeux de données sont les blocs de construction de la transformation et du suivi des données pour [[!DNL Catalog Service]](../../catalog/home.md) et représentent généralement des tableaux ou des fichiers qui contiennent des données ingérées. Tous les jeux de données sont basés sur des schémas XDM existants qui fournissent des contraintes sur ce que les données ingérées doivent contenir et sur la manière dont elles doivent être structurées. Pour plus d’informations, consultez la présentation d’[Adobe Experience Platform Data Ingestion](../../ingestion/home.md).
 
 ## Blocs de création d’un schéma
 
@@ -133,15 +133,15 @@ In order to ingest data into [!DNL Experience Platform], a dataset must first be
 
 Les schémas sont composés à l’aide de la formule suivante :
 
-**Class + Schema Field Group&amp;ast; = XDM Schema**
+**Classe + Groupe de champs de schéma&amp;ast; = Schéma XDM**
 
-&amp;ast;A schema is composed of a class and zero or more schema field groups. Cela signifie que vous pouvez composer un schéma de jeu de données sans utiliser de groupes de champs.
+&amp;ast;Un schéma est composé d’une classe et de zéro ou plusieurs groupes de champs de schéma. Cela signifie que vous pouvez composer un schéma de jeu de données sans utiliser de groupes de champs.
 
 ### Classe {#class}
 
 La composition d’un schéma commence par l’attribution d’une classe. Les classes définissent les aspects comportementaux des données que le schéma contiendra (enregistrements ou séries temporelles). En outre, les classes décrivent le plus petit de nombres de propriétés communes que tous les schémas basés sur cette classe doivent inclure et fournir une manière de fusionner plusieurs jeux de données compatibles.
 
-A schema&#39;s class determines which field groups will be eligible for use in that schema. Ceci est discuté plus en détail dans la [section suivante](#field-group).
+La classe d’un schéma détermine les groupes de champs qui pourront être utilisés dans ce schéma. Ceci est discuté plus en détail dans la [section suivante](#field-group).
 
 Adobe fournit plusieurs classes XDM standard (&quot;core&quot;). Deux de ces classes, [!DNL XDM Individual Profile] et [!DNL XDM ExperienceEvent], sont requises pour la plupart des processus Platform en aval. Outre ces classes principales, vous pouvez également créer vos propres classes personnalisées afin de décrire des cas d’utilisation plus spécifiques à votre organisation. Les classes personnalisées sont définies par une organisation lorsqu’aucune classe principale définie par l’Adobe n’est disponible pour décrire un cas d’utilisation unique.
 
@@ -159,15 +159,21 @@ Les groupes de champs définissent la ou les classes avec lesquelles ils sont co
 
 [!DNL Experience Platform] inclut de nombreux groupes de champs d’Adobe standard tout en permettant aux fournisseurs de définir des groupes de champs pour leurs utilisateurs et aux utilisateurs individuels de définir des groupes de champs pour leurs propres concepts spécifiques.
 
-For example, to capture details such as &quot;[!UICONTROL First Name]&quot; and &quot;[!UICONTROL Home Address]&quot; for your &quot;[!UICONTROL Loyalty Members]&quot; schema, you would be able to use standard field groups that define those common concepts. Cependant, les concepts spécifiques à des cas d’utilisation moins courants (tels que &quot;[!UICONTROL Loyalty Program Level]&quot;) ne comportent souvent pas de groupe de champs prédéfini. Dans ce cas, vous devez définir votre propre groupe de champs pour capturer ces informations.
+Par exemple, pour capturer des détails tels que &quot;[!UICONTROL Prénom]&quot; et &quot;[!UICONTROL Adresse du domicile]&quot; pour votre schéma &quot;[!UICONTROL Loyalty Members]&quot;, vous pouvez utiliser des groupes de champs standard qui définissent ces concepts communs. Cependant, les concepts spécifiques à des cas d’utilisation moins courants (tels que &quot;[!UICONTROL Loyalty Program Level]&quot;) ne comportent souvent pas de groupe de champs prédéfini. Dans ce cas, vous devez définir votre propre groupe de champs pour capturer ces informations.
 
-Remember that schemas are composed of &quot;zero or more&quot; field groups, so this means that you could compose a valid schema without using any field groups at all.
+>[!NOTE]
+>
+>Il est vivement recommandé d’utiliser des groupes de champs standard chaque fois que cela est possible dans vos schémas, car ces champs sont implicitement compris par les services [!DNL Experience Platform] et offrent une plus grande cohérence lorsqu’ils sont utilisés dans les composants [!DNL Platform].
+>
+>Les champs fournis par les composants standard (tels que &quot;Prénom&quot; et &quot;Adresse électronique&quot;) contiennent des connotations ajoutées au-delà des types de champs scalaires de base, indiquant à [!DNL Platform] que tout champ partageant le même type de données se comporte de la même manière. Ce comportement peut être considéré comme cohérent, quel que soit l’endroit d’où proviennent les données ou le service [!DNL Platform] dans lequel les données sont utilisées.
+
+N’oubliez pas que les schémas sont composés de groupes de champs &quot;zéro ou plus&quot;, ce qui signifie que vous pouvez composer un schéma valide sans utiliser aucun groupe de champs.
 
 La capture d’écran suivante montre comment les groupes de champs sont représentés dans l’interface utilisateur de Platform. Un seul groupe de champs ([!UICONTROL Détails démographiques]) est ajouté à un schéma dans cet exemple, qui fournit un regroupement de champs à la structure du schéma.
 
 ![](../images/schema-composition/field-group.png)
 
-For the most up-to-date list of available standard XDM field groups, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/fieldgroups). Alternatively, you can refer to the guide on [exploring XDM components](../ui/explore.md) if you prefer to view resources in the UI.
+Pour obtenir la liste la plus récente des groupes de champs XDM standard disponibles, reportez-vous au [référentiel XDM officiel](https://github.com/adobe/xdm/tree/master/components/fieldgroups). Vous pouvez également vous reporter au guide sur l’[exploration des composants XDM](../ui/explore.md) si vous préférez afficher les ressources dans l’interface utilisateur.
 
 ### Type de données {#data-type}
 
@@ -210,33 +216,15 @@ Les plages valides de ces types scalaires peuvent être limitées davantage à c
 >
 >Le type de champ « map » permet des données de paires clé-valeur, y compris plusieurs valeurs pour une clé unique. Les cartes ne peuvent être définies qu’au niveau du système, ce qui signifie que vous pouvez rencontrer une carte dans un schéma de secteur ou de fournisseur, mais celle-ci ne peut pas être utilisée dans les champs que vous définissez. Le [guide de développement de l’API Schema Registry](../api/getting-started.md) contient plus d’informations sur la définition des types de champ.
 
-Certaines opérations de données utilisées par des services et des applications en aval imposent des contraintes sur certains types de champs. Les services concernés incluent, sans s’y limiter :
-
-* [[!DNL Real-time Customer Profile]](../../profile/home.md)
-* [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!DNL Segmentation]](../../segmentation/home.md)
-* [[!DNL Query Service]](../../query-service/home.md)
-* [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
-
-Avant de créer un schéma à utiliser dans les services en aval, veuillez consulter la documentation appropriée de ces services afin de mieux comprendre les exigences et les contraintes de champ pour les opérations de données auxquelles le schéma est destiné.
-
-### Champs XDM
-
-En plus des champs de base et de la possibilité de définir vos propres types de données, XDM fournit un ensemble standard de champs et de types de données qui sont implicitement compris par les services [!DNL Experience Platform] et fournissent une plus grande cohérence lorsqu’ils sont utilisés dans les composants [!DNL Platform].
-
-Ces champs, tels que &quot;Prénom&quot; et &quot;Adresse électronique&quot;, contiennent des connotations ajoutées au-delà des types de champs scalaires de base, indiquant à [!DNL Platform] que tous les champs partageant le même type de données XDM se comportent de la même manière. Ce comportement peut être considéré comme cohérent, quel que soit l’endroit d’où proviennent les données ou le service [!DNL Platform] dans lequel les données sont utilisées.
-
-Consultez le [dictionnaire des champs XDM](field-dictionary.md) pour obtenir une liste complète des champs XDM disponibles. Nous vous recommandons d’utiliser les champs XDM et les types de données dès que possible pour aider à la cohérence et à la standardisation dans [!DNL Experience Platform].
-
 ## Exemple de composition
 
-Les schémas représentent le format et la structure des données qui seront ingérés dans [!DNL Platform] et qui sont créés à l’aide d’un modèle de composition. As previously mentioned, these schemas are composed of a class and zero or more field groups that are compatible with that class.
+Les schémas représentent le format et la structure des données qui seront ingérés dans [!DNL Platform] et qui sont créés à l’aide d’un modèle de composition. Comme mentionné précédemment, ces schémas sont composés d’une classe et de zéro ou plusieurs groupes de champs compatibles avec cette classe.
 
 Par exemple, un schéma décrivant les achats effectués dans un magasin de détail peut être appelé &quot;[!UICONTROL Transactions de magasin]&quot;. Le schéma met en oeuvre la classe [!DNL XDM ExperienceEvent] associée au groupe de champs standard [!UICONTROL Commerce] et un groupe de champs [!UICONTROL Informations sur le produit] défini par l’utilisateur.
 
-Another schema which tracks website traffic might be called &quot;[!UICONTROL Web Visits]&quot;. Il met également en oeuvre la classe [!DNL XDM ExperienceEvent], mais combine cette fois le groupe de champs [!UICONTROL Web] standard.
+Un autre schéma qui suit le trafic du site web peut être appelé &quot;[!UICONTROL Visites web]&quot;. Il met également en oeuvre la classe [!DNL XDM ExperienceEvent], mais combine cette fois le groupe de champs [!UICONTROL Web] standard.
 
-The diagram below shows these schemas and the fields contributed by each field group. Il contient également deux schémas basés sur la classe [!DNL XDM Individual Profile], y compris le schéma &quot;[!UICONTROL Loyalty Members]&quot; mentionné précédemment dans ce guide.
+Le diagramme ci-dessous montre ces schémas et les champs fournis par chaque groupe de champs. Il contient également deux schémas basés sur la classe [!DNL XDM Individual Profile], y compris le schéma &quot;[!UICONTROL Loyalty Members]&quot; mentionné précédemment dans ce guide.
 
 ![](../images/schema-composition/composition.png)
 
@@ -258,19 +246,19 @@ Tous les fichiers de données ingérés dans [!DNL Experience Platform] doivent 
 
 Si vous intégrez des segments provenant de systèmes externes dans Platform, vous devez utiliser les composants suivants pour les capturer dans vos schémas :
 
-* [[!UICONTROL Segment definition] class](../classes/segment-definition.md): Use this standard class to capture key attributes of an external segment definition.
+* [[!UICONTROL Classe ] de définition de segment](../classes/segment-definition.md) : Utilisez cette classe standard pour capturer les attributs clés d’une définition de segment externe.
 * [[!UICONTROL Groupe de champs ] Détails de l’appartenance au segment](../field-groups/profile/segmentation.md) : Ajoutez ce groupe de champs à votre schéma  [!UICONTROL de profils individuels ] XDM afin d’associer des profils client à des segments spécifiques.
 
 ## Étapes suivantes
 
-Now that you understand the basics of schema composition, you are ready to begin exploring and building schemas using the [!DNL Schema Registry].
+Maintenant que vous comprenez les principes de base de la composition des schémas, vous êtes prêt à commencer à explorer et à créer des schémas à l’aide de [!DNL Schema Registry].
 
 Pour examiner la structure des deux classes XDM principales et de leurs groupes de champs compatibles couramment utilisés, consultez la documentation de référence suivante :
 
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Adobe Experience Platform, and provides a user interface and RESTful API from which all available library resources are accessible. [!DNL Schema Library] contient les ressources du secteur définies par l’Adobe, les ressources du fournisseur définies par les partenaires [!DNL Experience Platform], ainsi que les classes, les groupes de champs, les types de données et les schémas composés par des membres de votre organisation.
+[!DNL Schema Registry] est utilisé pour accéder à [!DNL Schema Library] dans Adobe Experience Platform et fournit une interface utilisateur et une API RESTful à partir desquelles toutes les ressources de bibliothèque disponibles sont accessibles. [!DNL Schema Library] contient les ressources du secteur définies par l’Adobe, les ressources du fournisseur définies par les partenaires [!DNL Experience Platform], ainsi que les classes, les groupes de champs, les types de données et les schémas composés par des membres de votre organisation.
 
 Pour commencer à composer un schéma à l’aide de l’interface utilisateur, suivez le [tutoriel de l’éditeur de schémas](../tutorials/create-schema-ui.md) pour créer le schéma « Loyalty Members » mentionné tout au long de ce document.
 
@@ -284,7 +272,7 @@ Les sections suivantes contiennent des informations supplémentaires sur les pri
 
 Lorsque vous travaillez avec des bases de données relationnelles, les bonnes pratiques consistent à normaliser les données ou à prendre une entité et à la diviser en éléments individuels qui sont ensuite affichés sur plusieurs tableaux. Pour pouvoir lire les données dans leur ensemble ou mettre à jour l’entité, des opérations de lecture et d’écriture doivent être effectuées sur plusieurs tableaux individuels à l’aide de la fonction REJOINDRE.
 
-Grâce aux objets intégrés, les schémas XDM peuvent représenter directement des données complexes et les stocker dans des documents autonomes avec une structure hiérarchique. L’un des principaux avantages de cette structure est qu’elle vous permet d’effectuer des requêtes sur des données sans avoir à reconstruire l’entité par des liaisons onéreuses sur plusieurs tableaux dénormalisés. There are no hard restrictions to how many levels your schema hierarchy can be.
+Grâce aux objets intégrés, les schémas XDM peuvent représenter directement des données complexes et les stocker dans des documents autonomes avec une structure hiérarchique. L’un des principaux avantages de cette structure est qu’elle vous permet d’effectuer des requêtes sur des données sans avoir à reconstruire l’entité par des liaisons onéreuses sur plusieurs tableaux dénormalisés. Il n’existe aucune restriction stricte quant au nombre de niveaux pouvant être autorisés dans votre hiérarchie de schémas.
 
 ### Schémas et Big Data {#big-data}
 
@@ -322,9 +310,9 @@ Les avantages et inconvénients de l’utilisation d’objets sur des champs de 
 
 Les avantages et inconvénients de l’utilisation de champs de forme libre par rapport aux objets sont répertoriés ci-dessous.
 
-**Pros**:
+**Avantages** :
 
-* Free-form fields are created directly under the root object of the schema (`_tenantId`), increasing visibility.
+* Les champs de forme libre sont créés directement sous l’objet racine du schéma (`_tenantId`), ce qui augmente la visibilité.
 * Les chaînes de référence pour les champs de forme libre ont tendance à être plus courtes lors de l’utilisation de Query Service.
 
 **Inconvénients** :
