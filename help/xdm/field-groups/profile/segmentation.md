@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM
 solution: Experience Platform
 title: Groupe de champs de schéma Détails de l’appartenance à un segment
 topic-legacy: overview
-description: Ce document présente un aperçu du groupe de champs Détails de l’appartenance au segment .
+description: This document provides an overview of the Segment Membership Details schema field group.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 3%
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `segmentMembership` | Carte | Objet map qui décrit les appartenances aux segments de l’individu. La structure de cet objet est décrite en détail ci-dessous. |
+| `segmentMembership` | Carte | A map object which describes the individual&#39;s segment memberships. La structure de cet objet est décrite en détail ci-dessous. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -84,5 +84,5 @@ Voici un exemple de `segmentMembership` carte que le système a renseignée pour
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
-* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)
+* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
