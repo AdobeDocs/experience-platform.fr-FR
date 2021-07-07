@@ -5,10 +5,10 @@ title: Principes de base de la composition des schémas
 topic-legacy: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7158ae97d0260111b76edddbd447e6b302ddeb77
+source-git-commit: 2781825bf48940d0aa0a38485006263bfc8ac474
 workflow-type: tm+mt
-source-wordcount: '3708'
-ht-degree: 33%
+source-wordcount: '3726'
+ht-degree: 32%
 
 ---
 
@@ -32,7 +32,7 @@ La normalisation est un concept clé de [!DNL Experience Platform]. XDM, piloté
 
 L’infrastructure sur laquelle [!DNL Experience Platform] est construit, appelée [!DNL XDM System], facilite les workflows basés sur des schémas et inclut les [!DNL Schema Registry], [!DNL Schema Editor], les métadonnées de schéma et les modèles de consommation de service. Pour plus d’informations, consultez la [présentation du système XDM](../home.md).
 
-La création et l’utilisation de schémas dans [!DNL Experience Platform] présentent plusieurs avantages clés. Tout d’abord, les schémas permettent une meilleure gouvernance des données et une réduction au minimum des données, ce qui est particulièrement important avec les réglementations de confidentialité. Ensuite, la création de schémas avec les composants standard d’Adobe permet d’obtenir des informations d’usine et d’utiliser les services AI/ML avec un minimum de personnalisations. Enfin, les schémas fournissent une infrastructure pour le partage de données et une orchestration efficace.
+L’utilisation des schémas dans [!DNL Experience Platform] présente plusieurs avantages clés. Tout d’abord, les schémas permettent une meilleure gouvernance des données et une réduction au minimum des données, ce qui est particulièrement important avec les réglementations de confidentialité. Ensuite, la création de schémas avec les composants standard d’Adobe permet d’obtenir des informations d’usine et d’utiliser les services AI/ML avec un minimum de personnalisations. Enfin, les schémas fournissent une infrastructure pour le partage de données et une orchestration efficace.
 
 ## Planification de votre schéma
 
@@ -111,7 +111,7 @@ Comme l’exemple ci-dessus le montre, chaque clé de l’objet `identityMap` re
 
 Étant donné que la nature des expériences numériques continue à évoluer, les schémas utilisés pour les représenter le doivent aussi. Un schéma bien conçu est donc capable de s’adapter et d’évoluer si nécessaire sans provoquer des modifications destructives aux versions précédentes du schéma.
 
-Le maintien de la compatibilité descendante étant essentiel pour l’évolution du schéma, [!DNL Experience Platform] applique un principe de contrôle de version purement additif afin de s’assurer que toute révision du schéma n’entraîne que des mises à jour et des modifications non destructives. En d’autres termes, **les modifications entraînant des ruptures ne sont pas prises en charge.**
+Le maintien de la compatibilité descendante étant essentiel pour l’évolution du schéma, [!DNL Experience Platform] applique un principe de contrôle de version purement additif. Ce principe garantit que toute révision du schéma n’entraîne que des mises à jour et des modifications non destructives. En d’autres termes, **les modifications entraînant des ruptures ne sont pas prises en charge.**
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ Le tableau suivant répertorie les modifications prises en charge lors de la mod
 
 | Modifications prises en charge | Modifications entraînant une rupture (non prises en charge) |
 | --- | --- |
-| <ul><li>Ajouter de nouveaux champs à la ressource</li><li>Rendre un champ obligatoire facultatif</li><li>Modification du nom d’affichage et de la description de la ressource</li></ul> | <ul><li>Supprimer des champs définis précédemment</li><li>Introduire de nouveaux champs obligatoires</li><li>Renommer ou redéfinir des champs existants</li><li>Supprimer ou limiter des valeurs de champ précédemment prises en charge</li><li>Déplacer des attributs vers un autre emplacement de l’arborescence</li></ul> |
+| <ul><li>Ajouter de nouveaux champs à la ressource</li><li>Rendre un champ obligatoire facultatif</li><li>Modification du nom d’affichage et de la description de la ressource</li><li>Activation du schéma pour participer à Profile</li></ul> | <ul><li>Supprimer des champs définis précédemment</li><li>Introduire de nouveaux champs obligatoires</li><li>Renommer ou redéfinir des champs existants</li><li>Supprimer ou limiter des valeurs de champ précédemment prises en charge</li><li>Déplacement de champs existants vers un autre emplacement de l’arborescence</li><li>Suppression du schéma</li><li>Désactivation de la participation du schéma dans Profile</li></ul> |
 
 ### Schémas et ingestion de données
 
