@@ -6,9 +6,9 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a451e462ac38d157335568310e26cf6375699c6b
+source-git-commit: 4ad261c4ca5878f7ef5abb2c2957b5714cf3101a
 workflow-type: tm+mt
-source-wordcount: '2928'
+source-wordcount: '2888'
 ht-degree: 12%
 
 ---
@@ -154,7 +154,7 @@ Sélectionnez **[!UICONTROL Exporter les fichiers complets]** pour que les fichi
 
 >[!IMPORTANT]
 >
->La modification du planning d’exportation de fichier, de toute configuration de planification à l’exportation complète de fichier, avec la valeur **[!UICONTROL Fréquence]** définie sur **[!UICONTROL Une fois]**, pour les segments qui ont déjà été exportés, n’exporte pas de nouveau fichier de renvoi. Pour exporter un nouveau fichier de renvoi avec une planification différente, vous devez créer une nouvelle instance de destination. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
+>La modification du planning d’exportation de fichiers pour les segments qui ont déjà été exportés n’est actuellement pas prise en charge. Pour réexporter des segments avec un planning différent, vous devez créer une nouvelle instance de destination. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
 
 ### Exportation de fichiers incrémentiels {#export-incremental-files}
 
@@ -184,7 +184,7 @@ Sélectionnez **[!UICONTROL Exporter les fichiers incrémentiels]** pour que vos
 
 >[!IMPORTANT]
 >
->La modification du planning d’exportation de fichier, de toute configuration de planification à l’exportation complète de fichier, avec la valeur **[!UICONTROL Fréquence]** définie sur **[!UICONTROL Une fois]**, pour les segments qui ont déjà été exportés, n’exporte pas de nouveau fichier de renvoi. Pour exporter un nouveau fichier de renvoi avec une planification différente, vous devez créer une nouvelle instance de destination. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
+>La modification du planning d’exportation de fichiers pour les segments qui ont déjà été exportés n’est actuellement pas prise en charge. Pour réexporter des segments avec un planning différent, vous devez créer une nouvelle instance de destination. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
 
 ### Configuration des noms de fichier {#file-names}
 
