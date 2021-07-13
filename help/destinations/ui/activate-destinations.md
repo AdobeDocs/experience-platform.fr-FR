@@ -6,10 +6,10 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 73a8d65255359de6cff6a9410310554ca419fe1c
+source-git-commit: a451e462ac38d157335568310e26cf6375699c6b
 workflow-type: tm+mt
-source-wordcount: '2806'
-ht-degree: 13%
+source-wordcount: '2928'
+ht-degree: 12%
 
 ---
 
@@ -152,6 +152,9 @@ Sélectionnez **[!UICONTROL Exporter les fichiers complets]** pour que les fichi
 3. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir le jour ou l’intervalle au cours duquel l’exportation doit avoir lieu.
 4. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
 
+>[!IMPORTANT]
+>
+>La modification du planning d’exportation de fichier, de toute configuration de planification à l’exportation complète de fichier, avec la valeur **[!UICONTROL Fréquence]** définie sur **[!UICONTROL Une fois]**, pour les segments qui ont déjà été exportés, n’exporte pas de nouveau fichier de renvoi. Pour exporter un nouveau fichier de renvoi avec une planification différente, vous devez créer une nouvelle instance de destination. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
 
 ### Exportation de fichiers incrémentiels {#export-incremental-files}
 
@@ -178,6 +181,10 @@ Sélectionnez **[!UICONTROL Exporter les fichiers incrémentiels]** pour que vos
 
 3. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir le jour ou l’intervalle au cours duquel l’exportation doit avoir lieu.
 4. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
+
+>[!IMPORTANT]
+>
+>La modification du planning d’exportation de fichier, de toute configuration de planification à l’exportation complète de fichier, avec la valeur **[!UICONTROL Fréquence]** définie sur **[!UICONTROL Une fois]**, pour les segments qui ont déjà été exportés, n’exporte pas de nouveau fichier de renvoi. Pour exporter un nouveau fichier de renvoi avec une planification différente, vous devez créer une nouvelle instance de destination. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
 
 ### Configuration des noms de fichier {#file-names}
 
