@@ -5,9 +5,9 @@ title: Prise en charge du TCF 2.0 de l’IAB dans l’Experience Platform
 topic-legacy: privacy events
 description: Découvrez comment configurer vos opérations de données et vos schémas pour transmettre les choix de consentement des clients lors de l’activation de segments vers des destinations dans Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: a3468d55d95b89c075abf91391bd7dfaa974742c
 workflow-type: tm+mt
-source-wordcount: '2476'
+source-wordcount: '2564'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ Platform vous permet de collecter les données de consentement des clients par l
 
 Outre les commandes SDK déclenchées par les hooks de modification du consentement de la CMP, les données de consentement peuvent également être transmises à Experience Platform par le biais de toutes les données XDM générées par le client qui sont directement chargées dans un jeu de données [!DNL Profile] activé.
 
-Tout segment partagé avec Platform par Adobe Audience Manager (par l’intermédiaire du [!DNL Audience Manager] connecteur source ou autre) peut également contenir des données de consentement, à condition que les champs appropriés aient été appliqués à ces segments par l’intermédiaire de [!DNL Experience Cloud Identity Service]. Pour plus d’informations sur la collecte de données de consentement dans [!DNL Audience Manager], consultez le document sur le [module Adobe Audience Manager pour IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+Tout segment partagé avec Platform par Adobe Audience Manager (par l’intermédiaire du [!DNL Audience Manager] connecteur source ou autre) peut également contenir des données de consentement, à condition que les champs appropriés aient été appliqués à ces segments par l’intermédiaire de [!DNL Experience Cloud Identity Service]. Pour plus d’informations sur la collecte de données de consentement dans [!DNL Audience Manager], consultez le document sur le [module Adobe Audience Manager pour IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=fr).
 
 ### Application du consentement en aval
 
@@ -74,7 +74,7 @@ Une fois les données de consentement TCF ingérées, les processus suivants se 
 
 Les autres sections de ce document fournissent des conseils sur la configuration de Platform et de vos opérations de données pour répondre aux exigences de collecte et d’application décrites ci-dessus.
 
-## Déterminer comment générer des données de consentement du client dans votre CMP {#consent-data}
+## Déterminer comment générer des données de consentement client dans votre CMP {#consent-data}
 
 Chaque système de CMP étant unique, vous devez déterminer la meilleure manière de permettre à vos clients de fournir un consentement lorsqu’ils interagissent avec votre service. Pour ce faire, utilisez une boîte de dialogue de consentement pour les cookies, comme dans l’exemple suivant :
 
@@ -97,9 +97,9 @@ Les chaînes de consentement ne peuvent être créées que par une CMP enregistr
 
 ## Création de jeux de données avec des champs de consentement TCF {#datasets}
 
-Les données de consentement du client doivent être envoyées aux jeux de données dont les schémas contiennent des champs de consentement TCF. Reportez-vous au tutoriel sur la [création de jeux de données pour la capture du consentement TCF 2.0](./dataset.md) pour savoir comment créer les deux jeux de données requis avant de poursuivre avec ce guide.
+Les données de consentement du client doivent être envoyées aux jeux de données dont les schémas contiennent des champs de consentement TCF. Reportez-vous au tutoriel sur la [création de jeux de données pour la capture du consentement TCF 2.0](./dataset.md) pour savoir comment créer le jeu de données de profil requis (et un jeu de données d’événement d’expérience facultatif) avant de poursuivre avec ce guide.
 
-## Mettre à jour les [!DNL Profile] stratégies de fusion pour inclure les données de consentement {#merge-policies}
+## Mettre à jour les stratégies de fusion [!DNL Profile] pour inclure les données de consentement {#merge-policies}
 
 Une fois que vous avez créé un jeu de données compatible [!DNL Profile] pour collecter les données de consentement, vous devez vous assurer que vos stratégies de fusion ont été configurées pour inclure systématiquement les champs de consentement TCF dans vos profils client. Cela implique de définir la priorité du jeu de données afin que votre jeu de données de consentement soit hiérarchisé par rapport à d’autres jeux de données potentiellement conflictuels.
 
@@ -127,8 +127,8 @@ Après avoir fourni un nom unique pour la configuration, cliquez sur le bouton d
 | --- | --- |
 | [!UICONTROL Environnement de test] | Nom de la plateforme [sandbox](../../../../sandboxes/home.md) qui contient la connexion en continu requise et les jeux de données pour configurer la configuration de périphérie. |
 | [!UICONTROL Inlet de diffusion en continu] | Une connexion en continu valide pour l’Experience Platform. Consultez le tutoriel sur la [création d’une connexion en continu](../../../../ingestion/tutorials/create-streaming-connection-ui.md) si vous ne disposez pas d’inlet de diffusion existant. |
-| [!UICONTROL Jeu de données d’événement] | Sélectionnez le jeu de données [!DNL XDM ExperienceEvent] créé à l’[étape précédente](#datasets). |
-| [!UICONTROL Jeu de données de profil] | Sélectionnez le jeu de données [!DNL XDM Individual Profile] créé à l’[étape précédente](#datasets). |
+| [!UICONTROL Jeu de données d’événement] | Sélectionnez le jeu de données [!DNL XDM ExperienceEvent] créé à l’[étape précédente](#datasets). Si vous avez inclus le [[!UICONTROL consentement IAB TCF 2.0] groupe de champs](../../../../xdm/field-groups/event/iab.md) dans le schéma de ce jeu de données, vous pouvez effectuer le suivi des événements de modification du consentement au fil du temps à l’aide de la commande [`sendEvent`](#sendEvent), en stockant ces données dans ce jeu de données. Gardez à l’esprit que les valeurs de consentement stockées dans ce jeu de données ne sont **pas** utilisées dans les workflows d’application automatique. |
+| [!UICONTROL Jeu de données de profil] | Sélectionnez le jeu de données [!DNL XDM Individual Profile] créé à l’[étape précédente](#datasets). Lors de la réponse aux hooks de modification du consentement de la CMP à l’aide de la commande [`setConsent`](#setConsent), les données collectées seront stockées dans ce jeu de données. Comme ce jeu de données est activé pour Profile, les valeurs de consentement stockées dans ce jeu de données sont honorées pendant les workflows d’application automatique. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
@@ -142,7 +142,7 @@ Une fois que vous avez créé la configuration Edge décrite dans la section pr�
 >
 >Pour une présentation de la syntaxe commune à toutes les commandes du SDK Platform, consultez le document sur [l’exécution des commandes](../../../../edge/fundamentals/executing-commands.md).
 
-#### Utilisation des hooks de modification du consentement de la CMP
+#### Utilisation des hooks de modification du consentement de la CMP {#setConsent}
 
 De nombreuses CMP fournissent des hooks prêts à l’emploi qui écoutent les événements de modification du consentement. Lorsque ces événements se produisent, vous pouvez utiliser la commande `setConsent` pour mettre à jour les données de consentement de ce client.
 
@@ -189,7 +189,7 @@ OneTrust.OnConsentChanged(function () {
 });
 ```
 
-#### Utilisation des événements
+#### Utilisation des événements {#sendEvent}
 
 Vous pouvez également collecter des données de consentement TCF 2.0 sur chaque événement déclenché dans Platform à l’aide de la commande `sendEvent`.
 
