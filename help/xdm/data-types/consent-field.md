@@ -4,9 +4,9 @@ title: Type de données de champ de consentement générique
 topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM Champ de consentement générique .
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '478'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Ce type de données est conçu pour être utilisé afin de personnaliser la structure des schémas de consentement de votre organisation à l’aide du [[!UICONTROL groupe de champs Confidentialité/Personnalisation/Préférences marketing (consentement)]](../field-groups/profile/consents.md) comme base.
+>Ce type de données est conçu pour être utilisé pour personnaliser la structure des schémas de consentement de votre organisation à l’aide du [[!UICONTROL groupe de champs Contenus et Préférences]](../field-groups/profile/consents.md) comme ligne de base.
 
 ![](../images/data-types/consent-field.png)
 
