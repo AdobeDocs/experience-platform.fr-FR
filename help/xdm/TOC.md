@@ -4,10 +4,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes de modèle de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schémas
-source-git-commit: 9b6352eec56cf32e58d49be4d72b2fb4cf933b89
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 45%
+source-wordcount: '311'
+ht-degree: 46%
 
 ---
 
@@ -33,10 +33,11 @@ ht-degree: 45%
 * Groupes de champs de schéma {#field-groups}
    * Groupes de champs de profil {#profile}
       * [Détails démographiques](./field-groups/profile/demographic-details.md)
+      * [Consentement IAB TCF 2.0](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
       * [Détails de fidélité](./field-groups/profile/loyalty-details.md)
       * [Détails du contact personnel](./field-groups/profile/personal-contact-details.md)
-      * [Préférences marketing/confidentialité (consentement)](./field-groups/profile/consents.md)
+      * [Consentements et préférences](./field-groups/profile/consents.md)
       * [Détails de l’adhésion au segment](./field-groups/profile/segmentation.md)
       * [Détails du contact professionnel](./field-groups/profile/work-contact-details.md)
    * Groupes de champs d’événement {#event}
@@ -45,6 +46,7 @@ ht-degree: 45%
       * [Détails du commerce](./field-groups/event/commerce-details.md)
       * [Détails de l’ID d’utilisateur final](./field-groups/event/enduserids.md)
       * [Détails de l’environnement](./field-groups/event/environment-details.md)
+      * [Consentement IAB TCF 2.0](./field-groups/event/iab.md)
       * [Détails web](./field-groups/event/web-details.md)
    * [Mises à jour des noms de groupe de champs](./field-groups/name-updates.md)
 * Types des données {#data-types}
@@ -52,6 +54,7 @@ ht-degree: 45%
    * [Balise](./data-types/beacon.md)
    * [Détails du navigateur](./data-types/browser-details.md)
    * [Commerce](./data-types/commerce.md)
+   * [Chaîne de consentement](./data-types/consent-string.md)
    * [Contenus et préférences](./data-types/consents.md)
    * [Appareil](./data-types/device.md)
    * [Adresse électronique](./data-types/email-address.md)
@@ -98,7 +101,7 @@ ht-degree: 45%
       * [Champs d’objet](./ui/fields/object.md)
       * [Champs de tableau](./ui/fields/array.md)
       * [Champs d’énumération](./ui/fields/enum.md)
-      * [Champs d’identité](./ui/fields/identity.md)
+      * [Champs d&#39;identité](./ui/fields/identity.md)
       * [Champs de relation](./ui/fields/relationship.md)
    * [Génération d’exemples de données XDM](./ui/sample.md)
    * [Exportation des schémas XDM](./ui/export.md)
