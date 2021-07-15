@@ -4,18 +4,18 @@ title: Type de données Consentements et Préférences
 description: Le type de données Consentement pour la confidentialité, la personnalisation et les préférences marketing est destiné à prendre en charge la collecte des autorisations et préférences client générées par les plateformes de gestion du consentement (CMP) et d’autres sources provenant de vos opérations de données.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1904'
 ht-degree: 3%
 
 ---
 
-# [!DNL Consents & Preferences] type de données
+# [!UICONTROL Type de données Consentements et ] Préférences
 
-Le type de données [!UICONTROL Consentement pour la confidentialité, la personnalisation et les préférences marketing] (ci-après appelé &quot;type de données&quot;[!DNL Consents & Preferences]) est un type de données [!DNL Experience Data Model] (XDM) destiné à prendre en charge la collecte des autorisations et des préférences client générées par les plateformes de gestion du consentement (CMP) et d’autres sources provenant de vos opérations de données.
+Le type de données [!UICONTROL Consentement pour la confidentialité, la personnalisation et les préférences marketing] (ci-après appelé le type de données &quot;[!UICONTROL Consentements et préférences]&quot;) est un type de données [!DNL Experience Data Model] (XDM) destiné à prendre en charge la collecte des autorisations et des préférences des clients générées par les plateformes de gestion du consentement (CMP) et d’autres sources issues de vos opérations de données.
 
-Ce document couvre la structure et l&#39;utilisation prévue des champs fournis par le type de données [!DNL Consents & Preferences].
+Ce document couvre la structure et l’utilisation prévue des champs fournis par le type de données [!UICONTROL Contenus et Préférences] .
 
 ## Conditions préalables {#prerequisites}
 
@@ -28,9 +28,9 @@ Ce document nécessite une compréhension pratique de XDM et de l’utilisation 
 
 >[!IMPORTANT]
 >
->Le type de données [!DNL Consents & Preferences] est conçu pour couvrir divers cas d’utilisation de la gestion des préférences et du consentement. Par conséquent, ce document décrit l’utilisation des champs du type de données en termes généraux et ne fait que des suggestions sur la manière dont vous devez interpréter l’utilisation de ces champs. Consultez votre équipe juridique de la confidentialité pour aligner la structure du type de données sur la manière dont votre organisation interprète et présente à vos clients ces choix de consentement et de préférence.
+>Le type de données [!UICONTROL Contenus et Préférences] est conçu pour couvrir divers cas d’utilisation de la gestion du consentement et des préférences. Par conséquent, ce document décrit l’utilisation des champs du type de données en termes généraux et ne fait que des suggestions sur la manière dont vous devez interpréter l’utilisation de ces champs. Consultez votre équipe juridique de la confidentialité pour aligner la structure du type de données sur la manière dont votre organisation interprète et présente à vos clients ces choix de consentement et de préférence.
 
-Le type de données [!DNL Consents & Preferences] fournit plusieurs champs utilisés pour capturer les informations **consentement** et **préférence**.
+Le type de données [!UICONTROL Contenus et Préférences] fournit plusieurs champs utilisés pour capturer les informations **consentement** et **préférence**.
 
 Un consentement est une option qui permet à un client de spécifier comment ses données peuvent être utilisées. La plupart des consentements ont un aspect juridique, dans la mesure où certaines juridictions exigent l’obtention d’une autorisation avant que les données ne puissent être utilisées d’une manière particulière, ou exigent que le client ait la possibilité d’arrêter cette utilisation (opt-out) si un consentement positif n’est pas requis.
 
@@ -47,7 +47,7 @@ La capture d’écran suivante montre comment la structure du type de données e
 >
 >Consultez le guide sur l’[exploration des ressources XDM](../ui/explore.md) vers pour savoir comment rechercher une ressource XDM et examiner sa structure dans l’interface utilisateur de Platform.
 
-Le fichier JSON suivant illustre un exemple du type de données que le type de données [!DNL Consents & Preferences] peut traiter. Les sections suivantes contiennent des informations sur l’utilisation spécifique de chacun de ces champs.
+Le fichier JSON suivant illustre un exemple du type de données que le type de données [!UICONTROL Contenus et Préférences] peut traiter. Les sections suivantes contiennent des informations sur l’utilisation spécifique de chacun de ces champs.
 
 ```json
 {
@@ -251,12 +251,12 @@ Dans le même exemple, si un client choisit de ne pas participer au marketing di
 
 ## Ingestion des données à l’aide du type de données {#ingest}
 
-Pour utiliser le type de données [!DNL Consents & Preferences] afin d’ingérer des données de consentement de vos clients, vous devez créer un jeu de données basé sur un schéma qui contient ce type de données.
+Pour utiliser le type de données [!UICONTROL Contenus et Préférences] afin d’ingérer des données de consentement de vos clients, vous devez créer un jeu de données basé sur un schéma qui contient ce type de données.
 
-Consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment attribuer des types de données aux champs. Une fois que vous avez créé un schéma contenant un champ avec le type de données [!DNL Consents & Preferences] , reportez-vous à la section sur la [création d’un jeu de données](../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation du jeu de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
+Consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment attribuer des types de données aux champs. Une fois que vous avez créé un schéma contenant un champ avec le type de données [!UICONTROL Contenus et Préférences] , reportez-vous à la section sur la [création d’un jeu de données](../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation du jeu de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
 
 >[!IMPORTANT]
-Si vous souhaitez envoyer des données de consentement à [!DNL Real-time Customer Profile], vous devez créer un schéma compatible [!DNL Profile] basé sur la classe [!DNL XDM Individual Profile] qui contient le type de données [!DNL Consents & Preferences]. Le jeu de données que vous créez à partir de ce schéma doit également être activé pour [!DNL Profile]. Reportez-vous aux tutoriels ci-dessus pour connaître les étapes spécifiques aux [!DNL Real-time Customer Profile] exigences relatives aux schémas et aux jeux de données.
+Si vous souhaitez envoyer des données de consentement à [!DNL Real-time Customer Profile], vous devez créer un schéma compatible [!DNL Profile] basé sur la classe [!DNL XDM Individual Profile] qui contient le type de données [!UICONTROL Contenus et Préférences]. Le jeu de données que vous créez à partir de ce schéma doit également être activé pour [!DNL Profile]. Reportez-vous aux tutoriels ci-dessus pour connaître les étapes spécifiques aux [!DNL Real-time Customer Profile] exigences relatives aux schémas et aux jeux de données.
 En outre, vous devez également vous assurer que vos stratégies de fusion sont configurées pour prioriser le ou les jeux de données qui contiennent les dernières données de consentement et de préférence, afin que les profils client soient correctement mis à jour. Pour plus d’informations, consultez la présentation des [stratégies de fusion](../../rtcdp/profile/merge-policies.md) .
 
 ## Gestion des modifications du consentement et des préférences
@@ -265,7 +265,7 @@ Lorsqu’un client modifie ses consentements ou ses préférences sur votre site
 
 ## Annexe {#appendix}
 
-Les sections ci-dessous fournissent des informations de référence supplémentaires concernant le type de données [!DNL Consents & Preferences] .
+Les sections ci-dessous fournissent des informations de référence supplémentaires concernant le type de données [!UICONTROL Contenus et Préférences] .
 
 ### Valeurs acceptées pour `val` {#choice-values}
 
@@ -291,7 +291,7 @@ Le tableau suivant décrit les valeurs acceptées pour `preferred` :
 
 | Valeur | Description |
 | --- | --- |
-| `email` | Canal Email. |
+| `email` | Courriel messages. |
 | `push` | Notifications push. |
 | `inApp` | Les messages in-app. |
 | `sms` | SMS. |
@@ -307,6 +307,6 @@ Le tableau suivant décrit les valeurs acceptées pour `preferred` :
 
 {style=&quot;table-layout:auto&quot;}
 
-### Schéma [!DNL Consents & Preferences] complet {#full-schema}
+### Schéma [!UICONTROL Conférences et préférences] complet {#full-schema}
 
-Pour afficher le schéma complet pour le type de données [!DNL Consents & Preferences] , reportez-vous au [référentiel XDM officiel](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
+Pour afficher le schéma complet pour le type de données [!UICONTROL Contenus et Préférences], reportez-vous au [référentiel XDM officiel](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
