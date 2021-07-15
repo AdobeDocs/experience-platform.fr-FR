@@ -5,9 +5,9 @@ title: Respect du consentement dans les segments
 topic-legacy: overview
 description: Découvrez comment honorer les préférences de consentement des clients pour la collecte et le partage de données personnelles dans les opérations de segmentation.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 6d11a94d45b4a089ca6960aaf1ce78ae654ebc3f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Le respect des valeurs de consentement des clients nécessite une compréhension
 
 ## Champs de schéma de consentement
 
-Afin d’honorer les consentements et les préférences des clients, l’un des schémas qui fait partie de votre schéma d’union [!UICONTROL XDM Individual Profile] doit contenir le groupe de champs standard **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consensus)]**.
+Afin d’honorer les consentements et les préférences des clients, l’un des schémas qui fait partie de votre schéma d’union [!UICONTROL XDM Individual Profile] doit contenir le groupe de champs standard **[!UICONTROL Contenus et Préférences]**.
 
 Pour plus d’informations sur la structure et le cas d’utilisation prévu de chacun des attributs fournis par le groupe de champs, consultez le [guide de référence des consentements et des préférences](../xdm/field-groups/profile/consents.md). Pour obtenir des instructions détaillées sur l’ajout d’un groupe de champs à un schéma, reportez-vous au [guide de l’interface utilisateur XDM](../xdm/ui/resources/schemas.md#add-field-groups).
 
