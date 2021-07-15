@@ -5,9 +5,9 @@ title: Traitement du consentement dans Adobe Experience Platform
 topic-legacy: getting started
 description: Découvrez comment traiter les signaux de consentement des clients dans Adobe Experience Platform à l’aide de la norme Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1572'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,11 @@ Dans la version actuelle de la prise en charge du traitement du consentement dan
 
 >[!NOTE]
 >
->Pour plus d’informations sur la structure des champs de consentement XDM mentionnés ci-dessus, reportez-vous au guide sur le [type de données Contenus et Préférences](../../../../xdm/data-types/consents.md).
+>Pour plus d’informations sur la structure des champs de consentement XDM mentionnés ci-dessus, reportez-vous au guide sur le [[!UICONTROL type de données et les préférences ]](../../../../xdm/data-types/consents.md).
 
 Une fois le système configuré, le SDK Web Platform interprète la valeur de consentement de collecte de données pour l’utilisateur actuel afin de déterminer si les données doivent être envoyées au réseau Edge Adobe Experience Platform, abandonnées depuis le client ou conservées jusqu’à ce que l’autorisation de collecte de données soit définie sur oui ou non.
 
-## Déterminer comment générer des données de consentement du client dans votre CMP {#consent-data}
+## Déterminer comment générer des données de consentement client dans votre CMP {#consent-data}
 
 Chaque système de CMP étant unique, vous devez déterminer la meilleure manière de permettre à vos clients de fournir un consentement lorsqu’ils interagissent avec votre service. Pour ce faire, utilisez généralement une boîte de dialogue de consentement de cookie, comme dans l’exemple suivant :
 
@@ -68,7 +68,7 @@ Les données de consentement du client doivent être envoyées à un jeu de donn
 
 Reportez-vous au tutoriel sur la [configuration d’un jeu de données pour capturer des données de consentement](./dataset.md) pour obtenir des instructions détaillées sur la manière d’ajouter ces champs obligatoires à un jeu de données activé par [!DNL Profile] avant de poursuivre avec ce guide.
 
-## Mettre à jour les [!DNL Profile] stratégies de fusion pour inclure les données de consentement {#merge-policies}
+## Mettre à jour les stratégies de fusion [!DNL Profile] pour inclure les données de consentement {#merge-policies}
 
 Une fois que vous avez créé un jeu de données [!DNL Profile] activé pour le traitement des données de consentement, vous devez vous assurer que vos stratégies de fusion ont été configurées pour inclure systématiquement des champs de consentement dans chaque profil client. Cela implique de définir la priorité du jeu de données afin que votre jeu de données de consentement soit hiérarchisé par rapport à d’autres jeux de données potentiellement conflictuels.
 
@@ -76,7 +76,7 @@ Une fois que vous avez créé un jeu de données [!DNL Profile] activé pour le 
 >
 >Si vous n’avez pas de jeux de données en conflit, vous devez définir la priorité d’horodatage de votre stratégie de fusion à la place. Cela permet de s’assurer que le dernier consentement spécifié par un client est le paramètre de consentement utilisé.
 
-Pour plus d’informations sur l’utilisation des stratégies de fusion, commencez par lire la [présentation des stratégies de fusion](../../../../profile/merge-policies/overview.md). Lors de la configuration de vos stratégies de fusion, vous devez vous assurer que vos profils incluent tous les attributs de consentement requis fournis par le groupe de champs de schéma Contenus et Préférences, comme indiqué dans le guide sur la [préparation du jeu de données](./dataset.md).
+Pour plus d’informations sur l’utilisation des stratégies de fusion, commencez par lire la [présentation des stratégies de fusion](../../../../profile/merge-policies/overview.md). Lors de la configuration de vos stratégies de fusion, vous devez vous assurer que vos profils incluent tous les attributs de consentement requis fournis par le groupe de champs de schéma [!UICONTROL Contenus et Préférences], comme indiqué dans le guide sur la [préparation du jeu de données](./dataset.md).
 
 ## Importation des données de consentement dans Platform
 
@@ -86,11 +86,11 @@ Vous devez principalement utiliser le SDK Web de Adobe Experience Platform pour 
 
 Vous trouverez des détails sur chacune de ces méthodes dans les sous-sections ci-dessous.
 
-### Configurez le SDK Web Experience Platform pour traiter les données de consentement {#web-sdk}
+### Configuration du SDK Web Experience Platform pour traiter les données de consentement {#web-sdk}
 
 Une fois que vous avez configuré votre CMP pour écouter les événements de modification du consentement sur votre site web, vous pouvez intégrer le SDK Web Experience Platform pour recevoir les paramètres de consentement mis à jour et les envoyer à Platform à chaque chargement de page et chaque fois qu’un événement de modification du consentement se produit. Pour plus d’informations, consultez le guide sur la [configuration du SDK Web pour traiter les données de consentement du client](./sdk.md) .
 
-### Configurez le SDK Mobile Experience Platform pour traiter les données de consentement {#mobile-sdk}
+### Configuration du SDK Mobile Experience Platform pour traiter les données de consentement {#mobile-sdk}
 
 Si des préférences de consentement du client sont requises dans votre application mobile, vous pouvez intégrer le SDK Mobile Experience Platform pour récupérer et mettre à jour les paramètres de consentement, en les envoyant à Platform chaque fois que l’API de consentement est appelée.
 
