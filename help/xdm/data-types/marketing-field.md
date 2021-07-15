@@ -4,9 +4,9 @@ title: Type de données du champ de préférences marketing générique
 topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM Champ de préférences marketing générique .
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '539'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Ce type de données est conçu pour être utilisé afin de personnaliser la structure des schémas de consentement de votre organisation à l’aide du [[!UICONTROL groupe de champs Confidentialité/Personnalisation/Préférences marketing (consentement)]](../field-groups/profile/consents.md) comme base.
+>Ce type de données est conçu pour être utilisé pour personnaliser la structure des schémas de consentement de votre organisation à l’aide du [[!UICONTROL groupe de champs Contenus et Préférences]](../field-groups/profile/consents.md) comme ligne de base.
 >
 >Si vous avez besoin d’une carte `subscriptions` pour un champ de préférence marketing particulier, vous devez utiliser le champ [marketing avec le type de données d’abonnements](./marketing-field-subscriptions.md) à la place.
 
