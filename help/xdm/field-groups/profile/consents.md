@@ -1,19 +1,19 @@
 ---
 solution: Experience Platform
-title: Groupe de champs de schéma de préférences/personnalisation/préférences marketing (consentement)
+title: Groupe de champs de schéma de contenu et de préférences
 topic-legacy: overview
-description: Ce document présente un aperçu du groupe de champs de schéma Préférences marketing (Contenus) pour la confidentialité/personnalisation.
+description: Ce document présente un aperçu du groupe de champs de schéma Contenus et Préférences .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '2304'
+source-wordcount: '2316'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL Groupe de champs Confidentialité/Personnalisation/Préférences marketing (consentement)] 
+# [!UICONTROL Consentements et groupe de champs ] Préférences
 
-[!UICONTROL Privacy/Personalization/Marketing Preferences (Conférences)]  (ci-après le groupe de  [!DNL Privacy & Consents] champs) est un groupe de champs standard pour la  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md), qui est utilisé pour capturer les informations de consentement et de préférence du client.
+[!UICONTROL Contient et ]privilégie un groupe de champs standard pour la  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md), qui est utilisé pour capturer les informations de consentement et de préférence du client.
 
 >[!NOTE]
 >
@@ -23,9 +23,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Le groupe de champs [!DNL Consents & Preferences] est conçu pour couvrir un éventail de cas pratiques de gestion des consentements et des préférences. Par conséquent, ce document décrit l’utilisation des champs du groupe de champs en termes généraux et ne fait que des suggestions sur la manière dont vous devez interpréter l’utilisation de ces champs. Veuillez consulter votre équipe juridique de la confidentialité pour aligner la structure du groupe de champs avec la manière dont votre organisation interprète et présente à vos clients ces choix de consentement et de préférence.
+>Le groupe de champs [!UICONTROL Conférences et Préférences] est conçu pour couvrir un large éventail de cas d’utilisation de la gestion du consentement et des préférences. Par conséquent, ce document décrit l’utilisation des champs du groupe de champs en termes généraux et ne fait que des suggestions sur la manière dont vous devez interpréter l’utilisation de ces champs. Veuillez consulter votre équipe juridique de la confidentialité pour aligner la structure du groupe de champs avec la manière dont votre organisation interprète et présente à vos clients ces choix de consentement et de préférence.
 
-Le groupe de champs [!DNL Consents & Preferences] fournit plusieurs champs utilisés pour capturer les informations **consentement** et **préférence**.
+Le groupe de champs [!UICONTROL Contenus et Préférences] fournit plusieurs champs utilisés pour capturer les informations **consentement** et **préférence**.
 
 Un consentement est une option qui permet à un client de spécifier comment ses données peuvent être utilisées. La plupart des consentements ont un aspect juridique, dans la mesure où certaines juridictions exigent l’obtention d’une autorisation avant que les données ne puissent être utilisées d’une manière particulière, ou exigent que le client ait la possibilité d’arrêter cette utilisation (opt-out) si un consentement positif n’est pas requis.
 
@@ -42,7 +42,7 @@ La capture d’écran suivante montre comment la structure du groupe de champs e
 >
 >Consultez le guide sur l’[exploration des ressources XDM](../../ui/explore.md) vers pour savoir comment rechercher une ressource XDM et examiner sa structure dans l’interface utilisateur de Platform.
 
-Le fichier JSON suivant illustre un exemple du type de données que le groupe de champs [!DNL Consents & Preferences] peut traiter. Les sections suivantes contiennent des informations sur l’utilisation spécifique de chacun de ces champs.
+Le fichier JSON suivant illustre un exemple du type de données que le groupe de champs [!UICONTROL Contenus et Préférences] peut traiter. Les sections suivantes contiennent des informations sur l’utilisation spécifique de chacun de ces champs.
 
 ```json
 {
@@ -343,12 +343,12 @@ Vous ne devez pas définir cette valeur directement, car le SDK Adobe Experience
 
 ## Ingestion de données à l’aide du groupe de champs {#ingest}
 
-Pour utiliser le groupe de champs [!DNL Consents & Preferences] afin d’ingérer les données de consentement de vos clients, vous devez créer un jeu de données basé sur un schéma qui contient ce groupe de champs.
+Pour utiliser le groupe de champs [!UICONTROL Contenus et Préférences] afin d’ingérer les données de consentement de vos clients, vous devez créer un jeu de données basé sur un schéma qui contient ce groupe de champs.
 
-Consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment attribuer des groupes de champs à des champs. Une fois que vous avez créé un schéma contenant un champ avec le groupe de champs [!DNL Consents & Preferences] , reportez-vous à la section sur la [création d’un jeu de données](../../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation du jeu de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
+Consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment attribuer des groupes de champs à des champs. Une fois que vous avez créé un schéma contenant un champ avec le groupe de champs [!UICONTROL Contenus et Préférences] , reportez-vous à la section sur la [création d’un jeu de données](../../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation du jeu de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
 
 >[!IMPORTANT]
-Si vous souhaitez envoyer des données de consentement à [!DNL Real-time Customer Profile], vous devez créer un schéma compatible [!DNL Profile] basé sur la classe [!DNL XDM Individual Profile] qui contient le groupe de champs [!DNL Consents & Preferences]. Le jeu de données que vous créez à partir de ce schéma doit également être activé pour [!DNL Profile]. Reportez-vous aux tutoriels ci-dessus pour connaître les étapes spécifiques aux [!DNL Real-time Customer Profile] exigences relatives aux schémas et aux jeux de données.
+Si vous souhaitez envoyer des données de consentement à [!DNL Real-time Customer Profile], vous devez créer un schéma compatible [!DNL Profile] basé sur la classe [!DNL XDM Individual Profile] qui contient le groupe de champs [!UICONTROL Contenus et Préférences]. Le jeu de données que vous créez à partir de ce schéma doit également être activé pour [!DNL Profile]. Reportez-vous aux tutoriels ci-dessus pour connaître les étapes spécifiques aux [!DNL Real-time Customer Profile] exigences relatives aux schémas et aux jeux de données.
 En outre, vous devez également vous assurer que vos stratégies de fusion sont configurées pour prioriser le ou les jeux de données qui contiennent les dernières données de consentement et de préférence, afin que les profils client soient correctement mis à jour. Pour plus d’informations, consultez la présentation des [stratégies de fusion](../../../rtcdp/profile/merge-policies.md) .
 
 ## Gestion des modifications du consentement et des préférences
@@ -357,7 +357,7 @@ Lorsqu’un client modifie ses consentements ou ses préférences sur votre site
 
 ## Annexe {#appendix}
 
-Les sections ci-dessous fournissent des informations de référence supplémentaires sur le groupe de champs [!DNL Consents & Preferences].
+Les sections ci-dessous fournissent des informations de référence supplémentaires concernant le groupe de champs [!UICONTROL Contenus et Préférences] .
 
 ### Valeurs acceptées pour `val` {#choice-values}
 
@@ -383,7 +383,7 @@ Le tableau suivant décrit les valeurs acceptées pour `preferred` :
 
 | Valeur | Description |
 | --- | --- |
-| `email` | Canal Email. |
+| `email` | Courriel messages. |
 | `push` | Notifications push. |
 | `inApp` | Les messages in-app. |
 | `sms` | SMS. |
@@ -399,6 +399,6 @@ Le tableau suivant décrit les valeurs acceptées pour `preferred` :
 
 {style=&quot;table-layout:auto&quot;}
 
-### Schéma [!DNL Consents & Preferences] complet {#full-schema}
+### Schéma [!UICONTROL Conférences et préférences] complet {#full-schema}
 
-Pour afficher le schéma complet du groupe de champs [!DNL Consents & Preferences], reportez-vous au [référentiel XDM officiel](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
+Pour afficher le schéma complet du groupe de champs [!UICONTROL Contenus et Préférences], reportez-vous au [référentiel XDM officiel](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
