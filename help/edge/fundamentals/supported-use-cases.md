@@ -2,9 +2,9 @@
 title: Cas d’utilisation pris en charge avec le SDK Web de Adobe Experience Platform
 description: Découvrez les cas d’utilisation pris en charge avec le SDK Web de Adobe Experience Platform.
 keywords: sdk web;cas d’utilisation
-source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
+source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '565'
 ht-degree: 16%
 
 ---
@@ -43,7 +43,7 @@ Cette page répertorie les cas d’utilisation pris en charge pour le SDK Web, a
 | Si le jeu de données est activé pour le profil, possibilité d’envoyer des données à Real-time Customer Data Profile en temps réel |  |
 | Envoi de données à Customer Journey Analytics en temps réel |  |
 | Consentement en écriture sur le profil | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
-| Transfert des données côté serveur en temps réel vers des tiers | [Documentation](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
+| Transfert des données côté serveur en temps réel vers des tiers | [Documentation](../../tags/ui/event-forwarding/overview.md) |
 | Prise en charge des espaces de noms d’identité |  |
 
 {style=&quot;table-layout:auto&quot;}
