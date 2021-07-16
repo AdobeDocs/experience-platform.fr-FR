@@ -5,10 +5,10 @@ title: Présentation de la collecte de données
 topic-legacy: overview
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: a150c23dffde9431953a019509e9554159052d21
-workflow-type: ht
-source-wordcount: '320'
-ht-degree: 100%
+source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+workflow-type: tm+mt
+source-wordcount: '313'
+ht-degree: 95%
 
 ---
 
@@ -43,6 +43,6 @@ Platform Edge Network est un réseau de serveurs distribué dans le monde entier
 
 ## Transformation, enrichissement et envoi de données de manière rapide et sécurisée
 
-[Adobe Experience Platform Launch côté serveur](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=fr) peut puiser dans n’importe quel flux de données de Platform. Vous pouvez transformer, enrichir et envoyer des données vers une destination autre qu’Adobe avec une latence extrêmement faible, et ce, sans ajouter de code tiers au périphérique client. Ainsi, les données sont collectées et distribuées de manière plus rapide et plus sécurisée.
+[Le transfert d’événement dans Adobe Experience ](../tags/ui/event-forwarding/overview.md) Platform peut appuyer sur n’importe quel flux de données Platform. Vous pouvez transformer, enrichir et envoyer des données vers une destination autre qu’Adobe avec une latence extrêmement faible, et ce, sans ajouter de code tiers au périphérique client. Ainsi, les données sont collectées et distribuées de manière plus rapide et plus sécurisée.
 
 ![](./images/launch.png)
