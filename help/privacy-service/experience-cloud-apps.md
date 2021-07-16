@@ -5,9 +5,9 @@ title: Applications Privacy Service et Experience Cloud
 topic-legacy: overview
 description: Ce document fournit une référence pour la configuration de différentes applications Experience Cloud pour les opérations liées à la confidentialité.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 55d6d8ad7b0fc5457dc0fdc981aaa92717adbe68
+source-git-commit: 892bb4fa5302d63923c1a2e4759f0253955576e2
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '594'
 ht-degree: 44%
 
 ---
@@ -49,9 +49,9 @@ Vous trouverez ci-dessous une liste des applications [!DNL Experience Cloud] qui
 | [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html) | Présentation des fonctionnalités relatives au RGPD pour Adobe Campaign Classic. |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Présentation de la gestion des requêtes RGPD par l’administrateur de la confidentialité client ou l’administrateur AEM. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Étapes pour créer des requêtes RGPD d’accès et de suppression à l’aide de Livefyre. |
-| [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/client-side-info/deploy-javascript-tags-to-opt-in-to-launch.html) | Comment les développeurs peuvent-ils utiliser les extensions et le créateur de règles pour définir les solutions d’accords préalables et de droits d’opposition ? |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Assurez-vous que vos installations de Magento Commerce sont conformes aux exigences des législations spécifiques sur la confidentialité. |
 | [Marketo](https://www.marketo.com/company/trust/gdpr/) | Découvrez comment les réglementations de confidentialité s’appliquent à Marketo. |
+| [Balises dans Adobe Experience Platform](../tags/ui/client-side/consent.md) | Comment les développeurs peuvent-ils utiliser les extensions et le créateur de règles pour définir les solutions d’accords préalables et de droits d’opposition ? |
 | [Workfront](https://www.workfront.com/privacy-notice) | Découvrez comment Workfront collecte des données personnelles et comment un sujet des données peut envoyer une demande d’accès à des informations personnelles via un formulaire. |
 
 {style=&quot;table-layout:auto&quot;}
