@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform s’engage à fournir des fonctionnalités accessibles et inclusives à tous les individus.
 source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '311'
 ht-degree: 100%
 
