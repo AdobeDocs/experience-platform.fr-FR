@@ -5,7 +5,7 @@ title: Présentation des jeux de mappages
 topic-legacy: overview
 description: Découvrez comment utiliser les jeux de mappages avec la préparation de données Adobe Experience Platform.
 source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '959'
 ht-degree: 100%
 
