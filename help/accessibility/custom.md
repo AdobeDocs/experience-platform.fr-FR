@@ -1,151 +1,151 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;profil unifié;Profil unifié;unifié;Profil;rtcp;graphiques XDM
-title: Solutions d’accessibilité personnalisée pour les Experience Platform
+title: Solutions d’accessibilité personnalisées pour Experience Platform
 topic-legacy: guide
 type: Documentation
-description: En savoir plus sur les solutions d’accessibilité personnalisées dans l’interface utilisateur de Adobe Experience Platform.
+description: En savoir plus sur les solutions d’accessibilité personnalisées dans l’interface utilisateur d’Adobe Experience Platform.
 source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1531'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# Solutions d’accessibilité personnalisées pour les Experience Platform
+# Solutions d’accessibilité personnalisées pour Experience Platform
 
-Adobe Experience Platform est continuellement amélioré pour répondre aux besoins de tous les types d’utilisateurs et se conformer aux normes internationales qui incluent les personnes ayant des déficiences visuelles, auditives, mobiles ou autres. Ce document décrit les solutions d’accessibilité personnalisées dans l’interface utilisateur de l’Experience Platform.
+Adobe Experience Platform est continuellement amélioré pour répondre aux besoins de tous les types d’utilisateurs et appliquer les normes internationales afin d’inclure les personnes atteintes d’une déficience visuelle ou auditive, souffrant de mobilité réduite ou autre. Ce document décrit les solutions d’accessibilité personnalisées dans l’interface utilisateur d’Experience Platform.
 
-## Page d’accueil et interface utilisateur - Aperçu
+## Présentation de la page d’accueil et de l’interface utilisateur
 
-L’interface utilisateur de l’Experience Platform respecte les rapports de contraste requis pour le texte, les graphiques et les composants de l’interface utilisateur normaux. Les couleurs de l’interface utilisateur ont également été choisies pour prendre en charge l’accessibilité pour tous les utilisateurs, y compris ceux présentant un handicap visuel.
+L’interface utilisateur d’Experience Platform applique les rapports de contraste requis pour le texte normal, les graphiques et les composants de l’interface utilisateur. Les couleurs de l’interface utilisateur ont également été choisies pour prendre en charge l’accessibilité de tous les utilisateurs, y compris ceux présentant un handicap visuel.
 
-Dans Platform, les éléments de l’interface utilisateur qui peuvent être cliqués ou activés avec un pointeur peuvent également être engagés à l’aide du clavier. Cela inclut le volet de navigation de gauche, les lecteurs vidéo, les tableaux, etc.
+Dans Platform, les éléments de l’interface utilisateur exploitables ou sur lesquels l’utilisateur peut cliquer peuvent également fonctionner à l’aide d’un clavier. Cela inclut le volet de navigation de gauche, les lecteurs vidéo, les tableaux, etc.
 
-Experience Platform s’efforce de respecter les normes internationales d’accessibilité, y compris les directives d’accessibilité du contenu web 2.1 aux niveaux A et AA et les normes web de l’Initiative sur l’accessibilité web - Applications Internet riches accessibles (WAI-ARIA).
+Experience Platform s’efforce de respecter les normes internationales en matière d’accessibilité. Cela inclut les règles pour l’accessibilité des contenus web 2.1 aux niveaux A et AA, ainsi que les normes web WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications).
 
-![Page d’accueil de l’interface utilisateur de Adobe Experience Platform.](images/homepage.png)
+![Page d’accueil de l’interface utilisateur d’Adobe Experience Platform.](images/homepage.png)
 
-## Navigation de gauche
+## Volet de navigation de gauche
 
-Le volet de navigation de gauche de l’interface utilisateur de l’Experience Platform est accessible via le clavier et fournit un contraste des couleurs dans les états normaux, de survol et de sélection, conformément aux normes d’accessibilité.
+Le volet de navigation de gauche de l’interface utilisateur d’Experience Platform est accessible à partir du clavier et fournit un contraste des couleurs dans les états Normal, De survol et De sélection, conformément aux normes d’accessibilité.
 
-Dans l’écran d’accueil, les utilisateurs peuvent accéder à l’onglet dans le volet de navigation de gauche. Si vous sélectionnez **Maj + Tab**, l’utilisateur est renvoyé à l’écran d’accueil.
+Sur l’écran d’accueil, les utilisateurs peuvent utiliser la touche de tabulation pour accéder au volet de navigation de gauche. En sélectionnant **Maj + touche de tabulation** l’utilisateur est renvoyé à l’écran d’accueil.
 
-![L’Experience Platform a quitté la navigation.](images/left-navigation-select.png)
+![Volet de navigation de gauche d’Experience Platform.](images/left-navigation-select.png)
 
-La navigation de gauche étant active, l’onglet **Tab** permet aux utilisateurs de développer et de réduire l’interaction. La possibilité de développer ou de réduire la navigation de gauche est activée avec **Entrée (Retour)**.
+Lorsque le focus se trouve sur le volet de navigation de gauche, la touche de **tabulation** permet aux utilisateurs de développer et de réduire l’interaction. La possibilité de développer ou réduire le volet de navigation de gauche est activée avec **Entrée (Retour)**.
 
-![La navigation à gauche de l’Experience Platform s’est effondrée.](images/left-navigation-collapse.png)
+![Volet de navigation de gauche d’Experience Platform réduit.](images/left-navigation-collapse.png)
 
-Avec la navigation de gauche active, les touches fléchées Haut et Bas naviguent continuellement vers chaque élément de la navigation et du cycle (en d’autres termes, la cible d’action ne se déplace pas tant que l’utilisateur ne s’éloigne pas de la navigation de gauche). Le focus s’affiche pour les éléments de navigation lorsqu’ils sont sélectionnés. La sélection en cours s’affiche avec un texte en surbrillance et en gras. Lorsque vous sélectionnez un élément de navigation de gauche, **Entrée (Retour)** ouvre l’élément d’interface utilisateur sélectionné dans le panneau de droite, mais la sélection reste dans le volet de navigation de gauche jusqu’à ce que l’utilisateur s’éloigne de l’onglet .
+Lorsque le focus se trouve sur le volet de navigation de gauche, les touches fléchées vers le haut et vers le bas permettent d’accéder à chaque élément de la navigation dans un cycle continu (en d’autres termes, le focus reste sur le volet de navigation de gauche tant que l’utilisateur ne le quitte pas à l’aide de la touche de tabulation). Le focus apparaît pour les éléments de navigation sélectionnés. La sélection en cours s’affiche avec un texte en surbrillance et en gras. Lorsqu’un élément du volet de navigation de gauche est sélectionné, la touche **Entrée (Retour)** ouvre l’élément d’interface utilisateur sélectionné dans le panneau de droite. Toutefois, le focus reste sur le volet de navigation de gauche jusqu’à ce que l’utilisateur le quitte à l’aide de la touche de tabulation.
 
-![Le volet de navigation de gauche de l’Experience Platform avec les sources sélectionnées.](images/left-navigation-sources.png)
+![Volet de navigation de gauche d’Experience Platform avec l’élément Sources sélectionné.](images/left-navigation-sources.png)
 
-Certaines fonctionnalités de Platform ne sont pas activées pour tous les utilisateurs. Ces éléments apparaissent dans la navigation, mais ne peuvent pas être sélectionnés. Lorsque vous naviguez à l’aide du clavier, ces éléments sont ignorés lors de la navigation par flèche et ne peuvent pas être sélectionnés à l’aide de la commande **Entrée (retour)**.
+Certaines fonctionnalités de Platform ne sont pas activées pour tous les utilisateurs. Ces éléments apparaissent dans la navigation, mais ne peuvent pas être sélectionnés. Lorsque vous naviguez à l’aide du clavier, ces éléments sont ignorés lors de la navigation par flèche et ne peuvent pas être sélectionnés à l’aide de la touche **Entrée (Retour)**.
 
-![Les sections de la navigation de gauche de l’Experience Platform qui ne sont pas activées pour l’utilisateur ne peuvent pas être sélectionnées.](images/left-navigation-sections-disabled.png)
+![Sections du volet de navigation de gauche d’Experience Platform non activées pour l’utilisateur et ne pouvant pas être sélectionnées.](images/left-navigation-sections-disabled.png)
 
-## Boîte de dialogue Vidéo incorporée
+## Boîte de dialogue de la vidéo intégrée
 
-Vous pouvez visionner les vidéos dans Experience Platform à l’aide de la navigation clavier pour mettre en surbrillance et sélectionner un lien vidéo disponible. Une boîte de dialogue vidéo incorporée s’ouvre alors dans l’interface utilisateur de Platform.
+Vous pouvez visionner des vidéos dans Experience Platform à l’aide de la navigation au clavier, qui permet de mettre en surbrillance et de sélectionner un lien vidéo disponible. Une boîte de dialogue de la vidéo intégrée s’ouvre alors dans l’interface utilisateur de Platform.
 
-![Une bordure bleue apparaît autour d’un élément sélectionné pour indiquer que le focus est appliqué.](images/profile-overview-tab.png)
+![Bordure bleue apparaissant autour d’un élément sélectionné pour indiquer que le focus est appliqué.](images/profile-overview-tab.png)
 
-## Accessibilité clavier de la boîte de dialogue vidéo
+## Accessibilité de la boîte de dialogue de la vidéo à l’aide du clavier
 
-La boîte de dialogue vidéo incorporée peut également être naviguée à l’aide du clavier. Le tableau suivant décrit la navigation clavier complète disponible pour la boîte de dialogue vidéo incorporée.
+Vous pouvez également naviguer dans la boîte de dialogue de la vidéo intégrée à l’aide du clavier. Le tableau suivant décrit la navigation au clavier complète disponible pour la boîte de dialogue de la vidéo intégrée.
 
-| Elément Boîte de dialogue | Accessibilité au clavier | Description |
+| Élément de la boîte de dialogue | Accessibilité à l’aide du clavier | Description |
 |---|---|---|
-| Lecture et pause | Onglet<br/>Barre d’espacement | Utilisez **l’onglet** pour mettre l’accent sur le bouton de lecture. **** La barre d’espace lance la lecture vidéo et interrompt la lecture vidéo. |
-| Lecture | Tab<br/>Flèche vers la gauche<br/>Flèche vers la droite | Lorsque la vidéo est en cours de lecture, utilisez **Tabulation** pour cibler la barre de défilement. Avec la barre de défilement active, **les touches fléchées gauche et droite** ignorent la lecture vidéo avant et arrière 5 secondes, respectivement. |
-| Mode muet | Onglet<br/>Barre d’espacement | Utilisez **Onglet** pour cibler l’élément de volume silencieux. Utilisez **spacebar** pour mettre en sourdine ou annuler la lecture vidéo. |
-| Volume | Tab<br/>Flèche vers la gauche<br/>Flèche vers la droite | Utilisez **Onglet** pour vous concentrer sur l’élément de volume. **Les** touches fléchées gauche et droite déplacent le volume vers le haut et vers le bas, respectivement. |
-| [!UICONTROL Sous-titres]  codés(&quot;cc&quot;) | Onglet<br/>Entrée<br/>Flèche vers le haut<br/>Flèche vers le bas | **** Onglet Sous-titres  [!UICONTROL codés]  (&quot;cc&quot;). Utilisez **Entrée** pour ouvrir le menu, et **touches fléchées Haut et Bas** pour sélectionner une langue pour les sous-titres. **** L’entrée confirme votre sélection. |
-| [!UICONTROL Qualité] | Onglet<br/>Entrée<br/>Flèche vers le haut<br/>Flèche vers le bas | Utilisez **l’onglet** pour cibler l’élément [!UICONTROL Qualité]. Utilisez **Entrée** pour ouvrir le menu et les **touches fléchées Haut et Bas** pour sélectionner la qualité vidéo. **** L’entrée confirme votre sélection. |
-| Plein écran | Onglet<br/>Barre d’espacement ou Entrée<br/>Échappement | Utilisez **Onglet** pour cibler l’élément Plein écran. Utilisez **la barre d’espace ou Entrée** pour activer l’affichage plein écran. **Escape** (&quot;esc&quot;) quitte le mode plein écran. |
-| Fermer | Onglet<br/>Barre d’espace ou Entrée | Utilisez **Tabulation** pour mettre le bouton de fermeture au point. Utilisez la touche **barre d’espace ou Entrée** pour quitter la boîte de dialogue vidéo. |
+| Lecture et pause | Touche de tabulation<br/>Barre d’espacement | Utilisez la touche de **tabulation** pour définir le focus sur le bouton de lecture. La **barre d’espacement** permet de démarrer la lecture de la vidéo ou de la mettre en pause. |
+| Barre de défilement | Touche de tabulation<br/>Flèche à gauche<br/>Flèche à droite | Lorsque la vidéo est en cours de lecture, utilisez la touche de **tabulation** pour placer le focus sur la barre de défilement. Lorsque le focus se trouve sur la barre de défilement, les **touches fléchées à gauche et à droite** font respectivement avancer et reculer la lecture vidéo de 5 secondes. |
+| Mode muet | Touche de tabulation<br/>Barre d’espacement | Utilisez la touche de **tabulation** pour placer le focus sur l’élément de volume muet. Utilisez la **barre d’espacement** pour couper ou remettre le son de la lecture vidéo. |
+| Volume | Touche de tabulation<br/>Flèche à gauche<br/>Flèche à droite | Utilisez la touche de **tabulation** pour placer le focus sur l’élément de volume. Les **touches fléchées à gauche et à droite** augmentent ou diminuent respectivement le volume. |
+| [!UICONTROL Sous-titres] (« cc ») | Touche de tabulation<br/>Entrée<br/>Flèche vers le haut<br/>Flèche vers le bas | Utilisez la touche de **tabulation** pour atteindre l’élément [!UICONTROL Sous-titres] (« cc »). Utilisez la touche **Entrée** pour ouvrir le menu, puis les **touches fléchées vers le haut et vers le bas** pour sélectionner la langue des sous-titres. Appuyez sur **Entrée** pour confirmer votre sélection. |
+| [!UICONTROL Qualité] | Touche de tabulation<br/>Entrée<br/>Flèche vers le haut<br/>Flèche vers le bas | Utilisez la touche de **tabulation** pour placer le focus sur l’élément [!UICONTROL Qualité]. Utilisez la touche **Entrée** pour ouvrir le menu, puis les **touches fléchées vers le haut et vers le bas** pour sélectionner la qualité de la vidéo. Appuyez sur **Entrée** pour confirmer votre sélection. |
+| Plein écran | Touche de tabulation<br/>Barre d’espacement ou Entrée<br/>Échap | Utilisez la touche de **tabulation** pour placer le focus sur l’élément Plein écran. Utilisez la **barre d’espacement ou la touche Entrée** pour activer l’affichage plein écran. Appuyez sur **Échap** (« esc ») pour quitter le mode plein écran. |
+| Fermer | Touche de tabulation<br/>Barre d’espacement ou Entrée | Utilisez la touche de **tabulation** pour placer le focus sur le bouton Fermer. Utilisez la **barre d’espacement ou la touche Entrée** pour quitter la boîte de dialogue de la vidéo. |
 
 >[!NOTE]
 >
->À tout moment pendant la lecture, la touche Échap (&quot;esc&quot;) peut être utilisée pour fermer la boîte de dialogue vidéo incorporée.
+>À tout moment pendant la lecture, la touche Échap (« esc ») peut être utilisée pour fermer la boîte de dialogue de la vidéo intégrée.
 
-![Boîte de dialogue vidéo incorporée avec des nombres identifiant les éléments de navigation au clavier.](images/video-dialog.png)
+![Boîte de dialogue de la vidéo intégrée avec des chiffres identifiant les éléments de la navigation au clavier.](images/video-dialog.png)
 
-## Glisser-déposer de fichier
+## Glisser-déposer un fichier
 
-Dans Experience Platform, toutes les zones de glisser-déposer de sélection de fichier sont accessibles via le clavier. L’utilisation de l’onglet **Tab** pour mettre en surbrillance **[!UICONTROL Sélectionner les fichiers]** et l’utilisation de l’option **Entrée ou de la barre d’espace** pour la sélectionner appellent l’interface utilisateur de sélection des fichiers du système d’exploitation.
+Dans Experience Platform, toutes les zones de glisser-déposer de sélection de fichier sont accessibles à l’aide du clavier. L’utilisation de la touche de **tabulation** pour mettre en surbrillance le bouton **[!UICONTROL Choisir des fichiers]** ainsi que l’utilisation de la touche **Entrée ou de la barre d’espacement** afin de le sélectionner invoquent l’interface utilisateur de sélection de fichier du système d’exploitation.
 
-Une fois le fichier téléchargé, une icône de suppression devient accessible via le clavier pour supprimer le fichier sélectionné et en charger un nouveau. Les utilisateurs peuvent utiliser **l’onglet** pour se concentrer sur l’icône de suppression et **Entrée ou la barre d’espace** pour la sélectionner. Une fois le fichier supprimé, **[!UICONTROL Choose files]** est automatiquement activé et peut être sélectionné.
+Une fois le fichier transféré, une icône de suppression devient accessible à l’aide du clavier. Cela permet de supprimer le fichier sélectionné et d’en transférer un nouveau. Les utilisateurs peuvent utiliser la touche de **tabulation** pour placer le focus sur l’icône de suppression, puis appuyer sur **Entrée ou la barre d’espacement** pour la sélectionner. Une fois le fichier supprimé, le focus se trouve automatiquement sur le bouton **[!UICONTROL Choisir des fichiers]**, qui peut être sélectionné.
 
-Si le fichier téléchargé n’est pas au format correct, une icône d’erreur s’affiche avec un message d’erreur et le bouton **[!UICONTROL Choisir les fichiers]** est activé et sélectionnable.
+Si le fichier transféré n’est pas au bon format, une icône d’erreur apparaît accompagnée d’un message d’erreur. Le focus se trouve alors sur le bouton **[!UICONTROL Choisir des fichiers]**, qui peut être sélectionné.
 
-![Zone de glisser-déposer d’un fichier avec un message d’erreur et le bouton de sélection des fichiers activé.](images/drag-and-drop.png)
+![Zone de glisser-déposer de fichier avec un message d’erreur et focus sur le bouton Choisir des fichiers.](images/drag-and-drop.png)
 
-Lorsque vous sélectionnez une zone de glisser-déposer, l’interface utilisateur de sélection de fichier est également invoquée. De plus, l’utilisateur peut sélectionner un fichier et le faire glisser sur la zone pour commencer le téléchargement.
+Sélectionner une zone de glisser-déposer à l’aide de la souris invoque également l’interface utilisateur de sélection de fichier. Par ailleurs, l’utilisateur peut sélectionner un fichier et le faire glisser sur la zone pour démarrer le transfert.
 
-![Une zone de glisser-déposer de fichier active en tant qu’utilisateur de la souris fait glisser un fichier dans la zone.](images/drag-and-drop-mouse-over.png)
+![Focus sur la zone de glisser-déposer de fichier lorsqu’un utilisateur fait glisser un fichier dans la zone avec la souris.](images/drag-and-drop-mouse-over.png)
 
-## Navigation dans le tableau
+## Navigation dans un tableau
 
-Tous les tableaux de l’interface utilisateur de l’Experience Platform sont accessibles via le clavier. La navigation et l’interaction avec les lignes et les colonnes d’un tableau sont possibles grâce à une série de raccourcis clavier :
+Tous les tableaux de l’interface utilisateur d’Experience Platform sont accessibles à l’aide du clavier. La navigation et l’interaction avec les lignes et les colonnes d’un tableau sont possibles grâce à une série de raccourcis clavier :
 
-* Dans l’en-tête du tableau, utilisez la **flèche vers le bas** pour parcourir le tableau. Les en-têtes de tableau peuvent être sélectionnés lors de la navigation via **Onglet**. Vous pouvez modifier l’ordre de tri à l’aide de **la barre d’espace**.
-* **Les** touches fléchées Haut et Bas traversent les lignes du tableau.
-* Lorsqu’une ligne est sélectionnée ou sélectionnée, la fonction **Entrée** de la ligne fournit des détails dans le rail de droite.
-* Lorsqu’une ligne est sélectionnée ou sélectionnée, utilisez les **touches de direction** pour parcourir chaque élément de la ligne.
-* Utilisez **Entrée** pour sélectionner un élément dans la ligne. Les utilisateurs disposant de lecteurs d’écran sont avertis si une nouvelle fenêtre doit s’ouvrir.
+* Dans l’en-tête du tableau, utilisez la **flèche vers le bas** pour parcourir le tableau. Les en-têtes de tableau peuvent être sélectionnés lors de la navigation à l’aide de la touche de **tabulation**. Vous pouvez modifier l’ordre de tri à l’aide de la **barre d’espacement**.
+* Les **touches fléchées vers le haut et vers le bas** permettent de se déplacer vers le haut et vers le bas parmi les lignes du tableau.
+* Lorsqu’une ligne est sélectionnée ou fait l’objet du focus, l’utilisation de la touche **Entrée** permet d’obtenir des détails dans le rail de droite.
+* Lorsqu’une ligne est sélectionnée ou fait l’objet du focus, utilisez les **touches fléchées** pour vous déplacer parmi tous les éléments de la ligne.
+* Appuyez sur **Entrée** pour sélectionner un élément de la ligne. Les utilisateurs disposant de lecteurs d’écran sont avertis si une nouvelle fenêtre doit s’ouvrir.
 
-### Accessibilité clavier du tableau de navigation
+### Accessibilité de la navigation dans un tableau à l’aide du clavier
 
-| Accessibilité au clavier | Description |
+| Accessibilité à l’aide du clavier | Description |
 |---|---|
-| HOME (Fonction + flèche gauche) | Lorsque la ligne est sélectionnée, emmène les utilisateurs au premier élément de la ligne. |
-| END (Fonction + flèche droite) | Lorsque la ligne est sélectionnée, emmène les utilisateurs au dernier élément de la ligne. |
-| Page vers le haut | Déplace 10 lignes vers le haut du tableau (par page) |
-| Page vers le bas | Déplace 10 lignes vers le bas du tableau (par page) |
-| Ctrl + ACCUEIL | Atteint la première ligne du tableau |
-| Ctrl + FIN | Commence à travailler dans le tableau par page |
+| DÉBUT (fonction + flèche à gauche) | Redirige les utilisateurs vers le premier élément de la ligne qui fait l’objet du focus |
+| FIN (fonction + flèche à droite) | Redirige les utilisateurs vers le dernier élément de la ligne qui fait l’objet du focus |
+| Page vers le haut | Remonte 10 lignes dans le tableau (par page) |
+| Page vers le bas | Descend 10 lignes dans le tableau (par page) |
+| Contrôle + DÉBUT | Atteint la première ligne du tableau |
+| Contrôle + FIN | Atteint la première ligne du tableau par page |
 
-## Interface utilisateur de l’éditeur de schémas
+## Interface utilisateur de l’éditeur de schéma
 
-L’interface utilisateur de l’éditeur de schémas est rendue accessible par les fonctionnalités suivantes :
+L’interface utilisateur de l’éditeur de schéma est accessible à l’aide de la fonctionnalité suivante :
 
-* L’éditeur de schémas prend en charge la navigation au clavier, y compris l’utilisation de l’onglet **Tab** pour naviguer dans les éléments de l’interface utilisateur.
-* **** Des onglets entrent dans le champ de recherche, puis dans l’arborescence du schéma.
-* L’arborescence des schémas prend en charge l’utilisation de touches fléchées pour naviguer dans l’interface utilisateur de l’arborescence des schémas.
-   * **Les** flèches haut et bas peuvent être utilisées pour parcourir l’arborescence.
-   * **Les** flèches gauche et droite peuvent être utilisées pour développer et réduire les noeuds ou passer d’une action intégrée à l’autre dans l’arborescence du schéma.
-* **Entrée (Retour)** active les détails des noeuds individuels dans le panneau des détails à droite.
-* La clé **Home** renvoie au haut de l’arborescence.
-* La touche **Fin** accède au bas de l’arborescence.
+* L’éditeur de schéma prend en charge la navigation au clavier, y compris l’utilisation de la touche de **tabulation** pour naviguer parmi les éléments de l’interface utilisateur.
+* La touche de **tabulation** permet d’accéder au champ de recherche, puis à l’arborescence du schéma.
+* L’arborescence du schéma prend en charge l’utilisation de touches fléchées pour naviguer au sein de son interface utilisateur.
+   * Les **flèches vers le haut et vers le bas** peuvent être utilisées pour parcourir l’arborescence.
+   * Les **flèches à gauche et à droite** peuvent être utilisées pour développer et réduire les nœuds ou passer d’une action en ligne à l’autre dans l’arborescence du schéma.
+* La touche **Entrée (Retour)** active les détails des nœuds individuels dans le panneau des détails à droite.
+* La touche **Début** renvoie au haut de l’arborescence.
+* La touche **Fin** permet d’accéder au bas de l’arborescence.
 * L’arborescence du schéma comprend également des libellés ARIA pour les lecteurs d’écran.
 
 ## Interface utilisateur du créateur de segments
 
-Lorsque vous utilisez l’interface utilisateur du créateur de segments pour créer, modifier et interagir avec des segments dans Experience Platform, les fonctionnalités suivantes améliorent l’accessibilité :
+Lors de l’utilisation de l’interface utilisateur du créateur de segments pour créer, modifier et interagir avec des segments dans Experience Platform, les fonctionnalités suivantes améliorent l’accessibilité :
 
-* L’interface utilisateur du créateur de segments est accessible via la navigation clavier.
-* Les lecteurs d’écran doivent reconnaître les balises de balisage pour les en-têtes et peuvent annoncer l’en-tête avec son niveau.
-* D’autres technologies d’assistance peuvent modifier l’affichage visuel d’une page à l’aide d’en-têtes codés correctement pour afficher un aperçu ou une autre vue.
+* L’interface utilisateur du créateur de segments est accessible par le biais de la navigation au clavier.
+* Les lecteurs d’écran doivent reconnaître le balisage des titres et peuvent annoncer le titre ainsi que son niveau.
+* D’autres technologies d’assistance peuvent modifier l’affichage visuel d’une page à l’aide de titres codés de manière adéquate pour afficher un aperçu ou une autre vue.
 
 ## Éditeur de Query Service
 
-Les fonctionnalités d’accessibilité suivantes sont disponibles dans l’éditeur de Query Service :
+Les fonctionnalités d’accessibilité suivantes sont disponibles dans l’éditeur de Query Service :
 
-* Le contraste de couleur dans l’interface utilisateur de l’éditeur de Query Service respecte la conformité en matière d’accessibilité.
+* Le contraste des couleurs dans l’interface utilisateur de l’éditeur de Query Service respecte la conformité en matière d’accessibilité.
 * La navigation au clavier est prise en charge en dehors de l’interface utilisateur de l’éditeur. L’interface utilisateur de l’éditeur est un miroir de code incorporé.
 
-## Onglet Vue du système dans les sources et les destinations
+## Onglet Vue du système dans Sources et Destinations
 
-Lorsque vous parcourez la **[!UICONTROL vue système]** dans les sources et les destinations, les fonctionnalités suivantes améliorent l’accessibilité :
+Lorsque vous parcourez la **[!UICONTROL Vue du système]** dans Sources et Destinations, la fonctionnalité suivante améliore l’accessibilité :
 
-* **** Les tablettes mettent l’accent sur la première carte de connexion source.
-   * **** Onglet pour vous concentrer à nouveau sur le bouton à l’intérieur de la carte
-   * Sélectionnez **Entrée** pour activer le bouton d’appel à l’action dans la carte.
-* La sélection de **Entrée** sur la carte de connexion active également plus de détails dans le rail de droite.
-   * Lorsque le rail de droite est activé, la sélection est définie sur cette zone. **** Le panneau se concentre sur  **** Fermer pour le volet de droite. Si vous sélectionnez **Onglet**, la sélection se déplace à nouveau dans le panneau du rail droit.
-   * S’il existe plusieurs cartes de connexion source, **Onglet** passe par les connexions.
-   * Utilisez les **touches fléchées (vers le haut, le bas, la gauche et la droite)** pour parcourir la liste des sources.
-   * Sélectionnez **Onglet** pour définir la mise au point sur le panneau du rail droit.
+* La touche de **tabulation** définit le focus sur la première carte de connexion source.
+   * Appuyez à nouveau sur la touche de **tabulation** pour déplacer le focus sur le bouton à l’intérieur de la carte.
+   * Appuyez sur **Entrée** pour activer le bouton d’appel à l’action dans la carte.
+* Appuyer sur **Entrée** sur la carte de connexion active également l’affichage de plus de détails dans le rail de droite.
+   * Lorsque le rail de droite est activé, le focus est défini sur cette zone. La touche de **tabulation** place le focus sur le bouton **Fermer** du volet du rail de droite. Appuyer à nouveau sur la touche de **tabulation** déplace le focus sur le volet du rail de droite.
+   * S’il existe plusieurs cartes de connexion source, la touche de **tabulation** permet de se déplacer parmi les connexions.
+   * Utilisez les **touches fléchées (vers le haut, le bas, à gauche et à droite)** pour vous déplacer dans la liste des sources.
+   * Appuyez sur la touche de **tabulation** pour définir le focus sur le volet du rail de droite.
