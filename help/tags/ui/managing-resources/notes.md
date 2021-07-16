@@ -1,0 +1,47 @@
+---
+title: Notes
+description: Découvrez comment ajouter des annotations textuelles à certaines ressources de balises dans Adobe Experience Platform.
+source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+workflow-type: tm+mt
+source-wordcount: '308'
+ht-degree: 78%
+
+---
+
+# Remarques
+
+>[!NOTE]
+>
+>Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+
+Les notes sont des annotations textuelles que vous pouvez ajouter à certaines ressources de balises dans Adobe Experience Platform. Des notes peuvent être ajoutées aux ressources suivantes :
+
+* Extensions
+* Éléments de données
+* Règles
+* Composants de  règle
+* Bibliothèques
+* Propriétés
+
+Les notes peuvent contenir jusqu’à 512 caractères Unicode.
+
+Les notes sont des commentaires qui n’ont aucun impact sur le comportement des ressources auxquelles elles sont rattachées. Elles ne sont pas incluses dans les bibliothèques construites. Vous pouvez utiliser des notes pour :
+
+* Fournir des informations supplémentaires sur une ressource
+* Servir de liste de tâches pour les améliorations futures à apporter à la ressource
+* Transmettre à d’autres utilisateurs des conseils sur l’utilisation de la ressource
+* Donner des instructions aux autres membres de l’équipe
+* Enregistrer les informations d’historique
+* Noter la fonction d’une ressource, pourquoi elle est construite d’une telle manière ou comment l’utiliser
+
+## Création d’une note
+
+Les ressources qui peuvent être annotées ont un rail fin sur le côté droit de l’écran. Ce rail comprend une icône pour l’annotation. Cette icône indique le nombre actuel de notes jointes à la ressource.
+
+Cliquez sur l’icône **[!UICONTROL Notes]** pour développer le rail de droite et afficher les notes. Les notes les plus récentes sont affichées en haut.  Pour ajouter une nouvelle note, saisissez votre texte dans la zone située en haut et cliquez sur **[!UICONTROL Ajouter une note]**.
+
+## Autre
+
+* Les notes sur les ressources de balise correspondent au comportement des notes dans la gestion dynamique des balises, dans la mesure où elles sont immuables et ne peuvent pas être modifiées ni supprimées.
+* Lorsque vous affichez les anciennes révisions d’une ressource, seules les notes créées avant la date `created_at` de cette révision s’affichent.
+* Lorsque vous supprimez une ressource, toutes les notes qui lui sont associées sont également supprimées.
