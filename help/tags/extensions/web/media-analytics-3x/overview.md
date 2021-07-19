@@ -1,10 +1,10 @@
 ---
-title: Extension Adobe Media Analytics (SDK 3.x) for Audio and Video Présentation
+title: Présentation de l’extension Adobe Medium Analytics (SDK 3.x) for Audio and Video
 description: Découvrez l’extension de balise Adobe Medium Analytics (SDK 3.x) for Audio and Video dans Adobe Experience Platform.
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 89%
+source-wordcount: '768'
+ht-degree: 88%
 
 ---
 
@@ -51,7 +51,7 @@ Après avoir inclus les trois extensions mentionnées ci-dessus dans votre proje
 | Export APIs to Window Object | Activer ou désactiver l’exportation des API Media Analytics vers la portée globale |
 | Variable Name | Une variable utilisée pour exporter les API de Media Analytics sous l’objet `window` |
 
-**Rappel :** l’extension MA requiert les extensions [Analytics](../analytics/overview.md) et [Experience Cloud ID](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html?lang=fr). Vous devez également ajouter ces extensions à la propriété de votre extension et les configurer.
+**Rappel :** l’extension MA requiert les extensions [Analytics](../analytics/overview.md) et [Experience Cloud ID](../id-service/overview.md). Vous devez également ajouter ces extensions à la propriété de votre extension et les configurer.
 
 ## Utilisation de l’extension MA
 
@@ -109,4 +109,4 @@ L’extension MA expose `media` en tant que module partagé à d’autres extens
 
 >[!NOTE]
 >
->**Tests :** pour tester votre extension dans cette version, vous devez télécharger votre extension sur [ Platform ](https://github.com/Adobe-Marketing-Cloud/reactor-user-docs/tree/73a73bd5ff53162339ce5ded3f4bba4712146d20/extension-reference/launch.adobe.com), où vous avez accès à toutes les extensions dépendantes.
+>**Tests :** pour tester votre extension dans cette version, vous devez télécharger votre extension sur [ Platform ](../../../extension-dev/submit/upload-and-test.md), où vous avez accès à toutes les extensions dépendantes.
