@@ -3,10 +3,10 @@ keywords: extensions de lancement;extension de lancement;destinations de lanceme
 title: Extension Adobe Experience Platform Launch
 description: Adobe Experience Platform Launch représente la nouvelle génération des fonctionnalités de gestion des balises dʼAdobe. Platform Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 20a9103dd96116f3099bccc9eeb678be5ac2bb79
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 48%
+source-wordcount: '600'
+ht-degree: 50%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform Launch représente la nouvelle génération des foncti
 Pour obtenir une présentation des fonctionnalités d’Experience Platform Launch, consultez les ressources ci-dessous :
 
 - [documentation d’Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=fr)
-- Adobe Experience Platform Launch [Vidéos de démarrage rapide](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/videos.html?). Commencez par [Présentation d’Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) et [Présentation du processus de publication](https://helpx.adobe.com/fr/analytics/how-to/adobe-launch-publishing-process.html), puis passez aux concepts suivants.
+- Adobe Experience Platform Launch [Vidéos de démarrage rapide](../../../tags/quick-start/videos.md). Commencez par [Présentation d’Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) et [Présentation du processus de publication](https://helpx.adobe.com/fr/analytics/how-to/adobe-launch-publishing-process.html), puis passez aux concepts suivants.
 
 ## Comment trouver les extensions de Platform launch dans l’interface de Platform {#how-to-find-extensions-in-interface}
 
@@ -33,7 +33,7 @@ Les extensions Platform launch transfèrent les données d’événement brutes 
 
 ![Comparaison entre les extensions d’Experience Platform Launch et d’autres destinations](../../assets/common/launch-and-other-destinations.png)
 
-## Avantages de l’utilisation des extensions de Platform launch {#extensions-benefits}
+## Avantages des extensions de Platform launch {#extensions-benefits}
 
 Adobe Experience Platform Launch est gratuit pour les clients Experience Cloud existants. platform launch simplifie le déploiement des balises sur votre site web au moyen d’extensions simples d’utilisation que vous pouvez installer, configurer, mettre à jour et supprimer. platform launch a une petite empreinte sur votre site web et vous permet de charger rapidement vos pages.
 
@@ -41,7 +41,7 @@ Adobe Experience Platform Launch est gratuit pour les clients Experience Cloud e
 >
 >Bien que vous ne puissiez pas activer les segments vers des extensions de Platform launch, vous pouvez configurer des règles pour transférer les données d’événement uniquement dans certaines situations. Retrouvez plus d’informations ci-dessous.
 
-Vous pouvez créer des *règles* déterminant le moment où les données d’événement sont transférées aux extensions. Cette puissante fonctionnalité vous permet de transférer les données d’événement uniquement dans certaines situations, plutôt que d’envoyer les données d’événement à chaque interaction. Pour plus d’informations, consultez les règles dans la [documentation Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+Vous pouvez créer des *règles* déterminant le moment où les données d’événement sont transférées aux extensions. Cette puissante fonctionnalité vous permet de transférer les données d’événement uniquement dans certaines situations, plutôt que d’envoyer les données d’événement à chaque interaction. Pour plus d’informations, consultez les règles dans la [documentation Adobe Experience Platform Launch](../../../tags/ui/managing-resources/rules.md).
 
 ## Exemples de cas d’utilisation pour les extensions de Platform launch {#extensions-use-cases}
 
