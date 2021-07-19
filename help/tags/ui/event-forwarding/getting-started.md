@@ -1,10 +1,10 @@
 ---
 title: Prise En Main Du Transfert D’Événements
 description: Suivez ce tutoriel détaillé pour commencer à utiliser le transfert d’événement dans Adobe Experience Platform.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '915'
-ht-degree: 49%
+source-wordcount: '906'
+ht-degree: 48%
 
 ---
 
@@ -110,7 +110,7 @@ Créez votre propriété dans l’interface utilisateur de la collecte de donné
 
 1. Sélectionnez le domaine Edge.
 
-Consultez la [documentation relative à l’extension SDK Web](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html?lang=fr) pour plus d’options de configuration.
+Consultez la [documentation relative à l’extension SDK Web](../../extensions/web/sdk/overview.md) pour plus d’options de configuration.
 
 ## Créer une règle de balise pour envoyer des données au SDK Web Platform
 
