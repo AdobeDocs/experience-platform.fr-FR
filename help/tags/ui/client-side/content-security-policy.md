@@ -1,10 +1,10 @@
 ---
 title: Prise en charge de la stratégie de sécurité du contenu (CSP)
 description: Découvrez comment gérer les restrictions de la stratégie de sécurité du contenu (CSP) lors de l’intégration de votre site web aux balises dans Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1087'
-ht-degree: 59%
+source-wordcount: '1079'
+ht-degree: 58%
 
 ---
 
@@ -64,7 +64,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **Balise `<meta>` HTML**
 
 
-Il y a une condition préalable très importante : Vous devez charger la bibliothèque de balises [de manière asynchrone](https://experienceleague.adobe.com/docs/launch/using/reference/client-side-info/asynchronous-deployment.html?lang=fr). Cela ne fonctionne pas avec un chargement synchrone de la bibliothèque de balises (ce qui entraîne des erreurs de console et des règles qui ne s’exécutent pas correctement).
+Il y a une condition préalable très importante : Vous devez charger la bibliothèque de balises [de manière asynchrone](./asynchronous-deployment.md). Cela ne fonctionne pas avec un chargement synchrone de la bibliothèque de balises (ce qui entraîne des erreurs de console et des règles qui ne s’exécutent pas correctement).
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
