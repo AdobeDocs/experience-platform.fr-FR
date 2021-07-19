@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1211'
 ht-degree: 90%
 
 ---
@@ -103,7 +103,7 @@ v1.6.2
 
 v1.6.1
 
-* **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. S’il est configuré, tous les scripts intégrés qu’une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge l’utilisation d’une stratégie de sécurité du contenu (CSP) avec une valeur à usage unique afin que les scripts Platform Launch puissent toujours se charger dans un environnement CSP. Pour en savoir plus sur l’utilisation de Platform Launch avec une stratégie de sécurité du contenu, cliquez [ici](https://experienceleague.adobe.com/docs/launch/using/reference/client-side-info/content-security-policy.html).
+* **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. S’il est configuré, tous les scripts intégrés qu’une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge l’utilisation d’une stratégie de sécurité du contenu (CSP) avec une valeur à usage unique afin que les scripts Platform Launch puissent toujours se charger dans un environnement CSP. Pour en savoir plus sur l’utilisation de Platform Launch avec une stratégie de sécurité du contenu, cliquez [ici](../../../ui/client-side/content-security-policy.md).
 
 ## 18 juin 2019
 
