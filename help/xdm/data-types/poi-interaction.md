@@ -5,9 +5,9 @@ title: Type de données d’interaction du point ciblé
 topic-legacy: overview
 description: Ce document présente le type de données XDM de l’interaction Point ciblé.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '188'
 ht-degree: 4%
 
 ---
@@ -28,5 +28,5 @@ ht-degree: 4%
 
 Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.example.1.json)
-* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.schema.json)
+* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.example.1.json)
+* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.schema.json)
