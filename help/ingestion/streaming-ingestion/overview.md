@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation de données ; données assimilées ; diffusion en continu ; présentation ; assimilation en flux continu ; latence ; latence en flux continu ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion de données;données ingérées;diffusion en continu;présentation;ingestion par flux;latence;latence de diffusion en continu;latence ;
 solution: Experience Platform
-title: Présentation de la gestion en flux continu
+title: Présentation de l’ingestion par flux
 topic-legacy: overview
-description: L’assimilation en flux continu pour Adobe Experience Platform permet aux utilisateurs d’envoyer en temps réel des données en provenance de périphériques client et serveur à l’Experience Platform.
+description: L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données de périphériques côté client et côté serveur vers Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 21%
+source-wordcount: '277'
+ht-degree: 22%
 
 ---
 
 # Présentation de l’ingestion par flux
 
-L’assimilation en flux continu pour Adobe Experience Platform permet aux utilisateurs d’envoyer en temps réel des données depuis des périphériques client et serveur à [!DNL Experience Platform].
+L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données de périphériques côté client et côté serveur vers [!DNL Experience Platform].
 
 ## Que pouvez-vous faire avec l’ingestion par flux ?
 
-Adobe Experience Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes en générant une [!DNL Real-time Customer Profile] pour chacun de vos clients. La diffusion en continu de l&#39;assimilation joue un rôle clé dans la création de ces profils en vous permettant de fournir des données [!DNL Profile] dans [!DNL Data Lake] avec le moins de latence possible.
+Adobe Experience Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes en générant une [!DNL Real-time Customer Profile] pour chacun de vos clients. L’ingestion par flux joue un rôle clé dans la création de ces profils en vous permettant de fournir des données [!DNL Profile] dans [!DNL Data Lake] avec le moins de latence possible.
 
-La vidéo suivante est conçue pour vous aider à comprendre l’assimilation en flux continu et présente les concepts ci-dessus.
+La vidéo suivante est conçue pour vous aider à comprendre l’ingestion par flux et décrit les concepts ci-dessus.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
-### Enregistrements de profil de diffusion en continu et [!DNL ExperienceEvents]
+### Diffusion des enregistrements de profil et [!DNL ExperienceEvents]
 
-Avec l’assimilation en flux continu, les utilisateurs peuvent diffuser les enregistrements de profil et [!DNL ExperienceEvents] en [!DNL Platform] en secondes afin de faciliter la personnalisation en temps réel. Toutes les données envoyées aux API d’assimilation en flux continu sont automatiquement conservées dans [!DNL Data Lake].
+Grâce à l’ingestion par flux, les utilisateurs peuvent diffuser en quelques secondes des enregistrements de profil et [!DNL ExperienceEvents] vers [!DNL Platform] pour faciliter la personnalisation en temps réel. Toutes les données envoyées aux API d’ingestion par flux sont automatiquement conservées dans la balise [!DNL Data Lake].
 
 Pour plus d’informations, consultez le [guide de création d’une connexion en continu](../tutorials/create-streaming-connection.md).
 
@@ -35,9 +34,9 @@ Pour plus d’informations, consultez le [guide de création d’une connexion e
 
 Une fois que vous êtes certain que vos données sont propres, vous pouvez activer vos jeux de données pour [!DNL Real-time Customer Profile] et [!DNL Identity Service].
 
-Pour plus d&#39;informations sur l&#39;activation d&#39;un jeu de données pour [!DNL Profile] et [!DNL Identity Service], consultez le [guide de configuration d&#39;un jeu de données](../../profile/tutorials/dataset-configuration.md).
+Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL Profile] et [!DNL Identity Service], consultez le [guide de configuration d’un jeu de données](../../profile/tutorials/dataset-configuration.md).
 
-## Quelle est la latence attendue pour l&#39;assimilation en flux continu sur [!DNL Platform] ?
+## Quelle est la latence attendue de l’ingestion par flux sur [!DNL Platform] ?
 
 | Destination | Latence attendue |
 | --------- | ---------------- |
@@ -46,4 +45,4 @@ Pour plus d&#39;informations sur l&#39;activation d&#39;un jeu de données pour 
 
 ## Extension Adobe Experience Platform
 
-Vous pouvez utiliser l’extension Adobe Experience Platform pour créer une connexion en continu. L&#39;extension [!DNL Experience Platform] fournit des actions permettant d&#39;envoyer des balises formatées dans [!DNL Experience Data Model] (XDM) pour l&#39;assimilation en temps réel à [!DNL Experience Platform]. Pour plus d’informations, consultez la documentation de [l’extension Experience Platform](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html).
+Vous pouvez utiliser l’extension Adobe Experience Platform pour créer une connexion en continu. L’extension [!DNL Experience Platform] fournit des actions pour envoyer des balises formatées dans [!DNL Experience Data Model] (XDM) pour l’ingestion en temps réel vers [!DNL Experience Platform]. Pour plus d’informations, consultez la documentation de [l’extension Experience Platform](../../tags/extensions/web/sdk/overview.md).
