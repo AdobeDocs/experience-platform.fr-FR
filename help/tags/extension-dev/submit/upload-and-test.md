@@ -1,7 +1,7 @@
 ---
 title: Téléchargement et implémentation de tests de bout en bout pour une extension
 description: Découvrez comment valider, charger et tester votre extension dans Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
 source-wordcount: '2391'
 ht-degree: 35%
@@ -228,9 +228,3 @@ Lorsque vous découvrez des modifications à apporter à votre package d’exten
 1. Modifier des ressources : si la configuration de l’un de vos composants d’extension a été modifiée, vous devrez mettre à jour ces ressources dans l’interface utilisateur de la collecte de données.
 1. Ajoutez les dernières modifications apportées à votre bibliothèque et créez-la à nouveau.
 1. Effectuez une autre série de tests.
-
-<!--
-## Document {#document}
-
-Your [exchange listing](./create-listing.md) is a great place for marketing and support information for your extension, but our tags [Help Docs](https://experienceleague.adobe.com/docs/launch/using/overview.html) are used every day by our customers. We encourage you to submit a pull request to [add your extension documentation](https://github.com/AdobeDocs/launch.en/blob/master/help/extension-reference/3rd-party-extensions.md) into the tags user docs. Open source docs for the win! 🚀
--->
