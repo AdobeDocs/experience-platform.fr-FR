@@ -1,10 +1,10 @@
 ---
 title: Guide de démarrage rapide
 description: Découvrez comment utiliser rapidement les balises dans Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1562'
-ht-degree: 45%
+source-wordcount: '1533'
+ht-degree: 44%
 
 ---
 
@@ -134,8 +134,6 @@ Pour plus d’informations sur les différents états et options disponibles pen
 ## Ressources supplémentaires
 
 Pour en savoir plus sur les balises, consultez les ressources suivantes :
-
-[https://forums.adobe.com/community/experience-cloud/platform/launchAsk](https://forums.adobe.com/community/experience-cloud/platform/launchAsk) et répondez aux questions, proposez des idées, votez pour les idées des autres. Connectez-vous avec votre Adobe ID.
 
 * **[Communauté de collecte de données](https://forums.adobe.com/community/experience-cloud/platform/launch)** : Posez vos questions et répondez à d&#39;autres, proposez des idées, votez pour les idées des autres. Connectez-vous avec votre Adobe ID.
 * **[Developer Docs](https://developer.adobelaunch.com/)** : Participez à la communauté des développeurs de balises pour créer des extensions ou utiliser les API de balises.
