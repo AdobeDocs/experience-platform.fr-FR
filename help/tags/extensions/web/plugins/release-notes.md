@@ -1,14 +1,22 @@
 ---
 title: Notes de mise à jour de l’extension des modules externes courants Analytics
 description: Notes de mise à jour les plus récentes pour l’extension de balise Plugins Analytics communs dans Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 94%
+source-wordcount: '314'
+ht-degree: 92%
 
 ---
 
 # Notes de mise à jour des modules externes courants Analytics
+
+## 23 juin 2021
+
+### Extension de modules externes courants 3.0.6
+
+#### Correctifs
+
+* Correction d’un problème en raison duquel getPercentPageViewed se rompait lors de l’utilisation de caractères spéciaux.
 
 ## 20 mai 2021
 
