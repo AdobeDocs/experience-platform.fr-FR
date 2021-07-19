@@ -1,9 +1,9 @@
 ---
 title: Présentation de l’extension Adobe Analytics Product String
 description: Découvrez l’extension de balise Chaîne de produit Adobe Analytics dans Adobe Experience Platform.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '524'
 ht-degree: 95%
 
 ---
@@ -93,4 +93,4 @@ Cette action doit s’accompagner d’une action « Adobe Analytics - Définir 
 ### Conditions
 
 * Une [couche de données](https://theblog.adobe.com/data-layers-buzzword-best-practice/) basée sur un objet avec des variables pour toutes les données liées au produit (comme l’ID du produit, la quantité, le prix). Cette extension ne fonctionne pas avec les couches de données basées sur des tableaux.
-* L’extension [Adobe Analytics](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html?lang=fr) doit être installée.
+* L’extension [Adobe Analytics](../analytics/overview.md) doit être installée.
