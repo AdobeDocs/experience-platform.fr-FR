@@ -5,7 +5,7 @@ title: Type de données Détails de la page web
 topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM (Experience Data Model) des détails de la page web.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 11%
@@ -35,5 +35,5 @@ Le type de données est destiné aux détails complets de la page et aux chargem
 
 Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webpagedetails.example.2.json)
-* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webpagedetails.schema.json)
+* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.example.2.json)
+* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.schema.json)
