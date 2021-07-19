@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour
 description: Notes de mise à jour les plus récentes pour les balises dans Adobe Experience Platform.
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 67%
+source-wordcount: '498'
+ht-degree: 54%
 
 ---
 
@@ -13,6 +13,14 @@ ht-degree: 67%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+
+## 19 juillet 2021
+
+**Ajustements du droit &quot;Gérer les propriétés&quot;**  : le droit Gérer les propriétés a rencontré un problème en raison duquel un utilisateur était autorisé à créer une propriété, mais ne pouvait pas la voir une fois créée (comme indiqué dans le fil de la communauté  [ici](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176)). Un correctif est maintenant en ligne avec les autorisations appliquées comme décrit dans l’article.
+
+>[!NOTE]
+>
+>Si vous attribuez le nouveau droit &quot;Modifier la propriété&quot; à un groupe d’utilisateurs, l’interface utilisateur ne se mettra pas à jour pour activer les champs dans l’écran de configuration des propriétés. Un correctif pour ce problème sera mis en oeuvre dans une prochaine version.
 
 ## 17 mai 2021
 
