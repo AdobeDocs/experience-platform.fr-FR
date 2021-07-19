@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation de la correspondance de segment
 topic-legacy: overview
 description: La correspondance de segment est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment de manière sécurisée, gérée et respectueuse de la confidentialité.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '1901'
 ht-degree: 6%
 
 ---
@@ -63,7 +63,7 @@ La vérification du consentement de l’inclusion et de l’exclusion détermine
 
 La configuration du consentement par défaut pour [!DNL Segment Match] est définie sur `opt-out`. Pour appliquer un modèle d’inclusion à vos données, envoyez une demande par courrier électronique à votre gestionnaire de compte Adobe.
 
-Pour plus d’informations sur l’attribut `share` utilisé pour définir la valeur de consentement du partage de données, consultez la documentation suivante sur le [groupe de champs de confidentialité et consentement](../../xdm/field-groups/profile/consents.md). Pour plus d’informations sur le groupe de champs spécifique utilisé pour recueillir le consentement des consommateurs pour la collecte et l’utilisation de données liées à la confidentialité, la personnalisation et les préférences marketing, voir l’ [exemple GitHub suivant ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent-preferences.schema.md) Consentement pour la confidentialité, la personnalisation et les préférences marketing.
+Pour plus d’informations sur l’attribut `share` utilisé pour définir la valeur de consentement du partage de données, consultez la documentation suivante sur le [groupe de champs de confidentialité et consentement](../../xdm/field-groups/profile/consents.md). Pour plus d’informations sur le groupe de champs spécifique utilisé pour recueillir le consentement des consommateurs pour la collecte et l’utilisation de données liées à la confidentialité, la personnalisation et les préférences marketing, voir l’ [exemple GitHub suivant ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md) Consentement pour la confidentialité, la personnalisation et les préférences marketing.
 
 ### Configuration des libellés d’utilisation des données
 
@@ -171,7 +171,7 @@ Pour ajouter ou supprimer des segments, sélectionnez **[!UICONTROL Créer un fl
 
 La liste des segments s’affiche. À partir de là, vous pouvez ajouter de nouveaux segments à votre flux et utiliser le rail droit pour supprimer les segments dont vous n’avez plus besoin. Une fois que vous avez terminé de gérer les segments dans votre flux, sélectionnez **[!UICONTROL Suivant]** , puis suivez les étapes décrites ci-dessus pour terminer le flux mis à jour.
 
-![mettre à jour](../images/ui/segment-match/update.png)
+![update](../images/ui/segment-match/update.png)
 
 >[!NOTE]
 >
