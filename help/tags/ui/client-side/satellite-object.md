@@ -1,10 +1,10 @@
 ---
 title: Référence d’objet satellite Balises
 description: Découvrez lʼobjet _satellite côté client et les différentes fonctions quʼil offre dans Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1131'
-ht-degree: 53%
+source-wordcount: '1123'
+ht-degree: 52%
 
 ---
 
@@ -86,7 +86,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-Si l’extension [!DNL Adobe Experience Cloud ID] est installée sur la propriété, cette méthode renvoie l’instance d’identifiant visiteur. Pour plus d’informations, consultez la [documentation du service Experience Cloud ID](https://forums.adobe.com/external-link.jspa?url=https%3A%2F%2Fmarketing.adobe.com%2Fresources%2Fhelp%2Ffr_FR%2Fmcvid%2F).
+Si l’extension [!DNL Adobe Experience Cloud ID] est installée sur la propriété, cette méthode renvoie l’instance d’identifiant visiteur. Pour plus d’informations, consultez la [documentation du service Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr).
 
 ## `logger`
 
