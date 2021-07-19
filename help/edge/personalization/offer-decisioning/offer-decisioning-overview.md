@@ -3,9 +3,9 @@ title: Utilisation d’Offer Decisioning avec le SDK Web Platform
 description: Le SDK Web de Adobe Experience Platform peut diffuser et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API Offer Decisioning.
 keywords: offer decisioning;prise de décision;SDK Web;SDK Web Platform;offres personnalisées;diffuser des offres;diffusion d’offres;personnalisation des offres ;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 6b3548e2db596d56aeacec8f2d5cdd29ddc09bf2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '779'
 ht-degree: 9%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Web SDK] peut diffuser et générer des offres p
 
 Il est important de comprendre la terminologie suivante lorsque vous utilisez Offer Decisioning. Pour plus d’informations et pour consulter d’autres termes, consultez le [glossaire des Offers decisionings](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
-* **Conteneur :** un conteneur est un mécanisme d’isolation qui permet de séparer les différentes préoccupations. L’ID de conteneur est le premier élément de chemin d’accès pour toutes les API du référentiel. Tous les objets de prise de décision résident dans un conteneur.
+* **Conteneur :** un conteneur est un mécanisme d’isolation qui permet de séparer les différentes préoccupations. L&#39;ID de conteneur est le premier élément de chemin d&#39;accès pour toutes les API du référentiel. Tous les objets de prise de décision résident dans un conteneur.
 
 * **Portées de décision :** pour l’Offer decisioning, il s’agit des chaînes codées Base64 de JSON contenant les identifiants d’activité et d’emplacement que vous souhaitez que le service d’offer decisioning utilise pour proposer des offres.
 
@@ -65,7 +65,7 @@ Pour activer l’Offer decisioning, procédez comme suit :
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Suivez les instructions pour [installer le SDK](../../fundamentals/installing-the-sdk.md) (le SDK peut être installé seul ou via [Adobe Experience Platform Launch](http://launch.adobe.com/fr). Voici un [guide de démarrage rapide de Platform launch](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html)).
+1. Suivez les instructions pour [installer le SDK](../../fundamentals/installing-the-sdk.md) (le SDK peut être installé seul ou via [Adobe Experience Platform Launch](http://launch.adobe.com/fr). Voici un [guide de démarrage rapide de Platform launch](../../../tags/quick-start/quick-start.md)).
 1. [Configurez le ](../../fundamentals/configuring-the-sdk.md) SDK pour Offer Decisioning. Vous trouverez ci-dessous d’autres étapes spécifiques à l’Offer decisioning.
 
    * SDK autonome installé
@@ -83,26 +83,26 @@ Pour activer l’Offer decisioning, procédez comme suit :
          ```
    * SDK installé par platform launch
 
-      1. [Création d’une propriété de Platform launch](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html)
+      1. [Création d’une propriété de Platform launch](../../../tags/ui/administration/companies-and-properties.md)
       1. [Ajout du code incorporé de Platform launch](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. Installez et configurez l’extension SDK Web Platform avec le Datastream que vous venez de créer en sélectionnant la configuration dans la liste déroulante &quot;Datastream&quot;. Consultez la documentation sur les [extensions](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html).
+      1. Installez et configurez l’extension SDK Web Platform avec le Datastream que vous venez de créer en sélectionnant la configuration dans la liste déroulante &quot;Datastream&quot;. Consultez la documentation sur les [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. Créez les [Éléments de données](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html) nécessaires. Au minimum, vous devez créer une carte d’identité SDK Web Platform et un élément de données XDM d’objet SDK Web Platform.
+      1. Créez les [Éléments de données](../../../tags/ui/managing-resources/data-elements.md) nécessaires. Au minimum, vous devez créer une carte d’identité SDK Web Platform et un élément de données XDM d’objet SDK Web Platform.
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
 
-      1. Créez vos [Règles](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+      1. Créez vos [Règles](../../../tags/ui/managing-resources/rules.md).
 
          * Ajoutez une action Envoyer un événement via le SDK Web Platform et ajoutez la balise `decisionScopes` appropriée à la configuration de cette action.
 
             ![send-event-action-décisionScopes](./assets/send-event-action-decisionScopes.png)
-      1. [Créez et publiez une ](https://experienceleague.adobe.com/docs/launch/using/reference/publish/libraries.html) bibliothèque contenant toutes les règles, les éléments de données et les extensions que vous avez configurés appropriés.
+      1. [Créez et publiez une ](../../../tags/ui/publishing/libraries.md) bibliothèque contenant toutes les règles, les éléments de données et les extensions que vous avez configurés appropriés.
 
 
 
