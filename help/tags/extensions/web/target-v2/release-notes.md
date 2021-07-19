@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour de l’extension Adobe Target v2
 description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '438'
 ht-degree: 78%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 78%
 
 ### Extension 0.14 d’Adobe Target v2
 
-- Ajout d’une nouvelle action Charger Target avec la fonction de [prise de décision sur l’appareil](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/targetv2-extension/adobe-target-extension-v2.html?lang=fr#load-target-with-on-device-decisioning), qui charge at.js 2.5 avec les fonctionnalités de prise de décision sur l’appareil.
+- Ajout d’une nouvelle action Charger Target avec la fonction de [prise de décision sur l’appareil](./overview.md#load-target-with-on-device-decisioning), qui charge at.js 2.5 avec les fonctionnalités de prise de décision sur l’appareil.
 - Mise à jour du fichier at.js vers la version 2.5
 
 
