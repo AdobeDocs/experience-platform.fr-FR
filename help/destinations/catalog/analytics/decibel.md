@@ -1,25 +1,24 @@
 ---
-keywords: extension décibel ; décibel ; destination décibel
+keywords: extension de décibel;décibel;destination de décibel
 title: Extension Decibel
-description: L’extension decibel est une destination d’analyse à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+description: L’extension Decibel est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+exl-id: 0508f8f8-d512-48f1-b2ea-1429f59079db
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 27%
+source-wordcount: '483'
+ht-degree: 29%
 
 ---
-
 
 # [!DNL Decibel] Extension {#decibel-extension}
 
 ## Présentation {#overview}
 
-Déployez rapidement et en toute simplicité [!DNL Decibel] sur vos propriétés Web. D’autres configurations avancées peuvent également être déployées à l’aide de règles grâce aux actions proposées par l’extension.
+Déployez rapidement et facilement [!DNL Decibel] sur vos propriétés web. D’autres configurations avancées peuvent également être déployées à l’aide de règles grâce aux actions proposées par l’extension.
 
 [!DNL Decibel] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100913.html).
 
-Cette destination est une extension Adobe Experience Platform Launch. Pour plus d&#39;informations sur le fonctionnement des extensions de Platform launch dans Platform, voir [Présentation des extensions Adobe Experience Platform Launch](../launch-extensions/overview.md).
+Cette destination est une extension Adobe Experience Platform Launch. Pour plus d’informations sur le fonctionnement des extensions de Platform launch dans Platform, voir [Présentation des extensions Adobe Experience Platform Launch](../launch-extensions/overview.md).
 
 ![Extension Decibel](../../assets/catalog/analytics/decibel/catalog.png)
 
@@ -27,31 +26,31 @@ Cette destination est une extension Adobe Experience Platform Launch. Pour plus 
 
 Cette extension est disponible dans le catalogue [!DNL Destinations] pour tous les clients qui ont acheté Platform.
 
-Pour utiliser cette extension, vous devez accéder à Adobe Experience Platform Launch.  Platform Launch est une fonctionnalité gratuite intégrée à Adobe Experience Cloud. Contactez l’administrateur de votre organisation pour accéder au Platform launch et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer les extensions.
+Pour utiliser cette extension, vous devez accéder à Adobe Experience Platform Launch.  Platform Launch est une fonctionnalité gratuite intégrée à Adobe Experience Cloud. Contactez l’administrateur de votre organisation pour accéder à Platform launch et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer les extensions.
 
 ## Installation de l’extension {#install-extension}
 
-Pour installer l&#39;extension [!DNL Decibel] :
+Pour installer l’extension [!DNL Decibel] :
 
-Dans l&#39;[interface de plate-forme](http://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+Dans l’ [interface de Platform](http://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
-Cliquez sur la destination pour la mettre en évidence, puis sélectionnez **[!UICONTROL Configurer]** dans le rail de droite. Si le contrôle **[!UICONTROL Configure]** est grisé, l&#39;autorisation **[!UICONTROL manage_properties]** vous manque. Voir les [Conditions préalables](#prerequisites).
+Cliquez sur la destination pour la mettre en surbrillance, puis sélectionnez **[!UICONTROL Configurer]** dans le rail de droite. Si le contrôle **[!UICONTROL Configure]** est grisé, vous ne disposez pas de l’autorisation **[!UICONTROL manage_properties]**. Voir les [Conditions préalables](#prerequisites).
 
-Dans la fenêtre **[!UICONTROL Sélectionner la propriété de Platform launch disponible]**, sélectionnez la propriété de Platform launch dans laquelle vous souhaitez installer l&#39;extension. Vous avez également la possibilité de créer une propriété dans le Platform launch. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Découvrez les propriétés dans la section [Page Propriétés](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) de la documentation du Platform launch.
+Dans la fenêtre **[!UICONTROL Sélectionner la propriété de Platform launch disponible]** , sélectionnez la propriété de Platform launch dans laquelle vous souhaitez installer l’extension. Vous avez également la possibilité de créer une propriété dans Platform launch. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Découvrez les propriétés dans la [section de la page Propriétés](../../../tags/ui/administration/companies-and-properties.md#properties-page) de la documentation du Platform launch.
 
-Le processus vous conduit au Platform launch pour terminer l’installation.
+Le workflow vous permet de réaliser l’installation par Platform launch.
 
 Pour plus d’informations sur les options de configuration de l’extension, consultez la [page concernant l’extension Decibel](https://exchange.adobe.com/experiencecloud.details.100913.html) sur Adobe Exchange.
 
-Vous pouvez également installer l&#39;extension directement dans l&#39;[interface Adobe Experience Platform Launch](https://launch.adobe.com/). Voir [Ajouter une nouvelle extension](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) dans la documentation du Platform launch.
+Vous pouvez également installer l’extension directement dans l’[interface Adobe Experience Platform Launch](https://launch.adobe.com/). Voir [Ajouter une nouvelle extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) dans la documentation du Platform launch.
 
 ## Utilisation de l’extension {#how-to-use}
 
-Une fois que vous avez installé l&#39;extension, vous pouvez début la configuration des règles directement dans le Platform launch.
+Une fois que vous avez installé l’extension, vous pouvez commencer à configurer des règles pour celle-ci directement dans Platform launch.
 
-Dans le Platform launch, vous pouvez définir des règles pour vos extensions installées afin d’envoyer des données de événement à la destination de l’extension uniquement dans certaines situations. Pour plus d’informations sur la configuration de règles pour vos extensions, consultez la [documentation des règles](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+Dans Platform launch, vous pouvez configurer des règles pour vos extensions installées afin d’envoyer des données d’événement vers la destination de l’extension uniquement dans certains cas. Pour plus d’informations sur la configuration de règles pour vos extensions, consultez la [documentation des règles](../../../tags/ui/managing-resources/rules.md).
 
 ## Configuration, mise à niveau et suppression de l’extension {#configure-upgrade-delete}
 
@@ -59,9 +58,6 @@ Vous pouvez configurer, mettre à niveau et supprimer des extensions dans l’in
 
 >[!TIP]
 >
->Si l&#39;extension est déjà installée sur l&#39;une de vos propriétés, l&#39;interface utilisateur de la plate-forme affiche toujours **[!UICONTROL Installer]** pour l&#39;extension. Lancez le processus d&#39;installation comme décrit dans [Installer l&#39;extension](#install-extension) pour accéder au Platform launch et configurer ou supprimer votre extension.
+>Si l’extension est déjà installée sur l’une de vos propriétés, l’interface utilisateur de Platform affiche toujours **[!UICONTROL Install]** pour l’extension. Lancez le workflow d’installation comme décrit dans la section [Installer l’extension](#install-extension) pour accéder au Platform launch et configurer ou supprimer votre extension.
 
-Pour mettre à niveau votre extension, voir [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) dans la documentation du Platform launch.
-
-
-
+Pour mettre à niveau votre extension, voir [Mise à niveau de l’extension](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) dans la documentation du Platform launch.
