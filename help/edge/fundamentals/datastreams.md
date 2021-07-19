@@ -3,10 +3,10 @@ title: Configuration du flux de données pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer les flux de données. '
 keywords: configuration;datastreams;datastreamId;edge;id de configuration de périphérie;paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;ID de conteneur de synchronisation;sandbox;flux de données;jeu de données d’événement;cible;code client;jeton de propriété;ID d’environnement cible;destinations de cookie;destinations d’URL;ID de suite de rapports de paramètres Analytics;ID de boite
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 0%
+source-wordcount: '896'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ Les flux de données peuvent être créés dans Adobe [!DNL Experience Platform 
 
 >[!NOTE]
 >
->L’outil de configuration des flux de données est disponible pour les clients de la liste autorisée, qu’ils utilisent [!DNL Experience Platform Launch] comme gestionnaire de balises. En outre, les utilisateurs ont besoin des autorisations Développer dans [!DNL Experience Platform Launch]. Pour plus d’informations, reportez-vous à l’article [Autorisations utilisateur](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html) de la documentation [!DNL Experience Platform Launch] .
+>L’outil de configuration des flux de données est disponible pour les clients de la liste autorisée, qu’ils utilisent [!DNL Experience Platform Launch] comme gestionnaire de balises. En outre, les utilisateurs ont besoin des autorisations Développer dans [!DNL Experience Platform Launch]. Pour plus d’informations, reportez-vous à l’article [Autorisations utilisateur](../../tags/ui/administration/user-permissions.md) de la documentation [!DNL Experience Platform Launch] .
 
 Créez un flux de données en cliquant sur **[!UICONTROL Nouvelle flux de données]** dans la zone supérieure droite de l’écran. Après avoir fourni un nom et une description, vous êtes invité à définir les paramètres par défaut de chaque environnement. Les paramètres disponibles sont présentés ci-dessous.
 
@@ -83,7 +83,7 @@ Identifiant unique d’un compte cible. Pour le trouver, vous pouvez accéder à
 
 ### [!UICONTROL Jeton de propriété]
 
-[!DNL Target] permet aux clients de contrôler les autorisations par l’utilisation des propriétés. Vous trouverez des détails dans la section [Autorisations d’entreprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) de la documentation [!DNL Target].
+[!DNL Target] permet aux clients de contrôler les autorisations par l’utilisation des propriétés. Vous trouverez des détails dans la section [Autorisations d’entreprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=fr) de la documentation [!DNL Target].
 
 Le jeton de propriété se trouve dans [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Propriétés]
 
