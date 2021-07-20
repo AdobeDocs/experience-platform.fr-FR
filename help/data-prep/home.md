@@ -5,10 +5,10 @@ title: Présentation de Data Prep
 topic-legacy: overview
 description: Ce document présente Data Prep dans Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
-workflow-type: ht
-source-wordcount: '437'
-ht-degree: 100%
+source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
+workflow-type: tm+mt
+source-wordcount: '492'
+ht-degree: 88%
 
 ---
 
@@ -24,6 +24,10 @@ La préparation des données permet aux ingénieurs de données de mapper, trans
 - prévisualiser les données lors de leur manipulation dans Data Prep
 
 Data Prep applique également plusieurs validations de données intrinsèques afin de garantir le maintien de lʼintégrité des données lors de leur ingestion. Dans la mesure du possible, Data Prep mappe automatiquement les schémas de données entrants à XDM. Les ingénieurs de données peuvent modifier, corriger et supprimer les mappages suggérés et les remplacer par les mappages appropriés.
+
+>[!NOTE]
+>
+>À moins que le message qui en résulte ne soit un XDM non valide, toute erreur de transformation dans Data Prep entraîne la définition de ces attributs sur `null`, tandis que le reste de la ligne sera ingéré. Si la ligne ne correspond pas à un XDM non valide, elle **et non** sera ingérée. Dans ces deux cas, l’erreur sera documentée.
 
 ## Mappage
 
