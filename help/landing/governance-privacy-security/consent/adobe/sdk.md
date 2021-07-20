@@ -1,111 +1,110 @@
 ---
-title: Traiter les données de consentement du client à l’aide du SDK Web Adobe Experience Platform
+title: Traiter les données de consentement du client à l’aide du SDK Web de Adobe Experience Platform
 topic-legacy: getting started
-description: Découvrez comment intégrer le Adobe Experience Platform Web SDK pour traiter les données de consentement des clients dans Adobe Experience Platform à l’aide de la norme Adobe 2.0.
+description: Découvrez comment intégrer le SDK Web de Adobe Experience Platform pour traiter les données de consentement des clients dans Adobe Experience Platform à l’aide de la norme Adobe 2.0.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '1243'
-ht-degree: 0%
+source-wordcount: '1237'
+ht-degree: 3%
 
 ---
 
-# Intégration du SDK Web de la plate-forme pour traiter les données de consentement des clients à l’aide de la norme Adobe 2.0
+# Intégrer le SDK Web Platform pour traiter les données de consentement des clients à l’aide de la norme Adobe 2.0
 
-Le Adobe Experience Platform Web SDK vous permet de récupérer les signaux de consentement des clients générés par les plateformes de gestion du consentement (CMP) et de les envoyer à Adobe Experience Platform chaque fois qu’un événement de modification du consentement se produit.
+Le SDK Web de Adobe Experience Platform vous permet de récupérer les signaux de consentement des clients générés par les plateformes de gestion du consentement (CMP) et de les envoyer à Adobe Experience Platform chaque fois qu’un événement de modification du consentement se produit.
 
-**Le SDK n’interface pas avec les CMP prêtes à l’emploi**. Il vous appartient de déterminer comment intégrer le SDK à votre site Web, d’écouter les modifications apportées au consentement dans le CMP et d’appeler la commande appropriée. Ce document fournit des conseils généraux sur la façon d&#39;intégrer votre CMP au SDK Web de la plate-forme.
+**Le SDK n’interface pas avec les CMP prêtes à l’emploi**. C’est à vous de déterminer comment intégrer le SDK à votre site web, écouter les modifications apportées au consentement dans la CMP et appeler la commande appropriée. Ce document fournit des instructions générales sur la manière d’intégrer votre CMP au SDK Web de Platform.
 
 ## Conditions préalables
 
-Ce didacticiel suppose que vous avez déjà déterminé comment générer des données de consentement dans votre CMP et que vous avez créé un jeu de données contenant des champs de consentement qui a été activé pour le Profil client en temps réel. Pour en savoir plus sur ces étapes, consultez la présentation du traitement du consentement [en Experience Platform](./overview.md) avant de revenir à ce guide.
+Ce tutoriel suppose que vous avez déjà déterminé comment générer des données de consentement dans votre CMP et que vous avez créé un jeu de données contenant des champs de consentement activés pour Real-time Customer Profile. Pour en savoir plus sur ces étapes, consultez la présentation du [traitement du consentement dans Experience Platform](./overview.md) avant de revenir à ce guide.
 
-En outre, ce guide nécessite une bonne compréhension des extensions Adobe Experience Platform Launch et de leur installation dans les applications Web. Consultez la documentation suivante pour plus d’informations :
+En outre, ce guide nécessite une compréhension pratique des extensions Adobe Experience Platform Launch et de leur installation dans les applications web. Pour plus d’informations, consultez la documentation suivante :
 
-* [Présentation du platform launch](https://experienceleague.adobe.com/docs/launch/using/home.html)
-* [Guide de démarrage rapide](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html)
-* [Présentation de la publication](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html)
+* [Présentation des platform launchs](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=fr)
+* [Guide de démarrage rapide](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html?lang=fr)
+* [Présentation de la publication](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=fr)
 
-## Configuration d’une configuration de bord
+## Configuration d’un flux de données
 
-Pour que le SDK envoie des données à l’Experience Platform, vous devez disposer d’une configuration de périphérie existante pour la plateforme configurée dans Adobe Experience Platform Launch. En outre, le [!UICONTROL jeu de données de Profil] que vous sélectionnez pour la configuration doit contenir des champs de consentement normalisés.
+Pour que le SDK envoie des données à l’Experience Platform, un flux de données existant pour Platform doit être configuré dans Adobe Experience Platform Launch. En outre, le [!UICONTROL jeu de données de profil] que vous sélectionnez pour la configuration doit contenir des champs de consentement normalisés.
 
-Après avoir créé une nouvelle configuration ou sélectionné une configuration existante à modifier, sélectionnez le bouton bascule en regard de **[!UICONTROL Adobe Experience Platform]**. Ensuite, utilisez les valeurs répertoriées ci-dessous pour remplir le formulaire.
+Après avoir créé une configuration ou sélectionné une configuration existante à modifier, cliquez sur le bouton de basculement en regard de **[!UICONTROL Adobe Experience Platform]**. Ensuite, utilisez les valeurs répertoriées ci-dessous pour remplir le formulaire.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/edge-config.png)
 
-| Champ de configuration Edge | Valeur |
+| Champ de flux de données | Valeur |
 | --- | --- |
-| [!UICONTROL Environnement de test] | Nom de la plate-forme [sandbox](../../../../sandboxes/home.md) qui contient la connexion de flux continu et les jeux de données nécessaires pour configurer la configuration du bord. |
-| [!UICONTROL Entrée de diffusion en continu] | Connexion de flux continu valide pour l’Experience Platform. Consultez le didacticiel sur [la création d&#39;une connexion de diffusion](../../../../ingestion/tutorials/create-streaming-connection-ui.md) si vous n&#39;avez pas d&#39;entrée de diffusion existante. |
-| [!UICONTROL Jeu de données événement] | Jeu de données [!DNL XDM ExperienceEvent] que vous prévoyez d’envoyer aux utilisateurs du SDK pour envoyer des données de événement. Bien que vous soyez tenu de fournir un jeu de données de événement pour créer une configuration de bord de plate-forme, notez que l&#39;envoi direct de données de consentement via des événements n&#39;est pas actuellement pris en charge. |
-| [!UICONTROL Jeu de données profil] | Jeu de données activé [!DNL Profile] avec les champs de consentement du client que vous avez créés précédemment. |
+| [!UICONTROL Environnement de test] | Nom de la plateforme [sandbox](../../../../sandboxes/home.md) qui contient la connexion en continu requise et les jeux de données pour configurer le flux de données. |
+| [!UICONTROL Inlet de diffusion en continu] | Une connexion en continu valide pour l’Experience Platform. Consultez le tutoriel sur la [création d’une connexion en continu](../../../../ingestion/tutorials/create-streaming-connection-ui.md) si vous ne disposez pas d’inlet de diffusion existant. |
+| [!UICONTROL Jeu de données d’événement] | Jeu de données [!DNL XDM ExperienceEvent] que vous prévoyez d’envoyer aux données d’événement à l’aide du SDK. Bien que vous soyez tenu de fournir un jeu de données d’événement pour créer un flux de données Platform, notez que l’envoi direct de données de consentement via des événements n’est actuellement pas pris en charge. |
+| [!UICONTROL Jeu de données de profil] | Jeu de données compatible [!DNL Profile] avec les champs de consentement du client que vous avez créés précédemment. |
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** en bas de l’écran et continuez à suivre les invites supplémentaires pour terminer la configuration.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** en bas de l’écran et continuez à suivre les autres invites pour terminer la configuration.
 
 
-## Installation et configuration de l’extension Platform Web SDK
+## Installation et configuration de l’extension SDK Web Platform
 
-Une fois que vous avez créé une configuration Edge comme décrit dans la section précédente, vous devez configurer l&#39;extension Platform Web SDK que vous allez déployer sur votre site. Si l’extension SDK n’est pas installée sur votre propriété de Platform launch, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de l’onglet **[!UICONTROL Catalogue]**. Sélectionnez ensuite **[!UICONTROL Installer]** sous l’extension Platform SDK dans la liste des extensions disponibles.
+Une fois que vous avez créé un flux de données comme décrit dans la section précédente, vous devez configurer l’extension SDK Web Platform que vous allez déployer sur votre site. Si l’extension SDK n’est pas installée sur la propriété de Platform launch, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de l’onglet **[!UICONTROL Catalogue]** . Sélectionnez ensuite **[!UICONTROL Installer]** sous l’extension SDK Platform dans la liste des extensions disponibles.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
-Lors de la configuration du SDK, sous **[!UICONTROL Edge Configurations]**, sélectionnez la configuration que vous avez créée à l’étape précédente.
+Lors de la configuration du SDK, sous **[!UICONTROL Configurations Edge]**, sélectionnez le flux de données que vous avez créé à l’étape précédente.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
 
-Sélectionnez **[!UICONTROL Enregistrer]** pour installer l&#39;extension.
+Sélectionnez **[!UICONTROL Enregistrer]** pour installer l’extension.
 
-### Créer un élément de données pour définir le consentement par défaut
+### Création d’un élément de données pour définir le consentement par défaut
 
-Une fois l’extension SDK installée, vous avez la possibilité de créer un élément de données représentant la valeur de consentement de collecte de données par défaut (`collect.val`) pour vos utilisateurs. Cela peut s’avérer utile si vous souhaitez que les valeurs par défaut varient en fonction de l’utilisateur, par exemple `pending` pour les utilisateurs d’Union européenne et `in` pour les utilisateurs d’Amérique du Nord.
+Une fois l’extension SDK installée, vous avez la possibilité de créer un élément de données représentant la valeur de consentement de collecte de données par défaut (`collect.val`) pour vos utilisateurs. Cela peut s’avérer utile si vous souhaitez avoir différentes valeurs par défaut en fonction de l’utilisateur, telles que `pending` pour les utilisateurs de l’Union européenne et `in` pour les utilisateurs d’Amérique du Nord.
 
-Dans ce cas d’utilisation, vous pouvez implémenter les éléments suivants pour définir le consentement par défaut en fonction de la région de l’utilisateur :
+Dans ce cas d’utilisation, vous pouvez mettre en oeuvre les éléments suivants pour définir le consentement par défaut en fonction de la région de l’utilisateur :
 
-1. Déterminez la région de l’utilisateur sur le serveur Web.
-1. Avant la balise de script de Platform launch (code incorporé) sur la page Web, effectuez le rendu d’une balise de script distincte qui définit une variable `adobeDefaultConsent` en fonction de la région de l’utilisateur.
+1. Déterminez la région de l’utilisateur sur le serveur web.
+1. Avant la balise de script de Platform launch (code incorporé) sur la page web, effectuez le rendu d’une balise de script distincte qui définit une variable `adobeDefaultConsent` en fonction de la région de l’utilisateur.
 1. Configurez un élément de données qui utilise la variable JavaScript `adobeDefaultConsent` et utilisez cet élément de données comme valeur de consentement par défaut pour l’utilisateur.
 
-Si la région de l’utilisateur est déterminée par un CMP, vous pouvez utiliser les étapes suivantes à la place :
+Si la région de l’utilisateur est déterminée par une CMP, vous pouvez plutôt utiliser les étapes suivantes :
 
-1. Gérez le événement &quot;CMP loaded&quot; sur la page.
-1. Dans le gestionnaire de événements, définissez une variable `adobeDefaultConsent` en fonction de la région de l’utilisateur, puis chargez le script de bibliothèque de Platform launchs à l’aide de JavaScript.
+1. Gérez l’événement &quot;CMP loaded&quot; (Chargé par la CMP) sur la page.
+1. Dans le gestionnaire d’événements, définissez une variable `adobeDefaultConsent` en fonction de la région de l’utilisateur, puis chargez le script de bibliothèque de Platform launchs à l’aide de JavaScript.
 1. Configurez un élément de données qui utilise la variable JavaScript `adobeDefaultConsent` et utilisez cet élément de données comme valeur de consentement par défaut pour l’utilisateur.
 
-Pour créer un élément de données dans l’interface utilisateur du Platform launch, sélectionnez **[!UICONTROL Éléments de données]** dans le volet de navigation de gauche, puis **[!UICONTROL Ajouter l’élément de données]** pour accéder à la boîte de dialogue de création de l’élément de données.
+Pour créer un élément de données dans l’interface utilisateur de Platform launch, sélectionnez **[!UICONTROL Éléments de données]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Ajouter un élément de données]** pour accéder à la boîte de dialogue de création de l’élément de données.
 
-A partir de là, vous devez créer un élément de données [!UICONTROL JavaScript Variable] basé sur `adobeDefaultConsent`. Sélectionnez **[!UICONTROL Enregistrer]** une fois terminé.
+À partir de là, vous devez créer un élément de données [!UICONTROL Variable JavaScript] basé sur `adobeDefaultConsent`. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-Une fois l’élément de données créé, accédez à la page de configuration de l’extension du SDK Web. Dans la section [!UICONTROL Confidentialité], sélectionnez **[!UICONTROL Fourni par l’élément de données]** et utilisez la boîte de dialogue fournie pour sélectionner l’élément de données de consentement par défaut que vous avez créé précédemment.
+Une fois l’élément de données créé, revenez à la page de configuration de l’extension SDK Web. Dans la section [!UICONTROL Confidentialité], sélectionnez **[!UICONTROL Fourni par l’élément de données]** et utilisez la boîte de dialogue fournie pour sélectionner l’élément de données de consentement par défaut que vous avez créé précédemment.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 
-### Déployer l’extension sur votre site Web
+### Déployer l’extension sur votre site web
 
-Une fois que vous avez terminé de configurer l’extension, elle peut être intégrée à votre site Web. Consultez le [guide de publication](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) dans la documentation du Platform launch pour obtenir des informations détaillées sur la façon de déployer votre bibliothèque mise à jour.
+Une fois que vous avez terminé de configurer l’extension, elle peut être intégrée à votre site web. Pour plus d’informations sur le déploiement de votre version de bibliothèque mise à jour, reportez-vous au [guide de publication](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) dans la documentation du Platform launch.
 
-## Commandes de modification du consentement
+## Exécution de commandes de changement de consentement
 
-Une fois que vous avez intégré l’extension SDK à votre site Web, vous pouvez début à l’aide de la commande Platform Web SDK `setConsent` pour envoyer les données de consentement à Platform.
+Une fois que vous avez intégré l’extension SDK à votre site web, vous pouvez commencer à utiliser la commande SDK Web Platform `setConsent` pour envoyer les données de consentement à Platform.
 
-Il existe deux scénarios dans lesquels `setConsent` doit être appelé sur votre site :
+Il existe deux scénarios où `setConsent` doit être appelé sur votre site :
 
 1. Lorsque le consentement est chargé sur la page (en d’autres termes, à chaque chargement de page)
-1. Dans le cadre d&#39;un hook CMP ou d&#39;un écouteur de événement qui détecte les modifications apportées aux paramètres de consentement
+1. Dans le cadre d’un crochet de CMP ou d’un écouteur d’événement qui détecte les modifications apportées aux paramètres de consentement
 
 >[!NOTE]
 >
->Pour une introduction à la syntaxe commune des commandes du SDK de plate-forme, voir le document sur [l&#39;exécution des commandes](../../../../edge/fundamentals/executing-commands.md).
+>Pour une présentation de la syntaxe courante des commandes du SDK Platform, consultez le document sur [l’exécution des commandes](../../../../edge/fundamentals/executing-commands.md).
 
-La commande `setConsent` attend deux arguments :
+La commande `setConsent` requiert deux arguments :
 
-1. Chaîne indiquant le type de commande (dans ce cas, `"setConsent"`)
-1. Objet de charge utile contenant une propriété de type tableau unique : `consent`. Le tableau `consent` doit contenir au moins un objet qui fournit les champs de consentement requis pour la norme Adobe.
+1. Chaîne indiquant le type de commande (ici, `"setConsent"`)
+1. Objet de payload contenant une seule propriété de type tableau : `consent`. Le tableau `consent` doit contenir au moins un objet qui fournit les champs de consentement requis pour la norme Adobe.
 
-Les champs de consentement requis pour la norme Adobe sont indiqués dans l&#39;exemple suivant `setConsent` appel :
+Les champs de consentement requis pour la norme Adobe sont présentés dans l’exemple d’appel `setConsent` suivant :
 
 ```js
 alloy("setConsent", {
@@ -134,15 +133,15 @@ alloy("setConsent", {
 
 | Propriété Payload | Description |
 | --- | --- |
-| `standard` | Norme de consentement utilisée. Pour la norme Adobe, cette valeur doit être définie sur `Adobe`. |
+| `standard` | La norme de consentement utilisée. Pour la norme Adobe, cette valeur doit être définie sur `Adobe`. |
 | `version` | Numéro de version de la norme de consentement indiquée sous `standard`. Cette valeur doit être définie sur `2.0` pour le traitement du consentement standard par Adobe. |
-| `value` | Informations de consentement mises à jour du client, fournies sous la forme d’un objet XDM conforme à la structure des champs de consentement du jeu de données pris en charge par le Profil. |
+| `value` | Informations de consentement mises à jour du client, fournies sous la forme d’un objet XDM conforme à la structure des champs de consentement du jeu de données activé par Profile. |
 
 >[!NOTE]
 >
->Si vous utilisez d&#39;autres normes de consentement conjointement avec `Adobe` (par exemple `IAB TCF`), vous pouvez ajouter des objets supplémentaires à la baie `consent` pour chaque norme. Chaque objet doit contenir les valeurs appropriées pour `standard`, `version` et `value` pour la norme de consentement qu&#39;il représente.
+>Si vous utilisez d’autres normes de consentement conjointement avec `Adobe` (comme `IAB TCF`), vous pouvez ajouter des objets supplémentaires au tableau `consent` pour chaque norme. Chaque objet doit contenir les valeurs appropriées pour `standard`, `version` et `value` pour la norme de consentement qu’il représente.
 
-Le code JavaScript suivant fournit un exemple de fonction qui gère les modifications des préférences de consentement sur un site Web, qui peuvent être utilisées comme rappel dans un écouteur de événement ou un hook CMP :
+Le code JavaScript suivant illustre une fonction qui gère les modifications des préférences de consentement sur un site web, qui peuvent être utilisées comme rappel dans un écouteur d’événement ou un crochet de CMP :
 
 ```js
 var setConsent = function () {
@@ -184,10 +183,10 @@ var setConsent = function () {
 });
 ```
 
-## Gestion des réponses au SDK
+## Gestion des réponses du SDK
 
-Toutes les commandes [!DNL Platform SDK] renvoient des promesses indiquant si l&#39;appel a réussi ou échoué. Vous pouvez ensuite utiliser ces réponses pour une logique supplémentaire, telle que l’affichage de messages de confirmation à l’intention du client. Pour obtenir des exemples spécifiques, reportez-vous à la section [gestion des réussites ou des échecs](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) du guide sur l’exécution des commandes du SDK.
+Toutes les commandes [!DNL Platform SDK] renvoient des promesses indiquant si l’appel a réussi ou échoué. Vous pouvez ensuite utiliser ces réponses pour une logique supplémentaire, telle que l’affichage des messages de confirmation au client. Pour obtenir des exemples spécifiques, reportez-vous à la section [Gestion de la réussite ou de l’échec](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) du guide sur l’exécution des commandes du SDK.
 
 ## Étapes suivantes
 
-En suivant ce guide, vous avez configuré l&#39;extension Platform Web SDK pour envoyer des données de consentement à l&#39;Experience Platform. Vous pouvez maintenant revenir à l’aperçu du traitement du consentement pour connaître les étapes de [test de votre implémentation](./overview.md#test-implementation).
+En suivant ce guide, vous avez configuré l’extension SDK Web Platform pour envoyer des données de consentement à Experience Platform. Vous pouvez maintenant revenir à la présentation du traitement du consentement pour savoir comment [tester votre mise en oeuvre](./overview.md#test-implementation).
