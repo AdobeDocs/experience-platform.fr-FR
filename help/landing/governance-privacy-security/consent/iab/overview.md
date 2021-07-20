@@ -5,9 +5,9 @@ title: Prise en charge du TCF 2.0 de l’IAB dans l’Experience Platform
 topic-legacy: privacy events
 description: Découvrez comment configurer vos opérations de données et vos schémas pour transmettre les choix de consentement des clients lors de l’activation de segments vers des destinations dans Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: a3468d55d95b89c075abf91391bd7dfaa974742c
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '2564'
+source-wordcount: '2559'
 ht-degree: 1%
 
 ---
@@ -117,15 +117,15 @@ Une fois que vous avez configuré votre CMP pour générer des chaînes de conse
 
 **Le SDK n’interface pas avec les CMP prêtes à l’emploi**. C’est à vous de déterminer comment intégrer le SDK à votre site web, écouter les modifications apportées au consentement dans la CMP et appeler la commande appropriée.
 
-### Création d’une configuration Edge
+### Création d’un flux de données
 
-Pour que le SDK envoie des données à l’Experience Platform, vous devez d’abord créer une configuration de périphérie pour Platform dans [!DNL Adobe Experience Platform Launch]. Vous trouverez des étapes spécifiques pour créer une configuration dans la [documentation du SDK](../../../../edge/fundamentals/datastreams.md).
+Pour que le SDK envoie des données à l’Experience Platform, vous devez d’abord créer un nouveau flux de données pour Platform dans [!DNL Adobe Experience Platform Launch]. Vous trouverez des étapes spécifiques pour créer une configuration dans la [documentation du SDK](../../../../edge/fundamentals/datastreams.md).
 
 Après avoir fourni un nom unique pour la configuration, cliquez sur le bouton de basculement en regard de **[!UICONTROL Adobe Experience Platform]**. Utilisez ensuite les valeurs suivantes pour compléter le reste du formulaire :
 
-| Champ de configuration Edge | Valeur |
+| Champ de flux de données | Valeur |
 | --- | --- |
-| [!UICONTROL Environnement de test] | Nom de la plateforme [sandbox](../../../../sandboxes/home.md) qui contient la connexion en continu requise et les jeux de données pour configurer la configuration de périphérie. |
+| [!UICONTROL Environnement de test] | Nom de la plateforme [sandbox](../../../../sandboxes/home.md) qui contient la connexion en continu requise et les jeux de données pour configurer le flux de données. |
 | [!UICONTROL Inlet de diffusion en continu] | Une connexion en continu valide pour l’Experience Platform. Consultez le tutoriel sur la [création d’une connexion en continu](../../../../ingestion/tutorials/create-streaming-connection-ui.md) si vous ne disposez pas d’inlet de diffusion existant. |
 | [!UICONTROL Jeu de données d’événement] | Sélectionnez le jeu de données [!DNL XDM ExperienceEvent] créé à l’[étape précédente](#datasets). Si vous avez inclus le [[!UICONTROL consentement IAB TCF 2.0] groupe de champs](../../../../xdm/field-groups/event/iab.md) dans le schéma de ce jeu de données, vous pouvez effectuer le suivi des événements de modification du consentement au fil du temps à l’aide de la commande [`sendEvent`](#sendEvent), en stockant ces données dans ce jeu de données. Gardez à l’esprit que les valeurs de consentement stockées dans ce jeu de données ne sont **pas** utilisées dans les workflows d’application automatique. |
 | [!UICONTROL Jeu de données de profil] | Sélectionnez le jeu de données [!DNL XDM Individual Profile] créé à l’[étape précédente](#datasets). Lors de la réponse aux hooks de modification du consentement de la CMP à l’aide de la commande [`setConsent`](#setConsent), les données collectées seront stockées dans ce jeu de données. Comme ce jeu de données est activé pour Profile, les valeurs de consentement stockées dans ce jeu de données sont honorées pendant les workflows d’application automatique. |
@@ -136,7 +136,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** en bas de
 
 ### Exécution de commandes de changement de consentement
 
-Une fois que vous avez créé la configuration Edge décrite dans la section précédente, vous pouvez commencer à utiliser les commandes SDK pour envoyer des données de consentement à Platform. Les sections ci-dessous fournissent des exemples d’utilisation de chaque commande du SDK dans différents scénarios.
+Une fois que vous avez créé le flux de données décrit dans la section précédente, vous pouvez commencer à utiliser les commandes du SDK pour envoyer des données de consentement à Platform. Les sections ci-dessous fournissent des exemples d’utilisation de chaque commande du SDK dans différents scénarios.
 
 >[!NOTE]
 >
