@@ -5,9 +5,9 @@ title: Configuration d’un jeu de données pour capturer les données de consen
 topic-legacy: getting started
 description: Découvrez comment configurer un schéma et un jeu de données de modèle de données d’expérience (XDM) pour capturer les données de consentement et de préférence dans Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: ff793c207a181ca6d2486e7fd6ef5c4f57744fba
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1480'
 ht-degree: 4%
 
 ---
@@ -116,7 +116,7 @@ Le canevas réapparaît, indiquant que l’objet `consents` a été ajouté à l
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
-Si le schéma que vous avez modifié est utilisé par le [!UICONTROL jeu de données de profil] spécifié dans votre configuration de périphérie du SDK Web Platform, ce jeu de données inclut désormais les nouveaux champs de consentement. Vous pouvez maintenant revenir au [guide de traitement du consentement](./overview.md#merge-policies) pour continuer le processus de configuration de l’Experience Platform pour traiter les données de consentement.
+Si le schéma que vous avez modifié est utilisé par le [!UICONTROL jeu de données de profil] spécifié dans votre flux de données SDK Web Platform, ce jeu de données inclut désormais les nouveaux champs de consentement. Vous pouvez maintenant revenir au [guide de traitement du consentement](./overview.md#merge-policies) pour continuer le processus de configuration de l’Experience Platform pour traiter les données de consentement.
 
 Si vous n’avez pas créé de jeu de données pour ce schéma, suivez les étapes de la section suivante.
 
@@ -150,7 +150,7 @@ Enfin, sélectionnez **[!UICONTROL Activer]** dans la fenêtre contextuelle de c
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-Le jeu de données est maintenant enregistré et activé pour une utilisation dans [!DNL Profile]. Si vous envisagez d’utiliser le SDK Web Platform pour envoyer des données de consentement à Profile, vous devez sélectionner ce jeu de données comme [!UICONTROL Jeu de données de profil] lors de la configuration de votre [configuration de périphérie](../../../../edge/fundamentals/datastreams.md).
+Le jeu de données est maintenant enregistré et activé pour une utilisation dans [!DNL Profile]. Si vous envisagez d’utiliser le SDK Web de Platform pour envoyer des données de consentement à Profile, vous devez sélectionner ce jeu de données comme [!UICONTROL Jeu de données de profil] lors de la configuration de votre [flux de données](../../../../edge/fundamentals/datastreams.md).
 
 ## Étapes suivantes
 
