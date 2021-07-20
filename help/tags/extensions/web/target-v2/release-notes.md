@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de l’extension Adobe Target v2
 description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: ae6b69ecea54942c1bbf8a2765768bac50a8b930
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 78%
+source-wordcount: '572'
+ht-degree: 62%
 
 ---
 
@@ -13,6 +13,30 @@ ht-degree: 78%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+
+## 20 juillet 2021
+
+### Extension 0.15.1 d’Adobe Target v2
+
+- Correction d’un problème lié à un conflit de nom de fonction `stringify`, en raison duquel des valeurs UID incorrectes étaient générées pour `sessionId`, `requestId`, etc.
+
+## 16 juillet 2021
+
+### Extension 0.15.0 d’Adobe Target v2
+
+- Ajoutez un attribut sécurisé aux cookies chaque fois que les paramètres at.js secureOnly sont définis sur true
+- Les jetons de réponse sont désormais disponibles lors de l’utilisation de `triggerView()`
+- Correction d’un bogue lié à l’événement `CONTENT_RENDERING_NO_OFFERS` . Désormais, il se déclenche correctement lorsqu’aucun contenu n’est renvoyé par Target.
+- Les détails des mesures de clics A4T sont correctement renvoyés lors de l’utilisation de requêtes de prérécupération
+- La génération de l’UUID n’utilise plus `Math.random()`, mais repose sur `window.crypto`
+- `sessionId` l’expiration du cookie est correctement étendue à chaque appel réseau.
+- L’initialisation du cache de l’affichage SPA est désormais correctement gérée et respecte les paramètres `viewsEnable`
+
+## 2 juin 2021
+
+### Extension 0.14.2 d’Adobe Target v2
+
+- Correction d’un bogue en raison duquel le lot final de Launch contient deux versions d’at.js, l’une avec la prise de décision sur l’appareil et l’autre sans.
 
 ## 19 mai 2021
 
