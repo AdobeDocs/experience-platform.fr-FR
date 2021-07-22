@@ -1,9 +1,9 @@
 ---
 title: Manifeste d’extensions
 description: Découvrez comment configurer un fichier de manifeste JSON informant Adobe Experience Platform quant à la manière correcte de consommer votre extension.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2646'
 ht-degree: 77%
 
 ---
@@ -22,7 +22,7 @@ Un manifeste d’extensions doit être constitué des éléments suivants :
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom de l’extension. Il doit être différent du nom de toutes les autres extensions Reactor et doit respecter les [règles de nommage](#naming-rules). **Il est utilisé par les balises comme identifiant et ne doit pas être modifié après la publication de votre extension.** |
+| `name` | Nom de l’extension. Il doit être différent du nom de toutes les autres extensions et doit respecter les [règles de nommage](#naming-rules). **Il est utilisé par les balises comme identifiant et ne doit pas être modifié après la publication de votre extension.** |
 | `platform` | La plateforme de votre extension. La seule valeur acceptée pour le moment est `web`. |
 | `version` | La version de votre extension. Elle doit respecter le format de version [semver](http://semver.org/). Ce format est cohérent avec le [champ de version npm](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | Le nom lisible de votre extension. Cela sera présenté aux utilisateurs de Platform. Il n’est pas nécessaire de mentionner &quot;balises&quot; ou &quot;extension&quot; ; les utilisateurs savent déjà qu’ils utilisent une extension de balise. |
