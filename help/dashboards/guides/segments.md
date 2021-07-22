@@ -4,14 +4,14 @@ title: Tableau de bord Segments
 description: 'Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments que votre entreprise a créés. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 2%
+source-wordcount: '982'
+ht-degree: 6%
 
 ---
 
-# Tableau de bord des segments {#segment-dashboard}
+# Tableau de bord Segments {#segment-dashboard}
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos segments, telles qu’elles sont capturées lors d’un instantané quotidien. Ce guide explique comment accéder au tableau de bord des segments et l’utiliser dans l’interface utilisateur. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
@@ -39,9 +39,9 @@ Pour accéder au tableau de bord [!UICONTROL Segments] dans l’interface utilis
 
 ### Modification du tableau de bord [!UICONTROL Segments]
 
-Vous pouvez modifier l’aspect du tableau de bord [!UICONTROL Segments] en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Cela vous permet de déplacer, d’ajouter et de supprimer des widgets du tableau de bord, ainsi que d’accéder à la [!UICONTROL bibliothèque de widgets] pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
+Vous pouvez modifier l’aspect du tableau de bord [!UICONTROL Segments] en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Cela vous permet de déplacer, d’ajouter et de supprimer des widgets du tableau de bord, ainsi que d’accéder à la **[!UICONTROL bibliothèque de widgets]** pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
 
-Pour en savoir plus, consultez la documentation [Modification des tableaux de bord](../modify.md) et [bibliothèque de widgets](../widget-library.md) .
+Pour en savoir plus, reportez-vous à la documentation [Modification des tableaux de bord](../customize/modify.md) et [présentation de la bibliothèque de widgets](../customize/widget-library.md) .
 
 ## Sélection d’un segment
 
@@ -61,9 +61,11 @@ La date et l’heure de la &quot;dernière mise à jour&quot; d’un widget indi
 
 ![](../images/segments/widget-timestamp.png)
 
-## Widgets disponibles
+## Widgets standard
 
-Experience Platform fournit plusieurs widgets que vous pouvez utiliser pour visualiser différentes mesures liées à votre segment. Pour en savoir plus, sélectionnez le nom d’un widget ci-dessous :
+Adobe fournit plusieurs widgets standard que vous pouvez utiliser pour visualiser différentes mesures liées à vos segments. Vous pouvez également créer des widgets personnalisés à partager avec votre organisation à l’aide de la [!UICONTROL bibliothèque de widgets]. Pour en savoir plus sur la création de widgets personnalisés, commencez par lire la [présentation de la bibliothèque de widgets](../customize/widget-library.md).
+
+Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez le nom d’un widget dans la liste suivante :
 
 * [[!UICONTROL Taille de l’audience]](#audience-size)
 * [[!UICONTROL Tendance de la taille de l’audience]](#audience-size-trend)
