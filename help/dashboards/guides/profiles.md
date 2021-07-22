@@ -4,10 +4,10 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 2%
+source-wordcount: '1234'
+ht-degree: 7%
 
 ---
 
@@ -39,9 +39,9 @@ Pour accéder au tableau de bord [!UICONTROL Profils] dans l’interface utilisa
 
 ### Modification du tableau de bord [!UICONTROL Profils]
 
-Vous pouvez modifier l’aspect du tableau de bord [!UICONTROL Profils] en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Cela vous permet de déplacer, d’ajouter et de supprimer des widgets du tableau de bord, ainsi que d’accéder à la [!UICONTROL bibliothèque de widgets] pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
+Vous pouvez modifier l’aspect du tableau de bord [!UICONTROL Profils] en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Cela vous permet de déplacer, d’ajouter et de supprimer des widgets du tableau de bord, ainsi que d’accéder à la **[!UICONTROL bibliothèque de widgets]** pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
 
-Pour en savoir plus, consultez la documentation [Modification des tableaux de bord](../modify.md) et [bibliothèque de widgets](../widget-library.md) .
+Pour en savoir plus, reportez-vous à la documentation [Modification des tableaux de bord](../customize/modify.md) et [présentation de la bibliothèque de widgets](../customize/widget-library.md) .
 
 ## Stratégies de fusion
 
@@ -63,9 +63,11 @@ Le tableau de bord est composé de widgets, qui sont des mesures en lecture seul
 
 La date et l’heure de la &quot;dernière mise à jour&quot; d’un widget indique le moment où le dernier instantané des données a été pris. La date et l’heure de l’instantané sont indiquées en UTC ; il ne se trouve pas dans le fuseau horaire de l’utilisateur individuel ou de l’organisation IMS.
 
-## Widgets disponibles
+## Widgets standard
 
-Experience Platform fournit plusieurs widgets que vous pouvez utiliser pour visualiser différentes mesures liées à vos données de profil. Pour en savoir plus, sélectionnez le nom d’un widget ci-dessous :
+Adobe fournit plusieurs widgets standard que vous pouvez utiliser pour visualiser différentes mesures liées à vos données de profil. Vous pouvez également créer des widgets personnalisés à partager avec votre organisation à l’aide de la [!UICONTROL bibliothèque de widgets]. Pour en savoir plus sur la création de widgets personnalisés, commencez par lire la [présentation de la bibliothèque de widgets](../customize/widget-library.md).
+
+Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez le nom d’un widget dans la liste suivante :
 
 * [[!UICONTROL Nombre de profils]](#profile-count)
 * [[!UICONTROL Profils ajoutés]](#profiles-added)
@@ -99,7 +101,7 @@ Le nombre de profils ajoutés est le résultat de l’application de la stratég
 
 ### [!UICONTROL Profils par identité] {#profiles-by-identity}
 
-Le widget **[!UICONTROL Profils par identité]** affiche la ventilation des identités pour tous les profils fusionnés de votre banque de profils. Le nombre total de profils par identité (c’est-à-dire, additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur au nombre total de profils fusionnés, car plusieurs espaces de noms peuvent y être associés pour un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
+Le widget **[!UICONTROL Profils par identité]** affiche la ventilation des identités pour tous les profils fusionnés de votre banque de profils. Le nombre total de profils par identité (c’est-à-dire en additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur au nombre total de profils fusionnés, car plusieurs espaces de noms peuvent être associés à un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
 
 Pour en savoir plus sur les identités, consultez la [documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
 
