@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de la correspondance de segment
 topic-legacy: overview
 description: La correspondance de segment est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment de manière sécurisée, gérée et respectueuse de la confidentialité.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: d6eefc8c10a44fd31eaed00f22d09ee8a300db83
 workflow-type: tm+mt
 source-wordcount: '1901'
 ht-degree: 6%
@@ -12,11 +12,11 @@ ht-degree: 6%
 ---
 
 
-# (Alpha) [!DNL Segment Match] - Aperçu
+# (Version bêta) [!DNL Segment Match] - Aperçu
 
 >[!IMPORTANT]
 >
->[!DNL Segment Match] est actuellement en version alpha. La documentation et les fonctionnalités peuvent changer.
+>[!DNL Segment Match] est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
 Adobe Experience Platform Segment Match est un service de partage de segments qui permet à plusieurs utilisateurs de Platform d’échanger des données de segment de manière sécurisée, gérée et respectueuse de la confidentialité. [!DNL Segment Match] utilise des normes de confidentialité de Platform et des identifiants personnels tels que des emails hachés, des numéros de téléphone hachés et des identifiants d’appareil comme les IDFA et les GAID.
 
