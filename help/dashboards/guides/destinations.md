@@ -4,10 +4,10 @@ title: Tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 6%
+source-wordcount: '895'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ L’interface utilisateur de Adobe Experience Platform fournit un tableau de bor
 
 Pour obtenir un aperçu des destinations, ainsi qu’un catalogue de toutes les destinations disponibles dans Experience Platform, consultez la [documentation sur les destinations](../../destinations/home.md).
 
-##  Données du tableau de bord Destinations  {#destinations-dashboard-data}
+##  Données du tableau de bord Destinations {#destinations-dashboard-data}
 
 Le tableau de bord [!UICONTROL Destinations] affiche un instantané des destinations que votre entreprise a activées dans Experience Profile. Les données de lʼinstantané montrent les données exactement comme elles apparaissent au moment précis où lʼinstantané a été pris. En d’autres termes, l’instantané n’est pas une approximation ou un échantillon des données, et le tableau de bord des destinations n’est pas mis à jour en temps réel.
 
@@ -35,9 +35,17 @@ Pour accéder au tableau de bord des destinations dans l’interface utilisateur
 
 ![](../images/destinations/dashboard-overview.png)
 
-## Widgets disponibles
+### Modification du tableau de bord des destinations
 
-Experience Platform fournit plusieurs widgets que vous pouvez utiliser pour visualiser différentes mesures liées à vos destinations. Pour en savoir plus, sélectionnez le nom d’un widget ci-dessous :
+Vous pouvez modifier l’aspect du tableau de bord des destinations en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Cela vous permet de déplacer, d’ajouter et de supprimer des widgets du tableau de bord, ainsi que d’accéder à la **[!UICONTROL bibliothèque de widgets]** pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
+
+Pour en savoir plus, reportez-vous à la documentation [Modification des tableaux de bord](../customize/modify.md) et [présentation de la bibliothèque de widgets](../customize/widget-library.md) .
+
+## Widgets standard
+
+Adobe fournit plusieurs widgets standard que vous pouvez utiliser pour visualiser différentes mesures liées à vos destinations. Vous pouvez également créer des widgets personnalisés à partager avec votre organisation à l’aide de la [!UICONTROL bibliothèque de widgets]. Pour en savoir plus sur la création de widgets personnalisés, commencez par lire la [présentation de la bibliothèque de widgets](../customize/widget-library.md).
+
+Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez le nom d’un widget dans la liste suivante :
 
 * [[!UICONTROL Destinations les plus utilisées]](#most-used-destinations)
 * [[!UICONTROL Destinations créées récemment]](#recently-created-destinations)
