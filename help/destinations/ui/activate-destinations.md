@@ -6,7 +6,7 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 0162ec101c820c4870dea0f2c2bc09523eca862a
+source-git-commit: a28dc64cfe7f352a023aa2a5bd1156307bbad39f
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 11%
@@ -169,7 +169,7 @@ Sélectionnez **[!UICONTROL Exporter les fichiers complets]** pour que les fichi
 
 >[!IMPORTANT]
 >
->La modification du planning d’exportation de fichiers pour les segments qui ont déjà été exportés n’est actuellement pas prise en charge. Pour réexporter des segments avec un planning différent, vous devez créer une nouvelle instance de destination. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
+>La modification du planning d’exportation de fichiers pour les segments qui ont déjà été enregistrés n’est actuellement pas prise en charge. Pour réexporter des segments avec un planning différent, vous devez créer une nouvelle instance de destination. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
 
 ### Exportation de fichiers incrémentiels {#export-incremental-files}
 
@@ -215,7 +215,7 @@ Sélectionnez **[!UICONTROL Exporter les fichiers incrémentiels]** pour que vos
 
 >[!IMPORTANT]
 >
->La modification du planning d’exportation de fichiers pour les segments qui ont déjà été exportés n’est actuellement pas prise en charge. Pour réexporter des segments avec un planning différent, vous devez créer une nouvelle instance de destination. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
+>La modification du planning d’exportation de fichiers pour les segments qui ont déjà été enregistrés n’est actuellement pas prise en charge. Pour réexporter des segments avec un planning différent, vous devez créer une nouvelle instance de destination. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
 
 ### Configuration des noms de fichier {#file-names}
 
