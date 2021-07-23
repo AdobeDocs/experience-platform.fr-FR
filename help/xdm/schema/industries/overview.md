@@ -4,9 +4,9 @@ title: Présentation des modèles de données du secteur
 topic-legacy: overview
 description: Découvrez les modèles de données normalisés pour divers secteurs verticaux qui peuvent être créés à l’aide des composants standard du modèle de données d’expérience (XDM).
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 4ff97408659559174110a2234b24e9433007c9dc
+source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '354'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Selon le secteur d’activité sous lequel votre entreprise opère, certains com
 
 Afin de vous aider à orienter votre stratégie de modélisation des données en fonction de votre secteur d’activité spécifique, ce guide fournit une référence des diagrammes de relation d’entité (ERD) pour plusieurs secteurs verticaux pris en charge.
 
-## Conditions préalables   
+## Conditions préalables
 
 Pour lire les ERD référencés dans ce guide, vous devez avoir une compréhension pratique de la manière dont les composants XDM interagissent avec les schémas de formulaire et du fonctionnement des schémas XDM dans l’Experience Platform dans son ensemble. Assurez-vous d’avoir lu la documentation de présentation suivante avant de poursuivre :
 
@@ -38,6 +38,7 @@ Les ERD sont fournis pour les secteurs verticaux suivants :
 
 * [[!UICONTROL Vente au détail]](./retail.md)
 * [[!UICONTROL Services financiers]](./financial.md)
+* [[!UICONTROL Télécommunications]](./telecom.md)
 * [[!UICONTROL Voyage et hospitalité]](./travel-hospitality.md)
 
 ## Étapes suivantes
