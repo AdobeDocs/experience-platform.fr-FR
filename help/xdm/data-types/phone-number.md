@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;numéroTéléphone;xdm:numéroTéléphone;typeDeDonnées;type de données;type de données
+keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;numéroTéléphone;xdm:numéroTéléphone;typeDeDonnées;type de données;type de données;
 solution: Experience Platform
 title: Type de données de numéro de téléphone
 topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM Phone Number.
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '213'
 ht-degree: 10%
 
 ---
@@ -31,5 +31,5 @@ ht-degree: 10%
 
 Pour plus d’informations sur le type de données du numéro de téléphone, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/phonenumber.example.1.json)
-* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/phonenumber.schema.json)
+* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.example.1.json)
+* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.schema.json)
