@@ -1,43 +1,42 @@
 ---
-title: Variables Adobe Analytics mappées automatiquement dans le kit de développement Web Adobe Experience Platform
-description: Découvrez quelles variables sont automatiquement mises en correspondance en Adobe Analytics avec le SDK Web Experience Platform
-seo-description: Découvrez quelles variables sont automatiquement mises en correspondance en Adobe Analytics avec le kit de développement Web Adobe Experience Platform.
-keywords: adobe analytics ; variables ; analytics ; carte automatique ; mappage automatique ;
+title: Variables Adobe Analytics mappées automatiquement dans le SDK Web de Adobe Experience Platform
+description: Découvrez les variables qui sont automatiquement mappées dans Adobe Analytics avec le SDK Web Experience Platform
+seo-description: Découvrez les variables automatiquement mappées dans Adobe Analytics avec le SDK Web de Adobe Experience Platform
+keywords: adobe analytics;variables;analytics;carte automatique;mappage automatique;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-translation-type: tm+mt
-source-git-commit: 7a6a9f1ee764ab614fa163f90a2051bd35b76b7f
+source-git-commit: 2e004fdd87c8a74eb161ef7af93c7102953ea85c
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '708'
 ht-degree: 35%
 
 ---
 
-# Les variables sont automatiquement mises en correspondance dans [!DNL Analytics]
+# Variables automatiquement mappées dans [!DNL Analytics]
 
-Vous trouverez ci-dessous une liste de variables que Adobe Experience Platform Edge Network mappe automatiquement dans Adobe Analytics.
+Vous trouverez ci-dessous une liste des variables que Adobe Experience Platform Edge Network mappe automatiquement dans Adobe Analytics. Vous trouverez des informations détaillées sur les paramètres de requête de collecte de données Adobe Analytics dans le [Guide de mise en oeuvre Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html).
 
 | Chemin d’accès au champ XDM | [!DNL Analytics Query String] / En-tête HTTP | Description |
 | ---------- | ------------------------- | ----------------------------------------- |
 | `application.id` | `c.a.appid` | Mappage des données contextuelles `c.a.appid`AppMeasurement. |
 | `application.launches.value` | `c.a.launches` | Mappage des données contextuelles `c.a.launches` AppMeasurement. |
-| `commerce.checkouts.id` | `events` | `scCheckout` Sérialisation par événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
-| `commerce.checkouts.value` | `events` | Correspondance du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec la conversion COMMERCE_SC_CHECKOUT, à l’aide du délimiteur `,`. |
+| `commerce.checkouts.id` | `events` | `scCheckout` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
+| `commerce.checkouts.value` | `events` | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_CHECKOUT, à l’aide du délimiteur `,`. |
 | `commerce.order.currencyCode` | `cc` | Mappage du paramètre de requête CURRENCY AppMeasurement. |
 | `commerce.order.purchaseID` | `pi` | Mappage du paramètre de requête PURCHASEID AppMeasurement. |
-| `commerce.productListAdds.id` | `events` | `scAdd` Sérialisation par événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
-| `commerce.productListAdds.value` | `events` | Correspondance du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec la conversion COMMERCE_SC_AJOUTE, à l’aide du délimiteur `,`. |
-| `commerce.productListOpens.id` | `events` | `scOpen` Sérialisation par événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
-| `commerce.productListOpens.value` | `events` | Correspondance du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec la conversion COMMERCE_SC_OPEN, à l’aide du délimiteur `,`. |
-| `commerce.productListRemovals.id` | `events` | `scRemove` Sérialisation par événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
-| `commerce.productListRemovals.value` | `events` | Correspondance du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec la conversion COMMERCE_SC_REMOVE, à l’aide du délimiteur `,`. |
-| `commerce.productListViews.id` | `events` | `scView` Sérialisation par événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
-| `commerce.productListViews.value` | `events` | Correspondance du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec la conversion COMMERCE_SC_VUE, à l’aide du délimiteur `,`. |
-| `commerce.productViews.id` | `events` | `prodView` Sérialisation par événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
-| `commerce.productViews.value` | `events` | Mappage du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec conversion COMMERCE_PROD_VUE, à l’aide du délimiteur `,`. |
-| `commerce.purchases.value` | `events` | Mappage du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec conversion COMMERCE_PURCHASE, à l’aide du délimiteur `,`. |
+| `commerce.productListAdds.id` | `events` | `scAdd` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
+| `commerce.productListAdds.value` | `events` | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_ADD, à l’aide du délimiteur `,`. |
+| `commerce.productListOpens.id` | `events` | `scOpen` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
+| `commerce.productListOpens.value` | `events` | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_OPEN, à l’aide du délimiteur `,`. |
+| `commerce.productListRemovals.id` | `events` | `scRemove` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
+| `commerce.productListRemovals.value` | `events` | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_REMOVE, à l’aide du délimiteur `,`. |
+| `commerce.productListViews.id` | `events` | `scView` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
+| `commerce.productListViews.value` | `events` | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_SC_VIEW, à l’aide du délimiteur `,`. |
+| `commerce.productViews.id` | `events` | `prodView` sérialisation des événements. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’identifiant à l’entité. |
+| `commerce.productViews.value` | `events` | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_PROD_VIEW, à l’aide du délimiteur `,`. |
+| `commerce.purchases.value` | `events` | Mappage du paramètre de requête EVENT_LIST_FULL AppMeasurement avec conversion COMMERCE_PURCHASE, à l’aide du délimiteur `,`. |
 | `device.colorDepth` | `c` | Mappage du paramètre de requête C_COLOR AppMeasurement. |
-| `device.screenHeight` | `s` | Mappage de la résolution d’écran du paramètre de la requête AppMeasurement. |
-| `device.screenWidth` | `s` | Mappage de la résolution d’écran du paramètre de la requête AppMeasurement. |
+| `device.screenHeight` | `s` | Mappage du paramètre de requête Résolution d’écran AppMeasurement. |
+| `device.screenWidth` | `s` | Mappage du paramètre de requête Résolution d’écran AppMeasurement. |
 | `environment.browserDetails.acceptLanguage` | `Accept-Language` | Il s’agit d’un mappage d’en-tête HTTP, HEADER_ACCEPT_LANGUAGE. |
 | `environment.browserDetails.cookiesEnabled` | `k` | Mappage du paramètre de requête COOKIES AppMeasurement avec conversion BOOLEAN_TO_YN. |
 | `environment.browserDetails.javaEnabled` | `v` | Mappage du paramètre de requête JAVA_ENABLED AppMeasurement avec conversion BOOLEAN_TO_YN. |
@@ -67,7 +66,7 @@ Vous trouverez ci-dessous une liste de variables que Adobe Experience Platform E
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier` | `a.media.name` | Mappage des données contextuelles `a.media.name` AppMeasurement. |
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name` | `c.a.media.show` | Mappage des données contextuelles `c.a.media.show` AppMeasurement. |
 | `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | Mappage des données contextuelles `c.a.media.type` AppMeasurement avec conversion VEDIO_SHOW_TYPE. |
-| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | Mappage des données contextuelles AppMeasurement `c.a.media.type` avec la conversion VIDEO_SHOW_TYPE. |
+| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | Mappage des données contextuelles AppMeasurement `c.a.media.type` avec conversion VIDEO_SHOW_TYPE. |
 | `media.mediaTimed.primaryAssetReference.xmpDM:duration` | `c.a.media.length` | Mappage des données contextuelles `c.a.media.length`AppMeasurement. |
 | `media.mediaTimed.primaryAssetViewDetails.@id` | `c.a.media.vsid` | Données contextuelles AppMeasurement. |
 | `media.mediaTimed.primaryAssetViewDetails.broadcastChannel` | `c.a.media.channel` | Mappage des données contextuelles `c.a.media.channel`AppMeasurement. |
@@ -89,19 +88,19 @@ Vous trouverez ci-dessous une liste de variables que Adobe Experience Platform E
 | `placeContext.geo.longitude` | `lon` | Mappage du paramètre de requête LONGITUDE AppMeasurement. |
 | `placeContext.geo.postalCode` | `zip` | Mappage du paramètre de requête ZIP AppMeasurement. |
 | `placeContext.geo.stateProvince` | `state` | Mappage du paramètre de requête STATE AppMeasurement. |
-| `productlistitems.[N]._[NAME_SPACE].*` | `products` | Paramètre de la requête AppMeasurement Produits Mappage Événements de marchandisage / eVars. |
-| `productlistitems.[N].name` | `products` | Mappage du paramètre de la requête AppMeasurement pour le nom des produits. |
-| `productlistitems.[N].priceTotal` | `products` | Paramètre de la requête AppMeasurement Mappage des prix des produits. |
-| `productlistitems.[N].quantity` | `products` | Mappage de quantité du paramètre de la requête AppMeasurement Produits. |
-| `web.webInteraction.URL` | `pev1` | Mappage PAGE_ÉVÉNEMENT_VAR1 du paramètre de requête AppMeasurement. |
-| `web.webInteraction.name` | `pev2` | Mappage PAGE_ÉVÉNEMENT_VAR2 du paramètre de requête AppMeasurement. |
+| `productlistitems.[N]._[NAME_SPACE].*` | `products` | Mappage du paramètre de requête AppMeasurement Événements de marchandisage/Evars de produits . |
+| `productlistitems.[N].name` | `products` | Mappage du paramètre de requête Nom de produits AppMeasurement. |
+| `productlistitems.[N].priceTotal` | `products` | Mappage du paramètre de requête AppMeasurement Prix des produits . |
+| `productlistitems.[N].quantity` | `products` | Mappage du paramètre de requête Quantité de produits AppMeasurement. |
+| `web.webInteraction.URL` | `pev1` | Mappage du paramètre de requête PAGE_EVENT_VAR1 AppMeasurement. |
+| `web.webInteraction.name` | `pev2` | Mappage du paramètre de requête PAGE_EVENT_VAR2 AppMeasurement. |
 | `web.webInteraction.type` | `pe` | `web.webInteraction.type=other` à  `pe=lnk_o`;  `web.webInteraction.type=download` à  `pe=lnk_d`;  `web.webInteraction.type=exit` to  `pe=lnk_e` |
 | `web.webPageDetails.URL` | `g` | Mappage du paramètre de requête PAGE_URL AppMeasurement. |
-| `web.webPageDetails.errorPage` | `pageType` | Mappage du paramètre de requête AppMeasurement PAGE_TYPE_FULL avec la conversion ERROR_PAGE_TYPE. |
+| `web.webPageDetails.errorPage` | `pageType` | Mappage du paramètre de requête PAGE_TYPE_FULL AppMeasurement avec conversion ERROR_PAGE_TYPE. |
 | `web.webPageDetails.homePage` | `hp` | Mappage du paramètre de requête HOMEPAGE AppMeasurement avec conversion BOOLEAN_TO_YN. |
 | `web.webPageDetails.name` | `gn` | Mappage du paramètre de requête PAGENAME AppMeasurement. |
 | `web.webPageDetails.server` | `sv` | Mappage du paramètre de requête USER_SERVER AppMeasurement. |
-| `web.webPageDetails.siteSection` | `ch` | Mappage du CANAL des paramètres de la requête AppMeasurement. |
+| `web.webPageDetails.siteSection` | `ch` | Mappage du paramètre de requête CHANNEL AppMeasurement. |
 | `web.webReferrer.URL` | `r` | Mappage du paramètre de requête REFERRER AppMeasurement. |
 
 {style=&quot;table-layout:auto&quot;}
