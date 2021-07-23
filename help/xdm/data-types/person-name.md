@@ -5,10 +5,10 @@ title: Type de données du nom de personne
 topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM du nom de personne.
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 22%
+source-wordcount: '256'
+ht-degree: 21%
 
 ---
 
@@ -33,5 +33,5 @@ En outre, le type de données fournit un certain nombre de propriétés facultat
 
 Pour plus d’informations sur le type de données du nom de la personne, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.example.1.json)
-* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.schema.json)
+* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
+* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.schema.json)
