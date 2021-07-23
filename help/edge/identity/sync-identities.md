@@ -1,10 +1,9 @@
 ---
-title: Synchronisation des identités entre l’Audience Manager et Adobe Experience Platform à l’aide du SDK Web de la plate-forme
-description: Découvrez comment synchroniser les identités entre l'Audience Manager et Adobe Experience Platform à l'aide du SDK Web de la plate-forme
+title: Synchronisation des identités entre Audience Manager et Adobe Experience Platform à l’aide du SDK Web Platform
+description: Découvrez comment synchroniser les identités entre Audience Manager et Adobe Experience Platform à l’aide du SDK Web Platform
 seo-description: Découvrez comment synchroniser les identités avec Adobe Audience Manager avec le SDK Web Experience Platform
-keywords: gestionnaire d'audiences ; aam ; identités ; identités synchronisées ; espace de nommage ;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+keywords: audience manager;aam;identités;identités de synchronisation;espace de noms;
+source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -14,12 +13,12 @@ ht-degree: 0%
 
 # Synchronisation des identités entre l’Audience Manager et l’Experience Platform
 
-Adobe Experience Platform Web SDK prend en charge la possibilité de déclarer les ID de client et leurs états d’authentification via la commande [sendEvent](./overview.md#syncing-identities).
+Le SDK Web de Adobe Experience Platform prend en charge la possibilité de déclarer les ID de client et leurs états d’authentification via la commande [sendEvent](./overview.md#syncing-identities).
 
-Choisissez vos espaces de nommage dans les [Espaces de nommage du service d&#39;identité](../../identity/../identity-service/namespaces.md) pour indiquer le contexte auquel une identité se rapporte, en utilisant les valeurs de la colonne Symbole d&#39;identité :
+Sélectionnez vos espaces de noms dans les [Espaces de noms Identity Service](../../identity/../identity-service/namespaces.md) pour indiquer le contexte auquel une identité se rapporte, à l’aide des valeurs de la colonne Symbole d’identité :
 
-![Vue de l’interface utilisateur Espaces de nommage](../../assets/edge_namespaceUI_identity-symbol.png)
+![Vue de l’interface utilisateur des espaces de noms](../images/identity/edge_namespaceUI_identity-symbol.png)
 
-En tant que client d’Audience Manager, toutes vos sources de données existantes qui utilisent le type d’ID : L&#39;Espace de nommage d&#39;identité est automatiquement associé à plusieurs périphériques. Pour trouver l&#39;Espace de nommage d&#39;identité correspondant à votre source de données d&#39;Audience Manager, connectez-vous à Adobe Experience Platform et accédez à la section Identités.
+En tant que client d’Audience Manager, toutes vos sources de données existantes qui utilisent le type d’ID : Un espace de noms d’identité est automatiquement associé à l’ensemble des appareils. Pour trouver l’espace de noms d’identité correspondant à votre source de données d’Audience Manager, connectez-vous à Adobe Experience Platform et accédez à la section Identités .
 
-Toute nouvelle source de données [!DNL Audience Manager] utilisant le type d’ID : Un Espace de nommage d&#39;identité est généré sur plusieurs périphériques. Les types d’ID de source de données Cookie et ID de publicité de périphérique ne sont pas pris en charge actuellement. De plus, tout Espace de nommage d&#39;identité créé dans Adobe Experience Platform génère une source de données [!DNL Audience Manager] correspondante, mais notez que la méthode syncIdentity ne prend en charge que les symboles d&#39;identité d&#39;Espace de nommage.
+Toute nouvelle source de données [!DNL Audience Manager] qui utilise le type d’ID : L’ensemble des appareils génère un espace de noms d’identité correspondant. Les types d’ID de source de données Cookie et ID de publicité de périphérique ne sont actuellement pas pris en charge. De plus, tout espace de noms d’identité créé dans Adobe Experience Platform génère une source de données [!DNL Audience Manager] correspondante, mais notez que la méthode syncIdentity ne prend en charge que les symboles d’identité de l’espace de noms.
