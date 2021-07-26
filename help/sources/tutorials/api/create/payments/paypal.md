@@ -6,18 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter PayPal à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
-source-git-commit: 5cb853da21e41b38c88f25a4989a602dbcfceabc
+source-git-commit: 6b6bd67e70267e81c144c37549b0dcba20534eb6
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 7%
+source-wordcount: '462'
+ht-degree: 8%
 
 ---
 
 # Créez une connexion de base [!DNL PayPal] à l’aide de l’API [!DNL Flow Service]
-
->[!NOTE]
->
->Le connecteur [!DNL PayPal] est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez la [Présentation des sources](../../../../home.md#terms-and-conditions) .
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
