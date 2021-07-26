@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Ingestion de données, sources
-source-git-commit: e04df6e2ffabac6e70164dfccbad8440976b2755
+source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 18%
+source-wordcount: '628'
+ht-degree: 19%
 
 ---
 
@@ -75,6 +75,7 @@ ht-degree: 18%
       - [Connecteur Shopify](connectors/ecommerce/shopify.md)
    - Automatisation du marketing {#marketing-automation}
       - [Connecteur HubSpot](connectors/marketing-automation/hubspot.md)
+      - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Paiements {#payments}
       - [Connecteur PayPal](connectors/payments/paypal.md)
    - Protocoles {#protocols}
@@ -127,6 +128,7 @@ ht-degree: 18%
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - Automatisation du marketing {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+         - [Marketing Cloud Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Paiements {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - Protocoles {#protocols}
@@ -214,6 +216,7 @@ ht-degree: 18%
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - Automatisation du marketing {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [Marketing Cloud Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Paiements {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocoles {#protocols}
