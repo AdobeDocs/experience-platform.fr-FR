@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Azure Table Storage à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: 7af79b9e0d6ed29b796ac7c98b4df1dda09f3513
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 12%
@@ -39,7 +39,7 @@ Pour que [!DNL Flow Service] se connecte à [!DNL Azure Table Storage], vous dev
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | Chaîne de connexion utilisée pour se connecter à une instance [!DNL Azure Table Storage]. Le modèle de chaîne de connexion pour [!DNL Azure Table Storage] est le suivant : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions base et source. L’identifiant de spécification de connexion pour [!DNL Azure Table Storage] est `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions base et source. L’identifiant de spécification de connexion pour [!DNL Azure Table Storage] est `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 Pour plus d’informations sur l’obtention d’une chaîne de connexion, voir [this [!DNL Azure Table Storage] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 
