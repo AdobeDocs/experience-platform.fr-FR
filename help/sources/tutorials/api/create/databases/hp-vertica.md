@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter HP Vertica à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: 3506e8307d5f6dbdb11a04911ddbd6dc81b8278f
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 13%
+source-wordcount: '476'
+ht-degree: 12%
 
 ---
 
@@ -27,8 +27,8 @@ Ce tutoriel vous guide tout au long des étapes pour créer une connexion de bas
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](https://experienceleague.adobe.com/docs/experience-platform/source-connectors/home.html) :  [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, de mapper et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
-* [Environnements de test](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
+* [Environnements de test](../../../../../sandboxes/home.md)[!DNL Platform] : Experience fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL HP Vertica] à l’aide de l’API [!DNL Flow Service].
 
