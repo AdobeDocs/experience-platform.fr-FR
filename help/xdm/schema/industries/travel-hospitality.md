@@ -4,9 +4,9 @@ title: Modèle de données du secteur du voyage et de l’hôtellerie ERD
 topic-legacy: overview
 description: Affichez un diagramme de relation d’entité (ERD) qui décrit un modèle de données normalisé pour le secteur du voyage et de l’hôtellerie, compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-source-git-commit: 88c17992a391b24a76c3e387d3033df4c75a6aa6
+source-git-commit: 38fa2345cb87e50bd4c8788996f03939fb199cf9
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # [!UICONTROL Modèle de données de l’industrie des voyages et de l’] hospitalité ERD
 
 Le diagramme de relation des entités ci-après représente un modèle de données normalisé pour le secteur du voyage et de l’hôtellerie. L’ERD est délibérément présenté de manière dénormalisée et en tenant compte de la manière dont les données sont stockées dans Adobe Experience Platform.
+
+>[!NOTE]
+>
+>L’identifiant d’utilisateur (ERD) tel que décrit est une recommandation pour la manière dont vous devez modéliser vos données pour ce cas d’utilisation du secteur. Pour utiliser ce modèle de données dans Platform, vous devez construire vous-même les schémas recommandés et leurs relations. Pour plus d’informations, consultez les guides sur la gestion des [schémas](../../ui/resources/schemas.md) et des [relations](../../tutorials/relationship-ui.md) dans l’interface utilisateur.
 
 Utilisez la légende suivante pour interpréter cet ERD :
 
