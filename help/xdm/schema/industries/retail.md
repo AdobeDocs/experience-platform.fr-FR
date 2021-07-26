@@ -4,16 +4,20 @@ title: Modèle de données du secteur de la vente au détail
 topic-legacy: overview
 description: Affichez un modèle de données normalisé pour le secteur de la vente au détail, compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 9c5a4e064af0b46ff30b41afef71ca2fd3503a82
+source-git-commit: 38fa2345cb87e50bd4c8788996f03939fb199cf9
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 6%
+source-wordcount: '530'
+ht-degree: 5%
 
 ---
 
 #  Modèle de données du secteur de la vente au détail
 
 Le diagramme de relation d’entité suivant (ERD) représente un modèle de données normalisé pour le secteur de la vente au détail. L’ERD est délibérément présenté de manière dénormalisée et en tenant compte de la manière dont les données sont stockées dans Adobe Experience Platform.
+
+>[!NOTE]
+>
+>L’identifiant d’utilisateur (ERD) tel que décrit est une recommandation pour la manière dont vous devez modéliser vos données pour ce cas d’utilisation du secteur. Pour utiliser ce modèle de données dans Platform, vous devez construire vous-même les schémas recommandés et leurs relations. Pour plus d’informations, consultez les guides sur la gestion des [schémas](../../ui/resources/schemas.md) et des [relations](../../tutorials/relationship-ui.md) dans l’interface utilisateur.
 
 Utilisez la légende suivante pour interpréter cet ERD :
 
