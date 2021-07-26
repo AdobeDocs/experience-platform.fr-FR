@@ -5,7 +5,7 @@ title: Présentation des connecteurs source
 topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8236fb3a5786a6990fe85482c2fee0eda48bcf1f
+source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 57%
@@ -109,6 +109,7 @@ Experience Platform prend en charge l’ingestion de données à partir d’un s
 Experience Platform prend en charge l’ingestion de données provenant d’un système tiers d’automatisation du marketing. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL HubSpot] connector](connectors/marketing-automation/hubspot.md)
+- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### Paiements
 
