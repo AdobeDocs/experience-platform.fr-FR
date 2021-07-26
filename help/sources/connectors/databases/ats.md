@@ -5,22 +5,18 @@ title: Présentation du connecteur source de stockage Azure Table
 topic-legacy: overview
 description: Découvrez comment connecter Azure Table Storage à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+source-git-commit: 7af79b9e0d6ed29b796ac7c98b4df1dda09f3513
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 8%
+source-wordcount: '304'
+ht-degree: 18%
 
 ---
 
-# (Version bêta) Connecteur [!DNL Azure Table Storage]
+# [!DNL Azure Table Storage] connector
 
->[!NOTE]
->
->Le connecteur [!DNL Azure Table Storage] est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez la [Présentation des sources](../../home.md#terms-and-conditions) .
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
-
-[!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une base de données tierce. [!DNL Platform] peuvent se connecter à différents types de bases de données, telles que les entrepôts relationnels, NoSQL ou de données. [!DNL Azure Table Storage] est compatible avec les fournisseurs de base de données.
+Experience Platform prend en charge l’ingestion de données provenant d’une base de données tierce. Platform peut se connecter à différents types de bases de données comme les entrepôts relationnels, NoSQL ou de données. [!DNL Azure Table Storage] est compatible avec les fournisseurs de base de données.
 
 ## LISTE AUTORISÉE d’adresses IP
 
@@ -30,15 +26,15 @@ Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’
 >
 >Le connecteur source [!DNL Azure Table Storage] ne prend actuellement pas en charge la connectivité de la même région à Platform. Cela signifie que si votre instance Azure utilise la même région réseau que Platform, une connexion aux sources Platform ne peut pas être établie. Actuellement, seule la connectivité inter-régions est prise en charge. Pour plus d’informations, contactez votre gestionnaire de compte d’Adobe.
 
-La documentation ci-dessous fournit des informations sur la connexion de [!DNL Azure Table Storage] à [!DNL Platform] à l’aide des API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL Azure Table Storage] à Platform à l’aide d’API ou de l’interface utilisateur :
 
-## Connectez [!DNL Azure Table Storage] à [!DNL Platform] à l’aide des API
+## Connecter [!DNL Azure Table Storage] à Platform à l’aide d’API
 
 - [Création d’une connexion de base de stockage Azure Table à l’aide de l’API Flow Service](../../tutorials/api/create/databases/ats.md)
 - [Explorer la structure et le contenu des données d’une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/explore/database-nosql.md)
 - [Création d’un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
 
-## Connectez [!DNL Azure Table Storage] à [!DNL Platform] à l’aide de l’interface utilisateur.
+## Connexion de [!DNL Azure Table Storage] à Platform à l’aide de l’interface utilisateur
 
 - [Création d’une connexion source de stockage Azure Table dans l’interface utilisateur](../../tutorials/ui/create/databases/ats.md)
 - [Création d’un flux de données pour une connexion à la source de la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
