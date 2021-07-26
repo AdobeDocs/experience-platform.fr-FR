@@ -6,18 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Amazon Redshift à l’aide de l’API Flow Service.
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: 600b216932a7d19440534c4b190fb2f3766c8785
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '467'
 ht-degree: 12%
 
 ---
 
 # Créez une connexion de base [!DNL Amazon Redshift] à l’aide de l’API [!DNL Flow Service]
-
->[!NOTE]
->
->Le connecteur [!DNL Amazon Redshift] est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez la [Présentation des sources](../../../../home.md#terms-and-conditions) .
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
