@@ -4,10 +4,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes de modèle de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schémas
-source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
+source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 46%
+source-wordcount: '320'
+ht-degree: 45%
 
 ---
 
@@ -40,11 +40,13 @@ ht-degree: 46%
       * [Détails du contact personnel](./field-groups/profile/personal-contact-details.md)
       * [Consentements et préférences](./field-groups/profile/consents.md)
       * [Détails de l’adhésion au segment](./field-groups/profile/segmentation.md)
+      * [Abonnement aux télécommunications](./field-groups/profile/telecom-subscription.md)
       * [Détails du contact professionnel](./field-groups/profile/work-contact-details.md)
    * Groupes de champs d’événement {#event}
       * [Détails du marketing de campagne](./field-groups/event/campaign-marketing-details.md)
       * [Détails du canal](./field-groups/event/channel-details.md)
       * [Détails du commerce](./field-groups/event/commerce-details.md)
+      * [Détails sur l’entrée des appareils](./field-groups/event/device-trade-in-details.md)
       * [Détails de l’ID d’utilisateur final](./field-groups/event/enduserids.md)
       * [Détails de l’environnement](./field-groups/event/environment-details.md)
       * [Consentement IAB TCF 2.0](./field-groups/event/iab.md)
@@ -57,6 +59,7 @@ ht-degree: 46%
    * [Commerce](./data-types/commerce.md)
    * [Chaîne de consentement](./data-types/consent-string.md)
    * [Contenus et préférences](./data-types/consents.md)
+   * [Devise](./data-types/currency.md)
    * [Appareil](./data-types/device.md)
    * [Adresse électronique](./data-types/email-address.md)
    * [Environnement](./data-types/environment.md)
@@ -85,6 +88,7 @@ ht-degree: 46%
    * [Élément de liste de produits](./data-types/product-list-item.md)
    * [Recherche](./data-types/search.md)
    * [Abonnement](./data-types/subscription.md)
+   * [Abonnement aux télécommunications](./data-types/telecom-subscription.md)
    * [Informations web](./data-types/web-information.md)
    * [Interaction web](./data-types/web-interaction.md)
    * [Détails des pages web](./data-types/webpage-details.md)
