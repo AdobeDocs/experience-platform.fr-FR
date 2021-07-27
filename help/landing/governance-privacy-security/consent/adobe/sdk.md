@@ -3,9 +3,9 @@ title: Traiter les données de consentement du client à l’aide du SDK Web de 
 topic-legacy: getting started
 description: Découvrez comment intégrer le SDK Web de Adobe Experience Platform pour traiter les données de consentement des clients dans Adobe Experience Platform à l’aide de la norme Adobe 2.0.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 8b58bb60ae40f224433f3513060f4ae7ddc7d5b3
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1285'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,15 @@ ht-degree: 3%
 Le SDK Web de Adobe Experience Platform vous permet de récupérer les signaux de consentement des clients générés par les plateformes de gestion du consentement (CMP) et de les envoyer à Adobe Experience Platform chaque fois qu’un événement de modification du consentement se produit.
 
 **Le SDK n’interface pas avec les CMP prêtes à l’emploi**. C’est à vous de déterminer comment intégrer le SDK à votre site web, écouter les modifications apportées au consentement dans la CMP et appeler la commande appropriée. Ce document fournit des instructions générales sur la manière d’intégrer votre CMP au SDK Web de Platform.
+
+>[!NOTE]
+>
+>Ce guide décrit les étapes à suivre pour intégrer le SDK au moyen d’une extension de balise dans l’interface utilisateur de la collecte de données. Si vous souhaitez utiliser plutôt la version autonome du SDK, reportez-vous aux documents suivants :
+>
+>* [Configuration d’un flux de données](../../../../edge/fundamentals/datastreams.md)
+* [Installation du SDK](../../../../edge/fundamentals/installing-the-sdk.md)
+* [Configuration du SDK pour les commandes de consentement](../../../../edge/consent/supporting-consent.md)
+
 
 ## Conditions préalables
 
@@ -44,7 +53,7 @@ Après avoir créé une configuration ou sélectionné une configuration existan
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** en bas de l’écran et continuez à suivre les autres invites pour terminer la configuration.
 
 
-## Installation et configuration de l’extension SDK Web Platform
+## Installation et configuration du SDK Web de Platform
 
 Une fois que vous avez créé un flux de données comme décrit dans la section précédente, vous devez configurer l’extension SDK Web Platform que vous allez déployer sur votre site. Si l’extension SDK n’est pas installée sur la propriété de Platform launch, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de l’onglet **[!UICONTROL Catalogue]** . Sélectionnez ensuite **[!UICONTROL Installer]** sous l’extension SDK Platform dans la liste des extensions disponibles.
 
@@ -86,7 +95,7 @@ Une fois l’élément de données créé, revenez à la page de configuration d
 
 Une fois que vous avez terminé de configurer l’extension, elle peut être intégrée à votre site web. Pour plus d’informations sur le déploiement de votre version de bibliothèque mise à jour, reportez-vous au [guide de publication](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) dans la documentation du Platform launch.
 
-## Exécution de commandes de changement de consentement
+## Exécution de commandes de changement de consentement {#commands}
 
 Une fois que vous avez intégré l’extension SDK à votre site web, vous pouvez commencer à utiliser la commande SDK Web Platform `setConsent` pour envoyer les données de consentement à Platform.
 
@@ -96,8 +105,7 @@ Il existe deux scénarios où `setConsent` doit être appelé sur votre site :
 1. Dans le cadre d’un crochet de CMP ou d’un écouteur d’événement qui détecte les modifications apportées aux paramètres de consentement
 
 >[!NOTE]
->
->Pour une présentation de la syntaxe courante des commandes du SDK Platform, consultez le document sur [l’exécution des commandes](../../../../edge/fundamentals/executing-commands.md).
+Pour une présentation de la syntaxe courante des commandes du SDK Platform, consultez le document sur [l’exécution des commandes](../../../../edge/fundamentals/executing-commands.md).
 
 La commande `setConsent` requiert deux arguments :
 
@@ -138,8 +146,7 @@ alloy("setConsent", {
 | `value` | Informations de consentement mises à jour du client, fournies sous la forme d’un objet XDM conforme à la structure des champs de consentement du jeu de données activé par Profile. |
 
 >[!NOTE]
->
->Si vous utilisez d’autres normes de consentement conjointement avec `Adobe` (comme `IAB TCF`), vous pouvez ajouter des objets supplémentaires au tableau `consent` pour chaque norme. Chaque objet doit contenir les valeurs appropriées pour `standard`, `version` et `value` pour la norme de consentement qu’il représente.
+Si vous utilisez d’autres normes de consentement conjointement avec `Adobe` (comme `IAB TCF`), vous pouvez ajouter des objets supplémentaires au tableau `consent` pour chaque norme. Chaque objet doit contenir les valeurs appropriées pour `standard`, `version` et `value` pour la norme de consentement qu’il représente.
 
 Le code JavaScript suivant illustre une fonction qui gère les modifications des préférences de consentement sur un site web, qui peuvent être utilisées comme rappel dans un écouteur d’événement ou un crochet de CMP :
 
