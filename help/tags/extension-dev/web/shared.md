@@ -1,10 +1,10 @@
 ---
 title: Modules partagés dans les extensions web
 description: Découvrez comment définir des modules de bibliothèque partagés pour les extensions web dans Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 78%
+source-wordcount: '271'
+ht-degree: 72%
 
 ---
 
@@ -14,12 +14,18 @@ ht-degree: 78%
 >
 >Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Un module partagé est un mécanisme par lequel vous pouvez communiquer avec d’autres extensions. Dans les implémentations JavaScript, tous les modules partagés sont instanciés à l’aide de la méthode [`getSharedModule`](../turbine.md#shared) fournie par la variable libre `turbine`.
+Un module partagé est un mécanisme par lequel vous pouvez communiquer avec d’autres extensions. Par exemple, l’extension A peut charger un élément de données de manière asynchrone et le rendre accessible à l’extension B via une [promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-Lors du développement de votre propre extension de balise, vous pouvez définir tous les modules partagés que vous souhaitez qu’elle fournisse. Par exemple, vous pouvez créer un module qui charge un identifiant utilisateur de manière asynchrone, puis le partage avec toute autre extension via une [promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) :
+Dans les implémentations JavaScript, tous les modules partagés sont instanciés à l’aide de la méthode [`getSharedModule`](../turbine.md#shared) fournie par la variable libre `turbine`.
+
+Les modules partagés sont inclus dans les bibliothèques de balises même s’ils ne sont jamais appelés à partir d’autres extensions. Afin de ne pas augmenter inutilement la taille de la bibliothèque, vous devez faire attention à ce que vous exposez comme module partagé.
+
+Les modules partagés ne comportent pas de composant de vue.
+
+Lors du développement de votre propre extension de balise, vous pouvez définir tous les modules partagés que vous souhaitez qu’elle fournisse. Par exemple, vous pouvez créer un module qui charge un identifiant utilisateur de manière asynchrone, puis le partage avec toute autre extension via une promesse :
 
 ```javascript
-var userIdPromise = new Promise(/* load user id, then resolve promise */);
+var userIdPromise = new Promise(/* load user ID, then resolve promise */);
 module.exports = userIdPromise;
 ```
 
