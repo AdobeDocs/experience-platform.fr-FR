@@ -1,10 +1,10 @@
 ---
 title: Types de conditions pour les extensions web
 description: Découvrez comment définir un module de bibliothèque de type condition pour une extension de balise dans une propriété web.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 86%
+source-wordcount: '497'
+ht-degree: 67%
 
 ---
 
@@ -14,13 +14,24 @@ ht-degree: 86%
 >
 >Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Un module de bibliothèque de type de condition a un seul objectif : évaluer si quelque chose est vrai ou faux. Ce qu’il évalue ne dépend que de vous.
+Dans le contexte d’une règle, une condition est évaluée une fois qu’un événement s’est produit. Toutes les conditions doivent renvoyer la valeur vraie pour que la règle continue son traitement. L’exception est lorsque les utilisateurs placent explicitement des conditions dans un compartiment &quot;exception&quot;, auquel cas toutes les conditions du compartiment doivent renvoyer la valeur false pour que la règle puisse continuer le traitement.
+
+Par exemple, une extension peut fournir un type de condition « viewport contains » dans lequel l’utilisateur peut spécifier un sélecteur CSS. Lorsque la condition est évaluée sur le site web du client, l’extension peut trouver des éléments correspondant au sélecteur CSS et renvoyer si la fenêtre d’affichage de l’utilisateur contient l’un d’entre eux.
+
+Ce document explique comment définir des types de condition pour une extension web dans Adobe Experience Platform.
 
 >[!NOTE]
 >
->Ce document couvre les types de conditions pour les extensions web. Si vous développez une extension Edge, reportez-vous au guide sur les [types de condition pour les extensions Edge](../edge/condition-types.md) à la place.
+>Si vous développez une extension Edge, reportez-vous au guide sur les [types de condition pour les extensions Edge](../edge/condition-types.md) à la place.
 >
->Ce document suppose également que vous connaissez les modules de bibliothèque et leur intégration dans les extensions de balises. Si vous avez besoin d’une introduction, consultez la présentation sur le [formatage des modules de bibliothèque](./format.md) avant de revenir à ce guide.
+>Ce document suppose que vous connaissez les modules de bibliothèque et leur intégration dans les extensions web. Si vous avez besoin d’une introduction, consultez la présentation sur le [formatage des modules de bibliothèque](./format.md) avant de revenir à ce guide.
+
+Les types de condition se composent généralement des éléments suivants :
+
+1. [vue](./views.md) affichée dans l’interface utilisateur de la collecte de données qui permet aux utilisateurs de modifier les paramètres de la condition.
+2. Module de bibliothèque émis dans la bibliothèque du runtime de balises pour interpréter les paramètres et évaluer une condition.
+
+Un module de bibliothèque de type condition a un seul objectif : évaluer si quelque chose est vrai ou faux. Ce qu’il évalue ne dépend que de vous.
 
 Par exemple, si vous souhaitez évaluer si l’utilisateur se trouve sur l’hôte `example.com`, votre module peut se présenter comme suit :
 
