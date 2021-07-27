@@ -1,10 +1,10 @@
 ---
 title: Types d’actions pour les extensions Edge
 description: Découvrez comment définir un module de bibliothèque de type action pour une extension de balise dans une propriété edge.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 49%
+source-wordcount: '381'
+ht-degree: 45%
 
 ---
 
@@ -14,13 +14,22 @@ ht-degree: 49%
 >
 >Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Un module de bibliothèque de type action est conçu pour exécuter une action prédéfinie. L’effet de cette action est entièrement défini par l’auteur. Le module peut être créé en tant que balise ou même transformer certaines données de l’événement.
+Dans une règle de balise, une action est exécutée une fois que les conditions de règle ont réussi l’évaluation. Les types d’actions sont fournis par des extensions et leurs effets sont entièrement définis par l’auteur de l’extension.
+
+Par exemple, une extension peut fournir un type d’action « show support chat » qui peut afficher une boîte de dialogue de conversation d’assistance pour aider les utilisateurs qui ont du mal à payer leur commande.
+
+Ce document explique comment définir des types d’action pour une extension Edge dans Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Ce document couvre les types d’action pour les extensions Edge. Si vous développez une extension web, reportez-vous au guide sur les [types d’action pour les extensions web](../web/action-types.md) à la place.
+>Si vous développez une extension web, reportez-vous au guide sur les [types d’action pour les extensions web](../web/action-types.md) à la place.
 >
->Ce document suppose également que vous connaissez les modules de bibliothèque et leur intégration dans les extensions de balises. Si vous avez besoin d’une introduction, consultez la présentation sur le [formatage des modules de bibliothèque](./format.md) avant de revenir à ce guide.
+>Ce document suppose également que vous connaissez les modules de bibliothèque et leur intégration dans les extensions Edge. Si vous avez besoin d’une introduction, consultez la présentation sur le [formatage des modules de bibliothèque](./format.md) avant de revenir à ce guide.
+
+Les types d’actions sont généralement les suivants :
+
+1. Vue affichée dans l’interface utilisateur de la collecte de données qui permet aux utilisateurs de modifier les paramètres de l’action.
+2. Module de bibliothèque émis dans la bibliothèque du runtime de balises pour interpréter les paramètres et effectuer une action.
 
 Par exemple, un module permettant de transférer certaines données vers un point de terminaison tiers peut ressembler à ceci.
 
