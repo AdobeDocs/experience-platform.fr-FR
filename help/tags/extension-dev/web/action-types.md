@@ -1,10 +1,10 @@
 ---
 title: Types d’actions pour les extensions web
 description: Découvrez comment définir un module de bibliothèque de type action pour une extension de balise dans une propriété web.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 65%
+source-wordcount: '407'
+ht-degree: 53%
 
 ---
 
@@ -14,13 +14,22 @@ ht-degree: 65%
 >
 >Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Un module Bibliothèque de type action est conçu pour exécuter une action prédéfinie. Les effets de cette action ne dépendent que de vous. Voulez-vous envoyer une balise, présenter une offre, remercier l’utilisateur d’avoir visité un site, enregistrer un cookie ou ouvrir une discussion de support technique ?
+Dans le contexte des balises de collecte de données, une action est exécutée après qu’un événement de règle s’est produit et que toutes les conditions ont réussi l’évaluation.
+
+Par exemple, une extension peut fournir un type d’action « show support chat » qui peut afficher une boîte de dialogue de conversation d’assistance pour aider les utilisateurs qui ont du mal à payer leur commande.
+
+Ce document explique comment définir des types d’action pour une extension web dans Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
 >Ce document couvre les types d’actions pour les extensions web. Si vous développez une extension Edge, reportez-vous au guide sur les [types d’action pour les extensions Edge](../edge/action-types.md) à la place.
 >
->Ce document suppose également que vous connaissez les modules de bibliothèque et leur intégration dans les extensions de balises. Si vous avez besoin d’une introduction, consultez la présentation sur le [formatage des modules de bibliothèque](./format.md) avant de revenir à ce guide.
+>Ce document suppose également que vous connaissez les modules de bibliothèque et leur intégration dans les extensions web. Si vous avez besoin d’une introduction, consultez la présentation sur le [formatage des modules de bibliothèque](./format.md) avant de revenir à ce guide.
+
+Les types d’actions sont généralement les suivants :
+
+1. [vue](./views.md) affichée dans l’interface utilisateur de la collecte de données qui permet aux utilisateurs de modifier les paramètres de l’action.
+2. Module de bibliothèque émis dans la bibliothèque du runtime de balises pour interpréter les paramètres et effectuer une action.
 
 ```js
 module.exports = function(settings) {
