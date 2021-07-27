@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; requêtes planifiées ; requête planifiée ;
+keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;requêtes planifiées;requête planifiée;
 solution: Experience Platform
-title: Point de terminaison de l'API Requêtes planifiées
+title: Point de terminaison de l’API Requêtes planifiées
 topic-legacy: scheduled queries
-description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour les requêtes planifiées avec l’API Requête Service.
+description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour les requêtes planifiées avec l’API Query Service.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e99b57706bb5bdb0abaf4209a259b478d9406783
 workflow-type: tm+mt
-source-wordcount: '977'
-ht-degree: 92%
+source-wordcount: '1010'
+ht-degree: 89%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 92%
 
 ## Exemples d’appels API
 
-Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commencer à lancer des appels à l&#39;API [!DNL Query Service]. Les sections suivantes décrivent les différents appels d&#39;API que vous pouvez effectuer à l&#39;aide de l&#39;API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commencer à lancer des appels à l’API [!DNL Query Service]. Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide de l’API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
 ### Récupération d’une liste de requêtes planifiées
 
@@ -125,7 +124,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de requêtes pla
 
 ### Création d’une requête planifiée
 
-Vous pouvez créer une requête planifiée en effectuant une requête POST vers le point de terminaison `/schedules`.
+Vous pouvez créer une requête planifiée en effectuant une requête POST vers le point de terminaison `/schedules`. Lorsque vous créez une requête planifiée dans l’API, vous pouvez également la voir dans l’éditeur de requêtes. Pour plus d’informations sur les requêtes planifiées dans l’interface utilisateur, consultez la [documentation de Query Editor](../ui/user-guide.md#scheduled-queries).
 
 **Format d’API**
 
