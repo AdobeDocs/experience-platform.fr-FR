@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur de Query Editor
 topic-legacy: query editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service qui vous permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur de l’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
+source-git-commit: 7eaa808ecc644fdb9bc6b3fe1347c7651d54a33b
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 64%
+source-wordcount: '1572'
+ht-degree: 42%
 
 ---
 
@@ -80,7 +80,57 @@ Lorsque vous affichez une requête dans [!DNL Query Editor], le panneau **[!UICO
 
 ![Image](../images/ui/query-editor/query-details.png)
 
-Ce panneau vous permet de générer un jeu de données de sortie directement depuis l’interface utilisateur, de supprimer ou de nommer la requête affichée, et d’afficher le code SQL dans un format facile à copier dans l’onglet **[!UICONTROL Requête SQL]**. Ce panneau présente également des métadonnées utiles, telles que la dernière fois où la requête a été modifiée et qui l’a modifiée, le cas échéant. Pour générer un jeu de données, sélectionnez **[!UICONTROL Jeu de données de sortie]**. La boîte de dialogue **[!UICONTROL Jeu de données de sortie]** s’affiche. Saisissez un nom et une description, puis sélectionnez **[!UICONTROL Exécuter la requête]**. Le nouveau jeu de données s’affiche dans l’onglet **[!UICONTROL Jeux de données]**[!DNL Query Service] de l’interface utilisateur de dans [!DNL Platform].
+Ce panneau vous permet de générer un jeu de données de sortie directement à partir de l’interface utilisateur, de supprimer ou de nommer la requête affichée, et d’ajouter un planning à la requête.
+
+Ce panneau présente également des métadonnées utiles, telles que la dernière fois où la requête a été modifiée et qui l’a modifiée, le cas échéant. Pour générer un jeu de données, sélectionnez **[!UICONTROL Jeu de données de sortie]**. La boîte de dialogue **[!UICONTROL Jeu de données de sortie]** s’affiche. Saisissez un nom et une description, puis sélectionnez **[!UICONTROL Exécuter la requête]**. Le nouveau jeu de données s’affiche dans l’onglet **[!UICONTROL Jeux de données]**[!DNL Query Service] de l’interface utilisateur de dans [!DNL Platform].
+
+### Requêtes planifiées {#scheduled-queries}
+
+>[!NOTE]
+>
+> Vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée. De plus, **not** pourra ajouter un planning à une requête paramétrée.
+
+Pour ajouter un planning à une requête, sélectionnez **[!UICONTROL Ajouter un planning]**.
+
+![Image](../images/ui/query-editor/add-schedule.png)
+
+La page **[!UICONTROL Détails de la planification]** s’affiche. Sur cette page, vous pouvez choisir la fréquence de la requête planifiée, les dates d’exécution de la requête planifiée, ainsi que le jeu de données vers lequel exporter la requête.
+
+![Image](../images/ui/query-editor/schedule-details.png)
+
+Vous pouvez choisir les options suivantes pour **[!UICONTROL Fréquence]** :
+
+- **[!UICONTROL Horaire]** : La requête planifiée s’exécute toutes les heures pour la période que vous avez sélectionnée.
+- **[!UICONTROL Quotidien]** : La requête planifiée s’exécute tous les X jours à l’heure et à la période que vous avez sélectionnée. Notez que l’heure sélectionnée est en **UTC**, et non votre fuseau horaire local.
+- **[!UICONTROL Hebdomadaire]** : La requête sélectionnée s’exécute les jours de la semaine, de l’heure et de la période que vous avez sélectionnée. Notez que l’heure sélectionnée est en **UTC**, et non votre fuseau horaire local.
+- **[!UICONTROL Mensuel]** : La requête sélectionnée s’exécute tous les mois au jour, à l’heure et à la période que vous avez sélectionnée. Notez que l’heure sélectionnée est en **UTC**, et non votre fuseau horaire local.
+- **[!UICONTROL Annuel]** : La requête sélectionnée s’exécute chaque année au jour, au mois, à l’heure et à la période que vous avez sélectionnée. Notez que l’heure sélectionnée est en **UTC**, et non votre fuseau horaire local.
+
+Pour le jeu de données, vous avez la possibilité d’utiliser un jeu de données existant ou de créer un nouveau jeu de données.
+
+>[!IMPORTANT]
+>
+> Puisque vous utilisez un jeu de données existant ou que vous créez un jeu de données, vous n’avez pas besoin d’inclure **** `INSERT INTO` ou `CREATE TABLE AS SELECT` dans la requête, puisque les jeux de données sont déjà définis. L’inclusion de `INSERT INTO` ou `CREATE TABLE AS SELECT` dans vos requêtes planifiées entraînera une erreur.
+
+Après avoir confirmé tous ces détails, sélectionnez **[!UICONTROL Enregistrer]** pour créer une planification.
+
+La page des détails de la requête réapparaît et affiche désormais les détails du planning que vous venez de créer, y compris l’identifiant du planning, le planning lui-même et le jeu de données de sortie du planning. Vous pouvez utiliser l’ID de planning pour rechercher plus d’informations sur les exécutions de la requête planifiée elle-même. Pour en savoir plus, consultez le [guide des points de terminaison d’exécution de requête planifiée](../api/runs-scheduled-queries.md).
+
+>[!NOTE]
+>
+> Vous pouvez uniquement planifier **un modèle de requête** à l’aide de l’interface utilisateur. Si vous souhaitez ajouter des plannings supplémentaires à un modèle de requête, vous devez utiliser l’API . Si un planning a déjà été ajouté à l’aide de l’API, **et** ne seront pas ajoutés à l’aide de l’interface utilisateur. Si plusieurs planifications sont déjà jointes à un modèle de requête, seule la planification la plus ancienne s’affiche. Pour savoir comment ajouter des plannings à l’aide de l’API, consultez le [guide du point de terminaison des requêtes planifiées](../api/scheduled-queries.md).
+>
+> En outre, vous devez actualiser la page si vous souhaitez vous assurer que vous disposez de l’état le plus récent pour le planning que vous consultez.
+
+#### Suppression d’un planning
+
+Vous pouvez supprimer un planning en sélectionnant **[!UICONTROL Supprimer un planning]**.
+
+![Image](../images/ui/query-editor/delete-schedule.png)
+
+>[!IMPORTANT]
+>
+> Si vous souhaitez supprimer un planning pour une requête, vous devez d’abord désactiver ce planning.
 
 ### Enregistrement des requêtes
 
