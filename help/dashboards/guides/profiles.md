@@ -4,10 +4,10 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
+source-git-commit: a63969075215a8f9884d2f41485194bd732694f1
 workflow-type: tm+mt
-source-wordcount: '1234'
-ht-degree: 7%
+source-wordcount: '1496'
+ht-degree: 6%
 
 ---
 
@@ -43,7 +43,7 @@ Vous pouvez modifier l’aspect du tableau de bord [!UICONTROL Profils] en séle
 
 Pour en savoir plus, reportez-vous à la documentation [Modification des tableaux de bord](../customize/modify.md) et [présentation de la bibliothèque de widgets](../customize/widget-library.md) .
 
-## Stratégies de fusion
+## Stratégies de fusion {#merge-policies}
 
 Les mesures affichées dans le tableau de bord [!UICONTROL Profils] reposent sur les stratégies de fusion appliquées à vos données Real-time Customer Profile. Lorsque les données sont rassemblées à partir de plusieurs sources pour créer le profil client, il est possible que les données contiennent des valeurs en conflit (par exemple, un jeu de données peut répertorier un client comme &quot;unique&quot;, tandis qu’un autre jeu de données peut le répertorier comme &quot;marié&quot;). La tâche de la stratégie de fusion consiste à déterminer les données à prioriser et à afficher dans le cadre du profil.
 
@@ -79,29 +79,39 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 
 Le widget **[!UICONTROL Nombre de profils]** affiche le nombre total de profils fusionnés dans la banque de données de profil au moment de la prise de l’instantané. Ce nombre est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
 
-Pour plus d’informations sur les fragments et les profils fusionnés, commencez par lire la section *Fragments de profil par rapport aux profils fusionnés* de la [présentation de Real-time Customer Profile](../../profile/home.md).
+Voir la section [sur les stratégies de fusion plus tôt dans ce document](#merge-policies) pour en savoir plus.
+
+>[!NOTE]
+>
+>Le widget [!UICONTROL Nombre de profils] peut afficher un nombre différent du nombre de profils affiché dans l’onglet [!UICONTROL Parcourir] de la section [!UICONTROL Profils] de l’interface utilisateur pour plusieurs raisons. La raison la plus courante est que l’onglet [!UICONTROL Parcourir] référence le nombre total de profils fusionnés en fonction de la stratégie de fusion par défaut de votre organisation, tandis que le widget [!UICONTROL Nombre de profils] référence le nombre total de profils fusionnés en fonction de la stratégie de fusion que vous avez sélectionnée pour afficher dans le tableau de bord.
+>
+>Une autre raison courante est due aux différences entre le moment où l’instantané du tableau de bord est pris et le moment où l’exemple de tâche est exécuté pour l’onglet [!UICONTROL Parcourir] . Vous pouvez savoir à quel moment le widget [!UICONTROL Nombre de profils] a été mis à jour pour la dernière fois en observant l’horodatage du widget et pour en savoir plus sur le déclenchement de l’exemple de tâche dans l’onglet [!UICONTROL Parcourir], consultez la section [nombre de profils dans le guide d’interface utilisateur de Real-time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
 ![](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Profils ajoutés] {#profiles-added}
 
-Le widget **[!UICONTROL Profils ajoutés]** affiche le nombre total de profils fusionnés qui ont été ajoutés à l’entrepôt de données Profile à partir du dernier instantané pris. Ce nombre est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
+Le widget **[!UICONTROL Profils ajoutés]** affiche le nombre total de profils fusionnés qui ont été ajoutés à l’entrepôt de données Profile à partir du dernier instantané pris. Ce nombre est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu. Vous pouvez utiliser le sélecteur de liste déroulante pour afficher les profils ajoutés au cours des 30, 90 ou 12 derniers jours.
 
-Vous pouvez utiliser le sélecteur de liste déroulante pour afficher les profils ajoutés au cours des 30, 90 ou 12 derniers jours.
+>[!NOTE]
+>
+>Le widget [!UICONTROL Profils ajoutés] reflète le nombre de profils ajoutés au système suite à la configuration initiale de votre organisation. Par exemple, si quatre millions de profils ont été ajoutés pendant la configuration et que vous avez ajouté un million de profils supplémentaires au cours des 30 derniers jours, le widget [!UICONTROL Profils ajoutés] affichera &quot;1 000 000&quot; tandis que le widget [!UICONTROL Nombre de profils] affichera &quot;5 000 0 00&quot;.
 
 ![](../images/profiles/profiles-added.png)
 
 ### [!UICONTROL Tendance du nombre de profils] {#profiles-count-trend}
 
-Le widget **[!UICONTROL Tendance du nombre de profils]** affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à l’entrepôt de données Profile au cours des 30 derniers jours, 90 ou 12 derniers mois. Ce nombre est mis à jour chaque jour lorsque l’instantané est pris. Par conséquent, si vous deviez ingérer des profils dans Platform, le nombre de profils ne serait pas reflété tant que l’instantané suivant n’a pas été pris.
+Le widget **[!UICONTROL Tendance du nombre de profils]** affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à l’entrepôt de données Profile au cours des 30 derniers jours, 90 ou 12 derniers mois. Ce nombre est mis à jour chaque jour lorsque l’instantané est pris. Par conséquent, si vous deviez ingérer des profils dans Platform, le nombre de profils ne serait pas reflété tant que l’instantané suivant n’a pas été pris. Le nombre de profils ajoutés est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
 
-Le nombre de profils ajoutés est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
+Voir la section [sur les stratégies de fusion plus tôt dans ce document](#merge-policies) pour en savoir plus.
 
 ![](../images/profiles/profile-count-trend.png)
 
 ### [!UICONTROL Profils par identité] {#profiles-by-identity}
 
 Le widget **[!UICONTROL Profils par identité]** affiche la ventilation des identités pour tous les profils fusionnés de votre banque de profils. Le nombre total de profils par identité (c’est-à-dire en additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur au nombre total de profils fusionnés, car plusieurs espaces de noms peuvent être associés à un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
+
+Voir la section [sur les stratégies de fusion plus tôt dans ce document](#merge-policies) pour en savoir plus.
 
 Pour en savoir plus sur les identités, consultez la [documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
 
@@ -111,9 +121,9 @@ Pour en savoir plus sur les identités, consultez la [documentation du service A
 
 Le widget **[!UICONTROL chevauchement des identités]** affiche un diagramme de Venn, ou un diagramme de définition, qui montre le chevauchement des profils dans votre banque de profils contenant plusieurs identités.
 
-Après avoir utilisé les menus déroulants du widget pour sélectionner les identités à comparer, les cercles s’affichent avec la taille relative de chaque identité, le nombre de profils contenant les deux espaces de noms étant représenté par la taille du chevauchement entre les cercles.
+Après avoir utilisé les menus déroulants du widget pour sélectionner les identités à comparer, les cercles s’affichent avec la taille relative de chaque identité, le nombre de profils contenant les deux espaces de noms étant représenté par la taille du chevauchement entre les cercles. Si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités seront associées à ce client individuel. Par conséquent, il est probable que votre organisation dispose de plusieurs profils contenant des fragments provenant de plusieurs identités.
 
-Si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités seront associées à ce client individuel. Par conséquent, il est probable que votre organisation dispose de plusieurs profils contenant des fragments provenant de plusieurs identités.
+Pour plus d’informations sur les fragments de profil, commencez par lire la section [fragments de profil par rapport aux profils fusionnés](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) dans la présentation de Real-time Customer Profile.
 
 Pour en savoir plus sur les identités, consultez la [documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
 
