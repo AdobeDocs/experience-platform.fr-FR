@@ -6,7 +6,7 @@ title: Surveillance des flux de données pour les destinations dans l’interfac
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 029e990f5b30713ceea5da80ace8002368ac5652
+source-git-commit: 96855ec4e42e7adb17dc36a734561f63f926693b
 workflow-type: tm+mt
 source-wordcount: '1733'
 ht-degree: 4%
@@ -117,7 +117,7 @@ La page Détails affiche également une liste des identités qui ont échoué et
 
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## Tableau de bord de surveillance des destinations
+## Tableau de bord de surveillance des destinations {#monitoring-destinations-dashboard}
 
 Pour accéder au tableau de bord [!UICONTROL Surveillance], sélectionnez **[!UICONTROL Surveillance]** (![icône de surveillance](../assets/ui/monitor-destinations/monitoring-icon.png)
 ) dans le volet de navigation de gauche. Une fois sur la page [!UICONTROL Surveillance], sélectionnez [!UICONTROL Destinations]. Le tableau de bord [!UICONTROL Surveillance] contient des mesures et des informations sur les tâches d’exécution de destination.
