@@ -1,46 +1,51 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour d’Experience Platform du 30 juin 2021.
+description: Notes de mise à jour de l’Experience Platform pour le 28 juillet 2021.
 doc-type: release notes
-last-update: June 30, 2021
+last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: fc916f87bf07e5eabf7d1681059406e2fea362e0
+source-git-commit: dc01e03975fdda375b31f44edc8459fa32b5a61b
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 100%
+source-wordcount: '387'
+ht-degree: 65%
 
 ---
 
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : 30 juin 2021**
+**Date de publication : 28 juillet 2021**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [Profil client en temps réel](#profile)
-- [Sandbox](#sandboxes)
+- [Data Science Workspace](#dsw)
+- [Modèle de données d’expérience (XDM)](#xdm)
 - [Sources](#sources)
 
-## Real-time Customer Profile {#profile}
+## Data Science Workspace {#dsw}
 
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le [!DNL Profile] vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+Data Science Workspace utilise le machine learning et l’intelligence artificielle pour exploiter les informations contenues dans vos données. Intégré à Adobe Experience Platform, Data Science Workspace vous aide à obtenir des prévisions en utilisant votre contenu et des ressources de données de l’ensemble des solutions Adobe.
 
-| Fonctionnalité | Description |
-| ------- | ----------- |
-| Mises à jour du workflow de stratégie de fusion | Lors de la création et de la mise à jour de stratégies de fusion dans lʼinterface utilisateur, les utilisateurs peuvent désormais prévisualiser 20 exemples de profils en fonction du schéma dʼunion. Cela permet aux utilisateurs de prévisualiser lʼaspect des profils client avant lʼenregistrement des configurations des stratégies de fusion. Pour plus dʼinformations, consultez le [guide de lʼinterface utilisateur des stratégies de fusion](../../profile/merge-policies/ui-guide.md). |
-| Rapport de chevauchement d’identités | Le rapport de chevauchement d’identités fait partie de l’API Real-time Customer Profile et offre une visibilité sur la composition du magasin de profils. En utilisant le point d’entrée `/previewsamplestatus`, le rapport de chevauchement d’identités expose les identités qui contribuent le plus à l’audience adressable. Pour en savoir plus, consultez le [guide du point d’entrée de l’API de prévisualisation des statuts d’exemple](../../profile/api/preview-sample-status.md). |
-
-Pour plus d’informations sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données de [!DNL Profile], consultez la [présentation du profil client en temps réel](../../profile/home.md).
-
-## Sandbox {#sandboxes}
-
-Adobe Experience Platform est conçu pour enrichir les applications d’expérience numérique à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience numérique en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des environnements de test qui divisent une instance unique de Platform en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+**Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
-| ------- | ----------- |
-| Environnement de test de production améliorations apportées à la réinitialisation | Vous pouvez désormais réinitialiser les environnements de test de production utilisés pour le partage bidirectionnel de segments avec Adobe Audience Manager ou Audience Core Service. Cette opération peut être réalisée à partir de lʼinterface utilisateur ou en utilisant les nouveaux paramètres `validationOnly` et `ignoreWarnings` dans lʼAPI. Pour plus dʼinformations, consultez les tutoriels sur la [réinitialisation dʼun environnement de test dans lʼinterface utilisateur](../../sandboxes/ui/user-guide.md) et la [réinitialisation dʼun environnement de test dans lʼAPI](../../sandboxes/api/sandboxes.md). |
+| --- | --- |
+| Mises à jour de bibliothèque et de système d’exploitation | Data Science Workspace a effectué d’importantes mises à jour de bibliothèque et de système d’exploitation afin d’améliorer les fonctionnalités et la convivialité. Cela inclut JupyterLab 1.2.20, Python 3.7, Pandas 1.2.4, Tensorflow 2.4.1 avec prise en charge de CUDA 11 et de CUDNN 8, etc. Pour découvrir comment afficher les bibliothèques disponibles dans JupyterLab, consultez la section [Bibliothèques prises en charge](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) de la documentation de présentation des notebooks JupyterLab. |
+
+Pour plus d’informations sur Data Science Workspace, consultez la [Présentation de Data Science Workspace](../../data-science-workspace/home.md).
+
+## Modèle de données d’expérience (XDM) {#xdm}
+
+Le modèle de données d’expérience (XDM) est une spécification open source conçue pour améliorer la puissance des expériences digitales. Il fournit des structures et des définitions communes pour les données sous la forme de schémas, qui permettent à toute application de communiquer avec les services Platform.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Filtre de l&#39;industrie des télécommunications | Lors de l’ajout de groupes de champs à un schéma dans l’interface utilisateur, vous pouvez désormais filtrer selon le secteur des télécommunications. Consultez le [diagramme des relations d’entité du secteur des télécommunications (ERD)](../../xdm/schema/industries/telecom.md) pour afficher un modèle de données recommandé pour les cas d’utilisation des télécommunications. |
+
+Pour plus d’informations sur XDM dans Platform, reportez-vous à la [Présentation du système XDM](../../xdm/home.md).
 
 ## Sources {#sources}
 
@@ -50,7 +55,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| [!DNL Veeva CRM] (version bêta) | Vous pouvez désormais connecter [!DNL Veeva CRM] à Experience Platform à lʼaide de lʼAPI [!DNL Flow Service] ou de lʼinterface utilisateur. Pour plus d’informations, consultez la [[!DNL Veeva CRM] présentation du connecteur](../../sources/connectors/crm/veeva.md). |
-| Prise en charge de la surveillance des flux de données en continu | Vous pouvez désormais utiliser lʼespace de travail de lʼinterface utilisateur des sources pour surveiller les activités dʼingestion de données provenant de sources en continu, avec les mesures et le statut correspondants. Pour plus dʼinformations, consultez le tutoriel sur la [surveillance des flux de données en continu](../../sources/tutorials/ui/monitor-streaming.md). |
+| Sources bêta passant à la version générale | Les sources suivantes ont été promues de la version bêta à la version générale : <ul><li>[[!DNL Amazon Redshift]](../../sources/connectors/databases/redshift.md)</li><li>[[!DNL Azure Table Storage]](../../sources/connectors/databases/ats.md)</li><li>[[!DNL PayPal]](../../sources/connectors/payments/paypal.md)</li></ul> |
+| [!DNL Salesforce Marketing Cloud] (version bêta) | Vous pouvez désormais connecter [!DNL Salesforce Marketing Cloud] à Experience Platform à lʼaide de lʼAPI [!DNL Flow Service] ou de lʼinterface utilisateur. Pour plus d’informations, consultez la [[!DNL Salesforce Marketing Cloud] présentation du connecteur](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md). |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
