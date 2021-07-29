@@ -1,10 +1,10 @@
 ---
 title: Implémentation de bibliothèques tierces
 description: Découvrez les différentes méthodes d’hébergement de bibliothèques tierces dans vos extensions de balises Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1329'
-ht-degree: 69%
+source-wordcount: '1330'
+ht-degree: 67%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 L’un des principaux objectifs des extensions de balises dans Adobe Experience Platform est de vous permettre de mettre en oeuvre facilement les technologies (bibliothèques) marketing existantes dans votre site web. Utilisez les extensions pour implémenter les bibliothèques fournies par les réseaux de diffusion de contenu de tiers (Content diffusion Network) sans avoir à modifier manuellement le code HTML de votre site web.
 
