@@ -1,7 +1,7 @@
 ---
 title: Notes de mise à jour de l’extension Adobe Target v2
 description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
-source-git-commit: ae6b69ecea54942c1bbf8a2765768bac50a8b930
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 62%
@@ -12,7 +12,7 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## 20 juillet 2021
 
@@ -25,7 +25,7 @@ ht-degree: 62%
 ### Extension 0.15.0 d’Adobe Target v2
 
 - Ajoutez un attribut sécurisé aux cookies chaque fois que les paramètres at.js secureOnly sont définis sur true
-- Les jetons de réponse sont désormais disponibles lors de l’utilisation de `triggerView()`
+- Des jetons de réponse sont désormais disponibles lors de l’utilisation de `triggerView()`
 - Correction d’un bogue lié à l’événement `CONTENT_RENDERING_NO_OFFERS` . Désormais, il se déclenche correctement lorsqu’aucun contenu n’est renvoyé par Target.
 - Les détails des mesures de clics A4T sont correctement renvoyés lors de l’utilisation de requêtes de prérécupération
 - La génération de l’UUID n’utilise plus `Math.random()`, mais repose sur `window.crypto`
@@ -36,7 +36,7 @@ ht-degree: 62%
 
 ### Extension 0.14.2 d’Adobe Target v2
 
-- Correction d’un bogue en raison duquel le lot final de Launch contient deux versions d’at.js, l’une avec la prise de décision sur l’appareil et l’autre sans.
+- Correction d’un bogue en raison duquel le lot final contient deux versions d’at.js, l’une avec la prise de décision sur l’appareil et l’autre sans.
 
 ## 19 mai 2021
 
