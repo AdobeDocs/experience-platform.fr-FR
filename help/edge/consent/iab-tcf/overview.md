@@ -3,9 +3,9 @@ title: Prise en charge du TCF 2.0 de l’IAB dans le SDK Web de Adobe Experience
 description: Découvrez comment prendre en charge les préférences de consentement du TCF 2.0 de l’IAB à l’aide du SDK Web de Adobe Experience Platform
 keywords: consentement;setConsent;groupe de champs de confidentialité du profil;groupe de champs de confidentialité des événements d’expérience;groupe de champs de confidentialité;IAB TCF 2.0;plateforme de données clients en temps réel;profil de données client en temps réel
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,10 @@ ht-degree: 0%
 
 Le SDK web Adobe Experience Platform prend en charge la version 2.0 de l’Interactive Advertising Bureau Transparency &amp; Consent Framework (IAB TCF 2.0). Ce guide présente les exigences relatives à la prise en charge du TCF 2.0 de l’IAB par le biais du SDK Web de Adobe Experience Platform grâce à l’intégration à la plateforme de données clients en temps réel, à l’Audience Manager, aux événements d’expérience, à Adobe Analytics et à Experience Edge.
 
-En outre, les guides suivants sont disponibles pour vous aider à apprendre à intégrer IAB TCF 2.0 avec et sans Adobe Experience Platform Launch.
+En outre, les guides suivants sont disponibles pour vous aider à apprendre comment intégrer IAB TCF 2.0 avec et sans balises.
 
-- [Avec Adobe Experience Platform Launch](./with-launch.md)
-- [Sans Adobe Experience Platform Launch](./without-launch.md)
+- [Avec des balises](./with-launch.md)
+- [Sans balises](./without-launch.md)
 
 ## Prise en main
 
@@ -90,4 +90,4 @@ Pour plus d’informations sur la commande `sendEvent`, consultez la documentati
 
 ## Étapes suivantes
 
-Maintenant que vous connaissez le Transparency &amp; Consent Framework 2.0 de l’IAB, consultez l’un des guides sur l’utilisation du IAB TCF 2.0 [avec Adobe Experience Platform Launch](./with-launch.md) ou [sans Adobe Experience Platform Launch](./without-launch.md).
+Maintenant que vous connaissez de base le Transparency &amp; Consent Framework 2.0 de l’IAB, consultez l’un des guides sur l’utilisation du IAB TCF 2.0 [avec des balises](./with-launch.md) ou [sans balises](./without-launch.md).
