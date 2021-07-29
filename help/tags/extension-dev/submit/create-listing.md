@@ -44,6 +44,7 @@ Si vous disposez déjà d’un compte d’entreprise ou si vous ne prévoyez pas
    >[!NOTE]
    >
    >Il s’agit d’un format de fichier différent de celui utilisé dans votre code d’extension. L’extension elle-même contiendra un fichier svg en tant qu’[icône](../manifest.md).
+
    - **Image en vedette**  : obtenez de l’attention en utilisant une image autonome qui présentera votre marque et mettra en évidence votre application. L’image en vedette est celle qui s’affiche lorsqu’une personne partage un lien vers votre liste Exchange ou publie des articles à ce sujet sur les médias sociaux. Il doit donc être une représentation modèle de votre marque.
    - **Logo de l’éditeur de l’appli** : il s’agit du logo de votre entreprise. Vérifiez que l’icône a les dimensions appropriées, soit 1 280 x 720 ou 2 560 x 1 440 (16:9) au format png ou jpg.
    - **Instructions**  de configuration : informez les clients sur la configuration de votre extension Adobe Experience Platform. Assurez-vous qu’ils comprennent tous les paramètres requis et les étapes suivantes lorsque votre [vue de configuration](../configuration.md) apparaît immédiatement après l’installation de votre extension dans une propriété. 
