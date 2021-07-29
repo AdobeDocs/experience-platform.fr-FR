@@ -5,10 +5,10 @@ title: Présentation des connecteurs source
 topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '979'
-ht-degree: 57%
+ht-degree: 55%
 
 ---
 
@@ -26,7 +26,7 @@ Les sources dans Experience Platform sont regroupées dans les catégories suiva
 
 ### Applications Adobe
 
-Experience Platform permet d’ingérer des données provenant d’autres applications Adobe, notamment Adobe Analytics, Adobe Audience Manager et [!DNL Experience Platform Launch]. Consultez les documents connexes suivants pour plus d’informations :
+Experience Platform permet d’ingérer des données à partir d’autres applications Adobe, notamment Adobe Analytics et Adobe Audience Manager. Consultez les documents connexes suivants pour plus d’informations :
 
 - [Présentation du connecteur Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
 - [Création d’une connexion source Adobe Audience Manager dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/audience-manager.md)
