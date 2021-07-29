@@ -1,10 +1,10 @@
 ---
 title: Octroyer un accès utilisateur
 description: Configurez les comptes utilisateur et les autorisations des membres de votre équipe dans Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 25%
+source-wordcount: '738'
+ht-degree: 23%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 25%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Avant de commencer à utiliser extension_package, vous devez configurer des comptes d’utilisateur et des autorisations pour les membres de votre équipe. Vous pouvez le faire avec [Adobe Admin Console](https://adminconsole.adobe.com/).
 
@@ -39,7 +39,7 @@ Certains d’entre vous peuvent avoir accès à plusieurs organisations. Pour aj
 
 Un profil de produit est un groupe. Les droits individuels sont attribués aux profils de produits et tous les utilisateurs du profil hériteront de ces droits.
 
-Sélectionnez le lien **[!UICONTROL Produits]** en haut et **[!UICONTROL Experience Cloud]** à gauche. Si Adobe Experience Platform Launch n’est pas répertorié, les clients doivent contacter leur équipe de compte et les partenaires doivent envoyer un courrier électronique <ExchangeTechEC@adobe.com>.
+Sélectionnez le lien **[!UICONTROL Produits]** en haut et **[!UICONTROL Experience Cloud]** à gauche. Si l’interface utilisateur de collecte de données n’est pas répertoriée, les clients doivent contacter leur équipe de compte et les partenaires doivent envoyer un courrier électronique à l’adresse <ExchangeTechEC@adobe.com>.
 
 ![Onglet Produits de la console d’administration](../images/getting-started/admin-console-products-launch.png)
 
