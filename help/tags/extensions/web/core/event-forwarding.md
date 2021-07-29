@@ -1,10 +1,10 @@
 ---
 title: Présentation de l’extension de transfert des événements principaux
 description: Découvrez l’extension de transfert d’événement Core dans Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1725'
-ht-degree: 94%
+source-wordcount: '1724'
+ht-degree: 92%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 L’extension Core event-transfert fournit les événements, conditions et types de données par défaut pour le transfert d’événement dans Adobe Experience Platform.
 
@@ -165,7 +165,7 @@ Pour accéder à la valeur d’un élément de données dans le code personnalis
 getDataElementValue('productName') 
 ```
 
-Les actions de Platform Launch côté serveur s’exécutent de manière séquentielle. Il est également possible que le code personnalisé dans une action renvoie une valeur pouvant être utilisée dans une action ultérieure. La valeur renvoyée peut provenir du code de cette action ou du corps de réponse d’un appel effectué vers une source externe. Pour référencer les données d’une action précédemment exécutée dans une seule règle où l’extension Core est utilisée, créez un élément de données de type `Path` et utilisez le chemin suivant pour référencer la valeur d’une variable appelée `productCategory` définie dans le code personnalisé de l’extension Core :
+Les actions de transfert d’événement s’exécutent de manière séquentielle. Il est également possible que le code personnalisé dans une action renvoie une valeur pouvant être utilisée dans une action ultérieure. La valeur renvoyée peut provenir du code de cette action ou du corps de réponse d’un appel effectué vers une source externe. Pour référencer les données d’une action précédemment exécutée dans une seule règle où l’extension Core est utilisée, créez un élément de données de type `Path` et utilisez le chemin suivant pour référencer la valeur d’une variable appelée `productCategory` définie dans le code personnalisé de l’extension Core :
 
 ```javascript
 arc.ruleStash.[Extension-Name].[key-as-defined-by-action] 
