@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de l’extension Adobe Target
 description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Target dans Adobe Experience Platform.
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 77%
+source-wordcount: '506'
+ht-degree: 74%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## 24 juillet 2020
 
