@@ -1,43 +1,42 @@
 ---
-title: Intégration de la prise en charge d’IAB TCF 2.0 à l’aide du SDK Web Adobe Experience Platform
-description: Découvrez comment configurer la prise en charge d’IAB TCF 2.0 pour votre site Web sans utiliser Adobe Experience Platform Launch.
+title: Intégration de la prise en charge du TCF 2.0 de l’IAB à l’aide du SDK Web de Adobe Experience Platform
+description: Découvrez comment configurer la prise en charge du TCF 2.0 de l’IAB pour votre site web sans utiliser de balises.
 seo-description: Découvrez comment configurer le consentement IAB TCF 2.0 avec le SDK Web Adobe Experience Platform
-translation-type: tm+mt
-source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
+exl-id: 14f1802a-0f8d-487f-ae17-5daaaab05162
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '677'
 ht-degree: 0%
 
 ---
 
+# Intégration de la prise en charge du TCF 2.0 de l’IAB au SDK Web de Platform
 
-# Intégration de la prise en charge d’IAB TCF 2.0 avec Platform Web SDK
-
-Ce guide explique comment intégrer Interactive Advertising Bureau Transparency &amp; Consent Framework, version 2.0 (IAB TCF 2.0) avec Adobe Experience Platform Web SDK sans utiliser d’Experience Platform Launch. Pour un aperçu de l&#39;intégration avec IAB TCF 2.0, consultez la [présentation](./overview.md). Pour un guide sur la façon de s&#39;intégrer à l&#39;Experience Platform Launch, consultez le [guide de l&#39;IAB TCF 2.0 pour Experience Platform Launch](./with-launch.md).
+Ce guide explique comment intégrer l’Interactive Advertising Bureau Transparency &amp; Consent Framework, version 2.0 (IAB TCF 2.0) au SDK Web de Adobe Experience Platform sans utiliser de balises. Pour un aperçu de l’intégration avec IAB TCF 2.0, consultez la [présentation](./overview.md). Pour obtenir un guide sur l’intégration aux balises, consultez le [guide IAB TCF 2.0 pour les balises](./with-launch.md).
 
 ## Prise en main
 
-Ce guide utilise l&#39;interface `__tcfapi` pour accéder aux informations de consentement. Il peut s’avérer plus facile pour vous d’intégrer directement votre fournisseur de gestion de cloud (CMP). Toutefois, les informations contenues dans ce guide peuvent encore être utiles car les CMP offrent généralement des fonctionnalités similaires à l’API TCF.
+Ce guide utilise l’interface `__tcfapi` pour accéder aux informations de consentement. Il peut être plus facile d’intégrer directement votre fournisseur de gestion du cloud (CMP). Toutefois, les informations contenues dans ce guide peuvent être utiles, car les CMP offrent généralement des fonctionnalités similaires à l’API TCF.
 
 >[!NOTE]
 >
->Ces exemples supposent que lorsque le code est exécuté, `window.__tcfapi` est défini sur la page. Les CMP peuvent fournir un hook permettant d&#39;exécuter ces fonctions lorsque l&#39;objet `__tcfapi` est prêt.
+>Ces exemples supposent qu’au moment de l’exécution du code, `window.__tcfapi` est défini sur la page. Les CMP peuvent fournir un crochet où vous pouvez exécuter ces fonctions lorsque l’objet `__tcfapi` est prêt.
 
-Pour utiliser IAB TCF 2.0 avec Experience Platform Launch et l’extension Adobe Experience Platform Web SDK, vous devez disposer d’un schéma XDM. Si vous n&#39;avez défini aucune de ces options, débuts en affichant cette page avant de continuer.
+Pour utiliser IAB TCF 2.0 avec des balises et l’extension SDK Web Adobe Experience Platform, vous devez disposer d’un schéma XDM disponible. Si vous n’avez défini aucune de ces options, commencez par afficher cette page avant de continuer.
 
-En outre, ce guide vous demande de bien comprendre le SDK Web de Adobe Experience Platform. Pour une actualisation rapide, consultez la [présentation du SDK Web de Adobe Experience Platform](../../home.md) et la [documentation sur les questions fréquentes](../../web-sdk-faq.md).
+En outre, ce guide nécessite une compréhension pratique du SDK Web de Adobe Experience Platform. Pour une actualisation rapide, consultez la [présentation du SDK Web Adobe Experience Platform](../../home.md) et la [documentation sur les questions fréquentes](../../web-sdk-faq.md).
 
 ## Activation du consentement par défaut
 
-Si vous souhaitez traiter tous les utilisateurs inconnus de la même manière, vous pouvez définir le consentement par défaut sur `pending` ou `out`. Cette méthode met en file d’attente ou ignore les Événements d’expérience jusqu’à ce que les préférences de consentement soient reçues.
+Si vous souhaitez traiter tous les utilisateurs inconnus de la même manière, vous pouvez définir le consentement par défaut sur `pending` ou `out`. Cette file d’attente ou ignore les événements d’expérience jusqu’à ce que les préférences de consentement soient reçues.
 
-Pour plus d&#39;informations sur le consentement par défaut, consultez la section [consentement par défaut](../../fundamentals/configuring-the-sdk.md#default-consent) de la documentation de configuration du SDK Web de la plate-forme.
+Pour plus d’informations sur le consentement par défaut, reportez-vous à la [section concernant le consentement par défaut](../../fundamentals/configuring-the-sdk.md#default-consent) dans la documentation de configuration du SDK Web Platform.
 
 ### Définition du consentement par défaut basé sur `gdprApplies`
 
-Certains CMP permettent de déterminer si le Règlement général sur la protection des données (RGPD) s&#39;applique au client. Si vous souhaitez obtenir le consentement des clients pour lesquels GDPR ne s’applique pas, vous pouvez utiliser l’indicateur `gdprApplies` dans l’appel de l’API TCF.
+Certaines CMP permettent de déterminer si le Règlement général sur la protection des données (RGPD) s’applique au client. Si vous souhaitez obtenir le consentement des clients pour lesquels le RGPD ne s’applique pas, vous pouvez utiliser l’indicateur `gdprApplies` dans l’appel de l’API TCF.
 
-L’exemple suivant illustre une façon de procéder :
+L’exemple suivant illustre une méthode :
 
 ```javascript
 var alloyConfiguration = { ... };
@@ -49,17 +48,17 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 });
 ```
 
-Dans cet exemple, la commande `configure` est appelée une fois que `tcData` a été obtenu à partir de l’API TCF. Si `gdprApplies` a la valeur true, le consentement par défaut est défini sur `pending`. Si `gdprApplies` a la valeur false, le consentement par défaut est défini sur `in`. Veillez à renseigner la variable `alloyConfiguration` avec votre configuration.
+Dans cet exemple, la commande `configure` est appelée une fois que `tcData` a été obtenu à partir de l’API TCF. Si `gdprApplies` est vrai, le consentement par défaut est défini sur `pending`. Si `gdprApplies` a la valeur false, le consentement par défaut est défini sur `in`. Veillez à renseigner la variable `alloyConfiguration` avec votre configuration.
 
 >[!NOTE]
 >
 >Lorsque le consentement par défaut est défini sur `in`, la commande `setConsent` peut toujours être utilisée pour enregistrer les préférences de consentement de vos clients.
 
-## Utilisation du événement setConsent
+## Utilisation de l’événement setConsent
 
-L’API IAB TCF 2.0 fournit un événement pour le moment où le consentement est mis à jour par le client. Cela se produit lorsque le client définit initialement ses préférences et lorsque le client met à jour ses préférences.
+L’API IAB TCF 2.0 fournit un événement pour lorsque le consentement est mis à jour par le client. Cela se produit lorsque le client définit initialement ses préférences et lorsque le client met à jour ses préférences.
 
-L’exemple suivant illustre une façon de procéder :
+L’exemple suivant illustre une méthode :
 
 ```javascript
 const identityMap = { ... };
@@ -80,13 +79,13 @@ window.__tcfapi('addEventListener', 2, function (tcData, success) {
 });
 ```
 
-Ce bloc de code écoute le événement `useractioncomplete`, puis définit le consentement, en transmettant la chaîne de consentement et l&#39;indicateur `gdprApplies`. Si vous disposez d’identités personnalisées pour vos clients, veillez à renseigner la variable `identityMap`. Pour plus d&#39;informations sur l&#39;appel à `setConsent`, consultez le guide sur [le consentement à l&#39;appui](../../consent/supporting-consent.md).
+Ce bloc de code écoute l’événement `useractioncomplete` , puis définit le consentement, en transmettant la chaîne de consentement et l’indicateur `gdprApplies` . Si vous disposez d’identités personnalisées pour vos clients, veillez à renseigner la variable `identityMap` . Pour plus d’informations sur l’appel à `setConsent`, consultez le guide sur [l’approbation](../../consent/supporting-consent.md).
 
 ## Inclusion des informations de consentement dans sendEvent
 
-Dans les schémas XDM, vous pouvez stocker les informations de préférence de consentement dans les Événements d’expérience. Il existe deux façons d’ajouter ces informations à chaque événement.
+Dans les schémas XDM, vous pouvez stocker les informations de préférences de consentement des événements d’expérience. Il existe deux manières d’ajouter ces informations à chaque événement.
 
-Tout d&#39;abord, vous pouvez fournir le schéma XDM approprié à chaque appel `sendEvent`. L’exemple suivant illustre une façon de procéder :
+Tout d’abord, vous pouvez fournir le schéma XDM approprié à chaque appel `sendEvent`. L’exemple suivant illustre une méthode :
 
 ```javascript
 var sendEventOptions = { ... };
@@ -103,10 +102,10 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 });
 ```
 
-Cet exemple récupère les informations de consentement pour l’API TCF, puis envoie un événement avec les informations de consentement ajoutées au schéma XDM. Consultez le guide [événements de suivi](../../fundamentals/tracking-events.md) pour comprendre ce qui doit figurer dans les options de commande `sendEvent`.
+Cet exemple récupère les informations de consentement pour l’API TCF, puis envoie un événement avec les informations de consentement ajoutées au schéma XDM. Consultez le guide [suivi des événements](../../fundamentals/tracking-events.md) pour comprendre ce qui doit se trouver dans les options de commande `sendEvent`.
 
-L&#39;autre moyen d&#39;ajouter les informations de consentement à chaque requête consiste à utiliser le rappel `onBeforeEventSend`. Pour plus d’informations sur la manière de procéder, consultez la section [Modification des événements globalement](../../fundamentals/tracking-events.md#modifying-events-globally) dans la documentation des événements de suivi.
+L’autre manière d’ajouter les informations de consentement à chaque requête consiste à utiliser le rappel `onBeforeEventSend`. Pour plus d’informations sur la manière de procéder, consultez la section sur la [modification globale](../../fundamentals/tracking-events.md#modifying-events-globally) dans la documentation sur les événements de suivi .
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris à utiliser IAB TCF 2.0 avec l&#39;extension Platform Web SDK, vous pouvez également choisir de vous intégrer à d&#39;autres solutions d&#39;Adobe telles que Adobe Analytics ou la plate-forme de données client en temps réel. Pour plus d&#39;informations, consultez la [présentation du Cadre de transparence et de consentement IAB 2.0](./overview.md).
+Maintenant que vous avez appris à utiliser IAB TCF 2.0 avec l’extension SDK Web Platform, vous pouvez également choisir d’intégrer avec d’autres solutions Adobe telles qu’Adobe Analytics ou la plateforme de données clients en temps réel. Pour plus d’informations, consultez la [Présentation de Transparency and Consent Framework 2.0 de l’IAB](./overview.md) .
