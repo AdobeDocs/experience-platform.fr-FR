@@ -2,9 +2,9 @@
 title: Cas d’utilisation pris en charge avec le SDK Web de Adobe Experience Platform
 description: Découvrez les cas d’utilisation pris en charge avec le SDK Web de Adobe Experience Platform.
 keywords: sdk web;cas d’utilisation
-source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '552'
 ht-degree: 15%
 
 ---
@@ -29,7 +29,7 @@ Cette page répertorie les cas d’utilisation pris en charge pour le SDK Web, a
 | Envoi de données à plusieurs organisations sur la page | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
 | Rapports et logs d’erreur détaillés |  |
 | Demandes de suivi côté client et côté serveur |  |
-| Extension Adobe Experience Platform Launch | [Documentation sur l’extension SDK Web](../../tags/extensions/web/sdk/overview.md) |
+| extension de balise | [Documentation sur l’extension SDK Web](../../tags/extensions/web/sdk/overview.md) |
 | Outils de débogage disponibles | [Extension Debugger ](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=en) et  [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon) |
 
 {style=&quot;table-layout:auto&quot;}
