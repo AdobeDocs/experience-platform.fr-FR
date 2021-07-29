@@ -1,9 +1,9 @@
 ---
 title: Prise en main de l’API Reactor
 description: Découvrez comment commencer à utiliser l’API Reactor, y compris les étapes de génération des informations d’identification d’accès requises.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1064'
 ht-degree: 2%
 
 ---
@@ -60,7 +60,7 @@ L’écran suivant vous invite à sélectionner un ou plusieurs profils de produ
 
 >[!NOTE]
 >
->Les profils de produit sont gérés par votre organisation via Adobe Admin Console et contiennent des jeux d’autorisations spécifiques pour les fonctionnalités granulaires d’Adobe Experience Platform Launch. Les profils de produit et leurs autorisations ne peuvent être gérés que par des utilisateurs disposant de droits d’administrateur au sein de votre entreprise. Si vous ne savez pas quels profils de produit sélectionner pour l’API, contactez votre administrateur.
+>Les profils de produit sont gérés par votre organisation via Adobe Admin Console et contiennent des jeux d’autorisations spécifiques pour des fonctionnalités granulaires. Les profils de produit et leurs autorisations ne peuvent être gérés que par des utilisateurs disposant de droits d’administrateur au sein de votre entreprise. Si vous ne savez pas quels profils de produit sélectionner pour l’API, contactez votre administrateur.
 
 Sélectionnez les profils de produit souhaités dans la liste, puis sélectionnez **Enregistrer l’API configurée** pour terminer l’enregistrement de l’API.
 
@@ -98,7 +98,7 @@ Un nouveau jeton d’accès est généré et un bouton permettant de copier le j
 
 #### Générer des jetons d’accès par programmation {#program}
 
-Si vous utilisez votre intégration Launch pour une application, vous pouvez générer des jetons d’accès par programmation via des demandes d’API. Pour ce faire, vous devez obtenir les valeurs suivantes :
+Si vous utilisez votre intégration pour une application, vous pouvez générer des jetons d’accès par programmation via des demandes d’API. Pour ce faire, vous devez obtenir les valeurs suivantes :
 
 * Identifiant du client (`{API_KEY}`)
 * Client secret (`{SECRET}`)
