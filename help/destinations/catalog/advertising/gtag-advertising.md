@@ -3,9 +3,9 @@ keywords: gtag;google gtag;extension google;extension google gtag;GTAG
 title: Extension Google gtag
 description: L’extension Google gtag est une destination publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '505'
 ht-degree: 27%
 
 ---
@@ -26,7 +26,7 @@ Cette destination est une extension de balise. Pour plus d’informations sur le
 
 Cette extension est disponible dans le catalogue [!DNL Destinations] pour tous les clients qui ont acheté Platform.
 
-Pour utiliser cette extension, vous devez accéder aux balises dans Adobe Experience Platform. Balises proposées aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contactez l’administrateur de votre organisation pour accéder aux balises et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer les extensions. et leur demander de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer des extensions.
+Pour utiliser cette extension, vous devez accéder aux balises dans Adobe Experience Platform. Les balises sont proposées aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contactez l’administrateur de votre organisation pour accéder aux balises et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer les extensions. et leur demander de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer des extensions.
 
 ## Installation de l’extension {#install-extension}
 
