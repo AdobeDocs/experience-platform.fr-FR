@@ -1,18 +1,18 @@
 ---
-title: Informations collectées automatiquement dans le SDK Web Adobe Experience Platform
-description: Présentation de chaque élément d’informations que le kit Adobe Experience Platform SDK collecte automatiquement.
-keywords: collecter des informations ; contexte ; configurer ; périphérique ; hauteur de l’écran ; orientation de l’écran ; orientation de l’écran ; largeur d’écran ; largeur d’écran ; environnement ; hauteur de la fenêtre d’affichage ; hauteur de la fenêtre d’affichage ; largeur de la fenêtre d’affichage ; détails de l’écran ; détails de l’implémentation ; détails de l’implémentation ; nom ; version ; contexte local ; heure locale ; local ; local;décalage du fuseau horaire local;horodatage;web;url;webPageDetails;web PageDetails;webReferrer;web Parrain;paysage;portrait;
+title: Informations collectées automatiquement dans le SDK Web de Adobe Experience Platform
+description: Présentation de chaque information collectée automatiquement par le SDK Adobe Experience Platform.
+keywords: collecter des informations;contexte;configurer;appareil;hauteur d’écran;orientation de l’écran;orientation de l’écran;largeur d’écran;largeur d’écran;environnement;hauteur de fenêtre d’affichage;hauteur de fenêtre d’affichage;largeur de fenêtre d’affichage;détails du navigateur;détails de la mise en oeuvre;détails de la mise en oeuvre;nom;version;contexte local;heure locale;fuseau horaire local Décalage du fuseau horaire;horodatage;web;url;webPageDetails;détails de la page web;webReferrer;référent web;paysage;portrait;
 exl-id: 901df786-df36-4986-9c74-a32d29c11b71
-source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 58%
+source-wordcount: '511'
+ht-degree: 59%
 
 ---
 
 # Informations collectées automatiquement
 
-Le Adobe Experience Platform Web SDK collecte automatiquement un certain nombre d’informations sans configuration particulière. Toutefois, ces informations peuvent être désactivées si nécessaire à l’aide de l’option `context` de la commande `configure`. [Voir Configuration du SDK](../fundamentals/configuring-the-sdk.md). Vous trouverez ci-dessous la liste de ces informations. Le nom entre parenthèses indique la chaîne à utiliser lors de la configuration du contexte.
+Le SDK Web de Adobe Experience Platform collecte automatiquement un certain nombre d’informations sans configuration particulière. Toutefois, ces informations peuvent être désactivées si nécessaire à l’aide de l’option `context` de la commande `configure`. [Voir Configuration du SDK](../fundamentals/configuring-the-sdk.md). Vous trouverez ci-dessous la liste de ces informations. Le nom entre parenthèses indique la chaîne à utiliser lors de la configuration du contexte.
 
 ## Appareil (`device`)
 
@@ -82,7 +82,7 @@ Informations sur le SDK utilisé pour collecter l’événement.
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-Identifiant du kit de développement logiciel (SDK).  Ce champ utilise un URI pour améliorer l’unicité entre les identifiants fournis par différentes bibliothèques de logiciels. Lorsque la bibliothèque autonome est utilisée, la valeur est `https://ns.adobe.com/experience/alloy`. Lorsque la bibliothèque est utilisée dans le cadre de l’extension de Platform launch, la valeur est `https://ns.adobe.com/experience/alloy+reactor`.
+Identifiant du kit de développement logiciel (SDK).  Ce champ utilise un URI pour améliorer l’unicité entre les identifiants fournis par différentes bibliothèques de logiciels. Lorsque la bibliothèque autonome est utilisée, la valeur est `https://ns.adobe.com/experience/alloy`. Lorsque la bibliothèque est utilisée dans le cadre de l’extension de balise, la valeur est `https://ns.adobe.com/experience/alloy+reactor`.
 
 ### Version
 
@@ -90,7 +90,7 @@ Identifiant du kit de développement logiciel (SDK).  Ce champ utilise un URI po
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
-Lorsque la bibliothèque autonome est utilisée, la valeur est simplement la version de la bibliothèque. Lorsque la bibliothèque est utilisée dans le cadre de l&#39;extension de Platform launch, il s&#39;agit de la version de la bibliothèque et de la version de l&#39;extension de Platform launch associée à un &quot;+&quot;. Par exemple, si la version de la bibliothèque était 2.1.0 et la version de l’extension de Platform launch 2.1.3, la valeur serait `2.1.0+2.1.3`.
+Lorsque la bibliothèque autonome est utilisée, la valeur est simplement la version de la bibliothèque. Lorsque la bibliothèque est utilisée dans le cadre de l’extension de balise, il s’agit de la version de la bibliothèque et de la version de l’extension de balise associée à un &quot;+&quot;. Par exemple, si la version de la bibliothèque est 2.1.0 et que la version de l’extension de balise est 2.1.3, la valeur est `2.1.0+2.1.3`.
 
 ### Environnement
 
@@ -98,7 +98,7 @@ Lorsque la bibliothèque autonome est utilisée, la valeur est simplement la ver
 | ------------------------------------------------ | ------------ |
 | `events[].xdm.implementationDetails.environment` | `browser` |
 
-Environnement de collecte des données. Il est toujours défini sur `browser`.
+Environnement dans lequel les données ont été collectées. Cette valeur est toujours définie sur `browser`.
 
 ## Contexte de l’emplacement (`placeContext`)
 
