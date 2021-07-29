@@ -1,10 +1,10 @@
 ---
 title: Création dʼune liste Exchange pour une extension
 description: Découvrez comment ajouter votre extension au catalogue public dans Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1162'
-ht-degree: 63%
+ht-degree: 59%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Adobe Experience Platform dispose d’un catalogue unique unifié dans lequel les utilisateurs peuvent afficher les extensions de balise disponibles pour l’installation. Ce catalogue est disponible dans le produit et contient des extensions de trois types :
 
@@ -44,7 +44,6 @@ Si vous disposez déjà d’un compte d’entreprise ou si vous ne prévoyez pas
    >[!NOTE]
    >
    >Il s’agit d’un format de fichier différent de celui utilisé dans votre code d’extension. L’extension elle-même contiendra un fichier svg en tant qu’[icône](../manifest.md).
-   
    - **Image en vedette**  : obtenez de l’attention en utilisant une image autonome qui présentera votre marque et mettra en évidence votre application. L’image en vedette est celle qui s’affiche lorsqu’une personne partage un lien vers votre liste Exchange ou publie des articles à ce sujet sur les médias sociaux. Il doit donc être une représentation modèle de votre marque.
    - **Logo de l’éditeur de l’appli** : il s’agit du logo de votre entreprise. Vérifiez que l’icône a les dimensions appropriées, soit 1 280 x 720 ou 2 560 x 1 440 (16:9) au format png ou jpg.
    - **Instructions**  de configuration : informez les clients sur la configuration de votre extension Adobe Experience Platform. Assurez-vous qu’ils comprennent tous les paramètres requis et les étapes suivantes lorsque votre [vue de configuration](../configuration.md) apparaît immédiatement après l’installation de votre extension dans une propriété. 
@@ -69,4 +68,4 @@ Lorsque vous mettez à jour votre extension ou que vous devez simplement mettre 
 
 ## Lier votre package d’extension à votre liste
 
-Une fois votre liste approuvée et publiquement disponible, nous vous recommandons de fournir un lien vers la liste publique dans le champ `exchange_url` du fichier `extension.json` de votre package d’extension.  Cela créera un lien « Plus d’informations » dans le catalogue d’extensions de Platform Launch afin que les utilisateurs du produit puissent trouver votre liste et ses informations supplémentaires.
+Une fois votre liste approuvée et publiquement disponible, nous vous recommandons de fournir un lien vers la liste publique dans le champ `exchange_url` du fichier `extension.json` de votre package d’extension.  Cela créera un lien &quot;Plus d’informations&quot; dans le catalogue de l’extension de balise afin que les utilisateurs du produit puissent trouver votre liste et ses informations supplémentaires.
