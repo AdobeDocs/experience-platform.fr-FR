@@ -5,9 +5,9 @@ title: Présentation de la collecte de données
 topic-legacy: overview
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '304'
 ht-degree: 84%
 
 ---
@@ -25,7 +25,8 @@ La collecte de données est prise en charge pour les sources côté client suiva
 Les technologies de collecte de données fournies par Experience Platform se concentrent sur le référencement et l’accessibilité des jeux de données ingérés. Ces technologies englobent les éléments suivants :
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=fr)
-* [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=fr)
+* [Balises](../tags/home.md)
+* [Transfert d’événement](../tags/ui/event-forwarding/overview.md)
 * [SDK web Adobe Experience Platform](../edge/home.md)
 * [Modèle de données d’expérience (XDM)](../xdm/home.md)
 
@@ -37,7 +38,7 @@ Les SDK web et mobile d’Adobe Experience Platform réduisent et compressent to
 
 ## Processus de basculement afin de déployer la technologie Adobe
 
-Platform Edge Network est un réseau de serveurs distribué dans le monde entier. Rapide et fiable, il est capable de recevoir et de traiter des données à très grande échelle. Grâce à Platform launch, vous pouvez configurer des [flux de données](../edge/fundamentals/datastreams.md) pour des produits tels qu’Adobe Target, Adobe Audience Manager et Adobe Analytics, qui vous permettent d’activer ces produits côté serveur sans modifier le code côté client.
+Platform Edge Network est un réseau de serveurs distribué dans le monde entier. Rapide et fiable, il est capable de recevoir et de traiter des données à très grande échelle. À l’aide de balises, vous pouvez configurer des [flux de données](../edge/fundamentals/datastreams.md) pour des produits tels qu’Adobe Target, Adobe Audience Manager et Adobe Analytics, qui vous permettent d’activer ces produits côté serveur sans modifier le code côté client.
 
 ![](./images/deploy.png)
 
