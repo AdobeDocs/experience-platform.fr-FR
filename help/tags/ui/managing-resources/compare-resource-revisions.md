@@ -1,10 +1,10 @@
 ---
 title: Comparaison des révisions des ressources
 description: Découvrez comment afficher l’historique des révisions d’une ressource de balise dans Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 96%
+source-wordcount: '910'
+ht-degree: 94%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Comparez des révisions des ressources pour afficher l’historique d’une ressource individuelle. Vous pouvez comparer l’état actuel de la ressource à des versions plus anciennes ou comparer la version actuellement publiée d’une ressource au jeu de modifications le plus récent qui a été enregistré.
 
