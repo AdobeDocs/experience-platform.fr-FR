@@ -1,10 +1,10 @@
 ---
 title: Prise En Main Du Transfert D’Événements
 description: Suivez ce tutoriel détaillé pour commencer à utiliser le transfert d’événement dans Adobe Experience Platform.
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 48%
+source-wordcount: '907'
+ht-degree: 46%
 
 ---
 
@@ -12,12 +12,12 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Pour utiliser le transfert d’événement dans Adobe Experience Platform, les données doivent être envoyées à Adobe Experience Platform Edge Network à l’aide d’une ou de plusieurs des trois options suivantes :
 
 * [SDK web Adobe Experience Platform](../../extensions/web/sdk/overview.md)
-* [SDK mobile Adobe Experience Platform](https://sdkdocs.com)
+* [SDK Adobe Experience Platform Mobile](https://sdkdocs.com)
 * [API serveur à serveur](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
 
 >[!NOTE]
