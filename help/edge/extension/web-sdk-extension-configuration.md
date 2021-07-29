@@ -1,10 +1,10 @@
 ---
 title: Configuration du SDK Web Adobe Experience Platform
-description: En savoir plus sur l’extension SDK Web Adobe Experience Platform pour Adobe Experience Platform Launch
+description: Découvrez l’extension de balise du SDK Web de Adobe Experience Platform.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: e5b43a65bb9907f333f1ffedfbeed00f02f8ef39
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1034'
 ht-degree: 7%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 7%
 
 L’extension SDK Web Adobe Experience Platform envoie des données à Adobe Experience Cloud à partir de propriétés web par le biais du réseau Adobe Experience Platform Edge. L’extension vous permet de diffuser des données dans Platform, de synchroniser les identités, de traiter les signaux de consentement du client et de collecter automatiquement des données contextuelles.
 
-Ce document explique comment configurer l’extension dans l’interface utilisateur d’Adobe Experience Platform Launch.
+Ce document explique comment configurer l’extension dans l’interface utilisateur de la collecte de données.
 
 ## Configurez l’extension
 
-Si l’extension SDK Web Platform a déjà été installée pour une propriété, ouvrez la propriété dans l’interface utilisateur de Platform launch et sélectionnez l’onglet **[!UICONTROL Extensions]** . Sous Platform Web SDK, sélectionnez **[!UICONTROL Configurer]**.
+Si l’extension SDK Web Platform a déjà été installée pour une propriété, ouvrez la propriété dans l’interface utilisateur de collecte de données et sélectionnez l’onglet **[!UICONTROL Extensions]** . Sous Platform Web SDK, sélectionnez **[!UICONTROL Configurer]**.
 
 ![](../images/extension/overview/configure.png)
 
@@ -35,7 +35,7 @@ Les options de configuration en haut de la page indiquent à Adobe Experience Pl
 
 ### [!UICONTROL Nom]
 
-L’extension SDK Web Adobe Experience Platform prend en charge plusieurs instances sur la page. Le nom est utilisé pour envoyer des données à plusieurs organisations avec une configuration de Platform launch unique.
+L’extension SDK Web Adobe Experience Platform prend en charge plusieurs instances sur la page. Le nom est utilisé pour envoyer des données à plusieurs organisations avec une configuration de balise.
 
 Le nom de l’extension est par défaut &quot;[!DNL alloy]&quot;. Vous pouvez toutefois remplacer le nom de l’instance par n’importe quel nom d’objet JavaScript valide.
 
