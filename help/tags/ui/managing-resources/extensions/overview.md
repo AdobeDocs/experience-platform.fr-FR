@@ -1,10 +1,10 @@
 ---
 title: Extensions
 description: Découvrez le fonctionnement des extensions de balise dans Adobe Experience Platform.
-source-git-commit: 5b8ef30b1d0e6d682c94453117677c806eba1e02
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 77%
+source-wordcount: '497'
+ht-degree: 70%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Une extension est un ensemble de codes qui étend les fonctionnalités fournies par les balises ou le transfert d’événement.
 
@@ -26,15 +26,13 @@ Les extensions déterminent les éléments disponibles lors de la création de p
 
 Utilisez les liens situés en haut de la liste Extensions pour afficher les extensions installées, le catalogue des extensions ou les mises à jour.
 
-Sélectionnez une extension, puis cliquez sur [!UICONTROL Configurer] pour afficher et modifier les paramètres de l’extension. Voir [Ajout d’une nouvelle extension](#add-a-new-extension) pour plus d’informations sur les options d’extension.
+Sélectionnez une extension, puis cliquez sur [!UICONTROL Configurer] pour afficher et modifier les paramètres de l’extension. Pour plus d’informations, voir la section sur l’[ajout d’une nouvelle extension](#add-a-new-extension) pour plus d’informations sur les options d’extension.
 
 >[!IMPORTANT]
 >
 >Les modifications ne prennent effet que lorsqu’elles sont [publiées](../../publishing/overview.md).
 
 Par défaut, Adobe fournit des extensions qui prennent en charge les intégrations courantes. Les extensions peuvent être modifiées par des configurations personnalisées. Les configurations sont fournies par le biais des extensions. Pour créer une configuration, cliquez sur la carte d’extension, puis sélectionnez **[!UICONTROL Ajouter une nouvelle configuration]**.
-
-Pour obtenir une vidéo d’introduction, reportez-vous à [Extensions](../../../quick-start/videos.md).
 
 ## Catalogue d’extensions
 
