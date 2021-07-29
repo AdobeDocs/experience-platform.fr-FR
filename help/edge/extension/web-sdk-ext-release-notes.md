@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
 description: Extension de balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 52%
+source-wordcount: '1093'
+ht-degree: 53%
 
 ---
 
@@ -13,7 +13,13 @@ ht-degree: 52%
 
 Ce document couvre les notes de mise à jour de l’extension de balise SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, consultez les [Notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.6.1 - 29 juillet 2021
+
+Contient la version 2.6.1 de la bibliothèque SDK Web Adobe Experience Platform.
+
 ## Version 2.6.0 - 27 juillet 2021
+
+Contient la version 2.6.0 de la bibliothèque SDK Web Adobe Experience Platform.
 
 * Les libellés, descriptions et messages d’erreur utilisant le terme &quot;configuration de périphérie&quot; ont été modifiés afin d’utiliser le terme &quot;flux de données&quot; pour s’aligner sur la terminologie Adobe Experience Platform la plus récente.
 * Dans la vue de configuration de l’extension, la prise en charge a été ajoutée pour la gestion d’un grand nombre de jeux de données et d’environnements de flux de données.
