@@ -1,10 +1,10 @@
 ---
 title: Présentation des hôtes gérés par Adobe
 description: Découvrez l’option d’hébergement par défaut pour le déploiement des versions de bibliothèque de balises dans Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 66%
+source-wordcount: '1175'
+ht-degree: 65%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les hôtes gérés par Adobe sont le paramètre d’hôte par défaut pour le déploiement des versions de votre bibliothèque de balises dans Adobe Experience Platform. Lorsque vous créez une propriété via l’interface utilisateur de collecte de données, un hôte géré par Adobe par défaut est créé pour vous.
 
@@ -89,7 +89,7 @@ Les en-têtes de contrôle du cache ne sont appliqués que pour la version de bi
 
 ## Utilisation de l’hébergement géré par les Adobes dans l’interface utilisateur de la collecte de données
 
-Lorsque vous créez une propriété pour la première fois dans l’[interface utilisateur de collecte de données](http://launch.adobe.com/fr), un hôte géré par l’Adobe est automatiquement créé. Tous les environnements disponibles possédant des propriétés immédiatement utilisables sont également affectés par défaut à l’hôte géré par l’Adobe.
+Lorsque vous créez une propriété pour la première fois dans l’[interface utilisateur de collecte de données](https://experience.adobe.com/#/data-collection/), un hôte géré par l’Adobe est automatiquement créé. Tous les environnements disponibles possédant des propriétés immédiatement utilisables sont également affectés par défaut à l’hôte géré par l’Adobe.
 
 >[!NOTE]
 >
