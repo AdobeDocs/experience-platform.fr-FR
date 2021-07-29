@@ -3,9 +3,9 @@ title: Configuration du flux de données pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer les flux de données. '
 keywords: configuration;datastreams;datastreamId;edge;datastream id;paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;ID de conteneur de synchronisation;sandbox;flux de données;jeu de données d’événement;cible;code client;jeton de propriété;ID d’environnement cible;destinations de cookie;destinations d’URL;ID de suite de rapports de paramètres Analytics;ID de blocage
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
@@ -19,17 +19,17 @@ Votre entreprise doit être configurée pour cette fonctionnalité. Veuillez con
 
 ## Création d’une configuration de flux de données
 
-Les flux de données peuvent être créés dans Adobe [!DNL Experience Platform Launch] à l’aide de l’outil de configuration Datastream .
+Il est possible de créer des flux de données dans l’interface utilisateur de la collecte de données à l’aide de l’outil de configuration du flux de données.
 
 ![navigation de l’outil datastreams](../images/datastreams/config.png)
 
 >[!NOTE]
 >
->L’outil de configuration des flux de données est disponible pour les clients de la liste autorisée, qu’ils utilisent [!DNL Experience Platform Launch] comme gestionnaire de balises. En outre, les utilisateurs ont besoin des autorisations Développer dans [!DNL Experience Platform Launch]. Pour plus d’informations, reportez-vous à l’article [Autorisations utilisateur](../../tags/ui/administration/user-permissions.md) de la documentation [!DNL Experience Platform Launch] .
+>L’outil de configuration des flux de données est disponible pour les clients de la liste autorisée, qu’ils utilisent Platform comme gestionnaire de balises ou non. En outre, les utilisateurs ont besoin des autorisations de développement. Pour plus d’informations, reportez-vous à l’article [Autorisations utilisateur](../../tags/ui/administration/user-permissions.md) dans la documentation sur les balises.
 
 Créez un flux de données en cliquant sur **[!UICONTROL Nouvelle flux de données]** dans la zone supérieure droite de l’écran. Après avoir fourni un nom et une description, vous êtes invité à définir les paramètres par défaut de chaque environnement. Les paramètres disponibles sont présentés ci-dessous.
 
-Lors de la création d’un flux de données, trois environnements sont automatiquement créés avec des paramètres identiques. Ces trois environnements sont *dev*, *stage* et *prod*. Ils correspondent aux trois environnements par défaut dans [!DNL Experience Platform Launch]. Lorsque vous créez une bibliothèque [!DNL Experience Platform Launch] dans un environnement de développement, la bibliothèque utilise automatiquement l’environnement de développement de votre configuration. Vous pouvez modifier les paramètres dans des environnements individuels autant que vous le souhaitez.
+Lors de la création d’un flux de données, trois environnements sont automatiquement créés avec des paramètres identiques. Ces trois environnements sont *dev*, *stage* et *prod*. Ils correspondent aux trois environnements par défaut des balises. Lorsque vous créez une bibliothèque de balises dans un environnement de développement, la bibliothèque utilise automatiquement l’environnement de développement de votre configuration. Vous pouvez modifier les paramètres dans des environnements individuels autant que vous le souhaitez.
 
 L’ID utilisé dans le SDK comme `edgeConfigId` est un ID composite qui spécifie la configuration et l’environnement (par exemple, `1c86778b-cdba-4684-9903-750e52912ad1:stage`). Si aucun environnement n’est présent dans l’ID composite (par exemple, `stage` dans l’exemple précédent), l’environnement de production est utilisé.
 
