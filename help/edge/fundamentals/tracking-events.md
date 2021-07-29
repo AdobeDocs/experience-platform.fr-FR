@@ -3,9 +3,9 @@ title: Suivi des événements à l’aide du SDK Web de Adobe Experience Platfor
 description: Découvrez comment effectuer le suivi des événements du SDK Web Adobe Experience Platform.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;envoyer la balise;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: a6fca344e6b307e503e29ca7dda3534cdea62f53
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1451'
 ht-degree: 43%
 
 ---
@@ -68,7 +68,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-Dans cet exemple, la couche de données est clonée en la sérialisant au format JSON, puis en la désérialisant. Ensuite, le résultat cloné est transmis dans la commande `sendEvent`. Cela permet de s’assurer que la commande `sendEvent` possède un instantané de la couche de données telle qu’elle existait lors de l’exécution de la commande `sendEvent` afin que les modifications ultérieures apportées à l’objet de couche de données d’origine ne soient pas répercutées dans les données envoyées au serveur. Si vous utilisez une couche de données pilotée par un événement, le clonage de vos données est probablement déjà géré automatiquement. Par exemple, si vous utilisez la [couche de données client d’Adobe](https://github.com/adobe/adobe-client-data-layer/wiki), la méthode `getState()` fournit un instantané calculé et cloné de toutes les modifications antérieures. Cela est également géré automatiquement si vous utilisez l’extension SDK Web Adobe Experience Platform dans Adobe Experience Platform Launch.
+Dans cet exemple, la couche de données est clonée en la sérialisant au format JSON, puis en la désérialisant. Ensuite, le résultat cloné est transmis dans la commande `sendEvent`. Cela permet de s’assurer que la commande `sendEvent` possède un instantané de la couche de données telle qu’elle existait lors de l’exécution de la commande `sendEvent` afin que les modifications ultérieures apportées à l’objet de couche de données d’origine ne soient pas répercutées dans les données envoyées au serveur. Si vous utilisez une couche de données pilotée par un événement, le clonage de vos données est probablement déjà géré automatiquement. Par exemple, si vous utilisez la [couche de données client d’Adobe](https://github.com/adobe/adobe-client-data-layer/wiki), la méthode `getState()` fournit un instantané calculé et cloné de toutes les modifications antérieures. Cela est également géré automatiquement si vous utilisez l’extension de balise du SDK Web de Adobe Experience Platform.
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ Dans un événement d’expérience XDM, il existe un champ `eventType` facultat
 | delivery.feedback | Événements de retour pour une diffusion. Exemples d&#39;événements de retour pour une diffusion email |
 
 
-Ces types d’événement s’affichent dans une liste déroulante si vous utilisez l’extension Adobe Experience Platform Launch ou si vous pouvez toujours les transmettre sans Experience Platform Launch. Ils peuvent être transmis dans le cadre de l’option `xdm`.
+Ces types d’événement s’affichent dans une liste déroulante si vous utilisez l’extension de balise ou si vous pouvez toujours les transmettre sans balise. Ils peuvent être transmis dans le cadre de l’option `xdm`.
 
 
 ```javascript
