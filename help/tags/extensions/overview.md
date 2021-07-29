@@ -1,12 +1,11 @@
 ---
 title: Extensions Adobe
-seo-title: Extensions Adobe dans Adobe Experience Platform Launch
 description: Documentation pour les extensions de balises dans Adobe Experience Platform.
-seo-description: Documentation sur les extensions Adobe Experience Platform Launch fournies par les solutions Adobe.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+seo-description: Documentation sur les extensions de balise fournies par les solutions Adobe.
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 62%
+source-wordcount: '81'
+ht-degree: 24%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Découvrez les extensions de balise disponibles dans la bibliothèque d’extensions [!DNL Adobe Experience Platform].
 
