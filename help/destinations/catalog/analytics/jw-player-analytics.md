@@ -3,9 +3,9 @@ keywords: JW Player;jw player;JW Player;extension jw;extension JW
 title: Extension JW Player Analytics (Beta)
 description: L’extension JW Player Analytics (bêta) est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 32bdb2db-5c1b-4184-b6d3-b07dc4d0b324
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '497'
 ht-degree: 20%
 
 ---
@@ -26,7 +26,7 @@ Cette destination est une extension de balise. Pour plus d’informations sur le
 
 Cette extension est disponible dans le catalogue [!DNL Destinations] pour tous les clients qui ont acheté Platform.
 
-Pour utiliser cette extension, vous devez accéder aux balises dans Adobe Experience Platform. Balises proposées aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contactez l’administrateur de votre organisation pour accéder aux balises et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer les extensions. et leur demander de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer des extensions.
+Pour utiliser cette extension, vous devez accéder aux balises dans Adobe Experience Platform. Les balises sont proposées aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contactez l’administrateur de votre organisation pour accéder aux balises et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer les extensions. et leur demander de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer des extensions.
 
 ## Installation de l’extension {#install-extension}
 
