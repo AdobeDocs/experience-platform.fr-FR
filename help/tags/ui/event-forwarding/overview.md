@@ -1,10 +1,10 @@
 ---
 title: Présentation du transfert d’événement
 description: Découvrez le transfert d’événement dans Adobe Experience Platform, qui vous permet d’utiliser le réseau Platform Edge pour exécuter des tâches sans modifier votre mise en oeuvre des balises.
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 42%
+source-wordcount: '547'
+ht-degree: 39%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Le transfert d’événements dans Adobe Experience Platform réduit le poids des pages web et des applications en utilisant Adobe Experience Platform Edge Network pour exécuter les tâches normalement effectuées sur le client. Les règles de transfert d’événements peuvent transformer et envoyer des données vers de nouvelles destinations sans modifier les mises en oeuvre côté client.
 
