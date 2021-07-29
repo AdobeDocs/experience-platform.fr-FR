@@ -1,10 +1,10 @@
 ---
 title: Déploiement de balises JavaScript pour la gestion du consentement client
 description: Découvrez comment gérer les signaux d’opt-in et d’opt-out des clients pour diverses solutions d’Adobe dans Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 91%
+source-wordcount: '651'
+ht-degree: 88%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 La combinaison du [Règlement général sur la protection des données](https://gdpr-info.eu/art-7-gdpr/) de l’Union européenne et de la réglementation [ePrivacy](https://medium.com/mydata/consent-lost-gdpr-and-found-eprivacy-e85cf881ffb) exige que les entreprises puissent gérer le consentement des utilisateurs. Les clients Adobe peuvent demander aux visiteurs de sʼabonner avant lʼexécution de solutions Adobe pour un visiteur donné. Les visiteurs doivent pouvoir gérer leur état d’inclusion/exclusion.
 
