@@ -1,18 +1,17 @@
 ---
 title: Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
-description: SDK Web Adobe Experience Platform dans Adobe Experience Platform Launch
-seo-description: SDK Web Adobe Experience Platform dans Adobe Experience Platform Launch
+description: Extension de balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: dfcfdf90ae857e6a6ff0ddc7810cb6a6939c9758
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1071'
+ht-degree: 52%
 
 ---
 
 # Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
 
-Ce document couvre les notes de mise à jour de l’extension SDK Web Adobe Experience Platform pour Adobe Experience Platform Launch. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, consultez les [Notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+Ce document couvre les notes de mise à jour de l’extension de balise SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, consultez les [Notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
 ## Version 2.6.0 - 27 juillet 2021
 
@@ -103,14 +102,14 @@ Ces décisions ne sont renvoyées par la commande `sendEvent` que si `renderDeci
 * La requête effectuée lors de la migration des identifiants est envoyée au point de terminaison demdex afin d’améliorer l’identification inter-domaines lorsque le cookie demdex n’est pas défini.
 * La requête effectuée lors de la migration des identifiants attend toujours une réponse afin de s’assurer que le cookie d’identité est défini.
 * Lors de l’exécution d’une commande non valide, une liste de noms de commande valides sera enregistrée dans la console.
-* Ajout d’une case à cocher afin d’activer ou de désactiver la prise en charge des cookies tiers dans l’extension d’Adobe Experience Platform Launch. Ceci désactive les appels vers demdex.net.
+* Ajout d’une case à cocher pour activer ou désactiver la prise en charge des cookies tiers dans l’extension de balise. Ceci désactive les appels vers demdex.net.
 
 ## Version 0.0.5 - 20 décembre 2019
 
-* Ajout des configurations de suivi d’activité à l’extension Platform Launch.
+* Ajout des configurations de suivi d’activité à l’extension de balise
 * Exposition d’EventType et EventMergeId sur la commande d’événement.
-* Ajouter une configuration onBeforeEventSend à l’extension Platform Launch.
-* Ajout d’une configuration edgeBasePath à l’extension Platform Launch.
+* Ajouter la configuration onBeforeEventSend à l’extension de balise
+* Ajouter une configuration edgeBasePath à l’extension de balise
 
 ## Version 0.0.3 - 25 novembre 2019
 
