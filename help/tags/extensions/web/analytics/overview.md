@@ -1,10 +1,10 @@
 ---
 title: Présentation de lʼextension Adobe Analytics
 description: Découvrez l’extension de balise Adobe Analytics dans Adobe Experience Platform.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2201'
-ht-degree: 95%
+source-wordcount: '2202'
+ht-degree: 94%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Cette référence vous permet d’obtenir plus d’informations sur la configuration de l’extension Adobe Analytics et sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
 
