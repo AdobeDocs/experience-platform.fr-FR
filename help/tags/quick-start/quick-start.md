@@ -1,10 +1,10 @@
 ---
 title: Guide de démarrage rapide
 description: Découvrez comment utiliser rapidement les balises dans Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1533'
-ht-degree: 44%
+source-wordcount: '1532'
+ht-degree: 42%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les balises sont Adobe Experience Platform qui  la nouvelle génération de la technologie de gestion des balises. Il est conçu de toutes pièces pour prendre en charge un écosystème ouvert et durable où chacun peut construire ses propres intégrations que les clients Adobe peuvent déployer sur leurs sites. Il s’agit de la première application d’une API, donc tout ce que vous pouvez faire par le biais de l’interface utilisateur, vous pouvez également le faire par programmation via une API.
 
@@ -26,8 +26,6 @@ Processus des balises de base :
 6. Test dans votre environnement de développement.
 7. Promotion de la production.
 
-Pour obtenir une vidéo d’introduction, reportez-vous à la documentation [vidéos d’introduction](videos.md) .
-
 ## 1. Configuration de groupes et d’utilisateurs
 
 Les balises sont entièrement intégrées à votre Adobe ID. Les autorisations d’utilisateur sont gérées par l’intermédiaire du Admin Console avec d’autres produits et solutions d’Adobe provenant de [!DNL Creative Cloud], [!DNL Document Cloud] et de l’Experience Cloud.
@@ -38,7 +36,7 @@ Pour obtenir des instructions détaillées sur la création de groupes et l’aj
 
 ## 2. Connexion
 
-Une fois les droits de balise ajoutés à votre Adobe ID, vous devez vous connecter à l’interface utilisateur de la collecte de données. Pour ce faire, accédez directement à l’[écran de connexion Experience Cloud](https://experiencecloud.adobe.com), puis sélectionnez **[!UICONTROL Lancer / Collecte de données]** dans l’onglet Accès rapide .
+Une fois les droits de balise ajoutés à votre Adobe ID, vous devez vous connecter à l’interface utilisateur de la collecte de données. Pour ce faire, accédez directement à l’[écran de connexion Experience Cloud](https://experiencecloud.adobe.com), puis sélectionnez l’interface utilisateur de collecte de données dans l’onglet Accès rapide .
 
 >[!NOTE]
 >
@@ -56,7 +54,7 @@ Une extension est une intégration construite par Adobe ou un partenaire d’Ado
 
 Toutes les nouvelles propriétés sont dotées de l’ [extension Core](../extensions/web/core/overview.md). Les propriétés mobiles sont dotées d’extensions supplémentaires. L’extension Core est construite par Adobe afin de fournir un solide ensemble par défaut de types d’éléments de données pour votre couche de données et de types d’événements pour vos règles. La plupart des actions que vous souhaitez effectuer (obtenir un ECID, envoyer des balises [!DNL Adobe Analytics], charger la mbox globale [!DNL Target], etc.) proviennent des extensions que vous installez depuis le catalogue.
 
-Ce qui rend les balises de Platform vraiment uniques, c’est que ces extensions peuvent être créées par n’importe qui. Vous souhaitez déposer un pixel de remarketing Facebook sur votre site ? Découvrez l’extension créée par Facebook. Vous souhaitez la même pour Twitter ou LinkedIn ? Utilisez ces extensions. Vous souhaitez réaliser une enquête ? Jetez un œil à Question Pro ou Foresee. Avez-vous besoin de gérer la confidentialité et le consentement de vos utilisateurs finaux pour les aider avec [!DNL GDPR] ? Allez voir du côté d’Evidon et de Trust Arc. Souhaitez-vous obtenir des informations détaillées sur le comportement des utilisateurs individuels de votre site ? Clicktale peut vous être utile. Pour plus d’informations, reportez-vous à la section [Ajout d’une nouvelle extension](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+Ce qui rend les balises de Platform vraiment uniques, c’est que ces extensions peuvent être créées par n’importe qui. Vous souhaitez déposer un pixel de remarketing Facebook sur votre site ? Découvrez l’extension créée par Facebook. Vous souhaitez la même pour Twitter ou LinkedIn ? Utilisez ces extensions. Vous souhaitez réaliser une enquête ? Jetez un œil à Question Pro ou Foresee. Avez-vous besoin de gérer la confidentialité et le consentement de vos utilisateurs finaux pour les aider avec [!DNL GDPR] ? Allez voir du côté d’Evidon et de Trust Arc. Souhaitez-vous obtenir des informations détaillées sur le comportement des utilisateurs individuels de votre site ? Clicktale peut vous être utile. Pour plus d’informations, voir la section sur l’[ajout d’une nouvelle extension](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Création de règles et d’éléments de données
 
