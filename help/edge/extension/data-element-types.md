@@ -1,17 +1,17 @@
 ---
 title: Types d’éléments de données dans l’extension SDK Web Adobe Experience Platform
-description: Découvrez les différents types d’éléments de données fournis par l’extension SDK Web Adobe Experience Platform dans Adobe Experience Platform Launch.
+description: Découvrez les différents types d’éléments de données fournis par l’extension de balise du SDK Web de Adobe Experience Platform.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 5a295a1f6e64c33ac4a48e1d74253d0527f495f9
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 47%
+source-wordcount: '293'
+ht-degree: 49%
 
 ---
 
 # Types d’éléments de données
 
-Après avoir défini vos [types d’actions](action-types.md) dans l’ [extension SDK Web Adobe Experience Platform](web-sdk-extension-configuration.md) pour [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configurez vos types d’éléments de données.
+Après avoir défini vos [types d’actions](action-types.md) dans l’ [extension de balise SDK Web Adobe Experience Platform](web-sdk-extension-configuration.md), configurez vos types d’éléments de données.
 
 Cette page décrit les types d’éléments de données disponibles.
 
