@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 90%
+source-wordcount: '1210'
+ht-degree: 86%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## 20 mai 2021
 
@@ -103,7 +103,7 @@ v1.6.2
 
 v1.6.1
 
-* **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. S’il est configuré, tous les scripts intégrés qu’une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge l’utilisation d’une stratégie de sécurité du contenu (CSP) avec une valeur à usage unique afin que les scripts Platform Launch puissent toujours se charger dans un environnement CSP. Pour en savoir plus sur l’utilisation de Platform Launch avec une stratégie de sécurité du contenu, cliquez [ici](../../../ui/client-side/content-security-policy.md).
+* **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. S’il est configuré, tous les scripts intégrés qu’une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge l’utilisation d’une stratégie de sécurité du contenu avec une valeur à usage unique afin que les scripts de balise puissent toujours se charger dans un environnement CSP. Vous pouvez en savoir plus sur l’utilisation des balises avec une CSP [ici](../../../ui/client-side/content-security-policy.md).
 
 ## 18 juin 2019
 
