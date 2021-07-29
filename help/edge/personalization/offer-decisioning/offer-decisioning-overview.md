@@ -3,10 +3,10 @@ title: Utilisation d’Offer Decisioning avec le SDK Web Platform
 description: Le SDK Web de Adobe Experience Platform peut diffuser et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API Offer Decisioning.
 keywords: offer decisioning;prise de décision;SDK Web;SDK Web Platform;offres personnalisées;diffuser des offres;diffusion d’offres;personnalisation des offres ;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '779'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -65,10 +65,10 @@ Pour activer l’Offer decisioning, procédez comme suit :
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Suivez les instructions pour [installer le SDK](../../fundamentals/installing-the-sdk.md) (le SDK peut être installé seul ou via [Adobe Experience Platform Launch](http://launch.adobe.com/fr). Voici un [guide de démarrage rapide de Platform launch](../../../tags/quick-start/quick-start.md)).
+1. Suivez les instructions pour [installer le SDK](../../fundamentals/installing-the-sdk.md) (le SDK peut être installé seul ou via l’[interface utilisateur de collecte de données](https://experience.adobe.com/#/data-collection/). Pour plus d’informations, consultez le [guide de démarrage rapide des balises](../../../tags/quick-start/quick-start.md).
 1. [Configurez le ](../../fundamentals/configuring-the-sdk.md) SDK pour Offer Decisioning. Vous trouverez ci-dessous d’autres étapes spécifiques à l’Offer decisioning.
 
-   * SDK autonome installé
+   * Installation du SDK autonome
 
       1. Configurez l’action &quot;sendEvent&quot; avec votre `decisionScopes`
 
@@ -81,10 +81,10 @@ Pour activer l’Offer decisioning, procédez comme suit :
              ]
           })
          ```
-   * SDK installé par platform launch
+   * Installation du SDK par le biais de balises
 
-      1. [Création d’une propriété de Platform launch](../../../tags/ui/administration/companies-and-properties.md)
-      1. [Ajout du code incorporé de Platform launch](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [Création d’une propriété de balise](../../../tags/ui/administration/companies-and-properties.md)
+      1. [Ajout du code incorporé de ](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
       1. Installez et configurez l’extension SDK Web Platform avec le Datastream que vous venez de créer en sélectionnant la configuration dans la liste déroulante &quot;Datastream&quot;. Consultez la documentation sur les [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
