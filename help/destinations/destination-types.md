@@ -1,16 +1,15 @@
 ---
-keywords: destinations;destination;types de destination
+keywords: destinations;destination;types de destinations
 title: Types et catégories de destination
 seo-title: Types et catégories de destination
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
-translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 64%
+source-wordcount: '504'
+ht-degree: 63%
 
 ---
-
 
 # Types et catégories de destination
 
@@ -18,13 +17,13 @@ Lisez cette page pour comprendre les différents types et catégories de destina
 
 ## Types de destinations
 
-Dans Adobe Experience Platform, nous faisons la distinction entre deux types de destination : les connexions et les extensions. Il existe deux types de destinations de connexion : les destinations d’exportation de profils et les destinations d’exportation de segments.
+Dans Adobe Experience Platform, nous faisons la distinction entre deux types de destinations : les connexions et les extensions. Il existe deux types de destinations de connexion : les destinations d’exportation de profils et les destinations d’exportation de segments.
 
 ![Types de destinations](./assets/destination-types/types-of-destinations.png)
 
 ## Connexions {#connections}
 
-**[!UICONTROL Profil]** Exportations et  **[!UICONTROL segments]** Exportations dans Adobe Experience Platform capture les données du événement, les combine avec d’autres sources de données pour former le Profil [ client en temps ](../profile/home.md)réel, appliquer la segmentation et exporter des segments et des profils qualifiés vers des destinations.
+**[!UICONTROL Les destinations d’]** exportation de profils et d’ **[!UICONTROL exportation de segments dans Adobe Experience Platform capturent les données d’événement, les combinent à d’autres sources de données pour former le]** profil client en temps réel [ ](../profile/home.md), appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations.
 
 ## Destinations d’exportation de profils
 
@@ -42,15 +41,15 @@ La vidéo ci-dessous vous montre les particularités des deux types de destinati
 
 ## Extensions {#extensions}
 
-Platform tire parti de la puissance et de la flexibilité d&#39;Adobe Experience Platform Launch pour inclure des extensions de Platform launch dans l&#39;interface Platform.
+Platform tire parti de la puissance et de la flexibilité de la gestion des balises, ce qui vous permet de configurer des extensions de balise dans l’interface utilisateur de la collecte de données.
 
 >[!TIP]
 >
->Pour plus d&#39;informations sur les extensions Adobe Experience Platform Launch, y compris les cas d&#39;utilisation et la façon de les trouver dans l&#39;interface, consultez la [présentation des extensions Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md).
+>Pour plus d’informations sur les extensions de balise, y compris les cas d’utilisation et la manière de les trouver dans l’interface, consultez la [présentation des extensions de balise](./catalog/launch-extensions/overview.md).
 
-Les extensions de platform launch transfèrent les données de événement brutes vers plusieurs types de destinations. Considérez les extensions comme un type de destination **Transfert d’événement**. Il s’agit d’un type d’intégration aux plateformes de destination plus simple et qui ne transfère que les données d’événement brutes. Par exemple, l’[extension de personnalisation Gainsight](./catalog/personalization/gainsight.md) ou l’[extension de voix du client Confirmit](./catalog/voice/confirmit-digital-feedback.md).
+Les extensions de balise transfèrent les données d’événement brutes à plusieurs types de destinations. Considérez les extensions comme un type de destination **Transfert d’événement**. Il s’agit d’un type d’intégration aux plateformes de destination plus simple et qui ne transfère que les données d’événement brutes. Par exemple, l’[extension de personnalisation Gainsight](./catalog/personalization/gainsight.md) ou l’[extension de voix du client Confirmit](./catalog/voice/confirmit-digital-feedback.md).
 
-![Comparaison entre les extensions d’Experience Platform Launch et d’autres destinations](./assets/common/launch-and-other-destinations.png)
+![Comparaison des extensions de balise avec d’autres destinations](./assets/common/launch-and-other-destinations.png)
 
 ## Utilisation des connexions et des extensions
 
@@ -62,7 +61,6 @@ Les extensions s’avèrent utiles lorsque des données d’événement sont uti
 
 ## Catégories de destination
 
-Les connexions et extensions du catalogue de destinations [destinations](https://platform.adobe.com/destination/catalog) sont regroupées par catégorie de destination (**Publicité**, **enregistrement de cloud**, **plateformes de Questionnaire**, **Marketing par courriel**, etc.), en fonction de l&#39;action marketing qu&#39;ils vous aident à réaliser. Pour plus d’informations sur chaque catégorie, ainsi que sur les destinations incluses dans chaque catégorie, consultez la [documentation du catalogue des destinations](./catalog/overview.md).
+Les connexions et les extensions du [catalogue des destinations](https://platform.adobe.com/destination/catalog) sont regroupées par catégorie de destination (**Publicité**, **Stockage cloud**, **Plateformes d&#39;enquêtes**, **Marketing par e-mail**, etc.), selon l&#39;action marketing qu&#39;elles vous aident à réaliser. Pour plus d’informations sur chaque catégorie, ainsi que sur les destinations incluses dans chaque catégorie, consultez la [documentation du catalogue des destinations](./catalog/overview.md).
 
 ![Catégories de destination](./assets/destination-types/destination-categories-menu.png)
-
