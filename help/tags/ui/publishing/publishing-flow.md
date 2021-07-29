@@ -1,10 +1,10 @@
 ---
 title: Flux de publication
 description: Découvrez le processus de création des bibliothèques, de test et d’approbation des versions pour la production dans Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1498'
-ht-degree: 92%
+source-wordcount: '1499'
+ht-degree: 91%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Le flux de publication des balises dans Adobe Experience Platform fait référence au processus de création de bibliothèques, de test de versions et d’approbation pour la production.
 
@@ -63,7 +63,7 @@ Le tableau suivant décrit les actions disponibles pour une bibliothèque à lʼ
 | [!UICONTROL Envoyer et créer vers l’évaluation] | Cela ne peut être effectué que par un utilisateur disposant des droits Développer et Approuver. Cette action annule l’affectation de la bibliothèque à partir de l’environnement de développement, déplace la bibliothèque vers l’état [!UICONTROL Envoyé] et crée la bibliothèque dans l’environnement d’évaluation. Pour que cette option soit activée, la dernière version de la bibliothèque doit avoir été installée avec succès. |
 | [!UICONTROL Approuver pour publication] | Cela ne peut être effectué que par un utilisateur disposant des droits Développer et Approuver. Cette action annule l’affectation de la bibliothèque à partir de l’environnement de développement et la déplace vers l’état [!UICONTROL Approuvé], en ignorant entièrement l’environnement d’évaluation et l’état [!UICONTROL Envoyé]. Pour que cette option soit activée, la dernière version de la bibliothèque doit avoir été installée avec succès. |
 | [!UICONTROL Approuver et publier dans l’environnement de production] | Cela ne peut être effectué que par un utilisateur disposant des droits Développer, Approuver et Publier. Cette action annule l’attribution de la bibliothèque à l’environnement de développement, la déplace vers l’état [!UICONTROL Approuvé] et la publie en production. Une fois la création de production terminée, la bibliothèque passe à l’état [!UICONTROL Publié]. Pour que cette option soit activée, la dernière version de la bibliothèque doit avoir été installée avec succès. |
-| [!UICONTROL Supprimer] | Supprimez la bibliothèque de Platform Launch. Cela ne supprime pas la version de l’environnement. |
+| [!UICONTROL Supprimer] | Supprimez la bibliothèque du système. Cela ne supprime pas la version de l’environnement. |
 
 ### [!UICONTROL Envoyé] {#submitted}
 
