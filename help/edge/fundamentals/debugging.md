@@ -1,12 +1,12 @@
 ---
-title: Débogage dans le SDK Web Adobe Experience Platform
+title: Débogage dans le SDK Web de Adobe Experience Platform
 description: Découvrez comment activer/désactiver les fonctionnalités de débogage dans le SDK Web Experience Platform.
-keywords: débogage du sdk Web ; débogage ; configuration ; commande ; configuration ; commande de débogage ; edgeConfigId ; setDebug ; debugEnabled ; debug ;
+keywords: débogage du sdk web;débogage;configurer;commande de configuration;commande de débogage;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 73%
+source-wordcount: '441'
+ht-degree: 74%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 73%
 
 Lorsque le débogage est activé, le SDK envoie des messages à la console du navigateur qui peuvent s’avérer utiles pour déboguer votre implémentation et comprendre le comportement du SDK. Le débogage permet également une validation synchrone du côté serveur des données collectées par rapport au schéma configuré.
 
-Le débogage est désactivé par défaut, mais il est possible de l’activer de trois manières différentes :
+Le débogage est désactivé par défaut, mais peut être activé de trois manières différentes :
 
 * Commande `configure`
 * Commande `setDebug`
@@ -60,7 +60,7 @@ Tout comme la commande `debug`, si vous préférez ne pas modifier le code de vo
 
 ## Priorité et durée
 
-Lorsque le débogage est défini par le biais de la commande`debug` ou du paramètre de chaîne de requête, il remplace toute option `debug` définie dans la commande `configure`. Dans ces deux cas, le débogage reste également activé pendant la durée de la session. En d’autres termes, si vous activez le débogage à l’aide de la commande debug ou du paramètre de chaîne de requête, il reste activé jusqu’à :
+Lorsque le débogage est défini par le biais de la commande`debug` ou du paramètre de chaîne de requête, il remplace toute option `debug` définie dans la commande `configure`. Dans ces deux cas, le débogage reste activé pendant la durée de la session. En d’autres termes, si vous activez le débogage à l’aide de la commande debug ou du paramètre de chaîne de requête, il reste activé jusqu’à :
 
 * la fin de votre session ;
 * l’exécution de la commande `debug` ;
@@ -78,4 +78,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 Actuellement, l’objet `libraryInfo` fourni contient les propriétés suivantes :
 
-* `version` Il s’agit de la version de la bibliothèque chargée. Par exemple, si la version de la bibliothèque chargée est 1.0.0, la valeur est `1.0.0`. Lorsque la bibliothèque est exécutée dans l’extension Adobe Experience Platform Launch (appelée &quot;AEP Web SDK&quot;), la version correspond à la version de la bibliothèque et la version de l’extension de Platform launch associée à un signe &quot;+&quot;. Par exemple, si la version de la bibliothèque était 1.0.0 et la version de l’extension de Platform launch 1.2.0, la valeur serait `1.0.0+1.2.0`.
+* `version` Il s’agit de la version de la bibliothèque chargée. Par exemple, si la version de la bibliothèque chargée est 1.0.0, la valeur est `1.0.0`. Lorsque la bibliothèque est exécutée dans l’extension de balise (appelée &quot;SDK Web AEP&quot;), la version est la version de la bibliothèque et la version de l’extension de balise associée à un signe &quot;+&quot;. Par exemple, si la version de la bibliothèque est 1.0.0 et la version de l’extension de balise est 1.2.0, la valeur est `1.0.0+1.2.0`.
