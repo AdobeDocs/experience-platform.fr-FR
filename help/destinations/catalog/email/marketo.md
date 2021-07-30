@@ -3,10 +3,10 @@ keywords: Marketo;marketo;extension Marketo;extension marketo
 title: Extension Marketo
 description: L’extension Marketo est une destination d’e-mail dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
 source-wordcount: '471'
-ht-degree: 21%
+ht-degree: 19%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 21%
 
 [!DNL Marketo]Grâce à son puissant logiciel d’automatisation du marketing, les marketeurs peuvent maîtriser l’art et la science du marketing numérique pour attirer les clients et les prospects.
 
-[!DNL Marketo] est une extension de messagerie dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la [page de l’extension dans Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
+[!DNL Marketo] est une extension de messagerie dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la [page de l’extension dans Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balise dans Platform, consultez la [présentation des extensions de balise](../launch-extensions/overview.md).
 
@@ -38,7 +38,7 @@ Pour installer l’extension [!DNL Marketo] :
 4. Sélectionnez la propriété dans laquelle vous souhaitez installer l’extension. Vous avez également la possibilité de créer une propriété. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Découvrez les propriétés dans la [section de la page Propriétés](../../../tags/ui/administration/companies-and-properties.md#properties-page) de la documentation sur les balises.
 5. Le workflow vous guide tout au long des étapes nécessaires pour terminer l’installation.
 
-Pour plus d’informations sur les options de configuration d’extension et la prise en charge de l’installation, consultez la [page Marketo sur Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
+Pour plus d’informations sur les options de configuration d’extension et la prise en charge de l’installation, consultez la [page Marketo sur Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html).
 
 Vous pouvez également installer l’extension directement dans l’ [interface utilisateur de collecte de données](https://experience.adobe.com/#/data-collection/). Pour plus d’informations, reportez-vous à la section sur l’[ajout d’une nouvelle extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) dans la documentation sur les balises.
 
