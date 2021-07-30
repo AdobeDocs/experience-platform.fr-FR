@@ -3,10 +3,10 @@ keywords: Personnalisation web Marketo;personnalisation web du marketing;extensi
 title: Extension Marketo Web Personalization
 description: L’extension Marketo Web Personalization est une destination de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 29%
+source-wordcount: '516'
+ht-degree: 22%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 29%
 
 Cette extension déploie le script pour les applications [!DNL Marketo’s] Web Personalization et ContentAI. [!DNL Marketo] Web Personalization identifie et personnalise de manière unique le contenu des caractéristiques des visiteurs web comme les données démographiques des entreprises de visiteurs anonymes et un tableau large des attributs comportementaux au sein de Engagement Platform pour les visiteurs connus. [!DNL Marketo] [!DNL Marketo] ContentAI contient des fonctionnalités de recommandation et de personnalisation optimisées par l’intelligence artificielle pour des campagnes web et par e-mail uniques pour les clients B2B.
 
-[!DNL Marketo Web Personalization] est une extension de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html).
+[!DNL Marketo Web Personalization] est une extension de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur la personnalisation web et ContentAI dans Marketo, consultez [Présentation de la personnalisation web](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=en).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balise dans Platform, consultez la [présentation des extensions de balise](../launch-extensions/overview.md).
 
@@ -41,8 +41,6 @@ Cliquez sur la destination pour la mettre en surbrillance, puis sélectionnez **
 Sélectionnez la propriété dans laquelle vous souhaitez installer l’extension. Vous avez également la possibilité de créer une propriété. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Découvrez les propriétés dans la [section de la page Propriétés](../../../tags/ui/administration/companies-and-properties.md#properties-page) de la documentation sur les balises.
 
 Le workflow vous guide tout au long des étapes nécessaires pour terminer l’installation.
-
-Pour plus d’informations sur les options de configuration de l’extension et sur l’aide à l’installation, consultez la [page consacrée à Marketo Web Personalization dans Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html).
 
 Vous pouvez également installer l’extension directement dans l’ [interface utilisateur de collecte de données](https://experience.adobe.com/#/data-collection/). Pour plus d’informations, reportez-vous à la section sur l’[ajout d’une nouvelle extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) dans la documentation sur les balises.
 
