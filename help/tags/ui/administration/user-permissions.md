@@ -1,7 +1,7 @@
 ---
 title: Autorisations utilisateur
 description: Découvrez les différentes autorisations de balises disponibles pour les utilisateurs de Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e93cb075dc8c8d01fcda3edf0014f86a47b5b710
 workflow-type: tm+mt
 source-wordcount: '2397'
 ht-degree: 74%
@@ -75,7 +75,6 @@ Les autorisations disponibles dans ce groupe sont les suivantes :
 Les droits d’entreprise s’appliquent aux autorisations qui s’appliquent à plusieurs propriétés. Il en existe actuellement trois :
 
 * **Gérer les propriétés :** permet de créer de nouvelles propriétés dans l’interface utilisateur de la collecte de données et de modifier les métadonnées et les paramètres au niveau de la propriété. Vous pouvez également supprimer des propriétés. Pour plus d’informations, consultez la [documentation sur les propriétés](companies-and-properties.md) . Les administrateurs assument généralement ce rôle.
-* 
 * Permet de créer des propriétés et de modifier les métadonnées et les paramètres au niveau de la propriété. Vous pouvez également supprimer des propriétés. En savoir plus sur les propriétés [ici](companies-and-properties.md). Les administrateurs assument généralement ce rôle.
 * **Develop Extensions** (Développer des extensions) : permet de créer et de modifier des modules d’extensions dont l’entreprise dispose, y compris les versions privées et les demandes de version publique.
 * **Gérer les configurations d’application :** cette option n’est disponible que pour les clients qui disposent d’une licence Adobe Journey Optimizer ou pour toute autre solution qui leur donne accès aux messages in-app et aux notifications push.  Vous pouvez ainsi gérer les applications dont l’Experience Cloud connaît les informations ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service de notification push Apple.
