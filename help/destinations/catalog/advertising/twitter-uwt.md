@@ -3,10 +3,10 @@ keywords: twitter;Twitter;balise de site web universelle twitter;balise de site 
 title: Extension Twitter Universal Website Tag
 description: L’extension Twitter Universal Website Tag est une destination publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 18%
+source-wordcount: '462'
+ht-degree: 14%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 18%
 
 [!DNL Twitter Universal Website Tag] fournit des actions pour envoyer des balises à Twitter UWT Tag.
 
-[!DNL Twitter Universal Website Tag] est une extension publicitaire dans Adobe Experience Platform. Pour plus d’informations sur la fonctionnalité de l’extension, voir [Advanced Conversion Tracking](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html).
+[!DNL Twitter Universal Website Tag] est une extension publicitaire dans Adobe Experience Platform. Pour plus d’informations sur la fonctionnalité de l’extension, voir [Suivi des conversions](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) dans la documentation de Twitter.
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balise dans Platform, consultez la [présentation des extensions de balise](../launch-extensions/overview.md).
 
