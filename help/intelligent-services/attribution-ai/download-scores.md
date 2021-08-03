@@ -1,31 +1,30 @@
 ---
-keywords: Experience Platform ; attribution ai ; notes d’accès ; rubriques populaires ; téléchargements ; scores d’attribution ai ; exportation ; Exporter
+keywords: Experience Platform;attribution ai;scores d’accès;rubriques populaires;télécharger des scores;scores d’attribution ai;exporter;exporter
 solution: Experience Platform, Intelligent Services
-title: Téléchargement de scores dans Attribution AI
+title: Scores de téléchargement dans Attribution AI
 topic-legacy: Downloading scores
-description: Ce document sert de guide pour le téléchargement de scores pour Attribution AI.
+description: Ce document sert de guide pour télécharger des scores pour Attribution AI.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7219c44e1d8812506ee97367f27076b55a40203b
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 68%
+source-wordcount: '1053'
+ht-degree: 69%
 
 ---
 
 # Téléchargement de scores dans Attribution AI
 
-Ce document sert de guide pour le téléchargement de scores pour Attribution AI.
+Ce document sert de guide pour télécharger des scores pour Attribution AI.
 
 ## Prise en main
 
-Attribution AI vous permet de télécharger des partitions au format Parquet. Ce didacticiel nécessite que vous ayez lu et terminé le téléchargement de la section scores Attribution AI du guide [Prise en main](./getting-started.md).
+Attribution AI vous permet de télécharger des scores au format de fichier Parquet. Pour suivre ce tutoriel, vous devez avoir lu et terminé la section consacrée au téléchargement des scores Attribution AI dans le guide [Prise en main](./getting-started.md) .
 
-De plus, pour accéder aux scores d’Attribution AI, vous devez disposer d’une instance de service avec un état d’exécution réussi. Pour créer une instance de service, consultez le [guide de l’utilisateur Attribution AI](./user-guide.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
+De plus, pour accéder aux scores pour Attribution AI, vous devez disposer d’une instance de service avec un état d’exécution réussi disponible. Pour créer une instance de service, consultez le [guide de l’utilisateur Attribution AI](./user-guide.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
 
 ## Chercher l’identifiant de votre jeu de données {#dataset-id}
 
-Dans votre instance de service pour obtenir des informations sur les Attributions AI, cliquez sur la liste déroulante *Autres actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL scores d’accès]**.
+Dans votre instance de service pour les insights Attribution AI, cliquez sur la liste déroulante *Autres actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL Accéder aux scores]**.
 
 ![actions supplémentaires](./images/download-scores/more-actions.png)
 
@@ -35,7 +34,7 @@ Une boîte de dialogue s’affiche. Elle contient un lien vers la documentation 
 
 ## Récupération de votre identifiant de lot {#retrieve-your-batch-id}
 
-En utilisant l’identifiant du jeu de données de l’étape précédente, vous devez appeler l’API Catalog pour récupérer un identifiant de lot. D&#39;autres paramètres de requête sont utilisés pour cet appel d&#39;API afin de renvoyer le dernier lot réussi au lieu d&#39;une liste de lots appartenant à votre organisation. Pour renvoyer des lots supplémentaires, augmentez le nombre du paramètre de requête `limit` à la quantité souhaitée à renvoyer. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../catalog/api/filter-data.md).
+En utilisant l’identifiant du jeu de données de l’étape précédente, vous devez appeler l’API Catalog pour récupérer un identifiant de lot. Des paramètres de requête supplémentaires sont utilisés pour cet appel API afin de renvoyer le dernier lot réussi au lieu d’une liste de lots appartenant à votre organisation. Pour renvoyer des lots supplémentaires, augmentez le nombre du paramètre de requête `limit` au montant souhaité que vous souhaitez voir renvoyé. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../catalog/api/filter-data.md).
 
 **Format d’API**
 
@@ -59,11 +58,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant un objet d’identifiant de lot de Dans cet exemple, la valeur Key de l&#39;objet renvoyé est l&#39;identifiant de lot `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
+Une réponse réussie renvoie un payload contenant un objet d’identifiant de lot de Dans cet exemple, la valeur de clé de l’objet renvoyé est l’identifiant de lot `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
 
 >[!NOTE]
 >
-> L&#39;objet `tags` a été reformé dans la réponse suivante afin d&#39;être lisible.
+> L’objet `tags` de la réponse suivante a été modifié pour être lisible.
 
 ```json
 {
@@ -166,7 +165,7 @@ Une réponse réussie renvoie un payload contenant un objet `_links`. L’objet 
 }
 ```
 
-## Récupération de vos fichiers  {#retrieving-your-files}
+## Récupération de vos fichiers {#retrieving-your-files}
 
 À l’aide de la valeur `href` obtenue à l’étape précédente comme appel API, effectuez une nouvelle requête GET pour récupérer votre répertoire de fichiers.
 
@@ -261,19 +260,19 @@ La réponse télécharge le fichier que vous avez demandé dans votre répertoir
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-Les partitions téléchargées seront au format Parquet et auront besoin soit d&#39;un [!DNL Spark]-shell, soit d&#39;un lecteur de parquet pour les vues. Pour l’affichage des scores bruts, vous pouvez utiliser [les outils Parquet Apache](https://github.com/apache/parquet-mr/tree/master/parquet-tools). Les outils de parquets peuvent analyser les données avec [!DNL Spark].
+Les scores téléchargés seront au format Parquet et auront besoin d’un lecteur [!DNL Spark]-shell ou Parquet pour afficher les scores. Pour l’affichage des scores bruts, vous pouvez utiliser les [outils Apache Parquet](https://parquet.apache.org/documentation/latest/). Les outils parquet peuvent analyser les données avec [!DNL Spark].
 
 ## Étapes suivantes
 
-Ce document décrit les étapes requises pour télécharger les scores Attribution AI. Pour plus d&#39;informations sur les résultats de la note, veuillez consulter la [documentation sur les entrées et sorties de l&#39;API d&#39;attributs](./input-output.md).
+Ce document décrit les étapes requises pour télécharger des scores Attribution AI. Pour plus d’informations sur les résultats du score, consultez la [documentation sur l’entrée et la sortie de l’Attribution AI](./input-output.md) .
 
-## Accès aux scores à l’aide du Snowflake
+## Accès aux scores à l’aide de Snowflake
 
 >[!IMPORTANT]
 >
->Veuillez contacter attributionai-support@adobe.com pour plus de détails sur l&#39;accès aux scores en utilisant le Snowflake.
+>Pour plus d’informations sur l’accès aux scores à l’aide de Snowflake, contactez attributionai-support@adobe.com .
 
-Vous pouvez accéder aux scores d’Attribution AI agrégés par Snowflake. Pour l’instant, vous devez envoyer un e-mail à l’assistance d’Adobe à l’adresse attributionai-support@adobe.com afin de configurer et de recevoir les informations d’identification de votre compte de lecteur pour Snowflake.
+Vous pouvez accéder aux scores Attribution AI agrégés via Snowflake. Pour l’instant, vous devez envoyer un e-mail à l’assistance d’Adobe à l’adresse attributionai-support@adobe.com afin de configurer et de recevoir les informations d’identification de votre compte de lecteur pour Snowflake.
 
 Une fois votre demande traitée par l’assistance d’Adobe, vous recevez l’URL du compte de lecteur pour Snowflake et les informations d’identification correspondantes :
 
@@ -285,7 +284,7 @@ Une fois votre demande traitée par l’assistance d’Adobe, vous recevez l’U
 >
 >Le compte de lecteur sert à interroger les données à l’aide de clients SQL, de feuilles de calcul et de solutions BI compatibles avec le connecteur JDBC.
 
-Une fois que vous disposez de vos informations d’identification et de votre URL, vous pouvez requête les tables de modèles, regroupées par date de point de contact ou date de conversion.
+Une fois que vous disposez de vos informations d’identification et de l’URL, vous pouvez interroger les tableaux de modèle, les agréger par date de point de contact ou par date de conversion.
 
 ### Recherche de schéma dans Snowflake
 
