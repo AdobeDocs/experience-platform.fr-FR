@@ -2,10 +2,10 @@
 title: Types d’éléments de données dans l’extension SDK Web Adobe Experience Platform
 description: Découvrez les différents types d’éléments de données fournis par l’extension de balise du SDK Web de Adobe Experience Platform.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 49%
+source-wordcount: '292'
+ht-degree: 43%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 49%
 Après avoir défini vos [types d’actions](action-types.md) dans l’ [extension de balise SDK Web Adobe Experience Platform](web-sdk-extension-configuration.md), configurez vos types d’éléments de données.
 
 Cette page décrit les types d’éléments de données disponibles.
+
 
 ## Identifiant de fusion d’événement
 
@@ -31,7 +32,7 @@ Utilisez le format XDM pour envoyer des données au SDK Web de Adobe Experience 
 
 ![](./assets/XDM-object.png)
 
-Veuillez noter que lorsque vous ouvrez certains champs de votre schéma, par exemple `web.webPageDetails.URL`, certains éléments sont automatiquement collectés. Même si plusieurs éléments sont collectés automatiquement, vous pouvez en remplacer certains, si nécessaire. Toutes les valeurs peuvent être renseignées manuellement ou en utilisant d’autres éléments de données.
+Notez que lorsque vous ouvrez certains champs de votre schéma, tels que `web.webPageDetails.URL`, certains éléments sont automatiquement collectés. Même si plusieurs éléments sont collectés automatiquement, vous pouvez en remplacer certains, si nécessaire. Toutes les valeurs peuvent être renseignées manuellement ou en utilisant d’autres éléments de données.
 
 >[!NOTE]
 >
