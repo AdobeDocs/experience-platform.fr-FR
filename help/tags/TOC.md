@@ -4,9 +4,9 @@ user-guide-title: Aide sur les balises
 breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Collecte de données
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: bddad4476d6943c7549028e93c84c8ca29059dc0
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '385'
 ht-degree: 86%
 
 ---
@@ -88,6 +88,9 @@ ht-degree: 86%
       *  des statistiques sur les ressources Adobe Experience Manager{#asset-insights}
          * [Présentation](./extensions/web/asset-insights/overview.md)
          * [Notes de mise à jour](./extensions/web/asset-insights/release-notes.md)
+      * Adobe Experience Manager Forms {#forms}
+         * [Présentation](./extensions/web/forms/overview.md)
+         * [Notes de mise à jour](./extensions/web/forms/release-notes.md)
       *  Adobe Media Analytics for Audio and Video {#media-analytics}
          * [Présentation](./extensions/web/media-analytics/overview.md)
          * [Notes de mise à jour](./extensions/web/media-analytics/release-notes.md)
