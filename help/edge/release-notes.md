@@ -3,14 +3,18 @@ title: Notes de mise à jour du SDK web Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK Web Adobe Experience Platform.
 keywords: SDK Web Adobe Experience Platform;SDK Web Platform;SDK Web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
+source-git-commit: 165c9bce5dabce9704202ebab6b97a4a30e4ca00
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 4%
+source-wordcount: '714'
+ht-degree: 3%
 
 ---
 
 # Notes de mise à jour
+
+## Version 2.6.2 - 4 août 2021
+
+* Correction d’un problème en raison duquel un avertissement d’obsolescence de `result.decisions` (fourni par la commande `sendEvent`) était consigné dans la console même lorsque la propriété `result.decisions` n’était pas accessible. Aucun avertissement ne sera consigné lors de l’accès à la propriété `result.decisions`, mais la propriété est toujours obsolète.
 
 ## Version 2.6.1 - 29 juillet 2021
 
