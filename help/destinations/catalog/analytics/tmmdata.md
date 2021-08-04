@@ -3,10 +3,10 @@ keywords: TMMData;données tmm;tmdata;données TMM
 title: Extension TMMData
 description: L’extension TMMData est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 9f4ad50e-d964-41b0-b58e-71611bff3ead
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b90428845412613d59f3c5091ad7c1398ead9f6a
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 19%
+source-wordcount: '500'
+ht-degree: 20%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 19%
 
 [!DNL TMMData's] La plateforme Foundation pour Adobe Marketing Cloud fournit aux équipes marketing les outils nécessaires pour accéder à toutes leurs sources de données essentielles, y compris les données internes/externes et en ligne/hors ligne, et les fusionner, afin d’offrir aux équipes marketing une analyse cross-canal fiable et complète, avec une configuration de campagne automatisée et des importations directes vers Adobe et d’autres outils d’analyse et de BI.
 
-[!DNL TMMData] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
+[!DNL TMMData] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balise dans Platform, consultez la [présentation des extensions de balise](../launch-extensions/overview.md).
 
