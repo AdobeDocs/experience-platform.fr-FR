@@ -3,7 +3,7 @@ keywords: Advertising Cloud, extension Advertising Cloud ; destination de cloud 
 title: Extension Adobe Advertising Cloud
 description: L’extension Adobe Advertising Cloud est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 17%
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans Platform. Le
 
 Pour installer l’extension Adobe Advertising Cloud :
 
-Dans l’ [interface de Platform](http://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+Dans l’ [interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
