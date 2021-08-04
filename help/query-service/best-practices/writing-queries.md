@@ -1,32 +1,31 @@
 ---
-keywords: Experience Platform ; accueil ; sujets populaires ; service de requête ; service de Requête ; requêtes d'écriture ; requête d'écriture ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;service de requête;service de requête;écriture de requêtes;écriture de requêtes;
 solution: Experience Platform
-title: Directives générales pour l'exécution des Requêtes dans le service Requête
+title: Directives générales pour l’exécution de requête dans Query Service
 topic-legacy: queries
 type: Tutorial
 description: Ce document détaille les informations importantes à connaître pour la rédaction de requêtes dans Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c720b9e6f81ed4ad8bd3360a9b1a19bfcd21a0ef
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 52%
 
 ---
 
-# Directives générales pour l&#39;exécution des requêtes dans [!DNL Query Service]
+# Directives générales pour l’exécution des requêtes dans [!DNL Query Service]
 
 Ce document détaille les informations importantes à connaître pour la rédaction de requêtes dans Adobe Experience Platform [!DNL Query Service].
 
-Pour plus d&#39;informations sur la syntaxe SQL utilisée dans [!DNL Query Service], consultez la [documentation de la syntaxe SQL](../sql/syntax.md).
+Pour plus d’informations sur la syntaxe SQL utilisée dans [!DNL Query Service], consultez la [documentation sur la syntaxe SQL](../sql/syntax.md).
 
 ## Modèles d’exécution de requêtes
 
-Adobe Experience Platform [!DNL Query Service] a deux modèles d&#39;exécution de requête : interactif et non interactif. L’exécution interactive est utilisée pour le développement de requêtes et la génération de rapports dans les outils de Business Intelligence, tandis que l’exécution non interactive est utilisée pour les tâches plus importantes et les requêtes opérationnelles dans le cadre d’un workflow de traitement des données.
+Adobe Experience Platform [!DNL Query Service] comporte deux modèles d’exécution de requête : interactive et non interactive. L’exécution interactive est utilisée pour le développement de requêtes et la génération de rapports dans les outils de Business Intelligence, tandis que l’exécution non interactive est utilisée pour les tâches plus importantes et les requêtes opérationnelles dans le cadre d’un workflow de traitement des données.
 
 ### Exécution de requête interactive
 
-Les requêtes peuvent être exécutées de manière interactive en les envoyant via l&#39;interface utilisateur [!DNL Query Service] ou [via un client connecté](../clients/overview.md). Lors de l&#39;exécution de [!DNL Query Service] sur un client connecté, une session principale s&#39;exécute entre le client et [!DNL Query Service] jusqu&#39;à ce que la requête envoyée soit renvoyée ou expire.
+Les requêtes peuvent être exécutées de manière interactive en les envoyant via l’interface utilisateur [!DNL Query Service] ou [via un client connecté](../clients/overview.md). Lors de l’exécution de [!DNL Query Service] sur un client connecté, une session principale s’exécute entre le client et [!DNL Query Service] jusqu’à ce que la requête envoyée soit renvoyée ou expire.
 
 L’exécution de requête interactive présente les limites suivantes :
 
@@ -40,11 +39,11 @@ L’exécution de requête interactive présente les limites suivantes :
 >
 >Pour contourner la limite de lignes maximale, incluez `LIMIT 0` dans votre requête. Le délai d’expiration de 10 minutes s’applique toujours.
 
-Par défaut, les résultats des requêtes interactives sont renvoyés au client et **ne sont pas** conservés. Pour conserver les résultats sous la forme d&#39;un jeu de données dans [!DNL Experience Platform], la requête doit utiliser la syntaxe `CREATE TABLE AS SELECT`.
+Par défaut, les résultats des requêtes interactives sont renvoyés au client et **ne sont pas** conservés. Pour conserver les résultats sous la forme d’un jeu de données dans [!DNL Experience Platform], la requête doit utiliser la syntaxe `CREATE TABLE AS SELECT`.
 
 ### Exécution de requête non interactive
 
-Les requêtes envoyées via l&#39;API [!DNL Query Service] sont exécutées de manière non interactive. L’exécution non interactive signifie que [!DNL Query Service] reçoit l’appel d’API et exécute la requête dans l’ordre dans lequel elle est reçue. Les requêtes non interactives entraînent toujours la génération d&#39;un nouveau jeu de données dans [!DNL Experience Platform] pour recevoir les résultats ou l&#39;insertion de nouvelles lignes dans un jeu de données existant.
+Les requêtes envoyées via l’API [!DNL Query Service] sont exécutées de manière non interactive. L’exécution non interactive signifie que [!DNL Query Service] reçoit l’appel API et exécute la requête dans l’ordre de réception. Les requêtes non interactives entraînent toujours la génération d’un nouveau jeu de données dans [!DNL Experience Platform] pour recevoir les résultats ou l’insertion de nouvelles lignes dans un jeu de données existant.
 
 ## Accès à un champ spécifique dans un objet
 
@@ -109,9 +108,9 @@ LIMIT 1
 (1 row)
 ```
 
-## Devis
+## Guillemets
 
-Les guillemets simples, les guillemets de doublon et les guillemets arrière ont des usages différents dans les requêtes de Requête Service.
+Les guillemets simples, les guillemets doubles et les accents graves ont des utilisations différentes dans les requêtes Query Service.
 
 ### Guillemets simples
 
@@ -189,13 +188,13 @@ Les accents graves **ne sont pas** nécessaires si vous utilisez la notation par
  LIMIT 10
 ```
 
-## Affichage des informations d’un tableau
+## Affichage des informations relatives aux tableaux
 
-Après vous être connecté à Requête Service, vous pouvez afficher toutes les tables disponibles sur la plate-forme à l&#39;aide des commandes `\d` ou `SHOW TABLES`.
+Après la connexion à Query Service, vous pouvez voir toutes vos tables disponibles sur Platform à l’aide des commandes `\d` ou `SHOW TABLES`.
 
-### Vue de tableau standard
+### Affichage de tableau standard
 
-La commande `\d` affiche la vue PostgreSQL standard pour répertorier les tables. Vous trouverez ci-dessous un exemple de la sortie de cette commande :
+La commande `\d` affiche la vue PostgreSQL standard pour répertorier les tables. Vous trouverez ci-dessous un exemple de sortie de cette commande :
 
 ```sql
              List of relations
@@ -206,9 +205,9 @@ La commande `\d` affiche la vue PostgreSQL standard pour répertorier les tables
 (2 rows)
 ```
 
-### Vue détaillée du tableau
+### Affichage détaillé du tableau
 
-`SHOW TABLES` est une commande personnalisée qui fournit des informations plus détaillées sur les tables. Vous trouverez ci-dessous un exemple de la sortie de cette commande :
+`SHOW TABLES` est une commande personnalisée qui fournit des informations plus détaillées sur les tables. Vous trouverez ci-dessous un exemple de sortie de cette commande :
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -218,11 +217,11 @@ La commande `\d` affiche la vue PostgreSQL standard pour répertorier les tables
 (2 rows)
 ```
 
-### Informations sur le schéma
+### Informations du schéma
 
-Pour vue des informations plus détaillées sur les schémas du tableau, vous pouvez utiliser la commande `\d {TABLE_NAME}`, où `{TABLE_NAME}` est le nom de la table dont vous voulez vue les informations de schéma.
+Pour afficher des informations plus détaillées sur les schémas du tableau, vous pouvez utiliser la commande `\d {TABLE_NAME}`, où `{TABLE_NAME}` est le nom de la table dont vous souhaitez afficher les informations sur le schéma.
 
-L&#39;exemple suivant montre les informations de schéma de la table `luma_midvalues`, qui s&#39;afficheraient à l&#39;aide de `\d luma_midvalues` :
+L’exemple suivant montre les informations de schéma pour la table `luma_midvalues`, qui s’afficheraient à l’aide de `\d luma_midvalues` :
 
 ```sql
                          Table "public.luma_midvalues"
@@ -245,9 +244,9 @@ L&#39;exemple suivant montre les informations de schéma de la table `luma_midva
  search            | search                      |           |          | 
 ```
 
-De plus, vous pouvez obtenir des informations supplémentaires sur une colonne particulière en ajoutant le nom de la colonne au nom de la table. Il serait écrit au format `\d {TABLE_NAME}_{COLUMN}`.
+De plus, vous pouvez obtenir des informations supplémentaires sur une colonne spécifique en ajoutant le nom de la colonne au nom de la table. Cela serait écrit au format `\d {TABLE_NAME}_{COLUMN}`.
 
-L&#39;exemple suivant présente des informations supplémentaires pour la colonne `web` et sera appelé à l&#39;aide de la commande suivante : `\d luma_midvalues_web` :
+L’exemple suivant affiche des informations supplémentaires sur la colonne `web` et est appelé à l’aide de la commande suivante : `\d luma_midvalues_web` :
 
 ```sql
                  Composite type "public.luma_midvalues_web"
@@ -259,9 +258,9 @@ L&#39;exemple suivant présente des informations supplémentaires pour la colonn
 
 ## Association de jeux de données
 
-Vous pouvez associer plusieurs jeux de données afin d’inclure des données provenant d’autres jeux de données dans votre requête.
+Vous pouvez joindre plusieurs jeux de données pour inclure des données d’autres jeux de données dans votre requête.
 
-L&#39;exemple suivant joint les deux jeux de données suivants (`your_analytics_table` et `custom_operating_system_lookup`) et crée une instruction `SELECT` pour les 50 premiers systèmes d&#39;exploitation par nombre de vues de page.
+L’exemple suivant rejoint les deux jeux de données suivants (`your_analytics_table` et `custom_operating_system_lookup`) et crée une instruction `SELECT` pour les 50 premiers systèmes d’exploitation en fonction du nombre de pages vues.
 
 **Requête**
 
@@ -272,7 +271,7 @@ SELECT
 FROM your_analytics_table a 
      JOIN custom_operating_system_lookup b 
       ON a._experience.analytics.environment.operatingsystemID = b.operatingsystemid 
-WHERE TIMESTAMP >= ('2018-01-01') AND TIMESTAMP <= ('2018-12-31')
+WHERE TIMESTAMP >= TO_TIMESTAMP('2018-01-01') AND TIMESTAMP <= TO_TIMESTAMP('2018-12-31')
 GROUP BY OperatingSystem 
 ORDER BY PageViews DESC
 LIMIT 50;
@@ -280,31 +279,31 @@ LIMIT 50;
 
 **Résultats**
 
-| OperatingSystem | Pages vues |
+| OperatingSystem | PageViews |
 | --------------- | --------- |
-| Windows 7 | 2781979,0 |
-| Windows XP | 1669824,0 |
-| Windows 8 | 420024,0 |
-| Adobe AIR | 315032,0 |
-| Windows Vista | 173566,0 |
-| Mobile iOS 6.1.3 | 11 9069,0 |
-| Linux | 56516,0 |
-| OSX 10.6.8 | 53 652,0 |
-| Android 4.0.4 | 46 167,0 |
-| Android 4.0.3 | 3 1852,0 |
-| Windows Server 2003 et XP Édition x64 | 2 8883,0 |
-| Android 4.1.1 | 24 336,0 |
-| Android 2.3.6 | 1 5735,0 |
-| OSX 10.6 | 13 357,0 |
-| Windows Phone 7.5 | 11054,0 |
-| Android 4.3 | 9221,0 |
+| Windows 7 | 2781979.0 |
+| Windows XP | 1669824.0 |
+| Windows 8 | 420024.0 |
+| Adobe AIR | 315032.0 |
+| Windows Vista | 173566.0 |
+| Mobile iOS 6.1.3 | 119069.0 |
+| Linux | 56516.0 |
+| OSX 10.6.8 | 53652.0 |
+| Android 4.0.4 | 46167.0 |
+| Android 4.0.3 | 31852.0 |
+| Windows Server 2003 et XP Edition x64 | 28883.0 |
+| Android 4.1.1 | 24336.0 |
+| Android 2.3.6 | 15735.0 |
+| OSX 10.6 | 13357.0 |
+| Windows Phone 7.5 | 11054.0 |
+| Android 4.3 | 9221.0 |
 
 ## Déduplication
 
-Requête Service prend en charge la déduplication de données ou la suppression de lignes de duplicata des données. Pour plus d&#39;informations sur la déduplication, consultez le [Guide de déduplication du service de Requête](./deduplication.md).
+Query Service prend en charge le dédoublonnage des données ou la suppression des doublons de lignes des données. Pour plus d’informations sur la déduplication, consultez le [guide de déduplication de Query Service](./deduplication.md).
 
 ## Étapes suivantes
 
 La lecture de ce document vous a permis de vous initier à certaines considérations importantes lors de la rédaction d’une requête avec [!DNL Query Service]. Pour plus d’informations sur l’utilisation de la syntaxe SQL pour la rédaction de vos propres requêtes, veuillez lire la [documentation sur la syntaxe SQL](../sql/syntax.md).
 
-Pour plus d&#39;exemples de requêtes pouvant être utilisées dans Requête Service, consultez les guides sur les [requêtes d&#39;exemple Adobe Analytics](./adobe-analytics.md), [requêtes d&#39;exemple Adobe Target](./adobe-target.md) ou [requêtes d&#39;exemple ExperienceEvent](./experience-event-queries.md).
+Pour plus d’exemples de requêtes pouvant être utilisées dans Query Service, consultez les guides sur les [exemples de requêtes Adobe Analytics](./adobe-analytics.md), [exemples de requêtes Adobe Target](./adobe-target.md) ou [exemples de requêtes ExperienceEvent](./experience-event-queries.md).
