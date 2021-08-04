@@ -3,9 +3,9 @@ title: Notes de mise à jour du SDK web Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK Web Adobe Experience Platform.
 keywords: SDK Web Adobe Experience Platform;SDK Web Platform;SDK Web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 165c9bce5dabce9704202ebab6b97a4a30e4ca00
+source-git-commit: f3821176b0cbc4ad07fbd2e0e20caa1205324a44
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '717'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 ## Version 2.6.0 - 27 juillet 2021
 
-* Fournit davantage de contenu de personnalisation dans la promesse résolue `sendEvent`, y compris les jetons de réponse Adobe Target. Lorsque la commande `sendEvent` est exécutée, une promesse est renvoyée, qui est finalement résolue avec un objet `result` contenant les informations reçues du serveur. Cet objet result comprend une propriété nommée `decisions`. Cette propriété `decisions` est obsolète. Une nouvelle propriété, `propositions`, a été ajoutée. Cette nouvelle propriété permet aux clients d’accéder à davantage de contenu de personnalisation, y compris des jetons de réponse. D’autres documents seront bientôt disponibles.
+* Fournit davantage de contenu de personnalisation dans la promesse résolue `sendEvent`, y compris les jetons de réponse Adobe Target. Lorsque la commande `sendEvent` est exécutée, une promesse est renvoyée, qui est finalement résolue avec un objet `result` contenant les informations reçues du serveur. Auparavant, cet objet de résultat incluait une propriété nommée `decisions`. Cette propriété `decisions` est obsolète. Une nouvelle propriété, `propositions`, a été ajoutée. Cette nouvelle propriété permet aux clients d’accéder à davantage de contenu de personnalisation, y compris aux [jetons de réponse](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html).
 
 ## Version 2.5.0 - Juin 2021
 
