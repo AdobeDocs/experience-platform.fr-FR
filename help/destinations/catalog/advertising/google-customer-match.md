@@ -3,9 +3,9 @@ keywords: correspondance client Google;correspondance client Google;correspondan
 title: Connexion à la correspondance client Google
 description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
+source-git-commit: 8a521b2b846c953b74b8e48fb76b94966a652318
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1568'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 ![Destination de correspondance client Google dans l’interface utilisateur de Adobe Experience Platform](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
-## Cas d’utilisation
+## Cas d&#39;utilisation
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination [!DNL Google Customer Match], voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette fonctionnalité.
 
@@ -108,7 +108,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ## Configuration de la destination : présentation vidéo {#video}
 
-La vidéo ci-dessous présente les étapes de configuration d’une destination [!DNL Google Customer Match] et d’activation de segments. Les étapes sont également présentées de manière séquentielle dans les sections suivantes.
+La vidéo ci-dessous présente les étapes de configuration d’une destination sociale et d’activation de segments. La vidéo utilise LinkedIn comme exemple, mais les étapes sont similaires sur toutes les destinations sociales, y compris [!DNL Google Customer Match]. Les étapes de la vidéo sont également présentées de manière séquentielle dans les sections suivantes.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
