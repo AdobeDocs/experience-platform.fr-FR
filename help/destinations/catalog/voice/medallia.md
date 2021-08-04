@@ -3,7 +3,7 @@ keywords: Medallia;medallia
 title: Extension Medallia
 description: L’extension Medallia est une destination de voix du client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: c28cf31a-890c-4dcd-b936-5a030dc6e83e
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 20%
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans Adobe Experi
 
 Pour installer l’extension [!DNL Medallia] :
 
-Dans l’ [interface de Platform](http://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+Dans l’ [interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
