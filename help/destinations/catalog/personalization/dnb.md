@@ -3,7 +3,7 @@ keywords: D&B Visitor Intelligence;D&B;extension de l’intelligence des visiteu
 title: Extension D&B Visitor Intelligence
 description: L’extension D&B Visitor Intelligence est une destination de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: e06833d9-51d7-4b0c-a9ce-28e0fadc2b62
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 21%
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans Adobe Experi
 
 Pour installer l’extension D&amp;B Visitor Intelligence :
 
-Dans l’ [interface de Platform](http://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+Dans l’ [interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
