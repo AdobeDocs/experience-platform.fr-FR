@@ -5,10 +5,10 @@ title: Guide de dépannage de Query Service
 topic-legacy: troubleshooting
 description: Ce document contient des informations sur les codes d’erreur courants que vous rencontrez et les causes possibles.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e3557fe75680153f051b8a864ad8f6aca5f743ee
+source-git-commit: 2b118228473a5f07ab7e2c744b799f33a4c44c98
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 40%
+source-wordcount: '525'
+ht-degree: 30%
 
 ---
 
@@ -51,8 +51,8 @@ SELECT a._company AS _company,
 a._id AS _id,
 a.timestamp AS timestamp
 FROM actual_dataset a
-WHERE timestamp >= To_timestamp('2021-01-21 12:00:00')
-AND timestamp < To_timestamp('2021-01-21 13:00:00')
+WHERE timestamp >= TO_TIMESTAMP('2021-01-21 12:00:00')
+AND timestamp < TO_TIMESTAMP('2021-01-21 13:00:00')
 LIMIT 100;
 ```
 
@@ -85,15 +85,20 @@ Vous ne pouvez pas utiliser de caractères génériques pour obtenir toutes les 
 
 ## Erreurs de l’API PostgreSQL
 
-| Code d’erreur et état de la connexion | Description | Cause possible |
-| ------------------------------- | ----------- | -------------- |
-| **28P01** Start-up - authentication | Mot de passe non valide | Jeton d’authentification non valide |
-| **28000** Start-up - authentication | Type d’autorisation non valide | Type d’autorisation non valide. Doit être `AuthenticationCleartextPassword`. |
-| **42P12** Start-up - authentication | Aucune table trouvée | Aucune table n’a été trouvée pour utilisation |
-| **42601** Query | Erreur de syntaxe | Erreur de syntaxe ou de commande non valide |
-| **58000** Query | Erreur système | Échec du système interne |
-| **42P01** Query | Table introuvable | La table spécifiée dans la requête est introuvable |
-| **42P07** Query | La table existe | La table porte déjà le même nom (CREATE TABLE) |
-| **53400** Query | LIMIT dépasse la valeur maximale | L’utilisateur a spécifié une clause LIMIT supérieure à 100 000 |
-| **53400** Requête | Délai d’expiration de la déclaration | La déclaration soumise en direct a duré plus de 10 minutes au maximum |
-| **08P01** N/A | Type de message non pris en charge | Type de message non pris en charge |
+| Code erreur | État de la connexion | Description | Cause possible |
+| ---------- | ---------------- | ----------- | -------------- |
+| **08P01** | N/A | Type de message non pris en charge | Type de message non pris en charge |
+| **28P01** | Démarrage - authentification | Mot de passe non valide | Jeton d’authentification non valide |
+| **28000** | Démarrage - authentification | Type d’autorisation non valide | Type d’autorisation non valide. Doit être `AuthenticationCleartextPassword`. |
+| **42P12** | Démarrage - authentification | Aucune table trouvée | Aucune table n’a été trouvée pour utilisation |
+| **42601** | Requête | Erreur de syntaxe | Erreur de syntaxe ou de commande non valide |
+| **42P01** | Requête | Table introuvable | La table spécifiée dans la requête est introuvable |
+| **42P07** | Requête | La table existe | Il existe déjà une table portant le même nom (CREATE TABLE) |
+| **53400** | Requête | LIMIT dépasse la valeur maximale | L’utilisateur a spécifié une clause LIMIT supérieure à 100 000 |
+| **53400** | Requête | Délai d’expiration de la déclaration | La déclaration soumise en direct a duré plus de 10 minutes au maximum |
+| **58000** | Requête | Erreur système | Échec du système interne |
+| **0A000** | Requête/Commande | Non pris en charge | La fonctionnalité de la requête/commande n’est pas prise en charge |
+| **42501** | Requête DROP TABLE | Table de dépôt non créée par Query Service | La table en cours de suppression n’a pas été créée par Query Service à l’aide de l’instruction `CREATE TABLE` |
+| **42501** | Requête DROP TABLE | Tableau non créé par l’utilisateur authentifié | La table en cours de suppression n’a pas été créée par l’utilisateur actuellement connecté. |
+| **42P01** | Requête DROP TABLE | Table introuvable | La table spécifiée dans la requête est introuvable. |
+| **42P12** | Requête DROP TABLE | Aucune table trouvée pour `dbName` : consultez la section `dbName` | Aucune table n’a été trouvée dans la base de données actuelle |
