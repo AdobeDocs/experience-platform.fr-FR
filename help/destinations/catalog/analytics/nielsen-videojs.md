@@ -3,7 +3,7 @@ keywords: Gestionnaire de lecteur vidéo Nielsen;lecteur vidéo js nielsen;lecte
 title: Extension Nielsen VideoJS Player Handler
 description: L’extension Nielsen VideoJS Player Handler est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: d640bf40-c6af-4aff-8303-933fe71f4a7e
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '566'
 ht-degree: 32%
@@ -36,7 +36,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans Adobe Experi
 
 Pour installer l’extension [!DNL Nielsen VideoJS Player Handler] :
 
-Dans l’ [interface de Platform](http://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+Dans l’ [interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
