@@ -1,14 +1,14 @@
 ---
-title: Référence d’objet satellite Balises
-description: Découvrez lʼobjet _satellite côté client et les différentes fonctions quʼil offre dans Adobe Experience Platform.
-source-git-commit: 309a2f4de25eeb174f6ac50996bd735ccdc2393d
+title: Référence d’objet satellite
+description: Découvrez l’objet _satellite côté client et les différentes fonctions que vous pouvez exécuter avec celui-ci dans les balises .
+source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
 workflow-type: tm+mt
-source-wordcount: '1258'
-ht-degree: 45%
+source-wordcount: '1251'
+ht-degree: 43%
 
 ---
 
-# Balises Adobe Experience Platform Référence d’objet satellite
+# Référence d’objet satellite
 
 >[!NOTE]
 >
