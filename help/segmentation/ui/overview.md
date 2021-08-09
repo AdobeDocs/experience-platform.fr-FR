@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur de Segmentation Service
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
 workflow-type: tm+mt
-source-wordcount: '1561'
-ht-degree: 25%
+source-wordcount: '1577'
+ht-degree: 24%
 
 ---
 
@@ -37,7 +37,7 @@ Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UIC
 >
 >Si votre entreprise est une nouvelle entreprise de Platform et qu’elle ne dispose pas encore de jeux de données de profil principaux ni de stratégies de fusion créés, le tableau de bord [!UICONTROL Segments] n’est pas visible. L’onglet [!UICONTROL Aperçu] contient des liens et de la documentation pour vous aider à commencer à utiliser les segments.
 
-###  Tableau de bord des segments  {#segments-dashboard}
+###  Tableau de bord des segments {#segments-dashboard}
 
 Le tableau de bord **[!UICONTROL Segments]** décrit les mesures clés liées aux données de segment de votre entreprise.
 
@@ -82,6 +82,10 @@ La barre latérale droite contient des informations sur tous les segments de l�
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
 La sélection de la ligne de la définition de segment fournit un résumé de la définition de segment, y compris des options permettant de modifier ou de supprimer le segment, l’audience qualifiée du segment, la taille totale de l’audience, en plus du nom, de la description, de la méthode d’évaluation, de la date de création et de la date de dernière modification du segment.
+
+>[!NOTE]
+>
+> **not** pourra supprimer un segment utilisé dans une activation de destination.
 
 ![](../images/ui/overview/segment-browse-details.png)
 
