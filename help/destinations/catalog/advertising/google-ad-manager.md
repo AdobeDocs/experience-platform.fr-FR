@@ -3,10 +3,10 @@ keywords: gestionnaire de publicités Google;publicité Google;double-eclick;Dou
 title: Connexion à Google Ad Manager
 description: Google Ad Manager, anciennement appelé DoubleClick for Publishers ou DoubleClick AdX, est une plateforme de service publicitaire de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, par le biais de vidéos et dans des applications mobiles.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 4df2e7ce9c7e94da4ea0be50ba21232c639e2587
+source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
 workflow-type: tm+mt
-source-wordcount: '754'
-ht-degree: 26%
+source-wordcount: '732'
+ht-degree: 21%
 
 ---
 
@@ -41,7 +41,7 @@ Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google 
 
 **Exportation de segments**  : vous exportez tous les membres d’un segment (audience) vers la destination Google.
 
-## Conditions préalables   
+## Conditions préalables
 
 Si vous souhaitez créer votre première destination avec [!DNL Google Ad Manager] et que vous n’avez pas activé la [fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) dans le service d’ID Experience Cloud par le passé (avec Audience Manager ou d’autres applications), veuillez contacter Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez précédemment configuré des intégrations [!DNL Google] dans Audience Manager, les synchronisations des identifiants que vous avez configurées sont transférées vers Platform.
 
@@ -53,8 +53,8 @@ Si vous souhaitez créer votre première destination avec [!DNL Google Ad Manage
 
 Avant de créer la destination [!DNL Google Ad Manager] dans Platform, vous devez contacter [!DNL Google] pour que l’Adobe soit placé sur la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contactez [!DNL Google] et fournissez les informations suivantes :
 
-* **Identifiant de compte** : il s’agit de l’identifiant de compte d’Adobe avec [!DNL Google]. Contactez l’assistance clientèle d’Adobe ou votre représentant Adobe pour obtenir cet identifiant.
-* **Identifiant client** : il s’agit de l’identifiant client d’Adobe avec [!DNL Google]. Contactez l’assistance clientèle d’Adobe ou votre représentant Adobe pour obtenir cet identifiant.
+* **ID** du compte : Identifiant de compte de l’Adobe avec Google. ID de compte : 87933855.
+* **ID de client** : Identifiant du compte client de l’Adobe avec Google. ID de client : 89690775.
 * **Identifiant réseau** : il s’agit de votre compte avec [!DNL Google Ad Manager]
 * **Identifiant du lien d’audience** : il s’agit de votre compte avec [!DNL Google Ad Manager]
 * Votre type de compte. DFP de Google ou AdX buyer.
