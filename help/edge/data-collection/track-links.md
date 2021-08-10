@@ -3,7 +3,7 @@ title: Suivi des liens à l’aide du SDK Web de Adobe Experience Platform
 description: Découvrez comment envoyer des données de lien à Adobe Analytics avec le SDK Web Experience Platform
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;interaction web;pages vues;suivi des liens;liens;suivre les liens;cliquer sur la collection;cliquer sur la collection;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: b22eccb34e98ca2da47fe849492ee464d679d2a0
+source-git-commit: d6460e442a136bf9bd26582f228017a6fb52138c
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%
@@ -24,12 +24,12 @@ alloy("sendEvent", {
     "web": {
       "webInteraction": {
         "linkClicks": {
-            "value":1
+            "value": 1
+        }
       },
-      "name":"My Custom Link", // Name that shows up in the custom links report
-      "URL":"https://myurl.com", // The URL of the link
-      "type":"other", // values: other, download, exit
-      }
+      "name": "My Custom Link", // Name that shows up in the custom links report
+      "URL": "https://myurl.com", // The URL of the link
+      "type": "other" // values: other, download, exit
     }
   }
 });
