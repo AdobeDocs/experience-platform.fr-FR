@@ -5,9 +5,9 @@ title: Accès et fonctionnalités de Data Science Workspace
 topic-legacy: Access and features for data science workspace
 description: Le document suivant décrit les autorisations de Data Science Workspace et l’accès aux fonctionnalités.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 319cdb13c965010062aa9179b197d6f5b6a20287
+source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '684'
 ht-degree: 18%
 
 ---
@@ -63,7 +63,7 @@ Pour utiliser Data Science Workspace, l’autorisation « Gestion de Data Scien
 
 ## Prise en charge des environnements de test
 
-Les environnements de test sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Chaque instance Platform prend en charge plusieurs environnements de test de production et environnements de test hors production, chacun conservant sa propre bibliothèque de ressources Platform. Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter vos environnements de test de production. Pour plus d’informations sur les environnements de test, consultez la [présentation des environnements de test](../sandboxes/home.md).
+Les environnements de test sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Chaque instance de Platform prend en charge plusieurs environnements de test de production et hors production, chacun conservant sa propre bibliothèque de ressources de Platform. Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter vos environnements de test de production. Pour plus d’informations sur les environnements de test, consultez la [présentation des environnements de test](../sandboxes/home.md).
 
 Actuellement, Data Science Workspace présente la limitation d’environnement de test suivante :
 
