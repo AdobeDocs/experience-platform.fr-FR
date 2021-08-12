@@ -6,9 +6,9 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 1b750f0dc51983251d39515de15cd0286f5b51c1
+source-git-commit: bbb33287b82d348811852f4ad17a9c7b24a33b44
 workflow-type: tm+mt
-source-wordcount: '2957'
+source-wordcount: '2960'
 ht-degree: 12%
 
 ---
@@ -52,7 +52,7 @@ Dans le workflow **[!UICONTROL Activer la destination]**, sur la page **[!UICONT
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Appliquer la transformation"
->abstract="Cochez cette option lorsque vous utilisez des champs source non hachés afin que Adobe Experience Platform les hache automatiquement lors de l’activation."
+>abstract="Cochez cette option lorsque vous utilisez des champs source non hachés (comme *personalEmail.address* **personalEmail.address** `personalEmail.address`), pour que Adobe Experience Platform les hache automatiquement lors de l’activation."
 
 S’applique à : Destinations sociales et destination publicitaire de correspondance client Google
 
