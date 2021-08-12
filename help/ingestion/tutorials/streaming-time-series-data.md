@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation en flux continu ; assimilation ; données de séries chronologiques ; données de séries chronologiques de flux ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion par flux;ingestion;données de série temporelle;données de série temporelle de diffusion en continu ;
 solution: Experience Platform
-title: Diffusion en continu des données de série chronologique à l’aide des API d’importation en flux continu
+title: Diffusion en continu de données de séries temporelles à l’aide des API d’ingestion en flux continu
 topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-translation-type: tm+mt
-source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
+source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
 workflow-type: tm+mt
-source-wordcount: '1349'
-ht-degree: 69%
+source-wordcount: '1371'
+ht-degree: 71%
 
 ---
 
-# Diffusion en continu de données de séries chronologiques à l’aide des API d’importation en flux continu
+# Diffusion en continu de données de série temporelle à l’aide des API d’ingestion en flux continu
 
-Ce didacticiel vous aidera à commencer à utiliser les API d&#39;assimilation en flux continu, qui font partie des [!DNL Data Ingestion Service] API Adobe Experience Platform.
+Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API [!DNL Data Ingestion Service] Adobe Experience Platform.
 
 ## Prise en main
 
 Ce tutoriel nécessite une connaissance pratique de différents services d’Adobe Experience Platform. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel  [!DNL Platform] organiser les données d’expérience.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fournit un profil unifié et en temps réel pour les consommateurs, basé sur des données agrégées provenant de sources multiples.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel  [!DNL Platform] organise les données d’expérience.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 - [Guide de développement du registre des schémas](../../xdm/api/getting-started.md)[!DNL Schema Registry] : guide complet abordant chacun des points de terminaison disponibles de l’API et la manière d’effectuer des appels vers ceux-ci. Cela implique de connaître votre `{TENANT_ID}`, qui apparaît dans les appels de ce tutoriel, et de savoir comment créer des schémas utilisés pour la création d’un jeu de données destiné à être ingéré.
 
 De plus, pour suivre ce tutoriel, vous devez avoir déjà créé une connexion en continu. Pour plus d’informations sur la création d’une connexion en continu, consultez le [tutoriel de création d’une connexion en continu](./create-streaming-connection.md).
@@ -32,23 +31,23 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 ### Lecture d’exemples d’appels API
 
-Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce guide fournit des exemples d&#39;appels API pour démontrer comment formater vos requêtes. Il s&#39;agit notamment de chemins d&#39;accès, d&#39;en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecter des valeurs pour les en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-api-key : `{API_KEY}`
+- x-gw-ims-org-id : `{IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform] sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name : `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d&#39;informations sur les sandbox dans [!DNL Platform], consultez la [documentation d&#39;aperçu de sandbox](../../sandboxes/home.md).
+>Pour plus d’informations sur les environnements de test dans [!DNL Platform], consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
@@ -56,7 +55,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ## Composition d’un schéma basé sur la classe XDM ExperienceEvent
 
-Pour créer un jeu de données, vous devez d&#39;abord créer un nouveau schéma qui implémente la classe [!DNL XDM ExperienceEvent]. Pour plus d’informations sur la façon de créer des schémas, consultez le [guide de développement de l’API Schema Registry](../../xdm/api/getting-started.md).
+Pour créer un jeu de données, vous devez d’abord créer un nouveau schéma qui implémente la classe [!DNL XDM ExperienceEvent]. Pour plus d’informations sur la façon de créer des schémas, consultez le [guide de développement de l’API Schema Registry](../../xdm/api/getting-started.md).
 
 **Format d’API**
 
@@ -293,39 +292,39 @@ Une réponse réussie renvoie un état HTTP 201 et un tableau contenant l’ide
 
 ## Création d’une connexion en continu
 
-Après avoir créé votre schéma et votre jeu de données, vous devez créer une connexion de flux continu pour assimiler vos données.
+Après avoir créé votre schéma et votre jeu de données, vous devez créer une connexion en continu pour ingérer vos données.
 
 Pour plus d’informations sur la création d’une connexion en continu, consultez le [tutoriel de création d’une connexion en continu](./create-streaming-connection.md).
 
 ## Ingestion de données de série temporelle vers la connexion en continu
 
-Avec le jeu de données, la connexion en flux continu et le flux de données créé, vous pouvez ingérer des enregistrements JSON au format XDM pour ingérer des données de série chronologique dans [!DNL Platform].
+Une fois le jeu de données, la connexion en continu et le flux de données créés, vous pouvez ingérer des enregistrements JSON au format XDM pour ingérer des données de série temporelle dans [!DNL Platform].
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
-POST /collection/{CONNECTION_ID}?synchronousValidation=true
+POST /collection/{CONNECTION_ID}?syncValidation=true
 ```
 
 | Paramètre | Description |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | La valeur `id` de la connexion en continu que vous venez de créer. |
-| `synchronousValidation` | Paramètre de requête facultatif destiné au développement. S’il est défini sur `true`, il peut être utilisé pour obtenir des commentaires immédiats afin de déterminer si la requête a bien été envoyée. Par défaut, cette valeur est définie sur `false`. |
+| `syncValidation` | Paramètre de requête facultatif destiné au développement. S’il est défini sur `true`, il peut être utilisé pour obtenir des commentaires immédiats afin de déterminer si la requête a bien été envoyée. Par défaut, cette valeur est définie sur `false`. Si vous définissez ce paramètre de requête sur `true`, le taux de la requête sera limité à 60 fois par minute par `CONNECTION_ID`. |
 
 **Requête**
 
-L’insertion de données de série chronologique sur une connexion de flux continu peut se faire avec ou sans le nom source.
+L’ingestion de données de série temporelle vers une connexion en continu peut être effectuée avec ou sans le nom de la source.
 
-L&#39;exemple de requête ci-dessous ingère des données de série chronologique avec un nom source manquant à la plate-forme. Si le nom de la source est absent des données, l’ID source est ajouté à partir de la définition de connexion de flux continu.
+L’exemple de requête ci-dessous ingère des données de série temporelle avec un nom source manquant dans Platform. Si le nom source est absent des données, l’ID source est ajouté à partir de la définition de connexion en continu.
 
 >[!IMPORTANT]
 >
->Vous devrez générer vos propres `xdmEntity._id` et `xdmEntity.timestamp`. L’utilisation de la fonction UUID dans la préparation des données constitue un bon moyen de générer un identifiant. Pour plus d&#39;informations sur la fonction UUID, consultez le [Guide des fonctions de préparation des données](../../data-prep/functions.md). L&#39;attribut `xdmEntity._id` représente un identifiant unique pour l&#39;enregistrement lui-même, **pas** un identifiant unique de la personne ou du périphérique dont il s&#39;agit. L&#39;ID de personne ou d&#39;appareil sera spécifique dans tous les attributs attribués en tant que personne ou identifiant de dispositif du schéma.
+>Vous devrez générer vos propres `xdmEntity._id` et `xdmEntity.timestamp`. Un bon moyen de générer un ID est d’utiliser la fonction UUID dans Data Prep. Vous trouverez plus d’informations sur la fonction UUID dans le [guide Fonctions de préparation des données](../../data-prep/functions.md). L’attribut `xdmEntity._id` représente un identifiant unique pour l’enregistrement lui-même, **et non** un identifiant unique de la personne ou de l’appareil dont il s’agit. L’identifiant de personne ou d’appareil sera spécifique dans tous les attributs attribués en tant qu’identifiant de personne ou d’appareil du schéma.
 >
->`xdmEntity._id` et `xdmEntity.timestamp` sont les seuls champs obligatoires pour les données de série chronologique. De plus, l’appel API suivant ne nécessite **pas** d’en-têtes d’authentification.
+>`xdmEntity._id` et `xdmEntity.timestamp` sont les seuls champs obligatoires pour les données de série temporelle. De plus, l’appel API suivant ne nécessite **pas** d’en-têtes d’authentification.
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
   -H "Content-Type: application/json" \
   -d '{
     "header": {
@@ -405,14 +404,14 @@ Si vous souhaitez inclure un nom source, l’exemple suivant montre comment l’
 
 **Réponse**
 
-Une réponse réussie renvoie l&#39;état HTTP 200 avec les détails du [!DNL Profile] nouvellement diffusé.
+Une réponse réussie renvoie un état HTTP 200 avec les détails du [!DNL Profile] que vous venez de diffuser en continu.
 
 ```json
 {
     "inletId": "{CONNECTION_ID}",
     "xactionId": "1584479347507:2153:240",
     "receivedTimeMs": 1584479347507,
-    "synchronousValidation": {
+    "syncValidation": {
         "status": "pass"
     }
 }
@@ -420,20 +419,20 @@ Une réponse réussie renvoie l&#39;état HTTP 200 avec les détails du [!DNL Pr
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | `inletId` de la connexion de flux continu précédemment créée. |
+| `{CONNECTION_ID}` | `inletId` de la connexion en continu créée précédemment. |
 | `xactionId` | Un identifiant unique généré côté serveur pour l’enregistrement que vous venez d’envoyer. Cet identifiant aide Adobe à suivre le cycle de vie de cet enregistrement sur différents systèmes et en cas de débogage. |
 | `receivedTimeMs` : un horodatage (en millisecondes) indiquant l’heure de réception de la requête. |
-| `synchronousValidation.status` | Le paramètre de requête `synchronousValidation=true` ayant été ajouté, cette valeur s’affiche. Si la validation a réussi, l’état est `pass`. |
+| `syncValidation.status` | Le paramètre de requête `syncValidation=true` ayant été ajouté, cette valeur s’affiche. Si la validation a réussi, l’état est `pass`. |
 
 ## Récupération des données de série temporelle que vous venez d’ingérer
 
-Pour valider les enregistrements précédemment assimilés, vous pouvez utiliser [[!DNL Profile Access API]](../../profile/api/entities.md) pour récupérer les données de la série chronologique. Vous pouvez le faire en envoyant une requête GET au point de terminaison `/access/entities` et en utilisant des paramètres de requête facultatifs. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (&amp;).
+Pour valider les enregistrements précédemment ingérés, vous pouvez utiliser la balise [[!DNL Profile Access API]](../../profile/api/entities.md) pour récupérer les données de série temporelle. Vous pouvez le faire en envoyant une requête GET au point de terminaison `/access/entities` et en utilisant des paramètres de requête facultatifs. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (&amp;).
 
 >[!NOTE]
 >
->Si l&#39;ID de stratégie de fusion n&#39;est pas défini et que `schema.name` ou `relatedSchema.name` est `_xdm.context.profile`, [!DNL Profile Access] récupère **toutes** les identités associées.
+>Si l’ID de stratégie de fusion n’est pas défini et que `schema.name` ou `relatedSchema.name` est `_xdm.context.profile`, [!DNL Profile Access] récupère **toutes** les identités associées.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 GET /access/entities
@@ -529,6 +528,6 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails des entités 
 
 ## Étapes suivantes
 
-En lisant ce document, vous comprenez maintenant comment ingérer des données d&#39;enregistrement dans [!DNL Platform] à l&#39;aide de connexions en flux continu. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. De plus, vous pouvez début à surveiller vos données imbriquées par le biais de l&#39;interface utilisateur [!DNL Platform]. Pour plus d’informations, consultez le guide de [surveillance de l’ingestion des données](../quality/monitor-data-ingestion.md).
+En lisant ce document, vous comprenez maintenant comment ingérer des données d’enregistrement dans [!DNL Platform] à l’aide de connexions en continu. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. De plus, vous pouvez commencer à surveiller vos données ingérées via l’interface utilisateur [!DNL Platform]. Pour plus d’informations, consultez le guide de [surveillance de l’ingestion des données](../quality/monitor-data-ingestion.md).
 
 Pour plus d’informations sur l’ingestion par flux en général, consultez la [présentation de l’ingestion par flux](../streaming-ingestion/overview.md).
