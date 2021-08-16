@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 86%
+source-wordcount: '1293'
+ht-degree: 81%
 
 ---
 
@@ -13,6 +13,16 @@ ht-degree: 86%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+
+## 11 août 2021
+
+v3.0.0
+
+* PDCL-6153 : Ajoute la prise en charge pour extraire de manière fiable l’URL complète pour les actions de code personnalisé en mémoire cache.
+
+La version 3.0.0 de l’extension Core est couplée à des modifications dans [v27.2.0 du composant d’exécution Web Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), ce qui permet aux utilisateurs de charger leur bibliothèque parmi de nombreuses régions d’hébergement gérées par l’Adobe si la société de l’utilisateur prend en charge le réseau de diffusion de contenu Premium.
+
+Cette mise à niveau est facultative et rétrocompatible pour les utilisateurs sans réseau de diffusion de contenu Premium, et obligatoire pour les clients dont le réseau de diffusion de contenu Premium est activé dans leur entreprise.
 
 ## 20 mai 2021
 
