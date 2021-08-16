@@ -2,16 +2,24 @@
 title: Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
 description: Extension de balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7c30df7ea126ec7c7c794b8daaf3d2b813873b98
+source-git-commit: 40d280eb1d9810d679428ffd42c88035459f2b7d
 workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 53%
+source-wordcount: '1173'
+ht-degree: 51%
 
 ---
 
 # Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
 
 Ce document couvre les notes de mise à jour de l’extension de balise SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, consultez les [Notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Version 2.7.0 - 16 août 2021
+
+Contient la version 2.6.3 de la bibliothèque SDK Web Adobe Experience Platform.
+
+* Lors de l’utilisation du type d’élément de données de carte des identités, les identifiants dont les identifiants se résolvent en valeurs qui ne sont pas des chaînes renseignées sont désormais automatiquement supprimés de la carte des identités.
+* Correction d’une erreur qui se produisait lors de la tentative d’enregistrement d’un élément de données à l’aide du type d’élément de données Objet XDM alors qu’aucun schéma n’était sélectionné.
+* Amélioration de la typographie de l’interface utilisateur.
 
 ## Version 2.6.2 - 4 août 2021
 
