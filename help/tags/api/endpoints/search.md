@@ -1,9 +1,9 @@
 ---
 title: Point de terminaison de recherche
 description: Découvrez comment effectuer des appels vers le point de terminaison /search dans l’API Reactor.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '662'
 ht-degree: 2%
 
 ---
@@ -43,25 +43,15 @@ Pour plus d’informations sur l’utilisation de cette fonctionnalité, consult
 
 Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
 
-## Récupération d’une liste de règles {#list}
+## Exécution d’une recherche {#perform}
 
-Vous pouvez récupérer une liste de règles appartenant à une propriété en incluant en effectuant une requête de GET.
+Vous pouvez effectuer une recherche en effectuant une requête de POST.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
-GET /properties/{PROPERTY_ID}/rules
+POST /search
 ```
-
-| Paramètre | Description |
-| --- | --- |
-| `PROPERTY_ID` | `id` de la propriété dont vous souhaitez répertorier les composants. |
-
-{style=&quot;table-layout:auto&quot;}
-
->[!NOTE]
->
->À l’aide des paramètres de requête, les règles répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md) .
 
 **Requête**
 
@@ -71,6 +61,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data" : {
