@@ -3,10 +3,10 @@ keywords: annonces Google;annonces Google;mots-clés Google;Google AdWords;mots-
 title: Connexion Google Ads
 description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: ca388912d6634f72cab15a6bfb3e9f92264e52db
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 19%
+source-wordcount: '637'
+ht-degree: 20%
 
 ---
 
@@ -41,7 +41,7 @@ Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google 
 | MAID | Identifiant Microsoft Advertising. Cet identifiant identifie de manière unique les périphériques exécutant Windows 10. |  |
 | Identifiant Amazon Fire TV | Cet identifiant identifie de manière unique les téléviseurs Amazon Fire. |  |
 
-## Type d’exportation {#export-type}
+## Type d&#39;export {#export-type}
 
 **Exportation de segments**  : vous exportez tous les membres d’un segment (audience) vers la destination Google.
 
@@ -66,29 +66,22 @@ Avant de créer la destination [!DNL Google Ads] dans Platform, vous devez conta
 * Votre type de compte : **AdWords**
 * **Identifiant** Google AdWords : Il s’agit de votre identifiant avec  [!DNL Google]. Le format d’identifiant est généralement 123-456-7890.
 
-## Configuration de la destination
+## Connexion à la destination {#connect}
 
-Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez [!DNL Google Ads], puis **[!UICONTROL Configurer]**.
+Pour vous connecter à cette destination, suivez les étapes décrites dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
-![Connexion à la destination Google Ads](../../assets/catalog/advertising/google-ads-destination/catalog.png)
+### Paramètres de connexion {#parameters}
 
->[!NOTE]
->
->Si une connexion avec cette destination existe déjà, vous pouvez voir un bouton **[!UICONTROL Activer]** sur la carte de destination. Pour plus d’informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../../ui/destinations-workspace.md#catalog) de la documentation de l’espace de travail de destination.
-
-À l’étape **Configuration** du processus de création de destination, renseignez les [!UICONTROL Informations de base] de la destination.
-
-![Informations de base de Google Ads](../../assets/catalog/advertising/google-ads-destination/setup.png)
+Lors de la configuration de [](../../ui/connect-destination.md) cette destination, vous devez fournir les informations suivantes :
 
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
 * **[!UICONTROL Type de compte]** : AdWords est la seule option disponible.
 * **[!UICONTROL Identifiant de compte]** : renseignez votre identifiant de compte avec [!DNL Google Ads]. Le format d’identifiant est généralement 123-456-7890.
-* **[!UICONTROL Action]** marketing : Les actions marketing indiquent l’intention pour laquelle les données seront exportées vers la destination. Vous pouvez effectuer un choix parmi des actions marketing définies par l’Adobe ou créer votre propre action marketing. Pour plus d’informations sur les actions marketing, consultez la [Présentation des stratégies d’utilisation des données](../../../data-governance/policies/overview.md).
 
-## Activation des segments vers [!DNL Google Ads]
+## Activation des segments vers cette destination {#activate}
 
-Pour plus d’informations sur l’activation des segments vers [!DNL Google Ads], voir [Activation des données vers les destinations](../../ui/activate-destinations.md).
+Voir [Activation des profils et des segments vers une destination](../../ui/activate-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers des destinations.
 
 ## Données exportées
 
