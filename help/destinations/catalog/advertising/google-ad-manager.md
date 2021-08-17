@@ -3,10 +3,10 @@ keywords: gestionnaire de publicités Google;publicité Google;double-eclick;Dou
 title: Connexion à Google Ad Manager
 description: Google Ad Manager, anciennement appelé DoubleClick for Publishers ou DoubleClick AdX, est une plateforme de service publicitaire de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, par le biais de vidéos et dans des applications mobiles.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 21%
+source-wordcount: '651'
+ht-degree: 23%
 
 ---
 
@@ -37,7 +37,7 @@ Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google 
 | MAID | Identifiant Microsoft Advertising. Cet identifiant identifie de manière unique les périphériques exécutant Windows 10. |  |
 | Identifiant Amazon Fire TV | Cet identifiant identifie de manière unique les téléviseurs Amazon Fire. |  |
 
-## Type d’exportation {#export-type}
+## Type d&#39;export {#export-type}
 
 **Exportation de segments**  : vous exportez tous les membres d’un segment (audience) vers la destination Google.
 
@@ -59,19 +59,13 @@ Avant de créer la destination [!DNL Google Ad Manager] dans Platform, vous deve
 * **Identifiant du lien d’audience** : il s’agit de votre compte avec [!DNL Google Ad Manager]
 * Votre type de compte. DFP de Google ou AdX buyer.
 
-## Configuration de la destination
+## Connexion à la destination {#connect}
 
-Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez **[!DNL Google Ad Manager]**, puis **[!UICONTROL Configurer]**.
+Pour vous connecter à cette destination, suivez les étapes décrites dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
-![Connexion à la destination Google Ad Manager](../../assets/catalog/advertising/google-ad-manager/catalog.png)
+### Paramètres de connexion {#parameters}
 
->[!NOTE]
->
->Si une connexion avec cette destination existe déjà, vous pouvez voir un bouton **[!UICONTROL Activer]** sur la carte de destination. Pour plus d’informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../../ui/destinations-workspace.md#catalog) de la documentation de l’espace de travail de destination.
-
-À l’étape **Configuration** du processus de création de destination, renseignez les [!UICONTROL Informations de base] de la destination.
-
-![Informations de base de Google Ad Manager](../../assets/catalog/advertising/google-ad-manager/setup.png)
+Lors de la configuration de [](../../ui/connect-destination.md) cette destination, vous devez fournir les informations suivantes :
 
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
@@ -79,15 +73,14 @@ Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez 
    * Utilisez `DFP by Google` pour for Publishers[!DNL DoubleClick]
    * Utilisez `AdX buyer` pour [!DNL Google AdX]
 * **[!UICONTROL Identifiant de compte]** : renseignez votre identifiant de compte avec [!DNL Google]. Il peut s’agir de votre identifiant réseau ou de votre identifiant du lien d’audience. En règle générale, il s’agit d’un identifiant à huit chiffres.
-* **[!UICONTROL Action]** marketing : Les actions marketing indiquent l’intention pour laquelle les données seront exportées vers la destination. Vous pouvez effectuer un choix parmi des actions marketing définies par l’Adobe ou créer votre propre action marketing. Pour plus d’informations sur les actions marketing, consultez la [Présentation des stratégies d’utilisation des données](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >
->Lors de la configuration d’une destination [!DNL Google Ad Manager], veuillez travailler avec votre [!DNL Google Account Manager] ou représentant de l’Adobe pour comprendre le type de compte dont vous disposez.
+>Lors de la configuration d’une destination [!DNL Google Ad Manager], veuillez travailler avec votre [!DNL Google Account Manager] ou représentant d’Adobe pour comprendre le type de compte dont vous disposez.
 
-## Activation des segments vers [!DNL Google Ad Manager]
+## Activation des segments vers cette destination {#activate}
 
-Pour plus d’informations sur l’activation des segments vers [!DNL Google Ad Manager], voir [Activation des données vers les destinations](../../ui/activate-destinations.md).
+Voir [Activation des profils et des segments vers une destination](../../ui/activate-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers des destinations.
 
 ## Données exportées
 
