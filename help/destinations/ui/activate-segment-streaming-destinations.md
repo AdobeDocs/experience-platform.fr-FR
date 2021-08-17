@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activation des données d’audience vers des destinations d’exportation de segments par flux
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de diffusion en continu de segments.
 seo-description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de diffusion en continu de segments.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: 65e74041aeb285cb80c67e47ccdaca18de9889fa
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1165'
 ht-degree: 4%
 
 ---
@@ -42,6 +42,11 @@ Utilisez les cases à cocher situées à gauche des noms de segment pour sélect
 ![Sélection de segments](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
 
 ## Mise en correspondance des attributs et des identités {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Appliquer la transformation"
+>abstract="Cochez cette option lorsque vous utilisez des champs source non hachés afin que Adobe Experience Platform les hache automatiquement lors de l’activation."
 
 >[!IMPORTANT]
 >
