@@ -1,20 +1,21 @@
 ---
-keywords: messagerie mobile ; destinations de messagerie mobile ; Braze ; Aéronef
-title: Présentation des destinations d’engagement mobiles
+keywords: messagerie mobile;destinations de messagerie mobile;Braze; Airship
+title: Présentation des destinations d’engagement mobile
 description: Découvrez les différentes destinations d’engagement mobile prises en charge par Adobe Experience Platform.
-translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+exl-id: bb5852c0-a47a-42c7-9fae-ec7d80dc3bcf
+source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
 workflow-type: tm+mt
-source-wordcount: '42'
+source-wordcount: '46'
 ht-degree: 0%
 
 ---
 
+# Présentation des destinations d’engagement mobile {#mobile-destinations}
 
-# Présentation des destinations d’engagement mobiles {#mobile-destinations}
+## Destinations d’engagement mobile prises en charge {#supported-destinations}
 
-[!DNL Adobe Experience Platform] prend actuellement en charge les destinations d’engagement mobiles suivantes :
+[!DNL Adobe Experience Platform] prend actuellement en charge les destinations d’engagement mobile suivantes :
 
-* [Connexion aux attributs du navire](./airship-attributes.md)
-* [Connexion aux balises d&#39;avion](./airship-tags.md)
-* [Connexion au frein](./braze.md)
+* [Connexion aux attributs du navire](airship-attributes.md)
+* [Connexion à Airship Tags](airship-tags.md)
+* [Connexion de frein](braze.md)
