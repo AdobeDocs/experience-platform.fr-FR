@@ -3,9 +3,9 @@ keywords: extensions de balise;extension de balise;destinations de lancement ext
 title: Extensions de balises dans Adobe Experience Platform
 description: Adobe Experience Platform offre la nouvelle génération de fonctionnalités de gestion des balises d’Adobe. Platform vous offre un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '508'
 ht-degree: 35%
 
 ---
@@ -16,7 +16,7 @@ Adobe Experience Platform offre la nouvelle génération de fonctionnalités de 
 
 Pour une présentation des balises, reportez-vous aux ressources ci-dessous :
 
-- [Présentation des balises](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=fr)
+- [Présentation des balises](../../../tags/home.md)
 - [Guide de démarrage rapide](../../../tags/quick-start/quick-start.md)
 
 ## Comment trouver des extensions de balise dans l’interface de Platform {#how-to-find-extensions-in-interface}
