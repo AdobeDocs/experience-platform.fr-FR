@@ -4,9 +4,9 @@ title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 seo-description: Dans Adobe Experience Platform, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '861'
 ht-degree: 20%
 
 ---
@@ -72,7 +72,7 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 
 >[!TIP]
 >
-> * Utilisez le bouton ![Ajouter des segments](../assets/ui/workspace/add-data-symbol.png) de la colonne **[!UICONTROL Nom]** pour [activer](activate-destinations.md) d’autres segments vers cette destination.
+> * Utilisez le bouton ![Ajouter des segments](../assets/ui/workspace/add-data-symbol.png) de la colonne **[!UICONTROL Nom]** pour envoyer des segments vers cette destination.
 > * Utilisez le bouton ![Supprimer les destinations](../assets/ui/workspace/delete-destination-symbol.png) de la colonne **[!UICONTROL Nom]** pour [supprimer](delete-destinations.md) une connexion existante à une destination.
 
 
@@ -88,7 +88,7 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 | [!UICONTROL Nom d’utilisateur] | Les informations d’identification de compte que vous avez sélectionnées pour le flux de destination. |
 | [!UICONTROL Données d’activation] | Indique le nombre de segments activés vers cette destination. Sélectionnez ce contrôle pour en savoir plus sur les segments activés. Pour plus d’informations sur les segments activés, voir [Données d’activation](/help/destinations/ui/destination-details-page.md#activation-data) dans la page des détails de destination. |
 | [!UICONTROL Créé] | La date et l’heure (UTC) de création du flux d’activation vers la destination. |
-| [!UICONTROL État] | `Active` ou `Inactive`. Indique si les données sont activées vers cette destination. Pour modifier le statut, consultez [Désactiver l’activation](./activate-destinations.md#disable-activation). |
+| [!UICONTROL État] | `Active` ou `Inactive`. Indique si les données sont activées vers cette destination. |
 
 Cliquez sur une ligne de destination pour afficher plus d’informations sur la destination dans le rail de droite.
 
