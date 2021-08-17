@@ -3,9 +3,9 @@ keywords: diffusion en continu;
 title: Connexion HTTP
 description: La destination HTTP dans Adobe Experience Platform vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '357'
 ht-degree: 9%
 
 ---
@@ -56,11 +56,11 @@ Lors de la configuration de [](../ui/connect-destination.md) cette destination, 
 
 ## Activation des segments vers cette destination {#activate}
 
-Voir [Activation des profils et des segments vers une destination](../ui/activate-destinations.md#select-attributes) pour obtenir des instructions sur l’activation des segments d’audience vers des destinations.
+Voir [Activation des données d’audience vers les destinations d’exportation de profils en continu](../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
-## Attributs de destination {#attributes}
+### Attributs de destination {#attributes}
 
-À l’étape [[!UICONTROL Sélectionner les attributs]](../ui/activate-destinations.md#select-attributes), lorsque [l’activation de segments](../ui/activate-destinations.md) vers une destination [!DNL HTTP], l’Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination.
+À l’étape [[!UICONTROL Sélectionner les attributs]](../ui/activate-streaming-profile-destinations.md#select-attributes) , Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination.
 
 ## Données exportées {#exported-data}
 
