@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; Marketo Engage ; marketing à engager ; Marketo ; mappage
+keywords: Experience Platform;accueil;rubriques les plus consultées;Marketo Engage;interaction marketing;Marketo;mappage
 solution: Experience Platform
-title: Mappage de champs pour la source du Marketo Engage
+title: Mappage des champs pour la source du Marketo Engage
 topic-legacy: overview
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 178c0c4079d620b9a8380fcfcdd90cb74eb24bbb
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
 source-wordcount: '333'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
-# (bêta) [!DNL Marketo Engage] mappages de champs
+# (Version bêta) [!DNL Marketo Engage] mappages de champs
 
 >[!IMPORTANT]
 >
->La source [!DNL Marketo Engage] est actuellement en version bêta. Ses fonctionnalités et la documentation peuvent être modifiées.
+>La source [!DNL Marketo Engage] est actuellement en version bêta. Ses fonctionnalités et la documentation peuvent faire l’objet de modifications.
 
-Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux de données [!DNL Marketo] et les champs correspondants du modèle de données d’expérience (XDM).
+Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux de données [!DNL Marketo] et les champs de modèle de données d’expérience (XDM) correspondants.
 
 ## Activités {#activities}
 
-| Jeu de données source | Champ de cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Notes |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
 | `personID` | `personID` | Identité Principal |
@@ -92,7 +92,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 
 ## Programmes {#programs}
 
-| Jeu de données source | Champ de cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
 | `id` | `campaignID` | Identité Principal |
 | `sfdcId` | `extSourceSystemAudit.externalID` | Identité Secondaire |
@@ -111,9 +111,9 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 
 {style=&quot;table-layout:auto&quot;}
 
-## Membres de programme {#program-memberships}
+## Abonnements au programme {#program-memberships}
 
-| Jeu de données source | Champ de cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
 | `id` | `campaignMemberID` | Identité Principal |
 | `programId` | `campaignID` | Relation |
@@ -140,7 +140,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 
 ## Sociétés {#companies}
 
-| Jeu de données source | Champ de cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
 | `id` | `accountID` | Identité Principal |
 | `mktoCdpExternalId` | `extSourceSystemAudit.externalID` | Identité Secondaire |
@@ -166,7 +166,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 
 ## Listes statiques {#static-lists}
 
-| Jeu de données source | Champ de cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
 | `id` | `marketingListID` | Identité Principal |
 | `name` | `marketingListName` |
@@ -176,9 +176,9 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 
 {style=&quot;table-layout:auto&quot;}
 
-## Abonnements à la liste statique {#static-list-memnberships}
+## Abonnements à des listes statiques {#static-list-memnberships}
 
-| Jeu de données source | Champ de cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
 | `staticListMemberID` | `marketingListMemberID` | Identité Principal |
 | `staticListID` | `marketingListID` | Relation |
@@ -191,9 +191,9 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 
 >[!IMPORTANT]
 >
->Le jeu de données des comptes nommés n&#39;est nécessaire qu&#39;avec la fonction marketing basée sur les comptes (ABM) Marketo. Si vous n&#39;utilisez pas ABM, vous n&#39;avez pas besoin de configurer des mappages pour des comptes nommés.
+>Le jeu de données de comptes nommés n’est nécessaire qu’avec la fonctionnalité de marketing basé sur les comptes (ABM) de Marketo. Si vous n’utilisez pas ABM, vous n’avez pas besoin de configurer des mappages pour les comptes nommés.
 
-| Jeu de données source | Champ de cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
 | `id` | `accountID` | Identité Principal |
 | `crmGuid` | `extSourceSystemAudit.externalID` | Identité Secondaire |
@@ -215,7 +215,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 
 ## Opportunités {#opportunities}
 
-| Jeu de données source | Champ de cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
 | `id` | `opportunityID` | Identité Principal |
 | `externalOpportunityId` | `extSourceSystemAudit.externalID` | Identité Secondaire |
@@ -244,9 +244,9 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 
 {style=&quot;table-layout:auto&quot;}
 
-## Rôles de contact d&#39;opportunité {#opportunity-contact-roles}
+## Rôles de contact d’opportunité {#opportunity-contact-roles}
 
-| Jeu de données source | Champ de cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
 | `id` | `opportunityPersonID` | Identité Principal |
 | `mktoCdpSfdcId` | `extSourceSystemAudit.externalID` | Identité Secondaire |
@@ -261,7 +261,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 
 ## Personnes {#persons}
 
-| Jeu de données source | Champ de cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Identité Principal |
 | `contactCompany` | `b2b.accountID` |
@@ -310,8 +310,8 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 
 >[!NOTE]
 >
->Le champ source `to_object('ECID',arrays_to_objects('id',explode(ecids)))` est un champ calculé qui doit être ajouté à l&#39;aide de l&#39;option [!UICONTROL Ajouter champ calculé] dans l&#39;interface utilisateur de la plate-forme. Pour plus d&#39;informations, consultez le didacticiel sur l&#39;[ajout de champs calculés](../../../../ingestion/tutorials/map-a-csv-file.md).
+>Le champ source `to_object('ECID',arrays_to_objects('id',explode(ecids)))` est un champ calculé qui doit être ajouté à l’aide de l’option [!UICONTROL Ajouter un champ calculé] dans l’interface utilisateur de Platform. Pour plus d’informations, consultez le tutoriel sur l’[ajout de champs calculés](../../../../data-prep/calculated-fields.md) .
 
 ## Étapes suivantes
 
-En lisant ce document, vous obtenez des informations sur la relation de mappage entre vos jeux de données [!DNL Marketo] et leurs champs XDM correspondants. Consultez le didacticiel sur [la création d&#39;une  [!DNL Marketo] connexion source](../../../tutorials/ui/create/adobe-applications/marketo.md) pour terminer votre flux de données [!DNL Marketo].
+En lisant ce document, vous avez obtenu des informations sur la relation de mappage entre vos jeux de données [!DNL Marketo] et leurs champs XDM correspondants. Consultez le tutoriel sur la [création d’une [!DNL Marketo] connexion source](../../../tutorials/ui/create/adobe-applications/marketo.md) pour terminer votre flux de données [!DNL Marketo].
