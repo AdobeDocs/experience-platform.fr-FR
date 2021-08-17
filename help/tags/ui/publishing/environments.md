@@ -1,9 +1,9 @@
 ---
 title: Environnements
 description: Découvrez le concept des environnements de balises et leur fonctionnement dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1468'
 ht-degree: 79%
 
 ---
@@ -128,7 +128,7 @@ Pour plus d’informations sur ce paramètre, voir le guide sur le [déploiement
 
 #### Déploiement synchrone
 
-Lorsque le navigateur lit un code incorporé à l’aide d’un déploiement synchrone, il récupère la bibliothèque de balises et l’exécute avant de continuer à charger la page. C’est également ainsi que fonctionne la [Dynamic Tag Management (DTM)](https://docs.adobe.com/content/help/fr-FR/experience-cloud/user-guides/home.translate.html).
+Lorsque le navigateur lit un code incorporé à l’aide d’un déploiement synchrone, il récupère la bibliothèque de balises et l’exécute avant de continuer à charger la page.
 
 Les codes incorporés synchrones se composent de deux balises `<script>` qui doivent être placées dans le code HTML de votre site web. Une balise `<script>` doit être placée dans le document `<head>`, tandis que l’autre doit être placée juste avant la balise `</body>` de fermeture.
 
