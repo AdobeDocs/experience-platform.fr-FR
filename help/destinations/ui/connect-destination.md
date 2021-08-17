@@ -4,7 +4,7 @@ title: Création d’une connexion de destination
 type: Tutorial
 description: Ce tutoriel répertorie les étapes de connexion à une destination dans Adobe Experience Platform.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 1c67d9eb1b7762ecfcad5b0b7db5c317621f144e
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 1%
@@ -65,4 +65,4 @@ Saisissez les détails de la connexion à la plateforme de destination, puis sé
 
    ![Se connecter à la destination](../assets/ui/connect-destinations/connect-destination.png)
 
-1. Sélectionnez **[!UICONTROL Enregistrer et quitter]** pour enregistrer la configuration de destination ou **[!UICONTROL Suivant]** pour accéder au [flux d’activation](activate-destinations.md) des données d’audience.
+1. Sélectionnez **[!UICONTROL Enregistrer et quitter]** pour enregistrer la configuration de destination ou **[!UICONTROL Suivant]** pour accéder au [flux d’activation](activation-overview.md) des données d’audience.
