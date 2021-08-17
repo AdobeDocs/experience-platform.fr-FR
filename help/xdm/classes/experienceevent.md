@@ -5,9 +5,9 @@ title: Classe XDM ExperienceEvent
 topic-legacy: overview
 description: Ce document présente la classe XDM ExperienceEvent et les bonnes pratiques en matière de modélisation des données d’événement.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1573'
 ht-degree: 4%
 
 ---
@@ -53,7 +53,7 @@ Certaines interactions dans vos applications d’expérience peuvent entraîner 
 
 [Adobe Experience Platform Data ](../../data-prep/home.md) Preppermet de mapper, de transformer et de valider des données vers et depuis XDM. En utilisant les [fonctions de mappage](../../data-prep/functions.md) disponibles fournies par le service, vous pouvez appeler des opérateurs logiques pour prioriser, transformer et/ou consolider des données à partir d’enregistrements multi-événements lors de leur ingestion dans Experience Platform. Dans l’exemple ci-dessus, vous pouvez désigner `eventType` comme champ calculé qui donne la priorité à une &quot;consultation de produit&quot; par rapport à une &quot;page vue&quot; chaque fois qu’elles se produisent.
 
-Si vous ingérez manuellement des données dans Platform via l’interface utilisateur, consultez le guide sur le [mappage d’un fichier CSV à XDM](../../ingestion/tutorials/map-a-csv-file.md) pour obtenir des instructions spécifiques sur la création de champs calculés.
+Si vous ingérez manuellement des données dans Platform via l’interface utilisateur, reportez-vous au guide sur les [champs calculés ](../../data-prep/calculated-fields.md) pour obtenir des instructions spécifiques sur la création de champs calculés.
 
 Si vous diffusez des données en continu vers Platform à l’aide d’une connexion source, vous pouvez configurer la source pour qu’elle utilise à la place des champs calculés. Reportez-vous à la [documentation de votre source particulière](../../sources/home.md) pour obtenir des instructions sur la mise en oeuvre des champs calculés lors de la configuration de la connexion.
 
