@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: 0fef443c1979fec0c0d239a0b630cb3a0a134402
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 63%
+source-wordcount: '492'
+ht-degree: 58%
 
 ---
 
@@ -21,9 +21,13 @@ ht-degree: 63%
    * [Connexion aux destinations de marketing par e-mail et activation des données à l’aide de l’API Flow Service](./api/email-marketing.md)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
-   * [Connexion à une destination](./ui/connect-destination.md)
+   * [Création d’une connexion de destination](./ui/connect-destination.md)
+   * Activation des données d’audience vers les destinations{#activate}
+      * [Présentation de l’Activation](./ui/activation-overview.md)
+      * [Activation des données d’audience vers des destinations d’exportation de segments par flux](./ui/activate-segment-streaming-destinations.md)
+      * [Activation des données d’audience vers des destinations d’exportation de profils en continu](./ui/activate-streaming-profile-destinations.md)
+      * [Activation des données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md)
    * [Affichage des détails de destination](./ui/destination-details-page.md)
-   * [Activation de profils et de segments vers une destination](./ui/activate-destinations.md)
    * [Mise à jour des comptes de destination](./ui/update-accounts.md)
    * [Modification des flux d’activation](./ui/edit-activation.md)
    * [Suppression de destinations](./ui/delete-destinations.md)
