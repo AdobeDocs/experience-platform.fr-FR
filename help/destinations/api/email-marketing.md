@@ -6,9 +6,9 @@ description: Ce document couvre la création de destinations de marketing par e-
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1705'
 ht-degree: 72%
 
 ---
@@ -21,7 +21,7 @@ Ce tutoriel utilise la destination Adobe Campaign dans tous ses exemples, mais l
 
 ![Présentation : étapes de création d’une destination et d’activation de segments](../assets/api/email-marketing/overview.png)
 
-Si vous préférez utiliser l’interface utilisateur de Platform pour connecter une destination et activer des données, consultez les tutoriels [Connexion d’une destination](../ui/connect-destination.md) et [Activation des profils et des segments vers une destination](../ui/activate-destinations.md).
+Si vous préférez utiliser l’interface utilisateur de Platform pour connecter une destination et activer des données, consultez les tutoriels [Connexion d’une destination](../ui/connect-destination.md) et [Activation des données d’audience vers les destinations d’exportation de profil de lot](../ui/activate-batch-profile-destinations.md) .
 
 ## Prise en main
 
