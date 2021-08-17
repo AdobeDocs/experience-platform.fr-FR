@@ -1,72 +1,64 @@
 ---
-keywords: Destination du hub de événement Azure ; hub de événement azure ; event azure
-title: (bêta) Connexion à !DNL Azure Événement Hubs]
-description: Créez une connexion sortante en temps réel à votre enregistrement !DNL Azure Événement Hubs] pour diffuser des données à partir de l'Experience Platform.
+keywords: Destination du hub d’événements Azure ; hub d’événements Azure ; thub d’événements azure
+title: (Version bêta) Connexion à !DNL Azure Event Hubs
+description: Créez une connexion sortante en temps réel à votre stockage !DNL Azure Event Hubs] pour diffuser des données depuis l’Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 6%
+source-wordcount: '474'
+ht-degree: 3%
 
 ---
 
-# (Beta) [!DNL Azure Event Hubs] connexion
+# (Version bêta) [!DNL Azure Event Hubs] connexion
 
 ## Présentation {#overview}
 
 >[!IMPORTANT]
 >
->La destination [!DNL Azure Event Hubs] dans Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>La destination [!DNL Azure Event Hubs] de Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
-[!DNL Azure Event Hubs] est une plate-forme de diffusion de données massives et un service d’assimilation de événements. Il peut recevoir et traiter des millions de événements par seconde. Les données envoyées à un hub de événement peuvent être transformées et stockées à l’aide de n’importe quel fournisseur d’analyses en temps réel ou de cartes de traitement par lot/d’enregistrement.
+[!DNL Azure Event Hubs] est une plateforme de diffusion en continu de données volumineuses et un service d’ingestion d’événements. Il peut recevoir et traiter des millions d’événements par seconde. Les données envoyées à un hub d’événements peuvent être transformées et stockées à l’aide de n’importe quel fournisseur d’analyses en temps réel ou d’adaptateurs de traitement par lot/stockage.
 
-Vous pouvez créer une connexion sortante en temps réel à votre [!DNL Azure Event Hubs] enregistrement de diffusion de données à partir de Adobe Experience Platform.
+Vous pouvez créer une connexion sortante en temps réel à votre stockage [!DNL Azure Event Hubs] pour diffuser des données depuis Adobe Experience Platform.
 
-* Pour plus d&#39;informations sur [!DNL Azure Event Hubs], consultez la [documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
-* Pour vous connecter à [!DNL Azure Event Hubs] par programmation, consultez le [didacticiel sur l&#39;API de destinations de diffusion en continu](../../api/streaming-destinations.md).
-* Pour vous connecter à [!DNL Azure Event Hubs] à l&#39;aide de l&#39;interface utilisateur de la plate-forme, consultez les sections ci-dessous.
+* Pour plus d’informations sur [!DNL Azure Event Hubs], consultez la [documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
+* Pour vous connecter à [!DNL Azure Event Hubs] par programmation, consultez le [tutoriel sur l’API des destinations de diffusion en continu](../../api/streaming-destinations.md).
+* Pour vous connecter à [!DNL Azure Event Hubs] à l’aide de l’interface utilisateur de Platform, reportez-vous aux sections ci-dessous.
 
-![Kinesis AWS dans l’interface utilisateur](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
+![AWS Kinesis dans l’interface utilisateur](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
 ## Cas d’utilisation {#use-cases}
 
-En utilisant des destinations de diffusion en flux continu telles que [!DNL Azure Event Hubs], vous pouvez facilement intégrer des événements de segmentation à forte valeur ajoutée et des attributs de profil associés dans vos systèmes de choix.
+En utilisant des destinations de diffusion en continu telles que [!DNL Azure Event Hubs], vous pouvez facilement alimenter les événements de segmentation à valeur élevée et les attributs de profil associés dans vos systèmes de votre choix.
 
-Par exemple, une prospect a téléchargé un livre blanc qui les classe dans un segment &quot;forte propension à la conversion&quot;. En mappant le segment dans lequel la prospect se trouve sur la destination [!DNL Azure Event Hubs], vous recevriez ce événement dans [!DNL Azure Event Hubs]. Vous pouvez y appliquer une approche par soi-même et décrire la logique d&#39;entreprise en plus du événement, comme vous pensez qu&#39;elle fonctionne le mieux avec vos systèmes informatiques d&#39;entreprise.
+Par exemple, un prospect a téléchargé un livre blanc qui les qualifie en segment &quot;forte propension à convertir&quot;. En mappant le segment dans lequel le prospect est ajouté à la destination [!DNL Azure Event Hubs], vous recevrez cet événement dans [!DNL Azure Event Hubs]. Vous pouvez y utiliser une approche par vous-même et décrire la logique commerciale en plus de l’événement, comme vous le pensez, qui fonctionne le mieux avec vos systèmes informatiques d’entreprise.
 
-## Type d&#39;exportation {#export-type}
+## Type d&#39;export {#export-type}
 
-**Basé sur**  le profil : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom de famille), tel que choisi dans l’écran de sélection des attributs du processus [ d’activation de ](../../ui/activate-destinations.md#select-attributes)destination.
+**Basé sur un profil**  : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse email, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs du workflow d’activation de  [destination](../../ui/activate-destinations.md#select-attributes).
 
-## Connexion à la destination {#connect-destination}
+## Connexion à la destination {#connect}
 
-Voir [Flux de travaux de destination des enregistrements cloud ](./workflow.md)pour obtenir des instructions sur la connexion à vos destinations d’enregistrement cloud, y compris [!DNL Azure Event Hubs].
+Pour vous connecter à cette destination, suivez les étapes décrites dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
-Pour les destinations [!DNL Azure Event Hubs], saisissez les informations suivantes dans le processus de création de destination :
+### Paramètres de connexion {#parameters}
 
-## Étape du compte {#account-step}
+Lors de la configuration de [](../../ui/connect-destination.md) cette destination, vous devez fournir les informations suivantes :
 
-* **[!UICONTROL Clé]** de clé SAS et Clé **** SAS : Renseignez votre clé et votre nom de clé SAS. Découvrez comment vous authentifier auprès de [!DNL Azure Event Hubs] avec des clés SAS dans la [documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* **[!UICONTROL Espace de nommage]** : Remplissez votre  [!DNL Azure Event Hubs] espace de nommage. Découvrez les espaces de nommage [!DNL Azure Event Hubs] dans la [documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL SAS Key]** Name et  **[!UICONTROL SAS Key]** : Renseignez le nom et la clé de votre clé SAS. Découvrez comment vous authentifier sur [!DNL Azure Event Hubs] à l’aide de clés SAS dans la [documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Espace de noms]** : Renseignez votre  [!DNL Azure Event Hubs] espace de noms. Découvrez les [!DNL Azure Event Hubs] espaces de noms dans la [documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL Nom]** : Renseignez un nom pour la connexion à  [!DNL Azure Event Hubs].
+* **[!UICONTROL Description]** : Fournissez une description de la connexion.  Exemples : &quot;Clients Premium&quot;, &quot;Hommes intéressés par le kitesurfing&quot;.
+* **[!UICONTROL eventHubName]** : Attribuez un nom au flux vers votre  [!DNL Azure Event Hubs] destination.
 
-![Entrée requise dans l’étape du compte](../../assets/catalog/cloud-storage/event-hubs/account.png)
+## Activation des segments vers cette destination {#activate}
 
-## Étape d&#39;authentification {#authentication-step}
-
-* **[!UICONTROL Nom]** : Renseignez le nom de la connexion à  [!DNL Azure Event Hubs].
-* **[!UICONTROL Description]** : Fournissez une description de la connexion.  Exemples : &quot;Clients Premium&quot;, &quot;Hommes intéressés par le kitesurf&quot;.
-* **[!UICONTROL eventHubName]** : Attribuez un nom au flux jusqu’à votre  [!DNL Azure Event Hubs] destination.
-* **[!UICONTROL Actions]** marketing : Les actions marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des actions marketing définies par Adobe ou créer votre propre action marketing. Pour plus d’informations sur les actions marketing, voir la page [Gouvernance des données dans Adobe Experience Platform](../../../data-governance/policies/overview.md). Pour plus d&#39;informations sur les actions marketing définies par l&#39;Adobe, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
-
-![Données requises à l’étape de l’authentification](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
-
-## Activation des segments {#activate-segments}
-
-Pour obtenir des informations sur le processus d’activation des segments, voir [Activer les profils et les segments à une destination](../../ui/activate-destinations.md).
+Voir [Activation des profils et des segments vers une destination](../../ui/activate-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers des destinations.
 
 ## Données exportées {#exported-data}
 
-Vos données [!DNL Experience Platform] exportées atterrissent dans [!DNL Azure Event Hubs] au format JSON. Par exemple, le événement ci-dessous contient l’attribut profil d’adresse électronique d’une audience qui s’est qualifiée pour un certain segment et a quitté un autre segment. Les identités de cette prospect sont ECID et email.
+Vos données [!DNL Experience Platform] exportées se trouvent dans [!DNL Azure Event Hubs] au format JSON. Par exemple, l’événement ci-dessous contient l’attribut de profil d’adresse électronique d’une audience qui s’est qualifiée pour un certain segment et qui a quitté un autre segment. Les identités de ce prospect sont ECID et email.
 
 ```json
 {
@@ -109,7 +101,7 @@ Vos données [!DNL Experience Platform] exportées atterrissent dans [!DNL Azure
 
 >[!MORELIKETHIS]
 >
->* [Se connecter aux concentrateurs de Événement Azure et activer les données à l&#39;aide de l&#39;API Flow Service](../../api/streaming-destinations.md)
+>* [Connectez-vous à Azure Event Hubs et activez les données à l’aide de l’API Flow Service](../../api/streaming-destinations.md)
 * [Destination AWS Kinesis](./amazon-kinesis.md)
 * [Types et catégories de destination](../../destination-types.md)
 
