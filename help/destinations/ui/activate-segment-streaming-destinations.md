@@ -1,0 +1,176 @@
+---
+keywords: activation des destinations de diffusion en continu de segments ; activation des destinations de diffusion en continu de segments ; activation des données
+title: Activation des données d’audience vers des destinations d’exportation de segments par flux
+type: Tutorial
+seo-title: Activation des données d’audience vers des destinations d’exportation de segments par flux
+description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de diffusion en continu de segments.
+seo-description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de diffusion en continu de segments.
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+workflow-type: tm+mt
+source-wordcount: '1145'
+ht-degree: 4%
+
+---
+
+
+# Activation des données d’audience vers des destinations d’exportation de segments par flux
+
+## Présentation {#overview}
+
+Cet article explique le workflow requis pour activer les données d’audience dans les destinations de diffusion en continu de segments Adobe Experience Platform.
+
+## Conditions préalables {#prerequisites}
+
+Pour activer les données vers les destinations, vous devez être [connecté à une destination](./connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [catalogue des destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser.
+
+## Sélectionner votre destination {#select-destination}
+
+1. Accédez à **[!UICONTROL Connexions > Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Parcourir]**.
+
+   ![Onglet Parcourir la destination](../assets/ui/activate-segment-streaming-destinations/browse-tab.png)
+
+1. Sélectionnez le bouton **[!UICONTROL Ajouter des segments]** correspondant à la destination vers laquelle vous souhaitez activer vos segments, comme illustré dans l’image ci-dessous.
+
+   ![Boutons Activer](../assets/ui/activate-segment-streaming-destinations/activate-buttons-browse.png)
+
+1. Passez à la section suivante pour [sélectionner vos segments](#select-segments).
+
+## Sélection de vos segments {#select-segments}
+
+Utilisez les cases à cocher situées à gauche des noms de segment pour sélectionner les segments que vous souhaitez activer vers la destination, puis sélectionnez **[!UICONTROL Suivant]**.
+
+![Sélection de segments](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
+
+## Mise en correspondance des attributs et des identités {#mapping}
+
+>[!IMPORTANT]
+>
+>Cette étape s’applique uniquement à certaines destinations de diffusion en continu de segments. Si vos destinations ne comportent pas d’étape **[!UICONTROL Mapping]**, passez à [Planification de l’exportation de segments](#scheduling).
+
+Certaines destinations de diffusion en continu de segments nécessitent que vous sélectionniez des attributs source ou des espaces de noms d’identité à mapper en tant qu’identités cibles dans la destination.
+
+1. Dans la page **[!UICONTROL Mapping]** , sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**.
+
+   ![Ajouter un nouveau mappage](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
+
+1. Sélectionnez la flèche située à droite de l&#39;entrée **[!UICONTROL Champ source]**.
+
+   ![Sélectionner le champ source](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
+
+1. Dans la page **[!UICONTROL Sélectionner le champ source]** , utilisez les options **[!UICONTROL Sélectionner les attributs]** ou **[!UICONTROL Sélectionner l’espace de noms de l’identité]** pour basculer entre les deux catégories de champs sources disponibles. Dans les [!DNL XDM] attributs de profil et espaces de noms d’identité disponibles, sélectionnez ceux que vous souhaitez mapper à la destination, puis choisissez **[!UICONTROL Sélectionner]**.
+
+   ![Sélectionner la page du champ source](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+
+1. Sélectionnez le bouton situé à droite de l’entrée **[!UICONTROL Champ cible]**.
+
+   ![Sélectionner le champ cible](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
+
+1. Dans la page **[!UICONTROL Sélectionner un champ cible]** , sélectionnez l’espace de noms d’identité cible auquel vous souhaitez mapper le champ source, puis sélectionnez **[!UICONTROL Sélectionner]**.
+
+   ![Sélectionner la page de champ cible](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
+
+1. Pour ajouter d’autres mappages, répétez les étapes 1 à 5.
+
+### Exemple de mappage : activation des données d’audience dans [!DNL Facebook Custom Audience] {#example-facebook}
+
+Vous trouverez ci-dessous un exemple de mappage d’identité correct lors de l’activation des données d’audience dans [!DNL Facebook Custom Audience].
+
+Sélection des champs sources :
+
+* Sélectionnez l’espace de noms `Email` comme identité source si les adresses électroniques que vous utilisez ne sont pas hachées.
+* Sélectionnez l’espace de noms `Email_LC_SHA256` comme identité source si vous avez haché les adresses électroniques du client lors de l’ingestion des données dans [!DNL Platform], conformément aux [!DNL Facebook] [exigences de hachage des emails](../catalog/social/facebook.md#email-hashing-requirements).
+* Sélectionnez l’espace de noms `PHONE_E.164` comme identité source si vos données se composent de numéros de téléphone non hachés. [!DNL Platform] hachera les numéros de téléphone pour se conformer aux  [!DNL Facebook] exigences.
+* Sélectionnez l’espace de noms `Phone_SHA256` comme identité source si vous avez haché des numéros de téléphone lors de l’ingestion de données dans [!DNL Platform], conformément aux [!DNL Facebook] [exigences de hachage des numéros de téléphone](../catalog/social/facebook.md#phone-number-hashing-requirements).
+* Sélectionnez l’espace de noms `IDFA` comme identité source si vos données se composent d’identifiants d’appareil [!DNL Apple].
+* Sélectionnez l’espace de noms `GAID` comme identité source si vos données se composent d’identifiants d’appareil [!DNL Android].
+* Sélectionnez l’espace de noms `Custom` comme identité source si vos données sont composées d’autres types d’identifiants.
+
+Sélection des champs cibles :
+
+* Sélectionnez l’espace de noms `Email_LC_SHA256` comme identité cible lorsque vos espaces de noms source sont `Email` ou `Email_LC_SHA256`.
+* Sélectionnez l’espace de noms `Phone_SHA256` comme identité cible lorsque vos espaces de noms source sont `PHONE_E.164` ou `Phone_SHA256`.
+* Sélectionnez les espaces de noms `IDFA` ou `GAID` comme identité cible lorsque vos espaces de noms source sont `IDFA` ou `GAID`.
+* Sélectionnez l’espace de noms `Extern_ID` comme identité cible lorsque l’espace de noms source est personnalisé.
+
+>[!IMPORTANT]
+>
+>Les données des espaces de noms non hachés sont automatiquement hachées par [!DNL Platform] lors de l’activation.
+> 
+>Les données de la source d’attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l&#39;option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l&#39;activation.
+
+![Mappage des identités](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+
+### Exemple de mappage : activation des données d’audience dans [!DNL Google Customer Match] {#example-gcm}
+
+Il s’agit d’un exemple de mappage d’identité correct lors de l’activation des données d’audience dans [!DNL Google Customer Match].
+
+Sélection des champs sources :
+
+* Sélectionnez l’espace de noms `Email` comme identité source si les adresses électroniques que vous utilisez ne sont pas hachées.
+* Sélectionnez l’espace de noms `Email_LC_SHA256` comme identité source si vous avez haché les adresses électroniques du client lors de l’ingestion des données dans [!DNL Platform], conformément aux [!DNL Google Customer Match] [exigences de hachage des emails](../catalog/social/../advertising/google-customer-match.md).
+* Sélectionnez l’espace de noms `PHONE_E.164` comme identité source si vos données se composent de numéros de téléphone non hachés. [!DNL Platform] hachera les numéros de téléphone pour se conformer aux  [!DNL Google Customer Match] exigences.
+* Sélectionnez l’espace de noms `Phone_SHA256_E.164` comme identité source si vous avez haché des numéros de téléphone lors de l’ingestion de données dans [!DNL Platform], conformément aux [!DNL Facebook] [exigences de hachage des numéros de téléphone](../catalog/social/../advertising/google-customer-match.md).
+* Sélectionnez l’espace de noms `IDFA` comme identité source si vos données se composent d’identifiants d’appareil [!DNL Apple].
+* Sélectionnez l’espace de noms `GAID` comme identité source si vos données se composent d’identifiants d’appareil [!DNL Android].
+* Sélectionnez l’espace de noms `Custom` comme identité source si vos données sont composées d’autres types d’identifiants.
+
+Sélection des champs cibles :
+
+* Sélectionnez l’espace de noms `Email_LC_SHA256` comme identité cible lorsque vos espaces de noms source sont `Email` ou `Email_LC_SHA256`.
+* Sélectionnez l’espace de noms `Phone_SHA256_E.164` comme identité cible lorsque vos espaces de noms source sont `PHONE_E.164` ou `Phone_SHA256_E.164`.
+* Sélectionnez les espaces de noms `IDFA` ou `GAID` comme identité cible lorsque vos espaces de noms source sont `IDFA` ou `GAID`.
+* Sélectionnez l’espace de noms `User_ID` comme identité cible lorsque l’espace de noms source est personnalisé.
+
+![Mappage des identités](../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+
+Les données des espaces de noms non hachés sont automatiquement hachées par [!DNL Platform] lors de l’activation.
+
+Les données de la source d’attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l&#39;option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l&#39;activation.
+
+![Transformation du mapping des identités](../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+
+## Planification de l’exportation de segments {#scheduling}
+
+1. Sur la page **[!UICONTROL Planification du segment]** , sélectionnez chaque segment, puis utilisez les sélecteurs **[!UICONTROL Date de début]** et **[!UICONTROL Date de fin]** pour configurer l’intervalle d’envoi des données à votre destination.
+
+   ![Planification du segment](../assets/ui/activate-segment-streaming-destinations/segment-schedule.png)
+
+   * Pour certaines destinations, vous devez sélectionner **[!UICONTROL Origine de l’audience]** pour chaque segment, à l’aide du menu déroulant situé sous les sélecteurs de calendrier. Si votre destination n’inclut pas ce sélecteur, ignorez cette étape.
+
+      ![ID de mappage](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+
+   * Certaines destinations nécessitent que vous mappiez manuellement des segments [!DNL Platform] à leur contrepartie dans la destination cible. Pour ce faire, sélectionnez chaque segment, puis saisissez l’identifiant de segment correspondant à partir de la plateforme de destination dans le champ **[!UICONTROL Identifiant du mappage]** . Si votre destination n’inclut pas ce champ, ignorez cette étape.
+
+      ![ID de mappage](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+
+   * Certaines destinations nécessitent que vous saisissiez un **[!UICONTROL ID d’application]** lors de l’activation de segments [!DNL IDFA] ou [!DNL GAID]. Si votre destination n’inclut pas ce champ, ignorez cette étape.
+
+      ![ID d’application](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
+
+1. Sélectionnez **[!UICONTROL Suivant]** pour accéder à la page [!UICONTROL Révision].
+
+## Révision {#review}
+
+Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre sélection. Sélectionnez **[!UICONTROL Annuler]** pour interrompre le flux, **[!UICONTROL Précédent]** pour modifier vos paramètres ou **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer les données à la destination.
+
+>[!IMPORTANT]
+>
+>Au cours de cette étape, Adobe Experience Platform recherche les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation d’une stratégie. Vous ne pouvez pas terminer le workflow d’activation du segment tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la manière de résoudre les violations de stratégie, voir [Application de la stratégie](../../rtcdp/privacy/data-governance-overview.md#enforcement) dans la section de documentation sur la gouvernance des données.
+
+![violation de la politique de données](../assets/common/data-policy-violation.png)
+
+Si aucune violation de stratégie n’a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer les données à la destination.
+
+![Révision](../assets/ui/activate-segment-streaming-destinations/review.png)
+
+## Vérification de l’activation des segments {#verify}
+
+Vérifiez votre compte de destination. Si l’activation a réussi, les audiences sont renseignées dans votre plateforme de destination.
+
+<!-- 
+For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
+
+>[!TIP]
+>
+>The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications are sent to [!DNL Facebook] when you activate the segments to the destination.
+-->
