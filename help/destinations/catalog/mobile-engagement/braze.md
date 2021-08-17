@@ -3,10 +3,10 @@ keywords: mobile; le braquage; la messagerie;
 title: Connexion de frein
 description: Braze est une plateforme d’engagement client complète qui optimise les expériences pertinentes et mémorables entre les clients et les marques qu’ils aiment.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 66c3e81dfdbf6f6c3ff9a127fbca8943c0e32279
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 4%
+source-wordcount: '789'
+ht-degree: 2%
 
 ---
 
@@ -34,7 +34,7 @@ Notez les détails suivants qui sont spécifiques à la destination [!DNL Braze]
 >
 >Gardez à l’esprit que l’envoi d’attributs personnalisés supplémentaires à [!DNL Braze] peut entraîner une augmentation de la consommation de vos points de données [!DNL Braze]. Consultez votre gestionnaire de compte [!DNL Braze] avant d’envoyer des attributs personnalisés supplémentaires.
 
-## Cas d’utilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 En tant que marketeur, je souhaite cibler les utilisateurs dans une destination d’engagement mobile, avec des segments créés dans [!DNL Adobe Experience Platform]. En outre, je souhaite leur fournir des expériences personnalisées, en fonction des attributs de leurs profils [!DNL Adobe Experience Platform], dès que les segments et les profils sont mis à jour dans [!DNL Adobe Experience Platform].
 
@@ -46,42 +46,29 @@ En tant que marketeur, je souhaite cibler les utilisateurs dans une destination 
 |---|---|---|
 | external_id | Identifiant [!DNL Braze] personnalisé qui prend en charge le mappage de n’importe quelle identité. | Vous pouvez envoyer n’importe quelle [identité](../../../identity-service/namespaces.md) à la destination [!DNL Braze] tant que vous la mappez à la [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
-## Type d’exportation {#export-type}
+## Type d&#39;export {#export-type}
 
 **[!DNL Profile-based]** - vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom) et/ou identités, en fonction du mappage de vos champs.
 [!DNL Adobe Experience Platform] les segments sont exportés vers  [!DNL Braze] sous l’ `AdobeExperiencePlatformSegments` attribut .
 
-## Se connecter à la destination {#connect-destination}
+## Connexion à la destination {#connect}
 
-Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez [!DNL Braze], puis **[!UICONTROL Configurer]**.
+Pour vous connecter à cette destination, suivez les étapes décrites dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
-![Configuration de la destination de bloc](../../assets/catalog/mobile-engagement/braze/configure.png)
+### Paramètres de connexion {#parameters}
 
->[!NOTE]
->
->Si une connexion avec cette destination existe déjà, vous pouvez voir un bouton **[!UICONTROL Activer]** sur la carte de destination. Pour plus d’informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../../ui/destinations-workspace.md#catalog) de la documentation de l’espace de travail de destination.
->
->![Activation de la destination de braquage](../../assets/catalog/mobile-engagement/braze/activate.png)
+Lors de la configuration de [](../../ui/connect-destination.md) cette destination, vous devez fournir les informations suivantes :
 
-À l’étape [!UICONTROL Compte] , vous devez fournir votre jeton de compte [!DNL Braze]. Il s’agit de votre clé [!DNL Braze] [!DNL API]. Vous trouverez des instructions détaillées sur la manière d’obtenir votre clé [!DNL API] ici : [Présentation de la clé API REST](https://www.braze.com/docs/api/api_key/). Saisissez le jeton et cliquez sur **[!UICONTROL Se connecter à la destination]**.
-
-![Étape du compte de destination du braquage](../../assets/catalog/mobile-engagement/braze/account.png)
-
-Cliquez sur **[!UICONTROL Suivant]**. À l’étape [!UICONTROL Authentification], vous devez saisir les détails de la connexion [!DNL Braze] :
+* **[!UICONTROL Jeton de compte de braquage]** : C&#39;est ta  [!DNL Braze] [!DNL API] clé. Vous trouverez des instructions détaillées sur la manière d’obtenir votre clé [!DNL API] ici : [Présentation de la clé API REST](https://www.braze.com/docs/api/api_key/).
 * **[!UICONTROL Nom]** : saisissez un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : saisissez une description qui vous aidera à identifier cette destination ultérieurement.
 * **[!UICONTROL Instance]** de point d’entrée : demandez à votre  [!DNL Braze] représentant l’instance de point d’entrée que vous devez utiliser.
-* **[!UICONTROL Action]** marketing : les actions marketing indiquent l’intention pour laquelle les données seront exportées vers la destination. Vous pouvez effectuer un choix parmi des actions marketing définies par l’Adobe ou créer votre propre action marketing. Pour plus d’informations sur les actions marketing, consultez la page [Gouvernance des données dans Adobe Experience Platform](../../../data-governance/policies/overview.md) . Pour plus d’informations sur les actions marketing définies par l’Adobe, consultez la [Présentation des stratégies d’utilisation des données](../../../data-governance/policies/overview.md).
 
-![Étape d’authentification de Braquer](../../assets/catalog/mobile-engagement/braze/authentication.png)
+## Activation des segments vers cette destination {#activate}
 
-Cliquez sur **[!UICONTROL Créer une destination]**. Votre destination est maintenant créée. Vous pouvez cliquer sur **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement. Vous pouvez également sélectionner **[!UICONTROL Suivant]** pour poursuivre le workflow et sélectionner les segments à activer. Dans les deux cas, reportez-vous à la section suivante, [Activate Segments](#activate-segments), pour le reste du workflow.
+Voir [Activation des profils et des segments vers une destination](../../ui/activate-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers des destinations.
 
-## Activation des segments {#activate-segments}
-
-Pour obtenir des informations sur le processus d’activation des segments, voir [Activer les profils et les segments à une destination](../../ui/activate-destinations.md#select-attributes).
-
-## Mappage des champs {#field-mapping}
+## Considérations relatives au mappage {#mapping-considerations}
 
 Pour envoyer correctement les données d’audience de [!DNL Adobe Experience Platform] vers la destination [!DNL Braze], vous devez passer par l’étape de mappage des champs.
 
@@ -135,7 +122,7 @@ Supposons que votre schéma de profil XDM et votre instance [!DNL Braze] contien
 |  | Schéma de profil XDM | [!DNL Braze] Instance |
 |---|---|---|
 | Attributs | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>FirstName</code></li><li>LastName</code></li><li>PhoneNumber</code></li></ul> |
-| Identités | <ul><li>E-mail</code></li><li>Identifiant Google Ad (GAID)</code></li><li>Identifiant Apple Pour Les Annonceurs (IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
+| Identités | <ul><li>Email</code></li><li>Identifiant Google Ad (GAID)</code></li><li>Identifiant Apple Pour Les Annonceurs (IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
 
 Le mappage correct se présente comme suit :
 
@@ -145,6 +132,6 @@ Le mappage correct se présente comme suit :
 
 Pour vérifier si les données ont bien été exportées vers la destination [!DNL Braze], vérifiez votre compte [!DNL Braze]. [!DNL Adobe Experience Platform] les segments sont exportés vers  [!DNL Braze] sous l’ `AdobeExperiencePlatformSegments` attribut .
 
-## Utilisation des données et gouvernance {#data-usage-governance}
+## Utilisation et gouvernance des données {#data-usage-governance}
 
 Toutes les destinations [!DNL Adobe Experience Platform] sont conformes aux politiques d’utilisation des données lors de la gestion de vos données. Pour plus d’informations sur la façon dont [!DNL Adobe Experience Platform] applique la gouvernance des données, voir [Présentation de la gouvernance des données](../../../data-governance/home.md).
