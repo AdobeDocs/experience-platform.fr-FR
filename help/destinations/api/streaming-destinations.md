@@ -6,9 +6,9 @@ description: Ce document couvre la création de destinations de diffusion en con
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '2024'
+source-wordcount: '2025'
 ht-degree: 53%
 
 ---
@@ -25,7 +25,7 @@ Ce tutoriel utilise la destination [!DNL Amazon Kinesis] dans tous les exemples,
 
 ![Présentation : étapes de création d’une destination de diffusion en continu et d’activation des segments](../assets/api/streaming-destination/overview.png)
 
-Si vous préférez utiliser l’interface utilisateur de Platform pour vous connecter à une destination et activer des données, consultez les tutoriels [Connexion d’une destination](../ui/connect-destination.md) et [Activation des profils et des segments vers une destination](../ui/activate-destinations.md).
+Si vous préférez utiliser l’interface utilisateur de Platform pour vous connecter à une destination et activer des données, consultez les tutoriels [Connexion d’une destination](../ui/connect-destination.md) et [Activation des données d’audience vers des destinations d’exportation de segments en continu](../ui/activate-segment-streaming-destinations.md) .
 
 ## Prise en main
 
