@@ -1,37 +1,36 @@
 ---
 keywords: modifier l’activation, modifier la destination, modifier la destination
-title: Modifier les flux d'activation
+title: Modification des flux d’activation
 type: Tutorial
-seo-title: Modifier les flux d'activation
-description: Suivez les étapes décrites dans cet article pour modifier un flux d’activations existant dans Adobe Experience Platform.
-seo-description: Suivez les étapes décrites dans cet article pour modifier un flux d’activations existant dans Adobe Experience Platform.
+seo-title: Modification des flux d’activation
+description: Suivez les étapes de cet article pour modifier un flux d’activation existant dans Adobe Experience Platform.
+seo-description: Suivez les étapes de cet article pour modifier un flux d’activation existant dans Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-translation-type: tm+mt
-source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '191'
 ht-degree: 1%
 
 ---
 
-# Modifier les flux d&#39;activation {#edit-activation-flows}
+# Modification des flux d’activation {#edit-activation-flows}
 
-Suivez les étapes ci-dessous pour modifier les flux d’activation existants dans Adobe Experience Platform :
+Pour modifier les flux d’activation existants dans Adobe Experience Platform, procédez comme suit :
 
-1. Connectez-vous à l&#39;[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur pour vue de vos destinations existantes.
+1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur pour afficher vos destinations existantes.
 
    ![Parcourir les destinations](../assets/ui/edit-activation/browse-destinations.png)
 
 2. Sélectionnez l’icône de filtre ![Icône de filtre](../assets/ui/edit-activation/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
 
-   ![Filtrer les destinations](../assets/ui/edit-activation/filter-destinations.png)
+   ![Filtrage des destinations](../assets/ui/edit-activation/filter-destinations.png)
 
-3. Sélectionnez le nom de la destination à modifier.
+3. Sélectionnez le nom de la destination que vous souhaitez modifier.
 
    ![Sélectionner la destination](../assets/ui/edit-activation/destination-select.png)
 
-4. La page de détails de la destination s’affiche, avec les commandes disponibles. Sélectionnez **[!UICONTROL Activer]** dans le rail de droite pour modifier les segments à envoyer à la destination.
+4. La page de détails de la destination s’affiche, affichant ses commandes disponibles. Sélectionnez **[!UICONTROL Activer]** dans le rail de droite pour modifier les segments à envoyer à la destination.
 
    ![Détails de la destination](../assets/ui/edit-activation/destination-details.png)
 
-5. Consultez [Activer les profils et les segments vers une destination](activate-destinations.md) pour plus d&#39;informations sur la façon d&#39;activer les nouveaux segments.
+5. Voir [Présentation de l’activation](activation-overview.md) pour plus d’informations sur l’activation des nouveaux segments.
