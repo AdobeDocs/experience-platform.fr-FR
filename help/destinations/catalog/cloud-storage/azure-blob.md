@@ -3,10 +3,10 @@ keywords: Azure Blob;destination Blob;s3;destination blob Azure
 title: Connexion Azure Blob
 description: Créez une connexion sortante active à votre stockage Azure Blob pour exporter périodiquement des fichiers de données CSV ou délimités par des tabulations à partir de Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 13%
+source-wordcount: '400'
+ht-degree: 14%
 
 ---
 
@@ -25,13 +25,13 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [Tutoriel](../../../xdm/tutorials/create-schema-ui.md) de l’éditeur de schémas : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [[!DNL Real-time Customer Profile]](../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
-Si vous disposez déjà d’une destination [!DNL Blob] valide, vous pouvez ignorer le reste de ce document et passer au tutoriel sur [l’activation des segments vers votre destination](../../ui/activate-destinations.md).
+Si vous disposez déjà d’une destination [!DNL Blob] valide, vous pouvez ignorer le reste de ce document et passer au tutoriel sur [l’activation des segments vers votre destination](../../ui/activate-batch-profile-destinations.md).
 
 ## Formats de fichiers pris en charge {#file-formats}
 
 [!DNL Experience Platform] prend en charge le format de fichier suivant à exporter vers  [!DNL Blob]:
 
-* Valeurs séparées par des délimiteurs (DSV) : La prise en charge des fichiers de données au format DSV est actuellement limitée aux valeurs séparées par des virgules. La prise en charge des fichiers DSV généraux sera assurée à l’avenir. Pour plus d’informations sur les fichiers pris en charge, consultez la section relative à l’espace de stockage dans le cloud du tutoriel sur l’[activation des destinations](../../ui/activate-destinations.md#esp-and-cloud-storage).
+* Valeurs séparées par des délimiteurs (DSV) : La prise en charge des fichiers de données au format DSV est actuellement limitée aux valeurs séparées par des virgules. La prise en charge des fichiers DSV généraux sera assurée à l’avenir.
 
 ## Connexion à la destination {#connect}
 
@@ -54,4 +54,4 @@ Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajout
 
 ## Activation des segments vers cette destination {#activate}
 
-Voir [Activation des profils et des segments vers une destination](../../ui/activate-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers des destinations.
+Voir [Activation des données d’audience vers les destinations d’exportation de profil de lot](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
