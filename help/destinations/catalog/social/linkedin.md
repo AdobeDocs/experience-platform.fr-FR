@@ -3,10 +3,10 @@ keywords: connexion linkedin;connexion linkedin;destinations linkedin;linkedin;
 title: Connexion à des audiences mises en correspondance Linkedin
 description: Activez les profils de vos campagnes LinkedIn pour le ciblage, la personnalisation et la suppression des audiences, en fonction des courriers électroniques hachés.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 8ec6f1eb38f4865daaa4fe4cd749a9014742dce6
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '677'
-ht-degree: 5%
+source-wordcount: '766'
+ht-degree: 4%
 
 ---
 
@@ -18,7 +18,7 @@ Activez les profils de vos campagnes [!DNL LinkedIn] pour le ciblage, la personn
 
 ![Destination linkedIn dans l’interface utilisateur de Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
 
-## Cas d’utilisation
+## Cas d&#39;utilisation
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination [!DNL LinkedIn Matched Audiences], voici un cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette fonctionnalité.
 
@@ -35,7 +35,7 @@ Une société de logiciels organise une conférence et souhaite rester en contac
 | email_lc_sha256 | Adresses électroniques hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA256. Suivez les instructions de la section [Exigences de correspondance des ID](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour le texte brut et les courriers électroniques hachés, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l&#39;option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l&#39;activation. |
 
 
-## Type d’exportation {#export-type}
+## Type d&#39;export {#export-type}
 
 **Exportation de segments**  : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone et autres) utilisés dans la  [!DNL LinkedIn Matched Audiences] destination.
 
@@ -59,12 +59,12 @@ Pour en savoir plus sur l’ingestion d’adresses électroniques dans Experienc
 
 Si vous choisissez de hacher vous-même les adresses électroniques, veillez à respecter les exigences suivantes :
 
-- Corrigez tous les espaces de début et de fin de la chaîne de courrier électronique. Par exemple : `johndoe@example.com` et non `<space>johndoe@example.com<space>`;
-- Lors du hachage des chaînes d’email, veillez à mettre la chaîne en minuscules par hachage.
-   - Exemple : `example@email.com` et non `EXAMPLE@EMAIL.COM`;
-- Assurez-vous que la chaîne hachée est entièrement en minuscules.
-   - Exemple : `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149` et non `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
-- Ne salez pas la chaîne.
+* Corrigez tous les espaces de début et de fin de la chaîne de courrier électronique. Par exemple : `johndoe@example.com` et non `<space>johndoe@example.com<space>`;
+* Lors du hachage des chaînes d’email, veillez à mettre la chaîne en minuscules par hachage.
+   * Exemple : `example@email.com` et non `EXAMPLE@EMAIL.COM`;
+* Assurez-vous que la chaîne hachée est entièrement en minuscules.
+   * Exemple : `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149` et non `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
+* Ne salez pas la chaîne.
 
 >[!NOTE]
 >
@@ -77,17 +77,29 @@ Si vous choisissez de hacher vous-même les adresses électroniques, veillez à 
 
 ![Transformation du mapping des identités](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-## Se connecter à la destination {#connect-destination}
+## Connexion à la destination {#connect}
 
-Pour vous connecter à la destination [!DNL LinkedIn Matched Audiences], voir [Processus d’authentification des destinations sociales](./workflow.md).
+Pour vous connecter à cette destination, suivez les étapes décrites dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
 La vidéo ci-dessous présente également les étapes de configuration d’une destination [!DNL LinkedIn Matched Audiences] et d’activation de segments.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
-## Activation des segments vers [!DNL LinkedIn Matched Audiences] {#activate-segments}
+>[!NOTE]
+>
+>L’interface utilisateur de l’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous au [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
-Pour plus d’informations sur l’activation des segments vers [!DNL LinkedIn Matched Audiences], voir [Activation des données vers les destinations](../../ui/activate-destinations.md).
+### Paramètres de connexion {#parameters}
+
+Lors de la configuration de [](../../ui/connect-destination.md) cette destination, vous devez fournir les informations suivantes :
+
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination ultérieurement.
+* **[!UICONTROL ID]** du compte : votre  [!DNL LinkedIn Campaign Manager Account ID]. Vous pouvez trouver cet ID dans votre compte [!DNL LinkedIn Campaign Manager].
+
+## Activation des segments vers cette destination {#activate}
+
+Voir [Activation des profils et des segments vers une destination](../../ui/activate-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers des destinations.
 
 ## Données exportées {#exported-data}
 
