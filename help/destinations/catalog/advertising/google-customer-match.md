@@ -3,10 +3,10 @@ keywords: correspondance client Google;correspondance client Google;correspondan
 title: Connexion à la correspondance client Google
 description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 8a521b2b846c953b74b8e48fb76b94966a652318
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 4%
+source-wordcount: '1250'
+ht-degree: 1%
 
 ---
 
@@ -106,54 +106,32 @@ Avant de pouvoir utiliser l’espace de noms `User_ID` pour envoyer des données
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
 
-## Configuration de la destination : présentation vidéo {#video}
+<!-- ## Configure destination - video walkthrough {#video}
 
-La vidéo ci-dessous présente les étapes de configuration d’une destination sociale et d’activation de segments. La vidéo utilise LinkedIn comme exemple, mais les étapes sont similaires sur toutes les destinations sociales, y compris [!DNL Google Customer Match]. Les étapes de la vidéo sont également présentées de manière séquentielle dans les sections suivantes.
+The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
-## Se connecter à la destination {#connect-destination}
+## Connexion à la destination {#connect}
 
-Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**, faites défiler l’écran jusqu’à la catégorie **[!UICONTROL Publicité]**. Sélectionnez [!DNL Google Customer Match], puis **[!UICONTROL Configurer]**.
+Pour vous connecter à cette destination, suivez les étapes décrites dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
-![Connexion à la destination de correspondance client Google](../../assets/catalog/advertising/google-customer-match/connect.png)
+### Paramètres de connexion {#parameters}
 
->[!NOTE]
->
->Si une connexion avec cette destination existe, vous pouvez voir un bouton **[!UICONTROL Activer]** sur la carte de destination. Pour plus d’informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../../ui/destinations-workspace.md#catalog) de la documentation de l’espace de travail de destination.
+Lors de la configuration de [](../../ui/connect-destination.md) cette destination, vous devez fournir les informations suivantes :
 
-À l’étape **Compte**, si vous aviez auparavant configuré une connexion à votre destination [!DNL Google Customer Match], sélectionnez **[!UICONTROL Compte existant]** et sélectionnez votre connexion existante. Vous pouvez également sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à [!DNL Google Customer Match]. Pour vous connecter et connecter Adobe Experience Cloud à votre compte [!DNL Google Ad], sélectionnez **[!UICONTROL Se connecter à la destination]**.
-
->[!NOTE]
->
->Experience Platform prend en charge la validation des informations d’identification dans le processus d’authentification. Il affiche un message d’erreur si vous saisissez des informations d’identification incorrectes pour votre compte [!DNL Google Ad], afin de vous assurer que vous ne complétez pas le workflow avec des informations d’identification incorrectes.
-
-![Connexion à la destination de correspondance client Google - étape d’authentification](../../assets/catalog/advertising/google-customer-match/connection.png)
-
-Une fois vos informations d’identification confirmées et que Adobe Experience Cloud est connecté à votre compte Google, vous pouvez sélectionner **[!UICONTROL Suivant]** pour passer à l’étape **[!UICONTROL Authentification]** .
-
-![Informations d’identification confirmées](../../assets/catalog/advertising/google-customer-match/connection-success.png)
-
-À l’étape **[!UICONTROL Authentification]**, saisissez un **[!UICONTROL Nom]** et une **[!UICONTROL Description]** pour votre flux d’activation et renseignez votre **[!UICONTROL ID de compte Google]**.
-
-Au cours de cette étape, vous pouvez également sélectionner toute **[!UICONTROL action marketing]** qui s’applique à cette destination. Les actions marketing indiquent l’intention pour laquelle les données sont exportées vers la destination. Vous pouvez effectuer un choix parmi des actions marketing définies par l’Adobe ou créer votre propre action marketing. Pour plus d’informations sur les actions marketing, consultez la [Présentation des stratégies d’utilisation des données](../../../data-governance/policies/overview.md).
-
-Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
+* **[!UICONTROL Nom]** : fournir un nom pour cette connexion de destination ;
+* **[!UICONTROL Description]** : fournir une description pour cette connexion de destination ;
+* **[!UICONTROL ID]** du compte : votre ID client Google. Le format de l’ID est xxx-xxx-xxxx.
 
 >[!IMPORTANT]
 >
 > * L’action marketing **[!UICONTROL Combiner avec les PII]** est sélectionnée par défaut pour la destination [!DNL Google Customer Match] et ne peut pas être supprimée.
-> * Pour les destinations [!DNL Google Customer Match]. **[!UICONTROL L’]** ID de compte est votre ID client avec Google. Le format de l’ID est xxx-xxx-xxxx.
 
 
-![Connexion à la correspondance client Google - étape d’authentification](../../assets/catalog/advertising/google-customer-match/authentication.png)
+## Activation des segments vers cette destination {#activate}
 
-Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement. Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le workflow et choisir les segments à activer. Dans les deux cas, reportez-vous à la section suivante, [Activation des segments vers [!DNL Google Customer Match]](#activate-segments), pour le reste du workflow.
-
-## Activation des segments vers [!DNL Google Customer Match] {#activate-segments}
-
-Pour plus d’informations sur l’activation des segments vers [!DNL Google Customer Match], voir [Activation des données vers les destinations](../../ui/activate-destinations.md).
-
+Voir [Activation des profils et des segments vers une destination](../../ui/activate-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers des destinations.
 
 À l’étape **[!UICONTROL Planification du segment]** , vous devez fournir l’ [!UICONTROL ID d’application] lors de l’envoi de segments [!DNL IDFA] ou [!DNL GAID] à [!DNL Google Customer Match].
 
