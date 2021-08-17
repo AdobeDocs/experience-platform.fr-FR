@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 952b2caa6983b331c046618aff255131a6480e67
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1441'
 ht-degree: 8%
 
 ---
@@ -134,7 +134,7 @@ La documentation suivante fournit d’autres ressources sur la préparation des 
 
 * [Présentation de la préparation des données](../../../../../data-prep/home.md)
 * [Fonctions de mappage de la préparation de données](../../../../../data-prep/functions.md)
-* [Mappage d’un fichier CSV à un schéma XDM et ajout de champs calculés](../../../../../ingestion/tutorials/map-a-csv-file.md#add-calculated-field)
+* [Ajouter des champs calculés](../../../../../data-prep/calculated-fields.md)
 
 ### Fournir des détails sur les flux de données
 
