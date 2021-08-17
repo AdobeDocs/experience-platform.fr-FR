@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinations d’e-mail;adobe campaign;campagne
 title: Connexion Adobe Campaign
 description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '722'
 ht-degree: 17%
 
 ---
@@ -20,7 +20,7 @@ Pour envoyer des données de segment à Adobe Campaign, vous devez d’abord [co
 
 ## Type d&#39;export {#export-type}
 
-**Basé sur un profil**  : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse email, numéro de téléphone, nom), tel que sélectionné dans l&#39;étape  **[!UICONTROL Sélectionner les]** attributs du workflow [ d&#39;activation de ](../../ui/activate-destinations.md#select-attributes)destination.
+**Basé sur un profil**  : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse email, numéro de téléphone, nom), tel que sélectionné dans l&#39;étape  **[!UICONTROL Sélectionner les]** attributs du workflow d&#39;activation de l&#39; [audience](../../ui/activate-batch-profile-destinations.md#select-attributes).
 
 ## LISTE AUTORISÉE d’adresses IP {#allow-list}
 
@@ -59,15 +59,15 @@ Lors de la configuration de [](../../ui/connect-destination.md) cette destinatio
 
 ## Activation des segments vers cette destination {#activate}
 
-Voir [Activation des profils et des segments vers une destination](../../ui/activate-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers des destinations.
+Voir [Activation des données d’audience vers les destinations d’exportation de profil de lot](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
-## Attributs de destination {#destination-attributes}
+### Attributs de destination {#destination-attributes}
 
-Lorsque [l’activation de segments](../../ui/activate-destinations.md) vers cette destination, Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination. Pour plus d’informations, voir [Sélectionner les champs de schéma à utiliser comme attributs de destination dans vos fichiers exportés](./overview.md#destination-attributes).
+Lors de l’activation des segments vers cette destination, Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination. Pour plus d’informations, reportez-vous aux [bonnes pratiques lors de l’activation d’audiences vers des destinations de marketing par e-mail](overview.md#best-practices).
 
 ## Données exportées {#exported-data}
 
-Pour les destinations [!DNL Adobe Campaign], [!DNL Platform] crée un fichier `.csv` délimité par des tabulations dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Destinations de marketing par e-mail et destinations de stockage dans le cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) dans le tutoriel sur l’activation du segment.
+Pour les destinations [!DNL Adobe Campaign], [!DNL Platform] crée un fichier `.csv` délimité par des tabulations dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Vérification de l’activation du segment](../../ui/activate-batch-profile-destinations.md#verify) dans le tutoriel sur l’activation du segment.
 
 ## Configurer l’importation des données dans Adobe Campaign {#import-data-into-campaign}
 
