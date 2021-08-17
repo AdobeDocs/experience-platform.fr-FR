@@ -1,35 +1,65 @@
 ---
-keywords: destination de l’enregistrement cloud ; enregistrement cloud
-title: Présentation des destinations d’Enregistrement dans le cloud
-description: Adobe Experience Platform peut distribuer vos segments sous forme de fichiers de données à vos emplacements d’enregistrement cloud Amazon S3, AWS Kinesis, Azure Événement Hubs ou SFTP.
-translation-type: tm+mt
-source-git-commit: 4f636de9f0cac647793564ce37c6589d096b61f7
+keywords: destination de stockage dans le cloud;espace de stockage dans le cloud
+title: Présentation des destinations de stockage dans le cloud
+description: Adobe Experience Platform peut diffuser vos segments sous forme de fichiers de données vers vos emplacements de stockage dans le cloud Amazon S3, AWS Kinesis, Azure Event Hubs ou SFTP.
+exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '162'
-ht-degree: 22%
+source-wordcount: '297'
+ht-degree: 2%
 
 ---
 
-
 # Présentation des destinations de stockage dans le cloud {#cloud-storage-destinations}
 
-Adobe Experience Platform peut distribuer vos segments sous forme de fichiers de données vers vos emplacements d’enregistrement Cloud. Vous pouvez ainsi envoyer des audiences et leurs attributs de profil à vos systèmes internes, au moyen de fichiers CSV ou délimités par des tabulations pour [!DNL Amazon S3], [!DNL Azure Blob] et SFTP. Pour les destinations [!DNL Amazon Kinesis] et [!DNL Azure Event Hubs], les données sont diffusées en flux continu en dehors de l’Experience Platform au format JSON.
+## Présentation {#overview}
 
-![Destinations des enregistrements de cloud d’Adobe](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
+Adobe Experience Platform peut fournir vos segments sous forme de fichiers de données aux emplacements de stockage dans le cloud. Vous pouvez ainsi envoyer des audiences et leurs attributs de profil à vos systèmes internes par le biais de fichiers CSV ou délimités par des tabulations pour [!DNL Amazon S3], [!DNL Azure Blob] et SFTP. Pour les destinations [!DNL Amazon Kinesis] et [!DNL Azure Event Hubs], les données sont diffusées en continu hors de l’Experience Platform au format [!DNL JSON].
 
-Pour plus d’informations sur la connexion aux destinations de stockage dans le cloud, voir [Processus de création de destinations de stockage dans le cloud](./workflow.md).
+![Destinations de stockage dans le cloud Adobe](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
-## Type d’exportation de données
+## Destinations de stockage dans le cloud prises en charge {#supported-destinations}
 
-**Exportation basée sur les profils** : vous exportez des détails sur les individus de l’audience. Ces détails sont nécessaires à la personnalisation et peuvent inclure des attributs, des événements, des adhésions aux segments, etc.
+Adobe Experience Platform prend en charge les destinations de stockage dans le cloud suivantes :
 
-## Destinations d’enregistrement de cloud disponibles
+* [Connexion à Amazon Kinesis](amazon-kinesis.md)
+* [Connexion à Amazon S3](amazon-s3.md)
+* [Connexion Azure Blob](azure-blob.md)
+* [Connexion à Azure Event Hubs](azure-event-hubs.md)
+* [Connexion SFTP](sftp.md)
 
-- [Connexion Amazon S3](./amazon-s3.md)
-- [Connexion Blob Azure](./azure-blob.md)
-- [Connexion SFTP](./sftp.md)
+## Connexion à une nouvelle destination de stockage dans le cloud {#connect-destination}
 
-## Destinations de diffusion en continu de l’enregistrement cloud disponibles
+Pour envoyer des segments aux destinations de stockage dans le cloud pour vos campagnes, Platform doit d’abord se connecter à la destination. Pour plus d’informations sur la configuration d’une nouvelle destination, consultez le [tutoriel sur la création de destination](../../ui/connect-destination.md) .
 
-- [Connexion Amazon](./amazon-kinesis.md)
-- [Connexion à Azure Événement Hubs](./azure-event-hubs.md)
+
+## Utilisation de macros pour créer un dossier à l’emplacement de stockage {#use-macros}
+
+>[!NOTE]
+>
+> Les fonctionnalités décrites dans cette section sont actuellement disponibles uniquement pour les destinations [Amazon S3](amazon-s3.md).
+
+Pour créer un dossier personnalisé par fichier de segment à l’emplacement de stockage, vous pouvez utiliser des macros dans le champ d’entrée Chemin du dossier. Insérez les macros à la fin du champ de saisie, comme illustré ci-dessous.
+
+![Utilisation des macros pour créer un dossier dans votre stockage](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
+
+Les exemples ci-dessous font référence à un exemple de segment `Luxury Audience` avec l’ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+
+**Macro 1 :`%SEGMENT_NAME%`**
+
+Entrée : `acme/campaigns/2021/%SEGMENT_NAME%`
+Chemin du dossier dans l’emplacement de stockage : `acme/campaigns/2021/Luxury Audience`
+
+**Macro 2 :`%SEGMENT_ID%`**
+
+Entrée : `acme/campaigns/2021/%SEGMENT_ID%`
+Chemin du dossier dans l’emplacement de stockage : `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+**Macro 3 :`%SEGMENT_NAME%/%SEGMENT_ID%`**
+
+Entrée : `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
+Chemin du dossier dans l’emplacement de stockage : `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+## Type d’exportation de données {#export-type}
+
+Les destinations de stockage dans le cloud prennent en charge **l’exportation basée sur les profils**. Cela signifie que vous exportez des détails sur les individus de l’audience. Ces détails sont nécessaires à la personnalisation et peuvent inclure des attributs, des événements, des appartenances à des segments, etc.
