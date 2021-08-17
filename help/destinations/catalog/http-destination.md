@@ -1,86 +1,70 @@
 ---
-keywords: diffusion en continu ;
+keywords: diffusion en continu;
 title: Connexion HTTP
 description: La destination HTTP dans Adobe Experience Platform vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 8%
+source-wordcount: '361'
+ht-degree: 9%
 
 ---
-
 
 # (Alpha) [!DNL HTTP] connexion
 
 >[!IMPORTANT]
 >
->La destination [!DNL HTTP] dans Platform est actuellement en alpha. La documentation et les fonctionnalités peuvent changer.
+>La destination [!DNL HTTP] de Platform est actuellement en alpha. La documentation et les fonctionnalités peuvent changer.
 
 ## Présentation {#overview}
 
-La destination [!DNL HTTP] est une destination de diffusion en flux continu [!DNL Adobe Experience Platform] qui vous permet d’envoyer des données de profil à des points de terminaison tiers [!DNL HTTP].
+La destination [!DNL HTTP] est une destination de diffusion en continu [!DNL Adobe Experience Platform] qui vous permet d’envoyer des données de profil à des points de terminaison [!DNL HTTP] tiers.
 
-Pour envoyer des données de profil aux points de terminaison [!DNL HTTP], vous devez d&#39;abord vous connecter à la destination dans [[!DNL Adobe Experience Platform]](#connect-destination).
+Pour envoyer des données de profil aux points de terminaison [!DNL HTTP], vous devez d’abord vous connecter à la destination dans [[!DNL Adobe Experience Platform]](#connect-destination).
 
-## Cas d’utilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
-La destination [!DNL HTTP] est destinée aux clients qui doivent exporter des données de profil XDM et des segments d&#39;audience vers des points de terminaison génériques [!DNL HTTP].
+La destination [!DNL HTTP] est destinée aux clients qui doivent exporter les données de profil XDM et les segments d’audience vers des points de terminaison [!DNL HTTP] génériques.
 
-[!DNL HTTP] les points de terminaison peuvent être des systèmes propres aux clients ou des solutions tierces.
+[!DNL HTTP] Les points de terminaison peuvent être les systèmes des clients ou des solutions tierces.
 
-## Se connecter à la destination {#connect-destination}
+## Connexion à la destination {#connect}
 
-Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez [!DNL HTTP API], puis **[!UICONTROL Configurer]**.
+Pour vous connecter à cette destination, suivez les étapes décrites dans le [tutoriel sur la configuration des destinations](../ui/connect-destination.md).
 
-![Activer la destination HTTP](../assets/catalog/http/activate.png)
+### Paramètres de connexion {#parameters}
 
-Si une connexion avec cette destination existe déjà, vous pouvez voir un bouton **[!UICONTROL Activer]** sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../ui/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
+Lors de la configuration de [](../ui/connect-destination.md) cette destination, vous devez fournir les informations suivantes :
 
-![Activer la destination HTTP](../assets/catalog/http/connect.png)
+* **[!UICONTROL httpEndpoint]**: l’identifiant  [!DNL URL] du point de terminaison HTTP auquel vous souhaitez envoyer les données de profil.
+   * Vous pouvez éventuellement ajouter des paramètres de requête à [!UICONTROL httpEndpoint] [!DNL URL].
+* **[!UICONTROL authEndpoint]** : l’identifiant  [!DNL URL] du point de terminaison HTTP utilisé pour l’ [!DNL OAuth2] authentification.
+* **[!UICONTROL ID]** client : le  [!DNL clientID] paramètre utilisé dans les informations d’identification du  [!DNL OAuth2] client.
+* **[!UICONTROL Client Secret]** : le  [!DNL clientSecret] paramètre utilisé dans les informations d’identification du  [!DNL OAuth2] client.
 
-À l’étape [!UICONTROL Compte], vous devez définir les détails de la connexion du point de terminaison HTTP. Sélectionnez **[!UICONTROL Nouveau compte]** et saisissez les détails de la connexion pour le point de terminaison HTTP auquel vous souhaitez vous connecter.
-- **[!UICONTROL httpEndpoint]** : la fin complète  [!DNL URL] du point de terminaison HTTP auquel vous souhaitez envoyer les données du profil.
-   - Vous pouvez éventuellement ajouter des paramètres de requête à [!UICONTROL httpEndpoint] [!DNL URL].
-- **[!UICONTROL authEndpoint]** : la fin complète  [!DNL URL] du point de terminaison HTTP utilisé pour  [!DNL OAuth2] l’authentification.
-- **[!UICONTROL ID]** client : le  [!DNL clientID] paramètre utilisé dans les informations d’identification du  [!DNL OAuth2] client.
-- **[!UICONTROL Secret]** client : le  [!DNL clientSecret] paramètre utilisé dans les informations d’identification du  [!DNL OAuth2] client.
+   >[!NOTE]
+   >
+   >Seules les informations d’identification du client [!DNL OAuth2] sont actuellement prises en charge.
 
->[!NOTE]
->
->Seules les informations d’identification de client [!DNL OAuth2] sont actuellement prises en charge.
+* **[!UICONTROL Nom]** : saisissez un nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Description]** : saisissez une description qui vous aidera à identifier cette destination ultérieurement.
+* **[!UICONTROL En-têtes personnalisés]** : saisissez les en-têtes personnalisés que vous souhaitez inclure dans les appels de destination, selon le format suivant :  `header1:value1,header2:value2,...headerN:valueN`.
 
-![Connexion au point de terminaison HTTP](../assets/catalog/http/connect.png)
+   >[!IMPORTANT]
+   >
+   >L’implémentation actuelle nécessite au moins un en-tête personnalisé. Cette limitation sera résolue dans une prochaine mise à jour.
 
-Cliquez sur **[!UICONTROL Se connecter à destination]**. Une fois la connexion établie, cliquez sur **[!UICONTROL Suivant]**.
+## Activation des segments vers cette destination {#activate}
 
-À l’étape [!UICONTROL Authentification], saisissez les informations d’identification d’authentification du compte :
-- **[!UICONTROL Nom]** : entrez un nom qui vous permettra de reconnaître cette destination à l&#39;avenir.
-- **[!UICONTROL Description]** : entrez une description qui vous aidera à identifier cette destination dans le futur.
-- **[!UICONTROL En-têtes]** personnalisés : saisissez les en-têtes personnalisés à inclure dans les appels de destination, selon le format suivant :  `header1:value1,header2:value2,...headerN:valueN`.
-- **[!UICONTROL Actions]** marketing : Les actions marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des actions marketing définies par Adobe ou créer votre propre action marketing. Pour plus d’informations sur les actions marketing, voir la page [Gouvernance des données dans Adobe Experience Platform](/help/data-governance/policies/overview.md). Pour plus d&#39;informations sur les actions marketing définies par l&#39;Adobe, consultez la [Présentation des stratégies d&#39;utilisation des données](/help/data-governance/policies/overview.md).
+Voir [Activation des profils et des segments vers une destination](../ui/activate-destinations.md#select-attributes) pour obtenir des instructions sur l’activation des segments d’audience vers des destinations.
 
->[!IMPORTANT]
->
->L’implémentation actuelle requiert au moins un en-tête personnalisé. Cette limitation sera résolue dans une prochaine mise à jour.
+## Attributs de destination {#attributes}
 
-![Authentification HTTP](../assets/catalog/http/authenticate.png)
-
-**[!UICONTROL Action]** marketing : Les actions marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des actions marketing définies par Adobe ou créer votre propre action marketing. Pour plus d&#39;informations sur les actions marketing, consultez la [Présentation des stratégies d&#39;utilisation des données](../../data-governance/policies/overview.md).
-
-Cliquez sur **[!UICONTROL Créer une destination]**.
-
-## Activer les segments
-
-Pour obtenir des informations sur le processus d’activation des segments, voir [Activer les profils et les segments à une destination](../ui/activate-destinations.md#select-attributes).
-
-## Attributs de destination
-
-Au cours de l&#39;étape [[!UICONTROL Sélectionner des attributs]](../ui/activate-destinations.md#select-attributes), lorsque [l&#39;activation de segments](../ui/activate-destinations.md) vers une destination [!DNL HTTP], nous vous recommandons de sélectionner un identifiant unique dans votre [schéma d&#39;union](../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination.
+À l’étape [[!UICONTROL Sélectionner les attributs]](../ui/activate-destinations.md#select-attributes), lorsque [l’activation de segments](../ui/activate-destinations.md) vers une destination [!DNL HTTP], l’Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination.
 
 ## Données exportées {#exported-data}
 
-Vos données [!DNL Experience Platform] exportées atterrissent dans votre destination [!DNL HTTP] au format JSON. Par exemple, le événement ci-dessous contient l’attribut profil d’adresse électronique d’une audience qui s’est qualifiée pour un certain segment et a quitté un autre segment. Les identités de cette prospect sont [!DNL ECID] et e-mail.
+Vos données [!DNL Experience Platform] exportées se trouvent dans votre destination [!DNL HTTP] au format JSON. Par exemple, l’événement ci-dessous contient l’attribut de profil d’adresse électronique d’une audience qui s’est qualifiée pour un certain segment et qui a quitté un autre segment. Les identités de ce prospect sont [!DNL ECID] et e-mail.
 
 ```json
 {
