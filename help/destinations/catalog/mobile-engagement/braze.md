@@ -3,9 +3,9 @@ keywords: mobile; le braquage; la messagerie;
 title: Connexion de frein
 description: Braze est une plateforme d’engagement client complète qui optimise les expériences pertinentes et mémorables entre les clients et les marques qu’ils aiment.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '791'
 ht-degree: 2%
 
 ---
@@ -66,7 +66,7 @@ Lors de la configuration de [](../../ui/connect-destination.md) cette destinatio
 
 ## Activation des segments vers cette destination {#activate}
 
-Voir [Activation des profils et des segments vers une destination](../../ui/activate-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers des destinations.
+Voir [Activation des données d’audience vers les destinations d’exportation de segments en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
 ## Considérations relatives au mappage {#mapping-considerations}
 
