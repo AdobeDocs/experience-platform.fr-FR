@@ -5,10 +5,10 @@ title: Présentation de Data Prep
 topic-legacy: overview
 description: Ce document présente Data Prep dans Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
+source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 88%
+source-wordcount: '547'
+ht-degree: 80%
 
 ---
 
@@ -34,6 +34,12 @@ Data Prep applique également plusieurs validations de données intrinsèques af
 Un mappage est l’association dʼun attribut dʼentrée ou dʼun champ calculé à un attribut XDM. Un attribut unique peut être mappé à plusieurs attributs XDM en créant des mappages individuels.
 
 Pour en savoir plus sur les différentes fonctions de mappage, consultez le [guide des fonctions de mappage](./functions.md).
+
+### Les champs calculés
+
+Les champs calculés permettent de créer des valeurs en fonction des attributs du schéma d’entrée. Ces valeurs peuvent ensuite être affectées à des attributs dans le schéma cible et recevoir un nom et une description pour faciliter la référence.
+
+Pour en savoir plus sur les champs calculés, consultez le [guide des champs calculés](./functions.md#calculated-fields).
 
 ## Jeu de mappages
 
