@@ -1,10 +1,10 @@
 ---
 title: 'Accès à l’ECID '
 description: Extension SDK Web Adobe Experience Platform Utilisation de l’ECID dans les balises
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: befe1efa884706165b8d65803d06f6370a8a60f2
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 9%
+source-wordcount: '124'
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 Pour accéder à l’ECID dans des balises, Adobe recommande ce qui suit :
 
-1. Vérifiez que la propriété est configurée avec l’option [séquencement des composants de règle](https://experienceleague.adobe.com/docs/launch/using/ui/rules.html?lang=en#rule-component-sequencing) activée.
+1. Vérifiez que la propriété est configurée avec l’option [séquencement des composants de règle](../../tags/ui/managing-resources/rules.md#sequencing) activée.
 1. Créez une nouvelle règle.
 1. Ajoutez un événement [!UICONTROL Library Loaded] (Bibliothèque chargée) à la règle.
 1. Ajoutez une action [!UICONTROL Condition personnalisée] à la règle avec le code suivant (en supposant que le nom que vous avez configuré pour l’instance du SDK soit `alloy`) :
