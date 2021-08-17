@@ -4,9 +4,9 @@ title: Présentation des destinations du marketing par email
 type: Tutorial
 description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '387'
 ht-degree: 39%
 
 ---
@@ -70,9 +70,9 @@ Lisez les articles de destination de marketing par e-mail individuels pour savoi
 
 ## Activer les segments vers les destinations de marketing par e-mail {#activate}
 
-Pour plus d’informations sur l’activation des segments vers les destinations de marketing par e-mail, voir [Activation des profils et des segments vers une destination](../../ui/activate-destinations.md).
+Pour plus d’informations sur l’activation des segments vers les destinations de marketing par e-mail, reportez-vous à la section [Activation des données d’audience vers les destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md).
 
 ## Ressources supplémentaires
 
-* [Activation des données vers les destinations](../../ui/activate-destinations.md)
+* [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md)
 * [Création de destinations de marketing par e-mail et activation des données à l’aide de l’API Flow Service](../../api/email-marketing.md)
