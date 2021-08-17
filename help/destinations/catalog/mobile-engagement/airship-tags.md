@@ -3,9 +3,9 @@ keywords: balises d’avion;destination du navire d’aviation
 title: Connexion à Airship Tags
 description: Transmettez en toute transparence les données d’audience Adobe à Airship en tant que balises d’audience pour le ciblage dans Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: e413933920028e3239f6044111d9cf215c865eba
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '705'
 ht-degree: 2%
 
 ---
@@ -92,7 +92,7 @@ Lors de la configuration de [](../../ui/connect-destination.md) cette destinatio
 
 ## Activation des segments vers cette destination {#activate}
 
-Voir [Activation des profils et des segments vers une destination](../../ui/activate-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers des destinations.
+Voir [Activation des données d’audience vers les destinations d’exportation de segments en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
 ## Considérations relatives au mappage {#mapping-considerations}
 
