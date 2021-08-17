@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinations d’e-mail;oracle eloqua;oracle
 title: Oracle de la connexion Eloqua
 description: Oracle Eloqua est une plateforme de logiciel en tant que service (SaaS, Software as a service) pour l’automatisation du marketing proposée par Oracle, qui vise à aider les spécialistes marketing et les entreprises B2B à gérer les campagnes marketing et la génération de pistes commerciales.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '494'
 ht-degree: 26%
 
 ---
@@ -18,7 +18,7 @@ Pour envoyer des données de segment à [!DNL Oracle Eloqua], vous devez d’abo
 
 ## Type d&#39;export {#export-type}
 
-**Basé sur un profil**  : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse email, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs du workflow d’activation de  [destination](../../ui/activate-destinations.md#select-attributes).
+**Basé sur un profil**  : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse email, numéro de téléphone, nom), tel que sélectionné dans l&#39;écran de sélection des attributs du workflow d&#39;activation de l&#39; [audience](../../ui/activate-batch-profile-destinations.md#select-attributes).
 
 ## LISTE AUTORISÉE d’adresses IP {#allow-list}
 
@@ -66,15 +66,15 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## Activation des segments vers cette destination {#activate}
 
-Voir [Activation des profils et des segments vers une destination](../../ui/activate-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers des destinations.
+Voir [Activation des données d’audience vers les destinations d’exportation de profil de lot](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
-## Attributs de destination {#destination-attributes}
+### Attributs de destination {#destination-attributes}
 
-Lorsque [l’activation de segments](../../ui/activate-destinations.md) vers cette destination, Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination. Pour plus d’informations, voir [Sélectionner les champs de schéma à utiliser comme attributs de destination dans vos fichiers exportés](./overview.md#destination-attributes).
+Lors de l’activation des segments vers cette destination, Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination. Pour plus d’informations, reportez-vous aux [bonnes pratiques lors de l’activation d’audiences vers des destinations de marketing par e-mail](overview.md#best-practices).
 
 ## Données exportées {#exported-data}
 
-Pour les destinations [!DNL Oracle Eloqua], Platform crée un fichier `.csv` délimité par des tabulations dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Destinations de marketing par e-mail et destinations de stockage dans le cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) dans le tutoriel sur l’activation du segment.
+Pour les destinations [!DNL Oracle Eloqua], Platform crée un fichier `.csv` délimité par des tabulations dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Vérification de l’activation du segment](../../ui/activate-batch-profile-destinations.md#verify) dans le tutoriel sur l’activation du segment.
 
 ## Configurer l’importation des données dans [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
