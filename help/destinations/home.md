@@ -5,10 +5,10 @@ seo-title: Présentation des destinations
 description: Découvrez comment activer les données Adobe Experience Platform vers des destinations pour les campagnes marketing cross-canal, les e-mails, la publicité ciblée, etc.
 seo-description: Les destinations sont des intégrations prédéfinies avec des plateformes de destination qui permettent l’activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 38%
+source-wordcount: '507'
+ht-degree: 37%
 
 ---
 
@@ -25,7 +25,7 @@ L’une des principales fonctionnalités de Platform est l’ingestion de vos do
 ## Étapes des destinations {#steps}
 
 * Choisissez parmi un [catalogue en libre-service](./catalog/overview.md) de toutes les destinations disponibles dans Platform.
-* Utilisez les destinations pour [activer](./ui/activate-destinations.md) et envoyez des profils ou des segments aux plateformes d’automatisation marketing, de publicité numérique, etc.
+* Utilisez des destinations pour envoyer des profils ou des segments aux plateformes d’automatisation marketing, de publicité numérique, etc.
 * Planifiez régulièrement des exportations de données vers les destinations de votre choix.
 
 ## Commandes {#controls}
@@ -66,4 +66,8 @@ Pour plus d’informations sur la sélection d’actions marketing dans le proce
 * [Destinations de marketing par e-mail ](./catalog/email-marketing/overview.md)
 * [Destinations sociales](./catalog/social/overview.md)
 
-Pour plus d’informations sur les violations de stratégie de données dans le processus d’activation des segments, voir l’étape Révision dans [Activation des profils et des segments vers une destination](./ui/activate-destinations.md#review).
+Pour plus d’informations sur les violations de stratégie de données dans le processus d’activation des segments, voir l’étape Révision dans les guides suivants :
+
+* [Activation des données d’audience vers des destinations d’exportation de segments par flux](./ui/activate-segment-streaming-destinations.md#review)
+* [Activation des données d’audience vers des destinations d’exportation de profils en continu](./ui/activate-streaming-profile-destinations.md#review)
+* [Activation des données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md#review)
