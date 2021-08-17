@@ -1,22 +1,29 @@
 ---
-keywords: social;destinations sociales;Livefyre;facebook;Facebook
-title: Présentation des destinations sociales
-description: Avec les destinations sociales, vous pouvez activer des profils pour vos campagnes pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
+keywords: réseaux sociaux;destinations sociales;Livefyre;facebook;Facebook
+title: Présentation des destinations de réseau social
+description: Avec les destinations sociales, vous pouvez activer les profils de vos campagnes pour un ciblage, une personnalisation et une suppression de l’audience basés sur des emails hachés.
 exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
-translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 5%
+source-wordcount: '109'
+ht-degree: 4%
 
 ---
 
-# Présentation des destinations sociales {#social-network-destinations}
+# Présentation des destinations de réseau social {#social-network-destinations}
 
-Avec les destinations sociales, vous pouvez activer des profils pour vos campagnes pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
+## Présentation {#overview}
+
+Avec les destinations sociales, vous pouvez activer les profils de vos campagnes pour un ciblage, une personnalisation et une suppression de l’audience basés sur des emails hachés.
+
+## Destinations sociales prises en charge {#supported-destinations}
 
 Adobe Experience Platform prend actuellement en charge les destinations sociales suivantes :
 
-- [Extension Adobe Livefyre](./adobe-livefyre.md)
-- [[!DNL Facebook]  extension](./facebook.md)
-- [Connexion des Audiences mises en correspondance Linkedin](./linkedin.md)
+* [Extension Adobe Livefyre](adobe-livefyre.md)
+* [[!DNL Facebook] Extension](facebook.md)
+* [Connexion à des audiences mises en correspondance Linkedin](linkedin.md)
+
+## Connexion à une nouvelle destination de réseau social {#connect-destination}
+
+Pour envoyer des segments vers des destinations sociales pour vos campagnes, Platform doit d’abord se connecter à la destination. Pour plus d’informations sur la configuration d’une nouvelle destination, consultez le [tutoriel sur la création de destination](../../ui/connect-destination.md) .
