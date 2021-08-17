@@ -3,10 +3,10 @@ keywords: Connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion facebook
 description: Activez les profils de vos campagnes Facebook pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 32da733eda61049738e87bce48978196a1fea96d
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 8%
+source-wordcount: '1257'
+ht-degree: 7%
 
 ---
 
@@ -56,12 +56,12 @@ Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les identifia
 
 Avant d’envoyer vos segments ciblés à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
 
-- L’autorisation [!DNL Facebook] doit être activée pour votre compte utilisateur **[!DNL Manage campaigns]** pour le compte publicitaire que vous prévoyez d’utiliser.
-- Le compte commercial **Adobe Experience Cloud** doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Pour plus d’informations, voir [Ajout de partenaires à votre compte Business Manager](https://www.facebook.com/business/help/1717412048538897) dans la documentation Facebook.
+* L’autorisation [!DNL Facebook] doit être activée pour votre compte utilisateur **[!DNL Manage campaigns]** pour le compte publicitaire que vous prévoyez d’utiliser.
+* Le compte commercial **Adobe Experience Cloud** doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Pour plus d’informations, voir [Ajout de partenaires à votre compte Business Manager](https://www.facebook.com/business/help/1717412048538897) dans la documentation Facebook.
    >[!IMPORTANT]
    >
    > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. L’autorisation est requise pour l’intégration [!DNL Adobe Experience Platform].
-- Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, où `accountID` correspond à votre [!DNL Facebook Ad Account ID].
+* Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, où `accountID` correspond à votre [!DNL Facebook Ad Account ID].
 
 ## Exigences de correspondance des identifiants {#id-matching-requirements}
 
@@ -73,8 +73,8 @@ Selon le type d’ID que vous ingérez dans Adobe Experience Platform, vous deve
 
 Il existe deux méthodes pour activer les numéros de téléphone dans [!DNL Facebook] :
 
-- **Ingestion de numéros** de téléphone bruts : vous pouvez ingérer des numéros de téléphone bruts au  [!DNL E.164] format  [!DNL Platform]. Ils se sont automatiquement hachés lors de l’activation. Si vous choisissez cette option, veillez à toujours ingérer vos numéros de téléphone bruts dans l’espace de noms `Phone_E.164`.
-- **Ingestion de numéros** de téléphone hachés : vous pouvez pré-hacher vos numéros de téléphone avant l’ingestion dans  [!DNL Platform]. Si vous choisissez cette option, veillez à toujours ingérer vos numéros de téléphone hachés dans l’espace de noms `Phone_SHA256`.
+* **Ingestion de numéros** de téléphone bruts : vous pouvez ingérer des numéros de téléphone bruts au  [!DNL E.164] format  [!DNL Platform]. Ils se sont automatiquement hachés lors de l’activation. Si vous choisissez cette option, veillez à toujours ingérer vos numéros de téléphone bruts dans l’espace de noms `Phone_E.164`.
+* **Ingestion de numéros** de téléphone hachés : vous pouvez pré-hacher vos numéros de téléphone avant l’ingestion dans  [!DNL Platform]. Si vous choisissez cette option, veillez à toujours ingérer vos numéros de téléphone hachés dans l’espace de noms `Phone_SHA256`.
 
 >[!NOTE]
 >
@@ -89,12 +89,12 @@ Pour en savoir plus sur l’ingestion d’adresses électroniques dans Experienc
 
 Si vous choisissez de hacher vous-même les adresses électroniques, veillez à respecter les exigences suivantes :
 
-- Rogner tous les espaces de début et de fin de la chaîne de courrier électronique ; exemple : `johndoe@example.com` et non `<space>johndoe@example.com<space>`;
-- Lors du hachage des chaînes d’email, veillez à mettre la chaîne en minuscules par hachage.
-   - Exemple : `example@email.com` et non `EXAMPLE@EMAIL.COM`;
-- Assurez-vous que la chaîne hachée est entièrement en minuscules.
-   - Exemple : `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149` et non `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
-- Ne salez pas la chaîne.
+* Rogner tous les espaces de début et de fin de la chaîne de courrier électronique ; exemple : `johndoe@example.com` et non `<space>johndoe@example.com<space>`;
+* Lors du hachage des chaînes d’email, veillez à mettre la chaîne en minuscules par hachage.
+   * Exemple : `example@email.com` et non `EXAMPLE@EMAIL.COM`;
+* Assurez-vous que la chaîne hachée est entièrement en minuscules.
+   * Exemple : `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149` et non `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
+* Ne salez pas la chaîne.
 
 >[!NOTE]
 >
@@ -108,17 +108,29 @@ Si vous choisissez de hacher vous-même les adresses électroniques, veillez à 
 
 Avant de pouvoir utiliser l’espace de noms `Extern_ID` pour envoyer des données à [!DNL Facebook], veillez à synchroniser vos propres identifiants à l’aide de [!DNL Facebook Pixel]. Consultez la [documentation officielle de Facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) pour plus d’informations.
 
-## Se connecter à la destination {#connect-destination}
+## Connexion à la destination {#connect}
 
-Pour vous connecter à la destination [!DNL Facebook], voir [Processus d’authentification des destinations sociales](./workflow.md).
+Pour vous connecter à cette destination, suivez les étapes décrites dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
-La vidéo ci-dessous présente également les étapes de configuration d’une destination sociale et d’activation de segments. La vidéo utilise LinkedIn comme exemple, mais les étapes sont similaires sur toutes les destinations sociales.
+La vidéo ci-dessous présente également les étapes de configuration d’une destination [!DNL Facebook] et d’activation de segments.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
-## Activation des segments vers [!DNL Facebook] {#activate-segments}
+>[!NOTE]
+>
+>L’interface utilisateur de l’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous au [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
-Pour plus d’informations sur l’activation des segments vers [!DNL Facebook], voir [Activation des données vers les destinations](../../ui/activate-destinations.md).
+### Paramètres de connexion {#parameters}
+
+Lors de la configuration de [](../../ui/connect-destination.md) cette destination, vous devez fournir les informations suivantes :
+
+* **[!UICONTROL Nom]** : Un nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Description]** : Description qui vous aidera à identifier cette destination ultérieurement.
+* **[!UICONTROL ID]** du compte : votre  [!DNL Facebook Ad Account ID]. Vous pouvez trouver cet ID dans votre compte [!DNL Facebook Ads Manager]. Lors de la saisie de cet ID, ajoutez toujours un préfixe `act_`.
+
+## Activation des segments vers cette destination {#activate}
+
+Voir [Activation des profils et des segments vers une destination](../../ui/activate-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers des destinations.
 
 À l’étape **[!UICONTROL Planification du segment]** , vous devez indiquer [!UICONTROL Origine de l’audience] lors de l’envoi de segments à [!DNL Facebook Custom Audiences].
 
