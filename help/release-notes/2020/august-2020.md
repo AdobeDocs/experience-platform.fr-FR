@@ -1,19 +1,18 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
+title: Notes de mise à jour d’Adobe Experience Platform
 description: Notes de mise à jour des Experience Platform 10 août 2020
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
-translation-type: tm+mt
-source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
+exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
 source-wordcount: '568'
-ht-degree: 24%
+ht-degree: 29%
 
 ---
 
-
-# Notes de mise à jour d’Adobe Experience Platform
+# Notes de mise à jour d’Adobe Experience Platform
 
 **Date de publication : 12 août 2020**
 
@@ -26,19 +25,19 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-[!DNL Data Science Workspace] utilise l&#39;apprentissage automatique et l&#39;intelligence artificielle pour libérer des informations de vos données. Intégré dans Adobe Experience Platform, [!DNL Data Science Workspace] vous aide à faire des prédictions à l’aide de vos contenus et de vos ressources de données dans les solutions d’Adobe.
+[!DNL Data Science Workspace] dans utilise lʼapprentissage automatique et lʼintelligence artificielle pour exploiter les informations contenues dans vos données. Intégré à Adobe Experience Platform, [!DNL Data Science Workspace] vous aide à obtenir des prévisions en utilisant votre contenu et des ressources de données de lʼensemble des solutions Adobe.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Améliorations de la machine virtuelle dans [!DNL JupyterLab] | Stabilité des machines virtuelles [!DNL JupyterLab notebook] à long terme améliorée. |
+| Améliorations de la machine virtuelle dans [!DNL JupyterLab] | Amélioration de la stabilité des machines virtuelles [!DNL JupyterLab notebook] à long terme. |
 
-Pour plus d&#39;informations sur [!DNL JupyterLab], consultez le [[!DNL JupyterLab] guide de l&#39;utilisateur](../../data-science-workspace/jupyterlab/overview.md).
+Pour plus d’informations sur [!DNL JupyterLab], consultez le [[!DNL JupyterLab] guide d’utilisation](../../data-science-workspace/jupyterlab/overview.md).
 
 ## Destinations {#destinations}
 
-Dans [Plate-forme de données client en temps réel](../../rtcdp/overview.md), les destinations sont des intégrations préétablies avec les plateformes de destination qui activent les données à ces partenaires de manière transparente.
+Dans la [plateforme de données clients en temps réel](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées avec des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
 
 **Nouvelles destinations**
 
@@ -46,26 +45,26 @@ De nouvelles destinations vous permettent d’activer vos données Adobe Experie
 
 | Destination | Description |
 |--- | ---|
-| [!DNL Google Customer Match] | La Correspondance avec les clients de Google vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, comme : [!DNL Search], [!DNL Shopping], Gmail et YouTube. <br><br> Consultez la  [!DNL Google Customer Match] [](../../destinations/catalog/advertising/google-customer-match.md) page du catalogue de destinations pour en savoir plus sur la destination et sur la façon de la configurer dans le CDP en temps réel. |
+| [!DNL Google Customer Match] | La correspondance client Google vous permet d’utiliser vos données en ligne et hors ligne pour atteindre et réengager vos clients dans les propriétés détenues et exploitées de Google, telles que : [!DNL Search], [!DNL Shopping], Gmail et YouTube. <br><br> Consultez la  [!DNL Google Customer Match] [](../../destinations/catalog/advertising/google-customer-match.md) page du catalogue des destinations pour plus d’informations sur la destination et sur la manière de la configurer dans la plateforme de données clients en temps réel. |
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 |------- | -----------|
-| Editeur de nom de fichier personnalisé | Mettez à jour le processus d’activation des données pour les destinations de marketing par courrier électronique et les destinations d’enregistrement cloud afin de modifier le nom des fichiers exportés. Pour plus d&#39;informations, consultez l&#39;[ étape de configuration](../../destinations/ui/activate-destinations.md#configure) dans le processus d&#39;activation. |
-| Attributs recommandés | Mettez à jour le processus d’activation des données pour les destinations de marketing par courrier électronique et les destinations d’enregistrement cloud qui affichent les attributs recommandés à ajouter aux fichiers exportés. Pour plus d&#39;informations, reportez-vous à l&#39;[étape de sélection des attributs](../../destinations/ui/activate-destinations.md#select-attributes) dans le processus d&#39;activation. |
+| Éditeur de nom de fichier personnalisé | Mise à jour du workflow d’activation des données pour les destinations de marketing par e-mail et de stockage dans le cloud qui vous permet de modifier le nom des fichiers exportés. Pour plus d’informations, voir [ Configuration de l’étape](../../destinations/ui/activate-batch-profile-destinations.md) dans le workflow d’activation. |
+| Attributs recommandés | Mise à jour du workflow d’activation des données pour les destinations de marketing par e-mail et de stockage dans le cloud qui affiche les attributs recommandés à ajouter aux fichiers exportés. Pour plus d’informations, reportez-vous à l’[étape Sélection des attributs](../../destinations/ui/activate-batch-profile-destinations.md) dans le workflow d’activation. |
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Basée sur la plate-forme de données client en temps réel des Experience Platform ([!DNL Real-time CDP]), elle permet aux sociétés de rassembler des données connues et inconnues pour activer les profils clients avec une prise de décision intelligente dans tout le parcours client. [!DNL Real-time CDP] combine plusieurs sources de données d’entreprise pour créer des profils clients en temps réel. Les segments créés à partir de ces profils peuvent ensuite être envoyés vers des destinations en aval afin de fournir des expériences client personnalisées un à un sur tous les canaux et périphériques.
+Basée sur la plateforme de données clients en temps réel des Experience Platform ([!DNL Real-time CDP]), elle permet aux entreprises de rassembler des données connues et inconnues pour activer les profils clients avec une prise de décision intelligente tout au long du parcours client. [!DNL Real-time CDP] combine plusieurs sources de données d’entreprise pour créer des profils client en temps réel. Les segments créés à partir de ces profils peuvent ensuite être envoyés vers des destinations en aval afin de fournir des expériences client personnalisées et individuelles sur tous les canaux et appareils.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge d’IAB TCF 2.0 | [!DNL Real-time CDP] est maintenant un fournisseur enregistré pour la version 2.0 du  [!DNL Transparency & Consent Framework] (TCF), comme l&#39;indique le  [!DNL Interactive Advertising Bureau] (IAB). Vous pouvez configurer vos opérations de données et vos schémas de profil pour accepter les données de consentement des clients générées par un CMP et appliquer les préférences de consentement de vos clients lors de l’activation de segments vers des destinations en aval. |
+| Prise en charge du TCF 2.0 de l’IAB | [!DNL Real-time CDP] est désormais un fournisseur enregistré pour la version 2.0 du  [!DNL Transparency & Consent Framework] (TCF), comme indiqué par l’ [!DNL Interactive Advertising Bureau] (IAB). Vous pouvez configurer vos opérations de données et vos schémas de profil pour accepter les données de consentement du client générées par une CMP et appliquer les préférences de consentement de vos clients lors de l’activation de segments vers des destinations en aval. |
 
-Pour plus d&#39;informations sur [!DNL Real-time CDP], voir [[!DNL Real-time CDP] overview](../../rtcdp/overview.md).
+Pour plus d’informations sur [!DNL Real-time CDP], consultez la [[!DNL Real-time CDP] présentation](../../rtcdp/overview.md).
 
 ## Sources {#sources}
 
@@ -77,8 +76,8 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Surveillance de l&#39;exécution du flux | Les utilisateurs peuvent surveiller toutes les exécutions de flux et voir une vue détaillée de chaque exécution, y compris l’état d’achèvement, la durée d’exécution, la liste des fichiers traités, les erreurs et les mesures. Pour plus d&#39;informations, consultez le document [surveillance des flux de données](../../sources/tutorials/ui/monitor.md). |
-| Notifications d’exécution de flux | Les utilisateurs peuvent s’abonner à des événements et enregistrer des hameçons Web pour recevoir des notifications en temps réel sur l’état, les mesures et les erreurs concernant les exécutions de flux. |
-| Améliorations du catalogue de l’interface utilisateur | Mises à jour de l’écran du catalogue de sources pour faciliter l’accès aux actions Principales des objets sélectionnés. |
+| Surveillance de l’exécution du flux | Les utilisateurs peuvent surveiller toutes les exécutions de flux et afficher une vue détaillée de chaque exécution, y compris l’état d’achèvement, la durée d’exécution, la liste des fichiers traités, les erreurs et les mesures. Pour plus d’informations, consultez le document [suivi des flux de données](../../sources/tutorials/ui/monitor.md) . |
+| Notifications d’exécution de flux | Les utilisateurs peuvent s’abonner à des événements et enregistrer des webhooks pour recevoir des notifications en temps réel sur l’état, les mesures et les erreurs concernant les exécutions de flux. |
+| Améliorations du catalogue de l’interface utilisateur | Mises à jour de l’écran Catalogue de sources pour faciliter l’accès aux Principales actions des objets sélectionnés. |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
