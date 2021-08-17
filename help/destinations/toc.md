@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 61%
+source-wordcount: '467'
+ht-degree: 63%
 
 ---
 
@@ -79,7 +79,6 @@ ht-degree: 61%
       * [Extension Yext Conversion Tracking](./catalog/analytics/yext.md)
    * Destinations de stockage dans le cloud {#cloud-storage}
       * [Présentation des destinations de stockage dans le cloud](./catalog/cloud-storage/overview.md)
-      * [Création d’une destination de stockage dans le cloud](./catalog/cloud-storage/workflow.md)
       * [(Version bêta) Connexion Kinesis Amazon](./catalog/cloud-storage/amazon-kinesis.md)
       * [Connexion à Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Connexion Azure Blob](./catalog/cloud-storage/azure-blob.md)
@@ -119,7 +118,6 @@ ht-degree: 61%
       * [Extension Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
    * Destinations sociales{#social}
       * [Présentation des destinations de réseau social](./catalog/social/overview.md)
-      * [Création d’une destination de réseau social](./catalog/social/workflow.md)
       * [Extension Adobe Livefyre](./catalog/social/adobe-livefyre.md)
       * [Connexion facebook](./catalog/social/facebook.md)
       * [Connexion des audiences mappées linkedIn](./catalog/social/linkedin.md)
