@@ -1,7 +1,7 @@
 ---
 title: Règles
 description: Découvrez le fonctionnement des extensions de balise dans Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
 source-wordcount: '1977'
 ht-degree: 82%
@@ -168,7 +168,7 @@ Adobe ne peut garantir qu’aucune autre règle sera réellement déclenchée et
 * **JavaScript :** le code JavaScript est chargé à partir du serveur sous forme de texte normal, encapsulé dans une balise de script et ajouté au document à l’aide de Postscribe. Si la règle comporte plusieurs scripts personnalisés JavaScript, ils sont chargés en parallèle à partir du serveur, mais exécutés dans le même ordre que celui qui a été configuré dans la règle.
 * **HTML :** le code HTML est chargé à partir du serveur et ajouté au document à l’aide de Postscribe. Si la règle comporte plusieurs scripts HTML personnalisés, ils sont chargés en parallèle à partir du serveur, mais exécutés dans le même ordre que celui qui a été configuré dans la règle.
 
-## Séquencement des composants de règle
+## Séquencement des composants de règle {#sequencing}
 
 Le comportement de l’environnement d’exécution de balise dépend de si **[!UICONTROL les composants de règle d’exécution dans la séquence]** sont activés ou désactivés pour votre propriété.
 
