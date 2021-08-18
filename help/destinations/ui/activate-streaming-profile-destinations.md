@@ -5,10 +5,10 @@ type: Tutorial
 seo-title: Activation des données d’audience vers des destinations d’exportation de profils en continu
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil en continu.
 seo-description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil en continu.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: f0c854e1b6b89d499c720328fa5054611147772f
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 14%
+source-wordcount: '532'
+ht-degree: 7%
 
 ---
 
@@ -86,16 +86,42 @@ Si aucune violation de stratégie n’a été détectée, sélectionnez **[!UICO
 
 ## Vérification de l’activation des segments {#verify}
 
+Vos données [!DNL Experience Platform] exportées arrivent dans votre destination cible au format JSON. Par exemple, l’événement ci-dessous contient l’attribut de profil d’adresse électronique d’une audience qui s’est qualifiée pour un certain segment et qui a quitté un autre segment. Les identités de ce prospect sont ECID et email.
 
-Pour les destinations de marketing par e-mail et de stockage dans le cloud, Adobe Experience Platform crée un fichier `.csv` délimité par des tabulations dans l’emplacement de stockage que vous avez fourni. Attendez-vous à ce qu’un nouveau fichier soit créé chaque jour à votre emplacement de stockage. Le format de fichier par défaut est le suivant :
-`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
-
-Les fichiers que vous pouvez recevoir pendant trois jours consécutifs peuvent ressembler à ceux-ci :
-
-```console
-Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
-Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
-Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
+```json
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
+        "lastQualificationTime": "2020-05-25T21:24:39Z",
+        "status": "exited"
+      },
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
+        "lastQualificationTime": "2020-05-25T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
-
-La présence de ces fichiers dans votre emplacement de stockage est la confirmation de la réussite de l’activation. Pour comprendre la structure des fichiers exportés, vous pouvez [télécharger un exemple de fichier .csv](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). Ce fichier d’exemple comprend les attributs de profil `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear` et `personalEmail.address`.
