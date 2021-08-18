@@ -4,7 +4,7 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 0fef443c1979fec0c0d239a0b630cb3a0a134402
+source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 58%
@@ -57,7 +57,7 @@ ht-degree: 58%
       * [Extension Google gtag](./catalog/advertising/gtag-advertising.md)
       * [Extension LinkedIn Insight Tag](./catalog/advertising/linkedin.md)
       * [Connexion Microsoft Bing](./catalog/advertising/bing.md)
-      * [Extension Pinterest Conversion Tracking](./catalog/advertising/pinterest.md)
+      * [Extension Pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
       * [La connexion au bureau de commerce](./catalog/advertising/tradedesk.md)
       * [Extension Twitter Universal Website Tag](./catalog/advertising/twitter-uwt.md)
    * Destinations d’analyse {#analytics}
