@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activation des données d’audience vers des destinations d’exportation de profils par lots
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil de lot.
 seo-description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil de lot.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: f814f11db0a258d1c5265206d6ec61c27ad2ee7d
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2008'
 ht-degree: 7%
 
 ---
@@ -270,7 +270,7 @@ Examinons les deux profils suivants.
 }
 ```
 
-### Cas d’utilisation 1 de la déduplication : pas de déduplication
+### Cas d’utilisation 1 de la déduplication : pas de déduplication {#deduplication-use-case-1}
 
 Sans dédoublonnage, le fichier d&#39;export contiendrait les entrées suivantes.
 
@@ -280,7 +280,7 @@ Sans dédoublonnage, le fichier d&#39;export contiendrait les entrées suivantes
 | johndoe@example.com | John | D |
 
 
-### Cas d’utilisation 2 de la déduplication : déduplication basée sur l’espace de noms d’identité
+### Cas d’utilisation 2 de la déduplication : déduplication basée sur l’espace de noms d’identité {#deduplication-use-case-2}
 
 En supposant une déduplication par l’espace de noms [!DNL Email], le fichier d’exportation contiendra les entrées suivantes. Le profil B est le dernier qui a rempli les critères pour le segment. Il est donc le seul à être exporté.
 
@@ -289,7 +289,7 @@ En supposant une déduplication par l’espace de noms [!DNL Email], le fichier 
 | johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
 
-### Cas d’utilisation 3 de la déduplication : déduplication basée sur un attribut de profil unique
+### Cas d’utilisation 3 de la déduplication : déduplication basée sur un attribut de profil unique {#deduplication-use-case-3}
 
 En supposant une déduplication par l’attribut `personal Email` , le fichier d’exportation contiendra l’entrée suivante. Le profil B est le dernier qui a rempli les critères pour le segment. Il est donc le seul à être exporté.
 
@@ -298,7 +298,7 @@ En supposant une déduplication par l’attribut `personal Email` , le fichier d
 | johndoe@example.com | John | D |
 
 
-### Cas d’utilisation 4 de la déduplication : déduplication basée sur deux attributs de profil (clé de déduplication composite)
+### Cas d’utilisation 4 de la déduplication : déduplication basée sur deux attributs de profil {#deduplication-use-case-4}
 
 En supposant une déduplication par la clé composite `personalEmail + lastName`, le fichier d’exportation contiendra les entrées suivantes.
 
