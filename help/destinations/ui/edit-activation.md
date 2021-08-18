@@ -6,10 +6,10 @@ seo-title: Modification des flux d’activation
 description: Suivez les étapes de cet article pour modifier un flux d’activation existant dans Adobe Experience Platform.
 seo-description: Suivez les étapes de cet article pour modifier un flux d’activation existant dans Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 1%
+source-wordcount: '204'
+ht-degree: 0%
 
 ---
 
@@ -29,8 +29,10 @@ Pour modifier les flux d’activation existants dans Adobe Experience Platform, 
 
    ![Sélectionner la destination](../assets/ui/edit-activation/destination-select.png)
 
-4. La page de détails de la destination s’affiche, affichant ses commandes disponibles. Sélectionnez **[!UICONTROL Activer]** dans le rail de droite pour modifier les segments à envoyer à la destination.
+4. La page **[!UICONTROL Flux de données s’exécute]** pour la destination s’affiche, affichant ses commandes disponibles. Sélectionnez **[!UICONTROL Activer]** dans le rail de droite pour modifier les segments à envoyer à la destination.
+
+   De plus, vous pouvez modifier le nom et la description de la destination.
 
    ![Détails de la destination](../assets/ui/edit-activation/destination-details.png)
 
-5. Voir [Présentation de l’activation](activation-overview.md) pour plus d’informations sur l’activation des nouveaux segments.
+5. Pour plus d’informations sur l’activation de nouveaux segments vers vos destinations, voir [Aperçu de l’activation](activation-overview.md) .
