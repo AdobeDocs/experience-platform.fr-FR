@@ -4,9 +4,9 @@ title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 seo-description: Dans Adobe Experience Platform, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '873'
 ht-degree: 20%
 
 ---
@@ -72,8 +72,8 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 
 >[!TIP]
 >
-> * Utilisez le bouton ![Ajouter des segments](../assets/ui/workspace/add-data-symbol.png) de la colonne **[!UICONTROL Nom]** pour envoyer des segments vers cette destination.
-> * Utilisez le bouton ![Supprimer les destinations](../assets/ui/workspace/delete-destination-symbol.png) de la colonne **[!UICONTROL Nom]** pour [supprimer](delete-destinations.md) une connexion existante à une destination.
+> * Sélectionnez les trois points de la colonne [!UICONTROL Nom] et utilisez le bouton ![Ajouter des segments](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activer ]**pour envoyer des segments vers cette destination.
+> * Sélectionnez les trois points de la colonne [!UICONTROL Nom] et utilisez le bouton ![Supprimer les destinations](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Supprimer ]**pour [supprimer](delete-destinations.md) une connexion existante à une destination.
 
 
 ![Onglet Parcourir](../assets/ui/workspace/browse-tab.png)
@@ -102,6 +102,6 @@ L’onglet **[!UICONTROL Vue du système]** affiche une représentation graphiqu
 
 ![Flux de données 1](../assets/ui/workspace/data-flows1.png)
 
-Sélectionnez l’une des destinations affichées sur la page et cliquez sur **[!UICONTROL Afficher les flux]** pour afficher les informations sur toutes les connexions que vous avez configurées pour chaque destination.
+Sélectionnez l’une des destinations affichées sur la page et cliquez sur **[!UICONTROL Afficher les flux de données]** pour afficher les informations sur toutes les connexions que vous avez configurées pour chaque destination.
 
 ![Flux de données 2](../assets/ui/workspace/data-flows2.png)
