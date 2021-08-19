@@ -4,9 +4,9 @@ user-guide-title: Aide sur les balises
 breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Collecte de données
-source-git-commit: 3658384ec39226f457fd9cea86d1838613a9508c
+source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '380'
 ht-degree: 86%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 86%
    * [Présentation](./ui/administration/overview.md)
    * [Sociétés et propriétés](./ui/administration/companies-and-properties.md)
    * [Autorisations utilisateur](./ui/administration/user-permissions.md)
+   * [Gestion des autorisations](./ui/administration/manage-permissions.md)
 * Extensions {#extensions}
    * [Présentation](./extensions/overview.md)
    * Extensions Adobe {#adobe}
