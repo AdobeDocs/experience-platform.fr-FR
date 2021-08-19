@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activation des données d’audience vers des destinations d’exportation de segments par flux
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de diffusion en continu de segments.
 seo-description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de diffusion en continu de segments.
-source-git-commit: 0d5e0d57d209e4cf9a832531676e836add4256d0
+source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '740'
 ht-degree: 6%
 
 ---
@@ -43,14 +43,9 @@ Utilisez les cases à cocher situées à gauche des noms de segment pour sélect
 
 ## Mise en correspondance des attributs et des identités {#mapping}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_applytransformation"
->title="Appliquer la transformation"
->abstract="Cochez cette option lorsque vous utilisez des champs source non hachés afin que Adobe Experience Platform les hache automatiquement lors de l’activation."
-
 >[!IMPORTANT]
 >
->Cette étape s’applique uniquement à certaines destinations de diffusion en continu de segments. Si vos destinations ne comportent pas d’étape **[!UICONTROL Mapping]**, passez à [Planification de l’exportation de segments](#scheduling).
+>Cette étape s’applique uniquement à certaines destinations de diffusion en continu de segments. Si votre destination ne comporte pas d’étape **[!UICONTROL Mapping]**, passez à [Planification de l’exportation de segments](#scheduling).
 
 Certaines destinations de diffusion en continu de segments nécessitent que vous sélectionniez des attributs source ou des espaces de noms d’identité à mapper en tant qu’identités cibles dans la destination.
 
@@ -76,8 +71,17 @@ Certaines destinations de diffusion en continu de segments nécessitent que vous
 
 1. Pour ajouter d’autres mappages, répétez les étapes 1 à 5.
 
+### Appliquer la transformation {#apply-transformation}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Appliquer la transformation"
+>abstract="Cochez cette option lorsque vous utilisez des champs source non hachés afin que Adobe Experience Platform les hache automatiquement lors de l’activation."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#apply-transformation" text="En savoir plus dans la documentation"
 
+Lorsque vous mappez des attributs source non hachés avec des attributs cibles que la destination s’attend à être hachée (par exemple : `email_lc_sha256` ou `phone_sha256`), cochez l’option **Appliquer la transformation** pour que Adobe Experience Platform hache automatiquement les attributs source lors de l’activation.
+
+![Mappage des identités](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 
 ## Planification de l’exportation de segments {#scheduling}
