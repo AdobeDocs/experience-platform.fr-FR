@@ -5,10 +5,10 @@ type: Tutorial
 seo-title: Activation des données d’audience vers des destinations d’exportation de profils par lots
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil de lot.
 seo-description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil de lot.
-source-git-commit: b1d9b03af1d5266a03d0f16c6a9803a08f19b7bd
+source-git-commit: eebebcdc5e5f94d90eceb291dfe487fcd0f8c254
 workflow-type: tm+mt
-source-wordcount: '1990'
-ht-degree: 6%
+source-wordcount: '1933'
+ht-degree: 7%
 
 ---
 
@@ -64,10 +64,10 @@ Sélectionnez **[!UICONTROL Exporter les fichiers complets]** pour déclencher l
 
 1. Utilisez le sélecteur **[!UICONTROL Fréquence]** pour sélectionner la fréquence d’exportation :
 
-   * **[!UICONTROL Une fois]** : planifier une exportation de fichier à la demande unique.
-   * **[!UICONTROL Quotidien]** : planifier des exportations complètes de fichiers une fois par jour, tous les jours, de la date de début à la date de fin à 00h00 UTC (19h00 HNE).
+   * **[!UICONTROL Une fois]** : planifier une exportation de fichiers complète à la demande unique.
+   * **[!UICONTROL Quotidien]** : planifier des exportations complètes de fichiers une fois par jour, tous les jours, au moment que vous spécifiez.
 
-1. Utilisez le sélecteur **[!UICONTROL Heure]** pour choisir l’heure de la journée, au format [!DNL UTC], où doit avoir lieu l’exportation. L’export d’un fichier **[!UICONTROL Quotidien]** exporte le fichier tous les jours de la date de début à la date de fin au moment sélectionné.
+1. Utilisez le sélecteur **[!UICONTROL Heure]** pour choisir l’heure de la journée, au format [!DNL UTC], où doit avoir lieu l’exportation.
 
    >[!IMPORTANT]
    >
@@ -89,14 +89,14 @@ Sélectionnez **[!UICONTROL Exporter les fichiers incrémentiels]** pour déclen
 
 1. Utilisez le sélecteur **[!UICONTROL Fréquence]** pour sélectionner la fréquence d’exportation :
 
-   * **[!UICONTROL Quotidien]** : planifier les exportations incrémentielles de fichiers une fois par jour, tous les jours, de la date de début à la date de fin à 00h00 UTC (19h00 HNE).
+   * **[!UICONTROL Quotidien]** : planifier des exportations incrémentielles de fichiers une fois par jour, tous les jours, au moment que vous spécifiez.
    * **[!UICONTROL Horaire]** : planifier des exportations incrémentielles de fichiers toutes les 3, 6, 7 ou 12 heures.
 
 2. Utilisez le sélecteur **[!UICONTROL Heure]** pour choisir l’heure de la journée, au format [!DNL UTC], où doit avoir lieu l’exportation.
 
    >[!IMPORTANT]
    >
-   >L&#39;option permettant de sélectionner l&#39;heure de la journée pour l&#39;export n&#39;est disponible que pour un nombre restreint de clients. <br> <br> En raison de la configuration des processus Experience Platform internes, la première exportation incrémentielle ou complète de fichier peut ne pas contenir toutes les données de renvoi.  <br> <br> Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, Adobe recommande de définir l’heure d’exportation du premier fichier après 12h GMT le jour suivant. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
+   >En raison de la configuration des processus Experience Platform internes, la première exportation incrémentielle ou complète de fichier peut ne pas contenir toutes les données de renvoi. <br> <br> Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, Adobe recommande de définir l’heure d’exportation du premier fichier après 12h GMT le jour suivant. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
 
 3. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir le jour ou l’intervalle au cours duquel l’exportation doit avoir lieu.
 4. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
