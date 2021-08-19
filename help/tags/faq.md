@@ -1,10 +1,10 @@
 ---
-title: FAQ
+title: Guide de dépannage des balises
 description: Obtenez des réponses aux questions fréquentes sur les balises dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: dc957372e5e8c6f034f2e0cd0283e0e997501ba8
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 30%
+source-wordcount: '1055'
+ht-degree: 26%
 
 ---
 
@@ -92,6 +92,16 @@ La plupart des clients Adobe utilisent des fonctionnalités de plateforme web pl
 ## Les balises fonctionnent-elles sur les applications mobiles natives ?
 
 Oui! Les balises prennent désormais en charge les propriétés et la configuration mobiles des nouveaux [SDK mobiles de Adobe Experience Platform](https://sdkdocs.com) pour mettre en oeuvre la collecte et la diffusion de données dans un environnement d’application mobile natif. Veuillez consulter la [documentation](https://sdkdocs.com) pour en savoir plus.
+
+## Pourquoi l’interface utilisateur indique-t-elle qu’une erreur s’est produite lors du chargement de mon compte ?
+
+Si vous recevez un message indiquant qu’une erreur s’est produite lors du chargement de votre compte, cela signifie que votre compte n’appartient à aucun profil de produit pour les balises . Consultez le guide sur la [gestion des autorisations](./ui/administration/manage-permissions.md) pour savoir comment configurer un profil de produit dans Adobe Admin Console pour accorder l’accès à l’interface utilisateur de la collecte de données.
+
+## Pourquoi ne puis-je ajouter aucune propriété dans l’interface utilisateur ?
+
+Si vous ne pouvez pas créer de nouvelles propriétés lorsque vous êtes connecté à l’interface utilisateur de la collecte de données, cela signifie que votre compte n’appartient pas à un profil de produit disposant du droit Manage Properties (Gérer les propriétés).
+
+Consultez le guide sur la [gestion des autorisations](./ui/administration/manage-permissions.md) pour savoir comment configurer un profil de produit dans Adobe Admin Console pour accorder le droit Manage Properties (Gérer les propriétés). Pour plus d’informations sur les différents droits des balises, consultez la présentation des [autorisations utilisateur pour les balises](./ui/administration/user-permissions.md).
 
 ## Et si j’ai d’autres questions ?
 
