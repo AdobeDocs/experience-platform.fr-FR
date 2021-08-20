@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; adresse ip ; adresses ip ; liste autorisée d'adresse ip ; liste autorisée
+keywords: Experience Platform;accueil;rubriques les plus consultées;adresse ip;adresses ip;liste autorisée d’adresse ip;adresse ip liste autorisée
 description: Les adresses IP doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source.
 solution: Experience Platform
-title: LISTE AUTORISÉE d'adresses IP pour les connexions source
+title: LISTE AUTORISÉE d’adresses IP pour les connexions source
 topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: fcdf6209ef3fa7c4685fadd3322f631b608e4605
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 0%
+source-wordcount: '107'
+ht-degree: 2%
 
 ---
 
-# LISTE AUTORISÉE d&#39;adresse IP
+# LISTE AUTORISÉE d’adresses IP
 
-Vous pouvez définir des contrôles d&#39;accès réseau via votre pare-feu réseau. En spécifiant la plage d’adresses IP source appropriée, vous pouvez autoriser le trafic pour le service de transfert de données. Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources.
+Vous pouvez définir des contrôles d’accès réseau via votre pare-feu réseau. En spécifiant la plage d’adresses IP source appropriée, vous pouvez autoriser le trafic pour le service de transfert de données. Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou des performances peuvent se produire lors de l’utilisation de sources.
 
-## Région est-américaine
+## VA7
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -25,9 +24,6 @@ Vous pouvez définir des contrôles d&#39;accès réseau via votre pare-feu rés
 - `20.49.111.0/29`
 - `40.71.14.32/28`
 - `40.78.229.96/28`
-
-## East US 2 region
-
 - `20.41.2.0/23`
 - `20.41.4.0/26`
 - `20.44.17.80/28`
@@ -35,7 +31,7 @@ Vous pouvez définir des contrôles d&#39;accès réseau via votre pare-feu rés
 - `40.70.148.160/28`
 - `52.167.107.224/28`
 
-## Région de l&#39;Europe occidentale
+## NLD2
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -45,7 +41,7 @@ Vous pouvez définir des contrôles d&#39;accès réseau via votre pare-feu rés
 - `40.113.176.232/29`
 - `52.236.187.112/28`
 
-## Australie-Est
+## AUS5
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
