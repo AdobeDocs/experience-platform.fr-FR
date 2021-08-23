@@ -4,10 +4,10 @@ description: Découvrez comment configurer le SDK Web de Adobe Experience Platfo
 seo-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
 keywords: configure;configuration;SDK;edge;SDK Web;configure;edgeConfigId;contexte;web;périphérique;environnement;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;paramètres du sdk web;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinations;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 4b04f02a7a8843e667ea05b000bc93ebb065babd
+source-git-commit: 549203c8ddc94e00cf4e4ba432f367ddc371cb27
 workflow-type: tm+mt
-source-wordcount: '839'
-ht-degree: 43%
+source-wordcount: '856'
+ht-degree: 42%
 
 ---
 
@@ -31,6 +31,10 @@ De nombreuses options peuvent être définies lors de la configuration. Vous tro
 ## Options générales
 
 ### `edgeConfigId`
+
+>[!NOTE]
+>
+>**Les configurations Edge ont été renommées en Datastreams. Un identifiant de flux de données est identique à un identifiant de configuration.**
 
 | **Type** | **Obligatoire** | **Valeur par défaut** |
 | -------- | ------------ | ----------------- |
