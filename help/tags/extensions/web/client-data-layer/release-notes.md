@@ -2,7 +2,7 @@
 title: Notes de mise à jour de l’extension Adobe Client Data Layer (ACDL)
 description: Notes de mise à jour les plus récentes pour l’extension de balise ACDL dans Adobe Experience Platform.
 source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '164'
 ht-degree: 100%
 
