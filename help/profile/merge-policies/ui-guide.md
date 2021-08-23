@@ -4,8 +4,8 @@ title: Guide de l’interface utilisateur des stratégies de fusion
 type: Documentation
 description: Lorsque vous rassemblez des données provenant de plusieurs sources dans Experience Platform, les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer la vue unifiée. Ce guide fournit des instructions détaillées sur l’utilisation des stratégies de fusion à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 2696dab922d9c1992b61ffefe50a4e3155793282
-workflow-type: ht
+source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
+workflow-type: tm+mt
 source-wordcount: '2193'
 ht-degree: 100%
 
