@@ -1,34 +1,34 @@
 ---
 title: Relations dans l’API Reactor
-description: Découvrez comment les relations de ressources sont établies dans l’API Reactor, y compris les exigences de relation pour chaque ressource.
+description: Découvrez comment les relations de ressources sont établies dans l’API Reactor, y compris les exigences en matière de relation pour chaque ressource.
 source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '798'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
 # Relations dans l’API Reactor
 
-Les ressources de l’API Reactor sont souvent liées. Ce document présente la manière dont les relations entre les ressources sont établies dans l’API et les exigences en matière de relation de chaque type de ressource.
+Les ressources de l’API Reactor sont souvent associées les unes aux autres. Ce document présente la manière dont les relations de ressources sont établies dans l’API et les exigences en matière de relation pour chaque type de ressource.
 
-Selon le type de ressource en question, certaines relations sont nécessaires. Une relation requise implique que la ressource parent ne peut pas exister sans la relation. Toutes les autres relations sont facultatives.
+Selon le type de ressource dont il est question, certaines relations s’avèrent obligatoires. Une relation obligatoire implique que la ressource parent ne peut pas exister sans la relation. Toutes les autres relations sont facultatives.
 
-Qu’elles soient obligatoires ou facultatives, les relations sont soit automatiquement établies par le système lors de la création des ressources appropriées, soit elles doivent être créées manuellement. Dans le cas de la création manuelle de relations, il existe deux méthodes possibles en fonction de la ressource en question :
+Qu’elles soient obligatoires ou facultatives, les relations sont automatiquement établies par le système lors de la création de ressources pertinentes ou doivent être créées manuellement. En cas de création de relations manuelle, deux méthodes sont possibles, lesquelles dépendent de la ressource en question :
 
-* [Créer par payload](#payload)
-* [Créer par URL](#url)  (pour les bibliothèques uniquement)
+* [Création par payload](#payload)
+* [Création par URL](#url) (pour les bibliothèques uniquement)
 
-Reportez-vous à la section [Exigences de relation](#requirements) pour obtenir la liste des relations compatibles pour chaque type de ressource, ainsi que les méthodes nécessaires pour établir ces relations, le cas échéant.
+Reportez-vous à la section sur les [exigences en matière de relation](#requirements) pour obtenir la liste des relations compatibles pour chaque type de ressource ainsi que les méthodes nécessaires à l’établissement de ces relations, le cas échéant.
 
 ## Création d’une relation par payload {#payload}
 
-Certaines relations doivent être établies manuellement lors de la création initiale d’une ressource. Pour ce faire, vous devez fournir un objet `relationship` dans le payload de la requête lorsque vous créez la ressource parent pour la première fois. Voici quelques exemples de ces relations :
+Certaines relations doivent être établies manuellement lors de la création initiale d’une ressource. Pour ce faire, vous devez fournir un objet `relationship` dans le payload de la requête lorsque vous créez la ressource parent pour la première fois. Voici quelques exemples de ces relations :
 
-* [Création d’un ](../endpoints/data-elements.md#create) élément de données avec les extensions requises
-* [Création d’un ](../endpoints/environments.md#create) environnement avec la relation d’hôte requise
+* [Création d’un élément de données](../endpoints/data-elements.md#create) avec les extensions requises
+* [Création d’un environnement](../endpoints/environments.md#create) avec la relation d’hôte requise
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
@@ -36,14 +36,14 @@ POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
 
 | Paramètre | Description |
 | --- | --- |
-| `{PROPERTY_ID}` | L’identifiant de la propriété à laquelle appartient la ressource. |
+| `{PROPERTY_ID}` | Identifiant de la propriété à laquelle appartient la ressource. |
 | `{RESOURCE_TYPE}` | Type de ressource à créer. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante crée un `rule_component`, établissant des relations avec `rules` et un `extension`.
+La requête suivante crée un `rule_component`, établissant des relations avec les `rules` et une `extension`.
 
 ```shell
 curl -X POST \
@@ -83,21 +83,21 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `relationships` | Objet qui doit être fourni lors de la création de relations par charge utile. Chaque clé de cet objet représente un type de relation spécifique. Dans l’exemple ci-dessus, les relations `extension` et `rules` sont établies, qui sont spécifiques à `rule_components`. Pour plus d’informations sur les types de relation compatibles pour différentes ressources, consultez la section sur les [exigences en matière de relation par ressource](#relationship-requirements-by-resource). |
-| `data` | Chaque type de relation fourni sous l’objet `relationship` doit contenir une propriété `data`, qui fait référence aux propriétés `id` et `type` de la ressource avec laquelle une relation est établie. Vous pouvez créer une relation avec plusieurs ressources du même type en formatant la propriété `data` en tant que tableau d’objets, chaque objet contenant les éléments `id` et `type` d’une ressource applicable. |
-| `id` | Identifiant unique d’une ressource. Chaque `id` doit être accompagné d’une propriété `type` frère, indiquant le type de ressource en question. |
-| `type` | Type de ressource tel que référencé par un champ `id` frère. Les valeurs acceptées sont `data_elements`, `rules`, `extensions` et `environments`. |
+| `relationships` | Objet qui doit être fourni lors de la création de relations par payload. Chaque clé de cet objet représente un type de relation spécifique. Dans l’exemple ci-dessus, les relations entre `extension` et `rules` sont établies. Elles sont spécifiques à `rule_components`. Pour plus d’informations sur les types de relation compatibles pour différentes ressources, consultez la section sur les [exigences en matière de relation par ressource](#relationship-requirements-by-resource). |
+| `data` | Chaque type de relation fourni sous l’objet `relationship` doit contenir une propriété `data`, qui fait référence aux propriétés `id` et `type` de la ressource avec laquelle une relation est établie. Vous pouvez créer une relation avec plusieurs ressources du même type en formatant la propriété `data` en tant que tableau d’objets, où chaque objet contient les propriétés `id` et `type` d’une ressource applicable. |
+| `id` | Identifiant unique d’une ressource. Chaque `id` doit être accompagné d’une propriété `type` sœur, indiquant le type de ressource en question. |
+| `type` | Type de ressource tel que référencé par un champ `id` frère. Les valeurs acceptées incluent `data_elements`, `rules`, `extensions` et `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Création d’une relation par URL {#url}
 
-Contrairement aux autres ressources, les bibliothèques établissent des relations par le biais de leurs propres points de terminaison `/relationship` dédiés. Par exemple :
+Contrairement à d’autres ressources, les bibliothèques établissent des relations par le biais de leurs propres points d’entrée `/relationship` dédiés. Par exemple :
 
 * [Ajout d’extensions, d’éléments de données et de règles à une bibliothèque](../endpoints/libraries.md#add-resources)
 * [Affectation d’une bibliothèque à un environnement](../endpoints/libraries.md#environment)
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /properties/{PROPERTY_ID}/libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
@@ -105,13 +105,13 @@ POST /properties/{PROPERTY_ID}/libraries/{LIBRARY_ID}/relationships/{RESOURCE_TY
 
 | Paramètre | Description |
 | --- | --- |
-| `{PROPERTY_ID}` | ID de la propriété à laquelle appartient la bibliothèque. |
-| `{LIBRARY_ID}` | L’identifiant de la bibliothèque pour laquelle vous souhaitez créer une relation. |
-| `{RESOURCE_TYPE}` | Type de ressource que la relation cible. Les valeurs disponibles sont `environment`, `data_elements`, `extensions` et `rules`. |
+| `{PROPERTY_ID}` | Identifiant de la propriété à laquelle appartient la bibliothèque. |
+| `{LIBRARY_ID}` | Identifiant de la bibliothèque pour laquelle vous souhaitez créer une relation. |
+| `{RESOURCE_TYPE}` | Type de ressource ciblé par la relation. Les exemples de valeurs comprennent `environment`, `data_elements`, `extensions` et `rules`. |
 
 **Requête**
 
-La requête suivante utilise le point de terminaison `/relationships/environment` d’une bibliothèque pour créer une relation avec un environnement.
+La requête suivante utilise le point d’entrée `/relationships/environment` d’une bibliothèque pour créer une relation avec un environnement.
 
 ```shell
 curl -X POST \
@@ -132,14 +132,14 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `data` | Objet faisant référence à `id` et `type` de la ressource cible pour la relation. Si vous créez une relation avec plusieurs ressources du même type (telles que `extensions` et `rules`), la propriété `data` doit être formatée sous la forme d’un tableau d’objets, chaque objet contenant les éléments `id` et `type` d’une ressource applicable. |
-| `id` | Identifiant unique d’une ressource. Chaque `id` doit être accompagné d’une propriété `type` frère, indiquant le type de ressource en question. |
-| `type` | Type de ressource tel que référencé par un champ `id` frère. Les valeurs acceptées sont `data_elements`, `rules`, `extensions` et `environments`. |
+| `id` | Identifiant unique d’une ressource. Chaque `id` doit être accompagné d’une propriété `type` sœur, indiquant le type de ressource en question. |
+| `type` | Type de ressource tel que référencé par un champ `id` frère. Les exemples de valeurs comprennent `data_elements`, `rules`, `extensions` et `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Exigences de relation par ressource {#requirements}
 
-Les tableaux suivants décrivent les relations disponibles pour chaque type de ressource, si ces relations sont nécessaires ou non, et la méthode acceptée pour créer manuellement la relation, le cas échéant.
+Les tableaux suivants décrivent les relations disponibles pour chaque type de ressource, que ces relations soient nécessaires ou pas, et la méthode acceptée pour créer manuellement la relation, le cas échéant.
 
 >[!NOTE]
 >
@@ -147,7 +147,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 ### Événements d’audit
 
-| Relation | Obligatoire | Créer par payload | Créer par URL |
+| Relation | Obligatoire | Création par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 | `entity` | ✓ |  |  |
@@ -156,7 +156,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 ### Versions
 
-| Relation | Obligatoire | Créer par payload | Créer par URL |
+| Relation | Obligatoire | Création par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `data_elements` |  |  |  |
 | `extensions` |  |  |  |
@@ -169,7 +169,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 ### Rappels
 
-| Relation | Obligatoire | Créer par payload | Créer par URL |
+| Relation | Obligatoire | Création par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
@@ -177,7 +177,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 ### Sociétés
 
-| Relation | Obligatoire | Créer par payload | Créer par URL |
+| Relation | Obligatoire | Création par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `properties` |  |  |  |
 
@@ -185,7 +185,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 ### Éléments de données
 
-| Relation | Obligatoire | Créer par payload | Créer par URL |
+| Relation | Obligatoire | Création par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
 | `revisions` | ✓ |  |  |
@@ -200,7 +200,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 ### Environnements
 
-| Relation | Obligatoire | Créer par payload | Créer par URL |
+| Relation | Obligatoire | Création par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `library` |  |  |  |
 | `builds` |  |  |  |
@@ -211,7 +211,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 ### Extensions
 
-| Relation | Obligatoire | Créer par payload | Créer par URL |
+| Relation | Obligatoire | Création par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
 | `revisions` | ✓ |  |  |
@@ -225,7 +225,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 ### Hôtes
 
-| Relation | Obligatoire | Créer par payload | Créer par URL |
+| Relation | Obligatoire | Création par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
@@ -233,7 +233,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 ### Bibliothèques
 
-| Relation | Obligatoire | Créer par payload | Créer par URL |
+| Relation | Obligatoire | Création par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `builds` |  |  |  |
 | `environment` |  |  | ✓ |
@@ -249,7 +249,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 ### Notes
 
-| Relation | Obligatoire | Créer par payload | Créer par URL |
+| Relation | Obligatoire | Création par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `resource` | ✓ |  |  |
 
@@ -257,7 +257,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 ### Propriétés
 
-| Relation | Obligatoire | Créer par payload | Créer par URL |
+| Relation | Obligatoire | Création par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `company` | ✓ |  |  |
 | `callbacks` |  |  |  |
@@ -271,7 +271,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 ### Composants de  règle
 
-| Relation | Obligatoire | Créer par payload | Créer par URL |
+| Relation | Obligatoire | Création par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `updated_with_extensions_package` | ✓ |  |  |
 | `updated_with_extension` | ✓ |  |  |
@@ -286,7 +286,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 ### Règles
 
-| Relation | Obligatoire | Créer par payload | Créer par URL |
+| Relation | Obligatoire | Création par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
 | `revisions` | ✓ |  |  |
