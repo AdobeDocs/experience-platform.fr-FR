@@ -2,9 +2,9 @@
 title: Cas d’utilisation pris en charge avec le SDK Web de Adobe Experience Platform
 description: Découvrez les cas d’utilisation pris en charge avec le SDK Web de Adobe Experience Platform.
 keywords: sdk web;cas d’utilisation
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e012e12a8cadb8c13781b0380d84652c23567180
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '565'
 ht-degree: 15%
 
 ---
@@ -91,6 +91,7 @@ Cette page répertorie les cas d’utilisation pris en charge pour le SDK Web, a
 | Mise à jour du profil Target | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
 | Recommandations |  |
 | Identifiant tiers mBox |  |
+| Jetons de réponse | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
 
 {style=&quot;table-layout:auto&quot;}
 
