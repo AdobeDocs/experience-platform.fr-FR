@@ -5,16 +5,16 @@ title: Présentation des connecteurs source
 topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 55%
+source-wordcount: '1007'
+ht-degree: 56%
 
 ---
 
 # Présentation des connecteurs source
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que des applications d’Adobe, des entrepôts dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, les stockages dans le cloud, des bases de données, etc.
 
 [!DNL Flow Service] est utilisé pour collecter et centraliser des données client à partir de diverses sources disparates dans Platform. Le service fournit une interface utilisateur et une API RESTful qui vous permettent de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent d’authentifier vos systèmes tiers, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
@@ -104,6 +104,12 @@ Experience Platform prend en charge l’ingestion de données à partir d’un s
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
+### Système local
+
+Experience Platform prend en charge l’ingestion de données à partir de votre système local. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+
+- [Chargement de fichier local](connectors/local-system/local-file-upload.md)
+
 ### Automatisation du marketing
 
 Experience Platform prend en charge l’ingestion de données provenant d’un système tiers d’automatisation du marketing. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
@@ -122,7 +128,6 @@ Experience Platform prend en charge l’ingestion de données provenant d’un s
 Experience Platform prend en charge l’ingestion de données à partir de sources de diffusion en continu. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
-
 
 ### Protocoles
 
