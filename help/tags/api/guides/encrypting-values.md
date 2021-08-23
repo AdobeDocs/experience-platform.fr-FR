@@ -2,27 +2,27 @@
 title: Chiffrement des valeurs
 description: Découvrez comment chiffrer des valeurs sensibles lors de l’utilisation de l’API Reactor.
 source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '395'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # Chiffrement des valeurs
 
-Lorsque vous utilisez des balises dans Adobe Experience Platform, certains workflows nécessitent de fournir des valeurs sensibles (par exemple, en fournissant une clé privée lors de la diffusion de bibliothèques vers des environnements via des hôtes). La nature délicate de ces informations d’identification nécessite
-le transfert et le stockage sécurisés.
+Lorsque vous utilisez des balises dans Adobe Experience Platform, certains flux de travaux nécessitent de fournir des valeurs sensibles (par exemple, en fournissant une clé privée lors de la diffusion de bibliothèques vers des environnements via des hôtes). La nature sensible de ces informations d’identification nécessite
+un transfert et un stockage sécurisés.
 
-Ce document décrit comment chiffrer des valeurs sensibles à l’aide de [cryptage GnuPG](https://www.gnupg.org/gph/en/manual/x110.html) (également appelé GPG) afin que seul le système de balises puisse les lire.
+Ce document décrit comment chiffrer des valeurs sensibles à l’aide du [chiffrement GnuPG](https://www.gnupg.org/gph/en/manual/x110.html) (également appelé GPG) afin que seul le système de balises puisse les lire.
 
 ## Obtention de la clé GPG publique et de la somme de contrôle
 
-Après avoir téléchargé [et installé la dernière version de GPG, vous devez obtenir la clé GPG publique pour l’environnement de production des balises :](https://gnupg.org/download/)
+Après avoir [téléchargé](https://gnupg.org/download/) et installé la dernière version de GPG, vous devez obtenir la clé GPG publique pour l’environnement de production des balises :
 
 * [Clé GPG](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg)
-* [Checksum](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg.sum)
+* [Somme de contrôle](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg.sum)
 
-## Importez la clé dans votre trousseau
+## Importation de la clé dans votre trousseau
 
 Une fois que vous avez enregistré la clé sur votre ordinateur, l’étape suivante consiste à l’ajouter à votre trousseau GPG.
 
@@ -44,24 +44,24 @@ gpg --import {KEY_NAME}
 gpg --import launch@adobe.com_pub.gpg
 ```
 
-## Chiffrer les valeurs
+## Chiffrement de valeurs
 
-Après avoir ajouté la clé à votre chaîne de clés, vous pouvez commencer à chiffrer les valeurs à l’aide de l’indicateur `--encrypt`. Le script suivant illustre le fonctionnement de cette commande :
+Après avoir ajouté la clé à votre chaîne de clés, vous pouvez commencer à chiffrer les valeurs à l’aide de l’indicateur `--encrypt`. Le script suivant illustre le fonctionnement de cette commande :
 
 ```shell
 echo -n 'Example value' | gpg --armor --encrypt -r "Tags Data Encryption <launch@adobe.com>"
 ```
 
-Cette commande peut être répartie comme suit :
+Cette commande peut être répartie comme suit :
 
-* L&#39;entrée est fournie à la commande `gpg`.
-* `--armor` crée une sortie encadrée ASCII au lieu de binaire. Cela simplifie le transfert de la valeur via JSON.
-* `--encrypt` Indique à GPG de chiffrer les données.
-* `-r` définit le destinataire des données. Seul le destinataire (titulaire de la clé privée correspondant à la clé publique) peut décrypter les données. Le nom du destinataire de la clé souhaitée peut être trouvé en examinant la sortie de `gpg --list-keys`.
+* L’entrée est fournie à la commande `gpg`.
+* `--armor` crée une sortie blindée ASCII au lieu de binaire. Cela simplifie le transfert de la valeur via JSON.
+* `--encrypt` indique à GPG de chiffrer les données.
+* `-r` définit le destinataire des données. Seul le destinataire (titulaire de la clé privée correspondant à la clé publique) peut déchiffrer les données. Le nom du destinataire de la clé souhaitée peut être trouvé en examinant la sortie de `gpg --list-keys`.
 
-La commande ci-dessus utilise la clé publique pour `Tags Data Encryption <launch@adobe.com>` pour chiffrer la valeur, `Example value`, au format ASCII.
+La commande ci-dessus utilise la clé publique pour `Tags Data Encryption <launch@adobe.com>` afin de chiffrer la valeur, `Example value`, au format ASCII.
 
-La sortie de la commande ressemblerait à ce qui suit :
+La sortie de la commande ressemblerait à ce qui suit :
 
 ```shell
 -----BEGIN PGP MESSAGE-----
@@ -83,11 +83,11 @@ OUoIPf4KxTaboHZOEy32ZBng5heVrn4i9w==
 -----END PGP MESSAGE-----
 ```
 
-Cette sortie ne peut être décryptée que par les systèmes disposant de la clé privée qui
-correspond à la clé publique `Tags Data Encryption <launch@adobe.com>` .
+Cette sortie ne peut être déchiffrée que par les systèmes disposant de la clé privée qui
+correspond à la clé publique `Tags Data Encryption <launch@adobe.com>`.
 
-Cette sortie est la valeur qui doit être fournie dans lors de l’envoi de données à l’API Reactor. Le système stocke cette sortie chiffrée et la décrypte temporairement selon les besoins. Par exemple, le système décrypte les informations d’identification de l’hôte suffisamment longtemps pour lancer une connexion au serveur, puis supprime immédiatement toutes les traces de la valeur déchiffrée.
+Cette sortie correspond à la valeur qui doit être fournie lors de l’envoi de données à l’API Reactor. Le système stocke cette sortie chiffrée et la déchiffre temporairement selon les besoins. Par exemple, le système déchiffre les informations d’identification de l’hôte suffisamment longtemps pour lancer une connexion au serveur, puis supprime immédiatement toutes les traces de la valeur déchiffrée.
 
 >[!NOTE]
 >
->Le format de la valeur encadrée et chiffrée est important. Assurez-vous que les retours de ligne sont correctement précédés d’une séquence d’échappement dans la valeur fournie dans la requête.
+>Le format de la valeur encadrée et chiffrée est important. Assurez-vous que les retours à la ligne sont correctement précédés d’une séquence d’échappement dans la valeur fournie dans la requête.
