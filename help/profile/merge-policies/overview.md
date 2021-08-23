@@ -3,10 +3,10 @@ keywords: Experience Platform;profil;profil client en temps réel;stratégies de
 title: Présentation des stratégies de fusion
 type: Documentation
 description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer cette vue unifiée.
-source-git-commit: c2cc1428e3a70cf987adab583e9f9fb5d5140c74
-workflow-type: ht
-source-wordcount: '1492'
-ht-degree: 100%
+source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
+workflow-type: tm+mt
+source-wordcount: '1252'
+ht-degree: 99%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platform permet de rassembler des données issues de plusieurs 
 Ce guide nécessite une compréhension pratique de plusieurs fonctions [!DNL Experience Platform] importantes. Avant de suivre ce guide et d’utiliser des stratégies de fusion, consultez la documentation des services suivants :
 
 * [Real-time Customer Profile](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md) : permet d’activer le profil client en temps réel en établissant un lien entre les identités des sources de données disparates se trouvant dans [!DNL Platform].
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): permet d’obtenir un profil client en temps réel en rassemblant des identités de sources de données disparates ingérées dans [!DNL Platform].
 * [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience client.
 
 ## Comprendre les stratégies de fusion
@@ -44,8 +44,7 @@ La sélection d’une méthode de fusion vous permet de spécifier les attributs
 Deux méthodes de fusion sont disponibles pour les stratégies de fusion. Chacune de ces méthodes est résumée ci-dessous, et des informations supplémentaires sont fournies dans les sections suivantes :
 
 * **[!UICONTROL Priorité du jeu de données] :** En cas de conflit, donnez la priorité aux fragments de profil en fonction du jeu de données duquel ils sont issus. Lorsque vous sélectionnez cette option, vous devez sélectionner les jeux de données associés et leur ordre de priorité. En savoir plus sur la méthode de fusion [priorité du jeu de données](#dataset-precedence).
-* **[!UICONTROL Horodatage ordonné] :** En cas de conflit, la priorité est donnée au fragment de profil qui a été mis à jour le plus récemment. En savoir plus sur la méthode de fusion [Horodatage ordonné](#timestamp-ordered).
-   * **Horodatages personnalisés :** La méthode de fusion avec horodatage ordonné prend également en charge les horodatages personnalisés qui ont la priorité sur les horodatages système lors de la fusion de données dans le même jeu de données (identités multiples) ou dans plusieurs jeux de données. Pour en savoir plus, consultez la section sur [Utilisation d’horodatages personnalisés](#custom-timestamps).
+* **[!UICONTROL Horodatage ordonné] :** En cas de conflit, la priorité est donnée au fragment de profil qui a été mis à jour le plus récemment. En savoir plus sur la méthode de fusion [timestamp ordered](#timestamp-ordered) .
 
 ### Priorité du jeu de données {#dataset-precedence}
 
@@ -56,22 +55,6 @@ Pour créer une stratégie de fusion à l’aide de la **[!UICONTROL priorité d
 ### Horodatage ordonné {#timestamp-ordered}
 
 Lorsque des enregistrements de profil sont intégrés dans Experience Platform, un horodatage système est obtenu au moment de l’intégration et ajouté à l’enregistrement. Lorsque **[!UICONTROL Horodatage ordonné]** est sélectionné comme méthode de fusion pour une stratégie de fusion, les profils sont fusionnés en fonction de l’horodatage système. En d’autres termes, la fusion est effectuée en fonction de l’horodatage du moment où l’enregistrement a été intégré à Platform.
-
-#### Utilisation d’horodatages personnalisés {#custom-timestamps}
-
-Parfois, il peut arriver qu’il soit nécessaire de fournir un horodatage personnalisé et que la stratégie de fusion respecte l’horodatage personnalisé plutôt que l’horodatage système. Il peut s’agir par exemple de renseigner des données ou de vérifier que l’ordre des événements est correct si les enregistrements sont intégrés dans le désordre.
-
-Pour utiliser un horodatage personnalisé, le groupe de champs de schémas **[!UICONTROL Détails de l’audit du système source externe]** doit être ajouté à votre schéma de profil. Une fois ajouté, l’horodatage personnalisé peut être renseigné à l’aide du champ `lastUpdatedDate`. Lorsqu’un enregistrement est intégré et que le champ `lastUpdatedDate` est renseigné, Experience Platform utilise ce champ pour fusionner des enregistrements dans les jeux de données. Si `lastUpdatedDate` n’est pas présent ou n’est pas renseigné, Platform continuera à utiliser l’horodatage système.
-
->[!NOTE]
->
->Vous devez vous assurer que l’horodatage `lastUpdatedDate` est renseigné lors de l’intégration d’une mise à jour sur le même enregistrement.
-
-La capture d’écran suivante affiche les champs du groupe de champs [!UICONTROL Détails de l’audit du système source externe] . Pour obtenir des instructions détaillées sur l’utilisation des schémas à l’aide de l’interface utilisateur de Platform, notamment sur l’ajout de groupes de champs aux schémas, consultez le [tutoriel sur la création d’un schéma à l’aide de l’interface utilisateur](../../xdm/tutorials/create-schema-ui.md).
-
-![](../images/merge-policies/custom-timestamp-field-group.png)
-
-Pour utiliser des horodatages personnalisés à l’aide de l’API, reportez-vous à la [section du guide de point d’entrée des stratégies de fusion sur l’utilisation d’horodatages personnalisés](../api/merge-policies.md#custom-timestamps).
 
 ## Combinaison d’identités {#id-stitching}
 
