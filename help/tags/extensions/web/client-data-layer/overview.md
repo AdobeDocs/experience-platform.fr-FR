@@ -1,8 +1,8 @@
 ---
-title: Extension Adobe Client Data Layer (ACDL)
+title: Extension Adobe Client Data Layer
 description: Découvrez l’extension de balise ACDL dans Adobe Experience Platform.
 source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '643'
 ht-degree: 100%
 
