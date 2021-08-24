@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; notifications d'assimilation de données ; notifications ; événements d'abonnement ; événements d'état d'assimilation de données ; événements d'état ; abonnement ; notifications d'état ;
+keywords: Experience Platform;accueil;rubriques populaires;notifications d’ingestion de données;notifications;événements d’abonnement;événements d’état d’ingestion de données;événements d’état;abonner;notifications d’état;
 solution: Experience Platform
-title: Notifications d'importation de données
+title: Notifications d’ingestion de données
 topic-legacy: overview
-description: Pour faciliter le suivi du processus d'assimilation, Adobe Experience Platform permet de s'abonner à un ensemble de événements publiés à chaque étape du processus, en vous informant de l'état des données ingérées et de toute erreur éventuelle.
+description: Pour faciliter la surveillance du processus d’ingestion, Adobe Experience Platform permet de s’abonner à un ensemble d’événements publiés par chaque étape du processus, vous informant de l’état des données ingérées et des échecs possibles.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 29%
@@ -15,27 +14,27 @@ ht-degree: 29%
 
 # Notifications d’ingestion de données
 
-Le processus d’ingestion de données dans Adobe Experience Platform se compose de plusieurs étapes. Une fois que vous avez identifié les fichiers de données à ingérer dans [!DNL Platform], le processus d&#39;assimilation commence et chaque étape se produit consécutivement jusqu&#39;à ce que les données soient correctement ingérées ou échouent. Il est possible d’initier le processus d’ingestion à l’aide de l’[API Data Ingestion d’Adobe ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) ou de l’interface utilisateur Experience Platform.[!DNL Experience Platform]
+Le processus d’ingestion de données dans Adobe Experience Platform se compose de plusieurs étapes. Une fois que vous avez identifié les fichiers de données à ingérer dans [!DNL Platform], le processus d’ingestion commence et chaque étape se produit consécutivement jusqu’à ce que les données soient correctement ingérées ou échouent. Il est possible d’initier le processus d’ingestion à l’aide de l’[API Data Ingestion d’Adobe ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) ou de l’interface utilisateur Experience Platform.[!DNL Experience Platform]
 
-Les données chargées dans [!DNL Platform] doivent suivre plusieurs étapes pour atteindre leur destination, le [!DNL Data Lake] ou le magasin de données [!DNL Real-time Customer Profile]. Chaque étape implique le traitement des données, leur validation, puis leur stockage avant de passer à l’étape suivante. En fonction de la quantité de données ingérée, ce processus peut devenir chronophage et il existe toujours une possibilité qu’il échoue en raison d’erreurs de validation, de sémantique ou de traitement. En cas d’échec, les problèmes de données doivent être résolus, puis l’ensemble du processus d’ingestion doit être redémarré en utilisant des fichiers de données corrigés.
+Les données chargées dans [!DNL Platform] doivent passer par plusieurs étapes pour atteindre leur destination, [!DNL Data Lake] ou l’entrepôt de données [!DNL Real-time Customer Profile]. Chaque étape implique le traitement des données, leur validation, puis leur stockage avant de passer à l’étape suivante. En fonction de la quantité de données ingérée, ce processus peut devenir chronophage et il existe toujours une possibilité qu’il échoue en raison d’erreurs de validation, de sémantique ou de traitement. En cas d’échec, les problèmes de données doivent être résolus, puis l’ensemble du processus d’ingestion doit être redémarré en utilisant des fichiers de données corrigés.
 
-Pour vous aider à surveiller le processus d&#39;assimilation, [!DNL Experience Platform] permet de vous abonner à un ensemble de événements publiés à chaque étape du processus, en vous informant de l&#39;état des données ingérées et de tout échec éventuel.
+Pour faciliter la surveillance du processus d’ingestion, [!DNL Experience Platform] permet d’abonner à un ensemble d’événements publiés par chaque étape du processus, vous informant de l’état des données ingérées et des échecs possibles.
 
-## Enregistrement d’un crochet Web pour les notifications d’assimilation de données
+## Enregistrement d’un webhook pour les notifications d’ingestion de données
 
-Pour recevoir des notifications d&#39;assimilation de données, vous devez utiliser [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr) pour enregistrer un webhook dans votre intégration Experience Platform.
+Pour recevoir des notifications d’ingestion de données, vous devez utiliser [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) pour enregistrer un webhook dans votre intégration Experience Platform.
 
-Suivez le didacticiel sur [l&#39;abonnement aux  [!DNL Adobe I/O Event] notifications](../../observability/notifications/subscribe.md) pour obtenir des instructions détaillées sur la façon d&#39;y parvenir.
+Suivez le tutoriel sur [l’abonnement à [!DNL Adobe I/O Event] notifications](../../observability/alerts/subscribe.md) pour obtenir des instructions détaillées sur la manière d’y parvenir.
 
 >[!IMPORTANT]
 >
->Au cours du processus d’abonnement, veillez à sélectionner **[!UICONTROL Notifications de plateforme]** comme fournisseur de événement et à sélectionner l’abonnement de événement **[!UICONTROL Notification d’assimilation de données]** lorsque vous y êtes invité.
+>Pendant le processus d’abonnement, veillez à sélectionner **[!UICONTROL Notifications de plateforme]** comme fournisseur d’événement, et à sélectionner l’abonnement à l’événement **[!UICONTROL Notification d’ingestion de données]** lorsque vous y êtes invité.
 
-## Recevoir des notifications d&#39;assimilation de données
+## Réception de notifications d’ingestion de données
 
-Une fois que vous avez enregistré votre webhook et que de nouvelles données ont été ingérées, vous pouvez début recevoir des notifications de événement. Ces événements peuvent être visualisés à l’aide de webhook lui-même ou en sélectionnant l’onglet **[!UICONTROL Suivi du débogage]** dans l’aperçu de l’enregistrement des événements de votre projet dans Adobe Developer Console.
+Une fois que vous avez enregistré votre webhook et que de nouvelles données ont été ingérées, vous pouvez commencer à recevoir des notifications d’événement. Ces événements peuvent être visualisés à l’aide du webhook lui-même ou en sélectionnant l’onglet **[!UICONTROL Suivi du débogage]** dans la présentation de l’enregistrement des événements de votre projet dans Adobe Developer Console.
 
-Le fichier JSON suivant est un exemple de charge utile de notification qui serait envoyée à votre webhook en cas d’échec d’un événement d’assimilation par lots :
+Le fichier JSON suivant est un exemple de payload de notification qui serait envoyé à votre webhook en cas d’échec d’un événement d’ingestion par lots :
 
 ```json
 {
@@ -65,32 +64,32 @@ Le fichier JSON suivant est un exemple de charge utile de notification qui serai
 | Propriété | Description |
 | --- | --- |
 | `event_id` | Identifiant unique généré par le système pour la notification. |
-| `event` | Objet contenant les détails du événement qui a déclenché la notification. |
-| `event.xdm:datasetId` | ID du jeu de données auquel s&#39;applique le événement d&#39;assimilation. |
-| `event.xdm:eventCode` | Code d’état indiquant le type de événement déclenché pour le jeu de données. Voir l&#39;[appendice](#event-codes) pour connaître les valeurs spécifiques et leurs définitions. |
+| `event` | Objet contenant les détails de l’événement qui a déclenché la notification. |
+| `event.xdm:datasetId` | Identifiant du jeu de données auquel s’applique l’événement d’ingestion. |
+| `event.xdm:eventCode` | Un code d’état indiquant le type d’événement qui a été déclenché pour le jeu de données. Voir l’ [annexe](#event-codes) pour connaître les valeurs spécifiques et leurs définitions. |
 
-Pour vue le schéma complet des notifications de événement, consultez le [référentiel GitHub public](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
+Pour afficher le schéma complet des notifications d’événement, reportez-vous au [référentiel GitHub public](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
 
 ## Étapes suivantes
 
-Une fois que vous avez enregistré des notifications [!DNL Platform] à votre projet, vous pouvez vue les événements reçus de l&#39;[!UICONTROL Aperçu du projet]. Pour obtenir des instructions détaillées sur la façon de tracer vos événements, consultez le guide sur les [Événements de suivi des Adobes I/O](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md).
+Une fois que vous avez enregistré des [!DNL Platform] notifications sur votre projet, vous pouvez afficher les événements reçus de la [!UICONTROL présentation du projet]. Pour obtenir des instructions détaillées sur la manière de suivre vos événements, reportez-vous au guide sur les [événements d’Adobe I/O de suivi](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) .
 
 ## Annexe
 
-La section suivante contient des informations supplémentaires sur l&#39;interprétation des charges utiles de notification d&#39;assimilation de données.
+La section suivante contient des informations supplémentaires sur l’interprétation des payloads des notifications d’ingestion de données.
 
 ### Événements de notification d’état disponibles {#event-codes}
 
-Le tableau suivant liste les notifications d&#39;état d&#39;assimilation de données disponibles auxquelles vous pouvez vous abonner.
+Le tableau suivant répertorie les notifications d’état d’ingestion de données disponibles auxquelles vous pouvez vous abonner.
 
 | Code d’événement | Service Platform | État | Description des événements |
 | --- | ---------------- | ------ | ----------------- |
-| `ing_load_success` | [!DNL Data Ingestion] | success | Un lot a été assimilé à un jeu de données dans [!DNL Data Lake]. |
-| `ing_load_failure` | [!DNL Data Ingestion] | failure | Échec de l&#39;assimilation d&#39;un lot dans un jeu de données dans [!DNL Data Lake]. |
-| `ps_load_success` | [!DNL Real-time Customer Profile] | succès | Un lot a été assimilé à un lot dans le magasin de données [!DNL Profile]. |
-| `ps_load_failure` | [!DNL Real-time Customer Profile] | échec | Échec de l&#39;assimilation d&#39;un lot dans le magasin de données [!DNL Profile]. |
-| `ig_load_success` | [!DNL Identity Service] | succès | Les données ont été chargées avec succès dans le graphique d&#39;identité. |
-| `ig_load_failure` | [!DNL Identity Service] | échec | Échec du chargement des données dans le graphique d&#39;identité. |
+| `ing_load_success` | [!DNL Data Ingestion] | success | Un lot a bien été ingéré dans un jeu de données dans [!DNL Data Lake]. |
+| `ing_load_failure` | [!DNL Data Ingestion] | failure | Échec de l’ingestion d’un lot dans un jeu de données dans [!DNL Data Lake]. |
+| `ps_load_success` | [!DNL Real-time Customer Profile] | success | Un lot a été ingéré avec succès dans l’entrepôt de données [!DNL Profile]. |
+| `ps_load_failure` | [!DNL Real-time Customer Profile] | failure | Échec de l’ingestion d’un lot dans l’entrepôt de données [!DNL Profile]. |
+| `ig_load_success` | [!DNL Identity Service] | success | Les données ont bien été chargées dans le graphique d’identités. |
+| `ig_load_failure` | [!DNL Identity Service] | failure | Échec du chargement des données dans le graphique d’identités. |
 
 >[!NOTE]
 >
