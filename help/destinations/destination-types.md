@@ -4,10 +4,10 @@ title: Types et catégories de destination
 seo-title: Types et catégories de destination
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5a6f14ba65584a6bd61d62c4fb0b46e8f9e8e96d
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 63%
+source-wordcount: '534'
+ht-degree: 45%
 
 ---
 
@@ -23,17 +23,28 @@ Dans Adobe Experience Platform, nous faisons la distinction entre deux types de 
 
 ## Connexions {#connections}
 
-**[!UICONTROL Les destinations d’]** exportation de profils et d’ **[!UICONTROL exportation de segments dans Adobe Experience Platform capturent les données d’événement, les combinent à d’autres sources de données pour former le]** profil client en temps réel [ ](../profile/home.md), appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations.
+**[!UICONTROL Les destinations d’]** exportation de profils et d’ **[!UICONTROL exportation de segments en flux continu dans Adobe Experience Platform capturent les données d’événement, les combinent à d’autres sources de données pour former le profil client en temps]** réel [ ](../profile/home.md), appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations.
 
 ## Destinations d’exportation de profils
 
-Les destinations d’exportation de profils génèrent un fichier contenant des profils et/ou des attributs. Ces destinations utilisent des données brutes, souvent avec l’adresse électronique comme clé primaire. La [destination de stockage dans le cloud Amazon S3](./catalog/cloud-storage/amazon-s3.md) est un exemple de destination où vous pouvez déposer des fichiers contenant des exportations de profils.
+Les destinations d’exportation de profils reçoivent des données brutes, souvent avec l’adresse électronique comme clé Principale. Experience Platform prend actuellement en charge deux types de destinations d’exportation de profils :
 
-## Destinations d’exportation de segments
+* [Destinations d’exportation de profils en flux continu](#streaming-profile-export)
+* [Destinations basées sur des fichiers](#file-based)
 
-Les destinations d’exportation de segments envoient les profils et les segments pour lesquels ils sont qualifiés vers des plateformes de destination. Ces destinations utilisent des identifiants de segment ou d’utilisateur. Les destinations publicitaires telles que [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) ou [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) sont des exemples de ces types de destinations.
+### Destinations d’exportation de profils en flux continu {#streaming-profile-export}
 
-## Destinations d’exportation de segments et de profils : présentation vidéo
+Les destinations d’exportation de profils en flux continu reçoivent des données de segment et de profil en tant que flux de données Experience Platform. [Amazon ](catalog/cloud-storage/amazon-kinesis.md) Kinesisand et  [Azure Event ](catalog/cloud-storage/azure-event-hubs.md) Hub sont des exemples de destinations de ce type.
+
+### Destinations basées sur des fichiers {#file-based}
+
+Les destinations basées sur des fichiers reçoivent des fichiers `.csv` contenant des profils et/ou des attributs. [Amazon S3](catalog/cloud-storage/amazon-s3.md) est un exemple de destination où vous pouvez déposer des fichiers contenant des exportations de profils.
+
+## Destinations d’exportation de segments en flux continu
+
+Les destinations d’exportation de segments reçoivent des données de segment Experience Platform. Ces destinations utilisent des identifiants de segment ou d’utilisateur. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md) et  [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) sont des exemples de ces destinations.
+
+## Destinations d’exportation de profils et de segments - Présentation vidéo
 
 La vidéo ci-dessous vous montre les particularités des deux types de destinations :
 
