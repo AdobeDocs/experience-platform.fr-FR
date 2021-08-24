@@ -5,10 +5,10 @@ title: 'Segmentation Edge à l’aide de l’API '
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 3de00fb9ae5348b129a499cfd81d8db6dbac2d46
+source-git-commit: af1eee8787d7fa2ae2d56e541823100d2620dd2d
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 20%
+source-wordcount: '633'
+ht-degree: 19%
 
 ---
 
@@ -38,8 +38,8 @@ Pour qu’un segment soit évalué à l’aide de la segmentation Edge, la requ�
 | ---------- | ------- |
 | Accès entrant | Toute définition de segment qui fait référence à un seul événement entrant sans restriction temporelle. |
 | Accès entrant qui fait référence à un profil | Toute définition de segment qui fait référence à un seul événement entrant, sans restriction temporelle, et à un ou plusieurs attributs de profil. |
-| Requête de fréquence | Toute définition de segment qui fait référence à un événement se produisant au moins un certain nombre de fois. |
-| Requête de fréquence faisant référence à un profil | Toute définition de segment qui fait référence à un événement se produisant au moins un certain nombre de fois et qui possède un ou plusieurs attributs de profil. |
+| Accès entrant avec une fenêtre temporelle de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans les 24 heures |
+| Accès entrant qui fait référence à un profil avec une fenêtre temporelle de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans les 24 heures et à un ou plusieurs attributs de profil |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -47,9 +47,9 @@ Les types de requête suivants sont **non** actuellement pris en charge par la s
 
 | Type de requête | Détails |
 | ---------- | ------- |
-| Fenêtre de temps relatif | Si une requête fait référence à une fenêtre temporelle, elle ne peut pas être évaluée à l’aide de la segmentation Edge. |
-| Négation | Si une requête contient une négation ou un événement `not`, elle ne peut pas être évaluée à l’aide de la segmentation Edge. |
 | Événements multiples | Si une requête contient plusieurs événements, elle ne peut pas être évaluée à l’aide de la segmentation Edge. |
+| Requête de fréquence | Toute définition de segment qui fait référence à un événement se produisant au moins un certain nombre de fois. |
+| Requête de fréquence faisant référence à un profil | Toute définition de segment qui fait référence à un événement se produisant au moins un certain nombre de fois et qui possède un ou plusieurs attributs de profil. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -57,7 +57,7 @@ Les types de requête suivants sont **non** actuellement pris en charge par la s
 
 Vous pouvez récupérer une liste de tous les segments activés pour la segmentation Edge dans votre organisation IMS en envoyant une requête GET au point de terminaison `/segment/definitions` .
 
-**Format d&#39;API**
+**Format d’API**
 
 Pour récupérer les segments activés pour la segmentation Edge, vous devez inclure le paramètre de requête `evaluationInfo.synchronous.enabled=true` dans le chemin de requête.
 
