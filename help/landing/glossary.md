@@ -5,10 +5,10 @@ title: Glossaire Adobe Experience Platform
 topic-legacy: getting started
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 83efc9f3c203cf4743514dc4b7a480715dadb19a
 workflow-type: tm+mt
-source-wordcount: '7225'
-ht-degree: 13%
+source-wordcount: '7386'
+ht-degree: 12%
 
 ---
 
@@ -144,6 +144,8 @@ ht-degree: 13%
 
 ## D
 
+**Quotidien** : Dans le cadre d’exportations de fichiers planifiées, planifie des exportations de fichiers complètes ou incrémentielles une fois par jour, tous les jours, de la date de début à la date de fin à l’heure spécifiée par l’utilisateur.
+
 **Dictionnaire** de données : Dans le contexte des balises, un dictionnaire de données (également appelé mappage de données) est un ensemble d’éléments de données définis dans une propriété.
 
 **Élément** de données : Dans le contexte des balises, un élément de données est un pointeur utilisé dans les règles et les extensions pour pointer vers un élément de données spécifique existant sur l’appareil client.
@@ -179,6 +181,8 @@ ht-degree: 13%
 **Identifiant** du jeu de données : Identifiant généré par l’Adobe pour un jeu de données ingéré.
 
 **Sortie** du jeu de données : La sortie du jeu de données fournit un mécanisme permettant de déterminer l’option &quot;Créer un tableau comme sélectionné&quot; qui sera utilisée pour une  [!DNL Query Service] exécution particulière.
+
+**Clé** de déduplication : Clé Principale définie par l’utilisateur qui détermine l’identité par laquelle les utilisateurs souhaitent dédupliquer leurs profils. &#x200B;
 
 **Colonne** delta : Une colonne delta vous permet de sélectionner un champ de données source pour représenter un horodatage pour l’ingestion incrémentielle.
 
@@ -224,6 +228,10 @@ ht-degree: 13%
 
 **Événement d’expérience** : Un événement d’expérience représente un instantané du système lorsqu’une interaction ou un événement lié à une expérience client se produit. Les événements d’expérience sont des enregistrements factuels non modifiables de ce qui s’est passé et représentent ce qui s’est passé sans agrégation ni interprétation. Dans le modèle de données d’expérience (XDM), ce concept est capturé par la classe [!DNL XDM ExperienceEvent].
 
+**Exporter le fichier** complet : Un fichier d’exportation contenant un instantané complet de toutes les qualifications de profil pour le segment sélectionné.
+
+**Exporter les fichiers** incrémentiels : Série de fichiers exportés où le premier fichier est un instantané complet de toutes les qualifications de profil pour le segment sélectionné et les fichiers suivants sont des qualifications de profil incrémentielles depuis l’exportation précédente.
+
 **Extension** : Dans le contexte des balises, une extension est un module de fonctionnalités ajouté à une propriété de balise. Une extension est généralement axée sur une solution marketing ou analytique spécifique et fournit les outils nécessaires au déploiement de cette technologie dans un environnement client.
 
 **Package** d’extension : Dans le contexte des balises, un package d’extension est un fichier ZIP créé et téléchargé par un développeur d’extensions qui fournit tout le nécessaire pour que les utilisateurs de balises installent l’extension dans leur propriété. Un package d’extension contient un manifeste spécifiant des informations sur l’extension, le code HTML/JavaScript nécessaire pour que les utilisateurs finaux configurent le comportement de l’extension de balise et le code JavaScript exécutable diffusé à l’environnement client (si nécessaire).
@@ -253,6 +261,8 @@ ht-degree: 13%
 ## H
 
 **Hôte** : Dans le contexte des balises, un hôte spécifie l’emplacement, le domaine et les informations d’identification d’utilisateur nécessaires pour que le système diffuse une version.
+
+**Horaire** : Dans le contexte des exportations de fichiers planifiées, planifie les exportations incrémentielles de fichiers toutes les 3, 6, 7 ou 12 heures.
 
 ## I
 
@@ -314,6 +324,8 @@ ht-degree: 13%
 
 **Modèle** d’apprentissage automatique : Un modèle d’apprentissage automatique est une instance d’une recette d’apprentissage automatique formée à l’aide de données historiques et de configurations pour résoudre un cas d’utilisation commerciale. Dans Adobe Experience Platform Data Science Workspace, les modèles d’apprentissage automatique sont appelés recettes.
 
+**Attribut** obligatoire : Case à cocher activée par l’utilisateur qui garantit que tous les enregistrements de profil contiennent l’attribut sélectionné. Par exemple : tous les profils exportés contiennent une adresse email.
+
 **Mappage** : Le mappage des données est le processus de mappage des champs de données sources aux champs cibles associés dans une destination.
 
 **Action** marketing : Dans le cadre de la gouvernance des données, une action marketing (également appelée cas d’utilisation marketing) est une action entreprise par un utilisateur de données Experience Platform, pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
@@ -343,6 +355,8 @@ ht-degree: 13%
 **Action marketing de personnalisation sur site** : Action marketing qui utilise les données pour la personnalisation de contenu sur site. La personnalisation sur site est une donnée utilisée pour établir des inférences sur les intérêts des utilisateurs et pour sélectionner le contenu ou les publicités diffusés en fonction de ces inférences.
 
 **Action marketing de ciblage sur site** : Action marketing qui utilise les données pour les publicités sur site, y compris la sélection et la diffusion de publicités sur les sites web ou les applications de votre entreprise, ou pour mesurer la diffusion et l’efficacité de ces publicités.
+
+**Une fois** : Dans le contexte des exportations de fichiers planifiées, planifie une exportation de fichiers unique, à la demande et complète.
 
 **Stratégie** d’enregistrement de remplacement : La stratégie d’enregistrement &quot;Overwrite&quot; (Remplacer) est une option permettant d’ingérer des données tierces via une connexion. Vous pouvez y indiquer si les données ingérées seront remplacées selon un calendrier spécifié.
 
