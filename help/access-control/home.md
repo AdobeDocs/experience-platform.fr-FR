@@ -5,10 +5,10 @@ topic-legacy: overview
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: f340ecfb850ef50504938a5db136e70b8bede61a
+source-git-commit: 4425f7d61aa5ff357c7ba25cf986201fefeacd67
 workflow-type: tm+mt
-source-wordcount: '1320'
-ht-degree: 99%
+source-wordcount: '1347'
+ht-degree: 97%
 
 ---
 
@@ -105,6 +105,8 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 | [!DNL Destinations] | [!UICONTROL Activation des destinations] | Capacité à activer les données vers les destinations actives qui ont été créées. Cette autorisation nécessite dʼaccorder soit « Affichage des destinations » ou « Gestion des [!UICONTROL destinations »] à lʼutilisateur qui activera les destinations. |
 | [!DNL Data Ingestion] | [!UICONTROL Gestion des sources] | Accès à la lecture, la création, la modification et la désactivation des sources. |
 | [!DNL Data Ingestion] | [!UICONTROL Affichage des sources] | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Accès pour créer, accepter et refuser des poignées de main de partenaire afin de connecter deux organisations IMS et d’activer des flux [!DNL Segment Match]. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Accès à la lecture, la création, la modification et la publication de flux [!DNL Segment Match] avec des partenaires principaux. |
 | [!DNL Data Science Workspace] | [!UICONTROL Gestion de Data Science Workspace] | Accès à la lecture, la création, la modification et la suppression dans [!DNL Data Science Workspace]. |
 | [!DNL Data Governance] | [!UICONTROL Application dʼétiquettes dʼutilisation des données] | Accès à la lecture, la création et la suppression des étiquettes dʼutilisation des données. |
 | [!DNL Data Governance] | [!UICONTROL Gestion des stratégies dʼutilisation des données] | Accès à la lecture, la création, la modification et la suppression des stratégies dʼutilisation des données. |
