@@ -1,56 +1,55 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation par lots ; assimilation par lots ; assimilation partielle ; assimilation partielle ; extraction de l'erreur ; extraction de l'erreur ; extraction de l'erreur ; erreur ; assimilation partielle du lot ; assimilation partielle ; assimilation ; assimilation ; diagnostic d'erreur ; récupération des diagnostics d'erreur ; obtention d'erreurs ; obtention d'erreurs ; récupération des erreurs ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion par lots;ingestion par lots;ingestion partielle;ingestion partielle;récupération d’une erreur;récupérer une erreur;erreur;ingestion par lots partielle;ingestion par lots partielle;ingestion;ingestion;diagnostics d’erreur;récupérer les diagnostics d’erreur;obtenir des diagnostics d’erreur;obtenir une erreur;obtenir des erreurs;récupérer des erreurs;récupérer des erreurs;
 solution: Experience Platform
-title: Récupération des diagnostics d'erreur de gestion des données
+title: Récupération des diagnostics d’erreur d’ingestion de données
 topic-legacy: overview
-description: Ce document fournit des informations sur la surveillance de l'assimilation des lots, la gestion des erreurs d'assimilation partielle des lots, ainsi qu'une référence pour les types d'assimilation partielle des lots.
+description: Ce document fournit des informations sur la surveillance de l’ingestion par lots, la gestion des erreurs d’ingestion par lots partielle, ainsi qu’une référence pour les types d’ingestion par lots partielle.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 104e6eb258136caa2192b61c793697baf95b55eb
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 35%
+source-wordcount: '979'
+ht-degree: 40%
 
 ---
 
-# Récupération des diagnostics d&#39;erreur d&#39;assimilation des données
+# Récupération des diagnostics d’erreur d’ingestion de données
 
-Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. Vous pouvez utiliser l’assimilation par lot, qui vous permet d’insérer des données à l’aide de différents types de fichiers (tels que les fichiers CSV), ou l’assimilation en flux continu, qui vous permet d’insérer leurs données dans [!DNL Platform] à l’aide de points de terminaison en flux continu en temps réel.
+Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. Vous pouvez utiliser soit l’ingestion par lots, qui vous permet d’insérer des données à l’aide de différents types de fichiers (tels que des fichiers CSV), soit l’ingestion par flux, qui vous permet d’insérer leurs données dans [!DNL Platform] à l’aide de points de terminaison en continu en temps réel.
 
-Ce document fournit des informations sur la surveillance de l&#39;assimilation des lots, la gestion des erreurs d&#39;assimilation partielle des lots, ainsi qu&#39;une référence pour les types d&#39;assimilation partielle des lots.
+Ce document fournit des informations sur la surveillance de l’ingestion par lots, la gestion des erreurs d’ingestion par lots partielle, ainsi qu’une référence pour les types d’ingestion par lots partielle.
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
-- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): Méthodes d’envoi des données à  [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md) : méthodes par lesquelles les données peuvent être envoyées à [!DNL Experience Platform].
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecter des valeurs pour les en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Schema Registry], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Schema Registry], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d&#39;informations sur les sandbox dans [!DNL Platform], consultez la [documentation d&#39;aperçu de sandbox](../../sandboxes/home.md).
+>Pour plus d’informations sur les environnements de test dans [!DNL Platform], consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
 
-## Téléchargement des diagnostics d&#39;erreur {#download-diagnostics}
+## Téléchargement des diagnostics d’erreur {#download-diagnostics}
 
-Adobe Experience Platform permet aux utilisateurs de télécharger les diagnostics d’erreur des fichiers d’entrée. Les diagnostics seront conservés dans un délai de [!DNL Platform] jusqu&#39;à 30 jours.
+Adobe Experience Platform permet aux utilisateurs de télécharger les diagnostics d’erreur des fichiers d’entrée. Les diagnostics seront conservés dans [!DNL Platform] pendant un maximum de 30 jours.
 
-### Fichiers d’entrée de liste {#list-files}
+### Liste des fichiers d’entrée {#list-files}
 
 La requête suivante récupère une liste de tous les fichiers fournis dans un lot finalisé.
 
@@ -76,7 +75,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Réponse**
 
-Une réponse réussie renvoie des objets JSON détaillant l&#39;emplacement d&#39;enregistrement des diagnostics.
+Une réponse réussie renvoie des objets JSON détaillant l’emplacement d’enregistrement des diagnostics.
 
 ```json
 {
@@ -107,9 +106,9 @@ Une réponse réussie renvoie des objets JSON détaillant l&#39;emplacement d&#3
 }
 ```
 
-### Récupérer les diagnostics des fichiers d&#39;entrée {#retrieve-diagnostics}
+### Récupération des diagnostics de fichier d’entrée {#retrieve-diagnostics}
 
-Une fois que vous avez récupéré une liste de tous les différents fichiers d’entrée, vous pouvez récupérer les diagnostics du fichier individuel à l’aide de la requête suivante.
+Une fois que vous avez récupéré la liste de tous les différents fichiers d’entrée, vous pouvez récupérer les diagnostics du fichier individuel à l’aide de la requête suivante.
 
 **Format d’API**
 
@@ -134,30 +133,32 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Réponse**
 
-Une réponse réussie renvoie des objets JSON contenant des objets `path` détaillant l&#39;emplacement d&#39;enregistrement des diagnostics. La réponse renvoie les objets `path` au format [Lignes JSON](https://jsonlines.org/).
+Une réponse réussie renvoie des objets JSON contenant des objets `path` détaillant l’emplacement d’enregistrement des diagnostics. La réponse renvoie les objets `path` au format [Lignes JSON](https://jsonlines.org/) .
 
 ```json
 {"path": "F1.json"}
 {"path": "etc/F2.json"}
 ```
 
-## Récupérer les erreurs d&#39;assimilation par lots {#retrieve-errors}
+## Récupération des erreurs d’ingestion par lots {#retrieve-errors}
 
-Si les lots contiennent des échecs, vous devez récupérer les informations d’erreur sur ces échecs afin de pouvoir réassimiler les données.
+Si les lots contiennent des échecs, vous devez récupérer les informations d’erreur sur ces échecs afin de pouvoir ingérer à nouveau les données.
 
 ### Vérification de l’état {#check-status}
 
-Pour vérifier l’état du lot ingéré, vous devez indiquer l’identifiant du lot dans le chemin d’une requête GET.
+Pour vérifier l’état du lot ingéré, vous devez indiquer l’identifiant du lot dans le chemin d’une requête GET. Pour en savoir plus sur l’utilisation de cet appel API, consultez le [guide du point de terminaison du catalogue](../../catalog/api/list-objects.md).
 
 **Format d’API**
 
 ```http
 GET /catalog/batches/{BATCH_ID}
+GET /catalog/batches/{BATCH_ID}?{FILTER}
 ```
 
 | Paramètre | Description |
 | --------- | ----------- |
 | `{BATCH_ID}` | Valeur `id` du lot dont vous voulez vérifier l’état. |
+| `{FILTER}` | Un paramètre de requête utilisé pour filtrer les résultats renvoyés dans la réponse. Plusieurs paramètres sont séparés par des esperluettes (`&`). Pour plus d’informations, consultez le guide sur le [filtrage des données du catalogue](../../catalog/api/filter-data.md). |
 
 **Requête**
 
@@ -169,9 +170,9 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Réponse sans erreurs**
+**Réponse sans erreur**
 
-Une réponse positive est renvoyée avec des informations détaillées sur l&#39;état du lot.
+Une réponse réussie renvoie des informations détaillées sur l’état du lot.
 
 ```json
 {
@@ -214,11 +215,11 @@ Une réponse positive est renvoyée avec des informations détaillées sur l&#39
 
 | Propriété | Description |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Nombre de lignes qui n’ont pas pu être traitées en raison de l’analyse, de la conversion ou de la validation. Cette valeur peut être déduite en soustrayant `inputRecordCount` de `outputRecordCount`. Cette valeur est générée sur tous les lots, même si `errorDiagnostics` est activé. |
+| `metrics.failedRecordCount` | Nombre de lignes qui n’ont pas pu être traitées en raison de l’analyse, de la conversion ou de la validation. Cette valeur peut être déduite en soustrayant la valeur `inputRecordCount` de la valeur `outputRecordCount`. Cette valeur est générée sur tous les lots, que `errorDiagnostics` soit activé. |
 
-**Réponse avec erreurs**
+**Réponse en erreur**
 
-Si le lot comporte une ou plusieurs erreurs et que les diagnostics d’erreur sont activés, la réponse renvoie plus d’informations sur les erreurs, à la fois dans la charge utile elle-même et dans un fichier d’erreur téléchargeable. Notez que l&#39;état d&#39;un lot contenant des erreurs peut toujours avoir un état de réussite.
+Si le lot comporte une ou plusieurs erreurs et que les diagnostics d’erreur sont activés, la réponse renvoie plus d’informations sur les erreurs, à la fois dans la payload elle-même et dans un fichier d’erreur téléchargeable. Notez que l’état d’un lot contenant des erreurs peut toujours présenter un état de réussite.
 
 ```json
 {
@@ -277,7 +278,7 @@ Si le lot comporte une ou plusieurs erreurs et que les diagnostics d’erreur so
 
 | Propriété | Description |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Nombre de lignes qui n’ont pas pu être traitées en raison de l’analyse, de la conversion ou de la validation. Cette valeur peut être déduite en soustrayant `inputRecordCount` de `outputRecordCount`. Cette valeur est générée sur tous les lots, même si `errorDiagnostics` est activé. |
+| `metrics.failedRecordCount` | Nombre de lignes qui n’ont pas pu être traitées en raison de l’analyse, de la conversion ou de la validation. Cette valeur peut être déduite en soustrayant la valeur `inputRecordCount` de la valeur `outputRecordCount`. Cette valeur est générée sur tous les lots, que `errorDiagnostics` soit activé. |
 | `errors.recordCount` | Nombre de lignes qui ont échoué pour le code d’erreur spécifié. Cette valeur est **générée uniquement** si `errorDiagnostics` est activé. |
 
 >[!NOTE]
@@ -295,15 +296,15 @@ Si le lot comporte une ou plusieurs erreurs et que les diagnostics d’erreur so
 
 ## Étapes suivantes {#next-steps}
 
-Ce didacticiel explique comment surveiller les erreurs d&#39;assimilation partielle de lots. Pour plus d’informations sur l’ingestion par lots, consultez le [guide de développement de l’ingestion par lots](../batch-ingestion/api-overview.md).
+Ce tutoriel explique comment surveiller les erreurs d’ingestion par lots partielle. Pour plus d’informations sur l’ingestion par lots, consultez le [guide de développement de l’ingestion par lots](../batch-ingestion/api-overview.md).
 
 ## Annexe {#appendix}
 
-Cette section fournit des informations supplémentaires sur les types d&#39;erreur d&#39;assimilation.
+Cette section fournit des informations supplémentaires sur les types d’erreurs d’ingestion.
 
 ### Types d’erreurs d’ingestion par lots partielle {#partial-ingestion-types}
 
-L&#39;assimilation partielle par lot comporte trois types d&#39;erreur différents lors de l&#39;assimilation de données :
+L’ingestion par lots partielle présente trois types d’erreur différents lors de l’ingestion de données :
 
 - [Fichiers illisibles](#unreadable)
 - [Schémas ou en-têtes non valides](#schemas-headers)
@@ -319,7 +320,7 @@ Si le lot ingéré comporte un schéma ou des en-têtes non valides, les erreurs
 
 ### Lignes non analysables {#unparsable}
 
-Si le lot que vous avez assimilé contient des lignes non analysables, vous pouvez utiliser la requête suivante pour vue d’une liste de fichiers contenant des erreurs.
+Si le lot que vous avez ingéré contient des lignes non analysables, vous pouvez utiliser la requête suivante pour afficher la liste des fichiers contenant des erreurs.
 
 **Format d’API**
 
@@ -343,7 +344,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203P
 
 **Réponse**
 
-Une réponse réussie renvoie une liste des fichiers qui contiennent des erreurs.
+Une réponse réussie renvoie une liste des fichiers en erreur.
 
 ```json
 {
@@ -374,7 +375,7 @@ Une réponse réussie renvoie une liste des fichiers qui contiennent des erreurs
 }
 ```
 
-Vous pouvez ensuite récupérer des informations détaillées sur les erreurs à l&#39;aide du [point de terminaison de récupération des diagnostics](#retrieve-diagnostics).
+Vous pouvez ensuite récupérer des informations détaillées sur les erreurs à l’aide du [point de terminaison de récupération des diagnostics](#retrieve-diagnostics).
 
 Vous trouverez ci-dessous un exemple de réponse de récupération du fichier d’erreur :
 
