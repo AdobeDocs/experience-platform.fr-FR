@@ -4,10 +4,10 @@ description: Notes de mise à jour des Experience Platform pour le 25 août 2021
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: 17d4e91aeeca988f5b047007f87062872f36365c
+source-git-commit: bd3d60e1960b1f4c32ade8c4070d7c1b01e5ba07
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 30%
+source-wordcount: '457'
+ht-degree: 42%
 
 ---
 
@@ -20,6 +20,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 - [Observability Insights](#observability)
 - [Profil client en temps réel](#profile)
+- [Sources](#sources)
 
 ## Observability Insights {#observability}
 
@@ -42,3 +43,15 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences co
 | Parcourir les profils par stratégie ou identité de fusion | Lors de l’exploration des profils dans Experience Platform, vous pouvez désormais naviguer par stratégie de fusion pour prévisualiser 20 profils d’exemple en fonction de la stratégie de fusion sélectionnée. Vous pouvez également naviguer par identité afin de rechercher un profil spécifique à l’aide d’un espace de noms d’identité et d’une valeur d’identité associée. Pour plus d’informations, consultez le [guide de l’interface utilisateur de Real-time Customer Profile](../../profile/ui/user-guide.md). |
 
 Pour en savoir plus sur Real-time Customer Profile, y compris des tutoriels et des bonnes pratiques concernant l’utilisation des données de profil, commencez par lire la [présentation de Real-time Customer Profile](../../profile/home.md).
+
+## Sources {#sources}
+
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Connecteur source de chargement de fichier local | La catégorie d’ingestion de fichiers a été renommée système local, ce qui vous permet d’importer directement des fichiers locaux dans Platform à l’aide du connecteur de téléchargement de fichiers local. Les données ingérées par ce connecteur peuvent être surveillées via le tableau de bord de surveillance. Pour plus d’informations, consultez la [présentation de la source de chargement de fichier locale](../../sources/connectors/local-system/local-file-upload.md) . |
+
+Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
