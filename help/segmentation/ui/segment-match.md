@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation de la correspondance de segment
 topic-legacy: overview
 description: La correspondance de segment est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment de manière sécurisée, gérée et respectueuse de la confidentialité.
-source-git-commit: d6eefc8c10a44fd31eaed00f22d09ee8a300db83
+source-git-commit: ee59da6c075573af366403e1059b5318fb924d21
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1982'
 ht-degree: 6%
 
 ---
@@ -74,6 +74,17 @@ Les libellés d’utilisation des données vous permettent de classer les jeux d
 [!DNL Segment Match] utilise l’étiquette C11, une étiquette de contrat spécifique à  [!DNL Segment Match] que vous pouvez ajouter manuellement à n’importe quel jeu de données ou attribut pour vous assurer qu’ils sont exclus du processus de  [!DNL Segment Match] partage avec les partenaires. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs à exclure de [!DNL Segment Match] et ajouté l’étiquette C11 en conséquence, le libellé est automatiquement appliqué par le workflow [!DNL Segment Match]. [!DNL Segment Match] active automatiquement la stratégie  [!UICONTROL Restreindre le ] partage des données de base. Pour obtenir des instructions spécifiques sur la manière d’appliquer des libellés d’utilisation des données aux jeux de données, consultez le tutoriel sur la [gestion des libellés d’utilisation des données dans l’interface utilisateur](../../data-governance/labels/user-guide.md).
 
 Pour obtenir la liste des libellés d’utilisation des données et leurs définitions, consultez le [glossaire des libellés d’utilisation des données](../../data-governance/labels/reference.md). Pour plus d’informations sur les stratégies d’utilisation des données, consultez la [présentation des stratégies d’utilisation des données](../../data-governance/policies/overview.md).
+
+### Présentation des [!DNL Segment Match] autorisations
+
+Deux autorisations sont associées à [!DNL Segment Match] :
+
+| Autorisation | Description |
+| --- | --- |
+| Gestion des connexions du partage d’audience | Cette autorisation vous permet de terminer le processus de négociation des liens avec les partenaires, qui connecte deux organisations IMS pour activer les flux [!DNL Segment Match]. |
+| Gestion des partages d’audience | Cette autorisation vous permet de créer, de modifier et de publier des flux (le module de données utilisé pour [!DNL Segment Match]) avec des partenaires principaux (partenaires qui ont été connectés par l’utilisateur administrateur avec un accès **[!UICONTROL Connexions de partage d’audience]**). |
+
+Pour plus d’informations sur le contrôle d’accès et les autorisations, consultez la [présentation du contrôle d’accès](../../access-control/home.md) .
 
 ## [!DNL Segment Match] workflow de bout en bout
 
