@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur de Segmentation Service
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
+source-git-commit: fc59ad026a746bc75192fc6b314989894f8f6c45
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1613'
 ht-degree: 24%
 
 ---
@@ -81,7 +81,7 @@ La barre latérale droite contient des informations sur tous les segments de l�
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
-La sélection de la ligne de la définition de segment fournit un résumé de la définition de segment, y compris des options permettant de modifier ou de supprimer le segment, l’audience qualifiée du segment, la taille totale de l’audience, en plus du nom, de la description, de la méthode d’évaluation, de la date de création et de la date de dernière modification du segment.
+La sélection de la ligne de la définition de segment fournit un résumé de la définition de segment, y compris des options permettant de modifier ou de supprimer le segment, d’activer le segment vers une destination, l’audience qualifiée pour le segment, la taille totale de l’audience, en plus du nom du segment, de la description, de la méthode d’évaluation, de la date de création et de la date de dernière modification.
 
 >[!NOTE]
 >
@@ -101,7 +101,13 @@ La page des détails du segment s’affiche. En haut se trouve un résumé de la
 
 La section **[!UICONTROL Résumé du segment]** fournit des informations telles que l’identifiant, le nom, la description et les détails des attributs.
 
-De plus, vous avez la possibilité de modifier le segment. Sélectionnez **[!UICONTROL Modifier le segment]** pour accéder à [!DNL Segment Builder]. Pour plus d’informations sur l’utilisation de l’espace de travail [!DNL Segment Builder], consultez le [[!DNL Segment Builder] guide d’utilisation](./segment-builder.md).
+De plus, vous avez la possibilité d’activer le segment vers une destination ou de le modifier. Sélectionnez **[!UICONTROL Activer à la destination]** pour activer le segment vers une destination. Pour plus d’informations sur l’activation d’un segment vers une destination, consultez la [présentation de l’activation](../../destinations/ui/activation-overview.md).
+
+![](../images/ui/overview/segment-details-activate.png)
+
+Sélectionnez **[!UICONTROL Modifier le segment]** pour accéder à [!DNL Segment Builder]. Pour plus d’informations sur l’utilisation de l’espace de travail [!DNL Segment Builder], consultez le [[!DNL Segment Builder] guide d’utilisation](./segment-builder.md).
+
+![](../images/ui/overview/segment-details-edit-segment.png)
 
 ### Audience totale dans le segment
 
