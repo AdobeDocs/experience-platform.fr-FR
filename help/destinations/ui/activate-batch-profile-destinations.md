@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activate audience data to batch profile export destinations
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil de lot.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
-source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
+source-git-commit: 7c10f39e7452481a00fb4269925c80aab34a7319
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1925'
 ht-degree: 7%
 
 ---
@@ -25,13 +25,17 @@ Pour activer les données vers les destinations, vous devez être [connecté à 
 
 ## Sélectionner votre destination {#select-destination}
 
-1. Accédez à **[!UICONTROL Connexions > Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Parcourir]**.
+1. Accédez à **[!UICONTROL Connexions > Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**.
 
-   ![Onglet Parcourir la destination](../assets/ui/activate-batch-profile-destinations/browse-tab.png)
+   ![Onglet Catalogue de destinations](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
-1. Sélectionnez le bouton **[!UICONTROL Ajouter des segments]** correspondant à la destination vers laquelle vous souhaitez activer vos segments, comme illustré dans l’image ci-dessous.
+1. Sélectionnez **[!UICONTROL Activer les segments]** sur la carte correspondant à la destination vers laquelle vous souhaitez activer vos segments, comme illustré dans l’image ci-dessous.
 
-   ![Boutons Activer](../assets/ui/activate-batch-profile-destinations/activate-buttons-browse.png)
+   ![Bouton Activer les segments](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
+
+1. Sélectionnez la connexion de destination à utiliser pour activer vos segments, puis cliquez sur **[!UICONTROL Suivant]**.
+
+   ![Sélectionner la destination](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Passez à la section suivante pour [sélectionner vos segments](#select-segments).
 
@@ -144,9 +148,7 @@ Pour les destinations basées sur un profil, vous devez sélectionner les attrib
 
    ![Sélectionner la page du champ source](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
-
 1. Pour ajouter d’autres mappages, répétez les étapes 1 à 3.
-
 
 >[!NOTE]
 >
