@@ -1,91 +1,46 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour de l’Experience Platform pour le 28 juillet 2021.
-doc-type: release notes
-last-update: July 28, 2021
-author: ens60013
+description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 3d6402a35e1813b94af866d7aaea975d4f103906
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 53%
+source-wordcount: '459'
+ht-degree: 44%
 
 ---
 
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : 28 juillet 2021**
+**Date de publication : 25 août 2021**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [Data Science Workspace](#dsw)
-- [Flux de données](#destinations)
-- [Destinations](#destinations)
-- [Modèle de données d’expérience (XDM)](#xdm)
-- [Query Service](#query)
+- [Observability Insights](#observability)
+- [Profil client en temps réel](#profile)
 - [Sources](#sources)
 
-## Data Science Workspace {#dsw}
+## Observability Insights {#observability}
 
-Data Science Workspace utilise le machine learning et l’intelligence artificielle pour exploiter les informations contenues dans vos données. Intégré à Adobe Experience Platform, Data Science Workspace vous aide à obtenir des prévisions en utilisant votre contenu et des ressources de données de l’ensemble des solutions Adobe.
+Observability Insights vous permet de surveiller les activités de Platform à l’aide de mesures statistiques et de notifications d’événement.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mises à jour de bibliothèque et de système d’exploitation | Data Science Workspace a effectué d’importantes mises à jour de bibliothèque et de système d’exploitation afin d’améliorer les fonctionnalités et la convivialité. Cela inclut JupyterLab 1.2.20, Python 3.7, Pandas 1.2.4, Tensorflow 2.4.1 avec prise en charge de CUDA 11 et de CUDNN 8, etc. Pour découvrir comment afficher les bibliothèques disponibles dans JupyterLab, consultez la section [Bibliothèques prises en charge](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) de la documentation de présentation des notebooks JupyterLab. |
+| Alertes | Vous pouvez désormais vous abonner à des alertes importantes liées aux workflows exécutés sur Platform. Après vous être abonné à des règles d’alerte spécifiques, vous recevrez des notifications et des e-mails dans l’interface utilisateur lorsqu’un événement de cycle de vie important se produit (par exemple, une ingestion de données réussie) ou si des problèmes nécessitent votre attention (par exemple, un échec du flux d’ingestion ou une tâche de segmentation qui prend plus de temps que prévu). Pour plus d’informations, consultez la [présentation des alertes](../../observability/alerts/overview.md). |
 
-Pour plus d’informations sur Data Science Workspace, consultez la [Présentation de Data Science Workspace](../../data-science-workspace/home.md).
+Pour plus d’informations sur le service, consultez la [présentation d’Observability Insights](../../observability/home.md) .
 
-## Flux de données {#dataflows}
+## Real-time Customer Profile {#profile}
 
-Dans Platform, les données sont ingérées à partir de nombreuses sources différentes, analysées dans le système et activées vers un large éventail de destinations. En offrant de la transparence au niveau des flux de données, Platform facilite le processus de suivi de ce flux de données potentiellement non linéaire.
-
-Les flux de données sont une représentation des tâches qui déplacent des données dans Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers les jeux de données cibles, où elles sont ensuite utilisées par le service d’identités et le profil client en temps réel avant d’être finalement activées vers les destinations.
-
-**Nouvelles fonctionnalités**
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Profile vous permet de consolider les données client dans une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Destinations Tableau de bord  | Vous pouvez désormais utiliser le tableau de bord de surveillance pour surveiller les flux de données pour les destinations. Pour en savoir plus, consultez le tutoriel sur les [destinations de surveillance dans l’interface utilisateur](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) |
+| Parcourir les profils par stratégie ou identité de fusion | Lors de l’exploration des profils dans Experience Platform, vous pouvez désormais naviguer par stratégie de fusion pour prévisualiser 20 profils d’exemple en fonction de la stratégie de fusion sélectionnée. Vous pouvez également naviguer par identité afin de rechercher un profil spécifique à l’aide d’un espace de noms d’identité et d’une valeur d’identité associée. Pour plus d’informations, consultez le [guide de l’interface utilisateur de Real-time Customer Profile](../../profile/ui/user-guide.md). |
 
-Pour des informations plus générales sur les flux de données, reportez-vous à la [présentation des flux de données](../../dataflows/home.md). Pour en savoir plus sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
-
-## Destinations {#destinations}
-
-Les destinations sont des intégrations prédéfinies avec des plateformes de destination qui permettent l’activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
-
-**Nouvelles fonctionnalités**
-
-| Fonctionnalité | Description |
-| --- | --- |
-| [Exports de fichiers incrémentiels plus rapides](../../destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) | Vous pouvez désormais planifier des exportations incrémentielles de fichiers pour les destinations basées sur des fichiers toutes les 3, 6, 8 et 12 heures. La modification du planning d’exportation de fichiers pour les segments qui ont déjà été enregistrés n’est actuellement pas prise en charge. Pour réexporter des segments avec un planning différent, vous devez créer une nouvelle instance de destination. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions. |
-| [Prise en charge des clés de déduplication](../../destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) | Éliminez plusieurs enregistrements du même profil dans les fichiers d&#39;export en sélectionnant une clé de déduplication. Vous pouvez sélectionner un seul espace de noms ou jusqu’à deux attributs de schéma XDM comme clé de déduplication. |
-
-## Modèle de données d’expérience (XDM) {#xdm}
-
-Le modèle de données d’expérience (XDM) est une spécification open source conçue pour améliorer la puissance des expériences digitales. Il fournit des structures et des définitions communes pour les données sous la forme de schémas, qui permettent à toute application de communiquer avec les services Platform.
-
-| Fonctionnalité | Description |
-| --- | --- |
-| Filtre de l&#39;industrie des télécommunications | Lors de l’ajout de groupes de champs à un schéma dans l’interface utilisateur, vous pouvez désormais filtrer selon le secteur des télécommunications. Consultez le [diagramme des relations d’entité du secteur des télécommunications (ERD)](../../xdm/schema/industries/telecom.md) pour afficher un modèle de données recommandé pour les cas d’utilisation des télécommunications. |
-
-Pour plus d’informations sur XDM dans Platform, reportez-vous à la [Présentation du système XDM](../../xdm/home.md).
-
-## Query Service {#query}
-
-Query Service permet d’utiliser le langage SQL standard pour interroger des données dans Adobe Experience Platform, ce qui prend en charge divers cas d’utilisation d’analyse et de gestion des données. Il s’agit d’un outil sans serveur qui vous permet de joindre des jeux de données du lac de données et de capturer les résultats des requêtes en tant que nouveaux jeux de données qui pourront être utilisés dans les rapports, Data Science Workspace ou pour une ingestion dans Real-time Customer Profile.
-
-Vous pouvez utiliser Query Service pour créer des écosystèmes d’analyse des données, en créant une image des clients sur leurs différents canaux d’interaction. Ces canaux peuvent inclure des systèmes de point de vente, web, mobiles ou CRM.
-
-**Nouvelles fonctionnalités**
-
-| Fonctionnalité | Description |
-| ------- | ----------- |
-| Requêtes planifiées | Vous pouvez désormais planifier des requêtes dans Platform à l’aide de Query Editor. Pour en savoir plus, consultez la documentation sur [Query Editor](../../query-service/ui/user-guide.md#scheduled-queries). |
-
-Pour plus d’informations, consultez la [documentation de Query Service](../../query-service/home.md).
+Pour en savoir plus sur Real-time Customer Profile, y compris des tutoriels et des bonnes pratiques concernant l’utilisation des données de profil, commencez par lire la [présentation de Real-time Customer Profile](../../profile/home.md).
 
 ## Sources {#sources}
 
@@ -95,7 +50,6 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Sources bêta passant à la version générale | Les sources suivantes ont été promues de la version bêta à la version générale : <ul><li>[[!DNL Amazon Redshift]](../../sources/connectors/databases/redshift.md)</li><li>[[!DNL Azure Table Storage]](../../sources/connectors/databases/ats.md)</li><li>[[!DNL PayPal]](../../sources/connectors/payments/paypal.md)</li></ul> |
-| [!DNL Salesforce Marketing Cloud] (version bêta) | Vous pouvez désormais connecter [!DNL Salesforce Marketing Cloud] à Experience Platform à lʼaide de lʼAPI [!DNL Flow Service] ou de lʼinterface utilisateur. Pour plus d’informations, consultez la [[!DNL Salesforce Marketing Cloud] présentation du connecteur](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md). |
+| Connecteur source de chargement de fichier local | La catégorie d’ingestion de fichiers a été renommée système local, ce qui vous permet d’importer directement des fichiers locaux dans Platform à l’aide du connecteur de téléchargement de fichiers local. Les données ingérées par ce connecteur peuvent être surveillées via le tableau de bord de surveillance. Pour plus d’informations, consultez la [présentation de la source de chargement de fichier locale](../../sources/connectors/local-system/local-file-upload.md) . |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
