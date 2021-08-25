@@ -2,11 +2,11 @@
 keywords: plateforme;destinations;espace de travail des destinations;espace de travail;ui;interface utilisateur des destinations;catalogue;catalogue des destinations
 title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
-seo-description: Dans Adobe Experience Platform, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
+seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '858'
 ht-degree: 20%
 
 ---
@@ -40,14 +40,14 @@ L’interface utilisateur de [!DNL Platform] propose plusieurs options de recher
 * Basculez entre [!UICONTROL Toutes les destinations] et [!UICONTROL Mes destinations]. Lorsque vous sélectionnez **[!UICONTROL Toutes les destinations]**, toutes les destinations [!DNL Platform] disponibles s’affichent. Lorsque vous sélectionnez **[!UICONTROL Mes destinations]**, vous ne pouvez afficher que les destinations avec lesquelles vous avez établi une connexion.
 * Sélectionnez cette option pour afficher **[!UICONTROL Connexions]** et/ou **[!UICONTROL Extensions]**. Pour comprendre la différence entre les deux catégories, voir [Types de destination et Catégories](../destination-types.md).
 
-![filtrage des destinations et démonstration de recherche](../assets/ui/workspace/destinations-search-and-filter.gif)
+![Catalogue](../assets/ui/workspace/catalog.png)
 
-Les cartes de destination contiennent soit un contrôle **[!UICONTROL Configurer]** ou **[!UICONTROL Activer]**, soit un contrôle secondaire qui affiche d’autres options. Ces contrôles sont décrits ci-dessous :
+Les cartes de destination contiennent soit un contrôle **[!UICONTROL Configurer]** ou **[!UICONTROL Activer les segments]** et un contrôle secondaire qui affiche d’autres options. Ces contrôles sont décrits ci-dessous :
 
 | Contrôle | Description |
 |---------|----------|
 | [!UICONTROL Configuration] | Permet de créer une connexion à la destination. |
-| [!UICONTROL Activer] | Une fois que vous avez établi une connexion à la destination, vous pouvez activer les segments. |
+| [!UICONTROL Activation des segments] | Une fois que vous avez établi une connexion à la destination, vous pouvez activer les segments. |
 | [!UICONTROL Afficher le compte] | Affichez les comptes que vous avez connectés pour une destination. |
 | [!UICONTROL Afficher les flux de données] | Affichez les flux d’activation de données qui existent pour une destination. |
 | [!UICONTROL Afficher la documentation] | Ouvre un lien vers la page de documentation de cette destination spécifique pour plus d’informations et pour vous aider à la configurer. |
@@ -72,7 +72,7 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 
 >[!TIP]
 >
-> * Sélectionnez les trois points de la colonne [!UICONTROL Nom] et utilisez le bouton ![Ajouter des segments](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activer ]**pour envoyer des segments vers cette destination.
+> * Sélectionnez les trois points de la colonne [!UICONTROL Nom] et utilisez le bouton ![Ajouter des segments](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activer les segments ]**pour envoyer des segments vers cette destination.
 > * Sélectionnez les trois points de la colonne [!UICONTROL Nom] et utilisez le bouton ![Supprimer les destinations](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Supprimer ]**pour [supprimer](delete-destinations.md) une connexion existante à une destination.
 
 
