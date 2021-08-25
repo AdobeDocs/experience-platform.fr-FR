@@ -2,12 +2,12 @@
 keywords: activer les destinations de profil ; activer les destinations ; activer les données ; activer les destinations de marketing par e-mail ; Activation des destinations de stockage dans le cloud
 title: Activation des données d’audience vers des destinations d’exportation de profils par lots
 type: Tutorial
-seo-title: Activation des données d’audience vers des destinations d’exportation de profils par lots
+seo-title: Activate audience data to batch profile export destinations
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil de lot.
-seo-description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil de lot.
-source-git-commit: eebebcdc5e5f94d90eceb291dfe487fcd0f8c254
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1905'
 ht-degree: 7%
 
 ---
@@ -90,7 +90,7 @@ Sélectionnez **[!UICONTROL Exporter les fichiers incrémentiels]** pour déclen
 1. Utilisez le sélecteur **[!UICONTROL Fréquence]** pour sélectionner la fréquence d’exportation :
 
    * **[!UICONTROL Quotidien]** : planifier des exportations incrémentielles de fichiers une fois par jour, tous les jours, au moment que vous spécifiez.
-   * **[!UICONTROL Horaire]** : planifier des exportations incrémentielles de fichiers toutes les 3, 6, 7 ou 12 heures.
+   * **[!UICONTROL Horaire]** : planifier des exportations incrémentielles de fichiers toutes les 3, 6, 8 ou 12 heures.
 
 2. Utilisez le sélecteur **[!UICONTROL Heure]** pour choisir l’heure de la journée, au format [!DNL UTC], où doit avoir lieu l’exportation.
 
@@ -320,8 +320,7 @@ Adobe recommande de sélectionner un espace de noms d’identité tel qu’une [
 >* Les champs sont configurés en tant qu’attributs prévisionnels pour la destination cible.
 
 >
-> 
-Par exemple, si le champ `person.name.firstName` contient certains libellés d’utilisation des données qui entrent en conflit avec l’action marketing de la destination, une violation de la politique d’utilisation des données s’affichera à l’étape de révision. Pour plus d’informations, voir [Gouvernance des données dans Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Par exemple, si le champ `person.name.firstName` contient certains libellés d’utilisation des données qui entrent en conflit avec l’action marketing de la destination, une violation de la politique d’utilisation des données s’affichera à l’étape de révision. Pour plus d’informations, voir [Gouvernance des données dans Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ## Révision {#review}
 
