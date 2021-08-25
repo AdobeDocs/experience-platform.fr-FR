@@ -4,10 +4,10 @@ description: Notes de mise à jour des Experience Platform pour le 25 août 2021
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: bd3d60e1960b1f4c32ade8c4070d7c1b01e5ba07
+source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 42%
+source-wordcount: '534'
+ht-degree: 44%
 
 ---
 
@@ -18,9 +18,22 @@ ht-degree: 42%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [Destinations](#destinations)
 - [Observability Insights](#observability)
 - [Profil client en temps réel](#profile)
 - [Sources](#sources)
+
+## Destinations {#destinations}
+
+Les destinations sont des intégrations prédéfinies avec des plateformes de destination qui permettent l’activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| [Améliorations de l’utilisation des destinations](../../destinations/ui/activation-overview.md) | Les améliorations de l’utilisation des destinations permettent aux marketeurs d’activer facilement des segments vers des destinations existantes. |
+
+Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
 
 ## Observability Insights {#observability}
 
