@@ -5,10 +5,10 @@ title: Point de terminaison de l’API Requêtes planifiées
 topic-legacy: scheduled queries
 description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour les requêtes planifiées avec l’API Query Service.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 0b1afcb23e070209006383d27eb68edcf92d02cd
+source-git-commit: 34a3b71ace2f9ece02e4368b6bd7eab716330ee1
 workflow-type: tm+mt
 source-wordcount: '1113'
-ht-degree: 81%
+ht-degree: 80%
 
 ---
 
@@ -161,7 +161,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | Nom de la base de données pour laquelle vous créez une requête planifiée. |
 | `query.sql` | La requête SQL que vous souhaitez créer. |
 | `query.name` | Le nom de la requête planifiée. |
-| `schedule.schedule` | Le planning cron de la requête. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Dans cet exemple, « 30 * * * * » signifie que la requête s’exécute toutes les heures à la 30e minute.<br><br>Vous pouvez également utiliser les expressions abrégées suivantes :<ul><li>`@once`: La requête ne s’exécute qu’une seule fois.</li><li>`@hourly`: La requête s’exécute toutes les heures au début de l’heure. Cela équivaut à l’expression cron `0 * * * *`.</li><li>`@daily`: La requête s’exécute une fois par jour à minuit. Cela équivaut à l’expression cron `0 0 * * *`.</li><li>`@weekly`: La requête s’exécute une fois par semaine, le dimanche, à minuit. Cela équivaut à l’expression cron `0 0 * * 0`.</li><li>`@monthly`: La requête s&#39;exécute une fois par mois, le premier jour du mois, à minuit. Cela équivaut à l’expression cron `0 0 1 * *`.</li><li>`@yearly`: La requête s’exécute une fois par an, le 1er janvier, à minuit. Cela équivaut à l’expression cron `1 0 0 1 1 *`. |
+| `schedule.schedule` | Le planning cron de la requête. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Dans cet exemple, « 30 * * * * » signifie que la requête s’exécute toutes les heures à la 30e minute.<br><br>Vous pouvez également utiliser les expressions abrégées suivantes :<ul><li>`@once`: La requête ne s’exécute qu’une seule fois.</li><li>`@hourly`: La requête s’exécute toutes les heures au début de l’heure. Cela équivaut à l’expression cron `0 * * * *`.</li><li>`@daily`: La requête s’exécute une fois par jour à minuit. Cela équivaut à l’expression cron `0 0 * * *`.</li><li>`@weekly`: La requête s’exécute une fois par semaine, le dimanche, à minuit. Cela équivaut à l’expression cron `0 0 * * 0`.</li><li>`@monthly`: La requête s&#39;exécute une fois par mois, le premier jour du mois, à minuit. Cela équivaut à l’expression cron `0 0 1 * *`.</li><li>`@yearly`: La requête s’exécute une fois par an, le 1er janvier, à minuit. Cela équivaut à l’expression cron `1 0 0 1 1 *`. |
 | `schedule.startDate` | La date de début de votre requête planifiée, écrite en tant qu’horodatage en UTC. |
 
 **Réponse**
@@ -364,7 +364,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec le message suiv
 
 ### Mise à jour du planning de la requête planifiée
 
-Vous pouvez utiliser `/schedule/schedule` pour mettre à jour le planning cron de la requête planifiée. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
+Vous pouvez utiliser `/schedule/schedule` pour mettre à jour le planning cron de la requête planifiée. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
 **Format d’API**
 
