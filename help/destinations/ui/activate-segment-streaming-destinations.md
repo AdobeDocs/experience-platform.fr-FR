@@ -2,12 +2,12 @@
 keywords: activation des destinations de diffusion en continu de segments ; activation des destinations de diffusion en continu de segments ; activation des données
 title: Activation des données d’audience vers des destinations d’exportation de segments par flux
 type: Tutorial
-seo-title: Activation des données d’audience vers des destinations d’exportation de segments par flux
+seo-title: Activate audience data to streaming segment export destinations
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de diffusion en continu de segments.
-seo-description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de diffusion en continu de segments.
-source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '781'
 ht-degree: 6%
 
 ---
@@ -25,13 +25,17 @@ Pour activer les données vers les destinations, vous devez être [connecté à 
 
 ## Sélectionner votre destination {#select-destination}
 
-1. Accédez à **[!UICONTROL Connexions > Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Parcourir]**.
+1. Accédez à **[!UICONTROL Connexions > Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**.
 
-   ![Onglet Parcourir la destination](../assets/ui/activate-segment-streaming-destinations/browse-tab.png)
+   ![Onglet Catalogue de destinations](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Sélectionnez le bouton **[!UICONTROL Ajouter des segments]** correspondant à la destination vers laquelle vous souhaitez activer vos segments, comme illustré dans l’image ci-dessous.
+1. Sélectionnez **[!UICONTROL Activer les segments]** sur la carte correspondant à la destination vers laquelle vous souhaitez activer vos segments, comme illustré dans l’image ci-dessous.
 
-   ![Boutons Activer](../assets/ui/activate-segment-streaming-destinations/activate-buttons-browse.png)
+   ![Boutons Activer](../assets/ui/activate-segment-streaming-destinations/activate-segments-button.png)
+
+1. Sélectionnez la connexion de destination à utiliser pour activer vos segments, puis cliquez sur **[!UICONTROL Suivant]**.
+
+   ![Sélectionner la destination](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. Passez à la section suivante pour [sélectionner vos segments](#select-segments).
 
@@ -81,10 +85,17 @@ Certaines destinations de diffusion en continu de segments nécessitent que vous
 
 Lorsque vous mappez des attributs source non hachés avec des attributs cibles que la destination s’attend à être hachée (par exemple : `email_lc_sha256` ou `phone_sha256`), cochez l’option **Appliquer la transformation** pour que Adobe Experience Platform hache automatiquement les attributs source lors de l’activation.
 
-![Mappage des identités](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
-
+![Mappage des identités](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Planification de l’exportation de segments {#scheduling}
+
+Par défaut, la page [!UICONTROL Planification du segment] affiche uniquement les segments que vous avez choisis dans le flux d’activation actuel.
+
+![Nouveaux segments](../assets/ui/activate-segment-streaming-destinations/new-segments.png)
+
+Pour voir tous les segments activés vers votre destination, utilisez l’option de filtrage et désactivez le filtre **[!UICONTROL Afficher les nouveaux segments uniquement]** .
+
+![Tous les segments](../assets/ui/activate-segment-streaming-destinations/all-segments.png)
 
 1. Sur la page **[!UICONTROL Planification du segment]** , sélectionnez chaque segment, puis utilisez les sélecteurs **[!UICONTROL Date de début]** et **[!UICONTROL Date de fin]** pour configurer l’intervalle d’envoi des données à votre destination.
 
@@ -120,7 +131,7 @@ Si aucune violation de stratégie n’a été détectée, sélectionnez **[!UICO
 
 ## Vérification de l’activation des segments {#verify}
 
-Vérifiez votre compte de destination. Si l’activation a réussi, les audiences sont renseignées dans votre plateforme de destination.
+Consultez la [documentation sur la surveillance des destinations](../../dataflows/ui/monitor-destinations.md) pour obtenir des informations détaillées sur la manière de surveiller le flux de données vers vos destinations.
 
 <!-- 
 For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
