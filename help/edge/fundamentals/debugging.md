@@ -3,16 +3,16 @@ title: Débogage dans le SDK Web de Adobe Experience Platform
 description: Découvrez comment activer/désactiver les fonctionnalités de débogage dans le SDK Web Experience Platform.
 keywords: débogage du sdk web;débogage;configurer;commande de configuration;commande de débogage;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 74%
+source-wordcount: '422'
+ht-degree: 73%
 
 ---
 
 # Débogage
 
-Lorsque le débogage est activé, le SDK envoie des messages à la console du navigateur qui peuvent s’avérer utiles pour déboguer votre implémentation et comprendre le comportement du SDK. Le débogage permet également une validation synchrone du côté serveur des données collectées par rapport au schéma configuré.
+Lorsque le débogage est activé, le SDK envoie des messages à la console du navigateur qui peuvent s’avérer utiles pour déboguer votre implémentation et comprendre le comportement du SDK.
 
 Le débogage est désactivé par défaut, mais peut être activé de trois manières différentes :
 
