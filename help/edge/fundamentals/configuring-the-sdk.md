@@ -1,13 +1,13 @@
 ---
 title: Configuration du SDK Web de Adobe Experience Platform
 description: Découvrez comment configurer le SDK Web de Adobe Experience Platform.
-seo-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
+seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: configure;configuration;SDK;edge;SDK Web;configure;edgeConfigId;contexte;web;périphérique;environnement;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;paramètres du sdk web;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinations;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 549203c8ddc94e00cf4e4ba432f367ddc371cb27
+source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 42%
+source-wordcount: '826'
+ht-degree: 40%
 
 ---
 
@@ -66,7 +66,6 @@ Indique si le débogage est activé. La définition de cette configuration sur l
 
 | **Fonctionnalité** | **Fonction** |
 | ---------------------- | ------------------ |
-| Validation synchrone | Valide les données collectées par rapport au schéma et renvoie une erreur dans la réponse sous le libellé suivant : `collect:error OR success` |
 | Journalisation de la console | Permet l’affichage des messages de débogage dans la console JavaScript du navigateur. |
 
 {style=&quot;table-layout:auto&quot;}
