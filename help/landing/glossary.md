@@ -5,7 +5,7 @@ title: Glossaire Adobe Experience Platform
 topic-legacy: getting started
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 83efc9f3c203cf4743514dc4b7a480715dadb19a
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
 source-wordcount: '7386'
 ht-degree: 12%
@@ -262,7 +262,7 @@ ht-degree: 12%
 
 **Hôte** : Dans le contexte des balises, un hôte spécifie l’emplacement, le domaine et les informations d’identification d’utilisateur nécessaires pour que le système diffuse une version.
 
-**Horaire** : Dans le contexte des exportations de fichiers planifiées, planifie les exportations incrémentielles de fichiers toutes les 3, 6, 7 ou 12 heures.
+**Horaire** : Dans le contexte des exportations de fichiers planifiées, planifie les exportations incrémentielles de fichiers toutes les 3, 6, 8 ou 12 heures.
 
 ## I
 
