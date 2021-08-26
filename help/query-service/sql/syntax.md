@@ -5,9 +5,9 @@ title: Syntaxe SQL dans Query Service
 topic-legacy: syntax
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 26bd2abc998320245091b0917fb6f236ed09b95c
+source-git-commit: 8dceab8cdba1ac6b4a649f0e01b2bbda5f025bef
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2154'
 ht-degree: 13%
 
 ---
@@ -118,6 +118,15 @@ Notez qu’une clause `SNAPSHOT` fonctionne avec un alias de table ou de table, 
 
 De plus, vous pouvez utiliser `HEAD` et `TAIL` comme valeurs de décalage spéciales pour les clauses d’instantané. L’utilisation de `HEAD` fait référence à un décalage avant le premier instantané, tandis que `TAIL` fait référence à un décalage après le dernier instantané.
 
+>[!NOTE]
+>
+>Si vous interrogez deux ID d’instantané et que l’instantané de début a expiré, les deux scénarios suivants peuvent se produire, selon que l’indicateur de comportement de secours facultatif (`resolve_fallback_snapshot_on_failure`) est défini :
+>
+>- Si l’indicateur facultatif de comportement de secours est défini, Query Service choisit l’instantané disponible le plus ancien, le définit comme instantané de début et renvoie les données entre l’instantané disponible le plus ancien et l’instantané de fin spécifié. Ces données sont **inclusives** de l’instantané disponible le plus tôt.
+>
+>- Si l’indicateur de comportement de secours facultatif n’est pas défini, une erreur est renvoyée.
+
+
 ### Clause WHERE
 
 Par défaut, les correspondances générées par une clause `WHERE` sur une requête `SELECT` sont sensibles à la casse. Si vous souhaitez que les correspondances ne soient pas sensibles à la casse, vous pouvez utiliser le mot-clé `ILIKE` au lieu de `LIKE`.
@@ -227,7 +236,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 **Paramètres**
 
-- `IF EXISTS`: Si cette valeur est spécifiée, aucune exception n’est générée si la table n’existe  **** pas.
+- `IF EXISTS`: Si cette valeur est spécifiée, aucune exception n’est générée si la table  **** n’existe pas.
 
 ## DROP DABASE
 
