@@ -2,10 +2,10 @@
 title: Types d’éléments de données dans l’extension SDK Web Adobe Experience Platform
 description: Découvrez les différents types d’éléments de données fournis par l’extension de balise du SDK Web de Adobe Experience Platform.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
+source-git-commit: 4caab19e1f58fc5cec5a3c56c43e47786d49c3dc
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 43%
+source-wordcount: '511'
+ht-degree: 19%
 
 ---
 
@@ -22,7 +22,19 @@ Lorsque cet élément de données est utilisé, il fournit un identifiant de fus
 
 ## Mappage d’identités
 
-L’élément de données de carte Identité vous permet de créer des identités à partir d’autres éléments de données ou d’autres valeurs que vous spécifiez. Toutes les identités que vous créez doivent être liées à un espace de noms correspondant. Cet élément de données fournit une liste déroulante qui répertorie tous les espaces de noms par défaut, ainsi que tous les espaces de noms que vous avez créés.
+Une carte des identités vous permet d’établir les identités du visiteur de votre page web. Un mappage d’identité se compose d’espaces de noms, tels que _phone_ ou _email_, chaque espace de noms contenant un ou plusieurs identifiants. Par exemple, si l’individu de votre site web a fourni deux numéros de téléphone, l’espace de noms de votre téléphone doit contenir deux identifiants.
+
+Dans l’élément de données [!UICONTROL carte des identités], vous fournissez les informations suivantes pour chaque identifiant :
+
+* **[!UICONTROL ID]** : Valeur identifiant le visiteur. Par exemple, si l’identifiant appartient à l’espace de noms _phone_ , l’[!UICONTROL ID] peut être _555-555-5555_. Cette valeur est généralement dérivée d’une variable JavaScript ou d’un autre élément de données sur votre page. Il est donc préférable de créer un élément de données qui référence les données de la page, puis de référencer l’élément de données dans le champ [!UICONTROL ID] de l’élément de données [!UICONTROL Identité map] . Si, lors de l’exécution sur votre page, la valeur de l’identifiant est autre qu’une chaîne renseignée, l’identifiant est automatiquement supprimé de la carte d’identité.
+* **[!UICONTROL État]** authentifié : Sélection indiquant si le visiteur est authentifié.
+* **[!UICONTROL Principal]** : Sélection indiquant si l’identifiant doit être utilisé comme identifiant Principal de l’individu. Si aucun identifiant n’est marqué comme Principal, l’ECID est utilisé comme identifiant Principal.
+
+Vous ne devez pas fournir d’ECID lors de la création d’une carte d’identité. Lors de l’utilisation du SDK, un ECID est automatiquement généré sur le serveur et inclus dans la carte d’identité.
+
+L’élément de données de carte d’identité est souvent utilisé en tandem avec le type d’élément de données [[!UICONTROL Objet XDM] et le type d’action [[!UICONTROL Définir le consentement]](action-types.md#set-consent).](#xdm-object)
+
+En savoir plus sur [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=fr).
 
 ![](./assets/identity-map-data-element.png)
 
