@@ -5,7 +5,7 @@ title: 'Segmentation Edge à l’aide de l’API '
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: af1eee8787d7fa2ae2d56e541823100d2620dd2d
+source-git-commit: f92b12d343584f33870dd42288977e7b6e446b0f
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 19%
@@ -57,7 +57,7 @@ Les types de requête suivants sont **non** actuellement pris en charge par la s
 
 Vous pouvez récupérer une liste de tous les segments activés pour la segmentation Edge dans votre organisation IMS en envoyant une requête GET au point de terminaison `/segment/definitions` .
 
-**Format d’API**
+**Format d&#39;API**
 
 Pour récupérer les segments activés pour la segmentation Edge, vous devez inclure le paramètre de requête `evaluationInfo.synchronous.enabled=true` dans le chemin de requête.
 
@@ -227,7 +227,7 @@ Une réponse réussie renvoie les détails de la définition de segment nouvelle
     "expression": {
         "type": "PQL",
         "format": "pql/text",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+        "value": "chain(xEvent, timestamp, [X: WHAT(var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = "true")])"
     },
     "evaluationInfo": {
         "batch": {
