@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Lorsque vous rassemblez ces données, les stratégies de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer une vue unifiée.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: acf88ba3c4181fce85ffec3b0041a30b7bb14cef
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '2263'
-ht-degree: 73%
+source-wordcount: '2258'
+ht-degree: 72%
 
 ---
 
@@ -24,7 +24,7 @@ Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Composants des stratégies de fusion {#components-of-merge-policies}
 

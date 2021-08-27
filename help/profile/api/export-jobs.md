@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Real-time Customer Profile vous permet de créer une vue unique de clients individuels dans Adobe Experience Platform en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1526'
-ht-degree: 68%
+source-wordcount: '1521'
+ht-degree: 67%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 68%
 
 [!DNL Real-time Customer Profile] vous permet d’établir une vue unique des clients individuels en rassemblant des données issues de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur. Par exemple, les segments d’audience provenant de données [!DNL Profile] peuvent être exportés pour activation et les attributs de profil peuvent être exportés pour la création de rapports.
 
-Ce document fournit des instructions détaillées sur la création et la gestion de tâches d’exportation à l’aide de l’[API de profil](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+Ce document fournit des instructions détaillées sur la création et la gestion de tâches d’exportation à l’aide de l’[API de profil](https://www.adobe.com/go/profile-apis-en).
 
 >[!NOTE]
 >
@@ -183,7 +183,7 @@ Une réponse réussie renvoie un jeu de données contenant les données Profile,
 
 Vous pouvez renvoyer une liste de toutes les tâches d’exportation pour une organisation IMS particulière en effectuant une requête GET sur le point de terminaison `export/jobs`. La requête prend également en charge les paramètres de requête `limit` et `offset`, comme illustré ci-dessous.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /export/jobs
@@ -329,7 +329,7 @@ La réponse comprend un objet `records` contenant les tâches d’exportation cr
 
 Pour afficher les détails d’une tâche d’exportation spécifique, ou contrôler son état pendant son traitement, vous pouvez effectuer une requête GET sur le point de terminaison `/export/jobs` et inclure l’`id` de la tâche d’exportation dans le chemin d’accès. La tâche d’exportation est terminée lorsque le champ `status` renvoie la valeur &quot;SUCCEEDED&quot;.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /export/jobs/{EXPORT_JOB_ID}
@@ -406,7 +406,7 @@ curl -X GET \
 
 Experience Platform vous permet d’annuler une tâche d’exportation existante, ce qui peut s’avérer utile pour plusieurs raisons, notamment si la tâche d’exportation n’a pas été terminée ou est restée bloquée en cours de traitement. Pour annuler une tâche d’exportation, vous pouvez effectuer une requête DELETE sur le point de terminaison `/export/jobs` et inclure l’`id` de la tâche d’exportation que vous souhaitez annuler dans le chemin de la requête.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /export/jobs/{EXPORT_JOB_ID}

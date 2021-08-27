@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Guide du profil client en temps réel
 user-guide-description: Fusionnez les données client pour créer une vue unifiée des interactions client entre les canaux.
-feature: Profils
-source-git-commit: e56898542bc9cd305173fc2d7f3b6dd53dca7eb2
-workflow-type: ht
-source-wordcount: '139'
-ht-degree: 100%
+feature: Profiles
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+workflow-type: tm+mt
+source-wordcount: '133'
+ht-degree: 96%
 
 ---
 
@@ -49,5 +49,5 @@ ht-degree: 100%
    * [Plus de tutoriels](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=fr)
 * [Traitement des demandes d’accès à des informations personnelles](privacy.md)
 * [Guide de dépannage du [!DNL Profile]](troubleshooting.md)
-* [Référence de l’API Profile](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
-* [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+* [Référence de l’API Profile](https://www.adobe.com/go/profile-apis-en)
+* [Notes de mise à jour de Platform](https://www.adobe.com/go/platform-release-notes-en)

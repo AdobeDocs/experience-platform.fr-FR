@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API
+keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Points de terminaison de l’API de projection Edge
 topic-legacy: guide
 type: Documentation
-description: Adobe Experience Platform vous permet de proposer des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, en rendant les données appropriées facilement disponibles et mises à jour en continu au fur et à mesure des changements. Pour ce faire, il utilise des arêtes, un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications.
+description: Adobe Experience Platform vous permet de proposer des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, en rendant les données appropriées facilement disponibles et mises à jour en continu au fur et à mesure des changements. Pour ce faire, il utilise des périphéries, un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications.
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1964'
-ht-degree: 80%
+source-wordcount: '1959'
+ht-degree: 85%
 
 ---
 
-# Configurations de projection Edge et points de terminaison de destination
+# Configurations de projection Edge et points d’entrée de destinations
 
-Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en continu au fur et à mesure des changements. Adobe Experience Platform permet cet accès aux données en temps réel grâce à l’utilisation de ce que l’on appelle les périphéries. Une périphérie est un serveur réparti géographiquement qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications d’Adobe telles que Adobe Target et Adobe Campaign utilisent des bords afin de fournir des expériences client personnalisées en temps réel. Les données sont acheminées vers une périphérie par projection, une destination de projection définissant la périphérie vers laquelle les données sont envoyées, et une configuration de projection définissant les informations spécifiques rendues disponibles dans la périphérie. Ce guide fournit des instructions détaillées sur l&#39;utilisation de l&#39;API [!DNL Real-time Customer Profile] pour utiliser les projections de bord, y compris les destinations et les configurations.
+Afin d’offrir à vos clients des expériences coordonnées, cohérentes et personnalisées sur plusieurs canaux en temps réel, les bonnes données doivent être facilement disponibles et mises à jour en continu, au fur et à mesure des changements. Adobe Experience Platform permet cet accès aux données en temps réel grâce à l’utilisation de ce que l’on appelle les périphéries. Une périphérie est un serveur réparti géographiquement qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles qu’Adobe Target et Adobe Campaign utilisent des périphéries afin d’offrir des expériences client personnalisées en temps réel. Les données sont acheminées vers une périphérie par projection, une destination de projection définissant la périphérie vers laquelle les données sont envoyées, et une configuration de projection définissant les informations spécifiques rendues disponibles dans la périphérie. Ce guide fournit des instructions détaillées sur l’utilisation de l’API [!DNL Real-time Customer Profile] pour travailler avec des projections de périphérie, y compris les destinations et les configurations.
 
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie du [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API [!DNL Experience Platform].
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 >[!NOTE]
 >
->Les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête `Content-Type`. Plusieurs `Content-Type` sont utilisés dans ce document. Veuillez prêter une attention particulière aux en-têtes des exemples d’appels afin de vous assurer que vous utilisez le `Content-Type` correct pour chaque demande.
+>Les requêtes contenant un payload (POST, PUT, PATCH) nécessitent un en-tête `Content-Type`. Plusieurs `Content-Type` sont utilisés dans ce document. Veuillez prêter une attention particulière aux en-têtes des exemples d’appels afin de vous assurer que vous utilisez le `Content-Type` correct pour chaque requête.
 
 ## Destinations de projection
 
@@ -149,9 +148,9 @@ curl -X POST \
 | Propriété | Description |
 |---|---|
 | `type` **(Obligatoire)** | Type de destination à créer. La seule valeur acceptée, « EDGE », crée une destination de périphérie. |
-| `dataCenters` **(Obligatoire)** | Tableau de chaînes qui liste les arêtes vers lesquelles les projections doivent être routées. Peut contenir une ou plusieurs des valeurs suivantes : « OR1 » - États-Unis de l’Ouest, « VA5 » - États-Unis de l’Est, « NLD1 » - EMEA. |
-| `ttl` **(Obligatoire)** | Spécifie l&#39;expiration de projection. Plage de valeurs acceptée : 600 à 604800. Valeur par défaut : 3600. |
-| `replicationPolicy` **(Obligatoire)** | Définit le comportement de la réplication des données du hub aux bords.  Valeurs prises en charge : PROCATIVE, RÉACTIVE. Valeur par défaut : RÉACTIVE. |
+| `dataCenters` **(Obligatoire)** | Tableau de chaînes qui répertorie les périphéries vers lesquelles les projections doivent être acheminées. Peut contenir une ou plusieurs des valeurs suivantes : « OR1 » - États-Unis de l’Ouest, « VA5 » - États-Unis de l’Est, « NLD1 » - EMEA. |
+| `ttl` **(Obligatoire)** | Indique l’expiration de projection. Plage de valeurs acceptée : 600 à 604800. Valeur par défaut : 3600. |
+| `replicationPolicy` **(Obligatoire)** | Définit le comportement de la réplication des données du hub aux périphéries.  Valeurs prises en charge : PROCATIVE, RÉACTIVE. Valeur par défaut : RÉACTIVE. |
 
 **Réponse**
 
@@ -332,7 +331,7 @@ La requête de suppression renvoie un état HTTP 204 (Pas de contenu) et un cor
 
 ## Configurations de projection
 
-Les configurations de projection fournissent des informations concernant les données disponibles pour chaque périphérie. Plutôt que de projeter un schéma complet [!DNL Experience Data Model] (XDM) sur le bord, une projection ne fournit que des données spécifiques, ou champs, du schéma. Votre organisation peut définir plus d’une configuration de projection pour chaque schéma XDM.
+Les configurations de projection fournissent des informations concernant les données disponibles pour chaque périphérie. Plutôt que de projeter un schéma [!DNL Experience Data Model] (XDM) complet vers la périphérie, une projection fournit uniquement des données spécifiques, ou champs, du schéma. Votre organisation peut définir plus d’une configuration de projection pour chaque schéma XDM.
 
 ### Liste de toutes les configurations de projection
 
@@ -357,7 +356,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **Requête**
 
-La requête suivante liste toutes les configurations de projection associées à la classe de schéma [!DNL Experience Data Model], [!DNL XDM Individual Profile]. Pour plus d&#39;informations sur XDM et son rôle dans [!DNL Platform], veuillez commencer par lire l&#39;[Présentation du système XDM](../../xdm/home.md).
+La requête suivante répertorie toutes les configurations de projection associées à la classe de schéma [!DNL Experience Data Model], [!DNL XDM Individual Profile]. Pour plus d’informations sur XDM et son rôle dans [!DNL Platform], commencez par lire la [présentation du système XDM](../../xdm/home.md).
 
 ```shell
 curl -X GET \
@@ -438,7 +437,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 >[!NOTE]
 >
->La demande du POST pour créer une configuration requiert un en-tête `Content-Type` spécifique, comme illustré ci-dessous. L’utilisation d’un en-tête `Content-Type` incorrect entraîne un état HTTP 415 (Unsupported Media Type).
+>La requête du POST pour créer une configuration nécessite un en-tête `Content-Type` spécifique, comme illustré ci-dessous. L’utilisation d’un en-tête `Content-Type` incorrect entraîne un état HTTP 415 (Unsupported Media Type).
 
 ```shell
 curl -X POST \
@@ -650,4 +649,4 @@ Renvoie uniquement les valeurs des champs `type` et `city` pour chaque élément
 
 ## Étapes suivantes
 
-Ce guide décrit les étapes nécessaires à la configuration des projections et des destinations, y compris la manière de formater correctement le paramètre `selector`. Vous pouvez désormais créer de nouvelles destinations de projection et de nouvelles configurations spécifiques aux besoins de votre entreprise.
+Ce guide vous a présenté les étapes impliquées afin de configurer des projections et des destinations, y compris la manière de formater correctement le paramètre `selector`. Vous pouvez désormais créer de nouvelles destinations de projection et des configurations spécifiques aux besoins de votre entreprise.

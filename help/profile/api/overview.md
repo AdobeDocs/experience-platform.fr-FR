@@ -3,10 +3,10 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Guide de l’API Real-time Customer Profile
 description: L’API Real-time Customer Profile permet aux développeurs d’explorer et d’utiliser les données de profil, notamment d’afficher les profils, de créer et de mettre à jour des stratégies de fusion, d’exporter ou d’échantillonner des données de profil, ainsi que de supprimer les données de profil qui ne sont plus requises ou qui ont été ajoutées par erreur. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 28%
+source-wordcount: '886'
+ht-degree: 27%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 28%
 
 L’API [!DNL Real-time Customer Profile] comprend plusieurs points de terminaison, décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
 
-Pour afficher tous les points de terminaison disponibles et les opérations CRUD, consultez le [swagger de référence de l’API Real-time Customer Profile](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+Pour afficher tous les points de terminaison disponibles et les opérations CRUD, consultez le [swagger de référence de l’API Real-time Customer Profile](https://www.adobe.com/go/profile-apis-en).
 
 Pour obtenir un guide sur l’utilisation des données [!DNL Real-time Customer Profile] dans l’interface utilisateur [!DNL Experience Platform], reportez-vous au [Guide d’utilisation du profil](../ui/user-guide.md).
 
@@ -40,7 +40,7 @@ Adobe Experience Platform permet de personnaliser en temps réel les expérience
 
 Grâce à Adobe Experience Platform, vous pouvez accéder aux données [!DNL Real-time Customer Profile] à l’aide des API RESTful ou de l’interface utilisateur. Pour savoir comment accéder aux entités, plus communément appelées &quot;profils&quot;, à l’aide de l’API, suivez les étapes décrites dans le [guide des points d’entrée des entités](entities.md). Pour accéder aux profils à l’aide de l’interface utilisateur [!DNL Platform], consultez le [Guide de l’utilisateur du profil](../ui/user-guide.md).
 
-## Tâches d’exportation (exportation de [!DNL Profile]){#profile-export}
+## Tâches d’exportation (exportation de [!DNL Profile]) {#profile-export}
 
 [!DNL Real-time Customer Profile] les données peuvent être exportées vers un jeu de données pour un traitement ultérieur, par exemple pour l’exportation de segments d’audience en vue de l’activation ou d’attributs de profil pour la création de rapports. Les tâches d’exportation pour les segments ciblés font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Pour en savoir plus, consultez le [guide de point de terminaison des tâches d’exportation de segmentation](../../profile/api/export-jobs.md). Pour obtenir des instructions détaillées sur la création et la gestion des tâches d’exportation pour les attributs de profil, consultez le [guide de point de terminaison des tâches d’exportation](export-jobs.md).
 
@@ -50,7 +50,7 @@ Lorsque vous rassemblez des données provenant de plusieurs sources dans [!DNL E
 
 Pour en savoir plus sur les stratégies de fusion et leur rôle dans Platform, commencez par lire la [présentation des stratégies de fusion](../merge-policies/overview.md).
 
-## Prévisualisation des exemples de statut (prévisualisation du [!DNL Profile]){#profile-preview}
+## Prévisualisation des exemples de statut (prévisualisation du [!DNL Profile]) {#profile-preview}
 
 Les données activées pour Profile étant ingérées dans Experience Platform, elles sont stockées dans la banque de données Profile. À mesure que le nombre d’enregistrements dans la banque de profils augmente ou diminue, un exemple de tâche est exécuté qui inclut des informations concernant le nombre de fragments de profil et de profils fusionnés dans la banque de données. À l’aide de l’API Profile, vous pouvez prévisualiser le dernier exemple réussi, ainsi que répertorier la distribution du profil par jeu de données et par espace de noms d’identité. Pour commencer à utiliser le point d’entrée `/profilepreviewstatus`, reportez-vous au [guide d’aperçu du point d’entrée d’état ](preview-sample-status.md).
 
