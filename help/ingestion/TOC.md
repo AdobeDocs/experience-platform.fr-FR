@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Data Ingestion
 breadcrumb-title: Guide d’ingestion de données
 user-guide-description: Introduisez vos données dans Platform par lot ou en ingestion continue.
 feature: Data Ingestion
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '123'
-ht-degree: 100%
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+workflow-type: tm+mt
+source-wordcount: '117'
+ht-degree: 95%
 
 ---
 
@@ -41,5 +41,5 @@ ht-degree: 100%
    - [Validation de l’ingestion par flux](quality/streaming-validation.md)
    - [Notifications d’ingestion de données](quality/subscribe-events.md)
 - [Connecteurs source](source-connectors.md)
-- [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
+- [Référence d’API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)

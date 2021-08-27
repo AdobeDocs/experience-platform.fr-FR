@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Guide des catalogues et des jeux de données
 user-guide-description: Découvrez le lignage de données, les métadonnées, les descriptions de fichiers, les répertoires et les jeux de données dans le lac de données.
-feature: Gestion des données
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '108'
-ht-degree: 100%
+feature: Data Management
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 95%
 
 ---
 
@@ -33,5 +33,5 @@ ht-degree: 100%
    * [Création et remplissage d’un jeu de données à l’aide d’API](datasets/create.md)
 * [Traitement des demandes d’accès à des informations personnelles dans le lac de données](privacy.md)
 * [Protection des données dans Experience Platform](data-protection.md)
-* [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+* [Référence d’API](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)

@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des segments et générez des audiences à partir de vos données de profil client en temps réel.
 feature: Segments
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 78%
+source-wordcount: '159'
+ht-degree: 75%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 78%
    - [Présentation](ui/overview.md)
    - [Tableau de bord des segments](ui/segment-dashboard.md)
    - [Créateur de segments](ui/segment-builder.md)
-   - [Correspondance de segment](ui/segment-match.md)
+   - [Correspondance de segments](ui/segment-match.md)
    - [Segmentation Edge](ui/edge-segmentation.md)
    - [Segmentation par flux](ui/streaming-segmentation.md)
    - [Segmentation par flux (Vidéo)](video/streaming-segmentation-overview.md)
@@ -40,13 +40,13 @@ ht-degree: 78%
 - [Segmentation d’entités multiples](multi-entity-segmentation.md)
 - Langage de requête de profil {#pql}
    - [Présentation](pql/overview.md)
-   - [Fonctions booléennes](pql/boolean-functions.md)
-   - [Fonctions de comparaison](pql/comparison-functions.md)
+   - [Fonctions booléennes ](pql/boolean-functions.md)
+   - [Fonctions de comparaison ](pql/comparison-functions.md)
    - [Fonctions de tableau, de liste et d’ensemble](pql/array-functions.md)
    - [Fonctions de mappage](pql/map-functions.md)
    - [Fonctions de chaîne](pql/string-functions.md)
    - [Fonctions d&#39;objet](pql/object-functions.md)
-   - [Fonctions arithmétiques](pql/arithmetic-functions.md)
+   - [Fonctions arithmétiques ](pql/arithmetic-functions.md)
    - [Fonctions d&#39;agrégation](pql/aggregation-functions.md)
    - [Fonctions de date et d’heure](pql/datetime-functions.md)
    - [Fonctions de filtre](pql/filter-functions.md)
@@ -61,5 +61,5 @@ ht-degree: 78%
    - [Import et utilisation d&#39;audiences externes](tutorials/using-external-audiences.md)
    - [Création d’un jeu de données pour exporter des données](tutorials/create-dataset-export-segment.md)
    - [Application de la conformité à l’utilisation des données pour les segments](tutorials/governance.md)
-- [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
+- [Référence d’API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)

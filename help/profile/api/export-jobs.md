@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Real-time Customer Profile vous permet de créer une vue unique de clients individuels dans Adobe Experience Platform en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: b47a52920f82a962ff044a0dacf9777b6eeae447
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1517'
 ht-degree: 67%
 
 ---
@@ -433,7 +433,7 @@ Une requête de suppression réussie renvoie un état HTTP 204 (No Content) et 
 
 ## Étapes suivantes
 
-Une fois l’exportation terminée, vos données sont disponibles dans le lac de données d’Experience Platform. Vous pouvez ensuite utiliser l’[API Data Access](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) pour accéder aux données à l’aide du `batchId` associé à l’exportation. Selon la taille de l’exportation, les données peuvent se présenter sous forme de blocs et le lot peut être constitué de plusieurs fichiers.
+Une fois l’exportation terminée, vos données sont disponibles dans le lac de données d’Experience Platform. Vous pouvez ensuite utiliser l’[API Data Access](https://www.adobe.io/experience-platform-apis/references/data-access/) pour accéder aux données à l’aide du `batchId` associé à l’exportation. Selon la taille de l’exportation, les données peuvent se présenter sous forme de blocs et le lot peut être constitué de plusieurs fichiers.
 
 Pour obtenir des instructions détaillées sur l’utilisation de l’API Data Access afin d’accéder aux fichiers de lot et les télécharger, suivez le [tutoriel portant sur l’accès aux données](../../data-access/tutorials/dataset-data.md).
 

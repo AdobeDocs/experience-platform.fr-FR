@@ -1,21 +1,20 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation par lots ; assimilation par lots ; assimilation ; guide du développeur ; guide de l’api ; téléchargement ; ingest Parquet ; ingest json ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion par lots;ingestion par lots;ingestion;guide de développement;guide d’api;charger;ingérer le paramètre;ingérer le fichier json ;
 solution: Experience Platform
-title: Guide de l'API d'importation par lot
+title: Guide de l’API Batch Ingestion
 topic-legacy: developer guide
 description: Ce document présente de manière exhaustive l’utilisation des API d’ingestion par lots.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '2556'
+source-wordcount: '2552'
 ht-degree: 89%
 
 ---
 
-# Guide de l&#39;API d&#39;assimilation de lot
+# Guide de l’API d’ingestion par lots
 
-Ce document présente de manière exhaustive l’utilisation des [API d’ingestion par lots](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+Ce document présente de manière exhaustive l’utilisation des [API d’ingestion par lots](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
 
 L’annexe de ce document fournit des informations sur le [formatage des données à utiliser pour l’ingestion](#data-transformation-for-batch-ingestion), y compris des exemples de fichiers de données CSV et JSON.
 
@@ -28,38 +27,38 @@ Les sections suivantes fournissent des informations supplémentaires que vous de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [Ingestion par lots](./overview.md) : vous permet d’ingérer des données dans Adobe Experience Platform sous forme de fichiers de lots.
-- [[!DNL Experience Data Model (XDM)] Système](../../xdm/home.md) : Cadre normalisé selon lequel  [!DNL Experience Platform] organiser les données d’expérience client.
-- [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
+- [[!DNL Experience Data Model (XDM)] Système](../../xdm/home.md) : Cadre normalisé selon lequel  [!DNL Experience Platform] organise les données d’expérience client.
+- [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une  [!DNL Platform] instance unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-### Lecture d’exemples d’appels API
+### Lecture d&#39;exemples d&#39;appels API
 
-Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce guide fournit des exemples d&#39;appels API pour démontrer comment formater vos requêtes. Il s&#39;agit notamment de chemins d&#39;accès, d&#39;en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecter des valeurs pour les en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform] sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d&#39;informations sur les sandbox dans [!DNL Platform], consultez la [documentation d&#39;aperçu de sandbox](../../sandboxes/home.md).
+>Pour plus d’informations sur les environnements de test dans [!DNL Platform], consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
 
 Les requêtes contenant un payload (POST, PUT, PATCH) peuvent requérir un en-tête `Content-Type` supplémentaire. Les valeurs acceptées propres à chaque appel sont précisées dans les paramètres d’appel.
 
 ## Types
 
-Lors de l’assimilation de données, il est important de comprendre le fonctionnement des schémas [!DNL Experience Data Model] (XDM). Pour plus d’informations sur la façon dont les types de champs XDM sont associés à différents formats, reportez-vous au [guide de développement du registre des schémas](../../xdm/api/getting-started.md).
+Lors de l’ingestion de données, il est important de comprendre le fonctionnement des schémas [!DNL Experience Data Model] (XDM). Pour plus d’informations sur la façon dont les types de champs XDM sont associés à différents formats, reportez-vous au [guide de développement du registre des schémas](../../xdm/api/getting-started.md).
 
 L’ingestion de données offre une certaine souplesse : si un type ne correspond pas à ce qui se trouve dans le schéma cible, les données seront converties dans le type cible précisé. Si cette conversion est impossible, le lot échouera avec `TypeCompatibilityException`.
 
-Par exemple, ni JSON ni CSV ne comportent de date ou de type d’horodatage. Par conséquent, ces valeurs sont exprimées au moyen de [chaînes formatées ISO 8061](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (« 2018-07-10T15:05:59.000-08:00 ») ou en heure Unix formatée en millisecondes (1531263959000), et sont ensuite converties en heure d’ingestion vers le type XDM cible.
+Par exemple, ni JSON ni CSV ne comportent de date ou de type d’horodatage. Par conséquent, ces valeurs sont exprimées au moyen de [chaînes formatées ISO 8061](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou d’une heure Unix formatée en millisecondes (1531263959000) et sont converties au moment de l’ingestion vers le type XDM cible.
 
 Le tableau ci-dessous illustre les conversions prises en charge lors de l’ingestion de données.
 
@@ -70,7 +69,7 @@ Le tableau ci-dessous illustre les conversions prises en charge lors de l’inge
 | Court | X | X | X | X | X | X |  |  |  |  |
 | Entier | X | X | X | X | X | X |  |  |  |  |
 | Long | X | X | X | X | X | X | X | X |  |  |
-| Doublon | X | X | X | X | X | X |  |  |  |  |
+| Double | X | X | X | X | X | X |  |  |  |  |
 | Date |  |  |  |  |  |  | X |  |  |  |
 | Date et heure |  |  |  |  |  |  |  | X |  |  |
 | Objet |  |  |  |  |  |  |  |  | X | X |
@@ -174,7 +173,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d&#39;accès au fichier correspond à l&#39;emplacement d&#39;enregistrement du fichier côté Adobe. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d’accès au fichier est l’emplacement où le fichier sera enregistré côté Adobe. |
 
 **Requête**
 
@@ -194,7 +193,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d&#39;accès au fichier correspond au chemin d&#39;accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
 
 **Réponse**
 
@@ -309,7 +308,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d&#39;accès au fichier correspond à l&#39;emplacement d&#39;enregistrement du fichier côté Adobe. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d’accès au fichier est l’emplacement où le fichier sera enregistré côté Adobe. |
 
 **Requête**
 
@@ -329,7 +328,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d&#39;accès au fichier correspond au chemin d&#39;accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
 
 **Réponse**
 
@@ -482,7 +481,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d&#39;accès au fichier correspond à l&#39;emplacement d&#39;enregistrement du fichier côté Adobe. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d’accès au fichier est l’emplacement où le fichier sera enregistré côté Adobe. |
 
 **Requête**
 
@@ -504,7 +503,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Paramètre | Description |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | En entiers, le début et la fin de la plage demandée. |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d&#39;accès au fichier correspond au chemin d&#39;accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
 
 
 **Réponse**
@@ -698,7 +697,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d&#39;accès au fichier correspond à l&#39;emplacement d&#39;enregistrement du fichier côté Adobe. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d’accès au fichier est l’emplacement où le fichier sera enregistré côté Adobe. |
 
 **Requête**
 
@@ -718,7 +717,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d&#39;accès au fichier correspond au chemin d&#39;accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
 
 
 **Réponse**
@@ -905,7 +904,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d&#39;accès au fichier correspond à l&#39;emplacement d&#39;enregistrement du fichier côté Adobe. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d’accès au fichier est l’emplacement où le fichier sera enregistré côté Adobe. |
 
 **Requête**
 
@@ -925,7 +924,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d&#39;accès au fichier correspond au chemin d&#39;accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `Users/sample-user/Downloads/sample.json`. |
 
 **Réponse**
 
@@ -967,7 +966,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Transformation des données pour l’ingestion par lots
 
-Pour importer un fichier de données dans [!DNL Experience Platform], la structure hiérarchique du fichier doit respecter le schéma [Modèle de données d’expérience (XDM)](../../xdm/home.md) associé au jeu de données dans lequel il est transféré.
+Pour ingérer un fichier de données dans [!DNL Experience Platform], la structure hiérarchique du fichier doit être conforme au schéma [Modèle de données d’expérience (XDM)](../../xdm/home.md) associé au jeu de données dans lequel il est chargé.
 
 Vous trouverez des informations sur le mappage d’un fichier CSV pour être conforme à un schéma XDM dans le document traitant des [exemples de transformations](../../etl/transformations.md), ainsi qu’un exemple de fichier de données JSON correctement formaté. Les exemples de fichiers fournis dans ce document se trouvent ici :
 

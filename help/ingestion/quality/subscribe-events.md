@@ -5,16 +5,16 @@ title: Notifications d’ingestion de données
 topic-legacy: overview
 description: Pour faciliter la surveillance du processus d’ingestion, Adobe Experience Platform permet de s’abonner à un ensemble d’événements publiés par chaque étape du processus, vous informant de l’état des données ingérées et des échecs possibles.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 29%
+source-wordcount: '677'
+ht-degree: 27%
 
 ---
 
 # Notifications d’ingestion de données
 
-Le processus d’ingestion de données dans Adobe Experience Platform se compose de plusieurs étapes. Une fois que vous avez identifié les fichiers de données à ingérer dans [!DNL Platform], le processus d’ingestion commence et chaque étape se produit consécutivement jusqu’à ce que les données soient correctement ingérées ou échouent. Il est possible d’initier le processus d’ingestion à l’aide de l’[API Data Ingestion d’Adobe ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) ou de l’interface utilisateur Experience Platform.[!DNL Experience Platform]
+Le processus d’ingestion de données dans Adobe Experience Platform se compose de plusieurs étapes. Une fois que vous avez identifié les fichiers de données à ingérer dans [!DNL Platform], le processus d’ingestion commence et chaque étape se produit consécutivement jusqu’à ce que les données soient correctement ingérées ou échouent. Il est possible d’initier le processus d’ingestion à l’aide de l’[API Data Ingestion d’Adobe ](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) ou de l’interface utilisateur Experience Platform.[!DNL Experience Platform]
 
 Les données chargées dans [!DNL Platform] doivent passer par plusieurs étapes pour atteindre leur destination, [!DNL Data Lake] ou l’entrepôt de données [!DNL Real-time Customer Profile]. Chaque étape implique le traitement des données, leur validation, puis leur stockage avant de passer à l’étape suivante. En fonction de la quantité de données ingérée, ce processus peut devenir chronophage et il existe toujours une possibilité qu’il échoue en raison d’erreurs de validation, de sémantique ou de traitement. En cas d’échec, les problèmes de données doivent être résolus, puis l’ensemble du processus d’ingestion doit être redémarré en utilisant des fichiers de données corrigés.
 

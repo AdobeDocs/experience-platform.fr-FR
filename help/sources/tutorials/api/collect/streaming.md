@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données en continu et les introduire dans Platform à l’aide des connecteurs source et des API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1107'
 ht-degree: 17%
 
 ---
@@ -152,7 +152,7 @@ Une réponse réussie renvoie les détails du schéma nouvellement créé, y com
 
 ## Création d’un jeu de données cible
 
-Avec un schéma XDM cible créé et son `$id` unique, vous pouvez maintenant créer un jeu de données cible contenant vos données source. Pour créer un jeu de données cible, envoyez une requête de POST au point de terminaison `dataSets` de l’API [Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), tout en fournissant l’identifiant du schéma cible dans la payload.
+Avec un schéma XDM cible créé et son `$id` unique, vous pouvez maintenant créer un jeu de données cible contenant vos données source. Pour créer un jeu de données cible, envoyez une requête de POST au point de terminaison `dataSets` de l’API [Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/), tout en fournissant l’identifiant du schéma cible dans la payload.
 
 **Format d’API**
 

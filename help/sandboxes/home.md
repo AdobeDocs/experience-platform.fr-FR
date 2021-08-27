@@ -5,9 +5,9 @@ title: Présentation des environnements de test
 topic-legacy: overview
 description: Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1005'
 ht-degree: 60%
 
 ---
@@ -60,7 +60,7 @@ Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.
 
 ## Environnements de test dans les API Experience Platform
 
-Lors d’appels aux API Experience Platform, un nom d’environnement de test doit être renseigné sous l’en-tête `x-sandbox-name`. Par exemple, lors d’un appel à [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) pour afficher tous les jeux de données dans l’environnement de test de production, le nom de l’environnement de test (&quot;prod&quot;) est fourni comme en-tête dans la requête API :
+Lors d’appels aux API Experience Platform, un nom d’environnement de test doit être renseigné sous l’en-tête `x-sandbox-name`. Par exemple, lors d’un appel à [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) pour afficher tous les jeux de données dans l’environnement de test de production, le nom de l’environnement de test (&quot;prod&quot;) est fourni comme en-tête dans la requête API :
 
 ```shell
 curl -X GET \

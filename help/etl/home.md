@@ -5,10 +5,10 @@ title: Développement d’intégrations ETL pour Adobe Experience Platform
 topic-legacy: overview
 description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et l’ingestion de données dans Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '4143'
-ht-degree: 100%
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+workflow-type: tm+mt
+source-wordcount: '4083'
+ht-degree: 98%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 100%
 Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour [!DNL Experience Platform] et l’ingestion de données dans [!DNL Platform].
 
 
-- [[!DNL Catalog]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
-- [[!DNL Data Access]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)
-- [[!DNL Data Ingestion]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
+- [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
+- [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
+- [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Authentification et autorisation pour les API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis)
 - [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
 
@@ -50,13 +50,13 @@ Plusieurs composants d’Experience Platform sont impliqués dans les intégrati
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin ou dont vous devrez disposer pour passer avec succès des appels aux API [!DNL Experience Platform].
 
-### Lecture d’exemples d’appels API
+### Lecture d&#39;exemples d&#39;appels API
 
-Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce guide fournit des exemples d&#39;appels API pour démontrer comment formater vos requêtes. Il s&#39;agit notamment de chemins d&#39;accès, d&#39;en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
@@ -90,7 +90,7 @@ Des maquelles pour un échantillon d’outil ETL et de workflow ont été fourni
 
 ### Visualisation de la liste des jeux de données
 
-En utilisant la source des données pour le mappage, une liste de tous les jeux de données disponibles peut être récupérée à l’aide de l’[[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+En utilisant la source des données pour le mappage, une liste de tous les jeux de données disponibles peut être récupérée à l’aide de l’[[!DNL Catalog API]](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
 Vous pouvez émettre une seule requête API pour visualiser tous les jeux de données disponibles (p. ex. `GET /dataSets`), la meilleure méthode étant d’inclure des paramètres de requête qui limitent la taille de la réponse.
 
@@ -127,7 +127,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-Consultez la [présentation du service de catalogue](../catalog/home.md) pour obtenir des exemples détaillés sur la manière d’effectuer des appels vers l’[[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+Consultez la [présentation du service de catalogue](../catalog/home.md) pour obtenir des exemples détaillés sur la manière d’effectuer des appels vers l’[[!DNL Catalog API]](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
 **Réponse**
 
@@ -229,7 +229,7 @@ Les jeux de données peuvent contenir une propriété « schema » désormais 
 }
 ```
 
-Si la propriété « schema » d’un jeu de données est renseignée, cela indique que le schéma est un schéma `/xdms` obsolète. C’est pourquoi, lorsqu’il est pris en charge, le connecteur ETL devrait utiliser la valeur de la propriété « schema » avec le point d’entrée `/xdms` (un point d’entrée obsolète de l’[[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)) pour récupérer l’ancien schéma.
+Si la propriété « schema » d’un jeu de données est renseignée, cela indique que le schéma est un schéma `/xdms` obsolète. C’est pourquoi, lorsqu’il est pris en charge, le connecteur ETL devrait utiliser la valeur de la propriété « schema » avec le point d’entrée `/xdms` (un point d’entrée obsolète de l’[[!DNL Catalog API]](https://www.adobe.io/experience-platform-apis/references/catalog/)) pour récupérer l’ancien schéma.
 
 **Format d’API**
 
@@ -491,13 +491,13 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-Les données seront écrites dans [!DNL Experience Platform] à l’aide de l’[API Data Ingestion](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).  L’écriture des données est un processus asynchrone. Lorsque des données sont écrites dans Adobe Experience Platform, un lot est créé et marqué comme réussi uniquement après que les données ont été entièrement écrites.
+Les données seront écrites dans [!DNL Experience Platform] à l’aide de l’[API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).  L’écriture des données est un processus asynchrone. Lorsque des données sont écrites dans Adobe Experience Platform, un lot est créé et marqué comme réussi uniquement après que les données ont été entièrement écrites.
 
 Dans [!DNL Experience Platform], les données devraient être écrites sous la forme de fichiers parquet.
 
 ## Phase d’exécution
 
-Lorsque l’exécution démarre, le connecteur (tel que défini dans le composant source) lit les données d’[!DNL Experience Platform] à l’aide de l’[[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml). Le processus de transformation lira les données pour une certaine période. En interne, il interrogera des lots de jeux de données source. Lors de l’interrogation, il utilisera une date de début paramétrée (qui varie pour les données de série temporelle ou les données incrémentielles) et établira une liste des fichiers de jeu de données pour ces lots. Il commencera également à demander des données pour ces fichiers de jeu de données.
+Lorsque l’exécution démarre, le connecteur (tel que défini dans le composant source) lit les données d’[!DNL Experience Platform] à l’aide de l’[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/). Le processus de transformation lira les données pour une certaine période. En interne, il interrogera des lots de jeux de données source. Lors de l’interrogation, il utilisera une date de début paramétrée (qui varie pour les données de série temporelle ou les données incrémentielles) et établira une liste des fichiers de jeu de données pour ces lots. Il commencera également à demander des données pour ces fichiers de jeu de données.
 
 ### Exemples de transformations
 
@@ -505,7 +505,7 @@ Le document d’[échantillon de transformations ETL](./transformations.md) cont
 
 ### Lecture des données à partir d’[!DNL Experience Platform]
 
-À l’aide de l’[[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), vous pouvez récupérer tous les lots entre une heure de début et une heure de fin spécifiques, puis les trier selon l’ordre dans lequel ils ont été créés.
+À l’aide de l’[[!DNL Catalog API]](https://www.adobe.io/experience-platform-apis/references/catalog/), vous pouvez récupérer tous les lots entre une heure de début et une heure de fin spécifiques, puis les trier selon l’ordre dans lequel ils ont été créés.
 
 **Requête**
 
@@ -522,7 +522,7 @@ Vous trouverez des détails sur le filtrage des lots dans le [tutoriel portant s
 
 ### Extraction de fichiers d’un lot
 
-Une fois que vous disposez de l’identifiant du lot que vous recherchez (`{BATCH_ID}`), il est possible de récupérer une liste de fichiers appartenant à un lot en particulier via l’[[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  Pour plus d’informations sur ce processus, reportez-vous au tutoriel portant sur l’[[!DNL Data Access] ](../data-access/tutorials/dataset-data.md).
+Une fois que vous disposez de l’identifiant du lot que vous recherchez (`{BATCH_ID}`), il est possible de récupérer une liste de fichiers appartenant à un lot en particulier via l’[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/).  Pour plus d’informations sur ce processus, reportez-vous au tutoriel portant sur l’[[!DNL Data Access] ](../data-access/tutorials/dataset-data.md).
 
 **Requête**
 
@@ -536,7 +536,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### Accès aux fichiers à l’aide de l’identifiant de fichier
 
-À l’aide de l’ID unique d’un fichier (`{FILE_ID`), le [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) permet d’accéder aux détails spécifiques du fichier, notamment son nom, sa taille en octets et un lien pour le télécharger.
+À l’aide de l’ID unique d’un fichier (`{FILE_ID`), le [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) permet d’accéder aux détails spécifiques du fichier, notamment son nom, sa taille en octets et un lien pour le télécharger.
 
 **Requête**
 
@@ -552,7 +552,7 @@ La réponse peut pointer vers un seul fichier ou vers un répertoire. Vous trouv
 
 ### Accès au contenu du fichier
 
-Le [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) permet d’accéder au contenu d’un fichier spécifique. Pour récupérer le contenu, une requête GET est effectuée à l’aide de la valeur renvoyée pour `_links.self.href` lors de l’accès à un fichier à l’aide de l’identifiant de fichier.
+Le [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) permet d’accéder au contenu d’un fichier spécifique. Pour récupérer le contenu, une requête GET est effectuée à l’aide de la valeur renvoyée pour `_links.self.href` lors de l’accès à un fichier à l’aide de l’identifiant de fichier.
 
 **Requête**
 
@@ -580,7 +580,7 @@ La validation peut être effectuée pour les types XDM logiques à l’aide d’
 
 ### Création d’un lot
 
-Une fois les données traitées, l’outil ETL réécrit les données dans [!DNL Experience Platform] à l’aide de l’[API Batch Ingestion](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Avant de pouvoir ajouter des données à un jeu de données, celles-ci doivent être liées à un lot qui sera chargé ultérieurement dans un jeu de données spécifique.
+Une fois les données traitées, l’outil ETL réécrit les données dans [!DNL Experience Platform] à l’aide de l’[API Batch Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Avant de pouvoir ajouter des données à un jeu de données, celles-ci doivent être liées à un lot qui sera chargé ultérieurement dans un jeu de données spécifique.
 
 **Requête**
 
@@ -640,7 +640,7 @@ La prochaine fois que la transformation sera exécutée (probablement par planif
 
 ### Obtention de l’état du dernier lot
 
-Avant d’exécuter de nouvelles tâches dans l’outil ETL, vous devez vous assurer que le dernier lot a bien été terminé. Le [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) fournit une option spécifique pour les lots qui indique les détails des lots pertinents.
+Avant d’exécuter de nouvelles tâches dans l’outil ETL, vous devez vous assurer que le dernier lot a bien été terminé. Le [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) fournit une option spécifique pour les lots qui indique les détails des lots pertinents.
 
 **Requête**
 
@@ -674,7 +674,7 @@ De nouvelles tâches peuvent être planifiées si la valeur « status » du lo
 
 ### Obtention de l’état du dernier lot par identifiant
 
-Un état de lot individuel peut être récupéré via l’[[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) en émettant une requête GET à l’aide du `{BATCH_ID}`. L’identifiant `{BATCH_ID}` utilisé est identique à celui renvoyé lors de la création du lot.
+Un état de lot individuel peut être récupéré via l’[[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) en émettant une requête GET à l’aide du `{BATCH_ID}`. L’identifiant `{BATCH_ID}` utilisé est identique à celui renvoyé lors de la création du lot.
 
 **Requête**
 

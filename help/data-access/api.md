@@ -1,27 +1,26 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; accès aux données ; sdk python ; sdk spark ; api d’accès aux données ; exportation ; Exporter
+keywords: Experience Platform;accueil;rubriques populaires;accès aux données;sdk python;sdk spark;api data access;exporter;exporter
 solution: Experience Platform
-title: Guide de l'API d'accès aux données
+title: Guide de l’API Data Access
 topic-legacy: developer guide
-description: L'API d'accès aux données prend en charge Adobe Experience Platform en fournissant aux développeurs une interface RESTful axée sur la détectabilité et l'accessibilité des jeux de données assimilés dans l'Experience Platform.
+description: L’API Data Access prend en charge Adobe Experience Platform en fournissant aux développeurs une interface RESTful axée sur la découverte et l’accessibilité des jeux de données ingérés dans Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 78%
+source-wordcount: '524'
+ht-degree: 84%
 
 ---
 
-# Guide de l’API d’accès aux données
+# Guide de l’API Data Access
 
-L&#39;API d&#39;accès aux données prend en charge Adobe Experience Platform en fournissant aux utilisateurs une interface RESTful axée sur la détectabilité et l&#39;accessibilité des jeux de données assimilés dans [!DNL Experience Platform].
+L’API Data Access prend en charge Adobe Experience Platform en fournissant aux utilisateurs une interface RESTful axée sur la découverte et l’accessibilité des jeux de données ingérés dans [!DNL Experience Platform].
 
 ![Data Access sur Experience Platform](images/Data_Access_Experience_Platform.png)
 
 ## Référence de spécification API
 
-Vous trouverez [ici](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) la documentation de référence de l’API Swagger.
+Vous trouverez [ici](https://www.adobe.io/experience-platform-apis/references/data-access/) la documentation de référence de l’API Swagger.
 
 ## Terminologie
 
@@ -204,7 +203,7 @@ Lorsqu’un répertoire est renvoyé, il contient un tableau de tous les fichier
 
 ## Accès aux contenus d’un fichier
 
-L&#39;API [!DNL Data Access] peut également être utilisée pour accéder au contenu d&#39;un fichier. Vous pouvez ensuite l’utiliser pour télécharger les contenus vers une source externe.
+L’API [!DNL Data Access] peut également être utilisée pour accéder au contenu d’un fichier. Vous pouvez ensuite l’utiliser pour télécharger les contenus vers une source externe.
 
 **Format d’API**
 
@@ -241,4 +240,4 @@ Pour consulter d’autres exemples, veuillez vous reporter au [tutoriel d’acc�
 
 ## Abonnement aux événements d’ingestion de données
 
-[!DNL Platform] rend des événements spécifiques à forte valeur ajoutée disponibles pour l&#39;abonnement via la Console  [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus d&#39;informations, consultez le didacticiel sur [l&#39;abonnement aux notifications d&#39;assimilation de données](../ingestion/quality/subscribe-events.md).
+[!DNL Platform] met à disposition des événements ayant une valeur élevée à lʼabonnement par lʼintermédiaire de la [console des développeurs Adobe](https://www.adobe.com/go/devs_console_ui). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus dʼinformations, consultez le tutoriel sur [lʼabonnement aux notifications dʼingestion des données](../ingestion/quality/subscribe-events.md).

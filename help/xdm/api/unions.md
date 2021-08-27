@@ -5,10 +5,10 @@ title: Point de terminaison de l’API Unions
 description: Le point d’entrée /unions de l’API Schema Registry vous permet de gérer par programmation les schémas d’union XDM dans votre application d’expérience.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '915'
-ht-degree: 51%
+source-wordcount: '911'
+ht-degree: 50%
 
 ---
 
@@ -32,7 +32,7 @@ Le tableau `timeSeriesEvents` est une liste d’événements de série temporell
 
 ### Mappage de l’adhésion aux segments
 
-Le mappage `segmentMembership` stocke les résultats des évaluations de segments. Lorsque les tâches de segmentation sont exécutées avec succès à l’aide de l’[API Segmentation](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), le mappage est mis à jour. `segmentMembership` stocke également tous les segments d’audience pré-évalués qui sont ingérés dans Platform, permettant l’intégration avec d’autres solutions comme Adobe Audience Manager. Pour plus d’informations, consultez le tutoriel sur la [création de segments à l’aide des API](../../segmentation/tutorials/create-a-segment.md).
+Le mappage `segmentMembership` stocke les résultats des évaluations de segments. Lorsque les tâches de segmentation sont exécutées avec succès à l’aide de l’[API Segmentation](https://www.adobe.io/experience-platform-apis/references/segmentation/), le mappage est mis à jour. `segmentMembership` stocke également tous les segments d’audience pré-évalués qui sont ingérés dans Platform, permettant l’intégration avec d’autres solutions comme Adobe Audience Manager. Pour plus d’informations, consultez le tutoriel sur la [création de segments à l’aide des API](../../segmentation/tutorials/create-a-segment.md).
 
 ## Récupération d’une liste d’unions {#list}
 
@@ -98,7 +98,7 @@ Vous pouvez voir une union spécifique en exécutant une requête GET qui inclut
 >
 >Les recherches d’unions sont disponibles à l’aide des points de terminaison `/unions` et `/schemas`[!DNL Profile] afin de les activer pour les utiliser dans les exportations de dans un jeu de données.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /tenant/unions/{UNION_ID}
