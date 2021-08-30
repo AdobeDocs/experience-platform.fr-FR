@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Annexe du guide de l’API Sandbox
 description: Ce document fournit des informations supplémentaires sur l’utilisation de l’API Sandbox.
 topic-legacy: developer guide
-source-git-commit: e4067f79e9da106fe2d2a86fa0024c2e5fe5d0ba
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 10%
+source-wordcount: '124'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ Ce document fournit des informations supplémentaires sur l’utilisation de l�
 
 ## Utilisation des paramètres de requête {#query}
 
-L’ [[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) prend en charge l’utilisation de paramètres de requête pour la page et le filtrage des résultats lors de la mise en liste des environnements de test.
+L’ [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) prend en charge l’utilisation de paramètres de requête pour la page et le filtrage des résultats lors de la mise en liste des environnements de test.
 
 >[!NOTE]
 >

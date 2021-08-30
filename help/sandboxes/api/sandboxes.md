@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API de gestion des environnements de test
 topic-legacy: developer guide
 description: Le point de terminaison /sandbox dans l’API Sandbox vous permet de gérer par programmation les environnements de test dans Adobe Experience Platform.
-source-git-commit: 1ec141fa5a13bb4ca6a4ec57f597f38802a92b3f
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 49%
+source-wordcount: '1436'
+ht-degree: 50%
 
 ---
 
@@ -17,13 +17,13 @@ Les environnements de test d’Adobe Experience Platform fournissent des environ
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼAPI [[!DNL Sandbox] ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼAPI [[!DNL Sandbox] ](https://www.adobe.io/experience-platform-apis/references/sandbox). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
 
 ## Récupération d’une liste d’environnements de test {#list}
 
 Vous pouvez répertorier tous les environnements de test appartenant à votre organisation IMS (principal ou non) en effectuant une requête GET sur le point de terminaison `/sandboxes` .
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /sandboxes?{QUERY_PARAMS}
@@ -306,7 +306,7 @@ Vous pouvez mettre à jour un ou plusieurs champs d’un environnement de test e
 >
 >Actuellement, seule la propriété `title` d’un environnement de test peut être mise à jour.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /sandboxes/{SANDBOX_NAME}
@@ -400,7 +400,7 @@ Une réponse réussie renvoie les détails de l’environnement de test mis à j
 }
 ```
 
-L’environnement de test de production par défaut et les environnements de test de production créés par l’utilisateur ne peuvent pas être réinitialisés si le graphique d’identités qui y est hébergé est également utilisé par Adobe Analytics pour la fonction [Analyse entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) ou si le graphique d’identités hébergé est également utilisé par Adobe Audience Manager pour la fonction [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)).
+L’environnement de test de production par défaut et les environnements de test de production créés par l’utilisateur ne peuvent pas être réinitialisés si le graphique d’identités qui y est hébergé est également utilisé par Adobe Analytics pour la fonction [Analyse entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=fr) ou si le graphique d’identités hébergé est également utilisé par Adobe Audience Manager pour la fonction [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr)).
 
 Voici une liste d’exceptions possibles qui peuvent empêcher la réinitialisation d’un environnement de test :
 
@@ -429,7 +429,7 @@ Voici une liste d’exceptions possibles qui peuvent empêcher la réinitialisat
 
 Vous pouvez procéder à la réinitialisation d’un environnement de test de production utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service] en ajoutant le paramètre `ignoreWarnings` à votre requête.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true

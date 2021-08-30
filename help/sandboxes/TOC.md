@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Aide aux environnements de test dans Adobe Experience Platform
 breadcrumb-title: Guide des environnements de test
 user-guide-description: Partitionnez une instance de Platform en environnements virtuels pour le développement, le test et le déploiement d’applications.
-feature: Gestion des données
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+feature: Data Management
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 90%
+source-wordcount: '60'
+ht-degree: 81%
 
 ---
 
@@ -26,5 +26,5 @@ ht-degree: 90%
    * [Types de sandbox](api/types.md)
    * [Annexe](api/appendix.md)
 * [Guide de dépannage](troubleshooting-guide.md)
-* [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
+* [Référence d’API](https://www.adobe.io/experience-platform-apis/references/sandbox)
 * [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
