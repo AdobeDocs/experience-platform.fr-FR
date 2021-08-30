@@ -1,35 +1,34 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; PSQL ; psqlconnect to requête service ; Requête service ; requête service ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;PSQL;psqlconnect to query service;Query service;query service;
 solution: Experience Platform
-title: Connecter PSQL à Requête Service
+title: Connexion de PSQL à Query Service
 topic-legacy: connect
-description: PSQL est une interface de ligne de commande qui vient lorsque vous installez PostgreSQL sur votre machine. Vous pouvez l’installer en suivant ces instructions.
+description: PSQL est une interface de ligne de commande qui s’affiche lorsque vous installez PostgreSQL sur votre machine. Vous pouvez l’installer en suivant ces instructions.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 13%
+source-wordcount: '275'
+ht-degree: 12%
 
 ---
 
-# Connecter PSQL à Requête Service
+# Connexion de PSQL à Query Service
 
-PSQL est une interface de ligne de commande qui s&#39;installe lorsque vous installez [!DNL PostgreSQL] sur votre machine. Ce document décrit les étapes de connexion de PSQL à Adobe Experience Platform [!DNL Query Service].
+PSQL est une interface de ligne de commande installée lorsque vous installez [!DNL PostgreSQL] sur votre machine. Ce document décrit les étapes de connexion de PSQL à Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> Ce guide suppose que vous avez déjà accès à [!DNL PSQL] et que vous savez comment l&#39;utiliser. Pour plus d&#39;informations sur [!DNL PSQL], consultez la [documentation officielle [!DNL PSQL]] (https://www.postgresql.org/docs/current/app-psql.html).
+> Ce guide suppose que vous avez déjà accès à [!DNL PSQL] et que vous savez comment l’utiliser. Vous trouverez plus d’informations sur [!DNL PSQL] dans la [documentation officielle [!DNL PSQL]](https://www.postgresql.org/docs/current/app-psql.html).
 
-Après avoir installé PSQL sur votre ordinateur, vous êtes prêt à connecter PSQL à Requête Service. Revenez à l&#39;interface utilisateur [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, puis **[!UICONTROL Informations d&#39;identification]**.
+Après avoir installé PSQL sur votre ordinateur, vous êtes prêt à connecter PSQL à Query Service. Revenez à l’interface utilisateur [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
 
 ![Image](../images/clients/psql/connect-bi.png)
 
-Sélectionnez l&#39;icône pour copier la section intitulée **[!UICONTROL Commande PSQL]**, puis collez la chaîne de commande dans un terminal ou une fenêtre de ligne de commande avant d&#39;appuyer sur Entrée.
+Sélectionnez l’icône pour copier la section intitulée **[!UICONTROL Commande PSQL]**, puis collez la chaîne de commande dans un terminal ou une fenêtre de ligne de commande avant d’appuyer sur la touche Entrée.
 
 >[!IMPORTANT]
 >
->Si vous êtes sur un PC, utilisez un éditeur de texte pour supprimer les sauts de ligne dans la chaîne de commande, puis copiez la chaîne. De plus, si vous utilisez la version 12.0 ou supérieure, vous devrez ajouter `PGGSSENCMODE=disable` à votre chaîne de connexion.
+>Si vous utilisez un PC, utilisez un éditeur de texte pour supprimer les sauts de ligne dans la chaîne de commande, puis copiez la chaîne. Si vous utilisez la version 12.0 ou ultérieure, vous devez ajouter `PGGSSENCMODE=disable` à la chaîne de connexion. De plus, si vous utilisez des informations d’identification non arrivant à expiration, veillez à remplacer le champ du mot de passe par le mot de passe des informations d’identification non arrivant à expiration. Pour en savoir plus sur les informations d’identification non arrivant à expiration, consultez le [guide des informations d’identification](../ui/credentials.md).
 
 Vous devriez voir apparaître un résultat similaire à ceci :
 
@@ -44,4 +43,4 @@ Si la version qui s’affiche est antérieure à la version 10.5, vous devez t�
 
 ## Étapes suivantes
 
-Maintenant que vous êtes connecté à [!DNL Query Service], vous pouvez utiliser PSQL pour écrire des requêtes. Pour plus d&#39;informations sur la façon d&#39;écrire et d&#39;exécuter des requêtes, veuillez lire le guide sur les [requêtes en cours d&#39;exécution](../best-practices/writing-queries.md).
+Maintenant que vous êtes connecté à [!DNL Query Service], vous pouvez utiliser PSQL pour écrire des requêtes. Pour plus d’informations sur la façon d’écrire et d’exécuter des requêtes, consultez le guide sur [l’exécution des requêtes](../best-practices/writing-queries.md).

@@ -1,41 +1,40 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; service de Requête ; service de requête ; postico ; Postico ; connexion au service de requête ;
+keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;postico;Postico;se connecter au service de requête;
 solution: Experience Platform
-title: Connecter Postico au service de Requête
+title: Connexion de Postico à Query Service
 topic-legacy: connect
-description: Ce document contient le lien permettant d’installer le client de sauvegarde Postico pour Adobe Experience Platform Requête Service.
+description: Ce document contient le lien d’installation du client de sauvegarde Postico pour Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 16%
+source-wordcount: '248'
+ht-degree: 7%
 
 ---
 
-# Connectez [!DNL Postico] à Requête Service (Mac)
+# Connecter [!DNL Postico] à Query Service (Mac)
 
 Ce document décrit les étapes de connexion de [!DNL Postico] à Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> Ce guide suppose que vous avez déjà accès à [!DNL Postico] et que vous savez comment naviguer dans son interface. Vous trouverez plus d&#39;informations sur [!DNL Postico] dans la [documentation officielle [!DNL Postico] ](https://eggerapps.at/postico/docs).
+> Ce guide suppose que vous avez déjà accès à [!DNL Postico] et que vous savez comment naviguer dans son interface. Vous trouverez plus d’informations sur [!DNL Postico] dans la [documentation  [!DNL Postico] officielle](https://eggerapps.at/postico/docs).
 > 
-> De plus, [!DNL Postico] est **uniquement** disponible sur les périphériques macOS.
+> En outre, [!DNL Postico] est **uniquement** disponible sur les appareils macOS.
 
-Pour connecter [!DNL Postico] à Requête Service, ouvrez [!DNL Postico] et sélectionnez **[!DNL New Favorite]**.
+Pour connecter [!DNL Postico] à Query Service, ouvrez [!DNL Postico] et sélectionnez **[!DNL New Favorite]**.
 
 ![](../images/clients/postico/open-postico.png)
 
-Vous pouvez désormais entrer des valeurs pour vous connecter à Adobe Experience Platform.
+Vous pouvez désormais saisir des valeurs pour vous connecter à Adobe Experience Platform.
 
-Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de la base de données ainsi que les informations d’identification de connexion, consultez la [page des informations d’identification sur Platform](https://platform.adobe.com/query/configuration). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, puis **[!UICONTROL Informations d’identification]**.
+Pour plus d’informations sur la recherche du nom, de l’hôte, du port et des informations de connexion de votre base de données, consultez le [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
 
-Après avoir inséré vos informations d’identification, sélectionnez **[!DNL Connect]** pour vous connecter à Requête Service.
+Après avoir inséré vos informations d’identification, sélectionnez **[!DNL Connect]** pour vous connecter à Query Service.
 
 ![](../images/clients/postico/authentication-details.png)
 
-Après la connexion à Platform, vous pourrez voir une liste de toutes les relations précédemment établies avec Requête Service.
+Après la connexion à Platform, vous pourrez voir la liste de toutes les relations précédemment établies avec Query Service.
 
 ![](../images/clients/postico/show-queries.png)
 
@@ -45,11 +44,11 @@ Pour créer une requête SQL, sélectionnez et ouvrez &quot;Requête SQL&quot;.
 
 ![](../images/clients/postico/create-query.png)
 
-Une zone apparaît et vous pouvez saisir la requête à exécuter à partir de cette fenêtre. Lorsque vous avez terminé, sélectionnez **[!DNL Execute Statement]** pour exécuter la requête.
+Une zone s’affiche et vous pouvez saisir la requête à exécuter à partir de celle-ci. Lorsque vous avez terminé, sélectionnez **[!DNL Execute Statement]** pour exécuter la requête.
 
 ![](../images/clients/postico/run-statement.png)
 
-Un tableau s’affiche, présentant les résultats de l’exécution de votre requête terminée.
+Un tableau s’affiche, indiquant les résultats de l’exécution de la requête terminée.
 
 ![](../images/clients/postico/query-results.png)
 

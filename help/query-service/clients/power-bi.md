@@ -5,10 +5,10 @@ title: Connexion de Power BI à Query Service
 topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter Power BI à Adobe Experience Platform Query Service.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 2109abd02b9c6c321c21a8fe3826509d22b1c2e2
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 7%
+source-wordcount: '463'
+ht-degree: 2%
 
 ---
 
@@ -42,7 +42,7 @@ Sélectionnez **[!DNL PostgreSQL database]**, suivi de **[!DNL Connect]**.
 
 ![](../images/clients/power-bi/get-data.png)
 
-Vous pouvez désormais saisir des valeurs pour le serveur et la base de données. Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de la base de données ainsi que les informations d’identification de connexion, consultez la [page des informations d’identification sur Platform](https://platform.adobe.com/query/configuration). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
+Vous pouvez désormais saisir des valeurs pour le serveur et la base de données. Pour plus d’informations sur la recherche du nom, de l’hôte, du port et des informations de connexion de votre base de données, consultez le [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
 
 **[!DNL Server]** est l’hôte trouvé sous les détails de la connexion. Pour la production, ajoutez le port `:80` à la fin de la chaîne hôte. **[!DNL Database]** peut être &quot;all&quot; ou un nom de table de jeu de données.
 

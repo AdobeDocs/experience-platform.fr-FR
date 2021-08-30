@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur de Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
+source-git-commit: 30c3ca4aa3e8f42140566c8fdf9fbc855ec72e1b
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 50%
+source-wordcount: '614'
+ht-degree: 47%
 
 ---
 
@@ -57,7 +57,7 @@ L’onglet **[!UICONTROL Journal]** fournit une liste de requêtes qui ont été
 
 ## Informations d’identification
 
-L’onglet **[!UICONTROL Informations d’identification]** affiche vos informations d’identification [!DNL Postgres] Sélectionnez l’icône **[!UICONTROL Copier]** en regard d’un champ pour stocker son contenu dans la mémoire tampon du clavier. Pour plus d’informations sur l’utilisation de ces informations d’identification pour établir une connexion avec des clients externes, consultez le [guide de connexion aux clients](../clients/overview.md).
+L’onglet **[!UICONTROL Informations d’identification]** affiche à la fois les informations d’identification arrivant à expiration et non arrivant à expiration. Pour plus d’informations sur l’utilisation de ces informations d’identification pour se connecter à des clients externes, consultez le [guide des informations d’identification](../clients/overview.md).
 
 ![Image](../images/ui/overview/credentials.png)
 
