@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activate audience data to batch profile export destinations
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil de lot.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
-source-git-commit: 7c10f39e7452481a00fb4269925c80aab34a7319
+source-git-commit: 99835d0b3d8ab64422be7f878cf556ac8890b123
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1959'
 ht-degree: 7%
 
 ---
@@ -75,9 +75,12 @@ Sélectionnez **[!UICONTROL Exporter les fichiers complets]** pour déclencher l
 
    >[!IMPORTANT]
    >
-   >En raison de la configuration des processus Experience Platform internes, la première exportation incrémentielle ou complète de fichier peut ne pas contenir toutes les données de renvoi. <br> <br> Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, Adobe recommande de définir l’heure d’exportation du premier fichier après 12h GMT le jour suivant. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
+   >En raison de la configuration des processus Experience Platform internes, la première exportation incrémentielle ou complète de fichier peut ne pas contenir toutes les données de renvoi. <br> <br> Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, Adobe recommande de définir l’heure d’exportation du premier fichier après 12h GMT le jour suivant. Cette limitation sera corrigée dans les prochaines versions.
 
 1. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir le jour ou l’intervalle au cours duquel l’exportation doit avoir lieu.
+   >[!TIP]
+   >
+   > Pour les exportations quotidiennes, définissez les dates de début et de fin afin de correspondre à la durée de vos campagnes sur vos plateformes en aval.
 1. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
 
 
@@ -96,14 +99,17 @@ Sélectionnez **[!UICONTROL Exporter les fichiers incrémentiels]** pour déclen
    * **[!UICONTROL Quotidien]** : planifier des exportations incrémentielles de fichiers une fois par jour, tous les jours, au moment que vous spécifiez.
    * **[!UICONTROL Horaire]** : planifier des exportations incrémentielles de fichiers toutes les 3, 6, 8 ou 12 heures.
 
-2. Utilisez le sélecteur **[!UICONTROL Heure]** pour choisir l’heure de la journée, au format [!DNL UTC], où doit avoir lieu l’exportation.
+1. Utilisez le sélecteur **[!UICONTROL Heure]** pour choisir l’heure de la journée, au format [!DNL UTC], où doit avoir lieu l’exportation.
 
    >[!IMPORTANT]
    >
-   >En raison de la configuration des processus Experience Platform internes, la première exportation incrémentielle ou complète de fichier peut ne pas contenir toutes les données de renvoi. <br> <br> Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, Adobe recommande de définir l’heure d’exportation du premier fichier après 12h GMT le jour suivant. Il s’agit d’une limitation qui sera corrigée dans les prochaines versions.
+   >En raison de la configuration des processus Experience Platform internes, la première exportation incrémentielle ou complète de fichier peut ne pas contenir toutes les données de renvoi. <br> <br> Pour garantir une exportation complète et à jour des données de renvoi pour les fichiers complets et incrémentiels, Adobe recommande de définir l’heure d’exportation du premier fichier après 12h GMT le jour suivant. Cette limitation sera corrigée dans les prochaines versions.
 
-3. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir le jour ou l’intervalle au cours duquel l’exportation doit avoir lieu.
-4. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
+1. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir le jour ou l’intervalle au cours duquel l’exportation doit avoir lieu.
+   >[!TIP]
+   >
+   >Définissez les dates de début et de fin pour correspondre à la durée de vos campagnes sur vos plateformes en aval.
+1. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
 
 ### Configuration des noms de fichier {#file-names}
 
