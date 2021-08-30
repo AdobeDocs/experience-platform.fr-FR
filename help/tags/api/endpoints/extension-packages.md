@@ -1,10 +1,10 @@
 ---
 title: Point d’entrée des packages d’extension
-description: Découvrez comment effectuer des appels au point de terminaison /extension_packages dans l’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+description: Découvrez comment effectuer des appels au point d'entrée /extension_packages dans l’API Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 7%
+source-wordcount: '951'
+ht-degree: 73%
 
 ---
 
@@ -12,17 +12,17 @@ ht-degree: 7%
 
 >[!WARNING]
 >
->L’implémentation du point de terminaison `/extension_packages` est en flux continu à mesure que des fonctionnalités sont ajoutées, supprimées et retravaillées.
+>L’implémentation du point d&#39;entrée `/extension_packages` se fait en flux continu à mesure que des fonctionnalités sont ajoutées, supprimées et retravaillées.
 
-Un package d’extension représente une [extension](./extensions.md) telle qu’elle a été créée par un développeur d’extension. Un package d’extension définit des fonctionnalités supplémentaires qui peuvent être mises à la disposition des utilisateurs de balises. La plupart du temps, ces fonctionnalités se présentent sous la forme de [composants de règle](./rule-components.md) (événements, conditions et actions) et [éléments de données](./data-elements.md), mais peuvent également inclure des modules principaux et des modules partagés.
+Un package d’extension représente une [extension](./extensions.md) telle qu’elle a été créée par un développeur d’extension. Un package d’extension définit des fonctionnalités supplémentaires qui peuvent être mises à la disposition des utilisateurs de balises. La plupart du temps, ces fonctionnalités se présentent sous la forme de [composants de règle](./rule-components.md) (événements, conditions et actions) et [d&#39;éléments de données](./data-elements.md), mais peuvent également inclure des modules principaux et des modules partagés.
 
-Les modules d’extension s’affichent dans le catalogue d’extensions dans l’interface utilisateur de la collecte de données pour que les utilisateurs puissent les installer. L’ajout d’un package d’extension à une propriété est effectué par la création d’une extension avec un lien vers le package d’extension.
+Les packages d&#39;extension s’affichent dans le catalogue d’extensions dans l’interface utilisateur de collecte de données pour que les utilisateurs puissent les installer. L’ajout d’un package d’extension à une propriété s&#39;effectue en créant une extension comportant un lien vers le package d’extension.
 
 Un package d’extension appartient à la [société](./companies.md) du développeur qui l’a créé.
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la marche à suivre pour s&#39;authentifier auprès de l&#39;API.
 
 En plus de comprendre comment passer des appels à l’API Reactor, il est important de comprendre comment les attributs `status` et `availability` d’un package d’extension affectent les actions que vous pouvez effectuer sur celui-ci. Ces informations sont expliquées dans les sections ci-dessous.
 
@@ -50,9 +50,9 @@ Il existe des niveaux de disponibilité pour un package d’extension : `develop
 >
 >Lorsqu’un package d’extension est créé, `availability` est défini sur `development`. Une fois le test terminé, vous pouvez passer le package d’extension à `private` ou `public`.
 
-## Récupération d’une liste de packages d’extension {#list}
+## Récupération d’une liste des packages d’extension {#list}
 
-Vous pouvez récupérer une liste des packages d’extension en effectuant une requête de GET sur `/extension_packages`.
+Vous pouvez récupérer une liste des packages d’extension en effectuant une requête GET sur `/extension_packages`.
 
 **Format d&#39;API**
 
@@ -62,7 +62,7 @@ GET /extension_packages
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les packages d’extension répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md) .
+>À l’aide des paramètres de requête, les packages d’extension répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Consultez le guide sur le [filtrage des réponses](../guides/filtering.md) pour plus d&#39;informations.
 
 **Requête**
 
@@ -78,7 +78,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste de packages d’extension.
+Une réponse réussie renvoie une liste des packages d’extension.
 
 ```json
 {
@@ -236,9 +236,9 @@ Une réponse réussie renvoie une liste de packages d’extension.
 
 ## Recherche d’un package d’extension {#lookup}
 
-Vous pouvez rechercher un package d’extension en fournissant son identifiant dans le chemin d’accès d’une requête de GET.
+Vous pouvez rechercher un package d’extension en fournissant son identifiant dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /extension_packages/{EXTENSION_PACKAGE_ID}
@@ -246,7 +246,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | `id` du package d’extension que vous souhaitez rechercher. |
+| `EXTENSION_PACKAGE_ID` | Le `id` du package d’extension que vous souhaitez rechercher. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -264,7 +264,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du package d’extension, y compris ses ressources déléguées telles que `actions`, `conditions`, `data_elements`, etc. L’exemple de réponse ci-dessous a été tronqué pour l’espace.
+Une réponse réussie renvoie les informations relatives au package d’extension, y compris ses ressources déléguées telles que `actions`, `conditions`, `data_elements`, etc. La réponse ci-dessous a été réduite pour gagner de l’espace.
 
 ```json
 {
@@ -471,9 +471,9 @@ Une réponse réussie renvoie les détails du package d’extension, y compris s
 
 ## Créer un package d’extension {#create}
 
-Les modules d’extension sont créés à l’aide d’un outil de génération de modèles automatique Node.js et enregistrés sur votre ordinateur local avant d’être soumis à l’API Reactor. Pour plus d’informations sur la configuration d’un package d’extension, consultez le guide de [prise en main du développement d’extension](../../extension-dev/getting-started.md).
+Les packages d’extension sont créés à l’aide d’un outil de génération de modèles automatique Node.js et enregistrés sur votre ordinateur local avant d’être soumis à l’API Reactor. Pour plus d’informations sur la configuration d’un package d’extension, consultez le guide de [prise en main du développement d’extension](../../extension-dev/getting-started.md).
 
-Une fois le fichier du package d’extension créé, vous pouvez l’envoyer à l’API Reactor par le biais d’une demande de POST.
+Une fois le fichier du package d’extension créé, vous pouvez l’envoyer à l’API Reactor par le biais d’une requête POST.
 
 **Format d’API**
 
@@ -483,7 +483,7 @@ POST /extension_packages
 
 **Requête**
 
-La requête suivante crée un package d’extension. Le chemin d’accès local au fichier de package en cours de chargement est référencé en tant que données de formulaire (`package`). Par conséquent, ce point de terminaison nécessite un en-tête `Content-Type` de `multipart/form-data`.
+La requête suivante crée un package d’extension. Le chemin d’accès local au fichier de package en cours de chargement est référencé en tant que données de formulaire (`package`). Par conséquent, ce point d&#39;entrée nécessite un en-tête `Content-Type` de `multipart/form-data`.
 
 ```shell
 curl -X POST \
@@ -497,7 +497,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du package d’extension nouvellement créé.
+Une réponse réussie renvoie les détails du package d’extension qui vient d’être créé.
 
 ```json
 {
@@ -706,7 +706,7 @@ Une réponse réussie renvoie les détails du package d’extension nouvellement
 
 Vous pouvez mettre à jour un package d’extension en incluant son identifiant dans le chemin d’accès d’une requête de PATCH.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
@@ -714,13 +714,13 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | `id` du package d’extension que vous souhaitez mettre à jour. |
+| `EXTENSION_PACKAGE_ID` | Le `id` du package d’extension que vous souhaitez mettre à jour. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-Comme avec [la création d’un package d’extension](#create), une version locale du package mis à jour doit être téléchargée via les données de formulaire.
+Comme pour [la création d’un package d’extension](#create), une version locale du package mis à jour doit être téléchargée via les données de formulaire.
 
 ```shell
 curl -X PATCH \
@@ -945,7 +945,7 @@ Une fois que vous avez terminé le test de votre package d’extension, vous pou
 
 Une fois que vous avez publié votre version privée, vous pouvez lancer le processus de publication publique en remplissant le [formulaire de demande de publication publique](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U).
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
@@ -953,13 +953,13 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | `id` du package d’extension que vous souhaitez publier en privé. |
+| `EXTENSION_PACKAGE_ID` | Le `id` du package d’extension que vous souhaitez publier en privé. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-Une version privée est obtenue en fournissant une valeur `action` de `release_private` dans la balise `meta` des données de la requête.
+Une version privée est obtenue en fournissant une `action` avec une valeur de `release_private` dans la balise `meta` des données de la requête.
 
 ```shell
 curl -X PATCH \
@@ -1188,9 +1188,9 @@ Une réponse réussie renvoie les détails du package d’extension.
 
 ## Arrêt d’un package d’extension {#discontinue}
 
-Vous pouvez arrêter un package d’extension en définissant son attribut `discontinued` sur `true` via une requête de PATCH.
+Vous pouvez arrêter un package d’extension en définissant son attribut `discontinued` sur `true` via une requête PATCH.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
@@ -1198,13 +1198,13 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | `id` du package d’extension que vous souhaitez arrêter. |
+| `EXTENSION_PACKAGE_ID` | Le `id` du package d’extension que vous souhaitez arrêter. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-Une version privée est obtenue en fournissant une valeur `action` de `release_private` dans la balise `meta` des données de la requête.
+Une version privée est obtenue en fournissant une `action` avec une valeur de `release_private` dans la balise `meta` des données de la requête.
 
 ```shell
 curl -X PATCH \
@@ -1283,7 +1283,7 @@ Une réponse réussie renvoie les détails du package d’extension.
 
 Vous pouvez répertorier les versions d’un package d’extension en ajoutant `/versions` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
@@ -1291,7 +1291,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
 
 | Paramètre | Description |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | `id` du package d’extension dont vous souhaitez répertorier les versions. |
+| `EXTENSION_PACKAGE_ID` | Le `id` du package d’extension dont vous souhaitez répertorier les versions. |
 
 {style=&quot;table-layout:auto&quot;}
 

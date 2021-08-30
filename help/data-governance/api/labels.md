@@ -5,10 +5,10 @@ title: Point d’entrée de lʼAPI Labels
 topic-legacy: developer guide
 description: Découvrez la façon de gérer les libellés dʼutilisation des données dans Experience Platform à lʼaide de lʼAPI Policy Service.
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '510'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '506'
+ht-degree: 99%
 
 ---
 
@@ -22,7 +22,7 @@ Les libellés dʼutilisation des données vous permettent de classer les donnée
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Récupération dʼune liste dʼétiquettes {#list}
 

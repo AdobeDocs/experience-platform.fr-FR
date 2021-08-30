@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une base de données et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1645'
-ht-degree: 22%
+source-wordcount: '1641'
+ht-degree: 21%
 
 ---
 
@@ -147,7 +147,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 Pour que les données source soient utilisées dans Platform, un schéma XDM cible doit être créé pour structurer les données source en fonction de vos besoins. Le schéma XDM cible est ensuite utilisé pour créer un jeu de données Platform dans lequel les données source sont contenues. Ce schéma XDM cible étend également la classe [!DNL XDM Individual Profile] .
 
-Vous pouvez créer un schéma XDM cible en adressant une requête de POST à l’[API Schema Registry](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Vous pouvez créer un schéma XDM cible en adressant une requête de POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **Format d’API**
 

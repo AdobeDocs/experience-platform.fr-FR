@@ -5,10 +5,10 @@ title: Présentation de Privacy Service
 topic-legacy: overview
 description: Privacy Service vous permet de faciliter votre mise en conformité automatisée aux réglementations légales liées à la confidentialité dans vos opérations de données Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '1394'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '1390'
+ht-degree: 99%
 
 ---
 
@@ -73,7 +73,7 @@ Une fois que vous avez déterminé les besoins en matière de confidentialité d
 
 #### Utilisation de l’API
 
-[[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) fournit plusieurs points d’entrée pour la création et la gestion des tâches relatives à la confidentialité à l’aide des appels d’API RESTful. Cela vous permet d’avoir une approche automatisée de la conformité aux règlements relatifs à la confidentialité sur vos applications [!DNL Experience Cloud]. Pour obtenir des instructions détaillées sur l’utilisation de l’API, consultez le [guide de développement de l’API Privacy Service](api/getting-started.md).
+[[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) fournit plusieurs points d’entrée pour la création et la gestion des tâches relatives à la confidentialité à l’aide des appels d’API RESTful. Cela vous permet d’avoir une approche automatisée de la conformité aux règlements relatifs à la confidentialité sur vos applications [!DNL Experience Cloud]. Pour obtenir des instructions détaillées sur l’utilisation de l’API, consultez le [guide de développement de l’API Privacy Service](api/getting-started.md).
 
 #### Utilisation de l’interface utilisateur
 

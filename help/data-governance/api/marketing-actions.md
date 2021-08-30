@@ -5,10 +5,10 @@ title: Point d’entrée de l’API des actions marketing
 topic-legacy: developer guide
 description: Dans le cadre de la gouvernance des données Adobe Experience Platform, une action marketing est une action entreprise par un utilisateur de données Experience Platform pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 100%
+source-wordcount: '730'
+ht-degree: 99%
 
 ---
 
@@ -20,7 +20,7 @@ Vous pouvez gérer les actions marketing pour votre organisation en utilisant le
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’API [[!DNL Policy Service] ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Les points d’entrée d’API utilisés dans ce guide font partie de l’API [[!DNL Policy Service] ](https://www.adobe.io/experience-platform-apis/references/policy-service/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Récupération d’une liste d’actions marketing {#list}
 
@@ -109,7 +109,7 @@ Une réponse réussie renvoie les détails de chaque action marketing récupér�
 
 Vous recherchez les détails d’une action marketing spécifique en incluant la propriété `name` de l’action marketing dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /marketingActions/core/{MARKETING_ACTION_NAME}
@@ -160,7 +160,7 @@ L’objet de réponse contient les détails de l’action marketing, y compris l
 
 Vous pouvez créer une action marketing personnalisée ou mettre à jour une action marketing existante en incluant le nom existant ou prévu de l’action marketing dans le chemin d’accès d’une requête PUT.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
@@ -224,7 +224,7 @@ Vous pouvez supprimer une action marketing personnalisée en incluant son nom da
 >
 >Les actions marketing référencées par des stratégies existantes ne peuvent pas être supprimées. Toute tentative de suppression de l’une de ces actions marketing provoquera une erreur HTTP 400 (Bad Request), ainsi qu’un message contenant les identifiants de toutes les stratégies qui font référence à l’action marketing.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}

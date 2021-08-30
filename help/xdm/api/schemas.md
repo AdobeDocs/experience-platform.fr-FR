@@ -5,9 +5,9 @@ title: Point d’entrée de l’API Schemas
 description: Le point de terminaison /schemas de l’API Schema Registry vous permet de gérer par programmation les schémas XDM dans votre application d’expérience.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1454'
 ht-degree: 19%
 
 ---
@@ -18,7 +18,7 @@ Un schéma peut être considéré comme le plan directeur des données que vous 
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼAPI [[!DNL Schema Registry] ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼAPI [[!DNL Schema Registry] ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
 
 ## Récupération d’une liste de schémas {#list}
 
@@ -28,7 +28,7 @@ Vous pouvez répertorier tous les schémas sous le conteneur `global` ou `tenant
 >
 >Lors de l’énumération des ressources, le registre des schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres de pagination. Il est également recommandé d’utiliser des paramètres de requête supplémentaires pour filtrer les résultats et réduire le nombre de ressources renvoyées. Pour plus d’informations, reportez-vous à la section [Paramètres de requête](./appendix.md#query) du document de l’annexe.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
@@ -102,7 +102,7 @@ La requête ci-dessus utilisait l’en-tête `application/vnd.adobe.xed-id+json`
 
 Vous pouvez rechercher un schéma spécifique en effectuant une requête de GET qui inclut l’identifiant du schéma dans le chemin d’accès.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
@@ -287,7 +287,7 @@ Vous pouvez remplacer un schéma entier par le biais d’une opération de PUT, 
 >
 >Si vous souhaitez uniquement mettre à jour une partie d’un schéma au lieu de le remplacer entièrement, reportez-vous à la section [mise à jour d’une partie d’un schéma](#patch).
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PUT /tenant/schemas/{SCHEMA_ID}
@@ -370,7 +370,7 @@ Vous pouvez mettre à jour une partie d’un schéma à l’aide d’une requêt
 
 L’une des opérations de PATCH les plus courantes consiste à ajouter des groupes de champs définis précédemment à un schéma, comme le montre l’exemple ci-dessous.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /tenant/schema/{SCHEMA_ID} 
@@ -461,7 +461,7 @@ Pour qu’un schéma participe à [Real-time Customer Profile](../../profile/hom
 >
 >Les balises immuables sont des balises destinées à être configurées, mais jamais supprimées.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /tenant/schema/{SCHEMA_ID} 
@@ -544,7 +544,7 @@ Vous pouvez maintenant afficher l’union de la classe de ce schéma pour confir
 
 Il peut parfois être nécessaire de supprimer un schéma du registre des schémas. Pour ce faire, il vous suffit d’effectuer une requête de DELETE avec l’identifiant de schéma fourni dans le chemin d’accès.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /tenant/schemas/{SCHEMA_ID}

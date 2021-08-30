@@ -1,9 +1,9 @@
 ---
 title: Présentation des journaux d’audit
 description: Découvrez comment les journaux d’audit vous permettent de voir qui a effectué les actions dans Adobe Experience Platform.
-source-git-commit: eb8144ace087c68a159aab89195832860df431e2
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '463'
 ht-degree: 5%
 
 ---
@@ -58,7 +58,7 @@ Select **[!UICONTROL Download log]** to export an audit log.
 
 ## Gestion des journaux d’audit dans l’API
 
-Toutes les actions que vous pouvez effectuer dans l’interface utilisateur peuvent également être effectuées à l’aide d’appels API. Pour plus d’informations, consultez le [document de référence sur l’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/audit-query.yaml) .
+Toutes les actions que vous pouvez effectuer dans l’interface utilisateur peuvent également être effectuées à l’aide d’appels API. Pour plus d’informations, consultez le [document de référence sur l’API](https://www.adobe.io/experience-platform-apis/references/audit-query/) .
 
 ## Gestion des journaux d’audit pour Adobe Admin Console
 

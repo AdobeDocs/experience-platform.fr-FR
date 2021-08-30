@@ -5,9 +5,9 @@ title: Point de terminaison de l’API Mixins
 description: Le point de terminaison /mixins de l’API Schema Registry vous permet de gérer par programmation les mixins XDM dans votre application d’expérience.
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1210'
 ht-degree: 14%
 
 ---
@@ -25,7 +25,7 @@ Les mixins sont des composants réutilisables qui définissent un ou plusieurs c
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[[!DNL Schema Registry] API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
 
 ## Récupération d’une liste de mixins {#list}
 
@@ -35,7 +35,7 @@ Vous pouvez répertorier tous les mixins sous le conteneur `global` ou `tenant` 
 >
 >Lors de l’énumération des ressources, le registre des schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres de pagination. Il est également recommandé d’utiliser des paramètres de requête supplémentaires pour filtrer les résultats et réduire le nombre de ressources renvoyées. Pour plus d’informations, reportez-vous à la section [Paramètres de requête](./appendix.md#query) du document de l’annexe.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
@@ -121,7 +121,7 @@ La requête ci-dessus utilisait l’en-tête `application/vnd.adobe.xed-id+json`
 
 Vous pouvez rechercher un mixin spécifique en incluant l’identifiant du mixin dans le chemin d’une requête de GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
@@ -402,7 +402,7 @@ Vous pouvez remplacer un mixin entier par le biais d’une opération de PUT, en
 >
 >Si vous souhaitez uniquement mettre à jour une partie d’un mixin au lieu de le remplacer entièrement, reportez-vous à la section sur la [mise à jour d’une partie d’un mixin](#patch).
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PUT /tenant/mixins/{MIXIN_ID}
@@ -587,7 +587,7 @@ Vous pouvez mettre à jour une partie d’un mixin à l’aide d’une requête 
 >
 >Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, reportez-vous à la section [Remplacement d’un mixin à l’aide d’une opération de PUT](#put).
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /tenant/mixin/{MIXIN_ID} 
@@ -726,7 +726,7 @@ La réponse montre que les deux opérations ont été réalisées avec succès. 
 
 Il peut parfois être nécessaire de supprimer un mixin du registre des schémas. Pour ce faire, il vous suffit d’effectuer une requête de DELETE avec l’ID de mixin fourni dans le chemin d’accès.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /tenant/mixins/{MIXIN_ID}

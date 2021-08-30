@@ -5,10 +5,10 @@ title: Présentation des libellés d’utilisation des données
 topic-legacy: labels
 description: La gouvernance des données d’Adobe Experience Platform vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d’utilisation des données associées. Ce document offre une présentation des libellés d’utilisation des données dans Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '619'
-ht-degree: 100%
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
+workflow-type: tm+mt
+source-wordcount: '611'
+ht-degree: 98%
 
 ---
 
@@ -52,9 +52,9 @@ L’espace de travail **[!UICONTROL Stratégies]** de l’interface utilisateur 
 
 ### Utilisation des API
 
-Le point d’entrée `/labels` de l’[API Policy Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) vous permet de gérer par programmation les libellés d’utilisation des données, y compris la création de libellés personnalisés. Pour plus d’informations, consultez le [guide des points d’entrée des libellés](../api/labels.md).
+Le point d’entrée `/labels` de l’[API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) vous permet de gérer par programmation les libellés d’utilisation des données, y compris la création de libellés personnalisés. Pour plus d’informations, consultez le [guide des points d’entrée des libellés](../api/labels.md).
 
-L’[API Dataset Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) est utilisée pour gérer les libellés des jeux de données et des champs. Pour plus d’informations, consultez le guide sur la [gestion des libellés de jeux de données](./dataset-api.md).
+L’[API Dataset Service](https://www.adobe.io/experience-platform-apis/references/dataset-service/) est utilisée pour gérer les libellés des jeux de données et des champs. Pour plus d’informations, consultez le guide sur la [gestion des libellés de jeux de données](./dataset-api.md).
 
 ## Étapes suivantes
 

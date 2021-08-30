@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Point de terminaison de l’API des groupes de champs
 description: Le point d’entrée /fieldgroups de l’API Schema Registry vous permet de gérer par programmation les groupes de champs de schéma XDM dans votre application d’expérience.
 topic-legacy: developer guide
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1211'
 ht-degree: 10%
 
 ---
@@ -18,7 +18,7 @@ Les groupes de champs de schéma sont des composants réutilisables qui définis
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[[!DNL Schema Registry] API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
 
 ## Récupération d’une liste de groupes de champs {#list}
 
@@ -28,7 +28,7 @@ Vous pouvez répertorier tous les groupes de champs sous le conteneur `global` o
 >
 >Lors de l’énumération des ressources, le registre des schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres de pagination. Il est également recommandé d’utiliser des paramètres de requête supplémentaires pour filtrer les résultats et réduire le nombre de ressources renvoyées. Pour plus d’informations, reportez-vous à la section [Paramètres de requête](./appendix.md#query) du document de l’annexe.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
@@ -114,7 +114,7 @@ La requête ci-dessus utilisait l’en-tête `application/vnd.adobe.xed-id+json`
 
 Vous pouvez rechercher un groupe de champs spécifique en incluant l’identifiant du groupe de champs dans le chemin d’une requête de GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
@@ -395,7 +395,7 @@ Vous pouvez remplacer un groupe de champs entier par le biais d’une opération
 >
 >Si vous souhaitez uniquement mettre à jour une partie d’un groupe de champs au lieu de la remplacer entièrement, reportez-vous à la section [mise à jour d’une partie d’un groupe de champs](#patch).
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
@@ -580,7 +580,7 @@ Vous pouvez mettre à jour une partie d’un groupe de champs à l’aide d’un
 >
 >Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, reportez-vous à la section [Remplacement d’un groupe de champs à l’aide d’une opération de PUT](#put).
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /tenant/fieldgroups/{FIELD_GROUP_ID} 
@@ -719,7 +719,7 @@ La réponse montre que les deux opérations ont été réalisées avec succès. 
 
 Il peut parfois être nécessaire de supprimer un groupe de champs du registre des schémas. Pour ce faire, il vous suffit d’effectuer une requête de DELETE avec l’identifiant de groupe de champs fourni dans le chemin d’accès.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}

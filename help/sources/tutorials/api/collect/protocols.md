@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application de protocoles et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1543'
-ht-degree: 22%
+source-wordcount: '1539'
+ht-degree: 21%
 
 ---
 
@@ -156,7 +156,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 Pour que les données source soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données source en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform dans lequel les données source sont contenues. Ce schéma XDM cible étend également la classe XDM [!DNL Individual Profile].
 
-Vous pouvez créer un schéma XDM cible en adressant une requête de POST à l’[API Schema Registry](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Vous pouvez créer un schéma XDM cible en adressant une requête de POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **Format d’API**
 

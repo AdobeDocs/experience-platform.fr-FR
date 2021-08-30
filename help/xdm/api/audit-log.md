@@ -5,9 +5,9 @@ title: Point de terminaison de l’API du journal d’audit
 description: Le point de terminaison /auditlog de l’API Schema Registry vous permet de récupérer une liste chronologique des modifications apportées à une ressource XDM existante.
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '402'
 ht-degree: 6%
 
 ---
@@ -18,7 +18,7 @@ Pour chaque ressource de modèle de données d’expérience (XDM), [!DNL Schema
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[[!DNL Schema Registry] API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
 
 Le point de terminaison `/auditlog` fait partie des appels de procédure distante (RPC) pris en charge par [!DNL Schema Registry]. Contrairement aux autres points de terminaison de l’API [!DNL Schema Registry], les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires tels que `Accept` ou `Content-Type` et n’utilisent pas de `CONTAINER_ID`. Ils doivent plutôt utiliser l’espace de noms `/rpc`, comme illustré dans l’appel API ci-dessous.
 
@@ -26,7 +26,7 @@ Le point de terminaison `/auditlog` fait partie des appels de procédure distant
 
 Vous pouvez récupérer un journal d’audit pour n’importe quelle classe, groupe de champs, type de données ou schéma dans la bibliothèque de schémas en spécifiant l’identifiant de la ressource dans le chemin d’accès d’une requête de GET au point de terminaison `/auditlog`.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /rpc/auditlog/{RESOURCE_ID}

@@ -1,22 +1,22 @@
 ---
-title: Point de terminaison des rappels
-description: Découvrez comment effectuer des appels vers le point de terminaison /callbacks dans l’API Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Point dʼentrée des rappels
+description: Découvrez comment effectuer des appels vers le point dʼentrée /callbacks dans lʼAPI Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 10%
+source-wordcount: '621'
+ht-degree: 99%
 
 ---
 
-# Point de terminaison des rappels
+# Point dʼentrée des rappels
 
-Un rappel est un message que l’API Reactor envoie à une URL spécifique (généralement une URL hébergée par votre organisation).
+Un rappel est un message que lʼAPI Reactor envoie à une URL spécifique (généralement une URL hébergée par votre organisation).
 
-Les rappels sont destinés à être utilisés conjointement avec les [événements d’audit](./audit-events.md) pour effectuer le suivi des activités dans l’API Reactor. Chaque fois qu’un événement d’audit d’un certain type est généré, un rappel peut envoyer un message correspondant à l’URL spécifiée.
+Les rappels sont destinés à être utilisés conjointement avec les [événements dʼaudit](./audit-events.md) afin dʼeffectuer le suivi des activités dans lʼAPI Reactor. Chaque fois quʼun événement dʼaudit dʼun certain type est généré, un rappel peut envoyer un message correspondant à lʼURL spécifiée.
 
-Le service derrière l’URL spécifiée dans le rappel doit répondre avec le code d’état HTTP 200 (OK) ou 201 (Created). Si le service ne répond avec aucun de ces codes d’état, la diffusion du message est retentée aux intervalles suivants :
+Le service derrière lʼURL spécifiée dans le rappel doit répondre avec le code dʼétat HTTP 200 (OK) ou 201 (Created). Si le service ne répond avec aucun de ces codes dʼétat, la remise du message est à nouveau tentée aux intervalles suivants :
 
-* 1 minute
+* 1 minute
 * 5 minutes
 * 30 minutes
 * 1 heure
@@ -26,21 +26,21 @@ Le service derrière l’URL spécifiée dans le rappel doit répondre avec le c
 
 >[!NOTE]
 >
->Les intervalles de reprise sont relatifs à l’intervalle précédent. Par exemple, si la nouvelle tentative échoue à une minute, la tentative suivante est planifiée pendant cinq minutes après l’échec de la tentative d’une minute (six minutes après la génération du message).
+>Les intervalles ayant subi une nouvelle tentative dépendent de lʼintervalle précédent. Par exemple, si la nouvelle tentative échoue à une minute, la tentative suivante est planifiée cinq minutes après lʼéchec de la tentative à une minute (six minutes après la génération du message).
 
-Si toutes les tentatives de diffusion échouent, le message est ignoré.
+Si toutes les tentatives de remise du message échouent, le message est rejeté.
 
-Un rappel appartient exactement à une [propriété](./properties.md). Une propriété peut comporter de nombreux rappels.
+Un rappel appartient à une seule [propriété](./properties.md). Une propriété peut posséder de nombreux rappels.
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la manière de sʼauthentifier auprès de lʼAPI.
 
-## Rappels de liste {#list}
+## Liste des rappels {#list}
 
-Vous pouvez répertorier tous les rappels sous une propriété en effectuant une requête de GET.
+Vous pouvez répertorier tous les rappels appartenant à une propriété en effectuant une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /properties/{PROPERTY_ID}/callbacks
@@ -54,7 +54,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les rappels répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`created_at`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md) .
+>À lʼaide des paramètres de requête, les rappels répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`created_at`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -115,11 +115,11 @@ Une réponse réussie renvoie une liste de rappels pour la propriété spécifi�
 }
 ```
 
-## Recherche d’un rappel {#lookup}
+## Recherche dʼun rappel {#lookup}
 
-Vous pouvez rechercher un rappel en fournissant son identifiant dans le chemin d’accès d’une requête de GET.
+Vous pouvez rechercher un rappel en fournissant son identifiant dans le chemin dʼaccès dʼune requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /callbacks/{CALLBACK_ID}
@@ -127,7 +127,7 @@ GET /callbacks/{CALLBACK_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `CALLBACK_ID` | `id` du rappel que vous souhaitez rechercher. |
+| `CALLBACK_ID` | Champ `id` du rappel que vous souhaitez rechercher. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -179,11 +179,11 @@ Une réponse réussie renvoie les détails du rappel.
 }
 ```
 
-## Création d’un rappel {#create}
+## Création dʼun rappel {#create}
 
-Vous pouvez créer un rappel en effectuant une requête de POST.
+Vous pouvez créer un rappel en effectuant une requête POST.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /properties/{PROPERTY_ID}/callbacks
@@ -191,7 +191,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 
 | Paramètre | Description |
 | --- | --- |
-| `PROPERTY_ID` | `id` de la [propriété](./properties.md) sous laquelle vous définissez le rappel. |
+| `PROPERTY_ID` | Champ `id` de la [propriété](./properties.md) sous laquelle vous définissez le rappel. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -218,8 +218,8 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `url` | Destination de l’URL du message de rappel. L’URL doit utiliser l’extension de protocole HTTPS. |
-| `subscriptions` | Tableau de chaînes indiquant les types d’événements de contrôle qui déclencheront le rappel. Pour obtenir la liste des types d’événements possibles, reportez-vous au [guide de point de terminaison des événements de contrôle](./audit-events.md) . |
+| `url` | Destination URL du message de rappel. LʼURL doit utiliser lʼextension de protocole HTTPS. |
+| `subscriptions` | Tableau de chaînes indiquant les types dʼévénements dʼaudit qui déclencheront le rappel. Pour obtenir la liste des types dʼévénements possibles, reportez-vous au [guide du point dʼentrée des événements dʼaudit](./audit-events.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -259,11 +259,11 @@ Une réponse réussie renvoie les détails du rappel que vous venez de créer.
 }
 ```
 
-## Mise à jour d’un rappel
+## Mise à jour dʼun rappel
 
-Vous pouvez mettre à jour un rappel en incluant son identifiant dans le chemin d’accès d’une requête de PUT.
+Vous pouvez mettre à jour un rappel en incluant son identifiant dans le chemin dʼaccès dʼune requête PUT.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PUT /callbacks/{CALLBACK_ID}
@@ -271,13 +271,13 @@ PUT /callbacks/{CALLBACK_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `CALLBACK_ID` | `id` du rappel que vous souhaitez mettre à jour. |
+| `CALLBACK_ID` | Champ `id` du rappel que vous souhaitez mettre à jour. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante met à jour le tableau `subscriptions` pour un rappel existant.
+La requête suivante met à jour le tableau `subscriptions` dʼun rappel existant.
 
 ```shell
 curl -X PUT \
@@ -302,9 +302,9 @@ curl -X PUT \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour le rappel. Chaque clé représente l’attribut de rappel particulier à mettre à jour, ainsi que la valeur correspondante vers laquelle il doit être mis à jour.<br><br>Les attributs suivants peuvent être mis à jour pour les rappels :<ul><li>`subscriptions`</li><li>`url`</li></ul> |
-| `id` | `id` du rappel que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{CALLBACK_ID}` fournie dans le chemin de requête. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `callbacks`. |
+| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour le rappel. Chaque clé représente lʼattribut de rappel particulier à mettre à jour, ainsi que la valeur correspondante vers laquelle il doit être mis à jour.<br><br>Les attributs suivants peuvent être mis à jour pour les rappels :<ul><li>`subscriptions`</li><li>`url`</li></ul> |
+| `id` | Champ `id` du rappel que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{CALLBACK_ID}` fournie dans le chemin dʼaccès à la demande. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `callbacks`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -345,11 +345,11 @@ Une réponse réussie renvoie les détails du rappel mis à jour.
 }
 ```
 
-## Suppression d’un rappel
+## Suppression dʼun rappel
 
-Vous pouvez supprimer un rappel en incluant son identifiant dans le chemin d’accès d’une requête de DELETE.
+Vous pouvez supprimer un rappel en incluant son identifiant dans le chemin dʼaccès dʼune requête DELETE.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /callbacks/{CALLBACK_ID}
@@ -357,7 +357,7 @@ DELETE /callbacks/{CALLBACK_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `CALLBACK_ID` | `id` du rappel que vous souhaitez supprimer. |
+| `CALLBACK_ID` | Champ `id` du rappel que vous souhaitez supprimer. |
 
 {style=&quot;table-layout:auto&quot;}
 

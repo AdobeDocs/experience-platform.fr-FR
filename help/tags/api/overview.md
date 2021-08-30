@@ -1,119 +1,119 @@
 ---
-title: Guide de l’API Reactor
-description: L’API Reactor permet aux développeurs de gérer toutes les ressources de balises par programme dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
-workflow-type: ht
-source-wordcount: '1039'
-ht-degree: 100%
+title: Guide de lʼAPI Reactor
+description: LʼAPI Reactor permet aux développeurs de gérer par programmation toutes les ressources des balises dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '1035'
+ht-degree: 99%
 
 ---
 
 # Guide de l’API [!DNL Reactor]
 
-L’API Reactor fournit plusieurs points d’entrée qui vous permettent de gérer toutes les ressources de balises par programme dans Adobe Experience Platform.
+LʼAPI Reactor fournit plusieurs points dʼentrée qui vous permettent de gérer par programmation toutes les ressources des balises dans Adobe Experience Platform.
 
-Ces points d’entrée sont décrits ci-dessous. Consultez les guides des points d’entrée individuels pour plus de détails et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur la manière de vous authentifier auprès de l’API.
+Ces points d’entrée sont décrits ci-dessous. Consultez les guides des différents points dʼentrée pour obtenir plus dʼinformations et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur la manière de vous authentifier auprès de lʼAPI.
 
-Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez le document de [référence de l’API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml).
+Pour afficher tous les points dʼentrée et opérations CRUD disponibles, consultez la section [Informations de référence sur lʼAPI Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/).
 
 ## Sociétés
 
-Une société représente l’organisation d’un utilisateur de balises, généralement une entreprise. La correspondance de ces sociétés est de 1:1 avec les identifiants de l’organisation IMS. Les utilisateurs d’API n’auront de visibilité que sur les sociétés auxquelles ils ont accès.
+Une société représente lʼorganisation dʼun utilisateur de balises, généralement une entreprise. Ces sociétés répondent parfaitement aux identifiants dʼorganisation IMS. Les utilisateurs de l’API nʼauront une visibilité que sur les sociétés auxquelles ils ont accès.
 
-Consultez le [guide des points d’entrée de sociétés](./endpoints/companies.md) pour savoir comment afficher les sociétés disponibles dans l’API.
+Pour savoir comment afficher les sociétés disponibles dans lʼAPI, consultez le [guide du point dʼentrée des sociétés](./endpoints/companies.md).
 
 ## Propriétés
 
-Une propriété est un conteneur qui contient la plupart des autres ressources disponibles dans l’API Reactor. Les seules ressources qui ne sont pas détenues par une propriété sont les événements d’audit, les sociétés, les packages d’extension et les profils. Une propriété appartient à une seule société exactement. Par ailleurs, une société peut avoir plusieurs propriétés.
+Une propriété est un conteneur qui contient la plupart des autres ressources disponibles dans lʼAPI Reactor. Les seules ressources qui ne sont pas détenues par une propriété sont les événements dʼaudit, les sociétés, les packages dʼextension et les profils. Une propriété appartient à une seule et unique société, mais une société peut posséder plusieurs propriétés.
 
-Consultez le [guide des points d’entrée des propriétés](./endpoints/properties.md) pour savoir comment gérer les propriétés dans l’API.
+Pour savoir comment gérer les propriétés dans lʼAPI, consultez le [guide du point dʼentrée des propriétés](./endpoints/properties.md).
 
 ## Éléments de données
 
-Un élément de données fonctionne comme une variable qui pointe vers un élément de données important dans votre application. Les éléments de données sont utilisés dans les règles et les configurations d’extension. Lorsque la règle est déclenchée, au moment de l’exécution dans un navigateur ou une application, la valeur de l’élément de données est résolue et utilisée dans la règle.
+Un élément de données fonctionne comme une variable qui pointe vers une donnée importante dans votre application. Les éléments de données sont utilisés dans les règles et les configurations dʼextension. Lorsque la règle est déclenchée au moment de lʼexécution dans un navigateur ou une application, la valeur de lʼélément de données est résolue et utilisée dans la règle.
 
-Consultez le [guide des points d’entrée des éléments de données](./endpoints/data-elements.md) pour savoir comment gérer les éléments de données dans l’API.
+Pour savoir comment gérer les éléments de données dans lʼAPI, consultez le [guide du point dʼentrée des éléments de données](./endpoints/data-elements.md).
 
 ## Règles
 
-Les règles contrôlent le comportement des ressources contenues dans une bibliothèque déployée. Une règle correspond à un groupe d’un ou plusieurs composants de règle. Elle existe pour lier les composants de règle de manière logique.
+Les règles contrôlent le comportement des ressources contenues dans une bibliothèque déployée. Une règle regroupe un ou plusieurs composants de règle dans le but de les lier de manière logique.
 
-Consultez le [guide des points d’entrée des règles](./endpoints/rules.md) pour savoir comment gérer les règles dans l’API.
+Pour savoir comment gérer les règles dans lʼAPI, consultez le [guide du point dʼentrée des règles](./endpoints/rules.md).
 
 ## Composants de  règle
 
-Les composants de règle sont les éléments individuels qui constituent une règle. Les composants de règle ont trois types de base :
+Les composants de règle sont les éléments individuels constitutifs dʼune règle. Les composants de règle possèdent trois types de base :
 
-* **Événements** : ce qui déclenche une règle
-* **Conditions** : ce que vérifie la règle pour déterminer une action
-* **Actions** : ce que la règle exécute, en fonction du respect de la condition
+* **Événements** : ce qui déclenche une règle
+* **Conditions** : ce que la règle vérifie pour déterminer une action
+* **Actions** : ce que la règle exécute selon que la condition est remplie ou non.
 
-Consultez le [guide des points d’entrée de règles](./endpoints/rules.md) pour savoir comment gérer les règles dans l’API.
+Pour savoir comment gérer les règles dans lʼAPI, consultez le [guide du point dʼentrée des règles](./endpoints/rules.md).
 
-## Packages d’extension
+## Modules d’extension
 
-Un package d’extension représente un groupement de fonctionnalités individuelles qui peuvent être mises à la disposition d’un utilisateur de balises. La plupart du temps, ces fonctionnalités se présentent sous la forme de composants de règle et d’éléments de données, mais peuvent également inclure des modules principaux et des modules partagés. Les fonctionnalités fournies par un package d’extension sont installées sous forme d’extension lorsque ce package est inclus dans une bibliothèque.
+Un package dʼextension représente un ensemble de fonctionnalités individuelles qui peuvent être mises à la disposition dʼun utilisateur de balises. La plupart du temps, ces fonctionnalités se présentent sous la forme de composants de règle et dʼéléments de données, mais peuvent également inclure des modules principaux et partagés. Les fonctionnalités fournies par un package dʼextension sont installées en tant quʼextension lorsquʼil est inclus dans une bibliothèque.
 
-Consultez le [guide des points d’entrée de packages d’extension](./endpoints/extension-packages.md) pour savoir comment gérer les packages d’extension dans l’API.
+Pour savoir comment gérer les packages dʼextension dans lʼAPI, reportez-vous au [guide du point dʼentrée des packages dʼextension](./endpoints/extension-packages.md).
 
 ## Extensions
 
-Une extension représente l’instance installée d’un package d’extension. Une extension met à disposition les fonctionnalités définies par un package d’extension pour une propriété. Ces fonctionnalités sont exploitées lors de la création d’éléments de données et de composants de règle.
+Une extension représente lʼinstance installée dʼun package dʼextension. Une extension permet de rendre disponibles pour une propriété les fonctionnalités définies par un package dʼextension. Ces fonctionnalités sont utiles lors de la création dʼéléments de données et de composants de règle.
 
-Consultez le [guide des points d’entrée d’extensions](./endpoints/extensions.md) pour savoir comment gérer les extensions dans l’API.
+Pour savoir comment gérer les extensions dans lʼAPI, consultez le [guide du point dʼentrée des extensions](./endpoints/extensions.md).
 
 ## Bibliothèques
 
-Une bibliothèque est un ensemble de ressources (extensions, règles et éléments de données) qui représente le comportement souhaité d’une propriété. Les bibliothèques sont compilées dans des versions, lesquelles sont affectées à différents environnements lorsqu’elles descendent le flux de publication et passent du test à la production.
+Une bibliothèque est une collection de ressources (extensions, règles et éléments de données) qui représente le comportement souhaité dʼune propriété. Les bibliothèques sont compilées dans des versions, qui sont affectées à différents environnements à mesure de leur progression dans le flux de publication, du test à la production.
 
-Consultez le [guide du point d’entrée des bibliothèques](./endpoints/libraries.md) pour savoir comment gérer les bibliothèques dans l’API.
+Pour savoir comment gérer les bibliothèques dans lʼAPI, consultez le [guide du point dʼentrée des bibliothèques](./endpoints/libraries.md).
 
 ## Versions
 
-Une bibliothèque de balises est compilée dans une version afin d’être affectée à un environnement à des fins de test et de déploiement. Le contenu d’une version varie en fonction des ressources incluses dans la bibliothèque, de la configuration de l’environnement auquel elle est affectée et de la plateforme de la propriété à laquelle elle appartient.
+Une bibliothèque de balises est compilée dans une version afin dʼêtre affectée à un environnement à des fins de test et de déploiement. Le contenu dʼune version varie en fonction des ressources incluses dans la bibliothèque, de la configuration de lʼenvironnement auquel elle est affectée et de la plateforme de la propriété à laquelle elle appartient.
 
-Consultez le [guide du point d’entrée des versions](./endpoints/builds.md) pour savoir comment gérer les versions dans l’API.
+Consultez le [guide du point dʼentrée des versions](./endpoints/builds.md) pour savoir comment gérer les versions dans lʼAPI.
 
 ## Environnements
 
-Un environnement indique l’hôte spécifique sur lequel une version peut être déployée et si cette version doit être déployée sous la forme d’un ensemble de fichiers ou compressée dans un format d’archive. Dans l’API Reactor, les environnements sont distincts des hôtes eux-mêmes, lesquels sont gérés par le point d’entrée `/hosts`.
+Un environnement indique lʼhôte spécifique dans lequel une version peut être déployée, et si la version doit être déployée sous la forme dʼun ensemble de fichiers ou compressée dans un format dʼarchive. Dans lʼAPI Reactor, les environnements sont distincts des hôtes eux-mêmes, qui sont gérés par le point dʼentrée `/hosts`.
 
-Consultez le [guide du point d’entrée des versions](./endpoints/builds.md) pour savoir comment gérer les versions dans l’API.
+Consultez le [guide du point dʼentrée des versions](./endpoints/builds.md) pour savoir comment gérer les versions dans lʼAPI.
 
 ## Hôtes
 
-Un hôte représente une destination hébergée dans laquelle une version de bibliothèque peut être diffusée et finalement déployée. Les hôtes peuvent être des serveurs Akamai ou SFTP.
+Un hôte représente une destination hébergée dans lequel une version de bibliothèque peut être diffusée et finalement déployée. Les hôtes peuvent être des serveurs Akamai ou SFTP.
 
-Consultez le [guide du point d’entrée des hôtes](./endpoints/hosts.md) pour savoir comment gérer les hôtes dans l’API.
+Pour savoir comment gérer les hôtes dans lʼAPI, consultez le [guide du point dʼentrée des hôtes](./endpoints/hosts.md).
 
-## Configurations des applications
+## Configurations d’application
 
-Les configurations d’application permettent de stocker et de récupérer les informations d’identification en vue d’une utilisation ultérieure. Consultez le [guide du point d’entrée des configurations d’application](./endpoints/app-configurations.md) pour savoir comment gérer les configurations d’application dans l’API.
+Les configurations dʼapplication permettent de stocker et de récupérer les informations dʼidentification en vue dʼune utilisation ultérieure. Pour savoir comment gérer les configurations dʼapplication dans lʼAPI, consultez le [guide du point dʼentrée des configurations dʼapplication](./endpoints/app-configurations.md).
 
 ## Événements d’audit
 
-Un événement d’audit correspond à l’enregistrement d’une modification spécifique apportée à une autre ressource de balise, généré au moment de la modification. Il s’agit d’événements système auxquels il est possible de s’abonner à l’aide d’une fonction de rappel.
+Un événement dʼaudit est un enregistrement dʼune modification spécifique apportée à une autre ressource de balise, générée au moment de la modification. Il sʼagit dʼévénements système auxquels vous pouvez souscrire à lʼaide dʼune fonction de rappel.
 
-Consultez le [guide du point d’entrée des événements d’audit](./endpoints/audit-events.md) pour savoir comment gérer les événements d’audit dans l’API.
+Pour savoir comment gérer les événements dʼaudit dans lʼAPI, reportez-vous au [guide du point dʼentrée des événements dʼaudit](./endpoints/audit-events.md).
 
 ## Rappels
 
-Un rappel est un message que Platform envoie à un hôte d’URL chaque fois qu’un nouvel événement d’audit est généré. Consultez le [guide du point d’entrée des rappels](./endpoints/callbacks.md) pour savoir comment gérer les rappels dans l’API.
+Un rappel est un message que Platform envoie à un hôte dʼURL chaque fois quʼun nouvel événement dʼaudit est généré. Pour savoir comment gérer les rappels dans lʼAPI, consultez le [guide du point dʼentrée des rappels](./endpoints/callbacks.md).
 
 ## Notes
 
-Les notes sont des annotations textuelles que vous pouvez ajouter à certaines ressources de balise, telles que les éléments de données, les extensions, les bibliothèques, les propriétés, les règles et les composants de règle. Consultez le [guide du point d’entrée des notes](./endpoints/notes.md) pour savoir comment gérer les notes dans l’API.
+Les notes sont des annotations textuelles que vous pouvez ajouter à certaines ressources de balise, telles que les éléments de données, les extensions, les bibliothèques, les propriétés, les règles et les composants de règle. Pour savoir comment gérer les notes dans lʼAPI, consultez le [guide du point dʼentrée des notes](./endpoints/notes.md).
 
-## Profil
+## Profile
 
-Un profil contient toutes les informations relatives à l’utilisateur connecté, y compris l’ensemble des organisations d’Adobe auxquelles il appartient, les profils de produit auxquels il appartient dans chaque organisation ainsi que les droits dont il dispose pour chaque profil de produit.
+Un profil contient toutes les informations sur lʼutilisateur connecté, y compris toutes les organisations Adobe auxquelles il appartient, les profils de produits auxquels il appartient dans chaque organisation et les droits dont il dispose pour chaque profil de produit.
 
-Consultez le [guide du point d’entrée des profils](./endpoints/profile.md) pour savoir comment afficher ces informations dans l’API.
+Pour savoir comment afficher ces informations dans lʼAPI, consultez le [guide du point dʼentrée de profil](./endpoints/profile.md).
 
 ## Recherche
 
-Le point d’entrée `/search` permet de trouver des ressources correspondant à un critère souhaité, exprimé sous la forme d’une requête. Toutes les requêtes sont incluses dans votre société actuelle et les propriétés accessibles. Consultez le [guide du point d’entrée de recherche](./endpoints/search.md) pour découvrir comment utiliser cette fonctionnalité.
+Le point dʼentrée `/search` permet de trouver des ressources correspondant à un critère donné, exprimé sous la forme dʼune requête. Toutes les requêtes sont limitées à votre société actuelle et aux propriétés accessibles. Pour savoir comment utiliser cette fonctionnalité, consultez le [guide du point dʼentrée de recherche](./endpoints/search.md).
 
 ## Étapes suivantes
 
-Pour commencer à effectuer des appels à l’aide de l’API Schema Registry, consultez le [guide de prise en main](./getting-started.md), puis sélectionnez l’un des guides de point d’entrée pour savoir comment utiliser des points d’entrée spécifiques.
+Pour commencer à effectuer des appels à lʼaide de lʼAPI Schema Registry, consultez le [guide de prise en main](./getting-started.md), puis sélectionnez lʼun des guides des points dʼentrée pour savoir comment utiliser des points dʼentrée spécifiques.

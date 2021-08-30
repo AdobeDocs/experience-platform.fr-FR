@@ -1,24 +1,24 @@
 ---
-title: Point de terminaison des événements d’audit
-description: Découvrez comment effectuer des appels au point de terminaison /audit_events dans l’API Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Point d’entrée des événements d’audit
+description: Découvrez comment effectuer des appels au point d’entrée /audit_events dans l’API Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 5%
+source-wordcount: '262'
+ht-degree: 98%
 
 ---
 
-# Point de terminaison des événements d’audit
+# Point d’entrée des événements d’audit
 
 >[!WARNING]
 >
->L’implémentation du point de terminaison `/audit_events` est en flux continu à mesure que des fonctionnalités sont ajoutées, supprimées et retravaillées.
+>L’implémentation du point d’entrée `/audit_events` est en flux continu à mesure que des fonctionnalités sont ajoutées, supprimées et retravaillées.
 
-Un événement d’audit est un enregistrement d’une modification spécifique apportée à une autre ressource de l’API Reactor, généré au moment de la modification. Il s’agit d’événements système auxquels vous pouvez vous abonner en utilisant un [rappel](./callbacks.md). Le point de terminaison `/audit_events` de l’API Reactor vous permet de gérer par programmation les événements de contrôle dans votre application d’expérience.
+Un événement d’audit est un enregistrement d’une modification spécifique apportée à une autre ressource de l’API Reactor; il est généré au moment de la modification. Il s’agit d’événements système auxquels vous pouvez vous abonner en utilisant un [rappel](./callbacks.md). Le point d&#39;entrée `/audit_events` de l’API Reactor vous permet de gérer par programmation les événements d&#39;audit dans votre application d’expérience.
 
 Les événements d’audit sont structurés sous la forme `{RESOURCE_TYPE}.{EVENT}`, par exemple `build.created` ou `rule.updated`.
 
-Le type de ressource peut être l’un des suivants :
+Le type de ressource peut être l’un des types suivants :
 
 * `property`
 * `extension`
@@ -38,11 +38,11 @@ Les événements suivants sont pris en charge pour chaque type de ressource :
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la marche à suivre pour s’authentifier auprès de l’API.
 
-## Récupération d’une liste d’événements de contrôle {#list}
+## Récupération d’une liste d’événements d’audit {#list}
 
-Vous pouvez récupérer une liste d’événements de contrôle pour toutes les propriétés détenues par votre organisation en envoyant une requête de GET au point de terminaison `/audit_events` .
+Vous pouvez récupérer une liste d’événements d’audit pour toutes les propriétés détenues par votre organisation en envoyant une requête GET au point d’entrée `/audit_events`.
 
 **Format d’API**
 
@@ -64,7 +64,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste d’événements de contrôle. L’exemple de réponse ci-dessous a été tronqué pour l’espace.
+Une réponse réussie renvoie une liste d’événements d’audit. La réponse ci-dessous a été réduite pour gagner de l’espace.
 
 ```json
 {
@@ -159,9 +159,9 @@ Une réponse réussie renvoie une liste d’événements de contrôle. L’exemp
 
 ## Recherche d’un événement d’audit {#lookup}
 
-Vous pouvez rechercher un événement d’audit en fournissant son identifiant dans le chemin d’accès d’une requête de GET.
+Vous pouvez rechercher un événement d’audit en fournissant son identifiant dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /audit_events/{AUDIT_EVENT_ID}
@@ -169,7 +169,7 @@ GET /audit_events/{AUDIT_EVENT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `AUDIT_EVENT_ID` | `id` de l’événement d’audit que vous souhaitez rechercher. |
+| `AUDIT_EVENT_ID` | Le `id` de l’événement d’audit que vous souhaitez rechercher. |
 
 {style=&quot;table-layout:auto&quot;}
 

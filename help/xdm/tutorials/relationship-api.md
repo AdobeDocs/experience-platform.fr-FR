@@ -6,10 +6,10 @@ description: Ce document fournit un tutoriel indiquant comment définir une rela
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1369'
-ht-degree: 42%
+source-wordcount: '1365'
+ht-degree: 41%
 
 ---
 
@@ -19,7 +19,7 @@ Comprendre les relations entre vos clients et leurs interactions avec votre marq
 
 Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et de [!DNL Real-time Customer Profile], cela ne s’applique qu’aux schémas qui partagent la même classe. Pour établir une relation entre deux schémas appartenant à des classes différentes, un champ de relation dédié doit être ajouté à un schéma source, qui référence l’identité d’un schéma de destination.
 
-Ce document fournit un tutoriel pour la définition d’une relation un-à-un entre deux schémas définis par votre organisation à l’aide de [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Ce document fournit un tutoriel pour la définition d’une relation un-à-un entre deux schémas définis par votre organisation à l’aide de [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## Prise en main
 
@@ -238,7 +238,7 @@ Enregistrez l’URI `$id` du groupe de champs à utiliser dans l’étape suivan
 
 Une fois que vous avez créé un groupe de champs, vous pouvez l’ajouter au schéma source en envoyant une requête de PATCH au point de terminaison `/tenant/schemas/{SCHEMA_ID}` .
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /tenant/schemas/{SCHEMA_ID}

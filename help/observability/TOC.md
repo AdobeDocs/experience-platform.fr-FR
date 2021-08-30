@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Guide des Insights d’observabilité
 user-guide-description: Surveillez les activités dans Platform grâce aux mesures statistiques et aux notifications d’événements.
-feature: Gestion des données
-source-git-commit: 905d364796911f35111d42c46c91744bc18304f2
+feature: Data Management
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 95%
+source-wordcount: '54'
+ht-degree: 85%
 
 ---
 
@@ -23,5 +23,5 @@ ht-degree: 95%
    * [Règles d’alerte standard](./alerts/rules.md)
    * [Guide de l’interface utilisateur du ](./alerts/ui.md)
    * [Abonnement aux notifications d’événement I/O](./alerts/subscribe.md)
-* [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)
+* [Référence d’API](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
 * [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)

@@ -5,16 +5,16 @@ title: 'Gestion des étiquettes dʼutilisation des données pour les jeux de don
 topic-legacy: developer guide
 description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '961'
-ht-degree: 100%
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
+workflow-type: tm+mt
+source-wordcount: '957'
+ht-degree: 99%
 
 ---
 
 # Gestion des étiquettes dʼutilisation des données pour les jeux de données à lʼaide dʼAPI
 
-[[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI [!DNL Catalog Service] qui gère les métadonnées du jeu de données.
+[[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI [!DNL Catalog Service] qui gère les métadonnées du jeu de données.
 
 Ce document explique la gestion des étiquettes pour les jeux de données et les champs à lʼaide de [!DNL Dataset Service API]. Pour obtenir des instructions sur la gestion des étiquettes dʼutilisation des données elles-mêmes à lʼaide dʼappels API, consultez le [guide de point d’entrée des étiquettes](../api/labels.md) pour [!DNL Policy Service API].
 

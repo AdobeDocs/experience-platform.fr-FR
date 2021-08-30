@@ -5,10 +5,10 @@ title: Développement d’intégrations ETL pour Adobe Experience Platform
 topic-legacy: overview
 description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et l’ingestion de données dans Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '4083'
-ht-degree: 98%
+source-wordcount: '4075'
+ht-degree: 97%
 
 ---
 
@@ -21,7 +21,7 @@ Le guide d’intégration ETL décrit les étapes générales de la création de
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Authentification et autorisation pour les API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis)
-- [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+- [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 Ce guide comprend également des exemples d’appels d’API à utiliser lors de la conception d’un connecteur ETL, avec des liens vers la documentation détaillant chaque service [!DNL Experience Platform] et l’utilisation de son API.
 
@@ -257,7 +257,7 @@ Tout comme les étapes de la [visualisation du schéma du jeu de données](#view
 
 >[!NOTE]
 >
->Lorsque le champ « schema » est vide ou absent, le connecteur devrait lire le champ « schemaRef » et utiliser l’[API Schema Registry](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) comme illustré dans les étapes précédentes pour [visualiser un schéma de jeu de données](#view-dataset-schema).
+>Lorsque le champ « schema » est vide ou absent, le connecteur devrait lire le champ « schemaRef » et utiliser l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/) comme illustré dans les étapes précédentes pour [visualiser un schéma de jeu de données](#view-dataset-schema).
 
 ### La propriété « observableSchema »
 

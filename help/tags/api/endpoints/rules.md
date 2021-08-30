@@ -1,32 +1,32 @@
 ---
-title: Point de terminaison des règles
-description: Découvrez comment effectuer des appels au point d’entrée /rules dans l’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Point d’entrée des règles
+description: Découvrez comment effectuer des appels au point d’entrée /règles dans l’API Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 10%
+source-wordcount: '933'
+ht-degree: 99%
 
 ---
 
-# Point de terminaison des règles
+# Point d’entrée des règles
 
-Dans le contexte des balises de collecte de données, les règles contrôlent le comportement des ressources dans une bibliothèque déployée. Une règle est composée d’un ou de plusieurs [composants de règle](./rule-components.md), existe pour lier les composants de règle de manière logique. Le point de terminaison `/rules` de l’API Reactor vous permet de gérer les règles de balise par programmation.
+Dans le contexte des balises de collecte de données, les règles contrôlent le comportement des ressources au sein d’une bibliothèque déployée. Une règle est composée d’un ou de plusieurs [composants de règle](./rule-components.md), existe pour lier les composants de règle de manière logique. Le point d’entrée `/rules` de l’API Reactor vous permet de gérer les règles de balises par programmation.
 
 >[!NOTE]
 >
 >Ce document explique comment gérer les règles dans l’API Reactor. Pour plus d’informations sur l’interaction avec les règles dans l’interface utilisateur de la collecte de données, reportez-vous au [guide de l’interface utilisateur](../../ui/managing-resources/rules.md).
 
-Une règle appartient exactement à une [propriété](./properties.md). Une propriété peut comporter de nombreuses règles.
+Une règle appartient à une seule [propriété](./properties.md). Une propriété peut comporter de nombreuses règles.
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la marche à suivre pour s’authentifier auprès de l’API.
 
-## Récupération d’une liste de règles {#list}
+## Récupération dʼune liste de règles {#list}
 
-Vous pouvez récupérer une liste de règles appartenant à une propriété en incluant en effectuant une requête de GET.
+Vous pouvez récupérer une liste de règles appartenant à une propriété en réalisant une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /properties/{PROPERTY_ID}/rules
@@ -40,7 +40,7 @@ GET /properties/{PROPERTY_ID}/rules
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les règles répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md) .
+>À lʼaide des paramètres de requête, les règles répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -139,15 +139,15 @@ Une réponse réussie renvoie une liste de règles pour la propriété spécifi�
 }
 ```
 
-## Rechercher une règle {#lookup}
+## Recherche d’une règle {#lookup}
 
-Vous pouvez rechercher une règle en fournissant son identifiant dans le chemin d’accès d’une requête de GET.
+Vous pouvez rechercher une règle en fournissant son identifiant dans le chemin d’accès d’une requête GET.
 
 >[!NOTE]
 >
->Lorsque des règles sont supprimées, elles sont marquées comme supprimées, mais ne sont pas réellement supprimées du système. Il est donc possible de récupérer une règle supprimée. Les règles supprimées peuvent être identifiées par la présence d’une propriété `meta.deleted_at`.
+>Lorsque des règles sont supprimées, elles sont marquées comme supprimées, mais ne sont pas réellement supprimées du système. Il est donc possible de récupérer une règle supprimée. Les règles qui ont été supprimées peuvent être identifiées par la présence d’une propriété `meta.deleted_at`.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /rules/{RULE_ID}
@@ -247,9 +247,9 @@ Une réponse réussie renvoie les détails de la règle.
 
 ## Création d’une règle {#create}
 
-Vous pouvez créer une règle en effectuant une requête de POST.
+Vous pouvez créer une règle en effectuant une requête POST.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /properties/{PROPERTY_ID}/rules
@@ -283,9 +283,9 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes.name` | **(Obligatoire)** Nom lisible de la règle. |
-| `attributes.enabled` | Valeur boolean indiquant si la règle est activée. |
-| `type` | Type de ressource en cours de création. Pour ce point de terminaison, la valeur doit être `rules`. |
+| `attributes.name` | **(Obligatoire)** Nom de la règle, lisible par l’utilisateur. |
+| `attributes.enabled` | Valeur booléenne indiquant si la règle est activée. |
+| `type` | Le type de ressource en cours de création. Pour ce point d&#39;entrée, la valeur doit être `rules`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -365,13 +365,13 @@ Une réponse réussie renvoie les détails de la règle nouvellement créée.
 
 ## Ajout d’événements, de conditions et d’actions à une règle {#components}
 
-Une fois que vous avez [créé une règle](#create), vous pouvez commencer à développer sa logique en ajoutant des événements, des conditions et des actions (collectivement appelés composants de règle). Reportez-vous à la section [Création d’un composant de règle](./rule-components.md#create) du guide de point de terminaison `/rule_components` pour savoir comment le faire dans l’API Reactor.
+Une fois que vous avez [créé une règle](#create), vous pouvez commencer à développer sa logique en ajoutant des événements, des conditions et des actions (collectivement appelés composants de règle). Reportez-vous à la section [Création d’un composant de règle](./rule-components.md#create) du guide de point d’entrée `/rule_components` pour savoir comment le faire dans l’API Reactor.
 
 ## Mettre à jour une règle {#update}
 
-Vous pouvez mettre à jour les attributs d’une règle en incluant son identifiant dans le chemin d’accès d’une requête de PATCH.
+Vous pouvez mettre à jour les attributs d’une règle en incluant son identifiant dans le chemin d’accès d’une requête PATCH.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /rules/{RULE_ID}
@@ -408,8 +408,8 @@ curl -X PATCH \
 | Propriété | Description |
 | --- | --- |
 | `attributes` | Objet dont les règles représentent les attributs à mettre à jour pour la règle. Les attributs suivants peuvent être mis à jour pour une règle : <ul><li>`name`</li><li>`enabled`</li></ul> |
-| `id` | `id` de la règle que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{RULE_ID}` fournie dans le chemin de requête. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `rules`. |
+| `id` | `id` de la règle que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{RULE_ID}` fournie dans le chemin d’accès de la requête. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `rules`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -489,9 +489,9 @@ Une réponse réussie renvoie les détails de la règle mise à jour.
 
 ## Supprimer une règle
 
-Vous pouvez supprimer une règle en incluant son identifiant dans le chemin d’accès d’une requête de DELETE.
+Vous pouvez supprimer une règle en incluant son identifiant dans le chemin dʼaccès dʼune requête DELETE.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /rules/{RULE_ID}
@@ -519,19 +519,19 @@ Une réponse réussie renvoie un état HTTP 204 (No Content) sans corps de répo
 
 ## Gestion des notes d’une règle {#notes}
 
-Les règles sont des ressources &quot;remarquables&quot;, ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource. Pour plus d’informations sur la gestion des notes pour les règles et d’autres ressources compatibles, consultez le [guide de point de fin de notes](./notes.md) .
+Les règles sont des ressources « remarquables », ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource. Pour plus d’informations sur la gestion des notes pour les règles et d’autres ressources compatibles, consultez le [guide de point d’entrée de notes](./notes.md).
 
-## Récupération des ressources associées pour une règle {#related}
+## Récupération des ressources associées à une règle {#related}
 
-Les appels suivants montrent comment récupérer les ressources associées pour une règle. Lorsque [recherche une règle](#lookup), ces relations sont répertoriées sous la règle `relationships`.
+Les appels suivants montrent comment récupérer les ressources associées à une règle. Lors de la [recherche d’une règle](#lookup), ces relations sont répertoriées sous la règle `relationships`.
 
-Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md) .
+Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md).
 
-### Liste des bibliothèques associées pour une règle {#libraries}
+### Liste des bibliothèques associées à une règle {#libraries}
 
-Vous pouvez répertorier les bibliothèques qui utilisent une règle spécifique en ajoutant `/libraries` au chemin d’une requête de recherche.
+Vous pouvez répertorier les bibliothèques qui utilisent une règle spécifique en ajoutant `/libraries` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /rules/{RULE_ID}/libraries
@@ -649,11 +649,11 @@ Une réponse réussie renvoie une liste de bibliothèques qui utilisent la règl
 }
 ```
 
-### Liste des révisions associées pour une règle {#revisions}
+### Liste des révisions associées à une règle {#revisions}
 
 Vous pouvez répertorier les révisions d’une règle en ajoutant `/revisions` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /rules/{RULE_ID}/revisions
@@ -827,11 +827,11 @@ Une réponse réussie renvoie une liste de révisions qui utilisent la règle sp
 }
 ```
 
-### Rechercher l’origine associée d’une règle {#origin}
+### Rechercher l’origine associée à une règle {#origin}
 
-Vous pouvez rechercher l’origine (version précédente) d’une règle en ajoutant `/origin` au chemin d’une requête de recherche.
+Vous pouvez rechercher l’origine (version précédente) d’une règle en ajoutant `/origin` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /rules/{RULE_ID}/origin
@@ -929,11 +929,11 @@ Une réponse réussie renvoie les détails de l’extension de la règle spécif
 }
 ```
 
-### Recherche de la propriété associée pour une règle {#property}
+### Recherche de la propriété associée à une règle {#property}
 
-Vous pouvez rechercher la propriété propriétaire d’une règle en ajoutant `/property` au chemin d’accès d’une requête de recherche.
+Vous pouvez rechercher la propriété détentrice d’une règle en ajoutant `/property` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /rules/{RULE_ID}/property

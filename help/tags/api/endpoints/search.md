@@ -1,18 +1,18 @@
 ---
-title: Point de terminaison de recherche
-description: Découvrez comment effectuer des appels vers le point de terminaison /search dans l’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Point dʼentrée de recherche
+description: Découvrez comment effectuer des appels vers le point dʼentrée /recherche dans lʼAPI Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 2%
+source-wordcount: '658'
+ht-degree: 97%
 
 ---
 
-# Point de terminaison de recherche
+# Point dʼentrée de recherche
 
-Le point d’entrée `/search` de l’API Reactor permet de trouver des ressources correspondant aux critères souhaités, exprimés sous forme de requête.
+Le point dʼentrée `/search` de lʼAPI Reactor permet de trouver des ressources correspondant aux critères souhaités, exprimés sous forme de requête.
 
-Les types de ressources d’API suivants peuvent faire l’objet de recherches, en utilisant la même structure de données que les documents basés sur les ressources renvoyés dans l’API :
+Les types de ressources API suivants peuvent faire lʼobjet de recherches, au moyen de la même structure de données que les documents basés sur les ressources renvoyés par lʼAPI :
 
 * `audit_events`
 * `builds`
@@ -27,21 +27,21 @@ Les types de ressources d’API suivants peuvent faire l’objet de recherches, 
 * `rule_components`
 * `rules`
 
-Toutes les requêtes sont incluses dans la portée de votre société actuelle et les propriétés accessibles.
+Toutes les requêtes sont limitées à votre entreprise actuelle et aux propriétés accessibles.
 
 >[!IMPORTANT]
 >
 >La fonctionnalité de recherche comporte les avertissements et exceptions suivants :
->* meta n’est pas consultable et n’est pas renvoyé dans les résultats de recherche.
->* Champs de schéma pour les délégués de package d’extension (actions, conditions, etc.) peuvent faire l’objet de recherches sous forme de texte, et non en tant que structure de données imbriquées.
->* Actuellement, les requêtes de plage ne prennent en charge que les entiers.
+>* meta ne peut faire lʼobjet de recherches et nʼest pas renvoyé dans les résultats de recherche.
+>* Les champs de schéma pour les délégués de packages dʼextension (actions, conditions, etc.) peuvent faire lʼobjet de recherches sous forme de texte, et non en tant que structure de données imbriquées.
+>* Actuellement, les requêtes de plage ne prennent en charge que les nombres entiers.
 
 
-Pour plus d’informations sur l’utilisation de cette fonctionnalité, consultez le [guide de recherche](../guides/search.md).
+Pour plus dʼinformations détaillées sur lʼutilisation de cette fonctionnalité, consultez le [guide de recherche](../guides/search.md).
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la marche à suivre pour s&#39;authentifier auprès de l&#39;API.
 
 ## Exécution d’une recherche {#perform}
 
@@ -93,17 +93,17 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `from` | Le nombre de résultats à décaler de la réponse. |
-| `size` | Nombre maximal de résultats à renvoyer. Les résultats ne doivent pas dépasser 100 éléments. |
-| `query` | Objet représentant la requête de recherche. Pour chaque propriété de cet objet, la clé doit représenter un chemin d’accès au champ à partir duquel effectuer la requête, et la valeur doit être un objet dont les sous-propriétés déterminent ce pour quoi effectuer la requête.<br><br>Pour chaque chemin d’accès au champ, vous pouvez utiliser les sous-propriétés suivantes :<ul><li>`exists`: Renvoie &quot;true&quot; si le champ existe dans la ressource.</li><li>`value`: Renvoie true si la valeur du champ correspond à la valeur de cette propriété.</li><li>`value_operator`: Logique booléenne utilisée pour déterminer le traitement d’une  `value` requête. Les valeurs autorisées sont `AND` et `OR`. Lorsqu’elle est exclue, la logique `AND` est supposée. Voir la section [logique de l’opérateur de valeur](#value-operator) pour plus d’informations.</li><li>`range` Renvoie &quot;true&quot; si la valeur du champ correspond à une plage numérique spécifique. La plage elle-même est déterminée par les sous-propriétés suivantes :<ul><li>`gt`: Supérieur à la valeur fournie, non incluse.</li><li>`gte`: Supérieur ou égal à la valeur fournie.</li><li>`lt`: Inférieur à la valeur fournie, non incluse.</li><li>`lte`: Inférieur ou égal à la valeur fournie.</li></ul></li></ul> |
-| `sort` | Tableau d’objets indiquant l’ordre dans lequel trier les résultats. Chaque objet doit contenir une seule propriété : la clé représente le chemin d’accès au champ à trier, et la valeur représente l’ordre de tri (`asc` pour l’ordre croissant, `desc` pour l’ordre décroissant). |
+| `from` | Nombre de résultats à décaler de la réponse. |
+| `size` | Nombre maximal de résultats à renvoyer. Les résultats sont limités à 100 éléments. |
+| `query` | Objet représentant la requête. Pour chaque propriété au sein de cet objet, la clé doit représenter un chemin du champ sur lequel portera la requête, et la valeur doit être un objet dont les sous-propriétés déterminent le contenu de la requête.<br><br>Pour chaque chemin du champ, vous pouvez utiliser les sous-propriétés suivantes :<ul><li>`exists` : renvoie « true » si le champ existe dans la ressource.</li><li>`value` : renvoie « true » si la valeur du champ correspond à la valeur de cette propriété.</li><li>`value_operator` : logique booléenne utilisée pour déterminer le traitement dʼune requête `value`. Les valeurs autorisées sont `AND` et `OR`. Lorsquʼelle est exclue, la logique `AND` est supposée. Pour plus dʼinformations, voir la section [Logique de lʼopérateur de valeur](#value-operator).</li><li>`range` Renvoie « true » si la valeur du champ se situe dans une plage numérique spécifique. La plage elle-même est déterminée par les sous-propriétés suivantes :<ul><li>`gt` : supérieure à la valeur fournie, non incluse.</li><li>`gte` : supérieure ou égale à la valeur fournie.</li><li>`lt` : inférieure à la valeur fournie, non incluse.</li><li>`lte` : inférieure ou égale à la valeur fournie.</li></ul></li></ul> |
+| `sort` | Tableau dʼobjets indiquant lʼordre dans lequel trier les résultats. Chaque objet doit contenir une seule propriété : la clé représente le chemin du champ à trier et la valeur lʼordre de tri (`asc` pour lʼordre croissant et `desc` pour lʼordre décroissant). |
 | `resource_types` | Tableau de chaînes indiquant les types de ressources spécifiques à rechercher. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-Une réponse réussie renvoie une liste de ressources correspondantes pour la requête. Pour plus d’informations sur la manière dont l’API détermine les correspondances pour des valeurs spécifiques, reportez-vous à la section de l’annexe sur les [conventions correspondantes](#conventions).
+Une réponse réussie renvoie une liste de ressources correspondant à la requête. Pour plus dʼinformations sur la manière dont lʼAPI détermine les correspondances pour des valeurs spécifiques, reportez-vous à la section de lʼannexe sur les [conventions de correspondance](#conventions).
 
 ```json
 {
@@ -210,37 +210,37 @@ Une réponse réussie renvoie une liste de ressources correspondantes pour la re
 
 ## Annexe
 
-La section suivante contient des informations supplémentaires sur l’utilisation du point de terminaison `/search`.
+La section suivante contient des informations supplémentaires sur lʼutilisation du point dʼentrée `/search`.
 
-### Logique de l’opérateur de valeur {#value-operator}
+### Logique de lʼopérateur de valeur {#value-operator}
 
-Les valeurs de requête de recherche sont fractionnées en termes pour correspondre aux documents indexés. Entre chaque terme, une relation `AND` est supposée.
+Les valeurs de requête sont séparées en termes afin dʼêtre comparées aux documents indexés. Entre chaque terme, une relation `AND` est supposée.
 
-Lorsque vous utilisez `AND` comme `value_operator`, une valeur de requête `My Rule Holiday Sale` est interprétée comme des documents avec un champ contenant `My AND Rule AND Holiday AND Sale`.
+Lorsque vous utilisez `AND` comme `value_operator`, une valeur de requête `My Rule Holiday Sale` est interprétée comme des documents dont le champ contient `My AND Rule AND Holiday AND Sale`.
 
-Lorsque vous utilisez `OR` comme `value_operator`, une valeur de requête `My Rule Holiday Sale` est interprétée comme des documents avec un champ contenant `My OR Rule OR Holiday OR Sale`. Plus la correspondance est élevée, plus `match_score` est élevé. En raison de la nature de la correspondance partielle des termes, lorsque rien ne correspond exactement à la valeur souhaitée, vous pouvez obtenir un jeu de résultats pour lequel la valeur n’est trouvée qu’à un niveau très élémentaire, comme quelques caractères de texte.
+Lorsque vous utilisez `OR` comme `value_operator`, une valeur de requête `My Rule Holiday Sale` est interprétée comme des documents dont le champ contient `My OR Rule OR Holiday OR Sale`. Plus le nombre de termes correspondants est élevé, plus le `match_score` est élevé. En raison de la nature de la correspondance partielle des termes, lorsquʼaucune valeur ne correspond exactement à celle souhaitée, vous pouvez obtenir un jeu de résultats pour lequel la valeur ne correspond quʼà un niveau très élémentaire, comme quelques caractères de texte.
 
-### Correspondance de conventions {#conventions}
+### Conventions de correspondance {#conventions}
 
-La recherche consiste à répondre à la pertinence d’un document par rapport à une requête fournie. La manière dont les données du document sont analysées et indexées affecte directement cette situation.
+La recherche consiste à déterminer dans quelle mesure un document est pertinent par rapport à une requête fournie. La manière dont les données des documents sont analysées et indexées a un impact direct sur ce processus.
 
-Le tableau suivant ventile les conventions de correspondance pour les types de champ courants :
+Le tableau suivant détaille les conventions de correspondance pour les types de champs les plus courants :
 
 | Type de champ | Conventions de correspondance |
 | --- | --- |
-| Chaînes | Texte avec analyse de terme partielle, non-respect de la casse |
-| Valeurs d’énumération | Correspondance exacte, respect de la casse |
-| Entiers | Correspondance exacte |
-| Flottes | Correspondance exacte |
-| Horodatages | Correspondance exacte (format DateTime ) |
-| Noms d’affichage | Texte avec analyse de terme partielle, non-respect de la casse |
+| Chaînes | Texte avec une analyse partielle des termes, non sensible à la casse |
+| Valeurs Enum | Correspondance exacte, sensible à la casse |
+| Nombres entiers | Correspondance exacte |
+| Nombres à virgule flottante | Correspondance exacte |
+| Horodatages | Correspondance exacte (format date et heure) |
+| Noms d’affichage | Texte avec une analyse partielle des termes, non sensible à la casse |
 
-Il existe d’autres conventions pour des champs spécifiques qui apparaissent dans l’API :
+Il existe aussi dʼautres conventions propres à des champs spécifiques qui apparaissent dans lʼAPI :
 
 | Champ | Conventions de correspondance |
 | --- | --- |
-| `id` | Correspondance exacte, respect de la casse |
-| `delegate_descriptor_id` | Correspondance exacte, sensible à la casse, avec des termes fractionnés sur `::` |
-| `name` | Correspondance exacte, respect de la casse |
-| `settings` | Texte avec analyse de terme partielle, non-respect de la casse |
-| `type` | Correspondance exacte, respect de la casse |
+| `id` | Correspondance exacte, sensible à la casse |
+| `delegate_descriptor_id` | Correspondance exacte, sensible à la casse, avec les termes séparés sur `::` |
+| `name` | Correspondance exacte, sensible à la casse |
+| `settings` | Texte avec une analyse partielle des termes, non sensible à la casse |
+| `type` | Correspondance exacte, sensible à la casse |

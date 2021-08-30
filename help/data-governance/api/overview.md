@@ -5,10 +5,10 @@ title: Guide de l’API Policy Service
 topic-legacy: developer guide
 description: L’API Policy Service permet aux développeurs de gérer les libellés et les stratégies d’utilisation des données dans Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '504'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '500'
+ht-degree: 99%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Data Governance] vous permet de gérer les donn�
 
 L’API [!DNL Policy Service] fournit plusieurs points d’entrée vous permettant de gérer par programmation les libellés et les stratégies d’utilisation des données, ainsi que d’évaluer les actions marketing en cas de violation de ces stratégies. Ces points d’entrée sont décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
 
-Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez le document Swagger de l’API [[!DNL Policy Service] ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
+Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez le document Swagger de l’API [[!DNL Policy Service] ](https://www.adobe.io/experience-platform-apis/references/policy-service/).
 
 ## Étiquettes
 

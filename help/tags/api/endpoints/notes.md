@@ -1,26 +1,26 @@
 ---
-title: Point de terminaison Notes
-description: Découvrez comment effectuer des appels au point de terminaison /notes dans l’API Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Point dʼentrée des notes
+description: Découvrez comment effectuer des appels au point dʼentrée /notes dans lʼAPI Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 8%
+source-wordcount: '526'
+ht-degree: 99%
 
 ---
 
-# Point de terminaison Notes
+# Point dʼentrée des notes
 
-Dans l’API Reactor, les notes sont des annotations textuelles que vous pouvez ajouter à certaines ressources. Les notes sont essentiellement des commentaires sur leurs ressources respectives. Le contenu des notes n’a aucun impact sur le comportement des ressources et peut être utilisé dans divers cas d’utilisation, notamment :
+Dans lʼAPI Reactor, les notes sont des annotations textuelles que vous pouvez ajouter à certaines ressources. Les notes sont essentiellement des commentaires sur leurs ressources respectives. Le contenu des notes nʼa aucun impact sur le comportement des ressources et peut être utilisé dans divers cas dʼutilisation, notamment :
 
 * Fournir des informations générales
-* Fonctionnement en tant que listes de tâches
-* Transmission de conseils sur l’utilisation des ressources
-* Donner des instructions à d’autres membres de l’équipe
-* Enregistrement du contexte historique
+* Faire office de listes de tâches
+* Transmettre des conseils sur l’utilisation des ressources
+* Donner des instructions aux autres membres de lʼéquipe
+* Enregistrer le contexte historique
 
-Le point d’entrée `/notes` de l’API Reactor vous permet de gérer ces notes par programmation.
+Le point dʼentrée `/notes` de lʼAPI Reactor vous permet de gérer ces notes par programmation.
 
-Les notes peuvent être appliquées aux ressources suivantes :
+Des notes peuvent être appliquées aux ressources suivantes :
 
 * [Éléments de données](./data-elements.md)
 * [Extensions](./extensions.md)
@@ -29,23 +29,23 @@ Les notes peuvent être appliquées aux ressources suivantes :
 * [Composants de  règle](./rule-components.md)
 * [Règles](./rules.md)
 
-Ces six types de ressources sont communément appelés ressources &quot;remarquables&quot;. Lorsqu’une ressource notable est supprimée, ses notes associées sont également supprimées.
+Ces six types de ressources sont communément appelés ressources « annotables ». Lorsquʼune ressource annotable est supprimée, ses notes associées le sont également.
 
 >[!NOTE]
 >
->Pour les ressources qui peuvent avoir plusieurs révisions, toute note doit être créée sur la révision actuelle (head). Elles ne peuvent pas être jointes à d’autres révisions.
+>Pour les ressources disposant de plusieurs révisions, les notes doivent être créées sur la révision actuelle (head). Elles ne peuvent pas être jointes à dʼautres révisions.
 >
->Toutefois, les notes peuvent toujours être lues à partir des révisions. Dans ce cas, l’API renvoie uniquement les notes qui existaient avant la création de la révision. Elles fournissent un instantané des annotations telles qu’elles étaient lorsque la révision a été coupée. En revanche, la lecture de notes de la révision actuelle (head) renvoie toutes ses notes.
+>Toutefois, les notes peuvent toujours être lues à partir des révisions. Dans de tels cas, lʼAPI renvoie uniquement les notes qui existaient avant la création de la révision. Elles fournissent un instantané des annotations telles quʼelles étaient au moment où la révision a été effectuée. En revanche, la lecture de notes de la révision actuelle (head) renvoie toutes ses notes.
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la manière de sʼauthentifier auprès de lʼAPI.
 
-## Récupération d’une liste de notes {#list}
+## Récupération dʼune liste de notes {#list}
 
-Vous pouvez récupérer une liste de notes pour une ressource en ajoutant `/notes` au chemin d’accès d’une demande de GET pour la ressource en question.
+Vous pouvez récupérer une liste de notes dʼune ressource en ajoutant `/notes` au chemin dʼaccès dʼune requête GET de la ressource en question.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
@@ -53,7 +53,7 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 
 | Paramètre | Description |
 | --- | --- |
-| `RESOURCE_TYPE` | Type de ressource pour lequel vous récupérez des notes. Doit être l’une des valeurs suivantes : <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
+| `RESOURCE_TYPE` | Type de ressource pour lequel vous récupérez des notes. Doit être lʼune des valeurs suivantes : <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | `id` de la ressource spécifique dont vous souhaitez répertorier les notes. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -117,11 +117,11 @@ Une réponse réussie renvoie une liste de notes jointes à la ressource spécif
 }
 ```
 
-## Rechercher une note {#lookup}
+## Recherche dʼune note {#lookup}
 
-Vous pouvez rechercher une note en fournissant son identifiant dans le chemin d’accès d’une demande de GET.
+Vous pouvez rechercher une note en indiquant son identifiant dans le chemin dʼaccès dʼune requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /notes/{NOTE_ID}
@@ -129,7 +129,7 @@ GET /notes/{NOTE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `NOTE_ID` | `id` de la note que vous souhaitez rechercher. |
+| `NOTE_ID` | Champ `id` de la note que vous souhaitez rechercher. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -183,11 +183,11 @@ Une réponse réussie renvoie les détails de la note.
 
 >[!WARNING]
 >
->Avant de créer une nouvelle note, gardez à l’esprit que les notes ne sont pas modifiables et que la seule façon de les supprimer est de supprimer la ressource correspondante.
+>Avant de créer une note, gardez à lʼesprit que les notes ne sont pas modifiables et que la seule façon de les supprimer est de supprimer la ressource correspondante.
 
-Vous pouvez créer une nouvelle note en ajoutant `/notes` au chemin d’accès d’une requête de POST pour la ressource en question.
+Vous pouvez créer une note en ajoutant `/notes` au chemin dʼaccès dʼune requête POST de la ressource en question.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
@@ -195,14 +195,14 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 
 | Paramètre | Description |
 | --- | --- |
-| `RESOURCE_TYPE` | Type de ressource pour lequel vous créez une note. Doit être l’une des valeurs suivantes : <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | `id` de la ressource spécifique pour laquelle vous souhaitez créer une note. |
+| `RESOURCE_TYPE` | Type de ressource pour lequel vous créez une note. Doit être lʼune des valeurs suivantes : <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
+| `RESOURCE_ID` | Champ `id` de la ressource spécifique pour laquelle vous souhaitez créer une note. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante crée une nouvelle note pour une propriété.
+La requête suivante crée une note pour une propriété.
 
 ```shell
 curl -X POST \
@@ -223,14 +223,14 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `type` | **(Obligatoire)** Type de ressource mise à jour. Pour ce point de terminaison, la valeur doit être `notes`. |
+| `type` | **(Obligatoire)** Type de ressource mis à jour. Pour ce point dʼentrée, la valeur doit être `notes`. |
 | `attributes.text` | **(Obligatoire)** Texte qui comprend la note. Chaque note est limitée à 512 caractères Unicode. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle note créée.
+Une réponse réussie renvoie les détails de la note créée.
 
 ```json
 {

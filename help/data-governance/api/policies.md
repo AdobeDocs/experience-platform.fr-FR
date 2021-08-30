@@ -5,10 +5,10 @@ title: Point d’entrée de lʼAPI Policies
 topic-legacy: developer guide
 description: Les stratégies d’utilisation des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données au sein d’Experience Platform. Le point d’entrée « /policies » est utilisé pour tous les appels API liés à lʼaffichage, la création, la mise à jour ou la suppression des stratégies dʼutilisation des données.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '1817'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '1813'
+ht-degree: 99%
 
 ---
 
@@ -18,7 +18,7 @@ Les stratégies d’utilisation des données sont des règles qui décrivent les
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼAPI [[!DNL Policy Service] ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼAPI [[!DNL Policy Service] ](https://www.adobe.io/experience-platform-apis/references/policy-service/). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Récupération dʼune liste de stratégies {#list}
 

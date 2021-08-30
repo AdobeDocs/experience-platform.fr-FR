@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système eCommerce tiers et les ingérer dans Platform à l’aide des connecteurs sources et des API.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1523'
-ht-degree: 20%
+source-wordcount: '1519'
+ht-degree: 19%
 
 ---
 
@@ -132,7 +132,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 Pour que les données source soient utilisées dans [!DNL Platform], un schéma cible doit être créé afin de structurer les données source en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données [!DNL Platform] dans lequel les données source sont contenues. Ce schéma XDM cible étend également la classe XDM [!DNL Individual Profile].
 
-Vous pouvez créer un schéma XDM cible en adressant une requête de POST à l’[API Schema Registry](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Vous pouvez créer un schéma XDM cible en adressant une requête de POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **Format d’API**
 

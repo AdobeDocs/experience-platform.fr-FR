@@ -5,10 +5,10 @@ title: Points de terminaison de l’API d’exportation/importation
 description: Les points de terminaison /export et /import de l’API Schema Registry vous permettent de partager des ressources XDM entre les organisations IMS et les environnements de test.
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 4%
+source-wordcount: '506'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ Toutes les ressources de [!DNL Schema Library] sont contenues dans un environnem
 
 ## Prise en main
 
-Les points de terminaison utilisés dans ce guide font partie de l’[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Les points de terminaison utilisés dans ce guide font partie de l’[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
 
 Les points de terminaison export/import font partie des appels de procédure distants (RPC) pris en charge par [!DNL Schema Registry]. Contrairement aux autres points de terminaison de l’API [!DNL Schema Registry], les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires tels que `Accept` ou `Content-Type` et n’utilisent pas de `CONTAINER_ID`. Ils doivent plutôt utiliser l’espace de noms `/rpc`, comme illustré dans les appels API ci-dessous.
 
@@ -26,7 +26,7 @@ Les points de terminaison export/import font partie des appels de procédure dis
 
 Pour tout schéma, groupe de champs ou type de données existant dans [!DNL Schema Library], vous pouvez générer une payload d’exportation en effectuant une requête GET sur le point de terminaison `/export`, en fournissant l’identifiant de la ressource dans le chemin d’accès.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /rpc/export/{RESOURCE_ID}

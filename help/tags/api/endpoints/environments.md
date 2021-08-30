@@ -1,33 +1,33 @@
 ---
-title: Point d’entrée Environnements
-description: Découvrez comment effectuer des appels au point d’entrée /environnements dans l’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Point d’entrée d’environnements
+description: Découvrez comment effectuer des appels au point d’entrée /environments dans l’API Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 9%
+source-wordcount: '1038'
+ht-degree: 99%
 
 ---
 
-# Point d’entrée Environnements
+# Point d’entrée d’environnements
 
-Lorsqu’une [bibliothèque](./libraries.md) est compilée dans une [build](./builds.md) dans l’API Reactor, le contenu exact de la version dépend des paramètres d’environnement et des ressources inclus dans la bibliothèque. Plus précisément, l’environnement détermine les éléments suivants :
+Lorsqu’une [bibliothèque](./libraries.md) est compilée dans une [version](./builds.md) dans l’API Reactor, le contenu exact de la version dépend des paramètres d’environnement et des ressources inclus dans la bibliothèque. Plus précisément, l’environnement détermine les éléments suivants :
 
-1. **Destination** : L’emplacement où vous souhaitez déployer la version. Cela est contrôlé en sélectionnant un [hôte](./hosts.md) pour l’environnement à utiliser.
-1. **Archive** : Vous pouvez choisir de récupérer la version sous la forme d’un ensemble de fichiers déployable ou de la faire compresser dans un format d’archive. Cela est contrôlé par le paramètre `archive` de l’environnement.
+1. **Destination** : l&#39;endroit où la version sera déployée. Pour cela, sélectionnez un [hôte](./hosts.md) pour l’environnement à utiliser.
+1. **Archive** : vous pouvez choisir de récupérer la version sous la forme d’un ensemble de fichiers déployable ou de la faire compresser dans un format d’archive. Cela est contrôlé par le paramètre `archive` de l’environnement.
 
-Le format de destination et d’archive configuré par l’environnement modifie la manière dont vous référencez la version dans votre application (cette référence étant un [code incorporé](../../ui/publishing/environments.md#embed-code)). Si vous apportez des modifications au format de destination ou de fichier, vous devez effectuer une mise à jour correspondante dans votre application pour utiliser la nouvelle référence.
+Le format de destination et d’archive configuré par l’environnement modifie la manière dont vous référencez la version dans votre application (cette référence étant un [code intégré](../../ui/publishing/environments.md#embed-code)). Si vous apportez des modifications au format de destination ou de fichier, vous devez effectuer une mise à jour correspondante dans votre application pour utiliser la nouvelle référence.
 
-Les environnements sont organisés en trois types (ou scènes), chaque type ayant une limite différente au nombre total que vous pouvez avoir :
+Les environnements sont organisés en trois types (ou étapes), chaque type ayant une limite différente du nombre total que vous pouvez avoir :
 
 | Type d’environnement | Nombre autorisé |
 | --- | --- |
 | Développement | (Aucune limite) |
-| Évaluation | One |
-| Production | One |
+| Évaluation | Un |
+| Production | Un |
 
 {style=&quot;table-layout:auto&quot;}
 
-Ces types d’environnements ont un comportement similaire, mais sont utilisés à différentes étapes du [workflow de publication de balises](../../ui/publishing/publishing-flow.md).
+Ces types d’environnements ont un comportement similaire, mais sont utilisés à différentes étapes du [flux de travaux de publication de balises](../../ui/publishing/publishing-flow.md).
 
 Un environnement appartient exactement à une [propriété](./properties.md).
 
@@ -35,13 +35,13 @@ Pour des informations plus générales sur les environnements, consultez la sect
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la procédure à suivre pour s’authentifier auprès de l’API.
 
-## Récupération d’une liste d’environnements {#list}
+## Récupération dʼune liste dʼenvironnements {#list}
 
-Vous pouvez récupérer une liste d’environnements pour une propriété en incluant l’identifiant de la propriété dans le chemin d’accès d’une requête de GET.
+Vous pouvez récupérer une liste d’environnements pour une propriété en incluant l’identifiant de la propriété dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /properties/{PROPERTY_ID}/environments
@@ -49,13 +49,13 @@ GET /properties/{PROPERTY_ID}/environments
 
 | Paramètre | Description |
 | --- | --- |
-| `PROPERTY_ID` | `id` de la propriété propriétaire des environnements. |
+| `PROPERTY_ID` | Le `id` de la propriété propriétaire des environnements. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les environnements répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md) .
+>À l’aide des paramètres de requête, les environnements répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -161,11 +161,11 @@ Une réponse réussie renvoie une liste d’environnements pour la propriété s
 }
 ```
 
-## Recherche d’un environnement {#lookup}
+## Recherche d&#39;un environnement {#lookup}
 
-Vous pouvez rechercher un environnement en fournissant son identifiant dans le chemin d’accès d’une requête de GET.
+Vous pouvez rechercher un environnement en fournissant son identifiant dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /environments/{ENVIRONMENT_ID}
@@ -173,7 +173,7 @@ GET /environments/{ENVIRONMENT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `ENVIRONMENT_ID` | `id` de l’environnement que vous souhaitez rechercher. |
+| `ENVIRONMENT_ID` | Le `id` de l’environnement que vous voulez rechercher. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -272,9 +272,9 @@ Une réponse réussie renvoie les détails de l’environnement.
 
 ## Création d’un environnement {#create}
 
-Vous pouvez créer un environnement en effectuant une requête de POST.
+Vous pouvez créer un environnement en effectuant une requête POST.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /properties/{PROPERTY_ID}/environments
@@ -282,13 +282,13 @@ POST /properties/{PROPERTY_ID}/environments
 
 | Paramètre | Description |
 | --- | --- |
-| `PROPERTY_ID` | `id` de la [propriété](./properties.md) sous laquelle vous définissez l’environnement. |
+| `PROPERTY_ID` | Le `id` de la [propriété](./properties.md) sous laquelle vous définissez l’environnement. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante crée un environnement pour la propriété spécifiée. L’appel associe également l’environnement à un hôte existant via la propriété `relationships` . Pour plus d’informations, consultez le guide sur les [relations](../guides/relationships.md) .
+La requête suivante crée un environnement pour la propriété spécifiée. L’appel associe également l’environnement à un hôte existant via la propriété `relationships`. Pour plus d&#39;informations, consultez le guide sur les [relations](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -322,12 +322,12 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `attributes.name` | **(Obligatoire)** Nom lisible par l’utilisateur pour l’environnement. |
-| `attributes.archive` | Valeur boolean indiquant si la version qu’elle a créée est au format d’archive. |
+| `attributes.archive` | Valeur booléenne indiquant si la version créée est au format d’archive. |
 | `attributes.archive_passphrase` | Mot de passe de chaîne pouvant être utilisé pour déverrouiller le fichier d’archive. |
 | `attributes.path` | Chemin d’accès à partir de l’URL hôte pour l’environnement. |
-| `attributes.stage` | Etape de l’environnement (développement, évaluation ou production). |
-| `id` | `id` de l’environnement que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{ENVIRONMENT_ID}` fournie dans le chemin de requête. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `environments`. |
+| `attributes.stage` | Étape de l’environnement (développement, évaluation ou production). |
+| `id` | Le `id` de l&#39;environnement que vous voulez mettre à jour. Il doit correspondre à la valeur `{ENVIRONMENT_ID}` fournie dans le chemin de requête. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -414,9 +414,9 @@ Une réponse réussie renvoie les détails de l’environnement nouvellement cr�
 
 ## Mise à jour d’un environnement {#update}
 
-Vous pouvez mettre à jour un environnement en incluant son identifiant dans le chemin d’accès d’une requête de PATCH.
+Vous pouvez mettre à jour un environnement en incluant son identifiant dans le chemin d’accès d’une requête PATCH.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /environments/{ENVIRONMENT_ID}
@@ -424,13 +424,13 @@ PATCH /environments/{ENVIRONMENT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `ENVIRONMENT_ID` | `id` de l’environnement que vous souhaitez mettre à jour. |
+| `ENVIRONMENT_ID` | Le `id` de l&#39;environnement que vous voulez mettre à jour. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante met à jour `name` pour un environnement existant.
+La requête suivante met à jour le `name` pour un environnement existant.
 
 ```shell
 curl -X PATCH \
@@ -452,15 +452,15 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour l’environnement. Les attributs d’environnement suivants peuvent être mis à jour : <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Voir l’exemple d’appel pour [créer un environnement](#create) pour obtenir la liste des attributs et leur cas d’utilisation. |
-| `id` | `id` de l’environnement que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{ENVIRONMENT_ID}` fournie dans le chemin de requête. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `environments`. |
+| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour l’environnement. Les attributs d’environnement suivants peuvent être mis à jour : <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Voir l’exemple d’appel pour [créer un environnement](#create) dans le but d&#39;obtenir la liste des attributs et leur cas d’utilisation. |
+| `id` | Le `id` de l&#39;environnement que vous voulez mettre à jour. Il doit correspondre à la valeur `{ENVIRONMENT_ID}` fournie dans le chemin de requête. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’environnement mis à jour.
+Une réponse réussie renvoie les détails de l&#39;environnement mis à jour.
 
 ```json
 {
@@ -541,9 +541,9 @@ Une réponse réussie renvoie les détails de l’environnement mis à jour.
 
 ## Suppression d’un environnement
 
-Vous pouvez supprimer un environnement en incluant son identifiant dans le chemin d’accès d’une requête de DELETE.
+Vous pouvez supprimer un environnement en incluant son identifiant dans le chemin dʼaccès dʼune requête DELETE.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /environments/{ENVIRONMENT_ID}
@@ -551,7 +551,7 @@ DELETE /environments/{ENVIRONMENT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `ENVIRONMENT_ID` | `id` de l’environnement que vous souhaitez supprimer. |
+| `ENVIRONMENT_ID` | Le `id` de l&#39;environnement que vous souhaitez supprimer. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -571,15 +571,15 @@ Une réponse réussie renvoie un état HTTP 204 (No Content) sans corps de répo
 
 ## Récupération des ressources associées pour un environnement {#related}
 
-Les appels suivants montrent comment récupérer les ressources associées pour un environnement. Lorsque [recherche un environnement](#lookup), ces relations sont répertoriées sous la propriété `relationships`.
+Les appels suivants montrent la marche à suivre pour récupérer les ressources associées pour un environnement. Lorsque vous [recherchez un environnement](#lookup), ces relations sont répertoriées sous la propriété `relationships`.
 
-Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md) .
+Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md).
 
 ### Liste des versions associées pour un environnement {#builds}
 
 Vous pouvez répertorier les versions qui utilisent un environnement en ajoutant `/builds` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /environments/{ENVIRONMENT_ID}/builds
@@ -587,7 +587,7 @@ GET  /environments/{ENVIRONMENT_ID}/builds
 
 | Paramètre | Description |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | `id` de l’environnement dont vous souhaitez répertorier les versions. |
+| `{ENVIRONMENT_ID}` | Le `id` de l’environnement dont vous souhaitez répertorier les versions. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -690,13 +690,13 @@ Une réponse réussie renvoie une liste de versions qui utilisent l’environnem
 
 ### Recherche de l’hôte associé pour un environnement {#host}
 
-Vous pouvez rechercher l’hôte qui utilise un environnement en ajoutant `/host` au chemin d’accès d’une requête de GET.
+Vous pouvez rechercher l’hôte qui utilise un environnement en ajoutant `/host` au chemin d’accès d’une requête GET.
 
 >[!NOTE]
 >
 >Vous pouvez rechercher l’objet de relation hôte lui-même par l’intermédiaire d’un [appel distinct](#host-relationship).
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /environments/{ENVIRONMENT_ID}/host
@@ -761,9 +761,9 @@ Une réponse réussie renvoie les détails de l’hôte qui utilise l’environn
 
 ### Recherche de la bibliothèque associée pour un environnement {#library}
 
-Vous pouvez rechercher la bibliothèque qui utilise un environnement en ajoutant `/library` au chemin d’accès d’une requête de GET.
+Vous pouvez rechercher la bibliothèque qui utilise un environnement en ajoutant `/library` au chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /environments/{ENVIRONMENT_ID}/library
@@ -771,7 +771,7 @@ GET  /environments/{ENVIRONMENT_ID}/library
 
 | Paramètre | Description |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | `id` de l’environnement dont vous souhaitez rechercher la bibliothèque. |
+| `{ENVIRONMENT_ID}` | Le `id` de l’environnement dont vous souhaitez rechercher la bibliothèque. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -876,9 +876,9 @@ Une réponse réussie renvoie les détails de la bibliothèque qui utilise l’e
 
 ### Recherche de la propriété associée pour un environnement {#property}
 
-Vous pouvez rechercher la propriété propriétaire d’un environnement en ajoutant `/property` au chemin d’accès d’une requête de GET.
+Vous pouvez rechercher la propriété propriétaire d’un environnement en ajoutant `/property` au chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /environments/{ENVIRONMENT_ID}/property
@@ -886,7 +886,7 @@ GET  /environments/{ENVIRONMENT_ID}/property
 
 | Paramètre | Description |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | `id` de l’environnement dont vous souhaitez rechercher la propriété. |
+| `{ENVIRONMENT_ID}` | Le `id` de l’environnement dont vous souhaitez rechercher la propriété. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -1,36 +1,36 @@
 ---
-title: Point de terminaison Builder
-description: Découvrez comment effectuer des appels vers le point de terminaison /builds dans l’API Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Point d’entrée de versions
+description: Découvrez comment effectuer des appels vers le point d’entrée /versions dans l’API Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 10%
+source-wordcount: '833'
+ht-degree: 99%
 
 ---
 
-# Point de terminaison Builder
+# Point d’entrée de versions
 
-Les extensions, les règles et les éléments de données sont les blocs de construction des balises dans Adobe Experience Platform. Lorsque vous souhaitez que votre application fasse quelque chose, ces blocs de création sont ajoutés à une [bibliothèque](./libraries.md). Pour déployer une bibliothèque sur votre application d’expérience, celle-ci est compilée dans une version. Le point d’entrée `/builds` de l’API Reactor vous permet de gérer par programmation les versions de votre application d’expérience.
+Les extensions, les règles et les éléments de données sont les blocs de construction de Balises dans Adobe Experience Platform. Lorsque vous souhaitez que votre application fasse quelque chose, ces blocs de construction sont ajoutés à une [bibliothèque](./libraries.md). Pour déployer une bibliothèque sur votre application d’expérience, cette bibliothèque est compilée dans une version. Le point d’entrée `/builds` de l’API Reactor vous permet de gérer par programmation les versions de votre application d’expérience.
 
-Une version est le ou les fichiers chargés dans votre application web et mobile. Le contenu de chaque version varie en fonction des facteurs suivants :
+Une version est constituée du ou des fichiers chargés dans votre application web et mobile. Le contenu de chaque version varie en fonction des facteurs suivants :
 
 * Ressources incluses dans la bibliothèque
-* Configuration de l’ [environnement](./environments.md) dans lequel la bibliothèque est créée.
+* Configuration de l’[environnement](./environments.md) dans lequel la bibliothèque est créée.
 * Plateforme de la [propriété](./properties.md) à laquelle appartient la version.
 
-Une version appartient exactement à une seule bibliothèque. Une bibliothèque peut avoir plusieurs versions.
+Une version appartient exactement à une seule bibliothèque. Une bibliothèque peut posséder plusieurs versions.
 
-Pour plus d’informations sur les versions et leur compatibilité avec le processus de publication des balises, reportez-vous à la [présentation de la publication](../../ui/publishing/overview.md).
+Pour plus d’informations sur les versions et leur compatibilité avec le processus de publication des flux de travaux pour Balises, reportez-vous à la [présentation de la publication](../../ui/publishing/overview.md).
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la marche à suivre pour s&#39;authentifier auprès de l&#39;API.
 
-## Récupération d’une liste de versions {#list}
+## Récupération dʼune liste de versions {#list}
 
-Vous pouvez répertorier les versions d’une bibliothèque spécifique en incluant l’identifiant de la bibliothèque dans le chemin d’accès d’une requête de GET.
+Vous pouvez répertorier les versions d’une bibliothèque spécifique en incluant l’identifiant de la bibliothèque dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /libraries/{LIBRARY_ID}/builds
@@ -44,7 +44,7 @@ GET /libraries/{LIBRARY_ID}/builds
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les versions répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md) .
+>À l’aide des paramètres de requête, les versions répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Consultez le guide sur le [filtrage des réponses](../guides/filtering.md) pour plus d&#39;informations.
 
 **Requête**
 
@@ -145,9 +145,9 @@ Une réponse réussie renvoie une liste de versions pour la bibliothèque spéci
 
 ## Recherche d’une version {#lookup}
 
-Vous pouvez rechercher une version en fournissant son identifiant dans le chemin d’accès d’une requête de GET.
+Vous pouvez rechercher une version en fournissant son identifiant dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /builds/{BUILD_ID}
@@ -155,7 +155,7 @@ GET /builds/{BUILD_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `BUILD_ID` | `id` de la version que vous souhaitez rechercher. |
+| `BUILD_ID` | Champ `id` de la version que vous souhaitez rechercher. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -247,9 +247,9 @@ Une réponse réussie renvoie les détails de la version.
 
 ## Création d’une version {#create}
 
-Vous pouvez créer une version pour une bibliothèque, y compris l’identifiant de la bibliothèque, dans le chemin d’accès d’une requête de POST.
+Vous pouvez créer une version pour une bibliothèque en incluant l’identifiant de la bibliothèque, dans le chemin d’accès d’une requête POST.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /libraries/{LIBRARY_ID}/builds
@@ -263,7 +263,7 @@ POST /libraries/{LIBRARY_ID}/builds
 
 **Requête**
 
-La requête suivante crée une version pour la bibliothèque spécifiée dans le chemin de la requête. Aucun payload de requête n’est requis.
+La requête suivante crée une version pour la bibliothèque spécifiée dans le chemin d’accès de la requête. Aucun payload de requête n’est requis.
 
 ```shell
 curl -X POST \
@@ -275,7 +275,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du nouveau build.
+Une réponse réussie renvoie les détails de la nouvelle version.
 
 ```json
 {
@@ -349,9 +349,9 @@ Une réponse réussie renvoie les détails du nouveau build.
 
 ## Republication d’une version {#republish}
 
-Vous pouvez republier une version à partir d’une [bibliothèque publiée](./libraries.md#publish) en incluant son identifiant dans le chemin d’accès d’une requête de PATCH.
+Vous pouvez republier une version à partir d’une [bibliothèque publiée](./libraries.md#publish) en incluant son identifiant dans le chemin d’accès d’une requête PATCH.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /builds/{BUILD_ID}
@@ -365,7 +365,7 @@ PATCH /builds/{BUILD_ID}
 
 **Requête**
 
-La requête suivante met à jour `app_id` pour une configuration d’application existante.
+La requête suivante met à jour le `app_id` pour une configuration d’application existante.
 
 ```shell
 curl -X PATCH \
@@ -387,9 +387,9 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --- | --- |
-| `id` | `id` du build que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{BUILD_ID}` fournie dans le chemin de requête. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `builds`. |
-| `meta.action` | Type d’action du PATCH à exécuter. Doit être défini sur `republish`. |
+| `id` | `id` de la version à mettre à jour. Cela doit correspondre à la valeur `{BUILD_ID}` fournie dans le chemin d’accès de la requête. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `builds`. |
+| `meta.action` | Type d’action PATCH à exécuter. Doit être défini sur `republish`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -468,17 +468,17 @@ Une réponse réussie renvoie les détails de la version republiée.
 }
 ```
 
-## Récupération des ressources associées pour une version {#related}
+## Récupération des ressources associées à une version {#related}
 
-Les appels suivants montrent comment récupérer les ressources associées pour une version. Lorsque [recherche une version](#lookup), ces relations sont répertoriées sous la propriété `relationships`.
+Les appels suivants montrent comment récupérer les ressources associées à une version. Lors de la [recherche d’une version](#lookup), ces relations sont répertoriées sous la propriété `relationships`.
 
-Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md) .
+Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md).
 
-### Liste des éléments de données associés pour une version {#data-elements}
+### Liste des éléments de données associés à une version {#data-elements}
 
-Vous pouvez répertorier les éléments de données associés pour une version en ajoutant `/data_elements` au chemin d’accès d’une requête de recherche.
+Vous pouvez répertorier les éléments de données associés à une version en ajoutant `/data_elements` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /builds/{BUILD_ID}/data_elements
@@ -504,7 +504,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste des éléments de données liés à la version.
+Une réponse réussie renvoie une liste des éléments de données associés à la version.
 
 ```json
 {
@@ -615,11 +615,11 @@ Une réponse réussie renvoie une liste des éléments de données liés à la v
 }
 ```
 
-### Liste des extensions associées pour une version {#extensions}
+### Liste des extensions associées à une version {#extensions}
 
-Vous pouvez répertorier les extensions associées pour une version en ajoutant `/extensions` au chemin d’accès d’une requête de recherche.
+Vous pouvez répertorier les extensions associées à une version en ajoutant `/extensions` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /builds/{BUILD_ID}/extensions
@@ -645,7 +645,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste d’extensions liées à la version.
+Une réponse réussie renvoie une liste d’extensions associées à la version.
 
 ```json
 {
@@ -746,11 +746,11 @@ Une réponse réussie renvoie une liste d’extensions liées à la version.
 }
 ```
 
-### Liste des règles associées pour une version {#rules}
+### Liste des règles associées à une version {#rules}
 
-Vous pouvez répertorier les règles associées pour une version en ajoutant `/rules` au chemin d’accès d’une requête de recherche.
+Vous pouvez répertorier les règles associées à une version en ajoutant `/rules` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /builds/{BUILD_ID}/rules
@@ -776,7 +776,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste de règles liées à la version.
+Une réponse réussie renvoie une liste de règles associées à la version.
 
 ```json
 {
@@ -859,11 +859,11 @@ Une réponse réussie renvoie une liste de règles liées à la version.
 }
 ```
 
-### Recherche de la bibliothèque associée pour une version {#library}
+### Recherche de la bibliothèque associée à une version {#library}
 
-Vous pouvez récupérer la bibliothèque associée pour une version en ajoutant `/library` au chemin d’accès d’une requête de recherche.
+Vous pouvez récupérer la bibliothèque associée à une version en ajoutant `/library` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /builds/{BUILD_ID}/library
@@ -972,11 +972,11 @@ curl -X GET \
 }
 ```
 
-### Recherche de l’environnement associé pour une version {#environment}
+### Recherche de l’environnement associé à une version {#environment}
 
-Vous pouvez récupérer l’environnement associé pour une version en ajoutant `/environment` au chemin d’accès d’une requête de recherche.
+Vous pouvez récupérer l’environnement associé à une version en ajoutant `/environment` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /builds/{BUILD_ID}/environment

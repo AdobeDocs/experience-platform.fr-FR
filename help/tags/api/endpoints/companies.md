@@ -1,26 +1,26 @@
 ---
-title: Point de terminaison des entreprises
-description: Découvrez comment effectuer des appels vers le point de terminaison /company dans l’API Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Point d’entrée des entreprises
+description: Découvrez comment effectuer des appels vers le point d’entrée dans l’API Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 6%
+source-wordcount: '243'
+ht-degree: 97%
 
 ---
 
-# Point de terminaison des entreprises
+# Point d’entrée des entreprises
 
-Une entreprise représente une organisation client, généralement une entreprise. Dans l’API Reactor, ces sociétés correspondent 1:1 à l’identifiant de l’organisation IMS. Les utilisateurs d’API n’ont de visibilité que sur les entreprises auxquelles ils ont accès. Une société peut contenir de nombreuses [propriétés](./properties.md). Une propriété appartient exactement à une seule société.
+Une société représente une organisation client, généralement une entreprise. Dans l’API Reactor, ces sociétés correspondent à l’identifiant de l’organisation IMS. Les utilisateurs d’API n’ont de visibilité que sur les sociétés auxquelles ils ont accès. Une société peut contenir de nombreuses [propriétés](./properties.md). Une propriété appartient à exactement une seule société.
 
-Le point d’entrée `/companies` de l’API Reactor vous permet de récupérer par programmation les entreprises auxquelles vous avez accès dans votre application d’expérience.
+Le point d’entrée `/companies` de l’API Reactor vous permet de récupérer par programmation les sociétés auxquelles vous avez accès dans votre application d’expérience.
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
 
-## Récupération d’une liste d’entreprises {#list}
+## Récupération dʼune liste de sociétés {#list}
 
-Vous pouvez répertorier les sociétés auxquelles vous êtes autorisé à utiliser en envoyant une requête de GET au point de terminaison `/companies` . Dans la plupart des cas, il y en a exactement un.
+Vous pouvez répertorier les sociétés que vous êtes autorisé à utiliser en envoyant une requête GET au point d&#39;entrée `/companies`. Dans la plupart des cas, il y en a exactement une.
 
 **Format d&#39;API**
 
@@ -30,7 +30,7 @@ GET /companies
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les sociétés répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md) .
+>À l’aide des paramètres de requête, les sociétés répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -46,7 +46,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste des entreprises auxquelles vous avez accès.
+Une réponse réussie renvoie une liste des sociétés auxquelles vous avez accès.
 
 ```json
 {
@@ -106,11 +106,11 @@ Une réponse réussie renvoie une liste des entreprises auxquelles vous avez acc
 }
 ```
 
-## Recherche d’une entreprise {#lookup}
+## Recherche d’une société {#lookup}
 
-Vous pouvez rechercher une société spécifique en incluant son identifiant dans le chemin d’accès d’une demande de GET.
+Vous pouvez rechercher une société spécifique en incluant son identifiant dans le chemin d’accès dʼune requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /companies/{COMPANY_ID}

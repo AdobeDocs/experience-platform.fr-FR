@@ -1,44 +1,44 @@
 ---
 title: Point d’entrée des composants de règle
 description: Découvrez comment effectuer des appels au point d’entrée /rule_components dans l’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 7%
+source-wordcount: '1207'
+ht-degree: 99%
 
 ---
 
 # Point d’entrée des composants de règle
 
-Dans les balises de collecte de données, [les règles](./rules.md) contrôlent le comportement des ressources dans une [bibliothèque](./libraries.md) déployée. **Les** composants de règle sont les parties individuelles qui constituent une règle. Si une règle est une recette, alors un composant de règle est l’un des ingrédients. Le point d’entrée `/rule_components` de l’API Reactor vous permet de gérer par programmation les composants de règle.
+Dans les balises de collecte de données, les [règles](./rules.md) contrôlent le comportement des ressources dans une [bibliothèque](./libraries.md) déployée. Les **Composants de règle** sont les éléments individuels qui constituent une règle. Si l’on compare une règle à une recette, un composant de règle correspond alors à l’un des ingrédients. Le point d’entrée `/rule_components` de l’API Reactor vous permet de gérer les composants de règle par programme.
 
 >[!NOTE]
 >
->Ce document explique comment gérer les composants de règle dans l’API Reactor. Pour plus d’informations sur l’interaction avec les règles et les composants de règle dans l’interface utilisateur de collecte de données, reportez-vous au [guide de l’interface utilisateur](../../ui/managing-resources/rules.md).
+>Ce document explique comment gérer les composants de règle dans l’API Reactor. Pour plus d’informations sur la façon d’interagir avec les règles et les composants de règle dans l’interface utilisateur de la collecte de données, reportez-vous au [guide de l’interface utilisateur](../../ui/managing-resources/rules.md).
 
-Les composants de règle ont trois types de base :
+Les composants de règle possèdent trois types de base :
 
 | Type de composant de règle | Description |
 | --- | --- |
-| Événements | Un événement est le déclencheur d’une règle. La règle commence lorsque l’événement se produit au moment de l’exécution sur l’appareil client. &quot;[!UICONTROL Chargement de bibliothèque]&quot;, &quot;[!UICONTROL Haut de page]&quot; et &quot;[!UICONTROL Cliquez sur]&quot; sont des exemples d’événements. |
-| Conditions | Une condition est une évaluation de si certains critères sont satisfaits avant l’exécution d’actions. Une fois qu’un événement se produit, les conditions sont évaluées. Les actions de la règle ne s’exécutent que si toutes les conditions sont remplies. |
+| Événements | Un événement correspond au déclencheur d’une règle. La règle commence lorsque l’événement se produit au moment de l’exécution sur l’appareil client. « [!UICONTROL Chargement de bibliothèque] », « [!UICONTROL Haut de page] » et « [!UICONTROL Clic] » sont des exemples d’événements. |
+| Conditions | Une condition correspond à une évaluation déterminant si certains critères sont satisfaits avant l’exécution d’actions. Une fois qu’un événement se produit, les conditions sont évaluées. Les actions de la règle ne s’exécutent que si toutes les conditions sont remplies. |
 | Actions | Il s’agit des actions que la règle doit effectuer, telles que l’envoi d’une balise Adobe Analytics, la récupération d’un identifiant visiteur personnalisé ou le déclenchement d’une mbox spécifique. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Un composant de règle appartient exactement à une règle. Une règle peut (et doit) comporter de nombreux composants de règle.
+Un composant de règle appartient à une règle exactement. Une règle peut (et doit) contenir de nombreux composants de règle.
 
-Un composant de règle est fourni par une [extension](./extensions.md) exacte. Les extensions peuvent fournir de nombreux types de composants de règle.
+Un composant de règle est fourni par une [extension](./extensions.md) exactement. Les extensions peuvent fournir de nombreux types de composants de règle.
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
 
 ## Récupération d’une liste de composants de règle {#list}
 
-Vous pouvez récupérer une liste de composants de règle appartenant à une règle en incluant l’identifiant de la règle dans le chemin d’une requête de GET.
+Vous pouvez récupérer une liste de composants de règle appartenant à une règle en incluant l’identifiant de la règle dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /rules/{RULE_ID}/rule_components
@@ -52,7 +52,7 @@ GET /rules/{RULE_ID}/rule_components
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les composants de règle répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md) .
+>À l’aide des paramètres de requête, les composants de règle répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -175,9 +175,9 @@ Une réponse réussie renvoie une liste de composants de règle pour la règle s
 
 ## Recherche d’un composant de règle {#lookup}
 
-Vous pouvez rechercher un composant de règle en fournissant son identifiant dans le chemin d’accès d’une requête de GET.
+Vous pouvez rechercher un composant de règle en fournissant son identifiant dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /rule_components/{RULE_COMPONENT_ID}
@@ -299,9 +299,9 @@ Une réponse réussie renvoie les détails du composant de règle.
 
 ## Création d’un composant de règle {#create}
 
-Vous pouvez créer un composant de règle en effectuant une requête de POST.
+Vous pouvez créer un composant de règle en effectuant une requête POST.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /rules/{RULE_ID}/rule_components
@@ -315,7 +315,7 @@ POST /rules/{RULE_ID}/rule_components
 
 **Requête**
 
-La requête suivante crée un composant de règle pour la règle spécifiée. L’appel associe également le composant de règle à une extension existante par le biais de la propriété `relationships`. Pour plus d’informations, consultez le guide sur les [relations](../guides/relationships.md) .
+La requête suivante crée un composant de règle pour la règle spécifiée. L’appel associe également le composant de règle à une extension existante par le biais de la propriété `relationships`. Pour plus d’informations, consultez le guide sur les [relations](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -358,15 +358,15 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes.delegate_descriptor_id` | **(Obligatoire)** Les types de composants de règle que vous pouvez définir sont fournis par les packages  [d’extension](./extension-packages.md). Lorsque vous créez un composant de règle, vous devez fournir un identifiant de descripteur délégué pour indiquer le package d’extension sur lequel ce composant de règle est basé, le type du composant (événement, condition ou action) et le nom du composant spécifique tel que défini par l’extension (comme l’événement &quot;Click&quot; dans l’extension Core).<br><br>Pour plus d’informations, consultez le guide sur les  [ID de descripteur ](../guides/delegate-descriptor-ids.md) délégué . |
-| `attributes.name` | **(Obligatoire)** Nom lisible par l’utilisateur pour le composant de règle. |
+| `attributes.delegate_descriptor_id` | **(Obligatoire)** Les types de composants de règle que vous pouvez définir sont fournis par les [packages d’extension](./extension-packages.md). Lorsque vous créez un composant de règle, vous devez fournir un ID de descripteur de délégué pour indiquer le package d’extension sur lequel ce composant de règle se base, le type du composant (événement, condition ou action) ainsi que le nom du composant spécifique tel que défini par l’extension (comme l’événement « Clic » dans l’extension Core).<br><br>Pour plus d’informations, consultez le guide sur les [ID de descripteur de délégué](../guides/delegate-descriptor-ids.md). |
+| `attributes.name` | **(Obligatoire)** Nom compréhensible pour le composant de règle. |
 | `attributes.delay_next` | Valeur booléenne qui indique s’il faut retarder les actions ultérieures. |
-| `attributes.order` | Entier indiquant l’ordre de chargement du composant par type. |
-| `attributes.rule_order` | Entier indiquant la priorité de déclenchement de la règle associée. |
-| `attributes.settings` | Un objet JSON settings représenté sous la forme d’une chaîne. |
-| `attributes.timeout` | Entier indiquant le délai d’expiration de l’action exécutée en séquence. |
-| `relationships` | Objet qui établit les relations nécessaires pour le composant de règle. Deux relations doivent être établies : <ol><li>`extension`: Extension qui définit ce composant de règle. Il doit s’agir de la même extension dont le package d’extension est indiqué par la balise `delegate_descriptor_id`.</li><li>`rules`: La règle sous laquelle ce composant est défini. Doit être le même ID de règle que celui fourni dans le chemin d’accès de la requête.</li></ol>Pour plus d&#39;informations générales sur les relations, consultez le [guide sur les relations](../guides/relationships.md). |
-| `type` | Type de ressource en cours de création. Pour ce point de terminaison, la valeur doit être `rule_components`. |
+| `attributes.order` | Nombre entier indiquant l’ordre de chargement du composant par type. |
+| `attributes.rule_order` | Nombre entier indiquant la priorité de déclenchement de la règle associée. |
+| `attributes.settings` | Un objet JSON de paramétrage représenté sous la forme d’une chaîne. |
+| `attributes.timeout` | Nombre entier indiquant le délai d’expiration de l’action exécutée en séquence. |
+| `relationships` | Objet qui établit les relations nécessaires pour le composant de règle. Deux relations doivent être établies : <ol><li>`extension` : l’extension qui définit ce composant de règle. Il doit s’agir de la même extension que celle du package d’extension indiqué par `delegate_descriptor_id`.</li><li>`rules` : la règle sous laquelle ce composant est défini. Doit être le même ID de règle que celui fourni dans le chemin d’accès de la requête.</li></ol>Pour plus d’informations générales sur les relations, consultez le [guide sur les relations](../guides/relationships.md). |
+| `type` | Le type de ressource en cours de création. Pour ce point d&#39;entrée, la valeur doit être `rule_components`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -466,15 +466,15 @@ Une réponse réussie renvoie les détails du composant de règle nouvellement c
 }
 ```
 
-## Mettre à jour un composant de règle {#update}
+## Mise à jour d’un composant de règle {#update}
 
-Vous pouvez mettre à jour un composant de règle en incluant son identifiant dans le chemin d’accès d’une requête de PATCH.
+Vous pouvez mettre à jour un composant de règle en incluant son identifiant dans le chemin d’accès d’une requête PATCH.
 
 >[!NOTE]
 >
->La mise à jour d’un composant de règle met également à jour l’horodatage `updated_at` de la règle parente.
+>La mise à jour d’un composant de règle met également à jour la date et l’heure `updated_at` de la règle parente.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /rule_components/{RULE_COMPONENT_ID}
@@ -511,9 +511,9 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes` | Objet dont les composants de règle représentent les attributs à mettre à jour pour le composant de règle. Les attributs suivants peuvent être mis à jour pour un composant de règle : <ul><li>`delay_next`</li><li>`delegate_descriptor_id`</li><li>`name`</li><li>`order`</li><li>`rule_order`</li><li>`settings`</li><li>`timeout`</li></ul> |
-| `id` | `id` du composant de règle que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{RULE_COMPONENT_ID}` fournie dans le chemin de requête. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `rule_components`. |
+| `attributes` | Objet dont les composants de règle représentent les attributs à mettre à jour pour le composant de règle. Les attributs suivants peuvent être mis à jour pour un composant de règle : <ul><li>`delay_next`</li><li>`delegate_descriptor_id`</li><li>`name`</li><li>`order`</li><li>`rule_order`</li><li>`settings`</li><li>`timeout`</li></ul> |
+| `id` | `id` du composant de règle que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{RULE_COMPONENT_ID}` fournie dans le chemin d’accès de la requête. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `rule_components`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -613,11 +613,11 @@ Une réponse réussie renvoie les détails du composant de règle mis à jour.
 }
 ```
 
-## Suppression d’un composant de règle
+## Suppression dʼun composant de règle
 
-Vous pouvez supprimer un composant de règle en incluant son identifiant dans le chemin d’accès d’une requête de DELETE.
+Vous pouvez supprimer un composant de règle en incluant son identifiant dans le chemin dʼaccès dʼune requête DELETE.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /rule_components/{RULE_COMPONENT_ID}
@@ -643,21 +643,21 @@ curl -X DELETE \
 
 Une réponse réussie renvoie un état HTTP 204 (No Content) sans corps de réponse, indiquant que le composant de règle a été supprimé.
 
-## Gestion des notes d’un composant de règle {#notes}
+## Gestion des notes dʼun composant de règle {#notes}
 
-Les composants de règle sont des ressources &quot;remarquables&quot;, ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource. Pour plus d’informations sur la gestion des notes pour les composants de règle et d’autres ressources compatibles, consultez le [guide de point de fin de notes](./notes.md) .
+Les composants de règle sont des ressources « inscriptibles », ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource individuelle. Pour plus dʼinformations sur la gestion des notes pour les composants de règle et dʼautres ressources compatibles, consultez le [guide de point du point dʼentrée des notes](./notes.md).
 
 ## Récupération des ressources associées pour un composant de règle {#related}
 
-Les appels suivants montrent comment récupérer les ressources associées pour un composant de règle. Si [vous recherchez un composant de règle](#lookup), ces relations sont répertoriées sous le composant de règle `relationships`.
+Les appels suivants montrent comment récupérer les ressources associées pour un composant de règle. Lorsque vous [recherchez un composant de règle](#lookup), ces relations sont répertoriées sous le composant de règle `relationships`.
 
-Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md) .
+Pour plus dʼinformations sur les relations dans lʼAPI Reactor, consultez le [guide des relations](../guides/relationships.md).
 
 ### Liste des règles associées pour un composant de règle {#rules}
 
-Vous pouvez répertorier les règles qui utilisent un composant de règle spécifique en ajoutant `/rules` au chemin d’accès d’une requête de recherche.
+Vous pouvez répertorier les règles utilisant un composant de règle spécifique en ajoutant `/rules` au chemin dʼaccès dʼune demande de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /rule_components/{RULE_COMPONENT_ID}/rules
@@ -683,7 +683,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste de règles qui utilisent le composant de règle spécifié.
+Une réponse réussie renvoie une liste des règles qui utilisent le composant de règle spécifié.
 
 ```json
 {
@@ -757,11 +757,11 @@ Une réponse réussie renvoie une liste de règles qui utilisent le composant de
 }
 ```
 
-### Recherche de l’extension associée pour un composant de règle {#extension}
+### Recherche de lʼextension associée à un composant de règle {#extension}
 
-Vous pouvez rechercher l’extension qui fournit un composant de règle en ajoutant `/extension` au chemin d’accès d’une requête de recherche.
+Vous pouvez rechercher lʼextension qui fournit un composant de règle en ajoutant `/extension` au chemin dʼaccès dʼune demande de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /rule_components/{RULE_COMPONENT_ID}/extension
@@ -769,7 +769,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/extension
 
 | Paramètre | Description |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | `id` du composant de règle dont vous souhaitez rechercher l’extension. |
+| `{RULE_COMPONENT_ID}` | `id` du composant de règle dont vous souhaitez rechercher lʼextension. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -787,7 +787,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’extension du composant de règle spécifié.
+Une réponse réussie renvoie les détails de lʼextension du composant de règle spécifié.
 
 ```json
 {
@@ -877,11 +877,11 @@ Une réponse réussie renvoie les détails de l’extension du composant de règ
 }
 ```
 
-### Recherche de l’origine associée pour un composant de règle {#origin}
+### Recherche de lʼorigine associée dʼun composant de règle {#origin}
 
-Vous pouvez rechercher l’origine (révision précédente) d’un composant de règle en ajoutant `/origin` au chemin d’une requête de recherche.
+Vous pouvez rechercher lʼorigine (révision précédente) dʼun composant de règle en ajoutant `/origin` au chemin dʼaccès dʼune demande de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /rule_components/{RULE_COMPONENT_ID}/origin
@@ -889,7 +889,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/origin
 
 | Paramètre | Description |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | `id` du composant de règle dont vous souhaitez rechercher l’origine. |
+| `{RULE_COMPONENT_ID}` | `id` du composant de règle dont vous souhaitez rechercher lʼorigine. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -907,7 +907,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’origine du composant de règle spécifié.
+Une réponse réussie renvoie les détails de lʼorigine du composant de règle spécifié.
 
 ```json
 {

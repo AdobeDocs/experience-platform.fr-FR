@@ -1,36 +1,36 @@
 ---
-title: Point de terminaison des hôtes
-description: Découvrez comment effectuer des appels au point de terminaison /hosts dans l’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Point d’entrée des hôtes
+description: Découvrez comment effectuer des appels au point d’entrée /hôtes dans l’API Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 8%
+source-wordcount: '765'
+ht-degree: 99%
 
 ---
 
-# Point de terminaison des hôtes
+# Point d’entrée des hôtes
 
 >[!NOTE]
 >
 >Ce document explique comment gérer les hôtes dans l’API Reactor. Pour plus d’informations sur les hôtes pour les balises, consultez le guide sur la [présentation des hôtes](../../ui/publishing/hosts/hosts-overview.md) dans la documentation de publication.
 
-Dans l’API Reactor, un hôte définit une destination où une [build](./builds.md) peut être diffusée.
+Dans l’API Reactor, un hôte définit une destination où une [version](./builds.md) peut être diffusée.
 
-Lorsqu’une version est demandée par un utilisateur de balises dans Adobe Experience Platform, le système vérifie la bibliothèque pour déterminer à quel [environnement](./environments.md) la bibliothèque doit être créée. Chaque environnement entretient une relation avec un hôte, indiquant où diffuser la version.
+Lorsqu’une version est demandée par un utilisateur de balises dans Adobe Experience Platform, le système vérifie la bibliothèque pour déterminer dans quel [environnement](./environments.md) la bibliothèque doit être créée. Chaque environnement entretient une relation avec un hôte, indiquant où diffuser la version.
 
-Un hôte appartient exactement à une [propriété](./properties.md), tandis qu’une propriété peut avoir de nombreux hôtes. Une propriété doit comporter au moins un hôte avant de pouvoir publier.
+Un hôte appartient à une seule [propriété](./properties.md), tandis qu’une propriété peut avoir de nombreux hôtes. Une propriété doit comporter au moins un hôte avant de pouvoir publier.
 
 Un hôte peut être utilisé par plusieurs environnements au sein d’une propriété. Il est courant de disposer d’un seul hôte sur une propriété et de faire en sorte que tous les environnements de cette propriété utilisent le même hôte.
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
 
-## Récupération d’une liste d’hôtes {#list}
+## Récupération dʼune liste dʼhôtes {#list}
 
-Vous pouvez récupérer une liste d’hôtes pour une propriété en incluant l’identifiant de la propriété dans le chemin d’accès d’une requête de GET.
+Vous pouvez récupérer une liste d’hôtes pour une propriété en incluant l’identifiant de la propriété dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /properties/{PROPERTY_ID}/hosts
@@ -38,13 +38,13 @@ GET /properties/{PROPERTY_ID}/hosts
 
 | Paramètre | Description |
 | --- | --- |
-| `PROPERTY_ID` | `id` de la propriété propriétaire des hôtes. |
+| `PROPERTY_ID` | Le `id` de la propriété propriétaire des hôtes. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les hôtes répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md) .
+>À l’aide des paramètres de requête, les hôtes répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -110,9 +110,9 @@ Une réponse réussie renvoie une liste d’hôtes pour la propriété spécifi�
 
 ## Recherche d’un hôte {#lookup}
 
-Vous pouvez rechercher un hôte en fournissant son identifiant dans le chemin d’accès d’une requête de GET.
+Vous pouvez rechercher un hôte en fournissant son identifiant dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /hosts/{HOST_ID}
@@ -120,7 +120,7 @@ GET /hosts/{HOST_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `HOST_ID` | `id` de l’hôte que vous souhaitez rechercher. |
+| `HOST_ID` | Le `id` de l’hôte que vous voulez rechercher. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -177,9 +177,9 @@ Une réponse réussie renvoie les détails de l’hôte.
 
 ## Création d’un hôte {#create}
 
-Vous pouvez créer un hôte en effectuant une requête de POST.
+Vous pouvez créer un hôte en effectuant une requête POST.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /properties/{PROPERTY_ID}/hosts
@@ -187,13 +187,13 @@ POST /properties/{PROPERTY_ID}/hosts
 
 | Paramètre | Description |
 | --- | --- |
-| `PROPERTY_ID` | `id` de la [propriété](./properties.md) sous laquelle vous définissez l’hôte. |
+| `PROPERTY_ID` | Le `id` de la [propriété](./properties.md) sous laquelle vous définissez l’hôte. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante crée un hôte pour la propriété spécifiée. L’appel associe également l’hôte à une extension existante par le biais de la propriété `relationships`. Pour plus d’informations, consultez le guide sur les [relations](../guides/relationships.md) .
+La requête suivante crée un hôte pour la propriété spécifiée. L’appel associe également l’hôte à une extension existante par le biais de la propriété `relationships`. Pour plus d’informations, consultez le guide sur les [relations](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -220,14 +220,14 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes.name` | **(Obligatoire)** Nom lisible par l’utilisateur. |
-| `attributes.type_of` | **(Obligatoire)** Type d’hôte. Il peut s’agir de l’une des deux options suivantes : <ul><li>`akamai` pour les hôtes gérés par  [Adobe](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` pour les hôtes  [SFTP](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
+| `attributes.name` | **(Obligatoire)** Nom de l’hôte, lisible par l’utilisateur. |
+| `attributes.type_of` | **(Obligatoire)** Type d’hôte. Il peut s’agir de l’une des deux options suivantes : <ul><li>`akamai` pour les [hôtes gérés par Adobe](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` pour les [hôtes SFTP](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
 | `attributes.encrypted_private_key` | Clé privée facultative à utiliser pour l’authentification de l’hôte. |
-| `attributes.path` | Chemin d’accès à l’URL `server`. |
-| `attributes.port` | Entier indiquant le port de serveur spécifique à utiliser. |
+| `attributes.path` | Chemin d’accès à ajouter à l’URL `server`. |
+| `attributes.port` | Nombre entier indiquant le port de serveur spécifique à utiliser. |
 | `attributes.server` | URL hôte du serveur. |
 | `attributes.username` | Nom d’utilisateur facultatif pour l’authentification. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `hosts`. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `hosts`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -270,15 +270,15 @@ Une réponse réussie renvoie les détails de l’hôte nouvellement créé.
 }
 ```
 
-## Mettre à jour un hôte {#update}
+## Mise à jour d’un hôte {#update}
 
 >[!NOTE]
 >
 >Seuls les hôtes SFTP peuvent être mis à jour.
 
-Vous pouvez mettre à jour un hôte en incluant son identifiant dans le chemin d’accès d’une requête de PATCH.
+Vous pouvez mettre à jour un hôte en incluant son identifiant dans le chemin d’accès d’une requête PATCH.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /hosts/{HOST_ID}
@@ -286,13 +286,13 @@ PATCH /hosts/{HOST_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `HOST_ID` | `id` de l’hôte que vous souhaitez mettre à jour. |
+| `HOST_ID` | Le `id` de l’hôte que vous voulez mettre à jour. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante met à jour `name` pour un hôte existant.
+La requête suivante met à jour le `name` pour un hôte existant.
 
 ```shell
 curl -X PATCH \
@@ -315,14 +315,14 @@ curl -X PATCH \
 | Propriété | Description |
 | --- | --- |
 | `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour l’hôte. Les attributs suivants peuvent être mis à jour pour un hôte : <ul><li>`encrypted_private_key`</li><li>`name`</li><li>`path`</li><li>`port`</li><li>`server`</li><li>`type_of`</li><li>`username`</li></ul> |
-| `id` | `id` de l’hôte que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{HOST_ID}` fournie dans le chemin de requête. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `hosts`. |
+| `id` | Le `id` de l’hôte que vous voulez mettre à jour. Il doit correspondre à la valeur `{HOST_ID}` fournie dans le chemin de requête. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `hosts`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’hôte mis à jour.
+Une réponse réussie renvoie les détails de l&#39;hôte mis à jour.
 
 ```json
 {
@@ -361,9 +361,9 @@ Une réponse réussie renvoie les détails de l’hôte mis à jour.
 
 ## Suppression d’un hôte
 
-Vous pouvez supprimer un hôte en incluant son identifiant dans le chemin d’accès d’une requête de DELETE.
+Vous pouvez supprimer un hôte en incluant son identifiant dans le chemin dʼaccès dʼune requête DELETE.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /hosts/{HOST_ID}
@@ -371,7 +371,7 @@ DELETE /hosts/{HOST_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `HOST_ID` | `id` de l’hôte que vous souhaitez supprimer. |
+| `HOST_ID` | Le `id` de lʼhôte que vous voulez supprimer. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -389,17 +389,17 @@ curl -X DELETE \
 
 Une réponse réussie renvoie un état HTTP 204 (No Content) sans corps de réponse, indiquant que l’hôte a été supprimé.
 
-## Récupération des ressources associées pour un hôte {#related}
+## Récupération des ressources associées à un hôte {#related}
 
-Les appels suivants montrent comment récupérer les ressources associées pour un hôte. Lorsque [recherche un hôte](#lookup), ces relations sont répertoriées sous la propriété `relationships`.
+Les appels suivants montrent la marche à suivre pour récupérer les ressources associées à un hôte. Lorsque vous [recherchez un hôte](#lookup), ces relations sont répertoriées sous la propriété `relationships`.
 
-Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md) .
+Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md).
 
 ### Recherche de la propriété associée pour un hôte {#property}
 
 Vous pouvez rechercher la propriété propriétaire d’un hôte en ajoutant `/property` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /hosts/{HOST_ID}/property
@@ -407,7 +407,7 @@ GET /hosts/{HOST_ID}/property
 
 | Paramètre | Description |
 | --- | --- |
-| `{HOST_ID}` | `id` de l’hôte dont vous souhaitez rechercher la propriété. |
+| `{HOST_ID}` | Champ `id` de lʼhôte dont vous souhaitez rechercher la propriété. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -425,7 +425,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la propriété de l’hôte spécifié.
+Une réponse réussie renvoie les détails de la propriété de lʼhôte spécifié.
 
 ```json
 {

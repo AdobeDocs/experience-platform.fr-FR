@@ -1,67 +1,66 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; conformité à l’utilisation des données ; appliquer ; appliquer la conformité à l’utilisation des données ; Service de segmentation ; segmentation ; Segmentation ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;conformité de l’utilisation des données;application;application de la conformité de l’utilisation des données;service de segmentation;segmentation;segmentation;segmentation
 solution: Experience Platform
-title: Appliquer la conformité à l’utilisation des données pour un segment d’Audience à l’aide d’API
+title: Application de la conformité de l’utilisation des données à un segment d’audience à l’aide d’API
 topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour appliquer la conformité de l’utilisation des données pour les segments ciblés de profils client en temps réel à l’aide d’API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1362'
-ht-degree: 50%
+source-wordcount: '1358'
+ht-degree: 54%
 
 ---
 
 # Application de la conformité de l’utilisation des données à un segment ciblé à l’aide d’API
 
-Ce didacticiel décrit les étapes à suivre pour appliquer la conformité de l&#39;utilisation des données aux segments d&#39;audience [!DNL Real-time Customer Profile] à l&#39;aide des API.
+Ce tutoriel décrit les étapes à suivre pour appliquer la conformité de l’utilisation des données pour les segments d’audience [!DNL Real-time Customer Profile] à l’aide des API.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants de [!DNL Adobe Experience Platform] :
+Ce tutoriel nécessite une compréhension pratique des composants suivants de [!DNL Adobe Experience Platform] :
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):  [!DNL Real-time Customer Profile] est un magasin d’entités de recherche générique, qui est utilisé pour gérer  [!DNL Experience Data Model (XDM)] les données au sein  [!DNL Platform]. Profile fusionne les données de divers actifs de données d’entreprise et permet d’accéder à ces données dans une présentation unifiée.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):  [!DNL Real-time Customer Profile] est un magasin d’entités de recherche générique utilisé pour gérer  [!DNL Experience Data Model (XDM)] les données dans  [!DNL Platform]. Profile fusionne les données de divers actifs de données d’entreprise et permet d’accéder à ces données dans une présentation unifiée.
    - [Stratégies de fusion](../../profile/api/merge-policies.md)[!DNL Real-time Customer Profile] : stratégies utilisées par pour déterminer quelles données peuvent être fusionnées en une vue unifiée dans certains cas. Les stratégies de fusion peuvent être configurées à des fins [!DNL Data Governance].
 - [[!DNL Segmentation]](../home.md)[!DNL Real-time Customer Profile] : manière dont divise un grand groupe d’individus inclus dans la banque de profils en groupes plus petits partageant des caractéristiques et réagissant de la même manière aux stratégies marketing.
-- [[!DNL Data Governance]](../../data-governance/home.md):  [!DNL Data Governance] fournit l’infrastructure pour l’étiquetage et l’application des données, en utilisant les composants suivants :
+- [[!DNL Data Governance]](../../data-governance/home.md):  [!DNL Data Governance] fournit l’infrastructure pour l’étiquetage et l’application de l’utilisation des données à l’aide des composants suivants :
    - [Libellés d’utilisation des données](../../data-governance/labels/user-guide.md) : libellés utilisés pour décrire les jeux de données et les champs en fonction du niveau de sensibilité avec lequel traiter leurs données respectives.
    - [Stratégies d’utilisation des données](../../data-governance/policies/overview.md) : configurations indiquant quelles actions marketing sont autorisées sur les données classées selon des libellés d’utilisation de données particulières.
-   - [Application des](../../data-governance/enforcement/overview.md) politiques : Permet d’appliquer des stratégies d’utilisation des données et d’empêcher les opérations de données qui constituent des violations de stratégies.
-- [Sandbox](../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
+   - [Application des stratégies](../../data-governance/enforcement/overview.md) : Permet d’appliquer des stratégies d’utilisation des données et d’empêcher les opérations de données qui constituent des violations de stratégie.
+- [Environnements de test](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API [!DNL Platform].
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels aux API [!DNL Platform].
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecter des valeurs pour les en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-api-key : `{API_KEY}`
+- x-gw-ims-org-id : `{IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform] sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name : `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d&#39;informations sur les sandbox dans [!DNL Platform], consultez la [documentation d&#39;aperçu de sandbox](../../sandboxes/home.md).
+>Pour plus d’informations sur les environnements de test dans [!DNL Platform], consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
 - Content-Type: application/json
 
-## Rechercher une stratégie de fusion pour une définition de segment {#merge-policy}
+## Recherche d’une stratégie de fusion pour une définition de segment {#merge-policy}
 
-Ce workflow commence par l’accès à un segment connu. Les segments qui sont activés pour une utilisation dans [!DNL Real-time Customer Profile] contiennent un ID de stratégie de fusion dans leur définition de segment. Cette stratégie de fusion contient des informations sur les jeux de données à inclure dans le segment, qui à leur tour contiennent les libellés d’utilisation de données applicables.
+Ce workflow commence par l’accès à un segment connu. Les segments activés pour une utilisation dans [!DNL Real-time Customer Profile] contiennent un ID de stratégie de fusion dans leur définition de segment. Cette stratégie de fusion contient des informations sur les jeux de données à inclure dans le segment, qui à leur tour contiennent les libellés d’utilisation de données applicables.
 
-À l&#39;aide de l&#39;API [!DNL Segmentation], vous pouvez rechercher une définition de segment par son identifiant afin de trouver la stratégie de fusion associée.
+À l’aide de l’API [!DNL Segmentation], vous pouvez rechercher une définition de segment par son identifiant pour trouver sa stratégie de fusion associée.
 
 **Format d’API**
 
@@ -128,7 +127,7 @@ Une réponse réussie renvoie les détails de la définition de segment.
 
 ## Recherche des jeux de données source à partir de la stratégie de fusion {#datasets}
 
-Les stratégies de fusion contiennent des informations sur leurs jeux de données source, qui contiennent à leur tour des étiquettes d’utilisation des données. Vous pouvez rechercher les détails d&#39;une stratégie de fusion en fournissant l&#39;ID de stratégie de fusion dans une demande de GET à l&#39;API [!DNL Profile]. Pour plus d&#39;informations sur les stratégies de fusion, consultez le [guide du point de terminaison des stratégies de fusion](../../profile/api/merge-policies.md).
+Les stratégies de fusion contiennent des informations sur leurs jeux de données source, qui à leur tour contiennent des libellés d’utilisation des données. Vous pouvez rechercher les détails d’une stratégie de fusion en fournissant l’ID de stratégie de fusion dans une requête de GET à l’API [!DNL Profile]. Vous trouverez plus d’informations sur les stratégies de fusion dans le [guide de point de terminaison des stratégies de fusion](../../profile/api/merge-policies.md).
 
 **Format d’API**
 
@@ -183,15 +182,15 @@ Une réponse réussie renvoie les détails de la stratégie de fusion.
 | `attributeMerge.type` | Type de configuration de priorité des données de la stratégie de fusion. Si la valeur est `dataSetPrecedence`, les jeux de données associés à cette stratégie de fusion sont répertoriés sous `attributeMerge > data > order`. Si la valeur est `timestampOrdered`, tous les jeux de données associés au schéma référencés dans `schema.name` sont utilisés par la stratégie de fusion. |
 | `attributeMerge.data.order` | Si la valeur `attributeMerge.type` est `dataSetPrecedence`, cet attribut sera un tableau contenant les identifiants des jeux de données utilisés par cette stratégie de fusion. Ces identifiants sont utilisés à l’étape suivante. |
 
-## Evaluer les jeux de données en cas de violation de stratégie
+## Évaluation des jeux de données en cas de violation de stratégie
 
 >[!NOTE]
 >
-> Cette étape suppose que vous disposez d’au moins une stratégie d’utilisation des données principale qui empêche l’exécution d’actions marketing spécifiques sur les données contenant certaines étiquettes. Si vous n&#39;avez pas de règles d&#39;utilisation applicables pour les jeux de données évalués, suivez le [didacticiel de création de stratégies](../../data-governance/policies/create.md) pour en créer une avant de poursuivre cette étape.
+> Cette étape suppose que vous disposez au moins d’une stratégie d’utilisation des données principale qui empêche l’exécution d’actions marketing spécifiques sur les données contenant certains libellés. Si vous ne disposez d’aucune stratégie d’utilisation applicable pour les jeux de données évalués, suivez le [tutoriel sur la création de stratégies](../../data-governance/policies/create.md) pour en créer une avant de poursuivre cette étape.
 
-Une fois que vous avez obtenu les ID des jeux de données source de la stratégie de fusion, vous pouvez utiliser l&#39;[API du service de stratégie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) pour évaluer ces jeux de données par rapport à des actions marketing spécifiques afin de vérifier les violations de la stratégie d&#39;utilisation des données.
+Une fois que vous avez obtenu les identifiants des jeux de données source de la stratégie de fusion, vous pouvez utiliser l’[API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) pour évaluer ces jeux de données par rapport à des actions marketing spécifiques afin de rechercher les violations de stratégie d’utilisation des données.
 
-Pour évaluer les jeux de données, vous devez indiquer le nom de l’action marketing dans le chemin d’une requête de POST, tout en indiquant les ID de jeu de données dans le corps de la requête, comme indiqué dans l’exemple ci-dessous.
+Pour évaluer les jeux de données, vous devez fournir le nom de l’action marketing dans le chemin d’une requête de POST, tout en fournissant les identifiants des jeux de données dans le corps de la requête, comme illustré dans l’exemple ci-dessous.
 
 **Format d’API**
 
@@ -202,11 +201,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Paramètre | Description |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nom de l’action marketing associée à la stratégie d’utilisation des données par laquelle vous évaluez les jeux de données. Selon que la stratégie a été définie par Adobe ou par votre organisation, vous devez utiliser `/marketingActions/core` ou `/marketingActions/custom`, respectivement. |
+| `{MARKETING_ACTION_NAME}` | Nom de l’action marketing associée à la stratégie d’utilisation des données que vous évaluez les jeux de données. Selon que la stratégie a été définie par Adobe ou par votre organisation, vous devez utiliser `/marketingActions/core` ou `/marketingActions/custom`, respectivement. |
 
 **Requête**
 
-La requête suivante teste l&#39;action marketing `exportToThirdParty` par rapport aux jeux de données obtenus à l&#39;étape [précédente](#datasets). La charge utile de requête est un tableau contenant les ID de chaque jeu de données.
+La requête suivante teste l’action marketing `exportToThirdParty` par rapport aux jeux de données obtenus à l’ [étape précédente](#datasets). Le payload de requête est un tableau contenant les identifiants de chaque jeu de données.
 
 ```shell
 curl -X POST \
@@ -235,7 +234,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse positive renvoie l’URI de l’action marketing, les étiquettes d’utilisation des données collectées à partir des jeux de données fournis et une liste de toute stratégie d’utilisation des données qui a été violée suite au test de l’action par rapport à ces étiquettes. Dans cet exemple, la stratégie &quot;Exporter les données vers un tiers&quot; est affichée dans la baie `violatedPolicies`, ce qui indique que l&#39;action marketing a déclenché une violation de la stratégie.
+Une réponse réussie renvoie l’URI de l’action marketing, les libellés d’utilisation des données collectés à partir des jeux de données fournis et une liste de toutes les stratégies d’utilisation des données violées suite au test de l’action en fonction de ces libellés. Dans cet exemple, la stratégie &quot;Export Data to Third Party&quot; s’affiche dans le tableau `violatedPolicies`, indiquant que l’action marketing a déclenché une violation de la stratégie.
 
 ```json
 {
@@ -361,23 +360,23 @@ Une réponse positive renvoie l’URI de l’action marketing, les étiquettes d
 
 | Propriété | Description |
 | --- | --- |
-| `duleLabels` | Liste d’étiquettes d’utilisation des données extraites des jeux de données fournis. |
+| `duleLabels` | Liste des libellés d’utilisation des données extraits des jeux de données fournis. |
 | `discoveredLabels` | Liste des jeux de données fournis dans le payload de la requête affichant les libellés au niveau du jeu de données et au niveau du champ trouvées dans chaque jeu. |
-| `violatedPolicies` | Tableau répertoriant toutes les stratégies d&#39;utilisation des données qui ont été violées en testant l&#39;action marketing (spécifiée dans `marketingActionRef`) par rapport au `duleLabels` fourni. |
+| `violatedPolicies` | Un tableau répertoriant toutes les stratégies d’utilisation des données violées lors du test de l’action marketing (spécifiée dans `marketingActionRef`) par rapport à la balise `duleLabels` fournie. |
 
-En utilisant les données renvoyées dans la réponse de l’API, vous pouvez configurer des protocoles dans votre application d’expérience afin d’appliquer de manière appropriée les violations de stratégie lorsqu’elles se produisent.
+En utilisant les données renvoyées dans la réponse de l’API, vous pouvez configurer des protocoles dans votre application d’expérience afin d’appliquer correctement les violations de stratégie lorsqu’elles se produisent.
 
 ## Filtrage des champs de données
 
-Si votre segment d’audience ne réussit pas l’évaluation, vous pouvez ajuster les données incluses dans le segment par l’une des deux méthodes décrites ci-dessous.
+Si votre segment d’audience ne réussit pas l’évaluation, vous pouvez ajuster les données incluses dans le segment à l’aide de l’une des deux méthodes décrites ci-dessous.
 
 ### Mise à jour de la stratégie de fusion de la définition de segment
 
-La mise à jour de la stratégie de fusion d’une définition de segment modifie les jeux de données et les champs qui seront inclus dans l’exécution de la tâche de segmentation. Pour plus d&#39;informations, consultez la section [mise à jour d&#39;une stratégie de fusion existante](../../profile/api/merge-policies.md#update) dans le didacticiel de stratégie de fusion d&#39;API.
+La mise à jour de la stratégie de fusion d’une définition de segment modifie les jeux de données et les champs qui seront inclus dans l’exécution de la tâche de segmentation. Pour plus d’informations, consultez la section [Mise à jour d’une stratégie de fusion existante](../../profile/api/merge-policies.md#update) dans le tutoriel sur les stratégies de fusion d’API .
 
 ### Restriction des champs de données spécifiques lors de l’exportation du segment
 
-Lors de l’exportation d’un segment vers un jeu de données à l’aide de l’API [!DNL Segmentation], vous pouvez filtrer les données incluses dans l’exportation à l’aide du paramètre `fields`. Tous les champs de données ajoutés à ce paramètre seront inclus dans l’exportation, tandis que tous les autres champs de données en seront exclus.
+Lors de l’exportation d’un segment vers un jeu de données à l’aide de l’API [!DNL Segmentation], vous pouvez filtrer les données incluses dans l’exportation à l’aide du paramètre `fields` . Tous les champs de données ajoutés à ce paramètre seront inclus dans l’exportation, tandis que tous les autres champs de données en seront exclus.
 
 Prenons l’exemple d’un segment dont les champs de données sont nommés « A », « B » et « C ». Si vous ne souhaitez exporter que le champ « C », le `fields` paramètre contiendra seulement le champ « C ». Ainsi, les champs « A » et « B » seront exclus lors de l’exportation du segment.
 
@@ -385,4 +384,4 @@ Pour plus d’informations, consultez la section sur l’[exportation d’un seg
 
 ## Étapes suivantes
 
-Dans ce tutoriel, vous avez cherché les libellés d’utilisation des données associés à un segment ciblé et les avez testés pour détecter des violations de stratégie en fonction d’actions marketing spécifiques. Pour plus d&#39;informations sur [!DNL Data Governance] dans [!DNL Experience Platform], veuillez lire l&#39;aperçu pour [[!DNL Data Governance]](../../data-governance/home.md).
+Dans ce tutoriel, vous avez cherché les libellés d’utilisation des données associés à un segment ciblé et les avez testés pour détecter des violations de stratégie en fonction d’actions marketing spécifiques. Pour plus d’informations sur [!DNL Data Governance] dans [!DNL Experience Platform], veuillez lire la présentation de [[!DNL Data Governance]](../../data-governance/home.md).

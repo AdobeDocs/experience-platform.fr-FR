@@ -5,10 +5,10 @@ title: Guide de l’API Schema Registry
 description: L’API Schema Registry permet aux développeurs de gérer par programmation tous les schémas et toutes les ressources XDM (Experience Data Model) associées dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: c2ca679e046f59d05e2d12ca83bc1b2496b2288f
+source-git-commit: 6ba8da07a4fb36c6e8bd2ede8ac415edaabe0ef6
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 10%
+source-wordcount: '983'
+ht-degree: 9%
 
 ---
 
@@ -24,7 +24,7 @@ Ces points d’entrée sont décrits ci-dessous. Consultez le guide de chaque po
 >
 >XDM utilise le formatage du schéma JSON pour décrire et valider la structure des données d’expérience client ingérées. Avant d’utiliser l’API Schema Registry, il est vivement recommandé de consulter la [documentation officielle du schéma JSON](https://json-schema.org/) afin de mieux comprendre cette technologie sous-jacente.
 
-Pour afficher tous les points de terminaison disponibles et les opérations CRUD, consultez la [référence de l’API Schema Registry](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Pour afficher tous les points de terminaison disponibles et les opérations CRUD, consultez la [référence de l’API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## Schémas
 

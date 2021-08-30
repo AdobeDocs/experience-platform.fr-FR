@@ -6,16 +6,16 @@ topic-legacy: policies
 type: Tutorial
 description: L’API Policy Service vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés d’utilisation. Ce document fournit un tutoriel détaillé sur la création d’une stratégie à l’aide de l’API Policy Service.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '1219'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '1215'
+ht-degree: 99%
 
 ---
 
 # Création d’une stratégie d’utilisation des données dans l’API
 
-L’[API Policy Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés d’utilisation.
+L’[API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés d’utilisation.
 
 Ce document fournit un tutoriel détaillé sur la création d’une stratégie à l’aide de l’API [!DNL Policy Service]. Pour consulter un guide plus complet sur les différentes opérations disponibles dans l’API, référez-vous au [guide de développement de Policy Service](../api/getting-started.md).
 

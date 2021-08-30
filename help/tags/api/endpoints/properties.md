@@ -1,18 +1,18 @@
 ---
 title: Point d’entrée Propriétés
-description: Découvrez comment effectuer des appels vers le point d’entrée /properties dans l’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+description: Découvrez comment effectuer des appels vers le point d’entrée /Propriétés dans l’API Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 11%
+source-wordcount: '1146'
+ht-degree: 99%
 
 ---
 
 # Point d’entrée Propriétés
 
-Une propriété est un concept de conteneur qui contient la plupart des autres ressources disponibles dans l’API Reactor. Vous gérez les propriétés par programmation à l’aide du point de terminaison `/properties`.
+Une propriété est un concept de conteneur qui assure le disponibilité de la plupart des autres ressources dans l’API Reactor. Vous gérez les propriétés par programmation à l’aide du point d’entrée `/properties`.
 
-Dans la hiérarchie de ressources, une propriété est propriétaire des éléments suivants :
+Dans la hiérarchie Ressource, une propriété est considérée propriétaire des éléments suivants :
 
 * [Versions](./builds.md)
 * [Rappels](./callbacks.md)
@@ -24,19 +24,19 @@ Dans la hiérarchie de ressources, une propriété est propriétaire des éléme
 * [Composants de  règle](./rule-components.md)
 * [Règles](./rules.md)
 
-Une propriété appartient exactement à une [société](./companies.md). Une société peut avoir plusieurs propriétés.
+Une propriété appartient à une seule [société](./companies.md). Une société peut contenir plusieurs propriétés.
 
 Pour plus d’informations sur les propriétés et leur rôle dans la gestion des balises, reportez-vous à la présentation des [entreprises et propriétés](../../ui/administration/companies-and-properties.md).
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, veuillez consulter le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
 
-## Récupération d’une liste de propriétés {#list}
+## Récupération dʼune liste de propriétés {#list}
 
-Vous pouvez récupérer une liste de propriétés appartenant à l’entreprise en incluant l’identifiant de l’entreprise dans le chemin d’une demande de GET.
+Vous pouvez récupérer une liste de propriétés appartenant à la société en incluant l’identifiant de l’entreprise dans le chemin d&#39;accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /companies/{COMPANY_ID}/properties
@@ -44,13 +44,13 @@ GET /companies/{COMPANY_ID}/properties
 
 | Paramètre | Description |
 | --- | --- |
-| `COMPANY_ID` | `id` de la société propriétaire des propriétés que vous souhaitez répertorier. |
+| `COMPANY_ID` | Champ `id` de la société qui détient les propriétés que vous souhaitez répertorier. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les propriétés répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md) .
+>À l’aide des paramètres de requête, les propriétés répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -258,9 +258,9 @@ Une réponse réussie renvoie une liste de propriétés pour la société spéci
 
 ## Recherche d’une propriété {#lookup}
 
-Vous pouvez rechercher une propriété en fournissant son identifiant dans le chemin d’accès d’une requête de GET.
+Vous pouvez rechercher une propriété en fournissant son identifiant dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /properties/{PROPERTY_ID}
@@ -268,7 +268,7 @@ GET /properties/{PROPERTY_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `PROPERTY_ID` | `id` de la propriété que vous souhaitez rechercher. |
+| `PROPERTY_ID` | Champ `id` de la propriété que vous souhaitez rechercher. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -286,7 +286,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la propriété.
+Une réponse réussie renvoie les détails au sujet de la propriété.
 
 ```json
 {
@@ -381,9 +381,9 @@ Une réponse réussie renvoie les détails de la propriété.
 
 ## Création d’une propriété {#create}
 
-Vous pouvez créer une propriété en effectuant une requête de POST.
+Vous pouvez créer une propriété en effectuant une requête POST.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /company/{COMPANY_ID}/properties
@@ -391,13 +391,13 @@ POST /company/{COMPANY_ID}/properties
 
 | Paramètre | Description |
 | --- | --- |
-| `COMPANY_ID` | `id` de la société sous laquelle vous définissez la propriété. |
+| `COMPANY_ID` | Champ `id` de la société sous laquelle vous définissez la propriété. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante crée une propriété pour la propriété spécifiée. L’appel associe également la propriété à une extension existante par le biais de la propriété `relationships`. Pour plus d’informations, consultez le guide sur les [relations](../guides/relationships.md) .
+La requête suivante crée une propriété pour la propriété spécifiée. L’appel associe également la propriété à une extension existante par le biais de la propriété `relationships`. Pour plus d’informations, consultez le guide sur les [relations](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -426,15 +426,15 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes.name` | **(Obligatoire)** Nom lisible de la propriété. |
-| `attributes.platform` | **(Obligatoire)** Plateforme de la propriété. Peut être `web` pour les propriétés web ou `mobile` ou `edge` pour les propriétés mobiles. |
-| `attributes.domains` | **(Requis pour les propriétés web)** Tableau de domaines d’URL pour la propriété. |
+| `attributes.name` | **(Obligatoire)** Nom lisible par l&#39;utilisateur de la propriété. |
+| `attributes.platform` | **(Obligatoire)** Plateforme de la propriété. Peut être `web` pour les propriétés web ou `mobile` ou encore `edge` pour les propriétés mobiles. |
+| `attributes.domains` | **(Obligatoire pour les propriétés web)** Tableau de domaines d’URL pour la propriété. |
 | `attributes.development` | Valeur booléenne qui indique s’il s’agit d’une propriété de développement. |
 | `attributes.privacy` | Chaîne pouvant être utilisée pour faire référence à des considérations liées à la confidentialité pour la propriété. |
 | `attributes.rule_component_sequencing_enabled` | Valeur booléenne indiquant si le séquencement des composants de règle doit être activé pour cette propriété. |
-| `attributes.ssl_enabled` | Valeur booléenne indiquant si SSL (Secure Sockets Layer) doit être activé pour cette propriété. |
-| `attributes.undefined_vars_return_empty` | Valeur booléenne indiquant si les variables non définies doivent être renvoyées comme vides pour cette propriété. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `properties`. |
+| `attributes.ssl_enabled` | Valeur booléenne indiquant si le protocole SSL (Secure Sockets Layer) doit être activé pour cette propriété. |
+| `attributes.undefined_vars_return_empty` | Valeur booléenne indiquant si les variables non définies doivent être renvoyées comme étant vides pour cette propriété. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `properties`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -535,9 +535,9 @@ Une réponse réussie renvoie les détails de la propriété nouvellement créé
 
 ## Mettre à jour une propriété {#update}
 
-Vous pouvez mettre à jour une propriété en incluant son identifiant dans le chemin d’accès d’une requête de PATCH.
+Vous pouvez mettre à jour une propriété en incluant son identifiant dans le chemin d’accès d’une requête PATCH.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /properties/{PROPERTY_ID}
@@ -545,7 +545,7 @@ PATCH /properties/{PROPERTY_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `PROPERTY_ID` | `id` de la propriété que vous souhaitez mettre à jour. |
+| `PROPERTY_ID` | Champ `id` de la propriété que vous souhaitez mettre à jour. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -576,9 +576,9 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour la propriété. Les attributs suivants peuvent être mis à jour pour une propriété : <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
-| `id` | `id` de la propriété que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{PROPERTY_ID}` fournie dans le chemin de requête. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `properties`. |
+| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour la propriété. Pour une propriété donnée, les attributs suivants peuvent être mis à jour : <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
+| `id` | Le `id` de la propriété que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{PROPERTY_ID}` fournie dans le chemin d’accès de la requête. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `properties`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -679,9 +679,9 @@ Une réponse réussie renvoie les détails de la propriété mise à jour.
 
 ## Suppression d’une propriété
 
-Vous pouvez supprimer une propriété en incluant son identifiant dans le chemin d’accès d’une requête de DELETE.
+Vous pouvez supprimer une propriété en incluant son identifiant dans le chemin dʼaccès dʼune requête DELETE.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /properties/{PROPERTY_ID}
@@ -709,19 +709,19 @@ Une réponse réussie renvoie un état HTTP 204 (No Content) sans corps de répo
 
 ## Gestion des notes d’une propriété {#notes}
 
-Les propriétés sont des ressources &quot;remarquables&quot;, ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource. Pour plus d’informations sur la gestion des notes pour les propriétés et d’autres ressources compatibles, consultez le [guide de point de fin de notes](./notes.md) .
+Les propriétés sont des ressources « remarquables », ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource. Pour plus d’informations sur la façon de gérer des notes pour les propriétés et d’autres ressources compatibles, consultez le [guide des points d’entrée de notes](./notes.md).
 
-## Récupération des ressources associées pour une propriété {#related}
+## Récupération des ressources associées à une propriété {#related}
 
-Les appels suivants montrent comment récupérer les ressources associées pour une propriété. Lorsque [recherche une propriété](#lookup), ces relations sont répertoriées sous la propriété `relationships`.
+Les appels suivants montrent comment récupérer les ressources associés à une propriété. Lorsque [recherche une propriété](#lookup), ces relations sont répertoriées sous la propriété `relationships`.
 
-Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md) .
+Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md).
 
 ### Liste des rappels associés à une propriété {#callbacks}
 
 Vous pouvez répertorier les [rappels](./callbacks.md) enregistrés sur une propriété en ajoutant `/callbacks` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /properties/{PROPERTY_ID}/callbacks
@@ -792,11 +792,11 @@ Une réponse réussie renvoie une liste de rappels détenus par la propriété s
 }
 ```
 
-### Liste des éléments de données associés pour une propriété {#data-elements}
+### Liste des éléments de données associés à une propriété {#data-elements}
 
 Vous pouvez répertorier les [éléments de données](./data-elements.md) qui sont détenus par une propriété en ajoutant `/data_elements` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /properties/{PROPERTY_ID}/data_elements
@@ -933,11 +933,11 @@ Une réponse réussie renvoie une liste d’éléments de données détenus par 
 }
 ```
 
-### Liste des environnements associés pour une propriété {#environments}
+### Liste des environnements associés à une propriété {#environments}
 
 Vous pouvez répertorier les [environnements](./environments.md) qui sont détenus par une propriété en ajoutant `/environments` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /properties/{PROPERTY_ID}/environments
@@ -1053,11 +1053,11 @@ Une réponse réussie renvoie une liste d’environnements détenus par la propr
 }
 ```
 
-### Liste des extensions associées pour une propriété {#extensions}
+### Liste des extensions associées à une propriété {#extensions}
 
 Vous pouvez répertorier les [extensions](./extensions.md) qui sont détenues par une propriété en ajoutant `/extensions` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /properties/{PROPERTY_ID}/extensions
@@ -1184,11 +1184,11 @@ Une réponse réussie renvoie une liste d’extensions détenues par la proprié
 }
 ```
 
-### Liste des hôtes associés pour une propriété {#hosts}
+### Liste des hôtes associés à une propriété {#hosts}
 
 Vous pouvez répertorier les [hôtes](./hosts.md) utilisés par une propriété en ajoutant `/hosts` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /properties/{PROPERTY_ID}/hosts
@@ -1262,11 +1262,11 @@ Une réponse réussie renvoie une liste d’hôtes utilisés par une propriété
 }
 ```
 
-### Liste des règles associées pour une propriété {#rules}
+### Liste des règles associées à une propriété {#rules}
 
 Vous pouvez répertorier les [règles](./rules.md) utilisées par une propriété en ajoutant `/rules` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /properties/{PROPERTY_ID}/rules
@@ -1375,11 +1375,11 @@ Une réponse réussie renvoie une liste de règles utilisées par une propriét�
 }
 ```
 
-### Recherche de la société associée pour une propriété {#company}
+### Recherche de la société associée à une propriété {#company}
 
-Vous pouvez rechercher la société propriétaire d’une propriété en ajoutant `/company` au chemin d’accès d’une requête de recherche.
+Vous pouvez rechercher la société qui détient une propriété en ajoutant `/company` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /properties/{PROPERTY_ID}/company
@@ -1387,7 +1387,7 @@ GET /properties/{PROPERTY_ID}/company
 
 | Paramètre | Description |
 | --- | --- |
-| `{PROPERTY_ID}` | `id` de la propriété dont vous souhaitez rechercher la société. |
+| `{PROPERTY_ID}` | `id` de la propriété dont vous souhaitez rechercher la société détentrice. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1405,7 +1405,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la société de la propriété spécifiée.
+Une réponse réussie renvoie les détails de la société détentrice de la propriété spécifiée.
 
 ```json
 {

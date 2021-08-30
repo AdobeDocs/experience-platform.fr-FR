@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Point de terminaison de l’API des types de données
 description: Le point d’entrée /datatypes de l’API Schema Registry vous permet de gérer par programmation les types de données XDM dans votre application d’expérience.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1168'
 ht-degree: 14%
 
 ---
@@ -17,7 +17,7 @@ Les types de données sont utilisés comme champs de type référence dans des c
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[[!DNL Schema Registry] API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
 
 ## Récupération d’une liste de types de données {#list}
 

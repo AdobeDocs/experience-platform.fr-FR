@@ -1,26 +1,26 @@
 ---
 title: Point d’entrée des profils
 description: Découvrez comment effectuer des appels vers le point d’entrée /profiles dans l’API Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 6%
+source-wordcount: '170'
+ht-degree: 97%
 
 ---
 
-# Point de terminaison de profil
+# Point d’entrée de profil
 
-Dans l’API Reactor, un profil représente un utilisateur Adobe Experience Platform. L’API Reactor ne conserve pas sa propre base de données d’utilisateurs et d’autorisations. Elle repose plutôt sur les identifiants d’Adobe gérés par [le système de gestion des identités (IMS)](https://helpx.adobe.com/fr/enterprise/using/identity.html) de l’Adobe.
+Dans l’API Reactor, un profil représente un utilisateur Adobe Experience Platform. L’API Reactor ne conserve pas sa propre base de données d’utilisateurs et d’autorisations. Elle repose plutôt sur les Adobe ID gérés par le [sytème IMS (Identity Management System)](https://helpx.adobe.com/fr/enterprise/using/identity.html) d’Adobe.
 
-Un profil contient toutes les informations sur l’utilisateur connecté, y compris toutes les organisations IMS auxquelles il appartient, les profils de produit auxquels il appartient dans chaque organisation et les droits dont il dispose de chaque profil de produit.
+Un profil contient toutes les informations sur l’utilisateur connecté, y compris toutes les organisations IMS auxquelles il appartient, les profils de produit auxquels il appartient au sein de chaque organisation ainsi que les droits dont il dispose sur chaque profil de produit.
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, veuillez consulter le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
 
 ## Récupération du profil actif {#lookup}
 
-Vous pouvez récupérer les détails du profil actuellement connecté en envoyant une requête de GET au point de terminaison `/profile` .
+Vous pouvez récupérer les détails du profil actuellement connecté en envoyant une requête GET au point d’entrée `/profile`.
 
 **Format d’API**
 

@@ -1,28 +1,28 @@
 ---
 title: Point d’entrée des extensions
-description: Découvrez comment effectuer des appels au point de terminaison /extensions dans l’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+description: Découvrez comment effectuer des appels au point d’entrée /extensions dans l’API Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 10%
+source-wordcount: '977'
+ht-degree: 99%
 
 ---
 
 # Point d’entrée des extensions
 
-Dans l’API Reactor, une extension représente l’instance installée d’un package d’extension [](./extension-packages.md). Une extension rend les fonctionnalités définies par un package d’extension disponibles pour une [propriété](./properties.md). Ces fonctionnalités sont exploitées lors de la création des [extensions](./data-elements.md) et des [composants de règle](./rule-components.md).
+Dans l’API Reactor, une extension représente l’instance installée d’un [package d’extension](./extension-packages.md). Une extension rend les fonctionnalités définies par un package d’extension disponibles pour une [propriété](./properties.md). Ces fonctionnalités sont exploitées lors de la création des [extensions](./data-elements.md) et des [composants de règle](./rule-components.md).
 
 Une extension appartient à une seule propriété. Une propriété peut avoir de nombreuses extensions, mais pas plus d’une instance installée d’un package d’extension donné.
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
 
-## Récupération d’une liste d’extensions {#list}
+## Récupération dʼune liste dʼextensions {#list}
 
-Vous pouvez récupérer une liste d’extensions pour une propriété en effectuant une requête de GET.
+Vous pouvez récupérer une liste d’extensions pour une propriété en effectuant une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET properties/{PROPERTY_ID}/extensions
@@ -36,7 +36,7 @@ GET properties/{PROPERTY_ID}/extensions
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les extensions répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md) .
+>À l’aide des paramètres de requête, les extensions répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -155,13 +155,13 @@ Une réponse réussie renvoie une liste d’extensions définies sous la propri�
 
 ## Recherche d’une extension {#lookup}
 
-Vous pouvez rechercher une extension en fournissant son identifiant dans le chemin d’accès d’une requête de GET.
+Vous pouvez rechercher une extension en fournissant son identifiant dans le chemin d’accès d’une requête GET.
 
 >[!NOTE]
 >
 >Lorsque des extensions sont supprimées, elles sont marquées comme supprimées dans le système, mais ne sont pas réellement supprimées. Il est donc possible de récupérer une extension supprimée. Les extensions supprimées peuvent être identifiées par la présence d’une propriété `deleted_at` dans la balise `meta` des données d’extension renvoyées.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /extensions/{EXTENSION_ID}
@@ -169,7 +169,7 @@ GET /extensions/{EXTENSION_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `EXTENSION_ID` | `id` de l’extension que vous souhaitez rechercher. |
+| `EXTENSION_ID` | Le `id` de l’extension que vous voulez rechercher. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -281,7 +281,7 @@ Une réponse réussie renvoie les détails de l’extension.
 
 Les extensions sont créées en référençant un [package d’extension](./extension-packages.md) et en ajoutant l’extension installée à une propriété. Une fois la tâche d’installation terminée, une réponse est renvoyée, indiquant si l’extension a été installée avec succès.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /properties/{PROPERTY_ID}/extensions
@@ -289,7 +289,7 @@ POST /properties/{PROPERTY_ID}/extensions
 
 | Paramètre | Description |
 | --- | --- |
-| `PROPERTY_ID` | `id` de la propriété sous laquelle vous souhaitez installer l’extension. |
+| `PROPERTY_ID` | Le `id` de la propriété sous laquelle vous souhaitez installer l’extension. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -325,9 +325,9 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `relationships.extension_package` | **(Obligatoire)** Objet faisant référence à l’identifiant du package d’extension en cours d’installation. |
-| `attributes.delegate_descriptor_id` | Si votre extension nécessite des paramètres personnalisés, elle nécessite également un identifiant de descripteur délégué. Pour plus d’informations, consultez le guide sur les [ID de descripteur délégué](../guides/delegate-descriptor-ids.md) . |
+| `attributes.delegate_descriptor_id` | Si votre extension requiert des paramètres personnalisés, elle requiert alors également un ID de descripteur de délégué. Pour plus d’informations, consultez le guide sur les [identifiants de descripteur délégué](../guides/delegate-descriptor-ids.md). |
 | `attributes.enabled` | Valeur booléenne indiquant si l’extension est activée. |
-| `attributes.settings` | Un objet JSON settings représenté sous la forme d’une chaîne. |
+| `attributes.settings` | Un objet JSON de paramétrage représenté sous la forme d’une chaîne. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -423,11 +423,11 @@ Une réponse réussie renvoie les détails de l’extension nouvellement créée
 }
 ```
 
-## Modification d’une extension {#revise}
+## Révision d’une extension {#revise}
 
-Vous pouvez réviser une extension en incluant son identifiant dans le chemin d’accès d’une requête de PATCH.
+Vous pouvez réviser une extension en incluant son identifiant dans le chemin d’accès d’une requête PATCH.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /extensions/{EXTENSION_ID}
@@ -441,7 +441,7 @@ PATCH /extensions/{EXTENSION_ID}
 
 **Requête**
 
-Comme pour [la création d’une extension](#create), une version locale du package révisé doit être téléchargée via les données de formulaire.
+Comme pour [la création d’une extension](#create), une version locale du module révisé doit être téléchargée via les données de formulaire.
 
 ```shell
 curl -X PATCH \
@@ -467,7 +467,7 @@ curl -X PATCH \
 | Propriété | Description |
 | --- | --- |
 | `attributes` | Attributs que vous souhaitez réviser. Pour les extensions, vous pouvez réviser leurs attributs `delegate_descriptor_id`, `enabled` et `settings`. |
-| `meta.action` | Doit être inclus avec une valeur `revise` lors de l’exécution d’une révision. |
+| `meta.action` | Doit être inclus avec une valeur de `revise` lors de l’exécution d’une révision. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -565,9 +565,9 @@ Une réponse réussie renvoie les détails de l’extension révisée, avec sa p
 
 ## Suppression d’une extension {#private-release}
 
-Vous pouvez supprimer une extension en incluant son identifiant dans le chemin d’accès d’une requête de DELETE.
+Vous pouvez supprimer une extension en incluant son identifiant dans le chemin dʼaccès dʼune requête DELETE.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /extensions/{EXTENSION_ID}
@@ -575,7 +575,7 @@ DELETE /extensions/{EXTENSION_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `EXTENSION_ID` | `id` de l’extension que vous souhaitez supprimer. |
+| `EXTENSION_ID` |  `id` de l’extension que vous souhaitez supprimer. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -595,19 +595,19 @@ Une réponse réussie renvoie un état HTTP 204 (No Content) sans corps de répo
 
 ## Gestion des notes pour une extension {#notes}
 
-Les extensions sont des ressources &quot;remarquables&quot;, ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource. Pour plus d’informations sur la gestion des notes pour les extensions et d’autres ressources compatibles, consultez le [guide de point de fin de notes](./notes.md) .
+Les extensions sont des ressources « remarquables », ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource. Pour plus d’informations sur la gestion des notes pour les extensions et d’autres ressources compatibles, consultez le [guide de point d’entrée des notes](./notes.md).
 
 ## Récupération des ressources associées pour une extension {#related}
 
-Les appels suivants montrent comment récupérer les ressources associées pour une extension. Lorsque [recherche une extension](#lookup), ces relations sont répertoriées sous la propriété `relationships`.
+Les appels suivants montrent comment récupérer les ressources associées pour une extension. Lors de la [recherche d’une extension](#lookup), ces relations sont répertoriées sous la propriété `relationships`.
 
-Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md) .
+Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md).
 
 ### Liste des bibliothèques associées pour une extension {#libraries}
 
 Vous pouvez répertorier les bibliothèques qui utilisent une extension en ajoutant `/libraries` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /extensions/{EXTENSION_ID}/libraries
@@ -727,9 +727,9 @@ Une réponse réussie renvoie une liste de bibliothèques qui utilisent l’exte
 
 ### Liste des révisions associées pour une extension {#revisions}
 
-Vous pouvez répertorier les révisions précédentes d’une extension en ajoutant `/revisions` au chemin d’accès d’une requête de recherche.
+Vous pouvez répertorier les précédentes révisions d’une extension en ajoutant `/revisions` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /extensions/{EXTENSION_ID}/revisions
@@ -939,11 +939,11 @@ Une réponse réussie renvoie une liste de révisions pour l’extension spécif
 }
 ```
 
-### Recherche du package d’extension associé pour une extension {#extension}
+### Recherche du module d’extension associé pour une extension {#extension}
 
-Vous pouvez rechercher le package d’extension sur lequel une extension est basée en ajoutant `/extension_package` au chemin d’accès d’une requête de GET.
+Vous pouvez rechercher le module d’extension sur lequel une extension est basée en ajoutant `/extension_package` au chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /extensions/{EXTENSION_ID}/extension_package
@@ -969,7 +969,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du package d’extension sur lequel l’extension spécifiée est basée. L’exemple de réponse ci-dessous a été tronqué pour l’espace.
+Une réponse réussie renvoie les détails du module d’extension sur lequel l’extension spécifiée est basée. La réponse ci-dessous a été réduite pour gagner de l’espace.
 
 ```json
 {
@@ -1176,9 +1176,9 @@ Une réponse réussie renvoie les détails du package d’extension sur lequel l
 
 ### Recherche de l’origine associée pour une extension {#origin}
 
-Vous pouvez rechercher l’origine d’une extension en ajoutant `/origin` au chemin d’une demande de GET. L’origine d’une extension est la révision précédente qui a été mise à jour pour créer la révision actuelle.
+Vous pouvez rechercher l’origine d’une extension en ajoutant `/origin` au chemin d’accès d’une requête GET. L’origine d’une extension est la révision précédente qui a été mise à jour pour créer la révision actuelle.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /extensions/{EXTENSION_ID}/origin
@@ -1296,9 +1296,9 @@ Une réponse réussie renvoie les détails de l’origine de l’extension spéc
 
 ### Recherche de la propriété associée pour une extension {#property}
 
-Vous pouvez rechercher la propriété propriétaire d’une extension en ajoutant `/property` au chemin d’accès d’une requête de GET.
+Vous pouvez rechercher la propriété détentrice d’une extension en ajoutant `/property` au chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /extensions/{EXTENSION_ID}/property
@@ -1324,7 +1324,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la propriété propriétaire de l’extension spécifiée.
+Une réponse réussie renvoie les détails de la propriété détentrice de l’extension spécifiée.
 
 ```json
 {

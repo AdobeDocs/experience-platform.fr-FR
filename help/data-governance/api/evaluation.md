@@ -5,10 +5,10 @@ title: Points d’entrée de l’API Policy Evaluation
 topic-legacy: developer guide
 description: Une fois les actions marketing créées et les stratégies définies, vous pouvez utiliser l’API Policy Service pour déterminer si certaines actions ne respectent pas les stratégies. Les contraintes renvoyées prennent la forme d’un ensemble de stratégies qui seraient enfreintes si l’action marketing était appliquée aux données spécifiées contenant les libellés d’utilisation des données.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '1544'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '1540'
+ht-degree: 99%
 
 ---
 
@@ -26,7 +26,7 @@ Les requêtes d’évaluation peuvent être effectuées de trois façons :
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’API [[!DNL Policy Service] ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Les points d’entrée d’API utilisés dans ce guide font partie de l’API [[!DNL Policy Service] ](https://www.adobe.io/experience-platform-apis/references/policy-service/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Évaluation des violations de stratégie à l’aide de libellés d’utilisation des données {#labels}
 

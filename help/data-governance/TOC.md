@@ -3,16 +3,16 @@ audience: user
 user-guide-title: Aide sur la gouvernance des données d’Adobe Experience Platform
 breadcrumb-title: Guide de gouvernance des données
 user-guide-description: Faites respecter les restrictions d’utilisation des données au moyen d’étiquettes, d’actions marketing et de stratégies.
-feature: Gouvernance des données
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '100'
-ht-degree: 100%
+feature: Data Governance
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '94'
+ht-degree: 94%
 
 ---
 
 
-# Gouvernance des données d’Adobe Experience Platform {#data-governance}
+# Gouvernance des données d’Adobe Experience Platform {#data-governance}
 
 * [Présentation de la gouvernance des données](home.md)
 * Libellés d’utilisation des données {#labels}
@@ -35,5 +35,5 @@ ht-degree: 100%
    * [Stratégies](api/policies.md)
    * [Actions marketing](api/marketing-actions.md)
    * [Évaluation](api/evaluation.md)
-* [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
+* [Référence d’API](https://www.adobe.io/experience-platform-apis/references/policy-service/)
 * [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)

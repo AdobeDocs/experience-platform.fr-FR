@@ -5,10 +5,10 @@ title: Présentation des stratégies dʼutilisation des données
 topic-legacy: policies
 description: Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 4aeb12aec026ab2dc29133dd44e54b453fb71fe3
-workflow-type: ht
-source-wordcount: '1077'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '1073'
+ht-degree: 99%
 
 ---
 
@@ -31,7 +31,7 @@ Un exemple d’action marketing peut être le souhait d’exporter un jeu de don
 >
 >En tant que telles, les actions marketing ne limitent pas l’utilisation des données. Elles doivent être incluses dans les stratégies d’utilisation des données activées afin que ces actions soient évaluées en cas de violation des stratégies.
 
-Lorsque des données sont utilisées dans le service de votre organisation, les actions marketing appropriées doivent être indiquées afin que toute violation de stratégie puisse être identifiée. Vous pouvez ensuite utiliser l’[API Policy Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) pour vérifier les violations de stratégie dans votre intégration.
+Lorsque des données sont utilisées dans le service de votre organisation, les actions marketing appropriées doivent être indiquées afin que toute violation de stratégie puisse être identifiée. Vous pouvez ensuite utiliser l’[API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) pour vérifier les violations de stratégie dans votre intégration.
 
 >[!NOTE]
 >

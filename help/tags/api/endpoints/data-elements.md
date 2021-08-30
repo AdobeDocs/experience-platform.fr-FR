@@ -1,18 +1,18 @@
 ---
 title: Point d’entrée des éléments de données
 description: Découvrez comment effectuer des appels au point d’entrée /data_elements dans l’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1415'
-ht-degree: 8%
+source-wordcount: '1411'
+ht-degree: 99%
 
 ---
 
 # Point d’entrée des éléments de données
 
-Un élément de données fonctionne comme une variable qui pointe vers un élément de données important dans votre application. Les éléments de données sont utilisés dans les configurations [rules](./rules.md) et [extension](./extensions.md). Lorsqu’une règle est déclenchée au moment de l’exécution dans un navigateur ou une application, la valeur de l’élément de données est résolue et utilisée dans la règle. Les éléments de données fonctionnent de la même manière pour les configurations d’extension.
+Un élément de données fonctionne comme une variable qui pointe vers une donnée importante dans votre application. Les éléments de données sont utilisés dans les configurations [règles](./rules.md) et [extension](./extensions.md). Lorsqu’une règle est déclenchée au moment de l’exécution dans un navigateur ou une application, la valeur de l’élément de données est résolue et utilisée dans la règle. Les éléments de données fonctionnent de la même manière pour les configurations d’extension.
 
-L’utilisation conjointe de plusieurs éléments de données génère un dictionnaire de données ou un mappage de données. Ce dictionnaire représente les données que Adobe Experience Platform connaît et peut utiliser.
+L’utilisation conjointe de plusieurs éléments de données génère un dictionnaire de données ou un mappage de données. Ce dictionnaire représente les données qu’Adobe Experience Platform connaît et peut utiliser.
 
 Un élément de données appartient exactement à une [propriété](./properties.md). Une propriété peut comporter de nombreux éléments de données.
 
@@ -20,13 +20,13 @@ Pour des informations plus générales sur les éléments de données et leur ut
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
 
 ## Récupération d’une liste d’éléments de données {#list}
 
-Vous pouvez récupérer une liste d’éléments de données pour une propriété en incluant l’identifiant de la propriété dans le chemin d’accès d’une requête de GET.
+Vous pouvez récupérer une liste d’éléments de données pour une propriété en incluant l’identifiant de la propriété dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /properties/{PROPERTY_ID}/data_elements
@@ -34,13 +34,13 @@ GET /properties/{PROPERTY_ID}/data_elements
 
 | Paramètre | Description |
 | --- | --- |
-| `PROPERTY_ID` | `id` de la propriété propriétaire des éléments de données. |
+| `PROPERTY_ID` | `id` de la propriété appartenant aux éléments de données. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les éléments de données répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md) .
+>À l’aide des paramètres de requête, les éléments de données répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -169,13 +169,13 @@ Une réponse réussie renvoie une liste d’éléments de données pour la propr
 
 ## Recherche d’un élément de données {#lookup}
 
-Vous pouvez rechercher un élément de données en fournissant son identifiant dans le chemin d’accès d’une requête de GET.
+Vous pouvez rechercher un élément de données en fournissant son identifiant dans le chemin d’accès d’une requête GET.
 
 >[!NOTE]
 >
->Lorsque des éléments de données sont supprimés, ils sont marqués comme supprimés, mais ne sont pas réellement supprimés du système. Il est donc possible de rechercher un élément de données supprimé. Les éléments de données supprimés peuvent être identifiés par la présence d’un attribut `data.meta.deleted_at`.
+>Lorsque des éléments de données sont supprimés, ils sont marqués comme supprimés, mais ils ne sont pas réellement supprimés du système. Il est donc possible de rechercher un élément de données supprimé. Les éléments de données supprimés peuvent être identifiés par la présence d’un attribut `data.meta.deleted_at`.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /data_elements/{DATA_ELEMENT_ID}
@@ -183,7 +183,7 @@ GET /data_elements/{DATA_ELEMENT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `DATA_ELEMENT_ID` | `id` de l’élément de données que vous souhaitez rechercher. |
+| `DATA_ELEMENT_ID` | Le `id` de l’élément de données que vous souhaitez rechercher. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -201,7 +201,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’élément de données.
+Une réponse réussie renvoie les détails de l&#39;élément de données.
 
 ```json
 {
@@ -303,9 +303,9 @@ Une réponse réussie renvoie les détails de l’élément de données.
 
 ## Créer un élément de données {#create}
 
-Vous pouvez créer un élément de données en effectuant une requête de POST.
+Vous pouvez créer un nouvel élément de données en effectuant une requête POST.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /properties/{PROPERTY_ID}/data_elements
@@ -313,13 +313,13 @@ POST /properties/{PROPERTY_ID}/data_elements
 
 | Paramètre | Description |
 | --- | --- |
-| `PROPERTY_ID` | `id` de la [propriété](./properties.md) sous laquelle vous définissez l’élément de données. |
+| `PROPERTY_ID` | Le `id` de la [propriété](./properties.md) sous laquelle vous définissez l’élément de données. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante crée un élément de données pour la propriété spécifiée. L’appel associe également l’élément de données à une extension existante par le biais de la propriété `relationships`. Pour plus d’informations, consultez le guide sur les [relations](../guides/relationships.md) .
+La requête suivante crée un nouvel élément de données pour la propriété spécifiée. L’appel associe également l’élément de données à une extension existante par le biais de la propriété `relationships`. Pour plus d’informations, consultez le guide sur la [relation](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -355,13 +355,13 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `attributes.name` | **(Obligatoire)** Nom lisible par l’utilisateur de l’élément de données. |
-| `attributes.delegate_descriptor_id` | **(Obligatoire)** Chaîne formatée qui associe l’élément de données à un package d’extension. Tous les éléments de données doivent être associés à un package d’extension lors de leur première création, car chaque package d’extension définit les types compatibles pour ses éléments de données délégués, ainsi que leur comportement prévu. Pour plus d’informations, consultez le guide sur les [ID de descripteur délégué](../guides/delegate-descriptor-ids.md) . |
-| `attributes.settings` | Un objet JSON settings représenté sous la forme d’une chaîne. |
+| `attributes.delegate_descriptor_id` | **(Obligatoire)** Chaîne formatée qui associe l’élément de données à un package d’extension. Tous les éléments de données doivent être associés à un package d’extension lors de leur première création, car chaque package d’extension définit les types compatibles pour ses éléments de données délégués, ainsi que leur comportement prévu. Pour plus d’informations, consultez le guide sur les [identifiants de descripteur délégué](../guides/delegate-descriptor-ids.md). |
+| `attributes.settings` | Un objet JSON de paramétrage représenté sous la forme d’une chaîne. |
 | `attributes.default_value` | Valeur par défaut à renvoyer si l’élément de données est évalué sur `undefined`. |
-| `attributes.enabled` | Valeur boolean indiquant si l’élément de données est activé. |
-| `attributes.force_lower_case` | Valeur boolean indiquant si la valeur de l’élément de données doit être convertie en minuscules avant d’être stockée. |
-| `attributes.clean_text` | Valeur boolean indiquant si les espaces de début et de fin doivent être supprimés de la valeur de l’élément de données avant d’être stockés. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `data_elements`. |
+| `attributes.enabled` | Valeur booléenne indiquant si l’élément de données est activé. |
+| `attributes.force_lower_case` | Valeur booléenne indiquant si la valeur de l’élément de données doit être convertie en minuscules avant d’être stockée. |
+| `attributes.clean_text` | Valeur booléenne indiquant si les espaces de début et de fin doivent être supprimés de la valeur de l’élément de données avant d’être stockés. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `data_elements`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -467,11 +467,11 @@ Une réponse réussie renvoie les détails de l’élément de données nouvelle
 }
 ```
 
-## Mise à jour d’un élément de données {#update}
+## Mettre à jour un élément de données {#update}
 
-Vous pouvez mettre à jour un élément de données en incluant son identifiant dans le chemin d’accès d’une requête de PATCH.
+Vous pouvez mettre à jour un élément de données en incluant son identifiant dans le chemin d’accès d’une requête PATCH.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /data_elements/{DATA_ELEMENT_ID}
@@ -479,7 +479,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `DATA_ELEMENT_ID` | `id` de l’élément de données que vous souhaitez mettre à jour. |
+| `DATA_ELEMENT_ID` | Le `id` de l’élément de données que vous souhaitez mettre à jour. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -508,14 +508,14 @@ curl -X PATCH \
 | Propriété | Description |
 | --- | --- |
 | `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour l’élément de données. Tous les attributs d’élément de données peuvent être mis à jour. Voir l’exemple d’appel pour [la création d’un élément de données](#create) pour une liste d’attributs et leur cas d’utilisation. |
-| `id` | `id` de l’élément de données que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{DATA_ELEMENT_ID}` fournie dans le chemin de requête. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `data_elements`. |
+| `id` | Le `id` de l&#39;élément de données que vous voulez à mettre à jour. Cela doit correspondre à la valeur `{DATA_ELEMENT_ID}` fournie dans le chemin de requête. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `data_elements`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’élément de données mis à jour.
+Une réponse réussie renvoie les détails de l&#39;élément de données mis à jour.
 
 ```json
 {
@@ -615,13 +615,13 @@ Une réponse réussie renvoie les détails de l’élément de données mis à j
 }
 ```
 
-## Modification d’un élément de données {#revise}
+## Réviser un élément de données {#revise}
 
-Lorsque vous révisez un élément de données, une nouvelle révision de l’élément de données est créée avec la révision actuelle (head). Chaque révision d’un élément de données possède son propre ID. L’élément de données d’origine peut être découvert par le biais d’un lien d’origine.
+Lorsque vous révisez un élément de données, une nouvelle révision de l’élément de données est créée avec la révision actuelle (head). Chaque révision d’un élément de données possède son propre identifiant. L’élément de données d’origine peut être découvert par le biais d’un lien d’origine.
 
-Vous pouvez réviser un élément de données en fournissant une propriété `meta.action` avec la valeur `revise` dans le corps d’une requête de PATCH.
+Vous pouvez réviser un élément de données en fournissant une propriété `meta.action` avec une valeur de `revise` dans le corps d’une requête PATCH.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /data_elements/{DATA_ELEMENT_ID}
@@ -629,7 +629,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `DATA_ELEMENT_ID` | `id` de l’élément de données que vous souhaitez réviser. |
+| `DATA_ELEMENT_ID` | Le `id` de l’élément de données que vous souhaitez réviser. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -661,7 +661,7 @@ curl -X PATCH \
 | `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour l’élément de données. Tous les attributs d’élément de données peuvent être mis à jour. Voir l’exemple d’appel pour [la création d’un élément de données](#create) pour une liste d’attributs et leur cas d’utilisation. |
 | `meta.action` | Lorsqu’elle est incluse avec une valeur `revise`, cette propriété indique qu’une nouvelle révision doit être créée pour l’élément de données. |
 | `id` | `id` de l’élément de données que vous souhaitez réviser. Cela doit correspondre à la valeur `{DATA_ELEMENT_ID}` fournie dans le chemin de requête. |
-| `type` | Type de ressource en cours de révision. Pour ce point de terminaison, la valeur doit être `data_elements`. |
+| `type` | Type de ressource en cours de révision. Pour ce point d’entrée, la valeur doit être `data_elements`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -767,11 +767,11 @@ Une réponse réussie renvoie les détails de la nouvelle révision de l’élé
 }
 ```
 
-## Suppression d’un élément de données
+## Supprimer un élément de données
 
-Vous pouvez supprimer un élément de données en incluant son identifiant dans le chemin d’accès d’une requête de DELETE.
+Vous pouvez supprimer un élément de données en incluant son identifiant dans le chemin dʼaccès dʼune requête DELETE.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /data_elements/{DATA_ELEMENT_ID}
@@ -779,7 +779,7 @@ DELETE /data_elements/{DATA_ELEMENT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `DATA_ELEMENT_ID` | `id` de l’élément de données que vous souhaitez supprimer. |
+| `DATA_ELEMENT_ID` | Le `id` de l’élément de données que vous souhaitez supprimer. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -797,21 +797,21 @@ curl -X DELETE \
 
 Une réponse réussie renvoie un état HTTP 204 (No Content) sans corps de réponse, indiquant que l’élément de données a été supprimé.
 
-## Gestion des notes d’un élément de données {#notes}
+## Gérer les notes d’un élément de données {#notes}
 
-Les éléments de données sont des ressources &quot;remarquables&quot;, ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource. Pour plus d’informations sur la gestion des notes pour les éléments de données et d’autres ressources compatibles, reportez-vous au [guide de point de fin de notes](./notes.md) .
+Les éléments de données sont des ressources « remarquables », ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource individuelle. Pour plus d’informations sur la gestion des notes pour les éléments de données et d’autres ressources compatibles, reportez-vous au [guide de point d&#39;entrée des notes](./notes.md).
 
-## Récupération des ressources associées pour un élément de données {#related}
+## Récupérer les ressources associées pour un élément de données {#related}
 
 Les appels suivants montrent comment récupérer les ressources associées pour un élément de données. Si [vous recherchez un élément de données](#lookup), ces relations sont répertoriées sous la propriété `relationships`.
 
-Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md) .
+Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md).
 
 ### Liste des bibliothèques associées pour un élément de données {#libraries}
 
 Vous pouvez répertorier les bibliothèques qui utilisent un élément de données en ajoutant `/libraries` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /data_elements/{DATA_ELEMENT_ID}/libraries
@@ -819,7 +819,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/libraries
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | `id` de l’élément de données dont vous souhaitez répertorier les bibliothèques. |
+| `{DATA_ELEMENT_ID}` | Le `id` de l’élément de données dont vous souhaitez répertorier les bibliothèques. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -931,9 +931,9 @@ Une réponse réussie renvoie une liste de bibliothèques qui utilisent l’él�
 
 ### Liste des révisions associées pour un élément de données {#revisions}
 
-Vous pouvez répertorier les révisions précédentes d’un élément de données en ajoutant `/revisions` au chemin d’une requête de recherche.
+Vous pouvez répertorier les révisions précédentes d’un élément de données en ajoutant `/revisions` au chemin d&#39;accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /data_elements/{DATA_ELEMENT_ID}/revisions
@@ -941,7 +941,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/revisions
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | `id` de l’élément de données dont vous souhaitez répertorier les révisions. |
+| `{DATA_ELEMENT_ID}` | Le `id` de l’élément de données dont vous souhaitez répertorier les révisions. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1165,9 +1165,9 @@ Une réponse réussie renvoie une liste de révisions pour l’élément de donn
 
 ### Recherche de l’extension associée pour un élément de données {#extension}
 
-Vous pouvez rechercher l’extension qui utilise un élément de données en ajoutant `/extension` au chemin d’une requête de GET.
+Vous pouvez rechercher l’extension qui utilise un élément de données en ajoutant `/extension` au chemin d&#39;accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /data_elements/{DATA_ELEMENT_ID}/extension
@@ -1175,7 +1175,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/extension
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | `id` de l’élément de données dont vous souhaitez rechercher l’extension. |
+| `{DATA_ELEMENT_ID}` | Le `id` de l’élément de données dont vous souhaitez rechercher l’extension. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1285,9 +1285,9 @@ Une réponse réussie renvoie les détails de l’extension qui utilise l’él�
 
 ### Recherche de l’origine associée pour un élément de données {#origin}
 
-Vous pouvez rechercher l’origine d’un élément de données en ajoutant `/origin` au chemin d’une requête de GET. L’origine d’un élément de données est la révision précédente qui a été mise à jour pour créer la révision actuelle.
+Vous pouvez rechercher l’origine d’un élément de données en ajoutant `/origin` au chemin d’une requête GET. L’origine d’un élément de données est la révision précédente qui a été mise à jour pour créer la révision actuelle.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /data_elements/{DATA_ELEMENT_ID}/origin
@@ -1415,9 +1415,9 @@ Une réponse réussie renvoie les détails de l’origine de l’élément de do
 
 ### Recherche de la propriété associée pour un élément de données {#property}
 
-Vous pouvez rechercher la propriété propriétaire d’un élément de données en ajoutant `/property` au chemin d’accès d’une requête de GET.
+Vous pouvez rechercher la propriété propriétaire d’un élément de données en ajoutant `/property` au chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /data_elements/{DATA_ELEMENT_ID}/property
@@ -1443,7 +1443,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la propriété propriétaire de l’élément de données spécifié.
+Une réponse réussie renvoie les détails de la propriété à laquelle l’élément de données spécifié appartient.
 
 ```json
 {

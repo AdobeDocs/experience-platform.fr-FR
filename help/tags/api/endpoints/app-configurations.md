@@ -1,10 +1,10 @@
 ---
 title: Point d’entrée des configurations d’application
 description: Découvrez comment effectuer des appels vers le point d’entrée /app_configurations dans l’API Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 11%
+source-wordcount: '586'
+ht-degree: 99%
 
 ---
 
@@ -12,17 +12,17 @@ ht-degree: 11%
 
 >[!WARNING]
 >
->L’implémentation du point de terminaison `/app_configurations` est en flux continu à mesure que des fonctionnalités sont ajoutées, supprimées et retravaillées.
+>L’implémentation du point d&#39;entrée `/app_configurations` se fait en flux continu à mesure que des fonctionnalités sont ajoutées, supprimées et retravaillées.
 
-Les configurations d’application permettent de stocker et de récupérer les informations d’identification en vue d’une utilisation ultérieure. Le point d’entrée `/app_configurations` de l’API Reactor vous permet de gérer par programmation les configurations d’application dans votre application d’expérience.
+Les configurations dʼapplication permettent de stocker et de récupérer les informations dʼidentification en vue dʼune utilisation ultérieure. Le point d’entrée `/app_configurations` de l’API Reactor vous permet de gérer par programmation les configurations d’application au sein de votre application d’expérience.
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, veuillez consulter le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
 
 ## Récupération d’une liste de configurations d’application {#list}
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /companies/{COMPANY_ID}/app_configurations
@@ -36,7 +36,7 @@ GET /companies/{COMPANY_ID}/app_configurations
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les configurations d’application répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md) .
+>À l’aide des paramètres de requête, les configurations d’application répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -100,9 +100,9 @@ Une réponse réussie renvoie une liste de configurations d’application.
 
 ## Recherche d’une configuration d’application {#lookup}
 
-Vous pouvez rechercher une configuration d’application en fournissant son identifiant dans le chemin d’accès d’une requête de GET.
+Vous pouvez rechercher une configuration d’application en fournissant son identifiant dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /app_configurations/{APP_CONFIGURATION_ID}
@@ -110,7 +110,7 @@ GET /app_configurations/{APP_CONFIGURATION_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `APP_CONFIGURATION_ID` | `id` de la configuration de l’application que vous souhaitez rechercher. |
+| `APP_CONFIGURATION_ID` | Le `id` de la configuration d’application que vous souhaitez rechercher. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -128,7 +128,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la configuration de l’application.
+Une réponse réussie renvoie les détails de la configuration d’application.
 
 ```json
 {
@@ -165,9 +165,9 @@ Une réponse réussie renvoie les détails de la configuration de l’applicatio
 
 ## Création d’une configuration d’application {#create}
 
-Vous pouvez créer une configuration d’application en effectuant une requête de POST.
+Vous pouvez créer une configuration d’application en effectuant une requête POST.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /companies/{COMPANY_ID}/app_configurations
@@ -175,7 +175,7 @@ POST /companies/{COMPANY_ID}/app_configurations
 
 | Paramètre | Description |
 | --- | --- |
-| `COMPANY_ID` | `id` de la [société](./companies.md) dans laquelle vous définissez la configuration de l’application. |
+| `COMPANY_ID` | Champ `id` de la [société](./companies.md) dans laquelle vous définissez la configuration d’application. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -219,7 +219,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la configuration de l’application nouvellement créée.
+Une réponse réussie renvoie les détails de la configuration d’application que vous venez de créer.
 
 ```json
 {
@@ -256,9 +256,9 @@ Une réponse réussie renvoie les détails de la configuration de l’applicatio
 
 ## Mise à jour d’une configuration d’application
 
-Vous pouvez mettre à jour une configuration d’application en incluant son identifiant dans le chemin d’accès d’une requête de PUT.
+Vous pouvez mettre à jour une configuration d’application en incluant son identifiant dans le chemin d’accès d’une requête PUT.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PUT /app_configurations/{APP_CONFIGURATION_ID}
@@ -266,13 +266,13 @@ PUT /app_configurations/{APP_CONFIGURATION_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `APP_CONFIGURATION_ID` | `id` de la configuration de l’application que vous souhaitez mettre à jour. |
+| `APP_CONFIGURATION_ID` | Champ `id` de la configuration d’application que vous souhaitez mettre à jour. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante met à jour `app_id` pour une configuration d’application existante.
+La requête suivante met à jour le `app_id` pour une configuration d’application existante.
 
 ```shell
 curl -X PUT \
@@ -294,15 +294,15 @@ curl -X PUT \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour la configuration de l’application. Chaque clé représente l’attribut de configuration de l’application particulier à mettre à jour, ainsi que la valeur correspondante vers laquelle elle doit être mise à jour.<br><br>Les attributs suivants peuvent être mis à jour pour les configurations d’application :<ul><li>`app_id`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`push_credential`</li></ul> |
-| `id` | `id` de la configuration de l’application que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{APP_CONFIGURATION_ID}` fournie dans le chemin de requête. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `app_configurations`. |
+| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour la configuration d’application. Chaque clé représente l’attribut de configuration d’application particulier à mettre à jour, ainsi que la valeur correspondante vers laquelle elle doit être mise à jour.<br><br>Les attributs suivants peuvent être mis à jour pour les configurations d’application :<ul><li>`app_id`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`push_credential`</li></ul> |
+| `id` | Champ `id` de la configuration d’application à mettre à jour. Cela doit correspondre à la valeur `{APP_CONFIGURATION_ID}` fournie dans le chemin d’accès de la requête. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `app_configurations`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la configuration de l’application mise à jour.
+Une réponse réussie renvoie les détails de la configuration d’application mise à jour.
 
 ```json
 {
@@ -339,9 +339,9 @@ Une réponse réussie renvoie les détails de la configuration de l’applicatio
 
 ## Suppression d’une configuration d’application
 
-Vous pouvez supprimer une configuration d’application en incluant son identifiant dans le chemin d’accès d’une requête de DELETE.
+Vous pouvez supprimer une configuration d’application en incluant son identifiant dans le chemin dʼaccès dʼune requête DELETE.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /app_configurations/{APP_CONFIGURATION_ID}
@@ -349,7 +349,7 @@ DELETE /app_configurations/{APP_CONFIGURATION_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `APP_CONFIGURATION_ID` | `id` de la configuration de l’application que vous souhaitez supprimer. |
+| `APP_CONFIGURATION_ID` | Champ `id` de la configuration d’application que vous souhaitez supprimer. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -365,4 +365,4 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 204 (No Content) sans corps de réponse, indiquant que la configuration de l’application a été supprimée.
+Une réponse réussie renvoie un statut HTTP 204 (No Content) sans corps de réponse, indiquant que la configuration d’application a été supprimée.

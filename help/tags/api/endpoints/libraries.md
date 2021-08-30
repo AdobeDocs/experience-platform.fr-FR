@@ -1,30 +1,30 @@
 ---
-title: Point de terminaison des bibliothèques
-description: Découvrez comment effectuer des appels vers le point de terminaison /library dans l’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Point d’entrée des bibliothèques
+description: Découvrez comment effectuer des appels vers le point d’entrée /bibliothèques dans l’API Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1588'
-ht-degree: 10%
+source-wordcount: '1584'
+ht-degree: 99%
 
 ---
 
-# Point de terminaison des bibliothèques
+# Point d’entrée des bibliothèques
 
-Une bibliothèque est un ensemble de ressources de balises ([extensions](./extensions.md), [rules](./rules.md) et [éléments de données](./data-elements.md)) qui représentent le comportement souhaité d’une [propriété](./properties.md). Le point de terminaison `/libraries` de l’API Reactor vous permet de gérer par programmation les bibliothèques de vos propriétés de balise.
+Une bibliothèque est un ensemble de ressources de balises ([extensions](./extensions.md), [règles](./rules.md) et [éléments de données](./data-elements.md)) qui représentent le comportement souhaité d’une [propriété](./properties.md). Le point d’entrée `/libraries` de l’API Reactor vous permet de gérer les bibliothèques de vos propriétés de balise par programme.
 
-Une bibliothèque appartient à une seule propriété. Une propriété peut comporter de nombreuses bibliothèques.
+Une bibliothèque appartient à une seule propriété exactement. Une propriété peut comporter de nombreuses bibliothèques.
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la marche à suivre pour s&#39;authentifier auprès de l&#39;API.
 
-Avant de travailler avec des bibliothèques dans l’API Reactor, il est important de comprendre les rôles que l’état et les environnements de bibliothèque jouent pour déterminer les actions que vous pouvez effectuer sur une bibliothèque particulière. Pour plus d’informations, consultez le guide sur le [flux de publication de bibliothèque](../../ui/publishing/publishing-flow.md) .
+Avant de travailler avec des bibliothèques dans l’API Reactor, il est important de comprendre les rôles joués par l’état et les environnements d’une bibliothèque pour déterminer les actions que vous pouvez effectuer sur une bibliothèque particulière. Pour plus d’informations, consultez le guide sur le [flux de publication des bibliothèques](../../ui/publishing/publishing-flow.md).
 
-## Récupération d’une liste de bibliothèques {#list}
+## Récupération dʼune liste de bibliothèques {#list}
 
-Vous pouvez récupérer une liste de bibliothèques pour une propriété en incluant l’identifiant de la propriété dans le chemin d’accès d’une requête de GET.
+Vous pouvez récupérer une liste de bibliothèques pour une propriété en incluant l’identifiant de la propriété dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /properties/{PROPERTY_ID}/libraries
@@ -32,13 +32,13 @@ GET /properties/{PROPERTY_ID}/libraries
 
 | Paramètre | Description |
 | --- | --- |
-| `PROPERTY_ID` | `id` de la propriété propriétaire des bibliothèques. |
+| `PROPERTY_ID` | `id` de la propriété qui détient les bibliothèques. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les bibliothèques répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md) .
+>À l’aide des paramètres de requête, les bibliothèques répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -148,9 +148,9 @@ Une réponse réussie renvoie une liste de bibliothèques pour la propriété sp
 
 ## Recherche d’une bibliothèque {#lookup}
 
-Vous pouvez rechercher une bibliothèque en fournissant son identifiant dans le chemin d’accès d’une requête de GET.
+Vous pouvez rechercher une bibliothèque en fournissant son identifiant dans le chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /libraries/{LIBRARY_ID}
@@ -259,9 +259,9 @@ Une réponse réussie renvoie les détails de la bibliothèque.
 
 ## créer une bibliothèque ; {#create}
 
-Vous pouvez créer une bibliothèque en effectuant une requête de POST.
+Vous pouvez créer une bibliothèque en effectuant une requête POST.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /properties/{PROPERTY_ID}/libraries
@@ -275,7 +275,7 @@ POST /properties/{PROPERTY_ID}/libraries
 
 **Requête**
 
-La requête suivante crée une bibliothèque pour la propriété spécifiée. Lors de la première création d’une bibliothèque, seul son attribut `name` peut être configuré. Pour ajouter des éléments de données, des extensions et des règles à la bibliothèque, vous devez créer des relations. Voir la section [Gestion des ressources de bibliothèque](#resources) pour plus d’informations.
+La requête suivante crée une bibliothèque pour la propriété spécifiée. Lors de la création initiale d’une bibliothèque, seul son attribut `name` peut être configuré. Pour ajouter des éléments de données, des extensions et des règles à la bibliothèque, vous devez créer des relations. Pour plus d’informations, consultez la section sur la [gestion des ressources de bibliothèques](#resources).
 
 ```shell
 curl -X POST \
@@ -296,8 +296,8 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes.name` | **(Obligatoire)** Nom lisible par l’utilisateur de la bibliothèque. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `libraries`. |
+| `attributes.name` | **(Obligatoire)** Nom lisible pour la bibliothèque. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `libraries`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -405,13 +405,13 @@ Une réponse réussie renvoie les détails de la bibliothèque nouvellement cré
 
 ## Gestion des ressources pour une bibliothèque {#resources}
 
-Les éléments de données, les extensions, les règles et l’environnement associés à une bibliothèque sont établis par le biais de relations. Les sections ci-dessous expliquent comment gérer ces relations par le biais d’appels API.
+Les éléments de données, les extensions, les règles et l’environnement associés à une bibliothèque sont établis par le biais de relations. Les sections ci-dessous expliquent comment gérer ces relations par le biais d’appels d’API.
 
 ### Ajout de ressources à une bibliothèque {#add-resources}
 
-Vous pouvez ajouter des ressources à une bibliothèque en ajoutant `/relationships` au chemin d’une requête de POST, suivi du type de ressource.
+Vous pouvez ajouter des ressources à une bibliothèque en ajoutant `/relationships` au chemin d’accès d’une requête POST, suivi du type de ressource.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
@@ -420,7 +420,7 @@ POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | Paramètre | Description |
 | --- | --- |
 | `{LIBRARY_ID}` | Identifiant de la bibliothèque à laquelle vous souhaitez ajouter des ressources. |
-| `{RESOURCE_TYPE}` | Type de ressource que vous ajoutez à la bibliothèque. Les valeurs suivantes sont acceptées : <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
+| `{RESOURCE_TYPE}` | Type de ressource que vous ajoutez à la bibliothèque. Les valeurs suivantes sont acceptées : <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -452,7 +452,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `id` | L’identifiant de la ressource que vous ajoutez à la bibliothèque. |
+| `id` | Identifiant de la ressource que vous ajoutez à la bibliothèque. |
 | `type` | Type de ressource que vous ajoutez à la bibliothèque. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -482,9 +482,9 @@ Une réponse réussie renvoie les détails des relations ajoutées. L’exécuti
 
 ### Remplacement des ressources d’une bibliothèque {#replace-resources}
 
-Vous pouvez remplacer toutes les ressources existantes d’un certain type pour une bibliothèque en ajoutant `/relationships` au chemin d’accès d’une requête de PATCH, suivi du type de ressource que vous remplacez.
+Vous pouvez remplacer toutes les ressources d’un certain type qui existent pour une bibliothèque en ajoutant `/relationships` au chemin d’accès d’une requête PATCH, suivi du type de ressource que vous remplacez.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
@@ -493,7 +493,7 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | Paramètre | Description |
 | --- | --- |
 | `{LIBRARY_ID}` | Identifiant de la bibliothèque dont vous souhaitez remplacer les relations. |
-| `{RESOURCE_TYPE}` | Type de ressource que vous remplacez. Les valeurs suivantes sont acceptées : <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
+| `{RESOURCE_TYPE}` | Type de ressource que vous remplacez. Les valeurs suivantes sont acceptées : <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -521,7 +521,7 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --- | --- |
-| `id` | L’identifiant de la ressource que vous ajoutez à la bibliothèque. |
+| `id` | Identifiant de la ressource que vous ajoutez à la bibliothèque. |
 | `type` | Type de ressource que vous ajoutez à la bibliothèque. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -545,11 +545,11 @@ Une réponse réussie renvoie les détails des relations mises à jour. L’exé
 }
 ```
 
-### Suppression de ressources pour une bibliothèque {#remove-resources}
+### Suppression de ressources d’une bibliothèque {#remove-resources}
 
-Vous pouvez supprimer des ressources existantes d’une bibliothèque en ajoutant `/relationships` au chemin d’accès d’une requête de DELETE, suivi du type de ressource que vous supprimez.
+Vous pouvez supprimer des ressources existantes d’une bibliothèque en ajoutant `/relationships` au chemin d’accès d’une requête DELETE, suivi du type de ressource que vous supprimez.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
@@ -558,7 +558,7 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | Paramètre | Description |
 | --- | --- |
 | `{LIBRARY_ID}` | Identifiant de la bibliothèque dont vous souhaitez supprimer les ressources. |
-| `{RESOURCE_TYPE}` | Type de ressource que vous supprimez. Les valeurs suivantes sont acceptées : <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
+| `{RESOURCE_TYPE}` | Type de ressource que vous supprimez. Les valeurs suivantes sont acceptées : <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -586,7 +586,7 @@ curl -X DELETE \
 
 | Propriété | Description |
 | --- | --- |
-| `id` | L’identifiant de la ressource que vous supprimez de la bibliothèque. |
+| `id` | Identifiant de la ressource que vous supprimez de la bibliothèque. |
 | `type` | Type de ressource que vous supprimez de la bibliothèque. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -609,9 +609,9 @@ Une réponse réussie renvoie les détails des relations mises à jour pour le t
 
 ## Affectation d’une bibliothèque à un environnement {#environment}
 
-Vous pouvez affecter une bibliothèque à un environnement `/relationships/environment` au chemin d’accès d’une requête de POST.
+Vous pouvez affecter une bibliothèque à un environnement en ajoutant `/relationships/environment` au chemin d’accès d’une requête POST.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /libraries/{LIBRARY_ID}/relationships/environment
@@ -619,7 +619,7 @@ POST /libraries/{LIBRARY_ID}/relationships/environment
 
 | Paramètre | Description |
 | --- | --- |
-| `{LIBRARY_ID}` | L’identifiant de la bibliothèque que vous souhaitez affecter. |
+| `{LIBRARY_ID}` | Identifiant de la bibliothèque que vous souhaitez affecter. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -643,8 +643,8 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `id` | L’identifiant de l’environnement auquel vous affectez la bibliothèque. |
-| `type` | Doit être défini sur `environments`. |
+| `id` | Identifiant de l’environnement auquel vous affectez la bibliothèque. |
+| `type` | Cette propriété doit être définie sur `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -667,9 +667,9 @@ Une réponse réussie renvoie les détails de la relation. L’exécution d’un
 
 ## Transition d’une bibliothèque {#transition}
 
-Vous pouvez transférer une bibliothèque vers un autre état de publication en incluant son identifiant dans le chemin d’accès d’une demande de PATCH et en fournissant une valeur `meta.action` appropriée dans le payload.
+Vous pouvez effectuer la transition d’une bibliothèque vers un autre état de publication en incluant son identifiant dans le chemin d’accès d’une requête PATCH et en fournissant une valeur `meta.action` appropriée dans le payload.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /libraries/{LIBRARY_ID}
@@ -683,7 +683,7 @@ PATCH /libraries/{LIBRARY_ID}
 
 **Requête**
 
-La requête suivante transforme l’état d’une bibliothèque existante, en fonction de la valeur `meta.action` fournie dans la payload. Les actions disponibles pour une bibliothèque dépendent de son état de publication actuel, comme indiqué dans le [flux de publication](../../ui/publishing/publishing-flow.md#state).
+La requête suivante entraîne la transition de l’état d’une bibliothèque existante, en fonction de la valeur `meta.action` fournie dans le payload. Les actions disponibles pour une bibliothèque dépendent de son état de publication actuel, comme indiqué dans le [flux de publication](../../ui/publishing/publishing-flow.md#state).
 
 ```shell
 curl -X PATCH \
@@ -705,9 +705,9 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --- | --- |
-| `meta.action` | Action de transition spécifique que vous souhaitez effectuer sur la bibliothèque. Les actions suivantes sont disponibles, selon l’état de publication actuel de la bibliothèque : <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
-| `id` | `id` de la bibliothèque que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{LIBRARY_ID}` fournie dans le chemin de requête. |
-| `type` | Le type de ressource en cours de mise à jour. Pour ce point de terminaison, la valeur doit être `libraries`. |
+| `meta.action` | Action de transition spécifique que vous souhaitez effectuer sur la bibliothèque. Les actions suivantes sont disponibles, selon l’état de publication actuel de la bibliothèque : <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
+| `id` | `id` de la bibliothèque que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{LIBRARY_ID}` fournie dans le chemin d’accès de la requête. |
+| `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `libraries`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -805,7 +805,7 @@ Une réponse réussie renvoie les détails de la bibliothèque mise à jour.
 
 Pour publier une bibliothèque en production, vérifiez qu’un environnement de production a été ajouté à la bibliothèque, puis créez une version.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /libraries/{LIBRARY_ID}/builds
@@ -904,19 +904,19 @@ curl -X POST \
 
 ## Gestion des notes d’une bibliothèque {#notes}
 
-Les bibliothèques sont des ressources &quot;remarquables&quot;, ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource. Pour plus d’informations sur la gestion des notes pour les bibliothèques et d’autres ressources compatibles, consultez le [guide de point de fin de notes](./notes.md) .
+Les bibliothèques sont des ressources « notables ». Cela signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource. Pour plus d’informations sur la gestion des notes pour les bibliothèques et d’autres ressources compatibles, consultez le [guide des points d’entrée de notes](./notes.md).
 
-## Récupération des ressources associées pour une bibliothèque {#related}
+## Récupération de ressources associées pour une bibliothèque {#related}
 
-Les appels suivants montrent comment récupérer les ressources associées pour une bibliothèque. Lorsque [recherche une bibliothèque](#lookup), ces relations sont répertoriées sous la propriété `relationships`.
+Les appels suivants montrent comment récupérer les ressources associées pour une bibliothèque. Lors d’une [recherche de bibliothèque](#lookup), ces relations sont répertoriées sous la propriété `relationships`.
 
-Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md) .
+Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md).
 
 ### Liste des éléments de données associés pour une bibliothèque {#data-elements}
 
 Vous pouvez répertorier les éléments de données utilisés par une bibliothèque en ajoutant `/data_elements` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /libraries/{LIBRARY_ID}/data_elements
@@ -1057,7 +1057,7 @@ Une réponse réussie renvoie une liste d’éléments de données qui utilisent
 
 Vous pouvez répertorier les extensions utilisées par une bibliothèque en ajoutant `/extensions` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /libraries/{LIBRARY_ID}/extensions
@@ -1188,7 +1188,7 @@ Une réponse réussie renvoie une liste d’extensions qui utilisent la biblioth
 
 Vous pouvez répertorier les règles utilisées par une bibliothèque en ajoutant `/rules` au chemin d’accès d’une requête de recherche.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /libraries/{LIBRARY_ID}/rules
@@ -1299,9 +1299,9 @@ Une réponse réussie renvoie une liste de règles qui utilisent la bibliothèqu
 
 ### Recherche de l’environnement associé pour une bibliothèque {#related-environment}
 
-Vous pouvez rechercher l’environnement auquel une bibliothèque est affectée en ajoutant `/environment` au chemin d’accès d’une requête de GET.
+Vous pouvez rechercher l’environnement auquel une bibliothèque est affectée en ajoutant `/environment` au chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /libraries/{LIBRARY_ID}/environment
@@ -1411,9 +1411,9 @@ Une réponse réussie renvoie les détails de l’environnement auquel la biblio
 
 ### Recherche de la propriété associée pour une bibliothèque {#property}
 
-Vous pouvez rechercher la propriété propriétaire d’une bibliothèque en ajoutant `/property` au chemin d’accès d’une requête de GET.
+Vous pouvez rechercher la propriété qui détient une bibliothèque en ajoutant `/property` au chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /libraries/{LIBRARY_ID}/property
@@ -1439,7 +1439,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la propriété propriétaire de la bibliothèque spécifiée.
+Une réponse réussie renvoie les détails de la propriété qui détient la bibliothèque spécifiée.
 
 ```json
 {
@@ -1532,11 +1532,11 @@ Une réponse réussie renvoie les détails de la propriété propriétaire de la
 }
 ```
 
-### Recherche en amont d’une bibliothèque {#upstream}
+### Recherche d’une bibliothèque en amont {#upstream}
 
-Vous pouvez rechercher la bibliothèque suivante en amont à partir d’une bibliothèque en ajoutant `/upstream_library` au chemin d’accès d’une requête de GET.
+Vous pouvez rechercher la bibliothèque suivante en amont à partir d’une bibliothèque en ajoutant `/upstream_library` au chemin d’accès d’une requête GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET  /libraries/{LIBRARY_ID}/upstream_library
