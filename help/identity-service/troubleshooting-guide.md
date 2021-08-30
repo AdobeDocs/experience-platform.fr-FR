@@ -5,9 +5,9 @@ title: Guide de dépannage d’Identity Service
 topic-legacy: troubleshooting
 description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Identity Service, ainsi qu’un guide de dépannage pour les erreurs courantes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2185'
+source-wordcount: '2177'
 ht-degree: 84%
 
 ---
@@ -78,11 +78,11 @@ Les espaces de noms d’identité standard sont des espaces de noms disponibles 
 
 ## Où trouver la liste des espaces de noms d’identité disponibles pour mon organisation ?
 
-À l’aide de l’[API Identity Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), vous pouvez répertorier tous les espaces de noms d’identité disponibles pour votre organisation en envoyant une requête GET au point de terminaison `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [liste des espaces de noms disponibles](./api/list-namespaces.md) dans la présentation de l’API Identity Service.
+À l’aide de l’[API Identity Service](https://www.adobe.io/experience-platform-apis/references/identity-service), vous pouvez répertorier tous les espaces de noms d’identité disponibles pour votre organisation en envoyant une requête GET au point de terminaison `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [liste des espaces de noms disponibles](./api/list-namespaces.md) dans la présentation de l’API Identity Service.
 
 ## Comment créer un espace de noms personnalisé pour mon organisation ?
 
-À l’aide de l’[API Identity Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), vous pouvez créer un espace de noms d’identité personnalisé pour votre organisation en envoyant une requête POST au point de terminaison `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [création d’un espace de noms personnalisé](./api/create-custom-namespace.md) dans la présentation de l’API Identity Service.
+À l’aide de l’[API Identity Service](https://www.adobe.io/experience-platform-apis/references/identity-service), vous pouvez créer un espace de noms d’identité personnalisé pour votre organisation en envoyant une requête POST au point de terminaison `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [création d’un espace de noms personnalisé](./api/create-custom-namespace.md) dans la présentation de l’API Identity Service.
 
 ## Que sont les identités composites et les XID ?
 

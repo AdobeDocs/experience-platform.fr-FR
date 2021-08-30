@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel utilise l’API Schema Registry pour vous guider tout au long des étapes de composition d’un schéma à l’aide d’une classe standard.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2426'
+source-wordcount: '2422'
 ht-degree: 52%
 
 ---
@@ -996,7 +996,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Vous pouvez répertorier les valeurs &quot;xdm:namespace&quot; disponibles ou en créer de nouvelles, à l’aide de [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). La valeur de « xdm:property » peut être soit « xdm:code », soit « xdm:id », selon la clé « xdm:namespace » utilisée.
+>Vous pouvez répertorier les valeurs &quot;xdm:namespace&quot; disponibles ou en créer de nouvelles, à l’aide de [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). La valeur de « xdm:property » peut être soit « xdm:code », soit « xdm:id », selon la clé « xdm:namespace » utilisée.
 
 **Réponse**
 

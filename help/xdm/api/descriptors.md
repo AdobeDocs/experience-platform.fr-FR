@@ -5,9 +5,9 @@ title: Point de terminaison de l’API Descripteurs
 description: Le point de terminaison /descriptors de l’API Schema Registry vous permet de gérer par programmation les descripteurs XDM dans votre application d’expérience.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '1634'
+source-wordcount: '1630'
 ht-degree: 57%
 
 ---
@@ -24,7 +24,7 @@ Le point de terminaison `/descriptors` de l’API [!DNL Schema Registry] vous pe
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[[!DNL Schema Registry] API ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
 
 ## Récupération d’une liste de descripteurs {#list}
 
@@ -315,7 +315,7 @@ Un descripteur d’identité signale que le champ &quot;[!UICONTROL sourceProper
 | `xdm:sourceSchema` | L’URI `$id` du schéma dans lequel le descripteur est défini. |
 | `xdm:sourceVersion` | La version principale du schéma source. |
 | `xdm:sourceProperty` | Le chemin vers la propriété spécifique qui sera l’identité. Le chemin doit commencer et non se terminer par un « / ». N’incluez pas « properties » dans le chemin (par exemple, utilisez « /personalEmail/address » au lieu de « /properties/personalEmail/properties/address ») |
-| `xdm:namespace` | La valeur `id` ou `code` de l’espace de noms de l’identité. Vous trouverez une liste d’espaces de noms à l’aide de [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:namespace` | La valeur `id` ou `code` de l’espace de noms de l’identité. Vous trouverez une liste d’espaces de noms à l’aide de [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). |
 | `xdm:property` | `xdm:id` ou `xdm:code` selon l’espace de noms `xdm:namespace` utilisé. |
 | `xdm:isPrimary` | Une valeur booléenne facultative. Lorsqu’elle est définie sur true, le champ est l’identité principale. Les schémas ne peuvent contenir qu’une seule identité principale. |
 
