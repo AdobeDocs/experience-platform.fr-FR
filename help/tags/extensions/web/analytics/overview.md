@@ -1,10 +1,10 @@
 ---
 title: Présentation de lʼextension Adobe Analytics
-description: Découvrez l’extension de balise Adobe Analytics dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Découvrez lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
+source-git-commit: 90dece1054cf54d40a62093990a034ee5f3bccaf
 workflow-type: tm+mt
 source-wordcount: '2202'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
@@ -88,7 +88,7 @@ Permet d’insérer le code [AppMeasurement.js](https://experienceleague.adobe.c
 
 >[!NOTE]
 >
->Le programme de validation utilisé dans l’éditeur de code de balises est conçu pour identifier les problèmes liés au code écrit par le développeur. Le code qui a fait l’objet d’un processus de minimisation (tel que le code AppMeasurement.js téléchargé depuis le Gestionnaire de code) peut être faussement signalé comme ayant des problèmes par le programme de validation des balises, lesquels peuvent généralement être ignorés.
+>Le programme de validation utilisé dans lʼéditeur de code de balises est conçu pour identifier les problèmes liés au code écrit par le développeur. Le code qui a fait lʼobjet dʼun processus de minimisation (tel que le code AppMeasurement.js téléchargé depuis le Gestionnaire de code) peut être faussement signalé comme ayant des problèmes par le programme de validation de balises, ce qui peut généralement être ignoré.
 
 #### Set the following report suites on tracker (Définition des suites de rapports suivantes sur le suivi)
 
@@ -110,7 +110,7 @@ Sélectionnez une option dans la section General (Général) de la page de confi
 
 Permet d’activer ou de désactiver le suivi selon le cookie de confidentialité de l’UE.
 
-Lorsque vous cochez la case Conformité UE, le champ [!UICONTROL Nom du cookie de suivi] sʼaffiche. Le cookie de suivi remplace le nom du cookie de suivi par défaut. Vous pouvez personnaliser le nom utilisé par les balises pour effectuer le suivi de votre état d’exclusion pour la réception d’autres cookies.
+Lorsque vous cochez la case Conformité UE, le champ [!UICONTROL Nom du cookie de suivi] sʼaffiche. Le cookie de suivi remplace le nom du cookie de suivi par défaut. Vous pouvez personnaliser le nom utilisé par les balises pour effectuer le suivi de votre statut dʼexclusion pour la réception dʼautres cookies.
 
 Lorsqu’une page est chargée, le système vérifie si un cookie appelé sat\_track est défini (ou le nom du cookie personnalisé spécifié dans la page Edit Property (Modifier une propriété)). Prenez en compte les points suivants :
 
@@ -270,11 +270,11 @@ Les options suivantes s’affichent :
 
 Adobe Audience Manager attribue le sous-domaine Audience Manager. Il est parfois appelé « Partner Name » (Nom de partenaire) ou « Partner Subdomain » (Sous-domaine partenaire). Contactez votre conseiller Adobe ou l’Assistance clientèle si vous ne connaissez pas votre nom de partenaire.
 
-Vous pouvez configurer des paramètres avancés en sélectionnant **Afficher les paramètres avancés** et en saisissant vos préférences.
+Vous pouvez configurer les paramètres avancés en sélectionnant **Afficher les paramètres avancés** et en saisissant vos préférences.
 
 ![](../../../images/an-ext-aam-adv.png)
 
-Pour plus d’informations sur chaque paramètre, cliquez sur l’icône d’information ou consultez la [documentation d’Adobe Audience Manager](https://docs.adobe.com/content/help/fr-FR/experience-cloud/user-guides/home.translate.html).
+Pour plus d’informations sur chaque paramètre, cliquez sur l’icône d’information ou consultez la [documentation d’Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr).
 
 ## Types d’actions de l’extension Analytics
 
@@ -367,7 +367,7 @@ Utilisez l’éditeur pour spécifier le code personnalisé de votre page.
 
 Sélectionnez cette option si vous souhaitez incrémenter une page vue.
 
-#### Do not increment a pageview - s.t()
+#### N’incrémentez pas une page vue - s.tl()
 
 Sélectionnez cette option si vous ne souhaitez pas incrémenter une page vue.
 
