@@ -5,7 +5,7 @@ title: Traitement du consentement dans Adobe Experience Platform
 topic-legacy: getting started
 description: Découvrez comment traiter les signaux de consentement des clients dans Adobe Experience Platform à l’aide de la norme Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 1c398cdac45141b4886d984db32fbac7ca60265c
 workflow-type: tm+mt
 source-wordcount: '1572'
 ht-degree: 0%
@@ -88,7 +88,7 @@ Vous trouverez des détails sur chacune de ces méthodes dans les sous-sections 
 
 ### Configuration du SDK Web Experience Platform pour traiter les données de consentement {#web-sdk}
 
-Une fois que vous avez configuré votre CMP pour écouter les événements de modification du consentement sur votre site web, vous pouvez intégrer le SDK Web Experience Platform pour recevoir les paramètres de consentement mis à jour et les envoyer à Platform à chaque chargement de page et chaque fois qu’un événement de modification du consentement se produit. Pour plus d’informations, consultez le guide sur la [configuration du SDK Web pour traiter les données de consentement du client](./sdk.md) .
+Une fois que vous avez configuré votre CMP pour écouter les événements de modification du consentement sur votre site web, vous pouvez intégrer le SDK Web Experience Platform pour recevoir les paramètres de consentement mis à jour et les envoyer à Platform à chaque chargement de page et chaque fois qu’un événement de modification du consentement se produit. Pour plus d’informations, consultez le guide sur la [configuration du SDK Web pour traiter les données de consentement du client](../sdk.md) .
 
 ### Configuration du SDK Mobile Experience Platform pour traiter les données de consentement {#mobile-sdk}
 
