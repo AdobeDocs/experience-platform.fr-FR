@@ -3,9 +3,9 @@ keywords: correspondance client Google;correspondance client Google;correspondan
 title: Connexion à la correspondance client Google
 description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1557'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Certaines destinations en Experience Platform ont certaines règles et obligatio
 
 Avant de configurer une destination [!DNL Google Customer Match] en Experience Platform, veillez à lire et à respecter la politique d’utilisation de [!DNL Customer Match] de Google, décrite dans la [documentation du support Google](https://support.google.com/google-ads/answer/6299717).
 
-Ensuite, assurez-vous que votre compte [!DNL Google] est configuré pour un niveau d’accès [!DNL Standard] ou supérieur. Pour plus d’informations, voir la [documentation Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) .
+Ensuite, assurez-vous que votre compte [!DNL Google] est configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations, voir la [documentation Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) .
 
 ### Liste autorisée {#allowlist}
 
@@ -174,6 +174,17 @@ Une fois le flux d’activation terminé, basculez vers votre compte **[!UICONTR
 
 Lors du mappage d’un segment sur les [!DNL IDFA] et [!DNL GAID] identifiants mobiles, [!DNL Google Customer Match] crée un segment distinct pour chaque mappage d’identifiant. Votre compte [!DNL Google Ads] affiche deux segments différents, l’un pour [!DNL IDFA] et l’autre pour le mappage [!DNL GAID].
 
+## Dépannage {#troubleshooting}
+
+### Message d’erreur 400 Bad Request {#bad-request}
+
+Lors de la configuration de cette destination, vous risquez de recevoir l’erreur suivante :
+
+`{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
+
+Cette erreur se produit lorsque les comptes clients ne respectent pas les [conditions préalables](#google-account-prerequisites). Pour résoudre ce problème, contactez Google et assurez-vous que votre compte est placé sur la liste autorisée et configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations, voir la [documentation Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) .
+
 ## Ressources supplémentaires {#additional-resources}
 
 * [Intégration de la correspondance client Google - Tutoriel vidéo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
+
