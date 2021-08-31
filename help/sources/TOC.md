@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
-feature: Ingestion de données, sources
-source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
+feature: Data Ingestion, Sources
+source-git-commit: ebe620b078096349c514420746902ce406a910d1
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 18%
+source-wordcount: '643'
+ht-degree: 19%
 
 ---
 
@@ -136,7 +136,7 @@ ht-degree: 18%
       - Protocoles {#protocols}
          - [OData générique](tutorials/api/create/protocols/odata.md)
       - Diffusion en continu {#streaming}
-         - [API HTTP](tutorials/api/create/streaming/http.md)
+         - [API HTTP ](tutorials/api/create/streaming/http.md)
    - Exploration des données {#explore}
       - [Explorer les données publicitaires](tutorials/api/explore/advertising.md)
       - [Explorer les données de stockage dans le cloud](tutorials/api/explore/cloud-storage.md)
@@ -226,7 +226,7 @@ ht-degree: 18%
       - Protocoles {#protocols}
          - [OData générique](tutorials/ui/create/protocols/odata.md)
       - Diffusion en continu {#streaming}
-         - [API HTTP](tutorials/ui/create/streaming/http.md)
+         - [API HTTP ](tutorials/ui/create/streaming/http.md)
    - Configuration d’un flux de données {#dataflow}
       - [Flux de données de connexion Advertising](tutorials/ui/dataflow/advertising.md)
       - [Flux de données de connexion de stockage dans le cloud par lots](tutorials/ui/dataflow/batch/cloud-storage.md)
@@ -247,5 +247,6 @@ ht-degree: 18%
    - [Suppression de flux de données](tutorials/ui/delete.md)
 - [Notifications d’exécution de flux](notifications.md)
 - [LISTE AUTORISÉE d’adresses IP](ip-address-allow-list.md)
-- [Questions fréquemment posées](./troubleshooting.md)
+- [Questions fréquentes](./troubleshooting.md)
+- [Référence d’API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
