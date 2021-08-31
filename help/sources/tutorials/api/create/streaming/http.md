@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 42b8710cf6c04fabf7df1f005fae6b3828eeee49
+source-git-commit: 0ff93d580482f44954321089659bd2fc062f3f61
 workflow-type: tm+mt
-source-wordcount: '1206'
-ht-degree: 39%
+source-wordcount: '1268'
+ht-degree: 37%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 39%
 
 Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
 
-Ce tutoriel utilise l’API [!DNL Flow Service] pour vous guider dans les étapes de création d’une connexion en continu à l’aide de l’API Flow Service.
+Ce tutoriel utilise l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) pour vous guider dans les étapes de création d’une connexion en continu à l’aide de l’API Flow Service.
 
 ## Prise en main
 
@@ -192,7 +192,7 @@ Une réponse réussie renvoie un état HTTP 201 avec les détails de la nouvelle
 
 Une fois la connexion de base créée, vous pouvez désormais récupérer l’URL de votre point de terminaison de diffusion en continu.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /flowservice/connections/{CONNECTION_ID}
@@ -295,7 +295,9 @@ Une réponse réussie renvoie un état HTTP 201 avec le détail de la nouvelle c
 
 ## Créer une connexion cible
 
-Après avoir créé votre connexion source, vous pouvez créer une connexion cible. Lors de la création de votre connexion cible, vous aurez besoin de la valeur `id` du jeu de données créé précédemment.
+Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, vous devez indiquer l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+Vous disposez désormais des identifiants uniques d’un schéma cible d’un jeu de données cible et de l’identifiant de spécification de connexion au lac de données. Grâce à ces identifiants, vous pouvez créer une connexion cible à l’aide de l’API [!DNL Flow Service] pour spécifier le jeu de données qui contiendra les données source entrantes.
 
 **Format d’API**
 
@@ -420,7 +422,7 @@ Si l’en-tête `Authorization` n’est pas présent ou si un jeton d’accès n
 
 Maintenant que vous avez créé votre flux, vous pouvez envoyer votre message JSON au point de terminaison de diffusion que vous avez précédemment créé.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /collection/{CONNECTION_ID}
