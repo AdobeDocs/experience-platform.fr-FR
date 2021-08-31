@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un espace de stockage cloud tiers et les intégrer à Platform à l’aide des connecteurs source et des API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1796'
-ht-degree: 19%
+source-wordcount: '1792'
+ht-degree: 18%
 
 ---
 
 # Collecte de données de stockage dans le cloud à l’aide des connecteurs source et des API
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un stockage cloud tiers et les introduire dans Platform par le biais des connecteurs source et de l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un stockage cloud tiers et les introduire dans Platform par le biais des connecteurs source et de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

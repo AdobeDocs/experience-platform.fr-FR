@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une base de données et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1641'
-ht-degree: 21%
+source-wordcount: '1619'
+ht-degree: 20%
 
 ---
 
 # Collecte de données à partir d’une base de données à l’aide des connecteurs source et des API
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une base de données tierce et les ingérer dans Platform via les connecteurs source et l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une base de données tierce et les ingérer dans Platform via les connecteurs source et l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
@@ -30,7 +30,7 @@ Ce tutoriel nécessite également une compréhension pratique des composants sui
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): L’API Batch Ingestion vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots.
 * [Environnements de test](../../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à une base de données tierce à l’aide de l’API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à une base de données tierce à l’aide de l’API [!DNL Flow Service].
 
 ### Lecture d’exemples d’appels API
 
@@ -431,7 +431,7 @@ Une réponse réussie renvoie les détails du nouveau mappage, y compris son ide
 
 ## Récupération des spécifications du flux de données {#specs}
 
-Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en adressant une demande de GET à l’API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Les spécifications de flux de données sont chargées de collecter les données d’une base de données externe ou d’un système NoSQL.
+Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en adressant une demande de GET à l’API [!DNL Flow Service]. Les spécifications de flux de données sont chargées de collecter les données d’une base de données externe ou d’un système NoSQL.
 
 **Format d’API**
 

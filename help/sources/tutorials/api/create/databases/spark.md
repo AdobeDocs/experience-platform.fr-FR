@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Apache Spark sur Azure HDInsights à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 1f7ca86e-32f4-45f7-92c2-f87c5c0c4ea4
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 11%
+source-wordcount: '493'
+ht-degree: 9%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 11%
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Apache Spark] sur [!DNL Azure HDInsights] (ci-après appelée &quot;[!DNL Spark]&quot;) à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Apache Spark] sur [!DNL Azure HDInsights] (ci-après appelée &quot;[!DNL Spark]&quot;) à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

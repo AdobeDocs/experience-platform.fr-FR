@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à un compte Google PubSub à l’aide de l’API Flow Service.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: f13afbd70db18e5faa1a101300f3dc7ec944baa3
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '744'
-ht-degree: 9%
+source-wordcount: '740'
+ht-degree: 7%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 9%
 >
 >Le connecteur [!DNL Google PubSub] est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez la [Présentation des sources](../../../../home.md#terms-and-conditions) .
 
-Ce tutoriel vous guide tout au long des étapes permettant de connecter [!DNL Google PubSub] (ci-après appelé &quot;[!DNL PubSub]&quot;) à l’Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel vous guide tout au long des étapes permettant de connecter [!DNL Google PubSub] (ci-après appelé &quot;[!DNL PubSub]&quot;) à l’Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

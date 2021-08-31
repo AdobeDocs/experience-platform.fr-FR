@@ -6,10 +6,10 @@ description: Ce document couvre la création de destinations de marketing par e-
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1705'
-ht-degree: 72%
+source-wordcount: '1701'
+ht-degree: 71%
 
 ---
 
@@ -66,7 +66,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ### Documentation Swagger
 
-Ce tutoriel vous permet de trouver dans Swagger la documentation de référence relative à tous les appels API. Consultez la [documentation de l’API de service de flux sur Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Nous vous recommandons de consulter ce tutoriel et la page de documentation de Swagger en parallèle.
+Ce tutoriel vous permet de trouver dans Swagger la documentation de référence relative à tous les appels API. Consultez la [documentation de l’API de service de flux sur Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Nous vous recommandons de consulter ce tutoriel et la page de documentation de Swagger en parallèle.
 
 ## Obtention de la liste des destinations disponibles {#get-the-list-of-available-destinations}
 

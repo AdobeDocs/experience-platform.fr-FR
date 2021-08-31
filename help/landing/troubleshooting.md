@@ -7,10 +7,10 @@ landing-page-description: Trouvez des réponses aux questions fréquemment posé
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
+source-git-commit: f83e4150210af8d3e9e67285d1f9665b6e243f54
 workflow-type: tm+mt
-source-wordcount: '1731'
-ht-degree: 66%
+source-wordcount: '1727'
+ht-degree: 65%
 
 ---
 
@@ -204,6 +204,6 @@ Vous trouverez ci-dessous une liste des guides de dépannage et de la documentat
 |  de segmentation d’Adobe Experience Platform | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) |
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQ et guide de dépannage](../xdm/troubleshooting-guide.md) |
-| [!DNL Flow Service] ([!DNL Sources] et [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
+| [!DNL Flow Service] ([!DNL Sources] et [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | Guide de dépannage du [[!DNL Profile] ](../profile/troubleshooting.md) |
 | Environnements de test | [API Sandbox](https://www.adobe.io/experience-platform-apis/references/sandbox) | [Guide de dépannage des environnements de test](../sandboxes/troubleshooting-guide.md) |

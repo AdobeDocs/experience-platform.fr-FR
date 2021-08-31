@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système de succès client et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1567'
 ht-degree: 20%
 
 ---
 
 # Collecte de données à partir d’un système de succès client à l’aide des connecteurs source et des API
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système client tiers et les ingérer dans [!DNL Platform] par le biais des connecteurs source et de l’API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système client tiers et les ingérer dans [!DNL Platform] par le biais des connecteurs source et de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

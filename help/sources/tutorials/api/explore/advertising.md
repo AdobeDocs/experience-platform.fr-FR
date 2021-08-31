@@ -5,10 +5,10 @@ title: Exploration d’un système Advertising à l’aide de l’API Flow Servi
 topic-legacy: overview
 description: Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables. Ce tutoriel utilise l’API Flow Service pour explorer les systèmes publicitaires.
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
-source-git-commit: 8aa8dfcc4f8a36d0898a9cc079bd98b89e3589a1
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 11%
+source-wordcount: '502'
+ht-degree: 10%
 
 ---
 
@@ -16,12 +16,11 @@ ht-degree: 11%
 
 Une fois la connexion de base créée, vous pouvez désormais utiliser l’identifiant de connexion de base unique pour parcourir la structure de données et le contenu de votre source. Vous pouvez ainsi identifier les éléments spécifiques, ainsi que leurs types de données et formats respectifs, avant de créer un flux de données et de les transférer à Adobe Experience Platform.
 
-Ce tutoriel utilise l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). explorer les systèmes publicitaires.
+Ce tutoriel utilise l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) pour explorer les systèmes publicitaires.
 
 ## Prise en main
 
 >[!IMPORTANT]
-
 Ce tutoriel nécessite que vous disposiez de l’identifiant de connexion de base unique pour votre source publicitaire. Si vous ne possédez pas cet identifiant, consultez le tutoriel sur la [connexion d’une source publicitaire à Platform](../../api/create/advertising/ads.md) .
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
@@ -39,7 +38,7 @@ Pour plus d’informations sur la manière d’effectuer des appels avec succès
 
 À l’aide de la connexion de base de votre système publicitaire, vous pouvez explorer vos tableaux de données en exécutant des requêtes GET. Utilisez l’appel suivant pour trouver le chemin de la table que vous souhaitez inspecter ou ingérer dans [!DNL Platform].
 
-**Format d&#39;API**
+**Format d’API**
 
 ```https
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
@@ -101,7 +100,7 @@ Une réponse réussie est un tableau de tableaux allant de à votre système pub
 
 Pour inspecter la structure d’une table à partir de votre système publicitaire, effectuez une requête de GET tout en spécifiant le chemin d’une table comme paramètre de requête.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}

@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application publicitaire tierce et les ingérer dans Platform à l’aide des connecteurs source et de l’API Flow Service.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1539'
 ht-degree: 21%
 
 ---
 
 # Collecte de données publicitaires à l’aide des connecteurs source et des API
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application publicitaire tierce et les ingérer dans Adobe Experience Platform via les connecteurs source et l’API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application publicitaire tierce et les ingérer dans Adobe Experience Platform via les connecteurs source et l’API [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

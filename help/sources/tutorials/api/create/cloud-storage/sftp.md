@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à un serveur SFTP (protocole de transfert de fichiers sécurisé) à l’aide de l’API Flow Service.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 8%
+source-wordcount: '794'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL SFTP] (protocole de transfert de fichiers sécurisé) à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL SFTP] (protocole de transfert de fichiers sécurisé) à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

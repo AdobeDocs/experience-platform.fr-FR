@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Notifications d’exécution de flux
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 6%
+source-wordcount: '782'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) sert à collecter et à centraliser les données client à partir de diverses sources disparates dans  [!DNL Platform]. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
+[[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/) APIest utilisé pour collecter et centraliser les données client à partir de diverses sources disparates dans  [!DNL Platform]. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
 
 Avec les événements d’Adobe I/O, vous pouvez vous abonner aux événements et utiliser des webhooks pour recevoir des notifications concernant l’état de vos exécutions de flux. Ces notifications contiennent des informations sur le succès de votre exécution de flux ou les erreurs qui ont contribué à l’échec d’une exécution.
 

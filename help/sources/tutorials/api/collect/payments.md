@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application de paiements et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1590'
-ht-degree: 21%
+source-wordcount: '1586'
+ht-degree: 20%
 
 ---
 
 # Collecte de données de paiement à l’aide des connecteurs source et des API
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application de paiements tierce et les ingérer dans Platform via les connecteurs source et l’API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application de paiements tierce et les ingérer dans Platform via les connecteurs source et l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

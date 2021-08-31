@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système eCommerce tiers et les ingérer dans Platform à l’aide des connecteurs sources et des API.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1515'
 ht-degree: 19%
 
 ---
 
 # Collecte de données eCommerce à l’aide des connecteurs source et des API
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un système **[!UICONTROL eCommerce]** tiers et les ingérer dans [!DNL Platform] par le biais des connecteurs source et de l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un système **[!UICONTROL eCommerce]** tiers et les ingérer dans [!DNL Platform] par le biais des connecteurs source et de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

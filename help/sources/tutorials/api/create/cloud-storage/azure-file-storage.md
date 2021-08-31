@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Azure File Storage à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
-source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '477'
-ht-degree: 12%
+source-wordcount: '473'
+ht-degree: 10%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 12%
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Azure File Storage] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Azure File Storage] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

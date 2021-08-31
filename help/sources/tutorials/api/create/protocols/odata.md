@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Generic OData à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
-source-git-commit: 3dd7266451eada02a2342bbba5f3cf6c327529d6
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 12%
+source-wordcount: '443'
+ht-degree: 11%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 12%
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Generic OData] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Generic OData] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

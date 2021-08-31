@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données en continu et les introduire dans Platform à l’aide des connecteurs source et des API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1099'
 ht-degree: 16%
 
 ---
 
 # Créez un flux de données en continu pour les données brutes à l’aide de l’API [!DNL Flow Service]
 
-Ce tutoriel décrit les étapes à suivre pour récupérer les données brutes d’un connecteur de source de diffusion en continu et les apporter à l’Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel décrit les étapes à suivre pour récupérer les données brutes d’un connecteur de source de diffusion en continu et les apporter à l’Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

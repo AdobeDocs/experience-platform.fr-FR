@@ -1,51 +1,50 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; service de flux ; supprimer des comptes ; supprimer ; api
+keywords: Experience Platform;accueil;rubriques les plus consultées;service de flux;supprimer des comptes;supprimer;api
 solution: Experience Platform
-title: Suppression d’un compte à l’aide de l’API du service de flux
+title: Suppression d’un compte à l’aide de l’API Flow Service
 topic-legacy: overview
 type: Tutorial
-description: Découvrez comment supprimer un compte à l’aide de l’API de service de flux.
+description: Découvrez comment supprimer un compte à l’aide de l’API Flow Service.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '592'
-ht-degree: 27%
+source-wordcount: '589'
+ht-degree: 37%
 
 ---
 
-# Suppression d’un compte à l’aide de l’API du service de flux
+# Suppression d’un compte à l’aide de l’API Flow Service
 
-Adobe Experience Platform permet l’assimilation de données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] sert à collecter et à centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
 
-Ce didacticiel décrit les étapes à suivre pour supprimer à l’aide de [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel décrit les étapes de suppression à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
-Ce didacticiel nécessite que vous disposiez d’un ID de connexion valide. Si vous ne disposez pas d’un ID de connexion valide, sélectionnez le connecteur de votre choix dans le [aperçu des sources](../../home.md) et suivez les étapes décrites avant de tenter ce didacticiel.
+Ce tutoriel nécessite que vous disposiez d’un identifiant de connexion valide. Si vous ne disposez pas d’un identifiant de connexion valide, sélectionnez votre connecteur de votre choix dans la [présentation des sources](../../home.md) et suivez les étapes décrites avant de lancer ce tutoriel.
 
-Ce didacticiel nécessite également une bonne compréhension des composants suivants de Adobe Experience Platform :
+Ce tutoriel nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
 
-* [Sources](../../home.md) :  [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
-* [Sandbox](../../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
+* [Sources](../../home.md) :  [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
+* [Environnements de test](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour supprimer une connexion à l&#39;aide de l&#39;API [!DNL Flow Service].
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour supprimer une connexion à l’aide de l’API [!DNL Flow Service].
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecter des valeurs pour les en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
+Toutes les ressources qui se trouvent dans [!DNL Experience Platform], y compris celles liées à la [!DNL Flow Service], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -53,10 +52,10 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 * `Content-Type: application/json`
 
-## Rechercher les détails de connexion
+## Recherche des détails de connexion
 
 >[!NOTE]
->Ce didacticiel utilise le [connecteur source Azure Blob](../../connectors/cloud-storage/blob.md) comme exemple, mais les étapes décrites s&#39;appliquent à l&#39;un des connecteurs de source [disponibles](../../home.md).
+>Ce tutoriel utilise comme exemple le [connecteur source Azure Blob](../../connectors/cloud-storage/blob.md), mais les étapes décrites s’appliquent à l’un des [connecteurs source disponibles](../../home.md).
 
 La première étape de la mise à jour des informations de connexion consiste à récupérer les détails de connexion à l’aide de votre identifiant de connexion.
 
@@ -68,11 +67,11 @@ GET /connections/{CONNECTION_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Valeur `id` unique pour la connexion que vous souhaitez récupérer. |
+| `{CONNECTION_ID}` | La valeur `id` unique de la connexion que vous souhaitez récupérer. |
 
 **Requête**
 
-L&#39;exemple suivant récupère des informations concernant votre ID de connexion.
+Ce qui suit récupère des informations concernant votre identifiant de connexion.
 
 ```shell
 curl -X GET \
@@ -85,7 +84,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails actuels de votre connexion, y compris ses informations d&#39;identification, son identifiant unique (`id`) et sa version.
+Une réponse réussie renvoie les détails actuels de votre connexion, y compris ses informations d’identification, son identifiant unique (`id`) et sa version.
 
 ```json
 {
@@ -122,7 +121,7 @@ Une réponse réussie renvoie les détails actuels de votre connexion, y compris
 
 ## Supprimer la connexion
 
-Une fois que vous disposez d’un ID de connexion existant, exécutez une requête de DELETE vers l’API [!DNL Flow Service].
+Une fois que vous disposez d’un identifiant de connexion existant, effectuez une requête de DELETE vers l’API [!DNL Flow Service].
 
 **Format d’API**
 
@@ -132,7 +131,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Valeur `id` unique pour la connexion à supprimer. |
+| `{CONNECTION_ID}` | La valeur `id` unique de la connexion que vous souhaitez supprimer. |
 
 **Requête**
 
@@ -149,10 +148,10 @@ curl -X DELETE \
 
 Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
 
-Vous pouvez confirmer la suppression en tentant d&#39;envoyer une demande de recherche (GET) à la connexion.
+Vous pouvez confirmer la suppression en tentant d’adresser une requête de recherche (GET) à la connexion.
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez réussi à utiliser l&#39;API [!DNL Flow Service] pour supprimer des comptes existants.
+En suivant ce tutoriel, vous avez utilisé l’API [!DNL Flow Service] pour supprimer des comptes existants.
 
-Pour savoir comment effectuer ces opérations à l’aide de l’interface utilisateur, consultez le didacticiel de [suppression de comptes dans l’interface utilisateur](../../tutorials/ui/delete-accounts.md).
+Pour savoir comment effectuer ces opérations à l’aide de l’interface utilisateur, reportez-vous au tutoriel sur la [suppression de comptes dans l’interface utilisateur](../../tutorials/ui/delete-accounts.md)

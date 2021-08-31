@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application de protocoles et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1539'
+source-wordcount: '1535'
 ht-degree: 21%
 
 ---
 
 # Collecte de données de protocoles à l’aide des connecteurs source et des API
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’une application de protocole tierce et les ingérer dans Adobe Experience Platform via des connecteurs source et l’API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’une application de protocole tierce et les ingérer dans Adobe Experience Platform via des connecteurs source et l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

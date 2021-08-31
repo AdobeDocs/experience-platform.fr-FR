@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Azure synapse Analytics à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 12%
+source-wordcount: '466'
+ht-degree: 10%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 12%
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Azure Synapse Analytics] (ci-après appelée &quot;[!DNL Synapse]&quot;) à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Azure Synapse Analytics] (ci-après appelée &quot;[!DNL Synapse]&quot;) à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

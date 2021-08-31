@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système CRM tiers et les introduire dans Platform à l’aide des connecteurs source et des API.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1582'
-ht-degree: 21%
+source-wordcount: '1578'
+ht-degree: 20%
 
 ---
 
 # Collecte de données CRM à l’aide des connecteurs source et des API
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un système de gestion de la relation client tiers et les ingérer dans Adobe Experience Platform par le biais des connecteurs source et de l’API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un système de gestion de la relation client tiers et les ingérer dans Adobe Experience Platform via des connecteurs source et l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

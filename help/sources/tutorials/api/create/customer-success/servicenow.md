@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à un serveur ServiceNow à l’aide de l’API Flow Service.
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
-source-git-commit: ff0f6bc6b8a57b678b329fe2b47c53919e0e2d64
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 12%
+source-wordcount: '474'
+ht-degree: 10%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 12%
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Google ServiceNow] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Google ServiceNow] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
