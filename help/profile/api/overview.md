@@ -3,9 +3,9 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Guide de l’API Real-time Customer Profile
 description: L’API Real-time Customer Profile permet aux développeurs d’explorer et d’utiliser les données de profil, notamment d’afficher les profils, de créer et de mettre à jour des stratégies de fusion, d’exporter ou d’échantillonner des données de profil, ainsi que de supprimer les données de profil qui ne sont plus requises ou qui ont été ajoutées par erreur. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '890'
 ht-degree: 27%
 
 ---
@@ -52,7 +52,7 @@ Pour en savoir plus sur les stratégies de fusion et leur rôle dans Platform, c
 
 ## Prévisualisation des exemples de statut (prévisualisation du [!DNL Profile]) {#profile-preview}
 
-Les données activées pour Profile étant ingérées dans Experience Platform, elles sont stockées dans la banque de données Profile. À mesure que le nombre d’enregistrements dans la banque de profils augmente ou diminue, un exemple de tâche est exécuté qui inclut des informations concernant le nombre de fragments de profil et de profils fusionnés dans la banque de données. À l’aide de l’API Profile, vous pouvez prévisualiser le dernier exemple réussi, ainsi que répertorier la distribution du profil par jeu de données et par espace de noms d’identité. Pour commencer à utiliser le point d’entrée `/profilepreviewstatus`, reportez-vous au [guide d’aperçu du point d’entrée d’état ](preview-sample-status.md).
+Lorsque des données sont ingérées dans Platform, un exemple de tâche est exécuté pour mettre à jour le nombre de profils et d’autres mesures liées aux données de Real-time Customer Profile. Les résultats de cet exemple de tâche peuvent être visualisés à l’aide du point de terminaison `/previewsamplestatus`, qui fait partie de l’API Real-time Customer Profile. Ce point de terminaison peut également être utilisé pour répertorier les distributions de profil par jeu de données et espace de noms d’identité, ainsi que pour générer plusieurs rapports afin de mieux comprendre la composition de la banque de profils de votre entreprise.  Pour commencer à utiliser le point d’entrée `/profilepreviewstatus`, reportez-vous au [guide d’aperçu du point d’entrée d’état ](preview-sample-status.md).
 
 ## Tâches de système Profile {#profile-system-jobs}
 

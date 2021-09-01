@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;aperçu;exemple
 title: Aperçu de l’exemple d’état (aperçu du profil), point de terminaison de l’API
-description: À l’aide de l’exemple de point de terminaison d’état de la prévisualisation, qui fait partie de l’API Real-time Customer Profile, vous pouvez prévisualiser le dernier échantillon réussi de vos données Profile, répertorier la distribution du profil par jeu de données et par identité, et générer un rapport de chevauchement de jeux de données.
+description: À l’aide de l’exemple de point de terminaison d’état de la prévisualisation, qui fait partie de l’API Real-time Customer Profile, vous pouvez prévisualiser le dernier échantillon réussi de vos données de profil, répertorier la distribution du profil par jeu de données et par identité, et générer des rapports montrant le chevauchement des jeux de données, le chevauchement des identités et les profils inconnus.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 0c7dc02ed0bacf7e0405b836f566149a872fc31a
+source-git-commit: 8b1ba51f1f59b88a85d103cc40c18ac15d8648f6
 workflow-type: tm+mt
-source-wordcount: '2450'
+source-wordcount: '2882'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 Adobe Experience Platform vous permet d’ingérer des données client provenant de plusieurs sources afin de créer un profil robuste et unifié pour chacun de vos clients. Lorsque des données sont ingérées dans Platform, un exemple de tâche est exécuté pour mettre à jour le nombre de profils et d’autres mesures liées aux données de Real-time Customer Profile.
 
-Les résultats de cet exemple de tâche peuvent être visualisés à l’aide du point de terminaison `/previewsamplestatus`, qui fait partie de l’API Real-time Customer Profile. Ce point de terminaison peut également être utilisé pour répertorier les distributions de profil par jeu de données et espace de noms d’identité, ainsi que pour générer un rapport de chevauchement de jeux de données et un rapport de chevauchement d’identités afin de bénéficier d’une meilleure visibilité sur la composition de la banque de profils de votre entreprise. Ce guide décrit les étapes requises pour afficher ces mesures à l’aide du point de terminaison de l’API `/previewsamplestatus`.
+Les résultats de cet exemple de tâche peuvent être visualisés à l’aide du point de terminaison `/previewsamplestatus`, qui fait partie de l’API Real-time Customer Profile. Ce point de terminaison peut également être utilisé pour répertorier les distributions de profil par jeu de données et espace de noms d’identité, ainsi que pour générer plusieurs rapports afin de mieux comprendre la composition de la banque de profils de votre entreprise. Ce guide décrit les étapes requises pour afficher ces mesures à l’aide du point de terminaison de l’API `/previewsamplestatus`.
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ La réponse inclut les détails du dernier exemple de tâche réussi qui a été
 | Propriété | Description |
 |---|---|
 | `numRowsToRead` | Le nombre total de profils fusionnés dans l’exemple. |
-| `sampleJobRunning` | Valeur boolean qui renvoie `true` lorsqu’un exemple de tâche est en cours. Fournit une transparence quant à la latence qui survient lorsqu’un fichier de lot est chargé dans lorsqu’il est réellement ajouté à la banque de profils. |
+| `sampleJobRunning` | Valeur boolean qui renvoie `true` lorsqu’un exemple de tâche est en cours. Fournit une transparence sur la latence qui survient lorsqu’un fichier de lot est chargé dans lorsqu’il est réellement ajouté à la banque de profils. |
 | `cosmosDocCount` | Nombre total de documents dans Cosmos. |
 | `totalFragmentCount` | Nombre total de fragments de profil dans la banque de profils. |
 | `lastSuccessfulBatchTimestamp` | Dernier horodatage d’ingestion par lots réussi. |
@@ -115,7 +115,7 @@ La réponse inclut les détails du dernier exemple de tâche réussi qui a été
 
 Pour afficher la distribution des profils par jeu de données, vous pouvez exécuter une requête de GET sur le point de terminaison `/previewsamplestatus/report/dataset` .
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /previewsamplestatus/report/dataset
@@ -206,7 +206,7 @@ La réponse comprend un tableau `data` contenant une liste d’objets de jeu de 
 
 ## Liste de la distribution des profils par espace de noms d’identité
 
-Vous pouvez exécuter une requête de GET sur le point de terminaison `/previewsamplestatus/report/namespace` pour afficher la ventilation par espace de noms d’identité pour tous les profils fusionnés de votre banque de profils. Cela inclut les identités standard fournies par Adobe, ainsi que les identités personnalisées définies par votre organisation.
+Vous pouvez exécuter une requête de GET sur le point de terminaison `/previewsamplestatus/report/namespace` pour afficher la ventilation par espace de noms d’identité pour tous les profils fusionnés dans votre banque de profils. Cela inclut les identités standard fournies par Adobe, ainsi que les identités personnalisées définies par votre organisation.
 
 Les espaces de noms d’identité sont un composant important de Adobe Experience Platform Identity Service qui sert d’indicateurs du contexte auquel les données client se rapportent. Pour en savoir plus, commencez par lire la [présentation de l’espace de noms d’identité](../../identity-service/namespaces.md).
 
@@ -214,7 +214,7 @@ Les espaces de noms d’identité sont un composant important de Adobe Experienc
 >
 >Le nombre total de profils par espace de noms (additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur à la mesure du nombre de profils, car un profil peut être associé à plusieurs espaces de noms. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /previewsamplestatus/report/namespace
@@ -309,7 +309,7 @@ Vous pouvez générer le rapport de chevauchement de jeux de données en exécut
 
 Pour obtenir des instructions détaillées sur la génération du rapport de chevauchement de jeux de données à l’aide de la ligne de commande ou de l’interface utilisateur Postman, reportez-vous au [tutoriel sur la génération du rapport de chevauchement de jeux de données](../tutorials/dataset-overlap-report.md).
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /previewsamplestatus/report/dataset/overlap
@@ -363,22 +363,23 @@ Les résultats du rapport peuvent être interprétés à partir des jeux de donn
 ```
 
 Ce rapport fournit les informations suivantes :
+
 * Il existe 123 profils composés de données provenant des jeux de données suivants : `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * Il existe 454 412 profils composés de données provenant de ces deux jeux de données : `5d92921872831c163452edc8` et `5eb2cdc6fa3f9a18a7592a98`.
 * 107 profils se composent uniquement de données provenant du jeu de données `5eeda0032af7bb19162172a7`.
 * Il y a un total de 454 642 profils dans l’organisation.
 
-## Génération du rapport de chevauchement d’identités
+## Génération du rapport de chevauchement des espaces de noms d’identité
 
-Le rapport sur le chevauchement d’identités offre une visibilité sur la composition de la banque de profils de votre entreprise en exposant les identités qui contribuent le plus à votre audience adressable (profils fusionnés). Cela inclut les identités standard fournies par Adobe, ainsi que les identités personnalisées définies par votre organisation.
+Le rapport sur le chevauchement des espaces de noms d’identité offre une visibilité sur la composition de la banque de profils de votre entreprise en exposant les espaces de noms d’identité qui contribuent le plus à votre audience adressable (profils fusionnés). Cela inclut les espaces de noms d’identité standard fournis par Adobe, ainsi que les espaces de noms d’identité personnalisés définis par votre organisation.
 
-Vous pouvez générer le rapport de chevauchement d’identités en effectuant une requête de GET sur le point de terminaison `/previewsamplestatus/report/identity/overlap` .
+Vous pouvez générer le rapport de chevauchement d’espaces de noms d’identité en effectuant une requête de GET sur le point de terminaison `/previewsamplestatus/report/namespace/overlap` .
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
-GET /previewsamplestatus/report/identity/overlap
-GET /previewsamplestatus/report/identity/overlap?{QUERY_PARAMETERS}
+GET /previewsamplestatus/report/namespace/overlap
+GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
 ```
 
 | Paramètre | Description |
@@ -391,7 +392,7 @@ La requête suivante utilise le paramètre `date` pour renvoyer le rapport le pl
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/identity/overlap?date=2021-12-29 \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace/overlap?date=2021-12-29 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -399,7 +400,7 @@ curl -X GET \
 
 **Réponse**
 
-Une requête réussie renvoie un état HTTP 200 (OK) et le rapport de chevauchement d’identités.
+Une requête réussie renvoie un état HTTP 200 (OK) et le rapport de chevauchement des espaces de noms d’identité.
 
 ```json
 {
@@ -446,7 +447,7 @@ Une requête réussie renvoie un état HTTP 200 (OK) et le rapport de chevauchem
 | Codes d’espace de noms | `code` est un formulaire court pour chaque nom d’espace de noms d’identité. Vous trouverez un mappage de chaque `code` à sa `name` à l’aide de l’[API Adobe Experience Platform Identity Service](../../identity-service/api/list-namespaces.md). `code` est également appelé [!UICONTROL Symbole d’identité] dans l’interface utilisateur de l’Experience Platform. Pour en savoir plus, consultez la [présentation des espaces de noms d’identité](../../identity-service/namespaces.md). |
 | `reportTimestamp` | Horodatage du rapport. Si un paramètre `date` a été fourni pendant la demande, le rapport renvoyé correspond à la date fournie. Si aucun paramètre `date` n’est fourni, le rapport le plus récent est renvoyé. |
 
-### Interprétation du rapport de chevauchement d’identités
+### Interprétation du rapport de chevauchement des espaces de noms d’identité
 
 Les résultats du rapport peuvent être interprétés à partir des identités et du nombre de profils dans la réponse. La valeur numérique de chaque ligne indique le nombre de profils composés de cette combinaison exacte d’espaces de noms d’identité standard et personnalisés.
 
@@ -459,11 +460,137 @@ Examinez l’extrait suivant de l’objet `data` :
 ```
 
 Ce rapport fournit les informations suivantes :
+
 * Il existe 142 profils composés d’identités standard `AAID`, `ECID` et `Email`, ainsi que d’un espace de noms d’identité `crmid` personnalisé.
 * Il existe 24 profils composés d’espaces de noms d’identité `AAID` et `ECID`.
 * 6 565 profils incluent uniquement une identité `ECID`.
 
+## Générer le rapport des profils inconnus
+
+Vous pouvez mieux connaître la composition de la banque de profils de votre entreprise grâce au rapport Profils inconnus . Un &quot;profil inconnu&quot; fait référence à tout profil qui est à la fois désassemblé et inactif pour une période donnée. Un profil &quot;désassemblé&quot; est un profil qui ne contient qu’un fragment de profil, tandis qu’un profil &quot;inactif&quot; est un profil qui n’a pas ajouté de nouveaux événements pendant la période spécifiée. Le rapport Profils inconnus fournit une ventilation des profils pour une période de 7, 30, 60, 90 et 120 jours.
+
+Vous pouvez générer le rapport des profils inconnus en effectuant une requête de GET sur le point de terminaison `/previewsamplestatus/report/unknownProfiles` .
+
+**Format d’API**
+
+```http
+GET /previewsamplestatus/report/unknownProfiles
+```
+
+**Requête**
+
+La requête suivante renvoie le rapport des profils inconnus.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Réponse**
+
+Une requête réussie renvoie un état HTTP 200 (OK) et le rapport des profils inconnus.
+
+>[!NOTE]
+>
+>Pour les besoins de ce guide, le rapport a été tronqué afin d’inclure uniquement les périodes `"120days"` et &quot;`7days`&quot;. Le rapport Profils inconnus complet fournit une répartition des profils pour une période de 7, 30, 60, 90 et 120 jours.
+
+```json
+{
+  "data": {
+      "totalNumberOfProfiles": 63606,
+      "totalNumberOfEvents": 130977,
+      "unknownProfiles": {
+          "120days": {
+              "countOfProfiles": 1644,
+              "eventsAssociated": 26824,
+              "nsDistribution": {
+                  "Email": {
+                      "countOfProfiles": 18,
+                      "eventsAssociated": 95
+                  },
+                  "loyal": {
+                      "countOfProfiles": 26,
+                      "eventsAssociated": 71
+                  },
+                  "ECID": {
+                      "countOfProfiles": 1600,
+                      "eventsAssociated": 26658
+                  }
+              }
+          },
+          "7days": {
+              "countOfProfiles": 1782,
+              "eventsAssociated": 29151,
+              "nsDistribution": {
+                  "Email": {
+                      "countOfProfiles": 19,
+                      "eventsAssociated": 97
+                  },
+                  "ECID": {
+                      "countOfProfiles": 1734,
+                      "eventsAssociated": 28591
+                  },
+                  "loyal": {
+                      "countOfProfiles": 29,
+                      "eventsAssociated": 463
+                  }
+              }
+          }
+      }
+  },
+  "reportTimestamp": "2025-08-25T22:14:55.186"
+}
+```
+
+| Propriété | Description |
+|---|---|
+| `data` | L’objet `data` contient les informations renvoyées pour le rapport des profils inconnus. |
+| `totalNumberOfProfiles` | Nombre total de profils uniques dans la banque de profils. Cela équivaut au nombre d’audiences adressables. Il inclut des profils connus et inconnus. |
+| `totalNumberOfEvents` | Nombre total d’ExperienceEvents dans le magasin de profils. |
+| `unknownProfiles` | Objet contenant une ventilation des profils inconnus (désassemblés et inactifs) par période. Le rapport Profils inconnus fournit une ventilation des profils pour les périodes de 7, 30, 60, 90 et 120 jours. |
+| `countOfProfiles` | Le nombre de profils inconnus pour la période ou le nombre de profils inconnus pour l’espace de noms. |
+| `eventsAssociated` | Nombre d’ExperienceEvents pour la période ou nombre d’événements pour l’espace de noms. |
+| `nsDistribution` | Objet contenant des espaces de noms d’identité individuels avec la distribution de profils et d’événements inconnus pour chaque espace de noms. Remarque : Si vous additionnez le total `countOfProfiles` pour chaque espace de noms d’identité dans l’objet `nsDistribution`, la valeur `countOfProfiles` est égale à la valeur  pour la période. Il en va de même pour `eventsAssociated` par espace de noms et pour le total `eventsAssociated` par période. |
+| `reportTimestamp` | Horodatage du rapport. |
+
+### Interprétation du rapport des profils inconnus
+
+Les résultats du rapport peuvent fournir des informations sur le nombre de profils désassemblés et inactifs de votre organisation dans son magasin de profils.
+
+Examinez l’extrait suivant de l’objet `data` :
+
+```json
+  "7days": {
+    "countOfProfiles": 1782,
+    "eventsAssociated": 29151,
+    "nsDistribution": {
+      "Email": {
+        "countOfProfiles": 19,
+        "eventsAssociated": 97
+      },
+      "ECID": {
+        "countOfProfiles": 1734,
+        "eventsAssociated": 28591
+      },
+      "loyal": {
+        "countOfProfiles": 29,
+        "eventsAssociated": 463
+      }
+    }
+  }
+```
+
+Ce rapport fournit les informations suivantes :
+
+* Il existe 1 782 profils qui ne contiennent qu’un fragment de profil et n’ont aucun nouvel événement au cours des sept derniers jours.
+* 29 151 ExperienceEvents sont associés aux 1 782 profils inconnus.
+* Il existe 1 734 profils inconnus contenant un fragment de profil unique à partir de l’espace de noms d’identité d’ECID.
+* 28 591 événements sont associés aux 1 734 profils inconnus qui contiennent un fragment de profil unique à partir de l’espace de noms d’identité d’ECID.
+
 ## Étapes suivantes
 
-Maintenant que vous savez comment prévisualiser des données d’exemple dans la banque de profils et exécuter plusieurs rapports de chevauchement, vous pouvez également utiliser les points de terminaison d’estimation et de prévisualisation de l’API Segmentation Service pour afficher des informations sommaires sur vos définitions de segment. Ces informations vous permettent de vous assurer que vous isolez l’audience attendue dans votre segment. Pour en savoir plus sur l’utilisation des prévisualisations et des estimations de segments à l’aide de l’API Segmentation, consultez le [guide de prévisualisation et d’estimation des points de terminaison](../../segmentation/api/previews-and-estimates.md).
+Maintenant que vous savez comment prévisualiser des données d’exemple dans le magasin de profils et exécuter plusieurs rapports sur les données, vous pouvez également utiliser les points de terminaison d’estimation et de prévisualisation de l’API Segmentation Service pour afficher des informations sommaires sur vos définitions de segment. Ces informations vous permettent de vous assurer que vous isolez l’audience attendue dans votre segment. Pour en savoir plus sur l’utilisation des prévisualisations et des estimations de segments à l’aide de l’API Segmentation, consultez le [guide de prévisualisation et d’estimation des points de terminaison](../../segmentation/api/previews-and-estimates.md).
 
