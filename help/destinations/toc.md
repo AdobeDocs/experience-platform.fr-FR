@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
+source-git-commit: 316bad8b7b33d212c7ec304c064edb9f2c17859a
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 58%
+source-wordcount: '494'
+ht-degree: 57%
 
 ---
 
@@ -60,6 +60,7 @@ ht-degree: 58%
       * [Extension Pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
       * [La connexion au bureau de commerce](./catalog/advertising/tradedesk.md)
       * [Extension Twitter Universal Website Tag](./catalog/advertising/twitter-uwt.md)
+      * [Yahoo/Verizon DataX](./catalog/advertising/datax.md)
    * Destinations d’analyse {#analytics}
       * [Présentation des destinations d’analyse](./catalog/analytics/overview.md)
       * [Extension Adform Website Tracking](./catalog/analytics/adform.md)
@@ -137,5 +138,5 @@ ht-degree: 58%
       * [Extension Invoca Tags](./catalog/voice/invoca.md)
       * [Extension Medallia](./catalog/voice/medallia.md)
       * [Extension Talk URL Inbox](./catalog/voice/talkurl.md)
-* [Questions fréquemment posées](./destinations-faq.md)
+* [Questions fréquentes](./destinations-faq.md)
 * [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
