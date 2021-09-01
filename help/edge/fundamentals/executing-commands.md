@@ -1,20 +1,19 @@
 ---
-title: Exécuter les commandes du SDK Web Adobe Experience Platform
+title: Exécution des commandes du SDK Web Adobe Experience Platform
 description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
-keywords: Exécuter les commandes ; commandName ; Promises ; getLibraryInfo ; objets response ; consentement ;
-translation-type: tm+mt
-source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
+keywords: exécuter des commandes;commandName;Promesses;getLibraryInfo;objets de réponse;consentement;
+exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
+source-git-commit: ca3ee230d510dfb9de400b6f573a612ec33c8f7a
 workflow-type: tm+mt
 source-wordcount: '416'
-ht-degree: 70%
+ht-degree: 71%
 
 ---
 
+# Exécution des commandes
 
-# Exécuter les commandes
 
-
-Une fois le code de base implémenté sur votre page web, vous pouvez commencer à exécuter des commandes à l’aide du SDK. Il n&#39;est pas nécessaire d&#39;attendre que le fichier externe (`alloy.js`) soit chargé à partir du serveur avant d&#39;exécuter les commandes. Si le chargement du SDK n’est pas terminé, les commandes sont mises en file d’attente et traitées dès que possible par le SDK.
+Une fois le code de base implémenté sur votre page web, vous pouvez commencer à exécuter des commandes à l’aide du SDK. Il n’est pas nécessaire d’attendre que le fichier externe (`alloy.js`) soit chargé à partir du serveur avant d’exécuter les commandes. Si le chargement du SDK n’est pas terminé, les commandes sont mises en file d’attente et traitées dès que possible par le SDK.
 
 Les commandes sont exécutées à l’aide de la syntaxe ci-après.
 
@@ -66,15 +65,15 @@ alloy("commandName", options)
 
 ### Objets de réponse
 
-Toutes les promesses renvoyées par les commandes sont résolues avec un objet `result`. L’objet result contient des données en fonction de la commande et du consentement de l’utilisateur. Par exemple, les informations de bibliothèque sont transmises sous la forme d’une propriété de l’objet result dans la commande suivante.
+Toutes les promesses renvoyées par les commandes sont résolues avec un objet `result`. L’objet result contient des données en fonction de la commande et du consentement de l’utilisateur. Par exemple, les informations sur la bibliothèque sont transmises en tant que propriété de l’objet de résultats dans la commande suivante.
 
 ```js
 alloy("getLibraryInfo")
   .then(function(result) {
-    console.log(results.libraryInfo.version);
+    console.log(result.libraryInfo.version);
   });
 ```
 
 ### Consentement
 
-Si l&#39;utilisateur n&#39;a pas donné son consentement à une fin particulière, la promesse sera toujours résolue ; toutefois, l’objet response ne contiendra que les informations qui peuvent être fournies dans le contexte de ce à quoi l’utilisateur a consenti.
+Si un utilisateur n’a pas donné son consentement dans un but particulier, la promesse sera toujours résolue ; cependant, l’objet de réponse ne contient que les informations qui peuvent être fournies dans le contexte de ce à quoi l’utilisateur a consenti.
