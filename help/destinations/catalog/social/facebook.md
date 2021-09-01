@@ -3,9 +3,9 @@ keywords: Connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion facebook
 description: Activez les profils de vos campagnes Facebook pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: 2faf27495c3785a27613db917c7416e1d7b08c4d
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1521'
 ht-degree: 6%
 
 ---
@@ -62,6 +62,9 @@ Avant d’envoyer vos segments ciblés à [!DNL Facebook], assurez-vous de respe
    >
    > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. L’autorisation est requise pour l’intégration [!DNL Adobe Experience Platform].
 * Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, où `accountID` correspond à votre [!DNL Facebook Ad Account ID].
+   >[!IMPORTANT]
+   >
+   >Lors de la signature des [!DNL Facebook Custom Audiences] Conditions d’utilisation, veillez à utiliser le même compte utilisateur que celui que vous utilisiez pour vous authentifier dans l’API Facebook.
 
 ## Exigences de correspondance des identifiants {#id-matching-requirements}
 
