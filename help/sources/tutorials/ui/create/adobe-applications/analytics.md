@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: e28158bbd4e89e5fcf19f4dc89f266d737b34e65
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1493'
 ht-degree: 8%
 
 ---
 
 # Création d’une connexion source Adobe Analytics dans l’interface utilisateur
 
-Ce tutoriel décrit les étapes à suivre pour créer une connexion source Adobe Analytics dans l’interface utilisateur afin d’importer les données [!DNL Analytics] de suite de rapports dans Adobe Experience Platform.
+Ce tutoriel décrit les étapes à suivre pour créer une connexion source Adobe Analytics dans l’interface utilisateur afin d’importer les [!DNL Analytics] données de suite de rapports dans Adobe Experience Platform.
 
 ## Prise en main
 
@@ -30,7 +30,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 Il est important de comprendre les termes clés suivants utilisés dans ce document :
 
 * **Attribut** standard : Les attributs standard sont tous les attributs prédéfinis par Adobe. Ils ont la même signification pour tous les clients et sont disponibles dans les groupes de champs de schéma [!DNL Analytics] et de données source [!DNL Analytics].
-* **Attribut** personnalisé : Les attributs personnalisés sont n’importe quel attribut de la hiérarchie de dimension personnalisée dans  [!DNL Analytics]. Ils font également partie des schémas définis par l’Adobe, mais peuvent être interprétés différemment par différents clients. Les attributs personnalisés incluent des eVars, des props et des listes. Pour plus d’informations sur les eVars, consultez la [[!DNL Analytics] documentation suivante sur les variables de conversion](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) .
+* **Attribut** personnalisé : Les attributs personnalisés sont n’importe quel attribut de la hiérarchie de variables personnalisées dans  [!DNL Analytics]. Les attributs personnalisés sont utilisés dans une mise en oeuvre Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut différer d’une suite de rapports à l’autre. Les attributs personnalisés incluent des eVars, des props et des listes. Pour plus d’informations sur les eVars, consultez la [[!DNL Analytics] documentation suivante sur les variables de conversion](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) .
 * **N’importe quel attribut dans les groupes** de champs personnalisés : Les attributs provenant de groupes de champs créés par les clients sont tous définis par l’utilisateur et ne sont considérés comme des attributs ni standard ni personnalisés.
 * **Noms** conviviaux : Les noms conviviaux sont des étiquettes fournies par l’utilisateur pour les variables personnalisées dans une  [!DNL Analytics] mise en oeuvre. Pour plus d’informations sur les noms conviviaux, consultez la [[!DNL Analytics] documentation suivante sur les variables de conversion](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) .
 
@@ -46,15 +46,15 @@ Dans la catégorie **[!UICONTROL Adobe des applications]** , sélectionnez **[!U
 
 ### Sélectionner des données
 
-L’étape **[!UICONTROL Ajout de données à la source Analytics]** s’affiche. Sélectionnez **[!UICONTROL Suite de rapports]** pour commencer à créer une connexion source pour les données de la suite de rapports Analytics, puis sélectionnez la suite de rapports à ingérer. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
+L’étape **[!UICONTROL Ajout de données à la source Analytics]** s’affiche. Sélectionnez **[!UICONTROL Suite de rapports]** pour commencer à créer une connexion source pour les données de la suite de rapports Analytics, puis sélectionnez la suite de rapports à ingérer. Les suites de rapports qui ne peuvent pas être sélectionnées ont déjà été ingérées dans cet environnement de test ou dans un autre environnement de test. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 >[!NOTE]
 >
->Plusieurs connexions entrantes à une source peuvent être établies pour importer différentes données.
+>Plusieurs connexions entrantes peuvent être établies pour importer plusieurs suites de rapports, mais une seule suite de rapports peut être utilisée à la fois avec la plateforme de données clients en temps réel.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-<!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
+<!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### Mappage
 
@@ -74,9 +74,9 @@ La section [!UICONTROL Mapper les champs standard] affiche des panneaux pour les
 
 | Mappage des champs standard | Description |
 | --- | --- |
-| [!UICONTROL Mappings standard appliqués] | Le panneau [!UICONTROL Mappages standard appliqués] affiche le nombre total d’attributs standard mappés. Les mappages standard se rapportent aux jeux de mappages entre les attributs standard dans les données [!DNL Analytics] source et les attributs standard dans le groupe de champs [!DNL Analytics]. Ils sont prémappés et ne peuvent pas être modifiés. |
-| [!UICONTROL Mappings standard non correspondants] | Le panneau [!UICONTROL Mappages standard non correspondants] fait référence au nombre d’attributs standard mappés contenant des conflits de noms conviviaux. Ces conflits apparaissent lorsque vous réutilisez un schéma qui comporte déjà un ensemble de descripteurs de champ renseigné. Vous pouvez poursuivre votre flux de données [!DNL Analytics] même avec des conflits de noms conviviaux. |
-| [!UICONTROL Mappings personnalisés] | Le panneau [!UICONTROL Mappages personnalisés] affiche le nombre d’attributs personnalisés mappés, y compris les eVars, les props et les listes. Les mappages personnalisés se rapportent aux jeux de mappages entre les attributs personnalisés dans les données [!DNL Analytics] source et les attributs personnalisés dans le groupe de champs [!DNL Analytics]. Les attributs personnalisés peuvent être mappés à d’autres attributs personnalisés, ainsi qu’à des attributs standard. |
+| [!UICONTROL Mappings standard appliqués] | Le panneau [!UICONTROL Mappages standard appliqués] affiche le nombre total d’attributs mappés. Les mappages standard se rapportent aux ensembles de mappages entre tous les attributs des données [!DNL Analytics] source et les attributs correspondants dans le groupe de champs [!DNL Analytics]. Ils sont prémappés et ne peuvent pas être modifiés. |
+| [!UICONTROL Mappings standard non correspondants] | Le panneau [!UICONTROL Mappages standard non correspondants] fait référence au nombre d’attributs mappés contenant des conflits de nom conviviaux. Ces conflits apparaissent lorsque vous réutilisez un schéma qui comporte déjà un ensemble rempli de descripteurs de champ provenant d’une autre suite de rapports. Vous pouvez poursuivre votre flux de données [!DNL Analytics] même avec des conflits de noms conviviaux. |
+| [!UICONTROL Mappings personnalisés] | Le panneau [!UICONTROL Mappages personnalisés] affiche le nombre d’attributs personnalisés mappés, y compris les eVars, les props et les listes. Les mappages personnalisés font référence aux jeux de mappages entre les attributs personnalisés dans les données source [!DNL Analytics] et les attributs dans les groupes de champs personnalisés inclus dans le schéma sélectionné. |
 
 ![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
 
@@ -92,7 +92,7 @@ Platform détecte automatiquement vos jeux de mappages pour tout conflit de noms
 
 ![mapping](../../../../images/tutorials/create/analytics/mapping.png)
 
-En cas de conflits de noms conviviaux dans vos jeux de mappages, vous pouvez continuer avec votre flux de données [!DNL Analytics], en reconnaissant que les descripteurs de champ seront les mêmes. Vous pouvez également choisir de créer un nouveau schéma avec un ensemble vide de descripteurs.
+S’il existe des conflits de noms conviviaux entre votre suite de rapports source et votre schéma sélectionné, vous pouvez continuer avec votre flux de données [!DNL Analytics], en reconnaissant que les descripteurs de champ ne seront pas modifiés. Vous pouvez également choisir de créer un nouveau schéma avec un ensemble vide de descripteurs.
 
 Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
@@ -147,7 +147,7 @@ L’étape **[!UICONTROL Détails du flux de données]** s’affiche, où vous d
 L’étape [!UICONTROL Réviser] s’affiche, ce qui vous permet de passer en revue votre nouveau flux de données Analytics avant qu’il ne soit créé. Les détails de la connexion sont regroupés par catégories, notamment :
 
 * [!UICONTROL Connexion] : Affiche la plateforme source de la connexion.
-* [!UICONTROL Type] de données : Affiche la suite de rapports sélectionnée et son identifiant de suite de rapports correspondant.
+* [!UICONTROL Type] de données : Affiche la suite de rapports sélectionnée et l’identifiant de suite de rapports correspondant.
 
 ![review](../../../../images/tutorials/create/analytics/review.png)
 
@@ -181,7 +181,7 @@ Pour supprimer un flux de données, accédez à la page [!UICONTROL Flux de donn
 
 ## Étapes suivantes et ressources supplémentaires
 
-Une fois la connexion créée, un schéma cible et un flux de données sont automatiquement créés pour contenir les données entrantes. En outre, un remplissage de données se produit et ingère jusqu’à 13 mois de données historiques. Une fois l’ingestion initiale terminée, les données [!DNL Analytics] sont utilisées par les services Platform en aval tels que [!DNL Real-time Customer Profile] et Segmentation Service. Pour plus d’informations, consultez les documents suivants :
+Une fois la connexion créée, le flux de données est automatiquement créé pour contenir les données entrantes et renseigner un jeu de données avec votre schéma sélectionné. En outre, un remplissage de données se produit et ingère jusqu’à 13 mois de données historiques. Une fois l’ingestion initiale terminée, les données [!DNL Analytics] sont utilisées par les services Platform en aval tels que [!DNL Real-time Customer Profile] et Segmentation Service. Pour plus d’informations, consultez les documents suivants :
 
 * [Présentation d’[!DNL Real-time Customer Profile]](../../../../../profile/home.md)
 * [Présentation d’[!DNL Segmentation Service]](../../../../../segmentation/home.md)
