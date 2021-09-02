@@ -5,10 +5,10 @@ title: Principes de base de la composition des schémas
 topic-legacy: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7d05b5d57ec4597b168be0261e75da5f243cb660
+source-git-commit: 2bd7c12209a1944aa954ba4490bb0c57f2a5ea61
 workflow-type: tm+mt
-source-wordcount: '3629'
-ht-degree: 31%
+source-wordcount: '3684'
+ht-degree: 30%
 
 ---
 
@@ -68,7 +68,11 @@ Il existe deux manières d’envoyer des données d’identité à Platform :
 
 `identityMap` est un champ de type map qui décrit les différentes valeurs d’identité d’un individu, ainsi que les espaces de noms qui lui sont associés. Ce champ peut être utilisé pour fournir des informations d’identité pour vos schémas, au lieu de définir des valeurs d’identité dans la structure du schéma lui-même.
 
-L’inconvénient principal de l’utilisation de `identityMap` est que les identités sont incorporées dans les données et deviennent par conséquent moins visibles. Si vous ingérez des données brutes, vous devez définir des champs d’identité individuels dans la structure réelle du schéma à la place. Les schémas qui utilisent `identityMap` ne peuvent pas non plus participer aux relations.
+L’inconvénient principal de l’utilisation de `identityMap` est que les identités sont incorporées dans les données et deviennent par conséquent moins visibles. Si vous ingérez des données brutes, vous devez définir des champs d’identité individuels dans la structure réelle du schéma à la place.
+
+>[!NOTE]
+>
+>Un schéma qui utilise `identityMap` peut être utilisé comme schéma source dans une relation, mais ne peut pas être utilisé comme schéma de destination. Cela est dû au fait que tous les schémas de destination doivent avoir une identité visible qui peut être mappée dans un champ de référence dans le schéma source. Pour plus d’informations sur les exigences des schémas source et de destination, consultez le guide de l’interface utilisateur sur les [relations](../tutorials/relationship-ui.md) .
 
 Cependant, les mappages d’identité peuvent s’avérer particulièrement utiles si vous rentrez des données provenant de sources qui stockent les identités ensemble (comme [!DNL Airship] ou Adobe Audience Manager), ou s’il existe un nombre variable d’identités pour un schéma. En outre, les mappages d’identité sont requis si vous utilisez le [SDK Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/).
 
