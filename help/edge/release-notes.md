@@ -3,14 +3,18 @@ title: Notes de mise à jour du SDK web Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK Web Adobe Experience Platform.
 keywords: SDK Web Adobe Experience Platform;SDK Web Platform;SDK Web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
+source-git-commit: f5d3c5911357d4b76e4d38564bf637e2549469d6
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '771'
 ht-degree: 3%
 
 ---
 
 # Notes de mise à jour
+
+## Version 2.6.4 - 7 septembre 2021
+
+* Correction d’un problème en raison duquel les actions HTML Adobe Target appliquées à l’élément `head` remplaçaient l’intégralité du contenu `head`. Désormais, les actions HTML définies appliquées à l’élément `head` sont modifiées pour ajouter du code HTML.
 
 ## Version 2.6.3 - 16 août 2021
 
