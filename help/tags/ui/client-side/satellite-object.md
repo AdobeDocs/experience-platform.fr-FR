@@ -1,20 +1,21 @@
 ---
 title: Référence d’objet satellite
 description: Découvrez l’objet _satellite côté client et les différentes fonctions que vous pouvez exécuter avec celui-ci dans les balises .
-source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
+exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 43%
+source-wordcount: '1285'
+ht-degree: 83%
 
 ---
 
-# Référence d’objet satellite
+# Référence d’objet par satellite
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Ce document sert de référence à l’objet `_satellite` côté client et aux différentes fonctions que vous pouvez exécuter avec celui-ci.
+Ce document sert de référence à lʼobjet `_satellite` côté client et aux différentes fonctions que vous pouvez exécuter avec celui-ci.
 
 ## `track`
 
@@ -30,7 +31,7 @@ _satellite.track(identifier: string [, detail: *] )
 _satellite.track('contact_submit', { name: 'John Doe' });
 ```
 
-`track` déclenche toutes les règles à l’aide du type d’événement Direct Call (Appel direct) qui a été configuré avec l’identifiant donné à partir de l’extension de balise Core. L’exemple ci-dessus déclenche toutes les règles à l’aide d’un type d’événement Direct Call (Appel direct) dans lequel l’identifiant configuré est `contact_submit`. Un objet facultatif contenant des informations connexes est également transmis. Vous pouvez accéder à l’objet de détail en saisissant `%event.detail%` dans un champ de texte d’une condition ou d’une action ou `event.detail` dans l’éditeur de code d’une condition ou d’une action Custom Code (Code personnalisé).
+`track` déclenche toutes les règles à lʼaide du type dʼévénement Direct Call (Appel direct) qui a été configuré avec lʼidentifiant donné à partir de lʼextension de balise Core. L’exemple ci-dessus déclenche toutes les règles à l’aide d’un type d’événement Direct Call (Appel direct) dans lequel l’identifiant configuré est `contact_submit`. Un objet facultatif contenant des informations connexes est également transmis. Vous pouvez accéder à l’objet de détail en saisissant `%event.detail%` dans un champ de texte d’une condition ou d’une action ou `event.detail` dans l’éditeur de code d’une condition ou d’une action Custom Code (Code personnalisé).
 
 ## `getVar`
 
@@ -46,9 +47,9 @@ _satellite.getVar(name: string) => *
 var product = _satellite.getVar('product');
 ```
 
-Dans l’exemple fourni, si un élément de données existe avec un nom correspondant, la valeur de l’élément de données est renvoyée. S’il n’existe aucun élément de données correspondant, il vérifie alors si une variable personnalisée avec un nom correspondant a été précédemment définie à l’aide de `_satellite.setVar()`. Si une variable personnalisée correspondante est trouvée, sa valeur va être renvoyée.
+Dans lʼexemple proposé, sʼil existe un élément de données avec un nom correspondant, la valeur de lʼélément de données sera renvoyée. S’il n’existe aucun élément de données correspondant, il vérifie alors si une variable personnalisée avec un nom correspondant a été précédemment définie à l’aide de `_satellite.setVar()`. Si une variable personnalisée correspondante est trouvée, sa valeur va être renvoyée.
 
-Notez que dans de nombreux champs de formulaire de l’interface utilisateur de la collecte de données, vous pouvez utiliser la syntaxe `%%` pour référencer des variables, ce qui réduit la nécessité d’appeler `_satellite.getVar()`. Par exemple, l’utilisation de %product% donne accès à la valeur de l’élément de données du produit ou de la variable personnalisée.
+Remarquez que dans de nombreux champs de formulaire de lʼinterface utilisateur de collecte de données, vous pouvez utiliser la syntaxe `%%` pour référencer des variables, ce qui réduit la nécessité dʼinvoquer `_satellite.getVar()`. Par exemple, l’utilisation de %product% donne accès à la valeur de l’élément de données du produit ou de la variable personnalisée.
 
 ## `setVar`
 
@@ -114,7 +115,7 @@ _satellite.logger.error(message: string)
 _satellite.logger.error('No product ID found.');
 ```
 
-L’objet `logger` permet de consigner un message dans la console du navigateur. Le message ne s’affiche que si le débogage des balises est activé par l’utilisateur (en appelant `_satellite.setDebug(true)` ou en utilisant une extension de navigateur appropriée).
+Lʼobjet `logger` permet de consigner un message dans la console du navigateur. Le message ne sʼaffiche que si le débogage de balises est activé par lʼutilisateur (en appelant `_satellite.setDebug(true)` ou en utilisant une extension de navigateur appropriée).
 
 ### Consignation des avertissements d’obsolescence
 
@@ -128,11 +129,11 @@ _satellite.logger.deprecation(message: string)
 _satellite.logger.deprecation('This method is no longer supported, please use [new example] instead.');
 ```
 
-Un avertissement s’affiche alors dans la console du navigateur. Le message s’affiche, que le débogage des balises soit activé ou non par l’utilisateur.
+Cette opération permet de consigner un message dʼavertissement dans la console du navigateur. Le message sʼaffiche et ce, que le débogage de balises soit activé ou non par lʼutilisateur.
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` contient des fonctions permettant de lire et d’écrire des cookies. Il s’agit d’une copie exposée du cookie-js de bibliothèque tiers. Pour plus d’informations sur l’utilisation plus avancée de cette bibliothèque, consultez la [documentation js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` contient des fonctions permettant de lire et d’écrire des cookies. Il sʼagit dʼune copie exposée du cookie-js de bibliothèque tiers. Pour plus d’informations sur l’utilisation plus avancée de cette bibliothèque, consultez la [documentation js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
 
 ### Définition d’un cookie {#cookie-set}
 
@@ -200,11 +201,11 @@ _satellite.cookie.remove('product');
 _satellite.buildInfo
 ```
 
-Cet objet contient des informations sur la version de la bibliothèque du runtime de balises active. L’objet contient les propriétés suivantes :
+Cet objet contient des informations sur la création de la bibliothèque dʼexécution des balises actuelle. L’objet contient les propriétés suivantes :
 
 ### `turbineVersion`
 
-Ceci fournit la version [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilisée dans la bibliothèque actuelle.
+Permet de fournir la version de [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilisée dans la bibliothèque actuelle.
 
 ### `turbineBuildDate`
 
@@ -214,7 +215,31 @@ Date ISO 8601 de création de la version de [Turbine](https://www.npmjs.com/pack
 
 Date ISO 8601 de la création de la bibliothèque actuelle.
 
-### `environment`
+Cet exemple illustre les valeurs d’objet :
+
+```javascript
+{
+  turbineVersion: "14.0.0",
+  turbineBuildDate: "2016-07-01T18:10:34Z",
+  buildDate: "2016-03-30T16:27:10Z"
+}
+```
+
+## `environment`
+
+**Code**
+
+```javascript
+_satellite.environment
+```
+
+Cet objet contient des informations sur l’environnement sur lequel la bibliothèque du runtime de balises active est déployée. L’objet contient les propriétés suivantes :
+
+### `id`
+
+ID de l’environnement.
+
+### `stage`
 
 Environnement pour lequel cette bibliothèque a été créée. Les valeurs possibles sont les suivantes :
 
@@ -226,10 +251,8 @@ Cet exemple illustre les valeurs d’objet :
 
 ```javascript
 {
-  turbineVersion: "14.0.0",
-  turbineBuildDate: "2016-07-01T18:10:34Z",
-  buildDate: "2016-03-30T16:27:10Z",
-  environment: "development"
+  id: "EN123456...",
+  stage: "development"
 }
 ```
 
@@ -251,9 +274,9 @@ _satellite.notify(message: string[, level: number])
 _satellite.notify('Hello world!');
 ```
 
-`notify` consigne un message dans la console du navigateur. Le message ne s’affiche que si le débogage des balises est activé par l’utilisateur (en appelant `_satellite.setDebug(true)` ou en utilisant une extension de navigateur appropriée).
+`notify` consigne un message sur la console du navigateur. Le message ne sʼaffiche que si le débogage de balises est activé par lʼutilisateur (en appelant `_satellite.setDebug(true)` ou en utilisant une extension de navigateur appropriée).
 
-Un niveau de journalisation facultatif peut être transmis, ce qui affecte le style et le filtrage du message enregistré. Les niveaux pris en charge sont les suivants :
+Un niveau de journalisation facultatif peut être transmis, ce qui va affecter la stylisation et le filtrage du message enregistré. Les niveaux pris en charge sont les suivants :
 
 3 - Messages d’information.
 
@@ -281,7 +304,7 @@ _satellite.setCookie(name: string, value: string, days: number)
 _satellite.setCookie('product', 'Circuit Pro', 3);
 ```
 
-Cela définit un cookie dans le navigateur de l’utilisateur. Le cookie persistera pendant le nombre de jours spécifié.
+Cette opération configure un cookie dans le navigateur de lʼutilisateur. Le cookie persistera pendant le nombre de jours spécifié.
 
 ## `readCookie`
 
@@ -301,7 +324,7 @@ _satellite.readCookie(name: string) => string
 var product = _satellite.readCookie('product');
 ```
 
-Ceci lit un cookie à partir du navigateur de l’utilisateur.
+Cette opération lit un cookie à partir du navigateur de lʼutilisateur.
 
 ## `removeCookie`
 
@@ -321,7 +344,7 @@ _satellite.removeCookie(name: string)
 _satellite.removeCookie('product');
 ```
 
-Cela supprime un cookie du navigateur de l’utilisateur.
+Cette opération supprime un cookie du navigateur de lʼutilisateur.
 
 ## Fonctions de débogage
 
@@ -357,7 +380,7 @@ _satellite._monitors
 
 **Exemple**
 
-Sur votre page web exécutant une bibliothèque de balises, ajoutez un fragment de code à votre code HTML. En règle générale, le code est inséré dans l’élément `<head>` avant l’élément `<script>` qui charge la bibliothèque de balises. Cela permet au moniteur de capturer les premiers événements système qui se produisent dans la bibliothèque de balises. Par exemple :
+Sur votre page web exécutant une bibliothèque de balises, ajoutez un fragment de code à votre code HTML. En règle générale, le code est inséré dans lʼélément `<head>` avant lʼélément `<script>` qui charge la bibliothèque de balises. Cela permet au moniteur de capturer les premiers événements système qui surviennent dans la bibliothèque de balises. Par exemple :
 
 ```html
 <!DOCTYPE html>
@@ -399,7 +422,7 @@ Sur votre page web exécutant une bibliothèque de balises, ajoutez un fragment 
 </html>
 ```
 
-Dans le premier élément de script, puisque la bibliothèque de balises n’a pas encore été chargée, l’objet `_satellite` initial est créé et un tableau sur `_satellite._monitors` est initialisé. Le script ajoute ensuite un objet de moniteur à ce tableau. L’objet monitor peut spécifier les méthodes suivantes qui seront ensuite appelées par la bibliothèque de balises :
+Dans le premier élément de script, puisque la bibliothèque de balises n’a pas encore été chargée, l’objet `_satellite` initial est créé et un tableau est initialisé sur `_satellite._monitors`. Le script ajoute ensuite un objet de moniteur à ce tableau. L’objet de moniteur peut spécifier les méthodes suivantes, qui seront ensuite appelées par la bibliothèque de balises :
 
 ### `ruleTriggered`
 
@@ -407,7 +430,7 @@ Cette fonction est appelée après qu’un événement déclenche une règle, ma
 
 ### `ruleCompleted`
 
-Cette fonction est appelée une fois qu’une règle a été entièrement traitée. En d’autres termes, l’événement s’est produit, toutes les conditions ont été remplies et toutes les actions ont été exécutées. L’objet d’événement transmis à `ruleCompleted` contient des informations sur la règle qui a été complétée.
+Cette fonction est appelée une fois qu’une règle a été entièrement traitée. En d’autres termes, l’événement est survenu, toutes les conditions ont été satisfaites et toutes les actions ont été exécutées. L’objet d&#39;événement transmis à `ruleCompleted` contient des informations sur la règle qui a été traitée.
 
 ### `ruleConditionFailed`
 
@@ -421,7 +444,7 @@ Si `ruleTriggered` est appelé, `ruleCompleted` ou `ruleConditionFailed` sera ap
 
 ### Test du moniteur
 
-L’exemple ci-dessus indique les trois méthodes du moniteur. Lorsqu’elles sont appelées, le moniteur déconnecte les informations pertinentes. Pour le tester, configurez deux règles dans la bibliothèque de balises :
+L’exemple ci-dessus indique les trois méthodes du moniteur. Lorsqu’elles sont appelées, le moniteur déconnecte les informations pertinentes. Pour tester ce paramètre, configurez deux règles dans la bibliothèque de balises :
 
 1. Une règle qui comporte un événement clics et une condition de navigateur qui est uniquement satisfaite si le navigateur est [!DNL Chrome].
 1. Une règle qui comporte un événement clics et une condition de navigateur qui est uniquement satisfaite si le navigateur est [!DNL Firefox].
@@ -430,4 +453,4 @@ Si vous ouvrez la page dans [!DNL Chrome], ouvrez la console du navigateur et cl
 
 ![](../../images/debug.png)
 
-Des hooks supplémentaires ou des informations supplémentaires peuvent être ajoutés à ces gestionnaires si nécessaire.
+Il est possible d’ajouter des raccordements ou des informations supplémentaires à ces gestionnaires, si nécessaire.
