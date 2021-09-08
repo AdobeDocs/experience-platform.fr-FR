@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 6b688b88dc111cfb638ae71d9b43276e93eff28b
+source-git-commit: 834814cc2929c618b9f41c0fcf3ef79a831a969d
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 57%
+source-wordcount: '627'
+ht-degree: 46%
 
 ---
 
@@ -139,5 +139,38 @@ ht-degree: 57%
       * [Extension Invoca Tags](./catalog/voice/invoca.md)
       * [Extension Medallia](./catalog/voice/medallia.md)
       * [Extension Talk URL Inbox](./catalog/voice/talkurl.md)
+* SDK de destination {#destination-sdk}
+   * [Présentation](./destination-sdk/overview.md)
+   * [Conditions préalables à l’intégration](./destination-sdk/integration-prerequisites.md)
+   * [Prise en main](./destination-sdk/getting-started.md)
+   * Fonctionnalité du SDK de destination {#functionality}
+      * [Options de configuration](./destination-sdk/configuration-options.md)
+      * [Configuration de la destination](./destination-sdk/destination-configuration.md)
+      * [Spécifications du serveur et des modèles](./destination-sdk/server-and-template-configuration.md)
+      * [Format du message](./destination-sdk/message-format.md)
+      * [Gestion des métadonnées d’audience](./destination-sdk/audience-metadata-management.md)
+      * [Configuration de l’authentification](./destination-sdk/credentials-configuration.md)
+      * [Authentification OAuth 2](./destination-sdk/oauth2-authentication.md)
+      * Outils de développement {#developer-tools}
+         * [Créer et tester un modèle de transformation de message](./destination-sdk/create-template.md)
+         * [Test de votre configuration de destination](./destination-sdk/test-destination.md)
+   * Référence d’API {#api-reference}
+      * [Opérations de l’API Destinations endpoint](./destination-sdk/destination-configuration-api.md)
+      * [Opérations de l’API du point d’entrée du serveur de destination](./destination-sdk/destination-server-api.md)
+      * [Opérations de l’API de point d’entrée des métadonnées d’audience](./destination-sdk/audience-metadata-api.md)
+      * [Opérations de l’API du point d’entrée des informations d’identification](./destination-sdk/credentials-configuration-api.md)
+      * [Opérations de l’API de point de terminaison de publication](./destination-sdk/destination-publish-api.md)
+      * Référence des outils de développement {#developer-tools-reference}
+         * [Obtention d’un exemple d’opération d’API de modèle](./destination-sdk/sample-template-api.md)
+         * [Opérations de l’API de modèle de rendu](./destination-sdk/render-template-api.md)
+         * [Opérations de l’API de test de destination](./destination-sdk/destination-testing-api.md)
+         * [Exemples d’opérations API de génération de profil](./destination-sdk/sample-profile-generation-api.md)
+   * Guides {#guides}
+      * [Utilisation du SDK de destination pour configurer votre destination](./destination-sdk/configure-destination-instructions.md)
+   * Document de votre destination {#document-destination}
+      * [Document de votre destination dans Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
+      * [Utilisation de l’interface web GitHub pour créer une page de documentation de destination](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
+      * [Utilisation d’un éditeur de texte dans votre environnement local pour créer une page de documentation de destination](./destination-sdk/docs-framework/work-in-local-environment.md)
+      * [Modèle de libre-service de documentation](./destination-sdk/docs-framework/self-service-template.md)
 * [Questions fréquentes](./destinations-faq.md)
 * [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
