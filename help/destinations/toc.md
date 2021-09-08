@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 09bae0d24eead5f0b6533ba5b89e1fc87c8c71b5
+source-git-commit: 6b688b88dc111cfb638ae71d9b43276e93eff28b
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '496'
 ht-degree: 57%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 57%
       * [Extension LinkedIn Insight Tag](./catalog/advertising/linkedin.md)
       * [Connexion Microsoft Bing](./catalog/advertising/bing.md)
       * [Extension Pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
+      * [Connexion à la liste des clients pinterest](./catalog/advertising/pinterest.md)
       * [La connexion au bureau de commerce](./catalog/advertising/tradedesk.md)
       * [Extension Twitter Universal Website Tag](./catalog/advertising/twitter-uwt.md)
       * [Connexion à Yahoo/Verizon DataX](./catalog/advertising/datax.md)
@@ -108,9 +109,9 @@ ht-degree: 57%
       * [Présentation de l’extension de balise](./catalog/launch-extensions/overview.md)
    * Destinations d’engagement mobile {#mobile-engagement}
       * [Présentation des destinations d’engagement mobile](./catalog/mobile-engagement/overview.md)
-      * [(Version bêta) Connexion aux attributs du navire](./catalog/mobile-engagement/airship-attributes.md)
-      * [(Version bêta) Connexion aux balises d’Airship](./catalog/mobile-engagement/airship-tags.md)
-      * [(Version bêta) Connexion de blocage](./catalog/mobile-engagement/braze.md)
+      * [Connexion aux attributs du navire](./catalog/mobile-engagement/airship-attributes.md)
+      * [Connexion à Airship Tags](./catalog/mobile-engagement/airship-tags.md)
+      * [Connexion de frein](./catalog/mobile-engagement/braze.md)
    * Destinations de personnalisation {#personalization}
       * [Présentation des destinations de personnalisation](./catalog/personalization/overview.md)
       * [Extension Adobe Target](./catalog/personalization/adobe-target.md)
