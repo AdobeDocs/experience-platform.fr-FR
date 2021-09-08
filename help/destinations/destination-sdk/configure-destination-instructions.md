@@ -3,7 +3,8 @@ description: Cette page décrit comment utiliser les informations de référence
 seo-description: This page describes how to use the reference information in Configuration options for the Destinations SDK to configure your destination using Destination SDK.
 seo-title: How to use Destination SDK to configure your destination
 title: Comment utiliser le SDK de destination pour configurer votre destination
-source-git-commit: 2841adc0ce212a945c35ba38209d4c00c519ad7b
+exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 0%
@@ -161,7 +162,7 @@ Dans le cadre du processus de test de votre destination, vous devez utiliser l�
 
 ## Étape 7 : Publier votre destination {#publish-destination}
 
-Après avoir configuré et testé votre destination. utilisez l’ [API de publication de destination](./destination-publish-api.md) pour envoyer votre configuration à Adobe pour révision.
+Après avoir configuré et testé votre destination, utilisez l’[API de publication de destination](./destination-publish-api.md) pour envoyer votre configuration à Adobe en vue de la révision.
 
 ## Étape 8 : Document de votre destination {#document-destination}
 

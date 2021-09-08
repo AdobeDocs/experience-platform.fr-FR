@@ -1,9 +1,10 @@
 ---
-description: 'Dans le cadre du SDK de destination, Adobe fournit des outils de développement pour vous aider à configurer et à tester votre destination. Cette page décrit comment tester votre configuration de destination. '
+description: Dans le cadre du SDK de destination, Adobe fournit des outils de développement pour vous aider à configurer et à tester votre destination. Cette page décrit comment tester votre configuration de destination.
 title: Test de votre configuration de destination
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -228,4 +229,4 @@ Pour obtenir des descriptions des paramètres de requête et de réponse, voir [
 
 ## Étapes suivantes
 
-Une fois que vous avez confirmé que votre destination est correctement configurée, utilisez le processus de documentation en libre-service [Adobe](./docs-framework/documentation-instructions.md) pour créer une page de documentation pour votre destination.
+Après avoir testé votre destination et confirmé qu’elle est correctement configurée, utilisez l’[API de publication de destination](./destination-publish-api.md) pour envoyer votre configuration à Adobe pour révision.
