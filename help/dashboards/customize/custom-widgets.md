@@ -2,8 +2,7 @@
 keywords: Experience Platform;interface utilisateur;interface utilisateur;tableaux de bord;profils;segments;destinations;utilisation des licences;widgets;mesures
 title: Création de widgets personnalisés pour les tableaux de bord
 description: 'Ce guide fournit des instructions détaillées sur la création de widgets personnalisés à utiliser dans les tableaux de bord Adobe Experience Platform. '
-exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 4a578721cfc5e6e35179bec82886808fd6e18b53
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 0%

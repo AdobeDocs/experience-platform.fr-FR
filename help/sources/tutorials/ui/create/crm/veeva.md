@@ -5,8 +5,7 @@ title: Création d’une connexion source CRM Veeva dans l’interface utilisate
 topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source CRM Veeva à l’aide de l’interface utilisateur de Adobe Experience Platform.
-exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 076e0880c9efd1fe1cbfb4c610c5e15093adf460
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 13%

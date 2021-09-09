@@ -2,8 +2,7 @@
 keywords: Experience Platform;interface utilisateur;interface utilisateur;tableaux de bord;profils;segments;destinations;utilisation des licences
 title: Modifier le schéma pour créer des widgets de tableau de bord personnalisés
 description: 'Ce guide fournit des instructions étape par étape pour la sélection des attributs et la configuration du schéma de votre organisation afin de créer des widgets personnalisés pour les tableaux de bord Adobe Experience Platform. '
-exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 16a8764fd27e6b1ae32bc37b3abcd521aaf88887
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 1%
