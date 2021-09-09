@@ -1,10 +1,11 @@
 ---
 title: Autorisations utilisateur pour les balises
 description: Découvrez les différents types d’autorisations disponibles pour les balises et quelques stratégies de mise en oeuvre de base pour différents cas d’utilisation professionnels.
-source-git-commit: acef25fe46f0ac0c45c18d4590be4af95ad5e0ab
+exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
+source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
 workflow-type: tm+mt
 source-wordcount: '1307'
-ht-degree: 17%
+ht-degree: 24%
 
 ---
 
@@ -33,13 +34,13 @@ Dans un profil de produit, les autorisations pour les balises sont divisées en 
 
 ### Plateformes
 
-Chaque propriété de balise possède une plateforme. Il existe actuellement deux plateformes que vous pouvez utiliser pour les balises : Web et mobile. Vous pouvez utiliser ce type d’autorisation pour restreindre ou accorder l’accès à un type particulier de propriété. Cela peut s’avérer utile lorsque l’équipe qui gère vos applications mobiles diffère de celle qui gère vos sites web.
+Chaque propriété de balise possède une plateforme. Vous pouvez actuellement utiliser deux plateformes pour les balises : Web et Mobile. Vous pouvez utiliser ce type d’autorisation pour restreindre ou accorder l’accès à un type particulier de propriété. Cela peut s’avérer utile lorsque l’équipe qui gère vos applications mobiles diffère de celle qui gère vos sites web.
 
 ### Propriétés
 
 Par défaut, les profils de produit accordent l’accès à toutes les propriétés qui existent au sein de votre entreprise, à la fois actuellement et à l’avenir. Avec ce type d’autorisation, vous pouvez restreindre ou accorder l’accès à des propriétés existantes spécifiques par nom.
 
-### Droits de propriété
+### Droits de propriété {#property-rights}
 
 Toute propriété que vous créez dans l’interface utilisateur de la collecte de données est disponible dans Admin Console, ce qui vous permet de regrouper la propriété avec des droits de propriété spécifiques dans le même profil de produit.
 
@@ -51,11 +52,11 @@ Le tableau suivant décrit les droits de propriété disponibles et les fonction
 
 | Droit de propriété | Description |
 | --- | --- |
-| **Développer** | Vous pouvez ainsi effectuer les actions suivantes :<ul><li>Création de règles et d’éléments de données</li><li>Créer des bibliothèques et les créer dans des environnements de développement existants</li><li>Soumettre une bibliothèque pour approbation</li></ul>La plupart des tâches quotidiennes dans l’interface utilisateur de la collecte de données requièrent ce droit. |
+| **Développer** | Vous pouvez ainsi effectuer les actions suivantes :<ul><li>Création de règles et d’éléments de données</li><li>Créer des bibliothèques et les créer dans des environnements de développement existants</li><li>Soumettre une bibliothèque pour approbation</li></ul>La plupart des tâches quotidiennes dans lʼinterface utilisateur de la collecte de données requièrent ce droit. |
 | **Approuver** | Vous pouvez ainsi prendre une bibliothèque envoyée et la créer dans l’environnement d’évaluation. Vous pouvez également approuver une bibliothèque en vue de la publier une fois le test terminé. |
 | **Publier** | Vous pouvez ainsi publier des bibliothèques approuvées dans l’environnement de production. |
-| **Gérer les extensions** | Vous pouvez ainsi effectuer les actions suivantes : <ul><li>Installation de nouvelles extensions sur une propriété</li><li>Modification de la configuration d’une extension déjà installée</li><li>Suppression d’une extension</li></ul>Consultez la documentation de présentation des extensions pour [plus d’informations sur les extensions](../managing-resources/extensions/overview.md). Ce rôle appartient généralement au service informatique ou au marketing, selon votre organisation. |
-| **Gérer les environnements** | Vous pouvez ainsi créer et modifier des environnements. Pour plus d’informations, consultez la [documentation sur les environnements](../publishing/environments.md) . Ce rôle appartient généralement au groupe informatique. |
+| **Gérer les extensions** | Vous pouvez ainsi effectuer les actions suivantes : <ul><li>Installation de nouvelles extensions sur une propriété</li><li>Modification de la configuration d’une extension déjà installée</li><li>Suppression d’une extension</li></ul>Consultez la documentation de présentation des extensions pour [plus dʼinformations sur les extensions](../managing-resources/extensions/overview.md). Ce rôle appartient généralement au service informatique ou au marketing, selon votre organisation. |
+| **Gérer les environnements** | Vous pouvez ainsi créer et modifier des environnements. Pour plus dʼinformations, consultez la [documentation sur les environnements](../publishing/environments.md). Ce rôle appartient généralement au groupe informatique. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -67,7 +68,7 @@ Les droits d’entreprise s’appliquent aux autorisations qui s’appliquent à
 | --- | --- |
 | **Gérer les propriétés** | Vous pouvez ainsi effectuer les actions suivantes :<ul><li>Création de propriétés</li><li>Modification des métadonnées et des paramètres au niveau de la propriété</li><li>Suppression des propriétés</li></ul>Les administrateurs assument généralement ce rôle. Pour plus d’informations, consultez la [documentation sur les propriétés](companies-and-properties.md) . |
 | **Développer des extensions** | Permet de créer et de modifier des modules d’extension dont l’entreprise est propriétaire, y compris les versions privées et les demandes de publication publique. |
-| **Gérer les configurations d&#39;application** | Cette option n’est disponible que si vous disposez d’une licence pour Adobe Journey Optimizer ou d’une autre solution qui accorde l’accès aux messages in-app et push mobiles.  Vous pouvez ainsi gérer les applications dont l’Experience Cloud connaît les informations ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service de notification push Apple. |
+| **Gérer les configurations d&#39;application** | Cette option n’est disponible que si vous disposez d’une licence pour Adobe Journey Optimizer ou d’une autre solution qui accorde l’accès aux messages in-app et push mobiles.  Cela permet de gérer les applications dont Experience Cloud a connaissance, ainsi que les informations dʼidentification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service de notification push Apple. |
 
 {style=&quot;table-layout:auto&quot;}
 
