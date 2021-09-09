@@ -1,76 +1,79 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; sources ; assimilation ; dépannage ; sources ; dépannage ; sources faq ; faq ; connecteurs source ; connecteur source ; connecteurs source ; faqs ; connecteurs source ; dépannage ; connecteurs source ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;sources;ingestion;dépannage;dépannage des sources;faq;faq;faq;connecteurs source;connecteur source;faqs des connecteurs source;dépannage des connecteurs source;dépannage des connecteurs source
 solution: Experience Platform
-title: Dépannage des sources
+title: Résolution des problèmes liés aux sources
 topic-legacy: troubleshooting
-description: Ce document fournit des réponses aux questions fréquentes sur les sources de Adobe Experience Platform.
+description: Ce document répond aux questions les plus fréquemment posées sur les sources dans Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5f42c6ade63244c5c0bca2d6f879e43014474a83
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '749'
 ht-degree: 1%
 
 ---
 
-# (Bêta) Guide de dépannage des sources
+# (Version bêta) Guide de dépannage des sources
 
-Ce document fournit des réponses aux questions fréquentes sur les sources de Adobe Experience Platform. Pour toute question ou dépannage concernant d&#39;autres services [!DNL Platform], y compris ceux rencontrés sur toutes les API [!DNL Platform], consultez le [guide de dépannage Experience Platform](../landing/troubleshooting.md).
+Ce document répond aux questions les plus fréquemment posées sur les sources dans Adobe Experience Platform. Pour toute question ou dépannage concernant d’autres services [!DNL Platform], y compris ceux rencontrés sur toutes les API [!DNL Platform], reportez-vous au [guide de dépannage Experience Platform](../landing/troubleshooting.md).
 
-## Questions fréquemment posées 
+## Questions fréquentes
 
-Voici une liste de réponses aux questions fréquemment posées sur les sources.
+Vous trouverez ci-dessous une liste de réponses aux questions fréquentes sur les sources.
 
 ### Dois-je apporter des modifications à nos paramètres de sécurité réseau pour activer les sources ?
 
-Vous devrez peut-être placer sur la liste autorisée certaines adresses IP pour activer les sources. Pour plus d&#39;informations, veuillez lire la documentation sur votre connecteur source spécifique.
+Vous devrez peut-être placer sur la liste autorisée certaines adresses IP pour activer les sources. Pour plus d’informations, consultez la documentation sur votre connecteur source spécifique.
 
-### Quels types d&#39;authentification sont pris en charge par les sources ?
+### Quels types d’authentification sont pris en charge par les sources ?
 
-Les sources peuvent être authentifiées à l’aide de chaînes de connexion, de noms d’utilisateur et de mots de passe, ou de jetons d&#39;accès et clés. Vous trouverez des détails spécifiques sur les types d&#39;authentification pris en charge dans la documentation du connecteur source spécifié.
+Les sources peuvent être authentifiées à l’aide de chaînes de connexion, de noms d’utilisateur et de mots de passe, ou de jetons d’accès et de clés. Vous trouverez des détails spécifiques sur les types d’authentification pris en charge dans la documentation du connecteur source spécifié.
 
-### Pourquoi tous mes flux récents échouent-ils ?
+### Pourquoi toutes mes exécutions de flux récentes échouent-elles ?
 
-Si vous constatez que toutes vos exécutions de flux récentes échouent, vos informations d’identification ont peut-être été modifiées ou ont expiré. Pour résoudre ce problème, essayez de mettre à jour votre connexion avec les dernières informations d’identification.
+Si vous constatez que toutes vos exécutions de flux récentes échouent, vos informations d’identification ont peut-être changé ou expiré. Pour résoudre ce problème, essayez de mettre à jour votre connexion avec les informations d’identification les plus récentes.
 
-### Quels types de fichier sont pris en charge ?
+### Quels types de fichiers sont pris en charge ?
 
-Actuellement, les types de fichiers pris en charge sont les fichiers délimités, JSON et Parquet.
+Actuellement, les types de fichiers pris en charge sont les fichiers délimités JSON et Parquet.
 
-### Quelles sont les contraintes relatives aux noms et tailles de fichiers ?
+### Quelles sont les contraintes sur les noms et tailles de fichier ?
 
-Vous trouverez ci-dessous une liste de contraintes dont vous devez tenir compte pour les fichiers des sources.
+Vous trouverez ci-dessous une liste des contraintes que vous devez tenir compte des fichiers dans les sources.
 
-- Les noms des composants de répertoire et de fichier ne peuvent pas dépasser 255 caractères.
-- Les noms de répertoire et de fichier ne peuvent pas se terminer par une barre oblique (`/`). S&#39;il est fourni, il sera automatiquement supprimé.
-- Les caractères d’URL réservés suivants doivent être correctement placés en séquence d’échappement : `! ' ( ) ; @ & = + $ , % # [ ]`
+- Les noms des composants de répertoire et de fichier ne doivent pas dépasser 255 caractères.
+- Les noms de répertoire et de fichier ne peuvent pas se terminer par une barre oblique (`/`). S’il est fourni, il sera automatiquement supprimé.
+- Les caractères d’URL réservés suivants doivent être correctement précédés d’une séquence d’échappement : `! ' ( ) ; @ & = + $ , % # [ ]`
 - Les caractères suivants ne sont pas autorisés : `" \ / : | < > * ?`.
-- Caractères de chemin d’URL non autorisés. Les points de code tels que `\uE000`, bien qu&#39;ils soient valides dans les noms de fichier NTFS, ne sont pas des caractères Unicode valides. En outre, certains caractères ASCII ou Unicode, tels que les caractères de contrôle (0x00 à 0x1F, \u0081, etc.), ne sont pas non plus autorisés. Pour les règles régissant les chaînes Unicode dans HTTP/1.1, voir [RFC 2616, Section 2.2 : Règles de base](https://www.ietf.org/rfc/rfc2616.txt) et [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- Les noms de fichier suivants ne sont pas autorisés : LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caractère point (.) et deux caractères de point (.).
+- Caractères de chemin d’URL interdits. Les points de code tels que `\uE000`, bien qu’ils soient valides dans les noms de fichier NTFS, ne sont pas des caractères Unicode valides. En outre, certains caractères ASCII ou Unicode, tels que les caractères de contrôle (0x00 à 0x1F, \u0081, etc.), ne sont pas non plus autorisés. Pour les règles régissant les chaînes Unicode en HTTP/1.1, voir [RFC 2616, Section 2.2 : Règles de base](https://www.ietf.org/rfc/rfc2616.txt) et [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Les noms de fichier suivants ne sont pas autorisés : LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caractère point (..) et deux caractères de point (.).
 - Le nombre maximal de fichiers par lot est de 1 500, avec une taille de lot maximale de 100 Go.
 - Le nombre maximal de propriétés ou de champs par ligne est de 10 000.
-- Le nombre maximal de lots pouvant être envoyés par utilisateur par minute est de 138.
+- Le nombre maximal de lots pouvant être envoyés par utilisateur, par minute, est de 138.
 
 ### Quels types de données sont pris en charge ?
 
-Les types de données pris en charge sont les entiers, les chaînes, les booléens, les objets datetime, les tableaux et les objets.
+Les types de données pris en charge sont les entiers, les chaînes, les valeurs booléennes, les objets datetime, les tableaux et les objets.
 
 ### Quels formats de date et d’heure sont pris en charge ?
 
-Les sources prennent en charge une grande variété de formats de date et heure lors de l’importation de données. Vous trouverez plus d’informations sur les formats de date et heure pris en charge dans la section des dates du [guide de gestion du format de données](../data-prep/data-handling.md#dates) de la documentation de l’API.
+Les sources prennent en charge un large éventail de formats de date et heure lors de l’ingestion de données. Vous trouverez plus d’informations sur les formats de date et d’heure pris en charge dans la section dates du [guide de gestion des formats de données](../data-prep/data-handling.md#dates) de la documentation relative à la préparation des données.
 
 ### Comment formater des tableaux dans des fichiers CSV, JSON et Parquet ?
 
-Les fichiers JSON et Parquet prennent en charge les tableaux de manière native. Pour les structures plates, telles que les CSV, les tableaux ne sont pas pris en charge. Cependant, il est possible de diviser les chaînes avec plusieurs valeurs en tableau à l’aide des fonctions de prép de données telles que exploser et joindre. Pour plus d&#39;informations sur ces fonctions de prép de données, consultez le [guide des fonctions de prép de données](../data-prep/functions.md#string).
+Les fichiers JSON et Parquet prennent en charge de manière native les tableaux. Pour les structures plates, telles que les fichiers CSV, les tableaux ne sont pas pris en charge. Cependant, les chaînes comportant plusieurs valeurs peuvent être divisées en un tableau à l’aide de fonctions de préparation de données telles que l’explosion et la jointure. Vous trouverez plus d’informations sur ces fonctions de prép de données dans le [guide des fonctions de prép de données](../data-prep/functions.md#string)
 
-### Quelles sources prennent en charge l&#39;ingestion partielle ?
+### Quelles sources prennent en charge l’ingestion partielle ?
 
-Toutes les sources d&#39;assimilation par lot prennent en charge l&#39;assimilation partielle. Cependant, les sources d’assimilation en flux continu ne prennent pas en charge l’assimilation partielle.
+Toutes les sources d’ingestion par lots prennent en charge l’ingestion partielle. Toutefois, les sources d’ingestion par flux ne prennent pas en charge l’ingestion partielle.
 
-### Quand dois-je utiliser l&#39;ingestion partielle ?
+### Quand dois-je utiliser l’ingestion partielle ?
 
-L&#39;assimilation partielle doit être utilisée si **ne** a pas de contraintes, comme le fait que le fichier entier soit ingéré dans Platform. Vous pouvez également utiliser l’assimilation partielle si vous n’avez pas d’inconvénient à ingérer des données susceptibles de contenir des erreurs.
+L’ingestion partielle doit être utilisée si **et que** ne présente pas de contraintes, par exemple si le fichier entier est ingéré dans Platform. Vous pouvez également utiliser l’ingestion partielle si vous n’avez pas envie d’ingérer des données susceptibles de contenir des erreurs.
 
-### Quel est le seuil d&#39;erreur d&#39;assimilation partielle type ?
+### Quel est le seuil d’erreur d’ingestion partielle type ?
 
-Il n’existe pas de &quot;seuil d’erreur type&quot; pour l’assimilation partielle. Au lieu de cela, cette valeur peut varier d’un cas d’utilisation à l’autre. Par défaut, le seuil d’erreur est défini à 5 %.
+Il n’existe pas de &quot;seuil d’erreur type&quot; pour l’ingestion partielle. Cette valeur peut plutôt varier d’un cas d’utilisation à l’autre. Par défaut, le seuil d’erreur est défini sur 5 %.
+
+### Combien de temps faut-il pour qu’un état d’exécution de flux soit mis à jour après la création d’un nouveau flux de données ?
+
+Les exécutions de flux ne sont pas générées instantanément et peuvent prendre entre deux et trois minutes pour se mettre à jour après la `startTime` désignée. La vérification de l’état d’une exécution de flux immédiatement après la création d’un nouveau flux de données ne renvoie pas d’informations sur la `lastRunDetails` de l’exécution de flux, car elle ne s’est pas encore produite. Il est recommandé d’autoriser le flux de données à générer quelques minutes avant de vérifier l’état de l’exécution du flux.
