@@ -2,10 +2,10 @@
 title: Variable sans Turbine
 description: Découvrez lʼobjet turbine, une variable libre qui fournit des informations et des utilitaires spécifiques à lʼexécution des balises Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 89%
+source-wordcount: '619'
+ht-degree: 86%
 
 ---
 
@@ -117,6 +117,7 @@ Lʼutilitaire de journalisation est utilisé pour consigner les messages dans la
 * `logger.warn(message: string)` : consigne un message d’avertissement dans la console.
 * `logger.error(message: string)` : consigne un message d’erreur dans la console.
 * `logger.debug(message: string)` : consigne un message de débogage dans la console. (Visible uniquement lorsque la journalisation `verbose` est activée dans la console du navigateur.)
+* `logger.deprecation(message: string)`: Consigne un message d’avertissement dans la console, que le débogage des balises soit activé ou non par l’utilisateur.
 
 ### `onDebugChanged`
 
