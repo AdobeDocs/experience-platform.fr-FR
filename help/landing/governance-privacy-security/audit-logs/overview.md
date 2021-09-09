@@ -1,9 +1,10 @@
 ---
 title: Présentation des journaux d’audit
 description: Découvrez comment les journaux d’audit vous permettent de voir qui a effectué les actions dans Adobe Experience Platform.
-source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
+exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
+source-git-commit: df269a30251cb17e337ec25787d6a1eed41e9c0b
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '469'
 ht-degree: 5%
 
 ---
@@ -36,7 +37,7 @@ Le tableau suivant décrit les actions sur lesquelles les ressources sont enregi
 
 Lorsque la fonction est activée pour votre organisation, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux.
 
-Pour afficher et exporter les journaux d’audit, vous devez disposer de l’autorisation de contrôle d’accès &quot;Afficher les journaux d’audit&quot;. Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités de Platform, consultez la [documentation sur le contrôle d’accès](../../../access-control/home.md).
+Pour afficher et exporter les journaux d’audit, vous devez disposer de l’autorisation de contrôle d’accès &quot;Afficher les journaux d’audit&quot; (disponible dans la catégorie &quot;Gouvernance des données&quot;). Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités de Platform, consultez la [documentation sur le contrôle d’accès](../../../access-control/home.md).
 
 ## Gestion des journaux d’audit dans l’interface utilisateur
 
