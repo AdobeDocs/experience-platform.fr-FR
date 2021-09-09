@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Type de données de devise
 topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM de devise.
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
+source-git-commit: 5e92b288bb8c996cfcf343d8ac1ab1665b0d3ad0
 workflow-type: tm+mt
-source-wordcount: '130'
-ht-degree: 30%
+source-wordcount: '127'
+ht-degree: 7%
 
 ---
 
@@ -19,9 +20,9 @@ ht-degree: 30%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `amount` | Double | Nombre de couleurs que l’affichage peut représenter. |
-| `conversionDate` | DateTime | Nombre de couleurs que l’affichage peut représenter. |
-| `currencyCode` | Chaîne | Nombre de couleurs que l’affichage peut représenter. |
+| `amount` | Double | Montant de la devise telle que définie par le `currencyCode`. |
+| `conversionDate` | DateTime | Horodatage du moment où la conversion de devise a été effectuée. |
+| `currencyCode` | Chaîne | Code ISO 4217 indiquant le type de devise représenté par `amount`. |
 
 {style=&quot;table-layout:auto&quot;}
 
