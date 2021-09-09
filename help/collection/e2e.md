@@ -1,16 +1,16 @@
 ---
-title: Présentation de la collecte de données Adobe Experience Platform de bout en bout
-description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide de la collecte de données Adobe Experience Platform.
-source-git-commit: b14d592c8beb5fc545ae0682000e4e05b6dac3a0
+title: Présentation de la collecte de données de bout en bout
+description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide des technologies de collecte de données fournies par Adobe Experience Platform.
+source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2568'
 ht-degree: 1%
 
 ---
 
-# Collecte de données Adobe Experience Platform - Aperçu de bout en bout
+# Présentation de la collecte de données de bout en bout
 
-La collecte de données Adobe Experience Platform fournit plusieurs technologies qui fonctionnent ensemble pour collecter vos données vers d’autres produits Adobe ou destinations tierces. Pour envoyer des données d’événement de votre application au réseau Adobe Experience Platform Edge, il est important de comprendre ces technologies de base et de les configurer afin de fournir vos données aux destinations dont vous avez besoin, lorsque vous en avez besoin.
+Dans Adobe Experience Platform, la collecte de données fait référence à plusieurs technologies qui fonctionnent ensemble pour collecter les données et les transférer vers d’autres produits Adobe ou destinations tierces. Pour envoyer des données d’événement de votre application au réseau Adobe Experience Platform Edge, il est important de comprendre ces technologies de base et de les configurer afin de fournir vos données aux destinations dont vous avez besoin, lorsque vous en avez besoin.
 
 Ce guide fournit un tutoriel général sur la manière d’envoyer un événement par le biais du réseau Edge à l’aide des technologies de collecte de données. Plus précisément, le tutoriel décrit les étapes à suivre pour installer et configurer l’extension de balise SDK Web Adobe Experience Platform dans l’interface utilisateur de la collecte de données.
 
