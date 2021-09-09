@@ -1,13 +1,13 @@
 ---
 keywords: RTCDP;CDP;Plateforme de données client en temps réel;plateforme de données client en temps réel;real time cdp;cdp;IA dédiée aux clients
 title: Présentation de la plateforme de données client en temps réel
-seo-title: Présentation de la plateforme de données client en temps réel
+seo-title: Real-time Customer Data Platform Overview
 description: Présentation de la plateforme de données client en temps réel
-seo-description: Présentation de la plateforme de données client en temps réel
+seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
-workflow-type: ht
-source-wordcount: '306'
+source-git-commit: 7dedc679ac4173ab3f782bc57517b2e66bc20844
+workflow-type: tm+mt
+source-wordcount: '295'
 ht-degree: 100%
 
 ---
