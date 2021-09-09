@@ -1,10 +1,11 @@
 ---
 title: Extensions
-description: Découvrez le fonctionnement des extensions de balise dans Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+description: Découvrez le fonctionnement des extensions de balises dans Adobe Experience Platform.
+exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
+source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 70%
+ht-degree: 93%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 70%
 >
 >Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Une extension est un ensemble de codes qui étend les fonctionnalités fournies par les balises ou le transfert d’événement.
+Une extension est un jeu de codes empaqueté qui étend les fonctionnalités fournies par les balises ou le transfert dʼévénements.
 
 L’ajout d’une extension ajoute de nouveaux éléments de données et de nouvelles options pour créer des règles.
 
@@ -36,7 +37,7 @@ Par défaut, Adobe fournit des extensions qui prennent en charge les intégratio
 
 ## Catalogue d’extensions
 
-Utilisez le catalogue d’extensions pour parcourir, configurer et déployer les technologies publicitaires et marketing conçues et gérées par des fournisseurs de logiciels indépendants, ainsi que des extensions pour les solutions Adobe.
+Utilisez le catalogue dʼextensions pour parcourir, configurer et déployer la technologie publicitaire et marketing créée et conservée par des fournisseurs de logiciels indépendants, ainsi que des extensions pour les solutions Adobe.
 
 La page Extensions propose trois options d’affichage :
 
@@ -52,16 +53,16 @@ La page Extensions propose trois options d’affichage :
 
 Cliquez sur **[!UICONTROL Extensions]** pour afficher toutes les extensions installées. Vous pouvez également utiliser le catalogue pour afficher la liste de toutes les extensions disponibles et les extensions pour lesquelles des mises à jour sont disponibles.
 
-Voir [Référence des extensions](../../../extensions/web/overview.md) pour plus d’informations sur les extensions détenues par l’Adobe.
+Pour plus dʼinformations sur les extensions développées par Adobe, voir [Référence des extensions](../../../extensions/web/overview.md).
 
 ## Ajouter une nouvelle extension {#add-a-new-extension}
 
-Les balises sont très extensibles. Les extensions ajoutent des fonctionnalités de base aux balises . Les extensions sont souvent utilisées pour créer des intégrations avec d’autres applications.
+Nombre de fonctionnalités peuvent être ajoutées aux balises. Les extensions ajoutent des fonctionnalités essentielles aux balises. Les extensions sont souvent utilisées pour créer des intégrations avec d’autres applications.
 
 1. Ouvrez l’onglet **[!UICONTROL Extensions]** à partir de la page d’aperçu de la propriété.
 1. Sélectionnez l’extension.
 
-   ![]()../../../images/extensions.png)
+   ![Extension Core](../../../images/extensions.png)
 
    * Si l’extension existe, sélectionnez-la dans le catalogue des extensions.
    * Placez le pointeur de la souris sur une extension de votre liste pour la configurer ou la désactiver.
@@ -85,4 +86,4 @@ Placez le pointeur de la souris sur une extension installée et cliquez sur **[!
 >
 >Certaines extensions ne nécessitent pas de configuration et ne proposent pas d’options de configuration.
 
-Chaque extension configurable possède des options uniques. Pour plus d’informations sur les options disponibles pour chaque extension d’Adobe, voir [Référence des extensions](../../../extensions/web/overview.md) .
+Chaque extension configurable possède des options uniques. Pour plus dʼinformations sur les options disponibles pour chaque extension Adobe, reportez-vous à la section [Référence des extensions](../../../extensions/web/overview.md).
