@@ -5,9 +5,9 @@ title: Classe XDM ExperienceEvent
 topic-legacy: overview
 description: Ce document présente la classe XDM ExperienceEvent et les bonnes pratiques en matière de modélisation des données d’événement.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ff446e2b9a2573889bcd1a5ab0933f60e871c353
+source-git-commit: 5405a2e2312e81db210a97a759681f66faa8b1fa
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1759'
 ht-degree: 3%
 
 ---
@@ -68,8 +68,14 @@ Adobe fournit plusieurs groupes de champs standard à utiliser avec la classe [!
 * [[!UICONTROL Détails du marketing de campagne]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL Détails du canal]](../field-groups/event/channel-details.md)
 * [[!UICONTROL Détails du commerce]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL Détails sur l’entrée des appareils]](../field-groups/event/device-trade-in-details.md)
+* [[!UICONTROL Définition de la réservation]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL Détails de l’ID d’utilisateur final]](../field-groups/event/enduserids.md)
 * [[!UICONTROL Détails de l’environnement]](../field-groups/event/environment-details.md)
+* [[!UICONTROL Réservation en vol]](../field-groups/event/flight-reservation.md)
+* [[!UICONTROL Consentement IAB TCF 2.0]](../field-groups/event/iab.md)
+* [[!UICONTROL Réservation logement]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL Détails de la réservation]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Détails web]](../field-groups/event/web-details.md)
 
 ## Annexe

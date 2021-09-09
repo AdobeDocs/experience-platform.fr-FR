@@ -2,8 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;période
 title: S’abonner aux notifications d’événement d’Adobe I/O
 description: Ce document décrit les étapes à suivre pour s’abonner aux notifications d’événement d’Adobe I/O pour les services Adobe Experience Platform. Des informations de référence sur les types d’événement disponibles sont également fournies, ainsi que des liens vers d’autres documents sur la manière d’interpréter les données d’événement renvoyées pour chaque service [!DNL Platform] applicable.
+feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8c00fb98a213b578f6970c1e1978f0159f8f38df
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 8%
@@ -58,8 +59,8 @@ L’écran suivant affiche une liste des types d’événements auxquels s’abo
 >Si vous ne savez pas à quels événements vous abonner pour le service que vous utilisez, consultez la documentation de notification spécifique au service :
 >
 >* [[!DNL Privacy Service] notifications](../../privacy-service/privacy-events.md)
-* [[!DNL Data Ingestion] notifications](../../ingestion/quality/subscribe-events.md)
-* [[!DNL Flow Service (sources)] notifications](../../sources/notifications.md)
+>* [[!DNL Data Ingestion] notifications](../../ingestion/quality/subscribe-events.md)
+>* [[!DNL Flow Service (sources)] notifications](../../sources/notifications.md)
 
 
 ![](../images/notifications/choose-event-subscriptions.png)
@@ -72,7 +73,7 @@ Pour les besoins de ce tutoriel, la première option est suivie. Sélectionnez l
 
 Lorsque la paire de clés est générée, elle est automatiquement téléchargée par le navigateur. Vous devez stocker ce fichier vous-même, car il n’est pas conservé dans Developer Console.
 
-L’écran suivant vous permet de consulter les détails de la paire de clés nouvellement générée. Cliquez sur **[!UICONTROL Next (Suivant)]** pour continuer.
+L’écran suivant vous permet de consulter les détails de la paire de clés nouvellement générée. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![](../images/notifications/keypair-generated.png)
 
