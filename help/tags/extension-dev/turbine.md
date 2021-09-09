@@ -2,10 +2,10 @@
 title: Variable sans Turbine
 description: Découvrez lʼobjet turbine, une variable libre qui fournit des informations et des utilitaires spécifiques à lʼexécution des balises Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
+source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 91%
+source-wordcount: '602'
+ht-degree: 89%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 91%
 
 L’objet `turbine` est une « variable libre » dans la portée des modules de bibliothèque de votre extension. Il fournit des informations et des utilitaires spécifiques à lʼexécution des balises Adobe Experience Platform et est toujours disponible pour les modules de bibliothèque sans utiliser `require()`.
 
-## [!DNL buildInfo]
+## `buildInfo`
 
 ```js
 console.log(turbine.buildInfo.turbineBuildDate);
@@ -40,7 +40,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `buildDate` | Date ISO 8601 de la création de la bibliothèque actuelle. |
 
 
-## [!DNL environment]
+## `environment`
 
 ```js
 console.log(turbine.environment.stage);
@@ -50,24 +50,24 @@ console.log(turbine.environment.stage);
 
 ```js
 {
-    id: "EN123456...",
+    id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
     stage: "development"
 }
 ```
 
 | Propriété | Description |
 | --- | --- |
-| `id` | ID de l’environnement. |
-| `stage` | Environnement pour lequel cette bibliothèque a été créée. Les valeurs acceptées sont `development`, `staging` et `production`. |
+| `id` | L’identifiant de l’environnement. |
+| `stage` | Environnement pour lequel cette bibliothèque a été créée. Les valeurs possibles sont `development`, `staging` et `production`. |
 
 
-## [!DNL debugEnabled]
+## `debugEnabled`
 
-Indique si le débogage des balises est actuellement activé.
+Valeur boolean indiquant si le débogage des balises est actuellement activé.
 
 Si vous essayez simplement de consigner des messages, il est peu probable que vous ayez besoin d’utiliser cette fonctionnalité. Au lieu de cela, consignez toujours les messages à lʼaide de `turbine.logger` afin de vous assurer quʼils ne sont imprimés sur la console que lorsque le débogage des balises est activé.
 
-### [!DNL getDataElementValue]
+### `getDataElementValue`
 
 ```js
 console.log(turbine.getDataElementValue(dataElementName));
@@ -75,7 +75,7 @@ console.log(turbine.getDataElementValue(dataElementName));
 
 Renvoie la valeur d’un élément de données.
 
-### [!DNL getExtensionSettings] {#get-extension-settings}
+### `getExtensionSettings` {#get-extension-settings}
 
 ```js
 var extensionSettings = turbine.getExtensionSettings();
@@ -85,7 +85,7 @@ Renvoie l’objet settings qui a été enregistré pour la dernière fois à par
 
 Veuillez noter que les valeurs des objets settings renvoyés peuvent provenir d’éléments de données. Par conséquent, l’appel de `getExtensionSettings()` à des moments différents peut donner des résultats différents si les valeurs des éléments de données ont changé. Pour obtenir les valeurs les plus récentes, patientez aussi longtemps que possible avant dʼappeler `getExtensionSettings()`.
 
-### [!DNL getHostedLibFileUrl] {#get-hosted-lib-file}
+### `getHostedLibFileUrl` {#get-hosted-lib-file}
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -96,7 +96,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 
 La propriété [hostedLibFiles](./manifest.md) peut être définie dans le manifeste dʼextension afin dʼhéberger divers fichiers avec la bibliothèque dʼexécution des balises. Ce module renvoie l’URL d’hébergement du fichier de bibliothèque donné.
 
-### [!DNL getSharedModule] {#shared}
+### `getSharedModule` {#shared}
 
 ```js
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
@@ -104,7 +104,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 
 Récupère un module qui a été partagé depuis une autre extension. Si aucun module correspondant n’est trouvé, `undefined` est renvoyé. Voir [Implémentation de modules partagés](./web/shared.md) pour plus d’informations sur les modules partagés.
 
-### [!DNL logger]
+### `logger`
 
 ```js
 turbine.logger.error('Error!');
@@ -118,13 +118,13 @@ Lʼutilitaire de journalisation est utilisé pour consigner les messages dans la
 * `logger.error(message: string)` : consigne un message d’erreur dans la console.
 * `logger.debug(message: string)` : consigne un message de débogage dans la console. (Visible uniquement lorsque la journalisation `verbose` est activée dans la console du navigateur.)
 
-### [!DNL onDebugChanged]
+### `onDebugChanged`
 
 En transmettant une fonction de rappel dans `turbine.onDebugChanged`, les balises appellent votre rappel chaque fois que le débogage est activé/désactivé. Les balises transmettent une valeur booléenne à la fonction de rappel, qui est vraie si le débogage a été activé ou fausse si le débogage a été désactivé.
 
 Si vous essayez simplement de consigner des messages, il est peu probable que vous ayez besoin d’utiliser cette fonctionnalité. Au lieu de cela, consignez toujours les messages à lʼaide de `turbine.logger` et les balises feront en sorte que vos messages ne soient imprimés sur la console que lorsque le débogage des balises sera activé.
 
-### [!DNL propertySettings] {#property-settings}
+### `propertySettings` {#property-settings}
 
 ```js
 console.log(turbine.propertySettings.domains);

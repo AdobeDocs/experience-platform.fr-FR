@@ -3,18 +3,14 @@ keywords: balises d’avion;destination du navire d’aviation
 title: Connexion à Airship Tags
 description: Transmettez en toute transparence les données d’audience Adobe à Airship en tant que balises d’audience pour le ciblage dans Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: e413933920028e3239f6044111d9cf215c865eba
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '705'
-ht-degree: 2%
+source-wordcount: '685'
+ht-degree: 0%
 
 ---
 
-# (Version bêta) [!DNL Airship Tags] connexion {#airship-tags-destination}
-
->[!IMPORTANT]
->
->La destination [!DNL Airship Tags] de Adobe Experience Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+# [!DNL Airship Tags] connection {#airship-tags-destination}
 
 ## Présentation
 

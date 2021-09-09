@@ -3,18 +3,14 @@ keywords: attributs de navire d’aviation;destination du navire d’aviation
 title: Connexion aux attributs du navire
 description: Transférez en toute transparence les données d’audience Adobe à Airship en tant qu’attributs d’audience pour le ciblage au sein de Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 2%
+source-wordcount: '706'
+ht-degree: 0%
 
 ---
 
-# (Version bêta) [!DNL Airship Attributes] connexion {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->La destination [!DNL Airship Attributes] de Adobe Experience Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+# [!DNL Airship Attributes] connection {#airship-attributes-destination}
 
 ## Présentation {#overview}
 

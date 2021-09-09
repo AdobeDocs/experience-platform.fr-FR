@@ -2,9 +2,9 @@
 title: Référence d’objet satellite
 description: Découvrez l’objet _satellite côté client et les différentes fonctions que vous pouvez exécuter avec celui-ci dans les balises .
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
+source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1279'
 ht-degree: 83%
 
 ---
@@ -227,34 +227,27 @@ Cet exemple illustre les valeurs d’objet :
 
 ## `environment`
 
+Cet objet contient des informations sur l’environnement sur lequel la bibliothèque du runtime de balises active est déployée.
+
 **Code**
 
 ```javascript
 _satellite.environment
 ```
 
-Cet objet contient des informations sur l’environnement sur lequel la bibliothèque du runtime de balises active est déployée. L’objet contient les propriétés suivantes :
-
-### `id`
-
-ID de l’environnement.
-
-### `stage`
-
-Environnement pour lequel cette bibliothèque a été créée. Les valeurs possibles sont les suivantes :
-
-* Développement
-* Évaluation
-* production
-
-Cet exemple illustre les valeurs d’objet :
+L’objet contient les propriétés suivantes :
 
 ```javascript
 {
-  id: "EN123456...",
+  id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
   stage: "development"
 }
 ```
+
+| Propriété | Description |
+| --- | --- |
+| `id` | ID de l’environnement. |
+| `stage` | Environnement pour lequel cette bibliothèque a été créée. Les valeurs possibles sont `development`, `staging` et `production`. |
 
 ## `notify`
 
