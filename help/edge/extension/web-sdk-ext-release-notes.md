@@ -2,9 +2,9 @@
 title: Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
 description: Extension de balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: a4a41a91429104b302e223034bf15f9839ddb5ad
+source-git-commit: 07a280f906c5bcc69a0bffc529e1d1c8280f771a
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1192'
 ht-degree: 49%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 49%
 
 Ce document couvre les notes de mise à jour de l’extension de balise SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, consultez les [Notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## Version 2.7.1 - 7 septembre 2021
+## Version 2.7.3 - 7 septembre 2021
 
 Contient la version 2.6.4 de la bibliothèque SDK Web Adobe Experience Platform.
+
+* Il n’existe plus d’avertissement d’obsolescence pour `container.buildInfo.environment.`
 
 ## Version 2.7.0 - 16 août 2021
 
