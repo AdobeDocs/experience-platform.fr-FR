@@ -2,9 +2,9 @@
 description: Le SDK de destination Adobe Experience Platform est un ensemble d’API de configuration qui vous permettent de configurer des modèles d’intégration de destination pour que l’Experience Platform puisse fournir des données d’audience et de profil à votre point de terminaison, en fonction des données et des formats d’authentification de votre choix. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via l’API pour des mises à jour supplémentaires.
 title: SDK de destination Adobe Experience Platform
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 2841adc0ce212a945c35ba38209d4c00c519ad7b
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '702'
 ht-degree: 4%
 
 ---
@@ -63,8 +63,8 @@ L’accès au SDK de destination varie en fonction de votre statut de partenaire
 ---------|----------|
 | Fournisseur de logiciels indépendant (ISV) | Rejoignez le [programme Adobe Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud.html) et demandez à un environnement de test Experience Platform d’accéder au SDK Destination. |
 | Intégrateur système (SI) | Vous devez être au niveau Gold ou Platinum dans le [programme Partenaires en solution Adobe](https://solutionpartners.adobe.com/home.html). Un environnement de test Experience Platform est configuré et vous avez accès au SDK de destination. |
-| Client Experience Platform sur le package d’activation | Par défaut, vous avez accès aux environnements de test Experience Platform et au SDK de destination. |
-| Client Experience Platform sur le package CDP en temps réel | Vous n’avez pas accès au SDK de destination, mais vous avez accès à toutes les destinations productisées configurées par d’autres sociétés à l’aide du SDK de destination et publiées dans les organisations Experience Platform. |
+| Client Experience Platform sur le [package d’activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | Par défaut, vous avez accès aux environnements de test Experience Platform et au SDK de destination. |
+| Client Experience Platform sur le [package CDP en temps réel](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Vous n’avez pas accès au SDK de destination, mais vous avez accès à toutes les destinations productisées configurées par d’autres sociétés à l’aide du SDK de destination et publiées dans les organisations Experience Platform. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -1,7 +1,8 @@
 ---
 description: Les spécifications du serveur et du modèle peuvent être configurées dans le SDK de destination Adobe Experience Platform via le point de terminaison commun `/authoring/destination-servers`.
 title: Options de configuration des spécifications de serveur et de modèle dans le SDK de destination
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 7%
@@ -23,7 +24,7 @@ Les spécifications du serveur et du modèle peuvent être configurées dans le 
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -49,7 +50,7 @@ Ce processus fournit des données utilisateur sous la forme d’une série de me
 |---|---|---|
 | `name` | Chaîne | Représente un nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible par les partenaires ou les clients. Exemple `Moviestar destination server`. |
 | `destinationServerType` | Chaîne | `URL_BASED` est actuellement la seule option disponible. |
-| `templatingStrategy` | Chaîne | <ul><li>Utilisez `PEBBLE_V1` si l’Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point de terminaison du type : `https://api.moviestar.com/data/{{endpoint.region}}/items` </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire côté Adobe, par exemple si vous avez un point de terminaison comme : `https://api.moviestar.com/data/items` </li></ul> |
+| `templatingStrategy` | Chaîne | <ul><li>Utilisez `PEBBLE_V1` si l’Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point de terminaison du type : `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire côté Adobe, par exemple si vous avez un point de terminaison comme : `https://api.moviestar.com/data/items` </li></ul> |
 | `value` | Chaîne | Renseignez l’adresse du point de terminaison de l’API auquel l’Experience Platform doit se connecter. |
 
 {style=&quot;table-layout:auto&quot;}

@@ -1,7 +1,8 @@
 ---
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison API `/authoring/destination-servers. Les spécifications du serveur et du modèle pour votre destination peuvent être configurées dans le SDK de destination Adobe Experience Platform via le point de terminaison commun `/authoring/destination-servers`.
 title: Opérations de l’API du point d’entrée du serveur de destination
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 5%
@@ -49,7 +50,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -67,7 +68,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | Chaîne | Représente un nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible par les partenaires ou les clients. Exemple `Moviestar destination server`. |
 | `destinationServerType` | Chaîne | `URL_BASED` est actuellement la seule option disponible. |
-| `urlBasedDestination.url.templatingStrategy` | Chaîne | <ul><li>Utilisez `PEBBLE_V1` si l’Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point de terminaison du type : `https://api.moviestar.com/data/{{endpoint.region}}/items`. </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire côté Adobe, par exemple si vous avez un point de terminaison comme : `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | Chaîne | <ul><li>Utilisez `PEBBLE_V1` si l’Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point de terminaison du type : `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire côté Adobe, par exemple si vous avez un point de terminaison comme : `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | Chaîne | Renseignez l’adresse du point de terminaison de l’API auquel l’Experience Platform doit se connecter. |
 | `urlBasedDestination.maxUsersPerRequest` | Entier | Adobe peut agréger plusieurs profils exportés en un seul appel HTTP. Indiquez le nombre maximal de profils que votre point de terminaison doit recevoir dans un seul appel HTTP. Notez qu’il s’agit d’une agrégation du meilleur effort. Par exemple, si vous indiquez la valeur 100, Adobe peut envoyer n’importe quel nombre de profils inférieur à 100 lors d’un appel. <br> Si votre serveur n’accepte pas plusieurs utilisateurs par demande, définissez cette valeur sur 1. |
 | `urlBasedDestination.splitUserById` | Booléen | Utilisez cet indicateur si l’appel à la destination doit être divisé par l’identité. Définissez cet indicateur sur `true` si votre serveur n’accepte qu’une seule identité par appel, pour un espace de noms donné. |
@@ -216,7 +217,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -270,7 +271,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaillé
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
