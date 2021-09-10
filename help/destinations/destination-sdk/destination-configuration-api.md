@@ -1,9 +1,10 @@
 ---
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/destinations`.
 title: Opérations de point d’entrée de l’API Destinations
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 96755e9d-be62-432f-b985-91330575b395
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '2360'
+source-wordcount: '2381'
 ht-degree: 5%
 
 ---
@@ -383,7 +384,7 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des configurations
 | `uiAttributes.connectionType` | Chaîne | `Server-to-server` est actuellement la seule option disponible. |
 | `uiAttributes.frequency` | Chaîne | `Streaming` est actuellement la seule option disponible. |
 | `identityNamespaces.externalId.acceptsAttributes` | Booléen | Indique si votre destination accepte les attributs de profil standard. En règle générale, ces attributs sont mis en évidence dans la documentation de nos partenaires. |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | Booléen | Indique si les clients peuvent configurer des espaces de noms personnalisés dans votre destination. |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | Booléen | Indique si les clients peuvent configurer des espaces de noms personnalisés dans votre destination. En savoir plus sur les [espaces de noms personnalisés](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces) dans Adobe Experience Platform. |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | Chaîne | _Non affiché dans l’exemple de configuration_. Utilisé, par exemple, lorsque le client [!DNL Platform] a des adresses électroniques ordinaires comme attribut et que votre plateforme n’accepte que des emails hachés. C’est là que vous fournissez la transformation à appliquer (par exemple, transformez l’email en minuscules, puis en hachage). |
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _Non affiché dans l’exemple de configuration_. Utilisé dans les cas où votre plateforme accepte des [espaces de noms d’identité standard](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (IDFA, par exemple), afin que vous puissiez empêcher les utilisateurs de Platform de sélectionner uniquement ces espaces de noms d’identité. |
 | `destinationDelivery.authenticationRule` | Chaîne | Indique comment les clients [!DNL Platform] se connectent à votre destination. Les valeurs acceptées sont `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si les clients Platform se connectent à votre système par l’intermédiaire d’un nom d’utilisateur et d’un mot de passe, d’un jeton porteur ou d’une autre méthode d’authentification. Par exemple, sélectionnez cette option si vous avez également sélectionné `authType: OAUTH2` ou `authType:BEARER` dans `customerAuthenticationConfigurations`. </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre l’Adobe et votre destination et que le client [!DNL Platform] n’a pas besoin de fournir d’informations d’identification d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer un objet d’identification à l’aide de la configuration [Credentials](./credentials-configuration.md) . </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
@@ -396,6 +397,7 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des configurations
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Booléen | Contrôle si l’identifiant de mappage de segments dans le workflow d’activation de destination est le nom du segment Experience Platform. |
 | `segmentMappingConfig.audienceTemplateId` | Booléen | `instanceId` du [modèle de métadonnées d’audience](./audience-metadata-management.md) utilisé pour cette destination. Pour configurer un modèle de métadonnées d’audience, consultez la [référence de l’API de métadonnées d’audience](./audience-metadata-api.md). |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Mettre à jour une configuration de destination existante {#update}
 

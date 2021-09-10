@@ -1,9 +1,10 @@
 ---
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/testing/destinationInstance/`, afin de tester si votre destination est configurée correctement et de vérifier l’intégrité des flux de données vers votre destination configurée.
 title: Opérations de l’API de test de destination
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '657'
 ht-degree: 2%
 
 ---
@@ -158,6 +159,7 @@ Une réponse réussie renvoie un état HTTP 200 avec la réponse de l’API prov
 | `results.httpCalls.response` | Inclut la réponse reçue par l’Adobe de votre destination. |
 | `inputProfiles` | Inclut les profils qui ont été exportés lors de l’appel vers votre destination. Les profils correspondent à votre schéma source. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Tester la configuration de votre destination avec les profils ajoutés à l’appel {#test-with-added-profiles}
 

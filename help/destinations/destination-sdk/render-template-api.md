@@ -1,9 +1,10 @@
 ---
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/testing/template/render`, pour effectuer le rendu des données exportées pour votre destination, en fonction de votre modèle de transformation de messages.
 title: Opérations de l’API de modèle de rendu
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '523'
 ht-degree: 2%
 
 ---
@@ -42,6 +43,8 @@ POST authoring/testing/template/render
 | `destinationId` | L’identifiant de la configuration de destination pour laquelle vous effectuez le rendu des données exportées. |
 | `template` | Version du modèle avec échappement par les caractères sur laquelle vous effectuez le rendu des données exportées. |
 | `profiles` | Si vous souhaitez ajouter des profils au corps de l’appel, vous pouvez en générer en utilisant l’ [API de génération d’exemples de profils](./sample-profile-generation-api.md). |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 Vous pouvez effectuer le rendu des données exportées comme illustré dans les exemples ci-dessous :

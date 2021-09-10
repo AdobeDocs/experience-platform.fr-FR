@@ -1,9 +1,10 @@
 ---
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/destinations/publish`.
 title: Opérations de point d’entrée de l’API de publication Destinations
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 0564a132-42f4-478c-9197-9b051acf093c
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '775'
 ht-degree: 5%
 
 ---
@@ -123,6 +124,8 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des destinations s
 | `publishDetailsList.allowedOrgs` | Chaîne | Renvoie les organisations Experience Platform pour lesquelles la destination doit être disponible. |
 | `publishDetailsList.status` | Chaîne | État de votre requête de publication de destination. Les valeurs possibles sont `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. |
 | `publishDetailsList.publishedDate` | Chaîne | Date à laquelle la destination a été envoyée pour publication, dans l’heure considérée. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Mettre à jour une requête de publication de destination existante {#update}
 

@@ -1,10 +1,11 @@
 ---
 description: Cette configuration vous permet d’indiquer des informations de base telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur Experience Platform et les identités qui peuvent être exportées vers votre destination.
 title: Options de configuration de destination pour le SDK de destination
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '1506'
-ht-degree: 4%
+source-wordcount: '1527'
+ht-degree: 5%
 
 ---
 
@@ -123,6 +124,8 @@ Vous trouverez ci-dessous un exemple de configuration pour une destination ficti
 | `description` | Chaîne | Fournissez une description que l’Adobe utilisera dans le catalogue des destinations Experience Platform pour votre carte de destination. Ne vise pas plus de 4 à 5 phrases. |
 | `status` | Chaîne | Indique l’état du cycle de vie de la carte de destination. Les valeurs acceptées sont `TEST`, `PUBLISHED` et `DELETED`. Utilisez `TEST` lorsque vous configurez votre destination pour la première fois. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Configurations de l’authentification du client {#customer-authentication-configurations}
 
 Cette section génère la page du compte dans l’interface utilisateur de l’Experience Platform, où les utilisateurs se connectent Experience Platform aux comptes qu’ils possèdent avec votre destination. Selon l’option d’authentification que vous indiquez dans le champ `authType` , la page Experience Platform est générée pour les utilisateurs comme suit :
@@ -145,6 +148,8 @@ Les utilisateurs sélectionnent **[!UICONTROL Se connecter à la destination]** 
 | `customerAuthenticationConfigurations` | Chaîne | Indique la configuration utilisée pour authentifier les clients Experience Platform sur votre serveur. Voir `authType` ci-dessous pour connaître les valeurs acceptées. |
 | `authType` | Chaîne | Les valeurs acceptées sont `OAUTH2, BEARER`. <br><ul><li> Si votre destination prend en charge l’authentification OAuth 2, sélectionnez la valeur `OAUTH2` et ajoutez les champs requis pour OAuth 2, comme indiqué dans la page d’authentification du SDK de destination OAuth 2. De plus, vous devez sélectionner `authenticationRule=CUSTOMER_AUTHENTICATION` dans la section [Diffusion de destination](./destination-configuration.md). </li><li>Pour l’authentification du porteur, sélectionnez `BEARER` et sélectionnez `authenticationRule=CUSTOMER_AUTHENTICATION` dans la [section de diffusion de destination](./destination-configuration.md).</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Champs de données client {#customer-data-fields}
 
 Cette section permet aux partenaires d’introduire des champs personnalisés. Dans l’exemple de configuration ci-dessus, `customerDataFields` exige que les utilisateurs sélectionnent un point de terminaison dans le flux d’authentification et indiquent leur ID de client avec la destination. La configuration se reflète dans le flux d’authentification comme illustré ci-dessous :
@@ -161,6 +166,8 @@ Cette section permet aux partenaires d’introduire des champs personnalisés. D
 | `enum` | Chaîne | Rend le champ personnalisé sous forme de menu déroulant et répertorie les options disponibles pour l’utilisateur. |
 | `pattern` | Chaîne | Impose un modèle pour le champ personnalisé, si nécessaire. Utilisez des expressions régulières pour appliquer un modèle. Par exemple, si vos ID de client n’incluent pas de chiffres ou de traits de soulignement, saisissez `^[A-Za-z]+$` dans ce champ. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Attributs de l’interface utilisateur {#ui-attributes}
 
 Cette section fait référence aux éléments de l’interface utilisateur dans la configuration ci-dessus que l’Adobe doit utiliser pour votre destination dans l’interface utilisateur de Adobe Experience Platform. Voir ci-dessous :
@@ -171,6 +178,8 @@ Cette section fait référence aux éléments de l’interface utilisateur dans 
 | `category` | Chaîne | Fait référence à la catégorie affectée à votre destination dans Adobe Experience Platform. Pour plus d’informations, consultez [Catégories de destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Utilisez l’une des valeurs suivantes : `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `connectionType` | Chaîne | `Server-to-server` est actuellement la seule option disponible. |
 | `frequency` | Chaîne | `Streaming` est actuellement la seule option disponible. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Configuration du schéma dans l’étape de mappage {#schema-configuration}
 
@@ -184,6 +193,8 @@ Utilisez les paramètres de `schemaConfig` pour activer l’étape de mappage du
 | `profileRequired` | Booléen | Utilisez `true` si les utilisateurs doivent être en mesure de mapper les attributs de profil de l’Experience Platform aux attributs personnalisés du côté de votre destination, comme illustré dans l’exemple de configuration ci-dessus. |
 | `segmentRequired` | Booléen | Utilisez toujours `segmentRequired:true`. |
 | `identityRequired` | Booléen | Utilisez `true` si les utilisateurs doivent pouvoir mapper les espaces de noms d’identité de l’Experience Platform à votre schéma souhaité. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Identités et attributs {#identities-and-attributes}
 
@@ -205,6 +216,8 @@ Pour en savoir plus, consultez la [présentation de l’espace de noms d’ident
 | `allowedAttributesTransformation` | Chaîne | *Non affiché dans l’exemple de configuration*. Utilisé, par exemple, lorsque le client [!DNL Platform] a des adresses électroniques ordinaires comme attribut et que votre plateforme n’accepte que des emails hachés. C’est là que vous fournissez la transformation à appliquer (par exemple, transformez l’email en minuscules, puis en hachage). |
 | `acceptedGlobalNamespaces` | - | *Non affiché dans l’exemple de configuration*. Utilisé dans les cas où votre plateforme accepte des [espaces de noms d’identité standard](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (IDFA, par exemple), afin que vous puissiez empêcher les utilisateurs de Platform de sélectionner uniquement ces espaces de noms d’identité. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Diffusion de destination {#destination-delivery}
 
 | Paramètre | Type | Description |
@@ -212,6 +225,8 @@ Pour en savoir plus, consultez la [présentation de l’espace de noms d’ident
 | `authenticationRule` | Chaîne | Indique comment les clients [!DNL Platform] se connectent à votre destination. Les valeurs acceptées sont `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si les clients Platform se connectent à votre système par l’intermédiaire d’un nom d’utilisateur et d’un mot de passe, d’un jeton porteur ou d’une autre méthode d’authentification. Par exemple, sélectionnez cette option si vous avez également sélectionné `authType: OAUTH2` ou `authType:BEARER` dans `customerAuthenticationConfigurations`. </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre l’Adobe et votre destination et que le client [!DNL Platform] n’a pas besoin de fournir d’informations d’identification d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer un objet d’identification à l’aide de la configuration [Credentials](./credentials-configuration.md) . </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
 | `destinationServerId` | Chaîne | `instanceId` de la [configuration du serveur de destination](./destination-server-api.md) utilisée pour cette destination. |
 | `backfillHistoricalProfileData` | Booléen | Contrôle si les données de profil historiques sont exportées lorsque les segments sont activés vers la destination. <br> <ul><li> `true`:  [!DNL Platform] envoie les profils utilisateur historiques qualifiés pour le segment avant l’activation du segment. </li><li> `false`:  [!DNL Platform] inclut uniquement les profils utilisateur qui remplissent les critères pour le segment une fois le segment activé. </li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Configuration du mappage de segments {#segment-mapping}
 
