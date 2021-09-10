@@ -1,9 +1,10 @@
 ---
 title: Présentation de la collecte de données de bout en bout
 description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide des technologies de collecte de données fournies par Adobe Experience Platform.
-source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
+exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
+source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
 workflow-type: tm+mt
-source-wordcount: '2568'
+source-wordcount: '2619'
 ht-degree: 1%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 1%
 
 Dans Adobe Experience Platform, la collecte de données fait référence à plusieurs technologies qui fonctionnent ensemble pour collecter les données et les transférer vers d’autres produits Adobe ou destinations tierces. Pour envoyer des données d’événement de votre application au réseau Adobe Experience Platform Edge, il est important de comprendre ces technologies de base et de les configurer afin de fournir vos données aux destinations dont vous avez besoin, lorsque vous en avez besoin.
 
-Ce guide fournit un tutoriel général sur la manière d’envoyer un événement par le biais du réseau Edge à l’aide des technologies de collecte de données. Plus précisément, le tutoriel décrit les étapes à suivre pour installer et configurer l’extension de balise SDK Web Adobe Experience Platform dans l’interface utilisateur de la collecte de données.
+Ce guide fournit un tutoriel général sur la manière d’envoyer un événement par le biais du réseau Edge à l’aide des technologies de collecte de données. Plus précisément, le tutoriel décrit les étapes à suivre pour installer et configurer l’extension de balise SDK Web Adobe Experience Platform dans l’interface utilisateur de la collecte de données (anciennement Adobe Experience Platform Launch).
 
 >[!NOTE]
 >
@@ -44,7 +45,7 @@ Le processus de configuration du réseau Edge pour votre site web peut être ré
 1. [Créez un schéma de ](#datastream) données pour configurer les destinations vers lesquelles vos données doivent être envoyées.
 1. [Installez et configurez le ](#sdk) SDK Web pour envoyer des données à la banque de données lorsque certains événements se produisent sur votre site Web.
 
-Une fois que vous avez la possibilité d’envoyer des données au réseau Edge, vous pouvez également [configurer le transfert d’événement](#event-forwarding) si votre organisation dispose d’une licence pour ce transfert.
+Une fois que vous avez la possibilité d’envoyer des données au réseau Edge, vous pouvez également [configurer le transfert d’événement](#event-forwarding) si votre entreprise dispose d’une licence pour ce transfert.
 
 ## Création d’un schéma {#schema}
 
@@ -96,7 +97,7 @@ Un flux de données est une configuration qui indique au réseau Edge où vous s
 >
 >Si vous souhaitez utiliser le [transfert d’événement](../tags/ui/event-forwarding/overview.md) (en supposant que votre organisation dispose d’une licence pour la fonctionnalité), vous devez l’activer pour un flux de données de la même manière que vous activez les produits Adobe. Les détails de ce processus sont traités dans une [section ultérieure](#event-forwarding).
 
-Dans l’interface utilisateur de la collecte de données, sélectionnez **[!UICONTROL Flux de données]**. À partir de là, vous pouvez sélectionner une zone de données existante dans la liste à modifier ou créer une configuration en sélectionnant **[!UICONTROL Nouvelle zone de données]**.
+Dans l’interface utilisateur de la collecte de données, sélectionnez **[!UICONTROL Flux de données]**. À partir de là, vous pouvez sélectionner un flux de données existant dans la liste à modifier ou créer une configuration en sélectionnant **[!UICONTROL Nouvelle flux de données]**.
 
 ![Flux de données](./images/e2e/datastreams.png)
 
@@ -179,9 +180,26 @@ Une fois que vous avez terminé de mapper vos données au schéma, attribuez un 
 
 Après avoir enregistré l’élément de données, l’étape suivante consiste à créer une règle qui l’enverra au réseau Edge chaque fois qu’un certain événement se produit sur votre site web (par exemple, lorsqu’un client ajoute un produit à un panier).
 
-Par exemple, cette section explique comment créer une règle qui se déclenche lorsqu’un client ajoute un article à un panier. Cependant, vous pouvez configurer des règles pour pratiquement tous les événements qui peuvent se produire sur votre site web.
+Vous pouvez configurer des règles pour pratiquement tous les événements qui peuvent se produire sur votre site web. Par exemple, cette section explique comment créer une règle qui se déclenche lorsqu’un client envoie un formulaire. Le code HTML suivant représente une page web simple avec un formulaire &quot;Ajouter au panier&quot;, qui fera l’objet de la règle :
 
-Sélectionnez **[!UICONTROL Règles]** dans le volet de navigation de gauche, puis **[!UICONTROL Créer une règle]**.
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+  <form id="add-to-cart-form">
+    <label for="item">Product:</label><br>
+    <input type="text" id="item" name="item"><br>
+    <label for="amount">Amount:</label><br>
+    <input type="number" id="amount" name="amount" value="1"><br><br>
+    <input type="submit" value="Add to Cart">
+  </form> 
+
+</body>
+</html>
+```
+
+Dans l’interface utilisateur de la collecte de données, sélectionnez **[!UICONTROL Règles]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Créer une règle]**.
 
 ![Règles](./images/e2e/rules.png)
 
@@ -189,13 +207,13 @@ Dans l’écran suivant, donnez un nom à la règle. À partir de là, l’étap
 
 ![Règle de nom](./images/e2e/name-rule.png)
 
-La page de configuration des événements s’affiche. Pour configurer un événement, vous devez d’abord sélectionner le type d’événement. Les types d’événement sont fournis par les extensions. Pour configurer un événement &quot;form submit&quot;, par exemple, sélectionnez l’extension **[!UICONTROL Core]**, puis sélectionnez le type d’événement **[!UICONTROL Submit]** sous la catégorie **[!UICONTROL Form]**. Dans la boîte de dialogue de configuration qui s’affiche, vous pouvez fournir le sélecteur CSS du formulaire spécifique sur lequel vous souhaitez que cette règle se déclenche.
+La page de configuration des événements s’affiche. Pour configurer un événement, vous devez d’abord sélectionner le type d’événement. Les types d’événement sont fournis par les extensions. Pour configurer un événement &quot;form submit&quot;, par exemple, sélectionnez l’extension **[!UICONTROL Core]**, puis sélectionnez le type d’événement **[!UICONTROL Submit]** sous la catégorie **[!UICONTROL Form]**.
 
 >[!NOTE]
 >
 >Pour plus d’informations sur les différents types d’événements fournis par les extensions web d’Adobe, y compris sur la manière de les configurer, consultez la [référence des extensions d’Adobe](../tags/extensions/web/overview.md) dans la documentation des balises.
 
-Sélectionnez **[!UICONTROL Conserver les modifications]** pour ajouter l’événement à la règle.
+L’événement d’envoi de formulaire vous permet d’utiliser un [sélecteur CSS](https://www.w3schools.com/css/css_selectors.asp) pour référencer un élément spécifique sur lequel la règle doit se déclencher. Dans l’exemple ci-dessous, l’ID `add-to-cart-form` est utilisé afin que cette règle ne se déclenche que pour le formulaire &quot;Ajouter au panier&quot;. Sélectionnez **[!UICONTROL Conserver les modifications]** pour ajouter l’événement à la règle.
 
 ![Configuration des événements](./images/e2e/event-config.png)
 
@@ -237,7 +255,7 @@ Une fois l’environnement installé sur votre site web, vous pouvez [tester vot
 
 >[!NOTE]
 >
->Le transfert d’événement n’est disponible que pour les organisations qui ont reçu une licence.
+>Le transfert d’événement est disponible uniquement pour les organisations qui ont reçu une licence pour celui-ci.
 
 Une fois que vous avez configuré le SDK pour envoyer des données au réseau Edge, vous pouvez configurer le transfert d’événement pour indiquer au réseau Edge où vous souhaitez que ces données soient diffusées.
 
