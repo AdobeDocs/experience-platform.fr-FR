@@ -3,9 +3,9 @@ keywords: réseaux sociaux;destinations sociales;Livefyre;facebook;Facebook
 title: Présentation des destinations de réseau social
 description: Avec les destinations sociales, vous pouvez activer les profils de vos campagnes pour un ciblage, une personnalisation et une suppression de l’audience basés sur des emails hachés.
 exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
-source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
+source-git-commit: 9ec7bd591af6c76a794f83d5a984017330328238
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,7 @@ Adobe Experience Platform prend actuellement en charge les destinations sociales
 * [Extension Adobe [!DNL Livefyre] ](adobe-livefyre.md)
 * [[!DNL Facebook] connection](facebook.md)
 * [[!DNL LinkedIn Matched Audiences] connection](linkedin.md)
+* [[!DNL Twitter Custom Audiences] connection](twitter.md)
 
 ## Connexion à une nouvelle destination de réseau social {#connect-destination}
 
