@@ -2,9 +2,9 @@
 title: Présentation de la collecte de données de bout en bout
 description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide des technologies de collecte de données fournies par Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
+source-git-commit: 3f5a05068a24432237a5241dd20680d2f8ed0b55
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2618'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Voir la [présentation de l’interface utilisateur du contrôle d’accès](../
 
 ## Résumé du processus
 
-Le processus de configuration du réseau Edge pour votre site web peut être résumé comme suit :
+Le processus de configuration de la collecte de données pour votre site web peut être résumé comme suit :
 
 1. [Créez un ](#schema) schéma afin de déterminer la structure de vos données lors de leur envoi au réseau Edge.
 1. [Créez un schéma de ](#datastream) données pour configurer les destinations vers lesquelles vos données doivent être envoyées.
