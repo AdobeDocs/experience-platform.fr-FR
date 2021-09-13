@@ -1,7 +1,7 @@
 ---
 title: Connexion à la liste des clients pinterest
 description: Créez des audiences à partir des listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
-source-git-commit: 96086324e644d4e2b2b2a3d03dce393c49c2d52e
+source-git-commit: e6fa353c74c652f82ff187692de8784463d0fd01
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 5%
