@@ -1,10 +1,11 @@
 ---
 title: Notes de mise à jour de l’extension Adobe Analytics
-description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Analytics dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Dernières notes de mise à jour pour lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
+exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
+source-git-commit: cf0f8022e0a9ea115b1312d9988b3abb804d9b80
 workflow-type: tm+mt
-source-wordcount: '1221'
-ht-degree: 94%
+source-wordcount: '1249'
+ht-degree: 97%
 
 ---
 
@@ -13,6 +14,15 @@ ht-degree: 94%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+
+## 24 août 2021
+
+### Extension Adobe Analytics 1.8.6
+
+#### Correctifs
+
+* Mise à niveau de [AppMeasurement vers la version 2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr).
+* Mise à jour de la variable linkName de secours vers la logique du Activity Map miroir au lieu d’utiliser innerHTML.
 
 ## 6 août 2020
 
@@ -24,7 +34,7 @@ ht-degree: 94%
 
 #### Fonctionnalités
 
-* Mise à jour d’[AppMeasurement vers la version 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr).
+* Mise à jour d’[AppMeasurement vers la version 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * Légère modification de l’interface utilisateur, de façon à ce que les paramètres supplémentaires apparaissent désormais réduits en accordéon plutôt que sous forme de case à cocher.
 
 ## 2 juin 2020
@@ -90,7 +100,7 @@ ht-degree: 94%
 
 #### Fonctionnalités
 
-* Trie numérique des eVars, des props et des événements dans la vue Extension.
+* Trie numériquement les eVars, les props et les événements dans la vue Extension.
 * Changements de schéma principal pour la prise en charge des données contextuelles Magento
 
 ## 6 septembre 2019
@@ -135,7 +145,7 @@ ht-degree: 94%
 #### Fonctionnalités
 
 * Mise à jour de l’extension Adobe Analytics vers [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr#version-2.14.0) incluant un correctif pour un problème clearVars connu
-* Ajout d’un lien Exchange à l’extension. Vous pouvez accéder à la liste eXchange en cliquant sur la liste déroulante et en sélectionnant « info extension »
+* Ajout d’un lien Exchange à l’extension. Vous pouvez accéder à la liste Exchange en cliquant sur la liste déroulante et en sélectionnant « Informations sur l’extension »
 
 #### Correctifs
 
@@ -188,7 +198,7 @@ ht-degree: 94%
 
 #### Correctifs
 
-* Correction d’un conflit avec prototype.js. L’extension Analytics prend désormais en charge les bibliothèques prototype.js standard.
+* Correction d’un conflit avec Prototype JS. L’extension Analytics prend désormais en charge les bibliothèques prototype.js standard.
 
 ## 9 novembre 2018
 
@@ -255,7 +265,7 @@ ht-degree: 94%
 #### **Fonctionnalités**
 
 * Mise à jour de l’AppMeasurement vers la version 2.6
-* L’outil de suivi Analytics initialisé est désormais exposé par le biais d’un module partagé dans l’extension de balise Adobe Experience Platform afin que d’autres extensions puissent inclure du code pour interagir avec l’outil.
+* Lʼoutil de suivi Analytics initialisé est désormais accessible via un module partagé dans lʼextension de balise Adobe Experience Platform, si bien que dʼautres extensions peuvent inclure du code pour interagir avec lʼoutil.
 
 #### **Correctifs**
 
