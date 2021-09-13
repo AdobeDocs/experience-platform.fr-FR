@@ -3,9 +3,9 @@ keywords: TMMData;données tmm;tmdata;données TMM
 title: Extension TMMData
 description: L’extension TMMData est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 9f4ad50e-d964-41b0-b58e-71611bff3ead
-source-git-commit: b90428845412613d59f3c5091ad7c1398ead9f6a
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '485'
 ht-degree: 20%
 
 ---
@@ -26,7 +26,7 @@ Cette destination est une extension de balise. Pour plus d’informations sur le
 
 Cette extension est disponible dans le catalogue [!DNL Destinations] pour tous les clients qui ont acheté Platform.
 
-Pour utiliser cette extension, vous devez accéder aux balises dans Adobe Experience Platform. Les balises sont proposées aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contactez l’administrateur de votre organisation pour accéder aux balises et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer les extensions. et leur demander de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer des extensions.
+Pour utiliser cette extension, vous devez accéder aux balises dans Adobe Experience Platform. Les balises sont proposées aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contactez l’administrateur de votre organisation pour accéder aux balises et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer les extensions.
 
 ## Installation de l’extension {#install-extension}
 
