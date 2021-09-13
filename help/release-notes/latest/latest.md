@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
+source-git-commit: e9d5f24bec8cd2793ce30245b46c1d912bf17cc7
 workflow-type: tm+mt
-source-wordcount: '536'
-ht-degree: 45%
+source-wordcount: '711'
+ht-degree: 35%
 
 ---
 
@@ -25,10 +25,22 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 Les destinations sont des intégrations prédéfinies avec des plateformes de destination qui permettent l’activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
+**Nouvelles destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md) | La destination Attributs des appareils, qui était auparavant en version bêta, est désormais disponible en général. |
+| [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md) | La destination Balises aériennes, qui était auparavant en version bêta, est désormais disponible en général. |
+| [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) | La destination de braze, précédemment en version bêta, est désormais disponible en général. |
+| [[!DNL Pinterest Customer List]](../../destinations/catalog/advertising/pinterest.md) | Avec la destination de liste de clients Pinterest, vous pouvez créer des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest. |
+| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | Ciblez vos abonnés et clients existants dans Twitter et créez des campagnes de remarketing pertinentes en activant vos audiences créées dans Adobe Experience Platform. |
+| [[!DNL Verizon Media/Yahoo DataX]](../../destinations/catalog/advertising/datax.md) | DataX est une infrastructure Verizon Media/Yahoo agrégée qui héberge divers composants qui permettent à Verizon Media/Yahoo d’échanger des données avec ses partenaires externes de manière sécurisée, automatisée et évolutive. |
+
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
+| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Le SDK de destination Adobe Experience Platform est une suite d’API de configuration qui vous permet de configurer des modèles d’intégration de destination pour que l’Experience Platform puisse fournir des données d’audience et de profil à votre point de terminaison, en fonction des données et des formats d’authentification de votre choix. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via l’API pour des mises à jour supplémentaires. |
 | [Améliorations de l’utilisation des destinations](../../destinations/ui/activation-overview.md) | Les améliorations de l’utilisation des destinations permettent aux marketeurs d’activer facilement des segments vers des destinations existantes. |
 
 Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
