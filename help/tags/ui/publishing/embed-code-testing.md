@@ -2,9 +2,9 @@
 title: Test des codes incorporés à l’aide du débogeur Adobe Experience Platform
 description: Découvrez comment utiliser Platform Debugger pour tester localement différents codes incorporés pour Adobe Experience Platform sur votre site web.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '516'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -12,13 +12,13 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Lorsque vous apportez des modifications aux versions de votre bibliothèque de balises dans Adobe Experience Platform, vous devez les tester avant de déployer la version dans votre environnement de production. Si vous ne disposez pas d’un environnement d’évaluation ou de développement dédié à votre site web, vous pouvez utiliser le débogueur Adobe Experience Platform pour tester localement différents codes incorporés dans votre site.
+Lorsque vous apportez des modifications à vos versions de bibliothèque dans Adobe Experience Platform, vous devez les tester avant de déployer la version sur votre environnement de production. Si vous ne disposez pas d’un environnement d’évaluation ou de développement dédié à votre site web, vous pouvez utiliser le débogueur Adobe Experience Platform pour tester localement différents codes incorporés dans votre site.
 
 ## Conditions préalables
 
-Ce tutoriel nécessite une compréhension pratique de l’utilisation des environnements et des codes incorporés dans l’interface utilisateur de la collecte de données. Pour plus d’informations, consultez la [présentation des environnements](./environments.md).
+Ce tutoriel nécessite une bonne compréhension de l’utilisation des environnements et des codes incorporés dans l’interface utilisateur de la collecte de données. Pour plus d’informations, consultez la [présentation des environnements](./environments.md).
 
 Ce tutoriel nécessite également l’installation de l’extension de navigateur Débogueur Platform. Le débogueur Platform n’est disponible que pour les navigateurs Chrome et Firefox. Utilisez l’un des liens suivants pour installer l’extension avant de démarrer le tutoriel :
 
@@ -27,7 +27,7 @@ Ce tutoriel nécessite également l’installation de l’extension de navigateu
 
 ## Ouvrir Débogueur Platform sur votre site web
 
-À l’aide du navigateur de votre choix, accédez à votre site web et ouvrez l’extension Débogueur Platform. Le site auquel le débogueur Platform est actuellement connecté s’affiche au bas de la fenêtre. Si des balises sont en cours d’exécution sur votre site, elles seront répertoriées dans l’onglet [!UICONTROL Résumé].
+À l’aide du navigateur de votre choix, accédez à votre site web et ouvrez l’extension Débogueur Platform. Le site auquel le débogueur Platform est actuellement connecté s’affiche au bas de la fenêtre. Si des balises sont en cours d’exécution sur votre site, elles sont répertoriées dans l’onglet [!UICONTROL Résumé].
 
 ![](./images/embed-code-testing/summary.png)
 
