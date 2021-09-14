@@ -2,9 +2,9 @@
 title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
 source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1293'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -12,17 +12,17 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## 11 août 2021
 
 v3.0.0
 
-* PDCL-6153 : Ajoute la prise en charge pour extraire de manière fiable l’URL complète pour les actions de code personnalisé en mémoire cache.
+* PDCL-6153 : ajoute la prise en charge pour extraire de manière fiable lʼURL complète pour les actions de code personnalisé en mémoire cache.
 
-La version 3.0.0 de l’extension Core est couplée à des modifications dans [v27.2.0 du composant d’exécution Web Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), ce qui permet aux utilisateurs de charger leur bibliothèque parmi de nombreuses régions d’hébergement gérées par l’Adobe si la société de l’utilisateur prend en charge le réseau de diffusion de contenu Premium.
+La version 3.0.0 de lʼextension Core est associée à des modifications dans la [version 27.2.0 de lʼobjet dʼexécution Web Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), ce qui permet aux utilisateurs de charger leur bibliothèque parmi de nombreuses régions dʼhébergement gérées par Adobe si la société de lʼutilisateur prend en charge le réseau CDN Premium.
 
-Cette mise à niveau est facultative et rétrocompatible pour les utilisateurs sans réseau de diffusion de contenu Premium, et obligatoire pour les clients dont le réseau de diffusion de contenu Premium est activé dans leur entreprise.
+Cette mise à niveau est facultative et rétrocompatible pour les utilisateurs qui ne possèdent pas le réseau CDN Premium, cependant, elle est obligatoire pour les clients disposant du réseau CDN Premium au sein de leur société.
 
 ## 20 mai 2021
 
@@ -49,7 +49,7 @@ v2.0.4
 
 * Ajout de la prise en charge des éléments de données dans plusieurs champs - La prise en charge des éléments de données a été ajoutée aux événements suivants : « Temps sur la page », « Entrée dans la fenêtre dʼaffichage », « Survol » et « Temps de lecture du média ». En plus des conditions suivantes : « Temps sur le site » et « Comparaison de valeur »
 * Ajout de la prise en charge du comportement par défaut pour Ctrl/Cmd + Clic et pour le clic central de la souris lors de lʼutilisation du délai de lien
-* **Le délai de lien avec lʼévénement Clic « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le  [blog de collecte de données ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) pour Adobe Experience Platform
+* **Le délai de lien avec lʼévénement Clic « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de la collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) pour Adobe Experience Platform.
 
 ## 6 janvier 2021
 
@@ -113,7 +113,7 @@ v1.6.2
 
 v1.6.1
 
-* **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. S’il est configuré, tous les scripts intégrés qu’une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge l’utilisation d’une stratégie de sécurité du contenu avec une valeur à usage unique afin que les scripts de balise puissent toujours se charger dans un environnement CSP. Vous pouvez en savoir plus sur l’utilisation des balises avec une CSP [ici](../../../ui/client-side/content-security-policy.md).
+* **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. S’il est configuré, tous les scripts intégrés qu’une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge lʼutilisation dʼune stratégie de sécurité du contenu (CSP) avec une valeur à usage unique afin que les scripts de balises puissent toujours se charger dans un environnement CSP. Pour en savoir plus sur lʼutilisation des balises avec une stratégie de sécurité du contenu, [cliquez ici](../../../ui/client-side/content-security-policy.md).
 
 ## 18 juin 2019
 
@@ -141,8 +141,8 @@ v1.4.2
 ## 8 novembre 2018
 
 * **Option Persist Cohort** : l’option de conservation d’une cohorte a été ajoutée à la condition de l’échantillonnage. Cela a pour effet de conserver un utilisateur dans ou hors de la cohorte de l’échantillon d’une session à l’autre. Par exemple, si la case Conserver la cohorte est cochée et que la condition renvoie vrai lors de sa première exécution pour un visiteur donné, elle renvoie vrai sur toutes les exécutions suivantes de la condition pour le même visiteur. De même, si la case Conserver la cohorte est cochée et que la condition renvoie faux lors de sa première exécution pour un visiteur donné, elle renvoie faux sur toutes les exécutions suivantes de la condition pour le même visiteur.
-* **Bug Fix**  : correction d’un bogue qui effaçait le contenu du site web lorsqu’une règle utilisant un événement Page Bottom (Bas de page) et une action Custom Code (Code personnalisé) sur une page sur laquelle les balises étaient chargées de manière synchrone mais mal installées (aucun appel à  `_satellite.pageBottom()`) était supprimée.
-* **Bug Fix**  : correction d’un bogue entraînant le dysfonctionnement de l’événement Enters Viewport lorsque la bibliothèque de balises était chargée de manière asynchrone et que le chargement se terminait après le déclenchement de l’événement DOMContentLoaded du navigateur.
+* **Correction de bugs** : correction d’un bug qui effaçait le contenu du site web lorsqu’une règle utilisant un événement Page Bottom (Bas de page) et une action Custom Code (Code personnalisé) sur une page où les balises étaient chargées de manière synchrone mais installées de manière incorrecte (aucun appel à `_satellite.pageBottom()`).
+* **Correction de bugs** : correction d’un bug entraînant le dysfonctionnement de l’événement Enters Viewport lorsque la bibliothèque de balises était chargée de manière asynchrone et que le chargement se terminait après que le navigateur déclenche l’événement DOMContentLoaded.
 
 ## 24 mai 2018
 
