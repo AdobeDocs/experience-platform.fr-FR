@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de l’extension Adobe Target
-description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Target dans Adobe Experience Platform.
+description: Dernières notes de mise à jour de l’extension de balise Adobe Target dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '506'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## 24 juillet 2020
 
@@ -42,7 +42,7 @@ ht-degree: 74%
 * Auparavant, la bibliothèque ECID effectuait deux appels de blocage avant qu’at.js puisse récupérer des expériences. Cela a été réduit à un seul appel, ce qui améliore considérablement les performances.
 
 >[!NOTE]
->Mettez à niveau votre extension de balise ECID pour Adobe Experience Platform vers la version 4.4.1 pour tirer parti de cette amélioration des performances.
+>Mettez à niveau votre extension de balise ECID pour Adobe Experience Platform vers la version 4.4.1 afin de profiter de cette amélioration des performances.
 
 ## 31 juillet 2019
 
@@ -74,7 +74,7 @@ ht-degree: 74%
 
 #### **Fonctionnalités**
 
-* Mise à jour de l’extension afin d’utiliser at.js 1.7.0 avec la fonctionnalité de confidentialité d’accord préalable prise en charge via les balises pour contrôler comment et quand la balise Target est déclenchée. Veuillez consulter la documentation sur les balises pour savoir comment configurer votre mise en oeuvre d’Opt-in. Ajout de la possibilité de choisir si un paramètre mbox associé à une valeur vide doit être envoyé à Target ou non.
+* Mise à jour d’extension pour utiliser le fichier at.js 1.7.0 avec la fonctionnalité d’accord préalable prise en charge via les balises pour contrôler comment et quand la balise Target est déclenchée. Reportez-vous à la documentation relative aux balises pour savoir comment configurer l’implémentation de la fonctionnalité d’accord préalable. Ajout de la possibilité de choisir si un paramètre mbox associé à une valeur vide doit être envoyé à Target ou non.
 
 ## 23 janvier 2019
 
@@ -140,7 +140,7 @@ ht-degree: 74%
 
 #### **Correctifs**
 
-* Correction d’une erreur dans l’extension Adobe Target qui empêchait Visual Experience Composer d’afficher la page lors d’un déploiement via des balises.
+* Correction d’une erreur dans l’extension Adobe Target qui empêchait Visual Experience Composer d’afficher la page en cas de déploiement via les balises.
 
 ## 8 février 2018
 
