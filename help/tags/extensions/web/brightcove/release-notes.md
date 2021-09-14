@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de l’extension de suivi vidéo BrightCove
-description: Notes de mise à jour les plus récentes pour l’extension de la balise BrightCove Video Tracking dans Adobe Experience Platform.
+description: Dernières notes de mise à jour pour l’extension de balises de suivi vidéo BrightCove dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '123'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## 6 juillet 2020
 
