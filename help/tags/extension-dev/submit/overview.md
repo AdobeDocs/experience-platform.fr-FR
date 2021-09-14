@@ -1,10 +1,10 @@
 ---
 title: Présentation du processus d’envoi des extensions
-description: Découvrez les étapes à suivre pour envoyer votre extension dans Adobe Experience Platform du développement à la publication.
+description: Découvrez la procédure qui vous permettra d’envoyer votre extension Adobe Experience Platform du développement à la publication.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '229'
-ht-degree: 34%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 34%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 L’envoi d’une extension au catalogue de collecte de données dans Adobe Experience Platform peut sembler une tâche ardue. Ce document fournit un guide détaillé pour envoyer votre extension à l’aide de guides séquentiels individuels. Pour envoyer votre extension, vous devez effectuer les étapes suivantes :
 
@@ -28,8 +28,8 @@ Cliquez sur le lien correspondant pour plus d’informations sur chacune de ces 
 
 ## Support technique
 
-L’assistance est disponible via l’espace de travail du Slack de la communauté des développeurs de balises pendant que vous créez et testez votre extension. L’espace de travail du Slack est une communauté en ligne dans laquelle les auteurs d’extensions se soutiennent mutuellement. Vous pouvez demander l’accès à l’adresse [http://join.launchdevelopers.chat](http://join.launchdevelopers.chat).
+L’assistance est disponible via l’espace de travail Slack de la communauté des développeurs de balises pendant que vous créez et testez votre extension. L’espace de travail Slack est une communauté en ligne dans laquelle les auteurs d’extensions se soutiennent mutuellement. Vous pouvez demander l’accès à l’adresse [http://join.launchdevelopers.chat](http://join.launchdevelopers.chat).
 
 >[!NOTE]
 >
->Bien qu’il y ait des membres de l’équipe d’Adobe dans cet espace de travail de Slack, il s’agit d’une ressource communautaire non sponsorisée ou modérée par Adobe.
+>Bien qu’il y ait des membres de l’équipe Adobe dans cet espace de travail Slack, il s’agit d’une ressource communautaire, qui n’est ni sponsorisée ni modérée par Adobe.
