@@ -1,47 +1,47 @@
 ---
 solution: Experience Platform
-title: Téléchargement des tableaux de bord Experience Platform au format PDF
+title: Téléchargement de tableaux de bord Experience Platform au format PDF
 type: Documentation
-description: Enregistrez des copies des visualisations du tableau de bord à l’aide de la fonction de téléchargement au format PDF disponible dans l’interface utilisateur de l’Experience Platform.
+description: Enregistrez des copies des visualisations de vos tableaux de bord à l’aide de la fonctionnalité de téléchargement au format PDF disponible dans l’interface utilisateur d’Experience Platform.
 source-git-commit: a95f77d048b5bb9562507122d249f592e68a1bcf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '495'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Téléchargement des tableaux de bord au format PDF
+# Téléchargement de tableaux de bord au format PDF
 
-Les tableaux de bord de Adobe Experience Platform peuvent être téléchargés au format PDF depuis l’interface utilisateur de Platform pour faciliter le partage d’informations avec les membres de votre organisation.
+Il est possible de télécharger les tableaux de bord d’Adobe Experience Platform au format PDF depuis l’interface utilisateur de Platform. Cela facilite ainsi le partage d’informations avec les membres de votre organisation.
 
-Ce document résume la procédure de téléchargement des tableaux de bord à l’aide de l’interface utilisateur de Platform et d’enregistrement du tableau de bord au format PDF à l’aide du menu d’impression du navigateur par défaut.
+Ce document résume la procédure de téléchargement de tableaux de bord à l’aide de l’interface utilisateur de Platform. Il décrit également comment enregistrer le tableau de bord au format PDF à l’aide du menu d’impression du navigateur par défaut.
 
 >[!WARNING]
 >
->Les données contenues dans vos tableaux de bord peuvent inclure des informations d’identification personnelle (PII) sur vos clients ou des données sensibles liées à votre organisation. Toutes les données de tableau de bord enregistrées au format PDF doivent être gérées de manière appropriée conformément aux directives de confidentialité des données de votre entreprise.
+>Les données contenues dans vos tableaux de bord peuvent inclure des informations d’identification personnelle (PII) sur vos clients ou des données sensibles liées à votre organisation. Toutes les données des tableaux de bord enregistrées au format PDF doivent être gérées de manière appropriée, conformément aux directives relatives à la confidentialité des données de votre organisation.
 
-## Télécharger le tableau de bord
+## Téléchargement de tableau de bord
 
-Pour commencer à télécharger un tableau de bord, accédez au tableau de bord à télécharger (par exemple, le tableau de bord [!UICONTROL Profils] ), puis sélectionnez le menu d’options supplémentaires (**`...`**) dans le coin supérieur droit du tableau de bord. Sélectionnez ensuite **[!UICONTROL Télécharger]**.
+Pour commencer à télécharger un tableau de bord, accédez au tableau de bord que vous souhaitez télécharger (par exemple, le tableau de bord [!UICONTROL Profils]), puis sélectionnez le menu Plus d’options (**`...`**) dans le coin supérieur droit du tableau de bord. Cliquez ensuite sur **[!UICONTROL Télécharger]**.
 
 ![](images/download/download-button.png)
 
-## Aperçu PDF
+## Prévisualisation PDF
 
-Après avoir sélectionné **[!UICONTROL Télécharger]**, le menu d’impression par défaut de votre navigateur s’ouvre. Dans cet exemple, le menu d’impression Google Chrome s’affiche.
+Après avoir cliqué sur **[!UICONTROL Télécharger]**, le menu d’impression par défaut de votre navigateur s’ouvre. Cet exemple montre l’affichage du menu d’impression de Google Chrome.
 
-Le menu Imprimer vous permet de prévisualiser le PDF qui sera enregistré. Le fichier PDF est une véritable représentation des widgets du tableau de bord tels qu’ils apparaissent dans l’interface utilisateur de Platform. De plus, la taille du fichier PDF est automatiquement ajustée pour afficher tous les widgets du tableau de bord actuellement visibles sur une seule page.
+Le menu d’impression vous permet de prévisualiser le PDF qui sera enregistré. Le fichier PDF offre une véritable représentation des widgets du tableau de bord tels qu’ils apparaissent dans l’interface utilisateur de Platform. De plus, la taille du fichier PDF est automatiquement ajustée pour afficher tous les widgets du tableau de bord actuellement visibles sur une seule page.
 
 ![](images/download/download-chrome-print.png)
 
-Le PDF comprend un en-tête généré automatiquement contenant le logo de l’Experience Platform, le nom du tableau de bord, votre nom et la date et l’heure de téléchargement du tableau de bord. Ces informations sont en lecture seule et ne peuvent pas être modifiées dans le PDF.
+Le fichier PDF inclut un en-tête généré automatiquement, lequel contient le logo d’Experience Platform, le nom du tableau de bord, votre nom ainsi que la date et l’heure de téléchargement du tableau de bord. Ces informations sont en lecture seule et ne peuvent pas être modifiées dans le PDF.
 
 ![](images/download/download-pdf.png)
 
-## Enregistrer au format PDF
+## Enregistrement au format PDF
 
-Après avoir prévisualisé le PDF, sélectionnez **Enregistrer** pour choisir l’emplacement où vous souhaitez enregistrer le PDF.
+Après avoir prévisualisé le PDF, sélectionnez **Enregistrer** pour choisir l’emplacement où vous souhaitez enregistrer le fichier PDF.
 
 >[!NOTE]
 >
@@ -49,15 +49,15 @@ Après avoir prévisualisé le PDF, sélectionnez **Enregistrer** pour choisir l
 
 ![](images/download/download-chrome-print-destination.png)
 
-## Personnalisation des fichiers PDF du tableau de bord
+## Personnalisation des fichiers PDF de tableaux de bord
 
-Le fichier PDF généré correspond au tableau de bord visible dans l’interface utilisateur et ne comprend que les widgets actuellement visibles dans votre tableau de bord. Certains tableaux de bord peuvent être personnalisés pour modifier la taille et l’emplacement des widgets ou pour ajouter et supprimer des widgets de la vue. La personnalisation de l’aspect de votre tableau de bord dans l’interface utilisateur de Platform modifie également l’aspect du PDF généré.
+Le fichier PDF généré correspond au tableau de bord visible dans l’interface utilisateur et ne comprend que les widgets actuellement visibles dans votre tableau de bord. Certains tableaux de bord peuvent être personnalisés pour modifier la taille et l’emplacement des widgets ou pour ajouter et supprimer des widgets de l’affichage. La personnalisation de l’aspect de votre tableau de bord dans l’interface utilisateur de Platform modifie également l’aspect du PDF généré.
 
 Par exemple, vous pouvez modifier l’aspect du tableau de bord des profils afin d’inclure plusieurs widgets pleine largeur empilés au-dessus de trois widgets standard.
 
 ![](images/download/download-modify.png)
 
-Si vous choisissez de télécharger le tableau de bord mis à jour, un nouvel aperçu PDF correspondant à l’aspect du tableau de bord des profils personnalisés s’affiche. Il ajuste également automatiquement la taille du fichier PDF pour s’assurer que tous les widgets visibles sont inclus dans un fichier PDF d’une page.
+Si vous choisissez de télécharger le tableau de bord mis à jour, une nouvelle prévisualisation du fichier PDF reprenant l’aspect du tableau de bord des profils personnalisés s’affiche. En outre, la taille du fichier PDF est automatiquement ajustée pour garantir l’inclusion de tous les widgets visibles dans un fichier PDF d’une seule page.
 
 ![](images/download/download-chrome-print-modified.png)
 
@@ -65,4 +65,4 @@ Pour en savoir plus sur la personnalisation des tableaux de bord, commencez par 
 
 ## Étapes suivantes
 
-Maintenant que vous avez téléchargé votre tableau de bord et l’avez enregistré au format PDF, vous pouvez répéter ces étapes pour télécharger des tableaux de bord supplémentaires ou partager le PDF avec des membres de votre entreprise.
+Maintenant que vous avez téléchargé votre tableau de bord et que vous l’avez enregistré au format PDF, vous pouvez répéter ces étapes pour télécharger des tableaux de bord supplémentaires ou partager le fichier PDF avec des membres de votre organisation.
