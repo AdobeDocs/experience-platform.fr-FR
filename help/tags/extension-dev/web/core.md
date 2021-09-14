@@ -2,9 +2,9 @@
 title: Modules de bibliothèque principaux pour les extensions web
 description: Découvrez les modules de bibliothèque principaux que vous pouvez utiliser dans vos extensions web.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '350'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Ce document fournit une liste de modules de bibliothèque principaux que vous pouvez utiliser dans vos extensions web. Vous pouvez accéder à ces modules à l’aide de `require('@adobe/{MODULE}')`, où `{MODULE}` est le nom du module principal à utiliser.
 
@@ -78,7 +78,7 @@ loadScript(url).then(function() {
 
 ### [!DNL reactor-promise]
 
-`reactor-promise` est un constructeur qui imite l’[API Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) native dans ECMAScript 6. Si l’API Promise native est disponible, elle est renvoyée à la place.
+`reactor-promise` est un constructeur qui imite l’[API Promise](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) native dans ECMAScript 6. Si l’API Promise native est disponible, elle est renvoyée à la place.
 
 ```javascript
 var Promise = require('@adobe/reactor-promise');
