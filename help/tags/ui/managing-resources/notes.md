@@ -2,24 +2,24 @@
 title: Notes
 description: Découvrez comment ajouter des annotations textuelles à certaines ressources de balises dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '309'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
-# Remarques
+# Notes
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les notes sont des annotations textuelles que vous pouvez ajouter à certaines ressources de balises dans Adobe Experience Platform. Des notes peuvent être ajoutées aux ressources suivantes :
 
 * Extensions
 * Éléments de données
 * Règles
-* Composants de  règle
+* Composants de   règle
 * Bibliothèques
 * Propriétés
 
@@ -42,6 +42,6 @@ Cliquez sur l’icône **[!UICONTROL Notes]** pour développer le rail de droite
 
 ## Autre
 
-* Les notes sur les ressources de balise correspondent au comportement des notes dans la gestion dynamique des balises, dans la mesure où elles sont immuables et ne peuvent pas être modifiées ni supprimées.
+* Les notes sur les ressources de balises se comportent de la même manière que les notes dans DTM. Elles sont immuables et ne peuvent pas être modifiées ni supprimées.
 * Lorsque vous affichez les anciennes révisions d’une ressource, seules les notes créées avant la date `created_at` de cette révision s’affichent.
 * Lorsque vous supprimez une ressource, toutes les notes qui lui sont associées sont également supprimées.
