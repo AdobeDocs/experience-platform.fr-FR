@@ -2,9 +2,9 @@
 title: Présentation de la publication
 description: Découvrez le processus de publication des modifications apportées à vos bibliothèques de code de gestion des balises dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '609'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 80%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Adobe Experience Platform vous permet d’encapsuler les modifications apportées à votre code de gestion des balises dans des bibliothèques individuelles. Comme plusieurs bibliothèques peuvent désormais être développées en parallèle par différentes équipes, celles-ci doivent suivre un processus délibéré et autorisé pour fusionner les modifications avant d’être transférées vers votre environnement de production.
+Adobe Experience Platform vous permet d’encapsuler les modifications apportées à votre code de gestion des balises dans des bibliothèques individuelles. Dans la mesure où plusieurs bibliothèques peuvent désormais être développées en parallèle par différentes équipes, ces bibliothèques doivent suivre un processus délibéré et autorisé afin de fusionner les modifications avant le transfert vers votre environnement de production.
 
 Au niveau de base, chaque bibliothèque passe par le processus de publication suivant :
 
@@ -32,10 +32,10 @@ Outre le flux de publication, il est important de comprendre le fonctionnement d
 | --- | --- |
 | Bibliothèques | Une bibliothèque est un ensemble d’instructions qui définit la façon dont les extensions, les éléments de données et les règles interagissent les uns avec les autres, ainsi qu’avec votre site web. Lorsqu’une bibliothèque est compilée pour être déployée dans un environnement, elle devient une version.<br><br>Reportez-vous à la présentation des [bibliothèques](./libraries.md) pour plus d’informations sur la création, la gestion et l’activation de bibliothèques dans l’interface utilisateur. |
 | Versions | Une version est une bibliothèque compilée. Lorsqu’elle est déployée dans un environnement, une version fournit l’ensemble réel des fichiers contenant le code qui est distribué au navigateur de chaque utilisateur lorsque ce dernier consulte votre site.<br><br>Reportez-vous à la présentation des [versions](./builds.md) pour plus d’informations sur le contenu et le format des versions. |
-| Environnements | Un environnement de balises est un ensemble d’instructions de déploiement qui indique à Platform dans quel format vous souhaitez créer votre version et où vous souhaitez qu’elle soit livrée.<br><br>Reportez-vous à la présentation des [environnements](./environments.md) pour plus d’informations sur les différents types d’environnements ainsi que sur la manière d’installer et de configurer des environnements existants ou d’en créer de nouveaux. |
+| Environnements | Un environnement de balises est un ensemble dʼinstructions de déploiement qui indique à Platform le format souhaité de votre version et où vous souhaitez quʼelle soit livrée.<br><br>Reportez-vous à la présentation des [environnements](./environments.md) pour plus d’informations sur les différents types d’environnements ainsi que sur la manière d’installer et de configurer des environnements existants ou d’en créer de nouveaux. |
 | Hôtes | Un hôte représente les détails de la connexion permettant à un environnement de distribuer une version à votre site web. Vous pouvez laisser Adobe gérer l’hébergement de votre version ou bien fournir des informations sur vos propres serveurs hôtes.<br><br>Reportez-vous à la présentation des [hôtes](./hosts/hosts-overview.md) pour plus d’informations sur chaque option d’hébergement. |
-| Code côté client | Le code côté client est l’ensemble des scripts que vous placez dans le code source de votre site ou application et qui indique à chaque appareil client où récupérer la version. Le code est associé à un environnement et peut changer lorsque vous apportez des modifications à la configuration de votre environnement.<br><br>Pour en savoir plus, consultez la section sur le  [code ](./environments.md#embed-code) incorporé dans la présentation des environnements . |
+| Code côté client | Le code côté client est l’ensemble des scripts que vous placez dans le code source de votre site ou application et qui indique à chaque appareil client où récupérer la version. Le code est associé à un environnement et peut changer lorsque vous apportez des modifications à la configuration de votre environnement.<br><br>Pour en savoir plus, consultez la section sur les [codes incorporés](./environments.md#embed-code) dans la présentation des environnements. |
 
 ## Étapes suivantes
 
-Ce document fournit un aperçu des différents composants impliqués dans la publication de bibliothèques de balises dans Adobe Experience Platform. Reportez-vous à la documentation à laquelle renvoie les différentes sections de ce guide pour en savoir plus sur les détails du processus de publication.
+Ce document présente un aperçu des différents composants impliqués dans la publication de bibliothèques de balises dans Adobe Experience Platform. Reportez-vous à la documentation à laquelle renvoie les différentes sections de ce guide pour en savoir plus sur les détails du processus de publication.
