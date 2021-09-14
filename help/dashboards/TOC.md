@@ -5,9 +5,9 @@ breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Visualisez les données dʼExperience Platform sur des tableaux de bord personnalisables.
 feature: Gestion des données
 source-git-commit: 168960692605b96324533ca295544c2f855481b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '60'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 83%
 
 * [Présentation des tableaux de bord](home.md)
 * [Autorisations d’accès aux tableaux de bord](permissions.md)
-* [Téléchargement des tableaux de bord au format PDF](download.md)
+* [Téléchargement de tableaux de bord au format PDF](download.md)
 * Tableaux de bord disponibles {#guides}
    * [Profils](guides/profiles.md)
    * [Segments](guides/segments.md)
