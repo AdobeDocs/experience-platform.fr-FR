@@ -2,19 +2,19 @@
 title: Recherche de ressources dans l’API Reactor
 description: Découvrez comment rechercher des ressources dans l’API Reactor.
 source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '260'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Recherche de ressources dans l’API Reactor
 
-Le point d’entrée `/search` de l’API Reactor vous permet de créer des requêtes structurées sur des ressources stockées. Ce document fournit des exemples de différentes requêtes de recherche pour différents cas d’utilisation courants.
+Le point d’entrée `/search` de l’API Reactor vous permet de créer des requêtes structurées sur des ressources stockées. Ce document fournit des exemples de différentes requêtes de recherche pour des cas d’utilisation courants.
 
 >[!NOTE]
 >
->Avant de lire ce guide, reportez-vous au [guide de point de terminaison de recherche](../endpoints/search.md) pour plus d’informations sur la syntaxe de requête acceptée et d’autres instructions d’utilisation.
+>Avant de lire ce guide, reportez-vous au [guide des points d’entrée de recherche](../endpoints/search.md) pour plus d’informations sur la syntaxe de requête acceptée et d’autres instructions d’utilisation.
 
 ## Stratégies de requête de base
 
@@ -38,11 +38,11 @@ Une recherche peut être effectuée sur plusieurs champs à l’aide de caractè
 
 >[!IMPORTANT]
 >
->Normalement, les valeurs de recherche doivent correspondre au type de données en cours de recherche. Par exemple, une valeur de requête `evar7` sur un champ entier échouerait. Lors de la recherche sur plusieurs champs, l’exigence du type de requête est rendue indulgente afin d’éviter les erreurs, mais elle peut produire des résultats indésirables.
+>Normalement, les valeurs de recherche doivent correspondre au type de données recherchées. Par exemple, une valeur de requête de `evar7` sur un champ entier échouerait. Lors de la recherche sur plusieurs champs, l’exigence du type de requête fait preuve de tolérance afin d’éviter les erreurs, mais elle peut produire des résultats indésirables.
 
-### Portée des requêtes à des types de ressources spécifiques
+### Étendue des requêtes à des types de ressources spécifiques
 
-Vous pouvez étendre une recherche à un type de ressource spécifique en fournissant `resource_types` dans la requête. Par exemple, pour effectuer une recherche dans `data_elements` et `rule_components` :
+Vous pouvez étendre une recherche à un type de ressource spécifique en fournissant `resource_types` dans la requête. Par exemple, pour effectuer une recherche dans `data_elements` et `rule_components` :
 
 ```json
 {
@@ -64,7 +64,7 @@ Vous pouvez étendre une recherche à un type de ressource spécifique en fourni
 
 ### Tri des réponses
 
-La propriété `sort` peut être utilisée pour trier les réponses. Par exemple, pour trier par `created_at` en commençant par le plus récent :
+La propriété `sort` peut être utilisée pour trier les réponses. Par exemple, pour trier par `created_at` en commençant par la plus récente :
 
 ```json
 {
@@ -114,7 +114,7 @@ curl -X POST \
       }'
 ```
 
-### Toute ressource référençant &quot;evar7&quot;
+### Toute ressource référençant « evar7 »
 
 ```shell
 curl -X POST \
@@ -135,7 +135,7 @@ curl -X POST \
       }'
 ```
 
-### Éléments de données d’un type de délégué &quot;code personnalisé&quot;
+### Éléments de données d’un type de délégué « code personnalisé »
 
 ```shell
 curl -X POST \
@@ -222,7 +222,7 @@ curl -X POST \
       }'
 ```
 
-### Exécution d’une recherche à l’aide d’une logique de terme &quot;OU&quot;
+### Exécution d’une recherche à l’aide d’une logique de terme « OR »
 
 ```shell
 curl -X POST \
