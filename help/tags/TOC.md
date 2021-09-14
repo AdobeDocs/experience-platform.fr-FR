@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Collecte de données
 source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '380'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -80,7 +80,7 @@ ht-degree: 86%
       * Service Adobe Experience Cloud ID {#id-service}
          * [Présentation](./extensions/web/id-service/overview.md)
          * [Notes de mise à jour](./extensions/web/id-service/release-notes.md)
-      * Démonstration de Adobe Experience Platform {#platform-demo}
+      * Démo Adobe Experience Platform {#platform-demo}
          * [Présentation](./extensions/web/platform-demo/overview.md)
       * SDK web Adobe Experience Platform {#sdk}
          * [Présentation](./extensions/web/sdk/overview.md)
@@ -92,10 +92,10 @@ ht-degree: 86%
       *  Adobe Media Analytics for Audio and Video {#media-analytics}
          * [Présentation](./extensions/web/media-analytics/overview.md)
          * [Notes de mise à jour](./extensions/web/media-analytics/release-notes.md)
-      * Adobe Medium Analytics (SDK 3.x) {#media-analytics-3x}
+      * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
          * [Présentation](./extensions/web/media-analytics-3x/overview.md)
          * [Notes de mise à jour](./extensions/web/media-analytics-3x/release-notes.md)
-      * Confidentialité des Adobes {#privacy}
+      * Confidentialité Adobe {#privacy}
          * [Présentation](./extensions/web/privacy/overview.md)
       * Adobe Target {#target}
          * [Présentation](./extensions/web/target/overview.md)
@@ -103,7 +103,7 @@ ht-degree: 86%
       * Adobe Target v2 {#target-v2}
          * [Présentation](./extensions/web/target-v2/overview.md)
          * [Notes de mise à jour](./extensions/web/target-v2/release-notes.md)
-      * Modules externes courants Analytics {#plugins}
+      * Plugins Analytics courants {#plugins}
          * [Présentation](./extensions/web/plugins/overview.md)
          * [Notes de mise à jour](./extensions/web/plugins/release-notes.md)
       * Base {#core}
@@ -113,10 +113,10 @@ ht-degree: 86%
       * [!DNL Marketo Munchkin] {#marketo}
          * [Présentation](./extensions/web/marketo/overview.md)
          * [Notes de mise à jour](./extensions/web/marketo/release-notes.md)
-      * [!DNL BrightCove] suivi vidéo  {#brightcove}
+      * [!DNL BrightCove] suivi vidéo {#brightcove}
          * [Présentation](./extensions/web/brightcove/overview.md)
          * [Notes de mise à jour](./extensions/web/brightcove/release-notes.md)
-      * Extension de suivi vidéo [!DNL YouTube] {#youtube}
+      * [!DNL YouTube] Extension de suivi vidéo {#youtube}
          * [Présentation](./extensions/web/youtube/overview.md)
          * [Notes de mise à jour](./extensions/web/youtube/release-notes.md)
    * [Extensions tierces](./extensions/3rd-party-extensions.md)
@@ -162,24 +162,24 @@ ht-degree: 86%
       * [Propriétés](./api/endpoints/properties.md)
       * [Éléments de données](./api/endpoints/data-elements.md)
       * [Règles](./api/endpoints/rules.md)
-      * [Composants de  règle](./api/endpoints/rule-components.md)
+      * [Composants de   règle](./api/endpoints/rule-components.md)
       * [Packages d’extension](./api/endpoints/extension-packages.md)
       * [Extensions](./api/endpoints/extensions.md)
       * [Bibliothèques](./api/endpoints/libraries.md)
       * [Versions](./api/endpoints/builds.md)
       * [Environnements](./api/endpoints/environments.md)
       * [Hôtes](./api/endpoints/hosts.md)
-      * [Configurations d’application](./api/endpoints/app-configurations.md)
+      * [Configurations des applications](./api/endpoints/app-configurations.md)
       * [Événements d’audit](./api/endpoints/audit-events.md)
       * [Rappels](./api/endpoints/callbacks.md)
-      * [Remarques](./api/endpoints/notes.md)
-      * [Profile](./api/endpoints/profile.md)
+      * [Notes](./api/endpoints/notes.md)
+      * [Profil](./api/endpoints/profile.md)
       * [Recherche](./api/endpoints/search.md)
    * Guides {#guides}
-      * [Délégation des ID de descripteur](./api/guides/delegate-descriptor-ids.md)
+      * [ID de descripteur de délégué](./api/guides/delegate-descriptor-ids.md)
       * [Chiffrement des valeurs](./api/guides/encrypting-values.md)
-      * [Traitement des erreurs](./api/guides/error-handling.md)
-      * [Filtrer les réponses](./api/guides/filtering.md)
+      * [Gestion des erreurs](./api/guides/error-handling.md)
+      * [Filtrage des réponses](./api/guides/filtering.md)
       * [Pagination des réponses](./api/guides/pagination.md)
       * [Tri des réponses](./api/guides/sorting.md)
       * [Relations](./api/guides/relationships.md)
