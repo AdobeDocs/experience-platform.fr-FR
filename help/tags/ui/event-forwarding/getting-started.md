@@ -1,27 +1,27 @@
 ---
-title: Prise En Main Du Transfert D’Événements
+title: Prise en main du transfert d’événements
 description: Suivez ce tutoriel détaillé pour commencer à utiliser le transfert d’événement dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '907'
-ht-degree: 46%
+ht-degree: 100%
 
 ---
 
-# Prise en main du transfert d’événement
+# Prise en main du transfert d’événements
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Pour utiliser le transfert d’événement dans Adobe Experience Platform, les données doivent être envoyées à Adobe Experience Platform Edge Network à l’aide d’une ou de plusieurs des trois options suivantes :
+Pour utiliser le transfert d’événement dans Adobe Experience Platform, les données doivent être envoyées à Adobe Experience Platform Edge Network à l’aide d’une ou de plusieurs des trois options suivantes :
 
 * [SDK web Adobe Experience Platform](../../extensions/web/sdk/overview.md)
-* [SDK Adobe Experience Platform Mobile](https://sdkdocs.com)
-* [API serveur à serveur](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
+* [SDK mobile Adobe Experience Platform](https://sdkdocs.com)
+* [API serveur à serveur](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=fr)
 
 >[!NOTE]
->Le SDK Web Platform et le SDK Mobile Platform ne nécessitent pas de déploiement par le biais de balises dans Adobe Experience Platform. Toutefois, il est recommandé d’utiliser des balises pour déployer ces SDK.
+>Le SDK web Platform et le SDK mobile Platform ne nécessitent pas de déploiement par le biais de balises dans Adobe Experience Platform. Toutefois, il est recommandé d’utiliser des balises pour déployer ces SDK.
 
 Après avoir envoyé les données au réseau Edge, vous pouvez basculer sur des solutions Adobe pour y envoyer des données. Pour envoyer des données à une solution non Adobe, configurez-la dans le transfert d’événement.
 
@@ -30,7 +30,7 @@ Après avoir envoyé les données au réseau Edge, vous pouvez basculer sur des 
 * Adobe Experience Platform Collection Enterprise (contactez votre gestionnaire de compte pour connaître les tarifs)
 * Transfert d’événement dans Adobe Experience Platform
 * SDK Web ou Mobile Adobe Experience Platform, configuré pour envoyer des données au réseau Edge
-* Faire correspondre les données au modèle de données d’expérience (XDM) (ce mappage peut être effectué à l’aide de balises).
+* Mettez en correspondance les données avec le modèle de données dʼexpérience (XDM) (cette mise en correspondance peut être effectuée en utilisant les balises).
 
 ## Créer un schéma XDM
 
@@ -40,11 +40,11 @@ Créez votre schéma dans Adobe Experience Platform.
 
 1. Donnez un nom et une brève description au schéma.
 
-1. Vous pouvez ajouter le groupe de champs &quot;Détails web ExperienceEvent&quot; en sélectionnant **[!UICONTROL Ajouter]** en regard de **[!UICONTROL Groupes de champs]**.
+1. Vous pouvez ajouter le groupe de champs « Détails web ExperienceEvent » en sélectionnant **[!UICONTROL Ajouter]** en regard de **[!UICONTROL Groupes de champs]**.
 
    >[!NOTE]
    >
-   >Vous pouvez ajouter plusieurs groupes de champs, le cas échéant.
+   >Plusieurs groupes de champs peuvent être ajoutés, si nécessaire.
 
 1. Enregistrez le schéma et notez le nom que vous lui avez donné.
 
@@ -52,7 +52,7 @@ Pour plus d’informations sur les schémas, voir [Aide du système XDM (Modèle
 
 ## Création d’une propriété de transfert d’événement
 
-Dans l’interface utilisateur de la collecte de données, créez une propriété de type &quot;Edge&quot;.
+Dans l’interface utilisateur de la collecte de données, créez une propriété de type « Edge ».
 
 1. Sélectionnez **[!UICONTROL Nouvelle propriété]**.
 
@@ -63,7 +63,7 @@ Dans l’interface utilisateur de la collecte de données, créez une propriét�
 1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
 Après avoir créé la propriété, accédez à lʼonglet **[!UICONTROL Environnements]** correspondant à la nouvelle propriété et
-notez les identifiants de lʼenvironnement. Si l’organisation d’Adobe utilisée dans la file d’attente des données diffère de l’organisation d’Adobe utilisée dans le transfert d’événement, vous pouvez copier l’identifiant d’environnement de l’onglet **[!UICONTROL Environnements]** et le coller lors de la création d’un flux de données. Sinon, vous pouvez sélectionner l’environnement dans un menu déroulant.
+notez les identifiants de lʼenvironnement. Si lʼorganisation Adobe utilisée dans le flux de données diffère de celle utilisée dans le transfert dʼévénement, vous pouvez copier lʼidentifiant dʼenvironnement de lʼonglet **[!UICONTROL Environnements]** et le coller lors de la création dʼun flux de données. Sinon, vous pouvez sélectionner l’environnement dans un menu déroulant.
 
 ## Création d’un flux de données
 
@@ -82,25 +82,25 @@ La description permet d’identifier les configurations dans une liste de plusie
 
 ## Activation du transfert d’événement
 
-Ensuite, configurez Edge Network pour envoyer des données au transfert d’événement et à d’autres produits Adobe.
+Ensuite, configurez Edge Network pour envoyer des données à l’environnement de transfert d’événement et à d’autres produits Adobe.
 
 1. Dans l’interface utilisateur des flux de données, sélectionnez la propriété que vous avez créée.
 
 1. Sélectionnez l’environnement de développement, de production ou d’évaluation.
 
-   Ou, pour envoyer des données à un environnement de transfert d’événement en dehors de l’organisation d’Adobe, sélectionnez **[!UICONTROL Passer en mode avancé]** et collez-les dans un ID. L’identifiant est fourni lorsque vous créez une propriété de transfert d’événement.
+   Ou, pour envoyer des données à un environnement de transfert d’événement en dehors de lʼorganisation Adobe, sélectionnez la commande **[!UICONTROL Passer en mode avancé]** et collez-la dans un identifiant. L’identifiant est fourni lorsque vous créez une propriété de transfert d’événement.
 
 1. Activez les outils nécessaires et configurez-les selon les besoins.
 
    * Adobe Analytics requiert un identifiant de suite de rapports.
 
-   * Le transfert d’événement dans Adobe Experience Platform requiert un identifiant de propriété et un identifiant d’environnement. Il s’agit du chemin de publication de la propriété de transfert d’événement.
+   * Le transfert d’événement dans Adobe Experience Platform nécessite un identifiant de propriété et un identifiant d’environnement. Il s’agit du chemin de publication de la propriété de transfert d’événement.
 
 Après la configuration, prenez note des identifiants d’environnement pour la nouvelle propriété.
 
-## Configurez l’extension SDK Web de balise pour envoyer des données à la banque de données créée précédemment
+## Configurez l’extension SDK web de balise pour envoyer des données au flux de données créé précédemment.
 
-Créez votre propriété dans l’interface utilisateur de la collecte de données, puis utilisez l’extension SDK Web Adobe Experience Platform pour la configurer.
+Créez votre propriété dans l’interface utilisateur de la collecte de données, puis utilisez l’extension SDK web d’Adobe Experience Platform pour la configurer.
 
 1. Attribuez un nom à la propriété.
 
@@ -112,9 +112,9 @@ Créez votre propriété dans l’interface utilisateur de la collecte de donné
 
 Consultez la [documentation relative à l’extension SDK Web](../../extensions/web/sdk/overview.md) pour plus d’options de configuration.
 
-## Créer une règle de balise pour envoyer des données au SDK Web Platform
+## Créer une règle de balise pour envoyer des données au SDK web Platform
 
-Une fois que les balises ci-dessus sont en place, créez des définitions de données, des règles, etc. qui utilisent le transfert d’événement et les balises, mais qui ne nécessitent qu’une seule requête de la page.
+Quand les éléments ci-dessus sont en place, créez les définitions des données, règles, etc. qui utilisent le transfert d’événement et les balises, mais qui ont uniquement besoin d’une seule requête provenant de la page.
 
 Créez une règle de chargement de page à lʼaide de lʼextension SDK web Platform et du type dʼaction « Envoyer lʼévénement » :
 
@@ -134,9 +134,9 @@ Autre exemple : vous pouvez créer une règle qui envoie la couche de données 
 
 ## Résumé
 
-Les éléments suivants étant en place, vous pouvez désormais créer des règles de transfert d’événement pour transférer des données vers des destinations autres que les Adobes.
+Les éléments suivants étant en place, vous pouvez désormais créer des règles de transfert d’événement pour envoyer des données vers des destinations autres qu’Adobe.
 
 * Schéma du modèle de données dʼexpérience (notez le nom que vous lui avez donné).
-* Une propriété de transfert d’événement (suivez l’ID de propriété et les ID d’environnement).
-* Un flux de données (notez l’ID d’environnement, à ne pas confondre avec l’ID d’environnement du transfert d’événement.)
-* Propriété de balise
+* Une propriété de transfert d’événement (suivez l’identifiant de propriété et les identifiants d’environnement).
+* Un flux de données (notez l’identifiant d’environnement, à ne pas confondre avec l’identifiant d’environnement du transfert d’événement.)
+* Une propriété de balise
