@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de l’extension Adobe Target v2
-description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
+description: Notes de mise à jour les plus récentes pour lʼextension de balise Adobe Target v2 dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '572'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
@@ -12,31 +12,31 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## 20 juillet 2021
 
 ### Extension 0.15.1 d’Adobe Target v2
 
-- Correction d’un problème lié à un conflit de nom de fonction `stringify`, en raison duquel des valeurs UID incorrectes étaient générées pour `sessionId`, `requestId`, etc.
+- Correction d’un problème lié à un conflit de nom de fonction `stringify`, en raison duquel des valeurs UUID incorrectes étaient générées pour `sessionId`, `requestId`, etc.
 
 ## 16 juillet 2021
 
 ### Extension 0.15.0 d’Adobe Target v2
 
-- Ajoutez un attribut sécurisé aux cookies chaque fois que les paramètres at.js secureOnly sont définis sur true
+- Ajout d’un attribut sécurisé aux cookies chaque fois que les paramètres at.js secureOnly sont définis sur true
 - Des jetons de réponse sont désormais disponibles lors de l’utilisation de `triggerView()`
-- Correction d’un bogue lié à l’événement `CONTENT_RENDERING_NO_OFFERS` . Désormais, il se déclenche correctement lorsqu’aucun contenu n’est renvoyé par Target.
-- Les détails des mesures de clics A4T sont correctement renvoyés lors de l’utilisation de requêtes de prérécupération
+- Correction d’un bug lié à l’événement `CONTENT_RENDERING_NO_OFFERS`. Désormais, il se déclenche correctement chaque fois que Target ne renvoie aucun contenu
+- Les informations détaillées des mesures de clics A4T sont correctement renvoyées lors de l’utilisation de requêtes de prérécupération
 - La génération de l’UUID n’utilise plus `Math.random()`, mais repose sur `window.crypto`
-- `sessionId` l’expiration du cookie est correctement étendue à chaque appel réseau.
+- L’expiration du cookie `sessionId` est correctement étendue à chaque appel réseau
 - L’initialisation du cache de l’affichage SPA est désormais correctement gérée et respecte les paramètres `viewsEnable`
 
-## 2 juin 2021
+## 2 juin 2021
 
 ### Extension 0.14.2 d’Adobe Target v2
 
-- Correction d’un bogue en raison duquel le lot final contient deux versions d’at.js, l’une avec la prise de décision sur l’appareil et l’autre sans.
+- Correction d’un bug en raison duquel l’offre groupée finale contenait deux versions d’at.js, l’une avec la prise de décision sur l’appareil et l’autre sans.
 
 ## 19 mai 2021
 
@@ -57,7 +57,7 @@ ht-degree: 62%
 ### Extension 0.13.7 d’Adobe Target v2
 
 - Correction dʼun problème en raison duquel le paramètre `targetPageParams` était inclus dans les requêtes mbox. Le paramètre `targetPageParams` ne doit être inclus que dans les requêtes `pageLoad`.
-- Correction d’un problème lié aux objets globaux document et window dans l’extension de balise en remplaçant les dépendances d’objets globaux par des références directes.
+- Correction dʼun problème lié aux objets globaux de document et de fenêtre dans lʼextension de balise en remplaçant les dépendances dʼobjets globaux par des références directes vers ces objets.
 - Mise à jour du fichier at.js vers la version 2.4.1.
 
 ## 25 janvier 2021
@@ -89,7 +89,7 @@ ht-degree: 62%
 ### Extension 0.13.2 d’Adobe Target v2
 
 - Correction d’un problème lors de l’utilisation du remplacement CNAME et Edge, en raison duquel at.js 1.x pouvait créer un domaine de serveur incorrect, entraînant ainsi l’échec de la demande de Target.
-- Correction d’un problème en raison duquel, lors de l’utilisation de l’extension de balise v2 pour Target et l’extension de balise Adobe Analytics, Target retardait l’appel sendBeacon d’Analytics.
+- Correction dʼun problème lors de lʼutilisation de lʼextension de balise v2 pour Target et de lʼextension de balise Adobe Analytics au cours duquel Target retardait lʼappel Analytics sendBeacon.
 - Amélioration du paramètre `deviceIdLifetime` en le rendant remplaçable via `targetGlobalSettings`
 
 ## 25 mars 2020
@@ -109,7 +109,7 @@ ht-degree: 62%
 - Auparavant, la bibliothèque ECID effectuait deux appels de blocage avant qu’at.js puisse récupérer des expériences. Cela a été réduit à un seul appel, ce qui améliore considérablement les performances.
 
 >[!NOTE]
->Mettez à niveau votre extension de balise ECID vers la version 4.4.1 pour tirer parti de cette amélioration des performances.
+>Mettez à niveau votre extension de balise ECID vers la version 4.4.1 pour profiter de cette amélioration des performances.
 
 ## 31 juillet 2019
 
@@ -122,4 +122,4 @@ ht-degree: 62%
 
 ### Extension 0.11.0 d’Adobe Target v2
 
-- Nouvelle extension de balise pour la prise en charge d’at.js 2.1
+- Nouvelle extension de balise pour la prise en charge dʼat.js 2.1
