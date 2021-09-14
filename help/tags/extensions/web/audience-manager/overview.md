@@ -1,10 +1,10 @@
 ---
 title: Présentation de l’extension Adobe Audience Manager
-description: Découvrez l’extension de balise Adobe Audience Manager dans Adobe Experience Platform.
+description: Découvrez lʼextension de balises d’Adobe Audience Manager dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '496'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -12,15 +12,15 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Avec l’extension de balise d’Audience Manager, vous pouvez intégrer le code de DIL utilisé par l’Audience Manager à vos propriétés dans Adobe Experience Platform.
+Avec l’extension de balises d’Audience Manager, vous pouvez intégrer le code DIL utilisé par Audience Manager à vos propriétés dans Adobe Experience Platform 
 
 Utilisez cette référence pour obtenir des informations sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
 
 >[!NOTE]
 >
->Cette extension n’est pas destinée à être utilisée pour le transfert d’événement des données Adobe Analytics. Pour le transfert d’événement, utilisez l’[extension Adobe Analytics](../analytics/overview.md).
+>Cette extension n’est pas destinée à être utilisée pour le transfert d’événement des données d’Adobe Analytics. Pour le transfert d’événement, utilisez [l’extension Adobe Analytics](../analytics/overview.md).
 
 ## Configuration de l’extension Adobe Audience Manager
 
@@ -66,7 +66,7 @@ Ajoutez les propriétés d’initialisation utilisées par [DIL.create](https://
 
 Sélectionnez **[!UICONTROL Choisir un élément]** pour ajouter des propriétés supplémentaires.
 
-Survolez les icônes « i » avec la souris pour connaître les fonctions de chaque propriété. Vous trouverez plus d’informations sur les propriétés dans la [documentation DIL pour Audience Manager](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html).
+Survolez les icônes « i » avec la souris pour connaître les fonctions de chaque propriété. Vous trouverez plus d’informations sur les propriétés dans la [documentation DIL pour Audience Manager](https://experiencecloud.adobe.com/resources/help/fr_FR/aam/r_dil_create.html).
 
 Cliquez sur **[!UICONTROL Enregistrer]** quand vous avez fini de configurer l’extension.
 
