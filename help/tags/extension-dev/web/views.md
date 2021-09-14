@@ -2,9 +2,9 @@
 title: Vues dans les extensions web
 description: 'Découvrez comment définir des vues pour les modules de bibliothèque dans vos extensions web Adobe Experience Platform '
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2063'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Chaque type d’événement, de condition, d’action ou d’élément de données peut fournir une vue permettant à un utilisateur de fournir des paramètres. L’extension peut également avoir une [vue de configuration d’extension](../configuration.md) de niveau supérieur permettant aux utilisateurs de fournir des paramètres globaux pour l’extension entière. Le processus de création d’une vue est identique pour tous les types de vues.
 
@@ -24,19 +24,19 @@ Veillez à inclure une balise `doctype` dans votre fichier HTML. En règle gén�
 <!DOCTYPE html>
 ```
 
-## Inclusion du script iframe de balises
+## Inclusion du script iframe des balises
 
-Incluez le script iframe de balises dans le code HTML de votre vue :
+Incluez le script iframe des balises dans le code HTML de votre vue :
 
 ```html
 <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
 ```
 
-Ce script fournit une API de communication pour permettre à votre vue de communiquer avec l’application de balises.
+Ce script fournit une API de communication permettant à votre vue de communiquer avec l’application de balises.
 
 ## Inscription avec l’API de communication du pont d’extension
 
-Une fois le script iframe chargé, vous devrez fournir certaines méthodes aux balises qu’il utilisera pour la communication. Appelez `window.extensionBridge.register` et transmettez-lui un objet comme suit :
+Une fois le script iframe chargé, vous devrez fournir certaines méthodes aux balises. Le script les utilisera pour la communication. Appelez `window.extensionBridge.register` et transmettez-lui un objet comme suit :
 
 ```js
 window.extensionBridge.register({
@@ -64,14 +64,14 @@ Le contenu de chacune des méthodes devra être modifié en fonction de vos beso
 
 ### [!DNL init]
 
-La méthode `init` sera appelée par des balises dès que la vue aura été chargée dans l’iframe. Un seul argument sera transmis (`info`) qui doit être un objet contenant les propriétés suivantes :
+La méthode `init` sera appelée par les balises dès que la vue aura été chargée dans l’iframe. Un seul argument sera transmis (`info`) qui doit être un objet contenant les propriétés suivantes :
 
 | Propriété | Description |
 | --- | --- |
 | `settings` | Objet contenant les paramètres précédemment enregistrés à partir de cette vue. Si `settings` est `null`, cela indique que l’utilisateur crée les paramètres initiaux plutôt que de charger une version enregistrée. Si `settings` est un objet, vous devez l’utiliser pour remplir votre vue, car l’utilisateur choisit de modifier les paramètres précédemment conservés. |
 | `extensionSettings` | Paramètres enregistrés dans la vue de configuration de l’extension. Cela peut s’avérer utile pour accéder aux paramètres d’extension dans les vues qui ne sont pas la vue de configuration de l’extension. Si la vue actuelle est la vue de configuration de l’extension, utilisez `settings`. |
 | `propertySettings` | Objet contenant les paramètres de la propriété. Consultez le [guide d’objet Turbine](../turbine.md#property-settings) pour plus d’informations sur le contenu de cet objet. |
-| `tokens` | Objet contenant des jetons API. Pour accéder aux API d’Adobe depuis la vue, vous devez généralement utiliser un jeton IMS sous `tokens.imsAccess`. Ce jeton ne sera disponible que pour les extensions développées par Adobe. Si vous êtes un employé d’Adobe représentant une extension créée par Adobe, veuillez [envoyer un email à l’équipe d’ingénierie de collecte de données](mailto:reactor@adobe.com) et indiquer le nom de l’extension afin que nous puissions l’ajouter à la liste autorisée. |
+| `tokens` | Objet contenant des jetons API. Pour accéder aux API d’Adobe depuis la vue, vous devez généralement utiliser un jeton IMS sous `tokens.imsAccess`. Ce jeton ne sera disponible que pour les extensions développées par Adobe. Si vous êtes un employé d’Adobe représentant une extension créée par Adobe, veuillez [envoyer un e-mail à l’équipe d’ingénieurs en charge de la collecte de données](mailto:reactor@adobe.com) et indiquer le nom de l’extension afin que nous puissions l’ajouter à la liste autorisée. |
 | `company` | Objet contenant une seule propriété, `orgId`, qui représente votre Adobe Experience Cloud ID (chaîne alphanumérique de 24 caractères). |
 | `schema` | Objet au format [Schéma JSON](http://json-schema.org/). Cet objet provient du [manifeste d’extension](../manifest.md) et peut s’avérer utile pour valider votre formulaire. |
 
@@ -79,7 +79,7 @@ Votre vue doit utiliser ces informations pour générer et gérer son formulaire
 
 ### [!DNL validate]
 
-La méthode `validate` sera appelée une fois que l’utilisateur aura cliqué sur le bouton &quot;Enregistrer&quot;. Elle devrait renvoyer l’une des valeurs suivantes :
+La méthode `validate` sera appelée une fois que l’utilisateur aura cliqué sur le bouton « Enregistrer ». Elle devrait renvoyer l’une des valeurs suivantes :
 
 * Valeur booléenne indiquant si l’entrée de l’utilisateur est valide.
 * Promesse qui sera résolue ultérieurement avec une valeur booléenne indiquant si l’entrée de l’utilisateur est valide.
@@ -90,16 +90,16 @@ Si l’entrée de l’utilisateur n’est pas valide, veuillez l’indiquer dans
 
 ### [!DNL getSettings]
 
-La méthode `getSettings` sera appelée une fois que l’utilisateur aura cliqué sur le bouton &quot;Enregistrer&quot; et que la vue aura été validée. La fonction doit renvoyer l’une des valeurs suivantes :
+La méthode `getSettings` sera appelée une fois que l’utilisateur aura cliqué sur le bouton « Enregistrer » et que la vue aura été validée. La fonction doit renvoyer l’une des valeurs suivantes :
 
 * Objet contenant des paramètres basés sur l’entrée de l’utilisateur.
 * Promesse qui sera résolue ultérieurement avec un objet contenant des paramètres basés sur l’entrée de l’utilisateur.
 
-Cet objet settings sera ultérieurement émis dans la bibliothèque du runtime de balises. C’est vous qui décidez du contenu de cet objet. L’objet doit être sérialisable et désérialisable vers et depuis JSON. Les valeurs telles que les fonctions ou les instances [RegExp](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/RegExp) ne répondent pas à ces critères et ne sont donc pas autorisées.
+Cet objet settings sera ultérieurement émis dans la bibliothèque d’exécution de balises. C’est vous qui décidez du contenu de cet objet. L’objet doit être sérialisable et désérialisable vers et depuis JSON. Les valeurs telles que les fonctions ou les instances [RegExp](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/RegExp) ne répondent pas à ces critères et ne sont donc pas autorisées.
 
 ## Exploitation des vues partagées
 
-L’objet `window.extensionBridge` possède plusieurs méthodes qui vous permettent de tirer parti des vues existantes disponibles par le biais de balises afin que vous n’ayez pas à les reproduire dans votre vue. Les options disponibles sont les suivantes :
+L’objet `window.extensionBridge` comporte plusieurs méthodes qui vous permettent de tirer parti des vues existantes disponibles par le biais des balises, ceci afin que vous n’ayez pas à les reproduire dans votre vue. Les options disponibles sont les suivantes :
 
 ### [!DNL openCodeEditor]
 
@@ -129,7 +129,7 @@ L’appel de cette méthode affiche un mode permettant à un utilisateur de test
 | Propriété | Description |
 | --- | --- |
 | `pattern` | Modèle d’expression régulière qui doit être utilisé comme valeur initiale du champ de modèle à l’intérieur du testeur. Est généralement fourni lorsque l’utilisateur modifie une expression régulière existante. Si ce n’est pas le cas, le champ de motif sera initialement vide. |
-| `flags` | Les indicateurs d’expression régulière qui doivent être utilisés par le testeur. Par exemple, `gi` indique l’indicateur de correspondance globale et l’indicateur de casse ignorée. Ces indicateurs ne sont pas modifiables par l’utilisateur dans le testeur, mais sont utilisés pour illustrer les indicateurs spécifiques que l’extension utilisera lors de l’exécution de l’expression régulière. Dans le cas contraire, aucun indicateur ne sera utilisé dans le testeur. Voir [Documentation sur RegExp de MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) pour plus d’informations sur les indicateurs d’expression régulière.<br><br>Un scénario courant est une extension qui permet aux utilisateurs d’inverser la casse pour une expression régulière. Pour ce faire, l’extension fournit généralement une case à cocher dans sa vue d’extension qui, lorsqu’elle est cochée, active l’insensibilité à la casse (représentée par l’indicateur `i`). L’objet settings enregistré par la vue doit indiquer si la case à cocher a été cochée pour que le module Bibliothèque exécutant l’expression régulière sache s’il faut utiliser l’indicateur `i`. En outre, lorsque la vue d’extension souhaite ouvrir le testeur d’expression régulière, elle doit transmettre l’indicateur `i` si la case d’insensibilité à la casse est cochée. Cela permet à l’utilisateur de tester correctement l’expression régulière avec l’insensibilité à la casse activée. |
+| `flags` | Les indicateurs d’expression régulière qui doivent être utilisés par le testeur. Par exemple, `gi` indique l’indicateur de correspondance globale et l’indicateur de casse ignorée. Ces indicateurs ne sont pas modifiables par l’utilisateur dans le testeur, mais sont utilisés pour illustrer les indicateurs spécifiques que l’extension utilisera lors de l’exécution de l’expression régulière. Dans le cas contraire, aucun indicateur ne sera utilisé dans le testeur. Voir [Documentation sur RegExp de MDN](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/RegExp) pour plus d’informations sur les indicateurs d’expression régulière.<br><br>Un scénario courant est une extension qui permet aux utilisateurs d’inverser la casse pour une expression régulière. Pour ce faire, l’extension fournit généralement une case à cocher dans sa vue d’extension qui, lorsqu’elle est cochée, active l’insensibilité à la casse (représentée par l’indicateur `i`). L’objet settings enregistré par la vue doit indiquer si la case à cocher a été cochée pour que le module Bibliothèque exécutant l’expression régulière sache s’il faut utiliser l’indicateur `i`. En outre, lorsque la vue d’extension souhaite ouvrir le testeur d’expression régulière, elle doit transmettre l’indicateur `i` si la case d’insensibilité à la casse est cochée. Cela permet à l’utilisateur de tester correctement l’expression régulière avec l’insensibilité à la casse activée. |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 
@@ -145,11 +145,11 @@ L’objet `options` doit contenir une seule propriété booléenne, `tokenize`. 
 
 ## Éléments de données pris en charge {#supporting-data-elements}
 
-Vos vues comportent probablement des champs de formulaire dans lesquels les utilisateurs souhaitent exploiter des éléments de données. Par exemple, si votre vue comporte un champ de texte dans lequel l’utilisateur doit saisir un nom de produit, il peut ne pas être logique que l’utilisateur saisisse une valeur codée en dur dans le champ. L’utilisateur peut préférer que la valeur du champ soit dynamique (déterminée au moment de l’exécution), ce qui peut être fait en utilisant un élément de données.
+Vos vues comportent sans doute des champs de formulaire dans lesquels les utilisateurs souhaitent utiliser des éléments de données. Par exemple, si votre vue comporte un champ de texte dans lequel l’utilisateur doit entrer un nom de produit, il serait illogique qu’il y saisisse une valeur codée en dur. L’utilisateur peut préférer que la valeur du champ soit dynamique (déterminée au moment de l’exécution), ce qui peut être fait en utilisant un élément de données.
 
-Par exemple, supposons que nous créions une extension qui envoie une balise pour suivre une conversion. Supposons également que l’une des données que notre balise envoie est un nom de produit. Notre vue d’extension qui permet à l’utilisateur de configurer la balise aurait probablement un champ de texte pour le nom du produit. En règle générale, il ne serait pas très logique que l’utilisateur de Platform saisisse un nom de produit statique tel que « Calzone Oven XL », car le nom du produit dépend probablement de la page à partir de laquelle la balise sera envoyée. C’est un excellent exemple pour un élément de données.
+Par exemple, supposons que nous créions une extension qui envoie une balise pour suivre une conversion. Supposons également que l’une des données que notre balise envoie est un nom de produit. Notre vue d’extension qui permet à l’utilisateur de configurer la balise disposerait probablement d’un champ de texte pour le nom du produit. En règle générale, il ne serait pas très logique que l’utilisateur de Platform saisisse un nom de produit statique tel que « Calzone Oven XL », car le nom du produit dépend probablement de la page à partir de laquelle la balise sera envoyée. C’est un excellent exemple pour un élément de données.
 
-Si un utilisateur souhaite utiliser l’élément de données `productname` comme valeur du nom du produit, il peut saisir le nom de l’élément de données encadré de signes de pourcentage (`%productname%`). Nous appelons le nom de l’élément de données encadré de signes de pourcentage un &quot;jeton d’élément de données&quot;. Ce concept est souvent familier aux utilisateurs de Platform. Votre extension, à son tour, enregistrerait le jeton d’élément de données dans l’objet `settings` qu’elle exporte. L’objet settings peut alors ressembler à ceci :
+Si un utilisateur souhaite utiliser l’élément de données `productname` comme valeur du nom du produit, il peut saisir le nom de l’élément de données encadré de signes de pourcentage (`%productname%`). Nous faisons référence au nom de l’élément de données encadré de signes de pourcentage comme un « jeton d’élément de données ». Les utilisateurs de Platform connaissent généralement cette construction. Votre extension, à son tour, enregistrerait le jeton d’élément de données dans l’objet `settings` qu’elle exporte. L’objet settings peut alors ressembler à ceci :
 
 ```js
 {
@@ -157,7 +157,7 @@ Si un utilisateur souhaite utiliser l’élément de données `productname` comm
 }
 ```
 
-Au moment de l’exécution, avant de transmettre l’objet settings à votre module de bibliothèque, l’objet settings est analysé et tous les jetons d’élément de données sont remplacés par leurs valeurs respectives. Si, au moment de l’exécution, la valeur de l’élément de données `productname` était `Ceiling Medallion Pro 2000`, l’objet settings qui serait transmis à votre module de bibliothèque serait le suivant :
+Au moment de l’exécution, avant de transmettre l’objet settings à votre module de bibliothèque, l’objet en question est analysé et tous les jetons d’éléments de données sont remplacés par leurs valeurs respectives. Si, au moment de l’exécution, la valeur de l’élément de données `productname` était `Ceiling Medallion Pro 2000`, l’objet settings transmis à votre module de bibliothèque serait le suivant :
 
 ```js
 {
@@ -215,7 +215,7 @@ D’un autre côté, supposons que l’objet settings persistant se présentait 
 }
 ```
 
-Dans ce cas, dans la mesure où la valeur de `productName` est supérieure à un jeton d’élément de données unique, le résultat sera toujours une chaîne. Chaque jeton d’élément de données est remplacé par sa valeur respective après avoir été converti en chaîne. Si, au moment de l’exécution, la valeur de `productname` était `Ceiling Medallion Pro` (une chaîne) et `modelnumber` était `2000` (un nombre), l’objet settings obtenu transmis à votre module de bibliothèque serait :
+Dans ce cas, dans la mesure où la valeur de `productName` est supérieure à un jeton d’élément de données unique, le résultat sera toujours une chaîne. Chaque jeton d’élément de données est remplacé par sa valeur respective après avoir été converti en chaîne. Si, au moment de l’exécution, la valeur de `productname` était `Ceiling Medallion Pro` (une chaîne) et `modelnumber` était `2000` (un nombre), l’objet settings obtenu transmis à votre module de bibliothèque serait :
 
 ```js
 {
@@ -225,4 +225,4 @@ Dans ce cas, dans la mesure où la valeur de `productName` est supérieure à un
 
 ## Éviter la navigation
 
-La communication entre la vue d’extension et l’interface utilisateur de collecte de données contenante dépend de l’absence de navigation dans la vue d’extension. Par conséquent, évitez d’ajouter quoi que ce soit à votre vue d’extension qui permette à l’utilisateur de quitter la page HTML de cette vue. Par exemple, si vous fournissez un lien dans votre vue d’extension, veillez à ce qu’il ouvre une nouvelle fenêtre de navigateur (généralement en ajoutant `target="_blank"` à la balise d’ancrage). Si vous choisissez d’utiliser un élément `form` dans votre vue d’extension, veillez à ce que le formulaire ne soit jamais envoyé. L’envoi du formulaire peut survenir par inadvertance si vous disposez d’un élément `button` dans le formulaire et ne parvenez pas à y ajouter `type="button"`. L’envoi d’un formulaire dans votre vue d’extension provoquerait l’actualisation du document HTML, générant une interruption de l’expérience utilisateur.
+La communication entre la vue d’extension et l’interface utilisateur de la collecte de données qui la contient dépend de l’absence de navigation dans la vue d’extension. Par conséquent, évitez d’ajouter quoi que ce soit à votre vue d’extension qui permette à l’utilisateur de quitter la page HTML de cette vue. Par exemple, si vous fournissez un lien dans votre vue d’extension, veillez à ce qu’il ouvre une nouvelle fenêtre de navigateur (généralement en ajoutant `target="_blank"` à la balise d’ancrage). Si vous choisissez d’utiliser un élément `form` dans votre vue d’extension, veillez à ce que le formulaire ne soit jamais envoyé. L’envoi du formulaire peut survenir par inadvertance si vous disposez d’un élément `button` dans le formulaire et ne parvenez pas à y ajouter `type="button"`. L’envoi d’un formulaire dans votre vue d’extension provoquerait l’actualisation du document HTML, générant une interruption de l’expérience utilisateur.
