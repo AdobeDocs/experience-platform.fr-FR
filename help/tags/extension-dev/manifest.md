@@ -2,9 +2,9 @@
 title: Manifeste d’extensions
 description: Découvrez comment configurer un fichier de manifeste JSON informant Adobe Experience Platform quant à la manière correcte de consommer votre extension.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2647'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
@@ -12,11 +12,11 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans le répertoire de base de votre extension, vous devez créer un fichier appelé `extension.json`. Cette section contient des détails importants sur votre extension, ce qui permet à Adobe Experience Platform de l’utiliser correctement. Certains contenus sont formés à l’instar du [npm `package.json`](https://docs.npmjs.com/files/package.json) de npm.
 
-Vous trouverez un exemple d’extension `extension.json` dans le référentiel Github de l’[extension Hello World](https://github.com/adobe/reactor-helloworld-extension/blob/master/extension.json).
+Vous trouverez un exemple d’extension `extension.json` dans le référentiel GitHub de l’[extension Hello World](https://github.com/adobe/reactor-helloworld-extension/blob/master/extension.json).
 
 Un manifeste d’extensions doit être constitué des éléments suivants :
 
@@ -25,13 +25,13 @@ Un manifeste d’extensions doit être constitué des éléments suivants :
 | `name` | Nom de l’extension. Il doit être différent du nom de toutes les autres extensions et doit respecter les [règles de nommage](#naming-rules). **Il est utilisé par les balises comme identifiant et ne doit pas être modifié après la publication de votre extension.** |
 | `platform` | La plateforme de votre extension. La seule valeur acceptée pour le moment est `web`. |
 | `version` | La version de votre extension. Elle doit respecter le format de version [semver](http://semver.org/). Ce format est cohérent avec le [champ de version npm](https://docs.npmjs.com/files/package.json#version). |
-| `displayName` | Le nom lisible de votre extension. Cela sera présenté aux utilisateurs de Platform. Il n’est pas nécessaire de mentionner &quot;balises&quot; ou &quot;extension&quot; ; les utilisateurs savent déjà qu’ils utilisent une extension de balise. |
-| `description` | La description de votre extension. Cela sera présenté aux utilisateurs de Platform. Si votre extension permet aux utilisateurs de mettre en œuvre votre produit sur leur site web, décrivez ce que fait votre produit. Il n’est pas nécessaire de mentionner &quot;balises&quot; ou &quot;extension&quot; ; les utilisateurs savent déjà qu’ils utilisent une extension de balise. |
-| `iconPath` *(Facultatif)* | Chemin d’accès relatif à l’icône qui s’affichera pour l’extension. Il ne doit pas commencer par une barre oblique. Il doit référencer un fichier SVG avec une extension `.svg`. Le SVG doit être carré et peut être mis à l’échelle par Platform. |
+| `displayName` | Le nom lisible de votre extension. Cela sera présenté aux utilisateurs de Platform. Il nʼest pas nécessaire de mentionner « balises » ou « Extension », les utilisateurs savent déjà quʼils utilisent une extension de balise. |
+| `description` | La description de votre extension. Cela sera présenté aux utilisateurs de Platform. Si votre extension permet aux utilisateurs de mettre en œuvre votre produit sur leur site web, décrivez ce que fait votre produit. Il nʼest pas nécessaire de mentionner « balises » ou « Extension », les utilisateurs savent déjà quʼils utilisent une extension de balise. |
+| `iconPath` *(Facultatif)* | Chemin dʼaccès relatif à lʼicône qui sʼaffichera pour lʼextension. Il ne doit pas commencer par une barre oblique. Il doit référencer un fichier SVG avec une extension `.svg`. Le SVG doit être carré et peut être mis à l’échelle par Platform. |
 | `author` | L’« auteur » est un objet qui doit être structuré comme suit : <ul><li>`name` : nom de l’auteur de l’extension. Vous pouvez également utiliser le nom de la société ici.</li><li>`url` *(Facultatif)* : URL permettant d’en savoir plus sur l’auteur de l’extension.</li><li>`email` *(Facultatif)* : adresse électronique de l’auteur de l’extension.</li></ul>Ceci est cohérent avec les règles [champ auteur npm](https://docs.npmjs.com/files/package.json#people-fields-author-contributors). |
 | `exchangeUrl` *(Requis pour les extensions publiques)* | URL de la liste de votre extension sur Adobe Exchange. Elle doit correspondre au modèle `https://www.adobeexchange.com/experiencecloud.details.######.html`. |
 | `viewBasePath` | Chemin d’accès relatif au sous-répertoire contenant toutes vos vues et ressources liées aux vues (HTML, JavaScript, CSS, images). Platform hébergera ce répertoire sur un serveur web et chargera le contenu iframe à partir de celui-ci. Il s’agit d’un champ obligatoire et il ne doit pas commencer par une barre oblique. Par exemple, si toutes vos vues sont contenues dans `src/view/`, la valeur de `viewBasePath` sera `src/view/`. |
-| `hostedLibFiles` *(Facultatif)* | Nombre de nos utilisateurs préfèrent héberger tous les fichiers liés aux balises sur leur propre serveur. Ces utilisateurs disposent ainsi d’un niveau de certitude accru quant à la disponibilité des fichiers au moment de l’exécution et peuvent facilement analyser le code à la recherche de failles de sécurité. Si la partie bibliothèque de votre extension doit charger des fichiers JavaScript au moment de l’exécution, il est recommandé d’utiliser cette propriété pour répertorier ces fichiers. Les fichiers répertoriés seront hébergés en même temps que la bibliothèque du runtime de balises. Votre extension peut ensuite charger les fichiers via une URL récupérée à l’aide de la méthode [getHostedLibFileUrl](./turbine.md#get-hosted-lib-file).<br><br>Cette option contient un tableau avec les chemins relatifs des fichiers de bibliothèque tiers qui doivent être hébergés. |
+| `hostedLibFiles` *(Facultatif)* | Beaucoup de nos utilisateurs préfèrent héberger tous les fichiers liés aux balises sur leur propre serveur. Ces utilisateurs disposent ainsi d’un niveau de certitude accru quant à la disponibilité des fichiers au moment de l’exécution et peuvent facilement analyser le code à la recherche de failles de sécurité. Si la partie bibliothèque de votre extension doit charger des fichiers JavaScript au moment de l’exécution, il est recommandé d’utiliser cette propriété pour répertorier ces fichiers. Les fichiers répertoriés seront hébergés en même temps que la bibliothèque dʼexécution des balises. Votre extension peut ensuite charger les fichiers via une URL récupérée à l’aide de la méthode [getHostedLibFileUrl](./turbine.md#get-hosted-lib-file).<br><br>Cette option contient un tableau avec les chemins relatifs des fichiers de bibliothèque tiers qui doivent être hébergés. |
 | `main` *(Facultatif)* | Chemin d’accès relatif d’un module de bibliothèque qui doit être exécuté au moment de l’exécution.<br><br>Ce module sera toujours inclus dans la bibliothèque runtime et exécuté. Comme le module est toujours inclus dans la bibliothèque runtime, nous vous recommandons de n’utiliser qu’un module « principal » lorsque cela est absolument nécessaire et de maintenir sa taille de code minimale.<br><br>Il n’est pas garanti que ce module soit exécuté en premier ; d’autres modules peuvent être exécutés avant. |
 | `configuration` *(Facultatif)* | Cette section décrit la partie [configuration de l’extension](./configuration.md). Cela est nécessaire si vous avez besoin que les utilisateurs fournissent des paramètres globaux pour l’extension. Voir l’[annexe](#config-object) pour obtenir plus d’informations sur la structure de ce champ. |
 | `events` *(Facultatif)* | Tableau de définitions de type [d’événement](./web/event-types.md). Voir la section de l’annexe sur [les définitions de type](#type-definitions) pour la structure de chaque objet du tableau. |
@@ -115,11 +115,11 @@ Une définition de type est un objet utilisé pour décrire un type d’événem
     </tr>
     <tr>
       <td><code>displayName</code></td>
-      <td>Texte qui sera utilisé pour représenter le type dans l’interface utilisateur de la collecte de données. Il doit être lisible à l’œil.</td>
+      <td>Le texte qui sera utilisé pour représenter le type dans lʼinterface utilisateur de la collecte de données. Il doit être lisible à l’œil.</td>
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(Facultatif)</em></td>
-      <td>Lorsqu’il est fourni, le <code>displayName</code> est répertorié sous le <code>categoryName</code> dans l’interface utilisateur de la collecte de données. Tous les types ayant le même <code>categoryName</code> sont répertoriés dans la même catégorie. Par exemple, si votre extension a fourni un type d’événement <code>keyUp</code> et un type d’événement <code>keyDown</code> et qu’ils ont tous deux un <code>categoryName</code> de <code>Keyboard</code>, les deux types d’événement sont répertoriés dans la catégorie Clavier tandis que l’utilisateur effectue une sélection dans la liste des types d’événement disponibles lors de la création d’une règle. La valeur de <code>categoryName</code> doit être lisible à l’œil.</td>
+      <td>Lorsquʼil est fourni, le <code>displayName</code> est répertorié sous le <code>categoryName</code> dans lʼinterface utilisateur de la collecte de données. Tous les types ayant le même <code>categoryName</code> sont répertoriés dans la même catégorie. Par exemple, si votre extension a fourni un type d’événement <code>keyUp</code> et un type d’événement <code>keyDown</code> et qu’ils ont tous deux un <code>categoryName</code> de <code>Keyboard</code>, les deux types d’événement sont répertoriés dans la catégorie Clavier tandis que l’utilisateur effectue une sélection dans la liste des types d’événement disponibles lors de la création d’une règle. La valeur de <code>categoryName</code> doit être lisible à l’œil.</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>
@@ -131,21 +131,21 @@ Une définition de type est un objet utilisé pour décrire un type d’événem
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Objet <a href="http://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet settings valide qui peut être enregistré par l’utilisateur. Les paramètres sont généralement configurés et enregistrés par un utilisateur à l’aide de l’interface utilisateur de la collecte de données. Dans ce cas, la vue de l’extension peut prendre les mesures nécessaires pour valider les paramètres fournis par l’utilisateur. D’un autre côté, certains utilisateurs choisissent d’utiliser les API de balises directement sans l’aide d’aucune interface utilisateur. Ce schéma permet à Platform de valider correctement que les objets settings enregistrés par les utilisateurs, qu’une interface utilisateur soit ou non utilisée, sont dans un format compatible avec le module Bibliothèque qui agira sur l’objet settings lors de l’exécution.<br><br>Voici un exemple d’objet schéma :<br>
+      <td>Objet <a href="http://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet settings valide qui peut être enregistré par l’utilisateur. Les paramètres sont généralement configurés et enregistrés par un utilisateur à lʼaide de lʼinterface utilisateur de la collecte de données. Dans ce cas, la vue de l’extension peut prendre les mesures nécessaires pour valider les paramètres fournis par l’utilisateur. Dʼun autre côté, certains utilisateurs choisissent dʼutiliser les API de balises directement sans lʼaide dʼaucune interface utilisateur. Ce schéma permet à Platform de valider correctement que les objets settings enregistrés par les utilisateurs, qu’une interface utilisateur soit ou non utilisée, sont dans un format compatible avec le module Bibliothèque qui agira sur l’objet settings lors de l’exécution.<br><br>Voici un exemple d’objet schéma :<br>
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties" : {
-    "delay" : {
+  "properties": {
+    "delay": {
       "type": "number",
-      "minimum" : 1
+      "minimum": 1
     }
   },
-  "required" : [
+  "required": [
     "delay"
   ],
-  "additionalProperties" : false
+  "additionalProperties": false
 }
 </pre>
       Nous vous recommandons d’utiliser un outil tel que le <a href="http://www.jsonschemavalidator.net/">Validateur de schémas JSON</a> pour tester manuellement votre schéma.</td>
@@ -159,9 +159,9 @@ Une définition de type est un objet utilisé pour décrire un type d’événem
 
 ### Transformations {#transforms}
 
-Pour certains cas d’utilisation spécifiques, les extensions ont besoin que les objets settings enregistrés à partir d’une vue soient transformés par Platform avant d’être émis dans la bibliothèque du runtime de balises. Vous pouvez demander qu’une ou plusieurs de ces transformations se produisent en définissant la propriété `transforms` lors de la définition d’une définition de type dans votre `extension.json`. La propriété `transforms` est un tableau d’objets où chaque objet représente une transformation qui doit avoir lieu.
+Pour certains cas dʼutilisation spécifiques, les extensions ont besoin que les objets settings enregistrés à partir dʼune vue soient transformés par Platform avant dʼêtre émis dans la bibliothèque dʼexécution des balises. Vous pouvez demander qu’une ou plusieurs de ces transformations se produisent en définissant la propriété `transforms` lors de la définition d’une définition de type dans votre `extension.json`. La propriété `transforms` est un tableau d’objets où chaque objet représente une transformation qui doit avoir lieu.
 
-Toutes les transformations nécessitent un `type` et un `propertyPath`. `type` doit être l’un des `function`, `remove` et `file` et décrit la transformation que Platform doit appliquer à l’objet settings. `propertyPath` est une chaîne délimitée par des points qui indique aux balises où trouver la propriété qui doit être modifiée dans l’objet settings. Voici un exemple d’objet settings et quelques `propertyPath` :
+Toutes les transformations nécessitent un `type` et un `propertyPath`. `type` doit être l’un des `function`, `remove` et `file` et décrit la transformation que Platform doit appliquer à l’objet settings. `propertyPath` est une chaîne délimitée par des points qui indique aux balises où trouver la propriété qui doit être modifiée dans lʼobjet settings. Voici un exemple d’objet settings et quelques `propertyPath` :
 
 ```js
 {
@@ -190,7 +190,7 @@ Les sections ci-dessous décrivent les transformations disponibles et comment le
 
 #### Transformation de fonction
 
-La transformation de fonction permet au code écrit par les utilisateurs de Platform d’être exécuté par un module de bibliothèque dans la bibliothèque runtime de balises émise.
+La transformation de fonction permet que le code écrit par les utilisateurs de Platform soit exécuté par un module Bibliothèque dans la bibliothèque dʼexécution des balises émise.
 
 Supposons que nous souhaitions fournir un type d’action « script personnalisé ». La vue d’action « script personnalisé » peut fournir une zone de texte dans laquelle l’utilisateur peut entrer du code. Supposons qu’un utilisateur ait saisi le code suivant dans la zone de texte :
 
@@ -206,11 +206,11 @@ Lorsque l’utilisateur enregistre la règle, l’objet settings enregistré par
 }
 ```
 
-Lorsqu’une règle utilisant notre action se déclenche dans la bibliothèque du runtime de balises, nous souhaitons exécuter le code de l’utilisateur et lui transmettre un nom d’utilisateur.
+Lorsquʼune règle utilisant notre action se déclenche dans la bibliothèque dʼexécution des balises, nous souhaitons exécuter le code de lʼutilisateur et lui transmettre un nom dʼutilisateur.
 
-Au moment où l’objet settings est enregistré à partir de la vue du type d’action, le code de l’utilisateur est simplement une chaîne. Cela est utile car il peut être correctement sérialisé vers et depuis JSON ; cependant, c’est également mauvais, car il serait généralement émis dans la bibliothèque runtime de balises sous la forme d’une chaîne plutôt que d’une fonction exécutable. Bien que vous puissiez tenter d’exécuter le code dans le module Bibliothèque de votre type d’action à l’aide de [`eval`](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/eval) ou d’une [fonction constructeur](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Objets_globaux/Function), cela est fortement déconseillé en raison de [stratégies de sécurité de contenu](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/CSP) susceptibles de bloquer l’exécution.
+Au moment où l’objet settings est enregistré à partir de la vue du type d’action, le code de l’utilisateur est simplement une chaîne. Ceci est utile car il peut être correctement sérialisé vers et à partir de JSON. Cependant, cʼest également un inconvénient, car il serait généralement émis dans la bibliothèque dʼexécution des balises sous la forme dʼune chaîne et non dʼune fonction exécutable. Bien que vous puissiez tenter d’exécuter le code dans le module Bibliothèque de votre type d’action à l’aide de [`eval`](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/eval) ou d’une [fonction constructeur](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Objets_globaux/Function), cela est fortement déconseillé en raison de [stratégies de sécurité de contenu](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/CSP) susceptibles de bloquer l’exécution.
 
-Pour pallier ce problème, l’utilisation de la transformation de fonction indique à Platform d’encapsuler le code de l’utilisateur dans une fonction exécutable lorsqu’il est émis dans la bibliothèque du runtime de balise. Pour résoudre le problème de notre exemple, nous définirions la transformation sur la définition de type dans `extension.json` comme suit :
+Pour pallier à ce problème, lʼutilisation de la transformation de fonction indique à Platform dʼencapsuler le code de lʼutilisateur dans une fonction exécutable lorsquʼelle est émise dans la bibliothèque dʼexécution des balises. Pour résoudre le problème de notre exemple, nous définirions la transformation sur la définition de type dans `extension.json` comme suit :
 
 ```json
 {
@@ -228,7 +228,7 @@ Pour pallier ce problème, l’utilisation de la transformation de fonction indi
 * `propertyPath` est une chaîne délimitée par des points qui indique à Platform où trouver la propriété qui doit être modifiée dans l’objet settings.
 * `parameters` est un tableau de noms de paramètres qui doit être inclus dans la signature de la fonction d’encapsulation.
 
-Lorsque l’objet settings est émis dans la bibliothèque du runtime de balises, il est transformé comme suit :
+Lorsque lʼobjet settings est émis dans la bibliothèque dʼexécution des balises, il est transformé comme suit :
 
 ```javascript
 {
@@ -244,7 +244,7 @@ Votre module Bibliothèque peut alors appeler la fonction contenant le code de l
 
 #### Transformation de fichier
 
-La transformation de fichier permet l’émission de code écrit par les utilisateurs de Platform dans un fichier distinct de la bibliothèque du runtime de balises. Le fichier sera hébergé avec la bibliothèque du runtime de balises et pourra ensuite être chargé selon les besoins de votre extension au moment de l’exécution.
+La transformation de fichier permet lʼémission de code écrit par les utilisateurs de Platform dans un fichier distinct de la bibliothèque dʼexécution des balises. Le fichier sera hébergé en même temps que la bibliothèque dʼexécution des balises et pourra ensuite être chargé selon les besoins de votre extension au moment de lʼexécution.
 
 Supposons que nous souhaitions fournir un type d’action « script personnalisé ». La vue du type d’action peut fournir un champ de texte dans lequel l’utilisateur peut saisir du code. Supposons qu’un utilisateur ait saisi le code suivant dans la zone de texte :
 
@@ -260,7 +260,7 @@ Lorsque l’utilisateur enregistre la règle, l’objet settings enregistré par
 }
 ```
 
-Nous souhaitons que le code de l’utilisateur soit placé dans un fichier distinct au lieu d’être inclus dans la bibliothèque du runtime de balises. Lorsqu’une règle utilisant notre action se déclenche dans la bibliothèque du runtime de balises, nous souhaitons charger le code de l’utilisateur en ajoutant un élément de script au corps du document. Pour résoudre le problème de notre exemple, nous définirions la transformation sur la définition de type d’action dans `extension.json` comme suit :
+Nous souhaitons que le code de lʼutilisateur soit placé dans un fichier distinct au lieu dʼêtre inclus dans la bibliothèque dʼexécution des balises. Lorsquʼune règle utilisant notre action se déclenche dans la bibliothèque dʼexécution des balises, nous souhaitons charger le code de lʼutilisateur en ajoutant un élément de script au corps du document. Pour résoudre le problème de notre exemple, nous définirions la transformation sur la définition de type d’action dans `extension.json` comme suit :
 
 ```json
 {
@@ -276,7 +276,7 @@ Nous souhaitons que le code de l’utilisateur soit placé dans un fichier disti
 * `type` définit le type de transformation à appliquer à l’objet settings.
 * `propertyPath` est une chaîne délimitée par des points qui indique à Platform où trouver la propriété qui doit être modifiée dans l’objet settings.
 
-Lorsque l’objet settings est émis dans la bibliothèque du runtime de balises, il est transformé comme suit :
+Lorsque lʼobjet settings est émis dans la bibliothèque dʼexécution des balises, il est transformé comme suit :
 
 ```javascript
 {
@@ -290,7 +290,7 @@ Dans ce cas, la valeur de `foo.bar` a été transformée en URL. L’URL exacte 
 
 #### Transformation remove
 
-Par défaut, toutes les propriétés de l’objet settings sont émises dans la bibliothèque du runtime de balises. Si certaines propriétés ne sont utilisées que pour la vue d’extension, en particulier si elles contiennent des informations sensibles (par exemple jeton secret), vous devez utiliser la transformation remove pour empêcher l’émission des informations dans la bibliothèque runtime de balises.
+Par défaut, toutes les propriétés de lʼobjet settings sont émises dans la bibliothèque dʼexécution des balises. Si certaines propriétés ne sont utilisées que pour la vue d’extension, en particulier si elles contiennent des informations sensibles (par exemple un jeton secret), vous devez utiliser la transformation remove pour empêcher lʼémission des informations dans la bibliothèque dʼexécution des balises.
 
 Supposons que nous voudrions fournir un nouveau type d’action. La vue du type d’action peut fournir une entrée à partir de laquelle l’utilisateur peut saisir une clé secrète permettant la connexion à une API spécifique. Supposons qu’un utilisateur ait saisi le texte suivant :
 
@@ -306,7 +306,7 @@ Lorsque l’utilisateur enregistre la règle, l’objet settings enregistré par
 }
 ```
 
-Nous souhaitons ne pas inclure la propriété `bar` à l’intérieur de la bibliothèque du runtime de balises. Pour résoudre le problème de notre exemple, nous définirions la transformation sur la définition de type d’action dans `extension.json` comme suit :
+Nous aimerions ne pas inclure la propriété `bar` dans la bibliothèque dʼexécution des balises. Pour résoudre le problème de notre exemple, nous définirions la transformation sur la définition de type d’action dans `extension.json` comme suit :
 
 ```json
 {
@@ -322,7 +322,7 @@ Nous souhaitons ne pas inclure la propriété `bar` à l’intérieur de la bibl
 * `type` définit le type de transformation à appliquer à l’objet settings.
 * `propertyPath` est une chaîne délimitée par des points qui indique à Platform où trouver la propriété qui doit être modifiée dans l’objet settings.
 
-Lorsque l’objet settings est émis dans la bibliothèque du runtime de balises, il est transformé comme suit :
+Lorsque lʼobjet settings est émis dans la bibliothèque dʼexécution des balises, il est transformé comme suit :
 
 ```js
 {
