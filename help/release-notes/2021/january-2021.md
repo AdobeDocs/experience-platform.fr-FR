@@ -6,9 +6,9 @@ last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
 source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '713'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -49,7 +49,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Correspondance d’ID avancée | Améliorations des fonctionnalités relatives aux taux de correspondance d’audience dans [!DNL Facebook Custom Audiences] et [!DNL Google Customer Match], grâce à l’ajout de la prise en charge de la correspondance d’identités supplémentaires, comme les ID externes, les numéros de téléphone et les ID d’équipement mobile. Pour plus d’informations, consultez la documentation suivante : <ul><li>[Destination Facebook](../../destinations/catalog/social/facebook.md)</li><li>[Destination Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Activation des données d’audience vers des destinations d’exportation de segments par flux](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
+| Correspondance d’ID avancée | Améliorations des fonctionnalités relatives aux taux de correspondance d’audience dans [!DNL Facebook Custom Audiences] et [!DNL Google Customer Match], grâce à l’ajout de la prise en charge de la correspondance d’identités supplémentaires, comme les ID externes, les numéros de téléphone et les ID d’équipement mobile. Pour plus d’informations, consultez la documentation suivante : <ul><li>[Destination Facebook](../../destinations/catalog/social/facebook.md)</li><li>[Destination Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Activation des données d’audience vers des destinations d’exportation de segments de diffusion](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
 
 Pour en savoir plus, consultez la [présentation des destinations](../../destinations/home.md).
 
