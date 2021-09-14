@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de l’extension de suivi vidéo YouTube
-description: Notes de mise à jour les plus récentes pour l’extension de balise de suivi vidéo YouTube dans Adobe Experience Platform.
+description: Notes de mise à jour les plus récentes pour lʼextension de balise de suivi vidéo YouTube dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '130'
-ht-degree: 56%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## 4 juin 2021
 
@@ -20,8 +20,8 @@ ht-degree: 56%
 
 #### Fonctionnalités
 
-* Correctifs de bogues pour les pages comportant plusieurs iFrames
-* Changement de nom pour la marque
+* Correction de bugs pour les pages comportant plusieurs iFrames
+* Changement de nom pour des raisons de branding
 
 ## 23 avril 2021
 
