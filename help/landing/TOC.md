@@ -6,7 +6,7 @@ user-guide-description: Découvrez comment Experience Platform permet de fournir
 source-git-commit: a154ff9dd2a2091a427f7e650a9cb6bc57cbdfb5
 workflow-type: tm+mt
 source-wordcount: '197'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 98%
          * [Présentation](./governance-privacy-security/consent/iab/overview.md)
          * [Configuration d’un jeu de données pour capturer les données de consentement et de préférence](./governance-privacy-security/consent/iab/dataset.md)
       * [Intégrer le SDK Web de Platform pour traiter les données de consentement et de préférence](./governance-privacy-security/consent/sdk.md)
-   * Logs d’audit (bêta) {#audit-logs}
+   * Journaux d’audit (Beta) {#audit-logs}
       * [Présentation](./governance-privacy-security/audit-logs/overview.md)
 * [Tableau de bord d’utilisation de la licence](license-usage-dashboard.md)
 * [Guide de dépannage](troubleshooting.md)

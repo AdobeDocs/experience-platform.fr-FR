@@ -1,7 +1,8 @@
 ---
 title: Point d’entrée Propriétés
 description: Découvrez comment effectuer des appels vers le point d’entrée /Propriétés dans l’API Reactor.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1146'
 ht-degree: 99%
@@ -21,7 +22,7 @@ Dans la hiérarchie Ressource, une propriété est considérée propriétaire de
 * [Extensions](./extensions.md)
 * [Hôtes](./properties.md)
 * [Bibliothèques](./libraries.md)
-* [Composants de  règle](./rule-components.md)
+* [Composants de   règle](./rule-components.md)
 * [Règles](./rules.md)
 
 Une propriété appartient à une seule [société](./companies.md). Une société peut contenir plusieurs propriétés.

@@ -1,19 +1,19 @@
 ---
-title: Référence d’objet satellite
-description: Découvrez l’objet _satellite côté client et les différentes fonctions que vous pouvez exécuter avec celui-ci dans les balises .
+title: Référence dʼobjet satellite
+description: Découvrez lʼobjet _satellite côté client et les différentes fonctions quʼil offre dans les balises.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
 source-wordcount: '1279'
-ht-degree: 83%
+ht-degree: 97%
 
 ---
 
-# Référence d’objet par satellite
+# Référence d’objet satellite
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Ce document sert de référence à lʼobjet `_satellite` côté client et aux différentes fonctions que vous pouvez exécuter avec celui-ci.
 
@@ -133,11 +133,11 @@ Cette opération permet de consigner un message dʼavertissement dans la console
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` contient des fonctions permettant de lire et d’écrire des cookies. Il sʼagit dʼune copie exposée du cookie-js de bibliothèque tiers. Pour plus d’informations sur l’utilisation plus avancée de cette bibliothèque, consultez la [documentation js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` contient des fonctions permettant de lire et dʼécrire des cookies. C’est une copie exposée du js-cookie de bibliothèque tiers. Pour plus dʼinformations sur lʼutilisation avancée de cette bibliothèque, consultez la [documentation sur le js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
 
-### Définition d’un cookie {#cookie-set}
+### Configuration dʼun cookie {#cookie-set}
 
-Pour définir un cookie, utilisez `_satellite.cookie.set()`.
+Pour configurer un cookie, utilisez `_satellite.cookie.set()`.
 
 **Code**
 
@@ -147,11 +147,11 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->Dans l’ancienne méthode [`setCookie`](#setCookie) de définition des cookies, le troisième argument (facultatif) de cet appel de fonction était un entier qui indiquait la durée de vie (TTL) du cookie en jours. Dans cette nouvelle méthode, un objet &quot;attributes&quot; est accepté comme troisième argument à la place. Pour définir un TTL pour un cookie à l’aide de la nouvelle méthode, vous devez fournir une propriété `expires` dans l’objet attributes et la définir sur la valeur souhaitée. Ceci est illustré dans l’exemple ci-dessous.
+>Dans lʼancienne méthode [`setCookie`](#setCookie) de configuration des cookies, le troisième argument (facultatif) de cet appel de fonction était un nombre entier qui indiquait la durée de vie (TTL) du cookie en jours. Dans cette nouvelle méthode, un objet « attributes » est accepté comme troisième argument à la place. Pour définir une TTL pour un cookie à lʼaide de la nouvelle méthode, vous devez fournir une propriété `expires` dans lʼobjet « attributes » et la définir sur la valeur souhaitée. Ceci est illustré dans lʼexemple ci-dessous.
 
 **Exemple**
 
-L’appel de fonction suivant écrit un cookie qui expire au cours d’une semaine.
+L’appel de fonction suivant écrit un cookie qui expire en une semaine.
 
 ```javascript
 _satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
@@ -169,7 +169,7 @@ _satellite.cookie.get(name: string) => string
 
 **Exemple**
 
-L’appel de fonction suivant lit un cookie précédemment défini.
+L’appel de fonction suivant lit un cookie précédemment configuré.
 
 ```javascript
 var product = _satellite.cookie.get('product');
@@ -187,7 +187,7 @@ _satellite.cookie.remove(name: string)
 
 **Exemple**
 
-L’appel de fonction suivant supprime un cookie précédemment défini.
+L’appel de fonction suivant supprime un cookie précédemment configuré.
 
 ```javascript
 _satellite.cookie.remove('product');

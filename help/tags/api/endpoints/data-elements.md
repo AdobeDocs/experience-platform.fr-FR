@@ -1,7 +1,8 @@
 ---
 title: Point d’entrée des éléments de données
 description: Découvrez comment effectuer des appels au point d’entrée /data_elements dans l’API Reactor.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: ea346682-441b-415b-af06-094158eb7c71
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1411'
 ht-degree: 99%

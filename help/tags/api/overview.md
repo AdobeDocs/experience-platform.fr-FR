@@ -1,7 +1,8 @@
 ---
 title: Guide de lʼAPI Reactor
 description: LʼAPI Reactor permet aux développeurs de gérer par programmation toutes les ressources des balises dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 153eab11-db08-499e-80d1-c56f254372ce
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1035'
 ht-degree: 99%
@@ -40,7 +41,7 @@ Les règles contrôlent le comportement des ressources contenues dans une biblio
 
 Pour savoir comment gérer les règles dans lʼAPI, consultez le [guide du point dʼentrée des règles](./endpoints/rules.md).
 
-## Composants de  règle
+## Composants de   règle
 
 Les composants de règle sont les éléments individuels constitutifs dʼune règle. Les composants de règle possèdent trois types de base :
 

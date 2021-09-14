@@ -1,10 +1,11 @@
 ---
 title: Point d’entrée des packages d’extension
 description: Découvrez comment effectuer des appels au point d'entrée /extension_packages dans l’API Reactor.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '951'
-ht-degree: 73%
+ht-degree: 99%
 
 ---
 
@@ -22,33 +23,33 @@ Un package d’extension appartient à la [société](./companies.md) du dévelo
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la marche à suivre pour s&#39;authentifier auprès de l&#39;API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la procédure à suivre pour s’authentifier auprès de l’API.
 
-En plus de comprendre comment passer des appels à l’API Reactor, il est important de comprendre comment les attributs `status` et `availability` d’un package d’extension affectent les actions que vous pouvez effectuer sur celui-ci. Ces informations sont expliquées dans les sections ci-dessous.
+Il est important de comprendre non seulement comment passer des appels à lʼAPI Reactor, mais également comment les attributs `status` et `availability` dʼun package dʼextension déterminent les actions que vous pouvez effectuer sur celui-ci. Ces actions sont abordées dans les sections ci-dessous.
 
 ### État
 
-Les modules d’extension ont trois états potentiels : `pending`, `succeeded` et `failed`.
+Les packages dʼextension ont trois états possibles : `pending`, `succeeded` et `failed`.
 
 | État | Description |
 | --- | --- |
-| `pending` | Lorsqu’un package d’extension est créé, sa valeur `status` est définie sur `pending`. Cela indique que le système a reçu les informations pour le package d’extension et qu’il commencera le traitement. Les modules d’extension dont l’état est `pending` ne sont pas disponibles. |
-| `succeeded` | L’état d’un package d’extension est mis à jour vers `succeeded` s’il réussit le traitement. |
-| `failed` | L’état d’un package d’extension est mis à jour vers `failed` s’il n’a pas réussi le traitement. Un package d’extension avec l’état `failed` peut être mis à jour jusqu’à ce que le traitement réussisse. Les modules d’extension dont l’état est `failed` ne sont pas disponibles. |
+| `pending` | Lorsquʼun package dʼextension est créé, sa valeur `status` est définie sur `pending`. Cela indique que le système a reçu les informations concernant le package dʼextension et que le traitement va commencer. Les packages dʼextension dont lʼétat est `pending` ne sont pas disponibles. |
+| `succeeded` | Lʼétat dʼun package dʼextension est mis à jour vers `succeeded` sʼil a réussi le traitement. |
+| `failed` | Lʼétat dʼun package dʼextension est mis à jour vers `failed` sʼil nʼa pas réussi le traitement. Un package dʼextension dont lʼétat est `failed` peut être mis à jour jusquʼà ce que le traitement réussisse. Les packages dʼextension dont lʼétat est `failed` ne sont pas disponibles. |
 
 ### Disponibilité
 
-Il existe des niveaux de disponibilité pour un package d’extension : `development`, `private` et `public`.
+Il existe plusieurs niveaux de disponibilité pour un package dʼextension : `development`, `private` et `public`.
 
 | Disponibilité | Description |
 | --- | --- |
-| `development` | Un package d’extension dans `development` n’est visible que par la société qui le possède, et est disponible au sein de celle-ci. En outre, elle ne peut être utilisée que sur les propriétés configurées pour le développement d’extensions. |
-| `private` | Un package d’extension `private` n’est visible que par la société qui le possède et ne peut être installé que sur les propriétés détenues par la société. |
-| `public` | Un package d’extension `public` est visible et disponible pour toutes les entreprises et propriétés. |
+| `development` | Un package dʼextension dont le niveau est `development` nʼest visible et disponible quʼau sein de la société qui le possède. En outre, il ne peut être utilisé que sur les propriétés configurées pour le développement dʼextensions. |
+| `private` | Un package dʼextension dont le niveau est `private` nʼest visible que par la société qui le possède et ne peut être installé que sur les propriétés détenues par la société. |
+| `public` | Un package dʼextension dont le niveau est `public` est visible et disponible pour toutes les sociétés et propriétés. |
 
 >[!NOTE]
 >
->Lorsqu’un package d’extension est créé, `availability` est défini sur `development`. Une fois le test terminé, vous pouvez passer le package d’extension à `private` ou `public`.
+>Lorsquʼun package dʼextension est créé, la valeur `availability` change en `development`. Une fois les tests terminés, vous pouvez définir le package dʼextension sur `private` ou `public`.
 
 ## Récupération d’une liste des packages d’extension {#list}
 
@@ -469,11 +470,11 @@ Une réponse réussie renvoie les informations relatives au package d’extensio
 }
 ```
 
-## Créer un package d’extension {#create}
+## Création dʼun package dʼextension {#create}
 
 Les packages d’extension sont créés à l’aide d’un outil de génération de modèles automatique Node.js et enregistrés sur votre ordinateur local avant d’être soumis à l’API Reactor. Pour plus d’informations sur la configuration d’un package d’extension, consultez le guide de [prise en main du développement d’extension](../../extension-dev/getting-started.md).
 
-Une fois le fichier du package d’extension créé, vous pouvez l’envoyer à l’API Reactor par le biais d’une requête POST.
+Une fois le fichier du package d’extension créé, vous pouvez l’envoyer à l’API Reactor par le biais d’une demande POST.
 
 **Format d’API**
 
@@ -704,7 +705,7 @@ Une réponse réussie renvoie les détails du package d’extension qui vient d�
 
 ## Mettre à jour un package d’extension {#update}
 
-Vous pouvez mettre à jour un package d’extension en incluant son identifiant dans le chemin d’accès d’une requête de PATCH.
+Vous pouvez mettre à jour un package dʼextension en incluant son identifiant dans le chemin dʼaccès dʼune requête PATCH.
 
 **Format d’API**
 

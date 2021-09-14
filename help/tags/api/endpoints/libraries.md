@@ -1,7 +1,8 @@
 ---
 title: Point d’entrée des bibliothèques
 description: Découvrez comment effectuer des appels vers le point d’entrée /bibliothèques dans l’API Reactor.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1584'
 ht-degree: 99%
@@ -16,7 +17,7 @@ Une bibliothèque appartient à une seule propriété exactement. Une propriét�
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la marche à suivre pour s&#39;authentifier auprès de l&#39;API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la procédure à suivre pour s’authentifier auprès de l’API.
 
 Avant de travailler avec des bibliothèques dans l’API Reactor, il est important de comprendre les rôles joués par l’état et les environnements d’une bibliothèque pour déterminer les actions que vous pouvez effectuer sur une bibliothèque particulière. Pour plus d’informations, consultez le guide sur le [flux de publication des bibliothèques](../../ui/publishing/publishing-flow.md).
 

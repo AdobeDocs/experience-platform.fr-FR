@@ -1,7 +1,8 @@
 ---
 title: Point dʼentrée des notes
 description: Découvrez comment effectuer des appels au point dʼentrée /notes dans lʼAPI Reactor.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 99%
@@ -26,7 +27,7 @@ Des notes peuvent être appliquées aux ressources suivantes :
 * [Extensions](./extensions.md)
 * [Bibliothèques](./libraries.md)
 * [Propriétés](./properties.md)
-* [Composants de  règle](./rule-components.md)
+* [Composants de   règle](./rule-components.md)
 * [Règles](./rules.md)
 
 Ces six types de ressources sont communément appelés ressources « annotables ». Lorsquʼune ressource annotable est supprimée, ses notes associées le sont également.

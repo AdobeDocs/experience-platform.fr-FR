@@ -1,10 +1,11 @@
 ---
 title: Présentation de lʼextension Adobe Analytics
 description: Découvrez lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
-source-git-commit: 90dece1054cf54d40a62093990a034ee5f3bccaf
+exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '2202'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Cette référence vous permet d’obtenir plus d’informations sur la configuration de l’extension Adobe Analytics et sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
 
@@ -114,8 +115,8 @@ Lorsque vous cochez la case Conformité UE, le champ [!UICONTROL Nom du cookie d
 
 Lorsqu’une page est chargée, le système vérifie si un cookie appelé sat\_track est défini (ou le nom du cookie personnalisé spécifié dans la page Edit Property (Modifier une propriété)). Prenez en compte les points suivants :
 
-* Si le cookie n’existe pas ou si le cookie existe et est défini sur une valeur autre que true, le chargement de l’outil est ignoré lorsque ce paramètre est activé. En d’autres termes, les parties de la règle qui utilisent cet outil ne sont pas appliquées. Si une règle contient des analyses avec la mise en conformité avec les normes de l’UE activée et du code de page tiers, et que la valeur du cookie est définie sur false, le code de page tiers continue de fonctionner. Les variables d’analyse ne seront toutefois pas définies.
-* Si le cookie existe mais est défini sur true, l’outil charge normalement.
+* Si le cookie n’existe pas ou si le cookie existe et est défini sur une valeur autre que  true, le chargement de l’outil est ignoré lorsque ce paramètre est activé. En d’autres termes, les parties de la règle qui utilisent cet outil ne sont pas appliquées. Si une règle contient des analyses avec la mise en conformité avec les normes de l’UE activée et du code de page tiers, et que la valeur du cookie est définie sur false, le code de page tiers continue de fonctionner. Les variables d’analyse ne seront toutefois pas définies.
+* Si le cookie existe mais est défini sur  true, l’outil charge normalement.
 
 Il vous incombe de définir le cookie sat\_track (ou le cookie personnalisé) sur false si un visiteur opt-out. Vous pouvez pour cela utiliser du code personnalisé :
 
@@ -123,7 +124,7 @@ Il vous incombe de définir le cookie sat\_track (ou le cookie personnalisé) su
 _satellite.cookie.set("sat_track", "false");
 ```
 
-Un mécanisme doit également permettre de définir ce cookie sur true si vous souhaitez que l’utilisateur puisse opt-in plus tard :
+Un mécanisme doit également permettre de définir ce cookie sur  true si vous souhaitez que l’utilisateur puisse opt-in plus tard :
 
 ```javascript
 _satellite.cookie.set("sat_track", "true");
