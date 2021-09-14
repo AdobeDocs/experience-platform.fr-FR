@@ -1,16 +1,16 @@
 ---
 title: Notes de mise à jour de l’extension des modules externes courants Analytics
-description: Notes de mise à jour les plus récentes pour l’extension de balise Plugins Analytics communs dans Adobe Experience Platform.
+description: Dernières notes de mise à jour pour l’extension des balises de modules externes d’analyses courants dans Adobe Experience Platform.
 source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '314'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 # Notes de mise à jour des modules externes courants Analytics
 
-## 23 juin 2021
+## mercredi 23 juin 2021
 
 ### Extension de modules externes courants 3.0.6
 
