@@ -2,9 +2,9 @@
 title: Types dʼéléments de données pour les extensions Edge
 description: Découvrez comment définir un module de bibliothèque de type élément de données pour une extension de balise dans une propriété Edge.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '435'
-ht-degree: 22%
+ht-degree: 100%
 
 ---
 
@@ -12,26 +12,26 @@ ht-degree: 22%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Dans les balises , les éléments de données sont des alias pour des éléments de données sur une page web ou mobile, indépendamment de l’emplacement de ces données dans l’événement reçu par le serveur. Un élément de données peut être référencé par des règles et agit comme une abstraction pour l’accès à ces données. Lorsque l’emplacement des données changera à l’avenir (par exemple en modifiant la clé d’événement qui contient la valeur), un seul élément de données peut être reconfiguré, tandis que toutes les règles référençant cet élément de données peuvent rester inchangées.
+Dans les balises, les éléments de données sont des alias de données sur une page web ou mobile, quel que soit l’emplacement de ces données dans l’événement reçu par le serveur. Un élément de données peut être référencé par des règles et agit comme une abstraction pour l’accès à ces données. À l’avenir, lors du changement d’emplacement des données (notamment en cas de modification de la clé de l’événement contenant la valeur), un seul élément de données pourra être reconfiguré tandis que toutes les règles référençant cet élément de données pourront rester inchangées.
 
-Les types d’éléments de données sont fournis par des extensions et l’auteur de l’extension détermine la manière dont cet élément de données est récupéré. Par exemple, vous pouvez utiliser un type d’élément de données pour permettre aux utilisateurs de Adobe Experience Platform de récupérer un élément de données de la couche XDM ou de leur couche de données personnalisée.
+Les types d’éléments de données sont fournis par les extensions. L’auteur de l’extension détermine la manière dont cet élément de données est récupéré. Par exemple, vous pouvez utiliser un type d’élément de données pour permettre aux utilisateurs d’Adobe Experience Platform de récupérer un élément de données de la couche XDM ou de leur couche de données personnalisée.
 
 Ce document explique comment définir des types d’éléments de données pour une extension Edge dans Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Si vous développez une extension web, reportez-vous au guide sur les types d’éléments de données [pour les extensions web](../web/data-element-types.md) à la place.
+>Si vous développez une extension web, reportez-vous au guide sur les [types d’éléments de données pour les extensions web](../web/data-element-types.md) à la place.
 >
 >Ce document suppose également que vous connaissez les modules de bibliothèque et leur intégration dans les extensions Edge. Si vous avez besoin d’une introduction, consultez la présentation sur le [formatage des modules de bibliothèque](./format.md) avant de revenir à ce guide.
 
-Les types d’éléments de données sont généralement les suivants :
+Les types d’éléments de données sont généralement les suivants :
 
-1. Vue affichée dans l’interface utilisateur de la collecte de données qui permet aux utilisateurs de modifier les paramètres de l’élément de données.
-2. Module de bibliothèque émis dans la bibliothèque du runtime de balises pour interpréter les paramètres et récupérer des éléments de données.
+1. Une vue affichée dans l’interface utilisateur de la collecte de données qui permet aux utilisateurs de modifier les paramètres de l’élément de données.
+2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et récupérer des éléments de données.
 
-Si vous souhaitez permettre aux utilisateurs de récupérer une donnée de la couche de données personnalisée, votre module peut ressembler à cet exemple.
+Si vous souhaitez permettre aux utilisateurs de récupérer un élément de donnée de la couche de données personnalisée, votre module peut ressembler à cet exemple.
 
 ```js
 module.exports = (context) => {
@@ -40,7 +40,7 @@ module.exports = (context) => {
 };
 ```
 
-Si vous souhaitez que les données renvoyées pour la couche de données puissent être configurées par l’utilisateur de Adobe Experience Platform, vous pouvez autoriser l’utilisateur à saisir un nom clé, puis enregistrer le nom dans l’objet `settings`. L&#39;objet pourrait ressembler à ceci.
+Si vous voulez que les données renvoyées pour la couche de données puissent être configurées par l’utilisateur d’Adobe Experience Platform, vous pouvez autoriser l’utilisateur à saisir un nom clé puis à enregistrer le nom dans l’objet `settings`. L’objet pourrait ressembler à ceci :
 
 ```js
 {
