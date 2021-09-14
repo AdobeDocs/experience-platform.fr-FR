@@ -1,10 +1,10 @@
 ---
 title: Republication de bibliothèque
-description: Découvrez comment republier une bibliothèque de balises précédente dans Adobe Experience Platform.
+description: Découvrez comment republier une ancienne bibliothèque de balises dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '650'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les cinq bibliothèques les plus récentes qui ont été publiées dans votre environnement de production sur une propriété Web peuvent être récupérées ultérieurement. Cette fonctionnalité est utile lorsque vous trouvez un bogue dans votre bibliothèque de production et que vous devez restaurer immédiatement un état que vous savez correct.
 
@@ -20,9 +20,9 @@ Le processus de récupération dépend des paramètres de votre environnement au
 
 Les options disponibles sont les suivantes :
 
-* **Hôte : Géré par Adobe, Archive : Désactivé :** si vous utilisez l’hôte géré par Adobe et que vous n’archivez pas votre bibliothèque, vous pouvez republier ces anciennes bibliothèques.
+* **Hôte : géré par Adobe, Archive : désactivée :** Si vous utilisez l’hôte Géré par Adobe et que vous n’archivez pas votre bibliothèque, vous pouvez republier ces anciennes bibliothèques.
 
-* **Hôte : Géré par Adobe, Archive : Sur :** si vous utilisez l’hôte géré par Adobe et que vous archivez votre bibliothèque, vous pouvez télécharger ces anciennes bibliothèques.
+* **Hôte : géré par Adobe, Archive: activée :** Si vous utilisez l’hôte Géré par Adobe et que vous archivez votre bibliothèque, vous pouvez télécharger ces anciennes bibliothèques.
 
 * **Hôte : SFTP ; Archive : Activée ou désactivée**. Si vous utilisez l’hôte SFTP, le système part du principe que vos propres stratégies d’archivage sont en place, aucune option de récupération n’est donc disponible.
 
@@ -30,13 +30,13 @@ Les options de récupération pour les propriétés mobiles ne sont pas encore d
 
 ## Republication
 
-Chaque environnement de balise fournit un lien vers un fichier de bibliothèque. Toute bibliothèque que vous créez dans cet environnement peut être référencée avec ce lien.
+Chaque environnement de balise fournit un lien vers un fichier de bibliothèque. Toute bibliothèque que vous créez dans cet environnement est référencée par ce lien.
 
 Lorsque vous lancez la nouvelle version d’un environnement de développement ou d’évaluation, l’ancienne version est nettoyée et la nouvelle version est déployée. Pour votre environnement de production, ce lien est mis à jour afin de pointer vers la dernière version, mais les cinq versions les plus récentes sont conservées avant d’être nettoyées.
 
 Ces cinq dernières versions de votre environnement de production sont celles qui peuvent être récupérées.
 
-Lorsque vous republiez une ancienne bibliothèque, Platform met à jour le lien de l’environnement afin qu’il pointe vers l’une de ces anciennes versions qui n’a pas encore été nettoyée.  Platform émet également une requête de purge dans le cache des noeuds périphériques du réseau de diffusion de contenu pour indiquer que la bibliothèque a été mise à jour et qu’une nouvelle copie doit être récupérée à partir de l’origine.
+Lorsque vous republiez une ancienne bibliothèque, Platform met à jour le lien de l’environnement afin qu’il pointe vers l’une de ces anciennes versions qui n’a pas encore été nettoyée.  Platform émet également une requête de purge dans le cache des nœuds périphériques CDN pour indiquer que la bibliothèque a été mise à jour et qu’une nouvelle copie doit être récupérée à partir de l’origine.
 
 Cela signifie que lorsque vous republiez une ancienne bibliothèque :
 
@@ -44,9 +44,9 @@ Cela signifie que lorsque vous republiez une ancienne bibliothèque :
 
 * La manière dont les environnements de développement et d’évaluation calculent ce qui est en amont ne change pas.
 
-Prenons comme exemple le cas où vous effectuez une restauration en raison d’un problème avec une règle spécifique. La révision de la règle qui est actuellement en production peut, par exemple, être vieille de trois versions. Lorsque vous affichez cette règle dans l’interface utilisateur de la collecte de données pour la corriger, elle reflète toujours les dernières modifications enregistrées plutôt que celles qui sont actuellement en production.
+Prenons comme exemple le cas où vous effectuez une restauration en raison d’un problème avec une règle spécifique. La révision de la règle qui est actuellement en production peut, par exemple, être vieille de trois versions. Lorsque vous affichez cette règle dans l’interface utilisateur de la collecte de données pour la corriger, elle reflète toujours les dernières modifications enregistrées au lieu de celles qui sont actuellement en production.
 
-Pour cette raison, Platform vous avertit qu’une propriété est dans un état republié afin de vous rappeler que ce que vous voyez dans l’interface utilisateur de la collecte de données est un peu plus éloigné de la production que d’habitude. Cette notification est non valide et s’affiche une seule fois par session de navigateur lors de la première consultation de la propriété.
+C’est pour cette raison que Platform vous avertit qu’une propriété est dans un état republié afin de vous rappeler que ce que vous voyez dans l’interface utilisateur de la collecte de données est un peu plus éloigné de la production que d’habitude. Cette notification peut être ignorée et s’affiche une seule fois par session du navigateur, lors de la première consultation de la propriété.
 
 ### Republication d’une ancienne bibliothèque
 
