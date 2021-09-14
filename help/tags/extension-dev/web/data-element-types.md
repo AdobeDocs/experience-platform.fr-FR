@@ -1,10 +1,10 @@
 ---
 title: Types d’éléments de données pour les extensions web
-description: Découvrez comment définir un module de bibliothèque de type élément de données pour une extension de balise dans une propriété web.
+description: Découvrez comment définir un module de bibliothèque de type d’élément de données pour une extension de balise dans une propriété web.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '596'
-ht-degree: 60%
+ht-degree: 100%
 
 ---
 
@@ -12,24 +12,24 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Dans les balises de collecte de données, les éléments de données sont essentiellement des alias vers des éléments de données sur une page. Ces données se trouvent dans des paramètres de chaîne de requête, des cookies, des éléments DOM ou d’autres emplacements. Un élément de données peut être référencé par des règles et agit comme une abstraction pour l’accès à ces données.
+Dans les balises de la collecte de données, les éléments de données sont essentiellement des alias vers des éléments de données sur une page. Ces données se trouvent dans des paramètres de chaîne de requête, des cookies, des éléments DOM ou d’autres emplacements. Un élément de données peut être référencé par des règles et agit comme une abstraction pour l’accès à ces données.
 
-Les types d’éléments de données sont fournis par des extensions et permettent aux utilisateurs de configurer des éléments de données pour accéder à des éléments de données d’une manière particulière. Par exemple, une extension peut fournir un type d’élément de données « élément d’enregistrement local » dans lequel l’utilisateur de peut spécifier un nom d’élément d’enregistrement local. Lorsque l’élément de données est référencé par une règle, l’extension peut rechercher la valeur de l’élément d’enregistrement local en utilisant le nom d’élément d’enregistrement local que l’utilisateur a fourni lors de la configuration de l’élément de données.
+Les types d’éléments de données sont fournis par les extensions et permettent aux utilisateurs de configurer des éléments de données pour accéder à des données d’une manière particulière. Par exemple, une extension peut fournir un type d’élément de données « élément d’enregistrement local » dans lequel l’utilisateur de peut spécifier un nom d’élément d’enregistrement local. Lorsque l’élément de données est référencé par une règle, l’extension peut rechercher la valeur de l’élément d’enregistrement local en utilisant le nom d’élément d’enregistrement local que l’utilisateur a fourni lors de la configuration de l’élément de données.
 
 Ce document explique comment définir des types d’éléments de données pour une extension web dans Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Si vous développez une extension Edge, reportez-vous au guide sur les types d’éléments de données [pour les extensions Edge](../edge/data-element-types.md) à la place.
+>Si vous développez une extension Edge, reportez-vous au guide sur les [types d’éléments de données pour les extensions Edge](../edge/data-element-types.md) à la place.
 >
 >Ce document suppose également que vous connaissez les modules de bibliothèque et leur intégration dans les extensions web. Si vous avez besoin d’une introduction, consultez la présentation sur le [formatage des modules de bibliothèque](./format.md) avant de revenir à ce guide.
 
-Les types d’éléments de données sont généralement les suivants :
+Les types d’éléments de données sont généralement les suivants :
 
-1. [vue](./views.md) affichée dans l’interface utilisateur de la collecte de données qui permet aux utilisateurs de modifier les paramètres de l’élément de données.
-2. Module de bibliothèque émis dans la bibliothèque du runtime de balises pour interpréter les paramètres et récupérer des éléments de données.
+1. Une [vue](./views.md) affichée dans l’interface utilisateur de la collecte de données qui permet aux utilisateurs de modifier les paramètres de l’élément de données.
+2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et récupérer des éléments de données.
 
 Supposons que vous souhaitiez autoriser les utilisateurs à récupérer cette donnée dans un élément d’enregistrement local nommé `productName`. Votre module peut se présenter comme suit :
 
@@ -39,7 +39,7 @@ module.exports = function(settings) {
 }
 ```
 
-Si vous souhaitez que l’utilisateur Adobe Experience Platform puisse configurer le nom de l’élément d’enregistrement local, vous pouvez autoriser l’utilisateur à saisir un nom, puis enregistrer le nom dans l’objet `settings` . L’objet pourrait ressembler à ceci :
+Si vous souhaitez que le nom de l’élément de stockage local soit configurable par l’utilisateur d’Adobe Experience Platform, vous pouvez autoriser l’utilisateur à saisir un nom puis à l’enregistrer dans l’objet `settings`. L’objet pourrait ressembler à ceci :
 
 ```js
 {
