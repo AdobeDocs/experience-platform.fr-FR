@@ -133,7 +133,7 @@ curl -X POST \
 | --- | --- |
 | `data` | Objet faisant référence à `id` et `type` de la ressource cible pour la relation. Si vous créez une relation avec plusieurs ressources du même type (telles que `extensions` et `rules`), la propriété `data` doit être formatée sous la forme d’un tableau d’objets, chaque objet contenant les éléments `id` et `type` d’une ressource applicable. |
 | `id` | Identifiant unique d’une ressource. Chaque `id` doit être accompagné d’une propriété `type` sœur, indiquant le type de ressource en question. |
-| `type` | Type de ressource tel que référencé par un champ `id` frère. Les exemples de valeurs comprennent `data_elements`, `rules`, `extensions` et `environments`. |
+| `type` | Type de ressource tel que référencé par un champ `id` frère. Les valeurs acceptées incluent `data_elements`, `rules`, `extensions` et `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -269,7 +269,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 {style=&quot;table-layout:auto&quot;}
 
-### Composants de  règle
+### Composants de   règle
 
 | Relation | Obligatoire | Création par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
