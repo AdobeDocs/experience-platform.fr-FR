@@ -6,9 +6,9 @@ breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Gestion des données
 source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '144'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -51,9 +51,9 @@ ht-degree: 90%
    * [Prise en charge du consentement](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
       * [Présentation](consent/iab-tcf/overview.md)
-      * [Intégration de balises](consent/iab-tcf/with-launch.md)
+      * [Intégration avec des balises](consent/iab-tcf/with-launch.md)
       * [Intégration sans balises](consent/iab-tcf/without-launch.md)
-* Extension de balise SDK Web {#extension}
+* Extension de balises du SDK web {#extension}
    * [Extension SDK web](extension/web-sdk-extension-configuration.md)
    * [Types d’événements](extension/event-types.md)
    * [Types d’actions](extension/action-types.md)
