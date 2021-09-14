@@ -1,10 +1,10 @@
 ---
 title: Contexte dans les modules d’extension Edge
-description: Découvrez l’objet de contexte et le rôle qu’il joue dans l’interaction avec les modules de bibliothèque dans les extensions de balise des propriétés Edge.
+description: Découvrez lʼobjet contexte et son rôle dans lʼinteraction avec les modules de bibliothèque dans les extensions de balises des propriétés Edge.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '747'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+> Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Tous les modules de bibliothèque des extensions Edge reçoivent un objet `context` lorsqu’ils sont exécutés. Ce document couvre les propriétés fournies par l’objet `context` et le rôle qu’ils jouent dans les modules de bibliothèque.
 
@@ -95,15 +95,15 @@ La première fois que cette action est exécutée, `ruleStash` commence comme `u
 
 >[!NOTE]
 >
->Veillez à toujours renvoyer l’ensemble complet des règles d’extension lors de l’utilisation de cette stratégie. Si vous ne renvoyez qu’une valeur, elle remplacera toutes les autres propriétés que vous avez définies.
+>Lorsque vous utilisez cette stratégie, veillez à toujours renvoyer lʼensemble complet des règles dʼextension utilisant cette stratégie. Si, au contraire, vous renvoyez uniquement une valeur, elle remplacera toutes les autres propriétés que vous avez définies.
 
 ## Utilitaires
 
-La propriété `utils` représente un objet qui fournit des utilitaires spécifiques à l’exécution de balise.
+La propriété `utils` représente un objet qui fournit des utilitaires spécifiques à l’exécution des balises.
 
 ### [!DNL logger]
 
-L’utilitaire `logger` vous permet de consigner les messages qui s’afficheront pendant les sessions de débogage lors de l’utilisation de [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
+Lʼutilitaire `logger` vous permet de consigner les messages qui sʼafficheront pendant les sessions de débogage lors de lʼutilisation dʼ[Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
 
 ```js
 context.utils.logger.error('Error!');
@@ -130,7 +130,7 @@ context.utils.fetch('http://example.com/movies.json')
 
 ### [!DNL getBuildInfo]
 
-Cet utilitaire renvoie un objet contenant des informations sur la version de la bibliothèque du runtime de balises active.
+Cet utilitaire renvoie un objet contenant des informations sur la version actuelle de la bibliothèque dʼexécution des balises.
 
 ```js
 logger.log(context.utils.getBuildInfo().turbineBuildDate);
