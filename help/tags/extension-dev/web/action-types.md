@@ -1,10 +1,10 @@
 ---
 title: Types d’actions pour les extensions web
-description: Découvrez comment définir un module de bibliothèque de type action pour une extension de balise dans une propriété web.
+description: Découvrez comment définir un module Bibliothèque de type action pour une extension de balises dans une propriété web.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '408'
-ht-degree: 49%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 49%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans le contexte des balises de collecte de données, une action est exécutée après qu’un événement de règle s’est produit et que toutes les conditions ont réussi l’évaluation.
 
@@ -26,10 +26,10 @@ Ce document explique comment définir des types d’action pour une extension we
 >
 >Ce document suppose également que vous connaissez les modules de bibliothèque et leur intégration dans les extensions web. Si vous avez besoin d’une introduction, consultez la présentation sur le [formatage des modules de bibliothèque](./format.md) avant de revenir à ce guide.
 
-Les types d’actions sont généralement les suivants :
+Les types d’actions sont généralement les suivants :
 
-1. [vue](./views.md) affichée dans l’interface utilisateur de la collecte de données qui permet aux utilisateurs de modifier les paramètres de l’action.
-2. Module de bibliothèque émis dans la bibliothèque du runtime de balises pour interpréter les paramètres et effectuer une action.
+1. Une [vue](./views.md) affichée dans l’interface utilisateur de la collecte de données qui permet aux utilisateurs de modifier les paramètres de l’action.
+2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et effectuer une action.
 
 ```js
 module.exports = function(settings) {
@@ -37,7 +37,7 @@ module.exports = function(settings) {
 };
 ```
 
-Par exemple, pour rendre le message configurable par l’utilisateur Adobe Experience Platform, vous pouvez autoriser l’utilisateur à saisir et enregistrer un message dans l’objet settings. L’objet ressemble à ceci :
+Par exemple, pour rendre le message configurable par l’utilisateur d’Adobe Experience Platform, vous pouvez autoriser ce dernier à saisir et enregistrer un message dans l’objet settings. L’objet ressemble à ceci :
 
 ```json
 {
@@ -55,7 +55,7 @@ module.exports = function(settings) {
 
 ## Données contextuelles de l’événement
 
-Un second argument doit ensuite être transmis à votre module contenant les informations contextuelles sur l’événement qui déclenche la règle. Ces informations peuvent être utiles dans certains cas et peuvent être consultées comme suit :
+Un second argument doit ensuite être transmis à votre module contenant les informations contextuelles à propos de l’événement qui déclenche la règle. Ces informations peuvent être utiles dans certains cas et peuvent être consultées comme suit :
 
 ```js
 module.exports = function(settings, event) {
