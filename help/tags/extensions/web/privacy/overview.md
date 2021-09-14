@@ -1,10 +1,10 @@
 ---
 title: Présentation de l’extension Adobe Privacy
-description: Découvrez l’extension Adobe Privacy tag dans Adobe Experience Platform.
+description: Découvrez lʼextension de balise Adobe Privacy dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '534'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 L’extension Adobe Privacy propose des fonctionnalités de collecte et de suppression des ID utilisateurs affectés aux utilisateurs finaux par les solutions Adobe.
 
@@ -44,13 +44,13 @@ Pour configurer dʼautres éléments, cliquez sur **[!UICONTROL Sélectionner un
 
 Cliquez sur **[!UICONTROL Sélectionner un élément]**, sélectionnez lʼélément à configurer, puis cliquez sur **[!UICONTROL Ajouter]** et saisissez le paramètre requis ou un élément de données. Actuellement, vous ne pouvez configurer que le paramètre `aamUUIDCookieName`.
 
-### Cible
+### Target
 
 ![](../../../images/ext-privacy-target.jpg)
 
 Saisissez le code client Target.
 
-### Service visiteur
+### Visitor Service
 
 ![](../../../images/ext-privacy-visitor.jpg)
 
