@@ -1,10 +1,10 @@
 ---
-title: Présentation de l’extension Adobe Medium Analytics (SDK 3.x) for Audio and Video
-description: Découvrez l’extension de balise Adobe Medium Analytics (SDK 3.x) for Audio and Video dans Adobe Experience Platform.
+title: Présentation de lʼextension Adobe Media Analytics (3.x SDK) for Audio and Video
+description: Découvrez lʼextension de balise Adobe Media Analytics (3.x SDK) for Audio and Video dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '764'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -12,11 +12,11 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Pour plus d’informations sur l’installation, la configuration et la mise en œuvre de l’extension Adobe Media Analytics (SDK 3.x) for Audio and Video (extension Media Analytics), utilisez cette documentation. Les options disponibles lors de l’utilisation de cette extension pour créer une règle, ainsi que des exemples et des liens vers des exemples, sont inclus.
 
-L’extension Media Analytics (MA) ajoute le SDK principal JavaScript Media (SDK Media 3.x). Cette extension permet d’ajouter l’instance de suivi `Media` à un site ou à un projet prenant en charge les balises. L’extension MA requiert deux extensions supplémentaires :
+L’extension Media Analytics (MA) ajoute le SDK principal JavaScript Media (SDK Media 3.x). Cette extension permet d’ajouter l’instance de suivi `Media` à un site ou à un projet avec balises. L’extension MA requiert deux extensions supplémentaires :
 
 * [Extension Analytics](../analytics/overview.md)
 * [L’extension Experience Cloud ID](../id-service/overview.md)
@@ -25,7 +25,7 @@ L’extension Media Analytics (MA) ajoute le SDK principal JavaScript Media (SDK
 >
 >Cette extension est déployée avec le SDK Media 3.x, qui n’a pas de compatibilité descendante avec le SDK Media 2.x. Si votre page utilise déjà le SDK Media 2.x, utilisez l’[extension Adobe Media Analytics for Audio and Video](../media-analytics/overview.md) au lieu de cette extension.
 
-Après avoir inclus les trois extensions mentionnées ci-dessus dans votre projet avec balises, vous pouvez procéder de l’une des deux façons suivantes :
+Après avoir inclus les trois extensions mentionnées ci-dessus dans votre projet avec balises, vous pouvez procéder de deux façons :
 
 * Utiliser les API `Media` de votre application web
 * Inclure ou créer une extension spécifique au lecteur qui associe des événements de lecteur multimédia spécifiques aux API sur l’instance de suivi `Media`. Cette instance est exposée via l’extension MA.
@@ -84,7 +84,7 @@ Vous pouvez obtenir l’exemple de lecteur ici : [MA Sample Player](https://gi
 
 ### Utilisation à partir d’autres extensions
 
-L’extension MA expose `media` en tant que module partagé à d’autres extensions. (Pour plus d’informations sur les modules partagés, voir la [documentation sur les modules partagés](../../../extension-dev/web/shared.md).)
+L’extension MA expose `media` en tant que module partagé aux autres extensions. (Pour plus d’informations sur les modules partagés, voir la [documentation sur les modules partagés](../../../extension-dev/web/shared.md).)
 
 >[!IMPORTANT]
 >
@@ -109,4 +109,4 @@ L’extension MA expose `media` en tant que module partagé à d’autres extens
 
 >[!NOTE]
 >
->**Tests :** pour tester votre extension dans cette version, vous devez télécharger votre extension sur [ Platform ](../../../extension-dev/submit/upload-and-test.md), où vous avez accès à toutes les extensions dépendantes.
+>**Tests :** pour tester votre extension dans cette version, vous devez télécharger votre extension sur [Platform](../../../extension-dev/submit/upload-and-test.md), où vous avez accès à toutes les extensions dépendantes.
