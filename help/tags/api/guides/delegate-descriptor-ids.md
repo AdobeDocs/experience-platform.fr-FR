@@ -24,7 +24,7 @@ Par exemple, si un module d’extension nommé `example-package` comporte une ac
 
 Les identifiants de descripteur délégué sont importants pour comprendre à quel moment définir des composants de règle (événements, conditions et actions) et des éléments de données dans l’API. Les sections ci-dessous décrivent comment ces identifiants entrent en jeu pour chaque ressource.
 
-### Composants de  règle
+### Composants de   règle
 
 Un [composant de règle](../endpoints/rule-components.md) doit être associé à un événement, une condition ou une action appartenant à un module d’extension. Cela représente le « type » du composant de règle, car il se rapporte à la logique de la règle globale (un événement, une condition ou une action). Par conséquent, lors de la création d’un composant de règle, un identifiant de descripteur délégué doit être fourni pour indiquer à quel événement, condition ou action le composant de règle doit être associé.
 
