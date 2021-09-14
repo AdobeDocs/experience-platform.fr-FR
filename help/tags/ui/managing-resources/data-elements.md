@@ -2,9 +2,9 @@
 title: Éléments de données
 description: Les éléments de données sont les blocs de construction de votre dictionnaire de données (ou mappage de données). Utilisez des éléments de données pour recueillir, organiser et diffuser des données dans les technologies marketing et publicitaires.
 source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1631'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -12,11 +12,11 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les éléments de données sont les blocs de construction de votre dictionnaire de données (ou mappage de données). Utilisez des éléments de données pour recueillir, organiser et diffuser des données dans les technologies marketing et publicitaires.
 
-Un seul élément de données est une variable dont la valeur peut être mappée à des chaînes de requête, des URL, des valeurs de cookie, des variables JavaScript, etc. Vous pouvez référencer cette valeur par son nom de variable dans Adobe Experience Platform. Cette collection d’éléments de données devient le dictionnaire des données définies que vous pouvez utiliser pour créer vos règles (événements, conditions et actions). Ce dictionnaire de données est partagé entre les balises afin d’être utilisé avec toute extension ajoutée à votre propriété.
+Un seul élément de données est une variable dont la valeur peut être mappée à des chaînes de requête, des URL, des valeurs de cookie, des variables JavaScript, etc. Vous pouvez référencer cette valeur par son nom de variable dans Adobe Experience Platform. Cette collection d’éléments de données devient le dictionnaire des données définies que vous pouvez utiliser pour créer vos règles (événements, conditions et actions). Cet élément de données est partagé à lʼéchelle des balises afin dʼêtre utilisé avec toute extension ajoutée à votre propriété.
 
 >[!IMPORTANT]
 >
@@ -26,9 +26,9 @@ Utilisez les éléments de données autant que possible lors de la création de 
 
 Les éléments de données réutilisables sont efficaces et devraient être utilisés en tant que bonnes pratiques.
 
-Par exemple, si vous référencez de manière particulière les noms de page ou les ID de produit ou si vous obtenez des informations des paramètres de chaîne de requête à partir d’un lien marketing affilié ou de [!DNL AdWords], vous pouvez créer un dictionnaire de données (éléments de données) en obtenant des informations de sa source, puis en utilisant ces données dans différentes règles de balise.
+Par exemple, si vous référencez de manière particulière les noms de page ou les ID de produit ou si vous obtenez des informations des paramètres de chaîne de requête à partir dʼun lien marketing affilié ou dʼ[!DNL AdWords], vous pouvez créer un dictionnaire de données (éléments de données) en obtenant des informations de plusieurs sources et en utilisant ces données dans différentes règles de balises.
 
-En prenant l’utilisation des noms de page comme exemple, supposons que vous utilisez un schéma page-nom spécifique en référençant une couche de données, l’élément `document.title` ou une balise de titre dans le site web. Les balises dans Adobe Experience Platform vous permettent de créer un élément de données comme point unique de référence pour ce point particulier de données. Vous pouvez ensuite utiliser cet élément de données dans n’importe quelle règle qui doit référencer le nom de page. Si pour une raison quelconque, vous décidez à l’avenir de modifier la manière dont vous référencez les noms de page (vous avez par exemple référencé `document.title` et vous souhaitez à présent référencer une couche de données spécifique), il n’est pas nécessaire de modifier plusieurs règles différentes pour changer cette référence. Il suffit de modifier la référence une seule fois dans l’élément de données. Toutes les règles référençant cet élément de données sont alors automatiquement mises à jour.
+En prenant l’utilisation des noms de page comme exemple, supposons que vous utilisez un schéma page-nom spécifique en référençant une couche de données, l’élément `document.title` ou une balise de titre dans le site web. Les balises dans Adobe Experience Platform vous permettent de créer un élément de données comme point de référence unique pour ce point de données particulier. Vous pouvez ensuite utiliser cet élément de données dans n’importe quelle règle qui doit référencer le nom de page. Si pour une raison quelconque, vous décidez à l’avenir de modifier la manière dont vous référencez les noms de page (vous avez par exemple référencé `document.title` et vous souhaitez à présent référencer une couche de données spécifique), il n’est pas nécessaire de modifier plusieurs règles différentes pour changer cette référence. Il suffit de modifier la référence une seule fois dans l’élément de données. Toutes les règles référençant cet élément de données sont alors automatiquement mises à jour.
 
 >[!NOTE]
 >
@@ -59,7 +59,7 @@ Les éléments de données constituent les blocs de construction des règles. Il
 1. Nommez l’élément de données.
 1. Sélectionnez une extension et un type.
 
-   Les types d’éléments de données disponibles sont déterminés par l’extension. Pour plus d’informations sur les types disponibles avec l’extension de balise Core, voir [Types d’éléments de données](data-elements.md#types-of-data-elements).
+   Les types d’éléments de données disponibles sont déterminés par l’extension. Pour plus dʼinformations sur les types disponibles avec lʼextension de balise Core, reportez-vous à [Types dʼéléments de données](data-elements.md#types-of-data-elements).
 
 1. Fournissez toutes les informations demandées à propos du type choisi dans les champs fournis.
 1. (Facultatif) Saisissez une valeur par défaut.
@@ -86,7 +86,7 @@ Les éléments de données constituent les blocs de construction des règles. Il
 
 1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
-Lors de la création ou de la modification d’éléments, vous pouvez enregistrer et créer une [bibliothèque active](../publishing/libraries.md#active-library). Cette opération enregistre immédiatement votre modification dans votre bibliothèque et exécute une version. Le statut de la version s’affiche. Vous pouvez également créer une bibliothèque à partir de la liste déroulante [!UICONTROL Principale bibliothèque].
+Lors de la création ou de la modification d’éléments, vous pouvez enregistrer et créer une [bibliothèque active](../publishing/libraries.md#active-library). Cette opération enregistre immédiatement votre modification dans votre bibliothèque et exécute une version. Le statut de la version s’affiche. Vous pouvez également créer une bibliothèque à partir de la liste déroulante [!UICONTROL Bibliothèque active].
 
 ## Types d’éléments de données {#types-of-data-elements}
 
@@ -96,7 +96,7 @@ Les sections suivantes décrivent les types d’éléments de données disponibl
 
 ### Cookie
 
-N’importe quel cookie de domaine disponible peut être référencé dans le champ de nom du cookie.
+N’importe quel cookie de domaine disponible peut être référencé dans le champ de  nom du cookie.
 
 #### Exemple :
 
@@ -119,7 +119,7 @@ if (window.location.pathname == '/') {
 }
 ```
 
-Le code personnalisé peut accepter `event` l’objet de la règle d’appel comme argument. Cela permet au code d’y lire la valeur.
+Le code personnalisé peut accepter `event` l’objet de la règle d’appel comme argument. Cela permet au code dʼy lire la valeur.
 
 **Exemple :**
 
@@ -133,7 +133,7 @@ Vous pouvez alors les utiliser dans des scripts personnalisés à l’aide de la
 
 `_satellite.getVar('data element name', event);`
 
-Lors de l’utilisation de la notation `%..%`, il vous suffit de spécifier le nom de l’élément de données. Vous n&#39;avez pas besoin de spécifier `event`.
+Lors de lʼutilisation de la notation `%..%`, il vous suffit de spécifier le nom de lʼélément de données. Vous n&#39;avez pas besoin de spécifier `event`.
 
 `%data element name%`
 
@@ -155,7 +155,7 @@ Obtention de la valeur de :
 
 N’importe quelle variable ou n’importe quel objet JavaScript peut être référencé à l’aide du champ de chemin d’accès.
 
-Si vous souhaitez collecter des variables JavaScript ou des propriétés d’objet dans vos balises et les utiliser avec l’une de vos extensions ou règles, des éléments de données peuvent être utilisés pour capturer ces valeurs. Ainsi, vous pouvez vous reporter à l’élément de données dans vos règles. Si la source des données venait à changer, il vous suffirait de modifier la référence à la source (l’élément de données) à un emplacement de l’interface utilisateur de collecte de données.
+Si vous souhaitez collecter des variables JavaScript ou des propriétés dʼobjet dans vos balises et les utiliser avec lʼune de vos extensions ou règles, des éléments de données peuvent être utilisés pour capturer ces valeurs. Ainsi, vous pouvez vous reporter à lʼélément de données dans vos règles, et si la source des données venait à changer, il vous suffirait de modifier la référence à la source (lʼélément de données) vers un emplacement de lʼinterface utilisateur de la collecte de données.
 
 Par exemple, supposons que vos balises contiennent une variable JavaScript nommée « `Page_Name` » comme illustré ci-dessous :
 
@@ -166,7 +166,7 @@ Par exemple, supposons que vos balises contiennent une variable JavaScript nomm�
 </script>
 ```
 
-Vous devez indiquer le chemin d’accès à cette variable lorsque vous créez l’élément de données.
+Vous devez indiquer le chemin dʼaccès à cette variable lors de la création de lʼélément de données.
 
 Si vous utilisez un objet collecteur de données dans votre couche de données, utilisez simplement la notation point dans le chemin pour faire référence à l’objet et la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName` ou `digitalData.pageName`, etc.
 
@@ -178,7 +178,7 @@ Si vous utilisez un objet collecteur de données dans votre couche de données, 
 
 Indiquez le nom de votre élément de stockage local dans le champ [!UICONTROL Local Storage Item Name].
 
-Le stockage local permet aux navigateurs de stocker des informations d’une page à l’autre ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Le stockage local fonctionne beaucoup comme les cookies, mais il est beaucoup plus volumineux et plus flexible.
+Le stockage local permet aux navigateurs de stocker des informations d’une page à l’autre ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Le stockage local est très similaire aux cookies mais est beaucoup plus volumineux et plus souple.
 
 Utilisez le champ fourni pour spécifier la valeur que vous avez créée pour un élément de stockage local, comme `lastProductViewed.`
 
@@ -230,7 +230,7 @@ Le stockage de session est similaire au stockage local, sauf que les données so
 
 ### Comportement du visiteur
 
-Tout comme Infos sur la page, cet élément de données utilise des types de comportement courants pour enrichir la logique au sein de règles ou d’autres solutions Platform.
+Similaire aux informations sur la page, cet élément de données utilise des types de comportements courants pour enrichir la logique dans les règles ou dʼautres solutions Platform.
 
 Sélectionnez l’un des attributs de comportement du visiteur suivants :
 
@@ -247,12 +247,12 @@ Voici quelques cas d’utilisation courants :
 * Afficher une enquête une fois qu’un visiteur a consulté le site pendant cinq minutes
 * S’il s’agit de la page d’entrée de la visite, renseigner une mesure [!DNL Analytics]
 * Afficher une nouvelle offre au visiteur après un nombre de sessions égal à X
-* Afficher un abonnement à une newsletter s’il s’agit d’un nouveau visiteur
+* Afficher un abonnement à la newsletter sʼil sʼagit dʼun nouveau visiteur
 
 ## Éléments de données intégrés
 
-Si vous avez déjà utilisé l’un des éléments de données suivants, vous devez créer un élément de données personnalisé dans l’interface utilisateur de la collecte de données :
+Si vous avez déjà utilisé lʼun des éléments de données suivants, vous devez créer un élément de données personnalisé dans lʼinterface utilisateur de la collecte de données :
 
 * URI
-* Protocole
+* Protocol
 * Hostname
