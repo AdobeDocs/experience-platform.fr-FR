@@ -1,10 +1,10 @@
 ---
 title: Présentation de l’extension Adobe Analytics Product String
-description: Découvrez l’extension de balise Chaîne de produit Adobe Analytics dans Adobe Experience Platform.
+description: Découvrez l’extension de balise Adobe Analytics Product String dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '525'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 La variable `products` surveille la manière dont les utilisateurs interagissent avec les produits de votre site. Par exemple, la variable `products` peut surveiller le nombre de fois où un produit est affiché, ajouté au panier, passé en caisse et acheté. Elle peut également surveiller l’efficacité relative des catégories de marchandisage de votre site.
 
