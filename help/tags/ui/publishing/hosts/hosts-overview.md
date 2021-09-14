@@ -2,9 +2,9 @@
 title: Présentation des hôtes
 description: Découvrez les différentes options d’hébergement disponibles dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '166'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les extensions, les règles et les éléments de données sont des blocs de construction. Lorsque vous souhaitez que votre application fasse quelque chose, ces blocs de construction sont ajoutés aux bibliothèques, puis une bibliothèque est « construite » sous la forme d’une version. Ces versions sont ensuite placées sur un emplacement hébergé.
 
