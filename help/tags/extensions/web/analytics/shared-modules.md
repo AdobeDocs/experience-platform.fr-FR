@@ -2,9 +2,9 @@
 title: Modules partagés pour l’extension Adobe Analytics
 description: Découvrez les modules de bibliothèque partagés fournis par l’extension de balise Adobe Analytics dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '431'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 L’[extension Adobe Analytics](./overview.md) fournit deux [modules partagés différents](../../../extension-dev/web/shared.md) que vous pouvez intégrer à votre application d’expérience. Ces modules sont traités dans les sections ci-dessous.
 
@@ -32,7 +32,7 @@ getTracker().then(function(tracker) {
 
 ### Vérification de l’installation d’Adobe Analytics
 
-Il est possible qu’Adobe Analytics n’ait pas été installé ou inclus dans la même bibliothèque de balises que votre extension. C’est pourquoi il est vivement recommandé de vérifier si tel est le cas dans votre code et de gérer cette situation de manière appropriée. Le code JavaScript suivant est un exemple d’implémentation de cette méthode :
+Il est possible qu’Adobe Analytics n’ait pas été installé ou inclus dans la même bibliothèque de balise que votre extension. C’est pourquoi il est vivement recommandé de vérifier si tel est le cas dans votre code et de gérer cette situation de manière appropriée. Le code JavaScript suivant est un exemple d’implémentation de cette méthode :
 
 ```js
 var getTracker = turbine.getSharedModule('adobe-analytics', 'get-tracker');
@@ -46,12 +46,12 @@ if (getTracker) {
 }
 ```
 
-Si `getTracker` est `undefined`, l’extension Adobe Analytics n’existe pas dans la bibliothèque de balises. Vous pouvez personnaliser le message consigné afin de refléter précisément les fonctionnalités qui risquent d’être perdues si Adobe Analytics n’est pas installé.
+Si le `getTracker` est `undefined`, l’extension Adobe Analytics n’existe pas dans la bibliothèque de balises. Vous pouvez personnaliser le message consigné afin de refléter précisément les fonctionnalités qui risquent d’être perdues si Adobe Analytics n’est pas installé.
 
 
 ## [!DNL augment-tracker]
 
-Une fois l’objet de suivi initialisé, l’étape suivante du processus est l’augmentation. Cette étape permet à votre extension d’augmenter le suivi avec tout ce qui est nécessaire avant l’application de variables à partir de la configuration de l’extension Adobe Analytics ou avant l’envoi de balises.
+Une fois l’objet de suivi initialisé, l’étape suivante du processus est l’augmentation. Cette étape donne à votre extension la possibilité d’augmenter le suivi avec tout ce qui est nécessaire avant que des variables aient été appliquées à partir de la configuration de l’extension Adobe Analytics ou avant que des balises aient été envoyées.
 
 En outre, votre extension a la possibilité de suspendre le processus d’initialisation de l’outil de suivi pendant que votre extension effectue toute tâche asynchrone propre, telle que la récupération de données ou de JavaScript à partir d’un serveur.
 
