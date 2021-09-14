@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Ce document présente Data Prep dans Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '547'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ Data Prep applique également plusieurs validations de données intrinsèques af
 
 >[!NOTE]
 >
->À moins que le message qui en résulte ne soit un XDM non valide, toute erreur de transformation dans Data Prep entraîne la définition de ces attributs sur `null`, tandis que le reste de la ligne sera ingéré. Si la ligne ne correspond pas à un XDM non valide, elle **et non** sera ingérée. Dans ces deux cas, l’erreur sera documentée.
+>À moins que le message qui en résulte ne soit un XDM non valide, toute erreur de transformation dans Data Prep entraîne la définition de ces attributs sur `null`. Toutefois, le reste de la ligne est ingéré. Si la ligne correspond à un XDM non valide, elle n’est **pas** ingérée. Dans ces deux cas, l’erreur est documentée.
 
 ## Mappage
 
@@ -37,7 +37,7 @@ Pour en savoir plus sur les différentes fonctions de mappage, consultez le [gui
 
 ### Les champs calculés
 
-Les champs calculés permettent de créer des valeurs en fonction des attributs du schéma d’entrée. Ces valeurs peuvent ensuite être affectées à des attributs dans le schéma cible et recevoir un nom et une description pour faciliter la référence.
+Les champs calculés permettent de créer des valeurs en fonction des attributs du schéma d’entrée. Ces valeurs peuvent ensuite être affectées à des attributs dans le schéma cible. Vous pouvez également leur fournir un nom et une description pour en faciliter la référence.
 
 Pour en savoir plus sur les champs calculés, consultez le [guide des champs calculés](./functions.md#calculated-fields).
 
