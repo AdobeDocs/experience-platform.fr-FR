@@ -1,10 +1,10 @@
 ---
 title: Navigateurs pris en charge
-description: Liste de plusieurs navigateurs compatibles avec l’exécution d’une balise Adobe Experience Platform.
+description: Liste des navigateurs compatibles avec lʼexécution dʼune balise Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '145'
-ht-degree: 39%
+ht-degree: 100%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 39%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-L’exécution de balise dans Adobe Experience Platform (diffusée sur les sites web des clients) est compatible avec plusieurs navigateurs :
+Lʼexécution des balises dans Adobe Experience Platform (diffusée sur les sites web des clients) est compatible avec différents navigateurs :
 
 - Chrome (dernière version)
 - Safari (dernière version)
@@ -26,11 +26,11 @@ L’exécution de balise dans Adobe Experience Platform (diffusée sur les sites
 
 Tout code d’extension inclus dans le runtime doit également s’efforcer de prendre en charge ces navigateurs.
 
-L’interface utilisateur de collecte de données est conçue pour prendre en charge les navigateurs suivants :
+Lʼinterface utilisateur de la collecte de données est conçue pour prendre en charge les navigateurs suivants :
 
 - Chrome (dernière version)
 - Safari (dernière version)
 - Firefox (dernière version)
 - Edge (dernière version)
 
-Tout code d’extension affiché dans l’interface utilisateur de la collecte de données doit également s’efforcer de prendre en charge ces navigateurs.
+Tout code dʼextension affiché dans lʼinterface utilisateur de la collecte de données doit également sʼefforcer de prendre en charge ces navigateurs.
