@@ -2,9 +2,9 @@
 title: Prise en charge de l’intégrité des sous-ressources (SRI)
 description: Découvrez comment l’intégrité des sous-ressources (SRI) est prise en charge dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '601'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Ce document présente la façon dont l’intégrité des sous-ressources (SRI) est prise en charge dans Adobe Experience Platform.
 
@@ -33,11 +33,11 @@ Le processus de validation de la SRI peut se résumer comme suit :
 
 ## Limites des systèmes de gestion des balises
 
-En tant que système de gestion des balises (TMS), les balises de Adobe Experience Platform fournissent une version de bibliothèque JavaScript compilée que vous chargez sur vos pages avec un seul élément `<script>` (code incorporé). La fonctionnalité dynamique offerte par le TMS est accomplie en remplaçant dynamiquement le contenu de ce script sans que vous ayez à changer quoi que ce soit d’autre.
+En tant que système de gestion des balises (TMS), dans Adobe Experience Platform les balises fournissent une version de bibliothèque JavaScript compilée que vous chargez sur vos pages avec un seul élément `<script>` (code incorporé). La fonctionnalité dynamique offerte par le TMS est accomplie en remplaçant dynamiquement le contenu de ce script sans que vous ayez à changer quoi que ce soit d’autre.
 
 Cependant, lorsque le contenu du script change, le hachage cryptographique de ce contenu change également. Par conséquent, la seule façon de faire fonctionner la SRI avec un TMS est de mettre à jour votre code incorporé en même temps que vous publiez une nouvelle version. Pour beaucoup, cela va à l’encontre de l’objectif principal de l’utilisation d’un TMS en premier lieu.
 
-La prochaine option de sécurité optimale pour les balises consiste à mettre en oeuvre une stratégie de sécurité du contenu. Pour plus d’informations, consultez le guide sur les [CSP et les balises ](./content-security-policy.md).
+La prochaine option de sécurité optimale pour les balises consiste à mettre en œuvre une stratégie de sécurité du contenu. Pour plus d’informations, voir le guide sur les [CSP et les balises](./content-security-policy.md).
 
 ## Intégration de la SRI dans le déploiement de la version
 
@@ -55,4 +55,4 @@ L’automatisation du processus de mise à jour de votre code incorporé varie e
 
 ## Étapes suivantes
 
-Ce document couvrait les limites de l’utilisation de la SRI avec des balises et les étapes requises pour l’intégrer dans les déploiements de version de bibliothèque, en dépit de ces limites. Si ce n’est déjà fait, il est vivement recommandé de lire le guide sur les [CSP et les balises ](./content-security-policy.md) pour une autre option de sécurité.
+Ce document couvrait les limites de l’utilisation de la SRI avec les balises et les étapes nécessaires pour l’intégrer dans les déploiements de versions de bibliothèque, en dépit de ces limites. Si vous ne l’avez pas encore fait, nous vous recommandons fortement de lire le guide concernant les [CSP et les balises](./content-security-policy.md) pour trouver des options de sécurité alternatives.
