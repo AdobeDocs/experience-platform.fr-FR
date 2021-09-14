@@ -1,10 +1,10 @@
 ---
 title: Bibliothèques auto-hébergées
-description: Découvrez comment implémenter l’auto-hébergement pour vos versions de bibliothèque de balises dans Adobe Experience Platform.
+description: Découvrez comment mettre en œuvre l’auto-hébergement pour vos versions de bibliothèque de balises dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '495'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -12,13 +12,13 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Les balises dans Adobe Experience Platform permettent la production d’un ensemble de fichiers appelé [build](../builds.md). Cet ensemble de fichiers contrôle le comportement de votre application au moment de l’exécution.
+La fonctionnalité Balises dans Adobe Experience Platform permet la production d’un ensemble de fichiers appelé [version](../builds.md). Cet ensemble de fichiers contrôle le comportement de votre application au moment de l’exécution.
 
 Les versions doivent être hébergées quelque part afin que les périphériques clients puissent les récupérer au moment de l’exécution.
 
-Vous pouvez laisser Platform  gérer l’hébergement de ces fichiers ou vous en occuper vous-même.
+Vous pouvez laisser Platform gérer l’hébergement de ces fichiers ou vous en occuper vous-même.
 
 ## Géré par Adobe {#managed-by-adobe}
 
@@ -32,7 +32,7 @@ La raison principale d’utiliser l’hébergement géré par Adobe est la simpl
 
 ## Auto-hébergement
 
-Si vous ne souhaitez pas qu’Adobe gère vos fichiers hébergés, vous devez les héberger vous-même. Pour héberger vos fichiers, vous devez obtenir les versions terminées de Platform et être responsable de l’obtention des fichiers via le cycle de publication de votre entreprise sur les serveurs gérés par l’entreprise.
+Si vous ne souhaitez pas qu’Adobe gère vos fichiers hébergés, vous devez les héberger vous-même. Pour héberger vos fichiers, vous devez obtenir les versions finalisées à partir de Platform et être responsable de l’obtention des fichiers via le cycle de publication de votre entreprise sur les serveurs que vous gérez.
 
 ### Pourquoi utiliser l’auto-hébergement ?
 
@@ -40,9 +40,9 @@ Vous pouvez choisir d’héberger vos propres fichiers de version pour plusieurs
 
 * Certains navigateurs bloquent le domaine assets.adobedtm.com en raison des paramètres de confidentialité configurés par l’utilisateur final.
 * L’auto-hébergement réduit le nombre requis de recherches DNS.
-* Vous devez utiliser HTTP/2.
+* Vous avez besoin d’utiliser HTTP/2.
 * Vous devez définir des en-têtes spécifiques pour des raisons de sécurité.
-* Vos exigences de contrôle du cache diffèrent des paramètres par défaut de l’Adobe.
+* Vos exigences de contrôle du cache sont différentes des paramètres par défaut d’Adobe.
 * Vous souhaitez avoir plus de contrôle sur l’emplacement des nœuds en périphérie.
 * Votre organisation a des exigences de sécurité et légales qui vous empêchent d’opter pour un hébergement géré par Adobe.
 
@@ -61,6 +61,6 @@ Utilisez un hôte [Managed by Adobe](self-hosting-libraries.md) (Géré par Adob
 
 #### Diffusion directe
 
-Les versions peuvent également être diffusées directement à un serveur SFTP que vous avez créé. Vous prenez la responsabilité de les placer dans votre cycle de publication et de les rendre disponibles.
+Les versions peuvent également être diffusées directement vers un serveur SFTP que vous avez créé. Vous prenez la responsabilité de les placer dans votre cycle de publication et de les rendre disponibles.
 
 Pour effectuer une diffusion directe, vous devez créer un [hôte SFTP](sftp-host.md) et affecter cet hôte à votre environnement. Chaque fois que vous créez une bibliothèque dans cet environnement, les fichiers sont diffusés sur votre serveur SFTP.
