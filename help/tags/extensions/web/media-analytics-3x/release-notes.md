@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de l’extension Adobe Media Analytics (SDK 3.x) for Audio and Video
-description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Medium Analytics (SDK 3.x) for Audio and Video dans Adobe Experience Platform.
+description: Dernières notes de mise à jour pour lʼextension de balise Adobe Media Analytics (SDK 3.x) for Audio and Video dans Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '171'
-ht-degree: 61%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch a été rebaptisé en tant que suite de technologies de collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## 5 avril 2021
 
@@ -28,4 +28,4 @@ ht-degree: 61%
 * Utilise l’API Media Collection pour le suivi des médias
 * Prend en charge le suivi de l’état du lecteur
 
-L’extension [Adobe Media Analytics (SDK 3.x) for Audio and Video](./overview.md) ajoute la bibliothèque JavaScript Media Analytics 3.x de base. Cette bibliothèque fournit la fonctionnalité nécessaire pour effectuer le suivi des médias vers un site ou un projet avec balises.
+L’extension [Adobe Media Analytics (SDK 3.x) for Audio and Video](./overview.md) ajoute la bibliothèque JavaScript Media Analytics 3.x de base. Cette bibliothèque fournit la fonctionnalité nécessaire pour suivre les médias jusquʼà un site ou à un projet autorisant les balises.
