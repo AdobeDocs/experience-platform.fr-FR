@@ -2,13 +2,13 @@
 title: Cas d’utilisation pris en charge avec le SDK Web de Adobe Experience Platform
 description: Découvrez les cas d’utilisation pris en charge avec le SDK Web de Adobe Experience Platform.
 keywords: sdk web;cas d’utilisation
-source-git-commit: e012e12a8cadb8c13781b0380d84652c23567180
+exl-id: e0643c2c-ceb3-4ea2-aafa-1e18e0c66453
+source-git-commit: ed092b85d74eaa0fdc29f3a8d28f84fe81ccca17
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 15%
+source-wordcount: '445'
+ht-degree: 20%
 
 ---
-
 
 # Cas d’utilisation pris en charge
 
@@ -21,12 +21,11 @@ Cette page répertorie les cas d’utilisation pris en charge pour le SDK Web, a
 | SDK simplifié unique |  |
 | Réseau de collecte de données global |  |
 | Consentement acquis du cours |  |
-| Chaînes de consentement IAB 2.0 | [Prise en charge du TCF 2.0 de l’IAB](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/iab-tcf/overview.html?lang=en#consent) |
-| Collecter le consentement éclairé | [Intégration du SDK Web avec le consentement Adobe 2.0](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html#prerequisites) |
+| Collecter le consentement des clients selon diverses normes | <ul><li>[Prise en charge du consentement Adobe 2.0](../../landing/governance-privacy-security/consent/adobe/overview.md)</li><li>[Prise en charge du TCF 2.0 de l’IAB](../../landing/governance-privacy-security/consent/iab/overview.md)</li><li>[Intégration du SDK pour envoyer des signaux de consentement au réseau Edge](../../landing/governance-privacy-security/consent/sdk.md)</li></ul> |
 | Prise en charge ECID | Pour plus d’informations sur la récupération de l’ECID, consultez notre documentation [ici](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#first-party-identity) et [ici](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/accessing-the-ecid.html?lang=en#extension) |
 | Collecter plusieurs entités |  |
 | Prise en charge de Device Graph (public/privé) | [Documentation](https://experienceleague.adobe.com/docs/analytics/components/cda/device-graph.html?lang=en) |
-| Envoi de données à plusieurs organisations sur la page | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
+| Envoi de données à plusieurs organisations sur la page | [Documentation](./interacting-with-multiple-properties.md) |
 | Rapports et logs d’erreur détaillés |  |
 | Demandes de suivi côté client et côté serveur |  |
 | extension de balise | [Documentation sur l’extension SDK Web](../../tags/extensions/web/sdk/overview.md) |
@@ -39,10 +38,10 @@ Cette page répertorie les cas d’utilisation pris en charge pour le SDK Web, a
 | Exemple d’utilisation | Plus d’informations |
 | --- | --- |
 | Envoi d’événements d’expérience |  |
-| Offer Decisioning | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
+| Offer Decisioning | [Documentation](../personalization/offer-decisioning/offer-decisioning-overview.md) |
 | Si le jeu de données est activé pour le profil, possibilité d’envoyer des données à Real-time Customer Data Profile en temps réel |  |
 | Envoi de données à Customer Journey Analytics en temps réel |  |
-| Consentement en écriture sur le profil | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
+| Consentement en écriture sur le profil | [Documentation](../../landing/governance-privacy-security/consent/sdk.md) |
 | Transfert des données côté serveur en temps réel vers des tiers | [Documentation](../../tags/ui/event-forwarding/overview.md) |
 | Prise en charge des espaces de noms d’identité |  |
 
@@ -59,14 +58,14 @@ Cette page répertorie les cas d’utilisation pris en charge pour le SDK Web, a
 | Props, eVars et événements |  |
 | Prise en charge de ListVar pour Adobe Analytics |  |
 | Version du système d’exploitation et du navigateur |  |
-| Variables d’usine | [Variables mappées automatiquement](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars.html?lang=en#data-collection) |
+| Variables d’usine | [Variables mappées automatiquement](../data-collection/adobe-analytics/automatically-mapped-vars.md) |
 | Règles VISTA/règles de traitement |  |
 | Prise en charge des attributs du visiteur |  |
 | Prise en charge des liens de sortie |  |
 | Liens personnalisés/liens de téléchargement |  |
 | Tracking de l’état et de l’action |  |
 | Sérialisation d’événements pour les événements standard |  |
-| Variable products | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=en#actions-related-to-products) |
+| Variable products | [Documentation](../data-collection/collect-commerce-data.md#actions-related-to-products) |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -75,10 +74,10 @@ Cette page répertorie les cas d’utilisation pris en charge pour le SDK Web, a
 | Exemple d’utilisation | Plus d’informations |
 | --- | --- |
 | Tous les types d’activité |  |
-| Prise en charge du compositeur d’expérience visuelle natif et SPA | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html?lang=en#personalization) |
+| Prise en charge du compositeur d’expérience visuelle natif et SPA | [Documentation](../personalization/adobe-target/spa-implementation.md) |
 | Compositeur d’après les formulaires |  |
-| Prise en charge de la mbox globale | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) |
-| Mbox personnalisées | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#manually-rendering-content) |
+| Prise en charge de la mbox globale | [Documentation](../personalization/rendering-personalization-content.md#automatically-rendering-content) |
+| Mbox personnalisées | [Documentation](../personalization/rendering-personalization-content.md#manually-rendering-content) |
 | Analytics for Target (A4T) |  |
 | Prise en charge de l’environnement |  |
 | Prise en charge de Workspace |  |
@@ -88,10 +87,10 @@ Cette page répertorie les cas d’utilisation pris en charge pour le SDK Web, a
 | Scripts de profil |  |
 | XDM devient des paramètres de mbox |  |
 | Offres de redirection prises en charge par les rapports A4T | [Documentation](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
-| Mise à jour du profil Target | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| Mise à jour du profil Target | [Documentation](../personalization/adobe-target/target-overview.md#single-profile-update) |
 | Recommandations |  |
 | Identifiant tiers mBox |  |
-| Jetons de réponse | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
+| Jetons de réponse | [Documentation](../personalization/adobe-target/accessing-response-tokens.md) |
 
 {style=&quot;table-layout:auto&quot;}
 
