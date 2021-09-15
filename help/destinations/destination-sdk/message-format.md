@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: Format du message
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
+source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1972'
 ht-degree: 3%
 
 ---
@@ -779,7 +779,7 @@ La `json` ci-dessous représente les données exportées depuis Adobe Experience
 
 Lorsque vous utilisez [l’agrégation configurable](./destination-configuration.md#configurable-aggregation) dans la configuration de destination, vous pouvez modifier le modèle de transformation des messages pour regrouper les profils exportés vers votre destination en fonction de critères tels que l’identifiant du segment, l’alias du segment, l’appartenance au segment ou les espaces de noms d’identité, comme illustré dans les exemples ci-dessous.
 
-#### Exemple d’utilisation de la clé d’agrégation des identifiants de segment dans le modèle {#aggregation-key-segment-id}
+#### Utiliser la clé d’agrégation des identifiants de segment dans le modèle {#aggregation-key-segment-id}
 
 Si vous utilisez [l’agrégation configurable](./destination-configuration.md#configurable-aggregation) et définissez `includeSegmentId` sur true, vous pouvez utiliser `segmentId` dans le modèle pour regrouper les profils dans les messages HTTP exportés vers votre destination :
 
@@ -942,7 +942,7 @@ Lorsqu’ils sont exportés vers votre destination, les profils sont divisés en
 }
 ```
 
-#### Exemple d&#39;utilisation de la clé d&#39;agrégation des alias de segment dans le modèle {#aggregation-key-segment-alias}
+#### Utiliser la clé d’agrégation des alias de segment dans le modèle {#aggregation-key-segment-alias}
 
 Si vous utilisez [l’agrégation configurable](./destination-configuration.md#configurable-aggregation) et définissez `includeSegmentId` sur true, vous pouvez utiliser l’alias de segment dans le modèle pour regrouper les profils dans les messages HTTP exportés vers votre destination.
 
@@ -952,7 +952,7 @@ Ajoutez la ligne ci-dessous au modèle pour regrouper les profils exportés en f
 "customerList={{input.aggregationKey.segmentAlias}}"
 ```
 
-#### Exemple d’utilisation de la clé d’agrégation de l’état du segment dans le modèle {#aggregation-key-segment-status}
+#### Utiliser la clé d’agrégation de l’état du segment dans le modèle {#aggregation-key-segment-status}
 
 Si vous utilisez [l’agrégation configurable](./destination-configuration.md#configurable-aggregation) et définissez `includeSegmentId` et `includeSegmentStatus` sur true, vous pouvez utiliser l’état du segment dans le modèle pour regrouper les profils dans les messages HTTP exportés vers votre destination selon que les profils doivent être ajoutés ou supprimés des segments.
 
@@ -968,7 +968,7 @@ Ajoutez la ligne ci-dessous au modèle pour ajouter ou supprimer des profils des
 "action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
 ```
 
-#### Exemple d’utilisation de la clé d’agrégation d’espaces de noms d’identité dans le modèle {#aggregation-key-identity}
+#### Utiliser la clé d’agrégation de l’espace de noms d’identité dans le modèle {#aggregation-key-identity}
 
 Vous trouverez ci-dessous un exemple dans lequel l’[agrégation configurable](./destination-configuration.md#configurable-aggregation) dans la configuration de destination est définie pour agréger les profils exportés par espaces de noms d’identité, sous la forme `"identityNamespaces": ["email", "phone"]`
 
@@ -1071,7 +1071,7 @@ La `json` ci-dessous représente les données exportées depuis Adobe Experience
 }
 ```
 
-#### Exemple d&#39;utilisation de la clé d&#39;agrégation dans un modèle d&#39;URL
+#### Utiliser la clé d&#39;agrégation dans un modèle d&#39;URL
 
 Notez que selon votre cas d’utilisation, vous pouvez également utiliser les clés d’agrégation décrites ici dans une URL, comme illustré ci-dessous :
 
