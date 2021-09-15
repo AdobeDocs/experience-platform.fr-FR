@@ -2,9 +2,9 @@
 description: Cette configuration vous permet d’indiquer des informations de base telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur Experience Platform et les identités qui peuvent être exportées vers votre destination.
 title: Options de configuration de destination pour le SDK de destination
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1557'
 ht-degree: 5%
 
 ---
@@ -247,6 +247,8 @@ Cette section vous permet de définir les stratégies d’agrégation que l’Ex
 Une stratégie d’agrégation détermine la manière dont les profils exportés sont combinés dans les exportations de données. Les options disponibles sont les suivantes :
 * Agrégation des meilleurs efforts
 * Agrégation configurable (affichée dans la configuration ci-dessus)
+
+Lisez la section sur [à l’aide du modèle](./message-format.md#using-templating) et des [exemples de clés d’agrégation](./message-format.md#template-aggregation-key) pour comprendre comment inclure la stratégie d’agrégation dans votre modèle de transformation de messages en fonction de la stratégie d’agrégation que vous avez sélectionnée.
 
 ### Agrégation des meilleurs efforts {#best-effort-aggregation}
 

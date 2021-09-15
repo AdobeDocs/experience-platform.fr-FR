@@ -3,9 +3,10 @@ description: Utilisez le contenu de cette page avec le reste des options de conf
 seo-description: Use the content on this page together with the rest of the configuration options for partner destinations. This page addresses the messaging format of data exported from Adobe Experience Platform to destinations, while the other page addresses specifics about connecting and authenticating to your destination.
 seo-title: Message format
 title: Format du message
-source-git-commit: d60933d2083b7befcfa8beba4b1630f372c08cfa
+exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1982'
 ht-degree: 3%
 
 ---
@@ -93,17 +94,15 @@ Cette section fournit plusieurs exemples de la manière dont ces transformations
 
 1. Exemples de transformation simples. Découvrez comment le modèle fonctionne avec des transformations simples pour les attributs de profil [](./message-format.md#attributes), [Appartenance au segment](./message-format.md#segment-membership) et les champs [Identité](./message-format.md#identities).
 2. Exemples de modèles plus complexes combinant les champs ci-dessus : [Créez un modèle qui envoie des segments et des identités](./message-format.md#segments-and-identities) et [Créez un modèle qui envoie des segments, des identités et des attributs de profil](./message-format.md#segments-identities-attributes).
-3. Exploration approfondie, montrant deux exemples de modèles de partenaires de l’industrie.
+3. Les modèles de incluent la clé d’agrégation. Lorsque vous utilisez [l’agrégation configurable](./destination-configuration.md#configurable-aggregation) dans la configuration de destination, l’Experience Platform regroupe les profils exportés vers votre destination en fonction de critères tels que l’identifiant de segment, l’état du segment ou les espaces de noms d’identité.
 
 ### Attributs de profil {#attributes}
 
 Pour transformer les attributs de profil exportés vers votre destination, reportez-vous aux exemples de code et JSON ci-dessous.
 
-
 >[!IMPORTANT]
 >
 >Pour obtenir la liste de tous les attributs de profil disponibles dans Adobe Experience Platform, consultez le [dictionnaire de champs XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
-
 
 
 **Entrée**
@@ -776,7 +775,311 @@ La `json` ci-dessous représente les données exportées depuis Adobe Experience
 }
 ```
 
-### Référence : Contexte et fonctions utilisés dans les modèles de transformation
+### Inclure la clé d’agrégation dans votre modèle pour regrouper les profils exportés selon différents critères {#template-aggregation-key}
+
+Lorsque vous utilisez [l’agrégation configurable](./destination-configuration.md#configurable-aggregation) dans la configuration de destination, vous pouvez modifier le modèle de transformation des messages pour regrouper les profils exportés vers votre destination en fonction de critères tels que l’identifiant du segment, l’alias du segment, l’appartenance au segment ou les espaces de noms d’identité, comme illustré dans les exemples ci-dessous.
+
+#### Exemple d’utilisation de la clé d’agrégation des identifiants de segment dans le modèle {#aggregation-key-segment-id}
+
+Si vous utilisez [l’agrégation configurable](./destination-configuration.md#configurable-aggregation) et définissez `includeSegmentId` sur true, vous pouvez utiliser `segmentId` dans le modèle pour regrouper les profils dans les messages HTTP exportés vers votre destination :
+
+**Entrée**
+
+Tenez compte des quatre profils ci-dessous, où les deux premiers font partie du segment avec l’ID de segment `788d8874-8007-4253-92b7-ee6b6c20c6f3` et les deux autres font partie du segment avec l’ID de segment `8f812592-3f06-416b-bd50-e7831848a31a`.
+
+Profil 1 :
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Hermione"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Profil 2 :
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Harry"
+      },
+      "birthDate":{
+         "value":"1980/07/31"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Profil 3 :
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Tom"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Profil 4 :
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Jerry"
+      },
+      "birthDate":{
+         "value":"1940/01/01"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+**Modèle**
+
+>[!IMPORTANT]
+>
+>Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+
+```python
+{
+    "profiles": [
+        {% for profile in input.profiles %}
+        {
+            {% for attribute in profile.attributes %}
+            "{{ attribute.key }}":
+                {% if attribute.value is empty %}
+                    null
+                {% else %}
+                    "{{ attribute.value.value }}"
+                {% endif %}
+            {% if not loop.last %},{% endif %}
+            {% endfor %}
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+    "audienceId": "{{input.aggregationKey.segmentId}}"
+}
+```
+
+**Résultat**
+
+Lorsqu’ils sont exportés vers votre destination, les profils sont divisés en deux groupes, en fonction de leur identifiant de segment.
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Hermione",
+            "birthDate": null
+        },
+        {
+            "firstName": "Harry",
+            "birthDate": "1980/07/31"
+        }
+    ],
+    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+}
+```
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Tom",
+            "birthDate": null
+        },
+        {
+            "firstName": "Jerry",
+            "birthDate": "1940/01/01"
+        }
+    ],
+    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+}
+```
+
+#### Exemple d&#39;utilisation de la clé d&#39;agrégation des alias de segment dans le modèle {#aggregation-key-segment-alias}
+
+Si vous utilisez [l’agrégation configurable](./destination-configuration.md#configurable-aggregation) et définissez `includeSegmentId` sur true, vous pouvez utiliser l’alias de segment dans le modèle pour regrouper les profils dans les messages HTTP exportés vers votre destination.
+
+Ajoutez la ligne ci-dessous au modèle pour regrouper les profils exportés en fonction de l’alias du segment.
+
+```python
+"customerList={{input.aggregationKey.segmentAlias}}"
+```
+
+#### Exemple d’utilisation de la clé d’agrégation de l’état du segment dans le modèle {#aggregation-key-segment-status}
+
+Si vous utilisez [l’agrégation configurable](./destination-configuration.md#configurable-aggregation) et définissez `includeSegmentId` et `includeSegmentStatus` sur true, vous pouvez utiliser l’état du segment dans le modèle pour regrouper les profils dans les messages HTTP exportés vers votre destination selon que les profils doivent être ajoutés ou supprimés des segments.
+
+Les valeurs possibles sont les suivantes :
+
+* réalisé
+* existant
+* exited
+
+Ajoutez la ligne ci-dessous au modèle pour ajouter ou supprimer des profils des segments, en fonction des valeurs ci-dessus.:
+
+```python
+"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+```
+
+#### Exemple d’utilisation de la clé d’agrégation d’espaces de noms d’identité dans le modèle {#aggregation-key-identity}
+
+Vous trouverez ci-dessous un exemple dans lequel l’[agrégation configurable](./destination-configuration.md#configurable-aggregation) dans la configuration de destination est définie pour agréger les profils exportés par espaces de noms d’identité, sous la forme `"identityNamespaces": ["email", "phone"]`
+
+**Entrée**
+
+Profil 1 :
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e1@example.com"
+         },
+         {
+            "id":"e2@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744111222"
+         }
+      ]
+   }
+}
+```
+
+Profil 2 :
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e3@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744333444"
+         },
+         {
+            "id":"+40744555666"
+         }
+      ]
+   }
+}
+```
+
+**Modèle**
+
+>[!IMPORTANT]
+>
+>Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+
+```python
+{
+            "profiles": [
+            {% for profile in input.profiles %}
+            {
+                {% for ns in input.aggregationKey.identityNamespaces %}
+                "{{ns}}": [
+                    {% for id in profile.identityMap[ns] %}
+                    "{{id.id}}"{% if not loop.last %},{% endif %}
+                    {% endfor %}
+                ]{% if not loop.last %},{% endif %}
+                {% endfor %}
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+}
+```
+
+**Résultat**
+
+La `json` ci-dessous représente les données exportées depuis Adobe Experience Platform.
+
+```json
+{
+   "profiles":[
+      {
+         "email":[
+            "e1@example.com",
+            "e2@example.com"
+         ],
+         "phone":[
+            "+40744111222"
+         ]
+      },
+      {
+         "email":[
+            "e3@example.com"
+         ],
+         "phone":[
+            "+40744333444",
+            "+40744555666"
+         ]
+      }
+   ]
+}
+```
+
+#### Exemple d&#39;utilisation de la clé d&#39;agrégation dans un modèle d&#39;URL
+
+Notez que selon votre cas d’utilisation, vous pouvez également utiliser les clés d’agrégation décrites ici dans une URL, comme illustré ci-dessous :
+
+```python
+https://api.example.com/audience/{{input.aggregationKey.segmentId}}
+```
+
+### Référence : Contexte et fonctions utilisés dans les modèles de transformation {#reference}
 
 Le contexte fourni au modèle contient `input` (les profils/données exportés dans cet appel) et `destination` (les données sur la destination vers laquelle l’Adobe envoie des données, valides pour tous les profils).
 
