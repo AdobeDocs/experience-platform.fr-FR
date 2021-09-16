@@ -4,9 +4,9 @@ title: Guide de l’interface utilisateur de Real-time Customer Profile
 topic-legacy: guide
 description: Real-time Customer Profile offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: ad5690997b079dbc064775ef1c4fdbe3770ff424
+source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1568'
 ht-degree: 13%
 
 ---
@@ -75,15 +75,21 @@ Tout comme la mesure [nombre de profils](#profile-count), lorsque l’ingestion 
 
 Dans l’onglet **[!UICONTROL Parcourir]**, vous pouvez afficher des exemples de profils à l’aide d’une stratégie de fusion ou rechercher des profils spécifiques à l’aide d’un espace de noms et d’une valeur d’identité.
 
-![](../images/user-guide/browse-by-dropdown.png)
+![](../images/user-guide/browse-by-none-selected.png)
 
 ### Parcourir par [!UICONTROL Stratégie de fusion]
 
-Le sélecteur **[!UICONTROL Parcourir par]** est défini sur [!UICONTROL Stratégie de fusion] par défaut et la **[!UICONTROL Stratégie de fusion]** sélectionnée est la stratégie de fusion par défaut de votre organisation.
+L’onglet **[!UICONTROL Parcourir]** est défini par défaut sur la stratégie de fusion par défaut pour votre organisation. Pour choisir une autre stratégie de fusion, sélectionnez `X` en regard du nom de la stratégie de fusion, puis utilisez le sélecteur pour ouvrir la boîte de dialogue **[!UICONTROL Sélectionner une stratégie de fusion]**.
 
-Pour en savoir plus sur les stratégies de fusion et leur rôle dans Platform, consultez la [présentation des stratégies de fusion](../merge-policies/overview.md).
+>[!NOTE]
+>
+>Si aucune stratégie de fusion n’est sélectionnée, utilisez le bouton de sélecteur situé en regard du champ **[!UICONTROL Stratégie de fusion]** pour ouvrir la boîte de dialogue de sélection.
 
 ![](../images/user-guide/browse-by-merge-policy.png)
+
+Pour choisir une stratégie de fusion dans la boîte de dialogue **[!UICONTROL Sélectionner une stratégie de fusion]**, cliquez sur le bouton radio en regard du nom de la stratégie, puis utilisez **[!UICONTROL Sélectionner]** pour revenir à l’onglet [!UICONTROL Parcourir]. Vous pouvez ensuite sélectionner **[!UICONTROL Afficher]** pour actualiser les exemples de profils et voir un échantillon de profils avec la nouvelle stratégie de fusion appliquée.
+
+![](../images/user-guide/select-merge-policy-dialog.png)
 
 Les profils affichés représentent un échantillon de 20 profils au maximum de la banque de profils de votre entreprise, une fois la stratégie de fusion sélectionnée appliquée. Les exemples de profils pour la stratégie de fusion sélectionnée sont actualisés lorsque de nouvelles données sont ajoutées à la banque de profils de votre organisation.
 
@@ -91,21 +97,16 @@ Pour afficher les détails de l’un des exemples de profils, sélectionnez l’
 
 ![](../images/user-guide/sample-profiles.png)
 
-Pour choisir une autre stratégie de fusion, sélectionnez `X` en regard du nom de la stratégie de fusion, puis utilisez le sélecteur pour ouvrir la boîte de dialogue **[!UICONTROL Sélectionner une stratégie de fusion]**.
+Pour en savoir plus sur les stratégies de fusion et leur rôle dans Platform, consultez la [présentation des stratégies de fusion](../merge-policies/overview.md).
 
-![](../images/user-guide/merge-policy-select.png)
-
-Pour choisir une stratégie de fusion dans la boîte de dialogue **[!UICONTROL Sélectionner une stratégie de fusion]**, cliquez sur le bouton radio en regard du nom de la stratégie, puis utilisez **[!UICONTROL Sélectionner]** pour revenir à l’onglet [!UICONTROL Parcourir]. Vous pouvez ensuite sélectionner **[!UICONTROL Afficher]** pour actualiser les exemples de profils et voir un échantillon de profils avec la nouvelle stratégie de fusion appliquée.
-
-![](../images/user-guide/select-merge-policy-dialog.png)
 
 ### Parcourir par [!UICONTROL Identité]
 
-À l’aide du sélecteur **[!UICONTROL Parcourir par]**, vous pouvez choisir [!UICONTROL Identité] afin de rechercher un profil spécifique par une valeur d’identité. Pour naviguer selon une identité, vous devez également fournir une stratégie de fusion, un espace de noms d’identité et une valeur d’identité.
+Dans l’onglet **[!UICONTROL Parcourir]**, vous pouvez utiliser un espace de noms d’identité afin de rechercher un profil spécifique en fonction d’une valeur d’identité. Pour naviguer selon une identité, vous devez fournir une stratégie de fusion, un espace de noms d’identité et une valeur d’identité.
 
 ![](../images/user-guide/browse-by-identity.png)
 
-Utilisez le sélecteur **[!UICONTROL Stratégie de fusion]** pour ouvrir la boîte de dialogue **[!UICONTROL Sélectionner une stratégie de fusion]** et sélectionnez la stratégie de fusion que vous souhaitez utiliser.
+Si nécessaire, utilisez le sélecteur **[!UICONTROL Stratégie de fusion]** pour ouvrir la boîte de dialogue **[!UICONTROL Sélectionner une stratégie de fusion]** et sélectionnez la stratégie de fusion que vous souhaitez utiliser.
 
 ![](../images/user-guide/select-merge-policy-dialog.png)
 
