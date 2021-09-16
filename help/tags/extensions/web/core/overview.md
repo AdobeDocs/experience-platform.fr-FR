@@ -2,10 +2,10 @@
 title: Présentation de l’extension Core
 description: Découvrez l’extension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
 workflow-type: tm+mt
-source-wordcount: '5130'
-ht-degree: 95%
+source-wordcount: '5257'
+ht-degree: 93%
 
 ---
 
@@ -708,6 +708,61 @@ Indiquez le nom de votre élément de stockage local dans le champ Local Storage
 Le stockage local permet aux navigateurs de stocker des informations d’une page à l’autre ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Le stockage local est très similaire aux cookies, mais est beaucoup plus volumineux et plus souple.
 
 Utilisez le champ fourni pour spécifier la valeur que vous avez créée pour un élément de stockage local, comme `lastProductViewed.`
+
+### Objets fusionnés
+
+Sélectionnez plusieurs éléments de données qui fourniront chacun un objet. Ces objets seront profondément (récursivement) fusionnés pour produire un nouvel objet. Les objets source ne seront pas modifiés. Si une propriété se trouve au même emplacement sur plusieurs objets source, la valeur de ce dernier objet est utilisée. Si la valeur d’une propriété source est `undefined`, elle ne remplacera pas une valeur d’un objet source précédent. Si des tableaux se trouvent au même emplacement sur plusieurs objets source, ils seront concaténés.
+
+Par exemple, supposons que vous sélectionniez un élément de données qui fournit l’objet suivant :
+
+```
+{
+  "sport": {
+    "name": "tennis"
+  },
+  "dessert": "ice cream",
+  "fruits": [
+    "apple",
+    "banana"
+  ]
+}
+```
+
+Supposons que vous sélectionniez également un autre élément de données qui fournit l’objet suivant :
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": undefined,
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "cherry",
+    "duku"
+  ]
+}
+```
+
+Le résultat de l’élément de données Objets fusionnés est l’objet suivant :
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": "ice cream",
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "apple",
+    "banana",
+    "cherry",
+    "duku"
+  ]
+}
+```
 
 ### Informations sur la page
 
