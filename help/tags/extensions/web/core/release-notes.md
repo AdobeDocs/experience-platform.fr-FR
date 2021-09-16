@@ -1,10 +1,11 @@
 ---
 title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
-source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
-workflow-type: ht
-source-wordcount: '1293'
-ht-degree: 100%
+exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+workflow-type: tm+mt
+source-wordcount: '1417'
+ht-degree: 91%
 
 ---
 
@@ -13,6 +14,18 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+
+## 16 septembre 2021
+
+v3.1.0
+
+De nouveaux éléments de données ont été ajoutés :
+
+* Objet fusionné : sélectionnez plusieurs éléments de données qui fourniront chacun un objet. Ces objets seront profondément (récursivement) fusionnés pour produire un nouvel objet.
+* Valeur conditionnelle : renvoie l’une des deux valeurs (conditionnelleValue ou fallbackValue) en fonction du résultat de la comparaison.
+* Environnement d’exécution : renvoie l’une des variables d’environnement Launch suivantes : étape d’environnement, date de version de bibliothèque, nom de propriété, ID de propriété, nom de règle, identifiant de règle, type d’événement, charge utile détaillée d’événement, identifiant d’appel direct.
+* Outils JavaScript - wrapper pour les opérations JavaScript courantes : manipulation de chaîne de base (remplacement, sous-chaîne, correspondance regex, premier et dernier index, division, tranche), opérations de tableau de base (tranche, jointure, pop, décalage) et opérations universelles de base (tranche, longueur).
+* Attributs de périphérique : renvoie les attributs de périphérique tels que la taille de fenêtre ou la taille d’écran.
 
 ## 11 août 2021
 
@@ -49,7 +62,7 @@ v2.0.4
 
 * Ajout de la prise en charge des éléments de données dans plusieurs champs - La prise en charge des éléments de données a été ajoutée aux événements suivants : « Temps sur la page », « Entrée dans la fenêtre dʼaffichage », « Survol » et « Temps de lecture du média ». En plus des conditions suivantes : « Temps sur le site » et « Comparaison de valeur »
 * Ajout de la prise en charge du comportement par défaut pour Ctrl/Cmd + Clic et pour le clic central de la souris lors de lʼutilisation du délai de lien
-* **Le délai de lien avec lʼévénement Clic « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de la collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) pour Adobe Experience Platform.
+* **Le délai de lien avec lʼévénement Clic « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) pour Adobe Experience Platform.
 
 ## 6 janvier 2021
 
@@ -113,7 +126,7 @@ v1.6.2
 
 v1.6.1
 
-* **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. S’il est configuré, tous les scripts intégrés qu’une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge lʼutilisation dʼune stratégie de sécurité du contenu (CSP) avec une valeur à usage unique afin que les scripts de balises puissent toujours se charger dans un environnement CSP. Pour en savoir plus sur lʼutilisation des balises avec une stratégie de sécurité du contenu, [cliquez ici](../../../ui/client-side/content-security-policy.md).
+* **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. S’il est configuré, tous les scripts intégrés qu&#39;une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge lʼutilisation dʼune stratégie de sécurité du contenu (CSP) avec une valeur à usage unique afin que les scripts de balises puissent toujours se charger dans un environnement CSP. Pour en savoir plus sur lʼutilisation des balises avec une stratégie de sécurité du contenu, [cliquez ici](../../../ui/client-side/content-security-policy.md).
 
 ## 18 juin 2019
 
@@ -141,8 +154,8 @@ v1.4.2
 ## 8 novembre 2018
 
 * **Option Persist Cohort** : l’option de conservation d’une cohorte a été ajoutée à la condition de l’échantillonnage. Cela a pour effet de conserver un utilisateur dans ou hors de la cohorte de l’échantillon d’une session à l’autre. Par exemple, si la case Conserver la cohorte est cochée et que la condition renvoie vrai lors de sa première exécution pour un visiteur donné, elle renvoie vrai sur toutes les exécutions suivantes de la condition pour le même visiteur. De même, si la case Conserver la cohorte est cochée et que la condition renvoie faux lors de sa première exécution pour un visiteur donné, elle renvoie faux sur toutes les exécutions suivantes de la condition pour le même visiteur.
-* **Correction de bugs** : correction d’un bug qui effaçait le contenu du site web lorsqu’une règle utilisant un événement Page Bottom (Bas de page) et une action Custom Code (Code personnalisé) sur une page où les balises étaient chargées de manière synchrone mais installées de manière incorrecte (aucun appel à `_satellite.pageBottom()`).
-* **Correction de bugs** : correction d’un bug entraînant le dysfonctionnement de l’événement Enters Viewport lorsque la bibliothèque de balises était chargée de manière asynchrone et que le chargement se terminait après que le navigateur déclenche l’événement DOMContentLoaded.
+* **Correctif** : correction d’un bug par lequel une règle utilisant un événement Page Bottom et une action Custom Code (Code personnalisé) sur une page où les balises étaient chargées de manière synchrone, mais installées de manière incorrecte (aucun appel à `_satellite.pageBottom()`) effaçait le contenu du site Web.
+* **Correctif** - Correction d’un bug entraînant le dysfonctionnement de l’événement Enters Viewport lorsque la bibliothèque de balises était chargée de manière asynchrone et que son chargement se terminait après le renvoi de l’événement DOMContentLoaded du navigateur.
 
 ## 24 mai 2018
 

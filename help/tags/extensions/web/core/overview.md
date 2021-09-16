@@ -1,10 +1,11 @@
 ---
 title: Présentation de l’extension Core
-description: Découvrez lʼextension de balise Core dans Adobe Experience Platform.
-source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
-workflow-type: ht
-source-wordcount: '4905'
-ht-degree: 100%
+description: Découvrez l’extension de balise Core dans Adobe Experience Platform.
+exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+workflow-type: tm+mt
+source-wordcount: '5130'
+ht-degree: 95%
 
 ---
 
@@ -14,158 +15,158 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Lʼextension de balise Core est lʼextension par défaut disponible avec Adobe Experience Platform.
+L’extension de balise Core est l’extension par défaut disponible avec Adobe Experience Platform.
 
-Ce document fournit des informations sur les options disponibles lors de lʼutilisation de lʼextension Core pour créer une règle.
+Ce document fournit des informations sur les options disponibles lors de l’utilisation de l’extension Core pour créer une règle.
 
 ## Types d’événements de l’extension Core {#core-extension-event-types}
 
-Cette section décrit les types d’événements disponibles dans l’extension Core. Pour plus dʼinformations sur les options pouvant être définies pour plusieurs types dʼévénements différents, reportez-vous à la section [Options](#options).
+Cette section décrit les types d’événements disponibles dans l’extension Core. Pour plus d’informations sur les options pouvant être définies pour plusieurs types d’événements différents, voir la section [Options](#options).
 
 ### Événements basés sur le navigateur
 
 #### Tab Blur
 
-Lʼévénement Onglet flou déclenche lʼaction lorsquʼun onglet nʼest plus actif. Il n’existe aucun paramètre pour ce type d’événement.
+L’événement tab-blur déclenche l’action lorsqu’un onglet perd le focus. Il n’existe aucun paramètre pour ce type d’événement.
 
 #### Tab Focus
 
-Lʼévénement Onglet actif déclenche lʼaction lorsquʼun onglet devient actif. Il n’existe aucun paramètre pour ce type d’événement.
+L’événement tab-focus déclenche l’action lorsqu’un onglet reçoit le focus. Il n’existe aucun paramètre pour ce type d’événement.
 
 ### Form
 
 #### Blur
 
-Lʼévénement Flou déclenche lʼaction lorsquʼun formulaire nʼest plus actif. Pour plus dʼinformations sur les paramètres dʼévénements personnalisables, reportez-vous à la section [Options](#options).
+L’événement blur déclenche l’action lorsqu’un formulaire perd le focus. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
 #### Focus
 
-Lʼévénement Actif déclenche lʼaction lorsquʼun formulaire devient actif. Pour plus dʼinformations sur les paramètres dʼévénements personnalisables, reportez-vous à la section [Options](#options).
+L’événement focus déclenche l’action lorsqu’un formulaire reçoit le focus. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
-#### Envoyer
+#### Submit
 
-Lʼévénement Envoi déclenche lʼaction lors de lʼenvoi dʼun formulaire. Pour plus dʼinformations sur les paramètres dʼévénements personnalisables, reportez-vous à la section [Options](#options).
+L’événement submit déclenche l’action lors de l’envoi d’un formulaire. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
 ### Événements contrôlés par le clavier
 
-#### Appui sur une touche
+#### Key Press
 
-Lʼévénement se déclenche lorsquʼune touche est enfoncée. Pour plus dʼinformations sur les paramètres dʼévénements personnalisables, reportez-vous à la section [Options](#options).
+L’événement se déclenche lorsqu’une touche est enfoncée. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
-### Événements basés sur le fichier multimédia
+### Événements basés sur un média
 
-#### Fin du média
+#### Media Ended
 
-Lʼévénement se déclenche lorsque le fichier multimédia se termine. Pour plus dʼinformations sur les paramètres dʼévénements personnalisables, reportez-vous à la section [Options](#options).
+L’événement se déclenche lorsque le média prend fin. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
-#### Données chargées sur le fichier multimédia
+#### Données chargées par le média
 
-Lʼévénement se déclenche lorsque le fichier multimédia charge des données. Pour plus dʼinformations sur les paramètres dʼévénements personnalisables, reportez-vous à la section [Options](#options).
+L’événement est déclenché lorsque le fichier multimédia charge des données. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
-#### Pause du média
+#### Media Pause
 
-Lʼévénement se déclenche lorsque le fichier multimédia est en pause. Pour plus dʼinformations sur les paramètres dʼévénements personnalisables, reportez-vous à la section [Options](#options).
+L’événement se déclenche lorsque le fichier multimédia est en pause. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
-#### Lecture du média
+#### Media Play
 
-Lʼévénement se déclenche lors de la lecture du fichier multimédia. Pour plus dʼinformations sur les paramètres dʼévénements personnalisables, reportez-vous à la section [Options](#options).
+L’événement est déclenché lors de la lecture du fichier multimédia. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
-#### Média bloqué
+#### Media Stalled
 
-Lʼévénement se déclenche si le fichier multimédia se bloque. Pour plus dʼinformations sur les paramètres dʼévénements personnalisables, voir la section [Options](#options).
+L’événement se déclenche si le média se bloque. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
 #### Durée de lecture du fichier multimédia
 
-Lʼévénement se déclenche si le fichier multimédia est lu pendant une durée spécifiée. Pour déclencher lʼévénement, vous devez spécifier la durée de lecture du média. Pour plus dʼinformations sur les paramètres dʼévénements personnalisables, voir la section [Options](#options).
+L’événement se déclenche si le fichier multimédia est lu pendant une durée spécifiée. Pour déclencher l’événement, vous devez spécifier la durée de lecture du fichier multimédia. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
 
 #### Modification du volume du fichier multimédia
 
-Lʼévénement se déclenche si le volume est augmenté ou réduit. Pour plus dʼinformations sur les paramètres dʼévénements personnalisables, voir la section [Options](#options).
+L’événement se déclenche en cas d&#39;augmentation ou de réduction de volume. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
-### Événements orientés vers les appareils mobiles
+### Événements orientés appareil mobile
 
-#### Modification de l’orientation
+#### Orientation Change
 
-Lʼévénement se déclenche si lʼorientation de lʼappareil change. Pour déclencher lʼévénement, vous devez spécifier la durée pendant laquelle lʼorientation doit changer. Il n’existe aucun paramètre pour ce type d’événement.
+L’événement se déclenche s’il y a modification de l’orientation de l’appareil. Pour déclencher l’événement, vous devez spécifier la durée pendant laquelle la modification d’orientation doit se produire. Il n’existe aucun paramètre pour ce type d’événement.
 
-#### Modification du zoom
+#### Zoom Change
 
-Lʼévénement se déclenche si lʼutilisateur effectue un zoom avant ou arrière. Il n’existe aucun paramètre pour ce type d’événement.
+L’événement se déclenche si l’utilisateur effectue un zoom avant ou arrière. Il n’existe aucun paramètre pour ce type d’événement.
 
 ### Événements contrôlés par la souris
 
-#### Clic
+#### Click
 
-Lʼévénement se déclenche si lʼélément spécifié est sélectionné (clic). Vous pouvez éventuellement spécifier des valeurs de propriété qui doivent être vraies pour l’élément avant que l’événement ne soit déclenché.
+L’événement se déclenche si l’élément spécifié est sélectionné (par un clic). Vous pouvez éventuellement spécifier des valeurs de propriété qui doivent être vraies pour l’élément avant que l’événement ne soit déclenché.
 
-Si lʼélément est une balise dʼancrage (`<a>`) vers du contenu lié, vous pouvez également indiquer si la navigation doit être retardée pendant une certaine période. Cela peut sʼavérer utile si votre règle nécessite un délai dʼexécution supplémentaire et nʼest normalement pas terminée avant que la page ne sʼouvre.
+Si lʼélément est une balise de type ancre (`<a>`) de lien vers un contenu, vous pouvez également indiquer si la navigation doit être retardée pendant un certain intervalle de temps. Cela peut sʼavérer utile si votre règle nécessite un délai dʼexécution supplémentaire et nʼest normalement pas terminée avant que la page ne sʼouvre.
 
 >[!WARNING]
 >
 >Cette option doit être utilisée avec une extrême prudence en raison des conséquences négatives potentielles quʼelle peut entraîner pour lʼexpérience utilisateur si elle est mal utilisée.
 
-Lorsque vous utilisez un délai de lien, Platform empêche le navigateur de quitter la page. Platform effectue ensuite une redirection JavaScript vers la destination dʼorigine après le délai dʼexpiration spécifié. C’est particulièrement risqué lorsque le balisage de votre page comporte des balises `<a>` où la fonctionnalité prévue ne permet pas de rediriger l’utilisateur en dehors de la page. S’il vous est impossible de résoudre ce problème d’une autre manière, soyez extrêmement précis quant à la définition de votre sélecteur afin que cet événement se déclenche exactement là où vous en avez besoin et nulle part ailleurs.
+Lorsque vous utilisez un retard de lien, Platform empêche le navigateur de quitter la page. Il effectue ensuite une redirection JavaScript vers la destination d’origine après la temporisation spécifiée. C’est particulièrement risqué lorsque le balisage de votre page comporte des balises `<a>` où la fonctionnalité prévue ne permet pas de rediriger l’utilisateur en dehors de la page. S’il vous est impossible de résoudre ce problème d’une autre manière, soyez extrêmement précis quant à la définition de votre sélecteur afin que cet événement se déclenche exactement là où vous en avez besoin et nulle part ailleurs.
 
-La valeur par défaut du délai de lien est de 100 millisecondes. Remarquez que les balises attendent toujours que la durée soit spécifiée et quʼelles ne sont en aucun cas liées à lʼexécution des actions de la règle. Il est possible que le délai oblige l’utilisateur à attendre plus longtemps que nécessaire et qu’il ne soit pas suffisant pour permettre à toutes les actions de la règle de s’achever correctement. Des délais plus longs offrent du temps supplémentaire à lʼexécution des règles, mais entraînent également une détérioration de lʼexpérience client.
+La valeur par défaut du délai de lien est de 100 millisecondes. Veuillez noter que les balises attendront toujours l’intervalle de temps spécifié et ne sont en aucun cas liées à l’exécution des actions de la règle. Il est possible que le délai oblige l’utilisateur à attendre plus longtemps que nécessaire et qu’il ne soit pas suffisant pour permettre à toutes les actions de la règle de s’achever correctement. Des retards plus longs donnent plus de temps à l’exécution des règles, mais dégradent également l’expérience client.
 
-Pour appliquer le délai, il est nécessaire de fournir à la fois lʼélément sélectionné qui déclenche lʼévénement, ainsi que la durée spécifique avant le déclenchement de celui-ci.
+Pour appliquer le retard, il est nécessaire de fournir à la fois l’élément sélectionné qui déclenche l’événement et l’intervalle de temps précis à respecter avant que l’événement ne soit déclenché.
 
-Pour plus dʼinformations sur les options avancées, reportez-vous à la section [Options](#options).
+Pour plus d’informations au sujet des options avancées, reportez-vous à la section [Options](#options).
 
-#### Survol
+#### Hover
 
-Lʼévénement se déclenche si lʼutilisateur survole un élément spécifié. Vous devez également choisir si la règle est déclenchée immédiatement ou après un certain nombre de millisecondes. Pour plus dʼinformations sur les paramètres dʼévénements personnalisables, reportez-vous à la section [Options](#options).
+L’événement se déclenche si l’utilisateur survole un élément spécifié. De plus, indiquez si la règle doit être déclenchée de façon instantanée ou après un certain nombre de millisecondes. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
 ### Autres événements
 
-#### Événement personnalisé
+#### Custom Event
 
-Lʼévénement se déclenche si un type dʼévénement personnalisé se produit. Les fonctions JavaScript nommées définies ailleurs dans le code base peuvent être utilisées comme type dʼévénement personnalisé. Vous devez indiquer le nom du type dʼévénement personnalisé et configurer tous les autres paramètres tel que décrit dans la section [Options](#options) ci-dessous.
+L’événement se déclenche si un type d’événement personnalisé se produit. Les fonctions JavaScript nommées et définies ailleurs dans le codebase peuvent être utilisées comme type d’événement personnalisé. Vous devez indiquer le nom du type d’événement personnalisé, puis configurer les autres paramètres tel que décrit dans la section [Options](#options) ci-dessous.
 
-#### Élément de données modifié
+#### Data Element Changed
 
-Lʼévénement se déclenche si un élément de données spécifié change. Vous devez attribuer un nom à lʼélément de données. Vous pouvez sélectionner lʼélément de données en saisissant son nom dans le champ de texte ou en sélectionnant lʼicône de lʼélément de données à droite du champ de texte et en effectuant ensuite une sélection dans une liste fournie dans la boîte de dialogue qui sʼaffiche.
+L’événement se déclenche en cas de modification d’un élément de données spécifié. Vous devez fournir un nom pour l’élément de données. Vous pouvez sélectionner lʼélément de données en saisissant son nom dans le champ de texte ou en sélectionnant lʼicône de lʼélément de données à droite du champ de texte et en effectuant ensuite une sélection dans une liste fournie dans la boîte de dialogue qui sʼaffiche.
 
-#### Appel direct
+#### Direct Call
 
-Lʼévénement « direct-call » contourne les systèmes de recherche et de détection dʼévénements. Les règles « direct-call » sont adaptées aux situations dans lesquelles vous devez indiquer à Platform ce qui se passe exactement. Elles s’avèrent également très utiles lorsque Platform ne peut pas détecter un événement dans le modèle DOM (dans le cas d’Adobe Flash, par exemple). Indiquez la chaîne `_satellite.track` dans le champ de texte de lʼidentifiant.
+L’événement appel direct contourne les systèmes de recherche et de détection des événements. Les règles d’appel direct conviennent parfaitement aux situations dans lesquelles vous devez indiquer à Platform ce qui se passe exactement. Elles s’avèrent également très utiles lorsque Platform ne peut pas détecter un événement dans le modèle DOM (dans le cas d’Adobe Flash, par exemple). Indiquez la chaîne `_satellite.track` dans le champ de texte de l’identifiant.
 
-#### L’élément existe
+#### Element Exists
 
-Lʼévénement se déclenche si un élément spécifié existe. Pour plus dʼinformations sur les paramètres dʼévénements personnalisables, reportez-vous à la section [Options](#options).
+L’événement se déclenche s’il existe un élément spécifié. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
-#### Entre dans la fenêtre d’affichage
+#### Enters Viewport
 
-Lʼévénement se déclenche si lʼutilisateur entre dans une fenêtre dʼaffichage spécifiée. Vous devez fournir un sélecteur CSS en tant que critère pour cibler les éléments correspondants. Vous devez également choisir si la règle est déclenchée immédiatement ou après un certain nombre de millisecondes, et si lʼévénement doit se déclencher à chaque fois que lʼévénement se produit ou uniquement la première fois.
+L’événement se déclenche si l’utilisateur entre dans une fenêtre d’affichage spécifiée. Vous devez fournir un sélecteur CSS en tant que critère permettant de cibler les éléments correspondants. Vous devez également configurer si la règle doit être déclenchée de façon instantannée ou après un nombre spécifié de millisecondes, et si l’événement doit se déclencher chaque fois qu’il se produit ou uniquement la première fois.
 
-Pour plus dʼinformations sur les paramètres dʼévénements personnalisables, reportez-vous à la section [Options](#options).
+Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
 #### History change
 
-Lʼévénement se déclenche si un événement « pushState » ou « hashchange » se produit. Il n’existe aucun paramètre pour ce type d’événement.
+L’événement se déclenche si un événement pushState ou hashchange se produit. Il n’existe aucun paramètre pour ce type d’événement.
 
-#### Durée de consultation de la page
+#### Temps passé sur une page
 
-Lʼévénement se déclenche si lʼutilisateur reste sur la page pendant un certain nombre de secondes. Vous devez indiquer le nombre de secondes qui doivent sʼécouler avant le déclenchement de lʼévénement.
+L’événement se déclenche si l’utilisateur reste sur la page pendant un certain nombre de secondes. Indiquez le nombre de secondes qui doivent s’écouler avant le déclenchement de l’événement.
 
 ### Événements de chargement de page
 
-#### DOM prêt
+#### DOM Ready
 
-Lʼévénement se déclenche lorsque le DOM est prêt et que lʼutilisateur peut interagir avec la page. Il n’existe aucun paramètre pour ce type d’événement.
+L’événement se déclenche lorsque le DOM est prêt et que l’utilisateur peut interagir avec la page. Il n’existe aucun paramètre pour ce type d’événement.
 
-#### Bibliothèque chargée (haut de page) {#library-loaded-page-top}
+#### Library Loaded (Page Top) {#library-loaded-page-top}
 
-Lʼévénement se déclenche dès que la bibliothèque de balises est chargée. Il n’existe aucun paramètre pour ce type d’événement.
+L’événement se déclenche dès que la bibliothèque de balises est chargée. Il n’existe aucun paramètre pour ce type d’événement.
 
-#### Bas de page {#page-bottom}
+#### Page Bottom {#page-bottom}
 
-Lʼévénement se déclenche une fois que `_satellite.pageBottom();` a été appelé. Ce type dʼévénement ne doit pas être utilisé lors du chargement asynchrone de la bibliothèque de balises. Il n’existe aucun paramètre pour ce type d’événement.
+L’événement se déclenche une fois que `_satellite.pageBottom();` a été appelé. Ce type d’événement ne doit pas être utilisé lors du chargement asynchrone de la bibliothèque de balises. Il n’existe aucun paramètre pour ce type d’événement.
 
 #### Window Loaded
 
-Lʼévénement se déclenche lorsque onLoad est appelé par le navigateur et que le chargement de la page est terminé. Il n’existe aucun paramètre pour ce type d’événement.
+L’événement se déclenche lorsque le navigateur appelle onLoad et que le chargement de la page est terminé. Il n’existe aucun paramètre pour ce type d’événement.
 
 ### Options {#options}
 
@@ -533,7 +534,7 @@ Indiquez le pourcentage de fois où la condition renvoie true (vrai).
 
 Cette section décrit les types d’actions disponibles dans l’extension Core.
 
-### Custom Code
+### Code personnalisé
 
 Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées.
 
@@ -555,7 +556,7 @@ Exécutez la règle dans un navigateur et examinez l’objet d’événement con
 
 ### Traitement de l’action Custom Code
 
-L’extension Core, disponible pour tous les utilisateurs d’Adobe Experience Platform, contient une action Code personnalisé pour l’exécution du code JavaScript ou HTML fourni par l’utilisateur. Il est souvent utile que les utilisateurs comprennent comment les règles avec les actions Custom Code sont traitées.
+L’extension Core, disponible pour tous les utilisateurs d’Adobe Experience Platform, contient une action Custom Code pour l’exécution du code JavaScript ou HTML fourni par l’utilisateur. Il est souvent utile que les utilisateurs comprennent comment les règles avec les actions Custom Code sont traitées.
 
 #### Règles utilisant les événements de haut ou de bas de page
 
@@ -569,7 +570,7 @@ Bien que l’utilisation de document.write après le chargement d’une page pos
 
 #### Validation du Custom Code
 
-Le programme de validation utilisé dans l’éditeur de code de balises est conçu pour identifier les problèmes liés au code écrit par le développeur. Le code qui a fait l’objet d’un processus de minimisation (tel que le code AppMeasurement.js téléchargé depuis le Gestionnaire de code) peut être faussement signalé comme ayant des problèmes par le programme de validation de, lesquels peuvent généralement être ignorés.
+Le programme de validation utilisé dans lʼéditeur de code de balises est conçu pour identifier les problèmes liés au code écrit par le développeur. Le code qui a fait l’objet d’un processus de minimisation (tel que le code AppMeasurement.js téléchargé depuis le Gestionnaire de code) peut être faussement signalé comme ayant des problèmes par le programme de validation de, lesquels peuvent généralement être ignorés.
 
 #### Séquencage d’actions
 
@@ -577,11 +578,11 @@ Lorsque l’option « Run rule components in sequence » des paramètres de pr
 
 *JavaScript*
 
-Lors de la création d’une action Custom Code JavaScript, vous pouvez renvoyer une [promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) depuis votre action. L’action suivante de la règle sera exécutée uniquement lorsque la promesse renvoyée sera résolue. Si la promesse est refusée, les actions suivantes de la règle ne seront pas exécutées.
+Lors de la création d’une action Custom Code JavaScript, vous pouvez renvoyer une [promesse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) depuis votre action. L’action suivante de la règle sera exécutée uniquement lorsque la promesse renvoyée sera résolue. Si la promesse est refusée, les actions suivantes de la règle ne seront pas exécutées.
 
 >[!NOTE]
 >
->Cela ne fonctionne que si votre JavaScript n’est pas défini pour s’exécuter globalement. Si vous exécutez votre action Code personnalisée dans la portée globale, les balises traitent la promesse comme résolue immédiatement et passent à l’élément suivant dans la file d’attente de traitement.
+>Cela ne fonctionne que si votre code JavaScript n’est pas défini pour s’exécuter globalement. Si vous exécutez votre action Custom Code dans la portée globale, les balises traitent la promesse comme résolue immédiatement et passent à l’élément suivant dans la file d’attente de traitement.
 
 Exemple d’action Custom Code JavaScript renvoyant une promesse :
 
@@ -599,7 +600,7 @@ return new Promise(function(resolve, reject) {
 
 *HTML*
 
-Lors de la création d’une action Custom Code HTML, une fonction nommée `onCustomCodeSuccess()` peut être utilisée dans votre Custom Code. Vous pouvez appeler cette fonction pour indiquer que votre code personnalisé est terminé et que les balises peuvent passer à l’exécution des actions suivantes. D’un autre côté, si votre Custom Code a échoué d’une manière ou d’une autre, vous pouvez appeler `onCustomCodeFailure()`. Cette action indiquera aux balises de ne pas exécuter les actions suivantes à partir de cette règle.
+Lors de la création d’une action Custom Code HTML, une fonction nommée `onCustomCodeSuccess()` peut être utilisée dans votre Custom Code. Vous pouvez appeler cette fonction pour indiquer que votre Custom Code est terminé et que les balises peuvent passer à l’exécution des actions suivantes. D’un autre côté, si votre Custom Code a échoué d’une manière ou d’une autre, vous pouvez appeler `onCustomCodeFailure()`. Cette action indiquera aux balises de ne pas exécuter les actions suivantes à partir de cette règle.
 
 Exemple d’action Custom Code HTML utilisant les nouveaux rappels :
 
@@ -681,9 +682,9 @@ Obtention de la valeur de :
 
 N’importe quelle variable ou n’importe quel objet JavaScript peut être référencé à l’aide du champ de chemin d’accès.
 
-Les éléments de données de balises peuvent être utilisés pour capturer vos variables JavaScript dʼannotation ou vos propriétés d’objet. Ces valeurs peuvent ensuite être utilisées dans vos extensions ou règles personnalisées en référençant les éléments de données de balise. Si la source des données change, il suffit de mettre à jour la référence à la source dans l’interface utilisateur de la collecte de données.
+Les éléments de données de balise peuvent être utilisés pour recueillir vos variables JavaScript de balisage ou vos propriétés d’objet. Ces valeurs peuvent ensuite être utilisées dans vos extensions ou règles personnalisées en référençant les éléments de données de balise. Si la source des données est modifiée, il suffit de mettre à jour la référence à la source dans l’interface utilisateur de la collecte de données.
 
-Dans l’exemple ci-dessous, lʼannotation contient une variable JavaScript nommée `Page_Name`.
+Dans l’exemple ci-dessous, l’annotation contient une variable JavaScript nommée `Page_Name`.
 
 ```markup
 <script>
@@ -692,9 +693,9 @@ Dans l’exemple ci-dessous, lʼannotation contient une variable JavaScript nomm
 </script>
 ```
 
-Lorsque vous créez l’élément de données dans l’interface utilisateur de la collecte de données, il vous suffit de fournir le chemin d’accès à cette variable.
+Lorsque vous créez l’élément de données dans l’interface utilisateur de la collecte de données, fournissez simplement le chemin d’accès à cette variable.
 
-Si vous utilisez un objet collecteur de données dans votre couche de données, utilisez la notation point dans le chemin pour faire référence à l’objet et à la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName` ou `digitalData.pageName`, etc.
+Si vous utilisez un objet collecteur de données dans votre couche de données, servez-vous simplement de la notation point dans le chemin d’accès pour faire référence à l’objet et de la propriété que vous souhaitez recueillir dans l’élément de données, par exemple `_myData.pageName`, ou `digitalData.pageName`, etc.
 
 #### Exemple :
 
@@ -717,7 +718,7 @@ Vous pouvez sélectionner l’un des attributs de page suivants à utiliser dans
 * URL
 * Hostname
 * Pathname
-* Protocol
+* Protocole
 * Référent
 * Title
 
@@ -756,7 +757,7 @@ Le stockage de session est similaire au stockage local, sauf que les données so
 
 ### Comportement du visiteur
 
-Semblable aux informations sur la page, cet élément de données utilise des types de comportements courants pour enrichir la logique dans les règles ou d’autres solutions Platform.
+Semblable aux informations sur la page Infos, cet élément de données utilise des types de comportements courants pour enrichir la logique dans les règles et autres solutions de plateforme.
 
 Sélectionnez l’un des attributs de comportement du visiteur suivants :
 
@@ -774,3 +775,36 @@ Voici quelques cas d’utilisation courants :
 * S’il s’agit de la page d’entrée de la visite, renseigner une mesure Analytics
 * Afficher une nouvelle offre au visiteur après un nombre de sessions égal à X
 * Afficher un abonnement au bulletin d’information s’il s’agit d’un nouveau visiteur
+
+### Valeur conditionnelle
+
+wrapper pour la condition [Value Comparison](#value-comparison-value-comparison). En fonction du résultat de la comparaison, renvoie l’une des deux valeurs disponibles dans le formulaire. Peut ainsi gérer &quot; si... Alors... Sinon...&quot; sans avoir besoin de règles supplémentaires.
+
+### Environnement d’exécution
+
+Permet de sélectionner l&#39;une des variables suivantes :
+
+* Étape de l’environnement : renvoie `_satellite.environment.stage` pour différencier les environnements de développement/d’évaluation/de production.
+* Date de version de la bibliothèque : renvoie `turbine.buildInfo.buildDate` qui contient la même valeur que `_satellite.buildInfo.buildDate`.
+* Nom de la propriété : renvoie `_satellite.property.name` pour obtenir le nom de la propriété Launch.
+* ID de propriété : renvoie `_satellite.property.id` pour obtenir l’ID de la propriété Launch.
+* Nom de la règle : renvoie `event.$rule.name` contenant le nom de la règle exécutée.
+* ID de règle : renvoie `event.$rule.id` contenant l’ID de la règle exécutée.
+* Type d’événement : renvoie `event.$type` contenant le type d’événement qui a déclenché la règle.
+* Charge utile des détails de l’événement : renvoie `event.detail` contenant la charge utile d’un événement personnalisé ou d’une règle d’appel direct.
+* Identifiant d’appel direct : renvoie `event.identifier` contenant l’identifiant d’une règle d’appel direct.
+
+### Attributs de périphérique
+
+Renvoie l’un des attributs d’appareil du visiteur suivants :
+
+* Taille de la fenêtre du navigateur
+* Taille d’écran
+
+### Outils JavaScript
+
+Il s’agit d’un wrapper pour les opérations JavaScript courantes. Il reçoit un élément de données comme entrée. Elle renvoie le résultat de l’une des transformations suivantes de la valeur de l’élément de données :
+
+* Manipulation de base de chaînes (remplacement, sous-chaîne, correspondance regex, premier et dernier index, division, tranche)
+* Opérations de base de tableau (tranche, jointure, pop, shift)
+* Opérations universelles de base (tranche, longueur)
