@@ -2,14 +2,14 @@
 title: Présentation des journaux d’audit
 description: Découvrez comment les journaux d’audit vous permettent de voir qui a effectué les actions dans Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: df269a30251cb17e337ec25787d6a1eed41e9c0b
+source-git-commit: 4dc49c7219ebb613c74e5960f1f8d477dc1b7605
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 5%
+source-wordcount: '598'
+ht-degree: 7%
 
 ---
 
-# Journaux d’audit (version bêta)
+# Journaux d’audit (Beta)
 
 >[!IMPORTANT]
 >
@@ -21,16 +21,18 @@ En un sens simple, un journal d’audit indique à **qui** a effectué **l’act
 
 Ce document couvre les journaux d’audit dans Platform, y compris la manière de les afficher et de les gérer dans l’interface utilisateur ou l’API.
 
-## Types d’événement capturés par les journaux d’audit
+## Types d’événement capturés par les journaux d’audit {#category}
 
 Le tableau suivant décrit les actions sur lesquelles les ressources sont enregistrées par les journaux d’audit :
 
 | Ressource | Actions |
 | --- | --- |
-| [Environnement de test](../../../sandboxes/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Réinitialiser</li><li>Supprimer</li></ul> |
 | [Jeu de données](../../../catalog/datasets/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Activez pour [Real-time Customer Profile](../../../profile/home.md)</li></ul> |
 | [Schéma](../../../xdm/schema/composition.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Groupe de champs](../../../xdm/schema/composition.md#field-group) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Type de données](../../../xdm/schema/composition.md#data-type) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Environnement de test](../../../sandboxes/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Réinitialiser</li><li>Supprimer</li></ul> |
 | [Destination](../../../destinations/home.md) | <ul><li>Activer</li></ul> |
 
 ## Accès aux journaux d’audit
@@ -50,6 +52,23 @@ Le système affiche uniquement les journaux d’audit de l’année précédente
 Sélectionnez un événement dans la liste pour afficher ses détails dans le rail de droite.
 
 ![Détails de l’événement](../../images/audit-logs/select-event.png)
+
+Sélectionnez l’icône d’entonnoir (![Icône de filtre](../../images/audit-logs/icon.png)) pour afficher une liste de contrôles de filtre afin d’affiner les résultats.
+
+![Filtres](../../images/audit-logs/filters.png)
+
+Les filtres suivants sont disponibles pour les événements de contrôle dans l’interface utilisateur :
+
+| Filtrer | Description |
+| --- | --- |
+| [!UICONTROL Catégorie] | Utilisez le menu déroulant pour filtrer les résultats affichés par [catégorie](#category). |
+| [!UICONTROL Action] | Filtrer par action. Actuellement, seules les actions [!UICONTROL Créer] et [!UICONTROL Supprimer] peuvent être filtrées. |
+| [!UICONTROL État du contrôle d’accès] | Vous pouvez filtrer si l’action a été autorisée (terminée) ou refusée en raison de l’absence d’autorisations de [contrôle d’accès](../../../access-control/home.md). |
+| [!UICONTROL Date] | Sélectionnez une date de début et/ou une date de fin pour définir une période en fonction de laquelle filtrer les résultats. |
+
+Pour supprimer un filtre, sélectionnez le &quot;X&quot; sur l’icône en forme de pilule du filtre en question, ou sélectionnez **[!UICONTROL Effacer tout]** pour supprimer tous les filtres.
+
+![Effacer les filtres](../../images/audit-logs/clear-filters.png)
 
 <!-- (Planned for post-beta release)
 ### Export an audit log
