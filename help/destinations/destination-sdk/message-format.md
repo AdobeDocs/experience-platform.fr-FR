@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: Format du message
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: add6c7c4f3a60bd9ee2c2b77a8a242c4df03377b
+source-git-commit: a1e77520ba5555db42578eac261e01e77130aea2
 workflow-type: tm+mt
-source-wordcount: '2056'
+source-wordcount: '2090'
 ht-degree: 3%
 
 ---
@@ -799,9 +799,6 @@ Profil 1 :
    "attributes":{
       "firstName":{
          "value":"Hermione"
-      },
-      "birthDate":{
-         
       }
    },
    "segmentMembership":{
@@ -822,9 +819,6 @@ Profil 2 :
    "attributes":{
       "firstName":{
          "value":"Harry"
-      },
-      "birthDate":{
-         "value":"1980/07/31"
       }
    },
    "segmentMembership":{
@@ -845,9 +839,6 @@ Profil 3 :
    "attributes":{
       "firstName":{
          "value":"Tom"
-      },
-      "birthDate":{
-         
       }
    },
    "segmentMembership":{
@@ -868,9 +859,6 @@ Profil 4 :
    "attributes":{
       "firstName":{
          "value":"Jerry"
-      },
-      "birthDate":{
-         "value":"1940/01/01"
       }
    },
    "segmentMembership":{
@@ -918,16 +906,13 @@ Lorsqu’ils sont exportés vers votre destination, les profils sont divisés en
    "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
    "profiles":[
       {
-         "firstName":"Hermione",
-         "birthDate":null
+         "firstName":"Hermione"
       },
       {
-         "firstName":"Harry",
-         "birthDate":"1980/07/31"
+         "firstName":"Harry"
       },
       {
-         "firstName":"Jerry",
-         "birthDate":"1940/01/01"
+         "firstName":"Jerry"
       }
    ]
 }
@@ -938,12 +923,10 @@ Lorsqu’ils sont exportés vers votre destination, les profils sont divisés en
    "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
    "profiles":[
       {
-         "firstName":"Tom",
-         "birthDate":null
+         "firstName":"Tom"
       },
       {
-         "firstName":"Jerry",
-         "birthDate":"1940/01/01"
+         "firstName":"Jerry"
       }
    ]
 }
@@ -977,7 +960,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### Utiliser la clé d’agrégation de l’espace de noms d’identité dans le modèle {#aggregation-key-identity}
 
-Vous trouverez ci-dessous un exemple dans lequel l’[agrégation configurable](./destination-configuration.md#configurable-aggregation) dans la configuration de destination est définie pour agréger les profils exportés par espaces de noms d’identité, sous la forme `"identityNamespaces": ["email", "phone"]`
+Vous trouverez ci-dessous un exemple dans lequel l’agrégation [configurable](./destination-configuration.md#configurable-aggregation) dans la configuration de destination est définie pour agréger les profils exportés par espaces de noms d’identité, sous la forme `"namespaces": ["email", "phone"]` et `"namespaces": ["GAID", "IDFA"]`. Consultez le paramètre `groups` dans la [référence de l’API de configuration de destination](./destination-configuration-api.md) pour voir comment cela est fait.
 
 **Entrée**
 
@@ -997,6 +980,16 @@ Profil 1 :
       "phone":[
          {
             "id":"+40744111222"
+         }
+      ],
+      "IDFA":[
+         {
+            "id":"AEBE52E7-03EE-455A-B3C4-E57283966239"
+         }
+      ],
+      "GAID":[
+         {
+            "id":"e4fe9bde-caa0-47b6-908d-ffba3fa184f2"
          }
       ]
    }
@@ -1019,6 +1012,16 @@ Profil 2 :
          },
          {
             "id":"+40744555666"
+         }
+      ],
+      "IDFA":[
+         {
+            "id":"134GHU45-34HH-GHJ7-K0H8-LHN665998NN0"
+         }
+      ],
+      "GAID":[
+         {
+            "id":"47bh00i9-8jv6-334n-lll8-nb7f24sghg76"
          }
       ]
    }
@@ -1053,7 +1056,7 @@ Notez que `input.aggregationKey.identityNamespaces` est utilisé dans le modèle
 
 **Résultat**
 
-La `json` ci-dessous représente les données exportées depuis Adobe Experience Platform.
+Lorsqu’ils sont exportés vers votre destination, les profils sont divisés en deux groupes, en fonction de leurs espaces de noms d’identité (email et téléphone dans un groupe, GAID et IDFA dans un autre).
 
 ```json
 {
@@ -1074,6 +1077,29 @@ La `json` ci-dessous représente les données exportées depuis Adobe Experience
          "phone":[
             "+40744333444",
             "+40744555666"
+         ]
+      }
+   ]
+}
+```
+
+```json
+{
+   "profiles":[
+      {
+         "IDFA":[
+            "AEBE52E7-03EE-455A-B3C4-E57283966239"
+         ],
+         "GAID":[
+            "e4fe9bde-caa0-47b6-908d-ffba3fa184f2"
+         ]
+      },
+      {
+         "IDFA":[
+            "134GHU45-34HH-GHJ7-K0H8-LHN665998NN0"
+         ],
+         "GAID":[
+            "47bh00i9-8jv6-334n-lll8-nb7f24sghg76"
          ]
       }
    ]
