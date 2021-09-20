@@ -2,7 +2,7 @@
 title: Modèle de libre-service de documentation // Remplacer par le nom de votre destination
 description: Utilisez ce modèle pour créer une documentation publique pour votre destination dans le catalogue Adobe Experience Platform. // Remplacer par le paragraphe dans la section Aperçu
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+source-git-commit: 396b9a9ec1509abedba96797f68ad3e5aa2e5988
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 3%
@@ -55,10 +55,9 @@ ht-degree: 3%
 
 **Exportation de segments**  : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la  ** destination YOURDESTINATION.
 
-## Cas d’utilisation
+## Cas d&#39;utilisation
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination *YOURDESTINATION*, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
-
 
 ### Cas d’utilisation #1
 
