@@ -3,10 +3,10 @@ title: Conditions préalables requises pour l’utilisation du SDK Web de Adobe 
 description: Découvrez les conditions préalables requises pour utiliser le SDK Web de Adobe Experience Platform.
 keywords: Domaine propriétaire;CNAME;schéma;créer un schéma;launch;extension du sdk web aep;extension;ID de configuration;outil de configuration;élément de données;créer un élément de données;objet XDM;sendEvent;envoyer un événement;
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: 5f3b82edbc52d96cad13932be1d201e275780f3c
+source-git-commit: 9d3965be1956de754f0d2a82178bf5dcd871e239
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 0%
+source-wordcount: '405'
+ht-degree: 1%
 
 ---
 
@@ -23,3 +23,17 @@ Pour utiliser le SDK Web Platform, vous devez d’abord :
 
 - Sois autorisé à utiliser Adobe Experience Platform. Si vous n’avez pas acheté Adobe Experience Platform, Adobe vous fournira l’accès nécessaire pour une utilisation limitée avec le SDK sans frais supplémentaires.
 - Si votre site web utilise déjà le [service d’ID Experience Cloud](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html) sur votre site web (via l’API visiteur ou l’extension du service d’ID Experience Cloud dans Adobe Experience Platform Launch) et que vous souhaitez continuer à l’utiliser lors de la migration vers le SDK Web Adobe Experience Platform, vous devez utiliser la dernière version de l’API visiteur ou l’extension du service d’ID Experience Cloud. Voir [Migration des identifiants](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) pour plus d’informations.
+
+## Gestion des autorisations pour le SDK Web Adobe Experience Platform
+
+L’utilisation de Adobe Experience Platform ne nécessite aucune autorisation spéciale, mais vous devez disposer des [autorisations](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=fr) appropriées pour créer vos schémas dans Adobe Experience Platform. Les autorisations minimales dont une personne a besoin se trouvent dans la catégorie Modélisation des données et identités .
+
+![](../images/AEP-permission-categories.png)
+
+Dans la catégorie Modélisation des données , accordez aux utilisateurs les autorisations Manage Schemas (Gérer les schémas) et View Schemas (Afficher les schémas).
+
+![](../images/data-modeling-permissions.png)
+
+Dans la catégorie Identity Management , accordez aux utilisateurs les autorisations Manage Identity Namespaces (Gérer les espaces de noms d’identité) et View Identity Namespaces (Afficher les espaces de noms d’identité).
+
+![](../images/identity-management-permissions.png)
