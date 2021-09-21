@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes de configuration d’un nouveau flux de données à l’aide de votre compte de base de données.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
+source-git-commit: b0b993842b1015f5503fe2ae5a23d9188eeaad48
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1451'
 ht-degree: 4%
 
 ---
@@ -28,11 +28,11 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 En outre, ce tutoriel nécessite que vous ayez déjà créé un compte de base de données. Vous trouverez une liste des tutoriels de création de différents connecteurs de base de données dans l’interface utilisateur dans la [présentation des connecteurs source](../../../home.md).
 
-## Sélectionner des données
+## Ajout de données
 
-Une fois le compte de base de données créé, l’étape **[!UICONTROL Sélectionner les données]** s’affiche, vous permettant ainsi d’explorer la hiérarchie de votre base de données dans une interface interactive.
+Après avoir créé votre compte de base de données, l’étape **[!UICONTROL Ajouter des données]** s’affiche, vous permettant ainsi d’explorer la hiérarchie de votre base de données dans une interface interactive.
 
-- La moitié gauche de l&#39;interface est un navigateur qui affiche la liste des bases de données de votre compte.
+- La moitié gauche de l’interface est un navigateur qui affiche la liste des tableaux de données de votre compte.
 - La moitié droite de l&#39;interface permet de prévisualiser jusqu&#39;à 100 lignes de données.
 
 Vous pouvez utiliser l’option **[!UICONTROL Rechercher]** en haut de la page pour identifier rapidement les données source que vous prévoyez d’utiliser.
@@ -41,7 +41,7 @@ Vous pouvez utiliser l’option **[!UICONTROL Rechercher]** en haut de la page p
 >
 >L’option de données de source de recherche est disponible pour tous les connecteurs source tabulaires, à l’exception des connecteurs Analytics, Classifications, Hubs d’événements et Kinesis.
 
-Une fois que vous avez trouvé les données source, sélectionnez le répertoire, puis cliquez sur **[!UICONTROL Suivant]**.
+Une fois que vous avez trouvé les données sources, sélectionnez le tableau, puis **[!UICONTROL Suivant]**.
 
 ![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
 
