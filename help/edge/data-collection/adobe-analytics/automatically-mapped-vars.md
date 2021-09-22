@@ -4,7 +4,7 @@ description: Découvrez les variables qui sont automatiquement mappées dans Ado
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics;variables;analytics;carte automatique;mappage automatique;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: f5cd00c9639bde3b36b8ef9825148725ff9f89c1
+source-git-commit: 7809e64abab80f72af979e685f268c0799e74eca
 workflow-type: tm+mt
 source-wordcount: '907'
 ht-degree: 35%
@@ -46,7 +46,7 @@ Vous trouverez ci-dessous une liste des variables que Adobe Experience Platform 
 | environment.browserDetails.viewportWidth | bw | Mappage du paramètre de requête BROWSER_WIDTH AppMeasurement. |
 | environment.connectionType | ct | Mappage du paramètre de requête CT_CONNECT_TYPE AppMeasurement. |
 | environment.ipV4 | X-Forwarded-For | Il s’agit d’un mappage d’en-tête HTTP X-FORWARDED-FOR. |
-| identityMap.ECID.[0].id | mid | Mappage du paramètre de requête MID AppMeasurement. |
+| identityMap.ECID[0].id | mid | Mappage du paramètre de requête MID AppMeasurement. |
 | marketing.trackingCode | v0 | Mappage du paramètre de requête CAMPAIGN AppMeasurement. |
 | media.mediaTimed.completes.value | c.a.media.complete | Données contextuelles AppMeasurement. |
 | media.mediaTimed.dropBeforeStart.value | c.a.media.view, c.a.media.timePlayed, c.a.media.play | Données contextuelles AppMeasurement. |
@@ -58,10 +58,10 @@ Vous trouverez ci-dessous une liste des variables que Adobe Experience Platform 
 | media.mediaTimed.pauses.value | c.a.media.pauseCount | Mappage des données contextuelles `c.a.media.pauseCount`AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.@identifiant | c.a.media.asset | Données contextuelles AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.dc:title | c.a.media.friendlyName | Mappage des données contextuelles `c.a.media.friendlyName`AppMeasurement. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator.[N].iptc4xmpExt:Name | c.a.media.originator | Données contextuelles AppMeasurement. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator[N].iptc4xmpExt:Name | c.a.media.originator | Données contextuelles AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Episode.iptc4xmpExt:Number | c.a.media.episode | Mappage des données contextuelles `c.a.media.episode`AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Genre | c.a.media.genre | Données contextuelles AppMeasurement. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating.[N].iptc4xmpExt:RatingValue | c.a.media.rating | Données contextuelles AppMeasurement. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating[N].iptc4xmpExt:RatingValue | c.a.media.rating | Données contextuelles AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Season.iptc4xmpExt:Number | c.a.media.season | Mappage des données contextuelles `c.a.media.season`AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier | a.media.name | Mappage des données contextuelles `a.media.name`AppMeasurement. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name | c.a.media.show | Mappage des données contextuelles `c.a.media.show`AppMeasurement. |
@@ -89,9 +89,9 @@ Vous trouverez ci-dessous une liste des variables que Adobe Experience Platform 
 | placeContext.geo.postalCode | zip | Mappage du paramètre de requête ZIP AppMeasurement. |
 | placeContext.geo.stateProvince | state | Mappage du paramètre de requête STATE AppMeasurement. |
 | productListItems[N].lineItemId | products | Mappage du paramètre de requête Produits AppMeasurement. |
-| productlistitems.[N].name | products | Mappage du paramètre de requête Nom de produits AppMeasurement. |
-| productlistitems.[N].priceTotal | products | Mappage du paramètre de requête AppMeasurement Prix des produits . |
-| productlistitems.[N].quantity | products | Mappage du paramètre de requête Quantité de produits AppMeasurement. |
+| productlistitems[N].name | products | Mappage du paramètre de requête Nom de produits AppMeasurement. |
+| productlistitems[N].priceTotal | products | Mappage du paramètre de requête AppMeasurement Prix des produits . |
+| productlistitems[N].quantity | products | Mappage du paramètre de requête Quantité de produits AppMeasurement. |
 | web.webInteraction.URL | pev1 | Mappage du paramètre de requête PAGE_EVENT_VAR1 AppMeasurement. |
 | web.webInteraction.name | pev2 | Mappage du paramètre de requête PAGE_EVENT_VAR2 AppMeasurement. |
 | web.webInteraction.type | pe | `web.webInteraction.type=other` à  `pe=lnk_o`;  `web.webInteraction.type=download` à  `pe=lnk_d`;  `web.webInteraction.type=exit` to  `pe=lnk_e` |
