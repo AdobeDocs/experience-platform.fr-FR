@@ -1,9 +1,10 @@
 ---
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/testing/template/sample` pour obtenir un modèle de transformation de message de test pour votre destination.
 title: Obtention d’un exemple d’opération d’API de modèle
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '401'
 ht-degree: 2%
 
 ---
@@ -58,7 +59,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 Une réponse réussie renvoie un état HTTP 200 avec un exemple de modèle que vous pouvez modifier pour correspondre au format de données attendu.
 
-Si l’identifiant de destination que vous fournissez correspond à un modèle de serveur de destination avec `maxUsersPerRequest=1`, la requête renvoie un exemple de modèle similaire à celui-ci :
+Si l’identifiant de destination que vous fournissez correspond à une configuration de destination avec [l’agrégation du meilleur effort](./destination-configuration.md#best-effort-aggregation) et `maxUsersPerRequest=1` dans la stratégie d’agrégation, la requête renvoie un exemple de modèle similaire à celui-ci :
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -91,7 +92,7 @@ Si l’identifiant de destination que vous fournissez correspond à un modèle d
 }
 ```
 
-Si l’identifiant de destination que vous fournissez correspond à un modèle de serveur de destination dont la valeur est `maxUsersPerRequest` supérieure à un, la requête renvoie un exemple de modèle similaire à celui-ci :
+Si l’identifiant de destination que vous fournissez correspond à un modèle de serveur de destination avec une agrégation [configurable](./destination-configuration.md#configurable-aggregation) ou [agrégation des meilleurs efforts](./destination-configuration.md#best-effort-aggregation) avec `maxUsersPerRequest` supérieure à un, la requête renvoie un exemple de modèle similaire à celui-ci :
 
 ```python
 {#- THIS is an example template for multiple profiles -#}

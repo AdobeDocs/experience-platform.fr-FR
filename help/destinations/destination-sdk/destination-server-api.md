@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison API `/authoring/destination-servers. Les spécifications du serveur et du modèle pour votre destination peuvent être configurées dans le SDK de destination Adobe Experience Platform via le point de terminaison commun `/authoring/destination-servers`.
 title: Opérations de l’API du point d’entrée du serveur de destination
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 3ab19995d9520c35701912087158bf63755c55c8
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 5%
+source-wordcount: '845'
+ht-degree: 6%
 
 ---
 
@@ -66,14 +66,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Paramètre | Type | Description |
 | -------- | ----------- | ----------- |
-| `name` | Chaîne | Représente un nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible par les partenaires ou les clients. Exemple `Moviestar destination server`. |
-| `destinationServerType` | Chaîne | `URL_BASED` est actuellement la seule option disponible. |
-| `urlBasedDestination.url.templatingStrategy` | Chaîne | <ul><li>Utilisez `PEBBLE_V1` si l’Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point de terminaison du type : `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire côté Adobe, par exemple si vous avez un point de terminaison comme : `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | Chaîne | Renseignez l’adresse du point de terminaison de l’API auquel l’Experience Platform doit se connecter. |
-| `httpTemplate.httpMethod` | Chaîne | Méthode que l’Adobe utilisera dans les appels à votre serveur. Les options sont `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
-| `httpTemplate.requestBody.templatingStrategy` | Chaîne | Utilisez `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Chaîne | Cette chaîne est la version avec échappement par des caractères qui transforme les données des clients Platform au format attendu par votre service. <br> <ul><li> Pour plus d’informations sur la façon d’écrire le modèle, consultez la [section Utilisation de modèles](./message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la [norme JSON RFC, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour un exemple de transformation simple, reportez-vous à la transformation [Attributs de profil](./message-format.md#attributes) . </li></ul> |
-| `httpTemplate.contentType` | Chaîne | Type de contenu que votre serveur accepte. Cette valeur est probablement `application/json`. |
+| `name` | Chaîne | *Obligatoire.* Représente un nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible par les partenaires ou les clients. Exemple `Moviestar destination server`. |
+| `destinationServerType` | Chaîne | *Obligatoire.* `URL_BASED` est actuellement la seule option disponible. |
+| `urlBasedDestination.url.templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si l’Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point de terminaison du type : `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire côté Adobe, par exemple si vous avez un point de terminaison comme : `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point de terminaison de l’API auquel l’Experience Platform doit se connecter. |
+| `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode que l’Adobe utilisera dans les appels à votre serveur. Les options sont `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `httpTemplate.requestBody.templatingStrategy` | Chaîne | *Obligatoire.* Utilisation `PEBBLE_V1`. |
+| `httpTemplate.requestBody.value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec échappement par des caractères qui transforme les données des clients Platform au format attendu par votre service.  <br> <ul><li> Pour plus d’informations sur la façon d’écrire le modèle, consultez la [section Utilisation de modèles](./message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la [norme JSON RFC, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour un exemple de transformation simple, reportez-vous à la transformation [Attributs de profil](./message-format.md#attributes) . </li></ul> |
+| `httpTemplate.contentType` | Chaîne | *Obligatoire.* Type de contenu que votre serveur accepte. Cette valeur est probablement `application/json`. |
 
 {style=&quot;table-layout:auto&quot;}
 

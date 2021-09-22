@@ -2,9 +2,9 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison API `/authoring/sample-profiles`, afin de générer des exemples de profils à utiliser dans les tests de destination.
 title: Exemples d’opérations API de génération de profil
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '833'
 ht-degree: 3%
 
 ---
@@ -28,6 +28,10 @@ Vous pouvez générer des exemples de profils en fonction du schéma source XDM 
 Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Générer des exemples de profils en fonction du schéma source {#generate-sample-profiles-source-schema}
+
+>[!IMPORTANT]
+>
+>Ajoutez les exemples de profils générés ici aux appels HTTP lorsque [testez votre destination](./test-destination.md).
 
 Vous pouvez générer des exemples de profils en fonction du schéma source en envoyant une requête de GET au point de terminaison `authoring/sample-profiles/` et en fournissant l’identifiant d’une instance de destination que vous avez créée en fonction de la configuration de destination que vous souhaitez tester.
 
@@ -176,6 +180,10 @@ Une réponse réussie renvoie un état HTTP 200 avec le nombre spécifié de pro
 {style=&quot;table-layout:auto&quot;}
 
 ## Générer des exemples de profils en fonction du schéma cible {#generate-sample-profiles-target-schema}
+
+>[!IMPORTANT]
+>
+>Utilisez les exemples de profils générés ici lors de la conception de votre modèle, à l’étape [Modèle de rendu](./render-template-api.md#multiple-profiles-with-body).
 
 Vous pouvez générer des exemples de profils en fonction du schéma cible en envoyant une requête de GET au point de terminaison `authoring/sample-profiles/` et en fournissant l’identifiant de destination de la configuration de destination basée sur laquelle vous créez votre modèle.
 

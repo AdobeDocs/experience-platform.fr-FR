@@ -1,9 +1,10 @@
 ---
 description: Dans le cadre du SDK de destination, Adobe fournit des outils de développement pour vous aider à configurer et à tester votre destination. Cette page décrit comment créer et tester un modèle de transformation de messages.
 title: Créer et tester un modèle de transformation de message
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -68,7 +69,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-Si l’identifiant de destination que vous fournissez correspond à un modèle de serveur de destination avec `maxUsersPerRequest=1`, la requête renvoie un exemple de modèle similaire à celui-ci :
+Si l’identifiant de destination que vous fournissez correspond à une configuration de destination avec [l’agrégation du meilleur effort](./destination-configuration.md#best-effort-aggregation) et `maxUsersPerRequest=1` dans la stratégie d’agrégation, la requête renvoie un exemple de modèle similaire à celui-ci :
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -101,7 +102,7 @@ Si l’identifiant de destination que vous fournissez correspond à un modèle d
 }
 ```
 
-Si l’identifiant de destination que vous fournissez correspond à un modèle de serveur de destination dont la valeur est `maxUsersPerRequest` supérieure à un, la requête renvoie un exemple de modèle similaire à celui-ci :
+Si l’identifiant de destination que vous fournissez correspond à un modèle de serveur de destination avec une agrégation [configurable](./destination-configuration.md#configurable-aggregation) ou [agrégation des meilleurs efforts](./destination-configuration.md#best-effort-aggregation) avec `maxUsersPerRequest` supérieure à un, la requête renvoie un exemple de modèle similaire à celui-ci :
 
 ```python
 {#- THIS is an example template for multiple profiles -#}

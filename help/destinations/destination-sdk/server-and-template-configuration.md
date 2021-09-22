@@ -2,10 +2,10 @@
 description: Les spécifications du serveur et du modèle peuvent être configurées dans le SDK de destination Adobe Experience Platform via le point de terminaison commun `/authoring/destination-servers`.
 title: Options de configuration des spécifications de serveur et de modèle dans le SDK de destination
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
-source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 7%
+source-wordcount: '419'
+ht-degree: 9%
 
 ---
 
@@ -48,10 +48,10 @@ Ce processus fournit des données utilisateur sous la forme d’une série de me
 
 | Paramètre | Type | Description |
 |---|---|---|
-| `name` | Chaîne | Représente un nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible par les partenaires ou les clients. Exemple `Moviestar destination server`. |
-| `destinationServerType` | Chaîne | `URL_BASED` est actuellement la seule option disponible. |
-| `templatingStrategy` | Chaîne | <ul><li>Utilisez `PEBBLE_V1` si l’Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point de terminaison du type : `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire côté Adobe, par exemple si vous avez un point de terminaison comme : `https://api.moviestar.com/data/items` </li></ul> |
-| `value` | Chaîne | Renseignez l’adresse du point de terminaison de l’API auquel l’Experience Platform doit se connecter. |
+| `name` | Chaîne | *Obligatoire.* Représente un nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible par les partenaires ou les clients. Exemple `Moviestar destination server`. |
+| `destinationServerType` | Chaîne | *Obligatoire.* `URL_BASED` est actuellement la seule option disponible. |
+| `templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si l’Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point de terminaison du type : `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire côté Adobe, par exemple si vous avez un point de terminaison comme : `https://api.moviestar.com/data/items` </li></ul> |
+| `value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point de terminaison de l’API auquel l’Experience Platform doit se connecter. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -83,10 +83,10 @@ La spécification du modèle vous permet de configurer le format du message expo
 
 | Paramètre | Type | Description |
 |---|---|---|
-| `httpMethod` | Chaîne | Méthode que l’Adobe utilisera dans les appels à votre serveur. Les options sont `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
-| `templatingStrategy` | Chaîne | Utilisez `PEBBLE_V1`. |
-| `value` | Chaîne | Cette chaîne est la version avec échappement par des caractères qui transforme les données des clients Platform au format attendu par votre service. <br> Pour plus d’informations sur l’écriture du modèle, consultez la section  [Utilisation de modèles](./message-format.md#using-templating). <br> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la  [norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Pour un exemple de transformation simple, reportez-vous à la transformation  [Attributs de profil ](./message-format.md#attributes) . |
-| `contentType` | Chaîne | Type de contenu que votre serveur accepte. Cette valeur est probablement `application/json`. |
+| `httpMethod` | Chaîne | *Obligatoire.* Méthode que l’Adobe utilisera dans les appels à votre serveur. Les options sont `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `templatingStrategy` | Chaîne | *Obligatoire.* Utilisation `PEBBLE_V1`. |
+| `value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec échappement par des caractères qui transforme les données des clients Platform au format attendu par votre service. <br> Pour plus d’informations sur l’écriture du modèle, consultez la section  [Utilisation de modèles](./message-format.md#using-templating). <br> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la  [norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Pour un exemple de transformation simple, reportez-vous à la transformation  [Attributs de profil ](./message-format.md#attributes) . |
+| `contentType` | Chaîne | *Obligatoire.* Type de contenu que votre serveur accepte. Cette valeur est probablement `application/json`. |
 
 {style=&quot;table-layout:auto&quot;}
 
