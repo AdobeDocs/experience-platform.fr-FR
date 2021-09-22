@@ -4,7 +4,7 @@ title: Guide de l’interface utilisateur de Real-time Customer Profile
 topic-legacy: guide
 description: Real-time Customer Profile offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
+source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
 workflow-type: tm+mt
 source-wordcount: '1568'
 ht-degree: 13%
@@ -100,7 +100,7 @@ Pour afficher les détails de l’un des exemples de profils, sélectionnez l’
 Pour en savoir plus sur les stratégies de fusion et leur rôle dans Platform, consultez la [présentation des stratégies de fusion](../merge-policies/overview.md).
 
 
-### Parcourir par [!UICONTROL Identité]
+### Parcourir par [!UICONTROL Identité] {#browse-identity}
 
 Dans l’onglet **[!UICONTROL Parcourir]**, vous pouvez utiliser un espace de noms d’identité afin de rechercher un profil spécifique en fonction d’une valeur d’identité. Pour naviguer selon une identité, vous devez fournir une stratégie de fusion, un espace de noms d’identité et une valeur d’identité.
 

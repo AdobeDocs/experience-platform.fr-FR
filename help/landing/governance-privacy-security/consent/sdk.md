@@ -3,9 +3,9 @@ title: Traiter les données de consentement du client à l’aide du SDK Web de 
 topic-legacy: getting started
 description: Découvrez comment intégrer le SDK Web de Adobe Experience Platform pour traiter les données de consentement des clients dans Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 1780e08a9e45fd87891bbb1727c464aadb0e9b31
+source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
 workflow-type: tm+mt
-source-wordcount: '1270'
+source-wordcount: '1330'
 ht-degree: 1%
 
 ---
@@ -97,6 +97,10 @@ Une fois que vous avez terminé de configurer l’extension, elle peut être int
 ## Exécution de commandes de changement de consentement {#commands}
 
 Une fois que vous avez intégré l’extension SDK à votre site web, vous pouvez commencer à utiliser la commande SDK Web Platform `setConsent` pour envoyer les données de consentement à Platform.
+
+>[!IMPORTANT]
+>
+>La commande `setConsent` ne met à jour que les données directement dans la banque de profils et n’envoie aucune donnée au lac de données.
 
 Il existe deux scénarios où `setConsent` doit être appelé sur votre site :
 
@@ -194,6 +198,8 @@ var setConsent = function () {
 ## Gestion des réponses du SDK
 
 Toutes les commandes [!DNL Platform SDK] renvoient des promesses indiquant si l’appel a réussi ou échoué. Vous pouvez ensuite utiliser ces réponses pour une logique supplémentaire, telle que l’affichage des messages de confirmation au client. Pour obtenir des exemples spécifiques, reportez-vous à la section [Gestion de la réussite ou de l’échec](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) du guide sur l’exécution des commandes du SDK.
+
+Une fois que vous avez effectué avec succès des appels `setConsent` avec le SDK, vous pouvez utiliser la visionneuse de profils dans l’interface utilisateur de Platform pour vérifier si les données arrivent dans la banque de profils. Pour plus d’informations, reportez-vous à la section [navigation des profils par identité](../../../profile/ui/user-guide.md#browse-identity) .
 
 ## Étapes suivantes
 
