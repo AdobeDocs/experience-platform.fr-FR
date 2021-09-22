@@ -5,10 +5,10 @@ title: Annexe du guide de l’API Schema Registry
 description: Ce document fournit des informations supplémentaires relatives au travail avec l’API Schema Registry.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: d70f297130ec04dd799d60c70b95777ee79bbfef
+source-git-commit: 403dcb75e43b5c7aa462495086e5a9e403ef6f5b
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 48%
+source-wordcount: '984'
+ht-degree: 36%
 
 ---
 
@@ -30,9 +30,9 @@ Les paramètres de requête les plus courants pour la pagination sont les suivan
 
 | Paramètre | Description |
 | --- | --- |
-| `start` | Spécifiez où commencer les résultats répertoriés. Cette valeur peut être obtenue à partir de l’attribut `_page.next` d’une réponse de liste et utilisée pour accéder à la page de résultats suivante. Si la valeur `_page.next` est nulle, aucune page supplémentaire n’est disponible. |
-| `limit` | Limite le nombre de ressources renvoyé. Exemple : `limit=5` renverra une liste de cinq ressources. |
-| `orderby` | Triez les résultats en fonction d’une propriété spécifique. Exemple : `orderby=title` triera les résultats par titre dans l’ordre croissant (A-Z). L’ajout d’un `-` devant la valeur du paramètre (`orderby=-title`) triera les éléments par titre dans l’ordre décroissant (Z-A). |
+| `orderby` | Triez les résultats en fonction d&#39;une propriété spécifique. Exemple : `orderby=title` triera les résultats par titre dans l’ordre croissant (A-Z). L’ajout d’un `-` devant la valeur du paramètre (`orderby=-title`) triera les éléments par titre dans l’ordre décroissant (Z-A). |
+| `limit` | Lorsqu’elle est utilisée conjointement avec un paramètre `orderby` , `limit` limite le nombre maximal d’éléments à renvoyer pour une requête donnée. Ce paramètre ne peut pas être utilisé sans paramètre `orderby` présent.<br><br>Le  `limit` paramètre spécifie un entier positif (entre  `0` et  `500`) comme  ** nombre de points au nombre maximum d’éléments à renvoyer. Par exemple, `limit=5` renvoie uniquement cinq ressources dans la liste. Cependant, cette valeur n’est pas strictement respectée. La taille réelle de la réponse peut être plus petite ou plus grande, en raison de la nécessité de fournir le fonctionnement fiable du paramètre `start`, le cas échéant. |
+| `start` | Lorsqu’elle est utilisée conjointement avec un paramètre `orderby` , `start` indique où la liste des éléments sous-définie doit commencer. Ce paramètre ne peut pas être utilisé sans paramètre `orderby` présent. Cette valeur peut être obtenue à partir de l’attribut `_page.next` d’une réponse de liste et utilisée pour accéder à la page de résultats suivante. Si la valeur `_page.next` est nulle, aucune page supplémentaire n’est disponible.<br><br>En règle générale, ce paramètre est omis afin d’obtenir la première page de résultats. Ensuite, `start` doit être défini sur la valeur maximale de la propriété de tri Principale du champ `orderby` reçu dans la page précédente. La réponse de l’API renvoie ensuite des entrées commençant par celles dont la propriété de tri est Principale à partir de `orderby` strictement supérieure (pour l’ordre ascendant) ou strictement inférieure (pour l’ordre descendant) à la valeur spécifiée.<br><br>Par exemple, si le  `orderby` paramètre est défini sur  `orderby=name,firstname`, le  `start` paramètre contiendra une valeur pour la  `name` propriété . Dans ce cas, si vous souhaitez afficher les 20 entrées suivantes d’une ressource immédiatement après le nom &quot;Miller&quot;, utilisez : `?orderby=name,firstname&start=Miller&limit=20`. |
 
 {style=&quot;table-layout:auto&quot;}
 
