@@ -3,10 +3,10 @@ title: Utilisation d’Offer Decisioning avec le SDK Web Platform
 description: Le SDK Web de Adobe Experience Platform peut diffuser et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API Offer Decisioning.
 keywords: offer decisioning;prise de décision;SDK Web;SDK Web Platform;offres personnalisées;diffuser des offres;diffusion d’offres;personnalisation des offres ;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5a688fed26a8f641347ed1c625bfe448004f75b0
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 10%
+source-wordcount: '826'
+ht-degree: 7%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->L’utilisation d’Offer Decisioning dans le SDK web d’Adobe Experience Platform est actuellement possible en accès anticipé pour certains utilisateurs. Cette fonctionnalité n’est pas disponible pour toutes les organisations IMS.
+>L’utilisation d’Offer Decisioning dans le SDK Web de Adobe Experience Platform est disponible en accès anticipé pour certains utilisateurs. Cette fonctionnalité n’est pas disponible pour toutes les organisations IMS.
 
 Adobe Experience Platform [!DNL Web SDK] peut diffuser et générer des offres personnalisées gérées en Offer decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur (IU) ou des API d’Offer decisioning.
 
@@ -30,7 +30,7 @@ Il est important de comprendre la terminologie suivante lorsque vous utilisez Of
 
 * **Conteneur :** un conteneur est un mécanisme d’isolation qui permet de séparer les différentes préoccupations. L&#39;ID de conteneur est le premier élément de chemin d&#39;accès pour toutes les API du référentiel. Tous les objets de prise de décision résident dans un conteneur.
 
-* **Portées de décision :** pour l’Offer decisioning, il s’agit des chaînes codées Base64 de JSON contenant les identifiants d’activité et d’emplacement que vous souhaitez que le service d’offer decisioning utilise pour proposer des offres.
+* **Portées de décision :** Pour les Offers decisionings, les portées de décision sont les chaînes codées Base64 de JSON contenant les identifiants d’activité et d’emplacement que le service d’offer decisioning doit utiliser pour proposer des offres.
 
    *Portée de décision JSON :*
 
@@ -55,7 +55,7 @@ Il est important de comprendre la terminologie suivante lorsque vous utilisez Of
 
 * **Flux de données :** Pour plus d’informations, consultez la documentation  [](../../fundamentals/datastreams.md) datastreams.
 
-* **Identité** : Pour plus d’informations, consultez cette documentation décrivant comment le SDK Web de  [Platform exploite Identity Service](../../identity/overview.md).
+* **Identité** : Pour plus d’informations, consultez cette documentation décrivant comment le SDK Web de  [Platform utilise Identity Service](../../identity/overview.md).
 
 ## Activation de l’Offer decisioning
 
@@ -85,7 +85,7 @@ Pour activer l’Offer decisioning, procédez comme suit :
 
       1. [Création d’une propriété de balise](../../../tags/ui/administration/companies-and-properties.md)
       1. [Ajout du code incorporé de ](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. Installez et configurez l’extension SDK Web Platform avec le Datastream que vous venez de créer en sélectionnant la configuration dans la liste déroulante &quot;Datastream&quot;. Consultez la documentation sur les [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
+      1. Installez et configurez l’extension SDK Web Platform avec le Datastream que vous avez créé en sélectionnant la configuration dans la liste déroulante &quot;Datastream&quot;. Consultez la documentation sur les [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
@@ -329,3 +329,7 @@ Pour activer l’Offer decisioning, procédez comme suit :
 | `content` | Contenu associé à l’offre proposée au format d’une chaîne. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | Contenu de l&#39;image associé à l&#39;offre proposée au format d&#39;une URL. | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | Caractéristiques associées à l’offre proposée au format d’un objet JSON. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
+
+## Limites
+
+Certaines contraintes d’offre ne sont actuellement pas prises en charge avec les workflows Experience Edge mobiles, par exemple la limitation. La valeur du champ de limitation indique le nombre de fois où une offre peut être présentée à tous les utilisateurs. Pour plus d’informations, voir [Documentation sur les règles d’éligibilité et les contraintes d’offre](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
