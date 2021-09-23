@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 29a238c517b6bd5a95284b4d6954fd14a1668f0e
+source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
 workflow-type: tm+mt
-source-wordcount: '1434'
-ht-degree: 90%
+source-wordcount: '1522'
+ht-degree: 85%
 
 ---
 
@@ -15,7 +15,23 @@ ht-degree: 90%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-## 17 septembre 2021
+## 23 septembre 2021
+
+v3.2.1
+
+* Correction d’une erreur en raison de laquelle l’initialisation de l’élément de données de valeur conditionnelle ne fonctionnait pas correctement lorsque les valeurs de champ étaient 0.
+
+## 23 septembre 2021
+
+v3.2.0
+
+Les modifications suivantes ont été introduites dans l’élément de données Valeur conditionnelle :
+
+* Ajoutez une case à cocher pour les valeurs conditionnelles et de secours qui permet à l’utilisateur de choisir s’il souhaite que la valeur renvoyée soit indéfinie.
+* Les valeurs numériques sont exposées sous forme de nombres dans l’objet settings.
+* La valeur conditionnelle n’est plus requise, de sorte qu’elle puisse se comporter de la même manière que la valeur de secours.
+
+## 17 septembre 2021
 
 v3.1.1
 
