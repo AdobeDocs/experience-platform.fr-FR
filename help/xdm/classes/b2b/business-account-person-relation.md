@@ -1,18 +1,18 @@
 ---
 title: Classe de relation de personne de compte professionnel XDM
 description: Ce document présente la classe XDM Business Account Person Relation dans le modèle de données d’expérience (XDM).
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 4%
+source-wordcount: '334'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL Classe de ] relation client du compte commercial XDM
+# [!UICONTROL Classe de ] relation client du compte professionnel XDM (version bêta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Cette classe est uniquement disponible pour les organisations qui ont accès à la plateforme de données clients en temps réel de l’édition B2B.
+>Cette classe est disponible dans le cadre de la plateforme de données clients en temps réel de l’édition B2B, actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
 
 [!UICONTROL XDM Business Account Persson ] Relationship est une classe XDM standard qui capture les propriétés minimales requises d’une personne associée à un compte d’entreprise.
 

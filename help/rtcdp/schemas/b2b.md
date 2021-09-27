@@ -1,14 +1,18 @@
 ---
 title: Schémas de la plateforme de données clients en temps réel de l’édition B2B
 description: Présentation du rôle des schémas de modèle de données d’expérience (XDM) dans l’édition B2B de la plateforme de données clients en temps réel.
-source-git-commit: a8c322cfe02c7a005275ec33e5dac92d2f76667a
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '198'
-ht-degree: 0%
+source-wordcount: '218'
+ht-degree: 3%
 
 ---
 
-# Schémas de la plateforme de données clients en temps réel de l’édition B2B
+# Schémas de la plateforme de données clients en temps réel B2B (version bêta)
+
+>[!IMPORTANT]
+>
+>La plateforme de données clients en temps réel de l’édition B2B est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
 
 La plateforme de données clients en temps réel de l’édition B2B fournit plusieurs classes [Modèle de données d’expérience (XDM) standard](../../xdm/schema/composition.md#class) qui capturent des détails sur les entités de données B2B essentielles, telles que les comptes, les opportunités, les campagnes, etc. En outre, la plateforme CDP B2B en temps réel permet de définir des relations multiples-à-un entre ces schémas afin qu’ils puissent participer à des cas d’utilisation de segmentation avancée.
 

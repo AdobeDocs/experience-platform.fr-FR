@@ -1,18 +1,18 @@
 ---
 title: Classe d’opportunités commerciales XDM
 description: Ce document présente la classe XDM Business Opportunity dans Experience Data Model (XDM).
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 5%
+source-wordcount: '222'
+ht-degree: 8%
 
 ---
 
-# [!UICONTROL Classe ] d’opportunités commerciales XDM
+# [!UICONTROL Classe ] d’opportunités commerciales XDM (bêta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Cette classe est uniquement disponible pour les organisations qui ont accès à la plateforme de données clients en temps réel de l’édition B2B.
+>Cette classe est disponible dans le cadre de la plateforme de données clients en temps réel de l’édition B2B, actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
 
 [!UICONTROL XDM Business ] Opportunity est une classe XDM standard qui capture les propriétés minimales requises d’une opportunité commerciale.
 

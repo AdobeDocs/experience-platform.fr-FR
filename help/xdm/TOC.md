@@ -4,10 +4,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes de modèle de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
-source-git-commit: 50ca41ac5adba60e4abb484c8689372d0de77571
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 35%
+source-wordcount: '391'
+ht-degree: 29%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 35%
    * [XDM Individual Profile](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Définition de segment](./classes/segment-definition.md)
-   * Classes B2B {#b2b}
+   * Classes B2B (bêta) {#b2b}
       * [Compte d’entreprise XDM](./classes/b2b/business-account.md)
       * [Relation avec la personne du compte d’entreprise XDM](./classes/b2b/business-account-person-relation.md)
       * [Campagne commerciale XDM](./classes/b2b/business-campaign.md)
@@ -145,11 +145,11 @@ ht-degree: 35%
    * [Mixins (obsolète)](api/mixins.md)
    * [Annexe](api/appendix.md)
 * Tutoriels {#tutorials}
-   * [Création d’un schéma (IU)](tutorials/create-schema-ui.md)
-   * [Création d’un schéma (API)](tutorials/create-schema-api.md)
-   * [Définition d’une relation entre deux schémas (IU)](tutorials/relationship-ui.md)
-   * [Définition d’une relation entre deux schémas (API)](tutorials/relationship-api.md)
-   * [Définition d’une relation entre deux schémas (B2B)](tutorials/relationship-b2b.md)
+   * [Création d’un schéma dans l’interface utilisateur](tutorials/create-schema-ui.md)
+   * [Création d’un schéma dans l’API](tutorials/create-schema-api.md)
+   * [Définition d’une relation de schéma dans l’interface utilisateur](tutorials/relationship-ui.md)
+   * [Définition d’une relation de schéma dans l’API](tutorials/relationship-api.md)
+   * [Définition d’une relation de schéma dans la plateforme CDP B2B en temps réel (version bêta)](tutorials/relationship-b2b.md)
    * [Création d’un schéma ad hoc (API)](tutorials/ad-hoc.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
