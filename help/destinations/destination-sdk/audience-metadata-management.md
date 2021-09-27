@@ -1,7 +1,8 @@
 ---
 description: Utilisez les modèles de métadonnées d’audience pour créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Adobe fournit un modèle de métadonnées d’audience extensible que vous pouvez configurer en fonction des spécifications de votre API marketing. Une fois que vous avez défini, testé et envoyé le modèle, il sera utilisé par Adobe pour structurer les appels d’API vers votre destination.
 title: Gestion des métadonnées d’audience
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
+source-git-commit: 397c49284c30c648695a7a186d3f3e76a2675807
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 1%
@@ -54,7 +55,7 @@ Vous pouvez utiliser le modèle générique pour [créer un modèle d’audience
 
 L’équipe d’ingénierie d’Adobe peut collaborer avec vous pour développer le modèle générique avec des champs personnalisés si vos cas d’utilisation le requièrent.
 
-## Exemples de modèles {#template-examples}
+## Exemples de configuration {#configuration-examples}
 
 Cette section présente trois exemples de configurations génériques des métadonnées d’audience, à titre de référence, ainsi que des descriptions des sections principales de la configuration. Notez les différences entre l’URL, les en-têtes, la requête et le corps de réponse entre les trois exemples de configuration. Cela est dû aux différentes spécifications de l’API marketing des trois exemples de plateformes.
 
