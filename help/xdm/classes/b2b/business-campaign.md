@@ -1,10 +1,10 @@
 ---
 title: Classe de campagne commerciale XDM
 description: Ce document présente la classe XDM Business Campaign dans le modèle de données d’expérience (XDM).
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 6%
+source-wordcount: '181'
+ht-degree: 4%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->Cette classe est disponible uniquement pour les organisations qui ont accès à l’édition B2B de la plateforme de données clients en temps réel.
+>Cette classe est uniquement disponible pour les organisations qui ont accès à la plateforme de données clients en temps réel de l’édition B2B.
 
 [!UICONTROL XDM Business ] Campaigns est une classe XDM (modèle de données d’expérience) standard qui capture les propriétés minimales requises d’une campagne d’entreprise.
 
@@ -27,3 +27,5 @@ ht-degree: 6%
 | `campaignID` | Chaîne | Identifiant unique de l’entité de campagne. |
 | `campaignName` | Chaîne | Nom de la campagne. |
 | `campaignType` | Chaîne | Type de campagne ou audience cible. |
+
+Consultez le guide sur les [relations de schéma dans l’édition B2B de la plateforme des données clients en temps réel](../../tutorials/relationship-b2b.md) pour découvrir comment cette classe est liée conceptuellement aux autres classes B2B et comment vous pouvez établir ces relations dans l’interface utilisateur de Adobe Experience Platform.

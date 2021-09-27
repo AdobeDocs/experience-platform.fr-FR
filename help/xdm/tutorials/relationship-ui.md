@@ -6,14 +6,18 @@ description: Ce document fournit un tutoriel sur la définition d’une relation
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 497a515a872efdeeda270d0aa90b1fc99898ad4d
+source-git-commit: 2118dc175b421e856c6b0a33a83a7238f01b7ee3
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1020'
 ht-degree: 26%
 
 ---
 
 # Définissez une relation entre deux schémas à l’aide de [!DNL Schema Editor]
+
+>[!NOTE]
+>
+>Si vous utilisez l’édition B2B de la plateforme de données clients en temps réel, reportez-vous au guide sur la [création de relations B2B](./relationship-b2b.md) à la place.
 
 Comprendre les relations entre vos clients et leurs interactions avec votre marque sur divers canaux est un aspect important d’Adobe Experience Platform. La définition de ces relations au sein de la structure de vos schémas [!DNL Experience Data Model] (XDM) vous permet d’obtenir des informations complexes sur les données de vos clients.
 
