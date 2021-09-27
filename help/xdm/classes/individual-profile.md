@@ -5,9 +5,9 @@ title: Classe XDM Individual Profile
 topic-legacy: overview
 description: Ce document présente la classe XDM Individual Profile.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
@@ -42,12 +42,17 @@ La classe [!DNL XDM Individual Profile] fournit elle-même plusieurs valeurs gé
 
 Adobe fournit plusieurs groupes de champs standard à utiliser avec la classe [!DNL XDM Individual Profile]. Voici une liste de certains groupes de champs couramment utilisés pour la classe :
 
+* [[!UICONTROL Consentements et préférences]](../field-groups/profile/consents.md)
 * [[!UICONTROL Détails démographiques]](../field-groups/profile/demographic-details.md)
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Détails de fidélité]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL Détails du contact personnel]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL Consentements et préférences]](../field-groups/profile/consents.md)
 * [[!UICONTROL Détails de l’adhésion au segment]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL Abonnement aux télécommunications]](../field-groups/profile/telecom-subscription.md)
 * [[!UICONTROL Détails du contact professionnel]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL Composants]](../field-groups/profile/business-person-components.md) de personne active XDM\*
+* [[!UICONTROL Détails]](../field-groups/profile/business-person-details.md) de la personne active XDM\*
+
+*\*Ce groupe de champs est disponible uniquement pour les organisations ayant accès à l’édition B2B de la plateforme de données clients en temps réel.*
 
 Pour obtenir la liste complète de tous les groupes de champs compatibles pour [!DNL XDM Individual Profile], consultez le [référentiel XDM GitHub](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).

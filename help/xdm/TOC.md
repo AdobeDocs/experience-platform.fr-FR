@@ -4,10 +4,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes de modèle de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+source-git-commit: cf0f0a46cc337d21c47a9b3a2fc12f8a7a6cb828
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 42%
+source-wordcount: '375'
+ht-degree: 36%
 
 ---
 
@@ -31,6 +31,15 @@ ht-degree: 42%
    * [XDM Individual Profile](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Définition de segment](./classes/segment-definition.md)
+   * Classes B2B {#b2b}
+      * [Compte d’entreprise XDM](./classes/b2b/business-account.md)
+      * [Relation avec la personne du compte d’entreprise XDM](./classes/b2b/business-account-person-relation.md)
+      * [Campagne commerciale XDM](./classes/b2b/business-campaign.md)
+      * [Membres de XDM Business Campaign](./classes/b2b/business-campaign-members.md)
+      * [Opportunités commerciales XDM](./classes/b2b/business-opportunity.md)
+      * [Relation de personne avec les opportunités commerciales XDM](./classes/b2b/business-opportunity-person-relation.md)
+      * [Liste XDM Business Marketing](./classes/b2b/business-marketing-list.md)
+      * [Membres de la liste XDM Business Marketing](./classes/b2b/business-marketing-list-members.md)
 * Groupes de champs de schéma {#field-groups}
    * Groupes de champs de profil {#profile}
       * [Détails démographiques](./field-groups/profile/demographic-details.md)
@@ -42,6 +51,8 @@ ht-degree: 42%
       * [Détails de l’adhésion au segment](./field-groups/profile/segmentation.md)
       * [Abonnement aux télécommunications](./field-groups/profile/telecom-subscription.md)
       * [Détails du contact professionnel](./field-groups/profile/work-contact-details.md)
+      * [Composants de personne active XDM](./field-groups/profile/business-person-components.md)
+      * [Informations détaillées sur les personnes commerciales XDM](./field-groups/profile/business-person-details.md)
    * Groupes de champs d’événement {#event}
       * [Détails du marketing de campagne](./field-groups/event/campaign-marketing-details.md)
       * [Détails du canal](./field-groups/event/channel-details.md)
@@ -60,6 +71,7 @@ ht-degree: 42%
    * [Application](./data-types/application.md)
    * [Balise](./data-types/beacon.md)
    * [Détails du navigateur](./data-types/browser-details.md)
+   * [Source B2B](./data-types/b2b-source.md)
    * [Commerce](./data-types/commerce.md)
    * [Chaîne de consentement](./data-types/consent-string.md)
    * [Contenus et préférences](./data-types/consents.md)
@@ -68,6 +80,7 @@ ht-degree: 42%
    * [Adresse électronique](./data-types/email-address.md)
    * [Environnement](./data-types/environment.md)
    * [Canal d’expérience](./data-types/experience-channel.md)
+   * [Attributs d’audit du système de source externe](./data-types/external-source-system-audit-attributes.md)
    * [Champ de consentement générique](./data-types/consent-field.md)
    * [Champ générique de préférences marketing](./data-types/marketing-field.md)
    * [Champ générique de préférences marketing avec abonnements](./data-types/marketing-field-subscriptions.md)
