@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Guide des catalogues et des jeux de données
 user-guide-description: Découvrez le lignage de données, les métadonnées, les descriptions de fichiers, les répertoires et les jeux de données dans le lac de données.
 feature: Data Management
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 95%
+source-wordcount: '116'
+ht-degree: 83%
 
 ---
 
@@ -31,6 +31,8 @@ ht-degree: 95%
    * [Présentation des jeux de données](datasets/overview.md)
    * [Guide d’utilisation des jeux de données](datasets/user-guide.md)
    * [Création et remplissage d’un jeu de données à l’aide d’API](datasets/create.md)
+   * [Activation d’un jeu de données pour Profile et Identity Service](datasets/enable-for-profile.md)
+   * [Activation d’un jeu de données pour les mises à jour de profil (insertion)](datasets/enable-upsert.md)
 * [Traitement des demandes d’accès à des informations personnelles dans le lac de données](privacy.md)
 * [Protection des données dans Experience Platform](data-protection.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/catalog/)

@@ -2,90 +2,26 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion par lots;ingestion par lots;ingestion;guide de développement;guide d’api;charger;ingérer le paramètre;ingérer le fichier json ;
 solution: Experience Platform
 title: Guide de l’API Batch Ingestion
-topic-legacy: developer guide
-description: Ce document présente de manière exhaustive l’utilisation des API d’ingestion par lots.
+description: Ce document fournit un guide complet aux développeurs qui utilisent les API d’ingestion par lots pour Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 89%
+source-wordcount: '2373'
+ht-degree: 77%
 
 ---
 
-# Guide de l’API d’ingestion par lots
+# Guide de développement de l’ingestion par lots
 
-Ce document présente de manière exhaustive l’utilisation des [API d’ingestion par lots](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
+Ce document fournit un guide complet sur l’utilisation des [points de terminaison de l’API d’ingestion par lots](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) dans Adobe Experience Platform. Pour une présentation des API d’ingestion par lots, y compris les conditions préalables et les bonnes pratiques, veuillez commencer par lire la [présentation de l’API d’ingestion par lots](overview.md).
 
 L’annexe de ce document fournit des informations sur le [formatage des données à utiliser pour l’ingestion](#data-transformation-for-batch-ingestion), y compris des exemples de fichiers de données CSV et JSON.
 
 ## Prise en main
 
-L’ingestion de données fournit une API RESTful grâce à laquelle vous pouvez effectuer des opérations CRUD sur les types d’objets pris en charge.
+Les points de terminaison d’API utilisés dans ce guide font partie de l’[API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). L’ingestion de données fournit une API RESTful grâce à laquelle vous pouvez effectuer des opérations CRUD sur les types d’objets pris en charge.
 
-Les sections suivantes fournissent des informations supplémentaires que vous devrez connaître ou dont vous devrez disposer pour passer avec succès des appels à l’API Batch Ingestion.
-
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
-
-- [Ingestion par lots](./overview.md) : vous permet d’ingérer des données dans Adobe Experience Platform sous forme de fichiers de lots.
-- [[!DNL Experience Data Model (XDM)] Système](../../xdm/home.md) : Cadre normalisé selon lequel  [!DNL Experience Platform] organise les données d’expérience client.
-- [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une  [!DNL Platform] instance unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
-
-### Lecture d&#39;exemples d&#39;appels API
-
-Ce guide fournit des exemples d&#39;appels API pour démontrer comment formater vos requêtes. Il s&#39;agit notamment de chemins d&#39;accès, d&#39;en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
-
-### Collecte des valeurs des en-têtes requis
-
-Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
-
-- `Authorization: Bearer {ACCESS_TOKEN}`
-- `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
-
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
-
-- `x-sandbox-name: {SANDBOX_NAME}`
-
->[!NOTE]
->
->Pour plus d’informations sur les environnements de test dans [!DNL Platform], consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
-
-Les requêtes contenant un payload (POST, PUT, PATCH) peuvent requérir un en-tête `Content-Type` supplémentaire. Les valeurs acceptées propres à chaque appel sont précisées dans les paramètres d’appel.
-
-## Types
-
-Lors de l’ingestion de données, il est important de comprendre le fonctionnement des schémas [!DNL Experience Data Model] (XDM). Pour plus d’informations sur la façon dont les types de champs XDM sont associés à différents formats, reportez-vous au [guide de développement du registre des schémas](../../xdm/api/getting-started.md).
-
-L’ingestion de données offre une certaine souplesse : si un type ne correspond pas à ce qui se trouve dans le schéma cible, les données seront converties dans le type cible précisé. Si cette conversion est impossible, le lot échouera avec `TypeCompatibilityException`.
-
-Par exemple, ni JSON ni CSV ne comportent de date ou de type d’horodatage. Par conséquent, ces valeurs sont exprimées au moyen de [chaînes formatées ISO 8061](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou d’une heure Unix formatée en millisecondes (1531263959000) et sont converties au moment de l’ingestion vers le type XDM cible.
-
-Le tableau ci-dessous illustre les conversions prises en charge lors de l’ingestion de données.
-
-| Entrant (ligne) / Cible (colonne) | Chaîne | Octet | Court | Entier | Long | Double | Date | Date et heure | Objet | Map |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Chaîne | X | X | X | X | X | X | X | X |  |  |
-| Octet | X | X | X | X | X | X |  |  |  |  |
-| Court | X | X | X | X | X | X |  |  |  |  |
-| Entier | X | X | X | X | X | X |  |  |  |  |
-| Long | X | X | X | X | X | X | X | X |  |  |
-| Double | X | X | X | X | X | X |  |  |  |  |
-| Date |  |  |  |  |  |  | X |  |  |  |
-| Date et heure |  |  |  |  |  |  |  | X |  |  |
-| Objet |  |  |  |  |  |  |  |  | X | X |
-| Carte |  |  |  |  |  |  |  |  | X | X |
-
->[!NOTE]
->
->Les booléens et les tableaux ne peuvent pas être convertis en d’autres types.
-
-## Contraintes d’ingestion
-
-L’ingestion de données par lots présente certaines contraintes :
-- Nombre maximal de fichiers par lot : 1 500
-- Taille maximale du lot : 100 Go
-- Nombre maximal de propriétés ou de champs par ligne : 10 000
-- Nombre maximal de lots par minute, par utilisateur : 138
+Avant de poursuivre, consultez la [présentation de l’API d’ingestion par lots](overview.md) et le [guide de prise en main](getting-started.md).
 
 ## Ingestion de fichiers JSON
 
@@ -157,7 +93,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Chargement de fichiers
 
-Maintenant que vous avez créé un lot, vous pouvez utiliser le `batchId` précisé plus haut pour charger des fichiers dans le lot. Vous pouvez charger plusieurs fichiers dans le lot.
+Maintenant que vous avez créé un lot, vous pouvez utiliser l’identifiant de lot de la réponse de création de lot pour charger les fichiers dans le lot. Vous pouvez charger plusieurs fichiers dans le lot.
 
 >[!NOTE]
 >
@@ -231,7 +167,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 200 OK
 ```
 
-## Ingestion de fichiers Parquet
+## Ingestion de fichiers Parquet {#ingest-parquet-files}
 
 >[!NOTE]
 >
@@ -812,6 +748,21 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
+## Correction d’un lot
+
+Il peut parfois être nécessaire de mettre à jour les données dans la banque de profils de votre entreprise. Par exemple, vous devrez peut-être corriger des enregistrements ou modifier une valeur d’attribut. Adobe Experience Platform prend en charge la mise à jour ou le correctif des données de la banque de profils par le biais d’une action d’insertion ou de &quot;correction d’un lot&quot;.
+
+>[!NOTE]
+>
+>Ces mises à jour ne sont autorisées que sur les enregistrements de profil, et non sur les événements d’expérience.
+
+Les éléments suivants sont requis pour corriger un lot :
+
+- **Jeu de données activé pour les mises à jour de profil et d’attribut.** Pour ce faire, vous devez utiliser des balises de jeu de données et ajouter une  `isUpsert:true` balise spécifique au  `unifiedProfile` tableau . Pour obtenir des détails sur la procédure de création d’un jeu de données ou de configuration d’un jeu de données existant à des fins de publication, suivez le tutoriel portant sur l’[activation d’un jeu de données pour les mises à jour de profil](../../catalog/datasets/enable-upsert.md).
+- **Fichier parquet contenant les champs à corriger et les champs d’identité du profil.** Le format de données utilisé pour corriger un lot est similaire au processus normal d’ingestion par lots. L’entrée requise est un fichier Parquet. En plus des champs à mettre à jour, les données chargées doivent contenir les champs d’identité afin de correspondre aux données de la banque de profils.
+
+Une fois qu’un jeu de données est activé pour Profile et upsert, et qu’un fichier Parquet contient les champs que vous souhaitez corriger ainsi que les champs d’identité nécessaires, vous pouvez suivre les étapes d’[ingestion de fichiers Parquet](#ingest-parquet-files) afin de terminer le correctif par ingestion par lots.
+
 ## Relecture d’un lot
 
 Si vous souhaitez remplacer un lot déjà ingéré, vous pouvez le faire grâce à la fonctionnalité « relecture de lot ». Cette action équivaut à supprimer l’ancien lot et à en ingérer un nouveau pour le remplacer.
@@ -963,6 +914,8 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 ```
 
 ## Annexe
+
+La section suivante contient des informations supplémentaires sur l’ingestion de données dans Experience Platform à l’aide de l’ingestion par lots.
 
 ### Transformation des données pour l’ingestion par lots
 

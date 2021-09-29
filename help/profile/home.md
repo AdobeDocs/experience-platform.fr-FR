@@ -4,10 +4,10 @@ title: Présentation du profil client en temps réel
 topic-legacy: guide
 description: Real-time Customer Profile fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 93a4cd5c86a715cd04cd2a553866bbb4e19f951a
+source-git-commit: 2eac45cd4b053753f954bbaae999fc321c75bd9b
 workflow-type: tm+mt
-source-wordcount: '1810'
-ht-degree: 92%
+source-wordcount: '1884'
+ht-degree: 89%
 
 ---
 
@@ -104,6 +104,10 @@ Vous pouvez configurer [!DNL Platform] pour envoyer les données d’enregistrem
 ### Mesures d’ingestion de profil
 
 Observability Insights vous permet d’afficher les mesures clés dans Adobe Experience Platform. Outre les statistiques d’utilisation relatives à [!DNL Experience Platform] et les indicateurs de performances pour diverses fonctionnalités de [!DNL Platform], des mesures spécifiques liées au profil vous permettent d’obtenir des éclairages sur les taux de requêtes entrantes, les taux d’ingestion réussie, les tailles d’enregistrements ingérés, etc. Pour en savoir plus, consultez tout d’abord la [présentation de l’API Observability Insights](../observability/api/overview.md) et pour obtenir une liste complète des mesures du profil client en temps réel, consultez la documentation sur les [mesures disponibles](../observability/api/metrics.md#available-metrics).
+
+## Mise à jour des données de banque de profils
+
+Il peut parfois être nécessaire de mettre à jour les données dans la banque de profils de votre entreprise. Par exemple, vous devrez peut-être corriger des enregistrements ou modifier une valeur d’attribut. Pour ce faire, vous pouvez procéder à l’ingestion par lots ou par flux, ce qui nécessite un jeu de données activé par Profile configuré avec une balise upsert. Pour plus d’informations sur la configuration d’un jeu de données pour les mises à jour d’attributs, reportez-vous au tutoriel [Activation d’un jeu de données pour Profile et upsert](../catalog/datasets/enable-upsert.md).
 
 ## [!DNL Data governance] et [!DNL Privacy]
 

@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Data Ingestion
 breadcrumb-title: Guide d’ingestion de données
 user-guide-description: Introduisez vos données dans Platform par lot ou en ingestion continue.
 feature: Data Ingestion
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 95%
+source-wordcount: '124'
+ht-degree: 88%
 
 ---
 
@@ -20,8 +20,9 @@ ht-degree: 95%
    - [Connecteur Kafka](streaming-ingestion/kafka.md)
    - [Dépannage](streaming-ingestion/troubleshooting.md)
 - Ingestion par lots {#batch}
-   - [Présentation](batch-ingestion/overview.md)
-   - [API d’ingestion par lots](batch-ingestion/api-overview.md)
+   - [Prise en main des API d’ingestion par lots](batch-ingestion/getting-started.md)
+   - [Présentation de l’API](batch-ingestion/overview.md)
+   - [Guide du développeur de l’API](batch-ingestion/api-overview.md)
    - [Ingestion par lots partielle](batch-ingestion/partial.md)
    - [Dépannage](batch-ingestion/troubleshooting.md)
 - Tutoriels {#tutorials}

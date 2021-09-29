@@ -3,10 +3,10 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Guide de l’API Real-time Customer Profile
 description: L’API Real-time Customer Profile permet aux développeurs d’explorer et d’utiliser les données de profil, notamment d’afficher les profils, de créer et de mettre à jour des stratégies de fusion, d’exporter ou d’échantillonner des données de profil, ainsi que de supprimer les données de profil qui ne sont plus requises ou qui ont été ajoutées par erreur. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 27%
+source-wordcount: '963'
+ht-degree: 25%
 
 ---
 
@@ -57,6 +57,10 @@ Lorsque des données sont ingérées dans Platform, un exemple de tâche est ex�
 ## Tâches de système Profile {#profile-system-jobs}
 
 Les données activées pour le profil qui sont ingérées dans [!DNL Platform] sont stockées dans [!DNL Data Lake] ainsi que dans l’entrepôt de données [!DNL Real-time Customer Profile]. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot du magasin [!DNL Profile] pour supprimer les données dont vous n’avez plus besoin ou qui ont été ajoutées par erreur. Pour ce faire, il est nécessaire d’utiliser l’API afin de créer une balise [!DNL Profile System Job], également appelée &quot;[!DNL delete request]&quot;, qui peut être modifiée, surveillée ou supprimée si nécessaire. Pour savoir comment utiliser les requêtes de suppression à l’aide du point de terminaison `/system/jobs` de l’API [!DNL Real-time Customer Profile], suivez les étapes décrites dans le [guide de terminaison des tâches du système de profil](profile-system-jobs.md).
+
+## Mise à jour des attributs de profil {#update-profile}
+
+Il peut parfois être nécessaire de mettre à jour les données dans la banque de profils de votre entreprise. Par exemple, vous devrez peut-être corriger des enregistrements ou modifier une valeur d’attribut. Pour ce faire, vous pouvez procéder à l’ingestion par lots ou par flux, ce qui nécessite un jeu de données activé par Profile configuré avec une balise upsert. Pour plus d’informations sur la configuration d’un jeu de données pour les mises à jour d’attributs, reportez-vous au tutoriel [Activation d’un jeu de données pour Profile et upsert](../../catalog/datasets/enable-upsert.md).
 
 ## Étapes suivantes {#next-steps}
 
