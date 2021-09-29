@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: b616a0c0d49d980644f82bc3af5995b3b17b4c80
+source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 59%
+source-wordcount: '381'
+ht-degree: 50%
 
 ---
 
@@ -15,8 +15,21 @@ ht-degree: 59%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [Ingestion de données](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [Sources](#sources)
+
+## Ingestion de données {#ingestion}
+
+Adobe Experience Platform Data Ingestion représente les multiples méthodes par lesquelles Platform ingère des données provenant de diverses sources, ainsi que la manière dont ces données sont conservées dans le lac de données pour être utilisées par les services Platform en aval.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+|------- | -----------|
+| Mise à jour ou correction d’enregistrements de profil à l’aide de l’ingestion par lots | Real-time Customer Profile permet désormais de mettre à jour les attributs de profil dans les données d’enregistrement de profil individuelles par ingestion par lots. Pour en savoir plus, consultez le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md). |
+
+Pour en savoir plus sur l’ingestion de données dans Platform, consultez la [Documentation de Data Ingestion](../../ingestion/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
