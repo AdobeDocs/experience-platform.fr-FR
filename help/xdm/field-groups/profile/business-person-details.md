@@ -1,19 +1,19 @@
 ---
 title: Groupe de champs de schéma de détails de personne professionnelle XDM
 description: Ce document fournit un aperçu du groupe de champs de schéma XDM Business Person Details .
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
+source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 9%
+source-wordcount: '562'
+ht-degree: 11%
 
 ---
 
+# [!UICONTROL Groupe de champs ] Détails de la personne professionnelle XDM (bêta)
 
-# [!UICONTROL Groupe de champs ] Détails de la personne professionnelle XDM
-
->[!NOTE]
+>[!IMPORTANT]
 >
->Ce groupe de champs est disponible uniquement pour les organisations qui ont accès à l’édition B2B de la plateforme de données clients en temps réel.
+>Ce groupe de champs est disponible dans le cadre de la plateforme de données clients en temps réel de l’édition B2B, actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
 
 [!UICONTROL XDM Business Person ] Détail d’un groupe de champs de schéma standard pour la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe qui capture les informations sur une personne dans le contexte d’une entreprise B2B (business-to-business).
 

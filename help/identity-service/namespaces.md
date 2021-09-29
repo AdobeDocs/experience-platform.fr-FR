@@ -3,12 +3,12 @@ keywords: Experience Platform;accueil;rubriques populaires;espace de noms;espace
 solution: Experience Platform
 title: Présentation d’Identity Namespace
 topic-legacy: overview
-description: Les espaces de noms d’identité sont des composants d’Identity Service qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name@email.com" comme adresse électronique ou "443522" comme identifiant CRM numérique.
+description: Les espaces de noms d’identité sont des composants du Service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name@email.com" comme adresse électronique ou "443522" comme identifiant CRM numérique.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1638'
-ht-degree: 19%
+source-wordcount: '1598'
+ht-degree: 20%
 
 ---
 
@@ -61,13 +61,13 @@ Les espaces de noms standard suivants sont fournis pour être utilisés par tout
 | Service de notification push Apple | Espace de noms représentant les identités collectées à l’aide du service de notification push Apple. Pour plus d’informations, consultez le document suivant sur [Service de notification push Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) . |
 | CORE | Espace de noms représentant Adobe Audience Manager. Cet espace de noms peut également être référencé par son nom hérité : &quot;Adobe AudienceManager&quot;. Pour plus d’informations, consultez le document suivant sur les [ID d’Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids). |
 | ECID | Espace de noms qui représente l’ECID. Cet espace de noms peut également être référencé par les alias suivants : &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consultez le document suivant sur [ECID](./ecid.md) pour plus d’informations. |
-| E-mail | Espace de noms représentant une adresse électronique. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
+| Email | Espace de noms représentant une adresse électronique. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
 | Emails (SHA256, avec mise en minuscules) | Espace de noms pour l’adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage avec SHA256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse email ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Pour plus d’informations, consultez le document suivant sur la [prise en charge du hachage SHA-256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) . |
 | Firebase Cloud Messaging | Espace de noms représentant les identités collectées à l’aide de Google Firebase Cloud Messaging pour les notifications push. Pour plus d’informations, consultez le document suivant sur [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) . |
 | Identifiant Google Ad (GAID) | Espace de noms qui représente un identifiant Google Advertising. Consultez le document suivant sur [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) pour plus d’informations. |
 | ID de clic Google | Espace de noms représentant un ID de clic Google. Pour plus d’informations, consultez le document suivant sur [Suivi des clics dans Google Ads](https://developers.google.com/adwords/api/docs/guides/click-tracking). |
 | Téléphone | Espace de noms qui représente un numéro de téléphone. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
-| Téléphone (E.164) | Espace de noms qui représente les numéros de téléphone bruts qui doivent être hachés au format E.164. Le format E.164 comprend un signe plus (`+`), un code d&#39;appel international, un code local et un numéro de téléphone. Par exemple: `(+)(country code)(area code)(phone number)`. |
+| Téléphone (E.164) | Espace de noms qui représente les numéros de téléphone bruts qui doivent être hachés au format E.164. Le format E.164 comprend un signe plus (`+`), un code d&#39;appel international, un code local et un numéro de téléphone. Par exemple : `(+)(country code)(area code)(phone number)`. |
 | Téléphone (SHA256) | Espace de noms qui représente les numéros de téléphone qui doivent être hachés à l’aide de SHA256. Vous devez supprimer les symboles, les lettres et les zéros de début. Vous devez également ajouter le code d’appel de pays comme préfixe. |
 | Téléphone (SHA256_E.164) | Espace de noms qui représente les numéros de téléphone bruts qui doivent être hachés au format SHA256 et E.164. |
 | TNTID | Espace de noms représentant Adobe Target. Pour plus d’informations, voir le document suivant sur [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en). |
@@ -79,7 +79,7 @@ Pour afficher les espaces de noms d’identité dans l’interface utilisateur, 
 
 ![parcourir](./images/browse.png)
 
-Une liste d’espaces de noms d’identité s’affiche dans l’interface principale de la page, affichant des informations sur leur nom, les symboles d’identité, la date de dernière mise à jour et s’il s’agit d’un espace de noms standard ou personnalisé. Le rail de droite contient des informations sur [!UICONTROL Identités uniques] et [!UICONTROL Force du graphique d’identités]. [!UICONTROL Les ] identités uniques font référence au nombre d’identités qui existent dans l’environnement de test particulier que vous utilisez, tandis que le graphique d’ [!UICONTROL identités ] renforce l’affichage d’informations sur le nombre d’identifiants de cookie et de cookies non-cookies dans votre environnement de test.
+Une liste d’espaces de noms d’identité s’affiche dans l’interface principale de la page, affichant des informations sur leur nom, les symboles d’identité, la date de dernière mise à jour et s’il s’agit d’un espace de noms standard ou personnalisé. Le rail de droite contient des informations sur la [!UICONTROL force du graphique d’identités].
 
 ![identités](./images/identities.png)
 

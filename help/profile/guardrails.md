@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform fournit une série de garde-fous pour vous aider à éviter de créer des modèles de données que Real-time Customer Profile ne peut pas prendre en charge. Ce document décrit les bonnes pratiques et les contraintes à garder à l’esprit lors de la modélisation des données de profil.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 441c2978b90a4703874787b3ed8b94c4a7779aa8
+source-git-commit: c351ee91367082cc5fbfc89da50aa2db5e415ea8
 workflow-type: tm+mt
-source-wordcount: '1666'
-ht-degree: 6%
+source-wordcount: '1962'
+ht-degree: 5%
 
 ---
 
@@ -48,10 +48,6 @@ Le modèle de données de magasin [!DNL Profile] se compose de deux types d’en
 
    ![](images/guardrails/profile-and-dimension-entities.png)
 
-## Fragments de profil
-
-Ce document comporte plusieurs barrières de sécurité faisant référence à des &quot;fragments de profil&quot;. Le profil client en temps réel est composé de plusieurs fragments de profil. Chaque fragment représente les données de l’identité d’un jeu de données où il s’agit de l’identité Principale. Cela signifie qu’un fragment peut contenir un identifiant Principal et des données d’événement (série temporelle) dans un jeu de données XDM ExperienceEvent ou qu’il peut être composé d’un identifiant Principal et de données d’enregistrement (attributs indépendants du temps) dans un jeu de données XDM Individual Profile.
-
 ## Types de limite
 
 Lors de la définition de votre modèle de données, il est recommandé de rester dans les barrières de sécurité fournies pour garantir des performances correctes et éviter les erreurs système.
@@ -62,6 +58,10 @@ Les barrières de sécurité fournies dans ce document incluent deux types de li
 
 * **Limite stricte :** une limite stricte fournit un maximum absolu au système. Si vous dépassez cette limite, des pannes et des erreurs s’affichent, ce qui empêche le système de fonctionner comme prévu.
 
+## Fragments de profil
+
+Dans ce document, plusieurs barrières de sécurité font référence à des &quot;fragments de profil&quot;. Dans Experience Platform, plusieurs fragments de profil sont fusionnés pour former Real-time Customer Profile. Chaque fragment représente une identité Principale unique et les données d’enregistrement ou d’événement correspondantes pour cet identifiant dans un jeu de données donné. Pour en savoir plus sur les fragments de profil, consultez la [Présentation des profils](home.md#profile-fragments-vs-merged-profiles).
+
 ## Barrières de sécurité du modèle de données
 
 Il est recommandé de respecter les barrières de sécurité suivantes lors de la création d’un modèle de données à utiliser avec [!DNL Real-time Customer Profile].
@@ -70,11 +70,13 @@ Il est recommandé de respecter les barrières de sécurité suivantes lors de l
 
 | Guardrail | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Nombre de jeux de données recommandés pour contribuer au schéma d’union [!DNL Profile] | 20 | Soft | **Il est recommandé d’utiliser un maximum de 20 jeux de données  [!DNL Profile]activés.** Pour activer un autre jeu de données pour  [!DNL Profile], un jeu de données existant doit d’abord être supprimé ou désactivé. |
+| Nombre de jeux de données activés pour Profile | 20 | Soft | **20 jeux de données au maximum peuvent contribuer au schéma d’ [!DNL Profile] union.** Pour activer un autre jeu de données pour  [!DNL Profile], un jeu de données existant doit d’abord être supprimé ou désactivé. La limite de 20 jeux de données inclut des jeux de données provenant d’autres solutions d’Adobe (par exemple, Adobe Analytics). |
+| Nombre de jeux de données de suite de rapports Adobe Analytics activés pour Profile | 1 | Soft | **Un (1) jeu de données de suite de rapports Analytics doit être activé au maximum pour Profile.** Toute tentative d’activation de plusieurs jeux de données de suite de rapports Analytics pour Profile peut avoir des conséquences imprévues sur la qualité des données. Pour plus d’informations, voir la section [Jeux de données Adobe Analytics](#aa-datasets) dans l’annexe de ce document. |
 | Nombre de relations multi-entités recommandé | 5 | Soft | **Il est recommandé d’établir au maximum 5 relations multientités définies entre des entités Principales et des entités de dimension.** D’autres mappages de relation ne doivent pas être effectués tant qu’une relation existante n’est pas supprimée ou désactivée. |
 | Profondeur JSON maximale pour le champ d’ID utilisé dans les relations entre entités multiples | 4 | Soft | **La profondeur maximale recommandée pour un champ d’ID utilisé dans les relations multi-entités est de 4.** Cela signifie que dans un schéma fortement imbriqué, les champs imbriqués de plus de 4 niveaux de profondeur ne doivent pas être utilisés comme champ d’identifiant dans une relation. |
 | Cardinalité d’un tableau dans un fragment de profil | &lt;=500 | Soft | **La cardinalité optimale du tableau dans un fragment de profil (données indépendantes du temps) est la suivante :  &lt;>** |
 | Cardinalité des tableaux dans ExperienceEvent | &lt;=10 | Soft | **La cardinalité optimale du tableau dans un ExperienceEvent (données de série temporelle) est :  &lt;>** |
+| Limite du nombre d’identités pour le graphique d’identités d’un profil individuel | 50 | Hard | **Le nombre maximal d’identités dans un graphique d’identités pour un profil individuel est de 50.** Les profils comportant plus de 50 identités sont exclus de la segmentation, des exportations et des recherches. |
 
 ### Protections des entités de Dimension
 
@@ -98,8 +100,8 @@ Les barrières de sécurité suivantes se rapportent à la taille des données e
 | --- | --- | --- | --- |
 | Taille maximale d’ExperienceEvent | 10 Ko | Hard | **La taille maximale d’un événement est de 10 Ko.** L’ingestion se poursuit, mais tous les événements de plus de 10 Ko seront ignorés. |
 | Taille maximale d’enregistrement de profil | 100 Ko | Hard | **La taille maximale d’un enregistrement de profil est de 100 Ko.** L’ingestion se poursuit, mais les enregistrements de profil supérieurs à 100 Ko seront supprimés. |
-| Taille maximale du fragment de profil | 50 Mo | Hard | **La taille maximale d’un fragment de profil est de 50 Mo.** La segmentation, les exportations et les recherches peuvent échouer pour tout  [ ](#profile-fragments) fragment de profil supérieur à 50 Mo. |
-| Taille maximale de stockage du profil | 50 Mo | Soft | **La taille maximale d’un profil stocké est de 50 Mo.** L’ajout de nouveaux  [fragments de ](#profile-fragments) profil dans un profil supérieur à 50 Mo affecte les performances du système. |
+| Taille maximale du fragment de profil | 50 Mo | Hard | **La taille maximale d’un fragment de profil unique est de 50 Mo.** La segmentation, les exportations et les recherches peuvent échouer pour tout  [ ](#profile-fragments) fragment de profil supérieur à 50 Mo. |
+| Taille maximale de stockage du profil | 50 Mo | Soft | **La taille maximale d’un profil stocké est de 50 Mo.** L’ajout de nouveaux  [fragments de ](#profile-fragments) profil dans un profil supérieur à 50 Mo affecte les performances du système. Par exemple, un profil peut contenir un fragment unique de 50 Mo ou plusieurs fragments répartis dans plusieurs jeux de données avec une taille totale combinée de 50 Mo. Toute tentative de stockage d’un profil avec un fragment unique de plus de 50 Mo ou plusieurs fragments dont la taille combinée est supérieure à 50 Mo aura une incidence sur les performances du système. |
 | Nombre de lots Profile ou ExperienceEvent ingérés par jour | 90 | Soft | **Le nombre maximal de lots Profile ou ExperienceEvent ingérés par jour est de 90.** Cela signifie que le total combiné des lots Profile et ExperienceEvent ingérés chaque jour ne peut pas dépasser 90. L’ingestion de lots supplémentaires affectera les performances du système. |
 
 ### Protections des entités de Dimension
@@ -119,3 +121,13 @@ Les barrières de sécurité décrites dans cette section font référence au no
 | Nombre maximal de segments par environnement de test | 10 000 | Soft | **Le nombre maximal de segments qu’une organisation peut créer est de 10 000 par environnement de test.** Une organisation peut avoir plus de 10 000 segments au total, à condition qu’il y ait moins de 10 000 segments dans chaque environnement de test individuel. Toute tentative de création de segments supplémentaires entraînera une dégradation des performances du système. |
 | Nombre maximal de segments de diffusion en continu par environnement de test | 500 | Soft | **Le nombre maximal de segments en flux continu qu’une organisation peut créer est de 500 par environnement de test.** Une organisation peut avoir plus de 500 segments en flux continu au total, à condition qu’il y ait moins de 500 segments en flux continu dans chaque environnement de test individuel. Toute tentative de création de segments de diffusion en continu supplémentaires entraînera une dégradation des performances du système. |
 | Nombre maximal de segments par lot par environnement de test | 10 000 | Soft | **Le nombre maximal de segments par lot qu’une organisation peut créer est de 10 000 par environnement de test.** Une organisation peut avoir plus de 10 000 segments par lot au total, à condition qu’il y ait moins de 10 000 segments par lot dans chaque environnement de test individuel. Toute tentative de création de segments par lot supplémentaires entraînera une dégradation des performances du système. |
+
+## Annexe
+
+Cette section fournit des détails supplémentaires sur les barrières de sécurité individuelles.
+
+### Jeux de données de suite de rapports Adobe Analytics dans Platform {#aa-datasets}
+
+Un (1) jeu de données de suite de rapports Adobe Analytics maximum doit être activé pour Profile. Il s’agit d’une limite soft, ce qui signifie que vous pouvez activer plusieurs jeux de données Analytics pour Profile, mais elle n’est pas recommandée, car elle peut avoir des conséquences inattendues sur vos données. Cela est dû aux différences entre les schémas du modèle de données d’expérience (XDM), qui fournissent la structure sémantique des données dans Experience Platform et permettent une cohérence dans l’interprétation des données, ainsi que la nature personnalisable des eVars et des variables de conversion dans Adobe Analytics.
+
+Par exemple, dans Adobe Analytics, une seule organisation peut avoir plusieurs suites de rapports. Si la suite de rapports A désigne l’eVar 4 comme &quot;terme de recherche interne&quot; et que la suite de rapports B désigne l’eVar 4 comme &quot;domaine référent&quot;, ces valeurs seront toutes deux ingérées dans le même champ de Profile, ce qui entraînera une confusion et dégradera la qualité des données.

@@ -1,19 +1,19 @@
 ---
 title: Groupe de champs de schéma des composants de personne professionnelle XDM
 description: Ce document fournit un aperçu du groupe de champs de schéma XDM Business Person Components.
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 4%
+source-wordcount: '441'
+ht-degree: 5%
 
 ---
 
+# [!UICONTROL Groupe de champs ] de schéma de composants de personne professionnelle XDM (bêta)
 
-# [!UICONTROL Groupe de champs ] de schéma de composants de personne professionnelle XDM
-
->[!NOTE]
+>[!IMPORTANT]
 >
->Ce groupe de champs est uniquement disponible pour les organisations qui ont accès à l’édition B2B de la plateforme de données clients en temps réel (CDP en temps réel).
+>Ce groupe de champs est disponible dans le cadre de la plateforme de données clients en temps réel de l’édition B2B, actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
 
 [!UICONTROL Les ] composants XDM Business Person constituent un groupe de champs de schéma standard pour la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe qui capture plusieurs enregistrements source pour une personne, ainsi que d’autres attributs requis pour la segmentation des personnes.
 

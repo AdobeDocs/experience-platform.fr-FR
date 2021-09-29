@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes de configuration d’un nouveau flux de données à l’aide de votre compte de stockage dans le cloud.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: df6ddf52f5cab7e5faae591594f060d641977783
+source-git-commit: e980ca69517d6e51ce00f102492829aabaa52976
 workflow-type: tm+mt
-source-wordcount: '2001'
+source-wordcount: '2002'
 ht-degree: 4%
 
 ---
@@ -142,7 +142,7 @@ Notez que vous ne pouvez pas effectuer de mappage sur différents types. Par exe
 
 >[!TIP]
 >
->[!DNL Platform] fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
+>Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
 
 Sélectionnez **[!UICONTROL Aperçu des données]** pour afficher les résultats de mappage de 100 lignes maximum de données d’exemple du jeu de données sélectionné.
 

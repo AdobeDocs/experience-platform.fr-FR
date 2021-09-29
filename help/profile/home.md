@@ -2,12 +2,12 @@
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;profil unifié;Profil unifié;unifié;Profil;rtcp;graphiques XDM
 title: Présentation du profil client en temps réel
 topic-legacy: guide
-description: Real-time Customer Profile fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils client individuels et d’événements de série temporelle associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
+description: Real-time Customer Profile fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
+source-git-commit: 93a4cd5c86a715cd04cd2a553866bbb4e19f951a
 workflow-type: tm+mt
-source-wordcount: '1779'
-ht-degree: 98%
+source-wordcount: '1810'
+ht-degree: 92%
 
 ---
 
@@ -43,13 +43,15 @@ L’interface utilisateur d’Experience Platform fournit un tableau de bord gr�
 
 Chaque profil client est composé de plusieurs fragments de profil qui ont été fusionnés dans le but de former une vue unique pour ce client. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Platform, ils sont fusionnés afin de créer un profil unique pour ce client.
 
-Lorsque les données provenant de plusieurs sources entrent en conflit (par exemple, si un fragment classe le client comme étant « célibataire » tandis qu’un autre le classe comme étant « marié »), la [stratégie de fusion](#merge-policies) détermine quelles informations doivent passer en priorité et être incluses dans le profil de l’individu. Par conséquent, il est probable que le nombre total de fragments de profil au sein de Platform soit toujours supérieur au nombre total de profils fusionnés, chaque profil étant composé de fragments multiples.
+En d’autres termes, les fragments de profil représentent une identité Principale unique et les données [record](#record-data) ou [event](#time-series-events) correspondantes pour cet identifiant dans un jeu de données donné.
 
-### Données d’enregistrement
+Lorsque les données de plusieurs jeux de données entrent en conflit (par exemple, un fragment répertorie le client comme &quot;célibataire&quot; tandis que l’autre liste le client comme &quot;marié&quot;), la [stratégie de fusion](#merge-policies) détermine les informations à prioriser et à inclure dans le profil de l’individu. Par conséquent, il est probable que le nombre total de fragments de profil dans Platform soit toujours supérieur au nombre total de profils fusionnés, car chaque profil est généralement composé de plusieurs fragments provenant de plusieurs jeux de données.
+
+### Données d’enregistrement {#record-data}
 
 Un profil est la représentation d’un sujet, d’une organisation ou d’un individu. Il est composé de nombreux attributs également appelés données d’enregistrement. Par exemple, le profil d’un produit peut inclure un SKU et une description, tandis que le profil d’une personne contient des informations telles que le prénom, le nom et l’adresse électronique. [!DNL Experience Platform] vous permet de personnaliser les profils afin d’utiliser des données spécifiques pertinentes pour votre entreprise. La classe standard du [!DNL Experience Data Model] (XDM), [!DNL XDM Individual Profile], est la classe privilégiée à partir de laquelle créer un schéma lors de la description des données d’enregistrement des clients. Elle fournit les données intégrées à de nombreuses interactions entre les services Platform. Pour plus d’informations sur l’utilisation des schémas dans [!DNL Experience Platform], consultez tout d’abord la [présentation du système XDM](../xdm/home.md).
 
-### Événements de série temporelle
+### Événements de série temporelle {#time-series-events}
 
 Les données de série temporelle fournissent un instantané du système au moment où une action a été entreprise, directement ou indirectement, par un sujet, ainsi que des données détaillant l’événement lui-même. Représentées par la classe de schéma standard XDM ExperienceEvent, les données de série temporelle peuvent décrire des événements tels que l’ajout d’articles à un panier, l’utilisation de liens et la lecture de vidéos. Vous pouvez utiliser les données de série temporelle pour établir des règles de segmentation et consulter les événements individuellement dans le cadre d’un profil.
 
@@ -108,6 +110,7 @@ Observability Insights vous permet d’afficher les mesures clés dans Adobe Exp
 La [!DNL Data governance] désigne une série de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données.
 
 En ce qui concerne l’accès aux données, la gouvernance des données joue un rôle essentiel dans [!DNL Experience Platform], et ce, à différents niveaux :
+
 * Application de libellés d’utilisation des données
 * Stratégies d’accès aux données
 * Contrôle de l’accès aux données pour les actions marketing
@@ -120,4 +123,4 @@ La [!DNL Data governance] est gérée à partir de plusieurs points. Il s’agit
 
 ## Étapes suivantes et ressources supplémentaires
 
-Pour en savoir plus sur l’utilisation des données du [!DNL Real-time Customer Profile] à l’aide de l’interface utilisateur d’Experience Platform ou de l’API Profile, commencez par consulter respectivement le [guide de l’interface utilisateur du profil](ui/user-guide.md) ou le [guide du développement de l’API](api/overview.md).
+Pour en savoir plus sur l’utilisation des données de profil client en temps réel à l’aide de l’interface utilisateur Experience Platform ou de l’API Profile, veuillez commencer par lire le [guide de développement de l’interface utilisateur de profil](ui/user-guide.md) ou le [guide de développement de l’API](api/overview.md), respectivement.

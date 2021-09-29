@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Data Ingestion, Sources
-source-git-commit: e85980565889dd66f7dbd93749e013f77e434b74
+source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '656'
 ht-degree: 19%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 19%
          - [Connecteur Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
          - [Guide d’authentification du Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Espaces de noms et schémas du Marketo Engage](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - Publicité {#advertising}
+   - Advertising {#advertising}
       - [Connecteur Google AdWords](connectors/advertising/ads.md)
    - Stockage dans le cloud {#cloud-storage}
       - [Connecteur Amazon Kinesis](connectors/cloud-storage/kinesis.md)
@@ -40,6 +40,7 @@ ht-degree: 19%
       - [Connecteur Azure Blob](connectors/cloud-storage/blob.md)
       - [Connecteur Azure Event Hubs](connectors/cloud-storage/eventhub.md)
       - [Connecteur Azure File Storage](connectors/cloud-storage/azure-file-storage.md)
+      - [Zone d’entrée des données](connectors/cloud-storage/data-landing-zone.md)
       - [Connecteur FTP](connectors/cloud-storage/ftp.md)
       - [Connecteur Google Cloud Storage](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
@@ -97,6 +98,7 @@ ht-degree: 19%
          - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Centre d’événements Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Stockage de fichiers Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [Zone d’entrée des données](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Stockage Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
@@ -185,6 +187,7 @@ ht-degree: 19%
          - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
          - [Centre d’événements Azure](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Stockage de fichiers Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+         - [Zone d’entrée des données](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Stockage Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)

@@ -5,9 +5,9 @@ title: Présentation dʼIdentity Service
 topic-legacy: overview
 description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 947d8803416cee584b35a8d480929e2684d0057f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1792'
 ht-degree: 57%
 
 ---
@@ -35,7 +35,6 @@ Avant de rentrer dans les détails de [!DNL Identity Service], voici un résumé
 | Espace de noms d’identité | Un espace de noms d’identité sert à distinguer le contexte ou le type d’une identité. Par exemple, une identité identifie &quot;name<span>@email.com&quot; comme adresse électronique ou &quot;443522&quot; comme identifiant CRM numérique. Les espaces de noms d’identité sont utilisés pour rechercher des identités individuelles et fournir le contexte des valeurs d’identité. Cela vous permet de déterminer que deux fragments [!DNL Profile] contenant des identifiants Principaux différents, mais partageant la même valeur pour l’espace de noms d’identité `email`, sont en fait la même personne. Pour plus d’informations, voir [Présentation des espaces de noms d’identité](./namespaces.md). |
 | Graphique d’identités | Un graphique d’identités est une carte des relations entre différentes identités, ce qui vous permet de visualiser et de mieux comprendre les identités de client qui sont regroupées et comment. Pour plus d’informations, consultez le tutoriel sur [à l’aide de la visionneuse de graphiques d’identités](./ui/identity-graph-viewer.md) . |
 | Informations d’identification personnelle | Les PII sont des informations qui peuvent identifier directement un client, telles qu’une adresse électronique ou un numéro de téléphone. Les valeurs des PII sont souvent utilisées pour correspondre. identités multiples d’un client sur différents systèmes. |
-| Identité unique | Une identité unique est une identité qui n’existe que dans un environnement de test spécifique. |
 | Identités inconnues ou anonymes | Les identités inconnues ou anonymes sont des indicateurs qui isolent les appareils sans identifier la personne qui utilise l’appareil. Les identités inconnues et anonymes incluent des informations telles que l’adresse IP et l’ID de cookie d’un visiteur. Bien que les identités inconnues et anonymes puissent fournir des données comportementales, elles sont limitées jusqu’à ce qu’un client fournisse ses informations d’identification personnelles. |
 
 ## Qu&#39;est-ce que [!DNL Identity Service] ?

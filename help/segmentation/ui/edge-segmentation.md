@@ -5,7 +5,7 @@ title: Guide de l’interface utilisateur d’Edge Segmentation
 topic-legacy: ui guide
 description: La segmentation Edge permet d’évaluer instantanément les segments dans Platform, ce qui permet d’utiliser des cas de personnalisation de page et de page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 8f2540902cdcff99627393429424dbfe1de2d3da
+source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 4%
@@ -18,7 +18,7 @@ ht-degree: 4%
 >
 >La segmentation Edge est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
-La segmentation Edge permet d’évaluer instantanément les segments dans Adobe Experience Platform, ce qui permet d’utiliser les cas de personnalisation de page suivante et de page identique.
+La segmentation Edge permet d’évaluer instantanément les segments dans Adobe Experience Platform [sur la périphérie](../../edge/home.md), ce qui permet d’activer les cas d’utilisation de la personnalisation de la même page et de la page suivante.
 
 ## Types de requête de segmentation Edge
 
