@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Guide des plateformes de données client en temps réel
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
-source-git-commit: 89cd5a89bb33e4ea8b3412adebee49921e788ebd
+source-git-commit: db61b8b1ea7f39578769a195ac13f83bde3eaf43
 workflow-type: tm+mt
-source-wordcount: '113'
-ht-degree: 92%
+source-wordcount: '120'
+ht-degree: 86%
 
 ---
 
@@ -42,5 +42,6 @@ ht-degree: 92%
    * [Schémas dans l’édition CDP en temps réel B2B](schemas/b2b.md)
 * Sources {#sources}
    * [Présentation des sources](sources/sources-overview.md)
+   * [Sources dans l’édition CDP en temps réel B2B](sources/b2b.md)
 * [Notes de mise à jour d’Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
 * [Glossaire Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/glossary.html)
