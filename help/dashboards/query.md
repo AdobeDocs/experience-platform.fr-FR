@@ -1,15 +1,15 @@
 ---
 solution: Experience Platform
-title: Exploration et traitement des jeux de données bruts optimisant les tableaux de bord Experience Platform
+title: Exploration et traitement des jeux de données bruts optimisant les tableaux de bord Platform
 type: Documentation
 description: Découvrez comment utiliser Query Service pour explorer et traiter des jeux de données bruts alimentant les tableaux de bord de profils, de segments et de destinations dans Experience Platform.
-source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
-workflow-type: ht
-source-wordcount: '614'
-ht-degree: 100%
+exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
+source-git-commit: b9dd7584acc43b5946f8c0669d7a81001e44e702
+workflow-type: tm+mt
+source-wordcount: '738'
+ht-degree: 66%
 
 ---
-
 
 # Exploration, vérification et traitement des jeux de données de tableaux de bord à l’aide de Query Service
 
@@ -27,19 +27,36 @@ Vous pouvez utiliser Query Service pour interroger des jeux de données bruts po
 
 ### Jeux de données d’attributs de profils
 
-Pour chaque stratégie de fusion principale dans le profil client en temps réel, un jeu de données d’attributs de profils est disponible dans le lac de données.
+Les insights du tableau de bord des profils sont liés aux stratégies de fusion définies par votre organisation. Pour chaque stratégie de fusion principale, un jeu de données d’attributs de profil est disponible dans le lac de données.
 
-La convention d’affectation des noms de ces jeux de données est **Attribut de profil** suivi d’une valeur alphanumérique. Par exemple : `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+La convention d’affectation des noms de ces jeux de données est **Profile-Snapshot-Export** suivie d’une valeur numérique alphanumérique aléatoire générée par le système. Par exemple : `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
 
-Pour comprendre le schéma complet de chaque jeu de données, vous pouvez prévisualiser et explorer les jeux de données à l’aide de la visionneuse de jeux de données dans l’interface utilisateur d’Experience Platform.
+Pour comprendre le schéma complet de chaque jeu de données d’exportation instantané de profil, vous pouvez prévisualiser et explorer les jeux de données [à l’aide de la visionneuse de jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur de l’Experience Platform.
+
+![](images/query/profile-attribute.png)
+
+#### Mappage de jeux de données d’attributs de profil pour fusionner les identifiants de stratégie
+
+Chaque jeu de données d’attributs de profil est intitulé **Exportation d’instantané de profil** suivi d’une valeur numérique alphanumérique aléatoire générée par le système. Par exemple : `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+
+Cette valeur alphanumérique est une chaîne aléatoire générée par le système qui correspond à un identifiant de stratégie de fusion de l’une des stratégies de fusion créées par votre organisation. Le mappage de chaque ID de stratégie de fusion avec sa chaîne de jeu de données d’attribut de profil associée est conservé dans le jeu de données `adwh_dim_merge_policies`.
+
+Le jeu de données `adwh_dim_merge_policies` contient les champs suivants :
+
+* `merge_policy_name`
+* `merge_policy_id`
+* `merge_policy`
+* `dataset_id`
+
+Ce jeu de données peut être exploré à l’aide de l’interface utilisateur de Query Editor dans Experience Platform. Pour en savoir plus sur l’utilisation de Query Editor, consultez le [guide de l’interface utilisateur de Query Editor](../query-service/ui/user-guide.md).
 
 ### Jeu de données de métadonnées de segments
 
 Un jeu de données de métadonnées de segment contenant des métadonnées pour chacun des segments de votre organisation est disponible dans le lac de données.
 
-La convention d’affectation des noms de ce jeu de données est **Définition de segment de profil** suivie d’une valeur alphanumérique. Par exemple : `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
+La convention d’affectation des noms de ce jeu de données est **Segmentdefinition-Snapshot-Export** suivie d’une valeur numérique alphanumérique. Par exemple : `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-Pour comprendre le schéma complet du jeu de données, vous pouvez prévisualiser et explorer le schéma à l’aide de la visionneuse de jeux de données dans l’interface utilisateur d’Experience Platform.
+Pour comprendre le schéma complet de chaque jeu de données d’exportation instantané de définition de segment, vous pouvez prévisualiser et explorer les jeux de données [à l’aide de la visionneuse de jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur Experience Platform.
 
 ![](images/query/segment-metadata.png)
 
@@ -49,7 +66,7 @@ Les métadonnées de toutes les destinations activées de votre organisation son
 
 La convention d’affectation des noms de ce jeu de données est **DIM_Destination**.
 
-Pour comprendre le schéma complet du jeu de données, vous pouvez prévisualiser et explorer le schéma à l’aide de la visionneuse de jeux de données dans l’interface utilisateur d’Experience Platform.
+Pour comprendre le schéma complet du jeu de données de destination DIM, vous pouvez prévisualiser et explorer le jeu de données [à l’aide de la visionneuse de jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur de l’Experience Platform.
 
 ![](images/query/destinations-metadata.png)
 
@@ -59,7 +76,11 @@ Les exemples de requêtes suivants incluent des requêtes SQL pouvant être util
 
 ### Nombre de profils par identité
 
-Cet aperçu du profil fournit une ventilation des identités pour tous les profils fusionnés du jeu de données. Le nombre total de profils par identité (c’est-à-dire en additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur au nombre total de profils fusionnés, car plusieurs espaces de noms peuvent être associés à un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
+Cet aperçu du profil fournit une ventilation des identités pour tous les profils fusionnés du jeu de données.
+
+>[!NOTE]
+>
+>Le nombre total de profils par identité (c’est-à-dire en additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur au nombre total de profils fusionnés, car plusieurs espaces de noms peuvent être associés à un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
 
 **Requête**
 
@@ -72,7 +93,7 @@ Select
            Select
                explode(identitymap)
            from
-              profile_attribute_14adf268-2a20-4dee-bee6-a6b0e34616a9
+              Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
         )
      group by
         namespace;
@@ -96,7 +117,7 @@ Select
                   Select
                     explode(Segmentmembership)
                   from
-                    profile_attribute_14adf268-2a20-4dee-bee6-a6b0e34616a9
+                    Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
               )
         )
       group by

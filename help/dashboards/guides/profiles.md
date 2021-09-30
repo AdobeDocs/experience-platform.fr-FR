@@ -4,9 +4,9 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a63969075215a8f9884d2f41485194bd732694f1
+source-git-commit: d5c69972426008809c3fd0ac03be995efcc2f541
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1513'
 ht-degree: 6%
 
 ---
@@ -95,7 +95,9 @@ Le widget **[!UICONTROL Profils ajoutés]** affiche le nombre total de profils f
 
 >[!NOTE]
 >
->Le widget [!UICONTROL Profils ajoutés] reflète le nombre de profils ajoutés au système suite à la configuration initiale de votre organisation. Par exemple, si quatre millions de profils ont été ajoutés pendant la configuration et que vous avez ajouté un million de profils supplémentaires au cours des 30 derniers jours, le widget [!UICONTROL Profils ajoutés] affichera &quot;1 000 000&quot; tandis que le widget [!UICONTROL Nombre de profils] affichera &quot;5 000 0 00&quot;.
+>Le widget [!UICONTROL Profils ajoutés] reflète le nombre de profils ajoutés au système suite à la configuration initiale de votre organisation. Pour en savoir plus sur l’ajout de profils à la banque de profils, consultez la [documentation de Real-time Customer Profile](../../profile/home.md).
+>
+>Par exemple, si quatre millions de profils ont été ajoutés pendant la configuration et que vous avez ajouté un million de profils supplémentaires au cours des 30 derniers jours, le widget [!UICONTROL Profils ajoutés] affichera &quot;1 000 000&quot; tandis que le widget [!UICONTROL Nombre de profils] affichera &quot;5 000 0 00&quot;.
 
 ![](../images/profiles/profiles-added.png)
 
