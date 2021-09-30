@@ -5,28 +5,34 @@ title: Création d’un profil produit dans Adobe Admin Console
 topic-legacy: user guide
 description: Ce document reprend toutes les étapes nécessaires à la création d’un profil produit dans la console Adobe Admin Console. Pour commencer la création d’un profil, accédez à l’onglet Profil de produits et cliquez sur Nouveau profil.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '261'
-ht-degree: 100%
+source-git-commit: 6228f499a42e61583abd1f7ff1e1af1fb90640c6
+workflow-type: tm+mt
+source-wordcount: '315'
+ht-degree: 58%
 
 ---
 
 # Création d’un profil produit dans Adobe Admin Console
 
-Pour commencer la création d’un profil, accédez à l’onglet **[!UICONTROL Profil de produits]** et cliquez sur **[!UICONTROL Nouveau profil]**.
+Pour commencer à créer un profil, accédez à l’onglet **[!UICONTROL Profils produit]** et sélectionnez **[!UICONTROL Nouveau profil]**.
 
-![new-profile-button](../images/new-profile-button.png)
+![new-profile](../images/new-profile.png)
 
-La boîte de dialogue **[!UICONTROL Créer un profil]** apparaît, vous invitant à saisir un nom de profil ainsi qu’une description pour ce nouveau profil. Si vous souhaitez que le nom d’affichage du profil soit différent, désélectionnez l’option **[!UICONTROL Identique au nom de profil]** et saisissez le nom d’affichage dans la zone de texte qui s’affiche. Sous **[!UICONTROL Notifications utilisateur]**, vous pouvez activer ou désactiver la notification par courrier électronique des utilisateurs lorsqu’ils sont ajoutés ou supprimés du profil.
+La boîte de dialogue **[!UICONTROL Créer un nouveau profil de produit]** s’affiche, vous invitant à saisir un profil, un nom d’affichage facultatif et une description facultative. Sous **[!UICONTROL Notifications utilisateur]**, vous pouvez activer ou désactiver la notification par courrier électronique des utilisateurs lorsqu’ils sont ajoutés ou supprimés du profil.
 
-Lorsque vous avez terminé, cliquez sur **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
-![new-profile-details](../images/new-profile-details.png)
+![create-new-product-profile](../images/create-new-product-profile.png)
 
-L’écran suivant vous invite à choisir les services [!DNL Platform] à inclure dans le profil. Cliquez sur le bouton près d’un service pour désactiver celui-ci. Si un service est désactivé, toutes les fonctionnalités qui y sont associées ne seront pas disponibles pour les utilisateurs affectés à ce profil de produit. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Terminé]**.
+L’écran suivant vous invite à choisir les services Platform à inclure dans le profil. Sélectionnez le bouton de basculement en regard d’un service pour le désactiver. Si un service est désactivé, toutes les fonctionnalités qui y sont associées ne seront pas disponibles pour les utilisateurs affectés à ce profil de produit. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
-![new-profile-services](../images/new-profile-services.png)
+![enable-services](../images/enable-services.png)
+
+Les clients autorisés à utiliser l’édition B2B ou B2P ont accès à l’interface utilisateur B2B. L’interface utilisateur B2B peut être configurée pour les utilisateurs via le [!UICONTROL menu Activer les services]. Sélectionnez la bascule en regard de [!UICONTROL L’interface utilisateur B2B] pour activer le service pour un profil de produit particulier, puis sélectionnez **[!UICONTROL Enregistrer]**.
+
+Le bouton d’activation/désactivation de l’interface utilisateur B2B permet aux utilisateurs d’afficher les processus B2B relatifs à la gestion des comptes et des opportunités, ainsi que de créer des segments liés à B2B.
+
+![enable-b2b](../images/enable-b2b.png)
 
 Le nouveau profil de produits a été créé avec succès, et vous êtes redirigé vers la [page de modification des autorisations](#edit-permissions) du profil. Pour plus d’informations sur la gestion des profils de produits après leur création, reportez-vous aux sections relatives à la [gestion des autorisations](#manage-permissions-for-a-product-profile) et à la [gestion des utilisateurs](#manage-users-for-a-product-profile).
 

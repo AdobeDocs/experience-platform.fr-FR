@@ -5,7 +5,7 @@ topic-legacy: overview
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
+source-git-commit: 584461d3da5c5c39b9702b5d1dc1d1319568f695
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 96%
@@ -72,7 +72,7 @@ L’autorisation « Gestion des environnements de test » permet aux utilisate
 
 L’onglet Autorisations au sein d’un profil de produit affiche les environnements de test et les autorisations actives pour ce profil :
 
-![présentation-autorisations](./images/permissions-overview.png)
+![présentation-autorisations](./images/permissions.png)
 
 Les autorisations accordées par lʼintermédiaire dʼ[!DNL Admin Console] sont triées par catégorie, certaines autorisations permettant dʼaccéder à plusieurs fonctionnalités de bas niveau.
 
