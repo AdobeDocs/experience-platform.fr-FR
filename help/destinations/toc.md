@@ -4,15 +4,15 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 9ec7bd591af6c76a794f83d5a984017330328238
+source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '644'
 ht-degree: 46%
 
 ---
 
 
-# Destinations {#destinations}
+# Destinations  {#destinations}
 
 * [Présentation des destinations](./home.md)
 * [Types et catégories de destination](./destination-types.md)
@@ -24,9 +24,10 @@ ht-degree: 46%
    * [Création d’une connexion de destination](./ui/connect-destination.md)
    * Activation des données d’audience vers les destinations{#activate}
       * [Présentation de l’Activation](./ui/activation-overview.md)
-      * [Activation des données d’audience vers des destinations d’exportation de segments par flux](./ui/activate-segment-streaming-destinations.md)
+      * [Activation des données d’audience vers des destinations d’exportation de segments de diffusion](./ui/activate-segment-streaming-destinations.md)
       * [Activation des données d’audience vers des destinations d’exportation de profils en continu](./ui/activate-streaming-profile-destinations.md)
       * [Activation des données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md)
+      * [Activation des données d’audience vers les destinations de requête de profil (version bêta)](./ui/activate-profile-request-destinations.md)
    * [Affichage des détails de destination](./ui/destination-details-page.md)
    * [Mise à jour des comptes de destination](./ui/update-accounts.md)
    * [Modification des flux d’activation](./ui/edit-activation.md)
@@ -114,9 +115,11 @@ ht-degree: 46%
       * [Connexion de frein](./catalog/mobile-engagement/braze.md)
    * Destinations de personnalisation {#personalization}
       * [Présentation des destinations de personnalisation](./catalog/personalization/overview.md)
+      * [Connexion Adobe Target (bêta)](./catalog/personalization/adobe-target-connection.md)
       * [Extension Adobe Target](./catalog/personalization/adobe-target.md)
       * [Extension Adobe Target v2](./catalog/personalization/adobe-target-v2.md)
       * [Extension Beemray](./catalog/personalization/beemray.md)
+      * [Connexion de personnalisation personnalisée (bêta)](./catalog/personalization/custom-personalization.md)
       * [Extension D&amp;B Visitor Intelligence](./catalog/personalization/dnb.md)
       * [Extension du service Experience Cloud ID](./catalog/personalization/adobe-ecid.md)
       * [Extension Gainsight](./catalog/personalization/gainsight.md)
