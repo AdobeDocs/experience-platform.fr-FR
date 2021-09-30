@@ -1,11 +1,11 @@
 ---
 keywords: personnalisation de la cible ; destination; destination de la cible de la plateforme d’expérience;destination adobe target;
-title: Connexion Adobe Target
+title: Connexion Adobe Target (bêta)
 description: Adobe Target est une application qui fournit une personnalisation et une expérimentation optimisées par l’intelligence artificielle, en temps réel et 1:1 dans toutes les interactions client entrantes entre sites web, applications mobiles, etc.
-source-git-commit: caccd096c9165139d9b966bbfcb311456276192a
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 12%
+source-wordcount: '392'
+ht-degree: 11%
 
 ---
 

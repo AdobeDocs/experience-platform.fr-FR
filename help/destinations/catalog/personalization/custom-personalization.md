@@ -1,10 +1,10 @@
 ---
 keywords: personnalisation personnalisée ; destination; destination personnalisée de la plateforme d’expérience ;
-title: Destination de personnalisation personnalisée
+title: Connexion de personnalisation personnalisée (bêta)
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer des informations de segment à partir de Adobe Experience Platform. Cette destination fournit des fonctionnalités 1:1 en temps réel et une personnalisation basée sur l’appartenance à un segment d’un profil d’utilisateur.
-source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '578'
 ht-degree: 8%
 
 ---
@@ -25,11 +25,11 @@ Cette intégration est optimisée par le [SDK Web Adobe Experience Platform](../
 
 ## Type d&#39;export {#export-type}
 
-**Requête de profil**  : vous demandez tous les segments mappés dans la destination de personnalisation personnalisée pour un seul profil. Différentes destinations de personnalisation personnalisées peuvent être configurées pour différents flux de données de collecte de données d’Adobe.
+**Requête de profil**  : vous demandez tous les segments mappés dans la destination de personnalisation personnalisée pour un seul profil. Différentes destinations de personnalisation personnalisées peuvent être configurées pour différents [flux de données de collecte de données d’Adobe](../../../edge/fundamentals/datastreams.md).
 
 ## Cas d&#39;utilisation {#use-cases}
 
-Cette destination partage des audiences avec un serveur de publicités et des applications de personnalisation autres que l’Adobe, à utiliser en temps réel, afin de décider quelle publicité les utilisateurs doivent voir sur un site web.
+Cette destination partage les audiences avec les serveurs d’annonces et les applications de personnalisation autres que les Adobes, qui doivent être utilisées en temps réel, afin de décider quelle publicité les utilisateurs doivent voir sur un site web.
 
 ### Cas d’utilisation #1
 
@@ -62,7 +62,7 @@ Voir [Activation des profils et des segments vers les destinations de demande de
 
 Si vous utilisez [Adobe Tags](../../../tags/home.md) pour déployer le SDK Web Experience Platform, utilisez la fonctionnalité [send event complete](../../../edge/extension/event-types.md) et votre action de code personnalisé comporte une variable `event.destinations` que vous pouvez utiliser pour afficher les données exportées.
 
-Si vous n’utilisez pas [Adobe Tags](../../../tags/home.md) pour déployer le SDK Web Experience Platform, utilisez la fonctionnalité [gestion des réponses provenant d’événements](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events).
+Si vous n’utilisez pas [Adobe Tags](../../../tags/home.md) pour déployer le SDK Web Experience Platform, utilisez la fonctionnalité [gestion des réponses des événements](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) pour afficher les données exportées.
 
 Vous pouvez analyser la réponse JSON de Adobe Experience Platform pour trouver l’alias d’intégration correspondant à l’application que vous intégrez à Adobe Experience Platform. Les identifiants de segment peuvent être transmis dans le code de l’application en tant que paramètres de ciblage. Vous trouverez ci-dessous un exemple de ce à quoi cela ressemblerait spécifique à la réponse de destination.
 

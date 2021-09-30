@@ -1,13 +1,13 @@
 ---
 keywords: activation des destinations de requête de profil;activation des données;destinations de requête de profil
-title: Activation des données d’audience vers les destinations de requête de profil
+title: Activation des données d’audience vers les destinations de requête de profil (version bêta)
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de requête de profil.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
-source-git-commit: caccd096c9165139d9b966bbfcb311456276192a
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '474'
 ht-degree: 10%
 
 ---
@@ -28,7 +28,7 @@ Pour activer les données vers les destinations, vous devez être [connecté à 
 
 ### Stratégie de fusion de segments {#merge-policy}
 
-Actuellement, les destinations de requête de profil ne prennent en charge que l’activation des segments qui utilisent la stratégie de fusion par défaut. Toute tentative d’activation de segments avec une stratégie de fusion différente entraîne une erreur dans la page [[!UICONTROL Réviser]](#review).
+Actuellement, les destinations de requête de profil ne prennent en charge que l’activation des segments qui utilisent la [stratégie de fusion par défaut](../../segmentation/ui/segment-builder.md#merge-policies).
 
 ## Sélectionner votre destination {#select-destination}
 
