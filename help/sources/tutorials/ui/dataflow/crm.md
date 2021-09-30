@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes de configuration d’un nouveau flux de données à l’aide de votre compte CRM.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
+source-git-commit: cd9b28c66f6cc841e46e797b39db838a83e727e3
 workflow-type: tm+mt
-source-wordcount: '1524'
-ht-degree: 5%
+source-wordcount: '1387'
+ht-degree: 4%
 
 ---
 
 # Configuration d’un flux de données pour une connexion CRM dans l’interface utilisateur
 
-Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données [!DNL Platform]. Ce tutoriel décrit les étapes de configuration d’un nouveau flux de données à l’aide de votre compte CRM.
+Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes de configuration d’un nouveau flux de données à l’aide de votre compte CRM.
 
 ## Prise en main
 
@@ -30,9 +30,9 @@ En outre, ce tutoriel nécessite que vous ayez déjà créé un compte CRM. Vous
 
 ## Sélectionner des données
 
-Une fois votre compte CRM créé, l’étape *Sélectionner les données* s’affiche, vous permettant ainsi d’explorer la hiérarchie des fichiers dans une interface interactive.
+Une fois votre compte CRM créé, l’étape [!UICONTROL Sélectionner les données] s’affiche, vous permettant ainsi d’explorer la hiérarchie des fichiers.
 
-* La moitié gauche de l’interface est un navigateur de répertoires qui affiche les fichiers et répertoires de votre serveur.
+* La moitié gauche de l&#39;interface est un explorateur de répertoires qui affiche les fichiers et répertoires de votre CRM.
 * La moitié droite de l&#39;interface permet de prévisualiser jusqu&#39;à 100 lignes de données à partir d&#39;un fichier compatible.
 
 Vous pouvez utiliser l’option **[!UICONTROL Rechercher]** en haut de la page pour identifier rapidement les données source que vous prévoyez d’utiliser.
@@ -41,29 +41,29 @@ Vous pouvez utiliser l’option **[!UICONTROL Rechercher]** en haut de la page p
 >
 >L’option de données de source de recherche est disponible pour tous les connecteurs source tabulaires, à l’exception des connecteurs Analytics, Classifications, Hubs d’événements et Kinesis.
 
-Une fois que vous avez trouvé les données source, sélectionnez le répertoire, puis cliquez sur **[!UICONTROL Suivant]**.
+Une fois que vous avez trouvé les données source, sélectionnez le répertoire, puis **[!UICONTROL Suivant]**.
 
 ![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## Mappage des champs de données à un schéma XDM
 
-L’étape **[!UICONTROL Mappage]** s’affiche, fournissant une interface interactive pour mapper les données source à un jeu de données [!DNL Platform].
+L’étape **[!UICONTROL Mappage]** s’affiche, fournissant une interface pour mapper les données source à un jeu de données Platform.
 
 Sélectionnez un jeu de données dans lequel ingérer les données entrantes. Vous pouvez utiliser un jeu de données existant ou en créer un nouveau.
 
 ### Utilisation d’un jeu de données existant
 
-Pour ingérer des données dans un jeu de données existant, sélectionnez **[!UICONTROL Utiliser le jeu de données existant]**, puis cliquez sur l’icône du jeu de données.
+Pour ingérer des données dans un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]**, puis sélectionnez l’icône de données ![data](../../../images/tutorials/dataflow/crm/data.png) en regard de la barre d’entrée.
 
-![use-existing-dataset](../../../images/tutorials/dataflow/crm/use-existing-dataset.png)
+![existing-dataset](../../../images/tutorials/dataflow/crm/existing-dataset.png)
 
 La boîte de dialogue **[!UICONTROL Sélectionner un jeu de données]** s’affiche. Recherchez le jeu de données que vous souhaitez utiliser, sélectionnez-le, puis cliquez sur **[!UICONTROL Continuer]**.
 
-![select-existing-dataset](../../../images/tutorials/dataflow/crm/select-existing-dataset.png)
+![select-dataset](../../../images/tutorials/dataflow/crm/select-dataset.png)
 
 ### Utilisation d’un nouveau jeu de données
 
-Pour ingérer des données dans un nouveau jeu de données, sélectionnez **[!UICONTROL Créer un nouveau jeu de données]** et saisissez un nom et une description pour le jeu de données dans les champs fournis.
+Pour ingérer des données dans un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]** et saisissez un nom et une description pour le jeu de données dans les champs fournis.
 
 Vous pouvez joindre un champ de schéma en entrant un nom de schéma dans la barre de recherche **[!UICONTROL Sélectionner le schéma]**. Vous pouvez également sélectionner l’icône déroulante pour afficher la liste des schémas existants. Vous pouvez également sélectionner **[!UICONTROL Recherche avancée]** pour accéder à l’écran des schémas existants, y compris leurs détails respectifs.
 
@@ -79,19 +79,27 @@ La boîte de dialogue **[!UICONTROL Sélectionner le schéma]** s’affiche. Sé
 
 Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs calculées ou calculées. Pour plus d’informations sur les fonctions du mappeur et les champs calculés, consultez le [guide des fonctions de préparation de données](../../../../data-prep/functions.md) ou le [guide des champs calculés](../../../../data-prep/calculated-fields.md).
 
+<!--
 >[!TIP]
 >
->[!DNL Platform] fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
+>If you are using the [!DNL Salesforce] source as part of B2B CDP, refer to the [[!DNL Salesforce] field mapping tables](../../../connectors/adobe-applications/mapping/salesforce.md) for a guide on the appropriate mapping sets between [!DNL Salesforce] source fields and XDM target fields.
+-->
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
 
 Sélectionnez **[!UICONTROL Aperçu des données]** pour afficher les résultats de mappage de 100 lignes maximum de données d’exemple du jeu de données sélectionné.
 
+![](../../../images/tutorials/dataflow/crm/preview-data.png)
+
 Lors de la prévisualisation, la colonne d’identité est considérée comme le premier champ, car il s’agit des informations clés nécessaires à la validation des résultats du mapping.
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
-
 Une fois les données source mises en correspondance, sélectionnez **[!UICONTROL Fermer]**.
+
+![](../../../images/tutorials/dataflow/crm/preview.png)
+
+Ensuite, dans l’écran [!UICONTROL Mapping], sélectionnez **[!UICONTROL Suivant]** pour continuer.
+
+![](../../../images/tutorials/dataflow/crm/mapping.png)
 
 ## Planification des exécutions d’ingestion
 
@@ -111,7 +119,7 @@ Pour définir l’heure de début de l’ingestion, ajustez la date et l’heure
 
 Sélectionnez **[!UICONTROL Charger les données incrémentielles par]** pour affecter la colonne delta. Ce champ établit une distinction entre les données nouvelles et existantes.
 
-![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+![](../../../images/tutorials/dataflow/crm/scheduling.png)
 
 ### Configuration d’un flux de données d’ingestion unique
 
@@ -123,7 +131,7 @@ Pour configurer l’ingestion unique, sélectionnez la flèche de liste déroula
 
 Une fois que vous avez fourni les valeurs appropriées au planning, sélectionnez **[!UICONTROL Suivant]**.
 
-![schedule-once](../../../images/tutorials/dataflow/databases/schedule-once.png)
+![schedule-once](../../../images/tutorials/dataflow/crm/one-time-ingestion.png)
 
 ## Fournir des détails sur les flux de données
 
@@ -133,15 +141,15 @@ Au cours de ce processus, vous pouvez également activer **[!UICONTROL l’inges
 
 Indiquez les valeurs du flux de données et sélectionnez **[!UICONTROL Suivant]**.
 
-![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
+![dataflow-details](../../../images/tutorials/dataflow/crm/dataflow-detail.png)
 
 ## Vérification du flux de données
 
 L’étape *Réviser* s’affiche, ce qui vous permet de passer en revue votre nouveau flux de données avant qu’il ne soit créé. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Détails]** de la connexion : Affiche le type de source, le chemin d’accès approprié du fichier source choisi et la quantité de colonnes qu’il contient.
-* **[!UICONTROL Détails du mappage]** : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
-* **[!UICONTROL Détails]** du planning : Affiche la période, la fréquence et l’intervalle principaux du planning d’ingestion.
+* **[!UICONTROL Connexion]** : Affiche le nom du compte source, la plateforme source, le chemin d’accès approprié au fichier source choisi, ainsi que le nombre de colonnes dans ce fichier source.
+* **[!UICONTROL Attribuez des champs de jeu de données et de mappage]** : Affiche le jeu de données cible dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
+* **[!UICONTROL Planification]** : Affiche l’heure de début et le taux de fréquence du flux de données.
 
 Une fois que vous avez examiné votre flux de données, cliquez sur **[!UICONTROL Terminer]** et laissez un certain temps pour que le flux de données soit créé.
 
@@ -157,33 +165,13 @@ Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui 
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé un flux de données pour importer des données d’un CRM et vous avez obtenu des informations sur la surveillance des jeux de données. Pour en savoir plus sur la création de flux de données, vous pouvez compléter votre apprentissage en regardant la vidéo ci-dessous. En outre, les données entrantes peuvent désormais être utilisées par les services [!DNL Platform] en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, consultez les documents suivants :
+En suivant ce tutoriel, vous avez créé un flux de données pour importer des données d’un CRM et vous avez obtenu des informations sur la surveillance des jeux de données. Pour en savoir plus sur la création de flux de données, vous pouvez compléter votre apprentissage en regardant la vidéo ci-dessous. En outre, les données entrantes peuvent désormais être utilisées par les services Platform en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, consultez les documents suivants :
 
 * [Présentation de Real-time Customer Profile](../../../../profile/home.md)
 * [Présentation de Data Science Workspace](../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
-> Lʼinterface utilisateur de [!DNL Platform] affichée dans la vidéo suivante est obsolète. Reportez-vous à la documentation ci-dessus pour connaître les dernières captures d’écran et fonctionnalités de l’interface utilisateur.
-
+> L’interface utilisateur de Platform affichée dans la vidéo suivante est obsolète. Reportez-vous à la documentation ci-dessus pour connaître les dernières captures d’écran et fonctionnalités de l’interface utilisateur.
+>
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
-
-## Annexe
-
-Les sections suivantes apportent des informations supplémentaires sur l’utilisation des connecteurs source.
-
-### Désactivation d’un flux de données
-
-Lorsqu’un flux de données est créé, il devient immédiatement principal et ingère des données selon le planning qu’il a été donné. Vous pouvez désactiver un principal flux de données à tout moment en suivant les instructions ci-dessous.
-
-Dans l’écran **[!UICONTROL authentification]**, sélectionnez le nom de la connexion associée au flux de données que vous souhaitez désactiver.
-
-![](../../../images/tutorials/dataflow/crm/monitor.png)
-
-La page **Activité source** s’affiche. Sélectionnez le principal flux de données dans la liste pour ouvrir sa colonne **[!UICONTROL Propriétés]** sur le côté droit de l’écran, qui contient un bouton d’activation **[!UICONTROL activé]**. Cliquez sur le bouton bascule pour désactiver le flux de données. Le même bouton peut être utilisé pour réactiver un flux de données une fois qu’il a été désactivé.
-
-![disable](../../../images/tutorials/dataflow/crm/disable.png)
-
-### Activation des données entrantes pour la population [!DNL Profile]
-
-Les données entrantes provenant de votre connecteur source peuvent être utilisées pour enrichir et renseigner vos [!DNL Real-time Customer Profile] données. Pour plus d’informations sur le remplissage de vos données [!DNL Real-time Customer Profile], consultez le tutoriel sur [Population de profils](../profile.md).

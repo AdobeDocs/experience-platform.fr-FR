@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Data Ingestion, Sources
-source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
+source-git-commit: 8a2cca1fa10b145757c582237a5f9ab64105b6b5
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '654'
 ht-degree: 19%
 
 ---
@@ -21,15 +21,15 @@ ht-degree: 19%
       - [Connecteur source Analytics](connectors/adobe-applications/analytics.md)
       - [Connecteur source d’Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Connecteur source des attributs du client](connectors/adobe-applications/customer-attributes.md)
-      - Adobe des mappages des champs de l’application {#mapping}
+      - Mappages de champs {#mapping}
          - [Mappages des champs Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Mappages des champs d’Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mappings de champ Target](connectors/adobe-applications/mapping/target.md)
          - [Mappages de champs du Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
-      - Marketo Engage {#marketo}
+      - B2B {#b2b}
          - [Connecteur Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
          - [Guide d’authentification du Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
-         - [Espaces de noms et schémas du Marketo Engage](connectors/adobe-applications/marketo/marketo-namespaces.md)
+         - [Espaces de noms et schémas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
       - [Connecteur Google AdWords](connectors/advertising/ads.md)
    - Stockage dans le cloud {#cloud-storage}
