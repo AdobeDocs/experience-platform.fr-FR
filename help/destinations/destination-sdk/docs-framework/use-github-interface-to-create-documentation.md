@@ -2,9 +2,9 @@
 title: 'Utilisation de l’interface web GitHub pour créer une page de documentation de destination '
 description: Les instructions de cette page vous montrent comment utiliser l’interface web GitHub pour créer une page de documentation pour votre destination Experience Platform et l’envoyer pour révision.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '780'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
 ## Configuration de votre environnement de création GitHub {#set-up-environment}
 
 1. Dans votre navigateur, accédez à la page suivante : `https://github.com/AdobeDocs/experience-platform.en`.
-2. Pour [dupliquer](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) le référentiel, cliquez sur **Fork** comme illustré dans l’image ci-dessous.
+2. Pour [dupliquer](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) le référentiel, cliquez sur **Fork** comme illustré ci-dessous. Cela crée une copie du référentiel Experience Platform dans votre propre compte GitHub.
 
    ![Référentiel de documentation pour les Adobes de transfert](./assets/ssd-fork-repository.gif)
 
@@ -61,7 +61,7 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
 >
 >Notez qu’il n’y a rien que vous puissiez casser ici. En suivant les instructions de cette section, vous proposez simplement une mise à jour de la documentation. Votre mise à jour suggérée sera approuvée ou modifiée par l’équipe de documentation de Adobe Experience Platform.
 
-1. Après avoir enregistré le fichier et téléchargé les images de votre choix, vous pouvez ouvrir une requête de tirage (PR) pour fusionner votre branche de travail dans la branche principale du référentiel de documentation Adobe. Assurez-vous que la branche sur laquelle vous avez travaillé est sélectionnée et sélectionnez **Contribution > Requête d’extraction**.
+1. Après avoir enregistré le fichier et téléchargé les images de votre choix, vous pouvez ouvrir une requête de tirage (PR) pour fusionner votre branche de travail dans la branche principale du référentiel de documentation Adobe. Assurez-vous que la branche sur laquelle vous avez travaillé est sélectionnée et sélectionnez **Contribution > Ouvrir la requête d’extraction**.
 
 ![Créer une requête d’extraction](./assets/ssd-create-pull-request-1.gif)
 

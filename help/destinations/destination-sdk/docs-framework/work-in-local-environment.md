@@ -2,9 +2,9 @@
 title: Utilisation d’un éditeur de texte dans votre environnement local pour créer une page de documentation de destination
 description: Les instructions de cette page vous montrent comment utiliser un éditeur de texte pour travailler dans votre environnement local afin de créer une page de documentation pour votre destination Experience Platform et de l’envoyer pour révision.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '885'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ Les instructions de cette page vous montrent comment utiliser un éditeur de tex
 ## Connectez-vous à GitHub et configurez votre environnement de création local. {#set-up-environment}
 
 1. Dans votre navigateur, accédez à `https://github.com/AdobeDocs/experience-platform.en`
-2. Pour [dupliquer](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) le référentiel, cliquez sur **Branchement** comme illustré dans la capture d’écran.
+2. Pour [dupliquer](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) le référentiel, cliquez sur **Fork** comme illustré ci-dessous. Cela crée une copie du référentiel Experience Platform dans votre propre compte GitHub.
 
    ![Référentiel de documentation pour les Adobes de transfert](./assets/ssd-fork-repository.gif)
 
@@ -61,7 +61,7 @@ Les instructions de cette page vous montrent comment utiliser un éditeur de tex
 
    ![Push your commit](./assets/push-local-to-remote.png)
 
-1. Dans l’interface web GitHub, ouvrez une requête de tirage (PR) pour fusionner votre branche de travail dans la branche principale du référentiel de documentation d’Adobe. Assurez-vous que la branche sur laquelle vous avez travaillé est sélectionnée et sélectionnez **Requête d’extraction**.
+1. Dans l’interface web GitHub, ouvrez une requête de tirage (PR) pour fusionner votre branche de travail dans la branche principale du référentiel de documentation d’Adobe. Assurez-vous que la branche sur laquelle vous avez travaillé est sélectionnée et sélectionnez **Contribution > Ouvrir la requête d’extraction**.
 
    ![Créer une requête d’extraction](./assets/ssd-create-pull-request-1.gif)
 
