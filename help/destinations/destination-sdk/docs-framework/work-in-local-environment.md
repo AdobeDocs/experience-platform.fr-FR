@@ -1,13 +1,11 @@
 ---
 title: Utilisation d’un éditeur de texte dans votre environnement local pour créer une page de documentation de destination
-seo-title: Use a text editor in your local environment to create a destination documentation page
-description: Les instructions de cette page vous montrent comment utiliser un éditeur de texte pour travailler dans votre environnement local afin de créer de la documentation et envoyer une requête de tirage.
-seo-description: The instructions on this page show you how to use a text editor to work in your local environment to author documentation and submit a pull request.
+description: Les instructions de cette page vous montrent comment utiliser un éditeur de texte pour travailler dans votre environnement local afin de créer une page de documentation pour votre destination Experience Platform et de l’envoyer pour révision.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: e1e7d2f70c032d02f96b3999e4fca736070c6ca9
+source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 3%
+source-wordcount: '871'
+ht-degree: 2%
 
 ---
 
@@ -28,7 +26,7 @@ Les instructions de cette page vous montrent comment utiliser un éditeur de tex
 1. Dans votre navigateur, accédez à `https://github.com/AdobeDocs/experience-platform.en`
 2. Pour [dupliquer](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) le référentiel, cliquez sur **Branchement** comme illustré dans la capture d’écran.
 
-   ![Référentiel de documentation pour les Adobes de transfert](./assets/ssd-fork-repo.png)
+   ![Référentiel de documentation pour les Adobes de transfert](./assets/ssd-fork-repository.gif)
 
 3. Cloner le référentiel sur votre ordinateur local. Sélectionnez **Code > HTTPS > Ouvrir avec GitHub Desktop**, comme illustré ci-dessous. Vérifiez que [GitHub Desktop](https://desktop.github.com/) est installé. Pour plus d’informations, reportez-vous à la section [Création d’un clone local du référentiel](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) dans le guide du contributeur d’Adobe.
 
@@ -47,6 +45,10 @@ Les instructions de cette page vous montrent comment utiliser un éditeur de tex
 
 ## Soumettre votre documentation pour révision {#submit-review}
 
+>[!TIP]
+>
+>Notez qu’il n’y a rien que vous puissiez casser ici. En suivant les instructions de cette section, vous proposez simplement une mise à jour de la documentation. Votre mise à jour suggérée sera approuvée ou modifiée par l’équipe de documentation de Adobe Experience Platform.
+
 1. Dans GitHub Desktop, créez une branche opérationnelle pour vos mises à jour et sélectionnez **Publier la branche** pour publier la branche sur GitHub.
 
 ![Nouvelle branche locale](./assets/new-branch-local.gif)
@@ -61,7 +63,7 @@ Les instructions de cette page vous montrent comment utiliser un éditeur de tex
 
 1. Dans l’interface web GitHub, ouvrez une requête de tirage (PR) pour fusionner votre branche de travail dans la branche principale du référentiel de documentation d’Adobe. Assurez-vous que la branche sur laquelle vous avez travaillé est sélectionnée et sélectionnez **Requête d’extraction**.
 
-   ![Créer une requête d’extraction](./assets/ssd-create-pull-request-1.png)
+   ![Créer une requête d’extraction](./assets/ssd-create-pull-request-1.gif)
 
 1. Assurez-vous que les branches de base et de comparaison sont correctes. Ajoutez une note au document de requête de tirage décrivant votre mise à jour, puis sélectionnez **Créer une requête de tirage**. Cela ouvre une requête de tirage pour fusionner la branche opérationnelle de votre double dans la branche principale du référentiel Adobe.
    >[!TIP]
