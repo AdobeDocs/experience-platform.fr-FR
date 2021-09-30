@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Data Ingestion, Sources
-source-git-commit: 8a2cca1fa10b145757c582237a5f9ab64105b6b5
+source-git-commit: fe024675e6337ebf9a401f65db939440f435053f
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '653'
 ht-degree: 19%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 19%
          - [Mappages des champs d’Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mappings de champ Target](connectors/adobe-applications/mapping/target.md)
          - [Mappages de champs du Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
-      - B2B {#b2b}
+      - Marketo {#marketo}
          - [Connecteur Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
          - [Guide d’authentification du Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Espaces de noms et schémas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
