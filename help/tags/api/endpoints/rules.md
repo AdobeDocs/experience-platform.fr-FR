@@ -3,9 +3,9 @@ title: Point d’entrée des règles
 description: Découvrez comment effectuer des appels au point d’entrée /règles dans l’API Reactor.
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '933'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -41,7 +41,7 @@ GET /properties/{PROPERTY_ID}/rules
 
 >[!NOTE]
 >
->À lʼaide des paramètres de requête, les règles répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
+>À lʼaide des paramètres de requête, les règles répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -408,7 +408,7 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes` | Objet dont les règles représentent les attributs à mettre à jour pour la règle. Les attributs suivants peuvent être mis à jour pour une règle : <ul><li>`name`</li><li>`enabled`</li></ul> |
+| `attributes` | Objet dont les règles représentent les attributs à mettre à jour pour la règle. Les attributs suivants peuvent être mis à jour pour une règle : <ul><li>`name`</li><li>`enabled`</li></ul> |
 | `id` | `id` de la règle que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{RULE_ID}` fournie dans le chemin d’accès de la requête. |
 | `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `rules`. |
 
