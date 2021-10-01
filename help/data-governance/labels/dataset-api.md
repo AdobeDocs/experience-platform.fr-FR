@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '957'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
