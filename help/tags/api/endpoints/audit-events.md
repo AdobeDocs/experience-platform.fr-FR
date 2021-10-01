@@ -3,9 +3,9 @@ title: Point d’entrée des événements d’audit
 description: Découvrez comment effectuer des appels au point d’entrée /audit_events dans l’API Reactor.
 exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '262'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 98%
 
 >[!WARNING]
 >
->L’implémentation du point d’entrée `/audit_events` est en flux continu à mesure que des fonctionnalités sont ajoutées, supprimées et retravaillées.
+>L’implémentation du point d&#39;entrée `/audit_events` se fait en flux continu à mesure que des fonctionnalités sont ajoutées, supprimées et retravaillées.
 
 Un événement d’audit est un enregistrement d’une modification spécifique apportée à une autre ressource de l’API Reactor; il est généré au moment de la modification. Il s’agit d’événements système auxquels vous pouvez vous abonner en utilisant un [rappel](./callbacks.md). Le point d&#39;entrée `/audit_events` de l’API Reactor vous permet de gérer par programmation les événements d&#39;audit dans votre application d’expérience.
 
 Les événements d’audit sont structurés sous la forme `{RESOURCE_TYPE}.{EVENT}`, par exemple `build.created` ou `rule.updated`.
 
-Le type de ressource peut être l’un des types suivants :
+Le type de ressource peut être l’un des types suivants :
 
 * `property`
 * `extension`
@@ -31,7 +31,7 @@ Le type de ressource peut être l’un des types suivants :
 * `environment`
 * `host`
 
-Les événements suivants sont pris en charge pour chaque type de ressource :
+Les événements suivants sont pris en charge pour chaque type de ressource :
 
 * `created`
 * `updated`
