@@ -5,10 +5,10 @@ title: Gestion des détails et des services supplémentaires pour un profil de p
 topic-legacy: user guide
 description: Ce document reprend les étapes nécessaires à la gestion des détails et des services supplémentaires pour un profil de produit dans Adobe Admin Console. Vous pouvez configurer les détails d’un profil et accéder aux services supplémentaires à partir du menu Paramètres du profil.
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
-source-git-commit: 6228f499a42e61583abd1f7ff1e1af1fb90640c6
+source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
 workflow-type: tm+mt
-source-wordcount: '296'
-ht-degree: 49%
+source-wordcount: '303'
+ht-degree: 48%
 
 ---
 
@@ -39,6 +39,6 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
 Les clients autorisés à utiliser l’édition B2B ou B2P ont accès à l’interface utilisateur B2B. L’interface utilisateur B2B peut être configurée pour les utilisateurs via le [!UICONTROL menu Activer les services]. Sélectionnez la bascule en regard de [!UICONTROL L’interface utilisateur B2B] pour activer le service pour un profil de produit particulier, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-Le bouton d’activation/désactivation de l’interface utilisateur B2B permet aux utilisateurs d’afficher les processus B2B relatifs à la gestion des comptes et des opportunités, ainsi que de créer des segments liés à B2B.
+Le bouton d’activation/désactivation de l’interface utilisateur B2B permet aux utilisateurs d’afficher les processus B2B relatifs à la gestion des comptes et des opportunités, ainsi que de créer des segments liés à B2B. Pour plus d’informations, voir la documentation sur [[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
 
 ![enable-b2b](../images/enable-b2b.png)
