@@ -1,16 +1,20 @@
 ---
-title: Workflows basés sur les champs dans l’éditeur de schémas
-description: Découvrez comment ajouter individuellement des champs standard provenant de groupes de champs définis par Adobe à vos schémas de modèle de données d’expérience (XDM).
+title: Workflows basés sur les champs dans l’éditeur de schémas (version bêta)
+description: Découvrez comment ajouter individuellement des champs provenant de groupes de champs existants à vos schémas de modèle de données d’expérience (XDM).
 hide: true
 hidefromtoc: true
-source-git-commit: 8947fbb815f3eda97fb218be6791cb67e6e66719
+source-git-commit: 139d453c3758f4f137cd1b31307b61dc777fc1c1
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
 
-# Workflows basés sur les champs dans l’éditeur de schémas
+# Workflows basés sur les champs dans l’éditeur de schémas (version bêta)
+
+>[!IMPORTANT]
+>
+>Les workflows décrits dans ce document sont actuellement en version bêta. La fonctionnalité et la documentation peuvent être modifiées.
 
 Adobe Experience Platform fournit un solide ensemble de groupes de champs [normalisés](../schema/composition.md#field-group) à utiliser dans les schémas de modèle de données d’expérience (XDM). La structure et la sémantique derrière ces groupes de champs sont soigneusement conçues pour répondre à un large éventail de cas d’utilisation de la segmentation et à d’autres applications en aval dans Platform. Vous pouvez également définir vos propres groupes de champs personnalisés pour répondre à des besoins professionnels uniques.
 
