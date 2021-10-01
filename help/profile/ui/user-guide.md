@@ -4,10 +4,10 @@ title: Guide de l’interface utilisateur de Real-time Customer Profile
 topic-legacy: guide
 description: Real-time Customer Profile offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
+source-git-commit: 771be1f5939066295c01eb573a13dbb740e8c776
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 13%
+source-wordcount: '1774'
+ht-degree: 11%
 
 ---
 
@@ -136,9 +136,33 @@ Les champs par défaut affichés peuvent également être modifiés au niveau de
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Vous pouvez afficher des informations supplémentaires relatives au profil individuel en sélectionnant un autre des onglets disponibles. Ces onglets comprennent des attributs, des événements et l’onglet d’adhésion au segment qui affiche les segments pour lesquels le profil est actuellement qualifié.
+Vous pouvez afficher des informations supplémentaires relatives au profil client individuel en sélectionnant un autre des onglets disponibles. Ces onglets comprennent des attributs, des événements et l’onglet d’adhésion au segment qui affiche les segments pour lesquels le profil est actuellement qualifié.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
+
+### Onglet Attributs
+
+L’onglet **[!UICONTROL Attributs]** fournit une vue de liste résumant tous les attributs associés à un seul profil, une fois la stratégie de fusion spécifiée appliquée.
+
+Ces attributs peuvent également être affichés sous la forme d’un objet JSON en sélectionnant **[!UICONTROL Afficher JSON]**. Cela s’avère utile pour les utilisateurs qui souhaitent mieux comprendre comment les attributs de profil sont ingérés dans Platform.
+
+![](../images/user-guide/profiles-attributes.png)
+
+### Onglet Événements
+
+L’onglet **[!UICONTROL Événements]** contient des données liées à ExperienceEvents associées au client. Il peut s’agir d’ouvertures de courrier électronique, d’activités de panier, de pages vues, etc. Si vous sélectionnez **[!UICONTROL Afficher tout]** pour un événement individuel, des champs et des valeurs supplémentaires sont capturés dans le cadre de l’événement.
+
+Les événements peuvent également être affichés sous la forme d’un objet JSON en sélectionnant **[!UICONTROL Afficher JSON]**. Cela s’avère utile pour comprendre comment les événements sont capturés dans Platform.
+
+![](../images/user-guide/profiles-events.png)
+
+### Onglet abonnement au segment
+
+L’onglet **[!UICONTROL Appartenance au segment]** affiche une liste avec le nom et la description des segments auxquels le profil client individuel appartient actuellement. Cette liste est mise à jour automatiquement lorsque le profil est admissible ou expire à partir des segments. Le nombre total de segments pour lesquels le profil est actuellement qualifié s’affiche sur le côté droit de l’onglet.
+
+Pour plus d’informations sur la segmentation dans Experience Platform, consultez la [documentation d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
+
+![](../images/user-guide/profiles-segment-membership.png)
 
 ## Stratégies de fusion
 
