@@ -1,14 +1,14 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour des Experience Platform pour le 25 août 2021.
+description: Notes de mise à jour dʼExperience Platform du 25 août 2021.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
 exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
 source-git-commit: e9d5f24bec8cd2793ce30245b46c1d912bf17cc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '709'
-ht-degree: 33%
+ht-degree: 100%
 
 ---
 
@@ -20,54 +20,54 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 - [Destinations](#destinations)
 - [Observability Insights](#observability)
-- [Profil client en temps réel](#profile)
+- [Real-time Customer Profile](#profile)
 - [Sources](#sources)
 
 ## Destinations {#destinations}
 
-Les destinations sont des intégrations prédéfinies avec des plateformes de destination qui permettent l’activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
 **Nouvelles destinations**
 
 | Destination | Description |
 | ----------- | ----------- |
-| [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md) | La destination Attributs des appareils, qui était auparavant en version bêta, est désormais disponible en général. |
-| [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md) | La destination Balises aériennes, qui était auparavant en version bêta, est désormais disponible en général. |
-| [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) | La destination de braze, précédemment en version bêta, est désormais disponible en général. |
-| [[!DNL Pinterest Customer List]](../../destinations/catalog/advertising/pinterest.md) | Avec la destination de liste de clients Pinterest, vous pouvez créer des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest. |
-| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | Ciblez vos abonnés et clients existants dans Twitter et créez des campagnes de remarketing pertinentes en activant vos audiences créées dans Adobe Experience Platform. |
-| [[!DNL Verizon Media/Yahoo DataX]](../../destinations/catalog/advertising/datax.md) | DataX est une infrastructure Verizon Media/Yahoo agrégée qui héberge divers composants qui permettent à Verizon Media/Yahoo d’échanger des données avec ses partenaires externes de manière sécurisée, automatisée et évolutive. |
+| [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md) | La destination Attributs Airship, auparavant en version Beta, est désormais disponible pour tous. |
+| [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md) | La destination Balises Airship, auparavant en version Beta, est désormais disponible pour tous. |
+| [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) | La destination Braze, auparavant en version Beta, est désormais disponible pour tous. |
+| [[!DNL Pinterest Customer List]](../../destinations/catalog/advertising/pinterest.md) | Grâce à la destination Liste de clients Pinterest, vous pouvez créer des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest. |
+| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | Ciblez vos abonnés et clients existants sur Twitter et créez des campagnes de remarketing pertinentes en activant vos audiences créées dans Adobe Experience Platform. |
+| [[!DNL Verizon Media/Yahoo DataX]](../../destinations/catalog/advertising/datax.md) | DataX, une infrastructure globale appartenant à Verizon Media/Yahoo, permet dʼhéberger différents composants et dʼéchanger des données avec les partenaires externes de Verizon Media/Yahoo, de manière sécurisée, automatisée et évolutive. |
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Le SDK de destination Adobe Experience Platform est une suite d’API de configuration qui vous permet de configurer des modèles d’intégration de destination pour que l’Experience Platform puisse fournir des données d’audience et de profil à votre point de terminaison, en fonction des données et des formats d’authentification de votre choix. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via l’API pour des mises à jour supplémentaires. |
-| [Améliorations de l’utilisation des destinations](../../destinations/ui/activation-overview.md) | Les améliorations de l’utilisation des destinations permettent aux marketeurs d’activer facilement des segments vers des destinations existantes. |
+| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Le SDK Destination Adobe Experience Platform est un ensemble dʼAPI de configuration permettant de configurer des modèles dʼintégration de destination, afin quʼExperience Platform puisse envoyer des données dʼaudience et de profil à votre point dʼentrée, selon les formats de données et dʼauthentification choisis. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via lʼAPI pour des mises à jour supplémentaires. |
+| [Améliorations de lʼutilisation des destinations](../../destinations/ui/activation-overview.md) | Les améliorations apportées aux destinations afin de faciliter leur utilisation permettent aux spécialistes du marketing dʼactiver facilement des segments vers des destinations existantes. |
 
 Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
 
 ## Observability Insights {#observability}
 
-Observability Insights vous permet de surveiller les activités de Platform à l’aide de mesures statistiques et de notifications d’événement.
+Observability Insights vous permet de surveiller les activités de Platform en utilisant des mesures statistiques et des notifications dʼévénement.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Alertes | Vous pouvez désormais vous abonner à des alertes importantes liées aux workflows exécutés sur Platform. Après vous être abonné à des règles d’alerte spécifiques, vous recevrez des notifications et des e-mails dans l’interface utilisateur lorsqu’un événement de cycle de vie important se produit (par exemple, une ingestion de données réussie) ou si des problèmes nécessitent votre attention (par exemple, un échec du flux d’ingestion ou une tâche de segmentation qui prend plus de temps que prévu). Pour plus d’informations, consultez la [présentation des alertes](../../observability/alerts/overview.md). |
+| Alertes | Vous pouvez désormais vous abonner à des alertes importantes concernant les workflows exécutés sur Platform. Après vous être abonné à des règles dʼalerte spécifiques, vous recevrez des notifications et des e-mails dans lʼinterface utilisateur dès quʼun événement de cycle de vie important se produit (par exemple, une ingestion de données réussie) ou si des problèmes nécessitent votre attention (par exemple, un échec du flux dʼingestion ou une tâche de segmentation qui prend plus de temps que prévu). Pour plus dʼinformations, voir la [présentation des alertes](../../observability/alerts/overview.md). |
 
-Pour plus d’informations sur le service, consultez la [présentation d’Observability Insights](../../observability/home.md) .
+Pour plus dʼinformations sur ce service, voir la [présentation dʼObservability Insights](../../observability/home.md).
 
 ## Real-time Customer Profile {#profile}
 
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Profile vous permet de consolider les données client dans une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le Profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Parcourir les profils par stratégie ou identité de fusion | Lors de l’exploration des profils dans Experience Platform, vous pouvez désormais naviguer par stratégie de fusion pour prévisualiser 20 profils d’exemple en fonction de la stratégie de fusion sélectionnée. Vous pouvez également naviguer par identité afin de rechercher un profil spécifique à l’aide d’un espace de noms d’identité et d’une valeur d’identité associée. Pour plus d’informations, consultez le [guide de l’interface utilisateur de Real-time Customer Profile](../../profile/ui/user-guide.md). |
+| Parcourir les profils par stratégie de fusion ou identité | Lors de lʼexploration des profils dans Experience Platform, vous pouvez désormais naviguer par stratégie de fusion pour prévisualiser 20 profils dʼexemple en fonction de la stratégie de fusion sélectionnée. Vous pouvez également naviguer par identité afin de rechercher un profil spécifique à lʼaide dʼun espace de noms dʼidentité et dʼune valeur dʼidentité associée. Pour plus dʼinformations, consultez le [guide dʼinterface utilisateur du profil client en temps réel](../../profile/ui/user-guide.md). |
 
-Pour en savoir plus sur Real-time Customer Profile, y compris des tutoriels et des bonnes pratiques concernant l’utilisation des données de profil, commencez par lire la [présentation de Real-time Customer Profile](../../profile/home.md).
+Pour en savoir plus sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à lʼutilisation des données de profil, consultez la [présentation du profil client en temps réel](../../profile/home.md).
 
 ## Sources {#sources}
 
@@ -77,6 +77,6 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Connecteur source de chargement de fichier local | La catégorie d’ingestion de fichiers a été renommée système local, ce qui vous permet d’importer directement des fichiers locaux dans Platform à l’aide du connecteur de téléchargement de fichiers local. Les données ingérées par ce connecteur peuvent être surveillées via le tableau de bord de surveillance. Pour plus d’informations, consultez la [présentation de la source de chargement de fichier locale](../../sources/connectors/local-system/local-file-upload.md) . |
+| Connecteur source de téléchargement de fichiers locaux | La catégorie dʼingestion de fichiers a été renommée en système local, ce qui vous permet dʼimporter directement des fichiers locaux dans Platform à lʼaide du connecteur de téléchargement de fichiers locaux. Les données ingérées par ce connecteur peuvent être visualisées dans le tableau de bord de surveillance. Pour plus dʼinformations, consultez la [présentation de la source de téléchargement de fichiers locaux](../../sources/connectors/local-system/local-file-upload.md). |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
