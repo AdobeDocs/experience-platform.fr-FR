@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: L’API Policy Service permet aux développeurs de gérer les libellés et les stratégies d’utilisation des données dans Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '500'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -18,9 +18,9 @@ Adobe Experience Platform [!DNL Data Governance] vous permet de gérer les donn�
 
 L’API [!DNL Policy Service] fournit plusieurs points d’entrée vous permettant de gérer par programmation les libellés et les stratégies d’utilisation des données, ainsi que d’évaluer les actions marketing en cas de violation de ces stratégies. Ces points d’entrée sont décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
 
-Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez le document Swagger de l’API [[!DNL Policy Service] ](https://www.adobe.io/experience-platform-apis/references/policy-service/).
+Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez le document Swagger de l’[[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/).
 
-## Étiquettes
+## Libellés
 
 Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans [!DNL Experience Platform], ou dès que les données sont disponibles pour une utilisation dans [!DNL Platform]. Vous pouvez créer, afficher, modifier et supprimer des libellés à l’aide du point d’entrée `/labels`. Pour découvrir comment utiliser ce point d’entrée, consultez le [guide des points d’entrée des libellés](./labels.md).
 
