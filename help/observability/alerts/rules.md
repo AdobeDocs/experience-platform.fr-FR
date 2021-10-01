@@ -5,22 +5,22 @@ description: Ce document couvre les règles d’alerte prédéfinies fournies pa
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
 source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '148'
-ht-degree: 17%
+ht-degree: 100%
 
 ---
 
 # Règles d’alerte standard
 
-Adobe Experience Platform fournit plusieurs règles d’alerte prédéfinies que vous pouvez activer pour votre organisation. Le tableau ci-dessous présente les détails de ces règles d’alerte fournies par l’Adobe. Pour plus d’informations sur les alertes en Experience Platform, consultez la [présentation des alertes](./overview.md).
+Adobe Experience Platform fournit plusieurs règles d’alerte prédéfinies que vous pouvez activer pour votre organisation. Le tableau ci-dessous présente les détails de ces règles d’alerte fournies par Adobe. Pour plus d’informations sur les alertes dans Experience Platform, consultez la [présentation des alertes](./overview.md).
 
-| Composants de  | Description | Fréquence d&#39;évaluation | Fenêtre de répétition |
+| Composants de   | Description | Fréquence d’évaluation | Fenêtre de répétition |
 | --- | --- | --- | --- |
 | Succès de l’exécution du flux de sources | Cette alerte se déclenche lorsque les données sont correctement ingérées à partir d’une connexion source. | S.O. | S.O. |
 | Échec de l’exécution du flux des sources | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’ingestion de données à partir d’une connexion source. | S.O. | S.O. |
-| Délai de tâche de segment | Cette alerte se déclenche lorsqu’une tâche de segmentation prend plus de 150 minutes. | 30 secondes | 3 heures |
-| Définition de segment désactivée | Cette alerte se déclenche lorsqu’une définition de segment est désactivée. | S.O. | N/A |
+| Délai de tâche de segmentation | Cette alerte se déclenche lorsqu’une tâche de segmentation prend plus de 150 minutes. | 30 secondes | 3 heures |
+| Définition de segment désactivée | Cette alerte se déclenche lorsqu’une définition de segment est désactivée. | S.O. | S.O. |
 
 {style=&quot;table-layout:auto&quot;}
 
