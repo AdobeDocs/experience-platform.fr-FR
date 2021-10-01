@@ -3,9 +3,9 @@ title: Point d’entrée des hôtes
 description: Découvrez comment effectuer des appels au point d’entrée /hôtes dans l’API Reactor.
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '765'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +45,7 @@ GET /properties/{PROPERTY_ID}/hosts
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les hôtes répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
+>À l’aide des paramètres de requête, les hôtes répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -222,7 +222,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `attributes.name` | **(Obligatoire)** Nom de l’hôte, lisible par l’utilisateur. |
-| `attributes.type_of` | **(Obligatoire)** Type d’hôte. Il peut s’agir de l’une des deux options suivantes : <ul><li>`akamai` pour les [hôtes gérés par Adobe](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` pour les [hôtes SFTP](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
+| `attributes.type_of` | **(Obligatoire)** Type d’hôte. Il peut s’agir de l’une des deux options suivantes : <ul><li>`akamai` pour les [hôtes gérés par Adobe](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` pour les [hôtes SFTP](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
 | `attributes.encrypted_private_key` | Clé privée facultative à utiliser pour l’authentification de l’hôte. |
 | `attributes.path` | Chemin d’accès à ajouter à l’URL `server`. |
 | `attributes.port` | Nombre entier indiquant le port de serveur spécifique à utiliser. |
@@ -315,7 +315,7 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour l’hôte. Les attributs suivants peuvent être mis à jour pour un hôte : <ul><li>`encrypted_private_key`</li><li>`name`</li><li>`path`</li><li>`port`</li><li>`server`</li><li>`type_of`</li><li>`username`</li></ul> |
+| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour l’hôte. Les attributs suivants peuvent être mis à jour pour un hôte : <ul><li>`encrypted_private_key`</li><li>`name`</li><li>`path`</li><li>`port`</li><li>`server`</li><li>`type_of`</li><li>`username`</li></ul> |
 | `id` | Le `id` de l’hôte que vous voulez mettre à jour. Il doit correspondre à la valeur `{HOST_ID}` fournie dans le chemin de requête. |
 | `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `hosts`. |
 
