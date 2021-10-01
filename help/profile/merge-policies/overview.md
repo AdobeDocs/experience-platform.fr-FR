@@ -3,13 +3,13 @@ keywords: Experience Platform;profil;profil client en temps réel;stratégies de
 title: Présentation des stratégies de fusion
 type: Documentation
 description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer cette vue unifiée.
-source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
-workflow-type: tm+mt
+exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: ht
 source-wordcount: '1252'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
-
 
 # Présentation des stratégies de fusion
 
@@ -44,7 +44,7 @@ La sélection d’une méthode de fusion vous permet de spécifier les attributs
 Deux méthodes de fusion sont disponibles pour les stratégies de fusion. Chacune de ces méthodes est résumée ci-dessous, et des informations supplémentaires sont fournies dans les sections suivantes :
 
 * **[!UICONTROL Priorité du jeu de données] :** En cas de conflit, donnez la priorité aux fragments de profil en fonction du jeu de données duquel ils sont issus. Lorsque vous sélectionnez cette option, vous devez sélectionner les jeux de données associés et leur ordre de priorité. En savoir plus sur la méthode de fusion [priorité du jeu de données](#dataset-precedence).
-* **[!UICONTROL Horodatage ordonné] :** En cas de conflit, la priorité est donnée au fragment de profil qui a été mis à jour le plus récemment. En savoir plus sur la méthode de fusion [timestamp ordered](#timestamp-ordered) .
+* **[!UICONTROL Horodatage ordonné] :** En cas de conflit, la priorité est donnée au fragment de profil qui a été mis à jour le plus récemment. En savoir plus sur la méthode de fusion [horodatage ordonné](#timestamp-ordered)
 
 ### Priorité du jeu de données {#dataset-precedence}
 
