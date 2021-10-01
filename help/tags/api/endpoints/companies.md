@@ -3,9 +3,9 @@ title: Point d’entrée des entreprises
 description: Découvrez comment effectuer des appels vers le point d’entrée dans l’API Reactor.
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '243'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,7 @@ Le point d’entrée `/companies` de l’API Reactor vous permet de récupérer 
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la procédure à suivre pour s’authentifier auprès de l’API.
 
 ## Récupération dʼune liste de sociétés {#list}
 
@@ -31,7 +31,7 @@ GET /companies
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les sociétés répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
+>À l’aide des paramètres de requête, les sociétés répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
