@@ -3,9 +3,9 @@ title: Point d’entrée de versions
 description: Découvrez comment effectuer des appels vers le point d’entrée /versions dans l’API Reactor.
 exl-id: 476abea0-efff-478a-b87f-ef6b91bfcca5
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '833'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 99%
 
 Les extensions, les règles et les éléments de données sont les blocs de construction de Balises dans Adobe Experience Platform. Lorsque vous souhaitez que votre application fasse quelque chose, ces blocs de construction sont ajoutés à une [bibliothèque](./libraries.md). Pour déployer une bibliothèque sur votre application d’expérience, cette bibliothèque est compilée dans une version. Le point d’entrée `/builds` de l’API Reactor vous permet de gérer par programmation les versions de votre application d’expérience.
 
-Une version est constituée du ou des fichiers chargés dans votre application web et mobile. Le contenu de chaque version varie en fonction des facteurs suivants :
+Une version est constituée du ou des fichiers chargés dans votre application web et mobile. Le contenu de chaque version varie en fonction des facteurs suivants :
 
 * Ressources incluses dans la bibliothèque
 * Configuration de l’[environnement](./environments.md) dans lequel la bibliothèque est créée.
@@ -45,7 +45,7 @@ GET /libraries/{LIBRARY_ID}/builds
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les versions répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Consultez le guide sur le [filtrage des réponses](../guides/filtering.md) pour plus d&#39;informations.
+>À l’aide des paramètres de requête, les versions répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Consultez le guide sur le [filtrage des réponses](../guides/filtering.md) pour plus d&#39;informations.
 
 **Requête**
 
