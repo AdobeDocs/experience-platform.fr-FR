@@ -3,9 +3,10 @@ title: Workflows basés sur les champs dans l’éditeur de schémas (version b�
 description: Découvrez comment ajouter individuellement des champs provenant de groupes de champs existants à vos schémas de modèle de données d’expérience (XDM).
 hide: true
 hidefromtoc: true
-source-git-commit: 139d453c3758f4f137cd1b31307b61dc777fc1c1
+exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
+source-git-commit: b7c6f37d3e6d824465713647b624473cff188378
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '1175'
 ht-degree: 0%
 
 ---
@@ -50,6 +51,26 @@ Le canevas réapparaît avec uniquement les champs sélectionnés présents dans
 
 ![Champs ajoutés](../images/ui/field-based-workflows/fields-added.png)
 
+## Ajout direct de champs standard à un schéma
+
+Vous pouvez ajouter directement à un schéma des champs provenant de groupes de champs standard sans avoir à connaître au préalable le groupe de champs correspondant. Pour ajouter un champ standard à un schéma, sélectionnez l’icône plus (**+**) en regard du nom du schéma dans la zone de travail. Un espace réservé **[!UICONTROL Champ sans titre]** apparaît dans la structure du schéma et le rail droit est mis à jour pour afficher les commandes permettant de configurer le champ.
+
+![Espace réservé du champ](../images/ui/field-based-workflows/root-custom-field.png)
+
+Sous **[!UICONTROL Nom du champ]**, commencez à saisir le nom du champ que vous souhaitez ajouter. Le système recherche automatiquement les champs standard correspondant à la requête et les répertorie sous **[!UICONTROL Champs standard recommandés]**, y compris les groupes de champs auxquels ils appartiennent.
+
+![Champs standard recommandés](../images/ui/field-based-workflows/standard-field-search.png)
+
+Bien que certains champs standard portent le même nom, leur structure peut varier en fonction du groupe de champs d’où ils proviennent. Si un champ standard est imbriqué dans un objet parent dans la structure du groupe de champs, le champ parent sera également inclus dans le schéma si le champ enfant est ajouté.
+
+Sélectionnez l’icône d’aperçu (![Icône d’aperçu](../images/ui/field-based-workflows/preview-icon.png)) en regard d’un champ standard pour afficher la structure de son groupe de champs et mieux comprendre comment il peut être imbriqué. Pour ajouter le champ standard au schéma, sélectionnez l’icône plus (![Icône Plus](../images/ui/field-based-workflows/add-icon.png)).
+
+![Ajouter un champ standard](../images/ui/field-based-workflows/add-standard-field.png)
+
+Le canevas se met à jour pour afficher le champ standard ajouté au schéma, y compris tous les champs parents sous lesquels il est imbriqué dans la structure du groupe de champs. Le nom du groupe de champs est également répertorié sous **[!UICONTROL Groupes de champs]** dans le rail de gauche. Si vous souhaitez ajouter d’autres champs à partir du même groupe de champs, sélectionnez **[!UICONTROL Gérer les champs associés]** dans le rail de droite.
+
+![Champ standard ajouté](../images/ui/field-based-workflows/standard-field-added.png)
+
 ## Ajout direct de champs personnalisés à un schéma
 
 Si vous avez déjà [créé des groupes de champs personnalisés](./resources/field-groups.md#create), vous pouvez ajouter des champs personnalisés directement au schéma sans avoir à les ajouter séparément à un groupe de champs personnalisés au préalable.
@@ -62,7 +83,11 @@ Pour ajouter des champs au niveau racine d’un schéma, sélectionnez l’icôn
 
 ![Champ personnalisé racine](../images/ui/field-based-workflows/root-custom-field.png)
 
-Utilisez les commandes du rail de droite pour indiquer un nom, un nom d’affichage et un type de données pour le champ. Sous **[!UICONTROL Attribuer un groupe de champs]**, sélectionnez le groupe de champs personnalisé auquel vous souhaitez associer le nouveau champ.
+Commencez à saisir le nom du champ personnalisé que vous souhaitez ajouter, et le système commence automatiquement à rechercher les champs standard correspondants. Pour créer un champ personnalisé à la place, sélectionnez l’option supérieure ajoutée avec **([!UICONTROL Nouveau champ])**.
+
+![Nouveau champ](../images/ui/field-based-workflows/custom-field-search.png)
+
+À partir de là, indiquez un nom d’affichage et un type de données pour le champ. Sous **[!UICONTROL Attribuer un groupe de champs]**, sélectionnez le groupe de champs personnalisé auquel vous souhaitez associer le nouveau champ.
 
 ![Sélectionner un groupe de champs](../images/ui/field-based-workflows/select-field-group.png)
 
@@ -78,7 +103,7 @@ Le nouveau champ est ajouté à la zone de travail et est un espace de noms situ
 >
 >Les autres champs fournis par le groupe de champs personnalisé sélectionné sont supprimés du schéma par défaut. Si vous souhaitez ajouter certains de ces champs au schéma, sélectionnez un champ appartenant au groupe, puis sélectionnez **[!UICONTROL Gérer les champs associés]** dans le rail de droite.
 
-### Ajouter des champs à la structure des groupes de champs standard
+### Ajouter des champs personnalisés à la structure des groupes de champs standard
 
 Si le schéma sur lequel vous travaillez comporte un champ de type objet fourni par un groupe de champs standard, vous pouvez ajouter vos propres champs personnalisés à cet objet standard. Sélectionnez l’icône plus (**+**) en regard de la racine de l’objet et fournissez les détails du champ personnalisé dans le rail de droite.
 
