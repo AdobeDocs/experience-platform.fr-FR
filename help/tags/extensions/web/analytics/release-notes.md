@@ -3,9 +3,9 @@ title: Notes de mise à jour de l’extension Adobe Analytics
 description: Dernières notes de mise à jour pour lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 source-git-commit: cf0f8022e0a9ea115b1312d9988b3abb804d9b80
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1249'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -21,8 +21,8 @@ ht-degree: 98%
 
 #### Correctifs
 
-* Mise à niveau de [AppMeasurement vers la version 2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr).
-* Mise à jour de la variable linkName de secours vers la logique du Activity Map miroir au lieu d’utiliser innerHTML.
+* Mise à niveau dʼ[AppMeasurement vers la version 2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr).
+* Mise à jour de lʼargumernt linkName Fallback pour refléter la logique Activity Map au lieu dʼutiliser innerHTML.
 
 ## 6 août 2020
 
@@ -34,7 +34,7 @@ ht-degree: 98%
 
 #### Fonctionnalités
 
-* Mise à jour d’[AppMeasurement vers la version 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* Mise à jour d’[AppMeasurement vers la version 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr).
 * Légère modification de l’interface utilisateur, de façon à ce que les paramètres supplémentaires apparaissent désormais réduits en accordéon plutôt que sous forme de case à cocher.
 
 ## 2 juin 2020
@@ -62,7 +62,7 @@ ht-degree: 98%
 
 #### Fonctionnalités
 
-* [Mise à jour d’AppMeasurement vers la version 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
+* [Mise à jour d’AppMeasurement vers la version 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr)
 
 ## 2 mars 2020
 
@@ -74,7 +74,7 @@ ht-degree: 98%
 
 #### Fonctionnalités
 
-* [Mise à jour d’AppMeasurement vers la version 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
+* [Mise à jour d’AppMeasurement vers la version 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr)
 * Mise à jour de la bibliothèque DIL dans le module Audience Manager vers la version 9.4
 * Augmentation de la longueur des champs d’entrée dans l’extension
 * Les eVars et les props dans les configurations d’extension et d’action affichent désormais le nom convivial issu d’Analytics.
@@ -135,7 +135,7 @@ ht-degree: 98%
 
 * Mise à jour de l’extension Adobe Analytics pour la prise en charge de DIL 9.2 pour Audience Manager
 
-* Mise à jour de l’extension pour la prise en charge d’[AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#Version 2.15.0)
+* Mise à jour de l’extension pour la prise en charge d’[AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr#Version 2.15.0)
 * Suppression de la case à cocher suivante qui n’est plus prise en charge : « Do not attach the destination publishing IFRAME to the DOM or fire destinations » (Ne joignez pas l’IFRAME de publication de destination au DOM ou aux destinations de déclenchement)
 
 ## 4 juin 2019
