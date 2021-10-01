@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: Découvrez la façon de gérer les libellés dʼutilisation des données dans Experience Platform à lʼaide de lʼAPI Policy Service.
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '506'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
