@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Type de données du canal d’expérience
 topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM (Experience Channel Data Model).
-source-git-commit: b9168052174c250810e59e403cb77419d510df3b
+exl-id: 209654f7-0bde-439a-989c-ce2e41599105
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 19%

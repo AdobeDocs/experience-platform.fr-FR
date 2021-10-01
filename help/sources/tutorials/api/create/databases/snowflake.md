@@ -5,10 +5,11 @@ title: Création d’une connexion de base de Snowflake à l’aide de l’API F
 topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Snowflake à l’aide de l’API Flow Service.
-source-git-commit: 5e2301a409f04bd4e23888648f244918b871f0ad
+exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
+source-git-commit: db483110b8bfd5290f6a9a30fdb008f478fdbbf4
 workflow-type: tm+mt
 source-wordcount: '496'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 

@@ -1,8 +1,9 @@
 ---
 title: Suppression de ressources
-description: Découvrez comment supprimer des ressources de balises dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez comment supprimer des ressources de balise dans Adobe Experience Platform.
+exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 100%
 
@@ -14,7 +15,7 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-La suppression d’une ressource entraîne la suppression définitive de cette ressource dans Adobe Experience Platform. Si vous souhaitez toujours que la ressource apparaisse dans l’interface utilisateur de la collecte de données, mais pas dans votre bibliothèque de balises, consultez la section [Suppression de ressources d’une bibliothèque](remove-resources-from-library.md).
+La suppression d’une ressource entraîne sa suppression définitive dans Adobe Experience Platform. Si vous souhaitez que la ressource apparaisse toujours dans l’interface utilisateur de collecte de données mais pas dans votre bibliothèque de balises, reportez-vous à [Suppression de ressources d’une bibliothèque](remove-resources-from-library.md).
 
 Vous pouvez supprimer des éléments de données, des règles, des extensions, des hôtes, des environnements et des propriétés. Une fois supprimées, il n’est pas possible de récupérer ces ressources.
 
@@ -49,7 +50,7 @@ Vous pouvez résoudre ces dépendances avant ou après la suppression de l’él
 
 Toutes les autres ressources (règles, composants de règles et éléments de données) sont fournies par des extensions.
 
-Le comportement des composants de règle et des éléments de données dépend des extensions. Ils en dépendent également uniquement pour s’afficher dans l’interface utilisateur de la collecte de données. Si vous supprimez l’extension avant de résoudre les dépendances, vous ne pourrez plus afficher ces ressources orphelines. Ces ressources orphelines apparaissent dans les vues de liste, mais vous recevrez une erreur si vous essayez d’ouvrir la vue des détails.
+Le comportement des composants de règles et des éléments de données dépend d’extensions, et c’est également le cas pour leur affichage dans l’interface utilisateur de collecte de données. Si vous supprimez l’extension avant de résoudre les dépendances, vous ne pourrez plus afficher ces ressources orphelines. Ces ressources orphelines apparaissent dans les vues de liste, mais vous recevrez une erreur si vous essayez d’ouvrir la vue des détails.
 
 C’est pourquoi vous devez faire particulièrement attention lorsque vous supprimez des extensions et résoudre les dépendances avant de les supprimer.
 

@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Groupe de champs de schéma de consentement IAB TCF 2.0
 topic-legacy: overview
 description: Ce document fournit un aperçu du groupe de champs de schéma de consentement IAB TCF 2.0 pour la classe XDM Individual Profile.
-source-git-commit: 9b75a69cc6e31ea0ad77048a6ec1541df2026f27
+exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 2%
 
 ---
-
 
 # [!UICONTROL Groupe de champs ] de schéma de consentement IAB TCF 2.0
 

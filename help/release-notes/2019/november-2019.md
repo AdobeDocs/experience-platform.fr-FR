@@ -48,7 +48,7 @@ Pour plus d’informations, consultez la [documentation de la plateforme de donn
 
 | Fonctionnalité | Description |
 |---|---|
-| Destinations | Intégrations prédéfinies avec des plateformes de destination prises en charge par la fonction [!DNL Real-time Customer Data Platform] d’Adobe qui activent les données vers ces partenaires de manière transparente. Pour plus d’informations, consultez [Destinations](#destinations) ci-dessous. |
+| Destinations  | Intégrations prédéfinies avec des plateformes de destination prises en charge par la fonction [!DNL Real-time Customer Data Platform] d’Adobe qui activent les données vers ces partenaires de manière transparente. Pour plus d’informations, consultez [Destinations](#destinations) ci-dessous. |
 | Tableau de bord de mesures de la page d’accueil | La page d’accueil de la plateforme de données clients en temps réel (CDP) comprend un tableau de bord de mesures qui affiche des informations sur les profils et les segments. La page d’accueil contient également des liens vers des documents d’apprentissage. Consultez la section sur les [mesures de la plateforme de données clients en temps réel](#real-time-customer-data-platform-metrics) ci-dessous. |
 | Sources | Vous pouvez envoyer des données à partir de différentes sources, notamment les solutions Adobe, le stockage dans le cloud, des logiciels tiers et la gestion de la relation client. Pour en savoir plus, consultez la section [Sources](#sources) ci-dessous. |
 
@@ -70,7 +70,7 @@ Pour en savoir plus, consultez la [présentation des mesures de la plateforme de
 
 La version de novembre permet à la plateforme de données clients en temps réel d’Adobe de prendre en charge les destinations suivantes :
 
-* Publicité: [!DNL Google]
+* Advertising: [!DNL Google]
 * Marketing par e-mail : Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
 Consultez le [catalogue des destinations](../../destinations/catalog/overview.md) pour en savoir plus sur chacune des destinations.

@@ -5,13 +5,13 @@ type: Tutorial
 seo-title: Activate audience data to batch profile export destinations
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil de lot.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
-source-git-commit: 99835d0b3d8ab64422be7f878cf556ac8890b123
+exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1959'
 ht-degree: 7%
 
 ---
-
 
 # Activation des données d’audience vers des destinations d’exportation de profils par lots
 
@@ -187,7 +187,7 @@ Il est recommandé que l’un des attributs soit un [identifiant unique](../../d
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
 >title="A propos des clés de déduplication"
->abstract="Éliminez plusieurs enregistrements du même profil dans les fichiers d&#39;export en sélectionnant une clé de déduplication. Sélectionnez un espace de noms unique ou jusqu’à deux attributs de schéma XDM comme clé de déduplication. Si vous ne sélectionnez pas de clé de déduplication, il se peut que des entrées de profil soient dupliquées dans les fichiers d’exportation."
+>abstract="Éliminez plusieurs occurrences du même profil dans les fichiers dʼexportation en sélectionnant une clé de déduplication. Sélectionnez un espace de noms unique ou jusqu’à deux attributs de schéma XDM comme clé de déduplication. Si vous ne sélectionnez pas de clé de déduplication, il se peut que des entrées de profil soient dupliquées dans les fichiers d’exportation."
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="En savoir plus dans la documentation"
 
 Une clé de déduplication est une clé Principale définie par l’utilisateur qui détermine l’identité par laquelle les utilisateurs souhaitent dédupliquer leurs profils. &#x200B;

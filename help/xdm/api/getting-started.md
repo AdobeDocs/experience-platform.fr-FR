@@ -29,11 +29,11 @@ XDM utilise le formatage du schéma JSON pour décrire et valider la structure d
 
 ## Lecture d’exemples d’appels API
 
-La documentation de l’API [!DNL Schema Registry] inclut des exemples d’appels d’API expliquant comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
+La documentation de l’API [!DNL Schema Registry] inclut des exemples d’appels d’API expliquant comment formater vos requêtes. Il s&#39;agit notamment de chemins d&#39;accès, d&#39;en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
 
 ## Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -232,8 +232,7 @@ Actuellement, Platform ne prend en charge qu’une seule version majeure (`1`) p
 >* Le jeu de données a été activé pour une utilisation dans Real-time Customer Profile (même si aucune donnée n’a été ingérée).
 
 >
->
-Si le schéma n’a pas été associé à un jeu de données qui répond à l’un des critères ci-dessus, toute modification peut lui être apportée. Cependant, dans tous les cas, le composant `version` reste à `1`.
+>Si le schéma n’a pas été associé à un jeu de données qui répond à l’un des critères ci-dessus, toute modification peut lui être apportée. Cependant, dans tous les cas, le composant `version` reste à `1`.
 
 ## Contraintes de champ XDM et bonnes pratiques
 

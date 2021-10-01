@@ -8,7 +8,7 @@ exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
 workflow-type: tm+mt
 source-wordcount: '779'
-ht-degree: 21%
+ht-degree: 30%
 
 ---
 
@@ -68,7 +68,7 @@ Une fois la création de l’environnement de test terminée, actualisez la page
 
 >[!IMPORTANT]
 >
->L’environnement de test de production par défaut ne peut pas être réinitialisé si le graphique d’identités qui y est hébergé est également utilisé par Adobe Analytics pour la fonction [Analyses entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) ou si le graphique d’identités qui y est hébergé est également utilisé par Adobe Audience Manager pour la fonction [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
+>Le sandbox de production par défaut ne peut pas être réinitialisé si le graphique dʼidentités quʼil contient est également utilisé par Adobe Analytics pour la fonctionnalité [Analyses entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=fr) ou par Adobe Audience Manager pour la fonctionnalité [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr).
 
 La réinitialisation d’un environnement de test de production ou de développement supprime toutes les ressources associées à cet environnement de test (schémas, jeux de données, etc.), tout en conservant le nom de l’environnement de test et les autorisations associées. Cet environnement de test « propre » reste disponible avec le même nom auprès des utilisateurs qui y ont accès.
 
@@ -116,7 +116,7 @@ La suppression d’un environnement de test de production ou de développement s
 
 Sélectionnez l’environnement de test à supprimer dans la liste des environnements de test. Dans le panneau de navigation de droite qui s’affiche, sélectionnez **[!UICONTROL Supprimer]**.
 
-![Supprimez](../images/ui/delete.png)
+![delete](../images/ui/delete.png)
 
 Une boîte de dialogue s’affiche, vous invitant à confirmer votre choix. Sélectionnez **[!UICONTROL Continuer]** pour continuer.
 

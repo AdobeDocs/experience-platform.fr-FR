@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Groupe de champs de schéma Détails sur l’entrée du périphérique
 topic-legacy: overview
 description: Ce document fournit une vue d’ensemble du groupe de champs Détails du commerce d’appareil.
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 5%

@@ -5,10 +5,11 @@ title: Création d’un connecteur source de téléchargement de fichier local d
 topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source pour votre système local pour importer des fichiers locaux dans Platform
-source-git-commit: 1bf112db27b534e2ec977be7b47e3becf75ee066
+exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1271'
-ht-degree: 6%
+ht-degree: 16%
 
 ---
 
@@ -95,21 +96,21 @@ Lors de la prévisualisation, la colonne d’identité est considérée comme le
 
 #### Ajouter un champ calculé
 
-Les champs calculés permettent de créer des valeurs en fonction des attributs du schéma d’entrée. Ces valeurs peuvent ensuite être affectées à des attributs dans le schéma cible et recevoir un nom et une description pour faciliter la référence.
+Les champs calculés permettent de créer des valeurs en fonction des attributs du schéma d’entrée. Ces valeurs peuvent ensuite être affectées à des attributs dans le schéma cible. Vous pouvez également leur fournir un nom et une description pour en faciliter la référence.
 
 Sélectionnez le bouton **[!UICONTROL Ajouter un champ calculé]** pour continuer.
 
 ![add-calculate-field](../../../../images/tutorials/create/local/add-calculated-field.png)
 
-Le panneau [!UICONTROL Créer un champ calculé] s’affiche. La boîte de dialogue de gauche contient les champs, fonctions et opérateurs pris en charge dans les champs calculés. Sélectionnez l&#39;un des onglets pour commencer à ajouter des fonctions, des champs ou des opérateurs dans l&#39;éditeur d&#39;expression.
+Le panneau [!UICONTROL Créer un champ calculé] sʼaffiche. La boîte de dialogue de gauche contient les champs, fonctions et opérateurs pris en charge dans les champs calculés. Sélectionnez lʼun des onglets pour commencer à ajouter des fonctions, des champs ou des opérateurs à lʼéditeur dʼexpression.
 
 ![create-calculate-field](../../../../images/tutorials/create/local/create-calculated-field.png)
 
 | Tabulation | Description |
 | --------- | ----------- |
-| Fonction | L’onglet Fonctions répertorie les fonctions disponibles pour transformer les données. Pour en savoir plus sur les fonctions que vous pouvez utiliser dans les champs calculés, consultez le guide sur [l’utilisation des fonctions de préparation de données (mappeur)](../../../../../data-prep/functions.md). |
-| Champ | L&#39;onglet Champs répertorie les champs et attributs disponibles dans le schéma source. |
-| Opérateur | L&#39;onglet Opérateurs répertorie les opérateurs disponibles pour la transformation des données. |
+| Fonction | Lʼonglet Fonctions répertorie les fonctions disponibles pour transformer les données. Pour en savoir plus sur les fonctions que vous pouvez utiliser dans les champs calculés, consultez le guide dʼ [utilisation des fonctions Data Prep (Mapper)](../../../../../data-prep/functions.md). |
+| Champ | Lʼonglet Champs répertorie les champs et attributs disponibles dans le schéma source. |
+| Opérateur | Lʼonglet Opérateurs répertorie les opérateurs disponibles pour la transformation des données. |
 
 Sélectionnez l’éditeur d’expression pour ajouter manuellement des champs, des fonctions et des opérateurs. Une fois que vous avez créé un champ calculé, sélectionnez **[!UICONTROL Enregistrer]** pour continuer.
 

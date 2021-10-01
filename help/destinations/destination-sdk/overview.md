@@ -1,11 +1,11 @@
 ---
-description: Le SDK de destination Adobe Experience Platform est un ensemble d’API de configuration qui vous permettent de configurer des modèles d’intégration de destination pour que l’Experience Platform puisse fournir des données d’audience et de profil à votre point de terminaison, en fonction des données et des formats d’authentification de votre choix. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via l’API pour des mises à jour supplémentaires.
+description: Le SDK de destination Adobe Experience Platform est un ensemble d’API de configuration qui vous permettent de configurer des modèles d’intégration de destination pour que l’Experience Platform puisse fournir des données d’audience et de profil à votre point de terminaison, en fonction des données et des formats d’authentification de votre choix. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via lʼAPI pour des mises à jour supplémentaires.
 title: SDK de destination Adobe Experience Platform
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
 source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '702'
-ht-degree: 4%
+ht-degree: 14%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 ## Présentation {#destinations-sdk}
 
-Le SDK de destination Adobe Experience Platform est une suite d’API de configuration qui vous permet de configurer des modèles d’intégration de destination pour que l’Experience Platform puisse fournir des données d’audience et de profil à votre point de terminaison, en fonction des données et des formats d’authentification de votre choix. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via l’API pour des mises à jour supplémentaires.
+Le SDK Destination Adobe Experience Platform est un ensemble dʼAPI de configuration permettant de configurer des modèles dʼintégration de destination, afin quʼExperience Platform puisse envoyer des données dʼaudience et de profil à votre point dʼentrée, selon les formats de données et dʼauthentification choisis. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via lʼAPI pour des mises à jour supplémentaires.
 
 La documentation du SDK de destination fournit des instructions pour vous permettre d’utiliser le SDK de destination Adobe Experience Platform pour configurer, tester et publier une intégration de destination productisée avec Adobe Experience Platform et faire en sorte que votre destination soit intégrée au catalogue de destinations en constante augmentation.
 

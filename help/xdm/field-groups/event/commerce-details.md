@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Groupe de champs de schéma de détails du commerce
 topic-legacy: overview
 description: Ce document fournit un aperçu du groupe de champs de schéma Détails du commerce .
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+exl-id: 36aba186-fadb-4abb-a94f-7e151ff3f744
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 4%
 
 ---
-
 
 # [!UICONTROL Groupe de champs ] Commerce Detailsschema
 

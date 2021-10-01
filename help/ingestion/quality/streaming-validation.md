@@ -70,7 +70,7 @@ Si un message échoue au cours de la validation synchrone, le message ne sera pa
 >
 >Les modifications de schéma peuvent ne pas être immédiatement disponibles, car elles sont mises en cache. L’actualisation du cache peut prendre jusqu’à quinze minutes.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /collection/{CONNECTION_ID}?syncValidation=true

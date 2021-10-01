@@ -1,8 +1,9 @@
 ---
 title: Octroyer un accès utilisateur
-description: Configurez les comptes utilisateur et les autorisations liés aux balises des membres de votre équipe dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Configurez les comptes utilisateur et les autorisations de balises des membres de votre équipe dans Adobe Experience Platform.
+exl-id: c7235e50-13b3-4487-b171-873063875621
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '738'
 ht-degree: 100%
 
@@ -16,7 +17,7 @@ ht-degree: 100%
 
 Avant de commencer à utiliser extension_package, vous devez configurer des comptes d’utilisateur et des autorisations pour les membres de votre équipe. Vous pouvez le faire avec [Adobe Admin Console](https://adminconsole.adobe.com/).
 
-Ce document fournit des étapes permettant d’octroyer l’accès aux balises dans Adobe Experience Platform par l’intermédiaire d’Admin Console.
+Ce document décrit les étapes pour accorder l’accès aux balises dans Adobe Experience Platform par l’intermédiaire d’Admin Console.
 
 ## Conditions préalables
 
@@ -27,61 +28,61 @@ Ce guide suppose que vous êtes un administrateur d’organisation tel qu’éta
 
 ## Choix de votre organisation
 
-Votre administrateur d’organisation Adobe Experience Cloud doit se connecter à [Admin Console](https://adminconsole.adobe.com/). Le premier écran affiche la présentation.
+Votre administrateur d’organisation Adobe Experience Cloud doit se connecter à [Admin Console](https://adminconsole.adobe.com/). Le premier écran montre la vue d’ensemble.
 
 ![Onglet de présentation d’Admin Console](../images/getting-started/admin-console-overview.png)
 
-Certains d’entre vous peuvent avoir accès à plusieurs organisations (Org). Pour ajouter la fonctionnalité de balises à l’organisation appropriée, sélectionnez le nom de l’organisation qui s’affiche dans le coin supérieur droit de l’écran. Dans la liste déroulante, sélectionnez ensuite l’organisation dans laquelle vous souhaitez utiliser les balises.
+Certains d’entre vous peuvent avoir accès à plusieurs organisations (Org). Pour ajouter la fonctionnalité de balises à l’organisation appropriée, sélectionnez le nom de l’organisation qui s’affiche dans le coin supérieur droit de l’écran. Sélectionnez ensuite l’organisation dans laquelle vous souhaitez utiliser les balises dans la liste déroulante.
 
-![Menu déroulant de sélection d’organisation d’Admin Console](../images/getting-started/admin-console-choose-org.png)
+![Menu déroulant de sélection de l’organisation d’Admin Console](../images/getting-started/admin-console-choose-org.png)
 
-## Création d’un profil de produits
+## Création d’un profil de produit
 
-Un profil de produits est un groupe. Les droits individuels sont attribués aux profils de produits et tous les utilisateurs du profil hériteront de ces droits.
+Un profil de produit est un groupe. Les droits individuels sont attribués aux profils de produits et tous les utilisateurs du profil hériteront de ces droits.
 
-Cliquez sur le lien **[!UICONTROL Produits]** en haut de l’écran, puis sur **[!UICONTROL Experience Cloud]** à gauche. Si lʼinterface utilisateur de la collecte de données nʼest pas répertoriée, les clients doivent contacter leur équipe de compte, et les partenaires doivent envoyer un e-mail à <ExchangeTechEC@adobe.com>.
+Cliquez sur le lien **[!UICONTROL Produits]** en haut de l’écran, puis sur **[!UICONTROL Experience Cloud]** sur la gauche. Si lʼinterface utilisateur de la collecte de données nʼest pas répertoriée, les clients doivent contacter leur équipe de compte, et les partenaires doivent envoyer un e-mail à <ExchangeTechEC@adobe.com>.
 
 ![Onglet Produits d’Admin Console](../images/getting-started/admin-console-products-launch.png)
 
-La capture d’écran ci-dessus présente un exemple de profil. Il se peut que vous n’en ayez pas encore. Pour en créer un, sélectionnez **[!UICONTROL Nouveau profil]**. Dans l’écran **Créer un profil**, ajoutez simplement un **Nom de profil** (Test de collecte de données, par exemple) et une **Description** facultative, puis cliquez sur **[!UICONTROL Enregistrer]** :
+La capture d’écran ci-dessus montre un exemple de profil, cependant, il se peut que vous n’en ayez pas encore. Pour en créer un, sélectionnez **[!UICONTROL Nouveau profil]**. À l’écran **Créer un profil**, ajoutez simplement un **Nom de profil** (test Collecte de données, par exemple) et une **Description** puis sélectionnez **[!UICONTROL Enregistrer]** :
 
-![Création d’un affichage de profil](../images/getting-started/admin-console-create-a-new-profile.png)
+![Créer un affichage de profil](../images/getting-started/admin-console-create-a-new-profile.png)
 
-Le profil de produits a bien été ajouté à l’organisation. Ajoutez ensuite des utilisateurs au profil de produits.
+Le profil de produit a maintenant été ajouté à l’organisation. Ajoutez ensuite des utilisateurs au profil de produit.
 
-## Attribution d’utilisateurs au profil de produits
+## Affecter des utilisateurs au profil de produits
 
-Veuillez noter que le profil de produits affiche zéro pour les **UTILISATEURS** et **ADMINISTRATEURS AUTORISÉS**. Cliquez sur le nom du profil de produits que vous avez créé (Test de collecte de données dans notre exemple).
+Veuillez noter que le profil de produit affiche zéro pour les **UTILISATEURS AUTORISÉS** et les **ADMINISTRATEURS**. Cliquez sur le nom du profil de produit que vous avez créé (test Collecte de données dans notre exemple).
 
-![Affichage des profils de produits](../images/getting-started/admin-console-profiles-add-user.png)
+![Affichage des profils de produit](../images/getting-started/admin-console-profiles-add-user.png)
 
-Sélectionnez l’onglet **[!UICONTROL Utilisateurs]**. Cet onglet vous permet de rechercher des utilisateurs Adobe ID existants à l’aide de leur adresse électronique ou d’ajouter de nouveaux utilisateurs au profil de produits. Sélectionnez **[!UICONTROL Ajouter un lien utilisateur]**.
+Sélectionnez l’onglet **[!UICONTROL Utilisateurs]**. Vous pouvez y rechercher des utilisateurs Adobe ID existants par adresse e-mail ou en ajouter de nouveaux en tant qu’utilisateurs de ce profil de produit. Sélectionnez **[!UICONTROL Ajouter un lien utilisateur]**.
 
-![Onglet Utilisateurs des profils de produits](../images/getting-started/admin-console-add-launch-user.png)
+![Onglet Utilisateurs de profils de produit](../images/getting-started/admin-console-add-launch-user.png)
 
-Saisissez un nom, un groupe d’utilisateurs ou une adresse électronique dans le champ de texte approprié. Dans la mesure du possible, il est recommandé d’inclure un prénom et un nom. Sélectionnez **[!UICONTROL Enregistrer]** pour ajouter l’utilisateur.
+Entrez un nom, un groupe d’utilisateurs ou une adresse électronique dans le champ de texte approprié. Dans la mesure du possible, il est recommandé d’inclure un prénom et un nom. Sélectionnez **[!UICONTROL Enregistrer]** pour ajouter l’utilisateur.
 
-![Ajout d’un utilisateur à l’affichage du profil](../images/getting-started/admin-console-add-user.png)
+![Ajout d’un utilisateur à l’affichage Profil](../images/getting-started/admin-console-add-user.png)
 
-Lorsque vous disposerez de tous les utilisateurs dont vous avez besoin dans ce profil de produits, nous leur ajouterons des autorisations. Sélectionnez l’onglet **[!UICONTROL Autorisations.]** Dans l’écran Autorisations, **[!UICONTROL Propriétés]**, **[!UICONTROL Droits de société]** et **[!UICONTROL Droits de propriété]** s’affichent. Sélectionnez **[!UICONTROL Modifier]**.
+Lorsque vous aurez tous les utilisateurs dont vous avez besoin dans ce profil de produits, nous leur ajouterons des autorisations. Sélectionnez l&#39;onglet **[!UICONTROL Autorisations]**. Sur l’écran des autorisations, vous verrez **[!UICONTROL Propriétés]**, **[!UICONTROL Droits d’entreprise]** et **[!UICONTROL Droits de propriété]**. Sélectionnez **[!UICONTROL Modifier]**.
 
-![Onglet Autorisations des profils de produits](../images/getting-started/admin-console-profile-permissions.png)
+![Onglet Autorisations des profils de produit](../images/getting-started/admin-console-profile-permissions.png)
 
-Pour créer des extensions, votre équipe doit au minimum disposer des autorisations suivantes :
+Pour créer des extensions, votre équipe doit disposer au minimum des autorisations suivantes :
 
-* « Gérer les propriétés » à partir du groupe de société.
+* « Gérer les propriétés » à partir du groupe d’entreprise.
 * « Gérer les extensions », « Gérer les environnements » et « Développer » à partir du groupe de propriétés.
 
-Si vous le souhaitez, vous pouvez créer d’autres profils de produits avec des droits plus limités. Toutefois, il vous suffit pour l’instant de sélectionner **[!UICONTROL + Ajouter tout]** pour **Droits de société** et **Droits de propriété**. Veillez à sélectionner **[!UICONTROL Enregistrer]** pour chacun.
+Vous pouvez créer d’autres profils de produits avec des droits plus limités si vous le souhaitez, mais pour l’instant, il vous suffit de sélectionner **[!UICONTROL + Ajouter tout]** pour **Droits d’entreprise** et **Droits de propriété**. Veillez à sélectionner **[!UICONTROL Enregistrer]** sur chacun d’eux.
 
 ![Gestion des droits de propriété](../images/getting-started/admin-console-add-all-property-rights.png)
 
-![Gestion des droits de société](../images/getting-started/admin-console-add-all-company-rights.png)
+![Gestion des droits d’entreprise](../images/getting-started/admin-console-add-all-company-rights.png)
 
 Jusqu’à présent, nous avons choisi l’organisation appropriée, créé un profil de produits, ajouté des utilisateurs au profil de produits et attribué des autorisations.
 
-Cela conclut la configuration requise dans Admin Console. Vous et les membres de votre équipe qui ont été configurés en tant qu’utilisateurs pouvez désormais vous connecter à l’[interface utilisateur de la collecte de données](https://launch.adobe.com/).
+Cette opération termine la configuration requise dans Admin Console. Vous et les membres de votre équipe qui ont été configurés en tant qu’utilisateurs pouvez désormais vous connecter à l&#39;[interface utilisateur de la collecte de données](https://launch.adobe.com/).
 
-## Confirmation de l’approvisionnement
+## Confirmer l’approvisionnement
 
-Une fois l’accès aux balises attribué à votre société et vos utilisateurs configurés comme décrit ci-dessus, vous devez pouvoir accéder à l’environnement de production à partir de l’[interface utilisateur de la collecte de données](https://launch.adobe.com/). Si des privilèges d’accès aux balises vous ont été attribués et que vous avez suivi les étapes d’Admin Console ci-dessus, mais que vous ne pouvez toujours pas vous connecter à l’interface utilisateur de la collecte de données, contactez les représentants du support Adobe.
+Une fois que votre société a accès aux balises et que vos utilisateurs sont configurés comme décrit ci-dessus, vous devez pouvoir accéder à l’environnement de production depuis l’[interface utilisateur de la collecte de données](https://launch.adobe.com/). Si vous avez reçu les privilèges d’accès pour les balises et que vous avez suivi les étapes Admin Console ci-dessus, mais que vous ne pouvez toujours pas vous connecter à l’interface utilisateur de la collecte de données, contactez les représentants de l’assistance Adobe.

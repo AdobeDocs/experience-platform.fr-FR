@@ -3,7 +3,8 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Activation d’un jeu de données pour Profile et Identity Service à l’aide d’API
 type: Tutorial
 description: Ce tutoriel vous explique comment activer un jeu de données à utiliser avec Real-time Customer Profile et Identity Service à l’aide des API Adobe Experience Platform.
-source-git-commit: 244e09835cec4b15d6a96e7d615321513fa3b5aa
+exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
+source-git-commit: 648923a0a124767f530bea09519449f76d576b5e
 workflow-type: tm+mt
 source-wordcount: '1075'
 ht-degree: 59%

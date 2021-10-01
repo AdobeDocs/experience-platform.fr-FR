@@ -1,8 +1,9 @@
 ---
 title: Republication de bibliothèque
 description: Découvrez comment republier une ancienne bibliothèque de balises dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 100%
 
@@ -20,9 +21,9 @@ Le processus de récupération dépend des paramètres de votre environnement au
 
 Les options disponibles sont les suivantes :
 
-* **Hôte : géré par Adobe, Archive : désactivée :** Si vous utilisez l’hôte Géré par Adobe et que vous n’archivez pas votre bibliothèque, vous pouvez republier ces anciennes bibliothèques.
+* **Hôte : géré par Adobe, Archive : désactivé :** si vous utilisez lʼhôte Géré par Adobe et que vous nʼarchivez pas votre bibliothèque, vous pouvez republier ces anciennes bibliothèques.
 
-* **Hôte : géré par Adobe, Archive: activée :** Si vous utilisez l’hôte Géré par Adobe et que vous archivez votre bibliothèque, vous pouvez télécharger ces anciennes bibliothèques.
+* **Hôte : géré par Adobe, Archive : activé :** si vous utilisez lʼhôte Géré par Adobe et que vous archivez votre bibliothèque, vous pouvez télécharger ces anciennes bibliothèques.
 
 * **Hôte : SFTP ; Archive : Activée ou désactivée**. Si vous utilisez l’hôte SFTP, le système part du principe que vos propres stratégies d’archivage sont en place, aucune option de récupération n’est donc disponible.
 
@@ -30,23 +31,23 @@ Les options de récupération pour les propriétés mobiles ne sont pas encore d
 
 ## Republication
 
-Chaque environnement de balise fournit un lien vers un fichier de bibliothèque. Toute bibliothèque que vous créez dans cet environnement est référencée par ce lien.
+Chaque environnement de balises fournit un lien vers un fichier de bibliothèque. Toute bibliothèque que vous créez dans cet environnement peut être référencée par ce lien.
 
 Lorsque vous lancez la nouvelle version d’un environnement de développement ou d’évaluation, l’ancienne version est nettoyée et la nouvelle version est déployée. Pour votre environnement de production, ce lien est mis à jour afin de pointer vers la dernière version, mais les cinq versions les plus récentes sont conservées avant d’être nettoyées.
 
 Ces cinq dernières versions de votre environnement de production sont celles qui peuvent être récupérées.
 
-Lorsque vous republiez une ancienne bibliothèque, Platform met à jour le lien de l’environnement afin qu’il pointe vers l’une de ces anciennes versions qui n’a pas encore été nettoyée.  Platform émet également une requête de purge dans le cache des nœuds périphériques CDN pour indiquer que la bibliothèque a été mise à jour et qu’une nouvelle copie doit être récupérée à partir de l’origine.
+Lorsque vous republiez une ancienne bibliothèque, Platform met à jour le lien de lʼenvironnement afin quʼil pointe vers lʼune de ces anciennes versions qui nʼa pas encore été nettoyée.  Platform émet également une requête de purge dans le cache des nœuds périphériques CDN pour indiquer que la bibliothèque a été mise à jour et quʼune nouvelle copie doit être récupérée à partir de lʼorigine.
 
 Cela signifie que lorsque vous republiez une ancienne bibliothèque :
 
-* Aucune modification n’est apportée aux ressources (ou aux révisions historiques) de votre propriété de balise.
+* Aucune modification nʼest apportée aux ressources (ou aux révisions historiques) de votre propriété de balise.
 
 * La manière dont les environnements de développement et d’évaluation calculent ce qui est en amont ne change pas.
 
-Prenons comme exemple le cas où vous effectuez une restauration en raison d’un problème avec une règle spécifique. La révision de la règle qui est actuellement en production peut, par exemple, être vieille de trois versions. Lorsque vous affichez cette règle dans l’interface utilisateur de la collecte de données pour la corriger, elle reflète toujours les dernières modifications enregistrées au lieu de celles qui sont actuellement en production.
+Prenons comme exemple le cas où vous effectuez une restauration en raison d’un problème avec une règle spécifique. La révision de la règle qui est actuellement en production peut, par exemple, être vieille de trois versions. Lorsque vous affichez cette règle dans lʼinterface utilisateur de collecte de données pour la corriger, elle reflète toujours les dernières modifications enregistrées au lieu de celles qui sont actuellement en production.
 
-C’est pour cette raison que Platform vous avertit qu’une propriété est dans un état republié afin de vous rappeler que ce que vous voyez dans l’interface utilisateur de la collecte de données est un peu plus éloigné de la production que d’habitude. Cette notification peut être ignorée et s’affiche une seule fois par session du navigateur, lors de la première consultation de la propriété.
+Cʼest pourquoi Platform vous avertit quʼune propriété est dans un état republié afin de vous rappeler que ce que vous voyez dans lʼinterface utilisateur de collecte de données est un peu plus éloigné de la production que dʼhabitude. Cette notification peut être ignorée et sʼaffiche une seule fois par session du navigateur, lors de la première consultation de la propriété.
 
 ### Republication d’une ancienne bibliothèque
 

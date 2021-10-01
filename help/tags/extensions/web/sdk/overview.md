@@ -1,8 +1,9 @@
 ---
 title: Présentation de lʼextension SDK Web
-description: Découvrez lʼextension de balise SDK Web dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez lʼextension de balise SDK Web dʼAdobe Experience Platform.
+exl-id: 2bc738b9-5939-47a6-a829-429937e4c673
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 100%
 

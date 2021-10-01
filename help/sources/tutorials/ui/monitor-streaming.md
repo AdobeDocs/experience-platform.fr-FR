@@ -5,13 +5,13 @@ solution: Experience Platform
 title: Surveillance des flux de données pour les sources de diffusion en continu dans l’interface utilisateur
 topic-legacy: overview
 type: Tutorial
-source-git-commit: 58761cbe8465f4a00f07f33f751f481d34493cf7
+exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 12%
 
 ---
-
 
 # Surveillance des flux de données pour les sources de diffusion en continu dans l’interface utilisateur
 

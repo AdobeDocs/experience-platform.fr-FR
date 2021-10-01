@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; exemples de requêtes ; exemple de requête ; adobe analytics ;
+keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;exemples de requêtes;exemple de requête;adobe analytics;
 solution: Experience Platform
-title: Exemples de Requêtes pour les données Adobe Analytics
+title: Exemples de requêtes pour les données Adobe Analytics
 topic-legacy: queries
 description: Les données des suites de rapports Adobe Analytics sélectionnées sont transformées en XDM ExperienceEvent et ingérées par Adobe Experience Platform sous la forme de jeux de données. Ce document décrit un certain nombre de cas d’utilisation dans lesquels Adobe Experience Platform Query Service utilise ces données. Il comprend également des exemples de requête qui devraient fonctionner avec vos jeux de données Adobe Analytics.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1021'
@@ -15,9 +14,9 @@ ht-degree: 58%
 
 # Exemples de requêtes pour les données d’Adobe Analytics
 
-Les données des suites de rapports Adobe Analytics sélectionnées sont transformées en données conformes à la classe [!DNL XDM ExperienceEvent] et ingérées dans Adobe Experience Platform en tant que jeux de données.
+Les données des suites de rapports Adobe Analytics sélectionnées sont transformées en données conformes à la classe [!DNL XDM ExperienceEvent] et ingérées dans Adobe Experience Platform sous forme de jeux de données.
 
-Ce document décrit un certain nombre de cas d&#39;utilisation où Adobe Experience Platform [!DNL Query Service] utilise ces données, y compris les requêtes d&#39;exemple qui doivent fonctionner avec vos jeux de données Adobe Analytics. Pour plus d’informations sur le mappage à [!DNL Experience Events], consultez la documentation relative au [mappage des champs Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md).
+Ce document décrit un certain nombre de cas d’utilisation dans lesquels Adobe Experience Platform [!DNL Query Service] utilise ces données, y compris des exemples de requêtes qui doivent fonctionner avec vos jeux de données Adobe Analytics. Pour plus d’informations sur le mappage sur [!DNL Experience Events], consultez la documentation sur le [mappage des champs Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md).
 
 ## Prise en main
 
@@ -25,7 +24,7 @@ Les exemples SQL de ce document nécessitent la modification du code SQL et le r
 
 ## Exemples SQL couramment utilisés
 
-Les exemples suivants montrent les requêtes SQL couramment utilisées pour analyser vos données Adobe Analytics.
+Les exemples suivants montrent les requêtes SQL fréquemment utilisées pour analyser vos données Adobe Analytics.
 
 ### Nombre de visiteurs par heure pour un jour donné
 
@@ -124,11 +123,11 @@ ORDER BY Hour;
 
 ### Syntaxe du produit
 
-En Adobe Analytics, les données personnalisées au niveau du produit peuvent être collectées par le biais de variables spécialement configurées appelées variables de marchandisage. Elles sont basées sur un eVar ou sur des événements personnalisés. La différence entre ces variables et leur utilisation standard est qu’elles représentent une valeur distincte pour chaque produit du résultat plutôt qu’une seule valeur pour le résultat.
+Dans Adobe Analytics, les données personnalisées au niveau du produit peuvent être collectées au moyen de variables configurées spécialement et appelées variables de marchandisage. Ils sont basés sur des événements d’eVar ou personnalisés. La différence entre ces variables et leur utilisation standard est qu’elles représentent une valeur distincte pour chaque produit du résultat plutôt qu’une seule valeur pour le résultat.
 
-Ces variables sont appelées variables de marchandisage de syntaxe de produit. Cela permet de collecter des informations, telles qu&#39;un &quot;montant d&#39;escompte&quot; par produit ou des informations sur l&#39;&quot;emplacement sur la page&quot; du produit dans les résultats de recherche du client.
+Ces variables sont appelées variables de marchandisage de syntaxe de produit. Cela permet la collecte d’informations, telles qu’un &quot;montant de remise&quot; par produit ou des informations sur l’&quot;emplacement sur la page&quot; du produit dans les résultats de recherche du client.
 
-Pour en savoir plus sur l’utilisation de la syntaxe du produit, consultez la documentation Adobe Analytics sur [l’implémentation d’eVars à l’aide de la syntaxe du produit](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax).
+Pour en savoir plus sur l’utilisation de la syntaxe du produit, consultez la documentation Adobe Analytics sur [l’implémentation des eVars à l’aide de la syntaxe du produit](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax).
 
 Les sections ci-dessous décrivent les champs XDM nécessaires pour accéder aux variables de marchandisage dans votre jeu de données [!DNL Analytics] :
 
@@ -138,8 +137,8 @@ Les sections ci-dessous décrivent les champs XDM nécessaires pour accéder aux
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
-- `#`: Index de la baie à laquelle vous accédez.
-- `evar#`: Variable d’eVar spécifique à laquelle vous accédez.
+- `#`: Index du tableau auquel vous accédez.
+- `evar#`: La variable d’eVar spécifique à laquelle vous accédez.
 
 #### Événements personnalisés
 
@@ -147,8 +146,8 @@ productListItems[#]._experience.analytics.customDimensions.evars.evar#
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
-- `#`: Index de la baie à laquelle vous accédez.
-- `event#`: Variable de événement personnalisée spécifique à laquelle vous accédez.
+- `#`: Index du tableau auquel vous accédez.
+- `event#`: La variable d’événement personnalisé spécifique à laquelle vous accédez.
 
 #### Exemples de requêtes
 
@@ -166,7 +165,7 @@ WHERE timestamp = to_timestamp('2019-07-23')
 LIMIT 10
 ```
 
-Cette requête suivante explose la baie `productListItems` et renvoie chaque eVar et événement de marchandisage par produit. Le champ `_id` est inclus pour indiquer la relation avec le résultat d’origine. La valeur `_id` est une clé Principale unique pour le jeu de données.
+Cette requête suivante explose le tableau `productListItems` et renvoie chaque eVar de marchandisage et chaque événement par produit. Le champ `_id` est inclus pour indiquer la relation avec le résultat d’origine. La valeur `_id` est une clé Principale unique pour le jeu de données.
 
 ```sql
 SELECT
@@ -188,7 +187,7 @@ LIMIT 20
 
 >[!NOTE]
 >
-> Si vous tentez de récupérer un champ qui n&#39;existe pas dans votre jeu de données actuel, l&#39;erreur &quot;Aucun champ de structure de ce type&quot; se produira. Evaluez le motif renvoyé dans le message d’erreur afin d’identifier un champ disponible, puis mettez à jour votre requête et réexécutez-la.
+> Si vous tentez de récupérer un champ qui n’existe pas dans votre jeu de données actuel, l’erreur &quot;No such struct field&quot; (Aucun champ struct de ce type) se produira. Évaluez le motif renvoyé dans le message d’erreur pour identifier un champ disponible, puis mettez à jour votre requête et relancez l’exécution.
 >
 >
 ```console
@@ -197,7 +196,7 @@ LIMIT 20
 
 ### Syntaxe de conversion
 
-La syntaxe de conversion est un autre type de variable de marchandisage disponible en Adobe Analytics. Avec la syntaxe du produit, la valeur est collectée en même temps que le produit, mais les données doivent être présentes sur la même page. Il existe des scénarios où les données se produisent sur une page avant la conversion ou l’événement d’intérêt relatif au produit. Par exemple, prenez en compte le cas d’utilisation de la méthode de recherche de produits.
+La syntaxe de conversion est un autre type de variable de marchandisage disponible dans Adobe Analytics. Avec la syntaxe du produit, la valeur est collectée en même temps que le produit, mais cela nécessite que les données soient présentes sur la même page. Il existe des scénarios où les données se produisent sur une page avant la conversion ou l’événement d’intérêt relatif au produit. Prenons l’exemple du cas d’utilisation de la méthode de recherche de produit.
 
 1. Un utilisateur effectue une recherche interne pour « bonnet d’hiver », qui définit l’eVar6 de marchandisage avec syntaxe de conversion active sur « recherche interne : bonnet d’hiver ».
 2. L’utilisateur clique sur « bonnet à pompon » et accède à la page détaillée du produit.\
@@ -215,12 +214,12 @@ Dans les rapports, les commandes, recettes, consultations de produit et ajouts a
 
 | eVar6 (méthode de recherche de produits) | recettes | commandes | consultations de produit | ajouts au panier |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| recherche interne : T-shirt d’été | 19,99 | 1 | 1 | 1 |
-| recherche interne : bonnet d’hiver | 12,99 | 1 | 1 | 1 |
+| recherche interne : T-shirt d’été | 19,99 | 1 | 3 | 3 |
+| recherche interne : bonnet d’hiver | 12,99 | 3 | 3 | 3 |
 
-Pour en savoir plus sur l’utilisation de la syntaxe de conversion, consultez la documentation Adobe Analytics sur [l’implémentation d’eVars à l’aide de la syntaxe de conversion](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
+Pour en savoir plus sur l’utilisation de la syntaxe de conversion, consultez la documentation Adobe Analytics sur [l’implémentation des eVars à l’aide de la syntaxe de conversion](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 
-Voici les champs XDM pour générer la syntaxe de conversion dans votre jeu de données [!DNL Analytics] :
+Voici les champs XDM pour produire la syntaxe de conversion dans votre jeu de données [!DNL Analytics] :
 
 #### eVars
 
@@ -228,7 +227,7 @@ Voici les champs XDM pour générer la syntaxe de conversion dans votre jeu de d
 _experience.analytics.customDimensions.evars.evar#
 ```
 
-- `evar#`: Variable d’eVar spécifique à laquelle vous accédez.
+- `evar#`: La variable d’eVar spécifique à laquelle vous accédez.
 
 #### Produit
 
@@ -236,7 +235,7 @@ _experience.analytics.customDimensions.evars.evar#
 productListItems[#].sku
 ```
 
-- `#`: Index de la baie à laquelle vous accédez.
+- `#`: Index du tableau auquel vous accédez.
 
 #### Exemples de requêtes
 

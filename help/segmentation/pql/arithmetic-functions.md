@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; pql ; PQL ; Profil Requête Language ; fonctions arithmétiques ; arithmétique ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;pql;PQL;langage de requête de profil;fonctions arithmétiques;arithmétique;
 solution: Experience Platform
 title: Fonctions arithmétiques PAL
 topic-legacy: developer guide
 description: Les fonctions arithmétiques sont utilisées pour effectuer des calculs de base sur des valeurs dans le langage de requête de profil (PQL).
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '260'
-ht-degree: 83%
+ht-degree: 87%
 
 ---
 
-# Fonctions arithmétiques
+# Fonctions arithmétiques 
 
-Fonctions arithmétiques sont utilisées pour effectuer des calculs de base sur les valeurs de [!DNL Profile Query Language] (PQL). Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans le [[!DNL Profile Query Language] overview](./overview.md).
+Les fonctions arithmétiques sont utilisées pour effectuer des calculs de base sur des valeurs dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Addition
 
-La fonction `+` (addition) est utilisée pour trouver la somme de deux expressions d’argument.
+La fonction `+` (addition) est utilisée pour trouver la somme de deux expressions d&#39;argument.
 
 **Format**
 
@@ -37,7 +36,7 @@ product1.price + product2.price
 
 ## Multiplication
 
-La fonction `*` (multiplication) est utilisée pour trouver le produit de deux expressions d’argument.
+La fonction `*` (multiplication) est utilisée pour trouver le produit de deux expressions d&#39;argument.
 
 **Format**
 
@@ -55,7 +54,7 @@ product.inventory * product.price
 
 ## Soustraction
 
-La fonction `-` (soustraction) permet de trouver la différence entre deux expressions d’argument.
+La fonction `-` (soustraction) permet de trouver la différence entre deux expressions d&#39;argument.
 
 **Format**
 
@@ -73,7 +72,7 @@ product1.price - product2.price
 
 ## Division
 
-La fonction `/` (division) est utilisée pour trouver le quotient de deux expressions d’argument.
+La fonction `/` (division) est utilisée pour trouver le quotient de deux expressions d&#39;argument.
 
 **Format**
 
@@ -91,7 +90,7 @@ totalProduct.price / totalProduct.sold
 
 ## Reste
 
-La fonction `%` (modulo/reste) est utilisée pour trouver le reste après la division des deux expressions d’argument.
+La fonction `%` (modulo/reste) est utilisée pour trouver le reste après la division des deux expressions d&#39;argument.
 
 **Format**
 

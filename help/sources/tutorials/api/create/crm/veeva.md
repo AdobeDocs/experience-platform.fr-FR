@@ -5,10 +5,11 @@ title: Création d’une connexion de base CRM Veeva à l’aide de l’API Flow
 topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Veeva CRM à l’aide de l’API Flow Service.
-source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
+exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
+source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
 workflow-type: tm+mt
 source-wordcount: '514'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 

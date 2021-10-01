@@ -1,8 +1,9 @@
 ---
 title: Présentation de l’extension Cloud Connector
-description: Découvrez l’extension de transfert d’événements Cloud Connector dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez l’extension de transfert d’événement Cloud Connector dans Adobe Experience Platform.
+exl-id: f3713652-ac32-4171-8dda-127c8c235849
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1616'
 ht-degree: 100%
 
@@ -14,7 +15,7 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-L’extension de transfert d’événements Cloud Connector vous permet de créer des requêtes HTTP personnalisées dans le but d’envoyer des données vers une destination ou de récupérer des données d’une destination. L’extension Cloud Connector est semblable à Postman sur Adobe Experience Platform Edge Network et peut être utilisée pour envoyer des données à un point d’entrée qui n’a pas encore d’extension dédiée.
+L’extension de transfert d’événement Cloud Connector vous permet de créer des requêtes HTTP personnalisées pour envoyer des données à une destination ou récupérer des données d’une destination. L’extension Cloud Connector est semblable à Postman sur Adobe Experience Platform Edge Network et peut être utilisée pour envoyer des données à un point d’entrée qui n’a pas encore d’extension dédiée.
 
 Utilisez cette référence pour obtenir des informations sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
 
@@ -44,13 +45,13 @@ Utilisez chacun de ces onglets (Paramètres de requête, En-têtes et Éléments
 
 #### Paramètres de requête
 
-Définissez une clé et une valeur pour chaque paire clé-valeur à envoyer en tant que paramètre de chaîne de requête. Pour saisir manuellement un élément de données, utilisez la segmentation en unités lexicales de l’élément de données Accolade pour le transfert d’événements. Pour référencer la valeur d’un élément de données nommé « siteSection » comme clé ou valeur, saisissez `{{siteSection}}`. Vous pouvez également sélectionner l’élément de données créé précédemment en le sélectionnant dans le menu déroulant.
+Définissez une clé et une valeur pour chaque paire clé-valeur à envoyer en tant que paramètre de chaîne de requête. Pour entrer manuellement un élément de données, utilisez la segmentation en unités lexicales de l’élément de données pour le transfert d&#39;événement. Pour référencer la valeur d’un élément de données nommé « siteSection » comme clé ou valeur, saisissez `{{siteSection}}`. Vous pouvez également sélectionner l’élément de données créé précédemment en le sélectionnant dans le menu déroulant.
 
 Pour ajouter d’autres paramètres de requête, sélectionnez **[!UICONTROL Ajouter un autre élément]**.
 
 #### En-têtes
 
-Définissez une clé et une valeur pour chaque paire clé-valeur que vous voulez envoyer en tant qu’en-tête. Pour saisir manuellement un élément de données, utilisez la segmentation en unités lexicales de l’élément de données Accolade pour le transfert d’événements. Pour référencer la valeur d’un élément de données nommé « pageName » comme clé ou valeur, saisissez `{{pageName}}`. Vous pouvez également sélectionner l’élément de données créé précédemment en le sélectionnant dans le menu déroulant.
+Définissez une clé et une valeur pour chaque paire clé-valeur que vous voulez envoyer en tant qu’en-tête. Pour entrer manuellement un élément de données, utilisez la segmentation en unités lexicales de l’élément de données pour le transfert d&#39;événement. Pour référencer la valeur d’un élément de données nommé « pageName » comme clé ou valeur, saisissez `{{pageName}}`. Vous pouvez également sélectionner l’élément de données créé précédemment en le sélectionnant dans le menu déroulant.
 
 Pour ajouter d’autres en-têtes, sélectionnez **[!UICONTROL Ajouter un autre élément]**.
 
@@ -63,13 +64,13 @@ Le tableau suivant répertorie les en-têtes prédéfinis. Vous n’êtes pas li
 | Header | Description |
 |---|---|
 | [A-IM](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers/Accept) |  |
+| [Accept](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) |  |
 | [Accept-Charset](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers/Accept-Charset) |  |
 | [Accept-Encoding](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers/Accept-Encoding) |  |
 | [Accept-Language](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers/Accept-Language) |  |
-| [Accept-Datetime](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers/Accept) | Transmis par un agent utilisateur pour indiquer qu’il souhaite avoir accès à un état passé d’une ressource originale. À cette fin, l’en-tête `Accept-Datetime` est transmis dans une requête HTTP émise par rapport à un TimeGate pour une ressource d’origine, et sa valeur indique la date et l’heure (datetime) de l’état passé recherché de la ressource d’origine. |
-| Access-Control-Request-Headers | Utilisé par les navigateurs lors de l’émission d’une demande de contrôle en amont de la [requête preflight](https://developer.mozilla.org/fr-FR/docs/Glossary/preflight_request), pour indiquer au serveur quels en-têtes [HTTP](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers) le client peut envoyer lorsque la demande réelle est effectuée. |
-| Access-Control-Request-Method | Utilisé par les navigateurs lors de l’émission d’une [requête preflight](https://developer.mozilla.org/fr-FR/docs/Glossary/preflight_request), pour indiquer au serveur la méthode [HTTP](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods) qui sera utilisée quand la demande réelle sera effectuée. Cet en-tête est nécessaire parce que la requête preflight est toujours une [OPTION](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods/OPTIONS) et n’utilise pas la même méthode que la requête réelle. |
+| [Accept-Datetime](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) | Transmis par un agent utilisateur pour indiquer qu’il souhaite avoir accès à un état passé d’une ressource originale. À cette fin, l’en-tête `Accept-Datetime` est transmis dans une requête HTTP émise par rapport à un TimeGate pour une ressource d’origine, et sa valeur indique la date et l’heure (datetime) de l’état passé recherché de la ressource d’origine. |
+| Access-Control-Request-Headers | Utilisé par les navigateurs lors de l’émission d’une demande de contrôle en amont de la [requête preflight](https://developer.mozilla.org/fr-FR/docs/Glossary/preflight_request), pour indiquer au serveur quels en-têtes [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) le client peut envoyer lorsque la demande réelle est effectuée. |
+| Access-Control-Request-Method | Utilisé par les navigateurs lors de l’émission d’une [requête preflight](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), pour indiquer au serveur la méthode [HTTP](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods) qui sera utilisée quand la demande réelle sera effectuée. Cet en-tête est nécessaire parce que la requête preflight est toujours une [OPTION](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods/OPTIONS) et n’utilise pas la même méthode que la requête réelle. |
 | Authorization | Contient les informations d’identification permettant d’authentifier un agent utilisateur auprès d’un serveur. |
 | [Cache-Control](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers/Cache-Control) | Directives pour les mécanismes de mise en cache dans les requêtes et les réponses. |
 | [Connexion](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers/Connection) | Contrôle si la connexion réseau reste ouverte une fois la transaction en cours terminée. |
@@ -103,17 +104,17 @@ Le tableau suivant répertorie les en-têtes prédéfinis. Vous n’êtes pas li
 
 #### Corps en tant que JSON
 
-Définissez une clé et une valeur pour chaque paire clé-valeur que vous voulez envoyer dans le corps de la requête. Pour saisir manuellement un élément de données, utilisez la segmentation en unités lexicales de l’élément de données Accolade pour le transfert d’événements. Pour référencer la valeur d’un élément de données nommé « appSection » comme clé ou valeur, saisissez `{{appSection}}`. Vous pouvez également sélectionner l’élément de données créé précédemment en le sélectionnant dans le menu déroulant.
+Définissez une clé et une valeur pour chaque paire clé-valeur que vous voulez envoyer dans le corps de la requête. Pour entrer manuellement un élément de données, utilisez la segmentation en unités lexicales de l’élément de données pour le transfert d&#39;événement. Pour référencer la valeur d’un élément de données nommé « appSection » comme clé ou valeur, saisissez `{{appSection}}`. Vous pouvez également sélectionner l’élément de données créé précédemment en le sélectionnant dans le menu déroulant.
 
 Pour ajouter des paires clé-valeur supplémentaires, sélectionnez **[!UICONTROL Ajouter un autre élément]**.
 
 #### Corps comme brut
 
-Définissez une clé et une valeur pour chaque paire clé-valeur que vous voulez envoyer dans le corps de la requête. Pour saisir manuellement un élément de données, utilisez la segmentation en unités lexicales de l’élément de données Accolade pour le transfert d’événements. Pour référencer la valeur d’un élément de données nommé « appSection » comme clé ou valeur, saisissez `{{appSection}}`. Vous pouvez également sélectionner l’élément de données créé précédemment en le sélectionnant dans le menu déroulant. Vous pouvez ajouter un ou plusieurs éléments de données.
+Définissez une clé et une valeur pour chaque paire clé-valeur que vous voulez envoyer dans le corps de la requête. Pour entrer manuellement un élément de données, utilisez la segmentation en unités lexicales de l’élément de données pour le transfert d&#39;événement. Pour référencer la valeur d’un élément de données nommé « appSection » comme clé ou valeur, saisissez `{{appSection}}`. Vous pouvez également sélectionner l’élément de données créé précédemment en le sélectionnant dans le menu déroulant. Vous pouvez ajouter un ou plusieurs éléments de données.
 
 ### Advanced
 
-Les actions contenues dans les règles du transfert d’événements s’exécutent de manière séquentielle. Dans certaines situations, vous pourriez souhaiter récupérer des données provenant d’une source externe non présente sur l’événement entrant du client, puis prendre cette réponse et transformer ou envoyer ces données vers une destination finale lors d’une action ultérieure au sein d’une seule règle. La section « Enregistrer la réponse à la requête » de la section Avancée permet cette opération.
+Les actions dans les règles du transfert d’événement s’exécutent de manière séquentielle. Dans certaines situations, vous pourriez souhaiter récupérer des données provenant d’une source externe non présente sur l’événement entrant du client, puis prendre cette réponse et transformer ou envoyer ces données vers une destination finale lors d’une action ultérieure au sein d’une seule règle. La section « Enregistrer la réponse à la requête » de la section Avancée permet cette opération.
 
 Pour enregistrer le corps de la réponse à partir d’un point d’entrée, cochez la case **[!UICONTROL Enregistrer la réponse de la requête]** et définissez une clé de réponse dans le champ de texte.
 

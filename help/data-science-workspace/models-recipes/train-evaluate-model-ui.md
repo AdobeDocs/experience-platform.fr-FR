@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform ; formation et évaluation ; Espace de travail des données ; sujets populaires ; créer un modèle ; créer une session de formation
+keywords: Experience Platform;formation et évaluation;Data Science Workspace;rubriques les plus consultées;créer un modèle;créer une session de formation
 solution: Experience Platform
-title: Formation et évaluation d’un modèle dans l’interface utilisateur de l’espace de travail Data Science Workspace
+title: Formation et évaluation d’un modèle dans l’interface utilisateur de Data Science Workspace
 topic-legacy: tutorial
 type: Tutorial
 description: Dans Adobe Experience Platform Data Science Workspace, un modèle d’apprentissage automatique est créé en incorporant une recette existante adéquate au but du modèle. Le modèle est ensuite formé et évalué afin d’optimiser son efficience et son efficacité opérationnelles en affinant ses hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques à l’aide d’une seule recette.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
-translation-type: tm+mt
 source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1092'
@@ -22,25 +21,25 @@ Ce tutoriel décrit les étapes à suivre pour créer, former et évaluer un mod
 
 ## Prise en main
 
-Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
+Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de poursuivre.
 
 Ce tutoriel nécessite une recette existante. Si vous ne possédez aucune recette, suivez le tutoriel [Importation d’une recette empaquetée dans l’interface utilisateur](./import-packaged-recipe-ui.md) avant de continuer.
 
 ## Création d’un modèle
 
-Dans l’Experience Platform, sélectionnez l’onglet **[!UICONTROL Modèles]** situé dans le volet de navigation de gauche, puis sélectionnez l’onglet Parcourir pour vue vos modèles existants. Sélectionnez **[!UICONTROL Créer un modèle]** en haut à droite de la page pour commencer un processus de création de modèle.
+Dans Experience Platform, sélectionnez l’onglet **[!UICONTROL Modèles]** situé dans le volet de navigation de gauche, puis sélectionnez l’onglet Parcourir pour afficher vos modèles existants. Sélectionnez **[!UICONTROL Créer un modèle]** près du coin supérieur droit de la page pour lancer un processus de création de modèle.
 
 ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-Parcourez la liste des recettes existantes, recherchez et sélectionnez la recette à utiliser pour créer le modèle et sélectionnez **[!UICONTROL Suivant]**.
+Parcourez la liste des recettes existantes, recherchez et sélectionnez la recette à utiliser pour créer le modèle, puis sélectionnez **[!UICONTROL Suivant]**.
 ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-Sélectionnez un jeu de données d’entrée approprié et sélectionnez **[!UICONTROL Suivant]**. Cette opération définit le jeu de données de formation d’entrée par défaut pour le modèle.
+Sélectionnez un jeu de données d’entrée approprié, puis **[!UICONTROL Suivant]**. Cette opération définit le jeu de données de formation d’entrée par défaut pour le modèle.
 ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 Attribuez un nom au modèle et passez en revue les configurations de modèle par défaut. Les configurations par défaut ont été appliquées lors de la création de la recette. Vérifiez et modifiez les valeurs de configuration en double-cliquant sur celles-ci.
 
-Pour fournir un nouveau jeu de configurations, sélectionnez **[!UICONTROL Télécharger la nouvelle configuration]** et faites glisser un fichier JSON contenant des configurations de modèle dans la fenêtre du navigateur. Sélectionnez **[!UICONTROL Terminer]** pour créer le modèle.
+Pour fournir un nouvel ensemble de configurations, sélectionnez **[!UICONTROL Télécharger la nouvelle configuration]** et faites glisser un fichier JSON contenant les configurations de modèle dans la fenêtre du navigateur. Sélectionnez **[!UICONTROL Terminer]** pour créer le modèle.
 
 >[!NOTE]
 >
@@ -50,21 +49,21 @@ Pour fournir un nouveau jeu de configurations, sélectionnez **[!UICONTROL Tél�
 
 ## Création d’une opération de formation
 
-Dans l’Experience Platform, sélectionnez l’onglet **[!UICONTROL Modèles]** situé dans le volet de navigation de gauche, puis sélectionnez l’onglet Parcourir pour vue vos modèles existants. Recherchez et sélectionnez l&#39;hyperlien joint au nom du modèle que vous souhaitez former.
+Dans Experience Platform, sélectionnez l’onglet **[!UICONTROL Modèles]** situé dans le volet de navigation de gauche, puis sélectionnez l’onglet Parcourir pour afficher vos modèles existants. Recherchez et sélectionnez le lien hypertexte associé au nom du modèle que vous souhaitez entraîner.
 
 ![](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-Toutes les sessions de formation existantes ainsi que leur état actuel sont répertoriées. Pour les modèles créés à l&#39;aide de l&#39;interface utilisateur [!DNL Data Science Workspace], une série de formations est automatiquement générée et exécutée à l&#39;aide des configurations par défaut et du jeu de données de formation d&#39;entrée.
+Toutes les sessions de formation existantes ainsi que leur état actuel sont répertoriées. Pour les modèles créés à l’aide de l’interface utilisateur [!DNL Data Science Workspace], une opération de formation est automatiquement générée et exécutée à l’aide des configurations par défaut et du jeu de données de formation d’entrée.
 
-Créez une nouvelle session de formation en sélectionnant **[!UICONTROL Train]** en haut à droite de la page d&#39;aperçu du modèle.
+Créez une nouvelle opération de formation en sélectionnant **[!UICONTROL Former]** près du coin supérieur droit de la page d’aperçu du modèle.
 
 ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-Sélectionnez le jeu de données d’entrée de formation pour l’exécution de la formation, puis sélectionnez **[!UICONTROL Suivant]**.
+Sélectionnez le jeu de données d’entrée de formation pour l’opération de formation, puis sélectionnez **[!UICONTROL Suivant]**.
 
 ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-Les configurations par défaut fournies lors de la création du modèle s’affichent : modifiez-les en conséquence en double-cliquant sur les valeurs. Sélectionnez **[!UICONTROL Terminer]** pour créer et exécuter la session de formation.
+Les configurations par défaut fournies lors de la création du modèle s’affichent : modifiez-les en conséquence en double-cliquant sur les valeurs. Sélectionnez **[!UICONTROL Terminer]** pour créer et exécuter l’opération de formation.
 
 >[!NOTE]
 >
@@ -75,27 +74,27 @@ Les configurations par défaut fournies lors de la création du modèle s’affi
 
 ## Évaluation du modèle
 
-Dans l’Experience Platform, sélectionnez l’onglet **[!UICONTROL Modèles]** situé dans le volet de navigation de gauche, puis sélectionnez l’onglet Parcourir pour vue vos modèles existants. Recherchez et sélectionnez l&#39;hyperlien joint au nom du modèle que vous souhaitez évaluer.
+Dans Experience Platform, sélectionnez l’onglet **[!UICONTROL Modèles]** situé dans le volet de navigation de gauche, puis sélectionnez l’onglet Parcourir pour afficher vos modèles existants. Recherchez et sélectionnez l’hyperlien associé au nom du modèle que vous souhaitez évaluer.
 
-![sélectionner un modèle](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
+![select model](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-Toutes les sessions de formation existantes ainsi que leur état actuel sont répertoriées. Avec plusieurs séries de sessions de formation terminées, les mesures d&#39;évaluation peuvent être comparées à différentes séries de formations dans le graphique d&#39;évaluation du modèle. Sélectionnez une mesure d’évaluation à l’aide de la liste déroulante au-dessus du graphique.
+Toutes les sessions de formation existantes ainsi que leur état actuel sont répertoriées. Avec plusieurs opérations de formation terminées, les mesures d’évaluation peuvent être comparées entre différentes opérations de formation dans le graphique d’évaluation du modèle. Sélectionnez une mesure d’évaluation à l’aide de la liste déroulante au-dessus du graphique.
 
 La mesure Pourcentage d’erreur absolue moyen (MAPE) exprime la précision sous forme de pourcentage d’erreur. Elle permet d’identifier l’expérience la plus performante. Plus la valeur MAPE est faible, meilleures sont les performances de l’expérience.
 
-![présentation des stages de formation](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
+![présentation des opérations de formation](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
 
 La mesure « Précision » décrit le pourcentage d’instances pertinentes par rapport au total des instances *récupérées*. La précision peut être considérée comme la probabilité qu’un résultat sélectionné de manière aléatoire soit correct.
 
 ![exécution de plusieurs exécutions](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
 
-La sélection d’une série de formations spécifique fournit les détails de cette série en ouvrant la page d’évaluation. Cette action peut être effectuée avant la fin de l’opération. Sur la page d’évaluation, vous pouvez afficher d’autres mesures d’évaluation, paramètres de configuration et visualisations spécifiques à l’exécution de la formation.
+La sélection d’une opération de formation spécifique fournit les détails de cette opération en ouvrant la page d’évaluation. Cette action peut être effectuée avant la fin de l’opération. Sur la page d’évaluation, vous pouvez voir d’autres mesures d’évaluation, paramètres de configuration et visualisations spécifiques à l’opération de formation.
 
-![Journaux de prévisualisation](../images/models-recipes/train-evaluate-ui/evaluate_training.png)
+![journaux d’aperçu](../images/models-recipes/train-evaluate-ui/evaluate_training.png)
 
 Vous pouvez également télécharger des journaux d’activités pour afficher les détails de l’opération. Les journaux sont particulièrement utiles pour comprendre ce qui s’est mal passé lors des échecs d’opération.
 
-![Journaux des activités](../images/models-recipes/train-evaluate-ui/activity_logs.png)
+![logs d’activité](../images/models-recipes/train-evaluate-ui/activity_logs.png)
 
 Les hyperparamètres ne peuvent pas être formés, et un modèle doit être optimisé en testant différentes combinaisons d’hyperparamètres. Répétez ce processus de formation et d’évaluation du modèle jusqu’à ce que vous parveniez à obtenir un modèle optimisé.
 

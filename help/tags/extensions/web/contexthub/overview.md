@@ -1,8 +1,9 @@
 ---
 title: Présentation de l’extension Adobe ContextHub
 description: Découvrez lʼextension de balise Adobe ContextHub dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 90700ce2-14fd-4d15-bbb8-98a8bbca5005
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 100%
 

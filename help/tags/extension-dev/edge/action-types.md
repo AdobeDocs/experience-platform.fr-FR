@@ -1,8 +1,9 @@
 ---
 title: Types d’actions pour les extensions Edge
-description: Découvrez comment définir un module de bibliothèque de type action pour une extension de balise dans une propriété Edge.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez comment définir un module de bibliothèque de type action pour une extension de balise dans une propriété edge.
+exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 100%
 
@@ -48,7 +49,7 @@ module.exports = (context) {
 };
 ```
 
-Si vous souhaitez que le point d’entrée soit configurable par l’utilisateur et permettre l’entrée et la persistance d’un point d’entrée dans l’objet settings du module, l’objet ressemblerait à ceci.
+Si vous souhaitez que le point d’entrée soit configurable par l’utilisateur et permettre l’entrée et la persistance d’un point d’entrée dans l’objet settings du module, l’objet ressemblera à ce qui suit.
 
 ```json
 {
@@ -56,7 +57,7 @@ Si vous souhaitez que le point d’entrée soit configurable par l’utilisateur
 }
 ```
 
-Pour pouvoir agir sur le point d’entrée défini par l’utilisateur, votre module doit changer comme suit :
+Pour pouvoir agir sur le point d’entrée défini par l’utilisateur, votre module doit être transformé de façon à correspondre à l’exemple qui suit.
 
 ```js
 module.exports = (context) {

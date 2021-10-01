@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: 6d1ece1e7920e8c182c84bf8b57bdb6c3f853a60
 workflow-type: tm+mt
 source-wordcount: '139'
-ht-degree: 90%
+ht-degree: 97%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 90%
 - UI Query Service {#ui}
    - [Présentation de l’interface utilisateur](ui/overview.md)
    - [Guide d’utilisation de Query Editor](ui/user-guide.md)
-   - [Utilisation des informations d’identification de Query Service](ui/credentials.md)
+   - [Utilisation des informations dʼidentification de Query Service](ui/credentials.md)
    - [Génération des jeux de données à partir de résultats de requête](ui/create-datasets.md)
 - Bonnes pratiques {#best-practices}
    - [Directives générales pour l’exécution des requêtes](best-practices/writing-queries.md)

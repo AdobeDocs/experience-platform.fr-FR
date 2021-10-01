@@ -2,13 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;réservation;repas;
 title: Définition du groupe de champs de schéma de réservation
 description: Ce document présente un aperçu du groupe de champs de schéma Réservation pour le dîner.
-source-git-commit: d230cfa9e74eb96aa44e8b83ca8f2306db4ba4ec
+exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 6%
 
 ---
-
 
 # [!UICONTROL Définition du groupe de champs ] de schéma de réservation
 

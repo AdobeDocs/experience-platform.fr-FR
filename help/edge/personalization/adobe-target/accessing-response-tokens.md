@@ -2,13 +2,13 @@
 title: Accès aux jetons de réponse à l’aide du SDK Web de Adobe Experience Platform
 description: Découvrez comment accéder aux jetons de réponse à l’aide du SDK Web de Adobe Experience Platform.
 keywords: personnalisation;target;adobe target;renderDecisions;sendEvent;décisionScopes;result.requests,jetons de réponse;
-source-git-commit: 4bddd9f23ae885468148d1592af219290d6fafd9
+exl-id: fc9d552a-29ba-4693-9ee2-599c7bc76cdf
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '271'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # Accès aux jetons de réponse
 
@@ -66,5 +66,3 @@ alloy("sendEvent", {
     // them in some other way.
   });
 ```
-
-

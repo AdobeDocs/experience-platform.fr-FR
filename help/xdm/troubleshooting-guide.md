@@ -52,7 +52,7 @@ Pour plus d’informations sur les types de champ, consultez le document sur les
 
 ### Comment définir les identités pour mon schéma ?
 
-Dans [!DNL Experience Platform], les identités sont utilisées pour identifier un sujet (généralement une personne individuelle), quelles que soient les sources de données interprétées. Elles sont définies dans les schémas en marquant les champs clés comme « Identité ». Les champs généralement utilisés pour l’identité comprennent l’adresse électronique, le numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), l’ID CRM et d’autres champs d’ID uniques.
+Dans [!DNL Experience Platform], les identités sont utilisées pour identifier un sujet (généralement une personne individuelle), quelles que soient les sources de données interprétées. Elles sont définies dans les schémas en marquant les champs clés comme « Identité ». Les champs généralement utilisés pour l’identité comprennent l’adresse électronique, le numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr), l’ID CRM et d’autres champs d’ID uniques.
 
 Les champs peuvent être marqués comme identités à l’aide de l’API ou de l’interface utilisateur.
 

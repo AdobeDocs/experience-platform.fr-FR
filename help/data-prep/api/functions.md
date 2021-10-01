@@ -6,7 +6,7 @@ topic-legacy: schemas
 description: Vous pouvez utiliser le point d’entrée `/functions` dans l’API Adobe Experience Platform pour valider vos expressions de mappage et répertorier les fonctions de jeux de mappages disponibles.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 100%
 

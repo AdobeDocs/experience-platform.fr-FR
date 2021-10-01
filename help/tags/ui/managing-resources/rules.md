@@ -1,8 +1,9 @@
 ---
 title: Règles
 description: Découvrez le fonctionnement des extensions de balises dans Adobe Experience Platform.
-source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
-workflow-type: ht
+exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1977'
 ht-degree: 100%
 
@@ -14,7 +15,7 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Dans Adobe Experience Platform, les balises obéissent à un système basé sur des règles. Elles recherchent les interactions utilisateur et les données associées. Lorsque les critères définis dans votre règle sont satisfaits, la règle déclenche l’extension, le script ou le code côté client que vous avez identifié.
+Dans Adobe Experience Platform, les balises suivent un système basé sur des règles. Elles recherchent les interactions utilisateur et les données associées. Lorsque les critères définis dans votre règle sont satisfaits, la règle déclenche l’extension, le script ou le code côté client que vous avez identifié.
 
 Créez des règles pour intégrer les données et les fonctionnalités du marketing, ainsi qu’une technologie d’annonces qui rassemble les produits disparates en une seule solution.
 
@@ -22,7 +23,7 @@ Créez des règles pour intégrer les données et les fonctionnalités du market
 
 **Événements (If) :** l’événement est l’élément que la règle doit rechercher. Il est défini en sélectionnant un événement, toutes les conditions applicables et toutes les exceptions.
 
-**Actions (Then) :** les déclencheurs surviennent après que les événements d’une règle ont lieu et que toutes les conditions sont satisfaites. Une règle de balise peut déclencher autant dʼactions discrètes que vous souhaitez et vous pouvez contrôler lʼordre dans lequel elles se produisent. Par exemple, une règle unique pour une page de remerciements d’un site de commerce électronique peut déclencher vos outils d’analyse et balises tierces. Il n’est pas nécessaire de créer une règle distincte pour chaque extension ou balise.
+**Actions (Then) :** les déclencheurs surviennent après que les événements d’une règle ont lieu et que toutes les conditions sont satisfaites. Une règle de balise peut déclencher autant d’actions discrètes que vous souhaitez et vous pouvez contrôler l’ordre dans lequel elles se produisent. Par exemple, une règle unique pour une page de remerciements d’un site de commerce électronique peut déclencher vos outils d’analyse et balises tierces. Il n’est pas nécessaire de créer une règle distincte pour chaque extension ou balise.
 
 Vous pouvez ajouter d’autres types d’événements. Plusieurs événements sont associés à l’aide d’un opérateur OR. Les conditions de la règle seront donc évaluées si l’un des événements est satisfait.
 
@@ -38,7 +39,7 @@ Si un événement spécifié se produit, les conditions sont évaluées, puis le
 
 * **Événements** : indiquez un ou plusieurs événements devant avoir lieu pour déclencher la règle. Plusieurs événements sont unis par un opérateur OR. L’un des événements spécifiés va déclencher la règle.
 
-* **Conditions** : circonscrivez lʼévénement en configurant les conditions qui doivent être vraies pour quʼun événement déclenche la règle. Une exception est définie comme une condition NOT. Plusieurs conditions sont réunies par un opérateur AND.
+* **Conditions** : circonscrivez l’événement en configurant les conditions qui doivent être vraies pour qu’un événement déclenche la règle. Une exception est définie comme une condition NOT. Plusieurs conditions sont réunies par un opérateur AND.
 
 Les événements disponibles dépendent des extensions installées. Pour plus d’informations sur les événements dans l’extension Core, reportez-vous à [Types d’événements de l’extension Core](../../extensions/web/core/overview.md#core-extension-event-types).
 
@@ -46,7 +47,7 @@ Les événements disponibles dépendent des extensions installées. Pour plus d�
 
 Les actions sont la partie *Then* d’une règle. Elles définissent ce que vous voulez qu’il se passe lorsque la règle s’exécute. Lorsqu’un événement est déclenché, si les conditions prennent la valeur true (vrai) et si les exceptions prennent la valeur false (faux), les actions sont effectuées. Vous pouvez faire glisser et déposer des actions pour les organiser selon vos besoins.
 
-## Création d’une règle
+## Créez une règle
 
 Créez une règle en indiquant les actions qui se produisent si une condition est remplie.
 
@@ -64,7 +65,7 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
 
    >[!IMPORTANT]
    >
-   >Dans une règle côté client, les éléments de données sont segmentés en unités lexicales avec un `%` au début et à la fin du nom de l’élément de données. Par exemple : `%viewportHeight%`. Dans une règle de transfert dʼévénements, les éléments de données sont segmentés en unités lexicales avec `{{` au début et `}}` à la fin du nom de lʼélément de données. Par exemple : `{{viewportHeight}}`.
+   >Dans une règle côté client, les éléments de données sont segmentés en unités lexicales avec un `%` au début et à la fin du nom de l’élément de données. Par exemple : `%viewportHeight%`. Dans une règle de transfert d’événements, les éléments de données sont segmentés en unités lexicales avec `{{` au début et `}}` à la fin du nom de l’élément de données. Par exemple : `{{viewportHeight}}`.
 
    Pour référencer des données à partir du réseau Edge, le chemin d’accès de l’élément de données doit être `arc.event._<element>_`.
 
@@ -107,7 +108,7 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
 
    Les types d’action disponibles dépendent de l’extension que vous avez sélectionnée. Les paramètres d’action diffèrent selon le type d’action.
 
-   (Avancé) Attendre avant d’exécuter l’action suivante : Cette option est disponible lorsque le séquencement des composants de règle est activé sur votre propriété. Lorsquʼelle est cochée, les balises nʼappellent pas lʼaction suivante tant que celle-ci nʼest pas terminée. Lorsque cette option est désactivée, l’action suivante commence à s’exécuter immédiatement. La valeur par défaut est **[!UICONTROL Activé]**.
+   (Avancé) Attendre avant d’exécuter l’action suivante : Cette option est disponible lorsque le séquencement des composants de règle est activé sur votre propriété. Lorsque cette option est cochée, les balises n’appellent pas l’action suivante tant que celle-ci n’est pas terminée. Lorsque cette option est désactivée, l’action suivante commence à s’exécuter immédiatement. La valeur par défaut est **[!UICONTROL Activé]**.
 
    (Avancé) Délai d’expiration : Cette option est disponible lorsque le séquencement des composants de règle est activé sur votre propriété. Il définit la durée maximale autorisée pour l’achèvement de l’action. Si le délai d’expiration est atteint, l’action échoue et toutes les actions suivantes de cette règle sont supprimées de la file d’attente de traitement. La valeur par défaut est de 2 000 ms.
 
@@ -124,9 +125,9 @@ L’ordre des règles vous permet de contrôler l’ordre d’exécution des rè
 
 Il est souvent important que vos règles se déclenchent dans un ordre spécifique. Exemples : (1) vous avez plusieurs règles qui définissent de manière conditionnelle des variables [!DNL Analytics] et vous devez vous assurer que la règle avec Send Beacon (Envoyer la balise) passe en dernier lieu. (2) vous avez une règle qui déclenche [!DNL Target] et une autre règle déclenche [!DNL Analytics], et vous souhaitez que la règle [!DNL Target] s’exécute en premier lieu.
 
-En fin de compte, la responsabilité d’exécuter les actions dans l’ordre repose sur le développeur d’extensions du type d’événement que vous utilisez. Les développeurs dʼextensions Adobe sʼassurent que leurs extensions fonctionnent comme prévu. En ce qui concerne les extensions tierces, Adobe fournit des conseils aux développeurs dʼextensions pour leur permettre dʼeffectuer cette mise en œuvre correctement, mais cʼest à eux de le faire.
+En fin de compte, la responsabilité d’exécuter les actions dans l’ordre repose sur le développeur d’extensions du type d’événement que vous utilisez. Les développeurs d’extensions Adobe s’assurent que leurs extensions fonctionnent comme prévu. En ce qui concerne les extensions tierces, Adobe fournit des conseils aux développeurs d’extensions pour leur permettre d’effectuer cette implémentation correctement, mais c’est à eux de le faire.
 
-Adobe recommande vivement dʼordonner vos règles avec des nombres positifs compris entre 1 et 100 (la valeur par défaut est 50). Au plus simple, au mieux. Rappelez-vous que vous devez conserver votre ordre. Toutefois, Adobe admet quʼil peut y avoir des cas où cet ordre peut être contraignant. Dès lors dʼautres nombres sont autorisés. Les balises prennent en charge les nombres compris entre +/- 2 147 483 648. Vous pouvez également utiliser une douzaine de décimales. Cependant, si vous pensez que vous devez y avoir recours, vous devez repenser certaines des décisions que vous avez prises pour arriver à la situation actuelle.
+Adobe vous recommande vivement de classer vos règles avec des nombres positifs compris entre 1 et 100 (la valeur par défaut est 50). Au plus simple, au mieux. Rappelez-vous que vous devez conserver votre ordre. Toutefois, Adobe admet qu’il peut y avoir des cas dans lesquels cet ordre s’avère contraignant. Dès lors, d’autres nombres sont autorisés. Les balises prennent en charge les nombres compris entre +/- 2 147 483 648. Vous pouvez également utiliser une douzaine de décimales. Cependant, si vous pensez que vous devez y avoir recours, vous devez repenser certaines des décisions que vous avez prises pour arriver à la situation actuelle.
 
 >[!IMPORTANT]
 >
@@ -143,7 +144,7 @@ L’ordre de chargement des règles varie selon que l’action de règle est con
 
 Vous pouvez utiliser `document.write` dans vos scripts personnalisés, quels que soient les événements configurés pour la règle.
 
-Vous pouvez agencer différents types de code personnalisé les uns par rapport aux autres. Vous pouvez, par exemple, avoir une action de code personnalisé JavaScript, puis une action de code personnalisé HTML, et enfin une action de code personnalisé JavaScript. Les balises sʼassurent quʼils sont exécutés dans cet ordre.
+Vous pouvez agencer différents types de code personnalisé les uns par rapport aux autres. Vous pouvez, par exemple, avoir une action de code personnalisé JavaScript, puis une action de code personnalisé HTML, et enfin une action de code personnalisé JavaScript. Les balises garantissent leur exécution dans cet ordre.
 
 ## Regroupement de règles
 
@@ -157,7 +158,7 @@ Ces événements doivent être presque toujours exécutés (à moins que les con
 
    >[!NOTE]
    >
-   >Les balises utilisent du JavaScript ES5. Le transfert dʼévénements utilise du JavaScript ES6.
+   >Les balises utilisent du code JavaScript ES5. Le transfert d’événements utilise ES6.
 
 * **HTML :** le code HTML est intégré à la bibliothèque de balises principale. `document.write` est utilisée pour écrire le code HTML dans le document. Si la règle comporte plusieurs scripts personnalisés, ils sont écrits dans l’ordre.
 
@@ -174,7 +175,7 @@ Le comportement de lʼenvironnement dʼexécution des balises dépend de si **[!
 
 ### Activé
 
-Si cette option est activée, lorsqu’un événement est déclenché au moment de l’exécution, les conditions et actions de la règle sont ajoutées à une file d’attente de traitement (selon l’ordre que vous avez défini) et traitées une par une sur une base FIFO. La balise attend lʼachèvement du composant avant de passer au suivant.
+Si cette option est activée, lorsqu’un événement est déclenché au moment de l’exécution, les conditions et actions de la règle sont ajoutées à une file d’attente de traitement (selon l’ordre que vous avez défini) et traitées une par une sur une base FIFO. La balise attend l’achèvement du composant avant de passer au suivant.
 
 Si une condition est évaluée comme false ou atteint son délai d’expiration défini, les conditions et actions suivantes de cette règle sont supprimées de la file d’attente.
 
@@ -182,10 +183,10 @@ Si une action échoue ou atteint son délai d’expiration défini, les actions 
 
 >[!NOTE]
 >
->Lorsque ce paramètre est activé, toutes les conditions et actions sont exécutées de manière asynchrone, même si vous avez chargé la bibliothèque de balises de manière synchrone.
+>Lorsque ce paramètre est activé, toutes les conditions et actions sont exécutées de manière asynchrone, et ce, même si vous avez chargé la bibliothèque de balises de manière synchrone.
 
 ### Désactivé
 
 Si cette option est désactivée, lorsqu’un événement est déclenché au moment de l’exécution, les conditions de la règle sont immédiatement évaluées. Plusieurs conditions sont évaluées en parallèle.
 
-Si toutes les conditions renvoient la valeur true (et que les exceptions renvoient la valeur false), les actions de la règle sont immédiatement exécutées. Les actions sont appelées dans lʼordre, mais les balises nʼattendent pas quʼune action soit achevée avant dʼappeler la suivante. Si vos actions sont synchrones, elles sont tout de même exécutées dans l’ordre. Si une ou plusieurs actions sont asynchrones, certaines actions s’exécutent en parallèle.
+Si toutes les conditions renvoient la valeur true (et que les exceptions renvoient la valeur false), les actions de la règle sont immédiatement exécutées. Les actions sont appelées dans l’ordre, mais les balises n’attendent pas qu’une action soit achevée avant d’appeler la suivante. Si vos actions sont synchrones, elles sont tout de même exécutées dans l’ordre. Si une ou plusieurs actions sont asynchrones, certaines actions s’exécutent en parallèle.

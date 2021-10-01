@@ -1,8 +1,9 @@
 ---
 title: Types d’éléments de données pour les extensions web
-description: Découvrez comment définir un module de bibliothèque de type d’élément de données pour une extension de balise dans une propriété web.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez comment définir un module Bibliothèque de type élément de données pour une extension de balise dans une propriété web.
+exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 100%
 
@@ -39,7 +40,7 @@ module.exports = function(settings) {
 }
 ```
 
-Si vous souhaitez que le nom de l’élément de stockage local soit configurable par l’utilisateur d’Adobe Experience Platform, vous pouvez autoriser l’utilisateur à saisir un nom puis à l’enregistrer dans l’objet `settings`. L’objet pourrait ressembler à ceci :
+Si vous souhaitez que le nom de l’élément d’enregistrement local soit configurable par l’utilisateur d’Adobe Experience Platform, vous pouvez autoriser l’utilisateur à saisir un nom, puis enregistrer le nom dans l’objet `settings`. L’objet pourrait ressembler à ceci :
 
 ```js
 {

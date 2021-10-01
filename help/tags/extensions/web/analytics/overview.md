@@ -5,7 +5,7 @@ exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '2202'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -368,7 +368,7 @@ Utilisez l’éditeur pour spécifier le code personnalisé de votre page.
 
 Sélectionnez cette option si vous souhaitez incrémenter une page vue.
 
-#### N’incrémentez pas une page vue - s.tl()
+#### Do not increment a pageview - s.tl()
 
 Sélectionnez cette option si vous ne souhaitez pas incrémenter une page vue.
 

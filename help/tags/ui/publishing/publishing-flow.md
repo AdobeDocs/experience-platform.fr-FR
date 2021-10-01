@@ -1,8 +1,9 @@
 ---
 title: Flux de publication
 description: Découvrez le processus de création des bibliothèques, de test et d’approbation des versions pour la production dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 100%
 
@@ -14,7 +15,7 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Le flux de publication des balises dans Adobe Experience Platform fait référence au processus de création de bibliothèques, de test de versions et d’approbation pour la production.
+Le flux de publication des balises dans Adobe Experience Platform fait référence au processus de création de bibliothèques, de test des versions et dʼapprobation pour la production.
 
 Les actions disponibles que vous pouvez réaliser sur une bibliothèque dépendent de l’état de la bibliothèque et du niveau d’autorisation que vous possédez. En outre, l’état d’une bibliothèque affecte également les ressources qu’elle contient (règles, éléments de données et extensions) en fonction de ce qui se trouve en amont dans le flux de publication.
 
@@ -30,7 +31,7 @@ Il existe différents niveaux dʼautorisations dʼutilisateur importants pour le
 
 Les droits ne sont pas inclusifs. Pour qu’une seule personne effectue le processus du début à la fin, cette personne doit se voir attribuer les trois droits au sein d’une propriété donnée.
 
-Pour plus d’informations sur la gestion des autorisations pour les balises, consultez le [guide des autorisations utilisateur](../administration/user-permissions.md).
+Pour plus dʼinformations sur la gestion des autorisations pour les balises, consultez le [guide des autorisations utilisateur](../administration/user-permissions.md).
 
 ## État de la bibliothèque {#state}
 
@@ -41,7 +42,7 @@ En ce qui concerne le flux de publication, une bibliothèque peut se trouver dan
 * [[!UICONTROL Approuvé]](#approved)
 * [[!UICONTROL Publié]](#published)
 
-Ces quatre états sont représentés sous forme de colonnes dans lʼonglet **[!UICONTROL Flux de publication]** de lʼinterface utilisateur de la collecte de données.
+Ces quatre états sont représentés sous forme de colonnes dans lʼonglet **[!UICONTROL Flux de publication]** de lʼinterface utilisateur de collecte de données.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -111,7 +112,7 @@ Ce qui est inclus en amont dépend de l’étape actuelle de la bibliothèque. P
 
 ![](./images/approval-workflow/upstream.png)
 
-Lorsque vous modifiez une bibliothèque dans lʼinterface utilisateur de la collecte de données, toutes les ressources héritées des éléments en amont sont représentées dans la section **[!UICONTROL Ressources en amont]**. Pour afficher ces ressources, sélectionnez l’onglet Développer situé sous l’en-tête de la section.
+Lorsque vous modifiez une bibliothèque dans lʼinterface utilisateur de collecte de données, toutes les ressources héritées des éléments en amont sont représentées dans la section **[!UICONTROL Ressources en amont]**. Pour afficher ces ressources, sélectionnez l’onglet Développer situé sous l’en-tête de la section.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 
@@ -121,4 +122,4 @@ La section se développe pour afficher les ressources individuelles héritées d
 
 ## Étapes suivantes
 
-Ce guide fournit une présentation détaillée du flux de publication des bibliothèques dans Adobe Experience Platform. Pour en savoir plus sur la façon de publier vos bibliothèques, consultez la section [Présentation de la publication](./overview.md).
+Ce guide fournit une présentation détaillée du flux de publication pour les bibliothèques dans Adobe Experience Platform. Pour en savoir plus sur la façon de publier vos bibliothèques, consultez la section [Présentation de la publication](./overview.md).

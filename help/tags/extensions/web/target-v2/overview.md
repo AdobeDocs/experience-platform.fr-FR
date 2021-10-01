@@ -1,8 +1,9 @@
 ---
 title: Présentation de l’extension Adobe Target v2
 description: Découvrez l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 100%
 
@@ -30,7 +31,7 @@ Pour configurer l’extension, ouvrez l’onglet Extensions, survolez-la avec la
 
 ### Paramètres at.js
 
-Tous vos paramètres at.js, à l’exception du délai d’expiration, sont automatiquement récupérés de la configuration at.js de l’interface utilisateur de Target. L’extension extrait les paramètres de l’interface utilisateur de Target uniquement lors de l’ajout initial. De ce fait, tous les paramètres doivent être gérés dans l’interface utilisateur de la collecte de données si d’autres mises à jour sont nécessaires.
+Tous les paramètres at.js, à l’exception de la temporisation, sont automatiquement extraits de la configuration at.js de l’interface utilisateur de Target. L’extension extrait les paramètres de l’interface utilisateur de Target uniquement lors de l’ajout initial. De ce fait, tous les paramètres doivent être gérés dans l’interface utilisateur de collecte de données si d’autres mises à jour sont nécessaires.
 
 Les options de configuration disponibles sont les suivantes :
 
@@ -44,7 +45,7 @@ Cet identifiant associe votre mise en œuvre à votre compte Adobe Experience Cl
 
 #### Server Domain (Domaine du serveur)
 
-Le domaine du serveur fait référence au domaine vers lequel les requêtes Target sont envoyées. Cette valeur doit presque toujours être conservée comme valeur par défaut.
+Le domaine du serveur fait référence au domaine dans lequel les requêtes Target sont envoyées. Cette valeur doit presque toujours être conservée comme valeur par défaut.
 
 #### Opt-in RGPD (Accord préalable RGPD)
 
@@ -64,13 +65,13 @@ L’extension Target permet d’effectuer les actions suivantes dans la partie �
 
 ### Load Target (Charger Target)
 
-Ajoutez cette action à l’endroit correspondant de votre règle de balise pour charger Target dans le cadre de votre règle. Cette opération charge la bibliothèque at.js sur la page. Dans la plupart des mises en œuvre, Target doit être chargé sur chacune des pages de votre site. Adobe recommande d’utiliser l’action Charger Target uniquement si elle est précédée d’un appel de Target. Dans le cas contraire, vous pourriez rencontrer des problèmes, comme un retard de l’appel d’Analytics.
+Ajoutez cette action à votre règle de balise pour charger Target dans le cadre de votre règle. Cette opération charge la bibliothèque at.js sur la page. Dans la plupart des mises en œuvre, Target doit être chargé sur chacune des pages de votre site. Adobe recommande d’utiliser l’action Charger Target uniquement si elle est précédée d’un appel de Target. Dans le cas contraire, vous pourriez rencontrer des problèmes, comme un retard de l’appel d’Analytics.
 
 Aucune configuration n’est nécessaire.
 
 ### Charger Target avec la prise de décision sur l’appareil
 
-Ajoutez cette action à l’endroit correspondant de votre règle de balise pour charger Target avec [la prise de décision sur l’appareil](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=fr) activée dans le cadre de votre règle. Cela charge la bibliothèque at.js sur la page avec la prise de décision sur l’appareil activée. Dans la plupart des mises en œuvre, Target doit être chargé sur chacune des pages de votre site. Adobe recommande d’utiliser l’action Charger Target avec la prise de décision sur l’appareil uniquement si elle est précédée d’un appel de Target. Dans le cas contraire, vous pourriez rencontrer des problèmes, comme un retard de l’appel d’Analytics.
+Ajoutez cette action à votre règle de balise pour charger Target avec [la prise de décision sur l’appareil](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=fr) activée dans le cadre de votre règle. Cela charge la bibliothèque at.js sur la page avec la prise de décision sur l’appareil activée. Dans la plupart des mises en œuvre, Target doit être chargé sur chacune des pages de votre site. Adobe recommande d’utiliser l’action Charger Target avec la prise de décision sur l’appareil uniquement si elle est précédée d’un appel de Target. Dans le cas contraire, vous pourriez rencontrer des problèmes, comme un retard de l’appel d’Analytics.
 
 Aucune configuration n’est nécessaire.
 
@@ -83,16 +84,16 @@ Ce type d’action permet d’ajouter des paramètres à toutes les requêtes Ta
 
 ### Add Params to Page Load Request (Ajout de paramètres à la requête de chargement de page)
 
-Ce type d’action permet d’ajouter des paramètres de façon spécifique à vos requêtes de chargement de page. L’action Load Target (Charger Target) doit avoir été utilisée au préalable.
+Ce type d’action permet d’ajouter des paramètres spécifiquement à vos requêtes de chargement de page. L’action Load Target (Charger Target) doit avoir été utilisée au préalable.
 
 1. Indiquez le nom et la valeur du paramètre que vous souhaitez ajouter.
 1. Cliquez sur l’icône Ajouter pour ajouter d’autres paramètres.
 
 ### Déclencher la requête de chargement de page
 
-Ce type d’action permet à Target de déclencher une requête lors du chargement de votre page. L’action Load Target (Charger Target) doit avoir été utilisée au préalable.
+Ce type d’action permet à Target de déclencher une requête au chargement de votre page. L’action Load Target (Charger Target) doit avoir été utilisée au préalable.
 
-Vous devez indiquer s’il convient d’activer le masquage du corps pour éviter le scintillement, ainsi que le style utilisé lors du masquage de l’élément de corps. Les options disponibles sont les suivantes :
+Vous devez spécifier si vous souhaitez activer le masquage du corps pour éviter le scintillement, ainsi que le style utilisé lors du masquage de l’élément de corps. Les options disponibles sont les suivantes :
 
 * **Body Hiding** (Masquage du corps) : vous pouvez activer ou désactiver ce paramètre. La valeur par défaut est Enabled (Activé), ce qui signifie que la balise HTML BODY est masquée.
 * **Body Hidden Style** (Style masqué de l’élément corps) : la valeur par défaut est body{opacity:0}. Cette valeur peut être modifiée et remplacée par autre chose, par exemple body{display:none}.
@@ -101,7 +102,7 @@ Pour plus d’informations, reportez-vous à la [documentation d’aide en ligne
 
 ### Trigger View (Déclenchement d’affichage)
 
-L’action Trigger View peut être appelée à chaque chargement d’une nouvelle page ou lorsqu’un composant fait l’objet d’un nouveau rendu sur une page. La fonction Trigger View doit être implémentée pour les applications monopage.
+L&#39;action Vue Trigger peut être appelée à chaque nouveau chargement de page ou lorsqu’un composant fait l’objet d’un nouveau rendu sur une page. La vue Trigger doit être implémentée pour les applications d’une seule page.
 
 1. Spécifiez le nom d’affichage qui doit être déclenché.
 1. Précisez si le déclenchement de la vue doit être attribué à une impression de reporting en cochant la case Page. Si l’affichage est corrélé à un composant qui est à nouveau rendu et n’est pas attribué à une impression de reporting, ne cochez pas la case Page.
@@ -122,18 +123,18 @@ Une fois cette règle enregistrée, vous devez l’ajouter à une bibliothèque 
 
 Les balises peuvent être déployées de manière asynchrone. Si vous chargez la bibliothèque de balises avec Target de manière asynchrone, alors Target sera également chargé de manière asynchrone. Ce scénario est entièrement pris en charge, mais il faut tenir compte d’un autre aspect.
 
-Avec les déploiements asynchrones, il est possible que la page termine de rendre le contenu par défaut avant que la bibliothèque Target ne soit complètement chargée et que le contenu ait été permuté. Cela peut entraîner un « scintillement », c’est-à-dire que le contenu par défaut s’affiche brièvement avant d’être remplacé par le contenu personnalisé spécifié par Target. Pour éviter ce problème, nous vous suggérons d’utiliser un fragment de code de masquage préalable et de charger le lot de balises de manière asynchrone.
+Avec les déploiements asynchrones, il est possible que la page termine de rendre le contenu par défaut avant que la bibliothèque Target ne soit complètement chargée et que le contenu ait été permuté. Cela peut entraîner un « scintillement », c’est-à-dire que le contenu par défaut s’affiche brièvement avant d’être remplacé par le contenu personnalisé spécifié par Target. Pour éviter ce scintillement, nous vous suggérons d’utiliser un fragment de code de pré-masquage préalable et de charger le lot de balise de manière asynchrone pour éviter tout scintillement de contenu.
 
 Voici quelques éléments à garder à l’esprit lors de l’utilisation du fragment de code de masquage préalable :
 
-* Le fragment de code doit être ajouté avant le chargement du code incorporé d’en-tête de balise.
+* Le code doit être ajouté avant de charger le code incorporé d’en-tête de balise.
 * Ce code ne peut pas être géré par des balises. Il doit donc être ajouté directement à la page.
 * La page s’affiche lorsque le premier des événements suivants se produit :
    * Lorsque la réponse de chargement de page a été reçue
    * Lorsque la requête de chargement de page arrive à expiration
    * Lorsque le fragment lui-même arrive à expiration.
 * L’action « Fire Page Load Request » (Déclenchement de la requête pendant le chargement de la page) doit être utilisée sur toutes les pages à l’aide du fragment de code de masquage préalable afin de minimiser la durée du masquage.
-* Le masquage du corps doit également être activé dans l’action Fire Page Load Request de la règle Page Load que vous utilisez pour Target dans l’interface utilisateur de la collecte de données. Dans le cas contraire, tous les chargements de page (Page loads) restent masqués pendant le délai d’expiration.
+* Le masquage du corps doit également être activé dans l’action Requête de chargement de page de la règle Chargement de page que vous utilisez pour Target dans l&#39;interface utilisateur de collecte de données. Dans le cas contraire, tous les chargements de page restent masqués pendant la période de temporisation.
 
 Le fragment de code de masquage préalable se présente comme suit et peut être réduit. Les options configurables se trouvent à la fin :
 

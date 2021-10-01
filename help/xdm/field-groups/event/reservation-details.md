@@ -2,13 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;réservation;détails de réservation;;page d’accueil;schéma;schéma;schéma;schéma;schéma;groupe de champs;groupe de champs;groupe de réservation;détails de réservation
 title: Groupe de champs de schéma Détails de la réservation
 description: Ce document présente un aperçu du groupe de champs de schéma Détails de la réservation.
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 6%
 
 ---
-
 
 # [!UICONTROL Groupe de champs ] Détails de la réservation
 

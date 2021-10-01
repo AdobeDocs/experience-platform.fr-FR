@@ -1,19 +1,19 @@
 ---
 keywords: activation des destinations de diffusion en continu de segments ; activation des destinations de diffusion en continu de segments ; activation des données
-title: Activation des données d’audience vers des destinations d’exportation de segments par flux
+title: Activation des données d’audience vers des destinations d’exportation de segments de diffusion
 type: Tutorial
 seo-title: Activate audience data to streaming segment export destinations
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de diffusion en continu de segments.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
-source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
+exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '781'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
-
-# Activation des données d’audience vers des destinations d’exportation de segments par flux
+# Activation des données d’audience vers des destinations d’exportation de segments de diffusion
 
 ## Présentation {#overview}
 

@@ -1,8 +1,9 @@
 ---
 title: Environnements
 description: Découvrez le concept des environnements de balises et leur fonctionnement dans Adobe Experience Platform.
-source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
-workflow-type: ht
+exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 100%
 
@@ -14,7 +15,7 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Les environnements de balises définissent plusieurs aspects clés des versions de bibliothèque que vous déployez sur votre site web ou application :
+Les environnements de balises définissent plusieurs aspects clés des versions de bibliothèque que vous déployez sur votre site Web ou application :
 
 * Nom de fichier de la version.
 * Le domaine et le chemin d’accès de la version, en fonction de l’hôte affecté à l’environnement.
@@ -24,11 +25,11 @@ Lorsque vous créez une version de bibliothèque, vous devez l’affecter à un 
 
 Il peut y avoir différents artefacts dans chaque environnement. Cela vous permet de tester différentes bibliothèques dans différents environnements lorsque vous les utilisez dans votre processus.
 
-Ce document décrit la procédure à suivre pour installer, configurer et créer différents environnements dans l’interface utilisateur de la collecte de données.
+Ce document décrit la procédure à suivre pour installer, configurer et créer différents environnements dans l’interface utilisateur de Collecte de données.
 
 ## Types d’environnement
 
-Les balises prennent en charge trois types d’environnements différents, chacun correspondant à un état différent dans le [flux de travaux de publication](./publishing-flow.md) :
+Les balises prennent en charge trois types d&#39;environnements différents, chacun correspondant à un état spécifique dans le [flux de travaux de publication](./publishing-flow.md) :
 
 | Type d’environnement | Description |
 | --- | --- |
@@ -74,7 +75,7 @@ Pour plus d’informations, consultez la présentation sur les [hôtes](./hosts/
 
 ## Configuration web
 
-Pour les propriétés web, les paramètres de l’environnement affecté déterminent les éléments suivants :
+Les paramètres de l’environnement affecté déterminent les éléments suivants pour les propriétés Web :
 
 * **Hôte** : emplacement du serveur sur lequel vous souhaitez déployer votre version.
 * **Paramètre d’archivage** : indique si le système doit générer un ensemble de fichiers déployable ou les compresser dans un format d’archive.
@@ -90,7 +91,7 @@ Sélectionnez **[!UICONTROL Hôte]** pour choisir un hôte préconfiguré pour l
 
 ![](./images/environments/select-host.png)
 
-Une fois une version créée, celle-ci est déployée vers l’emplacement spécifié pour l’hôte affecté. Pour plus d’informations sur la création et la configuration des hôtes dans l’interface utilisateur de la collecte de données, reportez-vous à la [présentation des hôtes](./hosts/hosts-overview.md).
+Lors de la création d’une version, celle-ci est distribuée à l’emplacement spécifié pour l’hôte affecté. Pour plus d’informations sur la création et la configuration des hôtes dans l’interface utilisateur de collecte de données, reportez-vous à la [présentation des hôtes](./hosts/hosts-overview.md).
 
 ### Paramètre d’archivage {#archive}
 
@@ -104,7 +105,7 @@ Si vous choisissez d’activer le paramètre d’archivage, d’autres paramètr
 
 Le chemin d’accès peut être soit une URL complète, soit un chemin relatif utilisable pour plusieurs domaines. Ce chemin est important, car la plupart des versions comportent plusieurs fichiers qui contiennent des références internes les uns aux autres.
 
-Si vous utilisez l’option d’archivage, tous les fichiers de la version sont fournis sous la forme d’un fichier .zip. Ce format peut s’avérer utile si :
+Si vous utilisez l’option d’archivage, tous les fichiers de la version sont fournis sous la forme d’un fichier.zip. Ce format peut s’avérer utile si :
 
 1. vous auto-hébergez la bibliothèque, mais ne souhaitez pas configurer un hôte SFTP pour la diffusion ;
 1. vous devez exécuter une analyse du code sur la version avant son déploiement ;
@@ -112,13 +113,13 @@ Si vous utilisez l’option d’archivage, tous les fichiers de la version sont 
 
 ### Code incorporé {#embed-code}
 
-Un code incorporé est une balise `<script>` qui doit être placée dans les sections `<head>` des pages de votre site web pour charger et exécuter le code que vous créez. Chaque configuration d’environnement génère automatiquement son propre code incorporé. Il vous suffit donc de le copier et de le coller dans votre site sur les pages sur lesquelles vous souhaitez exécuter les balises.
+Un code incorporé est une balise `<script>` devant être placée dans les sections `<head>` de vos pages Web afin de charger et exécuter le code que vous créez. Chaque configuration d’environnement génère automatiquement son propre code incorporé. Il vous suffit donc de le copier-coller dans votre site sur les pages sur lesquelles vous souhaitez exécuter les balises.
 
 Lorsque vous consultez les instructions d’installation, vous pouvez choisir que le script charge les fichiers de bibliothèque de manière synchrone ou asynchrone. Ce paramètre n’est pas persistant et ne reflète pas la manière dont vous avez réellement implémenté les balises sur votre site. Au contraire, il ne vise qu’à montrer la manière appropriée d’installer l’environnement.
 
 >[!WARNING]
 >
->Selon le contenu de votre bibliothèque de balises, le comportement de vos règles et d’autres éléments peut varier entre le déploiement synchrone et asynchrone. Il est donc important de tester minutieusement les modifications que vous apportez.
+>Selon le contenu de votre bibliothèque de balises, le comportement de vos règles et d’autres éléments peut varier entre un déploiement synchrone et asynchrone. Il est donc important de tester minutieusement les modifications que vous apportez.
 
 #### Déploiement asynchrone
 
@@ -142,7 +143,7 @@ Les codes incorporés étant générés en fonction des configurations de votre 
 
 >[!WARNING]
 >
->Lorsque le code incorporé d’un environnement change dans une balise, vous devez mettre à jour manuellement les codes incorporés dans votre code HTML. Pour éviter une maintenance coûteuse, vous ne devez mettre à jour votre ou vos codes incorporés que lorsque cela est absolument nécessaire.
+>Lorsque le code incorporé d’un environnement de balises change, vous devez mettre manuellement à jour les codes incorporés dans votre code HTML. Pour éviter une maintenance coûteuse, vous ne devez mettre à jour votre ou vos codes incorporés que lorsque cela est absolument nécessaire.
 
 ## Création d’un environnement
 

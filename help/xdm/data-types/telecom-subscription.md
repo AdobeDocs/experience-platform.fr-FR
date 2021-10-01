@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Type de données d'abonnement aux télécommunications
 topic-legacy: overview
 description: Ce document présente un aperçu du type de données XDM (Modèle de données d’expérience d’abonnement aux services de télécommunication).
-source-git-commit: 19675e4042c28061a4b2ed4e68374d5e09216ba1
+exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '611'
 ht-degree: 18%

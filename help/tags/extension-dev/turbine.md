@@ -5,7 +5,7 @@ exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
 workflow-type: tm+mt
 source-wordcount: '619'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -57,13 +57,13 @@ console.log(turbine.environment.stage);
 
 | Propriété | Description |
 | --- | --- |
-| `id` | L’identifiant de l’environnement. |
-| `stage` | Environnement pour lequel cette bibliothèque a été créée. Les valeurs possibles sont `development`, `staging` et `production`. |
+| `id` | Identifiant de l’environnement. |
+| `stage` | Environnement pour lequel cette bibliothèque a été créée. Les valeurs possibles sont les suivantes : `development`, `staging` et `production`. |
 
 
 ## `debugEnabled`
 
-Valeur boolean indiquant si le débogage des balises est actuellement activé.
+Valeur booléenne indiquant si le débogage des balises est actuellement activé.
 
 Si vous essayez simplement de consigner des messages, il est peu probable que vous ayez besoin d’utiliser cette fonctionnalité. Au lieu de cela, consignez toujours les messages à lʼaide de `turbine.logger` afin de vous assurer quʼils ne sont imprimés sur la console que lorsque le débogage des balises est activé.
 
@@ -117,7 +117,7 @@ Lʼutilitaire de journalisation est utilisé pour consigner les messages dans la
 * `logger.warn(message: string)` : consigne un message d’avertissement dans la console.
 * `logger.error(message: string)` : consigne un message d’erreur dans la console.
 * `logger.debug(message: string)` : consigne un message de débogage dans la console. (Visible uniquement lorsque la journalisation `verbose` est activée dans la console du navigateur.)
-* `logger.deprecation(message: string)`: Consigne un message d’avertissement dans la console, que le débogage des balises soit activé ou non par l’utilisateur.
+* `logger.deprecation(message: string)` : consigne un message d’avertissement dans la console, que le débogage des balises soit activé ou non par l’utilisateur.
 
 ### `onDebugChanged`
 

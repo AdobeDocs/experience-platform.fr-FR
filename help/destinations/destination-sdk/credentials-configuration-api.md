@@ -1,7 +1,8 @@
 ---
 description: Cette page décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/credentials`.
 title: Opérations de l’API du point d’entrée des informations d’identification
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
+source-git-commit: 6ff5fd0e80f7ca1015969e91cc23c88251509b61
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 6%

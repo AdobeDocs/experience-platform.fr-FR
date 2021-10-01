@@ -1,18 +1,17 @@
 ---
-title: Publications de blog
-seo-title: Publications de blog sur le SDK Web Adobe Experience Platform
-description: Publications de blog sur le SDK Web Adobe Experience Platform
-seo-description: Publications de blog sur le SDK Web Adobe Experience Platform
-translation-type: tm+mt
-source-git-commit: 531c633f8e80b50d65d7c64a00e5fbf48e1ae2fb
+title: Publications du blog
+seo-title: Blog Posts about Adobe Experience Platform Web SDK
+description: Publications de blog à propos du SDK Web de Adobe Experience Platform
+seo-description: Blog Posts about Adobe Experience Platform Web SDK
+exl-id: a6dd3a6c-e211-4fc3-b5f6-8c170e8f7503
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 0%
+source-wordcount: '49'
+ht-degree: 8%
 
 ---
 
+# Publications du blog
 
-# Publications de blog
-
-* [Résolution des problèmes de mise en oeuvre avec le SDK Web Adobe Experience Platform et Edge Network](https://medium.com/adobetech/solving-implementation-pain-points-with-adobe-experience-platform-web-sdk-and-edge-network-880b635e6819)
-* [Amélioration des performances du site Web grâce au SDK Web Adobe Experience Platform et au réseau Edge](https://medium.com/adobetech/boosting-website-performance-with-adobe-experience-platform-web-sdk-and-edge-network-329fcf70fdf9)
+* [Résolution des problèmes de mise en oeuvre liés au SDK web Adobe Experience Platform et au réseau Edge](https://medium.com/adobetech/solving-implementation-pain-points-with-adobe-experience-platform-web-sdk-and-edge-network-880b635e6819)
+* [Amélioration des performances du site web avec le SDK web Adobe Experience Platform et le réseau Edge](https://medium.com/adobetech/boosting-website-performance-with-adobe-experience-platform-web-sdk-and-edge-network-329fcf70fdf9)

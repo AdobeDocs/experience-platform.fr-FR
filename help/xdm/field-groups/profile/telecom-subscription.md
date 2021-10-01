@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Groupe de champs de schéma d’abonnement aux télécommunications
 topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs Schéma d'abonnement aux télécommunications .
-source-git-commit: 19675e4042c28061a4b2ed4e68374d5e09216ba1
+exl-id: 00c20081-09d0-425c-9894-0f957558bd43
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 8%
@@ -109,4 +110,3 @@ Pour plus d’informations sur le groupe de champs, reportez-vous au référenti
 | `portedNumber` | Booléen | Indique si le client porte son numéro depuis un autre opérateur. |
 
 {style=&quot;table-layout:auto&quot;}
-

@@ -4,13 +4,13 @@ title: Présentation des fonctionnalités d’accessibilité dans Experience Pla
 topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform s’engage à fournir des fonctionnalités accessibles et inclusives à tous les individus.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
-workflow-type: ht
+exl-id: 54ce6826-09ee-4716-8237-ef904a41986f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 100%
 
 ---
-
 
 # Accessibilité dans Adobe Experience Platform
 

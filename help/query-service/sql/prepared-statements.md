@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; instructions préparées ; préparé ; sql ;
+keywords: Experience Platform;accueil;rubriques populaires;service de requête;Query Service;instructions préparées;préparées;sql;
 solution: Experience Platform
-title: Déclarations préparées dans Requête Service
+title: Instructions préparées dans Query Service
 topic-legacy: prepared statements
 description: Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform Query Service prend en charge les instructions préparées à l’aide d’une requête paramétrée.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '381'
@@ -15,7 +14,7 @@ ht-degree: 89%
 
 # Instructions préparées
 
-Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform [!DNL Query Service] prend en charge les instructions préparées en utilisant une requête paramétrée. Vous pouvez l’utiliser pour optimiser les performances, car vous n’aurez plus besoin de continuer à analyser une requête à l’infini.
+Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform [!DNL Query Service] prend en charge les instructions préparées à l’aide d’une requête paramétrée. Vous pouvez l’utiliser pour optimiser les performances, car vous n’aurez plus besoin de continuer à analyser une requête à l’infini.
 
 ## Utilisation d’instructions préparées
 
@@ -108,7 +107,7 @@ Lors de l’appel, les résultats sont exactement les mêmes que précédemment�
 
 | identifiant | prénom | nom | date de naissance | adresse électronique | ville | pays |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 1 0000 | alexander | davis | 15/09/1993 | exemple@exemple.com | Vancouver | Canada |
+| 10 000 | alexander | davis | 15/09/1993 | exemple@exemple.com | Vancouver | Canada |
 | 10001 | antoine | dubois | 14/03/1967 | exemple2@exemple.com | Paris | France |
 | 10002 | kyoko | sakura | 26/11/1999 | exemple3@exemple.com | Tokyo | Japon |
 | 10003 | linus | pettersson | 03/06/1982 | exemple4@exemple.com | Stockholm | Suède |

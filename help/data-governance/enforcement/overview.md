@@ -6,7 +6,7 @@ topic-legacy: guide
 description: Une fois que les libellés d’utilisation des données ont été appliqués aux jeux de données d’Adobe Experience Platform et que les stratégies d’utilisation des données ont été définies pour les actions marketing suivant ces libellés, les fonctionnalités de gouvernance des données vous permettent d’appliquer ces stratégies et d’empêcher les opérations de données en violation avec celles-ci. Il existe deux méthodes d’application des stratégies fournies par les fonctionnalités de gouvernance des données sur Platform. Il s’agit de l’application basée sur les API et de l’application automatique.
 exl-id: d19d8060-85a1-405c-856d-f59041947a33
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 100%
 

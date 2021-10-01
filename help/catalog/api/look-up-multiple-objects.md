@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; catalogue ; recherche d’objets multiples ; api
+keywords: Experience Platform;accueil;rubriques populaires;catalogue;recherche d’objets multiples;api
 solution: Experience Platform
-title: Rechercher plusieurs objets de catalogue
+title: Recherche De Plusieurs Objets Catalogue
 topic-legacy: developer guide
 description: Si vous souhaitez afficher plusieurs objets spécifiques au lieu d’effectuer une requête par objet, le catalogue fournit un raccourci simple pour demander plusieurs objets du même type. Vous pouvez utiliser une requête GET unique pour renvoyer plusieurs objets spécifiques en incluant une liste d’identifiants séparés par des virgules.
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '237'
@@ -13,13 +12,13 @@ ht-degree: 54%
 
 ---
 
-# Recherche de plusieurs objets Catalogue
+# Recherche de plusieurs objets Catalog
 
-Si vous souhaitez vue plusieurs objets spécifiques, plutôt que d&#39;effectuer une requête par objet, [!DNL Catalog] fournit un raccourci simple pour demander plusieurs objets du même type. Vous pouvez utiliser une requête GET unique pour renvoyer plusieurs objets spécifiques en incluant une liste d’identifiants séparés par des virgules.
+Si vous souhaitez afficher plusieurs objets spécifiques, plutôt qu’effectuer une requête par objet, [!DNL Catalog] fournit un raccourci simple pour demander plusieurs objets du même type. Vous pouvez utiliser une requête GET unique pour renvoyer plusieurs objets spécifiques en incluant une liste d’identifiants séparés par des virgules.
 
 >[!NOTE]
 >
->Même lorsque vous demandez des objets [!DNL Catalog] spécifiques, il est recommandé au paramètre de requête `properties` de renvoyer uniquement les propriétés dont vous avez besoin.
+>Même lors de la demande d’objets [!DNL Catalog] spécifiques, il est toujours recommandé au paramètre de requête `properties` de renvoyer uniquement les propriétés dont vous avez besoin.
 
 **Format d’API**
 
@@ -30,7 +29,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | Paramètre | Description |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | Type d&#39;objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | Un identifiant de l’un des objets spécifiques que vous souhaitez récupérer. |
 
 **Requête**
@@ -52,7 +51,7 @@ Une réponse réussie renvoie une liste des jeux de données spécifiés contena
 
 >[!NOTE]
 >
->Si un objet renvoyé ne contient pas un ou plusieurs des propriétés demandées indiquées par la requête `properties`, la réponse renvoie uniquement les propriétés demandées qu&#39;elle inclut, comme indiqué dans ***`Sample Dataset 3`*** et ***`Sample Dataset 4`*** ci-dessous.
+>Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par la requête `properties`, la réponse renvoie uniquement les propriétés demandées incluses, comme illustré dans les sections ***`Sample Dataset 3`*** et ***`Sample Dataset 4`*** ci-dessous.
 
 ```json
 {

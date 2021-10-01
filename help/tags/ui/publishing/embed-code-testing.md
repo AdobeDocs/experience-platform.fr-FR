@@ -1,8 +1,9 @@
 ---
 title: Test des codes incorporés à l’aide du débogeur Adobe Experience Platform
 description: Découvrez comment utiliser Platform Debugger pour tester localement différents codes incorporés pour Adobe Experience Platform sur votre site web.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 100%
 
@@ -14,7 +15,7 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Lorsque vous apportez des modifications à vos versions de bibliothèque dans Adobe Experience Platform, vous devez les tester avant de déployer la version sur votre environnement de production. Si vous ne disposez pas d’un environnement d’évaluation ou de développement dédié à votre site web, vous pouvez utiliser le débogueur Adobe Experience Platform pour tester localement différents codes incorporés dans votre site.
+Lorsque vous apportez des modifications à vos versions de bibliothèque de balises dans Adobe Experience Platform, vous devez les tester avant de déployer la version sur votre environnement de production. Si vous ne disposez pas d’un environnement d’évaluation ou de développement dédié à votre site web, vous pouvez utiliser le débogueur Adobe Experience Platform pour tester localement différents codes incorporés dans votre site.
 
 ## Conditions préalables
 
@@ -27,7 +28,7 @@ Ce tutoriel nécessite également l’installation de l’extension de navigateu
 
 ## Ouvrir Débogueur Platform sur votre site web
 
-À l’aide du navigateur de votre choix, accédez à votre site web et ouvrez l’extension Débogueur Platform. Le site auquel le débogueur Platform est actuellement connecté s’affiche au bas de la fenêtre. Si des balises sont en cours d’exécution sur votre site, elles sont répertoriées dans l’onglet [!UICONTROL Résumé].
+À l’aide du navigateur de votre choix, accédez à votre site web et ouvrez l’extension Débogueur Platform. Le site auquel le débogueur Platform est actuellement connecté s’affiche au bas de la fenêtre. Si les balises sont en cours d’exécution sur votre site, celui-ci est répertorié dans l’onglet [!UICONTROL Résumé].
 
 ![](./images/embed-code-testing/summary.png)
 

@@ -1,8 +1,9 @@
 ---
 title: Présentation de l’extension Adobe Media Analytics for Audio and Video
-description: Découvrez l’extension de balises Adobe Media Analytics for Audio and Video dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez lʼextension de balise Adobe Media Analytics for Audio and Video dans Adobe Experience Platform.
+exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 100%
 
@@ -16,7 +17,7 @@ ht-degree: 100%
 
 Pour plus d’informations sur l’installation, la configuration et la mise en œuvre de l’extension Adobe Media Analytics for Audio and Video (extension Media Analytics), utilisez cette documentation. Les options disponibles lors de l’utilisation de cette extension pour créer une règle, ainsi que des exemples et des liens vers des exemples, sont inclus.
 
-L’extension Media Analytics (MA) ajoute le SDK principal JavaScript Media (SDK Media 2.x). Cette extension permet d’ajouter l’instance de suivi `MediaHeartbeat` à un site ou à un projet de balises. L’extension MA requiert deux extensions supplémentaires :
+L’extension Media Analytics (MA) ajoute le SDK principal JavaScript Media (SDK Media 2.x). Cette extension permet dʼajouter lʼinstance de suivi `MediaHeartbeat` à un site de balise ou à un projet. L’extension MA requiert deux extensions supplémentaires :
 
 * [Extension Analytics](../analytics/overview.md)
 * [L’extension Experience Cloud ID](../id-service/overview.md)
@@ -25,7 +26,7 @@ L’extension Media Analytics (MA) ajoute le SDK principal JavaScript Media (SDK
 >
 >Le suivi audio requiert l’extension Analytics version 1.6 ou ultérieure.
 
-Après avoir inclus les trois extensions mentionnées ci-dessus dans votre projet de balises, vous pouvez procéder de deux façons :
+Après avoir inclus les trois extensions mentionnées ci-dessus dans votre projet de balise, vous pouvez procéder de deux façons :
 
 * Utiliser les API `MediaHeartbeat` de votre application web
 * Inclure ou créer une extension spécifique au lecteur qui associe des événements de lecteur multimédia spécifiques aux API sur l’instance de suivi `MediaHeartbeat`. Cette instance est exposée via l’extension MA.
@@ -129,7 +130,7 @@ L’extension MA expose les modules partagés `get-instance` et `media-heartbeat
 
       | Propriété | Description | Obligatoire |
       | :--- | :--- | :--- |
-      | Online Video Provider | Nom de la plateforme vidéo en ligne sur laquelle le contenu est distribué. | Non. Le cas échéant, remplace la valeur définie pendant la configuration de l’extension. |
+      | Fournisseur de vidéos en ligne | Nom de la plateforme vidéo en ligne sur laquelle le contenu est distribué. | Non. Le cas échéant, remplace la valeur définie pendant la configuration de l’extension. |
       | Nom du lecteur | Le nom du lecteur multimédia en cours d’utilisation (par exemple, « AVPlayer », « Lecteur HTML5 », « Mon lecteur personnalisé ») | Non. Le cas échéant, remplace la valeur définie pendant la configuration de l’extension. |
       | Canal | Propriété du nom de canal | Non. Le cas échéant, remplace la valeur définie pendant la configuration de l’extension. |
    **Valeur renvoyée** : une promesse qui est résolue avec une instance `MediaHeartbeat` ou rejetée avec un message d’erreur.

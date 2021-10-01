@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;pql;PQL;Profil Requête Language;agrégation fonctions;agrégation;
+keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;pql;PQL;langage de requête de profil;fonctions d’agrégation;agrégation;
 solution: Experience Platform
 title: Fonctions d’agrégation PQL
 topic-legacy: developer guide
 description: Les fonctions d’agrégation sont utilisées pour grouper plusieurs valeurs dans des tableaux PQL (langue de requête de profil) afin de former une seule valeur de résumé.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 80%
+ht-degree: 86%
 
 ---
 
-# Fonctions d’agrégation
+# Fonctions d&#39;agrégation
 
-Fonctions d’agrégation sont utilisées pour regrouper plusieurs valeurs dans des tableaux [!DNL Profile Query Language] (PQL) afin de former une seule valeur de synthèse. Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans le [[!DNL Profile Query Language] overview](./overview.md).
+Les fonctions d’agrégation sont utilisées pour regrouper plusieurs valeurs dans des tableaux [!DNL Profile Query Language] (PQL) afin de former une seule valeur de synthèse. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Count
 
-La fonction `count` renvoie le nombre d’éléments dans le tableau donné.
+La fonction `count` renvoie le nombre d&#39;éléments dans le tableau donné.
 
 **Format**
 

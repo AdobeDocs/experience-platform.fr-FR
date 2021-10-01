@@ -1,8 +1,9 @@
 ---
 title: Présentation de l’extension de suivi vidéo BrightCove
-description: Découvrez lʼextension de balise de suivi vidéo BrightCove dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez l’extension de balise de suivi de vidéo BrightCove dans Adobe Experience Platform.
+exl-id: d27eff21-2abf-4495-8382-08cab32742e0
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '915'
 ht-degree: 100%
 
@@ -16,56 +17,56 @@ ht-degree: 100%
 
 ## Prérequis
 
-Pour chaque propriété de balise dans Adobe Experience Platform, les extensions suivantes doivent être installées et configurées dans lʼécran Extension :
+Pour chaque propriété de balise Adobe Experience Platform, les extensions suivantes doivent être installées et configurées dans l’écran Extension :
 
 * Adobe Analytics
 * Service d’identification des visiteurs Experience Cloud
 * Extensions Core installées
 
-Utilisez le fragment de code « Code incorporé sur la page (avancé) » dans le code HTML de chaque page web sur laquelle un lecteur vidéo doit apparaître. Lʼextrait de code HTML « Code incorporé sur la page (avancé) » se trouve dans la [documentation Brightcove](https://fr.studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). Le lien suivant fournit des informations supplémentaires sur [la manière de générer un code incorporé pour les lecteurs vidéo de prévisualisation et publiés](https://fr.studio.support.brightcove.com/players/generating-player-embed-code.html).
+Utilisez le fragment de code « Code incorporé sur la page (avancé) » dans le code HTML de chaque page web sur laquelle un lecteur vidéo doit apparaître. Le fragment de code HTML « Code incorporé sur la page (avancé) » se trouve dans la [documentation Brightcove](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). Le lien suivant fournit des informations supplémentaires sur [la manière de générer du code incorporé pour les lecteurs vidéo d’aperçu et de vidéos publiées](https://fr.studio.support.brightcove.com/players/generating-player-embed-code.html).
 
-Cette extension (version 1.1.0) prend en charge lʼincorporation de plusieurs vidéos BrightCove sur une seule page web. Sʼil existe plusieurs propriétés `id` parmi les balises Embed avancées, assurez-vous quʼelles possèdent toutes des valeurs uniques. Par exemple, `player1`, `player2`, etc.
+Cette extension version 1.1.0 prend en charge l’incorporation de plusieurs vidéos BrightCove sur une seule page web. S’il existe plusieurs propriétés `id` dans les balises incorporées avancées, assurez-vous qu’elles possèdent chacune des valeurs uniques. Par exemple, `player1`, `player2`, etc.
 
 >[!NOTE]
 >
->Sur les pages comportant plusieurs vidéos, chaque vidéo utilise le même jeu de configurations défini par la règle de la balise qui sʼexécute sur cette page. Par exemple, si vous créez une règle avec un événement qui se déclenche lorsque la vidéo est terminée à 50 %, chaque vidéo de la page déclenche la règle au point de repère de 50 %.
+>Sur les pages comportant plusieurs vidéos, chaque vidéo utilise le même jeu de configuration défini dans la règle de balise qui s’exécute sur cette page. Par exemple, si vous créez une règle avec un événement qui se déclenche lorsque la vidéo est terminée à 50 %, chaque vidéo de la page déclenche la règle au point de repère de 50 %.
 
-Si la page web utilisant cette extension interagit avec la vidéo avant que le script associé ne soit complètement chargé, deux options sʼoffrent à vous pour résoudre ce problème. Soit la bibliothèque de balises peut être chargée de manière synchrone, soit lʼélément `<script type="text/javascript">\_satellite.pageBottom();\</script\>` peut être placé avant lʼincorporation de la vidéo sur la page.
+Si la page web qui utilise cette extension interagit avec la vidéo avant que le script approprié ne soit complètement chargé, vous pouvez prendre deux mesures pour résoudre le problème. Vous pouvez tout d’abord charger la bibliothèque de balises de manière synchrone, puis placer l’élément `<script type="text/javascript">\_satellite.pageBottom();\</script\>` avant l’intégration de la vidéo dans la page.
 
-Pour plus dʼinformations sur les méthodes et les événements des composants utilisés dans cette extension, voir la [documentation de lʼAPI BrightCove](https://docs.brightcove.com/brightcove-player/1.x/Player.html#vjsplayer).
+Voir la [documentation de l’API BrightCove](https://docs.brightcove.com/brightcove-player/1.x/Player.html#vjsplayer) pour plus d’informations sur les méthodes de composants et les événements utilisés dans cette extension.
 
 ## Éléments de données
 
 L’extension contient sept éléments de données. Aucun ne nécessite d’être configuré.
 
-* **Position de la tête de lecture :** lorsque cet élément de données est appelé dans une règle de balise, il enregistre en secondes la position de la tête de lecture sur le montage vidéo.
+* **Position de la tête de lecture :** lorsque cet élément de données est appelé dans une règle de balise, il enregistre en secondes la position de la tête de lecture sur le montage vidéo.
 * **Identifiant du compte de la vidéo :** cet élément de données enregistre l’identifiant du compte Brightcove qui a publié la vidéo.
 * **Durée de la vidéo :** cet élément de données enregistre la durée totale, en secondes, du contenu vidéo. De plus, une mesure calculée peut être créée dans Analytics pour convertir cette valeur en minutes ou en heures.
-* **Prise en charge des publicités vidéo :** cet élément de données indique si les publicités sont prises en charge dans la vidéo ou non.
+* **Prise en charge des publicités vidéo :** cet élément de données indique si les publicités sont prises en charge dans la vidéo.
 * **Identifiant de la vidéo :** cet élément de données indique l’identifiant BrightCove associé à la vidéo.
 * **Nom de la vidéo :** cet élément de données indique le nom descriptif ou convivial de la vidéo.
-* **Balises de la vidéo :** cet élément de données indique les scripts spécifiques associés à la vidéo.
+* **Balises vidéo :** cet élément de données indique les scripts spécifiques associés à la vidéo.
 
 ## Événements
 
 L’extension comprend sept événements et seul le suivi personnalisé par points de repère requiert une configuration.
 
-* **Suivi personnalisé par points de repère :** cet événement se déclenche lorsque la vidéo atteint le pourcentage de vidéo indiqué. Par exemple, si une vidéo dure 60 secondes et que la valeur indiquée est de 50 %, lʼévénement se déclenche à 30 secondes de vidéo.
+* **Suivi personnalisé par points de repère :** cet événement se déclenche lorsque la vidéo atteint le pourcentage de vidéo indiqué. Par exemple, si une vidéo dure 60 secondes et que la valeur indiquée est de 50 %, l’événement se déclenche à 30 secondes de vidéo. 
 
 >[!NOTE]
 >
 >Veuillez noter que cet événement se déclenche à chaque fois que ce point de repère est atteint. Par exemple, si l’utilisateur atteint le repère des 50 %, retourne à un point antérieur de la vidéo, puis atteint à nouveau le repère, l’événement se déclenche à nouveau.
 
-* **Vidéo terminée :** cet événement se déclenche lorsquʼune vidéo est entièrement terminée.
-* **Métadonnées vidéo chargées :** cet événement est déclenché lorsque le lecteur a reçu les informations initiales de durée et de dimension.
+* **Vidéo terminée :** cet événement se déclenche lorsqu’une vidéo est entièrement terminée.
+* **Métadonnées de vidéo chargées :** cet événement est déclenché lorsque le lecteur a reçu les informations initiales de durée et de dimension.
 * **Vidéo mise en pause :** cet événement se déclenche lorsque la vidéo est mise en pause.
 * **Vidéo reprise :** cet événement se déclenche lorsque la vidéo reprend après avoir été mise en pause.
-* **Modification de lʼaffichage de la vidéo :** cet événement se déclenche lorsque la vidéo passe en mode Plein écran puis le quitte.
+* **Modification de l’affichage vidéo :** cet événement se déclenche lorsque la vidéo passe en mode Plein écran et le quitte.
 * **Vidéo lancée :** cet événement se déclenche lorsque la vidéo est lancée pour la première fois.
 
 ## Utilisation
 
-Une règle de balise peut être définie pour chaque événement vidéo (les sept événements répertoriés ci-dessus). Créez une règle de balise spécifique pour chaque événement dont vous souhaitez effectuer le suivi. Si vous ne souhaitez pas suivre un événement, il vous suffit de l’omettre pour créer une règle pour celui-ci.
+Une règle de balise peut être définie pour chaque événement vidéo (les sept événements répertoriés ci-dessus). Créez une règle de balise spécifique pour chaque événement dont vous souhaitez effectuer le suivi. Si vous ne souhaitez pas effectuer le suivi dʼun événement, ne créez pas de règle pour celui-ci.
 
 Les règles comportent trois actions :
 
@@ -75,7 +76,7 @@ Les règles comportent trois actions :
 
 ## Exemple de règle de balise pour « Vidéo lancée »
 
-Les objets dʼextension vidéo suivants doivent être inclus :
+Les objets d’extension vidéo suivants doivent être inclus :
 
 * **Événements**
 
@@ -90,16 +91,16 @@ Les objets dʼextension vidéo suivants doivent être inclus :
    1. Dans une action Analytics « Définir des variables », définissez :
 
       * L’événement pour **Vidéo lancée** (exemple : event17)
-      * Une valeur prop/eVar pour lʼélément de données **Nom de la vidéo** (exemple : eVar10)
-      * Une valeur prop/eVar pour lʼélément de données **Durée de la vidéo** (exemple : eVar11)
-      * Une valeur prop/eVar pour lʼélément de données **Emplacement actuel de la vidéo** (exemple : eVar12)
+      * Une valeur prop/eVar pour l’élément de données **Nom de la vidéo** (exemple : eVar10)
+      * Une valeur prop/eVar pour l&#39;élément de données **Durée de la vidéo** (exemple : eVar11)
+      * Une valeur prop/eVar pour l’élément de données **Emplacement actuel de la vidéo** (exemple : eVar12)
    1. L’action Analytics « Envoyer la balise » (`s.tl`)
    1. L’action Analytics « Effacer les variables »
 
 
 >[!TIP]
 >
->Pour ceux qui ne souhaitent pas fournir plusieurs valeurs eVar ou prop pour chaque élément vidéo, il existe une autre méthode. Les valeurs des éléments de données peuvent être concaténées dans lʼinterface utilisateur de la collecte de données. Elles sont ensuite analysées dans des rapports de classification à lʼaide de lʼoutil Créateur de règles de classification. Pour plus dʼinformations, voir la documentation sur lʼ[Outil Créateur de règles de classification](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr). Suite à lʼanalyse, elles sont appliquées en tant que segment dans Analysis Workspace.
+>Pour ceux qui ne souhaitent pas configurer plusieurs eVars ou props pour chaque élément vidéo, il existe une autre méthode. Les valeurs des éléments de données peuvent être concaténées dans l’interface utilisateur de la collecte de données. Ils sont ensuite analysés dans les rapports de classification à l’aide de l’outil Créateur de règles de classification. Pour plus d’informations, voir la documentation [Outil Créateur de règles de classification](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr). Enfin, elles sont appliquées en tant que segment dans Analysis Workspace.
 >
 >Pour ce faire, créez un nouvel élément de données appelé par exemple « Métadonnées vidéo » et programmez-le pour extraire tous les éléments de données vidéo (répertoriés ci-dessus) et les concaténer.
 

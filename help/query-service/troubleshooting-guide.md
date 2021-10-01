@@ -16,7 +16,7 @@ ht-degree: 30%
 
 Ce document fournit des réponses aux questions fréquentes sur Query Service et fournit une liste des codes d’erreur courants lors de l’utilisation de Query Service. Pour toute question ou dépannage concernant les autres services d’Adobe Experience Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
 
-## Questions fréquemment posées
+## Questions fréquentes
 
 Vous trouverez ci-dessous une liste de réponses aux questions les plus courantes sur Query Service.
 
@@ -87,7 +87,7 @@ Vous ne pouvez pas utiliser de caractères génériques pour obtenir toutes les 
 
 | Code erreur | État de la connexion | Description | Cause possible |
 | ---------- | ---------------- | ----------- | -------------- |
-| **08P01** | N/A | Type de message non pris en charge | Type de message non pris en charge |
+| **08P01** | S.O. | Type de message non pris en charge | Type de message non pris en charge |
 | **28P01** | Démarrage - authentification | Mot de passe non valide | Jeton d’authentification non valide |
 | **28000** | Démarrage - authentification | Type d’autorisation non valide | Type d’autorisation non valide. Doit être `AuthenticationCleartextPassword`. |
 | **42P12** | Démarrage - authentification | Aucune table trouvée | Aucune table n’a été trouvée pour utilisation |

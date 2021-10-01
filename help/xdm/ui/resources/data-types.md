@@ -21,7 +21,7 @@ Adobe Experience Platform fournit de nombreux types de données standard qui peu
 
 Ce tutoriel décrit les étapes de création et de modification des types de données personnalisés dans l’interface utilisateur de Platform.
 
-## Conditions préalables   
+## Conditions préalables
 
 Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous à la [présentation de XDM](../../home.md) pour une présentation du rôle de XDM dans l’écosystème Experience Platform et les [bases de la composition des schémas](../../schema/composition.md) pour la manière dont les types de données contribuent aux schémas XDM.
 
@@ -64,7 +64,7 @@ Sélectionnez le type de données à modifier dans la liste pour ouvrir le rail 
 
 ![](../../images/ui/resources/data-types/edit.png)
 
-## Ajoutez des champs au type de données {#add-fields}
+## Ajouter des champs au type de données {#add-fields}
 
 Pour commencer à ajouter des champs au type de données, sélectionnez l’icône **plus (+)** en regard du champ de niveau racine dans la zone de travail. Un nouveau champ s’affiche en dessous et le rail de droite se met à jour pour afficher les commandes du nouveau champ.
 

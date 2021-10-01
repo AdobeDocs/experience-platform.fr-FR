@@ -5,7 +5,7 @@ breadcrumb-title: Guide du contrôle d’accès
 user-guide-description: Tirez parti des profils de produits d’Adobe Admin Console pour lier les utilisateurs aux autorisations et aux environnements de test.
 feature: Access Control
 source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 100%
 

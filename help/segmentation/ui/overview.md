@@ -199,7 +199,7 @@ Vous trouverez plus d’informations sur la segmentation Edge dans le [guide de 
 >
 >Les violations de stratégie ne s’appliquent que si vous créez un segment qui a été affecté à une destination.
 
-Une fois le segment créé, il est analysé par la gouvernance des données de Adobe Experience Platform afin de s’assurer qu’il n’y a aucune violation de stratégie dans le segment. Pour de plus amples informations, rendez-vous sur la [[!DNL Data Governance]  d’aperçu](../../data-governance/home.md).
+Une fois le segment créé, il est analysé par la gouvernance des données de Adobe Experience Platform afin de s’assurer qu’il n’y a aucune violation de stratégie dans le segment. Pour plus d’informations, consultez la [[!DNL Data Governance] présentation ](../../data-governance/home.md).
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 

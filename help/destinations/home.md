@@ -1,14 +1,14 @@
 ---
 keywords: destinations;adobe experience platform;plateforme;présentation des destinations;activer les données;activer;activer
 title: Présentation des destinations
-seo-title: Présentation des destinations
+seo-title: Destinations overview
 description: Découvrez comment activer les données Adobe Experience Platform vers des destinations pour les campagnes marketing cross-canal, les e-mails, la publicité ciblée, etc.
-seo-description: Les destinations sont des intégrations prédéfinies avec des plateformes de destination qui permettent l’activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
 source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 37%
+source-wordcount: '457'
+ht-degree: 42%
 
 ---
 
@@ -68,6 +68,6 @@ Pour plus d’informations sur la sélection d’actions marketing dans le proce
 
 Pour plus d’informations sur les violations de stratégie de données dans le processus d’activation des segments, voir l’étape Révision dans les guides suivants :
 
-* [Activation des données d’audience vers des destinations d’exportation de segments par flux](./ui/activate-segment-streaming-destinations.md#review)
+* [Activation des données d’audience vers des destinations d’exportation de segments de diffusion](./ui/activate-segment-streaming-destinations.md#review)
 * [Activation des données d’audience vers des destinations d’exportation de profils en continu](./ui/activate-streaming-profile-destinations.md#review)
 * [Activation des données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md#review)

@@ -51,7 +51,7 @@ Les extensions vous permettent de répondre à divers cas d’utilisation client
 
 Les extensions peuvent appartenir aux catégories suivantes dans Platform :
 
-- [Publicité](../advertising/overview.md)
+- [Advertising](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
 - [Plateforme de gestion des données](../data-management/overview.md)
 - [Destinations de marketing par e-mail ](../email-marketing/overview.md)

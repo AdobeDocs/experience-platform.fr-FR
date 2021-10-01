@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; PSQL ; psql ; service de Requête ; service de requête ; métadonnées ; commandes ; commandes de métadonnées ;
+keywords: Experience Platform;accueil;rubriques populaires;PSQL;psql;service de requête;service de requête;métadonnées;commandes;commandes de métadonnées;
 solution: Experience Platform
-title: Commandes PostgreSQL de métadonnées dans Requête Service
+title: Commandes de métadonnées PostgreSQL dans Query Service
 topic-legacy: metadata
-description: Liste de commandes PostgreSQL actuellement prises en charge pour interroger des métadonnées dans Adobe Experience Platform Requête Service.
+description: Liste des commandes PostgreSQL actuellement prises en charge pour interroger des métadonnées dans Adobe Experience Platform Query Service.
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '338'
@@ -13,9 +12,9 @@ ht-degree: 82%
 
 ---
 
-# Commandes PostgreSQL de métadonnées dans Requête Service
+# Commandes PostgreSQL de métadonnées dans Query Service
 
-Pour les métadonnées de votre jeu de données, les commandes PostgreSQL suivantes sont actuellement prises en charge pour l&#39;interrogation :
+Pour les métadonnées de votre jeu de données, les commandes PostgreSQL suivantes sont actuellement prises en charge pour l’interrogation :
 
 >[!NOTE]
 >

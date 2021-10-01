@@ -2,14 +2,14 @@
 keywords: modifier l’activation, modifier la destination, modifier la destination
 title: Modification des flux d’activation
 type: Tutorial
-seo-title: Modification des flux d’activation
+seo-title: Edit activation flows
 description: Suivez les étapes de cet article pour modifier un flux d’activation existant dans Adobe Experience Platform.
-seo-description: Suivez les étapes de cet article pour modifier un flux d’activation existant dans Adobe Experience Platform.
+seo-description: Follow the steps in this article to edit an existing activation flow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 0%
+source-wordcount: '185'
+ht-degree: 1%
 
 ---
 

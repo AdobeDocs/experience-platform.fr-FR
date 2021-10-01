@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Type de données marketing
 topic-legacy: overview
 description: Ce document présente un aperçu du type de données Marketing XDM.
-source-git-commit: cb4afb0979bd65a9a82a6018323fa7beacdbf605
+exl-id: b5ac0127-15fe-42b6-b7fc-2fbcda7e7e27
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 7%
 
 ---
-
 
 #  Type de données marketing
 

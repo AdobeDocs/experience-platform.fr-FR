@@ -5,7 +5,7 @@ exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '586'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +37,7 @@ GET /companies/{COMPANY_ID}/app_configurations
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les configurations d’application répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
+>À l’aide des paramètres de requête, les configurations d’application répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -295,7 +295,7 @@ curl -X PUT \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour la configuration d’application. Chaque clé représente l’attribut de configuration d’application particulier à mettre à jour, ainsi que la valeur correspondante vers laquelle elle doit être mise à jour.<br><br>Les attributs suivants peuvent être mis à jour pour les configurations d’application :<ul><li>`app_id`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`push_credential`</li></ul> |
+| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour la configuration d’application. Chaque clé représente l’attribut de configuration d’application particulier à mettre à jour, ainsi que la valeur correspondante vers laquelle elle doit être mise à jour.<br><br>Les attributs suivants peuvent être mis à jour pour les configurations d’application :<ul><li>`app_id`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`push_credential`</li></ul> |
 | `id` | Champ `id` de la configuration d’application à mettre à jour. Cela doit correspondre à la valeur `{APP_CONFIGURATION_ID}` fournie dans le chemin d’accès de la requête. |
 | `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `app_configurations`. |
 

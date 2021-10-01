@@ -6,7 +6,7 @@ topic-legacy: labels
 description: La gouvernance des données d’Adobe Experience Platform vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d’utilisation des données associées. Ce document offre une présentation des libellés d’utilisation des données dans Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '611'
 ht-degree: 100%
 

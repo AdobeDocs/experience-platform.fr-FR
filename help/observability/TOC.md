@@ -4,7 +4,7 @@ user-guide-title: Guide des Insights d’observabilité
 user-guide-description: Surveillez les activités dans Platform grâce aux mesures statistiques et aux notifications d’événements.
 feature: Data Management
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 100%
 

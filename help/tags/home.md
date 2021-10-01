@@ -1,8 +1,9 @@
 ---
 title: Présentation des balises
-description: Les balises dans Adobe Experience Platform Launch représentent la nouvelle génération des fonctionnalités de gestion des balises dʼAdobe. Les balises offrent aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Les balises dans Adobe Experience Platform représentent la nouvelle génération des fonctionnalités de gestion des balises dʼAdobe. Les balises offrent aux clients un moyen simple de déployer et de gérer toutes les balises dʼanalyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
+exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 100%
 
@@ -14,7 +15,7 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](./term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Les balises dans Adobe Experience Platform Launch représentent la nouvelle génération des fonctionnalités de gestion des balises dʼAdobe. Les balises offrent aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
+Les balises dans Adobe Experience Platform représentent la nouvelle génération des fonctionnalités de gestion des balises dʼAdobe. Les balises offrent aux clients un moyen simple de déployer et de gérer toutes les balises dʼanalyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 
 Les balises permettent à tous les utilisateurs de créer et de gérer leurs propres intégrations, appelées *extensions*. Ces extensions sont disponibles pour les clients [!DNL Adobe Experience Cloud] sous la forme d’une expérience d’app store qui leur permet d’installer, de configurer et de déployer rapidement leurs balises.
 
@@ -30,7 +31,7 @@ Les balises sont proposées aux clients [!DNL Adobe Experience Cloud] en tant qu
 
 ### Extensions
 
-Une extension est un module de code (JavaScript, HTML et CSS) qui étend les fonctionnalités de balises. Créez, gérez et mettez à jour vos intégrations à l’aide d’une interface en libre-service ou presque. Vous pouvez considérer les extensions comme des applications que vous utilisez pour exécuter vos tâches.
+Une extension est un module de code (JavaScript, HTML et CSS) qui étend les fonctionnalités des balises. Créez, gérez et mettez à jour vos intégrations à l’aide d’une interface en libre-service ou presque. Vous pouvez considérer les extensions comme des applications que vous utilisez pour exécuter vos tâches.
 
 ### Catalogue d’extensions
 
@@ -55,22 +56,22 @@ Collectez, organisez et transmettez les données sur différentes technologies p
 
 ### Publication d’entreprise
 
-Le processus de publication permet aux équipes de publier du code sur les pages. Des personnes différentes peuvent créer une implémentation, l’approuver et la publier sur vos pages.
+Le processus de publication permet aux équipes de publier du code sur les pages. Des personnes différentes peuvent créer une mise en œuvre, lʼapprouver et la publier sur vos pages.
 
-* Les modifications apportées à votre code sont encapsulées dans les bibliothèques que vous définissez.
+* Les modifications de votre code sont encapsulées dans les bibliothèques que vous définissez.
 * Vous spécifiez où et quand vous souhaitez déployer votre code.
 * Plusieurs bibliothèques peuvent être créées en parallèle par des équipes différentes.
 * Environnements de développement illimités.
-* Processus délibéré de fusion des bibliothèques basé sur des autorisations.
+* Processus délibéré, basé sur des autorisations, pour fusionner des bibliothèques entre elles.
 
 ### API ouvertes.
 
-Automatisez les implémentations de technologies individuelles ou d’un groupe de technologies.
+Automatisez la mise en œuvre de technologies individuelles ou dʼun groupe de technologies.
 
-* Les balises interagissent avec l’API Reactor.
+* Les balises interagissent avec lʼAPI Reactor.
 * Les déploiements peuvent être automatisés grâce aux API.
 * Vous pouvez intégrer les API à vos propres systèmes internes.
-* Vous pouvez créer votre propre interface utilisateur, le cas échéant.
+* Vous pouvez créer votre propre interface utilisateur si tel est votre souhait.
 
 ### Balise conteneur modulaire légère
 
@@ -78,7 +79,7 @@ Le contenu de votre conteneur est réduit, y compris votre code personnalisé. T
 
 ## Autres informations importantes
 
-Les balises s’accompagnent de plusieurs améliorations par rapport aux systèmes similaires, notamment :
+Les balises offrent plusieurs avantages par rapport aux systèmes similaires, notamment :
 
 * La fonction `document.write ()` n’est pas utilisée lorsque Chrome ne l’autorise pas.
 * Les règles Haut de page et Bas de page sont regroupées dans la bibliothèque principale afin de réduire le nombre d’appels HTTP superflus.

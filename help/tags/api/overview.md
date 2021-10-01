@@ -5,7 +5,7 @@ exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1035'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -43,11 +43,11 @@ Pour savoir comment gérer les règles dans lʼAPI, consultez le [guide du point
 
 ## Composants de   règle
 
-Les composants de règle sont les éléments individuels constitutifs dʼune règle. Les composants de règle possèdent trois types de base :
+Les composants de règle sont les éléments individuels constitutifs dʼune règle. Les composants de règle possèdent trois types de base :
 
-* **Événements** : ce qui déclenche une règle
-* **Conditions** : ce que la règle vérifie pour déterminer une action
-* **Actions** : ce que la règle exécute selon que la condition est remplie ou non.
+* **Événements** : ce qui déclenche une règle
+* **Conditions** : ce que la règle vérifie pour déterminer une action
+* **Actions** : ce que la règle exécute selon que la condition est remplie ou non.
 
 Pour savoir comment gérer les règles dans lʼAPI, consultez le [guide du point dʼentrée des règles](./endpoints/rules.md).
 

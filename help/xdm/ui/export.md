@@ -22,7 +22,7 @@ Pour répondre à ce besoin, l’espace de travail [!UICONTROL Schémas] de l’
 >
 >Vous pouvez également utiliser l’API Schema Registry pour exporter d’autres ressources en plus des schémas, notamment des classes, des groupes de champs de schéma et des types de données. Pour plus d’informations, consultez le guide sur les [points de terminaison export/import](../api/export-import.md) .
 
-## Conditions préalables   
+## Conditions préalables
 
 Bien que l’interface utilisateur de Platform vous permette d’exporter des ressources XDM, vous devez utiliser l’API Schema Registry pour importer ces ressources dans d’autres environnements de test ou organisations IMS afin de terminer le workflow. Consultez le guide de [prise en main de l’API Schema Registry](../api/getting-started.md) pour obtenir des informations importantes sur les en-têtes d’authentification requis avant de suivre ce guide.
 

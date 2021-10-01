@@ -1,8 +1,9 @@
 ---
 title: Présentation de lʼextension du service Experience Cloud Identity dʼAdobe
-description: Découvrez lʼextension de balises du service Adobe Experience Cloud Identity dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez lʼextension de balise du service Experience Cloud Identity dʼAdobe dans Adobe Experience Platform.
+exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 100%
 

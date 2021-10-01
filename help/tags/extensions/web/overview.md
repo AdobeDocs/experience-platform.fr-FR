@@ -1,8 +1,9 @@
 ---
 title: Référence des extensions Adobe
-description: Recherchez la documentation relative aux extensions de balises pour les produits Adobe dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Recherchez la documentation sur les extensions de balises pour les produits Adobe dans Adobe Experience Platform.
+exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 100%
 
@@ -14,7 +15,7 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Voici une liste reprenant la documentation pour les extensions de balises fournies par les solutions Adobe :
+Voici une liste reprenant la documentation pour les extensions de balises fournies par les solutions dʼAdobe :
 
 * [Extension Analytics](analytics/overview.md)
 * [Extension Adobe Analytics Product String](product-string/overview.md)

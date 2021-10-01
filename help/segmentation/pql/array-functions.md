@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;pql;PQL;Profil Requête Language;array fonctions;array;
+keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;pql;PQL;langage de requête de profil;fonctions de tableau;tableau;tableau
 solution: Experience Platform
-title: Tableau, Liste et définition des fonctions PQL
+title: Fonctions de tableau, de liste et de définition de PQL
 topic-legacy: developer guide
 description: Le langage de requête de profil (PQL) offre des fonctions pour faciliter l’interaction avec des tableaux, des listes et des chaînes.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '767'
-ht-degree: 93%
+ht-degree: 95%
 
 ---
 
 # Fonctions de tableau, de liste et d’ensemble
 
-[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l&#39;interaction avec les tableaux, les listes et les chaînes. Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans le [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l’interaction avec des tableaux, des listes et des chaînes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## In
 
-La fonction `in` permet de déterminer si un élément est un membre d’un tableau ou d’une liste.
+La fonction `in` permet de déterminer si un élément est un membre d&#39;un tableau ou d&#39;une liste.
 
 **Format**
 
@@ -37,11 +36,11 @@ person.birthMonth in [3, 6, 9]
 
 ## Not in
 
-La fonction `notIn` permet de déterminer si un élément n’est pas un membre d’un tableau ou d’une liste.
+La fonction `notIn` permet de déterminer si un élément n&#39;est pas un membre d&#39;un tableau ou d&#39;une liste.
 
 >[!NOTE]
 >
->La fonction `notIn` assure *également* qu’aucune valeur n’est nulle. Par conséquent, les résultats ne sont pas une négation exacte de la fonction `in`.
+>La fonction `notIn` assure *également* qu&#39;aucune valeur n&#39;est nulle. Par conséquent, les résultats ne sont pas une négation exacte de la fonction `in`.
 
 **Format**
 
@@ -95,7 +94,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Subset of
 
-La fonction `subsetOf` sert à déterminer si un tableau spécifique (tableau A) est un sous-ensemble d’un autre tableau (tableau B). En d’autres termes, elle permet de déterminer si tous les éléments du tableau A sont des éléments du tableau B.
+La fonction `subsetOf` sert à déterminer si un tableau spécifique (tableau A) est un sous-ensemble d&#39;un autre tableau (tableau B). En d&#39;autres termes, elle permet de déterminer si tous les éléments du tableau A sont des éléments du tableau B.
 
 **Format**
 
@@ -113,7 +112,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Superset of
 
-La fonction `supersetOf` sert à déterminer si un tableau spécifique (tableau A) est un sur-ensemble d’un autre tableau (tableau B). En d’autres termes, elle permet de déterminer si le tableau A contient tous les éléments du tableau B.
+La fonction `supersetOf` sert à déterminer si un tableau spécifique (tableau A) est un sur-ensemble d&#39;un autre tableau (tableau B). En d&#39;autres termes, elle permet de déterminer si le tableau A contient tous les éléments du tableau B.
 
 **Format**
 
@@ -243,7 +242,7 @@ La fonction `topN` est utilisée pour renvoyer les premiers éléments `N` d’u
 | --------- | ----------- |
 | `{ARRAY}` | Tableau ou liste à trier. |
 | `{VALUE}` | Propriété dans laquelle trier le tableau ou la liste. |
-| `{AMOUNT}` | Nombre d’éléments à renvoyer. |
+| `{AMOUNT}` | Nombre d&#39;éléments à renvoyer. |
 
 **Exemple**
 
@@ -267,7 +266,7 @@ La fonction `bottomN` est utilisée pour renvoyer les derniers éléments `N` d�
 | --------- | ----------- | 
 | `{ARRAY}` | Tableau ou liste à trier. |
 | `{VALUE}` | Propriété dans laquelle trier le tableau ou la liste. |
-| `{AMOUNT}` | Nombre d’éléments à renvoyer. |
+| `{AMOUNT}` | Nombre d&#39;éléments à renvoyer. |
 
 **Exemple**
 

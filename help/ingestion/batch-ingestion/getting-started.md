@@ -3,13 +3,13 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Prise en main de l’API Data Ingestion
 type: Documentation
 description: Le guide de prise en main de l’API Data Ingestion décrit les concepts clés et les fonctionnalités de base que vous devez connaître avant de commencer à ingérer des données dans Experience Platform à l’aide d’API.
-source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
+exl-id: 0653de2b-3268-478b-a23f-c458b6d3df7c
+source-git-commit: 648923a0a124767f530bea09519449f76d576b5e
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 43%
 
 ---
-
 
 # Prise en main de l’API Data Ingestion {#getting-started}
 

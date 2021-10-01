@@ -6,7 +6,7 @@ feature: Profiles
 source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 93%
+ht-degree: 96%
 
 ---
 
@@ -50,4 +50,4 @@ ht-degree: 93%
 * [Traitement des demandes d’accès à des informations personnelles](privacy.md)
 * [Guide de dépannage du [!DNL Profile]](troubleshooting.md)
 * [Référence de l’API Profile](https://www.adobe.com/go/profile-apis-en)
-* [Notes de mise à jour de Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)

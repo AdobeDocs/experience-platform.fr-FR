@@ -21,7 +21,7 @@ ht-degree: 10%
 
 Dans Adobe Experience Platform, les données sont ingérées à partir d’une grande variété de sources, analysées dans Experience Platform et activées vers un grand nombre de destinations. En offrant de la transparence au niveau des flux de données, Platform facilite le processus de suivi de ce flux de données potentiellement non linéaire.
 
-Le tableau de bord de surveillance vous fournit une représentation visuelle du parcours d’un flux de données. Vous pouvez utiliser une vue de surveillance agrégée et naviguer verticalement du niveau source à un flux de données et à une exécution de flux de données, ce qui vous permet d’afficher les mesures correspondantes qui contribuent au succès ou à l’échec d’un flux de données. Vous pouvez également utiliser la capacité de surveillance interservices du tableau de bord de surveillance pour surveiller le parcours d’un flux de données depuis une source, vers [!DNL Identity Service] et vers [!DNL Profile].
+Le tableau de bord de surveillance vous fournit une représentation visuelle du parcours d’un flux de données. Vous pouvez utiliser une vue de surveillance agrégée et naviguer verticalement du niveau source à un flux de données et à une exécution de flux de données, ce qui vous permet d’afficher les mesures correspondantes qui contribuent au succès ou à l’échec d’un flux de données. Vous pouvez également utiliser la capacité de surveillance inter-services du tableau de bord de surveillance pour surveiller le parcours d’un flux de données depuis une source, vers [!DNL Identity Service] et vers [!DNL Profile].
 
 Ce tutoriel décrit les étapes à suivre pour surveiller votre flux de données à l’aide de la vue de surveillance agrégée et de la surveillance inter-services.
 

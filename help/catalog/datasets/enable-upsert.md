@@ -3,13 +3,13 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Activation d’un jeu de données pour les mises à jour de profil à l’aide d’API
 type: Tutorial
 description: Ce tutoriel vous explique comment utiliser les API Adobe Experience Platform pour activer un jeu de données avec des fonctionnalités "d’insertion" afin d’effectuer des mises à jour des données de Real-time Customer Profile.
-source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
+exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
+source-git-commit: 648923a0a124767f530bea09519449f76d576b5e
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 35%
 
 ---
-
 
 # Activation d’un jeu de données pour les mises à jour de profil à l’aide d’API
 

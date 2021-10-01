@@ -1,8 +1,9 @@
 ---
 title: Manifeste d’extensions
 description: Découvrez comment configurer un fichier de manifeste JSON informant Adobe Experience Platform quant à la manière correcte de consommer votre extension.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '2647'
 ht-degree: 100%
 
@@ -25,8 +26,8 @@ Un manifeste d’extensions doit être constitué des éléments suivants :
 | `name` | Nom de l’extension. Il doit être différent du nom de toutes les autres extensions et doit respecter les [règles de nommage](#naming-rules). **Il est utilisé par les balises comme identifiant et ne doit pas être modifié après la publication de votre extension.** |
 | `platform` | La plateforme de votre extension. La seule valeur acceptée pour le moment est `web`. |
 | `version` | La version de votre extension. Elle doit respecter le format de version [semver](http://semver.org/). Ce format est cohérent avec le [champ de version npm](https://docs.npmjs.com/files/package.json#version). |
-| `displayName` | Le nom lisible de votre extension. Cela sera présenté aux utilisateurs de Platform. Il nʼest pas nécessaire de mentionner « balises » ou « Extension », les utilisateurs savent déjà quʼils utilisent une extension de balise. |
-| `description` | La description de votre extension. Cela sera présenté aux utilisateurs de Platform. Si votre extension permet aux utilisateurs de mettre en œuvre votre produit sur leur site web, décrivez ce que fait votre produit. Il nʼest pas nécessaire de mentionner « balises » ou « Extension », les utilisateurs savent déjà quʼils utilisent une extension de balise. |
+| `displayName` | Le nom lisible de votre extension. Il sera visible pour les utilisateurs de Platform. Il nʼest pas nécessaire de mentionner « balises » ou « Extension », les utilisateurs savent déjà quʼils utilisent une extension de balise. |
+| `description` | La description de votre extension. Il sera visible pour les utilisateurs de Platform. Si votre extension permet aux utilisateurs de mettre en œuvre votre produit sur leur site web, décrivez ce que fait votre produit. Il nʼest pas nécessaire de mentionner « balises » ou « Extension », les utilisateurs savent déjà quʼils utilisent une extension de balise. |
 | `iconPath` *(Facultatif)* | Chemin dʼaccès relatif à lʼicône qui sʼaffichera pour lʼextension. Il ne doit pas commencer par une barre oblique. Il doit référencer un fichier SVG avec une extension `.svg`. Le SVG doit être carré et peut être mis à l’échelle par Platform. |
 | `author` | L’« auteur » est un objet qui doit être structuré comme suit : <ul><li>`name` : nom de l’auteur de l’extension. Vous pouvez également utiliser le nom de la société ici.</li><li>`url` *(Facultatif)* : URL permettant d’en savoir plus sur l’auteur de l’extension.</li><li>`email` *(Facultatif)* : adresse électronique de l’auteur de l’extension.</li></ul>Ceci est cohérent avec les règles [champ auteur npm](https://docs.npmjs.com/files/package.json#people-fields-author-contributors). |
 | `exchangeUrl` *(Requis pour les extensions publiques)* | URL de la liste de votre extension sur Adobe Exchange. Elle doit correspondre au modèle `https://www.adobeexchange.com/experiencecloud.details.######.html`. |
@@ -115,7 +116,7 @@ Une définition de type est un objet utilisé pour décrire un type d’événem
     </tr>
     <tr>
       <td><code>displayName</code></td>
-      <td>Le texte qui sera utilisé pour représenter le type dans lʼinterface utilisateur de la collecte de données. Il doit être lisible à l’œil.</td>
+      <td>Le texte qui sera utilisé pour représenter le type dans lʼinterface utilisateur de collecte de données. Il doit être lisible à l’œil.</td>
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(Facultatif)</em></td>
@@ -136,16 +137,16 @@ Une définition de type est un objet utilisé pour décrire un type d’événem
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": {
-    "delay": {
+  "properties" : {
+    "delay" : {
       "type": "number",
-      "minimum": 1
+      "minimum" : 3
     }
   },
-  "required": [
+  "required" : [
     "delay"
   ],
-  "additionalProperties": false
+  "additionalProperties" : false
 }
 </pre>
       Nous vous recommandons d’utiliser un outil tel que le <a href="http://www.jsonschemavalidator.net/">Validateur de schémas JSON</a> pour tester manuellement votre schéma.</td>
@@ -161,7 +162,7 @@ Une définition de type est un objet utilisé pour décrire un type d’événem
 
 Pour certains cas dʼutilisation spécifiques, les extensions ont besoin que les objets settings enregistrés à partir dʼune vue soient transformés par Platform avant dʼêtre émis dans la bibliothèque dʼexécution des balises. Vous pouvez demander qu’une ou plusieurs de ces transformations se produisent en définissant la propriété `transforms` lors de la définition d’une définition de type dans votre `extension.json`. La propriété `transforms` est un tableau d’objets où chaque objet représente une transformation qui doit avoir lieu.
 
-Toutes les transformations nécessitent un `type` et un `propertyPath`. `type` doit être l’un des `function`, `remove` et `file` et décrit la transformation que Platform doit appliquer à l’objet settings. `propertyPath` est une chaîne délimitée par des points qui indique aux balises où trouver la propriété qui doit être modifiée dans lʼobjet settings. Voici un exemple d’objet settings et quelques `propertyPath` :
+Toutes les transformations nécessitent un `type` et un `propertyPath`. `type` doit être l’un des `function`, `remove` et `file` et décrit la transformation que Platform doit appliquer à l’objet settings. Le champ `propertyPath` est une chaîne délimitée par des points qui indique aux balises où trouver la propriété qui doit être modifiée dans lʼobjet settings. Voici un exemple d’objet settings et quelques `propertyPath` :
 
 ```js
 {

@@ -5,7 +5,7 @@ description: Ce document décrit la procédure à suivre pour sʼabonner aux not
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
 source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 100%
 

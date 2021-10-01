@@ -57,7 +57,7 @@ Le tableau suivant décrit les valeurs acceptées pour `type` et leur significat
 
 | Valeur | Description |
 | --- | --- |
-| `browser` | Browser |
+| `browser` | Navigateur |
 | `application` | Application |
 | `iot` | Internet des choses |
 | `external` | Système externe |

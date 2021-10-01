@@ -1,8 +1,9 @@
 ---
 title: Modules de bibliothèque principaux pour les extensions web
-description: Découvrez les modules de bibliothèque principaux que vous pouvez utiliser dans vos extensions web.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez les principaux modules Bibliothèque que vous pouvez utiliser dans vos extensions web.
+exl-id: 7fb63208-aed0-4add-b6da-8e4aea063d0a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 100%
 
@@ -78,7 +79,7 @@ loadScript(url).then(function() {
 
 ### [!DNL reactor-promise]
 
-`reactor-promise` est un constructeur qui imite l’[API Promise](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) native dans ECMAScript 6. Si l’API Promise native est disponible, elle est renvoyée à la place.
+`reactor-promise` est un constructeur qui imite l’[API Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) native dans ECMAScript 6. Si l’API Promise native est disponible, elle est renvoyée à la place.
 
 ```javascript
 var Promise = require('@adobe/reactor-promise');

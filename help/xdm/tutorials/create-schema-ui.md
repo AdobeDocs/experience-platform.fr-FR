@@ -27,7 +27,7 @@ Si vous préférez composer un schéma à l’aide de l’API [!DNL Schema Regis
 
 Ce tutoriel nécessite une compréhension pratique des différents aspects de Adobe Experience Platform impliqués dans la création de schémas. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux concepts suivants :
 
-* [[!DNL Experience Data Model (XDM)]](../home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
+* [[!DNL Experience Data Model (XDM)]](../home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
    * [Principes de base de la composition](../schema/composition.md) des schémas : Présentation des schémas XDM et de leurs blocs de création, notamment les classes, les groupes de champs de schéma, les types de données et les champs individuels.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
@@ -178,7 +178,7 @@ Différentes options de contraintes sont disponibles selon le type de données s
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Ajoutez d’autres champs au groupe de champs {#field-group-fields-2}
+## Ajouter d’autres champs au groupe de champs {#field-group-fields-2}
 
 Maintenant que vous avez ajouté le champ `loyaltyId` , vous pouvez ajouter des champs supplémentaires pour capturer des informations relatives à la fidélité, telles que :
 

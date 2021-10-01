@@ -5,13 +5,13 @@ exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1060'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
 # Prise en main de l’API Reactor
 
-Pour utiliser l’[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/), chaque demande doit inclure les en-têtes d’authentification suivants :
+Pour utiliser l’[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/), chaque demande doit inclure les en-têtes d’authentification suivants :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -25,7 +25,7 @@ Avant de pouvoir générer des valeurs d’authentification pour l’API Reactor
 
 ## Génération des informations d’identification d’accès
 
-À l’aide d’Adobe Developer Console, vous devez générer les trois informations d’identification d’accès suivantes :
+À l’aide d’Adobe Developer Console, vous devez générer les trois informations d’identification d’accès suivantes :
 
 * `{IMS_ORG}`
 * `{API_KEY}`
@@ -67,10 +67,10 @@ Sélectionnez les profils de produit souhaités dans la liste, puis sélectionne
 
 ![](../images/api/getting-started/select-product-profile.png)
 
-Une fois que l’API a été ajoutée au projet, la page du projet réapparaît sur la page Experience Platform de l’API Reactor. À partir de là, faites défiler l’écran jusqu’à la section **Compte de service (JWT)**, qui fournit les informations d’identification d’accès suivantes, requises dans tous les appels à l’API Reactor :
+Une fois que l’API a été ajoutée au projet, la page du projet réapparaît sur la page Experience Platform de l’API Reactor. À partir de là, faites défiler l’écran jusqu’à la section **Compte de service (JWT)**, qui fournit les informations d’identification d’accès suivantes, requises dans tous les appels à l’API Reactor :
 
 * **ID CLIENT** : l’identifiant du client est l’identifiant requis `{API_KEY}` qui doit être fourni dans l’en-tête `x-api-key`.
-* **ID D’ORGANISATION** : l’ID d’organisation est la valeur `{IMS_ORG}` qui doit être utilisée dans l’en-tête `x-gw-ims-org-id`.
+* **ID D’ORGANISATION** : l’ID d’organisation est la valeur `{IMS_ORG}` qui doit être utilisée dans l’en-tête `x-gw-ims-org-id`.
 
 ![](../images/api/getting-started/access-creds.png)
 
@@ -82,7 +82,7 @@ Maintenant que vous disposez de vos valeurs `{API_KEY}` et `{IMS_ORG}`, l’éta
 >
 >Ces jetons expirent après 24 heures. Si vous utilisez cette intégration pour une application, il est préférable d’obtenir votre jeton du porteur par programmation à partir de votre application.
 
-Selon votre cas d’utilisation, vous disposez de deux options pour générer vos jetons d’accès :
+Selon votre cas d’utilisation, vous disposez de deux options pour générer vos jetons d’accès :
 
 * [Génération manuelle de jetons](#manual)
 * [Génération de jetons par programmation](#program)
@@ -99,7 +99,7 @@ Un nouveau jeton d’accès est généré et un bouton permettant de copier le j
 
 #### Générer des jetons d’accès par programmation {#program}
 
-Si vous utilisez votre intégration pour une application, vous pouvez générer des jetons d’accès par programmation par le biais des demandes d’API. Pour ce faire, vous devez obtenir les valeurs suivantes :
+Si vous utilisez votre intégration pour une application, vous pouvez générer des jetons d’accès par programmation par le biais des demandes d’API. Pour ce faire, vous devez obtenir les valeurs suivantes :
 
 * Identifiant du client (`{API_KEY}`)
 * Client secret (`{SECRET}`)
@@ -121,7 +121,7 @@ Une fois que vous avez rassemblé vos informations d’identification, vous pouv
 
 **Requête**
 
-La requête doit envoyer une payload `multipart/form-data`, fournissant vos informations d’authentification comme illustré ci-dessous :
+La requête doit envoyer une payload `multipart/form-data`, fournissant vos informations d’authentification comme illustré ci-dessous :
 
 ```shell
 curl -X POST \
@@ -165,6 +165,6 @@ Une fois que vous avez confirmé que vos informations d’identification d’acc
 
 ## Ressources supplémentaires
 
-Bibliothèques et SDK JWT : [https://jwt.io/](https://jwt.io/)
+Bibliothèques et SDK JWT : [https://jwt.io/](https://jwt.io/)
 
-Développement de l’API Postman : [https://www.postman.com/](https://www.postman.com/)
+Développement de l’API Postman : [https://www.postman.com/](https://www.postman.com/)

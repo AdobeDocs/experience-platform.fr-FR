@@ -3,12 +3,12 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM
 solution: Experience Platform
 title: Groupe de champs de schéma Détails de l’appartenance à un segment
 topic-legacy: overview
-description: This document provides an overview of the Segment Membership Details schema field group.
+description: Ce document présente un aperçu du groupe de champs Détails de l’appartenance au segment .
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '426'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `segmentMembership` | Carte | A map object which describes the individual&#39;s segment memberships. La structure de cet objet est décrite en détail ci-dessous. |
+| `segmentMembership` | Carte | Objet map qui décrit les appartenances aux segments de l’individu. La structure de cet objet est décrite en détail ci-dessous. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -77,7 +77,7 @@ Voici un exemple de `segmentMembership` carte que le système a renseignée pour
 | `xdm:version` | Version du segment pour lequel ce profil s’est qualifié. |
 | `xdm:lastQualificationTime` | Horodatage de la dernière fois que ce profil s’est qualifié pour le segment. |
 | `xdm:validUntil` | Horodatage indiquant le moment où l’appartenance au segment ne doit plus être considérée comme valide. |
-| `xdm:status` | Indique si l’appartenance au segment a été réalisée dans le cadre de la requête actuelle. Les valeurs suivantes sont acceptées : <ul><li>`existing`: Le profil faisait déjà partie du segment avant la demande et continue de conserver son adhésion.</li><li>`realized`: Le profil entre dans le segment dans le cadre de la requête actuelle.</li><li>`exited`: Le profil quitte le segment dans le cadre de la requête actuelle.</li></ul> |
+| `xdm:status` | Indique si l’appartenance au segment a été réalisée dans le cadre de la requête actuelle. Les valeurs suivantes sont acceptées : <ul><li>`existing`: Le profil faisait déjà partie du segment avant la demande et continue de conserver son adhésion.</li><li>`realized`: Le profil entre dans le segment dans le cadre de la requête actuelle.</li><li>`exited`: Le profil quitte le segment dans le cadre de la requête actuelle.</li></ul> |
 | `xdm:payload` | Certaines adhésions aux segments incluent une payload qui décrit les valeurs supplémentaires directement liées à l’appartenance. Un seul payload d’un type donné peut être fourni pour chaque appartenance. `xdm:payloadType` indique le type de charge utile (`boolean`,  `number`,  `propensity` ou  `string`), tandis que sa propriété frère fournit la valeur du type de charge utile. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -85,4 +85,4 @@ Voici un exemple de `segmentMembership` carte que le système a renseignée pour
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
+* [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)

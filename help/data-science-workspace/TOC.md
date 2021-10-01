@@ -5,10 +5,9 @@ breadcrumb-title: Guide de Data Science Workspace
 user-guide-description: Utilisez le machine learning pour développer, entraîner et évaluer des modèles et des recettes avec des ordinateurs portables équipés d’Adobe Sensei et de JupyterLab.
 feature: Data Science Workspace
 solution: Experience Platform, Intelligent Services
-translation-type: ht
 source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
-workflow-type: ht
-source-wordcount: '240'
+workflow-type: tm+mt
+source-wordcount: '237'
 ht-degree: 100%
 
 ---
@@ -33,7 +32,7 @@ ht-degree: 100%
    * [MLInstances (recettes)](api/mlinstances.md)
    * [Expériences](api/experiments.md)
    * [Modèles](api/models.md)
-   * [MLServices](api/mlservices.md)
+   * [MLService](api/mlservices.md)
    * [Insights](api/insights.md)
    * [Annexe](api/appendix.md)
 * Machine learning en temps réel (Alpha) {#real-time-machine-learning}
@@ -44,7 +43,7 @@ ht-degree: 100%
 * Recettes préconfigurées {#pre-built-recipes}
    * [Recette des recommandations de produits](pre-built-recipes/product-recommendations.md)
    * [Prédiction d’achat de produit](pre-built-recipes/product-purchase-prediction.md)
-   * [Recette de ventes au détail](pre-built-recipes/retail-sales.md)
+   * [Recette Ventes au détail](pre-built-recipes/retail-sales.md)
 * Création de modèles {#authoring}
    * [SDK de création de modèles](authoring/sdk.md)
    * [Création d’un pipeline de fonctionnalités](authoring/feature-pipeline.md)

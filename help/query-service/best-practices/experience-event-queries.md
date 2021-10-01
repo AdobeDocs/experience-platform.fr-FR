@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; requêtes d’événement d’expérience ; requête d’événement d’expérience ; requête de Événement d’expérience ;
+keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;requêtes experienceevent;requête experienceevent;requête Experience Event;
 solution: Experience Platform
-title: Exemples de Requêtes pour les Événements d’expérience
+title: Exemples de requêtes pour les événements d’expérience
 topic-legacy: queries
 type: Tutorial
-description: Le document suivant fournit des exemples de requêtes impliquant des Événements d’expérience dans Adobe Experience Platform Requête Service.
+description: Le document suivant fournit des exemples de requêtes impliquant des événements d’expérience dans Adobe Experience Platform Query Service.
 exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '320'
@@ -16,15 +15,15 @@ ht-degree: 58%
 
 # Exemples de requêtes pour [!DNL Experience Events]
 
-Outre les requêtes SQL standard, Adobe Experience Platform [!DNL Query Service] prend en charge l&#39;écriture de requêtes à l&#39;aide de [!DNL Experience Events]. Les Événements d’expérience sont représentés par la classe ExperienceEvent du modèle de données d’expérience (XDM), qui capture un instantané immuable et non agrégé du système lorsqu’un utilisateur interagit avec un site Web ou un service et peut donc être utilisé pour l’analyse du domaine temporel.
+Outre les requêtes SQL standard, Adobe Experience Platform [!DNL Query Service] prend en charge l’écriture de requêtes à l’aide de [!DNL Experience Events]. Les événements d’expérience sont représentés par la classe ExperienceEvent du modèle de données d’expérience (XDM), qui capture un instantané non agrégé et immuable du système lorsqu’un utilisateur interagit avec un site web ou un service et peut donc être utilisé pour l’analyse du domaine temporel.
 
-Vous trouverez plus d&#39;informations sur XDM et [!DNL Experience Events] dans le [[!DNL XDM System] overview](../../xdm/home.md). En combinant [!DNL Query Service] à [!DNL Experience Events], vous pouvez effectuer un suivi efficace des tendances comportementales parmi vos utilisateurs. Le document suivant fournit des exemples de requêtes impliquant [!DNL Experience Events].
+Vous trouverez plus d’informations sur XDM et [!DNL Experience Events] dans la [[!DNL XDM System] présentation](../../xdm/home.md). En combinant [!DNL Query Service] à [!DNL Experience Events], vous pouvez effectuer un suivi efficace des tendances comportementales parmi vos utilisateurs. Le document suivant fournit des exemples de requêtes impliquant [!DNL Experience Events].
 
 ## Création d’un rapport de tendance d’événements par jour sur une période spécifique
 
 L’exemple suivant crée un rapport de tendance d’événements sur une période donnée avec un regroupement par date. Plus précisément, il récapitule diverses valeurs d’analyse sous A, B et C, puis récapitule le nombre de fois où les parkas ont été consultées.
 
-La colonne d&#39;horodatage trouvée dans les jeux de données [!DNL Experience Event] se trouve en UTC. L’exemple suivant utilise la fonction `from_utc_timestamp()` pour changer l’horodatage UTC en EDT. La fonction `date_format()` est ensuite utilisée pour isoler la date du reste de l’horodatage.
+La colonne d’horodatage trouvée dans les jeux de données [!DNL Experience Event] est en UTC. L’exemple suivant utilise la fonction `from_utc_timestamp()` pour changer l’horodatage UTC en EDT. La fonction `date_format()` est ensuite utilisée pour isoler la date du reste de l’horodatage.
 
 ```sql
 SELECT 

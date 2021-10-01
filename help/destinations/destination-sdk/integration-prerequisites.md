@@ -1,7 +1,8 @@
 ---
 description: Pour utiliser le SDK de destination, une société partenaire doit remplir les conditions préalables répertoriées dans ce document.
 title: Conditions préalables à l’intégration
-source-git-commit: 2841adc0ce212a945c35ba38209d4c00c519ad7b
+exl-id: 031af9f1-ce18-4056-bd53-199ce8b56be5
+source-git-commit: 6ff5fd0e80f7ca1015969e91cc23c88251509b61
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%

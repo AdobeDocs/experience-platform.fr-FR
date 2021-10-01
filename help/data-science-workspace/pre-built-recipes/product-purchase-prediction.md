@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; recette d'achat de produit ; Espace de travail de données ; rubriques populaires ; recettes ; recette de précréation
+keywords: Experience Platform;recette d’achat de produit;Data Science Workspace;rubriques populaires;recettes;recette de précréation
 solution: Experience Platform
-title: Recette de prédiction d'achat de produit
+title: Recette de prédiction d’achat de produit
 topic-legacy: overview
 description: La recette de prédiction d’achat de produit vous permet de prévoir la probabilité d’un certain type d’événement d’achat de client, un achat de produit, par exemple.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-translation-type: tm+mt
 source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '397'
@@ -13,7 +12,7 @@ ht-degree: 94%
 
 ---
 
-# Recette de prédiction d&#39;achat de produit
+# Recette de prédiction d’achat de produit
 
 La recette de prédiction d’achat de produit vous permet de prévoir la probabilité d’un certain type d’événement d’achat de client, un achat de produit, par exemple.
 

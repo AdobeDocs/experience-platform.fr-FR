@@ -1,8 +1,9 @@
 ---
 title: Déploiement asynchrone
-description: Découvrez comment déployer les bibliothèques de balises d’Adobe Experience Platform de manière asynchrone sur votre site web.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez comment déployer les bibliothèques de balises Adobe Experience Platform de manière asynchrone sur votre site web.
+exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 100%
 
@@ -14,7 +15,7 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Les performances et le déploiement sans blocage des bibliothèques JavaScript exigés par nos produits sont de plus en plus importants pour les utilisateurs d’Adobe Experience Cloud. Des outils tels que [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) recommandent aux utilisateurs de modifier leur manière de déployer les bibliothèques Adobe sur leur site. Cet article explique comment utiliser les bibliothèques JavaScript d’Adobe d’une manière asynchrone.
+Les performances et le déploiement sans blocage des bibliothèques JavaScript exigés par nos produits sont de plus en plus importants pour les utilisateurs dʼAdobe Experience Cloud. Des outils tels que [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) recommandent aux utilisateurs de modifier leur manière de déployer les bibliothèques Adobe sur leur site. Cet article explique comment utiliser les bibliothèques JavaScript dʼAdobe de manière asynchrone.
 
 ## Synchrone et asynchrone
 
@@ -44,15 +45,15 @@ Cela indique au navigateur que, lorsque cette balise script est analysée, il do
 
 ## Considérations en matière de déploiement asynchrone
 
-Comme décrit ci-dessus, dans le cas des déploiements synchrones, le navigateur suspend l’analyse et le rendu de la page pendant le chargement et l’exécution de la bibliothèque de balises d’Adobe Experience Platform. D’autre part, dans le cas des déploiements asynchrones, le navigateur poursuit l’analyse et le rendu de la page pendant le chargement de la bibliothèque. La variabilité du moment où le chargement de la bibliothèque de balises peut prendre fin par rapport à l’analyse et au rendu de la page doit être prise en compte.
+Comme décrit ci-dessus, dans le cas des déploiements synchrones, le navigateur suspend l’analyse et le rendu de la page pendant le chargement et l’exécution de la bibliothèque de balises Adobe Experience Platform. D’autre part, dans le cas des déploiements asynchrones, le navigateur poursuit l’analyse et le rendu de la page pendant le chargement de la bibliothèque. La variabilité du moment où le chargement de la bibliothèque de balises peut prendre fin par rapport à l’analyse et au rendu de la page doit être prise en compte.
 
-Tout d’abord, puisque le chargement de la bibliothèque de balises peut prendre fin avant ou après l’analyse et l’exécution du bas de la page, vous ne devriez plus appeler `_satellite.pageBottom()` depuis votre code de page (`_satellite` ne sera pas disponible avant le chargement de la bibliothèque). Cela est expliqué dans la section [Chargement asynchrone du code intégré aux balises](#loading-the-tags-embed-code-asynchronously).
+Tout d’abord, puisque le chargement de la bibliothèque peut prendre fin avant ou après l’analyse et l’exécution du bas de la page, vous ne devriez plus appeler `_satellite.pageBottom()` depuis votre code de page (`_satellite` ne sera disponible qu&#39;une fois la bibliothèque chargée). Ceci est expliqué dans [Chargement asynchrone du code incorporé aux balises](#loading-the-tags-embed-code-asynchronously).
 
-Ensuite, le chargement de la bibliothèque de balises peut se terminer avant ou après que [`DOMContentLoaded`](https://developer.mozilla.org/fr-FR/docs/Web/Events/DOMContentLoaded) l’événement de navigateur (DOM Ready [Prêt pour DOM]) soit survenu.
+Ensuite, le chargement de la bibliothèque de balises peut se terminer avant ou après que l’événement de navigateur [`DOMContentLoaded`](https://developer.mozilla.org/fr-FR/docs/Web/Events/DOMContentLoaded) (DOM Ready) soit survenu.
 
-Pour ces deux raisons, il est intéressant de montrer comment les types d’événements [Library Loaded (Bibliothèque chargée)](../../extensions/web/core/overview.md#library-loaded-page-top), [Page Bottom (Bas de page)](../../extensions/web/core/overview.md#page-bottom), [DOM Ready (Prêt pour DOM)](../../extensions/web/core/overview.md#page-bottom) et [Window Loaded (Fenêtre chargée)](../../extensions/web/core/overview.md#window-loaded) provenant de l’extension Core fonctionnent lors du chargement asynchrone d’une bibliothèque.
+Pour ces deux raisons, il est important de montrer comment les types d&#39;événements [Library Loaded (Bibliothèque chargée)](../../extensions/web/core/overview.md#library-loaded-page-top), [Page Bottom (Bas de page)](../../extensions/web/core/overview.md#page-bottom), [DOM Ready (Prêt pour DOM)](../../extensions/web/core/overview.md#page-bottom), et [Window Loaded (Fenêtre chargée)](../../extensions/web/core/overview.md#window-loaded) provenant de l’extension Core fonctionnent lors du chargement asynchrone d’une bibliothèque.
 
-Si votre propriété de balise contient les quatre règles suivantes :
+Si votre propriété de balise contient les quatre règles suivantes :
 
 * Règle A : utilise le type d’événement Library Loaded (Bibliothèque chargée).
 * Règle B : utilise le type d’événement Page Bottom (Bas de page).
@@ -63,11 +64,11 @@ Quel que soit le moment auquel le chargement de la bibliothèque de balises se t
 
 Règle A → Règle B → Règle C → Règle D
 
-Bien que la commande soit toujours appliquée, il se peut que certaines règles soient exécutées immédiatement lorsque le chargement de la bibliothèque de balises se termine, tandis que d’autres peuvent être exécutées ultérieurement. Les actions suivantes se produisent lorsque le chargement de la bibliothèque de balises se termine :
+Bien que l’ordre soit toujours suivi, il se peut que certaines règles soient exécutées immédiatement lorsque le chargement de la bibliothèque de balises se termine, tandis que d’autres pourront être exécutées ultérieurement. Les actions suivantes se produisent lorsque le chargement de la bibliothèque de balises se termine :
 
 1. La règle A est exécutée immédiatement.
-1. Si l’événement de navigateur `DOMContentLoaded` (DOM Ready (Prêt pour DOM)) est déjà survenu, la règle B et la règle C sont exécutées immédiatement. Dans le cas contraire, les règles B et C sont exécutées ultérieurement lorsque l’événement de navigateur [`DOMContentLoaded`](https://developer.mozilla.org/fr-FR/docs/Web/Events/DOMContentLoaded) survient.
-1. Si l’événement de navigateur [`load`](https://developer.mozilla.org/fr-FR/docs/Web/Events/load) (Window Loaded [Fenêtre chargée]) est déjà survenu, la règle D est exécutée immédiatement. Dans le cas contraire, la règle D est exécutée ultérieurement lorsque l’événement de navigateur [`load`](https://developer.mozilla.org/fr-FR/docs/Web/Events/load) survient. Veuillez noter que si vous avez installé la bibliothèque de balises conformément aux instructions, son chargement complet s’achève *toujours* avant que [`load`](https://developer.mozilla.org/fr-FR/docs/Web/Events/load) l’événement de navigateur ne se produise.
+1. Si l’événement de navigateur `DOMContentLoaded` (DOM Ready (Prêt pour DOM)) est déjà survenu, la règle B et la règle C sont exécutées immédiatement. Dans le cas contraire, les règles B et C sont exécutées ultérieurement lorsque l’événement de navigateur [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) survient.
+1. Si l’événement de navigateur [`load`](https://developer.mozilla.org/fr-FR/docs/Web/Events/load) (Window Loaded [Fenêtre chargée]) est déjà survenu, la règle D est exécutée immédiatement. Dans le cas contraire, la règle D est exécutée ultérieurement lorsque l’événement de navigateur [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) survient. Veillez noter que si vous avez installé la bibliothèque de balises conformément aux instructions, le chargement de la bibliothèque se termine *toujours* avant la survenue de l’événement de navigateur [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load).
 
 Lorsque vous appliquez ces principes à votre propre site web, tenez compte des points suivants :
 
@@ -78,11 +79,11 @@ Si vous constatez que des actions se produisent dans le désordre, il est probab
 
 ## Chargement asynchrone du code intégré aux balises
 
-Le système Balises propose un bouton d’activation/désactivation permettant d’activer le chargement asynchrone lors de la création d’un code intégré au moment de la configuration d’un [environnement](../publishing/environments.md). Vous pouvez également configurer vous-même le chargement asynchrone :
+Les balises proposent un bouton d’activation/désactivation permettant d’activer le chargement asynchrone lors de la création d’un code intégré au moment de la configuration d’un [environnement](../publishing/environments.md). Vous pouvez également configurer vous-même le chargement asynchrone :
 
 1. Ajoutez un attribut asynchrone à la balise `<script>` pour charger le script de manière asynchrone.
 
-   Pour le code intégré à aux balises, cela revient à modifier ceci :
+   Pour le code intégré aux balises, cela revient à modifier ceci :
 
    ```markup
    <script src="//www.yoururl.com/launch-EN1a3807879cfd4acdc492427deca6c74e.min.js"></script>
@@ -100,4 +101,4 @@ Le système Balises propose un bouton d’activation/désactivation permettant d
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   Ce code indique à Platform que l’analyseur du navigateur a atteint le bas de la page. Étant donné qu’il est probable que les balises n’aient pas été chargées et exécutées avant ce moment, l’invocation de `_satellite.pageBottom()` entraîne une erreur et un comportement inattendu du type d’événement Page Bottom (Bas de page).
+   Ce code indique à Platform que l’analyseur du navigateur a atteint le bas de la page. Étant donné qu’il est probable que les balises n’aient pas été chargées et exécutées avant ce moment, l’invocation de `_satellite.pageBottom()` provoque une erreur, et le type d’événement Page Bottom (Bas de page) se comportera peut-être de façon inattendue.

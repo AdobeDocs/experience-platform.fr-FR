@@ -1,8 +1,9 @@
 ---
 title: Types de conditions pour les extensions web
-description: Découvrez comment définir un module de bibliothèque de type condition pour une extension de balise dans une propriété web.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez comment définir un module de bibliothèque de types de conditions pour une extension de balise dans une propriété web.
+exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 100%
 

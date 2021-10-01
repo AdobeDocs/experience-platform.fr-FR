@@ -89,7 +89,7 @@ Le fichier JSON suivant illustre un exemple du type de données que le type de d
 >Vous pouvez générer des exemples de données JSON pour tout schéma XDM que vous définissez dans Experience Platform afin de mieux visualiser la manière dont vos données de consentement et de préférence client doivent être mappées. Pour plus d’informations, consultez la documentation suivante :
 >
 >* [Génération d’exemples de données dans l’interface utilisateur](../ui/sample.md)
-* [Génération d’exemples de données dans l’API](../api/sample-data.md)
+>* [Génération d’exemples de données dans l’API](../api/sample-data.md)
 
 
 ## `consents` {#choices}
@@ -179,8 +179,10 @@ Le fichier JSON suivant illustre un exemple du type de données que le type de d
 `personalize` capture les préférences des clients concernant les façons dont leurs données peuvent être utilisées pour la personnalisation. Les clients peuvent se désabonner de cas d’utilisation de personnalisation spécifiques ou se désabonner entièrement de la personnalisation.
 
 >[!IMPORTANT]
-`personalize` ne couvre pas les cas d’utilisation marketing. Par exemple, si un client choisit de ne pas se personnaliser pour tous les canaux, il ne doit pas cesser de recevoir des communications par le biais de ces canaux. Au contraire, les messages qu&#39;ils reçoivent doivent être génériques et non basés sur leur profil.
-Dans le même exemple, si un client choisit de ne pas participer au marketing direct pour tous les canaux (par l’intermédiaire de `marketing`, expliqué dans la [section suivante](#marketing)), ce client ne doit recevoir aucun message, même si la personnalisation est autorisée.
+>
+>`personalize` ne couvre pas les cas d’utilisation marketing. Par exemple, si un client choisit de ne pas se personnaliser pour tous les canaux, il ne doit pas cesser de recevoir des communications par le biais de ces canaux. Au contraire, les messages qu&#39;ils reçoivent doivent être génériques et non basés sur leur profil.
+>
+>Dans le même exemple, si un client choisit de ne pas participer au marketing direct pour tous les canaux (par l’intermédiaire de `marketing`, expliqué dans la [section suivante](#marketing)), ce client ne doit recevoir aucun message, même si la personnalisation est autorisée.
 
 ```json
 "personalize": {
@@ -256,8 +258,10 @@ Pour utiliser le type de données [!UICONTROL Contenus et Préférences] afin d�
 Consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment attribuer des types de données aux champs. Une fois que vous avez créé un schéma contenant un champ avec le type de données [!UICONTROL Contenus et Préférences] , reportez-vous à la section sur la [création d’un jeu de données](../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation du jeu de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
 
 >[!IMPORTANT]
-Si vous souhaitez envoyer des données de consentement à [!DNL Real-time Customer Profile], vous devez créer un schéma compatible [!DNL Profile] basé sur la classe [!DNL XDM Individual Profile] qui contient le type de données [!UICONTROL Contenus et Préférences]. Le jeu de données que vous créez à partir de ce schéma doit également être activé pour [!DNL Profile]. Reportez-vous aux tutoriels ci-dessus pour connaître les étapes spécifiques aux [!DNL Real-time Customer Profile] exigences relatives aux schémas et aux jeux de données.
-En outre, vous devez également vous assurer que vos stratégies de fusion sont configurées pour prioriser le ou les jeux de données qui contiennent les dernières données de consentement et de préférence, afin que les profils client soient correctement mis à jour. Pour plus d’informations, consultez la présentation des [stratégies de fusion](../../rtcdp/profile/merge-policies.md) .
+>
+>Si vous souhaitez envoyer des données de consentement à [!DNL Real-time Customer Profile], vous devez créer un schéma compatible [!DNL Profile] basé sur la classe [!DNL XDM Individual Profile] qui contient le type de données [!UICONTROL Contenus et Préférences]. Le jeu de données que vous créez à partir de ce schéma doit également être activé pour [!DNL Profile]. Reportez-vous aux tutoriels ci-dessus pour connaître les étapes spécifiques aux [!DNL Real-time Customer Profile] exigences relatives aux schémas et aux jeux de données.
+>
+>En outre, vous devez également vous assurer que vos stratégies de fusion sont configurées pour prioriser le ou les jeux de données qui contiennent les dernières données de consentement et de préférence, afin que les profils client soient correctement mis à jour. Pour plus d’informations, consultez la présentation des [stratégies de fusion](../../rtcdp/profile/merge-policies.md) .
 
 ## Gestion des modifications du consentement et des préférences
 

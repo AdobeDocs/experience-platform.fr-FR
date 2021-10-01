@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; champs de mappage Analytics ; mappage Analytics
+keywords: Experience Platform;accueil;rubriques populaires;champs de mappage Analytics;mappage analytics
 solution: Experience Platform
-title: Mappage de champs pour le connecteur source Adobe Analytics
+title: Mappage des champs pour le connecteur source Adobe Analytics
 topic-legacy: overview
 description: Adobe Experience Platform vous permet d’ingérer des données Adobe Analytics par le biais du connecteur de données Analytics (ADC, Analytics Data Connector). Certaines données ingérées par ADC peuvent être mappées directement des champs Analytics aux champs du modèle de données d’expérience (XDM), tandis que d’autres nécessitent des transformations et des fonctions spécifiques pour être mappées avec succès.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-translation-type: tm+mt
 source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
 source-wordcount: '3405'
@@ -13,7 +12,7 @@ ht-degree: 99%
 
 ---
 
-# Mappages de champs Analytics
+# Mappages des champs Analytics
 
 Adobe Experience Platform vous permet d’ingérer des données Adobe Analytics par le biais du connecteur de données Analytics (ADC, Analytics Data Connector). Certaines données ingérées par ADC peuvent être mappées directement des champs Analytics aux champs du modèle de données d’expérience (XDM), tandis que d’autres nécessitent des transformations et des fonctions spécifiques pour être mappées avec succès.
 
@@ -88,40 +87,40 @@ Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics
 | videosessionid | media.mediaTimed.primaryAssetViewDetails._id | chaîne | Identifiant de session vidéo. |
 | videogenre | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Genre | tableau | Genre de la vidéo. | {title (Object), description (Object), type (Object), meta:xdmType (Object), items (string), meta:xdmField (Object)} |
 | mobileinstalls | application.firstLaunches | objet | Se déclenche lors de la première exécution après l’installation ou la réinstallation. | {id (string), value (number)} |
-| mobileupgrades | application.upgrades | objet | Indique le nombre de mises à niveau d’application. Se déclenche lors de la première exécution après mise à niveau ou dès que le numéro de version change. | {id (chaîne), valeur (nombre)} |
-| mobilelaunches | application.launches | objet | Nombre de fois où l’application a été lancée. | {id (chaîne), valeur (nombre)} |
-| mobilecrashes | application.crashes | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| mobilemessageclicks | directMarketing.clicks | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| mobileplaceentry | placeContext.POIinteraction.poiEntries | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| mobileplaceexit | placeContext.POIinteraction.poiExits | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videotime | media.mediaTimed.timePlayed | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videostart | media.mediaTimed.impressions | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videocomplete | media.mediaTimed.completes | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videosegmentviews | media.mediaTimed.mediaSegmentViews | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videoadstart | advertising.impressions | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videoadcomplete | advertising.completes | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videoadtime | advertising.timePlayed | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videochapterstart | media.mediaTimed.mediaChapter.impressions | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videochaptercomplete | media.mediaTimed.mediaChapter.completes | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videochaptertime | media.mediaTimed.mediaChapter.timePlayed | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videoplay | media.mediaTimed.starts | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videototaltime | media.mediaTimed.totalTimePlayed | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videoqoetimetostart | media.mediaTimed.primaryAssetViewDetails.qoe.timeToStart | objet | Temps jusqu’au début de la qualité vidéo. | {id (chaîne), valeur (nombre)} |
-| videoqoedropbeforestart | media.mediaTimed.dropBeforeStarts | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videoqoebuffercount | media.mediaTimed.primaryAssetViewDetails.qoe.buffers | objet | Nombre de mémoires tampons de la qualité vidéo. | {id (chaîne), valeur (nombre)} |
-| videoqoebuffertime | media.mediaTimed.primaryAssetViewDetails.qoe.bufferTime | objet | Période tampon de la qualité vidéo. | {id (chaîne), valeur (nombre)} |
-| videoqoebitratechangecount | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | objet | Nombre de changements de la qualité vidéo. | {id (chaîne), valeur (nombre)} |
-| videoqoebitrateaverage | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateAverage | objet | Débit moyen de la qualité vidéo. | {id (chaîne), valeur (nombre)} |
-| videoqoeerrorcount | media.mediaTimed.primaryAssetViewDetails.qoe.errors | objet | Nombre d’erreurs de la qualité vidéo. | {id (chaîne), valeur (nombre)} |
-| videoqoedroppedframecount | media.mediaTimed.primaryAssetViewDetails.qoe.droppedFrames | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videoprogress10 | media.mediaTimed.progress10 | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videoprogress25 | media.mediaTimed.progress25 | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videoprogress50 | media.mediaTimed.progress50 | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videoprogress75 | media.mediaTimed.progress75 | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videoprogress95 | media.mediaTimed.progress95 | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videoresume | media.mediaTimed.resumes | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videopausecount | media.mediaTimed.pauses | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
-| videopausetime | media.mediaTimed.pauseTime | objet | <!-- MISSING --> | {id (chaîne), valeur (nombre)} |
+| mobileupgrades | application.upgrades | objet | Indique le nombre de mises à niveau d’application. Se déclenche lors de la première exécution après mise à niveau ou dès que le numéro de version change. | {id (string), value (number)} |
+| mobilelaunches | application.launches | objet | Nombre de fois où l’application a été lancée. | {id (string), value (number)} |
+| mobilecrashes | application.crashes | objet | <!-- MISSING --> | {id (string), value (number)} |
+| mobilemessageclicks | directMarketing.clicks | objet | <!-- MISSING --> | {id (string), value (number)} |
+| mobileplaceentry | placeContext.POIinteraction.poiEntries | objet | <!-- MISSING --> | {id (string), value (number)} |
+| mobileplaceexit | placeContext.POIinteraction.poiExits | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videotime | media.mediaTimed.timePlayed | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videostart | media.mediaTimed.impressions | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videocomplete | media.mediaTimed.completes | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videosegmentviews | media.mediaTimed.mediaSegmentViews | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videoadstart | advertising.impressions | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videoadcomplete | advertising.completes | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videoadtime | advertising.timePlayed | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videochapterstart | media.mediaTimed.mediaChapter.impressions | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videochaptercomplete | media.mediaTimed.mediaChapter.completes | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videochaptertime | media.mediaTimed.mediaChapter.timePlayed | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videoplay | media.mediaTimed.starts | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videototaltime | media.mediaTimed.totalTimePlayed | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videoqoetimetostart | media.mediaTimed.primaryAssetViewDetails.qoe.timeToStart | objet | Temps jusqu’au début de la qualité vidéo. | {id (string), value (number)} |
+| videoqoedropbeforestart | media.mediaTimed.dropBeforeStarts | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videoqoebuffercount | media.mediaTimed.primaryAssetViewDetails.qoe.buffers | objet | Nombre de mémoires tampons de la qualité vidéo. | {id (string), value (number)} |
+| videoqoebuffertime | media.mediaTimed.primaryAssetViewDetails.qoe.bufferTime | objet | Période tampon de la qualité vidéo. | {id (string), value (number)} |
+| videoqoebitratechangecount | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | objet | Nombre de changements de la qualité vidéo. | {id (string), value (number)} |
+| videoqoebitrateaverage | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateAverage | objet | Débit moyen de la qualité vidéo. | {id (string), value (number)} |
+| videoqoeerrorcount | media.mediaTimed.primaryAssetViewDetails.qoe.errors | objet | Nombre d’erreurs de la qualité vidéo. | {id (string), value (number)} |
+| videoqoedroppedframecount | media.mediaTimed.primaryAssetViewDetails.qoe.droppedFrames | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videoprogress10 | media.mediaTimed.progress10 | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videoprogress25 | media.mediaTimed.progress25 | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videoprogress50 | media.mediaTimed.progress50 | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videoprogress75 | media.mediaTimed.progress75 | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videoprogress95 | media.mediaTimed.progress95 | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videoresume | media.mediaTimed.resumes | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videopausecount | media.mediaTimed.pauses | objet | <!-- MISSING --> | {id (string), value (number)} |
+| videopausetime | media.mediaTimed.pauseTime | objet | <!-- MISSING --> | {id (string), value (number)} |
 | videosecondssincelastcall | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | entier |
 
 {style=&quot;table-layout:auto&quot;}
@@ -155,14 +154,14 @@ Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics
 | m_mvvar1 - m_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] - _experience.analytics.customDimensions.lists.list3.list[] | tableau | Liste de valeurs variables. Contient une liste délimitée de valeurs personnalisées, selon l’implémentation. | {value (string), key (string)} |
 | m_color | device.colorDepth | entier | Identifiant de profondeur de la couleur, basé sur la valeur de la colonne c_color. |
 | m_cookies | environment.browserDetails.cookiesEnabled | booléen | Variable utilisée dans la dimension Prise en charge des cookies. |
-| m_event_list | commerce.purchases, commerce.productViews, commerce.productListOpens, commerce.checkouts, commerce.productListAdds, commerce.productListRemovals, commerce.productListViews | objet | Événements de commerce standard déclenchés à l’accès. | {id (chaîne), valeur (nombre)} |
-| m_événement_liste | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101to200.event101 - _experience.analytics.event101to200.event200, _experience.analytics.event201to300.event201 - _experience.analytics.event201to300.event300, _experience.analytics.event301to400.event301 - _experience.analytics.event301to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to500.event500, _experience.analytics.event501to600.event501 - _experience.analytics.event501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event701to800.event701 - _experience.analytics.event701to800.event800, _experience.analytics.event801to900.event801 - _experience.analytics.event801to900.event900, _experience.analytics.event901to1000.event901 - _experience.analytics.event901to1000.event1000 | objet | Événements personnalisés déclenchés à l’accès. | {id (Object), value (Object)} |
+| m_event_list | commerce.purchases, commerce.productViews, commerce.productListOpens, commerce.checkouts, commerce.productListAdds, commerce.productListRemovals, commerce.productListViews | objet | Événements de commerce standard déclenchés à l’accès. | {id (string), value (number)} |
+| m_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101to200.event101 - _experience.analytics.event101to200.event200, _experience.analytics.event201to300.event201 - _experience.analytics.event201to300.event300, _experience.analytics.event301to400.event301 - _experience.analytics.event301to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to500.event500, _experience.analytics.event501to600.event501 - _experience.analytics.event501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event701to800.event701 - _experience.analytics.event701to800.event800, _experience.analytics.event801to900.event801 - _experience.analytics.event801to900.event900, _experience.analytics.event901to1000.event901 - _experience.analytics.event901to1000.event1000 | objet | Événements personnalisés déclenchés à l’accès. | {id (Object), value (Object)} |
 | m_geo_country | placeContext.geo.countryCode | chaîne | Abréviation du pays d’où provient l’accès, selon l’adresse IP. |
 | m_geo_latitude | placeContext.geo._schema.latitude | nombre | <!-- MISSING --> |
 | m_geo_longitude | placeContext.geo._schema.longitude | nombre | <!-- MISSING --> |
 | m_java_enabled | environment.browserDetails.javaEnabled | booléen | Indicateur précisant si Java est activé. |
-| m_latitude | placeContext.geo._schéma.latitude | nombre | <!-- MISSING --> |
-| m_longitude | placeContext.geo._schéma.longitude | nombre | <!-- MISSING --> |
+| m_latitude | placeContext.geo._schema.latitude | nombre | <!-- MISSING --> |
+| m_longitude | placeContext.geo._schema.longitude | nombre | <!-- MISSING --> |
 | m_page_event_var1 | web.webInteraction.URL | chaîne | Variable utilisée uniquement dans les demandes d’image de suivi de liens. Cette variable contient l’URL du lien de téléchargement, de sortie ou personnalisé sur lequel a cliqué l’utilisateur. |
 | m_page_event_var2 | web.webInteraction.name | chaîne | Variable utilisée uniquement dans les demandes d’image de suivi de liens. Répertorie le nom personnalisé du lien, s’il est spécifié. |
 | m_page_type | web.webPageDetails.isErrorPage | booléen | Variable utilisée pour remplir la dimension Pages introuvables. Cette variable doit être vide ou contenir « ErrorPage ». |
@@ -229,14 +228,14 @@ Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics
 | post_state | _experience.analytics.customDimensions.stateProvince | chaîne | Variable d’état. |
 | post_user_server | web.webPageDetails.server | chaîne | Variable utilisée dans la dimension Serveur. |
 | post_zip | _experience.analytics.customDimensions.postalCode | chaîne | Variable utilisée pour remplir la dimension Code postal. |
-| browser | _experience.analytics.environnement.browserID | entier | Identifiant numérique du navigateur. |
+| browser | _experience.analytics.environment.browserID | entier | Identifiant numérique du navigateur. |
 | domain | environment.domain | chaîne | Variable utilisée dans la dimension Domaine. Dépend du fournisseur d’accès à Internet (FAI) de l’utilisateur. |
 | first_hit_referrer | _experience.analytics.endUser.firstWeb.webReferrer.URL | chaîne | Première URL de référence du visiteur. |
 | geo_city | placeContext.geo.city | chaîne | Nom de la ville de l’accès. Dépend de l’adresse IP de l’accès. |
 | geo_dma | placeContext.geo.dmaID | entier | Identifiant numérique de la zone démographique pour l’accès. Dépend de l’adresse IP de l’accès. |
 | geo_region | placeContext.geo.stateProvince | chaîne | Nom de l’état ou de la région de l’accès. Dépend de l’adresse IP de l’accès. |
 | geo_zip | placeContext.geo.postalCode | chaîne | Code postal de l’accès. Dépend de l’adresse IP de l’accès. |
-| os | _experience.analytics.environnement.operatingSystemID | entier | Identifiant numérique représentant le système d’exploitation du visiteur. Dépend de la colonne user_agent. |
+| os | _experience.analytics.environment.operatingSystemID | entier | Identifiant numérique représentant le système d’exploitation du visiteur. Dépend de la colonne user_agent. |
 | search_page_num | search.pageDepth | entier | Cette variable est utilisée par la dimension Classification globale des pages de recherche et indique sur quelle page de résultats de recherche est apparu votre site | avant que l’utilisateur n’ait cliqué sur celui-ci. |
 | visit_keywords | _experience.analytics.session.search.keywords | chaîne | Variable utilisée dans la dimension Mots-clés de recherche. |
 | visit_num | _experience.analytics.session.num | entier | Variable utilisée dans la dimension Nombre de visites. Commence à 1 et est incrémenté chaque fois qu’une nouvelle visite est entamée (par utilisateur). |
@@ -244,31 +243,31 @@ Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics
 | visit_referrer | _experience.analytics.session.web.webReferrer.URL | chaîne | Premier référent de la visite. |
 | visit_search_page_num | _experience.analytics.session.search.pageDepth | entier | Premier nom de page de la visite. |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprops.prop75 | objet | Variables de trafic personnalisées 1 - 75. |
-| post_hier1 - post_hier5 | _experience.analytics.customDimensions.hierarchies.hier1 - _experience.analytics.customDimensions.hierarchies.hier5 | objet | Utilisé par les variables de hiérarchie et contient une liste délimitée de valeurs. | {values (array), delimiter (string)} |
+| post_hier1 - post_hier5 | _experience.analytics.customDimensions.hierarchies.hier1 - _experience.analytics.customDimensions.hierarchies.hier5 | objet | Utilisé par les variables de hiérarchie et contient une liste délimitée de valeurs. | {values (array), délimiteur (string)} |
 | post_mvvar1 - post_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] - _experience.analytics.customDimensions.lists.list3.list[] | tableau | Liste de valeurs variables. Contient une liste délimitée de valeurs personnalisées, selon l’implémentation. | {value (string), key (string)} |
 | post_cookies | environment.browserDetails.cookiesEnabled | booléen | Variable utilisée dans la dimension Prise en charge des cookies. |
-| post_event_list | commerce.achats, commerce.productViews, commerce.productListOuvert, commerce.checkouts, commerce.productListAdds, commerce.productListRemovals, commerce.productListViews | objet | Événements de commerce standard déclenchés à l’accès. | {id (chaîne), valeur (nombre)} |
-| post_événement_liste | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101to200.event101 - _experience.analytics.event101to200.event200, _experience.analytics.event201to300.event201 - _experience.analytics.event201to300.event300, _experience.analytics.event301to400.event301 - _experience.analytics.event301to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to500.event500, _experience.analytics.event501to600.event501 - _experience.analytics.event501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event701to800.event701 - _experience.analytics.event701to800.event800, _experience.analytics.event801to900.event801 - _experience.analytics.event801to900.event900, _experience.analytics.event901to1000.event901 - _experience.analytics.event901to1000.event1000 | objet | Événements personnalisés déclenchés à l’accès. | {id (objet), value (objet)} |
+| post_event_list | commerce.purchases, commerce.productViews, commerce.productListOpens, commerce.checkouts, commerce.productListAdds, commerce.productListRemovals, commerce.productListViews | objet | Événements de commerce standard déclenchés à l’accès. | {id (string), value (number)} |
+| post_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101to200.event101 - _experience.analytics.event101to200.event200, _experience.analytics.event201to300.event201 - _experience.analytics.event201to300.event300, _experience.analytics.event301to400.event301 - _experience.analytics.event301to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to500.event500, _experience.analytics.event501to600.event501 - _experience.analytics.event501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event701to800.event701 - _experience.analytics.event701to800.event800, _experience.analytics.event801to900.event801 - _experience.analytics.event801to900.event900, _experience.analytics.event901to1000.event901 - _experience.analytics.event901to1000.event1000 | objet | Événements personnalisés déclenchés à l’accès. | {id (Object), value (Object)} |
 | post_java_enabled | environment.browserDetails.javaEnabled | booléen | Indicateur précisant si Java est activé. |
-| post_latitude | placeContext.geo._schéma.latitude | nombre | <!-- MISSING --> |
-| post_longitude | placeContext.geo._schéma.longitude | nombre | <!-- MISSING --> |
+| post_latitude | placeContext.geo._schema.latitude | nombre | <!-- MISSING --> |
+| post_longitude | placeContext.geo._schema.longitude | nombre | <!-- MISSING --> |
 | post_page_event | web.webInteraction.type | chaîne | Le type d’accès qui est envoyé dans la demande d’image (accès standard, lien de téléchargement, lien de sortie ou lien personnalisé sur lequel le visiteur a cliqué). |
-| post_page_événement | web.webInteraction.linkClicks.value | nombre | Le type d’accès qui est envoyé dans la demande d’image (accès standard, lien de téléchargement, lien de sortie ou lien personnalisé sur lequel le visiteur a cliqué). |
+| post_page_event | web.webInteraction.linkClicks.value | nombre | Le type d’accès qui est envoyé dans la demande d’image (accès standard, lien de téléchargement, lien de sortie ou lien personnalisé sur lequel le visiteur a cliqué). |
 | post_page_event_var1 | web.webInteraction.URL | chaîne | Variable utilisée uniquement dans les demandes d’image de suivi de liens. URL du lien de téléchargement, de sortie ou personnalisé sur lequel a cliqué l’utilisateur. |
 | post_page_event_var2 | web.webInteraction.name | chaîne | Variable utilisée uniquement dans les demandes d’image de suivi de liens. Il s’agira du nom personnalisé du lien. |
 | post_page_type | web.webPageDetails.isErrorPage | booléen | Utilisé pour remplir la dimension Pages introuvables. Cette variable doit être vide ou contenir « ErrorPage ». |
 | post_pagename_no_url | web.webPageDetails.pageViews.value | nombre | Nom de la page (s’il est défini). Si aucune page n’est spécifiée, cette valeur n’est pas renseignée. |
-| post_product_list | productListItems[].items | tableau | Liste de produits, telle qu’elle est transmise par l’intermédiaire de la variable des produits. | {SKU (chaîne), quantité (entier), prixTotal (nombre)} |
+| post_product_list | productListItems[].items | tableau | Liste de produits, telle qu’elle est transmise par l’intermédiaire de la variable des produits. | {SKU (string), quantity (integer), priceTotal (number)} |
 | post_search_engine | search.searchEngine | chaîne | Identifiant numérique représentant le moteur de recherche qui a renvoyé le visiteur sur votre site. |
 | mvvar1_instances | .list.items[] | objet | Liste de valeurs variables. Contient une liste délimitée de valeurs personnalisées, selon l’implémentation. |
-| mvvar2_instances | .liste.items[] | objet | Liste de valeurs variables. Contient une liste délimitée de valeurs personnalisées, selon l’implémentation. |
-|  | mvvar3_instances | .liste.items[] | objet | Liste de valeurs variables. Contient une liste délimitée de valeurs personnalisées, selon l’implémentation. |
+| mvvar2_instances | .list.items[] | objet | Liste de valeurs variables. Contient une liste délimitée de valeurs personnalisées, selon l’implémentation. |
+|  | mvvar3_instances | .list.items[] | objet | Liste de valeurs variables. Contient une liste délimitée de valeurs personnalisées, selon l’implémentation. |
 | color | device.colorDepth | entier | Identifiant de profondeur de la couleur, basé sur la valeur de la colonne c_color. |
 | first_hit_ref_type | _experience.analytics.endUser.firstWeb.webReferrer.type | chaîne | Identifiant numérique, représentant le type de référent du tout premier référent du visiteur. |
 | first_hit_time_gmt | _experience.analytics.endUser.firstTimestamp | entier | Horodatage du tout premier accès du visiteur (heure Unix). |
 | geo_country | placeContext.geo.countryCode | chaîne | Abréviation du pays d’où provient l’accès, selon l’adresse IP. |
-| geo_latitude | placeContext.geo._schéma.latitude | nombre | <!-- MISSING --> |
-| geo_longitude | placeContext.geo._schéma.longitude | nombre | <!-- MISSING --> |
+| geo_latitude | placeContext.geo._schema.latitude | nombre | <!-- MISSING --> |
+| geo_longitude | placeContext.geo._schema.longitude | nombre | <!-- MISSING --> |
 | paid_search | search.isPaid | booléen | Indicateur défini si l’accès correspond à la détection des référencements payants. |
 | ref_type | web.webReferrer.type | chaîne | Identifiant numérique représentant le type de référence pour l’accès. |
 | visit_paid_search | _experience.analytics.session.search.isPaid | booléen | Indicateur (1=payant, 0=non payant) signalant si le premier accès de la visite provient d’un accès de référencement payant. |

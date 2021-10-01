@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; connexion en flux continu ; créer une connexion en flux continu ; guide d’API ; didacticiel ; créer une connexion en flux continu ; assimilation en flux continu ; assimilation ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;connexion en continu;créer une connexion en continu;guide d’api;tutoriel;créer une connexion en continu;ingestion en continu;ingestion ;
 solution: Experience Platform
-title: Création d’une connexion de diffusion en continu à l’aide de l’API
+title: Création d’une connexion en continu à l’aide de l’API
 topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 23c03ace-795f-4a92-a220-c47ee86cec64
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '128'
@@ -20,4 +19,4 @@ L’enregistrement d’une connexion en continu est requis pour commencer la dif
 
 Après avoir enregistré une connexion en continu, vous obtiendrez, en tant que producteur des données, une URL unique que vous pourrez utiliser pour diffuser en continu des données vers Platform.
 
-Pour savoir comment créer une connexion de flux continu authentifiée, consultez le [guide de l&#39;API source HTTP ](../../sources/tutorials/api/create/streaming/http.md).
+Pour savoir comment créer une connexion en continu authentifiée, consultez le [guide de l’API source HTTP](../../sources/tutorials/api/create/streaming/http.md).

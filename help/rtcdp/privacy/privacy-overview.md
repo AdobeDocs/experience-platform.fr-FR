@@ -1,14 +1,14 @@
 ---
 keywords: gouvernance des données rtcdp;gouvernance des données rtcdp;gouvernance des données de profil client en temps réel;rtcdp de confidentialité;rtcdp de confidentialité
 title: Confidentialité dans la plateforme de données clients en temps réel
-seo-title: Confidentialité dans la plateforme de données clients en temps réel
+seo-title: Privacy in Real-time Customer Data Platform
 description: La plateforme de données clients en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les réglementations de confidentialité.
-seo-description: La plateforme de données clients en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les réglementations de confidentialité.
+seo-description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
 source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
-source-wordcount: '390'
-ht-degree: 6%
+source-wordcount: '365'
+ht-degree: 7%
 
 ---
 

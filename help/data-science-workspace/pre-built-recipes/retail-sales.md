@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; recette de vente au détail ; Espace de travail des sciences de données ; rubriques populaires ; recettes ; recette de précréation
+keywords: Experience Platform;recette de ventes au détail;Data Science Workspace;rubriques les plus consultées;recettes;recette de précréation
 solution: Experience Platform
-title: Recette vente au détail
+title: Recette Ventes Au Détail
 topic-legacy: overview
 description: La recette Ventes au détail vous fournit des prévisions de ventes pour tous les magasins contrôlés pour une période donnée. Avec un modèle de prévision précis, le détaillant serait en mesure d’identifier la relation entre les politiques de demande et de prix, mais aussi de prendre des décisions optimisées concernant le prix afin de maximiser les ventes et le chiffre d’affaires.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-translation-type: tm+mt
 source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '585'
@@ -34,7 +33,7 @@ La recette de prévision des ventes au détail se sert de l’apprentissage auto
 
 Pour commencer, suivez ce [tutoriel](../jupyterlab/create-a-recipe.md).
 
-Ce didacticiel porte sur la création de la recette Ventes au détail dans un bloc-notes Jupyter et sur l&#39;utilisation du bloc-notes pour la recette afin de créer la recette dans Adobe Experience Platform.
+Ce tutoriel abordera la création de la recette Ventes au détail dans un notebook Jupyter et l’utilisation du notebook pour créer la recette dans Adobe Experience Platform.
 
 ## Schéma des données
 

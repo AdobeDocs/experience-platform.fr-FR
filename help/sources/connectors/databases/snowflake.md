@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Présentation du connecteur source Snowflake
 topic-legacy: overview
 description: Découvrez comment connecter Snowflake à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
-source-git-commit: ee83c547b0c6b03baf14ebc732be14f27f557bf9
+exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
+source-git-commit: db483110b8bfd5290f6a9a30fdb008f478fdbbf4
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 21%

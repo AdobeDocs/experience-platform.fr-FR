@@ -1,28 +1,29 @@
 ---
-title: Recherche de ressources dans l’API Reactor
-description: Découvrez comment rechercher des ressources dans l’API Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
-workflow-type: ht
+title: Recherche de ressources dans lʼAPI Reactor
+description: Découvrez comment rechercher des ressources dans lʼAPI Reactor.
+exl-id: cb594e60-3e24-457e-bfb3-78ec84d3e39a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 100%
 
 ---
 
-# Recherche de ressources dans l’API Reactor
+# Recherche de ressources dans lʼAPI Reactor
 
-Le point d’entrée `/search` de l’API Reactor vous permet de créer des requêtes structurées sur des ressources stockées. Ce document fournit des exemples de différentes requêtes de recherche pour des cas d’utilisation courants.
+Le point dʼentrée `/search` de lʼAPI Reactor vous permet de créer des requêtes structurées sur des ressources stockées. Ce document fournit des exemples de différentes requêtes de recherche pour différents cas dʼutilisation courants.
 
 >[!NOTE]
 >
->Avant de lire ce guide, reportez-vous au [guide des points d’entrée de recherche](../endpoints/search.md) pour plus d’informations sur la syntaxe de requête acceptée et d’autres instructions d’utilisation.
+>Avant de parcourir ce guide, reportez-vous au [guide du point dʼentrée de recherche](../endpoints/search.md) afin dʼobtenir plus dʼinformations sur la syntaxe de requête acceptée et dʼautres instructions dʼutilisation.
 
 ## Stratégies de requête de base
 
-Les exemples suivants présentent quelques concepts de base pour l’utilisation de la fonctionnalité de recherche de l’API.
+Les exemples suivants présentent quelques concepts de base sur lʼutilisation de la fonctionnalité de recherche de lʼAPI.
 
 ### Recherche dans plusieurs champs
 
-Une recherche peut être effectuée sur plusieurs champs à l’aide de caractères génériques dans le nom du champ. Par exemple, pour effectuer une recherche dans plusieurs champs d’attribut, utilisez `attributes.*` comme nom de champ.
+Une recherche peut être effectuée dans plusieurs champs à lʼaide de caractères génériques saisis dans le nom du champ. Par exemple, pour effectuer une recherche dans plusieurs champs dʼattribut, utilisez `attributes.*` en tant que nom de champ.
 
 ```json
 {
@@ -38,11 +39,11 @@ Une recherche peut être effectuée sur plusieurs champs à l’aide de caractè
 
 >[!IMPORTANT]
 >
->Normalement, les valeurs de recherche doivent correspondre au type de données recherchées. Par exemple, une valeur de requête de `evar7` sur un champ entier échouerait. Lors de la recherche sur plusieurs champs, l’exigence du type de requête fait preuve de tolérance afin d’éviter les erreurs, mais elle peut produire des résultats indésirables.
+>Normalement, les valeurs de recherche doivent correspondre au type de données recherchées. Par exemple, une valeur de requête `evar7` sur un champ de nombres entiers échouerait. Lorsque la recherche porte sur plusieurs champs, les exigences relatives au type de requête sont assouplies afin dʼéviter les erreurs, mais peuvent produire des résultats non souhaités.
 
-### Étendue des requêtes à des types de ressources spécifiques
+### Portée des requêtes à des types de ressources spécifiques
 
-Vous pouvez étendre une recherche à un type de ressource spécifique en fournissant `resource_types` dans la requête. Par exemple, pour effectuer une recherche dans `data_elements` et `rule_components` :
+Vous pouvez étendre une recherche à un type de ressource spécifique en indiquant `resource_types` dans la requête. Par exemple, pour effectuer une recherche dans `data_elements` et `rule_components` :
 
 ```json
 {
@@ -64,7 +65,7 @@ Vous pouvez étendre une recherche à un type de ressource spécifique en fourni
 
 ### Tri des réponses
 
-La propriété `sort` peut être utilisée pour trier les réponses. Par exemple, pour trier par `created_at` en commençant par la plus récente :
+La propriété `sort` peut être utilisée pour trier les réponses. Par exemple, pour trier par `created_at` en commençant par le plus récent :
 
 ```json
 {
@@ -91,7 +92,7 @@ La propriété `sort` peut être utilisée pour trier les réponses. Par exemple
 
 ## Exemples de recherche courants
 
-L’exemple suivant illustre d’autres modèles de recherche courants.
+Lʼexemple suivant illustre dʼautres modèles de recherche courants.
 
 ### Toute ressource portant un nom spécifique
 
@@ -114,7 +115,7 @@ curl -X POST \
       }'
 ```
 
-### Toute ressource référençant « evar7 »
+### Toute ressource référençant « evar7 »
 
 ```shell
 curl -X POST \
@@ -135,7 +136,7 @@ curl -X POST \
       }'
 ```
 
-### Éléments de données d’un type de délégué « code personnalisé »
+### Éléments de données dʼun type délégué « custom-code »
 
 ```shell
 curl -X POST \
@@ -157,7 +158,7 @@ curl -X POST \
       }'
 ```
 
-### Composants de règle référençant un élément de données spécifique
+### Composants de règle faisant référence à un élément de données spécifique
 
 ```shell
 curl -X POST \
@@ -201,7 +202,7 @@ curl -X POST \
       }'
 ```
 
-### Recherche d’une ressource par identifiant
+### Recherche dʼune ressource par son identifiant
 
 ```shell
 curl -X POST \
@@ -222,7 +223,7 @@ curl -X POST \
       }'
 ```
 
-### Exécution d’une recherche à l’aide d’une logique de terme « OR »
+### Exécution dʼune recherche à lʼaide dʼune logique traditionnelle « OR »
 
 ```shell
 curl -X POST \

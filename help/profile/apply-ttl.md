@@ -3,13 +3,13 @@ keywords: Experience Platform;accueil;rubriques populaires;jeu de données;Jeu d
 solution: Experience Platform
 title: Durée de vie des jeux de données
 description: Ce document fournit des instructions générales sur la durée de vie (TTL) des jeux de données dans le magasin de profils pour Adobe Experience Platform.
-source-git-commit: 878c04c688268f8cf1850c3e8d40f958a6d2d69b
-workflow-type: ht
+exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 100%
 
 ---
-
 
 # Durée de vie dans le service de profils (TTL)
 
@@ -43,4 +43,3 @@ Par exemple, si vous appliquez une valeur de durée de vie de 30 jours le 15 mai
 1. Tous les nouveaux événements auront une valeur de durée de vie de 30 jours appliquée lors de leur ingestion.
 2. Tous les événements existants dont la date est antérieure au 15 avril seront immédiatement supprimés avec la tâche système.
 3. Tous les événements existants dont la date est postérieure au 15 avril auront une valeur dʼexpiration de durée de vie de 30 jours après la date de leur événement. Ainsi, si un événement a une date correspondant au 18 avril, il sera supprimé trente jours après cette date, soit le 18 mai.
-

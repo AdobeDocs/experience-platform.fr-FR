@@ -1,8 +1,9 @@
 ---
 title: Notes de mise à jour de l’extension de suivi vidéo YouTube
-description: Notes de mise à jour les plus récentes pour lʼextension de balise de suivi vidéo YouTube dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Notes de mise à jour les plus récentes pour l’extension de suivi vidéo YouTube dans Adobe Experience Platform.
+exl-id: 5c680b1d-3970-42ed-9956-e78ead7b3662
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 100%
 

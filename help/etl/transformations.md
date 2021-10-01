@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;etl;ETL;etl transformations;ETL
+keywords: Experience Platform;accueil;rubriques populaires;etl;ETL;transformations etl;transformations ETL
 solution: Experience Platform
 title: Exemple de transformations ETL
 topic-legacy: overview
 description: Cet article présente les exemples de transformations qu’un développeur ETL (extraction, transformation et chargement) peut rencontrer.
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '493'
@@ -21,7 +20,7 @@ Cet article présente les exemples de transformations qu’un développeur ETL (
 
 ### Exemples de fichiers
 
-Des exemples de fichiers CSV et JSON sont disponibles à partir de la référence ETL [!DNL GitHub] repo publique gérée par l’Adobe :
+Des exemples de fichiers CSV et JSON sont disponibles à partir du référentiel public de référence ETL [!DNL GitHub] géré par Adobe :
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -178,7 +177,7 @@ La hiérarchie d’un cadre de données (tel qu’un fichier Parquet) doit corre
 
 ### Exemple de cadre de données
 
-La structure de l&#39;exemple de base de données suivant a été mappée à un schéma qui implémente la classe [!DNL XDM Individual Profile] et contient les champs les plus courants associés aux schémas de ce type.
+La structure de l’exemple de cadre de données suivant a été mappée à un schéma qui implémente la classe [!DNL XDM Individual Profile] et contient les champs les plus courants associés aux schémas de ce type.
 
 ```python
 [

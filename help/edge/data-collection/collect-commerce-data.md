@@ -1,9 +1,8 @@
 ---
-title: Collecte d’informations commerciales et de produits à l’aide du SDK Web Adobe Experience Platform
-description: Découvrez comment ajouter des données liées à des produits ou à un panier à l’aide du Adobe Experience Platform Web SDK.
-keywords: produits;commerce;mesures;mesure;order;cartAbandons;passages en caisse;productListAdds;productListOpen;productListRemovals;productListReouvertures;productListViews;productViews;purchase;saveForLaters;currencyCode;paiements;paiementAmount;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
+title: Collecte d’informations commerciales et de produits à l’aide du SDK Web de Adobe Experience Platform
+description: Découvrez comment ajouter des données relatives aux produits ou à un panier à l’aide du SDK Web de Adobe Experience Platform.
+keywords: produits;commerce;mesures;order;cartAbandons;passages en caisse;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;achats;saveForLaters;currencyCode;paiements;paymentAmount;paymentType;priceTotal;purchaseID;purchaseOrderNumber;
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-translation-type: tm+mt
 source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
 source-wordcount: '1324'
@@ -15,7 +14,7 @@ ht-degree: 93%
 
 Si votre site contient des produits, il s’agit d’un ensemble par défaut d’éléments que vous souhaiterez peut-être envoyer pour activer les fonctionnalités essentielles d’Adobe. Bien qu’il s’agisse d’une suggestion, un ensemble très solide de données est fourni dès le départ.
 
-Ce document utilise le groupe de champs [Détails commerciaux d’ExperienceEvent](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) schéma. Le groupe de champs `commerce` est divisé en deux parties : l&#39;objet `commerce` et le tableau `productListItems`. L’objet `commerce` vous permet d’indiquer les actions qui se produisent dans le tableau `productListItems`.
+Ce document utilise le groupe de champs de schéma [Détails du commerce ExperienceEvent](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) . Le groupe de champs `commerce` est divisé en deux parties : l’objet `commerce` et le tableau `productListItems`. L’objet `commerce` vous permet d’indiquer les actions qui se produisent dans le tableau `productListItems`.
 
 >[!TIP]
 >

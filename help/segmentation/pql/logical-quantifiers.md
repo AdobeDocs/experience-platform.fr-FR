@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; pql ; PQL ; Langage de Requête de Profil ; quantificateurs logiques ; quantificateur logique ;
+keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;pql;PQL;langage de requête de profil;quantificateurs logiques;quantificateur logique
 solution: Experience Platform
 title: Quantificateurs logiques PQL
 topic-legacy: developer guide
 description: Les quantificateurs logiques peuvent être utilisés pour insérer des conditions dans des tableaux dans le langage de requête de profil (PQL).
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '219'
@@ -15,7 +14,7 @@ ht-degree: 79%
 
 # Fonctions de quantificateur logique
 
-Des quantificateurs logiques peuvent être utilisés pour affirmer des conditions avec des tableaux dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans le [[!DNL Profile Query Language] overview](./overview.md).
+Les quantificateurs logiques peuvent être utilisés pour insérer des conditions avec des tableaux dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Existe
 

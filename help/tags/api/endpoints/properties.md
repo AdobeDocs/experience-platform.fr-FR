@@ -5,7 +5,7 @@ exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1146'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 99%
 
 Une propriété est un concept de conteneur qui assure le disponibilité de la plupart des autres ressources dans l’API Reactor. Vous gérez les propriétés par programmation à l’aide du point d’entrée `/properties`.
 
-Dans la hiérarchie Ressource, une propriété est considérée propriétaire des éléments suivants :
+Dans la hiérarchie Ressource, une propriété est considérée propriétaire des éléments suivants :
 
 * [Versions](./builds.md)
 * [Rappels](./callbacks.md)
@@ -51,7 +51,7 @@ GET /companies/{COMPANY_ID}/properties
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les propriétés répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
+>À l’aide des paramètres de requête, les propriétés répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -577,7 +577,7 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour la propriété. Pour une propriété donnée, les attributs suivants peuvent être mis à jour : <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
+| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour la propriété. Pour une propriété donnée, les attributs suivants peuvent être mis à jour : <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
 | `id` | Le `id` de la propriété que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{PROPERTY_ID}` fournie dans le chemin d’accès de la requête. |
 | `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `properties`. |
 

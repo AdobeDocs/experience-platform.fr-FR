@@ -11,7 +11,7 @@ ht-degree: 2%
 
 ---
 
-# Tableau de bord d’utilisation de la licence {#license-usage-dashboard}
+# [!UICONTROL Tableau de bord d’utilisation de la licence] {#license-usage-dashboard}
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation de la licence de votre entreprise, telles qu’elles sont capturées pendant un instantané quotidien.
 

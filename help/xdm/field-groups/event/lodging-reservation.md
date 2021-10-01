@@ -2,13 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;réservation;hébergement;
 title: Groupe de champs de schéma de réservation d’hébergement
 description: Ce document présente un aperçu du groupe de champs Schéma de réservation de logement .
-source-git-commit: d230cfa9e74eb96aa44e8b83ca8f2306db4ba4ec
+exl-id: f0eafc83-21f1-483d-9397-1133e3777699
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 6%
 
 ---
-
 
 # [!UICONTROL Groupe de champs ] de schéma de réservation
 

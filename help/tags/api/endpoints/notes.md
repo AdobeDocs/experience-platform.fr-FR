@@ -5,13 +5,13 @@ exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
 # Point dʼentrée des notes
 
-Dans lʼAPI Reactor, les notes sont des annotations textuelles que vous pouvez ajouter à certaines ressources. Les notes sont essentiellement des commentaires sur leurs ressources respectives. Le contenu des notes nʼa aucun impact sur le comportement des ressources et peut être utilisé dans divers cas dʼutilisation, notamment :
+Dans lʼAPI Reactor, les notes sont des annotations textuelles que vous pouvez ajouter à certaines ressources. Les notes sont essentiellement des commentaires sur leurs ressources respectives. Le contenu des notes nʼa aucun impact sur le comportement des ressources et peut être utilisé dans divers cas dʼutilisation, notamment :
 
 * Fournir des informations générales
 * Faire office de listes de tâches

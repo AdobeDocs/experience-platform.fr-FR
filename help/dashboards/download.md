@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Téléchargement de tableaux de bord Experience Platform au format PDF
 type: Documentation
 description: Enregistrez des copies des visualisations de vos tableaux de bord à l’aide de la fonctionnalité de téléchargement au format PDF disponible dans l’interface utilisateur d’Experience Platform.
-source-git-commit: a95f77d048b5bb9562507122d249f592e68a1bcf
-workflow-type: ht
+exl-id: 838e98a0-ce2e-4dcd-8c8f-d28ef2cb8315
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 100%
 
 ---
-
 
 # Téléchargement de tableaux de bord au format PDF
 

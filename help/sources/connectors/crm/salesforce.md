@@ -7,8 +7,8 @@ description: Découvrez comment connecter Salesforce à Adobe Experience Platfor
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 source-git-commit: 759f38bac9b59fe32594dff771617ba8eaabae41
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '229'
+ht-degree: 20%
 
 ---
 

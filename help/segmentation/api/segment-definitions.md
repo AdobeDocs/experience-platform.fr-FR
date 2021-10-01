@@ -8,7 +8,7 @@ exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
 source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
 workflow-type: tm+mt
 source-wordcount: '1188'
-ht-degree: 48%
+ht-degree: 49%
 
 ---
 
@@ -20,7 +20,7 @@ Ce guide fournit des informations pour vous aider à mieux comprendre les défin
 
 ## Prise en main
 
-Les points de terminaison utilisés dans ce guide font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment les en-têtes requis et la manière de lire des exemples d’appels API.
+Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment les en-têtes requis et la manière de lire des exemples d’appels API.
 
 ## Obtention d’une liste de définitions de segment {#list}
 
@@ -258,7 +258,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la défini
 
 Vous pouvez récupérer des informations détaillées sur une définition de segment spécifique en envoyant une requête GET au point de terminaison `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez récupérer dans le chemin de requête.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /segment/definitions/{SEGMENT_ID}
@@ -477,7 +477,7 @@ Vous pouvez demander la suppression d’une définition de segment spécifique e
 >
 > **not** pourra supprimer un segment utilisé dans une activation de destination.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /segment/definitions/{SEGMENT_ID}
@@ -505,7 +505,7 @@ Une réponse réussie renvoie un état HTTP 200 sans message.
 
 Vous pouvez mettre à jour une définition de segment spécifique en envoyant une requête de PATCH au point de terminaison `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez mettre à jour dans le chemin d’accès de la requête.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 PATCH /segment/definitions/{SEGMENT_ID}

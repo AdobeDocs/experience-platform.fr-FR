@@ -9,7 +9,7 @@ ht-degree: 2%
 
 ---
 
-# Questions fréquemment posées
+# Questions fréquentes
 
 Ce guide répond aux questions fréquentes sur le SDK Web de Adobe Experience Platform.
 

@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires
+keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
-title: Annexe du Guide de l’API Privacy Service
+title: Annexe du guide de l’API Privacy Service
 topic-legacy: developer guide
-description: Ce document contient des informations supplémentaires sur l’utilisation de l’API du Privacy Service.
+description: Ce document contient des informations supplémentaires sur l’utilisation de l’API Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-translation-type: tm+mt
 source-git-commit: a4f6801cc85624274716889bdda0146fa38eb4b7
 workflow-type: tm+mt
 source-wordcount: '478'
-ht-degree: 76%
+ht-degree: 79%
 
 ---
 
@@ -19,9 +18,9 @@ Les sections suivantes contiennent des informations supplémentaires sur l’uti
 
 ## Espaces de noms d’identité standard {#standard-namespaces}
 
-Toutes les identités envoyées à [!DNL Privacy Service] doivent être fournies sous un espace de nommage d&#39;identité spécifique. Les espaces de noms d’identité sont des composants [Adobe Experience Platform Identity Service](../../identity-service/home.md) qui servent d’indicateurs du contexte auquel une identité se rapporte.
+Toutes les identités envoyées à [!DNL Privacy Service] doivent être fournies sous un espace de noms d’identité spécifique. Les espaces de noms d’identité sont des composants [Adobe Experience Platform Identity Service](../../identity-service/home.md) qui servent d’indicateurs du contexte auquel une identité se rapporte.
 
-Le tableau suivant présente plusieurs types d&#39;identité prédéfinis couramment utilisés, rendus disponibles par [!DNL Experience Platform], ainsi que les valeurs `namespace` associées :
+Le tableau suivant présente plusieurs types d’identité prédéfinis couramment utilisés, mis à disposition par [!DNL Experience Platform], ainsi que les valeurs `namespace` associées :
 
 | Type d’identité | `namespace` | `namespaceId` |
 | --- | --- | --- |
@@ -33,7 +32,7 @@ Le tableau suivant présente plusieurs types d&#39;identité prédéfinis couram
 | Identifiant Adobe Target | `TNTID` | `9` |
 | [!DNL Apple] Identifiant pour les annonceurs | `IDFA` | `20915` |
 | [!DNL Google] Identifiant de publicité | `GAID` | `20914` |
-| [!DNL Windows] AIDE | `WAID` | `8` |
+| [!DNL Windows] AID | `WAID` | `8` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -54,8 +53,8 @@ Lors de la spécification d’une valeur `namespace`[!DNL Privacy Service] dans 
 | `integrationCode` | Code d’intégration, similaire à « custom », mais spécifiquement défini comme le code d’intégration d’une source de données à rechercher. L’identifiant d’espace de noms est fourni. |
 | `namespaceId` | Indique que la valeur correspond à l’identifiant réel de l’espace de noms créé ou mappé via le service d’espace de noms. |
 | `unregistered` | Chaîne de forme libre non définie dans le service d’espace de noms et prise « en l’état ». Toute application qui gère ces types d’espaces de noms les compare et les traite en fonction du contexte de l’entreprise et du jeu de données. Aucun identifiant d’espace de noms n’est fourni. |
-| `analytics` | Espace de nommage personnalisé mappé en interne dans [!DNL Analytics], et non dans le service d’espace de nommage. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
-| `target` | Espace de nommage personnalisé compris en interne par [!DNL Target], et non dans le service d’espace de nommage. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
+| `analytics` | Espace de noms personnalisé mappé en interne dans [!DNL Analytics], et non dans le service d’espace de noms. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
+| `target` | Espace de noms personnalisé compris en interne par [!DNL Target], et non dans le service d’espace de noms. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -72,8 +71,8 @@ Le tableau suivant indique les valeurs acceptées pour la spécification d’un 
 | Adobe Experience Platform | `AdobeCloudPlatform` |
 | Adobe Primetime Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
-| Produit d&#39;automatisation | `automationProduct` |
+| Produit d’automatisation | `automationProduct` |
 | Attributs du client (CRS) | `CRS` |
-| Profil client en temps réel | `profileService` |
+| Real-time Customer Profile | `profileService` |
 
 {style=&quot;table-layout:auto&quot;}

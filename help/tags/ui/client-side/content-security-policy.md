@@ -1,8 +1,9 @@
 ---
 title: Prise en charge de la stratégie de sécurité du contenu (CSP)
-description: Découvrez comment gérer les restrictions de la stratégie de sécurité du contenu (CSP) lors de l’intégration des balises à votre site web dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez comment gérer les restrictions de la stratégie de sécurité du contenu (CSP) lors de lʼintégration de votre site web au moyen de balises dans Adobe Experience Platform.
+exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1080'
 ht-degree: 100%
 
@@ -14,7 +15,7 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Une stratégie de sécurité du contenu (CSP) est une fonctionnalité de sécurité qui aide à prévenir les attaques de type « cross-site scripting » (XSS). Ces attaques se produisent lorsque le navigateur est amené à exécuter du contenu malveillant qui semble provenir d’une source de confiance, mais qui vient en réalité d’ailleurs. La stratégie de sécurité du contenu permet au navigateur (au nom de l’utilisateur) de vérifier que le script provient bien d’une source de confiance.
+Une stratégie de sécurité du contenu (CSP) est une fonctionnalité de sécurité qui aide à prévenir les attaques de type « cross-site scripting » (XSS). Elles se produisent lorsque le navigateur est amené à exécuter du contenu malveillant qui semble provenir dʼune source de confiance, mais qui vient en réalité dʼailleurs. La stratégie de sécurité du contenu permet au navigateur (au nom de l’utilisateur) de vérifier que le script provient bien d’une source de confiance.
 
 Les fichiers CSP sont implémentés en ajoutant un en-tête HTTP `Content-Security-Policy` à vos réponses de serveur ou en ajoutant un élément `<meta>` configuré dans la section `<head>` de vos fichiers HTML.
 
@@ -22,18 +23,18 @@ Les fichiers CSP sont implémentés en ajoutant un en-tête HTTP `Content-Securi
 >
 > Pour plus d’informations sur la CSP, consultez la [documentation web MDN](https://developer.mozilla.org/fr/docs/Web/HTTP/CSP).
 
-Les balises dans Adobe Experience Platform constituent un système de gestion des balises conçu pour charger dynamiquement les scripts sur votre site web. Une CSP par défaut bloque ces scripts chargés dynamiquement en raison de problèmes de sécurité potentiels. Ce document explique comment configurer votre CSP pour autoriser les scripts chargés dynamiquement à partir des balises.
+Dans Adobe Experience Platform, les balises représentent un système de gestion des balises conçu pour charger dynamiquement des scripts sur votre site web. Une CSP par défaut bloque ces scripts chargés dynamiquement en raison de problèmes de sécurité potentiels. Ce document explique comment configurer votre CSP pour autoriser les scripts chargés dynamiquement à partir de balises.
 
-Si vous souhaitez que les balises soient conformes à votre stratégie de sécurité du contenu, deux critères principaux doivent être vérifiés :
+Si vous souhaitez que les balises soient conformes à votre stratégie de sécurité du contenu, deux critères principaux doivent être remplis :
 
-* **La source de votre bibliothèque de balises doit être fiable.** Si cette condition n’est pas remplie, la bibliothèque de balises et les autres fichiers JavaScript requis sont bloqués par le navigateur et ne se chargent pas sur la page.
+* **La source de votre bibliothèque de balises doit être fiable.** Si cette condition nʼest pas remplie, la bibliothèque de balises et les autres fichiers JavaScript requis sont bloqués par le navigateur et ne se chargent pas sur la page.
 * **Les scripts intégrés doivent être autorisés.** Si cette condition n’est pas remplie, les actions des règles Custom Code (Code personnalisé) sont bloquées sur la page et ne s’exécuteront pas correctement.
 
-Une sécurité renforcée nécessite un travail accru de la part du créateur de contenu. Si vous souhaitez utiliser les balises et avoir une stratégie de sécurité du contenu mise en place, vous devez corriger ces deux problèmes sans que les autres scripts soient considérés comme sûrs par erreur. Le reste du document fournit des conseils sur la façon d’y parvenir.
+Une sécurité renforcée exige une quantité de travail plus importante de la part du créateur de contenu. Si vous souhaitez utiliser les balises et avoir une stratégie de sécurité du contenu mise en place, vous devez corriger ces deux problèmes sans que les autres scripts soient considérés comme sûrs par erreur. Le reste du document fournit des conseils sur la façon d’y parvenir.
 
 ## Ajouter les balises en tant que source de confiance
 
-Lors de l’utilisation d’une CSP, vous devez inclure tous les domaines de confiance dans la valeur de l’en-tête `Content-Security-Policy`. La valeur que vous devez fournir pour les balises varie en fonction du type d’hébergement utilisé.
+Lors de l’utilisation d’une CSP, vous devez inclure tous les domaines de confiance dans la valeur de l’en-tête `Content-Security-Policy`. La valeur que vous devez fournir pour les balises varie en fonction du type dʼhébergement utilisé.
 
 ### Auto-hébergement
 
@@ -64,7 +65,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **Balise `<meta>` HTML**
 
 
-Il y a une condition préalable très importante : vous devez charger la bibliothèque de balises [de manière asynchrone](./asynchronous-deployment.md). Cela ne fonctionne pas avec un chargement synchrone de la bibliothèque de balises (entraîne des erreurs de console et des règles dont l’exécution ne se fait pas correctement).
+Il y a une condition préalable très importante : vous devez charger la bibliothèque de balises [de manière asynchrone](./asynchronous-deployment.md). Cela ne fonctionne pas avec un chargement synchrone de la bibliothèque de balises (entraîne des erreurs de console et des règles dont lʼexécution ne se fait pas correctement).
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
@@ -81,7 +82,7 @@ Par défaut, la CSP désactive les scripts intégrés et doit donc être configu
 
 >[!NOTE]
 >
->La spécification CSP contient des détails sur une troisième option utilisant des hachages, mais cette approche ne peut pas être utilisée avec des systèmes de gestion des balises tels que la fonctionnalité Balises. Pour plus d’informations sur les limites d’utilisation des hachages avec les balises dans Platform, consultez le guide [Intégrité des sous-ressources (SRI)](./sri.md).
+>La spécification CSP contient des détails sur une troisième option utilisant des hachages, mais cette approche ne peut pas être utilisée avec des systèmes de gestion des balises tels que des balises. Pour plus dʼinformations sur les limites dʼutilisation des hachages avec les balises dans Platform, consultez le guide [Intégrité des sous-ressources (SRI)](./sri.md).
 
 ### Autoriser par valeur à usage unique {#nonce}
 
@@ -105,7 +106,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c'">
 ```
 
-Une fois que vous avez configuré l’en-tête ou la balise HTML, vous devez indiquer à la balise où trouver la valeur à usage unique lors du chargement d’un script intégré. Pour qu’une balise utilise la valeur à usage unique lors du chargement du script, vous devez :
+Une fois que vous avez configuré lʼen-tête ou la balise HTML, vous devez indiquer à la balise où trouver la valeur à usage unique lors du chargement dʼun script intégré. Pour quʼune balise utilise la valeur à usage unique lors du chargement du script, vous devez :
 
 1. créer un élément de données qui référence l’emplacement de la valeur à usage unique dans votre couche de données ;
 1. configurer l’extension Core et spécifier l’élément de données que vous avez utilisé ;
@@ -113,7 +114,7 @@ Une fois que vous avez configuré l’en-tête ou la balise HTML, vous devez ind
 
 >[!NOTE]
 >
->Le processus ci-dessus gère uniquement le chargement de votre code personnalisé, et non ce que ce code personnalisé fait. Si un script intégré contient du code personnalisé qui n’est pas conforme à votre CSP, la CSP est prioritaire. Par exemple, si vous utilisez un code personnalisé pour charger un script intégré en l’ajoutant au DOM, la balise ne peut pas ajouter correctement la valeur à usage unique. Ainsi, cette action Custom Code particulière ne fonctionnera pas comme prévu.
+>Le processus ci-dessus gère uniquement le chargement de votre code personnalisé, et non ce que ce code personnalisé fait. Si un script intégré contient du code personnalisé qui n’est pas conforme à votre CSP, la CSP est prioritaire. Par exemple, si vous utilisez un code personnalisé pour charger un script intégré en lʼajoutant au DOM, la balise ne peut pas ajouter correctement la valeur à usage unique. Ainsi, cette action Custom Code particulière ne fonctionnera pas comme prévu.
 
 ### Autoriser tous les scripts intégrés {#unsafe-inline}
 
@@ -157,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 Grâce à ce document, vous devriez comprendre comment configurer votre en-tête CSP pour accepter le fichier de bibliothèque de balises et les scripts intégrés.
 
-À titre de mesure de sécurité supplémentaire, vous pouvez également choisir d’utiliser l’intégrité des sous-ressources (SRI) pour valider les versions de bibliothèque récupérées. Cependant, cette fonctionnalité présente certaines limites majeures lorsqu’elle est utilisée avec des systèmes de gestion des balises tels que la fonctionnalité Balises. Pour plus d’informations, consultez le guide sur la [compatibilité SRI dans Platform](./sri.md).
+À titre de mesure de sécurité supplémentaire, vous pouvez également choisir d’utiliser l’intégrité des sous-ressources (SRI) pour valider les versions de bibliothèque récupérées. Cependant, cette fonctionnalité présente certaines limites majeures lorsquʼelle est utilisée avec des systèmes de gestion des balises tels que des balises. Pour plus dʼinformations, consultez le guide sur la [compatibilité SRI dans Platform](./sri.md).

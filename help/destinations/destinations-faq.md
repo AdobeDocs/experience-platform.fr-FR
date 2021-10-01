@@ -1,18 +1,18 @@
 ---
 keywords: les destinations ; questions; aux questions fréquentes; faq; faq sur les destinations
 title: Questions fréquentes
-seo-title: 'Questions fréquemment posées '
+seo-title: Frequently asked questions
 description: Réponses aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform
-seo-description: Réponses aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform
-source-git-commit: a01b53758f4ad42272c39f71a08021d30900e7af
+seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
+exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '718'
 ht-degree: 11%
 
 ---
 
-
-# Questions fréquemment posées {#faq}
+# Questions fréquentes {#faq}
 
 ## Présentation {#overview}
 

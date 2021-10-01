@@ -4,13 +4,13 @@ description: Notes de mise à jour d’Experience Platform du 21 avril 2021.
 doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
-workflow-type: ht
+exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 100%
 
 ---
-
 
 # Notes de mise à jour d’Adobe Experience Platform
 
@@ -39,7 +39,7 @@ Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation]
 
 ## [!DNL Experience Data Model (XDM)] {#xdm}
 
-Le modèle de données d’expérience (XDM) est une spécification open source conçue pour améliorer la puissance des expériences digitales. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+Le modèle de données d’expérience (XDM) est une spécification open source conçue pour améliorer la puissance des expériences digitales. Il fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 | Fonctionnalité | Description |
 | --- | --- |
@@ -61,9 +61,9 @@ Customer AI disponible dans la plateforme de données clients en temps réel es
 
 Pour plus d’informations sur les jeux de données pris en charge, consultez la [[!DNL Intelligent Services] documentation sur la préparation des données](../../intelligent-services/data-preparation.md).
 
-### Attribution AI
+### Attribution AI
 
-Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client.
+Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |

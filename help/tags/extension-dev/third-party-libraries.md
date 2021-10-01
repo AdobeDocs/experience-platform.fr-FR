@@ -1,8 +1,9 @@
 ---
 title: Implémentation de bibliothèques tierces
 description: Découvrez les différentes méthodes dʼhébergement de bibliothèques tierces dans vos extensions de balises Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1330'
 ht-degree: 100%
 
@@ -24,7 +25,7 @@ Ce document nécessite une bonne compréhension des extensions au sein des balis
 
 ## Processus de chargement du code de base
 
-En dehors du contexte des balises, il est important de comprendre comment les technologies de marketing sont généralement chargées sur un site web. Les fournisseurs de bibliothèques tierces fournissent un fragment de code (appelé code de base) qui doit être incorporé dans le code HTML de votre site web pour charger les fonctionnalités de la bibliothèque.
+En dehors du contexte de balises, il est important de comprendre comment les technologies de marketing sont généralement chargées sur un site web. Les fournisseurs de bibliothèques tierces fournissent un fragment de code (appelé code de base) qui doit être incorporé dans le code HTML de votre site web pour charger les fonctionnalités de la bibliothèque.
 
 En général, les codes de base des technologies de marketing exécutent une variante du processus suivant lors du chargement sur votre site :
 
@@ -32,7 +33,7 @@ En général, les codes de base des technologies de marketing exécutent une var
 1. Chargez la bibliothèque du fournisseur.
 1. Effectuez une série d’appels initiaux en file d’attente vers la fonction globale à des fins de configuration et de suivi.
 
-Pendant la configuration initiale de la fonction globale, vous pouvez encore appeler la fonction avant que le chargement de la bibliothèque ne soit terminé. Tous les appels que vous effectuez sont ajoutés au mécanisme de file dʼattente du code de base, puis exécutés dans lʼordre séquentiel une fois la bibliothèque chargée.
+Pendant la configuration initiale de la fonction globale, vous pouvez encore appeler la fonction avant que le chargement de la bibliothèque ne soit terminé. Tous les appels que vous effectuez sont ajoutés au mécanisme de file dʼattente du code de base et sont ensuite exécutés dans lʼordre séquentiel une fois la bibliothèque chargée.
 
 Quand le chargement de la bibliothèque est terminé, la fonction globale est remplacée par une nouvelle fonction qui contourne la file d’attente et traite immédiatement les appels futurs à la fonction.
 
@@ -98,7 +99,7 @@ Les méthodes suivantes sont couvertes :
       - [Exemple de code de base](#base-code-example)
    - [Options dʼimplémentation des balises](#tags-implementation-options)
       - [Chargement au moment de l’exécution à partir de l’hôte fournisseur {#vendor-host}](#load-at-runtime-from-the-vendor-host-vendor-host)
-      - [Chargement au moment de lʼexécution à partir de lʼhôte de bibliothèque des balises](#load-at-runtime-from-the-tag-library-host)
+      - [Chargement au moment de lʼexécution à partir de lʼhôte de bibliothèque de balises](#load-at-runtime-from-the-tag-library-host)
       - [Incorporer directement la bibliothèque](#embed-the-library-directly)
    - [Étapes suivantes](#next-steps)
 
@@ -159,7 +160,7 @@ module.exports = function() {
 };
 ```
 
-### Chargement au moment de lʼexécution à partir de lʼhôte de bibliothèque des balises
+### Chargement au moment de lʼexécution à partir de lʼhôte de bibliothèque de balises
 
 L’utilisation d’un CDN comme fournisseur pour l’hébergement d’une bibliothèque présente plusieurs risques : le CDN peut échouer, le fichier peut être mis à jour avec un bug critique à tout moment, ou le fichier peut être compromis à des fins malhonnêtes.
 
@@ -171,7 +172,7 @@ Pour résoudre ces problèmes, vous pouvez choisir d’inclure la bibliothèque 
 
 Pour implémenter cette méthode, vous devez d’abord télécharger la bibliothèque du fournisseur sur votre ordinateur. Dans le cas de Pinterest, la bibliothèque du fournisseur se trouve à l’adresse [https://s.pinimg.com/ct/core.js](https://s.pinimg.com/ct/core.js). Une fois le fichier téléchargé, vous devez le placer dans votre projet d’extension. Dans l’exemple ci-dessous, le fichier est nommé `pinterest.js` et se trouve dans un dossier `vendor` du répertoire de projet.
 
-Quand le fichier de bibliothèque est dans votre projet, vous devez mettre à jour votre [manifeste dʼextension](./manifest.md) (`extension.json`) pour indiquer que la bibliothèque du fournisseur doit être fournie avec la bibliothèque de balises. Pour ce faire, ajoutez le chemin d’accès au fichier de bibliothèque dans un tableau `hostedLibFiles` :
+Quand le fichier de bibliothèque est dans votre projet, vous devez mettre à jour votre [manifeste dʼextension](./manifest.md) (`extension.json`) pour indiquer que la bibliothèque du fournisseur doit être fournie avec la bibliothèque de balises principale. Pour ce faire, ajoutez le chemin d’accès au fichier de bibliothèque dans un tableau `hostedLibFiles` :
 
 ```json
 {
@@ -204,7 +205,7 @@ Il est important de noter que, quand vous utilisez cette méthode, vous devez me
 
 ### Incorporer directement la bibliothèque
 
-Vous pouvez éviter dʼavoir à charger entièrement la bibliothèque du fournisseur en incorporant directement le code de bibliothèque dans le code dʼaction lui-même, ce qui en fait un élément de la bibliothèque de balises principale. L’utilisation de cette méthode augmente la taille de la bibliothèque principale, mais évite d’avoir à effectuer une requête HTTP supplémentaire pour récupérer un fichier distinct.
+Vous pouvez éviter dʼavoir à charger la bibliothèque du fournisseur entièrement en incorporant directement le code de bibliothèque dans le code dʼaction lui-même, ce qui en fait un élément de la bibliothèque de balises principale. L’utilisation de cette méthode augmente la taille de la bibliothèque principale, mais évite d’avoir à effectuer une requête HTTP supplémentaire pour récupérer un fichier distinct.
 
 Avec le code d’action créé dans la [section précédente](#vendor-host) comme point de départ, vous pouvez remplacer la ligne où le script est chargé par le contenu du script lui-même :
 

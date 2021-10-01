@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; exécuter des requêtes planifiées ; exécuter des requêtes planifiées ; service de Requête ; requêtes planifiées ; requête programmée ;
+keywords: Experience Platform;accueil;rubriques populaires;service de requête;exécuter des requêtes planifiées;exécuter une requête planifiée;service de requête;requêtes planifiées;requête planifiée;
 solution: Experience Platform
-title: Point de terminaison de l’API des exécutions de Requêtes planifiées
+title: Point de terminaison de l’API des exécutions de requête planifiées
 topic-legacy: runs for scheduled queries
-description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour exécuter des requêtes planifiées avec l’API Requête Service.
+description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour exécuter des requêtes planifiées avec l’API Query Service.
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '696'
@@ -13,11 +12,11 @@ ht-degree: 88%
 
 ---
 
-# Point de terminaison d’exécution de la requête planifiée
+# Point de terminaison des exécutions de requête planifiées
 
 ## Exemples d’appels API
 
-Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commencer à lancer des appels à l&#39;API [!DNL Query Service]. Les sections suivantes décrivent les différents appels d&#39;API que vous pouvez effectuer à l&#39;aide de l&#39;API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commencer à lancer des appels à l’API [!DNL Query Service]. Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide de l’API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
 ### Récupération d’une liste de toutes les exécutions pour une requête planifiée spécifiée
 

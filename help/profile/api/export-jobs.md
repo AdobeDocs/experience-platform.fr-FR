@@ -8,7 +8,7 @@ exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 source-git-commit: b47a52920f82a962ff044a0dacf9777b6eeae447
 workflow-type: tm+mt
 source-wordcount: '1517'
-ht-degree: 67%
+ht-degree: 68%
 
 ---
 
@@ -26,7 +26,7 @@ Outre la création d’une tâche d’exportation, vous pouvez accéder aux donn
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’API [!DNL Real-time Customer Profile]. Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Real-time Customer Profile]API. Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Création d’une tâche d’exportation
 

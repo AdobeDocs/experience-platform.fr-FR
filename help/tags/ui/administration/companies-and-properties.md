@@ -1,8 +1,9 @@
 ---
 title: Propriétés
 description: Découvrez comment vos extensions, environnements et bibliothèques sont organisés et regroupés pour votre organisation dans Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
-workflow-type: ht
+exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1178'
 ht-degree: 100%
 
@@ -16,7 +17,7 @@ ht-degree: 100%
 
 ## Propriétés web
 
-Une propriété web est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Chaque propriété web possède son propre jeu de codes incorporés et peut être déployée sur un nombre indéfini de sites web (domaines différents).
+Une propriété web est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Chaque propriété web possède son propre jeu de codes intégrés et peut être déployée sur un nombre indéfini de sites web (domaines différents).
 
 ## Propriétés mobiles
 
@@ -24,7 +25,7 @@ Un type de propriété mobile peut contenir plusieurs applications. Par exemple,
 
 ## Bonnes pratiques pour la planification des propriétés {#best-practices-for-planning-properties}
 
-Les implémentations de balises dans Adobe Experience Platform peuvent être très différentes. Elles disposent d’un large éventail de besoins de collecte des données, d’utilisation des variables, d’extensions, de balises tierces, d’autres systèmes et technologies, de personnes, d’équipes, de régions géographiques, etc. Vous devez structurer vos propriétés de manière à ce qu’elles correspondent à votre workflow d’organisation IMS et à vos processus.
+Chaque mise en œuvre de balises dans Adobe Experience Platform peut être très différente. Elles possèdent un large éventail de besoins de collecte des données, dʼutilisation des variables, dʼextensions, de balises tierces, dʼautres systèmes et technologies, de personnes, dʼéquipes, de régions géographiques, etc. Vous devez structurer vos propriétés de manière à ce quʼelles correspondent au workflow de votre organisation IMS et à vos processus.
 
 Tenez compte des éléments suivants lors de la planification des propriétés :
 
@@ -36,7 +37,7 @@ Tenez compte des éléments suivants lors de la planification des propriétés 
 
 ### Structure du code
 
-Les sites sont basés sur du HTML, des applications mobiles sur du code. Si les modèles ou les codes base HTML sous-jacents sont identiques pour plusieurs sites et applications, vous pouvez envisager d’utiliser une seule propriété de balise pour gérer plusieurs sites ou applications.
+Les sites sont basés sur du HTML, des applications mobiles sur du code. Si les modèles ou les codes base HTML sous-jacents sont identiques pour plusieurs sites et applications, vous pouvez envisager dʼutiliser une seule propriété de balise pour gérer plusieurs sites ou applications.
 
 ### Données
 
@@ -44,7 +45,7 @@ Pour tous vos sites web ou applications, les données que vous allez collecter s
 
 Si les données à collecter sont similaires, il est logique de regrouper les sites ou applications en une propriété afin d’éviter de dupliquer des règles ou de copier des règles d’une propriété à une autre.
 
-Si vos besoins en termes de collecte de données sont uniques pour chaque site ou application, il semble logique de séparer ces sites ou applications en propriétés distinctes. Cette méthode permet de contrôler la collecte de données plus spécifiquement sans utiliser d’importants volumes de logique conditionnelle dans les scripts personnalisés.
+Si vos besoins en termes de collecte de données sont uniques pour chaque site ou application, il semble logique de les séparer dans des propriétés distinctes. Cette méthode permet de contrôler la collecte de données plus spécifiquement sans utiliser d’importants volumes de logique conditionnelle dans les scripts personnalisés.
 
 ### Variables
 
@@ -56,7 +57,7 @@ Par exemple, si l’eVar27 est utilisée pour la même valeur source sur tous vo
 
 Les extensions, balises et systèmes que vous allez déployer sont-ils très similaires, plutôt similaires ou uniques ?
 
-Si les extensions, balises et systèmes que vous allez déployer sont très similaires sur l’ensemble de vos sites ou applications, vous pouvez les inclure dans la même propriété.
+Si les extensions, balises et systèmes que vous allez déployer sont très similaires sur lʼensemble de vos sites ou applications, vous pouvez les inclure dans la même propriété.
 
 Si vous déployez [!DNL Adobe Analytics] sur un seul site ou une seule application et que vos autres extensions et balises sont également uniques, vous pouvez créer des propriétés distinctes afin de disposer d’un meilleur contrôle.
 
@@ -64,13 +65,13 @@ Par exemple, si vous déployez [!DNL Adobe Analytics], [!DNL Target] et les mêm
 
 ### Personnes
 
-Les personnes, équipes et organisations qui travaillent sur Adobe Experience Platform auront-elles besoin d’un accès à tous vos sites web et applications, à certaines de ces ressources ou à seulement l’une d’entre elles ?
+Les personnes, équipes et organisations qui travaillent sur Adobe Experience Platform auront-elles besoin dʼun accès à tous vos sites web et applications, à certaines de ces ressources ou à seulement lʼune dʼentre elles ?
 
 Les fonctionnalités de gestion des utilisateurs permettent d’affecter des rôles à différentes personnes pour toutes vos propriétés ou par propriété. Si une personne dispose des droits suffisants, elle peut effectuer des actions administratives pour toutes les propriétés de cette organisation IMS dans Platform. Tous les autres rôles peuvent être affectés sur une base par propriété. Vous pouvez même masquer une propriété pour certains utilisateurs (non administrateurs) en ne leur accordant aucun rôle dans cette propriété.
 
 ## Page Propriétés
 
-Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Pour le Web, il n’y a qu’un seul code incorporé de publication par propriété. Pour les propriétés mobiles, il y a un ID d’application de configuration par propriété.
+Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Pour le Web, il nʼy a quʼun seul code incorporé de publication par propriété. Pour les propriétés mobiles, il y a un identifiant dʼapplication de configuration par propriété.
 
 Une propriété peut être n’importe quel regroupement d’un ou de plusieurs domaines et sous-domaines. Vous pouvez gérer ces ressources et en effectuer le suivi de manière similaire. Par exemple, supposons que vous disposez de plusieurs sites web reposant sur un modèle et que vous souhaitez effectuer le suivi des mêmes ressources sur tous les sites. Vous pouvez appliquer une propriété à plusieurs domaines.
 
@@ -88,7 +89,7 @@ Cliquez sur une propriété pour en voir une présentation. La présentation ré
 
 ## Création ou configuration d’une propriété
 
-Cette section fournit des conseils sur la création ou la configuration d’une propriété de balise dans Adobe Experience Platform.
+Cette section fournit des instructions sur la manière de créer ou de configurer une propriété de balise dans Adobe Experience Platform.
 
 >[!NOTE]
 >
@@ -122,7 +123,7 @@ Suivez les instructions pour créer une propriété mobile.
 1. Renseignez les champs suivants :
 
    * **Name :** le nom de la propriété.
-   * **Privacy :** par défaut, le paramètre de confidentialité est défini sur Opted In (Activé), ce qui signifie que vous souhaitez que le SDK collecte et envoie des données aux solutions. Si vous sélectionnez Opt Out (Désactivé), le SDK ne transmettra PAS les données aux solutions par défaut. Si vous sélectionnez le paramètre Inconnu, le SDK doit préalablement demander à l’utilisateur l’autorisation de collecter et de partager les données.
+   * **Privacy :** par défaut, le paramètre de confidentialité est défini sur Opted In (Activé), ce qui signifie que vous souhaitez que le SDK collecte et envoie des données aux solutions. Si vous sélectionnez Opt Out (Désactivé), le SDK ne transmettra PAS les données aux solutions par défaut. Si vous sélectionnez Unknown (Aucun), le SDK doit préalablement demander à lʼutilisateur lʼautorisation de collecter et de partager les données.
 
       >[!NOTE]
       >
@@ -132,7 +133,7 @@ Suivez les instructions pour créer une propriété mobile.
 
 1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
-Une fois la propriété créée, Platform ajoute automatiquement un hôte par défaut, un ensemble d’environnements (Développement, Évaluation et Production) et les extensions par défaut.
+Une fois la propriété créée, Platform ajoute automatiquement un hôte par défaut, un ensemble dʼenvironnements (Développement, Évaluation et Production) et les extensions par défaut.
 
 ## Suppression d’une propriété
 

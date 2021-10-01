@@ -1,19 +1,19 @@
 ---
 title: Connexion à MediaYahoo DataX Verizon
-description: DataX est une infrastructure Verizon Media/Yahoo agrégée qui héberge divers composants qui permettent à Verizon Media/Yahoo d’échanger des données avec ses partenaires externes de manière sécurisée, automatisée et évolutive.
-source-git-commit: 09bae0d24eead5f0b6533ba5b89e1fc87c8c71b5
+description: DataX, une infrastructure globale appartenant à Verizon Media/Yahoo, permet dʼhéberger différents composants et dʼéchanger des données avec les partenaires externes de Verizon Media/Yahoo, de manière sécurisée, automatisée et évolutive.
+exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '586'
-ht-degree: 6%
+ht-degree: 16%
 
 ---
-
 
 # Connexion à Verizon Media/Yahoo DataX
 
 ## Présentation {#overview}
 
-DataX est une infrastructure Verizon Media/Yahoo agrégée qui héberge divers composants qui permettent à Verizon Media/Yahoo d’échanger des données avec ses partenaires externes de manière sécurisée, automatisée et évolutive.
+DataX, une infrastructure globale appartenant à Verizon Media/Yahoo, permet dʼhéberger différents composants et dʼéchanger des données avec les partenaires externes de Verizon Media/Yahoo, de manière sécurisée, automatisée et évolutive.
 
 >[!IMPORTANT]
 >

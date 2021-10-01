@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; sujets populaires ;
+keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées ;
 solution: Experience Platform
-title: Guide de l'API d'apprentissage automatique Sensei Annexe
+title: Annexe du guide de l’API Sensei Machine Learning
 topic-legacy: Developer guide
 description: Les sections suivantes fournissent des informations de référence pour différentes fonctionnalités de l’API Sensei Machine Learning.
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '330'
@@ -15,11 +14,11 @@ ht-degree: 80%
 
 # [!DNL Sensei Machine Learning] Annexe du guide d’API
 
-Les sections suivantes contiennent des informations de référence sur diverses fonctionnalités de l&#39;API [!DNL Sensei Machine Learning].
+Les sections suivantes contiennent des informations de référence sur les différentes fonctionnalités de l’API [!DNL Sensei Machine Learning].
 
 ## Paramètres de requête pour la récupération de ressources {#query}
 
-L&#39;API [!DNL Sensei Machine Learning] prend en charge les paramètres de requête lors de la récupération des ressources. Les paramètres de requête disponibles et leurs utilisations sont décrits dans le tableau suivant :
+L’API [!DNL Sensei Machine Learning] prend en charge les paramètres de requête pour la récupération des ressources. Les paramètres de requête disponibles et leurs utilisations sont décrits dans le tableau suivant :
 
 | Paramètre de requête | Description | Valeur par défaut |
 | --------------- | ----------- | ------- |
@@ -75,7 +74,7 @@ L’exemple suivant présente une configuration qui précise l’utilisation d�
 
 ## Configurations des ressources PySpark et Spark {#resource-config}
 
-Les moteurs Spark permettent de modifier les ressources de calcul à des fins de formation et de notation. Ces ressources sont décrites dans le tableau suivant :
+Les moteurs Spark permettent de modifier des ressources de calcul à des fins de formation et de notation. Ces ressources sont décrites dans le tableau suivant :
 
 | Ressource | Description | Type |
 | -------- | ----------- | ---- |

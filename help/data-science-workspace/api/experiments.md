@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; sujets populaires ; expériences ; api d’apprentissage automatique sensei
+keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées;expériences;api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Point de terminaison de l’API d’expériences
 topic-legacy: Developer guide
 description: Le développement et la formation de modèle se déroulent au niveau de l’expérience qui se compose d’une instance MLInstance ainsi que d’exécutions de formation et de notation.
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '783'
@@ -13,7 +12,7 @@ ht-degree: 97%
 
 ---
 
-# Point de terminaison des expériences
+# Point d’entrée des expériences
 
 Le développement et la formation de modèle se déroulent au niveau de l’expérience qui se compose d’une instance MLInstance ainsi que d’exécutions de formation et de notation.
 
@@ -70,7 +69,7 @@ Une réponse réussie renvoie un payload contenant les détails de l’expérien
 }
 ```
 
-## Création et exécution d’une exécution de formation ou de notation  {#experiment-training-scoring}
+## Création et exécution d’une exécution de formation ou de notation {#experiment-training-scoring}
 
 Vous pouvez créer des exécutions de formation ou de notation en exécutant une requête POST ainsi qu’en fournissant un identifiant d’expérience valide et en spécifiant la tâche d’exécution. Les exécutions de notation ne peuvent être créées que si elles sont associées à une exécution de formation réussie. La création réussie d’une exécution de formation initie la procédure de formation du modèle, tandis que son achèvement réussi génère un modèle formé. La génération de modèles formés remplace les modèles qui existaient auparavant, de sorte qu’une expérience ne peut utiliser qu’un seul modèle formé à un moment donné.
 

@@ -1,12 +1,11 @@
 ---
-keywords: 'Experience Platform ; présentation de l’attribution ; rubriques populaires ; attribution : ai ; attribution : ai'
+keywords: Experience Platform;présentation de l’attribution;rubriques les plus consultées;AEM d’attribution;AEM d’attribution
 solution: Experience Platform, Intelligent Services
 title: Présentation d’Attribution AI
 topic-legacy: Attribution AI
 description: Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client. Les impressions de publicités affichées, les envois de courriers électroniques, les ouvertures de courriers électroniques ainsi que les clics de référencement payants sont autant d’exemples de points de contact.
-landing-page-description: Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client.
+landing-page-description: Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '499'
@@ -24,11 +23,11 @@ Attribution AI est utilisé pour attribuer des crédits aux points de contact qu
 
 Les résultats d’Attribution AI peuvent être répartis dans plusieurs dimensions et utilisés à différentes étapes du parcours client. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en problèmes d’apprentissage automatique, ou de choisir des modèles d’algorithmes, de formation ou de déploiement.
 
-Les données Attributions AI peuvent provenir de l’Adobe (p. ex. [!DNL Analytics]) ou des sources de données non Adobes.
+Les données Attribution AI peuvent provenir d’un Adobe (par exemple, [!DNL Analytics]) ou des sources de données non Adobes.
 
 Attribution AI prend en charge deux catégories de scores : les scores algorithmiques et les scores basés sur des règles. Les scores algorithmiques incluent les scores incrémentiels et influencés. Première touche, Dernière touche, Linéaire, En forme de U et Décroissance temporelle sont compris parmi les scores basés sur des règles.
 
-La vidéo suivante est conçue pour vous aider à comprendre l&#39;Attribution AI.
+La vidéo suivante est conçue pour vous aider à comprendre Attribution AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
 
@@ -44,7 +43,7 @@ Attribution AI peut fournir une assistance pour les cas d’utilisation suivants
 
 ### Fonctionnalités supplémentaires
 
-Attribution AI offre également l&#39;intégration à d&#39;autres solutions d&#39;Adobe telles que [!DNL Adobe Analytics]. Vous pouvez ainsi utiliser ces solutions pour vous servir du modèle algorithmique personnalisable afin d’évaluer les performances du média et de fournir des informations analytiques.
+Attribution AI propose également l’intégration à d’autres solutions d’Adobe telles que [!DNL Adobe Analytics]. Vous pouvez ainsi utiliser ces solutions pour vous servir du modèle algorithmique personnalisable afin d’évaluer les performances du média et de fournir des informations analytiques.
 
 ## Étapes suivantes
 

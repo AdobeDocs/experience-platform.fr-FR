@@ -8,7 +8,7 @@ exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
 source-git-commit: d316c199c7e2d87d175015c1828af6fd0d57f32a
 workflow-type: tm+mt
 source-wordcount: '646'
-ht-degree: 42%
+ht-degree: 43%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform Identity Service conserve un stock d’espaces de nom 
 
 ## ECID et service d’accord préalable
 
-Adobe Experience Cloud [!DNL Identity Service] sert de cadre d’identification courant pour [!DNL Experience Cloud] et affecte un identifiant persistant et unique à chaque visiteur du site. L’identifiant [!DNL Experience Cloud] (ECID) effectue le suivi de l’activité d’un client à l’aide d’un cookie propriétaire, peut identifier de manière unique un appareil dans plusieurs applications et vous permet d’identifier un même visiteur du site et ses données dans différentes applications [!DNL Experience Cloud]. Pour plus d’informations, consultez la [présentation d’Identity Service d’Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html).
+Adobe Experience Cloud [!DNL Identity Service] sert de cadre d’identification courant pour [!DNL Experience Cloud] et affecte un identifiant persistant et unique à chaque visiteur du site. L’identifiant [!DNL Experience Cloud] (ECID) effectue le suivi de l’activité d’un client à l’aide d’un cookie propriétaire, peut identifier de manière unique un appareil dans plusieurs applications et vous permet d’identifier un même visiteur du site et ses données dans différentes applications [!DNL Experience Cloud]. Pour plus d’informations, consultez la [présentation d’Identity Service d’Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr).
 
 Le service Opt-in, une extension de [!DNL Experience Cloud Identity Service], vous permet de configurer des protocoles sur votre application pour permettre aux visiteurs de déterminer si vous pouvez définir un cookie sur l’appareil ou le navigateur du visiteur. Pour des informations plus détaillées sur le service d’accord préalable, y compris sur la configuration du service pour votre application, consultez la [documentation du service d’accord préalable](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=fr).
 

@@ -2,15 +2,16 @@
 title: Types d’événement dans l’extension SDK Web Adobe Experience Platform
 description: Découvrez comment utiliser les types d’événements fournis par l’extension SDK Web Adobe Experience Platform dans Adobe Experience Platform Launch.
 solution: Experience Platform
-feature: SDK Web
-source-git-commit: 4bddd9f23ae885468148d1592af219290d6fafd9
+feature: Web SDK
+exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1024'
 ht-degree: 1%
 
 ---
 
-# Types d’événements
+# Types d’événements 
 
 Cette page décrit les types d’événements Adobe Experience Platform fournis par l’extension de balise du SDK Web de Adobe Experience Platform. Ils sont utilisés pour [créer des règles](https://experienceleague.adobe.com/docs/launch-learn/tutorials/fundamentals/building-rules-in-launch.html) et ne doivent pas être confondus avec le champ [`eventType` dans XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=fr).
 
@@ -260,8 +261,3 @@ if (propositions) {
   // them in some other way.
 }
 ```
-
-
-
-
-

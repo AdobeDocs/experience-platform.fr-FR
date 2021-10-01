@@ -3,8 +3,8 @@ title: Présentation des cas d’utilisation de la segmentation pour l’éditio
 description: Présentation des différents cas d’utilisation de la plateforme CDP B2B en temps réel disponibles.
 source-git-commit: e85d4b108e2d4a6a88772c071d9281603b695ada
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1121'
+ht-degree: 2%
 
 ---
 

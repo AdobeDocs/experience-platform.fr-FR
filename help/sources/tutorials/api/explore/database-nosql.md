@@ -1,48 +1,47 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; base de données tierce ; service de flux de base de données
+keywords: Experience Platform;accueil;rubriques populaires;base de données tierce;service de flux de base de données
 solution: Experience Platform
-title: Exploration d’une base de données à l’aide de l’API du service de flux
+title: Exploration d’une base de données à l’aide de l’API Flow Service
 topic-legacy: overview
-description: Ce didacticiel utilise l’API Flow Service pour explorer le contenu et la structure de fichiers d’une base de données tierce.
+description: Ce tutoriel utilise l’API Flow Service pour explorer le contenu et la structure de fichiers d’une base de données tierce.
 exl-id: 94935492-a7be-48dc-8089-18476590bf98
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '563'
-ht-degree: 22%
+ht-degree: 33%
 
 ---
 
-# Explorez une base de données à l’aide de l’API [!DNL Flow Service]
+# Exploration d’une base de données à l’aide de l’API [!DNL Flow Service]
 
-Ce didacticiel utilise l&#39;API [!DNL Flow Service] pour explorer le contenu et la structure des fichiers d&#39;une base de données tierce.
+Ce tutoriel utilise l’API [!DNL Flow Service] pour explorer le contenu et la structure de fichiers d’une base de données tierce.
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../home.md) :  [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
-* [Sandbox](../../../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
+* [Sources](../../../home.md) :  [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
+* [Environnements de test](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à une base de données tierce à l&#39;aide de l&#39;API [!DNL Flow Service].
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à une base de données tierce à l’aide de l’API [!DNL Flow Service].
 
 ### Collecte des informations d’identification requises
 
-Ce didacticiel vous oblige à établir une connexion valide avec la base de données tierce à partir de laquelle vous souhaitez importer des données. Une connexion valide implique l&#39;ID de spécification de connexion et l&#39;ID de connexion de votre base de données. Pour plus d&#39;informations sur la création d&#39;une connexion à une base de données et la récupération de ces valeurs, consultez la [présentation des connecteurs source](./../../../home.md#database).
+Ce tutoriel nécessite que vous disposiez d’une connexion valide à la base de données tierce à partir de laquelle vous souhaitez ingérer des données. Une connexion valide implique l’identifiant de spécification de connexion et l’identifiant de connexion de votre base de données. Vous trouverez plus d’informations sur la création d’une connexion à la base de données et la récupération de ces valeurs dans la [présentation des connecteurs source](./../../../home.md#database).
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
-### Collecter des valeurs pour les en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le didacticiel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API E[!DNL xperience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API E[!DNL xperience Platform], comme illustré ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
+Toutes les ressources qui se trouvent dans [!DNL Experience Platform], y compris celles liées à la [!DNL Flow Service], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -50,9 +49,9 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 * `Content-Type: application/json`
 
-## Explorez vos tableaux de données
+## Exploration des tableaux de données
 
-A l’aide de l’ID de connexion de votre base de données, vous pouvez explorer vos tables de données en exécutant des demandes de GET. Utilisez l&#39;appel suivant pour trouver le chemin de la table que vous souhaitez inspecter ou assimiler dans [!DNL Platform].
+À l’aide de l’identifiant de connexion à votre base de données, vous pouvez explorer vos tableaux de données en effectuant des requêtes de GET. Utilisez l’appel suivant pour trouver le chemin de la table que vous souhaitez inspecter ou ingérer dans [!DNL Platform].
 
 **Format d’API**
 
@@ -62,7 +61,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | Paramètre | Description |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | ID de connexion de la source de la base de données. |
+| `{BASE_CONNECTION_ID}` | Identifiant de connexion de la source de votre base de données. |
 
 **Requête**
 
@@ -77,7 +76,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau de tables de votre base de données. Recherchez la table que vous souhaitez importer dans [!DNL Platform] et notez sa propriété `path`, car vous devez la fournir à l&#39;étape suivante pour inspecter sa structure.
+Une réponse réussie renvoie un tableau de tableaux de votre base de données. Recherchez le tableau que vous souhaitez importer dans [!DNL Platform] et notez sa propriété `path`, car vous devez le fournir à l’étape suivante pour inspecter sa structure.
 
 ```json
 [
@@ -100,7 +99,7 @@ Une réponse réussie renvoie un tableau de tables de votre base de données. Re
 
 ## Inspect de la structure d’un tableau
 
-Pour inspecter la structure d&#39;une table à partir de votre base de données, effectuez une demande de GET tout en spécifiant le chemin d&#39;une table en tant que paramètre de requête.
+Pour inspecter la structure d’un tableau de votre base de données, effectuez une requête de GET tout en spécifiant le chemin d’un tableau comme paramètre de requête.
 
 **Format d’API**
 
@@ -110,7 +109,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | Paramètre | Description |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | ID d’une connexion à la base de données. |
+| `{BASE_CONNECTION_ID}` | L’identifiant d’une connexion à la base de données. |
 | `{TABLE_PATH}` | Chemin d’accès d’un tableau. |
 
 **Requête**
@@ -126,7 +125,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie la structure de la table spécifiée. Les détails relatifs à chacune des colonnes du tableau se trouvent dans les éléments du tableau `columns`.
+Une réponse réussie renvoie la structure de la table spécifiée. Les détails concernant chacune des colonnes du tableau sont situés dans les éléments du tableau `columns`.
 
 ```json
 {
@@ -154,4 +153,4 @@ Une réponse réussie renvoie la structure de la table spécifiée. Les détails
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez exploré votre base de données, trouvé le chemin de la table dans laquelle vous souhaitez insérer [!DNL Platform] et obtenu des informations sur sa structure. Vous pouvez utiliser ces informations dans le didacticiel suivant pour [collecter les données de votre base de données et les importer dans Platform](../collect/database-nosql.md).
+En suivant ce tutoriel, vous avez exploré votre base de données, trouvé le chemin du tableau que vous souhaitez ingérer dans [!DNL Platform] et obtenu des informations sur sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données de votre base de données et les importer dans Platform](../collect/database-nosql.md).

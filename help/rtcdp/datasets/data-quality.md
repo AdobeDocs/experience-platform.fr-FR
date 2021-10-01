@@ -1,19 +1,18 @@
 ---
-keywords: qualité des données ; qualité des données rtcdp
-title: Qualité des données dans la plate-forme de données client en temps réel
-seo-title: Qualité des données sur la plateforme de données client en temps réel
+keywords: qualité des données, qualité des données rtcdp
+title: Qualité des données dans la plateforme de données clients en temps réel
+seo-title: Data quality on Real-time Customer Data Platform
 description: Document sur la qualité des données sur la plateforme de données client en temps réel
-seo-description: Document décrivant le fonctionnement de la qualité des données grâce à l’assimilation par lots et données sur la plate-forme de données client en temps réel
-translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+seo-description: A document describing how data quality works through batch and data ingestion on Real-time Customer Data Platform
+exl-id: 1d1b0bf9-1011-4053-8f8a-7a141febd000
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 76%
+source-wordcount: '126'
+ht-degree: 84%
 
 ---
 
-
-# Qualité des données dans la plate-forme de données client en temps réel
+# Qualité des données dans la plateforme de données clients en temps réel
 
 La plateforme de données client (CDP) en temps réel permet de rassembler des données issues de plusieurs sources afin de générer une expérience coordonnée et cohérente pour vos clients. Il est donc extrêmement important de vous assurer que vos données sont complètes, précises et concises.
 

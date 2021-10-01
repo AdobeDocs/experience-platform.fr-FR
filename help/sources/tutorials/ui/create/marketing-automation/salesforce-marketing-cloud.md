@@ -5,7 +5,8 @@ title: Création d’une connexion source de Marketing Cloud Salesforce dans l�
 topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source de Marketing Cloud Salesforce à l’aide de l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: f196da32f67578ad1d73f3200f6050a7ddab0d88
+exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 12%

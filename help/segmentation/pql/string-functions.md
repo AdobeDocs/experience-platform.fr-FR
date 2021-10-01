@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;pql;PQL;Profil Requête Language;string fonctions;string;
+keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;pql;PQL;langage de requête de profil;fonctions de chaîne;chaîne;
 solution: Experience Platform
 title: Fonctions de chaîne PQL
 topic-legacy: developer guide
 description: Le langage de requête de profil (PQL) offre des fonctions pour faciliter l’interaction avec les chaînes.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '784'
@@ -15,7 +14,7 @@ ht-degree: 94%
 
 # Fonctions de chaîne
 
-[!DNL Profile Query Language] (PQL) offre les fonctions pour rendre l&#39;interaction avec les chaînes plus simple. Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans le [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l’interaction avec des chaînes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Like
 
@@ -30,7 +29,7 @@ La fonction `like` permet de déterminer si une chaîne correspond à un modèle
 | Argument | Description |
 | --------- | ----------- |
 | `{STRING_1}` | La chaîne à vérifier. |
-| `{STRING_2}` | L’expression à laquelle comparer la première chaîne. Les deux caractères spéciaux pris en charge pour créer une expression sont `%` et `_`. <ul><li>`%` est utilisé pour représenter aucun ou plusieurs caractères.</li><li>`_` est utilisé pour représenter exactement un caractère.</li></ul> |
+| `{STRING_2}` | L&#39;expression à laquelle comparer la première chaîne. Les deux caractères spéciaux pris en charge pour créer une expression sont `%` et `_`. <ul><li>`%` est utilisé pour représenter aucun ou plusieurs caractères.</li><li>`_` est utilisé pour représenter exactement un caractère.</li></ul> |
 
 **Exemple**
 
@@ -209,7 +208,7 @@ person.name.equals("John")
 
 ## Not equal to
 
-La fonction `notEqualTo` permet de déterminer si une chaîne est différente d’une chaîne donnée.
+La fonction `notEqualTo` permet de déterminer si une chaîne est différente d&#39;une chaîne donnée.
 
 **Format**
 
@@ -232,7 +231,7 @@ person.name.notEqualTo("John")
 
 ## Matches
 
-La fonction `matches` permet de déterminer si une chaîne correspond à une expression régulière donnée. Reportez-vous à [ce document](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) pour plus d’informations concernant les modèles correspondants dans les expressions régulières.
+La fonction `matches` permet de déterminer si une chaîne correspond à une expression régulière donnée. Reportez-vous à [ce document](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) pour plus d&#39;informations concernant les modèles correspondants dans les expressions régulières.
 
 **Format**
 
@@ -250,7 +249,7 @@ person.name.matches("(?i)^John")
 
 ## Regular expression group
 
-La fonction `regexGroup` est utilisée pour extraire des informations spécifiques en fonction de l’expression régulière fournie.
+La fonction `regexGroup` est utilisée pour extraire des informations spécifiques en fonction de l&#39;expression régulière fournie.
 
 **Format**
 

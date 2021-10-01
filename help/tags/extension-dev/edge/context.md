@@ -1,8 +1,9 @@
 ---
 title: Contexte dans les modules d’extension Edge
-description: Découvrez lʼobjet contexte et son rôle dans lʼinteraction avec les modules de bibliothèque dans les extensions de balises des propriétés Edge.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez l’objet Contexte ainsi que son rôle dans l’interaction avec les modules Bibliothèque dans les extensions de balises des propriétés Edge.
+exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '747'
 ht-degree: 100%
 
@@ -95,7 +96,7 @@ La première fois que cette action est exécutée, `ruleStash` commence comme `u
 
 >[!NOTE]
 >
->Lorsque vous utilisez cette stratégie, veillez à toujours renvoyer lʼensemble complet des règles dʼextension utilisant cette stratégie. Si, au contraire, vous renvoyez uniquement une valeur, elle remplacera toutes les autres propriétés que vous avez définies.
+>Lorsque vous utilisez cette stratégie, veillez à toujours renvoyer l’ensemble complet des règles d’extension qui y sont liées. En revanche, si vous renvoyez une seule valeur, la stratégie remplacera toutes les autres propriétés que vous auriez définies.
 
 ## Utilitaires
 
@@ -103,7 +104,7 @@ La propriété `utils` représente un objet qui fournit des utilitaires spécifi
 
 ### [!DNL logger]
 
-Lʼutilitaire `logger` vous permet de consigner les messages qui sʼafficheront pendant les sessions de débogage lors de lʼutilisation dʼ[Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
+L’utilitaire `logger` vous permet de consigner les messages qui s’afficheront pendant les sessions de débogage lors de l’utilisation d’[Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
 
 ```js
 context.utils.logger.error('Error!');
@@ -130,7 +131,7 @@ context.utils.fetch('http://example.com/movies.json')
 
 ### [!DNL getBuildInfo]
 
-Cet utilitaire renvoie un objet contenant des informations sur la version actuelle de la bibliothèque dʼexécution des balises.
+Cet utilitaire renvoie un objet contenant des informations sur la version actuelle de la bibliothèque d’exécution des balises.
 
 ```js
 logger.log(context.utils.getBuildInfo().turbineBuildDate);

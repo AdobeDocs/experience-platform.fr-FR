@@ -1,8 +1,9 @@
 ---
 title: Présentation du développement d’extension
-description: Découvrez les principaux composants des différents types d’extensions de balises ainsi que le processus de développement des extensions dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez les principaux composants des différents types d’extensions de balise ainsi que le processus de développement des extensions dans Adobe Experience Platform.
+exl-id: b72df3df-f206-488d-a690-0f086973c5b6
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 100%
 

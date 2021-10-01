@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; filtre ; Filtrer ; Filtrer les données ; Filtrer les données
+keywords: Experience Platform;accueil;rubriques populaires;filtre;filtre;filtrer les données;filtrer les données
 solution: Experience Platform
-title: Objets du catalogue de listes
+title: Objets Catalogue de listes
 topic-legacy: developer guide
 description: Vous pouvez récupérer une liste de tous les objets disponibles d’un type spécifique à l’aide d’un seul appel API. Une bonne pratique consiste à inclure des filtres qui limitent la taille de la réponse.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '242'
@@ -13,7 +12,7 @@ ht-degree: 53%
 
 ---
 
-# Objets du catalogue de listes
+# Objets Catalogue de listes
 
 Vous pouvez récupérer une liste de tous les objets disponibles d’un type spécifique à l’aide d’un seul appel API. Une bonne pratique consiste à inclure des filtres qui limitent la taille de la réponse.
 
@@ -26,7 +25,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type de l&#39;objet [!DNL Catalog] à répertorier. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à répertorier. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{FILTER}` | Un paramètre de requête utilisé pour filtrer les résultats renvoyés dans la réponse. Plusieurs paramètres sont séparés par des esperluettes (`&`). Pour plus d’informations, consultez le guide sur le [filtrage des données de Catalog](filter-data.md). |
 
 **Requête**
@@ -44,11 +43,11 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste d&#39;objets [!DNL Catalog] sous la forme de paires clé-valeur, filtrée par les paramètres de requête fournis dans la requête. Pour chaque paire clé-valeur, la clé représente un identifiant unique pour l&#39;objet [!DNL Catalog] en question, qui peut ensuite être utilisé dans un autre appel à [vue cet objet spécifique](look-up-object.md) pour plus de détails.
+Une réponse réussie renvoie une liste d’objets [!DNL Catalog] sous la forme de paires clé-valeur, filtrés par les paramètres de requête fournis dans la requête. Pour chaque paire clé-valeur, la clé représente un identifiant unique pour l’objet [!DNL Catalog] en question, qui peut ensuite être utilisé dans un autre appel à [afficher cet objet spécifique](look-up-object.md) pour plus de détails.
 
 >[!NOTE]
 >
->Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par la requête `properties`, la réponse renvoie uniquement les propriétés demandées qu&#39;elle inclut, comme indiqué dans ***`Sample Dataset 3`*** et ***`Sample Dataset 4`*** ci-dessous.
+>Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par la requête `properties`, la réponse renvoie uniquement les propriétés demandées incluses, comme illustré dans les sections ***`Sample Dataset 3`*** et ***`Sample Dataset 4`*** ci-dessous.
 
 ```json
 {

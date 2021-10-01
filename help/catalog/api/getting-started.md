@@ -14,7 +14,7 @@ ht-degree: 58%
 
 # Guide de l’API [!DNL Catalog Service]
 
-Le [!DNL Catalog Service]est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. [!DNL Catalog] agit comme un magasin de métadonnées ou un &quot;catalogue&quot; dans lequel vous pouvez trouver des informations sur vos données  [!DNL Experience Platform], sans avoir à accéder aux données elles-mêmes. Pour de plus amples informations, rendez-vous sur la [[!DNL Catalog]  d’aperçu](../home.md).
+Le [!DNL Catalog Service]est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. [!DNL Catalog] agit comme un magasin de métadonnées ou un &quot;catalogue&quot; dans lequel vous pouvez trouver des informations sur vos données  [!DNL Experience Platform], sans avoir à accéder aux données elles-mêmes. Pour plus d’informations, consultez la [[!DNL Catalog] présentation ](../home.md).
 
 Ce guide du développeur décrit les étapes à suivre pour commencer à utiliser l&#39;API [!DNL Catalog]. Le guide fournit ensuite des exemples d’appels API pour effectuer des opérations clés à l’aide de [!DNL Catalog].
 

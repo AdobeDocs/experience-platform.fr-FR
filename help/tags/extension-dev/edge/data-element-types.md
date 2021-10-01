@@ -1,8 +1,9 @@
 ---
 title: Types dʼéléments de données pour les extensions Edge
 description: Découvrez comment définir un module de bibliothèque de type élément de données pour une extension de balise dans une propriété Edge.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '435'
 ht-degree: 100%
 
@@ -40,7 +41,7 @@ module.exports = (context) => {
 };
 ```
 
-Si vous voulez que les données renvoyées pour la couche de données puissent être configurées par l’utilisateur d’Adobe Experience Platform, vous pouvez autoriser l’utilisateur à saisir un nom clé puis à enregistrer le nom dans l’objet `settings`. L’objet pourrait ressembler à ceci :
+Si vous souhaitez que les données renvoyées pour la couche de données puissent être configurées par lʼutilisateur dʼAdobe Experience Platform, vous pouvez autoriser lʼutilisateur à saisir un nom clé puis à enregistrer le nom dans lʼobjet `settings`. Lʼobjet pourrait ressembler à ceci.
 
 ```js
 {

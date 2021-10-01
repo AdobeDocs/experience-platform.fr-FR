@@ -1,20 +1,21 @@
 ---
-title: Présentation de l’extension Core de transfert d’événements
-description: Découvrez l’extension Core de transfert d’événements dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+title: Présentation de lʼextension Core Event Forwarding
+description: Découvrez lʼextension Core Event Forwarding dans Adobe Experience Platform.
+exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 100%
 
 ---
 
-# Présentation de l’extension Core de transfert d’événements
+# Présentation de lʼextension Core Event Forwarding
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-L’extension Core de transfert d’événements fournit les événements, conditions et types de données par défaut pour le transfert d’événements dans Adobe Experience Platform.
+Lʼextension Core Event Forwarding fournit les événements, conditions et types de données par défaut pour les transferts dʼévénements dans Adobe Experience Platform.
 
 Utilisez cette référence pour obtenir des informations sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
 
@@ -24,7 +25,7 @@ Cette section décrit les types de conditions disponibles dans l’extension Cor
 
 ### Custom code
 
-Spécifiez un Custom Code qui doit exister comme condition de l’événement. Utilisez l’éditeur de code intégré pour saisir le code personnalisé. Le transfert d’événements dans Adobe Experience Platform prend en charge ES6.
+Spécifiez un Custom Code qui doit exister comme condition de l’événement. Utilisez l’éditeur de code intégré pour saisir le code personnalisé. Le transfert dʼévénements dans Adobe Experience Platform prend en charge ES6.
 
 1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
 1. Saisissez le Custom Code.
@@ -151,9 +152,9 @@ Les opérateurs de comparaison de valeurs suivants sont disponibles :
 
 Cette section décrit les types d’actions disponibles dans l’extension Core.
 
-### Custom Code
+### Code personnalisé
 
-Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées. Le transfert d’événements dans Adobe Experience Platform prend en charge ES6.
+Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées. Le transfert dʼévénements dans Adobe Experience Platform prend en charge ES6.
 
 1. Nommez le code d’action.
 1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
@@ -224,4 +225,4 @@ arc.event.xdm.page.pageName
 
 >[!NOTE]
 >
->L’appel `interact` du client comporte la valeur `events`, mais pour le transfert d’événements, vous avez besoin de la valeur `event`. La raison en est que le transfert d’événements inspecte chaque événement individuellement, et non en tant que lot de plusieurs événements, comme indiqué sur le client.
+>Lʼappel `interact` du client possède `events`, mais pour le transfert dʼévénements, vous avez besoin de `event`. La raison en est que la fonctionnalité de transfert dʼévénements inspecte chaque événement individuellement, et non en tant que lot de plusieurs événements, comme indiqué sur le client.

@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; informations ; assistance client ; rubriques populaires ; segments d’assistance client
+keywords: Experience Platform;insights;service client;rubriques les plus consultées;segments d’assistance client
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Créer des segments de clients avec des scores prédits
+title: Création de segments client avec des scores prédéfinis
 topic-legacy: Create a segment
 description: Lorsqu’une opération de prédiction se termine, les scores de propension prévus sont automatiquement utilisés par les Profils. L’enrichissement des profils avec les scores Customer AI permet de créer des segments client pour trouver des audiences en fonction de leurs scores de propension. Cette section décrit les étapes à suivre pour créer des segments à l’aide du créateur de segments.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '318'
@@ -35,10 +34,10 @@ Sous la colonne de droite *Propriétés du segment*, indiquez un nom pour le seg
 
 ![](../images/user-guide/properties.png)
 
-Au-dessus de la colonne de gauche *Champs*, cliquez sur l&#39;icône **engrenage** et sélectionnez une *stratégie de fusion* dans la liste déroulante. Cliquez sur **[!UICONTROL Enregistrer]** pour créer le segment.
+Au-dessus de la colonne *Champs* de gauche, cliquez sur l&#39;icône **engrenage** et sélectionnez une *Stratégie de fusion* dans la liste déroulante. Cliquez sur **[!UICONTROL Enregistrer]** pour créer le segment.
 
 ![](../images/user-guide/merge_policy.png)
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez réussi à trouver des audiences basées sur leurs scores de propension à l’aide du Créateur de segments. Vous pouvez désormais cibler vos audiences en les activant sur les destinations. Pour plus d’informations, consultez [Présentation des destinations](../../../destinations/home.md).
+En suivant ce tutoriel, vous avez réussi à trouver des audiences en fonction de leurs scores de propension à l’aide du créateur de segments. Vous pouvez désormais cibler vos audiences en les activant sur les destinations. Pour plus d’informations, consultez [Présentation des destinations](../../../destinations/home.md).

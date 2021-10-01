@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform ; score d’un modèle ; Espace de travail des données ; rubriques populaires ; ui ; exécution de score ; résultats de score
+keywords: Experience Platform;noter un modèle;Data Science Workspace;rubriques populaires;ui;opération de notation;résultats de notation
 solution: Experience Platform
-title: Score d’un modèle dans l’interface utilisateur de Data Science Workspace
+title: Notation d’un modèle dans l’interface utilisateur de Data Science Workspace
 topic-legacy: tutorial
 type: Tutorial
 description: La notation dans Adobe Experience Platform Data Science Workspace peut être réalisée en alimentant un modèle formé existant avec des données d’entrée. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '648'
@@ -14,15 +13,15 @@ ht-degree: 35%
 
 ---
 
-# Score d’un modèle dans l’interface utilisateur de Data Science Workspace
+# Notation d’un modèle dans l’interface utilisateur de Data Science Workspace
 
-Le score dans Adobe Experience Platform [!DNL Data Science Workspace] peut être obtenu en alimentant les données d&#39;entrée dans un modèle existant. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
+La notation dans Adobe Experience Platform [!DNL Data Science Workspace] peut être obtenue en alimentant les données d’entrée dans un modèle formé existant. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
 
-Ce didacticiel présente les étapes requises pour marquer un modèle dans l&#39;interface utilisateur [!DNL Data Science Workspace].
+Ce tutoriel présente les étapes requises pour noter un modèle dans l’interface utilisateur [!DNL Data Science Workspace].
 
 ## Prise en main
 
-Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
+Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de poursuivre.
 
 Ce tutoriel nécessite un modèle formé. Si vous ne disposez pas d’un modèle formé, suivez le tutoriel [Formation et évaluation d’un modèle dans l’interface utilisateur](./train-evaluate-model-ui.md) avant de poursuivre.
 
@@ -30,15 +29,15 @@ Ce tutoriel nécessite un modèle formé. Si vous ne disposez pas d’un modèle
 
 Vous pouvez créer une opération de notation l’aide de configurations optimisées provenant d’une opération de formation déjà terminée et évaluée. L’ensemble des configurations optimales d’un modèle est généralement déterminé en examinant les mesures d’évaluation de l’opération de formation.
 
-Trouvez l’opération de formation optimale afin d’utiliser ses configurations pour la notation. Ouvrez ensuite l’exécution de formation souhaitée en sélectionnant l’hyperlien associé à son nom.
+Trouvez l’opération de formation optimale afin d’utiliser ses configurations pour la notation. Ouvrez ensuite l’opération de formation souhaitée en sélectionnant le lien hypertexte associé à son nom.
 
-![Sélectionner la période de formation](../images/models-recipes/score/select-run.png)
+![Sélection de l’opération de formation](../images/models-recipes/score/select-run.png)
 
-Dans l&#39;onglet **[!UICONTROL Evaluation]** de l&#39;exécution de formation, sélectionnez **[!UICONTROL Score]** dans la partie supérieure droite de l&#39;écran. Un nouveau processus de notation commence.
+Dans l’onglet **[!UICONTROL Évaluation]** de l’opération de formation, sélectionnez **[!UICONTROL Score]** en haut à droite de l’écran. Un nouveau workflow de notation commence.
 
 ![](../images/models-recipes/score/training_run_overview.png)
 
-Sélectionnez le jeu de données de score d’entrée et sélectionnez **[!UICONTROL Suivant]**.
+Sélectionnez le jeu de données de notation d’entrée et sélectionnez **[!UICONTROL Suivant]**.
 
 ![](../images/models-recipes/score/scoring_input.png)
 
@@ -46,54 +45,54 @@ Sélectionnez le jeu de données de notation de sortie. Il s’agit du jeu de do
 
 ![](../images/models-recipes/score/scoring_results.png)
 
-La dernière étape du processus vous invite à configurer votre opération de notation. Ces configurations sont utilisées par le modèle pour l’exécution de notation.
-Notez que vous ne pouvez pas supprimer les paramètres hérités qui ont été définis lors de la création des modèles. Vous pouvez modifier ou rétablir des paramètres non hérités en cliquant sur la valeur ou en sélectionnant l’icône de rétablissement tout en survolant l’entrée.
+La dernière étape du processus vous invite à configurer votre opération de notation. Ces configurations sont utilisées par le modèle pour l’opération de notation.
+Notez que vous ne pouvez pas supprimer les paramètres hérités qui ont été définis lors de la création des modèles. Vous pouvez modifier ou rétablir des paramètres non hérités en double-cliquant sur la valeur ou en sélectionnant l’icône Rétablir lorsque vous survolez l’entrée.
 
 ![configuration](../images/models-recipes/score/configuration.png)
 
-Vérifiez et confirmez les configurations de score et sélectionnez **[!UICONTROL Terminer]** pour créer et exécuter l&#39;exécution de score. Vous êtes dirigé vers l’onglet **[!UICONTROL Scoring Runs]** et la nouvelle série de notes avec l’état **[!UICONTROL En attente]** s’affiche.
+Vérifiez et confirmez les configurations de notation et sélectionnez **[!UICONTROL Terminer]** pour créer et exécuter l’opération de notation. Vous êtes dirigé vers l’onglet **[!UICONTROL Opérations de notation]** et la nouvelle opération de notation avec l’état **[!UICONTROL En attente]** s’affiche.
 
-![onglet séries de notes](../images/models-recipes/score/scoring_runs_tab.png)
+![onglet opérations de notation](../images/models-recipes/score/scoring_runs_tab.png)
 
-Une série de scores peut être affichée avec l’un des états suivants :
+Une opération de notation peut être affichée avec l’un des états suivants :
 - En attente
 - Terminée
 - Échoué
 - En cours
 
-Les états sont mis à jour automatiquement. Passez à l’étape suivante si l’état est **[!UICONTROL Terminé]** ou **[!UICONTROL Échec]**.
+Les états sont automatiquement mis à jour. Passez à l’étape suivante si l’état est **[!UICONTROL Terminé]** ou **[!UICONTROL Échec]**.
 
 ## Affichage des résultats de la notation
 
-Pour vue les résultats de score, début en sélectionnant une série de formations.
+Pour afficher les résultats de la notation, commencez par sélectionner une opération de formation.
 
-![Sélectionner la période de formation](../images/models-recipes/score/select-run.png)
+![Sélection de l’opération de formation](../images/models-recipes/score/select-run.png)
 
-Vous êtes redirigé vers la page des exécutions de formation **[!UICONTROL Evaluation]**. Près de la partie supérieure de la page d’évaluation de l’exécution de formation, sélectionnez l’onglet **[!UICONTROL Scoring Runs]** pour vue une liste d’exécutions de score existantes.
+Vous êtes redirigé vers la page des opérations de formation **[!UICONTROL Évaluation]** . Près de la partie supérieure de la page d’évaluation de l’opération de formation, sélectionnez l’onglet **[!UICONTROL Opérations de notation]** pour afficher une liste des opérations de notation existantes.
 
-![page d&#39;évaluation](../images/models-recipes/score/view_scoring_runs.png)
+![page d’évaluation](../images/models-recipes/score/view_scoring_runs.png)
 
-Ensuite, sélectionnez une série de scores pour vue les détails de la série.
+Sélectionnez ensuite une opération de notation pour afficher les détails de l’opération.
 
-![détails d&#39;exécution](../images/models-recipes/score/view_details.png)
+![détails de l’exécution](../images/models-recipes/score/view_details.png)
 
-Si l&#39;exécution de score sélectionnée a l&#39;état &quot;Terminé&quot; ou &quot;Échec&quot;, le lien **[!UICONTROL Journaux des Activités de Vue]** est disponible. En cas d’échec d’une exécution de score, les journaux d’exécution peuvent fournir des informations utiles pour déterminer la raison de l’échec. Pour télécharger les journaux d&#39;exécution, sélectionnez **[!UICONTROL Journaux des Activités de Vue]**.
+Si l’état de l’opération de notation sélectionnée est &quot;Terminé&quot; ou &quot;Échec&quot;, le lien **[!UICONTROL Afficher les journaux d’activité]** est disponible. Si une opération de notation échoue, les journaux d’exécution peuvent fournir des informations utiles pour déterminer la raison de l’échec. Pour télécharger les journaux d’exécution, sélectionnez **[!UICONTROL Afficher les journaux d’activité]**.
 
-![Sélectionner les journaux de vue](../images/models-recipes/score/view_logs.png)
+![Sélectionner les journaux d’affichage](../images/models-recipes/score/view_logs.png)
 
-La fenêtre contextuelle **[!UICONTROL Journaux des activités de Vue]** s&#39;affiche. Sélectionnez une URL pour télécharger automatiquement les journaux associés.
+La fenêtre contextuelle **[!UICONTROL Afficher les journaux d’activité]** s’affiche. Sélectionnez une URL pour télécharger automatiquement les logs associés.
 
 ![](../images/models-recipes/score/activity_logs.png)
 
-Vous avez également la possibilité de vue vos résultats de score en sélectionnant **[!UICONTROL jeu de données de résultats de score de Prévisualisation]**.
+Vous avez également la possibilité d’afficher vos résultats de notation en sélectionnant **[!UICONTROL Aperçu du jeu de données des résultats de notation]**.
 
-![Sélectionner les résultats de la prévisualisation](../images/models-recipes/score/view_results.png)
+![Sélectionner les résultats de l’aperçu](../images/models-recipes/score/view_results.png)
 
-Une prévisualisation du jeu de données de sortie est fournie.
+Un aperçu du jeu de données de sortie est fourni.
 
-![Résultats de la prévisualisation](../images/models-recipes/score/preview_results.png)
+![aperçu des résultats](../images/models-recipes/score/preview_results.png)
 
-Pour obtenir l’ensemble complet des résultats de score, sélectionnez le lien **[!UICONTROL Score Results Dataset]** situé dans la colonne de droite.
+Pour consulter l’ensemble des résultats de la notation, cliquez sur le lien **[!UICONTROL Jeu de données des résultats de la notation]** situé dans la colonne de droite.
 
 ## Étapes suivantes
 

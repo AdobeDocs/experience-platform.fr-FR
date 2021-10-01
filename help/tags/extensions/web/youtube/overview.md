@@ -1,8 +1,9 @@
 ---
 title: Présentation de l’extension de suivi vidéo YouTube
-description: Découvrez l’extension de balise de suivi vidéo YouTube dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez lʼextension de balise de suivi vidéo YouTube dans Adobe Experience Platform.
+exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '891'
 ht-degree: 100%
 
@@ -16,7 +17,7 @@ ht-degree: 100%
 
 **Conditions préalables**
 
-Chaque propriété de balise Adobe Experience Platform requiert que les extensions suivantes soient installées et configurées à partir de l’écran Extensions :
+Chaque propriété de balise dans Adobe Experience Platform requiert que les extensions suivantes soient installées et configurées à partir de lʼécran Extensions :
 
 * Adobe Analytics
 * Service d’identification des visiteurs Experience Cloud
@@ -32,7 +33,7 @@ Cette extension est également conçue pour vérifier dynamiquement la valeur d�
 
 >[!NOTE]
 >
->Sur les pages comportant plusieurs vidéos, chaque vidéo utilise le même jeu de configuration défini par la règle de balise qui s’exécute sur cette page. Par exemple, si vous créez une règle avec un événement qui se déclenche lorsque la vidéo atteint 50 %, chaque vidéo de la page déclenche la règle au point de repère de 50 %.
+>Sur les pages comportant plusieurs vidéos, chaque vidéo utilise le même jeu de configuration défini par la règle de balise qui sʼexécute sur cette page. Par exemple, si vous créez une règle avec un événement qui se déclenche lorsque la vidéo atteint 50 %, chaque vidéo de la page déclenche la règle au point de repère de 50 %.
 
 L’extension repose sur la logique suivante pour réécrire les iFrames :
 
@@ -47,7 +48,7 @@ Par conséquent, il y aura un léger scintillement après le chargement de la pa
 
 L’extension contient six éléments de données. Aucun ne nécessite d’être configuré.
 
-* **Position de la tête de lecture :** lorsqu’il est appelé dans une règle de balise, cet élément enregistre l’emplacement, en secondes, de la position de la tête de lecture sur le montage vidéo.
+* **Position du curseur de lecture :** lorsquʼil est appelé dans une règle de balise, cet élément de données enregistre lʼemplacement, en secondes, de la position du curseur sur la chronologie de la vidéo.
 * **ID de la vidéo :** indique l’ID YouTube associé à la vidéo.
 * **Nom de la vidéo :** indique le nom descriptif ou convivial de la vidéo.
 * **URL de la vidéo :** renvoie l’URL YouTube.com pour la vidéo actuellement chargée/en cours de lecture.
@@ -63,13 +64,13 @@ L’extension comprend huit événements et seul le suivi des points de repère 
 * **Relecture vidéo :** se déclenche lorsque la vidéo est guidée et relue après le démarrage initial. Ce déclencheur se déclenche à chaque lecture.
 * **Vidéo mise en pause :** se déclenche lorsque la vidéo est mise en pause.
 * **Reprise de la vidéo :** se déclenche lorsque la vidéo reprend et lorsque `player.getCurrentTime() !== 0`
-* **Suivi des points de repère personnalisés :** se déclenche lorsque la vidéo atteint le pourcentage de vidéo indiqué. Par exemple, si une vidéo dure 60 secondes et que le repère spécifié est de 50 %, l’événement se déclenche lorsque la position de la tête de lecture est égale à 30 secondes. Le suivi des points de repère s’applique à la lecture initiale et à la relecture. Veuillez noter que si l’utilisateur effectue une recherche sur un point de repère, l’événement ne se déclenche pas. Les événements du point de repère ne se déclenchent que lorsque la tête de lecture traverse l’emplacement du point de repère calculé sur le montage et que le lecteur vidéo est en cours de lecture.
+* **Suivi des points de repère personnalisés :** se déclenche lorsque la vidéo atteint le pourcentage de vidéo indiqué. Par exemple, si une vidéo dure 60 secondes et que le repère spécifié est de 50 %, lʼévénement se déclenche lorsque la position du curseur de lecture est égale à 30 secondes. Le suivi des points de repère s’applique à la lecture initiale et à la relecture. Remarquez que si lʼutilisateur effectue une recherche sur un point de repère, lʼévénement ne se déclenche pas. Les événements du point de repère ne se déclenchent que lorsque le curseur de lecture traverse lʼemplacement du point de repère calculé sur la chronologie et que le lecteur vidéo est en cours de lecture.
 * **Mémoire tampon de la vidéo :** se déclenche lorsque le lecteur télécharge une certaine quantité de données avant de commencer la lecture de la vidéo.
 * **Fin de la vidéo :** se déclenche lorsqu’une vidéo est entièrement terminée.
 
 ## Utilisation
 
-Une règle de balise peut être définie pour chaque événement vidéo (les sept événements répertoriés ci-dessus). Créez une règle de balise spécifique pour chaque événement dont vous souhaitez effectuer le suivi. Si vous ne souhaitez pas suivre un événement, il vous suffit de l’omettre pour créer une règle pour celui-ci.
+Une règle de balise peut être définie pour chaque événement vidéo (les sept événements répertoriés ci-dessus). Créez une règle de balise spécifique pour chaque événement dont vous souhaitez effectuer le suivi. Si vous ne souhaitez pas effectuer le suivi dʼun événement, ne créez pas de règle pour celui-ci.
 
 Les règles comportent trois actions :
 
@@ -77,15 +78,15 @@ Les règles comportent trois actions :
 * **Envoyer la balise :** envoyez la balise Adobe Analytics en tant qu’appel de suivi des liens personnalisé et indiquez une valeur « Nom du lien ».
 * **Effacer les variables :** effacez les variables Adobe Analytics.
 
-## Exemple de règle de balise pour « Début vidéo »
+## Exemple de règle de balise pour « Vidéo lancée »
 
-Les objets d’extension vidéo suivants doivent être inclus.
+Les objets dʼextension vidéo suivants doivent être inclus.
 
-* **Événements** : « Début vidéo » (cet événement déclenche la règle lorsque le visiteur lance une vidéo YouTube).
+* **Événements** : « Vidéo lancée » (cet événement déclenche la règle lorsque le visiteur lance une vidéo YouTube).
 
 * **Condition :** aucune
 
-* **Actions :**  Utilisez l’action **extension Analytics** pour « Définir des variables » afin de mapper :
+* **Actions :**  Utilisez lʼ&#x200B;**extension Analytics** pour lʼaction « Définir des variables » et mettre en correspondance :
 
    * L’événement pour Début vidéo,
    * Une valeur prop/eVar pour l’élément de données Durée de la vidéo
@@ -93,11 +94,11 @@ Les objets d’extension vidéo suivants doivent être inclus.
    * Une valeur prop/eVar pour l’élément de données Nom de la vidéo
    * Une valeur prop/eVar pour l’élément de données URL de la vidéo
 
-   Insérez ensuite l’action « Envoyer la balise » (`s.tl`) avec le nom de lien « Début vidéo », suivie d’une action « Effacer les variables ».
+   Insérez ensuite lʼaction « Envoyer la balise » (`s.tl`) avec le nom de lien « Vidéo lancée », suivie dʼune action « Effacer les variables ».
 
 >[!TIP]
 > 
->Pour les implémentations dans lesquelles il est impossible d’utiliser plusieurs eVars ou props pour chaque élément vidéo, les valeurs des éléments de données peuvent être concaténées dans Platform, analysées dans les rapports de classification à l’aide de l’outil Créateur de règles de classification, comme expliqué dans [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr), puis appliquées en tant que segment dans Analysis Workspace.
+>Pour les implémentations dans lesquelles il est impossible dʼutiliser plusieurs eVars ou props pour chaque élément vidéo, les valeurs des éléments de données peuvent être concaténées dans Platform, analysées dans les rapports de classification à lʼaide de lʼoutil Créateur de règles de classification, comme expliqué dans [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr), puis appliquées en tant que segment dans Analysis Workspace.
 
 Pour concaténer des valeurs d’informations sur la vidéo, créez un nouvel élément de données appelé « Métadonnées vidéo », puis programmez-le à extraire tous les éléments de données vidéo (répertoriés ci-dessus) et à les assembler. Par exemple :
 

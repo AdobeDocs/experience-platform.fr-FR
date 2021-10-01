@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; mappage des Audiences Manager ; mappage du gestionnaire d’audiences
+keywords: Experience Platform;accueil;rubriques les plus consultées;mappage des Audiences Manager;mappage d’audience manager
 solution: Experience Platform
-title: Mappage de champs pour le connecteur source Adobe Audience Manager
+title: Mappage des champs pour le connecteur source Adobe Audience Manager
 topic-legacy: overview
-description: Découvrez comment mapper les données Adobe Audience Manager (en temps réel, intégrées et de Profil) aux champs correspondants du modèle de données d’expérience (XDM) pour le connecteur de source d’Audience Manager.
+description: Découvrez comment mapper les données Adobe Audience Manager (données en temps réel, intégrées et de profil) aux champs de modèle de données d’expérience (XDM) correspondants pour le connecteur source d’Audience Manager.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
-translation-type: tm+mt
 source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
 source-wordcount: '175'
-ht-degree: 68%
+ht-degree: 71%
 
 ---
 

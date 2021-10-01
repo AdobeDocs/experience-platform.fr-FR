@@ -5,7 +5,7 @@ exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '658'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 99%
 
 Le point dʼentrée `/search` de lʼAPI Reactor permet de trouver des ressources correspondant aux critères souhaités, exprimés sous forme de requête.
 
-Les types de ressources API suivants peuvent faire lʼobjet de recherches, au moyen de la même structure de données que les documents basés sur les ressources renvoyés par lʼAPI :
+Les types de ressources API suivants peuvent faire lʼobjet de recherches, au moyen de la même structure de données que les documents basés sur les ressources renvoyés par lʼAPI :
 
 * `audit_events`
 * `builds`
@@ -32,7 +32,7 @@ Toutes les requêtes sont limitées à votre entreprise actuelle et aux proprié
 
 >[!IMPORTANT]
 >
->La fonctionnalité de recherche comporte les avertissements et exceptions suivants :
+>La fonctionnalité de recherche comporte les avertissements et exceptions suivants :
 >* meta ne peut faire lʼobjet de recherches et nʼest pas renvoyé dans les résultats de recherche.
 >* Les champs de schéma pour les délégués de packages dʼextension (actions, conditions, etc.) peuvent faire lʼobjet de recherches sous forme de texte, et non en tant que structure de données imbriquées.
 >* Actuellement, les requêtes de plage ne prennent en charge que les nombres entiers.
@@ -96,8 +96,8 @@ curl -X POST \
 | --- | --- |
 | `from` | Nombre de résultats à décaler de la réponse. |
 | `size` | Nombre maximal de résultats à renvoyer. Les résultats sont limités à 100 éléments. |
-| `query` | Objet représentant la requête. Pour chaque propriété au sein de cet objet, la clé doit représenter un chemin du champ sur lequel portera la requête, et la valeur doit être un objet dont les sous-propriétés déterminent le contenu de la requête.<br><br>Pour chaque chemin du champ, vous pouvez utiliser les sous-propriétés suivantes :<ul><li>`exists` : renvoie « true » si le champ existe dans la ressource.</li><li>`value` : renvoie « true » si la valeur du champ correspond à la valeur de cette propriété.</li><li>`value_operator` : logique booléenne utilisée pour déterminer le traitement dʼune requête `value`. Les valeurs autorisées sont `AND` et `OR`. Lorsquʼelle est exclue, la logique `AND` est supposée. Pour plus dʼinformations, voir la section [Logique de lʼopérateur de valeur](#value-operator).</li><li>`range` Renvoie « true » si la valeur du champ se situe dans une plage numérique spécifique. La plage elle-même est déterminée par les sous-propriétés suivantes :<ul><li>`gt` : supérieure à la valeur fournie, non incluse.</li><li>`gte` : supérieure ou égale à la valeur fournie.</li><li>`lt` : inférieure à la valeur fournie, non incluse.</li><li>`lte` : inférieure ou égale à la valeur fournie.</li></ul></li></ul> |
-| `sort` | Tableau dʼobjets indiquant lʼordre dans lequel trier les résultats. Chaque objet doit contenir une seule propriété : la clé représente le chemin du champ à trier et la valeur lʼordre de tri (`asc` pour lʼordre croissant et `desc` pour lʼordre décroissant). |
+| `query` | Objet représentant la requête. Pour chaque propriété au sein de cet objet, la clé doit représenter un chemin du champ sur lequel portera la requête, et la valeur doit être un objet dont les sous-propriétés déterminent le contenu de la requête.<br><br>Pour chaque chemin du champ, vous pouvez utiliser les sous-propriétés suivantes :<ul><li>`exists` : renvoie « true » si le champ existe dans la ressource.</li><li>`value` : renvoie « true » si la valeur du champ correspond à la valeur de cette propriété.</li><li>`value_operator` : logique booléenne utilisée pour déterminer le traitement dʼune requête `value`. Les valeurs autorisées sont `AND` et `OR`. Lorsquʼelle est exclue, la logique `AND` est supposée. Pour plus dʼinformations, voir la section [Logique de lʼopérateur de valeur](#value-operator).</li><li>`range` Renvoie « true » si la valeur du champ se situe dans une plage numérique spécifique. La plage elle-même est déterminée par les sous-propriétés suivantes :<ul><li>`gt` : supérieure à la valeur fournie, non incluse.</li><li>`gte` : supérieure ou égale à la valeur fournie.</li><li>`lt` : inférieure à la valeur fournie, non incluse.</li><li>`lte` : inférieure ou égale à la valeur fournie.</li></ul></li></ul> |
+| `sort` | Tableau dʼobjets indiquant lʼordre dans lequel trier les résultats. Chaque objet doit contenir une seule propriété : la clé représente le chemin du champ à trier et la valeur lʼordre de tri (`asc` pour lʼordre croissant et `desc` pour lʼordre décroissant). |
 | `resource_types` | Tableau de chaînes indiquant les types de ressources spécifiques à rechercher. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -225,7 +225,7 @@ Lorsque vous utilisez `OR` comme `value_operator`, une valeur de requête `My Ru
 
 La recherche consiste à déterminer dans quelle mesure un document est pertinent par rapport à une requête fournie. La manière dont les données des documents sont analysées et indexées a un impact direct sur ce processus.
 
-Le tableau suivant détaille les conventions de correspondance pour les types de champs les plus courants :
+Le tableau suivant détaille les conventions de correspondance pour les types de champs les plus courants :
 
 | Type de champ | Conventions de correspondance |
 | --- | --- |
@@ -236,7 +236,7 @@ Le tableau suivant détaille les conventions de correspondance pour les types de
 | Horodatages | Correspondance exacte (format date et heure) |
 | Noms d’affichage | Texte avec une analyse partielle des termes, non sensible à la casse |
 
-Il existe aussi dʼautres conventions propres à des champs spécifiques qui apparaissent dans lʼAPI :
+Il existe aussi dʼautres conventions propres à des champs spécifiques qui apparaissent dans lʼAPI :
 
 | Champ | Conventions de correspondance |
 | --- | --- |

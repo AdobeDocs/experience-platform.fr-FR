@@ -1,8 +1,9 @@
 ---
 title: Types d’actions pour les extensions web
-description: Découvrez comment définir un module Bibliothèque de type action pour une extension de balises dans une propriété web.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez comment définir un module Bibliothèque de type action pour une extension de balise dans une propriété web.
+exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 100%
 
@@ -37,7 +38,7 @@ module.exports = function(settings) {
 };
 ```
 
-Par exemple, pour rendre le message configurable par l’utilisateur d’Adobe Experience Platform, vous pouvez autoriser ce dernier à saisir et enregistrer un message dans l’objet settings. L’objet ressemble à ceci :
+Par exemple, pour que l’utilisateur Adobe Experience Platform soit capable de configurer le message, vous pouvez lui donner l’autorisation de saisir et d’enregistrer un message dans l’objet Paramètres. L’objet ressemble à ceci :
 
 ```json
 {

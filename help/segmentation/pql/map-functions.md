@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;pql;PQL;Profil Requête Language;map fonctions;map;
+keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;Segmentation Service;pql;PQL;langage de requête de profil;fonctions de mappage;mapper;
 solution: Experience Platform
 title: Fonctions de mappage PQL
 topic-legacy: developer guide
 description: Le langage de requête de profil (PQL) offre des fonctions pour faciliter l’interaction avec des cartes.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '173'
-ht-degree: 76%
+ht-degree: 81%
 
 ---
 
 # Fonctions de mappage
 
-[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l&#39;interaction avec les cartes. Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans le [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL) offre des fonctions permettant de faciliter l&#39;interaction avec les cartes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Get
 
-La fonction `get` est utilisée pour récupérer la valeur d’une carte pour une clé donnée.
+La fonction `get` est utilisée pour récupérer la valeur d&#39;une carte pour une clé donnée.
 
 **Format**
 
@@ -37,7 +36,7 @@ identityMap.get("example@example.com")
 
 ## Keys
 
-La fonction `keys` est utilisée pour récupérer toutes les clés d’une carte donnée.
+La fonction `keys` est utilisée pour récupérer toutes les clés d&#39;une carte donnée.
 
 **Format**
 
@@ -55,7 +54,7 @@ identityMap.keys()
 
 ## Values
 
-La fonction `values` est utilisée pour récupérer toutes les valeurs d’une carte donnée.
+La fonction `values` est utilisée pour récupérer toutes les valeurs d&#39;une carte donnée.
 
 **Format**
 

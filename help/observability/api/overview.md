@@ -8,7 +8,7 @@ exl-id: 3dee20e2-0551-43db-ba89-bc049b56af08
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
 source-wordcount: '155'
-ht-degree: 27%
+ht-degree: 30%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 27%
 
 L’API [!DNL Observability Insights] fournit un point de terminaison qui vous permet de récupérer et de surveiller par programmation les données de mesure pour diverses fonctionnalités de Adobe Experience Platform. Ce point de terminaison est décrit ci-dessous. Consultez le guide de point de terminaison pour plus de détails et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture d’exemples d’appels API, etc.
 
-Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez le document Swagger de l’API [[!DNL Observability Insights] ](https://www.adobe.io/experience-platform-apis/references/observability-insights/).
+Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez le document Swagger de l’[[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/).
 
 ## Mesures
 

@@ -5,7 +5,7 @@ topic-legacy: guide
 description: Découvrez les concepts clés et les fonctionnalités de base dont vous avez besoin pour utiliser les points d’entrée de l’API Data Prep afin d’effectuer des opérations CRUD de base à utiliser avec le mappeur.
 exl-id: 027e6fbe-9a0d-420b-8d67-659ca7f5ec22
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 100%
 

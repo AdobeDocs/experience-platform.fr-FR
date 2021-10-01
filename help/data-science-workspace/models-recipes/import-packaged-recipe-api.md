@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform ; importer la recette empaquetée ; Espace de travail de données ; rubriques populaires ; recettes ; api ; apprentissage automatique sensei ; créer un moteur
+keywords: Experience Platform;importer une recette empaquetée;Data Science Workspace;rubriques populaires;recettes;api;apprentissage automatique sensei;créer un moteur
 solution: Experience Platform
-title: Importer une recette compressée à l'aide de l'API d'apprentissage automatique Sensei
+title: Importation d’une recette empaquetée à l’aide de l’API Sensei Machine Learning
 topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel utilise l’API Sensei Machine Learning pour créer un moteur, aussi appelé recette dans l’interface utilisateur.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1007'
@@ -14,11 +13,11 @@ ht-degree: 62%
 
 ---
 
-# Importer une recette assemblée à l&#39;aide de l&#39;API d&#39;apprentissage automatique Sensei
+# Importation d’une recette empaquetée à l’aide de l’API Sensei Machine Learning
 
-Ce didacticiel utilise [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) pour créer un [moteur](../api/engines.md), également appelé Recette dans l’interface utilisateur.
+Ce tutoriel utilise la balise [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) pour créer un [moteur](../api/engines.md), également appelé recette dans l’interface utilisateur.
 
-Avant de commencer, il est important de noter que Adobe Experience Platform [!DNL Data Science Workspace] utilise des termes différents pour faire référence à des éléments similaires dans l&#39;API et l&#39;interface utilisateur. Les termes de l’API sont utilisés dans ce tutoriel et le tableau suivant décrit les termes corrélés :
+Avant de commencer, il est important de noter que Adobe Experience Platform [!DNL Data Science Workspace] utilise des termes différents pour faire référence à des éléments similaires dans l’API et l’interface utilisateur. Les termes de l’API sont utilisés dans ce tutoriel et le tableau suivant décrit les termes corrélés :
 
 | Terme de l’interface utilisateur | Terme de l’API |
 | ---- | ---- |
@@ -27,17 +26,17 @@ Avant de commencer, il est important de noter que Adobe Experience Platform [!DN
 | Formation et évaluation | [Expérience](../api/experiments.md) |
 | Service | [MLService](../api/mlservices.md) |
 
-Un moteur contient des algorithmes d’apprentissage automatique et une logique pour résoudre des problèmes spécifiques. Le diagramme ci-dessous fournit une visualisation présentant le flux de travail de l&#39;API dans [!DNL Data Science Workspace]. Ce tutoriel se concentre sur la création d’un moteur, le cerveau d’un modèle d’apprentissage automatique.
+Un moteur contient des algorithmes d’apprentissage automatique et une logique pour résoudre des problèmes spécifiques. Le diagramme ci-dessous fournit une visualisation montrant le workflow de l’API dans [!DNL Data Science Workspace]. Ce tutoriel se concentre sur la création d’un moteur, le cerveau d’un modèle d’apprentissage automatique.
 
 ![](../images/models-recipes/import-package-api/engine_hierarchy_api.png)
 
 ## Prise en main
 
-Ce didacticiel nécessite un fichier de recette empaqueté sous la forme d&#39;une URL Docker. Suivez le tutoriel [Former une recette empaquetée à partir de fichiers source](./package-source-files-recipe.md) pour savoir comment créer un fichier de recette empaquetée ou fournir votre fichier.
+Ce tutoriel nécessite un fichier de recette empaqueté sous la forme d’une URL Docker. Suivez le tutoriel [Former une recette empaquetée à partir de fichiers source](./package-source-files-recipe.md) pour savoir comment créer un fichier de recette empaquetée ou fournir votre fichier.
 
 - `{DOCKER_URL}` : adresse URL vers une image Docker d’un service intelligent.
 
-Pour suivre ce tutoriel, vous devez avoir terminé le tutoriel [Authentification à Adobe Experience ](https://www.adobe.com/go/platform-api-authentication-en) afin d’effectuer avec succès des appels vers les API Platform. [!DNL Platform] Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour suivre ce tutoriel, vous devez avoir terminé le tutoriel [Authentification à Adobe Experience ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis) afin d’effectuer avec succès des appels vers les API Platform. [!DNL Platform] Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.
 - `{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
@@ -45,7 +44,7 @@ Pour suivre ce tutoriel, vous devez avoir terminé le tutoriel [Authentification
 
 ## Création d’un moteur
 
-Vous pouvez créer des moteurs en adressant une requête de POST au point de terminaison /engine. Le moteur créé est configuré en fonction du formulaire du fichier de recette empaqueté qui doit être inclus dans la demande d&#39;API.
+Vous pouvez créer des moteurs en envoyant une requête de POST au point de terminaison /engines. Le moteur créé est configuré en fonction du formulaire du fichier de recette empaqueté qui doit être inclus dans la demande d’API.
 
 ### Création d’un moteur avec une URL Docker {#create-an-engine-with-a-docker-url}
 
@@ -55,13 +54,13 @@ Pour créer un moteur avec un fichier de recette empaquetée stocké dans un con
 >
 > Si vous utilisez [!DNL Python] ou R, utilisez la requête ci-dessous. Si vous utilisez PySpark ou Scala, utilisez l’exemple de requête PySpark/Scala situé sous l’exemple Python/R.
 
-**Format d’API**
+**Format d&#39;API**
 
 ```http
 POST /engines
 ```
 
-**Demande de Python/R**
+**Demander Python/R**
 
 ```shell
 curl -X POST \
@@ -89,14 +88,14 @@ curl -X POST \
 
 | Propriété | Description |
 | -------  | ----------- |
-| `engine.name` | Nom souhaité pour le moteur. La Recette correspondant à ce moteur héritera de cette valeur à afficher dans l&#39;interface utilisateur [!DNL Data Science Workspace] en tant que nom de la Recette. |
-| `engine.description` | Description facultative du moteur. La Recette correspondant à ce moteur héritera de cette valeur à afficher dans l&#39;interface utilisateur [!DNL Data Science Workspace] comme description de la Recette. Ne supprimez pas cette propriété, laissez une chaîne vide pour cette valeur si vous choisissez de ne pas fournir de description. |
-| `engine.type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker a été développée. Lorsqu&#39;une URL Docker est fournie pour créer un moteur, `type` est soit `Python`, `R`, `PySpark`, `Spark` (Scala), soit `Tensorflow`. |
+| `engine.name` | Nom souhaité pour le moteur. La recette correspondant à ce moteur héritera de cette valeur qui sera affichée dans l’interface utilisateur [!DNL Data Science Workspace] en tant que nom de la recette. |
+| `engine.description` | Description facultative du moteur. La recette correspondant à ce moteur héritera de cette valeur qui sera affichée dans l’interface utilisateur [!DNL Data Science Workspace] en tant que description de la recette. Ne supprimez pas cette propriété, laissez une chaîne vide pour cette valeur si vous choisissez de ne pas fournir de description. |
+| `engine.type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker a été développée. Lorsqu’une URL Docker est fournie pour créer un moteur, `type` est `Python`, `R`, `PySpark`, `Spark` (Scala) ou `Tensorflow`. |
 | `artifacts.default.image.location` | Votre `{DOCKER_URL}` va ici. Une URL Docker complète possède la structure suivante : `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Nom supplémentaire du fichier image Docker. Ne supprimez pas cette propriété, laissez une chaîne vide pour cette valeur si vous choisissez de ne pas fournir de nom de fichier image Docker supplémentaire. |
-| `artifacts.default.image.executionType` | Type d&#39;exécution de ce moteur. Cette valeur correspond à la langue dans laquelle l’image Docker a été développée. Lorsqu&#39;une URL Docker est fournie pour créer un moteur, `executionType` est soit `Python`, `R`, `PySpark`, `Spark` (Scala), soit `Tensorflow`. |
+| `artifacts.default.image.executionType` | Type d’exécution de ce moteur. Cette valeur correspond à la langue dans laquelle l’image Docker a été développée. Lorsqu’une URL Docker est fournie pour créer un moteur, `executionType` est `Python`, `R`, `PySpark`, `Spark` (Scala) ou `Tensorflow`. |
 
-**Request PySpark**
+**Demander PySpark**
 
 ```shell
 curl -X POST \
@@ -128,10 +127,10 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom souhaité pour le moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que nom de la recette. |
 | `description` | Description facultative du moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que description de la recette. Cette propriété est obligatoire. Si vous ne souhaitez pas fournir de description, définissez sa valeur comme étant une chaîne vide. |
-| `type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image Docker est construite sur &quot;PySpark&quot;. |
+| `type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée sur &quot;PySpark&quot;. |
 | `mlLibrary` | Champ obligatoire lors de la création de moteurs pour les recettes PySpark et Scala. |
 | `artifacts.default.image.location` | Emplacement de l’image Docker à laquelle est liée une URL Docker. |
-| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image du Docker est construite sur &quot;Spark&quot;. |
+| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée sur &quot;Spark&quot;. |
 
 **Request Scala**
 
@@ -165,14 +164,14 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom souhaité pour le moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que nom de la recette. |
 | `description` | Description facultative du moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que description de la recette. Cette propriété est obligatoire. Si vous ne souhaitez pas fournir de description, définissez sa valeur comme étant une chaîne vide. |
-| `type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image du Docker est construite sur &quot;Spark&quot;. |
+| `type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée sur &quot;Spark&quot;. |
 | `mlLibrary` | Champ obligatoire lors de la création de moteurs pour les recettes PySpark et Scala. |
 | `artifacts.default.image.location` | Emplacement de l’image Docker à laquelle est liée une URL Docker. |
-| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image du Docker est construite sur &quot;Spark&quot;. |
+| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée sur &quot;Spark&quot;. |
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant les détails du nouveau moteur, y compris son identifiant unique (`id`). L&#39;exemple de réponse suivant est pour un moteur [!DNL Python]. Les clés `executionType` et `type` changent en fonction du POST fourni.
+Une réponse réussie renvoie un payload contenant les détails du nouveau moteur, y compris son identifiant unique (`id`). L’exemple de réponse suivant est pour un moteur [!DNL Python]. Les clés `executionType` et `type` changent en fonction du POST fourni.
 
 ```json
 {

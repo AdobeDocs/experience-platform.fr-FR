@@ -272,7 +272,7 @@ Pour plus d’informations sur la création d’une connexion en continu, consul
 
 Une fois le jeu de données et la connexion en continu en place, vous pouvez ingérer des enregistrements JSON au format XDM pour ingérer des données d’enregistrement dans [!DNL Platform].
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /collection/{CONNECTION_ID}?syncValidation=true
@@ -380,7 +380,7 @@ Pour valider les enregistrements précédemment ingérés, vous pouvez utiliser 
 >
 >Si l’ID de stratégie de fusion n’est pas défini et que `schema.name` ou `relatedSchema.name` est `_xdm.context.profile`, [!DNL Profile Access] récupère **toutes** les identités associées.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /access/entities

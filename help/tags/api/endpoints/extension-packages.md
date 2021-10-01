@@ -3,7 +3,7 @@ title: Point d’entrée des packages d’extension
 description: Découvrez comment effectuer des appels au point d'entrée /extension_packages dans l’API Reactor.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 100%
 

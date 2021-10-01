@@ -1,8 +1,9 @@
 ---
 title: Notes de mise à jour de l’extension Adobe Target v2
-description: Notes de mise à jour les plus récentes pour lʼextension de balise Adobe Target v2 dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
+exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 100%
 
@@ -57,7 +58,7 @@ ht-degree: 100%
 ### Extension 0.13.7 d’Adobe Target v2
 
 - Correction dʼun problème en raison duquel le paramètre `targetPageParams` était inclus dans les requêtes mbox. Le paramètre `targetPageParams` ne doit être inclus que dans les requêtes `pageLoad`.
-- Correction dʼun problème lié aux objets globaux de document et de fenêtre dans lʼextension de balise en remplaçant les dépendances dʼobjets globaux par des références directes vers ces objets.
+- Correction d’un problème lié aux objets globaux de document et de fenêtre dans l’extension de balise en remplaçant les dépendances d’objets globaux par des références directes vers ces objets.
 - Mise à jour du fichier at.js vers la version 2.4.1.
 
 ## 25 janvier 2021
@@ -89,7 +90,7 @@ ht-degree: 100%
 ### Extension 0.13.2 d’Adobe Target v2
 
 - Correction d’un problème lors de l’utilisation du remplacement CNAME et Edge, en raison duquel at.js 1.x pouvait créer un domaine de serveur incorrect, entraînant ainsi l’échec de la demande de Target.
-- Correction dʼun problème lors de lʼutilisation de lʼextension de balise v2 pour Target et de lʼextension de balise Adobe Analytics au cours duquel Target retardait lʼappel Analytics sendBeacon.
+- Correction d’un problème en raison duquel, lors de l’utilisation de l’extension de balise v2 pour Target et l’extension de balise Adobe Analytics, Target retardait l’appel sendBeacon d’Analytics.
 - Amélioration du paramètre `deviceIdLifetime` en le rendant remplaçable via `targetGlobalSettings`
 
 ## 25 mars 2020
@@ -122,4 +123,4 @@ ht-degree: 100%
 
 ### Extension 0.11.0 d’Adobe Target v2
 
-- Nouvelle extension de balise pour la prise en charge dʼat.js 2.1
+- Nouvelle extension de balise pour la prise en charge d’at.js 2.1

@@ -38,7 +38,7 @@ Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble
 
 Pour plus d’informations sur ce service, consultez la [présentation de la gouvernance des données.](../../data-governance/home.md)
 
-## Destinations {#destinations}
+## Destinations  {#destinations}
 
 Dans la [plateforme de données clients en temps réel](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées avec des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
 

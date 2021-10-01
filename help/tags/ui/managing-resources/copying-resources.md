@@ -1,8 +1,9 @@
 ---
 title: Copie des ressources
-description: Découvrez comment créer une ressource de balise à lʼaide des paramètres dʼune ressource de balise existante dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez comment créer une ressource de balise à l’aide des paramètres d’une ressource existante dans Adobe Experience Platform.
+exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 100%
 
@@ -34,7 +35,7 @@ Si vous copiez une règle ou un élément de données, vous pouvez utiliser le m
 
 >[!NOTE]
 >
->Dans lʼinterface utilisateur de la collecte de données, il est impossible de copier des ressources vers une autre propriété si une propriété est configurée pour le développement dʼextensions et que lʼautre propriété ne lʼest pas.
+>Dans l’interface utilisateur de collecte de données, il est impossible de copier des ressources vers une autre propriété si une propriété est configurée pour le développement d’extensions et que l’autre propriété ne l’est pas.
 
 Après avoir configuré le comportement souhaité, cliquez sur **[!UICONTROL Copier]**.
 
@@ -63,7 +64,7 @@ Toutes les règles et tous les éléments de données sont fournis par une exten
 
 ![Copie d’une règle vers ma propriété de démonstration](../../images/copy-rules-dialog1.png)
 
-La boîte de dialogue Copier fournit une explication précise de ce qui se passera avant que vous ne commenciez à copier. La boîte de dialogue ci-dessus concerne une règle, mais il en est de même pour les éléments de données.
+La boîte de dialogue Copier fournit une explication de ce qui se passera exactement avant que vous ne commenciez à copier. La boîte de dialogue ci-dessus concerne une règle, mais il en est de même pour les éléments de données.
 
 1. **Les extensions requises par ces règles sont copiées.** Cela vous permet de savoir que les extensions requises vont suivre la règle. Ces copies suivent les mêmes règles qu’une copie d’extension normale décrite ci-dessus.
 1. **Les paramètres d’extension ne seront PAS copiés si l’extension est déjà installée.** Cela signifie que si les extensions requises existent déjà sur la propriété de destination, l’extension reste inchangée. Si vous souhaitez également copier les paramètres d’extension, vous pouvez utiliser le bouton d’activation/désactivation **Remplacer les paramètres d’extension sur la propriété de destination** afin que l’explication soit mise à jour en conséquence.

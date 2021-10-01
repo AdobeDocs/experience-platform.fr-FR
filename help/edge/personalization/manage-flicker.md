@@ -1,19 +1,18 @@
 ---
-title: Gestion de Flicker pour les expériences personnalisées à l’aide du SDK Web Adobe Experience Platform
-description: Découvrez comment utiliser le Adobe Experience Platform Web SDK pour gérer le scintillement sur les expériences des utilisateurs.
-keywords: cible ; scintillement ; prehideStyle ; asynchrone ; asynchrone ;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+title: Gestion du scintillement pour les expériences personnalisées à l’aide du SDK Web de Adobe Experience Platform
+description: Découvrez comment utiliser le SDK Web de Adobe Experience Platform pour gérer le scintillement sur les expériences utilisateur.
+keywords: target;scintillement;prehideStyle;asynchrone;asynchrone;
+exl-id: f4b59109-df7c-471b-9bd6-7082e00c293b
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 76%
 
 ---
 
-
 # Gestion du scintillement
 
-Lorsque vous tentez d’effectuer le rendu du contenu de personnalisation, le SDK doit s’assurer qu’il n’y a pas de scintillement. Flicker, également appelé FOOC (Flash du contenu original), est lorsqu’un contenu original est brièvement affiché avant que l’alternative n’apparaisse pendant les tests/la personnalisation. Le SDK tente d’appliquer des styles CSS aux éléments de la page afin de s’assurer qu’ils sont masqués jusqu’à ce que le contenu de personnalisation soit correctement rendu.
+Lorsque vous tentez d’effectuer le rendu du contenu de personnalisation, le SDK doit s’assurer qu’il n’y a pas de scintillement. Le scintillement, également appelé FOOC (Flash du contenu original), est lorsqu’un contenu original est brièvement affiché avant que l’alternative n’apparaisse pendant le test/la personnalisation. Le SDK tente d’appliquer des styles CSS aux éléments de la page afin de s’assurer qu’ils sont masqués jusqu’à ce que le contenu de personnalisation soit correctement rendu.
 
 La fonctionnalité de gestion des scintillements comporte quelques phases :
 
@@ -23,9 +22,9 @@ La fonctionnalité de gestion des scintillements comporte quelques phases :
 
 ## Prémasquage
 
-Au cours de la phase de prémasquage, le SDK utilise l’option de configuration `prehidingStyle` pour créer une balise de style HTML et l’ajouter au modèle DOM afin de s’assurer que de grandes parties de la page sont masquées. Si vous ne savez pas quelles parties de la page seront personnalisées, il est recommandé de définir `prehidingStyle` sur `body { opacity: 0 !important }`. La page entière est ainsi masquée. Toutefois, cela a pour inconvénient d&#39;entraîner une dégradation des performances de rendu des pages signalées par des outils tels que Lighthouse, Web Page Tests, etc. Pour optimiser les performances de rendu des pages, il est recommandé de définir `prehidingStyle` sur une liste d’éléments de conteneurs qui contiennent les parties de la page à personnaliser.
+Au cours de la phase de prémasquage, le SDK utilise l’option de configuration `prehidingStyle` pour créer une balise de style HTML et l’ajouter au modèle DOM afin de s’assurer que de grandes parties de la page sont masquées. Si vous ne savez pas quelles parties de la page seront personnalisées, il est recommandé de définir `prehidingStyle` sur `body { opacity: 0 !important }`. La page entière est ainsi masquée. Toutefois, cela a l’inconvénient d’entraîner des performances de rendu de page pires, signalées par des outils tels que Lighthouse, les tests de page web, etc. Pour optimiser les performances de rendu des pages, il est recommandé de définir `prehidingStyle` sur une liste d’éléments de conteneurs qui contiennent les parties de la page à personnaliser.
 
-En supposant que vous ayez une page HTML telle que celle ci-dessous, vous savez que seuls les éléments de conteneur `bar` et `bazz` seront personnalisés :
+En supposant que vous ayez une page HTML comme celle ci-dessous et que vous sachiez que seuls les éléments de conteneur `bar` et `bazz` seront personnalisés :
 
 ```html
 <html>

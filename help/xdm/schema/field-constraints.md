@@ -8,7 +8,7 @@ exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 source-git-commit: 61025ada3a900a5bd7682e3bb7d4f6cd23347231
 workflow-type: tm+mt
 source-wordcount: '1097'
-ht-degree: 18%
+ht-degree: 17%
 
 ---
 
@@ -369,9 +369,9 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
     <td>
       <pre class="JSON language-JSON hljs">
 "sampleField": {
-          "type": "string",
-          "format": "date-time",
-          "examples": ["2004-10-23T12:00:00-06:00"]
+  "type": "string",
+  "format": "date-time",
+  "examples" : ["2004-10-23T12:00:00-06:00"]
 }</pre>
     </td>
   </tr>

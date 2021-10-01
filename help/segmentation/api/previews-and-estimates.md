@@ -8,7 +8,7 @@ exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
 source-git-commit: a5cc688357e4750dee73baf3fc9af02a9f2e49e3
 workflow-type: tm+mt
 source-wordcount: '978'
-ht-degree: 18%
+ht-degree: 21%
 
 ---
 
@@ -26,7 +26,7 @@ Au fur et à mesure que vous développez une définition de segment, vous pouvez
 
 ## Prise en main
 
-Les points de terminaison utilisés dans ce guide font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment les en-têtes requis et la manière de lire des exemples d’appels API.
+Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment les en-têtes requis et la manière de lire des exemples d’appels API.
 
 ## Comment sont générées les estimations
 
@@ -105,11 +105,11 @@ Une réponse réussie renvoie un état HTTP 201 (Created) avec les détails de 
 | `state` | L’état actuel de la tâche de prévisualisation. Lors de sa création initiale, il est à l’état &quot;NEW&quot;. Par la suite, il sera à l’état &quot;RUNNING&quot; jusqu’à ce que le traitement soit terminé, auquel cas il deviendra &quot;RESULT_READY&quot; ou &quot;FAILED&quot;. |
 | `previewId` | Identifiant de la tâche de prévisualisation à utiliser à des fins de recherche lors de l’affichage d’une estimation ou d’une prévisualisation, comme indiqué dans la section suivante. |
 
-## Récupérer les résultats d’une prévisualisation spécifique {#get-preview}
+## Récupération des résultats d’une prévisualisation spécifique {#get-preview}
 
 Vous pouvez récupérer des informations détaillées sur une prévisualisation spécifique en envoyant une requête de GET au point de terminaison `/preview` et en fournissant l’ID de prévisualisation dans le chemin d’accès de la requête.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /preview/{PREVIEW_ID}
@@ -186,7 +186,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 Une fois que vous avez créé une tâche de prévisualisation, vous pouvez utiliser sa balise `previewId` dans le chemin d’une requête de GET vers le point de terminaison `/estimate` pour afficher des informations statistiques sur la définition du segment, y compris la taille prévue de l’audience, l’intervalle de confiance et l’écart-type d’erreur.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /estimate/{PREVIEW_ID}

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-#  Tableau de bord des segments  {#segment-dashboard}
+#  Tableau de bord des segments {#segment-dashboard}
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos segments, telles qu’elles sont capturées lors d’un instantané quotidien.
 

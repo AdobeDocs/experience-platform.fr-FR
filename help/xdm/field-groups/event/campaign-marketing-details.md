@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Groupe de champs de schéma Détails du marketing de Campaign
 topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs Détails du marketing Campaign .
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 5%
 
 ---
-
 
 # [!UICONTROL Groupe de champs ] Détails du marketing de Campaign
 

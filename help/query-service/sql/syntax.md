@@ -236,7 +236,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 **Paramètres**
 
-- `IF EXISTS`: Si cette valeur est spécifiée, aucune exception n’est générée si la table  **** n’existe pas.
+- `IF EXISTS`: Si cette valeur est spécifiée, aucune exception n’est générée si la table n’existe  **** pas.
 
 ## DROP DABASE
 

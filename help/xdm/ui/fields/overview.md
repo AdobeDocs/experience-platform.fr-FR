@@ -22,7 +22,7 @@ Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous �
 
 Bien que ce guide ne soit pas obligatoire, il est recommandé de suivre également le tutoriel sur la [composition d’un schéma dans l’interface utilisateur](../../tutorials/create-schema-ui.md) afin de vous familiariser avec les différentes fonctionnalités de [!DNL Schema Editor].
 
-## Sélectionnez une ressource pour ajouter des champs à {#select-resource}
+## Sélectionner une ressource à laquelle ajouter des champs {#select-resource}
 
 Pour définir de nouveaux champs XDM dans l’interface utilisateur, vous devez d’abord ouvrir un schéma dans [!DNL Schema Editor]. Selon les schémas actuellement disponibles dans la balise [!DNL Schema Library], vous pouvez choisir de [créer un nouveau schéma](../resources/schemas.md#create) ou [sélectionner un schéma existant à modifier](../resources/schemas.md#edit).
 

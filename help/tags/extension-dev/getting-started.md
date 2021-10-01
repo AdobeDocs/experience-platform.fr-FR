@@ -1,8 +1,9 @@
 ---
 title: Prise en main du développement des extensions
-description: Commencez à développer vos propres extensions de balises dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Commencez à développer vos propres extensions de balise dans Adobe Experience Platform.
+exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 100%
 

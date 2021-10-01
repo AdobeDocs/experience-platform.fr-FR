@@ -1,8 +1,9 @@
 ---
 title: Présentation de lʼextension Adobe Media Analytics (3.x SDK) for Audio and Video
-description: Découvrez lʼextension de balise Adobe Media Analytics (3.x SDK) for Audio and Video dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez lʼextension Adobe Media Analytics (SDK 3.x) for Audio and Video dans Adobe Experience Platform.
+exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 100%
 
@@ -16,7 +17,7 @@ ht-degree: 100%
 
 Pour plus d’informations sur l’installation, la configuration et la mise en œuvre de l’extension Adobe Media Analytics (SDK 3.x) for Audio and Video (extension Media Analytics), utilisez cette documentation. Les options disponibles lors de l’utilisation de cette extension pour créer une règle, ainsi que des exemples et des liens vers des exemples, sont inclus.
 
-L’extension Media Analytics (MA) ajoute le SDK principal JavaScript Media (SDK Media 3.x). Cette extension permet d’ajouter l’instance de suivi `Media` à un site ou à un projet avec balises. L’extension MA requiert deux extensions supplémentaires :
+L’extension Media Analytics (MA) ajoute le SDK principal JavaScript Media (SDK Media 3.x). Cette extension est une fonctionnalité qui permet d’ajouter l’instance `Media` de suivi à un site ou à un projet acceptant les balises. L’extension MA requiert deux extensions supplémentaires :
 
 * [Extension Analytics](../analytics/overview.md)
 * [L’extension Experience Cloud ID](../id-service/overview.md)
@@ -25,7 +26,7 @@ L’extension Media Analytics (MA) ajoute le SDK principal JavaScript Media (SDK
 >
 >Cette extension est déployée avec le SDK Media 3.x, qui n’a pas de compatibilité descendante avec le SDK Media 2.x. Si votre page utilise déjà le SDK Media 2.x, utilisez l’[extension Adobe Media Analytics for Audio and Video](../media-analytics/overview.md) au lieu de cette extension.
 
-Après avoir inclus les trois extensions mentionnées ci-dessus dans votre projet avec balises, vous pouvez procéder de deux façons :
+Après avoir inclus les trois extensions mentionnées ci-dessus dans votre projet acceptant les balises, vous pouvez procéder de deux façons :
 
 * Utiliser les API `Media` de votre application web
 * Inclure ou créer une extension spécifique au lecteur qui associe des événements de lecteur multimédia spécifiques aux API sur l’instance de suivi `Media`. Cette instance est exposée via l’extension MA.

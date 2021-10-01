@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;ETL;etl;etl workflow;ETL workflow
+keywords: Experience Platform;accueil;rubriques populaires;ETL;etl;workflow etl;workflow ETL
 solution: Experience Platform
-title: Processus ETL
+title: Workflow ETL
 topic-legacy: overview
 description: Différents outils d’extraction, de transformation et de chargement (ETL) peuvent avoir des formats différents, mais la plupart présentent des fonctionnalités similaires pour faciliter la combinaison de plusieurs sources de données.
 exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '213'
@@ -35,7 +34,7 @@ Les actions illustrées ci-dessous sont détaillées dans les étapes décrites 
 
 ![](images/image4.png)
 
-### Figure 4 - Nouvelle interface utilisateur de transformation, sélection de la connexion [!DNL Experience Platform] :
+### Figure 4 - Nouvelle interface utilisateur de transformation, en sélectionnant [!DNL Experience Platform] Connexion :
 
 ![](images/image5.png)
 
@@ -59,7 +58,7 @@ Les actions illustrées ci-dessous sont détaillées dans les étapes décrites 
 
 ![](images/image10.png)
 
-### Figure 10 - Définition du jeu de données de la cible [!DNL Experience Data Model] (XDM) :
+### Figure 10 - Définition du jeu de données cible [!DNL Experience Data Model] (XDM) :
 
 ![](images/image11.png)
 

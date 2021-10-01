@@ -5,7 +5,7 @@ exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
 source-wordcount: '1279'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -246,7 +246,7 @@ L’objet contient les propriétés suivantes :
 
 | Propriété | Description |
 | --- | --- |
-| `id` | ID de l’environnement. |
+| `id` | Identifiant de l’environnement. |
 | `stage` | Environnement pour lequel cette bibliothèque a été créée. Les valeurs possibles sont `development`, `staging` et `production`. |
 
 ## `notify`
@@ -415,7 +415,7 @@ Sur votre page web exécutant une bibliothèque de balises, ajoutez un fragment 
 </html>
 ```
 
-Dans le premier élément de script, puisque la bibliothèque de balises n’a pas encore été chargée, l’objet `_satellite` initial est créé et un tableau est initialisé sur `_satellite._monitors`. Le script ajoute ensuite un objet de moniteur à ce tableau. L’objet de moniteur peut spécifier les méthodes suivantes, qui seront ensuite appelées par la bibliothèque de balises :
+Dans le premier élément de script, puisque la bibliothèque de balises n’a pas encore été chargée, l’objet `_satellite` initial est créé et un tableau est initialisé sur `_satellite._monitors`. Le script ajoute ensuite un objet de moniteur à ce tableau. L’objet de moniteur peut spécifier les méthodes suivantes, qui seront ensuite appelées par la bibliothèque de balises :
 
 ### `ruleTriggered`
 

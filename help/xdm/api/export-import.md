@@ -8,7 +8,7 @@ exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
 source-wordcount: '506'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -18,7 +18,7 @@ Toutes les ressources de [!DNL Schema Library] sont contenues dans un environnem
 
 ## Prise en main
 
-Les points de terminaison utilisés dans ce guide font partie de l’[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Les points d’entrée d’API utilisés dans ce guide font partie de l’[[!DNL Schema Registry] ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
 
 Les points de terminaison export/import font partie des appels de procédure distants (RPC) pris en charge par [!DNL Schema Registry]. Contrairement aux autres points de terminaison de l’API [!DNL Schema Registry], les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires tels que `Accept` ou `Content-Type` et n’utilisent pas de `CONTAINER_ID`. Ils doivent plutôt utiliser l’espace de noms `/rpc`, comme illustré dans les appels API ci-dessous.
 

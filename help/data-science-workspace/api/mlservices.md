@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; rubriques populaires ; mlservices ; api d’apprentissage automatique sensei
+keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées;mlservices;api d’apprentissage automatique sensei
 solution: Experience Platform
-title: Point de terminaison de l'API MLServices
+title: Point d’entrée de l’API MLServices
 topic-legacy: Developer guide
 description: Un MLService est un modèle formé publié qui permet à votre organisation d’accéder aux modèles précédemment développés et de les réutiliser. L’une des principales caractéristiques de MLServices est sa capacité d’automatiser la formation et la notation selon un calendrier précis. Les exécutions de formation planifiées peuvent contribuer à préserver l’efficacité et la précision d’un modèle, tandis que les exécutions de notation planifiées peuvent garantir que de nouvelles informations sont générées de manière cohérente.
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '890'
@@ -13,7 +12,7 @@ ht-degree: 97%
 
 ---
 
-# Point de terminaison MLServices
+# Point d’entrée MLServices
 
 Un MLService est un modèle formé publié qui permet à votre organisation d’accéder aux modèles précédemment développés et de les réutiliser. L’une des principales caractéristiques de MLServices est sa capacité d’automatiser la formation et la notation selon un calendrier précis. Les exécutions de formation planifiées peuvent contribuer à préserver l’efficacité et la précision d’un modèle, tandis que les exécutions de notation planifiées peuvent garantir que de nouvelles informations sont générées de manière cohérente.
 
@@ -107,7 +106,7 @@ Une réponse réussie renvoie un payload contenant les détails du MLService nou
 }
 ```
 
-## Obtention d’une liste de MLServices  {#retrieve-a-list-of-mlservices}
+## Obtention d’une liste de MLServices {#retrieve-a-list-of-mlservices}
 
 Vous pouvez récupérer une liste de MLServices en exécutant une requête GET unique. Pour filtrer les résultats plus facilement, vous pouvez spécifier les paramètres de requête dans le chemin d’accès de la requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
 
@@ -166,7 +165,7 @@ Une réponse réussie renvoie une liste de MLService et leurs informations, y co
 }
 ```
 
-## Récupération d’un MLService spécifique  {#retrieve-a-specific-mlservice}
+## Récupération d’un MLService spécifique {#retrieve-a-specific-mlservice}
 
 Vous pouvez récupérer les détails d’une expérience spécifique en exécutant une requête GET qui inclut l’identifiant de MLService souhaité dans le chemin de la requête.
 
@@ -210,7 +209,7 @@ Une réponse réussie renvoie un payload contenant les détails du MLService dem
 }
 ```
 
-## Mise à jour d’un MLService  {#update-an-mlservice}
+## Mise à jour d’un MLService {#update-an-mlservice}
 
 Vous pouvez mettre à jour un MLService existant en écrasant ses propriétés par le biais d’une requête PUT qui inclut l’identifiant du MLService cible dans le chemin d’accès à la requête et en fournissant un payload JSON contenant des propriétés mises à jour.
 

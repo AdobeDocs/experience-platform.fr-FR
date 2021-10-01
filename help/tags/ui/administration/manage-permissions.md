@@ -1,8 +1,9 @@
 ---
 title: Gestion des autorisations relatives aux balises
 description: Découvrez comment octroyer des autorisations relatives aux balises dans Adobe Experience Platform.
-source-git-commit: 72d2e9328bcfb6abf0a7f8f0c5113f021a112a35
-workflow-type: ht
+exl-id: b0439909-c515-4829-82b9-267da8862cba
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 100%
 

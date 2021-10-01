@@ -1,8 +1,9 @@
 ---
 title: Norme de rétrocompatibilité
-description: Découvrez la norme de rétrocompatibilité dans Adobe Experience Platform, qui garantit que les versions mises à jour des extensions de balises sont compatibles avec les versions précédentes.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez la norme de rétrocompatibilité d’Adobe Experience Platform, qui garantit que les versions mises à jour des extensions de balises sont compatibles avec les versions précédentes.
+exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 100%
 
@@ -14,11 +15,11 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Les mises à jour dʼune extension de balise dans Adobe Experience Platform doivent être rétrocompatibles avec les versions précédentes de lʼextension. Cela signifie que :
+Les mises à jour d’extension de balise dans Adobe Experience Platform doivent être rétrocompatibles avec les versions précédentes de l’extension. Cela signifie que :
 
 * Toute modification des composants principaux des extensions doit être compatible avec les versions précédentes. Cela inclut la configuration de l’extension, les types d’événement, les types de condition, les types d’action, les types d’éléments de données et les modules partagés.
 * Les composants qu’un utilisateur a créés avec l’ancienne version de l’extension doivent être en mesure de transmettre la validation par rapport aux schémas fournis par la nouvelle version.
-* Un utilisateur dʼAdobe Experience Platform doit pouvoir installer une version mise à jour de votre extension et faire en sorte que tout ce quʼil a fait continue à fonctionner exactement comme précédemment avant dʼeffectuer des modifications délibérées.
+* Un utilisateur d’Adobe Experience Platform doit pouvoir installer une version mise à jour de votre extension et faire en sorte que tout ce qu’il a fait continue à fonctionner exactement comme précédemment jusqu’à ce qu’il apporte des modifications délibérées.
 
 ## Modifications autorisées
 
@@ -56,7 +57,7 @@ Il peut y avoir des cas où vous avez une raison commerciale valable de penser q
 1. Je souhaite modifier un champ facultatif pour qu’il soit obligatoire => Créer un nouveau composant nécessitant le champ souhaité et abandonner l’ancien
 1. Je veux modifier l’API d’un module partagé => Créer un nouveau module partagé et abandonner l’ancien
 
-Il se peut que vous remarquiez un point commun. Tant mieux. Lors de lʼabandon dʼun ancien composant, vous souhaitez informer les utilisateurs de votre extension quʼil a été abandonné et quʼils doivent passer à un nouveau composant.  Quelques suggestions pour communiquer avec les utilisateurs :
+Il se peut que vous remarquiez un point commun. Tant mieux. Lors de l’abandon d’un ancien composant, vous devez informer les utilisateurs de votre extension que celui-ci a été abandonné et qu’ils doivent passer à un nouveau composant.  Quelques suggestions pour communiquer avec les utilisateurs :
 
 * Mettez à jour le nom d’affichage de l’ancien composant pour inclure « (Obsolète) ».
 * Mettez à jour la vue de l’ancien composant pour qu’elle contienne un texte d’avertissement rouge indiquant que ce composant est obsolète et que l’utilisateur devrait passer au nouveau composant.

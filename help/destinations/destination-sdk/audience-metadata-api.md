@@ -1,7 +1,8 @@
 ---
 description: Cette page décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/audience-templates`.
 title: Opérations de l’API de point d’entrée des métadonnées d’audience
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
+source-git-commit: 6ff5fd0e80f7ca1015969e91cc23c88251509b61
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 5%

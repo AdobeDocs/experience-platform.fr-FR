@@ -2,13 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;réservation;vol;
 title: Groupe de champs de schéma de réservation de vol
 description: Ce document présente un aperçu du groupe de champs du schéma de réservation de vol.
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 5%
 
 ---
-
 
 # [!UICONTROL Groupe de champs ] de schéma de réservation de vol
 

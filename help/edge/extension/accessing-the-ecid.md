@@ -1,13 +1,13 @@
 ---
-title: 'Accès à l’ECID '
+title: Accès à l’ECID
 description: Extension SDK Web Adobe Experience Platform Utilisation de l’ECID dans les balises
-source-git-commit: befe1efa884706165b8d65803d06f6370a8a60f2
+exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 10%
 
 ---
-
 
 # Accès à l’ECID
 

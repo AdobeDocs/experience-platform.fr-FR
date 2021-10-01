@@ -1,8 +1,9 @@
 ---
 title: Présentation de l’extension Adobe Experience Platform Demo
 description: Découvrez l’extension Adobe Experience Platform Demo dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 100%
 
@@ -50,7 +51,7 @@ Si vous sélectionnez **[!UICONTROL Créer une connexion en continu]**, une fen�
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-Le modal contient les champs avec des valeurs préremplies qui peuvent être modifiées en fonction de vos besoins. Si vous prévoyez de créer plusieurs connexions en continu, n’oubliez pas que le champ **[!UICONTROL Source de données]** doit être unique. Toute tentative visant à créer une autre connexion en continu à l’aide d’une **[!UICONTROL Source de données]** utilisée sur une autre connexion échouera.
+Le modal contient les champs avec des valeurs préremplies qui peuvent être modifiées en fonction de vos besoins. Si vous prévoyez de créer plus d’une connexion en continu, sachez que le champ **[!UICONTROL Source de données]** doit être unique. Toute tentative visant à créer une autre connexion en continu à l’aide d’une **[!UICONTROL Source de données]** utilisée sur une autre connexion échouera.
 
 Une fois que vous avez sélectionné un point de terminaison de connexion en continu, l’URL et la source du point de terminaison de connexion en continu s’affichent.
 
@@ -80,7 +81,7 @@ Après avoir sélectionné le jeu de données, vous pouvez définir votre mappag
 
 Le champ Valeur source accepte une valeur ou un élément de données. Vous pouvez ajouter un élément de données en cliquant sur le bouton de l’élément de données situé à côté du champ valeur source.
 
-Le champ Schéma cible contient le chemin d’un champ XDM défini dans le schéma de jeu de données. Pour les champs définis plus précisément dans la hiérarchie de schéma, vous pouvez utiliser le point comme séparateur des parties du chemin d’accès (par exemple timeSeriesEvents.eventType).
+Le champ de schéma cible contient le chemin d’un champ XDM défini dans le schéma de jeu de données. Pour les champs définis plus précisément dans la hiérarchie de schéma, vous pouvez utiliser le point comme séparateur des parties du chemin d’accès (par exemple timeSeriesEvents.eventType).
 
 ### Sélecteur de champ de schéma
 
@@ -115,11 +116,11 @@ Une section d’identité s’affiche si votre schéma contient un champ `xdm:id
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-section.png)
 
-La section de mappage d’identité peut contenir plusieurs lignes. Chaque ligne peut définir un certain type d’identité. Pour chaque identité, vous pouvez définir plusieurs attributs, à savoir le type, l’état d’authentification et la valeur, ainsi qu’indiquer s’il s’agit de l’identité principale.
+La section de mappage d’identité peut contenir plusieurs lignes. Chaque ligne peut définir un certain type d’identité. Pour chaque identité, vous pouvez définir plusieurs attributs, à savoir le type, l’état d’authentification et la valeur, ainsi qu’indiquer s’il s’agit de l’identité principale ou non.
 
 Si la section de mappage d’identité comporte plusieurs identités, une seule identité peut être marquée comme identité principale.
 
-Si un schéma comporte un champ `xdm:identityMap` et qu’un autre champ est marqué comme champ d’identité principale, la colonne « primary » de la section de mappage d’identité ne sera pas visible.
+Si l’un des schémas comporte un champ `xdm:identityMap` et qu’un autre champ est marqué comme champ d’identité principal, la colonne « primary » de la section de mappage d’identité ne sera pas visible.
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-section-not-primary.png)
 

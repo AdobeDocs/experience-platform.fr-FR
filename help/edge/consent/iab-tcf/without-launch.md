@@ -1,11 +1,11 @@
 ---
 title: Intégration de la prise en charge du TCF 2.0 de l’IAB à l’aide du SDK Web de Adobe Experience Platform
 description: Découvrez comment configurer la prise en charge du TCF 2.0 de l’IAB pour votre site web sans utiliser de balises.
-seo-description: Découvrez comment configurer le consentement IAB TCF 2.0 avec le SDK Web Adobe Experience Platform
+seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Web SDK
 exl-id: 14f1802a-0f8d-487f-ae17-5daaaab05162
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---

@@ -1,15 +1,14 @@
 ---
-keywords: classification de texte ; classification de texte
+keywords: classification de texte;classification de texte
 solution: Experience Platform, Intelligent Services
-title: Classification de texte dans l’API d’API Content and Commerce
+title: Classification de texte dans l’API Content and Commerce AI
 topic-legacy: Developer guide
-description: Lorsqu’un fragment de texte est fourni, le service de classification de texte peut le classifier en une ou plusieurs étiquettes. La classification peut être à libellé unique, à libellé multiple ou hiérarchique.
+description: Lorsqu’un fragment de texte est fourni, le service de classification de texte peut le classer dans une ou plusieurs étiquettes. La classification peut être une seule étiquette, plusieurs étiquettes ou hiérarchique.
 exl-id: f240519a-0d83-4309-91e4-4e48be7955a1
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '441'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -19,7 +18,7 @@ ht-degree: 4%
 >
 >Content and Commerce AI est en version bêta. La documentation peut être modifiée.
 
-Lorsqu’un fragment de texte est fourni, le service de classification de texte peut le classifier en une ou plusieurs étiquettes. La classification peut être à libellé unique, à libellé multiple ou hiérarchique.
+Lorsqu’un fragment de texte est fourni, le service de classification de texte peut le classer dans une ou plusieurs étiquettes. La classification peut être une seule étiquette, plusieurs étiquettes ou hiérarchique.
 
 **Format d’API**
 
@@ -29,11 +28,11 @@ POST /services/v1/predict
 
 **Requête**
 
-La requête suivante classe le texte d’un fragment en fonction des paramètres d’entrée fournis dans la charge utile. Consultez le tableau ci-dessous pour plus d’informations sur les paramètres d’entrée affichés.
+La requête suivante classe le texte d’un fragment en fonction des paramètres d’entrée fournis dans le payload. Pour plus d’informations sur les paramètres d’entrée affichés, reportez-vous au tableau ci-dessous de l’exemple de payload.
 
 >[!CAUTION]
 >
->`analyzer_id` détermine lequel  [!DNL Sensei Content Framework] est utilisé. Veuillez vérifier que vous disposez du `analyzer_id` approprié avant de faire votre demande. Contactez l’équipe bêta de Content and Commerce AI pour recevoir votre `analyzer_id` pour ce service.
+>`analyzer_id` détermine qui  [!DNL Sensei Content Framework] est utilisé. Vérifiez que vous disposez des `analyzer_id` appropriées avant de faire votre demande. Contactez l’équipe bêta de Content and Commerce AI pour recevoir votre `analyzer_id` pour ce service.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -62,21 +61,21 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Propriété | Description | Obligatoire |
 | --- | --- | --- |
-| `analyzer_id` | ID de service [!DNL Sensei] sous lequel votre requête est déployée. Cet identifiant détermine lequel des [!DNL Sensei Content Frameworks] est utilisé. Pour les services personnalisés, contactez l’équipe d’API Content and Commerce pour configurer un identifiant personnalisé. | Oui |
-| `application-id` | ID de l’application créée. | Oui |
-| `data` | Tableau contenant un objet JSON avec chaque objet du tableau représentant un document. Tout paramètre transmis dans le cadre de ce tableau remplace les paramètres globaux spécifiés en dehors du tableau `data`. Toutes les autres propriétés décrites ci-dessous dans ce tableau peuvent être remplacées à partir de `data`. | Oui |
+| `analyzer_id` | L’ID de service [!DNL Sensei] sous lequel votre requête est déployée. Cet identifiant détermine lequel des [!DNL Sensei Content Frameworks] est utilisé. Pour les services personnalisés, contactez l’équipe Content and Commerce AI pour configurer un identifiant personnalisé. | Oui |
+| `application-id` | L’identifiant de l’application créée. | Oui |
+| `data` | Tableau contenant un objet JSON dont chaque objet du tableau représente un document. Tous les paramètres transmis dans le cadre de ce tableau remplacent les paramètres globaux spécifiés en dehors du tableau `data`. Toutes les propriétés restantes décrites ci-dessous dans ce tableau peuvent être remplacées dans `data`. | Oui |
 | `language` | Langue du texte de saisie. La valeur par défaut est `en`. | Non |
-| `content-type` | Permet d’indiquer si l’entrée fait partie du corps de la requête ou si une URL signée est associée à un compartiment S3. La valeur par défaut de cette propriété est `inline`. | Non |
+| `content-type` | Utilisé pour indiquer si l’entrée fait partie du corps de la requête ou une URL signée pour un compartiment S3. La valeur par défaut de cette propriété est `inline`. | Non |
 | `encoding` | Format de codage du texte d’entrée. Il peut s’agir de `utf-8` ou `utf-16`. La valeur par défaut de cette propriété est `utf-8`. | Non |
 | `threshold` | Seuil de score (0 à 1) au-dessus duquel les résultats doivent être renvoyés. Utilisez la valeur `0` pour renvoyer tous les résultats. La valeur par défaut de cette propriété est `0`. | Non |
-| `top-N` | Nombre de résultats à renvoyer (ne peut pas être un entier négatif). Utilisez la valeur `0` pour renvoyer tous les résultats. Lorsqu&#39;il est utilisé conjointement avec `threshold`, le nombre de résultats renvoyés est le moins élevé des deux limites définies. La valeur par défaut de cette propriété est `0`. | Non |
-| `custom` | Tout paramètre personnalisé à transmettre. Cette propriété requiert un objet JSON valide pour fonctionner. | Non |
-| `content-id` | ID unique de l’élément de données renvoyé dans la réponse. Si ce n’est pas le cas, un identifiant généré automatiquement est attribué. | Non |
-| `content` | Contenu utilisé par le service de classification de texte. Le contenu peut être du texte brut (type de contenu &quot;intégré&quot;). <br> Si le contenu est un fichier sur S3 (&#39;s3-bucket&#39; content-type), transmettez l’URL signée. | Oui |
+| `top-N` | Nombre de résultats à renvoyer (ne peut pas être un entier négatif). Utilisez la valeur `0` pour renvoyer tous les résultats. Lorsqu’il est utilisé conjointement avec `threshold`, le nombre de résultats renvoyé est le moins élevé des deux limites définies. La valeur par défaut de cette propriété est `0`. | Non |
+| `custom` | Tous les paramètres personnalisés à transmettre. Cette propriété requiert un objet JSON valide pour fonctionner. | Non |
+| `content-id` | Identifiant unique de l’élément de données renvoyé dans la réponse. Si ce n’est pas le cas, un identifiant généré automatiquement est attribué. | Non |
+| `content` | Contenu utilisé par le service de classification de texte. Le contenu peut être du texte brut (type de contenu &quot;intégré&quot;). <br> Si le contenu est un fichier sur S3 (type de contenu &quot;s3-bucket&quot;), transmettez l’URL signée. | Oui |
 
 **Réponse**
 
-Une réponse réussie renvoie le texte classifié dans un tableau de réponses.
+Une réponse réussie renvoie le texte classé dans un tableau de réponse.
 
 ```json
 {

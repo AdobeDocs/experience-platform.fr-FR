@@ -1,6 +1,6 @@
 ---
-title: Segmentation en flux continu dans Adobe Experience Platform
-description: Cette vidéo fournit une compréhension de base de la segmentation en flux continu dans Adobe Experience Platform et explique comment procéder à la segmentation en flux continu à l’aide de l’interface utilisateur de la plate-forme.
+title: Segmentation par flux dans Adobe Experience Platform
+description: Cette vidéo présente une compréhension de base de la segmentation par flux dans Adobe Experience Platform et explique comment effectuer la segmentation par flux à l’aide de l’interface utilisateur de Platform.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -9,23 +9,22 @@ audience: all
 doc-type: video
 activity: understand
 thumbnail: null
-translation-type: tm+mt
-source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
+exl-id: 8092a614-4888-43e3-a02c-b1cf0eb45256
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
+# Segmentation par flux dans l’interface utilisateur Experience Platform
 
-# Segmentation en flux continu dans l’interface utilisateur Experience Platform
+La vidéo suivante est destinée à vous aider à comprendre la segmentation par flux. Il présente un exemple d’expérience client suivi d’un aperçu rapide des fonctionnalités clés de l’interface [!DNL Platform]. Pour en savoir plus sur la segmentation par flux et sur la manière d’effectuer la segmentation par flux dans l’interface utilisateur, consultez le [guide de l’interface utilisateur de la segmentation par flux](../ui/streaming-segmentation.md).
 
-La vidéo suivante est destinée à vous aider à comprendre la segmentation en flux continu. Il présente un exemple d&#39;expérience client suivi d&#39;une visite rapide des principales fonctionnalités de l&#39;interface [!DNL Platform]. Pour en savoir plus sur la segmentation en flux continu et sur la façon d’effectuer la segmentation en flux continu dans l’interface utilisateur, consultez le [guide de l’interface utilisateur de la segmentation en flux continu](../ui/streaming-segmentation.md).
-
-Si vous souhaitez une segmentation en flux continu à l’aide de l’API de segmentation, consultez le [guide de l’API de segmentation en flux continu](../api/streaming-segmentation.md).
+Si vous souhaitez une segmentation par flux à l’aide de l’API Segmentation, consultez le [guide de l’API de segmentation par flux](../api/streaming-segmentation.md).
 
 >[!NOTE]
 >
->L&#39;interface utilisateur de l&#39;Experience Platform est fréquemment mise à jour et peut avoir changé depuis l&#39;enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, consultez le [guide de l’interface utilisateur de segmentation en flux continu](../ui/streaming-segmentation.md).
+>L’interface utilisateur de l’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir des informations à jour, reportez-vous au [guide de l’interface utilisateur de la segmentation par flux](../ui/streaming-segmentation.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)

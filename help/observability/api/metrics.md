@@ -18,7 +18,7 @@ Les mesures d’observabilité fournissent des informations sur les statistiques
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼAPI [[!DNL Observability Insights] ](https://www.adobe.io/experience-platform-apis/references/observability-insights/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Récupération des mesures d’observabilité
 
@@ -356,7 +356,7 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Quer
 | timeseries.queryservice.query.batchquery.count | Nombre total de requêtes en lot exécutées. | N/A |
 | timeseries.queryservice.query.scheduledquery.count | Nombre total de requêtes planifiées exécutées. | N/A |
 | timeseries.queryservice.query.interactivequery.count | Nombre total de requêtes interactives exécutées. | N/A |
-| timeseries.queryservice.query.batchfrompsqlquery.count | Nombre total de requêtes en lot exécutées à partir de PSQL. | N/A |
+| timeseries.queryservice.query.batchfrompsqlquery.count | Nombre total de requêtes en lot exécutées à partir de PSQL. | S.O. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Présentation de la correspondance de segment
 topic-legacy: overview
 description: La correspondance de segment est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment de manière sécurisée, gérée et respectueuse de la confidentialité.
-source-git-commit: ee59da6c075573af366403e1059b5318fb924d21
+exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1982'
 ht-degree: 6%
 
 ---
-
 
 # (Version bêta) [!DNL Segment Match] - Aperçu
 
@@ -51,7 +51,7 @@ La liste des espaces de noms pris en charge est la suivante :
 | --------- | ----------- |
 | Emails (SHA256, avec mise en minuscules) | Espace de noms pour l’adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage avec SHA256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse email ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Pour plus d’informations, consultez le document suivant sur la [prise en charge du hachage SHA-256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) . |
 | Téléphone (SHA256_E.164) | Espace de noms qui représente les numéros de téléphone bruts qui doivent être hachés au format SHA256 et E.164. |
-| ECID | Espace de noms représentant une valeur d’identifiant Experience Cloud (ECID). Cet espace de noms peut également être référencé par les alias suivants : &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Pour plus d’informations, consultez la [présentation de l’ECID](../../identity-service/ecid.md) . |
+| ECID | Espace de noms représentant une valeur d’identifiant Experience Cloud (ECID). Cet espace de noms peut également être référencé par les alias suivants : &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Pour plus d’informations, consultez la [présentation ECID](../../identity-service/ecid.md). |
 | IDFA Apple (ID pour les annonceurs) | Espace de noms qui représente l’Apple ID pour les annonceurs. Pour plus d’informations, consultez le document suivant sur les [annonces basées sur les intérêts](https://support.apple.com/fr-fr/HT202074). |
 | Google Ad ID | Espace de noms qui représente un identifiant Google Advertising. Consultez le document suivant sur [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) pour plus d’informations. |
 

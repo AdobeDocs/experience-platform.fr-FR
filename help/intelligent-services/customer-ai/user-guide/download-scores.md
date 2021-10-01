@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; téléchargez des scores ; assistance client ; rubriques populaires ; Exporter ; exporter ; téléchargement de l’assistance client ; scores de l’assistance client
+keywords: Experience Platform;télécharger des scores;service clientèle;rubriques les plus consultées;exportation;téléchargement de l’assistance client;scores de l’assistance client
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Téléchargement de scores dans l’IA du client
+title: Scores de téléchargement dans Customer AI
 topic-legacy: Downloading scores
-description: L’IA du client vous permet de télécharger des scores au format de fichier Parquet.
+description: Customer AI vous permet de télécharger des scores au format de fichier Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '961'
@@ -13,15 +12,15 @@ ht-degree: 87%
 
 ---
 
-# Téléchargement de scores dans l’API client
+# Téléchargement de scores dans Customer AI
 
 Ce document sert de guide pour télécharger des scores dans Customer AI.
 
 ## Prise en main
 
-L’IA du client vous permet de télécharger des scores au format de fichier Parquet. Pour suivre ce tutoriel, vous devez avoir terminé de lire la section consacrée au téléchargement de scores Customer AI dans le [guide de prise en main](../getting-started.md).
+Customer AI vous permet de télécharger des scores au format de fichier Parquet. Pour suivre ce tutoriel, vous devez avoir terminé de lire la section consacrée au téléchargement de scores Customer AI dans le [guide de prise en main](../getting-started.md).
 
-De plus, pour accéder aux scores dans Customer AI, vous devez disposer d’une instance de service avec un état d’exécution réussi disponible. Pour créer une nouvelle instance de service, consultez [Configuration d’une instance d’API client](./configure.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
+De plus, pour accéder aux scores dans Customer AI, vous devez disposer d’une instance de service avec un état d’exécution réussi disponible. Pour créer une instance de service, consultez la page [Configuration d’une instance Customer AI](./configure.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
 
 Actuellement, il existe deux manières de télécharger les scores Customer AI :
 
@@ -40,7 +39,7 @@ Une boîte de dialogue s’affiche. Elle contient un lien vers la documentation 
 
 ## Récupération de votre identifiant de lot {#retrieve-your-batch-id}
 
-En utilisant l’identifiant du jeu de données de l’étape précédente, vous devez appeler l’API Catalog pour récupérer un identifiant de lot. D&#39;autres paramètres de requête sont utilisés pour cet appel d&#39;API afin de renvoyer le dernier lot réussi au lieu d&#39;une liste de lots appartenant à votre organisation. Pour renvoyer des lots supplémentaires, augmentez le nombre du paramètre de requête limite à la quantité souhaitée à renvoyer. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../../catalog/api/filter-data.md).
+En utilisant l’identifiant du jeu de données de l’étape précédente, vous devez appeler l’API Catalog pour récupérer un identifiant de lot. Des paramètres de requête supplémentaires sont utilisés pour cet appel API afin de renvoyer le dernier lot réussi au lieu d’une liste de lots appartenant à votre organisation. Pour renvoyer des lots supplémentaires, augmentez le nombre du paramètre de requête limite à la valeur souhaitée que vous souhaitez voir renvoyer. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../../catalog/api/filter-data.md).
 
 **Format d’API**
 
@@ -113,7 +112,7 @@ Une réponse réussie renvoie un payload contenant un objet d’identifiant de l
 }
 ```
 
-## Récupération de l’appel API suivant avec l’identifiant de lot  {#retrieve-the-next-api-call-with-your-batch-id}
+## Récupération de l’appel API suivant avec l’identifiant de lot {#retrieve-the-next-api-call-with-your-batch-id}
 
 Une fois que vous disposez de l’identifiant de lot, vous pouvez adresser une nouvelle requête GET à `/batches`. La requête renvoie un lien utilisé pour la requête d’API suivante.
 
@@ -167,7 +166,7 @@ Une réponse réussie renvoie un payload contenant un objet `_links`. L’objet 
 }
 ```
 
-## Récupération de vos fichiers  {#retrieving-your-files}
+## Récupération de vos fichiers {#retrieving-your-files}
 
 À l’aide de la valeur `href` obtenue à l’étape précédente comme appel API, effectuez une nouvelle requête GET pour récupérer votre répertoire de fichiers.
 

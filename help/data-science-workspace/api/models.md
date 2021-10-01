@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; rubriques populaires ; modèles ; api d’apprentissage automatique sensei
+keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques populaires;modèles;api d’apprentissage automatique sensei
 solution: Experience Platform
-title: Point de terminaison de l'API Modèles
+title: Point de terminaison de l’API Modèles
 topic-legacy: Developer guide
 description: Un modèle est une instance d’une recette d’apprentissage automatique formée à l’aide de données historiques et de configurations dans le but de résoudre un cas d’usage commercial.
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '864'
@@ -163,9 +162,9 @@ Une réponse réussie renvoie un payload contenant les détails de votre modèle
 | `experimentId` | Un identifiant d’expérience valide. |
 | `experimentRunId` | Un identifiant d’exécution d’expérience valide. |
 
-## Enregistrer un modèle prégénéré {#register-a-model}
+## Enregistrement d’un modèle prégénéré {#register-a-model}
 
-Vous pouvez enregistrer un modèle prégénéré en adressant une demande de POST au point de terminaison `/models`. Pour enregistrer votre modèle, les valeurs de fichier `modelArtifact` et de propriété `model` doivent être incluses dans le corps de la requête.
+Vous pouvez enregistrer un modèle prégénéré en envoyant une requête de POST au point de terminaison `/models`. Pour enregistrer votre modèle, les valeurs de fichier `modelArtifact` et de propriété `model` doivent être incluses dans le corps de la requête.
 
 **Format d’API**
 
@@ -175,7 +174,7 @@ POST /models
 
 **Requête**
 
-Le POST suivant contient le fichier `modelArtifact` et les valeurs de propriété `model` nécessaires. Pour plus d’informations sur ces valeurs, voir le tableau ci-dessous.
+Le POST suivant contient le fichier `modelArtifact` et les valeurs de propriété `model` nécessaires. Consultez le tableau ci-dessous pour plus d’informations sur ces valeurs.
 
 ```shell
 curl -X POST \
@@ -193,8 +192,8 @@ curl -X POST \
 
 | Paramètre | Description |
 | --- | --- |
-| `modelArtifact` | Emplacement de l&#39;artefact de modèle complet que vous souhaitez inclure. |
-| `model` | Données de formulaire de l&#39;objet Modèle qui doit être créé. |
+| `modelArtifact` | Emplacement de l’artefact de modèle complet que vous souhaitez inclure. |
+| `model` | Les données de formulaire de l’objet de modèle qui doivent être créées. |
 
 **Réponse**
 
@@ -215,7 +214,7 @@ Une réponse réussie renvoie un payload contenant les détails de votre modèle
 | Propriété | Description |
 | --- | --- |
 | `id` | L’identifiant correspondant au modèle. |
-| `modelArtifactUri` | Un URI indiquant l’emplacement de stockage du modèle. L&#39;URI se termine par la valeur `id` de votre modèle. |
+| `modelArtifactUri` | Un URI indiquant l’emplacement de stockage du modèle. L’URI se termine par la valeur `id` de votre modèle. |
 
 ## Mise à jour d’un modèle par son identifiant
 
@@ -317,9 +316,9 @@ Une réponse réussie renvoie un payload contenant un état 200 qui confirme la
 }
 ```
 
-## Créer un nouveau transcodage pour un modèle {#create-transcoded-model}
+## Création d’un transcodage pour un modèle {#create-transcoded-model}
 
-Le transcodage est la conversion numérique-numérique directe d’un codage à un autre. Vous créez un nouveau transcodage pour un modèle en fournissant les éléments `{MODEL_ID}` et `targetFormat` dans lesquels vous souhaitez que la nouvelle sortie se trouve.
+Le transcodage est la conversion numérique-numérique directe d’un encodage vers un autre. Vous créez un nouveau transcodage pour un modèle en fournissant les éléments `{MODEL_ID}` et `targetFormat` dans lesquels vous souhaitez que la nouvelle sortie se trouve.
 
 **Format d’API**
 
@@ -356,7 +355,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant un objet JSON avec les informations de votre transcodage. Ceci inclut l&#39;identifiant unique de transcodages (`id`) utilisé dans [la récupération d&#39;un modèle transcodé spécifique](#retrieve-transcoded-model).
+Une réponse réussie renvoie un payload contenant un objet JSON contenant les informations de votre transcodage. Cela inclut l’identifiant unique de transcodage (`id`) utilisé dans [la récupération d’un modèle transcodé spécifique](#retrieve-transcoded-model).
 
 ```json
 {
@@ -372,9 +371,9 @@ Une réponse réussie renvoie une charge utile contenant un objet JSON avec les 
 }
 ```
 
-## Récupérer une liste de transcodages pour un modèle {#retrieve-transcoded-model-list}
+## Récupération d’une liste de transcodages pour un modèle {#retrieve-transcoded-model-list}
 
-Vous pouvez récupérer une liste de transcodages qui ont été effectués sur un modèle en exécutant une demande de GET avec votre `{MODEL_ID}`.
+Vous pouvez récupérer une liste des transcodages qui ont été effectués sur un modèle en exécutant une requête de GET avec votre `{MODEL_ID}`.
 
 **Format d’API**
 
@@ -399,7 +398,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant un objet json avec une liste de chaque transcodage effectué sur le modèle. Chaque modèle transcodé reçoit un identifiant unique (`id`).
+Une réponse réussie renvoie un payload contenant un objet json avec une liste de chaque transcodage effectué sur le modèle. Chaque modèle transcodé reçoit un identifiant unique (`id`).
 
 ```json
 {
@@ -432,9 +431,9 @@ Une réponse réussie renvoie une charge utile contenant un objet json avec une 
 }
 ```
 
-## Récupérer un modèle transcodé spécifique {#retrieve-transcoded-model}
+## Récupération d’un modèle transcodé spécifique {#retrieve-transcoded-model}
 
-Vous pouvez récupérer un modèle transcodé spécifique en exécutant une demande de GET avec votre `{MODEL_ID}` et l&#39;id d&#39;un modèle transcodé.
+Vous pouvez récupérer un modèle transcodé spécifique en exécutant une requête de GET avec votre `{MODEL_ID}` et l’identifiant d’un modèle transcodé.
 
 **Format d’API**
 
@@ -444,8 +443,8 @@ GET /models/{MODEL_ID}/transcodings/{TRANSCODING_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{MODEL_ID}` | Identificateur unique d&#39;un modèle formé ou publié. |
-| `{TRANSCODING_ID}` | Identificateur unique d&#39;un modèle transcodé. |
+| `{MODEL_ID}` | Identifiant unique d’un modèle formé ou publié. |
+| `{TRANSCODING_ID}` | Identifiant unique d’un modèle transcodé. |
 
 **Requête**
 
@@ -460,7 +459,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant un objet JSON avec les données du modèle transcodé.
+Une réponse réussie renvoie un payload contenant un objet JSON avec les données du modèle transcodé.
 
 ```json
 {

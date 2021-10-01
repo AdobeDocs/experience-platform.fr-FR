@@ -5,7 +5,7 @@ exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1207'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,7 @@ Dans les balises de collecte de données, les [règles](./rules.md) contrôlent 
 >
 >Ce document explique comment gérer les composants de règle dans l’API Reactor. Pour plus d’informations sur la façon d’interagir avec les règles et les composants de règle dans l’interface utilisateur de la collecte de données, reportez-vous au [guide de l’interface utilisateur](../../ui/managing-resources/rules.md).
 
-Les composants de règle possèdent trois types de base :
+Les composants de règle possèdent trois types de base :
 
 | Type de composant de règle | Description |
 | --- | --- |

@@ -30,7 +30,7 @@ Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’
 
 La section suivante fournit des informations supplémentaires sur la configuration de prérequis requise pour pouvoir créer une connexion source [!DNL Google BigQuery].
 
-### Génération de vos [!DNL Google BigQuery] informations d’identification
+### Générer vos [!DNL Google BigQuery] informations d’identification
 
 Pour connecter [!DNL Google BigQuery] à Platform, vous devez générer des valeurs pour les informations d’identification suivantes :
 

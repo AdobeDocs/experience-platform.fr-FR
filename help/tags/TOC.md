@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Aide sur les balises
 breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
-feature: Collecte de données
+feature: Data Collection
 source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
-workflow-type: ht
-source-wordcount: '380'
+workflow-type: tm+mt
+source-wordcount: '378'
 ht-degree: 100%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 100%
 * Prise en main {#get-started}
    * [Guide de démarrage rapide](./quick-start/quick-start.md)
    * [Guides de mise en œuvre](./quick-start/implementation-guides.md)
-* Interface utilisateur de la collecte de données {#ui}
+* Interface utilisateur de collecte de données {#ui}
    * [Présentation](./ui/managing-resources/overview.md)
    * Extensions {#extensions}
       * [Présentation](./ui/managing-resources/extensions/overview.md)
@@ -47,7 +47,7 @@ ht-degree: 100%
 * Informations côté client {#client-side}
    * [Présentation](./ui/client-side/overview.md)
    * [Déploiement asynchrone](./ui/client-side/asynchronous-deployment.md)
-   * [Référence d’objet satellite](./ui/client-side/satellite-object.md)
+   * [Référence d’objet par satellite](./ui/client-side/satellite-object.md)
    * [Déploiement de balises JavaScript pour la gestion du consentement client](./ui/client-side/consent.md)
    * [Prise en charge de la stratégie de sécurité du contenu (CSP)](./ui/client-side/content-security-policy.md)
    * [Prise en charge de l’intégrité des sous-ressources (SRI)](./ui/client-side/sri.md)
@@ -163,22 +163,22 @@ ht-degree: 100%
       * [Éléments de données](./api/endpoints/data-elements.md)
       * [Règles](./api/endpoints/rules.md)
       * [Composants de   règle](./api/endpoints/rule-components.md)
-      * [Packages d’extension](./api/endpoints/extension-packages.md)
+      * [Modules d’extension](./api/endpoints/extension-packages.md)
       * [Extensions](./api/endpoints/extensions.md)
       * [Bibliothèques](./api/endpoints/libraries.md)
       * [Versions](./api/endpoints/builds.md)
       * [Environnements](./api/endpoints/environments.md)
       * [Hôtes](./api/endpoints/hosts.md)
-      * [Configurations des applications](./api/endpoints/app-configurations.md)
+      * [Configurations d’application](./api/endpoints/app-configurations.md)
       * [Événements d’audit](./api/endpoints/audit-events.md)
       * [Rappels](./api/endpoints/callbacks.md)
-      * [Notes](./api/endpoints/notes.md)
-      * [Profil](./api/endpoints/profile.md)
+      * [Remarques](./api/endpoints/notes.md)
+      * [Profile](./api/endpoints/profile.md)
       * [Recherche](./api/endpoints/search.md)
    * Guides {#guides}
       * [ID de descripteur de délégué](./api/guides/delegate-descriptor-ids.md)
       * [Chiffrement des valeurs](./api/guides/encrypting-values.md)
-      * [Gestion des erreurs](./api/guides/error-handling.md)
+      * [Traitement des erreurs](./api/guides/error-handling.md)
       * [Filtrage des réponses](./api/guides/filtering.md)
       * [Pagination des réponses](./api/guides/pagination.md)
       * [Tri des réponses](./api/guides/sorting.md)

@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; déduplication de données ; déduplication ;
+keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;déduplication des données;déduplication ;
 solution: Experience Platform
-title: Déduplication de données dans Requête Service
+title: Déduplication des données dans Query Service
 topic-legacy: queries
 type: Tutorial
-description: Ce document présente des exemples complets et de sous-sélection de requêtes pour dédupliquer trois cas d’utilisation courants Événements d’expérience, achats et mesures.
+description: 'Ce document présente des exemples de requêtes de sous-sélection et d’échantillon complet pour dédupliquer trois cas d’utilisation courants : Événements d’expérience, achats et mesures.'
 exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '494'
@@ -14,33 +13,33 @@ ht-degree: 18%
 
 ---
 
-# Déduplication de données dans [!DNL Query Service]
+# Déduplication des données dans [!DNL Query Service]
 
-Adobe Experience Platform [!DNL Query Service] prend en charge la déduplication des données. La déduplication de données peut être effectuée lorsqu’il est nécessaire de supprimer une ligne entière d’un calcul ou d’ignorer un ensemble de champs spécifique, car seule une partie des données de la ligne est des informations de duplicata.
+Adobe Experience Platform [!DNL Query Service] prend en charge le dédoublonnage des données. La déduplication des données peut être effectuée lorsqu’il est nécessaire de supprimer une ligne entière d’un calcul ou d’ignorer un ensemble spécifique de champs, car seule une partie des données de la ligne est une duplication des informations.
 
-La déduplication implique généralement l&#39;utilisation de la fonction `ROW_NUMBER()` sur une fenêtre pour un identifiant (ou une paire d&#39;identifiants) au fil du temps, ce qui renvoie un nouveau champ qui représente le nombre de fois où un duplicata a été détecté. L’heure est souvent représentée en utilisant le champ [!DNL Experience Data Model] (XDM) `timestamp`.
+La déduplication consiste généralement à utiliser la fonction `ROW_NUMBER()` sur une fenêtre pour un identifiant (ou une paire d’identifiants) au fil du temps ordonné, ce qui renvoie un nouveau champ qui représente le nombre de fois où un doublon a été détecté. L’heure est souvent représentée à l’aide du champ [!DNL Experience Data Model] (XDM) `timestamp` .
 
 Lorsque la valeur de `ROW_NUMBER()` est `1`, elle fait référence à l’instance d’origine. En règle générale, il s’agit de l’instance que vous souhaitez utiliser. Cela se fait le plus souvent au sein d’une sous-sélection, dans laquelle le dédoublonnage est effectué avec une requête `SELECT` de niveau supérieur, comme le compte d’agrégats.
 
-Les cas d&#39;utilisation de la déduplication peuvent être globaux ou limités à un seul utilisateur ou ID d&#39;utilisateur final dans `identityMap`.
+Les cas d’utilisation de déduplication peuvent être globaux ou limités à un seul utilisateur ou un identifiant d’utilisateur final dans `identityMap`.
 
-Ce document décrit comment effectuer une déduplication pour trois cas d’utilisation courants : Événements d’expérience, achats et mesures.
+Ce document décrit la procédure de déduplication pour trois cas d’utilisation courants : Événements d’expérience, achats et mesures.
 
-Chaque exemple comprend la portée, la clé de fenêtre, un aperçu de la méthode de déduplication, ainsi que la requête SQL complète.
+Chaque exemple inclut le périmètre, la clé de fenêtre, une composition de la méthode de déduplication, ainsi que la requête SQL complète.
 
 ## Événements Experience {#experience-events}
 
-Dans le cas des Événements d’expérience de duplicata, il est probable que vous souhaitiez ignorer la totalité de la ligne.
+Dans le cas d’événements d’expérience en double, vous souhaiterez probablement ignorer la ligne entière.
 
 >[!CAUTION]
 >
->De nombreux jeux de données dans [!DNL Experience Platform], y compris ceux produits par le connecteur de données Adobe Analytics, ont déjà une déduplication au niveau Événement d’expérience appliquée. Par conséquent, la réapplication de ce niveau de dédoublonnage est inutile et ralentira votre requête.
+>De nombreux jeux de données dans [!DNL Experience Platform], y compris ceux générés par le connecteur de données Adobe Analytics, ont déjà été appliqués au dédoublonnage au niveau de l’événement d’expérience. Par conséquent, la réapplication de ce niveau de dédoublonnage est inutile et ralentira votre requête.
 >
->Il est important de comprendre la source de vos jeux de données et de savoir si la déduplication au niveau du Événement d’expérience a déjà été appliquée. Pour tous les jeux de données diffusés en continu (par exemple, ceux d’Adobe Target), vous **devez** appliquer une déduplication au niveau Événement d’expérience, puisque ces sources de données ont une sémantique &quot;au moins une fois&quot;.
+>Il est important de comprendre la source de vos jeux de données et de savoir si le dédoublonnage au niveau de l’événement d’expérience a déjà été appliqué. Pour tous les jeux de données diffusés en continu (par exemple, ceux d’Adobe Target), vous **devrez** appliquer une déduplication au niveau de l’événement d’expérience, car ces sources de données ont une sémantique &quot;au moins une fois&quot;.
 
 **Portée :** globale
 
-**Touche de fenêtre :** `id`
+**Clé de la fenêtre :** `id`
 
 ### Exemple de déduplication
 
@@ -68,7 +67,7 @@ SELECT COUNT(*) AS num_events FROM (
 
 ## Achats {#purchases}
 
-Si vous avez des achats de duplicata, vous souhaiterez probablement conserver la majeure partie de la ligne Événement d’expérience, mais ignorez les champs liés à l’achat (comme la mesure `commerce.orders`). Les achats contiennent un champ spécial pour l&#39;ID d&#39;achat, qui est `commerce.order.purchaseID`.
+Si vous avez des achats en double, vous souhaiterez probablement conserver la majeure partie de la ligne Événement d’expérience, mais ignorer les champs liés à l’achat (comme la mesure `commerce.orders`). Les achats contiennent un champ spécial pour l’identifiant d’achat, `commerce.order.purchaseID`.
 
 **Portée :** visiteur
 
@@ -108,7 +107,7 @@ SELECT SUM(commerce.purchases.value) AS num_purchases FROM (
 
 ## Mesures {#metrics}
 
-Si une mesure utilise l’identifiant unique facultatif et qu’un duplicata de cet identifiant s’affiche, vous voudrez probablement ignorer cette valeur et conserver le reste du Événement d’expérience.
+Si une mesure utilise l’identifiant unique facultatif et qu’un doublon de cet identifiant apparaît, vous voudrez probablement ignorer cette valeur de mesure et conserver le reste de l’événement d’expérience.
 
 Dans XDM, la plupart des mesures utilisent le `Measure`type de données qui inclut un champ facultatif`id` que vous pouvez utiliser pour le dédoublonnage.
 
@@ -150,4 +149,4 @@ SELECT SUM(application.launches.value) AS num_launches FROM (
 
 ## Étapes suivantes
 
-Ce document décrit comment effectuer la déduplication de données dans Requête Service, ainsi que des exemples de déduplication de données. Pour plus d&#39;informations sur les meilleures pratiques lors de l&#39;écriture de requêtes à l&#39;aide de Requête Service, consultez le [guide de requêtes d&#39;écriture](./writing-queries.md).
+Ce document décrit comment effectuer la déduplication des données dans Query Service, ainsi que des exemples de déduplication des données. Pour plus d’informations sur les bonnes pratiques à appliquer lors de l’écriture de requêtes à l’aide de Query Service, consultez le [guide sur l’écriture de requêtes](./writing-queries.md).

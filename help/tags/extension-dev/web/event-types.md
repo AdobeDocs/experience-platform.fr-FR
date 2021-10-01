@@ -1,8 +1,9 @@
 ---
 title: Types d’événements pour les extensions web
 description: Découvrez comment définir un module de bibliothèque relatif aux types d’événements pour une extension web dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1048'
 ht-degree: 100%
 
@@ -16,7 +17,7 @@ ht-degree: 100%
 
 Dans une règle de balise, un événement est une activité qui doit se produire pour qu’une règle se déclenche. Par exemple, une extension web peut fournir un type d’événement « mouvement » qui surveille un certain mouvement de souris ou de toucher. Une fois le mouvement effectué, la logique de l’événement déclenche la règle.
 
-Un module de bibliothèque de type d’événement est conçu pour détecter le moment où une activité se produit, puis appeler une fonction afin de déclencher une règle associée. L’événement détecté est personnalisable. Il peut par exemple détecter un certain mouvement de la part d’un utilisateur, un défilement rapide ou une interaction avec quelque chose.
+Un module Bibliothèque de type d’événement est conçu pour détecter lorsqu’une activité se produit, puis appeler une fonction pour déclencher une règle associée. L’événement détecté est personnalisable. Il peut par exemple détecter un certain mouvement de la part d’un utilisateur, un défilement rapide ou une interaction avec quelque chose.
 
 Ce document explique comment définir des types d’événements pour une extension web dans Adobe Experience Platform.
 
@@ -29,7 +30,7 @@ Les types d’événements sont définis par des extensions et se composent gén
 1. Une [vue](./views.md) affichée dans l’interface utilisateur de la collecte de données, qui permet aux utilisateurs de modifier les paramètres de l’événement.
 2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et surveiller l’apparition d’une certaine activité.
 
-`module.exports` accepte les paramètres `settings` et `trigger`. Cela permet de personnaliser le type d’événement.
+`module.exports` acceptez les paramètres `settings` et `trigger`. Cela permet de personnaliser le type d’événement.
 
 ```js
 module.exports = function(settings, trigger) { … };
@@ -38,13 +39,13 @@ module.exports = function(settings, trigger) { … };
 | Paramètre | Description |
 | --- | --- |
 | `settings` | Objet contenant tous les paramètres configurés par l’utilisateur dans la vue du type d’événement. Vous avez le contrôle ultime sur ce qui va dans cet objet. |
-| `trigger` | Fonction que le module doit appeler chaque fois que la règle doit être déclenchée. Il existe une relation de type « un à un » entre un objet `settings`, une fonction `trigger` et une règle. Cela signifie que la fonction de déclenchement que vous avez reçue pour une règle ne peut pas être utilisée pour déclencher une autre règle. |
+| `trigger` | Fonction que le module doit appeler chaque fois que la règle doit être déclenchée. Il existe une relation de type « un à un » entre un objet `settings`, une fonction `trigger` et une règle. En d’autres termes, la fonction de déclenchement que vous avez reçue pour une règle ne peut pas être utilisée pour déclencher une autre règle. |
 
 >[!NOTE]
 >
 >La fonction exportée sera appelée une fois pour chaque règle configurée pour utiliser votre type d’événement.
 
-En prenant comme exemple l’activité de cinq secondes qui s’écoule, après cinq secondes, l’activité a eu lieu et la règle se déclenche. Le module ressemblera à l’exemple suivant.
+En prenant comme exemple l’activité de cinq secondes qui s’écoule, après cinq secondes, l’activité a eu lieu et la règle se déclenche. Le module ressemblera à cet exemple.
 
 ```js
 module.exports = function(settings, trigger) {
@@ -52,7 +53,7 @@ module.exports = function(settings, trigger) {
 };
 ```
 
-Si vous souhaitez que l’utilisateur Adobe Experience Platform puisse configurer la durée, il est nécessaire d’ajouter la possibilité de saisir et d’enregistrer une durée à l’objet settings. L’objet pourrait ressembler à ceci :
+Si vous souhaitez que l’utilisateur Adobe Experience Platform puisse configurer la durée, vous avez la possibilité de saisir et d’enregistrer une durée dans l’objet Paramètres. L’objet pourrait ressembler à ceci :
 
 ```js
 {
@@ -60,7 +61,7 @@ Si vous souhaitez que l’utilisateur Adobe Experience Platform puisse configure
 }
 ```
 
-Pour fonctionner selon la durée définie par l’utilisateur, le module doit être mis à jour pour inclure cela.
+Pour fonctionner selon la durée définie par l’utilisateur, notre module devrait être modifié pour devenir ceci :
 
 ```js
 module.exports = function(settings, trigger) {
@@ -70,7 +71,7 @@ module.exports = function(settings, trigger) {
 
 ## Transmission de données d’événement contextuelles
 
-Lorsqu’une règle est déclenchée, il est souvent utile de fournir des détails supplémentaires sur l’événement qui s’est produit. Les utilisateurs qui créent des règles peuvent trouver ces informations utiles pour obtenir un certain comportement. Prenons le cas d’un spécialiste marketing qui souhaite créer une règle dans laquelle une balise d’analyse est envoyée chaque fois que l’utilisateur balaie l’écran. L’extension doit fournir un type d’événement `swipe` afin que le spécialiste marketing puisse utiliser ce type d’événement pour déclencher la règle appropriée. Supposons que le spécialiste marketing souhaite inclure l’angle auquel le glissement s’est produit sur la balise. Il serait difficile d’effectuer cela sans fournir d’informations supplémentaires. Pour fournir des informations supplémentaires sur l’événement qui s’est produit, transmettez un objet lors de l’appel de la fonction `trigger`. Par exemple :
+Lorsqu’une règle est déclenchée, il est souvent utile de fournir des détails supplémentaires sur l’événement qui s’est produit. Les utilisateurs qui créent des règles peuvent trouver ces informations utiles pour obtenir un certain comportement. Supposons, par exemple, qu’un spécialiste marketing souhaite créer une règle dans laquelle une balise d’analyse est envoyée chaque fois que l’utilisateur balaie l’écran. L’extension doit fournir un type d’événement `swipe` afin que le professionnel du marketing puisse utiliser ce type d’événement pour déclencher la règle appropriée. En supposant que le spécialiste du marketing souhaite inclure l’angle auquel le glissement s’est produit sur la balise, cela serait difficile à faire sans fournir d’informations supplémentaires. Pour fournir des informations supplémentaires sur l’événement qui s’est produit, transmettez un objet lors de l’appel de la fonction `trigger`. Par exemple :
 
 ```js
 trigger({
@@ -78,7 +79,7 @@ trigger({
 });
 ```
 
-Le spécialiste marketing peut alors utiliser cette valeur sur une balise d’analyse en spécifiant la valeur `%event.swipeAngle%` dans un champ de texte. Il peut également accéder à `event.swipeAngle` à partir d’autres contextes (comme une action de code personnalisée). Il est possible d’inclure d’autres types d’informations d’événement facultatives qui peuvent être également utiles à un spécialiste marketing.
+Le spécialiste marketing peut alors utiliser cette valeur sur une balise d’analyse en spécifiant la valeur `%event.swipeAngle%` dans un champ de texte. Il peut également accéder à `event.swipeAngle` à partir d’autres contextes (comme une action de code personnalisée). Il est possible d’inclure d’autres types d’informations d’événement facultatives qui peuvent être utiles à un spécialiste du marketing de la même manière.
 
 ### [!DNL nativeEvent]
 
@@ -94,7 +95,7 @@ Cela peut s’avérer utile pour les spécialistes marketing qui tentent d’acc
 
 ### [!DNL element]
 
-S’il existe une relation forte entre un élément et l’événement qui s’est produit, nous vous recommandons de définir la propriété `element` sur le nœud DOM de l’élément. C’est le cas si, par exemple, votre extension fournit un type d’événement `click` et que vous autorisez les spécialistes marketing à le configurer afin que la règle ne se déclenche que si un élément doté de l’identifiant `herobanner` est sélectionné. Dans ce cas, si l’utilisateur sélectionne la bannière principale, nous vous recommandons d’appeler `trigger` et de définir `element` sur le nœud DOM de la bannière principale.
+S’il existe une relation forte entre un élément et l’événement qui s’est produit, il est recommandé de définir la propriété `element` sur le nœud DOM de l’élément. Supposons, par exemple, que votre extension fournisse un type d’événement `click` et que vous autorisiez les spécialistes du marketing à le configurer afin que la règle ne se déclenche que si un élément avec l’identifiant de `herobanner` est sélectionné. Dans ce cas, si l’utilisateur sélectionne la bannière principale, il est recommandé d’appeler `trigger` et de définir `element` sur le nœud DOM de la bannière principale.
 
 ```js
 trigger({

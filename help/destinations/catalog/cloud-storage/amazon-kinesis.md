@@ -150,6 +150,6 @@ Vos données [!DNL Experience Platform] exportées se trouvent dans [!DNL Amazon
 >[!MORELIKETHIS]
 >
 >* [Connexion à Amazon Kinesis et activation des données à l’aide de l’API Flow Service](../../api/streaming-destinations.md)
-* [Destination des centres d’événements Azure](./azure-event-hubs.md)
-* [Types et catégories de destination](../../destination-types.md)
+>* [Destination des centres d’événements Azure](./azure-event-hubs.md)
+>* [Types et catégories de destination](../../destination-types.md)
 

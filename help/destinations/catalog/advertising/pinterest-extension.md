@@ -1,7 +1,8 @@
 ---
 title: Extension Pinterest Conversion Tracking
 description: L’extension Pinterest Conversion Tracking est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-source-git-commit: e7959e678ec7d086a50f3142e9e64b34adb57214
+exl-id: c2a78f79-99c8-4aca-892e-fb40f9281f2d
+source-git-commit: 0d0f1afcc1cc259d3f3feae2584329ef030f1902
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 29%

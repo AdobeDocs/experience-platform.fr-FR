@@ -1,8 +1,9 @@
 ---
 title: Modules partagés dans les extensions web
 description: Découvrez comment définir des modules de bibliothèque partagés pour les extensions web dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: ec013a39-966c-43f3-bc36-31198990a17e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 100%
 

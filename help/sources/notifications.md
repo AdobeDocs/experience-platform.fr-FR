@@ -8,7 +8,7 @@ exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -26,7 +26,7 @@ Ce document décrit les étapes à suivre pour s’abonner à des événements, 
 
 Ce tutoriel suppose que vous avez déjà créé au moins une connexion source dont vous souhaitez surveiller le flux. Si vous n’avez pas encore configuré de connexion source, commencez par consulter la [présentation des sources](./home.md) pour configurer la source de votre choix avant de revenir à ce guide.
 
-Ce document nécessite également une compréhension pratique des webhooks et de la manière dont connecter un webhook d’une application à une autre. Consultez la [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) pour une présentation des webhooks.
+Ce document nécessite également une compréhension pratique des webhooks et de la manière dont connecter un webhook d’une application à une autre. Pour en savoir plus sur les Webhooks, consultez la [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md).
 
 ## Enregistrement d’un webhook pour les notifications d’exécution de flux
 

@@ -4,18 +4,17 @@ description: Notes de mise à jour d’Experience Platform, 12 février 2020
 doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
-translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+exl-id: 96db25ca-d857-489b-9a9d-625e86b1bf3e
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 70%
 
 ---
 
-
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : 12 février 2020**
+**Date de mise à jour : 12 février 2020**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
@@ -31,10 +30,10 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge des API pour SaaS - systèmes de service | Nouveaux connecteurs source pour les API [!DNL Salesforce Service Cloud] et [!DNL ServiceNow]. |
-| Prise en charge des API pour SaaS - systèmes marketing | Nouveaux connecteurs source pour l&#39;API [!DNL HubSpot]. |
+| Prise en charge des API pour SaaS - systèmes de service | Nouveaux connecteurs source pour l’API [!DNL Salesforce Service Cloud] et l’API [!DNL ServiceNow]. |
+| Prise en charge des API pour SaaS - systèmes marketing | Nouveaux connecteurs source pour l’API [!DNL HubSpot]. |
 | Prise en charge des API pour les systèmes de base de données [!DNL NoSQL] | Nouveaux connecteurs source pour les API [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL MySQL], [!DNL PostgreSQL] et [!DNL SQL Server]. |
-| Prise en charge de l’API pour les systèmes de stockage dans le cloud | Nouveaux connecteurs source pour les API [!DNL Azure Data Lake Service Gen 2] et [!DNL Google Cloud Storage]. |
+| Prise en charge de l’API pour les systèmes de stockage dans le cloud | Nouveaux connecteurs source pour l’API [!DNL Azure Data Lake Service Gen 2] et l’API [!DNL Google Cloud Storage]. |
 | Prise en charge de l’interface utilisateur pour les systèmes de stockage dans le cloud | Nouveau connecteur source pour [!DNL Google Cloud Storage] dans l’interface utilisateur. |
 
 **Problèmes connus**

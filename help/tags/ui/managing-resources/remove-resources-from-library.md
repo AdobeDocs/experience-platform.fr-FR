@@ -1,8 +1,9 @@
 ---
 title: Supprimer des ressources d’une bibliothèque
-description: Découvrez comment supprimer des ressources d’une bibliothèque de balises.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez comment supprimer des ressources dʼune bibliothèque de balises.
+exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 100%
 

@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; identité ; identité
+keywords: Experience Platform;accueil;rubriques les plus consultées;identité;identité
 solution: Experience Platform
-title: Correspondances d'identité des listes
+title: Mappages d’identités de liste
 topic-legacy: API guide
 description: Un mappage est un ensemble regroupant toutes les identités d’un cluster pour un espace de noms spécifié.
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '270'

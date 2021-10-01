@@ -1,8 +1,9 @@
 ---
 title: Notes de mise à jour de l’extension des modules externes courants Analytics
-description: Dernières notes de mise à jour pour l’extension des balises de modules externes d’analyses courants dans Adobe Experience Platform.
-source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
-workflow-type: ht
+description: Dernières notes de mise à jour pour lʼextension de balise de modules externes courants Analytics dans Adobe Experience Platform.
+exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 100%
 

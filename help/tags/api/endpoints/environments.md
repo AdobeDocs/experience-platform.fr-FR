@@ -5,20 +5,20 @@ exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1038'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
 # Point d’entrée d’environnements
 
-Lorsqu’une [bibliothèque](./libraries.md) est compilée dans une [version](./builds.md) dans l’API Reactor, le contenu exact de la version dépend des paramètres d’environnement et des ressources inclus dans la bibliothèque. Plus précisément, l’environnement détermine les éléments suivants :
+Lorsqu’une [bibliothèque](./libraries.md) est compilée dans une [version](./builds.md) dans l’API Reactor, le contenu exact de la version dépend des paramètres d’environnement et des ressources inclus dans la bibliothèque. Plus précisément, l’environnement détermine les éléments suivants :
 
-1. **Destination** : l&#39;endroit où la version sera déployée. Pour cela, sélectionnez un [hôte](./hosts.md) pour l’environnement à utiliser.
-1. **Archive** : vous pouvez choisir de récupérer la version sous la forme d’un ensemble de fichiers déployable ou de la faire compresser dans un format d’archive. Cela est contrôlé par le paramètre `archive` de l’environnement.
+1. **Destination** : l&#39;endroit où la version sera déployée. Pour cela, sélectionnez un [hôte](./hosts.md) pour l’environnement à utiliser.
+1. **Archive** : vous pouvez choisir de récupérer la version sous la forme d’un ensemble de fichiers déployable ou de la faire compresser dans un format d’archive. Cela est contrôlé par le paramètre `archive` de l’environnement.
 
 Le format de destination et d’archive configuré par l’environnement modifie la manière dont vous référencez la version dans votre application (cette référence étant un [code intégré](../../ui/publishing/environments.md#embed-code)). Si vous apportez des modifications au format de destination ou de fichier, vous devez effectuer une mise à jour correspondante dans votre application pour utiliser la nouvelle référence.
 
-Les environnements sont organisés en trois types (ou étapes), chaque type ayant une limite différente du nombre total que vous pouvez avoir :
+Les environnements sont organisés en trois types (ou étapes), chaque type ayant une limite différente du nombre total que vous pouvez avoir :
 
 | Type d’environnement | Nombre autorisé |
 | --- | --- |
@@ -56,7 +56,7 @@ GET /properties/{PROPERTY_ID}/environments
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les environnements répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
+>À l’aide des paramètres de requête, les environnements répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -453,7 +453,7 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour l’environnement. Les attributs d’environnement suivants peuvent être mis à jour : <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Voir l’exemple d’appel pour [créer un environnement](#create) dans le but d&#39;obtenir la liste des attributs et leur cas d’utilisation. |
+| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour l’environnement. Les attributs d’environnement suivants peuvent être mis à jour : <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Voir l’exemple d’appel pour [créer un environnement](#create) dans le but d&#39;obtenir la liste des attributs et leur cas d’utilisation. |
 | `id` | Le `id` de l&#39;environnement que vous voulez mettre à jour. Il doit correspondre à la valeur `{ENVIRONMENT_ID}` fournie dans le chemin de requête. |
 | `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `environments`. |
 

@@ -8,21 +8,21 @@ exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
 source-wordcount: '1792'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
 # Présentation d’[!DNL Identity Service]
 
-Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre des systèmes disparates, ce qui fait apparaître que chaque client possède plusieurs &quot;identités&quot;.
+Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes ; chaque client semble alors posséder plusieurs « identités ». 
 
-Adobe Experience Platform Identity Service vous offre une vue d’ensemble complète de vos clients et de leur comportement en rapprochant des identités entre appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+Adobe Experience Platform Identity Service vous offre la possibilité de mieux connaître vos clients et leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
 
-Avec [!DNL Identity Service], vous pouvez :
+Avec [!DNL Identity Service], vous pouvez réaliser les actions suivantes :
 
-- Veillez à ce que vos clients bénéficient d’une expérience cohérente, personnalisée et pertinente lors de chaque interaction.
-- Combinez plusieurs identités différentes à partir de sources disparates et créez une vue d’ensemble complète de vos clients.
-- Utilisez un graphique d’identités pour mapper différents espaces de noms d’identité, ce qui vous permet d’avoir une représentation visuelle de la manière dont vos clients interagissent avec votre marque sur différents canaux.
+- Veiller à ce que vos clients bénéficient d’une expérience cohérente, personnalisée et pertinente lors de chaque interaction.
+- Combiner plusieurs identités différentes à partir de sources disparates et créer une vue d’ensemble complète de vos clients.
+- Utiliser un graphique d’identités pour mapper différents espaces de noms d’identité, ce qui vous permet d’avoir une représentation visuelle de la manière dont vos clients interagissent avec votre marque sur différents canaux.
 
 ## Prise en main
 
@@ -30,29 +30,29 @@ Avant de rentrer dans les détails de [!DNL Identity Service], voici un résumé
 
 | Terme | Définition |
 | --- | --- |
-| Identité | Une identité correspond à des données propres à une entité, généralement une personne individuelle. Une identité, telle qu’un identifiant de connexion, un ECID ou un identifiant de fidélité, est également appelée &quot;identité connue&quot;. |
-| ECID | L’identifiant Experience Cloud (ECID) est un espace de noms d’identité partagé utilisé dans les applications Experience Platform et Adobe Experience Cloud. ECID fournit une base pour l’identité du client et est utilisé comme Principal ID pour les appareils et comme noeud de base pour les graphiques d’identités. Pour plus d’informations, consultez la [présentation de l’ECID](./ecid.md) . |
-| Espace de noms d’identité | Un espace de noms d’identité sert à distinguer le contexte ou le type d’une identité. Par exemple, une identité identifie &quot;name<span>@email.com&quot; comme adresse électronique ou &quot;443522&quot; comme identifiant CRM numérique. Les espaces de noms d’identité sont utilisés pour rechercher des identités individuelles et fournir le contexte des valeurs d’identité. Cela vous permet de déterminer que deux fragments [!DNL Profile] contenant des identifiants Principaux différents, mais partageant la même valeur pour l’espace de noms d’identité `email`, sont en fait la même personne. Pour plus d’informations, voir [Présentation des espaces de noms d’identité](./namespaces.md). |
-| Graphique d’identités | Un graphique d’identités est une carte des relations entre différentes identités, ce qui vous permet de visualiser et de mieux comprendre les identités de client qui sont regroupées et comment. Pour plus d’informations, consultez le tutoriel sur [à l’aide de la visionneuse de graphiques d’identités](./ui/identity-graph-viewer.md) . |
-| Informations d’identification personnelle | Les PII sont des informations qui peuvent identifier directement un client, telles qu’une adresse électronique ou un numéro de téléphone. Les valeurs des PII sont souvent utilisées pour correspondre. identités multiples d’un client sur différents systèmes. |
-| Identités inconnues ou anonymes | Les identités inconnues ou anonymes sont des indicateurs qui isolent les appareils sans identifier la personne qui utilise l’appareil. Les identités inconnues et anonymes incluent des informations telles que l’adresse IP et l’ID de cookie d’un visiteur. Bien que les identités inconnues et anonymes puissent fournir des données comportementales, elles sont limitées jusqu’à ce qu’un client fournisse ses informations d’identification personnelles. |
+| Identité | Une identité correspond à des données propres à une entité, généralement une personne individuelle. Une identité telle qu’un identifiant de connexion, un ECID ou un identifiant de fidélité correspond à une « identité connue ». |
+| ECID | L’identifiant Experience Cloud ID (ECID) est un espace de noms d’identité partagé utilisé dans les applications Experience Platform et Adobe Experience Cloud. ECID fournit une base pour l’identité du client et est utilisé comme ID principal pour les appareils et comme nœud de base pour les graphiques d’identités. Pour plus d’informations, consultez la [présentation ECID](./ecid.md). |
+| Espace de noms d’identité | Un espace de noms d’identité sert à distinguer le contexte ou le type d’une identité. Par exemple, une identité identifie « name<span>@email.com » comme adresse électronique ou « 443522 » comme identifiant CRM numérique. Les espaces de noms d’identité sont utilisés pour rechercher des identités individuelles et fournir le contexte des valeurs d’identité. Cela vous permet de déterminer que deux fragments [!DNL Profile] contenant des identifiants principaux différents mais partageant la même valeur pour l’espace de noms d’identité `email` sont en fait la même personne. Pour plus d’informations, voir [Présentation des espaces de noms d’identité](./namespaces.md). |
+| Graphique d’identités | Un graphique d’identités est une carte des relations entre différentes identités, ce qui vous permet de visualiser et de mieux comprendre les identités de client qui sont regroupées et comment. Pour plus d’informations, consultez le tutoriel sur [à l’aide de la visionneuse de graphiques d’identités](./ui/identity-graph-viewer.md). |
+| Informations d’identification personnelle (PII) | Les PII sont des informations qui permettent d’identifier directement un client, telles qu’une adresse électronique ou un numéro de téléphone. Les valeurs des PII sont souvent utilisées pour faire correspondre les identités multiples d’un client sur différents systèmes. |
+| Identités inconnues ou anonymes | Les identités inconnues ou anonymes sont des indicateurs qui isolent les appareils sans identifier la personne qui utilise l’appareil. Les identités inconnues et anonymes incluent des informations telles que l’adresse IP et l’ID de cookie d’un visiteur. Bien que les identités inconnues et anonymes puissent fournir des données comportementales, elles sont limitées jusqu’à ce qu’un client fournisse ses informations d’identification personnelle. |
 
 ## Qu&#39;est-ce que [!DNL Identity Service] ?
 
-Chaque jour, les clients interagissent avec votre entreprise et établissent une relation en constante évolution avec votre marque. Un client type peut être principal dans un certain nombre de systèmes au sein de l’infrastructure de données de votre entreprise, tels que vos systèmes d’e-commerce, de fidélité et de service d’assistance. Ce même client peut également utiliser un nombre illimité d’appareils de manière anonyme. [!DNL Identity Service] vous permet de dresser le portrait complet de votre client, en agrégeant des données connexes qui pourraient autrement être réparties dans différents systèmes.
+Chaque jour, les clients interagissent avec votre entreprise et établissent une relation en constante évolution avec votre marque. Un client type peut être actif dans un certain nombre de systèmes au sein de l’infrastructure de données de votre organisation, comme vos systèmes d’e-commerce, de fidélité et de service d’assistance. Ce même client peut également utiliser un nombre illimité d’appareils de manière anonyme. [!DNL Identity Service] vous permet de dresser le portrait complet de votre client, en agrégeant des données connexes qui pourraient autrement être réparties dans différents systèmes.
 
 Prenons un exemple courant de relation entre un consommateur et votre marque :
 
-- Marie a un compte sur votre site de commerce électronique où elle a déjà passé quelques commandes. En général, elle utilise son ordinateur portable personnel pour se connecter lorsqu’elle fait des achats. Cependant, lors d’une de ses visites, elle a utilisé sa tablette pour chercher des sandales, mais n’a pas passé de commande et ne s’est pas connectée.
-- À ce stade, l’activité de Marie apparaît sous la forme de deux profils distincts :
-   - Son e-commerce login
-   - Son appareil de tablette, peut-être identifié par l’identifiant de l’appareil
-- Plus tard, Marie relance la session sur sa tablette et fournit son adresse électronique en s’abonnant à votre newsletter. Ce faisant, l’ingestion par flux ajoute une nouvelle identité en tant que données d’enregistrement dans son profil. Par conséquent, [!DNL Identity Service] rattache désormais l’activité de l’appareil à tablette de Mary à son historique de compte de commerce électronique.
-- D’ici le prochain clic sur sa tablette, votre contenu ciblé pourrait refléter le profil et l’historique complets de Marie, plutôt qu’une simple tablette utilisée par un acheteur inconnu.
+- Marie possède un compte sur votre site d’e-commerce sur lequel elle a déjà passé quelques commandes. En général, elle utilise son ordinateur portable personnel pour se connecter lorsqu’elle fait des achats. Cependant, lors d’une de ses visites, elle a utilisé sa tablette pour chercher des sandales, mais n’a pas passé de commande et ne s’est pas connectée.
+- À ce stade, l’activité de Marie apparaît sous la forme de deux profils distincts :
+   - Son nom d’utilisateur e-commerce
+   - Sa tablette, peut-être identifiée au moyen de l’identifiant de l’appareil
+- Plus tard, Marie relance la session sur sa tablette et fournit son adresse électronique en s’abonnant à votre newsletter. Ce faisant, l’ingestion par flux ajoute une nouvelle identité en tant que données d’enregistrement dans son profil. [!DNL Identity Service] associe désormais lʼactivité sur la tablette de Marie à lʼhistorique de son compte dʼe-commerce.
+- La prochaine fois qu’elle utilisera sa tablette, votre contenu ciblé pourra refléter le profil et l’historique complets de Marie, plutôt qu’une simple tablette utilisée par un client inconnu.
 
 ![Combinaison d’identités sur Platform](./images/identity-service-stitching.png)
 
-Essentiellement, [!DNL Identity Service] vous permet de dresser un portrait complet de votre client, en agrégeant des données connexes qui pourraient autrement être réparties sur différents systèmes. Les relations d’identité définies et maintenues par [!DNL Identity Service] sont exploitées par Real-time Customer Profile pour obtenir une vue d’ensemble complète d’un client et de ses interactions avec votre marque. Pour plus d’informations, consultez la [présentation de Real-time Customer Profile](../profile/home.md).
+Pour résumer, [!DNL Identity Service] vous permet de dresser le portrait complet de votre client en agrégeant des données connexes qui pourraient autrement être éparpillées sur différents systèmes. Les relations d’identité définies et maintenues par [!DNL Identity Service] sont exploitées par le profil client en temps réel pour dresser le portrait complet d’un client et de ses interactions avec votre marque. Pour plus d’informations, consultez la [présentation de Real-time Customer Profile](../profile/home.md).
 
 ### Cas d&#39;utilisation
 
@@ -68,15 +68,15 @@ Voici quelques exemples de mise en œuvre dʼ[!DNL Identity Service] :
 Si vous demandez à une personne : « Quel est votre identifiant ? » sans autre précision, il lui sera difficile de fournir une réponse utile. Dans la même logique, une valeur de chaîne représentant une valeur d’identité, qu’il s’agisse d’un identifiant généré par le système ou d’une adresse électronique, n’est complète que lorsqu’elle est accompagnée d’un qualificateur qui fournit le contexte de la valeur de chaîne : l’espace de noms d’identité.
 
 
-Vos clients peuvent interagir avec votre marque par le biais d’une combinaison de canaux en ligne et hors ligne, ce qui se traduit par un défi de réconciliation de ces interactions fragmentées en une seule identité client.
+Vos clients peuvent interagir avec votre marque par le biais d’une combinaison de canaux en ligne et hors ligne, ce qui crée une difficulté lorsqu’il s’agit de rassembler ces interactions fragmentées en une seule identité client.
 
-Pour comprendre votre client sur plusieurs appareils et canaux, vous devez commencer par le reconnaître dans chaque canal. Platform y parvient en utilisant des espaces de noms d’identité. Un espace de noms d’identité est un identifiant, tel que Courrier électronique ou Téléphone, utilisé pour fournir un contexte supplémentaire aux identités du client. Les espaces de noms d’identité sont utilisés pour rechercher ou lier des identités individuelles et fournir un contexte pour les valeurs d’identité. Pour plus d’informations, voir [Présentation des espaces de noms d’identité](./namespaces.md).
+Pour comprendre votre client sur plusieurs appareils et canaux, vous devez commencer par le reconnaître dans chaque canal. Pour ce faire, Platform utilise les espaces de noms d’identité. Un espace de noms d’identité est un identifiant, tel que E-mail ou Téléphone, utilisé pour fournir un contexte supplémentaire aux identités du client. Les espaces de noms d’identité sont utilisés pour rechercher ou lier des identités individuelles et fournir un contexte pour les valeurs d’identité. Pour plus d’informations, voir [Présentation des espaces de noms d’identité](./namespaces.md).
 
 ## Graphiques d’identités
 
-Un graphique d’identités est une carte des relations entre différents espaces de noms d’identité, ce qui vous permet de visualiser et de mieux comprendre les identités de client qui sont regroupées, ainsi que la manière dont elles sont regroupées. Pour plus d’informations, consultez le tutoriel sur [à l’aide de la visionneuse de graphiques d’identités](./ui/identity-graph-viewer.md) .
+Un graphique d’identités est une carte des relations entre différents espaces de noms d’identité, ce qui vous permet de visualiser et de mieux comprendre les identités de client qui sont regroupées, ainsi que la manière dont elles sont regroupées. Pour plus d’informations, consultez le tutoriel sur [l’utilisation de la visionneuse de graphiques d’identités](./ui/identity-graph-viewer.md).
 
-La vidéo suivante est destinée à étayer votre compréhension des identités et des graphiques dʼidentité. Il couvre les trois fonctionnalités de la collecte des identités, des graphiques d’identités et de l’API. Il décrit également comment les algorithmes déterministes et probabilistes sont utilisés pour créer des graphiques d’identités privés et explique leur rôle, ainsi que les graphiques tiers et le graphique Adobe Experience Platform Identity Service Co-Op.
+La vidéo suivante est destinée à étayer votre compréhension des identités et des graphiques dʼidentité. Il couvre la collecte des identités, les graphiques d’identités et l’API. Il décrit également comment les algorithmes déterministes et probabilistes sont utilisés pour créer des graphiques d’identités privés et explique leur rôle, ainsi que ceux des graphiques tiers et du graphique Adobe Experience Platform Identity Service Co-Op.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
@@ -102,7 +102,7 @@ Bien qu’Experience Platform offre de nombreux espaces de noms standard, vous d
 
 ### Inclusion des données dʼidentité dans [!DNL Experience Data Model] (XDM)
 
-[!DNL Experience Data Model] (XDM) est le cadre normalisé selon lequel [!DNL Platform] organise les données client. Il permet de partager et de comprendre les données entre les Experience Platform et les autres services interagissant avec [!DNL Platform]. Pour plus d’informations, consultez la [présentation du système XDM](../xdm/home.md).
+En tant que cadre normalisé selon lequel [!DNL Platform] organise les données clients, [!DNL Experience Data Model] (XDM) permet de partager et de comprendre les données utilisées sur Experience Platform et d’autres services interagissant avec [!DNL Platform]. Pour plus d’informations, consultez la [présentation du système XDM](../xdm/home.md).
 
 Les schémas d’enregistrement et de série temporelle permettent d’inclure des données d’identité. À mesure que les données sont ingérées, le graphique d’identités crée de nouvelles relations entre les fragments de données provenant de différents espaces de noms s’il s’avère qu’ils partagent des données d’identité communes.
 
@@ -143,4 +143,4 @@ Adobe Experience Platform a été conçue dans une optique de confidentialité e
 
 ## Étapes suivantes
 
-Maintenant que vous comprenez les concepts clés de [!DNL Identity Service] et son rôle dans Experience Platform, vous pouvez commencer à apprendre à utiliser votre graphique d’identités à l’aide de [[!DNL Identity Service API]](./api/getting-started.md).
+Maintenant que vous comprenez les concepts clés du [!DNL Identity Service] et son rôle au sein d’Experience Platform, vous pouvez commencer à apprendre à travailler avec votre graphique d’identités à l’aide de l’[[!DNL Identity Service API]](./api/getting-started.md).

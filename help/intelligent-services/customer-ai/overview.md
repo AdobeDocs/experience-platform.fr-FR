@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform ; présentation ; assistance client ; rubriques populaires ; présentation de l’assistance client
+keywords: Experience Platform;présentation;service clientèle;rubriques les plus consultées;présentation client
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Présentation de Customer AI
 topic-legacy: Customer AI Overview
@@ -37,11 +37,11 @@ Customer AI n’est pas conçu pour certaines utilisations :
 
 - Customer AI ne doit pas être utilisé pour prédire la tarification dynamique, ni le prix auquel le client va effectuer un achat.
 - Customer AI ne peut pas déterminer si une offre va inciter un client à acheter un article. Bien que vous puissiez décider d’envoyer des réductions basées sur des scores de propension, cela n’est pas nécessairement la meilleure façon de convertir ces clients.
-- Customer AI n’est pas un outil de recommandation de produits. Si vous disposez de milliers de SKU, n’utilisez pas l’API client comme proxy pour une solution de recommandations de produits réelle telle que [!DNL Adobe Target].
+- Customer AI n’est pas un outil de recommandation de produits. Si vous disposez de milliers de SKU, n’utilisez pas Customer AI comme proxy pour une vraie solution de recommandations de produits telle que [!DNL Adobe Target].
 - Customer AI ne peut pas déterminer à quel stade du parcours d’achat se trouve le client, par exemple s’il est en phase de « sensibilisation », de « considération », d’« achat » ou de « rétention ».
 - N’utilisez pas Customer AI pour identifier les clients susceptibles d’acheter un produit qui sera lancé ultérieurement. Certains événement de succès doivent s’être produits pour que Customer AI puisse correctement former l’algorithme d’apprentissage automatique sur vos données.
 
-La vidéo suivante est conçue pour vous aider à comprendre l’IA du client.
+La vidéo suivante est conçue pour vous aider à comprendre Customer AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
@@ -51,4 +51,4 @@ Customer AI analyse les données d’événement d’expérience existantes pour
 
 ## Étapes suivantes
 
-Vous pouvez commencer par suivre le [guide de prise en main](./getting-started.md). Ce guide vous guide tout au long de la configuration de toutes les conditions préalables requises pour l’IA du client. Si vous disposez déjà de toutes vos informations d’identification et données, consultez la page [configuration d’une instance d’API client](./user-guide/configure.md). Il décrit les étapes à suivre pour utiliser l’IA du client.
+Vous pouvez commencer par suivre le [guide de prise en main](./getting-started.md). Ce guide vous guide tout au long des étapes nécessaires à la configuration de toutes les conditions préalables requises pour Customer AI. Si vous disposez déjà de toutes vos informations d’identification et données, consultez la section [configuration d’une instance Customer AI](./user-guide/configure.md). Elle décrit les étapes à suivre pour utiliser Customer AI.

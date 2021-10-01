@@ -100,7 +100,7 @@ L’affichage du code fournit un bouton qui vous permet de copier la valeur du s
 
 ![](../images/ui/segment-builder/copy-code.png)
 
-### Fonctions d’agrégation
+### Fonctions d&#39;agrégation
 
 Une agrégation dans [!DNL Segment Builder] est un calcul effectué sur un groupe d’attributs XDM dont le type de données est un nombre (double ou entier). Les quatre fonctions d’agrégation prises en charge dans le créateur de segments sont SUM, MOYENNE, MIN et MAX.
 

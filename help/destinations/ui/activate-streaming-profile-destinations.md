@@ -5,13 +5,13 @@ type: Tutorial
 seo-title: Activate audience data to streaming profile export destinations
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil en continu.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
-source-git-commit: d13920250fafd2ba4ff37dd5d4a45d417ed3ecc7
+exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 7%
 
 ---
-
 
 # Activation des données d’audience vers des destinations d’exportation de profils en continu
 

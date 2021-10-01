@@ -1,8 +1,9 @@
 ---
 title: Notes de mise à jour
-description: Dernières notes de mise à jour pour les balises dans Adobe Experience Platform.
-source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
-workflow-type: ht
+description: Dernières notes de mise à jour relatives aux balises dans Adobe Experience Platform.
+exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 100%
 
@@ -34,12 +35,12 @@ ht-degree: 100%
 
 **Collecte de données dans Adobe Experience Platform** : l’envoi de données à Adobe ne consiste pas seulement à déployer des balises sur votre site ou une configuration sur votre application.  L’utilisation des SDK Experience Platform et du réseau Edge nécessite l’accès à d’autres fonctionnalités de Platform.  Auparavant, cela nécessitait une connexion à divers outils. Désormais, ils sont réunis en un seul endroit.
 
-La collecte de données dans Platform est constituée de six fonctionnalités. En outre, votre navigation nouvellement rationalisée ne contient que les éléments auxquels votre société et votre compte utilisateur ont accès.  Certains noms de fonctionnalités ont également été mis à jour pour correspondre aux modèles de nommage d’Experience Platform.
+La collecte de données dans Platform est constituée de six fonctionnalités. En outre, votre navigation nouvellement rationalisée ne contient que les éléments accessibles par votre société et votre compte utilisateur.  Certains noms de fonctionnalités ont également été mis à jour pour correspondre aux modèles de nommage d’Experience Platform.
 
 * Client (anciennement accessible en tant que côté client)
 * Flux de données (anciennement accessible en tant que configurations Edge)
 * Serveur (anciennement accessible en tant que côté serveur)
-* Configurations des applications
+* Configurations d’application
 * Schémas
 * Identités
 

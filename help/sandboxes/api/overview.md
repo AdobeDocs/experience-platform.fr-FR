@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Guide de l’API Sandbox
 topic-legacy: developer guide
 description: Les environnements de test d’Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des opérations et de créer des configurations personnalisées sans affecter votre environnement de production.
-source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
+exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 26%

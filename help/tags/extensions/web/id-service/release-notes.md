@@ -1,8 +1,9 @@
 ---
 title: Notes de mise à jour de l’extension Service d’identités d’Adobe Experience Cloud
-description: Dernières notes de mise à jour pour lʼextension de balise Service dʼidentités dʼAdobe Experience Cloud dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Dernières notes de mise à jour pour l’extension Service d’identités d’Adobe Experience Cloud dans Adobe Experience Platform.
+exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 100%
 
@@ -14,7 +15,7 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Pour les notes de mise à jour du Service dʼidentités dʼExperience Cloud lui-même et pas uniquement de lʼextension de balise Adobe Experience Platform, veuillez consulter : [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr)
+Pour les notes de mise à jour du Service d’identités d’Experience Cloud lui-même et pas uniquement de l’extension Adobe Experience Platform Launch, veuillez consulter : [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr)
 
 ## 3 novembre 2020
 
@@ -123,7 +124,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 #### **Fonctionnalités**
 
 * Mise à jour du fichier visitor.js vers la version 4.3
-* Ajout du type dʼélément de données pour Experience Cloud ID dans le cadre de lʼextension de balise
+* Type d’élément de données ajouté pour ECID dans le cadre de l’extension de balise
 
    ![](../../../images/ecid-data-element.png)
 

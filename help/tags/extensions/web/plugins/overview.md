@@ -1,8 +1,9 @@
 ---
 title: Présentation de l’extension Common Analytics
-description: Découvrez l’extension de balises Common Analytics dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez l’extension de balise Common Analytics dans Adobe Experience Platform.
+exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 100%
 
@@ -61,32 +62,32 @@ Cette section décrit les éléments de données disponibles dans l’extension 
 
 ### getGeoCoordinates
 
-Permet aux utilisateurs d’utiliser l’interface utilisateur native de la collecte de données d’Adobe Experience Platform pour configurer le plug-in getGeoCoordinates.
+Permet aux utilisateurs d’utiliser l’interface utilisateur native de la collecte de données dans Adobe Experience Platform pour configurer le plug-in getGeoCoordinates.
 
 ### getNewRepeat
 
-Permet aux utilisateurs d’utiliser l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getNewRepeat.
+Permet aux utilisateurs de tirer profit de l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getNewRepeat.
 
 ### getPageName
 
-Permet aux utilisateurs d’utiliser l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getPageName.
+Permet aux utilisateurs de tirer profit de l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getPageName.
 
 ### getResponsiveLayout
 
-Permet aux utilisateurs d’utiliser l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getResponsiveLayout.
+Permet aux utilisateurs de tirer profit de l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getResponsiveLayout.
 
 ### getTimeParting
 
-Permet aux utilisateurs d’utiliser l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getTimeParting.
+Permet aux utilisateurs de tirer profit de l’interface utilisateur native de collecte de données pour définir et configurer le plug-in getTimeParting.
 
 ### getTimeSinceLastVisit
 
-Permet aux utilisateurs d’utiliser l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getTimeSinceLastVisit.
+Permet aux utilisateurs de tirer profit de l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getTimeSinceLastVisit.
 
 ### getVisitDuration
 
-Permet aux utilisateurs d’utiliser l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getVisitDuration.
+Permet aux utilisateurs de tirer profit de l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getVisitDuration.
 
 ### getVisitNum
 
-Permet aux utilisateurs de tirer profit de l’interface utilisateur native de la collecte de données pour définir et configurer le module getVisitNum.
+Permet aux utilisateurs de tirer profit de l’interface utilisateur native de la collecte de données pour définir et configurer le plug-in getVisitNum.

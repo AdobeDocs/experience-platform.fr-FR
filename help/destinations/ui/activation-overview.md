@@ -5,13 +5,13 @@ type: Tutorial
 seo-title: Activation overview
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform vers différents types de destinations.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform to various types of destinations.
-source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
+exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '294'
-ht-degree: 1%
+ht-degree: 9%
 
 ---
-
 
 # Présentation de l’Activation
 
@@ -25,7 +25,7 @@ Après avoir [configuré vos destinations](connect-destination.md), vous pouvez 
 
 Pour plus d’informations sur l’activation des audiences vers votre destination à partir du catalogue des destinations, consultez les guides suivants :
 
-* [Activation des données d’audience vers des destinations d’exportation de segments par flux](activate-segment-streaming-destinations.md)
+* [Activation des données d’audience vers des destinations d’exportation de segments de diffusion](activate-segment-streaming-destinations.md)
 * [Activation des données d’audience vers des destinations d’exportation de profils en continu](activate-streaming-profile-destinations.md)
 * [Activation des données d’audience vers des destinations d’exportation de profils par lots](activate-batch-profile-destinations.md)
 
@@ -43,7 +43,7 @@ Suivez les étapes ci-dessous pour activer les données vers vos destinations à
 
 1. Selon la destination sélectionnée, suivez les étapes décrites dans les articles ci-dessous, en commençant par l’étape **[!UICONTROL Sélectionner les segments]**, pour terminer le workflow d’activation :
 
-   * [Activation des données d’audience vers des destinations d’exportation de segments par flux](activate-segment-streaming-destinations.md)
+   * [Activation des données d’audience vers des destinations d’exportation de segments de diffusion](activate-segment-streaming-destinations.md)
    * [Activation des données d’audience vers des destinations d’exportation de profils en continu](activate-streaming-profile-destinations.md)
    * [Activation des données d’audience vers des destinations d’exportation de profils par lots](activate-batch-profile-destinations.md)
 
@@ -53,6 +53,6 @@ Vous pouvez activer des segments vers des destinations à partir de la page des 
 
 Selon la destination sélectionnée, suivez les étapes décrites dans les articles ci-dessous pour terminer le workflow d’activation :
 
-* [Activation des données d’audience vers des destinations d’exportation de segments par flux](activate-segment-streaming-destinations.md)
+* [Activation des données d’audience vers des destinations d’exportation de segments de diffusion](activate-segment-streaming-destinations.md)
 * [Activation des données d’audience vers des destinations d’exportation de profils en continu](activate-streaming-profile-destinations.md)
 * [Activation des données d’audience vers des destinations d’exportation de profils par lots](activate-batch-profile-destinations.md)

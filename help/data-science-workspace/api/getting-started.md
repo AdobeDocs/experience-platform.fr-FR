@@ -1,37 +1,36 @@
 ---
-keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences des données ; sujets populaires ; espace de travail des sciences des données ; sciences des données
+keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées;espace de travail Data Science;science des données
 solution: Experience Platform
-title: Guide de l'API d'apprentissage automatique Sensei
+title: Guide de l’API d’apprentissage automatique Sensei
 topic-legacy: Developer guide
-description: L’API d’apprentissage automatique Sensei permet aux développeurs d’effectuer des opérations CRUD sur diverses ressources de l’espace de travail Data Science. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
+description: L’API Sensei Machine Learning permet aux développeurs d’effectuer des opérations CRUD sur diverses ressources Data Science Workspace. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '243'
-ht-degree: 51%
+ht-degree: 74%
 
 ---
 
-# [!DNL Sensei Machine Learning] Guide des API
+# Guide de l’API [!DNL Sensei Machine Learning]
 
-L&#39;API [!DNL Sensei Machine Learning] fournit un mécanisme permettant aux chercheurs de données d&#39;organiser et de gérer les services d&#39;apprentissage automatique, de l&#39;intégration des algorithmes à l&#39;expérimentation en passant par le déploiement des services.
+L’API [!DNL Sensei Machine Learning] fournit un mécanisme permettant aux spécialistes des données d’organiser et de gérer les services d’apprentissage automatique, de l’intégration des algorithmes à l’expérimentation et au déploiement des services.
 
 Ce guide de développement décrit les étapes à suivre pour vous aider à prendre en main l’[API Sensei Machine Learning](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) et présente les appels d’API visant à effectuer des opérations CRUD sur diverses ressources de Data Science Workspace.
 
 ## Prise en main
 
-Vous devez avoir suivi le tutoriel portant sur l’[authentification](https://www.adobe.com/go/platform-api-authentication-en) pour pouvoir accéder aux en-têtes de requête suivants afin de passer des appels aux API [!DNL Adobe Experience Platform]
+Vous devez avoir suivi le tutoriel portant sur l’[authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis) pour pouvoir accéder aux en-têtes de requête suivants afin de passer des appels aux API [!DNL Adobe Experience Platform]
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-api-key : `{API_KEY}`
+* x-gw-ims-org-id : `{IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform] sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name : `{SANDBOX_NAME}`
 
-Pour plus d&#39;informations sur les sandbox dans [!DNL Platform], consultez la [documentation d&#39;aperçu de sandbox](../../sandboxes/home.md).
+Pour plus d’informations sur les environnements de test dans [!DNL Platform], consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
@@ -45,6 +44,6 @@ Une fois que vous disposez des informations d’authentification requises, vous 
 * [Expériences](./experiments.md)
 * [Insights](./insights.md)
 * [MLInstances (recettes)](./mlinstances.md)
-* [MLServices](./mlservices.md)
+* [MLService](./mlservices.md)
 * [Modèles](./models.md)
 * [Annexe](./appendix.md)

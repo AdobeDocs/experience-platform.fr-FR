@@ -3,7 +3,8 @@ solution: Experience Platform
 title: Type de données de chaîne de consentement
 topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM Chaîne de consentement.
-source-git-commit: 7a0ac3970713e95438c6f0fdbd6175545ea7fdd0
+exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 5%

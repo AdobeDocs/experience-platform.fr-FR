@@ -8,7 +8,7 @@ exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
 source-wordcount: '787'
-ht-degree: 41%
+ht-degree: 44%
 
 ---
 
@@ -46,7 +46,7 @@ Pour permettre aux développeurs d’accéder à [!DNL Platform], suivez les ét
 
 ### Génération des informations d’identification d’accès
 
-À l’aide d’Adobe Developer Console, vous devez générer les trois informations d’identification d’accès suivantes :
+À l’aide d’Adobe Developer Console, vous devez générer les trois informations d’identification d’accès suivantes :
 
 * `{IMS_ORG}`
 * `{API_KEY}`
@@ -58,7 +58,7 @@ Les étapes de génération de ces valeurs sont décrites en détail ci-dessous.
 
 #### Configuration ponctuelle
 
-Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) et connectez-vous avec votre Adobe ID. Suivez ensuite les étapes décrites dans le tutoriel sur la [création d’un projet vide](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) dans la documentation d’Adobe Developer Console.
+Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) et connectez-vous avec votre Adobe ID. Suivez ensuite les étapes décrites dans le tutoriel sur la [création dʼun projet vide](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) disponible dans la documentation dʼAdobe Developer Console.
 
 Une fois que vous avez créé un projet, sélectionnez **[!UICONTROL Ajouter l’API]** dans l’écran **[!UICONTROL Aperçu du projet]**.
 

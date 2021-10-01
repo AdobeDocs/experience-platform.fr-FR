@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; Qualité des données ; Qualité ; Qualité ; Validation prise en charge ; Validation ; Validation prise en charge ;
+keywords: Experience Platform;accueil;rubriques populaires;Qualité des données;Qualité;Qualité;Validation prise en charge;Validation;Validation prise en charge ;
 solution: Experience Platform
 title: Qualité des données
 topic-legacy: overview
-description: Le document suivant fournit un résumé des contrôles et des comportements de validation pris en charge pour l’assimilation par lots et en flux continu dans Adobe Experience Platform.
+description: Le document suivant résume les comportements de vérification et de validation pris en charge pour l’ingestion par lots et par flux dans Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '317'
@@ -30,7 +29,7 @@ Adobe Experience Platform fournit des garanties bien définies d’exhaustivité
 
 ## Comportements de validation pris en charge
 
-L’assimilation par lot et en flux continu empêche les données en panne de se rendre en aval en déplaçant les données incorrectes pour récupération et analyse dans [!DNL Data Lake]. L’ingestion de données fournit les validations suivantes pour l’ingestion par lots et par flux.
+L’ingestion par lots et par flux empêche les données en échec de se rendre en aval en déplaçant les données incorrectes pour la récupération et l’analyse dans [!DNL Data Lake]. L’ingestion de données fournit les validations suivantes pour l’ingestion par lots et par flux.
 
 ### Ingestion par lots
 
@@ -56,4 +55,4 @@ Les validations suivantes sont effectuées pour l’ingestion par flux :
 | Jeu de données | Vérifie que le jeu de données est spécifié, activé et n’a pas été supprimé. |
 | En-tête | Vérifie que l’en-tête est spécifié et valide. |
 
-Pour plus d&#39;informations sur la façon dont [!DNL Platform] surveille et valide les données, consultez la [documentation sur les flux de données de surveillance](./monitor-data-ingestion.md).
+Vous trouverez plus d’informations sur la façon dont [!DNL Platform] surveille et valide les données dans la [documentation sur la surveillance des flux de données](./monitor-data-ingestion.md).

@@ -1,8 +1,9 @@
 ---
 title: Extensions tierces
 description: Découvrez les extensions tierces pour Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: c82546de-a89d-4d1c-b97a-43983b513360
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 100%
 
@@ -16,4 +17,4 @@ ht-degree: 100%
 
 Outre les extensions fournies par les solutions Adobe, des extensions tierces sont également disponibles pour Adobe Experience Platform 
 
-Les extensions des développeurs tiers ne sont pas sous garantie Adobe. Il incombe donc aux auteurs de ces extensions de choisir une licence ainsi qu’un processus de prise en charge pour leurs extensions. De nombreux développeurs font le choix de publier le code source de leurs packages d’extensions sur un référentiel GitHub public, où les utilisateurs peuvent le consulter à leur guise. Pour plus d’informations, consultez le [référentiel du développeur de balises](https://github.com/Launch-Developers).
+Les extensions des développeurs tiers ne sont pas sous garantie Adobe. Il incombe donc aux auteurs de ces extensions de choisir une licence ainsi qu’un processus de prise en charge pour leurs extensions. De nombreux développeurs font le choix de publier le code source de leurs packages d’extensions sur un référentiel GitHub public, où les utilisateurs peuvent le consulter à leur guise. Pour plus dʼinformations, consultez le [référentiel du développeur de balises](https://github.com/Launch-Developers).

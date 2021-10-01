@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires
+keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
-title: Principes de base de l’API Experience Platform
+title: Principes fondamentaux des API Experience Platform
 topic-legacy: getting started
-description: Ce document donne un bref aperçu de certaines technologies et syntaxes sous-jacentes impliquées dans les API Experience Platform.
+description: Ce document présente brièvement certaines des technologies et syntaxes sous-jacentes impliquées dans les API Experience Platform.
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
-translation-type: tm+mt
 source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
 source-wordcount: '516'
-ht-degree: 53%
+ht-degree: 54%
 
 ---
 
-# Principes de base de l’API Experience Platform
+# Principes fondamentaux des API Experience Platform
 
-Les API Adobe Experience Platform utilisent plusieurs technologies et syntaxes sous-jacentes qui sont importantes à comprendre pour gérer efficacement les ressources [!DNL Platform] JSON. Ce document apporte un aperçu rapide de ces technologies ainsi que des liens vers de la documentation externe pour vous apporter de plus amples informations.
+Les API Adobe Experience Platform utilisent plusieurs technologies et syntaxes sous-jacentes importantes à comprendre pour gérer efficacement les ressources [!DNL Platform] basées sur JSON. Ce document apporte un aperçu rapide de ces technologies ainsi que des liens vers de la documentation externe pour vous apporter de plus amples informations.
 
 ## JSON Pointer {#json-pointer}
 
-JSON Pointer est une syntaxe de chaîne normalisée ([RFC 6901](https://tools.ietf.org/html/rfc6901)) qui permet d’identifier des valeurs spécifiques dans des documents JSON. Un pointeur JSON est une chaîne de jetons séparés par des caractères `/` qui précisent soit les clés d’objet soit les index de tableau ainsi que les jetons pouvant être une chaîne ou un nombre. Les chaînes de pointeur JSON sont utilisées dans de nombreuses opérations de PATCH pour les API [!DNL Platform], comme décrit plus loin dans ce document. Pour plus d’informations sur JSON Pointer, reportez-vous à la [documentation de présentation de JSON Pointer](https://rapidjson.org/md_doc_pointer.html).
+JSON Pointer est une syntaxe de chaîne normalisée ([RFC 6901](https://tools.ietf.org/html/rfc6901)) qui permet d’identifier des valeurs spécifiques dans des documents JSON. Un pointeur JSON est une chaîne de jetons séparés par des caractères `/` qui précisent soit les clés d’objet soit les index de tableau ainsi que les jetons pouvant être une chaîne ou un nombre. Les chaînes JSON Pointer sont utilisées dans de nombreuses opérations de PATCH pour les API [!DNL Platform], comme décrit plus loin dans ce document. Pour plus d’informations sur JSON Pointer, reportez-vous à la [documentation de présentation de JSON Pointer](https://rapidjson.org/md_doc_pointer.html).
 
 ### Exemple d’objet de schéma JSON
 
-Le fichier JSON suivant représente un schéma XDM simplifié dont les champs peuvent être référencés à l’aide de chaînes de pointeur JSON. Notez que tous les champs qui ont été ajoutés à l’aide de groupes de champs de schéma personnalisés (tels que `loyaltyLevel`) sont espacés dans le nom d’un objet `_{TENANT_ID}`, contrairement aux champs qui ont été ajoutés à l’aide de groupes de champs de base (tels que `fullName`).
+Le fichier JSON suivant représente un schéma XDM simplifié dont les champs peuvent être référencés à l’aide de chaînes de pointeur JSON. Notez que tous les champs qui ont été ajoutés à l’aide de groupes de champs de schéma personnalisés (tels que `loyaltyLevel`) sont espaces de noms sous un objet `_{TENANT_ID}`, contrairement aux champs qui ont été ajoutés à l’aide de groupes de champs principaux (tels que `fullName`).
 
 ```json
 {
@@ -87,18 +86,18 @@ Le fichier JSON suivant représente un schéma XDM simplifié dont les champs pe
 | JSON Pointer | Est résolu sur |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | (Renvoie une référence au champ `fullName`, fourni par un groupe de champs principal.) |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Renvoie une référence au champ `loyaltyLevel`, fourni par un groupe de champs personnalisé.) |
+| `"/properties/person/properties/name/properties/fullName"` | (Renvoie une référence au champ `fullName` fourni par un groupe de champs principal.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Renvoie une référence au champ `loyaltyLevel` fourni par un groupe de champs personnalisé.) |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!NOTE]
 >
->Lorsque vous utilisez les attributs `xdm:sourceProperty` et `xdm:destinationProperty` des descripteurs [!DNL Experience Data Model] (XDM), toute clé `properties` doit être **exclue** de la chaîne JSON Pointer. Pour plus d&#39;informations, consultez le [!DNL Schema Registry] sous-guide du développeur d&#39;API sur les [descripteurs](../xdm/api/descriptors.md).
+>Lors de l’utilisation des attributs `xdm:sourceProperty` et `xdm:destinationProperty` des descripteurs [!DNL Experience Data Model] (XDM), toute clé `properties` doit être **exclue** de la chaîne JSON Pointer. Pour plus d’informations, consultez la sous-partie [!DNL Schema Registry] Guide de développement de l’API consacrée aux [descripteurs](../xdm/api/descriptors.md).
 
 ## Correctif JSON {#json-patch}
 
-De nombreuses opérations de PATCH pour les API [!DNL Platform] acceptent les objets de correctif JSON pour leurs charges utiles de demande. Le correctif JSON est un format standardisé ([RFC 6902](https://tools.ietf.org/html/rfc6902)) permettant de décrire les modifications apportées à un document JSON. Il vous permet de définir des mises à jour partielles vers JSON sans avoir besoin d’envoyer le document entier dans un corps de requête.
+Il existe de nombreuses opérations de PATCH pour les API [!DNL Platform] qui acceptent les objets de correctif JSON pour leurs payloads de requête. Le correctif JSON est un format standardisé ([RFC 6902](https://tools.ietf.org/html/rfc6902)) permettant de décrire les modifications apportées à un document JSON. Il vous permet de définir des mises à jour partielles vers JSON sans avoir besoin d’envoyer le document entier dans un corps de requête.
 
 ### Exemple d’un objet de correctif JSON
 
@@ -120,10 +119,10 @@ De nombreuses opérations de PATCH pour les API [!DNL Platform] acceptent les ob
 
 En fonction du type d’opération indiqué dans `op`, l’objet du correctif JSON peut nécessiter des propriétés supplémentaires. Pour plus d’informations sur les différentes opérations de correctif JSON et leur syntaxe obligatoire, reportez-vous à la [documentation du correctif JSON](http://jsonpatch.com/).
 
-## Schéma JSON  {#json-schema}
+## Schéma JSON {#json-schema}
 
 Le schéma JSON est un format utilisé pour décrire et valider la structure des données JSON. [Le modèle de données d’expérience (XDM)](../xdm/home.md) tire parti des fonctionnalités du schéma JSON pour imposer des contraintes sur la structure et le format des données d’expérience client ingérées. Pour plus d’informations sur le schéma JSON, consultez la [documentation officielle](https://json-schema.org/).
 
 ## Étapes suivantes
 
-Ce document a présenté certaines des technologies et syntaxes impliquées dans la gestion des ressources basées sur JSON pour [!DNL Experience Platform]. Consultez le [guide de prise en main](api-guide.md) pour plus d&#39;informations sur l&#39;utilisation des API de plateformes, y compris les meilleures pratiques. Pour obtenir des réponses aux questions fréquentes, consultez le [Guide de dépannage de la plate-forme](troubleshooting.md).
+Ce document a présenté certaines des technologies et syntaxes impliquées dans la gestion des ressources basées sur JSON pour [!DNL Experience Platform]. Pour plus d’informations sur l’utilisation des API Platform, y compris les bonnes pratiques, consultez le [guide de prise en main](api-guide.md) . Pour obtenir des réponses aux questions fréquentes, reportez-vous au [Guide de dépannage de Platform](troubleshooting.md).

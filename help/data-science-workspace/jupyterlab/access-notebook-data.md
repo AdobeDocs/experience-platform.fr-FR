@@ -90,7 +90,7 @@ Lors de la lecture de jeux de données avec des notebooks PySpark et Scala, vous
 | Mode interactif SDK (en secondes) | 28.2 s | 18.6s | 20,8 s | 20,9 s | 23,8 s | 21,7 s | 24,7 s | - | - | - | - | - |
 | Mode batch du SDK (en secondes) | 428.8s | 578.8s | 641.4 s | 538.5s | 630,9 s | 467.3s | 411s | 675s | 702s | 719.2s | 1022.1s | 1122.3s |
 
-### [!DNL Spark] Limites des données du notebook (noyau Scala) :  {#scala-data-limits}
+### [!DNL Spark] Limites des données du notebook (noyau Scala) : {#scala-data-limits}
 
 **Schéma XDM ExperienceEvent :** en mode interactif, vous devriez pouvoir lire un maximum de 5 millions de lignes (~13,42 Go de données sur le disque) de données XDM en environ 18 minutes. Le mode interactif ne prend en charge que 5 millions de lignes au maximum. Si vous souhaitez lire des jeux de données plus volumineux, il est conseillé de passer en mode batch. En mode batch, vous devriez pouvoir lire un maximum de 500 millions de lignes (~1,31 To de données sur le disque) de données XDM en 14 heures environ.
 
@@ -147,7 +147,7 @@ dataset_reader = DatasetReader(get_platform_sdk_client_context(), dataset_id="{D
 df = dataset_reader.limit(100).offset(10).read()
 ```
 
-### Écrire un jeu de données en Python {#write-python}
+### Écriture dans un jeu de données en Python {#write-python}
 
 Pour écrire dans un jeu de données de votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en évidence ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** et cliquez avec le bouton droit, puis sélectionnez l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 
@@ -207,7 +207,7 @@ SELECT {table_columns}
 FROM {table_name}
 ```
 
-### Filtrer les [!DNL ExperienceEvent] données {#python-filter}
+### Filtrer les données [!DNL ExperienceEvent] {#python-filter}
 
 Pour accéder à un jeu de données [!DNL ExperienceEvent] et le filtrer dans un notebook [!DNL Python], vous devez fournir l’identifiant du jeu de données (`{DATASET_ID}`) ainsi que les règles de filtrage qui définissent une période spécifique à l’aide d’opérateurs logiques. Lorsqu’un intervalle de temps est défini, toute pagination spécifiée est ignorée et le jeu de données complet est pris en compte.
 
@@ -245,7 +245,7 @@ La documentation R ci-dessous décrit les concepts suivants :
 - [Écriture dans un jeu de données](#write-r)
 - [Filtrage des données ExperienceEvent](#r-filter)
 
-### Lecture à partir d’un jeu de données dans R {#r-read-dataset}
+### Lecture à partir d’un jeu de données en R {#r-read-dataset}
 
 **Sans pagination :**
 
@@ -283,7 +283,7 @@ dataset_reader <- DatasetReader(py$get_platform_sdk_client_context(), dataset_id
 df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 ```
 
-### Écrire dans un jeu de données en R {#write-r}
+### Écriture dans un jeu de données en R {#write-r}
 
 Pour écrire dans un jeu de données de votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en évidence ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** et cliquez avec le bouton droit, puis sélectionnez l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 
@@ -301,7 +301,7 @@ dataset_writer <- psdk$dataset_writer$DatasetWriter(py$get_platform_sdk_client_c
 write_tracker <- dataset_writer$write(df, file_format='json')
 ```
 
-### Filtrer les [!DNL ExperienceEvent] données {#r-filter}
+### Filtrer les données [!DNL ExperienceEvent] {#r-filter}
 
 Pour accéder à un jeu de données [!DNL ExperienceEvent] et le filtrer dans un notebook R, vous devez fournir l’identifiant du jeu de données (`{DATASET_ID}`) ainsi que les règles de filtrage qui définissent un intervalle de temps spécifique à l’aide d’opérateurs logiques. Lorsqu’un intervalle de temps est défini, toute pagination spécifiée est ignorée et le jeu de données complet est pris en compte.
 
@@ -394,8 +394,7 @@ Commande magique [!DNL Data Science Workspace] personnalisée pour lire ou écri
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 
 > 
-> 
-Pour plus d’informations, consultez le [guide de dépannage](../troubleshooting-guide.md) .
+> Pour plus d’informations, consultez le [guide de dépannage](../troubleshooting-guide.md) .
 
 Vous pouvez générer automatiquement les exemples ci-dessus dans JupyterLab en achetant à l’aide de la méthode suivante :
 
@@ -406,7 +405,7 @@ Sélectionnez l’onglet Icône de données (en surbrillance ci-dessous) dans le
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
-### Créer un cadre de données local {#pyspark-create-dataframe}
+### Création d’un cadre de données local {#pyspark-create-dataframe}
 
 Pour créer un cadre de données local à l’aide de PySpark 3, utilisez des requêtes SQL. Par exemple :
 
@@ -437,7 +436,7 @@ sample_df = df.sample(fraction)
 >
 >Vous pouvez également spécifier un échantillon de contrôle facultatif, tel qu’une valeur booléenne avecRemplacement, une double fraction ou une valeur de départ longue.
 
-### Filtrer les [!DNL ExperienceEvent] données {#pyspark-filter-experienceevent}
+### Filtrer les données [!DNL ExperienceEvent] {#pyspark-filter-experienceevent}
 
 Pour accéder à un jeu de données [!DNL ExperienceEvent] et le filtrer dans un notebook PySpark, vous devez fournir l’identité du jeu de données (`{DATASET_ID}`), l’identité IMS de votre organisation et les règles de filtrage définissant une période spécifique. Un intervalle de temps de filtrage est défini à l’aide de la fonction `spark.sql()`, où le paramètre de fonction est une chaîne de requête SQL.
 
@@ -461,7 +460,7 @@ timepd = spark.sql("""
 timepd.show()
 ```
 
-## notebooks Scala0/>{#scala-notebook}
+## notebooks Scala {#scala-notebook}
 
 La documentation ci-dessous contient des exemples des concepts suivants :
 
@@ -483,7 +482,7 @@ val spark = SparkSession
   .getOrCreate()
 ```
 
-### Lire un jeu de données {#read-scala-dataset}
+### Lecture d’un jeu de données {#read-scala-dataset}
 
 Dans Scala, vous pouvez importer `clientContext` pour obtenir et renvoyer des valeurs Platform, ce qui élimine la nécessité de définir des variables telles que `var userToken`. Dans l’exemple Scala ci-dessous, `clientContext` est utilisé pour obtenir et renvoyer toutes les valeurs requises pour lire un jeu de données.
 
@@ -496,8 +495,7 @@ Dans Scala, vous pouvez importer `clientContext` pour obtenir et renvoyer des va
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 
 > 
-> 
-Pour plus d’informations, consultez le [guide de dépannage](../troubleshooting-guide.md) .
+> Pour plus d’informations, consultez le [guide de dépannage](../troubleshooting-guide.md) .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -540,7 +538,7 @@ And
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 
-### Écrire dans un jeu de données {#scala-write-dataset}
+### Écriture dans un jeu de données {#scala-write-dataset}
 
 Dans Scala, vous pouvez importer `clientContext` pour obtenir et renvoyer des valeurs Platform, ce qui élimine la nécessité de définir des variables telles que `var userToken`. Dans l’exemple Scala ci-dessous, `clientContext` est utilisé pour définir et renvoyer toutes les valeurs requises pour l’écriture dans un jeu de données.
 
@@ -553,8 +551,7 @@ Dans Scala, vous pouvez importer `clientContext` pour obtenir et renvoyer des va
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 
 > 
-> 
-Pour plus d’informations, consultez le [guide de dépannage](../troubleshooting-guide.md) .
+> Pour plus d’informations, consultez le [guide de dépannage](../troubleshooting-guide.md) .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -585,7 +582,7 @@ df1.write.format("com.adobe.platform.query")
 >
 >Consultez les tables Scala dans la section [Limites de données des notebooks](#notebook-data-limits) pour déterminer si `mode` doit être défini sur `interactive` ou `batch`.
 
-### créer un cadre de données local {#scala-create-dataframe}
+### créer un cadre de données local ; {#scala-create-dataframe}
 
 Pour créer un cadre de données local à l’aide de Scala, des requêtes SQL sont requises. Par exemple :
 
@@ -595,7 +592,7 @@ sparkdf.createOrReplaceTempView("sparkdf")
 val localdf = spark.sql("SELECT * FROM sparkdf LIMIT 1)
 ```
 
-### Filtrer les [!DNL ExperienceEvent] données {#scala-experienceevent}
+### Filtrer les données [!DNL ExperienceEvent] {#scala-experienceevent}
 
 Pour accéder à un jeu de données [!DNL ExperienceEvent] et le filtrer dans un notebook Scala, vous devez fournir l’identité du jeu de données (`{DATASET_ID}`), l’identité IMS de votre organisation et les règles de filtrage définissant une période spécifique. Un intervalle de temps de filtrage est défini à l’aide de la fonction `spark.sql()`, où le paramètre de fonction est une chaîne de requête SQL.
 

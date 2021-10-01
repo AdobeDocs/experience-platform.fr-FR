@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Aide du SDK web d’Adobe Experience Platform
 breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
-feature: Gestion des données
+feature: Data Management
 source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
-workflow-type: ht
-source-wordcount: '144'
+workflow-type: tm+mt
+source-wordcount: '142'
 ht-degree: 100%
 
 ---

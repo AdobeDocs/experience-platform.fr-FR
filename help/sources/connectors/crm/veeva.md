@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Présentation du connecteur source CRM Veeva
 topic-legacy: overview
 description: Découvrez comment connecter Veeva CRM à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 8%

@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; accueil ; sujets populaires ; espace de nommage ; Espace de nommage ; espaces de nommage ; Espaces de nommage ; espace de nommage d'identité ; espace de nommage d'identité ; identité ; identité
+keywords: Experience Platform;accueil;rubriques populaires;espace de noms;espaces de noms;espaces de noms;espace de noms;espace de noms d’identité;espace de noms d’identité;identité;identité
 solution: Experience Platform
-title: Création d’un Espace de nommage personnalisé dans l’API Identity Service
+title: Création d’un espace de noms personnalisé dans l’API Identity Service
 topic-legacy: API guide
 description: À l’aide de l’API Identity Namespace, vous pouvez créer un espace de noms personnalisé qui sera disponible uniquement pour votre organisation.
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '120'
@@ -13,9 +12,9 @@ ht-degree: 57%
 
 ---
 
-# Création d’un espace de nommage personnalisé dans l’API Identity Service
+# Création d’un espace de noms personnalisé dans l’API Identity Service
 
-L&#39;API [!DNL Identity Namespace] vous permet de créer un espace de nommage d&#39;identité personnalisé qui ne sera disponible que pour votre organisation.
+À l’aide de l’API [!DNL Identity Namespace], vous pouvez créer un espace de noms d’identité personnalisé qui sera disponible uniquement pour votre organisation.
 
 Pour obtenir des recommandations sur la création d’espaces de noms personnalisés, reportez-vous à aux [questions fréquentes sur Identity Service](../troubleshooting-guide.md).
 

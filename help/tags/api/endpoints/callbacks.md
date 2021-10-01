@@ -5,7 +5,7 @@ exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '621'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ Un rappel est un message que lʼAPI Reactor envoie à une URL spécifique (gén�
 
 Les rappels sont destinés à être utilisés conjointement avec les [événements dʼaudit](./audit-events.md) afin dʼeffectuer le suivi des activités dans lʼAPI Reactor. Chaque fois quʼun événement dʼaudit dʼun certain type est généré, un rappel peut envoyer un message correspondant à lʼURL spécifiée.
 
-Le service derrière lʼURL spécifiée dans le rappel doit répondre avec le code dʼétat HTTP 200 (OK) ou 201 (Created). Si le service ne répond avec aucun de ces codes dʼétat, la remise du message est à nouveau tentée aux intervalles suivants :
+Le service derrière lʼURL spécifiée dans le rappel doit répondre avec le code dʼétat HTTP 200 (OK) ou 201 (Created). Si le service ne répond avec aucun de ces codes dʼétat, la remise du message est à nouveau tentée aux intervalles suivants :
 
 * 1 minute
 * 5 minutes
@@ -55,7 +55,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 >[!NOTE]
 >
->À lʼaide des paramètres de requête, les rappels répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`created_at`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
+>À lʼaide des paramètres de requête, les rappels répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`created_at`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 
@@ -303,7 +303,7 @@ curl -X PUT \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour le rappel. Chaque clé représente lʼattribut de rappel particulier à mettre à jour, ainsi que la valeur correspondante vers laquelle il doit être mis à jour.<br><br>Les attributs suivants peuvent être mis à jour pour les rappels :<ul><li>`subscriptions`</li><li>`url`</li></ul> |
+| `attributes` | Objet dont les propriétés représentent les attributs à mettre à jour pour le rappel. Chaque clé représente lʼattribut de rappel particulier à mettre à jour, ainsi que la valeur correspondante vers laquelle il doit être mis à jour.<br><br>Les attributs suivants peuvent être mis à jour pour les rappels :<ul><li>`subscriptions`</li><li>`url`</li></ul> |
 | `id` | Champ `id` du rappel que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `{CALLBACK_ID}` fournie dans le chemin dʼaccès à la demande. |
 | `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `callbacks`. |
 

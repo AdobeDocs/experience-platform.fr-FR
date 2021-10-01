@@ -107,7 +107,7 @@ Le fichier JSON suivant illustre un exemple du type de données que le groupe de
 >Vous pouvez générer des exemples de données JSON pour tout schéma XDM que vous définissez dans Experience Platform afin de mieux visualiser la manière dont vos données de consentement et de préférence client doivent être mappées. Pour plus d’informations, consultez la documentation suivante :
 >
 >* [Génération d’exemples de données dans l’interface utilisateur](../../ui/sample.md)
-* [Génération d’exemples de données dans l’API](../../api/sample-data.md)
+>* [Génération d’exemples de données dans l’API](../../api/sample-data.md)
 
 
 ## Cas d’utilisation des champs
@@ -151,8 +151,10 @@ Les cas d’utilisation prévus pour chacun de ces champs sont présentés dans 
 `personalize` capture les préférences des clients concernant les façons dont leurs données peuvent être utilisées pour la personnalisation. Les clients peuvent se désabonner de cas d’utilisation de personnalisation spécifiques ou se désabonner entièrement de la personnalisation.
 
 >[!IMPORTANT]
-`personalize` ne couvre pas les cas d’utilisation marketing. Par exemple, si un client choisit de ne pas se personnaliser pour tous les canaux, il ne doit pas cesser de recevoir des communications par le biais de ces canaux. Au contraire, les messages qu&#39;ils reçoivent doivent être génériques et non basés sur leur profil.
-Dans le même exemple, si un client choisit de ne pas participer au marketing direct pour tous les canaux (par l’intermédiaire de `marketing`, expliqué dans la [section suivante](#marketing)), ce client ne doit recevoir aucun message, même si la personnalisation est autorisée.
+>
+>`personalize` ne couvre pas les cas d’utilisation marketing. Par exemple, si un client choisit de ne pas se personnaliser pour tous les canaux, il ne doit pas cesser de recevoir des communications par le biais de ces canaux. Au contraire, les messages qu&#39;ils reçoivent doivent être génériques et non basés sur leur profil.
+>
+>Dans le même exemple, si un client choisit de ne pas participer au marketing direct pour tous les canaux (par l’intermédiaire de `marketing`, expliqué dans la [section suivante](#marketing)), ce client ne doit recevoir aucun message, même si la personnalisation est autorisée.
 
 ```json
 "personalize": {
@@ -272,9 +274,11 @@ Les propriétés `email`, `push` et `sms` de l’objet `marketing` peuvent repr�
 `idSpecific` peut être utilisé lorsqu’un consentement ou une préférence spécifique ne s’applique pas universellement à un client, mais est limité à un seul appareil ou à un seul identifiant. Par exemple, un client peut refuser de recevoir des emails à une adresse, tout en autorisant éventuellement l’envoi d’emails à une autre.
 
 >[!IMPORTANT]
-Les consentements et préférences au niveau du canal (c’est-à-dire ceux fournis sous `consents` en dehors de `idSpecific`) s’appliquent aux identifiants dans ce canal. Par conséquent, tous les consentements et préférences au niveau du canal influent directement sur le respect des paramètres équivalents d’ID ou spécifiques à l’appareil :
-* Si le client s’est désabonné au niveau du canal, tous les consentements ou préférences équivalents dans `idSpecific` sont ignorés.
-* Si le consentement ou la préférence au niveau du canal n’est pas définie, ou si le client s’est inscrit, les consentements ou préférences équivalents dans `idSpecific` sont respectés.
+>
+>Les consentements et préférences au niveau du canal (c’est-à-dire ceux fournis sous `consents` en dehors de `idSpecific`) s’appliquent aux identifiants dans ce canal. Par conséquent, tous les consentements et préférences au niveau du canal influent directement sur le respect des paramètres équivalents d’ID ou spécifiques à l’appareil :
+>
+>* Si le client s’est désabonné au niveau du canal, tous les consentements ou préférences équivalents dans `idSpecific` sont ignorés.
+>* Si le consentement ou la préférence au niveau du canal n’est pas définie, ou si le client s’est inscrit, les consentements ou préférences équivalents dans `idSpecific` sont respectés.
 
 
 Chaque clé de l’objet `idSpecific` représente un espace de noms d’identité spécifique reconnu par le service Adobe Experience Platform Identity. Bien que vous puissiez définir vos propres espaces de noms personnalisés pour classer différents identifiants, il est recommandé d’utiliser l’un des espaces de noms standard fournis par Identity Service pour réduire les tailles de stockage pour Real-time Customer Profile. Pour plus d’informations sur les espaces de noms d’identité, consultez la [présentation des espaces de noms d’identité](../../../identity-service/namespaces.md) dans la documentation Identity Service.
@@ -339,7 +343,8 @@ Le `adID` consentement représente le consentement du client pour savoir si un I
 ```
 
 >[!NOTE]
-Vous ne devez pas définir cette valeur directement, car le SDK Adobe Experience Platform Mobile la définit automatiquement le cas échéant.
+>
+>Vous ne devez pas définir cette valeur directement, car le SDK Adobe Experience Platform Mobile la définit automatiquement le cas échéant.
 
 ## Ingestion de données à l’aide du groupe de champs {#ingest}
 
@@ -348,8 +353,10 @@ Pour utiliser le groupe de champs [!UICONTROL Contenus et Préférences] afin d�
 Consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment attribuer des groupes de champs à des champs. Une fois que vous avez créé un schéma contenant un champ avec le groupe de champs [!UICONTROL Contenus et Préférences] , reportez-vous à la section sur la [création d’un jeu de données](../../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation du jeu de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
 
 >[!IMPORTANT]
-Si vous souhaitez envoyer des données de consentement à [!DNL Real-time Customer Profile], vous devez créer un schéma compatible [!DNL Profile] basé sur la classe [!DNL XDM Individual Profile] qui contient le groupe de champs [!UICONTROL Contenus et Préférences]. Le jeu de données que vous créez à partir de ce schéma doit également être activé pour [!DNL Profile]. Reportez-vous aux tutoriels ci-dessus pour connaître les étapes spécifiques aux [!DNL Real-time Customer Profile] exigences relatives aux schémas et aux jeux de données.
-En outre, vous devez également vous assurer que vos stratégies de fusion sont configurées pour prioriser le ou les jeux de données qui contiennent les dernières données de consentement et de préférence, afin que les profils client soient correctement mis à jour. Pour plus d’informations, consultez la présentation des [stratégies de fusion](../../../rtcdp/profile/merge-policies.md) .
+>
+>Si vous souhaitez envoyer des données de consentement à [!DNL Real-time Customer Profile], vous devez créer un schéma compatible [!DNL Profile] basé sur la classe [!DNL XDM Individual Profile] qui contient le groupe de champs [!UICONTROL Contenus et Préférences]. Le jeu de données que vous créez à partir de ce schéma doit également être activé pour [!DNL Profile]. Reportez-vous aux tutoriels ci-dessus pour connaître les étapes spécifiques aux [!DNL Real-time Customer Profile] exigences relatives aux schémas et aux jeux de données.
+>
+>En outre, vous devez également vous assurer que vos stratégies de fusion sont configurées pour prioriser le ou les jeux de données qui contiennent les dernières données de consentement et de préférence, afin que les profils client soient correctement mis à jour. Pour plus d’informations, consultez la présentation des [stratégies de fusion](../../../rtcdp/profile/merge-policies.md) .
 
 ## Gestion des modifications du consentement et des préférences
 

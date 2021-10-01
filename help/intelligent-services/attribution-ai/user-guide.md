@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; guide de l’utilisateur ; attribution ai ; rubriques populaires ; région
+keywords: Experience Platform;guide de l’utilisateur;accès à l’attribution;rubriques les plus consultées;région
 solution: Experience Platform, Intelligent Services
 title: Guide de l’interface utilisateur Attribution AI
 topic-legacy: User guide
 description: Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1765'
@@ -21,28 +20,28 @@ Ce document sert de guide pour interagir avec Attribution AI dans l’interface 
 
 ## Création d’une instance
 
-Dans l&#39;interface utilisateur [!DNL Adobe Experience Platform], cliquez sur **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur **[!UICONTROL Services]** apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur d’Attribution AI, cliquez sur **[!UICONTROL Ouvrir]**.
+Dans l’interface utilisateur [!DNL Adobe Experience Platform], cliquez sur **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur **[!UICONTROL Services]** apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur d’Attribution AI, cliquez sur **[!UICONTROL Ouvrir]**.
 
 ![Accès à votre instance](./images/user-guide/open_Attribution_ai.png)
 
 La page de service d’Attribution AI s’affiche. Cette page répertorie les instances de service d’Attribution AI et affiche les informations les concernant, notamment le nom de l’instance, les événements de conversion, la fréquence à laquelle l’instance est exécutée et l’état de la dernière mise à jour.
 
-Vous pouvez trouver la mesure **[!UICONTROL événements de conversion totaux marqués]** située dans le coin inférieur droit du conteneur **[!UICONTROL Créer une instance]**. Cette mesure suit le nombre total de événements de conversion marqués par Attribution AI pour l’année civile en cours, y compris tous les environnements de sandbox et toutes les instances de service supprimées.
+La mesure **[!UICONTROL Total des événements de conversion notés]** se trouve dans le coin inférieur droit du conteneur **[!UICONTROL Créer une instance]**. Cette mesure effectue le suivi du nombre total d’événements de conversion marqués par Attribution AI pour l’année civile en cours, y compris tous les environnements de test et toutes les instances de service supprimées.
 
 ![](./images/user-guide/total_conversions.png)
 
-Les instances de service peuvent être modifiées, clonées et supprimées à l’aide des commandes situées sur le côté droit de l’interface utilisateur. Pour afficher ces contrôles, sélectionnez une instance de vos instances **[!UICONTROL Service existantes]**. Les contrôles contiennent les informations suivantes :
+Les instances de service peuvent être modifiées, clonées et supprimées à l’aide des commandes situées dans la partie droite de l’interface utilisateur. Pour afficher ces contrôles, sélectionnez une instance parmi vos **[!UICONTROL instances de service]** existantes. Les contrôles contiennent les informations suivantes :
 
-- **[!UICONTROL Modifier]** : Le fait de sélectionner  **** Modifier vous permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description, l’état et la fréquence d’évaluation de l’instance.
-- **[!UICONTROL Cloner]** : La sélection de  **** Clonecopies copie l’instance de service sélectionnée. Vous pouvez ensuite modifier le processus pour effectuer des ajustements mineurs et le renommer en tant que nouvelle instance.
+- **[!UICONTROL Modifier]** : Sélectionnez  **** Editer pour modifier une instance de service existante. Vous pouvez modifier le nom, la description, l’état et la fréquence de notation de l’instance.
+- **[!UICONTROL Cloner]** : Sélectionnez  **** Clonecopies pour l’instance de service sélectionnée. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouvelle instance.
 - **[!UICONTROL Supprimer]** : Vous pouvez supprimer une instance de service, y compris les exécutions historiques.
 - **[!UICONTROL Source]** de données : Lien vers le jeu de données utilisé par cette instance.
-- **[!UICONTROL Détails]** de la dernière exécution : Ceci s’affiche uniquement en cas d’échec d’une exécution. Les informations sur les raisons pour lesquelles l&#39;exécution a échoué, telles que les codes d&#39;erreur, sont affichées ici.
+- **[!UICONTROL Détails]** de la dernière exécution : Cette option n’est affichée que lorsqu’une exécution échoue. Vous trouverez ici des informations sur les raisons pour lesquelles l’exécution a échoué, telles que les codes d’erreur.
 
 ![](./images/user-guide/side_panel.png)
 
-- **[!UICONTROL Événements]** de conversion : Aperçu rapide des événements de conversion configurés pour cette instance.
-- **[!UICONTROL Fenêtre]** de recherche : Période que vous avez définie indiquant le nombre de jours avant l’inclusion des points de contact du événement de conversion.
+- **[!UICONTROL Événements de conversion]** : Aperçu rapide des événements de conversion configurés pour cette instance.
+- **[!UICONTROL Intervalle]** de recherche en amont : La période que vous avez définie indiquant le nombre de jours avant l’inclusion des points de contact de l’événement de conversion.
 - **[!UICONTROL Points de contact]** : Liste de tous les points de contact que vous avez définis lors de la création de cette instance.
 
 ![](./images/user-guide/side_panel_2.png)
@@ -67,7 +66,7 @@ Après avoir renseigné les informations de base, cliquez sur le menu déroulant
 
 >[!TIP]
 >
->Les jeux de données Adobe Analytics sont pris en charge par le biais d’Analytics Source Connector.
+>Les jeux de données Adobe Analytics sont pris en charge via le connecteur source Analytics.
 
 ![page de configuration](./images/user-guide/dataset_selector.png)
 
@@ -109,7 +108,7 @@ Si vous avez besoin de plusieurs conversions, cliquez sur **Ajouter une conversi
 
 ![ajouter une conversion](./images/user-guide/add_conversion.png)
 
-### Définition de l’intervalle de recherche en amont  {#lookback-window}
+### Définition de l’intervalle de recherche en amont {#lookback-window}
 
 Une fois la conversion définie, vous devez confirmer votre intervalle de recherche en amont. En utilisant les touches fléchées ou en cliquant sur la valeur par défaut (56), indiquez le nombre de jours avant votre événement de conversion à partir duquel vous souhaitez inclure des points de contact. Les points de contact sont définis à l’étape suivante.
 
@@ -179,11 +178,11 @@ Pour modifier l’heure de la journée où vous souhaitez que la notation soit e
 
 ![icône de l’horloge](./images/user-guide/time_of_day.png)
 
-### Autres colonnes de jeux de données de score (facultatif)
+### Colonnes de jeu de données de score supplémentaires (facultatif)
 
-Par défaut, un jeu de données de score est créé pour chaque instance de service dans un schéma standard. Vous pouvez choisir d’ajouter d’autres colonnes en fonction de vos configurations de Événement de conversion et de points de contact à la sortie du jeu de données de score. Début en sélectionnant des colonnes dans votre jeu de données d&#39;entrée, vous pouvez ensuite les faire glisser pour modifier l&#39;ordre en maintenant le bouton gauche de la souris enfoncé sur l&#39;icône du hamburger.
+Par défaut, un jeu de données de score est créé pour chaque instance de service dans un schéma standard. Vous pouvez choisir d’ajouter des colonnes supplémentaires en fonction de vos configurations Événement de conversion et Point de contact à la sortie du jeu de données de score. Commencez par sélectionner des colonnes dans votre jeu de données d’entrée, puis faites-les glisser et déposez-les pour modifier l’ordre en maintenant le bouton gauche de la souris enfoncé sur l’icône de hamburger.
 
-![score ajout de colonne de données](./images/user-guide/Add-score-dataset.png)
+![ajout de colonne de jeu de données de score](./images/user-guide/Add-score-dataset.png)
 
 ### Modélisation basée sur la région (facultative) {#region-based-modeling-optional}
 
@@ -205,9 +204,9 @@ Pour finir, saisissez le code pays dans le menu déroulant **[!UICONTROL Saisir 
 
 ![région](./images/user-guide/region-based.png)
 
-### Période de formation  {#training-window}
+### Période de formation {#training-window}
 
-Pour vous assurer d’obtenir le modèle le plus précis possible, il est important de former votre modèle avec des données historiques qui représentent votre entreprise. Par défaut, le modèle est formé à l’aide de 2 trimestres (6 mois) de données sur les événements de conversion. Sélectionnez le menu déroulant pour modifier la valeur par défaut. Vous pouvez opter pour une formation basée sur un à quatre trimestres de données (3 à 12 mois).
+Pour vous assurer d’obtenir le modèle le plus précis possible, il est important de former votre modèle avec des données historiques qui représentent votre entreprise. Par défaut, le modèle est formé à l’aide de 2 trimestres (6 mois) de données d’événements de conversion. Sélectionnez le menu déroulant pour modifier la valeur par défaut. Vous pouvez opter pour une formation basée sur un à quatre trimestres de données (3 à 12 mois).
 
 >[!NOTE]
 >
@@ -221,10 +220,10 @@ Une fois que vous avez sélectionné votre période de formation, cliquez sur **
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez réussi à créer une instance de service dans Attribution AI. Une fois que la notation avec l’instance est terminée (compter jusqu’à 24 heures), vous êtes prêt à [découvrir les insights d’Attribution AI](./discover-insights.md). De plus, si vous souhaitez télécharger vos résultats de score, consultez la [documentation de téléchargement des scores](./download-scores.md).
+En suivant ce tutoriel, vous avez réussi à créer une instance de service dans Attribution AI. Une fois que la notation avec l’instance est terminée (compter jusqu’à 24 heures), vous êtes prêt à [découvrir les insights d’Attribution AI](./discover-insights.md). De plus, si vous souhaitez télécharger les résultats de la notation, consultez la documentation [téléchargement des scores](./download-scores.md) .
 
 ## Ressources supplémentaires
 
-La vidéo suivante décrit un processus de bout en bout pour la création d’une instance dans Attribution AI.
+La vidéo suivante présente un processus de bout en bout pour créer une instance dans Attribution AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)

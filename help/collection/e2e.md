@@ -3,7 +3,7 @@ title: Présentation complète de la collecte de données
 description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide des technologies de collecte de données fournies par Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
 source-git-commit: 3f5a05068a24432237a5241dd20680d2f8ed0b55
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2618'
 ht-degree: 100%
 

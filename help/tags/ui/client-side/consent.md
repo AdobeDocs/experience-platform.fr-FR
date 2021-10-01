@@ -1,8 +1,9 @@
 ---
 title: Déploiement de balises JavaScript pour la gestion du consentement client
 description: Découvrez comment gérer les signaux d’opt-in et d’opt-out des clients pour diverses solutions d’Adobe dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 100%
 
@@ -18,7 +19,7 @@ La combinaison du [Règlement général sur la protection des données (RGPD)](h
 
 Les clients Adobe Experience Cloud ont besoin de différentes mises en œuvre de ces exigences. Certains utilisent des gestionnaires de consentement au niveau de l’entreprise, tandis que d’autres créent les leurs.
 
-Les développeurs dʼextensions Adobe Experience Platform utilisent les extensions et le créateur de règles pour définir les solutions dʼinclusion/exclusion.
+Les développeurs dʼextension Adobe Experience Platform utilisent les extensions et le créateur de règles pour définir les solutions dʼinclusion/exclusion.
 
 Ce document contient des informations sur la façon d’empêcher le déclenchement des balises Adobe tant que le consentement n’est pas obtenu.
 
@@ -43,7 +44,7 @@ Les intégrations avec les gestionnaires de consentement (tels que OneTrust) peu
 
 ## Audience Manager
 
-La DIL (Bibliothèque d’intégration des données) est actuellement configurée pour se déclencher automatiquement si elle est placée sur une page client. Pensez à utiliser l’[objet d’accord préalable d’Adobe](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=fr) pour contrôler le déclenchement de cette balise, et ce, en même temps que votre plateforme de gestion du consentement.
+La DIL (Bibliothèque d’intégration des données) est actuellement configurée pour se déclencher automatiquement si elle est placée sur une page client. Pensez à utiliser l’[objet d’accord préalable d’Adobe](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html) pour contrôler le déclenchement de cette balise, et ce, en même temps que votre plateforme de gestion du consentement.
 
 [!DNL Adobe] vous conseille d’utiliser le transfert côté serveur dans [!DNL Analytics].
 
@@ -51,12 +52,12 @@ La DIL (Bibliothèque d’intégration des données) est actuellement configuré
 
 [!DNL Experience Cloud ID] se déclenche automatiquement s’il est placé sur une page client.
 
-Pensez à utiliser l’[objet d’accord préalable d’Adobe](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=fr) pour contrôler le déclenchement de cette balise, et ce, en même temps que votre plateforme de gestion du consentement.
+Pensez à utiliser l’[objet d’accord préalable d’Adobe](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html) pour contrôler le déclenchement de cette balise, et ce, en même temps que votre plateforme de gestion du consentement.
 
 ## Target
 
 Adobe Experience Platform ne déclenche pas automatiquement [!DNL Target]. [!DNL Target] se déclenche uniquement si vous le lui indiquez spécifiquement dans une action de règle. Utilisez les conditions de règle pour déterminer ce qu’il convient de déclencher et quand. Par exemple, pour utiliser des cookies afin de déterminer l’état d’inclusion, définissez un élément de données pour lire ce cookie et utilisez-le comme condition dans la règle pour déterminer quand déclencher l’action Load [!DNL Target] (Charger Target).
 
-Par ailleurs, vous pourriez envisager d’utiliser l’[objet d’accord préalable d’Adobe](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=fr) pour contrôler le déclenchement de cette balise, et ce, en même temps que votre plateforme de gestion du consentement.
+Par ailleurs, vous pourriez envisager d’utiliser l’[objet d’accord préalable d’Adobe](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html) pour contrôler le déclenchement de cette balise, et ce, en même temps que votre plateforme de gestion du consentement.
 
 Les intégrations avec les gestionnaires de consentement (tels que OneTrust) peuvent définir et suivre les cookies de consentement pour les clients, qui peuvent ensuite être utilisés dans le créateur de règles.

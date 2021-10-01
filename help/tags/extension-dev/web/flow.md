@@ -1,8 +1,9 @@
 ---
 title: Flux d’extension web
-description: Découvrez comment les composants d’extension web interagissent les uns avec les autres au moment de l’exécution dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Découvrez comment les composants d’extension web interagissent les uns avec les autres pendant l’exécution dans Adobe Experience Platform.
+exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 100%
 
@@ -16,7 +17,7 @@ ht-degree: 100%
 
 Dans les extensions web, chaque type d’événement, de condition, d’action et d’élément de données comporte à la fois une vue qui permet aux utilisateurs de modifier les paramètres et un module de bibliothèque leur permettant d’agir sur ces paramètres définis par l’utilisateur.
 
-Comme le montre le diagramme de haut niveau suivant, la vue de type d’événement de l’extension sera affichée dans un iframe dans l’application intégrée à Adobe Experience Platform. L’utilisateur utilise ensuite la vue pour modifier les paramètres qui sont alors enregistrés dans Platform. Lorsque la bibliothèque d’exécution de balises est créée, le module de bibliothèque de type d’événement de l’extension ainsi que les paramètres définis par l’utilisateur sont inclus dans la bibliothèque d’exécution. Au moment de l’exécution, Platform injectera les paramètres définis par l’utilisateur dans le module de bibliothèque.
+Comme le montre le diagramme de haut niveau suivant, la vue de type d’événement de l’extension sera affichée dans un iframe dans l’application intégrée à Adobe Experience Platform. L’utilisateur se sert ensuite de l’affichage pour modifier les paramètres qui sont alors enregistrés dans Platform. Lorsque la bibliothèque d’exécution des balises est créée, le module Bibliothèque de types d’événement de l’extension ainsi que les paramètres définis par l’utilisateur sont inclus dans la bibliothèque d’exécution. Au moment de l’exécution, Platform injectera les paramètres définis par l’utilisateur dans le module de bibliothèque.
 
 ![diagramme de flux d’extension](../images/flow/web/extension-flow.png)
 

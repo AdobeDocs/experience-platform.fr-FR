@@ -52,7 +52,7 @@ Une fois que vous avez créé un ERD pour identifier les entités essentielles q
 | --- | --- |
 | Entités de profil | Les entités de profil représentent les attributs relatifs à une personne, généralement un client. Les entités qui appartiennent à cette catégorie doivent être représentées par des schémas basés sur la **[!DNL XDM Individual Profile]classe**. |
 | Entités de recherche | Les entités de recherche représentent des concepts qui peuvent être associés à une personne, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités qui appartiennent à cette catégorie doivent être représentées par des schémas basés sur **des classes personnalisées**. |
-| Entités d’événement | Les entités d’événement représentent des concepts liés aux actions qu’un client peut entreprendre, aux événements système ou à tout autre concept sur lequel vous souhaitez peut-être suivre les modifications au fil du temps. Les entités qui appartiennent à cette catégorie doivent être représentées par des schémas basés sur la **[!DNL XDM ExperienceEvent]classe**. |
+| Entités d’événement | Les entités d’événement représentent des concepts liés aux actions qu’un client peut entreprendre, aux événements système ou à tout autre concept dans lequel vous souhaitez peut-être suivre les modifications au fil du temps. Les entités qui appartiennent à cette catégorie doivent être représentées par des schémas basés sur la **[!DNL XDM ExperienceEvent]classe**. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -72,7 +72,7 @@ Si une entité contient des attributs liés à un client individuel, il s’agit
 
 Si vous souhaitez analyser la manière dont certains attributs au sein d’une entité changent au fil du temps, il s’agit probablement d’une entité d’événement. Par exemple, l’ajout d’éléments de produit à un panier peut être suivi en tant qu’événements de panier à ajouter dans [!DNL Platform] :
 
-| Customer ID | Type | ID de produit | Quantité | Horodatage |
+| Identifiant client | Type | ID de produit | Quantité | Horodatage |
 | --- | --- | --- | --- | --- |
 | 1234567 | Addition | 275098 | 2 | 1er octobre à 10h32 |
 | 1234567 | Supprimer | 275098 | 1 | 1er octobre à 10h33 |
@@ -192,7 +192,7 @@ Les [règles d’évolution du schéma](./composition.md#evolution) stipulent qu
 
 Si vous ne savez pas si un champ particulier est nécessaire pour l’inclure dans un schéma, la bonne pratique consiste à l’exclure. S’il est déterminé par la suite que le champ est nécessaire, il peut toujours être ajouté à la prochaine itération du schéma.
 
-### Champs d’identité
+### Champs d&#39;identité
 
 Dans Experience Platform, les champs XDM marqués comme identités sont utilisés pour rassembler des informations sur les clients individuels provenant de plusieurs sources de données. Bien qu’un schéma puisse comporter plusieurs champs marqués comme identités, une seule identité Principale doit être définie pour que le schéma puisse être utilisé dans [!DNL Real-time Customer Profile]. Consultez la section [Champs d’identité](./composition.md#identity) dans les principes de base de la composition des schémas pour plus d’informations sur le cas d’utilisation de ces champs.
 

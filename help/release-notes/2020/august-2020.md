@@ -35,7 +35,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 Pour plus d’informations sur [!DNL JupyterLab], consultez le [[!DNL JupyterLab] guide d’utilisation](../../data-science-workspace/jupyterlab/overview.md).
 
-## Destinations {#destinations}
+## Destinations  {#destinations}
 
 Dans la [plateforme de données clients en temps réel](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées avec des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
 

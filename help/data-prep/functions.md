@@ -7,7 +7,7 @@ description: Ce document présente les fonctions de mappage utilisées avec Data
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 source-git-commit: 1133580d6d4d8df352ab901d5106f0bb6c1f2a08
 workflow-type: tm+mt
-source-wordcount: '3935'
+source-wordcount: '3933'
 ht-degree: 18%
 
 ---

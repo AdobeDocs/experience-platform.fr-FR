@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;dataset;Dataset;create dataset;create dataset;create dataset;enable dataset
+keywords: Experience Platform;accueil;rubriques populaires;jeu de données;jeu de données;créer un jeu de données;créer un jeu de données;activer un jeu de données
 solution: Experience Platform
 title: Création d’un jeu de données dans l’API
 topic-legacy: developer guide
-description: Ce document explique comment créer un objet de jeu de données dans l’API du service de catalogue.
+description: Ce document explique comment créer un objet de jeu de données dans l’API Catalog Service.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '254'
-ht-degree: 48%
+ht-degree: 53%
 
 ---
 
 # Création d’un jeu de données dans l’API
 
-Pour créer un jeu de données à l&#39;aide de l&#39;API [!DNL Catalog], vous devez connaître la valeur `$id` du schéma [!DNL Experience Data Model] (XDM) sur lequel le jeu de données sera basé. Une fois que vous disposez de l&#39;ID de schéma, vous pouvez créer un jeu de données en envoyant une requête de POST au point de terminaison `/datasets` de l&#39;API [!DNL Catalog].
+Pour créer un jeu de données à l’aide de l’API [!DNL Catalog], vous devez connaître la valeur `$id` du schéma [!DNL Experience Data Model] (XDM) sur lequel le jeu de données sera basé. Une fois que vous disposez de l’identifiant de schéma, vous pouvez créer un jeu de données en envoyant une requête de POST au point de terminaison `/datasets` dans l’API [!DNL Catalog].
 
 >[!NOTE]
 >
->Ce document traite uniquement de la création d&#39;un objet de jeu de données dans [!DNL Catalog]. Pour obtenir des instructions complètes sur la création, le remplissage et la surveillance d’un jeu de données, reportez-vous au [tutoriel](../datasets/create.md) suivant.
+>Ce document couvre uniquement la création d’un objet de jeu de données dans [!DNL Catalog]. Pour obtenir des instructions complètes sur la création, le remplissage et la surveillance d’un jeu de données, reportez-vous au [tutoriel](../datasets/create.md) suivant.
 
 **Format d’API**
 
@@ -52,7 +51,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom du jeu de données à créer. |
 | `schemaRef.id` | La valeur `$id` de l’URI pour le schéma XDM sur lequel sera basé le jeu de données. |
-| `schemaRef.contentType` | Indique le format et la version du schéma. Pour plus d&#39;informations, consultez la section [versioning de schéma](../../xdm/api/getting-started.md#versioning) du guide de l&#39;API XDM. |
+| `schemaRef.contentType` | Indique le format et la version du schéma. Pour plus d’informations, reportez-vous à la section [contrôle de version des schémas](../../xdm/api/getting-started.md#versioning) du guide de l’API XDM. |
 
 >[!NOTE]
 >

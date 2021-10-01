@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; rubriques populaires ; moteurs ; api d’apprentissage automatique sensei
+keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées;moteurs;api d’apprentissage automatique sensei
 solution: Experience Platform
-title: Point de terminaison de l'API Moteurs
+title: Point de terminaison de l’API Moteurs
 topic-legacy: Developer guide
 description: Les moteurs sont le fondement des modèles d’apprentissage automatique dans Data Science Workspace. Ils contiennent des algorithmes d’apprentissage automatique qui permettent de résoudre des problèmes spécifiques, des pipelines de fonctionnalités permettant de concevoir des fonctionnalités, ou les deux.
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1165'
@@ -21,7 +20,7 @@ Les moteurs sont le fondement des modèles d’apprentissage automatique dans Da
 
 >[!TIP]
 >
->Si vous n&#39;avez pas d&#39;URL Docker, consultez le didacticiel [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) pour obtenir une présentation détaillée de la création d&#39;une URL d&#39;hôte Docker.
+>Si vous ne disposez pas d’URL Docker, consultez le tutoriel [Former une recette empaquetée à partir de fichiers source](../models-recipes/package-source-files-recipe.md) pour une présentation détaillée de la création d’une URL d’hôte Docker.
 
 Les informations d’identification de votre registre Docker sont nécessaires pour charger un fichier de recette empaqueté, y compris l’URL de votre hôte Docker, votre nom d’utilisateur et votre mot de passe. Vous pouvez rechercher ces informations en exécutant la requête GET suivante :
 
@@ -67,7 +66,7 @@ Vous pouvez créer un moteur en exécutant une requête POST tout en fournissant
 POST /engines
 ```
 
-**Demande de Python/R**
+**Demander Python/R**
 
 ```shell
 curl -X POST \
@@ -103,9 +102,9 @@ curl -X POST \
 | `artifacts.default.image.location` | Emplacement de l’image Docker à laquelle est liée une URL Docker. |
 | `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond au langage dans lequel l’image Docker est conçue, et peut être soit « Python », « R » ou « Tensorflow ». |
 
-**Demande de PySpark/Scala**
+**Demander PySpark/Scala**
 
-Lors d&#39;une demande de recettes PySpark, `executionType` et `type` sont &quot;PySpark&quot;. Lors d&#39;une demande de recettes Scala, les `executionType` et `type` sont &quot;Spark&quot;. L’exemple de recette Scala suivant utilise Spark :
+Lors de l’exécution d’une requête pour les recettes PySpark, les `executionType` et `type` sont &quot;PySpark&quot;. Lors de l’exécution d’une requête de recettes Scala, les `executionType` et `type` sont &quot;Spark&quot;. L’exemple de recette Scala suivant utilise Spark :
 
 ```shell
 curl -X POST \
@@ -137,14 +136,14 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom souhaité pour le moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que nom de la recette. |
 | `description` | Description facultative du moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que description de la recette. Cette propriété est obligatoire. Si vous ne souhaitez pas fournir de description, définissez sa valeur comme étant une chaîne vide. |
-| `type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image du Docker est construite. La valeur peut être définie sur Spark ou PySpark. |
+| `type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée. La valeur peut être définie sur Spark ou PySpark. |
 | `mlLibrary` | Champ obligatoire lors de la création de moteurs pour les recettes PySpark et Scala. Ce champ doit être défini sur `databricks-spark`. |
-| `artifacts.default.image.location` | Emplacement de l&#39;image Docker. Seul le Dockerhub Azure ACR ou Public (non authentifié) est pris en charge. |
-| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image du Docker est construite. Il peut s’agir de &quot;Spark&quot; ou de &quot;PySpark&quot;. |
+| `artifacts.default.image.location` | Emplacement de l’image Docker. Seul Azure ACR ou Public (non authentifié) Dockerhub est pris en charge. |
+| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée. Il peut s’agir de &quot;Spark&quot; ou de &quot;PySpark&quot;. |
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant les détails du nouveau moteur, y compris son identifiant unique (`id`). L&#39;exemple de réponse suivant est pour un moteur Python. Toutes les réponses du moteur suivent ce format :
+Une réponse réussie renvoie un payload contenant les détails du nouveau moteur, y compris son identifiant unique (`id`). L’exemple de réponse suivant est pour un moteur Python. Toutes les réponses du moteur suivent ce format :
 
 ```json
 {
@@ -171,7 +170,7 @@ Une réponse réussie renvoie un payload contenant les détails du nouveau moteu
 }
 ```
 
-## Création d&#39;un moteur de pipeline de fonctionnalités à l&#39;aide des URL Docker {#feature-pipeline-docker}
+## Création d’un moteur de pipeline de fonctionnalités à l’aide des URL Docker {#feature-pipeline-docker}
 
 Vous pouvez créer un moteur de pipeline de fonctionnalités en exécutant une requête de POST tout en fournissant ses métadonnées et une URL Docker qui référence une image Docker.
 
@@ -214,19 +213,19 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image du Docker est construite. La valeur peut être définie sur Spark ou PySpark. |
+| `type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée. La valeur peut être définie sur Spark ou PySpark. |
 | `algorithm` | L’algorithme utilisé, définissez cette valeur sur `fp` (pipeline de fonctionnalités). |
 | `name` | Nom souhaité pour le moteur de pipeline de fonctionnalités. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que nom de la recette. |
 | `description` | Description facultative du moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que description de la recette. Cette propriété est obligatoire. Si vous ne souhaitez pas fournir de description, définissez sa valeur comme étant une chaîne vide. |
 | `mlLibrary` | Champ obligatoire lors de la création de moteurs pour les recettes PySpark et Scala. Ce champ doit être défini sur `databricks-spark`. |
-| `artifacts.default.image.location` | Emplacement de l&#39;image Docker. Seul le Dockerhub Azure ACR ou Public (non authentifié) est pris en charge. |
-| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image du Docker est construite. Il peut s’agir de &quot;Spark&quot; ou de &quot;PySpark&quot;. |
-| `artifacts.default.image.packagingType` | Type d&#39;emballage du moteur. Cette valeur doit être définie sur `docker`. |
+| `artifacts.default.image.location` | Emplacement de l’image Docker. Seul Azure ACR ou Public (non authentifié) Dockerhub est pris en charge. |
+| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée. Il peut s’agir de &quot;Spark&quot; ou de &quot;PySpark&quot;. |
+| `artifacts.default.image.packagingType` | Type de package du moteur. Cette valeur doit être définie sur `docker`. |
 | `artifacts.default.defaultMLInstanceConfigs` | Vos paramètres de fichier de configuration `pipeline.json`. |
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant les détails du nouveau moteur de pipeline de fonctionnalités créé, y compris son identifiant unique (`id`). L’exemple de réponse suivant est pour un moteur de pipeline de fonctionnalités PySpark.
+Une réponse réussie renvoie un payload contenant les détails du nouveau moteur de pipeline de fonctionnalités, y compris son identifiant unique (`id`). L’exemple de réponse suivant concerne un moteur de pipeline de fonctionnalités PySpark.
 
 ```json
 {

@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Groupe de champs de schéma de consentement IAB TCF 2.0
 topic-legacy: overview
 description: Ce document fournit un aperçu du groupe de champs de schéma de consentement IAB TCF 2.0 pour la classe XDM ExperienceEvent.
-source-git-commit: 7a0ac3970713e95438c6f0fdbd6175545ea7fdd0
+exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 2%
 
 ---
-
 
 # [!UICONTROL Groupe de champs ] de schéma de consentement IAB TCF 2.0
 

@@ -1,13 +1,13 @@
 ---
 title: Récupération des ID Experience Cloud à l’aide du SDK Web de Adobe Experience Platform
 description: Découvrez comment récupérer les Adobe Experience Cloud ID (ECID) à l’aide du SDK Web de Adobe Experience Platform.
-seo-description: Découvrez comment obtenir l’identifiant Adobe Experience Cloud.
+seo-description: Learn how to get Adobe Experience Cloud Id.
 keywords: Identité;identité propriétaire;service d’identité;identité tierce;migration des identifiants;identifiant visiteur;identité tierce;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;synchroniser les identités;syncIdentity;sendEvent;identityMap;Principal;ecid;espace de noms d’identité;idd’espace de noms;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
 source-git-commit: d753cfca6f518dfe2cafa1cb30ad26bd0b591c54
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 5%
+source-wordcount: '1209'
+ht-degree: 6%
 
 ---
 
@@ -49,7 +49,7 @@ Si le transfert côté serveur est actuellement activé et que vous utilisez `ap
 
 ## Récupération de l’identifiant visiteur et de l’identifiant de région
 
-Si vous souhaitez utiliser l’identifiant visiteur unique, utilisez la commande `getIdentity`. `getIdentity` renvoie l’ECID existant pour le visiteur actuel. Pour les nouveaux visiteurs qui n’ont pas encore d’ECID, cette commande génère un nouvel ECID. `getIdentity` renvoie également l’identifiant de région du visiteur. Pour plus d’informations, consultez le [Guide de l’utilisateur de Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html) .
+Si vous souhaitez utiliser l’identifiant visiteur unique, utilisez la commande `getIdentity`. `getIdentity` renvoie l’ECID existant pour le visiteur actuel. Pour les nouveaux visiteurs qui n’ont pas encore d’ECID, cette commande génère un nouvel ECID. `getIdentity` renvoie également l’identifiant de région du visiteur. Pour plus d’informations, consultez le [Guide de l’utilisateur de Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=fr) .
 
 >[!NOTE]
 >

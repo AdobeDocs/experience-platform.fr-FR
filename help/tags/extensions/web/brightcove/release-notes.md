@@ -1,8 +1,9 @@
 ---
 title: Notes de mise à jour de l’extension de suivi vidéo BrightCove
 description: Dernières notes de mise à jour pour l’extension de balises de suivi vidéo BrightCove dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 2e24a28f-b0c6-4aa5-a98f-3056024d312c
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 100%
 

@@ -1,8 +1,9 @@
 ---
 title: Présentation de l’extension Adobe Target
 description: Découvrez l’extension de balise pour Adobe Target dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 100%
 
@@ -30,7 +31,7 @@ Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], placez
 
 ### Paramètres at.js
 
-Tous les paramètres at.js, à l’exception de la temporisation, sont automatiquement extraits de la configuration at.js de l’interface utilisateur de Target. L’extension extrait les paramètres de l’interface utilisateur de Target uniquement lors de l’ajout initial. De ce fait, tous les paramètres doivent être gérés dans l’interface utilisateur de la collecte de données si d’autres mises à jour sont nécessaires.
+Tous les paramètres at.js, à l’exception de la temporisation, sont automatiquement extraits de la configuration at.js de l’interface utilisateur Target. L’extension extrait les paramètres de l’interface utilisateur de Target uniquement lors de l’ajout initial. De ce fait, tous les paramètres doivent être gérés dans l’interface utilisateur de la collecte de données si d’autres mises à jour sont nécessaires.
 
 Les options de configuration disponibles sont les suivantes :
 
@@ -71,7 +72,7 @@ Pour plus d’informations sur le fonctionnement du délai d’expiration, consu
 
 #### Autres paramètres at.js disponibles dans l’interface utilisateur de Target
 
-Plusieurs paramètres sont disponibles sur la page [!UICONTROL paramètres Edit at.js] de l’interface utilisateur Target et ne font pas partie de l’extension Target. Voici quelques solutions suggérées :
+Plusieurs des paramètres disponibles sur la page [!UICONTROL Paramètres Edit at.js] de l’interface utilisateur Target ne font pas partie de l’extension Target. Voici quelques solutions suggérées :
 
 * Auto-create global mbox (Créer automatiquement la mbox globale) : ce paramètre est remplacé par l’action Fire Global Mbox (Déclencher la mbox globale) dans l’extension Target.
 * Library Header (En-tête de bibliothèque) : ce paramètre ne fait pas partie de l’extension Target. Placez le code devant être chargé avant at.js dans une action Core Extension (Extension Core) > Custom Code (Code personnalisé) avant d’utiliser l’action Load Target (Charger Target).
@@ -85,7 +86,7 @@ L’extension Target permet d’effectuer les actions suivantes dans la partie �
 
 ### Load Target (Charger Target)
 
-Ajoutez cette action à l’endroit correspondant de votre règle de balise pour charger Target dans le cadre de votre règle. Cette opération charge la bibliothèque at.js sur la page. Dans la plupart des mises en œuvre, Target doit être chargé sur chacune des pages de votre site.
+Ajoutez cette action à votre règle de balise pour charger Target dans le cadre de votre règle. Cette opération charge la bibliothèque at.js sur la page. Dans la plupart des mises en œuvre, Target doit être chargé sur chacune des pages de votre site.
 
 Aucune configuration n’est nécessaire.
 
@@ -130,11 +131,11 @@ Une fois cette règle enregistrée, vous devez l’ajouter à une bibliothèque 
 
 Les balises peuvent être déployées de manière asynchrone. Si vous chargez la bibliothèque de balises avec Target de manière asynchrone, alors Target sera également chargé de manière asynchrone. Ce scénario est entièrement pris en charge, mais il faut tenir compte d’un autre aspect.
 
-Dans les déploiements asynchrones, il est possible que la page termine de rendre le contenu par défaut avant que la bibliothèque Target ne soit complètement chargée et que le contenu ait été permuté. Cela peut entraîner un « scintillement », c’est-à-dire que le contenu par défaut s’affiche brièvement avant d’être remplacé par le contenu personnalisé spécifié par Target. Pour éviter ce problème, nous vous suggérons d’utiliser un fragment de code de masquage préalable et de charger le lot de balises de manière asynchrone.
+Avec les déploiements asynchrones, il est possible que la page termine de rendre le contenu par défaut avant que la bibliothèque Target ne soit complètement chargée et que le contenu ait été permuté. Cela peut entraîner un « scintillement », c’est-à-dire que le contenu par défaut s’affiche brièvement avant d’être remplacé par le contenu personnalisé spécifié par Target. Pour éviter ce scintillement, nous vous suggérons d’utiliser un fragment de code de pré-masquage préalable et de charger le lot de balise de manière asynchrone pour éviter tout scintillement de contenu.
 
 Voici quelques éléments à garder à l’esprit lors de l’utilisation du fragment de code de masquage préalable :
 
-* Le fragment de code doit être ajouté avant le chargement du code incorporé d’en-tête de balise.
+* Le code doit être ajouté avant de charger le code incorporé d’en-tête de balise.
 * Ce code ne peut pas être géré par des balises. Il doit donc être ajouté directement à la page.
 * La page s’affiche lorsque l’un des événements suivants se produit en premier lieu :
    * Lorsque la réponse mbox globale a été reçue.

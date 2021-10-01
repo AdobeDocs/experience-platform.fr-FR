@@ -4,7 +4,8 @@ title: Création d’une connexion à la source du Snowflake dans l’interface 
 topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source de Snowflake à l’aide de l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: 2e717f33b487430220bd3bb7812558cde81d8852
+exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
+source-git-commit: db483110b8bfd5290f6a9a30fdb008f478fdbbf4
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 7%

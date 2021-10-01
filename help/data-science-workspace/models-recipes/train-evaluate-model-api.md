@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform ; formation et évaluation ; Espace de travail de données ; sujets populaires ; API d’apprentissage automatique Sensei
+keywords: Experience Platform;formation et évaluation;Data Science Workspace;rubriques les plus consultées;API Sensei Machine Learning
 solution: Experience Platform
-title: Formation et évaluation d'un modèle à l'aide de l'API d'apprentissage automatique Sensei
+title: Formation et évaluation d’un modèle à l’aide de l’API Sensei Machine Learning
 topic-legacy: tutorial
 type: Tutorial
-description: Ce didacticiel vous montrera comment créer, former et évaluer un modèle à l'aide d'appels d'API d'apprentissage automatique Sensei.
+description: Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’aide d’appels d’API Sensei Machine Learning.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-translation-type: tm+mt
 source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1235'
@@ -14,7 +13,7 @@ ht-degree: 92%
 
 ---
 
-# Former et évaluer un modèle à l&#39;aide de l&#39;API [!DNL Sensei Machine Learning]
+# Formation et évaluation d’un modèle à l’aide de l’API [!DNL Sensei Machine Learning]
 
 
 Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’aide d’appels API. Reportez-vous à [ce document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) pour obtenir une liste détaillée de la documentation sur les API.
@@ -23,7 +22,7 @@ Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’a
 
 Suivez la procédure [Importer une recette empaquetée à l’aide de l’API](./import-packaged-recipe-api.md) pour créer un moteur, ce qui est nécessaire pour former et évaluer un modèle à l’aide de l’API.
 
-Suivez le [didacticiel d’authentification de l’API Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) pour passer des appels d’API au début.
+Suivez le [tutoriel sur l’authentification de l’API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis) pour commencer à effectuer des appels d’API.
 
 Grâce au tutoriel, vous devez maintenant disposer des valeurs suivantes :
 
@@ -41,7 +40,7 @@ Nous utiliserons les API pour créer une exécution d’expérience pour la form
 
 >[!NOTE]
 >
->Les termes « Engine », « MLInstance », « MLService », « Experiment » et « Model »* ne sont pas désignés de la même façon dans l’interface utilisateur. Si vous venez de l’interface utilisateur, le tableau ci-dessous mappe les différences.
+>Les termes « Engine », « MLInstance », « MLService », « Experiment » et « Model »* ne sont pas désignés de la même façon dans l’interface utilisateur. Si vous venez de l’interface utilisateur, le tableau suivant associe les différences.
 
 | Terme de l’interface utilisateur | Terme de l’API |
 | --- | --- |
@@ -126,7 +125,7 @@ curl -X POST \
 >
 > Dans la `{JSON_PAYLOAD}`, nous définissons les paramètres utilisés pour la formation et la notation dans le tableau `tasks`. `{ENGINE_ID}` représente l’identifiant du moteur que vous souhaitez utiliser et le champ `tag` est un paramètre facultatif utilisé pour identifier l’instance.
 
-La réponse contient le `{INSTANCE_ID}` qui représente l&#39;instance MLInstance créée. Vous pouvez créer plusieurs MLInstances de modèle avec des configurations différentes.
+La réponse contient la balise `{INSTANCE_ID}` qui représente l’instance MLInstance créée. Vous pouvez créer plusieurs MLInstances de modèle avec des configurations différentes.
 
 **Réponse**
 

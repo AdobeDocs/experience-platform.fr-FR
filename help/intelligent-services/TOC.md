@@ -6,8 +6,8 @@ breadcrumb-title: Guide des services intelligents
 user-guide-description: Utilisez les services intelligents d’IA pour générer des scores, découvrir des insights et créer des segments à partir des données de vos événements marketing.
 feature: Data Science Workspace
 source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
-workflow-type: ht
-source-wordcount: '124'
+workflow-type: tm+mt
+source-wordcount: '121'
 ht-degree: 100%
 
 ---

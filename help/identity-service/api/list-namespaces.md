@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; accueil ; sujets populaires ; liste d'espace de nommage ; espace de nommage liste
+keywords: Experience Platform;accueil;rubriques populaires;liste d’espaces de noms;espace de noms de liste
 solution: Experience Platform
-title: Espaces de nommage d'identité disponibles pour la liste
+title: Liste des espaces de noms d’identité disponibles
 topic-legacy: API guide
-description: Liste de tous les espaces de nommage disponibles.
+description: Répertorier tous les espaces de noms disponibles.
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '83'
@@ -13,7 +12,7 @@ ht-degree: 44%
 
 ---
 
-# Espaces de nommage d&#39;identité liste disponibles
+# Liste des espaces de noms d’identité disponibles
 
 **Format d’API**
 
@@ -34,11 +33,11 @@ curl -X GET \
 
 **Réponse**
 
-La réponse comprend un tableau d’objets, chaque objet représentant un espace de noms disponible. Les Espaces de nommage dont la valeur &quot;[!UICONTROL custom]&quot; est &quot;[!UICONTROL false]&quot; sont des espaces de nommage standard, tandis que ceux dont la valeur &quot;[!UICONTROL custom]&quot; est &quot;[!UICONTROL true]&quot; sont des espaces de nommage créés par votre organisation.
+La réponse comprend un tableau d’objets, chaque objet représentant un espace de noms disponible. Les espaces de noms avec une valeur &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL false]&quot; sont des espaces de noms standard, tandis que ceux avec une valeur &quot;[!UICONTROL personnalisée]&quot; de &quot;[!UICONTROL true]&quot; sont des espaces de noms que votre organisation a créés.
 
 >[!NOTE]
 >
->Cette réponse a été tronquée pour l’espace.
+>Cette réponse a été tronquée pour des raisons de place.
 
 ```json
 [

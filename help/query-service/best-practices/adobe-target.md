@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; exemples de requêtes ; exemple de requête ; adobe cible ;
+keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;exemples de requêtes;exemple de requête;adobe target;
 solution: Experience Platform
-title: Exemples de Requêtes pour les données Adobe Target
+title: Exemples de requêtes pour les données Adobe Target
 topic-legacy: queries
-description: Les données issues d’Adobe Target sont transformées en schéma de modèle de données d’expérience et ingérées dans Experience Platform en tant que jeux de données. Ce document contient des exemples de requêtes pour l’utilisation de Requête Service avec vos ensembles de données Adobe Target.
+description: Les données issues d’Adobe Target sont transformées en schéma de modèle de données d’expérience et ingérées dans Experience Platform en tant que jeux de données. Ce document contient des exemples de requêtes pour utiliser Query Service avec vos jeux de données Adobe Target.
 exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '328'
@@ -15,31 +14,31 @@ ht-degree: 51%
 
 # Exemples de requêtes pour les données d’Adobe Target
 
-Les données d’Adobe Target sont transformées en schéma XDM du Événement d’expérience et ingérées dans Adobe Experience Platform en tant que jeux de données. Il existe de nombreux cas d’utilisation pour Adobe Experience Platform Requête Service avec ces données et les exemples de requêtes suivants doivent fonctionner avec vos ensembles de données Adobe Target.
+Les données d’Adobe Target sont transformées en schéma XDM d’événement d’expérience et ingérées dans Adobe Experience Platform en tant que jeux de données pour vous. Il existe de nombreux cas d’utilisation de Adobe Experience Platform Query Service avec ces données, et les exemples de requêtes suivants doivent fonctionner avec vos jeux de données Adobe Target.
 
-Dans l’Experience Platform, le nom du jeu de données créé automatiquement est &quot;Événements d’expérience Adobe Target&quot;. Lorsque vous utilisez ce jeu de données avec des requêtes, vous devez utiliser le nom `adobe_target_experience_events`.
+Dans Experience Platform, le nom du jeu de données créé automatiquement est &quot;Adobe Target Experience Events&quot;. Lors de l’utilisation de ce jeu de données avec des requêtes, vous devez utiliser le nom `adobe_target_experience_events`.
 
 ## Mappage de champs XDM partiels de haut niveau
 
-La liste suivante présente les champs de Cible qui correspondent à leurs champs XDM correspondants.
+La liste suivante répertorie les champs Target qui correspondent aux champs XDM correspondants.
 
 >[!NOTE]
 >
-> L&#39;utilisation de `[ ]` dans le champ XDM indique un tableau.
+> L’utilisation de `[ ]` dans le champ XDM indique un tableau.
 
 - mboxName: `_experience.target.mboxname`
 - Identifiant d’activité: `_experience.target.activities.activityID`
 - Identifiant d’expérience: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID`
 - Identifiant de segment: `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id`
 - Portée d’événement: `_experience.target.activities[].activityEvents[].eventScope`
-   - Ce champ effectue le suivi des nouveaux visiteurs et des visites.
+   - Ce champ effectue le suivi des nouveaux visiteurs et visites.
 - Identifiant d’étape: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID`
    - Ce champ est un ID d’étape personnalisé pour Adobe Campaign.
 - Prix total: `commerce.order.priceTotal`
 
 ## Exemples de requêtes
 
-Les requêtes suivantes présentent des exemples de requêtes couramment utilisées avec Adobe Target.
+Les requêtes suivantes présentent des exemples de requêtes fréquemment utilisées avec Adobe Target.
 
 Dans les exemples suivants, vous devrez modifier le code SQL pour remplir les paramètres attendus pour vos requêtes en fonction du jeu de données, des variables ou de la période que vous souhaitez évaluer. Spécifiez les paramètres partout où vous voyez `{ }` dans le SQL.
 

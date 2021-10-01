@@ -1,6 +1,6 @@
 ---
-title: Création de segments à plusieurs entités dans Adobe Experience Platform
-description: Cette vidéo fournit une compréhension de base de la création d’un segment à plusieurs entités à l’aide de l’interface utilisateur de la plate-forme.
+title: Création de segments d’entités multiples dans Adobe Experience Platform
+description: Cette vidéo fournit une compréhension de base de la création d’un segment d’entités multiples à l’aide de l’interface utilisateur de Platform.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -9,21 +9,20 @@ audience: all
 doc-type: video
 activity: understand
 thumbnail: null
-translation-type: tm+mt
-source-git-commit: d06e3c979b9279c6178e5049442fa009927bbb11
+exl-id: f6d15ca7-375c-4c8a-96a8-9079e5a44810
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
+# Création de segments d’entités multiples dans l’interface utilisateur de l’Experience Platform
 
-# Création de segments à plusieurs entités dans l’interface utilisateur de l’Experience Platform
-
-La vidéo suivante est destinée à vous aider à comprendre la création de segments dynamiques. Il présente un exemple d&#39;expérience client suivi d&#39;une visite rapide des principales fonctionnalités de l&#39;interface [!DNL Platform]. Pour en savoir plus sur la segmentation multientité, consultez le guide sur la [segmentation multientité](../multi-entity-segmentation.md).
+La vidéo suivante est destinée à vous aider à comprendre la création de segments dynamiques. Il présente un exemple d’expérience client suivi d’un aperçu rapide des fonctionnalités clés de l’interface [!DNL Platform]. Pour en savoir plus sur la segmentation d’entités multiples, consultez le guide sur la [segmentation d’entités multiples](../multi-entity-segmentation.md).
 
 >[!NOTE]
 >
->L&#39;interface utilisateur de l&#39;Experience Platform est fréquemment mise à jour et peut avoir changé depuis l&#39;enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, consultez le [Guide du créateur de segments](../ui/segment-builder.md).
+>L’interface utilisateur de l’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous au [guide du créateur de segments](../ui/segment-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32179?quality=12&learn=on)

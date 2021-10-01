@@ -2,7 +2,8 @@
 keywords: personnalisation personnalisée ; destination; destination personnalisée de la plateforme d’expérience ;
 title: Connexion de personnalisation personnalisée (bêta)
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer des informations de segment à partir de Adobe Experience Platform. Cette destination fournit des fonctionnalités 1:1 en temps réel et une personnalisation basée sur l’appartenance à un segment d’un profil d’utilisateur.
-source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
+exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
+source-git-commit: ba27484655438df654a1e062309ddd30638f62a5
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 8%

@@ -1,8 +1,9 @@
 ---
 title: Notes de mise à jour de l’extension Adobe Target
-description: Dernières notes de mise à jour de l’extension de balise Adobe Target dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Dernières notes de mise à jour pour lʼextension de balise Adobe Target dans Adobe Experience Platform.
+exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 100%
 
@@ -42,13 +43,13 @@ ht-degree: 100%
 * Auparavant, la bibliothèque ECID effectuait deux appels de blocage avant qu’at.js puisse récupérer des expériences. Cela a été réduit à un seul appel, ce qui améliore considérablement les performances.
 
 >[!NOTE]
->Mettez à niveau votre extension de balise ECID pour Adobe Experience Platform vers la version 4.4.1 afin de profiter de cette amélioration des performances.
+>Mettez à niveau votre extension de balise ECID pour Adobe Experience Platform vers la version 4.4.1 afin de profiter de cette amélioration des performances.
 
 ## 31 juillet 2019
 
 ### Extension Adobe Target 0.10.1
 
-* Correctif pour les paramètres qui gèrent l’extension de balise pour Adobe Target
+* Correctif pour les paramètres qui gèrent lʼextension de balise pour Adobe Target
 
 ## 4 mai 2019
 
@@ -74,7 +75,7 @@ ht-degree: 100%
 
 #### **Fonctionnalités**
 
-* Mise à jour d’extension pour utiliser le fichier at.js 1.7.0 avec la fonctionnalité d’accord préalable prise en charge via les balises pour contrôler comment et quand la balise Target est déclenchée. Reportez-vous à la documentation relative aux balises pour savoir comment configurer l’implémentation de la fonctionnalité d’accord préalable. Ajout de la possibilité de choisir si un paramètre mbox associé à une valeur vide doit être envoyé à Target ou non.
+* Mise à jour dʼextension pour utiliser le fichier at.js 1.7.0 avec la fonctionnalité dʼaccord préalable prise en charge par les balises pour contrôler comment et quand la balise Target est déclenchée. Consultez la documentation relative aux balises pour savoir comment paramétrer la mise en œuvre de la fonctionnalité dʼaccord préalable. Ajout de la possibilité de choisir si un paramètre mbox associé à une valeur vide doit être envoyé à Target ou non.
 
 ## 23 janvier 2019
 
@@ -140,7 +141,7 @@ ht-degree: 100%
 
 #### **Correctifs**
 
-* Correction d’une erreur dans l’extension Adobe Target qui empêchait Visual Experience Composer d’afficher la page en cas de déploiement via les balises.
+* Correction dʼune erreur dans lʼextension Adobe Target qui empêchait Visual Experience Composer dʼafficher la page en cas de déploiement via les balises.
 
 ## 8 février 2018
 

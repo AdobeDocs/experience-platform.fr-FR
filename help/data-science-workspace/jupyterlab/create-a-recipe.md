@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform ; JupyterLab ; recette ; cahiers ; Espace de travail des sciences de données ; rubriques populaires ; créer une recette
+keywords: Experience Platform;JupyterLab;recette;notebooks;Data Science Workspace;rubriques les plus consultées;créer une recette
 solution: Experience Platform
-title: Créer une recette à l'aide de portables Jupyter
+title: Création d’une recette à l’aide de notebooks Jupyter
 topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel se déroulera en deux temps. Tout d’abord, vous créerez un modèle d’apprentissage automatique à l’aide d’un modèle dans JupyterLab Notebook. Ensuite, vous utiliserez le notebook pour recevoir le workflow dans JupyterLab afin de créer une recette dans Data Science Workspace.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2364'
@@ -14,9 +13,9 @@ ht-degree: 81%
 
 ---
 
-# Création d&#39;une recette à l&#39;aide de portables Jupyter
+# Création d’une recette à l’aide de notebooks Jupyter
 
-Ce tutoriel se déroulera en deux temps. Tout d’abord, vous créerez un modèle d’apprentissage automatique à l’aide d’un modèle dans [!DNL JupyterLab Notebook]. Ensuite, vous allez utiliser le bloc-notes pour exécuter le processus de recette dans [!DNL JupyterLab] pour créer une recette dans [!DNL Data Science Workspace].
+Ce tutoriel se déroulera en deux temps. Tout d’abord, vous créerez un modèle d’apprentissage automatique à l’aide d’un modèle dans [!DNL JupyterLab Notebook]. Ensuite, vous utiliserez le notebook pour le processus de recette dans [!DNL JupyterLab] afin de créer une recette dans [!DNL Data Science Workspace].
 
 ## Concepts présentés :
 
@@ -25,11 +24,11 @@ Ce tutoriel se déroulera en deux temps. Tout d’abord, vous créerez un modèl
 - **Formation :** la formation est le processus de formation de modèles et de connaissances à partir de données étiquetées.
 - **Notation :** la notation est le processus de génération d’informations à partir de données en utilisant un modèle formé.
 
-## Commencez avec l&#39;environnement d&#39;ordinateur portable [!DNL JupyterLab]
+## Prise en main de l’environnement de notebook [!DNL JupyterLab]
 
-Vous pouvez créer une recette à partir de zéro dans [!DNL Data Science Workspace]. Pour début, accédez à [Adobe Experience Platform](https://platform.adobe.com) et cliquez sur l&#39;onglet **[!UICONTROL Ordinateurs portables]** à gauche. Créez un bloc-notes en sélectionnant le modèle Créateur de recettes dans le [!DNL JupyterLab Launcher].
+La création d’une recette à partir de zéro peut être effectuée dans [!DNL Data Science Workspace]. Pour commencer, accédez à [Adobe Experience Platform](https://platform.adobe.com) et cliquez sur l’onglet **[!UICONTROL Notebooks]** à gauche. Créez un nouveau notebook en sélectionnant le modèle Recipe Builder à partir de [!DNL JupyterLab Launcher].
 
-Le bloc-notes [!UICONTROL Recipe Builder] vous permet d&#39;exécuter des actions de formation et de notation dans le bloc-notes. Vous avez ainsi la possibilité d’apporter des modifications à leurs méthodes de `train()` et de `score()` entre deux expériences en cours d’exécution sur les données de formation et de notation. Une fois que vous êtes satisfait des résultats de la formation et du score, vous pouvez créer une recette à utiliser dans [!DNL Data Science Workspace] à l&#39;aide du bloc-notes pour la fonctionnalité de recette intégrée au bloc-notes du Générateur de recettes.
+Le notebook [!UICONTROL Recipe Builder] vous permet d’exécuter des opérations de formation et de notation dans le notebook. Vous avez ainsi la possibilité d’apporter des modifications à leurs méthodes de `train()` et de `score()` entre deux expériences en cours d’exécution sur les données de formation et de notation. Une fois que vous êtes satisfait des résultats de la formation et de la notation, vous pouvez créer une recette à utiliser dans [!DNL Data Science Workspace] à l’aide de la fonctionnalité notebook vers recette intégrée au notebook Recipe Builder.
 
 >[!NOTE]
 >
@@ -37,9 +36,9 @@ Le bloc-notes [!UICONTROL Recipe Builder] vous permet d&#39;exécuter des action
 
 ![](../images/jupyterlab/create-recipe/recipe_builder.png)
 
-Lorsque vous cliquez sur le bloc-notes du Générateur de recettes depuis le lanceur, le bloc-notes s&#39;ouvre dans l&#39;onglet. Le modèle utilisé dans le notebook est la recette Python de prévision des ventes au détail, qui se trouve également dans [ce référentiel public](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/).
+Lorsque vous cliquez sur le notebook Recipe Builder à partir du lanceur, le notebook est ouvert dans l’onglet . Le modèle utilisé dans le notebook est la recette Python de prévision des ventes au détail, qui se trouve également dans [ce référentiel public](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/).
 
-Vous remarquerez que dans la barre d&#39;outils, il y a trois autres actions : **[!UICONTROL Train]**, **[!UICONTROL Score]** et **[!UICONTROL Créer une recette]**. Ces icônes s’affichent uniquement dans le bloc-notes [!UICONTROL Générateur de recettes]. Vous trouverez plus d’informations sur ces actions [dans la section Formation et notation](#training-and-scoring) après avoir créé votre recette dans le notebook.
+Vous remarquerez que dans la barre d’outils, il existe trois autres actions, à savoir : **[!UICONTROL Former]**, **[!UICONTROL Score]** et **[!UICONTROL Créer une recette]**. Ces icônes s’affichent uniquement dans le notebook [!UICONTROL Recipe Builder]. Vous trouverez plus d’informations sur ces actions [dans la section Formation et notation](#training-and-scoring) après avoir créé votre recette dans le notebook.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -55,7 +54,7 @@ Effectuez les modifications nécessaires dans la cellule. Lorsque vous avez term
 
 ## Prise en main du notebook Recipe Builder
 
-Maintenant que vous connaissez les bases de l&#39;environnement de portables [!DNL JupyterLab], vous pouvez commencer à regarder les fichiers qui constituent une recette de modèle d&#39;apprentissage automatique. Les fichiers concernés sont présentés ici :
+Maintenant que vous connaissez les principes de base de l’environnement de notebook [!DNL JupyterLab], vous pouvez commencer à consulter les fichiers qui constituent une recette de modèle d’apprentissage automatique. Les fichiers concernés sont présentés ici :
 
 - [Fichier des exigences](#requirements-file)
 - [Fichiers de configuration](#configuration-files)
@@ -67,7 +66,7 @@ Maintenant que vous connaissez les bases de l&#39;environnement de portables [!D
 
 ### Fichier des exigences {#requirements-file}
 
-Le fichier des exigences sert à définir les bibliothèques supplémentaires que vous souhaitez utiliser dans la recette. En cas de dépendance, vous pouvez spécifier le numéro de version. Pour rechercher d&#39;autres bibliothèques, visitez [anaconda.org](https://anaconda.org). Pour savoir comment formater le fichier de configuration requise, visitez [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). Voici une liste non exhaustive des principales bibliothèques déjà utilisées :
+Le fichier des exigences sert à définir les bibliothèques supplémentaires que vous souhaitez utiliser dans la recette. En cas de dépendance, vous pouvez spécifier le numéro de version. Pour rechercher d’autres bibliothèques, consultez la page [anaconda.org](https://anaconda.org). Pour savoir comment formater le fichier des exigences, consultez la page [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). Voici une liste non exhaustive des principales bibliothèques déjà utilisées :
 
 ```JSON
 python=3.6.7
@@ -79,7 +78,7 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->Les bibliothèques ou versions spécifiques que vous ajoutez peuvent être incompatibles avec les bibliothèques mentionnées ci-dessus. De plus, si vous choisissez de créer manuellement un fichier d&#39;environnement, le champ `name` n&#39;est pas autorisé à être remplacé.
+>Les bibliothèques ou versions spécifiques que vous ajoutez peuvent être incompatibles avec les bibliothèques mentionnées ci-dessus. De plus, si vous choisissez de créer manuellement un fichier d’environnement, le champ `name` ne peut pas être remplacé.
 
 ### Fichiers de configuration {#configuration-files}
 
@@ -92,7 +91,7 @@ Les utilisateurs doivent renseigner les variables suivantes avant d’exécuter 
 - `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA`
 - `scoringResultsDataSetId`
 
-Pour trouver le jeu de données et les ID de schéma, accédez à l&#39;onglet de données ![Data tab](../images/jupyterlab/create-recipe/dataset-tab.png) dans les blocs-notes de la barre de navigation de gauche (sous l&#39;icône de dossier).
+Pour rechercher les identifiants du jeu de données et du schéma, accédez à l’onglet Données ![Onglet Données](../images/jupyterlab/create-recipe/dataset-tab.png) dans les notebooks dans la barre de navigation de gauche (sous l’icône de dossier).
 
 ![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
@@ -105,17 +104,17 @@ Les paramètres de configuration suivants sont définis par défaut lorsque vous
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
 
-## Chargeur de données d’apprentissage  {#training-data-loader}
+## Chargeur de données d’apprentissage {#training-data-loader}
 
 Le chargeur de données d’apprentissage est destiné à instancier les données utilisées pour créer le modèle d’apprentissage automatique. En règle générale, le chargeur de données d’apprentissage accomplit deux tâches :
-- Charger les données de [!DNL Platform]
+- Chargement de données à partir de [!DNL Platform]
 - Préparation des données et ingénierie des fonctionnalités
 
 Les deux prochaines sections traiteront du chargement et de la préparation des données.
 
-### Chargement des données  {#loading-data}
+### Chargement des données {#loading-data}
 
-Cette étape utilise le [cadre de données pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Les données peuvent être chargées à partir de fichiers dans [!DNL Adobe Experience Platform] à l&#39;aide du SDK [!DNL Platform] (`platform_sdk`) ou à partir de sources externes utilisant les fonctions `read_csv()` ou `read_json()` de pandas.
+Cette étape utilise le [cadre de données pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Les données peuvent être chargées à partir de fichiers dans [!DNL Adobe Experience Platform] à l’aide du SDK [!DNL Platform] (`platform_sdk`) ou à partir de sources externes à l’aide des fonctions `read_csv()` ou `read_json()` de pandas.
 
 - [[!DNL Platform SDK]](#platform-sdk)
 - [Sources externes](#external-sources)
@@ -128,7 +127,7 @@ Cette étape utilise le [cadre de données pandas](https://pandas.pydata.org/pan
 
 Pour un tutoriel détaillé sur l’utilisation du chargeur de données `platform_sdk`, consultez le [guide SDK Platform](../authoring/platform-sdk.md). Ce tutoriel fournit des informations sur l’authentification de création, la lecture et l’écriture basiques de données.
 
-### Sources externes  {#external-sources}
+### Sources externes {#external-sources}
 
 Cette section vous explique comment importer un fichier JSON ou CSV dans un objet pandas. La documentation officielle de la bibliothèque pandas se trouve ici :
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
@@ -148,9 +147,9 @@ df = pd.read_json(data)
 
 Vos données se trouvent maintenant dans l’objet « cadre de données » et peuvent être analysées et manipulées dans la [section suivante](#data-preparation-and-feature-engineering).
 
-### A partir du SDK de plate-forme
+### À partir du SDK Platform
 
-Vous pouvez charger des données à l’aide du SDK de plate-forme. La bibliothèque peut être importée en haut de la page en incluant la ligne :
+Vous pouvez charger des données à l’aide du SDK Platform. La bibliothèque peut être importée en haut de la page en incluant la ligne :
 
 `from platform_sdk.dataset_reader import DatasetReader`
 
@@ -173,7 +172,7 @@ def load(config_properties):
 
 >[!NOTE]
 >
->Comme mentionné dans la section [Fichier de configuration](#configuration-files), les paramètres de configuration suivants sont définis pour vous lorsque vous accédez aux données de l&#39;Experience Platform à l&#39;aide de `client_context` :
+>Comme mentionné dans la [section Fichier de configuration](#configuration-files), les paramètres de configuration suivants sont définis pour vous lorsque vous accédez aux données d’Experience Platform à l’aide de `client_context` :
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -182,7 +181,7 @@ def load(config_properties):
 
 Maintenant que vous disposez de vos données, vous pouvez commencer leur préparation ainsi que la conception des fonctionnalités.
 
-### Préparation des données et ingénierie des fonctionnalités  {#data-preparation-and-feature-engineering}
+### Préparation des données et ingénierie des fonctionnalités {#data-preparation-and-feature-engineering}
 
 Une fois les données chargées, elles sont préparées puis partagées entre les jeux de données `train` et `val`. Voici un échantillon de code :
 
@@ -214,7 +213,7 @@ Dans cet exemple, le jeu de données d’origine a subi cinq opérations :
 - Le décalage de `weeklySales` pour obtenir la valeur des ventes futures et antérieures
 - Le partage des données par date entre les jeux de données `train` et `val`
 
-D&#39;abord, les colonnes `week` et `year` sont créées et la colonne d&#39;origine `date` est convertie en [!DNL Python] [datetime](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html). Les valeurs Semaine et Année sont extraites de l’objet de datetime.
+Tout d’abord, les colonnes `week` et `year` sont créées et la colonne `date` d’origine est convertie en [!DNL Python] [datetime](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html). Les valeurs Semaine et Année sont extraites de l’objet de datetime.
 
 Ensuite, `storeType` est transformé en trois colonnes représentant les trois types de magasin différents, (`A`, `B` et `C`). Chacune contient une valeur booléenne qui indique quel `storeType` est vrai. La colonne `storeType` sera supprimée.
 
@@ -224,7 +223,7 @@ Ces données sont partagées entre les jeux de données `train` et `val`.
 
 La fonction `load()` doit être complétée avec les jeux de données `train` et `val` en tant que sortie.
 
-### Chargeur de données de notation  {#scoring-data-loader}
+### Chargeur de données de notation {#scoring-data-loader}
 
 La procédure de chargement des données pour notation est similaire à celle de chargement des données d’apprentissage de la fonction `split()`. Nous utilisons le SDK Data Access pour charger les données à partir de `scoringDataSetId` dans notre fichier `recipe.conf`.
 
@@ -299,7 +298,7 @@ df.dropna(0, inplace=True)
 
 La fonction `load()` de votre chargeur de données de notation doit comprendre le jeu de données de notation comme sortie.
 
-### Fichier Pipeline  {#pipeline-file}
+### Fichier Pipeline {#pipeline-file}
 
 Le fichier `pipeline.py` inclut la logique de formation et de notation.
 
@@ -349,7 +348,7 @@ def train(configProperties, data):
 
 Il faut souligner que selon votre application, vous aurez des arguments dans votre fonction `GradientBoostingRegressor()`. `xTrainingDataset` devrait contenir vos fonctionnalités utilisées pour la formation, tandis que `yTrainingDataset` devrait contenir vos étiquettes.
 
-### Notation  {#scoring}
+### Notation {#scoring}
 
 La fonction `score()` doit contenir l’algorithme de notation et renvoyer une mesure pour indiquer le degré de réussite du modèle. La fonction `score()` utilise les étiquettes des jeux de données de notation et le modèle formé pour générer un ensemble de fonctionnalités prédites. Ces valeurs prédites sont ensuite comparées aux fonctionnalités réelles du jeu de données de notation. Dans cet exemple, la fonction `score()` utilise le modèle formé pour prédire les fonctionnalités à l’aide des étiquettes du jeu de données de notation. Les fonctionnalités prédites sont renvoyées.
 
@@ -371,11 +370,11 @@ def score(configProperties, data, model):
     return data
 ```
 
-### Fichier Evaluator  {#evaluator-file}
+### Fichier Evaluator {#evaluator-file}
 
 Le fichier `evaluator.py` contient la logique de la manière dont vous souhaitez évaluer votre recette formée ainsi que la manière dont vos données d’apprentissage doivent être fractionnées. Dans l’exemple de ventes au détail, la logique de chargement et de préparation des données d’apprentissage sera incluse. Nous allons passer en revue les deux sections ci-dessous.
 
-### Fractionnement du jeu de données  {#split-the-dataset}
+### Fractionnement du jeu de données {#split-the-dataset}
 
 La phase de préparation des données pour la formation nécessite de fractionner le jeu de données à utiliser pour la formation et les tests. Ces données `val` seront utilisées implicitement pour évaluer le modèle après sa formation. Il s’agit d’un processus distinct de celui de notation.
 
@@ -394,7 +393,7 @@ def split(self, configProperties={}, dataframe=None):
     return train, val
 ```
 
-### Évaluation du modèle formé  {#evaluate-the-trained-model}
+### Évaluation du modèle formé {#evaluate-the-trained-model}
 
 La fonction `evaluate()` est exécutée après la formation du modèle et renvoie une mesure pour indiquer le degré de réussite du modèle. La fonction `evaluate()` utilise les étiquettes des jeux de données de test et le modèle formé pour prédire un ensemble de fonctionnalités. Ces valeurs prédites sont ensuite comparées aux fonctionnalités réelles du jeu de données de test. Voici quelques-uns des algorithmes de notation courants :
 - [Pourcentage d’erreur absolue moyen (MAPE)](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
@@ -423,9 +422,9 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 Vous remarquerez que la fonction renvoie un objet `metric` contenant un tableau de mesures d’évaluation. Ces mesures serviront à évaluer les performances du modèle formé.
 
-### Fichier Data Saver  {#data-saver-file}
+### Fichier Data Saver {#data-saver-file}
 
-Le fichier `datasaver.py` contient la fonction `save()` qui enregistre votre prédiction lors du test de notation. La fonction `save()` prend votre prédiction et utilise les API [!DNL Experience Platform Catalog], écrivez les données dans le `scoringResultsDataSetId` fichier `scoring.conf` que vous avez spécifié dans votre fichier .
+Le fichier `datasaver.py` contient la fonction `save()` qui enregistre votre prédiction lors du test de notation. La fonction `save()` récupère votre prédiction et utilise les API [!DNL Experience Platform Catalog], écrivez les données dans le `scoringResultsDataSetId` que vous avez spécifié dans votre fichier `scoring.conf`.
 
 L’exemple utilisé dans l’échantillon de recette des ventes au détail est illustré ici. Vous remarquez l’utilisation de la bibliothèque `DataSetWriter` pour écrire des données vers Platform :
 
@@ -456,7 +455,7 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-## Formation et notation  {#training-and-scoring}
+## Formation et notation {#training-and-scoring}
 
 Lorsque vous avez terminé de modifier votre notebook et que vous souhaitez former votre recette, vous pouvez cliquer sur les boutons associés en haut de la barre pour créer une session de formation dans la cellule. Lorsque vous cliquez sur le bouton, un journal des commandes et des sorties issues du script de formation s’affichera dans le notebook (sous la cellule `evaluator.py`). Conda installe d’abord toutes les dépendances, puis la formation commence.
 
@@ -464,13 +463,13 @@ Remarque : vous devez exécuter la formation au moins une fois avant de pouvoir
 
 À des fins de débogage, si vous souhaitez afficher la sortie masquée, ajoutez `debug` à la fin de la cellule de sortie et exécutez-la de nouveau.
 
-## Création d’une recette  {#create-recipe}
+## Création d’une recette {#create-recipe}
 
-Lorsque vous avez terminé de modifier la recette et que vous êtes satisfait de la sortie formation/score, vous pouvez créer une recette à partir du bloc-notes en appuyant sur **[!UICONTROL Créer une recette]** dans la barre de navigation supérieure droite.
+Lorsque vous avez terminé de modifier la recette et que vous êtes satisfait du résultat de formation/notation, vous pouvez créer une recette à partir du notebook en appuyant sur **[!UICONTROL Créer une recette]** dans la navigation en haut à droite.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Après avoir appuyé sur le bouton, vous êtes invité à saisir un nom de recette. Ce nom représente la recette réelle créée sur [!DNL Platform].
+Après avoir appuyé sur le bouton, vous êtes invité à saisir un nom de recette. Ce nom représente la recette créée sur [!DNL Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
@@ -489,11 +488,11 @@ Voici l’aspect de la recette une fois le processus terminé :
 > - Ne pas créer plusieurs recettes dans différents cahiers simultanément
 
 
-## Étapes suivantes  {#next-steps}
+## Étapes suivantes {#next-steps}
 
 En terminant ce tutoriel, vous avez appris à créer un modèle d’apprentissage automatique dans le notebook Recipe Builder. Vous avez également appris à utiliser le notebook pour recevoir le workflow dans le notebook afin de créer une recette dans [!DNL Data Science Workspace].
 
-Pour continuer à apprendre à utiliser les ressources dans [!DNL Data Science Workspace], veuillez visiter la liste déroulante [!DNL Data Science Workspace] recettes et modèles.
+Pour continuer à apprendre à utiliser les ressources dans [!DNL Data Science Workspace], consultez la liste déroulante [!DNL Data Science Workspace] recettes et modèles .
 
 ## Ressources supplémentaires {#additional-resources}
 

@@ -1,8 +1,9 @@
 ---
 title: Présentation de l’extension Adobe Privacy
 description: Découvrez lʼextension de balise Adobe Privacy dans Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 100%
 
@@ -44,13 +45,13 @@ Pour configurer dʼautres éléments, cliquez sur **[!UICONTROL Sélectionner un
 
 Cliquez sur **[!UICONTROL Sélectionner un élément]**, sélectionnez lʼélément à configurer, puis cliquez sur **[!UICONTROL Ajouter]** et saisissez le paramètre requis ou un élément de données. Actuellement, vous ne pouvez configurer que le paramètre `aamUUIDCookieName`.
 
-### Target
+### Cible
 
 ![](../../../images/ext-privacy-target.jpg)
 
 Saisissez le code client Target.
 
-### Visitor Service
+### Service visiteur
 
 ![](../../../images/ext-privacy-visitor.jpg)
 

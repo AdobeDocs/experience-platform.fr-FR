@@ -1,10 +1,11 @@
 ---
 title: Extensions Adobe
 description: Documentation portant sur les extensions de balises dans Adobe Experience Platform.
-seo-description: Documentation sur les extensions de balises fournies par les solutions Adobe.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
-source-wordcount: '81'
+seo-description: Documentation for the tag extensions provided by Adobe solutions.
+exl-id: 2433a64f-66f2-4c21-bdec-c6b8e1658b2b
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
+source-wordcount: '72'
 ht-degree: 100%
 
 ---

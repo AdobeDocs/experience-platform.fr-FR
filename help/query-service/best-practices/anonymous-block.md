@@ -1,7 +1,8 @@
 ---
 title: Exemples de requêtes de bloc anonymes
-description: 'Le bloc anonyme est une syntaxe SQL prise en charge par Adobe Experience Platform Query Service, qui vous permet d’exécuter efficacement une séquence de requêtes. '
-source-git-commit: dffa03d9ab8e26e2c99a359ae000022d6d469572
+description: Le bloc anonyme est une syntaxe SQL prise en charge par Adobe Experience Platform Query Service, qui vous permet d’exécuter efficacement une séquence de requêtes.
+exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
+source-git-commit: 50d4b49b43cf7882612e6de54cbbd680d549665a
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%

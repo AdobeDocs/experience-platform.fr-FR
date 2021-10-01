@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Type de données des informations web
 topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM (Experience Data Model), informations web.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+exl-id: bfb00835-5908-4baf-af2a-6d845710e340
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 4%
