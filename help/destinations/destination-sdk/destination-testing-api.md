@@ -2,9 +2,9 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/testing/destinationInstance/`, afin de tester si votre destination est configurée correctement et de vérifier l’intégrité des flux de données vers votre destination configurée.
 title: Opérations de l’API de test de destination
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 45cff6f0c4d4fd63a17108087edec0184cbf9703
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '664'
 ht-degree: 2%
 
 ---
@@ -20,6 +20,8 @@ Cette page répertorie et décrit toutes les opérations d’API que vous pouvez
 Vous envoyez des requêtes au point de terminaison de test avec ou sans ajouter de profils à l’appel . Si vous n’envoyez aucun profil sur la requête, Adobe les génère en interne et les ajoute à la requête.
 
 Vous pouvez utiliser l’[API de génération d’exemple de profil](./sample-profile-generation-api.md) pour créer des profils à utiliser dans les requêtes de l’API de test de destination.
+
+## Comment obtenir l’ID d’instance de destination {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >
