@@ -113,7 +113,6 @@ Une fois que vous avez créé un schéma et un flux de données, l’étape suiv
 >
 >* [Installation du SDK](../edge/fundamentals/installing-the-sdk.md)
 >* [Configuration du SDK](../edge/fundamentals/configuring-the-sdk.md)
-
 >
 >Notez également que même si vous souhaitez uniquement utiliser le transfert d’événement, vous devez tout de même installer et configurer le SDK comme décrit précédemment avant de configurer le transfert d’événement à une [étape ultérieure](#event-forwarding).
 
