@@ -1,14 +1,18 @@
 ---
 title: Contrôle d’accès dans l’édition B2B de la plateforme de données clients en temps réel
 description: Présentation du rôle du contrôle d’accès dans l’édition B2B de la plateforme de données clients en temps réel.
-source-git-commit: 4e52d77cce8fde1d0a9e8b86264f19e5db7ceef9
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Contrôle d’accès dans la plateforme de données clients en temps réel B2B (version bêta)
+# (Version bêta) Contrôle d’accès dans la plateforme de données clients en temps réel de l’édition B2B
+
+>[!IMPORTANT]
+>
+>La plateforme de données clients en temps réel de l’édition B2B est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
 
 Le contrôle d’accès pour l’édition B2B de la plateforme CDP en temps réel est géré par le biais de [Adobe Admin Console](http://adminconsole.adobe.com). Cette fonctionnalité exploite les profils de produit dans [!DNL Admin Console], ce qui vous permet de lier les utilisateurs à des autorisations et des environnements de test. Grâce à cette fonctionnalité, les administrateurs peuvent accorder ou restreindre l’accès à des fonctionnalités spécifiques de la plateforme de données clients en temps réel, telles que l’interface utilisateur B2B, pour des ensembles d’utilisateurs définis.
 

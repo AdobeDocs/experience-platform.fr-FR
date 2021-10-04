@@ -5,14 +5,18 @@ title: Authentification de votre connecteur source Marketo
 topic-legacy: overview
 description: Ce document fournit des informations sur la génération de vos informations d’authentification Marketo.
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
-source-git-commit: 50e92ac8c1eccc9ccfb6b078ad8b996817a6d693
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 0%
+source-wordcount: '622'
+ht-degree: 2%
 
 ---
 
-# Authentification de votre connecteur source [!DNL Marketo Engage]
+# (Version bêta) Authentification de votre connecteur source [!DNL Marketo Engage]
+
+>[!IMPORTANT]
+>
+>La source [!DNL Marketo Engage] de Adobe Experience Platform est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
 
 Avant de pouvoir créer un connecteur source [!DNL Marketo Engage] (ci-après appelé &quot;[!DNL Marketo]&quot;), vous devez d’abord configurer un service personnalisé via l’interface [!DNL Marketo], ainsi que récupérer les valeurs de votre ID Munchkin, de votre ID client et de votre secret client.
 
