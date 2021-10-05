@@ -4,10 +4,10 @@ title: Type de données Consentements et Préférences
 description: Le type de données Consentement pour la confidentialité, la personnalisation et les préférences marketing est destiné à prendre en charge la collecte des autorisations et préférences client générées par les plateformes de gestion du consentement (CMP) et d’autres sources provenant de vos opérations de données.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: da6131494d80dbd2bbd4496876f044f5026b0e12
 workflow-type: tm+mt
-source-wordcount: '1905'
-ht-degree: 3%
+source-wordcount: '2039'
+ht-degree: 2%
 
 ---
 
@@ -277,10 +277,12 @@ Le tableau suivant décrit les valeurs acceptées pour `val` :
 
 | Valeur | Titre | Description |
 | --- | --- | --- |
-| `y` | Oui | Le client a donné son consentement ou sa préférence. En d’autres termes, ils ont le **consentement** pour l’utilisation de leurs données, comme indiqué par le consentement ou la préférence en question. |
-| `n` | Non | Le client s’est désinscrit du consentement ou de la préférence. En d’autres termes, ils **ne donnent pas leur consentement à l’utilisation de leurs données comme indiqué par le consentement ou la préférence en question.** |
+| `y` | Oui (inclusion) | Le client a donné son consentement ou sa préférence. En d’autres termes, ils ont le **consentement** pour l’utilisation de leurs données, comme indiqué par le consentement ou la préférence en question. |
+| `n` | Non (opt-out) | Le client s’est désinscrit du consentement ou de la préférence. En d’autres termes, ils **ne donnent pas leur consentement à l’utilisation de leurs données comme indiqué par le consentement ou la préférence en question.** |
 | `p` | En attente de vérification | Le système n’a pas encore reçu de valeur de consentement ou de préférence finale. Il est le plus souvent utilisé dans le cadre d’un consentement qui nécessite une vérification en deux étapes. Par exemple, si un client choisit de recevoir des emails, ce consentement est défini sur `p` jusqu’à ce qu’il sélectionne un lien dans un email pour vérifier qu’il a fourni l’adresse email correcte, auquel moment le consentement est mis à jour sur `y`.<br><br>Si ce consentement ou cette préférence n’utilise pas un processus de vérification à deux ensembles, alors le  `p` choix peut être utilisé pour indiquer que le client n’a pas encore répondu à l’invite de consentement. Par exemple, vous pouvez définir automatiquement la valeur sur `p` sur la première page d’un site web avant que le client n’ait répondu à l’invite de consentement. Dans les juridictions qui ne requièrent pas de consentement explicite, vous pouvez également l’utiliser pour indiquer que le client n’a pas explicitement exercé son droit d’opposition (en d’autres termes, le consentement est supposé). |
 | `u` | Unknown (Inconnu) | Les informations de consentement ou de préférence du client sont inconnues. |
+| `dy` | Par défaut : Oui (inclusion) | Le client n’a pas fourni de valeur de consentement lui-même et est traité comme un accord préalable (&quot;Oui&quot;) par défaut. En d’autres termes, le consentement est supposé jusqu’à ce que le client indique le contraire.<br><br>Notez que si des lois ou des modifications apportées à la politique de confidentialité de votre entreprise entraînent des modifications des valeurs par défaut de certains utilisateurs ou de tous les utilisateurs, vous devez mettre à jour manuellement tous les profils contenant des valeurs par défaut. |
+| `dn` | Valeur par défaut de Non (opt-out) | Le client n’a pas fourni de valeur de consentement lui-même et est traité comme un droit d’opposition (&quot;Non&quot;) par défaut. En d’autres termes, le client est supposé avoir refusé le consentement jusqu’à ce qu’il en indique autrement.<br><br>Notez que si des lois ou des modifications apportées à la politique de confidentialité de votre entreprise entraînent des modifications des valeurs par défaut de certains utilisateurs ou de tous les utilisateurs, vous devez mettre à jour manuellement tous les profils contenant des valeurs par défaut. |
 | `LI` | L&#39;intérêt légitime | L’intérêt commercial légitime de collecter et de traiter ces données à des fins spécifiées l’emporte sur le préjudice potentiel qu’elles peuvent causer à l’individu. |
 | `CT` | Contrat | La collecte de données aux fins spécifiées est nécessaire pour respecter les obligations contractuelles avec l’individu. |
 | `CP` | Respect d’une obligation juridique | La collecte de données aux fins spécifiées est nécessaire pour respecter les obligations légales de l’entreprise. |
