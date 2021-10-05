@@ -2,9 +2,9 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/destinations`.
 title: Opérations de point d’entrée de l’API Destinations
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: c334a11ff6a03b38883a5319bc41cbe3f93c0289
 workflow-type: tm+mt
-source-wordcount: '2340'
+source-wordcount: '2407'
 ht-degree: 5%
 
 ---
@@ -125,33 +125,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "splitUserById":false
       }
    },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
-      }
-   },
    "destinationDelivery":[
       {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
@@ -195,18 +168,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `schemaConfig.profileRequired` | Booléen | Utilisez `true` si les utilisateurs doivent être en mesure de mapper les attributs de profil de l’Experience Platform aux attributs personnalisés du côté de votre destination, comme illustré dans l’exemple de configuration ci-dessus. |
 | `schemaConfig.segmentRequired` | Booléen | Utilisez toujours `segmentRequired:true`. |
 | `schemaConfig.identityRequired` | Booléen | Utilisez `true` si vous souhaitez que les utilisateurs puissent mapper les espaces de noms d’identité de l’Experience Platform à votre schéma souhaité. |
-| `aggregation.aggregationType` | - | Sélectionnez `BEST_EFFORT` ou `CONFIGURABLE_AGGREGATION`. Bien que l’exemple de configuration ci-dessus inclut les deux types d’agrégation, il vous suffit de sélectionner l’un d’eux pour votre destination. |
+| `aggregation.aggregationType` | - | Sélectionnez `BEST_EFFORT` ou `CONFIGURABLE_AGGREGATION`. L’exemple de configuration ci-dessus inclut l’agrégation `BEST_EFFORT`. Pour un exemple de `CONFIGURABLE_AGGREGATION`, reportez-vous à l’exemple de configuration dans le document [configuration de destination](./destination-configuration.md#example-configuration) . Notez que les paramètres relatifs à l’agrégation configurable sont décrits ci-dessous dans ce tableau. |
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | Entier | Experience Platform peut agréger plusieurs profils exportés en un seul appel HTTP. Indiquez le nombre maximal de profils que votre point de terminaison doit recevoir dans un seul appel HTTP. Notez qu’il s’agit d’une agrégation du meilleur effort. Par exemple, si vous spécifiez la valeur 100, Platform peut envoyer n’importe quel nombre de profils inférieur à 100 lors d’un appel. <br> Si votre serveur n’accepte pas plusieurs utilisateurs par demande, définissez cette valeur sur 1. |
 | `aggregation.bestEffortAggregation.splitUserById` | Booléen | Utilisez cet indicateur si l’appel à la destination doit être divisé par l’identité. Définissez cet indicateur sur `true` si votre serveur n’accepte qu’une seule identité par appel, pour un espace de noms donné. |
-| `aggregation.configurableAggregation.splitUserById` | Booléen | Utilisez cet indicateur si l’appel à la destination doit être divisé par l’identité. Définissez cet indicateur sur `true` si votre serveur n’accepte qu’une seule identité par appel, pour un espace de noms donné. |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Entier | *Valeur maximale : 3600*. Avec `maxNumEventsInBatch`, cela détermine la durée pendant laquelle l’Experience Platform doit attendre d’envoyer un appel API à votre point de terminaison. <br> Par exemple, si vous utilisez la valeur maximale pour les deux paramètres, Experience Platform patiente 3 600 secondes OU jusqu’à ce qu’il y ait 10 000 profils qualifiés avant d’effectuer l’appel API, selon ce qui se produit en premier. |
-| `aggregation.configurableAggregation.maxNumEventsInBatch` | Entier | *Valeur maximale : 10000*. Voir `maxBatchAgeInSecs` ci-dessus. |
-| `aggregation.configurableAggregation.aggregationKey` | Booléen | Permet d&#39;agréger les profils exportés mappés à la destination en fonction des paramètres ci-dessous : <br> <ul><li>identifiant de segment</li><li> état du segment </li><li> namespace d’identité </li></ul> |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Booléen | Définissez cette variable sur `true` si vous souhaitez regrouper les profils exportés vers votre destination par identifiant de segment. |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | Booléen | Vous devez définir `includeSegmentId:true` et `includeSegmentStatus:true` si vous souhaitez regrouper les profils exportés vers votre destination par identifiant de segment ET état du segment. |
-| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | Booléen | Définissez cette variable sur `true` si vous souhaitez regrouper les profils exportés vers votre destination par espace de noms d’identité. |
-| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booléen | Utilisez ce paramètre pour indiquer si vous souhaitez que les profils exportés soient agrégés en groupes d’une seule identité (GAID, IDFA, numéros de téléphone, email, etc.). |
-| `aggregation.configurableAggregation.aggregationKey.groups` | Chaîne | Créez des listes de groupes d’identités si vous souhaitez regrouper les profils exportés vers votre destination par groupes d’espaces de noms d’identité. Par exemple, vous pouvez combiner des profils qui contiennent les identifiants mobiles IDFA et GAID dans un appel vers votre destination et des emails dans un autre en utilisant la configuration de l’exemple. |
+| `aggregation.configurableAggregation.splitUserById` | Booléen | Voir paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Utilisez cet indicateur si l’appel à la destination doit être divisé par l’identité. Définissez cet indicateur sur `true` si votre serveur n’accepte qu’une seule identité par appel, pour un espace de noms donné. |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Entier | *Valeur maximale : 3600*. Voir paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Avec `maxNumEventsInBatch`, cela détermine la durée pendant laquelle l’Experience Platform doit attendre d’envoyer un appel API à votre point de terminaison. <br> Par exemple, si vous utilisez la valeur maximale pour les deux paramètres, Experience Platform patiente 3 600 secondes OU jusqu’à ce qu’il y ait 10 000 profils qualifiés avant d’effectuer l’appel API, selon ce qui se produit en premier. |
+| `aggregation.configurableAggregation.maxNumEventsInBatch` | Entier | *Valeur maximale : 10000*. Voir paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Voir `maxBatchAgeInSecs` ci-dessus. |
+| `aggregation.configurableAggregation.aggregationKey` | Booléen | Voir paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Permet d&#39;agréger les profils exportés mappés à la destination en fonction des paramètres ci-dessous : <br> <ul><li>identifiant de segment</li><li> état du segment </li><li> namespace d’identité </li></ul> |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Booléen | Voir paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Définissez cette variable sur `true` si vous souhaitez regrouper les profils exportés vers votre destination par identifiant de segment. |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | Booléen | Voir paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Vous devez définir `includeSegmentId:true` et `includeSegmentStatus:true` si vous souhaitez regrouper les profils exportés vers votre destination par identifiant de segment ET état du segment. |
+| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | Booléen | Voir paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Définissez cette variable sur `true` si vous souhaitez regrouper les profils exportés vers votre destination par espace de noms d’identité. |
+| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booléen | Voir paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Utilisez ce paramètre pour indiquer si vous souhaitez que les profils exportés soient agrégés en groupes d’une seule identité (GAID, IDFA, numéros de téléphone, email, etc.). |
+| `aggregation.configurableAggregation.aggregationKey.groups` | Chaîne | Voir paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Créez des listes de groupes d’identités si vous souhaitez regrouper les profils exportés vers votre destination par groupes d’espaces de noms d’identité. Par exemple, vous pouvez combiner des profils qui contiennent les identifiants mobiles IDFA et GAID dans un appel vers votre destination et des emails dans un autre en utilisant la configuration de l’exemple. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -330,33 +303,6 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des configurations
             "bestEffortAggregation":{
                "maxUsersPerRequest":10,
                "splitUserById":false
-            }
-         },
-         "aggregation":{
-            "aggregationType":"CONFIGURABLE_AGGREGATION",
-            "configurableAggregation":{
-               "splitUserById":true,
-               "maxBatchAgeInSecs":0,
-               "maxNumEventsInBatch":0,
-               "aggregationKey":{
-                  "includeSegmentId":true,
-                  "includeSegmentStatus":true,
-                  "includeIdentity":true,
-                  "oneIdentityPerGroup":false,
-                  "groups":[
-                     {
-                        "namespaces":[
-                           "IDFA",
-                           "GAID"
-                        ]
-                     },
-                     {
-                        "namespaces":[
-                           "EMAIL"
-                        ]
-                     }
-                  ]
-               }
             }
          },
          "destinationDelivery":[
@@ -551,33 +497,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
          "splitUserById":false
       }
    },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
-      }
-   },
    "destinationDelivery":[
       {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
@@ -735,33 +654,6 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaillé
       "bestEffortAggregation":{
          "maxUsersPerRequest":10,
          "splitUserById":false
-      }
-   },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
       }
    },
    "destinationDelivery":[
