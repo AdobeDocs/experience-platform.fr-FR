@@ -2,9 +2,9 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/destinations`.
 title: Opérations de point d’entrée de l’API Destinations
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
+source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
 workflow-type: tm+mt
-source-wordcount: '2352'
+source-wordcount: '2340'
 ht-degree: 5%
 
 ---
@@ -365,7 +365,6 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des configurations
                "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
             }
          ],
-         "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
          "destConfigId":"410631b8-f6b3-4b7c-82da-7998aa3f327c",
          "backfillHistoricalProfileData":true
       }
@@ -398,7 +397,6 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des configurations
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Utilisé dans les cas où votre plateforme accepte des [espaces de noms d’identité standard](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (IDFA, par exemple), afin que vous puissiez empêcher les utilisateurs de Platform de sélectionner uniquement ces espaces de noms d’identité. |
 | `destinationDelivery.authenticationRule` | Chaîne | Indique comment les clients [!DNL Platform] se connectent à votre destination. Les valeurs acceptées sont `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si les clients Platform se connectent à votre système par l’intermédiaire d’un nom d’utilisateur et d’un mot de passe, d’un jeton porteur ou d’une autre méthode d’authentification. Par exemple, sélectionnez cette option si vous avez également sélectionné `authType: OAUTH2` ou `authType:BEARER` dans `customerAuthenticationConfigurations`. </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre l’Adobe et votre destination et que le client [!DNL Platform] n’a pas besoin de fournir d’informations d’identification d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer un objet d’identification à l’aide de la configuration [Credentials](./credentials-configuration.md) . </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
 | `destinationDelivery.destinationServerId` | Chaîne | `instanceId` du [modèle de serveur de destination](./destination-server-api.md) utilisé pour cette destination. |
-| `inputSchemaId` | Chaîne | Ce champ est généré automatiquement et ne nécessite pas votre saisie. |
 | `destConfigId` | Chaîne | Ce champ est généré automatiquement et ne nécessite pas votre saisie. |
 | `backfillHistoricalProfileData` | Booléen | Contrôle si les données de profil historiques sont exportées lorsque les segments sont activés vers la destination. <br> <ul><li> `true`:  [!DNL Platform] envoie les profils utilisateur historiques qualifiés pour le segment avant l’activation du segment. </li><li> `false`:  [!DNL Platform] inclut uniquement les profils utilisateur qui remplissent les critères pour le segment une fois le segment activé. </li></ul> |
 | `segmentMappingConfig.mapUserInput` | Booléen | Contrôle si l’ID de mappage de segments dans le workflow d’activation de destination est saisi par l’utilisateur. |
@@ -586,7 +584,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
          "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
       }
    ],
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
    "backfillHistoricalProfileData":true
 }
 ```
@@ -773,7 +770,6 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaillé
          "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
       }
    ],
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
    "backfillHistoricalProfileData":true
 }
 ```
