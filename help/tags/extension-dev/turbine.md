@@ -2,9 +2,9 @@
 title: Variable sans Turbine
 description: Découvrez lʼobjet turbine, une variable libre qui fournit des informations et des utilitaires spécifiques à lʼexécution des balises Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
+source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '625'
 ht-degree: 100%
 
 ---
@@ -39,6 +39,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineBuildDate` | Date ISO 8601 de création de la version de [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilisée dans le conteneur. |
 | `buildDate` | Date ISO 8601 de la création de la bibliothèque actuelle. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## `environment`
 
@@ -60,6 +61,7 @@ console.log(turbine.environment.stage);
 | `id` | Identifiant de l’environnement. |
 | `stage` | Environnement pour lequel cette bibliothèque a été créée. Les valeurs possibles sont les suivantes : `development`, `staging` et `production`. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## `debugEnabled`
 
@@ -67,7 +69,7 @@ Valeur booléenne indiquant si le débogage des balises est actuellement activé
 
 Si vous essayez simplement de consigner des messages, il est peu probable que vous ayez besoin d’utiliser cette fonctionnalité. Au lieu de cela, consignez toujours les messages à lʼaide de `turbine.logger` afin de vous assurer quʼils ne sont imprimés sur la console que lorsque le débogage des balises est activé.
 
-### `getDataElementValue`
+## `getDataElementValue`
 
 ```js
 console.log(turbine.getDataElementValue(dataElementName));
@@ -75,7 +77,7 @@ console.log(turbine.getDataElementValue(dataElementName));
 
 Renvoie la valeur d’un élément de données.
 
-### `getExtensionSettings` {#get-extension-settings}
+## `getExtensionSettings` {#get-extension-settings}
 
 ```js
 var extensionSettings = turbine.getExtensionSettings();
@@ -85,7 +87,7 @@ Renvoie l’objet settings qui a été enregistré pour la dernière fois à par
 
 Veuillez noter que les valeurs des objets settings renvoyés peuvent provenir d’éléments de données. Par conséquent, l’appel de `getExtensionSettings()` à des moments différents peut donner des résultats différents si les valeurs des éléments de données ont changé. Pour obtenir les valeurs les plus récentes, patientez aussi longtemps que possible avant dʼappeler `getExtensionSettings()`.
 
-### `getHostedLibFileUrl` {#get-hosted-lib-file}
+## `getHostedLibFileUrl` {#get-hosted-lib-file}
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -96,7 +98,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 
 La propriété [hostedLibFiles](./manifest.md) peut être définie dans le manifeste dʼextension afin dʼhéberger divers fichiers avec la bibliothèque dʼexécution des balises. Ce module renvoie l’URL d’hébergement du fichier de bibliothèque donné.
 
-### `getSharedModule` {#shared}
+## `getSharedModule` {#shared}
 
 ```js
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
@@ -104,7 +106,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 
 Récupère un module qui a été partagé depuis une autre extension. Si aucun module correspondant n’est trouvé, `undefined` est renvoyé. Voir [Implémentation de modules partagés](./web/shared.md) pour plus d’informations sur les modules partagés.
 
-### `logger`
+## `logger`
 
 ```js
 turbine.logger.error('Error!');
@@ -119,13 +121,13 @@ Lʼutilitaire de journalisation est utilisé pour consigner les messages dans la
 * `logger.debug(message: string)` : consigne un message de débogage dans la console. (Visible uniquement lorsque la journalisation `verbose` est activée dans la console du navigateur.)
 * `logger.deprecation(message: string)` : consigne un message d’avertissement dans la console, que le débogage des balises soit activé ou non par l’utilisateur.
 
-### `onDebugChanged`
+## `onDebugChanged`
 
 En transmettant une fonction de rappel dans `turbine.onDebugChanged`, les balises appellent votre rappel chaque fois que le débogage est activé/désactivé. Les balises transmettent une valeur booléenne à la fonction de rappel, qui est vraie si le débogage a été activé ou fausse si le débogage a été désactivé.
 
 Si vous essayez simplement de consigner des messages, il est peu probable que vous ayez besoin d’utiliser cette fonctionnalité. Au lieu de cela, consignez toujours les messages à lʼaide de `turbine.logger` et les balises feront en sorte que vos messages ne soient imprimés sur la console que lorsque le débogage des balises sera activé.
 
-### `propertySettings` {#property-settings}
+## `propertySettings` {#property-settings}
 
 ```js
 console.log(turbine.propertySettings.domains);
