@@ -4,14 +4,14 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: d5c69972426008809c3fd0ac03be995efcc2f541
+source-git-commit: 05f2ba2e8e7abadeef18a908ba8b0e9a02d4c3f8
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1548'
 ht-degree: 6%
 
 ---
 
-#  Tableau de bord des profils
+#  Profilesdashboard
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos données [!DNL Real-time Customer Profile], telles qu’elles sont capturées lors d’un instantané quotidien. Ce guide explique comment accéder au tableau de bord [!UICONTROL Profils] et l’utiliser dans l’interface utilisateur. Il fournit également des informations sur les mesures affichées dans le tableau de bord.
 
@@ -77,7 +77,7 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 
 ### [!UICONTROL Nombre de profils] {#profile-count}
 
-Le widget **[!UICONTROL Nombre de profils]** affiche le nombre total de profils fusionnés dans la banque de données de profil au moment de la prise de l’instantané. Ce nombre est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
+Le widget **[!UICONTROL Nombre de profils]** affiche le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Ce nombre est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
 
 Voir la section [sur les stratégies de fusion plus tôt dans ce document](#merge-policies) pour en savoir plus.
 
@@ -91,19 +91,17 @@ Voir la section [sur les stratégies de fusion plus tôt dans ce document](#merg
 
 ### [!UICONTROL Profils ajoutés] {#profiles-added}
 
-Le widget **[!UICONTROL Profils ajoutés]** affiche le nombre total de profils fusionnés qui ont été ajoutés à l’entrepôt de données Profile à partir du dernier instantané pris. Ce nombre est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu. Vous pouvez utiliser le sélecteur de liste déroulante pour afficher les profils ajoutés au cours des 30, 90 ou 12 derniers jours.
+Le widget **[!UICONTROL Profils ajoutés]** affiche le nombre total de profils fusionnés qui ont été ajoutés à la banque de profils à partir du dernier instantané pris. Ce nombre est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu. Vous pouvez utiliser le sélecteur de liste déroulante pour afficher les profils ajoutés au cours des 30, 90 ou 12 derniers jours.
 
 >[!NOTE]
 >
->Le widget [!UICONTROL Profils ajoutés] reflète le nombre de profils ajoutés au système suite à la configuration initiale de votre organisation. Pour en savoir plus sur l’ajout de profils à la banque de profils, consultez la [documentation de Real-time Customer Profile](../../profile/home.md).
->
->Par exemple, si quatre millions de profils ont été ajoutés pendant la configuration et que vous avez ajouté un million de profils supplémentaires au cours des 30 derniers jours, le widget [!UICONTROL Profils ajoutés] affichera &quot;1 000 000&quot; tandis que le widget [!UICONTROL Nombre de profils] affichera &quot;5 000 0 00&quot;.
+>Le widget [!UICONTROL Profils ajoutés] reflète le nombre de profils ajoutés après la configuration de la banque de profils et l’ingestion des profils. En d’autres termes, si votre organisation a configuré la banque de profils et ingéré 4 000 000 le jour 1, dans les 24 heures, le tableau de bord sera disponible, mais le widget [!UICONTROL Profils ajoutés] sera défini sur 0. Cela permet d’éviter un pic associé à l’ingestion initiale des profils dans le système. Au cours des 30 prochains jours, votre entreprise assimilera 1 000 000 profils supplémentaires dans la banque de profils. Une fois l’instantané suivant pris, le widget [!UICONTROL Profils ajoutés] affichera un total de 1 000 000 profils ajoutés, tandis que le widget [!UICONTROL Nombre de profils] affichera 5 000 000 profils au total.
 
 ![](../images/profiles/profiles-added.png)
 
 ### [!UICONTROL Tendance du nombre de profils] {#profiles-count-trend}
 
-Le widget **[!UICONTROL Tendance du nombre de profils]** affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à l’entrepôt de données Profile au cours des 30 derniers jours, 90 ou 12 derniers mois. Ce nombre est mis à jour chaque jour lorsque l’instantané est pris. Par conséquent, si vous deviez ingérer des profils dans Platform, le nombre de profils ne serait pas reflété tant que l’instantané suivant n’a pas été pris. Le nombre de profils ajoutés est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
+Le widget **[!UICONTROL Tendance du nombre de profils]** affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, 90 ou 12 derniers mois. Ce nombre est mis à jour chaque jour lorsque l’instantané est pris. Par conséquent, si vous deviez ingérer des profils dans Platform, le nombre de profils ne serait pas reflété tant que l’instantané suivant n’a pas été pris. Le nombre de profils ajoutés est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
 
 Voir la section [sur les stratégies de fusion plus tôt dans ce document](#merge-policies) pour en savoir plus.
 
