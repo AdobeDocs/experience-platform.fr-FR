@@ -1,16 +1,16 @@
 ---
 keywords: identités rtcdp;identités rtcdp;identités cdp en temps réel
-title: Identités dans la plateforme de données clients en temps réel
+title: Identités dans Real-time Customer Data Platform
 description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements en rapprochant des identités entre appareils et systèmes.
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 5611a5abc7d1ed7781108b6f263e7550092b715d
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 74%
+source-wordcount: '431'
+ht-degree: 72%
 
 ---
 
-# Identités dans la plateforme de données clients en temps réel
+# Présentation des identités
 
 Adobe Experience Platform [!DNL Identity Service] vous aide à mieux connaître vos clients et leur comportement en rapprochant des identités entre appareils et systèmes. En règle générale, vos clients interagissent avec votre marque via plusieurs canaux, par exemple en naviguant sur votre site web, en effectuant un achat en magasin, en rejoignant votre programme de fidélité ou en appelant un centre d’assistance pour obtenir de l’aide. Sur ces multiples systèmes, une identité est créée pour ce client et [!DNL Identity Service] permet de rassembler ces identités pour obtenir une vue d’ensemble.
 
@@ -18,7 +18,7 @@ Désormais, plutôt que d’avoir cinq clients distincts interagissant avec votr
 
 ## Espaces de noms d’identité
 
-Les espaces de noms d’identité sont un composant de [!DNL Identity Service] et servent d’indicateurs fournissant un contexte supplémentaire aux identités client. Un exemple d’espace de noms d’ID couramment utilisé serait « Email », l’utilisation d’une même adresse électronique sur plusieurs sites web permettant de rassembler plusieurs identités, chacune associée à un ID client unique, comme appartenant au même client. [!DNL Experience Platform] permet d’utiliser des espaces de noms d’ID pour rechercher des profils individuels dans l’interface utilisateur. Pour plus d’informations sur l’affichage des profils, consultez la [présentation de la visionneuse de profils](/help/rtcdp/profile/profile-viewer.md). Pour en savoir plus les espaces de noms d’identité, consultez la [présentation des espaces de noms d’identité](../../identity-service/namespaces.md).
+Les espaces de noms d’identité sont un composant de [!DNL Identity Service] et servent d’indicateurs fournissant un contexte supplémentaire aux identités client. Un exemple d’espace de noms d’ID couramment utilisé serait « Email », l’utilisation d’une même adresse e-mail sur plusieurs sites web permettant de rassembler plusieurs identités, chacune associée à un ID client unique, comme appartenant au même client. [!DNL Experience Platform] permet d’utiliser des espaces de noms d’ID pour rechercher des profils individuels dans l’interface utilisateur. Pour plus d’informations sur l’affichage des profils, consultez la [présentation de la navigation des profils](profile-browse.md). Pour en savoir plus les espaces de noms d’identité, consultez la [présentation des espaces de noms d’identité](../../identity-service/namespaces.md).
 
 ## Graphiques d’identités
 

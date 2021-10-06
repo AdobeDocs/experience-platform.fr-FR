@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Guide des plateformes de données client en temps réel
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
-source-git-commit: 30a4d2b27092f4706bb4f3f986a190502b184034
+source-git-commit: 8e7ceaa5f62ee7647b5a53c494c9b3acb43c14c7
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 70%
+source-wordcount: '160'
+ht-degree: 66%
 
 ---
 
@@ -24,19 +24,24 @@ ht-degree: 70%
       * [Prise en main de l’édition B2B de la plateforme CDP en temps réel](./b2b-use-case.md)
 * Administration {#admin}
    * [Présentation de l’administration](administration/admin-overview.md)
+* Profils de compte {#account}
+   * [Présentation du profil de compte](accounts/account-profile-overview.md)
+   * [Guide de l’interface utilisateur du profil de compte](accounts/account-profile-ui-guide.md)
 * Jeux de données {#datasets}
    * [Jeux de données](datasets/dataset.md)
    * [Qualité des données sur la plateforme](datasets/data-quality.md)
 * Destinations {#destinations}
    * [Présentation des destinations](destinations/overview.md)
+* Identités {#identity}
+   * [Identités et espaces de noms d’identité](profile/identities-overview.md)
 * Confidentialité et gouvernance des données {#privacy}
    * [Présentation de la confidentialité](privacy/privacy-overview.md)
    * [Présentation de la gouvernance des données](privacy/data-governance-overview.md)
+* Stratégies de fusion {#merge-policies}
+   * [Présentation des stratégies de fusion](profile/merge-policies.md)
 * Profils {#profile}
    * [Présentation des profils](profile/profile-overview.md)
-   * [Identités et espaces de noms d’identité](profile/identities-overview.md)
-   * [Stratégies de fusion](profile/merge-policies.md)
-   * [Visionneuse de profils](profile/profile-viewer.md)
+   * [Parcourir les profils](profile/profile-browse.md)
 * Segments {#segmentation}
    * [Présentation de la segmentation](segmentation/segmentation-overview.md)
    * [Guide du créateur de segments](segmentation/segment-builder-guide.md)
