@@ -5,16 +5,16 @@ title: Guide de l’interface utilisateur d’Edge Segmentation
 topic-legacy: ui guide
 description: La segmentation Edge permet d’évaluer instantanément les segments dans Platform, ce qui permet d’utiliser des cas de personnalisation de page et de page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
+source-git-commit: 6bb1f417b5856f153adebe4deaac4fab264ef3a8
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '417'
 ht-degree: 4%
 
 ---
 
 # Guide de l’interface utilisateur de la segmentation Edge (version bêta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >La segmentation Edge est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
@@ -22,7 +22,15 @@ La segmentation Edge permet d’évaluer instantanément les segments dans Adobe
 
 ## Types de requête de segmentation Edge
 
-Une requête peut être évaluée avec la segmentation Edge si elle répond à l’un des critères suivants :
+Actuellement, seuls certains types de requête peuvent être évalués avec la segmentation Edge. Les sections suivantes répertorient les types de requête qui peuvent être évalués avec la segmentation Edge et ceux qui ne sont actuellement pas pris en charge.
+
+### Types de requête pris en charge
+
+Une requête peut être évaluée avec une segmentation Edge si elle répond à l’un des critères décrits dans le tableau suivant.
+
+>[!NOTE]
+>
+>Si la requête correspond à l’un des types de requête du tableau suivant, elle sera automatiquement évaluée à l’aide de la segmentation Edge. Le système détermine automatiquement cette fonctionnalité en fonction de l’expression de requête.
 
 | Type de requête | Détails | Exemple |
 | ---------- | ------- | ------- |
@@ -31,7 +39,7 @@ Une requête peut être évaluée avec la segmentation Edge si elle répond à l
 | Accès entrant avec une fenêtre temporelle de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans les 24 heures |  |
 | Accès entrant qui fait référence à un profil avec une fenêtre temporelle de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans les 24 heures et à un ou plusieurs attributs de profil |  |
 
-Si la requête correspond à l’un des types de requête ci-dessus, elle sera automatiquement évaluée à l’aide de la segmentation Edge.
+### Types de requête non pris en charge actuellement
 
 Les types de requête suivants sont **non** actuellement pris en charge pour la segmentation Edge :
 
@@ -43,6 +51,4 @@ Les types de requête suivants sont **non** actuellement pris en charge pour la 
 
 ## Étapes suivantes
 
-Ce guide d’utilisation explique comment évaluer les segments avec la segmentation Edge sur Adobe Experience Platform.
-
-Pour en savoir plus sur l’utilisation de l’interface utilisateur de Adobe Experience Platform, consultez le [guide d’utilisation de la segmentation](./overview.md). Pour savoir comment effectuer des actions similaires et utiliser des segments à l’aide de l’interface utilisateur de Adobe Experience Platform, consultez le [guide de l’API de segmentation Edge](../api/edge-segmentation.md).
+Ce guide explique comment évaluer les segments avec la segmentation Edge sur Adobe Experience Platform. Pour en savoir plus sur l’utilisation de l’interface utilisateur de l’Experience Platform, consultez le [guide d’utilisation de la segmentation](./overview.md). Pour savoir comment effectuer des actions similaires et utiliser des segments à l’aide d’API Experience Platform, consultez le [guide de l’API de segmentation Edge](../api/edge-segmentation.md).
