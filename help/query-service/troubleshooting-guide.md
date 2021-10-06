@@ -5,10 +5,10 @@ title: Guide de dépannage de Query Service
 topic-legacy: troubleshooting
 description: Ce document contient des informations sur les codes d’erreur courants que vous rencontrez et les causes possibles.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 2b118228473a5f07ab7e2c744b799f33a4c44c98
+source-git-commit: 42288ae7db6fb19bc0a0ee8e4ecfa50b7d63d017
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 30%
+source-wordcount: '699'
+ht-degree: 22%
 
 ---
 
@@ -60,6 +60,10 @@ LIMIT 100;
 
 Lors de l’interrogation des données de série temporelle, vous devez utiliser le filtre d’horodatage chaque fois que cela est possible pour une analyse plus précise.
 
+>[!NOTE]
+>
+> La chaîne de date **doit** être au format `yyyy-mm-ddTHH24:MM:SS`.
+
 Vous trouverez ci-dessous un exemple d’utilisation du filtre d’horodatage :
 
 ```sql
@@ -74,6 +78,60 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 ### Dois-je utiliser des caractères génériques, tels que * pour obtenir toutes les lignes de mes jeux de données ?
 
 Vous ne pouvez pas utiliser de caractères génériques pour obtenir toutes les données de vos lignes, car Query Service doit être traité comme **columnar-store** plutôt que comme un système de magasin basé sur les lignes traditionnel.
+
+### Dois-je utiliser `NOT IN` dans ma requête SQL ?
+
+L’opérateur `NOT IN` est souvent utilisé pour récupérer les lignes qui ne se trouvent pas dans une autre table ou instruction SQL. Cet opérateur peut ralentir les performances et renvoyer des résultats inattendus si les colonnes comparées acceptent `NOT NULL`, ou si vous avez un grand nombre d&#39;enregistrements.
+
+Au lieu d’utiliser `NOT IN`, vous pouvez utiliser `NOT EXISTS` ou `LEFT OUTER JOIN`.
+
+Par exemple, si les tables suivantes sont créées :
+
+```sql
+CREATE TABLE T1 (ID INT)
+CREATE TABLE T2 (ID INT)
+INSERT INTO T1 VALUES (1)
+INSERT INTO T1 VALUES (2)
+INSERT INTO T1 VALUES (3)
+INSERT INTO T2 VALUES (1)
+INSERT INTO T2 VALUES (2)
+```
+
+Si vous utilisez l’opérateur `NOT EXISTS`, vous pouvez effectuer une réplication à l’aide de l’opérateur `NOT IN` à l’aide de la requête suivante :
+
+```sql
+SELECT ID FROM T1
+WHERE NOT EXISTS
+(SELECT ID FROM T2 WHERE T1.ID = T2.ID)
+```
+
+Si vous utilisez l’opérateur `LEFT OUTER JOIN`, vous pouvez également effectuer une réplication à l’aide de l’opérateur `NOT IN` à l’aide de la requête suivante :
+
+```sql
+SELECT T1.ID FROM T1
+LEFT OUTER JOIN T2 ON T1.ID = T2.ID
+WHERE T2.ID IS NULL
+```
+
+### Quelle est l’utilisation correcte des opérateurs `OR` et `UNION` ?
+
+### Comment utiliser correctement l’opérateur `CAST` pour convertir mes horodatages dans les requêtes SQL ?
+
+Lorsque vous utilisez l’opérateur `CAST` pour convertir un horodatage, vous devez inclure à la fois la date **et l’heure**.
+
+Par exemple, l’absence du composant temporel, comme illustré ci-dessous, entraînera une erreur :
+
+```sql
+SELECT * FROM ABC
+WHERE timestamp = CAST('07-29-2021' AS timestamp)
+```
+
+L’utilisation correcte de l’opérateur `CAST` est présentée ci-dessous :
+
+```sql
+SELECT * FROM ABC
+WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
+```
 
 ## Erreurs de l’API REST
 
