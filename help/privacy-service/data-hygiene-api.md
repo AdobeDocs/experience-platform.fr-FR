@@ -3,10 +3,11 @@ title: API d’hygiène des données (Alpha)
 description: Découvrez comment corriger ou supprimer par programmation les données personnelles stockées de vos clients dans Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: dd8978566730975f0bde36f3af490cd33362b3ba
+exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
+source-git-commit: f956a8191614cc8e0eeaadaa55277abfbc5be106
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 20%
+source-wordcount: '535'
+ht-degree: 19%
 
 ---
 
@@ -17,6 +18,8 @@ ht-degree: 20%
 >L’API Data Hygiene est actuellement en version alpha et votre entreprise peut ne pas y avoir encore accès. Les fonctionnalités décrites dans ce document peuvent faire l’objet de modifications.
 
 L’API Data Hygiene vous permet de corriger ou de supprimer par programmation les données personnelles stockées de vos clients dans Adobe Experience Platform. Contrairement à l’API du Privacy Service, ces opérations ne doivent pas être associées aux réglementations légales en matière de confidentialité et peuvent être utilisées uniquement à des fins de nettoyage et d’exactitude de vos données.
+
+Vous pouvez accéder à l’API à l’aide du chemin racine suivant : `https://platform.adobe.io/data/core/hygiene/`
 
 ## Prise en main
 
