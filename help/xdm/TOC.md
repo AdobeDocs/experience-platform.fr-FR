@@ -4,9 +4,9 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes de modèle de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
-source-git-commit: 05d5a599b3ed101fab7ab96e4f218592f7e923ef
+source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '398'
 ht-degree: 30%
 
 ---
@@ -65,6 +65,8 @@ ht-degree: 30%
       * [Consentement IAB TCF 2.0](./field-groups/event/iab.md)
       * [Réservation logement](./field-groups/event/lodging-reservation.md)
       * [Détails de la réservation](./field-groups/event/reservation-details.md)
+      * [Détails de la mise à niveau](./field-groups/event/upgrade-details.md)
+      * [Détails de la mise à niveau](./field-groups/event/upsell-details.md)
       * [Détails web](./field-groups/event/web-details.md)
    * [Mises à jour des noms de groupe de champs](./field-groups/name-updates.md)
 * Types des données {#data-types}
@@ -77,7 +79,7 @@ ht-degree: 30%
    * [Contenus et préférences](./data-types/consents.md)
    * [Devise](./data-types/currency.md)
    * [Appareil](./data-types/device.md)
-   * [Adresse électronique](./data-types/email-address.md)
+   * [Adresse e-mail](./data-types/email-address.md)
    * [Environnement](./data-types/environment.md)
    * [Canal d’expérience](./data-types/experience-channel.md)
    * [Attributs d’audit du système de source externe](./data-types/external-source-system-audit-attributes.md)
@@ -91,6 +93,7 @@ ht-degree: 30%
    * [Détails des interactions géographiques](./data-types/geo-interaction-details.md)
    * [Forme géographique](./data-types/geo-shape.md)
    * [Identité](./data-types/identity.md)
+   * [Impressions](./data-types/impressions.md)
    * [Marketing](./data-types/marketing.md)
    * [Mesure](./data-types/measure.md)
    * [Commande](./data-types/order.md)
