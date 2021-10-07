@@ -4,10 +4,10 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: Format du message
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: a1e77520ba5555db42578eac261e01e77130aea2
+source-git-commit: c328293cf710ad8a2ddd2e52cb01c86d29c0b569
 workflow-type: tm+mt
-source-wordcount: '2090'
-ht-degree: 3%
+source-wordcount: '1995'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +19,6 @@ Pour comprendre le processus du côté Adobe, familiarisez-vous avec les concept
 
 * **Modèle de données d’expérience (XDM)**. [Présentation de XDM ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr) et   [création d’un schéma XDM dans Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
 * **Classe**. [Créez et modifiez des classes dans l’interface utilisateur](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
-* **Groupe de champs**. [](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#field-group) Définition d’un groupe de champs et  [plus d’informations sur les groupes de champs](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en#field-group).
 * **IdentityMap**. La carte des identités représente une carte de toutes les identités des utilisateurs finaux dans Adobe Experience Platform. Voir `xdm:identityMap` dans le [dictionnaire des champs XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 * **SegmentMembership**. L’attribut XDM [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) indique les segments dont un profil est membre. Pour connaître les trois valeurs différentes du champ `status`, lisez la documentation sur le [groupe de champs de schéma Détails de l’adhésion au segment](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
@@ -27,26 +26,30 @@ Pour comprendre le processus du côté Adobe, familiarisez-vous avec les concept
 
 Utilisez le contenu de cette page avec le reste des options de configuration [pour les destinations partenaires](./configuration-options.md). Cette page traite du format de message des données exportées de Adobe Experience Platform vers des destinations, tandis que l’autre page traite des détails relatifs à la connexion et à l’authentification à votre destination.
 
-Adobe Experience Platform exporte des données vers un nombre important de destinations, dans divers formats de données. Voici quelques exemples de types de destinations : plateformes publicitaires (Google), réseaux sociaux (Facebook), emplacements de stockage dans le cloud (Amazon S3, Azure Event Hubs).
+Adobe Experience Platform exporte des données vers un nombre important de destinations, dans divers formats de données. Parmi les types de destinations, citons les plateformes publicitaires (Google), les réseaux sociaux (Facebook), les emplacements de stockage dans le cloud (Amazon S3, Azure Event Hubs).
 
 Experience Platform peut ajuster le format du message exporté pour qu’il corresponde au format attendu de votre côté. Pour comprendre cette personnalisation, les concepts suivants sont importants :
 * Le schéma XDM source (1) et cible (2) dans Adobe Experience Platform
-* le format du message du côté partenaire (3), et
-* Couche de transformation entre les deux, que vous pouvez définir en créant un [modèle de transformation des messages](./message-format.md#using-templating).
+* le format de message attendu du côté partenaire (3), et
+* La couche de transformation entre le schéma XDM et le format de message attendu, que vous pouvez définir en créant un [modèle de transformation des messages](./message-format.md#using-templating).
 
 ![Schéma vers transformation JSON](./assets/transformations-3-steps.png)
 
-Experience Platform utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable.
+Experience Platform utilise des schémas XDM pour décrire la structure des données de manière cohérente et réutilisable.
 
-Les utilisateurs qui souhaitent activer des données vers votre destination doivent mapper les champs qu’ils utilisent pour leurs jeux de données dans Experience Platform à un schéma qui se traduit par le format attendu de votre destination. Adobe crée un groupe de champs personnalisé que votre entreprise doit ajouter au schéma cible. Les champs du groupe de champs dépendent des champs d’attribut de profil que vous pouvez recevoir.
+<!--
 
-**Schéma XDM source (1)** : Cela fait référence au schéma qu’un client utilise dans Experience Platform. Dans Experience Platform, à l’[étape de mappage](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) du workflow d’activation de destination, les clients mappent les champs de leur schéma source au schéma cible de votre destination (2).
+Users who want to activate data to your destination need to map the fields in their Experience Platform datasets to a schema that translates to your destination's expected format. Adobe will create a custom field group for your company to add to the target schema. The fields in the field group depend on the profile attribute fields that you can receive.
 
-**Schéma XDM cible (2)** : En fonction du schéma standard JSON (3) que vous partagez avec Adobe, l’équipe en Adobe crée un schéma personnalisé pour votre destination. Notez que dans une [future phase du projet](./overview.md#phased-approach), vous pourrez créer le schéma personnalisé pour votre destination vous-même.
+-->
 
-**Schéma standard JSON de vos attributs de profil de destination (3)**: Partagez avec nous un  [schéma JSON ](https://json-schema.org/learn/miscellaneous-examples.html) de tous les attributs de profil pris en charge par votre plateforme et de leurs types (par exemple : objet, chaîne, tableau). Les champs d’exemple que votre destination peut prendre en charge peuvent être `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, etc.
+**Schéma XDM source (1)** : Cet élément fait référence au schéma que les clients utilisent dans Experience Platform. Dans Experience Platform, à l’[étape de mappage](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) du workflow d’activation de destination, les clients mappent les champs de leur schéma source au schéma cible de votre destination (2).
 
-En fonction des transformations de schéma décrites ci-dessus, voici comment la structure d’un message change entre le schéma XDM source et l’exemple de schéma du côté partenaire :
+**Schéma XDM cible (2)** : En fonction du schéma standard JSON (3) du format attendu de votre destination, vous pouvez définir des attributs de profil et des identités dans votre schéma XDM cible. Vous pouvez le faire dans la configuration des destinations, dans les objets [schemaConfig](./destination-configuration.md#schema-configuration) et [identityNamespaces](./destination-configuration.md#identities-and-attributes) .
+
+**Schéma standard JSON de vos attributs de profil de destination (3)**: Cet élément représente un  [schéma ](https://json-schema.org/learn/miscellaneous-examples.html) JSON de tous les attributs de profil pris en charge par votre plateforme et de leurs types (par exemple : objet, chaîne, tableau). Les champs d’exemple que votre destination peut prendre en charge peuvent être `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, etc. Vous avez besoin d’un [modèle de transformation des messages](./message-format.md#using-templating) pour adapter au format attendu les données exportées depuis l’Experience Platform.
+
+En fonction des transformations de schéma décrites ci-dessus, voici comment la structure d’un message change entre le schéma XDM source et un exemple de schéma du côté partenaire :
 
 ![Exemple de message de transformations](./assets/transformations-with-examples.png)
 
@@ -59,7 +62,7 @@ Pour démontrer le processus de transformation, l’exemple ci-dessous utilise t
 
 >[!NOTE]
 >
->Le client mappe les attributs du schéma XDM source au schéma XDM du partenaire dans l’interface utilisateur de Adobe Experience Platform, à l’étape **Mapping** du [workflow d’activation de destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html#mapping).
+>Le client mappe les attributs du schéma XDM source au schéma XDM du partenaire dans l’interface utilisateur de Adobe Experience Platform, à l’étape **Mapping** du [workflow d’activation de destination](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
 Supposons que votre plateforme puisse recevoir un format de message du type :
 
@@ -94,7 +97,7 @@ Cette section fournit plusieurs exemples de la manière dont ces transformations
 
 1. Exemples de transformation simples. Découvrez comment le modèle fonctionne avec des transformations simples pour les attributs de profil [](./message-format.md#attributes), [Appartenance au segment](./message-format.md#segment-membership) et les champs [Identité](./message-format.md#identities).
 2. Exemples de modèles plus complexes combinant les champs ci-dessus : [Créez un modèle qui envoie des segments et des identités](./message-format.md#segments-and-identities) et [Créez un modèle qui envoie des segments, des identités et des attributs de profil](./message-format.md#segments-identities-attributes).
-3. Les modèles de incluent la clé d’agrégation. Lorsque vous utilisez [l’agrégation configurable](./destination-configuration.md#configurable-aggregation) dans la configuration de destination, l’Experience Platform regroupe les profils exportés vers votre destination en fonction de critères tels que l’identifiant de segment, l’état du segment ou les espaces de noms d’identité.
+3. Modèles contenant la clé d’agrégation. Lorsque vous utilisez [l’agrégation configurable](./destination-configuration.md#configurable-aggregation) dans la configuration de destination, l’Experience Platform regroupe les profils exportés vers votre destination en fonction de critères tels que l’identifiant de segment, l’état du segment ou les espaces de noms d’identité.
 
 ### Attributs de profil {#attributes}
 
@@ -139,7 +142,7 @@ Profil 2 :
 
 >[!IMPORTANT]
 >
->Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -237,7 +240,7 @@ Profil 2 :
 
 >[!IMPORTANT]
 >
->Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -341,7 +344,7 @@ Profil 2 :
 
 >[!IMPORTANT]
 >
->Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -479,7 +482,7 @@ Profil 2 :
 
 >[!IMPORTANT]
 >
->Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -661,7 +664,7 @@ Profil 2 :
 
 >[!IMPORTANT]
 >
->Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -779,7 +782,7 @@ La `json` ci-dessous représente les données exportées depuis Adobe Experience
 
 Lorsque vous utilisez [l’agrégation configurable](./destination-configuration.md#configurable-aggregation) dans la configuration de destination, vous pouvez regrouper les profils exportés vers votre destination en fonction de critères tels que l’identifiant du segment, l’alias du segment, l’appartenance au segment ou les espaces de noms d’identité.
 
-Dans le modèle de transformation des messages, vous pouvez accéder aux clés d&#39;agrégation mentionnées ci-dessus, comme illustré dans les exemples des sections suivantes. Vous pouvez ainsi formater le message HTTP exporté hors Experience Platform afin qu’il corresponde au format attendu par votre destination.
+Dans le modèle de transformation des messages, vous pouvez accéder aux clés d&#39;agrégation mentionnées ci-dessus, comme illustré dans les exemples des sections suivantes. Utilisez des clés d’agrégation pour structurer le message HTTP exporté hors Experience Platform afin qu’il corresponde aux limites de format et de taux attendues par votre destination.
 
 #### Utiliser la clé d’agrégation des identifiants de segment dans le modèle {#aggregation-key-segment-id}
 
@@ -880,9 +883,9 @@ Profil 4 :
 
 >[!IMPORTANT]
 >
->Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Notez ci-dessous comment `audienceId` est utilisé dans le modèle pour accéder aux ID de segment. Cela suppose que vous utilisiez `audienceId` pour l’adhésion au segment dans votre taxonomie de destination. Vous pouvez utiliser n’importe quel autre nom de champ en fonction de votre propre taxonomie.
+Notez ci-dessous comment `audienceId` est utilisé dans le modèle pour accéder aux ID de segment. Cet exemple suppose que vous utilisez `audienceId` pour l’adhésion au segment dans votre taxonomie de destination. Vous pouvez utiliser n’importe quel autre nom de champ en fonction de votre propre taxonomie.
 
 ```python
 {
@@ -944,7 +947,7 @@ customerList={{input.aggregationKey.segmentAlias}}
 
 #### Utiliser la clé d’agrégation de l’état du segment dans le modèle {#aggregation-key-segment-status}
 
-Si vous utilisez [l’agrégation configurable](./destination-configuration.md#configurable-aggregation) et définissez `includeSegmentId` et `includeSegmentStatus` sur true, vous pouvez accéder à l’état du segment dans le modèle pour regrouper les profils dans les messages HTTP exportés vers votre destination selon que les profils doivent être ajoutés ou supprimés des segments.
+Si vous utilisez [agrégation configurable](./destination-configuration.md#configurable-aggregation) et que vous définissez `includeSegmentId` et `includeSegmentStatus` sur true, vous pouvez accéder à l’état du segment dans le modèle. Ainsi, vous pouvez regrouper les profils dans les messages HTTP exportés vers votre destination selon que les profils doivent être ajoutés ou supprimés des segments.
 
 Les valeurs possibles sont les suivantes :
 
@@ -960,7 +963,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### Utiliser la clé d’agrégation de l’espace de noms d’identité dans le modèle {#aggregation-key-identity}
 
-Vous trouverez ci-dessous un exemple dans lequel l’agrégation [configurable](./destination-configuration.md#configurable-aggregation) dans la configuration de destination est définie pour agréger les profils exportés par espaces de noms d’identité, sous la forme `"namespaces": ["email", "phone"]` et `"namespaces": ["GAID", "IDFA"]`. Consultez le paramètre `groups` dans la [référence de l’API de configuration de destination](./destination-configuration-api.md) pour voir comment cela est fait.
+Vous trouverez ci-dessous un exemple dans lequel l’agrégation [configurable](./destination-configuration.md#configurable-aggregation) dans la configuration de destination est définie pour agréger les profils exportés par espaces de noms d’identité, sous la forme `"namespaces": ["email", "phone"]` et `"namespaces": ["GAID", "IDFA"]`. Reportez-vous au paramètre `groups` dans la [référence de l’API de configuration de destination](./destination-configuration-api.md) pour plus d’informations sur ce regroupement.
 
 **Entrée**
 
@@ -1032,7 +1035,7 @@ Profil 2 :
 
 >[!IMPORTANT]
 >
->Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Pour tous les modèles que vous utilisez, vous devez ajouter une séquence d’échappement aux caractères interdits, tels que les guillemets doubles `""` avant d’insérer le modèle dans la [configuration du serveur de destination](./server-and-template-configuration.md#template-specs). Pour plus d’informations sur l’échappement de guillemets doubles, voir le chapitre 9 de la [norme JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 Notez que `input.aggregationKey.identityNamespaces` est utilisé dans le modèle ci-dessous.
 
@@ -1056,7 +1059,7 @@ Notez que `input.aggregationKey.identityNamespaces` est utilisé dans le modèle
 
 **Résultat**
 
-Lorsqu’ils sont exportés vers votre destination, les profils sont divisés en deux groupes, en fonction de leurs espaces de noms d’identité (email et téléphone dans un groupe, GAID et IDFA dans un autre).
+Lorsqu’ils sont exportés vers votre destination, les profils sont divisés en deux groupes, en fonction de leurs espaces de noms d’identité. Les courriers électroniques et les téléphones se trouvent dans un groupe, tandis que GAID et IDFA en sont dans un autre.
 
 ```json
 {
@@ -1108,7 +1111,7 @@ Lorsqu’ils sont exportés vers votre destination, les profils sont divisés en
 
 #### Utiliser la clé d&#39;agrégation dans un modèle d&#39;URL {#aggregation-key-url-template}
 
-Notez que selon votre cas d’utilisation, vous pouvez également utiliser les clés d’agrégation décrites ici dans une URL, comme illustré ci-dessous :
+Selon votre cas d’utilisation, vous pouvez également utiliser les clés d’agrégation décrites ici dans une URL, comme illustré ci-dessous :
 
 ```python
 https://api.example.com/audience/{{input.aggregationKey.segmentId}}
