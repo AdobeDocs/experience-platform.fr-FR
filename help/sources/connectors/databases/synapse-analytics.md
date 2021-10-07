@@ -5,10 +5,10 @@ title: Présentation du connecteur source Azure synapse Analytics
 topic-legacy: overview
 description: Découvrez comment connecter Azure synapse Analytics à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 9%
+source-wordcount: '247'
+ht-degree: 11%
 
 ---
 
@@ -21,10 +21,6 @@ Adobe Experience Platform permet d’ingérer des données à partir de sources 
 ## LISTE AUTORISÉE d’adresses IP
 
 Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou des performances peuvent se produire lors de l’utilisation de sources. Pour plus d’informations, consultez la page [liste autorisée d’adresses IP](../../ip-address-allow-list.md) .
-
->[!IMPORTANT]
->
->Le connecteur source [!DNL Azure Synapse Analytics] ne prend actuellement pas en charge la connectivité de la même région à Platform. Cela signifie que si votre instance Azure utilise la même région réseau que Platform, une connexion aux sources Platform ne peut pas être établie. Actuellement, seule la connectivité inter-régions est prise en charge. Pour plus d’informations, contactez votre gestionnaire de compte d’Adobe.
 
 La documentation ci-dessous fournit des informations sur la connexion de [!DNL Azure Synapse Analytics] à [!DNL Platform] à l’aide des API ou de l’interface utilisateur :
 

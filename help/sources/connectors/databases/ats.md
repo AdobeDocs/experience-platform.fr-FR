@@ -5,10 +5,10 @@ title: Présentation du connecteur source de stockage Azure Table
 topic-legacy: overview
 description: Découvrez comment connecter Azure Table Storage à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
-source-git-commit: 7af79b9e0d6ed29b796ac7c98b4df1dda09f3513
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 18%
+source-wordcount: '254'
+ht-degree: 22%
 
 ---
 
@@ -21,10 +21,6 @@ Experience Platform prend en charge l’ingestion de données provenant d’une 
 ## LISTE AUTORISÉE d’adresses IP
 
 Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou des performances peuvent se produire lors de l’utilisation de sources. Pour plus d’informations, consultez la page [liste autorisée d’adresses IP](../../ip-address-allow-list.md) .
-
->[!IMPORTANT]
->
->Le connecteur source [!DNL Azure Table Storage] ne prend actuellement pas en charge la connectivité de la même région à Platform. Cela signifie que si votre instance Azure utilise la même région réseau que Platform, une connexion aux sources Platform ne peut pas être établie. Actuellement, seule la connectivité inter-régions est prise en charge. Pour plus d’informations, contactez votre gestionnaire de compte d’Adobe.
 
 La documentation ci-dessous fournit des informations sur la connexion de [!DNL Azure Table Storage] à Platform à l’aide d’API ou de l’interface utilisateur :
 
