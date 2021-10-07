@@ -2,9 +2,9 @@
 description: Cette configuration vous permet d’indiquer des informations de base telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur Experience Platform et les identités qui peuvent être exportées vers votre destination.
 title: Options de configuration de destination pour le SDK de destination
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1727'
 ht-degree: 5%
 
 ---
@@ -13,13 +13,15 @@ ht-degree: 5%
 
 ## Présentation {#overview}
 
-Cette configuration vous permet d’indiquer des informations de base telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur Experience Platform et les identités qui peuvent être exportées vers votre destination.
+Cette configuration vous permet d’indiquer des informations essentielles telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur Experience Platform et les identités qui peuvent être exportées vers votre destination.
+
+Cette configuration connecte également les autres configurations requises pour que votre destination fonctionne (métadonnées de serveur de destination et d’audience) à celle-ci. Découvrez comment vous pouvez référencer les deux configurations dans une section [plus loin sous](./destination-configuration.md#connecting-all-configurations).
 
 Vous pouvez configurer les fonctionnalités décrites dans ce document à l’aide du point de terminaison de l’API `/authoring/destinations`. Lisez [Opérations de point d’entrée de l’API Destinations](./destination-configuration-api.md) pour obtenir la liste complète des opérations que vous pouvez effectuer sur le point d’entrée.
 
 ## Exemple de configuration  {#example-configuration}
 
-Vous trouverez ci-dessous un exemple de configuration pour une destination fictive, Moviestar, qui comporte des points de terminaison dans quatre endroits sur le globe. La destination appartient à la catégorie des destinations mobiles. Les sections ci-dessous présentent la manière dont cette configuration est créée.
+Vous trouverez ci-dessous un exemple de configuration d’une destination fictive, Moviestar, qui comporte des points de terminaison dans quatre endroits sur le globe. La destination appartient à la catégorie des destinations mobiles. Les sections ci-dessous présentent la manière dont cette configuration est créée.
 
 ```json
 {
@@ -118,14 +120,15 @@ Vous trouverez ci-dessous un exemple de configuration pour une destination ficti
             ]
          }
       }
-   }
+   },
+   "backfillHistoricalProfileData":true
 }
 ```
 
 | Paramètre | Type | Description |
 |---------|----------|------|
 | `name` | Chaîne | Indique le titre de votre destination dans le catalogue des Experience Platform. |
-| `description` | Chaîne | Fournissez une description que l’Adobe utilisera dans le catalogue des destinations Experience Platform pour votre carte de destination. Ne vise pas plus de 4 à 5 phrases. |
+| `description` | Chaîne | Fournissez une description de votre carte de destination dans le catalogue des destinations Experience Platform. Ne vise pas plus de 4 à 5 phrases. |
 | `status` | Chaîne | Indique l’état du cycle de vie de la carte de destination. Les valeurs acceptées sont `TEST`, `PUBLISHED` et `DELETED`. Utilisez `TEST` lorsque vous configurez votre destination pour la première fois. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -193,7 +196,7 @@ Utilisez les paramètres de `schemaConfig` pour activer l’étape de mappage du
 
 | Paramètre | Type | Description |
 |---------|----------|------|
-| `profileFields` | Tableau | *Non affiché dans l’exemple de configuration ci-dessus.* Lorsque vous ajoutez des attributs prédéfinis  `profileFields`, les utilisateurs auront la possibilité de mapper les attributs Experience Platform aux attributs prédéfinis du côté de votre destination. |
+| `profileFields` | Tableau | *Non affiché dans l’exemple de configuration ci-dessus.* Lorsque vous ajoutez des attributs prédéfinis  `profileFields`, les utilisateurs Experience Platform ont la possibilité de mapper les attributs de Platform aux attributs prédéfinis du côté de votre destination. |
 | `profileRequired` | Booléen | Utilisez `true` si les utilisateurs doivent être en mesure de mapper les attributs de profil de l’Experience Platform aux attributs personnalisés du côté de votre destination, comme illustré dans l’exemple de configuration ci-dessus. |
 | `segmentRequired` | Booléen | Utilisez toujours `segmentRequired:true`. |
 | `identityRequired` | Booléen | Utilisez `true` si les utilisateurs doivent pouvoir mapper les espaces de noms d’identité de l’Experience Platform à votre schéma souhaité. |
@@ -204,7 +207,7 @@ Utilisez les paramètres de `schemaConfig` pour activer l’étape de mappage du
 
 Les paramètres de cette section déterminent la manière dont les identités et attributs de la cible sont renseignés à l’étape de mappage de l’interface utilisateur de l’Experience Platform, où les utilisateurs mappent leurs schémas XDM au schéma de votre destination.
 
-Adobe doit savoir quelles [!DNL Platform] identités les clients pourront exporter vers votre destination. Voici quelques exemples : [!DNL Experience Cloud ID], adresse électronique hachée, ID d’appareil ([!DNL IDFA], [!DNL GAID]). Ces valeurs sont des [!DNL Platform] espaces de noms d’identité que les clients peuvent mapper aux espaces de noms d’identité de votre destination.
+Vous devez indiquer les [!DNL Platform] identités que les clients peuvent exporter vers votre destination. Voici quelques exemples : [!DNL Experience Cloud ID], adresse électronique hachée, ID d’appareil ([!DNL IDFA], [!DNL GAID]). Ces valeurs sont des [!DNL Platform] espaces de noms d’identité que les clients peuvent mapper aux espaces de noms d’identité de votre destination.
 
 Les espaces de noms d’identité ne nécessitent pas de correspondance 1-à-1 entre [!DNL Platform] et votre destination.
 Par exemple, les clients peuvent mapper un espace de noms [!DNL Platform] [!DNL IDFA] à un espace de noms [!DNL IDFA] à partir de votre destination, ou ils peuvent mapper le même [!DNL Platform] [!DNL IDFA] à un espace de noms [!DNL Customer ID] dans votre destination.
@@ -215,9 +218,9 @@ Pour en savoir plus, consultez la [présentation de l’espace de noms d’ident
 
 | Paramètre | Type | Description |
 |---------|----------|------|
-| `acceptsAttributes` | Booléen | Indique si votre destination accepte les attributs de profil standard. En règle générale, ces attributs sont mis en évidence dans la documentation de nos partenaires. |
+| `acceptsAttributes` | Booléen | Indique si votre destination accepte les attributs de profil standard. En règle générale, ces attributs sont mis en évidence dans la documentation des partenaires. |
 | `acceptsCustomNamespaces` | Booléen | Indique si les clients peuvent configurer des espaces de noms personnalisés dans votre destination. |
-| `allowedAttributesTransformation` | Chaîne | *Non affiché dans l’exemple de configuration*. Utilisé, par exemple, lorsque le client [!DNL Platform] a des adresses électroniques ordinaires comme attribut et que votre plateforme n’accepte que des emails hachés. C’est là que vous fournissez la transformation à appliquer (par exemple, transformez l’email en minuscules, puis en hachage). |
+| `allowedAttributesTransformation` | Chaîne | *Non affiché dans l’exemple de configuration*. Utilisé, par exemple, lorsque le client [!DNL Platform] a des adresses électroniques ordinaires comme attribut et que votre plateforme n’accepte que des emails hachés. Dans cet objet, vous pouvez effectuer la transformation qui doit être appliquée (par exemple, transformer l&#39;email en minuscules, puis en hachage). Pour obtenir un exemple, voir `requiredTransformation` dans la [référence de l’API de configuration de destination](./destination-configuration-api.md#update). |
 | `acceptedGlobalNamespaces` | - | Utilisé dans les cas où votre plateforme accepte des [espaces de noms d’identité standard](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (IDFA, par exemple), afin que vous puissiez empêcher les utilisateurs de Platform de sélectionner uniquement ces espaces de noms d’identité. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -242,11 +245,19 @@ Grâce à la section `audienceTemplateId`, cette section associe également cett
 
 Les paramètres affichés dans la configuration ci-dessus sont décrits dans la [référence de l’API du point de terminaison des destinations](./destination-configuration-api.md).
 
+## Comment cette configuration connecte toutes les informations nécessaires à votre destination {#connecting-all-configurations}
+
+Certains paramètres de votre destination peuvent être configurés via le serveur de destination ou le point de terminaison des métadonnées de l’audience. Le point d’entrée de configuration de destination connecte tous ces paramètres en référençant les configurations comme suit :
+
+* Utilisez `destinationServerId` pour référencer la configuration du serveur de destination et du modèle configurée pour votre destination.
+* Utilisez `audienceMetadataId` pour référencer la configuration des métadonnées d’audience configurée pour votre destination.
+
+
 ## Stratégie d’agrégation {#aggregation}
 
 ![Stratégie d’agrégation dans le modèle de configuration](./assets/aggregation-configuration.png)
 
-Cette section vous permet de définir les stratégies d’agrégation que l’Experience Platform utilisera lors de l’exportation de données vers votre destination.
+Cette section vous permet de définir les stratégies d’agrégation que l’Experience Platform doit utiliser lors de l’exportation de données vers votre destination.
 
 Une stratégie d’agrégation détermine la manière dont les profils exportés sont combinés dans les exportations de données. Les options disponibles sont les suivantes :
 * Agrégation des meilleurs efforts
@@ -277,10 +288,10 @@ Cette option vous permet d’effectuer les opérations suivantes :
 
 Pour obtenir des explications détaillées sur les paramètres d’agrégation, consultez la page de référence [Opérations de point d’entrée de l’API Destinations](./destination-configuration-api.md), où chaque paramètre est décrit.
 
-<!--
+## Qualifications des profils historiques
 
-commenting out the `backfillHistoricalProfileData` parameter, which will only be used after an April release
+Vous pouvez utiliser le paramètre `backfillHistoricalProfileData` dans la configuration des destinations pour déterminer si les qualifications de profil historiques doivent être exportées vers votre destination.
 
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
-
--->
+| Paramètre | Type | Description |
+|---------|----------|------|
+| `backfillHistoricalProfileData` | Booléen | Contrôle si les données de profil historiques sont exportées lorsque les segments sont activés vers la destination. <br> <ul><li> `true`:  [!DNL Platform] envoie les profils utilisateur historiques qualifiés pour le segment avant l’activation du segment. </li><li> `false`:  [!DNL Platform] inclut uniquement les profils utilisateur qui remplissent les critères pour le segment une fois le segment activé. </li></ul> |
