@@ -3,10 +3,10 @@ title: API d’hygiène des données (Alpha)
 description: Découvrez comment corriger ou supprimer par programmation les données personnelles stockées de vos clients dans Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: dfe9c1ef826bc769a82938223029cd41c066c221
+source-git-commit: dd8978566730975f0bde36f3af490cd33362b3ba
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 19%
+source-wordcount: '525'
+ht-degree: 20%
 
 ---
 
@@ -106,6 +106,8 @@ curl -X POST \
 | --- | --- |
 | `companyContexts` | Un tableau contenant des informations d’authentification pour votre organisation. Il doit contenir un seul objet avec les propriétés suivantes : <ul><li>`namespace`: Cette propriété doit être définie sur `imsOrgID`.</li><li>`value`: Votre identifiant de l&#39;organisation IMS. Il s’agit de la même valeur que celle fournie dans l’en-tête `x-gw-ims-org-id`.</li></ul> |
 | `users` | Tableau contenant une collection d’au moins un utilisateur dont vous souhaitez supprimer les informations. Chaque objet d’utilisateur contient les informations suivantes : <ul><li>`key` : un identifiant pour un utilisateur utilisé pour exécuter les identifiants de tâches distincts dans les données de réponse. Il est recommandé de choisir une chaîne unique facilement identifiable pour cette valeur afin de pouvoir la référencer ou la rechercher ultérieurement.</li><li>`action` : un tableau répertoriant les actions souhaitées pouvant être effectuées sur les données de l’utilisateur. Doit contenir une seule valeur string : `delete`.</li><li>`userIDs` : une collection d’identités pour cet utilisateur. Le nombre d’identités qu’un utilisateur unique peut posséder est limité à neuf. Chaque identité contient les propriétés suivantes : <ul><li>`namespace`: Espace de noms  [d’identité ](../identity-service/namespaces.md) associé à l’identifiant. Il peut s’agir d’un [espace de noms standard](./api/appendix.md#standard-namespaces) reconnu par Platform ou d’un espace de noms personnalisé défini par votre organisation. Le type d’espace de noms utilisé doit être reflété dans la propriété `type` .</li><li>`value`: La valeur d’identité.</li><li>`type`: Doit être défini sur  `standard` si vous utilisez un espace de noms reconnu globalement ou  `custom` si vous utilisez un espace de noms défini par votre organisation.</li></ul></li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
