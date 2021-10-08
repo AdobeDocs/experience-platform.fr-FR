@@ -4,9 +4,9 @@ description: Découvrez comment ajouter individuellement des champs provenant de
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: b7c6f37d3e6d824465713647b624473cff188378
+source-git-commit: 0bac76ce754468bd7e5396b6f68fbcfc3d6e4aed
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Les workflows décrits dans ce document sont actuellement en version bêta. La fonctionnalité et la documentation peuvent être modifiées.
+>Les workflows décrits dans ce document sont actuellement en version bêta et votre entreprise peut ne pas y avoir encore accès. Les fonctionnalités décrites dans cette documentation peuvent faire l’objet de modifications.
 
 Adobe Experience Platform fournit un solide ensemble de groupes de champs [normalisés](../schema/composition.md#field-group) à utiliser dans les schémas de modèle de données d’expérience (XDM). La structure et la sémantique derrière ces groupes de champs sont soigneusement conçues pour répondre à un large éventail de cas d’utilisation de la segmentation et à d’autres applications en aval dans Platform. Vous pouvez également définir vos propres groupes de champs personnalisés pour répondre à des besoins professionnels uniques.
 
@@ -43,7 +43,7 @@ Si vous souhaitez supprimer plusieurs champs, vous pouvez gérer le groupe dans 
 
 ![Gestion des champs associés](../images/ui/field-based-workflows/manage-related-fields.png)
 
-Une boîte de dialogue s’affiche, indiquant la structure du groupe de champs en question. À partir de là, vous pouvez utiliser les cases à cocher fournies pour sélectionner ou désélectionner les champs dont vous avez besoin. Lorsque vous êtes satisfait, sélectionnez **[!UICONTROL Ajouter des champs]**.
+Une boîte de dialogue s’affiche, indiquant la structure du groupe de champs en question. À partir de là, vous pouvez utiliser les cases à cocher fournies pour sélectionner ou désélectionner les champs dont vous avez besoin. Lorsque vous êtes satisfait, sélectionnez **[!UICONTROL Confirmer]**.
 
 ![Sélectionner les champs d’un groupe de champs](../images/ui/field-based-workflows/select-fields.png)
 
@@ -73,23 +73,23 @@ Le canevas se met à jour pour afficher le champ standard ajouté au schéma, y 
 
 ## Ajout direct de champs personnalisés à un schéma
 
-Si vous avez déjà [créé des groupes de champs personnalisés](./resources/field-groups.md#create), vous pouvez ajouter des champs personnalisés directement au schéma sans avoir à les ajouter séparément à un groupe de champs personnalisés au préalable.
-
->[!WARNING]
->
->Lorsque vous ajoutez un champ personnalisé à un schéma, vous devez toujours sélectionner un groupe de champs personnalisé existant auquel il sera associé. Cela signifie que pour ajouter directement des champs personnalisés à un schéma, vous devez disposer d’au moins un groupe de champs personnalisés défini précédemment dans l’environnement de test dans lequel vous travaillez. En outre, tous les autres schémas qui utilisent ce groupe de champs personnalisé hériteront également du nouveau champ ajouté après avoir enregistré vos modifications.
+Tout comme le workflow pour les champs standard, vous pouvez également ajouter vos propres champs personnalisés directement à un schéma.
 
 Pour ajouter des champs au niveau racine d’un schéma, sélectionnez l’icône plus (**+**) en regard du nom du schéma dans la zone de travail. Un espace réservé **[!UICONTROL Champ sans titre]** apparaît dans la structure du schéma et le rail droit est mis à jour pour afficher les commandes permettant de configurer le champ.
 
 ![Champ personnalisé racine](../images/ui/field-based-workflows/root-custom-field.png)
 
-Commencez à saisir le nom du champ personnalisé que vous souhaitez ajouter, et le système commence automatiquement à rechercher les champs standard correspondants. Pour créer un champ personnalisé à la place, sélectionnez l’option supérieure ajoutée avec **([!UICONTROL Nouveau champ])**.
+Commencez à saisir le nom du champ que vous souhaitez ajouter, et le système commence automatiquement à rechercher les champs standards correspondants. Pour créer un champ personnalisé à la place, sélectionnez l’option supérieure ajoutée avec **([!UICONTROL Nouveau champ])**.
 
 ![Nouveau champ](../images/ui/field-based-workflows/custom-field-search.png)
 
-À partir de là, indiquez un nom d’affichage et un type de données pour le champ. Sous **[!UICONTROL Attribuer un groupe de champs]**, sélectionnez le groupe de champs personnalisé auquel vous souhaitez associer le nouveau champ.
+À partir de là, indiquez un nom d’affichage et un type de données pour le champ. Sous **[!UICONTROL Attribuer un groupe de champs]**, vous devez sélectionner un groupe de champs pour le nouveau champ à associer. Commencez à saisir le nom du groupe de champs. Si vous avez déjà [créé des groupes de champs personnalisés](./resources/field-groups.md#create), ils apparaîtront dans la liste déroulante. Vous pouvez également saisir un nom unique dans le champ pour créer un groupe de champs à la place.
 
 ![Sélectionner un groupe de champs](../images/ui/field-based-workflows/select-field-group.png)
+
+>[!WARNING]
+>
+>Si vous sélectionnez un groupe de champs personnalisé existant, tout autre schéma qui l’emploie héritera également du nouveau champ ajouté après avoir enregistré vos modifications. Pour cette raison, sélectionnez un groupe de champs existant uniquement si vous souhaitez ce type de propagation. Dans le cas contraire, vous devez choisir de créer un groupe de champs personnalisé.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]**.
 
@@ -110,6 +110,8 @@ Si le schéma sur lequel vous travaillez comporte un champ de type objet fourni 
 ![Ajouter un champ à un objet standard](../images/ui/field-based-workflows/add-field-to-standard-object.png)
 
 Après avoir appliqué vos modifications, le nouveau champ s’affiche sous l’espace de noms de l’identifiant du client dans l’objet standard. Cet espace de noms imbriqué empêche les conflits de nom de champ dans le groupe de champs lui-même afin d’éviter de rompre les modifications dans d’autres schémas qui utilisent le même groupe de champs.
+
+![Champ ajouté à l’objet standard](../images/ui/field-based-workflows/added-to-standard-object.png)
 
 ## Étapes suivantes
 
