@@ -2,10 +2,10 @@
 title: Prise en main du transfert dʼévénements
 description: Suivez les étapes de ce tutoriel pour commencer à utiliser le transfert dʼévénements dans Adobe Experience Platform.
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 406c7e90c315c1807f5f3dd2b32462868b312197
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -99,7 +99,7 @@ Ensuite, configurez Edge Network pour envoyer des données au transfert dʼévé
 
 Après la configuration, prenez note des identifiants d’environnement pour la nouvelle propriété.
 
-## Configurez lʼextension de balise SDK Web pour envoyer des données au flux de données créé précédemment
+## Configurez l’extension SDK Web Platform pour envoyer des données à la banque de données créée précédemment
 
 Créez votre propriété dans lʼinterface utilisateur de collecte de données, puis utilisez lʼextension SDK Web Adobe Experience Platform pour la configurer.
 
