@@ -5,10 +5,10 @@ title: Annexe du guide de l’API Schema Registry
 description: Ce document fournit des informations supplémentaires relatives au travail avec l’API Schema Registry.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 403dcb75e43b5c7aa462495086e5a9e403ef6f5b
+source-git-commit: 2871108b67d3d84f1578e80e9c087444ff407820
 workflow-type: tm+mt
 source-wordcount: '984'
-ht-degree: 36%
+ht-degree: 34%
 
 ---
 
@@ -77,29 +77,30 @@ Le tableau ci-dessous contient une comparaison côte à côte affichant les cham
   <tr>
   <td>
   <pre class=" language-json">
-        {
-          "xdm:birthDate": {
-              "title": "Birth Date",
-              "type": "string",
-              "format": "date",
-          },
-          "xdm:birthDayAndMonth": {
-              "title": "Birth Date",
-              "type": "string",
-              "pattern": "[0-1][0-9]-[0-9][0-9]",
-          },
-          "xdm:birthYear": {
-              "title": "Birth year",
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 32767
-        }
+{
+  "xdm:birthDate" : {
+    "title" : "Date de naissance",
+    "type": "string",
+    "format": "date"
+  },
+  "xdm:birthDayAndMonth": {
+    "title" : "Date de naissance",
+    "type": "string",
+    "pattern": "[0-1][0-9]-[0-9][0-9][0-9]"
+  },
+  "xdm:birthYear" : {
+    "title" : "Année de naissance",
+    "type": "integer",
+    "minimum" : 1,
+    "maximum": 32767
+  }
+}
   </pre>
   </td>
   <td>
   <pre class=" language-json">
-        {
-          "birthDate": {
+{
+  "birthDate": {
               "title": "Birth Date",
               "type": "string",
               "format": "date",
@@ -120,7 +121,8 @@ Le tableau ci-dessous contient une comparaison côte à côte affichant les cham
               "maximum": 32767,
               "meta:xdmField": "xdm:birthYear",
               "meta:xdmType": "short"
-        }
+  }
+}
       </pre>
   </td>
   </tr>
