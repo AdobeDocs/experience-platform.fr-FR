@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Guide des plateformes de données client en temps réel
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
-source-git-commit: 8e7ceaa5f62ee7647b5a53c494c9b3acb43c14c7
+source-git-commit: 2d9b1df064f0e2a5aa981d0144fefecc9d0a4146
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 66%
+source-wordcount: '171'
+ht-degree: 61%
 
 ---
 
@@ -32,6 +32,7 @@ ht-degree: 66%
    * [Qualité des données sur la plateforme](datasets/data-quality.md)
 * Destinations {#destinations}
    * [Présentation des destinations](destinations/overview.md)
+   * [Destinations dans l’édition B2B de la plateforme CDP en temps réel](destinations/b2b.md)
 * Identités {#identity}
    * [Identités et espaces de noms d’identité](profile/identities-overview.md)
 * Confidentialité et gouvernance des données {#privacy}
@@ -45,7 +46,7 @@ ht-degree: 66%
 * Segments {#segmentation}
    * [Présentation de la segmentation](segmentation/segmentation-overview.md)
    * [Guide du créateur de segments](segmentation/segment-builder-guide.md)
-   * [Segmentation B2B](segmentation/b2b.md)
+   * [Segmentation dans l’édition CDP en temps réel B2B](segmentation/b2b.md)
    * [Customer AI](segmentation/customer-ai.md)
 * Schémas {#schemas}
    * [Présentation des schémas](schemas/overview.md)
