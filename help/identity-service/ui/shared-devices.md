@@ -6,9 +6,9 @@ topic-legacy: tutorial
 description: La détection des appareils partagés identifie les différents utilisateurs authentifiés du même appareil, ce qui permet une représentation plus précise des données client dans les graphiques d’identités.
 hide: true
 hidefromtoc: true
-source-git-commit: 205d9a8d0d5759e978604bef2b05664b1376d835
+source-git-commit: 9c0d360b39bf69a44ac6298724dbab0f8456dc90
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '656'
 ht-degree: 8%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 8%
 
 Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
 
-[!DNL Shared Device Detection] se rapportent aux appareils utilisés par plusieurs individus. Les tablettes, les ordinateurs de bibliothèque et les kiosques sont des exemples d’appareils partagés. Grâce à [!DNL Shared Device Detection], différents utilisateurs d’un même appareil peuvent ne pas être fusionnés en une seule identité, ce qui permet une représentation plus précise.
+[!DNL Shared Device] fait référence aux appareils utilisés par plusieurs individus. Les tablettes, les ordinateurs de bibliothèque et les kiosques sont des exemples d’appareils partagés. Grâce à la fonction [!DNL Shared Device Detection], il est possible d’empêcher la fusion de différents utilisateurs d’un même appareil en une seule identité, ce qui permet une représentation plus précise.
 
 Avec [!DNL Shared Device Detection] vous pouvez :
 
@@ -31,7 +31,7 @@ Avec [!DNL Shared Device Detection] vous pouvez :
 
 >[!TIP]
 >
->Les configurations de [!DNL Shared Device Detection] doivent être terminées avant d’activer [!DNL Profile] pour le jeu de données, car vous ne pouvez plus modifier les paramètres, une fois que les données commencent à s’enchaîner dans [!DNL Identity Service].
+>Les configurations de [!DNL Shared Device Detection] doivent être terminées avant d’activer [!DNL Profile] pour le jeu de données, car vous ne pouvez plus modifier les paramètres, une fois les graphiques générés dans [!DNL Identity Service].
 
 ## Prise en main
 
