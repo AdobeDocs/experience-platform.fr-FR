@@ -2,13 +2,13 @@
 keywords: profil rtcdp;profils rtcdp;identités rtcdp;stratégies de fusion rtcdp;profil client en temps réel
 title: Guide de l’interface utilisateur du profil de compte
 description: Grâce aux profils de compte, l’édition B2B de Real-time Customer Data Platform vous permet d’unifier les informations de compte provenant de plusieurs sources. Ce guide fournit des détails sur l’interaction avec les profils de compte dans l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: 5301cf870052f537a34913beb0b814212bdaadaa
+exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
+source-git-commit: 5bd2afcc594d96878ee51af2e9e99d74b764009e
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
-
 
 # Guide de l’interface utilisateur du profil de compte
 
@@ -24,7 +24,7 @@ Les profils de compte vous permettent d’unifier les informations de compte de 
 
 ## Parcourir les profils de compte
 
-Pour parcourir les profils de compte, commencez par sélectionner **[!UICONTROL Profils]** sous Comptes dans le volet de navigation de gauche.
+Pour parcourir les profils de compte, commencez par sélectionner **[!UICONTROL Profils]** sous [!UICONTROL Comptes] dans le volet de navigation de gauche.
 
 ![](images/b2b-account-browse.png)
 
@@ -34,7 +34,7 @@ Dans l’onglet **[!UICONTROL Parcourir]**, vous pouvez explorer les profils de 
 
 ### Parcourir par [!UICONTROL source d’entreprise connectée]
 
-Pour parcourir les profils de compte en fonction d’une source d’entreprise connectée, vous devez d’abord sélectionner une source connectée à l’aide du bouton de sélecteur situé à côté du champ **[!UICONTROL Source]**.
+Pour parcourir les profils de compte en fonction d’une source d’entreprise connectée, sélectionnez **[!UICONTROL Source d’entreprise connectée]** dans la liste déroulante **[!UICONTROL Parcourir par]**, puis choisissez une source connectée à l’aide du bouton de sélecteur situé en regard du champ **[!UICONTROL Source]**.
 
 ![](images/b2b-account-browse.png)
 
@@ -60,13 +60,15 @@ Une fois la source sélectionnée, vous devez désormais saisir un **[!UICONTROL
 
 ![](images/b2b-account-browse-id.png)
 
-### Parcourir par [!UICONTROL Autre]
+### Parcourir par [!UICONTROL Autres]
 
 La plateforme de données clients en temps réel, B2B Edition, prend en charge la possibilité d’effectuer une recherche directe en vous permettant de saisir un **[!UICONTROL nom source]**, **[!UICONTROL instance source]** et **[!UICONTROL ID de compte]** pour un compte que vous souhaitez afficher. En saisissant directement le nom et l’instance de la source, vous fournissez le contexte nécessaire à l’Experience Platform pour rechercher et afficher les données correctes du profil du compte.
 
 La possibilité d’effectuer une recherche directe est utile dans les cas où une connexion source directe aux données n’est pas possible. Par exemple, si votre entreprise a mis en place des politiques de gouvernance des données qui empêchent la connexion directe à un CRM, vous pouvez exporter ces données vers un système de stockage dans le cloud, puis les ingérer dans Experience Platform.
 
 Un autre exemple peut être que vous effectuez une transformation sur les données entre le moment où il quitte un système et celui où il entre dans Platform. Vous pouvez utiliser la fonctionnalité de recherche directe pour fournir un contexte aux données (par exemple, en indiquant qu’il s’agit de données Marketo, bien qu’elles proviennent d’un compartiment Amazon S3, par exemple) afin que le système sache où chercher les données et comment les générer correctement.
+
+Pour lancer une recherche directe, sélectionnez **[!UICONTROL Autres]** dans la liste déroulante **[!UICONTROL Parcourir par]**, puis saisissez un **[!UICONTROL Nom source]**, **[!UICONTROL Instance source]** et **[!UICONTROL ID de compte]** pour le compte que vous souhaitez afficher.
 
 ![](images/b2b-account-browse-adhoc.png)
 
