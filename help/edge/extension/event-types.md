@@ -4,7 +4,7 @@ description: Découvrez comment utiliser les types d’événements fournis par 
 solution: Experience Platform
 feature: Web SDK
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 8f714933e23e281772cd8633d27096021de14c56
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Types d’événements 
 
-Cette page décrit les types d’événements Adobe Experience Platform fournis par l’extension de balise du SDK Web de Adobe Experience Platform. Ils sont utilisés pour [créer des règles](https://experienceleague.adobe.com/docs/launch-learn/tutorials/fundamentals/building-rules-in-launch.html) et ne doivent pas être confondus avec le champ [`eventType` dans XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=fr).
+Cette page décrit les types d’événements Adobe Experience Platform fournis par l’extension de balise du SDK Web de Adobe Experience Platform. Ils sont utilisés pour [créer des règles](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) et ne doivent pas être confondus avec le champ [`eventType` dans XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=fr).
 
 ## [!UICONTROL Envoyer l’événement terminé]
 
@@ -170,12 +170,12 @@ Dans cet exemple, si des propositions sont trouvées sur le serveur correspondan
 ]
 ```
 
-À ce stade, vous pouvez générer le contenu des propositions à votre gré. Dans cet exemple, la proposition correspondant à la portée `discount` est une proposition HTML créée à l’aide du compositeur d’expérience d’après les formulaires Adobe Target. Supposons que votre page comporte un élément avec l’identifiant `daily-special` et que vous souhaitiez effectuer le rendu du contenu de la proposition `discount` vers l’élément `daily-special`. Procédez comme suit :
+À ce stade, vous pouvez générer le contenu des propositions à votre gré. Dans cet exemple, la proposition correspondant à la portée `discount` est une proposition de HTML créée à l’aide du compositeur d’expérience d’après les formulaires Adobe Target. Supposons que votre page comporte un élément avec l’identifiant `daily-special` et que vous souhaitiez effectuer le rendu du contenu de la proposition `discount` vers l’élément `daily-special`. Procédez comme suit :
 
 1. Extrayez les propositions de l’objet `event`.
 1. Parcourez chaque proposition en recherchant la proposition dont le périmètre est `discount`.
-1. Si vous trouvez une proposition, passez en boucle chaque élément de la proposition, recherchant l&#39;élément qui est du contenu HTML. (Mieux vaut vérifier que supposer.)
-1. Si vous trouvez un élément contenant du contenu HTML, recherchez l’élément `daily-special` sur la page et remplacez son code HTML par le contenu personnalisé.
+1. Si vous trouvez une proposition, passez en boucle chaque élément de la proposition, recherchant l’élément qui est le contenu HTML. (Mieux vaut vérifier que supposer.)
+1. Si vous trouvez un élément contenant du contenu de HTML, recherchez l’élément `daily-special` sur la page et remplacez son HTML par le contenu personnalisé.
 
 Votre code personnalisé dans l’action [!UICONTROL Code personnalisé] peut apparaître comme suit :
 
