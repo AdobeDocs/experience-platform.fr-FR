@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur des environnements de test
 topic-legacy: user guide
 description: Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux environnements de test dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
+source-git-commit: a43dd851a5c7ec722e792a0f43d1bb42777f0c15
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 30%
+source-wordcount: '832'
+ht-degree: 28%
 
 ---
 
@@ -43,6 +43,10 @@ Vous pouvez parcourir la liste des environnements de test disponibles à l’aid
 ![](../images/ui/sandbox-search.png)
 
 ## Création d’un nouvel environnement de test
+
+>[!NOTE]
+>
+>Lorsqu’un nouvel environnement de test est créé, vous devez d’abord ajouter ce nouvel environnement de test à votre profil de produit dans [Adobe Admin Console](https://adminconsole.adobe.com/) avant de pouvoir commencer à utiliser le nouvel environnement de test. Pour plus d’informations sur la configuration d’un environnement de test à un profil de produit, voir la documentation sur la [gestion des autorisations pour un profil de produit](../../access-control/ui/permissions.md) .
 
 La vidéo suivante présente un aperçu rapide de l’utilisation des environnements de test dans Experience Platform.
 

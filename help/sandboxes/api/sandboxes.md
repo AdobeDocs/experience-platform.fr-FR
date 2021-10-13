@@ -5,10 +5,10 @@ title: Point de terminaison de l’API de gestion des environnements de test
 topic-legacy: developer guide
 description: Le point de terminaison /sandbox dans l’API Sandbox vous permet de gérer par programmation les environnements de test dans Adobe Experience Platform.
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: a43dd851a5c7ec722e792a0f43d1bb42777f0c15
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 50%
+source-wordcount: '1489'
+ht-degree: 48%
 
 ---
 
@@ -191,6 +191,10 @@ Une réponse réussie renvoie les détails de l’environnement de test, y compr
 | `eTag` | L’identifiant d’une version spécifique de l’environnement de test. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que l’environnement de test est modifié. |
 
 ## Création d’un environnement de test {#create}
+
+>[!NOTE]
+>
+>Lorsqu’un nouvel environnement de test est créé, vous devez d’abord ajouter ce nouvel environnement de test à votre profil de produit dans [Adobe Admin Console](https://adminconsole.adobe.com/) avant de pouvoir commencer à utiliser le nouvel environnement de test. Pour plus d’informations sur la configuration d’un environnement de test à un profil de produit, voir la documentation sur la [gestion des autorisations pour un profil de produit](../../access-control/ui/permissions.md) .
 
 Vous pouvez créer un environnement de test de développement ou de production en envoyant une requête de POST au point de terminaison `/sandboxes` .
 
