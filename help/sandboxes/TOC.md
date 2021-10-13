@@ -3,8 +3,8 @@ audience: user
 user-guide-title: Aide aux environnements de test dans Adobe Experience Platform
 breadcrumb-title: Guide des environnements de test
 user-guide-description: Partitionnez une instance de Platform en environnements virtuels pour le développement, le test et le déploiement d’applications.
-feature: Data Management
-source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
+feature: Sandboxes
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 81%

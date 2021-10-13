@@ -3,8 +3,8 @@ audience: user
 user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
-feature: Data Ingestion, Sources
-source-git-commit: fe024675e6337ebf9a401f65db939440f435053f
+feature: Sources
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 20%
@@ -100,7 +100,7 @@ ht-degree: 20%
          - [Stockage de fichiers Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Zone d’entrée des données](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
-         - [Stockage Google Cloud](tutorials/api/create/cloud-storage/google.md)
+         - [Stockage dans le cloud Google](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
@@ -189,7 +189,7 @@ ht-degree: 20%
          - [Stockage de fichiers Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Zone d’entrée des données](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Stockage Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Stockage dans le cloud Google](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)

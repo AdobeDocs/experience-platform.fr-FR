@@ -2,8 +2,8 @@
 audience: user
 user-guide-title: Guide des catalogues et des jeux de données
 user-guide-description: Découvrez le lignage de données, les métadonnées, les descriptions de fichiers, les répertoires et les jeux de données dans le lac de données.
-feature: Data Management
-source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
+feature: Catalog
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 87%
