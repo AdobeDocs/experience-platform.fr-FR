@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;prise en main;service clientèle;rubriques les plus consultées;entrée de l’assistance client;sortie de l’assistance client;dépannage des problèmes client;erreurs de l’assistance client
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Dépannage des erreurs de Customer AI
 topic-legacy: Getting started
 description: Trouvez des réponses aux erreurs courantes de Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%

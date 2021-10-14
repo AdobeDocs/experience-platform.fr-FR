@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;présentation de l’attribution;rubriques les plus consultées;AEM d’attribution;AEM d’attribution
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Présentation d’Attribution AI
 topic-legacy: Attribution AI
 description: Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client. Les impressions de publicités affichées, les envois de courriers électroniques, les ouvertures de courriers électroniques ainsi que les clics de référencement payants sont autant d’exemples de points de contact.
 landing-page-description: Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 90%

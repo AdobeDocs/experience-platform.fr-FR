@@ -3,8 +3,7 @@ audience: user
 user-guide-title: Guide d’ETL Adobe Experience Platform
 breadcrumb-title: Guide d’ETL
 user-guide-description: Découvrez les grandes lignes de la création de connecteurs sécurisés et performants pour l’ingestion de données dans Platform.
-feature: Data Ingestion
-source-git-commit: d1f50cc228cc6bc31a94981edb3109d07378911f
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 100%

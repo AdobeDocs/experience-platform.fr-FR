@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;insights;accès aux attributions;rubriques les plus consultées;informations sur les attributions
-solution: Intelligent Services, Experience Platform
+feature: Attribution AI
 title: Découvrez les statistiques dans Attribution AI
 topic-legacy: Attribution AI insights
 description: Ce document sert de guide pour interagir avec les insights des instances de service dans l’interface utilisateur Adobe Intelligent Services.
 exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 49%
