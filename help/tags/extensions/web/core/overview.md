@@ -5,7 +5,7 @@ exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
 workflow-type: tm+mt
 source-wordcount: '5257'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -59,7 +59,7 @@ L’événement se déclenche lorsqu’une touche est enfoncée. Voir la section
 
 L’événement se déclenche lorsque le média prend fin. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
-#### Données chargées par le média
+#### Media-Loaded Data
 
 L’événement est déclenché lorsque le fichier multimédia charge des données. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
@@ -75,14 +75,14 @@ L’événement est déclenché lors de la lecture du fichier multimédia. Voir 
 
 L’événement se déclenche si le média se bloque. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
-#### Durée de lecture du fichier multimédia
+#### Media-Time Played
 
 L’événement se déclenche si le fichier multimédia est lu pendant une durée spécifiée. Pour déclencher l’événement, vous devez spécifier la durée de lecture du fichier multimédia. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
 
-#### Modification du volume du fichier multimédia
+#### Media-Volume Changed
 
-L’événement se déclenche en cas d&#39;augmentation ou de réduction de volume. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
+L’événement se déclenche en cas d’augmentation ou de réduction de volume. Voir la section [Options](#options) pour plus d’informations sur les paramètres d’événement personnalisables.
 
 ### Événements orientés appareil mobile
 
@@ -146,7 +146,7 @@ Voir la section [Options](#options) pour plus d’informations sur les paramètr
 
 L’événement se déclenche si un événement pushState ou hashchange se produit. Il n’existe aucun paramètre pour ce type d’événement.
 
-#### Temps passé sur une page
+#### Time-Spent on Page
 
 L’événement se déclenche si l’utilisateur reste sur la page pendant un certain nombre de secondes. Indiquez le nombre de secondes qui doivent s’écouler avant le déclenchement de l’événement.
 
@@ -452,7 +452,7 @@ Indiquez un ou plusieurs modèles de hachage qui doivent exister dans l’URL.
 
 #### Path   And Query String
 
-Indiquez un ou plusieurs chemins d’accès qui doivent exister dans l’URL. Cela inclut le chemin et la chaîne de requête.
+Indiquez un ou plusieurs chemins d’accès qui doivent exister dans l’URL.  Cela inclut le chemin et la chaîne de requête.
 
 >[!NOTE]
 >
@@ -464,7 +464,7 @@ Indiquez un ou plusieurs chemins d’accès qui doivent exister dans l’URL. Ce
 
 #### Path Without Query String
 
-Indiquez un ou plusieurs chemins d’accès qui doivent exister dans l’URL. Cela inclut le chemin d’accès, mais n’inclut pas la chaîne de requête.
+Indiquez un ou plusieurs chemins d’accès qui doivent exister dans l’URL.  Cela inclut le chemin d’accès, mais n’inclut pas la chaîne de requête.
 
 >[!NOTE]
 >
@@ -483,7 +483,7 @@ Sélectionnez l’une des options suivantes :
 * HTTP
 * HTTPS
 
-#### Paramètre de chaîne de requête
+#### Query String Parameter
 
 Indiquez le paramètre d’URL utilisé dans l’URL.
 
@@ -526,7 +526,7 @@ Pour la fréquence maximale de la condition 1 par session, ces deux éléments `
 
 `sessionCount` est un élément `visitorTracking`. L’API du visiteur doit donc être activée pour que la condition d’échantillonnage fonctionne.
 
-#### Échantillonnage
+#### Sampling
 
 Indiquez le pourcentage de fois où la condition renvoie true (vrai).
 
@@ -574,7 +574,7 @@ Le programme de validation utilisé dans lʼéditeur de code de balises est con�
 
 #### Séquencage d’actions
 
-Lorsque l’option « Run rule components in sequence » des paramètres de propriété est activée, vous pouvez faire attendre les composants de règle suivants pendant que votre action effectue une tâche asynchrone. Cela fonctionne différemment pour le Custom Code JavaScript et HTML.
+Lorsque l’option « Run rule components in sequence » des paramètres de propriété est activée, vous pouvez faire attendre les composants de règle suivants pendant que votre action effectue une tâche asynchrone.  Cela fonctionne différemment pour le Custom Code JavaScript et HTML.
 
 *JavaScript*
 
@@ -624,7 +624,7 @@ Les sections suivantes décrivent les types d’éléments de données disponibl
 
 ### Cookie
 
-N’importe quel cookie de domaine disponible peut être référencé dans le champ de  nom du cookie.
+N’importe quel cookie de domaine disponible peut être référencé dans le champ de nom du cookie.
 
 #### Exemple :
 
@@ -711,9 +711,9 @@ Utilisez le champ fourni pour spécifier la valeur que vous avez créée pour un
 
 ### Objets fusionnés
 
-Sélectionnez plusieurs éléments de données qui fourniront chacun un objet. Ces objets seront profondément (récursivement) fusionnés pour produire un nouvel objet. Les objets source ne seront pas modifiés. Si une propriété se trouve au même emplacement sur plusieurs objets source, la valeur de ce dernier objet est utilisée. Si la valeur d’une propriété source est `undefined`, elle ne remplacera pas une valeur d’un objet source précédent. Si des tableaux se trouvent au même emplacement sur plusieurs objets source, ils seront concaténés.
+Sélectionnez plusieurs éléments de données qui fourniront chacun un objet. Ces objets seront profondément (récursivement) fusionnés pour produire un nouvel objet. Les objets source ne seront pas modifiés. Si une propriété se trouve au même endroit sur plusieurs objets source, la valeur du dernier objet sera utilisée. Si la valeur d’une propriété source est `undefined`, elle ne remplacera pas une valeur provenant d’un objet source antérieur. Si des tableaux se trouvent au même endroit sur plusieurs objets source, les tableaux seront concaténés.
 
-Par exemple, supposons que vous sélectionniez un élément de données qui fournit l’objet suivant :
+À titre d’exemple, supposons que vous sélectionniez un élément de données qui fournit l’objet suivant :
 
 ```
 {
@@ -728,7 +728,7 @@ Par exemple, supposons que vous sélectionniez un élément de données qui four
 }
 ```
 
-Supposons que vous sélectionniez également un autre élément de données qui fournit l’objet suivant :
+Supposons que vous sélectionniez également un autre élément de données qui fournit l’objet suivant :
 
 ```
 {
@@ -745,7 +745,7 @@ Supposons que vous sélectionniez également un autre élément de données qui 
 }
 ```
 
-Le résultat de l’élément de données Objets fusionnés est l’objet suivant :
+Le résultat de l’élément de données Objets fusionnés serait l’objet suivant :
 
 ```
 {
@@ -777,7 +777,7 @@ Vous pouvez sélectionner l’un des attributs de page suivants à utiliser dans
 * Référent
 * Title
 
-### Paramètre de chaîne de requête
+### Query String Parameter
 
 Spécifiez un paramètre d’URL unique dans le champ URL Parameter.
 
@@ -833,33 +833,33 @@ Voici quelques cas d’utilisation courants :
 
 ### Valeur conditionnelle
 
-wrapper pour la condition [Value Comparison](#value-comparison-value-comparison). En fonction du résultat de la comparaison, renvoie l’une des deux valeurs disponibles dans le formulaire. Peut ainsi gérer &quot; si... Alors... Sinon...&quot; sans avoir besoin de règles supplémentaires.
+Un wrapper pour la condition [Value Comparison](#value-comparison-value-comparison). En fonction du résultat de la comparaison, renverra l’une des deux valeurs disponibles dans le formulaire. Peut donc gérer les scénarios &quot;If... Then... Else...&quot; sans avoir besoin de règles supplémentaires.
 
 ### Environnement d’exécution
 
-Permet de sélectionner l&#39;une des variables suivantes :
+Permet de sélectionner l’une des variables suivantes :
 
-* Étape de l’environnement : renvoie `_satellite.environment.stage` pour différencier les environnements de développement/d’évaluation/de production.
-* Date de version de la bibliothèque : renvoie `turbine.buildInfo.buildDate` qui contient la même valeur que `_satellite.buildInfo.buildDate`.
-* Nom de la propriété : renvoie `_satellite.property.name` pour obtenir le nom de la propriété Launch.
-* ID de propriété : renvoie `_satellite.property.id` pour obtenir l’ID de la propriété Launch.
-* Nom de la règle : renvoie `event.$rule.name` contenant le nom de la règle exécutée.
-* ID de règle : renvoie `event.$rule.id` contenant l’ID de la règle exécutée.
-* Type d’événement : renvoie `event.$type` contenant le type d’événement qui a déclenché la règle.
-* Charge utile des détails de l’événement : renvoie `event.detail` contenant la charge utile d’un événement personnalisé ou d’une règle d’appel direct.
-* Identifiant d’appel direct : renvoie `event.identifier` contenant l’identifiant d’une règle d’appel direct.
+* Étape de l’environnement - Renvoie `_satellite.environment.stage` pour différencier les environnements de développement/évaluation/production.
+* Date de création de la bibliothèque - Renvoie `turbine.buildInfo.buildDate` qui contient la même valeur que `_satellite.buildInfo.buildDate`.
+* Nom de la propriété - Renvoie `_satellite.property.name` pour obtenir le nom de la propriété Launch.
+* ID de la propriété - Renvoie `_satellite.property.id` pour obtenir l’identifiant de la propriété Launch.
+* Rule name - Renvoie `event.$rule.name` contenant le nom de la règle exécutée.
+* Rule ID - Renvoie `event.$rule.id` contenant l’identifiant de la règle exécutée.
+* Event type - Renvoie `event.$type` contenant le type d’événement qui a déclenché la règle.
+* Event detail payload - Renvoie `event.detail` contenant la payload d’un événement personnalisé ou d’une règle d’appel direct.
+* Direct call identifier - Renvoie `event.identifier` contenant l’identifiant d’une règle d’appel direct.
 
-### Attributs de périphérique
+### Attributs de l’équipement
 
-Renvoie l’un des attributs d’appareil du visiteur suivants :
+Renvoie l’un des attributs d’équipement du visiteur suivants :
 
 * Taille de la fenêtre du navigateur
 * Taille d’écran
 
 ### Outils JavaScript
 
-Il s’agit d’un wrapper pour les opérations JavaScript courantes. Il reçoit un élément de données comme entrée. Elle renvoie le résultat de l’une des transformations suivantes de la valeur de l’élément de données :
+Il s’agit d’un wrapper pour les opérations JavaScript courantes. Il reçoit un élément de données en entrée. Il renvoie le résultat de l’une des transformations suivantes de la valeur de l’élément de données :
 
-* Manipulation de base de chaînes (remplacement, sous-chaîne, correspondance regex, premier et dernier index, division, tranche)
-* Opérations de base de tableau (tranche, jointure, pop, shift)
-* Opérations universelles de base (tranche, longueur)
+* Manipulation de base des chaînes (remplacement, sous-chaîne, correspondance regex, premier et dernier index, division, tranche)
+* Opérations de base sur les tableaux (division, liaison, affichage, déplacement)
+* Opérations universelles de base (division, longueur)

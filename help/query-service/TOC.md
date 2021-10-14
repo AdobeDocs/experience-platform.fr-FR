@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: 6d1ece1e7920e8c182c84bf8b57bdb6c3f853a60
 workflow-type: tm+mt
 source-wordcount: '139'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 97%
    - [Exemples de requêtes dʼévénements dʼexpérience](best-practices/experience-event-queries.md)
    - [Exemples de requêtes Adobe Analytics](best-practices/adobe-analytics.md)
    - [Exemples de requêtes Adobe Target](best-practices/adobe-target.md)
-   - [Exemples de requêtes bloquées anonymes](best-practices/anonymous-block.md)
+   - [Exemples de requêtes en blocs anonymes](best-practices/anonymous-block.md)
 - Référence SQL {#sql}
    - [Présentation de SQL](sql/overview.md)
    - [Syntaxe SQL](sql/syntax.md)

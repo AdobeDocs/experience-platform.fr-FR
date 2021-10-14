@@ -5,7 +5,7 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
 workflow-type: tm+mt
 source-wordcount: '1543'
-ht-degree: 84%
+ht-degree: 98%
 
 ---
 
@@ -26,41 +26,41 @@ v3.2.2
 
 v3.2.1
 
-* Correction d’une erreur en raison de laquelle l’initialisation de l’élément de données de valeur conditionnelle ne fonctionnait pas correctement lorsque les valeurs de champ étaient 0.
+* Correction d’une erreur qui entraînait un dysfonctionnement de l’initialisation d’affichage d’élément de données de valeur conditionnelle lorsque les valeurs de champs étaient égales à 0.
 
 ## 23 septembre 2021
 
 v3.2.0
 
-Les modifications suivantes ont été introduites dans l’élément de données Valeur conditionnelle :
+Les modifications suivantes ont été introduites dans l’élément de données de valeur conditionnelle :
 
-* Ajoutez une case à cocher pour les valeurs conditionnelles et de secours qui permet à l’utilisateur de choisir s’il souhaite que la valeur renvoyée soit indéfinie.
-* Les valeurs numériques sont exposées sous forme de nombres dans l’objet settings.
-* La valeur conditionnelle n’est plus requise, de sorte qu’elle puisse se comporter de la même manière que la valeur de secours.
+* Ajout d’une case à cocher pour les valeurs conditionnelles et de secours, qui permet à l’utilisateur de choisir s’il souhaite que la valeur renvoyée soit indéfinie.
+* Les valeurs numériques sont exposées comme des nombres dans l’objet Paramètres.
+* La valeur conditionnelle n’est plus nécessaire pour que le comportement soit similaire à celui de la valeur de secours.
 
 ## 17 septembre 2021
 
 v3.1.1
 
-* Correction d’une erreur JS qui empêchait le chargement de la vue de condition de période.
+* Correction d’une erreur JS qui empêchait le chargement de l’affichage des conditions de période.
 
 ## 16 septembre 2021
 
 v3.1.0
 
-De nouveaux éléments de données ont été ajoutés :
+De nouveaux éléments de données ont été ajoutés :
 
-* Objet fusionné : sélectionnez plusieurs éléments de données qui fourniront chacun un objet. Ces objets seront profondément (récursivement) fusionnés pour produire un nouvel objet.
-* Valeur conditionnelle : renvoie l’une des deux valeurs (conditionnelleValue ou fallbackValue) en fonction du résultat de la comparaison.
-* Environnement d’exécution : renvoie l’une des variables d’environnement Launch suivantes : étape d’environnement, date de version de bibliothèque, nom de propriété, ID de propriété, nom de règle, identifiant de règle, type d’événement, charge utile détaillée d’événement, identifiant d’appel direct.
-* Outils JavaScript - wrapper pour les opérations JavaScript courantes : manipulation de chaîne de base (remplacement, sous-chaîne, correspondance regex, premier et dernier index, division, tranche), opérations de tableau de base (tranche, jointure, pop, décalage) et opérations universelles de base (tranche, longueur).
-* Attributs de périphérique : renvoie les attributs de périphérique tels que la taille de fenêtre ou la taille d’écran.
+* Objet fusionné : sélectionnez plusieurs éléments de données qui fourniront chacun un objet. Ces objets seront profondément (récursivement) fusionnés pour produire un nouvel objet.
+* Valeur conditionnelle : renvoyez l’une des deux valeurs (conditionalValue ou fallbackValue) en fonction du résultat de la comparaison.
+* Environnement d’exécution : renvoyez l’une des variables d’environnement Launch suivantes (évaluation d’environnement, date de création de la bibliothèque, nom de la propriété, ID de la propriété, nom de la règle, ID de la règle, type d’événement, payload des détails de l’événement, identificateur d’appel direct).
+* Outils JavaScript : wrapper pour les opérations JavaScript les plus courantes, par exemple la manipulation de chaînes de base (remplacer, sous-chaîne, correspondance regex, premier et dernier index, fractionner, trancher), les opérations de tableaux de base (trancher, joindre, mise en valeur, déplacer) et les opérations universelles de base (trancher, longueur).
+* Attributs d’appareil : renvoyez les attributs d’appareil comme la taille de la fenêtre ou de l’écran.
 
 ## 11 août 2021
 
 v3.0.0
 
-* PDCL-6153 : ajoute la prise en charge pour extraire de manière fiable lʼURL complète pour les actions de code personnalisé en mémoire cache.
+* PDCL-6153 : ajoute la prise en charge pour extraire de manière fiable lʼURL complète pour les actions de code personnalisé en mémoire cache.
 
 La version 3.0.0 de lʼextension Core est associée à des modifications dans la [version 27.2.0 de lʼobjet dʼexécution Web Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), ce qui permet aux utilisateurs de charger leur bibliothèque parmi de nombreuses régions dʼhébergement gérées par Adobe si la société de lʼutilisateur prend en charge le réseau CDN Premium.
 
@@ -97,7 +97,7 @@ v2.0.4
 
 v1.9.0
 
-* **Nouvelle action « Déclenchement appel direct »** - L’extension Core inclut désormais un nouveau type d’action appelé `Trigger Direct Call`. Vous pouvez l’utiliser lorsque vous voulez déclencher une règle d’appel direct par le biais d’une action tirée d’une autre règle. Il correspond directement à la méthode `_satellite.track()`. Un grand merci à [Jan Exner](https://twitter.com/jexner) pour cette contribution.
+* **Nouvelle action « Déclenchement appel direct »** - L’extension Core inclut désormais un nouveau type d’action appelé `Trigger Direct Call`.  Vous pouvez l’utiliser lorsque vous voulez déclencher une règle d’appel direct par le biais d’une action tirée d’une autre règle. Il correspond directement à la méthode `_satellite.track()`. Un grand merci à [Jan Exner](https://twitter.com/jexner) pour cette contribution.
 
 ## 8 décembre 2020
 
@@ -128,7 +128,7 @@ v1.8.1
 
 v1.8.0
 
-* **Promesses dans le Custom Code (code personnalisé)** : Les conditions du Custom Code (code personnalisé) et des actions JavaScript qui ne s’exécutent pas dans la portée globale peuvent désormais renvoyer des promesses. Vous pouvez les utiliser pour que les conditions et actions suivantes attendent la fin d’un processus asynchrone dans votre Custom Code (code personnalisé) avant de passer à l’élément suivant.
+* **Promesses dans le Custom Code (code personnalisé)** : Les conditions du Custom Code (code personnalisé) et des actions JavaScript qui ne s’exécutent pas dans la portée globale peuvent désormais renvoyer des promesses.  Vous pouvez les utiliser pour que les conditions et actions suivantes attendent la fin d’un processus asynchrone dans votre Custom Code (code personnalisé) avant de passer à l’élément suivant.
 * **Rappels dans les actions Custom Code (code personnalisé) HTML** : Vous pouvez obtenir la même chose dans les actions Custom Code (code personnalisé) HTML à l’aide des rappels `onCustomCodeSuccess()` et `onCustomCodeFailure()`.
 
 Pour plus d’informations, reportez-vous à la [référence Extension Core](./overview.md) dans Conditions > Code personnalisé et Actions > Code personnalisé.
@@ -149,13 +149,13 @@ v1.7.0
 
 v1.6.2
 
-* **Nouveau type d’élément de données « Constante »** : l’extension Core inclut désormais un nouveau type d’élément de données appelé `Constant`. Vous pouvez l’utiliser lorsque vous avez besoin de stocker une valeur constante qui sera référencée dans différentes conditions, actions ou code personnalisé (Custom code). Un grand merci à [Jan Exner](https://twitter.com/jexner) pour cette contribution.
+* **Nouveau type d’élément de données « Constante »** : l’extension Core inclut désormais un nouveau type d’élément de données appelé `Constant`.  Vous pouvez l’utiliser lorsque vous avez besoin de stocker une valeur constante qui sera référencée dans différentes conditions, actions ou code personnalisé (Custom code). Un grand merci à [Jan Exner](https://twitter.com/jexner) pour cette contribution.
 
 ## 11 septembre 2019
 
 v1.6.1
 
-* **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. S’il est configuré, tous les scripts intégrés qu&#39;une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge lʼutilisation dʼune stratégie de sécurité du contenu (CSP) avec une valeur à usage unique afin que les scripts de balises puissent toujours se charger dans un environnement CSP. Pour en savoir plus sur lʼutilisation des balises avec une stratégie de sécurité du contenu, [cliquez ici](../../../ui/client-side/content-security-policy.md).
+* **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. S’il est configuré, tous les scripts intégrés qu’une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge lʼutilisation dʼune stratégie de sécurité du contenu (CSP) avec une valeur à usage unique afin que les scripts de balises puissent toujours se charger dans un environnement CSP. Pour en savoir plus sur lʼutilisation des balises avec une stratégie de sécurité du contenu, [cliquez ici](../../../ui/client-side/content-security-policy.md).
 
 ## 18 juin 2019
 

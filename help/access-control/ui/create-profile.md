@@ -8,29 +8,29 @@ exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
 source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
 workflow-type: tm+mt
 source-wordcount: '322'
-ht-degree: 57%
+ht-degree: 97%
 
 ---
 
 # Création d’un profil produit dans Adobe Admin Console
 
-Pour commencer à créer un profil, accédez à l’onglet **[!UICONTROL Profils produit]** et sélectionnez **[!UICONTROL Nouveau profil]**.
+Pour commencer la création d’un profil, accédez à l’onglet **[!UICONTROL Profils de produit]** et sélectionnez **[!UICONTROL Nouveau profil]**.
 
 ![new-profile](../images/new-profile.png)
 
-La boîte de dialogue **[!UICONTROL Créer un nouveau profil de produit]** s’affiche, vous invitant à saisir un profil, un nom d’affichage facultatif et une description facultative. Sous **[!UICONTROL Notifications utilisateur]**, vous pouvez activer ou désactiver la notification par courrier électronique des utilisateurs lorsqu’ils sont ajoutés ou supprimés du profil.
+La boîte de dialogue **[!UICONTROL Créer un profil de produit]** apparaît et vous invite à saisir un profil, un nom d’affichage facultatif et une description facultative. Sous **[!UICONTROL Notifications utilisateur]**, vous pouvez activer ou désactiver la notification par courrier électronique des utilisateurs lorsqu’ils sont ajoutés ou supprimés du profil.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![create-new-product-profile](../images/create-new-product-profile.png)
 
-L’écran suivant vous invite à choisir les services Platform à inclure dans le profil. Sélectionnez le bouton de basculement en regard d’un service pour le désactiver. Si un service est désactivé, toutes les fonctionnalités qui y sont associées ne seront pas disponibles pour les utilisateurs affectés à ce profil de produit. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
+L’écran suivant vous invite à choisir les services Platform à inclure dans le profil. Cliquez sur le bouton de bascule près d’un service pour le désactiver. Si un service est désactivé, toutes les fonctionnalités qui y sont associées ne seront pas disponibles pour les utilisateurs affectés à ce profil de produit. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![enable-services](../images/enable-services.png)
 
-Les clients autorisés à utiliser l’édition B2B ou B2P ont accès à l’interface utilisateur B2B. L’interface utilisateur B2B peut être configurée pour les utilisateurs via le [!UICONTROL menu Activer les services]. Sélectionnez la bascule en regard de [!UICONTROL L’interface utilisateur B2B] pour activer le service pour un profil de produit particulier, puis sélectionnez **[!UICONTROL Enregistrer]**.
+Les clients éligibles à l’édition B2B ou B2P ont accès à l’interface utilisateur B2B. L’interface utilisateur B2B peut être fournie aux utilisateurs par le biais du menu [!UICONTROL Activer les services]. Sélectionnez le bouton bascule à côté de [!UICONTROL IU B2B] pour activer le service pour un profil de produit spécifique, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-Le bouton d’activation/désactivation de l’interface utilisateur B2B permet aux utilisateurs d’afficher les processus B2B relatifs à la gestion des comptes et des opportunités, ainsi que de créer des segments liés à B2B. Pour plus d’informations, voir la documentation sur [[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
+L’option Activer/Désactiver de l’interface utilisateur B2B permet aux utilisateurs d’afficher les workflows B2B relatifs à la gestion des comptes et des opportunités, ainsi que de créer des segments liés au B2B. Pour plus d’informations, voir la documentation sur [[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
 
 ![enable-b2b](../images/enable-b2b.png)
 

@@ -7,11 +7,11 @@ exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: 2eac45cd4b053753f954bbaae999fc321c75bd9b
 workflow-type: tm+mt
 source-wordcount: '1884'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
-# Présentation d’[!DNL Real-time Customer Profile]
+# Présentation du [!DNL Real-time Customer Profile]
 
 Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Le [!DNL Real-time Customer Profile] offre une vision holistique de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le [!DNL Profile] vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client. Cette présentation vous aidera à comprendre le rôle et l’utilisation du [!DNL Real-time Customer Profile] dans [!DNL Experience Platform].
 
@@ -43,13 +43,13 @@ L’interface utilisateur d’Experience Platform fournit un tableau de bord gr�
 
 Chaque profil client est composé de plusieurs fragments de profil qui ont été fusionnés dans le but de former une vue unique pour ce client. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Platform, ils sont fusionnés afin de créer un profil unique pour ce client.
 
-En d’autres termes, les fragments de profil représentent une identité Principale unique et les données [record](#record-data) ou [event](#time-series-events) correspondantes pour cet identifiant dans un jeu de données donné.
+En d’autres termes, les fragments de profil représentent une identité principale unique et les données [enregistrement](#record-data) ou [événement](#time-series-events) correspondantes pour cet identifiant au sein d’un jeu de données spécifique.
 
-Lorsque les données de plusieurs jeux de données entrent en conflit (par exemple, un fragment répertorie le client comme &quot;célibataire&quot; tandis que l’autre liste le client comme &quot;marié&quot;), la [stratégie de fusion](#merge-policies) détermine les informations à prioriser et à inclure dans le profil de l’individu. Par conséquent, il est probable que le nombre total de fragments de profil dans Platform soit toujours supérieur au nombre total de profils fusionnés, car chaque profil est généralement composé de plusieurs fragments provenant de plusieurs jeux de données.
+Lorsque les données provenant de plusieurs sources entrent en conflit (par exemple, si un fragment classe le client comme étant « célibataire » tandis qu’un autre le classe comme étant « marié »), la [stratégie de fusion](#merge-policies) détermine quelles informations doivent être prioritaires et être incluses dans le profil de l’individu. Par conséquent, il est probable que le nombre total de fragments de profil au sein de Platform soit toujours supérieur au nombre total de profils fusionnés, chaque profil étant composé de fragments multiples issus de multiples jeux de données.
 
 ### Données d’enregistrement {#record-data}
 
-Un profil est la représentation d’un sujet, d’une organisation ou d’un individu. Il est composé de nombreux attributs également appelés données d’enregistrement. Par exemple, le profil d’un produit peut inclure un SKU et une description, tandis que le profil d’une personne contient des informations telles que le prénom, le nom et l’adresse électronique. [!DNL Experience Platform] vous permet de personnaliser les profils afin d’utiliser des données spécifiques pertinentes pour votre entreprise. La classe standard du [!DNL Experience Data Model] (XDM), [!DNL XDM Individual Profile], est la classe privilégiée à partir de laquelle créer un schéma lors de la description des données d’enregistrement des clients. Elle fournit les données intégrées à de nombreuses interactions entre les services Platform. Pour plus d’informations sur l’utilisation des schémas dans [!DNL Experience Platform], consultez tout d’abord la [présentation du système XDM](../xdm/home.md).
+Un profil est la représentation d’un sujet, d’une organisation ou d’un individu. Il est composé de nombreux attributs également appelés données d’enregistrement. Par exemple, le profil d’un produit peut inclure un SKU et une description, tandis que le profil d’une personne contient des informations telles que le prénom, le nom et l’adresse e-mail. [!DNL Experience Platform] vous permet de personnaliser les profils afin d’utiliser des données spécifiques pertinentes pour votre entreprise. La classe standard du [!DNL Experience Data Model] (XDM), [!DNL XDM Individual Profile], est la classe privilégiée à partir de laquelle créer un schéma lors de la description des données d’enregistrement des clients. Elle fournit les données intégrées à de nombreuses interactions entre les services Platform. Pour plus d’informations sur l’utilisation des schémas dans [!DNL Experience Platform], consultez tout d’abord la [présentation du système XDM](../xdm/home.md).
 
 ### Événements de série temporelle {#time-series-events}
 
@@ -105,9 +105,9 @@ Vous pouvez configurer [!DNL Platform] pour envoyer les données d’enregistrem
 
 Observability Insights vous permet d’afficher les mesures clés dans Adobe Experience Platform. Outre les statistiques d’utilisation relatives à [!DNL Experience Platform] et les indicateurs de performances pour diverses fonctionnalités de [!DNL Platform], des mesures spécifiques liées au profil vous permettent d’obtenir des éclairages sur les taux de requêtes entrantes, les taux d’ingestion réussie, les tailles d’enregistrements ingérés, etc. Pour en savoir plus, consultez tout d’abord la [présentation de l’API Observability Insights](../observability/api/overview.md) et pour obtenir une liste complète des mesures du profil client en temps réel, consultez la documentation sur les [mesures disponibles](../observability/api/metrics.md#available-metrics).
 
-## Mise à jour des données de banque de profils
+## Mise à jour des données du magasin de profils
 
-Il peut parfois être nécessaire de mettre à jour les données dans la banque de profils de votre entreprise. Par exemple, vous devrez peut-être corriger des enregistrements ou modifier une valeur d’attribut. Pour ce faire, vous pouvez procéder à l’ingestion par lots ou par flux, ce qui nécessite un jeu de données activé par Profile configuré avec une balise upsert. Pour plus d’informations sur la configuration d’un jeu de données pour les mises à jour d’attributs, reportez-vous au tutoriel [Activation d’un jeu de données pour Profile et upsert](../catalog/datasets/enable-upsert.md).
+Il peut parfois être nécessaire de mettre à jour les données du magasin de profils de votre organisation. Vous pouvez par exemple avoir besoin de corriger des enregistrements ou de modifier une valeur d’attribut. Cette opération peut être effectuée par ingestion par lot ou en continu et nécessite un jeu de données compatible avec les profils et configuré avec une balise upsert. Pour plus d’informations sur la façon de configurer un jeu de données pour les mises à jour d’attributs, veuillez vous référer au tutoriel concernant l’[activation d’un jeu de données pour Profile et upsert](../catalog/datasets/enable-upsert.md).
 
 ## [!DNL Data governance] et [!DNL Privacy]
 
@@ -127,4 +127,4 @@ La [!DNL Data governance] est gérée à partir de plusieurs points. Il s’agit
 
 ## Étapes suivantes et ressources supplémentaires
 
-Pour en savoir plus sur l’utilisation des données de profil client en temps réel à l’aide de l’interface utilisateur Experience Platform ou de l’API Profile, veuillez commencer par lire le [guide de développement de l’interface utilisateur de profil](ui/user-guide.md) ou le [guide de développement de l’API](api/overview.md), respectivement.
+Pour en savoir plus sur l’utilisation des données du profil client en temps réel à l’aide de l’interface utilisateur d’Experience Platform ou de l’API Profile, commencez par consulter respectivement le [guide de l’interface utilisateur Profil](ui/user-guide.md) ou le [guide développeur de l’API](api/overview.md).

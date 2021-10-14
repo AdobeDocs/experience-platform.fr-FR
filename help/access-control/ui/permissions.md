@@ -8,15 +8,15 @@ exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
 source-git-commit: 099bfc0098ebf5a2325f344215c6b21f1c347473
 workflow-type: tm+mt
 source-wordcount: '339'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
 # Gestion des autorisations d’un profil de produit
 
-Immédiatement après la [création d’un nouveau profil de produit](#create-a-new-product-profile), vous êtes invité à configurer les autorisations du profil. Si vous modifiez les autorisations d’un profil existant, sélectionnez le profil dans l’onglet **[!UICONTROL Profils produit]** pour ouvrir la page de détails du profil, puis sélectionnez **[!UICONTROL Autorisations]**.
+Immédiatement après la [création d’un nouveau profil de produit](#create-a-new-product-profile), vous êtes invité à configurer les autorisations du profil. Si vous modifiez les autorisations d’un profil existant, sélectionnez le profil depuis l’onglet **[!UICONTROL Profils de produit]** pour ouvrir la page de détails du profil, puis sélectionnez **[!UICONTROL Autorisations]**.
 
-![permissions](../images/permissions.png)
+![autorisations](../images/permissions.png)
 
 Les autorisations sont divisées en catégories et répertoriées sur cette page. La liste affiche le nom de la catégorie, le nombre d’autorisations qu’elle contient (et le nombre d’autorisations actives) ainsi que sa description.
 
@@ -28,9 +28,9 @@ La page **[!UICONTROL Modifier les autorisations]** fournit un espace de travail
 
 Par exemple, pour mettre à jour les autorisations pour la gestion des profils, sélectionnez **[!UICONTROL Gestion des profils]**.
 
-![gestion des profils](../images/profile-management.png)
+![profile-management](../images/profile-management.png)
 
-Pour ajouter une autorisation, cliquez sur l’icône plus **(+)** en regard du nom de l’autorisation. Vous pouvez également sélectionner **[!UICONTROL Ajouter tout]** pour ajouter au profil toutes les autorisations sous la catégorie actuelle. Les autorisations ajoutées s’affichent sous **[!UICONTROL Éléments d’autorisation inclus]**.
+Pour ajouter une autorisation, sélectionnez l’icône plus **(+)** en regard du nom de l’autorisation. Vous pouvez également sélectionner **[!UICONTROL Ajouter tout]** pour ajouter au profil toutes les autorisations sous la catégorie actuelle. Les autorisations ajoutées s’affichent sous **[!UICONTROL Éléments d’autorisation inclus]**.
 
 ![add-permission](../images/add-permission.png)
 
@@ -42,11 +42,11 @@ Pour supprimer une autorisation, sélectionnez lʼicône **X** à côté du nom 
 
 Continuez à parcourir les catégories disponibles et ajoutez toutes les autorisations souhaitées. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
-![remove-permission](../images/remove-permission.png)
+![remove-permisson](../images/remove-permission.png)
 
 L’onglet **[!UICONTROL Autorisations]** du profil de produit réapparaît et indique que les autorisations sélectionnées sont désormais actives.
 
-![autorisations mises à jour](../images/permissions-updated.png)
+![permissions-updated](../images/permissions-updated.png)
 
 ## Étapes suivantes
 

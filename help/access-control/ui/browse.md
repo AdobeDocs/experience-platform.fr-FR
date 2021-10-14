@@ -8,7 +8,7 @@ exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
 source-git-commit: 8dc88f3b9aa6ea25a43427d043749c665e0e9281
 workflow-type: tm+mt
 source-wordcount: '317'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ Afin de configurer le contrôle dʼaccès à [!DNL Experience Platform] via Adob
 
 Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour obtenir l’accès.
 
-Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Admin Console](https://adminconsole.adobe.com) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois connecté, la page **[!UICONTROL Présentation]** s’affiche pour l’organisation IMS pour laquelle vous disposez des droits d’administrateur. Cette page présente les produits auxquels votre organisation IMS est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’ensemble de l’organisation IMS. Sélectionnez **[!UICONTROL Adobe Experience Platform]** pour ouvrir l’espace de travail du contrôle d’accès pour votre intégration Platform.
+Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Admin Console](https://adminconsole.adobe.com) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois connecté, la page **[!UICONTROL Présentation]** s’affiche pour l’organisation IMS pour laquelle vous disposez des droits d’administrateur. Cette page présente les produits auxquels votre organisation IMS est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’ensemble de l’organisation IMS. Sélectionnez **[!UICONTROL Adobe Experience Platform]** pour ouvrir l’espace de travail du contrôle d’accès en vue de votre intégration Platform.
 
 ![select-product](../images/select-product.png)
 
@@ -26,7 +26,7 @@ L’espace de travail du contrôle d’accès d’Adobe Experience Platform appa
 
 ![select-product-profile](../images/select-product-profile.png)
 
-Ce guide d’utilisation se concentre sur l’utilisation de [!DNL Admin Console] pour affecter des autorisations d’accès à Platform. Pour obtenir des informations plus générales sur la façon de parcourir [!DNL Admin Console], consultez le [guide dʼutilisation dʼAdmin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html).
+Ce guide d’utilisation détaille la marche à suivre pour utiliser [!DNL Admin Console] afin d’attribuer des autorisations d’accès à Platform. Pour obtenir des informations plus générales sur la façon de parcourir [!DNL Admin Console], consultez le [guide dʼutilisation dʼAdmin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html).
 
 ## Étapes suivantes
 

@@ -6,7 +6,7 @@ feature: Catalog
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '116'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -31,8 +31,8 @@ ht-degree: 87%
    * [Présentation des jeux de données](datasets/overview.md)
    * [Guide d’utilisation des jeux de données](datasets/user-guide.md)
    * [Création et remplissage d’un jeu de données à l’aide d’API](datasets/create.md)
-   * [Activation d’un jeu de données pour Profile et Identity Service](datasets/enable-for-profile.md)
-   * [Activation d’un jeu de données pour les mises à jour de profil (insertion)](datasets/enable-upsert.md)
+   * [Configuration d’un jeu de données pour Profil et Identité](datasets/enable-for-profile.md)
+   * [Activer un jeu de données pour les mises à jour de profil (upsert)](datasets/enable-upsert.md)
 * [Traitement des demandes d’accès à des informations personnelles dans le lac de données](privacy.md)
 * [Protection des données dans Experience Platform](data-protection.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/catalog/)

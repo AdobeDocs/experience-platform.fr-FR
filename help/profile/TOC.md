@@ -6,7 +6,7 @@ feature: Profiles
 source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 96%
    * [Présentation du schéma d’union (vidéo)](video/union-schemas-overview.md)
 * Tutoriels {#tutorials}
    * [Ajout de données à Real-time Customer Profile](tutorials/add-profile-data.md)
-   * [Configuration d’un jeu de données pour Profile](tutorials/dataset-configuration.md)
+   * [Configuration dʼun jeu de données pour le profil](tutorials/dataset-configuration.md)
    * [Génération du rapport de chevauchement de jeux de données](tutorials/dataset-overlap-report.md)
    * [Plus de tutoriels](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=fr)
 * [Traitement des demandes d’accès à des informations personnelles](privacy.md)

@@ -7,7 +7,7 @@ feature: Data Ingestion
 source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 92%
 - Ingestion par lots {#batch}
    - [Prise en main des API d’ingestion par lots](batch-ingestion/getting-started.md)
    - [Présentation de l’API](batch-ingestion/overview.md)
-   - [Guide du développeur de l’API](batch-ingestion/api-overview.md)
+   - [Guide du développeur d’API](batch-ingestion/api-overview.md)
    - [Ingestion par lots partielle](batch-ingestion/partial.md)
    - [Dépannage](batch-ingestion/troubleshooting.md)
 - Tutoriels {#tutorials}

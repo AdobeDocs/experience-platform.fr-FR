@@ -7,7 +7,7 @@ user-guide-description: Regroupez les données connues et anonymes provenant de 
 source-git-commit: 2d9b1df064f0e2a5aa981d0144fefecc9d0a4146
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 61%
+ht-degree: 74%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 61%
 # Aide sur la plateforme de données clients en temps réel {#rtcdp}
 
 * [Présentation du CDP en temps réel](overview.md)
-* [Présentation de la plateforme CDP B2B en temps réel](b2b-overview.md)
+* [Présentation de l’édition B2B de Real-time CDP](b2b-overview.md)
 * Prise en main {#intro}
    * CDP en temps réel {#rtcdp-intro}
       * [Prise en main de la plateforme CDP en temps réel](get-started.md)
@@ -50,9 +50,9 @@ ht-degree: 61%
    * [Customer AI](segmentation/customer-ai.md)
 * Schémas {#schemas}
    * [Présentation des schémas](schemas/overview.md)
-   * [Schémas dans l’édition CDP en temps réel B2B](schemas/b2b.md)
+   * [Schémas dans l’édition B2B de Real-time CDP](schemas/b2b.md)
 * Sources {#sources}
    * [Présentation des sources](sources/sources-overview.md)
-   * [Sources dans l’édition CDP en temps réel B2B](sources/b2b.md)
+   * [Sources dans l’édition B2B de Real-time CDP](sources/b2b.md)
 * [Notes de mise à jour d’Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
 * [Glossaire Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/glossary.html)

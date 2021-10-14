@@ -7,7 +7,7 @@ exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
 source-git-commit: b9dd7584acc43b5946f8c0669d7a81001e44e702
 workflow-type: tm+mt
 source-wordcount: '738'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
@@ -27,36 +27,36 @@ Vous pouvez utiliser Query Service pour interroger des jeux de données bruts po
 
 ### Jeux de données d’attributs de profils
 
-Les insights du tableau de bord des profils sont liés aux stratégies de fusion définies par votre organisation. Pour chaque stratégie de fusion principale, un jeu de données d’attributs de profil est disponible dans le lac de données.
+Les informations contenues dans le tableau de bord du profil sont liées aux stratégies de fusion qui ont été définies par votre organisation. Pour chaque stratégie de fusion active, un jeu de données d’attributs de profil est disponible dans le lac de données.
 
-La convention d’affectation des noms de ces jeux de données est **Profile-Snapshot-Export** suivie d’une valeur numérique alphanumérique aléatoire générée par le système. Par exemple : `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+La convention d’affectation des noms de ces jeux de données est **Profile-Snapshot-Export** suivie d’une valeur alphanumérique aléatoire générée par le système. Par exemple : `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
 
-Pour comprendre le schéma complet de chaque jeu de données d’exportation instantané de profil, vous pouvez prévisualiser et explorer les jeux de données [à l’aide de la visionneuse de jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur de l’Experience Platform.
+Pour comprendre le schéma complet de chaque jeu de données d’exportation d’instantané de profil, vous pouvez prévisualiser et explorer les jeux de données [à l’aide de la visionneuse de jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur d’Experience Platform.
 
 ![](images/query/profile-attribute.png)
 
-#### Mappage de jeux de données d’attributs de profil pour fusionner les identifiants de stratégie
+#### Mappage des jeux de données d’attributs de profil aux ID de stratégie de fusion
 
-Chaque jeu de données d’attributs de profil est intitulé **Exportation d’instantané de profil** suivi d’une valeur numérique alphanumérique aléatoire générée par le système. Par exemple : `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+Chaque jeu de données d’attributs de profil est intitulé **Exportation d’instananés de profils** suivi d’une valeur alphanumérique aléatoire générée par le système. Par exemple : `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
 
-Cette valeur alphanumérique est une chaîne aléatoire générée par le système qui correspond à un identifiant de stratégie de fusion de l’une des stratégies de fusion créées par votre organisation. Le mappage de chaque ID de stratégie de fusion avec sa chaîne de jeu de données d’attribut de profil associée est conservé dans le jeu de données `adwh_dim_merge_policies`.
+Cette valeur alphanumérique est une chaîne aléatoire générée par le système qui fournit un mappage vers l’ID de l’une des stratégies de fusion créées par votre organisation. Le mappage de chaque ID de stratégie de fusion à sa chaîne de jeu de données d’attributs de profil correspondante est conservé dans le jeu de données `adwh_dim_merge_policies`.
 
-Le jeu de données `adwh_dim_merge_policies` contient les champs suivants :
+Le jeu de données `adwh_dim_merge_policies` contient les champs suivants :
 
 * `merge_policy_name`
 * `merge_policy_id`
 * `merge_policy`
 * `dataset_id`
 
-Ce jeu de données peut être exploré à l’aide de l’interface utilisateur de Query Editor dans Experience Platform. Pour en savoir plus sur l’utilisation de Query Editor, consultez le [guide de l’interface utilisateur de Query Editor](../query-service/ui/user-guide.md).
+Ce jeu de données peut être exploré à l’aide de l’interface utilisateur de l’éditeur de requêtes dans Experience Platform. Pour en savoir plus sur l’utilisation de l’éditeur de requêtes, reportez-vous au [Guide de l’interface utilisateur de l’éditeur de requêtes](../query-service/ui/user-guide.md).
 
 ### Jeu de données de métadonnées de segments
 
 Un jeu de données de métadonnées de segment contenant des métadonnées pour chacun des segments de votre organisation est disponible dans le lac de données.
 
-La convention d’affectation des noms de ce jeu de données est **Segmentdefinition-Snapshot-Export** suivie d’une valeur numérique alphanumérique. Par exemple : `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
+La convention d’affectation des noms de ce jeu de données est **Segmentdefinition-Snapshot-Export** suivi d’une valeur alphanumérique. Par exemple : `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-Pour comprendre le schéma complet de chaque jeu de données d’exportation instantané de définition de segment, vous pouvez prévisualiser et explorer les jeux de données [à l’aide de la visionneuse de jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur Experience Platform.
+Pour comprendre le schéma complet de chaque jeu de données d’exportation d’instantané de définition de segment, vous pouvez prévisualiser et explorer les jeux de données [à l’aide de la visionneuse de jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur d’Experience Platform.
 
 ![](images/query/segment-metadata.png)
 
@@ -66,7 +66,7 @@ Les métadonnées de toutes les destinations activées de votre organisation son
 
 La convention d’affectation des noms de ce jeu de données est **DIM_Destination**.
 
-Pour comprendre le schéma complet du jeu de données de destination DIM, vous pouvez prévisualiser et explorer le jeu de données [à l’aide de la visionneuse de jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur de l’Experience Platform.
+Pour comprendre le schéma complet du jeu de données de destination DIM, vous pouvez prévisualiser et explorer le schéma [à l’aide de la visionneuse de jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur d’Experience Platform.
 
 ![](images/query/destinations-metadata.png)
 
