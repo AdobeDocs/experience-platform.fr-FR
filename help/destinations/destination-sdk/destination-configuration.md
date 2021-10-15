@@ -2,9 +2,9 @@
 description: Cette configuration vous permet d’indiquer des informations de base telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur Experience Platform et les identités qui peuvent être exportées vers votre destination.
 title: Options de configuration de destination pour le SDK de destination
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
+source-git-commit: fd025932b9210d61e986b252e8d977ce4b83f6ff
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1757'
 ht-degree: 5%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 ## Présentation {#overview}
 
-Cette configuration vous permet d’indiquer des informations essentielles telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur Experience Platform et les identités qui peuvent être exportées vers votre destination.
+Cette configuration vous permet d’indiquer des informations essentielles telles que votre nom de destination, votre catégorie, votre description, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur Experience Platform et les identités qui peuvent être exportées vers votre destination.
 
 Cette configuration connecte également les autres configurations requises pour que votre destination fonctionne (métadonnées de serveur de destination et d’audience) à celle-ci. Découvrez comment vous pouvez référencer les deux configurations dans une section [plus loin sous](./destination-configuration.md#connecting-all-configurations).
 
@@ -135,17 +135,17 @@ Vous trouverez ci-dessous un exemple de configuration d’une destination fictiv
 
 ## Configurations de l’authentification du client {#customer-authentication-configurations}
 
-Cette section génère la page du compte dans l’interface utilisateur de l’Experience Platform, où les utilisateurs se connectent Experience Platform aux comptes qu’ils possèdent avec votre destination. Selon l’option d’authentification que vous indiquez dans le champ `authType` , la page Experience Platform est générée pour les utilisateurs comme suit :
+Cette section de la configuration des destinations génère la page [Configurer une nouvelle destination](/help/destinations/ui/connect-destination.md) dans l’interface utilisateur de l’Experience Platform, où les utilisateurs se connectent Experience Platform aux comptes qu’ils ont avec votre destination. Selon l’option d’authentification que vous indiquez dans le champ `authType` , la page Experience Platform est générée pour les utilisateurs comme suit :
 
 **Authentification du porteur**
 
-Les utilisateurs doivent saisir le jeton porteur qu’ils obtiennent de votre destination.
+Lorsque vous configurez le type d’authentification du porteur, les utilisateurs doivent saisir le jeton du porteur qu’ils obtiennent de votre destination.
 
 ![Rendu de l’interface utilisateur avec authentification du porteur](./assets/bearer-authentication-ui.png)
 
 **Authentification OAuth 2**
 
-Les utilisateurs sélectionnent **[!UICONTROL Se connecter à la destination]** pour déclencher le flux d’authentification OAuth 2 vers votre destination.
+Les utilisateurs sélectionnent **[!UICONTROL Se connecter à la destination]** pour déclencher le flux d’authentification OAuth 2 vers votre destination, comme illustré dans l’exemple ci-dessous pour la destination Audiences personnalisées de Twitter. Pour plus d’informations sur la configuration de l’authentification OAuth 2 à votre point de terminaison de destination, consultez la [page d’authentification dédiée du SDK de destination OAuth 2](./oauth2-authentication.md).
 
 ![Rendu de l’interface utilisateur avec authentification OAuth 2](./assets/oauth2-authentication-ui.png)
 
@@ -153,7 +153,7 @@ Les utilisateurs sélectionnent **[!UICONTROL Se connecter à la destination]** 
 | Paramètre | Type | Description |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | Chaîne | Indique la configuration utilisée pour authentifier les clients Experience Platform sur votre serveur. Voir `authType` ci-dessous pour connaître les valeurs acceptées. |
-| `authType` | Chaîne | Les valeurs acceptées sont `OAUTH2, BEARER`. <br><ul><li> Si votre destination prend en charge l’authentification OAuth 2, sélectionnez la valeur `OAUTH2` et ajoutez les champs requis pour OAuth 2, comme indiqué dans la page d’authentification du SDK de destination OAuth 2. De plus, vous devez sélectionner `authenticationRule=CUSTOMER_AUTHENTICATION` dans la section [Diffusion de destination](./destination-configuration.md). </li><li>Pour l’authentification du porteur, sélectionnez `BEARER` et sélectionnez `authenticationRule=CUSTOMER_AUTHENTICATION` dans la [section de diffusion de destination](./destination-configuration.md).</li></ul> |
+| `authType` | Chaîne | Les valeurs acceptées sont `OAUTH2, BEARER`. <br><ul><li> Si votre destination prend en charge l’authentification OAuth 2, sélectionnez la valeur `OAUTH2` et ajoutez les champs requis pour OAuth 2, comme indiqué dans la [page d’authentification du SDK de destination OAuth 2](./oauth2-authentication.md). De plus, vous devez sélectionner `authenticationRule=CUSTOMER_AUTHENTICATION` dans la section [Diffusion de destination](./destination-configuration.md). </li><li>Pour l’authentification du porteur, sélectionnez `BEARER` et sélectionnez `authenticationRule=CUSTOMER_AUTHENTICATION` dans la [section de diffusion de destination](./destination-configuration.md).</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -205,9 +205,9 @@ Utilisez les paramètres de `schemaConfig` pour activer l’étape de mappage du
 
 ## Identités et attributs {#identities-and-attributes}
 
-Les paramètres de cette section déterminent la manière dont les identités et attributs de la cible sont renseignés à l’étape de mappage de l’interface utilisateur de l’Experience Platform, où les utilisateurs mappent leurs schémas XDM au schéma de votre destination.
+Les paramètres de cette section déterminent quelles identités votre destination accepte. Cette configuration renseigne également les identités et les attributs de la cible à l’[étape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) de l’interface utilisateur de l’Experience Platform, où les utilisateurs mappent les identités et les attributs de leurs schémas XDM au schéma de votre destination.
 
-Vous devez indiquer les [!DNL Platform] identités que les clients peuvent exporter vers votre destination. Voici quelques exemples : [!DNL Experience Cloud ID], adresse électronique hachée, ID d’appareil ([!DNL IDFA], [!DNL GAID]). Ces valeurs sont des [!DNL Platform] espaces de noms d’identité que les clients peuvent mapper aux espaces de noms d’identité de votre destination.
+Vous devez indiquer les [!DNL Platform] identités que les clients peuvent exporter vers votre destination. Voici quelques exemples : [!DNL Experience Cloud ID], adresse électronique hachée, ID d’appareil ([!DNL IDFA], [!DNL GAID]). Ces valeurs sont des [!DNL Platform] espaces de noms d’identité que les clients peuvent mapper aux espaces de noms d’identité de votre destination. Vous pouvez également indiquer si les clients peuvent mapper des espaces de noms personnalisés à des identités prises en charge par votre destination.
 
 Les espaces de noms d’identité ne nécessitent pas de correspondance 1-à-1 entre [!DNL Platform] et votre destination.
 Par exemple, les clients peuvent mapper un espace de noms [!DNL Platform] [!DNL IDFA] à un espace de noms [!DNL IDFA] à partir de votre destination, ou ils peuvent mapper le même [!DNL Platform] [!DNL IDFA] à un espace de noms [!DNL Customer ID] dans votre destination.
@@ -231,7 +231,6 @@ Pour en savoir plus, consultez la [présentation de l’espace de noms d’ident
 |---------|----------|------|
 | `authenticationRule` | Chaîne | Indique comment les clients [!DNL Platform] se connectent à votre destination. Les valeurs acceptées sont `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si les clients Platform se connectent à votre système par l’intermédiaire d’un nom d’utilisateur et d’un mot de passe, d’un jeton porteur ou d’une autre méthode d’authentification. Par exemple, sélectionnez cette option si vous avez également sélectionné `authType: OAUTH2` ou `authType:BEARER` dans `customerAuthenticationConfigurations`. </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre l’Adobe et votre destination et que le client [!DNL Platform] n’a pas besoin de fournir d’informations d’identification d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer un objet d’identification à l’aide de la configuration [Credentials](./credentials-configuration.md) . </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
 | `destinationServerId` | Chaîne | `instanceId` de la [configuration du serveur de destination](./destination-server-api.md) utilisée pour cette destination. |
-| `backfillHistoricalProfileData` | Booléen | Contrôle si les données de profil historiques sont exportées lorsque les segments sont activés vers la destination. <br> <ul><li> `true`:  [!DNL Platform] envoie les profils utilisateur historiques qualifiés pour le segment avant l’activation du segment. </li><li> `false`:  [!DNL Platform] inclut uniquement les profils utilisateur qui remplissent les critères pour le segment une fois le segment activé. </li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -244,14 +243,6 @@ Cette section de la configuration de destination concerne la manière dont les m
 Grâce à la section `audienceTemplateId`, cette section associe également cette configuration à la [configuration des métadonnées d’audience](./audience-metadata-management.md).
 
 Les paramètres affichés dans la configuration ci-dessus sont décrits dans la [référence de l’API du point de terminaison des destinations](./destination-configuration-api.md).
-
-## Comment cette configuration connecte toutes les informations nécessaires à votre destination {#connecting-all-configurations}
-
-Certains paramètres de votre destination peuvent être configurés via le serveur de destination ou le point de terminaison des métadonnées de l’audience. Le point d’entrée de configuration de destination connecte tous ces paramètres en référençant les configurations comme suit :
-
-* Utilisez `destinationServerId` pour référencer la configuration du serveur de destination et du modèle configurée pour votre destination.
-* Utilisez `audienceMetadataId` pour référencer la configuration des métadonnées d’audience configurée pour votre destination.
-
 
 ## Stratégie d’agrégation {#aggregation}
 
@@ -280,18 +271,25 @@ Utilisez le paramètre `maxUsersPerRequest` pour spécifier le nombre maximal de
 Cette option fonctionne mieux si vous préférez prendre des lots volumineux, avec des milliers de profils sur le même appel. Cette option permet également d&#39;agréger les profils exportés en fonction de règles d&#39;agrégation complexes.
 
 Cette option vous permet d’effectuer les opérations suivantes :
-* Définissez la durée et le nombre maximal de profils à agréger avant qu’un appel API ne soit effectué vers votre destination.
+* Définissez la durée maximale et le nombre maximal de profils à agréger avant qu’un appel API ne soit effectué vers votre destination.
 * Agrégez les profils exportés mappés à la destination en fonction des éléments suivants :
-   * identifiant de segment
-   * état du segment
-   * identité ou groupes d’identités
+   * Identifiant de segment;
+   * État du segment ;
+   * Identité ou groupes d’identités.
 
 Pour obtenir des explications détaillées sur les paramètres d’agrégation, consultez la page de référence [Opérations de point d’entrée de l’API Destinations](./destination-configuration-api.md), où chaque paramètre est décrit.
 
-## Qualifications des profils historiques
+## Qualifications des profils historiques {#profile-backfill}
 
 Vous pouvez utiliser le paramètre `backfillHistoricalProfileData` dans la configuration des destinations pour déterminer si les qualifications de profil historiques doivent être exportées vers votre destination.
 
 | Paramètre | Type | Description |
 |---------|----------|------|
 | `backfillHistoricalProfileData` | Booléen | Contrôle si les données de profil historiques sont exportées lorsque les segments sont activés vers la destination. <br> <ul><li> `true`:  [!DNL Platform] envoie les profils utilisateur historiques qualifiés pour le segment avant l’activation du segment. </li><li> `false`:  [!DNL Platform] inclut uniquement les profils utilisateur qui remplissent les critères pour le segment une fois le segment activé. </li></ul> |
+
+## Comment cette configuration connecte toutes les informations nécessaires à votre destination {#connecting-all-configurations}
+
+Certains de vos paramètres de destination doivent être configurés via le [serveur de destination](./server-and-template-configuration.md) ou la [configuration des métadonnées d’audience](./audience-metadata-management.md). La configuration de destination décrite ici connecte tous ces paramètres en référençant les deux autres configurations comme suit :
+
+* Utilisez `destinationServerId` pour référencer la configuration du serveur de destination et du modèle configurée pour votre destination.
+* Utilisez `audienceMetadataId` pour référencer la configuration des métadonnées d’audience configurée pour votre destination.
