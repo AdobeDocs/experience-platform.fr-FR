@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 20%
+source-wordcount: '657'
+ht-degree: 19%
 
 ---
 
@@ -134,6 +134,8 @@ ht-degree: 20%
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - Automatisation du marketing {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+         - [Campagne MailChimp](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
+         - [Membres MailChimp](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Marketing Cloud Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Paiements {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
