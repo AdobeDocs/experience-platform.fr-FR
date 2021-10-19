@@ -1,65 +1,62 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;service de segmentation;segmentation Edge;segmentation Edge;périphérie en flux continu
+keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; segmentation des contours ; Segmentation des contours ; Segmentation des contours ; Diffusion des contours ;
 solution: Experience Platform
-title: 'Segmentation Edge à l’aide de l’API '
+title: 'Segmentation des contours à l’aide de l’API '
 topic-legacy: developer guide
-description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Adobe Experience Platform Segmentation Service.
+description: Ce document contient des exemples d’utilisation de la segmentation des contours avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
+source-git-commit: c89971668839555347e9b84c7c0a4ff54a394c1a
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 14%
+source-wordcount: '917'
+ht-degree: 9%
 
 ---
 
-# Segmentation Edge (version bêta)
+# Segmentation des contours (bêta)
 
 >[!NOTE]
 >
->Le document suivant indique comment effectuer une segmentation Edge à l’aide de l’API. Pour plus d’informations sur l’exécution de la segmentation Edge à l’aide de l’interface utilisateur, consultez le [guide de l’interface utilisateur de la segmentation Edge](../ui/edge-segmentation.md). En outre, la segmentation Edge est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>Le document suivant indique comment effectuer la segmentation des contours à l’aide de l’API. Pour plus d’informations sur la segmentation des contours à l’aide de l’interface utilisateur, consultez la section [guide de l’interface utilisateur de segmentation des contours](../ui/edge-segmentation.md). En outre, la segmentation des contours est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
-La segmentation Edge permet d’évaluer instantanément les segments dans Adobe Experience Platform, ce qui permet d’utiliser les cas de personnalisation de page suivante et de page identique.
+La segmentation Edge permet d’évaluer instantanément les segments de Adobe Experience Platform sur le bord, ce qui permet d’utiliser des cas d’utilisation de personnalisation de la même page et de la page suivante.
 
 ## Prise en main
 
-Ce guide de développement nécessite une compréhension pratique des différents services [!DNL Adobe Experience Platform] impliqués dans la segmentation de périphérie. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
+Ce guide du développeur nécessite une compréhension pratique des différents [!DNL Adobe Experience Platform] services impliqués dans la segmentation des contours. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur en temps réel unifié sur base des données agrégées provenant de plusieurs sources.
-- [[!DNL Segmentation]](../home.md): Permet de créer des segments et des audiences à partir de vos  [!DNL Real-time Customer Profile] données.
+- [[!DNL Segmentation]](../home.md): Permet de créer des segments et des publics à partir de votre [!DNL Real-time Customer Profile] données.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
-Pour passer avec succès des appels à des points de terminaison d’API Experience Platform, consultez le guide sur [la prise en main des API Platform](../../landing/api-guide.md) pour en savoir plus sur les en-têtes requis et sur la lecture d’exemples d’appels API.
+Pour réussir à appeler des points de terminaison API Experience Platform, lisez le guide sur [prise en main des API de plate-forme](../../landing/api-guide.md) pour en savoir plus sur les en-têtes requis et comment lire des exemples d’appels d’API.
 
-## Types de requête de segmentation Edge {#query-types}
+## Types de requête de segmentation de contour {#query-types}
 
-Pour qu’un segment soit évalué à l’aide de la segmentation Edge, la requête doit respecter les instructions suivantes :
+Pour qu&#39;un segment soit évalué à l&#39;aide de la segmentation des contours, la requête doit respecter les directives suivantes :
 
-| Type de requête | Détails |
-| ---------- | ------- |
-| Accès entrant | Toute définition de segment qui fait référence à un seul événement entrant sans restriction temporelle. |
-| Accès entrant qui fait référence à un profil | Toute définition de segment qui fait référence à un seul événement entrant, sans restriction temporelle, et à un ou plusieurs attributs de profil. |
-| Accès entrant avec une fenêtre temporelle de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans les 24 heures |
-| Accès entrant qui fait référence à un profil avec une fenêtre temporelle de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans les 24 heures et à un ou plusieurs attributs de profil |
-
-{style=&quot;table-layout:auto&quot;}
-
-Les types de requête suivants sont **non** actuellement pris en charge par la segmentation Edge :
-
-| Type de requête | Détails |
-| ---------- | ------- |
-| Événements multiples | Si une requête contient plusieurs événements, elle ne peut pas être évaluée à l’aide de la segmentation Edge. |
-| Requête de fréquence | Toute définition de segment qui fait référence à un événement se produisant au moins un certain nombre de fois. |
-| Requête de fréquence faisant référence à un profil | Toute définition de segment qui fait référence à un événement se produisant au moins un certain nombre de fois et qui possède un ou plusieurs attributs de profil. |
+| Type de requête | Détails | Exemple |
+| ---------- | ------- | ------- |
+| Événement unique | Toute définition de segment qui fait référence à un événement entrant unique sans limitation de temps. | Les personnes qui ont ajouté un article à leur panier. |
+| Événement unique faisant référence à un profil | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un seul événement entrant sans restriction de temps. | Des gens qui vivent aux États-Unis et ont visité la page d&#39;accueil. |
+| Événement unique négatif avec un attribut de profil | Toute définition de segment faisant référence à un événement entrant unique et à un ou plusieurs attributs de profil négatifs | Personnes vivant aux États-Unis et ayant **non** a visité la page d&#39;accueil. |
+| Événement unique dans une période de 24 heures | Toute définition de segment faisant référence à un événement entrant unique dans les 24 heures. | Les personnes qui ont visité la page d&#39;accueil ces dernières 24 heures. |
+| Événement unique avec un attribut de profil dans une fenêtre de temps de 24 heures | Toute définition de segment faisant référence à un ou plusieurs attributs de profil et à un événement entrant unique annulé dans les 24 heures. | Des gens qui vivent aux États-Unis et ont visité la page d&#39;accueil ces dernières 24 heures. |
+| Événement unique négatif avec un attribut de profil dans une période de 24 heures | Toute définition de segment faisant référence à un ou plusieurs attributs de profil et à un événement entrant unique annulé dans les 24 heures. | Personnes vivant aux États-Unis et ayant **non** a visité la page d&#39;accueil au cours des dernières 24 heures. |
+| Événement de fréquence dans une période de 24 heures | Toute définition de segment qui fait référence à un événement qui se produit un certain nombre de fois dans une période de 24 heures. | Personnes ayant visité la page d&#39;accueil **au moins** cinq fois au cours des dernières 24 heures. |
+| Événement de fréquence avec un attribut de profil dans une période de 24 heures | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un événement qui se produit un certain nombre de fois dans une période de 24 heures. | Personnes des États-Unis qui ont visité la page d&#39;accueil **au moins** cinq fois au cours des dernières 24 heures. |
+| Événement de fréquence négatif avec un profil dans une période de 24 heures | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un événement annulé qui se produit un certain nombre de fois dans une période de 24 heures. | Personnes qui n&#39;ont pas visité la page d&#39;accueil **plus** plus de cinq fois au cours des dernières 24 heures. |
+| Plusieurs visites entrantes dans un profil temporel de 24 heures | Toute définition de segment qui fait référence à plusieurs événements qui se produisent dans une période de 24 heures. | Personnes ayant visité la page d&#39;accueil **ou** a visité la page de paiement au cours des dernières 24 heures. |
+| Plusieurs événements avec un profil dans une période de 24 heures | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et plusieurs événements se produisant dans une période de 24 heures. | Des gens des États-Unis qui ont visité la page d&#39;accueil **et** a visité la page de paiement au cours des dernières 24 heures. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Récupération de tous les segments activés pour la segmentation Edge
+## Récupérer tous les segments activés pour la segmentation des contours
 
-Vous pouvez récupérer une liste de tous les segments activés pour la segmentation Edge dans votre organisation IMS en envoyant une requête GET au point de terminaison `/segment/definitions` .
+Vous pouvez récupérer une liste de tous les segments qui sont activés pour la segmentation des contours au sein de votre organisation IMS en adressant une demande de GET à l’adresse suivante : `/segment/definitions` point de terminaison.
 
 **Format d&#39;API**
 
-Pour récupérer les segments activés pour la segmentation Edge, vous devez inclure le paramètre de requête `evaluationInfo.synchronous.enabled=true` dans le chemin de requête.
+Pour récupérer les segments activés pour la segmentation des contours, vous devez inclure le paramètre de requête `evaluationInfo.synchronous.enabled=true` dans le chemin d’accès de la demande.
 
 ```http
 GET /segment/definitions?evaluationInfo.synchronous.enabled=true
@@ -78,7 +75,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau de segments de votre organisation IMS activés pour la segmentation Edge. Vous trouverez des informations plus détaillées sur la définition de segment renvoyée dans le [guide de point de terminaison des définitions de segment](./segment-definitions.md).
+Une réponse réussie renvoie un tableau de segments de votre organisation IMS qui sont activés pour la segmentation des contours. Des informations plus détaillées sur la définition de segment renvoyée sont disponibles dans le fichier [guide d&#39;extrémité des définitions de segment](./segment-definitions.md).
 
 ```json
 {
@@ -165,9 +162,9 @@ Une réponse réussie renvoie un tableau de segments de votre organisation IMS a
 }
 ```
 
-## Création d’un segment activé pour la segmentation Edge
+## Création d’un segment activé pour la segmentation des contours
 
-Vous pouvez créer un segment activé pour la segmentation Edge en envoyant une requête de POST au point de terminaison `/segment/definitions` correspondant à l’un des [types de requête de segmentation Edge répertoriés ci-dessus](#query-types).
+Vous pouvez créer un segment qui est activé pour la segmentation des contours en adressant une demande de POST à la `/segment/definitions` point de terminaison correspondant à l’un des [types de requête de segmentation de bord répertoriés ci-dessus](#query-types).
 
 **Format d’API**
 
@@ -179,7 +176,7 @@ POST /segment/definitions
 
 >[!NOTE]
 >
->L’exemple ci-dessous illustre une requête standard pour créer un segment. Pour plus d’informations sur la création d’une définition de segment, consultez le tutoriel sur la [création d’un segment](../tutorials/create-a-segment.md).
+>L’exemple ci-dessous est une demande standard de création d’un segment. Pour plus d’informations sur la création d’une définition de segment, consultez le tutoriel sur [création d’un segment](../tutorials/create-a-segment.md).
 
 ```shell
 curl -X POST \
@@ -206,7 +203,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la définition de segment nouvellement créée activée pour la segmentation Edge.
+Une réponse réussie renvoie les détails de la nouvelle définition de segment qui est activée pour la segmentation des contours.
 
 ```json
 {
@@ -248,6 +245,6 @@ Une réponse réussie renvoie les détails de la définition de segment nouvelle
 
 ## Étapes suivantes
 
-Maintenant que vous savez comment créer des segments activés pour la segmentation Edge, vous pouvez les utiliser pour activer des cas d’utilisation de la personnalisation de la même page et de la page suivante.
+Maintenant que vous savez comment créer des segments prenant en charge la segmentation des contours, vous pouvez les utiliser pour activer les cas d’utilisation de personnalisation de la même page et de la page suivante.
 
 Pour savoir comment effectuer des actions similaires et utiliser des segments à l’aide de l’interface utilisateur d’Adobe Experience Platform, consultez le [guide d’utilisation du créateur de segments](../ui/segment-builder.md).
