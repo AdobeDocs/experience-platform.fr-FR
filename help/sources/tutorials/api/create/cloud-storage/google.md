@@ -1,53 +1,53 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Google Cloud Storage;stockage dans le cloud Google;Google;Google
+keywords: Experience Platform ; accueil ; rubriques populaires ; Stockage cloud Google ; stockage cloud google ; stockage cloud ; google ; Google
 solution: Experience Platform
-title: Création d’une connexion à la base de stockage Google Cloud à l’aide de l’API Flow Service
+title: Création d'une connexion de base de stockage Google Cloud à l'aide de l'API Flow Service
 topic-legacy: overview
 type: Tutorial
-description: Découvrez comment connecter Adobe Experience Platform à un compte Google Cloud Storage à l’aide de l’API Flow Service.
+description: Découvrez comment connecter Adobe Experience Platform à un compte de stockage Google Cloud à l’aide de l’API Flow Service.
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 13bd1254dfe89004465174a7532b4f6aaef54c09
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '470'
 ht-degree: 11%
 
 ---
 
-# Créez une connexion de base [!DNL Google Cloud Storage] à l’aide de l’API [!DNL Flow Service]
+# Créer un [!DNL Google Cloud Storage] connexion de base à l’aide de [!DNL Flow Service] API
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Google Cloud Storage] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous explique les étapes à suivre pour créer une connexion de base pour [!DNL Google Cloud Storage] à l’aide de la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md) :  [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
+* [Sources](../../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, étiqueter et améliorer les données entrantes à l’aide de [!DNL Platform] services.
 * [Environnements de test](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à un compte Google Cloud Storage à l’aide de l’API [!DNL Flow Service].
+Les sections suivantes fournissent des informations supplémentaires que vous devez connaître pour pouvoir vous connecter à un compte de stockage Google Cloud à l’aide de l’onglet [!DNL Flow Service] API.
 
 ### Collecte des informations d’identification requises
 
-Pour que [!DNL Flow Service] se connecte à votre compte [!DNL Google Cloud Storage], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour [!DNL Flow Service] pour vous connecter à [!DNL Google Cloud Storage] , vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
-| Credential | Description |
+| Informations d&#39;identification | Description |
 | ---------- | ----------- |
-| `accessKeyId` | Chaîne alphanumérique de 61 caractères utilisée pour authentifier votre compte [!DNL Google Cloud Storage] dans Platform. |
-| `secretAccessKey` | Chaîne codée en base 64 caractères de 40 caractères utilisée pour authentifier votre compte [!DNL Google Cloud Storage] sur Platform. |
+| `accessKeyId` | Chaîne alphanumérique de 61 caractères utilisée pour authentifier votre [!DNL Google Cloud Storage] compte vers Plateforme. |
+| `secretAccessKey` | Chaîne codée en base de 40 caractères utilisée pour authentifier votre [!DNL Google Cloud Storage] compte vers Plateforme. |
 
-Pour plus d’informations sur ces valeurs, voir le guide [Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) . Pour savoir comment générer votre propre ID de clé d’accès et votre clé d’accès secrète, consultez la [[!DNL Google Cloud Storage] présentation](../../../../connectors/cloud-storage/google-cloud-storage.md).
+Pour plus d’informations sur ces valeurs, consultez la section [Clés HMAC de stockage Google Cloud](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. Pour connaître les étapes permettant de générer votre propre ID de clé d’accès et votre clé d’accès secret, consultez la section [[!DNL Google Cloud Storage] présentation](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
-### Utilisation des API Platform
+### Utilisation des API de plate-forme
 
-Pour plus d’informations sur la manière d’effectuer des appels avec succès vers les API Platform, consultez le guide de [prise en main des API Platform](../../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer des appels vers les API de plate-forme, consultez le guide sur [prise en main des API de plate-forme](../../../../../landing/api-guide.md).
 
 ## Création d’une connexion de base
 
-Une connexion de base conserve les informations entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
+Une connexion de base conserve les informations entre votre source et la plate-forme, y compris les informations d&#39;identification de votre source, l&#39;état actuel de la connexion et votre ID de connexion de base unique. L’ID de connexion de base vous permet d’explorer et de parcourir les fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez assimiler, y compris des informations concernant leurs types et formats de données.
 
-Pour créer un identifiant de connexion de base, envoyez une requête de POST au point de terminaison `/connections` tout en fournissant vos informations d’authentification [!DNL Google Cloud Storage] dans le cadre des paramètres de requête.
+Pour créer un ID de connexion de base, effectuez une demande de POST à l’adresse `/connections` point de terminaison lors de la fourniture de votre [!DNL Google Cloud Storage] les informations d&#39;identification d&#39;authentification dans le cadre des paramètres de demande.
 
 **Format d’API**
 
@@ -57,7 +57,7 @@ POST /connections
 
 **Requête**
 
-La requête suivante crée une connexion de base pour [!DNL Google Cloud Storage] :
+La demande suivante crée une connexion de base pour [!DNL Google Cloud Storage]:
 
 ```shell
 curl -X POST \
@@ -86,13 +86,13 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | Identifiant de clé d’accès associé à votre compte [!DNL Google Cloud Storage]. |
-| `auth.params.secretAccessKey` | Clé d’accès secrète associée à votre compte [!DNL Google Cloud Storage]. |
-| `connectionSpec.id` | ID de spécification de connexion [!DNL Google Cloud Storage] : `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| `auth.params.accessKeyId` | L’ID de clé d’accès associé à votre [!DNL Google Cloud Storage] compte. |
+| `auth.params.secretAccessKey` | La clé d’accès secret associée à votre [!DNL Google Cloud Storage] compte. |
+| `connectionSpec.id` | Le [!DNL Google Cloud Storage] ID de spécification de connexion : `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle connexion, y compris son identifiant unique (`id`). Cet identifiant est nécessaire pour explorer vos données de stockage dans le cloud dans le tutoriel suivant.
+Une réponse réussie renvoie les détails de la connexion nouvellement créée, y compris son identifiant unique (`id`). Cet ID est nécessaire pour explorer vos données de stockage dans le cloud dans le didacticiel suivant.
 
 ```json
 {
@@ -103,4 +103,4 @@ Une réponse réussie renvoie les détails de la nouvelle connexion, y compris s
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une connexion [!DNL Google Cloud Storage] à l’aide d’API et un identifiant unique a été obtenu dans le corps de la réponse. Vous pouvez utiliser cet identifiant de connexion pour [explorer le stockage dans le cloud à l’aide de l’API Flow Service](../../explore/cloud-storage.md) ou [ingérer des données Parquet à l’aide de l’API Flow Service](../../cloud-storage-parquet.md).
+En suivant ce tutoriel, vous avez créé un fichier [!DNL Google Cloud Storage] la connexion à l’aide d’API et d’un ID unique a été obtenue dans le corps de la réponse. Vous pouvez utiliser cet ID de connexion pour [exploration des sites de stockage dans le cloud à l’aide de l’API Flow Service](../../explore/cloud-storage.md).
