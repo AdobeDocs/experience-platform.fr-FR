@@ -2,10 +2,10 @@
 title: Notes de mise à jour
 description: Dernières notes de mise à jour relatives aux balises dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 100%
+source-wordcount: '578'
+ht-degree: 87%
 
 ---
 
@@ -14,6 +14,16 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+
+## 21 octobre 2021
+
+**Envoi de données à des points de terminaison authentifiés dans le transfert d’événements** - En utilisant des secrets, vous pouvez envoyer des données aux points de terminaison qui nécessitent les protocoles d&#39;authentification suivants :
+
+* **[!UICONTROL Jeton]**: Chaîne de caractères unique représentant une valeur de jeton d’authentification.
+* **[!UICONTROL HTTP simple]**: Contient deux attributs de chaîne pour un nom d&#39;utilisateur et un mot de passe.
+* **[!UICONTROL OAuth2]**: Contient plusieurs attributs pour prendre en charge le [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) spécification.
+
+Pour plus d’informations, voir les guides sur [gestion des secrets dans l&#39;interface utilisateur de collecte de données](../ui/event-forwarding/secrets.md) ou [gestion des secrets dans l&#39;API Reactor](../api/guides/secrets.md).
 
 ## 19 juillet 2021
 
