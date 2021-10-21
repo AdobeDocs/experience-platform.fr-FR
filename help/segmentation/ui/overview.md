@@ -5,9 +5,9 @@ title: Guide de l'interface utilisateur du service de segmentation
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segments.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: d65bcf62f0de29dc293a1a1313178a408613a024
+source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1691'
 ht-degree: 23%
 
 ---
@@ -23,7 +23,7 @@ L’utilisation des définitions de segment nécessite une compréhension des di
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] permet de diviser les données stockées dans [!DNL Experience Platform] qui se rapporte à des personnes (telles que des clients, des prospects, des utilisateurs ou des organisations) en groupes plus petits.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Permet la création de profils de clients en fusionnant les identités de sources de données disparates en cours d&#39;assimilation dans [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client. Pour tirer le meilleur parti de la segmentation, assurez-vous que vos données sont assimilées en tant que profils et événements en fonction de [meilleures pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 
 Il est également important de connaître deux termes clés utilisés dans ce document et de comprendre la différence entre eux :
 - **Définition de segment** : ensemble des règles utilisées pour décrire les caractéristiques ou les comportements clés d’une audience cible.
