@@ -2,10 +2,10 @@
 title: Guide de lʼAPI Reactor
 description: LʼAPI Reactor permet aux développeurs de gérer par programmation toutes les ressources des balises dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '1035'
-ht-degree: 100%
+source-wordcount: '1082'
+ht-degree: 95%
 
 ---
 
@@ -114,6 +114,10 @@ Pour savoir comment afficher ces informations dans lʼAPI, consultez le [guide d
 ## Recherche
 
 Le point dʼentrée `/search` permet de trouver des ressources correspondant à un critère donné, exprimé sous la forme dʼune requête. Toutes les requêtes sont limitées à votre société actuelle et aux propriétés accessibles. Pour savoir comment utiliser cette fonctionnalité, consultez le [guide du point dʼentrée de recherche](./endpoints/search.md).
+
+## Secrets
+
+Un secret contient des informations d&#39;identification qui permettent au transfert d&#39;événements de s&#39;authentifier sur un autre système pour un échange sécurisé de données. Voir la section [guide secrets](./guides/secrets.md) pour une présentation du fonctionnement des secrets dans le transfert d’événements, et la [guide de point de terminaison secrets](./endpoints/secrets.md) pour savoir comment les gérer dans l’API Reactor.
 
 ## Étapes suivantes
 

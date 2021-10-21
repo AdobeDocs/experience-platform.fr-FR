@@ -2,10 +2,10 @@
 title: Relations dans l’API Reactor
 description: Découvrez comment les relations de ressources sont établies dans l’API Reactor, y compris les exigences de relation pour chaque ressource.
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 100%
+source-wordcount: '807'
+ht-degree: 99%
 
 ---
 
@@ -151,7 +151,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
-| `entity` | ✓ |  |  |
+| `entity` | ☐ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -162,9 +162,9 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | `data_elements` |  |  |  |
 | `extensions` |  |  |  |
 | `rules` |  |  |  |
-| `environment` | ✓ |  |  |
-| `library` | ✓ |  |  |
-| `property` | ✓ |  |  |
+| `environment` | ☐ |  |  |
+| `library` | ☐ |  |  |
+| `property` | ☐ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -172,7 +172,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | ☐ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -189,13 +189,13 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
+| `revisions` | ☐ |  |  |
 | `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
-| `updated_with_extension` | ✓ |  |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `property` | ☐ |  |  |
+| `origin` | ☐ |  |  |
+| `extension` | ☐ | ☐ |  |
+| `updated_with_extension` | ☐ |  |  |
+| `updated_with_extension_package` | ☐ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -205,8 +205,8 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | :--- | :---: | :---: | :---: |
 | `library` |  |  |  |
 | `builds` |  |  |  |
-| `host` | ✓ | ✓ |  |
-| `property` | ✓ |  |  |
+| `host` | ☐ | ☐ |  |
+| `property` | ☐ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -215,12 +215,12 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
+| `revisions` | ☐ |  |  |
 | `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension_package` | ✓ | ✓ |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `property` | ☐ |  |  |
+| `origin` | ☐ |  |  |
+| `extension_package` | ☐ | ☐ |  |
+| `updated_with_extension_package` | ☐ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -228,7 +228,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | ☐ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -237,13 +237,13 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `builds` |  |  |  |
-| `environment` |  |  | ✓ |
-| `data_elements` |  |  | ✓ |
-| `extensions` |  |  | ✓ |
-| `rules` |  |  | ✓ |
+| `environment` |  |  | ☐ |
+| `data_elements` |  |  | ☐ |
+| `extensions` |  |  | ☐ |
+| `rules` |  |  | ☐ |
 | `notes` |  |  |  |
-| `upstream_library` | ✓ |  |  |
-| `property` | ✓ |  |  |
+| `upstream_library` | ☐ |  |  |
+| `property` | ☐ |  |  |
 | `last_build` |  |  |  |
 
 {style=&quot;table-layout:auto&quot;}
@@ -252,7 +252,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
-| `resource` | ✓ |  |  |
+| `resource` | ☐ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -260,7 +260,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
-| `company` | ✓ |  |  |
+| `company` | ☐ |  |  |
 | `callbacks` |  |  |  |
 | `environments` |  |  |  |
 | `libraries` |  |  |  |
@@ -274,14 +274,14 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
-| `updated_with_extensions_package` | ✓ |  |  |
-| `updated_with_extension` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
+| `updated_with_extensions_package` | ☐ |  |  |
+| `updated_with_extension` | ☐ |  |  |
+| `extension` | ☐ | ☐ |  |
 | `notes` |  |  |  |
-| `origin` | ✓ |  |  |
-| `property` | ✓ |  |  |
-| `rules` | ✓ | ✓ |  |
-| `revisions` | ✓ |  |  |
+| `origin` | ☐ |  |  |
+| `property` | ☐ |  |  |
+| `rules` | ☐ | ☐ |  |
+| `revisions` | ☐ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -290,8 +290,16 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
+| `revisions` | ☐ |  |  |
 | `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
+| `property` | ☐ |  |  |
+| `origin` | ☐ |  |  |
 | `rule_components` |  |  |  |
+
+### Secrets
+
+| Relation | Obligatoire | Créer par payload | Création par URL |
+| :--- | :---: | :---: | :---: |
+| `property` | ☐ |  | ☐ |
+| `environment` | ☐ | ☐ |  |
+

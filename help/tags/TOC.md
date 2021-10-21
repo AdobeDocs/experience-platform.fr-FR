@@ -4,10 +4,10 @@ user-guide-title: Aide sur les balises
 breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 100%
+source-wordcount: '380'
+ht-degree: 99%
 
 ---
 
@@ -172,9 +172,10 @@ ht-degree: 100%
       * [Configurations d’application](./api/endpoints/app-configurations.md)
       * [Événements d’audit](./api/endpoints/audit-events.md)
       * [Rappels](./api/endpoints/callbacks.md)
-      * [Remarques](./api/endpoints/notes.md)
+      * [Notes](./api/endpoints/notes.md)
       * [Profile](./api/endpoints/profile.md)
       * [Recherche](./api/endpoints/search.md)
+      * [Secrets](./api/endpoints/secrets.md)
    * Guides {#guides}
       * [ID de descripteur de délégué](./api/guides/delegate-descriptor-ids.md)
       * [Chiffrement des valeurs](./api/guides/encrypting-values.md)
@@ -184,6 +185,7 @@ ht-degree: 100%
       * [Tri des réponses](./api/guides/sorting.md)
       * [Relations](./api/guides/relationships.md)
       * [Recherche de ressources](./api/guides/search.md)
+      * [Secrets](./api/guides/secrets.md)
 * [FAQ](./faq.md)
 * [Mises à jour de terminologie](./term-updates.md)
 * Notes de mise à jour {#release-notes}
