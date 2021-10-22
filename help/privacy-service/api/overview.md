@@ -1,10 +1,10 @@
 ---
 title: Guide de l’API Privacy Service
 description: Découvrez comment utiliser l’API du Privacy Service pour gérer par programme les tâches de confidentialité pour les applications Adobe Experience Cloud prises en charge.
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 196147e7691010707953561c110a3934fec8ba1b
 workflow-type: tm+mt
 source-wordcount: '265'
-ht-degree: 32%
+ht-degree: 21%
 
 ---
 
@@ -30,4 +30,4 @@ Certains règlements exigent un consentement explicite de la part des clients av
 
 ## Étapes suivantes
 
-Pour commencer à effectuer des appels à lʼaide de lʼAPI Schema Registry, consultez le [guide de prise en main](./getting-started.md), puis sélectionnez lʼun des guides des points dʼentrée pour savoir comment utiliser des points dʼentrée spécifiques.
+Pour commencer à effectuer des appels à l’aide de l’API du Privacy Service, lisez la section [guide de prise en main](./getting-started.md) sélectionnez ensuite l’un des repères de point de terminaison pour apprendre à utiliser des points de terminaison spécifiques.
