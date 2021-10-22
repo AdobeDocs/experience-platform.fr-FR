@@ -5,10 +5,10 @@ title: Gestion des formats de données avec la préparation des données
 topic-legacy: overview
 description: Ce document donne un aperçu de la manière dont différents types de données sont traités dans la préparation des données.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 100%
+source-wordcount: '568'
+ht-degree: 98%
 
 ---
 
@@ -41,7 +41,7 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | Paramètre | Description |
 | --------- | ----------- |
 | `{DATE}` | Obligatoire. Chaîne représentant la date. |
-| `{FORMAT}` | Facultatif. Chaîne représentant le format de la date. Vous trouverez plus d’informations sur le formatage des chaînes dans la [section Chaîne de format date/heure](#format). |
+| `{FORMAT}` | Facultatif. Chaîne représentant le format de la date source. Vous trouverez plus d’informations sur le formatage des chaînes dans la [section Chaîne de format date/heure](#format). |
 | `{DEFAULT_DATE}` | Facultatif. Date par défaut à renvoyer si la date fournie est nulle. |
 
 Par exemple, l’expression `date(orderDate, "yyyy-MM-dd")` convertira une valeur `orderDate` de « 31 décembre 2020 » en une valeur datetime de « 2020-12-31 ».
