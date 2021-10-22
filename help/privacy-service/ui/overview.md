@@ -1,36 +1,36 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
-title: Présentation de l’interface utilisateur de Privacy Service
+title: Présentation de l’interface utilisateur Privacy Service
 topic-legacy: UI guide
-description: Commencez à utiliser l’interface utilisateur de Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
+description: Commencez à utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes de confidentialité dans diverses applications Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: b87861b7482976e6eda1dea22cfe954af9f6aecc
+source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
 workflow-type: tm+mt
 source-wordcount: '175'
-ht-degree: 25%
+ht-degree: 18%
 
 ---
 
 # [!DNL Privacy Service] Présentation de l’interface utilisateur
 
-Adobe Experience Platform [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur qui vous permettent de coordonner les demandes de confidentialité et de conformité à travers différentes solutions. Ce document explore l’interface utilisateur de [!DNL Privacy Service]. Pour plus d’informations sur l’utilisation de l’API, veuillez consulter le [guide de développement de Privacy Service](../api/getting-started.md).
+Adobe Experience Platform [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur qui vous permettent de coordonner les demandes de confidentialité et de conformité entre les différentes solutions. Ce document explore les [!DNL Privacy Service] Interface utilisateur. Pour plus d’informations sur l’utilisation de l’API, consultez la section [Guide de l’API Privacy Service](../api/overview.md).
 
-## Connectez-vous à l’interface utilisateur [!DNL Privacy Service]
+## Connectez-vous au [!DNL Privacy Service] Interface
 
 >[!IMPORTANT]
 >
->Vous devez disposer d’un Adobe ID pour vous authentifier dans l’interface utilisateur [!DNL Privacy Service]. En outre, vous devez disposer de droits d’administrateur système au sein de votre organisation IMS.
+>Vous devez disposer d’un Adobe ID pour pouvoir vous authentifier auprès de la [!DNL Privacy Service] Interface utilisateur. En outre, vous devez disposer de droits d&#39;administrateur système au sein de votre organisation IMS.
 
-Sélectionnez **[!UICONTROL Se connecter avec une Adobe ID]** et saisissez vos informations d’identification Adobe ID lorsque vous y êtes invité.
+Sélectionner **[!UICONTROL Connexion avec un Adobe ID]** et entrez vos informations d’identification Adobe ID lorsque vous y êtes invité.
 
-Une fois connecté, sélectionnez **[!UICONTROL Interface utilisateur de la confidentialité]**.
+Une fois connecté, sélectionnez **[!UICONTROL Interface de confidentialité]**.
 
 ![](../images/ui-overview/quick-access.png)
 
-### Connexion à partir de [!DNL Experience Platform]
+### Connexion depuis [!DNL Experience Platform]
 
-Si vous avez accès à l’interface utilisateur de Adobe Experience Platform, vous pouvez également accéder à l’interface utilisateur [!DNL Privacy Service] via l’onglet **[!UICONTROL Demandes]** dans le volet de navigation de gauche.
+Si vous avez accès à l’interface utilisateur Adobe Experience Platform, vous pouvez également accéder à la [!DNL Privacy Service] Interface utilisateur via **[!UICONTROL Demandes]** dans la barre de navigation de gauche.
 
 ![](../images/ui-overview/platform.png)
 
