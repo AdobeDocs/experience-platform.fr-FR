@@ -2,7 +2,7 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination de diffusion en continu à l’aide du SDK de destination.
 title: Comment utiliser le SDK de destination pour configurer une destination de diffusion en continu
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 0%
@@ -17,21 +17,21 @@ Cette page décrit comment utiliser les informations dans [Options de configurat
 
 >[!NOTE]
 >
->Configuring a batch destination through Destination SDK is currently not supported.
+>La configuration d’une destination par lots via le SDK de destination n’est actuellement pas prise en charge.
 
 ## Conditions préalables {#prerequisites}
 
-Before advancing to the steps illustrated below, please read the [Destination SDK getting started](./getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
+Avant de passer aux étapes illustrées ci-dessous, veuillez lire la section [Prise en main du SDK de destination](./getting-started.md) pour plus d’informations sur l’obtention des informations d’identification d’authentification d’Adobe I/O nécessaires et d’autres conditions préalables à l’utilisation des API SDK de destination.
 
 ## Étapes à suivre pour utiliser les options de configuration dans le SDK de destination pour configurer votre destination {#steps}
 
-![Illustrated steps of using Destination SDK endpoints](./assets/destination-sdk-steps.png)
+![Etapes illustrées d’utilisation des points de terminaison du SDK de destination](./assets/destination-sdk-steps.png)
 
 ## Étape 1 : Création d’une configuration de serveur et de modèle {#create-server-template-configuration}
 
-Commencez par créer une configuration de serveur et de modèle à l’aide de la `/destinations-server` point de terminaison (lecture) [Référence API](./destination-server-api.md)). For more information about the server and template configuration, refer to [Server and template specs](./configuration-options.md#server-and-template) in the reference section.
+Commencez par créer une configuration de serveur et de modèle à l’aide de la `/destinations-server` point de terminaison (lecture) [Référence API](./destination-server-api.md)). Pour plus d’informations sur la configuration du serveur et du modèle, reportez-vous à la section [Spécifications relatives aux serveurs et aux modèles](./configuration-options.md#server-and-template) dans la section de référence.
 
-Shown below is an example configuration. Notez que le modèle de transformation de message dans le fichier `requestBody.value` est traité à l&#39;étape 3, [Créer un modèle de transformation](./configure-destination-instructions.md#create-transformation-template).
+Voici un exemple de configuration. Notez que le modèle de transformation de message dans le fichier `requestBody.value` est traité à l&#39;étape 3, [Créer un modèle de transformation](./configure-destination-instructions.md#create-transformation-template).
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destination-servers
@@ -56,9 +56,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 }
 ```
 
-## Step 2: Create destination configuration {#create-destination-configuration}
+## Étape 2 : Créer une configuration de destination {#create-destination-configuration}
 
-Voici un exemple de configuration pour un modèle de destination, créé à l’aide de la `/destinations` Point de terminaison API. For more information about this template, refer to [Destination configuration](./destination-configuration.md).
+Voici un exemple de configuration pour un modèle de destination, créé à l’aide de la `/destinations` Point de terminaison API. Pour plus d’informations sur ce modèle, voir [Configuration de destination](./destination-configuration.md).
 
 Pour connecter la configuration du serveur et du modèle à l’étape 1 à cette configuration de destination, ajoutez l’ID d’instance de la configuration du serveur et du modèle en tant que `destinationServerId` ici.
 
@@ -146,15 +146,15 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Étape 3 : Créer un modèle de transformation de message - utiliser un langage de modèle pour spécifier le format de sortie de message {#create-transformation-template}
 
-Based on the payloads that your destination supports, you must create a template that transforms the format of the exported data from Adobe XDM format into a format supported by your destination. Voir des exemples de modèles dans la section [Utilisation d’une langue de modèle pour les transformations d’identité, d’attributs et d’appartenance aux segments](./message-format.md#using-templating) et utilisez la [outil de création de modèles](./create-template.md) fourni par Adobe.
+En fonction des charges prises en charge par votre destination, vous devez créer un modèle qui transforme le format des données exportées à partir du format XDM Adobe en un format pris en charge par votre destination. Voir des exemples de modèles dans la section [Utilisation d’une langue de modèle pour les transformations d’identité, d’attributs et d’appartenance aux segments](./message-format.md#using-templating) et utilisez la [outil de création de modèles](./create-template.md) fourni par Adobe.
 
-Once you have crafted a message transformation template that works for you, add it to the server and template configuration you created in step 1.
+Une fois que vous avez conçu un modèle de transformation de message qui fonctionne pour vous, ajoutez-le à la configuration de serveur et de modèle que vous avez créée à l’étape 1.
 
 ## Étape 4 : Créer une configuration de métadonnées d’audience {#create-audience-metadata-configuration}
 
-Pour certaines destinations, le SDK de destination nécessite que vous configuriez une configuration de métadonnées d’audience pour créer, mettre à jour ou supprimer des publics dans votre destination par programme. Refer to [Audience metadata management](./audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
+Pour certaines destinations, le SDK de destination nécessite que vous configuriez une configuration de métadonnées d’audience pour créer, mettre à jour ou supprimer des publics dans votre destination par programme. Reportez-vous à [Gestion des métadonnées du public](./audience-metadata-management.md) pour plus d’informations sur le moment où vous devez configurer cette configuration et comment le faire.
 
-Si vous utilisez une configuration de métadonnées d’audience, vous devez la connecter à la configuration de destination que vous avez créée à l’étape 2. Add the instance ID of your audience metadata configuration to your destination configuration as `audienceTemplateId`.
+Si vous utilisez une configuration de métadonnées d’audience, vous devez la connecter à la configuration de destination que vous avez créée à l’étape 2. Ajoutez l’ID d’instance de votre configuration de métadonnées d’audience à votre configuration de destination en tant que `audienceTemplateId`.
 
 ## Étape 5 : Créer une configuration des informations d&#39;identification / Configurer l&#39;authentification {#set-up-authentication}
 
@@ -169,7 +169,7 @@ Après avoir configuré votre destination à l’aide des points de terminaison 
 
 Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur de l’Experience Platform pour créer des segments que vous activerez vers votre destination. Reportez-vous aux deux ressources ci-dessous pour savoir comment créer des segments dans l’Experience Platform :
 
-* [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
+* [Création d’une page de documentation sur les segments](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
 * [Création d’une présentation vidéo de segment](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
 ## Étape 7 : Publication de votre destination {#publish-destination}
@@ -178,4 +178,4 @@ Après avoir configuré et testé votre destination, utilisez la [API de publica
 
 ## Étape 8 : Document de destination {#document-destination}
 
-If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience League destinations catalog](/help/destinations/catalog/overview.md).
+Si vous êtes un fournisseur de logiciels indépendants (ISV) ou un intégrateur de système (SI), créez un [intégration productive](./overview.md#productized-custom-integrations), utilisez la [processus de documentation en libre-service](./docs-framework/documentation-instructions.md) pour créer une page de documentation de produit pour votre destination dans le dossier [Catalogue de destinations Experience Platform](/help/destinations/catalog/overview.md).
