@@ -1,11 +1,12 @@
 ---
-keywords: rtcdp b2b;b2b;compte;profil de compte;profils de compte rtcdp;plateforme de données client en temps réel;
-title: Profils de compte dans l’édition CDP B2B en temps réel
-description: Découvrez comment l’édition B2B de Real-time Customer Data Platform vous permet d’unifier les informations de compte de plusieurs sources à l’aide de profils de compte.
-source-git-commit: 5301cf870052f537a34913beb0b814212bdaadaa
-workflow-type: tm+mt
+keywords: rtcdp b2b;b2b;compte;profil de compte;profils de compte rtcdp;real-time customer data platform;
+title: Profils de compte dans l’édition B2B de Real-time CDP
+description: Découvrez comment l’édition B2B de Real-time Customer Data Platform vous permet d’unifier des informations de comptes provenant de plusieurs sources à l’aide des profils de compte.
+exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
+source-git-commit: 8115a8716abbe6260321ce57728d86a6cc94d19c
+workflow-type: ht
 source-wordcount: '273'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
@@ -17,12 +18,12 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Les profils de compte ne sont disponibles que pour les clients de Real-time Customer Data Platform B2B Edition. Pour en savoir plus sur la plateforme CDP en temps réel, l’édition B2B, y compris les fonctionnalités disponibles, veuillez commencer par lire la [présentation de la plateforme CDP en temps réel, l’édition B2B](../b2b-overview.md).
+>Les profils de compte ne sont disponibles que pour les clients Real-time Customer Data Platform B2B Edition. Pour en savoir plus sur l’édition B2B de Real-time CDP et connaître notamment les fonctionnalités disponibles, commencez par lire la [présentation de l’édition B2B de Real-time CDP](../b2b-overview.md).
 
-Les profils de compte vous permettent d’unifier les informations de compte de plusieurs sources. Cette vue unifiée d’un compte rassemble les données de vos nombreux canaux marketing et des différents systèmes actuellement utilisés par votre organisation pour stocker les données de votre compte client.
+Les profils de compte vous permettent d’unifier les informations de compte provenant de plusieurs sources. Cette vue unifiée de compte rassemble des données provenant de vos nombreux canaux marketing et des divers systèmes actuellement utilisés par votre organisation pour stocker les données des comptes clients.
 
-En regroupant les données de compte de différentes sources, vous pouvez commencer à obtenir une vue d’ensemble complète de chacun de vos comptes clients, ainsi que des opportunités et contacts qui y sont liés. Cela permet à votre entreprise d’amener vos campagnes marketing B2B à un nouveau niveau. Pour en savoir plus sur la puissance de la plateforme CDP en temps réel, l’édition B2B, consultez l’ [exemple d’utilisation de la plateforme CDP en temps réel, l’édition B2B](../b2b-use-case.md).
+En regroupant les données de comptes provenant de différentes sources, une vue d’ensemble exhaustive se dessine pour chacun de vos comptes clients, ainsi que pour les opportunités et contacts qui leur sont associés. Votre organisation peut ainsi faire passer ses campagnes marketing B2B à un niveau supérieur. Pour en savoir plus sur la puissance de l’édition B2B de Real-time CDP, consultez l’[exemple de cas d’utilisation de l’édition B2B de Real-time CDP](../b2b-use-case.md).
 
-## Visionneuse de profil de compte
+## Visionneuse de profils de compte
 
-Avec la plateforme de données clients en temps réel, l’édition B2B, vous pouvez utiliser l’interface utilisateur de l’Experience Platform pour afficher les profils de compte et rechercher des comptes spécifiques à l’aide d’un ID de compte provenant d’une source d’entreprise connectée ou en saisissant directement les détails de la source. Pour plus d’informations sur l’affichage des profils de compte dans l’interface utilisateur de Platform, consultez le [guide de l’interface utilisateur des profils de compte](account-profile-ui-guide.md).
+L’édition B2B de Real-time CDP vous permet d’utiliser l’interface utilisateur d’Experience Platform pour afficher les profils de compte et rechercher des comptes spécifiques à l’aide d’un ID de compte provenant d’une source commerciale connectée ou en saisissant directement les détails de la source. Pour plus d’informations sur l’affichage des profils de compte dans l’interface utilisateur de Platform, consultez le [guide de l’interface utilisateur des profils de compte](account-profile-ui-guide.md).
