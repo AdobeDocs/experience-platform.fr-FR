@@ -3,9 +3,9 @@ title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1543'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -19,8 +19,8 @@ ht-degree: 98%
 
 v3.2.2
 
-* Corrigez le schéma JSON de l’élément de données de valeur conditionnelle pour tous les opérateurs disponibles.
-* Correctif https://github.com/adobe/reactor-extension-core/issues/64.
+* Correction du schéma JSON de l’élément de données de valeur conditionnelle pour tous les opérateurs disponibles.
+* Correction du problème https://github.com/adobe/reactor-extension-core/issues/64.
 
 ## 23 septembre 2021
 
