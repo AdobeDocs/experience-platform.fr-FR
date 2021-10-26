@@ -1,33 +1,33 @@
 ---
-title: API d’hygiène des données (Alpha)
-description: Découvrez comment corriger ou supprimer par programmation les données personnelles stockées de vos clients dans Adobe Experience Platform.
+title: API Data Hygiene (Alpha)
+description: Découvrez comment corriger ou supprimer par programme les données personnelles de vos clients stockées dans Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 source-git-commit: f956a8191614cc8e0eeaadaa55277abfbc5be106
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '535'
-ht-degree: 19%
+ht-degree: 100%
 
 ---
 
-# API d’hygiène des données (Alpha)
+# API Data Hygiene (Alpha)
 
 >[!IMPORTANT]
 >
->L’API Data Hygiene est actuellement en version alpha et votre entreprise peut ne pas y avoir encore accès. Les fonctionnalités décrites dans ce document peuvent faire l’objet de modifications.
+>L’API Data Hygiene est actuellement en version Alpha. Il est possible que votre organisation n’y ait pas encore accès. Les fonctionnalités décrites dans ce document peuvent faire l’objet de modifications.
 
-L’API Data Hygiene vous permet de corriger ou de supprimer par programmation les données personnelles stockées de vos clients dans Adobe Experience Platform. Contrairement à l’API du Privacy Service, ces opérations ne doivent pas être associées aux réglementations légales en matière de confidentialité et peuvent être utilisées uniquement à des fins de nettoyage et d’exactitude de vos données.
+L’API Data Hygiene vous permet de corriger ou de supprimer par programme les données personnelles de vos clients stockées dans Adobe Experience Platform. Contrairement à l’API Privacy Service, il n’est pas nécessaire que ces opérations soient associées aux réglementations légales en matière de confidentialité. Elles peuvent être utilisées uniquement à des fins de nettoyage et d’exactitude de vos données.
 
-Vous pouvez accéder à l’API à l’aide du chemin racine suivant : `https://platform.adobe.io/data/core/hygiene/`
+Vous pouvez accéder à l’API via le chemin racine suivant : `https://platform.adobe.io/data/core/hygiene/`.
 
 ## Prise en main
 
-Cette section présente les concepts de base que vous devez connaître avant d’effectuer des appels vers l’API Data Hygiene.
+Cette section présente les concepts de base que vous devez connaître avant d’effectuer des appels à l’API Data Hygiene.
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour passer des appels à l’API Data Hygiene, vous devez d’abord rassembler vos informations d’authentification. Il s’agit des mêmes informations d’identification que celles utilisées pour accéder à l’API du Privacy Service. Suivez le [guide de prise en main](./api/getting-started.md) de l’API du Privacy Service pour générer des valeurs pour chacun des en-têtes requis pour l’API d’hygiène des données, comme illustré ci-dessous :
+Pour effectuer des appels à l’API Data Hygiene, vous devez d’abord rassembler vos informations d’authentification. Ces informations d’identification sont les mêmes que celles utilisées pour accéder à l’API Privacy Service. Suivez le [guide de prise en main](./api/getting-started.md) de l’API Privacy Service afin de générer des valeurs pour chacun des en-têtes requis pour l’API Data Hygiene, comme illustré ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -39,11 +39,11 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ### Lecture d&#39;exemples d&#39;appels API
 
-Ce document fournit un exemple d’appel API pour démontrer comment formater vos requêtes. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section [Comment lire des exemples d’appels API](../landing/api-guide.md#sample-api) dans le guide de prise en main des API Experience Platform.
+Ce document fournit un exemple d’appel API pour illustrer la manière dont vous devez formater vos requêtes. Pour en savoir plus sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section relative à la [lecture d’exemples d’appels API](../landing/api-guide.md#sample-api) dans le guide de prise en main des API d’Experience Platform.
 
 ## Création d’une tâche de suppression
 
-Vous pouvez créer une tâche de suppression en effectuant une requête de POST.
+Vous pouvez créer une tâche de suppression en effectuant une requête POST.
 
 **Format d’API**
 
@@ -53,7 +53,7 @@ POST /jobs
 
 **Requête**
 
-La payload de la requête est structurée de la même manière que celle d’une requête [de suppression dans l’API du Privacy Service](./api/privacy-jobs.md#access-delete). Il comprend un tableau `users` dont les objets représentent les utilisateurs dont les données doivent être supprimées.
+La structure de la payload de la requête est similaire à celle d’une [requête DELETE dans l’API Privacy Service](./api/privacy-jobs.md#access-delete). Elle comprend un tableau `users` dans lequel les objets représentent les utilisateurs dont les données doivent être supprimées.
 
 ```shell
 curl -X POST \
@@ -107,8 +107,8 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `companyContexts` | Un tableau contenant des informations d’authentification pour votre organisation. Il doit contenir un seul objet avec les propriétés suivantes : <ul><li>`namespace`: Cette propriété doit être définie sur `imsOrgID`.</li><li>`value`: Votre identifiant de l&#39;organisation IMS. Il s’agit de la même valeur que celle fournie dans l’en-tête `x-gw-ims-org-id`.</li></ul> |
-| `users` | Tableau contenant une collection d’au moins un utilisateur dont vous souhaitez supprimer les informations. Chaque objet d’utilisateur contient les informations suivantes : <ul><li>`key` : un identifiant pour un utilisateur utilisé pour exécuter les identifiants de tâches distincts dans les données de réponse. Il est recommandé de choisir une chaîne unique facilement identifiable pour cette valeur afin de pouvoir la référencer ou la rechercher ultérieurement.</li><li>`action` : un tableau répertoriant les actions souhaitées pouvant être effectuées sur les données de l’utilisateur. Doit contenir une seule valeur string : `delete`.</li><li>`userIDs` : une collection d’identités pour cet utilisateur. Le nombre d’identités qu’un utilisateur unique peut posséder est limité à neuf. Chaque identité contient les propriétés suivantes : <ul><li>`namespace`: Espace de noms  [d’identité ](../identity-service/namespaces.md) associé à l’identifiant. Il peut s’agir d’un [espace de noms standard](./api/appendix.md#standard-namespaces) reconnu par Platform ou d’un espace de noms personnalisé défini par votre organisation. Le type d’espace de noms utilisé doit être reflété dans la propriété `type` .</li><li>`value`: La valeur d’identité.</li><li>`type`: Doit être défini sur  `standard` si vous utilisez un espace de noms reconnu globalement ou  `custom` si vous utilisez un espace de noms défini par votre organisation.</li></ul></li></ul> |
+| `companyContexts` | Un tableau contenant des informations d’authentification pour votre organisation. Il doit contenir un seul objet avec les propriétés suivantes : <ul><li>`namespace`: Cette propriété doit être définie sur `imsOrgID`.</li><li>`value`: Votre identifiant de l&#39;organisation IMS. Il s’agit de la même valeur que celle fournie dans l’en-tête `x-gw-ims-org-id`.</li></ul> |
+| `users` | Un tableau contenant une collection d’au moins un utilisateur dont vous souhaitez supprimer les informations. Chaque objet d’utilisateur contient les informations suivantes : <ul><li>`key` : un identifiant pour un utilisateur utilisé pour exécuter les identifiants de tâches distincts dans les données de réponse. Nous vous recommandons de choisir une chaîne unique et facilement identifiable pour cette valeur afin de pouvoir la référencer ou la rechercher ultérieurement.</li><li>`action` : un tableau répertoriant les actions souhaitées pouvant être effectuées sur les données de l’utilisateur. Doit contenir une seule valeur de chaîne : `delete`.</li><li>`userIDs` : une collection d’identités pour cet utilisateur. Le nombre d’identités qu’un utilisateur unique peut posséder est limité à neuf. Chaque identité contient les propriétés suivantes : <ul><li>`namespace` : l’[espace de noms d’identité](../identity-service/namespaces.md) associé à l’identifiant. Il peut s’agir d’un [espace de noms standard](./api/appendix.md#standard-namespaces) reconnu par Platform ou d’un espace de noms personnalisé défini par votre organisation. Le type d’espace de noms utilisé doit être reflété dans la propriété `type`.</li><li>`value` : la valeur de l’identité.</li><li>`type` : doit être défini sur `standard` si vous utilisez un espace de noms reconnu globalement ou sur `custom` si vous utilisez un espace de noms défini par votre organisation.</li></ul></li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
