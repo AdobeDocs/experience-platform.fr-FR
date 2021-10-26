@@ -3,7 +3,7 @@ title: Variable sans Turbine
 description: Découvrez lʼobjet turbine, une variable libre qui fournit des informations et des utilitaires spécifiques à lʼexécution des balises Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '625'
 ht-degree: 100%
 
