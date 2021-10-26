@@ -5,10 +5,10 @@ title: Présentation de la collecte de données
 topic-legacy: overview
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: bbaf272313d5a8afe33178598063164792f4d8c0
+source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 96%
+source-wordcount: '458'
+ht-degree: 52%
 
 ---
 
@@ -26,6 +26,7 @@ Les technologies de collecte de données fournies par Experience Platform se con
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=fr)
 * [Balises](../tags/home.md)
+* [Flux de données](../edge/fundamentals/datastreams.md)
 * [Transfert d’événement](../tags/ui/event-forwarding/overview.md)
 * [SDK web Adobe Experience Platform](../edge/home.md)
 * [ SDK Mobile Adobe Experience Platform](https://aep-sdks.gitbook.io/docs/)
@@ -33,30 +34,36 @@ Les technologies de collecte de données fournies par Experience Platform se con
 * [Modèle de données d’expérience (XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
-<!-- (Outdated terminology)
-![](./images/Collection.png)
--->
+Ce guide présente de manière approfondie la structure de collecte de données et son fonctionnement pour envoyer des données aux produits Adobe Experience Cloud et aux applications non Adobes par le biais de Platform Edge Network.
 
-## Implémentations facilitées, performances côté client accélérées
+## Balises, SDK Web et SDK Mobile
 
-Les SDK web et mobile d’Adobe Experience Platform réduisent et compressent toutes les bibliothèques des produits Adobe en un seul kit de développement pour les plateformes web ou mobiles. La compression de ces bibliothèques accélère la collecte de données et consolide les opérations dans un flux unique, reliant les appareils côté client à Adobe Experience Platform Edge Network.
+Le SDK Web de Platform et le SDK Mobile de Platform réduisent et compressent toutes les bibliothèques de produits d’Adobe dans un seul kit de développement pour les plateformes web et mobiles, respectivement. Ils peuvent être implémentés à l’aide de code brut ou en utilisant [tags](../tags/home.md) via l’interface utilisateur de la collecte de données.
 
-## Processus de basculement afin de déployer la technologie Adobe {#edge}
+La compression de ces bibliothèques accélère la collecte de données et consolide les opérations dans un flux unique entre les périphériques côté client et le réseau Platform Edge.
+
+![Balises, SDK Web, SDK Mobile](./images/home/tags-sdks.png)
+
+## Réseau et flux de données Platform Edge {#edge}
 
 Platform Edge Network est un réseau de serveurs distribué dans le monde entier. Rapide et fiable, il est capable de recevoir et de traiter des données à très grande échelle. Grâce aux balises, vous pouvez mettre en place des [flux de données](../edge/fundamentals/datastreams.md) pour des produits comme Adobe Target, Adobe Audience Manager et Adobe Analytics. Ces configurations vous permettent d‘activer les produits en question côté serveur sans modifier le code côté client.
 
-<!-- (Outdated terminology)
-![](./images/deploy.png)
--->
+![Solutions de flux de données et d’Adobe](./images/home/adobe-solutions.png)
 
 >[!NOTE]
 >
 >Pour une présentation détaillée de Platform Edge Network, reportez-vous à [cette présentation interactive du produit](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
-## Transformation, enrichissement et envoi de données de manière rapide et sécurisée
+## Transfert d’événement
 
-[Le transfert d’événement dans Adobe Experience Platform](../tags/ui/event-forwarding/overview.md) peut exploiter n’importe quel flux de données Platform. Vous pouvez transformer, enrichir et envoyer des données vers une destination autre qu’Adobe avec une latence extrêmement faible, et ce, sans ajouter de code tiers au périphérique client. Ainsi, les données sont collectées et distribuées de manière plus rapide et plus sécurisée.
+[Transfert d’événement](../tags/ui/event-forwarding/overview.md) Vous pouvez appuyer sur n’importe quel flux de données Experience Platform, ce qui vous permet de transformer, d’enrichir et d’envoyer des données à n’importe quelle destination non Adobe avec une latence extrême faible et sans ajouter de code tiers à l’appareil client.
 
-<!-- (Outdated terminology)
-![](./images/launch.png)
--->
+![Transfert d’événement](./images/home/event-forwarding.png)
+
+## Étapes suivantes
+
+Ce document fournit un aperçu général du fonctionnement des technologies de collecte de données de Platform pour automatiser le processus d’envoi des données d’expérience client collectées à des produits Adobe et à des destinations tierces.
+
+![Structure de collecte de données](./images/home/collection.png)
+
+Pour plus d’informations sur le workflow général impliqué dans l’envoi des données d’événement par le biais du réseau Edge, reportez-vous à la section [présentation de bout en bout de la collecte de données](./e2e.md).
