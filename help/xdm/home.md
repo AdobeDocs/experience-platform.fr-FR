@@ -5,10 +5,10 @@ title: Présentation du système XDM
 topic-legacy: overview
 description: La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. Le modèle de données d’expérience (XDM), optimisé par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 196147e7691010707953561c110a3934fec8ba1b
+source-git-commit: 18d245574ba771aa42776d8755a2c6681c8c8532
 workflow-type: tm+mt
-source-wordcount: '1947'
-ht-degree: 56%
+source-wordcount: '2015'
+ht-degree: 54%
 
 ---
 
@@ -51,14 +51,19 @@ Pour plus d&#39;informations sur la gestion et l&#39;interaction avec les schém
 
 ## Comportements de données dans le système XDM {#data-behaviors}
 
-Les données pouvant être utilisées dans Experience Platform sont regroupées selon deux types de comportements :
+Les données destinées à être utilisées dans l’Experience Platform sont regroupées en trois types de comportement :
 
-* **Enregistrer les données** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
-* **Données de séries chronologiques**: Fournit un instantané du système au moment où une action a été effectuée directement ou indirectement par un sujet d&#39;enregistrement.
+* **Enregistrer**: Fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
+* **Série temporelle**: Fournit un instantané du système au moment où une action a été effectuée directement ou indirectement par un sujet d&#39;enregistrement.
+* **Ad hoc**: Capture les champs dont l’espace de noms n’est utilisé que par un seul jeu de données. Les schémas ad hoc sont utilisés dans plusieurs workflows d’ingestion de données pour Experience Platform, notamment dans l’ingestion de fichiers CSV et dans la création de certains types de connexions sources.
 
 Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à celui-ci lorsqu’il est créé pour la première fois. Les classes XDM décrivent le plus petit nombre de propriétés qu’un schéma doit contenir pour représenter un comportement de données spécifique.
 
-Bien que vous puissiez définir vos propres classes au sein de la [!DNL Schema Registry], il est recommandé d’utiliser les classes préférées **[!UICONTROL Profil individuel XDM]** et **[!UICONTROL XDM ExperienceEvent]** pour les données d&#39;enregistrement et de série chronologique, respectivement. Ces classes sont décrites plus en détail ci-dessous.
+Bien que vous puissiez définir vos propres classes au sein de la [!DNL Schema Registry], il est recommandé d’utiliser les classes standard **[!UICONTROL Profil individuel XDM]** et **[!UICONTROL XDM ExperienceEvent]** pour les données d&#39;enregistrement et de série chronologique, respectivement. Ces classes sont décrites plus en détail ci-dessous.
+
+>[!NOTE]
+>
+>Il n’existe aucune classe standard basée sur le comportement ad hoc. Les schémas ad hoc sont générés automatiquement par les processus de la plate-forme qui les utilisent, mais ils peuvent également être [créé manuellement à l&#39;aide de l&#39;API Schema Registry](./tutorials/ad-hoc.md).
 
 ### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
 
