@@ -5,10 +5,10 @@ title: 'Gestion des étiquettes dʼutilisation des données pour les jeux de don
 topic-legacy: developer guide
 description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
+source-git-commit: ef711b1cbe0664f556e19ff6c64e9803d3cb1a21
 workflow-type: tm+mt
-source-wordcount: '957'
-ht-degree: 100%
+source-wordcount: '803'
+ht-degree: 87%
 
 ---
 
@@ -94,11 +94,15 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Requête**
 
-La requête PUT suivante met à jour les étiquettes existantes pour un jeu de données, ainsi quʼun champ spécifique dans ce jeu de données. Les champs fournis dans la payload sont identiques à ceux requis pour une requête POST.
+L’exemple de requête de PUT ci-dessous met à jour les libellés existants pour un jeu de données, ainsi qu’un champ spécifique dans ce jeu de données. Les champs fournis dans la payload sont identiques à ceux requis pour une requête POST.
 
->[!IMPORTANT]
+Lors d’appels API qui mettent à jour les libellés existants d’un jeu de données (PUT), une `If-Match` L’en-tête qui indique la version actuelle de l’entité du libellé du jeu de données dans le service de jeu de données doit être inclus. Afin dʼéviter les collisions de données, le service ne mettra à jour lʼentité jeu de données que si la chaîne `If-Match` incluse correspond à la dernière balise de version générée par le système pour ce jeu de données.
+
+>[!NOTE]
 >
->Un en-tête `If-Match` valide doit être fourni lors de lʼexécution de requêtes PUT au point d’entrée `/datasets/{DATASET_ID}/labels`. Pour plus dʼinformations sur lʼutilisation de lʼen-tête requis, consultez la [section Annexe](#if-match).
+>Si aucune étiquette nʼexiste actuellement pour le jeu de données en question, de nouvelles étiquettes ne peuvent être ajoutées que par le biais dʼune requête POST, qui ne nécessite pas un en-tête `If-Match`. Une fois que des étiquettes ont été ajoutées à un jeu de données, une valeur `etag` est attribuée qui peut être utilisée pour mettre à jour ou supprimer les étiquettes ultérieurement.
+
+Pour récupérer la version la plus récente de lʼentité étiquette-jeu de données, envoyez une [requête GET](#look-up) au point d’entrée `/datasets/{DATASET_ID}/labels`. La valeur actuelle est renvoyée dans la réponse sous un en-tête `etag`. Lors de la mise à jour des libellés de jeu de données existants, la bonne pratique consiste à effectuer d’abord une requête de recherche pour le jeu de données afin de récupérer ses dernières `etag` avant d’utiliser cette valeur dans la variable `If-Match` en-tête de votre requête de PUT suivante.
 
 ```shell
 curl -X PUT \
@@ -131,7 +135,7 @@ curl -X PUT \
 
 **Réponse**
 
-Une réponse réussie renvoie les étiquettes qui ont été ajoutées au jeu de données.
+Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de données.
 
 ```json
 {
@@ -149,42 +153,6 @@ Une réponse réussie renvoie les étiquettes qui ont été ajoutées au jeu de 
 }
 ```
 
-## Suppression des étiquettes dʼun jeu de données {#remove}
-
-Vous pouvez supprimer les étiquettes appliquées à un jeu de données en envoyant une requête DELETE à lʼAPI [!DNL Dataset Service].
-
-**Format d’API**
-
-```http
-DELETE /datasets/{DATASET_ID}/labels
-```
-
-| Paramètre | Description |
-| --- | --- |
-| `{DATASET_ID}` | Valeur `id` unique du jeu de données dont vous souhaitez supprimer les étiquettes. |
-
-**Requête**
-
-La requête suivante supprime les étiquettes pour le jeu de données spécifié dans le chemin dʼaccès.
-
->[!IMPORTANT]
->
->Un en-tête `If-Match` valide doit être fourni lors de lʼexécution de requêtes DELETE au point d’entrée `/datasets/{DATASET_ID}/labels`. Pour plus dʼinformations sur lʼutilisation de lʼen-tête requis, consultez la [section Annexe](#if-match).
-
-```shell
-curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000'
-```
-
-**Réponse**
-
-Réponse réussie état HTTP 200 (OK), indiquant que les étiquettes ont été supprimées. Vous pouvez [rechercher les étiquettes existantes](#look-up) pour le jeu de données dans un appel séparé pour confirmer cela.
-
 ## Étapes suivantes
 
 En lisant ce document, vous avez appris la gestion des étiquettes dʼutilisation des données pour les jeux de données et les champs à lʼaide de lʼAPI [!DNL Dataset Service].
@@ -194,17 +162,3 @@ Une fois que vous avez ajouté des étiquettes dʼutilisation des données au ni
 Désormais, vous pouvez également définir des stratégies d’utilisation des données en fonction des libellés que vous avez appliqués. Pour plus d’informations, consultez la [présentation des stratégies d’utilisation des données](../policies/overview.md).
 
 Pour plus dʼinformations sur la gestion des jeux de données dans [!DNL Experience Platform], consultez la [présentation des jeux de données](../../catalog/datasets/overview.md).
-
-## Annexe {#appendix}
-
-La section suivante contient des informations supplémentaires sur lʼutilisation des étiquettes à lʼaide de lʼAPI Dataset Service.
-
-### En-tête [!DNL If-Match] {#if-match}
-
-Lors dʼappels API mettant à jour les étiquettes existantes dʼun jeu de données (PUT et DELETE), un en-tête `If-Match` indiquant la version actuelle de lʼentité étiquette-jeu de données dans Dataset Service doit être inclus. Afin dʼéviter les collisions de données, le service ne mettra à jour lʼentité jeu de données que si la chaîne `If-Match` incluse correspond à la dernière balise de version générée par le système pour ce jeu de données.
-
->[!NOTE]
->
->Si aucune étiquette nʼexiste actuellement pour le jeu de données en question, de nouvelles étiquettes ne peuvent être ajoutées que par le biais dʼune requête POST, qui ne nécessite pas un en-tête `If-Match`. Une fois que des étiquettes ont été ajoutées à un jeu de données, une valeur `etag` est attribuée qui peut être utilisée pour mettre à jour ou supprimer les étiquettes ultérieurement.
-
-Pour récupérer la version la plus récente de lʼentité étiquette-jeu de données, envoyez une [requête GET](#look-up) au point d’entrée `/datasets/{DATASET_ID}/labels`. La valeur actuelle est renvoyée dans la réponse sous un en-tête `etag`. Lors de la mise à jour dʼétiquettes de jeux de données existants, il est recommandé dʼeffectuer dʼabord une demande de recherche pour le jeu de données afin de récupérer sa valeur `etag` la plus récente avant dʼutiliser cette valeur dans lʼen-tête `If-Match` de votre requête PUT ou DELETE ultérieure.
