@@ -3,16 +3,16 @@ title: Suivi des événements à l’aide du SDK Web de Adobe Experience Platfor
 description: Découvrez comment effectuer le suivi des événements du SDK Web Adobe Experience Platform.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;envoyer la balise;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 53a14b2b7d7ca8bdd278f2aeec2c2e8a30fdac7b
+source-git-commit: ac167a205d2bc7e18d320bc1270da7e99bd05975
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 34%
+source-wordcount: '1209'
+ht-degree: 32%
 
 ---
 
 # Suivi des événements
 
-Pour envoyer des données d’événement à Adobe Experience Cloud, utilisez la commande `sendEvent`. La commande `sendEvent` constitue le principal moyen pour envoyer des données à et pour récupérer du contenu personnalisé, des identités et des destinations d’audience.[!DNL Experience Cloud]
+Pour envoyer des données d’événement à Adobe Experience Cloud, utilisez la variable `sendEvent` . La commande `sendEvent` constitue le principal moyen pour envoyer des données à et pour récupérer du contenu personnalisé, des identités et des destinations d’audience.[!DNL Experience Cloud]
 
 Les données envoyées à Adobe Experience Cloud entrent dans deux catégories :
 
@@ -23,7 +23,7 @@ Les données envoyées à Adobe Experience Cloud entrent dans deux catégories
 
 Les données XDM sont un objet dont le contenu et la structure correspondent à un schéma que vous avez créé dans Adobe Experience Platform. [En savoir plus sur la création d’un schéma.](../../xdm/tutorials/create-schema-ui.md)
 
-Toutes les données XDM que vous souhaitez intégrer à vos analyses, à votre personnalisation, à vos audiences ou à vos destinations doivent être envoyées à l’aide de l’option `xdm`.
+Toutes les données XDM que vous souhaitez intégrer à vos analyses, à votre personnalisation, à vos audiences ou à vos destinations doivent être envoyées à l’aide de la variable `xdm` .
 
 
 ```javascript
@@ -41,7 +41,7 @@ alloy("sendEvent", {
 });
 ```
 
-Un certain temps peut s’écouler entre l’exécution de la commande `sendEvent` et l’envoi des données au serveur (par exemple, si la bibliothèque du SDK Web n’a pas été entièrement chargée ou si le consentement n’a pas encore été reçu). Si vous envisagez de modifier une partie de l’objet `xdm` après avoir exécuté la commande `sendEvent`, il est vivement recommandé de cloner l’objet `xdm` _avant_ d’exécuter la commande `sendEvent`. Par exemple :
+Un certain temps peut s’écouler entre le moment où la variable `sendEvent` est exécutée et lorsque les données sont envoyées au serveur (par exemple, si la bibliothèque SDK Web n’a pas été entièrement chargée ou si le consentement n’a pas encore été reçu). Si vous envisagez de modifier une partie de la variable `xdm` après avoir exécuté l’objet `sendEvent` , il est vivement recommandé de cloner l’événement `xdm` objet _before_ en exécutant la fonction `sendEvent` . Par exemple :
 
 ```javascript
 var clone = function(value) {
@@ -68,7 +68,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-Dans cet exemple, la couche de données est clonée en la sérialisant au format JSON, puis en la désérialisant. Ensuite, le résultat cloné est transmis dans la commande `sendEvent`. Cela permet de s’assurer que la commande `sendEvent` possède un instantané de la couche de données telle qu’elle existait lors de l’exécution de la commande `sendEvent` afin que les modifications ultérieures apportées à l’objet de couche de données d’origine ne soient pas répercutées dans les données envoyées au serveur. Si vous utilisez une couche de données pilotée par un événement, le clonage de vos données est probablement déjà géré automatiquement. Par exemple, si vous utilisez la [couche de données client d’Adobe](https://github.com/adobe/adobe-client-data-layer/wiki), la méthode `getState()` fournit un instantané calculé et cloné de toutes les modifications antérieures. Cela est également géré automatiquement si vous utilisez l’extension de balise du SDK Web de Adobe Experience Platform.
+Dans cet exemple, la couche de données est clonée en la sérialisant au format JSON, puis en la désérialisant. Ensuite, le résultat cloné est transmis dans la variable `sendEvent` . Cela permet de s’assurer que la variable `sendEvent` contient un instantané de la couche de données telle qu’elle existait lors de la `sendEvent` a été exécutée afin que les modifications ultérieures apportées à l’objet de couche de données d’origine ne soient pas répercutées dans les données envoyées au serveur. Si vous utilisez une couche de données pilotée par un événement, le clonage de vos données est probablement déjà géré automatiquement. Par exemple, si vous utilisez la variable [Adobe de la couche de données client](https://github.com/adobe/adobe-client-data-layer/wiki), la variable `getState()` fournit un instantané calculé et cloné de toutes les modifications antérieures. Cela est également géré automatiquement si vous utilisez l’extension de balise du SDK Web de Adobe Experience Platform.
 
 >[!NOTE]
 >
@@ -77,11 +77,11 @@ Dans cet exemple, la couche de données est clonée en la sérialisant au format
 
 ## Envoi de données autres que XDM
 
-Les données qui ne correspondent pas à un schéma XDM doivent être envoyées à l’aide de l’option `data` de la commande `sendEvent`. Cette fonctionnalité est prise en charge dans les versions 2.5.0 et ultérieures du SDK Web.
+Les données qui ne correspondent pas à un schéma XDM doivent être envoyées à l’aide de la variable `data` de l’option `sendEvent` . Cette fonctionnalité est prise en charge dans les versions 2.5.0 et ultérieures du SDK Web.
 
 Cela s’avère utile si vous devez mettre à jour un profil Adobe Target ou envoyer des attributs Recommendations Target. [En savoir plus sur ces fonctionnalités de Target.](../personalization/adobe-target/target-overview.md#single-profile-update)
 
-À l’avenir, vous pourrez envoyer la couche de données complète sous l’option `data` et la mapper sur XDM côté serveur.
+À l’avenir, vous pourrez envoyer votre couche de données complète sous la variable `data` et l’associer au serveur XDM.
 
 **Comment envoyer des attributs Profile et Recommendations à Adobe Target :**
 
@@ -103,9 +103,9 @@ alloy("sendEvent", {
 
 ### Définition de `eventType` {#event-types}
 
-Dans les schémas XDM ExperienceEvent, il existe un champ `eventType` facultatif. Il contient le type d’événement principal pour l’enregistrement. La définition d’un type d’événement peut vous aider à différencier les différents événements que vous enverrez. XDM fournit plusieurs types d’événements prédéfinis que vous pouvez utiliser ou vous créez toujours vos propres types d’événements personnalisés pour vos cas d’utilisation. Reportez-vous à la documentation XDM pour obtenir la [liste de tous les types d’événement prédéfinis](../../xdm/classes/experienceevent.md#eventType).
+Dans les schémas XDM ExperienceEvent, il existe une `eventType` champ . Il contient le type d’événement principal pour l’enregistrement. La définition d’un type d’événement peut vous aider à différencier les différents événements que vous enverrez. XDM fournit plusieurs types d’événements prédéfinis que vous pouvez utiliser ou vous créez toujours vos propres types d’événements personnalisés pour vos cas d’utilisation. Reportez-vous à la documentation XDM pour obtenir une [liste de tous les types d’événements prédéfinis](../../xdm/classes/experienceevent.md#eventType).
 
-Ces types d’événement s’affichent dans une liste déroulante si vous utilisez l’extension de balise ou si vous pouvez toujours les transmettre sans balise. Ils peuvent être transmis dans le cadre de l’option `xdm`.
+Ces types d’événement s’affichent dans une liste déroulante si vous utilisez l’extension de balise ou si vous pouvez toujours les transmettre sans balise. Ils peuvent être transmis dans le cadre de la fonction `xdm` .
 
 
 ```javascript
@@ -138,7 +138,7 @@ alloy("sendEvent", {
 
 ### Remplacement de l’identifiant du jeu de données
 
-Dans certains cas d’utilisation, vous pouvez envoyer un événement à un jeu de données autre que celui configuré dans l’interface utilisateur de configuration. Pour cela, vous devez définir l’option `datasetId` sur la commande `sendEvent` :
+Dans certains cas d’utilisation, vous pouvez envoyer un événement à un jeu de données autre que celui configuré dans l’interface utilisateur de configuration. Pour ce faire, vous devez définir la variable `datasetId` sur l’option `sendEvent` command :
 
 
 ```javascript
@@ -153,11 +153,11 @@ alloy("sendEvent", {
 
 ### Ajout d’informations d’identité
 
-Vous pouvez également ajouter des informations d’identité personnalisées à l’événement. Voir [Récupération de l’ID Experience Cloud](../identity/overview.md).
+Vous pouvez également ajouter des informations d’identité personnalisées à l’événement. Voir [Récupération de l’ID d’Experience Cloud](../identity/overview.md).
 
 ## Utilisation de l’API sendBeacon
 
-Il peut s’avérer difficile d’envoyer des données d’événement juste avant que l’utilisateur ne quitte une page web. Si la requête prend trop de temps, le navigateur peut l’annuler. Certains navigateurs ont implémenté une API web appelée `sendBeacon` pour faciliter la collecte des données pendant cette période. Lors de l’utilisation de `sendBeacon`, le navigateur effectue la demande web dans le contexte de navigation globale. Cela signifie que le navigateur effectue la demande de balise en arrière-plan et n’interrompt pas la navigation dans la page. Pour indiquer à Adobe Experience Platform [!DNL Web SDK] d’utiliser `sendBeacon`, ajoutez l’option `"documentUnloading": true` à la commande d’événement.  Voici un exemple :
+Il peut s’avérer difficile d’envoyer des données d’événement juste avant que l’utilisateur ne quitte une page web. Si la requête prend trop de temps, le navigateur peut l’annuler. Certains navigateurs ont implémenté une API web appelée `sendBeacon` pour faciliter la collecte des données pendant cette période. Lors de l’utilisation de `sendBeacon`, le navigateur effectue la demande web dans le contexte de navigation globale. Cela signifie que le navigateur effectue la demande de balise en arrière-plan et n’interrompt pas la navigation dans la page. Pour indiquer à Adobe Experience Platform [!DNL Web SDK] pour utiliser `sendBeacon`, ajoutez l’option `"documentUnloading": true` à la commande d’événement.  Voici un exemple :
 
 
 ```javascript
@@ -176,7 +176,7 @@ alloy("sendEvent", {
 });
 ```
 
-Les navigateurs ont imposé des limites à la quantité de données pouvant être simultanément envoyées avec `sendBeacon`. Dans de nombreux navigateurs, la limite est de 64 Ko. Si le navigateur rejette l’événement car la charge utile est trop importante, Adobe Experience Platform [!DNL Web SDK] revient à utiliser sa méthode de transport normale (par exemple, récupérer).
+Les navigateurs ont imposé des limites à la quantité de données pouvant être simultanément envoyées avec `sendBeacon`. Dans de nombreux navigateurs, la limite est de 64 Ko. Si le navigateur rejette l’événement car la charge utile est trop importante, Adobe Experience Platform [!DNL Web SDK] revient à utiliser son mode de transport normal (par exemple, récupérer).
 
 ## Gestion des réponses d’événements
 
@@ -196,7 +196,7 @@ alloy("sendEvent", {
       }
     }
   }
-}).then(function(results) {
+}).then(function(result) {
     // Tracking the event succeeded.
   })
   .catch(function(error) {
@@ -204,9 +204,32 @@ alloy("sendEvent", {
   });
 ```
 
+
+### Le `result` objet
+
+Le `sendEvent` renvoie une promesse résolue avec une `result` . Le `result` contient les propriétés suivantes :
+
+**propositions**: Les offres de personnalisation pour lesquelles le visiteur a rempli les critères. [En savoir plus sur les propositions.](../personalization/rendering-personalization-content.md#manually-rendering-content)
+
+**décisions**: Cette propriété est obsolète. Veuillez plutôt utiliser `propositions`.
+
+**destinations**: Segments de Adobe Experience Platform qui peuvent être partagés avec des plateformes de personnalisation externes, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur des sites web clients. [En savoir plus sur les destinations.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html?lang=en)
+
+>[!WARNING]
+>
+>`destinations` est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+
+**inférences**: Informations sur l’apprentissage automatique en temps réel. [En savoir plus sur l’apprentissage automatique en temps réel.](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/real-time-machine-learning/home.html?lang=en)
+
+>[!WARNING]
+>
+>`inferences` est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+
+
+
 ## Modification globale des événements {#modifying-events-globally}
 
-Si vous souhaitez ajouter, supprimer ou modifier des champs d’événements globalement, vous pouvez configurer un rappel `onBeforeEventSend`.  Ce rappel est appelé chaque fois qu’un événement est envoyé.  Il est transmis dans un objet d’événement avec un champ `xdm`.  Modifiez `content.xdm` pour modifier les données envoyées avec l’événement.
+Si vous souhaitez ajouter, supprimer ou modifier des champs d’événements globalement, vous pouvez configurer un rappel `onBeforeEventSend`.  Ce rappel est appelé chaque fois qu’un événement est envoyé.  Il est transmis dans un objet d’événement avec un champ `xdm`.  Modifier `content.xdm` pour modifier les données envoyées avec l’événement.
 
 
 ```javascript
@@ -230,10 +253,9 @@ Les champs `xdm` sont définis dans l’ordre suivant :
 2. Valeurs collectées automatiquement  (voir [Informations automatiques](../data-collection/automatic-information.md))
 3. Modifications apportées dans le rappel `onBeforeEventSend`
 
-Quelques notes sur le rappel `onBeforeEventSend` :
+Quelques notes sur le `onBeforeEventSend` callback :
 
-* L’événement XDM peut être modifié pendant le rappel. Une fois le rappel renvoyé, tous les champs et valeurs modifiés de
-les objets content.xdm et content.data sont envoyés avec l’événement .
+* L’événement XDM peut être modifié pendant le rappel. Une fois le rappel renvoyé, tous les champs et valeurs modifiés des objets content.xdm et content.data sont envoyés avec l’événement .
 
    ```javascript
    onBeforeEventSend: function(content){
@@ -245,9 +267,7 @@ les objets content.xdm et content.data sont envoyés avec l’événement .
    ```
 
 * Si le rappel renvoie une exception, le traitement de l’événement est interrompu et l’événement n’est pas envoyé.
-* Si le rappel renvoie la valeur booléenne `false`, le traitement des événements s’interrompt,
-sans erreur et l’événement n’est pas envoyé. Ce mécanisme permet d’ignorer facilement certains événements par
-examiner les données d’événement et renvoyer `false` si l’événement ne doit pas être envoyé.
+* Si le rappel renvoie la valeur booléenne de `false`, le traitement des événements s’interrompt, sans erreur, et l’événement n’est pas envoyé. Ce mécanisme permet d’ignorer facilement certains événements en examinant les données d’événement et en renvoyant `false` si l’événement ne doit pas être envoyé.
 
    >[!NOTE]
    >Veillez à ne pas renvoyer la valeur false lors du premier événement d’une page. Le renvoi de la valeur false sur le premier événement peut avoir une incidence négative sur la personnalisation.
@@ -263,7 +283,7 @@ examiner les données d’événement et renvoyer `false` si l’événement ne 
 
 Toute valeur renvoyée autre que la valeur booléenne `false` permettra à l’événement de traiter et d’envoyer après le rappel.
 
-* Les événements peuvent être filtrés en examinant le type d’événement (voir [Types d’événement](#event-types)) :
+* Les événements peuvent être filtrés en examinant le type d’événement (voir [Types d’événement](#event-types).):
 
 ```javascript
     onBeforeEventSend: function(content) {  
