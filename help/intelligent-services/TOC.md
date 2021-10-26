@@ -5,7 +5,7 @@ user-guide-title: Aide d’Intelligent Services
 breadcrumb-title: Guide des services intelligents
 user-guide-description: Utilisez les services intelligents d’IA pour générer des scores, découvrir des insights et créer des segments à partir des données de vos événements marketing.
 source-git-commit: c3320f040383980448135371ad9fae583cfca344
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '121'
 ht-degree: 100%
 
