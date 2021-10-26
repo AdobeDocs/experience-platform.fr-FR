@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Guide des plateformes de données client en temps réel
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 source-git-commit: 2d9b1df064f0e2a5aa981d0144fefecc9d0a4146
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '171'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -18,21 +18,21 @@ ht-degree: 74%
 * [Présentation de l’édition B2B de Real-time CDP](b2b-overview.md)
 * Prise en main {#intro}
    * CDP en temps réel {#rtcdp-intro}
-      * [Prise en main de la plateforme CDP en temps réel](get-started.md)
+      * [Prise en main de Real-time CDP](get-started.md)
       * [Présentation des mesures](home-page-dashboards.md)
-   * CDP en temps réel Édition B2B {#rtcdpb2b-intro}
-      * [Prise en main de l’édition B2B de la plateforme CDP en temps réel](./b2b-use-case.md)
+   * Édition B2B de Real-time CDP {#rtcdpb2b-intro}
+      * [Prise en main de l’édition B2B de Real-time CDP](./b2b-use-case.md)
 * Administration {#admin}
    * [Présentation de l’administration](administration/admin-overview.md)
 * Profils de compte {#account}
-   * [Présentation du profil de compte](accounts/account-profile-overview.md)
-   * [Guide de l’interface utilisateur du profil de compte](accounts/account-profile-ui-guide.md)
+   * [Présentation des profils de compte](accounts/account-profile-overview.md)
+   * [Guide de l’interface utilisateur des profils de compte](accounts/account-profile-ui-guide.md)
 * Jeux de données {#datasets}
    * [Jeux de données](datasets/dataset.md)
    * [Qualité des données sur la plateforme](datasets/data-quality.md)
 * Destinations {#destinations}
    * [Présentation des destinations](destinations/overview.md)
-   * [Destinations dans l’édition B2B de la plateforme CDP en temps réel](destinations/b2b.md)
+   * [Destinations dans l’édition B2B de Real-time CDP](destinations/b2b.md)
 * Identités {#identity}
    * [Identités et espaces de noms d’identité](profile/identities-overview.md)
 * Confidentialité et gouvernance des données {#privacy}
@@ -46,7 +46,7 @@ ht-degree: 74%
 * Segments {#segmentation}
    * [Présentation de la segmentation](segmentation/segmentation-overview.md)
    * [Guide du créateur de segments](segmentation/segment-builder-guide.md)
-   * [Segmentation dans l’édition CDP en temps réel B2B](segmentation/b2b.md)
+   * [Segmentation dans l’édition B2B de Real-time CDP](segmentation/b2b.md)
    * [Customer AI](segmentation/customer-ai.md)
 * Schémas {#schemas}
    * [Présentation des schémas](schemas/overview.md)
