@@ -4,7 +4,7 @@ description: Découvrez lʼextension Core Event Forwarding dans Adobe Experience
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1724'
 ht-degree: 100%
 
@@ -153,7 +153,7 @@ Les opérateurs de comparaison de valeurs suivants sont disponibles :
 
 Cette section décrit les types d’actions disponibles dans l’extension Core.
 
-### Code personnalisé
+### Custom Code
 
 Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées. Le transfert dʼévénements dans Adobe Experience Platform prend en charge ES6.
 
