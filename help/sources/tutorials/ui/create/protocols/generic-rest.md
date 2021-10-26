@@ -4,8 +4,7 @@ title: Création d’une connexion à la source de l’API REST générique dans
 topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source de l’API REST générique à l’aide de l’interface utilisateur de Adobe Experience Platform.
-exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 1a9c4d5ba3ba9201378e78c0e92dea5101668a24
+source-git-commit: 94809a8e98c8de7a9a474fb5543b590fc51cb075
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 6%
@@ -29,9 +28,9 @@ Ce tutoriel nécessite une compréhension pratique des composants suivants de Pl
 
 ### Collecte des informations d’identification requises
 
-Pour accéder à [!DNL Generic REST API] sur Platform, vous devez fournir des informations d’identification valides pour le type d’authentification de votre choix. L’API REST générique prend en charge le code d’actualisation OAuth 2 et l’authentification de base. Consultez les tableaux suivants pour plus d’informations sur les informations d’identification des deux types d’authentification pris en charge.
+In order to access your [!DNL Generic REST API] account on Platform, you must provide valid credentials for the authentication type of your choice. Generic REST API supports both OAuth 2 refresh code and basic authentication. Consultez les tableaux suivants pour plus d’informations sur les informations d’identification des deux types d’authentification pris en charge.
 
-#### Code d’actualisation OAuth 2
+#### OAuth 2 refresh code
 
 | Credential | Description |
 | --- | --- |
@@ -39,10 +38,10 @@ Pour accéder à [!DNL Generic REST API] sur Platform, vous devez fournir des in
 | URL du test d’autorisation | (Facultatif) L’URL du test d’autorisation est utilisée pour valider les informations d’identification lors de la création d’une connexion de base. Si elles ne sont pas fournies, les informations d’identification sont automatiquement vérifiées à l’étape de création de la connexion source. |
 | Identifiant du client | (Facultatif) Identifiant client associé à votre compte utilisateur. |
 | Client secret | (Facultatif) Le secret client associé à votre compte utilisateur. |
-| Jeton d’accès | Informations d’identification d’authentification Principales utilisées pour accéder à votre application. Le jeton d’accès représente l’autorisation de votre application, pour accéder à certains aspects des données d’un utilisateur. Cette valeur est requise et ne peut pas être ignorée à l’aide du remplacement du paramètre de requête. |
+| Access token | Informations d’identification d’authentification Principales utilisées pour accéder à votre application. Le jeton d’accès représente l’autorisation de votre application, pour accéder à certains aspects des données d’un utilisateur. Cette valeur est requise et ne peut pas être ignorée à l’aide du remplacement du paramètre de requête. |
 | Jeton d’actualisation | (Facultatif) Jeton utilisé pour générer un nouveau jeton d’accès, lorsque le jeton d’accès a expiré. |
 | URL du jeton d’accès | (Facultatif) Le point de terminaison URL utilisé pour récupérer votre jeton d’accès. |
-| Remplacement du paramètre de requête | (Facultatif) Une propriété qui vous permet de spécifier les paramètres d’identification à remplacer. |
+| Request parameter override | (Optional) A property that allows you to specify which credential parameters to override. |
 
 
 #### Authentification de base
@@ -57,13 +56,13 @@ Pour accéder à [!DNL Generic REST API] sur Platform, vous devez fournir des in
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Sources] workspace. Le [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
-Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de la barre de recherche.
+Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Alternatively, you can find the specific source you wish to work with using the search bar.
 
-Sous , [!UICONTROL Protocoles] catégorie, sélectionnez **[!UICONTROL API REST générique]** puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Under the [!UICONTROL Protocols] category, select **[!UICONTROL Generic REST API]** and then select **[!UICONTROL Add data]**.
 
 ![catalogue](../../../../images/tutorials/create/generic-rest/catalog.png)
 
-Le **[!UICONTROL Connexion à l’API REST générique]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+Le **[!UICONTROL Connexion à l’API REST générique]** s’affiche. On this page, you can either use new credentials or existing credentials.
 
 ### Compte existant
 
@@ -73,7 +72,7 @@ Pour connecter un compte existant, sélectionnez le compte API REST générique 
 
 ### Nouveau compte
 
-Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom et une description d’option pour votre nouvelle [!DNL Generic REST API] compte .
+If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and an option description for your new [!DNL Generic REST API] account.
 
 ![new](../../../../images/tutorials/create/generic-rest/new.png)
 
