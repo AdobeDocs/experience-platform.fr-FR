@@ -5,10 +5,10 @@ seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Présentation du compte de l’édition B2B de Real-time Customer Data Platform
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 6b582683483046efaf880e46e33d7f30a44a61bf
-workflow-type: ht
-source-wordcount: '1057'
-ht-degree: 100%
+source-git-commit: 4130528800a9219e0c9e12639f292a7f55f86d5e
+workflow-type: tm+mt
+source-wordcount: '1079'
+ht-degree: 93%
 
 ---
 
@@ -73,7 +73,9 @@ Consultez la documentation sur les [sources dans l’édition B2B de Real-time C
 
 ## Destinations B2B
 
-Les destinations Experience Platform, telles que Google, Linkedin et Facebook, sont disponibles dans l’édition B2B de Real-time CDP, qui les prend entièrement en charge. Il existe également une destination Marketo Engage qui diffuse les données d’abonnement de segments en dehors de Platform et les rend disponibles sous forme de listes dans Marketo.
+Les destinations Experience Platform telles que Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads et Google Ad Manager sont disponibles et entièrement prises en charge par l’édition B2B de la plateforme de données clients en temps réel. La destination de Marketo Engage diffuse également les données d’adhésion aux segments en dehors de Platform et les rend disponibles sous forme de listes dans Marketo.
+
+Consultez la présentation de la [Destination du Marketo Engage](../destinations/catalog/adobe/marketo-engage.md) pour plus d’informations.
 
 Pour les entreprises disposant de plusieurs CRM, l’édition B2B de Real-time CDP offre la possibilité de configurer des connecteurs de destinations vers des instances distinctes de Marketo ou de CRM. Si nécessaire, vous pouvez configurer des connecteurs de destinations pour chaque instance et envoyer des audiences à chacune des instances CRM de manière indépendante.
 
