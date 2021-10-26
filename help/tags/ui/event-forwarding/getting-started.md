@@ -4,9 +4,9 @@ description: Suivez les étapes de ce tutoriel pour commencer à utiliser le tra
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '907'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 98%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Pour utiliser le transfert dʼévénements dans Adobe Experience Platform, les données doivent être envoyées à Adobe Experience Platform Edge Network à lʼaide de lʼune ou de plusieurs des trois options suivantes :
+Pour utiliser le transfert dʼévénements dans Adobe Experience Platform, les données doivent être envoyées à Adobe Experience Platform Edge Network à lʼaide de lʼune ou de plusieurs des trois options suivantes :
 
 * [SDK web Adobe Experience Platform](../../extensions/web/sdk/overview.md)
 * [ SDK Mobile Adobe Experience Platform](https://sdkdocs.com)
@@ -100,7 +100,7 @@ Ensuite, configurez Edge Network pour envoyer des données au transfert dʼévé
 
 Après la configuration, prenez note des identifiants d’environnement pour la nouvelle propriété.
 
-## Configurez l’extension SDK Web Platform pour envoyer des données à la banque de données créée précédemment
+## Configurez l’extension SDK web de Platform pour envoyer des données au flux de données créé précédemment.
 
 Créez votre propriété dans lʼinterface utilisateur de collecte de données, puis utilisez lʼextension SDK Web Adobe Experience Platform pour la configurer.
 
