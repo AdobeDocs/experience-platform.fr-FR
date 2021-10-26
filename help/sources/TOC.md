@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
+source-git-commit: 030789af0a049b54d6e271410836c08456a83441
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '661'
 ht-degree: 21%
 
 ---
@@ -17,49 +17,49 @@ ht-degree: 21%
 - [Présentation des connecteurs source](home.md)
 - Connecteurs source disponibles {#connectors}
    - Applications Adobe {#adobe-applications}
-      - [Connecteur source des classifications d’analyses](connectors/adobe-applications/classifications.md)
-      - [Connecteur source d’analyse](connectors/adobe-applications/analytics.md)
-      - [Connecteur de source d&#39;Audience Manager](connectors/adobe-applications/audience-manager.md)
-      - [Connecteur source des attributs client](connectors/adobe-applications/customer-attributes.md)
+      - [Connecteur source Analytics Classifications](connectors/adobe-applications/classifications.md)
+      - [Connecteur source Analytics](connectors/adobe-applications/analytics.md)
+      - [Connecteur source d’Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Connecteur source des attributs du client](connectors/adobe-applications/customer-attributes.md)
       - Mappages de champs {#mapping}
-         - [Mappages de champs Analytics](connectors/adobe-applications/mapping/analytics.md)
-         - [Audience Manager de mappages de champs](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Mappages de champs cibles](connectors/adobe-applications/mapping/target.md)
-         - [Mappages de champs Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
+         - [Mappages des champs Analytics](connectors/adobe-applications/mapping/analytics.md)
+         - [Mappages des champs d’Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Mappings de champ Target](connectors/adobe-applications/mapping/target.md)
+         - [Mappages de champs du Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
       - Marketo {#marketo}
          - [Connecteur Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
-         - [Guide d’authentification des Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
+         - [Guide d’authentification du Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Espaces de noms et schémas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
       - [Connecteur Google AdWords](connectors/advertising/ads.md)
-   - Stockage cloud {#cloud-storage}
-      - [Connecteur Amazon](connectors/cloud-storage/kinesis.md)
+   - Stockage dans le cloud {#cloud-storage}
+      - [Connecteur Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Connecteur Amazon S3](connectors/cloud-storage/s3.md)
       - [Connecteur Apache HDFS](connectors/cloud-storage/hdfs.md)
-      - [Connecteur Gen2 Azure Data Lake Storage](connectors/cloud-storage/adls-gen2.md)
+      - [Connecteur Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md)
       - [Connecteur Azure Blob](connectors/cloud-storage/blob.md)
       - [Connecteur Azure Event Hubs](connectors/cloud-storage/eventhub.md)
-      - [Connecteur de stockage de fichiers Azure](connectors/cloud-storage/azure-file-storage.md)
+      - [Connecteur Azure File Storage](connectors/cloud-storage/azure-file-storage.md)
       - [Zone dʼatterrissage de données](connectors/cloud-storage/data-landing-zone.md)
       - [Connecteur FTP](connectors/cloud-storage/ftp.md)
-      - [Connecteur de stockage Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
+      - [Connecteur Google Cloud Storage](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
-      - [Stockage des objets Oracle](connectors/cloud-storage/oracle-object-storage.md)
+      - [Oracle Object Storage](connectors/cloud-storage/oracle-object-storage.md)
       - [Connecteur SFTP](connectors/cloud-storage/sftp.md)
       - [Connecteur Amazon S3 et Azure Blob](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Connecteur Microsoft Dynamics ](connectors/crm/ms-dynamics.md)
       - [Connecteur Salesforce](connectors/crm/salesforce.md)
       - [Connecteur CRM Veeva](connectors/crm/veeva.md)
-      - [Connecteur Zoho CRM](connectors/crm/zoho.md)
-   - Succès du client {#customer-success}
+      - [Connecteur CRM Zoho](connectors/crm/zoho.md)
+   - Succès des clients {#customer-success}
       - [Connecteur Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md)
       - [Connecteur ServiceNow](connectors/customer-success/servicenow.md)
    - Bases de données {#databases}
       - [Connecteur Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive sur le connecteur Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sur le connecteur Azure HDInsights](connectors/databases/spark.md)
-      - [Connecteur de Data Explorer Azure](connectors/databases/data-explorer.md)
+      - [Connecteur Data Explorer Azure](connectors/databases/data-explorer.md)
       - [Connecteur Azure synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Connecteur Azure Table Storage](connectors/databases/ats.md)
       - [Connecteur Couchbase](connectors/databases/couchbase.md)
@@ -68,16 +68,16 @@ ht-degree: 21%
       - [Connecteur HP Vertica](connectors/databases/hp-vertica.md)
       - [Connecteur IBM DB2](connectors/databases/ibm-db2.md)
       - [Connecteur MariaDB](connectors/databases/mariadb.md)
-      - [Connecteur SQL Server](connectors/databases/sql-server.md)
+      - [Connecteur Microsoft SQL Server](connectors/databases/sql-server.md)
       - [Connecteur MySQL](connectors/databases/mysql.md)
-      - [Connecteur d&#39;Oracle](connectors/databases/oracle.md)
+      - [Connecteur Oracle](connectors/databases/oracle.md)
       - [Connecteur Phoenix](connectors/databases/phoenix.md)
       - [Connecteur PostgreSQL](connectors/databases/postgres.md)
       - [Connecteur Snowflake](connectors/databases/snowflake.md)
    - eCommerce {#ecommerce}
       - [Connecteur Shopify](connectors/ecommerce/shopify.md)
    - Système local {#local-system}
-      - [Connecteur local de téléchargement de fichiers](connectors/local-system/local-file-upload.md)
+      - [Connecteur de téléchargement de fichiers local](connectors/local-system/local-file-upload.md)
    - Automatisation du marketing {#marketing-automation}
       - [Connecteur HubSpot](connectors/marketing-automation/hubspot.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
@@ -85,32 +85,33 @@ ht-degree: 21%
       - [Connecteur PayPal](connectors/payments/paypal.md)
    - Protocoles {#protocols}
       - [Connecteur OData générique](connectors/protocols/odata.md)
-   - Diffusion {#streaming}
+      - [Connecteur API REST générique](connectors/protocols/generic-rest.md)
+   - Diffusion en continu {#streaming}
       - [Connecteur d’API HTTP](connectors/streaming/http.md)
 - Tutoriels sur les API {#api-tutorials}
    - Création d’une connexion de base {#create}
       - Publicité {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
-      - Stockage cloud {#cloud-storage}
+      - Stockage dans le cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [Azure Blob](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
-         - [Azure Event Hubs](tutorials/api/create/cloud-storage/eventhub.md)
+         - [Centre d’événements Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Stockage de fichiers Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Zone dʼatterrissage de données](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
-         - [Stockage Google Cloud](tutorials/api/create/cloud-storage/google.md)
+         - [Stockage dans le cloud Google](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
-         - [Stockage des objets Oracle](tutorials/api/create/cloud-storage/oracle-object-storage.md)
+         - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [Microsoft Dynamics ](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
-         - [Veeva CRM](tutorials/api/create/crm/veeva.md)
+         - [GRC de Veeva](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
-      - Succès du client {#customer-success}
+      - Succès des clients {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - Bases de données {#databases}
@@ -119,7 +120,7 @@ ht-degree: 21%
          - [Apache Spark sur Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Data Explorer Azure](tutorials/api/create/databases/data-explorer.md)
          - [azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
-         - [Stockage de tables Azure](tutorials/api/create/databases/ats.md)
+         - [Stockage de table Azure](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum](tutorials/api/create/databases/greenplum.md)
@@ -135,7 +136,7 @@ ht-degree: 21%
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - Automatisation du marketing {#marketing-automation}
-         - [Concentrée](tutorials/api/create/marketing-automation/hubspot.md)
+         - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [Campagne MailChimp](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [Membres MailChimp](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Marketing Cloud Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
@@ -143,32 +144,33 @@ ht-degree: 21%
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - Protocoles {#protocols}
          - [OData générique](tutorials/api/create/protocols/odata.md)
-      - Diffusion {#streaming}
+         - [API REST générique](tutorials/api/create/protocols/generic-rest.md)
+      - Diffusion en continu {#streaming}
          - [API HTTP ](tutorials/api/create/streaming/http.md)
    - Exploration des données {#explore}
-      - [Exploration des données publicitaires](tutorials/api/explore/advertising.md)
-      - [Exploration des données de stockage dans le cloud](tutorials/api/explore/cloud-storage.md)
-      - [Exploration des données CRM](tutorials/api/explore/crm.md)
-      - [Exploration des données de réussite des clients](tutorials/api/explore/customer-success.md)
-      - [Exploration des données de base de données](tutorials/api/explore/database-nosql.md)
+      - [Explorer les données publicitaires](tutorials/api/explore/advertising.md)
+      - [Explorer les données de stockage dans le cloud](tutorials/api/explore/cloud-storage.md)
+      - [Explorer les données CRM](tutorials/api/explore/crm.md)
+      - [Explorer les données de succès client](tutorials/api/explore/customer-success.md)
+      - [Explorer les données de la base](tutorials/api/explore/database-nosql.md)
       - [Exploration des données eCommerce](tutorials/api/explore/ecommerce.md)
-      - [Exploration des données d&#39;automatisation marketing](tutorials/api/explore/marketing-automation.md)
-      - [Exploration des données de paiement](tutorials/api/explore/payments.md)
-      - [Exploration des données du protocole](tutorials/api/explore/protocols.md)
+      - [Explorer les données d’automatisation du marketing](tutorials/api/explore/marketing-automation.md)
+      - [Explorer les données de paiement](tutorials/api/explore/payments.md)
+      - [Explorer les données de protocole](tutorials/api/explore/protocols.md)
    - Collecte de données {#collect}
-      - [Collecte des données publicitaires](tutorials/api/collect/advertising.md)
+      - [Collecte de données publicitaires](tutorials/api/collect/advertising.md)
       - [Collecte des données de stockage dans le cloud](tutorials/api/collect/cloud-storage.md)
-      - [Collecte des données CRM](tutorials/api/collect/crm.md)
-      - [Collecte des données de réussite client](tutorials/api/collect/customer-success.md)
-      - [Collecte des données de base de données](tutorials/api/collect/database-nosql.md)
+      - [Collecte de données CRM](tutorials/api/collect/crm.md)
+      - [Collecte des données de succès client](tutorials/api/collect/customer-success.md)
+      - [Collecter les données de la base](tutorials/api/collect/database-nosql.md)
       - [Collecte de données eCommerce](tutorials/api/collect/ecommerce.md)
-      - [Collecte des données d&#39;automatisation marketing](tutorials/api/collect/marketing-automation.md)
-      - [Collecte des données de paiement](tutorials/api/collect/payments.md)
-      - [Collecte des données de protocole](tutorials/api/collect/protocols.md)
-      - [Collecte de données en flux continu](tutorials/api/collect/streaming.md)
+      - [Collecte de données d’automatisation du marketing](tutorials/api/collect/marketing-automation.md)
+      - [Collecter les données de paiement](tutorials/api/collect/payments.md)
+      - [Collecter les données de protocole](tutorials/api/collect/protocols.md)
+      - [Collecte de données en continu](tutorials/api/collect/streaming.md)
    - [Surveillance des flux de données](tutorials/api/monitor.md)
    - [Mettre à jour les comptes](tutorials/api/update.md)
-   - [Mettre à jour les flux de données](tutorials/api/update-dataflows.md)
+   - [Mise à jour des flux de données](tutorials/api/update-dataflows.md)
    - [Suppression de comptes](tutorials/api/delete.md)
    - [Suppression de flux de données](tutorials/api/delete-dataflows.md)
 - Tutoriels sur l’interface utilisateur {#ui-tutorials}
@@ -181,25 +183,25 @@ ht-degree: 21%
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Publicité {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
-      - Stockage cloud {#cloud-storage}
+      - Stockage dans le cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
-         - [Blob Azure](tutorials/ui/create/cloud-storage/blob.md)
-         - [Azure Event Hubs](tutorials/ui/create/cloud-storage/eventhub.md)
+         - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
+         - [Centre d’événements Azure](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Stockage de fichiers Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Zone dʼatterrissage de données](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Stockage Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Stockage dans le cloud Google](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
-         - [Stockage des objets Oracle](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
+         - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 et Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Microsoft Dynamics ](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
-         - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
+         - [GRC de Veeva](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Succès des clients {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
@@ -210,7 +212,7 @@ ht-degree: 21%
          - [Apache Spark sur Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Data Explorer Azure](tutorials/ui/create/databases/data-explorer.md)
          - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
-         - [Stockage de tables Azure](tutorials/ui/create/databases/ats.md)
+         - [Stockage de table Azure](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
@@ -226,36 +228,37 @@ ht-degree: 21%
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - Système local {#local-system}
-         - [Téléchargement de fichiers en local](tutorials/ui/create/local-system/local-file-upload.md)
+         - [Chargement de fichier local](tutorials/ui/create/local-system/local-file-upload.md)
       - Automatisation du marketing {#marketing-automation}
-         - [Concentrée](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Marketing Cloud Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Paiements {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocoles {#protocols}
          - [OData générique](tutorials/ui/create/protocols/odata.md)
-      - Diffusion {#streaming}
+         - [API REST générique](tutorials/ui/create/protocols/generic-rest.md)
+      - Diffusion en continu {#streaming}
          - [API HTTP ](tutorials/ui/create/streaming/http.md)
    - Configuration d’un flux de données {#dataflow}
-      - [Flux de données de connexion publicitaire](tutorials/ui/dataflow/advertising.md)
-      - [Flux de données de connexion de stockage en mode cloud par lots](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [Flux de données de connexion de stockage cloud en flux continu](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+      - [Flux de données de connexion Advertising](tutorials/ui/dataflow/advertising.md)
+      - [Flux de données de connexion de stockage dans le cloud par lots](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [Flux de données de connexion au stockage dans le cloud en flux continu](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [Flux de données de connexion CRM](tutorials/ui/dataflow/crm.md)
-      - [Flux de données de connexion de réussite client](tutorials/ui/dataflow/customer-success.md)
-      - [Flux de données de connexion de base de données](tutorials/ui/dataflow/databases.md)
-      - [Flux de données de connexion Ecommerce](tutorials/ui/dataflow/ecommerce.md)
-      - [Flux de données de connexion d&#39;automatisation marketing](tutorials/ui/dataflow/marketing-automation.md)
-      - [Flux de données de connexion de paiement](tutorials/ui/dataflow/payments.md)
+      - [Flux de données de connexion de succès client](tutorials/ui/dataflow/customer-success.md)
+      - [Flux de données de connexion à la base de données](tutorials/ui/dataflow/databases.md)
+      - [Flux de données de connexion au commerce électronique](tutorials/ui/dataflow/ecommerce.md)
+      - [Flux de données de connexion à l’automatisation marketing](tutorials/ui/dataflow/marketing-automation.md)
+      - [Flux de données de connexion aux paiements](tutorials/ui/dataflow/payments.md)
       - [Flux de données de connexion au protocole](tutorials/ui/dataflow/protocols.md)
-   - [Activer les données entrantes pour remplir les profils de clients](tutorials/ui/profile.md)
-   - [Surveiller les flux de données par lots](tutorials/ui/monitor.md)
-   - [Surveiller les flux de données de diffusion](tutorials/ui/monitor-streaming.md)
+   - [Activation des données entrantes pour renseigner les profils client](tutorials/ui/profile.md)
+   - [Surveillance des flux de données par lots](tutorials/ui/monitor.md)
+   - [Surveillance des flux de données en continu](tutorials/ui/monitor-streaming.md)
    - [Mettre à jour les comptes](tutorials/ui/update.md)
-   - [Mettre à jour les flux de données](tutorials/ui/update-dataflows.md)
+   - [Mise à jour des flux de données](tutorials/ui/update-dataflows.md)
    - [Suppression de comptes](tutorials/ui/delete-accounts.md)
    - [Suppression de flux de données](tutorials/ui/delete.md)
 - [Notifications d’exécution de flux](notifications.md)
-- [Liste d&#39;autorisations d&#39;adresses IP](ip-address-allow-list.md)
+- [LISTE AUTORISÉE d’adresses IP](ip-address-allow-list.md)
 - [Questions fréquentes](./troubleshooting.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
