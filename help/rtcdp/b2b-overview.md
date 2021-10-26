@@ -6,9 +6,9 @@ description: Présentation du compte de l’édition B2B de Real-time Customer D
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 source-git-commit: 6b582683483046efaf880e46e33d7f30a44a61bf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1057'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -69,16 +69,16 @@ Platform permet d’ingérer des données à partir de sources externes tout en 
 >
 >La source [!DNL Marketo] n’est **pas** nécessaire à l’utilisation de l’édition B2B de Real-time CDP.
 
-Pour plus d’informations sur Marketo et l’introduction de données B2B dans Platform, consultez la documentation [sources dans la plateforme CDP B2B en temps réel Edition](./sources/b2b.md) .
+Consultez la documentation sur les [sources dans l’édition B2B de Real-time CDP](./sources/b2b.md) pour en savoir plus sur Marketo et sur l’importation de données B2B dans Platform.
 
 ## Destinations B2B
 
-Les destinations Experience Platform telles que Google, Linkedin et Facebook sont disponibles et entièrement prises en charge par l’édition B2B de la plateforme CDP en temps réel. Il existe également une destination de Marketo Engage qui diffuse les données d’adhésion au segment en dehors de Platform et les rend disponibles sous forme de listes dans Marketo.
+Les destinations Experience Platform, telles que Google, Linkedin et Facebook, sont disponibles dans l’édition B2B de Real-time CDP, qui les prend entièrement en charge. Il existe également une destination Marketo Engage qui diffuse les données d’abonnement de segments en dehors de Platform et les rend disponibles sous forme de listes dans Marketo.
 
-Pour les entreprises disposant de plusieurs systèmes de gestion de la relation client, l’édition B2B de la plateforme CDP en temps réel permet de configurer les connecteurs de destination pour séparer les instances de Marketo ou de la gestion de la relation client. Si nécessaire, vous pouvez configurer des connecteurs de destinations pour chaque instance et envoyer des audiences à chacune des instances CRM de manière indépendante.
+Pour les entreprises disposant de plusieurs CRM, l’édition B2B de Real-time CDP offre la possibilité de configurer des connecteurs de destinations vers des instances distinctes de Marketo ou de CRM. Si nécessaire, vous pouvez configurer des connecteurs de destinations pour chaque instance et envoyer des audiences à chacune des instances CRM de manière indépendante.
 
 ## Étapes suivantes
 
 Vous avez désormais une meilleure compréhension des avantages offerts par l’édition B2B de Real-time CDP aux professionnels du marketing et connaissez les différences entre cette édition et Real-time CDP. Découvrez maintenant comment appliquer ces fonctionnalités à votre propre organisation IMS.
 
-Pour comprendre comment l’édition B2B de la plateforme CDP en temps réel peut bénéficier à votre modèle de service business-to-business, reportez-vous à l’ [exemple d’utilisation de la plateforme CDP en temps réel B2B Edition](./b2b-use-case.md). Vous pouvez également vous reporter à la documentation sur les [schémas dans l’édition B2B de Real-time Customer Data Platform](./schemas/b2b.md) pour obtenir des conseils plus spécifiques sur la création de schémas et la définition de relations pour les entités de données B2B essentielles.
+Pour connaître les avantages offerts par l’édition B2B de Real-time CDP pour votre modèle de service business-to-business, consultez l’[exemple de cas d’utilisation de l’édition B2B de Real-time CDP](./b2b-use-case.md). Vous pouvez également vous reporter à la documentation sur les [schémas dans l’édition B2B de Real-time Customer Data Platform](./schemas/b2b.md) pour obtenir des conseils plus spécifiques sur la création de schémas et la définition de relations pour les entités de données B2B essentielles.
