@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: 21a536d80f854a9e98452c78a8014df4cc43e125
+source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 20%
+source-wordcount: '651'
+ht-degree: 21%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 20%
       - [Connecteur Azure Blob](connectors/cloud-storage/blob.md)
       - [Connecteur Azure Event Hubs](connectors/cloud-storage/eventhub.md)
       - [Connecteur de stockage de fichiers Azure](connectors/cloud-storage/azure-file-storage.md)
-      - [Zone d&#39;atterrissage des données](connectors/cloud-storage/data-landing-zone.md)
+      - [Zone dʼatterrissage de données](connectors/cloud-storage/data-landing-zone.md)
       - [Connecteur FTP](connectors/cloud-storage/ftp.md)
       - [Connecteur de stockage Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
@@ -51,6 +51,7 @@ ht-degree: 20%
       - [Connecteur Microsoft Dynamics ](connectors/crm/ms-dynamics.md)
       - [Connecteur Salesforce](connectors/crm/salesforce.md)
       - [Connecteur CRM Veeva](connectors/crm/veeva.md)
+      - [Connecteur Zoho CRM](connectors/crm/zoho.md)
    - Succès du client {#customer-success}
       - [Connecteur Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md)
       - [Connecteur ServiceNow](connectors/customer-success/servicenow.md)
@@ -98,7 +99,7 @@ ht-degree: 20%
          - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azure Event Hubs](tutorials/api/create/cloud-storage/eventhub.md)
          - [Stockage de fichiers Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
-         - [Zone d&#39;atterrissage des données](tutorials/api/create/cloud-storage/data-landing-zone.md)
+         - [Zone dʼatterrissage de données](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Stockage Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
@@ -108,6 +109,7 @@ ht-degree: 20%
          - [Microsoft Dynamics ](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
+         - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - Succès du client {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -187,7 +189,7 @@ ht-degree: 20%
          - [Blob Azure](tutorials/ui/create/cloud-storage/blob.md)
          - [Azure Event Hubs](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Stockage de fichiers Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [Zone d&#39;atterrissage des données](tutorials/ui/create/cloud-storage/data-landing-zone.md)
+         - [Zone dʼatterrissage de données](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Stockage Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
@@ -198,6 +200,7 @@ ht-degree: 20%
          - [Microsoft Dynamics ](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
+         - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Succès des clients {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
