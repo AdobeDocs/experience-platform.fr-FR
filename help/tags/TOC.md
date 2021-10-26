@@ -87,7 +87,7 @@ ht-degree: 99%
          * [Présentation](./extensions/web/sdk/overview.md)
       *  Adobe Experience Platform Cloud Connector {#cloud-connector}
          * [Présentation](./extensions/web/cloud-connector/overview.md)
-      *  des statistiques sur les ressources Adobe Experience Manager{#asset-insights}
+      *  des statistiques sur les ressources Adobe Experience Manager {#asset-insights}
          * [Présentation](./extensions/web/asset-insights/overview.md)
          * [Notes de mise à jour](./extensions/web/asset-insights/release-notes.md)
       *  Adobe Media Analytics for Audio and Video {#media-analytics}
@@ -173,7 +173,7 @@ ht-degree: 99%
       * [Configurations d’application](./api/endpoints/app-configurations.md)
       * [Événements d’audit](./api/endpoints/audit-events.md)
       * [Rappels](./api/endpoints/callbacks.md)
-      * [Notes](./api/endpoints/notes.md)
+      * [Remarques](./api/endpoints/notes.md)
       * [Profile](./api/endpoints/profile.md)
       * [Recherche](./api/endpoints/search.md)
       * [Secrets](./api/endpoints/secrets.md)
