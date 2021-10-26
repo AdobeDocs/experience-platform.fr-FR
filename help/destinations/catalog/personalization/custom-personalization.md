@@ -3,7 +3,7 @@ keywords: personnalisation personnalisée ; destination; destination personnalis
 title: Connexion de personnalisation personnalisée (bêta)
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer des informations de segment à partir de Adobe Experience Platform. Cette destination fournit des fonctionnalités 1:1 en temps réel et une personnalisation basée sur l’appartenance à un segment d’un profil d’utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 398d591d66f4b579f75ef2b5eb0c10da9d7a83f3
+source-git-commit: 50ab34cb9147cf880e199afad88e718875fb591f
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 8%
@@ -22,13 +22,13 @@ Cette destination permet de récupérer les informations de segment de Adobe Exp
 
 ## Conditions préalables {#prerequisites}
 
-Cette intégration est optimisée par le [SDK Web Adobe Experience Platform](../../../edge/home.md). Vous devez utiliser ce SDK pour utiliser cette destination.
+Cette intégration est optimisée par la fonction [SDK Web Adobe Experience Platform](../../../edge/home.md). Vous devez utiliser ce SDK pour utiliser cette destination.
 
 ## Type d&#39;export {#export-type}
 
-**Requête de profil**  : vous demandez tous les segments mappés dans la destination de personnalisation personnalisée pour un seul profil. Différentes destinations de personnalisation personnalisées peuvent être configurées pour différents [flux de données de collecte de données d’Adobe](../../../edge/fundamentals/datastreams.md).
+**Requête de profil** - vous demandez tous les segments mappés dans la destination de personnalisation personnalisée pour un profil unique. Différentes destinations de personnalisation personnalisées peuvent être configurées pour différentes [Adobe des flux de données de collecte de données](../../../edge/fundamentals/datastreams.md).
 
-## Cas d&#39;utilisation {#use-cases}
+## Cas d’utilisation {#use-cases}
 
 Cette destination partage les audiences avec les serveurs d’annonces et les applications de personnalisation autres que les Adobes, qui doivent être utilisées en temps réel, afin de décider quelle publicité les utilisateurs doivent voir sur un site web.
 
@@ -44,26 +44,26 @@ En utilisant une destination de personnalisation personnalisée distincte pour l
 
 ## Connexion à la destination {#connect}
 
-Pour vous connecter à cette destination, suivez les étapes décrites dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
+Pour vous connecter à cette destination, procédez comme décrit dans la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
 ### Paramètres de connexion {#parameters}
 
-Lors de la configuration de [](../../ui/connect-destination.md) cette destination, vous devez fournir les informations suivantes :
+while [configuration](../../ui/connect-destination.md) Pour cette destination, vous devez fournir les informations suivantes :
 
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : saisissez une description pour votre destination. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination. Ce champ est facultatif.
-* **[!UICONTROL Alias]** d’intégration : Cette valeur est envoyée au SDK Web Experience Platform sous la forme d’un nom d’objet JSON.
-* **[!UICONTROL Identifiant]** de la banque de données : Cela détermine dans quel flux de données de collecte de données les segments seront inclus dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Voir [Configuration d’un flux de données](../../../edge/fundamentals/datastreams.md) pour plus d’informations.
+* **[!UICONTROL Alias d’intégration]**: Cette valeur est envoyée au SDK Web Experience Platform sous la forme d’un nom d’objet JSON.
+* **[!UICONTROL Identifiant du flux de données]**: Cela détermine dans quel flux de données de collecte de données les segments seront inclus dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Voir [Configuration d’un flux de données](../../../edge/fundamentals/datastreams.md) pour plus d’informations.
 
 ## Activation des segments vers cette destination {#activate}
 
-Voir [Activation des profils et des segments vers les destinations de demande de profil](../../ui/activate-profile-request-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Lecture [Activation des profils et des segments vers les destinations de requête de profil](../../ui/activate-profile-request-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
 ## Données exportées {#exported-data}
 
-Si vous utilisez [Adobe Tags](../../../tags/home.md) pour déployer le SDK Web Experience Platform, utilisez la fonctionnalité [send event complete](../../../edge/extension/event-types.md) et votre action de code personnalisé comporte une variable `event.destinations` que vous pouvez utiliser pour afficher les données exportées.
+Si vous utilisez [Adobe des balises](../../../tags/home.md) pour déployer le SDK Web Experience Platform, utilisez la méthode [envoi d’événement terminé](../../../edge/extension/event-types.md) et votre action de code personnalisé comporte une `event.destinations` que vous pouvez utiliser pour afficher les données exportées.
 
-Voici un exemple de valeur pour la variable `event.destinations` :
+Voici un exemple de valeur pour la variable `event.destinations` variable :
 
 ```
 [
@@ -85,7 +85,7 @@ Voici un exemple de valeur pour la variable `event.destinations` :
 ]
 ```
 
-Si vous n’utilisez pas [Adobe Tags](../../../tags/home.md) pour déployer le SDK Web Experience Platform, utilisez la fonctionnalité [gestion des réponses des événements](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) pour afficher les données exportées.
+Si vous n’utilisez pas [Adobe des balises](../../../tags/home.md) pour déployer le SDK Web Experience Platform, utilisez la méthode [gestion des réponses des événements](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) pour afficher les données exportées.
 
 Vous pouvez analyser la réponse JSON de Adobe Experience Platform pour trouver l’alias d’intégration correspondant à l’application que vous intégrez à Adobe Experience Platform. Les identifiants de segment peuvent être transmis dans le code de l’application en tant que paramètres de ciblage. Vous trouverez ci-dessous un exemple de ce à quoi cela ressemblerait spécifique à la réponse de destination.
 
@@ -102,15 +102,15 @@ alloy("sendEvent", {
       }
     }
   }
-}).then(function(results) {
-    if(results.destinations) { // Looking to see if the destination results are there
+}).then(function(result) {
+    if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = results.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = results.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -124,4 +124,4 @@ alloy("sendEvent", {
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Toutes les destinations [!DNL Adobe Experience Platform] sont conformes aux politiques d’utilisation des données lors de la gestion de vos données. Pour plus d’informations sur la façon dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [présentation de la gouvernance des données](../../../data-governance/home.md).
+Tous [!DNL Adobe Experience Platform] Les destinations sont conformes aux politiques d’utilisation des données lors de la gestion de vos données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la section [Présentation de la gouvernance des données](../../../data-governance/home.md).
