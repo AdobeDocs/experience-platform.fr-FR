@@ -1,33 +1,33 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;connexion en continu;créer une connexion en continu;guide d’api;tutoriel;créer une connexion en continu;ingestion en continu;ingestion ;
 solution: Experience Platform
-title: Création d’une connexion en continu à l’aide de l’API
+title: Création d’une connexion en continu d’API HTTP à l’aide de l’API
 topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 4ceeac5a7ae4a57787b37f6758851c49e02aa909
+source-git-commit: d39cdeaa57a221f10c975353a54d3ff7c88239d6
 workflow-type: tm+mt
-source-wordcount: '1268'
-ht-degree: 37%
+source-wordcount: '1567'
+ht-degree: 31%
 
 ---
 
 
-# Création d’une connexion en continu à l’aide de l’API
+# Création d’une [!DNL HTTP API] connexion en continu à l’aide de l’API
 
 Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
 
-Ce tutoriel utilise l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) pour vous guider dans les étapes de création d’une connexion en continu à l’aide de l’API Flow Service.
+Ce tutoriel utilise la méthode [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) pour vous guider dans les étapes de création d’une connexion en continu à l’aide de l’API Flow Service.
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Cadre normalisé selon lequel  [!DNL Platform] organise les données d’expérience.
+- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience.
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
-En outre, la création d’une connexion en continu nécessite que vous disposiez d’un schéma XDM cible et d’un jeu de données. Pour savoir comment les créer, consultez le tutoriel sur [données d’enregistrement en continu](../../../../../ingestion/tutorials/streaming-record-data.md) ou le tutoriel sur [données de série temporelle en flux continu](../../../../../ingestion/tutorials/streaming-time-series-data.md).
+En outre, la création d’une connexion en continu nécessite que vous disposiez d’un schéma XDM cible et d’un jeu de données. Pour savoir comment les créer, consultez le tutoriel sur [données d’enregistrement en continu](../../../../../ingestion/tutorials/streaming-record-data.md) ou du tutoriel sur [diffusion en continu de données de série temporelle](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à des API d’ingestion par flux.
 
@@ -71,7 +71,7 @@ POST /flowservice/connections
 
 **Requête**
 
-Pour créer une connexion en continu, l’identifiant du fournisseur et l’identifiant de spécification de connexion doivent être fournis dans le cadre de la demande du POST. L’ID de fournisseur est `521eee4d-8cbe-4906-bb48-fb6bd4450033` et l’ID de spécification de connexion est `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Pour créer une connexion en continu, l’identifiant du fournisseur et l’identifiant de spécification de connexion doivent être fournis dans le cadre de la demande du POST. L’identifiant du fournisseur est `521eee4d-8cbe-4906-bb48-fb6bd4450033` et l’identifiant de spécification de connexion est `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -133,7 +133,7 @@ POST /flowservice/connections
 
 **Requête**
 
-Pour créer une connexion en continu, l’identifiant du fournisseur et l’identifiant de spécification de connexion doivent être fournis dans le cadre de la demande du POST. L’ID de fournisseur est `521eee4d-8cbe-4906-bb48-fb6bd4450033` et l’ID de spécification de connexion est `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Pour créer une connexion en continu, l’identifiant du fournisseur et l’identifiant de spécification de connexion doivent être fournis dans le cadre de la demande du POST. L’identifiant du fournisseur est `521eee4d-8cbe-4906-bb48-fb6bd4450033` et l’identifiant de spécification de connexion est `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -212,7 +212,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la connexion demandée. L’URL du point de terminaison de la diffusion en continu est automatiquement créée avec la connexion et peut être récupérée à l’aide de la valeur `inletUrl`.
+Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la connexion demandée. L’URL du point de terminaison de diffusion en continu est automatiquement créée avec la connexion et peut être récupérée à l’aide de la fonction `inletUrl` .
 
 ```json
 {
@@ -249,9 +249,9 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 }
 ```
 
-## Création d’une connexion source
+## Création d’une connexion source {#source}
 
-Après avoir créé votre connexion de base, vous devez créer une connexion source. Lors de la création d’une connexion source, vous aurez besoin de la valeur `id` de la connexion de base créée.
+Après avoir créé votre connexion de base, vous devez créer une connexion source. Lors de la création d’une connexion source, vous aurez besoin de la variable `id` à partir de la connexion de base que vous avez créée.
 
 **Format d’API**
 
@@ -291,11 +291,25 @@ Une réponse réussie renvoie un état HTTP 201 avec le détail de la nouvelle c
 }
 ```
 
-## Créer une connexion cible
+## Création d’un schéma XDM cible {#target-schema}
+
+Pour que les données source soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données source en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform dans lequel les données source sont contenues.
+
+Un schéma XDM cible peut être créé en adressant une requête de POST au [API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+
+Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, consultez le tutoriel sur [création d’un schéma à l’aide de l’API](../../../../../xdm/api/schemas.md).
+
+### Création d’un jeu de données cible {#target-dataset}
+
+Un jeu de données cible peut être créé en adressant une requête de POST au [API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fournissant l’identifiant du schéma cible dans la payload.
+
+Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, consultez le tutoriel sur [création d’un jeu de données à l’aide de l’API](../../../../../catalog/api/create-dataset.md).
+
+## Créer une connexion cible {#target}
 
 Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, vous devez indiquer l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Vous disposez désormais des identifiants uniques d’un schéma cible d’un jeu de données cible et de l’identifiant de spécification de connexion au lac de données. Grâce à ces identifiants, vous pouvez créer une connexion cible à l’aide de l’API [!DNL Flow Service] pour spécifier le jeu de données qui contiendra les données source entrantes.
+Vous disposez désormais des identifiants uniques d’un schéma cible d’un jeu de données cible et de l’identifiant de spécification de connexion au lac de données. A l&#39;aide de ces identifiants, vous pouvez créer une connexion cible à l&#39;aide de la fonction [!DNL Flow Service] API pour spécifier le jeu de données qui contiendra les données source entrantes.
 
 **Format d’API**
 
@@ -340,9 +354,71 @@ Une réponse réussie renvoie un état HTTP 201 avec les détails de la nouvelle
 }
 ```
 
+## Création d’un mappage {#mapping}
+
+Pour que les données source soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible adhère.
+
+Pour créer un jeu de mappages, envoyez une requête de POST à la variable `mappingSets` point d’entrée du [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) tout en fournissant votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
+
+**Format d’API**
+
+```http
+POST /mappingSets
+```
+
+**Requête**
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/mappingSets' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "version": 0,
+        "xdmSchema": "_{TENANT_ID}.schemas.e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
+        "xdmVersion": "1.0",
+        "mappings": [
+            {
+                "destinationXdmPath": "person.name.firstName",
+                "sourceAttribute": "firstName",
+                "identity": false,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "person.name.lastName",
+                "sourceAttribute": "lastName",
+                "identity": false,
+                "version": 0
+            }
+        ]
+    }'
+```
+
+| Propriété | Description |
+| -------- | ----------- |
+| `xdmSchema` | Le `$id` du schéma XDM cible. |
+
+**Réponse**
+
+Une réponse réussie renvoie les détails du mappage nouvellement créé, y compris son identifiant unique (`id`). Cet identifiant est requis lors d’une étape ultérieure pour créer un flux de données.
+
+```json
+{
+    "id": "380b032b445a46008e77585e046efe5e",
+    "version": 0,
+    "createdDate": 1604960750613,
+    "modifiedDate": 1604960750613,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
+}
+```
+
 ## Création d’un flux de données
 
-Une fois vos connexions source et cible créées, vous pouvez désormais créer un flux de données. Le flux de données est chargé de planifier et de collecter les données d’une source. Vous pouvez créer un flux de données en exécutant une requête de POST vers le point de terminaison `/flows`.
+Une fois vos connexions source et cible créées, vous pouvez désormais créer un flux de données. Le flux de données est chargé de planifier et de collecter les données d’une source. Vous pouvez créer un flux de données en adressant une requête de POST au `/flows` point de terminaison .
 
 **Format d’API**
 
@@ -361,20 +437,36 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "name": "Sample flow",
-    "description": "Sample flow description",
-    "flowSpec": {
-        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
-        "version": "1.0"
-    },
-    "sourceConnectionIds": [
-        "{SOURCE_CONNECTION_ID}"
-    ],
-    "targetConnectionIds": [
-        "{TARGET_CONNECTION_ID}"
-    ]
-}'
+        "name": "HTTP API streaming dataflow",
+        "description": "HTTP API streaming dataflow",
+        "flowSpec": {
+            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
+            "version": "1.0"
+        },
+        "sourceConnectionIds": [
+            "63070871-ec3f-4cb5-af47-cf7abb25e8bb"
+        ],
+        "targetConnectionIds": [
+            "98a2a72e-a80f-49ae-aaa3-4783cc9404c2"
+        ],
+        "transformations": [
+            {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "380b032b445a46008e77585e046efe5e",
+                "mappingVersion": 0
+            }
+            }
+        ]
+    }'
 ```
+
+| Propriété | Description |
+| --- | --- |
+| `flowSpec.id` | L’identifiant de spécification de flux pour [!DNL HTTP API]. Cet identifiant est : `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
+| `sourceConnectionIds` | Le [ID de connexion source](#source) récupéré lors d’une étape précédente. |
+| `targetConnectionIds` | Le [identifiant de connexion cible](#target) récupéré lors d’une étape précédente. |
+| `transformations.params.mappingId` | Le [ID de mappage](#mapping) récupéré lors d’une étape précédente. |
 
 **Réponse**
 
@@ -389,9 +481,9 @@ Une réponse réussie renvoie un état HTTP 201 avec les détails du nouveau flu
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une connexion HTTP en continu, ce qui vous permet d’utiliser le point de terminaison de diffusion pour ingérer des données dans Platform. Pour obtenir des instructions sur la création d’une connexion en continu dans l’interface utilisateur, consultez le [tutoriel sur la création d’une connexion en continu](../../../ui/create/streaming/http.md).
+En suivant ce tutoriel, vous avez créé une connexion HTTP en continu, ce qui vous permet d’utiliser le point de terminaison de diffusion pour ingérer des données dans Platform. Pour obtenir des instructions sur la création d’une connexion en continu dans l’interface utilisateur, veuillez lire le [tutoriel sur la création d’une connexion en continu](../../../ui/create/streaming/http.md).
 
-Pour savoir comment diffuser des données vers Platform, lisez le tutoriel sur [diffusion en continu de données de série temporelle](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou le tutoriel sur [diffusion en continu de données d’enregistrement](../../../../../ingestion/tutorials/streaming-record-data.md).
+Pour savoir comment diffuser des données vers Platform, veuillez lire le tutoriel sur [diffusion en continu de données de série temporelle](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou du tutoriel sur [données d’enregistrement en continu](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Annexe
 

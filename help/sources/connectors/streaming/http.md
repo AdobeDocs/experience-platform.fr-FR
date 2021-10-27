@@ -4,20 +4,18 @@ solution: Experience Platform
 title: Présentation du connecteur source d’API HTTP
 description: Découvrez comment créer des connecteurs de diffusion en continu pour vous connecter à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
-source-git-commit: 6122a704aff23c3ac762563628859e141e7bfa45
+source-git-commit: 1127e85852b56cc9db3d1d0d483c1780c961b0bc
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 12%
+source-wordcount: '165'
+ht-degree: 11%
 
 ---
 
-# Connecteur d’API HTTP
-
->[!IMPORTANT]
->
->Actuellement, les fonctions de mappeur pour la source de l’API HTTP ne sont prises en charge que dans l’API et non dans l’interface utilisateur.
+# [!DNL HTTP API] connector
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+
+Vous pouvez utiliser la variable [!DNL HTTP API] connecteur source pour diffuser vos données vers Platform. Le [!DNL HTTP API] La source est prise en charge par [!DNL Data Prep] qui vous permet de mapper des données non conformes à XDM à un jeu de données compatible XDM.
 
 La documentation ci-dessous fournit des informations sur la création d’un connecteur de diffusion en continu d’API HTTP avec lequel se connecter. [!DNL Platform] à l’aide des API ou de l’interface utilisateur :
 
