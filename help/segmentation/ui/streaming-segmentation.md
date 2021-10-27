@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur de la segmentation par flux
 topic-legacy: ui guide
 description: La segmentation par flux sur Adobe Experience Platform vous permet d’effectuer une segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation par flux, la qualification de segment se produit désormais lorsque les données entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées au fur et à mesure que les données sont transmises à Platform, ce qui signifie que l’adhésion au segment sera conservée à jour sans exécuter les tâches de segmentation planifiées.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: b4a04b52ff9a2b7a36fda58d70a2286fea600ff1
+source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '840'
 ht-degree: 1%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Le document suivant indique comment utiliser la segmentation par flux à l’aide de l’interface utilisateur. Pour plus d’informations sur l’utilisation de la segmentation par flux à l’aide de l’API, consultez le [guide de l’API de segmentation par flux](../api/streaming-segmentation.md).
+>Le document suivant indique comment utiliser la segmentation par flux à l’aide de l’interface utilisateur. Pour plus d’informations sur l’utilisation de la segmentation par flux à l’aide de l’API, veuillez lire le [guide de l’API de segmentation par flux](../api/streaming-segmentation.md).
 
-La segmentation par flux sur [!DNL Adobe Experience Platform] permet aux clients d’effectuer une segmentation en temps quasi réel tout en se concentrant sur la richesse des données. Avec la segmentation par flux, la qualification de segment se produit maintenant lorsque les données en continu arrivent dans [!DNL Platform], ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées au fur et à mesure que les données sont transmises à [!DNL Platform], ce qui signifie que l’adhésion au segment sera conservée à jour sans exécuter les tâches de segmentation planifiées.
+Segmentation par flux sur [!DNL Adobe Experience Platform] permet aux clients d’effectuer une segmentation en temps quasi réel tout en se concentrant sur la richesse des données. Avec la segmentation par flux, la qualification de segment se produit maintenant lorsque les données en continu entrent dans [!DNL Platform], ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées au fur et à mesure de la transmission des données. [!DNL Platform], ce qui signifie que l’adhésion au segment sera maintenue à jour sans exécuter les tâches de segmentation planifiées.
 
 >[!NOTE]
 >
@@ -30,22 +30,22 @@ La segmentation par flux sur [!DNL Adobe Experience Platform] permet aux clients
 
 >[!NOTE]
 >
->Pour que la segmentation par flux fonctionne, vous devez activer la segmentation planifiée pour l’organisation. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à la [section de la segmentation par flux dans le guide d’utilisation de la segmentation](./overview.md#scheduled-segmentation).
+>Pour que la segmentation par flux fonctionne, vous devez activer la segmentation planifiée pour l’organisation. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à la section [la section Segmentation par flux dans le guide d’utilisation de la segmentation ;](./overview.md#scheduled-segmentation).
 
 Une requête est automatiquement évaluée avec la segmentation par flux si elle répond à l’un des critères suivants :
 
 | Type de requête | Détails | Exemple |
 | ---------- | ------- | ------- |
-| Accès entrant | Toute définition de segment qui fait référence à un seul événement entrant sans restriction temporelle. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Accès entrant dans un intervalle de temps relatif | Toute définition de segment qui fait référence à un seul événement entrant. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| Accès entrant avec intervalle de temps | Toute définition de segment qui fait référence à un seul événement entrant avec une fenêtre temporelle. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
+| Événement unique | Toute définition de segment qui fait référence à un seul événement entrant sans restriction temporelle. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
+| Événement unique dans une fenêtre temporelle relative | Toute définition de segment qui fait référence à un seul événement entrant. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Un seul événement avec une fenêtre temporelle | Toute définition de segment qui fait référence à un seul événement entrant avec une fenêtre temporelle. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. |  |
-| Accès entrant qui fait référence à un profil | Toute définition de segment qui fait référence à un seul événement entrant, sans restriction temporelle, et à un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
-| Accès entrant qui fait référence à un profil dans une fenêtre temporelle relative | Toute définition de segment qui fait référence à un seul événement entrant et à un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lot ou en flux continu. **Remarque :** Si un segment de segments est utilisé, la disqualification du profil se produit  **toutes les 24 heures**. | ![](../images/ui/streaming-segmentation/two-batches.png) |
-| Plusieurs événements faisant référence à un profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
+| Événement unique avec un attribut de profil | Toute définition de segment qui fait référence à un seul événement entrant, sans restriction temporelle, et à un ou plusieurs attributs de profil. **Remarque :** La requête est immédiatement évaluée lorsque l’événement arrive. Toutefois, dans le cas d’un événement de profil, il doit attendre 24 heures pour être incorporé. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
+| Événement unique avec un attribut de profil dans une fenêtre de temps relative | Toute définition de segment qui fait référence à un seul événement entrant et à un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lot ou en flux continu. **Remarque :** Si un segment est utilisé, la disqualification du profil se produit. **toutes les 24 heures**. | ![](../images/ui/streaming-segmentation/two-batches.png) |
+| Plusieurs événements avec un attribut de profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
-Une définition de segment **et** ne sera pas activée pour la segmentation par flux dans les scénarios suivants :
+Une définition de segment sera **not** être activé pour la segmentation par flux dans les scénarios suivants :
 
 - La définition de segment inclut des segments ou des caractéristiques Adobe Audience Manager (AAM).
 - La définition de segment comprend plusieurs entités (requêtes d’entités multiples).
@@ -55,7 +55,7 @@ En outre, certaines instructions s’appliquent lors de la segmentation par flux
 | Type de requête | Instruction |
 | ---------- | -------- |
 | Requête d’événement unique | Il n’existe aucune limite à l’intervalle de recherche en amont. |
-| Requête avec historique des événements | <ul><li>L’intervalle de recherche en amont est limité à **un jour**.</li><li>Une condition d’ordre du temps **doit** exister entre les événements.</li><li>Les requêtes comportant au moins un événement annulé sont prises en charge. Cependant, l’événement entier **ne peut pas** être une négation.</li></ul> |
+| Requête avec historique des événements | <ul><li>L’intervalle de recherche en amont est limité à **un jour**.</li><li>Condition d’ordre du temps stricte **must** existent entre les événements.</li><li>Les requêtes comportant au moins un événement annulé sont prises en charge. Cependant, l’événement entier **cannot** être une négation.</li></ul> |
 
 Si une définition de segment est modifiée de sorte qu’elle ne répond plus aux critères de la segmentation par flux, elle passe automatiquement de &quot;Diffusion en continu&quot; à &quot;Lot&quot;.
 
@@ -65,7 +65,7 @@ Après avoir créé un segment activé dans le flux, vous pouvez afficher les d�
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Plus précisément, des détails sur la **[!UICONTROL taille totale de l’audience qualifiée]** s’affichent. La **[!UICONTROL Taille totale de l’audience qualifiée]** indique le nombre total d’audiences qualifiées depuis la dernière exécution de la tâche de segmentation terminée. Si une tâche de segmentation n’a pas été effectuée au cours des dernières 24 heures, le nombre d’audiences sera prélevé dans une estimation à la place.
+Plus précisément, les détails sur la variable **[!UICONTROL taille totale de l&#39;audience qualifiée]** s’affichent. Le **[!UICONTROL Taille totale de l’audience qualifiée]** affiche le nombre total d’audiences qualifiées de la dernière exécution de la tâche de segmentation terminée. Si une tâche de segmentation n’a pas été effectuée au cours des dernières 24 heures, le nombre d’audiences sera prélevé dans une estimation à la place.
 
 Un graphique linéaire se trouve en dessous du nombre de segments qui ont été qualifiés et disqualifiés au cours des dernières 24 heures. La liste déroulante peut être ajustée afin d’afficher les dernières 24 heures, la semaine dernière ou les 30 derniers jours.
 
@@ -75,10 +75,10 @@ Vous trouverez des informations supplémentaires sur la dernière évaluation de
 
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
-Pour plus d’informations sur les définitions de segment, consultez la section précédente sur [les détails de la définition de segment](#segment-details).
+Pour plus d’informations sur les définitions de segment, consultez la section précédente sur [détails sur la définition de segment](#segment-details).
 
 ## Étapes suivantes
 
 Ce guide d’utilisation explique le fonctionnement des définitions de segment activées pour la diffusion en continu sur Adobe Experience Platform et comment surveiller les segments activés pour la diffusion en continu.
 
-Pour en savoir plus sur l’utilisation de l’interface utilisateur de Adobe Experience Platform, consultez le [guide d’utilisation de la segmentation](./overview.md).
+Pour en savoir plus sur l’utilisation de l’interface utilisateur de Adobe Experience Platform, veuillez lire le [Guide d’utilisation de la segmentation](./overview.md).
