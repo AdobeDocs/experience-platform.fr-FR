@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
-source-git-commit: 0c507a26f551af1eb17889e8e77a036e3c106240
+source-git-commit: 231ce8405a752bd3e7e4ae590bb6aaf98fc6527b
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 66%
+source-wordcount: '315'
+ht-degree: 56%
 
 ---
 
@@ -14,7 +14,21 @@ ht-degree: 66%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [[!DNL Data Prep]](#data-prep)
 - [Sources](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM).
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| fonction `contains_key` | Le `contains_key` a été introduite. Vous pouvez ainsi vérifier si l’objet existe dans la source. Cette fonction remplace la fonction `is_set` , désormais obsolète. |
+| Messages d’erreur | Messages d’erreur renvoyés par la variable `/mappingSets/preview` Les points de terminaison dans l’API Data Prep sont désormais cohérents avec les messages d’erreur générés lors de l’exécution. |
+
+Voir [[!DNL Data Prep] aperçu](../../data-prep/home.md) pour en savoir plus sur ce service.
 
 ## Sources {#sources}
 
