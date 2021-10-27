@@ -2,10 +2,10 @@
 title: Présentation de l’extension Core
 description: Découvrez l’extension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
+source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
 workflow-type: tm+mt
-source-wordcount: '5257'
-ht-degree: 100%
+source-wordcount: '5292'
+ht-degree: 99%
 
 ---
 
@@ -219,7 +219,13 @@ Spécifiez le nom et la valeur du cookie devant exister pour qu’un événement
 
 #### Custom Code
 
-Spécifiez un Custom Code qui doit exister comme condition de l’événement. Utilisez l’éditeur de code intégré pour saisir le code personnalisé.
+Spécifiez un Custom Code qui doit exister comme condition de l’événement.
+
+>[!NOTE]
+>
+>Le code JavaScript ES6+ est désormais pris en charge dans le code personnalisé. Notez que certains navigateurs plus anciens ne prennent pas en charge ES6+. Pour comprendre l’impact de l’utilisation des fonctions ES6+, testez-les par rapport à tous les navigateurs web qui doivent être pris en charge.
+
+Utilisez l’éditeur de code intégré pour saisir le code personnalisé:
 
 1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
 1. Saisissez le Custom Code.
