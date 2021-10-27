@@ -1,47 +1,34 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
-exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
+source-git-commit: f4e9750685d641c83b4ceed79af739de43343aef
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 94%
+source-wordcount: '315'
+ht-degree: 56%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : 29 septembre 2021**
+**Date de publication : 27 octobre 2021**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [Ingestion de données](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [Sources](#sources)
-
-## Ingestion de données {#ingestion}
-
-Adobe Experience Platform Data Ingestion représente les diverses méthodes que Platform emploie pour ingérer des données à partir de multiples sources, ainsi que la manière dont ces données sont conservées dans le lac de données pour être utilisées par les services de Platform en aval.
-
-**Nouvelles fonctionnalités**
-
-| Fonctionnalité | Description |
-|------- | -----------|
-| Mise à jour upsert ou correction des enregistrements de profil à l’aide de l’ingestion par lots | Real-time Customer Profile permet désormais de mettre à jour les attributs de profil dans les données d’enregistrements de profils individuels via l’ingestion par lots. Pour en savoir plus, consultez le [Guide du développeur de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md). |
-
-Pour en savoir plus sur l’ingestion de données dans Platform, consultez la [Documentation de Data Ingestion](../../ingestion/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM).
 
-**Nouvelles fonctionnalités**
+**Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Prise en charge des flux de données en continu | Vous pouvez désormais utiliser les fonctions de préparation de données lors de la création d’un flux de données en continu pour [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] et [!DNL Google PubSub]. Pour plus d’informations, consultez le tutoriel sur la [création d’un flux de données en continu pour des sources de stockage cloud](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md). |
+| fonction `contains_key` | Le `contains_key` a été introduite. Vous pouvez ainsi vérifier si l’objet existe dans la source. Cette fonction remplace la fonction `is_set` , désormais obsolète. |
+| Messages d’erreur | Messages d’erreur renvoyés par la variable `/mappingSets/preview` Les points de terminaison dans l’API Data Prep sont désormais cohérents avec les messages d’erreur générés lors de l’exécution. |
 
-Pour en savoir plus sur [!DNL Data Prep], consultez la présentation de [[!DNL Data Prep] ](../../data-prep/home.md).
+Voir [[!DNL Data Prep] aperçu](../../data-prep/home.md) pour en savoir plus sur ce service.
 
 ## Sources {#sources}
 
@@ -51,8 +38,8 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!DNL Data Landing Zone] | Vous pouvez désormais créer une connexion source [!DNL Data Landing Zone] à l’aide de l’API [[!DNL Flow Service] ](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) ou de l’[interface utilisateur](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] est une interface de  [!DNL Azure Blob] stockage configurée par Platform, qui vous permet d’accéder à une fonctionnalité de stockage de fichiers sécurisée basée sur le cloud pour importer des fichiers dans Platform. Pour plus d’informations, consultez la [[!DNL Data Landing Zone] présentation](../../sources/connectors/cloud-storage/data-landing-zone.md). |
-| [!DNL Snowflake] | Vous pouvez désormais créer une connexion source [!DNL Snowflake] à l’aide de l’API [[!DNL Flow Service] ](../../sources/tutorials/api/create/databases/snowflake.md) ou de l’[interface utilisateur](../../sources/tutorials/ui/create/databases/snowflake.md) pour importer les données de votre base de données [!DNL Snowflake] vers Platform. Pour plus d’informations, consultez la [[!DNL Snowflake] présentation](../../sources/connectors/databases/snowflake.md). |
-| Améliorations de la source [!DNL SFTP] | Vous pouvez définir manuellement un numéro de port personnalisé lors de la création d’une connexion source [!DNL SFTP]. Pour plus d’informations, consultez la [[!DNL SFTP] présentation](../../sources/connectors/cloud-storage/sftp.md). |
+| Améliorations de la source [!DNL Amazon S3] | Vous pouvez désormais utiliser la variable `s3SessionToken` pour connecter votre [!DNL Amazon S3] compte vers Platform à l’aide d’informations d’identification de sécurité temporaires. Ce jeton vous permet de fournir un accès temporaire à court terme à votre [!DNL Amazon S3] aux utilisateurs dans des environnements non approuvés. Pour plus d’informations, voir la [[!DNL Amazon S3] documentation ](../../sources/connectors/cloud-storage/s3.md#prerequisites). |
+| [!DNL Generic REST API] (version bêta) | Vous pouvez désormais créer une [!DNL Generic REST API] connexion source à l’aide de la fonction [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) ou le [interface utilisateur](../../sources/tutorials/ui/create/protocols/generic-rest.md) pour importer des données d’une application REST générique vers Platform. Pour plus d’informations, consultez la [[!DNL Generic REST API] présentation](../../sources/connectors/protocols/generic-rest.md). |
+| [!DNL Zoho CRM] (version bêta) | Vous pouvez désormais créer une [!DNL Zoho CRM] connexion source à l’aide de la fonction [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) ou le [interface utilisateur](../../sources/tutorials/ui/create/crm/zoho.md) pour importer des données de [!DNL Zoho CRM] compte à Platform. Pour plus d’informations, consultez la [[!DNL Zoho CRM] présentation](../../sources/connectors/crm/zoho.md). |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
