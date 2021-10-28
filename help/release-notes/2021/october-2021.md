@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
-source-git-commit: 231ce8405a752bd3e7e4ae590bb6aaf98fc6527b
+source-git-commit: 45c4486dc9860da13daa6984b23ef80038ea2f8d
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 56%
+source-wordcount: '458'
+ht-degree: 39%
 
 ---
 
@@ -12,12 +12,30 @@ ht-degree: 56%
 
 **Date de publication : 27 octobre 2021**
 
+## Mises à jour de l’Experience Platform
+
+Mises à jour de l’Experience Platform.
+
+### [Interface utilisateur] {#ui}
+
+L’interface utilisateur a été mise à jour avec les modifications suivantes :
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Thème sombre | Utilisez le sélecteur de thème sombre pour passer d’un thème clair à un thème sombre dans l’interface de Platform. Le commutateur se trouve dans le profil utilisateur sous le nom d’utilisateur et le courrier électronique. |
+| Activer/désactiver la navigation à gauche | Utilisez le bouton de navigation amélioré situé en haut de l’en-tête de l’application pour afficher ou masquer le menu affichant les fonctionnalités de votre Experience Platform. Le système mémorise votre dernière sélection et ne vous montre que les fonctionnalités auxquelles vous avez accès. |
+| Accès à la visibilité | La barre de navigation de gauche affiche uniquement les fonctionnalités auxquelles vous avez accès. Dans les versions précédentes de Adobe Experience Platform, les éléments indisponibles étaient visibles, même si vous ne pouviez pas y accéder. |
+
+Voir [Guide de l’interface utilisateur de Platform](../../landing/ui-guide.md) pour en savoir plus.
+
+## Mises à jour des fonctionnalités existantes
+
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [[!DNL Data Prep]](#data-prep)
 - [Sources](#sources)
 
-## [!DNL Data Prep] {#data-prep}
+### [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM).
 
@@ -30,7 +48,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 Voir [[!DNL Data Prep] aperçu](../../data-prep/home.md) pour en savoir plus sur ce service.
 
-## Sources {#sources}
+### Sources {#sources}
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
