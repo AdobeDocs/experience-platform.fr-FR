@@ -2,9 +2,9 @@
 description: Cette page décrit comment vous authentifier et commencer à utiliser le SDK Adobe Experience Platform Destination. Elle comprend des instructions sur la manière d’obtenir des informations d’authentification d’Adobe I/O, un nom d’environnement de test et l’autorisation de contrôle d’accès de création de destination.
 title: Prise en main du SDK Destination
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 6ff5fd0e80f7ca1015969e91cc23c88251509b61
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '540'
 ht-degree: 7%
 
 ---
@@ -17,13 +17,13 @@ Cette page décrit comment vous authentifier et commencer à utiliser le SDK Ado
 
 ## Terminologie {#terminology}
 
-Ce guide utilise des concepts spécifiques à Platform, tels que l’organisation IMS et les environnements de test. Consultez le [glossaire Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) pour connaître la définition de ces termes et d’autres termes.
+Ce guide utilise des concepts spécifiques à Platform, tels que l’organisation IMS et les environnements de test. Consultez la [Glossaire Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) pour connaître la définition de ces termes et d’autres termes.
 
 ## Obtention des informations d’authentification requises {#obtain-authentication-credentials}
 
-Le SDK de destination utilise la passerelle [Adobe I/O](https://www.adobe.io/) pour l’authentification. Pour effectuer des appels API vers les points de terminaison du SDK de destination, vous devez fournir certains en-têtes dans vos appels API. Collaborez avec l’équipe Adobe Exchange pour configurer l’authentification pour vous dans la [console de développement des Adobes](http://console.adobe.io/).
+Le SDK de destination utilise la variable [Adobe I/O](https://www.adobe.io/) passerelle pour l’authentification. Pour effectuer des appels API vers les points de terminaison du SDK de destination, vous devez fournir certains en-têtes dans vos appels API. Collaborez avec l’équipe Adobe Exchange pour configurer l’authentification pour vous au [Adobe Developer Console](http://console.adobe.io/).
 
-Pour réussir les appels vers les points d’entrée de l’API du SDK de destination, suivez le [tutoriel sur l’authentification Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Démarrez le tutoriel à partir de l’étape &quot;[Générer une clé API, l’identifiant de l’organisation IMS et le secret client](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;. L’équipe Adobe Exchange se chargera des étapes précédentes. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API du SDK de destination, comme illustré ci-dessous :
+Pour passer avec succès des appels aux points d’entrée de l’API du SDK de destination, suivez la [Tutoriel sur l’authentification des Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Démarrez le tutoriel à partir du[Génération d’une clé API, d’un identifiant de l’organisation IMS et d’un secret client](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;. L’équipe Adobe Exchange se chargera des étapes précédentes. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API du SDK de destination, comme illustré ci-dessous :
 
 * `x-api-key: {API_KEY}`, également appelé ID client
 * `x-gw-ims-org-id: {IMS_ORG}`, également appelé ID d’organisation
@@ -56,7 +56,7 @@ L’équipe Adobe Exchange vous fournit votre nom d’environnement de test, que
 
 ## Contrôle d’accès en fonction du rôle (RBAC) {#rbac}
 
-Pour utiliser les points d’entrée de l’API du SDK de destination décrits dans la [documentation de référence](./configuration-options.md), vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Création de destination]**. Collaborez avec l’équipe Adobe Exchange pour que cette autorisation vous soit affectée dans [Adobe Admin Console](https://adminconsole.adobe.com/).
+Pour utiliser les points d’entrée de l’API du SDK de destination décrits dans la section [documentation de référence](./configuration-options.md), vous avez besoin de la fonction **[!UICONTROL Création de destination]** autorisation de contrôle d’accès. Collaborez avec l’équipe Adobe Exchange pour que cette autorisation vous soit affectée dans [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![Autorisation de création de destination](./assets/destination-authoring-permission.png)
 
@@ -73,4 +73,6 @@ Pour plus d’informations, consultez les documents de contrôle d’accès Expe
 
 ## Étapes suivantes {#next-steps}
 
-En suivant les étapes décrites dans cet article, vous obteniez des informations d’authentification pour Adobe I/O, un nom d’environnement de test et l’autorisation de contrôle d’accès de création de destination. Vous pouvez ensuite configurer une destination à l’aide du SDK de destination. Lisez [Utilisation du SDK de destination pour configurer votre destination](./configure-destination-instructions.md) pour les étapes suivantes.
+En suivant les étapes décrites dans cet article, vous obteniez des informations d’authentification pour Adobe I/O, un nom d’environnement de test et l’autorisation de contrôle d’accès de création de destination. Vous pouvez ensuite configurer une destination à l’aide du SDK de destination.
+* Lecture [Utilisation du SDK de destination pour configurer votre destination](./configure-destination-instructions.md) pour les étapes suivantes.
+* Pour toutes les opérations, reportez-vous à la section [Documentation de l’API de création de destination](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
