@@ -5,36 +5,36 @@ title: Applications Privacy Service et Experience Cloud
 topic-legacy: overview
 description: Ce document fournit une référence pour la configuration de différentes applications Experience Cloud pour les opérations liées à la confidentialité.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 892bb4fa5302d63923c1a2e4759f0253955576e2
+source-git-commit: f0dc33dcd4803f157e411d8baf3b2d2f96cea5e1
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 46%
+source-wordcount: '600'
+ht-degree: 47%
 
 ---
 
-# [!DNL Privacy Service] et  [!DNL Experience Cloud] applications
+# [!DNL Privacy Service] et [!DNL Experience Cloud] applications
 
 Adobe Experience Platform [!DNL Privacy Service] est conçu pour prendre en charge les demandes d’accès à des informations personnelles pour plusieurs applications Adobe Experience Cloud. Chaque application est compatible avec différentes valeurs et différents identifiants de produit pour l’identification des titulaires de données.
 
-Ce document sert de référence à la documentation de l’application [!DNL Experience Cloud] qui explique comment configurer cette application pour des opérations liées à la confidentialité. Cela inclut les formats et les libellés de vos données. Deux catégories d’applications sont traitées :
+Ce document sert de référence pour [!DNL Experience Cloud] documentation de l’application qui explique comment configurer cette application pour des opérations liées à la confidentialité. Cela inclut les formats et les libellés de vos données. Deux catégories d’applications sont traitées :
 
-* [Applications intégrées à Privacy Service](#integrated) : Applications capables d’envoyer des demandes d’accès, de suppression ou d’exclusion à  [!DNL Privacy Service].
+* [Applications intégrées à Privacy Service](#integrated): Applications capables d’envoyer des demandes d’accès, de suppression ou d’exclusion à [!DNL Privacy Service].
 * [Les applications en libre-service](#self-serve)[!DNL Privacy Service] : ce sont des applications qui doivent gérer leurs requêtes de confidentialité en interne et qui ne peuvent pas communiquer directement avec 
 
-Consultez la documentation de vos applications [!DNL Experience Cloud] pour savoir comment formater vos demandes d’accès à des informations personnelles et quelles valeurs sont prises en charge pour ces demandes.
+Consultez la documentation relative à votre [!DNL Experience Cloud] pour savoir comment formater vos demandes d’accès à des informations personnelles et quelles valeurs sont prises en charge pour ces demandes.
 
 ## Applications intégrées à [!DNL Privacy Service] {#integrated}
 
-Vous trouverez ci-dessous une liste des applications [!DNL Experience Cloud] intégrées à [!DNL Privacy Service], notamment les fonctionnalités [!DNL Privacy Service] avec lesquelles elles sont compatibles, ainsi que des liens vers la documentation pour plus d’informations.
+Voici une liste de [!DNL Experience Cloud] applications intégrées à [!DNL Privacy Service], y compris le [!DNL Privacy Service] fonctionnalités avec lesquelles ils sont compatibles et liens vers la documentation pour plus d’informations.
 
 | Application | Accès/suppression | Opposition | Documentation et considérations |
 | --- | :---: | :---: | --- |
 | Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Documentation sur l’accès et la suppression pour le RGPD](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Documentation sur l’accès et la suppression pour le CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Documentation sur l’exclusion de la vente pour le CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
-| Adobe Analytics | ✓ | ✓ | <ul><li>[Documentation sur l’accès et la suppression](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=fr)</li><li>[!DNL Analytics] gère les requêtes d’opposition à l’aide de [variables de reporting sur la confidentialité](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html).</li></ul> |
+| Adobe Analytics | ✓ | ✓ | <ul><li>[Documentation sur l’accès et la suppression](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=fr)</li><li>[!DNL Analytics] gère les requêtes d’opposition à l’aide de [variables de reporting sur la confidentialité](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html?lang=fr).</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[Documentation sur l’accès et la suppression](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentation sur l’opposition](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Documentation sur l’accès et la suppression](https://docs.campaign.adobe.com/doc/standard/getting_started/fr/ACS_GDPR.html)</li><li>[Documentation sur l’opposition](../segmentation/consents.md)</li></ul> |
 | Adobe des attributs du client (CRS) | ✓ | N/A | <ul><li>[Documentation sur l’accès et la suppression pour le RGPD](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html)</li><li>[Documentation sur l’accès et la suppression pour le CCPA](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html)</li><li>Les attributs du client n’ont pas la capacité de transférer des données. Par conséquent, les demandes d’opposition ne sont pas applicables.</li></ul> |
-| Adobe Experience Platform | ✓ | ✓ | <ul><li>[Documentation sur l’accès et la suppression pour le lac de données](../catalog/privacy.md)</li><li>[Documentation sur l’accès et la suppression pour Real-time Customer Profile](../profile/privacy.md)</li><li>[!DNL Experience Platform] honore les demandes d’ [exclusion pour les segments d’audience](../segmentation/consents.md).</li></ul> |
+| Adobe Experience Platform | ✓ | ✓ | <ul><li>[Documentation sur l’accès et la suppression pour le lac de données](../catalog/privacy.md)</li><li>[Documentation sur l’accès/la suppression pour Identity Service](../identity-service/privacy.md)</li><li>[Documentation sur l’accès et la suppression pour Real-time Customer Profile](../profile/privacy.md)</li><li>[!DNL Experience Platform] honneurs [demandes d’exclusion pour les segments ciblés](../segmentation/consents.md).</li></ul> |
 | Adobe Primetime Authentication | ✓ | N/A | <ul><li>[Documentation sur l’accès et la suppression](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] n’a pas la capacité de transférer des données. Par conséquent, les requêtes d’opposition ne sont pas applicables.</li></ul> |
 | Adobe Target | ✓ | N/A | <ul><li>[Documentation sur l’accès et la suppression](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=fr)</li><li>[!DNL Target] n’a pas la capacité de transférer des données. Par conséquent, les requêtes d’opposition ne sont pas applicables.</li></ul> |
 
@@ -42,7 +42,7 @@ Vous trouverez ci-dessous une liste des applications [!DNL Experience Cloud] int
 
 ## Applications en libre-service {#self-serve}
 
-Vous trouverez ci-dessous une liste des applications [!DNL Experience Cloud] qui ne sont pas intégrées à [!DNL Privacy Service] et qui doivent gérer leurs problèmes de confidentialité en interne. Vous trouverez des liens vers la documentation de chaque application, ainsi qu’une description du contenu de la documentation.
+Voici une liste de [!DNL Experience Cloud] applications qui ne sont pas intégrées à [!DNL Privacy Service] et doivent gérer leurs problèmes de confidentialité en interne. Vous trouverez des liens vers la documentation de chaque application, ainsi qu’une description du contenu de la documentation.
 
 | Application | Description de la documentation |
 | ------- | ----------- |

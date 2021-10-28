@@ -5,9 +5,9 @@ title: Annexe du guide de l’API Privacy Service
 topic-legacy: developer guide
 description: Ce document contient des informations supplémentaires sur l’utilisation de l’API Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: a4f6801cc85624274716889bdda0146fa38eb4b7
+source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '480'
 ht-degree: 79%
 
 ---
@@ -18,9 +18,9 @@ Les sections suivantes contiennent des informations supplémentaires sur l’uti
 
 ## Espaces de noms d’identité standard {#standard-namespaces}
 
-Toutes les identités envoyées à [!DNL Privacy Service] doivent être fournies sous un espace de noms d’identité spécifique. Les espaces de noms d’identité sont des composants [Adobe Experience Platform Identity Service](../../identity-service/home.md) qui servent d’indicateurs du contexte auquel une identité se rapporte.
+Toutes les identités envoyées à [!DNL Privacy Service] doit être fourni sous un espace de noms d’identité spécifique. Les espaces de noms d’identité sont des composants [Adobe Experience Platform Identity Service](../../identity-service/home.md) qui servent d’indicateurs du contexte auquel une identité se rapporte.
 
-Le tableau suivant présente plusieurs types d’identité prédéfinis couramment utilisés, mis à disposition par [!DNL Experience Platform], ainsi que les valeurs `namespace` associées :
+Le tableau suivant présente plusieurs types d’identité prédéfinis couramment utilisés, mis à disposition par [!DNL Experience Platform], ainsi que les `namespace` values :
 
 | Type d’identité | `namespace` | `namespaceId` |
 | --- | --- | --- |
@@ -54,7 +54,7 @@ Lors de la spécification d’une valeur `namespace`[!DNL Privacy Service] dans 
 | `namespaceId` | Indique que la valeur correspond à l’identifiant réel de l’espace de noms créé ou mappé via le service d’espace de noms. |
 | `unregistered` | Chaîne de forme libre non définie dans le service d’espace de noms et prise « en l’état ». Toute application qui gère ces types d’espaces de noms les compare et les traite en fonction du contexte de l’entreprise et du jeu de données. Aucun identifiant d’espace de noms n’est fourni. |
 | `analytics` | Espace de noms personnalisé mappé en interne dans [!DNL Analytics], et non dans le service d’espace de noms. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
-| `target` | Espace de noms personnalisé compris en interne par [!DNL Target], et non dans le service d’espace de noms. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
+| `target` | Un espace de noms personnalisé compris en interne par [!DNL Target], et non dans le service d’espace de noms. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -73,6 +73,7 @@ Le tableau suivant indique les valeurs acceptées pour la spécification d’un 
 | Adobe Target | `target` |
 | Produit d’automatisation | `automationProduct` |
 | Attributs du client (CRS) | `CRS` |
-| Real-time Customer Profile | `profileService` |
+| Identity Service | `Identity` |
+| Profil client en temps réel | `profileService` |
 
 {style=&quot;table-layout:auto&quot;}
