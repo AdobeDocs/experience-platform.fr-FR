@@ -3,10 +3,10 @@ keywords: personnalisation de la cible ; destination; destination de la cible de
 title: Connexion Adobe Target (bêta)
 description: Adobe Target est une application qui fournit une personnalisation et une expérimentation optimisées par l’intelligence artificielle, en temps réel et 1:1 dans toutes les interactions client entrantes entre sites web, applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: ba27484655438df654a1e062309ddd30638f62a5
+source-git-commit: fae3d9a5aff3e84354831026e9724e1c85d32b5c
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 11%
+source-wordcount: '453'
+ht-degree: 10%
 
 ---
 
@@ -24,13 +24,13 @@ Adobe Target est une connexion de personnalisation dans Adobe Experience Platfor
 
 ## Conditions préalables {#prerequisites}
 
-Cette intégration est optimisée par le [SDK Web Adobe Experience Platform](../../../edge/home.md). Vous devez utiliser ce SDK pour utiliser cette destination.
+Cette intégration est optimisée par la fonction [SDK Web Adobe Experience Platform](../../../edge/home.md). Vous devez utiliser ce SDK pour utiliser cette destination.
 
 ## Type d&#39;export {#export-type}
 
-**Requête de profil**  : vous demandez tous les segments mappés dans la destination Adobe Target pour un seul profil.
+**Requête de profil** - vous demandez tous les segments mappés dans la destination Adobe Target pour un profil unique.
 
-## Cas d&#39;utilisation {#use-cases}
+## Cas d’utilisation {#use-cases}
 
 **Personnaliser une bannière de page d&#39;accueil**
 
@@ -38,21 +38,27 @@ Une société de location et de vente d’habitations souhaite personnaliser sa 
 
 ## Connexion à la destination {#connect}
 
-Pour vous connecter à cette destination, suivez les étapes décrites dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
+>[!CONTEXTUALHELP]
+>id="platform_destinations_target_datastream"
+>title="À propos des identifiants de flux de données"
+>abstract="Cette option détermine dans quel jeu de données de collecte de données les segments seront inclus dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Vous devez configurer un flux de données avant de pouvoir configurer votre destination."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Découvrez comment configurer un flux de données."
+
+Pour vous connecter à cette destination, procédez comme décrit dans la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
 Adobe Experience Platform se connecte automatiquement à l’instance Adobe Target de votre entreprise. Aucune authentification n’est requise.
 
 ### Paramètres de connexion {#parameters}
 
-Lors de la configuration de [](../../ui/connect-destination.md) cette destination, vous devez fournir les informations suivantes :
+while [configuration](../../ui/connect-destination.md) Pour cette destination, vous devez fournir les informations suivantes :
 
 * **Nom** : renseignez le nom de votre choix pour cette destination.
 * **Description** : saisissez une description pour votre destination. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination. Ce champ est facultatif.
-* **Identifiant** de la banque de données : Cela détermine dans quel flux de données de collecte de données les segments seront inclus dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Voir [Configuration d’un flux de données](../../../edge/fundamentals/datastreams.md) pour plus d’informations.
+* **Identifiant du flux de données**: Cela détermine dans quel flux de données de collecte de données les segments seront inclus dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Voir [Configuration d’un flux de données](../../../edge/fundamentals/datastreams.md) pour plus d’informations.
 
 ## Activation des segments vers cette destination {#activate}
 
-Voir [Activation des profils et des segments vers les destinations de demande de profil](../../ui/activate-profile-request-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Lecture [Activation des profils et des segments vers les destinations de requête de profil](../../ui/activate-profile-request-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
 ## Données exportées {#exported-data}
 
@@ -60,4 +66,4 @@ Adobe Target lit les données de profil du réseau Adobe Experience Platform Edg
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Toutes les destinations [!DNL Adobe Experience Platform] sont conformes aux politiques d’utilisation des données lors de la gestion de vos données. Pour plus d’informations sur la façon dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [présentation de la gouvernance des données](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Tous [!DNL Adobe Experience Platform] Les destinations sont conformes aux politiques d’utilisation des données lors de la gestion de vos données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, lisez la section [Présentation de la gouvernance des données](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
