@@ -5,9 +5,9 @@ title: 'Segmentation Edge à l’aide de l’API '
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 4d2c6385decd5b789a975165a87bc80f9b008cd7
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '942'
 ht-degree: 9%
 
 ---
@@ -48,7 +48,7 @@ Pour qu’un segment soit évalué à l’aide de la segmentation Edge, la requ�
 | Plusieurs accès entrants dans un profil temporel de 24 heures | Toute définition de segment qui fait référence à plusieurs événements qui se produisent dans une fenêtre temporelle de 24 heures. | Personnes ayant consulté la page d’accueil **ou** a consulté la page de passage en caisse au cours des dernières 24 heures. |
 | Plusieurs événements avec un profil dans un intervalle de temps de 24 heures | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à plusieurs événements se produisant dans une fenêtre temporelle de 24 heures. | Personnes des Etats-Unis qui ont visité la page d&#39;accueil **et** a consulté la page de passage en caisse au cours des dernières 24 heures. |
 
-{style=&quot;table-layout:auto&quot;}
+En outre, le segment **must** être lié à une stratégie de fusion principale. Pour plus d’informations sur les stratégies de fusion, consultez la section [guide des stratégies de fusion](../../profile/api/merge-policies.md).
 
 ## Récupération de tous les segments activés pour la segmentation Edge
 

@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Lorsque vous rassemblez ces données, les stratégies de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer une vue unifiée.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 9af59d5a4fda693a2aef8e590a7754f0e1c1ac8d
 workflow-type: tm+mt
-source-wordcount: '2258'
-ht-degree: 73%
+source-wordcount: '2469'
+ht-degree: 66%
 
 ---
 
@@ -20,7 +20,7 @@ Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votr
 
 À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation dans l’interface utilisateur. Ce guide décrit les étapes à suivre pour utiliser les stratégies de fusion à l’aide de l’API.
 
-Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur des stratégies de fusion](../merge-policies/ui-guide.md). Pour en savoir plus sur les stratégies de fusion en général et leur rôle dans Experience Platform, commencez par lire la [présentation des stratégies de fusion](../merge-policies/overview.md).
+Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur, reportez-vous à la section [guide de l’interface utilisateur des stratégies de fusion](../merge-policies/ui-guide.md). Pour en savoir plus sur les stratégies de fusion en général et leur rôle dans Experience Platform, veuillez commencer par lire la [présentation des stratégies de fusion](../merge-policies/overview.md).
 
 ## Prise en main
 
@@ -28,13 +28,17 @@ Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Real-ti
 
 ## Composants des stratégies de fusion {#components-of-merge-policies}
 
-Les stratégies de fusion sont réservées à votre organisation IMS, ce qui vous permet de créer différentes stratégies afin de fusionner les schémas selon vos besoins. Toute API accédant aux données [!DNL Profile] nécessite une stratégie de fusion, bien qu’une valeur par défaut soit utilisée si elle n’est pas explicitement fournie. [!DNL Platform] fournit aux organisations une stratégie de fusion par défaut, ou vous pouvez créer une stratégie de fusion pour une classe de schéma de modèle de données d’expérience (XDM) spécifique et la marquer comme stratégie par défaut pour votre organisation.
+Les stratégies de fusion sont réservées à votre organisation IMS, ce qui vous permet de créer différentes stratégies afin de fusionner les schémas selon vos besoins. Toute API accédant à [!DNL Profile] Les données nécessitent une stratégie de fusion, bien qu’une stratégie par défaut soit utilisée si elles ne sont pas explicitement fournies. [!DNL Platform] fournit aux organisations une stratégie de fusion par défaut, ou vous pouvez créer une stratégie de fusion pour une classe de schéma de modèle de données d’expérience (XDM) spécifique et la marquer comme stratégie par défaut pour votre organisation.
 
 Bien que chaque organisation puisse avoir plusieurs stratégies de fusion par classe de schéma, chaque classe ne peut avoir qu’une seule stratégie de fusion par défaut. Tout jeu de stratégies de fusion comme valeur par défaut sera utilisé lorsque le nom de la classe de schéma est fourni et qu’une stratégie de fusion est requise, mais pas fournie.
 
 >[!NOTE]
 >
 >Lorsque vous définissez une nouvelle stratégie de fusion comme stratégie par défaut, toute stratégie de fusion précédemment définie comme stratégie par défaut ne sera plus utilisée comme stratégie par défaut.
+
+Pour garantir que tous les consommateurs de profils utilisent la même vue sur les périphéries, les stratégies de fusion peuvent être marquées comme principales sur les bords. Pour qu’un segment soit activé sur Edge (marqué comme segment Edge), il doit être lié à une stratégie de fusion marquée comme principale sur Edge. Si un segment est **not** lié à une stratégie de fusion marquée comme principale sur Edge, le segment ne sera pas marqué comme principal sur Edge et sera marqué comme un segment en continu.
+
+En outre, chaque organisation IMS ne peut avoir que **one** stratégie de fusion principale en périphérie. Si une stratégie de fusion est principale sur Edge, elle peut être utilisée pour d’autres systèmes sur Edge, tels que Edge Profile, Edge Segmentation et Destinations on Edge.
 
 ### Objet de stratégie de fusion complet
 
@@ -57,6 +61,7 @@ L’objet de stratégie de fusion complet est un ensemble de préférences contr
         "attributeMerge": {
             "type": "{ATTRIBUTE_MERGE_TYPE}"
         },
+        "isActiveOnEdge": "{BOOLEAN}",
         "default": "{BOOLEAN}",
         "updateEpoch": "{UPDATE_TIME}"
     }
@@ -67,11 +72,12 @@ L’objet de stratégie de fusion complet est un ensemble de préférences contr
 | `id` | Le système a généré un identifiant unique attribué au moment de la création. |
 | `name` | Nom convivial par lequel la stratégie de fusion peut être identifiée dans les affichages en liste. |
 | `imsOrgId` | Identifiant d’organisation auquel appartient cette stratégie de fusion. |
-| `identityGraph` | Objet de [graphique d’identités](#identity-graph) indiquant le graphique d’identités à partir duquel les identités associées seront obtenues. Les fragments de profil trouvés pour toutes les identités associées seront fusionnés. |
-| `attributeMerge` | [Attribut ](#attribute-merge) mergeobject indiquant la manière dont la stratégie de fusion établit la priorité des attributs de profil en cas de conflit de données. |
-| `schema.name` | Partie de l’objet [`schema`](#schema), le champ `name` contient la classe de schéma XDM à laquelle la stratégie de fusion se rapporte. Pour plus d’informations sur les schémas et les classes, consultez la [documentation XDM](../../xdm/home.md). |
-| `default` | Valeur booléenne indiquant si cette stratégie de fusion est la valeur par défaut du schéma spécifié. |
+| `schema.name` | Partie de la variable [`schema`](#schema) , l’objet `name` contient la classe de schéma XDM à laquelle se rapporte la stratégie de fusion. Pour plus d’informations sur les schémas et les classes, veuillez lire la section [Documentation XDM](../../xdm/home.md). |
 | `version` | [!DNL Platform]Version de la stratégie de fusion gérée par Cette valeur en lecture seule est incrémentée chaque fois qu’une stratégie de fusion est mise à jour. |
+| `identityGraph` | Objet de [graphique d’identités](#identity-graph) indiquant le graphique d’identités à partir duquel les identités associées seront obtenues. Les fragments de profil trouvés pour toutes les identités associées seront fusionnés. |
+| `attributeMerge` | [Fusion d’attributs](#attribute-merge) indiquant la manière dont la stratégie de fusion établit la priorité des attributs de profil en cas de conflit de données. |
+| `isActiveOnEdge` | Valeur booléenne indiquant si cette stratégie de fusion peut être utilisée sur Edge. Par défaut, cette valeur est `false`. |
+| `default` | Valeur booléenne indiquant si cette stratégie de fusion est la valeur par défaut du schéma spécifié. |
 | `updateEpoch` | Date de la dernière mise à jour de la stratégie de fusion. |
 
 **Exemple de stratégie de fusion**
@@ -91,6 +97,7 @@ L’objet de stratégie de fusion complet est un ensemble de préférences contr
         "attributeMerge": {
             "type": "timestampOrdered"
         },
+        "isActiveOnEdge": false,
         "default": true,
         "updateEpoch": 1551660639
     }
@@ -98,7 +105,7 @@ L’objet de stratégie de fusion complet est un ensemble de préférences contr
 
 ### Graphique d’identités {#identity-graph}
 
-[Adobe Experience Platform Identity ](../../identity-service/home.md) Service gère les graphiques d’identités utilisés globalement et pour chaque organisation sur  [!DNL Experience Platform]. L’attribut `identityGraph` de la stratégie de fusion définit la manière de déterminer les identités associées pour un utilisateur.
+[Service Adobe Experience Platform Identity](../../identity-service/home.md) gère les graphiques d’identités utilisés globalement et pour chaque organisation sur [!DNL Experience Platform]. L’attribut `identityGraph` de la stratégie de fusion définit la manière de déterminer les identités associées pour un utilisateur.
 
 **Objet identityGraph**
 
@@ -123,7 +130,7 @@ Où `{IDENTITY_GRAPH_TYPE}` peut prendre une de ces valeurs :
 
 ### Fusion d’attributs {#attribute-merge}
 
-Un fragment de profil correspond aux informations de profil d’une seule identité de la liste d’identités qui existe pour un utilisateur particulier. Lorsque le type de graphique d’identités utilisé génère plusieurs identités, il existe un risque de conflit d’attributs de profil et une priorité doit être spécifiée. `attributeMerge` vous pouvez spécifier les attributs de profil à prioriser en cas de conflit de fusion entre des jeux de données de type Valeur de clé (données d’enregistrement).
+Un fragment de profil correspond aux informations de profil d’une seule identité de la liste d’identités qui existe pour un utilisateur particulier. Lorsque le type de graphique d’identités utilisé génère plusieurs identités, il existe un risque de conflit d’attributs de profil et une priorité doit être spécifiée. Utilisation `attributeMerge`, vous pouvez spécifier les attributs de profil à prioriser en cas de conflit de fusion entre des jeux de données de type Valeur clé (données d’enregistrement).
 
 **Objet attributeMerge**
 
@@ -137,9 +144,9 @@ Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
 
 * **`timestampOrdered`**: (par défaut) donne la priorité au profil qui a été mis à jour en dernier. Avec ce type de fusion, l’attribut `data` n’est pas obligatoire.
 * **`dataSetPrecedence`** : Donnez la priorité aux fragments de profil en fonction du jeu de données à partir duquel ils sont venus. Cela peut être utilisé lorsque les informations présentes dans un jeu de données sont préférées ou approuvées par rapport aux données d’un autre jeu de données. Lors de l’utilisation de ce type de fusion, l’attribut `order` est obligatoire, car il répertorie les jeux de données dans l’ordre de priorité.
-   * **`order`**: Lorsque &quot;dataSetPrecedence&quot; est utilisé, un  `order` tableau doit être fourni avec une liste de jeux de données. Les jeux de données qui ne font pas partie de la liste ne sont pas fusionnés. En d’autres termes, les jeux de données doivent être explicitement répertoriés pour être fusionnés dans un profil. Le tableau `order` répertorie les identifiants des jeux de données par ordre de priorité.
+   * **`order`**: Lorsque &quot;dataSetPrecedence&quot; est utilisé, une `order` doit être fourni avec une liste de jeux de données. Les jeux de données qui ne font pas partie de la liste ne sont pas fusionnés. En d’autres termes, les jeux de données doivent être explicitement répertoriés pour être fusionnés dans un profil. Le tableau `order` répertorie les identifiants des jeux de données par ordre de priorité.
 
-#### Exemple d’objet `attributeMerge` avec le type `dataSetPrecedence`
+#### Exemple `attributeMerge` objet `dataSetPrecedence` type
 
 ```json
     "attributeMerge": {
@@ -153,7 +160,7 @@ Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
     }
 ```
 
-#### Exemple d’objet `attributeMerge` avec le type `timestampOrdered`
+#### Exemple `attributeMerge` objet `timestampOrdered` type
 
 ```json
     "attributeMerge": {
@@ -183,11 +190,11 @@ Où la valeur de `name` est le nom de la classe XDM sur laquelle repose le sché
     }
 ```
 
-Pour en savoir plus sur XDM et l’utilisation des schémas dans Experience Platform, commencez par lire la [présentation du système XDM](../../xdm/home.md).
+Pour en savoir plus sur XDM et l’utilisation des schémas en Experience Platform, commencez par lire la [Présentation du système XDM](../../xdm/home.md).
 
 ## Accès aux stratégies de fusion {#access-merge-policies}
 
-À l’aide de l’API [!DNL Real-time Customer Profile], le point de terminaison `/config/mergePolicies` vous permet d’effectuer une requête de recherche pour afficher une stratégie de fusion spécifique selon son identifiant ou d’accéder à toutes les stratégies de fusion de votre organisation IMS, filtrées selon des critères spécifiques. Vous pouvez également utiliser le point de terminaison `/config/mergePolicies/bulk-get` pour récupérer plusieurs stratégies de fusion en fonction de leurs identifiants. Les étapes d’exécution de chacun de ces appels sont décrites dans les sections suivantes.
+En utilisant la variable [!DNL Real-time Customer Profile] API, `/config/mergePolicies` Le point de terminaison vous permet d’effectuer une requête de recherche pour afficher une stratégie de fusion spécifique selon son identifiant ou d’accéder à toutes les stratégies de fusion de votre organisation IMS, filtrées selon des critères spécifiques. Vous pouvez également utiliser la variable `/config/mergePolicies/bulk-get` point de terminaison pour récupérer plusieurs stratégies de fusion à l’aide de leurs identifiants. Les étapes d’exécution de chacun de ces appels sont décrites dans les sections suivantes.
 
 ### Accès à une stratégie de fusion unique par identifiant
 
@@ -232,6 +239,7 @@ Une réponse réussie renvoie les détails de la stratégie de fusion.
     "attributeMerge": {
         "type": "timestampOrdered"
     },
+    "isActiveOnEdge": "false",
     "default": false,
     "updateEpoch": 1551127597
 }
@@ -241,7 +249,7 @@ Pour en savoir plus sur chacun des éléments qui constituent une stratégie de 
 
 ### Récupération de plusieurs stratégies de fusion à l’aide de leurs identifiants
 
-Vous pouvez récupérer plusieurs stratégies de fusion en envoyant une requête de POST au point de terminaison `/config/mergePolicies/bulk-get` et en incluant les identifiants des stratégies de fusion que vous souhaitez récupérer dans le corps de la requête.
+Vous pouvez récupérer plusieurs stratégies de fusion en envoyant une requête de POST à la variable `/config/mergePolicies/bulk-get` point de terminaison et inclusion des identifiants des stratégies de fusion que vous souhaitez récupérer dans le corps de la requête.
 
 **Format d’API**
 
@@ -300,6 +308,7 @@ Une réponse réussie renvoie un état HTTP 207 (multi-état) et les détails de
             "attributeMerge": {
                 "type": "timestampOrdered"
             },
+            "isActiveOnEdge": true,
             "default": true,
             "updateEpoch": 1552086578
         },
@@ -327,6 +336,7 @@ Une réponse réussie renvoie un état HTTP 207 (multi-état) et les détails de
                     "5b76f8d787a6af01e2ceda18"
                 ]
             },
+            "isActiveOnEdge": false,
             "default": false,
             "updateEpoch": 1576099719
         }
@@ -351,6 +361,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 | `default` | Valeur booléenne filtrant les résultats selon que les stratégies de fusion sont ou non la valeur par défaut d’une classe de schémas. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. Valeur par défaut : 20 |
 | `orderBy` | Spécifie le champ de référence pour classer les résultats comme dans `orderBy=name` ou `orderBy=+name` pour un tri par nom dans l’ordre croissant ou `orderBy=-name` pour un tri dans l’ordre décroissant. Si vous omettez cette valeur, le tri par défaut de `name` s’effectue dans l’ordre croissant. |
+| `isActiveOnEdge` | Valeurs booléennes qui filtrent les résultats selon que les stratégies de fusion sont principales ou non. |
 | `schema.name` | Nom du schéma pour lequel récupérer les stratégies de fusion disponibles. |
 | `identityGraph.type` | Filtre les résultats par type de graphique d’identités. Les valeurs possibles sont &quot;none&quot; et &quot;pdg&quot; (graphique privé). |
 | `attributeMerge.type` | Filtre les résultats par type de fusion d’attributs utilisé. Les valeurs possibles sont &quot;timestampOrdered&quot; et &quot;dataSetPrecedence&quot;. |
@@ -404,6 +415,7 @@ Une réponse réussie renvoie une liste paginée de stratégies de fusion qui r�
             "attributeMerge": {
                 "type": "timestampOrdered"
             },
+            "isActiveOnEdge": true,
             "default": true,
             "updateEpoch": 1552086578
         },
@@ -431,6 +443,7 @@ Une réponse réussie renvoie une liste paginée de stratégies de fusion qui r�
                     "5b76f8d787a6af01e2ceda18"
                 ]
             },
+            "isActiveOnEdge": false,
             "default": false,
             "updateEpoch": 1576099719
         }
@@ -483,6 +496,7 @@ curl -X POST \
     "schema": {
         "name":"_xdm.context.profile"
     },
+    "isActiveOnEdge": true,
     "default": true
 }'
 ```
@@ -493,6 +507,7 @@ curl -X POST \
 | `identityGraph.type` | Type de graphique d’identités à partir duquel obtenir les identités connexes à fusionner. Valeurs possibles : &quot;none&quot; ou &quot;pdg&quot; (graphique privé). |
 | `attributeMerge` | Méthode de hiérarchisation des valeurs d’attribut de profil en cas de conflit de données. |
 | `schema` | Classe de schéma XDM associée à la stratégie de fusion. |
+| `isActiveOnEdge` | Indique si cette stratégie de fusion est principale ou non. |
 | `default` | Spécifie si cette stratégie de fusion est la stratégie par défaut pour le schéma. |
 
 Pour plus d’informations, reportez-vous à la section [Composants des stratégies de fusion](#components-of-merge-policies).
@@ -526,6 +541,7 @@ Une réponse réussie renvoie les détails de la stratégie de fusion créée.
             "5b76f8d787a6af01e2ceda18"
         ]
     },
+    "isActiveOnEdge": true,
     "default": true,
     "updateEpoch": 1551898378
 }
@@ -573,7 +589,7 @@ curl -X PATCH \
 | Propriété | Description |
 |---|---|
 | `op` | Spécifie l’opération à effectuer. Vous trouverez des exemples d’autres opérations PATCH dans la documentation [JSON Patch](http://jsonpatch.com). |
-| `path` | Chemin du champ à mettre à jour. Les valeurs acceptées sont les suivantes : &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot;. |
+| `path` | Chemin du champ à mettre à jour. Les valeurs acceptées sont les suivantes : &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot;., &quot;/isActiveOnEdge&quot; |
 | `value` | Valeur sur laquelle le champ spécifié doit être défini. |
 
 Pour plus d’informations, reportez-vous à la section [Composants des stratégies de fusion](#components-of-merge-policies).
@@ -608,6 +624,7 @@ Une réponse réussie renvoie les détails de la stratégie de fusion mise à jo
             "5b76f8d787a6af01e2ceda18"
         ]
     },
+    "isActiveOnEdge": true,
     "default": true,
     "updateEpoch": 1551898378
 }
@@ -656,6 +673,7 @@ curl -X PUT \
                 "5b76f8d787a6af01e2ceda18"
             ]
         },
+        "isActiveOnEdge": true,
         "default": true,
         "updateEpoch": 1551898378
     }'
@@ -667,10 +685,10 @@ curl -X PUT \
 | `identityGraph` | Graphique d’identités à partir duquel obtenir les identités connexes à fusionner. |
 | `attributeMerge` | Méthode de hiérarchisation des valeurs d’attribut de profil en cas de conflit de données. |
 | `schema` | Classe de schéma XDM associée à la stratégie de fusion. |
+| `isActiveOnEdge` | Indique si cette stratégie de fusion est principale ou non. |
 | `default` | Spécifie si cette stratégie de fusion est la stratégie par défaut pour le schéma. |
 
 Pour plus d’informations, reportez-vous à la section [Composants des stratégies de fusion](#components-of-merge-policies).
-
 
 **Réponse**
 
@@ -701,6 +719,7 @@ Une réponse réussie renvoie les détails de la stratégie de fusion mise à jo
             "5b76f8d787a6af01e2ceda18"
         ]
     },
+    "isActiveOnEdge": true,
     "default": true,
     "updateEpoch": 1551898378
 }
@@ -709,6 +728,10 @@ Une réponse réussie renvoie les détails de la stratégie de fusion mise à jo
 ## Suppression d’une stratégie de fusion
 
 Vous pouvez supprimer une stratégie de fusion en exécutant une requête DELETE au point de terminaison `/config/mergePolicies` et en incluant l’identifiant de la stratégie de fusion que vous souhaitez supprimer dans le chemin d’accès de la requête.
+
+>[!NOTE]
+>
+>Si la stratégie de fusion comporte `isActiveOnEdge` défini sur true, stratégie de fusion **cannot** être supprimées. Utilisez l’une des méthodes suivantes : [PATCH](#edit-individual-merge-policy-fields) ou [PUT](#overwrite-a-merge-policy) points de fin pour mettre à jour la stratégie de fusion avant de la supprimer.
 
 **Format d’API**
 
@@ -739,6 +762,6 @@ Une requête de suppression réussie renvoie un état HTTP 200 (OK) et un corps
 
 ## Étapes suivantes
 
-Maintenant que vous savez comment créer et configurer des stratégies de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils client dans Platform et pour créer des segments d’audience à partir de vos données [!DNL Real-time Customer Profile].
+Maintenant que vous savez comment créer et configurer des stratégies de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils client dans Platform et pour créer des segments d’audience à partir de votre organisation. [!DNL Real-time Customer Profile] data.
 
 Consultez l’[aide d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md) pour commencer à définir et à utiliser des segments.
