@@ -5,16 +5,20 @@ title: Point de terminaison de l’API de mesures
 topic-legacy: developer guide
 description: Découvrez comment récupérer les mesures d’observabilité dans Experience Platform à l’aide de l’API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 7dfc5115110ebdfa503e582b595191b17b0e46ed
 workflow-type: tm+mt
-source-wordcount: '2050'
-ht-degree: 47%
+source-wordcount: '1865'
+ht-degree: 45%
 
 ---
 
 # Point de terminaison des mesures
 
-Les mesures d’observabilité fournissent des informations sur les statistiques d’utilisation, les tendances historiques et les indicateurs de performances de diverses fonctionnalités de Adobe Experience Platform. Le point de terminaison `/metrics` dans la balise [!DNL Observability Insights API] vous permet de récupérer par programmation les données de mesure pour l’activité de votre organisation dans [!DNL Platform].
+Les mesures d’observabilité fournissent des informations sur les statistiques d’utilisation, les tendances historiques et les indicateurs de performances de diverses fonctionnalités de Adobe Experience Platform. Le `/metrics` du point de terminaison [!DNL Observability Insights API] vous permet de récupérer par programmation les données de mesure pour l’activité de votre entreprise dans [!DNL Platform].
+
+>[!NOTE]
+>
+>Le point de terminaison des mesures de version précédente (V1) a été abandonné. Ce document porte exclusivement sur la version actuelle (V2). Pour plus d’informations sur le point de terminaison V1 pour les implémentations héritées, reportez-vous à la section [Référence d’API](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
 
 ## Prise en main
 
@@ -22,101 +26,7 @@ Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Obs
 
 ## Récupération des mesures d’observabilité
 
-Il existe deux méthodes prises en charge pour récupérer les données de mesure à l’aide de l’API :
-
-* [Version 1](#v1) : Spécifiez des mesures à l’aide de paramètres de requête.
-* [Version 2](#v2) : Spécifiez et appliquez des filtres aux mesures à l’aide d’une charge utile JSON.
-
-### Version 1 {#v1}
-
-Vous pouvez récupérer des données de mesure en envoyant une requête de GET au point de terminaison `/metrics`, en spécifiant des mesures à l’aide de paramètres de requête.
-
-**Format d&#39;API**
-
-Au moins une mesure doit être fournie dans le paramètre `metric` . Les autres paramètres de requête sont facultatifs pour le filtrage des résultats.
-
-```http
-GET /metrics?metric={METRIC}
-GET /metrics?metric={METRIC}&metric={METRIC_2}
-GET /metrics?metric={METRIC}&id={ID}
-GET /metrics?metric={METRIC}&dateRange={DATE_RANGE}
-GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
-```
-
-| Paramètre | Description |
-| --- | --- |
-| `{METRIC}` | La mesure que vous souhaitez afficher. Lorsque vous combinez plusieurs mesures dans un seul appel, vous devez utiliser une esperluette (`&`) pour les séparer. Par exemple : `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | Identifiant d’une ressource [!DNL Platform] particulière dont vous souhaitez afficher les mesures. Cet identifiant peut être facultatif, obligatoire ou non applicable en fonction des mesures utilisées. Consultez l’ [annexe](#available-metrics) pour obtenir la liste des mesures disponibles, y compris les ID pris en charge (obligatoires et facultatifs) pour chaque mesure. |
-| `{DATE_RANGE}` | La période des mesures que vous souhaitez afficher, au format ISO 8601 (par exemple, `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
-
-**Requête**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/infrastructure/observability/insights/metrics?metric=timeseries.ingestion.dataset.size&metric=timeseries.ingestion.dataset.recordsuccess.count&id=5cf8ab4ec48aba145214abeb&dateRange=2018-10-01T07:00:00.000Z/2019-06-06T07:00:00.000Z \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Réponse**
-
-Une réponse réussie renvoie une liste d’objets, dont chacun contient une date et heure dans la `dateRange` fournie et les valeurs correspondantes pour les mesures spécifiées dans le chemin de requête. Si l’identifiant `id` d’une ressource de est inclus dans le chemin de requête, les résultats s’appliqueront uniquement à cette ressource particulière. [!DNL Platform] Si l’identifiant `id` est omis, les résultats s’appliqueront à toutes les ressources applicables au sein de votre organisation IMS.
-
-```json
-{
-  "id": "5cf8ab4ec48aba145214abeb",
-  "imsOrgId": "{IMS_ORG}",
-  "timeseries": {
-    "granularity": "MONTH",
-    "items": [
-      {
-        "timestamp": "2019-06-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 1125,
-          "timeseries.ingestion.dataset.size": 32320
-        }
-      },
-      {
-        "timestamp": "2019-05-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 1003,
-          "timeseries.ingestion.dataset.size": 31409
-        }
-      },
-      {
-        "timestamp": "2019-04-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 740,
-          "timeseries.ingestion.dataset.size": 25809
-        }
-      },
-      {
-        "timestamp": "2019-03-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 740,
-          "timeseries.ingestion.dataset.size": 25809
-        }
-      },
-      {
-        "timestamp": "2019-02-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 390,
-          "timeseries.ingestion.dataset.size": 16801
-        }
-      }
-    ],
-    "_page": null,
-    "_links": null
-  },
-  "stats": {}
-}
-```
-
-### Version 2 {#v2}
-
-Vous pouvez récupérer des données de mesure en envoyant une requête de POST au point de terminaison `/metrics`, en spécifiant les mesures que vous souhaitez récupérer dans la payload.
+Vous pouvez récupérer des données de mesure en envoyant une requête de POST à la variable `/metrics` point de terminaison , en spécifiant les mesures que vous souhaitez récupérer dans la payload.
 
 **Format d’API**
 
@@ -170,12 +80,12 @@ curl -X POST \
 | --- | --- |
 | `start` | Date/heure la plus ancienne à partir de laquelle récupérer les données de mesure. |
 | `end` | Date/heure la plus récente à partir de laquelle récupérer les données de mesure. |
-| `granularity` | Champ facultatif qui indique un intervalle de temps pour diviser les données de mesure en deux. Par exemple, une valeur `DAY` renvoie des mesures pour chaque jour entre la date `start` et la date `end`, tandis qu’une valeur `MONTH` regroupe les résultats des mesures par mois. Lors de l’utilisation de ce champ, une propriété `downsample` correspondante doit également être fournie pour indiquer la fonction d’agrégation par laquelle regrouper les données. |
+| `granularity` | Champ facultatif qui indique un intervalle de temps pour diviser les données de mesure en deux. Par exemple, une valeur de `DAY` renvoie des mesures pour chaque jour entre la variable `start` et `end` date, alors qu’une valeur de `MONTH` Regroupe plutôt les résultats des mesures par mois. Lors de l’utilisation de ce champ, une `downsample` doit également être fournie pour indiquer la fonction d’agrégation par laquelle regrouper les données. |
 | `metrics` | Tableau d’objets, un pour chaque mesure que vous souhaitez récupérer. |
-| `name` | Nom d’une mesure reconnue par Observability Insights. Consultez l’ [annexe](#available-metrics) pour obtenir la liste complète des noms de mesures acceptés. |
-| `filters` | Champ facultatif qui vous permet de filtrer les mesures selon des jeux de données spécifiques. Le champ est un tableau d’objets (un pour chaque filtre), chaque objet contenant les propriétés suivantes : <ul><li>`name`: Type d’entité par rapport auquel filtrer les mesures. Actuellement, seul `dataSets` est pris en charge.</li><li>`value`: L’identifiant d’un ou de plusieurs jeux de données. Plusieurs identifiants de jeu de données peuvent être fournis sous la forme d’une seule chaîne, chaque identifiant étant séparé par des caractères de barre verticale (`|`).</li><li>`groupBy`: Lorsqu’elle est définie sur true, indique que le jeu de données correspondant  `value` représente plusieurs jeux de données dont les résultats de mesure doivent être renvoyés séparément. S’il est défini sur false, les résultats des mesures de ces jeux de données sont regroupés.</li></ul> |
-| `aggregator` | Spécifie la fonction d’agrégation qui doit être utilisée pour regrouper plusieurs enregistrements de série temporelle en résultats uniques. Pour plus d’informations sur les agrégateurs disponibles, consultez la [documentation OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
-| `downsample` | Champ facultatif qui vous permet de spécifier une fonction d’agrégation afin de réduire le taux d’échantillonnage des données de mesure en triant les champs en intervalles (ou &quot;intervalles&quot;). L’intervalle du sous-échantillonnage est déterminé par la propriété `granularity` . Pour plus d’informations sur le sous-échantillonnage, consultez la [documentation OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
+| `name` | Nom d’une mesure reconnue par Observability Insights. Voir [annexe](#available-metrics) pour obtenir une liste complète des noms de mesures acceptés. |
+| `filters` | Champ facultatif qui vous permet de filtrer les mesures selon des jeux de données spécifiques. Le champ est un tableau d’objets (un pour chaque filtre), chaque objet contenant les propriétés suivantes : <ul><li>`name`: Type d’entité par rapport auquel filtrer les mesures. Actuellement, seul `dataSets` est pris en charge.</li><li>`value`: L’identifiant d’un ou de plusieurs jeux de données. Plusieurs identifiants de jeu de données peuvent être fournis sous la forme d’une seule chaîne, chaque identifiant étant séparé par des caractères de barre verticale (`|`).</li><li>`groupBy`: Lorsque la valeur est définie sur true, indique que la variable `value` représente plusieurs jeux de données dont les résultats de mesure doivent être renvoyés séparément. S’il est défini sur false, les résultats des mesures de ces jeux de données sont regroupés.</li></ul> |
+| `aggregator` | Spécifie la fonction d’agrégation qui doit être utilisée pour regrouper plusieurs enregistrements de série temporelle en résultats uniques. Pour plus d&#39;informations sur les agrégateurs disponibles, reportez-vous à la section [Documentation OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
+| `downsample` | Champ facultatif qui vous permet de spécifier une fonction d’agrégation afin de réduire le taux d’échantillonnage des données de mesure en triant les champs en intervalles (ou &quot;intervalles&quot;). L’intervalle du sous-échantillonnage est déterminé par la variable `granularity` . Pour plus d’informations sur le sous-échantillonnage, reportez-vous à la section [Documentation OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -268,18 +178,18 @@ Une réponse réussie renvoie les points de données résultants pour les mesure
 | `metric` | Nom de l’une des mesures fournies dans la requête. |
 | `filters` | Configuration de filtre pour la mesure spécifiée. |
 | `datapoints` | Tableau dont les objets représentent les résultats de la mesure et des filtres spécifiés. Le nombre d’objets dans le tableau dépend des options de filtre fournies dans la requête. Si aucun filtre n’a été fourni, le tableau ne contient qu’un seul objet représentant tous les jeux de données. |
-| `groupBy` | Si plusieurs jeux de données ont été spécifiés dans la propriété `filter` pour une mesure et que l’option `groupBy` a été définie sur true dans la requête, cet objet contiendra l’identifiant du jeu de données auquel s’applique la propriété `dps` correspondante.<br><br>Si cet objet apparaît vide dans la réponse, la  `dps` propriété correspondante s’applique à tous les jeux de données fournis dans le  `filters` tableau (ou à tous les jeux de données dans  [!DNL Platform] si aucun filtre n’a été fourni). |
-| `dps` | Les données renvoyées pour la mesure, le filtre et la période donnés. Chaque clé de cet objet représente un horodatage avec une valeur correspondante pour la mesure spécifiée. La période entre chaque point de données dépend de la valeur `granularity` spécifiée dans la requête. |
+| `groupBy` | Si plusieurs jeux de données ont été spécifiés dans la variable `filter` pour une mesure et la propriété `groupBy` a été définie sur true dans la requête, cet objet contiendra l’identifiant du jeu de données correspondant. `dps` s’applique à .<br><br>Si cet objet apparaît vide dans la réponse, la variable `dps` s’applique à tous les jeux de données fournis dans la variable `filters` tableau (ou tous les jeux de données dans [!DNL Platform] si aucun filtre n’a été fourni). |
+| `dps` | Les données renvoyées pour la mesure, le filtre et la période donnés. Chaque clé de cet objet représente un horodatage avec une valeur correspondante pour la mesure spécifiée. La période entre chaque point de données dépend de la variable `granularity` valeur spécifiée dans la requête. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Annexe
 
-La section suivante contient des informations supplémentaires sur l’utilisation du point de terminaison `/metrics`.
+La section suivante contient des informations supplémentaires sur l’utilisation de la variable `/metrics` point de terminaison .
 
 ### Mesures disponibles {#available-metrics}
 
-Les tableaux suivants répertorient toutes les mesures exposées par [!DNL Observability Insights], ventilées par service [!DNL Platform]. Chaque mesure comprend une description et un paramètre de requête d’identifiant accepté.
+Les tableaux suivants répertorient toutes les mesures exposées par [!DNL Observability Insights], ventilé par [!DNL Platform] service. Chaque mesure comprend une description et un paramètre de requête d’identifiant accepté.
 
 >[!NOTE]
 >
@@ -321,7 +231,7 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Iden
 
 | Mesure d’insights | Description | Paramètre de requête d’identifiant |
 | ---- | ---- | ---- |
-| timeseries.identity.dataset.recordsuccess.count | Nombre d’enregistrements écrits dans leur source de données par [!DNL Identity Service] pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
+| timeseries.identity.dataset.recordsuccess.count | Nombre d’enregistrements écrits dans leur source de données par [!DNL Identity Service], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.identity.dataset.recordfailed.count | Nombre d’enregistrements échoués par [!DNL Identity Service], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Nombre d’enregistrements d’identité correctement ingérés pour un espace de noms. | Identifiant d’espace de noms (**obligatoire**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Nombre d’enregistrements d’identité échoués par un espace de noms. | Identifiant d’espace de noms (**obligatoire**) |
@@ -366,11 +276,11 @@ Le tableau suivant décrit les mesures pour [!DNL Real-time Customer Profile].
 
 | Mesure d’insights | Description | Paramètre de requête d’identifiant |
 | ---- | ---- | ---- |
-| timeseries.profiles.dataset.recordread.count | Nombre d’enregistrements lus à partir de [!DNL Data Lake] par [!DNL Profile], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
+| timeseries.profiles.dataset.recordread.count | Nombre d&#39;enregistrements lus à partir du [!DNL Data Lake] par [!DNL Profile], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.profiles.dataset.recordsuccess.count | Nombre d’enregistrements écrits dans leur source de données par [!DNL Profile], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.profiles.dataset.recordfailed.count | Nombre d’enregistrements échoués par [!DNL Profile], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| timeseries.profiles.dataset.batchsuccess.count | Nombre de [!DNL Profile] lots ingérés pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| timeseries.profiles.dataset.batchfailed.count | Nombre de [!DNL Profile] lots échoués pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
+| timeseries.profiles.dataset.batchsuccess.count | Nombre [!DNL Profile] lots ingérés pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
+| timeseries.profiles.dataset.batchfailed.count | Nombre [!DNL Profile] les lots ont échoué pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | platform.ups.ingest.streaming.request.m1_rate | Taux de requêtes entrantes. | Organisation IMS (**Obligatoire**) |
 | platform.ups.ingest.streaming.access.put.success.m1_rate | Taux de réussite d’ingestion. | Organisation IMS (**Obligatoire**) |
 | platform.ups.ingest.streaming.records.created.m15_rate | Taux de nouveaux enregistrements ingérés pour un jeu de données. | Identifiant du jeu de données (**Obligatoire**) |
@@ -385,7 +295,7 @@ Le tableau suivant décrit les mesures pour [!DNL Real-time Customer Profile].
 
 ### Messages d’erreur
 
-Les réponses du point de terminaison `/metrics` peuvent renvoyer des messages d’erreur dans certaines conditions. Ces messages d’erreur sont renvoyés au format suivant :
+Réponses de la `/metrics` endpoint peut renvoyer des messages d’erreur sous certaines conditions. Ces messages d’erreur sont renvoyés au format suivant :
 
 ```json
 {
@@ -422,10 +332,10 @@ Le tableau suivant répertorie les différents codes d’erreur qui peuvent êtr
 
 | Code erreur | Titre | Description |
 | --- | --- | --- |
-| `INSGHT-1000-400` | Charge utile de requête incorrecte | Un problème s’est produit avec le payload de la requête. Assurez-vous de correspondre exactement à la mise en forme de la payload comme indiqué [au-dessus](#v2). L’une des raisons possibles peut déclencher cette erreur :<ul><li>Champs obligatoires manquants, tels que `aggregator`</li><li>Mesures non valides</li><li>La requête contient un agrégateur non valide</li><li>Une date de début a lieu après une date de fin</li></ul> |
+| `INSGHT-1000-400` | Charge utile de requête incorrecte | Un problème s’est produit avec le payload de la requête. Assurez-vous que la mise en forme de la payload correspond exactement à celle affichée. [above](#v2). L’une des raisons possibles peut déclencher cette erreur :<ul><li>Champs obligatoires manquants, tels que `aggregator`</li><li>Mesures non valides</li><li>La requête contient un agrégateur non valide</li><li>Une date de début a lieu après une date de fin</li></ul> |
 | `INSGHT-1001-400` | Échec de la requête des mesures | Une erreur s’est produite lors de la tentative d’interrogation de la base de données de mesures, en raison d’une mauvaise requête ou de l’impossibilité d’analyser la requête elle-même. Assurez-vous que votre requête est correctement formatée avant de réessayer. |
 | `INSGHT-1001-500` | Échec de la requête des mesures | Une erreur s’est produite lors de la tentative d’interrogation de la base de données de mesures, en raison d’une erreur du serveur. Essayez à nouveau la demande. Si le problème persiste, contactez le support Adobe. |
 | `INSGHT-1002-500` | Erreur de service | La demande n’a pas pu être traitée en raison d’une erreur interne. Essayez à nouveau la demande. Si le problème persiste, contactez le support Adobe. |
-| `INSGHT-1003-401` | Erreur de validation des environnements de test | La requête n’a pas pu être traitée en raison d’une erreur de validation de sandbox. Assurez-vous que le nom d’environnement de test que vous avez fourni dans l’en-tête `x-sandbox-name` représente un environnement de test valide et activé pour votre organisation IMS avant de réessayer la requête. |
+| `INSGHT-1003-401` | Erreur de validation des environnements de test | La requête n’a pas pu être traitée en raison d’une erreur de validation de sandbox. Assurez-vous que le nom de l’environnement de test que vous avez fourni dans la variable `x-sandbox-name` L’en-tête représente un environnement de test valide et activé pour votre organisation IMS avant de réessayer la requête. |
 
 {style=&quot;table-layout:auto&quot;}
