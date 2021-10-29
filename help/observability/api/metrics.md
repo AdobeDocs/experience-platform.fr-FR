@@ -5,9 +5,9 @@ title: Point de terminaison de l’API de mesures
 topic-legacy: developer guide
 description: Découvrez comment récupérer les mesures d’observabilité dans Experience Platform à l’aide de l’API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 7dfc5115110ebdfa503e582b595191b17b0e46ed
+source-git-commit: 6c10413adf033d09a49088951c127fc6e6c5552f
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1864'
 ht-degree: 45%
 
 ---
@@ -80,10 +80,10 @@ curl -X POST \
 | --- | --- |
 | `start` | Date/heure la plus ancienne à partir de laquelle récupérer les données de mesure. |
 | `end` | Date/heure la plus récente à partir de laquelle récupérer les données de mesure. |
-| `granularity` | Champ facultatif qui indique un intervalle de temps pour diviser les données de mesure en deux. Par exemple, une valeur de `DAY` renvoie des mesures pour chaque jour entre la variable `start` et `end` date, alors qu’une valeur de `MONTH` Regroupe plutôt les résultats des mesures par mois. Lors de l’utilisation de ce champ, une `downsample` doit également être fournie pour indiquer la fonction d’agrégation par laquelle regrouper les données. |
+| `granularity` | Champ facultatif qui indique l’intervalle de temps pour lequel diviser les données de mesure. Par exemple, une valeur de `DAY` renvoie des mesures pour chaque jour entre la variable `start` et `end` date, alors qu’une valeur de `MONTH` Regroupe plutôt les résultats des mesures par mois. Lors de l’utilisation de ce champ, une `downsample` doit également être fournie pour indiquer la fonction d’agrégation par laquelle regrouper les données. |
 | `metrics` | Tableau d’objets, un pour chaque mesure que vous souhaitez récupérer. |
 | `name` | Nom d’une mesure reconnue par Observability Insights. Voir [annexe](#available-metrics) pour obtenir une liste complète des noms de mesures acceptés. |
-| `filters` | Champ facultatif qui vous permet de filtrer les mesures selon des jeux de données spécifiques. Le champ est un tableau d’objets (un pour chaque filtre), chaque objet contenant les propriétés suivantes : <ul><li>`name`: Type d’entité par rapport auquel filtrer les mesures. Actuellement, seul `dataSets` est pris en charge.</li><li>`value`: L’identifiant d’un ou de plusieurs jeux de données. Plusieurs identifiants de jeu de données peuvent être fournis sous la forme d’une seule chaîne, chaque identifiant étant séparé par des caractères de barre verticale (`|`).</li><li>`groupBy`: Lorsque la valeur est définie sur true, indique que la variable `value` représente plusieurs jeux de données dont les résultats de mesure doivent être renvoyés séparément. S’il est défini sur false, les résultats des mesures de ces jeux de données sont regroupés.</li></ul> |
+| `filters` | Champ facultatif qui vous permet de filtrer les mesures selon des jeux de données spécifiques. Le champ est un tableau d’objets (un pour chaque filtre), chaque objet contenant les propriétés suivantes : <ul><li>`name`: Type d’entité par rapport auquel filtrer les mesures. Actuellement, seul `dataSets` est pris en charge.</li><li>`value`: L’identifiant d’un ou de plusieurs jeux de données. Plusieurs identifiants de jeu de données peuvent être fournis sous la forme d’une seule chaîne, chaque identifiant étant séparé par des caractères de barre verticale (`\|`).</li><li>`groupBy`: Lorsque la valeur est définie sur true, indique que la variable `value` représente plusieurs jeux de données dont les résultats de mesure doivent être renvoyés séparément. S’il est défini sur false, les résultats des mesures de ces jeux de données sont regroupés.</li></ul> |
 | `aggregator` | Spécifie la fonction d’agrégation qui doit être utilisée pour regrouper plusieurs enregistrements de série temporelle en résultats uniques. Pour plus d&#39;informations sur les agrégateurs disponibles, reportez-vous à la section [Documentation OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
 | `downsample` | Champ facultatif qui vous permet de spécifier une fonction d’agrégation afin de réduire le taux d’échantillonnage des données de mesure en triant les champs en intervalles (ou &quot;intervalles&quot;). L’intervalle du sous-échantillonnage est déterminé par la variable `granularity` . Pour plus d’informations sur le sous-échantillonnage, reportez-vous à la section [Documentation OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
 
