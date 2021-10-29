@@ -1,18 +1,18 @@
 ---
 keywords: RTCDP;CDP;Édition B2B;Real-time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp;IA dédiée aux clients
-title: Présentation de l’édition B2B de Real-time CDP
+title: Présentation de l’édition B2B de Real-time CDP (version bêta)
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Présentation du compte de l’édition B2B de Real-time Customer Data Platform
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 4130528800a9219e0c9e12639f292a7f55f86d5e
+source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 93%
+source-wordcount: '1092'
+ht-degree: 91%
 
 ---
 
-# Présentation de l’édition B2B de Real-time Customer Data Platform
+# Présentation de l’édition B2B de Real-time Customer Data Platform (version bêta)
 
 >[!IMPORTANT]
 >
@@ -83,4 +83,15 @@ Pour les entreprises disposant de plusieurs CRM, l’édition B2B de Real-time C
 
 Vous avez désormais une meilleure compréhension des avantages offerts par l’édition B2B de Real-time CDP aux professionnels du marketing et connaissez les différences entre cette édition et Real-time CDP. Découvrez maintenant comment appliquer ces fonctionnalités à votre propre organisation IMS.
 
-Pour connaître les avantages offerts par l’édition B2B de Real-time CDP pour votre modèle de service business-to-business, consultez l’[exemple de cas d’utilisation de l’édition B2B de Real-time CDP](./b2b-use-case.md). Vous pouvez également vous reporter à la documentation sur les [schémas dans l’édition B2B de Real-time Customer Data Platform](./schemas/b2b.md) pour obtenir des conseils plus spécifiques sur la création de schémas et la définition de relations pour les entités de données B2B essentielles.
+Pour comprendre comment la plateforme CDP B2B en temps réel peut bénéficier à votre modèle de service business-to-business, consultez la documentation suivante pour vous aider à démarrer :
+
+* [Exemple de cas d’utilisation pour l’édition B2B de la plateforme CDP en temps réel](./b2b-use-case.md)
+* [Envoi de données](./sources/b2b.md)
+* [Accès aux profils](./profile/profile-overview.md)
+* [Schémas dans l’édition B2B de Real-time Customer Data Platform](./schemas/b2b.md)
+* [Création de segments](./segmentation/b2b.md)
+* [Activation de segments vers des destinations](./destinations/b2b.md)
+* [Définition et application des stratégies de gouvernance des données](./privacy/data-governance-overview.md)
+
+<!-- PLACEHOLDER - page under construction -->
+<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->

@@ -1,16 +1,16 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Exemple de cas d’utilisation de l’édition B2B de Real-time Customer Data Platform
+title: Exemple de cas d’utilisation de l’édition B2B de Real-time Customer Data Platform (version bêta)
 description: Cet exemple de scénario fournit une illustration de configuration pour votre implémentation de l’édition B2B de Real-time Customer Data Platform.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 4ebc3ef813c3c44aa2b8a7aab5ccabbcc3c332b2
-workflow-type: ht
-source-wordcount: '1144'
+source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+workflow-type: tm+mt
+source-wordcount: '1146'
 ht-degree: 100%
 
 ---
 
-# Exemple de cas d’utilisation de l’édition B2B de Real-time Customer Data Platform
+# Exemple de cas d’utilisation de l’édition B2B de Real-time Customer Data Platform (version bêta)
 
 >[!IMPORTANT]
 >

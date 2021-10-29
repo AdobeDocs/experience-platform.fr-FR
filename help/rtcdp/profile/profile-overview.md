@@ -3,10 +3,10 @@ keywords: profil rtcdp;profils rtcdp;identités rtcdp;stratégies de fusion rtcd
 title: Présentation de Real-time Customer Profile dans la plateforme de données clients en temps réel
 description: Découvrez comment Real-time Customer Data Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes pour vos clients à l’aide de Real-time Customer Profile.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: 6579e371a8729e926b7061418c786150a27d4876
+source-git-commit: c15f59de49c60f55b432a39f30fb5f1865fd4671
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 45%
+source-wordcount: '476'
+ht-degree: 50%
 
 ---
 
@@ -20,13 +20,13 @@ Le profil client en temps réel offre une vue d’ensemble de chaque client en c
 
 La plateforme de données clients en temps réel repose sur les Experience Platform et utilise de nombreuses fonctionnalités Experience Platform de base, notamment la création de profils. Ces vues agrégées d’un client individuel rassemblent des données provenant de vos nombreux canaux marketing et des divers systèmes actuellement utilisés par votre organisation pour stocker les données client.
 
-## Améliorations des profils pour la plateforme de données clients en temps réel, version B2B
+## Améliorations des profils pour la plateforme CDP en temps réel, version B2B (bêta)
 
 >[!IMPORTANT]
 >
 >L’édition B2B de Real-time Customer Data Platform est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
 
-Outre les fonctionnalités de profil prises en charge par la plateforme de données clients en temps réel, vous pouvez utiliser la plateforme de données clients en temps réel, l’édition B2B, pour parcourir les informations importantes associées à une personne, telles qu’un compte et des opportunités. Pour en savoir plus sur les améliorations de profil pour la plateforme de données clients en temps réel, l’édition B2B, commencez par lire le [guide de navigation du profil](profile-browse.md).
+Outre les fonctionnalités de profil prises en charge par la plateforme de données clients en temps réel, vous pouvez utiliser la plateforme de données clients en temps réel, l’édition B2B, pour parcourir les informations importantes associées à une personne, telles qu’un compte et des opportunités. Pour en savoir plus sur les améliorations de profil pour la plateforme de données clients en temps réel, l’édition B2B, commencez par lire la [guide de navigation des profils](profile-browse.md).
 
 ## Identités et espaces de noms d’identité
 
@@ -38,7 +38,7 @@ Lorsque vous rassemblez des données client, les stratégies de fusion sont les 
 
 ## Visionneuse de profils
 
-Platform vous permet d’afficher facilement les profils client et de rechercher des profils précis à l’aide de différents attributs. Pour plus d’informations sur l’affichage des profils dans Platform, consultez la [présentation de la navigation sur les profils](profile-browse.md).
+Platform vous permet d’afficher facilement les profils client et de rechercher des profils précis à l’aide de différents attributs. Pour plus d’informations sur l’affichage des profils dans Platform, reportez-vous à la section [présentation de la navigation dans les profils](profile-browse.md).
 
 ## Étapes suivantes
 

@@ -1,21 +1,21 @@
 ---
-title: Schémas de la plateforme de données clients en temps réel de l’édition B2B
-description: Présentation du rôle des schémas de modèle de données d’expérience (XDM) dans l’édition B2B de la plateforme de données clients en temps réel.
+title: Schémas dans Real-time Customer Data Platform version B2B (bêta)
+description: Présentation du rôle des schémas de modèle de données d’expérience (XDM) dans l’édition B2B de Real-time Customer Data Platform.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 65afc75d89a4183d0ad03200f6c08c72dd104180
+source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 3%
+source-wordcount: '219'
+ht-degree: 8%
 
 ---
 
-# Schémas de la plateforme de données clients en temps réel B2B (version bêta)
+# Schémas dans Real-time Customer Data Platform version B2B (bêta)
 
 >[!IMPORTANT]
 >
->La plateforme de données clients en temps réel de l’édition B2B est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+>L’édition B2B de Real-time Customer Data Platform est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
 
-La plateforme de données clients en temps réel de l’édition B2B fournit plusieurs classes [Modèle de données d’expérience (XDM) standard](../../xdm/schema/composition.md#class) qui capturent des détails sur les entités de données B2B essentielles, telles que les comptes, les opportunités, les campagnes, etc. En outre, la plateforme CDP B2B en temps réel permet de définir des relations multiples-à-un entre ces schémas afin qu’ils puissent participer à des cas d’utilisation de segmentation avancée.
+L’édition B2B de Real-time Customer Data Platform offre plusieurs versions standard [Classes XDM (Experience Data Model)](../../xdm/schema/composition.md#class) qui capturent des détails sur les entités de données B2B essentielles, telles que les comptes, les opportunités, les campagnes, etc. En outre, la plateforme CDP B2B en temps réel permet de définir des relations multiples-à-un entre ces schémas afin qu’ils puissent participer à des cas d’utilisation de segmentation avancée.
 
 Les classes standard suivantes sont fournies dans l’édition B2B de la plateforme CDP en temps réel :
 
@@ -28,6 +28,6 @@ Les classes standard suivantes sont fournies dans l’édition B2B de la platefo
 * [Liste XDM Business Marketing](../../xdm/classes/b2b/business-marketing-list.md)
 * [Membres de la liste XDM Business Marketing](../../xdm/classes/b2b/business-marketing-list-members.md)
 
-Pour savoir comment créer une relation multiple-à-un entre deux schémas, reportez-vous au tutoriel sur la [définition des relations de schémas B2B](../../xdm/tutorials/relationship-b2b.md).
+Pour savoir comment créer une relation multiple-à-un entre deux schémas, reportez-vous au tutoriel sur [définition des relations de schéma B2B](../../xdm/tutorials/relationship-b2b.md).
 
-Si vous utilisez une connexion source B2B, vous pouvez utiliser un outil pour générer automatiquement les schémas requis et les relations entre eux. Pour plus d’informations, consultez le guide sur les [espaces de noms B2B](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) dans la documentation des sources.
+Si vous utilisez une connexion source B2B, vous pouvez utiliser un outil pour générer automatiquement les schémas requis et les relations entre eux. Consultez le guide sur la [Espaces de noms B2B](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) pour plus d’informations, voir la documentation sur les sources .

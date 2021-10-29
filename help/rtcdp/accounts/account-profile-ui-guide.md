@@ -1,16 +1,16 @@
 ---
 keywords: profil rtcdp;profils rtcdp;identités rtcdp;stratégies de fusion rtcdp;profil client en temps réel
-title: Guide de l’interface utilisateur des profils de compte
+title: Guide de l’interface utilisateur des profils de compte (version bêta)
 description: Grâce aux profils de compte, l’édition B2B de Real-time Customer Data Platform vous permet d’unifier les informations de compte provenant de plusieurs sources. Ce guide fournit des détails sur l’interaction avec les profils de compte dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 5bd2afcc594d96878ee51af2e9e99d74b764009e
-workflow-type: ht
-source-wordcount: '1191'
+source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+workflow-type: tm+mt
+source-wordcount: '1193'
 ht-degree: 100%
 
 ---
 
-# Guide de l’interface utilisateur des profils de compte
+# Guide de l’interface utilisateur des profils de compte (version bêta)
 
 >[!IMPORTANT]
 >

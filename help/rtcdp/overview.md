@@ -5,10 +5,10 @@ seo-title: Real-time Customer Data Platform Overview
 description: Présentation de la plateforme de données client en temps réel
 seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: 7dedc679ac4173ab3f782bc57517b2e66bc20844
+source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 100%
+source-wordcount: '421'
+ht-degree: 70%
 
 ---
 
@@ -26,6 +26,14 @@ La plateforme de données client en temps réel vous permet :
 * de gérer de manière responsable les profils avec des contrôles de confidentialité et de gouvernance fiables pour les identifiants connus et anonymes.
 * de générer des informations exploitables et d’adapter les audiences grâce à l’IA et à l’apprentissage automatique optimisés par Adobe Sensei et conçus pour les spécialistes marketing ;
 * de proposer des expériences personnalisées en temps réel sur l’ensemble des canaux et des destinations.
+
+## Real-time Customer Data Platform version B2B (bêta)
+
+Il existe également une autre version de la plateforme CDP en temps réel qui répond aux besoins de l’entreprise par rapport à l’entreprise. L’édition B2B de la plateforme CDP en temps réel est conçue spécifiquement pour étendre les fonctionnalités de la plateforme CDP en temps réel aux marketeurs. Elle dispose de différentes fonctionnalités activées dans l’écosystème Adobe Experience Platform pour mieux s’adapter au fonctionnement d’un modèle de service business-to-business.
+
+L’édition B2B de la plateforme CDP en temps réel permet aux marketeurs de créer des profils holistiques pour les personnes et les comptes. Plus précisément, vous pouvez enrichir, segmenter et exporter toutes vos données inter-sources à partir d’un magasin centralisé de profils de compte unifiés. Ces données peuvent être gérées à l’aide d’outils de gouvernance des données disponibles à chaque étape du processus de centralisation.
+
+Voir [Présentation de l’édition en temps réel de la plateforme CDP B2B](./b2b-overview.md) pour obtenir des informations plus complètes.
 
 ## Informations supplémentaires
 
