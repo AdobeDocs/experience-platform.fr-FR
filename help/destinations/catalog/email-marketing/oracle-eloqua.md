@@ -3,10 +3,10 @@ keywords: e-mail;e-mail;destinations d’e-mail;oracle eloqua;oracle
 title: Oracle de la connexion Eloqua
 description: Oracle Eloqua est une plateforme de logiciel en tant que service (SaaS, Software as a service) pour l’automatisation du marketing proposée par Oracle, qui vise à aider les spécialistes marketing et les entreprises B2B à gérer les campagnes marketing et la génération de pistes commerciales.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 26%
+source-wordcount: '487'
+ht-degree: 23%
 
 ---
 
@@ -54,7 +54,7 @@ while [configuration](../../ui/connect-destination.md) Pour cette destination, v
 * **[!UICONTROL Nom]** : choisissez un nom pertinent pour votre destination.
 * **[!UICONTROL Description]** : saisissez une description pour votre destination.
 * **[!UICONTROL Chemin du dossier]**: Indiquez le chemin d’accès dans votre emplacement de stockage où Platform dépose vos données d’exportation au format CSV.
-* **[!UICONTROL Format du fichier]** : **CSV** ou **séparé par des tabulations**. Sélectionnez le format du fichier à exporter vers l’emplacement de stockage.
+* **[!UICONTROL Format du fichier]**: Sélectionner **CSV** pour exporter des fichiers CSV vers votre emplacement de stockage.
 
 <!--
 
