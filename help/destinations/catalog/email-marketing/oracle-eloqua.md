@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinations d’e-mail;oracle eloqua;oracle
 title: Oracle de la connexion Eloqua
 description: Oracle Eloqua est une plateforme de logiciel en tant que service (SaaS, Software as a service) pour l’automatisation du marketing proposée par Oracle, qui vise à aider les spécialistes marketing et les entreprises B2B à gérer les campagnes marketing et la génération de pistes commerciales.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '491'
 ht-degree: 26%
 
 ---
@@ -14,21 +14,21 @@ ht-degree: 26%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/)[!DNL Oracle] est une plateforme de logiciel en tant que service (SaaS, Software as a service) pour l’automatisation du marketing proposée par , qui vise à aider les spécialistes marketing et les entreprises B2B à gérer les campagnes marketing et la génération de pistes commerciales.
 
-Pour envoyer des données de segment à [!DNL Oracle Eloqua], vous devez d’abord [connecter la destination](#connect-destination) dans Adobe Experience Platform, puis [configurer une importation de données](#import-data-into-eloqua) à partir de l’emplacement de stockage dans [!DNL Oracle Eloqua].
+Pour envoyer des données de segment à [!DNL Oracle Eloqua], vous devez d’abord [connecter la destination](#connect-destination) dans Adobe Experience Platform, puis [configurer un import de données](#import-data-into-eloqua) de votre emplacement de stockage dans [!DNL Oracle Eloqua].
 
 ## Type d&#39;export {#export-type}
 
-**Basé sur un profil**  : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse email, numéro de téléphone, nom), tel que sélectionné dans l&#39;écran de sélection des attributs du workflow d&#39;activation de l&#39; [audience](../../ui/activate-batch-profile-destinations.md#select-attributes).
+**Basé sur les profils** - vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), selon le choix effectué dans l’écran de sélection des attributs de la variable [workflow d&#39;activation d&#39;audience](../../ui/activate-batch-profile-destinations.md#select-attributes).
 
 ## LISTE AUTORISÉE d’adresses IP {#allow-list}
 
 Lors de la configuration des destinations de marketing par e-mail avec stockage SFTP, Adobe vous recommande d’ajouter certaines plages d’adresses IP à votre liste autorisée.
 
-Reportez-vous à la [liste autorisée d’adresses IP pour les destinations de stockage dans le cloud](../cloud-storage/ip-address-allow-list.md) si vous devez ajouter des adresses IP d’Adobe à votre liste autorisée.
+Voir [LISTE AUTORISÉE d’adresses IP pour les destinations de stockage dans le cloud](../cloud-storage/ip-address-allow-list.md) si vous devez ajouter des adresses IP d’Adobe à votre liste autorisée.
 
 ## Connexion à la destination {#connect}
 
-Pour vous connecter à cette destination, suivez les étapes décrites dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
+Pour vous connecter à cette destination, procédez comme décrit dans la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
 Cette destination prend en charge les types de connexions suivants :
 
@@ -37,23 +37,23 @@ Cette destination prend en charge les types de connexions suivants :
 
 ### Paramètres de connexion {#parameters}
 
-Lors de la configuration de [](../../ui/connect-destination.md) cette destination, vous devez fournir les informations suivantes :
+while [configuration](../../ui/connect-destination.md) Pour cette destination, vous devez fournir les informations suivantes :
 
-* Pour les connexions **[!UICONTROL SFTP avec mot de passe]**, vous devez fournir :
+* Pour **[!UICONTROL SFTP avec mot de passe]** connexions, vous devez fournir les éléments suivants :
    * [!UICONTROL Domaine]
    * [!UICONTROL Port]
    * [!UICONTROL Nom d’utilisateur]
    * [!UICONTROL Mot de passe]
-* Pour les connexions **[!UICONTROL SFTP avec clé SSH]**, vous devez fournir :
+* Pour **[!UICONTROL SFTP avec clé SSH]** connexions, vous devez fournir les éléments suivants :
    * [!UICONTROL Domaine]
    * [!UICONTROL Port]
    * [!UICONTROL Nom d’utilisateur]
    * [!UICONTROL Clé SSH]
 
-* Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement avec PGP/GPG à vos fichiers exportés sous la section **[!UICONTROL Clé]** . Votre clé publique doit être écrite en tant que chaîne codée [!DNL Base64].
+* Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement avec PGP/GPG à vos fichiers exportés sous le **[!UICONTROL Clé]** . Votre clé publique doit être écrite en tant que [!DNL Base64] chaîne codée.
 * **[!UICONTROL Nom]** : choisissez un nom pertinent pour votre destination.
 * **[!UICONTROL Description]** : saisissez une description pour votre destination.
-* **[!UICONTROL Chemin du dossier]** : Indiquez le chemin d’accès dans l’emplacement de stockage où Platform dépose vos données d’exportation au format CSV ou dans des fichiers séparés par des tabulations.
+* **[!UICONTROL Chemin du dossier]**: Indiquez le chemin d’accès dans votre emplacement de stockage où Platform dépose vos données d’exportation au format CSV.
 * **[!UICONTROL Format du fichier]** : **CSV** ou **séparé par des tabulations**. Sélectionnez le format du fichier à exporter vers l’emplacement de stockage.
 
 <!--
@@ -66,16 +66,16 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## Activation des segments vers cette destination {#activate}
 
-Voir [Activation des données d’audience vers les destinations d’exportation de profil de lot](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Voir [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
 ### Attributs de destination {#destination-attributes}
 
-Lors de l’activation des segments vers cette destination, Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination. Pour plus d’informations, reportez-vous aux [bonnes pratiques lors de l’activation d’audiences vers des destinations de marketing par e-mail](overview.md#best-practices).
+Lors de l’activation des segments vers cette destination, Adobe vous recommande de sélectionner un identifiant unique parmi vos [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination. Pour plus d’informations, reportez-vous à la section [bonnes pratiques lors de l’activation d’audiences vers des destinations de marketing par e-mail](overview.md#best-practices).
 
 ## Données exportées {#exported-data}
 
-Pour les destinations [!DNL Oracle Eloqua], Platform crée un fichier `.csv` délimité par des tabulations dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Vérification de l’activation du segment](../../ui/activate-batch-profile-destinations.md#verify) dans le tutoriel sur l’activation du segment.
+Pour [!DNL Oracle Eloqua] destinations, Platform crée une `.csv` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [vérification de l’activation des segments](../../ui/activate-batch-profile-destinations.md#verify) dans le tutoriel sur l’activation des segments.
 
 ## Configurer l’importation des données dans [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
-Après la connexion de [!DNL Platform] à votre stockage [!DNL SFTP], vous devez configurer l’importation des données depuis l’emplacement de stockage vers [!DNL Oracle Eloqua]. Pour découvrir la procédure à suivre, voir [Importation de contacts ou de comptes](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) dans la section [!DNL Oracle Eloqua Help Center].
+Après la connexion [!DNL Platform] à [!DNL SFTP] stockage, vous devez configurer l’importation des données depuis l’emplacement de stockage vers [!DNL Oracle Eloqua]. Pour découvrir la procédure à suivre, reportez-vous à la section [Importer des contacts ou des comptes](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) dans le [!DNL Oracle Eloqua Help Center].
