@@ -5,10 +5,10 @@ title: Traitement des demandes dʼaccès à des informations personnelles dans l
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service traite les demandes des clients dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts fondamentaux liés au traitement des demandes d’accès à des informations personnelles concernant les données clients stockées dans le lac de données.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
+source-git-commit: d8665a349c6f453d83b64317982f3544bbcde0f7
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 100%
+source-wordcount: '1380'
+ht-degree: 92%
 
 ---
 
@@ -35,7 +35,7 @@ Une connaissance concrète des services [!DNL Experience Platform] suivants est 
 
 ## Compréhension des espaces de noms d’identité {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] rapproche les données dʼidentité client entre les systèmes et les appareils. [!DNL Identity Service] utilise les espaces de noms d’identité pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse électronique (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
+Adobe Experience Platform [!DNL Identity Service] rapproche les données dʼidentité client entre les systèmes et les appareils. [!DNL Identity Service] utilise les espaces de noms d’identité pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse e-mail (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
 
 [!DNL Identity Service] conserve un stock d’espaces de nom d’identité définis globalement (standard) et par l’utilisateur (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
 
@@ -72,7 +72,7 @@ Une fois que vous avez défini les champs appropriés dans le schéma en tant qu
 >
 >Cette section suppose que vous connaissez la valeur unique de lʼidentifiant URI du schéma XDM de votre jeu de données. Si vous ne connaissez pas cette valeur, vous pouvez la récupérer à lʼaide de lʼAPI [!DNL Catalog Service]. Après avoir lu la section [prise en main](./api/getting-started.md) du guide du développeur, suivez les étapes décrites dans la section pour [répertorier](./api/list-objects.md) ou [rechercher des objets ](./api/look-up-object.md) [!DNL Catalog] pour trouver votre jeu de données. Lʼidentifiant de schéma se trouve sous `schemaRef.id`
 >
-> Cette section comprend des appels à lʼAPI Schema Registry. Pour obtenir des informations importantes sur lʼutilisation de lʼAPI, y compris la connaissance de votre `{TENANT_ID}` et du concept des conteneurs, consultez la section [prise en main](../xdm/api/getting-started.md) du guide du développeur.
+>Cette section suppose également que vous savez comment effectuer des appels vers l’API Schema Registry. Pour obtenir des informations importantes sur l’utilisation de l’API, y compris sur votre `{TENANT_ID}` et le concept de conteneurs, voir [prise en main](../xdm/api/getting-started.md) du guide de l’API.
 
 Vous pouvez ajouter un descripteur dʼidentité au schéma XDM dʼun jeu de données en envoyant une requête POST au point d’entrée `/descriptors` de lʼAPI [!DNL Schema Registry].
 
@@ -84,16 +84,16 @@ POST /descriptors
 
 **Requête**
 
-La requête suivante définit un descripteur d’identité dans un champ « adresse électronique » d’un exemple de schéma.
+La requête suivante définit un descripteur d’identité dans un champ « adresse e-mail » d’un exemple de schéma.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '
       {
         "@type": "xdm:descriptorIdentity",
@@ -154,19 +154,19 @@ Lors de la création de requêtes de tâche dans l’interface utilisateur, veil
 
 ### Utilisation de l’API
 
-Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. Les identifiants [!DNL Data Lake] doivent utiliser « non inscrit » pour la valeur `type` ainsi que pour la valeur `namespace` correspondant à lʼune des [étiquettes de confidentialité](#privacy-labels) ajoutées aux jeux de données applicables.
+Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. ID pour la variable [!DNL Data Lake] must use `unregistered` pour leur `type` et une `namespace` qui correspond à l’une des valeurs [étiquettes de confidentialité](#privacy-labels) qui ont été ajoutés aux jeux de données applicables.
 
 En outre, le tableau `include` du payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. Lorsque vous réalisez des requêtes vers [!DNL Data Lake], le tableau doit inclure la valeur `aepDataLake`.
 
-La requête suivante crée une nouvelle tâche concernant la confidentialité destinée à [!DNL Data Lake], à lʼaide de lʼespace de noms non enregistré « email_label ». Elle inclut également la valeur du produit pour [!DNL Data Lake] dans le tableau `include` :
+La requête suivante crée une nouvelle tâche de confidentialité pour le [!DNL Data Lake], à l’aide de l’événement non enregistré `email_label` espace de noms. Elle inclut également la valeur du produit pour [!DNL Data Lake] dans le tableau `include` :
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json' \
   -d '{
     "companyContexts": [
       {
@@ -198,6 +198,10 @@ curl -X POST \
     "regulation": "ccpa"
 }'
 ```
+
+>[!IMPORTANT]
+>
+>Platform traite les demandes d’accès à des informations personnelles dans toutes les [sandbox](../sandboxes/home.md) appartenant à votre organisation. Par conséquent, tout `x-sandbox-name` L’en-tête inclus dans la requête est ignoré par le système.
 
 ## Traitement des demandes de suppression
 
