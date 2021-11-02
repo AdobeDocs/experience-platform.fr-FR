@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un espace de stockage cloud tiers et les intégrer à Platform à l’aide des connecteurs source et des API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: f0bb779961e9387eab6a424461e35eba9ab48fe2
 workflow-type: tm+mt
 source-wordcount: '1792'
 ht-degree: 19%
@@ -15,21 +15,21 @@ ht-degree: 19%
 
 # Collecte de données de stockage dans le cloud à l’aide des connecteurs source et des API
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un stockage cloud tiers et les introduire dans Platform par le biais des connecteurs source et de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un espace de stockage cloud tiers et les intégrer à Platform par le biais des connecteurs source et de la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
-Ce tutoriel nécessite que vous ayez accès à un espace de stockage dans le cloud tiers par le biais d’une connexion valide et d’informations sur le fichier que vous souhaitez importer dans Platform, y compris le chemin d’accès et la structure du fichier. Si vous ne disposez pas de ces informations, reportez-vous au tutoriel sur [l’exploration d’un espace de stockage cloud tiers à l’aide de  [!DNL Flow Service] l’API](../explore/cloud-storage.md) avant de lancer ce tutoriel.
+Ce tutoriel nécessite que vous ayez accès à un espace de stockage dans le cloud tiers par le biais d’une connexion valide et d’informations sur le fichier que vous souhaitez importer dans Platform, y compris le chemin d’accès et la structure du fichier. Si vous ne disposez pas de ces informations, consultez le tutoriel sur [exploration de l’espace de stockage dans le cloud tiers à l’aide de la méthode [!DNL Flow Service] API](../explore/cloud-storage.md) avant de tester ce tutoriel.
 
 Ce tutoriel nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   - [Guide](../../../../xdm/api/getting-started.md) de développement du registre des schémas : Inclut des informations importantes à connaître pour effectuer avec succès des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
+   - [Guide de développement du registre des schémas](../../../../xdm/api/getting-started.md): Inclut des informations importantes à connaître pour effectuer avec succès des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Le de catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Experience Platform.
 - [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): L’API Batch Ingestion vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots.
 - [Environnements de test](../../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à un espace de stockage dans le cloud à l’aide de l’API [!DNL Flow Service].
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à un espace de stockage dans le cloud à l’aide de la variable [!DNL Flow Service] API.
 
 ### Lecture d’exemples d’appels API
 
@@ -43,7 +43,7 @@ Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutorie
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Toutes les ressources d’Experience Platform, y compris celles appartenant à [!DNL Flow Service], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Toutes les ressources de l’Experience Platform, y compris celles appartenant à [!DNL Flow Service], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -53,7 +53,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ## Création d’une connexion source {#source}
 
-Vous pouvez créer une connexion source en adressant une requête de POST à l’API [!DNL Flow Service]. Une connexion source se compose d’un identifiant de connexion, d’un chemin d’accès au fichier de données source et d’un identifiant de spécification de connexion.
+Vous pouvez créer une connexion source en envoyant une requête de POST au [!DNL Flow Service] API. Une connexion source se compose d’un identifiant de connexion, d’un chemin d’accès au fichier de données source et d’un identifiant de spécification de connexion.
 
 Pour créer une connexion source, vous devez également définir une valeur d&#39;énumération pour l&#39;attribut data format.
 
@@ -80,7 +80,7 @@ POST /sourceConnections
 
 **Requête**
 
-Vous pouvez ingérer un fichier délimité avec un délimiteur personnalisé en spécifiant une propriété `columnDelimiter`. Toute valeur de caractère unique est un délimiteur de colonne autorisé. Si elle n’est pas fournie, une virgule `(,)` est utilisée comme valeur par défaut.
+Vous pouvez ingérer un fichier délimité avec un délimiteur personnalisé en spécifiant une variable `columnDelimiter` comme propriété . Toute valeur de caractère unique est un délimiteur de colonne autorisé. Si elle n’est pas fournie, une virgule `(,)` est utilisée comme valeur par défaut.
 
 L’exemple de requête suivant crée une connexion source pour un type de fichier délimité à l’aide de valeurs séparées par des tabulations.
 
@@ -117,11 +117,11 @@ curl -X POST \
 | `data.format` | Une valeur enum qui définit l’attribut data format. |
 | `data.columnDelimiter` | Vous pouvez utiliser n’importe quel délimiteur de colonne de caractère unique pour collecter des fichiers plats. Cette propriété n’est requise que lors de l’ingestion de fichiers CSV ou TSV. |
 | `params.path` | Le chemin d’accès au fichier source auquel vous accédez. |
-| `connectionSpec.id` | Identifiant de spécification de connexion associé à votre système de stockage cloud tiers spécifique. Consultez l’ [annexe](#appendix) pour obtenir la liste des identifiants de spécification de connexion. |
+| `connectionSpec.id` | Identifiant de spécification de connexion associé à votre système de stockage cloud tiers spécifique. Voir [annexe](#appendix) pour obtenir la liste des identifiants de spécification de connexion. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion source nouvellement créée. Cet identifiant est requis lors d’une étape ultérieure pour créer un flux de données.
+Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion source. Cet identifiant est requis lors d’une étape ultérieure pour créer un flux de données.
 
 ```json
 {
@@ -134,7 +134,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 **Requête**
 
-Vous pouvez également ingérer des fichiers JSON compressés ou délimités en spécifiant sa `compressionType` comme propriété. La liste des types de fichiers compressés pris en charge est la suivante :
+Vous pouvez également ingérer des fichiers JSON compressés ou délimités en en spécifiant les `compressionType` comme propriété . La liste des types de fichiers compressés pris en charge est la suivante :
 
 - `bzip2`
 - `gzip`
@@ -143,7 +143,7 @@ Vous pouvez également ingérer des fichiers JSON compressés ou délimités en 
 - `tarGzip`
 - `tar`
 
-L’exemple de requête suivant crée une connexion source pour un fichier délimité compressé à l’aide d’un type de fichier `gzip`.
+L’exemple de requête suivant crée une connexion source pour un fichier délimité compressé à l’aide d’une `gzip` type de fichier.
 
 ```shell
 curl -X POST \
@@ -179,7 +179,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion source nouvellement créée. Cet identifiant est requis lors d’une étape ultérieure pour créer un flux de données.
+Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion source. Cet identifiant est requis lors d’une étape ultérieure pour créer un flux de données.
 
 ```json
 {
@@ -192,7 +192,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 Pour que les données source soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données source en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform dans lequel les données source sont contenues.
 
-Vous pouvez créer un schéma XDM cible en adressant une requête de POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Un schéma XDM cible peut être créé en adressant une requête de POST au [API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **Format d’API**
 
@@ -301,7 +301,7 @@ Une réponse réussie renvoie les détails du schéma nouvellement créé, y com
 
 ## Création d’un jeu de données cible
 
-Un jeu de données cible peut être créé en adressant une requête de POST à l’[API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/), en fournissant l’identifiant du schéma cible dans la payload.
+Un jeu de données cible peut être créé en adressant une requête de POST au [API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/), fournissant l’identifiant du schéma cible dans la payload.
 
 **Format d’API**
 
@@ -331,11 +331,11 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `schemaRef.id` | L’identifiant du schéma XDM cible. |
-| `schemaRef.contentType` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full-notext+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
+| `schemaRef.contentType` | Version du schéma. Cette valeur doit être définie. `application/vnd.adobe.xed-full-notext+json;version=1`, qui renvoie la dernière version mineure du schéma. |
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’identifiant du jeu de données est une chaîne en lecture seule générée par le système et utilisée pour référencer le jeu de données dans les appels API. L’identifiant du jeu de données cible est requis lors des étapes suivantes pour créer une connexion cible et un flux de données.
+Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de données que vous venez de créer au format `"@/datasets/{DATASET_ID}"`. L’identifiant du jeu de données est une chaîne en lecture seule générée par le système et utilisée pour référencer le jeu de données dans les appels API. L’identifiant du jeu de données cible est requis lors des étapes suivantes pour créer une connexion cible et un flux de données.
 
 ```json
 [
@@ -347,7 +347,7 @@ Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de don
 
 Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, vous devez indiquer l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Vous disposez désormais des identifiants uniques d’un schéma cible d’un jeu de données cible et de l’identifiant de spécification de connexion au lac de données. Grâce à ces identifiants, vous pouvez créer une connexion cible à l’aide de l’API [!DNL Flow Service] pour spécifier le jeu de données qui contiendra les données source entrantes.
+Vous disposez désormais des identifiants uniques d’un schéma cible d’un jeu de données cible et de l’identifiant de spécification de connexion au lac de données. A l&#39;aide de ces identifiants, vous pouvez créer une connexion cible à l&#39;aide de la fonction [!DNL Flow Service] API pour spécifier le jeu de données qui contiendra les données source entrantes.
 
 **Format d’API**
 
@@ -386,8 +386,8 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `data.schema.id` | `$id` du schéma XDM cible. |
-| `data.schema.version` | Version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full+json;version=1`, ce qui renvoie la dernière version mineure du schéma. |
+| `data.schema.id` | Le `$id` du schéma XDM cible. |
+| `data.schema.version` | Version du schéma. Cette valeur doit être définie. `application/vnd.adobe.xed-full+json;version=1`, qui renvoie la dernière version mineure du schéma. |
 | `params.dataSetId` | L’identifiant du jeu de données cible. |
 | `connectionSpec.id` | Correction de l’identifiant de spécification de connexion au lac de données. Cet identifiant est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
@@ -466,7 +466,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du nouveau mappage, y compris son identifiant unique (`id`). Cette valeur est requise lors d’une étape ultérieure pour créer un flux de données.
+Une réponse réussie renvoie les détails du mappage nouvellement créé, y compris son identifiant unique (`id`). Cette valeur est requise lors d’une étape ultérieure pour créer un flux de données.
 
 ```json
 {
@@ -501,7 +501,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la spécification de flux de données responsable de l’importation des données de votre source dans Platform. La réponse inclut la spécification de flux unique `id` requise pour créer un nouveau flux de données.
+Une réponse réussie renvoie les détails de la spécification de flux de données responsable de l’importation des données de votre source dans Platform. La réponse inclut la spécification de flux unique. `id` requis pour créer un nouveau flux de données.
 
 ```json
 {
@@ -639,11 +639,11 @@ La dernière étape de la collecte des données de stockage dans le cloud consis
 
 Un flux de données est chargé de planifier et de collecter les données d’une source. Vous pouvez créer un flux de données en exécutant une requête de POST tout en fournissant les valeurs mentionnées précédemment dans le payload.
 
-Pour planifier une ingestion, vous devez d’abord définir la valeur de l’heure de début sur la durée en secondes. Vous devez ensuite définir la valeur de fréquence sur l’une des cinq options suivantes : `once`, `minute`, `hour`, `day` ou `week`. La valeur interval désigne la période entre deux ingestion consécutives et la création d’une ingestion unique ne nécessite pas de définition d’un intervalle. Pour toutes les autres fréquences, la valeur de l’intervalle doit être égale ou supérieure à `15`.
+Pour planifier une ingestion, vous devez d’abord définir la valeur de l’heure de début sur la durée en secondes. Vous devez ensuite définir la valeur de fréquence sur l’une des cinq options suivantes : `once`, `minute`, `hour`, `day`ou `week`. La valeur interval désigne la période entre deux ingestion consécutives et la création d’une ingestion unique ne nécessite pas de définition d’un intervalle. Pour toutes les autres fréquences, la valeur de l’intervalle doit être égale ou supérieure à `15`.
 
 >[!IMPORTANT]
 >
->Il est vivement recommandé de planifier votre flux de données pour une ingestion unique lors de l’utilisation du [connecteur FTP](../../../connectors/cloud-storage/ftp.md).
+>Il est vivement recommandé de planifier votre flux de données pour une ingestion unique lors de l’utilisation de la variable [Connecteur FTP](../../../connectors/cloud-storage/ftp.md).
 
 **Format d’API**
 
@@ -692,17 +692,17 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `flowSpec.id` | L’ [identifiant de spécification de flux](#specs) récupéré à l’étape précédente. |
-| `sourceConnectionIds` | [ID de connexion source](#source) récupéré à une étape précédente. |
-| `targetConnectionIds` | [Identifiant de connexion cible](#target-connection) récupéré à une étape précédente. |
-| `transformations.params.mappingId` | [ID de mappage](#mapping) récupéré à une étape précédente. |
+| `flowSpec.id` | Le [identifiant de spécification de flux](#specs) récupéré à l’étape précédente. |
+| `sourceConnectionIds` | Le [ID de connexion source](#source) récupéré lors d’une étape précédente. |
+| `targetConnectionIds` | Le [identifiant de connexion cible](#target-connection) récupéré lors d’une étape précédente. |
+| `transformations.params.mappingId` | Le [ID de mappage](#mapping) récupéré lors d’une étape précédente. |
 | `scheduleParams.startTime` | Heure de début du flux de données dans l’époque. |
-| `scheduleParams.frequency` | Fréquence à laquelle le flux de données collectera les données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
-| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un entier non nul. L’intervalle n’est pas requis lorsque la fréquence est définie sur `once` et doit être supérieure ou égale à `15` pour les autres valeurs de fréquence. |
+| `scheduleParams.frequency` | Fréquence à laquelle le flux de données collectera les données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day`ou `week`. |
+| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un entier non nul. L’intervalle n’est pas requis lorsque la fréquence est définie sur `once` et doit être supérieur ou égal à `15` pour d’autres valeurs de fréquence. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données créé.
+Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données.
 
 ```json
 {
@@ -713,11 +713,11 @@ Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données
 
 ## Surveillance de votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions de flux, l’état d’achèvement et les erreurs. Pour plus d’informations sur la manière de surveiller les flux de données, consultez le tutoriel sur la [surveillance des flux de données dans l’API](../monitor.md)
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions de flux, l’état d’achèvement et les erreurs. Pour plus d’informations sur la surveillance des flux de données, consultez le tutoriel sur [surveillance des flux de données dans l’API](../monitor.md)
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé un connecteur source pour collecter les données de votre espace de stockage dans le cloud selon un calendrier précis. Les données entrantes peuvent désormais être utilisées par les services Platform en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, consultez les documents suivants :
+En suivant ce tutoriel, vous avez créé un connecteur source pour collecter les données de votre espace de stockage dans le cloud selon un calendrier précis. Les données entrantes peuvent désormais être utilisées par les services Platform en aval, tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, consultez les documents suivants :
 
 - [Présentation de Real-time Customer Profile](../../../../profile/home.md)
 - [Présentation de Data Science Workspace](../../../../data-science-workspace/home.md)
@@ -733,7 +733,7 @@ La section suivante répertorie les différents connecteurs source de stockage d
 | [!DNL Amazon S3] (S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
 | [!DNL Amazon Kinesis] (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
 | [!DNL Azure Blob] (Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
-| [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
+| [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) | `b3ba5556-48be-44b7-8b85-ff2b69b46dc4` |
 | [!DNL Azure Event Hubs] (Noeuds d’événement) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | [!DNL Azure File Storage] | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | [!DNL Google Cloud Storage] | `32e8f412-cdf7-464c-9885-78184cb113fd` |
