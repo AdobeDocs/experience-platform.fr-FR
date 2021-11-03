@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;api de destination;activation ad hoc;activation de segments ad hoc
 solution: Experience Platform
-title: (Version bêta) Activation des segments d’audience par le biais de l’API d’activation ad hoc Experience Platform
-description: Cet article illustre le processus de bout en bout d’activation des segments via l’API d’activation ad hoc, y compris les tâches de segmentation qui ont lieu avant l’activation.
+title: (Version bêta) Activation des segments d’audience vers des destinations par lots via l’API d’activation ad hoc
+description: Cet article illustre le processus de bout en bout d’activation des segments d’audience par le biais de l’API d’activation ad hoc, y compris les tâches de segmentation qui ont lieu avant l’activation.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
+source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1054'
 ht-degree: 12%
 
 ---
 
 
-# (Version bêta) Activation des segments d’audience par le biais de l’API d’activation ad hoc Experience Platform
+# (Version bêta) Activation des segments d’audience vers des destinations par lots via l’API d’activation ad hoc
 
 >[!IMPORTANT]
 >
@@ -35,16 +35,16 @@ Le diagramme ci-dessous illustre le workflow de bout en bout pour l’activation
 
 ### Ventes ou promotions de Flash
 
-Un détaillant en ligne prépare une vente flash limitée et souhaite informer ses clients dans un court délai. Grâce à l’API d’activation ad hoc Experience Platform, l’équipe marketing peut exporter des segments d’audience à la demande et envoyer rapidement des emails promotionnels à la base de clients.
+Un détaillant en ligne prépare une vente flash limitée et souhaite informer ses clients dans un court délai. Grâce à l’API d’activation ad hoc Experience Platform, l’équipe marketing peut exporter des segments à la demande et envoyer rapidement des emails promotionnels à la base de clients.
 
 
 ### Événements en cours ou informations de dernière minute
 
-Un hôtel s&#39;attend à des conditions météorologiques favorables les jours suivants et l&#39;équipe veut informer rapidement les arrivants afin qu&#39;ils puissent planifier en conséquence. L’équipe marketing peut utiliser l’API d’activation ad hoc Experience Platform pour exporter des segments d’audience à la demande et en informer les invités.
+Un hôtel s&#39;attend à des conditions météorologiques favorables les jours suivants et l&#39;équipe veut informer rapidement les arrivants afin qu&#39;ils puissent planifier en conséquence. L’équipe marketing peut utiliser l’API d’activation ad hoc Experience Platform pour exporter des segments à la demande et en informer les invités.
 
 ### Test d’intégration
 
-Les responsables informatiques peuvent utiliser l’API d’activation ad hoc Experience Platform pour exporter des segments d’audience à la demande, afin qu’ils puissent tester leur intégration personnalisée avec Adobe Experience Platform et s’assurer que tout fonctionne correctement.
+Les responsables informatiques peuvent utiliser l’API d’activation ad hoc Experience Platform pour exporter des segments à la demande, afin qu’ils puissent tester leur intégration personnalisée avec Adobe Experience Platform et s’assurer que tout fonctionne correctement.
 
 
 ## Barrières de sécurité {#guardrails}
@@ -156,8 +156,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Propriété | Description |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Les identifiants des instances de destination vers lesquelles vous souhaitez activer les segments d’audience. |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Les identifiants des segments d’audience que vous souhaitez activer vers la destination sélectionnée. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Les identifiants des instances de destination vers lesquelles vous souhaitez activer les segments. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Les identifiants des segments que vous souhaitez activer vers la destination sélectionnée. |
 | <ul><li>`exportId1`</li></ul> | L’ID renvoyé dans la réponse de la variable [exportation de segments](../../segmentation/api/export-jobs.md#retrieve-list) tâche. Voir [Étape 4 : Obtention du dernier ID de tâche d’exportation de segments](#segment-export-id) pour obtenir des instructions sur la manière de trouver cet identifiant. |
 
 ### Réponse
