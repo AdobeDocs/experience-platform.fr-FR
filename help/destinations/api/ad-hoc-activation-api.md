@@ -5,7 +5,7 @@ title: (Version bêta) Activation des segments d’audience par le biais de l’
 description: Cet article illustre le processus de bout en bout d’activation des segments via l’API d’activation ad hoc, y compris les tâches de segmentation qui ont lieu avant l’activation.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: d5b383ec4e9f6e2f05a0e5834e3998789a67ce32
+source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 12%
@@ -124,9 +124,9 @@ Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche
 
 Une fois la tâche d’exportation de segments terminée, vous pouvez déclencher l’activation.
 
->[!WARNING]
+>[!NOTE]
 >
->Vous pouvez activer un maximum de 50 segments par tâche d’activation ad hoc. Toute tentative d’activation de davantage de segments entraînera l’échec de la tâche.
+>Vous pouvez activer un maximum de 20 segments par tâche d’activation ad hoc. Toute tentative d’activation de davantage de segments entraînera l’échec de la tâche.
 
 ### Requête
 
