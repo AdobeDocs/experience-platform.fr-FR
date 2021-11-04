@@ -5,10 +5,10 @@ title: Guide de dépannage des environnements de test
 topic-legacy: troubleshooting guide
 description: Ce document apporte des réponses aux questions fréquentes sur les environnements de test dans Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 2a7b2040c221ff039f17f78d9ca712032d9fc02c
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 95%
+source-wordcount: '815'
+ht-degree: 44%
 
 ---
 
@@ -26,12 +26,11 @@ Les environnements de test sont des partitions virtuelles au sein d’une instan
 
 Deux types d’environnements de test sont disponibles dans Experience Platform :
 
-* Environnement de test de production
-* Environnement de test hors production
-
-Experience Platform fournit un environnement de test de production unique, qui ne peut pas être supprimé ou réinitialisé. Il ne peut y avoir qu’un seul environnement de test de production pour une instance Platform unique.
-
-Par comparaison, il est possible de créer plusieurs environnements de test hors production par administrateurs d’environnement de test pour une instance Platform unique. Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de test de production. En outre, les environnements de test hors production disposent d’une fonctionnalité de réinitialisation supprimant de l’environnement de test toutes les ressources créées par les clients. Les environnements de test hors production ne peuvent pas être convertis en environnements de test de production. Une licence Experience Platform par défaut vous accorde cinq environnements de test (un de production et quatre de non-production). Vous pouvez ajouter des packs de dix environnements de test hors production jusqu’à 75 environnements de test au total. Contactez votre administrateur dʼorganisation IMS ou votre représentant commercial Adobe pour plus de détails.
+* **Environnement de test de production**: Un environnement de test de production est conçu pour être utilisé avec des profils dans votre environnement de production. Platform vous permet de créer plusieurs environnements de test de production afin de fournir les fonctionnalités appropriées aux données tout en maintenant l’isolation opérationnelle. Cette fonctionnalité vous permet de dédier des environnements de test de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Les environnements de test de production prennent en charge un volume de profils de production allant jusqu’à votre licence [!DNL Profile] engagement (mesuré de manière cumulée sur tous vos environnements de test de production autorisés). Vous avez le droit d’utiliser un profil de moyenne sous licence par autorisé [!DNL Profile] (mesuré de manière cumulée sur tous vos environnements de test de production autorisés).
+* **Environnement de test de développement**: Un environnement de test de développement est un environnement de test qui peut être utilisé exclusivement à des fins de développement et de test avec des profils hors production. Les environnements de test de développement prennent en charge un volume de profils hors production pouvant atteindre 10 % de votre licence [!DNL Profile] engagement (mesuré de manière cumulée sur tous vos environnements de test de développement autorisés). Vous avez le droit de :
+   * une richesse moyenne de profil hors production de 75 kilo-octets par profil hors production autorisé (mesurée de manière cumulative sur tous vos environnements de test de développement autorisés) ;
+   * une tâche de segmentation par lots par jour, par environnement de test de développement ;
+   * Une moyenne de 120 [!DNL Profile] appels API, par [!DNL Profile], par an (mesuré de manière cumulée sur tous vos environnements de développement autorisés).
 
 Pour plus d’informations, consultez la [Présentation des environnements de test](./home.md).
 
@@ -39,13 +38,29 @@ Pour plus d’informations, consultez la [Présentation des environnements de te
 
 Les environnements de test sont des partitions isolées d’une instance Platform unique pour laquelle chaque environnement de test conserve sa propre bibliothèque indépendante de ressources. Il n’est pas possible d’accéder à une ressource qui existe dans un environnement de test depuis un autre environnement de test, quel que soit le type d’environnement de test (production ou hors production).
 
+## Quel est l’environnement de test de production par défaut ?
+
+L’environnement de test de production par défaut est le premier environnement de test de production créé lorsqu’une organisation IMS est configurée pour la première fois. L’environnement de test de production par défaut vous permet d’ingérer ou d’utiliser des données de Platform, ainsi que d’accepter des requêtes qui n’incluent pas de valeurs pour un nom d’environnement de test ou un ID d’environnement de test. L’environnement de test de production par défaut peut être réinitialisé, mais pas supprimé.
+
 ## De combien d’environnements de test de production puis-je disposer ?
 
-Experience Platform ne prend en charge qu’un environnement de test de production par organisation IMS qui est fourni prêt à l’emploi. Bien qu’il soit possible de renommer l’environnement de test de production, il ne peut être ni supprimé ni réinitialisé. Les utilisateurs possédant des droits d’administration pour les environnements de test peuvent seulement créer, réinitialiser et supprimer des environnements de test hors production.
+Une instance Experience Platform prend en charge plusieurs environnements de test de production et de développement, chaque environnement de test conservant sa propre bibliothèque indépendante de ressources Platform (y compris les schémas, les jeux de données et les profils).
 
-## De combien d’environnements de test hors production puis-je disposer ?
+Une licence d’Experience Platform par défaut vous accorde un total de cinq environnements de test que vous pouvez classer en tant que production ou développement. Vous pouvez attribuer une licence à des modules supplémentaires de 10 environnements de test, jusqu’à 75 environnements de test au total.
 
-Pour le moment, vous pouvez avoir jusqu’à 15 environnements de test hors production actifs dans Experience Platform au sein d’une organisation IMS unique.
+Les environnements de test de production peuvent être réinitialisés ou supprimés, à l’exception des environnements de test de production également utilisés par Adobe Analytics pour la variable [Analyses entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=fr) ou si le graphique d’identités hébergé dans est également utilisé par Adobe Audience Manager pour la variable [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr) fonction .
+
+Vous pouvez mettre à jour le titre d’un environnement de test de production. Cependant, un environnement de test de production ne peut pas être renommé.
+
+>[!NOTE]
+>
+>Le nom de l’environnement de test est utilisé à des fins de recherche dans les appels API, tandis que le titre de l’environnement de test est utilisé comme nom d’affichage.
+
+## Combien d’environnements de test de développement puis-je avoir ?
+
+Experience Platform permet actuellement à un maximum de 75 environnements de test (production et développement) d’être principaux au sein d’une seule organisation IMS.
+
+Les environnements de test de développement prennent en charge les fonctionnalités de réinitialisation et de suppression.
 
 ## Je viens de créer un environnement de test. Comment puis-je définir des autorisations pour les utilisateurs qui travailleront avec cet environnement de test ?
 
