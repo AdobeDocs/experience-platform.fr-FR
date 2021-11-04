@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 35%
+source-wordcount: '859'
+ht-degree: 36%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 35%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [[!DNL Data Governance]](#governance)
+- [Gouvernance des données](#governance)
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Observability Insights]](#observability)
 - [[!DNL Privacy Service]](#privacy)
@@ -26,9 +26,9 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
-## [!DNL Data Governance] {#governance}
+## Gouvernance des données {#governance}
 
-Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Il joue un rôle clé à différents niveaux dans [!DNL Experience Platform], notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et le contrôle d’accès sur les données pour les actions marketing.
+Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans la [!DNL Experience Platform] à différents niveaux, notamment le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
 
 **Nouvelles fonctionnalités**
 
@@ -38,15 +38,15 @@ Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble
 
 Pour plus d’informations sur ce service, consultez la [présentation de la gouvernance des données.](../../data-governance/home.md)
 
-## Destinations  {#destinations}
+## Destinations {#destinations}
 
-Dans la [plateforme de données clients en temps réel](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées avec des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
+Dans [Real-time Customer Data Platform](../../rtcdp/overview.md), les destinations sont des intégrations prédéfinies avec des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Améliorations de l’expérience utilisateur | Les utilisateurs peuvent accéder aux actions de tableau intégrées pour accéder plus facilement à des actions Principales, telles que l’ajout de données, la modification de la planification et l’ajout de segments. Pour plus d’informations, consultez le document [espaces de travail des destinations](../../destinations/ui/destinations-workspace.md) . |
+| Améliorations de l’expérience utilisateur | Les utilisateurs peuvent accéder aux actions de tableau intégrées pour accéder plus facilement à des actions Principales, telles que l’ajout de données, la modification de la planification et l’ajout de segments. Voir [espace de travail des destinations](../../destinations/ui/destinations-workspace.md) pour plus d’informations. |
 
 Pour en savoir plus, consultez la [présentation des destinations](../../destinations/home.md)
 
@@ -60,19 +60,19 @@ Pour en savoir plus, consultez la [présentation des destinations](../../destina
 | --- | --- |
 | Notifications d’événement d’Adobe I/O | [!DNL Observability Insights] tire parti des événements d’Adobe I/O pour créer des notifications d’événement pour plusieurs services d’Experience Platform. Les payloads de notification sont envoyés à un webhook configuré que vous pouvez ensuite utiliser pour automatiser d’autres processus en aval. |
 
-Pour plus d’informations sur le service, consultez la [[!DNL Observability Insights] présentation](../../observability/home.md) .
+Voir [[!DNL Observability Insights] aperçu](../../observability/home.md) pour plus d’informations sur le service.
 
 ## [!DNL Privacy Service] {#privacy}
 
-Plusieurs réglementations juridiques et organisationnelles donnent aux utilisateurs le droit d’accéder à leurs données personnelles ou de les supprimer de vos entrepôts de données sur demande. Adobe Experience Platform [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur pour vous aider à gérer ces requêtes de données de vos clients. Avec [!DNL Privacy Service], vous pouvez envoyer des demandes d’accès et de suppression de données clients privées ou personnelles des applications Adobe Experience Cloud, ce qui facilite la conformité automatisée aux réglementations de confidentialité légales et organisationnelles.
+Plusieurs réglementations juridiques et organisationnelles donnent aux utilisateurs le droit d’accéder à leurs données personnelles ou de les supprimer de vos entrepôts de données sur demande. Adobe Experience Platform [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur pour vous aider à gérer ces requêtes de données de vos clients. Avec [!DNL Privacy Service], vous pouvez soumettre des demandes d’accès et de suppression de données clients privées ou personnelles des applications Adobe Experience Cloud, ce qui facilite la conformité automatisée aux réglementations de confidentialité légales et organisationnelles.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge de LGPD (Brésil) | Des emplois dans le domaine de la vie privée peuvent maintenant être créés en vertu de la réglementation brésilienne [!DNL Lei Geral de Proteção de Dados] (LGPD). Ces tâches sont suivies sous le code de réglementation `lgpd_bra`. |
+| Prise en charge de LGPD (Brésil) | Des emplois dans le domaine de la vie privée peuvent maintenant être créés sous l&#39;égide du Brésil [!DNL Lei Geral de Proteção de Dados] (LGPD). Ces tâches sont suivies sous le code de réglementation. `lgpd_bra`. |
 
-Pour plus d’informations sur le service, consultez la [présentation du Privacy Service](../../privacy-service/home.md) .
+Voir [Présentation du Privacy Service](../../privacy-service/home.md) pour plus d’informations sur le service.
 
 ## Real-time Customer Profile {#profile}
 
@@ -82,7 +82,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences co
 | ------- | ----------- |
 | Visionneuse de profils | La visionneuse de profils, dans l’interface utilisateur de Platform, a été mise à jour pour être un tableau de bord avec une personnalisation complète. L’utilisateur a désormais la possibilité d’effectuer les tâches suivantes : <ul><li>Mettez à jour les attributs standard et personnalisés sélectionnés dans le widget d’informations de base.</li><li>Création, modification et suppression de widgets personnalisés</li><li>Redimensionnement et réorganisation des widgets</li></ul> |
 
-Pour plus d’informations sur [!DNL Real-time Customer Profile], y compris des tutoriels et des bonnes pratiques concernant l’utilisation des données [!DNL Profile], consultez la [présentation de Real-time Customer Profile](../../profile/home.md).
+Pour plus d’informations sur [!DNL Real-time Customer Profile], y compris des tutoriels et des bonnes pratiques pour travailler avec [!DNL Profile] data, veuillez lire la [Présentation de Real-time Customer Profile](../../profile/home.md).
 
 ## Segmentation Service {#segmentation}
 
@@ -101,7 +101,7 @@ Pour plus d’informations sur [!DNL Segmentation Service], consultez la [prése
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide de [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
 
 [!DNL Experience Platform] fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
@@ -110,6 +110,6 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Mappage automatique | [!DNL Platform] fournit des recommandations intelligentes pour le mappage automatique lors du processus d’ingestion des données, en fonction d’un schéma ou d’un jeu de données cible sélectionné par l’utilisateur. Vous pouvez ajuster manuellement des règles de mappage automatique flexibles en fonction de vos cas d’utilisation. |
-| Améliorations de l’expérience utilisateur | Les utilisateurs peuvent accéder aux actions de tableau intégrées pour accéder plus facilement à des actions Principales, telles que l’ajout de données, la modification de la planification et l’ajout de segments. Pour plus d’informations, consultez le document [suivi des flux de données](../../sources/tutorials/ui/monitor.md) . |
+| Améliorations de l’expérience utilisateur | Les utilisateurs peuvent accéder aux actions de tableau intégrées pour accéder plus facilement à des actions Principales, telles que l’ajout de données, la modification de la planification et l’ajout de segments. Voir [suivi des flux de données](../../sources/tutorials/ui/monitor.md) pour plus d’informations. |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

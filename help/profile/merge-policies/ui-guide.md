@@ -4,10 +4,10 @@ title: Guide de l’interface utilisateur des stratégies de fusion
 type: Documentation
 description: Lorsque vous rassemblez des données provenant de plusieurs sources dans Experience Platform, les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer la vue unifiée. Ce guide fournit des instructions détaillées sur l’utilisation des stratégies de fusion à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: e0a75a75e5dbb0318ec8785d887d7a156d28f5bd
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '2317'
-ht-degree: 94%
+source-wordcount: '2319'
+ht-degree: 93%
 
 ---
 
@@ -193,7 +193,7 @@ Une fois les modifications nécessaires effectuées, examinez votre stratégie d
 
 ## Violations de la politique de gouvernance des données
 
-Lors de la création ou de la mise à jour d’une stratégie de fusion, une vérification est effectuée pour déterminer si la politique de fusion enfreint l’une des stratégies en matière d’utilisation des données définies par votre organisation. Les stratégies dʼutilisation des données font partie de la [!DNL Data Governance] dʼAdobe Experience Platform et sont des règles qui décrivent les types dʼaction marketing que vous êtes autorisé à réaliser ou dont la réalisation est limitée sur certaines données de [!DNL Platform]. Par exemple, si vous avez utilisé une stratégie de fusion pour créer un segment activé dans une destination tierce et que votre organisation dispose dʼune stratégie dʼutilisation des données empêchant lʼexportation de données spécifiques à des tiers, vous recevrez une notification **[!UICONTROL Violation de la politique de gouvernance des données détectée]** lorsque vous tenterez dʼenregistrer votre stratégie de fusion.
+Lors de la création ou de la mise à jour d’une stratégie de fusion, une vérification est effectuée pour déterminer si la politique de fusion enfreint l’une des stratégies en matière d’utilisation des données définies par votre organisation. Les stratégies d’utilisation des données font partie de la gouvernance des données de Adobe Experience Platform et sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données spécifiques. [!DNL Platform] data. Par exemple, si vous avez utilisé une stratégie de fusion pour créer un segment activé dans une destination tierce et que votre organisation dispose dʼune stratégie dʼutilisation des données empêchant lʼexportation de données spécifiques à des tiers, vous recevrez une notification **[!UICONTROL Violation de la politique de gouvernance des données détectée]** lorsque vous tenterez dʼenregistrer votre stratégie de fusion.
 
 Cette notification inclut une liste des stratégies d’utilisation des données ayant été enfreintes et vous permet de consulter les détails de la violation en sélectionnant une stratégie depuis la liste. Si vous avez sélectionné une stratégie ayant fait lʼobjet dʼune infraction, lʼonglet **[!UICONTROL Liaison des données]** fournit un motif de violation et les activations concernées, chacun fournissant plus de détails sur la manière dont la stratégie dʼutilisation des données a été enfreinte.
 

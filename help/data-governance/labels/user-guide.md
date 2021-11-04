@@ -5,16 +5,16 @@ title: Gestion des libellés d’utilisation des données dans l’interface uti
 topic-legacy: labels
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 100%
+source-wordcount: '1140'
+ht-degree: 98%
 
 ---
 
 # Gestion des libellés d’utilisation des données dans l’interface utilisateur
 
-Ce guide d’utilisation détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur [!DNL Experience Platform]. Avant d’utiliser ce guide, consultez la présentation de la [[!DNL Data Governance] ](../home.md) pour une introduction plus détaillée du cadre de la [!DNL Data Governance].
+Ce guide d’utilisation détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur [!DNL Experience Platform]. Avant d’utiliser ce guide, reportez-vous à la section [Présentation de la gouvernance des données](../home.md) pour une introduction plus détaillée de la structure de gouvernance des données.
 
 ## Gestion des libellés au niveau du jeu de données
 
@@ -132,6 +132,6 @@ Désormais, vous pouvez également définir des stratégies d’utilisation des 
 
 ## Ressources supplémentaires
 
-La vidéo suivante a pour but de vous aider à comprendre la [!DNL Data Governance] et explique comment appliquer des libellés à un jeu de données et à des champs individuels.
+La vidéo suivante est destinée à vous aider à comprendre la gouvernance des données et explique comment appliquer des libellés à un jeu de données et à des champs individuels.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)

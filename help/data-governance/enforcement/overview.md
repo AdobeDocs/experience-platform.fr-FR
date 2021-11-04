@@ -5,10 +5,10 @@ title: Présentation de l’application des stratégies
 topic-legacy: guide
 description: Une fois que les libellés d’utilisation des données ont été appliqués aux jeux de données d’Adobe Experience Platform et que les stratégies d’utilisation des données ont été définies pour les actions marketing suivant ces libellés, les fonctionnalités de gouvernance des données vous permettent d’appliquer ces stratégies et d’empêcher les opérations de données en violation avec celles-ci. Il existe deux méthodes d’application des stratégies fournies par les fonctionnalités de gouvernance des données sur Platform. Il s’agit de l’application basée sur les API et de l’application automatique.
 exl-id: d19d8060-85a1-405c-856d-f59041947a33
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 100%
+source-wordcount: '239'
+ht-degree: 92%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 Une fois que les libellés d’utilisation des données ont été appliqués aux jeux de données et que les stratégies d’utilisation des données ont été définies pour les actions marketing suivant ces libellés, les fonctionnalités de gouvernance des données d’Adobe Experience Platform vous permettent d’appliquer ces stratégies et d’empêcher les opérations de données en violation avec celles-ci.
 
-Les fonctionnalités de [!DNL Data Governance] de [!DNL Platform] offrent deux méthodes d’application des stratégies : l’application basée sur les API et l’application automatique.
+Deux méthodes d’application des stratégies sont fournies par les fonctionnalités de gouvernance des données sur [!DNL Platform]: Application basée sur les API et application automatique.
 
 ## Application basée sur les API
 

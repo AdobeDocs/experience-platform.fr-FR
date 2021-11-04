@@ -5,16 +5,16 @@ title: Point d’entrée de l’API des actions marketing
 topic-legacy: developer guide
 description: Dans le cadre de la gouvernance des données Adobe Experience Platform, une action marketing est une action entreprise par un utilisateur de données Experience Platform pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 100%
+source-wordcount: '732'
+ht-degree: 95%
 
 ---
 
 # Point d’entrée des actions marketing
 
-Dans le cadre de la [!DNL Data Governance] d’Adobe Experience Platform, une action marketing est une action entreprise par un utilisateur de données [!DNL Experience Platform] pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
+Une action marketing, dans le cadre de la gouvernance des données de Adobe Experience Platform, est une action qui consiste à [!DNL Experience Platform] prise par l’utilisateur des données, pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
 
 Vous pouvez gérer les actions marketing pour votre organisation en utilisant le point d’entrée `/marketingActions` de l’API Policy Service.
 

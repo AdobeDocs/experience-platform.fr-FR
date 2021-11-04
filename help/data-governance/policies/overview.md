@@ -5,10 +5,10 @@ title: Présentation des stratégies dʼutilisation des données
 topic-legacy: policies
 description: Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1073'
-ht-degree: 100%
+source-wordcount: '1075'
+ht-degree: 98%
 
 ---
 
@@ -61,7 +61,7 @@ Pour plus d’informations sur l’utilisation des actions marketing et des stra
 
 ## Étapes suivantes
 
-Ce document a présenté les stratégies d’utilisation des données dans le cadre de la [!DNL Data Governance]. Vous pouvez maintenant poursuivre votre lecture en consultant la documentation relative au processus référencée tout au long de ce guide pour en savoir plus sur l’utilisation des stratégies dans l’API et l’interface utilisateur.
+Ce document présente les stratégies d’utilisation des données dans le cadre de la gouvernance des données. Vous pouvez maintenant poursuivre votre lecture en consultant la documentation relative au processus référencée tout au long de ce guide pour en savoir plus sur l’utilisation des stratégies dans l’API et l’interface utilisateur.
 
 ## Annexe
 

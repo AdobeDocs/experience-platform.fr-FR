@@ -5,22 +5,22 @@ title: Prise en main de l’API Policy Service
 topic-legacy: developer guide
 description: L’API Policy Service vous permet de créer et de gérer diverses ressources liées à la gouvernance des données d’Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels à l’API Policy Service.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 100%
+source-wordcount: '444'
+ht-degree: 92%
 
 ---
 
 # Prise en main de l’API [!DNL Policy Service]
 
-L’API [!DNL Policy Service] vous permet de créer et de gérer diverses ressources liées à la [!DNL Data Governance] d’Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels à l’API [!DNL Policy Service].
+Le [!DNL Policy Service] L’API vous permet de créer et de gérer diverses ressources liées à la gouvernance des données de Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels à l’API [!DNL Policy Service].
 
 ## Conditions préalables
 
 L’utilisation du guide du développement nécessite une bonne compréhension des différents services [!DNL Experience Platform] impliqués dans l’utilisation des fonctionnalités de gouvernance des données. Avant de commencer à travailler avec les [!DNL Policy Service API], consultez la documentation relative aux services suivants :
 
-* [[!DNL Data Governance]](../home.md) : cadre selon lequel [!DNL Experience Platform] applique la conformité d’utilisation des données.
+* [Gouvernance des données](../home.md) : cadre selon lequel [!DNL Experience Platform] applique la conformité d’utilisation des données.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [Environnements de test](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
@@ -37,7 +37,7 @@ La documentation de l’API exige aussi que vous ayez suivi le [tutoriel sur l�
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Toutes les ressources qui se trouvent dans [!DNL Experience Platform], y compris celles liées à la [!DNL Data Governance], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la gouvernance des données, sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 

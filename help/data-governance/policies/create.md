@@ -6,10 +6,10 @@ topic-legacy: policies
 type: Tutorial
 description: L’API Policy Service vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés d’utilisation. Ce document fournit un tutoriel détaillé sur la création d’une stratégie à l’aide de l’API Policy Service.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 100%
+source-wordcount: '1217'
+ht-degree: 97%
 
 ---
 
@@ -32,7 +32,7 @@ Avant de commencer ce tutoriel, consultez le [guide de développement](../api/ge
 
 ## Définition d’une action marketing {#define-action}
 
-Dans le cadre de la [!DNL Data Governance], une action marketing est une action entreprise par un utilisateur de données [!DNL Experience Platform] pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
+Dans la structure de gouvernance des données, une action marketing est une action qui consiste à [!DNL Experience Platform] prise par l’utilisateur des données, pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
 
 La première étape de la création d’une stratégie d’utilisation des données consiste à déterminer l’action marketing évaluée par la stratégie. Pour ce faire, utilisez l’une des options suivantes :
 
