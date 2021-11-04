@@ -5,10 +5,10 @@ title: Applications Privacy Service et Experience Cloud
 topic-legacy: overview
 description: Ce document fournit une référence pour la configuration de différentes applications Experience Cloud pour les opérations liées à la confidentialité.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: f0dc33dcd4803f157e411d8baf3b2d2f96cea5e1
+source-git-commit: 0d20da1264c20a5684c241a725041dd009f77b58
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 47%
+source-wordcount: '617'
+ht-degree: 49%
 
 ---
 
@@ -37,6 +37,7 @@ Voici une liste de [!DNL Experience Cloud] applications intégrées à [!DNL Pri
 | Adobe Experience Platform | ✓ | ✓ | <ul><li>[Documentation sur l’accès et la suppression pour le lac de données](../catalog/privacy.md)</li><li>[Documentation sur l’accès/la suppression pour Identity Service](../identity-service/privacy.md)</li><li>[Documentation sur l’accès et la suppression pour Real-time Customer Profile](../profile/privacy.md)</li><li>[!DNL Experience Platform] honneurs [demandes d’exclusion pour les segments ciblés](../segmentation/consents.md).</li></ul> |
 | Adobe Primetime Authentication | ✓ | N/A | <ul><li>[Documentation sur l’accès et la suppression](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] n’a pas la capacité de transférer des données. Par conséquent, les requêtes d’opposition ne sont pas applicables.</li></ul> |
 | Adobe Target | ✓ | N/A | <ul><li>[Documentation sur l’accès et la suppression](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=fr)</li><li>[!DNL Target] n’a pas la capacité de transférer des données. Par conséquent, les requêtes d’opposition ne sont pas applicables.</li></ul> |
+| Marketo Engage | ✓ | N/A | <ul><li>[Documentation sur l’accès et la suppression](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] n’a pas la capacité de transférer des données. Par conséquent, les requêtes d’opposition ne sont pas applicables.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -50,7 +51,6 @@ Voici une liste de [!DNL Experience Cloud] applications qui ne sont pas intégr�
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Présentation de la gestion des requêtes RGPD par l’administrateur de la confidentialité client ou l’administrateur AEM. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Étapes pour créer des requêtes RGPD d’accès et de suppression à l’aide de Livefyre. |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Assurez-vous que vos installations de Magento Commerce sont conformes aux exigences des législations spécifiques sur la confidentialité. |
-| [Marketo](https://www.marketo.com/company/trust/gdpr/) | Découvrez comment les réglementations de confidentialité s’appliquent à Marketo. |
 | [Balises dans Adobe Experience Platform](../tags/ui/client-side/consent.md) | Comment les développeurs peuvent-ils utiliser les extensions et le créateur de règles pour définir les solutions d’accords préalables et de droits d’opposition ? |
 | [Workfront](https://www.workfront.com/privacy-notice) | Découvrez comment Workfront collecte des données personnelles et comment un sujet des données peut envoyer une demande d’accès à des informations personnelles via un formulaire. |
 

@@ -5,9 +5,9 @@ title: Annexe du guide de l’API Privacy Service
 topic-legacy: developer guide
 description: Ce document contient des informations supplémentaires sur l’utilisation de l’API Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
+source-git-commit: 0d20da1264c20a5684c241a725041dd009f77b58
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '482'
 ht-degree: 79%
 
 ---
@@ -75,5 +75,6 @@ Le tableau suivant indique les valeurs acceptées pour la spécification d’un 
 | Attributs du client (CRS) | `CRS` |
 | Identity Service | `Identity` |
 | Profil client en temps réel | `profileService` |
+| Marketo Engage | `marketo` |
 
 {style=&quot;table-layout:auto&quot;}
