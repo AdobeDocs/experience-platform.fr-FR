@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes de mise à jour d’un flux de données, notamment son nom, sa description et sa planification, à l’aide de l’API Flow Service.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 152ad198918f9cf0bea9dabd67886f5d56763ef8
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 34%
+source-wordcount: '767'
+ht-degree: 27%
 
 ---
 
 # Mise à jour des flux de données à l’aide de l’API Flow Service
 
-Ce tutoriel décrit les étapes de mise à jour d’un flux de données, notamment son nom, sa description et sa planification à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes de mise à jour d’un flux de données, y compris ses informations de base, sa planification et ses jeux de mappages à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
@@ -23,10 +23,10 @@ Ce tutoriel nécessite que vous disposiez d’un identifiant de flux valide. Si 
 
 Ce tutoriel nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
 
-* [Sources](../../home.md) : Experience Platform permet d’ingérer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services Platform.
+* [Sources](../../home.md): Experience Platform permet d’ingérer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services Platform.
 * [Environnements de test](../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour mettre à jour votre flux de données avec succès à l’aide de l’API [!DNL Flow Service].
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour mettre à jour votre flux de données avec succès à l’aide de la variable [!DNL Flow Service] API.
 
 ### Lecture d’exemples d’appels API
 
@@ -40,7 +40,7 @@ Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutorie
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Toutes les ressources d’Experience Platform, y compris celles appartenant à [!DNL Flow Service], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Toutes les ressources de l’Experience Platform, y compris celles appartenant à [!DNL Flow Service], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -50,7 +50,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ## Recherche des détails du flux de données
 
-La première étape de la mise à jour de votre flux de données consiste à récupérer les détails du flux à l’aide de votre identifiant de flux. Vous pouvez afficher les détails actuels d’un flux de données existant en envoyant une requête de GET au point de terminaison `/flows` .
+La première étape de la mise à jour de votre flux de données consiste à récupérer les détails du flux à l’aide de votre identifiant de flux. Vous pouvez afficher les détails actuels d’un flux de données existant en adressant une requête de GET à la fonction `/flows` point de terminaison .
 
 **Format d’API**
 
@@ -60,7 +60,7 @@ GET /flows/{FLOW_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FLOW_ID}` | La valeur `id` unique du flux de données que vous souhaitez récupérer. |
+| `{FLOW_ID}` | L’unique `id` pour le flux de données que vous souhaitez récupérer. |
 
 **Requête**
 
@@ -191,11 +191,11 @@ Une réponse réussie renvoie les détails actuels de votre flux de données, y 
 
 ## Mise à jour du flux de données
 
-Pour mettre à jour le planning d’exécution, le nom et la description de votre flux de données, envoyez une requête de PATCH à l’API [!DNL Flow Service] tout en fournissant votre ID de flux, votre version et le nouveau planning que vous souhaitez utiliser.
+Pour mettre à jour le planning d’exécution, le nom et la description de votre flux de données, envoyez une requête de PATCH au [!DNL Flow Service] API lors de la fourniture de votre ID de flux, de votre version et du nouveau planning que vous souhaitez utiliser.
 
 >[!IMPORTANT]
 >
->L’en-tête `If-Match` est requis lors de l’exécution d’une requête de PATCH. La valeur de cet en-tête est la version unique de la connexion que vous souhaitez mettre à jour.
+>Le `If-Match` est requis lors de l’exécution d’une requête de PATCH. La valeur de cet en-tête est la version unique de la connexion que vous souhaitez mettre à jour. La valeur etag est mise à jour à chaque mise à jour réussie d’un flux de données.
 
 **Format d’API**
 
@@ -234,15 +234,15 @@ curl -X PATCH \
         ]'
 ```
 
-| Paramètre | Description |
+| Propriété | Description |
 | --------- | ----------- |
 | `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour le flux de données. Les opérations comprennent : `add`, `replace` et `remove`. |
-| `path` | Chemin d&#39;accès du paramètre à mettre à jour. |
+| `path` | Définit la partie du flux à mettre à jour. |
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 
 **Réponse**
 
-Une réponse réussie renvoie votre identifiant de flux et une balise mise à jour. Vous pouvez vérifier la mise à jour en adressant une demande de GET à l’API [!DNL Flow Service], tout en fournissant votre ID de flux.
+Une réponse réussie renvoie votre identifiant de flux et une balise mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à la variable [!DNL Flow Service] de l’API, tout en fournissant votre ID de flux.
 
 ```json
 {
@@ -251,6 +251,62 @@ Une réponse réussie renvoie votre identifiant de flux et une balise mise à jo
 }
 ```
 
+## Mise à jour du mapping
+
+Vous pouvez mettre à jour le jeu de mappages d’un flux de données existant en envoyant une requête PATCH à la variable [!DNL Flow Service] API et spécification des valeurs mises à jour pour votre `mappingId` et `mappingVersion`.
+
+**Format d’API**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+**Requête**
+
+La requête suivante met à jour le jeu de mappage de votre flux de données.
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
+    -d '[
+        {
+            "op": "replace",
+            "path": "/transformations/0",
+            "value": {
+                "name": "Mapping",
+                "params": {
+                    "mappingId": "c5f22f04e09f44498e528901546a83b1",
+                    "mappingVersion": 2
+                }
+            }
+        }
+    ]'
+```
+
+| Propriété | Description |
+| --- | --- |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour le flux de données. Les opérations comprennent : `add`, `replace` et `remove`. |
+| `path` | Définit la partie du flux à mettre à jour. Dans cet exemple, `transformations` est en cours de mise à jour. |
+| `value.name` | Nom de la propriété à mettre à jour. |
+| `value.params.mappingId` | Le nouvel identifiant de mappage à utiliser pour mettre à jour le jeu de mappages du flux de données. |
+| `value.params.mappingVersion` | La nouvelle version de mappage associée à l’ID de mappage mis à jour. |
+
+**Réponse**
+
+Une réponse réussie renvoie votre identifiant de flux et une balise mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à la variable [!DNL Flow Service] de l’API, tout en fournissant votre ID de flux.
+
+```json
+{
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"2c000802-0000-0200-0000-613976440000\""
+}
+```
+
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez mis à jour le planning d’exécution, le nom et la description de votre flux de données à l’aide de l’API [!DNL Flow Service]. Pour plus d’informations sur l’utilisation des connecteurs source, consultez la [présentation des sources](../../home.md).
+En suivant ce tutoriel, vous avez mis à jour les informations de base, la planification et les jeux de mappages de votre flux de données à l’aide de la variable [!DNL Flow Service] API. Pour plus d’informations sur l’utilisation des connecteurs source, voir [présentation des sources](../../home.md).
