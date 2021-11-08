@@ -4,10 +4,10 @@ title: Tableau de bord de l’utilisation des licences
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 47c4113d45b0101a761fa7d703013609e8729dbb
+source-git-commit: 87b6e12b33c49bdae49be45ce10f92b309a1e98e
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 4%
+source-wordcount: '837'
+ht-degree: 5%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation de la licence de votre entreprise, telles qu’elles sont capturées pendant un instantané quotidien. Ce guide explique comment accéder au tableau de bord de l’utilisation des licences dans l’interface utilisateur et l’utiliser. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
-Pour obtenir un aperçu général de l’interface utilisateur de Platform, consultez le [guide de l’interface utilisateur Experience Platform](../../landing/ui-guide.md).
+Pour obtenir un aperçu général de l’interface utilisateur de Platform, consultez le [Guide de l’interface utilisateur Experience Platform](../../landing/ui-guide.md).
 
 ## Données du tableau de bord d’utilisation des licences
 
@@ -27,19 +27,19 @@ Le tableau de bord de l’utilisation des licences affiche un instantané des do
 
 ## Exploration du tableau de bord de l’utilisation des licences
 
-Pour accéder au tableau de bord de l’utilisation des licences dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Utilisation des licences]** dans le rail de gauche. L’onglet **[!UICONTROL Aperçu]** s’affiche alors dans le tableau de bord.
+Pour accéder au tableau de bord de l’utilisation des licences dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Utilisation des licences]** dans le rail de gauche. Cela ouvre la fenêtre **[!UICONTROL Présentation]** du tableau de bord.
 
 >[!NOTE]
 >
->Le tableau de bord de l’utilisation des licences n’est pas activé par défaut. Pour pouvoir afficher le tableau de bord, les utilisateurs doivent disposer de l’autorisation &quot;Afficher le tableau de bord de l’utilisation de la licence&quot;. Pour obtenir des instructions sur l’octroi des autorisations d’accès pour l’affichage du tableau de bord d’utilisation des licences, consultez le [guide des autorisations du tableau de bord](../permissions.md).
+>Le tableau de bord de l’utilisation des licences n’est pas activé par défaut. Pour pouvoir afficher le tableau de bord, les utilisateurs doivent disposer de l’autorisation &quot;Afficher le tableau de bord de l’utilisation de la licence&quot;. Pour connaître les étapes d’octroi des autorisations d’accès pour afficher le tableau de bord d’utilisation des licences, reportez-vous à la section [Guide des autorisations de tableau de bord](../permissions.md).
 
 ![](../images/license-usage/dashboard-overview.png)
 
 ### Sélection d’un environnement de test
 
-Pour choisir un environnement de test à afficher dans le tableau de bord, sélectionnez [!UICONTROL Production] ou [!UICONTROL Développement]. L’environnement de test sélectionné est indiqué par le bouton radio en regard du nom de l’environnement de test.
+Pour choisir un environnement de test à afficher dans le tableau de bord, sélectionnez l’une des options suivantes : [!UICONTROL Production] ou [!UICONTROL Développement]. L’environnement de test sélectionné est indiqué par le bouton radio en regard du nom de l’environnement de test.
 
-La création de rapports de consommation pour les environnements de test est cumulative pour tous les environnements de test du même type. En d’autres termes, la sélection de [!UICONTROL Production] ou [!UICONTROL Développement] fournit des rapports de consommation pour tous les environnements de test de production ou de développement, respectivement.
+La création de rapports de consommation pour les environnements de test est cumulative pour tous les environnements de test du même type. En d’autres termes, la sélection [!UICONTROL Production] ou [!UICONTROL Développement] fournit des rapports sur la consommation pour tous les environnements de test de production ou de développement, respectivement.
 
 ![](../images/license-usage/select-sandbox.png)
 
@@ -64,7 +64,7 @@ Vous pouvez également sélectionner **[!UICONTROL Date personnalisée]** pour c
 
 ## Widgets
 
-Le tableau de bord de l’utilisation des licences est constitué de widgets qui affichent des mesures en lecture seule fournissant des informations importantes sur l’utilisation des licences de votre entreprise. Les mesures visibles dépendent des licences spécifiques à votre entreprise (voir la section [Mesures disponibles](#available-metrics) pour plus d’informations).
+Le tableau de bord de l’utilisation des licences est constitué de widgets qui affichent des mesures en lecture seule fournissant des informations importantes sur l’utilisation des licences de votre entreprise. Les mesures visibles dépendent des licences spécifiques à votre entreprise (voir la section [mesures disponibles](#available-metrics) pour plus d’informations).
 
 Chaque widget affiche un graphique linéaire qui compare les chiffres réels de votre entreprise au total disponible avec les licences de votre entreprise et fournit un pourcentage de l’utilisation totale.
 
@@ -72,20 +72,12 @@ Chaque widget affiche un graphique linéaire qui compare les chiffres réels de 
 
 ## Mesures disponibles
 
-Le tableau de bord de l’utilisation des licences répertorie quatre mesures clés, avec d’autres mesures à ajouter dans les versions suivantes. Les mesures disponibles sont répertoriées ci-dessous.
-
->[!NOTE]
->
->Trois des mesures disponibles sont actuellement en version bêta.
+Le tableau de bord de l’utilisation des licences répertorie quatre mesures clés, avec d’autres mesures à ajouter dans les versions suivantes. Les mesures disponibles sont les suivantes :
 
 * [!UICONTROL Audience adressable]
-* [!UICONTROL Richesse moyenne du profil]  (bêta)
-* [!UICONTROL Taux de segmentation des données analysées par]  (bêta)
-* [!UICONTROL Stockage]  consommé total (bêta)
-
->[!WARNING]
->
->Limite connue de la mesure [!UICONTROL Stockage total consommé] : Lors de la suppression de données de lot, ce lot est placé dans un état de suppression progressive pendant une période de 7 jours afin de prendre en charge les cas d’utilisation de récupération des données. Au bout de 7 jours, le lot est déplacé vers un état de suppression irréversible. La création de rapports sur le stockage total consommé ne reflète aucune modification du graphique des tendances tant que le lot n’est pas à l’état de suppression en dur. Ce problème sera résolu dans une version ultérieure.
+* [!UICONTROL Richesse moyenne du profil]
+* [!UICONTROL Ratio de segmentation des données analysées]
+* [!UICONTROL Stockage total consommé]
 
 La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par votre entreprise. Pour obtenir des définitions détaillées de chaque mesure, reportez-vous à la documentation appropriée Description du produit :
 
@@ -105,4 +97,4 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 
 Après avoir lu ce document, vous pouvez localiser le tableau de bord de l’utilisation des licences et sélectionner un environnement de test à afficher. Vous trouverez également plus d’informations sur les mesures disponibles pour votre entreprise, en fonction des licences acquises par votre entreprise.
 
-Pour en savoir plus sur les autres fonctionnalités disponibles dans l’interface utilisateur de l’Experience Platform, consultez le [guide de l’interface utilisateur de Platform](../../landing/ui-guide.md).
+Pour en savoir plus sur les autres fonctionnalités disponibles dans l’interface utilisateur de l’Experience Platform, reportez-vous à la section [Guide de l’interface utilisateur de Platform](../../landing/ui-guide.md).
