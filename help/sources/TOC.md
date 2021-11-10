@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: 030789af0a049b54d6e271410836c08456a83441
+source-git-commit: 0c7bb3d6f0a1bc4154bff0e4d79cc4c3c0b0ab71
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '658'
 ht-degree: 21%
 
 ---
@@ -236,7 +236,6 @@ ht-degree: 21%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocoles {#protocols}
          - [OData générique](tutorials/ui/create/protocols/odata.md)
-         - [API REST générique](tutorials/ui/create/protocols/generic-rest.md)
       - Diffusion en continu {#streaming}
          - [API HTTP ](tutorials/ui/create/streaming/http.md)
    - Configuration d’un flux de données {#dataflow}

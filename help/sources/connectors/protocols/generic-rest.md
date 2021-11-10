@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation générique du connecteur source de l’API REST
 topic-legacy: overview
 description: Découvrez comment connecter l’API REST générique à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
-source-git-commit: 127c2764b8414ee9b59d49ec04cbbd28269ca496
+source-git-commit: 0c7bb3d6f0a1bc4154bff0e4d79cc4c3c0b0ab71
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 7%
+source-wordcount: '235'
+ht-degree: 8%
 
 ---
 
@@ -32,12 +32,5 @@ La documentation ci-dessous fournit des informations sur la connexion à un [!DN
 ## Connexion [!DNL Generic REST API] to [!DNL Platform] utilisation des API
 
 - [Créer une connexion de base d’API REST générique à l’aide de l’API Flow Service](../../tutorials/api/create/protocols/generic-rest.md)
-- [Explorez la structure de données et le contenu d’une source de protocoles à l’aide de l’API Flow Service](../../tutorials/api/explore/protocols.md)
+- [Explorer la structure de données et le contenu d’une source de protocoles à l’aide de l’API Flow Service](../../tutorials/api/explore/protocols.md)
 - [Création d’un flux de données pour une source de protocoles à l’aide de l’API Flow Service](../../tutorials/api/collect/protocols.md)
-
-## Connexion [!DNL Generic REST API] to [!DNL Platform] utilisation de l’interface utilisateur
-
-- [Création d’une connexion source de l’API REST générique dans l’interface utilisateur](../../tutorials/ui/create/protocols/generic-rest.md)
-- [Création d’un flux de données pour une connexion source aux protocoles dans l’interface utilisateur](../../tutorials/ui/dataflow/protocols.md)
-
-

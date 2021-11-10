@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
-source-git-commit: 0209d7ef1c82915bc11f07518194e3dd68c63de9
+source-git-commit: b6f4c79df79ae20b8051b69ef34dd255df193454
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '454'
 ht-degree: 39%
 
 ---
@@ -22,7 +22,7 @@ L’interface utilisateur a été mise à jour avec les modifications suivantes 
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Thème sombre | Utilisez le sélecteur de thème sombre pour passer d’un thème clair à un thème sombre dans l’interface de Platform. Le commutateur se trouve dans le profil utilisateur sous le nom d’utilisateur et le courrier électronique. |
+| Thème sombre | Utilisez le sélecteur de thème sombre pour passer d’un thème clair à un thème sombre dans l’interface de Platform. Le commutateur se trouve dans le profil utilisateur sous le nom d’utilisateur et l’adresse électronique. |
 | Activer/désactiver la navigation à gauche | Utilisez le bouton de navigation amélioré situé en haut de l’en-tête de l’application pour afficher ou masquer le menu affichant les fonctionnalités de votre Experience Platform. Le système mémorise votre dernière sélection et ne vous montre que les fonctionnalités auxquelles vous avez accès. |
 | Accès à la visibilité | La barre de navigation de gauche affiche uniquement les fonctionnalités auxquelles vous avez accès. Dans les versions précédentes de Adobe Experience Platform, les éléments indisponibles étaient visibles, même si vous ne pouviez pas y accéder. |
 
@@ -57,7 +57,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 | Fonctionnalité | Description |
 | --- | --- |
 | Améliorations de la source [!DNL Amazon S3] | Vous pouvez désormais utiliser la variable `s3SessionToken` pour connecter votre [!DNL Amazon S3] compte vers Platform à l’aide d’informations d’identification de sécurité temporaires. Ce jeton vous permet de fournir un accès temporaire à court terme à votre [!DNL Amazon S3] aux utilisateurs dans des environnements non approuvés. Pour plus d’informations, voir la [[!DNL Amazon S3] documentation ](../../sources/connectors/cloud-storage/s3.md#prerequisites). |
-| [!DNL Generic REST API] (version bêta) | Vous pouvez désormais créer une [!DNL Generic REST API] connexion source à l’aide de la fonction [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) ou le [interface utilisateur](../../sources/tutorials/ui/create/protocols/generic-rest.md) pour importer des données d’une application REST générique vers Platform. Pour plus d’informations, consultez la [[!DNL Generic REST API] présentation](../../sources/connectors/protocols/generic-rest.md). |
+| [!DNL Generic REST API] (version bêta) | Vous pouvez désormais créer une [!DNL Generic REST API] connexion source à l’aide de la fonction [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) pour importer des données d’une application REST générique vers Platform. Pour plus d’informations, consultez la [[!DNL Generic REST API] présentation](../../sources/connectors/protocols/generic-rest.md). |
 | [!DNL Zoho CRM] (version bêta) | Vous pouvez désormais créer une [!DNL Zoho CRM] connexion source à l’aide de la fonction [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) ou le [interface utilisateur](../../sources/tutorials/ui/create/crm/zoho.md) pour importer des données de [!DNL Zoho CRM] compte à Platform. Pour plus d’informations, consultez la [[!DNL Zoho CRM] présentation](../../sources/connectors/crm/zoho.md). |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
