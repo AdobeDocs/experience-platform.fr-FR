@@ -5,10 +5,10 @@ seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Présentation du compte de l’édition B2B de Real-time Customer Data Platform
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 90%
+source-wordcount: '1083'
+ht-degree: 89%
 
 ---
 
@@ -82,12 +82,10 @@ Vous avez désormais une meilleure compréhension des avantages offerts par l’
 Pour comprendre comment la plateforme CDP B2B en temps réel peut bénéficier à votre modèle de service business-to-business, consultez la documentation suivante pour vous aider à démarrer :
 
 * [Exemple de cas d’utilisation pour l’édition B2B de la plateforme CDP en temps réel](./b2b-use-case.md)
+* [Tutoriel complet de Real-time Customer Data Platform Édition B2B](./b2b-tutorial.md)
 * [Envoi de données](./sources/b2b.md)
 * [Accès aux profils](./profile/profile-overview.md)
 * [Schémas dans l’édition B2B de Real-time Customer Data Platform](./schemas/b2b.md)
 * [Création de segments](./segmentation/b2b.md)
 * [Activation de segments vers des destinations](./destinations/b2b.md)
 * [Définition et application des stratégies de gouvernance des données](./privacy/data-governance-overview.md)
-
-<!-- PLACEHOLDER - page under construction -->
-<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->

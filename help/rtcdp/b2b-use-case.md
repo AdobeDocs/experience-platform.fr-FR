@@ -1,20 +1,16 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Exemple de cas d’utilisation de l’édition B2B de Real-time Customer Data Platform (version bêta)
+title: Exemple de cas d’utilisation de l’édition B2B de Real-time Customer Data Platform
 description: Cet exemple de scénario fournit une illustration de configuration pour votre implémentation de l’édition B2B de Real-time Customer Data Platform.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 100%
+source-wordcount: '1134'
+ht-degree: 99%
 
 ---
 
-# Exemple de cas d’utilisation de l’édition B2B de Real-time Customer Data Platform (version bêta)
-
->[!IMPORTANT]
->
->L’édition Business to Business de Real-time CDP est actuellement en version Beta. La documentation et les fonctionnalités peuvent changer.
+# Exemple de cas d’utilisation de l’édition B2B de Real-time Customer Data Platform
 
 L’édition B2B de Real-time Customer Data Platform étend les offres existantes de Real-time CDP et Adobe Experience Platform pour prendre en charge les workflows et données B2B. Ce document fournit un exemple de cas d’utilisation qui illustre les avantages supplémentaires fournis par l’édition B2B. Ce sont :
 
@@ -29,8 +25,6 @@ Bodea, une entreprise de technologie, a un nouveau produit et souhaite cibler le
 Cependant, Bodea a deux secteurs d’activité différents. Le premier secteur d’activité de Bodea, « Secteur 1 », crée des logiciels pour l’industrie automobile. Son second secteur d’activité, « Secteur 2 », vend des imprimantes 3D qui créent des pièces automobiles. En raison de ces deux secteurs d’activité, les données relatives au chiffre d’affaires généré par les comptes clients de Bodea ne sont pas unifiées dans une vue unique.
 
 Chaque secteur d’activité possède son propre système de vente : « CRM 1 » et « CRM 2 ». Ces deux systèmes de vente CRM sont connectés à leur propre plateforme d’automatisation marketing « Marketo 1 » et « Marketo 2 ». Les données de CRM 1 sont synchronisées uniquement dans Marketo 1 et les données de CRM 2 sont synchronisées uniquement dans Marketo 2. En fin de compte, les données sont conservées dans différents silos d’informations d’entreprise.
-
-<!-- ![lines of business diagram](./assets/lines-of-business.png) -->
 
 ## Situation actuelle des données
 
@@ -97,7 +91,7 @@ La lecture de ce document vous a permis de vous familiariser avec les types d’
 
 La documentation suivante est recommandée pour améliorer votre compréhension des fonctionnalités spécifiques au B2B :
 
-<!-- PLACEHOLDER Link to B2B tutorial required  -->
+- [Tutoriel de bout en bout sur l’édition B2B de Real-time Customer Data Platform](./b2b-tutorial.md)
 - [Sources dans l’édition B2B de Real-time Customer Data Platform](./sources/b2b.md)
 - [Schémas dans l’édition B2B de Real-time Customer Data Platform](./schemas/b2b.md)
 - [Exemples de segmentation B2B](./segmentation/b2b.md)

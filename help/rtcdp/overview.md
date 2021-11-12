@@ -5,9 +5,9 @@ seo-title: Real-time Customer Data Platform Overview
 description: Présentation de la plateforme de données client en temps réel
 seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '420'
 ht-degree: 70%
 
 ---
@@ -27,7 +27,7 @@ La plateforme de données client en temps réel vous permet :
 * de générer des informations exploitables et d’adapter les audiences grâce à l’IA et à l’apprentissage automatique optimisés par Adobe Sensei et conçus pour les spécialistes marketing ;
 * de proposer des expériences personnalisées en temps réel sur l’ensemble des canaux et des destinations.
 
-## Real-time Customer Data Platform version B2B (bêta)
+## Real-time Customer Data Platform B2B Edition
 
 Il existe également une autre version de la plateforme CDP en temps réel qui répond aux besoins de l’entreprise par rapport à l’entreprise. L’édition B2B de la plateforme CDP en temps réel est conçue spécifiquement pour étendre les fonctionnalités de la plateforme CDP en temps réel aux marketeurs. Elle dispose de différentes fonctionnalités activées dans l’écosystème Adobe Experience Platform pour mieux s’adapter au fonctionnement d’un modèle de service business-to-business.
 
