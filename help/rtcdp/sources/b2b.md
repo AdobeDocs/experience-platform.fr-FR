@@ -2,9 +2,9 @@
 title: Sources dans l’édition B2B de Real-time Customer Data Platform
 description: Présentation du rôle des sources dans l’édition B2B de Real-time Customer Data Platform.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: ef3b9bb742b44aafc838b84a0076e7c8445ac84f
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '275'
 ht-degree: 6%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 6%
 >
 >Si vous n’utilisez pas Real-time Customer Data Platform B2B Edition, reportez-vous à la section [présentation des sources](./sources-overview.md) au lieu de .
 
-L’édition B2B de Real-time Customer Data Platform vous permet d’importer vos données B2B via le [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) connecteur source tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de services.
+L’édition B2B de Real-time Customer Data Platform vous permet d’importer vos données B2B par le biais de diverses sources, y compris le [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) connecteur source, Salesforce, Amazon S3 et ADLS, entre autres. Cette gamme de sources vous permet de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de services.
 
 >[!TIP]
 >
