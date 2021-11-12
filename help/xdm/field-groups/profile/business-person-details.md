@@ -2,20 +2,16 @@
 title: Groupe de champs de schéma de détails de personne professionnelle XDM
 description: Ce document fournit un aperçu du groupe de champs de schéma XDM Business Person Details .
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 11%
+source-wordcount: '533'
+ht-degree: 10%
 
 ---
 
-# [!UICONTROL Groupe de champs ] Détails de la personne professionnelle XDM (bêta)
+# [!UICONTROL Informations détaillées sur les personnes commerciales XDM] groupe de champs de schéma
 
->[!IMPORTANT]
->
->Ce groupe de champs est disponible dans le cadre de la plateforme de données clients en temps réel de l’édition B2B, actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
-
-[!UICONTROL XDM Business Person ] Détail d’un groupe de champs de schéma standard pour la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe qui capture les informations sur une personne dans le contexte d’une entreprise B2B (business-to-business).
+[!UICONTROL Informations détaillées sur les personnes commerciales XDM] est un groupe de champs de schéma standard pour la variable [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) qui capture les informations sur une personne dans le contexte d’une entreprise B2B (business-to-business).
 
 ![](../../images/field-groups/business-person-details.png)
 
@@ -52,11 +48,11 @@ ht-degree: 11%
 | `otherAddress` | [Adresse postale](../../data-types/postal-address.md) | Adresse alternative de la personne. |
 | `otherPhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Numéro de téléphone alternatif de la personne. |
 | `person` | [Personne](../../data-types/person.md) | Acteur, contact ou propriétaire individuel. |
-| `personalEmail` | [Adresse électronique](../../data-types/email-address.md) | Adresse électronique personnelle de la personne. |
+| `personalEmail` | [Adresse e-mail](../../data-types/email-address.md) | Adresse électronique personnelle de la personne. |
 | `workAddress` | [Adresse postale](../../data-types/postal-address.md) | Adresse professionnelle de la personne. |
-| `workEmail` | [Adresse électronique](../../data-types/email-address.md) | Adresse électronique professionnelle de la personne. |
+| `workEmail` | [Adresse e-mail](../../data-types/email-address.md) | Adresse électronique professionnelle de la personne. |
 | `workPhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Numéro de téléphone professionnel de la personne. |
-| `identityMap` | Carte | Champ de mappage contenant un ensemble d’identités d’espace de noms pour la personne. Ce champ est automatiquement mis à jour par le système lors de l’ingestion des données d’identité. Pour utiliser correctement ce champ pour [Real-time Customer Profile](../../../profile/home.md), ne tentez pas de mettre à jour manuellement le contenu du champ dans vos opérations de données.<br /><br />Pour plus d’informations sur leur cas d’utilisation, reportez-vous à la section sur les mappages d’identité dans les  [principes de base de la ](../../schema/composition.md#identityMap) composition de schémas. |
+| `identityMap` | Carte | Champ de mappage contenant un ensemble d’identités d’espace de noms pour la personne. Ce champ est automatiquement mis à jour par le système lors de l’ingestion des données d’identité. Pour utiliser correctement ce champ pour [Real-time Customer Profile](../../../profile/home.md), ne tentez pas de mettre à jour manuellement le contenu du champ dans vos opérations de données.<br /><br />Consultez la section sur les mappages d’identité dans la [principes de base de la composition des schémas](../../schema/composition.md#identityMap) pour plus d’informations sur leur cas d’utilisation. |
 | `organizations` | Tableau de chaînes | Liste des noms de l’organisation dans laquelle la personne travaille. |
 
 {style=&quot;table-layout:auto&quot;}

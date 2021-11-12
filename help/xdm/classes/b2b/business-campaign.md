@@ -2,20 +2,16 @@
 title: Classe de campagne commerciale XDM
 description: Ce document présente la classe XDM Business Campaign dans le modèle de données d’expérience (XDM).
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 10%
+source-wordcount: '166'
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL XDM Business ] Campaignclass (bêta)
+# [!UICONTROL Campagne commerciale XDM] class
 
->[!IMPORTANT]
->
->Cette classe est disponible dans le cadre de la plateforme de données clients en temps réel de l’édition B2B, actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
-
-[!UICONTROL XDM Business ] Campaigns est une classe XDM (modèle de données d’expérience) standard qui capture les propriétés minimales requises d’une campagne d’entreprise.
+[!UICONTROL Campagne commerciale XDM] est une classe XDM (Experience Data Model) standard qui capture les propriétés minimales requises d’une campagne d’entreprise.
 
 ![](../../images/classes/b2b/business-campaign.png)
 
@@ -23,7 +19,7 @@ ht-degree: 10%
 | --- | --- | --- |
 | `campaignKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identifiant composite de l’entité de campagne. |
 | `extSourceSystemAudit` | [[!UICONTROL Attributs d’audit du système de source externe]](../../data-types/external-source-system-audit-attributes.md) | Si la campagne provient d’un système source externe, cet objet capture les attributs de contrôle de ce système. |
-| `_id` | Chaîne | Identifiant unique de l’enregistrement. Il s’agit d’une valeur générée par le système qui est distincte de `campaignID`. |
+| `_id` | Chaîne | Identifiant unique de l’enregistrement. Il s’agit d’une valeur générée par le système qui est distincte de la variable `campaignID`. |
 | `campaignDescription` | Chaîne | Description de la campagne. |
 | `campaignID` | Chaîne | Identifiant unique de l’entité de campagne. |
 | `campaignName` | Chaîne | Nom de la campagne. |
@@ -31,4 +27,4 @@ ht-degree: 10%
 
 {style=&quot;table-layout:auto&quot;}
 
-Consultez le guide sur les [relations de schéma dans l’édition B2B de la plateforme des données clients en temps réel](../../tutorials/relationship-b2b.md) pour découvrir comment cette classe est liée conceptuellement aux autres classes B2B et comment vous pouvez établir ces relations dans l’interface utilisateur de Adobe Experience Platform.
+Consultez le guide sur la [relations de schéma dans l’édition B2B de la plateforme CDP en temps réel](../../tutorials/relationship-b2b.md) pour découvrir comment cette classe correspond conceptuellement aux autres classes B2B et comment vous pouvez établir ces relations dans l’interface utilisateur de Adobe Experience Platform.

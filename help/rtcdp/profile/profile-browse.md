@@ -3,10 +3,10 @@ keywords: afficher les profils rtcdp;vue de profil rtcdp;profils rtcdp
 title: Parcourir les profils dans Real-time Customer Data Platform
 description: Real-time Customer Data Platform vous permet de parcourir les données de Real-time Customer Profile à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: c15f59de49c60f55b432a39f30fb5f1865fd4671
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 24%
+source-wordcount: '533'
+ht-degree: 21%
 
 ---
 
@@ -19,11 +19,7 @@ Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez affiche
 
 Real-time Customer Data Platform repose sur Adobe Experience Platform et permet ainsi d’utiliser les fonctionnalités d’affichage des profils dans l’interface utilisateur de l’Experience Platform. Pour obtenir un guide détaillé sur l’affichage des profils client dans l’interface utilisateur de Platform, reportez-vous à la section [Guide d’utilisation de Real-time Customer Profile](../../profile/ui/user-guide.md).
 
-## Améliorations des profils pour la plateforme CDP en temps réel, version B2B (bêta)
-
->[!IMPORTANT]
->
->L’édition B2B de Real-time Customer Data Platform est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+## Améliorations des profils pour la plateforme CDP en temps réel, version B2B
 
 Outre les fonctionnalités de navigation des profils prises en charge par Adobe Experience Platform, les utilisateurs de la plateforme de données clients en temps réel de l’édition B2B peuvent accéder aux attributs et événements B2B du profil client sur la page [!UICONTROL Attributs] et [!UICONTROL Événements] les onglets, respectivement. Les données B2B peuvent également être utilisées pour effectuer une segmentation, avec ces segments apparaissant sous le segment du client [!UICONTROL abonnement au segment] à côté des segments non B2B.
 
@@ -41,7 +37,7 @@ Le détail du profil inclut l’accès à [!UICONTROL Comptes], [!UICONTROL Oppo
 
 Sélectionner **[!UICONTROL Comptes]** pour afficher la liste des comptes liés au profil. Cette liste comprend des informations de base du profil du compte, telles que le nom, le site web et le secteur industriel du compte, ainsi qu’un lien vers le profil du compte.
 
-Pour plus d’informations sur l’affichage et l’exploration des profils de compte, commencez par lire la section [présentation des profils de compte](../accounts/account-profile-overview.md).
+Pour plus d’informations sur l’affichage et l’exploration des profils de compte, commencez par lire la [présentation des profils de compte](../accounts/account-profile-overview.md).
 
 ![](images/b2b-profile-accounts.png)
 

@@ -2,20 +2,16 @@
 title: Classe de relation d’une personne avec une opportunité commerciale XDM
 description: Ce document présente la classe XDM Business Opportunity Person Relation dans Experience Data Model (XDM).
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 7%
+source-wordcount: '242'
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Classe de ] relation client d’opportunité commerciale XDM (version bêta)
+# [!UICONTROL Relation de personne avec les opportunités commerciales XDM] class
 
->[!IMPORTANT]
->
->Cette classe est disponible dans le cadre de la plateforme de données clients en temps réel de l’édition B2B, actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
-
-[!UICONTROL XDM Business Opportunity Persson ] Relationship est une classe XDM standard qui capture les propriétés minimales requises d’une personne associée à une opportunité commerciale.
+[!UICONTROL Relation de personne avec les opportunités commerciales XDM] est une classe XDM (Experience Data Model) standard qui capture les propriétés minimales requises d’une personne associée à une opportunité commerciale.
 
 ![](../../images/classes/b2b/business-opportunity-person-relation.png)
 
@@ -34,4 +30,4 @@ ht-degree: 7%
 
 {style=&quot;table-layout:auto&quot;}
 
-Consultez le guide sur les [relations de schéma dans l’édition B2B de la plateforme des données clients en temps réel](../../tutorials/relationship-b2b.md) pour découvrir comment cette classe est liée conceptuellement aux autres classes B2B et comment vous pouvez établir ces relations dans l’interface utilisateur de Adobe Experience Platform.
+Consultez le guide sur la [relations de schéma dans l’édition B2B de la plateforme CDP en temps réel](../../tutorials/relationship-b2b.md) pour découvrir comment cette classe correspond conceptuellement aux autres classes B2B et comment vous pouvez établir ces relations dans l’interface utilisateur de Adobe Experience Platform.

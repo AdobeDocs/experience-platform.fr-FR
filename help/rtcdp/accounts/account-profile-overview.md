@@ -1,20 +1,16 @@
 ---
 keywords: rtcdp b2b;b2b;compte;profil de compte;profils de compte rtcdp;real-time customer data platform;
-title: Profils de compte dans l’édition B2B de Real-time CDP (version bêta)
+title: Profils de compte dans l’édition B2B de Real-time CDP
 description: Découvrez comment l’édition B2B de Real-time Customer Data Platform vous permet d’unifier des informations de comptes provenant de plusieurs sources à l’aide des profils de compte.
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '254'
 ht-degree: 100%
 
 ---
 
-# Présentation des profils de compte (version bêta)
-
->[!IMPORTANT]
->
->L’édition B2B de Real-time Customer Data Platform est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+# Présentation des profils de compte
 
 >[!NOTE]
 >

@@ -1,19 +1,15 @@
 ---
-title: Sources dans Real-time Customer Data Platform Édition B2B (bêta)
+title: Sources dans l’édition B2B de Real-time Customer Data Platform
 description: Présentation du rôle des sources dans l’édition B2B de Real-time Customer Data Platform.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 8dfeeea7c13802723bdfff48eaa49ba3f2c43d20
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '262'
 ht-degree: 6%
 
 ---
 
-# Sources dans Real-time Customer Data Platform Édition B2B (bêta)
-
->[!IMPORTANT]
->
->L’édition B2B de Real-time Customer Data Platform est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+# Sources dans l’édition B2B de Real-time Customer Data Platform
 
 >[!NOTE]
 >

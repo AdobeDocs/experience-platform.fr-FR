@@ -4,10 +4,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes de modèle de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
-source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
+source-git-commit: eea5cfe6111d25da4a7978d3924861250059cc7e
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 30%
+source-wordcount: '396'
+ht-degree: 31%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 30%
    * [XDM Individual Profile](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Définition de segment](./classes/segment-definition.md)
-   * Classes B2B (bêta) {#b2b}
+   * Classes B2B {#b2b}
       * [Compte d’entreprise XDM](./classes/b2b/business-account.md)
       * [Relation avec la personne du compte d’entreprise XDM](./classes/b2b/business-account-person-relation.md)
       * [Campagne commerciale XDM](./classes/b2b/business-campaign.md)
@@ -113,7 +113,7 @@ ht-degree: 30%
    * [Informations web](./data-types/web-information.md)
    * [Interaction web](./data-types/web-interaction.md)
    * [Détails des pages web](./data-types/webpage-details.md)
-*  SchemasUI  {#ui}
+* [!UICONTROL Schémas] Interface utilisateur {#ui}
    * [Présentation](./ui/overview.md)
    * [Explorer les ressources XDM](./ui/explore.md)
    * Créer et modifier des ressources {#resources}
@@ -153,7 +153,7 @@ ht-degree: 30%
    * [Création d’un schéma dans l’API](tutorials/create-schema-api.md)
    * [Définition d’une relation de schéma dans l’interface utilisateur](tutorials/relationship-ui.md)
    * [Définition d’une relation de schéma dans l’API](tutorials/relationship-api.md)
-   * [Définition d’une relation de schéma dans la plateforme CDP B2B en temps réel (version bêta)](tutorials/relationship-b2b.md)
+   * [Définition d’une relation de schéma dans l’édition B2B de la plateforme CDP en temps réel](tutorials/relationship-b2b.md)
    * [Création d’un schéma ad hoc (API)](tutorials/ad-hoc.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)

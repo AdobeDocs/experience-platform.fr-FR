@@ -2,24 +2,20 @@
 title: Type de données source B2B
 description: Ce document présente un aperçu du type de données XDM (Source Experience Data Model) B2B.
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 6%
+source-wordcount: '273'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Type ] de données source B2B (bêta)
+# [!UICONTROL Source B2B] type de données
 
->[!IMPORTANT]
->
->Ce type de données est disponible dans le cadre de la plateforme de données clients en temps réel de l’édition B2B, actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+[!UICONTROL Source B2B] est un type de données XDM (Experience Data Model) standard qui représente un identifiant composite pour une entité B2B (telle qu’une [account](../classes/b2b/business-account.md), un [occasion](../classes/b2b/business-opportunity.md)ou un [campaign](../classes/b2b/business-campaign.md)).
 
-[!UICONTROL La source B2B ] est un type de données XDM (Experience Data Model) standard qui représente un identifiant composite pour une entité B2B (un  [compte](../classes/b2b/business-account.md), une  [opportunité](../classes/b2b/business-opportunity.md) ou une  [campagne](../classes/b2b/business-campaign.md), par exemple).
+Lorsque vous vous fiez uniquement aux identifiants basés sur des chaînes, il peut y avoir des chevauchements entre les identifiants sur plusieurs systèmes (par exemple, une opportunité peut se voir attribuer un identifiant de chaîne sur un système CRM, mais ce même identifiant peut faire référence à une opportunité complètement différente). Cela peut entraîner des conflits de données lors de la fusion des données dans [Real-time Customer Profile](../../profile/home.md).
 
-Lorsque vous vous fiez uniquement aux identifiants basés sur des chaînes, il peut y avoir des chevauchements entre les identifiants sur plusieurs systèmes (par exemple, une opportunité peut se voir attribuer un identifiant de chaîne sur un système CRM, mais ce même identifiant peut faire référence à une opportunité complètement différente). Cela peut entraîner des conflits de données lors de la fusion de données dans [Real-time Customer Profile](../../profile/home.md).
-
-Le type de données [!UICONTROL Source B2B] vous permet d’utiliser l’ID de chaîne d’origine d’une entité et de le combiner avec des informations contextuelles spécifiques à la source afin de vous assurer qu’il reste entièrement unique dans le système Platform, quelle que soit la source d’où il provient.
+Le [!UICONTROL Source B2B] Le type de données vous permet d’utiliser l’identifiant de chaîne d’origine d’une entité et de le combiner avec des informations contextuelles spécifiques à la source afin de vous assurer qu’il reste entièrement unique dans le système Platform, quelle que soit la source d’où il provient.
 
 ![Structure de la source B2B](../images/data-types/b2b-source.png)
 
@@ -27,7 +23,7 @@ Le type de données [!UICONTROL Source B2B] vous permet d’utiliser l’ID de c
 | --- | --- | --- |
 | `sourceID` | Chaîne | Identifiant unique de l’enregistrement source. |
 | `sourceInstanceID` | Chaîne | ID d’instance ou d’organisation des données source. |
-| `sourceKey` | Chaîne | Identifiant unique composé de `sourceId`, `sourceInstanceId` et `sourceType` concaténés au format suivant : `[sourceID]@$[sourceInstanceID].[sourceType]`.<br><br>Certains connecteurs source tels que Marketo concaténent automatiquement cette valeur pour certains identifiants. D’autres doivent être concaténés manuellement à l’aide de la fonction [Préparation de données `concat`](../../data-prep/functions.md#string), par exemple : `concat(id,"@${ORG_ID}.Marketo")` |
+| `sourceKey` | Chaîne | Un identifiant unique composé de la variable `sourceId`, `sourceInstanceId`, et `sourceType` concaténé ensemble au format suivant : `[sourceID]@$[sourceInstanceID].[sourceType]`.<br><br>Certains connecteurs source tels que Marketo concaténent automatiquement cette valeur pour certains identifiants. Les autres doivent être concaténés manuellement à l’aide de la variable [Préparation de données `concat` function](../../data-prep/functions.md#string), par exemple : `concat(id,"@${ORG_ID}.Marketo")` |
 | `sourceType` | Chaîne | Nom de la plateforme qui fournit les données source. |
 
 {style=&quot;table-layout:auto&quot;}
