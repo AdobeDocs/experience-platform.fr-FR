@@ -6,7 +6,7 @@ title: Configuration d’une instance Customer AI
 topic-legacy: Instance creation
 description: Intelligent Services fournit Customer AI en tant que service Adobe Sensei simple d’emploi pouvant être configuré pour de multiples cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 52ab1527d3021500d934afe56cfc751116f784a4
+source-git-commit: 899ea8502c80fa520df55ce63255e95cb5ad436d
 workflow-type: tm+mt
 source-wordcount: '2299'
 ht-degree: 13%
@@ -74,7 +74,7 @@ Après avoir sélectionné les jeux de données que vous souhaitez utiliser, sé
 
 Icône Sélectionner l’information ![icône info](../images/user-guide/info-icon.png) en regard du jeu de données, la fenêtre contextuelle d’aperçu du jeu de données s’ouvre.
 
-![Sélection et recherche d’un jeu de données](../images/user-guide/dataset-info-2.png)
+![Sélection et recherche d’un jeu de données](../images/user-guide/dataset-info.png)
 
 L’aperçu du jeu de données contient des données telles que l’heure de la dernière mise à jour, le schéma source et un aperçu des dix premières colonnes.
 
@@ -85,8 +85,8 @@ Il existe une valeur de pourcentage d’exhaustivité du jeu de données dans l�
 >[!NOTE]
 >
 >L’exhaustivité des jeux de données est calculée à l’aide de la période de formation maximale pour Customer AI (un an). Cela signifie que les données de plus d’un an ne sont pas prises en compte lors de l’affichage de la valeur d’exhaustivité de votre jeu de données.
-<!-- training dataset completness needs to change -->
-![Complétude du jeu de données](../images/user-guide/dataset-info.png)
+
+![Complétude du jeu de données](../images/user-guide/dataset-info-2.png)
 
 ### Sélection d’une identité {#identity}
 
