@@ -1,31 +1,31 @@
 ---
-description: Cette page répertorie et décrit les étapes de configuration d’une destination de diffusion en continu à l’aide du SDK Destination.
-title: Comment utiliser le SDK de destination pour configurer une destination de diffusion en continu
+description: Cette page répertorie et décrit les étapes de configuration d’une destination de diffusion en continu à l’aide de Destination SDK.
+title: Utilisation de Destination SDK pour configurer une destination de diffusion en continu
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
 
-# Comment utiliser le SDK de destination pour configurer une destination de diffusion en continu
+# Utilisation de Destination SDK pour configurer une destination de diffusion en continu
 
 ## Présentation {#overview}
 
-Cette page décrit l’utilisation des informations dans [Options de configuration dans le SDK Destinations](./configuration-options.md) et dans d’autres fonctionnalités du SDK de destination et documents de référence d’API pour configurer une [destination de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). Les étapes sont présentées dans l’ordre séquentiel ci-dessous.
+Cette page décrit l’utilisation des informations dans [Options de configuration dans le SDK Destinations](./configuration-options.md) et dans d’autres fonctionnalités Destination SDK et documents de référence d’API pour configurer une [destination de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). Les étapes sont présentées dans l’ordre séquentiel ci-dessous.
 
 >[!NOTE]
 >
->La configuration d’une destination par lot via le SDK Destination n’est actuellement pas prise en charge.
+>La configuration d’une destination par lot via Destination SDK n’est actuellement pas prise en charge.
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes illustrées ci-dessous, veuillez lire la section [Prise en main du SDK de destination](./getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification d’Adobe I/O nécessaires et d’autres conditions préalables requises pour utiliser les API du SDK de destination.
+Avant de passer aux étapes illustrées ci-dessous, veuillez lire la section [Prise en main de Destination SDK](./getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification d’Adobe I/O nécessaires et d’autres conditions préalables requises pour utiliser les API Destination SDK.
 
-## Étapes d’utilisation des options de configuration dans le SDK de destination pour configurer votre destination {#steps}
+## Étapes d’utilisation des options de configuration dans Destination SDK pour configurer votre destination {#steps}
 
-![Étapes illustrées d’utilisation des points d’entrée du SDK de destination](./assets/destination-sdk-steps.png)
+![Étapes illustrées d’utilisation des points de fin Destination SDK](./assets/destination-sdk-steps.png)
 
 ## Étape 1 : Création d’une configuration de serveur et de modèle {#create-server-template-configuration}
 
@@ -152,7 +152,7 @@ Une fois que vous avez conçu un modèle de transformation de messages qui fonct
 
 ## Étape 4 : Création d’une configuration de métadonnées d’audience {#create-audience-metadata-configuration}
 
-Pour certaines destinations, le SDK de destination requiert que vous configuriez une configuration de métadonnées d’audience pour créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Voir [Gestion des métadonnées d’audience](./audience-metadata-management.md) pour plus d’informations sur le moment où vous devez configurer cette configuration et la manière de procéder.
+Pour certaines destinations, Destination SDK exige que vous configuriez une configuration de métadonnées d’audience pour créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Voir [Gestion des métadonnées d’audience](./audience-metadata-management.md) pour plus d’informations sur le moment où vous devez configurer cette configuration et la manière de procéder.
 
 Si vous utilisez une configuration de métadonnées d’audience, vous devez la connecter à la configuration de destination que vous avez créée à l’étape 2. Ajoutez l’ID d’instance de votre configuration de métadonnées d’audience à votre configuration de destination en tant que `audienceTemplateId`.
 
