@@ -5,7 +5,7 @@ topic-legacy: developer guide
 description: Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide de l’API Flow Service pour le SDK Sources.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 2%
@@ -616,4 +616,4 @@ Une réponse réussie renvoie les détails de la spécification de flux interrog
 
 ## Étapes suivantes
 
-Une fois la nouvelle spécification de connexion ajoutée à la spécification de flux appropriée, vous pouvez passer au test et envoyer votre nouvelle source. Consultez le guide sur la [test et envoi d’une nouvelle source](./overview.md#submit) pour plus d’informations.
+Une fois la nouvelle spécification de connexion ajoutée à la spécification de flux appropriée, vous pouvez passer au test et envoyer votre nouvelle source. Consultez le guide sur la [test et envoi d’une nouvelle source](./submit.md) pour plus d’informations.

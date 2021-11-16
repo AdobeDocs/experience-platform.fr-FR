@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Le SDK Sources de Adobe Experience Platform est un ensemble d’API de configuration qui vous permettent d’intégrer une source basée sur l’API REST à l’aide de l’API Flow Service pour importer vos données dans Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: bfe6be73ed05b494a4a3eb1153e53ee8b9864ecf
+source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 8%
@@ -41,17 +41,17 @@ Pour plus d’informations sur les sources et pour obtenir la liste des différe
 
 Grâce au SDK Sources, vous pouvez intégrer votre propre source basée sur l’API REST et importer vos données dans Platform avec [!DNL Flow Service]. Le SDK Sources vous permet d’intégrer une nouvelle source à Platform en créant et en envoyant une nouvelle spécification de connexion via le [!DNL Flow Service] API.
 
-Consultez le guide sur la [création d’une nouvelle spécification de connexion](./api/overview.md) pour plus d’informations sur la manière d’intégrer une nouvelle source à Platform.
+Consultez le guide sur la [création d’une nouvelle spécification de connexion](./api/api-overview.md) pour plus d’informations sur la manière d’intégrer une nouvelle source à Platform.
 
 ## Document de votre source
 
-Une fois votre source créée, reportez-vous à la section [guide de documentation](./documentation/overview.md) pour obtenir des instructions sur la manière de documenter votre source via le [!DNL GitHub] ou par l’intermédiaire de votre propre éditeur de texte.
+Une fois votre source créée, reportez-vous à la section [guide de documentation](./documentation/doc-overview.md) pour obtenir des instructions sur la manière de documenter votre source via le [!DNL GitHub] ou par l’intermédiaire de votre propre éditeur de texte.
 
 ## Processus de haut niveau
 
 Le processus étape par étape de configuration de votre source dans Experience Platform est décrit ci-dessous :
 
-* Lisez le [Guide de l’API du SDK Sources](./api/overview.md);
+* Lisez le [Guide de l’API du SDK Sources](./api/api-overview.md);
    * Lisez le [guide de prise en main](./api/getting-started.md);
    * Suivez le tutoriel sur [création d’une nouvelle spécification de connexion](./api/create.md);
    * Suivez le tutoriel sur [mise à jour de la spécification de connexion](./api/update-connection-specs.md);
@@ -61,7 +61,7 @@ Le processus étape par étape de configuration de votre source dans Experience 
    * Consultez le guide sur la [configuration de vos spécifications d’authentification](./config/authspec.md);
    * Consultez le guide sur la [configuration des spécifications source](./config/sourcespec.md);
    * Consultez le guide sur la [configuration de vos spécifications d’exploration](./config/explorespec.md);
-* Pour commencer à documenter votre source, reportez-vous à la section [Présentation de la création de la documentation pour le SDK Sources](./documentation/overview.md)
+* Pour commencer à documenter votre source, reportez-vous à la section [Présentation de la création de la documentation pour le SDK Sources](./documentation/doc-overview.md)
    * Vous pouvez utiliser [modèle de documentation sources](./documentation/template.md) pour structurer votre documentation ;
    * Consultez le guide sur la [utilisation de l’interface web GitHub](./documentation/github.md) pour savoir comment créer de la documentation à l’aide de GitHub ;
    * Consultez le guide sur la [utilisation d’un éditeur de texte](./documentation/text-editor.md) pour savoir comment créer de la documentation à l’aide de votre ordinateur local.
