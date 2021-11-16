@@ -4,7 +4,7 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: c178bf54bfdda54293cb4e06d452f82111690895
+source-git-commit: 83aefe6a0880b201e376f458279461888e531741
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 19%
@@ -257,14 +257,14 @@ ht-degree: 19%
    - [Mise à jour des flux de données](tutorials/ui/update-dataflows.md)
    - [Suppression de comptes](tutorials/ui/delete-accounts.md)
    - [Suppression de flux de données](tutorials/ui/delete.md)
-- [SDK Sources] {#sources-sdk}
+- [SDK Sources] {#sdk}
    - [Présentation](sources-sdk/overview.md)
-   - [Fonctionnalité du SDK Sources] {#functionality}
+   - [Configuration du SDK des sources] {#config}
       - [Options de configuration](sources-sdk/config/config.md)
       - [Configuration de la spécification d’authentification](sources-sdk/config/authspec.md)
       - [Configuration de la spécification source](sources-sdk/config/sourcespec.md)
       - [Configuration de la spécification d’exploration](sources-sdk/config/explorespec.md)
-   - [Tutoriels sur l’API du SDK Sources] {#sdk-tutorials}
+   - [Tutoriels sur l’API du SDK Sources] {#sdk-api}
       - [Présentation de l’API SDK Sources](sources-sdk/api/overview.md)
       - [Prise en main](sources-sdk/api/getting-started.md)
       - [Création d’une spécification de connexion](sources-sdk/api/create.md)
