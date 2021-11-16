@@ -2,14 +2,18 @@
 title: Classe de campagne commerciale XDM
 description: Ce document présente la classe XDM Business Campaign dans le modèle de données d’expérience (XDM).
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 7%
+source-wordcount: '206'
+ht-degree: 5%
 
 ---
 
 # [!UICONTROL Campagne commerciale XDM] class
+
+>[!IMPORTANT]
+>
+>Cette classe est destinée aux organisations ayant accès à [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). Pour que cette classe puisse participer à , vous devez avoir accès à l’édition B2B de la plateforme CDP en temps réel . [Real-time Customer Profile](../../../profile/home.md).
 
 [!UICONTROL Campagne commerciale XDM] est une classe XDM (Experience Data Model) standard qui capture les propriétés minimales requises d’une campagne d’entreprise.
 

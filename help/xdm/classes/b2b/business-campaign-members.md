@@ -2,14 +2,18 @@
 title: Classe des membres XDM Business Campaign
 description: Ce document présente la classe XDM Business Campaign Members dans le modèle de données d’expérience (XDM).
 exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 5%
+source-wordcount: '245'
+ht-degree: 4%
 
 ---
 
 # [!UICONTROL Membres de XDM Business Campaign] class
+
+>[!IMPORTANT]
+>
+>Cette classe est destinée aux organisations ayant accès à [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). Pour que cette classe puisse participer à , vous devez avoir accès à l’édition B2B de la plateforme CDP en temps réel . [Real-time Customer Profile](../../../profile/home.md).
 
 [!UICONTROL Membres de XDM Business Campaign] est une classe XDM (Experience Data Model) standard qui décrit un contact ou un prospect associé à une campagne commerciale.
 

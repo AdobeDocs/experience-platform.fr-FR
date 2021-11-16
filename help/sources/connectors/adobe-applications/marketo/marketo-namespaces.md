@@ -5,9 +5,9 @@ title: Espaces de noms et schémas B2B
 topic-legacy: overview
 description: Ce document fournit un aperçu des espaces de noms personnalisés requis lors de la création d’un connecteur source B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1688'
 ht-degree: 10%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 10%
 # Espaces de noms et schémas B2B
 
 Ce document fournit des informations sur la configuration sous-jacente des espaces de noms et des schémas à utiliser avec des sources B2B. Ce document fournit également des détails sur la configuration de votre utilitaire d’automatisation Postman requis pour générer des espaces de noms et des schémas B2B.
+
+>[!IMPORTANT]
+>
+>Vous devez avoir accès à [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) pour que les schémas B2B participent à [Real-time Customer Profile](../../../../profile/home.md).
 
 ## Configuration des espaces de noms B2B et de l’utilitaire de génération automatique de schéma
 

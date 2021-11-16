@@ -2,14 +2,18 @@
 title: Classe de compte professionnel XDM
 description: Ce document présente la classe XDM Business Account dans le modèle de données d’expérience (XDM).
 exl-id: abe4c919-a680-4aad-918e-6e56cae8bd4d
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 6%
+source-wordcount: '187'
+ht-degree: 4%
 
 ---
 
 # [!UICONTROL Compte d’entreprise XDM] class
+
+>[!IMPORTANT]
+>
+>Cette classe est destinée aux organisations ayant accès à [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). Pour que cette classe puisse participer à , vous devez avoir accès à l’édition B2B de la plateforme CDP en temps réel . [Real-time Customer Profile](../../../profile/home.md).
 
 [!UICONTROL Compte d’entreprise XDM] est une classe XDM (Experience Data Model) standard qui capture les propriétés minimales requises d’un compte d’entreprise.
 
