@@ -2,10 +2,10 @@
 title: Traitement des erreurs
 description: Découvrez la manière dont les erreurs sont traitées dans lʼAPI Reactor.
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 100%
+source-wordcount: '1068'
+ht-degree: 99%
 
 ---
 
@@ -86,7 +86,7 @@ Le tableau suivant répertorie les différentes erreurs que l’API peut renvoye
 | `invalid-rule` | Une règle non valide ne peut pas être ajoutée à une bibliothèque. |
 | `invalid-settings-syntax` | Une erreur de syntaxe sʼest produite lors de lʼanalyse des paramètres JSON. |
 | `library-file-not-found` | Un fichier requis défini en extension.json est introuvable dans le package zip. |
-| `minification-error` | Échec de la compilation du code en raison dʼun code non valide ou dʼun code ES6. |
+| `minification-error` | Le code n’a pas pu être compilé en raison d’un code non valide. |
 | `multiple-revisions` | Une seule révision de chaque ressource peut être incluse dans une bibliothèque. |
 | `no-available-orgs` | Ce compte utilisateur nʼappartient pas à un profil de produit ayant accès aux balises. Utilisez Admin Console pour ajouter cet utilisateur à un profil de produit disposant de droits de balises. |
 | `not-authorized` | Ce compte utilisateur ne dispose pas des autorisations nécessaires pour effectuer cette action. |

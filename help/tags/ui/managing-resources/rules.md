@@ -2,9 +2,9 @@
 title: Règles
 description: Découvrez le fonctionnement des extensions de balises dans Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1977'
+source-wordcount: '1969'
 ht-degree: 100%
 
 ---
@@ -155,10 +155,6 @@ Les événements et conditions des règles sont toujours regroupés dans la bibl
 Ces événements doivent être presque toujours exécutés (à moins que les conditions n’aient la valeur false). Par souci d’efficacité, ils sont donc regroupés dans la bibliothèque principale, le fichier référencé par votre code incorporé.
 
 * **Javascript :** le code JavaScript est intégré à la bibliothèque de balises principale. Le script personnalisé est encapsulé dans une balise de script et écrit dans le document à l’aide de `document.write`. Si la règle comporte plusieurs scripts personnalisés, ils sont écrits dans l’ordre.
-
-   >[!NOTE]
-   >
-   >Les balises utilisent du code JavaScript ES5. Le transfert d’événements utilise ES6.
 
 * **HTML :** le code HTML est intégré à la bibliothèque de balises principale. `document.write` est utilisée pour écrire le code HTML dans le document. Si la règle comporte plusieurs scripts personnalisés, ils sont écrits dans l’ordre.
 

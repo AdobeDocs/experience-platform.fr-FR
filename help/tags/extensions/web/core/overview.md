@@ -2,10 +2,10 @@
 title: Présentation de l’extension Core
 description: Découvrez l’extension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '5292'
-ht-degree: 99%
+source-wordcount: '5362'
+ht-degree: 98%
 
 ---
 
@@ -542,6 +542,10 @@ Cette section décrit les types d’actions disponibles dans l’extension Core.
 
 ### Code personnalisé
 
+>[!NOTE]
+>
+>Le code JavaScript ES6+ est désormais pris en charge dans le code personnalisé. Notez que certains navigateurs plus anciens ne prennent pas en charge ES6+. Pour comprendre l’impact de l’utilisation des fonctions ES6+, testez-les par rapport à tous les navigateurs web qui doivent être pris en charge.
+
 Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées.
 
 1. Nommez le code d’action.
@@ -645,6 +649,10 @@ Toute valeur de chaîne constante qui peut ensuite être référencée dans des 
 `string`
 
 ### Custom code
+
+>[!NOTE]
+>
+>Le code JavaScript ES6+ est désormais pris en charge dans le code personnalisé. Notez que certains navigateurs plus anciens ne prennent pas en charge ES6+. Pour comprendre l’impact de l’utilisation des fonctions ES6+, testez-les par rapport à tous les navigateurs web qui doivent être pris en charge.
 
 Il est possible d’entrer du code JavaScript personnalisé dans l’interface utilisateur en cliquant sur Open Editor et en insérant le code dans la fenêtre de l’éditeur.
 

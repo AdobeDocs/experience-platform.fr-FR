@@ -3,9 +3,9 @@ title: Présentation du transfert dʼévénements
 description: Découvrez le transfert dʼévénements dans Adobe Experience Platform, qui vous permet dʼutiliser Platform Edge Network afin dʼexécuter des tâches sans modifier votre mise en œuvre de balises.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
-workflow-type: ht
-source-wordcount: '547'
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
+workflow-type: tm+mt
+source-wordcount: '533'
 ht-degree: 100%
 
 ---
@@ -61,9 +61,5 @@ Il est important de prendre en compte les différences suivantes entre le transf
 * Séquence des actions de règle
 
    Dans la section Action dʼune règle, les règles de transfert dʼévénements sont toujours exécutées de manière séquentielle. Assurez-vous que l’ordre des actions est correct lorsque vous enregistrez une règle. Cette séquence dʼexécution ne peut pas être choisie, à la différence des balises.
-
-* Versions JavaScript du code personnalisé
-
-   Les balises utilisent la version es5 de JavaScript. Le transfert dʼévénements utilise la version es6.
 
 <!--doc Adobe Cloud Connector extension, get from Jon-->
