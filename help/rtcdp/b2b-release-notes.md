@@ -3,10 +3,10 @@ product: adobe experience platform
 solution: Experience Platform, Real-time Customer Data Platform
 title: Notes de mise à jour de Adobe Experience Platform Real-time Customer Data Platform B2B
 description: Notes de mise à jour les plus récentes pour l’édition B2B de Adobe Experience Platform Real-time Customer Data Platform.
-source-git-commit: f5d9252b25793bd9233b5bc8dcc83be464ce7fdd
+source-git-commit: 4417670d167d7390d0e82ac5c32a1a6b46a15226
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 27%
+source-wordcount: '445'
+ht-degree: 22%
 
 ---
 
@@ -36,7 +36,7 @@ Pour en savoir plus sur l’édition B2B de la plateforme CDP en temps réel, vo
 
 | Fonctionnalité | Description |
 |---|---|
-| Connecteur source Marketo Engage | Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Le connecteur source Marketo Engage est une solution complète pour la gestion des pistes et les spécialistes du marketing B2B. |
+| Connecteur source Marketo Engage | Le connecteur source du Marketo Engage permet aux marketeurs d’ingérer en toute transparence des données de leurs instances Marketo dans leur instance Adobe Experience Platform et fournit une solution complète pour la gestion des pistes et les spécialistes du marketing B2B. |
 | Destination du Marketo Engage | Le [Destination Marketo](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=fr) permet aux marketeurs de pousser les segments créés dans Adobe Experience Platform vers Marketo où ils apparaîtront sous forme de listes statiques. |
 
 Pour en savoir plus sur Marketo Source Connector, voir [aperçu](../sources/connectors/adobe-applications/marketo/marketo.md)
