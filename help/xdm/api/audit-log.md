@@ -5,26 +5,26 @@ title: Point de terminaison de l’API du journal d’audit
 description: Le point de terminaison /auditlog de l’API Schema Registry vous permet de récupérer une liste chronologique des modifications apportées à une ressource XDM existante.
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 7abe27d7fcc461becb0495fcd470eaea031b94bc
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '407'
 ht-degree: 7%
 
 ---
 
 # Point d’entrée du journal d’audit
 
-Pour chaque ressource de modèle de données d’expérience (XDM), [!DNL Schema Registry] conserve un journal de toutes les modifications qui se sont produites entre différentes mises à jour. Le point de terminaison `/auditlog` de l’API [!DNL Schema Registry] vous permet de récupérer un journal d’audit pour toute classe, groupe de champs de schéma, type de données ou schéma spécifié par l’ID.
+Pour chaque ressource de modèle de données d’expérience (XDM), la variable [!DNL Schema Registry] conserve un journal de toutes les modifications qui se sont produites entre différentes mises à jour. Le `/auditlog` du point de terminaison [!DNL Schema Registry] L’API vous permet de récupérer un journal d’audit pour toute classe, groupe de champs de schéma, type de données ou schéma spécifié par l’ID.
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Schema Registry] ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Schema Registry] ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d’appels API de ce document, ainsi que des informations importantes concernant les en-têtes requis pour réussir les appels à une API Experience Platform.
 
-Le point de terminaison `/auditlog` fait partie des appels de procédure distante (RPC) pris en charge par [!DNL Schema Registry]. Contrairement aux autres points de terminaison de l’API [!DNL Schema Registry], les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires tels que `Accept` ou `Content-Type` et n’utilisent pas de `CONTAINER_ID`. Ils doivent plutôt utiliser l’espace de noms `/rpc`, comme illustré dans l’appel API ci-dessous.
+Le `/auditlog` Le point d’entrée fait partie des appels de procédure distants (RPC) pris en charge par la fonction [!DNL Schema Registry]. Contrairement aux autres points de terminaison dans la variable [!DNL Schema Registry] API, les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires comme `Accept` ou `Content-Type`, et n’utilisez pas d’événement `CONTAINER_ID`. Ils doivent plutôt utiliser la variable `/rpc` , comme illustré dans l’appel API ci-dessous.
 
 ## Récupération d’un journal d’audit pour une ressource
 
-Vous pouvez récupérer un journal d’audit pour n’importe quelle classe, groupe de champs, type de données ou schéma dans la bibliothèque de schémas en spécifiant l’identifiant de la ressource dans le chemin d’accès d’une requête de GET au point de terminaison `/auditlog`.
+Vous pouvez récupérer un journal d’audit pour n’importe quelle classe, groupe de champs, type de données ou schéma dans la bibliothèque de schémas en spécifiant l’identifiant de la ressource dans le chemin d’accès d’une requête de GET à la variable `/auditlog` point de terminaison .
 
 **Format d’API**
 
@@ -34,17 +34,17 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{RESOURCE_ID}` | `meta:altId` ou `$id` encodé URL de la ressource dont vous souhaitez récupérer le journal d’audit. |
+| `{RESOURCE_ID}` | Le `meta:altId` ou encodé URL `$id` de la ressource dont vous souhaitez récupérer le journal d’audit. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante récupère le journal d’audit pour un groupe de champs `Restaurant`.
+La requête suivante récupère le journal d’audit pour un schéma.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.schemas.50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -58,44 +58,72 @@ Une réponse réussie renvoie une liste chronologique des modifications apporté
 ```json
 [
   {
-    "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-    "auditTrails": [
+    "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
+    "updatedUser": "{USER_ID}",
+    "imsOrg": "{IMS_ORG}",
+    "updatedTime": "02-19-2021 05:43:56",
+    "requestId": "a14NMF0jd6BIfyXaHdTDl4bC4R0r9rht",
+    "clientId": "{CLIENT_ID}",
+    "sandBoxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+    "updates": [
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
-        "action": "add",
-        "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/brand",
+        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
+        "xdmType": "schemas",
+        "action": "remove",
+        "path": "/meta:usageCount",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
+    "updatedUser": "{USER_ID}",
+    "imsOrg": "{IMS_ORG}",
+    "updatedTime": "02-19-2021 05:43:56",
+    "requestId": "pFQbgmWrdbJrNB9GdxTSGECpXYWspu68",
+    "clientId": "{CLIENT_ID}",
+    "sandBoxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+    "updates": [
+      {
+        "id": "https://ns.adobe.com/{TENANT_ID}/classes/11052164b588f0c29584bf6ae1a6663a59aa65426c82389f",
+        "xdmType": "classes",
+        "action": "remove",
+        "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/loyaltySunday_ABC",
         "value": {
-          "title": "Brand",
+          "title": "LoyaltySundayABC",
           "description": "",
           "type": "string",
           "isRequired": false,
+          "required": [],
           "meta:xdmType": "string"
         }
       },
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
-        "action": "add",
-        "path": "/meta:usageCount",
-        "value": 0
+        "id": "https://ns.adobe.com/{TENANT_ID}/classes/11052164b588f0c29584bf6ae1a6663a59aa65426c82389f",
+        "xdmType": "classes",
+        "action": "remove",
+        "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/loyaltyMoxee_XYZ",
+        "value": {
+          "title": "LoyaltyMoxeeXYZ",
+          "description": "",
+          "type": "string",
+          "isRequired": false,
+          "required": [],
+          "meta:xdmType": "string"
+        }
       }
-    ],
-    "updatedUser": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
-    "updated": 1606255582281,
-    "clientId": "{CLIENT_ID}",
-    "sandBoxId": "{SANDBOX_ID}"
+    ]
   }
 ]
 ```
 
 | Propriété | Description |
 | --- | --- |
-| `auditTrails` | Tableau d’objets, chaque objet représentant une modification apportée à la ressource spécifiée ou à l’une de ses ressources dépendantes. |
-| `id` | `$id` de la ressource qui a été modifiée. Cette valeur représente généralement la ressource spécifiée dans le chemin de requête, mais peut représenter une ressource dépendante si c’est la source de la modification. |
+| `updates` | Tableau d’objets, chaque objet représentant une modification apportée à la ressource spécifiée ou à l’une de ses ressources dépendantes. |
+| `id` | Le `$id` de la ressource qui a été modifiée. Cette valeur représente généralement la ressource spécifiée dans le chemin de requête, mais peut représenter une ressource dépendante si c’est la source de la modification. |
+| `xdmType` | Type de ressource qui a été modifié. |
 | `action` | Le type de modification qui a été apporté. |
-| `path` | Chaîne [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) indiquant le chemin d’accès au champ spécifique qui a été modifié ou ajouté. |
+| `path` | A [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) chaîne indiquant le chemin d’accès au champ spécifique qui a été modifié ou ajouté. |
 | `value` | Valeur affectée au champ nouveau ou mis à jour. |
 
 {style=&quot;table-layout:auto&quot;}
