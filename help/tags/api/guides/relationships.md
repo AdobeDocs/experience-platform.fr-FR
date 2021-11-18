@@ -3,9 +3,9 @@ title: Relations dans l’API Reactor
 description: Découvrez comment les relations de ressources sont établies dans l’API Reactor, y compris les exigences de relation pour chaque ressource.
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '807'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ Les ressources de l’API Reactor sont souvent liées. Ce document présente la 
 
 Selon le type de ressource en question, certaines relations sont nécessaires. Une relation requise implique que la ressource parent ne peut pas exister sans la relation. Toutes les autres relations sont facultatives.
 
-Qu’elles soient obligatoires ou facultatives, les relations sont soit automatiquement établies par le système lors de la création des ressources appropriées, soit elles doivent être créées manuellement. Dans le cas de la création manuelle de relations, il existe deux méthodes possibles en fonction de la ressource en question :
+Qu’elles soient obligatoires ou facultatives, les relations sont soit automatiquement établies par le système lors de la création des ressources appropriées, soit elles doivent être créées manuellement. Dans le cas de la création manuelle de relations, il existe deux méthodes possibles en fonction de la ressource en question :
 
 * [Créer par payload](#payload)
 * [Créer par URL](#url) (pour les bibliothèques uniquement)
@@ -24,7 +24,7 @@ Reportez-vous à la section [Exigences de relation](#requirements) pour obtenir 
 
 ## Création d’une relation par payload {#payload}
 
-Certaines relations doivent être établies manuellement lors de la création initiale d’une ressource. Pour ce faire, vous devez fournir un objet `relationship` dans le payload de la requête lorsque vous créez la ressource parent pour la première fois. Voici quelques exemples de ces relations :
+Certaines relations doivent être établies manuellement lors de la création initiale d’une ressource. Pour ce faire, vous devez fournir un objet `relationship` dans le payload de la requête lorsque vous créez la ressource parent pour la première fois. Voici quelques exemples de ces relations :
 
 * [Création d’un élément de données](../endpoints/data-elements.md#create) avec les extensions requises
 * [Création d’un environnement](../endpoints/environments.md#create) avec la relation d’hôte requise
@@ -151,7 +151,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
-| `entity` | ☐ |  |  |
+| `entity` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -162,9 +162,9 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | `data_elements` |  |  |  |
 | `extensions` |  |  |  |
 | `rules` |  |  |  |
-| `environment` | ☐ |  |  |
-| `library` | ☐ |  |  |
-| `property` | ☐ |  |  |
+| `environment` | ✓ |  |  |
+| `library` | ✓ |  |  |
+| `property` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -172,7 +172,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ☐ |  |  |
+| `property` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -189,13 +189,13 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | ☐ |  |  |
+| `revisions` | ✓ |  |  |
 | `notes` |  |  |  |
-| `property` | ☐ |  |  |
-| `origin` | ☐ |  |  |
-| `extension` | ☐ | ☐ |  |
-| `updated_with_extension` | ☐ |  |  |
-| `updated_with_extension_package` | ☐ |  |  |
+| `property` | ✓ |  |  |
+| `origin` | ✓ |  |  |
+| `extension` | ✓ | ✓ |  |
+| `updated_with_extension` | ✓ |  |  |
+| `updated_with_extension_package` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -205,8 +205,8 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | :--- | :---: | :---: | :---: |
 | `library` |  |  |  |
 | `builds` |  |  |  |
-| `host` | ☐ | ☐ |  |
-| `property` | ☐ |  |  |
+| `host` | ✓ | ✓ |  |
+| `property` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -215,12 +215,12 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | ☐ |  |  |
+| `revisions` | ✓ |  |  |
 | `notes` |  |  |  |
-| `property` | ☐ |  |  |
-| `origin` | ☐ |  |  |
-| `extension_package` | ☐ | ☐ |  |
-| `updated_with_extension_package` | ☐ |  |  |
+| `property` | ✓ |  |  |
+| `origin` | ✓ |  |  |
+| `extension_package` | ✓ | ✓ |  |
+| `updated_with_extension_package` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -228,7 +228,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ☐ |  |  |
+| `property` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -237,13 +237,13 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `builds` |  |  |  |
-| `environment` |  |  | ☐ |
-| `data_elements` |  |  | ☐ |
-| `extensions` |  |  | ☐ |
-| `rules` |  |  | ☐ |
+| `environment` |  |  | ✓ |
+| `data_elements` |  |  | ✓ |
+| `extensions` |  |  | ✓ |
+| `rules` |  |  | ✓ |
 | `notes` |  |  |  |
-| `upstream_library` | ☐ |  |  |
-| `property` | ☐ |  |  |
+| `upstream_library` | ✓ |  |  |
+| `property` | ✓ |  |  |
 | `last_build` |  |  |  |
 
 {style=&quot;table-layout:auto&quot;}
@@ -252,7 +252,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
-| `resource` | ☐ |  |  |
+| `resource` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -260,7 +260,7 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
-| `company` | ☐ |  |  |
+| `company` | ✓ |  |  |
 | `callbacks` |  |  |  |
 | `environments` |  |  |  |
 | `libraries` |  |  |  |
@@ -270,18 +270,18 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 
 {style=&quot;table-layout:auto&quot;}
 
-### Composants de   règle
+### Composants de règle
 
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
-| `updated_with_extensions_package` | ☐ |  |  |
-| `updated_with_extension` | ☐ |  |  |
-| `extension` | ☐ | ☐ |  |
+| `updated_with_extensions_package` | ✓ |  |  |
+| `updated_with_extension` | ✓ |  |  |
+| `extension` | ✓ | ✓ |  |
 | `notes` |  |  |  |
-| `origin` | ☐ |  |  |
-| `property` | ☐ |  |  |
-| `rules` | ☐ | ☐ |  |
-| `revisions` | ☐ |  |  |
+| `origin` | ✓ |  |  |
+| `property` | ✓ |  |  |
+| `rules` | ✓ | ✓ |  |
+| `revisions` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -290,16 +290,16 @@ Les tableaux suivants décrivent les relations disponibles pour chaque type de r
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | ☐ |  |  |
+| `revisions` | ✓ |  |  |
 | `notes` |  |  |  |
-| `property` | ☐ |  |  |
-| `origin` | ☐ |  |  |
+| `property` | ✓ |  |  |
+| `origin` | ✓ |  |  |
 | `rule_components` |  |  |  |
 
 ### Secrets
 
 | Relation | Obligatoire | Créer par payload | Création par URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ☐ |  | ☐ |
-| `environment` | ☐ | ☐ |  |
+| `property` | ✓ |  | ✓ |
+| `environment` | ✓ | ✓ |  |
 
