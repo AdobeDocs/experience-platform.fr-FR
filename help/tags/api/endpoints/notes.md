@@ -3,9 +3,9 @@ title: Point dʼentrée des notes
 description: Découvrez comment effectuer des appels au point dʼentrée /notes dans lʼAPI Reactor.
 exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '527'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ Des notes peuvent être appliquées aux ressources suivantes :
 * [Extensions](./extensions.md)
 * [Bibliothèques](./libraries.md)
 * [Propriétés](./properties.md)
-* [Composants de   règle](./rule-components.md)
+* [Composants de règle](./rule-components.md)
 * [Règles](./rules.md)
 * [Secrets](./secrets.md)
 
