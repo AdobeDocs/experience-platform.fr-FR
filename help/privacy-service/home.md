@@ -6,13 +6,13 @@ topic-legacy: overview
 description: Privacy Service vous permet de faciliter votre mise en conformité automatisée aux réglementations légales liées à la confidentialité dans vos opérations de données Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1389'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
-# Présentation d’[!DNL Privacy Service]
+# Présentation de [!DNL Privacy Service]
 
 Pour offrir de meilleures expériences client, vous devez collecter et stocker les données personnelles de vos clients. Lorsque vous utilisez ces données, il est important de comprendre et de respecter la confidentialité de vos clients. Les nouvelles réglementations légales et organisationnelles donnent aux utilisateurs le droit d’accéder à leurs données personnelles et de les supprimer de vos banques de données sur demande.
 
@@ -73,7 +73,7 @@ Une fois que vous avez déterminé les besoins en matière de confidentialité d
 
 #### Utilisation de l’API
 
-[[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) fournit plusieurs points d’entrée pour la création et la gestion des tâches relatives à la confidentialité à l’aide des appels d’API RESTful. Cela vous permet d’avoir une approche automatisée de la conformité aux règlements relatifs à la confidentialité sur vos applications [!DNL Experience Cloud]. Pour connaître la procédure détaillée d’utilisation de l’API, consultez la section [Guide de l’API Privacy Service](api/overview.md).
+[[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) fournit plusieurs points d’entrée pour la création et la gestion des tâches relatives à la confidentialité à l’aide des appels d’API RESTful. Cela vous permet d’avoir une approche automatisée de la conformité aux règlements relatifs à la confidentialité sur vos applications [!DNL Experience Cloud]. Pour obtenir des instructions détaillées sur lʼutilisation de lʼAPI, consultez le [guide de lʼAPI Privacy Service](api/overview.md).
 
 #### Utilisation de l’interface utilisateur
 
@@ -90,7 +90,7 @@ Une fois les tâches de confidentialité effectuées, plusieurs options vous per
 | Méthode de surveillance | Description |
 | --- | --- |
 | [!DNL Privacy Service] Interface utilisateur | L’interface utilisateur de [!DNL Privacy Service] s’accompagne d’un tableau de bord de surveillance qui vous permet d’afficher une représentation visuelle reprenant le statut de chaque demande active. Pour plus d’informations, consultez le [guide d’utilisation de Privacy Service](ui/overview.md). |
-| [!DNL Privacy Service] API | Vous pouvez surveiller le statut des tâches de confidentialité à l’aide d’un programme, en utilisant les points d’entrée de recherche fournis par l’API [!DNL Privacy Service]. Voir la section [Guide de l’API Privacy Service](./api/overview.md) pour obtenir des étapes détaillées sur l’utilisation de l’API. |
+| [!DNL Privacy Service] API | Vous pouvez surveiller le statut des tâches de confidentialité à l’aide d’un programme, en utilisant les points d’entrée de recherche fournis par l’API [!DNL Privacy Service]. Consultez le [guide de lʼAPI Privacy Service](./api/overview.md) pour obtenir des instructions détaillées sur lʼutilisation de lʼAPI. |
 | [!DNL Privacy Events] | [!DNL Privacy Events] tire parti des événements d’Adobe I/O envoyés à un webhook configuré afin de faciliter l’automatisation efficace des demandes de traitement. Ils réduisent ou éliminent la nécessité de consulter l’API [!DNL Privacy Service] pour savoir si une tâche est terminée ou si un certain jalon a été atteint dans un workflow. Pour plus d’informations, consultez le tutoriel sur l’[abonnement aux Événements relatifs à la confidentialité](./privacy-events.md). |
 
 ## Étapes suivantes
