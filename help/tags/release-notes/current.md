@@ -3,9 +3,9 @@ title: Notes de mise à jour
 description: Dernières notes de mise à jour relatives aux balises dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '578'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 87%
 
 ## 21 octobre 2021
 
-**Envoi de données à des points de terminaison authentifiés dans le transfert d’événements** - En utilisant des secrets, vous pouvez envoyer des données aux points de terminaison qui nécessitent les protocoles d&#39;authentification suivants :
+**Envoi de données vers des points d’entrée authentifiés dans le transfert d’événements** - En utilisant des secrets, vous pouvez envoyer des données aux points d’entrée qui requièrent les protocoles d’authentification suivants :
 
-* **[!UICONTROL Jeton]**: Chaîne de caractères unique représentant une valeur de jeton d’authentification.
-* **[!UICONTROL HTTP simple]**: Contient deux attributs de chaîne pour un nom d&#39;utilisateur et un mot de passe.
-* **[!UICONTROL OAuth2]**: Contient plusieurs attributs pour prendre en charge le [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) spécification.
+* **[!UICONTROL Jeton]** : chaîne unique de caractères représentant une valeur de jeton d’authentification.
+* **[!UICONTROL HTTP simple]** : contient deux attributs de chaîne (string) pour un nom d’utilisateur et un mot de passe.
+* **[!UICONTROL OAuth2]** : contient plusieurs attributs pour la prise en charge de la spécification [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749).
 
-Pour plus d’informations, voir les guides sur [gestion des secrets dans l&#39;interface utilisateur de collecte de données](../ui/event-forwarding/secrets.md) ou [gestion des secrets dans l&#39;API Reactor](../api/guides/secrets.md).
+Pour plus d’informations, voir les guides sur [la gestion des secrets dans l’interface utilisateur de collecte de données](../ui/event-forwarding/secrets.md) ou [la gestion des secrets dans l’API Reactor](../api/guides/secrets.md).
 
 ## 19 juillet 2021
 
@@ -43,9 +43,9 @@ Pour plus d’informations, voir les guides sur [gestion des secrets dans l&#39;
 
 ## 22 avril 2021
 
-**Collecte de données dans Adobe Experience Platform** : l’envoi de données à Adobe ne consiste pas seulement à déployer des balises sur votre site ou une configuration sur votre application.  L’utilisation des SDK Experience Platform et du réseau Edge nécessite l’accès à d’autres fonctionnalités de Platform.  Auparavant, cela nécessitait une connexion à divers outils. Désormais, ils sont réunis en un seul endroit.
+**Collecte de données dans Adobe Experience Platform** : l’envoi de données à Adobe ne consiste pas seulement à déployer des balises sur votre site ou une configuration sur votre application. L’utilisation des SDK Experience Platform et du réseau Edge nécessite l’accès à d’autres fonctionnalités de Platform. Auparavant, cela nécessitait une connexion à divers outils. Désormais, ils sont réunis en un seul endroit.
 
-La collecte de données dans Platform est constituée de six fonctionnalités. En outre, votre navigation nouvellement rationalisée ne contient que les éléments accessibles par votre société et votre compte utilisateur.  Certains noms de fonctionnalités ont également été mis à jour pour correspondre aux modèles de nommage d’Experience Platform.
+La collecte de données dans Platform est constituée de six fonctionnalités. En outre, votre navigation nouvellement rationalisée ne contient que les éléments accessibles par votre société et votre compte utilisateur. Certains noms de fonctionnalités ont également été mis à jour pour correspondre aux modèles de nommage d’Experience Platform.
 
 * Client (anciennement accessible en tant que côté client)
 * Flux de données (anciennement accessible en tant que configurations Edge)
