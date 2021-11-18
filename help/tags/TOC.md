@@ -7,7 +7,7 @@ feature: Tags
 source-git-commit: 7368b6e69522cce9343df78c31a712bfdbfedfe3
 workflow-type: tm+mt
 source-wordcount: '381'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -68,12 +68,12 @@ ht-degree: 99%
          * [Présentation](./extensions/web/analytics/overview.md)
          * [Modules partagés](./extensions/web/analytics/shared-modules.md)
          * [Notes de mise à jour](./extensions/web/analytics/release-notes.md)
-      *  Adobe Analytics Product String {#product-string}
+      * Adobe Analytics Product String {#product-string}
          * [Présentation](./extensions/web/product-string/overview.md)
          * [Notes de mise à jour](./extensions/web/product-string/release-notes.md)
       * Adobe Audience Manager {#audience-manager}
          * [Présentation](./extensions/web/audience-manager/overview.md)
-      *  Adobe Client Data Layer (ACDL) {#client-data-layer}
+      * Adobe Client Data Layer (ACDL) {#client-data-layer}
          * [Présentation](./extensions/web/client-data-layer/overview.md)
          * [Notes de mise à jour](./extensions/web/client-data-layer/release-notes.md)
       * Adobe ContextHub {#contexthub}
@@ -85,12 +85,12 @@ ht-degree: 99%
          * [Présentation](./extensions/web/platform-demo/overview.md)
       * SDK web Adobe Experience Platform {#sdk}
          * [Présentation](./extensions/web/sdk/overview.md)
-      *  Adobe Experience Platform Cloud Connector {#cloud-connector}
+      * Adobe Experience Platform Cloud Connector {#cloud-connector}
          * [Présentation](./extensions/web/cloud-connector/overview.md)
-      *  des statistiques sur les ressources Adobe Experience Manager {#asset-insights}
+      * des statistiques sur les ressources Adobe Experience Manager {#asset-insights}
          * [Présentation](./extensions/web/asset-insights/overview.md)
          * [Notes de mise à jour](./extensions/web/asset-insights/release-notes.md)
-      *  Adobe Media Analytics for Audio and Video {#media-analytics}
+      * Adobe Media Analytics for Audio and Video {#media-analytics}
          * [Présentation](./extensions/web/media-analytics/overview.md)
          * [Notes de mise à jour](./extensions/web/media-analytics/release-notes.md)
       * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
@@ -163,7 +163,7 @@ ht-degree: 99%
       * [Propriétés](./api/endpoints/properties.md)
       * [Éléments de données](./api/endpoints/data-elements.md)
       * [Règles](./api/endpoints/rules.md)
-      * [Composants de   règle](./api/endpoints/rule-components.md)
+      * [Composants de règle](./api/endpoints/rule-components.md)
       * [Modules d’extension](./api/endpoints/extension-packages.md)
       * [Extensions](./api/endpoints/extensions.md)
       * [Bibliothèques](./api/endpoints/libraries.md)

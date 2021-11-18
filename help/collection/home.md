@@ -8,7 +8,7 @@ exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
 workflow-type: tm+mt
 source-wordcount: '458'
-ht-degree: 52%
+ht-degree: 55%
 
 ---
 
@@ -30,7 +30,7 @@ Les technologies de collecte de données fournies par Experience Platform se con
 * [Transfert d’événement](../tags/ui/event-forwarding/overview.md)
 * [SDK web Adobe Experience Platform](../edge/home.md)
 * [ SDK Mobile Adobe Experience Platform](https://aep-sdks.gitbook.io/docs/)
-* [Débogueur Adobe Experience Platform](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
+* [Débogueur Adobe Experience Platform](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=fr)
 * [Modèle de données d’expérience (XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
