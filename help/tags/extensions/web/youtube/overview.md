@@ -3,7 +3,7 @@ title: Présentation de l’extension de suivi vidéo YouTube
 description: Découvrez lʼextension de balise de suivi vidéo YouTube dans Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
 source-git-commit: bbaf272313d5a8afe33178598063164792f4d8c0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '891'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ Chaque propriété de balise dans Adobe Experience Platform requiert que les ext
 * Service d’identification des visiteurs Experience Cloud
 * Extension Core
 
-Utilisez l’extrait de code [« Incorporer un lecteur à l’aide d’une balise \&lt;iframe\> »](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) de la documentation Google destinée aux développeurs dans le code HTML de chaque page web sur laquelle un lecteur vidéo doit être rendu.
+Utilisez l’extrait de code [« Incorporer un lecteur à l’aide d’une balise &lt;iframe\> »](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) de la documentation Google destinée aux développeurs dans le code HTML de chaque page web sur laquelle un lecteur vidéo doit être rendu.
 
 Cette extension, la version 2.0.1, prend en charge l’incorporation d’une ou de plusieurs vidéos YouTube sur une seule page web via l’insertion d’un attribut `id` avec une valeur unique dans la balise de script iframe, et l’ajout de `enablejsapi=1` et `rel=0` à la fin de la valeur de l’attribut `src`, si le code ne s’y trouve pas déjà. Par exemple :
 
@@ -86,7 +86,7 @@ Les objets dʼextension vidéo suivants doivent être inclus.
 
 * **Condition :** aucune
 
-* **Actions :**  Utilisez lʼ&#x200B;**extension Analytics** pour lʼaction « Définir des variables » et mettre en correspondance :
+* **Actions :** Utilisez lʼ&#x200B;**extension Analytics** pour lʼaction « Définir des variables » et mettre en correspondance :
 
    * L’événement pour Début vidéo,
    * Une valeur prop/eVar pour l’élément de données Durée de la vidéo
