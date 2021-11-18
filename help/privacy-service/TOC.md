@@ -5,9 +5,9 @@ breadcrumb-title: Guide de Privacy Service
 user-guide-description: Gérez les demandes de données des clients afin de respecter les réglementations légales en matière de confidentialité, telles que le RGPD et le CCPA.
 feature: Privacy
 source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '87'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 95%
    * [Présentation](./regulations/overview.md)
    * [FAQ](./regulations/faq.md)
    * [Terminologie](./regulations/terminology.md)
-* [API d’hygiène des données (Alpha)](./data-hygiene-api.md)
+* [API Data Hygiene (Alpha)](./data-hygiene-api.md)
 * [Guide de dépannage](./troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [Notes de mise à jour](./release-notes.md)
