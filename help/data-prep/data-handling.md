@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Ce document donne un aperçu de la manière dont différents types de données sont traités dans la préparation des données.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '568'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
