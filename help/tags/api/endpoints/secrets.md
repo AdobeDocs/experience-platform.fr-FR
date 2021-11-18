@@ -1,26 +1,26 @@
 ---
-title: Point de terminaison des secrets
-description: Découvrez comment effectuer des appels au point de terminaison /secrets dans l’API Reactor.
+title: Point d’entrée des secrets
+description: Découvrez comment effectuer des appels vers le point d’entrée /secrets dans l’API Reactor.
 source-git-commit: 103ba74646a42fd62007f47df4d1a46caf25e3e6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1187'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
-# Point de terminaison des secrets
+# Point d’entrée des secrets
 
-Un secret est une ressource qui n&#39;existe que dans les propriétés de transfert d&#39;événements (propriétés avec un `platform` attribut défini sur `edge`). Ils permettent au transfert d&#39;événements de s&#39;authentifier sur un autre système pour un échange sécurisé de données.
+Un secret est une ressource qui n’existe que dans les propriétés de transfert d’événements (propriétés avec un attribut `platform` défini sur `edge`). Ils permettent au transfert d’événements de s’authentifier sur un autre système pour un échange de données sécurisé.
 
-Ce guide vous explique comment appeler le `/secrets` point de terminaison dans l’API Reactor. Pour une explication détaillée des différents types de secrets et comment les utiliser, veuillez vous référer à la présentation de haut niveau sur [secrets](../guides/secrets.md) avant de revenir à ce guide.
+Ce guide vous explique comment effectuer des appels au point d’entrée `/secrets` dans l’API Reactor. Pour une explication détaillée des différents types de secrets et de leur utilisation, reportez-vous à la présentation générale sur les [secrets](../guides/secrets.md) avant de revenir à ce guide.
 
 ## Prise en main
 
 Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la procédure à suivre pour s’authentifier auprès de l’API.
 
-## Récupérer une liste de secrets pour une propriété {#list-property}
+## Récupération d’une liste de secrets pour une propriété {#list-property}
 
-Vous pouvez lister les secrets qui appartiennent à une propriété en faisant une demande de GET.
+Vous pouvez répertorier les secrets appartenant à une propriété en effectuant une requête GET.
 
 **Format d’API**
 
@@ -30,7 +30,7 @@ GET /properties/{PROPERTY_ID}/secrets
 
 | Paramètre | Description |
 | --- | --- |
-| `{PROPERTY_ID}` | ID de la propriété dont vous souhaitez répertorier les secrets. |
+| `{PROPERTY_ID}` | L’identifiant de la propriété dont vous souhaitez répertorier les secrets. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -114,9 +114,9 @@ Une réponse réussie renvoie une liste de secrets appartenant à la propriété
 }
 ```
 
-## Récupérer une liste de secrets pour un environnement {#list-environment}
+## Récupération d’une liste de secrets pour un environnement {#list-environment}
 
-Vous pouvez répertorier les secrets qui appartiennent à un environnement en effectuant une demande de GET.
+Vous pouvez répertorier les secrets appartenant à un environnement en effectuant une requête GET.
 
 **Format d’API**
 
@@ -126,7 +126,7 @@ GET /environments/{ENVIRONMENT_ID}/secrets
 
 | Paramètre | Description |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | ID de l&#39;environnement dont vous souhaitez répertorier les secrets. |
+| `{ENVIRONMENT_ID}` | L’identifiant de l’environnement dont vous souhaitez répertorier les secrets. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -144,7 +144,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste de secrets appartenant à l&#39;environnement.
+Une réponse réussie renvoie une liste de secrets appartenant à l’environnement.
 
 ```json
 {
@@ -210,9 +210,9 @@ Une réponse réussie renvoie une liste de secrets appartenant à l&#39;environn
 }
 ```
 
-## Rechercher un secret {#lookup}
+## Recherche dʼun secret {#lookup}
 
-Vous pouvez rechercher un secret en incluant son ID dans le chemin d’une demande de GET.
+Vous pouvez rechercher un secret en fournissant son identifiant dans le chemin d’accès d’une requête GET.
 
 **Format d’API**
 
@@ -222,7 +222,7 @@ GET /secrets/{SECRET_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SECRET_ID}` | L&#39;ID du secret que vous voulez rechercher. |
+| `{SECRET_ID}` | L’identifiant du secret que vous voulez rechercher. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -295,13 +295,13 @@ Une réponse réussie renvoie les détails du secret.
 }
 ```
 
-## Création d’un secret {#create}
+## Créer un secret {#create}
 
-Vous pouvez créer un secret en effectuant une demande de POST.
+Vous pouvez créer un secret en effectuant une requête POST.
 
 >[!NOTE]
 >
->Lorsque vous créez un nouveau secret, l’API renvoie une réponse immédiate contenant des informations pour cette ressource. Dans le même temps, une tâche d&#39;échange secret est déclenchée pour vérifier que l&#39;échange d&#39;informations d&#39;identification est fonctionnel. Cette tâche est traitée de manière asynchrone et met à jour l’attribut d’état du secret vers `succeeded` ou `failed` selon le résultat.
+>Lorsque vous créez un secret, l’API renvoie une réponse immédiate contenant des informations pour cette ressource. Dans le même temps, une tâche d’échange de secrets est déclenchée pour vérifier que l’échange d’informations d’identification est fonctionnel. Cette tâche est traitée de manière asynchrone et met à jour l’attribut status du secret vers `succeeded` ou `failed`, selon le résultat.
 
 **Format d’API**
 
@@ -311,7 +311,7 @@ POST /properties/{PROPERTY_ID}/secrets
 
 | Paramètre | Description |
 | --- | --- |
-| `{PROPERTY_ID}` | ID de la propriété sous laquelle vous souhaitez définir le secret. |
+| `{PROPERTY_ID}` | L’identifiant de la propriété sous laquelle vous souhaitez définir le secret. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -350,17 +350,17 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom descriptif unique du secret. |
-| `type_of` | Type d&#39;informations d&#39;identification d&#39;authentification que représente le secret. Contient trois valeurs acceptées :<ul><li>`token`: Chaîne de jeton.</li><li>`simple-http`: Nom d’utilisateur et mot de passe.</li><li>`oauth2`: Informations d’identification conformes à la norme OAuth.</li></ul> |
-| `credentials` | Objet contenant les valeurs d&#39;identification du secret. Selon le paramètre `type_of` , différentes propriétés doivent être fournies. Consultez la section sur [informations](../guides/secrets.md#credentials) dans le guide des secrets pour plus de détails sur les exigences de chaque type. |
-| `relationships.environment` | Chaque secret doit être associé à un environnement lors de sa création. Le `data` l&#39;objet dans cette propriété doit contenir `id` de l&#39;environnement, le secret qui lui est assigné, ainsi qu&#39;un `type` valeur de `environments`. |
+| `name` | Nom unique et descriptif pour le secret. |
+| `type_of` | Le type d’informations d’authentification que le secret représente. Trois valeurs acceptées :<ul><li>`token` : chaîne de jeton.</li><li>`simple-http` : nom d’utilisateur et mot de passe.</li><li>`oauth2` : informations d’identification conformes à la norme OAuth.</li></ul> |
+| `credentials` | Objet contenant les valeurs d’identification du secret. Selon l’attribut `type_of`, différentes propriétés doivent être fournies. Voir la section sur les [informations d’identification](../guides/secrets.md#credentials) dans le guide des secrets pour plus d’informations sur les exigences de chaque type. |
+| `relationships.environment` | Chaque secret doit être associé à un environnement lors de sa création. L’objet `data` dans cette propriété doit contenir le `id` de l’environnement auquel le secret est affecté, avec une valeur `type` de `environments`. |
 | `type` | Le type de ressource en cours de création. Pour cet appel, la valeur doit être `secrets`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du secret. Notez que, selon le type de secret, certaines propriétés sous `credentials` peut être masqué.
+Une réponse réussie renvoie les détails du secret. Notez que selon le type de secret, certaines propriétés sous `credentials` peuvent être masquées.
 
 ```json
 {
@@ -416,13 +416,13 @@ Une réponse réussie renvoie les détails du secret. Notez que, selon le type d
 }
 ```
 
-## Tester `oauth2` secret {#test}
+## Tester un secret `oauth2` {#test}
 
 >[!NOTE]
 >
->Cette opération ne peut être effectuée que sur des secrets avec un `type_of` valeur de `oauth2`.
+>Cette opération peut être effectuée uniquement sur les secrets avec une valeur `type_of` de `oauth2`.
 
-Vous pouvez tester `oauth2` en incluant son ID dans le chemin d’une demande de PATCH. L&#39;opération de test effectue un échange et inclut la réponse du service d&#39;autorisation dans la `test_exchange` dans le `meta` objet. Cette opération ne met pas à jour le secret lui-même.
+Vous pouvez tester un secret `oauth2` en incluant son identifiant dans le chemin d’accès d’une requête PATCH. L’opération de test effectue un échange et inclut la réponse du service d’autorisation dans l’attribut `test_exchange` de l’objet `meta` du secret. Cette opération ne met pas à jour le secret lui-même.
 
 **Format d’API**
 
@@ -432,7 +432,7 @@ PATCH /secrets/{SECRET_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SECRET_ID}` | L’ID du fichier `oauth2` secret que vous voulez tester. |
+| `{SECRET_ID}` | L’identifiant du secret `oauth2` que vous voulez tester. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -462,16 +462,16 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes` | Doit contenir un `type_of` avec une valeur de `oauth2`. |
-| `meta` | Doit contenir un `action` avec une valeur de `test`. |
-| `id` | L&#39;ID du secret que vous testez. Cette valeur doit correspondre à l’ID fourni dans le chemin d’accès de la demande. |
-| `type` | Type de ressource utilisée. Cette propriété doit être définie sur `secrets`. |
+| `attributes` | Doit contenir une propriété `type_of` avec une valeur de `oauth2`. |
+| `meta` | Doit contenir une propriété `action` avec une valeur de `test`. |
+| `id` | L’identifiant du secret que vous testez. Il doit correspondre à la valeur fournie dans le chemin de requête. |
+| `type` | Le type de ressource en cours d’exploitation. Cette propriété doit être définie sur `secrets`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du secret, avec la réponse du service d&#39;autorisation contenue dans la `meta.test_exchange`.
+Une réponse réussie renvoie les détails du secret, avec la réponse du service d’autorisation contenue dans `meta.test_exchange`.
 
 ```json
 { 
@@ -539,7 +539,7 @@ Une réponse réussie renvoie les détails du secret, avec la réponse du servic
 
 ## Réessayer un secret {#retry}
 
-Une nouvelle tentative de secret consiste à déclencher manuellement l&#39;échange secret. Vous pouvez réessayer un secret en incluant son ID dans le chemin d’une demande de PATCH.
+Réessayer un secret consiste à déclencher manuellement l’échange secret. Vous pouvez réessayer un secret en incluant son identifiant dans le chemin d’accès d’une requête PATCH.
 
 **Format d’API**
 
@@ -549,7 +549,7 @@ PATCH /secrets/{SECRET_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SECRET_ID}` | ID du secret que vous souhaitez réessayer. |
+| `{SECRET_ID}` | L’identifiant du secret que vous souhaitez réessayer. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -579,16 +579,16 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes` | Doit contenir un `type_of` propriété correspondant à celle du secret en cours de mise à jour (`token`, `simple-http`, ou `oauth2`). |
-| `meta` | Doit contenir un `action` avec une valeur de `retry`. |
-| `id` | L&#39;ID du secret que vous tentez de nouveau. Cette valeur doit correspondre à l’ID fourni dans le chemin d’accès de la demande. |
-| `type` | Type de ressource utilisée. Cette propriété doit être définie sur `secrets`. |
+| `attributes` | Doit contenir une propriété `type_of` correspondant à celle du secret mis à jour (`token`, `simple-http` ou `oauth2`). |
+| `meta` | Doit contenir une propriété `action` avec une valeur de `retry`. |
+| `id` | L’identifiant du secret que vous essayez à nouveau. Il doit correspondre à la valeur fournie dans le chemin de requête. |
+| `type` | Le type de ressource en cours d’exploitation. Cette propriété doit être définie sur `secrets`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du secret, avec son état réinitialisé sur `pending`. Une fois l&#39;échange terminé, le statut du secret sera mis à jour en `succeeded` ou `failed` selon le résultat.
+Une réponse réussie renvoie les détails du secret, dont le statut est réinitialisé sur `pending`. Une fois l’échange terminé, le statut du secret est mis à jour vers `succeeded` ou `failed` selon le résultat.
 
 ```json
 {
@@ -643,15 +643,15 @@ Une réponse réussie renvoie les détails du secret, avec son état réinitiali
 }
 ```
 
-## Suppression d’un secret {#delete}
+## Supprimer un secret {#delete}
 
-Vous pouvez supprimer un secret en incluant son ID dans le chemin d’une demande de DELETE. Il s’agit d’une suppression définitive avec effet immédiat et ne nécessite pas de republication de bibliothèque.
+Vous pouvez supprimer un secret en incluant son identifiant dans le chemin dʼaccès dʼune requête DELETE. Il s’agit d’une suppression irréversible avec effet immédiat qui ne nécessite pas de republication de bibliothèque.
 
-Cette opération supprime le secret de l&#39;environnement auquel il est associé et la ressource sous-jacente est supprimée.
+Cette opération supprime le secret de l’environnement auquel il est associé et la ressource sous-jacente est supprimée.
 
 >[!WARNING]
 >
->Si vous avez des règles déployées qui font référence à un secret supprimé, ces règles cesseront immédiatement de fonctionner. Tout élément de données faisant référence à ce secret doit être mis à jour ou supprimé par la suite.
+>Si des règles déployées font référence à un secret supprimé, elles cesseront immédiatement de fonctionner. Tous les éléments de données qui font référence à ce secret doivent être mis à jour ou supprimés ultérieurement.
 
 **Format d’API**
 
@@ -661,7 +661,7 @@ DELETE /secrets/{SECRET_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SECRET_ID}` | ID du secret que vous souhaitez supprimer. |
+| `{SECRET_ID}` | L’identifiant du secret que vous souhaitez supprimer. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -679,17 +679,17 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie l&#39;état HTTP 204 (Aucun contenu) et un corps de réponse vide, indiquant que le secret a été supprimé du système.
+Une réponse réussie renvoie un état HTTP 204 (No Content) et un corps de réponse vide, indiquant que le secret a été supprimé du système.
 
-## Liste des notes pour un secret {#notes}
+## Répertorier les notes correspondant à un secret {#notes}
 
-L’API Reactor vous permet d’ajouter des notes à certaines ressources, y compris des secrets. Les notes sont des annotations textuelles qui n’ont aucune incidence sur le comportement des ressources et peuvent être utilisées pour divers cas d’utilisation.
+L’API Reactor vous permet d’ajouter des notes à certaines ressources, y compris des secrets. Les notes sont des annotations textuelles qui n’ont aucun impact sur le comportement des ressources et peuvent être utilisées dans divers cas.
 
 >[!NOTE]
 >
->Voir la section [guide de point de terminaison notes](./notes.md) pour plus d’informations sur la création et la modification de notes pour les ressources d’API de réacteur.
+>Voir le [guide des points d’entrée des notes](./notes.md) pour plus d’informations sur la création et la modification de notes pour les ressources de l’API Reactor.
 
-Vous pouvez récupérer toutes les notes associées à un secret en effectuant une demande de GET.
+Vous pouvez récupérer toutes les notes liées à un secret en effectuant une requête GET.
 
 **Format d’API**
 
@@ -699,7 +699,7 @@ GET /secrets/{SECRET_ID}/notes
 
 | Paramètre | Description |
 | --- | --- |
-| `{SECRET_ID}` | L&#39;ID du secret dont vous souhaitez répertorier les notes. |
+| `{SECRET_ID}` | L’identifiant du secret dont vous souhaitez répertorier les notes. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -717,7 +717,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste de notes appartenant au secret.
+Une réponse réussie renvoie une liste des notes appartenant au secret.
 
 ```json
 {
@@ -760,15 +760,15 @@ Une réponse réussie renvoie une liste de notes appartenant au secret.
 }
 ```
 
-## Récupérer les ressources associées pour un secret {#related}
+## Récupération des ressources associées à un secret {#related}
 
-Les appels suivants montrent comment récupérer les ressources associées pour un secret. Lorsque [rechercher un secret](#lookup), ces relations sont répertoriées sous le noeud `relationships` propriété.
+Les appels suivants montrent comment récupérer les ressources associées à un secret. Lorsque vous [recherchez un secret](#lookup), ces relations sont répertoriées sous la propriété `relationships`.
 
 Pour plus d’informations sur les relations dans l’API Reactor, consultez le [guide des relations](../guides/relationships.md).
 
-### Rechercher un secret dans l&#39;environnement associé {#environment}
+### Recherche de l’environnement associé à un secret {#environment}
 
-Vous pouvez rechercher l&#39;environnement qui utilise un secret en ajoutant `/environment` vers le chemin d’une demande de GET.
+Vous pouvez rechercher l’environnement qui utilise un secret en ajoutant `/environment` au chemin d’accès d’une requête GET.
 
 **Format d’API**
 
@@ -778,7 +778,7 @@ GET /secrets/{SECRET_ID}/environment
 
 | Paramètre | Description |
 | --- | --- |
-| `{SECRET_ID}` | L&#39;ID du secret dont vous souhaitez rechercher l&#39;environnement. |
+| `{SECRET_ID}` | L’identifiant du secret dont vous souhaitez rechercher l’environnement. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -875,9 +875,9 @@ Une réponse réussie renvoie les détails de l’environnement.
 }
 ```
 
-### Rechercher un secret dans la propriété associée {#property}
+### Recherche de la propriété associée à un secret {#property}
 
-Vous pouvez rechercher la propriété qui possède un secret en ajoutant `/property` vers le chemin d’une demande de GET.
+Vous pouvez rechercher la propriété qui détient un secret en ajoutant `/property` au chemin d’accès d’une requête GET.
 
 **Format d’API**
 
@@ -887,7 +887,7 @@ GET /secrets/{SECRET_ID}/property
 
 | Paramètre | Description |
 | --- | --- |
-| `{SECRET_ID}` | L&#39;ID du secret dont vous souhaitez rechercher la propriété. |
+| `{SECRET_ID}` | L’identifiant du secret dont vous souhaitez rechercher la propriété. |
 
 {style=&quot;table-layout:auto&quot;}
 
