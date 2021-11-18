@@ -4,9 +4,9 @@ title: Groupe de champs de schéma de contenu et de préférences
 topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs de schéma Contenus et Préférences .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: d2c71423165776bf7c106a7503514c5acc284f8e
+source-git-commit: 6caece867afe3e6f3fd323843b753cce2319623c
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Le [!UICONTROL Consentements et préférences] Le groupe de champs fournit un ch
 >
 >Consultez le guide sur la [exploration des ressources XDM](../../ui/explore.md) pour savoir comment rechercher une ressource XDM et examiner sa structure dans l’interface utilisateur de Platform.
 
-Le fichier JSON suivant illustre un exemple du type de données que la variable [!UICONTROL Consentements et préférences] groupe de champs peut traiter. Les sections suivantes contiennent des informations sur l’utilisation spécifique de chacun de ces champs.
+Le fichier JSON suivant illustre un exemple du type de données que la variable [!UICONTROL Consentements et préférences] groupe de champs peut traiter. Pour plus d’informations sur l’utilisation de la plupart des champs fournis par le groupe de champs, consultez le guide sur la [Type de données Consentements et Préférences](../../data-types/consents.md). Les sous-sections ci-dessous portent sur les attributs uniques que le groupe de champs ajoute au type de données.
 
 ```json
 {
@@ -96,8 +96,6 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 >* [Génération d’exemples de données dans l’interface utilisateur](../../ui/sample.md)
 >* [Génération d’exemples de données dans l’API](../../api/sample-data.md)
 
-
-Pour plus d’informations sur l’utilisation de la plupart des champs fournis par le groupe de champs, consultez le guide sur la [Type de données Consentements et Préférences](../../data-types/consents.md). Les sous-sections ci-dessous portent sur les attributs uniques que le groupe de champs ajoute au type de données.
 
 ### `idSpecific`
 
