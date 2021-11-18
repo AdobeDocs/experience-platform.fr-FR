@@ -3,9 +3,9 @@ title: Guide de lʼAPI Reactor
 description: LʼAPI Reactor permet aux développeurs de gérer par programmation toutes les ressources des balises dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1082'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -41,7 +41,7 @@ Les règles contrôlent le comportement des ressources contenues dans une biblio
 
 Pour savoir comment gérer les règles dans lʼAPI, consultez le [guide du point dʼentrée des règles](./endpoints/rules.md).
 
-## Composants de   règle
+## Composants de règle
 
 Les composants de règle sont les éléments individuels constitutifs dʼune règle. Les composants de règle possèdent trois types de base :
 
@@ -117,7 +117,7 @@ Le point dʼentrée `/search` permet de trouver des ressources correspondant à 
 
 ## Secrets
 
-Un secret contient des informations d&#39;identification qui permettent au transfert d&#39;événements de s&#39;authentifier sur un autre système pour un échange sécurisé de données. Voir la section [guide secrets](./guides/secrets.md) pour une présentation du fonctionnement des secrets dans le transfert d’événements, et la [guide de point de terminaison secrets](./endpoints/secrets.md) pour savoir comment les gérer dans l’API Reactor.
+Un secret contient des informations d’identification qui permettent au transfert d’événements de s’authentifier sur un autre système pour un échange de données sécurisé. Voir le [guide des secrets](./guides/secrets.md) pour une présentation du fonctionnement des secrets dans le transfert d’événements et le [guide des points d’entrée des secrets](./endpoints/secrets.md) pour apprendre à les gérer dans l’API Reactor.
 
 ## Étapes suivantes
 
