@@ -5,13 +5,13 @@ topic-legacy: overview
 description: Ce document présente les configurations que vous devez préparer pour utiliser le SDK Sources.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
+source-git-commit: a3bfd3b87343ca1dd2d122f4f82926082965578c
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 2%
 
 ---
-
 
 # Configuration des spécifications d’authentification pour le SDK Sources
 
@@ -180,7 +180,7 @@ L’authentification de base est un type d’authentification qui vous permet d�
 | Propriété | Description | Exemple |
 | --- | --- | --- |
 | `authSpec.name` | Affiche le nom du type d’authentification pris en charge. | `Basic Authentication` |
-| `authSpec.type` | Définit le type d’authentification pris en charge par la source. | `oAuth2-refresh-code` |
+| `authSpec.type` | Définit le type d’authentification pris en charge par la source. | `BasicAuthentication` |
 | `authSpec.spec` | Contient des informations sur le schéma, le type de données et les propriétés de l’authentification. |
 | `authSpec.spec.$schema` | Définit le schéma utilisé pour l’authentification. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Définit le type de données du schéma. | `object` |
