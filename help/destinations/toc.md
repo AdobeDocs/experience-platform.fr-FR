@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: a01730fce4f7746389fc48e700c259567492d0ee
+source-git-commit: 320c95f894c75a7f52808730b0cac4bc1e4411e1
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '680'
 ht-degree: 44%
 
 ---
@@ -36,7 +36,6 @@ ht-degree: 44%
    * [Surveillance des flux de données](./ui/monitor-dataflows.md)
 * Catalogue des destinations {#catalog}
    * [Présentation du catalogue des destinations](./catalog/overview.md)
-   * [ (Alpha) Connexion HTTP](./catalog/http-destination.md)
    * Destinations Adobe {#adobe}
       * [Présentation des destinations Adobe](./catalog/adobe/overview.md)
       * [Connexion Marketo Engage](./catalog/adobe/marketo-engage.md)
@@ -132,6 +131,8 @@ ht-degree: 44%
       * [Connexion facebook](./catalog/social/facebook.md)
       * [Connexion des audiences mappées linkedIn](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
+   * Destinations de diffusion en continu {#streaming}
+      * [ (Version bêta) Connexion à l’API HTTP](./catalog/streaming/http-destination.md)
    * Destinations d’enquête {#survey}
       * [Présentation des destinations d’enquête](./catalog/survey/overview.md)
       * [Destination de l’extension Foresee](./catalog/survey/foresee.md)
