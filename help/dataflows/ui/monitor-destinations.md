@@ -6,9 +6,9 @@ title: Surveillance des flux de données pour les destinations dans l’interfac
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 9396f44aafc7d6e863d09b369440f507998dce2c
+source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1785'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ Le tableau de bord de surveillance fournit une représentation visuelle du parco
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [Flux de données](../home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
    - [Exécutions de flux de données](../../sources/notifications.md): Les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de fréquence des flux de données sélectionnés.
@@ -46,6 +46,18 @@ Pour plus d’informations sur les statuts, voir le tableau suivant :
 | Erreur | Le `Error` Le statut indique que le processus d’activation d’un flux de données a été interrompu. |
 
 ### Exécutions de flux de données pour les destinations de diffusion en continu
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_identitiesactivated"
+>title="Identités activées"
+>abstract="Nombre d’identités de profil individuelles activées avec succès vers la destination sélectionnée."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="En savoir plus dans la documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_identitiesexcluded"
+>title="Identités exclues"
+>abstract="Le nombre d’enregistrements de profil individuels exclus de l’activation pour la destination sélectionnée en fonction des attributs manquants et de la violation du consentement."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="En savoir plus dans la documentation"
 
 Pour les destinations de diffusion en continu, la variable [!UICONTROL Exécutions de flux de données] Cet onglet fournit une mise à jour horaire des données de mesure lors de l’exécution de votre flux de données. Les statistiques les plus en vue sont celles portant sur les identités.
 
@@ -121,7 +133,7 @@ La page Détails affiche également une liste des identités qui ont échoué et
 
 Pour accéder au [!UICONTROL Surveillance] tableau de bord, sélectionnez **[!UICONTROL Surveillance]** (![icône de surveillance](../assets/ui/monitor-destinations/monitoring-icon.png)) dans le volet de navigation de gauche. Une fois sur le [!UICONTROL Surveillance] page, sélectionnez [!UICONTROL Destinations]. Le [!UICONTROL Surveillance] Le tableau de bord contient des mesures et des informations sur les tâches d’exécution de destination.
 
-Au centre du tableau de bord se trouve le panneau Activation, qui contient des mesures et des graphiques affichant les données sur le taux d’activation des données exportées vers les destinations.
+Le panneau Activation se trouve au centre du tableau de bord. Il contient des mesures et des graphiques qui affichent les données sur le taux d’activation des données exportées vers les destinations.
 
 ![](../assets/ui/monitor-destinations/dashboard-graph.png)
 
