@@ -2,7 +2,7 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination de diffusion en continu à l’aide de Destination SDK.
 title: Utilisation de Destination SDK pour configurer une destination de diffusion en continu
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -165,7 +165,7 @@ Selon que vous spécifiez `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `
 
 ## Étape 6 : Tester votre destination {#test-destination}
 
-Après avoir configuré votre destination à l’aide des points de terminaison de configuration des étapes précédentes, vous pouvez utiliser la variable [outil de test de destination](./create-template.md) pour tester l’intégration entre Adobe Experience Platform et votre destination.
+Après avoir configuré votre destination à l’aide des points de terminaison de configuration des étapes précédentes, vous pouvez utiliser la variable [outil de test de destination](./test-destination.md) pour tester l’intégration entre Adobe Experience Platform et votre destination.
 
 Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur de l’Experience Platform pour créer des segments que vous activerez vers votre destination. Reportez-vous aux deux ressources ci-dessous pour savoir comment créer des segments dans Experience Platform :
 
