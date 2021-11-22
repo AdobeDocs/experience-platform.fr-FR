@@ -2,7 +2,7 @@
 title: Notes de mise à jour de l’extension Service d’identités d’Adobe Experience Cloud
 description: Dernières notes de mise à jour pour l’extension Service d’identités d’Adobe Experience Cloud dans Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 1d3abede47c97c9a4f3b18ae25c890c309e942fd
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 100%
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 Pour les notes de mise à jour du Service d’identités d’Experience Cloud lui-même et pas uniquement de l’extension Adobe Experience Platform Launch, veuillez consulter : [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr)
 
-## 3 novembre 2020
+## 3 novembre 2021
 
 ### Extension 5.2.1 d’Experience Cloud ID
 
