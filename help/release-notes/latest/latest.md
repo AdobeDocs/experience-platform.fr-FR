@@ -1,10 +1,11 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
-description: Dernières notes de mise à jour pour Adobe Experience Platform.
-source-git-commit: aa8cafc9a40748eda3098b2af732a828d39204b2
+description: Dernières notes de mise à jour pour Adobe Experience Platform.
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 28%
+source-wordcount: '798'
+ht-degree: 25%
 
 ---
 
@@ -14,9 +15,10 @@ ht-degree: 28%
 
 ## Nouvelles fonctionnalités
 
-Nouvelles fonctionnalités d’Adobe Experience Platform :
+Nouvelles fonctionnalités d’Adobe Experience Platform :
 
 - [Édition B2B de Real-time Customer Data Platform](#B2B)
+- [(Version bêta) Activation des segments d’audience vers des destinations par lots via l’API d’activation ad hoc](#ad-hoc-activation)
 
 ## Mises à jour des fonctionnalités existantes
 
@@ -31,7 +33,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de Real-time CDP a été conçue pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux professionnels du marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
 
-Des améliorations ont été apportées à diverses fonctionnalités d’Adobe Experience Platform, distinguant ainsi l’édition B2B de Real-time CDP de son équivalent B2C. Ils incluent des améliorations du modèle de données d’expérience (XDM) pour les cas d’utilisation B2B, des mises à niveau de la résolution des identités et de la segmentation des profils, ainsi qu’un connecteur et une destination personnalisés pour Marketo Engage. Le connecteur Marketo permet aux marques B2B de connecter leurs données d’engagement B2B leaders du secteur à des informations comportementales afin d’alimenter les pistes et d’améliorer les opérations marketing basées sur les comptes.
+Des améliorations ont été apportées à diverses fonctionnalités d’Adobe Experience Platform, distinguant ainsi l’édition B2B de Real-time CDP de son équivalent B2C. Ils incluent des améliorations du modèle de données d’expérience (XDM) pour les cas d’utilisation B2B, des mises à niveau de la résolution des identités et de la segmentation des profils, ainsi qu’un connecteur et une destination personnalisés pour Marketo Engage. Le connecteur Marketo permet aux marques B2B de connecter leurs données d’engagement B2B leaders du secteur à des informations comportementales afin d’alimenter les pistes et d’améliorer les opérations marketing basées sur les comptes.
 
 -[Nouvelles éditions B2B et B2P](#editions)
 -[Nouveaux connecteurs de source de données et de destination Marketo](#marketo)
@@ -62,6 +64,10 @@ Les classes XDM B2B standard, les groupes de champs et les types de données son
 
 Voir [Schémas dans Real-time Customer Data Platform version B2B](../../rtcdp/schemas/b2b.md) documentation pour en savoir plus sur la capture d’entités de données B2B.
 
+### (Version bêta) Activation des segments d’audience vers des destinations par lots via l’API d’activation ad hoc {#ad-hoc-activation}
+
+L’API d’activation ad hoc permet aux marketeurs d’activer par programmation les segments d’audience vers les destinations, de manière rapide et efficace, dans les cas où une activation immédiate est requise. L’activation des audiences ad hoc n’est prise en charge que par [destinations basées sur des fichiers de lots](../../destinations/destination-types.md#file-based) et est actuellement en version bêta. Pour plus d’informations, voir [documentation de l’API d’activation ad hoc](../../destinations/api/ad-hoc-activation-api.md).
+
 ### Attribution AI {#attribution-ai}
 
 Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client.
@@ -85,3 +91,4 @@ Customer AI disponible dans Real-time Customer Data Platform est utilisé pour g
 | Attributs de profil personnalisés | Customer AI prend désormais en charge la définition de champs de jeu de données de profil personnalisés (avec horodatages) dans vos données en plus des champs d’événement standard. L’utilisation de cette option vous permet d’ajouter des attributs de profil supplémentaires que vous estimez influents, ce qui peut améliorer la qualité de votre modèle et fournir des résultats plus précis. |
 
 Pour plus d’informations sur Customer AI, voir [Documentation de Customer AI](../../intelligent-services/customer-ai/overview.md).
+
