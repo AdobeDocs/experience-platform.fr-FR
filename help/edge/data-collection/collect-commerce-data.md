@@ -3,7 +3,7 @@ title: Collecte d’informations commerciales et de produits à l’aide du SDK 
 description: Découvrez comment ajouter des données relatives aux produits ou à un panier à l’aide du SDK Web de Adobe Experience Platform.
 keywords: produits;commerce;mesures;order;cartAbandons;passages en caisse;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;achats;saveForLaters;currencyCode;paiements;paymentAmount;paymentType;priceTotal;purchaseID;purchaseOrderNumber;
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
+source-git-commit: 22d15dde62f3113167684c7a76a2265e6f0e7bab
 workflow-type: tm+mt
 source-wordcount: '1324'
 ht-degree: 93%
@@ -14,7 +14,7 @@ ht-degree: 93%
 
 Si votre site contient des produits, il s’agit d’un ensemble par défaut d’éléments que vous souhaiterez peut-être envoyer pour activer les fonctionnalités essentielles d’Adobe. Bien qu’il s’agisse d’une suggestion, un ensemble très solide de données est fourni dès le départ.
 
-Ce document utilise le groupe de champs de schéma [Détails du commerce ExperienceEvent](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) . Le groupe de champs `commerce` est divisé en deux parties : l’objet `commerce` et le tableau `productListItems`. L’objet `commerce` vous permet d’indiquer les actions qui se produisent dans le tableau `productListItems`.
+Ce document utilise la méthode [Détails du commerce ExperienceEvent](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) groupe de champs de schéma. Le `commerce` Le groupe de champs est divisé en deux parties : la valeur `commerce` et le `productListItems` tableau. L’objet `commerce` vous permet d’indiquer les actions qui se produisent dans le tableau `productListItems`.
 
 >[!TIP]
 >
@@ -123,7 +123,7 @@ La liste de produits indique quels produits sont liés à l’action corresponda
 
 ## Exemples
 
-Événement `productView`
+Événement `productViews`
 
 ```javascript
 alloy("sendEvent",{
@@ -147,7 +147,7 @@ alloy("sendEvent",{
 });
 ```
 
-Événement `productView`
+Événement `productListAdds`
 
 ```javascript
 alloy("sendEvent",{
@@ -177,7 +177,7 @@ alloy("sendEvent",{
 });
 ```
 
-Événement `checkout`
+Événement `checkouts`
 
 ```javascript
 alloy("sendEvent",{
@@ -205,7 +205,7 @@ alloy("sendEvent",{
 });
 ```
 
-Événement `purchase`
+Événement `order`
 
 ```javascript
 alloy("sendEvent",{
