@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires
+keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
 title: Annexe du guide de l’API Privacy Service
 topic-legacy: developer guide
 description: Ce document contient des informations supplémentaires sur l’utilisation de l’API Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 0d20da1264c20a5684c241a725041dd009f77b58
+source-git-commit: 445c8158dbf012defb32e9cd7aa4c27c6be1fb88
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 79%
+source-wordcount: '484'
+ht-degree: 78%
 
 ---
 
@@ -18,7 +18,7 @@ Les sections suivantes contiennent des informations supplémentaires sur l’uti
 
 ## Espaces de noms d’identité standard {#standard-namespaces}
 
-Toutes les identités envoyées à [!DNL Privacy Service] doit être fourni sous un espace de noms d’identité spécifique. Les espaces de noms d’identité sont des composants [Adobe Experience Platform Identity Service](../../identity-service/home.md) qui servent d’indicateurs du contexte auquel une identité se rapporte.
+Toutes les identités envoyées à [!DNL Privacy Service] doit être fourni sous un espace de noms d’identité spécifique. Les espaces de noms d’identité sont des composants [Adobe Experience Platform Identity Service](../../identity-service/home.md) qui servent d’indicateurs du contexte auquel une identité se rapporte.
 
 Le tableau suivant présente plusieurs types d’identité prédéfinis couramment utilisés, mis à disposition par [!DNL Experience Platform], ainsi que les `namespace` values :
 
@@ -27,9 +27,9 @@ Le tableau suivant présente plusieurs types d’identité prédéfinis couramme
 | E-mail | `Email` | `6` |
 | Téléphone | `Phone` | `7` |
 | Identifiant Adobe Advertising Cloud | `AdCloud` | `411` |
-| UUID Adobe Audience Manager | `CORE` | `0` |
-| Adobe Experience Cloud ID | `ECID` | `4` |
-| Identifiant Adobe Target | `TNTID` | `9` |
+| UUID Adobe Audience Manager | `CORE` | `0` |
+| Adobe Experience Cloud ID | `ECID` | `4` |
+| Identifiant Adobe Target | `TNTID` | `9` |
 | [!DNL Apple] Identifiant pour les annonceurs | `IDFA` | `20915` |
 | [!DNL Google] Identifiant de publicité | `GAID` | `20914` |
 | [!DNL Windows] AID | `WAID` | `8` |
@@ -65,16 +65,16 @@ Le tableau suivant indique les valeurs acceptées pour la spécification d’un 
 | Produit | Valeur à utiliser dans l’attribut `include` |
 | --- | --- |
 | Adobe Advertising Cloud | `adCloud` |
-| Adobe Analytics | `analytics` |
-| Adobe Audience Manager | `AudienceManager` |
-| Adobe Campaign | `campaign` |
-| Adobe Experience Platform | `AdobeCloudPlatform` |
+| Adobe Analytics | `analytics` |
+| Adobe Audience Manager | `AudienceManager` |
+| Adobe Campaign | `campaign` |
+| Adobe Experience Platform (lac de données) | `aepDataLake` |
 | Adobe Primetime Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Produit d’automatisation | `automationProduct` |
 | Attributs du client (CRS) | `CRS` |
 | Identity Service | `Identity` |
-| Profil client en temps réel | `profileService` |
+| Real-time Customer Profile | `profileService` |
 | Marketo Engage | `marketo` |
 
 {style=&quot;table-layout:auto&quot;}
