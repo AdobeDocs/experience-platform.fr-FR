@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes de configuration d’un nouveau flux de données à l’aide de votre compte de stockage dans le cloud.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 10f04044e970158131677e0c630edf761d4577bd
+source-git-commit: aac052502ea9ac0d6fae5839d8af02a077c3d6db
 workflow-type: tm+mt
-source-wordcount: '2045'
-ht-degree: 4%
+source-wordcount: '2076'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ Un flux de données est une tâche planifiée qui récupère et ingère des donn
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Experience Platform] organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
@@ -189,6 +189,12 @@ Une fois que vous avez fourni les valeurs appropriées au planning, sélectionne
 
 ## Fournir des détails sur les flux de données
 
+>[!CONTEXTUALHELP]
+>id="platform_sources_alerts_subscribe"
+>title="Abonnement aux alertes de sources"
+>abstract="Cochez cette option pour vous abonner aux alertes de notification pour les flux de données de vos sources."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en#provide-dataflow-details" text="En savoir plus dans la documentation"
+
 Le **[!UICONTROL Détails du flux de données]** s’affiche, ce qui vous permet de nommer et de décrire brièvement votre nouveau flux de données.
 
 Au cours de ce processus, vous pouvez également activer **[!UICONTROL Ingestion partielle]** et **[!UICONTROL Diagnostics d’erreur]**. Activation **[!UICONTROL Ingestion partielle]** permet d’ingérer des données contenant des erreurs, jusqu’à un certain seuil que vous pouvez définir. Activation **[!UICONTROL Diagnostics d’erreur]** fournit des détails sur toutes les données incorrectes qui sont traitées par lots séparément. Pour plus d’informations, voir [Présentation de l’ingestion par lots partielle](../../../../../ingestion/batch-ingestion/partial.md).
@@ -221,8 +227,8 @@ Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui 
 
 En suivant ce tutoriel, vous avez créé un flux de données pour importer des données d’un espace de stockage cloud externe et vous avez obtenu des informations sur la surveillance des jeux de données. Pour en savoir plus sur la création de flux de données, vous pouvez compléter votre apprentissage en regardant la vidéo ci-dessous. En outre, les données entrantes peuvent désormais être utilisées par les utilisateurs en aval. [!DNL Platform] des services tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, consultez les documents suivants :
 
-* [Présentation du [!DNL Real-time Customer Profile]](../../../../../profile/home.md)
-* [Présentation du [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
+* [Présentation de [!DNL Real-time Customer Profile]](../../../../../profile/home.md)
+* [Présentation de [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
