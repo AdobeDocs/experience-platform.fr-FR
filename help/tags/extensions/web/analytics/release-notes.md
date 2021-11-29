@@ -1,23 +1,31 @@
 ---
-title: Notes de mise à jour de l’extension Adobe Analytics
-description: Dernières notes de mise à jour pour lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
+title: Notes de mise à jour de l’extension Adobe Analytics
+description: Dernières notes de mise à jour pour lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 83e9ebf65e904c6343fe44932a2b7b1a72039187
-workflow-type: ht
-source-wordcount: '1262'
+source-git-commit: 73fe3c2e060dbdd7607ed3b54c5b8e9cca752d8f
+workflow-type: tm+mt
+source-wordcount: '1272'
 ht-degree: 100%
 
 ---
 
-# Notes de mise à jour de l’extension Adobe Analytics
+# Notes de mise à jour de l’extension Adobe Analytics
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+
+## 29 novembre 2021
+
+### Extension Adobe Analytics 1.8.8
+
+#### Correctifs
+
+* Mise à niveau dʼAppMeasurement vers la version 2.22.3.
 
 ## 16 septembre 2021
 
-### Extension Adobe Analytics 1.8.7
+### Extension Adobe Analytics 1.8.7
 
 #### Correctifs
 
@@ -26,7 +34,7 @@ ht-degree: 100%
 
 ## 24 août 2021
 
-### Extension Adobe Analytics 1.8.6
+### Extension Adobe Analytics 1.8.6
 
 #### Correctifs
 
@@ -35,7 +43,7 @@ ht-degree: 100%
 
 ## 6 août 2020
 
-### Extension Adobe Analytics 1.8.5
+### Extension Adobe Analytics 1.8.5
 
 #### Correctifs
 
@@ -43,12 +51,12 @@ ht-degree: 100%
 
 #### Fonctionnalités
 
-* Mise à jour d’[AppMeasurement vers la version 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr).
+* Mise à jour d’[AppMeasurement vers la version 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * Légère modification de l’interface utilisateur, de façon à ce que les paramètres supplémentaires apparaissent désormais réduits en accordéon plutôt que sous forme de case à cocher.
 
 ## 2 juin 2020
 
-### Extension Adobe Analytics 1.8.4
+### Extension Adobe Analytics 1.8.4
 
 #### Correctifs
 
@@ -71,7 +79,7 @@ ht-degree: 100%
 
 #### Fonctionnalités
 
-* [Mise à jour d’AppMeasurement vers la version 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr)
+* [Mise à jour d’AppMeasurement vers la version 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
 
 ## 2 mars 2020
 
@@ -83,7 +91,7 @@ ht-degree: 100%
 
 #### Fonctionnalités
 
-* [Mise à jour d’AppMeasurement vers la version 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr)
+* [Mise à jour d’AppMeasurement vers la version 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
 * Mise à jour de la bibliothèque DIL dans le module Audience Manager vers la version 9.4
 * Augmentation de la longueur des champs d’entrée dans l’extension
 * Les eVars et les props dans les configurations d’extension et d’action affichent désormais le nom convivial issu d’Analytics.
@@ -92,7 +100,7 @@ ht-degree: 100%
 
 ## 13 novembre 2019
 
-### Extension Adobe Analytics 1.8.1
+### Extension Adobe Analytics 1.8.1
 
 #### Correctifs
 
@@ -100,7 +108,7 @@ ht-degree: 100%
 
 ## 1 novembre 2019
 
-### Extension Adobe Analytics 1.8.0
+### Extension Adobe Analytics 1.8.0
 
 #### Correctifs
 
@@ -114,7 +122,7 @@ ht-degree: 100%
 
 ## 6 septembre 2019
 
-### Extension Adobe Analytics 1.7.8
+### Extension Adobe Analytics 1.7.8
 
 #### Correctifs
 
@@ -123,7 +131,7 @@ ht-degree: 100%
 
 ## 5 septembre 2019
 
-### Extension Adobe Analytics 1.7.7
+### Extension Adobe Analytics 1.7.7
 
 #### Fonctionnalités
 
@@ -144,7 +152,7 @@ ht-degree: 100%
 
 * Mise à jour de l’extension Adobe Analytics pour la prise en charge de DIL 9.2 pour Audience Manager
 
-* Mise à jour de l’extension pour la prise en charge d’[AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr#Version 2.15.0)
+* Mise à jour de l’extension pour la prise en charge d’[AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#Version 2.15.0)
 * Suppression de la case à cocher suivante qui n’est plus prise en charge : « Do not attach the destination publishing IFRAME to the DOM or fire destinations » (Ne joignez pas l’IFRAME de publication de destination au DOM ou aux destinations de déclenchement)
 
 ## 4 juin 2019
@@ -153,7 +161,7 @@ ht-degree: 100%
 
 #### Fonctionnalités
 
-* Mise à jour de l’extension Adobe Analytics vers [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr#version-2.14.0) incluant un correctif pour un problème clearVars connu
+* Mise à jour de l’extension Adobe Analytics vers [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr#version-2.14.0) incluant un correctif pour un problème clearVars connu
 * Ajout d’un lien Exchange à l’extension. Vous pouvez accéder à la liste Exchange en cliquant sur la liste déroulante et en sélectionnant « Informations sur l’extension »
 
 #### Correctifs
@@ -202,7 +210,7 @@ ht-degree: 100%
 
 #### Fonctionnalités
 
-* Mise à jour de l’extension Adobe Analytics vers DIL 9.0 pour prendre en charge l’inclusion.
+* Mise à jour de l’extension Adobe Analytics vers DIL 9.0 pour prendre en charge l’inclusion.
 * Mise à jour de l’extension Adobe Analytics vers AppMeasurement 2.11 pour prendre en charge l’inclusion.
 
 #### Correctifs
@@ -249,7 +257,7 @@ ht-degree: 100%
 
 #### **Fonctionnalités**
 
-* Mise à jour de l’extension Adobe Analytics pour la prise en charge d’AppMeasurement 2.9.
+* Mise à jour de l’extension Adobe Analytics pour la prise en charge d’AppMeasurement 2.9.
 * Ajout de la fonctionnalité « Make tracker globally accessible » (Rendre le suivi accessible de manière globale) dans l’extension Adobe Analytics, ce qui permet à l’outil de suivi d’être déployé de manière globale sous `windows.s`.
 
 #### **Correctifs**
