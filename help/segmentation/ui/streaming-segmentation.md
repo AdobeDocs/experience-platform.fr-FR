@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur de la segmentation par flux
 topic-legacy: ui guide
 description: La segmentation par flux sur Adobe Experience Platform vous permet d’effectuer une segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation par flux, la qualification de segment se produit désormais lorsque les données entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées au fur et à mesure que les données sont transmises à Platform, ce qui signifie que l’adhésion au segment sera conservée à jour sans exécuter les tâches de segmentation planifiées.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 58b546ea83774672dd36ca6cd952e229410aa645
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '1200'
 ht-degree: 1%
 
 ---
@@ -22,11 +22,10 @@ Segmentation par flux sur [!DNL Adobe Experience Platform] permet aux clients d�
 
 >[!NOTE]
 >
->La segmentation par flux ne peut être utilisée que pour évaluer les données diffusées dans Platform. En d’autres termes, les données ingérées par l’ingestion par lots ne seront pas évaluées par la segmentation par flux et seront évaluées avec la tâche de segmentation planifiée de nuit.
 >
->En outre, les segments évalués avec la segmentation par flux peuvent dériver entre l’adhésion idéale et l’adhésion réelle si le segment est basé sur un autre segment évalué à l’aide de la segmentation par lots. Si, par exemple, le segment A est basé sur le segment B et le segment B est évalué à l’aide de la segmentation par lots, puisque le segment B n’est mis à jour que toutes les 24 heures, le segment A s’éloigne davantage des données réelles jusqu’à ce qu’il se resynchronise avec la mise à jour du segment B.
+>Les segments évalués avec la segmentation par flux peuvent dériver entre l’adhésion idéale et l’adhésion réelle si le segment est basé sur un autre segment évalué à l’aide de la segmentation par lots. Si, par exemple, le segment A est basé sur le segment B et le segment B est évalué à l’aide de la segmentation par lots, puisque le segment B n’est mis à jour que toutes les 24 heures, le segment A s’éloigne davantage des données réelles jusqu’à ce qu’il se resynchronise avec la mise à jour du segment B.
 
-## Types de requête de segmentation par flux
+## Types de requête de segmentation par flux {#query-types}
 
 >[!NOTE]
 >
@@ -50,7 +49,7 @@ Une définition de segment sera **not** être activé pour la segmentation par f
 - La définition de segment inclut des segments ou des caractéristiques Adobe Audience Manager (AAM).
 - La définition de segment comprend plusieurs entités (requêtes d’entités multiples).
 
-En outre, certaines instructions s’appliquent lors de la segmentation par flux :
+Veuillez noter que les instructions suivantes s’appliquent lors de la segmentation par flux :
 
 | Type de requête | Instruction |
 | ---------- | -------- |
@@ -58,6 +57,8 @@ En outre, certaines instructions s’appliquent lors de la segmentation par flux
 | Requête avec historique des événements | <ul><li>L’intervalle de recherche en amont est limité à **un jour**.</li><li>Condition d’ordre du temps stricte **must** existent entre les événements.</li><li>Les requêtes comportant au moins un événement annulé sont prises en charge. Cependant, l’événement entier **cannot** être une négation.</li></ul> |
 
 Si une définition de segment est modifiée de sorte qu’elle ne répond plus aux critères de la segmentation par flux, elle passe automatiquement de &quot;Diffusion en continu&quot; à &quot;Lot&quot;.
+
+De plus, l’exclusion du segment, tout comme la qualification du segment, se produit en temps réel. Par conséquent, si une audience n’est plus admissible pour un segment, elle sera immédiatement non qualifiée. Par exemple, si la définition de segment demande &quot;Tous les utilisateurs qui ont acheté des chaussures rouges au cours des trois dernières heures&quot;, au bout de trois heures, tous les profils initialement qualifiés pour la définition de segment ne seront pas qualifiés.
 
 ## Détails des segments de segmentation par flux
 
@@ -82,3 +83,33 @@ Pour plus d’informations sur les définitions de segment, consultez la section
 Ce guide d’utilisation explique le fonctionnement des définitions de segment activées pour la diffusion en continu sur Adobe Experience Platform et comment surveiller les segments activés pour la diffusion en continu.
 
 Pour en savoir plus sur l’utilisation de l’interface utilisateur de Adobe Experience Platform, veuillez lire le [Guide d’utilisation de la segmentation](./overview.md).
+
+## Annexe
+
+La section suivante répertorie les questions fréquentes sur la segmentation par flux :
+
+La section suivante répertorie les questions fréquentes sur la segmentation par flux :
+
+### La segmentation par flux est-elle &quot;non-qualification&quot; également effectuée en temps réel ?
+
+Pour la plupart des instances, l’inqualification de la segmentation par flux se produit en temps réel. Toutefois, les segments en flux continu qui utilisent des segments le font **not** non admissible en temps réel, mais non admissible après 24 heures.
+
+### Sur quelles données la segmentation par flux fonctionne-t-elle ?
+
+La segmentation par flux fonctionne sur toutes les données ingérées à l’aide d’une source de diffusion en continu. Les segments ingérés à l’aide d’une source par lots seront évalués de nuit, même s’ils sont qualifiés pour la segmentation par flux.
+
+### Comment les segments sont-ils définis comme segmentation par lots ou par flux ?
+
+Un segment est défini comme une segmentation par lot ou par flux basée sur une combinaison de type de requête et de durée d’historique des événements. Vous trouverez une liste des segments qui seront évalués en tant que segment en continu dans la variable [section types de requête de segmentation par flux](#query-types).
+
+### Un utilisateur peut-il définir un segment sous la forme d’une segmentation par lots ou par flux ?
+
+Actuellement, l’utilisateur ne peut pas définir si un segment est évalué à l’aide de l’ingestion par lots ou par flux, car le système détermine automatiquement la méthode avec laquelle le segment sera évalué.
+
+### Pourquoi le nombre de segments &quot;total qualifié&quot; continue-t-il à augmenter alors que le nombre sous &quot;X derniers jours&quot; reste à zéro dans la section de détails du segment ?
+
+Le nombre total de segments qualifiés est tiré de la tâche de segmentation quotidienne, qui inclut les audiences qui remplissent les critères des segments par lot et par flux. Cette valeur s’affiche pour les segments par lot et en flux continu.
+
+Nombre sous &quot;X derniers jours&quot; **only** inclut les audiences qualifiées en segmentation par flux, et **only** augmente si vous avez diffusé des données en flux continu dans le système et qu’elles sont prises en compte dans cette définition de flux continu. Cette valeur est **only** s’affiche pour les segments en continu. Par conséquent, cette valeur **may** s’affiche comme 0 pour les segments par lot.
+
+Par conséquent, si vous constatez que le nombre sous &quot;X derniers jours&quot; est nul et que le graphique linéaire signale également zéro, vous avez la valeur **not** diffusion en continu de tous les profils dans le système qui répondent aux critères de ce segment.

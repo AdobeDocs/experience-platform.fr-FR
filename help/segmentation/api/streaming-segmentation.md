@@ -5,10 +5,10 @@ title: 'Évaluation des événements en temps quasi réel avec la segmentation p
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation par flux avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 65ff1c34e12cc93f614c3c93c4e40e53f2bf51ff
 workflow-type: tm+mt
-source-wordcount: '1411'
-ht-degree: 45%
+source-wordcount: '1828'
+ht-degree: 35%
 
 ---
 
@@ -62,7 +62,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 Des en-têtes supplémentaires peuvent être nécessaires pour effectuer des requêtes spécifiques. Les en-têtes corrects sont présentés dans chacun des exemples de ce document. Accordez une attention particulière aux exemples de requêtes afin de vous assurer que tous les en-têtes requis sont inclus.
 
-### Types de requête permettant la segmentation par flux {#streaming-segmentation-query-types}
+### Types de requête permettant la segmentation par flux {#query-types}
 
 >[!NOTE]
 >
@@ -86,12 +86,16 @@ Une définition de segment sera **not** être activé pour la segmentation par f
 - La définition de segment inclut des segments ou des caractéristiques Adobe Audience Manager (AAM).
 - La définition de segment comprend plusieurs entités (requêtes d’entités multiples).
 
-En outre, certaines instructions s’appliquent lors de la segmentation par flux :
+Veuillez noter que les instructions suivantes s’appliquent lors de la segmentation par flux :
 
 | Type de requête | Instruction |
 | ---------- | -------- |
 | Requête d’événement unique | Il n’existe aucune limite à l’intervalle de recherche en amont. |
 | Requête avec historique des événements | <ul><li>L’intervalle de recherche en amont est limité à **un jour**.</li><li>Condition d’ordre du temps stricte **must** existent entre les événements.</li><li>Les requêtes comportant au moins un événement annulé sont prises en charge. Cependant, l’événement entier **cannot** être une négation.</li></ul> |
+
+Si une définition de segment est modifiée de sorte qu’elle ne répond plus aux critères de la segmentation par flux, elle passe automatiquement de &quot;Diffusion en continu&quot; à &quot;Lot&quot;.
+
+De plus, l’exclusion du segment, tout comme la qualification du segment, se produit en temps réel. Par conséquent, si une audience n’est plus admissible pour un segment, elle sera immédiatement non qualifiée. Par exemple, si la définition de segment demande &quot;Tous les utilisateurs qui ont acheté des chaussures rouges au cours des trois dernières heures&quot;, au bout de trois heures, tous les profils initialement qualifiés pour la définition de segment ne seront pas qualifiés.
 
 ## Récupération de tous les segments activés pour la segmentation par flux
 
@@ -208,7 +212,7 @@ Une réponse réussie renvoie un tableau de segments de votre organisation IMS p
 
 ## Création d’un segment activé dans le flux
 
-Un segment est automatiquement activé en continu s’il correspond à l’un des segments [types de segmentation par flux répertoriés ci-dessus](#streaming-segmentation-query-types).
+Un segment est automatiquement activé en continu s’il correspond à l’un des segments [types de segmentation par flux répertoriés ci-dessus](#query-types).
 
 **Format d’API**
 
@@ -406,4 +410,32 @@ La même opération peut être utilisée pour désactiver un planning en rempla�
 
 Maintenant que vous avez activé la segmentation par flux pour les segments nouveaux et existants, ainsi que la segmentation planifiée pour développer une ligne de base et effectuer des évaluations récurrentes, vous pouvez commencer à créer des segments activés par flux pour votre organisation.
 
-Pour savoir comment effectuer des actions similaires et utiliser des segments à l’aide de l’interface utilisateur d’Adobe Experience Platform, consultez le [guide d’utilisation du créateur de segments](../ui/segment-builder.md).
+Pour savoir comment effectuer des actions similaires et utiliser des segments à l’aide de l’interface utilisateur d’Adobe Experience Platform, consultez le [guide d’utilisation du créateur de segments](../ui/segment-builder.md).
+
+## Annexe
+
+La section suivante répertorie les questions fréquentes sur la segmentation par flux :
+
+### La segmentation par flux est-elle &quot;non-qualification&quot; également effectuée en temps réel ?
+
+Pour la plupart des instances, l’inqualification de la segmentation par flux se produit en temps réel. Toutefois, les segments en flux continu qui utilisent des segments le font **not** non admissible en temps réel, mais non admissible après 24 heures.
+
+### Sur quelles données la segmentation par flux fonctionne-t-elle ?
+
+La segmentation par flux fonctionne sur toutes les données ingérées à l’aide d’une source de diffusion en continu. Les segments ingérés à l’aide d’une source par lots seront évalués de nuit, même s’ils sont qualifiés pour la segmentation par flux.
+
+### Comment les segments sont-ils définis comme segmentation par lots ou par flux ?
+
+Un segment est défini comme une segmentation par lot ou par flux basée sur une combinaison de type de requête et de durée d’historique des événements. Vous trouverez une liste des segments qui seront évalués en tant que segment en continu dans la variable [section types de requête de segmentation par flux](#query-types).
+
+### Un utilisateur peut-il définir un segment sous la forme d’une segmentation par lots ou par flux ?
+
+Actuellement, l’utilisateur ne peut pas définir si un segment est évalué à l’aide de l’ingestion par lots ou par flux, car le système détermine automatiquement la méthode avec laquelle le segment sera évalué.
+
+### Pourquoi le nombre de segments &quot;total qualifié&quot; continue-t-il à augmenter alors que le nombre sous &quot;X derniers jours&quot; reste à zéro dans la section de détails du segment ?
+
+Le nombre total de segments qualifiés est tiré de la tâche de segmentation quotidienne, qui inclut les audiences qui remplissent les critères des segments par lot et par flux. Cette valeur s’affiche pour les segments par lot et en flux continu.
+
+Nombre sous &quot;X derniers jours&quot; **only** inclut les audiences qualifiées en segmentation par flux, et **only** augmente si vous avez diffusé des données en flux continu dans le système et qu’elles sont prises en compte dans cette définition de flux continu. Cette valeur est **only** s’affiche pour les segments en continu. Par conséquent, cette valeur **may** s’affiche comme 0 pour les segments par lot.
+
+Par conséquent, si vous constatez que le nombre sous &quot;X derniers jours&quot; est nul et que le graphique linéaire signale également zéro, vous avez la valeur **not** diffusion en continu de tous les profils dans le système qui répondent aux critères de ce segment.

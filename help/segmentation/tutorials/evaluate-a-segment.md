@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Suivez ce tutoriel pour savoir comment évaluer les segments et accéder aux résultats des segments à l’aide de l’API Adobe Experience Platform Segmentation Service.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 44644d786842564c76234bacb1f19815741b92ae
+source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
 workflow-type: tm+mt
-source-wordcount: '1572'
-ht-degree: 66%
+source-wordcount: '1595'
+ht-degree: 64%
 
 ---
 
@@ -86,12 +86,11 @@ L’évaluation sur demande vous permet de créer une tâche de segmentation afi
 
 ### Création d’une tâche de segmentation
 
-Une tâche de segmentation est un processus asynchrone qui crée un nouveau segment ciblé. Il fait référence à une définition de segment, ainsi qu’à toute stratégie de fusion contrôlant la manière dont [!DNL Real-time Customer Profile] fusionne des attributs qui se chevauchent dans vos fragments de profil. Lorsqu’une tâche de segmentation se termine avec succès, vous pouvez collecter diverses informations sur le segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience.
+Une tâche de segmentation est un processus asynchrone qui crée un segment d’audience à la demande. Il fait référence à une définition de segment, ainsi qu’à toute stratégie de fusion contrôlant la manière dont [!DNL Real-time Customer Profile] fusionne des attributs qui se chevauchent dans vos fragments de profil. Lorsqu’une tâche de segmentation se termine avec succès, vous pouvez collecter diverses informations sur le segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience. Une tâche de segmentation doit être exécutée chaque fois que vous souhaitez actualiser l’audience actuellement admissible pour la définition de segment.
 
 Vous pouvez créer une tâche de segmentation en exécutant une requête POST sur le point de terminaison `/segment/jobs` dans l’API [!DNL Real-time Customer Profile]
 
 Vous trouverez des informations plus détaillées sur l’utilisation de ce point de terminaison dans la section [guide de point de fin des tâches de segmentation](../api/segment-jobs.md#create)
-
 
 ### Recherche de l’état de la tâche de segmentation
 

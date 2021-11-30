@@ -5,22 +5,22 @@ title: Point de terminaison de l’API de tâches de segmentation
 topic-legacy: developer guide
 description: Le point de terminaison des tâches de segmentation de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les tâches de segmentation pour votre organisation.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
 workflow-type: tm+mt
-source-wordcount: '1168'
-ht-degree: 34%
+source-wordcount: '1169'
+ht-degree: 33%
 
 ---
 
 # Point de terminaison des tâches de segmentation
 
-Une tâche de segmentation est un processus asynchrone qui crée un nouveau segment ciblé. Il fait référence à une [définition de segment](./segment-definitions.md), ainsi qu’à toute [stratégie de fusion](../../profile/api/merge-policies.md) contrôlant la manière dont [!DNL Real-time Customer Profile] fusionne les attributs qui se chevauchent dans vos fragments de profil. Lorsqu’une tâche de segmentation se termine avec succès, vous pouvez collecter diverses informations sur le segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience.
+Une tâche de segmentation est un processus asynchrone qui crée un segment d’audience à la demande. Il fait référence à une [définition de segment](./segment-definitions.md), ainsi que la variable [stratégies de fusion](../../profile/api/merge-policies.md) contrôle [!DNL Real-time Customer Profile] fusionne des attributs qui se chevauchent dans vos fragments de profil. Lorsqu’une tâche de segmentation se termine avec succès, vous pouvez collecter diverses informations sur le segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience.
 
 Ce guide fournit des informations pour vous aider à mieux comprendre les tâches de segmentation et inclut des exemples d’appels API pour exécuter des actions de base à l’aide de l’API.
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment les en-têtes requis et la manière de lire des exemples d’appels API.
+Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
 
 ## Obtention d’une liste de tâches de segmentation {#retrieve-list}
 
@@ -181,7 +181,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de se
 
 ## Création d’une tâche de segmentation {#create}
 
-Vous pouvez créer une tâche de segmentation en effectuant une requête de POST sur le point de terminaison `/segment/jobs` et en incluant dans le corps l’identifiant de la définition de segment à partir de laquelle vous souhaitez créer une audience.
+Vous pouvez créer une tâche de segmentation en adressant une requête de POST à la fonction `/segment/jobs` point de terminaison et inclure dans le corps l’identifiant de la définition de segment à partir de laquelle vous souhaitez créer une audience.
 
 **Format d’API**
 
@@ -208,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `segmentId` | L’identifiant de la définition de segment pour laquelle vous souhaitez créer une tâche de segmentation. Ces définitions de segment peuvent appartenir à différentes stratégies de fusion. Vous trouverez plus d’informations sur les définitions de segment dans le [guide de point de terminaison de définition de segment](./segment-definitions.md). |
+| `segmentId` | L’identifiant de la définition de segment pour laquelle vous souhaitez créer une tâche de segmentation. Ces définitions de segment peuvent appartenir à différentes stratégies de fusion. Vous trouverez plus d’informations sur les définitions de segment dans la section [guide de point de terminaison de la définition de segment](./segment-definitions.md). |
 
 **Réponse**
 
@@ -275,7 +275,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la tâche 
 
 ## Récupération d’une tâche de segmentation spécifique {#get}
 
-Vous pouvez récupérer des informations détaillées sur une tâche de segmentation spécifique en effectuant une requête de GET sur le point de terminaison `/segment/jobs` et en fournissant l’identifiant de la tâche de segmentation que vous souhaitez récupérer dans le chemin de requête.
+Vous pouvez récupérer des informations détaillées sur une tâche de segmentation spécifique en adressant une requête de GET à la fonction `/segment/jobs` point de terminaison et en fournissant l’identifiant de la tâche de segmentation que vous souhaitez récupérer dans le chemin de requête.
 
 **Format d’API**
 
@@ -372,7 +372,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 ## Récupération en masse de tâches de segmentation {#bulk-get}
 
-Vous pouvez récupérer des informations détaillées sur plusieurs tâches de segmentation en envoyant une requête de POST au point de terminaison `/segment/jobs/bulk-get` et en fournissant les valeurs `id` des tâches de segmentation dans le corps de la requête.
+Vous pouvez récupérer des informations détaillées sur plusieurs tâches de segmentation en adressant une requête de POST à la fonction `/segment/jobs/bulk-get` point de terminaison et en fournissant le  `id` des tâches de segmentation dans le corps de la requête.
 
 **Format d’API**
 
@@ -478,7 +478,7 @@ Une réponse réussie renvoie un état HTTP 207 avec les tâches de segmentation
 
 ## Annulation ou suppression d’une tâche de segmentation spécifique {#delete}
 
-Vous pouvez supprimer une tâche de segmentation spécifique en effectuant une requête de DELETE sur le point de terminaison `/segment/jobs` et en fournissant l’identifiant de la tâche de segmentation que vous souhaitez supprimer dans le chemin d’accès de la requête.
+Vous pouvez supprimer une tâche de segmentation spécifique en adressant une requête de DELETE à la fonction `/segment/jobs` point de terminaison et en indiquant l’identifiant de la tâche de segmentation que vous souhaitez supprimer dans le chemin d’accès de la requête.
 
 >[!NOTE]
 >
