@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur de la segmentation par flux
 topic-legacy: ui guide
 description: La segmentation par flux sur Adobe Experience Platform vous permet d’effectuer une segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation par flux, la qualification de segment se produit désormais lorsque les données entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées au fur et à mesure que les données sont transmises à Platform, ce qui signifie que l’adhésion au segment sera conservée à jour sans exécuter les tâches de segmentation planifiées.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 58b546ea83774672dd36ca6cd952e229410aa645
+source-git-commit: 6db0aef66abe11b8ed9f4b8da56875aa296b1a10
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1190'
 ht-degree: 1%
 
 ---
@@ -85,8 +85,6 @@ Ce guide d’utilisation explique le fonctionnement des définitions de segment 
 Pour en savoir plus sur l’utilisation de l’interface utilisateur de Adobe Experience Platform, veuillez lire le [Guide d’utilisation de la segmentation](./overview.md).
 
 ## Annexe
-
-La section suivante répertorie les questions fréquentes sur la segmentation par flux :
 
 La section suivante répertorie les questions fréquentes sur la segmentation par flux :
 
