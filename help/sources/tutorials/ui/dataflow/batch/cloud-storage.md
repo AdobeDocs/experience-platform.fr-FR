@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes de configuration d’un nouveau flux de données à l’aide de votre compte de stockage dans le cloud.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 873a23d06696c98633f76e37a8b4a1d9b1d25c8b
+source-git-commit: 65007d1ee7934e2b3c98601b0a51542ce24bafd0
 workflow-type: tm+mt
-source-wordcount: '2061'
-ht-degree: 4%
+source-wordcount: '2082'
+ht-degree: 3%
 
 ---
 
@@ -192,8 +192,8 @@ Une fois que vous avez fourni les valeurs appropriées au planning, sélectionne
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
 >title="Abonnement aux alertes de sources"
->abstract="Cochez cette option pour vous abonner aux alertes de notification pour les flux de données de vos sources."
->text="Learn more in documentation"
+>abstract="Sélectionnez la ou les options auxquelles vous souhaitez vous abonner pour recevoir des alertes de notification pour vos flux de données de sources."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en#provide-dataflow-details" text="En savoir plus dans la documentation"
 
 Le **[!UICONTROL Détails du flux de données]** s’affiche, ce qui vous permet de nommer et de décrire brièvement votre nouveau flux de données.
 
