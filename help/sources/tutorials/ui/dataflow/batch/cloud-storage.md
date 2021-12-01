@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes de configuration d’un nouveau flux de données à l’aide de votre compte de stockage dans le cloud.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 82f02064477cc5336bf528a34284c9f4f7669c3d
+source-git-commit: db0c295777a98cc945d7c88f3e49eda3d2581f7b
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2045'
 ht-degree: 4%
 
 ---
@@ -187,13 +187,7 @@ Une fois que vous avez fourni les valeurs appropriées au planning, sélectionne
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
-## Fournir des détails sur les flux de données {#provide-dataflow-details}
-
->[!CONTEXTUALHELP]
->id="platform_sources_alerts_subscribe"
->title="Abonnement aux alertes de sources"
->abstract="Sélectionnez la ou les options auxquelles vous souhaitez vous abonner pour recevoir des alertes de notification pour vos flux de données de sources."
->text="Learn more in documentation"
+## Fournir des détails sur les flux de données
 
 Le **[!UICONTROL Détails du flux de données]** s’affiche, ce qui vous permet de nommer et de décrire brièvement votre nouveau flux de données.
 
