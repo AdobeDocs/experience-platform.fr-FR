@@ -1,12 +1,12 @@
 ---
 audience: user
-user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
+user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+source-git-commit: d6b633c5c53c3deba9e27c91ec2ced78d3ca9c9e
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '735'
 ht-degree: 19%
 
 ---
@@ -51,12 +51,12 @@ ht-degree: 19%
    - CRM {#crm}
       - [Connecteur Microsoft Dynamics ](connectors/crm/ms-dynamics.md)
       - [Connecteur Salesforce](connectors/crm/salesforce.md)
-      - [Veeva CRM connector](connectors/crm/veeva.md)
+      - [Connecteur CRM Veeva](connectors/crm/veeva.md)
       - [Connecteur CRM Zoho](connectors/crm/zoho.md)
    - Succès des clients {#customer-success}
       - [Connecteur Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md)
       - [Connecteur ServiceNow](connectors/customer-success/servicenow.md)
-   - Databases {#databases}
+   - Bases de données {#databases}
       - [Connecteur Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive sur le connecteur Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sur le connecteur Azure HDInsights](connectors/databases/spark.md)
@@ -158,9 +158,9 @@ ht-degree: 19%
       - [Explorer les données d’automatisation du marketing](tutorials/api/explore/marketing-automation.md)
       - [Explorer les données de paiement](tutorials/api/explore/payments.md)
       - [Explorer les données de protocole](tutorials/api/explore/protocols.md)
-   - Collect data {#collect}
-      - [Collect advertising data](tutorials/api/collect/advertising.md)
-      - [Collect cloud storage data](tutorials/api/collect/cloud-storage.md)
+   - Collecte de données {#collect}
+      - [Collecte de données publicitaires](tutorials/api/collect/advertising.md)
+      - [Collecte des données de stockage dans le cloud](tutorials/api/collect/cloud-storage.md)
       - [Collecte de données CRM](tutorials/api/collect/crm.md)
       - [Collecte des données de succès client](tutorials/api/collect/customer-success.md)
       - [Collecter les données de la base](tutorials/api/collect/database-nosql.md)
@@ -179,7 +179,7 @@ ht-degree: 19%
       - Applications Adobe {#adobe-applications}
          - [Adobe Analytics (données de suite de rapports)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (données de classification)](tutorials/ui/create/adobe-applications/classifications.md)
-         - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Attributs du client](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Publicité {#create}
@@ -207,13 +207,13 @@ ht-degree: 19%
       - Succès des clients {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
-      - Databases {#databases}
+      - Bases de données {#databases}
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
-         - [Apache Hive on Azure HDInsights](tutorials/ui/create/databases/hive.md)
+         - [Apache Hive sur Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Data Explorer Azure](tutorials/ui/create/databases/data-explorer.md)
          - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
-         - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
+         - [Stockage de table Azure](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
@@ -242,7 +242,7 @@ ht-degree: 19%
    - Configuration d’un flux de données {#dataflow}
       - [Flux de données de connexion Advertising](tutorials/ui/dataflow/advertising.md)
       - [Flux de données de connexion de stockage dans le cloud par lots](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [Streaming cloud storage connection dataflow](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+      - [Flux de données de connexion au stockage dans le cloud en flux continu](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [Flux de données de connexion CRM](tutorials/ui/dataflow/crm.md)
       - [Flux de données de connexion de succès client](tutorials/ui/dataflow/customer-success.md)
       - [Flux de données de connexion à la base de données](tutorials/ui/dataflow/databases.md)
@@ -257,6 +257,7 @@ ht-degree: 19%
    - [Mise à jour des flux de données](tutorials/ui/update-dataflows.md)
    - [Suppression de comptes](tutorials/ui/delete-accounts.md)
    - [Suppression de flux de données](tutorials/ui/delete.md)
+   - [Abonnement aux alertes de sources](tutorials/ui/alerts.md)
 - SDK Sources {#sdk}
    - [Présentation](sources-sdk/overview.md)
    - [Options de configuration](sources-sdk/config/config.md)
@@ -269,7 +270,7 @@ ht-degree: 19%
    - [Mise à jour d’une spécification de connexion](sources-sdk/api/update-connection-specs.md)
    - [Mise à jour d’une spécification de flux](sources-sdk/api/update-flow-specs.md)
    - [Envoyer votre source](sources-sdk/api/submit.md)
-   - [Document your source in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
+   - [Document de votre source dans Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
    - [Utilisation de l’interface web GitHub pour créer une page de documentation sur les sources](sources-sdk/documentation/github.md)
    - [Utilisation d’un éditeur de texte dans votre environnement local pour créer une page de documentation sur les sources](sources-sdk/documentation/text-editor.md)
    - [Modèle de libre-service de documentation](sources-sdk/documentation/template.md)
