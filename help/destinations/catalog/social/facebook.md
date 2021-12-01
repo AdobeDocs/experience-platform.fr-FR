@@ -3,9 +3,9 @@ keywords: Connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion facebook
 description: Activez les profils de vos campagnes Facebook pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 357916aa925c7b3ada4abe64a2bc6ad090d70cc0
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1589'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,7 @@ Vous pouvez utiliser cette destination pour le ciblage des audiences sur l’ens
 
 ![Destination facebook dans l’interface utilisateur de Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
 
-## Cas d’utilisation
+## Cas dʼutilisation
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!DNL Facebook] destination, voici deux exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette fonctionnalité.
 
@@ -138,6 +138,21 @@ while [configuration](../../ui/connect-destination.md) Pour cette destination, v
 >title="Origine de l’audience"
 >abstract="Choisissez la manière dont les données client du segment ont été collectées à l’origine. Les données s’affichent dans Facebook lorsqu’un utilisateur est ciblé par le segment."
 >additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="En savoir plus dans la documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customers"
+>title="Origine de l’audience"
+>abstract="Les annonceurs ont collecté des données directement auprès des clients."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_partners"
+>title="Origine de l’audience"
+>abstract="Les annonceurs ont collecté les données directement auprès de leurs partenaires."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
+>title="Origine de l’audience"
+>abstract="Les annonceurs ont collecté des données directement auprès de leurs clients et partenaires."
 
 Voir [Activation des données d’audience vers des destinations d’exportation de segments par flux](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
