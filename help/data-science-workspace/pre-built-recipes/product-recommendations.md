@@ -5,7 +5,7 @@ title: Recette des recommandations de produits
 topic-legacy: overview
 description: La recette des recommandations de produits vous permet d’apporter à vos clients des recommandations de produits personnalisées et adaptées à leurs besoins et à leurs intérêts. Grâce à une modélisation prédictive précise, l’historique des achats d’un client peut vous fournir des informations sur les produits susceptibles de l’intéresser.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 96%
@@ -26,7 +26,7 @@ La recette des recommandations de produits utilise l’apprentissage automatique
 
 ## Démarrage
 
-Pour commencer, suivez le tutoriel de l’atelier d’Adobe Experience Platform (voir le lien vers l’atelier ci-dessous). Ce tutoriel vous explique comment créer la recette des recommandations de produits dans un notebook Jupyter en suivant le workflow [notebook vers recette](../jupyterlab/create-a-recipe.md) et en implémentant la recette dans [!DNL Experience Platform] [!DNL Data Science Workspace].
+Pour commencer, suivez le tutoriel de l’atelier d’Adobe Experience Platform (voir le lien vers l’atelier ci-dessous). Ce tutoriel vous explique comment créer la recette des recommandations de produits dans un notebook Jupyter en suivant le workflow [notebook vers recette](../jupyterlab/create-a-model.md) et en implémentant la recette dans [!DNL Experience Platform] [!DNL Data Science Workspace].
 
 * [Atelier : Prédire l’avenir avec Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
 * [Ressources de l’atelier](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)

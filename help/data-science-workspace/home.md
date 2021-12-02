@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;accueil;Data Science Workspace;rubriques populaires;data science workspace;science des données
+keywords: Experience Platform;accueil;Data Science Workspace;rubriques populaires;data science workspace;science des données
 solution: Experience Platform
 title: Présentation de Data Science Workspace
 topic-legacy: overview
-description: Ce guide présente les concepts clés de Data Science Workspace dans Adobe Experience Platform.
+description: Ce guide présente les concepts clés de Data Science Workspace dans Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 100%
@@ -14,11 +14,11 @@ ht-degree: 100%
 
 # Présentation de Data Science Workspace
 
-[!DNL Data Science Workspace] dans Adobe Experience Platform utilise lʼapprentissage automatique et lʼintelligence artificielle pour exploiter les informations contenues dans vos données. Intégré à Adobe Experience Platform, [!DNL Data Science Workspace] vous aide à obtenir des prévisions en utilisant votre contenu et des ressources de données de lʼensemble des solutions Adobe.
+[!DNL Data Science Workspace] dans Adobe Experience Platform utilise lʼapprentissage automatique et lʼintelligence artificielle pour exploiter les informations contenues dans vos données. Intégré à Adobe Experience Platform, [!DNL Data Science Workspace] vous aide à obtenir des prévisions en utilisant votre contenu et des ressources de données de lʼensemble des solutions Adobe.
 
 Les spécialistes des données de tout niveau de compétence trouveront des outils sophistiqués et faciles à utiliser qui aident au développement, à la formation et au réglage rapide de recettes d’apprentissage automatique pour vous faire bénéficier de tous les avantages de la technologie IA sans sa complexité.
 
-Avec [!DNL Data Science Workspace], les spécialistes des données peuvent facilement créer des API de services intelligents optimisés par lʼapprentissage automatique. Ces services fonctionnent avec d’autres services Adobe, notamment Adobe Target et Adobe Analytics Cloud, pour vous aider à automatiser les expériences numériques ciblées et personnalisées dans les applications web, de bureau et mobiles.
+Avec [!DNL Data Science Workspace], les spécialistes des données peuvent facilement créer des API de services intelligents optimisés par lʼapprentissage automatique. Ces services fonctionnent avec d’autres services Adobe, notamment Adobe Target et Adobe Analytics Cloud, pour vous aider à automatiser les expériences numériques ciblées et personnalisées dans les applications web, de bureau et mobiles.
 
 Ce guide présente les concepts clés liés à [!DNL Data Science Workspace].
 
@@ -27,9 +27,9 @@ Ce guide présente les concepts clés liés à [!DNL Data Science Workspace].
 Les entreprises d’aujourd’hui accordent une grande priorité à l’exploration du Big Data pour obtenir des prévisions et des informations qui les aideront à personnaliser les expériences client et à offrir plus de valeur aux clients et à l’entreprise.
 Aussi importante qu’elle soit, la transformation des données en informations peut se révéler très coûteuse. Cela requiert généralement des spécialistes des données compétents qui effectuent des recherches de données intensives et chronophages pour développer des modèles d’apprentissage automatique ou des recettes, qui optimisent les services intelligents. Le processus est long, la technologie est complexe et les spécialistes des données compétents peuvent être difficiles à trouver.
 
-Avec [!DNL Data Science Workspace], Adobe Experience Platform vous permet de mettre en place une IA axée sur lʼexpérience à lʼéchelle de lʼentreprise, en rationalisant et en accélérant les conversions des données en informations et ensuite en code à lʼaide des solutions suivantes :
+Avec [!DNL Data Science Workspace], Adobe Experience Platform vous permet de mettre en place une IA axée sur lʼexpérience à lʼéchelle de lʼentreprise, en rationalisant et en accélérant les conversions des données en informations et ensuite en code à lʼaide des solutions suivantes :
 - Une structure et une exécution d’apprentissage automatique
-- Accès intégré à vos données stockées dans Adobe Experience Platform
+- Accès intégré à vos données stockées dans Adobe Experience Platform
 - Schéma de données unifié basé sur [!DNL Experience Data Model] (XDM)
 - La puissance de calcul indispensable à l’apprentissage automatique/IA et à la gestion des jeux de données volumineux
 - Recettes d’apprentissage automatique prédéfinies pour accélérer la transition vers des expériences basées sur l’IA
@@ -69,7 +69,7 @@ Le graphique suivant décrit la relation hiérarchique entre les recettes, les m
 
 Les données sont la pierre angulaire de l’IA et de l’apprentissage automatique.
 
-[!DNL Data Science Workspace] est entièrement intégré à Adobe Experience Platform, notamment au lac de données, à [!DNL Real-time Customer Profile], et à [!DNL Unified Edge]. Consultez toutes les données de votre organisation stockées dans Adobe Experience Platform en même temps, ainsi que le Big Data courant et les bibliothèques de Deep Learning, telles que [!DNL Spark] ML et [!DNL TensorFlow]. Si vous ne trouvez pas ce dont vous avez besoin, ingérez vos propres jeux de données à l’aide du schéma XDM normalisé.
+[!DNL Data Science Workspace] est entièrement intégré à Adobe Experience Platform, notamment au lac de données, à [!DNL Real-time Customer Profile], et à [!DNL Unified Edge]. Consultez toutes les données de votre organisation stockées dans Adobe Experience Platform en même temps, ainsi que le Big Data courant et les bibliothèques de Deep Learning, telles que [!DNL Spark] ML et [!DNL TensorFlow]. Si vous ne trouvez pas ce dont vous avez besoin, ingérez vos propres jeux de données à l’aide du schéma XDM normalisé.
 
 ### Recettes d’apprentissage automatique prédéfinies
 
@@ -85,9 +85,9 @@ Quel que soit votre niveau de compétence en matière de science des données, [
 
 ### Exploration des données
 
-Trouver les données adéquates et les préparer représente la partie la plus laborieuse de la création d’une recette efficace. [!DNL Data Science Workspace] et Adobe Experience Platform vous permettent de passer plus rapidement des données aux informations.
+Trouver les données adéquates et les préparer représente la partie la plus laborieuse de la création d’une recette efficace. [!DNL Data Science Workspace] et Adobe Experience Platform vous permettent de passer plus rapidement des données aux informations.
 
-Sur Adobe Experience Platform, vos données des différents canaux sont centralisées et stockées dans le schéma XDM normalisé. Les données sont donc plus faciles à trouver, à comprendre et à nettoyer. Une seule banque de données basée sur un schéma commun peut vous faire économiser d’innombrables heures d’exploration et de préparation de données.
+Sur Adobe Experience Platform, vos données des différents canaux sont centralisées et stockées dans le schéma XDM normalisé. Les données sont donc plus faciles à trouver, à comprendre et à nettoyer. Une seule banque de données basée sur un schéma commun peut vous faire économiser d’innombrables heures d’exploration et de préparation de données.
 
 Pendant votre navigation, utilisez R, [!DNL Python], ou Scala avec [!DNL Jupyter Notebook] intégré et hébergé pour parcourir le catalogue de données de [!DNL Platform]. Vous pouvez également profiter de [!DNL Spark] ML et TensorFlow en utilisant lʼun de ces langages. Partez de zéro ou utilisez l’un des modèles de notebook fournis pour des problèmes d’entreprise spécifiques.
 
@@ -99,7 +99,7 @@ Dans le cadre du processus d’exploration des données, vous pouvez également 
 
 - Gagnez du temps en recherchant une recette prédéfinie qui répond aux besoins de votre entreprise, que vous pouvez utiliser en l’état ou configurer pour répondre à vos besoins spécifiques.
 - Créez une recette à partir de zéro, en utilisant l’exécution de création du notebook Jupyter pour développer et enregistrer la recette.
-- Chargez une recette créée en dehors dʼAdobe Experience Platform dans [!DNL Data Science Workspace] ou importez le code de recette dʼun référentiel, comme [!DNL Git], à lʼaide de lʼauthentification et de lʼintégration disponibles entre [!DNL Git] et [!DNL Data Science Workspace].
+- Chargez une recette créée en dehors dʼAdobe Experience Platform dans [!DNL Data Science Workspace] ou importez le code de recette dʼun référentiel, comme [!DNL Git], à lʼaide de lʼauthentification et de lʼintégration disponibles entre [!DNL Git] et [!DNL Data Science Workspace].
 
 ### Expérimentation
 
@@ -149,9 +149,9 @@ En règle générale, un spécialiste des données passe jusqu’à 75 % du tem
 [//]: # (Your first step is to check the recipe gallery to see if an existing recipe meets your needs, or comes close. An alternative is to import a recipe you created outside of Adobe Experience Platform. Starting with an existing recipe often streamlines the data exploration phase and makes it easier for a data scientist.)
 
 Si vous partez de zéro ou configurez une recette existante, vous commencez votre recherche de données dans un catalogue de données centralisé et normalisé pour votre organisation, ce qui simplifie considérablement la recherche. Vous pourriez même découvrir qu’un autre spécialiste des données de votre organisation a déjà identifié un jeu de données similaire, et choisir d’optimiser ce jeu de données plutôt que de partir de zéro.
-Toutes les données d’Adobe Experience Platform sont conformes au schéma XDM normalisé, ce qui élimine la nécessité de créer un modèle complexe pour associer les données ou d’obtenir de l’aide d’un ingénieur en données.
+Toutes les données d’Adobe Experience Platform sont conformes au schéma XDM normalisé, ce qui élimine la nécessité de créer un modèle complexe pour associer les données ou d’obtenir de l’aide d’un ingénieur en données.
 
-Si vous ne trouvez pas immédiatement les données dont vous avez besoin, mais qu’elles existent en dehors d’Adobe Experience Platform, il est relativement simple d’ingérer des jeux de données supplémentaires, qui se transformeront également en schéma XDM normalisé.\
+Si vous ne trouvez pas immédiatement les données dont vous avez besoin, mais qu’elles existent en dehors d’Adobe Experience Platform, il est relativement simple d’ingérer des jeux de données supplémentaires, qui se transformeront également en schéma XDM normalisé.\
 Vous pouvez utiliser [!DNL Jupyter Notebook] pour simplifier le prétraitement des données, en commençant éventuellement par un modèle de notebook ou un notebook que vous avez déjà utilisé pour la propension à acheter.
 
 ![](./images/home/notebook_templates.png)

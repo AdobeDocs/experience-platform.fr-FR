@@ -5,7 +5,7 @@ title: Recette Ventes Au Détail
 topic-legacy: overview
 description: La recette Ventes au détail vous fournit des prévisions de ventes pour tous les magasins contrôlés pour une période donnée. Avec un modèle de prévision précis, le détaillant serait en mesure d’identifier la relation entre les politiques de demande et de prix, mais aussi de prendre des décisions optimisées concernant le prix afin de maximiser les ventes et le chiffre d’affaires.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 92%
@@ -31,7 +31,7 @@ La recette de prévision des ventes au détail se sert de l’apprentissage auto
 
 ## Comment démarrer ?
 
-Pour commencer, suivez ce [tutoriel](../jupyterlab/create-a-recipe.md).
+Pour commencer, suivez ce [tutoriel](../jupyterlab/create-a-model.md).
 
 Ce tutoriel abordera la création de la recette Ventes au détail dans un notebook Jupyter et l’utilisation du notebook pour créer la recette dans Adobe Experience Platform.
 

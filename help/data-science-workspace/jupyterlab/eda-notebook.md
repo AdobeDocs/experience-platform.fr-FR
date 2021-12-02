@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Ce guide porte sur l’utilisation du notebook d’analyse des données exploratoires (EDA) pour découvrir des modèles dans les données web, agréger les événements avec un objectif de prédiction, nettoyer les données agrégées et comprendre la relation entre les prédicteurs et un objectif.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 1%
@@ -23,11 +23,11 @@ La deuxième partie commence par une analyse descriptive sur les données agrég
 
 ## Prise en main
 
-Avant de lire ce guide, consultez le [[!DNL JupyterLab] guide de l’utilisateur](./overview.md) pour une présentation de haut niveau de [!DNL JupyterLab] et de son rôle dans Data Science Workspace. De plus, si vous utilisez vos propres données, consultez la documentation sur l’[accès aux données dans les  [!DNL Jupyterlab] notebooks](./access-notebook-data.md). Ce guide contient des informations importantes sur les limites de données des notebooks.
+Avant de lire ce guide, veuillez consulter la section [[!DNL JupyterLab] guide de l’utilisateur](./overview.md) pour une introduction de haut niveau à [!DNL JupyterLab] et son rôle dans Data Science Workspace. En outre, si vous utilisez vos propres données, veuillez consulter la documentation pour [accès aux données dans [!DNL Jupyterlab] notebooks](./access-notebook-data.md). Ce guide contient des informations importantes sur les limites de données des notebooks.
 
-Ce notebook utilise un jeu de données de valeurs moyennes sous la forme de données Adobe Analytics Experience Events trouvées dans Analytics Analysis Workspace. Pour utiliser le notebook EDA, vous devez définir votre tableau de données avec les valeurs `target_table` et `target_table_id` suivantes. Tout jeu de données de valeurs moyennes peut être utilisé.
+Ce notebook utilise un jeu de données de valeurs moyennes sous la forme de données Adobe Analytics Experience Events trouvées dans Analytics Analysis Workspace. Pour utiliser le notebook EDA, vous devez définir votre tableau de données avec les valeurs suivantes. `target_table` et `target_table_id`. Tout jeu de données de valeurs moyennes peut être utilisé.
 
-Pour rechercher ces valeurs, suivez les étapes décrites dans la section [écriture dans un jeu de données en python](./access-notebook-data.md#write-python) du guide d’accès aux données de JupyterLab. Le nom du jeu de données (`target_table`) se trouve dans le répertoire du jeu de données. Une fois que vous avez cliqué avec le bouton droit sur le jeu de données pour explorer ou écrire des données dans un notebook, un identifiant de jeu de données (`target_table_id`) est fourni dans l’entrée de code exécutable.
+Pour rechercher ces valeurs, suivez les étapes décrites dans la section [écriture dans un jeu de données en python](./access-notebook-data.md#write-python) dans le guide d’accès aux données de JupyterLab. Nom du jeu de données (`target_table`) se trouve dans le répertoire du jeu de données. Une fois que vous avez cliqué avec le bouton droit sur le jeu de données pour explorer ou écrire des données dans un notebook, un identifiant de jeu de données (`target_table_id`) est fourni dans l’entrée de code exécutable.
 
 ## Découverte des données
 
@@ -35,7 +35,7 @@ Cette section contient des étapes de configuration et des exemples de requêtes
 
 ### Configuration des bibliothèques
 
-JupyterLab prend en charge plusieurs bibliothèques. Le code suivant peut être collé et exécuté dans une cellule de code pour collecter et installer tous les packages requis utilisés dans cet exemple. Vous pouvez utiliser d’autres packages ou d’autres packages en dehors de cet exemple pour votre propre analyse de données. Pour obtenir la liste des packages pris en charge, copiez et collez `!pip list --format=columns` dans une nouvelle cellule.
+JupyterLab prend en charge plusieurs bibliothèques. Le code suivant peut être collé et exécuté dans une cellule de code pour collecter et installer tous les packages requis utilisés dans cet exemple. Vous pouvez utiliser d’autres packages ou d’autres packages en dehors de cet exemple pour votre propre analyse de données. Pour obtenir la liste des modules pris en charge, effectuez un copier-coller. `!pip list --format=columns` dans une nouvelle cellule.
 
 ```python
 !pip install colorama
@@ -65,9 +65,9 @@ pd.set_option('display.max_colwidth', -1)
 
 ### Connexion à Adobe Experience Platform [!DNL Query Service]
 
-[!DNL JupyterLab] sur Platform vous permet d’utiliser SQL dans un  [!DNL Python] notebook pour accéder aux données via  [Query Service](https://docs.adobe.com/content/help/fr-FR/experience-platform/query/home.html). L’accès aux données par l’intermédiaire de [!DNL Query Service] peut s’avérer utile pour traiter des jeux de données volumineux en raison de ses temps d’exécution supérieurs. Notez que l’interrogation de données à l’aide de [!DNL Query Service] a une durée de traitement de dix minutes.
+[!DNL JupyterLab] sur Platform vous permet d’utiliser SQL dans une [!DNL Python] notebook pour accéder aux données via [Query Service](https://docs.adobe.com/content/help/fr-FR/experience-platform/query/home.html). Accès aux données par le biais de [!DNL Query Service] peut s’avérer utile pour traiter des jeux de données volumineux en raison de ses temps d’exécution supérieurs. Notez que l’interrogation de données à l’aide de [!DNL Query Service] a une durée de traitement de dix minutes.
 
-Avant d’utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre la [[!DNL Query Service] syntaxe SQL](https://docs.adobe.com/content/help/fr-FR/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md).
+Avant d’utiliser [!DNL Query Service] in [!DNL JupyterLab], assurez-vous que vous comprenez bien le [[!DNL Query Service] Syntaxe SQL](https://docs.adobe.com/content/help/fr-FR/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md).
 
 Pour utiliser Query Service dans JupyterLab, vous devez d’abord créer une connexion entre votre notebook Python de travail et Query Service. Pour ce faire, exécutez la cellule suivante.
 
@@ -77,7 +77,7 @@ qs_connect()
 
 ### Définition du jeu de données de valeurs moyennes à explorer
 
-Pour commencer à interroger et à explorer les données, un tableau de jeu de données de valeurs intermédiaire doit être fourni. Copiez et remplacez les valeurs `table_name` et `table_id` par vos propres valeurs de tableau de données.
+Pour commencer à interroger et à explorer les données, un tableau de jeu de données de valeurs intermédiaire doit être fourni. Copiez et remplacez la variable `table_name` et `table_id` avec vos propres valeurs de tableau de données.
 
 ```python
 target_table = "table_name"
@@ -119,7 +119,7 @@ target_day = "(01,02,03)" ## The target days
 
 ### Découverte de jeux de données
 
-Une fois que vous avez configuré tous vos paramètres, démarré [!DNL Query Service] et que vous disposez d’une plage de dates, vous êtes prêt à commencer la lecture de lignes de données. Vous devez limiter le nombre de lignes que vous lisez.
+Une fois tous vos paramètres configurés, démarrez. [!DNL Query Service], et si vous disposez d’une plage de dates, vous êtes prêt à commencer la lecture de lignes de données. Vous devez limiter le nombre de lignes que vous lisez.
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -284,7 +284,7 @@ iplot(fig)
 
 **Les dix produits les plus consultés**
 
-Cette requête fournit une liste des dix produits les plus consultés. Dans l’exemple ci-dessous, la fonction `Explode()` est utilisée pour renvoyer chaque produit de l’objet `productlistitems` à sa propre ligne. Vous pouvez ainsi effectuer une requête imbriquée pour agréger les vues de produits pour différents SKU.
+Cette requête fournit une liste des dix produits les plus consultés. Dans l’exemple ci-dessous, la variable `Explode()` sert à renvoyer chaque produit dans la fonction `productlistitems` sur sa propre ligne. Vous pouvez ainsi effectuer une requête imbriquée pour agréger les vues de produits pour différents SKU.
 
 ```sql
 %%read_sql query_7_df -c QS_CONNECTION
@@ -368,7 +368,7 @@ threshold = 1
 
 ### Agrégation des données pour la création de fonctionnalités et d’objectifs
 
-Pour commencer l’analyse exploratoire, vous devez créer un objectif au niveau du profil, puis agréger votre jeu de données. Dans cet exemple, deux requêtes sont fournies. La première requête contient la création d&#39;un objectif. La seconde requête doit être mise à jour afin d&#39;inclure d&#39;autres variables que celles de la première requête. Vous pouvez mettre à jour la balise `limit` de votre requête. Après avoir exécuté les requêtes suivantes, les données agrégées sont désormais disponibles pour exploration.
+Pour commencer l’analyse exploratoire, vous devez créer un objectif au niveau du profil, puis agréger votre jeu de données. Dans cet exemple, deux requêtes sont fournies. La première requête contient la création d&#39;un objectif. La seconde requête doit être mise à jour afin d&#39;inclure d&#39;autres variables que celles de la première requête. Vous pouvez mettre à jour la variable `limit` pour votre requête. Après avoir exécuté les requêtes suivantes, les données agrégées sont désormais disponibles pour exploration.
 
 ```sql
 %%read_sql target_df -d -c QS_CONNECTION
@@ -510,13 +510,13 @@ iplot(fig)
 
 ![Valeurs manquantes](../images/jupyterlab/eda/missing-values.png)
 
-Après avoir détecté des valeurs manquantes, il est essentiel d’identifier les valeurs aberrantes. Les statistiques paramétriques telles que la moyenne, l’écart type et la corrélation sont très sensibles aux valeurs aberrantes. En outre, les hypothèses des procédures statistiques communes telles que les régressions linéaires sont également fondées sur ces statistiques. Cela signifie que les valeurs aberrantes peuvent vraiment gâcher une analyse.
+Après avoir détecté des valeurs manquantes, il est essentiel d’identifier les valeurs aberrantes. Les statistiques paramétriques telles que la moyenne, l’écart type et la corrélation sont très sensibles aux valeurs aberrantes. En outre, les hypothèses des procédures statistiques courantes telles que les régressions linéaires sont également fondées sur ces statistiques. Cela signifie que les valeurs aberrantes peuvent vraiment gâcher une analyse.
 
 Pour identifier les valeurs aberrantes, cet exemple utilise une plage interquartile. La plage interquartile (IQR) est la plage entre le premier et le troisième quartile (25e et 75e percentiles). Cet exemple rassemble tous les points de données qui tombent sous 1,5 fois l’IQR en dessous du 25e percentile, ou 1,5 fois l’IQR en dessous du 75e percentile. Les valeurs qui se trouvent sous l’une de ces valeurs sont définies comme une valeur aberrante dans la cellule suivante.
 
 >[!TIP]
 >
->Pour corriger les valeurs aberrantes, vous devez avoir une bonne compréhension de l’entreprise et de l’industrie dans lesquelles vous travaillez. Parfois, vous ne pouvez pas laisser tomber une observation juste parce que c&#39;est une exception. Les valeurs aberrantes peuvent être des observations légitimes et sont souvent les plus intéressantes. Pour en savoir plus sur la suppression des valeurs aberrantes, consultez l’[étape facultative de nettoyage des données](#optional-data-clean).
+>Pour corriger les valeurs aberrantes, vous devez avoir une bonne compréhension de l’entreprise et de l’industrie dans lesquelles vous travaillez. Parfois, vous ne pouvez pas laisser tomber une observation juste parce que c&#39;est une exception. Les valeurs aberrantes peuvent être des observations légitimes et sont souvent les plus intéressantes. Pour en savoir plus sur le retrait de valeurs aberrantes, consultez la section [étape facultative de nettoyage des données](#optional-data-clean).
 
 ```python
 TARGET = Data.TARGET
@@ -629,7 +629,7 @@ for col in Data.columns:
             Data.drop(col,inplace=True,axis=1)
 ```
 
-Une fois que vous avez supprimé les colonnes à valeur unique, vérifiez les autres colonnes à la recherche d’erreurs à l’aide de la commande `Data.columns` dans une nouvelle cellule.
+Une fois que vous avez supprimé les colonnes à une seule valeur, vérifiez les autres colonnes à la recherche d’erreurs à l’aide de la variable `Data.columns` dans une nouvelle cellule.
 
 ### Correction des valeurs manquantes
 
@@ -675,11 +675,11 @@ Une fois l’opération terminée, les données propres sont prêtes à être an
 
 L’analyse biologique est utilisée pour aider à comprendre la relation entre deux ensembles de valeurs, telles que vos fonctionnalités et une variable cible. Différents tracés s’adaptant aux types de données catégoriels et numériques, cette analyse doit être effectuée séparément pour chaque type de données. Les graphiques suivants sont recommandés pour l’analyse bivariée :
 
-- **Corrélation** : Un coefficient de corrélation est la mesure de la force d’une relation entre deux caractéristiques. La corrélation contient des valeurs comprises entre -1 et 1, où : 1 indique une forte relation positive, -1 indique une forte relation négative et un résultat de zéro indique qu’aucune relation n’est établie.
-- **Graphique** en paires : Les tracés de paires sont un moyen simple de visualiser les relations entre chaque variable. Il produit une matrice des relations entre chaque variable dans les données.
-- **Carte thermique** : Les cartes thermiques sont le coefficient de corrélation pour toutes les variables du jeu de données.
-- **Graphiques** de boîte : Les graphiques en boîte sont une manière normalisée d’afficher la distribution des données en fonction d’un résumé à cinq chiffres (minimum, premier quartile (Q1), médian, troisième quartile (Q3) et maximum).
-- **Graphique** de décompte : Un graphique de comptage est comme un histogramme ou un graphique à barres pour certaines fonctionnalités catégoriques. Il indique le nombre d’occurrences d’un élément en fonction d’un certain type de catégorie.
+- **Corrélation**: Un coefficient de corrélation est la mesure de la force d’une relation entre deux caractéristiques. La corrélation contient des valeurs comprises entre -1 et 1, où : 1 indique une forte relation positive, -1 indique une forte relation négative et un résultat de zéro indique qu’aucune relation n’est établie.
+- **Parcelle**: Les tracés de paires sont un moyen simple de visualiser les relations entre chaque variable. Il produit une matrice des relations entre chaque variable dans les données.
+- **Carte thermique**: Les cartes thermiques sont le coefficient de corrélation pour toutes les variables du jeu de données.
+- **Graphiques en boîte**: Les graphiques en boîte sont une manière normalisée d’afficher la distribution des données en fonction d’un résumé à cinq chiffres (minimum, premier quartile (Q1), médian, troisième quartile (Q3) et maximum).
+- **Graphique de répétitions**: Un graphique de comptage est comme un histogramme ou un graphique à barres pour certaines fonctionnalités catégoriques. Il indique le nombre d’occurrences d’un élément en fonction d’un certain type de catégorie.
 
 Pour comprendre la relation entre la variable &quot;objectif&quot; et les prédicteurs/fonctionnalités, les graphiques sont utilisés en fonction des types de données. Pour les fonctions numériques, vous devez utiliser un graphique de boîte si la variable &quot;objectif&quot; est catégorique, ainsi qu’un graphique de paires et une carte thermique si la variable &quot;objectif&quot; est numérique.
 
@@ -807,7 +807,7 @@ else:
 
 Pour corriger les valeurs aberrantes, vous devez avoir une bonne compréhension de l’entreprise et de l’industrie dans lesquelles vous travaillez. Parfois, vous ne pouvez pas laisser tomber une observation juste parce que c&#39;est une exception. Les valeurs aberrantes peuvent être des observations légitimes et sont souvent les plus intéressantes.
 
-Pour plus d’informations sur les valeurs aberrantes et sur leur suppression, lisez cette entrée du [facteur d’analyse](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
+Pour plus d&#39;informations sur les valeurs aberrantes et leur suppression, lisez cette entrée de la [facteur d&#39;analyse](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
 
 L’exemple suivant contient des limites de cellule et des points de données de fond qui renvoient des valeurs aberrantes en utilisant [plage interquartile](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
 
@@ -831,4 +831,4 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 Une fois votre analyse des données exploratoires terminée, vous êtes prêt à commencer à créer un modèle. Vous pouvez également utiliser les données et les insights que vous avez dérivés pour créer un tableau de bord avec des outils tels que Power BI.
 
-Adobe Experience Platform sépare le processus de création de modèle en deux étapes distinctes : Recettes (une instance de modèle) et Modèles. Pour lancer le processus de création de la recette, consultez la documentation de [création d’une recette dans les notebooks JupyerLab](./create-a-recipe.md). Ce document contient des informations et des exemples pour la création, la formation et la notation d’une recette dans les notebooks [!DNL JupyterLab].
+Adobe Experience Platform sépare le processus de création de modèle en deux étapes distinctes : Recettes (une instance de modèle) et Modèles. Pour lancer le processus de création de recette, consultez la documentation de [création d’une recette dans les notebooks JupyerLab](./create-a-model.md). Ce document contient des informations et des exemples pour la création, la formation et la notation d’une recette dans [!DNL JupyterLab] Notebooks.

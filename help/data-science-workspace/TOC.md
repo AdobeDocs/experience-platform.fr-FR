@@ -1,14 +1,14 @@
 ---
 audience: user
-user-guide-title: Aide d’Adobe Experience Platform Data Science Workspace
+user-guide-title: Aide d’Adobe Experience Platform Data Science Workspace
 breadcrumb-title: Guide de Data Science Workspace
 user-guide-description: Utilisez le machine learning pour développer, entraîner et évaluer des modèles et des recettes avec des ordinateurs portables équipés d’Adobe Sensei et de JupyterLab.
 feature: Data Science Workspace
 solution: Experience Platform, Intelligent Services
-source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
+source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 100%
+source-wordcount: '248'
+ht-degree: 94%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 100%
    * [Analyse de vos données](jupyterlab/analyze-your-data.md)
    * [Query Service](jupyterlab/query-service.md)
    * [Analyse exploratoire des données (AED)](jupyterlab/eda-notebook.md)
-   * [Création d’une recette](jupyterlab/create-a-recipe.md)
+   * [Création d’un modèle à l’aide du créateur de recettes](jupyterlab/create-a-model.md)
    * [Collaboration dans JupyterLab à l’aide de Git](jupyterlab/using-git-for-collaboration.md)
 * API Sensei Machine Learning {#api}
    * [Prise en main](api/getting-started.md)
@@ -52,6 +52,7 @@ ht-degree: 100%
    * [Accès aux données Spark](authoring/spark.md)
 * Tutoriels sur les modèles et les recettes {#models-recipes}
    * [Création et publication d’un modèle de machine learning](models-recipes/create-publish-model.md)
+   * [Création de jeux de données et de schémas Luma de démonstration](models-recipes/create-luma-data.md)
    * [Création de jeux de données et de schéma de ventes au détail](models-recipes/create-retails-sales-dataset.md)
    * [Prévisualisation des schémas et des jeux de données](models-recipes/preview-schema-data.md)
    * [Regroupement des fichiers source dans une recette](models-recipes/package-source-files-recipe.md)

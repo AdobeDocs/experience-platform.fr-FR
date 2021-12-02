@@ -5,14 +5,14 @@ title: Création de modèles à l’aide du SDK Adobe Experience Platform Platfo
 topic-legacy: SDK authoring
 description: Ce tutoriel vous fournit des informations sur la conversion de data_access_sdk_python en nouveau Python platform_sdk en Python et en R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 79%
 
 ---
 
-# Création de modèles à l’aide du SDK Adobe Experience Platform [!DNL Platform]
+# Création de modèles à l’aide de Adobe Experience Platform [!DNL Platform] SDK
 
 Ce tutoriel vous fournit des informations sur la conversion de `data_access_sdk_python` en nouveau `platform_sdk` Python en Python et en R. Ce tutoriel fournit des informations sur les opérations suivantes :
 
@@ -22,7 +22,7 @@ Ce tutoriel vous fournit des informations sur la conversion de `data_access_sdk_
 
 ## Authentification de création {#build-authentication}
 
-L’authentification est requise pour effectuer des appels vers [!DNL Adobe Experience Platform]. Elle est composée de la clé API, de l’identifiant de l’organisation IMS, d’un jeton utilisateur et d’un jeton de service.
+L’authentification est requise pour effectuer des appels vers [!DNL Adobe Experience Platform], et comprend une clé API, un identifiant de l’organisation IMS, un jeton utilisateur et un jeton de service.
 
 ### Python
 
@@ -69,7 +69,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Lecture basique des données {#basic-reading-of-data}
 
-Avec le nouveau SDK [!DNL Platform], la taille de lecture maximale est de 32 Go, avec un temps de lecture maximal de 10 minutes.
+Avec la nouvelle [!DNL Platform] SDK, la taille de lecture maximale est de 32 Go, avec un temps de lecture maximal de 10 minutes.
 
 Si votre temps de lecture est trop long, vous pouvez essayer d’utiliser l’une des options de filtrage suivantes :
 
@@ -146,7 +146,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-Le nouveau SDK [!DNL Platform] prend en charge les opérations suivantes :
+La nouvelle [!DNL Platform] Le SDK prend en charge les opérations suivantes :
 
 | Opération | Fonction |
 | --------- | -------- |
@@ -221,4 +221,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Étapes suivantes
 
-Une fois que vous avez configuré l’outil de chargement de données `platform_sdk`, les données sont préparées puis réparties dans les jeux de données `train` et `val`. Pour en savoir plus sur la préparation des données et la conception des fonctionnalités, consultez la section sur [la préparation des données et la conception des fonctionnalités](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) du tutoriel sur la création d’une recette à l’aide des notebooks [!DNL JupyterLab]
+Une fois que vous avez configuré l’outil de chargement de données `platform_sdk`, les données sont préparées puis réparties dans les jeux de données `train` et `val`. Pour en savoir plus sur la préparation des données et la conception des fonctionnalités, consultez la section sur [la préparation des données et la conception des fonctionnalités](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) du tutoriel sur la création d’une recette à l’aide des notebooks [!DNL JupyterLab]

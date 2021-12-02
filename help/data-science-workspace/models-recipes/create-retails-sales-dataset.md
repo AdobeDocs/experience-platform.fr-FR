@@ -4,14 +4,15 @@ solution: Experience Platform
 title: Création d’un schéma et d’un jeu de données de vente au détail
 topic-legacy: tutorial
 type: Tutorial
-description: Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous les autres tutoriels Data Science Workspace d’Adobe Experience Platform. Une fois que vous aurez terminé, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation IMS sur Experience Platform.
+description: Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous les autres tutoriels Data Science Workspace d’Adobe Experience Platform. Une fois que vous aurez terminé, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation IMS sur Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 71%
 
 ---
+
 
 # Création de jeux de données et de schéma de vente au détail
 
@@ -20,14 +21,14 @@ Ce tutoriel vous fournit les prérequis et les ressources requis pour tous les a
 ## Prise en main
 
 Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
-- Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de poursuivre.
-- Autorisation d’effectuer des appels d’API [!DNL Experience Platform]. Suivez le tutoriel [Authentification et accès aux API Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis) afin d’obtenir les valeurs suivantes pour effectuer ce didacticiel :
+- Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
+- Autorisation d’effectuer [!DNL Experience Platform] Appels API. Suivez le tutoriel [Authentification et accès aux API Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis) afin d’obtenir les valeurs suivantes pour effectuer ce didacticiel :
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
    - Client secret: `{CLIENT_SECRET}`
    - Client certificate: `{PRIVATE_KEY}`
-- Exemples de données et de fichiers source pour la [Recette des ventes au détail](../pre-built-recipes/retail-sales.md). Téléchargez les ressources requises pour cet didacticiel et d’autres [!DNL Data Science Workspace] à partir du [référentiel Git public Adobe](https://github.com/adobe/experience-platform-dsw-reference/).
+- Exemples de données et de fichiers source pour la [Recette des ventes au détail](../pre-built-recipes/retail-sales.md). Téléchargez les ressources requises pour ceci et d’autres [!DNL Data Science Workspace] tutoriels à partir de [Adobe du référentiel Git public](https://github.com/adobe/experience-platform-dsw-reference/).
 - [ >= 2.7](https://www.python.org/downloads/)[!DNL Python] et les paquets Python suivants :
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
@@ -43,7 +44,7 @@ Les jeux de données et le schéma de vente au détail sont créés automatiquem
 
 ### Fichiers de configuration
 
-1. Dans le module de ressources du tutoriel [!DNL Experience Platform], accédez au répertoire `bootstrap`, puis ouvrez `config.yaml` à l’aide d’un éditeur de texte approprié.
+1. Dans le [!DNL Experience Platform] module de ressources de tutoriel, accédez au répertoire `bootstrap`et ouvrez `config.yaml` à l’aide d’un éditeur de texte approprié.
 2. Dans la section `Enterprise`, saisissez les valeurs suivantes :
 
    ```yaml
@@ -92,7 +93,7 @@ Les jeux de données et le schéma de vente au détail sont créés automatiquem
 
 ### Exécution du script de bootstrap
 
-1. Ouvrez votre application de terminal et accédez au répertoire des ressources du tutoriel [!DNL Experience Platform].
+1. Ouvrez votre application de terminal et accédez au [!DNL Experience Platform] répertoire des ressources du tutoriel.
 2. Définissez le répertoire `bootstrap` comme chemin d’accès opérationnel actuel et exécutez le script `bootstrap.py` en saisissant la commande suivante :[!DNL Python]
 
    ```bash
@@ -113,4 +114,4 @@ Pour continuer à travailler sur les données ingérées, procédez de la façon
 - [Analyse de vos données à l’aide des notebooks Jupyter](../jupyterlab/analyze-your-data.md)
    - Utilisez les notebooks Jupyter dans Data Science Workspace pour accéder à vos données, les explorer, les visualiser et les comprendre.
 - [Regroupez les fichiers source dans une recette](./package-source-files-recipe.md)
-   - Suivez ce tutoriel pour apprendre à importer votre propre modèle dans [!DNL Data Science Workspace] en regroupant les fichiers source dans un fichier de recette pouvant être importé.
+   - Suivez ce tutoriel pour apprendre à importer votre propre modèle dans [!DNL Data Science Workspace] en regroupant les fichiers source dans un fichier Recette pouvant être importé.
