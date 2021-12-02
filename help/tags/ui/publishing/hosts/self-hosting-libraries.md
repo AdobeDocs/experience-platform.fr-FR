@@ -1,10 +1,10 @@
 ---
 title: Bibliothèques auto-hébergées
-description: Découvrez comment implémenter l’auto-hébergement pour vos versions de bibliothèque de balises dans Adobe Experience Platform.
+description: Découvrez comment mettre en œuvre l’auto-hébergement pour vos versions de bibliothèque de balises dans Adobe Experience Platform.
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '489'
 ht-degree: 100%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Les balises dans Adobe Experience Platform permettent la production d’un ensemble de fichiers appelé [version](../builds.md). Cet ensemble de fichiers contrôle le comportement de votre application au moment de l’exécution.
+La fonctionnalité Balises dans Adobe Experience Platform permet la production d’un ensemble de fichiers appelé [version](../builds.md). Cet ensemble de fichiers contrôle le comportement de votre application au moment de l’exécution.
 
 Les versions doivent être hébergées quelque part afin que les périphériques clients puissent les récupérer au moment de l’exécution.
 
@@ -41,7 +41,6 @@ Vous pouvez choisir d’héberger vos propres fichiers de version pour plusieurs
 
 * Certains navigateurs bloquent le domaine assets.adobedtm.com en raison des paramètres de confidentialité configurés par l’utilisateur final.
 * L’auto-hébergement réduit le nombre requis de recherches DNS.
-* Vous avez besoin d’utiliser HTTP/2.
 * Vous devez définir des en-têtes spécifiques pour des raisons de sécurité.
 * Vos exigences de contrôle du cache sont différentes des paramètres par défaut d’Adobe.
 * Vous souhaitez avoir plus de contrôle sur l’emplacement des nœuds en périphérie.
