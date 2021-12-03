@@ -5,9 +5,9 @@ topic-legacy: guide
 description: Real-time Customer Profile fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1890'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -111,7 +111,7 @@ Il peut parfois être nécessaire de mettre à jour les données du magasin de p
 
 ## Gouvernance des données et [!DNL Privacy]
 
-La gouvernance des données est une série de stratégies et de technologies utilisées pour gérer les données clients et garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données.
+La gouvernance des données est constituée d’une série de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données.
 
 En ce qui concerne l’accès aux données, la gouvernance des données joue un rôle essentiel dans [!DNL Experience Platform], et ce, à différents niveaux :
 
@@ -119,7 +119,7 @@ En ce qui concerne l’accès aux données, la gouvernance des données joue un 
 * Stratégies d’accès aux données
 * Contrôle de l’accès aux données pour les actions marketing
 
-La gouvernance des données est gérée à plusieurs points. Il s’agit notamment de choisir les données à ingérer dans [!DNL Platform] et celles qui seront accessibles après l’ingestion pour une action marketing donnée. Pour plus d’informations, commencez par lire la [présentation de la gouvernance des données](../data-governance/home.md).
+La gouvernance des données est gérée sur plusieurs points. Il s’agit notamment de choisir les données à ingérer dans [!DNL Platform] et celles qui seront accessibles après l’ingestion pour une action marketing donnée. Pour plus d’informations, commencez par lire la [présentation de la gouvernance des données](../data-governance/home.md).
 
 ### Gestion des demandes d’exclusion et de confidentialité des données
 
