@@ -6,9 +6,9 @@ topic-legacy: guide
 description: Ce document présente l’application automatique des stratégies d’utilisation de données lors de l’activation de segments vers des destinations dans Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1231'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -48,7 +48,7 @@ Lorsqu’un segment est activé pour la première fois, [!DNL Policy Service] v�
 
 La parenté des données joue un rôle essentiel dans la façon dont les stratégies sont appliquées dans Platform. D’une façon générale, la parenté des données fait référence à l’origine d’un jeu de données ainsi qu’à son évolution (ou à son déplacement) au fil du temps.
 
-Dans le contexte de la gouvernance des données, la traçabilité permet aux libellés d’utilisation des données de se propager des jeux de données aux services en aval qui utilisent leurs données, tels que Real-time Customer Profile et les destinations. Cela permet d’évaluer et d’appliquer les stratégies à plusieurs points clés du parcours des données par l’intermédiaire de Platform et fournit un contexte aux consommateurs de données quant aux raisons pour lesquelles une violation de stratégie a eu lieu.
+Dans le cadre de la gouvernance des données, la parenté permet aux libellés d’utilisation des données de se propager des jeux de données aux services en aval qui utilisent leurs données, comme le profil client en temps réel et les destinations. Cela permet d’évaluer et d’appliquer les stratégies à plusieurs points clés du parcours des données par l’intermédiaire de Platform et fournit un contexte aux consommateurs de données quant aux raisons pour lesquelles une violation de stratégie a eu lieu.
 
 Dans Experience Platform, l’application des stratégies est concernée par la parenté suivante :
 
