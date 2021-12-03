@@ -1,11 +1,11 @@
 ---
 title: Notes de mise à jour
-description: Dernières notes de mise à jour relatives aux balises dans Adobe Experience Platform.
+description: Dernières notes de mise à jour pour les balises dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
-workflow-type: ht
-source-wordcount: '578'
-ht-degree: 100%
+source-git-commit: 2056f7f6e7372fa1dee2e975a75e7ba3b8dfe518
+workflow-type: tm+mt
+source-wordcount: '658'
+ht-degree: 87%
 
 ---
 
@@ -13,7 +13,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+
+## 15 novembre 2021
+
+**Acceptation du code ES6 dans les balises** - Les extensions et le code personnalisé contenant du code ES6 peuvent désormais être utilisés dans les balises. Dans le catalogue d’extensions, une étiquette ES6+ apparaît dans la carte de chaque extension contenant du code ES6. IE10 et IE11 ne prennent pas en charge le code ES6. Avant d’utiliser du code ES6 dans vos bibliothèques de balises, faites preuve de diligence raisonnable.
+
+**Utilisation de Terser comme compresseur JavaScript** - Uglifier a été remplacé par Terser. À partir de cette version, toutes les bibliothèques de balises sont minimisées par Terser.
 
 ## 21 octobre 2021
 
@@ -43,9 +49,9 @@ Pour plus d’informations, voir les guides sur [la gestion des secrets dans l�
 
 ## 22 avril 2021
 
-**Collecte de données dans Adobe Experience Platform** : l’envoi de données à Adobe ne consiste pas seulement à déployer des balises sur votre site ou une configuration sur votre application. L’utilisation des SDK Experience Platform et du réseau Edge nécessite l’accès à d’autres fonctionnalités de Platform. Auparavant, cela nécessitait une connexion à divers outils. Désormais, ils sont réunis en un seul endroit.
+**Collecte de données dans Adobe Experience Platform** : l’envoi de données à Adobe ne consiste pas seulement à déployer des balises sur votre site ou une configuration sur votre application.  L’utilisation des SDK Experience Platform et du réseau Edge nécessite l’accès à d’autres fonctionnalités de Platform. Auparavant, cela nécessitait une connexion à divers outils. Désormais, ils sont réunis en un seul endroit.
 
-La collecte de données dans Platform est constituée de six fonctionnalités. En outre, votre navigation nouvellement rationalisée ne contient que les éléments accessibles par votre société et votre compte utilisateur. Certains noms de fonctionnalités ont également été mis à jour pour correspondre aux modèles de nommage d’Experience Platform.
+La collecte de données dans Platform est constituée de six fonctionnalités. En outre, votre navigation nouvellement rationalisée ne contient que les éléments accessibles par votre société et votre compte utilisateur. Certains noms de fonctionnalités ont également été mis à jour pour correspondre aux modèles de nommage d’Experience Platform.
 
 * Client (anciennement accessible en tant que côté client)
 * Flux de données (anciennement accessible en tant que configurations Edge)
@@ -54,7 +60,7 @@ La collecte de données dans Platform est constituée de six fonctionnalités. 
 * Schémas
 * Identités
 
-Retrouvez d’autres mises à jour au fur et à mesure de l’évolution d’Experience Platform et de la collecte de données.
+Retrouvez d’autres mises à jour au fur et à mesure de l’évolution d’Experience Platform et de la collecte de données.
 
 ## 18 février 2021
 
@@ -64,6 +70,6 @@ Retrouvez d’autres mises à jour au fur et à mesure de l’évolution d’Exp
 
 ## 13 janvier 2021
 
-**Disponibilité générale : transfert d’événements** Envoyez les données au niveau de l’événement à Adobe Experience Platform Edge Network, puis utilisez le transfert d’événements pour transformer, enrichir et envoyer ces données à un point d’entrée autre qu’Adobe à l’aide des serveurs Adobe, et non du client, avec une faible latence.
+**Disponibilité générale : transfert d’événements** Envoyez les données au niveau de l’événement à Adobe Experience Platform Edge Network, puis utilisez le transfert d’événements pour transformer, enrichir et envoyer ces données à un point d’entrée autre qu’Adobe à l’aide des serveurs Adobe, et non du client, avec une faible latence.
 
 Pour plus d’informations, consultez la [présentation du transfert d’événements](../ui/event-forwarding/overview.md) et le [guide de prise en main](../ui/event-forwarding/getting-started.md).
