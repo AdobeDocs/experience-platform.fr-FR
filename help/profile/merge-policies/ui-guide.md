@@ -5,9 +5,9 @@ type: Documentation
 description: Lorsque vous rassemblez des données provenant de plusieurs sources dans Experience Platform, les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer la vue unifiée. Ce guide fournit des instructions détaillées sur l’utilisation des stratégies de fusion à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2319'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -59,7 +59,7 @@ La première étape du flux de travaux vous permet de configurer votre stratégi
    * **[!UICONTROL Graphique privé]** : réalise des combinaisons d’identités basées sur votre graphique d’identités privé.
 * **[!UICONTROL Stratégie de fusion par défaut]** : un bouton de basculement qui vous permet de sélectionner cette stratégie de fusion ou non comme stratégie par défaut pour votre organisation. Si le sélecteur est activé, un avertissement s’affiche vous demandant de confirmer que vous souhaitez modifier la stratégie de fusion par défaut de votre organisation. Voir la [présentation des stratégies de fusion](overview.md) pour en savoir plus sur les stratégies de fusion par défaut.
    ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Stratégie de fusion principale sur le périphérique]**: Bouton de basculement qui vous permet de choisir si cette stratégie de fusion sera principale ou non. Pour garantir que tous les consommateurs de profils utilisent la même vue sur les périphéries, les stratégies de fusion peuvent être marquées comme principales sur les bords. Pour qu’un segment soit activé sur Edge (marqué comme segment Edge), il doit être lié à une stratégie de fusion marquée comme principale sur Edge. Si un segment est **not** lié à une stratégie de fusion marquée comme principale sur Edge, le segment ne sera pas marqué comme principal sur Edge et sera marqué comme un segment en continu. En outre, chaque organisation IMS ne peut avoir que **one** stratégie de fusion principale en périphérie.
+* **[!UICONTROL Stratégie de fusion Active-On-Edge]** : bouton de basculement qui vous permet de choisir si cette stratégie de fusion sera Active-On-Edge (active sur le bord). Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les stratégies de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’un segment soit Active-On-Edge (actif sur le bord) (marqué comme un segment de bord), il doit être lié à une stratégie de fusion marquée comme Active-on-Edge (active sur le bord). Si un segment n’est **pas** lié à une stratégie de fusion marquée comme Active-On-Edge (active sur le bord), le segment ne sera pas marqué comme Active-On-Edge (actif sur le bord), et sera marqué comme un segment en continu. En outre, chaque organisation IMS ne peut avoir qu’une **seule** stratégie de fusion Active-On-Edge (active sur le bord).
 
 Une fois les champs obligatoires renseignés, vous pouvez sélectionner **[!UICONTROL Suivant]** pour poursuivre le flux de travaux.
 
@@ -193,7 +193,7 @@ Une fois les modifications nécessaires effectuées, examinez votre stratégie d
 
 ## Violations de la politique de gouvernance des données
 
-Lors de la création ou de la mise à jour d’une stratégie de fusion, une vérification est effectuée pour déterminer si la politique de fusion enfreint l’une des stratégies en matière d’utilisation des données définies par votre organisation. Les stratégies d’utilisation des données font partie de la gouvernance des données de Adobe Experience Platform et sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données spécifiques. [!DNL Platform] data. Par exemple, si vous avez utilisé une stratégie de fusion pour créer un segment activé dans une destination tierce et que votre organisation dispose dʼune stratégie dʼutilisation des données empêchant lʼexportation de données spécifiques à des tiers, vous recevrez une notification **[!UICONTROL Violation de la politique de gouvernance des données détectée]** lorsque vous tenterez dʼenregistrer votre stratégie de fusion.
+Lors de la création ou de la mise à jour d’une stratégie de fusion, une vérification est effectuée pour déterminer si la politique de fusion enfreint l’une des stratégies en matière d’utilisation des données définies par votre organisation. Les stratégies d’utilisation des données font partie de la gouvernance des données d’Adobe Experience Platform et sont des règles qui décrivent les types d’action marketing que vous êtes autorisé à réaliser ou dont la réalisation est limitée sur certaines données de [!DNL Platform]. Par exemple, si vous avez utilisé une stratégie de fusion pour créer un segment activé dans une destination tierce et que votre organisation dispose dʼune stratégie dʼutilisation des données empêchant lʼexportation de données spécifiques à des tiers, vous recevrez une notification **[!UICONTROL Violation de la politique de gouvernance des données détectée]** lorsque vous tenterez dʼenregistrer votre stratégie de fusion.
 
 Cette notification inclut une liste des stratégies d’utilisation des données ayant été enfreintes et vous permet de consulter les détails de la violation en sélectionnant une stratégie depuis la liste. Si vous avez sélectionné une stratégie ayant fait lʼobjet dʼune infraction, lʼonglet **[!UICONTROL Liaison des données]** fournit un motif de violation et les activations concernées, chacun fournissant plus de détails sur la manière dont la stratégie dʼutilisation des données a été enfreinte.
 
