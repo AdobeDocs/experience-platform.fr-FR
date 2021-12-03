@@ -3,22 +3,22 @@ title: Traitement des erreurs
 description: Découvrez la manière dont les erreurs sont traitées dans lʼAPI Reactor.
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1068'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
 # Traitement des erreurs
 
-Lorsquʼun problème se produit lors dʼun appel à lʼAPI Reactor, une erreur peut être renvoyée de lʼune des façons suivantes :
+Lorsquʼun problème se produit lors dʼun appel à lʼAPI Reactor, une erreur peut être renvoyée de lʼune des façons suivantes :
 
-* **Erreurs immédiates** : lorsquʼune requête entraîne une erreur immédiate, une réponse dʼerreur est renvoyée par lʼAPI, lʼétat HTTP reflétant le type dʼerreur général qui sʼest produit.
-* **Retards dʼerreurs** : lorsquʼune requête dʼAPI entraîne un retard dʼerreur (une activité asynchrone, par exemple), une erreur peut être renvoyée par lʼAPI dans lʼélément `meta.status_details` dʼune ressource associée.
+* **Erreurs immédiates** : lorsquʼune requête entraîne une erreur immédiate, une réponse dʼerreur est renvoyée par lʼAPI, lʼétat HTTP reflétant le type dʼerreur général qui sʼest produit.
+* **Retards dʼerreurs** : lorsquʼune requête dʼAPI entraîne un retard dʼerreur (une activité asynchrone, par exemple), une erreur peut être renvoyée par lʼAPI dans lʼélément `meta.status_details` dʼune ressource associée.
 
 ## Format dʼerreur
 
-Les réponses dʼerreur visent à se conformer à la [spécification des erreurs JSON:API](http://jsonapi.org/format/#errors) et respectent généralement la structure suivante :
+Les réponses dʼerreur visent à se conformer à la [spécification des erreurs JSON:API](http://jsonapi.org/format/#errors) et respectent généralement la structure suivante :
 
 ```json
 {
@@ -46,7 +46,7 @@ Les réponses dʼerreur visent à se conformer à la [spécification des erreurs
 | `code` | Code dʼerreur spécifique à lʼapplication, exprimé sous la forme dʼune valeur de chaîne. |
 | `title` | Résumé court et lisible par lʼutilisateur du problème qui **ne doit pas être modifié** dʼune occurrence à lʼautre, sauf à des fins de localisation. |
 | `detail` | Explication lisible par lʼutilisateur spécifique à cette occurrence du problème. À lʼinstar de `title`, la valeur de ce champ peut être localisée. |
-| `source` | Objet contenant des références à la source de lʼerreur, incluant éventuellement lʼun des membres suivants :<ul><li>`pointer` : chaîne [JSON Pointer (RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901) qui référence lʼentité associée dans le document de requête (`/data` pour un objet de données principal ou `/data/attributes/title` pour un attribut spécifique, par exemple).</li></ul> |
+| `source` | Objet contenant des références à la source de lʼerreur, incluant éventuellement lʼun des membres suivants :<ul><li>`pointer` : chaîne [JSON Pointer (RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901) qui référence lʼentité associée dans le document de requête (`/data` pour un objet de données principal ou `/data/attributes/title` pour un attribut spécifique, par exemple).</li></ul> |
 | `meta` | Objet contenant des métadonnées non standard sur lʼerreur. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -86,7 +86,7 @@ Le tableau suivant répertorie les différentes erreurs que l’API peut renvoye
 | `invalid-rule` | Une règle non valide ne peut pas être ajoutée à une bibliothèque. |
 | `invalid-settings-syntax` | Une erreur de syntaxe sʼest produite lors de lʼanalyse des paramètres JSON. |
 | `library-file-not-found` | Un fichier requis défini en extension.json est introuvable dans le package zip. |
-| `minification-error` | Le code n’a pas pu être compilé en raison d’un code non valide. |
+| `minification-error` | Échec de la compilation du code en raison dʼun code non valide. |
 | `multiple-revisions` | Une seule révision de chaque ressource peut être incluse dans une bibliothèque. |
 | `no-available-orgs` | Ce compte utilisateur nʼappartient pas à un profil de produit ayant accès aux balises. Utilisez Admin Console pour ajouter cet utilisateur à un profil de produit disposant de droits de balises. |
 | `not-authorized` | Ce compte utilisateur ne dispose pas des autorisations nécessaires pour effectuer cette action. |
