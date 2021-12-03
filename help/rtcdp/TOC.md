@@ -7,7 +7,7 @@ user-guide-description: Regroupez les données connues et anonymes provenant de 
 source-git-commit: 69833137498fedd87e99ca4255b8f1ace0921ff9
 workflow-type: tm+mt
 source-wordcount: '174'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 92%
       * [Prise en main de Real-time CDP](get-started.md)
       * [Présentation des mesures](home-page-dashboards.md)
    * Édition B2B de Real-time CDP {#rtcdpb2b-intro}
-      * [Exemple de cas d’utilisation](./b2b-use-case.md)
+      * [Exemple de cas d’utilisation ](./b2b-use-case.md)
       * [Tutoriel de bout en bout](./b2b-tutorial.md)
-      * [Barrières de sécurité CDP B2B en temps réel](b2b-guardrails.md)
+      * [Barrières de sécurité de l’édition B2B de Real-time CDP](b2b-guardrails.md)
 * Profils de compte {#account}
    * [Présentation des profils de compte](accounts/account-profile-overview.md)
    * [Guide de l’interface utilisateur des profils de compte](accounts/account-profile-ui-guide.md)
@@ -52,7 +52,7 @@ ht-degree: 92%
    * [Présentation de la segmentation](segmentation/segmentation-overview.md)
    * [Guide du créateur de segments](segmentation/segment-builder-guide.md)
    * [Segmentation dans l’édition B2B de Real-time CDP](segmentation/b2b.md)
-   * [Customer AI](segmentation/customer-ai.md)
+   * [IA dédiée aux clients](segmentation/customer-ai.md)
 * Sources {#sources}
    * [Présentation des sources](sources/sources-overview.md)
    * [Sources dans l’édition B2B de Real-time CDP](sources/b2b.md)
