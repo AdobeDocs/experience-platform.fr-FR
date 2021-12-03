@@ -6,15 +6,15 @@ topic-legacy: labels
 description: La gouvernance des données d’Adobe Experience Platform vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d’utilisation des données associées. Ce document offre une présentation des libellés d’utilisation des données dans Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '615'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 # Présentation des libellés d’utilisation des données
 
-La gouvernance des données de Adobe Experience Platform vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d’utilisation des données associées.
+La gouvernance des données d’Adobe Experience Platform vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d’utilisation des données associées.
 
 Ce document offre une présentation des libellés d’utilisation des données dans [!DNL Experience Platform]. Avant de lire ce guide, consultez la [présentation de la gouvernance des données](../home.md) pour une introduction plus détaillée du cadre de la gouvernance des données.
 
@@ -38,9 +38,9 @@ Pour plus d’informations sur le fonctionnement de l’application automatique 
 
 ### Héritage des contrôles d’exportation de données d’Adobe Audience Manager
 
-[!DNL Experience Platform] permet de partager des segments avec Adobe Audience Manager. Tous les contrôles des exportations de données appliqués aux segments d’Audience Manager sont traduits en libellés équivalents et en actions marketing reconnues par [!DNL Experience Platform] Gouvernance des données.
+[!DNL Experience Platform] permet de partager des segments avec Adobe Audience Manager. Les contrôles d’exportation de données appliqués aux segments d’Audience Manager sont convertis en libellés équivalents et en actions marketing reconnues par la gouvernance des données [!DNL Experience Platform].
 
-Pour savoir comment des contrôles d‘exportation de données spécifiques se mappent aux libellés d’utilisation des données dans [!DNL Platform], consultez la [documentation sur Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr#aam-data-export-control-in-aep).
+Pour savoir comment des contrôles d‘exportation de données spécifiques se mappent aux libellés d’utilisation des données dans [!DNL Platform], consultez la [documentation sur Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr#aam-data-export-control-in-aep).
 
 ## Gestion des libellés d’utilisation des données dans [!DNL Experience Platform] {#manage-labels}
 
