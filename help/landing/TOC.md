@@ -4,9 +4,9 @@ user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform permet de fournir des expériences personnalisées à vos clients en temps réel.
 source-git-commit: 030d6761b36e5bc7e6e12b0524a810a13e060e55
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '233'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -37,12 +37,12 @@ ht-degree: 92%
 * Documentation de Platform {#documentation}
    * [Présentation](documentation/overview.md)
    * [Prise en charge des langues](documentation/language-support.md)
-* Services d’application créés sur Platform {#ecosystem}
+* Services applicatifs créés sur Platform {#ecosystem}
    * [Présentation](application-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=fr)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=fr)
    * [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html?lang=fr)
-   * [Real-time Customer Data Platform (toutes les éditions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+   * [Real-time Customer Data Platform (toutes les éditions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=fr)
    * [Application et services intelligents (vidéo)](video/application-intelligent-services.md)
    * [Intégrations de Platform avec Experience Cloud (vidéo)](video/experience-cloud-integrations.md)
 * Gouvernance, confidentialité et sécurité {#governance-privacy-security}
