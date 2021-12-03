@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: ef711b1cbe0664f556e19ff6c64e9803d3cb1a21
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '803'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -94,15 +94,15 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Requête**
 
-L’exemple de requête de PUT ci-dessous met à jour les libellés existants pour un jeu de données, ainsi qu’un champ spécifique dans ce jeu de données. Les champs fournis dans la payload sont identiques à ceux requis pour une requête POST.
+La requête PUT suivante met à jour les libellés existants pour un jeu de données, ainsi quʼun champ spécifique dans ce jeu de données. Les champs fournis dans la payload sont identiques à ceux requis pour une requête POST. 
 
-Lors d’appels API qui mettent à jour les libellés existants d’un jeu de données (PUT), une `If-Match` L’en-tête qui indique la version actuelle de l’entité du libellé du jeu de données dans le service de jeu de données doit être inclus. Afin dʼéviter les collisions de données, le service ne mettra à jour lʼentité jeu de données que si la chaîne `If-Match` incluse correspond à la dernière balise de version générée par le système pour ce jeu de données.
+Lors dʼappels API mettant à jour les libellés existants dʼun jeu de données (PUT), un en-tête `If-Match` indiquant la version actuelle de lʼentité libellé-jeu de données dans Dataset Service doit être inclus. Afin dʼéviter les collisions de données, le service ne mettra à jour lʼentité jeu de données que si la chaîne `If-Match` incluse correspond à la dernière balise de version générée par le système pour ce jeu de données.
 
 >[!NOTE]
 >
 >Si aucune étiquette nʼexiste actuellement pour le jeu de données en question, de nouvelles étiquettes ne peuvent être ajoutées que par le biais dʼune requête POST, qui ne nécessite pas un en-tête `If-Match`. Une fois que des étiquettes ont été ajoutées à un jeu de données, une valeur `etag` est attribuée qui peut être utilisée pour mettre à jour ou supprimer les étiquettes ultérieurement.
 
-Pour récupérer la version la plus récente de lʼentité étiquette-jeu de données, envoyez une [requête GET](#look-up) au point d’entrée `/datasets/{DATASET_ID}/labels`. La valeur actuelle est renvoyée dans la réponse sous un en-tête `etag`. Lors de la mise à jour des libellés de jeu de données existants, la bonne pratique consiste à effectuer d’abord une requête de recherche pour le jeu de données afin de récupérer ses dernières `etag` avant d’utiliser cette valeur dans la variable `If-Match` en-tête de votre requête de PUT suivante.
+Pour récupérer la version la plus récente de lʼentité étiquette-jeu de données, envoyez une [requête GET](#look-up) au point d’entrée `/datasets/{DATASET_ID}/labels`. La valeur actuelle est renvoyée dans la réponse sous un en-tête `etag`. Lors de la mise à jour de libellés de jeux de données existants, il est recommandé dʼeffectuer dʼabord une requête de recherche pour le jeu de données afin de récupérer sa valeur `etag` la plus récente avant dʼutiliser cette valeur dans lʼen-tête `If-Match` de votre requête PUT ultérieure. 
 
 ```shell
 curl -X PUT \
@@ -131,11 +131,11 @@ curl -X PUT \
 | Propriété | Description |
 | --- | --- |
 | `labels` | Liste dʼétiquettes dʼutilisation des données que vous souhaitez ajouter au jeu de données. |
-| `optionalLabels` | Liste de tous les champs individuels dans le jeu de données auxquels vous souhaitez ajouter des étiquettes. Chaque élément de ce tableau doit avoir les propriétés suivantes :<br/><br/>`option`objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li>id</code>: valeur URI $id</code> du schéma associé au champ.</li><li>contentType</code>: type de contenu et numéro de version du schéma. Cela doit prendre la forme dʼun des <a href="../../xdm/api/getting-started.md#accept">en-têtes « Accept »</a> valides pour une demande de recherche XDM.</li><li>schemaPath</code>: chemin dʼaccès au champ dans le schéma du jeu de données.</li></ul>`labels` : liste dʼétiquettes dʼutilisation des données que vous souhaitez ajouter au champ. |
+| `optionalLabels` | Liste de tous les champs individuels dans le jeu de données auxquels vous souhaitez ajouter des étiquettes. Chaque élément de ce tableau doit avoir les propriétés suivantes :<br/><br/>`option`objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li>id</code> : valeur URI $id</code> du schéma associé au champ.</li><li>contentType</code> : type de contenu et numéro de version du schéma. Cela doit prendre la forme dʼun des <a href="../../xdm/api/getting-started.md#accept">en-têtes « Accept »</a> valides pour une demande de recherche XDM.</li><li>schemaPath</code> : chemin dʼaccès au champ dans le schéma du jeu de données.</li></ul>`labels` : liste dʼétiquettes dʼutilisation des données que vous souhaitez ajouter au champ. |
 
 **Réponse**
 
-Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de données.
+Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de données. 
 
 ```json
 {
