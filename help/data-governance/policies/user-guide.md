@@ -6,7 +6,7 @@ topic-legacy: policies
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document offre un aperçu des actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur d’Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '776'
 ht-degree: 100%
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 # Gestion des stratégies d’utilisation des données dans l’interface utilisateur
 
-La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document offre un aperçu des actions que vous pouvez effectuer dans l’espace de travail **Stratégies** de l’interface utilisateur [!DNL Experience Platform].
+La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document offre un aperçu des actions que vous pouvez effectuer dans l’espace de travail **Stratégies** de l’interface utilisateur [!DNL Experience Platform].
 
 >[!IMPORTANT]
 >
