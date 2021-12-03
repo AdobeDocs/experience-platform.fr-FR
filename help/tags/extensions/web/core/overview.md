@@ -3,9 +3,9 @@ title: Présentation de l’extension Core
 description: Découvrez l’extension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5362'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -219,13 +219,13 @@ Spécifiez le nom et la valeur du cookie devant exister pour qu’un événement
 
 #### Custom Code
 
-Spécifiez un Custom Code qui doit exister comme condition de l’événement.
+Spécifiez un code personnalisé qui doit exister comme condition de l’événement.
 
 >[!NOTE]
 >
->Le code JavaScript ES6+ est désormais pris en charge dans le code personnalisé. Notez que certains navigateurs plus anciens ne prennent pas en charge ES6+. Pour comprendre l’impact de l’utilisation des fonctions ES6+, testez-les par rapport à tous les navigateurs web qui doivent être pris en charge.
+>ES6+ JavaScript est désormais pris en charge dans le code personnalisé. Notez que certains navigateurs plus anciens ne prennent pas en charge ES6+. Pour comprendre l’impact de l’utilisation des fonctions ES6+, testez-les par rapport à tous les navigateurs web qui doivent être pris en charge.
 
-Utilisez l’éditeur de code intégré pour saisir le code personnalisé:
+Utilisez l’éditeur de code intégré pour saisir le code personnalisé :
 
 1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
 1. Saisissez le Custom Code.
@@ -540,11 +540,11 @@ Indiquez le pourcentage de fois où la condition renvoie true (vrai).
 
 Cette section décrit les types d’actions disponibles dans l’extension Core.
 
-### Code personnalisé
+### Custom Code
 
 >[!NOTE]
 >
->Le code JavaScript ES6+ est désormais pris en charge dans le code personnalisé. Notez que certains navigateurs plus anciens ne prennent pas en charge ES6+. Pour comprendre l’impact de l’utilisation des fonctions ES6+, testez-les par rapport à tous les navigateurs web qui doivent être pris en charge.
+>ES6+ JavaScript est désormais pris en charge dans le code personnalisé. Notez que certains navigateurs plus anciens ne prennent pas en charge ES6+. Pour comprendre l’impact de l’utilisation des fonctions ES6+, testez-les par rapport à tous les navigateurs web qui doivent être pris en charge.
 
 Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées.
 
@@ -588,7 +588,7 @@ Lorsque l’option « Run rule components in sequence » des paramètres de pr
 
 *JavaScript*
 
-Lors de la création d’une action Custom Code JavaScript, vous pouvez renvoyer une [promesse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) depuis votre action. L’action suivante de la règle sera exécutée uniquement lorsque la promesse renvoyée sera résolue. Si la promesse est refusée, les actions suivantes de la règle ne seront pas exécutées.
+Lors de la création d’une action Custom Code JavaScript, vous pouvez renvoyer une [promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) depuis votre action. L’action suivante de la règle sera exécutée uniquement lorsque la promesse renvoyée sera résolue. Si la promesse est refusée, les actions suivantes de la règle ne seront pas exécutées.
 
 >[!NOTE]
 >
@@ -652,7 +652,7 @@ Toute valeur de chaîne constante qui peut ensuite être référencée dans des 
 
 >[!NOTE]
 >
->Le code JavaScript ES6+ est désormais pris en charge dans le code personnalisé. Notez que certains navigateurs plus anciens ne prennent pas en charge ES6+. Pour comprendre l’impact de l’utilisation des fonctions ES6+, testez-les par rapport à tous les navigateurs web qui doivent être pris en charge.
+>ES6+ JavaScript est désormais pris en charge dans le code personnalisé. Notez que certains navigateurs plus anciens ne prennent pas en charge ES6+. Pour comprendre l’impact de l’utilisation des fonctions ES6+, testez-les par rapport à tous les navigateurs web qui doivent être pris en charge.
 
 Il est possible d’entrer du code JavaScript personnalisé dans l’interface utilisateur en cliquant sur Open Editor et en insérant le code dans la fenêtre de l’éditeur.
 
@@ -787,7 +787,7 @@ Vous pouvez sélectionner l’un des attributs de page suivants à utiliser dans
 * URL
 * Hostname
 * Pathname
-* Protocole
+* Protocol
 * Référent
 * Title
 
