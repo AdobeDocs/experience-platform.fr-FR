@@ -6,9 +6,9 @@ topic-legacy: labels
 description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1984'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 99%
 
 Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Adobe Experience Platform Data Governance fournit de multiples étiquettes dʼutilisation des données de base prêtes à lʼemploi que vous pouvez utiliser pour commencer à classer vos données.
 
-Ce document décrit les étiquettes dʼutilisation des données de base actuellement fournies par [!DNL Experience Platform]. Vous trouverez plus d’informations sur la gouvernance des données dans la section [Présentation de la gouvernance des données](../home.md).
+Ce document décrit les étiquettes dʼutilisation des données de base actuellement fournies par [!DNL Experience Platform]. Vous trouverez plus d’informations sur la gouvernance des données dans la [présentation de la gouvernance des données](../home.md).
 
 ## Étiquettes Contrat
 
