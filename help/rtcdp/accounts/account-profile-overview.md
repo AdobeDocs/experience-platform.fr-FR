@@ -4,7 +4,7 @@ title: Profils de compte dans l’édition B2B de Real-time CDP
 description: Découvrez comment l’édition B2B de Real-time Customer Data Platform vous permet d’unifier des informations de comptes provenant de plusieurs sources à l’aide des profils de compte.
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
 source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '254'
 ht-degree: 100%
 
