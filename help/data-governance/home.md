@@ -6,9 +6,9 @@ topic-legacy: overview
 description: La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans Experience Platform à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’utilisation des données et le contrôle de l’utilisation des données lors d’activités marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1371'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 92%
 
 L’une des principales fonctionnalités d’Adobe Experience Platform est de rassembler des données issues de plusieurs systèmes d’entreprise afin de permettre aux professionnels du marketing d’identifier, de comprendre et d’impliquer les clients avec plus d’efficacité. Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Il est donc important de s’assurer que vos opérations de données au sein de [!DNL Platform] sont conformes aux stratégies d’utilisation des données.
 
-La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform], et ce, à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage d’utilisation des données, les stratégies d’utilisation des données et le contrôle de l’utilisation des données lors d’actions marketing.
+La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform], et ce, à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage d’utilisation des données, les stratégies d’utilisation des données et le contrôle de l’utilisation des données lors d’actions marketing.
 
 ## Rôles de la gouvernance des données
 
@@ -42,11 +42,11 @@ Les professionnels du marketing sont le point de terminaison de la gouvernance d
 * Les spécialistes du marketing et les concepteurs dans Experience utilisent des données pour concevoir de nouvelles expériences client.
 
 
-## Structure de gouvernance des données
+## Cadre de gouvernance des données
 
-Le cadre de gouvernance des données simplifie et rationalise le processus de catégorisation des données et de création de stratégies d’utilisation des données. Une fois les libellés de données appliqués et les stratégies d’utilisation des données en place, vous pouvez évaluer les actions marketing permettant d’assurer la bonne utilisation des données.
+Le cadre de gouvernance des données simplifie et rationalise le processus de catégorisation des données et de création des stratégies d’utilisation des données. Une fois les libellés de données appliqués et les stratégies d’utilisation des données en place, vous pouvez évaluer les actions marketing permettant d’assurer la bonne utilisation des données. 
 
-Le cadre de gouvernance des données comporte trois éléments clés : Étiquettes, stratégies et application.
+Le cadre de gouvernance des données comporte trois éléments clés : les libellés, les stratégies et l’application. 
 
 1. **Libellés :** classent les données en fonction des considérations liées à la confidentialité et aux conditions contractuelles afin qu’elles soient conformes aux réglementations et aux politiques de l’organisation.
 1. **Stratégies :** décrivent le ou les types d’actions marketing que vous êtes autorisé à effectuer ou non sur certaines données.
@@ -56,7 +56,7 @@ Le cadre de gouvernance des données comporte trois éléments clés : Étiquett
 
 La gouvernance des données permet aux gestionnaires de données d’appliquer des libellés au niveau du jeu de données et du champ pour catégoriser les données en fonction du type de politiques qui s’applique.
 
-Le cadre de gouvernance des données comprend des libellés d’utilisation des données prédéfinis qui peuvent être utilisés pour catégoriser les données de trois façons :
+Le cadre de gouvernance des données inclut des libellés d’utilisation des données prédéfinis pouvant être utilisés pour catégoriser les données de trois manières différentes :
 
 ![Catégorie des libellés d’utilisation des données](./images/overview/label-categories.png)
 
@@ -88,7 +88,7 @@ Pour plus d’informations sur les stratégies d’utilisation des données et l
 
 ## Étapes suivantes
 
-Ce document a fourni une introduction de haut niveau à la gouvernance des données et au cadre de gouvernance des données. Vous pouvez désormais poursuivre en consultant le [guide d’utilisation des libellés d’utilisation des données](labels/user-guide.md) et commencer à ajouter des libellés d’utilisation à vos données d’expérience.
+Ce document fournit une présentation détaillée de la gouvernance des données ainsi que du cadre de gouvernance des données. Vous pouvez désormais poursuivre en consultant le [guide d’utilisation des libellés d’utilisation des données](labels/user-guide.md) et commencer à ajouter des libellés d’utilisation à vos données d’expérience.
 
 ## Annexe
 
@@ -96,7 +96,7 @@ La section suivante fournit des informations supplémentaires concernant la gouv
 
 ### Terminologie de la gouvernance des données
 
-Le tableau suivant décrit les termes clés liés à la gouvernance des données et au cadre de gouvernance des données.
+Le tableau suivant présente les termes clés liés à la gouvernance des données ainsi qu’au cadre de gouvernance des données. 
 
 | Terme | Définition |
 |---|---|
@@ -116,10 +116,10 @@ Le tableau suivant décrit les termes clés liés à la gouvernance des données
 
 ## Ressources supplémentaires
 
-La vidéo suivante est destinée à vous aider à comprendre la structure de gouvernance des données.
+La vidéo suivante a pour but de vous aider à comprendre le cadre de gouvernance des données. 
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-La vidéo suivante présente différentes fonctionnalités de gouvernance des données dans Experience Platform.
+La vidéo suivante présente une introduction aux diverses fonctionnalités de gouvernance des données dans Experience Platform. 
 
 >[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
