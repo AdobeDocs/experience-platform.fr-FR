@@ -4,9 +4,9 @@ title: Exemple de cas d’utilisation de l’édition B2B de Real-time Customer 
 description: Cet exemple de scénario fournit une illustration de configuration pour votre implémentation de l’édition B2B de Real-time Customer Data Platform.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1134'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -91,7 +91,7 @@ La lecture de ce document vous a permis de vous familiariser avec les types d’
 
 La documentation suivante est recommandée pour améliorer votre compréhension des fonctionnalités spécifiques au B2B :
 
-- [Tutoriel de bout en bout sur l’édition B2B de Real-time Customer Data Platform](./b2b-tutorial.md)
+- [Tutoriel de bout en bout sur l’édition B2B de Real-time Customer Data Platform](./b2b-tutorial.md)
 - [Sources dans l’édition B2B de Real-time Customer Data Platform](./sources/b2b.md)
 - [Schémas dans l’édition B2B de Real-time Customer Data Platform](./schemas/b2b.md)
 - [Exemples de segmentation B2B](./segmentation/b2b.md)
