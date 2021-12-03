@@ -6,15 +6,15 @@ topic-legacy: developer guide
 description: L’API Policy Service permet aux développeurs de gérer les libellés et les stratégies d’utilisation des données dans Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '504'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
 # Guide de l’API [!DNL Policy Service]
 
-La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform], et ce, à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage d’utilisation des données, les stratégies d’utilisation des données et le contrôle de l’utilisation des données lors d’actions marketing.
+La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform], et ce, à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage d’utilisation des données, les stratégies d’utilisation des données et le contrôle de l’utilisation des données lors d’actions marketing.
 
 L’API [!DNL Policy Service] fournit plusieurs points d’entrée vous permettant de gérer par programmation les libellés et les stratégies d’utilisation des données, ainsi que d’évaluer les actions marketing en cas de violation de ces stratégies. Ces points d’entrée sont décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
 
@@ -26,7 +26,7 @@ Les libellés d’utilisation des données vous permettent de classer les jeux d
 
 ## Actions marketing
 
-Les actions marketing (également appelées cas d’utilisation marketing), dans le contexte de la structure de gouvernance des données, sont des actions qui [!DNL Experience Platform] le client de données peut prendre pour laquelle votre entreprise souhaite limiter l’utilisation des données. Pour obtenir des informations détaillées sur l’utilisation des actions marketing, consultez le [guide des points d’entrée des actions marketing](./marketing-actions.md).
+Les actions marketing (également appelées cas dʼutilisation marketing), dans le contexte du cadre de gouvernance des données, sont des actions quʼun utilisateur de données [!DNL Experience Platform] peut entreprendre et pour lesquelles votre entreprise souhaite restreindre lʼutilisation des données. Pour obtenir des informations détaillées sur l’utilisation des actions marketing, consultez le [guide des points d’entrée des actions marketing](./marketing-actions.md).
 
 ## Stratégies
 
