@@ -5,9 +5,9 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez SQL standard pour créer des requêtes de données dans le lac de données de Platform.
 feature: Queries
 source-git-commit: a41efa075d0fff5537eaf055635e346ac5ce677b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '141'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
