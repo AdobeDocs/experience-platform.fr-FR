@@ -6,7 +6,7 @@ topic-legacy: getting started
 description: Adobe Experience Platform permet aux entreprises de centraliser et de normaliser les données clients avant dʼappliquer la science des données et le machine learning afin dʼaméliorer considérablement la conception et la diffusion dʼexpériences riches et personnalisées.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
 source-git-commit: 0e58db465b9e978d66325c4600ed78e81c03ae44
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '437'
 ht-degree: 100%
 
@@ -24,9 +24,9 @@ La documentation dʼ[!DNL Experience Platform] est disponible dans plusieurs for
 
 Pour commencer à en savoir plus sur un service [!DNL Platform] spécifique, revenez à la [page dʼaccueil de la documentation](https://experienceleague.adobe.com/docs/experience-platform.html?lang=fr) et sélectionnez le guide approprié.
 
-### Documentation des services dʼapplication reposant sur [!DNL Experience Platform]
+### Documentation des services applicatifs reposant sur [!DNL Experience Platform]
 
-Adobe a créé de nombreux services dʼapplication sur Experience Platform. Vous trouverez la documentation de ces services dans leurs propres guides, dont les liens figurent ci-dessous :
+Adobe a créé de nombreux services applicatifs sur Experience Platform. Vous trouverez la documentation de ces services dans leurs propres guides, dont les liens figurent ci-dessous :
 
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=fr)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=fr)
