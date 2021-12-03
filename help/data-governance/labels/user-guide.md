@@ -6,15 +6,15 @@ topic-legacy: labels
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1140'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
 # Gestion des libellés d’utilisation des données dans l’interface utilisateur
 
-Ce guide d’utilisation détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur [!DNL Experience Platform]. Avant d’utiliser ce guide, reportez-vous à la section [Présentation de la gouvernance des données](../home.md) pour une introduction plus détaillée de la structure de gouvernance des données.
+Ce guide d’utilisation détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur [!DNL Experience Platform]. Avant de lire ce guide, consultez la [présentation de la gouvernance des données](../home.md) pour une introduction plus détaillée du cadre de la gouvernance des données.
 
 ## Gestion des libellés au niveau du jeu de données
 
