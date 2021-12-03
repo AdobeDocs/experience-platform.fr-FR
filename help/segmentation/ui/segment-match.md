@@ -5,7 +5,7 @@ title: Présentation de la correspondance de segment
 topic-legacy: overview
 description: La correspondance de segment est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment de manière sécurisée, gérée et respectueuse de la confidentialité.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: ba215f20db3bfead8beba8f1dea98bfc37e4358c
+source-git-commit: 105ddf70aafe8c92b5a64959ba1c4cefa5eb6f12
 workflow-type: tm+mt
 source-wordcount: '1982'
 ht-degree: 6%
@@ -59,7 +59,7 @@ La liste des espaces de noms pris en charge est la suivante :
 
 Vous devez fournir une configuration de consentement et définir sa valeur par défaut sur : `opt-in` ou `opt-out` pour une vérification du consentement.
 
-La vérification du consentement de l’inclusion et de l’exclusion détermine si vous pouvez utiliser avec le consentement pour partager les données utilisateur par défaut. Si la configuration du consentement par défaut est définie sur `opt-in`, les données utilisateur peuvent ensuite être partagées, sauf si un utilisateur s’exclut explicitement. Si la valeur par défaut est définie sur `opt-out`, les données utilisateur ne peuvent pas être partagées, à moins qu’un utilisateur n’y consente explicitement.
+La vérification du consentement de l’inclusion et de l’exclusion détermine si vous pouvez utiliser avec le consentement pour partager les données utilisateur par défaut. Si la configuration du consentement par défaut est définie sur `opt-out`, les données utilisateur peuvent ensuite être partagées, sauf si un utilisateur s’exclut explicitement. Si la valeur par défaut est définie sur `opt-in`, les données utilisateur ne peuvent pas être partagées, à moins qu’un utilisateur n’y consente explicitement.
 
 La configuration du consentement par défaut pour [!DNL Segment Match] est défini sur `opt-out`. Pour appliquer un modèle d’inclusion à vos données, envoyez une demande par courrier électronique à votre gestionnaire de compte Adobe.
 
