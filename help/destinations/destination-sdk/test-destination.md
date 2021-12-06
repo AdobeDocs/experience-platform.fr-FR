@@ -1,10 +1,10 @@
 ---
-description: Dans le cadre du SDK de destination, Adobe fournit des outils de développement pour vous aider à configurer et à tester votre destination. Cette page décrit comment tester votre configuration de destination.
+description: Dans le cadre de Destination SDK, Adobe fournit des outils de développement pour vous aider à configurer et tester votre destination. Cette page décrit comment tester votre configuration de destination.
 title: Test de votre configuration de destination
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
+source-git-commit: 1d191b0ce8eb3de8b14dbdc0b3a513585c18d1ea
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '526'
 ht-degree: 1%
 
 ---
@@ -13,17 +13,21 @@ ht-degree: 1%
 
 ## Présentation {#overview}
 
-Dans le cadre du SDK de destination, Adobe fournit des outils de développement pour vous aider à configurer et à tester votre destination. Cette page décrit comment tester votre configuration de destination. Pour plus d’informations sur la création d’un modèle de transformation de message, consultez la section [Créer et tester un modèle de transformation de message](./create-template.md).
+Dans le cadre de Destination SDK, Adobe fournit des outils de développement pour vous aider à configurer et tester votre destination. Cette page décrit comment tester votre configuration de destination. Pour plus d’informations sur la création d’un modèle de transformation de message, reportez-vous à la section [Créer et tester un modèle de transformation de message](./create-template.md).
 
-Pour **tester si votre destination est configurée correctement et pour vérifier l’intégrité des flux de données vers votre destination configurée**, utilisez l’*outil de test de destination*. Grâce à cet outil, vous pouvez tester la configuration de votre destination en envoyant des messages à votre point de terminaison API REST.
+À **tester si votre destination est configurée correctement et vérifier l’intégrité des flux de données vers votre destination configurée ;**, utilisez le *Outil de test de destination*. Grâce à cet outil, vous pouvez tester la configuration de votre destination en envoyant des messages à votre point de terminaison API REST.
 
-Vous trouverez ci-dessous la manière dont le test de votre destination s’insère dans le [workflow de configuration de destination](./configure-destination-instructions.md) du SDK de destination :
+Illustré ci-dessous, le test de votre destination s’insère dans la variable [workflow de configuration des destinations](./configure-destination-instructions.md) dans Destination SDK :
 
 ![Graphique indiquant où l’étape de test de destination correspond au workflow de configuration de destination](./assets/test-destination-step.png)
 
-## Outil de test de destination {#destination-testing-tool}
+## Outil de test de destination - Objectif et conditions préalables {#destination-testing-tool}
 
-Utilisez cet outil pour tester la configuration de votre destination en envoyant des messages au point de terminaison du partenaire que vous avez fourni dans la [configuration du serveur](./server-and-template-configuration.md).
+Utilisez l’outil de test de destination pour tester la configuration de votre destination en envoyant des messages au point de terminaison du partenaire que vous avez fourni dans la variable [configuration du serveur](./server-and-template-configuration.md).
+
+Avant d’utiliser l’outil, veillez à :
+* Configurez votre destination en suivant les étapes décrites dans la section [workflow de configuration des destinations](./configure-destination-instructions.md) et
+* établir une connexion à votre destination, comme indiqué dans la section [Comment obtenir l’ID d’instance de destination](./destination-testing-api.md#get-destination-instance-id).
 
 Avec cet outil, après avoir configuré votre destination, vous pouvez :
 * Testez si votre destination est correctement configurée ;
@@ -33,20 +37,20 @@ Avec cet outil, après avoir configuré votre destination, vous pouvez :
 
 >[!NOTE]
 >
->Pour consulter la documentation de référence complète sur l’API, voir [Opérations de l’API de test de destination](./destination-testing-api.md).
+>Pour consulter la documentation de référence complète sur l’API, reportez-vous à la section [Opérations de l’API de test de destination](./destination-testing-api.md).
 
 Vous pouvez effectuer des appels vers le point de terminaison de l’API de test de destination avec ou sans ajouter de profils sur la requête.
 
-Si vous n’ajoutez aucun profil dans la requête, Adobe les génère en interne et les ajoute à la requête. Si vous souhaitez générer des profils à utiliser dans cette requête, reportez-vous à la [Référence de l’API de génération d’exemples de profils](./sample-profile-generation-api.md). Vous devez générer des profils en fonction du schéma XDM source, comme indiqué dans la [référence API](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). Notez que le schéma source est le [schéma d’union](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) de l’environnement de test que vous utilisez.
+Si vous n’ajoutez aucun profil dans la requête, Adobe les génère en interne et les ajoute à la requête. Si vous souhaitez générer des profils à utiliser dans cette requête, reportez-vous à la section [Exemple de référence d’API de génération de profil](./sample-profile-generation-api.md). Vous devez générer des profils en fonction du schéma XDM source, comme indiqué dans la section [Référence d’API](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). Notez que le schéma source est le [schéma d’union](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) de l’environnement de test que vous utilisez.
 
 La réponse contient le résultat du traitement de la requête de destination. La demande comprend trois sections principales :
 * La requête générée par Adobe pour la destination.
 * Réponse reçue de votre destination.
-* La liste des profils envoyés dans la requête, que les profils aient été [ajoutés par vous dans la requête](./destination-testing-api.md/#test-with-added-profiles) ou générés par Adobe si [le corps de la requête de test de destination était vide](./destination-testing-api.md#test-without-adding-profiles).
+* La liste des profils envoyés dans la requête, si les profils étaient [ajouté par vous dans la requête ;](./destination-testing-api.md/#test-with-added-profiles), ou générés par l’Adobe si [le corps de la requête de test de destination était vide.](./destination-testing-api.md#test-without-adding-profiles).
 
 >[!NOTE]
 >
->Adobe peut générer plusieurs paires de requête et de réponse. Par exemple, si vous envoyez 10 profils vers une destination ayant une valeur `maxUsersPerRequest` de 7, il y aura une requête avec 7 profils et une autre requête avec 3 profils.
+>Adobe peut générer plusieurs paires de requête et de réponse. Par exemple, si vous envoyez 10 profils à une destination qui comporte une `maxUsersPerRequest` valeur de 7, il y aura une requête avec 7 profils et une autre requête avec 3 profils.
 
 **Exemple de requête avec paramètre de profil dans le corps**
 
@@ -121,7 +125,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **Exemple de réponse**
 
-Notez que le contenu du paramètre `results.httpCalls` est spécifique à votre API REST.
+Notez que le contenu de la variable `results.httpCalls` est spécifique à votre API REST.
 
 ```json
 {
@@ -225,8 +229,8 @@ Notez que le contenu du paramètre `results.httpCalls` est spécifique à votre 
 }
 ```
 
-Pour obtenir des descriptions des paramètres de requête et de réponse, voir [Opérations de l’API de test de destination](./destination-testing-api.md).
+Pour des descriptions des paramètres de requête et de réponse, reportez-vous à la section [Opérations de l’API de test de destination](./destination-testing-api.md).
 
 ## Étapes suivantes
 
-Après avoir testé votre destination et confirmé qu’elle est correctement configurée, utilisez l’[API de publication de destination](./destination-publish-api.md) pour envoyer votre configuration à Adobe pour révision.
+Après avoir testé votre destination et confirmé qu’elle est correctement configurée, utilisez la variable [API de publication de destination](./destination-publish-api.md) pour envoyer votre configuration à Adobe en vue de la révision.
