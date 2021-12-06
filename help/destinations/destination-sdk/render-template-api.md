@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/testing/template/render`, pour effectuer le rendu des données exportées pour votre destination, en fonction de votre modèle de transformation de messages.
 title: Opérations de l’API de modèle de rendu
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 5ecfd6e7f2f783d31642b7d81cc34b51eb0d6307
+source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
 workflow-type: tm+mt
-source-wordcount: '786'
-ht-degree: 2%
+source-wordcount: '824'
+ht-degree: 1%
 
 ---
 
@@ -24,6 +24,8 @@ Avant de poursuivre, veuillez consulter la section [guide de prise en main](./ge
 ## Rendre les profils exportés en fonction du modèle de transformation des messages {#render-exported-data}
 
 Vous pouvez effectuer le rendu des profils exportés en adressant une requête de POST au `authoring/testing/template/render` point de fin et en indiquant l’identifiant de destination de la configuration de destination et le modèle que vous avez créé à l’aide de la variable [exemple de point d’entrée de l’API de modèle](./sample-template-api.md).
+
+Vous pouvez commencer par utiliser un modèle simple qui exporte vos profils bruts sans appliquer de transformations, puis passer à un modèle plus complexe qui applique les transformations aux profils. La syntaxe du modèle simple est la suivante : <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
