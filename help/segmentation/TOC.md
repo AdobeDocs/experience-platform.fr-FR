@@ -1,18 +1,18 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform Segmentation Service
+user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des segments et générez des audiences à partir de vos données de profil client en temps réel.
 feature: Segments
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 0f20b5cfb3301bc7f7f336e14e9faa0234c05c51
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 75%
+source-wordcount: '163'
+ht-degree: 74%
 
 ---
 
 
-# Adobe Experience Platform Segmentation Service {#segmentation}
+# Adobe Experience Platform Segmentation Service {#segmentation}
 
 - [Présentation de Segmentation Service](home.md)
 - [Types de données de segmentation](data-types.md)
@@ -31,11 +31,13 @@ ht-degree: 75%
    - [Présentation](ui/overview.md)
    - [Tableau de bord des segments](ui/segment-dashboard.md)
    - [Créateur de segments](ui/segment-builder.md)
-   - [Correspondance de segments](ui/segment-match.md)
    - [Segmentation Edge](ui/edge-segmentation.md)
    - [Segmentation par flux](ui/streaming-segmentation.md)
    - [Segmentation par flux (Vidéo)](video/streaming-segmentation-overview.md)
    - [Refactorisation des contraintes de temps](ui/segment-refactoring.md)
+   - Correspondance de segments {#segment-match}
+      - [Correspondance de segment - Aperçu](ui/segment-match/overview.md)
+      - [Dépannage](ui/segment-match/troubleshooting.md)
 - [Respect du consentement](consents.md)
 - [Segmentation d’entités multiples](multi-entity-segmentation.md)
 - Langage de requête de profil {#pql}
@@ -45,9 +47,9 @@ ht-degree: 75%
    - [Fonctions de tableau, de liste et d’ensemble](pql/array-functions.md)
    - [Fonctions de mappage](pql/map-functions.md)
    - [Fonctions de chaîne](pql/string-functions.md)
-   - [Fonctions d&#39;objet](pql/object-functions.md)
+   - [Fonctions d’objet](pql/object-functions.md)
    - [Fonctions arithmétiques ](pql/arithmetic-functions.md)
-   - [Fonctions d&#39;agrégation](pql/aggregation-functions.md)
+   - [Fonctions d’agrégation](pql/aggregation-functions.md)
    - [Fonctions de date et d’heure](pql/datetime-functions.md)
    - [Fonctions de filtre](pql/filter-functions.md)
    - [Quantificateurs logiques](pql/logical-quantifiers.md)
