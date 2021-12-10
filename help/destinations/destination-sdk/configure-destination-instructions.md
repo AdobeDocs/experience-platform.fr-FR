@@ -2,9 +2,9 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination de diffusion en continu à l’aide de Destination SDK.
 title: Utilisation de Destination SDK pour configurer une destination de diffusion en continu
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
+source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,10 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 Vous trouverez ci-dessous un exemple de configuration pour un modèle de destination, créé à l’aide de la fonction `/destinations` Point d’entrée de l’API. Pour plus d’informations sur ce modèle, reportez-vous à la section [Configuration de la destination](./destination-configuration.md).
 
 Pour connecter la configuration du serveur et du modèle à l’étape 1 à cette configuration de destination, ajoutez l’ID d’instance du serveur et la configuration du modèle en tant que `destinationServerId` ici.
+
+>[!IMPORTANT]
+>
+>Pour créer une destination correctement configurée, vous devez *must* ajouter au moins une identité cible dans `identityNamespaces`, comme illustré ci-dessous. Si aucune identité cible n’est configurée, les utilisateurs ne pourront pas passer le [Etape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) du workflow d’activation.
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
