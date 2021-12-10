@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur de la segmentation par flux
 topic-legacy: ui guide
 description: La segmentation par flux sur Adobe Experience Platform vous permet d’effectuer une segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation par flux, la qualification de segment se produit désormais lorsque les données entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées au fur et à mesure que les données sont transmises à Platform, ce qui signifie que l’adhésion au segment sera conservée à jour sans exécuter les tâches de segmentation planifiées.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 6db0aef66abe11b8ed9f4b8da56875aa296b1a10
+source-git-commit: 1fa7663cc8bebca98f284593e98163315acda478
 workflow-type: tm+mt
-source-wordcount: '1190'
-ht-degree: 1%
+source-wordcount: '1245'
+ht-degree: 0%
 
 ---
 
@@ -69,6 +69,12 @@ Après avoir créé un segment activé dans le flux, vous pouvez afficher les d�
 Plus précisément, les détails sur la variable **[!UICONTROL taille totale de l&#39;audience qualifiée]** s’affichent. Le **[!UICONTROL Taille totale de l’audience qualifiée]** affiche le nombre total d’audiences qualifiées de la dernière exécution de la tâche de segmentation terminée. Si une tâche de segmentation n’a pas été effectuée au cours des dernières 24 heures, le nombre d’audiences sera prélevé dans une estimation à la place.
 
 Un graphique linéaire se trouve en dessous du nombre de segments qui ont été qualifiés et disqualifiés au cours des dernières 24 heures. La liste déroulante peut être ajustée afin d’afficher les dernières 24 heures, la semaine dernière ou les 30 derniers jours.
+
+>[!NOTE]
+>
+>Un segment est considéré comme qualifié s’il passe de l’absence d’état à la réalisation ou s’il passe de la sortie à la réalisation. Un segment est considéré comme non qualifié s’il passe de la réalisation à la sortie ou s’il existe à la sortie.
+>
+>Vous trouverez plus d’informations sur ces statuts dans le tableau des statuts du [présentation de la segmentation](./overview.md#browse).
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 

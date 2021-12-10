@@ -5,7 +5,7 @@ title: Guide de l’interface utilisateur de Segmentation Service
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ce3d5e3db28d39b8d7d5a984700dd681c650ac94
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 22%
@@ -45,7 +45,7 @@ Pour en savoir plus, rendez-vous sur la page [guide du tableau de bord des segme
 
 ![](../../dashboards/images/segments/dashboard-overview.png)
 
-## Parcourir
+## Parcourir {#browse}
 
 Sélectionnez la **[!UICONTROL Parcourir]** pour afficher une liste de toutes les définitions de segment pour votre organisation IMS.
 
