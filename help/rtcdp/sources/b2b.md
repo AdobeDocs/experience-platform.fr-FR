@@ -2,10 +2,10 @@
 title: Sources dans l’édition B2B de Real-time Customer Data Platform
 description: Présentation du rôle des sources dans l’édition B2B de Real-time Customer Data Platform.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: ef3b9bb742b44aafc838b84a0076e7c8445ac84f
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 6%
+source-wordcount: '290'
+ht-degree: 17%
 
 ---
 
@@ -19,7 +19,9 @@ L’édition B2B de Real-time Customer Data Platform vous permet d’importer vo
 
 >[!TIP]
 >
->Bien que l’édition B2B de Real-time Customer Data Platform offre un large éventail de sources externes à partir desquelles ingérer des données, elle ne dispose pas d’autant de sources que celles disponibles pour Real-time Customer Data Platform. Pour savoir quels connecteurs source sont disponibles pour votre entreprise, vous pouvez afficher le catalogue de sources dans l’interface utilisateur de Platform. Pour accéder au catalogue, sélectionnez **Sources** dans le volet de navigation de gauche, puis sélectionnez **Catalogue**.
+>Bien que l’édition B2B de Real-time Customer Data Platform offre un large éventail de sources externes à partir desquelles ingérer des données, elle ne dispose pas d’autant de sources que celles disponibles pour Real-time Customer Data Platform. Pour savoir quels connecteurs source sont disponibles pour votre entreprise, vous pouvez afficher le catalogue de sources dans l’interface utilisateur de Platform. Pour accéder au catalogue, sélectionnez **Sources** dans le volet de navigation de gauche, puis sélectionnez **Catalogue**. 
+
+Pour comprendre comment les sources s’intègrent à votre workflow B2B, reportez-vous à la section [tutoriel de bout en bout](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
 Voir [Présentation des connecteurs source](../../sources/home.md) pour plus d’informations sur les types de sources disponibles dans Adobe Experience Platform.
 

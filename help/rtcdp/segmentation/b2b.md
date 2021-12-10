@@ -1,17 +1,17 @@
 ---
-title: Présentation des cas d’utilisation de la segmentation pour l’édition B2B de la plateforme CDP en temps réel
+title: Cas d’utilisation de la segmentation pour l’édition B2B de la plateforme CDP en temps réel
 description: Présentation des différents cas d’utilisation de la plateforme CDP B2B en temps réel disponibles.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
+source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1105'
 ht-degree: 2%
 
 ---
 
-# Présentation des cas d’utilisation de la segmentation pour l’édition B2B de Real-time Customer Data Platform
+# Cas d’utilisation de la segmentation pour Real-time Customer Data Platform B2B Edition
 
-Ce document fournit des exemples concernant la segmentation disponible pour l’édition B2B de la plateforme CDP en temps réel et la manière dont les différents types d’attributs peuvent être combinés pour les cas d’utilisation B2B courants.
+Ce document fournit des exemples de définitions de segment dans l’édition B2B de la plateforme CDP en temps réel et explique comment différents types d’attributs peuvent être combinés pour les cas d’utilisation B2B courants. Pour comprendre comment les destinations s’intègrent à votre workflow B2B, reportez-vous à la section [tutoriel de bout en bout](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >
