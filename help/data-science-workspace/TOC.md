@@ -6,27 +6,27 @@ user-guide-description: Utilisez le machine learning pour développer, entraîne
 feature: Data Science Workspace
 solution: Experience Platform, Intelligent Services
 source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '248'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
 
 # Data Science Workspace {#data-science-workspace}
 
-* [Présentation de Data Science Workspace](home.md)
-* [Accès à Data Science Workspace et fonctionnalités](access-features-dsw.md)
-* [Présentation détaillée de Data Science Workspace](walkthrough.md)
+* [Présentation de Data Science Workspace](home.md)
+* [Accès à Data Science Workspace et fonctionnalités associées](access-features-dsw.md)
+* [Présentation détaillée de Data Science Workspace](walkthrough.md)
 * Notebooks JupyterLab {#jupyterlab}
    * [Présentation](jupyterlab/overview.md)
    * [Accès aux données](jupyterlab/access-notebook-data.md)
    * [Analyse de vos données](jupyterlab/analyze-your-data.md)
-   * [Query Service](jupyterlab/query-service.md)
+   * [Query Service](jupyterlab/query-service.md)
    * [Analyse exploratoire des données (AED)](jupyterlab/eda-notebook.md)
    * [Création d’un modèle à l’aide du créateur de recettes](jupyterlab/create-a-model.md)
    * [Collaboration dans JupyterLab à l’aide de Git](jupyterlab/using-git-for-collaboration.md)
-* API Sensei Machine Learning {#api}
+* API Sensei Machine Learning {#api}
    * [Prise en main](api/getting-started.md)
    * [Moteurs](api/engines.md)
    * [MLInstances (recettes)](api/mlinstances.md)
@@ -47,7 +47,7 @@ ht-degree: 94%
 * Création de modèles {#authoring}
    * [SDK de création de modèles](authoring/sdk.md)
    * [Création d’un pipeline de fonctionnalités](authoring/feature-pipeline.md)
-   * [Création de modèles à l’aide du SDK Platform (Python)](authoring/platform-sdk.md)
+   * [Création de modèles à l’aide du SDK Platform (Python)](authoring/platform-sdk.md)
    * [Accès aux données Python](authoring/python.md)
    * [Accès aux données Spark](authoring/spark.md)
 * Tutoriels sur les modèles et les recettes {#models-recipes}
@@ -63,10 +63,10 @@ ht-degree: 94%
    * [Notation d’un modèle (interface utilisateur)](models-recipes/score-model-ui.md)
    * [Notation d’un modèle (API)](models-recipes/score-model-api.md)
    * [Optimisation d’un modèle](models-recipes/optimize-model.md)
-   * [Enrichissement de Real-time Customer Profile avec des insights d’apprentissage automatique](models-recipes/enrich-profile.md)
+   * [Enrichissement de Real-time Customer Profile avec des insights de machine learning](models-recipes/enrich-profile.md)
    * [Publication d’un modèle en tant que service (interface utilisateur)](models-recipes/publish-model-service-ui.md)
    * [Publication d’un modèle en tant que service (API)](models-recipes/publish-model-service-api.md)
-   * [Planification de la formation et de la notation automatisée d’un service (interface utilisateur)](models-recipes/schedule-models-ui.md)
+   * [Planification de la formation et de la notation automatisées d’un service (interface utilisateur)](models-recipes/schedule-models-ui.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
 * [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
