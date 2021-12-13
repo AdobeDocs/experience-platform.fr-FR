@@ -1,25 +1,25 @@
 ---
-title: Notes de mise à jour de l’extension Service d’identités d’Adobe Experience Cloud
-description: Dernières notes de mise à jour pour l’extension Service d’identités d’Adobe Experience Cloud dans Adobe Experience Platform.
+title: Notes de mise à jour de l’extension Service d’identités d’Adobe Experience Cloud
+description: Dernières notes de mise à jour pour lʼextension de balise Service dʼidentités dʼAdobe Experience Cloud dans Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 source-git-commit: 1d3abede47c97c9a4f3b18ae25c890c309e942fd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '521'
 ht-degree: 100%
 
 ---
 
-# Notes de mise à jour de l’extension Service d’identités d’Adobe Experience Cloud
+# Notes de mise à jour de l’extension Service d’identités d’Adobe Experience Cloud
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Pour les notes de mise à jour du Service d’identités d’Experience Cloud lui-même et pas uniquement de l’extension Adobe Experience Platform Launch, veuillez consulter : [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr)
 
 ## 3 novembre 2021
 
-### Extension 5.2.1 d’Experience Cloud ID
+### Extension 5.2.1 d’Experience Cloud ID
 
 #### **Fonctionnalités**
 
@@ -66,7 +66,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
 ## 13 avril 2020
 
-### Extension 4.6.0 d’Experience Cloud ID
+### Extension 4.6.0 d’Experience Cloud ID
 
 #### **Fonctionnalités**
 
@@ -76,7 +76,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
 ## 22 janvier 2020
 
-### Extension 4.5.2 d’Experience Cloud ID
+### Extension 4.5.2 d’Experience Cloud ID
 
 #### **Fonctionnalités**
 
@@ -86,7 +86,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
 ## 7 janvier 2020
 
-### Extension 4.4.2 d’Experience Cloud ID
+### Extension 4.4.2 d’Experience Cloud ID
 
 #### **Fonctionnalités**
 
