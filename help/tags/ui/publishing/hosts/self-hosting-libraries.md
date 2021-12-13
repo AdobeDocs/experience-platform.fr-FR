@@ -3,7 +3,7 @@ title: Bibliothèques auto-hébergées
 description: Découvrez comment mettre en œuvre l’auto-hébergement pour vos versions de bibliothèque de balises dans Adobe Experience Platform.
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
 source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '489'
 ht-degree: 100%
 
