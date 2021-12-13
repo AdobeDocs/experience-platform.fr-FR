@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Ce guide présente les concepts clés de Data Science Workspace dans Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
 source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2388'
 ht-degree: 100%
 
