@@ -5,7 +5,7 @@ title: Présentation de l’API Batch Ingestion
 topic-legacy: overview
 description: L’API Adobe Experience Platform Data Ingestion vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être les données de profil d’un fichier plat dans un système CRM (par exemple un fichier Parquet) ou les données conformes à un schéma connu dans le registre Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 73%
@@ -14,7 +14,7 @@ ht-degree: 73%
 
 # Présentation de l’API d’ingestion par lots
 
-L’API Adobe Experience Platform Data Ingestion vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être des données de profil provenant d’un fichier plat (par exemple un fichier Parquet) ou des données conformes à un schéma connu dans le registre [!DNL Experience Data Model] (XDM).
+L’API Adobe Experience Platform Data Ingestion vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être des données de profil provenant d’un fichier plat (un fichier Parquet, par exemple) ou des données conformes à un schéma connu dans la variable [!DNL Experience Data Model] Registre (XDM).
 
 La [référence de l’API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) fournit des informations supplémentaires sur ces appels d’API.
 
@@ -24,12 +24,12 @@ Le diagramme suivant décrit le processus d’ingestion par lots :
 
 ## Prise en main
 
-Les points de terminaison d’API utilisés dans ce guide font partie de l’[API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Avant de poursuivre, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Les points de terminaison d’API utilisés dans ce guide font partie de la variable [API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Avant de poursuivre, veuillez consulter la section [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d’appels API de ce document, ainsi que des informations importantes concernant les en-têtes requis pour réussir les appels à une API Experience Platform.
 
 ### [!DNL Data Ingestion] conditions préalables
 
 - Les données à charger doivent être au format Parquet ou JSON.
-- Jeu de données créé dans [[!DNL Catalog services]](../../catalog/home.md).
+- Un jeu de données créé dans la variable [[!DNL Catalog services]](../../catalog/home.md).
 - Le contenu du fichier Parquet doit correspondre à un sous-ensemble du schéma du jeu de données dans lequel il est chargé.
 - Obtenez votre jeton d’accès unique après l’authentification.
 
@@ -49,15 +49,15 @@ L’ingestion de données par lots présente certaines contraintes :
 
 >[!NOTE]
 >
->Pour charger un fichier de plus de 512 Mo, vous devez le diviser en petits blocs. Vous trouverez des instructions pour télécharger un fichier volumineux dans la section [Chargement de fichier volumineux de ce document](#large-file-upload---create-file).
+>Pour charger un fichier de plus de 512 Mo, vous devez le diviser en petits blocs. Les instructions de chargement d’un fichier volumineux sont présentées dans la section [section de chargement de fichiers volumineux de ce document](#large-file-upload---create-file).
 
 ### Types
 
-Lors de l’ingestion de données, il est important de comprendre le fonctionnement des schémas [!DNL Experience Data Model] (XDM). Pour plus d’informations sur la façon dont les types de champs XDM sont associés à différents formats, reportez-vous au [guide de développement du registre des schémas](../../xdm/api/getting-started.md).
+Lors de l’ingestion de données, il est important de comprendre comment [!DNL Experience Data Model] Les schémas (XDM) fonctionnent. Pour plus d’informations sur la façon dont les types de champs XDM sont associés à différents formats, reportez-vous au [guide de développement du registre des schémas](../../xdm/api/getting-started.md).
 
 L’ingestion de données offre une certaine souplesse : si un type ne correspond pas à ce qui se trouve dans le schéma cible, les données seront converties dans le type cible précisé. Si cette conversion est impossible, le lot échouera avec `TypeCompatibilityException`.
 
-Par exemple, ni JSON ni CSV ne comportent de type `date` ou `date-time`. Par conséquent, ces valeurs sont exprimées au moyen de [chaînes formatées ISO 8061](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou d’une heure Unix formatée en millisecondes (1531263959000) et sont converties au moment de l’ingestion vers le type XDM cible.
+Par exemple, ni JSON ni CSV ne comportent de `date` ou `date-time` type. Par conséquent, ces valeurs sont exprimées à l’aide de [Chaînes formatées ISO 8061](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou heure Unix formatée en millisecondes (1531263959000) et convertie au moment de l’ingestion vers le type XDM cible.
 
 Le tableau ci-dessous illustre les conversions prises en charge lors de l’ingestion de données.
 
@@ -80,7 +80,7 @@ Le tableau ci-dessous illustre les conversions prises en charge lors de l’inge
 
 ## Utilisation de l’API
 
-L’API [!DNL Data Ingestion] vous permet d’ingérer des données sous forme de lots (une unité de données composée d’un ou de plusieurs fichiers à ingérer en une seule unité) dans [!DNL Experience Platform] en trois étapes de base :
+Le [!DNL Data Ingestion] L’API vous permet d’ingérer des données sous forme de lots (une unité de données composée d’un ou de plusieurs fichiers à ingérer en une seule unité) dans [!DNL Experience Platform] en trois étapes de base :
 
 1. Création d’un nouveau filtre.
 2. Chargez des fichiers vers un jeu de données spécifique qui correspond au schéma XDM des données.
@@ -102,7 +102,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
   -d '{ 
           "datasetId": "{DATASET_ID}" 
       }'
@@ -147,11 +147,11 @@ Vous pouvez charger des fichiers à l’aide de l’API Small File Upload. Toute
 
 >[!NOTE]
 >
->L’ingestion par lots peut être utilisée pour mettre à jour progressivement les données dans la banque de profils. Pour plus d’informations, voir la section [Mise à jour d’un lot](#patch-a-batch) dans le [guide de développement de l’ingestion par lots](api-overview.md).
+>L’ingestion par lots peut être utilisée pour mettre à jour progressivement les données dans la banque de profils. Pour plus d’informations, voir la section sur [mise à jour d’un lot](#patch-a-batch) dans le [guide de développement de l’ingestion par lots](api-overview.md).
 
 >[!INFO]
 >
->Les exemples ci-dessous utilisent le format de fichier [Apache Parquet](https://parquet.apache.org/documentation/latest/). Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](api-overview.md).
+>Les exemples ci-dessous utilisent la méthode [Apache Parquet](https://parquet.apache.org/documentation/latest/) format de fichier. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](api-overview.md).
 
 ### Chargement de petits fichiers
 
@@ -175,7 +175,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}" \
+  -H "x-api-key: {API_KEY}" \
   --data-binary "@{FILE_PATH_AND_NAME}.parquet"
 ```
 
@@ -275,7 +275,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 -H "x-gw-ims-org-id: {IMS_ORG}" \
 -H "x-sandbox-name: {SANDBOX_NAME}" \
 -H "Authorization: Bearer {ACCESS_TOKEN}" \
--H "x-api-key : {API_KEY}"
+-H "x-api-key: {API_KEY}"
 ```
 
 **Réponse**

@@ -3,7 +3,7 @@ title: Suivi des événements à l’aide du SDK Web de Adobe Experience Platfor
 description: Découvrez comment effectuer le suivi des événements du SDK Web Adobe Experience Platform.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;envoyer la balise;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: ac167a205d2bc7e18d320bc1270da7e99bd05975
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 32%
@@ -92,8 +92,8 @@ alloy("sendEvent", {
       target: {
         "profile.gender": "female",
         "profile.age": 30,
-        "entity.id" : "123",
-        "entity.genre" : "Drama"
+        "entity.id": "123",
+        "entity.genre": "Drama"
       }
     }
   }

@@ -5,7 +5,7 @@ title: Entrée et sortie dans Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Le document suivant décrit les différentes entrées et sorties utilisées dans Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9023019ed8a781f9ae3965adab875cf2244f55a9
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2268'
 ht-degree: 15%
@@ -87,7 +87,7 @@ Longueur minimale des données requises = période de formation + période de re
 >
 > La longueur minimale de données requise pour une application avec des configurations par défaut est la suivante : 2 trimestres (180 jours) + 56 jours = 236 jours.
 
-Exemple :
+Exemple :
 
 - Vous souhaitez attribuer des événements de conversion qui se sont produits au cours des 90 derniers jours (3 mois) et effectuer le suivi de tous les points de contact qui se sont produits dans les 4 semaines précédant l’événement de conversion. La durée des données d’entrée doit s’étendre sur les 90 derniers jours + 28 jours (4 semaines). La période de formation est de 90 jours et la période de recherche arrière est de 28 jours au total de 118 jours.
 

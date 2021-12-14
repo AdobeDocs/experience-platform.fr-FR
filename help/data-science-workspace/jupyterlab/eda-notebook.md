@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Ce guide porte sur l’utilisation du notebook d’analyse des données exploratoires (EDA) pour découvrir des modèles dans les données web, agréger les événements avec un objectif de prédiction, nettoyer les données agrégées et comprendre la relation entre les prédicteurs et un objectif.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 1%
@@ -342,7 +342,7 @@ Les fonctionnalités suivantes sont créées et explorées dans cette section :
 - `COUNT_CHECK_OUTS`: Nombre de passages en caisse.
 - `COUNT_PURCHASES`: Nombre d’achats.
 - `COUNT_INSTANCE_PRODUCTADDS`: Nombre d’instances d’ajout de produit.
-- `NUMBER_VISITS` : Nombre de visites.
+- `NUMBER_VISITS`: Nombre de visites.
 - `COUNT_PAID_SEARCHES`: Nombre de recherches payantes.
 - `DAYS_SINCE_VISIT`: Nombre de jours depuis la dernière visite.
 - `TOTAL_ORDER_REVENUE`: Chiffre d’affaires total des commandes.
@@ -469,7 +469,7 @@ Data.head(5)
 Cette cellule imprime le nombre de profils uniques.
 
 ```python
-print("Count of unique profiles :", (len(Data)))
+print("Count of unique profiles:", (len(Data)))
 ```
 
 ### Détecter les valeurs manquantes et les valeurs aberrantes
@@ -621,11 +621,11 @@ Les colonnes qui n’ont qu’une seule valeur n’ajoutent aucune information �
 for col in Data.columns:
     if len(Data[col].unique()) == 1:
         if col == 'TARGET':
-            print(Fore.RED + '\033[1m' + 'WARNING : TARGET HAS A SINGLE UNIQUE VALUE, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
+            print(Fore.RED + '\033[1m' + 'WARNING: TARGET HAS A SINGLE UNIQUE VALUE, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
         elif col == 'ID':
-            print(Fore.RED + '\033[1m' + 'WARNING : THERE IS ONLY ONE PROFILE IN THE DATA, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
+            print(Fore.RED + '\033[1m' + 'WARNING: THERE IS ONLY ONE PROFILE IN THE DATA, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
         else:
-            print('Dropped column :',col)
+            print('Dropped column:',col)
             Data.drop(col,inplace=True,axis=1)
 ```
 

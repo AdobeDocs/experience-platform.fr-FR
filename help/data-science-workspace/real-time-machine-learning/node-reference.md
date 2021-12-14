@@ -5,7 +5,7 @@ title: Référence des noeuds d’apprentissage automatique en temps réel
 topic-legacy: Nodes reference
 description: Un noeud est l’unité fondamentale de laquelle des graphiques sont formés. Chaque noeud effectue une tâche spécifique et peut être lié ensemble à l’aide de liens afin de former un graphique représentant un pipeline ML. La tâche effectuée par un noeud représente une opération sur les données d’entrée, telle qu’une transformation des données ou un schéma, ou une inférence d’apprentissage automatique. Le noeud sort la valeur transformée ou déduite au(x) noeud(s) suivant(s).
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -24,7 +24,7 @@ Le guide suivant décrit les bibliothèques de noeuds prises en charge pour l’
 
 ## Découverte des noeuds à utiliser dans votre pipeline ML
 
-Copiez le code suivant dans un notebook [!DNL Python] pour afficher tous les noeuds pouvant être utilisés.
+Copiez le code suivant dans une [!DNL Python] notebook pour afficher tous les noeuds disponibles.
 
 ```python
 from pprint import pprint
@@ -82,9 +82,9 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Pandas {#pandas}
 
-Le noeud pandas suivant permet d&#39;importer n&#39;importe quelle méthode `pd.DataFrame` ou n&#39;importe quelle fonction générale de niveau supérieur pandas. Pour en savoir plus sur les méthodes Pandas, consultez la [documentation sur les méthodes Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Pour plus d’informations sur les fonctions de niveau supérieur, consultez le [Guide de référence de l’API Pandas pour les fonctions générales](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+Le noeud pandas suivant vous permet d’importer n’importe quel `pd.DataFrame` ou toute fonction générale de niveau supérieur pandas. Pour en savoir plus sur les méthodes Pandas, consultez la section [Documentation sur les méthodes de pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Pour plus d’informations sur les fonctions de niveau supérieur, consultez la section [Guide de référence de l’API pandas pour les fonctions générales](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-Le noeud ci-dessous utilise `"import": "map"` pour importer le nom de la méthode sous la forme d’une chaîne dans les paramètres, suivie de la saisie des paramètres sous la forme d’une fonction de carte. L’exemple ci-dessous utilise `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Une fois la carte en place, vous avez la possibilité de définir `inplace` sur `True` ou `False`. Définissez `inplace` sur `True` ou `False` selon que vous souhaitez appliquer ou non la transformation. Par défaut, `"inplace": False` crée une nouvelle colonne. La prise en charge d’un nouveau nom de colonne doit être ajoutée dans une version ultérieure. La dernière ligne `cols` peut être un nom de colonne unique ou une liste de colonnes. Indiquez les colonnes sur lesquelles vous souhaitez appliquer la transformation. Dans cet exemple, `device` est spécifié.
+Le noeud ci-dessous utilise `"import": "map"` pour importer le nom de la méthode sous la forme d’une chaîne dans les paramètres, puis en saisissant les paramètres sous la forme d’une fonction map . L’exemple ci-dessous effectue cette opération en utilisant `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Une fois la carte en place, vous avez la possibilité de définir `inplace` as `True` ou `False`. Définir `inplace` as `True` ou `False` selon que vous souhaitez appliquer ou non une transformation statique. Par défaut `"inplace": False` crée une colonne. La prise en charge d’un nouveau nom de colonne doit être ajoutée dans une version ultérieure. La dernière ligne `cols` peut être un nom de colonne unique ou une liste de colonnes. Indiquez les colonnes sur lesquelles vous souhaitez appliquer la transformation. Dans cet exemple `device` est spécifié.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -115,7 +115,7 @@ model_train = ScikitLearn(params={
     "model_path": "resources/model.onnx",
     "params": {
         "model": "sklearn.linear_model.LogisticRegression",
-        "model_params": {"solver" : 'lbfgs'}
+        "model_params": {"solver": 'lbfgs'}
     }})
 msg6 = model_train.process(msg5)
 ```
@@ -127,7 +127,7 @@ msg6 = model_train.process(msg5)
 | mode | Train/test (chaîne). |
 | model_path | Chemin d’accès local au modèle d’enregistrement au format unique. |
 | params.model | Chemin d’accès absolu à l’importation du modèle (chaîne), par exemple : `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | hyperparamètres du modèle, consultez la documentation [l’API sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) pour plus d’informations. |
+| params.model_params | hyperparamètres du modèle, voir [API sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) pour plus d’informations. |
 | node_instance.process(data_message_from_previous_node) | La méthode `process()` prend DataMsg du noeud précédent et applique la transformation. Cela dépend du noeud actif utilisé. |
 
 ### Split
@@ -141,4 +141,4 @@ msg5 = splitter.process(msg4)
 
 ## Étapes suivantes
 
-L’étape suivante consiste à créer des noeuds à utiliser dans la notation d’un modèle d’apprentissage automatique en temps réel. Pour plus d’informations, consultez le [guide d’utilisation du notebook d’apprentissage automatique en temps réel](./rtml-authoring-notebook.md).
+L’étape suivante consiste à créer des noeuds à utiliser dans la notation d’un modèle d’apprentissage automatique en temps réel. Pour plus d’informations, consultez la [Guide d’utilisation du notebook d’apprentissage automatique en temps réel](./rtml-authoring-notebook.md).

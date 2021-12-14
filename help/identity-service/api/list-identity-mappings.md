@@ -5,7 +5,7 @@ title: Mappages d’identités de liste
 topic-legacy: API guide
 description: Un mappage est un ensemble regroupant toutes les identités d’un cluster pour un espace de noms spécifié.
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 96%
@@ -115,7 +115,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: 111111@AdobeOrg' \
   -d '{
-        "xids" : ["GesCQXX0CAESEE8wHpswUoLXXmrYy8KBTVgA"],
+        "xids": ["GesCQXX0CAESEE8wHpswUoLXXmrYy8KBTVgA"],
         "targetNs": "0",
         "graph-type": "Private Graph"
       }' | json_pp

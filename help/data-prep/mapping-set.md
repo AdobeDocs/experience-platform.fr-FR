@@ -5,7 +5,7 @@ title: Présentation des jeux de mappages
 topic-legacy: overview
 description: Découvrez comment utiliser les jeux de mappages avec la préparation de données Adobe Experience Platform.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 100%
@@ -18,7 +18,7 @@ Un jeu de mappages est un ensemble de mappages qui transforme les données d’u
 
 ## Prise en main
 
-Cette présentation d’ nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Cette présentation d’ nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [Préparation de données](./home.md) : la préparation des données permet aux ingénieurs de données de mapper, transformer et valider les données vers et à partir du modèle de données d’expérience (XDM).
 - [Flux de données](../dataflows/home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
@@ -33,9 +33,9 @@ Le fichier JSON suivant est un exemple de jeu de mappages type :
 
 ```json
 {
-    "id" : "cbb0da769faa48fcb29e026a924ba29d",
-    "name" : "Demo Mapping Set",
-    "inputSchema" : {
+    "id": "cbb0da769faa48fcb29e026a924ba29d",
+    "name": "Demo Mapping Set",
+    "inputSchema": {
         "id": "a167ff2947ff447ebd8bcf7ef6756232",
         "version": 0
     },
@@ -50,8 +50,8 @@ Le fichier JSON suivant est un exemple de jeu de mappages type :
             "sourceType": "ATTRIBUTE",
             "source": "Id",
             "destination": "_id",
-            "name" : "Id",
-            "description" : "Identifier field"
+            "name": "Id",
+            "description": "Identifier field"
         },
         {
             "sourceType": "ATTRIBUTE",

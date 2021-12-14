@@ -2,7 +2,7 @@
 title: Point dʼentrée de recherche
 description: Découvrez comment effectuer des appels vers le point dʼentrée /recherche dans lʼAPI Reactor.
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 100%
@@ -65,7 +65,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "from": 0,
           "size": 25,
           "query": {
@@ -96,7 +96,7 @@ curl -X POST \
 | --- | --- |
 | `from` | Nombre de résultats à décaler de la réponse. |
 | `size` | Nombre maximal de résultats à renvoyer. Les résultats sont limités à 100 éléments. |
-| `query` | Objet représentant la requête. Pour chaque propriété au sein de cet objet, la clé doit représenter un chemin du champ sur lequel portera la requête, et la valeur doit être un objet dont les sous-propriétés déterminent le contenu de la requête.<br><br>Pour chaque chemin du champ, vous pouvez utiliser les sous-propriétés suivantes :<ul><li>`exists` : renvoie « true » si le champ existe dans la ressource.</li><li>`value` : renvoie « true » si la valeur du champ correspond à la valeur de cette propriété.</li><li>`value_operator` : logique booléenne utilisée pour déterminer le traitement dʼune requête `value`. Les valeurs autorisées sont `AND` et `OR`. Lorsquʼelle est exclue, la logique `AND` est supposée. Pour plus dʼinformations, voir la section [Logique de lʼopérateur de valeur](#value-operator).</li><li>`range` Renvoie « true » si la valeur du champ se situe dans une plage numérique spécifique. La plage elle-même est déterminée par les sous-propriétés suivantes :<ul><li>`gt` : supérieure à la valeur fournie, non incluse.</li><li>`gte` : supérieure ou égale à la valeur fournie.</li><li>`lt` : inférieure à la valeur fournie, non incluse.</li><li>`lte` : inférieure ou égale à la valeur fournie.</li></ul></li></ul> |
+| `query` | Objet représentant la requête. Pour chaque propriété au sein de cet objet, la clé doit représenter un chemin du champ sur lequel portera la requête, et la valeur doit être un objet dont les sous-propriétés déterminent le contenu de la requête.<br><br>Pour chaque chemin du champ, vous pouvez utiliser les sous-propriétés suivantes :<ul><li>`exists` : renvoie « true » si le champ existe dans la ressource.</li><li>`value` : renvoie « true » si la valeur du champ correspond à la valeur de cette propriété.</li><li>`value_operator` : logique booléenne utilisée pour déterminer le traitement dʼune requête `value`. Les valeurs autorisées sont `AND` et `OR`. Lorsquʼelle est exclue, la logique `AND` est supposée. Pour plus dʼinformations, voir la section [Logique de lʼopérateur de valeur](#value-operator).</li><li>`range` Renvoie « true » si la valeur du champ se situe dans une plage numérique spécifique. La plage elle-même est déterminée par les sous-propriétés suivantes :<ul><li>`gt` : supérieure à la valeur fournie, non incluse.</li><li>`gte` : supérieure ou égale à la valeur fournie.</li><li>`lt` : inférieure à la valeur fournie, non incluse.</li><li>`lte` : inférieure ou égale à la valeur fournie.</li></ul></li></ul> |
 | `sort` | Tableau dʼobjets indiquant lʼordre dans lequel trier les résultats. Chaque objet doit contenir une seule propriété : la clé représente le chemin du champ à trier et la valeur lʼordre de tri (`asc` pour lʼordre croissant et `desc` pour lʼordre décroissant). |
 | `resource_types` | Tableau de chaînes indiquant les types de ressources spécifiques à rechercher. |
 

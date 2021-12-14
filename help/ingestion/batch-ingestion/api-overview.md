@@ -4,24 +4,24 @@ solution: Experience Platform
 title: Guide de l’API Batch Ingestion
 description: Ce document fournit un guide complet aux développeurs qui utilisent les API d’ingestion par lots pour Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2373'
-ht-degree: 77%
+ht-degree: 78%
 
 ---
 
 # Guide de développement de l’ingestion par lots
 
-Ce document fournit un guide complet sur l’utilisation des [points de terminaison de l’API d’ingestion par lots](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) dans Adobe Experience Platform. Pour une présentation des API d’ingestion par lots, y compris les conditions préalables et les bonnes pratiques, veuillez commencer par lire la [présentation de l’API d’ingestion par lots](overview.md).
+Ce document fournit un guide complet sur l’utilisation de [points de terminaison de l’API d’ingestion par lots](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) dans Adobe Experience Platform. Pour obtenir un aperçu des API d’ingestion par lots, y compris les conditions préalables et les bonnes pratiques, veuillez commencer par lire la section [Présentation de l’API d’ingestion par lots](overview.md).
 
 L’annexe de ce document fournit des informations sur le [formatage des données à utiliser pour l’ingestion](#data-transformation-for-batch-ingestion), y compris des exemples de fichiers de données CSV et JSON.
 
 ## Prise en main
 
-Les points de terminaison d’API utilisés dans ce guide font partie de l’[API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). L’ingestion de données fournit une API RESTful grâce à laquelle vous pouvez effectuer des opérations CRUD sur les types d’objets pris en charge.
+Les points de terminaison d’API utilisés dans ce guide font partie de la variable [API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). L’ingestion de données fournit une API RESTful grâce à laquelle vous pouvez effectuer des opérations CRUD sur les types d’objets pris en charge.
 
-Avant de poursuivre, consultez la [présentation de l’API d’ingestion par lots](overview.md) et le [guide de prise en main](getting-started.md).
+Avant de poursuivre, veuillez consulter la section [Présentation de l’API d’ingestion par lots](overview.md) et le [guide de prise en main](getting-started.md).
 
 ## Ingestion de fichiers JSON
 
@@ -50,7 +50,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -122,7 +122,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.json"
 ```
@@ -157,7 +157,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -184,7 +184,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "Content-Type: application/json" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
-  -H "x-api-key : {API_KEY}" \
+  -H "x-api-key: {API_KEY}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" 
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -257,7 +257,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.parquet"
 ```
@@ -292,7 +292,7 @@ POST /batches/{BATCH_ID}?action=complete
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -325,7 +325,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -501,7 +501,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -569,7 +569,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
             "datasetId": "{DATASET_ID}",
@@ -646,7 +646,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.csv"
 ```
@@ -678,7 +678,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -708,7 +708,7 @@ POST /batches/{BATCH_ID}?action=ABORT
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=ABORT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -738,7 +738,7 @@ POST /batches/{BATCH_ID}?action=REVERT
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=REVERT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -750,7 +750,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Correction d’un lot
 
-Il peut parfois être nécessaire de mettre à jour les données dans la banque de profils de votre entreprise. Par exemple, vous devrez peut-être corriger des enregistrements ou modifier une valeur d’attribut. Adobe Experience Platform prend en charge la mise à jour ou le correctif des données de la banque de profils par le biais d’une action d’insertion ou de &quot;correction d’un lot&quot;.
+Il peut parfois être nécessaire de mettre à jour les données du magasin de profils de votre organisation. Vous pouvez par exemple avoir besoin de corriger des enregistrements ou de modifier une valeur d’attribut. Adobe Experience Platform prend en charge la mise à jour ou le correctif des données de la banque de profils par le biais d’une action d’insertion ou de &quot;correction d’un lot&quot;.
 
 >[!NOTE]
 >
@@ -758,10 +758,10 @@ Il peut parfois être nécessaire de mettre à jour les données dans la banque 
 
 Les éléments suivants sont requis pour corriger un lot :
 
-- **Jeu de données activé pour les mises à jour de profil et d’attribut.** Pour ce faire, vous devez utiliser des balises de jeu de données et ajouter une  `isUpsert:true` balise spécifique au  `unifiedProfile` tableau . Pour obtenir des détails sur la procédure de création d’un jeu de données ou de configuration d’un jeu de données existant à des fins de publication, suivez le tutoriel portant sur l’[activation d’un jeu de données pour les mises à jour de profil](../../catalog/datasets/enable-upsert.md).
+- **Jeu de données activé pour les mises à jour de profil et d’attribut.** Pour ce faire, vous devez utiliser des balises de jeu de données et définir une `isUpsert:true` à ajouter à la balise `unifiedProfile` tableau. Pour plus d’informations sur les étapes qui montrent comment créer un jeu de données ou configurer un jeu de données existant à des fins de publication, suivez le tutoriel relatif à [activation d’un jeu de données pour les mises à jour de Profile](../../catalog/datasets/enable-upsert.md).
 - **Fichier parquet contenant les champs à corriger et les champs d’identité du profil.** Le format de données utilisé pour corriger un lot est similaire au processus normal d’ingestion par lots. L’entrée requise est un fichier Parquet. En plus des champs à mettre à jour, les données chargées doivent contenir les champs d’identité afin de correspondre aux données de la banque de profils.
 
-Une fois qu’un jeu de données est activé pour Profile et upsert, et qu’un fichier Parquet contient les champs que vous souhaitez corriger ainsi que les champs d’identité nécessaires, vous pouvez suivre les étapes d’[ingestion de fichiers Parquet](#ingest-parquet-files) afin de terminer le correctif par ingestion par lots.
+Une fois qu’un jeu de données est activé pour Profile et upsert, ainsi qu’un fichier Parquet contenant les champs que vous souhaitez répliquer, ainsi que les champs d’identité nécessaires, vous pouvez suivre les étapes pour [ingestion de fichiers Parquet](#ingest-parquet-files) pour terminer le correctif par ingestion par lots.
 
 ## Relecture d’un lot
 
@@ -784,7 +784,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -868,7 +868,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.json"
 ```
@@ -903,7 +903,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -919,7 +919,7 @@ La section suivante contient des informations supplémentaires sur l’ingestion
 
 ### Transformation des données pour l’ingestion par lots
 
-Pour ingérer un fichier de données dans [!DNL Experience Platform], la structure hiérarchique du fichier doit être conforme au schéma [Modèle de données d’expérience (XDM)](../../xdm/home.md) associé au jeu de données dans lequel il est chargé.
+Pour ingérer un fichier de données dans [!DNL Experience Platform], la structure hiérarchique du fichier doit être conforme au [Modèle de données d’expérience (XDM)](../../xdm/home.md) schéma associé au jeu de données dans lequel il est chargé.
 
 Vous trouverez des informations sur le mappage d’un fichier CSV pour être conforme à un schéma XDM dans le document traitant des [exemples de transformations](../../etl/transformations.md), ainsi qu’un exemple de fichier de données JSON correctement formaté. Les exemples de fichiers fournis dans ce document se trouvent ici :
 

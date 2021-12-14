@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à un compte Azure Event Hubs à l’aide de l’API Flow Service.
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 855b6414981c6d7ee79bc674e5a4087dd79dde5b
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '737'
 ht-degree: 8%
@@ -20,7 +20,7 @@ Ce tutoriel vous guide tout au long des étapes pour vous connecter. [!DNL Azure
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [Sources](../../../../home.md): [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
 - [Environnements de test](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
@@ -33,7 +33,7 @@ Pour [!DNL Flow Service] pour vous connecter à [!DNL Event Hubs] , vous devez f
 
 | Credential | Description |
 | ---------- | ----------- |
-| `sasKeyName` | Nom de la règle d’autorisation, également connu sous le nom de clé SAS. |
+| `sasKeyName` | Nom de la règle d’autorisation, également appelé nom de clé SAS. |
 | `sasKey` | La clé Principale de la variable [!DNL Event Hubs] espace de noms. Le `sasPolicy` que la variable `sasKey` correspond à `manage` les droits configurés pour [!DNL Event Hubs] liste à renseigner. |
 | `namespace` | L’espace de noms de la variable [!DNL Event Hubs] vous y accédez. Un [!DNL Event Hubs] L’espace de noms fournit un conteneur d’étendue unique, dans lequel vous pouvez créer un ou plusieurs [!DNL Event Hubs]. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions base et source. Le [!DNL Event Hubs] l’identifiant de spécification de connexion est : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
@@ -86,7 +86,7 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.sasKeyName` | Nom de la règle d’autorisation, également connu sous le nom de clé SAS. |
+| `auth.params.sasKeyName` | Nom de la règle d’autorisation, également appelé nom de clé SAS. |
 | `auth.params.sasKey` | Signature d’accès partagé générée. |
 | `auth.params.namespace` | L’espace de noms de la variable [!DNL Event Hubs] vous y accédez. |
 | `connectionSpec.id` | Le [!DNL Event Hubs] l’identifiant de spécification de connexion est : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |

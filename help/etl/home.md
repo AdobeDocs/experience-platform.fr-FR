@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;ETL;etl;intégrations etl;intégrations ETL
+keywords: Experience Platform;accueil;rubriques populaires;ETL;etl;intégrations etl;intégrations ETL
 solution: Experience Platform
-title: Développement d’intégrations ETL pour Adobe Experience Platform
+title: Développement d’intégrations ETL pour Adobe Experience Platform
 topic-legacy: overview
-description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et l’ingestion de données dans Platform.
+description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et l’ingestion de données dans Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '4075'
 ht-degree: 100%
 
 ---
 
-# Développement d’intégrations ETL pour Adobe Experience Platform
+# Développement d’intégrations ETL pour Adobe Experience Platform
 
 Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour [!DNL Experience Platform] et l’ingestion de données dans [!DNL Platform].
 
@@ -20,7 +20,7 @@ Le guide d’intégration ETL décrit les étapes générales de la création de
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
-- [Authentification et autorisation pour les API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis)
+- [Authentification et autorisation pour les API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis)
 - [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 Ce guide comprend également des exemples d’appels d’API à utiliser lors de la conception d’un connecteur ETL, avec des liens vers la documentation détaillant chaque service [!DNL Experience Platform] et l’utilisation de son API.
@@ -29,15 +29,15 @@ Un exemple d’intégration est disponible sur [!DNL GitHub] via l’[Ecosystem 
 
 ## Workflow
 
-Le diagramme de workflow suivant présente de manière générale l’intégration des composants d’Adobe Experience Platform à l’aide d’une application et d’un connecteur ETL.
+Le diagramme de workflow suivant présente de manière générale l’intégration des composants d’Adobe Experience Platform à l’aide d’une application et d’un connecteur ETL.
 
 ![](images/etl.png)
 
-## Composants d’Adobe Experience Platform
+## Composants d’Adobe Experience Platform
 
-Plusieurs composants d’Experience Platform sont impliqués dans les intégrations de connecteur ETL. La liste suivante détaille plusieurs des composants et fonctionnalités principales :
+Plusieurs composants d’Experience Platform sont impliqués dans les intégrations de connecteur ETL. La liste suivante détaille plusieurs des composants et fonctionnalités principales :
 
-- **Adobe Identity Management System (IMS)** — Fournit une structure d’authentification pour les services Adobe.
+- **Adobe IDentity Management System (IMS)** — Fournit une structure d’authentification pour les services Adobe.
 - **Organisation IMS** — Personne morale pouvant posséder ou accorder une licence pour des produits et des services et en permettre l’accès à ses membres.
 - **Utilisateur IMS** — Membres d’une organisation IMS. La relation Organisation-utilisateur est une relation many to many.
 - **[!DNL Sandbox]** - Une partition virtuelle d’une instance de [!DNL Platform] unique, qui aide au développement et à l’évolution des applications d’expérience numérique.
@@ -52,7 +52,7 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 ### Lecture d&#39;exemples d&#39;appels API
 
-Ce guide fournit des exemples d&#39;appels API pour démontrer comment formater vos requêtes. Il s&#39;agit notamment de chemins d&#39;accès, d&#39;en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce guide fournit des exemples d&#39;appels API pour démontrer comment formater vos requêtes. Il s&#39;agit notamment de chemins d&#39;accès, d&#39;en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
@@ -86,7 +86,7 @@ Des maquelles pour un échantillon d’outil ETL et de workflow ont été fourni
 
 >[!NOTE]
 >
->Le connecteur ETL doit spécifier un filtre d’horodatage déterminant la date d’ingestion des données et le décalage (c.-à-d. la fenêtre pour laquelle les données doivent être lues). L’outil ETL devrait prendre en charge ces deux paramètres dans cette interface utilisateur ou dans une autre interface utilisateur pertinente. Dans Adobe Experience Platform, ces paramètres seront mappés aux dates disponibles (le cas échéant) ou à la date capturée présente dans l’objet de lot du jeu de données.
+>Le connecteur ETL doit spécifier un filtre d’horodatage déterminant la date d’ingestion des données et le décalage (c.-à-d. la fenêtre pour laquelle les données doivent être lues). L’outil ETL devrait prendre en charge ces deux paramètres dans cette interface utilisateur ou dans une autre interface utilisateur pertinente. Dans Adobe Experience Platform, ces paramètres seront mappés aux dates disponibles (le cas échéant) ou à la date capturée présente dans l’objet de lot du jeu de données.
 
 ### Visualisation de la liste des jeux de données
 
@@ -342,7 +342,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/5bf479a6
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 **Réponse**
@@ -409,7 +409,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac031
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 **Réponse**
@@ -445,7 +445,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac031
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 La réponse à la requête ci-dessus contient un aperçu du contenu du fichier.
@@ -474,7 +474,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 -H "x-gw-ims-org-id: {IMS_ORG}" \
 -H "x-sandbox-name: {SANDBOX_NAME}" \
 -H "Authorization: Bearer {ACCESS_TOKEN}" \
--H "x-api-key : {API_KEY}"
+-H "x-api-key: {API_KEY}"
 ```
 
 **Réponse**
@@ -491,7 +491,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-Les données seront écrites dans [!DNL Experience Platform] à l’aide de l’[API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).  L’écriture des données est un processus asynchrone. Lorsque des données sont écrites dans Adobe Experience Platform, un lot est créé et marqué comme réussi uniquement après que les données ont été entièrement écrites.
+Les données seront écrites dans [!DNL Experience Platform] à l’aide de l’[API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).  L’écriture des données est un processus asynchrone. Lorsque des données sont écrites dans Adobe Experience Platform, un lot est créé et marqué comme réussi uniquement après que les données ont été entièrement écrites.
 
 Dans [!DNL Experience Platform], les données devraient être écrites sous la forme de fichiers parquet.
 
@@ -513,7 +513,7 @@ Le document d’[échantillon de transformations ETL](./transformations.md) cont
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?dataSet=DATASETID&createdAfter=START_TIMESTAMP&createdBefore=END_TIMESTAMP&sort=desc:created" \
   -H "Accept: application/json" \
   -H "Authorization:Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}" \
+  -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
@@ -531,7 +531,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 ### Accès aux fichiers à l’aide de l’identifiant de fichier
@@ -545,7 +545,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 La réponse peut pointer vers un seul fichier ou vers un répertoire. Vous trouverez des informations détaillées sur chaque option dans le tutoriel portant sur l’[[!DNL Data Access] ](../data-access/tutorials/dataset-data.md).
@@ -620,7 +620,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 Une fois que tous les fichiers ont été chargés dans le lot, il peut être marqué comme étant terminé. Cette action crée les entrées « DataSetFile » du [!DNL Catalog] pour les fichiers terminés et les associe au lot généré. Le lot de [!DNL Catalog] est marqué comme réussi, ce qui déclenche les flux en aval afin d’ingérer les données disponibles.
 
-Les données arriveront d’abord à l’emplacement d’évaluation sur Adobe Experience Platform, puis seront déplacées vers l’emplacement final après catalogage et validation. Les lots seront marqués comme réussis une fois toutes les données déplacées vers un emplacement permanent.
+Les données arriveront d’abord à l’emplacement d’évaluation sur Adobe Experience Platform, puis seront déplacées vers l’emplacement final après catalogage et validation. Les lots seront marqués comme réussis une fois toutes les données déplacées vers un emplacement permanent.
 
 **Requête**
 
@@ -629,7 +629,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization:Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 En cas de succès de l’opération, la réponse renvoie un état HTTP 200 OK, et le corps de la réponse est vide.
@@ -759,13 +759,13 @@ Lors de l’utilisation des profils instantanés, l’outil ETL devra sélection
 
 La relecture de lot et le retraitement des données peuvent être requis dans les cas où un client découvre que, au cours des « n » derniers jours, le traitement des données par ETL ne s’est pas déroulé comme prévu ou que les données source elles-mêmes n’étaient peut-être pas exactes.
 
-Pour ce faire, les administrateurs des données des clients utiliseront l’interface utilisateur de [!DNL Platform] pour supprimer les lots contenant des données corrompues. Ensuite, l’ETL devra probablement être réexécuté, ce qui fournira de nouvelles données correctes. Si la source elle-même contenait des données corrompues, l’ingénieur/l’administrateur des données devra corriger les lots source et ingérer de nouveau les données (soit dans Adobe Experience Platform, soit à l’aide de connecteurs ETL).
+Pour ce faire, les administrateurs des données des clients utiliseront l’interface utilisateur de [!DNL Platform] pour supprimer les lots contenant des données corrompues. Ensuite, l’ETL devra probablement être réexécuté, ce qui fournira de nouvelles données correctes. Si la source elle-même contenait des données corrompues, l’ingénieur/l’administrateur des données devra corriger les lots source et ingérer de nouveau les données (soit dans Adobe Experience Platform, soit à l’aide de connecteurs ETL).
 
 Selon le type de données généré, l’ingénieur de données choisira de supprimer un seul lot ou tous les lots de certains jeux de données. Les données seront supprimées/archivées conformément aux directives d’[!DNL Experience Platform].
 
 Il est probable que la fonctionnalité ETL de purge des données ait un rôle important.
 
-Une fois la purge terminée, les administrateurs client devront reconfigurer Adobe Experience Platform pour redémarrer le traitement des services principaux à partir du moment de suppression des lots.
+Une fois la purge terminée, les administrateurs client devront reconfigurer Adobe Experience Platform pour redémarrer le traitement des services principaux à partir du moment de suppression des lots.
 
 ## Traitement simultané de lot
 
@@ -781,7 +781,7 @@ Pour les lots source, cela dépendra à nouveau des préférences du client et d
 
 Le report est un processus au cours duquel les données d’entrée ne sont pas encore suffisamment complètes pour être envoyées aux processus en aval, mais peuvent être utilisées ultérieurement. Les clients détermineront leur propre tolérance en ce qui concerne le fenêtrage des données pour la future mise en correspondance par rapport au coût du traitement. Cela permettra d’éclairer leur décision de mettre de côté les données et de les retraiter lors de la prochaine exécution de la transformation, dans l’espoir qu’elles pourront être enrichies et réconciliées/assemblées ultérieurement dans la fenêtre de rétention. Ce cycle se poursuit jusqu’à ce que la ligne soit suffisamment traitée ou qu’elle soit considérée comme obsolète et que tout investissement soit jugé inutile. Chaque itération générera des données différées qui constituent un sur-ensemble de toutes les données différées des itérations précédentes.
 
-Actuellement, Adobe Experience Platform n’identifie pas les données différées. Les implémentations client doivent donc se fier aux configurations manuelles ETL et Dataset pour créer un autre jeu de données dans [!DNL Platform] reflétant le jeu de données source qui peut être utilisé pour conserver les données différées. Dans ce cas, les données différées sont similaires aux données instantanées. Dans chaque exécution de la transformation ETL, les données source sont combinées aux données différées et envoyées pour traitement.
+Actuellement, Adobe Experience Platform n’identifie pas les données différées. Les implémentations client doivent donc se fier aux configurations manuelles ETL et Dataset pour créer un autre jeu de données dans [!DNL Platform] reflétant le jeu de données source qui peut être utilisé pour conserver les données différées. Dans ce cas, les données différées sont similaires aux données instantanées. Dans chaque exécution de la transformation ETL, les données source sont combinées aux données différées et envoyées pour traitement.
 
 ## Journal des modifications
 

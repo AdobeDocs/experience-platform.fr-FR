@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous les autres tutoriels Data Science Workspace d’Adobe Experience Platform. Une fois que vous aurez terminé, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation IMS sur Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 71%

@@ -3,18 +3,18 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Point de terminaison de l’API de stratégies de fusion
 topic-legacy: guide
 type: Documentation
-description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Lorsque vous rassemblez ces données, les stratégies de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer une vue unifiée.
+description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Lorsque vous rassemblez ces données, les stratégies de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer une vue unifiée.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 9af59d5a4fda693a2aef8e590a7754f0e1c1ac8d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2469'
-ht-degree: 66%
+ht-degree: 70%
 
 ---
 
 # Point de terminaison des stratégies de fusion
 
-Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par [!DNL Platform] pour déterminer la priorité des données et les données qui seront combinées pour créer cette vue unifiée.
+Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par [!DNL Platform] pour déterminer la priorité des données et les données qui seront combinées pour créer cette vue unifiée.
 
 Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Platform, ils sont fusionnés afin de créer un profil unique pour ce client. Lorsque les données provenant de plusieurs sources entrent en conflit (par exemple, si un fragment classe le client comme étant « célibataire » tandis qu’un autre le classe comme étant « marié »), la stratégie de fusion détermine les informations qui doivent passer en priorité et être incluses dans le profil de l’individu.
 
@@ -36,9 +36,9 @@ Bien que chaque organisation puisse avoir plusieurs stratégies de fusion par cl
 >
 >Lorsque vous définissez une nouvelle stratégie de fusion comme stratégie par défaut, toute stratégie de fusion précédemment définie comme stratégie par défaut ne sera plus utilisée comme stratégie par défaut.
 
-Pour garantir que tous les consommateurs de profils utilisent la même vue sur les périphéries, les stratégies de fusion peuvent être marquées comme principales sur les bords. Pour qu’un segment soit activé sur Edge (marqué comme segment Edge), il doit être lié à une stratégie de fusion marquée comme principale sur Edge. Si un segment est **not** lié à une stratégie de fusion marquée comme principale sur Edge, le segment ne sera pas marqué comme principal sur Edge et sera marqué comme un segment en continu.
+Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les stratégies de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’un segment soit Active-On-Edge (actif sur le bord) (marqué comme un segment de bord), il doit être lié à une stratégie de fusion marquée comme Active-on-Edge (active sur le bord). Si un segment n’est **pas** lié à une stratégie de fusion marquée comme Active-On-Edge (active sur le bord), le segment ne sera pas marqué comme Active-On-Edge (actif sur le bord), et sera marqué comme un segment en continu.
 
-En outre, chaque organisation IMS ne peut avoir que **one** stratégie de fusion principale en périphérie. Si une stratégie de fusion est principale sur Edge, elle peut être utilisée pour d’autres systèmes sur Edge, tels que Edge Profile, Edge Segmentation et Destinations on Edge.
+En outre, chaque organisation IMS ne peut avoir qu’une **seule** stratégie de fusion Active-On-Edge (active sur le bord). Si une stratégie de fusion est principale sur Edge, elle peut être utilisée pour d’autres systèmes sur Edge, tels que Edge Profile, Edge Segmentation et Destinations on Edge.
 
 ### Objet de stratégie de fusion complet
 
@@ -72,7 +72,7 @@ L’objet de stratégie de fusion complet est un ensemble de préférences contr
 | `id` | Le système a généré un identifiant unique attribué au moment de la création. |
 | `name` | Nom convivial par lequel la stratégie de fusion peut être identifiée dans les affichages en liste. |
 | `imsOrgId` | Identifiant d’organisation auquel appartient cette stratégie de fusion. |
-| `schema.name` | Partie de la variable [`schema`](#schema) , l’objet `name` contient la classe de schéma XDM à laquelle se rapporte la stratégie de fusion. Pour plus d’informations sur les schémas et les classes, veuillez lire la section [Documentation XDM](../../xdm/home.md). |
+| `schema.name` | Partie de la variable [`schema`](#schema) , l’objet `name` contient la classe de schéma XDM à laquelle se rapporte la stratégie de fusion. Pour plus d’informations sur les schémas et les classes, veuillez lire le [Documentation XDM](../../xdm/home.md). |
 | `version` | [!DNL Platform]Version de la stratégie de fusion gérée par Cette valeur en lecture seule est incrémentée chaque fois qu’une stratégie de fusion est mise à jour. |
 | `identityGraph` | Objet de [graphique d’identités](#identity-graph) indiquant le graphique d’identités à partir duquel les identités associées seront obtenues. Les fragments de profil trouvés pour toutes les identités associées seront fusionnés. |
 | `attributeMerge` | [Fusion d’attributs](#attribute-merge) indiquant la manière dont la stratégie de fusion établit la priorité des attributs de profil en cas de conflit de données. |
@@ -143,7 +143,7 @@ Un fragment de profil correspond aux informations de profil d’une seule identi
 Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
 
 * **`timestampOrdered`**: (par défaut) donne la priorité au profil qui a été mis à jour en dernier. Avec ce type de fusion, l’attribut `data` n’est pas obligatoire.
-* **`dataSetPrecedence`** : Donnez la priorité aux fragments de profil en fonction du jeu de données à partir duquel ils sont venus. Cela peut être utilisé lorsque les informations présentes dans un jeu de données sont préférées ou approuvées par rapport aux données d’un autre jeu de données. Lors de l’utilisation de ce type de fusion, l’attribut `order` est obligatoire, car il répertorie les jeux de données dans l’ordre de priorité.
+* **`dataSetPrecedence`**: Donnez la priorité aux fragments de profil en fonction du jeu de données à partir duquel ils sont venus. Cela peut être utilisé lorsque les informations présentes dans un jeu de données sont préférées ou approuvées par rapport aux données d’un autre jeu de données. Lors de l’utilisation de ce type de fusion, l’attribut `order` est obligatoire, car il répertorie les jeux de données dans l’ordre de priorité.
    * **`order`**: Lorsque &quot;dataSetPrecedence&quot; est utilisé, une `order` doit être fourni avec une liste de jeux de données. Les jeux de données qui ne font pas partie de la liste ne sont pas fusionnés. En d’autres termes, les jeux de données doivent être explicitement répertoriés pour être fusionnés dans un profil. Le tableau `order` répertorie les identifiants des jeux de données par ordre de priorité.
 
 #### Exemple `attributeMerge` objet `dataSetPrecedence` type
@@ -151,7 +151,7 @@ Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
 ```json
     "attributeMerge": {
         "type": "dataSetPrecedence",
-        "order" : [
+        "order": [
             "dataSetId_2", 
             "dataSetId_3", 
             "dataSetId_1", 
@@ -483,12 +483,12 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "Loyalty members ordered by ID",
-    "identityGraph" : {
+    "identityGraph": {
         "type": "none"
     },
-    "attributeMerge" : {
+    "attributeMerge": {
         "type":"dataSetPrecedence",
-        "order" : [
+        "order": [
             "5b76f86b85d0e00000be5c8b",
             "5b76f8d787a6af01e2ceda18"
         ]
@@ -764,4 +764,4 @@ Une requête de suppression réussie renvoie un état HTTP 200 (OK) et un corps
 
 Maintenant que vous savez comment créer et configurer des stratégies de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils client dans Platform et pour créer des segments d’audience à partir de votre organisation. [!DNL Real-time Customer Profile] data.
 
-Consultez l’[aide d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md) pour commencer à définir et à utiliser des segments.
+Consultez l’[aide d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md) pour commencer à définir et à utiliser des segments.

@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;jeu de données;jeu d
 solution: Experience Platform
 title: Création d’un jeu de données à l’aide d’API
 topic-legacy: datasets
-description: Ce document décrit les étapes générales pour créer un jeu de données à l’aide des API d’Adobe Experience Platform et pour renseigner le jeu de données à l’aide d’un fichier.
+description: Ce document décrit les étapes générales pour créer un jeu de données à l’aide des API d’Adobe Experience Platform et pour renseigner le jeu de données à l’aide d’un fichier.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1305'
 ht-degree: 85%
@@ -14,21 +14,21 @@ ht-degree: 85%
 
 # Création d’un jeu de données à l’aide d’API
 
-Ce document décrit les étapes générales pour créer un jeu de données à l’aide des API d’Adobe Experience Platform et pour renseigner le jeu de données à l’aide d’un fichier.
+Ce document décrit les étapes générales pour créer un jeu de données à l’aide des API d’Adobe Experience Platform et pour renseigner le jeu de données à l’aide d’un fichier.
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Ingestion par lots](../../ingestion/batch-ingestion/overview.md) :  [!DNL Experience Platform] vous permet d’ingérer des données sous forme de fichiers de lot.
+* [Ingestion par lots](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] vous permet d’ingérer des données sous forme de fichiers de lot.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
-* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une  [!DNL Platform] instance unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une seule [!DNL Platform] dans des environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels aux API [!DNL Platform].
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à la fonction [!DNL Platform] API.
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
@@ -60,9 +60,9 @@ Ces définitions standard permettent d’interpréter les données de manière c
 
 Ce tutoriel commence là où le [tutoriel de l’API Schema Registry](../../xdm/tutorials/create-schema-api.md) se termine, en utilisant le schéma des membres du programme de fidélité créé pendant ce tutoriel.
 
-Si vous n’avez pas terminé le tutoriel [!DNL Schema Registry], commencez là et continuez avec ce tutoriel sur les jeux de données uniquement une fois que vous avez composé le schéma nécessaire.
+Si vous n’avez pas terminé la [!DNL Schema Registry] pour suivre ce tutoriel, commencez ici et continuez avec ce tutoriel sur les jeux de données uniquement une fois que vous avez composé le schéma nécessaire.
 
-L’appel suivant peut être utilisé pour afficher le schéma Loyalty Members que vous avez créé lors du tutoriel de l’API [!DNL Schema Registry] :
+L’appel suivant peut être utilisé pour afficher le schéma Loyalty Members que vous avez créé lors de la [!DNL Schema Registry] Tutoriel sur l’API :
 
 **Format d’API**
 
@@ -214,7 +214,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Ce tutoriel utilise le format de fichier [Apache Parquet](https://parquet.apache.org/documentation/latest/) pour tous ses exemples. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md)
+>Ce tutoriel utilise la méthode [Apache Parquet](https://parquet.apache.org/documentation/latest/) format de fichier pour tous ses exemples. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md)
 
 **Réponse**
 
@@ -246,7 +246,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'content-type: application/json' \
   -d '{
         "datasetId":"5c8c3c555033b814b69f947f"
@@ -317,7 +317,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc78a4e4f8c0c6b387b4b8d1c/datasets/5c8c3c555033b814b69f947f/files/loyaltyData.parquet' \
   -H 'content-type: application/octet-stream' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   --data-binary '@{FILE_PATH_AND_NAME}.parquet'
@@ -329,7 +329,7 @@ Un fichier transféré renvoie un corps de réponse vide et un état HTTP 200 (
 
 ## Signalement de la fin du lot
 
-Après avoir transféré tous les fichiers de données dans le lot, vous pouvez signaler que le lot est terminé. Le signalement de la fin entraîne la création d’entrées [!DNL Catalog] `DataSetFile` pour les fichiers chargés et leur association au lot généré précédemment. Le [!DNL Catalog] lot est marqué comme réussi, ce qui déclenche tous les flux en aval qui peuvent ensuite fonctionner sur les données désormais disponibles.
+Après avoir transféré tous les fichiers de données dans le lot, vous pouvez signaler que le lot est terminé. Le signalement de la fin entraîne la création du service. [!DNL Catalog] `DataSetFile` entrées pour les fichiers chargés et les associer au lot généré précédemment. Le [!DNL Catalog] Le lot est marqué comme réussi, ce qui déclenche tous les flux en aval qui peuvent ensuite fonctionner sur les données désormais disponibles.
 
 **Format d’API**
 
@@ -345,7 +345,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc78a4e4f8c0c6b387b4b8d1c?action=COMPLETE" \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
@@ -373,7 +373,7 @@ GET /batches?batch={BATCH_ID}
 ```SHELL
 curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/batches?batch=5d01230fc78a4e4f8c0c6b387b4b8d1c' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'
@@ -475,4 +475,4 @@ Pour plus d’informations sur la mise à jour des schémas, consultez le [guide
 
 Une fois que vous avez mis à jour le schéma, vous pouvez à nouveau suivre les étapes de ce tutoriel pour ingérer de nouvelles données conformes au schéma révisé.
 
-Il est important de se rappeler que l’évolution des schémas est purement additive, ce qui signifie que vous ne pouvez pas apporter de modification critique à un schéma une fois qu’il a été enregistré dans le registre et utilisé pour l’ingestion de données. Pour en savoir plus sur les bonnes pratiques de composition de schéma à utiliser avec Adobe Experience Platform, consultez le guide sur les [principes de base de la composition de schémas](../../xdm/schema/composition.md).
+Il est important de se rappeler que l’évolution des schémas est purement additive, ce qui signifie que vous ne pouvez pas apporter de modification critique à un schéma une fois qu’il a été enregistré dans le registre et utilisé pour l’ingestion de données. Pour en savoir plus sur les bonnes pratiques de composition de schéma à utiliser avec Adobe Experience Platform, consultez le guide sur les [principes de base de la composition de schémas](../../xdm/schema/composition.md).

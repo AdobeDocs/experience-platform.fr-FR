@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Dans Adobe Experience Platform, les attributs calculés sont des fonctions utilisées pour agréger les données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation. Ce guide explique comment créer, afficher, mettre à jour et supprimer des attributs calculés à l’aide de l’API Real-time Customer Profile.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2272'
 ht-degree: 65%
@@ -18,21 +18,21 @@ ht-degree: 65%
 >
 >La fonctionnalité d’attribut calculé décrite dans ce document est actuellement en version alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
 
-Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation. Ce guide comprend des exemples d’appels API pour effectuer des opérations CRUD de base à l’aide du point de terminaison `/computedAttributes`.
+Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation. Ce guide comprend des exemples d’appels API pour effectuer des opérations CRUD de base à l’aide de `/computedAttributes` point de terminaison .
 
-Pour en savoir plus sur les attributs calculés, commencez par lire la [présentation des attributs calculés](overview.md).
+Pour en savoir plus sur les attributs calculés, commencez par lire le [présentation des attributs calculés](overview.md).
 
 ## Prise en main
 
-Le point de terminaison d’API utilisé dans ce guide fait partie de l’[API Real-time Customer Profile](https://www.adobe.com/go/profile-apis-en).
+Le point de terminaison API utilisé dans ce guide fait partie de la variable [API Real-time Customer Profile](https://www.adobe.com/go/profile-apis-en).
 
-Avant de poursuivre, consultez le [guide de prise en main de l’API Profile](../api/getting-started.md) pour obtenir des liens vers la documentation recommandée, un guide de lecture des exemples d’appels API qui apparaissent dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Avant de poursuivre, veuillez consulter la section [Guide de prise en main de l’API Profile](../api/getting-started.md) pour obtenir des liens vers la documentation recommandée, un guide de lecture des exemples d’appels API qui apparaissent dans ce document, ainsi que des informations importantes concernant les en-têtes requis pour réussir les appels à une API Experience Platform.
 
 ## Configuration d’un champ d’attribut calculé
 
 Pour créer un attribut calculé, vous devez d’abord identifier le champ dans un schéma qui contiendra la valeur de l’attribut calculé.
 
-Reportez-vous à la documentation sur la [configuration d’un attribut calculé](configure-api.md) pour obtenir un guide complet de bout en bout sur la création d’un champ d’attribut calculé dans un schéma.
+Reportez-vous à la documentation relative à la [configuration d’un attribut calculé](configure-api.md) pour obtenir un guide complet de bout en bout sur la création d’un champ d’attribut calculé dans un schéma.
 
 >[!WARNING]
 >
@@ -40,9 +40,9 @@ Reportez-vous à la documentation sur la [configuration d’un attribut calculé
 
 ## Création d’un attribut calculé {#create-a-computed-attribute}
 
-Avec votre champ d’attribut calculé défini dans votre schéma activé pour Profile, vous pouvez maintenant configurer un attribut calculé. Si vous ne l’avez pas déjà fait, suivez le processus décrit dans la documentation [configuration d’un attribut calculé](configure-api.md) .
+Avec votre champ d’attribut calculé défini dans votre schéma activé pour Profile, vous pouvez maintenant configurer un attribut calculé. Si vous ne l’avez pas déjà fait, suivez le workflow décrit dans la section [configuration d’un attribut calculé](configure-api.md) documentation.
 
-Pour créer un attribut calculé, commencez par effectuer une requête de POST sur le point de terminaison `/config/computedAttributes` avec un corps de requête contenant les détails de l’attribut calculé que vous souhaitez créer.
+Pour créer un attribut calculé, commencez par envoyer une requête de POST à la variable `/config/computedAttributes` point de terminaison avec un corps de requête contenant les détails de l’attribut calculé que vous souhaitez créer.
 
 **Format d’API**
 
@@ -61,13 +61,13 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name" : "birthdayCurrentMonth",
-        "path" : "_{TENANT_ID}",
-        "description" : "Computed attribute to capture if the customer birthday is in the current month.",
-        "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
-            "value":  "person.birthDate.getMonth() = currentMonth()"
+        "name": "birthdayCurrentMonth",
+        "path": "_{TENANT_ID}",
+        "description": "Computed attribute to capture if the customer birthday is in the current month.",
+        "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
+            "value": "person.birthDate.getMonth() = currentMonth()"
         },
         "schema": 
           {
@@ -83,7 +83,7 @@ curl -X POST \
 | `path` | Le chemin d’accès au champ contenant l’attribut calculé. Ce chemin d’accès se trouve dans l’attribut `properties` du schéma et ne doit PAS inclure le nom du champ. Lors de l’écriture du chemin d’accès, omettez les multiples niveaux des attributs `properties`. |
 | `{TENANT_ID}` | Si vous ne connaissez pas votre identifiant de client, veuillez vous reporter à la procédure de recherche de votre identifiant de client dans le [guide de développement du registre des schémas](../../xdm/api/getting-started.md#know-your-tenant_id). |
 | `description` | Une description de l’attribut calculé. Celle-ci s’avère particulièrement utile si vous avez défini plusieurs attributs calculés, car elle aidera les autres membres de votre organisation IMS à déterminer l’attribut calculé correct à utiliser. |
-| `expression.value` | Une expression [!DNL Profile Query Language] (PQL) valide. Les attributs calculés prennent actuellement en charge les fonctions suivantes : sum, count, min, max et boolean. Pour obtenir une liste d’exemples d’expressions, reportez-vous à la documentation [exemple d’expressions PQL](expressions.md) . |
+| `expression.value` | Un valide [!DNL Profile Query Language] (PQL). Les attributs calculés prennent actuellement en charge les fonctions suivantes : sum, count, min, max et boolean. Pour obtenir une liste d’exemples d’expressions, reportez-vous à la section [exemple d’expressions PQL](expressions.md) documentation. |
 | `schema.name` | La classe sur laquelle le schéma contenant le champ attribut calculé est basé. Par exemple : `_xdm.context.experienceevent` pour un schéma basé sur la classe XDM ExperienceEvent. |
 
 **Réponse**
@@ -148,7 +148,7 @@ Un attribut calculé créé avec succès renvoie un état HTTP 200 (OK) et un c
 
 ## Création d’un attribut calculé qui référence des attributs calculés existants
 
-Il est également possible de créer un attribut calculé qui référence des attributs calculés existants. Pour ce faire, commencez par envoyer une requête de POST au point de terminaison `/config/computedAttributes`. Le corps de la requête contiendra des références aux attributs calculés dans le champ `expression.value` comme illustré dans l’exemple ci-dessous.
+Il est également possible de créer un attribut calculé qui référence des attributs calculés existants. Pour ce faire, commencez par envoyer une requête de POST à la fonction `/config/computedAttributes` point de terminaison . Le corps de la requête contiendra des références aux attributs calculés dans la variable `expression.value` comme illustré dans l’exemple ci-dessous.
 
 **Format d’API**
 
@@ -160,10 +160,10 @@ POST /config/computedAttributes
 
 Dans cet exemple, deux attributs calculés ont déjà été créés et seront utilisés pour définir un troisième. Les attributs calculés existants sont les suivants :
 
-* **`totalSpend`:** capture le montant total en dollars qu’un client a dépensé.
-* **`countPurchases`:** compte le nombre d’achats effectués par un client.
+* **`totalSpend`:** Capture le montant total en dollars qu’un client a dépensé.
+* **`countPurchases`:** Compte le nombre d’achats effectués par un client.
 
-La requête ci-dessous fait référence aux deux attributs calculés existants, en utilisant un PQL valide à diviser pour calculer le nouvel attribut calculé `averageSpend`.
+La requête ci-dessous fait référence aux deux attributs calculés existants, en utilisant un PQL valide à diviser pour calculer le nouveau `averageSpend` attribut calculé.
 
 ```shell
 curl -X POST \
@@ -174,13 +174,13 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name" : "averageSpend",
-        "path" : "_{TENANT_ID}.purchaseSummary",
-        "description" : "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
-        "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
-            "value":  "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
+        "name": "averageSpend",
+        "path": "_{TENANT_ID}.purchaseSummary",
+        "description": "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
+        "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
+            "value": "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
         },
         "schema": 
           {
@@ -196,7 +196,7 @@ curl -X POST \
 | `path` | Le chemin d’accès au champ contenant l’attribut calculé. Ce chemin d’accès se trouve dans l’attribut `properties` du schéma et ne doit PAS inclure le nom du champ. Lors de l’écriture du chemin d’accès, omettez les multiples niveaux des attributs `properties`. |
 | `{TENANT_ID}` | Si vous ne connaissez pas votre identifiant de client, veuillez vous reporter à la procédure de recherche de votre identifiant de client dans le [guide de développement du registre des schémas](../../xdm/api/getting-started.md#know-your-tenant_id). |
 | `description` | Une description de l’attribut calculé. Celle-ci s’avère particulièrement utile si vous avez défini plusieurs attributs calculés, car elle aidera les autres membres de votre organisation IMS à déterminer l’attribut calculé correct à utiliser. |
-| `expression.value` | Une expression PQL valide. Les attributs calculés prennent actuellement en charge les fonctions suivantes : sum, count, min, max et boolean. Pour obtenir une liste d’exemples d’expressions, reportez-vous à la documentation [exemple d’expressions PQL](expressions.md) .<br/><br/>Dans cet exemple, l’expression fait référence à deux attributs calculés existants. Les attributs sont référencés à l’aide de `path` et de `name` de l’attribut calculé, tels qu’ils apparaissent dans le schéma dans lequel les attributs calculés ont été définis. Par exemple, `path` du premier attribut calculé référencé est `_{TENANT_ID}.purchaseSummary` et `name` est `totalSpend`. |
+| `expression.value` | Une expression PQL valide. Les attributs calculés prennent actuellement en charge les fonctions suivantes : sum, count, min, max et boolean. Pour obtenir une liste d’exemples d’expressions, reportez-vous à la section [exemple d’expressions PQL](expressions.md) documentation.<br/><br/>Dans cet exemple, l’expression fait référence à deux attributs calculés existants. Les attributs sont référencés à l’aide de la fonction `path` et le `name` de l’attribut calculé tel qu’il apparaît dans le schéma dans lequel les attributs calculés ont été définis. Par exemple, la variable `path` du premier attribut calculé référencé est `_{TENANT_ID}.purchaseSummary` et le `name` is `totalSpend`. |
 | `schema.name` | La classe sur laquelle le schéma contenant le champ attribut calculé est basé. Par exemple : `_xdm.context.experienceevent` pour un schéma basé sur la classe XDM ExperienceEvent. |
 
 **Réponse**
@@ -220,9 +220,9 @@ Un attribut calculé créé avec succès renvoie un état HTTP 200 (OK) et un c
         "purchaseSummary"
     ],
     "description": "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
-    "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
+    "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
             "value":  "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
     },
     "schema": {
@@ -280,8 +280,8 @@ Lorsque vous travaillez avec des attributs calculés en utilisant l’API, vous 
 
 Les étapes des deux modèles d’accès sont décrites dans ce document. Sélectionnez l’une des options suivantes pour commencer :
 
-* **[Liste de tous les attributs calculés existants](#list-all-computed-attributes) :**  renvoie une liste de tous les attributs calculés existants créés par votre organisation.
-* **[Afficher un attribut calculé spécifique](#view-a-computed-attribute) :** renvoie les détails d’un seul attribut calculé en spécifiant son identifiant lors de la requête.
+* **[Liste de tous les attributs calculés existants](#list-all-computed-attributes):** Renvoie une liste de tous les attributs calculés existants créés par votre organisation.
+* **[Affichage d’un attribut calculé spécifique](#view-a-computed-attribute):** Renvoie les détails d’un attribut calculé unique en spécifiant son identifiant lors de la requête.
 
 ### Liste de tous les attributs calculés {#list-all-computed-attributes}
 
@@ -308,7 +308,7 @@ curl -X GET \
 
 Une réponse réussie inclut un attribut `_page` qui fournit le nombre total d’attributs calculés (`totalCount`) et le nombre d’attributs calculés sur la page (`pageSize`).
 
-La réponse inclut également un tableau `children` composé d’un ou de plusieurs objets qui contiennent chacun les détails d’un attribut calculé. Si votre organisation ne dispose d’aucun attribut calculé, `totalCount` et `pageSize` seront de 0 (zéro) et le tableau `children` sera vide.
+La réponse inclut également un tableau `children` composé d’un ou de plusieurs objets qui contiennent chacun les détails d’un attribut calculé. Si votre organisation ne dispose d’aucun attribut calculé, la variable `totalCount` et `pageSize` sera 0 (zéro) et la variable `children` est vide.
 
 ```json
 {
@@ -375,8 +375,8 @@ La réponse inclut également un tableau `children` composé d’un ou de plusie
             ],
             "description": "Calculate total product downloads.",
             "expression": {
-                "type" : "PQL", 
-                "format" : "pql/text", 
+                "type": "PQL", 
+                "format": "pql/text", 
                 "value":  "let Y = xEvent[_coresvc.event.subType = \"DOWNLOAD\"].groupBy(_coresvc.attributes[name = \"product\"].value).map({
                   \"downloaded\": this.head()._coresvc.attributes[name = \"product\"].head().value,
                   \"downloadsSum\": this.count(),
@@ -423,7 +423,7 @@ La réponse inclut également un tableau `children` composé d’un ou de plusie
 
 ### Affichage d’un attribut calculé {#view-a-computed-attribute}
 
-Vous pouvez afficher un attribut calculé spécifique en effectuant une requête GET sur le point de terminaison `/config/computedAttributes` et en incluant l’identifiant d’attribut calculé dans le chemin d’accès de la requête.
+Vous pouvez afficher un attribut calculé spécifique en envoyant une requête GET au `/config/computedAttributes` point de terminaison et inclusion de l’identifiant d’attribut calculé dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -524,8 +524,8 @@ curl -X PATCH \
           "path": "/expression",
           "value": 
           {
-            "type" : "PQL", 
-            "format" : "pql/text", 
+            "type": "PQL", 
+            "format": "pql/text", 
             "value":  "{NEW_EXPRESSION_VALUE}"
           }
         }
@@ -534,7 +534,7 @@ curl -X PATCH \
 
 | Propriété | Description |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | Une expression [!DNL Profile Query Language] (PQL) valide. Les attributs calculés prennent actuellement en charge les fonctions suivantes : sum, count, min, max et boolean. Pour obtenir une liste d’exemples d’expressions, reportez-vous à la documentation [exemple d’expressions PQL](expressions.md) . |
+| `{NEW_EXPRESSION_VALUE}` | Un valide [!DNL Profile Query Language] (PQL). Les attributs calculés prennent actuellement en charge les fonctions suivantes : sum, count, min, max et boolean. Pour obtenir une liste d’exemples d’expressions, reportez-vous à la section [exemple d’expressions PQL](expressions.md) documentation. |
 
 **Réponse**
 
@@ -575,11 +575,11 @@ Une requête de suppression réussie renvoie un état HTTP 200 (OK) et un corps
 
 ## Création d’une définition de segment référençant un attribut calculé
 
-Adobe Experience Platform vous permet de créer des segments définissant un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils. Une définition de segment inclut une expression qui encapsule une requête écrite dans PQL. Ces expressions peuvent également faire référence à des attributs calculés.
+Adobe Experience Platform vous permet de créer des segments définissant un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils. Une définition de segment inclut une expression qui encapsule une requête écrite dans PQL. Ces expressions peuvent également faire référence à des attributs calculés.
 
-L’exemple suivant crée une définition de segment qui fait référence à un attribut calculé existant. Pour en savoir plus sur les définitions de segment et sur leur utilisation dans l’API Segmentation Service, consultez le [guide de point d’entrée de l’API des définitions de segment](../../segmentation/api/segment-definitions.md).
+L’exemple suivant crée une définition de segment qui fait référence à un attribut calculé existant. Pour en savoir plus sur les définitions de segment et sur leur utilisation dans l’API Segmentation Service, reportez-vous à la section [guide d’entrée de l’API des définitions de segment](../../segmentation/api/segment-definitions.md).
 
-Pour commencer, envoyez une requête de POST au point de terminaison `/segment/definitions` , en fournissant l’attribut calculé dans le corps de la requête.
+Pour commencer, envoyez une requête de POST au `/segment/definitions` point de terminaison , fournissant l’attribut calculé dans le corps de la requête.
 
 **Format d’API**
 
@@ -625,11 +625,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.format` | Indique la structure de l’expression en valeur. Actuellement, seul `pql/text` est pris en charge. |
 | `expression.value` | Une expression PQL valide, dans cet exemple, inclut une référence à un attribut calculé existant. |
 
-Pour plus d’informations sur les attributs de définition de schéma, reportez-vous aux exemples fournis dans le [guide de point d’entrée de l’API de définitions de segment](../../segmentation/api/segment-definitions.md).
+Pour plus d’informations sur les attributs de définition de schéma, reportez-vous aux exemples fournis dans la section [guide d’entrée de l’API des définitions de segment](../../segmentation/api/segment-definitions.md).
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la définition de segment que vous venez de créer. Pour en savoir plus sur les objets de réponse de définition de segment, consultez le [guide de point d’entrée de l’API de définitions de segment](../../segmentation/api/segment-definitions.md).
+Une réponse réussie renvoie un état HTTP 200 avec les détails de la définition de segment que vous venez de créer. Pour en savoir plus sur les objets de réponse de définition de segment, reportez-vous à la section [guide d’entrée de l’API des définitions de segment](../../segmentation/api/segment-definitions.md).
 
 ```json
 {

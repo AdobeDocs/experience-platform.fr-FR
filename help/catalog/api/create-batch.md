@@ -5,7 +5,7 @@ title: Création d’un lot dans l’API
 topic-legacy: developer guide
 description: Vous pouvez créer un lot en envoyant une requête de POST au point de terminaison /batches dans l’API Catalog.
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 70%
@@ -30,7 +30,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'content-type: application/json' \
   -d '{
         "datasetId":"5c8c3c555033b814b69f947f"

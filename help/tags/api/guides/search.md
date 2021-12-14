@@ -2,7 +2,7 @@
 title: Recherche de ressources dans lʼAPI Reactor
 description: Découvrez comment rechercher des ressources dans lʼAPI Reactor.
 exl-id: cb594e60-3e24-457e-bfb3-78ec84d3e39a
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 100%
@@ -27,7 +27,7 @@ Une recherche peut être effectuée dans plusieurs champs à lʼaide de caractè
 
 ```json
 {
-  "data" : {
+  "data": {
     "query": {
       "attributes.*": {
         "value": "evar7"
@@ -43,11 +43,11 @@ Une recherche peut être effectuée dans plusieurs champs à lʼaide de caractè
 
 ### Portée des requêtes à des types de ressources spécifiques
 
-Vous pouvez étendre une recherche à un type de ressource spécifique en indiquant `resource_types` dans la requête. Par exemple, pour effectuer une recherche dans `data_elements` et `rule_components` :
+Vous pouvez étendre une recherche à un type de ressource spécifique en indiquant `resource_types` dans la requête. Par exemple, pour effectuer une recherche dans `data_elements` et `rule_components` :
 
 ```json
 {
-  "data" : {
+  "data": {
     "from": 0,
     "size": 25,
     "query": {
@@ -65,11 +65,11 @@ Vous pouvez étendre une recherche à un type de ressource spécifique en indiqu
 
 ### Tri des réponses
 
-La propriété `sort` peut être utilisée pour trier les réponses. Par exemple, pour trier par `created_at` en commençant par le plus récent :
+La propriété `sort` peut être utilisée pour trier les réponses. Par exemple, pour trier par `created_at` en commençant par le plus récent :
 
 ```json
 {
-  "data" : {
+  "data": {
     "from": 0,
     "size": 25,
     "query": {
@@ -105,7 +105,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.name": {
               "value": "Adobe"
@@ -115,7 +115,7 @@ curl -X POST \
       }'
 ```
 
-### Toute ressource référençant « evar7 »
+### Toute ressource référençant « evar7 »
 
 ```shell
 curl -X POST \
@@ -126,7 +126,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.*": {
               "value": "evar7"
@@ -136,7 +136,7 @@ curl -X POST \
       }'
 ```
 
-### Éléments de données dʼun type délégué « custom-code »
+### Éléments de données dʼun type délégué « custom-code »
 
 ```shell
 curl -X POST \
@@ -147,7 +147,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.delegate_descriptor_id": {
               "value": "custom-code"
@@ -169,7 +169,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.settings": {
               "value": "myDataElement8"
@@ -191,7 +191,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "relationships.property.data.id": {
               "value": "PR3cab070a9eb3423894e4a3038ef0e7b7"
@@ -213,7 +213,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "id": {
               "value": "PR3cab070a9eb3423894e4a3038ef0e7b7"
@@ -223,7 +223,7 @@ curl -X POST \
       }'
 ```
 
-### Exécution dʼune recherche à lʼaide dʼune logique traditionnelle « OR »
+### Exécution dʼune recherche à lʼaide dʼune logique traditionnelle « OR »
 
 ```shell
 curl -X POST \
@@ -234,7 +234,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.display_name": {
               "value": "My Rule Holiday Sale",
