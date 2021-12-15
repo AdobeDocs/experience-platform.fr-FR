@@ -1,9 +1,10 @@
 ---
 description: Cette page fournit toutes les informations dont vous avez besoin pour soumettre une révision pour une destination créée à l’aide de Destination SDK.
 title: Envoyer pour révision d’une destination créée dans Destination SDK
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
+source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '568'
 ht-degree: 1%
 
 ---
@@ -211,10 +212,6 @@ Indiquez l’identifiant de la requête de publication pour votre destination. P
 ## Documentation de destination PR (requête de tirage) pour les intégrations productives
 
 Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI), créez une [intégration productive](./overview.md#productized-custom-integrations), utilisez le [processus de documentation en libre-service](./docs-framework/documentation-instructions.md) pour créer une page de documentation du produit pour votre destination. Dans le cadre du processus d’envoi, fournissez la demande d’extraction (PR) pour votre documentation de destination.
-
-Les exemples de relations publiques des partenaires d’intégration existants sont les suivants :
-* [Documentation sur la destination Yahoo](https://github.com/AdobeDocs/experience-platform.en/pull/110);
-* [Documentation sur la destination de l’avion PR](https://github.com/AdobeDocs/experience-platform.en/pull/54).
 
 ## Logo de votre destination
 
