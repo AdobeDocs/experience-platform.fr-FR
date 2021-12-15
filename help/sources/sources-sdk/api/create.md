@@ -1,48 +1,49 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
+keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
-title: Création d’une spécification de connexion à l’aide de l’API Flow Service (bêta)
+title: Create a new connection specification using the Flow Service API (Beta)
 topic-legacy: tutorial
-description: Le document suivant décrit les étapes à suivre pour créer une spécification de connexion à l’aide de l’API Flow Service et intégrer une nouvelle source via le SDK Sources.
+description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Sources SDK.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
+source-git-commit: baa5f95fc8155c6a3f6c2faab99182046f33f49a
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 3%
 
 ---
 
-# Créez une nouvelle spécification de connexion à l’aide du [!DNL Flow Service] API (bêta)
+# [!DNL Flow Service]
 
 >[!IMPORTANT]
 >
->Le SDK Sources est actuellement en version bêta et votre entreprise n’y a peut-être pas encore accès. Les fonctionnalités décrites dans cette documentation peuvent faire l’objet de modifications.
+>Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
 
-Une spécification de connexion représente la structure d’une source. Il contient des informations sur les exigences d’authentification d’une source, définit la manière dont les données sources peuvent être explorées et inspectées et fournit des informations sur les attributs d’une source donnée. Le `/connectionSpecs` du point de terminaison [!DNL Flow Service] L’API vous permet de gérer par programmation les spécifications de connexion au sein de votre entreprise.
+A connection specification represents the structure of a source. It contains information on a source&#39;s authentication requirements, defines how source data can be explored and inspected, and provides information on the attributes of a given source. `/connectionSpecs`[!DNL Flow Service]
 
-Le document suivant décrit les étapes à suivre pour créer une spécification de connexion à l’aide de la fonction [!DNL Flow Service] API et intégrer une nouvelle source via le SDK Sources.
+[!DNL Flow Service]
 
 ## Prise en main
 
-Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d’appels API de ce document, ainsi que des informations importantes concernant les en-têtes requis pour réussir les appels à une API Experience Platform.
+[](./getting-started.md)
 
-## Collecte d’artefacts
+## Collect artifacts
 
-Première étape de la création d’une source par le biais de [!DNL Sources SDK] est de se coordonner avec le représentant de votre Adobe et d’identifier les valeurs de la source correspondante **icon**, **description**, **label**, et **category**.
+[!DNL Sources SDK]****************
 
-| Artefacts | Description | Exemple |
+| Artifacts | Description | Exemple |
 | --- | --- | --- |
-| Étiquette | Nom de la source. | [!DNL MailChimp Members] |
-| Description | Brève description de votre source. | Créez une connexion entrante active à votre [!DNL Mailchimp Members] pour ingérer des données historiques et planifiées dans Experience Platform. |
-| Icon | L’image ou le logo qui représente votre source. L’icône s’affiche dans le rendu de l’interface utilisateur de Platform de votre source. | `mailchimp-members-icon.svg` |
-| Catégorie | La catégorie de votre source. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li><li>`streaming`</li></ul> |
+| Libellé | The name of your source. | [!DNL MailChimp Members] |
+| Description | A brief description of your source. | [!DNL Mailchimp Members] |
+| Icon | The image or logo that represents your source. The icon is displayed in the Platform UI rendering of your source. | `mailchimp-members-icon.svg` |
+| Catégorie | The category of your source. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Copier le modèle de spécification de connexion
+## Copy connection specification template
 
-Une fois que vous avez rassemblé les artefacts requis, copiez et collez le modèle de spécification de connexion ci-dessous dans l’éditeur de texte de votre choix, puis mettez à jour les attributs entre crochets. `{}` avec des informations relatives à votre source spécifique.
+`{}`
 
 ```json
 {
@@ -284,19 +285,19 @@ Une fois que vous avez rassemblé les artefacts requis, copiez et collez le mod�
 }
 ```
 
-## Création d’une spécification de connexion {#create}
+## Create a connection specification {#create}
 
-Une fois que vous avez acquis le modèle de spécification de connexion, vous pouvez commencer à créer une nouvelle spécification de connexion en renseignant les valeurs appropriées qui correspondent à votre source.
+Once you have acquired the connection specification template, you can now start authoring a new connection specification by filling in the appropriate values that corresponds to your source.
 
-Une spécification de connexion peut être divisée en trois parties distinctes : les spécifications d’authentification, les spécifications source et les spécifications d’exploration.
+A connection specification can be divided into three distinct parts: the authentication specifications, the source specifications, and the explore specifications.
 
-Consultez les documents suivants pour obtenir des instructions sur la façon de renseigner les valeurs de chaque partie d’une spécification de connexion :
+See the following documents for instructions on how to populate the values of each part of a connection specification:
 
-* [Configuration de votre spécification d’authentification](../config/authspec.md)
-* [Configuration de votre spécification source](../config/sourcespec.md)
-* [Configuration de votre spécification d’exploration](../config/explorespec.md)
+* [Configure your authentication specification](../config/authspec.md)
+* [Configure your source specification](../config/sourcespec.md)
+* [Configure your explore specification](../config/explorespec.md)
 
-Une fois vos informations de spécification mises à jour, vous pouvez envoyer la nouvelle spécification de connexion en envoyant une requête de POST à la fonction `/connectionSpecs` point d’entrée du [!DNL Flow Service] API.
+`/connectionSpecs`[!DNL Flow Service]
 
 **Format d’API**
 
@@ -306,7 +307,7 @@ POST /connectionSpecs
 
 **Requête**
 
-La requête suivante est un exemple de spécification de connexion entièrement créée pour une [!DNL MailChimp] source :
+[!DNL MailChimp]
 
 ```shell
 curl -X POST \
@@ -481,7 +482,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie la spécification de connexion nouvellement créée, y compris son unique `id`.
+`id`
 
 ```json
 {
@@ -666,6 +667,6 @@ Une réponse réussie renvoie la spécification de connexion nouvellement créé
 
 ## Étapes suivantes
 
-Maintenant que vous avez créé une nouvelle spécification de connexion, vous devez ajouter son identifiant de spécification de connexion correspondant à une spécification de flux existante. Voir le tutoriel sur [mise à jour des spécifications de flux](./update-flow-specs.md) pour plus d’informations.
+Now that you have created a new connection specification, you must add its corresponding connection specification ID to an existing flow specification. [](./update-flow-specs.md)
 
-Pour apporter des modifications à la spécification de connexion que vous avez créée, consultez le tutoriel sur [mise à jour des spécifications de connexion](./update-connection-specs.md).
+[](./update-connection-specs.md)
