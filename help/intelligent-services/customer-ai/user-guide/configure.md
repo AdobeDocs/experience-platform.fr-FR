@@ -6,10 +6,10 @@ title: Configuration d’une instance Customer AI
 topic-legacy: Instance creation
 description: Intelligent Services fournit Customer AI en tant que service Adobe Sensei simple d’emploi pouvant être configuré pour de multiples cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 899ea8502c80fa520df55ce63255e95cb5ad436d
+source-git-commit: f7fde9ed299e6bdb6e63279be1126b91fc90d3f3
 workflow-type: tm+mt
-source-wordcount: '2299'
-ht-degree: 13%
+source-wordcount: '2608'
+ht-degree: 11%
 
 ---
 
@@ -19,7 +19,7 @@ Dans le cadre d’Intelligent Services, Customer AI vous permet de générer des
 
 Intelligent Services fournit Customer AI en tant que service Adobe Sensei simple d’emploi pouvant être configuré pour de multiples cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 
-## Configuration de votre instance {#set-up-your-instance}
+## Création d’une instance {#set-up-your-instance}
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur **[!UICONTROL Services]** apparaît et affiche tous les services disponibles. Dans le conteneur de Customer AI, sélectionnez **[!UICONTROL Ouvrir]**.
 
@@ -48,7 +48,7 @@ Pour créer une instance, sélectionnez **[!UICONTROL Créer une instance]**.
 
 ## Configuration
 
-Le workflow de création d’instance s’affiche à partir de l’étape **[!UICONTROL Configuration]**.
+Le workflow de création de l&#39;instance s&#39;affiche, en commençant par **[!UICONTROL Configuration]** étape .
 
 Vous trouverez ci-dessous des informations importantes sur les valeurs que vous pouvez renseigner dans l’instance :
 
@@ -156,9 +156,13 @@ Par défaut, les scores de propension sont générés pour tous les profils, sau
 
 Si vous disposez d’informations supplémentaires sur la variable [champs d’événement standard](../input-output.md#standard-events) utilisée par Customer AI pour générer des scores de propension, une option d’événements personnalisés est fournie. L’utilisation de cette option vous permet d’ajouter d’autres événements que vous jugez influents, ce qui peut améliorer la qualité de votre modèle et contribuer à fournir des résultats plus précis. Si le jeu de données que vous avez sélectionné inclut des événements personnalisés définis dans votre schéma, vous pouvez les ajouter à votre instance.
 
+>[!NOTE]
+>
+> Pour une explication détaillée de l’impact des événements personnalisés sur les résultats de la notation de Customer AI, consultez la page [Exemple d’événement personnalisé](#custom-event) .
+
 ![fonction d’événement](../images/user-guide/event-feature.png)
 
-Pour ajouter un événement personnalisé, sélectionnez **[!UICONTROL Ajout d’un événement personnalisé]**. Ensuite, saisissez un nom d’événement personnalisé, puis mappez-le au champ d’événement de votre schéma. Les noms d’événement personnalisés s’affichent à la place de la valeur des champs lorsque vous examinez les facteurs d’influence et d’autres informations. Cela signifie que les identifiants d’utilisateur, de réservation, les informations sur l’appareil et d’autres valeurs personnalisées sont répertoriés avec le nom de l’événement personnalisé au lieu de l’identifiant/de la valeur de l’événement. Ces événements personnalisés supplémentaires sont utilisés par Customer AI pour améliorer la qualité de votre modèle et fournir des résultats plus précis.
+Pour ajouter un événement personnalisé, sélectionnez **[!UICONTROL Ajout d’un événement personnalisé]**. Ensuite, saisissez un nom d’événement personnalisé, puis mappez-le au champ d’événement de votre schéma. Les noms d’événement personnalisés s’affichent à la place de la valeur des champs lorsque vous examinez les facteurs d’influence et d’autres informations. Cela signifie que le nom de l’événement personnalisé sera utilisé à la place de l’identifiant/de la valeur de l’événement. Pour plus d’informations sur l’affichage des événements personnalisés, voir [exemple de section d’événement personnalisé](#custom-event). Ces événements personnalisés supplémentaires sont utilisés par Customer AI pour améliorer la qualité de votre modèle et fournir des résultats plus précis.
 
 ![Champ Événement personnalisé](../images/user-guide/custom-event.png)
 
@@ -178,21 +182,31 @@ Vous pouvez définir des champs de jeu de données Profile importants (avec horo
 
 >[!NOTE]
 >
->L’ajout d’un attribut de profil personnalisé suit le même processus que l’ajout d’un événement personnalisé.
+>L’ajout d’un attribut de profil personnalisé suit le même processus que l’ajout d’un événement personnalisé. Comme pour les événements personnalisés, les attributs de profil personnalisés affectent la notation de votre modèle de la même manière. Pour obtenir une explication détaillée, consultez la rubrique [Exemple d’événement personnalisé](#custom-event) .
 
 ![ajout d’un attribut de profil personnalisé](../images/user-guide/profile-attributes.png)
 
+### Ajout d’un exemple d’événement personnalisé {#custom-event}
+
+Dans l’exemple suivant, un événement personnalisé et un attribut de profil sont ajoutés à une instance Customer AI. L’objectif de l’instance Customer AI est de prévoir la probabilité qu’un client achète un autre produit Luma dans les 60 prochains jours. Normalement, les données de produit sont liées à un SKU de produit. Dans ce cas, le SKU est `prd1013`. Une fois le modèle Customer AI formé/noté, ce SKU peut être lié à un événement et affiché comme facteur d’influence pour un compartiment de propension.
+
+Customer AI applique automatiquement la génération de fonctionnalités telles que &quot;Jours depuis&quot; ou &quot;Nombre de&quot; aux événements personnalisés tels que **Contrôle des achats**. Si cet événement a été considéré comme un facteur d’influence expliquant pourquoi les clients ont une propension élevée, moyenne ou faible, Customer AI l’affiche comme `Days since prd1013 purchase` ou `Count of prd1013 purchase`. En créant cet événement en tant qu’événement personnalisé, vous pouvez donner à l’événement un nouveau nom rendant les résultats beaucoup plus faciles à lire. Par exemple : `Days since Watch purchase`. En outre, Customer AI utilise cet événement dans sa formation et sa notation même si l’événement n’est pas un événement standard. Cela signifie que vous pouvez ajouter plusieurs événements qui, selon vous, peuvent avoir de l’influence et personnaliser davantage votre modèle en incluant des données telles que les réservations, les journaux des visiteurs et d’autres événements. L’ajout de ces points de données accroît davantage la précision et la précision de votre modèle Customer AI.
+
+![exemple d’événement personnalisé](../images/user-guide/custom-event-name.png)
+
+## Définition des options
+
+L’étape Définir les options vous permet de configurer un planning pour automatiser les opérations de prédiction, de définir les exclusions de prédiction pour filtrer certains événements et de basculer. **[!UICONTROL Profil]** activé/désactivé
+
 ### Configuration d’un planning *(facultatif)* {#configure-a-schedule}
 
-Le **[!UICONTROL Avancé]** s’affiche. Cette étape facultative vous permet de configurer un planning pour automatiser les opérations de prédiction, de définir des exclusions de prédiction pour filtrer certains événements ou de sélectionner **[!UICONTROL Terminer]** si rien n’est nécessaire.
-
-Configurez un planning de notation en configurant la **[!UICONTROL Fréquence de notation]**. Les opérations de prédiction automatisées peuvent être planifiées pour une exécution hebdomadaire ou mensuelle.
+Pour configurer un planning de notation, commencez par configurer le **[!UICONTROL Fréquence de notation]**. Les opérations de prédiction automatisées peuvent être planifiées pour une exécution hebdomadaire ou mensuelle.
 
 ![](../images/user-guide/schedule.png)
 
-### Exclusions de prédiction
+### Exclusions de prédiction *(facultatif)*
 
-Si votre jeu de données contenait des colonnes ajoutées en tant que données de test, vous pouvez ajouter cette colonne ou cet événement à une liste d’exclusion en sélectionnant **Ajouter une exclusion** puis saisissez le champ que vous souhaitez exclure. Cela empêche l’évaluation des événements répondant à certaines conditions lors de la génération de scores. Cette fonction peut être utilisée pour filtrer les entrées de données non pertinentes ou certaines promotions.
+Si votre jeu de données contenait des colonnes ajoutées en tant que données de test, vous pouvez ajouter cette colonne ou cet événement à une liste d’exclusion en sélectionnant **[!UICONTROL Ajouter une exclusion]** puis saisissez le champ que vous souhaitez exclure. Cela empêche l’évaluation des événements répondant à certaines conditions lors de la génération de scores. Cette fonction peut être utilisée pour filtrer les entrées de données ou les promotions non pertinentes.
 
 Pour exclure un événement, sélectionnez **[!UICONTROL Ajouter une exclusion]** et définissez l’événement. Pour supprimer une exclusion, sélectionnez les ellipses (**[!UICONTROL ...]**) en haut à droite du conteneur d’événements, puis sélectionnez **[!UICONTROL Supprimer le conteneur]**.
 
@@ -202,7 +216,7 @@ Pour exclure un événement, sélectionnez **[!UICONTROL Ajouter une exclusion]*
 
 Le bouton activer/désactiver de Profile permet à Customer AI d’exporter les résultats de notation dans Real-time Customer Profile. La désactivation de ce bouton empêche l’ajout des résultats de notation des modèles à Profile. Les résultats de notation de Customer AI sont toujours disponibles, mais cette fonctionnalité est désactivée.
 
-Lorsque vous utilisez Customer AI pour la première fois, vous devez désactiver cette fonction jusqu’à ce que vous soyez satisfait des résultats de sortie du modèle. Cela vous empêche de charger plusieurs jeux de données de notation sur Real-time Customer Profile tout en affinant votre modèle.
+Lorsque vous utilisez Customer AI pour la première fois, vous pouvez désactiver cette fonction jusqu’à ce que vous soyez satisfait des résultats de sortie du modèle. Cela vous empêche de charger plusieurs jeux de données de notation sur vos profils client tout en affinant votre modèle. Une fois que vous avez fini d’étalonner votre modèle, vous pouvez le cloner à l’aide de la fonction [option de clone](#set-up-your-instance) de la **Instances de service** page. Vous pouvez ainsi créer une copie de votre modèle et activer/désactiver le profil.
 
 ![Bascule des profils](../images/user-guide/advanced-workflow.png)
 
