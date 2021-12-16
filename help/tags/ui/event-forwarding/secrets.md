@@ -1,14 +1,15 @@
 ---
-title: Secrets de transfert dʼévénement
+title: Configuration des secrets dans le transfert d’événements
 description: Découvrez comment configurer des secrets dans lʼinterface utilisateur de la collecte de données afin de vous authentifier aux points dʼentrée utilisés dans les propriétés de transfert dʼévénement.
-source-git-commit: 43d593cd8adf5a29c3283a328c24b0994009222b
-workflow-type: ht
-source-wordcount: '1445'
-ht-degree: 100%
+exl-id: eefd87d7-457f-422a-b159-5b428da54189
+source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
+workflow-type: tm+mt
+source-wordcount: '1449'
+ht-degree: 99%
 
 ---
 
-# Secrets de transfert dʼévénement
+# Configuration des secrets dans le transfert d’événement
 
 Dans le transfert dʼévénement, un secret est une ressource qui représente des informations dʼidentification pour sʼauthentifier auprès dʼun autre système, ce qui permet lʼéchange sécurisé de données. Les secrets ne peuvent être créés que dans les propriétés de transfert dʼévénement.
 

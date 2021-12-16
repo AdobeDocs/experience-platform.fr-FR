@@ -4,10 +4,10 @@ user-guide-title: Aide sur les balises
 breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
-source-git-commit: 7368b6e69522cce9343df78c31a712bfdbfedfe3
+source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 100%
+source-wordcount: '382'
+ht-degree: 99%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 100%
       * [Hôtes SFTP](./ui/publishing/hosts/sftp-host.md)
    * Environnements {#environments}
       * [Présentation](./ui/publishing/environments.md)
-      * [Test des codes incorporés à l’aide du débogeur Adobe Experience Platform](./ui/publishing/embed-code-testing.md)
+      * [Test des codes incorporés à l’aide du débogeur Adobe Experience Platform](./ui/publishing/embed-code-testing.md)
    * [Versions](./ui/publishing/builds.md)
    * [Bibliothèques](./ui/publishing/libraries.md)
    * [Bibliothèques auto-hébergées](./ui/publishing/hosts/self-hosting-libraries.md)
@@ -54,7 +54,7 @@ ht-degree: 100%
 * Transfert d’événement {#event-forwarding}
    * [Présentation](./ui/event-forwarding/overview.md)
    * [Prise en main](./ui/event-forwarding/getting-started.md)
-   * [Secrets](./ui/event-forwarding/secrets.md)
+   * [Configuration des secrets](./ui/event-forwarding/secrets.md)
 * Administration {#admin}
    * [Présentation](./ui/administration/overview.md)
    * [Sociétés et propriétés](./ui/administration/companies-and-properties.md)
@@ -68,32 +68,32 @@ ht-degree: 100%
          * [Présentation](./extensions/web/analytics/overview.md)
          * [Modules partagés](./extensions/web/analytics/shared-modules.md)
          * [Notes de mise à jour](./extensions/web/analytics/release-notes.md)
-      * Adobe Analytics Product String {#product-string}
+      *  Adobe Analytics Product String {#product-string}
          * [Présentation](./extensions/web/product-string/overview.md)
          * [Notes de mise à jour](./extensions/web/product-string/release-notes.md)
-      * Adobe Audience Manager {#audience-manager}
+      * Adobe Audience Manager {#audience-manager}
          * [Présentation](./extensions/web/audience-manager/overview.md)
       * Adobe Client Data Layer (ACDL) {#client-data-layer}
          * [Présentation](./extensions/web/client-data-layer/overview.md)
          * [Notes de mise à jour](./extensions/web/client-data-layer/release-notes.md)
-      * Adobe ContextHub {#contexthub}
+      * Adobe ContextHub {#contexthub}
          * [Présentation](./extensions/web/contexthub/overview.md)
       * Service Adobe Experience Cloud ID {#id-service}
          * [Présentation](./extensions/web/id-service/overview.md)
          * [Notes de mise à jour](./extensions/web/id-service/release-notes.md)
-      * Démo Adobe Experience Platform {#platform-demo}
+      * Démo Adobe Experience Platform {#platform-demo}
          * [Présentation](./extensions/web/platform-demo/overview.md)
       * SDK web Adobe Experience Platform {#sdk}
          * [Présentation](./extensions/web/sdk/overview.md)
-      * Adobe Experience Platform Cloud Connector {#cloud-connector}
+      *  Adobe Experience Platform Cloud Connector {#cloud-connector}
          * [Présentation](./extensions/web/cloud-connector/overview.md)
-      * des statistiques sur les ressources Adobe Experience Manager {#asset-insights}
+      * des statistiques sur les ressources Adobe Experience Manager {#asset-insights}
          * [Présentation](./extensions/web/asset-insights/overview.md)
          * [Notes de mise à jour](./extensions/web/asset-insights/release-notes.md)
-      * Adobe Media Analytics for Audio and Video {#media-analytics}
+      *  Adobe Media Analytics for Audio and Video {#media-analytics}
          * [Présentation](./extensions/web/media-analytics/overview.md)
          * [Notes de mise à jour](./extensions/web/media-analytics/release-notes.md)
-      * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
+      * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
          * [Présentation](./extensions/web/media-analytics-3x/overview.md)
          * [Notes de mise à jour](./extensions/web/media-analytics-3x/release-notes.md)
       * Confidentialité Adobe {#privacy}
@@ -101,7 +101,7 @@ ht-degree: 100%
       * Adobe Target {#target}
          * [Présentation](./extensions/web/target/overview.md)
          * [Notes de mise à jour](./extensions/web/target/release-notes.md)
-      * Adobe Target v2 {#target-v2}
+      * Adobe Target v2 {#target-v2}
          * [Présentation](./extensions/web/target-v2/overview.md)
          * [Notes de mise à jour](./extensions/web/target-v2/release-notes.md)
       * Plugins Analytics courants {#plugins}
