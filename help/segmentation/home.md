@@ -5,10 +5,10 @@ title: Présentation de Segmentation Service
 topic-legacy: overview
 description: Découvrez Adobe Experience Platform Segmentation Service et le rôle qu’il joue dans l’écosystème de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
+source-git-commit: 3130d9731a53c01fb7bc15265e044191ceae47f6
 workflow-type: tm+mt
-source-wordcount: '1651'
-ht-degree: 57%
+source-wordcount: '1507'
+ht-degree: 62%
 
 ---
 
@@ -61,18 +61,6 @@ Pour plus d’informations sur la segmentation par flux, consultez la [documenta
 Au lieu d’un processus en continu de sélection de données, la segmentation par lots déplace toutes les données de profil à la fois dans les définitions de segment afin de produire des audiences correspondantes. Une fois créé, ce segment est enregistré et stocké afin que vous puissiez l’exporter pour l’utiliser.
 
 Les segments par lot sont automatiquement évalués toutes les 24 heures. Si vous souhaitez évaluer un segment par lot à la demande, vous pouvez utiliser une tâche de segmentation. Pour en savoir plus sur les tâches de segmentation, veuillez lire le [documentation sur les tâches de segmentation](./api/segment-jobs.md).
-
-**Segmentation incrémentale (version bêta)**
-
-Les segments par lot sont évalués toutes les 24 heures. Toutefois, pour les segments existants, la segmentation incrémentielle maintient les segments à jour pendant une heure au maximum.
-
-La segmentation incrémentielle s’exécute sur les nouvelles données qui entrent dans la banque de profils. Toutefois, les avertissements suivants s’appliquent à la segmentation incrémentielle :
-
-- Pour tout segment nouveau ou récemment modifié, les profils contenant de nouvelles données commenceront à être qualifiés lors de la prochaine exécution incrémentielle. Toutefois, les profils sans modification seront rattrapés lors de la prochaine tâche de segmentation par lots complète.
-- Les segments d’entités multiples seront actualisés dans la segmentation incrémentielle. S’il existe des mises à jour d’entité, tous les profils contenant de nouvelles données commenceront à les utiliser lors de l’exécution incrémentielle suivante. Toutefois, les profils sans modification seront rattrapés lors de la prochaine tâche de segmentation par lots complète.
-- Les événements qui abandonnent la fenêtre temporelle d’un segment seront réconciliés dans la prochaine tâche de segmentation par lots complète.
-
-Pour savoir comment évaluer les segments, consultez le [tutoriel sur l’évaluation des segments](./tutorials/evaluate-a-segment.md).
 
 ### Segmentation Edge
 
