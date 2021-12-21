@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;api;prise en main
+keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;api;prise en main
 solution: Experience Platform
 title: Guide de l’API Access Control
 topic-legacy: developer guide
-description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Les sections suivantes apportent des informations supplémentaires aux développeurs, pour leur permettre de passer des appels avec succès à l’API Schema Registry.
+description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Les sections suivantes apportent des informations supplémentaires aux développeurs, pour leur permettre de passer des appels avec succès à l’API Schema Registry.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
+source-git-commit: b1edea734f58762cfa895f768ea8e2969fdd5c02
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,11 +23,11 @@ Ce guide de développement fournit des informations sur la manière de formater 
 
 ## Prise en main
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin de passer des appels avec succès à l’API [!DNL Schema Registry].
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin de passer des appels avec succès à l’API [!DNL Access Control].
 
 ### Lecture d&#39;exemples d&#39;appels API
 
-Ce guide fournit des exemples d&#39;appels API pour démontrer comment formater vos requêtes. Il s&#39;agit notamment de chemins d&#39;accès, d&#39;en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce guide fournit des exemples d&#39;appels API pour démontrer comment formater vos requêtes. Il s&#39;agit notamment de chemins d&#39;accès, d&#39;en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
