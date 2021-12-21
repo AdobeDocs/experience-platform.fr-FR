@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;connecteurs
 solution: Experience Platform
 title: Présentation des connecteurs source
 topic-legacy: overview
-description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 030789af0a049b54d6e271410836c08456a83441
+source-git-commit: bdc9b78666c3f67cd8794d132515fda5698c81ac
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 56%
@@ -14,21 +14,21 @@ ht-degree: 56%
 
 # Présentation des connecteurs source
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, les stockages dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, les stockages dans le cloud, des bases de données, etc.
 
 [!DNL Flow Service] est utilisé pour collecter et centraliser des données client à partir de diverses sources disparates dans Platform. Le service fournit une interface utilisateur et une API RESTful qui vous permettent de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent d’authentifier vos systèmes tiers, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
-Experience Platform vous permet de centraliser les données que vous collectez de sources disparates et d’utiliser les informations ainsi acquises pour aller plus loin.
+Experience Platform vous permet de centraliser les données que vous collectez de sources disparates et d’utiliser les informations ainsi acquises pour aller plus loin.
 
 ## Types de sources
 
-Les sources dans Experience Platform sont regroupées dans les catégories suivantes :
+Les sources dans Experience Platform sont regroupées dans les catégories suivantes :
 
 ### Applications Adobe
 
 Experience Platform permet d’ingérer des données à partir d’autres applications Adobe, notamment Adobe Analytics et Adobe Audience Manager. Consultez les documents connexes suivants pour plus d’informations :
 
-- [Présentation du connecteur Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
+- [Présentation du connecteur Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
 - [Création d’une connexion source Adobe Audience Manager dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Présentation de la connexion à la source de données Adobe Analytics Classifications](connectors/adobe-applications/classifications.md)
 - [Création d’une connexion à la source de données Adobe Analytics Classifications dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/classifications.md)
@@ -73,14 +73,14 @@ Les systèmes de gestion de la relation client (CRM) fournissent des données qu
 
 ### Succès des clients
 
-Experience Platform prend en charge l’ingestion de données provenant d’une application de succès client tierce. Consultez les documents connexes suivants pour plus d’informations :
+Experience Platform prend en charge l’ingestion de données provenant d’une application de succès client tierce. Consultez les documents connexes suivants pour plus d’informations :
 
 - [[!DNL Salesforce Service Cloud] connector](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] connector](connectors/customer-success/servicenow.md)
 
 ### Base de données
 
-Experience Platform prend en charge l’ingestion de données provenant d’une base de données tierce. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Experience Platform prend en charge l’ingestion de données provenant d’une base de données tierce. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL Amazon Redshift] connector](connectors/databases/redshift.md)
 - [[!DNL Apache Hive on Azure HDInsights] connector](connectors/databases/hive.md)
@@ -115,7 +115,7 @@ Experience Platform prend en charge l’ingestion de données à partir de votre
 
 ### Automatisation du marketing
 
-Experience Platform prend en charge l’ingestion de données provenant d’un système tiers d’automatisation du marketing. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Experience Platform prend en charge l’ingestion de données provenant d’un système tiers d’automatisation du marketing. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL HubSpot] connector](connectors/marketing-automation/hubspot.md)
 - [[!DNL MailChimp Campaign]](./tutorials/api/create/marketing-automation/mailchimp-campaign.md)
@@ -139,7 +139,7 @@ Experience Platform prend en charge l’ingestion de données à partir de sourc
 Experience Platform prend en charge l’ingestion de données à partir d’un système de protocoles tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL Generic OData]](connectors/protocols/odata.md)
-- [[!DNL Genereic REST API]](connectors/protocols/generic-rest.md)
+- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md)
 
 ## Contrôle d’accès des sources dans l’ingestion des données
 
