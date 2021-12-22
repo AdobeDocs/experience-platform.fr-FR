@@ -4,7 +4,7 @@ title: Type de données Consentements et Préférences
 description: Le type de données Consentement pour la confidentialité, la personnalisation et les préférences marketing est destiné à prendre en charge la collecte des autorisations et préférences client générées par les plateformes de gestion du consentement (CMP) et d’autres sources provenant de vos opérations de données.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '2039'
 ht-degree: 2%
@@ -21,8 +21,8 @@ Ce document couvre la structure et l&#39;utilisation prévue des champs fournis 
 
 Ce document nécessite une compréhension pratique de XDM et de l’utilisation des schémas dans [!DNL Experience Platform]. Avant de poursuivre, consultez la documentation suivante :
 
-* [Présentation du système XDM](http://www.adobe.com/go/xdm-home-en)
-* [Principes de base de la composition des schémas](http://www.adobe.com/go/xdm-schema-best-practices-en)
+* [Présentation du système XDM](https://www.adobe.com/go/xdm-home-en)
+* [Principes de base de la composition des schémas](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## Structure du type de données {#structure}
 
@@ -255,7 +255,7 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 
 Pour utiliser la variable [!UICONTROL Consentements et préférences] type de données pour ingérer des données de consentement de vos clients, vous devez créer un jeu de données basé sur un schéma qui contient ce type de données.
 
-Voir le tutoriel sur [création d’un schéma dans l’interface utilisateur](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment attribuer des types de données à des champs. Une fois que vous avez créé un schéma contenant un champ avec la propriété [!UICONTROL Consentements et préférences] type de données, voir la section sur [création d’un jeu de données](../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation du jeu de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
+Voir le tutoriel sur [création d’un schéma dans l’interface utilisateur](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment attribuer des types de données à des champs. Une fois que vous avez créé un schéma contenant un champ avec la propriété [!UICONTROL Consentements et préférences] type de données, voir la section sur [création d’un jeu de données](../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation du jeu de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
 
 >[!IMPORTANT]
 >

@@ -4,7 +4,7 @@ title: Groupe de champs de schéma de contenu et de préférences
 topic-legacy: overview
 description: Ce document présente un aperçu du groupe de champs de schéma Contenus et Préférences .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -178,7 +178,7 @@ Le `adID` le consentement représente le consentement du client pour savoir si u
 
 Pour utiliser la variable [!UICONTROL Consentements et préférences] groupe de champs pour ingérer les données de consentement de vos clients, vous devez créer un jeu de données basé sur un schéma qui contient ce groupe de champs.
 
-Voir le tutoriel sur [création d’un schéma dans l’interface utilisateur](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment affecter des groupes de champs à des champs. Une fois que vous avez créé un schéma contenant un champ avec la propriété [!UICONTROL Consentements et préférences] groupe de champs, voir la section sur [création d’un jeu de données](../../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation du jeu de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
+Voir le tutoriel sur [création d’un schéma dans l’interface utilisateur](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment affecter des groupes de champs à des champs. Une fois que vous avez créé un schéma contenant un champ avec la propriété [!UICONTROL Consentements et préférences] groupe de champs, voir la section sur [création d’un jeu de données](../../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation du jeu de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
 
 >[!IMPORTANT]
 >

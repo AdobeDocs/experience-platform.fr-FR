@@ -2,7 +2,7 @@
 title: Prise en main de l’API Reactor
 description: Découvrez comment commencer à utiliser l’API Reactor, y compris les étapes de génération des informations d’identification d’accès requises.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 100%
@@ -19,9 +19,9 @@ Pour utiliser l’[API Reactor](https://www.adobe.io/experience-platform-apis/re
 
 Ce guide explique comment utiliser Adobe Developer Console pour rassembler les valeurs de chacun de ces en-têtes afin que vous puissiez commencer à lancer des appels vers l’API Reactor.
 
-## Obtenir l’accès en tant que développeur à Adobe Experience Platform
+## Obtenir l’accès développeur à Adobe Experience Platform
 
-Avant de pouvoir générer des valeurs d’authentification pour l’API Reactor, vous devez disposer d’un accès développeur à Experience Platform. Pour obtenir un accès en tant que développeur, suivez les étapes de début du [tutoriel sur l’authentification des Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Une fois que vous êtes arrivé à l’étape « Générer les informations d’identification d’accès dans Adobe Developer Console », revenez à ce tutoriel pour générer les informations d’identification spécifiques à l’API Reactor.
+Avant de pouvoir générer des valeurs d’authentification pour l’API Reactor, vous devez disposer d’un accès développeur à Experience Platform. Pour obtenir l’accès développeur, suivez les étapes mentionnées au début du [tutoriel sur l’authentification dans Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Une fois arrivé à l’étape « Générer les informations d’identification d’accès dans Adobe Developer Console », revenez sur ce tutoriel pour générer les informations d’identification spécifiques à l’API Reactor.
 
 ## Génération des informations d’identification d’accès
 
@@ -37,13 +37,13 @@ Les étapes de génération de ces valeurs sont décrites en détail ci-dessous.
 
 ### Configuration ponctuelle
 
-Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) et connectez-vous avec votre Adobe ID. Suivez ensuite les étapes décrites dans le tutoriel sur la [création d’un projet vide](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) dans la documentation de Developer Console.
+Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) et connectez-vous avec votre Adobe ID. Suivez ensuite les étapes décrites dans le tutoriel sur la [création d’un projet vide](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) dans la documentation de Developer Console.
 
 Une fois que vous avez créé un projet, sélectionnez **Ajouter une API** dans l’écran **Aperçu du projet**.
 
 ![](../images/api/getting-started/add-api-button.png)
 
-L’écran **Ajouter une API** s’affiche. Sélectionnez l’**API Reactor Experience Platform** dans la liste des API disponibles avant de sélectionner **Suivant**.
+L’écran **Ajouter une API** s’affiche. Sélectionnez **Experience Platform Reactor API** dans la liste des API disponibles avant de sélectionner **Next (Suivant)**.
 
 ![](../images/api/getting-started/add-launch-api.png)
 
@@ -67,7 +67,7 @@ Sélectionnez les profils de produit souhaités dans la liste, puis sélectionne
 
 ![](../images/api/getting-started/select-product-profile.png)
 
-Une fois que l’API a été ajoutée au projet, la page du projet réapparaît sur la page Experience Platform de l’API Reactor. À partir de là, faites défiler l’écran jusqu’à la section **Compte de service (JWT)**, qui fournit les informations d’identification d’accès suivantes, requises dans tous les appels à l’API Reactor :
+Dès que l’API a été ajoutée au projet, le projet s’ouvre à nouveau sur la page de l’API Reactor Experience Platform. À partir de là, faites défiler l’écran jusqu’à la section **Compte de service (JWT)**, qui fournit les informations d’identification d’accès suivantes, requises dans tous les appels à l’API Reactor :
 
 * **ID CLIENT** : l’identifiant du client est l’identifiant requis `{API_KEY}` qui doit être fourni dans l’en-tête `x-api-key`.
 * **ID D’ORGANISATION** : l’ID d’organisation est la valeur `{IMS_ORG}` qui doit être utilisée dans l’en-tête `x-gw-ims-org-id`.
