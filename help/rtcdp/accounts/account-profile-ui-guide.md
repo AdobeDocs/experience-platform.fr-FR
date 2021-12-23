@@ -4,9 +4,9 @@ title: Guide de l’interface utilisateur des profils de compte
 description: Grâce aux profils de compte, l’édition B2B de Real-time Customer Data Platform vous permet d’unifier les informations de compte provenant de plusieurs sources. Ce guide fournit des détails sur l’interaction avec les profils de compte dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1193'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 98%
 
 Les profils de compte vous permettent d’unifier les informations de compte provenant de plusieurs sources. Cette vue unifiée d’un compte rassemble les données de vos nombreux canaux marketing et des différents systèmes actuellement utilisés par votre organisation pour stocker les informations du compte client. Ce document fournit un guide sur l’interaction avec les profils de compte à l’aide des fonctionnalités Real-time CDP, B2B Edition disponibles dans l’interface utilisateur d’Adobe Experience Platform.
 
-Pour en savoir plus sur la manière dont les profils de compte sont créés dans le cadre du processus B2B, consultez la section [tutoriel de bout en bout](../b2b-tutorial.md).
+Pour en savoir plus sur la manière dont les profils de compte sont créés dans le cadre du workflow B2B, reportez-vous au [tutoriel de bout en bout](../b2b-tutorial.md).
 
 ## Parcourir les profils de compte
 
