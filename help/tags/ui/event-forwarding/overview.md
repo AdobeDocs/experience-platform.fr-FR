@@ -3,7 +3,7 @@ title: Présentation du transfert dʼévénements
 description: Découvrez Adobe Experience Platform, qui vous permet dʼutiliser Platform Edge Network afin dʼexécuter des tâches sans modifier votre implémentation de balises.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 82ce288d55e57f05910fd8290c38f44b1846f48e
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 12%
@@ -38,7 +38,7 @@ Transfert d’événement associé à Adobe Experience Platform [SDK Web](../../
 
 * Augmentez la transparence et le contrôle des données envoyées à l’emplacement de l’ensemble des propriétés.
 
-## Différences entre le transfert dʼévénements et les balises
+## Différences entre le transfert dʼévénements et les balises {#differences-from-tags}
 
 En termes de configuration, le transfert d’événement utilise plusieurs des mêmes concepts que les balises, tels que : [rules](../managing-resources/rules.md), [éléments de données](../managing-resources/data-elements.md), et [extensions](../managing-resources/extensions/overview.md). La principale différence entre les deux peut être résumée comme suit :
 
@@ -47,7 +47,7 @@ En termes de configuration, le transfert d’événement utilise plusieurs des m
 
 Tandis que les balises collectent les données d’événement directement sur votre site ou application mobile native à l’aide des SDK Web et Mobile Platform, le transfert d’événement nécessite que les données d’événement soient déjà envoyées via Platform Edge Network afin de les transférer vers les destinations. En d’autres termes, vous devez mettre en oeuvre le SDK Web ou mobile Platform sur votre propriété numérique (par le biais de balises ou à l’aide de code brut) afin d’utiliser le transfert d’événement.
 
-### Propriétés
+### Propriétés {#properties}
 
 Le transfert d’événement conserve sa propre banque de propriétés séparées des balises, que vous pouvez afficher dans l’interface utilisateur de la collecte de données en sélectionnant **[!UICONTROL Transfert d’événement]** dans le volet de navigation de gauche.
 
@@ -61,13 +61,13 @@ Le transfert d’événement possède son propre catalogue d’extensions compat
 
 ![Extensions de transfert d’événement dans l’interface utilisateur de la collecte de données](../../images/ui/event-forwarding/overview/extensions.png)
 
-### Éléments de données
+### Éléments de données {#data-elements}
 
 Les types d’éléments de données disponibles dans le transfert d’événement sont limités au catalogue des éléments compatibles. [extensions](#extensions) qui les fournissent.
 
 Bien que les éléments de données eux-mêmes soient créés et configurés de la même manière dans le transfert d’événement que pour les balises, il existe d’importantes différences de syntaxe concernant la manière dont ils référencent des données à partir de Platform Edge Network.
 
-#### Référence aux données de Platform Edge Network
+#### Référence aux données de Platform Edge Network {#edge}
 
 Pour référencer des données à partir de Platform Edge Network, vous devez créer un élément de données qui fournit un chemin d’accès valide à ces données. Lors de la création de l’élément de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Core]** pour l’extension et **[!UICONTROL Chemin]** pour le type .
 
@@ -75,23 +75,23 @@ Le **[!UICONTROL Chemin]** la valeur de l’élément de données doit suivre le
 
 ![Exemple d’élément de données de type chemin pour le transfert d’événement](../../images/ui/event-forwarding/overview/data-reference.png)
 
-### Règles
+### Règles {#rules}
 
 La création de règles dans les propriétés de transfert d’événement fonctionne de la même manière que les balises. La principale différence réside dans le fait que vous ne pouvez pas sélectionner d’événements en tant que composants de règle. À la place, une règle de transfert d’événement traite tous les événements qu’elle reçoit de l’événement [datastream](../../../edge/fundamentals/datastreams.md) et transfère ces événements vers les destinations si certaines conditions sont remplies.
 
 ![Règles de transfert d’événement dans l’interface utilisateur de la collecte de données](../../images/ui/event-forwarding/overview/rules.png)
 
-#### Segmentation d’éléments de données en unités lexicales
+#### Segmentation d’éléments de données en unités lexicales {#tokenization}
 
 Dans les règles de balise, les éléments de données sont segmentés en unités lexicales avec une `%` au début et à la fin du nom de l’élément de données (par exemple : `%viewportHeight%`). Dans les règles de transfert d’événement, les éléments de données sont à la place segmentés en unités lexicales avec `{{` au début et `}}` à la fin du nom de l’élément de données (par exemple : `{{viewportHeight}}`).
 
 ![Exemple d’élément de données de type chemin pour le transfert d’événement](../../images/ui/event-forwarding/overview/tokenization.png)
 
-#### Séquence des actions de règle
+#### Séquence des actions de règle {#action-sequencing}
 
 Le [!UICONTROL Actions] d’une règle de transfert d’événement est toujours exécutée de manière séquentielle. Assurez-vous que l’ordre des actions est correct lorsque vous enregistrez une règle. Cette séquence d’exécution ne peut pas être exécutée de manière asynchrone comme elle le peut avec des balises .
 
-## Secrets
+## Secrets {#secrets}
 
 Le transfert d’événements vous permet de créer, gérer et stocker des secrets qui peuvent être utilisés pour vous authentifier sur les serveurs auxquels vous envoyez des données. Consultez le guide sur la [secrets](./secrets.md) sur les différents types de types de secrets disponibles et la manière dont ils sont implémentés dans l’interface utilisateur.
 
