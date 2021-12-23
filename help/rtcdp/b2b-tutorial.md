@@ -5,9 +5,9 @@ title: Prise en main de l’édition B2B de Real-time Customer Data Platform
 description: Utilisez ce scénario type comme exemple lors de la configuration de votre implémentation de l’édition B2B de Real-time Customer Data Platform.
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1205'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ Ce workflow de tutoriel repose sur plusieurs services Adobe Experience Platfor
 Dans le cadre de la configuration initiale, le service informatique de Bodea doit créer un schéma XDM pour s’assurer que ses données suivent un format standard lors de leur importation dans Platform et qu’elles sont exploitables dans différents services Platform et produits Adobe Experience Cloud (Adobe Analytics et Adobe Target, par exemple). 
 
 >!![WARNING]
-Vous devez suivre les modèles d’ingestion décrits dans la documentation des sources pertinentes à laquelle vous avez lié ce tutoriel. Il n’est pas garanti que les autres méthodes de mappage de champs fonctionnent.
+Vous devez suivre les modèles d’ingestion tels que décrits dans la documentation pertinente sur les sources dont vous trouverez les liens tout au long de ce tutoriel. Il n’est pas garanti que les autres méthodes de mappage de champs fonctionnent.
 
 Adobe Experience Platform vous permet de générer automatiquement les schémas et les espaces de noms requis pour les sources de données B2B. Cet outil permet de s’assurer que les schémas créés décrivent les données d’une manière structurée et réutilisable. Suivez la [documentation de l’utilitaire de génération automatique de schémas et d’espaces de noms B2B](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) pour une référence complète au processus de configuration. 
 
@@ -59,7 +59,7 @@ Pour savoir quels connecteurs source sont disponibles pour votre entreprise, vou
 
 Pour créer une connexion entre un compte Marketo et Platform, vous devez acquérir des informations d’authentification. Consultez le [guide sur l’obtention des informations d’authentification du connecteur source Marketo](../sources/connectors/adobe-applications/marketo/marketo-auth.md) pour obtenir des instructions détaillées. 
 
-Après l’acquisition des informations d’authentification, le marketeur Bodea crée une connexion entre le compte Marketo et son organisation IMS de plateforme. Consultez la documentation pour obtenir des instructions sur [comment connecter un compte Marketo à l’aide de l’interface utilisateur de Platform](../sources/tutorials/ui/create/adobe-applications/marketo.md). 
+Après l’acquisition des informations d’authentification, le marketeur Bodea crée une connexion entre le compte Marketo et son organisation IMS de Platform. Consultez la documentation pour obtenir des instructions sur [comment connecter un compte Marketo à l’aide de l’interface utilisateur de Platform](../sources/tutorials/ui/create/adobe-applications/marketo.md). 
 
 Le connecteur source du Marketo Engage fournit une fonctionnalité de mappage automatique pour faciliter le processus de mappage de tous vos champs de données à ceux des schémas nouvellement créés. 
 
