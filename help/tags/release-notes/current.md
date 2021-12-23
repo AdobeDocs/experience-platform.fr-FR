@@ -3,9 +3,9 @@ title: Notes de mise à jour
 description: Dernières notes de mise à jour pour les balises dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: 2056f7f6e7372fa1dee2e975a75e7ba3b8dfe518
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '658'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -17,23 +17,23 @@ ht-degree: 87%
 
 ## 15 novembre 2021
 
-**Acceptation du code ES6 dans les balises** - Les extensions et le code personnalisé contenant du code ES6 peuvent désormais être utilisés dans les balises. Dans le catalogue d’extensions, une étiquette ES6+ apparaît dans la carte de chaque extension contenant du code ES6. IE10 et IE11 ne prennent pas en charge le code ES6. Avant d’utiliser du code ES6 dans vos bibliothèques de balises, faites preuve de diligence raisonnable.
+**Acceptation du code ES6 dans les balises** - Les extensions et le code personnalisé contenant du code ES6 peuvent désormais être utilisés dans les balises. Dans le catalogue d’extensions, un libellé ES6+ apparaît dans la carte de chaque extension contenant du code ES6. IE10 et IE11 ne prennent pas en charge le code ES6. Avant d’utiliser du code ES6 dans vos bibliothèques de balises, faites preuve de diligence raisonnable.
 
-**Utilisation de Terser comme compresseur JavaScript** - Uglifier a été remplacé par Terser. À partir de cette version, toutes les bibliothèques de balises sont minimisées par Terser.
+**Utilisation de Terser comme compresseur JavaScript** - Uglifier a été remplacé par Terser. À partir de cette version, toutes les bibliothèques de balises sont minifiées par Terser.
 
 ## 21 octobre 2021
 
 **Envoi de données vers des points d’entrée authentifiés dans le transfert d’événements** - En utilisant des secrets, vous pouvez envoyer des données aux points d’entrée qui requièrent les protocoles d’authentification suivants :
 
-* **[!UICONTROL Jeton]** : chaîne unique de caractères représentant une valeur de jeton d’authentification.
-* **[!UICONTROL HTTP simple]** : contient deux attributs de chaîne (string) pour un nom d’utilisateur et un mot de passe.
-* **[!UICONTROL OAuth2]** : contient plusieurs attributs pour la prise en charge de la spécification [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749).
+* **[!UICONTROL Jeton]** - chaîne unique de caractères représentant une valeur de jeton d’authentification.
+* **[!UICONTROL HTTP simple]** - contient deux attributs de chaîne (string) pour un nom d’utilisateur et un mot de passe.
+* **[!UICONTROL OAuth2]** - contient plusieurs attributs pour la prise en charge de la spécification [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749).
 
 Pour plus d’informations, voir les guides sur [la gestion des secrets dans l’interface utilisateur de collecte de données](../ui/event-forwarding/secrets.md) ou [la gestion des secrets dans l’API Reactor](../api/guides/secrets.md).
 
 ## 19 juillet 2021
 
-**Ajustements du droit « Gérer les propriétés »** : le droit Gérer les propriétés rencontrait un problème qui permettait à un utilisateur de créer une propriété, mais ne lui permettait pas de la voir une fois créée (comme indiqué dans le [fil de la communauté](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176?profile.language=fr)). Un correctif est disponible et les autorisations sont désormais appliquées comme décrit dans l’article.
+**Ajustements du droit « Gérer les propriétés »** - le droit Gérer les propriétés rencontrait un problème qui permettait à un utilisateur de créer une propriété, mais ne lui permettait pas de la voir une fois créée (comme indiqué dans le [fil de la communauté](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176?profile.language=fr)). Un correctif est disponible et les autorisations sont désormais appliquées comme décrit dans l’article.
 
 >[!NOTE]
 >
@@ -41,15 +41,15 @@ Pour plus d’informations, voir les guides sur [la gestion des secrets dans l�
 
 ## 17 mai 2021
 
-**Amélioration de la gestion des modifications non enregistrées** : avant, lorsque vous quittiez une vue de paramètres (extensions, éléments de données et composants de règle), une invite vous demandait si vous souhaitiez ignorer vos modifications. Cependant, la logique employée pour ce processus n’était pas optimale, si bien que la plupart du temps, il vous était demandé d’enregistrer vos modifications même si vous n’en aviez pas effectué. Cela a été corrigé. Désormais, vous ne devriez voir cette invite que lorsque vous avez réellement apporté des modifications.
+**Amélioration de la gestion des modifications non enregistrées** - avant, lorsque vous quittiez une vue de paramètres (extensions, éléments de données et composants de règle), une invite vous demandait si vous souhaitiez ignorer vos modifications. Cependant, la logique employée pour ce processus n’était pas optimale, si bien que la plupart du temps, il vous était demandé d’enregistrer vos modifications même si vous n’en aviez pas effectué. Cela a été corrigé. Désormais, vous ne devriez voir cette invite que lorsque vous avez réellement apporté des modifications.
 
 ## 10 mai 2021
 
-**Publication simplifiée** : la création dans l’environnement d’évaluation n’est plus nécessaire. Si vous disposez des droits appropriés, vous pouvez ignorer entièrement l’étape soumission et publier directement à partir de l’étape de développement, à condition que la version soit correctement créée et qu’il n’y ait pas d’autres bibliothèques en amont.
+**Publication simplifiée** - la création dans l’environnement d’évaluation n’est plus nécessaire. Si vous disposez des droits appropriés, vous pouvez ignorer entièrement l’étape soumission et publier directement à partir de l’étape de développement, à condition que la version soit correctement créée et qu’il n’y ait pas d’autres bibliothèques en amont.
 
 ## 22 avril 2021
 
-**Collecte de données dans Adobe Experience Platform** : l’envoi de données à Adobe ne consiste pas seulement à déployer des balises sur votre site ou une configuration sur votre application.  L’utilisation des SDK Experience Platform et du réseau Edge nécessite l’accès à d’autres fonctionnalités de Platform. Auparavant, cela nécessitait une connexion à divers outils. Désormais, ils sont réunis en un seul endroit.
+**Collecte de données dans Adobe Experience Platform** - l’envoi de données à Adobe ne consiste pas seulement à déployer des balises sur votre site ou une configuration sur votre application. L’utilisation des SDK Experience Platform et du réseau Edge nécessite l’accès à d’autres fonctionnalités de Platform. Auparavant, cela nécessitait une connexion à divers outils. Désormais, ils sont réunis en un seul endroit.
 
 La collecte de données dans Platform est constituée de six fonctionnalités. En outre, votre navigation nouvellement rationalisée ne contient que les éléments accessibles par votre société et votre compte utilisateur. Certains noms de fonctionnalités ont également été mis à jour pour correspondre aux modèles de nommage d’Experience Platform.
 
@@ -70,6 +70,6 @@ Retrouvez d’autres mises à jour au fur et à mesure de l’évolution d’Exp
 
 ## 13 janvier 2021
 
-**Disponibilité générale : transfert d’événements** Envoyez les données au niveau de l’événement à Adobe Experience Platform Edge Network, puis utilisez le transfert d’événements pour transformer, enrichir et envoyer ces données à un point d’entrée autre qu’Adobe à l’aide des serveurs Adobe, et non du client, avec une faible latence.
+**Disponibilité générale : transfert d’événements** - Envoyez les données au niveau de l’événement à Adobe Experience Platform Edge Network, puis utilisez le transfert d’événements pour transformer, enrichir et envoyer ces données à un point d’entrée autre qu’Adobe à l’aide des serveurs Adobe, et non du client, avec une faible latence.
 
 Pour plus d’informations, consultez la [présentation du transfert d’événements](../ui/event-forwarding/overview.md) et le [guide de prise en main](../ui/event-forwarding/getting-started.md).
