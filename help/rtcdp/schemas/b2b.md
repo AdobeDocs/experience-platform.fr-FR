@@ -3,9 +3,9 @@ title: Schémas dans l’édition B2B de Real-time Customer Data Platform
 description: Présentation du rôle des schémas de modèle de données d’expérience (XDM) dans l’édition B2B de Real-time Customer Data Platform.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '235'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ Les classes standard suivantes sont fournies dans l’édition B2B de Real-time 
 * [Liste XDM Business Marketing](../../xdm/classes/b2b/business-marketing-list.md)
 * [Membres de la liste XDM Business Marketing](../../xdm/classes/b2b/business-marketing-list-members.md)
 
-Pour comprendre comment les schémas s’intègrent à votre workflow B2B, reportez-vous à la section [tutoriel de bout en bout](../b2b-tutorial.md).
+Pour comprendre comment les schémas s’intègrent à votre workflow B2B, reportez-vous au [tutoriel de bout en bout](../b2b-tutorial.md).
 
 Pour savoir comment créer une relation multiple-à-un entre deux schémas, reportez-vous au tutoriel sur la [définition des relations de schéma B2B](../../xdm/tutorials/relationship-b2b.md).
 
