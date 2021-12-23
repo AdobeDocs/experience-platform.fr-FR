@@ -3,10 +3,10 @@ keywords: extensions de balise;extension de balise;destinations de lancement ext
 title: Extensions de balises dans Adobe Experience Platform
 description: Adobe Experience Platform offre la nouvelle génération de fonctionnalités de gestion des balises d’Adobe. Platform vous offre un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
+source-git-commit: fe71294cb73a25c2c4708b0a6ebe04fc2b97afdf
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 35%
+source-wordcount: '486'
+ht-degree: 25%
 
 ---
 
@@ -21,23 +21,33 @@ Pour une présentation des balises, reportez-vous aux ressources ci-dessous :
 
 ## Comment trouver des extensions de balise dans l’interface de Platform {#how-to-find-extensions-in-interface}
 
-Pour trouver les extensions dans l’interface de Platform, accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]** et sélectionnez **[!UICONTROL Extensions]** dans le filtre **[!UICONTROL Types]** .
+Pour trouver les extensions dans l’interface de Platform, accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]** et sélectionnez **[!UICONTROL Extensions]** dans le **[!UICONTROL Types]** filtre.
 
 ![Filtre des extensions dans l’interface](../../assets/catalog/launch-extensions/filter.png)
 
 ## Fonctionnement des extensions de balise {#how-extensions-work}
 
-Les extensions transfèrent les données d’événement brutes à plusieurs types de destinations. Considérez les extensions comme un type de destination **Transfert d’événement**. Il s’agit d’un type d’intégration aux plateformes de destination plus simple et qui ne transfère que les données d’événement brutes. Par exemple, l’[extension de personnalisation Gainsight](../personalization/gainsight.md) ou l’[extension de voix du client Confirmit](../voice/confirmit-digital-feedback.md).
+A [extension de balise](../../../tags/home.md#extensions) est un module de code qui améliore les fonctionnalités d’un site web ou d’une application mobile. Cela peut inclure l’envoi de données d’événement brutes à une destination comme [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) mais ils peuvent aussi remplir d&#39;autres fonctions.
 
-**Les destinations d’** exportation de profils/segments dans Adobe Experience Platform capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Par exemple, la [destination de stockage dans le cloud Amazon S3](../cloud-storage/amazon-s3.md) ou la [destination publicitaire Google Display &amp; Video 360](../advertising/google-dv360.md).
+Il est important de différencier les extensions de transfert de balises et d’événements. Les extensions affichées dans l’interface utilisateur des destinations Platform sont les suivantes : *extensions de balise*. Pour plus d’informations sur la variable [différences entre les balises et le transfert d’événement](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
 
-![Comparaison des extensions de balise avec d’autres destinations](../../assets/common/launch-and-other-destinations.png)
+
+
+<!--
+
+Extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](../personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](../voice/confirmit-digital-feedback.md).
+
+**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
+
+![Tag extensions compared to other destinations](../../assets/common/launch-and-other-destinations.png)
+
+-->
 
 ## Avantages des extensions de balise {#extensions-benefits}
 
 Les fonctionnalités de balise de Platform sont gratuites pour les clients Experience Cloud existants. Le système simplifie le déploiement des balises sur votre site web au moyen d’extensions conviviales que vous pouvez installer, configurer, mettre à jour et supprimer. Les balises n’ont qu’une faible empreinte sur votre site web et vous permettent de charger rapidement vos pages.
 
-Bien que vous ne puissiez pas activer les segments pour baliser les extensions, vous pouvez configurer des règles afin de ne transférer les données d’événement que dans certaines situations. Cette puissante fonctionnalité vous permet de transférer les données d’événement uniquement dans certaines situations, plutôt que d’envoyer les données d’événement à chaque interaction. Pour plus d’informations, consultez les règles dans la [documentation sur les balises](../../../tags/ui/managing-resources/rules.md).
+Bien que vous ne puissiez pas activer les segments pour baliser les extensions, vous pouvez configurer des règles afin de ne transférer les données d’événement que dans certaines situations. Cette puissante fonctionnalité vous permet de transférer les données d’événement uniquement dans certaines situations, plutôt que d’envoyer les données d’événement à chaque interaction. Pour plus d’informations, reportez-vous aux règles de la section [documentation sur les balises](../../../tags/ui/managing-resources/rules.md).
 
 ## Exemples d’utilisation des extensions de  {#extensions-use-cases}
 
