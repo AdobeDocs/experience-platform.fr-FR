@@ -69,7 +69,8 @@ Après l’acquisition des informations d’authentification, le marketeur Bodea
 Le connecteur source du Marketo Engage fournit une fonctionnalité de mappage automatique pour faciliter le processus de mappage de tous vos champs de données à ceux des schémas nouvellement créés. 
 
 >[!NOTE]
-Si vous avez créé des groupes de champs personnalisés dans vos schémas XDM, il se peut que vous ayez des champs non connectés à ce stade du processus. Veillez à vérifier toutes les valeurs qui renseignent vos groupes de champs personnalisés. 
+>
+>Si vous avez créé des groupes de champs personnalisés dans vos schémas XDM, il se peut que vous ayez des champs non connectés à ce stade du processus. Veillez à vérifier toutes les valeurs qui renseignent vos groupes de champs personnalisés. 
 
 Le marketeur Bodea vérifie que tous les groupes de champs sont correctement mappés et poursuit le processus de configuration des sources en initialisant un flux de données. En créant un flux de données pour importer les données Marketo, les données entrantes peuvent être utilisées par les services Platform en aval. Au cours du processus d’ingestion initial, les données sont importées dans Experience Platform sous la forme d’un lot. Ensuite, les données ingérées suivantes sont diffusées en continu dans Profile avec des mises à jour en temps quasi réel. 
 
@@ -96,7 +97,8 @@ Dans l’espace de travail [!UICONTROL Segments] de l’interface utilisateur de
 ![Activation du segment vers une destination](./assets/b2b-tutorial/activate-to-destination.png)
 
 >[!NOTE]
-Consultez le tutoriel sur l’[activation d’un segment vers une destination](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=fr) pour obtenir des instructions complètes sur la manière d’y parvenir. 
+>
+>Consultez le tutoriel sur l’[activation d’un segment vers une destination](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=fr) pour obtenir des instructions complètes sur la manière d’y parvenir. 
 
 Le marketeur Bodea active le segment vers la destination Marketo, ce qui lui permet de transférer les données de segment de Platform vers Marketo Engage sous la forme d’une liste statique. Consultez le guide sur la [Destination Marketo](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=fr) pour plus d’informations.
 
