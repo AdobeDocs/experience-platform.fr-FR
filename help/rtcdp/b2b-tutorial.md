@@ -30,8 +30,9 @@ Ce workflow de tutoriel repose sur plusieurs services Adobe Experience Platfor
 
 Dans le cadre de la configuration initiale, le service informatique de Bodea doit créer un schéma XDM pour s’assurer que ses données suivent un format standard lors de leur importation dans Platform et qu’elles sont exploitables dans différents services Platform et produits Adobe Experience Cloud (Adobe Analytics et Adobe Target, par exemple). 
 
->!![WARNING]
-Vous devez suivre les modèles d’ingestion tels que décrits dans la documentation pertinente sur les sources dont vous trouverez les liens tout au long de ce tutoriel. Il n’est pas garanti que les autres méthodes de mappage de champs fonctionnent.
+>![WARNING]
+>
+>Vous devez suivre les modèles d’ingestion tels que décrits dans la documentation pertinente sur les sources dont vous trouverez les liens tout au long de ce tutoriel. Il n’est pas garanti que les autres méthodes de mappage de champs fonctionnent.
 
 Adobe Experience Platform vous permet de générer automatiquement les schémas et les espaces de noms requis pour les sources de données B2B. Cet outil permet de s’assurer que les schémas créés décrivent les données d’une manière structurée et réutilisable. Suivez la [documentation de l’utilitaire de génération automatique de schémas et d’espaces de noms B2B](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) pour une référence complète au processus de configuration. 
 
@@ -42,20 +43,24 @@ Dans l’interface utilisateur d’Adobe Experience Platform, le marketeur Bod
 L’utilitaire de génération automatique a défini la structure de modèle de données pour les schémas à l’aide des classes XDM B2B standard (telles que [XDM Business Account](../xdm/classes/b2b/business-account.md) et [XDM Business Opportunity](../xdm/classes/b2b/business-opportunity.md)) qui capturent les entités de données B2B fondamentales. En outre, les schémas B2B générés automatiquement et construits sur ces classes ont des relations préétablies qui permettent des cas d’utilisation de segmentation avancés. Les groupes de champs supplémentaires requis pour la structure de données peuvent facilement être créés ici via l’interface utilisateur. Pour plus d’informations, consultez le [guide de l’interface utilisateur XDM, section Ajout de groupes de champs à un schéma](../xdm/ui/resources/schemas.md#add-field-groups). 
 
 >[!NOTE]
-Si vous n’utilisez pas l’utilitaire de génération automatique ou si une nouvelle relation doit être créée, consultez le tutoriel sur la [création de relations entre les schémas B2B](../xdm/tutorials/relationship-b2b.md).
+>
+>Si vous n’utilisez pas l’utilitaire de génération automatique ou si une nouvelle relation doit être créée, consultez le tutoriel sur la [création de relations entre les schémas B2B](../xdm/tutorials/relationship-b2b.md).
 
 Le profil client en temps réel fusionne des données provenant de sources disparates afin de créer des profils consolidés des principales entités B2B. Puisque les profils sont générés en fonction d’une seule classe, l’utilitaire de génération automatique configure des relations entre les schémas en fonction de cas d’utilisation métier courants. Par conséquent, l’équipe Bodea est maintenant prête à ingérer des données en fonction de leurs schémas B2B. 
 
 >[!NOTE]
-Les espaces de noms d’identité par défaut, les clés primaires et les relations créés pour les schémas par l’utilitaire de génération automatique sont facilement détectables dans l’espace de travail des schémas. 
-![affichage par défaut de l’identité du schéma et des relations dans l’interface utilisateur](./assets/b2b-tutorial/schema-identity-relationship.png)
+>
+>Les espaces de noms d’identité par défaut, les clés primaires et les relations créés pour les schémas par l’utilitaire de génération automatique sont facilement détectables dans l’espace de travail des schémas. 
+>
+>![affichage par défaut de l’identité du schéma et des relations dans l’interface utilisateur](./assets/b2b-tutorial/schema-identity-relationship.png)
 
 ## Ingestion de données dans Experience Platform
 
 Ensuite, le marketeur Bodea utilise le [connecteur Marketo Engage](../sources/connectors/adobe-applications/marketo/marketo.md) pour ingérer des données dans Platform en vue de les utiliser dans des services en aval. Vous pouvez également ingérer des données à l’aide de l’une des sources approuvées pour l’édition B2B de Real-time CDP. 
 
 >[!NOTE]
-Pour savoir quels connecteurs source sont disponibles pour votre entreprise, vous pouvez afficher le catalogue de sources dans l’interface utilisateur de Platform. Pour accéder au catalogue, sélectionnez **Sources** dans le volet de navigation de gauche, puis sélectionnez **Catalogue**. 
+>
+>Pour savoir quels connecteurs source sont disponibles pour votre entreprise, vous pouvez afficher le catalogue de sources dans l’interface utilisateur de Platform. Pour accéder au catalogue, sélectionnez **Sources** dans le volet de navigation de gauche, puis sélectionnez **Catalogue**. 
 
 Pour créer une connexion entre un compte Marketo et Platform, vous devez acquérir des informations d’authentification. Consultez le [guide sur l’obtention des informations d’authentification du connecteur source Marketo](../sources/connectors/adobe-applications/marketo/marketo-auth.md) pour obtenir des instructions détaillées. 
 
@@ -77,7 +82,8 @@ Dans cet exemple, le segment trouve toutes les personnes qui travaillent dans le
 ![Segment de cas d’utilisation](./assets/b2b-tutorial/use-case-segment.png)
 
 >[!NOTE]
-Pour plus d’informations sur la création de segments afin d’évaluer vos données, consultez le [guide de l’interface utilisateur du créateur de segments](../segmentation/ui/segment-builder.md). Pour des cas d’utilisation de la segmentation B2B plus spécifiques, reportez-vous à la [présentation de la segmentation pour l’édition B2B de Real-time CDP](./segmentation/b2b.md). 
+>
+>Pour plus d’informations sur la création de segments afin d’évaluer vos données, consultez le [guide de l’interface utilisateur du créateur de segments](../segmentation/ui/segment-builder.md). Pour des cas d’utilisation de la segmentation B2B plus spécifiques, reportez-vous à la [présentation de la segmentation pour l’édition B2B de Real-time CDP](./segmentation/b2b.md). 
 
 Le créateur de segments vous permet de créer une audience vendable à partir des données du profil client en temps réel et d’afficher les estimations de votre audience potentielle en fonction de la combinaison des attributs, événements et audiences existantes que vous avez définis. 
 
