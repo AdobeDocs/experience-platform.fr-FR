@@ -1,11 +1,11 @@
 ---
 title: Notes de mise à jour de l’extension Core
-description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
+description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
-workflow-type: ht
-source-wordcount: '1543'
-ht-degree: 100%
+source-git-commit: 5441c6ca0c15996ee06afa2c795ec5ae6e030f35
+workflow-type: tm+mt
+source-wordcount: '1565'
+ht-degree: 98%
 
 ---
 
@@ -13,7 +13,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+
+## 4 janvier 2022
+
+v3.3.0
+
+* Modifie la variable [Déclencher l’action d’appel direct](./overview.md#direct-call-action) afin que vous puissiez fournir des informations d’événement personnalisé à envoyer aux règles d’appel direct.
 
 ## 8 octobre 2021
 
@@ -89,9 +95,9 @@ v2.0.5
 
 v2.0.4
 
-* Ajout de la prise en charge des éléments de données dans plusieurs champs - La prise en charge des éléments de données a été ajoutée aux événements suivants : « Temps sur la page », « Entrée dans la fenêtre dʼaffichage », « Survol » et « Temps de lecture du média ». En plus des conditions suivantes : « Temps sur le site » et « Comparaison de valeur »
+* Ajout de la prise en charge des éléments de données dans plusieurs champs - La prise en charge des éléments de données a été ajoutée aux événements suivants : « Temps sur la page », « Entrée dans la fenêtre dʼaffichage », « Survol » et « Temps de lecture du média ». En plus des conditions suivantes : « Temps sur le site » et « Comparaison de valeur »
 * Ajout de la prise en charge du comportement par défaut pour Ctrl/Cmd + Clic et pour le clic central de la souris lors de lʼutilisation du délai de lien
-* **Le délai de lien avec lʼévénement Clic « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) pour Adobe Experience Platform.
+* **Le délai de lien avec lʼévénement Clic « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) pour Adobe Experience Platform.
 
 ## 6 janvier 2021
 

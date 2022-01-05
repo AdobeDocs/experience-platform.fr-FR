@@ -1,11 +1,11 @@
 ---
 title: Présentation de l’extension Core
-description: Découvrez l’extension de balise Core dans Adobe Experience Platform.
+description: Découvrez lʼextension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
-workflow-type: ht
-source-wordcount: '5362'
-ht-degree: 100%
+source-git-commit: 04404ff9ab8d623214b96ec65342d2e8d11e85a6
+workflow-type: tm+mt
+source-wordcount: '5492'
+ht-degree: 96%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 L’extension de balise Core est l’extension par défaut disponible avec Adobe Experience Platform.
 
@@ -128,9 +128,13 @@ L’événement se déclenche si un type d’événement personnalisé se produi
 
 L’événement se déclenche en cas de modification d’un élément de données spécifié. Vous devez fournir un nom pour l’élément de données. Vous pouvez sélectionner lʼélément de données en saisissant son nom dans le champ de texte ou en sélectionnant lʼicône de lʼélément de données à droite du champ de texte et en effectuant ensuite une sélection dans une liste fournie dans la boîte de dialogue qui sʼaffiche.
 
-#### Direct Call
+#### Direct Call {#direct-call-event}
 
-L’événement appel direct contourne les systèmes de recherche et de détection des événements. Les règles d’appel direct conviennent parfaitement aux situations dans lesquelles vous devez indiquer à Platform ce qui se passe exactement. Elles s’avèrent également très utiles lorsque Platform ne peut pas détecter un événement dans le modèle DOM (dans le cas d’Adobe Flash, par exemple). Indiquez la chaîne `_satellite.track` dans le champ de texte de l’identifiant.
+Un événement d’appel direct contourne les systèmes de recherche et de détection des événements. Les règles d’appel direct sont adaptées aux situations dans lesquelles vous souhaitez indiquer au système ce qui se passe exactement. Elles s’avèrent également très utiles lorsque le système ne peut pas détecter un événement dans le modèle DOM.
+
+Lors de la définition d’un événement d’appel direct, vous devez spécifier une chaîne qui agira comme identifiant de cet événement. Si une [déclencher une action d’appel direct](#direct-call-action) contenant le même identifiant est déclenché, toutes les règles d’événement d’appel direct écoutant cet identifiant s’exécuteront.
+
+![Capture d’écran d’un événement d’appel direct dans l’interface utilisateur de la collecte de données](../../../images/extensions/core/direct-call-event.png)
 
 #### Element Exists
 
@@ -144,7 +148,7 @@ Voir la section [Options](#options) pour plus d’informations sur les paramètr
 
 #### History change
 
-L’événement se déclenche si un événement pushState ou hashchange se produit. Il n’existe aucun paramètre pour ce type d’événement.
+Lʼévénement se déclenche si un événement « pushState » ou « hashchange » se produit. Il n’existe aucun paramètre pour ce type d’événement.
 
 #### Time-Spent on Page
 
@@ -275,7 +279,7 @@ Les opérateurs de comparaison de valeurs suivants sont disponibles :
 
 **Equal :** la condition renvoie true (vrai) si les deux valeurs sont égales à l’aide d’une comparaison non stricte (dans JavaScript, l’opérateur ==). Les valeurs peuvent être de n’importe quel type. Lorsque vous saisissez un mot tel que _true_ (vrai), _false_ (faux), _null_ (nul) ou _undefined_ (non défini) dans un champ de valeur, le mot est comparé en tant que chaîne et n’est pas converti vers son équivalent JavaScript.
 
-**Does Not Equal** : la condition renvoie true (vrai) si les deux valeurs ne sont pas égales à l’aide d’une comparaison non stricte (dans JavaScript, l’opérateur !=). Les valeurs peuvent être de n’importe quel type. Lorsque vous saisissez un mot tel que _true_ (vrai), _false_ (faux), _null_ (nul) ou _undefined_ (non défini) dans un champ de valeur, le mot est comparé en tant que chaîne et n’est pas converti vers son équivalent JavaScript.
+**Does Not Equal** (N’est pas égal à) : la condition renvoie true (vrai) si les deux valeurs ne sont pas égales à l’aide d’une comparaison non stricte (dans JavaScript, l’opérateur !=). Les valeurs peuvent être de n’importe quel type. Lorsque vous saisissez un mot tel que _true_ (vrai), _false_ (faux), _null_ (nul) ou _undefined_ (non défini) dans un champ de valeur, le mot est comparé en tant que chaîne et n’est pas converti vers son équivalent JavaScript.
 
 **Contains :** la condition renvoie true (vrai) si la première valeur contient la seconde valeur. Les nombres sont convertis en chaînes. Pour toute autre valeur qu’un nombre ou une chaîne, la condition renvoie false (faux).
 
@@ -540,7 +544,7 @@ Indiquez le pourcentage de fois où la condition renvoie true (vrai).
 
 Cette section décrit les types d’actions disponibles dans l’extension Core.
 
-### Custom Code
+### Code personnalisé
 
 >[!NOTE]
 >
@@ -566,7 +570,7 @@ Exécutez la règle dans un navigateur et examinez l’objet d’événement con
 
 ### Traitement de l’action Custom Code
 
-L’extension Core, disponible pour tous les utilisateurs d’Adobe Experience Platform, contient une action Custom Code pour l’exécution du code JavaScript ou HTML fourni par l’utilisateur. Il est souvent utile que les utilisateurs comprennent comment les règles avec les actions Custom Code sont traitées.
+L’extension Core, disponible pour tous les utilisateurs d’Adobe Experience Platform, contient une action Code personnalisé pour l’exécution du code JavaScript ou HTML fourni par l’utilisateur. Il est souvent utile que les utilisateurs comprennent comment les règles avec les actions Custom Code sont traitées.
 
 #### Règles utilisant les événements de haut ou de bas de page
 
@@ -588,7 +592,7 @@ Lorsque l’option « Run rule components in sequence » des paramètres de pr
 
 *JavaScript*
 
-Lors de la création d’une action Custom Code JavaScript, vous pouvez renvoyer une [promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) depuis votre action. L’action suivante de la règle sera exécutée uniquement lorsque la promesse renvoyée sera résolue. Si la promesse est refusée, les actions suivantes de la règle ne seront pas exécutées.
+Lors de la création d’une action Custom Code JavaScript, vous pouvez renvoyer une [promesse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) depuis votre action. L’action suivante de la règle sera exécutée uniquement lorsque la promesse renvoyée sera résolue. Si la promesse est refusée, les actions suivantes de la règle ne seront pas exécutées.
 
 >[!NOTE]
 >
@@ -625,6 +629,14 @@ setTimeout(function() {
 }, 1000);
 </script>
 ```
+
+### Déclencher l’appel direct {#direct-call-action}
+
+Cette action déclenche toutes les règles qui utilisent un [événement d’appel direct](#direct-call-event). Lors de la configuration de l’action, vous devez fournir la chaîne d’identifiant de l’événement d’appel direct que vous souhaitez déclencher. Vous pouvez également transmettre des données à l’événement d’appel direct par le biais d’une `detail` qui peut contenir un ensemble personnalisé de paires clé-valeur.
+
+![Capture d’écran d’une action Déclencher un appel direct dans l’interface utilisateur de la collecte de données](../../../images/extensions/core/direct-call-action.png)
+
+L’action correspond directement à la variable [`track` method](../../../ui/client-side/satellite-object.md?lang=en#track) dans le `satellite` , accessible par le code côté client.
 
 ## Types d’éléments de données de l’extension Core
 
@@ -787,7 +799,7 @@ Vous pouvez sélectionner l’un des attributs de page suivants à utiliser dans
 * URL
 * Hostname
 * Pathname
-* Protocol
+* Protocole
 * Référent
 * Title
 
