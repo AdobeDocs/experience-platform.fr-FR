@@ -5,27 +5,27 @@ title: Type de données de l’adresse électronique
 topic-legacy: overview
 description: Ce document fournit un aperçu du type de données XDM Adresse électronique.
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: fe6abe468025ab3373f802954aedceeb1af625fe
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '236'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL Type de données ] d’adresse électronique
+# [!UICONTROL Adresse électronique] type de données
 
-[!UICONTROL L’] adresse électronique est un type de données XDM standard qui décrit les détails d’une adresse électronique.
+[!UICONTROL Adresse électronique] est un type de données XDM (Experience Data Model) standard qui décrit les détails d’une adresse électronique.
 
 <img src="../images/data-types/email-address.png" width="450" /><br />
 
 | Propriété | Description |
 | --- | --- |
-| `address` | Adresse technique de l’email telle que définie couramment dans la norme RFC2822 et les normes ultérieures (par exemple, `name@domain.com`). |
-| `label` | Informations d’affichage supplémentaires qui peuvent être disponibles. Par exemple, si un email comporte un affichage d’adresse enrichie Microsoft Outlook de `John Smith smithjr@company.uk`, `John Smith` est placé dans ce champ. |
-| `primary` | Indique s’il s’agit de l’adresse électronique Principale de l’individu. Un profil ne peut avoir qu’une seule `primary` adresse électronique à un moment donné. |
+| `address` | Adresse technique de l’email telle que généralement définie dans la norme RFC2822 et les normes ultérieures (par exemple : `name@domain.com`).<br><br>Dans XDM, les adresses électroniques doivent contenir un domaine de niveau supérieur valide pour passer la validation. Reportez-vous aux [document](https://data.iana.org/TLD/tlds-alpha-by-domain.txt) pour obtenir une liste complète des domaines de niveau supérieur valides tels que définis par l’Internet Assigned Numbers Authority (IANA). |
+| `label` | Informations d’affichage supplémentaires qui peuvent être disponibles. Par exemple, si un courrier électronique contient une adresse Microsoft Outlook enrichie de `John Smith smithjr@company.uk`, `John Smith` serait placé dans ce champ. |
+| `primary` | Indique s’il s’agit de l’adresse électronique Principale de l’individu. Un profil ne peut avoir qu’un seul `primary` adresse électronique à un moment donné. |
 | `status` | Indique si l’adresse électronique peut être actuellement utilisée. |
-| `statusReason` | Description de la balise `status` actuelle. |
-| `type` | La façon dont le compte est associé à la personne (par exemple, `work` ou `personal`). |
+| `statusReason` | Description de la variable active `status`. |
+| `type` | La façon dont le compte est associé à la personne (par exemple `work` ou `personal`). |
 
 {style=&quot;table-layout:auto&quot;}
 
