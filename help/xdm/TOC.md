@@ -4,10 +4,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes de modèle de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
-source-git-commit: db7e8de8e2669fae7fdf21d10042b7a71c63a8f6
+source-git-commit: 065f5ef9d3d3be0fcab84d7518d8a00e4cd551cf
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 30%
+source-wordcount: '405'
+ht-degree: 38%
 
 ---
 
@@ -18,28 +18,29 @@ ht-degree: 30%
 * Schémas {#schema}
    * [Principes de base de la composition des schémas](schema/composition.md)
    * [Bonnes pratiques relatives à la modélisation des données](schema/best-practices.md)
+   * [Données sensibles et personnelles](./schema/sensitive-and-personal-data.md)
    * [Contraintes de type de champ XDM](schema/field-constraints.md)
    * [Espace de noms dans XDM](./schema/namespaces.md)
-   * [Dictionnaire des champs XDM](schema/field-dictionary.md)
    * Modèles de données du secteur {#industries}
       * [Présentation](./schema/industries/overview.md)
       * [Vente au détail](./schema/industries/retail.md)
       * [Services financiers](./schema/industries/financial.md)
       * [Télécommunications](./schema/industries/telecom.md)
       * [Voyage et hospitalité](./schema/industries/travel-hospitality.md)
+   * [Dictionnaire des champs XDM](schema/field-dictionary.md)
 * Classes {#classes}
    * [XDM Individual Profile](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Définition de segment](./classes/segment-definition.md)
    * Classes B2B {#b2b}
-      * [Compte d’entreprise XDM](./classes/b2b/business-account.md)
+      * [Compte d’entreprise XDM](./classes/b2b/business-account.md)
       * [Relation avec la personne du compte d’entreprise XDM](./classes/b2b/business-account-person-relation.md)
-      * [Campagne commerciale XDM](./classes/b2b/business-campaign.md)
+      * [XDM Business Campaign](./classes/b2b/business-campaign.md)
       * [Membres de XDM Business Campaign](./classes/b2b/business-campaign-members.md)
-      * [Opportunités commerciales XDM](./classes/b2b/business-opportunity.md)
-      * [Relation de personne avec les opportunités commerciales XDM](./classes/b2b/business-opportunity-person-relation.md)
+      * [XDM Business Opportunity](./classes/b2b/business-opportunity.md)
+      * [Relation avec la personne de XDM Business Opportunity](./classes/b2b/business-opportunity-person-relation.md)
       * [Liste XDM Business Marketing](./classes/b2b/business-marketing-list.md)
-      * [Membres de la liste XDM Business Marketing](./classes/b2b/business-marketing-list-members.md)
+      * [Membres de la liste XDM Business Marketing](./classes/b2b/business-marketing-list-members.md)
 * Groupes de champs {#field-groups}
    * Groupes de champs de profil {#profile}
       * [Détails démographiques](./field-groups/profile/demographic-details.md)
@@ -127,7 +128,7 @@ ht-degree: 30%
       * [Champs d’objet](./ui/fields/object.md)
       * [Champs de tableau](./ui/fields/array.md)
       * [Champs d’énumération](./ui/fields/enum.md)
-      * [Champs d&#39;identité](./ui/fields/identity.md)
+      * [Champs d’identité](./ui/fields/identity.md)
       * [Champs de relation](./ui/fields/relationship.md)
    * [Workflows basés sur les champs](./ui/field-based-workflows.md)
    * [Génération d’exemples de données XDM](./ui/sample.md)
