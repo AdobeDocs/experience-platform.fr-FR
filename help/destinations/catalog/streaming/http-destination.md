@@ -3,10 +3,10 @@ keywords: diffusion en continu;
 title: Connexion HTTP
 description: La destination d’API HTTP dans Adobe Experience Platform vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 3bec18f1b7209b1f329dc90aadb597edb6143291
+source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
 workflow-type: tm+mt
-source-wordcount: '360'
-ht-degree: 9%
+source-wordcount: '633'
+ht-degree: 5%
 
 ---
 
@@ -22,7 +22,7 @@ Le [!DNL HTTP] La destination de l’API est une [!DNL Adobe Experience Platform
 
 Pour envoyer des données de profil à [!DNL HTTP] points de fin, vous devez d’abord vous connecter à la destination dans [[!DNL Adobe Experience Platform]](#connect-destination).
 
-## Cas d’utilisation {#use-cases}
+## Cas dʼutilisation {#use-cases}
 
 Le [!DNL HTTP] destination est ciblée sur les clients qui doivent exporter les données de profil XDM et les segments d’audience vers des segments génériques [!DNL HTTP] points de fin.
 
@@ -61,6 +61,18 @@ Voir [Activation des données d’audience vers des destinations d’exportation
 ### Attributs de destination {#attributes}
 
 Dans le [[!UICONTROL Sélectionner des attributs]](../../ui/activate-streaming-profile-destinations.md#select-attributes) , Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination.
+
+## Comportement d’exportation de profils {#profile-export-behavior}
+
+Experience Platform optimise le comportement d’exportation de profils vers votre destination d’API HTTP, afin de n’exporter les données vers votre point de terminaison d’API que lorsque des mises à jour appropriées d’un profil se sont produites à la suite de la qualification de segment ou d’autres événements significatifs. Les profils sont exportés vers votre destination dans les situations suivantes :
+
+* La mise à jour du profil a été déclenchée par un changement de l’adhésion au segment pour au moins un des segments mappés à la destination. Par exemple, le profil s’est qualifié pour l’un des segments mappés à la destination ou a quitté l’un des segments mappés à la destination.
+* La mise à jour du profil a été déclenchée par une modification de la variable [identity map](/help/xdm/field-groups/profile/identitymap.md). Par exemple, un profil qui s’était déjà qualifié pour l’un des segments mappés à la destination a été ajouté une nouvelle identité dans l’attribut identity map .
+* La mise à jour du profil a été déclenchée par une modification des attributs pour au moins un des attributs mappés à la destination. Par exemple, l’un des attributs mappés à la destination dans l’étape de mappage est ajouté à un profil.
+
+Dans tous les cas décrits ci-dessus, seuls les profils où des mises à jour pertinentes se sont produites sont exportés vers votre destination. Par exemple, si un segment mappé au flux de destination comporte cent membres et que cinq nouveaux profils sont qualifiés pour le segment, l’exportation vers votre destination est incrémentielle et inclut uniquement les cinq nouveaux profils.
+
+Notez que tous les attributs mappés sont exportés pour un profil, quel que soit l’emplacement des modifications. Ainsi, dans l’exemple ci-dessus, tous les attributs mappés pour ces cinq nouveaux profils seront exportés même si les attributs eux-mêmes n’ont pas changé.
 
 ## Données exportées {#exported-data}
 

@@ -1,54 +1,54 @@
 ---
-keywords: Amazon Kinesis ; destination Kinesis ; kinesis
-title: Connexion Amazon
-description: Créez une connexion sortante en temps réel à votre stockage Amazon Kinesis pour diffuser des données à partir de Adobe Experience Platform.
+keywords: Amazon Kinesis;destination Genesis;Genesis
+title: Connexion à Amazon Kinesis
+description: Créez une connexion sortante en temps réel à votre stockage Amazon Kinesis pour diffuser des données depuis Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 3%
+source-wordcount: '824'
+ht-degree: 2%
 
 ---
 
-# (Bêta) [!DNL Amazon Kinesis] connexion
+# (Version bêta) [!DNL Amazon Kinesis] connection
 
 ## Présentation {#overview}
 
 >[!IMPORTANT]
 >
->Le [!DNL Amazon Kinesis] dans Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>Le [!DNL Amazon Kinesis] destination dans Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
-Le [!DNL Kinesis Data Streams] service par [!DNL Amazon Web Services] vous permet de collecter et de traiter des flux importants de données en temps réel.
+Le [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] vous permet de collecter et de traiter de grands flux d’enregistrements de données en temps réel.
 
-Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Amazon Kinesis] pour diffuser des données à partir de Adobe Experience Platform.
+Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Amazon Kinesis] stockage pour diffuser des données à partir de Adobe Experience Platform.
 
-* Pour plus d’informations sur [!DNL Amazon Kinesis], consultez la section [Documentation Amazon](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* Pour vous connecter à [!DNL Amazon Kinesis] par programme, consultez la section [Didacticiel sur l’API des destinations en flux continu](../../api/streaming-destinations.md).
-* Pour vous connecter à [!DNL Amazon Kinesis] à l’aide de l’interface utilisateur de la plate-forme, consultez les sections ci-dessous.
+* Pour plus d’informations sur [!DNL Amazon Kinesis], reportez-vous à la section [Documentation Amazon](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
+* Pour vous connecter à [!DNL Amazon Kinesis] par programmation, reportez-vous à la section [Tutoriel sur l’API des destinations de diffusion en continu](../../api/streaming-destinations.md).
+* Pour vous connecter à [!DNL Amazon Kinesis] à l’aide de l’interface utilisateur de Platform, consultez les sections ci-dessous.
 
-![Amazon Kinesis dans l&#39;interface utilisateur](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
+![Amazon Kinesis dans l’interface utilisateur](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
-## Cas d’utilisation {#use-cases}
+## Cas dʼutilisation {#use-cases}
 
-En utilisant des destinations de diffusion telles que [!DNL Amazon Kinesis], vous pouvez facilement insérer des événements de segmentation de grande valeur et des attributs de profil associés dans vos systèmes de votre choix.
+En utilisant des destinations de diffusion en continu, telles que [!DNL Amazon Kinesis], vous pouvez facilement alimenter les événements de segmentation à valeur élevée et les attributs de profil associés dans vos systèmes de choix.
 
-Par exemple, un prospect a téléchargé un livre blanc qui les qualifie en un segment de &quot;forte propension à convertir&quot;. En mappant le segment dans lequel le prospect tombe sur le [!DNL Amazon Kinesis] destination, vous recevriez cet événement dans [!DNL Amazon Kinesis]. Vous pouvez alors utiliser une approche &quot;bricolage&quot; et décrire la logique métier en plus de l&#39;événement, comme vous pensez qu&#39;elle fonctionnerait mieux avec vos systèmes informatiques d&#39;entreprise.
+Par exemple, un prospect a téléchargé un livre blanc qui les qualifie en segment &quot;forte propension à convertir&quot;. En mappant le segment auquel le prospect appartient à la variable [!DNL Amazon Kinesis] destination, vous recevriez cet événement dans [!DNL Amazon Kinesis]. Vous pouvez y utiliser une approche par vous-même et décrire la logique commerciale en plus de l’événement, comme vous le pensez, qui fonctionne le mieux avec vos systèmes informatiques d’entreprise.
 
-## Type d’exportation {#export-type}
+## Type d&#39;export {#export-type}
 
-**Basé sur le profil** - vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités (par exemple : adresse e-mail, numéro de téléphone, nom de famille), comme choisi dans l’écran des attributs sélectionnés de la [workflow d’activation du public](../../ui/activate-streaming-profile-destinations.md#select-attributes).
+**Basé sur les profils** - vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), selon le choix effectué dans l’écran de sélection des attributs de la variable [workflow d&#39;activation d&#39;audience](../../ui/activate-streaming-profile-destinations.md#select-attributes).
 
-## Obligatoire [!DNL Amazon Kinesis] autorisations {#required-kinesis-permission}
+## Obligatoire [!DNL Amazon Kinesis] permissions {#required-kinesis-permission}
 
-Pour connecter et exporter des données vers votre [!DNL Amazon Kinesis] , l’Experience Platform a besoin d’autorisations pour les actions suivantes :
+Pour établir une connexion et exporter des données vers votre [!DNL Amazon Kinesis] flux, l’Experience Platform a besoin d’autorisations pour les actions suivantes :
 
 * `kinesis:ListStreams`
 * `kinesis:PutRecord`
 * `kinesis:PutRecords`
 
-Ces autorisations sont organisées par le biais de la [!DNL Kinesis] et sont contrôlés par Platform une fois que vous avez configuré votre destination Kinesis dans l&#39;interface utilisateur de Platform.
+Ces autorisations sont organisées à l’aide de la fonction [!DNL Kinesis] et sont vérifiées par Platform une fois que vous avez configuré votre destination Kinesis dans l’interface utilisateur de Platform.
 
-L’exemple ci-dessous affiche les droits d’accès minimum requis pour exporter les données vers un [!DNL Kinesis] destination.
+L’exemple ci-dessous présente les droits d’accès minimaux requis pour exporter les données vers un [!DNL Kinesis] destination.
 
 ```json
 {
@@ -71,25 +71,25 @@ L’exemple ci-dessous affiche les droits d’accès minimum requis pour exporte
 
 | Propriété | Description |
 | -------- | ----------- |
-| `kinesis:ListStreams` | Action répertoriant vos flux de données Kinesis Amazon. |
+| `kinesis:ListStreams` | Action qui répertorie vos flux de données Kinesis Amazon. |
 | `kinesis:PutRecord` | Action qui écrit un enregistrement de données unique dans un flux de données Kinesis. |
-| `kinesis:PutRecords` | Action qui écrit plusieurs enregistrements de données dans un flux de données Kinesis en un seul appel. |
+| `kinesis:PutRecords` | Action qui écrit plusieurs enregistrements de données dans un flux de données Kinesis au cours d’un seul appel. |
 
-Pour plus d’informations sur le contrôle de l’accès pour [!DNL Kinesis] flux de données, lisez ce qui suit : [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
+Pour plus d’informations sur le contrôle de l’accès à [!DNL Kinesis] flux de données, lisez ce qui suit : [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
-## Se connecter à la destination {#connect}
+## Connexion à la destination {#connect}
 
-Pour vous connecter à cette destination, suivez les étapes décrites dans la section [didacticiel sur la configuration de destination](../../ui/connect-destination.md).
+Pour vous connecter à cette destination, procédez comme décrit dans la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
 ### Paramètres de connexion {#parameters}
 
-En [configuration](../../ui/connect-destination.md) cette destination, vous devez fournir les informations suivantes :
+while [configuration](../../ui/connect-destination.md) Pour cette destination, vous devez fournir les informations suivantes :
 
-* **[!DNL Amazon Web Services]clé d&#39;accès et clé secrète**: Entrée [!DNL Amazon Web Services], générez une `access key - secret access key` pour accorder l’accès à votre plate-forme [!DNL Amazon Kinesis] compte. Pour en savoir plus, consultez la page [Documentation de Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **région**: Indiquez laquelle [!DNL Amazon Web Services] pour diffuser les données vers.
-* **Nom**: Fournissez un nom pour votre connexion à [!DNL Amazon Kinesis]
+* **[!DNL Amazon Web Services]clé d&#39;accès et clé secrète**: Dans [!DNL Amazon Web Services], générez une `access key - secret access key` pour accorder l’accès à Platform à votre [!DNL Amazon Kinesis] compte . En savoir plus dans la section [Documentation Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **region**: Permet d’indiquer [!DNL Amazon Web Services] région vers laquelle diffuser des données.
+* **Nom**: Attribuez un nom à votre connexion pour [!DNL Amazon Kinesis]
 * **Description**: Fournissez une description de votre connexion à [!DNL Amazon Kinesis].
-* **flux**: Indiquez le nom d’un flux de données existant dans votre [!DNL Amazon Kinesis] compte. La plate-forme exportera les données vers ce flux.
+* **stream**: Indiquez le nom d’un flux de données existant dans votre [!DNL Amazon Kinesis] compte . Platform exportera les données vers ce flux.
 
 <!--
 
@@ -99,13 +99,25 @@ En [configuration](../../ui/connect-destination.md) cette destination, vous deve
 
 -->
 
-## Activer les segments vers cette destination {#activate}
+## Activation des segments vers cette destination {#activate}
 
-Voir [Activer les données d’audience vers les destinations d’exportation de profil de diffusion en continu](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Voir [Activation des données d’audience vers des destinations d’exportation de profils en continu](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+
+## Comportement d’exportation de profils {#profile-export-behavior}
+
+Experience Platform optimise le comportement d’exportation de profils vers votre destination Amazon Kinesis, afin de n’exporter les données vers votre destination que lorsque des mises à jour pertinentes d’un profil se sont produites à la suite de la qualification de segment ou d’autres événements significatifs. Les profils sont exportés vers votre destination dans les situations suivantes :
+
+* La mise à jour du profil a été déclenchée par un changement de l’adhésion au segment pour au moins un des segments mappés à la destination. Par exemple, le profil s’est qualifié pour l’un des segments mappés à la destination ou a quitté l’un des segments mappés à la destination.
+* La mise à jour du profil a été déclenchée par une modification de la variable [identity map](/help/xdm/field-groups/profile/identitymap.md). Par exemple, un profil qui s’était déjà qualifié pour l’un des segments mappés à la destination a été ajouté une nouvelle identité dans l’attribut identity map .
+* La mise à jour du profil a été déclenchée par une modification des attributs pour au moins un des attributs mappés à la destination. Par exemple, l’un des attributs mappés à la destination dans l’étape de mappage est ajouté à un profil.
+
+Dans tous les cas décrits ci-dessus, seuls les profils où des mises à jour pertinentes se sont produites sont exportés vers votre destination. Par exemple, si un segment mappé au flux de destination comporte cent membres et que cinq nouveaux profils sont qualifiés pour le segment, l’exportation vers votre destination est incrémentielle et inclut uniquement les cinq nouveaux profils.
+
+Notez que tous les attributs mappés sont exportés pour un profil, quel que soit l’emplacement des modifications. Ainsi, dans l’exemple ci-dessus, tous les attributs mappés pour ces cinq nouveaux profils seront exportés même si les attributs eux-mêmes n’ont pas changé.
 
 ## Données exportées {#exported-data}
 
-Votre exportation [!DNL Experience Platform] les données atterrissent dans [!DNL Amazon Kinesis] au format JSON. Par exemple, l’événement ci-dessous contient l’attribut de profil d’adresse électronique d’un public qui s’est qualifié pour un certain segment et a quitté un autre segment. Les identités de ce prospect sont ECID et e-mail.
+Votre exportation [!DNL Experience Platform] Les données arrivent dans [!DNL Amazon Kinesis] au format JSON. Par exemple, l’événement ci-dessous contient l’attribut de profil d’adresse électronique d’une audience qui s’est qualifiée pour un certain segment et qui a quitté un autre segment. Les identités de ce prospect sont ECID et email.
 
 ```json
 {
@@ -149,7 +161,7 @@ Votre exportation [!DNL Experience Platform] les données atterrissent dans [!DN
 
 >[!MORELIKETHIS]
 >
->* [Connexion à Amazon Kinesis et activation de données à l’aide de l’API Flow Service](../../api/streaming-destinations.md)
->* [Destination Azure Event Hubs](./azure-event-hubs.md)
+>* [Connexion à Amazon Kinesis et activation des données à l’aide de l’API Flow Service](../../api/streaming-destinations.md)
+>* [Destination des centres d’événements Azure](./azure-event-hubs.md)
 >* [Types et catégories de destination](../../destination-types.md)
 
