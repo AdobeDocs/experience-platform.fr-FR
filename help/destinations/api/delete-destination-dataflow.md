@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Suppression d’un flux de données de destination à l’aide de l’API Flow Service
 type: Tutorial
 description: Découvrez comment supprimer des flux de données vers des destinations de lot et de diffusion en continu à l’aide de l’API Flow Service.
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 44%
+source-wordcount: '565'
+ht-degree: 43%
 
 ---
 
@@ -90,3 +91,5 @@ Les points de terminaison d’API de ce tutoriel suivent les principes générau
 En suivant ce tutoriel, vous avez utilisé avec succès la méthode [!DNL Flow Service] API permettant de supprimer un flux de données existant vers une destination.
 
 Pour savoir comment effectuer ces opérations à l’aide de l’interface utilisateur, reportez-vous au tutoriel sur [suppression de flux de données dans l’interface utilisateur](../ui/delete-destinations.md).
+
+Vous pouvez maintenant poursuivre et [suppression des comptes de destination](/help/destinations/api/delete-destination-account.md) en utilisant la variable [!DNL Flow Service] API.

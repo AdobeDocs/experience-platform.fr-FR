@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Suppression d’un compte de destination à l’aide de l’API Flow Service
 type: Tutorial
 description: Découvrez comment supprimer un compte de destination à l’aide de l’API Flow Service.
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '769'
 ht-degree: 37%
 
 ---
@@ -184,4 +185,4 @@ Les points de terminaison d’API de ce tutoriel suivent les principes générau
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez utilisé avec succès la méthode [!DNL Flow Service] API pour supprimer les comptes de destination existants.
+En suivant ce tutoriel, vous avez utilisé avec succès la méthode [!DNL Flow Service] API pour supprimer les comptes de destination existants. Pour plus d’informations sur l’utilisation des destinations, reportez-vous à la section [présentation des destinations](/help/destinations/home.md).

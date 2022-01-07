@@ -1,11 +1,11 @@
 ---
 keywords: Destination du hub d’événements Azure ; hub d’événements Azure ; thub d’événements azure
-title: (Version bêta) Connexion à !DNL Azure Event Hubs
-description: Créez une connexion sortante en temps réel à votre stockage !DNL Azure Event Hubs] pour diffuser des données depuis l’Experience Platform.
+title: (Version bêta) [!DNL Azure Event Hubs] connection
+description: Créez une connexion sortante en temps réel avec votre [!DNL Azure Event Hubs] stockage pour diffuser des données depuis l’Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '741'
 ht-degree: 2%
 
 ---
