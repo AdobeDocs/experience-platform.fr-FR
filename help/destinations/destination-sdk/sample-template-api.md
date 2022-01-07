@@ -2,32 +2,32 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/testing/template/sample` pour obtenir un modèle de transformation de message de test pour votre destination.
 title: Obtention d’un exemple d’opération d’API de modèle
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '383'
 ht-degree: 2%
 
 ---
 
-# Obtenir des exemples d’opérations de l’API de modèle {#get=sample-template-api-operations}
+# Obtention d’un exemple d’opération d’API de modèle {#get=sample-template-api-operations}
 
 >[!IMPORTANT]
 >
 >**Point de terminaison de l’API**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
 
-Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/testing/template/sample` afin de générer un [modèle de transformation des messages](./message-format.md#using-templating) pour votre destination. Pour une description de la fonctionnalité prise en charge par ce point de terminaison, lisez [create template](./create-template.md).
+Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du `/authoring/testing/template/sample` point d’entrée d’API, pour générer un [modèle de transformation des messages](./message-format.md#using-templating) pour votre destination. Pour une description de la fonctionnalité prise en charge par ce point de terminaison, reportez-vous à la section [créer un modèle](./create-template.md).
 
 ## Prise en main des exemples d’opérations de l’API de modèle {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
+Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Obtenir un exemple de modèle {#generate-sample-template}
 
-Vous pouvez obtenir un exemple de modèle en effectuant une requête de GET sur le point de terminaison `authoring/testing/template/sample/` et en fournissant l’identifiant de destination de la configuration de destination basée sur laquelle vous créez votre modèle.
+Vous pouvez obtenir un exemple de modèle en adressant une requête de GET à la fonction `authoring/testing/template/sample/` point de terminaison et fournissant l’identifiant de destination de la configuration de destination selon laquelle vous créez votre modèle.
 
 >[!TIP]
 >
->* L’ID de destination que vous devez utiliser ici est `instanceId` qui correspond à une configuration de destination, créée à l’aide du point de terminaison `/destinations` . Reportez-vous à la [référence de l’API de configuration de destination](./destination-configuration-api.md#retrieve-list).
+>* L’identifiant de destination que vous devez utiliser ici est le suivant : `instanceId` qui correspond à une configuration de destination, créée à l’aide du `/destinations` point de terminaison . Reportez-vous à la section [référence de l’API de configuration de destination](./destination-configuration-api.md#retrieve-list).
 
 
 **Format d’API**
@@ -59,7 +59,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 Une réponse réussie renvoie un état HTTP 200 avec un exemple de modèle que vous pouvez modifier pour correspondre au format de données attendu.
 
-Si l’identifiant de destination que vous fournissez correspond à une configuration de destination avec [l’agrégation du meilleur effort](./destination-configuration.md#best-effort-aggregation) et `maxUsersPerRequest=1` dans la stratégie d’agrégation, la requête renvoie un exemple de modèle similaire à celui-ci :
+Si l’identifiant de destination que vous fournissez correspond à une configuration de destination avec [agrégation des meilleurs efforts](./destination-configuration.md#best-effort-aggregation) et `maxUsersPerRequest=1` dans la stratégie d’agrégation, la requête renvoie un exemple de modèle similaire à celui-ci :
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -92,7 +92,7 @@ Si l’identifiant de destination que vous fournissez correspond à une configur
 }
 ```
 
-Si l’identifiant de destination que vous fournissez correspond à un modèle de serveur de destination avec une agrégation [configurable](./destination-configuration.md#configurable-aggregation) ou [agrégation des meilleurs efforts](./destination-configuration.md#best-effort-aggregation) avec `maxUsersPerRequest` supérieure à un, la requête renvoie un exemple de modèle similaire à celui-ci :
+Si l’identifiant de destination que vous fournissez correspond à un modèle de serveur de destination avec [agrégation configurable](./destination-configuration.md#configurable-aggregation) ou [agrégation des meilleurs efforts](./destination-configuration.md#best-effort-aggregation) avec `maxUsersPerRequest` supérieur à un, la requête renvoie un exemple de modèle similaire à celui-ci :
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
@@ -133,8 +133,8 @@ Si l’identifiant de destination que vous fournissez correspond à un modèle d
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée de l’API du SDK de destination suivent les principes généraux des messages d’erreur de l’API Experience Platform. Reportez-vous aux sections [Codes d’état d’API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) et [erreurs d’en-tête de requête](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) dans le guide de dépannage de Platform.
+Les points de terminaison de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](../../landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu ce document, vous savez maintenant comment générer un modèle de transformation de message à l’aide du point de terminaison de l’API `/authoring/testing/template/sample`. Ensuite, vous pouvez utiliser le [point d’entrée de l’API de modèle de rendu](./render-template-api.md) pour générer les profils exportés en fonction du modèle et les comparer au format de données attendu de votre destination.
+Après avoir lu ce document, vous savez maintenant comment générer un modèle de transformation de message à l’aide du `/authoring/testing/template/sample` Point d’entrée de l’API. Vous pouvez ensuite utiliser la variable [Point d’entrée de l’API de modèle de rendu](./render-template-api.md) pour générer les profils exportés en fonction du modèle et les comparer au format de données attendu de votre destination.

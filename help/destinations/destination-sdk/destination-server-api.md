@@ -1,11 +1,11 @@
 ---
-description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison API `/authoring/destination-servers. Les spécifications du serveur et du modèle pour votre destination peuvent être configurées dans le SDK de destination Adobe Experience Platform via le point de terminaison commun `/authoring/destination-servers`.
+description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison API `/authoring/destination-servers. Les spécifications du serveur et du modèle pour votre destination peuvent être configurées en Adobe Experience Platform Destination SDK via le point de terminaison commun `/authoring/destination-servers`.
 title: Opérations de l’API du point d’entrée du serveur de destination
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 6%
+source-wordcount: '827'
+ht-degree: 7%
 
 ---
 
@@ -15,15 +15,15 @@ ht-degree: 6%
 >
 >**Point de terminaison de l’API**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/destination-servers`. Les spécifications du serveur et du modèle pour votre destination peuvent être configurées dans le SDK de destination Adobe Experience Platform via le point de terminaison commun `/authoring/destination-servers`. Pour une description de la fonctionnalité fournie par ce point de terminaison, lisez [les spécifications du serveur et du modèle](./server-and-template-configuration.md).
+Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du `/authoring/destination-servers` Point d’entrée de l’API. Les spécifications de serveur et de modèle pour votre destination peuvent être configurées en Adobe Experience Platform Destination SDK via le point de terminaison commun. `/authoring/destination-servers`. Pour obtenir une description de la fonctionnalité fournie par ce point de terminaison, reportez-vous à la section [spécifications du serveur et des modèles](./server-and-template-configuration.md).
 
 ## Prise en main des opérations de l’API du serveur de destination {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
+Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Création d’une configuration pour un serveur de destination {#create}
 
-Vous pouvez créer une configuration de serveur de destination en envoyant une requête de POST au point de terminaison `/authoring/destination-servers` .
+Vous pouvez créer une configuration de serveur de destination en adressant une requête de POST au `/authoring/destination-servers` point de terminaison .
 
 **Format d’API**
 
@@ -34,7 +34,7 @@ POST /authoring/destination-servers
 
 **Requête**
 
-La requête suivante crée une configuration de serveur de destination, configurée par les paramètres fournis dans la payload. La payload ci-dessous inclut tous les paramètres acceptés par le point de terminaison `/authoring/destination-servers`. Notez que vous n’avez pas à ajouter tous les paramètres à l’appel et que le modèle est personnalisable, conformément aux exigences de votre API.
+La requête suivante crée une configuration de serveur de destination, configurée par les paramètres fournis dans la payload. La payload ci-dessous inclut tous les paramètres acceptés par la fonction `/authoring/destination-servers` point de terminaison . Notez que vous n’avez pas à ajouter tous les paramètres à l’appel et que le modèle est personnalisable, conformément aux exigences de votre API.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -68,11 +68,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | Chaîne | *Obligatoire.* Représente un nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible par les partenaires ou les clients. Exemple `Moviestar destination server`. |
 | `destinationServerType` | Chaîne | *Obligatoire.* `URL_BASED` est actuellement la seule option disponible. |
-| `urlBasedDestination.url.templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si l’Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point de terminaison du type : `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire côté Adobe, par exemple si vous avez un point de terminaison comme : `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisation `PEBBLE_V1` si l’Adobe doit transformer l’URL dans la variable `value` ci-dessous. Utilisez cette option si vous disposez d’un point de terminaison du type : `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilisation `NONE` si aucune transformation n’est nécessaire du côté Adobe, par exemple si vous avez un point de terminaison comme : `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point de terminaison de l’API auquel l’Experience Platform doit se connecter. |
 | `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode que l’Adobe utilisera dans les appels à votre serveur. Les options sont `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
-| `httpTemplate.requestBody.templatingStrategy` | Chaîne | *Obligatoire.* Utilisation `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec échappement par des caractères qui transforme les données des clients Platform au format attendu par votre service.  <br> <ul><li> Pour plus d’informations sur la façon d’écrire le modèle, consultez la [section Utilisation de modèles](./message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la [norme JSON RFC, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour un exemple de transformation simple, reportez-vous à la transformation [Attributs de profil](./message-format.md#attributes) . </li></ul> |
+| `httpTemplate.requestBody.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
+| `httpTemplate.requestBody.value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec échappement par des caractères qui transforme les données des clients Platform au format attendu par votre service. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez le [Utilisation de la section de modèle](./message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour un exemple de transformation simple, reportez-vous à la section [Attributs de profil](./message-format.md#attributes) transformation. </li></ul> |
 | `httpTemplate.contentType` | Chaîne | *Obligatoire.* Type de contenu que votre serveur accepte. Cette valeur est probablement `application/json`. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -83,7 +83,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la configur
 
 ## Liste des configurations de serveur de destination {#retrieve-list}
 
-Vous pouvez récupérer une liste de toutes les configurations de serveur de destination pour votre organisation IMS en envoyant une requête GET au point de terminaison `/authoring/destination-servers` .
+Vous pouvez récupérer une liste de toutes les configurations de serveur de destination pour votre organisation IMS en adressant une requête GET à la fonction `/authoring/destination-servers` point de terminaison .
 
 **Format d’API**
 
@@ -106,7 +106,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Réponse**
 
-La réponse suivante renvoie un état HTTP 200 avec une liste des configurations de serveur de destination auxquelles vous avez accès, en fonction de l’identifiant de l’organisation IMS et du nom de l’environnement de test que vous avez utilisés. Un `instanceId` correspond au modèle d’un serveur de destination. La réponse est tronquée pour la concision.
+La réponse suivante renvoie un état HTTP 200 avec une liste des configurations de serveur de destination auxquelles vous avez accès, en fonction de l’identifiant de l’organisation IMS et du nom de l’environnement de test que vous avez utilisés. One `instanceId` correspond au modèle d’un serveur de destination. La réponse est tronquée pour la concision.
 
 ```json
 {
@@ -184,7 +184,7 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des configurations
 
 ## Mettre à jour une configuration de serveur de destination existante {#update}
 
-Vous pouvez mettre à jour une configuration de serveur de destination existante en envoyant une requête de PUT au point de terminaison `/authoring/destination-servers` et en fournissant l’ID d’instance de la configuration de serveur de destination que vous souhaitez mettre à jour. Dans le corps de l’appel , indiquez la configuration mise à jour du serveur de destination.
+Vous pouvez mettre à jour une configuration de serveur de destination existante en adressant une requête de PUT au `/authoring/destination-servers` point d’entrée et fournissant l’ID d’instance de la configuration du serveur de destination que vous souhaitez mettre à jour. Dans le corps de l’appel , indiquez la configuration mise à jour du serveur de destination.
 
 **Format d’API**
 
@@ -235,7 +235,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## Récupération d’une configuration de serveur de destination spécifique {#get}
 
-Vous pouvez récupérer des informations détaillées sur une configuration de serveur de destination spécifique en envoyant une requête GET au point de terminaison `/authoring/destination-servers` et en fournissant l’ID d’instance de la configuration de serveur de destination que vous souhaitez mettre à jour.
+Vous pouvez récupérer des informations détaillées sur une configuration de serveur de destination spécifique en adressant une requête de GET à la fonction `/authoring/destination-servers` point d’entrée et fournissant l’ID d’instance de la configuration du serveur de destination que vous souhaitez mettre à jour.
 
 **Format d’API**
 
@@ -286,7 +286,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaillé
 
 ## Suppression d’une configuration de serveur de destination spécifique {#delete}
 
-Vous pouvez supprimer la configuration de serveur de destination spécifiée en effectuant une requête de DELETE sur le point de terminaison `/authoring/destination-servers` et en fournissant l’identifiant de la configuration de serveur de destination que vous souhaitez supprimer dans le chemin d’accès de la requête.
+Vous pouvez supprimer la configuration de serveur de destination spécifiée en adressant une requête de DELETE au `/authoring/destination-servers` point de terminaison et en indiquant l’identifiant de la configuration du serveur de destination que vous souhaitez supprimer dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -296,7 +296,7 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | `id` de la configuration du serveur de destination que vous souhaitez supprimer. |
+| `{INSTANCE_ID}` | Le `id` de la configuration du serveur de destination que vous souhaitez supprimer. |
 
 **Requête**
 
@@ -314,8 +314,8 @@ Une réponse réussie renvoie un état HTTP 200 avec une réponse HTTP vide.
 
 ## Gestion des erreurs d’API
 
-Les points d’entrée de l’API du SDK de destination suivent les principes généraux des messages d’erreur de l’API Experience Platform. Reportez-vous aux sections [Codes d’état d’API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) et [erreurs d’en-tête de requête](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) dans le guide de dépannage de Platform.
+Les points de terminaison de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](../../landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
 
 ## Étapes suivantes
 
-Après avoir lu ce document, vous savez maintenant comment configurer votre serveur de destination et votre modèle à l’aide du point de terminaison de l’API `/authoring/destination-servers`. Lisez la section [Comment utiliser le SDK de destination pour configurer votre destination](./configure-destination-instructions.md) afin de comprendre où cette étape correspond au processus de configuration de votre destination.
+Après avoir lu ce document, vous savez maintenant comment configurer votre serveur de destination et créer des modèles à l’aide du `/authoring/destination-servers` Point d’entrée de l’API. Lecture [comment utiliser la Destination SDK pour configurer votre destination](./configure-destination-instructions.md) pour comprendre où cette étape s’inscrit dans le processus de configuration de votre destination.

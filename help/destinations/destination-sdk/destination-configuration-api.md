@@ -2,9 +2,9 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/destinations`.
 title: Opérations de point d’entrée de l’API Destinations
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '2405'
+source-wordcount: '2387'
 ht-degree: 5%
 
 ---
@@ -139,7 +139,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |---------|----------|------|
 | `name` | Chaîne | Indique le titre de votre destination dans le catalogue des Experience Platform |
 | `description` | Chaîne | Fournissez une description que l’Adobe utilisera dans le catalogue des destinations Experience Platform pour votre carte de destination. Ne vise pas plus de 4 à 5 phrases. |
-| `status` | Chaîne | Indique l’état du cycle de vie de la carte de destination. Les valeurs acceptées sont `TEST`, `PUBLISHED` et `DELETED`. Utilisation `TEST` la première fois que vous configurez votre destination. |
+| `status` | Chaîne | Indique l’état du cycle de vie de la carte de destination. Les valeurs acceptées sont `TEST`, `PUBLISHED` et `DELETED`. Utilisation `TEST` lorsque vous configurez votre destination pour la première fois. |
 | `customerAuthenticationConfigurations` | Chaîne | Indique la configuration utilisée pour authentifier les clients Experience Platform sur votre serveur. Voir `authType` ci-dessous pour les valeurs acceptées. |
 | `customerAuthenticationConfigurations.authType` | Chaîne | Les valeurs acceptées sont `OAUTH2, BEARER`. |
 | `customerDataFields.name` | Chaîne | Attribuez un nom au champ personnalisé que vous introduisez. |
@@ -169,11 +169,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `schemaConfig.segmentRequired` | Booléen | Toujours utiliser `segmentRequired:true`. |
 | `schemaConfig.identityRequired` | Booléen | Utilisation `true` si vous souhaitez que les utilisateurs puissent mapper des espaces de noms d’identité d’Experience Platform à votre schéma souhaité. |
 | `aggregation.aggregationType` | - | Sélectionnez `BEST_EFFORT` ou `CONFIGURABLE_AGGREGATION`. L’exemple de configuration ci-dessus inclut : `BEST_EFFORT` agrégation. Par exemple : `CONFIGURABLE_AGGREGATION`, reportez-vous à l’exemple de configuration dans la section [configuration de destination](./destination-configuration.md#example-configuration) document. Les paramètres relatifs à l&#39;agrégation configurable sont présentés ci-dessous dans ce tableau. |
-| `aggregation.bestEffortAggregation.maxUsersPerRequest` | Entier | Experience Platform peut agréger plusieurs profils exportés en un seul appel HTTP. Indiquez le nombre maximal de profils que votre point de terminaison doit recevoir dans un seul appel HTTP. Notez qu’il s’agit d’une agrégation du meilleur effort. Par exemple, si vous spécifiez la valeur 100, Platform peut envoyer n’importe quel nombre de profils inférieur à 100 lors d’un appel. <br> Si votre serveur n’accepte pas plusieurs utilisateurs par demande, définissez cette valeur sur 1. |
+| `aggregation.bestEffortAggregation.maxUsersPerRequest` | Nombre entier | Experience Platform peut agréger plusieurs profils exportés en un seul appel HTTP. Indiquez le nombre maximal de profils que votre point de terminaison doit recevoir dans un seul appel HTTP. Notez qu’il s’agit d’une agrégation du meilleur effort. Par exemple, si vous spécifiez la valeur 100, Platform peut envoyer n’importe quel nombre de profils inférieur à 100 lors d’un appel. <br> Si votre serveur n’accepte pas plusieurs utilisateurs par demande, définissez cette valeur sur 1. |
 | `aggregation.bestEffortAggregation.splitUserById` | Booléen | Utilisez cet indicateur si l’appel à la destination doit être divisé par l’identité. Définissez cet indicateur sur `true` si votre serveur n’accepte qu’une seule identité par appel, pour un espace de noms donné. |
 | `aggregation.configurableAggregation.splitUserById` | Booléen | Voir paramètre dans l’exemple de configuration [here](./destination-configuration.md#example-configuration). Utilisez cet indicateur si l’appel à la destination doit être divisé par l’identité. Définissez cet indicateur sur `true` si votre serveur n’accepte qu’une seule identité par appel, pour un espace de noms donné. |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Entier | *Valeur maximale : 3600*. Voir paramètre dans l’exemple de configuration [here](./destination-configuration.md#example-configuration). Associé à `maxNumEventsInBatch`, cela détermine la durée pendant laquelle l’Experience Platform doit attendre d’envoyer un appel API à votre point de terminaison . <br> Par exemple, si vous utilisez la valeur maximale pour les deux paramètres, Experience Platform patiente 3 600 secondes OU jusqu’à ce qu’il y ait 10 000 profils qualifiés avant d’effectuer l’appel API, selon ce qui se produit en premier. |
-| `aggregation.configurableAggregation.maxNumEventsInBatch` | Entier | *Valeur maximale : 10 000*. Voir paramètre dans l’exemple de configuration [here](./destination-configuration.md#example-configuration). Voir `maxBatchAgeInSecs` juste au-dessus. |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Nombre entier | *Valeur maximale : 3600*. Voir paramètre dans l’exemple de configuration [here](./destination-configuration.md#example-configuration). Associé à `maxNumEventsInBatch`, cela détermine la durée pendant laquelle l’Experience Platform doit attendre d’envoyer un appel API à votre point de terminaison . <br> Par exemple, si vous utilisez la valeur maximale pour les deux paramètres, Experience Platform patiente 3 600 secondes OU jusqu’à ce qu’il y ait 10 000 profils qualifiés avant d’effectuer l’appel API, selon ce qui se produit en premier. |
+| `aggregation.configurableAggregation.maxNumEventsInBatch` | Nombre entier | *Valeur maximale : 10 000*. Voir paramètre dans l’exemple de configuration [here](./destination-configuration.md#example-configuration). Voir `maxBatchAgeInSecs` juste au-dessus. |
 | `aggregation.configurableAggregation.aggregationKey` | Booléen | Voir paramètre dans l’exemple de configuration [here](./destination-configuration.md#example-configuration). Permet d&#39;agréger les profils exportés mappés à la destination en fonction des paramètres ci-dessous : <br> <ul><li>identifiant de segment</li><li> état du segment </li><li> namespace d’identité </li></ul> |
 | `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Booléen | Voir paramètre dans l’exemple de configuration [here](./destination-configuration.md#example-configuration). Définissez cette variable sur `true` si vous souhaitez regrouper les profils exportés vers votre destination par identifiant de segment. |
 | `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | Booléen | Voir paramètre dans l’exemple de configuration [here](./destination-configuration.md#example-configuration). Vous devez définir les deux `includeSegmentId:true` et `includeSegmentStatus:true` si vous souhaitez regrouper les profils exportés vers votre destination par identifiant de segment ET état du segment. |
@@ -323,7 +323,7 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des configurations
 |---------|----------|------|
 | `name` | Chaîne | Indique le titre de votre destination dans le catalogue des Experience Platform. |
 | `description` | Chaîne | Fournissez une description que l’Adobe utilisera dans le catalogue des destinations Experience Platform pour votre carte de destination. Ne vise pas plus de 4 à 5 phrases. |
-| `status` | Chaîne | Indique l’état du cycle de vie de la carte de destination. Les valeurs acceptées sont `TEST`, `PUBLISHED` et `DELETED`. Utilisation `TEST` la première fois que vous configurez votre destination. |
+| `status` | Chaîne | Indique l’état du cycle de vie de la carte de destination. Les valeurs acceptées sont `TEST`, `PUBLISHED` et `DELETED`. Utilisation `TEST` lorsque vous configurez votre destination pour la première fois. |
 | `customerAuthenticationConfigurations` | Chaîne | Indique la configuration utilisée pour authentifier les clients Experience Platform sur votre serveur. Voir `authType` ci-dessous pour les valeurs acceptées. |
 | `customerAuthenticationConfigurations.authType` | Chaîne | Les valeurs acceptées sont `OAUTH2, BEARER`. |
 | `customerDataFields.name` | Chaîne | Attribuez un nom au champ personnalisé que vous introduisez. |
@@ -697,8 +697,8 @@ Une réponse réussie renvoie un état HTTP 200 avec une réponse HTTP vide.
 
 ## Gestion des erreurs d’API
 
-Les points d’entrée de l’API du SDK de destination suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) et [erreurs d’en-tête de requête](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) dans le guide de dépannage de Platform.
+Les points de terminaison de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](../../landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
 
 ## Étapes suivantes
 
-Après avoir lu ce document, vous savez maintenant comment configurer votre destination à l’aide du `/authoring/destinations` Point d’entrée de l’API. Lecture [Comment utiliser le SDK de destination pour configurer votre destination](./configure-destination-instructions.md) pour comprendre où cette étape s’inscrit dans le processus de configuration de votre destination.
+Après avoir lu ce document, vous savez maintenant comment configurer votre destination à l’aide du `/authoring/destinations` Point d’entrée de l’API. Lecture [comment utiliser la Destination SDK pour configurer votre destination](./configure-destination-instructions.md) pour comprendre où cette étape s’inscrit dans le processus de configuration de votre destination.
