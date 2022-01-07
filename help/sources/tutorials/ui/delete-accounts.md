@@ -6,35 +6,39 @@ title: Suppression des comptes de connexion source dans l’interface utilisateu
 topic-legacy: overview
 type: Tutorial
 exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 609f7a5de51840fe657ca72df99c90da56c8f466
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 12%
+source-wordcount: '487'
+ht-degree: 11%
 
 ---
 
 # Suppression des comptes de connexion source
 
-Les connecteurs source de Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour supprimer des comptes de l’espace de travail **[!UICONTROL Sources]**.
+Les connecteurs source de Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour supprimer des comptes du **[!UICONTROL Sources]** workspace.
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [[!DNL Experience Data Model (XDM)] Système](../../../xdm/home.md) : Cadre normalisé selon lequel  [!DNL Experience Platform] organise les données d’expérience client.
+- [[!DNL Experience Data Model (XDM)] Système](../../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Experience Platform] organise les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   - [Tutoriel](../../../xdm/tutorials/create-schema-ui.md) de l’éditeur de schémas : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
+   - [Tutoriel de l’éditeur de schémas](../../../xdm/tutorials/create-schema-ui.md): Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 ## Suppression de comptes à l’aide de l’interface utilisateur
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com), puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer des comptes et des flux de données. Chaque source indique le nombre de comptes et de flux de données existants qui lui sont associés.
+>[!TIP]
+>
+>Avant de supprimer le compte source, vous devez d’abord supprimer les flux de données existants associés au compte source. Pour supprimer des flux de données existants, reportez-vous au tutoriel sur [suppression des flux de données de sources dans l’interface utilisateur](./delete.md).
 
-Sélectionnez **[!UICONTROL Comptes]** pour accéder à la page **[!UICONTROL Comptes]**.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. Le **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer des comptes et des flux de données. Chaque source indique le nombre de comptes et de flux de données existants qui lui sont associés.
+
+Sélectionner **[!UICONTROL Comptes]** pour accéder au **[!UICONTROL Comptes]** page.
 
 ![catalog-accounts](../../images/tutorials/delete-accounts/catalog.png)
 
-Une liste des comptes existants s’affiche. Cette page contient une liste d’informations pouvant être triées pour les comptes existants, tels que la source, le nom d’utilisateur, les flux de données associés et la date de création. Sélectionnez l’icône **entonnoir** en haut à gauche pour effectuer le tri.
+Une liste des comptes existants s’affiche. Cette page contient une liste d’informations pouvant être triées pour les comptes existants, tels que la source, le nom d’utilisateur, les flux de données associés et la date de création. Sélectionnez la **icône d’entonnoir** en haut à gauche à trier.
 
 ![dataflows-list](../../images/tutorials/delete-accounts/accounts.png)
 
@@ -46,9 +50,9 @@ Sélectionnez le compte que vous souhaitez supprimer.
 
 ![dataflows-sort](../../images/tutorials/delete-accounts/sort.png)
 
-Le panneau **[!UICONTROL Propriétés]** s’affiche sur le côté droit de l’écran, contenant des informations concernant le compte sélectionné.
+Le **[!UICONTROL Propriétés]** s’affiche sur le côté droit de l’écran, avec des informations relatives au compte sélectionné.
 
-Sélectionnez les points de suspension (`...`) à côté du nom du compte que vous avez l’intention de supprimer. Un panneau contextuel s’affiche, fournissant des options pour **[!UICONTROL Ajouter des données]**, **[!UICONTROL Modifier les détails]** et **[!UICONTROL Supprimer]**. Sélectionnez **[!UICONTROL Supprimer]** pour supprimer le compte.
+Sélectionnez les ellipses (`...`) en regard du nom du compte que vous avez l’intention de supprimer. Un panneau contextuel s’affiche, fournissant des options pour **[!UICONTROL Ajouter des données]**, **[!UICONTROL Modifier les détails]**, et **[!UICONTROL Supprimer]**. Sélectionner **[!UICONTROL Supprimer]** pour supprimer le compte.
 
 ![dataflows-sort](../../images/tutorials/delete-accounts/delete.png)
 
@@ -58,6 +62,6 @@ Une boîte de dialogue de confirmation finale s’affiche. Sélectionnez **[!UIC
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez correctement utilisé l’espace de travail **[!UICONTROL Sources]** pour supprimer des comptes existants.
+En suivant ce tutoriel, vous avez utilisé avec succès la méthode **[!UICONTROL Sources]** pour supprimer des comptes existants.
 
-Pour savoir comment effectuer ces opérations par programmation à l’aide de l’API [!DNL Flow Service], reportez-vous au tutoriel sur la [suppression des connexions à l’aide de l’API Flow Service](../../tutorials/api/delete.md)
+Pour savoir comment effectuer ces opérations par programmation à l’aide de la méthode [!DNL Flow Service] API, reportez-vous au tutoriel sur [suppression des connexions à l’aide de l’API Flow Service](../../tutorials/api/delete.md)

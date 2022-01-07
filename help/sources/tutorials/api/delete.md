@@ -6,20 +6,18 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment supprimer un compte à l’aide de l’API Flow Service.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 609f7a5de51840fe657ca72df99c90da56c8f466
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 38%
+source-wordcount: '339'
+ht-degree: 14%
 
 ---
 
 # Suppression d’un compte à l’aide de l’API Flow Service
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Vous pouvez supprimer les comptes de sources qui contiennent des erreurs ou qui sont devenus obsolètes à l’aide du [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-[!DNL Flow Service] sert à collecter et à centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
-
-Ce tutoriel décrit les étapes de suppression à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Consultez le tutoriel suivant pour savoir comment supprimer un compte à l’aide de l’API.
 
 ## Prise en main
 
@@ -27,121 +25,40 @@ Ce tutoriel nécessite que vous disposiez d’un identifiant de connexion valide
 
 Ce tutoriel nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
 
-* [Sources](../../home.md) :  [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
+* [Sources](../../home.md): [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
 * [Environnements de test](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour supprimer une connexion à l’aide de l’API [!DNL Flow Service].
+## Utilisation des API Platform
 
-### Lecture d’exemples d’appels API
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur [Prise en main des API Platform](../../../landing/api-guide.md).
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+## Supprimer un compte
 
-### Collecte des valeurs des en-têtes requis
+>[!TIP]
+>
+>Avant de supprimer le compte source, vous devez d’abord supprimer les flux de données existants associés au compte source. Pour supprimer des flux de données existants, reportez-vous au tutoriel sur [suppression des flux de données sources](./delete-dataflows.md).
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Toutes les ressources qui se trouvent dans [!DNL Experience Platform], y compris celles liées à la [!DNL Flow Service], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
-
-* `Content-Type: application/json`
-
-## Recherche des détails de connexion
-
->[!NOTE]
->Ce tutoriel utilise comme exemple le [connecteur source Azure Blob](../../connectors/cloud-storage/blob.md), mais les étapes décrites s’appliquent à l’un des [connecteurs source disponibles](../../home.md).
-
-La première étape de la mise à jour des informations de connexion consiste à récupérer les détails de connexion à l’aide de votre identifiant de connexion.
+Pour supprimer un compte, envoyez une requête de DELETE à la fonction [!DNL Flow Service] tout en fournissant l’identifiant de connexion de base qui correspond au compte que vous souhaitez supprimer.
 
 **Format d’API**
 
 ```http
-GET /connections/{CONNECTION_ID}
+DELETE /connections/{BASE_CONNECTION_ID}
 ```
 
 | Paramètre | Description |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | La valeur `id` unique de la connexion que vous souhaitez récupérer. |
-
-**Requête**
-
-Ce qui suit récupère des informations concernant votre identifiant de connexion.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/dd3631cd-d0ea-4fea-b631-cdd0ea6fea21' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Réponse**
-
-Une réponse réussie renvoie les détails actuels de votre connexion, y compris ses informations d’identification, son identifiant unique (`id`) et sa version.
-
-```json
-{
-    "items": [
-        {
-            "createdAt": 1603514659165,
-            "updatedAt": 1603514659165,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT",
-            "sandboxId": "{SANDBOX_ID}",
-            "sandboxName": "{SANDBOX_NAME}",
-            "id": "dd3631cd-d0ea-4fea-b631-cdd0ea6fea21",
-            "name": "Test Azure Blob Connector",
-            "description": "A test connector for Azure Blob",
-            "connectionSpec": {
-                "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "auth": {
-                "specName": "ConnectionString",
-                "params": {
-                    "connectionString": "xxxx"
-                }
-            },
-            "version": "\"07001eed-0000-0200-0000-5f93b1250000\"",
-            "etag": "\"07001eed-0000-0200-0000-5f93b1250000\""
-        }
-    ]
-}
-```
-
-## Supprimer la connexion
-
-Une fois que vous disposez d’un identifiant de connexion existant, effectuez une requête de DELETE vers l’API [!DNL Flow Service].
-
-**Format d’API**
-
-```http
-DELETE /connections/{CONNECTION_ID}
-```
-
-| Paramètre | Description |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | La valeur `id` unique de la connexion que vous souhaitez supprimer. |
+| --- | --- |
+| `{BASE_CONNECTION_ID}` | Identifiant de connexion de base du compte source que vous souhaitez supprimer. |
 
 **Requête**
 
 ```shell
 curl -X DELETE \
-    'https://platform-int.adobe.io/data/foundation/flowservice/connections/dd3631cd-d0ea-4fea-b631-cdd0ea6fea21' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'https://platform-int.adobe.io/data/foundation/flowservice/connections/dd3631cd-d0ea-4fea-b631-cdd0ea6fea21' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
@@ -152,6 +69,6 @@ Vous pouvez confirmer la suppression en tentant d’adresser une requête de rec
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez utilisé l’API [!DNL Flow Service] pour supprimer des comptes existants.
+En suivant ce tutoriel, vous avez utilisé avec succès la méthode [!DNL Flow Service] API pour supprimer des comptes existants.
 
-Pour savoir comment effectuer ces opérations à l’aide de l’interface utilisateur, reportez-vous au tutoriel sur la [suppression de comptes dans l’interface utilisateur](../../tutorials/ui/delete-accounts.md)
+Pour savoir comment effectuer ces opérations à l’aide de l’interface utilisateur, reportez-vous au tutoriel sur [suppression de comptes dans l’interface utilisateur](../../tutorials/ui/delete-accounts.md).
