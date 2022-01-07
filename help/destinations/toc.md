@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 320c95f894c75a7f52808730b0cac4bc1e4411e1
+source-git-commit: 54da385fa3e275137164423a0bec71445b0242e4
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 44%
+source-wordcount: '686'
+ht-degree: 46%
 
 ---
 
@@ -19,7 +19,9 @@ ht-degree: 44%
 * Tutoriels sur les API {#api}
    * [Connexion aux destinations de diffusion en continu et activation des données à l’aide de l’API Flow Service](./api/streaming-destinations.md)
    * [Connexion aux destinations de marketing par e-mail et activation des données à l’aide de l’API Flow Service](./api/email-marketing.md)
-   * [(Version bêta) Activation des segments d’audience vers des destinations par lots via l’API d’activation ad hoc](./api/ad-hoc-activation-api.md)
+   * [(Beta) Activation des segments d’audience vers des destinations par lots via l’API d’activation ad hoc](./api/ad-hoc-activation-api.md)
+   * [Suppression de comptes de destination](./api/delete-destination-account.md)
+   * [Suppression des flux de données de destination](./api/delete-destination-dataflow.md)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Création d’une connexion de destination](./ui/connect-destination.md)
@@ -66,8 +68,8 @@ ht-degree: 44%
    * Destinations d’analyse {#analytics}
       * [Présentation des destinations d’analyse](./catalog/analytics/overview.md)
       * [Extension Adform Website Tracking](./catalog/analytics/adform.md)
-      * [Extension Adobe Analytics](./catalog/analytics/adobe-analytics.md)
-      * [Extension Adobe Media Analytics for Audio and Video](./catalog/analytics/adobe-video-analytics.md)
+      * [Extension Adobe Analytics](./catalog/analytics/adobe-analytics.md)
+      * [Extension Adobe Media Analytics for Audio and Video](./catalog/analytics/adobe-video-analytics.md)
       * [Extension Clicktale](./catalog/analytics/clicktale.md)
       * [Extension Contentsquare](./catalog/analytics/contentsquare.md)
       * [Extension Decibel](./catalog/analytics/decibel.md)
@@ -94,7 +96,7 @@ ht-degree: 44%
       * [LISTE AUTORISÉE d’adresses IP](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinations de la plateforme de gestion des données {#data-management}
       * [Présentation des destinations Data Management Platform (DMP)](./catalog/data-management/overview.md)
-      * [Extension Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
+      * [Extension Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
    * Destinations des emails {#email}
       * [Extension Bizible](./catalog/email/bizible.md)
       * [Extension Marketo](./catalog/email/marketo.md)
@@ -116,12 +118,12 @@ ht-degree: 44%
    * Destinations de personnalisation {#personalization}
       * [Présentation des destinations de personnalisation](./catalog/personalization/overview.md)
       * [Connexion Adobe Target (bêta)](./catalog/personalization/adobe-target-connection.md)
-      * [Extension Adobe Target](./catalog/personalization/adobe-target.md)
-      * [Extension Adobe Target v2](./catalog/personalization/adobe-target-v2.md)
+      * [Extension Adobe Target](./catalog/personalization/adobe-target.md)
+      * [Extension Adobe Target v2](./catalog/personalization/adobe-target-v2.md)
       * [Extension Beemray](./catalog/personalization/beemray.md)
       * [Connexion de personnalisation personnalisée (bêta)](./catalog/personalization/custom-personalization.md)
       * [Extension D&amp;B Visitor Intelligence](./catalog/personalization/dnb.md)
-      * [Extension du service Experience Cloud ID](./catalog/personalization/adobe-ecid.md)
+      * [Extension du service Experience Cloud ID](./catalog/personalization/adobe-ecid.md)
       * [Extension Gainsight](./catalog/personalization/gainsight.md)
       * [Extension KickFire](./catalog/personalization/kickfire.md)
       * [Extension Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
@@ -149,7 +151,7 @@ ht-degree: 44%
    * [Présentation](./destination-sdk/overview.md)
    * [Conditions préalables à l’intégration](./destination-sdk/integration-prerequisites.md)
    * [Prise en main](./destination-sdk/getting-started.md)
-   * Fonctionnalité Destination SDK {#functionality}
+   * Fonctionnalité de la Destination SDK {#functionality}
       * [Options de configuration](./destination-sdk/configuration-options.md)
       * [Configuration de la destination](./destination-sdk/destination-configuration.md)
       * [Spécifications du serveur et des modèles](./destination-sdk/server-and-template-configuration.md)
@@ -162,7 +164,7 @@ ht-degree: 44%
          * [Créer et tester un modèle de transformation de message](./destination-sdk/create-template.md)
          * [Test de votre configuration de destination](./destination-sdk/test-destination.md)
    * Opérations API {#api}
-      * [Référence de l’API Destination SDK (création de destination)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Référence de l’API de Destination SDK (création de destination)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [Opérations de l’API Destinations endpoint](./destination-sdk/destination-configuration-api.md)
       * [Opérations de l’API du point d’entrée du serveur de destination](./destination-sdk/destination-server-api.md)
       * [Opérations de l’API de point d’entrée des métadonnées d’audience](./destination-sdk/audience-metadata-api.md)
@@ -174,7 +176,7 @@ ht-degree: 44%
          * [Opérations de l’API de test de destination](./destination-sdk/destination-testing-api.md)
          * [Exemples d’opérations API de génération de profil](./destination-sdk/sample-profile-generation-api.md)
    * Guides {#guides}
-      * [Utilisation de Destination SDK pour configurer une destination de diffusion en continu](./destination-sdk/configure-destination-instructions.md)
+      * [Utilisation de la Destination SDK pour configurer une destination de diffusion en continu](./destination-sdk/configure-destination-instructions.md)
       * [Envoyer pour révision d’une destination créée dans Destination SDK](./destination-sdk/submit-destination.md)
    * Document de votre destination {#document-destination}
       * [Document de votre destination dans Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
