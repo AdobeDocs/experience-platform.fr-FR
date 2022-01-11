@@ -3,7 +3,7 @@ title: Prise en main de l’API Reactor
 description: Découvrez comment commencer à utiliser l’API Reactor, y compris les étapes de génération des informations d’identification d’accès requises.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1060'
 ht-degree: 100%
 
@@ -21,7 +21,7 @@ Ce guide explique comment utiliser Adobe Developer Console pour rassembler les v
 
 ## Obtenir l’accès développeur à Adobe Experience Platform
 
-Avant de pouvoir générer des valeurs d’authentification pour l’API Reactor, vous devez disposer d’un accès développeur à Experience Platform. Pour obtenir l’accès développeur, suivez les étapes mentionnées au début du [tutoriel sur l’authentification dans Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Une fois arrivé à l’étape « Générer les informations d’identification d’accès dans Adobe Developer Console », revenez sur ce tutoriel pour générer les informations d’identification spécifiques à l’API Reactor.
+Avant de pouvoir générer des valeurs d’authentification pour l’API Reactor, vous devez disposer d’un accès développeur à Experience Platform. Pour obtenir l’accès développeur, suivez les étapes mentionnées au début du [tutoriel sur l’authentification dans Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Une fois arrivé à l’étape « Générer les informations d’identification d’accès dans Adobe Developer Console », revenez sur ce tutoriel pour générer les informations d’identification spécifiques à l’API Reactor.
 
 ## Génération des informations d’identification d’accès
 
