@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '382'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -173,7 +173,7 @@ ht-degree: 99%
       * [Configurations d’application](./api/endpoints/app-configurations.md)
       * [Événements d’audit](./api/endpoints/audit-events.md)
       * [Rappels](./api/endpoints/callbacks.md)
-      * [Remarques](./api/endpoints/notes.md)
+      * [Notes](./api/endpoints/notes.md)
       * [Profile](./api/endpoints/profile.md)
       * [Recherche](./api/endpoints/search.md)
       * [Secrets](./api/endpoints/secrets.md)
