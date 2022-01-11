@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et l’ingestion de données dans Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4075'
 ht-degree: 100%
 
@@ -20,7 +20,7 @@ Le guide d’intégration ETL décrit les étapes générales de la création de
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
-- [Authentification et autorisation pour les API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis)
+- [Authentification et autorisation pour les API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr)
 - [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 Ce guide comprend également des exemples d’appels d’API à utiliser lors de la conception d’un connecteur ETL, avec des liens vers la documentation détaillant chaque service [!DNL Experience Platform] et l’utilisation de son API.
@@ -50,13 +50,13 @@ Plusieurs composants d’Experience Platform sont impliqués dans les intégrat
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin ou dont vous devrez disposer pour passer avec succès des appels aux API [!DNL Experience Platform].
 
-### Lecture d&#39;exemples d&#39;appels API
+### Lecture d’exemples d’appels API
 
-Ce guide fournit des exemples d&#39;appels API pour démontrer comment formater vos requêtes. Il s&#39;agit notamment de chemins d&#39;accès, d&#39;en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
