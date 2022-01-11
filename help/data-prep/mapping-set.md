@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Découvrez comment utiliser les jeux de mappages avec la préparation de données Adobe Experience Platform.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
 source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '959'
 ht-degree: 100%
 
@@ -78,7 +78,7 @@ Le fichier JSON suivant est un exemple de jeu de mappages type :
 | `source` | Pour chaque mappage répertorié, l’attribut `source` indique le champ que vous souhaitez mapper. Vous trouverez plus d’informations sur la configuration de votre source dans la [section sources](#sources). |
 | `destination` | Pour chaque mappage répertorié, l’attribut `destination` indique le champ, ou le chemin d’accès au champ, où sera placée la valeur extraite du champ `source`. Vous trouverez plus d’informations sur la configuration de vos destinations dans la [section destination](#destination). |
 | `mappings.name` | (*Facultatif*) Nom du mappage. |
-| `mappings.description` | (*Facultatif)* Description du mappage. |
+| `mappings.description` | (*Facultatif*) Description du mappage. |
 
 ## Configuration des sources de mappage
 
