@@ -4,9 +4,9 @@ title: Activation d’un jeu de données pour Profile et Identity Service à l�
 type: Tutorial
 description: Ce tutoriel vous explique comment activer un jeu de données à utiliser avec Real-time Customer Profile et Identity Service à l’aide des API Adobe Experience Platform.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: d463dabbb9dc099394081b803df619129c0cb416
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1073'
 ht-degree: 59%
 
 ---
@@ -24,7 +24,7 @@ Ce tutoriel décrit le processus d’activation d’un jeu de données à utilis
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique de plusieurs services Adobe Experience Platform impliqués dans la gestion des jeux de données activés pour Profile. Avant de commencer ce tutoriel, veuillez consulter la documentation relative à ces services DNL Platform associés :
+Ce tutoriel nécessite une compréhension pratique de plusieurs services Adobe Experience Platform impliqués dans la gestion des jeux de données activés pour Profile. Avant de commencer ce tutoriel, veuillez consulter la documentation relative à ces [!DNL Platform] services :
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 - [[!DNL Identity Service]](../../identity-service/home.md): Active [!DNL Real-time Customer Profile] en rapprochant les identités des sources de données disparates ingérées dans [!DNL Platform].
@@ -35,11 +35,11 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
