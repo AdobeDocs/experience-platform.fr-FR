@@ -3,7 +3,7 @@ title: Extension Adobe Client Data Layer
 description: Découvrez l’extension de balise ACDL dans Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
 source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '643'
 ht-degree: 100%
 
@@ -119,7 +119,7 @@ Les sections ci-dessous couvrent les types d’éléments de données uniques fo
 
 L’élément de données État calculé de la couche de données peut renvoyer l’une des deux valeurs suivantes, selon la manière dont vous le configurez :
 
-* État complet de la couche de données : par défaut, l’état calculé de la couche de données complet est renvoyé.
+* État complet de la couche de données : par défaut, l’état complet calculé de la couche de données est renvoyé.
 * Chemin spécifique : vous pouvez spécifier le chemin que vous souhaitez renvoyer dans votre couche de données. Les chemins sont spécifiés à l’aide de la notation par points (par exemple, `data.foo`).
 
 ### Taille de couche de données
