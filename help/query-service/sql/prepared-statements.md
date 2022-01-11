@@ -3,18 +3,18 @@ keywords: Experience Platform;accueil;rubriques populaires;service de requête;Q
 solution: Experience Platform
 title: Instructions préparées dans Query Service
 topic-legacy: prepared statements
-description: Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform Query Service prend en charge les instructions préparées à l’aide d’une requête paramétrée.
+description: Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform Query Service prend en charge les instructions préparées à l’aide d’une requête paramétrée.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 89%
+source-wordcount: '374'
+ht-degree: 85%
 
 ---
 
 # Instructions préparées
 
-Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform [!DNL Query Service] prend en charge les instructions préparées à l’aide d’une requête paramétrée. Vous pouvez l’utiliser pour optimiser les performances, car vous n’aurez plus besoin de continuer à analyser une requête à l’infini.
+Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform [!DNL Query Service] prend en charge les instructions préparées à l’aide d’une requête paramétrée. Cela peut optimiser les performances, car vous n’avez plus besoin de réanalyser une requête de manière répétitive.
 
 ## Utilisation d’instructions préparées
 
@@ -82,7 +82,7 @@ SELECT * FROM table WHERE id >= 10000 AND id <= 10005;
 
 La requête SQL ci-dessus renvoie la réponse suivante :
 
-| identifiant | prénom | nom | date de naissance | adresse électronique | ville | pays |
+| identifiant | prénom | nom | date de naissance | adresse e-mail | ville | pays |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexander | davis | 15/09/1993 | exemple@exemple.com | Vancouver | Canada |
 | 10001 | antoine | dubois | 14/03/1967 | exemple2@exemple.com | Paris | France |
@@ -105,7 +105,7 @@ EXECUTE getIdRange(10000, 10005);
 
 Lors de l’appel, les résultats sont exactement les mêmes que précédemment :
 
-| identifiant | prénom | nom | date de naissance | adresse électronique | ville | pays |
+| identifiant | prénom | nom | date de naissance | adresse e-mail | ville | pays |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10 000 | alexander | davis | 15/09/1993 | exemple@exemple.com | Vancouver | Canada |
 | 10001 | antoine | dubois | 14/03/1967 | exemple2@exemple.com | Paris | France |

@@ -1,10 +1,11 @@
 ---
 title: Exemples de requêtes de chargement incrémentiel
 description: La fonction de chargement incrémentiel utilise des fonctions de blocage et d’instantané anonymes afin de fournir une solution en temps quasi réel pour déplacer les données du lac de données vers votre entrepôt de données, tout en ignorant les données correspondantes.
-source-git-commit: fb464c6e6b1972f5a2653872385517749936691a
+exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
+source-git-commit: 943886078fe31a12542c297133ac6a0a0d551e08
 workflow-type: tm+mt
-source-wordcount: '685'
-ht-degree: 3%
+source-wordcount: '687'
+ht-degree: 2%
 
 ---
 
@@ -22,11 +23,11 @@ Les exemples SQL de ce document nécessitent une compréhension du bloc anonyme 
 
 Reportez-vous à la section [Guide de syntaxe SQL](../sql/syntax.md).
 
-## Étapes
+## Chargement incrémentiel des données
 
 Les étapes ci-dessous montrent comment créer et charger des données par incréments à l’aide d’instantanés et de la fonction de blocage anonyme. Le modèle de conception peut être utilisé comme modèle pour votre propre séquence de requêtes.
 
-1. Créez un `checkpoint_log` pour effectuer le suivi de l’instantané le plus récent utilisé pour traiter les données avec succès. La table de tracking (`checkpoint_log` dans cet exemple) doit d’abord être initialisé en `null` afin de traiter de manière incrémentielle un jeu de données.
+1 Créez une `checkpoint_log` pour effectuer le suivi de l’instantané le plus récent utilisé pour traiter les données avec succès. La table de tracking (`checkpoint_log` dans cet exemple) doit d’abord être initialisé en `null` afin de traiter de manière incrémentielle un jeu de données.
 
 ```SQL
 DROP TABLE IF EXISTS checkpoint_log;
@@ -39,7 +40,7 @@ SELECT
    WHERE false;
 ```
 
-1. Renseignez la variable `checkpoint_log` avec un enregistrement vide pour le jeu de données qui nécessite un traitement incrémentiel. `DIM_TABLE_ABC` est le jeu de données à traiter dans l’exemple ci-dessous. Lors de la première fois de traitement `DIM_TABLE_ABC`, la variable `last_snapshot_id` est initialisé en tant que `null`. Cela vous permet de traiter l’ensemble du jeu de données la première fois et de manière incrémentielle par la suite.
+2 Renseignez la variable `checkpoint_log` avec un enregistrement vide pour le jeu de données qui nécessite un traitement incrémentiel. `DIM_TABLE_ABC` est le jeu de données à traiter dans l’exemple ci-dessous. Lors de la première fois de traitement `DIM_TABLE_ABC`, la variable `last_snapshot_id` est initialisé en tant que `null`. Cela vous permet de traiter l’ensemble du jeu de données la première fois et de manière incrémentielle par la suite.
 
 ```SQL
 INSERT INTO
@@ -51,20 +52,19 @@ INSERT INTO
        CURRENT_TIMESTAMP process_timestamp;
 ```
 
-1. Ensuite, initialisez `DIM_TABLE_ABC_Incremental` pour contenir la sortie traitée de `DIM_TABLE_ABC`. Le bloc anonyme dans la **required** la section exécution de l’exemple SQL ci-dessous, comme décrit dans les étapes 1 à 4, est exécutée de manière séquentielle pour traiter les données de manière incrémentielle.
+3 Ensuite, initialisez `DIM_TABLE_ABC_Incremental` pour contenir la sortie traitée de `DIM_TABLE_ABC`. Le bloc anonyme dans la **required** la section exécution de l’exemple SQL ci-dessous, comme décrit dans les étapes 1 à 4, est exécutée de manière séquentielle pour traiter les données de manière incrémentielle.
 
-   1. Définissez la variable `from_snapshot_id` qui indique d’où commence le traitement. Le `from_snapshot_id` dans l’exemple est interrogé à partir de la fonction `checkpoint_log` table à utiliser avec `DIM_TABLE_ABC`. Lors de l’exécution initiale, l’ID d’instantané est `null` ce qui signifie que l’ensemble du jeu de données sera traité.
-   2. Définissez la variable `to_snapshot_id` comme ID d’instantané actuel de la table source (`DIM_TABLE_ABC`). Dans l’exemple, cette requête provient de la table des métadonnées de la table source.
-   3. Utilisez la variable `CREATE` mot-clé à créer `DIM_TABLE_ABC_Incremenal` comme table de destination. Le tableau de destination conserve les données traitées du jeu de données source (`DIM_TABLE_ABC`). Cela permet aux données traitées du tableau source entre `from_snapshot_id` et `to_snapshot_id`, à ajouter de manière incrémentielle au tableau de destination.
-   4. Mettez à jour le `checkpoint_log` avec le `to_snapshot_id` pour les données source qui `DIM_TABLE_ABC` traité avec succès.
-   5. Si l’une des requêtes exécutées de manière séquentielle du bloc anonyme échoue, la variable **facultatif** exception est exécutée. Cela renvoie une erreur et met fin au processus.
+1. Définissez la variable `from_snapshot_id` qui indique d’où commence le traitement. Le `from_snapshot_id` dans l’exemple est interrogé à partir de la fonction `checkpoint_log` table à utiliser avec `DIM_TABLE_ABC`. Lors de l’exécution initiale, l’ID d’instantané est `null` ce qui signifie que l’ensemble du jeu de données sera traité.
+2. Définissez la variable `to_snapshot_id` comme ID d’instantané actuel de la table source (`DIM_TABLE_ABC`). Dans l’exemple, cette requête provient de la table des métadonnées de la table source.
+3. Utilisez la variable `CREATE` mot-clé à créer `DIM_TABLE_ABC_Incremenal` comme table de destination. Le tableau de destination conserve les données traitées du jeu de données source (`DIM_TABLE_ABC`). Cela permet aux données traitées du tableau source entre `from_snapshot_id` et `to_snapshot_id`, à ajouter de manière incrémentielle au tableau de destination.
+4. Mettez à jour le `checkpoint_log` avec le `to_snapshot_id` pour les données source qui `DIM_TABLE_ABC` traité avec succès.
+5. Si l’une des requêtes exécutées de manière séquentielle du bloc anonyme échoue, la variable **facultatif** exception est exécutée. Cela renvoie une erreur et met fin au processus.
 
 >[!NOTE]
 >
 >Le `history_meta('source table name')` est une méthode pratique utilisée pour accéder à l’instantané disponible dans un jeu de données.
 
 ```SQL
-$$
 BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -86,17 +86,16 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END$$;
+ END;
 ```
 
-1. Utilisez la logique de chargement incrémentiel des données dans l’exemple de bloc anonyme ci-dessous pour permettre le traitement et l’ajout régulier de toutes les nouvelles données du jeu de données source (depuis l’horodatage le plus récent) à la table de destination. Dans l’exemple, les données sont modifiées en `DIM_TABLE_ABC` sera traité et ajouté à `DIM_TABLE_ABC_incremental`.
+4 Utilisez la logique de chargement des données incrémentielles dans l’exemple de bloc anonyme ci-dessous pour permettre le traitement et l’ajout régulier de toutes les nouvelles données du jeu de données source (depuis l’horodatage le plus récent) à la table de destination. Dans l’exemple, les données sont modifiées en `DIM_TABLE_ABC` sera traité et ajouté à `DIM_TABLE_ABC_incremental`.
 
 >[!NOTE]
 >
 > `_ID` est la clé Principal dans les deux `DIM_TABLE_ABC_Incremental` et `SELECT history_meta('DIM_TABLE_ABC')`.
 
 ```SQL
-$$
 BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -118,7 +117,7 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END$$;
+ END;
 ```
 
 Cette logique peut être appliquée à n’importe quel tableau pour effectuer des chargements incrémentiels.
@@ -138,7 +137,6 @@ SET resolve_fallback_snapshot_on_failure=true;
 L’ensemble du bloc de code se présente comme suit :
 
 ```SQL
-$$
 BEGIN
     SET resolve_fallback_snapshot_on_failure=true;
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
@@ -160,7 +158,7 @@ Insert Into
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END$$;
+ END;
 ```
 
 ## Étapes suivantes
