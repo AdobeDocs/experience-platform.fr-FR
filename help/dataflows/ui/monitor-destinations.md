@@ -6,9 +6,9 @@ title: Surveillance des flux de données pour les destinations dans l’interfac
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 055338228608685a65bc79d9d9d0c07e3ddddfb2
+source-git-commit: 86981f2bf97c9f504c17d9531cd51a58ab994dd2
 workflow-type: tm+mt
-source-wordcount: '1785'
+source-wordcount: '1797'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 - [Destinations](../../destinations/home.md): Les destinations sont des intégrations préconfigurées aux applications courantes qui permettent l’activation transparente des données de Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 - [Environnements de test](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-## Surveillance des flux de données dans l’espace de travail des destinations
+## Surveillance des flux de données dans l’espace de travail des destinations {#monitor-dataflows-in-the-destinations-workspace}
 
 Dans le **[!UICONTROL Destinations]** dans l’interface utilisateur de Platform, accédez à la **[!UICONTROL Parcourir]** et sélectionnez le nom d’une destination que vous souhaitez afficher.
 
@@ -45,18 +45,24 @@ Pour plus d’informations sur les statuts, voir le tableau suivant :
 | En cours de traitement | Le `Processing` Le statut indique qu’un flux de données n’est pas encore principal. Cet état est souvent rencontré immédiatement après la création d’un nouveau flux de données. |
 | Erreur | Le `Error` Le statut indique que le processus d’activation d’un flux de données a été interrompu. |
 
-### Exécutions de flux de données pour les destinations de diffusion en continu
+### Exécutions de flux de données pour les destinations de diffusion en continu {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated"
 >title="Identités activées"
 >abstract="Nombre d’identités de profil individuelles activées avec succès vers la destination sélectionnée."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="En savoir plus dans la documentation"
+>text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded"
 >title="Identités exclues"
 >abstract="Le nombre d’enregistrements de profil individuels exclus de l’activation pour la destination sélectionnée en fonction des attributs manquants et de la violation du consentement."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesfailed"
+>title="Identités en échec"
+>abstract="Le nombre d’identités de profil individuelles qui ont échoué pour la destination sélectionnée. Pour plus d’informations, consultez les diagnostics d’erreur."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="En savoir plus dans la documentation"
 
 Pour les destinations de diffusion en continu, la variable [!UICONTROL Exécutions de flux de données] Cet onglet fournit une mise à jour horaire des données de mesure lors de l’exécution de votre flux de données. Les statistiques les plus en vue sont celles portant sur les identités.
@@ -93,7 +99,7 @@ La page Détails affiche également une liste des identités qui ont échoué et
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### Les flux de données s’exécutent pour les destinations par lots.
+### Les flux de données s’exécutent pour les destinations par lots. {#dataflow-runs-for-batch-destinations}
 
 Pour les destinations par lot, la variable [!UICONTROL Exécutions de flux de données] fournit des données de mesure sur vos exécutions de flux de données. Une liste des exécutions individuelles et de leurs mesures spécifiques s’affiche, ainsi que les totaux suivants pour les identités :
 
