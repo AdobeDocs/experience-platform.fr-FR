@@ -1,9 +1,9 @@
 ---
 title: Point dʼentrée de recherche
-description: Découvrez comment effectuer des appels vers le point dʼentrée /recherche dans lʼAPI Reactor.
+description: Découvrez comment effectuer des appels vers le point dʼentrée /search dans lʼAPI Reactor.
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '658'
 ht-degree: 100%
 
