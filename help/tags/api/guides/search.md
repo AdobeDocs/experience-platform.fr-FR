@@ -3,7 +3,7 @@ title: Recherche de ressources dans lʼAPI Reactor
 description: Découvrez comment rechercher des ressources dans lʼAPI Reactor.
 exl-id: cb594e60-3e24-457e-bfb3-78ec84d3e39a
 source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '260'
 ht-degree: 100%
 
