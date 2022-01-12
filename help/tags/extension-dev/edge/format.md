@@ -2,10 +2,10 @@
 title: Modules de bibliothèque dans les extensions Edge
 description: Mise en forme des modules de bibliothèque pour les extensions de balise dans une propriété Edge.
 exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 100%
+source-wordcount: '307'
+ht-degree: 98%
 
 ---
 
@@ -13,15 +13,15 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 >[!IMPORTANT]
 >
 >Ce document couvre le format du module de bibliothèque pour les extensions Edge. Si vous développez une extension web, consultez le guide de [formatage des modules d’extension web](../web/format.md) à la place.
 
-Un module de bibliothèque est un morceau de code réutilisable fourni par une extension émise dans la bibliothèque d’exécution de balise dans Adobe Experience Platform (la bibliothèque exécutée sur le nœud Edge). Par exemple, un type d’action `sendBeacon` aura un module de bibliothèque exécuté sur le nœud Edge et enverra une balise.
+Un module de bibliothèque est un morceau de code réutilisable fourni par une extension émise dans la bibliothèque d’exécution de balises d’Adobe Experience Platform (la bibliothèque exécutée sur le nœud Edge). Par exemple, un type d’action `sendBeacon` aura un module de bibliothèque exécuté sur le nœud Edge et enverra une balise.
 
-Le module Bibliothèque est structuré comme un [module CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1.1). Dans un module CommonJS, les variables suivantes peuvent être utilisées :
+Le module Bibliothèque est structuré comme un [module CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules). Dans un module CommonJS, les variables suivantes peuvent être utilisées :
 
 ## [!DNL require]
 

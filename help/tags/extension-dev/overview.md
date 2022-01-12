@@ -1,11 +1,11 @@
 ---
 title: Présentation du développement d’extension
-description: Découvrez les principaux composants des différents types d’extensions de balise ainsi que le processus de développement des extensions dans Adobe Experience Platform.
+description: Découvrez les principaux composants des différents types d’extensions de balise ainsi que le processus de développement des extensions dans Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 100%
+source-wordcount: '949'
+ht-degree: 99%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-L’un des principaux objectifs des balises dans Adobe Experience Platform est de créer un réseau ouvert où les ingénieurs extérieurs à Adobe peuvent exposer des fonctionnalités supplémentaires sur leurs sites web et applications mobiles. Les extensions de balises permettent cela. Une fois qu’une extension a été installée sur une propriété de balise, cette fonctionnalité d’extension est alors disponible auprès de tous les utilisateurs de la propriété.
+L’un des principaux objectifs des balises dans Adobe Experience Platform est de créer un réseau ouvert où les ingénieurs extérieurs à Adobe peuvent exposer des fonctionnalités supplémentaires sur leurs sites web et applications mobiles. Les extensions de balises permettent cela. Une fois qu’une extension a été installée sur une propriété de balise, cette fonctionnalité d’extension est alors disponible auprès de tous les utilisateurs de la propriété.
 
 Ce document décrit les composants principaux d’une extension et fournit des liens vers d’autres documents pour vous guider dans le processus de développement d’extensions.
 
@@ -29,7 +29,7 @@ Un fichier manifeste ([`extension.json`](./manifest.md)) doit exister à la raci
 
 ### Modules Bibliothèque
 
-Les modules de bibliothèque sont les fichiers qui décrivent les différents [composants](#components) fournis par une extension (en d’autres termes, la logique à émettre dans la bibliothèque d’exécution de balise). Le contenu de chaque fichier de module de bibliothèque doit respecter les [normes du module CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1.1).
+Les modules de bibliothèque sont les fichiers qui décrivent les différents [composants](#components) fournis par une extension (en d’autres termes, la logique à émettre dans la bibliothèque d’exécution de balise). Le contenu de chaque fichier de module de bibliothèque doit respecter les [normes du module CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules).
 
 Par exemple, si vous créez un type d’action appelé « Envoyer une balise », vous devez disposer d’un fichier contenant la logique qui envoie la balise. Si vous utilisez JavaScript, le fichier peut être appelé `sendBeacon.js`. Le contenu de ce fichier sera émis dans la bibliothèque d’exécution de balise.
 

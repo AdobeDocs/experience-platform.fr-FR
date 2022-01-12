@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Dans Adobe Experience Platform, les attributs calculés sont des fonctions utilisées pour agréger les données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation. Ce guide explique comment créer, afficher, mettre à jour et supprimer des attributs calculés à l’aide de l’API Real-time Customer Profile.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '2272'
+source-wordcount: '2275'
 ht-degree: 65%
 
 ---
@@ -508,7 +508,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 **Requête**
 
-Cette requête utilise le [format du correctif JSON](http://jsonpatch.com/) pour mettre à jour la « valeur » du champ « expression ».
+Cette requête utilise le [format du correctif JSON](https://datatracker.ietf.org/doc/html/rfc6902) pour mettre à jour la « valeur » du champ « expression ».
 
 ```shell
 curl -X PATCH \

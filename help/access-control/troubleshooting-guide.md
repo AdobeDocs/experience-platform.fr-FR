@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;dépannage;contrôle dʼaccès
+keywords: Experience Platform;accueil;rubriques populaires;dépannage;contrôle dʼaccès
 solution: Experience Platform
 title: Guide de dépannage du contrôle dʼaccès
 topic-legacy: troubleshooting guide
-description: Ce document répond aux questions fréquentes sur le contrôle d’accès dans Adobe Experience Platform.
+description: Ce document répond aux questions fréquentes sur le contrôle d’accès dans Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 100%
@@ -14,9 +14,9 @@ ht-degree: 100%
 
 # Guide de dépannage du contrôle d’accès
 
-Ce document répond aux questions fréquentes sur le contrôle d’accès dans Adobe Experience Platform. Pour les questions et le dépannage relatifs aux autres services [!DNL Platform], consultez le [guide de dépannage dʼExperience Platform](../landing/troubleshooting.md).
+Ce document répond aux questions fréquentes sur le contrôle d’accès dans Adobe Experience Platform. Pour les questions et le dépannage relatifs aux autres services [!DNL Platform], consultez le [guide de dépannage dʼExperience Platform](../landing/troubleshooting.md).
 
-[!DNL Experience Platform] exploite les profils de produit dans [Adobe Admin Console](http://adminconsole.adobe.com) pour fournir des contrôles d’accès en fonction du rôle, en liant les utilisateurs à des autorisations et des environnements de test.  Pour plus d’informations, consultez la [présentation du contrôle d’accès](home.md).
+[!DNL Experience Platform] exploite les profils de produit dans [Adobe Admin Console](https://adminconsole.adobe.com) pour fournir des contrôles d’accès en fonction du rôle, en liant les utilisateurs à des autorisations et des environnements de test.  Pour plus d’informations, consultez la [présentation du contrôle d’accès](home.md).
 
 ## Où puis-je trouver mes autorisations d’accès actuelles ?
 
@@ -26,7 +26,7 @@ Si vous n’êtes pas un administrateur, vous pouvez tout de même consulter vos
 
 ## Certaines fonctionnalités de lʼinterface utilisateur de [!DNL Platform] ne sont pas disponibles. Comment les autorisations contrôlent-elles l’accès à ces fonctionnalités ?
 
-Si vous ne disposez pas des autorisations dʼaccès pour une fonctionnalité de [!DNL Platform] spécifique, cette fonctionnalité sera masquée ou grisée dans lʼinterface utilisateur dʼ[!DNL Experience Platform]. Par exemple, pour afficher lʼonglet « [!UICONTROL Profils] », vous devez disposer de lʼautorisation « [!UICONTROL Affichage des profils] » ou « [!UICONTROL Gestion des profils] ». Contactez votre administrateur si vous avez besoin dʼautorisations supplémentaires pour les fonctionnalités dʼ[!DNL Experience Platform].
+Si vous ne disposez pas des autorisations dʼaccès pour une fonctionnalité de [!DNL Platform] spécifique, cette fonctionnalité sera masquée ou grisée dans lʼinterface utilisateur dʼ[!DNL Experience Platform]. Par exemple, pour afficher lʼonglet « [!UICONTROL Profils] », vous devez disposer de lʼautorisation « [!UICONTROL Affichage des profils] » ou « [!UICONTROL Gestion des profils] ». Contactez votre administrateur si vous avez besoin dʼautorisations supplémentaires pour les fonctionnalités dʼ[!DNL Experience Platform].
 
 ## Comment les autorisations sont-elles regroupées et quel groupe contient l’autorisation que je souhaite utiliser ?
 

@@ -1,8 +1,8 @@
 ---
 title: Vues dans les extensions web
-description: 'Découvrez comment définir des vues pour les modules de bibliothèque dans vos extensions web Adobe Experience Platform '
+description: 'Découvrez comment définir des vues pour les modules de bibliothèque dans vos extensions web Adobe Experience Platform '
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '2063'
 ht-degree: 100%
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Chaque type d’événement, de condition, d’action ou d’élément de données peut fournir une vue permettant à un utilisateur de fournir des paramètres. L’extension peut également avoir une [vue de configuration d’extension](../configuration.md) de niveau supérieur permettant aux utilisateurs de fournir des paramètres globaux pour l’extension entière. Le processus de création d’une vue est identique pour tous les types de vues.
 
@@ -73,8 +73,8 @@ La méthode `init` sera appelée par les balises dès que la vue aura été char
 | `extensionSettings` | Paramètres enregistrés dans la vue de configuration de l’extension. Cela peut s’avérer utile pour accéder aux paramètres d’extension dans les vues qui ne sont pas la vue de configuration de l’extension. Si la vue actuelle est la vue de configuration de l’extension, utilisez `settings`. |
 | `propertySettings` | Objet contenant les paramètres de la propriété. Consultez le [guide d’objet Turbine](../turbine.md#property-settings) pour plus d’informations sur le contenu de cet objet. |
 | `tokens` | Objet contenant des jetons API. Pour accéder aux API d’Adobe depuis la vue, vous devez généralement utiliser un jeton IMS sous `tokens.imsAccess`. Ce jeton ne sera disponible que pour les extensions développées par Adobe. Si vous êtes un employé dʼAdobe représentant une extension créée par Adobe, veuillez [envoyer un e-mail à lʼéquipe dʼingénieurs en charge de la collecte de données](mailto:reactor@adobe.com) et indiquer le nom de lʼextension afin que nous puissions lʼajouter à la liste autorisée. |
-| `company` | Objet contenant une seule propriété, `orgId`, qui représente votre Adobe Experience Cloud ID (chaîne alphanumérique de 24 caractères). |
-| `schema` | Objet au format [Schéma JSON](http://json-schema.org/). Cet objet provient du [manifeste d’extension](../manifest.md) et peut s’avérer utile pour valider votre formulaire. |
+| `company` | Objet contenant une seule propriété, `orgId`, qui représente votre Adobe Experience Cloud ID (chaîne alphanumérique de 24 caractères). |
+| `schema` | Objet au format [Schéma JSON](https://json-schema.org/). Cet objet provient du [manifeste d’extension](../manifest.md) et peut s’avérer utile pour valider votre formulaire. |
 
 Votre vue doit utiliser ces informations pour générer et gérer son formulaire. Il est probable que vous n’aurez affaire qu’à `info.settings`, mais d’autres informations sont fournies en cas de besoin.
 
@@ -150,7 +150,7 @@ Vos vues comportent probablement des champs de formulaire dans lesquels les util
 
 Par exemple, supposons que nous créions une extension qui envoie une balise pour suivre une conversion. Supposons également que l’une des données que notre balise envoie est un nom de produit. Notre vue dʼextension qui permet à lʼutilisateur de configurer la balise aurait probablement un champ de texte pour le nom du produit. En règle générale, il ne serait pas très logique que l’utilisateur de Platform saisisse un nom de produit statique tel que « Calzone Oven XL », car le nom du produit dépend probablement de la page à partir de laquelle la balise sera envoyée. C’est un excellent exemple pour un élément de données.
 
-Si un utilisateur souhaite utiliser l’élément de données `productname` comme valeur du nom du produit, il peut saisir le nom de l’élément de données encadré de signes de pourcentage (`%productname%`). Nous appelons le nom de lʼélément de données encadré de signes de pourcentage un « jeton dʼélément de données ». Cette construction est souvent familière aux utilisateurs de Platform. Votre extension, à son tour, enregistrerait le jeton d’élément de données dans l’objet `settings` qu’elle exporte. L’objet settings peut alors ressembler à ceci :
+Si un utilisateur souhaite utiliser l’élément de données `productname` comme valeur du nom du produit, il peut saisir le nom de l’élément de données encadré de signes de pourcentage (`%productname%`). Nous appelons le nom de lʼélément de données encadré de signes de pourcentage un « jeton dʼélément de données ». Cette construction est souvent familière aux utilisateurs de Platform. Votre extension, à son tour, enregistrerait le jeton d’élément de données dans l’objet `settings` qu’elle exporte. L’objet settings peut alors ressembler à ceci :
 
 ```js
 {

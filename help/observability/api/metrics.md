@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires
+keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
 title: Point de terminaison de l’API de mesures
 topic-legacy: developer guide
 description: Découvrez comment récupérer les mesures d’observabilité dans Experience Platform à l’aide de l’API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 5c893d7c8c455c86c94cd311a20ce774abcf65e0
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1864'
 ht-degree: 45%
 
 ---
@@ -84,8 +84,8 @@ curl -X POST \
 | `metrics` | Tableau d’objets, un pour chaque mesure que vous souhaitez récupérer. |
 | `name` | Nom d’une mesure reconnue par Observability Insights. Voir [annexe](#available-metrics) pour obtenir une liste complète des noms de mesures acceptés. |
 | `filters` | Champ facultatif qui vous permet de filtrer les mesures selon des jeux de données spécifiques. Le champ est un tableau d’objets (un pour chaque filtre), chaque objet contenant les propriétés suivantes : <ul><li>`name`: Type d’entité par rapport auquel filtrer les mesures. Actuellement, seul `dataSets` est pris en charge.</li><li>`value`: L’identifiant d’un ou de plusieurs jeux de données. Plusieurs identifiants de jeu de données peuvent être fournis sous la forme d’une seule chaîne, chaque identifiant étant séparé par des caractères de barre verticale (`\|`).</li><li>`groupBy`: Lorsque la valeur est définie sur true, indique que la variable `value` représente plusieurs jeux de données dont les résultats de mesure doivent être renvoyés séparément. S’il est défini sur false, les résultats des mesures de ces jeux de données sont regroupés.</li></ul> |
-| `aggregator` | Spécifie la fonction d’agrégation qui doit être utilisée pour regrouper plusieurs enregistrements de série temporelle en résultats uniques. Pour plus d&#39;informations sur les agrégateurs disponibles, reportez-vous à la section [Documentation OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
-| `downsample` | Champ facultatif qui vous permet de spécifier une fonction d’agrégation afin de réduire le taux d’échantillonnage des données de mesure en triant les champs en intervalles (ou &quot;intervalles&quot;). L’intervalle du sous-échantillonnage est déterminé par la variable `granularity` . Pour plus d’informations sur le sous-échantillonnage, reportez-vous à la section [Documentation OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
+| `aggregator` | Spécifie la fonction d’agrégation qui doit être utilisée pour regrouper plusieurs enregistrements de série temporelle en résultats uniques. Pour plus d&#39;informations sur les agrégateurs disponibles, reportez-vous à la section [Documentation OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `downsample` | Champ facultatif qui vous permet de spécifier une fonction d’agrégation afin de réduire le taux d’échantillonnage des données de mesure en triant les champs en intervalles (ou &quot;intervalles&quot;). L’intervalle du sous-échantillonnage est déterminé par la variable `granularity` . Pour plus d’informations sur le sous-échantillonnage, reportez-vous à la section [Documentation OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -197,7 +197,7 @@ Les tableaux suivants répertorient toutes les mesures exposées par [!DNL Obser
 
 #### [!DNL Data Ingestion] {#ingestion}
 
-Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Data Ingestion]. Les mesures en **gras** sont des mesures d’ingestion par flux.
+Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Data Ingestion]. Les mesures en **gras** sont des mesures d’ingestion par flux.
 
 | Mesure d’insights | Description | Paramètre de requête d’identifiant |
 | ---- | ---- | ---- |
@@ -227,7 +227,7 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Data
 
 #### [!DNL Identity Service] {#identity}
 
-Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Identity Service].
+Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Identity Service].
 
 | Mesure d’insights | Description | Paramètre de requête d’identifiant |
 | ---- | ---- | ---- |
@@ -245,7 +245,7 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Iden
 
 #### [!DNL Privacy Service] {#privacy}
 
-Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Privacy Service].
+Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Privacy Service].
 
 | Mesure d’insights | Description | Paramètre de requête d’identifiant |
 | ---- | ---- | ---- |
@@ -257,7 +257,7 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Priv
 
 #### [!DNL Query Service] {#query}
 
-Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Query Service].
+Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Query Service].
 
 | Mesure d’insights | Description | Paramètre de requête d’identifiant |
 | ---- | ---- | ---- |

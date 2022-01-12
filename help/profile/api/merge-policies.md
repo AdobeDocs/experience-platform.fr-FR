@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Lorsque vous rassemblez ces données, les stratégies de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer une vue unifiée.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '2469'
+source-wordcount: '2472'
 ht-degree: 70%
 
 ---
@@ -588,7 +588,7 @@ curl -X PATCH \
 
 | Propriété | Description |
 |---|---|
-| `op` | Spécifie l’opération à effectuer. Vous trouverez des exemples d’autres opérations PATCH dans la documentation [JSON Patch](http://jsonpatch.com). |
+| `op` | Spécifie l’opération à effectuer. Vous trouverez des exemples d’autres opérations PATCH dans la documentation [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902). |
 | `path` | Chemin du champ à mettre à jour. Les valeurs acceptées sont les suivantes : &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot;., &quot;/isActiveOnEdge&quot; |
 | `value` | Valeur sur laquelle le champ spécifié doit être défini. |
 

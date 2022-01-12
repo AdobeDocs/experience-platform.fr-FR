@@ -5,9 +5,9 @@ title: 'Évaluation des événements en temps quasi réel avec la segmentation p
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation par flux avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 65ff1c34e12cc93f614c3c93c4e40e53f2bf51ff
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1831'
 ht-degree: 35%
 
 ---
@@ -38,11 +38,11 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 ### Lecture d’exemples d’appels API
 
-Ce guide de développement fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce guide de développement fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
@@ -338,7 +338,7 @@ curl -X POST \
 | `type` | **(Obligatoire)** Le type de tâche au format chaîne. Les types `batch_segmentation` et `export` sont pris en charge. |
 | `properties` | **(Obligatoire)** Un objet contenant des propriétés supplémentaires liées au planning. |
 | `properties.segments` | **(Obligatoire lorsque `type` est égal à `batch_segmentation`)** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
-| `schedule` | **(Obligatoire)** Une chaîne contenant le planning de la tâche. Vous ne pouvez planifier qu’une seule exécution de tâche par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution d’une tâche plus d’une fois au cours d’une période de 24 heures. L’exemple illustré (`0 0 1 * * ?`) signifie que la tâche est déclenchée tous les jours à 1:00:00 UTC. Pour plus d’informations, consultez la documentation sur le [format d’expression cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). |
+| `schedule` | **(Obligatoire)** Une chaîne contenant le planning de la tâche. Vous ne pouvez planifier qu’une seule exécution de tâche par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution d’une tâche plus d’une fois au cours d’une période de 24 heures. L’exemple illustré (`0 0 1 * * ?`) signifie que la tâche est déclenchée tous les jours à 1:00:00 UTC. Pour plus d’informations, consultez la documentation sur le [format d’expression cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). |
 | `state` | *(Facultatif)* Chaîne contenant l’état du planning. Valeurs disponibles : `active` et `inactive`. La valeur par défaut est `inactive`. Une organisation IMS ne peut créer qu’un seul planning. Les étapes de mise à jour du planning sont disponibles plus loin dans ce tutoriel. |
 
 **Réponse**
@@ -381,7 +381,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **Requête**
 
-La requête suivante utilise le [format du correctif JSON](http://jsonpatch.com/) pour mettre à jour l’état `state` du planning sur `active`.
+La requête suivante utilise le [format du correctif JSON](https://datatracker.ietf.org/doc/html/rfc6902) pour mettre à jour l’état `state` du planning sur `active`.
 
 ```shell
 curl -X POST \
@@ -416,7 +416,7 @@ Pour savoir comment effectuer des actions similaires et utiliser des segments à
 
 La section suivante répertorie les questions fréquentes sur la segmentation par flux :
 
-### La segmentation par flux est-elle &quot;non-qualification&quot; également effectuée en temps réel ?
+### La segmentation par flux &quot;non-qualification&quot; se produit-elle également en temps réel ?
 
 Pour la plupart des instances, l’inqualification de la segmentation par flux se produit en temps réel. Toutefois, les segments en flux continu qui utilisent des segments le font **not** non admissible en temps réel, mais non admissible après 24 heures.
 

@@ -2,10 +2,10 @@
 title: Développer une extension
 description: Ce document offre un aperçu général du processus de développement dʼune extension de balise et contient des liens vers dʼautres documents présentant des processus plus détaillés.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 100%
+source-wordcount: '538'
+ht-degree: 97%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Une extension de balise doit être considérée comme un (petit) produit ayant ses propres besoins. Déterminer comment un utilisateur Adobe Experience Platform souhaite utiliser votre extension peut vous permettre de trier les fonctionnalités en fonction des types d’événement, de condition, d’action et d’éléments de données que votre extension doit fournir.
+Une extension de balise doit être considérée comme un (petit) produit ayant ses propres besoins. Déterminer comment un utilisateur Adobe Experience Platform souhaite utiliser votre extension peut vous permettre de trier les fonctionnalités en fonction des types d’événement, de condition, d’action et d’éléments de données que votre extension doit fournir.
 
 Grâce à ces connaissances, vous pouvez planifier les composants qui doivent être fournis dans votre extension.
 
@@ -23,14 +23,14 @@ Grâce à ces connaissances, vous pouvez planifier les composants qui doivent ê
 
 Une fois que vous avez mis un plan en place, ces guides vous aideront à comprendre le processus de développement des extensions :
 
-* Le [guide de prise en main](../getting-started.md) et dʼautres documents sous **Développement dʼextensions** dans le volet de navigation de gauche constituent un bon matériel de référence pour comprendre les extensions. Ces ressources décrivent en détail les possibilités offertes par les extensions, la manière dont les informations utilisateur sont stockées et transmises entre votre extension et Adobe Experience Platform, la manière dont votre code est intégré aux bibliothèques et la manière dont le code dʼextension est interprété et utilisé au moment de lʼexécution dans le navigateur.
+* Le [guide de prise en main](../getting-started.md) et dʼautres documents sous **Développement dʼextensions** dans le volet de navigation de gauche constituent un bon matériel de référence pour comprendre les extensions. Ces documents contiennent des détails sur le rôle des extensions, sur la façon dont les informations utilisateur sont stockées et transmises entre votre extension et Adobe Experience Platform. Ils expliquent aussi comment votre code est regroupé en bibliothèques et comment votre code d’extension est interprété et utilisé au moment de l’exécution dans le navigateur.
 * Le [tutoriel vidéo sur les extensions](https://youtu.be/rxjtC9o4rl0) constitue un bon début.
 * La playlist YouTube [Introduction to Extensions](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) passe en revue le processus de création de packages d’extension.
 * Présentation de l’article [Understanding JSON Schema](https://spacetelescope.github.io/understanding-json-schema/index.html#).
-* [JSON Lint/Validator](http://jsonlint.com/).
+* [JSON Lint/Validator](https://jsonlint.com/).
 * Extension Chrome [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) pour visualiser et imprimer des fichiers JSON et JSONP.
 * Éditeur [jsonschema.net](https://jsonschema.net/#/editor) pour créer un schéma JSON à partir de votre objet..
-* [JSON Schema Validator](http://www.jsonschemavalidator.net/), validateur de schémas JSON interactif en ligne.
+* [JSON Schema Validator](https://www.jsonschemavalidator.net), validateur de schémas JSON interactif en ligne.
 
 ## Outils
 
@@ -53,6 +53,6 @@ Il existe des exemples dʼextensions sur GitHub que vous pouvez consulter ou uti
 
 ## Espace de travail Slack
 
-Vous pouvez demander lʼaccès à lʼespace de travail communautaire Slack où les auteurs dʼextensions peuvent sʼentraider en utilisant ce [formulaire de demande](http://join.launchdevelopers.chat).
+Vous pouvez demander lʼaccès à lʼespace de travail communautaire Slack où les auteurs dʼextensions peuvent sʼentraider en utilisant ce [formulaire de demande](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
 
 **Remarque** : bien quʼil y ait des membres dʼAdobe dans cet espace de travail Slack, il sʼagit dʼune ressource communautaire ni sponsorisée ni modérée par Adobe.
