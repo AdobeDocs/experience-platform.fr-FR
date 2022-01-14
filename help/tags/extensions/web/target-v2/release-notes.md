@@ -3,9 +3,9 @@ title: Notes de mise à jour de l’extension Adobe Target v2
 description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 source-git-commit: 644be95d9f90e20622c4f8ad68252ac57c09a288
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '623'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 95%
 
 ### Extension 0.17.0 d’Adobe Target v2
 
-- Mise à jour afin de prendre en charge at.js v2.8.0, qui collecte désormais des données d’utilisation des fonctionnalités et de télémétrie des performances.  Les données personnelles ne sont pas collectées. Pour exclure cette fonctionnalité, définissez `telemetryEnabled` to `false` in `targetGlobalSettings`.
+- Mise à jour afin de prendre en charge at.js v2.8.0, qui collecte désormais des données télémétriques sur l’utilisation des fonctionnalités et les performances. Les données personnelles ne sont pas collectées. Pour vous désinscrire de cette fonctionnalité, définissez `telemetryEnabled` sur `false` dans `targetGlobalSettings`.
 
 ## 28 octobre 2021
 
