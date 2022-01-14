@@ -3,30 +3,29 @@ title: Conditions préalables requises pour l’utilisation du SDK Web de Adobe 
 description: Découvrez les conditions préalables requises pour utiliser le SDK Web de Adobe Experience Platform.
 keywords: Domaine propriétaire;CNAME;schéma;créer un schéma;launch;extension du sdk web aep;extension;ID de configuration;outil de configuration;élément de données;créer un élément de données;objet XDM;sendEvent;envoyer un événement;
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: 9d3965be1956de754f0d2a82178bf5dcd871e239
+source-git-commit: 072e1968fa152454f4df6e88fcf7de5c03494030
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 1%
+source-wordcount: '396'
+ht-degree: 2%
 
 ---
 
 # Conditions préalables requises pour l’utilisation du SDK Web de Adobe Experience Platform
 
-Pour utiliser le SDK Web Platform, vous devez d’abord :
+Pour utiliser le SDK Web de Adobe Experience Platform, vous devez d’abord :
 
-- Demandez à votre entreprise de configurer cette fonctionnalité. (L’accès au SDK Web Platform est gratuit. Si vous souhaitez y accéder, contactez votre responsable du succès client.)
+- Demandez à votre entreprise de configurer cette fonctionnalité. Si vous souhaitez y accéder, veuillez renseigner les informations suivantes : [formulaire](http://adobe.ly/websdkaccess) et Adobe vous donnera accès aux flux de données et à Adobe Experience Platform (si nécessaire). Veuillez noter que l’Adobe vous fournira l’accès nécessaire à une utilisation limitée avec le SDK sans frais supplémentaires.
 - Il est recommandé d’activer le domaine propriétaire (CNAME). Si vous disposez déjà d’un CNAME pour Adobe Analytics, vous devez l’utiliser. Le test en développement fonctionne sans CNAME, mais Adobe recommande d’en avoir un avant de passer en production. Bien qu’une mise en oeuvre CNAME ne fournisse aucun avantage en termes de durée de vie des cookies, elle peut empêcher certains bloqueurs d’annonces et navigateurs moins courants de bloquer les demandes de SDK. Dans ce cas, l’utilisation d’un CNAME peut empêcher que votre collecte de données ne soit interrompue pour les utilisateurs qui utilisent ces outils.
 
 >[!IMPORTANT]
 >
->**Notez qu’à compter du 11/10/20, les mises en oeuvre CNAME propriétaires expirent de 7 jours sur tous les navigateurs Safari et tous les appareils iOS mobiles.**
+>**Notez qu’à compter du 11/10/20, les mises en oeuvre CNAME propriétaires expirent de 7 jours sur tous les navigateurs Safari et les appareils iOS mobiles.**
 
-- Sois autorisé à utiliser Adobe Experience Platform. Si vous n’avez pas acheté Adobe Experience Platform, Adobe vous fournira l’accès nécessaire pour une utilisation limitée avec le SDK sans frais supplémentaires.
-- Si votre site web utilise déjà le [service d’ID Experience Cloud](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html) sur votre site web (via l’API visiteur ou l’extension du service d’ID Experience Cloud dans Adobe Experience Platform Launch) et que vous souhaitez continuer à l’utiliser lors de la migration vers le SDK Web Adobe Experience Platform, vous devez utiliser la dernière version de l’API visiteur ou l’extension du service d’ID Experience Cloud. Voir [Migration des identifiants](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) pour plus d’informations.
+- Si votre site web utilise déjà la variable [Service d’ID Experience Cloud](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html) sur votre site web (via l’API visiteur ou l’extension du service d’ID Experience Cloud dans Adobe Experience Platform Launch) et que vous souhaitez continuer à l’utiliser lors de la migration vers le SDK Web Adobe Experience Platform, vous devez utiliser la dernière version de l’API visiteur ou l’extension du service d’ID Experience Cloud. Voir [Migration des identifiants](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) pour plus d’informations.
 
 ## Gestion des autorisations pour le SDK Web Adobe Experience Platform
 
-L’utilisation de Adobe Experience Platform ne nécessite aucune autorisation spéciale, mais vous devez disposer des [autorisations](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=fr) appropriées pour créer vos schémas dans Adobe Experience Platform. Les autorisations minimales dont une personne a besoin se trouvent dans la catégorie Modélisation des données et identités .
+Pour commencer à utiliser Adobe Experience Platform, vous devez disposer des droits [permissions](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=fr) pour créer vos schémas et gérer les identités. Les autorisations minimales requises sont disponibles dans la catégorie Modélisation des données et identités .
 
 ![](../images/AEP-permission-categories.png)
 

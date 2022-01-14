@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform, Data Collection
 audience: user
-user-guide-title: Aide du SDK web d’Adobe Experience Platform
+user-guide-title: Aide du SDK web d’Adobe Experience Platform
 breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Web SDK
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
-workflow-type: ht
-source-wordcount: '142'
+source-git-commit: ccda6d3e16fd6b9966c2f30491feed5fafec47f2
+workflow-type: tm+mt
+source-wordcount: '141'
 ht-degree: 100%
 
 ---
@@ -62,4 +62,4 @@ ht-degree: 100%
    * [Notes de mise à jour de l’extension SDK web](extension/web-sdk-ext-release-notes.md)
 * [Notes de mise à jour](release-notes.md)
 * [Questions fréquentes](web-sdk-faq.md)
-* [Publications du blog](blog-posts.md)
+* [Ressources](resources.md)

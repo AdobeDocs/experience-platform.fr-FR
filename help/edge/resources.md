@@ -1,0 +1,18 @@
+---
+title: Ressources
+seo-title: Resources for Adobe Experience Platform Web SDK
+description: Ressources pour le SDK Web Adobe Experience Platform
+seo-description: Resources for Adobe Experience Platform Web SDK
+exl-id: a6dd3a6c-e211-4fc3-b5f6-8c170e8f7503
+source-git-commit: c4ce04277fd1f5798c0c2eb6cf978b51b14e1a4b
+workflow-type: tm+mt
+source-wordcount: '65'
+ht-degree: 1%
+
+---
+
+# Articles utiles
+
+* [Résolution des problèmes de mise en oeuvre liés au SDK web Adobe Experience Platform et au réseau Edge](https://medium.com/adobetech/solving-implementation-pain-points-with-adobe-experience-platform-web-sdk-and-edge-network-880b635e6819)
+* [Amélioration des performances du site web avec le SDK web Adobe Experience Platform et le réseau Edge](https://medium.com/adobetech/boosting-website-performance-with-adobe-experience-platform-web-sdk-and-edge-network-329fcf70fdf9)
+* [Guide d’implémentation du SDK Web de Adobe Experience Platform à l’aide des balises](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=en)
