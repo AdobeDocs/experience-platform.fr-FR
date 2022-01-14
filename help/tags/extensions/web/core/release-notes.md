@@ -3,9 +3,9 @@ title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 5441c6ca0c15996ee06afa2c795ec5ae6e030f35
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1565'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 98%
 
 v3.3.0
 
-* Modifie la variable [Déclencher l’action d’appel direct](./overview.md#direct-call-action) afin que vous puissiez fournir des informations d’événement personnalisé à envoyer aux règles d’appel direct.
+* Modifie lʼ[action Déclencher l’appel direct](./overview.md#direct-call-action) afin que vous puissiez fournir des informations sur l’événement personnalisé à envoyer aux règles d’appel direct.
 
 ## 8 octobre 2021
 
