@@ -3,9 +3,9 @@ title: Présentation de l’extension Core
 description: Découvrez lʼextension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 source-git-commit: 04404ff9ab8d623214b96ec65342d2e8d11e85a6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5492'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -128,11 +128,11 @@ L’événement se déclenche si un type d’événement personnalisé se produi
 
 L’événement se déclenche en cas de modification d’un élément de données spécifié. Vous devez fournir un nom pour l’élément de données. Vous pouvez sélectionner lʼélément de données en saisissant son nom dans le champ de texte ou en sélectionnant lʼicône de lʼélément de données à droite du champ de texte et en effectuant ensuite une sélection dans une liste fournie dans la boîte de dialogue qui sʼaffiche.
 
-#### Direct Call {#direct-call-event}
+#### Appel direct {#direct-call-event}
 
-Un événement d’appel direct contourne les systèmes de recherche et de détection des événements. Les règles d’appel direct sont adaptées aux situations dans lesquelles vous souhaitez indiquer au système ce qui se passe exactement. Elles s’avèrent également très utiles lorsque le système ne peut pas détecter un événement dans le modèle DOM.
+Un événement dʼappel direct contourne les systèmes de détection et de recherche dʼévénements. Les règles d’appel direct sont adaptées aux situations dans lesquelles vous devez indiquer au système ce qui se passe exactement. Elles s’avèrent également très utiles lorsque le système ne peut pas détecter un événement dans le DOM.
 
-Lors de la définition d’un événement d’appel direct, vous devez spécifier une chaîne qui agira comme identifiant de cet événement. Si une [déclencher une action d’appel direct](#direct-call-action) contenant le même identifiant est déclenché, toutes les règles d’événement d’appel direct écoutant cet identifiant s’exécuteront.
+Lors de la définition d’un événement d’appel direct, vous devez spécifier une chaîne qui agira comme identifiant de cet événement. Si une [action Déclencher lʼappel direct](#direct-call-action) contenant le même identifiant est déclenchée, toutes les règles d’événement d’appel direct correspondant à cet identifiant s’exécuteront.
 
 ![Capture d’écran d’un événement d’appel direct dans l’interface utilisateur de la collecte de données](../../../images/extensions/core/direct-call-event.png)
 
@@ -460,7 +460,7 @@ Indiquez un ou plusieurs modèles de hachage qui doivent exister dans l’URL.
 1. (Facultatif) Activez les Regex s’il s’agit d’une expression régulière.
 1. Ajoutez d’autres modèles de hachage.
 
-#### Path   And Query String
+#### Path And Query String
 
 Indiquez un ou plusieurs chemins d’accès qui doivent exister dans l’URL.  Cela inclut le chemin et la chaîne de requête.
 
@@ -544,7 +544,7 @@ Indiquez le pourcentage de fois où la condition renvoie true (vrai).
 
 Cette section décrit les types d’actions disponibles dans l’extension Core.
 
-### Code personnalisé
+### Custom Code
 
 >[!NOTE]
 >
@@ -592,7 +592,7 @@ Lorsque l’option « Run rule components in sequence » des paramètres de pr
 
 *JavaScript*
 
-Lors de la création d’une action Custom Code JavaScript, vous pouvez renvoyer une [promesse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) depuis votre action. L’action suivante de la règle sera exécutée uniquement lorsque la promesse renvoyée sera résolue. Si la promesse est refusée, les actions suivantes de la règle ne seront pas exécutées.
+Lors de la création d’une action Custom Code JavaScript, vous pouvez renvoyer une [promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) depuis votre action. L’action suivante de la règle sera exécutée uniquement lorsque la promesse renvoyée sera résolue. Si la promesse est refusée, les actions suivantes de la règle ne seront pas exécutées.
 
 >[!NOTE]
 >
@@ -630,13 +630,13 @@ setTimeout(function() {
 </script>
 ```
 
-### Déclencher l’appel direct {#direct-call-action}
+### Déclencher lʼappel direct {#direct-call-action}
 
-Cette action déclenche toutes les règles qui utilisent un [événement d’appel direct](#direct-call-event). Lors de la configuration de l’action, vous devez fournir la chaîne d’identifiant de l’événement d’appel direct que vous souhaitez déclencher. Vous pouvez également transmettre des données à l’événement d’appel direct par le biais d’une `detail` qui peut contenir un ensemble personnalisé de paires clé-valeur.
+Cette action déclenche toutes les règles qui utilisent un [événement dʼappel direct](#direct-call-event) spécifique. Lors de la configuration de l’action, vous devez fournir la chaîne d’identifiant de l’événement dʼappel direct à déclencher. Vous pouvez également transmettre des données à l’événement dʼappel direct au moyen d’un objet `detail`, qui peut contenir un ensemble personnalisé de paires clé-valeur.
 
-![Capture d’écran d’une action Déclencher un appel direct dans l’interface utilisateur de la collecte de données](../../../images/extensions/core/direct-call-action.png)
+![Capture d’écran d’une action Déclencher lʼappel direct dans l’interface utilisateur de la collecte de données](../../../images/extensions/core/direct-call-action.png)
 
-L’action correspond directement à la variable [`track` method](../../../ui/client-side/satellite-object.md?lang=en#track) dans le `satellite` , accessible par le code côté client.
+L’action mappe directement à la méthode [`track`](../../../ui/client-side/satellite-object.md?lang=en#track) dans lʼobjet `satellite`, accessible par le code côté client.
 
 ## Types d’éléments de données de l’extension Core
 
@@ -799,7 +799,7 @@ Vous pouvez sélectionner l’un des attributs de page suivants à utiliser dans
 * URL
 * Hostname
 * Pathname
-* Protocole
+* Protocol
 * Référent
 * Title
 
@@ -838,7 +838,7 @@ Le stockage de session est similaire au stockage local, sauf que les données so
 
 ### Comportement du visiteur
 
-Semblable aux informations sur la page Infos, cet élément de données utilise des types de comportements courants pour enrichir la logique dans les règles et autres solutions de plateforme.
+Semblable aux informations sur la page, cet élément de données utilise des types de comportements courants pour enrichir la logique dans les règles ou d’autres solutions Platform.
 
 Sélectionnez l’un des attributs de comportement du visiteur suivants :
 
