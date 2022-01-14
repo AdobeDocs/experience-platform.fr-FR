@@ -5,16 +5,16 @@ title: Guide de dépannage de Query Service
 topic-legacy: troubleshooting
 description: Ce document contient des informations sur les codes d’erreur courants que vous rencontrez et les causes possibles.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 42288ae7db6fb19bc0a0ee8e4ecfa50b7d63d017
+source-git-commit: ac313e2a23037507c95d6713a83ad5ca07e1cd85
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 22%
+source-wordcount: '769'
+ht-degree: 20%
 
 ---
 
 # Guide de dépannage du [!DNL Query Service]
 
-Ce document fournit des réponses aux questions fréquentes sur Query Service et fournit une liste des codes d’erreur courants lors de l’utilisation de Query Service. Pour toute question ou dépannage concernant les autres services d’Adobe Experience Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
+Ce document fournit des réponses aux questions fréquentes sur Query Service et fournit une liste des codes d’erreur courants lors de l’utilisation de Query Service. Pour toute question ou dépannage concernant les autres services d’Adobe Experience Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
 
 ## Questions fréquentes
 
@@ -62,7 +62,7 @@ Lors de l’interrogation des données de série temporelle, vous devez utiliser
 
 >[!NOTE]
 >
-> La chaîne de date **doit** être au format `yyyy-mm-ddTHH24:MM:SS`.
+> Chaîne de date **must** être au format `yyyy-mm-ddTHH24:MM:SS`.
 
 Vous trouverez ci-dessous un exemple d’utilisation du filtre d’horodatage :
 
@@ -77,11 +77,11 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 
 ### Dois-je utiliser des caractères génériques, tels que * pour obtenir toutes les lignes de mes jeux de données ?
 
-Vous ne pouvez pas utiliser de caractères génériques pour obtenir toutes les données de vos lignes, car Query Service doit être traité comme **columnar-store** plutôt que comme un système de magasin basé sur les lignes traditionnel.
+Vous ne pouvez pas utiliser de caractères génériques pour obtenir toutes les données de vos lignes, car Query Service doit être traité comme un **columnar-store** plutôt qu’un système de magasin traditionnel basé sur les lignes.
 
 ### Dois-je utiliser `NOT IN` dans ma requête SQL ?
 
-L’opérateur `NOT IN` est souvent utilisé pour récupérer les lignes qui ne se trouvent pas dans une autre table ou instruction SQL. Cet opérateur peut ralentir les performances et renvoyer des résultats inattendus si les colonnes comparées acceptent `NOT NULL`, ou si vous avez un grand nombre d&#39;enregistrements.
+Le `NOT IN` est souvent utilisé pour récupérer les lignes qui ne figurent pas dans une autre table ou instruction SQL. Cet opérateur peut ralentir les performances et renvoyer des résultats inattendus si les colonnes comparées acceptent `NOT NULL`, ou vous avez un grand nombre d’enregistrements.
 
 Au lieu d’utiliser `NOT IN`, vous pouvez utiliser `NOT EXISTS` ou `LEFT OUTER JOIN`.
 
@@ -97,7 +97,7 @@ INSERT INTO T2 VALUES (1)
 INSERT INTO T2 VALUES (2)
 ```
 
-Si vous utilisez l’opérateur `NOT EXISTS`, vous pouvez effectuer une réplication à l’aide de l’opérateur `NOT IN` à l’aide de la requête suivante :
+Si vous utilisez la variable `NOT EXISTS` , vous pouvez répliquer à l’aide de l’opérateur `NOT IN` en utilisant la requête suivante :
 
 ```sql
 SELECT ID FROM T1
@@ -105,7 +105,7 @@ WHERE NOT EXISTS
 (SELECT ID FROM T2 WHERE T1.ID = T2.ID)
 ```
 
-Si vous utilisez l’opérateur `LEFT OUTER JOIN`, vous pouvez également effectuer une réplication à l’aide de l’opérateur `NOT IN` à l’aide de la requête suivante :
+Si vous utilisez la méthode `LEFT OUTER JOIN` , vous pouvez répliquer à l’aide de l’opérateur `NOT IN` en utilisant la requête suivante :
 
 ```sql
 SELECT T1.ID FROM T1
@@ -113,11 +113,11 @@ LEFT OUTER JOIN T2 ON T1.ID = T2.ID
 WHERE T2.ID IS NULL
 ```
 
-### Quelle est l’utilisation correcte des opérateurs `OR` et `UNION` ?
+### Quelle est la bonne utilisation de la variable `OR` et `UNION` opérateurs ?
 
-### Comment utiliser correctement l’opérateur `CAST` pour convertir mes horodatages dans les requêtes SQL ?
+### Comment utiliser correctement la variable `CAST` pour convertir mes horodatages dans les requêtes SQL ?
 
-Lorsque vous utilisez l’opérateur `CAST` pour convertir un horodatage, vous devez inclure à la fois la date **et l’heure**.
+Lors de l’utilisation de la variable `CAST` pour convertir un horodatage, vous devez inclure la date **et** temps.
 
 Par exemple, l’absence du composant temporel, comme illustré ci-dessous, entraînera une erreur :
 
@@ -126,12 +126,16 @@ SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021' AS timestamp)
 ```
 
-L’utilisation correcte de l’opérateur `CAST` est présentée ci-dessous :
+Une utilisation correcte de la variable `CAST` est illustré ci-dessous :
 
 ```sql
 SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 ```
+
+### Comment télécharger mes résultats de requête sous la forme d’un fichier CSV ?
+
+Il ne s’agit pas d’une fonctionnalité que Query Service propose directement. Cependant, si la variable [!DNL PostgreSQL] Le client utilisé pour se connecter au serveur de base de données dispose de la fonctionnalité , la réponse d’une requête SELECT peut être écrite et téléchargée sous la forme d’un fichier CSV. Reportez-vous à la documentation de l’utilitaire ou de l’outil tiers que vous utilisez pour clarifier ce processus.
 
 ## Erreurs de l’API REST
 
@@ -156,7 +160,7 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 | **53400** | Requête | Délai d’expiration de la déclaration | La déclaration soumise en direct a duré plus de 10 minutes au maximum |
 | **58000** | Requête | Erreur système | Échec du système interne |
 | **0A000** | Requête/Commande | Non pris en charge | La fonctionnalité de la requête/commande n’est pas prise en charge |
-| **42501** | Requête DROP TABLE | Table de dépôt non créée par Query Service | La table en cours de suppression n’a pas été créée par Query Service à l’aide de l’instruction `CREATE TABLE` |
+| **42501** | Requête DROP TABLE | Table de dépôt non créée par Query Service | La table en cours de suppression n’a pas été créée par Query Service à l’aide de l’événement `CREATE TABLE` statement |
 | **42501** | Requête DROP TABLE | Tableau non créé par l’utilisateur authentifié | La table en cours de suppression n’a pas été créée par l’utilisateur actuellement connecté. |
 | **42P01** | Requête DROP TABLE | Table introuvable | La table spécifiée dans la requête est introuvable. |
-| **42P12** | Requête DROP TABLE | Aucune table trouvée pour `dbName` : consultez la section `dbName` | Aucune table n’a été trouvée dans la base de données actuelle |
+| **42P12** | Requête DROP TABLE | Aucune table trouvée pour `dbName`: veuillez consulter la section `dbName` | Aucune table n’a été trouvée dans la base de données actuelle |
