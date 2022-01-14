@@ -5,10 +5,10 @@ title: Présentation du connecteur source Azure Event Hub
 topic-legacy: overview
 description: Découvrez comment connecter Azure Event Hubs à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: cda9ca9c560b1af2147c00ea4e89dff09b7428ba
+source-git-commit: 832e32c31be944fff1101fa409e56f5c3e27d325
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 7%
+source-wordcount: '506'
+ht-degree: 4%
 
 ---
 
@@ -18,6 +18,20 @@ ht-degree: 7%
 Adobe Experience Platform fournit une connectivité native pour les fournisseurs cloud tels qu’AWS, [!DNL Google Cloud Platform], et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans Platform.
 
 Les sources de stockage dans le cloud peuvent introduire vos propres données dans Platform sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le workflow Sources . Platform vous permet d’importer des données depuis [!DNL Event Hubs] en temps réel.
+
+## Mise à l’échelle avec [!DNL Event Hubs]
+
+Le facteur d’échelle de votre [!DNL Event Hubs] doit être augmentée si vous devez ingérer des données à volume élevé, augmenter le parallélisme ou augmenter la vitesse de la plateforme d’ingestion.
+
+### Entrer des données à volume supérieur
+
+Actuellement, le volume maximal de données que vous pouvez importer de votre [!DNL Event Hubs] compte à Platform est de 2 000 enregistrements par seconde. Pour augmenter et ingérer des données à volume supérieur, contactez votre représentant Adobe.
+
+### Augmenter le parallélisme sur [!DNL Event Hubs] et plateforme
+
+Le parallèle fait référence à l’exécution simultanée des mêmes tâches sur plusieurs unités de traitement afin d’augmenter la vitesse et les performances. Vous pouvez augmenter le parallélisme sur la variable [!DNL Event Hubs] côte à côte en augmentant la partition ou en acquérant plus d’unités de traitement pour votre [!DNL Event Hubs] compte . Voir [[!DNL Event Hubs] document à l’échelle](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) pour plus d’informations.
+
+Pour augmenter la vitesse d’ingestion du côté Platform, Platform doit augmenter le nombre de tâches dans le connecteur source à lire à partir de votre [!DNL Event Hubs] partitions. Une fois que vous avez augmenté le parallélisme sur le [!DNL Event Hubs] côté, contactez votre représentant d’Adobe pour mettre à l’échelle les tâches de Platform en fonction de votre nouvelle partition. Actuellement, ce processus n’est pas automatisé.
 
 ## Utiliser un réseau virtuel pour se connecter à [!DNL Event Hubs] vers Platform
 
