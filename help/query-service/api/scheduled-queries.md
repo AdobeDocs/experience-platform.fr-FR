@@ -5,10 +5,10 @@ title: Point de terminaison de l’API Requêtes planifiées
 topic-legacy: scheduled queries
 description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour les requêtes planifiées avec l’API Query Service.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 34a3b71ace2f9ece02e4368b6bd7eab716330ee1
+source-git-commit: f1b982e5f788282a8cf2a9c4523370c520b82d0e
 workflow-type: tm+mt
 source-wordcount: '1113'
-ht-degree: 80%
+ht-degree: 77%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 80%
 
 ## Exemples d’appels API
 
-Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commencer à lancer des appels à l’API [!DNL Query Service]. Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide de l’API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Maintenant que vous comprenez les en-têtes à utiliser, vous êtes prêt à commencer à lancer des appels au [!DNL Query Service] API. Les sections suivantes décrivent les différents appels API que vous pouvez effectuer à l’aide de la variable [!DNL Query Service] API. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
 ### Récupération d’une liste de requêtes planifiées
 
@@ -124,7 +124,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de requêtes pla
 
 ### Création d’une requête planifiée
 
-Vous pouvez créer une requête planifiée en effectuant une requête POST vers le point de terminaison `/schedules`. Lorsque vous créez une requête planifiée dans l’API, vous pouvez également la voir dans l’éditeur de requêtes. Pour plus d’informations sur les requêtes planifiées dans l’interface utilisateur, consultez la [documentation de Query Editor](../ui/user-guide.md#scheduled-queries).
+Vous pouvez créer une requête planifiée en effectuant une requête POST vers le point de terminaison `/schedules`. Lorsque vous créez une requête planifiée dans l’API, vous pouvez également la voir dans l’éditeur de requêtes. Pour plus d’informations sur les requêtes planifiées dans l’interface utilisateur, veuillez lire le [Documentation de Query Editor](../ui/user-guide.md#scheduled-queries).
 
 **Format d’API**
 
@@ -161,7 +161,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | Nom de la base de données pour laquelle vous créez une requête planifiée. |
 | `query.sql` | La requête SQL que vous souhaitez créer. |
 | `query.name` | Le nom de la requête planifiée. |
-| `schedule.schedule` | Le planning cron de la requête. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Dans cet exemple, « 30 * * * * » signifie que la requête s’exécute toutes les heures à la 30e minute.<br><br>Vous pouvez également utiliser les expressions abrégées suivantes :<ul><li>`@once`: La requête ne s’exécute qu’une seule fois.</li><li>`@hourly`: La requête s’exécute toutes les heures au début de l’heure. Cela équivaut à l’expression cron `0 * * * *`.</li><li>`@daily`: La requête s’exécute une fois par jour à minuit. Cela équivaut à l’expression cron `0 0 * * *`.</li><li>`@weekly`: La requête s’exécute une fois par semaine, le dimanche, à minuit. Cela équivaut à l’expression cron `0 0 * * 0`.</li><li>`@monthly`: La requête s&#39;exécute une fois par mois, le premier jour du mois, à minuit. Cela équivaut à l’expression cron `0 0 1 * *`.</li><li>`@yearly`: La requête s’exécute une fois par an, le 1er janvier, à minuit. Cela équivaut à l’expression cron `1 0 0 1 1 *`. |
+| `schedule.schedule` | Le planning cron de la requête. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Dans cet exemple, « 30 * * * * » signifie que la requête s’exécute toutes les heures à la 30e minute.<br><br>Vous pouvez également utiliser les expressions abrégées suivantes :<ul><li>`@once`: La requête ne s’exécute qu’une seule fois.</li><li>`@hourly`: La requête s’exécute toutes les heures au début de l’heure. Cela équivaut à l’expression cron. `0 * * * *`.</li><li>`@daily`: La requête s’exécute une fois par jour à minuit. Cela équivaut à l’expression cron. `0 0 * * *`.</li><li>`@weekly`: La requête s’exécute une fois par semaine, le dimanche, à minuit. Cela équivaut à l’expression cron. `0 0 * * 0`.</li><li>`@monthly`: La requête s&#39;exécute une fois par mois, le premier jour du mois, à minuit. Cela équivaut à l’expression cron. `0 0 1 * *`.</li><li>`@yearly`: La requête s’exécute une fois par an, le 1er janvier, à minuit. Cela équivaut à l’expression cron. `1 0 0 1 1 *`. |
 | `schedule.startDate` | La date de début de votre requête planifiée, écrite en tant qu’horodatage en UTC. |
 
 **Réponse**
@@ -322,7 +322,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | La valeur `id` de la requête planifiée que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | Le `id` valeur de la requête planifiée que vous souhaitez PATCH. |
 
 
 **Requête**
@@ -374,7 +374,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | La valeur `id` de la requête planifiée que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | Le `id` valeur de la requête planifiée que vous souhaitez PATCH. |
 
 **Requête**
 
@@ -429,7 +429,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | La valeur `id` de la requête planifiée que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | Le `id` valeur de la requête planifiée que vous souhaitez DELETE. |
 
 **Requête**
 
