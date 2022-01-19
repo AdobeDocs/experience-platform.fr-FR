@@ -3,14 +3,20 @@ title: Notes de mise à jour du SDK web Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK Web Adobe Experience Platform.
 keywords: SDK Web Adobe Experience Platform;SDK Web Platform;SDK Web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7d7a9357f17b941a8f7800be86f211bb1276698d
+source-git-commit: a768cde86215ed9aad19e45362c6185276456703
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '852'
 ht-degree: 3%
 
 ---
 
 # Notes de mise à jour
+
+## Version 2.8.0 - 19 janvier 2022
+
+* Prise en charge des sélecteurs DOM fantômes pour la personnalisation.
+* Types d’événements de personnalisation renommés. (`display` et `click` devenir `decisioning.propositionDisplay` et `decisioning.propositionInteract`)
+* Correction d’un problème en raison duquel les offres de HTML avec des balises de script intégrées ajoutaient deux fois les balises de script à la page même si le script n’était exécuté qu’une seule fois.
 
 ## Version 2.7.0 - 26 octobre 2021
 
@@ -64,7 +70,7 @@ ht-degree: 3%
 * Amélioration de la compatibilité avec d’autres codes JavaScript sur la page qui peuvent être remplacés `window.console` API.
 * Bug Fix : `sendBeacon` n’était pas utilisé lorsque `documentUnloading` a été défini sur `true` ou lorsque les clics sur les liens ont été automatiquement suivis.
 * Bug Fix : Un lien ne serait pas automatiquement suivi si l’élément d’ancrage contenait du contenu HTML.
-* Bug Fix : Certaines erreurs de navigateur contenant une `message` n’ont pas été gérées correctement, ce qui a entraîné une erreur différente lors de l’exposition au client.
+* Bug Fix : Certaines erreurs de navigateur contenant une `message` n’ont pas été gérées correctement, ce qui a entraîné une erreur différente lors de l’exposition du client.
 * Bug Fix : L’exécution du SDK dans un iframe entraîne une erreur si la page de HTML de l’iframe provient d’un sous-domaine différent de celui de la page de HTML de la fenêtre parente.
 
 ## Version 2.2.0 - Octobre 2020
