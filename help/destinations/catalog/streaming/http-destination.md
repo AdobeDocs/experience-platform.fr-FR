@@ -3,32 +3,57 @@ keywords: diffusion en continu;
 title: Connexion via l’API HTTP
 description: La destination d’API HTTP dans Adobe Experience Platform vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: ba338972be13c7afa6720bba3f0fc96d244b8f9f
+source-git-commit: f098df9df2baa971db44a6746949f021e212ae3e
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 5%
+source-wordcount: '833'
+ht-degree: 4%
 
 ---
 
-# (Version bêta) [!DNL HTTP] Connexion API
+# (Version bêta) Connexion à l’API HTTP
 
 >[!IMPORTANT]
 >
->Le [!DNL HTTP] destination dans Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>La destination de l’API HTTP dans Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
 ## Présentation {#overview}
 
-Le [!DNL HTTP] La destination de l’API est une [!DNL Adobe Experience Platform] destination de diffusion en continu qui vous aide à envoyer des données de profil à des tiers [!DNL HTTP] points de fin.
+La destination de l’API HTTP est une [!DNL Adobe Experience Platform] destination de diffusion en continu qui vous aide à envoyer des données de profil à des points de terminaison HTTP tiers.
 
-Pour envoyer des données de profil à [!DNL HTTP] points de fin, vous devez d’abord vous connecter à la destination dans [[!DNL Adobe Experience Platform]](#connect-destination).
+Pour envoyer des données de profil aux points de terminaison HTTP, vous devez d’abord [se connecter à la destination](#connect-destination) in [!DNL Adobe Experience Platform].
 
 ## Cas dʼutilisation {#use-cases}
 
-Le [!DNL HTTP] destination est ciblée sur les clients qui doivent exporter les données de profil XDM et les segments d’audience vers des segments génériques [!DNL HTTP] points de fin.
+La destination HTTP est destinée aux clients qui doivent exporter les données de profil XDM et les segments d’audience vers des points de terminaison HTTP génériques.
 
-[!DNL HTTP] Les points de terminaison peuvent être les systèmes des clients ou des solutions tierces.
+Les points de terminaison HTTP peuvent être les systèmes des clients ou des solutions tierces.
 
-## Connexion à la destination {#connect}
+## Conditions préalables {#prerequisites}
+
+>[!IMPORTANT]
+>
+>Contactez les représentants de votre Adobe ou l’assistance clientèle Adobe si vous souhaitez activer la fonctionnalité bêta de destination de l’API HTTP pour votre entreprise.
+
+Pour utiliser la destination d’API HTTP afin d’exporter des données en dehors d’Experience Platform, vous devez respecter les conditions préalables suivantes :
+
+* Vous devez disposer d’un point de terminaison HTTP qui prend en charge l’API REST.
+* Votre point de terminaison HTTP doit prendre en charge le schéma de profil Experience Platform. Aucune transformation en schéma de charge utile tiers n’est prise en charge dans la destination de l’API HTTP. Reportez-vous à la section [données exportées](#exported-data) pour un exemple du schéma de sortie Experience Platform.
+* Votre point de terminaison HTTP doit prendre en charge les en-têtes.
+* Votre point de terminaison HTTP doit prendre en charge [Informations d’identification du client OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) authentification. Cette exigence est valide lorsque la destination de l’API HTTP est en phase bêta.
+* Les informations d’identification du client doivent être incluses dans le corps des requêtes du POST vers votre point de terminaison, comme illustré dans l’exemple ci-dessous.
+
+```shell
+curl --location --request POST '<YOUR_API_ENDPOINT>' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=client_credentials' \
+--data-urlencode 'client_id=<CLIENT_ID>' \
+--data-urlencode 'client_secret=<CLIENT_SECRET>'
+```
+
+
+Vous pouvez également utiliser [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) pour configurer une intégration et envoyer des données de profil Experience Platform à un point de terminaison HTTP.
+
+## Connexion à la destination {#connect-destination}
 
 Pour vous connecter à cette destination, procédez comme décrit dans la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
