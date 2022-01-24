@@ -6,9 +6,9 @@ title: Surveillance des flux de données pour les sources dans l’interface uti
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 241deb93b3500139b79425a4da79258670e044a8
+source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1856'
 ht-degree: 9%
 
 ---
@@ -154,6 +154,11 @@ Sélectionner **[!UICONTROL Identités]** pour afficher l’ingestion dans la va
 >abstract="Le traitement des identités contient des informations sur les enregistrements ingérés dans le service Identity, notamment le nombre d’identités ajoutées, les graphiques créés et les graphiques mis à jour. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
 >text="Learn more in documentation"
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_identity"
+>title="Détails de l’exécution du flux de données"
+>abstract="La page Détails de l’exécution du flux de données affiche plus d’informations sur votre exécution du flux de données d’identité, y compris son identifiant de l’organisation IMS et son identifiant d’exécution du flux de données."
+
 Le [!UICONTROL Traitement des identités] contient des informations sur les enregistrements ingérés dans [!DNL Identity Service], notamment le nombre d’identités ajoutées, les graphiques créés et les graphiques mis à jour.
 
 Icône Sélectionner le filtre ![filter](../assets/ui/monitor-sources/filter.png) en regard de l’heure de début d’exécution du flux de données pour afficher plus d’informations sur votre [!DNL Identity] dataflow s’exécute.
@@ -191,6 +196,11 @@ Dans la [!UICONTROL Traitement des identités] page, sélectionnez **[!UICONTROL
 >title="Traitement des profils"
 >abstract="Le traitement des profils contient des informations sur les enregistrements ingérés dans le service Profile, notamment le nombre de fragments de profil créés, de fragments de profil mis à jour et le nombre total de fragments de profil."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_profile"
+>title="Détails de l’exécution du flux de données"
+>abstract="La page Détails de l’exécution du flux de données affiche plus d’informations sur votre exécution du flux de données Profile, y compris son identifiant de l’organisation IMS et son identifiant d’exécution du flux de données."
 
 Le [!UICONTROL Traitement des profils] contient des informations sur les enregistrements ingérés dans [!DNL Profile], notamment le nombre de fragments de profil créés, de fragments de profil mis à jour et le nombre total de fragments de profil.
 
