@@ -3,9 +3,9 @@ title: Présentation du processus d’envoi des extensions
 description: Découvrez la procédure qui vous permettra d’envoyer votre extension Adobe Experience Platform du développement à la publication.
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '238'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ L’envoi d’une extension au catalogue de collecte de données dans Adobe Exp
 
 1. [Configuration d’une organisation Adobe Experience Cloud](./setup.md)
 1. [Octroyer un accès utilisateur pour le développement d’extensions](./access.md)
-1. [Développer une extension](./develop.md)
+1. [Développement d’une extension](./develop.md)
 1. [Créer une liste Exchange](./create-listing.md)
 1. Créer un pack d’extension
 1. [Télécharger et tester votre extension](./upload-and-test.md)
@@ -29,7 +29,7 @@ Pour obtenir plus dʼinformations, cliquez sur le lien correspondant à chaque �
 
 ## Support technique
 
-Lʼassistance est disponible via la communauté des développeurs de balises de lʼespace de travail Slack pendant que vous créez et testez votre extension. Lʼespace de travail Slack est une communauté internet dans laquelle les auteurs dʼextensions se soutiennent mutuellement. Vous pouvez demander l’accès en procédant comme suit : [formulaire en ligne](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
+Lʼassistance est disponible via la communauté des développeurs de balises de lʼespace de travail Slack pendant que vous créez et testez votre extension. Lʼespace de travail Slack est une communauté internet dans laquelle les auteurs dʼextensions se soutiennent mutuellement. Vous pouvez demander l’accès en utilisant le [formulaire en ligne](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) suivant.
 
 >[!NOTE]
 >
