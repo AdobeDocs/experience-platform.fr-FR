@@ -3,9 +3,9 @@ title: Modules de bibliothèque dans les extensions web
 description: Découvrez comment formater des modules de bibliothèque pour les extensions web dans Adobe Experience Platform.
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '378'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
