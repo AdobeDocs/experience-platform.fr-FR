@@ -6,9 +6,9 @@ title: Surveillance des flux de données pour les destinations dans l’interfac
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b9f9e709fe51000a32eaea7a1a7c76488a36dd9b
+source-git-commit: b66c39016b2ccd4a4e24899f9e59f9a80cdc531b
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '2085'
 ht-degree: 3%
 
 ---
@@ -135,6 +135,11 @@ La page Détails affiche également une liste des identités qui ont échoué et
 >title="Profils reçus"
 >abstract="Nombre total de profils reçus dans le flux de données. Cette valeur est mise à jour toutes les 60 minutes."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="Détails de l’exécution du flux de données"
+>abstract="Les détails de l’exécution du flux de données de destination contiennent des informations sur l’état d’activation du segment et des mesures provenant de Real-time Customer Profile pour générer des identités uniques. Pour en savoir plus, consultez le guide des définitions de mesure."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_batch"
