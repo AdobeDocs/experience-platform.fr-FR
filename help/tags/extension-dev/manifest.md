@@ -3,9 +3,9 @@ title: Manifeste d’extensions
 description: Découvrez comment configurer un fichier de manifeste JSON informant Adobe Experience Platform quant à la manière correcte de consommer votre extension.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2647'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ Un manifeste d’extensions doit être constitué des éléments suivants :
 | --- | --- |
 | `name` | Nom de l’extension. Il doit être différent du nom de toutes les autres extensions et doit respecter les [règles de nommage](#naming-rules). **Il est utilisé par les balises comme identifiant et ne doit pas être modifié après la publication de votre extension.** |
 | `platform` | La plateforme de votre extension. La seule valeur acceptée pour le moment est `web`. |
-| `version` | La version de votre extension. Elle doit respecter le format de version [semver](https://semver.org/). Ce format est cohérent avec le [champ de version npm](https://docs.npmjs.com/files/package.json#version). |
+| `version` | La version de votre extension. Elle doit respecter le format de version [semver](https://semver.org/lang/fr/). Ce format est cohérent avec le [champ de version npm](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | Le nom lisible de votre extension. Il sera visible pour les utilisateurs de Platform. Il nʼest pas nécessaire de mentionner « balises » ou « Extension », les utilisateurs savent déjà quʼils utilisent une extension de balise. |
 | `description` | La description de votre extension. Il sera visible pour les utilisateurs de Platform. Si votre extension permet aux utilisateurs de mettre en œuvre votre produit sur leur site web, décrivez ce que fait votre produit. Il nʼest pas nécessaire de mentionner « balises » ou « Extension », les utilisateurs savent déjà quʼils utilisent une extension de balise. |
 | `iconPath` *(Facultatif)* | Chemin dʼaccès relatif à lʼicône qui sʼaffichera pour lʼextension. Il ne doit pas commencer par une barre oblique. Il doit référencer un fichier SVG avec une extension `.svg`. Le SVG doit être carré et peut être mis à l’échelle par Platform. |
@@ -132,9 +132,22 @@ Une définition de type est un objet utilisé pour décrire un type d’événem
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Objet <a href="https://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet settings valide qui peut être enregistré par l’utilisateur. Les paramètres sont généralement configurés et enregistrés par un utilisateur à lʼaide de lʼinterface utilisateur de la collecte de données. Dans ce cas, la vue de l’extension peut prendre les mesures nécessaires pour valider les paramètres fournis par l’utilisateur. Dʼun autre côté, certains utilisateurs choisissent dʼutiliser les API de balises directement sans lʼaide dʼaucune interface utilisateur. Ce schéma permet à Platform de valider correctement que les objets settings enregistrés par les utilisateurs, qu’une interface utilisateur soit ou non utilisée, sont dans un format compatible avec le module Bibliothèque qui agira sur l’objet settings lors de l’exécution.<br><br>Voici un exemple d’objet schéma :<br>
+      <td>Objet de <a href="https://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet de paramètres valide qui peut être enregistré par l’utilisateur. Les paramètres sont généralement configurés et enregistrés par un utilisateur à lʼaide de lʼinterface utilisateur de la collecte de données. Dans ce cas, la vue de l’extension peut prendre les mesures nécessaires pour valider les paramètres fournis par l’utilisateur. Dʼun autre côté, certains utilisateurs choisissent dʼutiliser les API de balises directement sans lʼaide dʼaucune interface utilisateur. Ce schéma permet à Platform de valider correctement que les objets settings enregistrés par les utilisateurs, qu’une interface utilisateur soit ou non utilisée, sont dans un format compatible avec le module Bibliothèque qui agira sur l’objet settings lors de l’exécution.<br><br>Voici un exemple d’objet schéma :<br>
 <pre class="JSON language-JSON hljs">
-{ "$schema": "http://json-schema.org/draft-04/schema#", "type": "object", "properties" : { "delay": { "type": "number", "minimum" : 1 } }, "required" : [ "delay" ], "additionalProperties": false }
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "delay": {
+      "type": "number",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "delay"
+  ],
+  "additionalProperties": false
+}
 </pre>
       Nous vous recommandons d’utiliser un outil tel que le <a href="https://www.jsonschemavalidator.net/">Validateur de schémas JSON</a> pour tester manuellement votre schéma.</td>
     </tr>
