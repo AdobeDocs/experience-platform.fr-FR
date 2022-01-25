@@ -1,15 +1,15 @@
 ---
-title: Développer une extension
+title: Développement d’une extension
 description: Ce document offre un aperçu général du processus de développement dʼune extension de balise et contient des liens vers dʼautres documents présentant des processus plus détaillés.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '538'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
-# Développer une extension
+# Développement d’une extension
 
 >[!NOTE]
 >
@@ -26,10 +26,10 @@ Une fois que vous avez mis un plan en place, ces guides vous aideront à compren
 * Le [guide de prise en main](../getting-started.md) et dʼautres documents sous **Développement dʼextensions** dans le volet de navigation de gauche constituent un bon matériel de référence pour comprendre les extensions. Ces documents contiennent des détails sur le rôle des extensions, sur la façon dont les informations utilisateur sont stockées et transmises entre votre extension et Adobe Experience Platform. Ils expliquent aussi comment votre code est regroupé en bibliothèques et comment votre code d’extension est interprété et utilisé au moment de l’exécution dans le navigateur.
 * Le [tutoriel vidéo sur les extensions](https://youtu.be/rxjtC9o4rl0) constitue un bon début.
 * La playlist YouTube [Introduction to Extensions](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) passe en revue le processus de création de packages d’extension.
-* Présentation de l’article [Understanding JSON Schema](https://spacetelescope.github.io/understanding-json-schema/index.html#).
+* Article de [Présentation du schéma JSON](https://spacetelescope.github.io/understanding-json-schema/index.html#).
 * [JSON Lint/Validator](https://jsonlint.com/).
 * Extension Chrome [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) pour visualiser et imprimer des fichiers JSON et JSONP.
-* Éditeur [jsonschema.net](https://jsonschema.net/#/editor) pour créer un schéma JSON à partir de votre objet..
+* Éditeur [jsonschema.net](https://jsonschema.net/#/editor) pour créer un schéma JSON à partir de votre objet.
 * [JSON Schema Validator](https://www.jsonschemavalidator.net), validateur de schémas JSON interactif en ligne.
 
 ## Outils
