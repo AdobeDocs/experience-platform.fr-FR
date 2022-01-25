@@ -3,9 +3,9 @@ title: Présentation du développement d’extension
 description: Découvrez les principaux composants des différents types d’extensions de balise ainsi que le processus de développement des extensions dans Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '949'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +37,7 @@ Vous pouvez placer les fichiers de module de bibliothèque n’importe où dans 
 
 ### Vues
 
-Une vue est un fichier HTML pouvant être chargé dans un [`iframe`élément ](https://developer.mozilla.org/fr-FR/docs/Web/HTML/Element/iframe) dans l’application de balises, en particulier via l’interface utilisateur de la collecte de données. La vue doit inclure un script fourni par l’extension et se conformer à une petite API pour communiquer avec l’application.
+Une vue est un fichier HTML pouvant être chargé dans un [`iframe`élément](https://developer.mozilla.org/fr-FR/docs/Web/HTML/Element/iframe) dans l’application de balises, en particulier via l’interface utilisateur de la collecte de données. La vue doit inclure un script fourni par l’extension et se conformer à une petite API pour communiquer avec l’application.
 
 Le plus important fichier de vue de toute extension est sa configuration. Pour plus d’informations, consultez la section consacrée aux [configurations d’extension](#configuration).
 
