@@ -3,18 +3,15 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;segmentatio
 solution: Experience Platform
 title: FAQ sur la correspondance de segment (bêta)
 description: La correspondance de segment est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment de manière sécurisée, gérée et respectueuse de la confidentialité.
-source-git-commit: 81ef2030ff26d2aee146316fcdab41d9311e84c7
+exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
+source-git-commit: 50795be308649052037be62153109eadab02c9a1
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
 
 # [!DNL Segment Match] questions fréquentes (bêta)
-
->[!IMPORTANT]
->
->La correspondance de segment est actuellement en version bêta et votre entreprise n’y a peut-être pas encore accès. Les fonctionnalités décrites dans cette documentation peuvent faire l’objet de modifications.
 
 Ce guide répond aux questions juridiques et de confidentialité souvent posées sur la correspondance de segment Adobe Experience Platform.
 
