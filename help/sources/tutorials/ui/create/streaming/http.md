@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Création d’une connexion en continu d’API HTTP à l’aide de l’interface utilisateur
 topic-legacy: tutorial
 type: Tutorial
-description: Ce guide de l’interface utilisateur vous aidera à créer une connexion en continu à l’aide d’Adobe Experience Platform.
+description: Ce guide de l’interface utilisateur vous aidera à créer une connexion en continu à l’aide d’Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: d39cdeaa57a221f10c975353a54d3ff7c88239d6
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1058'
 ht-degree: 10%
 
 ---
@@ -20,7 +20,7 @@ Ce tutoriel décrit les étapes à suivre pour créer une connexion à une sourc
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 - [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Experience Platform] organise les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
@@ -72,7 +72,7 @@ Une fois les données chargées, vous pouvez utiliser le côté droit de l’int
 
 Le [!UICONTROL Mappage] s’affiche, fournissant une interface pour mapper les données source à un jeu de données Platform.
 
-Les fichiers parquet doivent être conformes à XDM et ne nécessitent pas de configurer manuellement le mappage, tandis que les fichiers CSV nécessitent que vous configuriez explicitement le mappage, mais vous permettent de sélectionner les champs de données source à mapper. Les fichiers JSON, s’ils sont marqués comme une plainte XDM, ne nécessitent pas de configuration manuelle. Cependant, s’il n’est pas marqué comme compatible avec XDM, il vous faudra configurer explicitement le mappage.
+Les fichiers parquet doivent être conformes à XDM et ne nécessitent pas de configurer manuellement le mappage, tandis que les fichiers CSV nécessitent que vous configuriez explicitement le mappage, mais vous permettent de sélectionner les champs de données source à mapper. Les fichiers JSON, s’ils sont marqués comme une plainte XDM, ne nécessitent pas de configuration manuelle. Cependant, s’il n’est pas marqué comme compatible XDM, il vous faudra configurer explicitement le mappage.
 
 Sélectionnez un jeu de données dans lequel ingérer les données entrantes. Vous pouvez utiliser un jeu de données existant ou en créer un nouveau.
 
@@ -90,7 +90,8 @@ Pour utiliser un jeu de données existant, sélectionnez **[!UICONTROL Jeu de do
 
 ### Mappage des champs standard
 
-Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs calculées ou calculées. Pour plus d’informations sur les fonctions du mappeur et les champs calculés, reportez-vous à la section [Guide des fonctions de préparation de données](../../../../../data-prep/functions.md) ou le [guide des champs calculés](../../../../../data-prep/calculated-fields.md).
+
+Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs calculées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
 
 Pour ajouter un nouveau champ source, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**.
 

@@ -5,7 +5,7 @@ title: Mappage des champs pour la source du Marketo Engage
 topic-legacy: overview
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 40e70903cd1a67f5012f6e7c8f09b6e91b3ae0ef
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 9%
@@ -343,7 +343,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf [!DNL
 
 >[!NOTE]
 >
->Le `to_object('ECID',arrays_to_objects('id',explode(ecids)))` Le champ source est un champ calculé qui doit être ajouté à l’aide de la variable [!UICONTROL Ajouter un champ calculé] dans l’interface utilisateur de Platform. Voir le tutoriel sur [ajout de champs calculés](../../../../data-prep/calculated-fields.md) pour plus d’informations.
+>Le `to_object('ECID',arrays_to_objects('id',explode(ecids)))` Le champ source est un champ calculé qui doit être ajouté à l’aide de la variable [!UICONTROL Ajouter un champ calculé] dans l’interface utilisateur de Platform. Voir le tutoriel sur [ajout de champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) pour plus d’informations.
 
 ## Étapes suivantes
 

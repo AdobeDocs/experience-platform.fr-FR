@@ -5,7 +5,7 @@ title: Classe XDM ExperienceEvent
 topic-legacy: overview
 description: Ce document présente la classe XDM ExperienceEvent et les bonnes pratiques en matière de modélisation des données d’événement.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
 source-wordcount: '1758'
 ht-degree: 3%
@@ -53,7 +53,7 @@ Certaines interactions dans vos applications d’expérience peuvent entraîner 
 
 [Préparation de données Adobe Experience Platform](../../data-prep/home.md) vous permet de mapper, de transformer et de valider des données vers et depuis XDM. Utilisation de la [fonctions de mappage](../../data-prep/functions.md) fourni par le service, vous pouvez appeler des opérateurs logiques pour prioriser, transformer et/ou consolider des données provenant d’enregistrements multi-événements lors de leur ingestion dans Experience Platform. Dans l’exemple ci-dessus, vous pouvez désigner `eventType` comme champ calculé qui donne la priorité à une &quot;consultation de produit&quot; plutôt qu’à une &quot;page vue&quot; chaque fois qu’elles se produisent.
 
-Si vous ingérez manuellement des données dans Platform via l’interface utilisateur, consultez le guide sur [champs calculés](../../data-prep/calculated-fields.md) pour obtenir des instructions spécifiques sur la création de champs calculés.
+Si vous ingérez manuellement des données dans Platform via l’interface utilisateur, consultez le guide sur [champs calculés](../../data-prep/ui/mapping.md#calculated-fields) pour obtenir des instructions spécifiques sur la création de champs calculés.
 
 Si vous diffusez des données en continu vers Platform à l’aide d’une connexion source, vous pouvez configurer la source pour qu’elle utilise à la place des champs calculés. Reportez-vous à la section [la documentation de votre source spécifique ;](../../sources/home.md) pour obtenir des instructions sur la mise en oeuvre des champs calculés lors de la configuration de la connexion.
 
