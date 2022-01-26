@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
-source-git-commit: 641fcab89b849d91a075fa5058421950bc7fecd7
+source-git-commit: 9cd9307d54d0950d4f67d5d8cee9c6412a558275
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 46%
+source-wordcount: '708'
+ht-degree: 31%
 
 ---
 
@@ -14,10 +14,12 @@ ht-degree: 46%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [Alertes](#alerts)
-- [Préparation de données](#data-prep)
-- [Sandbox](#sandboxes)
-- [Segmentation Service](#segmentation)
+- [Alertes {#alerts}](#alerts-alerts)
+- [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
+- [[!DNL Dashboards] {#dashboards}](#dnl-dashboards-dashboards)
+- [Query Service {#query-service}](#query-service-query-service)
+- [Environnements de test {#sandboxes}](#sandboxes-sandboxes)
+- [Segmentation Service {#segmentation}](#segmentation-service-segmentation)
 
 ## Alertes {#alerts}
 
@@ -42,6 +44,29 @@ Pour plus d’informations sur les alertes dans Platform, reportez-vous à la se
 | Expérience de mappage consolidé | La nouvelle interface de mappage de l’interface utilisateur de Platform vous offre une expérience de mappage cohérente pour tirer parti des recommandations de mappage intelligent, configurer manuellement les règles de mappage et déboguer les erreurs qui se produisent dans vos jeux de mappages. Pour plus d’informations, voir [[!DNL Data Prep] Guide de l’interface utilisateur](../../data-prep/home.md). |
 
 Pour plus d’informations sur [!DNL Data Prep], consultez la [[!DNL Data Prep] présentation de la ](../../data-prep/home.md).
+
+## [!DNL Dashboards] {#dashboards}
+
+[!DNL Dashboards] fait de jolies choses.
+
+| Fonctionnalité | Description |
+|---------|-------------|
+| Légendes intelligentes | Un algorithme d’apprentissage automatique fournit automatiquement des insights sur vos données de profil et d’audience, et illustre les schémas et tendances sur une période de 30 à 90 jours, ou de 12 mois. Les sous-titres contiennent des informations sur <ul><li>Forme globale et statistiques</li><li>Tendances et modifications brusques</li><li>Formats saisonniers</li><li>Les anomalies inattendues</li></ul> Vous trouverez plus d’informations sur la [tableaux de bord des profils](../../dashboards/guides/profiles.md#profiles-count-trend) et [tableaux de bord des segments](../../dashboards/guides/segments.md#audience-size-trend) documentation. |
+| Inventaire des tableaux de bord | Accédez aux rapports préconfigurés des tableaux de bord des profils, des segments et des destinations, y compris les intégrations installées telles que PowerBI, à un emplacement centralisé. Pour plus d’informations, voir [[!DNL Dashboards] aperçu](../../dashboards/home.md). |
+| Modèles de rapport PowerBI | Créez, personnalisez ou étendez des mesures à partir des modèles de données de rapports de profil, de segments et de destination à l’aide de nouveaux graphiques PowerBI. Le workflow d’installation automatisée vous permet de partager vos informations marketing dans l’ensemble de votre organisation à partir de l’environnement PowerBI. Pour plus d’informations, voir [[!DNL Dashboards] aperçu](../../dashboards/home.md). |
+
+Pour plus d’informations sur [!DNL Dashboards], consultez la [[!DNL Dashboards] présentation de la ](../../dashboards/home.md).
+
+## Query Service {#query-service}
+
+[!DNL Query Service] vous permet d’utiliser SQL standard pour interroger des données dans Adobe Experience Platform. [!DNL Data Lake]. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête en tant que nouveau jeu de données à utiliser dans les rapports, Data Science Workspace ou pour ingestion dans Real-time Customer Profile.
+
+| Fonctionnalité | Description |
+|----------------------|-----------------------|
+| Bloc anonyme | La structure SQL de bloc anonyme permet de ventiler les tâches de préparation de données à grande échelle dans Query Service en tâches plus petites, puis de les réutiliser et de les exécuter en séquence pour le chargement incrémentiel des données. Pour plus d’informations, voir [Présentation de Query Service](../../query-service/home.md). |
+| Organisation du jeu de données | Fournit une structure de données logique et cohérente pour organiser vos ressources de données à utiliser avec Query Service à mesure que la quantité de ressources de données dans l’environnement de test augmente. Pour plus d’informations, voir [Présentation de Query Service](../../query-service/home.md). |
+
+Pour plus d’informations sur [!DNL Query Service], consultez la [[!DNL Query Service] présentation de la ](../../query-service/home.md).
 
 ## Sandbox {#sandboxes}
 
