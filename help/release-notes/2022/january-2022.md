@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: bcd52989-ef62-4ab9-866e-1d9e57b76a0c
-source-git-commit: 78f9b8434d577909ccb1c62211a802e05c8291e1
+source-git-commit: 8a26a69e6a244fc8a0d347e2814f0406713b1c9b
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 37%
+source-wordcount: '1253'
+ht-degree: 33%
 
 ---
 
@@ -18,6 +18,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Alertes](#alerts)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Dashboards]](#dashboards)
+- [[!DNL Destinations]](#destinations)
 - [Query Service](#query-service)
 - [Sandbox](#sandboxes)
 - [Segmentation Service](#segmentation)
@@ -60,30 +61,34 @@ Pour plus d’informations sur [!DNL Dashboards], consultez la [[!DNL Dashboards
 
 Pour plus d’informations sur [!DNL Data Prep], consultez la [[!DNL Data Prep] présentation de la ](../../data-prep/home.md).
 
-<!--
-
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ----------- | ----------- |
+| Personnalisation de la même page et de la page suivante | La fonction de personnalisation de la même page et de la page suivante fournit une vue partagée et cible des utilisateurs pour les applications sur Experience Edge, pour une cohérence entre les canaux marketing et client. Cette personnalisation est possible grâce au [Connexion Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et le [Connexion à la personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Pour configurer les campagnes de personnalisation de la même page ou de la page suivante, reportez-vous à la section [tutoriel dédié](../../destinations/ui/configure-personalization-destinations.md). |
+| Améliorations des destinations Marketo | Les clients Experience Platform qui utilisent Marketo Engage peuvent optimiser leur base de données Marketo avec la nouvelle possibilité d’envoyer des enregistrements de nouvelles personnes dans Marketo Engage depuis Experience Platform via le [Connecteur de destination Marketo](/help/destinations/catalog/adobe/marketo-engage.md). Lors de l’envoi de segments d’audience d’Experience Platform à Marketo Engage, les personnes du segment qui n’existent pas encore dans votre base de données de Marketo Engage peuvent y être automatiquement ajoutées. Pour plus d’informations, reportez-vous à la section [Envoi d’un segment Adobe Experience Platform vers une liste statique Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (l’étape 9 du tutoriel indique comment envoyer des enregistrements de nouvelle personne dans Marketo). |
+
+<!--
 
 | Feature | Description |
 | ----------- | ----------- |
-| Placeholder for next-hit personalization | Description |
-| Placeholder for batch monitoring | Description |
-| Placeholder for re-introducing scheduling in the UI | Description |
-| Placeholder for Marketo destination update | Description |
+| Batch destination monitoring and segment-level metrics | The destination monitoring functionality is now expanded from streaming destinations to also include batch destinations and segment-level metrics for your activation dataflows. For more information, read monitoring destinations dashboard, monitoring segment jobs dashboard, and segment-level view. |
+| Schedule editing in the UI for existing batch activation dataflows | This release introduces the option to edit the schedule of your existing activation dataflows to batch destinations. For more information, read [activate profile data to batch profile destinations](/help/destinations/ui/activate-batch-profile-destinations.md).  |
 
+-->
 
-**New destinations**
+**Nouvelles destinations**
 
 | Destination | Description |
 | ----------- | ----------- |
-| Placeholder for Target | Description |
-| Placeholder for Custom Personalization | Description |
+| [Connexion Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) | Adobe Target est une application qui fournit une personnalisation et une expérimentation optimisées par l’IA en temps réel dans toutes les interactions client entrantes entre sites web, applications mobiles, etc. Adobe Target est une connexion de personnalisation dans Adobe Experience Platform. |
+| [Connexion à la personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md) | Cette connexion de personnalisation permet de récupérer les informations de segment de Adobe Experience Platform vers des plateformes de personnalisation externes, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur les sites web des clients. |
 
-For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
-
--->
+Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
 
 ## Query Service {#query-service}
 
