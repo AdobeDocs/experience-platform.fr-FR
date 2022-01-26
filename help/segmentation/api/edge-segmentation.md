@@ -1,24 +1,30 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;segmentation;Segmentation;service de segmentation;segmentation Edge;segmentation Edge;périphérie en flux continu
+keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;segmentation Edge;segmentation Edge;segmentation Edge;edge
 solution: Experience Platform
 title: 'Segmentation Edge à l’aide de l’API '
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 4d2c6385decd5b789a975165a87bc80f9b008cd7
+source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 9%
+source-wordcount: '989'
+ht-degree: 7%
 
 ---
 
-# Segmentation Edge (version bêta)
+# Segmentation Edge
 
 >[!NOTE]
 >
->Le document suivant indique comment effectuer une segmentation Edge à l’aide de l’API. Pour plus d’informations sur l’exécution de la segmentation Edge à l’aide de l’interface utilisateur, veuillez lire le [Guide de l’interface utilisateur de segmentation Edge](../ui/edge-segmentation.md). En outre, la segmentation Edge est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>Le document suivant indique comment effectuer une segmentation Edge à l’aide de l’API. Pour plus d’informations sur l’exécution de la segmentation Edge à l’aide de l’interface utilisateur, veuillez lire le [Guide de l’interface utilisateur de segmentation Edge](../ui/edge-segmentation.md).
+>
+>La segmentation Edge est désormais disponible en général pour tous les utilisateurs de Platform. Si vous avez créé des segments Edge au cours de la version bêta, ces segments continueront à fonctionner.
 
 La segmentation Edge permet d’évaluer instantanément les segments dans Adobe Experience Platform, ce qui permet d’utiliser les cas de personnalisation de page suivante et de page identique.
+
+>[!IMPORTANT]
+>
+> Les données Edge seront stockées dans un emplacement de serveur Edge le plus proche de l’emplacement où elles ont été collectées et peuvent être stockées à un autre emplacement que celui désigné comme centre de données Adobe Experience Platform principal (ou hub).
 
 ## Prise en main
 
@@ -247,4 +253,4 @@ Une réponse réussie renvoie les détails de la définition de segment nouvelle
 
 Maintenant que vous savez comment créer des segments activés pour la segmentation Edge, vous pouvez les utiliser pour activer des cas d’utilisation de la personnalisation de la même page et de la page suivante.
 
-Pour savoir comment effectuer des actions similaires et utiliser des segments à l’aide de l’interface utilisateur d’Adobe Experience Platform, consultez le [guide d’utilisation du créateur de segments](../ui/segment-builder.md).
+Pour savoir comment effectuer des actions similaires et utiliser des segments à l’aide de l’interface utilisateur d’Adobe Experience Platform, consultez le [guide d’utilisation du créateur de segments](../ui/segment-builder.md).
