@@ -1,58 +1,58 @@
 ---
-keywords: Experience Platform ; accueil ; sujets populaires ; Snowflake ; snowflake
+keywords: Experience Platform;accueil;rubriques les plus consultées;Snowflake;snowflake
 solution: Experience Platform
-title: Création d’une connexion de base de Snowflake à l’aide de l’API du service de flux
+title: Création d’une connexion de base de Snowflake à l’aide de l’API Flow Service
 topic-legacy: overview
 type: Tutorial
-description: Découvrez comment connecter Adobe Experience Platform au Snowflake à l’aide de l’API Flow Service.
+description: Découvrez comment connecter Adobe Experience Platform à Snowflake à l’aide de l’API Flow Service.
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 76b3e3e9bcb27eb2bd6981ae6eb109410ae16336
+source-git-commit: 0928da0ad15ce23d3677fec7b9866d079f3db407
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 10%
 
 ---
 
-# Créer un [!DNL Snowflake] connexion de base à l’aide de [!DNL Flow Service] API
+# Créez un [!DNL Snowflake] connexion de base à l’aide de [!DNL Flow Service] API
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous explique les étapes à suivre pour créer une connexion de base pour [!DNL Snowflake] à l’aide de la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Snowflake] en utilisant la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, étiqueter et améliorer les données entrantes à l’aide de [!DNL Platform] services.
+* [Sources](../../../../home.md): [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
 * [Environnements de test](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-### Utilisation des API de plate-forme
+### Utilisation des API Platform
 
-Pour plus d’informations sur la manière d’effectuer des appels vers les API de plate-forme, consultez le guide sur [prise en main des API de plate-forme](../../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur [Prise en main des API Platform](../../../../../landing/api-guide.md).
 
-La section suivante fournit des informations supplémentaires que vous devez connaître pour vous connecter à [!DNL Snowflake] à l’aide de la [!DNL Flow Service] API.
+La section suivante fournit des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Snowflake] en utilisant la variable [!DNL Flow Service] API.
 
 ### Collecte des informations d’identification requises
 
-Pour [!DNL Flow Service] pour se connecter à [!DNL Snowflake], vous devez fournir les propriétés de connexion suivantes :
+Pour [!DNL Flow Service] pour vous connecter à [!DNL Snowflake], vous devez fournir les propriétés de connexion suivantes :
 
-| Informations d&#39;identification | Description |
+| Credential | Description |
 | --- | --- |
-| `account` | Le nom complet du compte associé à votre [!DNL Snowflake] compte. Une personne pleinement qualifiée [!DNL Snowflake] le nom de compte comprend votre nom de compte, votre région et votre plate-forme cloud. Par exemple : `cj12345.east-us-2.azure`. Pour plus d’informations sur les noms de compte, reportez-vous à [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
-| `warehouse` | Le [!DNL Snowflake] l&#39;entrepôt gère le processus d&#39;exécution de la requête pour l&#39;application. Chacune [!DNL Snowflake] l&#39;entrepôt est indépendant l&#39;un de l&#39;autre et doit être accessible individuellement lors de l&#39;importation de données vers la plate-forme. |
-| `database` | Le [!DNL Snowflake] contient les données que vous souhaitez importer dans la plate-forme. |
-| `username` | Le nom d’utilisateur du [!DNL Snowflake] compte. |
-| `password` | Le mot de passe pour le [!DNL Snowflake] compte utilisateur. |
-| `connectionString` | La chaîne de connexion utilisée pour se connecter à votre [!DNL Snowflake] instance. Modèle de chaîne de connexion pour [!DNL Snowflake] est `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
-| `connectionSpec.id` | La spécification de connexion renvoie les propriétés de connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. ID de spécification de connexion pour [!DNL Snowflake] est `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
+| `account` | Le nom complet du compte associé à votre [!DNL Snowflake] compte . Une personne entièrement qualifiée [!DNL Snowflake] nom du compte inclut le nom de votre compte, votre région et votre plateforme cloud. Par exemple : `cj12345.east-us-2.azure`. Pour plus d&#39;informations sur les noms de compte, reportez-vous à cette section [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
+| `warehouse` | Le [!DNL Snowflake] l’entrepôt gère le processus d’exécution des requêtes de l’application. Chaque [!DNL Snowflake] L’entrepôt est indépendant l’un de l’autre et doit être accessible individuellement lors de l’importation de données vers Platform. |
+| `database` | Le [!DNL Snowflake] La base de données contient les données que vous souhaitez importer dans Platform. |
+| `username` | Nom d’utilisateur de la variable [!DNL Snowflake] compte . |
+| `password` | Le mot de passe du [!DNL Snowflake] compte utilisateur. |
+| `connectionString` | Chaîne de connexion utilisée pour se connecter à votre [!DNL Snowflake] instance. Le modèle de chaîne de connexion pour [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions base et source. L’identifiant de spécification de connexion pour [!DNL Snowflake] is `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à [[!DNL Snowflake] document](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
+Pour plus d’informations sur la prise en main, reportez-vous à cette section [[!DNL Snowflake] document](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
 
 ## Création d’une connexion de base
 
-Une connexion de base conserve les informations entre votre source et la plate-forme, y compris les informations d&#39;identification de votre source, l&#39;état actuel de la connexion et votre ID de connexion de base unique. L’ID de connexion de base vous permet d’explorer et de parcourir les fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez assimiler, y compris des informations concernant leurs types et formats de données.
+Une connexion de base conserve les informations entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
-Pour créer un ID de connexion de base, effectuez une demande de POST à l’adresse `/connections` point de terminaison lors de la fourniture de votre [!DNL Snowflake] les informations d&#39;identification d&#39;authentification dans le corps de la demande.
+Pour créer un identifiant de connexion de base, envoyez une requête de POST au `/connections` point de terminaison lors de la fourniture de [!DNL Snowflake] informations d’identification d’authentification dans le corps de la requête.
 
 **Format d’API**
 
@@ -62,7 +62,7 @@ POST /connections
 
 **Requête**
 
-La demande suivante crée une connexion de base pour [!DNL Snowflake]:
+La requête suivante crée une connexion de base pour [!DNL Snowflake]:
 
 ```shell
 curl -X POST \
@@ -90,12 +90,12 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.connectionString` | La chaîne de connexion utilisée pour se connecter à votre [!DNL Snowflake] instance. Modèle de chaîne de connexion pour [!DNL Snowflake] est `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
-| `connectionSpec.id` | Le [!DNL Snowflake] ID de spécification de connexion : `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
+| `auth.params.connectionString` | Chaîne de connexion utilisée pour se connecter à votre [!DNL Snowflake] instance. Le modèle de chaîne de connexion pour [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+| `connectionSpec.id` | Le [!DNL Snowflake] identifiant de spécification de connexion : `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 **Réponse**
 
-Une réponse réussie renvoie la connexion nouvellement créée, y compris son identifiant de connexion unique (`id`). Cet ID est nécessaire pour explorer vos données dans le tutoriel suivant.
+Une réponse réussie renvoie la connexion nouvellement créée, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
 
 ```json
 {
@@ -104,4 +104,4 @@ Une réponse réussie renvoie la connexion nouvellement créée, y compris son i
 }
 ```
 
-En suivant ce tutoriel, vous avez créé un fichier [!DNL Snowflake] connexion à l’aide de la [!DNL Flow Service] et ont obtenu la valeur d’ID unique de la connexion. Vous pouvez utiliser cet ID de connexion dans le tutoriel suivant pour apprendre à [exploration des bases de données à l’aide de l’API Flow Service](../../explore/database-nosql.md).
+En suivant ce tutoriel, vous avez créé une [!DNL Snowflake] connexion à l’aide de la fonction [!DNL Flow Service] et ont obtenu la valeur d’identifiant unique de la connexion. Vous pouvez utiliser cet identifiant de connexion dans le tutoriel suivant pendant que vous apprenez à [explorer des bases de données à l’aide de l’API Flow Service](../../explore/database-nosql.md).
