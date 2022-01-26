@@ -5,7 +5,7 @@ title: Guide de l’interface utilisateur des environnements de test
 topic-legacy: user guide
 description: Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux environnements de test dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 59b608ba06028f7f345f6a59dab333a4fdf2d225
+source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 16%
@@ -88,7 +88,7 @@ Dans la fenêtre de confirmation finale, saisissez le nom de l’environnement d
 
 >[!WARNING]
 >
->Vous ne pouvez pas supprimer l’environnement de test de production par défaut. Cependant, un environnement de test de production créé par l’utilisateur qui est utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service] peut être supprimé après un message d’avertissement.
+>Vous ne pouvez pas supprimer l’environnement de test de production par défaut. Cependant, tout environnement de test de production créé par l’utilisateur utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service] peut être supprimé après un message d’avertissement.
 
 La suppression d’un environnement de test de production ou de développement supprime définitivement toutes les ressources associées à cet environnement de test, y compris les autorisations.
 
