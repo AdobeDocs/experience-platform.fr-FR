@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;contrôle dʼaccès;adobe admin console
+keywords: Experience Platform;accueil;rubriques populaires;contrôle dʼaccès;adobe admin console
 solution: Experience Platform
 topic-legacy: overview
 title: Présentation du contrôle d’accès
-description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test.
+description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 2effccfa9b1975292f350369201269099dc1b2a1
-workflow-type: ht
-source-wordcount: '1383'
-ht-degree: 100%
+source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
+workflow-type: tm+mt
+source-wordcount: '1384'
+ht-degree: 99%
 
 ---
 
@@ -26,8 +26,8 @@ Pour configurer le contrôle dʼaccès dans [!DNL Experience Platform], vous dev
 
 Un workflow de haut niveau d’obtention et d’attribution d’autorisations d’accès peut se résumer de la manière suivante :
 
-- Après lʼoctroi de la licence pour Adobe Experience Platform, ou pour une application/service dʼapplication utilisant Experience Platform, un courrier électronique est envoyé à lʼadministrateur spécifié lors de lʼoctroi de la licence.
-- L’administrateur se connecte à [Adobe Admin Console](#adobe-admin-console) et sélectionne **Adobe Experience Platform** depuis la liste de produits sur la page d’aperçu.
+- Après lʼoctroi de la licence pour Adobe Experience Platform, ou pour une application/service dʼapplication utilisant Experience Platform, un courrier électronique est envoyé à lʼadministrateur spécifié lors de lʼoctroi de la licence.
+- L’administrateur se connecte à [Adobe Admin Console](#adobe-admin-console) et sélectionne **Adobe Experience Platform** depuis la liste de produits sur la page d’aperçu.
 - L’administrateur peut afficher les [profils de produit](#product-profiles) par défaut ou créer de nouveaux profils de produit clients si nécessaire.
 - L’administrateur peut modifier les autorisations et les utilisateurs pour tout profil de produit existant.
 - Lors de la création ou de la modification dʼun profil de produit, lʼadministrateur ajoute les utilisateurs au profil à lʼaide de lʼonglet **[!UICONTROL Utilisateurs]**, et accorde des autorisations à ces utilisateurs (comme « [!UICONTROL Lecture des jeux de données] » ou « [!UICONTROL Gestion des schémas] ») en y accédant depuis lʼonglet **[!UICONTROL Autorisations]**. De même, l’administrateur peut attribuer des accès aux environnements de test à l’aide du même onglet Autorisations.
@@ -56,7 +56,7 @@ Dans [!DNL Admin Console], des autorisations sont attribuées à des utilisateur
 
 ## Environnements de test et autorisations
 
-Les environnements de test hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres environnements de test et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les autorisations dʼun profil de produit donnent aux utilisateurs du profil lʼaccès aux fonctionnalités de [!DNL Platform] dans les environnements de test auxquels ils se sont vus accorder lʼaccès. Une licence Experience Platform par défaut vous accorde cinq environnements de test (un de production et quatre de non-production). Vous pouvez ajouter des packs de dix environnements de test de non-production jusquʼà un maximum de 75 environnements de test au total. Contactez votre administrateur dʼorganisation IMS ou votre représentant commercial Adobe pour plus de détails.
+Les environnements de test hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres environnements de test et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les autorisations dʼun profil de produit donnent aux utilisateurs du profil lʼaccès aux fonctionnalités de [!DNL Platform] dans les environnements de test auxquels ils se sont vus accorder lʼaccès. Une licence Experience Platform par défaut vous accorde cinq environnements de test (un de production et quatre de non-production). Vous pouvez ajouter des packs de dix environnements de test de non-production jusquʼà un maximum de 75 environnements de test au total. Contactez votre administrateur dʼorganisation IMS ou votre représentant commercial Adobe pour plus de détails.
 
 Pour plus dʼinformations sur les environnements de test dans [!DNL Experience Platform], reportez-vous à la [présentation des environnements de test](../sandboxes/home.md).
 
@@ -103,7 +103,7 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 | [!DNL Destinations] | [!UICONTROL Gestion des destinations] | Accès à la lecture, la création, la modification et la désactivation des destinations. |
 | [!DNL Destinations] | [!UICONTROL Affichage des destinations] | Accès en lecture seule aux destinations disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux destinations authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
 | [!DNL Destinations] | [!UICONTROL Activation des destinations] | Capacité à activer les données vers les destinations actives qui ont été créées. Cette autorisation nécessite dʼaccorder soit « Affichage des destinations » ou « Gestion des [!UICONTROL destinations »] à lʼutilisateur qui activera les destinations. |
-| [!DNL Destinations] | [!UICONTROL Création de destinations] | Possibilité de créer des destinations à lʼaide du [SDK Destination Adobe Experience Platform](../destinations/destination-sdk/overview.md). |
+| [!DNL Destinations] | [!UICONTROL Création de destinations] | Possibilité de créer des destinations à lʼaide du [SDK Destination Adobe Experience Platform](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Gestion des sources] | Accès à la lecture, la création, la modification et la désactivation des sources. |
 | [!DNL Data Ingestion] | [!UICONTROL Affichage des sources] | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Accès à la création, lʼacceptation et le refus des négociations entre partenaires afin de connecter deux organisations IMS et dʼactiver les flux [!DNL Segment Match]. |
@@ -112,7 +112,7 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 | Gouvernance des données | [!UICONTROL Application dʼétiquettes dʼutilisation des données] | Accès à la lecture, la création et la suppression des étiquettes dʼutilisation des données. |
 | Gouvernance des données | [!UICONTROL Gestion des stratégies dʼutilisation des données] | Accès à la lecture, la création, la modification et la suppression des stratégies dʼutilisation des données. |
 | Gouvernance des données | [!UICONTROL Affichage des stratégies dʼutilisation des données] | Accès en lecture seule pour les stratégies dʼutilisation des données appartenant à votre organisation. |
-| Gouvernance des données | [!UICONTROL Afficher le journal d’audit] | Accès en lecture seule pour afficher les [journaux d’audit](../landing/governance-privacy-security/audit-logs/overview.md) enregistrés des activités de Platform. |
+| Gouvernance des données | [!UICONTROL Afficher le journal d’activité utilisateur] | Accès en lecture seule pour afficher les [journaux d’audit](../landing/governance-privacy-security/audit-logs/overview.md) enregistrés des activités de Platform. |
 | [!DNL Dashboards] | [!UICONTROL Afficher le tableau de bord d’utilisation des licences] | Accès en lecture seule pour afficher le tableau de bord de l’utilisation des licences. |
 | [!DNL Dashboards] | [!UICONTROL Gestion des tableaux de bord standard] | Ajoutez des attributs personnalisés qui ne se trouvent pas encore dans l’entrepôt de données. |
 | [!DNL Query Service] | [!UICONTROL Gestion des requêtes] | Accès à la lecture, la création, la modification et la suppression des requêtes SQL structurées pour les données Platform. |
