@@ -1,34 +1,30 @@
 ---
 keywords: personnalisation personnalisée ; destination; destination personnalisée de la plateforme d’expérience ;
 title: Connexion de personnalisation personnalisée (bêta)
-description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer des informations de segment à partir de Adobe Experience Platform. Cette destination fournit des fonctionnalités 1:1 en temps réel et une personnalisation basée sur l’appartenance à un segment d’un profil d’utilisateur.
+description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer des informations de segment à partir de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance au segment du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 50ab34cb9147cf880e199afad88e718875fb591f
+source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 8%
+source-wordcount: '575'
+ht-degree: 7%
 
 ---
 
-# Connexion de personnalisation personnalisée (bêta) {#custom-personalization-connection}
+# Connexion à la personnalisation personnalisée {#custom-personalization-connection}
 
 ## Présentation {#overview}
-
->[!IMPORTANT]
->
->La connexion à la personnalisation personnalisée dans Adobe Experience Platform est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
 
 Cette destination permet de récupérer les informations de segment de Adobe Experience Platform vers des plateformes de personnalisation externes, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur les sites web des clients.
 
 ## Conditions préalables {#prerequisites}
 
-Cette intégration est optimisée par la fonction [SDK Web Adobe Experience Platform](../../../edge/home.md). Vous devez utiliser ce SDK pour utiliser cette destination.
+Cette intégration est optimisée par la fonction [SDK Web Adobe Experience Platform](../../../edge/home.md) ou le [SDK Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/). Vous devez utiliser l’un de ces SDK pour utiliser cette destination.
 
 ## Type d&#39;export {#export-type}
 
 **Requête de profil** - vous demandez tous les segments mappés dans la destination de personnalisation personnalisée pour un profil unique. Différentes destinations de personnalisation personnalisées peuvent être configurées pour différentes [Adobe des flux de données de collecte de données](../../../edge/fundamentals/datastreams.md).
 
-## Cas d’utilisation {#use-cases}
+## Cas dʼutilisation {#use-cases}
 
 Cette destination partage les audiences avec les serveurs d’annonces et les applications de personnalisation autres que les Adobes, qui doivent être utilisées en temps réel, afin de décider quelle publicité les utilisateurs doivent voir sur un site web.
 
@@ -73,12 +69,10 @@ Voici un exemple de valeur pour la variable `event.destinations` variable :
       "alias":"personalizationAlias",
       "segments":[
          {
-            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          },
          {
-            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          }
       ]
    }

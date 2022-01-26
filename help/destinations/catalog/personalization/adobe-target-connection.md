@@ -1,24 +1,20 @@
 ---
 keywords: personnalisation de la cible ; destination; destination de la cible de la plateforme d’expérience;destination adobe target;
-title: Connexion Adobe Target (bêta)
-description: Adobe Target est une application qui fournit une personnalisation et une expérimentation optimisées par l’intelligence artificielle, en temps réel et 1:1 dans toutes les interactions client entrantes entre sites web, applications mobiles, etc.
+title: Connexion Adobe Target
+description: Adobe Target est une application qui fournit des fonctionnalités de personnalisation et d’expérimentation optimisées par l’IA en temps réel dans toutes les interactions client entrantes entre sites web, applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: fae3d9a5aff3e84354831026e9724e1c85d32b5c
+source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 10%
+source-wordcount: '432'
+ht-degree: 9%
 
 ---
 
-# Connexion Adobe Target (bêta) {#adobe-target-connection}
+# Connexion Adobe Target {#adobe-target-connection}
 
 ## Présentation {#overview}
 
->[!IMPORTANT]
->
->La connexion Adobe Target dans Adobe Experience Platform est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
-
-Adobe Target est une application qui fournit une personnalisation et une expérimentation en temps réel, 1:1, optimisées par l’IA, dans toutes les interactions client entrantes entre sites web, applications mobiles, etc.
+Adobe Target est une application qui fournit des fonctionnalités de personnalisation et d’expérimentation optimisées par l’IA en temps réel dans toutes les interactions client entrantes entre sites web, applications mobiles, etc.
 
 Adobe Target est une connexion de personnalisation dans Adobe Experience Platform.
 
@@ -30,7 +26,7 @@ Cette intégration est optimisée par la fonction [SDK Web Adobe Experience Plat
 
 **Requête de profil** - vous demandez tous les segments mappés dans la destination Adobe Target pour un profil unique.
 
-## Cas d’utilisation {#use-cases}
+## Cas dʼutilisation {#use-cases}
 
 **Personnaliser une bannière de page d&#39;accueil**
 

@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: b41230c1280bf699e9a78d5fd15b43d51ab298f7
+source-git-commit: 628e7a993a3566322e0249a5a9864cf6b3fe4493
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '695'
 ht-degree: 45%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 45%
       * [Activation des données d’audience vers des destinations d’exportation de profils en continu](./ui/activate-streaming-profile-destinations.md)
       * [Activation des données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md)
       * [Activation des données d’audience vers les destinations de requête de profil (version bêta)](./ui/activate-profile-request-destinations.md)
+      * [Configuration des destinations de personnalisation pour la personnalisation de la même page et de la page suivante](./ui/configure-personalization-destinations.md)
    * [Affichage des détails de destination](./ui/destination-details-page.md)
    * [Mise à jour des comptes de destination](./ui/update-accounts.md)
    * [Modification des flux d’activation](./ui/edit-activation.md)
@@ -118,11 +119,11 @@ ht-degree: 45%
       * [Connexion de frein](./catalog/mobile-engagement/braze.md)
    * Destinations de personnalisation {#personalization}
       * [Présentation des destinations de personnalisation](./catalog/personalization/overview.md)
-      * [Connexion Adobe Target (bêta)](./catalog/personalization/adobe-target-connection.md)
+      * [Connexion Adobe Target](./catalog/personalization/adobe-target-connection.md)
       * [Extension Adobe Target](./catalog/personalization/adobe-target.md)
       * [Extension Adobe Target v2](./catalog/personalization/adobe-target-v2.md)
       * [Extension Beemray](./catalog/personalization/beemray.md)
-      * [Connexion de personnalisation personnalisée (bêta)](./catalog/personalization/custom-personalization.md)
+      * [Connexion à la personnalisation personnalisée](./catalog/personalization/custom-personalization.md)
       * [Extension D&amp;B Visitor Intelligence](./catalog/personalization/dnb.md)
       * [Extension du service Experience Cloud ID](./catalog/personalization/adobe-ecid.md)
       * [Extension Gainsight](./catalog/personalization/gainsight.md)
