@@ -4,17 +4,17 @@ title: Présentation des tableaux de bord dʼExperience Platform
 type: Documentation
 description: Explorez de nombreux tableaux de bord dans Adobe Experience Platform pour afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors des captures instantanées quotidiennes.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: e927dbef8a3028155e907e0ca05c17c29fb74cf1
+source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
 workflow-type: tm+mt
-source-wordcount: '252'
-ht-degree: 100%
+source-wordcount: '309'
+ht-degree: 71%
 
 ---
 
 
 # Présentation des tableaux de bord {#dashboards}
 
-Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
+Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
 
 ## Introduction aux tableaux de bord
 
@@ -22,7 +22,9 @@ Les tableaux de bord fournissent un compte rendu des performances prêt à lʼem
 
 ## Prise en main des tableaux de bord
 
-Pour accéder aux tableaux de bord, naviguez vers la section appropriée dans lʼinterface utilisateur de Platform (UI). Une fois dans la section, sélectionnez lʼonglet **[!UICONTROL Aperçu]**, sʼil nʼest pas automatiquement sélectionné, afin dʼafficher le tableau de bord.
+Pour afficher et gérer les tableaux de bord, accédez à **[!UICONTROL Tableaux de bord]** dans l’interface utilisateur de l’Experience Platform, puis sélectionnez l’option **[!UICONTROL Parcourir]** pour accéder à l’inventaire du tableau de bord.
+
+Vous pouvez également accéder aux tableaux de bord en accédant à la section correspondante dans l’interface utilisateur du tableau de bord que vous souhaitez afficher. Pour afficher le tableau de bord des profils, par exemple, accédez au **[!UICONTROL Profils]** espace de travail et sélectionnez **[!UICONTROL Présentation]** .
 
 Les données de lʼinstantané montrent les données exactement comme elles apparaissent au moment précis où lʼinstantané a été pris. En dʼautres termes, lʼinstantané nʼest pas une approximation ou un échantillon des données, tandis que les tableaux de bord ne sont pas mis à jour en temps réel.
 
@@ -30,8 +32,12 @@ Les données de lʼinstantané montrent les données exactement comme elles appa
 >
 >Les modifications ou mises à jour apportées aux données depuis la prise dʼun instantané ne seront pas reflétées dans le tableau de bord avant la prise de lʼinstantané suivant.
 
+## Inventaire du tableau de bord
+
+Pour obtenir des instructions détaillées sur l’utilisation de la variable **[!UICONTROL Tableaux de bord]** espace de travail pour afficher tous les tableaux de bord disponibles, reportez-vous à la section [guide d’inventaire des tableaux de bord](./inventory.md).
+
 ## Tableaux de bord disponibles
 
-De nombreux tableaux de bord sont actuellement disponibles dans Experience Platform, chacun apportant une transparence sur les données client de votre entreprise.
+De nombreux tableaux de bord sont actuellement disponibles dans Experience Platform, chacun apportant une transparence sur les données client de votre entreprise.
 
 Pour en savoir plus sur ces tableaux de bord et leurs mesures, sélectionnez un tableau de bord dans la liste des tableaux de bord disponibles dans la navigation de la documentation.
