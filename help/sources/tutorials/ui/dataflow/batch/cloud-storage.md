@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes de configuration d’un nouveau flux de données à l’aide de votre compte de stockage dans le cloud.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: 86d8313d7acea41e7b3bcea6554e91ea2190ae69
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 4%
+source-wordcount: '2083'
+ht-degree: 3%
 
 ---
 
@@ -171,7 +171,7 @@ Indiquez les valeurs du planning et sélectionnez **[!UICONTROL Suivant]**.
 
 >[!NOTE]
 >
->Pour l’ingestion par lots, chaque flux de données qui s’ensuit sélectionne les fichiers à ingérer à partir de votre source en fonction de leur **last modified** horodatage. Cela signifie que les flux de données par lot sélectionnent des fichiers de la source qui sont nouveaux ou qui ont été modifiés depuis la dernière exécution du flux de données.
+>Pour l’ingestion par lots, chaque flux de données qui s’ensuit sélectionne les fichiers à ingérer à partir de votre source en fonction de leur **last modified** horodatage. Cela signifie que les flux de données par lot sélectionnent les fichiers de la source qui sont nouveaux ou qui ont été modifiés depuis la dernière exécution du flux. En outre, vous devez vous assurer qu’il existe une période suffisante entre le chargement de fichiers et l’exécution d’un flux planifié, car les fichiers qui ne sont pas entièrement chargés sur votre compte de stockage dans le cloud avant l’heure d’exécution planifiée du flux peuvent ne pas être sélectionnés pour ingestion.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
