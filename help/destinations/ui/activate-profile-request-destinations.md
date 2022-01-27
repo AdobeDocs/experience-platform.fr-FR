@@ -6,46 +6,42 @@ seo-title: Activate audience data to profile request destinations
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de requête de profil.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: ba27484655438df654a1e062309ddd30638f62a5
+source-git-commit: dd9493077706b102467493e90b363ac202550eee
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 10%
+source-wordcount: '454'
+ht-degree: 9%
 
 ---
 
-# Activation des données d’audience vers les destinations de requête de profil (version bêta)
+# Activation des données d’audience vers les destinations de requête de profil
 
 ## Présentation {#overview}
 
->[!IMPORTANT]
->
->Les destinations de demande de profil dans Adobe Experience Platform sont actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
-
-Cet article explique le workflow requis pour activer les données d’audience dans les destinations de demande de profil Adobe Experience Platform. Les [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et les [connexions personnalisées](../../destinations/catalog/personalization/custom-personalization.md) sont des exemples de destinations de demande de profil.
+Cet article explique le workflow requis pour activer les données d’audience dans les destinations de demande de profil Adobe Experience Platform. Voici des exemples de destinations de requête de profil : [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et le [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md) connexions.
 
 ## Conditions préalables {#prerequisites}
 
-Pour activer les données vers les destinations, vous devez être [connecté à une destination](./connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [catalogue des destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser.
+Pour activer les données vers les destinations, vous devez avoir réussi [connecté à une destination](./connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser.
 
 ### Stratégie de fusion de segments {#merge-policy}
 
-Actuellement, les destinations de requête de profil ne prennent en charge que l’activation des segments qui utilisent la [stratégie de fusion par défaut](../../segmentation/ui/segment-builder.md#merge-policies).
+Actuellement, les destinations de requête de profil ne prennent en charge que l’activation des segments qui utilisent la variable [stratégie de fusion par défaut](../../segmentation/ui/segment-builder.md#merge-policies).
 
 ## Sélectionner votre destination {#select-destination}
 
-1. Accédez à **[!UICONTROL Connexions > Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**.
+1. Accédez à **[!UICONTROL Connexions > Destinations]**, puis sélectionnez la variable **[!UICONTROL Catalogue]** .
 
    ![Onglet Catalogue de destinations](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Sélectionnez **[!UICONTROL Activer les segments]** sur la carte correspondant à la destination vers laquelle vous souhaitez activer vos segments, comme illustré dans l’image ci-dessous.
+1. Sélectionner **[!UICONTROL Activation des segments]** sur la carte correspondant à la destination vers laquelle vous souhaitez activer vos segments, comme illustré dans l’image ci-dessous.
 
    ![Boutons Activer](../assets/ui/activate-profile-request-destinations/activate-segments-button.png)
 
-1. Sélectionnez la connexion de destination à utiliser pour activer vos segments, puis cliquez sur **[!UICONTROL Suivant]**.
+1. Sélectionnez la connexion de destination à utiliser pour activer vos segments, puis sélectionnez **[!UICONTROL Suivant]**.
 
    ![Sélectionner la destination](../assets/ui/activate-profile-request-destinations/select-destination.png)
 
-1. Passez à la section suivante pour [sélectionner vos segments](#select-segments).
+1. Accédez à la section suivante pour [sélectionner vos segments ;](#select-segments).
 
 ## Sélection de vos segments {#select-segments}
 
@@ -55,19 +51,19 @@ Utilisez les cases à cocher situées à gauche des noms de segment pour sélect
 
 ## Planification de l’exportation de segments {#scheduling}
 
-Par défaut, la page [!UICONTROL Planification du segment] affiche uniquement les segments que vous avez choisis dans le flux d’activation actuel.
+Par défaut, la variable [!UICONTROL Planification du segment] affiche uniquement les segments que vous avez sélectionnés dans le flux d’activation actuel.
 
 ![Nouveaux segments](../assets/ui/activate-profile-request-destinations/new-segments.png)
 
-Pour voir tous les segments activés vers votre destination, utilisez l’option de filtrage et désactivez le filtre **[!UICONTROL Afficher les nouveaux segments uniquement]** .
+Pour afficher tous les segments activés vers votre destination, utilisez l’option de filtrage et désactivez la variable **[!UICONTROL Afficher les nouveaux segments uniquement]** filtre.
 
 ![Tous les segments](../assets/ui/activate-profile-request-destinations/all-segments.png)
 
-Sur la page **[!UICONTROL Planification du segment]** , sélectionnez chaque segment, puis utilisez les sélecteurs **[!UICONTROL Date de début]** et **[!UICONTROL Date de fin]** pour configurer l’intervalle d’envoi des données à votre destination.
+Sur le **[!UICONTROL Planification du segment]** , sélectionnez chaque segment, puis utilisez la méthode **[!UICONTROL Date de début]** et **[!UICONTROL Date de fin]** sélecteurs pour configurer l’intervalle d’envoi des données à votre destination.
 
 ![Planification du segment](../assets/ui/activate-profile-request-destinations/segment-schedule.png)
 
-Sélectionnez **[!UICONTROL Suivant]** pour accéder à la page [!UICONTROL Révision].
+Sélectionner **[!UICONTROL Suivant]** pour accéder au [!UICONTROL Réviser] page.
 
 ## Révision {#review}
 
@@ -75,14 +71,14 @@ Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre s�
 
 >[!IMPORTANT]
 >
->Au cours de cette étape, Adobe Experience Platform recherche les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation d’une stratégie. Vous ne pouvez pas terminer le workflow d’activation du segment tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la manière de résoudre les violations de stratégie, voir [Application de la stratégie](../../rtcdp/privacy/data-governance-overview.md#enforcement) dans la section de documentation sur la gouvernance des données.
+>Au cours de cette étape, Adobe Experience Platform recherche les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation d’une stratégie. Vous ne pouvez pas terminer le workflow d’activation du segment tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, voir [Application des stratégies](../../rtcdp/privacy/data-governance-overview.md#enforcement) dans la section documentation sur la gouvernance des données .
 
 ![violation de la politique de données](../assets/common/data-policy-violation.png)
 
-Si aucune violation de stratégie n’a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer les données à la destination.
+Si aucune violation de stratégie n’a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer des données à la destination.
 
 ![Révision](../assets/ui/activate-profile-request-destinations/review.png)
 
 ## Vérification de l’activation des segments {#verify}
 
-Consultez la [documentation sur la surveillance des destinations](../../dataflows/ui/monitor-destinations.md) pour obtenir des informations détaillées sur la manière de surveiller le flux de données vers vos destinations.
+Vérifiez les [documentation sur la surveillance des destinations](../../dataflows/ui/monitor-destinations.md) pour obtenir des informations détaillées sur la manière de surveiller le flux de données vers vos destinations.

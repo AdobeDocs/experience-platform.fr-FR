@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 628e7a993a3566322e0249a5a9864cf6b3fe4493
+source-git-commit: dd9493077706b102467493e90b363ac202550eee
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '694'
 ht-degree: 45%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 45%
       * [Activation des données d’audience vers des destinations d’exportation de segments de diffusion](./ui/activate-segment-streaming-destinations.md)
       * [Activation des données d’audience vers des destinations d’exportation de profils en continu](./ui/activate-streaming-profile-destinations.md)
       * [Activation des données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md)
-      * [Activation des données d’audience vers les destinations de requête de profil (version bêta)](./ui/activate-profile-request-destinations.md)
+      * [Activation des données d’audience vers les destinations de requête de profil](./ui/activate-profile-request-destinations.md)
       * [Configuration des destinations de personnalisation pour la personnalisation de la même page et de la page suivante](./ui/configure-personalization-destinations.md)
    * [Affichage des détails de destination](./ui/destination-details-page.md)
    * [Mise à jour des comptes de destination](./ui/update-accounts.md)
