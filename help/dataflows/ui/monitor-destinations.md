@@ -6,7 +6,7 @@ title: Surveillance des flux de données pour les destinations dans l’interfac
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fbcaa4c9010835f7a21f9f555671f6de2344f892
+source-git-commit: e75dec7d71c301ea16cc5bfb6bad948964180c4d
 workflow-type: tm+mt
 source-wordcount: '3204'
 ht-degree: 2%
@@ -200,6 +200,11 @@ La page Détails affiche également une liste des identités qui ont échoué et
 
 ## Tableau de bord Surveillance des tâches de segments {#monitoring-segment-jobs-dashboard}
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_segment_jobs"
+>title="Tâches de segmentation"
+>abstract="Le tableau de bord des tâches de segmentation contient des informations sur les tâches d’évaluation et d’exportation pour tous vos segments."
+
 Pour accéder au [!UICONTROL Tâches de segmentation] tableau de bord, sélectionnez **[!UICONTROL Surveillance]** (![icône de surveillance](../assets/ui/monitor-destinations/monitoring-icon.png)) dans le volet de navigation de gauche. Une fois sur le [!UICONTROL Surveillance] page, sélectionnez [!UICONTROL Tâches de segmentation]. Le [!UICONTROL Surveillance] Le tableau de bord contient des mesures et des informations sur les tâches d’évaluation et d’exportation de segments.
 
 ![Tableau de bord de surveillance des tâches de segmentation](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
@@ -222,11 +227,6 @@ Les mesures suivantes sont disponibles pour les tâches de segmentation :
 >id="platform_monitoring_activation"
 >title="Activation"
 >abstract="L’activation de destination contient des informations sur l’état d’activation du segment et des mesures provenant de Real-time Customer Profile pour générer des identités uniques."
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="Tâches de segmentation"
->abstract="Le tableau de bord des tâches de segmentation contient des informations sur les tâches d’évaluation et d’exportation pour tous vos segments."
 
 Pour accéder au [!UICONTROL Surveillance] tableau de bord, sélectionnez **[!UICONTROL Surveillance]** (![icône de surveillance](../assets/ui/monitor-destinations/monitoring-icon.png)) dans le volet de navigation de gauche. Une fois sur le [!UICONTROL Surveillance] page, sélectionnez [!UICONTROL Destinations]. Le [!UICONTROL Surveillance] Le tableau de bord contient des mesures et des informations sur les tâches d’exécution de destination.
 
