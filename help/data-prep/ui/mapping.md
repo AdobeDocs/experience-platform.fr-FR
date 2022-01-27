@@ -2,7 +2,8 @@
 keywords: Experience Platform;accueil;rubriques populaires;mapper csv;mapper le fichier csv;mapper le fichier csv à xdm;mapper csv à xdm;guide de lʼui;mappeur;mappage;data prep;préparation des données;préparer des données;
 title: Guide de l’interface utilisateur de la préparation de données
 description: Ce document fournit des instructions sur l’utilisation des fonctions de préparation de données dans l’interface utilisateur de Platform pour mapper des fichiers CSV à un schéma XDM.
-source-git-commit: 4c2e3380881e6a032100ef00502b55112f3b103f
+exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
+source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
 workflow-type: tm+mt
 source-wordcount: '1665'
 ht-degree: 17%
@@ -80,18 +81,18 @@ Le **[!UICONTROL mapping]** L’interface de propose un outil complet pour mappe
 
 ### Présentation de l’interface de mappage
 
-L’interface de mappage comprend un tableau de bord qui fournit des informations sur l’intégrité de vos jeux de mappages dans le contexte du processus d’ingestion. Le tableau de bord affiche les détails suivants concernant vos jeux de mappages :
+L’interface de mappage comprend un tableau de bord qui fournit des informations sur l’intégrité de vos champs de mappage dans le contexte du processus d’ingestion. Le tableau de bord affiche les détails suivants concernant vos champs de mappage :
 
 | Propriété | Description |
 | --- | --- |
 | [!UICONTROL Champs mappés] | Affiche le nombre total de champs source qui ont été mappés à un champ XDM cible, quelles que soient les erreurs. |
 | [!UICONTROL Champs obligatoires] | Affiche le nombre de champs de mappage requis. |
-| [!UICONTROL Champs d’identité] | Affiche le nombre total de jeux de mappages définis comme identité. Ces ensembles de mappages sont représentés par une icône d’empreinte digitale. |
-| [!UICONTROL Erreurs] | Affiche le nombre de jeux de mappages erronés. |
+| [!UICONTROL Champs d’identité] | Affiche le nombre total de champs de mappage définis comme identité. Ces champs de mappage sont représentés par une icône d’empreinte digitale. |
+| [!UICONTROL Erreurs] | Affiche le nombre de champs de mappage erronés. |
 
 ![panneau supérieur](../images/ui/mapping/top-panel.png)
 
-L’interface de mappage propose également un panneau d’options parmi lesquelles choisir afin de mieux interagir ou filtrer vos jeux de mappages.
+L’interface de mappage propose également un panneau d’options parmi lesquelles vous pouvez choisir de mieux interagir ou filtrer les champs de mappage.
 
 ![deuxième panneau](../images/ui/mapping/second-panel.png)
 
@@ -112,11 +113,11 @@ Les options de filtrage sont les suivantes :
 | [!UICONTROL Champs non mappés] | Cette option filtre le schéma source pour n’afficher que les champs qui doivent encore être mappés. |
 | [!UICONTROL Champs avec recommandation] | Cette option filtre le schéma source pour n’afficher que les champs contenant les recommandations de mappage. |
 
-Sélectionner **[!UICONTROL Champs en erreur]** pour afficher tous les ensembles de mappages avec des erreurs.
+Sélectionner **[!UICONTROL Champs en erreur]** pour afficher tous les champs de mappage contenant des erreurs.
 
 ![filter](../images/ui/mapping/filter.png)
 
-Une vue isolée des jeux de mappages en erreur s’affiche, ce qui vous permet de corriger les erreurs par le biais de recommandations de mappage intelligent ou de l’arborescence de mappage manuelle.
+Une vue isolée des champs de mappage en erreur s’affiche, ce qui vous permet de corriger les erreurs par le biais de recommandations de mappage intelligent ou de l’arborescence de mappage manuelle.
 
 ![fields-with-errors](../images/ui/mapping/fields-with-errors.png)
 
@@ -176,13 +177,13 @@ Lors de la prévisualisation, la colonne d’identité est considérée comme le
 
 ![aperçu-écran](../images/ui/mapping/preview-screen.png)
 
-Pour supprimer tous les jeux de mappages, sélectionnez **[!UICONTROL Effacer tous les mappages]**.
+Pour supprimer tous les champs de mappage, sélectionnez **[!UICONTROL Effacer tous les mappages]**.
 
 ![clear-all](../images/ui/mapping/clear-all.png)
 
 ### Utilisation de l’interface de mappage
 
-Platform fournit automatiquement des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation ou corriger les jeux de mappages dupliqués afin d’effacer les erreurs.
+Platform fournit automatiquement des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation ou corriger les champs de mappage dupliqués afin d’effacer les erreurs.
 
 ![mapping-interface](../images/ui/mapping/mapping-interface.png)
 
@@ -200,7 +201,7 @@ Vous pouvez également sélectionner **[!UICONTROL Sélectionner manuellement]**
 
 ![recc-panel](../images/ui/mapping/recc-panel.png)
 
-L’interface de mappage de schéma cible apparaît dans la même vue que vos jeux de mappages, ce qui vous permet de modifier des paires de mappages dans le même écran. Sélectionnez le champ cible correspondant à votre cas d’utilisation ou corrigez vos erreurs.
+L’interface de mappage de schéma cible apparaît dans la même vue que vos champs de mappage, ce qui vous permet de modifier les paires de mappage dans le même écran. Sélectionnez le champ cible correspondant à votre cas d’utilisation ou corrigez vos erreurs.
 
 ![select-target-field](../images/ui/mapping/select-target-field.png)
 
