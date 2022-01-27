@@ -3,7 +3,7 @@ keywords: personnalisation personnalisée ; destination; destination personnalis
 title: Connexion à la personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer des informations de segment à partir de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance au segment du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: cfbf8fb29d15badd10bafe35c558d95e534d23e8
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 7%
@@ -18,7 +18,7 @@ Cette destination permet de récupérer les informations de segment de Adobe Exp
 
 ## Conditions préalables {#prerequisites}
 
-Cette intégration est optimisée par la fonction [SDK Web Adobe Experience Platform](../../../edge/home.md) ou le [SDK Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/). Vous devez utiliser l’un de ces SDK pour utiliser cette destination.
+Cette intégration est optimisée par la fonction [SDK Web Adobe Experience Platform](../../../edge/home.md) ou le [SDK Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/). Pour utiliser cette destination, vous devez utiliser l’un de ces SDK.
 
 ## Type d&#39;export {#export-type}
 
