@@ -2,13 +2,13 @@
 keywords: Experience Platform;accueil;rubriques populaires
 title: Traitement des demandes d’accès à des informations personnelles dans Identity Service
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels associés au traitement des demandes d’accès à des informations personnelles pour Identity Service.
-source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
-workflow-type: ht
-source-wordcount: '666'
-ht-degree: 100%
+exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
+source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
+workflow-type: tm+mt
+source-wordcount: '722'
+ht-degree: 92%
 
 ---
-
 
 # Traitement des demandes dʼaccès à des informations personnelles dans [!DNL Identity Service]
 
@@ -20,19 +20,19 @@ Ce document couvre les concepts essentiels associés au traitement des demandes 
 >
 >Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour la banque de données d’identité dans Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour le lac de données de Platform ou [!DNL Real-time Customer Profile], reportez-vous au guide sur le [traitement des demandes d’accès à des informations personnelles dans le lac de données](../catalog/privacy.md) et au guide sur le [traitement des demandes d’accès à des informations personnelles pour Profile](../profile/privacy.md) en plus de ce tutoriel.
 >
->Pour savoir comment effectuer des demandes d’accès à des informations personnelles pour d’autres applications Adobe Experience Cloud, reportez-vous à la [documentation du Privacy Service](../privacy-service/experience-cloud-apps.md).
+>Pour savoir comment effectuer des demandes d’accès à des informations personnelles pour d’autres applications Adobe Experience Cloud, reportez-vous à la [documentation du Privacy Service](../privacy-service/experience-cloud-apps.md).
 
 ## Prise en main
 
 Une connaissance concrète des services [!DNL Experience Platform] suivants est recommandée avant la lecture de ce guide :
 
-* [[!DNL Privacy Service]](../privacy-service/home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
+* [[!DNL Privacy Service]](../privacy-service/home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
 * [[!DNL Identity Service]](../identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
 * [[!DNL Real-time Customer Profile]](home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 ## Compréhension des espaces de noms d’identité {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] rapproche les données dʼidentité client entre les systèmes et les appareils. [!DNL Identity Service] utilise les **espaces de noms d’identité** pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse e-mail (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
+Adobe Experience Platform [!DNL Identity Service] rapproche les données dʼidentité client entre les systèmes et les appareils. [!DNL Identity Service] utilise les **espaces de noms d’identité** pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse e-mail (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
 
 Identity Service conserve un stock d’espaces de nom d’identité définis globalement (standard) et par l’utilisateur (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
 
@@ -49,6 +49,10 @@ Lors de la création de requêtes de tâche dans l’API, les identifiants fourn
 En outre, le tableau `include` de la payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. Lorsque vous réalisez des requêtes vers [!DNL Identity], le tableau doit inclure la valeur `Identity`.
 
 La requête suivante crée une tâche de confidentialité dans le cadre du RGPD pour les données d’un seul client dans la banque [!DNL Identity]. Deux valeurs d’identité sont fournies pour le client dans le tableau `userIDs` ; une utilisant la norme `Email` espace de noms d’identité et l’autre à l’aide d’un espace de noms `ECID`, il inclut également la valeur de produit pour [!DNL Identity] (`Identity`) dans le tableau `include` :
+
+>[!TIP]
+>
+>Lors de la suppression d’un espace de noms personnalisé à l’aide de l’API, vous devez spécifier le symbole d’identité comme espace de noms, au lieu du nom d’affichage.
 
 ```shell
 curl -X POST \
@@ -89,6 +93,10 @@ curl -X POST \
 ```
 
 ### Utilisation de l’interface utilisateur
+
+>[!TIP]
+>
+>Lors de la suppression d’un espace de noms personnalisé à l’aide de l’interface utilisateur, vous devez spécifier le symbole d’identité comme espace de noms, au lieu du nom d’affichage. De plus, vous ne pouvez pas supprimer les espaces de noms personnalisés dans l’interface utilisateur pour les environnements de test hors production.
 
 Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Identité]** sous **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées dans [!DNL Identity Service].
 
