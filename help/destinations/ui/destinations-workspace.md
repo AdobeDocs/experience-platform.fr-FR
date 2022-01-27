@@ -4,45 +4,45 @@ title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
+source-git-commit: 7356802ee5bb0c5c05b224d9aa5f0e32cf1de843
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 20%
+source-wordcount: '883'
+ht-degree: 19%
 
 ---
 
 # Espace de travail des destinations {#destinations-workspace}
 
-Dans Adobe Experience Platform, sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Destinations].
+Dans Adobe Experience Platform, sélectionnez **[!UICONTROL Destinations]** à partir de la barre de navigation de gauche pour accéder au [!UICONTROL Destinations] workspace.
 
-L’espace de travail [!UICONTROL Destinations] se compose de cinq sections : [!UICONTROL Aperçu], [!UICONTROL Catalogue], [!UICONTROL Parcourir], [!UICONTROL Comptes] et [!UICONTROL Vue du système], décrites dans les sections ci-dessous.
+Le [!UICONTROL Destinations] workspace se compose de cinq sections : [!UICONTROL Présentation], [!UICONTROL Catalogue], [!UICONTROL Parcourir], [!UICONTROL Comptes], et [!UICONTROL Vue du système], décrits dans les sections ci-dessous.
 
 ![Présentation des destinations](../assets/ui/workspace/destinations-overview.png)
 
 ## [!UICONTROL Présentation] {#overview}
 
-L’onglet **[!UICONTROL Aperçu]** affiche le tableau de bord [!UICONTROL Destinations], fournissant des mesures clés liées aux données de destination de votre entreprise. Pour en savoir plus, consultez le guide de tableau de bord [[!UICONTROL Destinations]](../../dashboards/guides/destinations.md).
+Le **[!UICONTROL Présentation]** affiche le [!UICONTROL Destinations] tableau de bord, fournissant des mesures clés liées aux données de destination de votre entreprise. Pour en savoir plus, rendez-vous sur la page [[!UICONTROL Destinations] guide du tableau de bord](../../dashboards/guides/destinations.md).
 
 >[!NOTE]
 >
->Si votre entreprise est une nouvelle société Experience Platform qui ne possède pas encore de destinations principales, le tableau de bord [!UICONTROL Destinations] et l’onglet [!UICONTROL Aperçu] ne sont pas visibles. À la place, la sélection de [!UICONTROL Destinations] dans le volet de navigation de gauche affiche l’onglet [[!UICONTROL Catalogue]](#catalog).
+>Si votre entreprise est une nouvelle société qui n’a pas encore de destinations principales, la variable [!UICONTROL Destinations] tableau de bord et [!UICONTROL Présentation] ne sont pas visibles. À la place, sélectionnez [!UICONTROL Destinations] dans le volet de navigation de gauche affiche le [[!UICONTROL Catalogue] tab](#catalog).
 
 ![](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catalogue] {#catalog}
 
-L’onglet **[!UICONTROL Catalogue]** affiche la liste de toutes les destinations disponibles dans [!DNL Platform], auxquelles vous pouvez envoyer des données.
+Le **[!UICONTROL Catalogue]** affiche une liste de toutes les destinations disponibles dans [!DNL Platform], auquel vous pouvez envoyer des données.
 
-L’interface utilisateur de [!DNL Platform] propose plusieurs options de recherche et de filtrage sur la page de catalogue des destinations :
+Le [!DNL Platform] L’interface utilisateur propose plusieurs options de recherche et de filtrage sur la page de catalogue des destinations :
 
 * Utilisez la fonctionnalité de recherche de la page pour localiser une destination spécifique.
-* Filtrez les destinations à l’aide de la commande [!UICONTROL Catégories].
-* Basculez entre [!UICONTROL Toutes les destinations] et [!UICONTROL Mes destinations]. Lorsque vous sélectionnez **[!UICONTROL Toutes les destinations]**, toutes les destinations [!DNL Platform] disponibles s’affichent. Lorsque vous sélectionnez **[!UICONTROL Mes destinations]**, vous ne pouvez afficher que les destinations avec lesquelles vous avez établi une connexion.
-* Sélectionnez cette option pour afficher **[!UICONTROL Connexions]** et/ou **[!UICONTROL Extensions]**. Pour comprendre la différence entre les deux catégories, voir [Types de destination et Catégories](../destination-types.md).
+* Filtrage des destinations à l’aide de la fonction [!UICONTROL Catégories] contrôle.
+* Basculer entre [!UICONTROL Toutes les destinations] et [!UICONTROL Mes destinations]. Lorsque vous sélectionnez **[!UICONTROL Toutes les destinations]**, toutes disponibles [!DNL Platform] les destinations s’affichent. Lorsque vous sélectionnez **[!UICONTROL Mes destinations]**, vous ne pouvez afficher que les destinations avec lesquelles vous avez établi une connexion.
+* Sélectionner pour afficher **[!UICONTROL Connexions]** et/ou **[!UICONTROL Extensions]**. Pour comprendre la différence entre les deux catégories, voir [Types et catégories de destinations](../destination-types.md).
 
 ![Catalogue](../assets/ui/workspace/catalog.png)
 
-Les cartes de destination contiennent soit un contrôle **[!UICONTROL Configurer]** ou **[!UICONTROL Activer les segments]** et un contrôle secondaire qui affiche d’autres options. Ces contrôles sont décrits ci-dessous :
+Les cartes de destination contiennent soit un **[!UICONTROL Configuration]** ou **[!UICONTROL Activation des segments]** et un contrôle secondaire qui offre davantage d’options. Ces contrôles sont décrits ci-dessous :
 
 | Contrôle | Description |
 |---------|----------|
@@ -60,33 +60,34 @@ Sélectionnez une carte de destination dans le catalogue pour ouvrir le rail de 
 
 ![Options du catalogue des destinations](../assets/ui/workspace/destination-right-rail.png)
 
-Pour plus d’informations sur les catégories de destination et les informations sur chaque destination, voir [Catalogue des destinations](../catalog/overview.md) et [Types et catégories de destination](../destination-types.md).
+Pour plus d’informations sur les catégories de destination et sur chaque destination, voir [Catalogue de destinations](../catalog/overview.md) et [Types et catégories de destination](../destination-types.md).
 
 ## [!UICONTROL Comptes] {#accounts}
 
-L’onglet **[!UICONTROL Comptes]** affiche des détails sur les connexions que vous avez établies avec différentes destinations et vous permet de mettre à jour les détails de connexion existants. Voir [Mise à jour de comptes](update-accounts.md) pour obtenir des instructions détaillées.
+Le **[!UICONTROL Comptes]** Cet onglet affiche des détails sur les connexions que vous avez établies avec différentes destinations et vous permet de mettre à jour les détails de connexion existants. Voir [Mettre à jour les comptes](update-accounts.md) pour obtenir des instructions détaillées.
 
 ## [!UICONTROL Parcourir] {#browse}
 
-L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles vous avez établi une connexion. Les destinations avec le bouton d’activation/désactivation **[!UICONTROL activé/désactivé]** activé/désactivé définissent la destination comme principale ou inactive, respectivement. Vous pouvez également afficher les destinations où les données circulent en sélectionnant **[!UICONTROL Segments]** > **[!UICONTROL Parcourir]** et en sélectionnant un segment à inspecter. Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet Parcourir :
+L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles vous avez établi une connexion. Destinations avec la variable **[!UICONTROL Activé/Désactivé]** Activez cette option pour définir la destination sur principale ou inactive, respectivement. Vous pouvez également afficher les destinations où les données circulent en sélectionnant **[!UICONTROL Segments]** > **[!UICONTROL Parcourir]** et sélectionner un segment à inspecter. Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet Parcourir :
 
 >[!TIP]
 >
-> * Sélectionnez les trois points de la colonne [!UICONTROL Nom] et utilisez le bouton ![Ajouter des segments](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activer les segments ]**pour envoyer des segments vers cette destination.
-> * Sélectionnez les trois points de la colonne [!UICONTROL Nom] et utilisez le bouton ![Supprimer les destinations](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Supprimer ]**pour [supprimer](delete-destinations.md) une connexion existante à une destination.
+> * Sélectionnez les trois points dans le [!UICONTROL Nom] et utilisez la variable ![Bouton Activer les segments](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activation des segments ]**pour envoyer des segments vers cette destination.
+> * Sélectionnez les trois points dans le [!UICONTROL Nom] et utilisez la variable ![Bouton Supprimer](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Supprimer ]**à [remove](delete-destinations.md) une connexion existante à une destination.
+> * Sélectionnez les trois points dans le [!UICONTROL Nom] et utilisez la variable ![Bouton Surveillance](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Surveillance ]**pour afficher les informations d’activation de cette destination dans le [tableau de bord de surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 
 
 ![Onglet Parcourir](../assets/ui/workspace/browse-tab.png)
 
 | Élément | Description |
 |---------|----------|
-| Nom | Le nom que vous avez fourni pour votre flux d’activation vers cette destination. La même colonne comprend deux contrôles : [!UICONTROL Activez ] et [!UICONTROL Supprimez la destination]. |
+| Nom | Le nom que vous avez fourni pour votre flux d’activation vers cette destination. La même colonne comprend deux contrôles : [!UICONTROL Activer ] et [!UICONTROL Supprimer la destination]. |
 | [!UICONTROL État de la dernière exécution de flux] | État de la dernière exécution du flux de données. Voir [Affichage des détails de destination](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
 | [!UICONTROL Date d’exécution du dernier flux] | Heure et date de la dernière exécution du flux de données. Voir [Affichage des détails de destination](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
 | [!UICONTROL Destination] | La plateforme de destination que vous avez sélectionnée pour votre flux d’activation. |
 | [!UICONTROL Type de connexion] | Représente le type de connexion à votre compartiment de stockage ou à votre destination. <ul><li>Pour les destinations de marketing par e-mail : Peut être S3, FTP ou [!DNL Azure Blob].</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur.</li><li>Pour les destinations de diffusion en continu : Peut être [!DNL Azure Event Hubs] ou [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Nom d’utilisateur] | Les informations d’identification de compte que vous avez sélectionnées pour le flux de destination. |
-| [!UICONTROL Données d’activation] | Indique le nombre de segments activés vers cette destination. Sélectionnez ce contrôle pour en savoir plus sur les segments activés. Pour plus d’informations sur les segments activés, voir [Données d’activation](/help/destinations/ui/destination-details-page.md#activation-data) dans la page des détails de destination. |
+| [!UICONTROL Données d’activation] | Indique le nombre de segments activés vers cette destination. Sélectionnez ce contrôle pour en savoir plus sur les segments activés. Voir [Données d’activation](/help/destinations/ui/destination-details-page.md#activation-data) sur la page de détails des destinations pour plus d’informations sur les segments activés. |
 | [!UICONTROL Créé] | La date et l’heure (UTC) de création du flux d’activation vers la destination. |
 | [!UICONTROL État] | `Active` ou `Inactive`. Indique si les données sont activées vers cette destination. |
 
@@ -98,10 +99,10 @@ Sélectionnez le nom de la destination pour afficher des informations sur les se
 
 ## [!UICONTROL Vue du système] {#system-view}
 
-L’onglet **[!UICONTROL Vue du système]** affiche une représentation graphique des flux d’activation que vous avez configurés dans Adobe Experience Platform.
+Le **[!UICONTROL Vue du système]** affiche une représentation graphique des flux d’activation que vous avez configurés dans Adobe Experience Platform.
 
 ![Flux de données 1](../assets/ui/workspace/data-flows1.png)
 
-Sélectionnez l’une des destinations affichées sur la page et cliquez sur **[!UICONTROL Afficher les flux de données]** pour afficher les informations sur toutes les connexions que vous avez configurées pour chaque destination.
+Sélectionnez l’une des destinations affichées sur la page, puis cliquez sur **[!UICONTROL Afficher les flux de données]** pour afficher des informations sur toutes les connexions que vous avez configurées pour chaque destination.
 
 ![Flux de données 2](../assets/ui/workspace/data-flows2.png)
