@@ -5,9 +5,9 @@ title: 'Segmentation Edge à l’aide de l’API '
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
+source-git-commit: e52aa55adde532d838d5417feba36913ed03ce29
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '1015'
 ht-degree: 7%
 
 ---
@@ -25,6 +25,8 @@ La segmentation Edge permet d’évaluer instantanément les segments dans Adobe
 >[!IMPORTANT]
 >
 > Les données Edge seront stockées dans un emplacement de serveur Edge le plus proche de l’emplacement où elles ont été collectées et peuvent être stockées à un autre emplacement que celui désigné comme centre de données Adobe Experience Platform principal (ou hub).
+>
+> En outre, le moteur de segmentation Edge ne traitera que les demandes sur la périphérie lorsqu’il existe des **one** Identité marquée Principale, qui est cohérente avec les identités Principales non basées sur un bord.
 
 ## Prise en main
 

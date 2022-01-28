@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur d’Edge Segmentation
 topic-legacy: ui guide
 description: La segmentation Edge permet d’évaluer instantanément les segments dans Platform, ce qui permet d’utiliser des cas de personnalisation de page et de page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
+source-git-commit: 522a6a005bc4b9d5059b4de3ceb0a24f7767caad
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,8 @@ La segmentation Edge permet d’évaluer instantanément les segments dans Adobe
 >[!IMPORTANT]
 >
 > Les données Edge seront stockées dans un emplacement de serveur Edge le plus proche de l’emplacement où elles ont été collectées et peuvent être stockées à un autre emplacement que celui désigné comme centre de données Adobe Experience Platform principal (ou hub).
+>
+> En outre, le moteur de segmentation Edge ne traitera que les demandes sur la périphérie lorsqu’il existe des **one** Identité marquée Principale, qui est cohérente avec les identités Principales non basées sur un bord.
 
 ## Types de requête de segmentation Edge
 
