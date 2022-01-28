@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: bcd52989-ef62-4ab9-866e-1d9e57b76a0c
-source-git-commit: 703e49a20fae0fbf527275e1385f596d01642954
+source-git-commit: 5a27b725d945fcfc3908b2299f770796ce4fdbd1
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1337'
 ht-degree: 31%
 
 ---
@@ -44,8 +44,8 @@ Adobe Experience Platform propose de nombreux tableaux de bord qui vous permet
 | Fonctionnalité | Description |
 | --- | --- |
 | Légendes intelligentes | Un algorithme d’apprentissage automatique fournit automatiquement des insights sur vos données de profil et d’audience, et illustre les schémas et tendances sur une période de 30 à 90 jours, ou de 12 mois. Les sous-titres contiennent des informations sur <ul><li>Forme globale et statistiques</li><li>Tendances et modifications brusques</li><li>Formats saisonniers</li><li>Les anomalies inattendues</li></ul> Vous trouverez plus d’informations sur la [tableaux de bord des profils](../../dashboards/guides/profiles.md#profiles-count-trend) et [tableaux de bord des segments](../../dashboards/guides/segments.md#audience-size-trend) documentation. |
-| Inventaire des tableaux de bord | Accédez aux rapports préconfigurés des tableaux de bord des profils, des segments et des destinations, y compris les intégrations installées telles que PowerBI, à un emplacement centralisé. Pour plus d’informations, voir [[!DNL Dashboards] aperçu](../../dashboards/home.md). |
-| Modèles de rapport PowerBI | Créez, personnalisez ou étendez des mesures à partir des modèles de données de rapports de profil, de segments et de destination à l’aide de nouveaux graphiques PowerBI. Le workflow d’installation automatisée vous permet de partager vos informations marketing dans l’ensemble de votre organisation à partir de l’environnement PowerBI. Pour plus d’informations, voir [[!DNL Dashboards] aperçu](../../dashboards/home.md). |
+| Inventaire des tableaux de bord | Accédez aux rapports préconfigurés des tableaux de bord des profils, des segments et des destinations, y compris les intégrations installées telles que PowerBI, à un emplacement centralisé. Pour plus d’informations, voir [[!DNL Dashboards] documentation d’inventaire](../../dashboards/inventory.md). |
+| Modèles de rapport PowerBI | Créez, personnalisez ou étendez des mesures à partir des modèles de données de rapports de profil, de segments et de destination à l’aide de nouveaux graphiques PowerBI. Le workflow d’installation automatisée vous permet de partager vos informations marketing dans l’ensemble de votre organisation à partir de l’environnement PowerBI. Pour plus d’informations, voir [Documentation sur le modèle de rapport PowerBI](../../dashboards/integrations/power-bi.md). |
 
 Pour plus d’informations sur [!DNL Dashboards], consultez la [[!DNL Dashboards] présentation de la ](../../dashboards/home.md).
 
@@ -91,8 +91,8 @@ Pour des informations plus générales sur les destinations, reportez-vous à la
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Bloc anonyme | La structure SQL de bloc anonyme permet de ventiler les tâches de préparation de données à grande échelle dans Query Service en tâches plus petites, puis de les réutiliser et de les exécuter en séquence pour le chargement incrémentiel des données. Pour plus d’informations, voir [Présentation de Query Service](../../query-service/home.md). |
-| Organisation du jeu de données | Fournit une structure de données logique et cohérente pour organiser vos ressources de données à utiliser avec Query Service à mesure que la quantité de ressources de données dans l’environnement de test augmente. Pour plus d’informations, voir [Présentation de Query Service](../../query-service/home.md). |
+| Bloc anonyme | La structure SQL de bloc anonyme permet de ventiler les tâches de préparation de données à grande échelle dans Query Service en tâches plus petites, puis de les réutiliser et de les exécuter en séquence pour le chargement incrémentiel des données. Pour plus d’informations, voir [exemples de requêtes pour la documentation bloquée anonyme](../../query-service/best-practices/anonymous-block.md). |
+| Organisation du jeu de données | Fournit une structure de données logique et cohérente pour organiser vos ressources de données à utiliser avec Query Service à mesure que la quantité de ressources de données dans l’environnement de test augmente. Pour plus d’informations, voir [documentation sur l’organisation des ressources de données](../../query-service/best-practices/organize-data-assets.md). |
 
 Pour plus d’informations sur [!DNL Query Service], consultez la [[!DNL Query Service] présentation de la ](../../query-service/home.md).
 
