@@ -4,9 +4,9 @@ title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 7356802ee5bb0c5c05b224d9aa5f0e32cf1de843
+source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '887'
 ht-degree: 19%
 
 ---
@@ -74,7 +74,7 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 >
 > * Sélectionnez les trois points dans le [!UICONTROL Nom] et utilisez la variable ![Bouton Activer les segments](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activation des segments ]**pour envoyer des segments vers cette destination.
 > * Sélectionnez les trois points dans le [!UICONTROL Nom] et utilisez la variable ![Bouton Supprimer](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Supprimer ]**à [remove](delete-destinations.md) une connexion existante à une destination.
-> * Sélectionnez les trois points dans le [!UICONTROL Nom] et utilisez la variable ![Bouton Surveillance](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Surveillance ]**pour afficher les informations d’activation de cette destination dans le [tableau de bord de surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Sélectionnez les trois points dans le [!UICONTROL Nom] et utilisez la variable ![Bouton Afficher dans la surveillance](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Afficher dans la surveillance ]**pour afficher les informations d’activation de cette destination dans le [tableau de bord de surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 
 
 ![Onglet Parcourir](../assets/ui/workspace/browse-tab.png)
