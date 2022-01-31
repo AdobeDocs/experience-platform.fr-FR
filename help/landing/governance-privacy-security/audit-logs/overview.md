@@ -2,9 +2,9 @@
 title: Présentation des journaux d’audit
 description: Découvrez comment les journaux d’audit vous permettent de voir qui a effectué les actions dans Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
+source-git-commit: 7e4853cee8a0fa937c82eb842cd73b675eb337a3
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '657'
 ht-degree: 6%
 
 ---
@@ -65,7 +65,7 @@ Les filtres suivants sont disponibles pour les événements de contrôle dans l�
 | --- | --- |
 | [!UICONTROL Catégorie] | Utiliser le menu déroulant pour filtrer les résultats affichés par [category](#category). |
 | [!UICONTROL Action] | Filtrer par action. Actuellement uniquement [!UICONTROL Créer] et [!UICONTROL Supprimer] Les actions peuvent être filtrées. |
-| [!UICONTROL État du contrôle d’accès] | Filtrez selon si l’action a été autorisée (terminée) ou refusée en raison de l’absence de [contrôle d&#39;accès](../../../access-control/home.md) autorisations. |
+| [!UICONTROL État] | Filtrez selon si l’action a été autorisée (terminée) ou refusée en raison de l’absence de [contrôle d&#39;accès](../../../access-control/home.md) autorisations. |
 | [!UICONTROL Date] | Sélectionnez une date de début et/ou une date de fin pour définir une période en fonction de laquelle filtrer les résultats. |
 
 Pour supprimer un filtre, sélectionnez le &quot;X&quot; sur l’icône de pilule du filtre en question, ou sélectionnez **[!UICONTROL Effacer tout]** pour supprimer tous les filtres.
