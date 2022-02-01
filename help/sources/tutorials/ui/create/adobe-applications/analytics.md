@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1571'
 ht-degree: 8%
 
 ---
@@ -61,6 +61,16 @@ Le **[!UICONTROL Ajout de données à la source Analytics]** s’affiche. Sélec
 >[!IMPORTANT]
 >
 >La fonctionnalité de prise en charge de la préparation des données pour la variable [!DNL Analytics] La source est en version bêta.
+
+Avant de pouvoir mapper votre [!DNL Analytics] pour cibler un schéma XDM, vous devez d’abord choisir si vous utilisez un schéma par défaut ou un schéma personnalisé.
+
+Un schéma par défaut crée un nouveau schéma à votre place, contenant la variable [!DNL Analytics] groupe de champs. Pour utiliser un schéma par défaut, sélectionnez **[!UICONTROL Schéma par défaut]**.
+
+![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
+
+Avec un schéma personnalisé, vous pouvez choisir n’importe quel schéma disponible pour votre [!DNL Analytics] tant que ce schéma contient [!DNL Analytics] groupe de champs. Pour utiliser un schéma personnalisé, sélectionnez **[!UICONTROL Schéma personnalisé]**.
+
+![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
 Le [!UICONTROL Mappage] fournit une interface permettant de mapper les champs sources à leurs champs de schéma cible appropriés. À partir de là, vous pouvez mapper des variables personnalisées à de nouveaux groupes de champs de schéma et appliquer des calculs comme pris en charge par Data Prep. Sélectionnez un schéma cible pour lancer le processus de mappage.
 
