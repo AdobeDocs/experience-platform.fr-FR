@@ -4,9 +4,9 @@ title: Type de données Consentements et Préférences
 description: Le type de données Consentement pour la confidentialité, la personnalisation et les préférences marketing est destiné à prendre en charge la collecte des autorisations et préférences client générées par les plateformes de gestion du consentement (CMP) et d’autres sources provenant de vos opérations de données.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 65ad76bb4a5318b03d79d68d3c7e030d7878cf30
 workflow-type: tm+mt
-source-wordcount: '2039'
+source-wordcount: '2058'
 ht-degree: 2%
 
 ---
@@ -53,10 +53,11 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 {
   "consents": {
     "collect": {
-      "val": "y",
+      "val": "VI",
     },
     "adID": {
-      "val": "VI"
+      "idType": "IDFA",
+      "val": "y"
     },
     "share": {
       "val": "y",
@@ -99,10 +100,11 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 ```json
 "consents": {
   "collect": {
-    "val": "y",
+    "val": "VI",
   },
   "adID": {
-    "val": "VI"
+    "idType": "IDFA",
+    "val": "y"
   },
   "share": {
     "val": "y",
@@ -144,16 +146,18 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 
 ### `adID`
 
-`adID` représente le consentement du client pour savoir si un ID d’annonceur (IDFA ou GAID) peut être utilisé pour lier le client à l’ensemble des applications de cet appareil.
+`adID` représente le consentement du client pour savoir si un ID d’annonceur peut être utilisé pour lier le client à l’ensemble des applications de cet appareil.
 
 ```json
 "adID": {
+  "idType": "IDFA",
   "val": "y"
 }
 ```
 
 | Propriété | Description |
 | --- | --- |
+| `idType` | Le type d’ID de publicité, soit `IDFA` pour Apple ID pour les annonceurs ou `GAID` pour Google Advertiser ID, également appelé Android Advertiser ID (AAID). |
 | `val` | Choix du consentement fourni par le client pour ce cas d’utilisation. Voir [annexe](#choice-values) pour les valeurs et définitions acceptées. |
 
 {style=&quot;table-layout:auto&quot;}
