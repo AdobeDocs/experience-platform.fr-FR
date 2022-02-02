@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
+source-git-commit: d62d1ff9ebef58401911bab1232d1847d65e043f
 workflow-type: tm+mt
 source-wordcount: '1571'
 ht-degree: 8%
@@ -64,11 +64,11 @@ Le **[!UICONTROL Ajout de données à la source Analytics]** s’affiche. Sélec
 
 Avant de pouvoir mapper votre [!DNL Analytics] pour cibler un schéma XDM, vous devez d’abord choisir si vous utilisez un schéma par défaut ou un schéma personnalisé.
 
-Un schéma par défaut crée un nouveau schéma à votre place, contenant la variable [!DNL Analytics] groupe de champs. Pour utiliser un schéma par défaut, sélectionnez **[!UICONTROL Schéma par défaut]**.
+Un schéma par défaut crée un nouveau schéma à votre place, contenant la variable [!DNL Adobe Analytics ExperienceEvent Template] groupe de champs. Pour utiliser un schéma par défaut, sélectionnez **[!UICONTROL Schéma par défaut]**.
 
 ![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
 
-Avec un schéma personnalisé, vous pouvez choisir n’importe quel schéma disponible pour votre [!DNL Analytics] tant que ce schéma contient [!DNL Analytics] groupe de champs. Pour utiliser un schéma personnalisé, sélectionnez **[!UICONTROL Schéma personnalisé]**.
+Avec un schéma personnalisé, vous pouvez choisir n’importe quel schéma disponible pour votre [!DNL Analytics] tant que ce schéma contient la variable [!DNL Adobe Analytics ExperienceEvent Template] groupe de champs. Pour utiliser un schéma personnalisé, sélectionnez **[!UICONTROL Schéma personnalisé]**.
 
 ![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
@@ -76,7 +76,7 @@ Le [!UICONTROL Mappage] fournit une interface permettant de mapper les champs so
 
 >[!TIP]
 >
->Seuls les schémas qui ont la variable [!DNL Analytics] les groupes de champs de modèle s’affichent dans le menu de sélection de schéma. Les autres schémas sont omis. Si aucun schéma approprié n’est disponible pour les données de votre suite de rapports, vous devez créer un nouveau schéma. Pour obtenir des instructions détaillées sur la création de schémas, consultez le guide sur la [création et modification de schémas dans l’interface utilisateur](../../../../../xdm/ui/resources/schemas.md).
+>Seuls les schémas qui ont la variable [!DNL Adobe Analytics ExperienceEvent Template] les groupes de champs s’affichent dans le menu de sélection de schéma. Les autres schémas sont omis. Si aucun schéma approprié n’est disponible pour les données de votre suite de rapports, vous devez créer un nouveau schéma. Pour obtenir des instructions détaillées sur la création de schémas, consultez le guide sur la [création et modification de schémas dans l’interface utilisateur](../../../../../xdm/ui/resources/schemas.md).
 
 ![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
