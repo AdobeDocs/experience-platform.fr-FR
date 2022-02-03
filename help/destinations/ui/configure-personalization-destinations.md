@@ -6,16 +6,14 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Découvrez comment configurer des destinations de personnalisation pour la personnalisation de la même page et de la page suivante.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: 851a9598523d26ba52a367f6c03e3c9612f6678b
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 1%
+source-wordcount: '367'
+ht-degree: 0%
 
 ---
 
 # Configuration des destinations de personnalisation pour la personnalisation de la même page et de la page suivante
-
-## Présentation {#overview}
 
 Utilisation de Adobe Experience Platform [segmentation de périphérie](../../segmentation/ui/edge-segmentation.md) pour permettre aux clients de créer et de cibler des segments d’audience à grande échelle, en temps réel.
 
@@ -23,11 +21,15 @@ Cette fonctionnalité vous permet de configurer des cas pratiques de personnalis
 
 Cet article fournit des instructions étape par étape sur la configuration d’Experience Platform et de vos destinations de personnalisation pour ces cas d’utilisation.
 
-## Étape 1 : Configuration d’un flux de données SDK Web Experience Platform {#configure-datastream}
+## Étape 1 : Configuration d’un flux de données dans l’interface utilisateur de la collecte de données {#configure-datastream}
 
-La première étape de la configuration de votre cas d’utilisation de personnalisation consiste à configurer une [!DNL Web SDK datastream].
+La première étape de la configuration de votre destination de personnalisation consiste à configurer un flux de données pour le SDK Web Experience Platform. Cette opération est effectuée dans l’interface utilisateur de la collecte de données.
 
-Suivez les instructions décrites dans la section [configuration des flux de données](../../edge/fundamentals/datastreams.md) documentation.
+Lors de la configuration du flux de données, sous **[!UICONTROL Adobe Experience Platform]** assurez-vous que les **[!UICONTROL Segmentation Edge]** et **[!UICONTROL Destinations de personnalisation]** sont sélectionnées.
+
+![Configuration des flux de données](../assets/ui/configure-personalization-destinations/datastream-config.png)
+
+Pour plus d’informations sur la configuration d’un flux de données, suivez les instructions décrites dans la section [Documentation du SDK Web Platform](../../edge/fundamentals/datastreams.md).
 
 ## Étape 2 : Configuration de votre destination de personnalisation {#configure-destination}
 
