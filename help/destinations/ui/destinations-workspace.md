@@ -4,10 +4,10 @@ title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
+source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 19%
+source-wordcount: '1084'
+ht-degree: 20%
 
 ---
 
@@ -64,11 +64,30 @@ Pour plus d’informations sur les catégories de destination et sur chaque dest
 
 ## [!UICONTROL Comptes] {#accounts}
 
-Le **[!UICONTROL Comptes]** Cet onglet affiche des détails sur les connexions que vous avez établies avec différentes destinations et vous permet de mettre à jour les détails de connexion existants. Voir [Mettre à jour les comptes](update-accounts.md) pour obtenir des instructions détaillées.
+Le **[!UICONTROL Comptes]** Cet onglet affiche des détails sur les connexions que vous avez établies avec différentes destinations et vous permet de mettre à jour ou de supprimer des détails de compte existants. Consultez le tableau ci-dessous pour obtenir toutes les informations disponibles sur chaque compte de destination.
+
+>[!TIP]
+>
+> * Sélectionnez les trois points dans le [!UICONTROL Plateforme] et utilisez la variable ![Bouton Activer les segments](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activation des segments ]**pour envoyer des segments vers cette destination.
+> * Sélectionnez les trois points dans le [!UICONTROL Plateforme] et utilisez la variable ![Bouton Modifier les détails](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Modifier les détails ]**à [update](update-accounts.md) les détails d’un compte de destination existant ;
+> * Sélectionnez les trois points dans le [!UICONTROL Plateforme] et utilisez la variable ![Bouton Supprimer](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Supprimer ]**à [delete](delete-destination-account.md) un compte de destination existant ;
+
+
+![Onglet Comptes](../assets/ui/workspace/destination-account-options.png)
+
+| Élément | Description |
+|---|---|
+| [!UICONTROL Plateforme] | La destination pour laquelle vous avez configuré la connexion. |
+| [!UICONTROL Type de connexion] | Représente le type de connexion du compte à votre compartiment de stockage ou à votre destination. Selon la destination, les options d’authentification sont les suivantes : <ul><li>Pour les destinations de marketing par e-mail : Il peut s’agir de S3, FTP ou Azure Blob.</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur</li><li>Pour les destinations de stockage dans le cloud Amazon S3 : clé d’accès </li><li>Pour les destinations de stockage dans le cloud SFTP : authentification de base pour SFTP</li><li>Authentification OAuth 1 ou OAuth 2</li><li>Authentification du jeton porteur</li></ul> |
+| [!UICONTROL Nom d’utilisateur] | Le nom d’utilisateur que vous avez sélectionné dans l’[assistant de connexion à la destination](../catalog/email-marketing/overview.md#connect-destination). |
+| [!UICONTROL Destinations] | Représente le nombre de flux de données de destination réussis uniques connectés aux informations de base créées pour une destination. |
+| [!UICONTROL Autorisé] | La date à laquelle la connexion à cette destination a été autorisée. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL Parcourir] {#browse}
 
-L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles vous avez établi une connexion. Destinations avec la variable **[!UICONTROL Activé/Désactivé]** Activez cette option pour définir la destination sur principale ou inactive, respectivement. Vous pouvez également afficher les destinations où les données circulent en sélectionnant **[!UICONTROL Segments]** > **[!UICONTROL Parcourir]** et sélectionner un segment à inspecter. Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet Parcourir :
+L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles vous avez établi une connexion. Destinations avec la variable **[!UICONTROL Activé/Désactivé]** Activez cette option pour définir la destination sur principale ou inactive, respectivement. Vous pouvez également afficher les destinations où les données circulent en sélectionnant **[!UICONTROL Segments]** > **[!UICONTROL Parcourir]** et sélectionner un segment à inspecter. Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans la variable [!UICONTROL Parcourir] tab :
 
 >[!TIP]
 >
