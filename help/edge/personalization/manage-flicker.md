@@ -3,7 +3,7 @@ title: Gestion du scintillement pour les expériences personnalisées à l’aid
 description: Découvrez comment utiliser le SDK Web de Adobe Experience Platform pour gérer le scintillement sur les expériences utilisateur.
 keywords: target;scintillement;prehideStyle;asynchrone;asynchrone;
 exl-id: f4b59109-df7c-471b-9bd6-7082e00c293b
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: e5d279397cab30e997103496beda5265520dca77
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 76%
@@ -24,7 +24,7 @@ La fonctionnalité de gestion des scintillements comporte quelques phases :
 
 Au cours de la phase de prémasquage, le SDK utilise l’option de configuration `prehidingStyle` pour créer une balise de style HTML et l’ajouter au modèle DOM afin de s’assurer que de grandes parties de la page sont masquées. Si vous ne savez pas quelles parties de la page seront personnalisées, il est recommandé de définir `prehidingStyle` sur `body { opacity: 0 !important }`. La page entière est ainsi masquée. Toutefois, cela a l’inconvénient d’entraîner des performances de rendu de page pires, signalées par des outils tels que Lighthouse, les tests de page web, etc. Pour optimiser les performances de rendu des pages, il est recommandé de définir `prehidingStyle` sur une liste d’éléments de conteneurs qui contiennent les parties de la page à personnaliser.
 
-En supposant que vous ayez une page HTML comme celle ci-dessous et que vous sachiez que seuls les éléments de conteneur `bar` et `bazz` seront personnalisés :
+En supposant que vous ayez une page de HTML comme celle ci-dessous et que vous sachiez que seulement `bar` et `bazz` les éléments de conteneur seront toujours personnalisés :
 
 ```html
 <html>
@@ -68,7 +68,7 @@ Il est recommandé de toujours charger le SDK de manière asynchrone afin d’ob
     var o=e.createElement("style");
     o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),
     setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
-    (document, document.location.href.indexOf("mboxEdit") !== -1, "body { opacity: 0 !important }", 3000);
+    (document, document.location.href.indexOf("adobe_authoring_enabled") !== -1, "body { opacity: 0 !important }", 3000);
 </script>
 ```
 
