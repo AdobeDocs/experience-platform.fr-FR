@@ -3,10 +3,10 @@ keywords: diffusion en continu;
 title: Connexion via l’API HTTP
 description: La destination d’API HTTP dans Adobe Experience Platform vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: f098df9df2baa971db44a6746949f021e212ae3e
+source-git-commit: bf36592fe4ea7b9d9b6703f3aca8fd8344fe5c9f
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 4%
+source-wordcount: '1274'
+ht-degree: 3%
 
 ---
 
@@ -87,21 +87,51 @@ Voir [Activation des données d’audience vers des destinations d’exportation
 
 Dans le [[!UICONTROL Sélectionner des attributs]](../../ui/activate-streaming-profile-destinations.md#select-attributes) , Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination.
 
+## Considérations sur les produits {#product-considerations}
+
+Experience Platform ne diffuse pas les données vers les points de terminaison HTTP par le biais d’un ensemble fixe d’adresses IP statiques. Par conséquent, Adobe ne peut pas fournir de liste d’adresses IP statiques que vous pouvez placer sur la liste autorisée pour la destination de l’API HTTP.
+
 ## Comportement d’exportation de profils {#profile-export-behavior}
 
 Experience Platform optimise le comportement d’exportation de profils vers votre destination d’API HTTP, afin de n’exporter les données vers votre point de terminaison d’API que lorsque des mises à jour appropriées d’un profil se sont produites à la suite de la qualification de segment ou d’autres événements significatifs. Les profils sont exportés vers votre destination dans les situations suivantes :
 
-* La mise à jour du profil a été déclenchée par un changement de l’adhésion au segment pour au moins un des segments mappés à la destination. Par exemple, le profil s’est qualifié pour l’un des segments mappés à la destination ou a quitté l’un des segments mappés à la destination.
-* La mise à jour du profil a été déclenchée par une modification de la variable [identity map](/help/xdm/field-groups/profile/identitymap.md). Par exemple, un profil qui s’était déjà qualifié pour l’un des segments mappés à la destination a été ajouté une nouvelle identité dans l’attribut identity map .
-* La mise à jour du profil a été déclenchée par une modification des attributs pour au moins un des attributs mappés à la destination. Par exemple, l’un des attributs mappés à la destination dans l’étape de mappage est ajouté à un profil.
+* La mise à jour du profil a été déterminée par un changement de l’adhésion au segment pour au moins un des segments mappés à la destination. Par exemple, le profil s’est qualifié pour l’un des segments mappés à la destination ou a quitté l’un des segments mappés à la destination.
+* La mise à jour du profil a été déterminée par une modification de la variable [identity map](/help/xdm/field-groups/profile/identitymap.md). Par exemple, un profil qui s’était déjà qualifié pour l’un des segments mappés à la destination a été ajouté une nouvelle identité dans l’attribut identity map .
+* La mise à jour du profil a été déterminée par une modification des attributs pour au moins un des attributs mappés à la destination. Par exemple, l’un des attributs mappés à la destination dans l’étape de mappage est ajouté à un profil.
 
 Dans tous les cas décrits ci-dessus, seuls les profils où des mises à jour pertinentes se sont produites sont exportés vers votre destination. Par exemple, si un segment mappé au flux de destination comporte cent membres et que cinq nouveaux profils sont qualifiés pour le segment, l’exportation vers votre destination est incrémentielle et inclut uniquement les cinq nouveaux profils.
 
 Notez que tous les attributs mappés sont exportés pour un profil, quel que soit l’emplacement des modifications. Ainsi, dans l’exemple ci-dessus, tous les attributs mappés pour ces cinq nouveaux profils seront exportés même si les attributs eux-mêmes n’ont pas changé.
 
+### Ce qui détermine une mise à jour et ce qui est inclus dans l’exportation {#what-determines-export-what-is-included}
+
+En ce qui concerne les données exportées pour un profil donné, il est important de comprendre les deux concepts différents de *ce qui détermine l’exportation des données vers votre destination d’API HTTP* et *les données incluses dans l’exportation ;*.
+
+| Ce qui détermine une exportation de destination | Éléments inclus dans l’exportation de destination |
+|---------|----------|
+| <ul><li>Les attributs et segments mappés servent de repère pour une mise à jour de destination. Cela signifie que si un segment mappé change d’état (de null à Reçue ou de get/existing à Extioning) ou que tout attribut mappé est mis à jour, une exportation de destination est déclenchée.</li><li>Comme les identités ne peuvent actuellement pas être mappées aux destinations d’API HTTP, les modifications d’identité sur un profil donné déterminent également les exportations de destination.</li><li>Une modification pour un attribut est définie comme toute mise à jour de l’attribut, qu’il s’agisse ou non de la même valeur. Cela signifie qu’un remplacement sur un attribut est considéré comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>Tous les segments (avec le dernier état d’adhésion), qu’ils soient mappés ou non dans le flux de données, sont inclus dans la variable `segmentMembership` .</li><li>Toutes les identités dans la variable `identityMap` sont également inclus (Experience Platform ne prend actuellement pas en charge le mappage d’identité dans la destination de l’API HTTP).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
+
+{style=&quot;table-layout:fixed&quot;}
+
+Prenons l’exemple de ce flux de données vers une destination HTTP où trois segments sont sélectionnés dans le flux de données et où quatre attributs sont mappés à la destination.
+
+![Flux de données de destination d’API HTTP](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+
+<!--
+
+![HTTP API destination dataflow](/help/destinations/assets/catalog/http/dataflow-destination.png)
+
+![Mapped attributes](/help/destinations/assets/catalog/http/mapped-attributes.png)
+
+-->
+
+Un export de profil vers la destination peut être déterminé par un profil éligible ou sortant de l’un des *trois segments mappés*. Toutefois, dans l’exportation des données, dans la variable `segmentMembership` (voir [Données exportées](#exported-data) ci-dessous), d’autres segments non mappés peuvent apparaître si ce profil particulier en fait partie. Si un profil est admissible pour le segment Client avec des voitures de Lorée, mais qu’il est également membre des segments de fans de films et de science-fiction &quot;Retour vers le futur&quot; de la visionneuse, ces deux autres segments seront également présents dans la variable `segmentMembership` de l’exportation des données, même si elles ne sont pas mappées dans le flux de données.
+
+Du point de vue des attributs de profil, toute modification apportée aux quatre attributs mappés ci-dessus déterminera une exportation de destination et l’un des quatre attributs mappés présents sur le profil sera présent dans l’exportation des données.
+
 ## Données exportées {#exported-data}
 
-Votre exportation [!DNL Experience Platform] Les données arrivent dans votre [!DNL HTTP] destination au format JSON. Par exemple, l’export ci-dessous contient un profil qui s’est qualifié pour un certain segment et qui a quitté un autre segment. Il comprend le prénom, le nom, la date de naissance et l’adresse email personnelle de l’attribut de profil. Les identités de ce profil sont ECID et email.
+Votre exportation [!DNL Experience Platform] Les données arrivent dans votre [!DNL HTTP] destination au format JSON. Par exemple, l’exportation ci-dessous contient un profil qui s’est qualifié pour un certain segment, qui est membre de deux autres segments et qui a quitté un autre segment. L’exportation inclut également le prénom, le nom, la date de naissance et l’adresse email personnelle de l’attribut de profil. Les identités de ce profil sont ECID et email.
 
 ```json
 {
@@ -116,17 +146,25 @@ Votre exportation [!DNL Experience Platform] Les données arrivent dans votre [!
     "address": "john.doe@acme.com"
   },
   "segmentMembership": {
-    "ups": {
-      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
-        "lastQualificationTime": "2020-05-25T21:24:39Z",
-        "status": "exited"
+   "ups":{
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93":{
+         "lastQualificationTime":"2022-01-11T21:24:39Z",
+         "status":"exited"
       },
-      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
-        "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae":{
+         "lastQualificationTime":"2022-01-02T23:37:33Z",
+         "status":"existing"
+      },
+      "947c1c46-008d-40b0-92ec-3af86eaf41c1":{
+         "lastQualificationTime":"2021-08-25T23:37:33Z",
+         "status":"existing"
+      },
+      "5114d758-ce71-43ba-b53e-e2a91d67b67f":{
+         "lastQualificationTime":"2022-01-11T23:37:33Z",
+         "status":"realized"
       }
-    }
-  },
+   }
+},
   "identityMap": {
     "ecid": [
       {
