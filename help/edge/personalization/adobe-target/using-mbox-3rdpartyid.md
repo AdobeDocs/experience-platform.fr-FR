@@ -2,8 +2,7 @@
 title: Synchronisation des profils en temps réel pour mbox3rdPartyId
 description: Découvrez comment utiliser mbox3rdPartyId avec le SDK Web de Adobe Experience Platform.
 keywords: personnalisation;target;adobe target;renderDecisions;sendEvent;mbox3rdPartyId;
-exl-id: null
-source-git-commit: b02a7a95be33b28ab79afc7418bb3a644c417fc9
+source-git-commit: 86acedc6813a14648848a25e08aa7e65f48d1a2a
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 9%
