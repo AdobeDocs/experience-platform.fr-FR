@@ -2,7 +2,7 @@
 title: Exemples de requêtes de chargement incrémentiel
 description: La fonction de chargement incrémentiel utilise des fonctions de blocage et d’instantané anonymes afin de fournir une solution en temps quasi réel pour déplacer les données du lac de données vers votre entrepôt de données, tout en ignorant les données correspondantes.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 943886078fe31a12542c297133ac6a0a0d551e08
+source-git-commit: e5a79db157524d014c9a07d2bf5907a5544e7b77
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 2%
@@ -65,7 +65,7 @@ INSERT INTO
 >Le `history_meta('source table name')` est une méthode pratique utilisée pour accéder à l’instantané disponible dans un jeu de données.
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -86,7 +86,8 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END 
+$$;
 ```
 
 4 Utilisez la logique de chargement des données incrémentielles dans l’exemple de bloc anonyme ci-dessous pour permettre le traitement et l’ajout régulier de toutes les nouvelles données du jeu de données source (depuis l’horodatage le plus récent) à la table de destination. Dans l’exemple, les données sont modifiées en `DIM_TABLE_ABC` sera traité et ajouté à `DIM_TABLE_ABC_incremental`.
@@ -96,7 +97,7 @@ EXCEPTION
 > `_ID` est la clé Principal dans les deux `DIM_TABLE_ABC_Incremental` et `SELECT history_meta('DIM_TABLE_ABC')`.
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -117,7 +118,8 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END
+$$;
 ```
 
 Cette logique peut être appliquée à n’importe quel tableau pour effectuer des chargements incrémentiels.
@@ -137,7 +139,7 @@ SET resolve_fallback_snapshot_on_failure=true;
 L’ensemble du bloc de code se présente comme suit :
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET resolve_fallback_snapshot_on_failure=true;
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -158,7 +160,8 @@ Insert Into
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END
+$$;
 ```
 
 ## Étapes suivantes
