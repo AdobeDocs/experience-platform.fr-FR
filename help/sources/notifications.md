@@ -5,18 +5,18 @@ solution: Experience Platform
 title: Notifications d’exécution de flux
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '786'
 ht-degree: 7%
 
 ---
 
 # Notifications d’exécution de flux
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
-[[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/) APIest utilisé pour collecter et centraliser les données client à partir de diverses sources disparates dans  [!DNL Platform]. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) est utilisé pour collecter et centraliser des données client à partir de diverses sources disparates dans [!DNL Platform]. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
 
 Avec les événements d’Adobe I/O, vous pouvez vous abonner aux événements et utiliser des webhooks pour recevoir des notifications concernant l’état de vos exécutions de flux. Ces notifications contiennent des informations sur le succès de votre exécution de flux ou les erreurs qui ont contribué à l’échec d’une exécution.
 
@@ -24,19 +24,19 @@ Ce document décrit les étapes à suivre pour s’abonner à des événements, 
 
 ## Prise en main
 
-Ce tutoriel suppose que vous avez déjà créé au moins une connexion source dont vous souhaitez surveiller le flux. Si vous n’avez pas encore configuré de connexion source, commencez par consulter la [présentation des sources](./home.md) pour configurer la source de votre choix avant de revenir à ce guide.
+Ce tutoriel suppose que vous avez déjà créé au moins une connexion source dont vous souhaitez surveiller le flux. Si vous n’avez pas encore configuré de connexion source, commencez par consulter le [présentation des sources](./home.md) pour configurer la source de votre choix avant de revenir à ce guide.
 
 Ce document nécessite également une compréhension pratique des webhooks et de la manière dont connecter un webhook d’une application à une autre. Pour en savoir plus sur les Webhooks, consultez la [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md).
 
 ## Enregistrement d’un webhook pour les notifications d’exécution de flux
 
-Pour recevoir des notifications d’exécution de flux, vous devez utiliser Adobe Developer Console pour enregistrer un webhook dans votre intégration [!DNL Experience Platform].
+Pour recevoir des notifications d’exécution de flux, vous devez utiliser Adobe Developer Console pour enregistrer un webhook dans votre [!DNL Experience Platform] intégration.
 
-Suivez le tutoriel sur [l’abonnement à [!DNL I/O Event] notifications](../observability/alerts/subscribe.md) pour obtenir des instructions détaillées sur la manière d’y parvenir.
+Suivez le tutoriel sur [abonnement aux notifications [!DNL I/O Event]](../observability/alerts/subscribe.md) pour obtenir des instructions détaillées sur la manière d’y parvenir.
 
 >[!IMPORTANT]
 >
->Pendant le processus d’abonnement, veillez à sélectionner **[!UICONTROL Notifications de plateforme]** comme fournisseur d’événement, puis sélectionnez les abonnements d’événement suivants :
+>Pendant le processus d’abonnement, veillez à sélectionner **[!UICONTROL Notifications Platform]** en tant que fournisseur d’événements, et sélectionnez les abonnements aux événements suivants :
 >
 >* **[!UICONTROL Succès de l’exécution du flux de la source Experience Platform]**
 >* **[!UICONTROL Échec de l’exécution du flux de la source Experience Platform]**
@@ -46,15 +46,15 @@ Suivez le tutoriel sur [l’abonnement à [!DNL I/O Event] notifications](../obs
 
 Une fois votre webhook connecté et votre abonnement à l’événement terminé, vous pouvez commencer à recevoir des notifications d’exécution de flux via le tableau de bord webhook.
 
-Une notification renvoie des informations telles que le nombre de tâches d’ingestion exécutées, la taille du fichier et les erreurs. Une notification renvoie également un payload associé à votre exécution de flux au format JSON. La charge utile de réponse peut être classée comme `sources_flow_run_success` ou `sources_flow_run_failure`.
+Une notification renvoie des informations telles que le nombre de tâches d’ingestion exécutées, la taille du fichier et les erreurs. Une notification renvoie également un payload associé à votre exécution de flux au format JSON. La payload de réponse peut être classée comme `sources_flow_run_success` ou `sources_flow_run_failure`.
 
 >[!IMPORTANT]
 >
->Si l’ingestion partielle est activée pendant le processus de création de flux, un flux qui contient à la fois des ingestion réussies et en échec ne sera marqué comme `sources_flow_run_success` que si le nombre d’erreurs est inférieur au pourcentage de seuil d’erreur défini pendant le processus de création de flux. Si une exécution de flux réussie contient des erreurs, ces erreurs seront toujours incluses dans la payload de retour.
+>Si l’ingestion partielle est activée pendant le processus de création de flux, un flux qui contient à la fois des ingérations réussies et en échec est marqué comme `sources_flow_run_success` uniquement si le nombre d’erreurs est inférieur au pourcentage du seuil d’erreur défini lors du processus de création de flux. Si une exécution de flux réussie contient des erreurs, ces erreurs seront toujours incluses dans la payload de retour.
 
 ### Réussite
 
-Une réponse réussie renvoie un ensemble de `metrics` qui définissent les caractéristiques d’une exécution de flux spécifique et `activities` qui décrivent la manière dont les données sont transformées.
+Une réponse réussie renvoie un ensemble de `metrics` qui définissent les caractéristiques d’une exécution de flux spécifique et `activities` qui indiquent comment les données sont transformées.
 
 ```json
 {
@@ -147,7 +147,7 @@ Une réponse réussie renvoie un ensemble de `metrics` qui définissent les cara
           "outputFileCount": 10,
           "extensions": {
             "manifest": {
-              "fileInfo": "https://platform-int.adobe.io/data/foundation/export/batches/01E4TSJNM2H5M74J0XB8MFWDHK/meta?path=input_files"
+              "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01E4TSJNM2H5M74J0XB8MFWDHK/meta?path=input_files"
             }
           }
         },
@@ -313,11 +313,11 @@ La réponse suivante est un exemple d’exécution d’un flux ayant échoué, a
 
 >[!NOTE]
 >
->Pour plus d’informations sur les messages d’erreur, consultez l’ [annexe](#errors) .
+>Voir [annexe](#errors) pour plus d’informations sur les messages d’erreur.
 
 ## Étapes suivantes
 
-Vous pouvez désormais vous abonner à des événements qui vous permettent de recevoir des notifications en temps réel sur vos états d’exécution de flux. Pour plus d’informations sur les exécutions de flux et les sources, consultez la [présentation des sources](./home.md).
+Vous pouvez désormais vous abonner à des événements qui vous permettent de recevoir des notifications en temps réel sur vos états d’exécution de flux. Pour plus d’informations sur les exécutions de flux et les sources, voir [présentation des sources](./home.md).
 
 ## Annexe
 
