@@ -2,10 +2,10 @@
 title: Configuration de secrets dans le transfert d’événements
 description: Découvrez comment configurer des secrets dans lʼinterface utilisateur de la collecte de données afin de vous authentifier aux points dʼentrée utilisés dans les propriétés de transfert dʼévénement.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
-workflow-type: ht
-source-wordcount: '1449'
-ht-degree: 100%
+source-git-commit: 737354ca3b286f6c39cb71bc09aa4d6141c4d9a4
+workflow-type: tm+mt
+source-wordcount: '1447'
+ht-degree: 98%
 
 ---
 
@@ -130,7 +130,7 @@ Vous pouvez réessayer ou actualiser un échange secret depuis l’écran d’é
 | Type de secret | Protocole de nouvel essai |
 | --- | --- |
 | [!UICONTROL Jeton] | Sélectionnez **[!UICONTROL Échange secret]** pour réessayer l’échange secret. Cette commande n’est disponible que lorsqu’un environnement est attaché au secret. |
-| [!UICONTROL HTTP] | Si aucun environnement n’est associé au secret, sélectionnez **[!UICONTROL Échange secret]** afin d’échanger les informations d’identification vers base64. Si un environnement est joint, sélectionnez **[!UICONTROL Échange et déploiement du secret]** pour passer à base64 et déployer le secret vers Cloudfare. |
+| [!UICONTROL HTTP] | Si aucun environnement n’est associé au secret, sélectionnez **[!UICONTROL Échange secret]** afin d’échanger les informations d’identification vers base64. Si un environnement est joint, sélectionnez Sélectionner . **[!UICONTROL Secret Exchange et déploiement]** pour échanger vers base64 et déployer le secret. |
 | [!UICONTROL OAuth2] | Sélectionnez **[!UICONTROL Générer un jeton]** pour échanger les informations d’identification et renvoyer un jeton d’accès du fournisseur d’authentification. |
 
 ## Supprimer un secret
