@@ -5,10 +5,10 @@ title: 'Évaluation des événements en temps quasi réel avec la segmentation p
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation par flux avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 4b9c72b4acb9c419afc1725235a9d7865181736b
 workflow-type: tm+mt
-source-wordcount: '1831'
-ht-degree: 35%
+source-wordcount: '1834'
+ht-degree: 34%
 
 ---
 
@@ -338,7 +338,7 @@ curl -X POST \
 | `type` | **(Obligatoire)** Le type de tâche au format chaîne. Les types `batch_segmentation` et `export` sont pris en charge. |
 | `properties` | **(Obligatoire)** Un objet contenant des propriétés supplémentaires liées au planning. |
 | `properties.segments` | **(Obligatoire lorsque `type` est égal à `batch_segmentation`)** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
-| `schedule` | **(Obligatoire)** Une chaîne contenant le planning de la tâche. Vous ne pouvez planifier qu’une seule exécution de tâche par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution d’une tâche plus d’une fois au cours d’une période de 24 heures. L’exemple illustré (`0 0 1 * * ?`) signifie que la tâche est déclenchée tous les jours à 1:00:00 UTC. Pour plus d’informations, consultez la documentation sur le [format d’expression cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). |
+| `schedule` | **(Obligatoire)** Une chaîne contenant le planning de la tâche. Vous ne pouvez planifier qu’une seule exécution de tâche par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution d’une tâche plus d’une fois au cours d’une période de 24 heures. L’exemple illustré (`0 0 1 * * ?`) signifie que la tâche est déclenchée tous les jours à 1:00:00 UTC. Pour plus d’informations, veuillez consulter l’ annexe de la section [format d’expression cron](./schedules.md#appendix) dans la documentation sur les plannings dans la segmentation. |
 | `state` | *(Facultatif)* Chaîne contenant l’état du planning. Valeurs disponibles : `active` et `inactive`. La valeur par défaut est `inactive`. Une organisation IMS ne peut créer qu’un seul planning. Les étapes de mise à jour du planning sont disponibles plus loin dans ce tutoriel. |
 
 **Réponse**

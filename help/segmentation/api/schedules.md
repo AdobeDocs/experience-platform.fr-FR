@@ -5,10 +5,10 @@ title: Point de terminaison de l’API Schedules
 topic-legacy: developer guide
 description: Les planifications sont un outil qui peut être utilisé pour exécuter automatiquement des tâches de segmentation par lots une fois par jour.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: a4f5602365d5db28ba375db0794b80670229fa75
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 46%
+source-wordcount: '2013'
+ht-degree: 24%
 
 ---
 
@@ -100,7 +100,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pou
 | `children.type` | Type de tâche sous forme de chaîne. Les deux types pris en charge sont &quot;batch_segmentation&quot; et &quot;export&quot;. |
 | `children.properties` | Objet contenant des propriétés supplémentaires liées au planning. |
 | `children.properties.segments` | L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
-| `children.schedule` | Chaîne contenant le planning de la tâche. L’exécution des tâches ne peut être planifiée qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution de plusieurs tâches sur une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire la documentation sur le [format d’expression cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Dans cet exemple, « 0 0 1 * * » signifie que ce planning sera exécuté à minuit le premier de chaque mois. |
+| `children.schedule` | Chaîne contenant le planning de la tâche. L’exécution des tâches ne peut être planifiée qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution de plusieurs tâches sur une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur la page [format d’expression cron](#appendix). Dans cet exemple, &quot;0 0 1 * *&quot; signifie que cette planification s’exécutera à 1h00 tous les jours. |
 | `children.state` | Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;principal&quot; et &quot;inactif&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
 
 ## Création d’un nouveau planning {#create}
@@ -142,7 +142,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **Obligatoire.** Type de tâche sous forme de chaîne. Les deux types pris en charge sont &quot;batch_segmentation&quot; et &quot;export&quot;. |
 | `properties` | **Obligatoire.** Objet contenant des propriétés supplémentaires liées au planning. |
 | `properties.segments` | **Obligatoire lorsque `type` est égal à &quot;batch_segmentation&quot;.** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
-| `schedule` | *Facultatif.* Chaîne contenant le planning de la tâche. L’exécution des tâches ne peut être planifiée qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution de plusieurs tâches sur une période de 24 heures. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Dans cet exemple, « 0 0 1 * * » signifie que ce planning sera exécuté à minuit le premier de chaque mois. <br><br>Si cette chaîne n’est pas fournie, un planning généré automatiquement. |
+| `schedule` | *Facultatif.* Chaîne contenant le planning de la tâche. L’exécution des tâches ne peut être planifiée qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution de plusieurs tâches sur une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur la page [format d’expression cron](#appendix). Dans cet exemple, &quot;0 0 1 * *&quot; signifie que cette planification s’exécutera à 1h00 tous les jours. <br><br>Si cette chaîne n’est pas fournie, un planning généré automatiquement. |
 | `state` | *Facultatif.* Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;principal&quot; et &quot;inactif&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
 
 **Réponse**
@@ -231,7 +231,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 | `type` | Type de tâche sous forme de chaîne. Les deux types pris en charge sont `batch_segmentation` et `export`. |
 | `properties` | Objet contenant des propriétés supplémentaires liées au planning. |
 | `properties.segments` | L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
-| `schedule` | Chaîne contenant le planning de la tâche. Vous ne pouvez planifier qu’une seule exécution de tâche par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution d’une tâche plus d’une fois au cours d’une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire la documentation sur le [format d’expression cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Dans cet exemple, « 0 0 1 * * » signifie que ce planning sera exécuté à minuit le premier de chaque mois. |
+| `schedule` | Chaîne contenant le planning de la tâche. Vous ne pouvez planifier qu’une seule exécution de tâche par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution d’une tâche plus d’une fois au cours d’une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur la page [format d’expression cron](#appendix). Dans cet exemple, &quot;0 0 1 * *&quot; signifie que cette planification s’exécutera à 1h00 tous les jours. |
 | `state` | Chaîne contenant l’état du planning. Les deux états pris en charge sont `active` et `inactive`. Par défaut, l’état est défini sur `inactive`. |
 
 ## Mise à jour des détails d’un planning spécifique {#update}
@@ -275,7 +275,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
 | Propriété | Description |
 | -------- | ----------- |
 | `path` | Chemin d’accès de la valeur que vous souhaitez mettre à jour. Dans ce cas, puisque vous mettez à jour l’état du planning, vous devez définir la valeur de `path` à &quot;/state&quot;. |
-| `value` | Valeur mise à jour de l’état du planning. Cette valeur peut être définie sur &quot;principal&quot; ou &quot;inactif&quot; pour activer ou désactiver le planning. |
+| `value` | Valeur mise à jour de l’état du planning. Cette valeur peut être définie sur &quot;principal&quot; ou &quot;inactif&quot; pour activer ou désactiver le planning. Veuillez noter que vous **cannot** désactivez une planification si l’organisation IMS a été activée pour la diffusion en continu. |
 
 **Réponse**
 
@@ -283,7 +283,7 @@ Une réponse réussie renvoie un état HTTP 204 (No Content).
 
 ### Mise à jour du planning cron {#update-schedule}
 
-Vous pouvez utiliser une opération de correctif JSON pour mettre à jour le planning cron. Pour mettre à jour le planning, vous devez déclarer la variable `path` property as `/schedule` et définissez la variable `value` à un planning cron valide. Pour plus d’informations sur le correctif JSON, veuillez lire la section [Correctif JSON](https://datatracker.ietf.org/doc/html/rfc6902) documentation. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
+Vous pouvez utiliser une opération de correctif JSON pour mettre à jour le planning cron. Pour mettre à jour le planning, vous devez déclarer la variable `path` property as `/schedule` et définissez la variable `value` à un planning cron valide. Pour plus d’informations sur le correctif JSON, veuillez lire la section [Correctif JSON](https://datatracker.ietf.org/doc/html/rfc6902) documentation. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur la page [format d’expression cron](#appendix).
 
 **Format d’API**
 
@@ -353,3 +353,57 @@ Une réponse réussie renvoie un état HTTP 204 (No Content).
 ## Étapes suivantes
 
 Après avoir lu ce guide, vous comprenez mieux le fonctionnement des plannings.
+
+## Annexe {#appendix}
+
+L’annexe suivante explique le format des expressions cron utilisées dans les plannings.
+
+### Format
+
+Une expression cron est une chaîne composée de 6 ou 7 champs. L’expression ressemble à ce qui suit :
+
+`0 0 12 * * ?`
+
+Dans une chaîne d’expression cron, le premier champ représente les secondes, le second les minutes, le troisième les heures, le quatrième le jour du mois, le cinquième le mois et le sixième le jour de la semaine. Vous pouvez également inclure un septième champ, qui représente l’année.
+
+| Nom du champ | Obligatoire | Valeurs possibles | Caractères spéciaux autorisés |
+| ---------- | -------- | --------------- | -------------------------- |
+| Seconds | Oui | 0 à 59 | `, - * /` |
+| Minutes | Oui | 0 à 59 | `, - * /` |
+| Heures | Oui | 0-23 | `, - * /` |
+| Jour du mois | Oui | 1-31 | `, - * ? / L W` |
+| Mois | Oui | 1-12, JAN-DEC | `, - * /` |
+| Jour de la semaine | Oui | 1-7, SUN-SAT | `, - * ? / L #` |
+| Année | Non | Vide, 1970-2099 | `, - * /` |
+
+>[!NOTE]
+>
+>Les noms des mois et des jours de la semaine sont **not** sensible à la casse. Par conséquent, `SUN` équivaut à utiliser `sun`.
+
+Les caractères spéciaux autorisés représentent les significations suivantes :
+
+| Caractère spécial | Description |
+| ----------------- | ----------- |
+| `*` | Cette valeur est utilisée pour sélectionner **all** dans un champ. Par exemple, la méthode `*` dans le champ heures signifierait **each** heure. |
+| `?` | Cette valeur signifie qu’aucune valeur spécifique n’est requise. Cette option est généralement utilisée pour spécifier quelque chose dans un champ où le caractère est autorisé, mais pas dans l’autre champ. Par exemple, si vous souhaitez qu’un événement se déclenche tous les 3 du mois, mais que vous ne vous souciez pas du jour de la semaine, vous pouvez définir `3` dans le champ jour du mois et `?` dans le champ jour de la semaine. |
+| `-` | Cette valeur est utilisée pour spécifier **inclusif** plages pour le champ . Par exemple, si vous placez `9-15` dans le champ heures , cela signifie que les heures comprennent 9, 10, 11, 12, 13, 14 et 15. |
+| `,` | Cette valeur est utilisée pour spécifier des valeurs supplémentaires. Par exemple, si vous placez `MON, FRI, SAT` dans le champ jour de la semaine , cela signifie que les jours de la semaine comprennent le lundi, le vendredi et le samedi. |
+| `/` | Cette valeur est utilisée pour spécifier des incréments. La valeur placée avant la variable `/` détermine d’où il est incrémenté, tandis que la valeur placée après la propriété `/` détermine la valeur de son incrément. Par exemple, si vous placez `1/7` dans le champ minutes , cela signifie que les minutes comprennent 1, 8, 15, 22, 29, 36, 43, 50 et 57. |
+| `L` | Cette valeur est utilisée pour spécifier `Last`, et a une signification différente selon le champ dans lequel elle est utilisée. S’il est utilisé avec le champ jour du mois, il représente le dernier jour du mois. S’il est utilisé seul avec le champ Jour de la semaine, il représente le dernier jour de la semaine, qui est samedi (`SAT`). S’il est utilisé avec le champ Jour de la semaine, conjointement avec une autre valeur, il représente le dernier jour de ce type pour le mois. Par exemple, si vous placez `5L` dans le champ jour de la semaine, il **only** inclut le dernier vendredi du mois. |
+| `W` | Cette valeur est utilisée pour spécifier le jour de la semaine le plus proche du jour donné. Par exemple, si vous placez `18W` dans le champ jour du mois, et le 18 de ce mois était un samedi, il se déclenchait le vendredi 17, qui est le jour de semaine le plus proche. Si le 18 de ce mois était un dimanche, il se déclencherait le lundi 19, qui est le jour de semaine le plus proche. Veuillez noter que si vous placez `1W` dans le champ jour du mois , et que le jour de semaine le plus proche se situe dans le mois précédent, l’événement se déclenche toujours le jour de semaine le plus proche de la variable **current** le mois.</br></br>De plus, vous pouvez combiner des `L` et `W` pour créer `LW`, qui spécifie le dernier jour de semaine du mois. |
+| `#` | Cette valeur est utilisée pour spécifier le énième jour de la semaine d’un mois. La valeur placée avant la variable `#` représente le jour de la semaine, tandis que la valeur placée après la variable `#` représente l’occurrence du mois. Par exemple, si vous placez `1#3`, l’événement se déclenche le troisième dimanche du mois. Veuillez noter que si vous placez `X#5` et il n’y a pas de cinquième occurrence de ce jour de la semaine ce mois-ci, l’événement **not** être déclenchée. Par exemple, si vous placez `1#5`, et il n’y a pas de cinquième dimanche dans ce mois-ci, l’événement aura lieu le 24 novembre 2010. **not** être déclenchée. |
+
+### Exemples
+
+Le tableau suivant présente des exemples de chaînes d’expression cron et explique leur signification.
+
+| Expression | Explication |
+| ---------- | ----------- |
+| `0 0 13 * * ?` | L&#39;événement se déclenchera tous les jours à 13h00. |
+| `0 30 9 * * ? 2022` | L&#39;événement se déclenchera tous les jours à 9h30 en 2022. |
+| `0 * 18 * * ?` | L&#39;événement se déclenche toutes les minutes, de 18h à 18h59, tous les jours. |
+| `0 0/10 17 * * ?` | L&#39;événement se déclenche toutes les 10 minutes, de 17h à 18h, chaque jour. |
+| `0 13,38 5 ? 6 WED` | L&#39;événement se déclenchera à 5h13 et 5h38 tous les mercredis du mois de juin. |
+| `0 30 12 ? * 4#3` | L&#39;événement se déclenchera à 12h30 le troisième mercredi tous les mois. |
+| `0 30 12 ? * 6L` | L’événement se déclenchera à 12h30 le dernier vendredi de chaque mois. |
+| `0 45 11 ? * MON-THU` | L’événement se déclenchera à 11h45 tous les lundis, mardis, mercredis et jeudis. |
