@@ -3,7 +3,7 @@ keywords: destination de stockage dans le cloud;espace de stockage dans le cloud
 title: Présentation des destinations de stockage dans le cloud
 description: Adobe Experience Platform peut diffuser vos segments sous forme de fichiers de données vers vos emplacements de stockage dans le cloud Amazon S3, AWS Kinesis, Azure Event Hubs ou SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: 818c9a6f5cd39db1405827b657872b99254ad1e5
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 2%
@@ -33,7 +33,7 @@ Adobe Experience Platform prend en charge les destinations de stockage dans le c
 Pour envoyer des segments aux destinations de stockage dans le cloud pour vos campagnes, Platform doit d’abord se connecter à la destination. Voir [tutoriel sur la création de destination](../../ui/connect-destination.md) pour plus d’informations sur la configuration d’une nouvelle destination.
 
 
-## Utilisation de macros pour créer un dossier à l’emplacement de stockage {#use-macros}
+## Utilisez les macros pour créer un dossier à l’emplacement de stockage {#use-macros}
 
 >[!NOTE]
 >
