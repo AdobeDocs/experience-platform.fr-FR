@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Snowflake à l’aide de l’API Flow Service.
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 0928da0ad15ce23d3677fec7b9866d079f3db407
+source-git-commit: ac7910c971fbedf3afebd87633f814d597260cae
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 10%
@@ -46,7 +46,7 @@ Pour [!DNL Flow Service] pour vous connecter à [!DNL Snowflake], vous devez fou
 | `connectionString` | Chaîne de connexion utilisée pour se connecter à votre [!DNL Snowflake] instance. Le modèle de chaîne de connexion pour [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions base et source. L’identifiant de spécification de connexion pour [!DNL Snowflake] is `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à cette section [[!DNL Snowflake] document](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
+Pour plus d’informations sur la prise en main, reportez-vous à cette section [[!DNL Snowflake] document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 ## Création d’une connexion de base
 
