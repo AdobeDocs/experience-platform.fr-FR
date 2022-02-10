@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;Noter un modèle;Data Science Workspace;rubriques les plus consultées;API d’apprentissage automatique sensei
 solution: Experience Platform
-title: Notation d’un modèle à l’aide de l’API Sensei Machine Learning
+title: Notation d’un modèle à l’aide de l’API d’apprentissage automatique de Sensei
 topic-legacy: tutorial
 type: Tutorial
-description: Ce tutoriel vous explique comment tirer parti des API Sensei Machine Learning pour créer une expérience et une exécution d’expérience.
+description: Ce tutoriel vous explique comment tirer parti des API d’apprentissage automatique de Sensei pour créer une expérience et une exécution d’expérience.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6ae6bbb5af0f007e483145dca5d4d505c388cc2c
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 91%
+source-wordcount: '554'
+ht-degree: 87%
 
 ---
 
 # Notation d’un modèle à l’aide de [!DNL Sensei Machine Learning API]
 
-Ce tutoriel explique comment utiliser les API pour créer une expérience et une exécution d’expérience. Pour une liste détaillée de la documentation sur les API, voir [ce document](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
+Ce tutoriel explique comment utiliser les API pour créer une expérience et une exécution d’expérience. Pour obtenir la liste de tous les points de terminaison de l’API Sensei Machine Learning, reportez-vous à la section [ce document](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Création d’une expérience planifiée pour la notation
 
@@ -35,9 +35,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
 `{JSON_PAYLOAD}` : objet d’exécution d’expérience à envoyer. Voici l’exemple utilisé dans notre tutoriel :
 
 ```JSON
@@ -123,9 +123,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
 `{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience que vous souhaitez cibler. Vous pouvez le trouver dans la réponse lors de la création de votre expérience.\
 `{JSON_PAYLOAD}` : données à publier. Voici l’exemple utilisé dans notre tutoriel :
 
@@ -188,7 +188,7 @@ curl -X GET \
 
 `{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience sous laquelle se trouve l’exécution.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
 
 Puisqu’il existe plusieurs exécutions d’expérience pour une expérience spécifique, la réponse renvoyée comporte un tableau d’identifiant d’exécution.
 
@@ -231,7 +231,7 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
 
 >[!NOTE]
 >
