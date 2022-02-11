@@ -3,9 +3,9 @@ title: Règles
 description: Découvrez le fonctionnement des extensions de balises dans Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
 source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1973'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Dans Adobe Experience Platform, les balises obéissent à un système basé su
 
 Créez des règles pour intégrer les données et les fonctionnalités du marketing, ainsi qu’une technologie d’annonces qui rassemble les produits disparates en une seule solution.
 
-## Structure des règles
+## Structure de règle
 
 **Événements (If) :** l’événement est l’élément que la règle doit rechercher. Il est défini en sélectionnant un événement, toutes les conditions applicables et toutes les exceptions.
 
@@ -121,18 +121,18 @@ Lors de la création ou de la modification de règles, vous pouvez enregistrer e
 
 ## Ordre des règles {#rule-ordering}
 
-L’ordre des règles vous permet de contrôler l’ordre d’exécution des règles qui partagent un événement. Chaque règle contient un entier qui détermine sa priorité de commande (la valeur par défaut est 50). Les règles qui contiennent des valeurs inférieures pour leur ordre sont exécutées avant celles qui comportent des valeurs supérieures.
+L’ordre des règles vous permet de contrôler l’ordre d’exécution des règles qui partagent un événement. Chaque règle contient un nombre entier qui détermine son ordre de priorité (la valeur par défaut est de 50). Les règles qui contiennent des valeurs inférieures pour leur ordre sont exécutées avant celles qui ont des valeurs supérieures.
 
-Tenez compte d’un ensemble de cinq règles qui partagent toutes un événement et ont toutes une priorité par défaut :
+Considérons un ensemble de cinq règles qui partagent toutes un événement et ont toutes une priorité par défaut :
 
-* Si vous souhaitez exécuter une règle en dernier, vous pouvez modifier ce composant de règle et lui attribuer un nombre supérieur à 50 (60 par exemple).
-* Si vous souhaitez exécuter une règle en premier, vous pouvez modifier ce composant de règle et lui attribuer un nombre inférieur à 50 (40 par exemple).
+* Si vous souhaitez quʼune règle soit exécutée en dernier, vous pouvez modifier le composant de cette règle et lui attribuer un nombre supérieur à 50 (60 par exemple).
+* Si vous souhaitez quʼune règle soit exécutée en premier, vous pouvez modifier le composant de cette règle et lui attribuer un nombre inférieur à 50 (40 par exemple).
 
 >[!NOTE]
 >
->En fin de compte, la responsabilité d’exécuter les actions dans l’ordre incombe au développeur d’extensions du type d’événement que vous utilisez. Les développeurs d’extensions Adobe s’assurent que leurs extensions fonctionnent comme prévu. Adobe fournit des conseils aux développeurs d’extensions tiers pour le faire correctement, mais ne peut pas garantir la manière dont ces instructions sont suivies.
+>En fin de compte, la responsabilité d’exécuter les actions dans l’ordre repose sur le développeur d’extensions du type d’événement que vous utilisez. Les développeurs d’extensions Adobe s’assurent que leurs extensions fonctionnent comme prévu. Adobe fournit des conseils aux développeurs dʼextensions tiers pour quʼils procèdent correctement, mais ne peut garantir le respect de ces directives.
 
-Il est vivement recommandé d’ordonner vos règles avec des nombres positifs compris entre 1 et 100 (la valeur par défaut étant 50). Comme l’ordre des règles doit être conservé manuellement, il est recommandé de garder votre modèle d’ordre aussi simple que possible. Si cette restriction est trop restrictive pour certains cas de périphérie, les balises prennent en charge les numéros d’ordre de règle compris entre +/- 2 147 483 648.
+Il est fortement recommandé d’ordonner vos règles avec des nombres positifs compris entre 1 et 100 (la valeur par défaut est de 50). Étant donné que lʼordre des règles doit être géré manuellement, une bonne pratique consiste à le garder aussi simple que possible. Sʼil existe des cas limites où cette contrainte est trop restrictive, les balises prennent en charge les numéros dʼordre des règles entre +/- 2 147 483 648.
 
 ### Gestion des règles côté client
 
@@ -163,17 +163,17 @@ Adobe ne peut garantir qu’aucune autre règle sera réellement déclenchée et
 
 ## Séquencement des composants de règle {#sequencing}
 
-Le comportement de lʼenvironnement dʼexécution dépend de si **[!UICONTROL Exécuter les composants de règle en séquence]** est activé ou non pour votre propriété. Ce paramètre détermine si les composants d’une règle peuvent être évalués en parallèle (de manière asynchrone) ou s’ils doivent l’être en séquence.
+Le comportement de lʼenvironnement dʼexécution dépend de si **[!UICONTROL Exécuter les composants de règle en séquence]** est activé ou non pour votre propriété. Ce paramètre détermine si les composants d’une règle peuvent être évalués en parallèle (de manière asynchrone) ou s’ils doivent l’être en séquence.
 
 >[!IMPORTANT]
 >
->Ce paramètre détermine uniquement la manière dont les conditions et actions sont évaluées dans chaque règle. Il n’affecte pas l’ordre d’exécution des règles elles-mêmes sur votre propriété. Reportez-vous à la section précédente sur la [ordre des règles](#rule-ordering) pour plus d’informations sur la manière de déterminer l’ordre d’exécution de plusieurs règles.
+>Ce paramètre détermine uniquement la manière dont les conditions et actions sont évaluées dans chaque règle. Il n’affecte pas la séquence dans laquelle les règles elles-mêmes sont exécutées sur votre propriété. Pour plus d’informations sur la manière de déterminer l’ordre d’exécution de plusieurs règles, reportez-vous à la section précédente sur lʼ[ordre des règles](#rule-ordering).
 >
->Dans [transfert d’événement](../event-forwarding/overview.md) propriétés, les actions de règle sont toujours exécutées de manière séquentielle et ce paramètre n’est pas disponible. Assurez-vous que l’ordre est correct lorsque vous créez la règle.
+>Dans les propriétés de [transfert d’événement](../event-forwarding/overview.md), les actions de règle sont toujours exécutées de manière séquentielle et ce paramètre n’est pas disponible. Assurez-vous que l’ordre est correct lorsque vous créez la règle.
 
 ### Activé
 
-Si le paramètre est activé lorsqu’un événement est déclenché au moment de l’exécution, les conditions et actions de la règle sont ajoutées à une file d’attente de traitement (selon l’ordre que vous avez défini) et traitées une par une sur la base du &quot;premier entré, premier sorti&quot; (FIFO). La règle attend la fin du composant avant de passer au suivant.
+Si ce paramètre est activé lorsqu’un événement est déclenché au moment de l’exécution, les conditions et les actions de la règle sont ajoutées à une file d’attente de traitement (selon l’ordre que vous avez défini) et traitées une à une selon le principe du « premier entré, premier sorti » (FIFO). La règle attend lʼachèvement du composant avant de passer à la suivante.
 
 Si une condition est évaluée comme false ou atteint son délai d’expiration défini, les conditions et actions suivantes de cette règle sont supprimées de la file d’attente.
 
