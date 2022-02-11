@@ -5,7 +5,7 @@ title: Prise en main de l’édition B2B de Real-time Customer Data Platform
 description: Utilisez ce scénario type comme exemple lors de la configuration de votre implémentation de l’édition B2B de Real-time Customer Data Platform.
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 source-git-commit: eb71896ec049253266685fdc831f941e14f3268a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1205'
 ht-degree: 100%
 
