@@ -5,7 +5,7 @@ exl-id: bcd52989-ef62-4ab9-866e-1d9e57b76a0c
 source-git-commit: 51f0cfc1423f8a3bd2ffbceb65de4a09c39d474b
 workflow-type: tm+mt
 source-wordcount: '1341'
-ht-degree: 31%
+ht-degree: 39%
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Platform propose de nombreux tableaux de bord qui vous permet
 | Inventaire des tableaux de bord | Accédez aux rapports préconfigurés des tableaux de bord des profils, des segments et des destinations, y compris les intégrations installées telles que PowerBI, à un emplacement centralisé. Pour plus d’informations, voir [[!DNL Dashboards] documentation d’inventaire](../../dashboards/inventory.md). |
 | Modèles de rapport PowerBI | Créez, personnalisez ou étendez des mesures à partir des modèles de données de rapports de profil, de segments et de destination à l’aide de nouveaux graphiques PowerBI. Le workflow d’installation automatisée vous permet de partager vos informations marketing dans l’ensemble de votre organisation à partir de l’environnement PowerBI. Pour plus d’informations, voir [Documentation sur le modèle de rapport PowerBI](../../dashboards/integrations/power-bi.md). |
 
-Pour plus d’informations sur [!DNL Dashboards], consultez la [[!DNL Dashboards] présentation de la ](../../dashboards/home.md).
+Pour plus d’informations sur [!DNL Dashboards], consultez la [[!DNL Dashboards] présentation](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -57,9 +57,9 @@ Pour plus d’informations sur [!DNL Dashboards], consultez la [[!DNL Dashboards
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Expérience de mappage consolidé | La nouvelle interface de mappage de l’interface utilisateur de Platform vous offre une expérience de mappage cohérente pour tirer parti des recommandations de mappage intelligent, configurer manuellement les règles de mappage et déboguer les erreurs qui se produisent dans vos jeux de mappages. Pour plus d’informations, voir [[!DNL Data Prep] Guide de l’interface utilisateur](../../data-prep/ui/mapping.md). |
+| Expérience de mappage consolidée | La nouvelle interface de mappage de l’interface utilisateur de Platform vous offre une expérience de mappage cohérente pour tirer parti des recommandations de mappage intelligent, configurer manuellement les règles de mappage et déboguer les erreurs qui se produisent dans vos jeux de mappages. Pour plus d’informations, consultez le [[!DNL Data Prep] guide de l’interface utilisateur](../../data-prep/ui/mapping.md). |
 
-Pour plus d’informations sur [!DNL Data Prep], consultez la [[!DNL Data Prep] présentation de la ](../../data-prep/home.md).
+Pour plus d’informations sur [!DNL Data Prep], consultez la [[!DNL Data Prep] présentation](../../data-prep/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -94,7 +94,7 @@ Pour des informations plus générales sur les destinations, reportez-vous à la
 | Bloc anonyme | La structure SQL de bloc anonyme permet de ventiler les tâches de préparation de données à grande échelle dans Query Service en tâches plus petites, puis de les réutiliser et de les exécuter en séquence pour le chargement incrémentiel des données. Pour plus d’informations, voir [exemples de requêtes pour la documentation bloquée anonyme](../../query-service/best-practices/anonymous-block.md). |
 | Organisation du jeu de données | Fournit une structure de données logique et cohérente pour organiser vos ressources de données à utiliser avec Query Service à mesure que la quantité de ressources de données dans l’environnement de test augmente. Pour plus d’informations, voir [documentation sur l’organisation des ressources de données](../../query-service/best-practices/organize-data-assets.md). |
 
-Pour plus d’informations sur [!DNL Query Service], consultez la [[!DNL Query Service] présentation de la ](../../query-service/home.md).
+Pour plus d’informations sur [!DNL Query Service], consultez la [[!DNL Query Service] présentation](../../query-service/home.md).
 
 ## Sandbox {#sandboxes}
 
@@ -104,9 +104,9 @@ Adobe Experience Platform est conçu pour enrichir les applications d’expér
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Améliorations de l’interface utilisateur des environnements de test | L’indicateur sandbox est désormais intégré à l’en-tête de toutes les applications de l’interface utilisateur de Platform. L’indicateur sandbox affiche le nom, la région et le type de l’environnement de test et vous permet également d’accéder à un menu déroulant pour basculer entre les environnements de test. Pour plus d’informations, voir [guide de l’interface utilisateur des environnements de test](../../sandboxes/ui/user-guide.md). |
+| Améliorations apportées à l’interface utilisateur des sandbox | L’indicateur sandbox est désormais intégré à l’en-tête de toutes les applications de l’interface utilisateur de Platform. L’indicateur sandbox affiche le nom, la région et le type du sandbox. Il vous offre également un accès à un menu déroulant afin de basculer entre les sandbox. Pour plus d’informations, consultez le [guide de l’interface utilisateur des sandbox](../../sandboxes/ui/user-guide.md). |
 
-Pour plus d’informations sur les environnements de test, voir [Présentation des environnements de test](../../sandboxes/home.md).
+Pour plus d’informations sur les sandbox, consultez la [présentation des sandbox](../../sandboxes/home.md).
 
 ## Segmentation Service {#segmentation}
 
@@ -116,7 +116,7 @@ Pour plus d’informations sur les environnements de test, voir [Présentation d
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Correspondance de segments | La correspondance de segment est un service de collaboration de données qui permet à deux utilisateurs ou plus de Platform d’échanger des données, en fonction d’identifiants communs, d’une manière sécurisée, gouvernée et respectueuse de la confidentialité. La correspondance de segment utilise les normes de confidentialité de Platform et les identifiants personnels tels que les emails hachés, les numéros de téléphone hachés et les identifiants d’appareil comme les IDFA et les GAID. Pour plus d’informations, voir [Correspondance de segment - Aperçu](../../segmentation/ui/segment-match/overview.md). |
+| Segment Match | La Segment Match est un service de collaboration de données qui permet à deux ou plusieurs utilisateurs de Platform d’échanger des données, reposant sur des identifiants communs, d’une manière sécurisée, contrôlée et respectueuse de la vie privée. La correspondance de segment utilise les normes de confidentialité de Platform et les identifiants personnels tels que les emails hachés, les numéros de téléphone hachés et les identifiants d’appareil comme les IDFA et les GAID. Pour plus d’informations, consultez la [présentation de la Segment Match](../../segmentation/ui/segment-match/overview.md). |
 
 Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md).
 

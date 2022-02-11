@@ -50,7 +50,7 @@ ht-degree: 90%
       * [Présentation](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consentement {#consent}
    * [Prise en charge du consentement](consent/supporting-consent.md)
-   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
+   * IAB の透明性および同意フレームワーク 2.0 {#iab-tcf}
       * [Présentation](consent/iab-tcf/overview.md)
       * [Intégration avec des balises](consent/iab-tcf/with-launch.md)
       * [Intégration sans balises](consent/iab-tcf/without-launch.md)
