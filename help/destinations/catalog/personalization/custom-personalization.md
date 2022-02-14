@@ -3,9 +3,9 @@ keywords: personnalisation personnalisée ; destination; destination personnalis
 title: Connexion à la personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer des informations de segment à partir de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance au segment du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: d0638ea80c03bf9d5ce76e27e3a4fc7358bfe83c
+source-git-commit: acbee5c4f67dd576b5513c061a67ed4b5af2d254
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '637'
 ht-degree: 6%
 
 ---
@@ -63,7 +63,7 @@ Lecture [Activation des profils et des segments vers les destinations de requêt
 
 ## Données exportées {#exported-data}
 
-Si vous utilisez [Adobe des balises](../../../tags/home.md) pour déployer le SDK Web Experience Platform, utilisez la méthode [envoi d’événement terminé](../../../edge/extension/event-types.md) et votre action de code personnalisé comporte une `event.destinations` que vous pouvez utiliser pour afficher les données exportées.
+Si vous utilisez [Balises dans Adobe Experience Platform](../../../tags/home.md) pour déployer le SDK Web Experience Platform, utilisez la méthode [envoi d’événement terminé](../../../edge/extension/event-types.md) et votre action de code personnalisé comporte une `event.destinations` que vous pouvez utiliser pour afficher les données exportées.
 
 Voici un exemple de valeur pour la variable `event.destinations` variable :
 
@@ -85,7 +85,7 @@ Voici un exemple de valeur pour la variable `event.destinations` variable :
 ]
 ```
 
-Si vous n’utilisez pas [Adobe des balises](../../../tags/home.md) pour déployer le SDK Web Experience Platform, utilisez la méthode [gestion des réponses des événements](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) pour afficher les données exportées.
+Si vous n’utilisez pas [Balises](../../../tags/home.md) pour déployer le SDK Web Experience Platform, utilisez la méthode [gestion des réponses des événements](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) pour afficher les données exportées.
 
 Vous pouvez analyser la réponse JSON de Adobe Experience Platform pour trouver l’alias d’intégration correspondant à l’application que vous intégrez à Adobe Experience Platform. Les identifiants de segment peuvent être transmis dans le code de l’application en tant que paramètres de ciblage. Vous trouverez ci-dessous un exemple de ce à quoi cela ressemblerait spécifique à la réponse de destination.
 
