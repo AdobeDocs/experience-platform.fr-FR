@@ -1,10 +1,10 @@
 ---
-title: Comparaison d’at.js au SDK Web Platform
-description: Découvrez comment comparer les fonctionnalités d’at.js aux SDK Web
+title: Comparaison d’at.js au SDK Web Experience Platform
+description: Découvrez comment comparer les fonctionnalités d’at.js au SDK Web Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;champ de décision;fragment de code de masquage préalable;vec;compositeur d’expérience d’après les formulaires;xdm;audiences;décisions;portée;schéma;schéma;diagramme système;diagramme
-source-git-commit: 95c6d0d20ee04affb4b67c3d9f90d80e655e2752
+source-git-commit: 6efb40e90cb8c29a0141bb0db6e20cec23f2be9a
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2277'
 ht-degree: 7%
 
 ---
@@ -129,7 +129,7 @@ alloy("sendEvent", {
 });
 ```
 
-Le SDK WEB AEP envoie automatiquement une notification avec les offres qui ont été exécutées par le SDK WEB. Voici un exemple de l’aspect d’une payload de requête de notification :
+Le SDK Web Experience Platform envoie automatiquement une notification avec les offres qui ont été exécutées par le SDK WEB. Voici un exemple de l’aspect d’une payload de requête de notification :
 
 ```json
 {
@@ -638,7 +638,7 @@ adobe.target.triggerView("homeView")
 
 ### Utilisation du SDK Web
 
-Pour déclencher ou signaler un changement d’affichage d’application d’une seule page, définissez la variable `web.webPageDetails.viewName` sous la propriété `xdm` de l’option `sendEvent` . Le SDK Web AEP vérifie le cache d’affichage, s’il existe des offres pour la variable `viewName` spécifié dans `sendEvent` il les exécute et envoie un événement de notification d’affichage.
+Pour déclencher ou signaler un changement d’affichage d’application d’une seule page, définissez la variable `web.webPageDetails.viewName` sous la propriété `xdm` de l’option `sendEvent` . Le SDK Web vérifie le cache des vues, s’il existe des offres pour la variable `viewName` spécifié dans `sendEvent` il les exécute et envoie un événement de notification d’affichage.
 
 **Exemple**
 
