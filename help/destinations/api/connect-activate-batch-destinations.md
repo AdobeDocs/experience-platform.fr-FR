@@ -1,0 +1,1217 @@
+---
+keywords: Experience Platform;accueil;rubriques populaires
+solution: Experience Platform
+title: Connexion aux destinations par lots et activation des données à l’aide de l’API Flow Service
+description: Cette section contient des instructions détaillées sur l’utilisation de l’API Flow Service pour créer un espace de stockage par lot dans le cloud ou une destination de marketing par e-mail dans Experience Platform et activer les données.
+topic-legacy: tutorial
+type: Tutorial
+exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
+source-git-commit: ae9c43b3a3cd59b0c0bcfd5034f5edc5ebb818d8
+workflow-type: tm+mt
+source-wordcount: '3179'
+ht-degree: 20%
+
+---
+
+# Connexion aux destinations par lots et activation des données à l’aide de l’API Flow Service
+
+Ce tutoriel explique comment utiliser l’API Flow Service pour créer un lot [espace de stockage](../catalog/cloud-storage/overview.md) ou [destination de marketing par e-mail](../catalog/email-marketing/overview.md), créez un flux de données vers la destination que vous venez de créer et exportez les données vers cette dernière au moyen de fichiers CSV.
+
+Ce tutoriel utilise la destination Adobe Campaign dans tous les exemples, mais les étapes sont identiques pour toutes les destinations de stockage dans le cloud de lot et de marketing par e-mail.
+
+![Présentation : étapes de création d’une destination et d’activation de segments](../assets/api/email-marketing/overview.png)
+
+Si vous préférez utiliser l’interface utilisateur de Platform pour vous connecter à une destination et activer des données, reportez-vous à la section [Connexion à une destination](../ui/connect-destination.md) et [Activation des données d’audience vers des destinations d’exportation de profils par lots](../ui/activate-batch-profile-destinations.md) tutoriels.
+
+## Prise en main {#get-started}
+
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] vous permet de créer des segments et de générer des audiences dans [!DNL Adobe Experience Platform] de votre [!DNL Real-time Customer Profile] data.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une seule [!DNL Platform] dans des environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+
+Les sections suivantes apportent des informations supplémentaires dont vous avez besoin pour activer les données vers les destinations par lots dans Platform.
+
+### Collecte des informations d’identification requises {#gather-required-credentials}
+
+Pour suivre les étapes de ce tutoriel, vous devez disposer des informations d’identification suivantes, selon le type de destination auquel vous vous connectez et activez des segments.
+
+* Pour [!DNL Amazon] Connexions S3 : `accessId`, `secretKey`
+* Pour [!DNL Amazon] Connexions S3 à [!DNL Adobe Campaign]: `accessId`, `secretKey`
+* Pour les connexions SFTP : `domain`, `port`, `username`, `password` ou `sshKey` (selon la méthode de connexion à l’emplacement FTP)
+* Pour [!DNL Azure Blob] connections : `connectionString`
+
+>[!NOTE]
+>
+>Informations d’identification `accessId`, `secretKey` pour les connexions Amazon S3 et `accessId`, `secretKey` pour les connexions Amazon S3 à Adobe Campaign sont identiques.
+
+### Lecture d’exemples d’appels API {#reading-sample-api-calls}
+
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
+
+### Collecte de valeurs pour les en-têtes requis et facultatifs {#gather-values-headers}
+
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key : `{API_KEY}`
+* x-gw-ims-org-id : `{IMS_ORG}`
+
+Ressources dans [!DNL Experience Platform] peut être isolé à des environnements de test virtuels spécifiques. Dans les requêtes à [!DNL Platform] API, vous pouvez spécifier le nom et l’identifiant de l’environnement de test dans lequel l’opération aura lieu. Il s’agit de paramètres facultatifs.
+
+* x-sandbox-name : `{SANDBOX_NAME}`
+
+>[!NOTE]
+>
+>Pour plus d’informations sur les environnements de test dans [!DNL Experience Platform], consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
+
+Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
+
+* Content-Type: `application/json`
+
+### Documentation de référence sur les API {#api-reference-documentation}
+
+Ce tutoriel contient la documentation de référence correspondante pour toutes les opérations d’API. Reportez-vous à la section [Documentation de l’API Flow Service sur Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Nous vous recommandons d’utiliser ce tutoriel et la documentation de référence de l’API en parallèle.
+
+## Obtention de la liste des destinations disponibles {#get-the-list-of-available-destinations}
+
+![Présentation des étapes de la destination : étape 1](../assets/api/batch-destination/step1.png)
+
+Dans un premier temps, vous devez décider vers quelle destination activer les données. Pour commencer, effectuez un appel pour demander une liste des destinations disponibles auxquelles vous pouvez vous connecter et activer des segments. Effectuez la requête GET suivante auprès du point de terminaison `connectionSpecs` pour obtenir une liste des destinations disponibles :
+
+**Format d’API**
+
+```http
+GET /connectionSpecs
+```
+
+**Requête**
+
+```shell
+curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
+--header 'accept: application/json' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
+
+**Réponse**
+
+Une réponse réussie contient une liste des destinations disponibles et leurs identifiants uniques (`id`). Conservez la valeur de la destination que vous prévoyez d’utiliser, car elle sera requise dans les étapes suivantes. Par exemple, si vous souhaitez vous connecter et fournir des segments à Adobe Campaign, recherchez l’extrait suivant dans la réponse :
+
+```json
+{
+    "id": "0b23e41a-cb4a-4321-a78f-3b654f5d7d97",
+  "name": "Adobe Campaign",
+  ...
+  ...
+}
+```
+
+À titre de référence, le tableau ci-dessous contient les identifiants de spécification de connexion pour les destinations par lots couramment utilisées :
+
+| Destination | Identifiant de spécification de connexion |
+---------|----------|
+| [!DNL Adobe Campaign] | 0b23e41a-cb4a-4321-a78f-3b654f5d7d97 |
+| [!DNL Amazon S3] | 4890fc95-5a1f-4983-94bb-e060c08e3f81 |
+| [!DNL Azure Blob] | e258278b-a4cf-43ac-b158-4fa0ca0d948b |
+| [!DNL Oracle Eloqua] | c1e44b6b-e7c8-404b-9031-58f0ef760604 |
+| [!DNL Oracle Responsys] | a5e28ddf-e265-426e-83a1-9d03a3a6822b |
+| [!DNL Salesforce Marketing Cloud] | f599a5b3-60a7-4951-950a-cc4115c7ea27 |
+| SFTP | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Connectez-vous à votre [!DNL Experience Platform] data {#connect-to-your-experience-platform-data}
+
+![Présentation des étapes de la destination : étape 2](../assets/api/batch-destination/step2.png)
+
+Ensuite, vous devez vous connecter à votre [!DNL Experience Platform] afin que vous puissiez exporter les données de profil et les activer dans votre destination préférée. Il s’agit de deux sous-étapes présentées ci-dessous.
+
+1. Tout d’abord, vous devez effectuer un appel pour autoriser l’accès à vos données dans [!DNL Experience Platform], en configurant une connexion de base.
+2. Ensuite, à l’aide de l’identifiant de connexion de base, effectuez un autre appel dans lequel vous créez une *connexion source*, qui établit la connexion à votre [!DNL Experience Platform] data.
+
+### Autoriser l’accès à vos données dans [!DNL Experience Platform]
+
+**Format d’API**
+
+```http
+POST /connections
+```
+
+**Requête**
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+            "name": "Base connection to Experience Platform",
+            "description": "This call establishes the connection to Experience Platform data",
+            "connectionSpec": {
+                "id": "{CONNECTION_SPEC_ID}",
+                "version": "1.0"
+            }
+}'
+```
+
+| Propriété | Description |
+| --------- | ----------- |
+| `name` | Attribuez un nom à la connexion de base à la banque de profils Experience Platform. |
+| `description` | Vous pouvez éventuellement fournir une description de la connexion de base. |
+| `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour la variable [Boutique de profils Experience Platform](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+
+**Réponse**
+
+Une réponse réussie contient l’identifiant unique de la connexion de base (`id`). Conservez cette valeur car elle est nécessaire à l’étape suivante pour créer la connexion source.
+
+```json
+{
+    "id": "1ed86558-59b5-42f7-9865-5859b552f7f4"
+}
+```
+
+### Connectez-vous à votre [!DNL Experience Platform] data {#connect-to-platform-data}
+
+**Format d’API**
+
+```http
+POST /sourceConnections
+```
+
+**Requête**
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+            "name": "Connecting to Profile Store",
+            "description": "Optional",
+            "connectionSpec": {
+                "id": "{CONNECTION_SPEC_ID}",
+                "version": "1.0"
+            },
+            "baseConnectionId": "{BASE_CONNECTION_ID}",
+            "data": {
+                "format": "CSV",
+                "schema": null
+            },
+            "params" : {}
+}'
+```
+
+| Propriété | Description |
+| --------- | ----------- |
+| `name` | Attribuez un nom à la connexion source au magasin de profils Experience Platform. |
+| `description` | Vous pouvez éventuellement fournir une description de la connexion source. |
+| `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour la variable [Boutique de profils Experience Platform](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+| `baseConnectionId` | Utilisez l’identifiant de connexion de base que vous avez obtenu à l’étape précédente. |
+| `data.format` | `CSV` est actuellement le seul format d’exportation de fichier pris en charge. |
+
+**Réponse**
+
+Une réponse réussie renvoie l’identifiant unique (`id`) pour la nouvelle connexion source à [!DNL Profile Store]. Cela confirme que vous avez réussi à vous connecter à votre [!DNL Experience Platform] data. Conservez cette valeur car elle sera nécessaire lors d’une prochaine étape.
+
+```json
+{
+    "id": "ed48ae9b-c774-4b6e-88ae-9bc7748b6e97"
+}
+```
+
+## Connexion à la destination du lot {#connect-to-batch-destination}
+
+![Présentation des étapes de la destination : étape 3](../assets/api/batch-destination/step3.png)
+
+Au cours de cette étape, vous configurez une connexion à l’espace de stockage par lots ou à la destination de marketing par e-mail de votre choix. Il s’agit de deux sous-étapes présentées ci-dessous.
+
+1. Tout d’abord, vous devez effectuer un appel pour autoriser l’accès à la plateforme de destination, en configurant une connexion de base.
+2. Ensuite, à l’aide de l’identifiant de connexion de base, vous effectuez un autre appel au cours duquel vous créez une *connexion cible*, qui spécifie l’emplacement dans votre compte de stockage où les fichiers de données exportés seront distribués, ainsi que le format des données qui seront exportées.
+
+### Autoriser l’accès à la destination du lot {#authorize-access-to-batch-destination}
+
+**Format d’API**
+
+```http
+POST /connections
+```
+
+**Requête**
+
+La requête ci-dessous établit une connexion de base aux destinations Adobe Campaign. En fonction de l’emplacement de stockage dans lequel vous souhaitez exporter des fichiers vers (Amazon S3, SFTP, Azure Blob), conservez les `auth` et supprimez les autres.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "S3 Connection for Adobe Campaign",
+    "description": "summer advertising campaign",
+    "connectionSpec": {
+        "id": "0b23e41a-cb4a-4321-a78f-3b654f5d7d97",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "S3",
+        "params": {
+            "accessId": "{ACCESS_ID}",
+            "secretKey": "{SECRET_KEY}"
+        }
+    }
+    "auth": {
+        "specName": "SFTP with Password",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "password": "{PASSWORD}"
+        }
+    }
+    "auth": {
+        "specName": "SFTP with SSH Key",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "sshKey": "{SSH_KEY}"
+        }
+    }        
+    "auth": {
+        "specName": "Azure Blob",
+        "params": {
+            "connectionString": "{AZURE_BLOB_CONNECTION_STRING}"
+        }
+    }    
+}'
+```
+
++++ Exemple de requête pour se connecter aux destinations Amazon S3
+
+La requête ci-dessous établit une connexion de base aux destinations Amazon S3.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Connect to Amazon S3",
+    "description": "summer advertising campaign",
+    "connectionSpec": {
+        "id": "4890fc95-5a1f-4983-94bb-e060c08e3f81",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "Access Key",
+        "params": {
+            "s3AccessKey": "{AMAZON_S3_ACCESS_KEY}",
+            "s3SecretKey": "{AMAZON_S3_SECRET_KEY}"
+        }
+    }
+}'
+```
+
++++
+
++++ Exemple de demande de connexion aux destinations Azure Blob
+
+La requête ci-dessous établit une connexion de base aux destinations Azure Blob.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Connect to Azure Blob",
+    "description": "Summer advertising campaign",
+    "connectionSpec": {
+        "id": "e258278b-a4cf-43ac-b158-4fa0ca0d948b",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "ConnectionString",
+        "params": {
+            "connectionString": "{AZURE_BLOB_CONNECTION_STRING}"
+        }
+    }
+}'
+```
+
++++
+
++++ Exemple de requête pour se connecter aux destinations Eloqua d’Oracle
+
+La requête ci-dessous établit une connexion de base aux destinations Eloqua d’Oracle. En fonction de l’emplacement de stockage dans lequel vous souhaitez exporter des fichiers, conservez les `auth` et supprimez les autres.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Connect to Eloqua destination",
+    "description": "summer advertising campaign",
+    "connectionSpec": {
+        "id": "c1e44b6b-e7c8-404b-9031-58f0ef760604",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "SFTP with Password",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "password": "{PASSWORD}"
+        }
+    }
+    "auth": {
+        "specName": "SFTP with SSH Key",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "sshKey": "{SSH_KEY}"
+        }
+    }    
+}'
+```
+
++++
+
++++ Exemple de requête pour se connecter aux destinations Responsys Oracle
+
+La requête ci-dessous établit une connexion de base aux destinations Responsys d’Oracle. En fonction de l’emplacement de stockage dans lequel vous souhaitez exporter des fichiers, conservez les `auth` et supprimez les autres.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Connect to Responsys destination",
+    "description": "summer advertising campaign",
+    "connectionSpec": {
+        "id": "a5e28ddf-e265-426e-83a1-9d03a3a6822b",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "SFTP with Password",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "password": "{PASSWORD}"
+        }
+    }
+    "auth": {
+        "specName": "SFTP with SSH Key",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "sshKey": "{SSH_KEY}"
+        }
+    }    
+}'
+```
+
++++
+
++++ Exemple de demande de connexion aux destinations de Marketing Cloud Salesforce
+
+La requête ci-dessous établit une connexion de base aux destinations de Marketing Cloud Salesforce. En fonction de l’emplacement de stockage dans lequel vous souhaitez exporter des fichiers, conservez les `auth` et supprimez les autres.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Connect to Salesforce Marketing Cloud",
+    "description": "summer advertising campaign",
+    "connectionSpec": {
+        "id": "f599a5b3-60a7-4951-950a-cc4115c7ea27",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "SFTP with Password",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "password": "{PASSWORD}"
+        }
+    }
+    "auth": {
+        "specName": "SFTP with SSH Key",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "sshKey": "{SSH_KEY}"
+        }
+    }    
+}'
+```
+
++++
+
++++ Exemple de demande de connexion à SFTP avec des destinations de mot de passe
+
+La requête ci-dessous établit une connexion de base aux destinations SFTP.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Connect to SFTP with password",
+    "description": "summer advertising campaign",
+    "connectionSpec": {
+        "id": "64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "Basic Authentication for sftp",
+        "params": {
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "password": "{PASSWORD}"
+        }
+    }
+}'
+```
+
++++
+
+| Propriété | Description |
+| --------- | ----------- |
+| `name` | Attribuez un nom à la connexion de base à la destination du lot. |
+| `description` | Vous pouvez éventuellement fournir une description de la connexion de base. |
+| `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour la destination de lot de votre choix. Vous avez obtenu cet identifiant à l’étape [Obtention de la liste des destinations disponibles](#get-the-list-of-available-destinations). |
+| `auth.specname` | Indique le format d’authentification de la destination. Pour connaître le specName de votre destination, effectuez une [Appel GET au point de terminaison des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), fournissant la spécification de connexion de la destination souhaitée. Recherche du paramètre `authSpec.name` dans la réponse. <br> Par exemple, pour les destinations Adobe Campaign, vous pouvez utiliser n’importe quelle `S3`, `SFTP with Password`ou `SFTP with SSH Key`. |
+| `params` | Selon la destination à laquelle vous vous connectez, vous devez fournir différents paramètres d’authentification requis. Pour les connexions Amazon S3, vous devez fournir votre ID d’accès et votre clé secrète à votre emplacement de stockage Amazon S3. <br> Pour connaître les paramètres requis pour votre destination, effectuez une [Appel GET au point de terminaison des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), fournissant la spécification de connexion de la destination souhaitée. Recherche du paramètre `authSpec.spec.required` dans la réponse. |
+
+**Réponse**
+
+Une réponse réussie contient l’identifiant unique de la connexion de base (`id`). Conservez cette valeur car elle est nécessaire à l’étape suivante pour créer une connexion cible.
+
+```json
+{
+    "id": "1ed86558-59b5-42f7-9865-5859b552f7f4"
+}
+```
+
+### Indication de l’emplacement de stockage et du format des données {#specify-storage-location-data-format}
+
+[!DNL Adobe Experience Platform] exporte des données pour les destinations de marketing par e-mail et de stockage dans le cloud sous la forme de [!DNL CSV] fichiers . Au cours de cette étape, vous pouvez déterminer le chemin d’accès à l’emplacement de stockage où les fichiers seront exportés.
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] divise automatiquement les fichiers d’exportation à 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil.
+>
+>Les noms de fichiers fractionnés sont ajoutés avec un nombre indiquant que le fichier fait partie d’un export plus important, en tant que tel : `filename.csv`, `filename_2.csv`, `filename_3.csv`.
+
+**Format d’API**
+
+```http
+POST /targetConnections
+```
+
+**Requête**
+
+La requête ci-dessous établit une connexion cible aux destinations Adobe Campaign, afin de déterminer où se trouvent les fichiers exportés dans votre emplacement de stockage. En fonction de l’emplacement de stockage dans lequel vous souhaitez exporter des fichiers, conservez les `params` et supprimez les autres.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "TargetConnection for Adobe Campaign",
+    "description": "Connection to Adobe Campaign",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "0b23e41a-cb4a-4321-a78f-3b654f5d7d97",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "json",
+        "schema": {
+            "id": "1.0",
+            "version": "1.0"
+        }
+    },
+    "params": {
+        "mode": "S3",
+        "bucketName": "{BUCKET_NAME}",
+        "path": "{FILEPATH}",
+        "format": "CSV"
+    }
+    "params": {
+        "mode": "AZURE_BLOB",
+        "container": "{CONTAINER}",
+        "path": "{FILEPATH}",
+        "format": "CSV"
+    }
+    "params": {
+        "mode": "FTP",
+        "remotePath": "{REMOTE_PATH}",
+        "format": "CSV"
+    }        
+}'
+```
+
++++ Exemple de requête pour configurer un emplacement de stockage pour les destinations Amazon S3
+
+La requête ci-dessous établit une connexion cible aux destinations Amazon S3, afin de déterminer où se trouvent les fichiers exportés dans votre emplacement de stockage.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "TargetConnection for Amazon S3",
+    "description": "Connection to Amazon S3",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "4890fc95-5a1f-4983-94bb-e060c08e3f81",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "json",
+        "schema": {
+            "id": "1.0",
+            "version": "1.0"
+        }
+    },
+    "params": {
+        "mode": "Cloud Storage",
+        "bucketName": "{BUCKET_NAME}",
+        "path": "{FILEPATH}",
+        "format": "CSV"
+    }
+}'
+```
+
++++
+
++++ Exemple de requête pour configurer un emplacement de stockage pour les destinations Azure Blob
+
+La requête ci-dessous établit une connexion cible aux destinations Azure Blob, afin de déterminer où se trouvent les fichiers exportés dans votre emplacement de stockage.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "TargetConnection for Azure Blob",
+    "description": "Connection to Azure Blob",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "e258278b-a4cf-43ac-b158-4fa0ca0d948b",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "json",
+        "schema": {
+            "id": "1.0",
+            "version": "1.0"
+        }
+    },
+    "params": {
+        "mode": "Cloud Storage",
+        "container": "{CONTAINER}",
+        "path": "{FILEPATH}",
+        "format": "CSV"
+    }
+}'
+```
+
++++
+
++++ Exemple de demande de configuration de l’emplacement de stockage pour les destinations Eloqua d’Oracle
+
+La requête ci-dessous établit une connexion cible aux destinations Eloqua d’Oracle, afin de déterminer où se trouvent les fichiers exportés dans votre emplacement de stockage. En fonction de l’emplacement de stockage dans lequel vous souhaitez exporter des fichiers, conservez les `params` et supprimez les autres.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "TargetConnection for Oracle Eloqua",
+    "description": "Connection to Oracle Eloqua",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "c1e44b6b-e7c8-404b-9031-58f0ef760604",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "json",
+        "schema": {
+            "id": "1.0",
+            "version": "1.0"
+        }
+    },
+    "params": {
+        "mode": "S3",
+        "bucketName": "{BUCKET_NAME}",
+        "path": "{FILEPATH}",
+        "format": "CSV"
+    }
+    "params": {
+        "mode": "FTP",
+        "remotePath": "{REMOTE_PATH}",
+        "format": "CSV"
+    }        
+}'
+```
+
++++
+
++++ Exemple de requête pour configurer un emplacement de stockage pour les destinations d’Oracle Responsys
+
+La requête ci-dessous établit une connexion cible aux destinations Responsys d’Oracle, afin de déterminer où se trouvent les fichiers exportés dans votre emplacement de stockage. En fonction de l’emplacement de stockage dans lequel vous souhaitez exporter des fichiers, conservez les `params` et supprimez les autres.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "TargetConnection for Oracle Responsys",
+    "description": "Connection to Oracle Responsys",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "a5e28ddf-e265-426e-83a1-9d03a3a6822b",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "json",
+        "schema": {
+            "id": "1.0",
+            "version": "1.0"
+        }
+    },
+    "params": {
+        "mode": "S3",
+        "bucketName": "{BUCKET_NAME}",
+        "path": "{FILEPATH}",
+        "format": "CSV"
+    }
+    "params": {
+        "mode": "FTP",
+        "remotePath": "{REMOTE_PATH}",
+        "format": "CSV"
+    }        
+}'
+```
+
++++
+
++++ Exemple de requête pour configurer un emplacement de stockage pour les destinations de Marketing Cloud Salesforce
+
+La requête ci-dessous établit une connexion cible aux destinations de Marketing Cloud Salesforce, afin de déterminer où se trouvent les fichiers exportés dans votre emplacement de stockage. En fonction de l’emplacement de stockage dans lequel vous souhaitez exporter des fichiers, conservez les `params` et supprimez les autres.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "TargetConnection for Salesforce Marketing Cloud",
+    "description": "Connection to Salesforce Marketing Cloud",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "f599a5b3-60a7-4951-950a-cc4115c7ea27",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "json",
+        "schema": {
+            "id": "1.0",
+            "version": "1.0"
+        }
+    },
+    "params": {
+        "mode": "S3",
+        "bucketName": "{BUCKET_NAME}",
+        "path": "{FILEPATH}",
+        "format": "CSV"
+    }
+    "params": {
+        "mode": "FTP",
+        "remotePath": "{REMOTE_PATH}",
+        "format": "CSV"
+    }        
+}'
+```
+
++++
+
++++ Exemple de requête pour configurer un emplacement de stockage pour les destinations SFTP
+
+La requête ci-dessous établit une connexion cible aux destinations SFTP, afin de déterminer où se trouvent les fichiers exportés dans votre emplacement de stockage.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "TargetConnection for SFTP",
+    "description": "Connection to SFTP",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "json",
+        "schema": {
+            "id": "1.0",
+            "version": "1.0"
+        }
+    },
+    "params": {
+        "mode": "Cloud Storage",
+        "remotePath": "{REMOTE_PATH}",
+    }
+}'
+```
+
++++
+
+
+| Propriété | Description |
+| --------- | ----------- |
+| `name` | Attribuez un nom à la connexion cible à la destination du lot. |
+| `description` | Vous pouvez éventuellement fournir une description pour la connexion cible. |
+| `baseConnectionId` | Utilisez l’identifiant de la connexion de base que vous avez créée à l’étape ci-dessus. |
+| `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour la destination de lot de votre choix. Vous avez obtenu cet identifiant à l’étape [Obtention de la liste des destinations disponibles](#get-the-list-of-available-destinations). |
+| `params` | Selon la destination à laquelle vous vous connectez, vous devez fournir différents paramètres requis à votre emplacement de stockage. Pour les connexions Amazon S3, vous devez fournir votre ID d’accès et votre clé secrète à votre emplacement de stockage Amazon S3. <br> Pour connaître les paramètres requis pour votre destination, effectuez une [Appel GET au point de terminaison des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), fournissant la spécification de connexion de la destination souhaitée. Recherche du paramètre `targetSpec.spec.required` dans la réponse. |
+| `params.mode` | En fonction du mode pris en charge pour votre destination, vous devez fournir ici une valeur différente. Pour connaître les paramètres requis pour votre destination, effectuez une [Appel GET au point de terminaison des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), fournissant la spécification de connexion de la destination souhaitée. Recherche du paramètre `targetSpec.spec.properties.mode.enum` dans la réponse et sélectionnez le mode souhaité. |
+| `params.bucketName` | Pour les connexions S3, indiquez le nom du compartiment où les fichiers seront exportés. |
+| `params.path` | Pour les connexions S3, indiquez le chemin d’accès au fichier dans l’emplacement de stockage où les fichiers seront exportés. |
+| `params.format` | `CSV` est actuellement le seul type d’exportation de fichier pris en charge. |
+
+**Réponse**
+
+Une réponse réussie renvoie l’identifiant unique (`id`) pour la nouvelle connexion cible à votre destination de lot. Conservez cette valeur car elle sera nécessaire lors de prochaines étapes.
+
+```json
+{
+    "id": "12ab90c7-519c-4291-bd20-d64186b62da8"
+}
+```
+
+## Création d’un flux de données {#create-dataflow}
+
+![Présentation des étapes de la destination : étape 4](../assets/api/batch-destination/step4.png)
+
+En utilisant la spécification de flux, la connexion source et les identifiants de connexion cible que vous avez obtenus aux étapes précédentes, vous pouvez maintenant créer un flux de données entre vos [!DNL Experience Platform] les données et la destination vers laquelle vous allez exporter les fichiers de données. Considérez cette étape comme la création d’un pipeline par lequel les données seront transmises ultérieurement entre [!DNL Experience Platform] et la destination souhaitée.
+
+Pour créer un flux de données, effectuez une requête de POST comme illustré ci-dessous, tout en fournissant les valeurs mentionnées ci-dessous dans la payload.
+
+**Format d’API**
+
+```http
+POST /flows
+```
+
+**Requête**
+
+```shell
+curl -X POST \
+'https://platform.adobe.io/data/foundation/flowservice/flows' \
+-H 'Authorization: Bearer {ACCESS_TOKEN}' \
+-H 'x-api-key: {API_KEY}' \
+-H 'x-gw-ims-org-id: {IMS_ORG}' \
+-H 'x-sandbox-name: {SANDBOX_NAME}' \
+-H 'Content-Type: application/json' \
+-d  '{
+   
+        "name": "Activate segments to Adobe Campaign",
+        "description": "This operation creates a dataflow which we will later use to activate segments to Adobe Campaign",
+        "flowSpec": {
+            "id": "{FLOW_SPEC_ID}",
+            "version": "1.0"
+        },
+        "sourceConnectionIds": [
+            "{SOURCE_CONNECTION_ID}"
+        ],
+        "targetConnectionIds": [
+            "{TARGET_CONNECTION_ID}"
+        ],
+        "transformations": [
+            {
+                "name": "GeneralTransform",
+                "params": {
+                    "segmentSelectors": {
+                        "selectors": []
+                    },
+                    "profileSelectors": {
+                        "selectors": []
+                    }
+                }
+            }
+        ]
+    }
+```
+
+| Propriété | Description |
+| --------- | ----------- |
+| `name` | Attribuez un nom au flux de données que vous créez. |
+| `description` | Vous pouvez éventuellement fournir une description du flux de données. |
+| `flowSpec.Id` | Utilisez l’identifiant de spécification de flux pour la destination de lot à laquelle vous souhaitez vous connecter. Pour récupérer l’identifiant de spécification du flux, effectuez une opération de GET sur la variable `flowspecs` , comme indiqué dans la section [documentation de référence de l’API des spécifications de flux](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). Dans la réponse, recherchez `upsTo` et copiez l’identifiant correspondant à la destination du lot à laquelle vous souhaitez vous connecter. Par exemple, pour Adobe Campaign, recherchez `upsToCampaign` et copiez le paramètre `id`. |
+| `sourceConnectionIds` | Utilisez l’identifiant de connexion source obtenu à l’étape [Connexion à vos données d’Experience Platform](#connect-to-your-experience-platform-data). |
+| `targetConnectionIds` | Utilisez l’identifiant de connexion cible obtenu à l’étape [Connexion à la destination du lot](#connect-to-batch-destination). |
+| `transformations` | À l’étape suivante, vous allez remplir cette section avec les segments et les attributs de profil à activer. |
+
+À titre de référence, le tableau ci-dessous contient les identifiants de spécification de flux pour les destinations par lots couramment utilisées :
+
+| Destination | Identifiant de spécification de flux |
+---------|----------|
+| Toutes les destinations de stockage dans le cloud (Amazon S3, SFTP, Azure Blob) et Oracle Eloqua | 71471eba-b620-49e4-90fd-23f1fa0174d8 |
+| Oracle Responsys | 51d675ce-e270-408d-91fc-22717bdf2148 |
+| Salesforce Marketing Cloud | 493b2bd6-26e4-4167-ab3b-5e910bba44f0 |
+
+**Réponse**
+
+Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données et un `etag`. Notez les deux valeurs, car vous en aurez besoin à l’étape suivante pour activer les segments et exporter les fichiers de données.
+
+```json
+{
+    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5",
+    "etag": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+}
+```
+
+
+## Activation des données vers votre nouvelle destination {#activate-data}
+
+![Présentation des étapes de la destination : étape 5](../assets/api/batch-destination/step5.png)
+
+Après avoir créé toutes les connexions et le flux de données, vous pouvez désormais activer vos données de profil vers la plateforme de destination. Au cours de cette étape, vous sélectionnez les segments et les attributs de profil à exporter vers la destination.
+
+Vous pouvez également déterminer le format de dénomination des fichiers exportés et les attributs à utiliser comme [clés de déduplication](../ui/activate-batch-profile-destinations.md#mandatory-keys) ou [attributs obligatoires](../ui/activate-batch-profile-destinations.md#mandatory-attributes). Au cours de cette étape, vous pouvez également déterminer le planning d’envoi des données vers la destination.
+
+Pour activer les segments vers votre nouvelle destination, vous devez effectuer une opération JSON PATCH, comme dans l’exemple ci-dessous. Vous pouvez activer plusieurs segments et attributs de profil lors d’un seul appel. Pour en savoir plus sur le JSON PATCH, consultez la [spécification RFC](https://tools.ietf.org/html/rfc6902).
+
+**Format d’API**
+
+```http
+PATCH /flows
+```
+
+**Requête**
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'If-Match: "{ETAG}"' \
+--data-raw '[
+    {
+        "op": "add",
+        "path": "/transformations/0/params/segmentSelectors/selectors/-",
+        "value": {
+            "type": "PLATFORM_SEGMENT",
+            "value": {
+                "name": "Name of the segment that you are activating",
+                "description": "Description of the segment that you are activating",
+                "id": "{SEGMENT_ID}",
+                "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+                "exportMode": "DAILY_FULL_EXPORT",
+                "schedule": {
+                    "frequency": "ONCE",
+                    "startDate": "2021-12-20",
+                    "startTime": "17:00"
+                } 
+            }
+        }
+    },
+{
+        "op": "add",
+        "path": "/transformations/0/params/segmentSelectors/selectors/-",
+        "value": {
+            "type": "PLATFORM_SEGMENT",
+            "value": {
+                "name": "Name of the segment that you are activating",
+                "description": "Description of the segment that you are activating",
+                "id": "{SEGMENT_ID}",
+                "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+                "exportMode": "DAILY_FULL_EXPORT",
+                "schedule": {
+                    "frequency": "ONCE",
+                    "startDate": "2021-12-20",
+                    "startTime": "17:00"
+                },   
+            }
+        }
+    },
+{
+        "op": "add",
+        "path": "/transformations/0/params/profileSelectors/selectors/-",
+        "value": {
+            "type": "JSON_PATH",
+            "value": {
+                "path": "{PROFILE_ATTRIBUTE}"
+            }
+        }
+    }
+]
+```
+
+| Propriété | Description |
+| --------- | ----------- |
+| `{DATAFLOW_ID}` | Dans l’URL, utilisez l’identifiant du flux de données que vous avez créé à l’étape précédente. |
+| `{ETAG}` | Utilisez l’etag obtenu à l’étape précédente. |
+| `{SEGMENT_ID}` | Indiquez l’identifiant du segment que vous souhaitez exporter vers cette destination. Pour récupérer les identifiants des segments que vous souhaitez activer, voir [récupération d’une définition de segment](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) dans la référence de l’API Experience Platform. |
+| `{PROFILE_ATTRIBUTE}` | Par exemple : `"person.lastName"`. |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour le flux de données. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter un segment à un flux de données, utilisez la variable `add` opération. |
+| `path` | Définit la partie du flux à mettre à jour. Lors de l’ajout d’un segment à un flux de données, utilisez le chemin spécifié dans l’exemple. |
+| `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
+| `id` | Indiquez l’identifiant du segment que vous ajoutez au flux de données de destination. |
+| `name` | *Facultatif*. Indiquez le nom du segment que vous ajoutez au flux de données de destination. Notez que ce champ n’est pas obligatoire et que vous pouvez ajouter un segment au flux de données de destination sans fournir son nom. |
+| `filenameTemplate` | Ce champ détermine le format du nom de fichier des fichiers exportés vers votre destination. <br> Les options disponibles sont les suivantes : <br> <ul><li>`%DESTINATION_NAME%`: Obligatoire. Les fichiers exportés contiennent le nom de destination.</li><li>`%SEGMENT_ID%`: Obligatoire. Les fichiers exportés contiennent l’identifiant du segment exporté.</li><li>`%SEGMENT_NAME%`: Facultatif. Les fichiers exportés contiennent le nom du segment exporté.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%`: Facultatif. Sélectionnez l’une de ces deux options pour que vos fichiers incluent l’heure à laquelle ils sont générés par l’Experience Platform.</li><li>`custom-text`: Facultatif. Remplacez cet espace réservé par tout texte personnalisé que vous souhaitez ajouter à la fin de vos noms de fichier.</li></ul> <br> Pour plus d’informations sur la configuration des noms de fichier, reportez-vous à la section [configuration des noms de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) dans le tutoriel sur l’activation des destinations par lot. |
+| `exportMode` | Obligatoire. Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous à la section [export des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [export de fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel sur l’activation des destinations par lot . |
+| `startDate` | Sélectionnez la date à laquelle le segment doit commencer à exporter les profils vers votre destination. |
+| `frequency` | Obligatoire. <br> <ul><li>Pour le `"DAILY_FULL_EXPORT"` mode d&#39;export, vous pouvez sélectionner `ONCE` ou `DAILY`.</li><li>Pour le `"FIRST_FULL_THEN_INCREMENTAL"` mode d&#39;export, vous pouvez sélectionner `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
+| `endDate` | Non applicable lors de la sélection `"exportMode":"DAILY_FULL_EXPORT"` et `"frequency":"ONCE"`. <br> Définit la date à laquelle les membres du segment cessent d’être exportés vers la destination. |
+| `startTime` | Obligatoire. Sélectionnez l’heure à laquelle les fichiers contenant des membres du segment doivent être générés et exportés vers votre destination. |
+
+**Réponse**
+
+Recherchez une réponse 202 Accepted . Aucun corps de réponse n’est renvoyé. Pour vérifier que la requête était correcte, reportez-vous à l’étape suivante, [Validation du flux de données](#validate-dataflow).
+
+## Validation du flux de données {#validate-dataflow}
+
+![Présentation des étapes de la destination : étape 6](../assets/api/batch-destination/step6.png)
+
+En guise de dernière étape du tutoriel, vous devez vérifier que les segments et les attributs de profil ont bien été mappés au flux de données.
+
+Pour ce faire, effectuez la requête GET suivante :
+
+**Format d’API**
+
+```http
+GET /flows
+```
+
+**Requête**
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--header 'x-sandbox-name: prod' \
+--header 'If-Match: "{ETAG}"' 
+```
+
+* `{DATAFLOW_ID}`: Utilisez le flux de données de l’étape précédente.
+* `{ETAG}` : utilisez l’etag de l’étape précédente.
+
+**Réponse**
+
+La réponse renvoyée doit inclure dans le paramètre `transformations` les segments et les attributs de profil que vous avez envoyés à l’étape précédente. Voici un exemple de paramètre `transformations` dans la réponse :
+
+```json
+"transformations":[
+   {
+      "name":"GeneralTransform",
+      "params":{
+         "profileSelectors":{
+            "selectors":[
+               {
+                  "type":"JSON_PATH",
+                  "value":{
+                     "path":"homeAddress.countryCode",
+                     "operator":"EXISTS",
+                     "mapping":{
+                        "sourceType":"text/x.schema-path",
+                        "source":"homeAddress.countryCode",
+                        "destination":"homeAddress.countryCode",
+                        "identity":false,
+                        "primaryIdentity":false,
+                        "functionVersion":0,
+                        "copyModeMapping":false,
+                        "sourceAttribute":"homeAddress.countryCode",
+                        "destinationXdmPath":"homeAddress.countryCode"
+                     }
+                  }
+               },
+               {
+                  "type":"JSON_PATH",
+                  "value":{
+                     "path":"person.name.firstName",
+                     "operator":"EXISTS",
+                     "mapping":{
+                        "sourceType":"text/x.schema-path",
+                        "source":"person.name.firstName",
+                        "destination":"person.name.firstName",
+                        "identity":false,
+                        "primaryIdentity":false,
+                        "functionVersion":0,
+                        "copyModeMapping":false,
+                        "sourceAttribute":"person.name.firstName",
+                        "destinationXdmPath":"person.name.firstName"
+                     }
+                  }
+               },
+               {
+                  "type":"JSON_PATH",
+                  "value":{
+                     "path":"person.name.lastName",
+                     "operator":"EXISTS",
+                     "mapping":{
+                        "sourceType":"text/x.schema-path",
+                        "source":"person.name.lastName",
+                        "destination":"person.name.lastName",
+                        "identity":false,
+                        "primaryIdentity":false,
+                        "functionVersion":0,
+                        "copyModeMapping":false,
+                        "sourceAttribute":"person.name.lastName",
+                        "destinationXdmPath":"person.name.lastName"
+                     }
+                  }
+               },
+               {
+                  "type":"JSON_PATH",
+                  "value":{
+                     "path":"personalEmail.address",
+                     "operator":"EXISTS",
+                     "mapping":{
+                        "sourceType":"text/x.schema-path",
+                        "source":"personalEmail.address",
+                        "destination":"personalEmail.address",
+                        "identity":false,
+                        "primaryIdentity":false,
+                        "functionVersion":0,
+                        "copyModeMapping":false,
+                        "sourceAttribute":"personalEmail.address",
+                        "destinationXdmPath":"personalEmail.address"
+                     }
+                  }
+               },
+               {
+                  "type":"JSON_PATH",
+                  "value":{
+                     "path":"segmentMembership.status",
+                     "operator":"EXISTS",
+                     "mapping":{
+                        "sourceType":"text/x.schema-path",
+                        "source":"segmentMembership.status",
+                        "destination":"segmentMembership.status",
+                        "identity":false,
+                        "primaryIdentity":false,
+                        "functionVersion":0,
+                        "copyModeMapping":false,
+                        "sourceAttribute":"segmentMembership.status",
+                        "destinationXdmPath":"segmentMembership.status"
+                     }
+                  }
+               }
+            ],
+            "mandatoryFields":[
+               "person.name.firstName",
+               "person.name.lastName"
+            ],
+            "primaryFields":[
+               {
+                  "fieldType":"ATTRIBUTE",
+                  "attributePath":"personalEmail.address"
+               }
+            ]
+         },
+         "segmentSelectors":{
+            "selectors":[
+               {
+                  "type":"PLATFORM_SEGMENT",
+                  "value":{
+                     "id":"9f7d37fd-7039-4454-94ef-2b0cd6c3206a",
+                     "name":"Interested in Mountain Biking",
+                     "filenameTemplate":"%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+                     "exportMode":"DAILY_FULL_EXPORT",
+                     "schedule":{
+                        "frequency":"ONCE",
+                        "startDate":"2021-12-20",
+                        "startTime":"17:00"
+                     },
+                     "createTime":"1640016962",
+                     "updateTime":"1642534355"
+                  }
+               },
+               {
+                  "type":"PLATFORM_SEGMENT",
+                  "value":{
+                     "id":"25768be6-ebd5-45cc-8913-12fb3f348613",
+                     "name":"Loyalty Segment",
+                     "filenameTemplate":"%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+                     "exportMode":"FIRST_FULL_THEN_INCREMENTAL",
+                     "schedule":{
+                        "frequency":"EVERY_6_HOURS",
+                        "startDate":"2021-12-22",
+                        "endDate":"2021-12-31",
+                        "startTime":"17:00"
+                     },
+                     "createTime":"1640016962",
+                     "updateTime":"1642534355"
+                  }
+               }
+            ]
+         }
+      }
+   }
+]
+```
+
+## Étapes suivantes
+
+En suivant ce tutoriel, vous avez réussi à connecter Platform à l’une de vos destinations préférées de stockage dans le cloud par lots ou de marketing par e-mail et à configurer un flux de données vers la destination correspondante pour exporter les fichiers de données. Les données sortantes peuvent désormais être utilisées dans la destination pour des campagnes par e-mail, de la publicité ciblée et de nombreux autres cas d’utilisation. Consultez les pages suivantes pour plus d’informations, telles que la modification des flux de données existants à l’aide de l’API Flow Service :
+
+* [Présentation des destinations](../home.md)
+* [Présentation du catalogue des destinations](../catalog/overview.md)
+* [Mise à jour des flux de données de destination à l’aide de l’API Flow Service](../api/update-destination-dataflows.md)
