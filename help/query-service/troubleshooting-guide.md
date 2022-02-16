@@ -5,10 +5,10 @@ title: Guide de dépannage de Query Service
 topic-legacy: troubleshooting
 description: Ce document contient des informations sur les codes d’erreur courants que vous rencontrez et les causes possibles.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: ac313e2a23037507c95d6713a83ad5ca07e1cd85
+source-git-commit: 03cd013e35872bcc30c68508d9418cb888d9e260
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 20%
+source-wordcount: '1106'
+ht-degree: 14%
 
 ---
 
@@ -54,6 +54,53 @@ FROM actual_dataset a
 WHERE timestamp >= TO_TIMESTAMP('2021-01-21 12:00:00')
 AND timestamp < TO_TIMESTAMP('2021-01-21 13:00:00')
 LIMIT 100;
+```
+
+### Comment modifier le fuseau horaire en horodatage UTC ?
+
+Adobe Experience Platform conserve les données au format d’horodatage UTC (temps universel coordonné). Exemple de format UTC : `2021-12-22T19:52:05Z`
+
+Query Service prend en charge les fonctions SQL intégrées pour convertir un horodatage donné au format UTC et à partir de ce format. Les deux `to_utc_timestamp()` et le `from_utc_timestamp()` Les méthodes prennent deux paramètres : horodatage et fuseau horaire.
+
+| Paramètre | Description |
+|---|---|
+| Horodatage | L’horodatage peut être écrit au format UTC ou simple. `{year-month-day}` format. Si aucune heure n’est fournie, la valeur par défaut est minuit le matin du jour donné. |
+| Fuseau horaire | Le fuseau horaire est écrit dans une `{continent/city})` format. Il doit s’agir de l’un des codes de fuseau horaire reconnus, comme indiqué dans la variable [base de données TZ du domaine public](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+
+#### Convertir en horodatage UTC
+
+Le `to_utc_timestamp()` interprète les paramètres donnés et les convertit **à l’horodatage de votre fuseau horaire local.** au format UTC. Par exemple, le fuseau horaire à Séoul, en Corée du Sud, est UTC/GMT +9 heures. En fournissant un horodatage date seule, la méthode utilise une valeur par défaut de minuit le matin. L’horodatage et le fuseau horaire sont convertis au format UTC de l’heure de cette région en horodatage UTC de votre région locale.
+
+```SQL
+SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
+```
+
+La requête renvoie un horodatage à l’heure locale de l’utilisateur. Dans ce cas, la veille à 15h00 comme à Séoul, il y a neuf heures d&#39;avance.
+
+```
+2021-08-30 15:00:00
+```
+
+Autre exemple : si l’horodatage donné a été `2021-07-14 12:40:00.0` pour le `Asia/Seoul` fuseau horaire, l’horodatage UTC renvoyé serait `2021-07-14 03:40:00.0`
+
+La sortie de console fournie dans l’interface utilisateur de Query Service est plus lisible :
+
+```
+8/30/2021, 3:00 PM
+```
+
+### Convertir à partir de l’horodatage UTC
+
+Le `from_utc_timestamp()` interprète les paramètres donnés. **à partir de l’horodatage de votre fuseau horaire local** et fournit l’horodatage équivalent de la région souhaitée au format UTC. Dans l’exemple ci-dessous, l’heure est 14 h 40 dans le fuseau horaire local de l’utilisateur. Le fuseau horaire de Séoul passé en tant que variable est neuf heures avant le fuseau horaire local.
+
+```SQL
+SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
+```
+
+La requête renvoie un horodatage au format UTC pour le fuseau horaire transmis en tant que paramètre. Le résultat est neuf heures avant le fuseau horaire qui a exécuté la requête.
+
+```
+8/31/2021, 11:40 PM
 ```
 
 ### Comment dois-je filtrer mes données de série temporelle ?
@@ -149,7 +196,7 @@ Il ne s’agit pas d’une fonctionnalité que Query Service propose directement
 
 | Code erreur | État de la connexion | Description | Cause possible |
 | ---------- | ---------------- | ----------- | -------------- |
-| **08P01** | S.O. | Type de message non pris en charge | Type de message non pris en charge |
+| **08P01** | S/O | Type de message non pris en charge | Type de message non pris en charge |
 | **28P01** | Démarrage - authentification | Mot de passe non valide | Jeton d’authentification non valide |
 | **28000** | Démarrage - authentification | Type d’autorisation non valide | Type d’autorisation non valide. Doit être `AuthenticationCleartextPassword`. |
 | **42P12** | Démarrage - authentification | Aucune table trouvée | Aucune table n’a été trouvée pour utilisation |
