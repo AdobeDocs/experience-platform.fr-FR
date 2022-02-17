@@ -6,9 +6,9 @@ title: Surveillance des flux de données pour les sources dans l’interface uti
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '1856'
+source-wordcount: '1862'
 ht-degree: 9%
 
 ---
@@ -41,7 +41,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Ingestion source"
->abstract="Le traitement des sources contient des informations sur l’état de l’activité de données et des mesures dans le service de lac de données, y compris les enregistrements ingérés et les enregistrements ayant échoué. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
+>abstract="La vue Ingestion source contient des informations sur l’état et les mesures de l’activité de données dans le service de lac de données, y compris les enregistrements ingérés et les enregistrements ayant échoué. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -151,7 +151,7 @@ Sélectionner **[!UICONTROL Identités]** pour afficher l’ingestion dans la va
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Traitement des identités"
->abstract="Le traitement des identités contient des informations sur les enregistrements ingérés dans le service Identity, notamment le nombre d’identités ajoutées, les graphiques créés et les graphiques mis à jour. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
+>abstract="La vue de traitement des identités contient des informations sur les enregistrements ingérés dans le service Identity, notamment le nombre d’identités ajoutées, les graphiques créés et les graphiques mis à jour. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -194,7 +194,7 @@ Dans la [!UICONTROL Traitement des identités] page, sélectionnez **[!UICONTROL
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="Traitement des profils"
->abstract="Le traitement des profils contient des informations sur les enregistrements ingérés dans le service Profile, notamment le nombre de fragments de profil créés, de fragments de profil mis à jour et le nombre total de fragments de profil."
+>abstract="La vue Traitement des profils contient des informations sur les enregistrements ingérés dans le service Profile, notamment le nombre de fragments de profil créés, de fragments de profil mis à jour et le nombre total de fragments de profil."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
