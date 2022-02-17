@@ -5,7 +5,7 @@ title: Point de terminaison de l’API de mesures
 topic-legacy: developer guide
 description: Découvrez comment récupérer les mesures d’observabilité dans Experience Platform à l’aide de l’API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 365fb476fa80f665ddd43bf85ec22533ee0c8ad8
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 45%
@@ -282,7 +282,7 @@ Le tableau suivant décrit les mesures pour [!DNL Real-time Customer Profile].
 | timeseries.profiles.dataset.batchsuccess.count | Nombre [!DNL Profile] lots ingérés pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.profiles.dataset.batchfailed.count | Nombre [!DNL Profile] les lots ont échoué pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | platform.ups.ingest.streaming.request.m1_rate | Taux de requêtes entrantes. | Organisation IMS (**Obligatoire**) |
-| platform.ups.ingest.streaming.access.put.success.m1_rate | Taux de réussite d’ingestion. | Organisation IMS (**Obligatoire**) |
+| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | Taux de réussite d’ingestion. | Organisation IMS (**Obligatoire**) |
 | platform.ups.ingest.streaming.records.created.m15_rate | Taux de nouveaux enregistrements ingérés pour un jeu de données. | Identifiant du jeu de données (**Obligatoire**) |
 | platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Taux d’enregistrements horodatés en désordre de requête de création pour un jeu de données. | Identifiant du jeu de données (**Obligatoire**) |
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Horodatage de la dernière requête d’enregistrement de création pour un jeu de données. | Identifiant du jeu de données (**Obligatoire**) |
