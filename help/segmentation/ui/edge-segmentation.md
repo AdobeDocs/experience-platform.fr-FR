@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur d’Edge Segmentation
 topic-legacy: ui guide
 description: La segmentation Edge permet d’évaluer instantanément les segments dans Platform, ce qui permet d’utiliser des cas de personnalisation de page et de page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 522a6a005bc4b9d5059b4de3ceb0a24f7767caad
+source-git-commit: 0173fbd36791f837e0d0336f9fa7bcc84e64909f
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Une requête peut être évaluée avec une segmentation Edge si elle répond à 
 | Événement unique qui fait référence à un profil | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un seul événement entrant sans restriction temporelle. | Des personnes qui vivent aux États-Unis et ont visité la page d&#39;accueil. |
 | Événement unique dégradé avec un attribut de profil | Toute définition de segment qui fait référence à un seul événement entrant négatif et à un ou plusieurs attributs de profil | Personnes qui vivent aux Etats-Unis et qui ont **not** a visité la page d’accueil. |
 | Événement unique dans une fenêtre de temps de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans les 24 heures. | Les personnes qui ont consulté la page d’accueil au cours des dernières 24 heures. |
-| Événement unique avec un attribut de profil dans une fenêtre de temps de 24 heures | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un événement entrant unique annulé dans les 24 heures. | Des personnes qui vivent aux États-Unis et ont visité la page d&#39;accueil au cours des dernières 24 heures. |
+| Événement unique avec un attribut de profil dans une fenêtre de temps de 24 heures | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un seul événement entrant dans les 24 heures. | Des personnes qui vivent aux États-Unis et ont visité la page d&#39;accueil au cours des dernières 24 heures. |
 | Evénement unique dégradé avec un attribut de profil dans une fenêtre de temps de 24 heures | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un événement entrant unique annulé dans les 24 heures. | Personnes qui vivent aux Etats-Unis et qui ont **not** a visité la page d’accueil au cours des dernières 24 heures. |
 | Événement de fréquence dans un intervalle de temps de 24 heures | Toute définition de segment qui fait référence à un événement qui se produit un certain nombre de fois dans une fenêtre temporelle de 24 heures. | Personnes ayant consulté la page d’accueil **au moins** cinq fois au cours des dernières 24 heures. |
 | Événement de fréquence avec un attribut de profil dans un intervalle de temps de 24 heures | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un événement qui se produit un certain nombre de fois dans une fenêtre temporelle de 24 heures. | Personnes des Etats-Unis qui ont visité la page d&#39;accueil **au moins** cinq fois au cours des dernières 24 heures. |
