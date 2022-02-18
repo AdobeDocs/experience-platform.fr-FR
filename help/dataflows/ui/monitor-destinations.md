@@ -6,9 +6,9 @@ title: Surveillance des flux de données pour les destinations dans l’interfac
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: 18a6a693f664211428d4c153fd9849cc3ac2ee47
 workflow-type: tm+mt
-source-wordcount: '3205'
+source-wordcount: '3124'
 ht-degree: 2%
 
 ---
@@ -46,24 +46,6 @@ Pour plus d’informations sur les statuts, voir le tableau suivant :
 | Erreur | Le `Error` Le statut indique que le processus d’activation d’un flux de données a été interrompu. |
 
 ### Exécutions de flux de données pour les destinations de diffusion en continu {#dataflow-runs-for-streaming-destinations}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesactivated"
->title="Identités activées"
->abstract="Nombre d’identités de profil individuelles activées avec succès vers la destination sélectionnée."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesexcluded"
->title="Identités exclues"
->abstract="Le nombre d’enregistrements de profil individuels exclus de l’activation pour la destination sélectionnée en fonction des attributs manquants et de la violation du consentement."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesfailed"
->title="Identités en échec"
->abstract="Le nombre d’identités de profil individuelles qui ont échoué pour la destination sélectionnée. Pour plus d’informations, consultez les diagnostics d’erreur."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="En savoir plus dans la documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
@@ -129,12 +111,6 @@ La page Détails affiche également une liste des identités qui ont échoué et
 ![Enregistrements de flux de données pour les destinations de diffusion en continu](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
 ### Les flux de données s’exécutent pour les destinations par lots. {#dataflow-runs-for-batch-destinations}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_profiles_received"
->title="Profils reçus"
->abstract="Nombre total de profils reçus dans le flux de données. Cette valeur est mise à jour toutes les 60 minutes."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
