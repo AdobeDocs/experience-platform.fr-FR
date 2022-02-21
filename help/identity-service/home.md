@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;identité;Identité;graphiques XDM;identity service;Identity service
+keywords: Experience Platform;accueil;rubriques populaires;identité;Identité;graphiques XDM;identity service;Identity service
 solution: Experience Platform
 title: Présentation dʼIdentity Service
 topic-legacy: overview
-description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: eb0fe2267416c5053cb589cc6d147324cc31c985
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 100%
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes ; chaque client semble alors posséder plusieurs « identités ».
 
-Adobe Experience Platform Identity Service vous offre la possibilité de mieux connaître vos clients et leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+Adobe Experience Platform Identity Service vous offre la possibilité de mieux connaître vos clients et leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
 
 Avec [!DNL Identity Service], vous pouvez réaliser les actions suivantes :
 
@@ -30,8 +30,8 @@ Avant de rentrer dans les détails de [!DNL Identity Service], voici un résumé
 
 | Terme | Définition |
 | --- | --- |
-| Identité | Une identité correspond à des données propres à une entité, généralement une personne individuelle. Une identité telle qu’un identifiant de connexion, un ECID ou un identifiant de fidélité correspond à une « identité connue ». |
-| ECID | L’identifiant Experience Cloud ID (ECID) est un espace de noms d’identité partagé utilisé dans les applications Experience Platform et Adobe Experience Cloud. ECID fournit une base pour l’identité du client et est utilisé comme ID principal pour les appareils et comme nœud de base pour les graphiques d’identités. Pour plus d’informations, consultez la [présentation ECID](./ecid.md). |
+| Identité | Une identité correspond à des données propres à une entité, généralement une personne individuelle. Une identité telle qu’un identifiant de connexion, un ECID ou un identifiant de fidélité correspond à une « identité connue ». |
+| ECID | L’identifiant Experience Cloud ID (ECID) est un espace de noms d’identité partagé utilisé dans les applications Experience Platform et Adobe Experience Cloud. ECID fournit une base pour l’identité du client et est utilisé comme ID principal pour les appareils et comme nœud de base pour les graphiques d’identités. Pour plus d’informations, consultez la [présentation ECID](./ecid.md). |
 | Espace de noms d’identité | Un espace de noms d’identité sert à distinguer le contexte ou le type d’une identité. Par exemple, une identité identifie « name<span>@email.com » comme adresse e-mail ou « 443522 » comme identifiant CRM numérique. Les espaces de noms d’identité sont utilisés pour rechercher des identités individuelles et fournir le contexte des valeurs d’identité. Cela vous permet de déterminer que deux fragments [!DNL Profile] contenant des identifiants principaux différents mais partageant la même valeur pour l’espace de noms d’identité `email` sont en fait la même personne. Pour plus d’informations, voir [Présentation des espaces de noms d’identité](./namespaces.md). |
 | Graphique d’identités | Un graphique d’identités est une carte des relations entre différentes identités, ce qui vous permet de visualiser et de mieux comprendre les identités de client qui sont regroupées et comment. Pour plus d’informations, consultez le tutoriel sur [à l’aide de la visionneuse de graphiques d’identités](./ui/identity-graph-viewer.md). |
 | Informations d’identification personnelle (PII) | Les PII sont des informations qui permettent d’identifier directement un client, telles qu’une adresse e-mail ou un numéro de téléphone. Les valeurs des PII sont souvent utilisées pour faire correspondre. les identités multiples d’un client sur différents systèmes. |
@@ -82,11 +82,11 @@ La vidéo suivante est destinée à étayer votre compréhension des identités 
 
 ## Fourniture de données dʼidentité à [!DNL Identity Service]
 
-Cette section décrit le traitement des données fournies à Adobe Experience Platform avant quʼelles ne soient utilisées par [!DNL Identity Service] pour créer un graphique dʼidentité pour chaque client.
+Cette section décrit le traitement des données fournies à Adobe Experience Platform avant quʼelles ne soient utilisées par [!DNL Identity Service] pour créer un graphique dʼidentité pour chaque client.
 
 ### Choix des champs d’identité
 
-En fonction de la stratégie de collecte de données de votre entreprise, les champs de données que vous désignez comme identités déterminent les données qui sont incluses dans votre carte d’identité. Pour tirer le meilleur parti d’Adobe Experience Platform et obtenir les identités de clients les plus complètes possible, vous devez charger des données en ligne et hors ligne.
+En fonction de la stratégie de collecte de données de votre entreprise, les champs de données que vous désignez comme identités déterminent les données qui sont incluses dans votre carte d’identité. Pour tirer le meilleur parti d’Adobe Experience Platform et obtenir les identités de clients les plus complètes possible, vous devez charger des données en ligne et hors ligne.
 
 - Les données en ligne décrivent la présence et le comportement en ligne, comme les noms d’utilisateur et les adresses électroniques.
 
@@ -94,7 +94,7 @@ En fonction de la stratégie de collecte de données de votre entreprise, les ch
 
 ### Création d’espaces de noms d’identité supplémentaires
 
-Bien qu’Experience Platform offre de nombreux espaces de noms standard, vous devrez peut-être créer des espaces de noms supplémentaires pour classer correctement vos identités. Pour plus d’informations, consultez la section sur la [consultation et création d’espaces de noms pour votre organisation](./namespaces.md) dans la présentation des espaces de noms d’identité.
+Bien qu’Experience Platform offre de nombreux espaces de noms standard, vous devrez peut-être créer des espaces de noms supplémentaires pour classer correctement vos identités. Pour plus d’informations, consultez la section sur la [consultation et création d’espaces de noms pour votre organisation](./namespaces.md) dans la présentation des espaces de noms d’identité.
 
 >[!NOTE]
 >
@@ -102,7 +102,7 @@ Bien qu’Experience Platform offre de nombreux espaces de noms standard, vous d
 
 ### Inclusion des données dʼidentité dans [!DNL Experience Data Model] (XDM)
 
-En tant que cadre normalisé selon lequel [!DNL Platform] organise les données clients, [!DNL Experience Data Model] (XDM) permet de partager et de comprendre les données utilisées sur Experience Platform et d’autres services interagissant avec [!DNL Platform]. Pour plus d’informations, consultez la [présentation du système XDM](../xdm/home.md).
+En tant que cadre normalisé selon lequel [!DNL Platform] organise les données clients, [!DNL Experience Data Model] (XDM) permet de partager et de comprendre les données utilisées sur Experience Platform et d’autres services interagissant avec [!DNL Platform]. Pour plus d’informations, consultez la [présentation du système XDM](../xdm/home.md).
 
 Les schémas d’enregistrement et de série temporelle permettent d’inclure des données d’identité. À mesure que les données sont ingérées, le graphique d’identités crée de nouvelles relations entre les fragments de données provenant de différents espaces de noms s’il s’avère qu’ils partagent des données d’identité communes.
 
@@ -127,9 +127,9 @@ Pendant le processus dʼingestion par flux, [!DNL Identity Service ]extrait auto
 
 ### Envoi de données à [!DNL Identity Service]
 
-[!DNL Identity Service] consomme des données conformes à XDM envoyées à Experience Platform par [ingestion par lots](../ingestion/batch-ingestion/overview.md) ou [ingestion par flux](../ingestion/streaming-ingestion/overview.md).
+[!DNL Identity Service] consomme des données conformes à XDM envoyées à Experience Platform par [ingestion par lots](../ingestion/batch-ingestion/overview.md) ou [ingestion par flux](../ingestion/streaming-ingestion/overview.md).
 
-La vidéo suivante est destinée à vous aider à comprendre Identity Service. Cette vidéo explique comment libeller les champs de données comme des identités, ingérer les données dʼidentité, puis vérifier que les données ont été enregistrées dans le graphique Privé dʼAdobe Experience Platform Identity Service.
+La vidéo suivante est destinée à vous aider à comprendre Identity Service. Cette vidéo explique comment libeller les champs de données comme des identités, ingérer les données dʼidentité, puis vérifier que les données ont été enregistrées dans le graphique Privé dʼAdobe Experience Platform Identity Service.
 
 >[!WARNING]
 >
@@ -139,8 +139,8 @@ La vidéo suivante est destinée à vous aider à comprendre Identity Service. C
 
 ## Gouvernance des données
 
-Adobe Experience Platform a été conçue dans une optique de confidentialité et comprend une structure de gouvernance des données pour protéger les données PII de vos clients. Les données d’identité sous l’espace de noms « e-mail » ou « téléphone » sont chiffrées par défaut. Toutefois, pour s’assurer que les données sensibles sont chiffrées avant qu’elles ne soient conservées, des libellés d’utilisation des données peuvent être appliqués aux données lors de leur ingestion ou lorsqu’elles arrivent dans [!DNL Platform]. Pour plus d’informations, consultez la [présentation de la gouvernance des données](../data-governance/home.md).
+Adobe Experience Platform a été conçue dans une optique de confidentialité et comprend une structure de gouvernance des données pour protéger les données PII de vos clients. Les données d’identité sous l’espace de noms « e-mail » ou « téléphone » sont chiffrées par défaut. Toutefois, pour s’assurer que les données sensibles sont chiffrées avant qu’elles ne soient conservées, des libellés d’utilisation des données peuvent être appliqués aux données lors de leur ingestion ou lorsqu’elles arrivent dans [!DNL Platform]. Pour plus d’informations, consultez la [présentation de la gouvernance des données](../data-governance/home.md).
 
 ## Étapes suivantes
 
-Maintenant que vous comprenez les concepts clés du [!DNL Identity Service] et son rôle au sein d’Experience Platform, vous pouvez commencer à apprendre à travailler avec votre graphique d’identités à l’aide de l’[[!DNL Identity Service API]](./api/getting-started.md).
+Maintenant que vous comprenez les concepts clés du [!DNL Identity Service] et son rôle au sein d’Experience Platform, vous pouvez commencer à apprendre à travailler avec votre graphique d’identités à l’aide de l’[[!DNL Identity Service API]](./api/getting-started.md).
