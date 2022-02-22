@@ -6,9 +6,9 @@ title: Surveillance des flux de données pour les destinations dans l’interfac
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 18a6a693f664211428d4c153fd9849cc3ac2ee47
+source-git-commit: 387e10038f61a7444a16f4e6270a62082446c09d
 workflow-type: tm+mt
-source-wordcount: '3124'
+source-wordcount: '3269'
 ht-degree: 2%
 
 ---
@@ -90,8 +90,10 @@ Une liste des exécutions individuelles et de leurs mesures spécifiques s’aff
 
 Chaque exécution de flux de données individuelle affiche les détails suivants :
 
-- **[!UICONTROL Démarrage de l’exécution du flux de données]**: Heure à laquelle le flux de données a commencé.
+- **[!UICONTROL Démarrage de l’exécution du flux de données]**: Heure à laquelle le flux de données a commencé. Pour les exécutions de flux de données en continu, Experience Platform capture les mesures en fonction du début de l’exécution du flux de données, sous la forme de mesures horaires. Pour les exécutions de flux de données en continu, si une exécution de flux de données a commencé, par exemple à 22 h 30, la mesure affiche l’heure de début sur 22 h dans l’interface utilisateur.
 - **[!UICONTROL Temps de traitement]**: Le temps nécessaire au traitement du flux de données.
+   - Pour **[!UICONTROL terminé]** s’exécute, la mesure de temps de traitement affiche toujours une heure.
+   - Pour les exécutions de flux de données qui se trouvent toujours dans une **[!UICONTROL traitement]** , la fenêtre permettant de capturer toutes les mesures reste ouverte pendant plus d’une heure, afin de traiter toutes les mesures qui correspondent à l’exécution du flux de données. Par exemple, une exécution de flux de données démarrée à 9h30 peut rester en état de traitement pendant une heure et demie pour capturer et traiter toutes les mesures. Ensuite, lorsque la fenêtre de traitement se ferme et que l’état du flux de données s’exécute, la fonction **terminé**, le temps de traitement affiché est remplacé par une heure.
 - **[!UICONTROL Profils reçus]**: Nombre total de profils reçus dans le flux de données.
 - **[!UICONTROL Identités activées]**: Nombre total d’identités de profil qui ont été activées avec succès vers la destination sélectionnée.
 - **[!UICONTROL Identités exclues]**: Nombre total d’identités de profil qui sont exclues de l’activation en fonction d’attributs manquants et de la violation du consentement.
