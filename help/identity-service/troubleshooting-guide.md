@@ -3,18 +3,18 @@ keywords: Experience Platform;accueil;rubriques populaires;espace de noms d’id
 solution: Experience Platform
 title: Guide de dépannage d’Identity Service
 topic-legacy: troubleshooting
-description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Identity Service, ainsi qu’un guide de dépannage pour les erreurs courantes.
+description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Identity Service, ainsi qu’un guide de dépannage pour les erreurs courantes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
+source-git-commit: 80530705f5f8d30294ad31e00d8956257ee2c085
 workflow-type: tm+mt
-source-wordcount: '2177'
-ht-degree: 84%
+source-wordcount: '2236'
+ht-degree: 82%
 
 ---
 
 # Guide de dépannage d’Identity Service
 
-Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform [!DNL Identity Service], ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question ou dépannage concernant les API [!DNL Platform] en général, consultez le [guide de dépannage de l’API Adobe Experience Platform](../landing/troubleshooting.md).
+Ce document répond aux questions les plus fréquemment posées sur Adobe Experience Platform [!DNL Identity Service], ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question ou dépannage concernant [!DNL Platform] Les API en général, voir [Guide de dépannage des API Adobe Experience Platform](../landing/troubleshooting.md).
 
 Les données qui identifient un client unique sont souvent fragmentées sur les différents appareils et systèmes qu’il utilise pour interagir avec votre marque. [!DNL Identity Service] rassemble ces identités fragmentées, ce qui permet une compréhension complète du comportement des clients afin que vous puissiez offrir des expériences numériques percutantes en temps réel. Pour plus d’informations, voir la [Présentation d’Identity Service](./home.md).
 
@@ -72,9 +72,9 @@ Les champs d’identité doivent être associés à un espace de noms d’identi
 
 Pour obtenir des instructions détaillées sur la définition d’un espace de noms lors de la création d’un descripteur d’identité à l’aide de l’API, reportez-vous à la section relative à la [création d’un descripteur](../xdm/tutorials/create-schema-ui.md) dans le guide de développement du registre des schémas. Pour marquer un champ de schéma comme identité dans l’interface utilisateur, suivez les étapes du [tutoriel de l’éditeur de schéma](../xdm/tutorials/create-schema-api.md).
 
-## Quels sont les espaces de noms d’identité standards fournis par Experience Platform ? {#standard-namespaces}
+## Quels sont les espaces de noms d’identité standards fournis par Experience Platform ? {#standard-namespaces}
 
-Les espaces de noms d’identité standard sont des espaces de noms disponibles pour toutes les organisations. Voir la [présentation des espaces de noms d’identité](./namespaces.md) pour obtenir la liste complète des espaces de noms standard disponibles.
+Les espaces de noms d’identité standard sont des espaces de noms disponibles pour toutes les organisations. Voir [Espaces de noms d’identité - Aperçu](./namespaces.md) pour obtenir la liste complète des espaces de noms standard disponibles.
 
 ## Où trouver la liste des espaces de noms d’identité disponibles pour mon organisation ?
 
@@ -120,13 +120,17 @@ Internal solutions|Preferred|Common
 
 --- -->
 
+## Pourquoi ne puis-je pas accéder à la page de graphique d’identités ou aux API ?
+
+Votre administrateur Platform doit vous fournir les `view-identity-graph` autorisation afin que vous puissiez afficher les données du graphique d’identités. Sans cette autorisation, vous recevrez un message de refus d’autorisation sur la page de la visionneuse de graphiques d’identités et lors de l’appel des API Platform. Voir [présentation du contrôle d’accès](../access-control/home.md) pour plus d’informations sur les autorisations.
+
 ## Dépannage
 
-La section suivante fournit des suggestions de dépannage pour les codes d’erreur spécifiques et les comportements inattendus que vous pouvez rencontrer lors de l’utilisation de l’API [!DNL Identity Service].
+La section suivante fournit des suggestions de dépannage pour des codes d’erreur spécifiques et des comportements inattendus que vous pouvez rencontrer lors de l’utilisation de la fonction [!DNL Identity Service] API.
 
 ## [!DNL Identity Service] messages d’erreur
 
-Voici une liste des messages d’erreur que vous pouvez rencontrer lors de l’utilisation de l’API [!DNL Identity Service].
+Voici une liste des messages d’erreur que vous pouvez rencontrer lors de l’utilisation de la variable [!DNL Identity Service] API.
 
 ### Paramètre de requête obligatoire manquant
 
@@ -195,7 +199,7 @@ Ce message d’erreur s’affiche lorsque vous tentez de récupérer des informa
 }
 ```
 
-Ce message d’erreur s’affiche lorsqu’une valeur non valide est attribuée à un paramètre de requête `graph-type` dans le chemin de requête. Consultez la section [graphiques d’identités](./home.md) dans la [!DNL Identity Service] présentation pour savoir quels types de graphiques sont pris en charge.
+Ce message d’erreur s’affiche lorsqu’une valeur non valide est attribuée à un paramètre de requête `graph-type` dans le chemin de requête. Voir la section sur [graphiques d’identités](./home.md) dans le [!DNL Identity Service] pour savoir quels types de graphique sont pris en charge.
 
 ### Le jeton de service ne possède pas d’étendue valide
 
@@ -219,7 +223,7 @@ Ce message d’erreur s’affiche lorsque votre organisation IMS n’a pas reçu
 }
 ```
 
-Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d’accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser les API [!DNL Platform]. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis).
+Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d’accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser [!DNL Platform] API. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
 
 ### Jeton de service d’autorisation non valide
 
@@ -231,7 +235,7 @@ Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d
 }
 ```
 
-Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d’accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser les API [!DNL Platform]. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en).
+Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d’accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser [!DNL Platform] API. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en).
 
 ### Le jeton utilisateur n’a pas de contexte de produit valide
 
@@ -243,7 +247,7 @@ Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d
 }
 ```
 
-Ce message d’erreur s’affiche lorsque votre jeton d’accès n’a pas été généré à partir d’une intégration [!DNL Experience Platform]. Consultez le [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en) pour obtenir des instructions sur la génération de jetons d’accès pour une intégration [!DNL Experience Platform].
+Ce message d’erreur s’affiche lorsque votre jeton d’accès n’a pas été généré à partir d’une [!DNL Experience Platform] intégration. Voir [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en) pour obtenir des instructions sur la génération de jetons d’accès pour une [!DNL Experience Platform] intégration.
 
 ### Erreur interne lors de l’obtention du XID natif à partir d’un code d’identité et d’espace de noms
 
@@ -255,9 +259,9 @@ Ce message d’erreur s’affiche lorsque votre jeton d’accès n’a pas été
 }
 ```
 
-Lorsque [!DNL Identity Service] persiste une identité, l’identifiant de l’identité et l’identifiant d’espace de noms associé se voient attribuer un identifiant unique appelé XID. Ce message s’affiche lorsqu’une erreur se produit lors du processus de recherche de l’XID pour une valeur d’identifiant et un espace de noms donnés.
+When [!DNL Identity Service] persiste une identité, l’identifiant de l’identité et l’identifiant de l’espace de noms associé se voient attribuer un identifiant unique appelé XID. Ce message s’affiche lorsqu’une erreur se produit lors du processus de recherche de l’XID pour une valeur d’identifiant et un espace de noms donnés.
 
-### L’organisation IMS n’est pas configurée pour l’utilisation de [!DNL Identity Service]
+### L’organisation IMS n’est pas configurée pour [!DNL Identity Service] usage
 
 ```json
 {
@@ -279,13 +283,13 @@ Ce message d’erreur s’affiche lorsque votre organisation IMS n’a pas reçu
 }
 ```
 
-Cette erreur s’affiche lorsqu’une exception inattendue se produit dans l’exécution d’un appel de service [!DNL Platform]. La bonne pratique consiste à programmer vos appels automatisés afin de relancer leurs requêtes à un intervalle de temps donné lors de la réception de cette erreur. Si le problème persiste, contactez votre administrateur système.
+Cette erreur s’affiche lorsqu’une exception inattendue se produit dans l’exécution d’un événement [!DNL Platform] appel de service. La bonne pratique consiste à programmer vos appels automatisés afin de relancer leurs requêtes à un intervalle de temps donné lors de la réception de cette erreur. Si le problème persiste, contactez votre administrateur système.
 
 ## Codes d’erreur d’ingestion par lots
 
 [!DNL Identity Service] ingère des données d’identité à partir des données d’enregistrement et de série temporelle téléchargées dans à l’aide de la fonction d’ingestion par lots. [!DNL Platform] L’ingestion par lots est un processus asynchrone, vous devez afficher les détails d’un lot pour voir les erreurs. Les erreurs s’accumulent au fur et à mesure que le lot avance, jusqu’à ce que le traitement du lot soit terminé.
 
-Vous trouverez ci-dessous une liste des messages d’erreur relatifs à [!DNL Identity Service] que vous pouvez rencontrer lors de l’utilisation de l’[API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
+Voici une liste des messages d’erreur liés à [!DNL Identity Service] vous pouvez rencontrer lors de l’utilisation de la variable [API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
 
 ### Schéma XDM inconnu
 
@@ -297,7 +301,7 @@ Vous trouverez ci-dessous une liste des messages d’erreur relatifs à [!DNL Id
 }
 ```
 
-[!DNL Identity Service] utilise uniquement des identités pour les données d’enregistrement ou de série temporelle conformes aux  [!DNL Profile] classes ou  [!DNL ExperienceEvent] , respectivement. Toute tentative d’ingestion de données pour [!DNL Identity Service] qui n’adhère à aucune des classes déclenchera cette erreur.
+[!DNL Identity Service] utilise uniquement des identités pour les données d’enregistrement ou de série temporelle conformes à la variable [!DNL Profile] ou [!DNL ExperienceEvent] , respectivement. Tentative d’ingestion de données pour [!DNL Identity Service] qui ne respecte aucune des classes déclenche cette erreur.
 
 ### Aucune identité valide dans les 100 premières lignes du lot traité
 
