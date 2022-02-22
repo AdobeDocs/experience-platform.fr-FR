@@ -5,24 +5,21 @@ title: Création d’une connexion source CRM Zoho dans l’interface utilisateu
 topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Zoho CRM à l’aide de l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: 030789af0a049b54d6e271410836c08456a83441
+exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
+source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 10%
+source-wordcount: '551'
+ht-degree: 11%
 
 ---
 
 # Créez un [!DNL Zoho CRM] connexion source dans l’interface utilisateur
 
->[!NOTE]
->
-> Le [!DNL Zoho CRM] La source est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs bêta-étiquetés.
-
 Les connecteurs source de Adobe Experience Platform permettent d’ingérer des données CRM externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Zoho CRM] connecteur source à l’aide de [!DNL Platform] de l’interface utilisateur.
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Experience Platform] organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
