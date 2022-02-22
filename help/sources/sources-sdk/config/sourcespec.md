@@ -5,13 +5,13 @@ topic-legacy: overview
 description: Ce document présente les configurations que vous devez préparer pour utiliser le SDK Sources.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
+source-git-commit: 4c4c89ab7db7d3546163d707ac80210561c2fa02
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '861'
 ht-degree: 1%
 
 ---
-
 
 # Configuration de la spécification source pour le SDK Sources
 
@@ -28,57 +28,199 @@ Voir [annexe](#source-spec) pour un exemple de spécification source entièremen
       "isPreview": true,
       "isBeta": true,
       "category": {
-        "key": "{CATEGORY}"
+        "key": "protocols"
       },
       "icon": {
-        "key": "{ICON}"
+        "key": "genericRestIcon"
       },
       "description": {
-        "key": "{DESCRIPTION}"
+        "key": "genericRestDescription"
       },
       "label": {
-        "key": "{LABEL}"
+        "key": "genericRestLabel"
       }
     },
-    "urlParams": {
-      "path": "{RESOURCE_PATH}",
-      "method": "{GET_or_POST}",
-      "queryParams": "{QUERY_PARAMS}"
-    },
-    "headerParams": "{HEADER_VALUES}",
-    "bodyParams": "{BODY_PARAMS_USED_IF_METHOD_IS_POST}",
-    "contentPath": {
-      "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
-      "skipAttributes": [],
-      "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}",
-      "keepAttributes": ["action", "type", "timestamp"]
-    },
-    "explodeEntityPath": {
-      "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
-      "skipAttributes": [],
-      "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}",
-      "keepAttributes": ["action", "type", "timestamp"]
-    },
-    "paginationParams": {
-      "type": "{OFFSET_OR_POINTER}",
-      "limitName": "{NUMBER_OF_RECORDS_ATTRIBUTE_NAME}",
-      "limitValue": "{NUMBER_OF_RECORDS_PER_PAGE}",
-      "offSetName": "{OFFSET_ATTRIBUTE_NAME_REQUIRED_IN_CASE_OF_OFFSET BASED_PAGINATION}",
-      "pointerName": "{POINTER_PATH_REQUIRED_IN__CASE_OF_POINTER BASED_PAGINATION}"
-    },
-    "scheduleParams": {
-      "scheduleStartParamName": "{START_TIME_PARAMETER_NAME}",
-      "scheduleEndParamName": "{END_TIME_PARAMETER_NAME}",
-      "scheduleStartParamFormat": "{DATE_TIME_FORMAT_FOR_START_TIME}",
-      "scheduleEndParamFormat": "{END_TIME_FORMAT_FOR_START_TIME}"
+    "spec": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "description": "Defines static and user input parameters to fetch resource values.",
+      "properties": {
+        "urlParams": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Enter resource path",
+              "example": "/3.0/reports/campaignId/email-activity"
+            },
+            "method": {
+              "type": "string",
+              "description": "HTTP method type.",
+              "enum": [
+                "GET",
+                "POST"
+              ]
+            },
+            "queryParams": {
+              "type": "object",
+              "description": "The query parameters in json format",
+            }
+          },
+          "required": [
+            "path",
+            "method"
+          ]
+        },
+        "headerParams": {
+          "type": "object",
+          "description": "The header parameters in json format",
+        },
+        "contentPath": {
+          "type": "object",
+          "description": "The parameters required for main collection content.",
+          "properties": {
+            "path": {
+              "description": "The path to the main content.",
+              "type": "string",
+              "example": "$.emails"
+            },
+            "skipAttributes": {
+              "type": "array",
+              "description": "The list of attributes that needs to be skipped while fattening the array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "keepAttributes": {
+              "type": "array",
+              "description": "The list of attributes that needs to be kept while fattening the array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "overrideWrapperAttribute": {
+              "type": "string",
+              "description": "The new name to be used for the root content path node.",
+              "example": "email"
+            }
+          },
+          "required": [
+            "path"
+          ]
+        },
+        "explodeEntityPath": {
+          "type": "object",
+          "description": "The parameters required for the sub-array content.",
+          "properties": {
+            "path": {
+              "description": "The path to the sub-array content.",
+              "type": "string",
+              "example": "$.email.activity"
+            },
+            "skipAttributes": {
+              "type": "array",
+              "description": "The list of attributes that needs to be skipped while fattening sub-array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "keepAttributes": {
+              "type": "array",
+              "description": "The list of attributes that needs to be kept while fattening the sub-array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "overrideWrapperAttribute": {
+              "type": "string",
+              "description": "The new name to be used for the  root content path node.",
+              "example": "activity"
+            }
+          },
+          "required": [
+            "path"
+          ]
+        },
+        "paginationParams": {
+          "type": "object",
+          "description": "The parameters required to fetch data using pagination.",
+          "properties": {
+            "type": {
+              "description": "The pagination fetch type.",
+              "type": "string",
+              "enum": [
+                "OFFSET",
+                "POINTER"
+              ]
+            },
+            "limitName": {
+              "type": "string",
+              "description": "The limit property name",
+              "example": "limit or count"
+            },
+            "limitValue": {
+              "type": "integer",
+              "description": "The number of records to fetch per page.",
+              "example": "limit=10 or count=10"
+            },
+            "offsetName": {
+              "type": "string",
+              "description": "The offset property name",
+              "example": "offset"
+            },
+            "pointerPath": {
+              "type": "string",
+              "description": "The path to pointer property",
+              "example": "$.paging.next"
+            }
+          },
+          "required": [
+            "type",
+            "limitName",
+            "limitValue"
+          ]
+        },
+        "scheduleParams": {
+          "type": "object",
+          "description": "The parameters required to fetch data for batch schedule.",
+          "properties": {
+            "scheduleStartParamName": {
+              "type": "string",
+              "description": "The order property name to get the order by date."
+            },
+            "scheduleEndParamName": {
+              "type": "string",
+              "description": "The order property name to get the order by date."
+            },
+            "scheduleStartParamFormat": {
+              "type": "string",
+              "description": "The order property name to get the order by date.",
+              "example": "yyyy-MM-ddTHH:mm:ssZ"
+            },
+            "scheduleEndParamFormat": {
+              "type": "string",
+              "description": "The order property name to get the order by date.",
+              "example": "yyyy-MM-ddTHH:mm:ssZ"
+            }
+          },
+          "required": [
+            "scheduleStartParamName",
+            "scheduleEndParamName"
+          ]
+        }
+      },
+      "required": [
+        "urlParams",
+        "contentPath",
+        "paginationParams",
+        "scheduleParams"
+      ]
     }
   },
-  "spec": {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "object",
-    "description": "Define user input parameters to fetch resource values.",
-    "properties": "{USER_INPUT}"
-  }
 }
 ```
 
@@ -87,37 +229,36 @@ Voir [annexe](#source-spec) pour un exemple de spécification source entièremen
 | `sourceSpec.attributes` | Contient des informations sur la source spécifique à l’interface utilisateur ou à l’API. |
 | `sourceSpec.attributes.uiAttributes` | Affiche des informations sur la source spécifique à l’interface utilisateur. |
 | `sourceSpec.attributes.uiAttributes.isBeta` | Attribut boolean qui indique si la source nécessite davantage de commentaires de la part des clients pour ajouter à ses fonctionnalités. | <ul><li>`true`</li><li>`false`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.category` | Définit la catégorie de la source. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li><li>`streaming`</li></ul> |
+| `sourceSpec.attributes.uiAttributes.category` | Définit la catégorie de la source. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Définit l’icône utilisée pour le rendu de la source dans l’interface utilisateur de Platform. | `mailchimp-icon.svg` |
 | `sourceSpec.attributes.uiAttributes.description` | Affiche une brève description de la source. |
 | `sourceSpec.attributes.uiAttributes.label` | Affiche le libellé à utiliser pour le rendu de la source dans l’interface utilisateur de Platform. |
-| `sourceSpec.attributes.urlParams` | Contient des informations sur le chemin, la méthode et les paramètres de requête pris en charge de la ressource URL. |
-| `sourceSpec.attributes.urlParams.path` | Définit le chemin d’accès à la ressource d’où récupérer les données. | `/3.0/reports/${campaignId}/email-activity` |
-| `sourceSpec.attributes.urlParams.method` | Définit la méthode HTTP à utiliser pour envoyer la requête à la ressource pour récupérer les données. | `GET`, `POST` |
-| `sourceSpec.attributes.urlParams.queryParams` | Définit les paramètres de requête pris en charge qui peuvent être utilisés pour ajouter l’URL source lors d’une requête de récupération de données. Les paramètres de requête doivent être une virgule (`,`) des paires clé-valeur séparées. **Remarque**: Toute valeur de paramètre fournie par l’utilisateur doit être formatée en tant qu’espace réservé. Par exemple : `${USER_PARAMETER}`. | `exclude_fields=emails._links,id=${id}` |
-| `sourceSpec.attributes.headerParams` | Définit la virgule (`,`) des en-têtes séparés qui doivent être fournis dans la requête HTTP à l’URL source lors de la récupération des données. | `Content-Type=application/json,foo=bar&userHeader={{USER_HEADER_VALUE}}` |
-| `sourceSpec.attributes.bodyParams` | Définit les paramètres de corps requis. Cette propriété n’est utilisée que si `urlParams.method` est défini sur `POST`. |
-| `sourceSpec.attributes.contentPath` | Définit le noeud qui contient la liste des éléments à ingérer dans Platform. Cet attribut doit respecter une syntaxe de chemin JSON valide et doit pointer vers un tableau particulier. | Voir [annexe](#content-path) pour un exemple de la ressource contenue dans un chemin d’accès au contenu. |
-| `sourceSpec.attributes.contentPath.path` | Chemin d’accès qui pointe vers les enregistrements de collection à ingérer dans Platform. | `$.emails` |
-| `sourceSpec.attributes.contentPath.skipAttributes` | Cette propriété vous permet d’identifier des éléments spécifiques de la ressource identifiée dans le chemin de contenu qui doivent être exclus de l’ingestion. |
-| `sourceSpec.attributes.contentPath.overrideWrapperAttribute` | Cette propriété vous permet de remplacer la valeur du nom d’attribut que vous avez spécifiée dans `contentPath`. |
-| `sourceSpec.attributes.contentPath.keepAttributes` | Cette propriété vous permet de spécifier explicitement les attributs individuels que vous souhaitez mapper. |
-| `sourceSpec.attributes.explodeEntityPath` | Cette propriété vous permet d’aplatir deux tableaux et de transformer les données de ressource en ressource Platform. |
-| `sourceSpec.attributes.explodeEntityPath.path` | Le chemin qui pointe vers les enregistrements de collection que vous souhaitez aplatir. | `$.email.activity` |
-| `sourceSpec.attributes.explodeEntityPath.skipAttributes` | Cette propriété vous permet d’identifier des éléments spécifiques de la ressource identifiée dans le chemin d’accès de l’entité qui doivent être exclus de l’ingestion. |
-| `sourceSpec.attributes.explodeEntityPath.overrideWrapperAttribute` | Cette propriété vous permet de remplacer la valeur du nom d’attribut que vous avez spécifiée dans `explodeEntityPath`. |
-| `sourceSpec.attributes.explodeEntityPath.keepAttributes` | Cette propriété vous permet de spécifier explicitement les attributs individuels que vous souhaitez mapper. |
-| `sourceSpec.attributes.paginationParams` | Définit les paramètres ou les champs qui doivent être fournis pour obtenir un lien vers la page suivante à partir de la réponse de page active de l’utilisateur ou lors de la création d’une URL de page suivante. |
-| `sourceSpec.attributes.paginationParams.type` | Affiche le type de pagination pris en charge pour votre source. | <ul><li>`offset`: Ce type de pagination vous permet d’analyser les résultats en spécifiant un index à partir duquel démarrer le tableau résultant, ainsi qu’une limite sur le nombre de résultats renvoyés.</li><li>`pointer`: Ce type de pagination permet d’utiliser une `pointer` pour pointer vers un élément particulier qui doit être envoyé avec une requête. La pagination du type de pointeur nécessite un chemin dans la payload qui pointe vers la page suivante.</li></ul> |
-| `sourceSpec.attributes.paginationParams.limitName` | Nom de la limite par laquelle l’API peut spécifier le nombre d’enregistrements à récupérer dans une page. | `count` |
-| `sourceSpec.attributes.paginationParams.limitValue` | Nombre d’enregistrements à récupérer dans une page. | `100` |
-| `sourceSpec.attributes.paginationParams.offSetName` | Nom de l’attribut offset. Cela est requis si le type de pagination est défini sur `offset`. | `offset` |
-| `sourceSpec.attributes.paginationParams.pointerName` | Nom de l’attribut du pointeur. Cela nécessite un chemin json vers l’attribut qui pointe vers la page suivante. Cela est requis si le type de pagination est défini sur `pointer`. | `pointer` |
-| `sourceSpec.attributes.scheduleParams` | Contient des paramètres qui définissent les formats de planification pris en charge pour votre source. Les paramètres de planification incluent `startTime` et `endTime`, qui vous permet de définir des intervalles de temps spécifiques pour les exécutions de lot, ce qui garantit que les enregistrements récupérés lors d’une exécution de lot précédente ne sont pas récupérés à nouveau. |
-| `sourceSpec.attributes.scheduleParams.scheduleStartParamName` | Définit le nom du paramètre d’heure de début | `since_last_changed` |
-| `sourceSpec.attributes.scheduleParams.scheduleEndParamName` | Définit le nom du paramètre d’heure de fin | `before_last_changed` |
-| `sourceSpec.attributes.scheduleParams.scheduleStartParamFormat` | Définit le format pris en charge pour la variable `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.attributes.scheduleParams.scheduleEndParamFormat` | Définit le format pris en charge pour la variable `scheduleEndParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
+| `sourceSpec.attributes.spec.properties.urlParams` | Contient des informations sur le chemin, la méthode et les paramètres de requête pris en charge de la ressource URL. |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Définit le chemin d’accès à la ressource d’où récupérer les données. | `/3.0/reports/${campaignId}/email-activity` |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Définit la méthode HTTP à utiliser pour envoyer la requête à la ressource pour récupérer les données. | `GET`, `POST` |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Définit les paramètres de requête pris en charge qui peuvent être utilisés pour ajouter l’URL source lors d’une requête de récupération de données. **Remarque**: Toute valeur de paramètre fournie par l’utilisateur doit être formatée en tant qu’espace réservé. Par exemple : `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` sera ajouté à l’URL source en tant que : `/?key=value&key1=value1` |
+| `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Définit les en-têtes qui doivent être fournis dans la requête HTTP à l’URL source lors de la récupération des données. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
+| `sourceSpec.attributes.spec.properties.contentPath` | Définit le noeud qui contient la liste des éléments à ingérer dans Platform. Cet attribut doit respecter une syntaxe de chemin JSON valide et doit pointer vers un tableau particulier. | Voir [annexe](#content-path) pour un exemple de la ressource contenue dans un chemin d’accès au contenu. |
+| `sourceSpec.attributes.spec.properties.contentPath.path` | Chemin d’accès qui pointe vers les enregistrements de collection à ingérer dans Platform. | `$.emails` |
+| `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Cette propriété vous permet d’identifier des éléments spécifiques de la ressource identifiée dans le chemin de contenu qui doivent être exclus de l’ingestion. | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Cette propriété vous permet de spécifier explicitement les attributs individuels que vous souhaitez conserver. | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Cette propriété vous permet de remplacer la valeur du nom d’attribut que vous avez spécifiée dans `contentPath`. | `email` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Cette propriété vous permet d’aplatir deux tableaux et de transformer les données de ressource en ressource Platform. |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | Le chemin qui pointe vers les enregistrements de collection que vous souhaitez aplatir. | `$.email.activity` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | Cette propriété vous permet d’identifier des éléments spécifiques de la ressource identifiée dans le chemin d’accès de l’entité qui doivent être exclus de l’ingestion. | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Cette propriété vous permet de spécifier explicitement les attributs individuels que vous souhaitez conserver. | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | Cette propriété vous permet de remplacer la valeur du nom d’attribut que vous avez spécifiée dans `explodeEntityPath`. | `activity` |
+| `sourceSpec.attributes.spec.properties.paginationParams` | Définit les paramètres ou les champs qui doivent être fournis pour obtenir un lien vers la page suivante à partir de la réponse de page active de l’utilisateur ou lors de la création d’une URL de page suivante. |
+| `sourceSpec.attributes.spec.properties.paginationParams.type` | Affiche le type de pagination pris en charge pour votre source. | <ul><li>`offset`: Ce type de pagination vous permet d’analyser les résultats en spécifiant un index à partir duquel démarrer le tableau résultant, ainsi qu’une limite sur le nombre de résultats renvoyés.</li><li>`pointer`: Ce type de pagination permet d’utiliser une `pointer` pour pointer vers un élément particulier qui doit être envoyé avec une requête. La pagination du type de pointeur nécessite un chemin dans la payload qui pointe vers la page suivante.</li></ul> |
+| `sourceSpec.attributes.spec.properties.paginationParams.limitName` | Nom de la limite par laquelle l’API peut spécifier le nombre d’enregistrements à récupérer dans une page. | `limit` ou `count` |
+| `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | Nombre d’enregistrements à récupérer dans une page. | `limit=10` ou `count=10` |
+| `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | Nom de l’attribut offset. Cela est requis si le type de pagination est défini sur `offset`. | `offset` |
+| `sourceSpec.attributes.spec.properties.paginationParams.pointerPath` | Nom de l’attribut du pointeur. Cela nécessite un chemin json vers l’attribut qui pointe vers la page suivante. Cela est requis si le type de pagination est défini sur `pointer`. | `pointer` |
+| `sourceSpec.attributes.spec.properties.scheduleParams` | Contient des paramètres qui définissent les formats de planification pris en charge pour votre source. Les paramètres de planification incluent `startTime` et `endTime`, qui vous permet de définir des intervalles de temps spécifiques pour les exécutions de lot, ce qui garantit que les enregistrements récupérés lors d’une exécution de lot précédente ne sont pas récupérés à nouveau. |
+| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamName` | Définit le nom du paramètre d’heure de début | `since_last_changed` |
+| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | Définit le nom du paramètre d’heure de fin | `before_last_changed` |
+| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | Définit le format pris en charge pour la variable `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
+| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | Définit le format pris en charge pour la variable `scheduleEndParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.spec.properties` | Définit les paramètres fournis par l’utilisateur pour récupérer les valeurs de ressource. | Voir [annexe](#user-input) pour un exemple de paramètres entrés par l’utilisateur pour `spec.properties`. |
 
 {style=&quot;table-layout:auto&quot;}
