@@ -1,7 +1,8 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
-source-git-commit: 6d360721a598ff3fa82169aea608263a09c1f05f
+exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
+source-git-commit: 3ae4d0f0a92c96b15c605c6654693fd6d7e94ba8
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 41%
@@ -37,7 +38,7 @@ Pour plus d’informations sur la collecte de données dans Platform, voir [pré
 
 [!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM). 
 
-**Fonctionnalités mises à jour**
+**Nouvelle fonctionnalité**
 
 | Fonctionnalité | Description |
 | --- | --- |
