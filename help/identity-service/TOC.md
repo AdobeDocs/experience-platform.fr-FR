@@ -1,21 +1,22 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform Identity Service
+user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: Guide de Platform Identity Service
 user-guide-description: Associez les identités des clients, quel que soit l’appareil ou le système utilisé, afin d’offrir des expériences numériques personnalisées.
 feature: Identities
-source-git-commit: 81b325fe0994eef73111f9fc474984a4550dd256
-workflow-type: ht
-source-wordcount: '98'
-ht-degree: 100%
+source-git-commit: 6ef978251c8b1ecaffa3a28cf2b89e24e2d725b6
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 96%
 
 ---
 
 
-# Adobe Experience Platform Identity Service {#identity}
+# Adobe Experience Platform Identity Service {#identity}
 
 - [Présentation d’Identity Service](home.md)
 - [Présentation des espaces de noms d’identité](namespaces.md)
+- [Barrières de sécurité pour les données d’identité](guardrails.md)
 - API Identity Service {#api}
    - [Prise en main](api/getting-started.md)
    - [Étiquetage d’un champ comme identité](api/label-identities.md)
