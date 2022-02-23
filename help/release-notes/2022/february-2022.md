@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
-source-git-commit: 07dc417cbeb5ac0a59d2405986e9bb771b0735f2
+source-git-commit: 6d360721a598ff3fa82169aea608263a09c1f05f
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '575'
 ht-degree: 41%
 
 ---
@@ -33,7 +33,6 @@ Platform fournit une suite de technologies qui vous permet de collecter des donn
 
 Pour plus d’informations sur la collecte de données dans Platform, voir [présentation de la collecte de données](../../collection/home.md).
 
-
 ## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM). 
@@ -52,7 +51,7 @@ Proposer des expériences numériques pertinentes nécessite une compréhension 
 
 Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leur comportement en rapprochant des identités entre les appareils et les systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
 
-**Nouvelles fonctionnalités**
+**Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
@@ -65,6 +64,8 @@ Pour des informations plus générales sur le [!DNL Identity Service], reportez-
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+
+**Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
