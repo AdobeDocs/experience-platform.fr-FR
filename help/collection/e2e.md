@@ -1,8 +1,8 @@
 ---
 title: Présentation complète de la collecte de données
-description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide des technologies de collecte de données fournies par Adobe Experience Platform.
+description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide des technologies de collecte de données fournies par Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 3f5a05068a24432237a5241dd20680d2f8ed0b55
+source-git-commit: 1125907e02c23b89ea672f424d1bbf9e9de0ba04
 workflow-type: tm+mt
 source-wordcount: '2618'
 ht-degree: 100%
@@ -11,9 +11,9 @@ ht-degree: 100%
 
 # Présentation complète de la collecte de données
 
-Dans Adobe Experience Platform, la collecte de données fait référence à plusieurs technologies qui fonctionnent ensemble pour collecter les données et les transférer vers d’autres produits Adobe ou destinations tierces. Pour envoyer des données d’événement de votre application au réseau Adobe Experience Platform Edge, il est important de comprendre ces technologies de base et de bien les configurer afin de fournir vos données aux destinations dont vous avez besoin, lorsque vous en avez besoin.
+Dans Adobe Experience Platform, la collecte de données fait référence à plusieurs technologies qui fonctionnent ensemble pour collecter les données et les transférer vers d’autres produits Adobe ou destinations tierces. Pour envoyer des données d’événement de votre application au réseau Adobe Experience Platform Edge, il est important de comprendre ces technologies de base et de bien les configurer afin de fournir vos données aux destinations dont vous avez besoin, lorsque vous en avez besoin.
 
-Ce guide fournit un tutoriel général sur la manière d’envoyer un événement par le biais du réseau Edge à l’aide des technologies de collecte de données. Plus précisément, le tutoriel décrit les étapes à suivre pour installer et configurer l’extension de balise SDK Web Adobe Experience Platform dans l’interface utilisateur de collecte de données (anciennement Adobe Experience Platform Launch).
+Ce guide fournit un tutoriel général sur la manière d’envoyer un événement par le biais du réseau Edge à l’aide des technologies de collecte de données. Plus précisément, le tutoriel décrit les étapes à suivre pour installer et configurer l’extension de balise SDK Web Adobe Experience Platform dans l’interface utilisateur de collecte de données (anciennement Adobe Experience Platform Launch).
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ Ce tutoriel utilise l’interface utilisateur de collecte de données pour crée
 
 Consultez le guide sur la [gestion des autorisations pour les balises](../tags/ui/administration/manage-permissions.md) pour savoir comment accorder l’accès aux propriétés et aux droits de propriété.
 
-Pour utiliser les différents produits de collecte de données mentionnés dans ce guide, vous devez également avoir accès aux flux de données et la possibilité de créer et de gérer des schémas. Si vous avez besoin d’accéder à l’une de ces fonctionnalités, contactez votre CSM qui vous aidera à obtenir l’accès nécessaire. Si vous n’avez pas acheté Adobe Experience Platform, Adobe vous donnera l’accès nécessaire pour utiliser le SDK sans frais supplémentaires.
+Pour utiliser les différents produits de collecte de données mentionnés dans ce guide, vous devez également avoir accès aux flux de données et la possibilité de créer et de gérer des schémas. Si vous avez besoin d’accéder à l’une de ces fonctionnalités, contactez votre CSM qui vous aidera à obtenir l’accès nécessaire. Si vous n’avez pas acheté Adobe Experience Platform, Adobe vous donnera l’accès nécessaire pour utiliser le SDK sans frais supplémentaires.
 
 Si vous avez déjà accès à Platform, vous devez vous assurer que toutes les [autorisations](../access-control/home.md#permissions) dans les catégories suivantes sont activées :
 
@@ -49,7 +49,7 @@ Une fois que vous avez la possibilité d’envoyer des données au réseau Edge,
 
 ## Création d’un schéma {#schema}
 
-[Le modèle de données d’expérience (XDM)](../xdm/home.md) est une spécification open source qui fournit des structures et des définitions communes pour les données sous la forme de schémas. En d’autres termes, XDM constitue un moyen de structurer et de mettre en forme vos données d’une manière exploitable par le réseau Edge et d’autres applications Adobe Experience Cloud.
+[Le modèle de données d’expérience (XDM)](../xdm/home.md) est une spécification open source qui fournit des structures et des définitions communes pour les données sous la forme de schémas. En d’autres termes, XDM constitue un moyen de structurer et de mettre en forme vos données d’une manière exploitable par le réseau Edge et d’autres applications Adobe Experience Cloud.
 
 La première étape de la configuration de vos opérations de collecte de données consiste à créer un schéma XDM pour représenter vos données. À une étape ultérieure de ce tutoriel, vous allez mapper les données que vous souhaitez envoyer à la structure de ce schéma.
 
@@ -91,7 +91,7 @@ Une fois que vous avez ajouté les champs dont vous avez besoin, sélectionnez *
 
 ## Création dʼun flux de données {#datastream}
 
-Un flux de données est une configuration qui indique au réseau Edge où vous souhaitez que vos données soient envoyées. Plus précisément, un flux de données indique à quels produits Experience Cloud vous souhaitez envoyer les données et comment vous souhaitez que les données soient traitées et stockées dans chaque produit.
+Un flux de données est une configuration qui indique au réseau Edge où vous souhaitez que vos données soient envoyées. Plus précisément, un flux de données indique à quels produits Experience Cloud vous souhaitez envoyer les données et comment vous souhaitez que les données soient traitées et stockées dans chaque produit.
 
 >[!NOTE]
 >
@@ -103,7 +103,7 @@ Dans l’interface utilisateur de la collecte de données, sélectionnez **[!UIC
 
 Les exigences de configuration d’un flux de données dépendent des produits et fonctionnalités auxquels vous envoyez des données. Pour plus d’informations sur les options de configuration de chaque produit, consultez la [présentation des flux de données](../edge/fundamentals/datastreams.md).
 
-## Installation et configuration du SDK Mobile
+## Installation et configuration du SDK Mobile {#install}
 
 Une fois que vous avez créé un schéma et un flux de données, l’étape suivante consiste à installer et à configurer le SDK Web Platform pour commencer à envoyer des données au réseau Edge.
 
@@ -118,7 +118,7 @@ Une fois que vous avez créé un schéma et un flux de données, l’étape suiv
 
 Le processus peut se résumer comme suit :
 
-1. [Installez le SDK Web d’Adobe Experience Platform sur une propriété de balise](#install-sdk) pour accéder à ses fonctionnalités.
+1. [Installez le SDK Web d’Adobe Experience Platform sur une propriété de balise](#install-sdk) pour accéder à ses fonctionnalités.
 1. [Créez un élément de données d’objet XDM](#data-element) pour mapper les variables de votre site Web à la structure du schéma XDM que vous avez créé précédemment.
 1. [Créez une règle](#rule) pour indiquer au SDK quand il doit envoyer des données au réseau Edge.
 1. [Créez et installez une bibliothèque](#library) pour mettre en œuvre la règle sur votre site Web.
@@ -153,7 +153,7 @@ Dans l’interface utilisateur, sélectionnez **[!UICONTROL Éléments de donné
 
 ![Créer un élément de données](./images/e2e/data-elements.png)
 
-À l’écran suivant, sélectionnez **[!UICONTROL SDK Web Adobe Experience Platform]** dans la liste déroulante [!UICONTROL Extension], puis sélectionnez **[!UICONTROL Objet XDM]** pour le type d’élément de données.
+À l’écran suivant, sélectionnez **[!UICONTROL SDK Web Adobe Experience Platform]** dans la liste déroulante [!UICONTROL Extension], puis sélectionnez **[!UICONTROL Objet XDM]** pour le type d’élément de données.
 
 ![Type d’objet XDM](./images/e2e/xdm-object.png)
 
@@ -222,7 +222,7 @@ Dans le cas contraire, l’étape suivante consiste à ajouter une action que la
 
 ![Ajouter une action](./images/e2e/add-action.png)
 
-La page de configuration d’action s’affiche. Pour obtenir la règle permettant d’envoyer des données au réseau Edge, sélectionnez **[!UICONTROL SDK Web Adobe Experience Platform]** pour l’extension et **[!UICONTROL Envoyer l’événement]** pour le type d’action.
+La page de configuration d’action s’affiche. Pour obtenir la règle permettant d’envoyer des données au réseau Edge, sélectionnez **[!UICONTROL SDK Web Adobe Experience Platform]** pour l’extension et **[!UICONTROL Envoyer l’événement]** pour le type d’action.
 
 ![Type d’action](./images/e2e/action-type.png)
 
@@ -248,7 +248,7 @@ Pour savoir comment créer une bibliothèque, ajouter des extensions et des règ
 
 Une fois que vous avez créé la bibliothèque et que sa version a été affectée à un environnement, vous pouvez installer cet environnement du côté client de votre site Web. Pour plus d’informations, consultez la section consacrée à l’[installation d’environnements](../tags/ui/publishing/environments.md#installation).
 
-Une fois l’environnement installé sur votre site Web, vous pouvez [tester votre mise en œuvre](../tags/ui/publishing/embed-code-testing.md) à l’aide du débogueur Adobe Experience Platform.
+Une fois l’environnement installé sur votre site Web, vous pouvez [tester votre mise en œuvre](../tags/ui/publishing/embed-code-testing.md) à l’aide du débogueur Adobe Experience Platform.
 
 ## Configuration du transfert d’événement (facultatif) {#event-forwarding}
 
