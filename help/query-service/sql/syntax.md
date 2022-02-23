@@ -5,9 +5,9 @@ title: Syntaxe SQL dans Query Service
 topic-legacy: syntax
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 91fc4c50eb9a5ab64de3445b47465eec74a61736
+source-git-commit: b291bcf4e0ce068b071adde489653b006f4e7fb2
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2360'
 ht-degree: 12%
 
 ---
@@ -217,14 +217,37 @@ INSERT INTO table_name select_query
 
 **Exemple**
 
+>[!NOTE]
+>
+>L&#39;exemple suivant est un exemple concret et se résume à des fins pédagogiques.
+
 ```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 
 INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 ```
 
->[!NOTE]
+>[!INFO]
+> 
 > Le `SELECT` statement **must not** entre parenthèses (). En outre, le schéma du résultat de la variable `SELECT` doit être conforme à celle de la table définie dans la variable `INSERT INTO` . Vous pouvez fournir un `SNAPSHOT` pour lire les deltas incrémentiels dans la table cible.
+
+La plupart des champs d’un schéma XDM réel sont introuvables au niveau racine et SQL n’autorise pas l’utilisation de la notation par points. Pour obtenir un résultat réaliste en utilisant des champs imbriqués, vous devez mapper chaque champ de votre `INSERT INTO` chemin d’accès.
+
+À `INSERT INTO` chemins imbriqués, utilisez la syntaxe suivante :
+
+```sql
+INSERT INTO [dataset]
+SELECT struct([source field1] as [target field in schema],
+[source field2] as [target field in schema],
+[source field3] as [target field in schema]) [tenant name]
+FROM [dataset]
+```
+
+**Exemple**
+
+```sql
+INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCity, Country as SupplierCountry) _Adobe FROM OnlineCustomers;
+```
 
 ## DROP TABLE
 
