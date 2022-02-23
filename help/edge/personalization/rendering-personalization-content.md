@@ -3,16 +3,20 @@ title: Rendu de contenu personnalisé à l’aide du SDK Web de Adobe Experience
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web de Adobe Experience Platform.
 keywords: personnalisation;renderDecisions;sendEvent;décisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 5d4214c1f9dc8476dd946559f602591c6e929cb1
+source-git-commit: 6ba563db7fd31084813426ffbb0c35be9d7fe4bb
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '741'
 ht-degree: 3%
 
 ---
 
 # Rendu de contenu personnalisé
 
-Le SDK Web de Adobe Experience Platform prend en charge la récupération de contenu personnalisé à partir de solutions de personnalisation Adobe, y compris [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) et [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=fr). Contenu créé dans Adobe Target [Compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) peut être récupéré et rendu automatiquement par le SDK. Contenu créé dans Adobe Target [Compositeur d’expérience d’après les formulaires](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) ou Offer decisioning ne peut pas être rendu automatiquement par le SDK. Vous devez plutôt demander ce contenu à l’aide du SDK, puis effectuer vous-même le rendu manuel du contenu.
+Le SDK Web de Adobe Experience Platform prend en charge la récupération de contenu personnalisé à partir des solutions de personnalisation d’Adobe, y compris [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) et [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=fr).
+
+En outre, le SDK Web offre des fonctionnalités de personnalisation de même page et page suivante par le biais de destinations de personnalisation Adobe Experience Platform, telles que [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et le [connexion à la personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Pour savoir comment configurer Experience Platform pour la personnalisation de la même page et de la page suivante, reportez-vous à la section [guide dédié](../../destinations/ui/configure-personalization-destinations.md).
+
+Contenu créé dans Adobe Target [Compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) peut être récupéré et rendu automatiquement par le SDK. Contenu créé dans Adobe Target [Compositeur d’expérience d’après les formulaires](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) ou Offer decisioning ne peut pas être rendu automatiquement par le SDK. Vous devez plutôt demander ce contenu à l’aide du SDK, puis effectuer vous-même le rendu manuel du contenu.
 
 ## Rendu automatique du contenu
 
