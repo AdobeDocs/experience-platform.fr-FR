@@ -4,10 +4,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes de modèle de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
-source-git-commit: 065f5ef9d3d3be0fcab84d7518d8a00e4cd551cf
+source-git-commit: fecea2040af6e6c666de8eb4f1b13b3beaa45486
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 38%
+source-wordcount: '412'
+ht-degree: 37%
 
 ---
 
@@ -55,6 +55,7 @@ ht-degree: 38%
       * [Composants de personne active XDM](./field-groups/profile/business-person-components.md)
       * [Informations détaillées sur les personnes commerciales XDM](./field-groups/profile/business-person-details.md)
    * Groupes de champs d’événement {#event}
+      * [Extension complète Adobe Analytics](./field-groups/event/analytics-full-extension.md)
       * [Détails du marketing de campagne](./field-groups/event/campaign-marketing-details.md)
       * [Détails du canal](./field-groups/event/channel-details.md)
       * [Détails du commerce](./field-groups/event/commerce-details.md)
@@ -95,6 +96,7 @@ ht-degree: 38%
    * [Forme géographique](./data-types/geo-shape.md)
    * [Identité](./data-types/identity.md)
    * [Impressions](./data-types/impressions.md)
+   * [Paire de valeurs clés](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Mesure](./data-types/measure.md)
    * [Commande](./data-types/order.md)
