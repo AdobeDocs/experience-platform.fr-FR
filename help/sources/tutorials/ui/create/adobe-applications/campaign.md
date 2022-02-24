@@ -4,7 +4,7 @@ title: Création d’une connexion source Adobe Campaign Managed Services à l�
 description: Découvrez comment connecter Adobe Experience Platform à Adobe Campaign Managed Services à l’aide de l’interface utilisateur de Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 1b1f25093db642b394c6e05f15f6d1071096eb36
+source-git-commit: 57a34b10e40dee80638392477d49c21e107c491f
 workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 2%
@@ -33,8 +33,6 @@ Sous , **[!UICONTROL Adobe des applications]** catégorie, sélectionnez **[!UIC
 
 ### Sélection des données {#select-data}
 
-Le [!UICONTROL Sélectionner des données] s’affiche, vous permettant ainsi de configurer les valeurs de votre [!UICONTROL Instance Adobe Campaign], [!UICONTROL Mapping de ciblage], et [!UICONTROL Nom du schéma].
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
 >title="Instance ACC"
@@ -52,3 +50,5 @@ Le [!UICONTROL Sélectionner des données] s’affiche, vous permettant ainsi de
 >title="Nom du schéma"
 >abstract="Nom de l’entité définie dans la base de données Adobe Campaign."
 >text="Learn more in documentation"
+
+Le [!UICONTROL Sélectionner des données] s’affiche, vous permettant ainsi de configurer les valeurs de votre [!UICONTROL Instance Adobe Campaign], [!UICONTROL Mapping de ciblage], et [!UICONTROL Nom du schéma].
