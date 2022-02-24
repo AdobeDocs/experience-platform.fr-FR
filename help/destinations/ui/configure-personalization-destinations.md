@@ -6,9 +6,9 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Découvrez comment configurer des destinations de personnalisation pour la personnalisation de la même page et de la page suivante.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: 69db8dbc315f97a0133bcc761ebf850d587dd7d1
+source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,10 @@ Cet article fournit des instructions étape par étape sur la configuration d’
 En outre, regardez la vidéo ci-dessous pour un aperçu du processus de configuration de bout en bout.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340091/)
+
+>[!NOTE]
+>
+>L’interface utilisateur de l’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous aux étapes de configuration décrites dans les sections ci-dessous.
 
 ## Étape 1 : Configuration d’un flux de données dans l’interface utilisateur de la collecte de données {#configure-datastream}
 

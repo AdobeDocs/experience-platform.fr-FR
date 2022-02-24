@@ -3,9 +3,9 @@ keywords: personnalisation de la cible ; destination; destination de la cible de
 title: Connexion Adobe Target
 description: Adobe Target est une application qui fournit des fonctionnalités de personnalisation et d’expérimentation optimisées par l’IA en temps réel dans toutes les interactions client entrantes entre sites web, applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 61a3a05466eca30ba08fcaf32a3f00e0ca49f325
+source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '469'
 ht-degree: 8%
 
 ---
@@ -21,6 +21,10 @@ Adobe Target est une connexion de personnalisation dans Adobe Experience Platfor
 ## Conditions préalables {#prerequisites}
 
 Cette intégration est optimisée par la fonction [SDK Web Adobe Experience Platform](../../../edge/home.md). Vous devez utiliser ce SDK pour utiliser cette destination.
+
+>[!IMPORTANT]
+>
+>Avant de créer un [!DNL Adobe Target] connexion, lisez le guide sur la façon de [configuration des destinations de personnalisation pour la personnalisation de la même page et de la page suivante](../../ui/configure-personalization-destinations.md). Ce guide vous guide tout au long des étapes de configuration requises pour les cas d’utilisation de la personnalisation de la même page et de la page suivante, sur plusieurs composants Experience Platform.
 
 ## Type d&#39;export {#export-type}
 
@@ -39,10 +43,6 @@ Une société de location et de vente d’habitations souhaite personnaliser sa 
 >title="À propos des identifiants de flux de données"
 >abstract="Cette option détermine dans quel jeu de données de collecte de données les segments seront inclus dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Vous devez configurer un flux de données avant de pouvoir configurer votre destination."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Découvrez comment configurer un flux de données."
-
->[!IMPORTANT]
->
->Avant de créer un [!DNL Adobe Target] connexion, nous vous recommandons de lire notre guide sur la façon de [configuration des destinations de personnalisation pour la personnalisation de la même page et de la page suivante](../../ui/configure-personalization-destinations.md). Ce guide vous guide tout au long des étapes de configuration requises pour les cas d’utilisation de la personnalisation de la même page et de la page suivante, sur plusieurs composants Experience Platform.
 
 Pour vous connecter à cette destination, procédez comme décrit dans la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 

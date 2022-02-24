@@ -3,9 +3,9 @@ keywords: personnalisation personnalisée ; destination; destination personnalis
 title: Connexion à la personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer des informations de segment à partir de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance au segment du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '676'
 ht-degree: 6%
 
 ---
@@ -19,6 +19,10 @@ Cette destination permet de récupérer les informations de segment de Adobe Exp
 ## Conditions préalables {#prerequisites}
 
 Cette intégration est optimisée par la fonction [SDK Web Adobe Experience Platform](../../../edge/home.md) ou le [SDK Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/). Pour utiliser cette destination, vous devez utiliser l’un de ces SDK.
+
+>[!IMPORTANT]
+>
+>Avant de créer une connexion de personnalisation personnalisée, lisez le guide sur la façon de [configuration des destinations de personnalisation pour la personnalisation de la même page et de la page suivante](../../ui/configure-personalization-destinations.md). Ce guide vous guide tout au long des étapes de configuration requises pour les cas d’utilisation de la personnalisation de la même page et de la page suivante, sur plusieurs composants Experience Platform.
 
 ## Type d&#39;export {#export-type}
 
@@ -39,10 +43,6 @@ Un site web de location et de vente d’habitations souhaite personnaliser sa pa
 En utilisant une destination de personnalisation personnalisée distincte pour leur serveur d’annonces, le même site web peut cibler la publicité sur site à l’aide d’un ensemble différent de segments de Adobe Experience Platform en tant que critères de ciblage.
 
 ## Connexion à la destination {#connect}
-
->[!IMPORTANT]
->
->Avant de créer une connexion de personnalisation personnalisée, nous vous recommandons de lire notre guide sur la façon de procéder [configuration des destinations de personnalisation pour la personnalisation de la même page et de la page suivante](../../ui/configure-personalization-destinations.md). Ce guide vous guide tout au long des étapes de configuration requises pour les cas d’utilisation de la personnalisation de la même page et de la page suivante, sur plusieurs composants Experience Platform.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
