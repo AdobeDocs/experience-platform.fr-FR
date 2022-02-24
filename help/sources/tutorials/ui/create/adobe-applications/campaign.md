@@ -4,10 +4,10 @@ title: Création d’une connexion source Adobe Campaign Managed Services à l�
 description: Découvrez comment connecter Adobe Experience Platform à Adobe Campaign Managed Services à l’aide de l’interface utilisateur de Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 24d7a549e83245fc363bd76f26ba58130e980c6c
+source-git-commit: 1b1f25093db642b394c6e05f15f6d1071096eb36
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 1%
+source-wordcount: '300'
+ht-degree: 2%
 
 ---
 
@@ -31,30 +31,24 @@ Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le cô
 
 Sous , **[!UICONTROL Adobe des applications]** catégorie, sélectionnez **[!UICONTROL Adobe Campaign Managed Services]** puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
-### Sélection des données
+### Sélection des données {#select-data}
 
 Le [!UICONTROL Sélectionner des données] s’affiche, vous permettant ainsi de configurer les valeurs de votre [!UICONTROL Instance Adobe Campaign], [!UICONTROL Mapping de ciblage], et [!UICONTROL Nom du schéma].
 
-#### Sélectionner l’instance de campagne {#select-campaign-instance}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
->title="Sélectionner l’instance de campagne"
+>title="Instance ACC"
 >abstract="Nom de l’environnement Adobe Campaign Classic que vous souhaitez utiliser."
 >text="Learn more in documentation"
 
-#### Sélectionner le mapping de campagne {#select-campaign-mapping}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_mapping"
->title="Sélectionner le mapping de ciblage de campagne"
+>title="Mapping de ciblage"
 >abstract="Les mappings de ciblage sont des objets techniques utilisés par Campaign pour diffuser des messages. Ils contiennent tous les paramètres techniques nécessaires pour envoyer des diffusions (adresses, numéros de téléphone, indicateurs d&#39;opt-in, identifiants additionnels, etc.)."
 >text="Learn more in documentation"
 
-#### Sélectionner le schéma de campagne {#select-campaign-schema}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_schema"
->title="Sélectionner le nom du schéma de campagne"
+>title="Nom du schéma"
 >abstract="Nom de l’entité définie dans la base de données Adobe Campaign."
 >text="Learn more in documentation"
