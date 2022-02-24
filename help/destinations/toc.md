@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 2f8e31321345a14c098f795b50d33c700ac0faa8
+source-git-commit: e03f680bfa2ee4c1e79e7ee22724702ac3721a84
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '724'
 ht-degree: 43%
 
 ---
@@ -157,9 +157,9 @@ ht-degree: 43%
    * Fonctionnalité de la Destination SDK {#functionality}
       * [Options de configuration](./destination-sdk/configuration-options.md)
       * [Configuration de destination de diffusion en continu](./destination-sdk/destination-configuration.md)
-      * [Configuration des destinations basées sur des fichiers](./destination-sdk/file-based-destination-configuration.md)
+      * [(Version bêta) Configuration de destination basée sur des fichiers](./destination-sdk/file-based-destination-configuration.md)
       * [Spécifications du serveur et des modèles de destinations en flux continu](./destination-sdk/server-and-template-configuration.md)
-      * [Spécifications de fichier et serveur de destinations basées sur des fichiers](./destination-sdk/server-and-file-configuration.md)
+      * [(Version bêta) Spécifications de serveur et de fichier basées sur des fichiers](./destination-sdk/server-and-file-configuration.md)
       * [Format du message](./destination-sdk/message-format.md)
       * [Gestion des métadonnées d’audience](./destination-sdk/audience-metadata-management.md)
       * Authentification {#authentication}
