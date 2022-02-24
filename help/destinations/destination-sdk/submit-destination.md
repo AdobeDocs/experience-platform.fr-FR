@@ -1,8 +1,8 @@
 ---
-description: Cette page fournit toutes les informations dont vous avez besoin pour soumettre une révision pour une destination créée à l’aide de Destination SDK.
+description: Cette page fournit toutes les informations que vous devez envoyer pour examiner une destination créée à l’aide de Destination SDK.
 title: Envoyer pour révision d’une destination créée dans Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: 111da9ce3e38096d11a1910929ee892e5661722c
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Avant que votre destination ne puisse être publiée dans la variable [Catalogue des destinations Experience Platform](/help/destinations/catalog/overview.md), vous devez fournir à l’Adobe certaines informations sur la destination et les tests que vous avez effectués, afin de vous assurer que les utilisateurs bénéficient de la meilleure expérience possible lors de l’activation des données vers votre plateforme.
 
-Cette page répertorie toutes les informations que vous devez fournir lors de l’envoi ou de la mise à jour d’une destination que vous avez créée à l’aide de Adobe Experience Platform Destination SDK. Pour envoyer une destination dans Adobe Experience Platform, envoyez un courrier électronique à <aepdestsdk@adobe.com> qui inclut :
+Cette page répertorie toutes les informations que vous devez fournir lors de l’envoi ou de la mise à jour d’une destination que vous avez créée à l’aide de l’Adobe Experience Platform Destination SDK. Pour envoyer une destination dans Adobe Experience Platform, envoyez un courrier électronique à <aepdestsdk@adobe.com> qui inclut :
 
 * Description des cas d’utilisation résolus par votre destination. Cela n’est pas nécessaire si vous mettez à jour une configuration de destination existante.
 * Testez les résultats après avoir utilisé le point d’entrée de l’API de destination de test pour effectuer un appel HTTP vers votre destination. Partagez avec l’Adobe :
@@ -37,6 +37,7 @@ Fournissez une description des cas d’utilisation que votre destination résout
 ## Résultats du test après l’utilisation de l’API de destination du test
 
 Fournir des résultats de test après avoir utilisé la méthode [API de destination du test](./test-destination.md) point de terminaison pour effectuer un appel HTTP vers votre destination. Cela inclut :
+
 * La requête API complète (en-têtes et corps) effectuée sur votre point de terminaison de destination, à l’aide de l’API de test.
 * Réponse de l’API reçue de votre point de terminaison de destination.
 

@@ -1,0 +1,262 @@
+---
+description: Les spécifications de configuration du serveur et des fichiers pour les destinations basées sur des fichiers peuvent être configurées en Adobe Experience Platform Destination SDK via le point d’entrée /destination-servers .
+title: (Version bêta) Options de configuration pour les spécifications de serveur de destination basées sur des fichiers
+source-git-commit: bc357e2e93b80edb5f7825bf2dee692f14bd7297
+workflow-type: tm+mt
+source-wordcount: '748'
+ht-degree: 12%
+
+---
+
+# (Version bêta) Configuration du serveur et des fichiers pour les spécifications de serveur de destination basées sur les fichiers
+
+## Présentation {#overview}
+
+>[!IMPORTANT]
+>
+>La fonctionnalité de configuration et d’envoi de destinations basées sur des fichiers à l’aide d’Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+
+Cette page détaille toutes les options de configuration du serveur pour vos serveurs de destination basés sur des fichiers et vous indique comment configurer diverses options de configuration de fichier pour les utilisateurs qui exportent des fichiers d’Experience Platform vers votre destination.
+
+Les spécifications de configuration du serveur et des fichiers pour les destinations basées sur des fichiers peuvent être configurées en Adobe Experience Platform Destination SDK via le `/destination-servers` point de terminaison . Lecture [Opérations de point d’entrée de l’API du serveur de destination](./destination-server-api.md) pour obtenir une liste complète des opérations que vous pouvez effectuer sur le point de terminaison .
+
+## Spécification du serveur de destination Amazon S3 basé sur les fichiers {#s3-example}
+
+```json
+{
+    "name": "S3 destination",
+    "destinationServerType": "FILE_BASED_S3",
+    "fileBasedS3Destination": {
+        "bucket": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.bucket}}"
+        },
+        "path": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.path}}"
+        }
+    },
+    "fileConfigurations": {
+       // see File-based destinations file configuration
+    }
+}
+```
+
+| Paramètre | Type | Description |
+|---|---|---|
+| `name` | Chaîne | Nom de la connexion à la destination. |
+| `destinationServerType` | Chaîne | Définissez cette valeur en fonction de votre plateforme de destination. Pour [!DNL Amazon S3], définissez ce paramètre sur `FILE_BASED_S3`. |
+| `fileBasedS3Destination.bucket.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
+| `fileBasedS3Destination.bucket.value` | Chaîne | Nom de la variable [!DNL Amazon S3] compartiment à utiliser par cette destination. |
+| `fileBasedS3Destination.path.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
+| `fileBasedS3Destination.path.value` | Chaîne | Chemin d’accès au dossier de destination qui hébergera les fichiers exportés. |
+
+## Spécification du serveur de destination SFTP basé sur les fichiers {#sftp-example}
+
+```json
+{
+   "name":"File-based SFTP destination server",
+   "destinationServerType":"FILE_BASED_SFTP",
+   "fileBasedSftpDestination":{
+      "rootDirectory":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.rootDirectory}}"
+      },
+      "hostName":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.hostName}}"
+      },
+      "port": 22,
+      "encryptionMode" : "PGP"
+   },
+    "fileConfigurations": {
+       // see File-based destinations file configuration
+    }
+}
+```
+
+| Paramètre | Type | Description |
+|---|---|---|
+| `name` | Chaîne | Nom de la connexion à la destination. |
+| `destinationServerType` | Chaîne | Définissez cette valeur en fonction de votre plateforme de destination. Pour [!DNL SFTP] destinations, définissez cette variable sur `FILE_BASED_SFTP`. |
+| `fileBasedSftpDestination.rootDirectory.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
+| `fileBasedSftpDestination.rootDirectory.value` | Chaîne | Répertoire racine du stockage de destination. |
+| `fileBasedSftpDestination.hostName.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
+| `fileBasedSftpDestination.hostName.value` | Chaîne | Nom d’hôte du stockage de destination. |
+| `port` | Nombre entier | Port du serveur de fichiers SFTP. |
+| `encryptionMode` | Chaîne | Indique s’il faut utiliser le chiffrement de fichier. Valeurs prises en charge : <ul><li>PGP</li><li>Aucun</li></ul> |
+
+## basé sur des fichiers [!DNL Azure Data Lake Storage] ([!DNL ADLS]) spécification du serveur de destination {#adls-example}
+
+```json
+{
+   "name":"ADLS destination server",
+   "destinationServerType":"FILE_BASED_ADLS_GEN2",
+   "fileBasedAdlsGen2Destination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      }
+   },
+  "fileConfigurations": {
+       // see File-based destinations file configuration
+    }
+}
+```
+
+| Paramètre | Type | Description |
+|---|---|---|
+| `name` | Chaîne | Nom de la connexion à la destination. |
+| `destinationServerType` | Chaîne | Définissez cette valeur en fonction de votre plateforme de destination. Pour [!DNL Azure Data Lake Storage] destinations, définissez cette variable sur `FILE_BASED_ADLS_GEN2`. |
+| `fileBasedAdlsGen2Destination.path.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
+| `fileBasedAdlsGen2Destination.path.value` | Chaîne | Chemin d’accès au dossier de destination qui hébergera les fichiers exportés. |
+
+## basé sur des fichiers [!DNL Azure Blob Storage] spécification du serveur de destination {#blob-example}
+
+```json
+{
+   "name":"Blob destination server",
+   "destinationServerType":"FILE_BASED_AZURE_BLOB",
+   "fileBasedAzureBlobDestination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      },
+      "container":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.container}}"
+      }
+   },
+  "fileConfigurations": {
+       // see File-based destinations file configuration
+    }
+}
+```
+
+| Paramètre | Type | Description |
+|---|---|---|
+| `name` | Chaîne | Nom de la connexion à la destination. |
+| `destinationServerType` | Chaîne | Définissez cette valeur en fonction de votre plateforme de destination. Pour [!DNL Azure Blob Storage] destinations, définissez cette variable sur `FILE_BASED_AZURE_BLOB`. |
+| `fileBasedAzureBlobDestination.path.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
+| `fileBasedAzureBlobDestination.path.value` | Chaîne | Chemin d’accès au dossier de destination qui hébergera les fichiers exportés. |
+| `fileBasedAzureBlobDestination.container.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
+| `fileBasedAzureBlobDestination.container.value` | Chaîne | Nom de la variable [!DNL Azure Blob Storage] conteneur à utiliser par cette destination. |
+
+## basé sur des fichiers [!DNL Data Landing Zone] ([!DNL DLZ]) spécification du serveur de destination {#dlz-example}
+
+```json
+{
+   "name":"DLZ destination server",
+   "destinationServerType":"FILE_BASED_DLZ",
+   "fileBasedDlzDestination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      },
+      "useCase": "Your use case"
+   },
+   "fileConfigurations": {
+       // see File-based destinations file configuration
+    }
+}
+```
+
+| Paramètre | Type | Description |
+|---|---|---|
+| `name` | Chaîne | Nom de la connexion à la destination. |
+| `destinationServerType` | Chaîne | Définissez cette valeur en fonction de votre plateforme de destination. Pour [!DNL Data Landing Zone] destinations, définissez cette variable sur `FILE_BASED_DLZ`. |
+| `fileBasedDlzDestination.path.templatingStrategy` | Chaîne | *Obligatoire.*  Utilisez `PEBBLE_V1`. |
+| `fileBasedDlzDestination.path.value` | Chaîne | Chemin d’accès au dossier de destination qui hébergera les fichiers exportés. |
+
+## Configuration des fichiers de destinations basés sur des fichiers {#file-configuration}
+
+Cette section décrit les paramètres de formatage de fichier pour l’exportation `CSV` fichiers . Vous pouvez modifier plusieurs propriétés des fichiers exportés pour répondre aux exigences du système de réception de fichiers de votre côté, afin de lire et interpréter de manière optimale les fichiers reçus d’un Experience Platform.
+
+>[!NOTE]
+>
+>Les options CSV ne sont prises en charge que lors de l’exportation de fichiers CSV. Le `fileConfigurations` n’est pas obligatoire lors de la configuration d’un nouveau serveur de destination. Si vous ne transmettez aucune valeur dans l’appel API pour les options CSV, les valeurs par défaut du tableau ci-dessous seront utilisées.
+
+```json
+"fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+```
+
+| Champ | Obligatoire / Facultatif | Description | Valeur par défaut |
+|---|---|---|---|
+| `compression.value` | Facultative | Codec de compression à utiliser lors de l’enregistrement de données dans un fichier. Valeurs prises en charge : `none`, `bzip2`, `gzip`, `lz4`, et `snappy`. | `none` |
+| `fileType.value` | Facultative | Indique le format du fichier de sortie. Valeurs prises en charge : `csv`, `parquet`, et `json`. | `csv` |
+| `csvOptions.quote.value` | Facultative | *Uniquement pour`"fileType.value": "csv"`*. Définit un caractère unique utilisé pour échapper les valeurs entre guillemets où le séparateur peut faire partie de la valeur. | `null` |
+| `csvOptions.quoteAll.value` | Facultative | *Uniquement pour`"fileType.value": "csv"`*. Indique si toutes les valeurs doivent toujours être placées entre guillemets. La valeur par défaut est d’ajouter uniquement des valeurs d’échappement contenant un guillemet. | `false` |
+| `csvOptions.escape.value` | Facultative | *Uniquement pour`"fileType.value": "csv"`*. Définit un caractère unique utilisé pour échapper les guillemets dans une valeur déjà entre guillemets. | `\` |
+| `csvOptions.escapeQuotes.value` | Facultative | *Uniquement pour`"fileType.value": "csv"`*. Indique si les valeurs contenant des guillemets doivent toujours être placées entre guillemets. Par défaut, toutes les valeurs contenant un guillemet doivent être placées dans une séquence d’échappement. | `true` |
+| `csvOptions.header.value` | Facultative | *Uniquement pour`"fileType.value": "csv"`*. Indique s’il faut écrire les noms des colonnes comme première ligne. | `true` |
+| `csvOptions.ignoreLeadingWhiteSpace.value` | Facultative | *Uniquement pour`"fileType.value": "csv"`*. Indique s’il faut rogner les espaces de début à partir des valeurs. | `true` |
+| `csvOptions.ignoreTrailingWhiteSpace.value` | Facultative | *Uniquement pour`"fileType.value": "csv"`*. Indique s’il faut supprimer les espaces de fin des valeurs. | `true` |
+| `csvOptions.nullValue.value` | Facultative | *Uniquement pour`"fileType.value": "csv"`*. Définit la représentation sous forme de chaîne d’une valeur nulle. | `""` |
+| `csvOptions.dateFormat.value` | Facultative | *Uniquement pour`"fileType.value": "csv"`*. Indique le format de date. | `yyyy-MM-dd` |
+| `csvOptions.timestampFormat.value` | Facultative | *Uniquement pour`"fileType.value": "csv"`*. Définit la chaîne qui indique un format d’horodatage. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` |
+| `csvOptions.charToEscapeQuoteEscaping.value` | Facultative | *Uniquement pour`"fileType.value": "csv"`*. Définit un caractère unique utilisé pour échapper l’échappement du caractère de guillemet. | `\` lorsque les caractères d’échappement et de guillemet sont différents. `\0` lorsque les caractères d’échappement et de guillemet sont identiques. |
+| `csvOptions.emptyValue.value` | Facultative | *Uniquement pour`"fileType.value": "csv"`*. Définit la représentation sous forme de chaîne d’une valeur vide. | `""` |
+| `csvOptions.lineSep.value` | Facultative | *Uniquement pour`"fileType.value": "csv"`*. Définit le séparateur de ligne à utiliser pour l’écriture. Longueur maximale : 1 caractère. | `\n` |

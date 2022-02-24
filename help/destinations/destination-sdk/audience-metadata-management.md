@@ -2,10 +2,10 @@
 description: Utilisez les modèles de métadonnées d’audience pour créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Adobe fournit un modèle de métadonnées d’audience extensible que vous pouvez configurer en fonction des spécifications de votre API marketing. Une fois que vous avez défini, testé et envoyé le modèle, il sera utilisé par Adobe pour structurer les appels d’API vers votre destination.
 title: Gestion des métadonnées d’audience
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: cb4e399798a9521e6f3da89cbd88d19476ab070d
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 1%
+source-wordcount: '1046'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,7 @@ Avec la prise en charge des métadonnées d’audience dans Destination SDK, lor
 
 ### Cas d’utilisation 1 - Vous disposez d’une API tierce et les utilisateurs n’ont pas besoin de saisir les identifiants de mappage
 
-Si vous disposez d’un point de terminaison API pour créer/mettre à jour/supprimer des segments ou des audiences, vous pouvez utiliser des modèles de métadonnées d’audience pour configurer Destination SDK afin qu’il corresponde aux spécifications de votre point de terminaison de création/mise à jour/suppression de segments. Experience Platform peut créer, mettre à jour ou supprimer des segments par programmation et resynchroniser les métadonnées dans Experience Platform.
+Si vous disposez d’un point de terminaison API pour créer/mettre à jour/supprimer des segments ou des audiences, vous pouvez utiliser des modèles de métadonnées d’audience pour configurer la Destination SDK afin qu’elle corresponde aux spécifications de votre point de terminaison de création/mise à jour/suppression de segments. Experience Platform peut créer, mettre à jour ou supprimer des segments par programmation et resynchroniser les métadonnées dans Experience Platform.
 
 Lors de l’activation de segments vers votre destination dans l’interface utilisateur de l’Experience Platform, les utilisateurs n’ont pas besoin de remplir manuellement un champ d’identifiant de mappage de segments dans le processus d’activation.
 
@@ -67,10 +67,11 @@ Notez que dans certains exemples, les champs de macro tels que `{{authData.acces
 | `update` | Inclut tous les composants requis (URL, méthode HTTP, en-têtes, requête et corps de réponse) pour effectuer un appel HTTP à votre API, pour mettre à jour par programmation les segments/audiences de votre plateforme et synchroniser les informations avec Adobe Experience Platform. |
 | `delete` | Inclut tous les composants requis (URL, méthode HTTP, en-têtes, requête et corps de réponse) pour effectuer un appel HTTP à votre API afin de supprimer par programmation les segments/audiences de votre plateforme. |
 | `validate` | Exécute des validations pour tous les champs de la configuration du modèle avant d’effectuer un appel vers l’API du partenaire. Par exemple, vous pouvez vérifier que l’ID de compte de l’utilisateur est saisi correctement. |
+| `notify` | S’applique uniquement aux destinations basées sur des fichiers. Inclut tous les composants requis (URL, méthode HTTP, en-têtes, requête et corps de réponse) pour effectuer un appel HTTP à votre API afin de vous informer de la réussite des exportations de fichiers. |
 
 {style=&quot;table-layout:auto&quot;}
 
-### Premier exemple {#example-1}
+### Exemple de diffusion en continu 1 {#example-1}
 
 ```json
 {
@@ -179,7 +180,7 @@ Notez que dans certains exemples, les champs de macro tels que `{{authData.acces
 }
 ```
 
-### Deuxième exemple {#example-2}
+### Exemple de diffusion en continu 2 {#example-2}
 
 ```json
 {
@@ -273,7 +274,7 @@ Notez que dans certains exemples, les champs de macro tels que `{{authData.acces
 }
 ```
 
-### Troisième exemple {#example-3}
+### Exemple de diffusion en continu 3 {#example-3}
 
 ```json
 {
@@ -371,6 +372,153 @@ Notez que dans certains exemples, les champs de macro tels que `{{authData.acces
          ]
       },
       "name":"Moviestar audience template - Third example"
+   }
+}
+```
+
+
+### Exemple basé sur des fichiers {#example-file-based}
+
+```json
+{
+   "instanceId":"34ab9cc2-2536-44a5-9dc5-b2fea60b3bd6",
+   "createdDate":"2021-07-26T19:30:52.012490Z",
+   "lastModifiedDate":"2021-07-27T21:25:42.763478Z",
+   "metadataTemplate":{
+      "create":{
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "httpMethod":"POST",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "requestBody":{
+            "json":{
+               "segments":[
+                  {
+                     "name":"{{segment.name}}",
+                     "description":"{{segment.description}}",
+                     "source_type":"FIRST_PARTY",
+                     "ad_account_id":"{{customerData.accountId}}",
+                     "retention_in_days":180
+                  }
+               ]
+            }
+         },
+         "responseFields":[
+            {
+               "value":"{{body.segments[0].segment.id}}",
+               "name":"externalAudienceId"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
+      "update":{
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
+         "httpMethod":"PUT",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "requestBody":{
+            "json":{
+               "segments":[
+                  {
+                     "id":"{{segment.alias}}",
+                     "name":"{{segment.name}}",
+                     "description":"{{segment.description}}"
+                  }
+               ]
+            }
+         },
+         "responseFields":[
+            {
+               "value":"{{body.segments[0].segment.id}}",
+               "name":"externalAudienceId"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
+      "notify":{
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
+         "httpMethod":"PUT",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "requestBody":{
+            "json":{
+               "segments":[
+                  {
+                     "id":"{{segment.alias}}",
+                     "name":"{{segment.name}}",
+                     "description":"{{segment.description}}"
+                  }
+               ]
+            }
+         },
+         "responseFields":[
+            {
+               "value":"{{body.segments[0].segment.id}}",
+               "name":"externalAudienceId"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
+      "delete":{
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
+         "httpMethod":"DELETE",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
+      "name":"Moviestar destination audience template - Example 1"
    }
 }
 ```

@@ -1,35 +1,31 @@
 ---
 description: Cette page répertorie et décrit les étapes de configuration d’une destination de diffusion en continu à l’aide de Destination SDK.
-title: Utilisation de Destination SDK pour configurer une destination de diffusion en continu
+title: Utilisation de la Destination SDK pour configurer une destination de diffusion en continu
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
 
-# Utilisation de Destination SDK pour configurer une destination de diffusion en continu
+# Utilisation de la Destination SDK pour configurer une destination de diffusion en continu
 
 ## Présentation {#overview}
 
-Cette page décrit l’utilisation des informations dans [Options de configuration dans le SDK Destinations](./configuration-options.md) et dans d’autres fonctionnalités Destination SDK et documents de référence d’API pour configurer une [destination de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). Les étapes sont présentées dans l’ordre séquentiel ci-dessous.
-
->[!NOTE]
->
->La configuration d’une destination par lot via Destination SDK n’est actuellement pas prise en charge.
+Cette page décrit l’utilisation des informations dans [Options de configuration dans le SDK Destinations](./configuration-options.md) et dans d’autres fonctionnalités de Destination SDK et documents de référence d’API pour configurer une [destination de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). Les étapes sont présentées dans l’ordre séquentiel ci-dessous.
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes illustrées ci-dessous, veuillez lire la section [Prise en main de Destination SDK](./getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification d’Adobe I/O nécessaires et d’autres conditions préalables requises pour utiliser les API Destination SDK.
+Avant de passer aux étapes illustrées ci-dessous, veuillez lire la section [Prise en main de la Destination SDK](./getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification d’Adobe I/O nécessaires et d’autres conditions préalables requises pour utiliser les API Destination SDK.
 
 ## Étapes d’utilisation des options de configuration dans Destination SDK pour configurer votre destination {#steps}
 
-![Étapes illustrées d’utilisation des points de fin Destination SDK](./assets/destination-sdk-steps.png)
+![Étapes illustrées d’utilisation des points de fin de Destination SDK](./assets/destination-sdk-steps.png)
 
 ## Étape 1 : Création d’une configuration de serveur et de modèle {#create-server-template-configuration}
 
-Commencez par créer une configuration de serveur et de modèle à l’aide du `/destinations-server` point d’entrée (lecture) [Référence d’API](./destination-server-api.md)). Pour plus d’informations sur la configuration du serveur et des modèles, reportez-vous à la section [Spécifications du serveur et des modèles](./configuration-options.md#server-and-template) dans la section de référence.
+Commencez par créer une configuration de serveur et de modèle à l’aide du `/destinations-server` point d’entrée (lecture) [Référence d’API](destination-server-api.md)). Pour plus d’informations sur la configuration du serveur et des modèles, reportez-vous à la section [Spécifications du serveur et des modèles](server-and-template-configuration.md) dans la section de référence.
 
 Vous trouverez ci-dessous un exemple de configuration. Notez que le modèle de transformation du message dans la variable `requestBody.value` est abordé à l’étape 3, [Créer un modèle de transformation](./configure-destination-instructions.md#create-transformation-template).
 
@@ -58,7 +54,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Étape 2 : Création d’une configuration de destination {#create-destination-configuration}
 
-Vous trouverez ci-dessous un exemple de configuration pour un modèle de destination, créé à l’aide de la fonction `/destinations` Point d’entrée de l’API. Pour plus d’informations sur ce modèle, reportez-vous à la section [Configuration de la destination](./destination-configuration.md).
+Vous trouverez ci-dessous un exemple de configuration pour un modèle de destination, créé à l’aide de la fonction `/destinations` Point d’entrée de l’API. Pour plus d’informations sur ce paramétrage, reportez-vous à la section [Configuration de la destination](./destination-configuration.md).
 
 Pour connecter la configuration du serveur et du modèle à l’étape 1 à cette configuration de destination, ajoutez l’ID d’instance du serveur et la configuration du modèle en tant que `destinationServerId` ici.
 
@@ -156,11 +152,11 @@ Une fois que vous avez conçu un modèle de transformation de messages qui fonct
 
 ## Étape 4 : Création d’une configuration de métadonnées d’audience {#create-audience-metadata-configuration}
 
-Pour certaines destinations, Destination SDK exige que vous configuriez une configuration de métadonnées d’audience pour créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Voir [Gestion des métadonnées d’audience](./audience-metadata-management.md) pour plus d’informations sur le moment où vous devez configurer cette configuration et la manière de procéder.
+Pour certaines destinations, Destination SDK exige que vous configuriez une configuration de métadonnées d’audience afin de créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Voir [Gestion des métadonnées d’audience](./audience-metadata-management.md) pour plus d’informations sur le moment où vous devez configurer cette configuration et la manière de procéder.
 
 Si vous utilisez une configuration de métadonnées d’audience, vous devez la connecter à la configuration de destination que vous avez créée à l’étape 2. Ajoutez l’ID d’instance de votre configuration de métadonnées d’audience à votre configuration de destination en tant que `audienceTemplateId`.
 
-## Étape 5 : Création de la configuration des informations d’identification / Configuration de l’authentification {#set-up-authentication}
+## Étape 5 : Configuration de l’authentification {#set-up-authentication}
 
 Selon que vous spécifiez `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `"authenticationRule": "PLATFORM_AUTHENTICATION"` dans la configuration de destination ci-dessus, vous pouvez configurer l’authentification pour votre destination à l’aide du `/destination` ou le `/credentials` point de terminaison .
 

@@ -2,9 +2,9 @@
 description: Cette page décrit comment vous authentifier et commencer à utiliser Adobe Experience Platform Destination SDK. Elle comprend des instructions sur la manière d’obtenir des informations d’authentification d’Adobe I/O, un nom d’environnement de test et l’autorisation de contrôle d’accès de création de destination.
 title: Prise en main de Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: d5ce6c8ccdd29b9bcf90a1c2d08085f3be4cf33f
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '613'
 ht-degree: 7%
 
 ---
@@ -21,7 +21,7 @@ Ce guide utilise des concepts spécifiques à Platform, tels que l’organisatio
 
 ## Obtention des informations d’authentification requises {#obtain-authentication-credentials}
 
-Destination SDK utilise la variable [Adobe I/O](https://www.adobe.io/) passerelle pour l’authentification. Pour effectuer des appels API vers des points de terminaison Destination SDK, vous devez fournir certains en-têtes dans vos appels API. Collaborez avec l’équipe Adobe Exchange pour configurer l’authentification pour vous au [Adobe Developer Console](https://developer.adobe.com/console).
+Destination SDK utilise la variable [Adobe I/O](https://www.adobe.io/) passerelle pour l’authentification. Pour effectuer des appels API vers des points de terminaison de Destination SDK, vous devez fournir certains en-têtes dans vos appels API. Collaborez avec l’équipe Adobe Exchange pour configurer l’authentification pour vous au [Adobe Developer Console](https://developer.adobe.com/console).
 
 Pour passer avec succès des appels aux points de terminaison de l’API Destination SDK, suivez la [Tutoriel sur l’authentification des Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Démarrez le tutoriel à partir du[Génération d’une clé API, d’un identifiant de l’organisation IMS et d’un secret client](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;. L’équipe Adobe Exchange se chargera des étapes précédentes. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels d’API Destination SDK, comme illustré ci-dessous :
 
@@ -48,7 +48,7 @@ You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-i
 
 ## Propriété de destination et environnements de test {#destination-ownership}
 
-Dans Experience Platform, toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Les requêtes envoyées à Destination SDK nécessitent des en-têtes qui spécifient le nom de l’environnement de test dans lequel l’opération a lieu :
+Dans Experience Platform, toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Les requêtes de Destination SDK nécessitent des en-têtes qui spécifient le nom de l’environnement de test dans lequel l’opération a lieu :
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -56,7 +56,7 @@ L’équipe Adobe Exchange vous fournit votre nom d’environnement de test, que
 
 ## Contrôle d’accès en fonction du rôle (RBAC) {#rbac}
 
-Pour utiliser les points d’entrée de l’API Destination SDK décrits dans la section [documentation de référence](./configuration-options.md), vous avez besoin de la fonction **[!UICONTROL Création de destination]** autorisation de contrôle d’accès. Collaborez avec l’équipe Adobe Exchange pour que cette autorisation vous soit affectée dans [Adobe Admin Console](https://adminconsole.adobe.com/).
+Pour utiliser les points de terminaison de l’API de Destination SDK décrits dans la section [documentation de référence](./configuration-options.md), vous avez besoin de la fonction **[!UICONTROL Création de destination]** autorisation de contrôle d’accès. Collaborez avec l’équipe Adobe Exchange pour que cette autorisation vous soit affectée dans [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![Autorisation de création de destination](./assets/destination-authoring-permission.png)
 
@@ -74,6 +74,11 @@ Pour plus d’informations, consultez les documents de contrôle d’accès Expe
 ## Étapes suivantes {#next-steps}
 
 En suivant les étapes décrites dans cet article, vous obteniez des informations d’authentification pour Adobe I/O, un nom d’environnement de test et l’autorisation de contrôle d’accès de création de destination. Vous pouvez ensuite configurer une destination à l’aide de Destination SDK.
-* Lecture [Utilisation de Destination SDK pour configurer votre destination](./configure-destination-instructions.md) pour les étapes suivantes.
+
+* Lisez les guides de configuration suivants, en fonction du type de destination :
+
+   * [Utilisation de la Destination SDK pour configurer une destination de diffusion en continu](./configure-destination-instructions.md)
+   * [(Version bêta) Utilisez la Destination SDK pour configurer une destination basée sur des fichiers](./configure-file-based-destination-instructions.md)
+
 * Pour toutes les opérations, reportez-vous à la section [Documentation de l’API de création de destination](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
 * Utilisez la variable [Collection Postman de l’API de création de destinations](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) pour configurer votre destination à l’aide des points de terminaison de l’API Destination SDK. Pour commencer à utiliser Postman, reportez-vous à la section [étapes pour importer des environnements et des collections](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) et un [Guide vidéo pour la création de l’environnement Postman](https://video.tv.adobe.com/v/28832).

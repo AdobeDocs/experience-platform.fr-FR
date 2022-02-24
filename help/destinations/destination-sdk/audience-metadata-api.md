@@ -2,7 +2,7 @@
 description: Cette page décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/audience-templates`.
 title: Opérations de l’API de point d’entrée des métadonnées d’audience
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: afdabdebe9b82d828cb1941edb99ca2518a941a2
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 6%
@@ -26,7 +26,6 @@ Avant de poursuivre, veuillez consulter la section [guide de prise en main](./ge
 Vous pouvez créer un modèle d’audience en adressant une requête de POST au `/authoring/audience-templates` point de terminaison .
 
 **Format d’API**
-
 
 ```http
 POST /authoring/audience-templates
@@ -146,6 +145,31 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
                "value":"string"
             }
          ]
+      },
+      "notify":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
       }
    },
    "validations":[
@@ -183,7 +207,6 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails du modèle d�
 Vous pouvez mettre à jour un modèle d’audience existant en adressant une requête de PUT au `/authoring/audience-templates` point de terminaison et fournissant l’ID d’instance du modèle d’audience que vous souhaitez mettre à jour. Dans le corps de l’appel, fournissez le modèle mis à jour.
 
 **Format d’API**
-
 
 ```http
 PUT /authoring/audience-templates/{INSTANCE_ID}
@@ -292,7 +315,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
    }
 }
 ```
-
 
 ## Récupération d’une liste de modèles d’audience {#retrieve-list}
 
@@ -430,7 +452,6 @@ La réponse suivante renvoie un état HTTP 200 avec une liste de modèles de mé
 Vous pouvez récupérer des informations détaillées sur un modèle d’audience spécifique en adressant une requête de GET à la fonction `/authoring/audience-templates` point de terminaison et en fournissant l’ID d’instance du modèle d’audience que vous souhaitez récupérer.
 
 **Format d’API**
-
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}

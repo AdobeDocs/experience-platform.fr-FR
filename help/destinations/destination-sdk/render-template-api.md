@@ -2,7 +2,7 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/testing/template/render`, pour effectuer le rendu des données exportées pour votre destination, en fonction de votre modèle de transformation de messages.
 title: Opérations de l’API de modèle de rendu
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: b337d65bcdfbb65da1b751645ddc649d30440dc7
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 1%
@@ -30,7 +30,6 @@ Vous pouvez commencer par utiliser un modèle simple qui exporte vos profils bru
 >[!TIP]
 >
 >* L’identifiant de destination que vous devez utiliser ici est le suivant : `instanceId` qui correspond à une configuration de destination, créée à l’aide du `/destinations` point de terminaison . Reportez-vous à la section [opérations de l’API de configuration de destination](./destination-configuration-api.md#retrieve-list).
-
 
 
 **Format d&#39;API**

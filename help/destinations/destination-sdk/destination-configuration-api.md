@@ -2,9 +2,9 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/destinations`.
 title: Opérations de point d’entrée de l’API Destinations
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 07ab607a96822b4d4c11bec128764fa08402def6
 workflow-type: tm+mt
-source-wordcount: '2387'
+source-wordcount: '2506'
 ht-degree: 5%
 
 ---
@@ -21,12 +21,11 @@ Cette page répertorie et décrit toutes les opérations d’API que vous pouvez
 
 Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
-## Création d’une configuration pour une destination {#create}
+## Création d’une configuration pour une destination de diffusion en continu {#create}
 
 Vous pouvez créer une configuration de destination en adressant une requête de POST au `/authoring/destinations` point de terminaison .
 
 **Format d’API**
-
 
 ```http
 POST /authoring/destinations
@@ -34,9 +33,9 @@ POST /authoring/destinations
 
 **Requête**
 
-La requête suivante crée une configuration de destination configurée par les paramètres fournis dans la payload. La payload ci-dessous inclut tous les paramètres acceptés par la fonction `/authoring/destinations` point de terminaison . Notez que vous n’avez pas à ajouter tous les paramètres à l’appel et que le modèle est personnalisable, conformément aux exigences de votre API.
+La requête suivante crée une configuration de destination de diffusion en continu, configurée par les paramètres fournis dans la payload. La payload ci-dessous inclut tous les paramètres pour les destinations de diffusion en continu acceptées par la fonction `/authoring/destinations` point de terminaison . Notez que vous n’avez pas à ajouter tous les paramètres à l’appel et que le modèle est personnalisable, conformément aux exigences de votre API.
 
-```shell
+```json
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
@@ -141,7 +140,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `description` | Chaîne | Fournissez une description que l’Adobe utilisera dans le catalogue des destinations Experience Platform pour votre carte de destination. Ne vise pas plus de 4 à 5 phrases. |
 | `status` | Chaîne | Indique l’état du cycle de vie de la carte de destination. Les valeurs acceptées sont `TEST`, `PUBLISHED` et `DELETED`. Utilisation `TEST` lorsque vous configurez votre destination pour la première fois. |
 | `customerAuthenticationConfigurations` | Chaîne | Indique la configuration utilisée pour authentifier les clients Experience Platform sur votre serveur. Voir `authType` ci-dessous pour les valeurs acceptées. |
-| `customerAuthenticationConfigurations.authType` | Chaîne | Les valeurs acceptées sont `OAUTH2, BEARER`. |
+| `customerAuthenticationConfigurations.authType` | Chaîne | Les valeurs prises en charge pour les destinations de diffusion en continu sont les suivantes : <ul><li>`OAUTH2`</li><li>`BEARER`</li></ul> Les valeurs prises en charge pour les destinations basées sur des fichiers sont les suivantes : <ul><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li></ul> |
 | `customerDataFields.name` | Chaîne | Attribuez un nom au champ personnalisé que vous introduisez. |
 | `customerDataFields.type` | Chaîne | Indique le type de champ personnalisé que vous introduisez. Les valeurs acceptées sont `string`, `object`, `integer` |
 | `customerDataFields.title` | Chaîne | Indique le nom du champ, tel qu’il est affiché par les clients dans l’interface utilisateur de l’Experience Platform. |
@@ -182,6 +181,254 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `aggregation.configurableAggregation.aggregationKey.groups` | Chaîne | Voir paramètre dans l’exemple de configuration [here](./destination-configuration.md#example-configuration). Créez des listes de groupes d’identités si vous souhaitez regrouper les profils exportés vers votre destination par groupes d’espaces de noms d’identité. Par exemple, vous pouvez combiner des profils qui contiennent les identifiants mobiles IDFA et GAID dans un appel vers votre destination et des emails dans un autre en utilisant la configuration de l’exemple. |
 
 {style=&quot;table-layout:auto&quot;}
+
+**Réponse**
+
+Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration de destination que vous venez de créer.
+
+## Création d’une configuration pour une destination basée sur des fichiers {#create-file-based}
+
+Vous pouvez créer une configuration de destination en adressant une requête de POST au `/authoring/destinations` point de terminaison .
+
+**Format d’API**
+
+```http
+POST /authoring/destinations
+```
+
+**Requête**
+
+La requête suivante crée une [!DNL Amazon S3] configuration de destination basée sur les fichiers, configurée par les paramètres fournis dans la payload. La payload ci-dessous inclut tous les paramètres pour les destinations basées sur des fichiers acceptés par le `/authoring/destinations` point de terminaison . Notez que vous n’avez pas à ajouter tous les paramètres à l’appel et que le modèle est personnalisable, conformément aux exigences de votre API.
+
+```json
+{
+        "name": "S3 Destination with CSV Options",
+        "description": "S3 Destination with CSV Options",
+        "releaseNotes": "S3 Destination with CSV Options",
+        "status": "TEST",
+        "customerAuthenticationConfigurations": [
+            {
+                "authType": "S3"
+            }
+        ],
+        "customerEncryptionConfigurations": [
+            {
+                "encryptionAlgo": ""
+            }
+        ],
+        "customerDataFields": [
+            {
+                "name": "bucket",
+                "title": "Select S3 Bucket",
+                "description": "Select S3 Bucket",
+                "type": "string",
+                "isRequired": true,
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "path",
+                "title": "S3 path",
+                "description": "Select S3 Bucket",
+                "type": "string",
+                "isRequired": true,
+                "pattern": "^[A-Za-z]+$",
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "sep",
+                "title": "Select separator for each field and value",
+                "description": "Select for each field and value",
+                "type": "string",
+                "isRequired": false,
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "encoding",
+                "title": "Specify encoding (charset) of saved CSV files",
+                "description": "Select encoding of csv files",
+                "type": "string",
+                "enum": ["UTF-8", "UTF-16"],
+                "isRequired": false,
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "quote",
+                "title": "Select a single character used for escaping quoted values",
+                "description": "Select single charachter for escaping quoted values",
+                "type": "string",
+                "isRequired": false,
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "quoteAll",
+                "title": "Quote All",
+                "description": "Select flag for escaping quoted values",
+                "type": "string",
+                "enum" : ["true","false"],
+                "default": "true",
+                "isRequired": true,
+                "readOnly": false,
+                "hidden": false
+            },
+             {
+                "name": "escape",
+                "title": "Select a single character used for escaping quotes",
+                "description": "Select a single character used for escaping quotes inside an already quoted value",
+                "type": "string",
+                "isRequired": false,
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "escapeQuotes",
+                "title": "Escape quotes",
+                "description": "A flag indicating whether values containing quotes should always be enclosed in quotes",
+                "type": "string",
+                "enum" : ["true","false"],
+                "isRequired": false,
+                "default": "true",
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "header",
+                "title": "header",
+                "description": "Writes the names of columns as the first line.",
+                "type": "string",
+                "isRequired": false,
+                "enum" : ["true","false"],
+                "readOnly": false,
+                "default": "true",
+                "hidden": false
+            },
+            {
+                "name": "ignoreLeadingWhiteSpace",
+                "title": "Ignore leading white space",
+                "description": "A flag indicating whether or not leading whitespaces from values being written should be skipped.",
+                "type": "string",
+                "isRequired": false,
+                "enum" : ["true","false"],
+                "readOnly": false,
+                "default": "true",
+                "hidden": false
+            },
+            {
+                "name": "nullValue",
+                "title": "Select the string representation of a null value",
+                "description": "Sets the string representation of a null value. ",
+                "type": "string",
+                "isRequired": false,
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "dateFormat",
+                "title": "Date format",
+                "description": "Select the string that indicates a date format. ",
+                "type": "string",
+                "default": "yyyy-MM-dd",
+                "isRequired": false,
+                "readOnly": false,
+                "hidden": false
+            },
+             {
+                "name": "charToEscapeQuoteEscaping",
+                "title": "Char to escape quote escaping",
+                "description": "Sets a single character used for escaping the escape for the quote character",
+                "type": "string",
+                "isRequired": false,
+                "readOnly": false,
+                "hidden": false
+            },
+            {
+                "name": "emptyValue",
+                "title": "Select the string representation of an empty value",
+                "description": "Select the string representation of an empty value",
+                "type": "string",
+                "isRequired": false,
+                "readOnly": false,
+                "default": "",
+                "hidden": false
+            },
+            {
+                "name": "compression",
+                "title": "Select compression",
+                "description": "Select compressiont",
+                "type": "string",
+                "isRequired": true,
+                "readOnly": false,
+                "enum" : ["SNAPPY","GZIP","DEFLATE", "NONE"]
+            },
+            {
+                "name": "fileType",
+                "title": "Select a fileType",
+                "description": "Select fileType",
+                "type": "string",
+                "isRequired": true,
+                "readOnly": false,
+                "hidden": false,
+                "enum" :["csv", "json", "parquet"],
+                "default" : "csv"
+            }
+        ],
+        "uiAttributes": {
+            "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+            "category": "S3",
+            "iconUrl": "https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
+            "connectionType": "S3",
+            "flowRunsSupported": true,
+            "monitoringSupported": true,
+            "frequency": "Batch"
+        },
+        "destinationDelivery": [
+            {
+                "deliveryMatchers" : [
+                    {
+                        "type" : "SOURCE",
+                        "value" : [
+                            "batch"
+                        ]
+                    }
+                ],
+                "authenticationRule": "CUSTOMER_AUTHENTICATION",
+                "destinationServerId": "{{destinationServerId}}"
+            }
+        ],
+        "schemaConfig" : {
+            "profileRequired" : true,
+            "segmentRequired" : true,
+            "identityRequired" : true
+        },
+        "batchConfig":{
+            "allowMandatoryFieldSelection": true,
+            "allowJoinKeyFieldSelection": true,
+            "defaultExportMode": "DAILY_FULL_EXPORT",
+            "allowedExportMode":[
+                "DAILY_FULL_EXPORT",
+                "FIRST_FULL_THEN_INCREMENTAL"
+            ],
+            "allowedScheduleFrequency":[
+                "DAILY",
+                "EVERY_3_HOURS",
+                "EVERY_6_HOURS",
+                "EVERY_8_HOURS",
+                "EVERY_12_HOURS",
+                "ONCE",
+                "EVERY_HOUR"
+            ],
+            "defaultFrequency":"DAILY",
+            "defaultStartTime":"00:00"
+        },
+        "backfillHistoricalProfileData": true
+    }
+```
+
+Pour une description détaillée de tous les paramètres ci-dessus, voir [configuration de destination basée sur les fichiers](file-based-destination-configuration.md).
 
 **Réponse**
 

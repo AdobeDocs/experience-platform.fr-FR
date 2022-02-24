@@ -1,11 +1,11 @@
 ---
-description: Utilisez les configurations d’authentification prises en charge dans le SDK Adobe Experience Platform Destination pour authentifier les utilisateurs et activer les données vers votre point de terminaison de destination.
+description: Utilisez les configurations d’authentification prises en charge en Adobe Experience Platform Destination SDK pour authentifier les utilisateurs et activer les données vers votre point de terminaison de destination.
 title: Configuration de l’authentification
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: e6d922800c17312df8529061c56d8a2deac46662
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 0%
+source-wordcount: '564'
+ht-degree: 7%
 
 ---
 
@@ -13,18 +13,32 @@ ht-degree: 0%
 
 ## Types d’authentification pris en charge {#supported-authentication-types}
 
-Le SDK Adobe Experience Platform Destination prend en charge plusieurs types d’authentification :
+La configuration d’authentification que vous sélectionnez détermine la manière dont l’Experience Platform s’authentifie à votre destination, dans l’interface utilisateur de Platform.
+
+L’Adobe Experience Platform Destination SDK prend en charge plusieurs types d’authentification :
 
 * Authentification du porteur
+* (Version bêta) Authentification Amazon S3
+* (Version bêta) Chaîne de connexion Azure
+* (Version bêta) Entité principale du service Azure
+* (Version bêta) SFTP avec clé SSH
+* (Version bêta) SFTP avec mot de passe
 * OAuth 2 avec code d’autorisation
 * OAUth 2 avec l&#39;octroi du mot de passe
 * OAuth 2 avec octroi des informations d’identification client
 
-Vous pouvez configurer les informations d’authentification pour votre destination via le `customerAuthenticationConfigurations` des paramètres `/destinations` point de terminaison . Reportez-vous à la section [section sur les configurations d’authentification du client](./destination-configuration.md#customer-authentication-configurations) dans l’article sur la configuration des destinations et dans les sections ci-dessous pour plus de détails sur les configurations de chaque type d’authentification.
+Vous pouvez configurer les informations d’authentification pour votre destination via le `customerAuthenticationConfigurations` des paramètres `/destinations` point de terminaison .
+
+Pour plus d’informations sur la configuration de l’authentification pour chaque type de destination, reportez-vous aux sections suivantes :
+
+* [Configurations d’authentification pour les destinations de diffusion en continu](destination-configuration.md#customer-authentication-configurations)
+* [Configurations de l’authentification pour les destinations basées sur des fichiers](file-based-destination-configuration.md#customer-authentication-configurations)
 
 ## Authentification du porteur {#bearer}
 
-Pour configurer l’authentification par type de porteur pour vos destinations, vous devez simplement configurer la variable `customerAuthenticationConfigurations` du paramètre `/destinations` point de terminaison comme illustré ci-dessous :
+L’authentification du porteur est prise en charge pour les destinations de diffusion en continu dans Experience Platform.
+
+Pour configurer l’authentification par type de porteur pour votre destination, configurez la variable `customerAuthenticationConfigurations` du paramètre `/destinations` point de terminaison comme illustré ci-dessous :
 
 ```json
    "customerAuthenticationConfigurations":[
@@ -34,9 +48,101 @@ Pour configurer l’authentification par type de porteur pour vos destinations, 
    ]
 ```
 
-## Authentification OAuth 2 {#oauth2}
+## (Version bêta) [!DNL Amazon S3] authentication {#s3}
 
-Pour plus d’informations sur la configuration des différents flux OAuth 2 pris en charge, ainsi que sur la prise en charge personnalisée d’OAuth 2, consultez la documentation du SDK de destination sur [Authentification OAuth 2](./oauth2-authentication.md).
+[!DNL Amazon S3] l’authentification est prise en charge pour les destinations basées sur des fichiers dans Experience Platform.
+
+>[!IMPORTANT]
+>
+>La prise en charge des destinations basées sur des fichiers en Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+
+Pour configurer l’authentification Amazon S3 pour votre destination, configurez la variable `customerAuthenticationConfigurations` du paramètre `/destinations` point de terminaison comme illustré ci-dessous :
+
+```json
+   "customerAuthenticationConfigurations":[
+      {
+         "authType":"S3"
+      }
+   ]
+```
+
+## (version bêta) [!DNL Azure Blob Storage] {#blob}
+
+[!DNL Azure Blob Storage] l’authentification est prise en charge pour les destinations basées sur des fichiers dans Experience Platform.
+
+>[!IMPORTANT]
+>
+>La prise en charge des destinations basées sur des fichiers en Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+
+Pour configurer [!DNL Azure Blob] l’authentification pour votre destination, configurez la variable `customerAuthenticationConfigurations` du paramètre `/destinations` point de terminaison comme illustré ci-dessous :
+
+```json
+   "customerAuthenticationConfigurations":[
+     {
+        "authType":"AZURE_CONNECTION_STRING"
+     }
+  ]
+```
+
+## (version bêta) [!DNL Azure Data Lake Storage] {#adls}
+
+[!DNL Azure Data Lake Storage] l’authentification est prise en charge pour les destinations basées sur des fichiers dans Experience Platform.
+
+>[!IMPORTANT]
+>
+>La prise en charge des destinations basées sur des fichiers en Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+
+Pour configurer [!DNL Azure Data Lake Storage] (ADLS) pour l’authentification de votre destination, configurez la variable `customerAuthenticationConfigurations` du paramètre `/destinations` point de terminaison comme illustré ci-dessous :
+
+```json
+   "customerAuthenticationConfigurations":[
+     {
+        "authType":"AZURE_SERVICE_PRINCIPAL"
+     }
+  ]
+```
+
+## (Version bêta) [!DNL SFTP] authentification avec [!DNL SSH] key {#sftp-ssh}
+
+[!DNL SFTP] authentification avec [!DNL SSH] est prise en charge pour les destinations basées sur des fichiers dans Experience Platform.
+
+>[!IMPORTANT]
+>
+>La prise en charge des destinations basées sur des fichiers en Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+
+Pour configurer l’authentification SFTP avec la clé SSH pour votre destination, configurez la variable `customerAuthenticationConfigurations` du paramètre `/destinations` point de terminaison comme illustré ci-dessous :
+
+```json
+   "customerAuthenticationConfigurations":[
+      {
+         "authType":"SFTP_WITH_SSH_KEY"
+      }
+   ]
+```
+
+## (Version bêta) [!DNL SFTP] authentification avec mot de passe {#sftp-password}
+
+[!DNL SFTP] l’authentification avec mot de passe est prise en charge pour les destinations basées sur des fichiers dans Experience Platform.
+
+>[!IMPORTANT]
+>
+>La prise en charge des destinations basées sur des fichiers en Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+
+Pour configurer l’authentification SFTP avec le mot de passe de votre destination, configurez la variable `customerAuthenticationConfigurations` du paramètre `/destinations` point de terminaison comme illustré ci-dessous :
+
+```json
+   "customerAuthenticationConfigurations":[
+      {
+         "authType":"SFTP_WITH_PASSWORD"
+      }
+   ]
+```
+
+## [!DNL OAuth 2] authentication {#oauth2}
+
+[!DNL OAuth 2] l’authentification est prise en charge pour les destinations de diffusion en continu dans Experience Platform.
+
+Pour plus d’informations sur la configuration des différents flux OAuth 2 pris en charge, ainsi que sur la prise en charge personnalisée d’OAuth 2, consultez la documentation de Destination SDK sur [Authentification OAuth 2](./oauth2-authentication.md).
 
 
 ## Quand utiliser la variable `/credentials` Point d’entrée API {#when-to-use}

@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison API `/authoring/destination-servers. Les spécifications du serveur et du modèle pour votre destination peuvent être configurées en Adobe Experience Platform Destination SDK via le point de terminaison commun `/authoring/destination-servers`.
 title: Opérations de l’API du point d’entrée du serveur de destination
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 6bdb7a3ce6e9f37070dceff8b0226bd6cd53038b
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 7%
+source-wordcount: '1454'
+ht-degree: 8%
 
 ---
 
@@ -21,12 +21,11 @@ Cette page répertorie et décrit toutes les opérations d’API que vous pouvez
 
 Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
-## Création d’une configuration pour un serveur de destination {#create}
+## Création d’une configuration pour un serveur de destination de diffusion en continu {#create}
 
-Vous pouvez créer une configuration de serveur de destination en adressant une requête de POST au `/authoring/destination-servers` point de terminaison .
+Vous pouvez créer une configuration de serveur de destination pour une destination de diffusion en continu en adressant une requête de POST à la fonction `/authoring/destination-servers` point de terminaison .
 
 **Format d’API**
-
 
 ```http
 POST /authoring/destination-servers
@@ -67,7 +66,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | Paramètre | Type | Description |
 | -------- | ----------- | ----------- |
 | `name` | Chaîne | *Obligatoire.* Représente un nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible par les partenaires ou les clients. Exemple `Moviestar destination server`. |
-| `destinationServerType` | Chaîne | *Obligatoire.* `URL_BASED` est actuellement la seule option disponible. |
+| `destinationServerType` | Chaîne | *Obligatoire.* Définissez sur . `URL_BASED` pour les destinations de diffusion en continu. |
 | `urlBasedDestination.url.templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisation `PEBBLE_V1` si l’Adobe doit transformer l’URL dans la variable `value` ci-dessous. Utilisez cette option si vous disposez d’un point de terminaison du type : `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilisation `NONE` si aucune transformation n’est nécessaire du côté Adobe, par exemple si vous avez un point de terminaison comme : `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point de terminaison de l’API auquel l’Experience Platform doit se connecter. |
 | `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode que l’Adobe utilisera dans les appels à votre serveur. Les options sont `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
@@ -80,6 +79,560 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
+
+## Création d’une configuration pour un serveur de destination basé sur les fichiers {#create-file-based}
+
+### Exemple : créer une configuration pour un serveur de destination SFTP ;
+
+>[!IMPORTANT]
+>
+>La prise en charge des destinations basées sur des fichiers en Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+
+Vous pouvez créer une configuration de serveur de destination SFTP en adressant une requête de POST au `/authoring/destination-servers` point de terminaison .
+
+**Format d’API**
+
+```http
+POST /authoring/destination-servers
+```
+
+**Requête**
+
+La requête suivante crée une configuration de serveur de destination, configurée par les paramètres fournis dans la payload. La payload ci-dessous inclut tous les paramètres acceptés par la fonction `/authoring/destination-servers` point de terminaison . Notez que vous n’avez pas à ajouter tous les paramètres à l’appel et que le modèle est personnalisable, conformément aux exigences de votre API.
+
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"File-based SFTP destination server",
+   "destinationServerType":"FILE_BASED_SFTP",
+   "fileBasedSftpDestination":{
+      "rootDirectory":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.rootDirectory}}"
+      }, 
+      "port": 22,
+      "encryptionMode" : "PGP"
+   },
+    "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**Réponse**
+
+Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
++++
+
++++Exemple : créer une configuration pour un serveur de destination Amazon S3 ;
+
+>[!IMPORTANT]
+>
+>La prise en charge des destinations basées sur des fichiers en Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+
+Vous pouvez créer une configuration de serveur de destination Amazon S3 en adressant une requête de POST à la fonction `/authoring/destination-servers` point de terminaison .
+
+**Format d’API**
+
+```http
+POST /authoring/destination-servers
+```
+
+**Requête**
+
+La requête suivante crée une configuration de serveur de destination, configurée par les paramètres fournis dans la payload. La payload ci-dessous inclut tous les paramètres acceptés par la fonction `/authoring/destination-servers` point de terminaison . Notez que vous n’avez pas à ajouter tous les paramètres à l’appel et que le modèle est personnalisable, conformément aux exigences de votre API.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+    "name": "S3 destination",
+    "destinationServerType": "FILE_BASED_S3",
+    "fileBasedS3Destination": {
+        "bucket": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.bucket}}"
+        },
+        "path": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.path}}"
+        }
+    },
+    "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**Réponse**
+
+Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
++++
+
++++Exemple : créer une configuration pour un serveur de destination Azure Blob ;
+
+>[!IMPORTANT]
+>
+>La prise en charge des destinations basées sur des fichiers en Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+
+Vous pouvez créer une configuration de serveur de destination Azure Blob en adressant une requête de POST à la fonction `/authoring/destination-servers` point de terminaison .
+
+**Format d’API**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**Requête**
+
+La requête suivante crée une configuration de serveur de destination, configurée par les paramètres fournis dans la payload. La payload ci-dessous inclut tous les paramètres acceptés par la fonction `/authoring/destination-servers` point de terminaison . Notez que vous n’avez pas à ajouter tous les paramètres à l’appel et que le modèle est personnalisable, conformément aux exigences de votre API.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Blob destination server",
+   "destinationServerType":"FILE_BASED_AZURE_BLOB",
+   "fileBasedAzureBlobDestination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      },
+      "container":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.container}}"
+      }
+   },
+  "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**Réponse**
+
+Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
++++
+
++++Exemple : créer une configuration pour un serveur de destination Azure Data Lake Storage (ADLS) ;
+
+>[!IMPORTANT]
+>
+>La prise en charge des destinations basées sur des fichiers en Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+
+Vous pouvez créer une configuration de serveur de destination ADLS en adressant une requête de POST à la fonction `/authoring/destination-servers` point de terminaison .
+
+**Format d’API**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**Requête**
+
+La requête suivante crée une configuration de serveur de destination, configurée par les paramètres fournis dans la payload. La payload ci-dessous inclut tous les paramètres acceptés par la fonction `/authoring/destination-servers` point de terminaison . Notez que vous n’avez pas à ajouter tous les paramètres à l’appel et que le modèle est personnalisable, conformément aux exigences de votre API.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"ADLS destination server",
+   "destinationServerType":"FILE_BASED_ADLS_GEN2",
+   "fileBasedAdlsGen2Destination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      }
+   },
+  "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**Réponse**
+
+Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
++++
+
++++Exemple : créer une configuration pour un serveur de destination de zone d’entrée de données (DLZ) ;
+
+>[!IMPORTANT]
+>
+>La prise en charge des destinations basées sur des fichiers en Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+
+[!DNL Data Landing Zone] ([!DNL DLZ]) est un [!DNL Azure Blob] Interface de stockage configurée par Adobe Experience Platform, qui vous permet d’accéder à une fonctionnalité de stockage de fichiers sécurisée basée sur le cloud pour importer des fichiers dans Platform. Voir
+
+Vous pouvez créer une configuration de serveur de destination DLZ en adressant une requête de POST à la fonction `/authoring/destination-servers` point de terminaison .
+
+**Format d’API**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**Requête**
+
+La requête suivante crée une configuration de serveur de destination, configurée par les paramètres fournis dans la payload. La payload ci-dessous inclut tous les paramètres acceptés par la fonction `/authoring/destination-servers` point de terminaison . Notez que vous n’avez pas à ajouter tous les paramètres à l’appel et que le modèle est personnalisable, conformément aux exigences de votre API.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"DLZ destination server",
+   "destinationServerType":"FILE_BASED_DLZ",
+   "fileBasedDlzDestination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      },
+      "useCase": "Your use case"
+   },
+   "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**Réponse**
+
+Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
++++
 
 ## Liste des configurations de serveur de destination {#retrieve-list}
 
@@ -228,10 +781,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
    }
 }
 ```
-
-
-
-
 
 ## Récupération d’une configuration de serveur de destination spécifique {#get}
 

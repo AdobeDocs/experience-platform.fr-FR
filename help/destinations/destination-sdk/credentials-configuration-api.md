@@ -2,9 +2,9 @@
 description: Cette page décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/credentials`.
 title: Opérations de l’API du point d’entrée des informations d’identification
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: bc357e2e93b80edb5f7825bf2dee692f14bd7297
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '797'
 ht-degree: 6%
 
 ---
@@ -17,6 +17,11 @@ ht-degree: 6%
 
 Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du `/authoring/credentials` Point d’entrée de l’API.
 
+Pour une description des fonctionnalités prises en charge par ce point de terminaison, lisez :
+
+* [Configuration de destination de diffusion en continu](destination-configuration.md) pour la fonctionnalité que vous pouvez configurer pour les destinations de diffusion en continu.
+* [Configuration des destinations basées sur des fichiers](file-based-destination-configuration.md) pour les fonctionnalités que vous pouvez configurer pour les destinations basées sur des fichiers.
+
 ## Quand utiliser la variable `/credentials` Point d’entrée API {#when-to-use}
 
 >[!IMPORTANT]
@@ -24,125 +29,6 @@ Cette page répertorie et décrit toutes les opérations d’API que vous pouvez
 >Dans la plupart des cas, vous *ne pas* Vous devez utiliser la variable `/credentials` Point d’entrée de l’API. Au lieu de cela, vous pouvez configurer les informations d’authentification pour votre destination via le `customerAuthenticationConfigurations` des paramètres `/destinations` point de terminaison . Lecture [Configuration de l’authentification](./authentication-configuration.md#when-to-use) pour plus d’informations.
 
 Utilisez ce point d’entrée API et sélectionnez `PLATFORM_AUTHENTICATION` dans le [configuration de destination](./destination-configuration.md#destination-delivery) s’il existe un système d’authentification global entre l’Adobe et votre destination et la variable [!DNL Platform] Le client n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer un objet d’identification à l’aide de la variable `/credentials` Point d’entrée de l’API.
-
-<!--
-
-Commenting out the example configurations
-
-## Example configurations
-
-**Example configuration for a Basic authentication credential configuration with username and password**
-
-```json
-{
-  "type": "BASIC",
-  "name": "YOUR_DESTINATION_NAME",
-  "basicAuthentication": {
-    "username": "YOUR_DESTINATION_SERVER_USERNAME",
-    "password": "YOUR_DESTINATION_SERVER_PASSWORD"
-  }
-}
-
-```
-
-**Example configuration for an OAuth2 credential configuration**
-
-```json
-
-{
-  "oauth2AccessTokenAuthentication": {
-    "accessToken": "YOUR_DESTINATION_SERVER_ACCESS_TOKEN",
-    "expiration": "YOUR_TOKEN_TIME_TO_LIVE",
-    "username": "YOUR_DESTINATION_SERVER_USERNAME",
-    "userId": "YOUR_DESTINATION_USER_ID",
-    "url": "AUTHORIZATION_PROVIDER_URL",
-    "header": "YOUR_AUTHORIZATION_HEADER"
-  }
-}
-
-```
-
-The sections below list out the necessary parameters for each authentication type. Let us know which authentication type your server uses and provide us with the relevant information for your server type.
-
-## Basic authentication
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`username` | String | credentials configuration login username |
-|`password` | String | credentials configuration login password |
-
-
-
-// commenting out this part as these types of authentication methods are not supported in phase one
-
-### S3 authentication
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|accessId | String | credentials configuration S3 credential Access key ID |
-|secretKey | String | credentials configuration S3 credential Secret key |
-
-### SSH 
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|username | String | credentials configuration SSH username |
-|SSHKey | String | credentials configuration SSH key |
-
-
-
-## OAuth1
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`apiKey` | String | A value used by the Destinations Service to identify itself to the Service Provider. |
-|`apiSecret` | String | Secret used by the Destinations Service to establish ownership of the API key to the Service Provider. |
-|`acccessToken` | String | A value used by the Destinations Service to gain access to the Protected Resources on behalf of the User |
-|`tokenSecret` | String | A secret used by the Destinations Service to establish ownership of an access token. |
-
-## OAuth2 user credentials
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`username` | String | The user's username to log on to your platform. |
-|`password` | String | The user's password to log on to your platform. |
-|`url` | String | URL of authorization provider |
-|`header` | String | Any header required for authorization |
-
-## OAuth2 client credentials
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`username`| String | URL of authorization provider |
-|`password` | String | Any header required for authorization |
-
-## OAuth2 access token
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`accessToken` | String | Access token provided by the authorization provider |
-|`expiration` | String | The time-to-live for the access token |
-|`username` | String | The user's username to log on to your platform. |
-|`userId` | String | The user's ID with your platform. |
-|`url` | String | URL of authorization provider |
-|`header` | String | Any header required for authorization |
-
-## OAuth2 refresh token
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`refreshToken` | String | Refresh token provided by the authorization provider |
-|`url` | String | URL of authorization provider |
-|`expiration` | String | The time-to-live for the refresh token |
-|`header` | String | Any header required for authorization |
-
--->
 
 ## Prise en main des opérations de l’API de configuration des informations d’identification {#get-started}
 
@@ -153,7 +39,6 @@ Avant de poursuivre, veuillez consulter la section [guide de prise en main](./ge
 Vous pouvez créer une configuration d’informations d’identification en adressant une requête de POST à la fonction `/authoring/credentials` point de terminaison .
 
 **Format d’API**
-
 
 ```http
 POST /authoring/credentials
@@ -202,14 +87,36 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
       "clientSecret":"string",
       "url":"string",
       "header":"string"
+   },
+   "s3Authentication":{
+      "accessId":"string",
+      "secretKey":"string"
+   },
+   "sshAuthentication":{
+      "username":"string",
+      "sshKey":"string"
+   },
+   "azureAuthentication":{
+      "url":"string",
+      "tenant":"string",
+      "servicePrincipalId":"string",
+      "servicePrincipalKey":"string"
+   },
+   "azureConnectionStringAuthentication":{
+      "connectionString":"string"
+   },
+   "basicAuthentication":{
+      "url":"string",
+      "username":"string",
+      "password":"string"
    }
 }
 ```
 
 | Paramètre | Type | Description |
 | -------- | ----------- | ----------- |
-| `username` | Chaîne | identification configuration nom d’utilisateur de connexion |
-| `password` | Chaîne | identifiant de connexion |
+| `username` | Chaîne | Nom d’utilisateur de connexion de configuration des informations d’identification |
+| `password` | Chaîne | Mot de passe de connexion de la configuration des informations d&#39;identification |
 | `url` | Chaîne | URL du fournisseur d’autorisations |
 | `clientId` | Chaîne | ID client des informations d’identification client/application |
 | `clientSecret` | Chaîne | Secret client des informations d’identification client/application |
@@ -217,6 +124,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | `expiration` | Chaîne | Durée de vie du jeton d’accès |
 | `refreshToken` | Chaîne | Jeton d’actualisation fourni par le fournisseur d’autorisations |
 | `header` | Chaîne | Tout en-tête requis pour l’autorisation |
+| `accessId` | Chaîne | Identifiant d’accès Amazon S3 |
+| `secretKey` | Chaîne | Clé secrète Amazon S3 |
+| `sshKey` | Chaîne | Clé SSH pour SFTP avec authentification SSH |
+| `tenant` | Chaîne | Client de stockage Azure Data Lake |
+| `servicePrincipalId` | Chaîne | Identifiant principal Azure Service pour Azure Data Lake Storage |
+| `servicePrincipalKey` | Chaîne | Clé principale Azure Service pour Azure Data Lake Storage |
+| `connectionString` | Chaîne | Chaîne de connexion de stockage Azure Blob |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -318,16 +232,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 }
 ```
 
-
-
-
-
 ## Récupération d’une configuration d’informations d’identification spécifique {#get}
 
 Vous pouvez récupérer des informations détaillées sur une configuration d’informations d’identification spécifique en envoyant une demande de GET à la fonction `/authoring/credentials` point de terminaison et en indiquant l’ID d’instance de la configuration des informations d’identification que vous souhaitez mettre à jour.
 
 **Format d’API**
-
 
 ```http
 GET /authoring/credentials/{INSTANCE_ID}
@@ -368,7 +277,6 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaillé
    }
 }
 ```
-
 
 ## Suppression d’une configuration d’informations d’identification spécifique {#delete}
 

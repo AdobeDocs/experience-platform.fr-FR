@@ -2,7 +2,7 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/destinations/publish`.
 title: Opérations de point d’entrée de l’API de publication Destinations
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 6ad556e3b7bf15f1d6ff522307ff232b8fd947d3
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 5%
@@ -20,6 +20,7 @@ Cette page répertorie et décrit toutes les opérations d’API que vous pouvez
 Après avoir configuré et testé votre destination, vous pouvez l’envoyer à Adobe pour révision et publication.
 
 Utilisez le point de terminaison de l’API des destinations de publication pour envoyer une requête de publication lorsque :
+
 * En tant que partenaire de Destination SDK, vous souhaitez rendre votre destination productisée disponible dans toutes les organisations Experience Platform pour que tous les clients Experience Platform puissent l’utiliser ;
 * Vous souhaitez rendre votre destination personnalisée disponible dans votre propre organisation Experience Platform, dans tous les environnements de test.
 
@@ -32,7 +33,6 @@ Avant de poursuivre, veuillez consulter la section [guide de prise en main](./ge
 Vous pouvez envoyer une configuration de destination pour publication en adressant une requête de POST au `/authoring/destinations/publish` point de terminaison .
 
 **Format d’API**
-
 
 ```http
 POST /authoring/destinations/publish
@@ -78,7 +78,6 @@ Vous pouvez récupérer une liste de toutes les destinations envoyées pour publ
 
 **Format d’API**
 
-
 ```http
 GET /authoring/destinations/publish
 ```
@@ -114,7 +113,6 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des destinations s
       }
    ]
 }
-    
 ```
 
 | Paramètre | Type | Description |
@@ -132,7 +130,6 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des destinations s
 Vous pouvez mettre à jour les organisations autorisées dans une requête de publication de destination existante en adressant une requête de PUT au `/authoring/destinations/publish` point de terminaison et en indiquant l’identifiant de la destination pour laquelle vous souhaitez mettre à jour les organisations autorisées. Dans le corps de l’appel , fournissez les organisations autorisées mises à jour.
 
 **Format d’API**
-
 
 ```http
 PUT /authoring/destinations/publish/{DESTINATION_ID}
@@ -169,7 +166,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 Vous pouvez récupérer des informations détaillées sur une requête de publication de destination spécifique en adressant une requête de GET à la fonction `/authoring/destinations/publish` point de terminaison et en indiquant l’identifiant de la destination pour laquelle vous souhaitez récupérer l’état de publication.
 
 **Format d’API**
-
 
 ```http
 GET /authoring/destinations/publish/{DESTINATION_ID}

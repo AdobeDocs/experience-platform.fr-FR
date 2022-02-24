@@ -1,27 +1,27 @@
 ---
 description: Cette configuration vous permet d’indiquer des informations de base telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur Experience Platform et les identités qui peuvent être exportées vers votre destination.
-title: Options de configuration de destination pour le SDK de destination
+title: Options de configuration de destination de diffusion en continu pour Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '1757'
+source-wordcount: '1756'
 ht-degree: 5%
 
 ---
 
-# Configuration de la destination {#destination-configuration}
+# Configuration de destination de diffusion en continu {#destination-configuration}
 
 ## Présentation {#overview}
 
-Cette configuration vous permet d’indiquer des informations essentielles telles que votre nom de destination, votre catégorie, votre description, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur Experience Platform et les identités qui peuvent être exportées vers votre destination.
+Cette configuration vous permet d’indiquer les informations essentielles à votre destination de diffusion en continu, telles que votre nom de destination, votre catégorie, votre description, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur Experience Platform et les identités qui peuvent être exportées vers votre destination.
 
 Cette configuration connecte également les autres configurations requises pour que votre destination fonctionne (métadonnées de serveur de destination et d’audience) à celle-ci. Découvrez comment vous pouvez référencer les deux configurations dans une [voir ci-dessous](./destination-configuration.md#connecting-all-configurations).
 
 Vous pouvez configurer les fonctionnalités décrites dans ce document à l’aide du `/authoring/destinations` Point d’entrée de l’API. Lecture [Opérations de point d’entrée de l’API Destinations](./destination-configuration-api.md) pour obtenir une liste complète des opérations que vous pouvez effectuer sur le point de terminaison .
 
-## Exemple de configuration  {#example-configuration}
+## Exemple de configuration de diffusion en continu {#example-configuration}
 
-Vous trouverez ci-dessous un exemple de configuration d’une destination fictive, Moviestar, qui comporte des points de terminaison dans quatre endroits sur le globe. La destination appartient à la catégorie des destinations mobiles. Les sections ci-dessous présentent la manière dont cette configuration est créée.
+Voici un exemple de configuration d’une destination fictive de diffusion en continu, Moviestar, qui a des points de terminaison dans quatre endroits sur le globe. La destination appartient à la catégorie des destinations mobiles.
 
 ```json
 {
@@ -129,7 +129,7 @@ Vous trouverez ci-dessous un exemple de configuration d’une destination fictiv
 |---------|----------|------|
 | `name` | Chaîne | Indique le titre de votre destination dans le catalogue des Experience Platform. |
 | `description` | Chaîne | Fournissez une description de votre carte de destination dans le catalogue des destinations Experience Platform. Ne vise pas plus de 4 à 5 phrases. |
-| `status` | Chaîne | Indique l’état du cycle de vie de la carte de destination. Les valeurs acceptées sont `TEST`, `PUBLISHED` et `DELETED`. Utilisation `TEST` la première fois que vous configurez votre destination. |
+| `status` | Chaîne | Indique l’état du cycle de vie de la carte de destination. Les valeurs acceptées sont `TEST`, `PUBLISHED` et `DELETED`. Utilisation `TEST` lorsque vous configurez votre destination pour la première fois. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -137,29 +137,28 @@ Vous trouverez ci-dessous un exemple de configuration d’une destination fictiv
 
 Cette section de la configuration des destinations génère la variable [Configuration d’une nouvelle destination](/help/destinations/ui/connect-destination.md) dans l’interface utilisateur de l’Experience Platform, où les utilisateurs se connectent Experience Platform aux comptes qu’ils possèdent avec votre destination. Selon l’option d’authentification que vous indiquez dans la variable `authType` , la page Experience Platform est générée pour les utilisateurs comme suit :
 
-**Authentification du porteur**
+### Authentification du porteur
 
 Lorsque vous configurez le type d’authentification du porteur, les utilisateurs doivent saisir le jeton du porteur qu’ils obtiennent de votre destination.
 
-![Rendu de l’interface utilisateur avec authentification du porteur](./assets/bearer-authentication-ui.png)
+![Rendu de l’interface utilisateur avec authentification du porteur](assets/bearer-authentication-ui.png)
 
-**Authentification OAuth 2**
+### Authentification OAuth 2
 
-Sélection des utilisateurs **[!UICONTROL Se connecter à la destination]** pour déclencher le flux d’authentification OAuth 2 vers votre destination, comme illustré dans l’exemple ci-dessous pour la destination Audiences personnalisées de Twitter. Pour plus d’informations sur la configuration de l’authentification OAuth 2 à votre point de terminaison de destination, consultez le [Page d’authentification OAuth 2 du SDK de destination](./oauth2-authentication.md).
+Sélection des utilisateurs **[!UICONTROL Se connecter à la destination]** pour déclencher le flux d’authentification OAuth 2 vers votre destination, comme illustré dans l’exemple ci-dessous pour la destination Audiences personnalisées de Twitter. Pour plus d’informations sur la configuration de l’authentification OAuth 2 à votre point de terminaison de destination, consultez le [Page d’authentification OAuth 2 de la Destination SDK](./oauth2-authentication.md).
 
-![Rendu de l’interface utilisateur avec authentification OAuth 2](./assets/oauth2-authentication-ui.png)
-
+![Rendu de l’interface utilisateur avec authentification OAuth 2](assets/oauth2-authentication-ui.png)
 
 | Paramètre | Type | Description |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | Chaîne | Indique la configuration utilisée pour authentifier les clients Experience Platform sur votre serveur. Voir `authType` ci-dessous pour les valeurs acceptées. |
-| `authType` | Chaîne | Les valeurs acceptées sont `OAUTH2, BEARER`. <br><ul><li> Si votre destination prend en charge l’authentification OAuth 2, sélectionnez la variable `OAUTH2` et ajoutez les champs requis pour OAuth 2, comme indiqué dans la section [Page d’authentification OAuth 2 du SDK de destination](./oauth2-authentication.md). En outre, vous devez sélectionner `authenticationRule=CUSTOMER_AUTHENTICATION` dans le [section de diffusion de destination](./destination-configuration.md). </li><li>Pour l’authentification du porteur, sélectionnez `BEARER` et sélectionnez `authenticationRule=CUSTOMER_AUTHENTICATION` dans le [section de diffusion de destination](./destination-configuration.md).</li></ul> |
+| `authType` | Chaîne | Les valeurs acceptées pour les destinations de diffusion en continu sont les suivantes :<ul><li>`BEARER`. Si votre destination prend en charge l’authentification du porteur, définissez `"authType":"Bearer"` et  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` dans le [section de diffusion de destination](./destination-configuration.md).</li><li>`OAUTH2`. Si votre destination prend en charge l’authentification OAuth 2, définissez `"authType":"OAUTH2"` et ajoutez les champs requis pour OAuth 2, comme indiqué dans la section [Page d’authentification OAuth 2 de la Destination SDK](./oauth2-authentication.md). En outre, définissez `"authenticationRule":"CUSTOMER_AUTHENTICATION"` dans le [section de diffusion de destination](./destination-configuration.md).</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Champs de données client {#customer-data-fields}
 
-Cette section permet aux partenaires d’introduire des champs personnalisés. Dans l’exemple de configuration ci-dessus, `customerDataFields` nécessite que les utilisateurs sélectionnent un point de terminaison dans le flux d’authentification et indiquent leur ID de client avec la destination. La configuration se reflète dans le flux d’authentification comme illustré ci-dessous :
+Utilisez cette section pour demander aux utilisateurs de renseigner des champs personnalisés, spécifiques à votre destination, lors de la connexion à la destination dans l’interface utilisateur de l’Experience Platform. La configuration se reflète dans le flux d’authentification comme illustré ci-dessous :
 
 ![Flux d’authentification de champ personnalisé](./assets/custom-field-authentication-flow.png)
 
@@ -184,7 +183,7 @@ Cette section fait référence aux éléments de l’interface utilisateur dans 
 | `documentationLink` | Chaîne | Fait référence à la page de documentation de la [Catalogue des destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) pour votre destination. Utilisation `http://www.adobe.com/go/destinations-YOURDESTINATION-en`où `YOURDESTINATION` est le nom de votre destination. Pour une destination appelée Moviestar, vous utiliseriez `http://www.adobe.com/go/destinations-moviestar-en` |
 | `category` | Chaîne | Fait référence à la catégorie affectée à votre destination dans Adobe Experience Platform. Pour plus d’informations, reportez-vous à la section [Catégories de destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Utilisez l’une des valeurs suivantes : `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `connectionType` | Chaîne | `Server-to-server` est actuellement la seule option disponible. |
-| `frequency` | Chaîne | `Streaming` est actuellement la seule option disponible. |
+| `frequency` | Chaîne | Fait référence au type d’exportation des données pris en charge par la destination. Valeurs prises en charge : <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -202,6 +201,7 @@ Utilisez les paramètres de la section `schemaConfig` pour activer l’étape de
 | `identityRequired` | Booléen | Utilisation `true` si les utilisateurs doivent être en mesure de mapper des espaces de noms d’identité d’Experience Platform à votre schéma souhaité. |
 
 {style=&quot;table-layout:auto&quot;}
+
 
 ## Identités et attributs {#identities-and-attributes}
 

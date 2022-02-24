@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
+source-git-commit: 2f8e31321345a14c098f795b50d33c700ac0faa8
 workflow-type: tm+mt
-source-wordcount: '701'
-ht-degree: 45%
+source-wordcount: '722'
+ht-degree: 43%
 
 ---
 
@@ -156,8 +156,10 @@ ht-degree: 45%
    * [Prise en main](./destination-sdk/getting-started.md)
    * Fonctionnalité de la Destination SDK {#functionality}
       * [Options de configuration](./destination-sdk/configuration-options.md)
-      * [Configuration de la destination](./destination-sdk/destination-configuration.md)
-      * [Spécifications du serveur et des modèles](./destination-sdk/server-and-template-configuration.md)
+      * [Configuration de destination de diffusion en continu](./destination-sdk/destination-configuration.md)
+      * [Configuration des destinations basées sur des fichiers](./destination-sdk/file-based-destination-configuration.md)
+      * [Spécifications du serveur et des modèles de destinations en flux continu](./destination-sdk/server-and-template-configuration.md)
+      * [Spécifications de fichier et serveur de destinations basées sur des fichiers](./destination-sdk/server-and-file-configuration.md)
       * [Format du message](./destination-sdk/message-format.md)
       * [Gestion des métadonnées d’audience](./destination-sdk/audience-metadata-management.md)
       * Authentification {#authentication}
@@ -180,6 +182,7 @@ ht-degree: 45%
          * [Exemples d’opérations API de génération de profil](./destination-sdk/sample-profile-generation-api.md)
    * Guides {#guides}
       * [Utilisation de la Destination SDK pour configurer une destination de diffusion en continu](./destination-sdk/configure-destination-instructions.md)
+      * [(Version bêta) Utilisez la Destination SDK pour configurer une destination basée sur des fichiers](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Envoyer pour révision d’une destination créée dans Destination SDK](./destination-sdk/submit-destination.md)
    * Document de votre destination {#document-destination}
       * [Document de votre destination dans Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
