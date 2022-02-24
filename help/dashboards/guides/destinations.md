@@ -4,10 +4,10 @@ title: Tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 48ceeadda939ea14132fafb4275db9e855d238b6
+source-git-commit: 8571d86e1ce9dc894e54fe72dea75b9f8fe84f0b
 workflow-type: tm+mt
-source-wordcount: '1642'
-ht-degree: 3%
+source-wordcount: '895'
+ht-degree: 5%
 
 ---
 
@@ -43,22 +43,17 @@ Reportez-vous à la section [modification des tableaux de bord](../customize/mod
 
 ## Widgets standard
 
-Adobe fournit plusieurs widgets standard que vous pouvez utiliser pour visualiser différentes mesures liées à vos destinations et évaluer l’exhaustivité des segments disponibles pour votre analyse des données. Vous pouvez également créer des widgets personnalisés à partager avec votre organisation à l’aide de la variable [!UICONTROL Bibliothèque de widgets]. Pour en savoir plus sur la création de widgets personnalisés, commencez par lire le [Présentation de la bibliothèque de widgets](../customize/widget-library.md).
+Adobe fournit plusieurs widgets standard que vous pouvez utiliser pour visualiser différentes mesures liées à vos destinations. Vous pouvez également créer des widgets personnalisés à partager avec votre organisation à l’aide de la variable [!UICONTROL Bibliothèque de widgets]. Pour en savoir plus sur la création de widgets personnalisés, commencez par lire le [Présentation de la bibliothèque de widgets](../customize/widget-library.md).
 
 Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez le nom d’un widget dans la liste suivante :
 
 * [[!UICONTROL Destinations les plus utilisées]](#most-used-destinations)
 * [[!UICONTROL Destinations créées récemment]](#recently-created-destinations)
 * [[!UICONTROL Segments récemment activés]](#recently-activated-segments)
-* [[!UICONTROL Segments récemment activés par destination]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Tendance de la taille de l’audience]](#audience-size-trends)
-* [[!UICONTROL Segments non mappés par identité]](#unmapped-segments-by-identity)
-* [[!UICONTROL Segments mappés par identité]](#mapped-segments-by-identity)
-* [[!UICONTROL Audiences courantes]](#common-audiences)
 
 ### [!UICONTROL Destinations les plus utilisées] {#most-used-destinations}
 
-Le **[!UICONTROL Destinations les plus utilisées]** widget affiche les principales destinations de votre entreprise en fonction du nombre de segments mappés, à partir du dernier instantané. Ce classement permet de savoir quelles destinations sont utilisées, tout en présentant éventuellement celles qui peuvent être sous-utilisées.
+Le **[!UICONTROL Destinations les plus utilisées]** le widget affiche les principales destinations de votre entreprise par nombre de segments mappés, à partir du dernier instantané. Ce classement permet de savoir quelles destinations sont utilisées, tout en présentant éventuellement celles qui peuvent être sous-utilisées.
 
 Par exemple, si vous avez configuré une destination hier mais que vous ne lui avez mappé aucun segment, vous pouvez constater que la destination est actuellement sous-utilisée.
 
@@ -91,66 +86,6 @@ Si vous sélectionnez le nom d’un segment dans la liste affichée sur le widge
 Pour plus d’informations sur l’utilisation des segments dans Experience Platform, commencez par lire le [Présentation de Segmentation Service](../../segmentation/home.md).
 
 ![](../images/destinations/recently-activated-segments.png)
-
-### [!UICONTROL Segments récemment activés par destination] {#recently-activated-segments-by-destination}
-
-Le **[!UICONTROL Segments récemment activés par destination]** le widget affiche les cinq segments les plus récemment activés dans l’ordre décroissant en fonction de la destination choisie dans la liste déroulante d’aperçu. Elle est similaire au [!UICONTROL Segments récemment activés] widget, mais les données affichées **only** s’applique à la destination sélectionnée.
-
-Ce widget contient deux mesures : le nom du segment et la date de la dernière activation du segment vers la destination. Les données affichées sont correctes à partir du dernier instantané quotidien.
-
-Vous pouvez afficher les détails d’un segment en le sélectionnant dans la liste affichée.
-
-![Segments récemment activés par widget de destination.](../images/destinations/recently-activated-segments-by-destination.png)
-
-### [!UICONTROL Tendance de la taille de l’audience] {#audience-size-trend}
-
-Le **[!UICONTROL Tendance de la taille de l’audience]** Le widget illustre la relation entre le nombre de profils sur une période donnée pour un segment qui a été mappé à ce compte de destination. Le widget utilise un graphique linéaire pour illustrer le nombre de profils contenus dans le segment, qui sont envoyés quotidiennement au compte de destination.
-
-Une période pour la tendance de l’audience des 30 derniers jours, 90 jours ou 12 mois, peut être ajustée à l’aide du premier menu déroulant.
-
-Le deuxième menu déroulant répertorie tous les segments disponibles qui peuvent être envoyés au compte de destination choisi en haut du tableau de bord.
-
-![Widget de tendance de taille d’audience.](../images/destinations/audience-size-trend.png)
-
-### [!UICONTROL Segments non mappés par identité] {#unmapped-segments-by-identity}
-
-Le **[!UICONTROL Segments non mappés par identité]** Le widget répertorie les cinq premiers **non mappé** segments classés par nombre d’identités décroissant pour une destination et une identité données. Il met en évidence les segments qui sont les plus bénéfiques à mapper sur le compte de destination choisi en fonction de l’identifiant choisi.
-
-La liste déroulante Identifiant de destination filtre vos segments disponibles. Les ID de filtre répertoriés dans la liste déroulante changent en fonction du compte de destination sélectionné en haut de la page d’aperçu.
-
-La colonne Identités comptabilise le nombre d’identifiants source dans le segment qui peuvent correspondre à l’identifiant choisi dans la liste déroulante Identifiant du widget.
-
-![Le widget Segments non mappés par identité .](../images/destinations/unmapped-segments-by-identity.png)
-
-### [!UICONTROL Segments mappés par identité] {#mapped-segments-by-identity}
-
-Ce widget fournit les cinq premières listes de **mappé** segments. La liste est classée de haut en bas en fonction du nombre d’ID source contenus dans les segments. L’ID de destination à comptabiliser est sélectionné dans le menu déroulant sous le titre du widget. Les identifiants de destination disponibles dans la liste déroulante du widget changent en fonction du filtre du compte de destination sélectionné en haut du tableau de bord de la présentation.
-
-![Le widget Segments mappés par identité .](../images/destinations/mapped-segments-by-identity.png)
-
-Le **[!UICONTROL Segments mappés par identité]** le widget met en évidence en un coup d’oeil la probabilité de réussir le ciblage des opportunités de profil pour une campagne au sein de la destination choisie. Une campagne ciblée efficace ne dépend pas du nombre de profils envoyés à la destination, mais plutôt du nombre d’identifiants sources qui sont susceptibles d’être associés aux identifiants de destination pour fournir des données utiles et exploitables.
-
-### Audiences courantes
-
-Le **[!UICONTROL Audiences courantes]** fournit une liste des cinq premiers segments activés dans le compte de destination choisi en haut de la page, ainsi que la destination sélectionnée dans la liste déroulante du widget. La liste des segments est classée en fonction de leur date d’activation récente. Le segment le plus récemment activé s’affiche en haut de l’écran.
-
-Le [!UICONTROL TAILLE DE L’AUDIENCE] indique le nombre total de profils de chaque segment répertorié.
-
-![Le widget Audiences courantes .](../images/destinations/common-audiences.png)
-
-### Santé de l’audience mappée
-
-Le widget fournit une liste de 20 segments mappés au maximum dont le nombre total de profils, à partir du dernier instantané quotidien, s’écarte d’un facteur d’écart type au moins par rapport à la taille moyenne d’audience de 30 jours mappée à cette destination.
-
-En résumé, il fournit une mesure calculée pour la dispersion des tailles d’audience par rapport à la moyenne au cours des 30 derniers jours. Il compare la taille actuelle de l’audience en dehors de l’écart-type historique observé dans les données au cours des 30 derniers jours.
-
-Toutes les tailles d’audience du système sont triées de la taille élevée à la taille faible, comme indiqué dans la variable [!UICONTROL DERNIÈRE TAILLE] colonne .
-
-Si le nombre de profils mappés de votre segment ne correspond pas à l’écart-type par rapport à la taille de profil mappée moyenne au cours des 30 derniers jours, cela indique une anomalie du système et doit être étudié.
-
-Si un segment dans la variable [!UICONTROL Santé de l’audience mappée] vous devez vous reporter au graphique de tendance de la taille de l’audience et localiser le segment anormal. La tendance peut fournir des informations supplémentaires sur l’intégrité de votre segment.
-
-![Le widget d’intégrité de l’audience mappé.](../images/destinations/mapped-audience-health.png)
 
 ## Étapes suivantes
 
