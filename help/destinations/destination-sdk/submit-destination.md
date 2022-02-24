@@ -2,9 +2,9 @@
 description: Cette page fournit toutes les informations que vous devez envoyer pour examiner une destination créée à l’aide de Destination SDK.
 title: Envoyer pour révision d’une destination créée dans Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 111da9ce3e38096d11a1910929ee892e5661722c
+source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,10 @@ Cette page répertorie toutes les informations que vous devez fournir lors de l�
 * Preuve que vous avez envoyé une requête de publication de destination pour votre destination à l’aide de la variable [API de publication de destination](./destination-publish-api.md).
 * (Pour les intégrations productives uniquement) une documentation PR (requête de tirage), suivant les instructions décrites dans la section [processus de documentation en libre-service](./docs-framework/documentation-instructions.md).
 * Un fichier image qui s’affichera sous forme de logo pour votre carte de destination dans le catalogue des destinations Experience Platform.
+
+>[!NOTE]
+>
+>Le temps de réponse standard de l’Adobe pour passer en revue les demandes de publication de destination est de 5 jours ouvrables.
 
 Vous trouverez des informations détaillées sur chaque élément dans les sections ci-dessous :
 
