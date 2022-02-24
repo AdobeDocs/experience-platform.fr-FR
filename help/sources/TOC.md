@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: 0154891cf2c68a38c08b9fe44251ec13325a7366
+source-git-commit: da3d0399bae9953cd74bd0ac6d6e16b64796a578
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '745'
 ht-degree: 19%
 
 ---
@@ -181,6 +181,7 @@ ht-degree: 19%
          - [Adobe Analytics (données de suite de rapports)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (données de classification)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [Attributs du client](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Publicité {#create}
