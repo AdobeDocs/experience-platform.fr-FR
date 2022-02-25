@@ -1,27 +1,27 @@
 ---
-title: Présentation de lʼextension Adobe Analytics
-description: Découvrez lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
+title: Présentation de lʼextension Adobe Analytics
+description: Découvrez lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 4b0b4cf7c262940bd21965d928cc7d0cf12d15d1
 workflow-type: tm+mt
-source-wordcount: '2202'
-ht-degree: 100%
+source-wordcount: '2275'
+ht-degree: 96%
 
 ---
 
-# Présentation de lʼextension Adobe Analytics
+# Présentation de lʼextension Adobe Analytics
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Cette référence vous permet d’obtenir plus d’informations sur la configuration de l’extension Adobe Analytics et sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
+Cette référence vous permet d’obtenir plus d’informations sur la configuration de l’extension Adobe Analytics et sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
 
-## Configuration de l’extension Adobe Analytics
+## Configuration de l’extension Adobe Analytics
 
-Cette section fournit des informations sur les options disponibles lors de la configuration de l’extension Adobe Analytics.
+Cette section fournit des informations sur les options disponibles lors de la configuration de l’extension Adobe Analytics.
 
-Si lʼextension Adobe Analytics nʼest pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, survolez lʼextension Adobe Analytics et cliquez sur **[!UICONTROL Installer]**.
+Si lʼextension Adobe Analytics nʼest pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, survolez lʼextension Adobe Analytics et cliquez sur **[!UICONTROL Installer]**.
 
 Pour configurer l’extension, ouvrez l’onglet Extensions, survolez-la avec la souris, puis cliquez sur **[!UICONTROL Configurer]**.
 
@@ -107,7 +107,7 @@ Spécifiez l’objet de suivi à utiliser globalement.
 
 Sélectionnez une option dans la section General (Général) de la page de configuration. Les options de configuration disponibles sont les suivantes :
 
-### Enable EU compliance for Adobe Analytics (Activer la conformité UE pour Adobe Analytics)
+### Enable EU compliance for Adobe Analytics (Activer la conformité UE pour Adobe Analytics)
 
 Permet d’activer ou de désactiver le suivi selon le cookie de confidentialité de l’UE.
 
@@ -145,15 +145,15 @@ Pour plus d’informations sur les codes de devise pris en charge, consultez [cu
 
 ### Serveur de suivi
 
-Utilisé pour les mises en œuvre de cookies propriétaires afin de déterminer l’emplacement de celui-ci. Si vous utilisez le service Experience Cloud ID, Adobe conseille de ne pas renseigner ce champ.
+Utilisé pour les mises en œuvre de cookies propriétaires afin de déterminer l’emplacement de celui-ci. Si vous utilisez le service Experience Cloud ID, Adobe conseille de ne pas renseigner ce champ.
 
 Un serveur de suivi peut être défini dans un code personnalisé Analytics à l’aide de la variable `s.trackingServer`.
 
-Voir [trackingServer](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackingserver.html?lang=fr) dans le guide de mise en œuvre d’Adobe Analytics.
+Voir [trackingServer](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackingserver.html?lang=fr) dans le guide de mise en œuvre d’Adobe Analytics.
 
 ### Serveur de suivi SSL
 
-Utilisé pour les mises en œuvre de cookies propriétaires SSL afin de déterminer l’emplacement de ce dernier. Si vous utilisez le service Experience Cloud ID, Adobe conseille de ne pas renseigner ce champ. Si elles ne sont pas définies, les données SSL utilisent le serveur de suivi.
+Utilisé pour les mises en œuvre de cookies propriétaires SSL afin de déterminer l’emplacement de ce dernier. Si vous utilisez le service Experience Cloud ID, Adobe conseille de ne pas renseigner ce champ. Si elles ne sont pas définies, les données SSL utilisent le serveur de suivi.
 
 Un serveur de suivi SSL peut être défini dans un code personnalisé Analytics à l’aide de la variable `s.trackingServerSecure`.
 
@@ -216,7 +216,7 @@ Voir [s.linkLeaveQueryString](https://experienceleague.adobe.com/docs/analytics/
 
 ## Cookies
 
-Configurez la description des champs des paramètres globaux des cookies utilisés pour le déploiement de l’extension Adobe Analytics. Les options de configuration disponibles sont les suivantes :
+Configurez la description des champs des paramètres globaux des cookies utilisés pour le déploiement de l’extension Adobe Analytics. Les options de configuration disponibles sont les suivantes :
 
 ### Visitor ID (Identifiant visiteur)
 
@@ -259,23 +259,23 @@ Voir [writeSecureCookies](https://experienceleague.adobe.com/docs/analytics/impl
 
 Utilisez l’éditeur pour personnaliser le code de votre page.
 
-## Adobe Audience Manager
+## Adobe Audience Manager
 
-Utilisez cette section de la configuration de l’extension pour spécifier comment Audience Manager fonctionne avec Analytics.
+Utilisez cette section de la configuration de l’extension pour spécifier comment Audience Manager fonctionne avec Analytics.
 
-Activez **Automatically share Analytics data with Audience Manager** (Partage automatique des données Analytics avec Audience Manager).
+Activez **Automatically share Analytics data with Audience Manager** (Partage automatique des données Analytics avec Audience Manager).
 
 Les options suivantes s’affichent :
 
 ![](../../../images/an-ext-aam.png)
 
-Adobe Audience Manager attribue le sous-domaine Audience Manager. Il est parfois appelé « Partner Name » (Nom de partenaire) ou « Partner Subdomain » (Sous-domaine partenaire). Contactez votre conseiller Adobe ou l’Assistance clientèle si vous ne connaissez pas votre nom de partenaire.
+Adobe Audience Manager attribue le sous-domaine Audience Manager. Il est parfois appelé « Partner Name » (Nom de partenaire) ou « Partner Subdomain » (Sous-domaine partenaire). Contactez votre conseiller Adobe ou l’Assistance clientèle si vous ne connaissez pas votre nom de partenaire.
 
 Vous pouvez configurer les paramètres avancés en sélectionnant **Afficher les paramètres avancés** et en saisissant vos préférences.
 
 ![](../../../images/an-ext-aam-adv.png)
 
-Pour plus d’informations sur chaque paramètre, cliquez sur l’icône d’information ou consultez la [documentation d’Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr).
+Pour plus d’informations sur chaque paramètre, cliquez sur l’icône d’information ou consultez la [documentation d’Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr).
 
 ## Types d’actions de l’extension Analytics
 
@@ -328,13 +328,22 @@ Spécifiez chaque niveau dans la hiérarchie.
 
 Si vous le souhaitez, configurez des hiérarchies supplémentaires.
 
+#### Nom de la page
+
+Cette valeur fait référence au nom d’une page donnée et correspond à la variable [`pageName` variable](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) dans Analytics.
+
+>[!IMPORTANT]
+>
+>Dans les implémentations Adobe Experience Manager, cette variable indique à AEM où stocker le rapport Analytics récupéré. Pour que les rapports soient correctement conservés, la chaîne de nom de page doit être formatée en tant que chemin d’accès au site séparé par des deux-points.
+>
+>Par exemple, une page web à l’adresse `content/we-retail/language-masters/en/men.html` doit avoir la valeur de nom de page de `content:we-retail:language-masters:en:men`.
+
 #### Other information (Autres informations)
 
 Spécifiez d’autres informations utilisées par vos pages.
 
 Ces paramètres incluent :
 
-* Page Name (Nom de la page)
 * Page URL (URL de la page)
 * Server (Serveur)
 * Canal
