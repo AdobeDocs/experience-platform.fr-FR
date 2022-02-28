@@ -1,26 +1,26 @@
 ---
-title: Envoi de données à Adobe Analytics à l’aide du SDK Web de Adobe Experience Platform
+title: Utilisation d’Adobe Analytics avec le SDK Web Platform
 description: Découvrez comment envoyer des données à Adobe Analytics avec le SDK Web de Adobe Experience Platform.
 keywords: adobe analytics;analytics;données mappées;variables mappées;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
+source-git-commit: 45becec3b198821e38afbc21fe42a8901e352888
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 61%
+source-wordcount: '189'
+ht-degree: 62%
 
 ---
 
-# Envoi de données à Adobe Analytics
+# Utilisation d’Adobe Analytics avec le SDK Web Platform
 
-Adobe Experience Platform [!DNL Web SDK] peut envoyer des données à Adobe Analytics. Cela fonctionne en convertissant `xdm` dans un format utilisable par Adobe Analytics.
+Adobe Experience Platform [!DNL Web SDK] peut envoyer des données à Adobe Analytics. Cela fonctionne en convertissant `xdm` dans un format utilisable par Adobe Analytics.
 
 ## Configuration
 
-Adobe Analytics récupère automatiquement les données que vous envoyez si une suite de rapports est mappée dans l’interface utilisateur de configuration du client. Ici, vous pouvez mapper un ou plusieurs rapports à une configuration donnée. Une fois qu’une suite de rapports est mappée, les données commencent automatiquement à circuler.
+Adobe Analytics récupère automatiquement les données que vous envoyez si une suite de rapports est mappée dans l’interface utilisateur de configuration du client. Ici, vous pouvez mapper un ou plusieurs rapports à une configuration donnée. Une fois qu’une suite de rapports est mappée, les données commencent automatiquement à circuler.
 
 ## Données mappées automatiquement
 
-Le Adobe Experience Platform [!DNL Edge Network] mappe automatiquement de nombreuses variables XDM. La liste complète de ces variables est [ici](automatically-mapped-vars.md).
+Adobe Experience Platform [!DNL Edge Network] mappe automatiquement de nombreuses variables XDM. La liste complète de ces variables est répertoriée. [here](automatically-mapped-vars.md).
 
 ## Données mappées manuellement
 
