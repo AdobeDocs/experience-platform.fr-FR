@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails et les informations d’identification d’un compte à l’aide de l’API Flow Service.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 33%
+source-wordcount: '523'
+ht-degree: 15%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 33%
 
 Dans certains cas, il peut être nécessaire de mettre à jour les détails d’une connexion source existante. [!DNL Flow Service] vous permet d’ajouter, de modifier et de supprimer les détails d’un lot ou d’une connexion en continu existante, y compris son nom, sa description et ses informations d’identification.
 
-Ce tutoriel décrit les étapes de mise à jour des détails et des informations d’identification d’une connexion à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails et les informations d’identification d’une connexion à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
@@ -25,34 +25,16 @@ Ce tutoriel nécessite que vous disposiez d’une connexion existante et d’un 
 
 Ce tutoriel nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
 
-* [Sources](../../home.md) : Experience Platform permet d’ingérer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services Platform.
-* [Environnements de test](../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sources](../../home.md): Experience Platform permet d’ingérer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services Platform.
+* [Environnements de test](../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour mettre à jour une connexion à l’aide de l’API [!DNL Flow Service].
+### Utilisation des API Platform
 
-### Lecture d’exemples d’appels API
-
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
-
-### Collecte des valeurs des en-têtes requis
-
-Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Toutes les ressources d’Experience Platform, y compris celles appartenant à [!DNL Flow Service], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
-
-* `Content-Type: application/json`
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur [Prise en main des API Platform](../../../landing/api-guide.md).
 
 ## Recherche des détails de connexion
 
-La première étape de la mise à jour de votre connexion consiste à récupérer ses détails à l’aide de votre identifiant de connexion. Pour récupérer les détails actuels de votre connexion, envoyez une demande de GET à l’API [!DNL Flow Service] tout en fournissant l’identifiant de connexion de la connexion que vous souhaitez mettre à jour.
+La première étape de la mise à jour de votre connexion consiste à récupérer ses détails à l’aide de votre identifiant de connexion. Pour récupérer les détails actuels de votre connexion, envoyez une demande de GET à la variable [!DNL Flow Service] API lors de la fourniture de l’identifiant de connexion, de la connexion que vous souhaitez mettre à jour.
 
 **Format d’API**
 
@@ -62,7 +44,7 @@ GET /connections/{CONNECTION_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | La valeur `id` unique de la connexion que vous souhaitez récupérer. |
+| `{CONNECTION_ID}` | L’unique `id` pour la connexion que vous souhaitez récupérer. |
 
 **Requête**
 
@@ -79,7 +61,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails actuels de votre connexion, y compris ses informations d’identification, son identifiant unique (`id`) et sa version. La valeur de version est requise pour mettre à jour votre connexion.
+Une réponse réussie renvoie les détails actuels de votre connexion, y compris ses informations d’identification et son identifiant unique (`id`), et version. La valeur de version est requise pour mettre à jour votre connexion.
 
 ```json
 {
@@ -117,11 +99,11 @@ Une réponse réussie renvoie les détails actuels de votre connexion, y compris
 
 ## Mettre à jour la connexion
 
-Pour mettre à jour le nom, la description et les informations d’identification de votre connexion, envoyez une requête de PATCH à l’API [!DNL Flow Service] tout en fournissant votre identifiant de connexion, votre version et les nouvelles informations que vous souhaitez utiliser.
+Pour mettre à jour le nom, la description et les informations d’identification de votre connexion, envoyez une requête de PATCH au [!DNL Flow Service] API lors de la fourniture de votre ID de connexion, de votre version et des nouvelles informations que vous souhaitez utiliser.
 
 >[!IMPORTANT]
 >
->L’en-tête `If-Match` est requis lors de l’exécution d’une requête de PATCH. La valeur de cet en-tête est la version unique de la connexion que vous souhaitez mettre à jour.
+>Le `If-Match` est requis lors de l’exécution d’une requête de PATCH. La valeur de cet en-tête est la version unique de la connexion que vous souhaitez mettre à jour.
 
 **Format d’API**
 
@@ -131,7 +113,7 @@ PATCH /connections/{CONNECTION_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | La valeur `id` unique de la connexion que vous souhaitez mettre à jour. |
+| `{CONNECTION_ID}` | L’unique `id` pour la connexion que vous souhaitez mettre à jour. |
 
 **Requête**
 
@@ -176,7 +158,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie renvoie votre identifiant de connexion et une balise mise à jour. Vous pouvez vérifier la mise à jour en adressant une demande de GET à l’API [!DNL Flow Service], tout en fournissant votre identifiant de connexion.
+Une réponse réussie renvoie votre identifiant de connexion et une balise mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à la variable [!DNL Flow Service] de l’API, tout en fournissant votre identifiant de connexion.
 
 ```json
 {
@@ -187,4 +169,4 @@ Une réponse réussie renvoie votre identifiant de connexion et une balise mise 
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez mis à jour les informations d’identification et les informations associées à votre connexion à l’aide de l’API [!DNL Flow Service]. Pour plus d’informations sur l’utilisation des connecteurs source, consultez la [présentation des sources](../../home.md).
+En suivant ce tutoriel, vous avez mis à jour les informations d’identification et de connexion associées à votre connexion à l’aide de la variable [!DNL Flow Service] API. Pour plus d’informations sur l’utilisation des connecteurs source, voir [présentation des sources](../../home.md).

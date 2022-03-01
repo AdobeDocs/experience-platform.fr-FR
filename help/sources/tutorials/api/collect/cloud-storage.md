@@ -1,27 +1,29 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;données de stockage dans le cloud
 solution: Experience Platform
-title: Collecte de données de stockage dans le cloud à l’aide des connecteurs source et des API
+title: Création d’un flux de données pour les sources de stockage dans le cloud à l’aide de l’API Flow Service
 topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un espace de stockage cloud tiers et les intégrer à Platform à l’aide des connecteurs source et des API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
 workflow-type: tm+mt
-source-wordcount: '1835'
-ht-degree: 18%
+source-wordcount: '1575'
+ht-degree: 11%
 
 ---
 
-# Collecte de données de stockage dans le cloud à l’aide des connecteurs source et des API
+# Créez un flux de données pour les sources de stockage dans le cloud à l’aide de la variable [!DNL Flow Service] API
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un espace de stockage cloud tiers et les intégrer à Platform par le biais des connecteurs source et de la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’une source de stockage dans le cloud et les apporter à Platform à l’aide de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!NOTE]
+>
+>Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec l’une des sources de stockage dans le cloud suivantes sur Platform :<ul><li>[[!DNL Amazon S3]](../create/cloud-storage/s3.md)</li><li>[[!DNL Apache HDFS]](../create/cloud-storage/hdfs.md)</li><li>[[!DNL Azure Blob]](../create/cloud-storage/blob.md)</li><li>[[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)</li><li>[[!DNL FTP]](../create/cloud-storage/ftp.md)</li><li>[[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)</li><li>[[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)</li><li>[[!DNL SFTP]](../create/cloud-storage/sftp.md)</li></ul>
 
 ## Prise en main
 
-Ce tutoriel nécessite que vous ayez accès à un espace de stockage dans le cloud tiers par le biais d’une connexion valide et d’informations sur le fichier que vous souhaitez importer dans Platform, y compris le chemin d’accès et la structure du fichier. Si vous ne disposez pas de ces informations, consultez le tutoriel sur [exploration de l’espace de stockage dans le cloud tiers à l’aide de la méthode [!DNL Flow Service] API](../explore/cloud-storage.md) avant de tester ce tutoriel.
-
-Ce tutoriel nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
+Ce tutoriel nécessite une compréhension pratique des composants suivants de Adobe Experience Platform :
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
@@ -29,27 +31,10 @@ Ce tutoriel nécessite également une compréhension pratique des composants sui
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Le de catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans  Experience Platform.
 - [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): L’API Batch Ingestion vous permet d’ingérer des données dans  Experience Platform sous forme de fichiers de lots.
 - [Environnements de test](../../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à un espace de stockage dans le cloud à l’aide de la variable [!DNL Flow Service] API.
 
-### Lecture d’exemples d’appels API
+### Utilisation des API Platform
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
-
-### Collecte des valeurs des en-têtes requis
-
-Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
-
-- `Authorization: Bearer {ACCESS_TOKEN}`
-- `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
-
-Toutes les ressources de l’Experience Platform, y compris celles appartenant à [!DNL Flow Service], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
-
-- `x-sandbox-name: {SANDBOX_NAME}`
-
-Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
-
-- `Content-Type: application/json`
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur [Prise en main des API Platform](../../../../landing/api-guide.md).
 
 ## Création d’une connexion source {#source}
 
@@ -194,154 +179,13 @@ Pour que les données source soient utilisées dans Platform, un schéma cible d
 
 Un schéma XDM cible peut être créé en adressant une requête de POST au [API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-**Format d’API**
+Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, consultez le tutoriel sur [création d’un schéma à l’aide de l’API](../../../../xdm/api/schemas.md).
 
-```http
-POST /schemaregistry/tenant/schemas
-```
+## Création d’un jeu de données cible {#target-dataset}
 
-**Requête**
+Un jeu de données cible peut être créé en adressant une requête de POST au [API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fournissant l’identifiant du schéma cible dans la payload.
 
-L’exemple de requête suivant crée un schéma XDM qui étend la classe XDM Individual Profile.
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "type": "object",
-        "title": "Target schema for a Cloud Storage connector",
-        "description": "Target schema for a Cloud Storage connector",
-        "allOf": [
-            {
-                "$ref": "https://ns.adobe.com/xdm/context/profile"
-            },
-            {
-                "$ref": "https://ns.adobe.com/xdm/context/profile-person-details"
-            },
-            {
-                "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
-            },
-            {
-                "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
-            }
-        ],
-        "meta:containerId": "tenant",
-        "meta:resourceType": "schemas",
-        "meta:xdmType": "object",
-        "meta:class": "https://ns.adobe.com/xdm/context/profile"
-    }'
-```
-
-**Réponse**
-
-Une réponse réussie renvoie les détails du schéma nouvellement créé, y compris son identifiant unique (`$id`). Cet identifiant est requis lors des étapes suivantes pour créer un jeu de données cible, un mappage et un flux de données.
-
-```json
-{
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-    "meta:altId": "_{TENANT_ID}.schemas.995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-    "meta:resourceType": "schemas",
-    "version": "1.0",
-    "title": "Target schema cloud storage",
-    "type": "object",
-    "description": "Target schema for cloud storage",
-    "allOf": [
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile",
-            "type": "object",
-            "meta:xdmType": "object"
-        },
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-person-details",
-            "type": "object",
-            "meta:xdmType": "object"
-        },
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
-            "type": "object",
-            "meta:xdmType": "object"
-        }
-    ],
-    "refs": [
-        "https://ns.adobe.com/xdm/context/profile-person-details",
-        "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/xdm/context/profile"
-    ],
-    "imsOrg": "{IMS_ORG}",
-    "meta:extensible": false,
-    "meta:abstract": false,
-    "meta:extends": [
-        "https://ns.adobe.com/xdm/context/profile-person-details",
-        "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/xdm/common/auditable",
-        "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/xdm/context/profile"
-    ],
-    "meta:xdmType": "object",
-    "meta:registryMetadata": {
-        "repo:createdDate": 1597783248870,
-        "repo:lastModifiedDate": 1597783248870,
-        "xdm:createdClientId": "{CREATED_CLIENT_ID}",
-        "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
-        "xdm:createdUserId": "{CREATED_USER_ID}",
-        "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "596661ec6c7a9c6ae530676e98290a4a58ca29540ed92489cf4478b2bf013a65",
-        "meta:globalLibVersion": "1.13.3"
-    },
-    "meta:class": "https://ns.adobe.com/xdm/context/profile",
-    "meta:containerId": "tenant",
-    "meta:tenantNamespace": "{TENANT_ID}"
-}
-```
-
-## Création d’un jeu de données cible
-
-Un jeu de données cible peut être créé en adressant une requête de POST au [API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/), fournissant l’identifiant du schéma cible dans la payload.
-
-**Format d’API**
-
-```http
-POST /catalog/dataSets
-```
-
-**Requête**
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/catalog/dataSets?requestDataSource=true' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Target dataset for cloud storage",
-        "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
-        }
-    }'
-```
-
-| Propriété | Description |
-| --- | --- |
-| `schemaRef.id` | L’identifiant du schéma XDM cible. |
-| `schemaRef.contentType` | Version du schéma. Cette valeur doit être définie. `application/vnd.adobe.xed-full-notext+json;version=1`, qui renvoie la dernière version mineure du schéma. |
-
-**Réponse**
-
-Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de données que vous venez de créer au format `"@/datasets/{DATASET_ID}"`. L’identifiant du jeu de données est une chaîne en lecture seule générée par le système et utilisée pour référencer le jeu de données dans les appels API. L’identifiant du jeu de données cible est requis lors des étapes suivantes pour créer une connexion cible et un flux de données.
-
-```json
-[
-    "@/dataSets/5f3c3cedb2805c194ff0b69a"
-]
-```
+Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, consultez le tutoriel sur [création d’un jeu de données à l’aide de l’API](../../../../catalog/api/create-dataset.md).
 
 ## Créer une connexion cible {#target-connection}
 
@@ -404,7 +248,9 @@ Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion ci
 
 ## Création d’un mappage {#mapping}
 
-Pour que les données source soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible adhère. Pour ce faire, il vous suffit d’adresser une requête de POST au service de conversion avec des mappages de données définis dans le payload de la requête.
+Pour que les données source soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible adhère.
+
+Pour créer un jeu de mappages, envoyez une requête de POST à la variable `mappingSets` point d’entrée du [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) tout en fournissant votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
 
 >[!TIP]
 >

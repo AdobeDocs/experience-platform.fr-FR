@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment supprimer un compte à l’aide de l’API Flow Service.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 14%
@@ -28,7 +28,7 @@ Ce tutoriel nécessite également une compréhension pratique des composants sui
 * [Sources](../../home.md): [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
 * [Environnements de test](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-## Utilisation des API Platform
+### Utilisation des API Platform
 
 Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur [Prise en main des API Platform](../../../landing/api-guide.md).
 

@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes de mise à jour d’un flux de données, notamment son nom, sa description et sa planification, à l’aide de l’API Flow Service.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 152ad198918f9cf0bea9dabd67886f5d56763ef8
+source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 27%
+source-wordcount: '607'
+ht-degree: 11%
 
 ---
 
@@ -24,29 +24,11 @@ Ce tutoriel nécessite que vous disposiez d’un identifiant de flux valide. Si 
 Ce tutoriel nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
 
 * [Sources](../../home.md): Experience Platform permet d’ingérer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services Platform.
-* [Environnements de test](../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Environnements de test](../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour mettre à jour votre flux de données avec succès à l’aide de la variable [!DNL Flow Service] API.
+### Utilisation des API Platform
 
-### Lecture d’exemples d’appels API
-
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
-
-### Collecte des valeurs des en-têtes requis
-
-Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Toutes les ressources de l’Experience Platform, y compris celles appartenant à [!DNL Flow Service], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
-
-* `Content-Type: application/json`
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur [Prise en main des API Platform](../../../landing/api-guide.md).
 
 ## Recherche des détails du flux de données
 

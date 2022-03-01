@@ -6,55 +6,35 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes de surveillance des données d’exécution de flux pour l’exhaustivité, les erreurs et les mesures à l’aide de l’API Flow Service.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 33%
+source-wordcount: '410'
+ht-degree: 9%
 
 ---
 
 # Surveillance des flux de données à l’aide de l’API Flow Service
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
-
-[!DNL Flow Service] sert à collecter et à centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
-
 Ce tutoriel décrit les étapes de surveillance de l’exécution des flux pour vérifier l’exhaustivité, les erreurs et les mesures à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Prise en main
+>[!NOTE]
+>
+>Ce tutoriel nécessite que vous disposiez de la valeur d’identifiant d’un flux de données valide. Si vous ne disposez pas d’un identifiant de flux de données valide, sélectionnez votre connecteur de votre choix dans la [présentation des sources](../../home.md) et suivez les étapes décrites pour créer un flux de données avant de lancer ce tutoriel.
 
-Ce tutoriel nécessite que vous disposiez de la valeur d’identifiant d’un flux de données valide. Si vous ne disposez pas d’un identifiant de flux de données valide, sélectionnez votre connecteur de votre choix dans la [présentation des sources](../../home.md) et suivez les étapes décrites avant de lancer ce tutoriel.
+## Prise en main
 
 Ce tutoriel nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
 
 * [Sources](../../home.md): [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
 * [Environnements de test](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour surveiller les exécutions de flux à l’aide de la variable [!DNL Flow Service] API.
+### Utilisation des API Platform
 
-### Lecture d’exemples d’appels API
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur [Prise en main des API Platform](../../../landing/api-guide.md).
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
+## Surveillance des flux de données
 
-### Collecte des valeurs des en-têtes requis
-
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Toutes les ressources qui se trouvent dans [!DNL Experience Platform], y compris celles liées à la [!DNL Flow Service], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
-
-* `Content-Type: application/json`
-
-## Surveiller les exécutions de flux
-
-Une fois que vous avez créé un flux de données, effectuez une requête de GET à la fonction [!DNL Flow Service] API.
+Pour afficher l’état de votre flux de données, envoyez une requête GET à la fonction [!DNL Flow Service] API, tout en fournissant l’identifiant de flux correspondant à votre flux de données.
 
 **Format d’API**
 
