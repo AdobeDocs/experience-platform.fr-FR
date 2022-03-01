@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 96791e24c59734f82113972a8db9191ea1c0c557
+source-git-commit: 06232d4b567ba1d6bed55226aaa08147510c4498
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1578'
 ht-degree: 8%
 
 ---
@@ -44,7 +44,7 @@ Sous , **[!UICONTROL Adobe des applications]** catégorie, sélectionnez **[!UIC
 
 ![catalogue](../../../../images/tutorials/create/analytics/catalog.png)
 
-### Sélectionner des données
+### Choix des données
 
 Le **[!UICONTROL Ajout de données à la source Analytics]** s’affiche. Sélectionner **[!UICONTROL Suite de rapports]** pour commencer à créer une connexion source pour les données d’une suite de rapports Analytics, puis sélectionnez la suite de rapports à ingérer. Les suites de rapports qui ne peuvent pas être sélectionnées ont déjà été ingérées dans cet environnement de test ou dans un autre environnement de test. Sélectionner **[!UICONTROL Suivant]** pour continuer.
 
@@ -57,6 +57,10 @@ Le **[!UICONTROL Ajout de données à la source Analytics]** s’affiche. Sélec
 <!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### Mappage
+
+>[!IMPORTANT]
+>
+>Prise en charge de la préparation des données pour le [!DNL Analytics] source est actuellement en version bêta. La fonctionnalité et la documentation peuvent être modifiées.
 
 Avant de pouvoir mapper votre [!DNL Analytics] pour cibler un schéma XDM, vous devez d’abord choisir si vous utilisez un schéma par défaut ou un schéma personnalisé.
 
