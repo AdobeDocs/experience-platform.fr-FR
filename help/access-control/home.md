@@ -113,7 +113,7 @@ Le tableau suivant décrit les autorisations disponibles pour [!DNL Experience P
 | Gouvernance des données | [!UICONTROL Application dʼétiquettes dʼutilisation des données] | Accès à la lecture, la création et la suppression des étiquettes dʼutilisation des données. |
 | Gouvernance des données | [!UICONTROL Gestion des stratégies dʼutilisation des données] | Accès à la lecture, la création, la modification et la suppression des stratégies dʼutilisation des données. |
 | Gouvernance des données | [!UICONTROL Affichage des stratégies dʼutilisation des données] | Accès en lecture seule pour les stratégies dʼutilisation des données appartenant à votre organisation. |
-| Gouvernance des données | [!UICONTROL Afficher le journal d’activité utilisateur] | Accès en lecture seule pour afficher les [journaux d’audit](../landing/governance-privacy-security/audit-logs/overview.md) enregistrés des activités de Platform. |
+| Gouvernance des données | [!UICONTROL Afficher le journal d’activité de l’utilisateur] | Accès en lecture seule pour afficher les [journaux d’audit](../landing/governance-privacy-security/audit-logs/overview.md) enregistrés des activités de Platform. |
 | [!DNL Dashboards] | [!UICONTROL Afficher le tableau de bord d’utilisation des licences] | Accès en lecture seule pour afficher le tableau de bord de l’utilisation des licences. |
 | [!DNL Dashboards] | [!UICONTROL Gestion des tableaux de bord standard] | Ajoutez des attributs personnalisés qui ne se trouvent pas encore dans l’entrepôt de données. |
 | [!DNL Query Service] | [!UICONTROL Gestion des requêtes] | Accès à la lecture, la création, la modification et la suppression des requêtes SQL structurées pour les données Platform. |

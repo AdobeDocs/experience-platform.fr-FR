@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: 0247d43429bb3d4cbf43ba0a94d435d01fbaf7a8
 workflow-type: tm+mt
 source-wordcount: '151'
-ht-degree: 93%
+ht-degree: 96%
 
 ---
 
