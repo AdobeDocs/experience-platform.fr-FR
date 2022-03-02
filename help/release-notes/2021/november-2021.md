@@ -1,8 +1,9 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
-source-git-commit: 7cd4a776ab07fcd123e798497b23edd41266f409
-workflow-type: tm+mt
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: c02f6ace461e6964b0005d07caee9026dca47e63
+workflow-type: ht
 source-wordcount: '798'
 ht-degree: 100%
 
@@ -90,4 +91,3 @@ L’IA dédiée aux clients disponible dans Real-time Customer Data Platform 
 | Attributs de profil personnalisés | L’IA dédiée aux clients prend désormais en charge la définition de champs de jeu de données de profil personnalisés (avec horodatages) dans vos données en plus des champs d’événement standard. L’utilisation de cette option vous permet d’ajouter des attributs de profil supplémentaires que vous jugez influents, ce qui peut améliorer la qualité de votre modèle et fournir des résultats plus précis.. |
 
 Pour plus d’informations sur l’IA dédiée aux clients, consultez la [Documentation sur l’IA dédiée aux clients](../../intelligent-services/customer-ai/overview.md).
-
