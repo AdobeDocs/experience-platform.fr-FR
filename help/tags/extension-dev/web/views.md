@@ -1,11 +1,11 @@
 ---
 title: Vues dans les extensions web
-description: 'Découvrez comment définir des vues pour les modules de bibliothèque dans vos extensions web Adobe Experience Platform '
+description: Découvrez comment définir des vues pour les modules de bibliothèque dans vos extensions web Adobe Experience Platform.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
 source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2083'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -130,7 +130,7 @@ L’appel de cette méthode affiche un mode permettant à un utilisateur de test
 | Propriété | Description |
 | --- | --- |
 | `pattern` | Modèle d’expression régulière qui doit être utilisé comme valeur initiale du champ de modèle à l’intérieur du testeur. Est généralement fourni lorsque l’utilisateur modifie une expression régulière existante. Si ce n’est pas le cas, le champ de motif sera initialement vide. |
-| `flags` | Les indicateurs d’expression régulière qui doivent être utilisés par le testeur. Par exemple, `gi` indique l’indicateur de correspondance globale et l’indicateur de casse ignorée. Ces indicateurs ne sont pas modifiables par l’utilisateur dans le testeur, mais sont utilisés pour illustrer les indicateurs spécifiques que l’extension utilisera lors de l’exécution de l’expression régulière. Dans le cas contraire, aucun indicateur ne sera utilisé dans le testeur. Voir [Documentation sur RegExp de MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) pour plus d’informations sur les indicateurs d’expression régulière.<br><br>Un scénario courant est une extension qui permet aux utilisateurs d’inverser la casse pour une expression régulière. Pour ce faire, lʼextension fournit généralement une case à cocher dans sa vue dʼextension qui, lorsquʼelle est cochée, active lʼinsensibilité à la casse (représentée par lʼindicateur `i`). L’objet settings enregistré par la vue doit indiquer si la case à cocher a été cochée pour que le module Bibliothèque exécutant l’expression régulière sache s’il faut utiliser l’indicateur `i`. En outre, lorsque la vue dʼextension souhaite ouvrir le testeur dʼexpression régulière, elle doit transmettre lʼindicateur `i` si la case dʼinsensibilité à la casse est cochée. Permet à lʼutilisateur de tester correctement lʼexpression régulière avec lʼinsensibilité à la casse activée. |
+| `flags` | Les indicateurs d’expression régulière qui doivent être utilisés par le testeur. Par exemple, `gi` indique l’indicateur de correspondance globale et l’indicateur de casse ignorée. Ces indicateurs ne sont pas modifiables par l’utilisateur dans le testeur, mais sont utilisés pour illustrer les indicateurs spécifiques que l’extension utilisera lors de l’exécution de l’expression régulière. Dans le cas contraire, aucun indicateur ne sera utilisé dans le testeur. Voir [Documentation sur RegExp de MDN](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/RegExp) pour plus d’informations sur les indicateurs d’expression régulière.<br><br>Un scénario courant est une extension qui permet aux utilisateurs d’inverser la casse pour une expression régulière. Pour ce faire, lʼextension fournit généralement une case à cocher dans sa vue dʼextension qui, lorsquʼelle est cochée, active lʼinsensibilité à la casse (représentée par lʼindicateur `i`). L’objet settings enregistré par la vue doit indiquer si la case à cocher a été cochée pour que le module Bibliothèque exécutant l’expression régulière sache s’il faut utiliser l’indicateur `i`. En outre, lorsque la vue dʼextension souhaite ouvrir le testeur dʼexpression régulière, elle doit transmettre lʼindicateur `i` si la case dʼinsensibilité à la casse est cochée. Permet à lʼutilisateur de tester correctement lʼexpression régulière avec lʼinsensibilité à la casse activée. |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 
@@ -172,7 +172,7 @@ Pour indiquer où il peut s’avérer utile pour les utilisateurs d’utiliser d
 
 >[!NOTE]
 >
->Pour télécharger l’icône appropriée, accédez à la [page icônes sur Adobe Spectrum](https://spectrum.adobe.com/page/icons/) et recherchez &quot;[!DNL Data]&quot;.
+>Pour télécharger l’icône appropriée, accédez à la [page relative aux icônes d’Adobe Spectrum](https://spectrum.adobe.com/page/icons/) et recherchez « [!DNL Data] ».
 
 Quand un utilisateur clique sur le bouton Suivant en regard du champ de texte, appelez `window.extensionBridge.openDataElementSelector` comme [indiqué ci-dessus](#open-data-element). Cette option affiche une liste des éléments de données de l’utilisateur dans laquelle l’utilisateur peut choisir plutôt que d’avoir à mémoriser le nom et à saisir les signes de pourcentage. Une fois que l’utilisateur a sélectionné un élément de données, vous recevrez le nom de l’élément de données sélectionné encadré des signes de pourcentage (sauf si vous avez défini l’option `tokenize` sur `false`). Nous vous encourageons à remplir ensuite le champ de texte avec le résultat.
 
