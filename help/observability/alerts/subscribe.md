@@ -5,9 +5,9 @@ description: Ce document décrit la procédure à suivre pour sʼabonner aux not
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
 source-git-commit: 29b1942e4009770d4f9d346a760b6e78cef23969
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '774'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -56,7 +56,7 @@ Lʼécran suivant affiche une liste des types dʼévénements auxquels vous pouv
 
 >[!NOTE]
 >
->Si vous ne savez pas à quels événements vous abonner pour le service que vous utilisez, consultez la documentation suivante :
+>Si vous avez des doutes sur les événements auxquels vous devez vous abonner pour le service avec lequel vous travaillez, consultez la documentation suivante :
 >
 >* [Notifications Platform](./rules.md)
 >* [Notifications Privacy Service](../../privacy-service/privacy-events.md)
@@ -98,4 +98,4 @@ En suivant ce tutoriel, vous avez enregistré un webhook pour recevoir des notif
 * [[!DNL Data Ingestion] notifications](../../ingestion/quality/subscribe-events.md)
 * [Notifications [!DNL Flow Service] (sources)](../../sources/notifications.md)
 
-Pour plus d’informations sur la façon de surveiller vos activités sur [!DNL Experience Platform] et [!DNL Privacy Service], consultez la [[!DNL Observability Insights] présentation ](../home.md).
+Pour plus d’informations sur la façon de surveiller vos activités sur [!DNL Experience Platform] et [!DNL Privacy Service], consultez la [[!DNL Observability Insights] présentation](../home.md).
