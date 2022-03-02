@@ -4,9 +4,9 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels associés au traitement des demandes d’accès à des informations personnelles pour Identity Service.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
 source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '722'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -52,7 +52,7 @@ La requête suivante crée une tâche de confidentialité dans le cadre du RGPD 
 
 >[!TIP]
 >
->Lors de la suppression d’un espace de noms personnalisé à l’aide de l’API, vous devez spécifier le symbole d’identité comme espace de noms, au lieu du nom d’affichage.
+>Lorsque vous supprimez un espace de noms personnalisé à l’aide de l’API, vous devez spécifier le symbole d’identité comme espace de noms, au lieu du nom d’affichage.
 
 ```shell
 curl -X POST \
@@ -92,11 +92,11 @@ curl -X POST \
 }'
 ```
 
-### Utilisation de l’interface utilisateur
+### Utiliser l’interface utilisateur
 
 >[!TIP]
 >
->Lors de la suppression d’un espace de noms personnalisé à l’aide de l’interface utilisateur, vous devez spécifier le symbole d’identité comme espace de noms, au lieu du nom d’affichage. De plus, vous ne pouvez pas supprimer les espaces de noms personnalisés dans l’interface utilisateur pour les environnements de test hors production.
+>Lorsque vous supprimez un espace de noms personnalisé à l’aide de l’interface utilisateur, vous devez spécifier le symbole d’identité comme espace de noms, au lieu du nom d’affichage. En outre, vous ne pouvez pas supprimer les espaces de noms personnalisés dans l’interface utilisateur pour les sandbox hors production.
 
 Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Identité]** sous **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées dans [!DNL Identity Service].
 
