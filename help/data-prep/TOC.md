@@ -4,9 +4,9 @@ user-guide-title: Guide de préparation des données
 user-guide-description: Préparez vos données pour l’ingestion dans Adobe Experience Platform.
 feature: Data Prep
 source-git-commit: d8d49bc904664f2950dd6ea2bf022584c2737709
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 91%
    - [Fonctions](./api/functions.md)
    - [Jeu de mappages](./api/mapping-set.md)
 - Interface utilisateur {#ui}
-   - [Guide de l’interface utilisateur de la préparation de données](./ui/mapping.md)
+   - [Guide de l’interface utilisateur de la préparation des données](./ui/mapping.md)
 - [Gestion des formats de données](./data-handling.md)
 - [Jeux de mappages](mapping-set.md)
 - [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
