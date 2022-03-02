@@ -1,26 +1,26 @@
 ---
-title: Affichage des tableaux de bord configurés
-description: Affichez la liste des tableaux de bord configurés de votre entreprise dans l’interface utilisateur de l’Experience Platform.
-source-git-commit: 2c8c98467d1a8e11ee1e32ae9ada4e3f87c7b27e
-workflow-type: tm+mt
+title: Afficher les tableaux de bord configurés
+description: Affichez une liste des tableaux de bord configurés de votre entreprise dans l’interface utilisateur d’Experience Platform.
+exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
+source-git-commit: 36fc6f996b4ffd33f542eb9be4fbc50f3fcdd1cb
+workflow-type: ht
 source-wordcount: '154'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Afficher les tableaux de bord configurés
 
-# Affichage des tableaux de bord configurés
+Si votre entreprise dispose de plusieurs tableaux de bord dans Adobe Experience Platform, vous pouvez les consulter dans l’interface utilisateur (IU).
 
-Si plusieurs tableaux de bord sont disponibles dans Adobe Experience Platform pour votre entreprise, vous pouvez les consulter dans l’interface utilisateur.
+Pour afficher les tableaux de bord que votre entreprise a configurés, sélectionnez **[!UICONTROL Tableaux de bord]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Parcourir]**.
 
-Pour afficher les tableaux de bord configurés par votre organisation, sélectionnez **[!UICONTROL Tableaux de bord]** dans le volet de navigation de gauche, puis sélectionnez l’option **[!UICONTROL Parcourir]** .
+Une liste de tous les tableaux de bord disponibles sur votre instance Platform est affichée sous l’onglet [!UICONTROL Parcourir]. Cela inclut les tableaux de bord intégrés créés par votre entreprise et qui ont été configurés par le biais d’applications tierces.
 
-Une liste de tous les tableaux de bord disponibles sur votre instance Platform s’affiche sous la [!UICONTROL Parcourir] . Cela inclut les tableaux de bord intégrés créés par votre organisation qui ont été configurés par le biais d’applications tierces.
+![L’Onglet Parcourir dans la section Tableaux de bord de l’interface utilisateur.](./images/inventory/browse-tab.png)
 
-![Onglet Parcourir de la section Tableaux de bord de l’interface utilisateur.](./images/inventory/browse-tab.png)
+Vous pouvez afficher un tableau de bord individuel en sélectionnant son nom dans la liste.
 
-Vous pouvez afficher un tableau de bord individuel en le sélectionnant dans la liste.
+![Onglet Parcourir avec un nom de tableau de bord en surbrillance](./images/inventory/dashboard-name.png).
 
-![Onglet Parcourir avec le nom d’un tableau de bord en surbrillance.](./images/inventory/dashboard-name.png)
-
-Lorsque cette option est sélectionnée, le tableau de bord s’ouvre dans l’interface utilisateur de Platform ou dans un espace de travail d’application entièrement intégré qui nécessite que vous vous connectiez à l’aide des informations d’identification nécessaires.
+Lorsqu’il est sélectionné, le tableau de bord s’ouvre soit dans l’interface utilisateur de Platform, soit dans un espace de travail d’application entièrement intégré qui nécessite que vous vous connectiez à l’aide des informations d’identification nécessaires.
