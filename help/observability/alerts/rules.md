@@ -5,81 +5,81 @@ description: Ce document couvre les règles d’alerte prédéfinies fournies pa
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
 source-git-commit: d8ada2de0ee0408e4e10f0dc45652af6eb6352cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '728'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
 # Règles d’alerte standard
 
-Adobe Experience Platform fournit plusieurs règles d’alerte prédéfinies que vous pouvez activer pour votre organisation. Ce document couvre les détails de ces règles d’alerte fournies par l’Adobe. Pour plus d’informations sur les alertes dans Experience Platform, consultez la [présentation des alertes](./overview.md).
+Adobe Experience Platform fournit plusieurs règles d’alerte prédéfinies que vous pouvez activer pour votre organisation. Ce document couvre les détails de ces règles d’alerte fournies par Adobe. Pour plus d’informations concernant les alertes dans Experience Platform, consultez la [présentation des alertes](./overview.md).
 
-When [affichage des règles d’alerte dans l’interface utilisateur de Platform](./ui.md), vous pouvez vous abonner à chaque règle individuellement. Lorsque vous vous abonnez à des alertes par le biais de [Notifications d’événements d’E/S](./subscribe.md), toutefois, les règles d’alerte sont organisées en différents packages d’abonnement. Dans les tableaux ci-dessous, chaque règle est affichée avec son nom d’abonnement d’événement d’E/S correspondant.
+Lors de l’[affichage des règles d’alerte dans l’interface utilisateur de Platform](./ui.md), vous pouvez vous abonner à chaque règle. Toutefois, lorsque vous vous abonnez à des alertes par le biais des [Notifications d’événements I/O](./subscribe.md), les règles d’alerte sont organisées en différents packages d’abonnement. Dans les tableaux ci-dessous, chaque règle est affichée avec son nom d’abonnement aux événements I/O correspondant.
 
-## Ingestion de données
+## Ingestion des données
 
-Les règles d’alerte suivantes sont spécifiques à [Ingestion des données](../../ingestion/home.md) et  [sources](../../sources/home.md):
+Les règles d’alerte suivantes sont spécifiques à l’[Ingestion des données](../../ingestion/home.md) et aux [sources](../../sources/home.md) :
 
-| abonnement aux événements I/O | Règle d&#39;alerte | Description |
+| Abonnement aux événements I/O | Règle d’alerte | Description |
 | --- | --- | --- |
-| Informations sur l’exécution du flux source | Démarrage de l’exécution du flux de sources | Cette alerte se déclenche lorsqu’une connexion source commence le traitement des données. |
-| Informations sur l’exécution du flux source | Succès de l’exécution du flux de sources | Cette alerte se déclenche lorsque les données sont correctement ingérées à partir d’une connexion source. |
-| Retards, échecs et erreurs d’exécution de flux source | Échec de l’exécution du flux des sources | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’ingestion de données à partir d’une connexion source. |
-| Retards, échecs et erreurs d’exécution de flux source | Délai d’ingestion | Cette alerte se déclenche lorsqu’une exécution du flux d’ingestion par lots dure plus de 150 minutes. |
+| Informations relatives à l’exécution du flux de sources | Début d’exécution du flux de sources | Cette alerte se déclenche lorsqu’une connexion source commence le traitement des données. |
+| Informations relatives à l’exécution du flux de sources | Succès de l’exécution du flux de sources | Cette alerte se déclenche lorsque les données sont correctement ingérées à partir d’une connexion source. |
+| Retards, échecs et erreurs de l’exécution du flux de sources | Échec de l’exécution du flux des sources | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’ingestion de données à partir d’une connexion source. |
+| Retards, échecs et erreurs de l’exécution du flux de sources | Retard d’ingestion | Cette alerte se déclenche lorsqu’une exécution de flux d’ingestion par lots dure plus de 150 minutes. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Identity Service
+## Service d’identités
 
-Les règles d’alerte suivantes sont spécifiques à [Identity Service](../../identity-service/home.md):
+Les règles d’alerte suivantes sont spécifiques au [service d’identités](../../identity-service/home.md) :
 
-| abonnement aux événements I/O | Règle d&#39;alerte | Description |
+| Abonnement aux événements I/O | Règle d’alerte | Description |
 | --- | --- | --- |
-| Informations sur l’ingestion d’identités | Démarrage de l’exécution du flux Identity Service | Cette alerte se déclenche lorsqu’une exécution de flux Identity Service démarre le traitement des données. En d’autres termes, les données ingérées sont chargées du lac de données vers Identity Service. |
-| Informations sur l’ingestion d’identités | Succès de l’exécution du flux Identity Service | Cette alerte se déclenche lorsque les données sont correctement chargées du lac de données vers Identity Service. |
-| Retards, échecs et erreurs d’ingestion d’identités | Délai d’exécution du flux Identity Service | Cette alerte se déclenche lorsqu’une exécution de flux Identity Service prend plus de 150 minutes pour être traitée. |
-| Retards, échecs et erreurs d’ingestion d’identités | Échec de l’exécution du flux Identity Service | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’ingestion de données dans Identity Service. |
+| Informations relatives à l’ingestion d’identités | Début d’exécution du flux du service d’identités | Cette alerte se déclenche lorsqu’une exécution du flux du services d’identités démarre le traitement des données. En d’autres termes, les données ingérées sont chargées du lac de données vers le service d’identités. |
+| Informations relatives à l’ingestion d’identités | Succès de l’exécution du flux du service d’identités | Cette alerte se déclenche lorsque les données sont correctement chargées du lac de données vers le service d’identités. |
+| Retards, échecs et erreurs de l’ingestion d’identités | Retard d’exécution du flux du service d’identités | Cette alerte se déclenche lorsqu’une exécution du flux du service d’identités dure plus de 150 minutes. |
+| Retards, échecs et erreurs de l’ingestion d’identités | Échec de l’exécution du flux du service d’identités | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’ingestion de données dans le service d’identités. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Real-time Customer Profile
+## Profil client en temps réel
 
-Les règles d’alerte suivantes sont spécifiques à [Real-time Customer Profile](../../profile/home.md):
+Les règles d’alerte suivantes sont spécifiques au [profil client en temps réel](../../profile/home.md) :
 
-| abonnement aux événements I/O | Règle d&#39;alerte | Description |
+| Abonnement aux événements I/O | Règle d’alerte | Description |
 | --- | --- | --- |
-| Informations sur l’ingestion du profil | Démarrage de l’exécution du flux de profil | Cette alerte se déclenche lorsqu’une exécution de flux de profil démarre le traitement des données. |
-| Informations sur l’ingestion du profil | Succès de l’exécution du flux de profil | Cette alerte se déclenche lorsque les données sont chargées correctement dans Profile à partir du lac de données. |
-| Retards, échecs et erreurs d’ingestion du profil | Délai d’exécution du flux de profil | Cette alerte se déclenche lors du chargement des données du lac de données dans Profile pendant plus de 150 minutes. |
-| Retards, échecs et erreurs d’ingestion du profil | Échec de l’exécution du flux de profil | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’ingestion de données dans Profile. |
+| Informations concernant l’ingestion de profils | Début de l’exécution du flux de profils | Cette alerte se déclenche lorsqu’une exécution du flux de profils démarre le traitement des données. |
+| Informations concernant l’ingestion de profils | Succès de l’exécution du flux de profils | Cette alerte se déclenche lorsque les données sont chargées correctement dans le profil à partir du lac de données. |
+| Retards, échecs et erreurs de l’ingestion de profils | Retard d’exécution du flux de profils | Cette alerte se déclenche lorsque le chargement des données du lac de données dans le profil dure plus de 150 minutes. |
+| Retards, échecs et erreurs de l’ingestion de profils | Échec de l’exécution du flux de profils | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’ingestion de données dans le profil. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Segmentation
 
-Les règles d’alerte suivantes sont spécifiques à [Segmentation Service](../../segmentation/home.md):
+Les règles d’alerte suivantes sont spécifiques à [Segmentation Service](../../segmentation/home.md) :
 
-| abonnement aux événements I/O | Règle d&#39;alerte | Description |
+| Abonnement aux événements I/O | Règle d’alerte | Description |
 | --- | --- | --- |
-| Informations sur la tâche d’évaluation de segment | Démarrage de la tâche de segment | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segment commence à traiter des données. |
-| Informations sur la tâche d’évaluation de segment | Réussite de la tâche de segment | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segment se termine avec succès. |
-| Retards, échecs et erreurs de tâche d’évaluation de segment | Délai de tâche de segmentation | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segment dure plus de 150 minutes. |
-| Retards, échecs et erreurs de tâche d’évaluation de segment | Échec de la tâche de segment | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segment génère une erreur. |
-| Retards, échecs et erreurs de tâche d’évaluation de segment | Définition de segment désactivée | Cette alerte se déclenche lorsqu’une définition de segment est désactivée en raison d’une erreur interne. Cela déclenche automatiquement une salle de guerre pour qu&#39;une équipe d&#39;ingénierie d&#39;Adobe enquête sur le problème. Cette alerte a pour seul but d’être informative et ne nécessite aucune action de votre part. |
+| Informations relatives à la tâche d’évaluation de segments | Début de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments commence à traiter des données. |
+| Informations relatives à la tâche d’évaluation de segments | Réussite de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments se termine avec succès. |
+| Retards, échecs et erreurs relatifs à la tâche d’évaluation de segments | Retard de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments dure plus de 150 minutes. |
+| Retards, échecs et erreurs relatifs à la tâche d’évaluation de segments | Échec de la tâche relative aux segments | Cette alerte se déclenche lorsqu’une tâche d’évaluation de segments génère une erreur. |
+| Retards, échecs et erreurs relatifs à la tâche d’évaluation de segments | Définition de segments désactivée | Cette alerte se déclenche lorsqu’une définition de segments est désactivée en raison d’une erreur interne. Cette action déclenche automatiquement un dispositif d’urgence pour qu’une équipe d’ingénieurs Adobe enquête sur le problème. Cette alerte a pour seul but d’être informative et ne nécessite aucune action de votre part. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Destinations
 
-Les règles d’alerte suivantes sont spécifiques à [destinations](../../destinations/home.md):
+Les règles d’alerte suivantes sont spécifiques aux [destinations](../../destinations/home.md) :
 
-| abonnement aux événements I/O | Règle d&#39;alerte | Description |
+| Abonnement aux événements I/O | Règle d’alerte | Description |
 | --- | --- | --- |
-| Informations sur l’exécution du flux de destination | Démarrage de l’exécution du flux de destination | Cette alerte se déclenche lorsqu’une exécution de flux de destination commence à activer un segment. |
-| Informations sur l’exécution du flux de destination | Succès de l’exécution du flux de destination | Cette alerte se déclenche lorsqu’un segment est activé avec succès vers une destination. |
-| Délais, échecs et erreurs d’exécution du flux de destination | Délai d’exécution du flux de destination | Cette alerte se déclenche lorsqu’une exécution de flux de destination dure plus de 150 minutes pour activer un segment. |
-| Délais, échecs et erreurs d’exécution du flux de destination | Échec de l’exécution du flux de destination | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’activation d’un segment vers une destination. |
+| Informations relatives à l’exécution du flux de destinations | Début de l’exécution du flux de destinations | Cette alerte se déclenche lorsqu’une exécution de flux de destinations commence à activer un segment. |
+| Informations relatives à l’exécution du flux de destinations | Succès de l’exécution du flux de destinations | Cette alerte se déclenche lorsqu’un segment est activé avec succès vers une destination. |
+| Délais, échecs et erreurs de l’exécution du flux de destinations | Retard de l’exécution du flux de destinations | Cette alerte se déclenche lorsqu’une exécution de flux de destinations dure plus de 150 minutes pour activer un segment. |
+| Délais, échecs et erreurs de l’exécution du flux de destinations | Échec de l’exécution du flux de destinations | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’activation d’un segment vers une destination. |
 
 {style=&quot;table-layout:auto&quot;}
 
