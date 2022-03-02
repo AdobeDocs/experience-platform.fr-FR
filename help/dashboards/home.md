@@ -5,9 +5,9 @@ type: Documentation
 description: Explorez de nombreux tableaux de bord dans Adobe Experience Platform pour afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors des captures instantanées quotidiennes.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
 source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '309'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -22,9 +22,9 @@ Les tableaux de bord fournissent un compte rendu des performances prêt à lʼem
 
 ## Prise en main des tableaux de bord
 
-Pour afficher et gérer les tableaux de bord, accédez à **[!UICONTROL Tableaux de bord]** dans l’interface utilisateur de l’Experience Platform, puis sélectionnez l’option **[!UICONTROL Parcourir]** pour accéder à l’inventaire du tableau de bord.
+Pour afficher et gérer les tableaux de bord, accédez à **[!UICONTROL Tableaux de bord]** dans l’interface utilisateur (IU) d’Experience Platform, puis sélectionnez l’onglet **[!UICONTROL Parcourir]** pour accéder à l’inventaire des tableaux de bord.
 
-Vous pouvez également accéder aux tableaux de bord en accédant à la section correspondante dans l’interface utilisateur du tableau de bord que vous souhaitez afficher. Pour afficher le tableau de bord des profils, par exemple, accédez au **[!UICONTROL Profils]** espace de travail et sélectionnez **[!UICONTROL Présentation]** .
+Vous pouvez également accéder aux tableaux de bord en accédant à la section appropriée de l’interface utilisateur pour le tableau de bord que vous souhaitez afficher. Pour afficher le tableau de bord des profils, par exemple, accédez à l’espace de travail **[!UICONTROL Profils]** et sélectionnez l’onglet **[!UICONTROL Aperçu]**.
 
 Les données de lʼinstantané montrent les données exactement comme elles apparaissent au moment précis où lʼinstantané a été pris. En dʼautres termes, lʼinstantané nʼest pas une approximation ou un échantillon des données, tandis que les tableaux de bord ne sont pas mis à jour en temps réel.
 
@@ -32,9 +32,9 @@ Les données de lʼinstantané montrent les données exactement comme elles appa
 >
 >Les modifications ou mises à jour apportées aux données depuis la prise dʼun instantané ne seront pas reflétées dans le tableau de bord avant la prise de lʼinstantané suivant.
 
-## Inventaire du tableau de bord
+## Inventaire des tableaux de bord
 
-Pour obtenir des instructions détaillées sur l’utilisation de la variable **[!UICONTROL Tableaux de bord]** espace de travail pour afficher tous les tableaux de bord disponibles, reportez-vous à la section [guide d’inventaire des tableaux de bord](./inventory.md).
+Pour des étapes détaillées sur la façon d’utiliser l’espace de travail **[!UICONTROL Tableaux de bord]** pour afficher tous les tableaux de bord disponibles, consultez le [guide de l’inventaire des tableaux de bord](./inventory.md).
 
 ## Tableaux de bord disponibles
 
