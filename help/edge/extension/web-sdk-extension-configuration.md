@@ -2,10 +2,10 @@
 title: Configuration de l’extension du SDK Web Adobe Experience Platform
 description: Comment configurer l’extension de balise du SDK Web Adobe Experience Platform dans l’interface utilisateur de la collecte de données.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
+source-git-commit: 1f9454148ed4ee95f0d86f03c4bcf8c917d0aeea
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 7%
+source-wordcount: '1047'
+ht-degree: 6%
 
 ---
 
@@ -45,7 +45,7 @@ Le [!UICONTROL Identifiant de l’organisation IMS] est l’organisation à laqu
 
 ### **[!UICONTROL Domaine Edge]**
 
-Le [!UICONTROL Domaine Edge] est le domaine à partir duquel l’extension Adobe Experience Platform envoie et reçoit des données. L’extension exige l’utilisation d’un CNAME propriétaire pour le trafic de production. Le domaine tiers par défaut fonctionne pour les environnements de développement, mais ne convient pas aux environnements de production. Les instructions de configuration d’un CNAME propriétaire sont répertoriées [ici](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=fr).
+Le [!UICONTROL Domaine Edge] est le domaine à partir duquel l’extension Adobe Experience Platform envoie et reçoit des données. Adobe recommande d’utiliser un domaine propriétaire (CNAME) pour cette extension. Le domaine tiers par défaut fonctionne pour les environnements de développement, mais ne convient pas aux environnements de production. Les instructions de configuration d’un CNAME propriétaire sont répertoriées [ici](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=fr).
 
 ## [!UICONTROL Flux de données]
 
