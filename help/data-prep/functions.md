@@ -5,9 +5,9 @@ title: Fonctions de mappage de prép de données
 topic-legacy: overview
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 080ff800c78263a29f855ae6fe0e6acdb73554d5
 workflow-type: tm+mt
-source-wordcount: '3964'
+source-wordcount: '3965'
 ht-degree: 17%
 
 ---
@@ -140,7 +140,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | is_empty | Vérifie si un objet est vide ou non. | <ul><li>INPUT : **Obligatoire** L’objet que vous essayez de vérifier est vide.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | array_to_object | Crée une liste d’objets. | <ul><li>INPUT : **Obligatoire** Groupement de paires clé-tableau.</li></ul> | array_to_object(INPUT) | exemple de besoin | exemple de besoin |
 | to_object | Crée un objet basé sur les paires clé/valeur plate données. | <ul><li>INPUT : **Obligatoire** Liste plate de paires clé/valeur.</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
-| str_to_object | Crée un objet à partir de la chaîne d’entrée. | <ul><li>STRING: **Obligatoire** Chaîne analysée pour créer un objet.</li><li>VALUE_DELIMITER: *Facultatif* Délimiteur qui sépare un champ de la valeur. Le délimiteur par défaut est `:`.</li><li>FIELD_DELIMITER : *Facultatif* Délimiteur qui sépare les paires valeur-champ. Le délimiteur par défaut est `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | phone - 123 456 7890&quot;, &quot;-&quot;, &quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
+| str_to_object | Crée un objet à partir de la chaîne d’entrée. | <ul><li>STRING: **Obligatoire** Chaîne analysée pour créer un objet.</li><li>VALUE_DELIMITER: *Facultatif* Délimiteur qui sépare un champ de la valeur. Le délimiteur par défaut est `:`.</li><li>FIELD_DELIMITER : *Facultatif* Délimiteur qui sépare les paires valeur-champ. Le délimiteur par défaut est `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName=John,lastName=Doe,phone=123 456 7890&quot;, &quot;=&quot;, &quot;,&quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
 | contains_key | Vérifie si l’objet existe dans les données source. **Remarque :** Cette fonction remplace le `is_set()` fonction . | <ul><li>INPUT : **Obligatoire** Chemin à vérifier s’il existe dans les données source.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | vrai |
 | nullify | Définit la valeur de l’attribut sur `null`. Vous devez l’utiliser lorsque vous ne souhaitez pas copier le champ dans le schéma cible. |  | nullify() | nullify() | `null` |
 | get_keys | Analyse les paires clé/valeur et renvoie toutes les clés. | <ul><li>OBJECT : **Obligatoire** Objet à partir duquel les clés seront extraites.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Fierté et préjugé&quot;, &quot;livre2&quot; : &quot;1984&quot;}) | `["book1", "book2"]` |
