@@ -5,10 +5,10 @@ title: Présentation de la collecte de données
 topic-legacy: overview
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
+source-git-commit: 1322ef78683e62130b56c5b6a22b8699e57a31cf
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 100%
+source-wordcount: '478'
+ht-degree: 95%
 
 ---
 
@@ -59,6 +59,10 @@ Le réseau Platform Edge est un réseau de serveurs distribué dans le monde en
 [Transfert d’événement](../tags/ui/event-forwarding/overview.md) peut exploiter n’importe quel flux de données Experience Platform, ce qui vous permet de transformer, d’enrichir et d’envoyer des données à n’importe quelle destination non Adobe avec une latence extrême faible et sans ajouter de code tiers à l’appareil client.
 
 ![Transfert d’événement](./images/home/event-forwarding.png)
+
+>[!NOTE]
+>
+>Le transfert d’événement est une fonctionnalité payante qui n’est incluse que dans l’offre Connexions Real-time Customer Data Platform .
 
 ## Étapes suivantes
 
