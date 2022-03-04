@@ -3,9 +3,9 @@ keywords: Destination du hub d’événements Azure ; hub d’événements Azure
 title: (Version bêta) [!DNL Azure Event Hubs] connection
 description: Créez une connexion sortante en temps réel avec votre [!DNL Azure Event Hubs] stockage pour diffuser des données depuis l’Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
+source-git-commit: be09d794a4cbc3afc76df70d11f55b0cae6f2009
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1183'
 ht-degree: 1%
 
 ---
@@ -46,10 +46,11 @@ Pour vous connecter à cette destination, procédez comme décrit dans la sectio
 
 while [configuration](../../ui/connect-destination.md) Pour cette destination, vous devez fournir les informations suivantes :
 
-* **[!UICONTROL Nom de clé SAS]** et **[!UICONTROL Clé SAS]**: Renseignez le nom et la clé de votre clé SAS. En savoir plus sur l’authentification à [!DNL Azure Event Hubs] avec les clés SAS dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Nom de clé SAS]**: Nom de la règle d’autorisation, également appelé nom de clé SAS.
+* **[!UICONTROL Clé SAS]**: Clé Principale de l’espace de noms des centres d’événements. Le `sasPolicy` que la variable `sasKey` correspond à **gérer** droits configurés pour que la liste des centres d’événements soit renseignée. En savoir plus sur l’authentification à [!DNL Azure Event Hubs] avec les clés SAS dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Espace de noms]**: Renseignez vos [!DNL Azure Event Hubs] espace de noms. En savoir plus sur [!DNL Azure Event Hubs] espaces de noms dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 * **[!UICONTROL Nom]**: Renseignez un nom pour la connexion à [!DNL Azure Event Hubs].
-* **[!UICONTROL Description]**: Fournissez une description de la connexion.  Exemples : &quot;Clients Premium&quot;, &quot;Hommes intéressés par le kitesurfing&quot;.
+* **[!UICONTROL Description]**: Fournissez une description de la connexion.  Exemples : &quot;Clients de niveau Premium&quot;, &quot;Clients intéressés par le kitesurfing&quot;.
 * **[!UICONTROL eventHubName]**: Attribuez un nom à la diffusion de [!DNL Azure Event Hubs] destination.
 
 ## Activation des segments vers cette destination {#activate}
