@@ -2,12 +2,10 @@
 title: Identifiants d’appareil propriétaires dans le SDK Web Platform
 description: Découvrez comment configurer des identifiants d’appareil propriétaires (FPID) pour le SDK Web de Adobe Experience Platform.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-hide: true
-hidefromtoc: true
-source-git-commit: c094e72232f9ac44d10a1919a00024e5faa27b2b
+source-git-commit: 700dea7ed7f35797b3a3fe4bf09f5e266577363b
 workflow-type: tm+mt
-source-wordcount: '1680'
-ht-degree: 0%
+source-wordcount: '1776'
+ht-degree: 1%
 
 ---
 
@@ -27,36 +25,44 @@ Ce guide suppose que vous connaissez le fonctionnement des données d’identit�
 
 ## Utilisation des FPID
 
-Les cookies propriétaires sont plus efficaces lorsqu’ils sont définis à l’aide d’un serveur appartenant au client qui exploite un enregistrement A DNS plutôt qu’un CNAME DNS. À l’aide d’identifiants d’appareil propriétaires, vous pouvez définir vos propres identifiants d’appareil dans des cookies à l’aide d’enregistrements A DNS. Ces identifiants peuvent ensuite être envoyés à Adobe et utilisés comme graines pour générer des ECID qui continueront à être les Principaux identifiants dans les applications Adobe Experience Cloud.
+Les FPID effectuent le suivi des visiteurs à l’aide de cookies propriétaires. Les cookies propriétaires sont plus efficaces lorsqu’ils sont définis à l’aide d’un serveur qui utilise un DNS. [Un enregistrement](https://datatracker.ietf.org/doc/html/rfc1035) (pour IPv4) ou [Enregistrement AAAA](https://datatracker.ietf.org/doc/html/rfc3596) (pour IPv6), par opposition à un CNAME DNS ou à un code JavaScript.
+
+>[!IMPORTANT]
+>
+>Les enregistrements ou les enregistrements AAAA ne sont pris en charge que pour la définition et le suivi des cookies. La méthode Principale pour la collecte de données est via un CNAME DNS. En d’autres termes, les FPID sont définis à l’aide d’un enregistrement A ou AAAA, puis sont envoyés à l’Adobe à l’aide d’un CNAME.
+>
+>Le [Programme de certificat géré par Adobe](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) est également toujours pris en charge pour la collecte de données propriétaires.
+
+Une fois qu’un cookie FPID est défini, sa valeur peut être récupérée et envoyée à l’Adobe à mesure que les données d’événement sont collectées. Les FPID collectés sont utilisés comme graines pour générer des ECID, qui restent les identifiants Principaux dans les applications Adobe Experience Cloud.
 
 Pour envoyer un FPID pour un visiteur de site web vers Platform Edge Network, vous devez inclure le FPID dans la variable `identityMap` pour ce visiteur. Reportez-vous à la section plus loin dans ce document sur [utilisation des FPID dans `identityMap`](#identityMap) pour plus d’informations.
 
-## Exigences de mise en forme des identifiants
+### Exigences de mise en forme des identifiants
 
 Le réseau Platform Edge n’accepte que les identifiants conformes au [Format UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122). Les ID d’appareil qui ne sont pas au format UUIDv4 seront rejetés.
 
 La génération d’un UUID entraîne presque toujours un identifiant unique et aléatoire, la probabilité qu’une collision se produise étant négligeable. UUIDv4 ne peut pas être transféré à l’aide d’adresses IP ou d’autres informations d’identification personnelles (PII). Les UUID sont omniprésents et des bibliothèques sont disponibles pour pratiquement tous les langages de programmation pour les générer.
 
-## Définition d’un cookie à l’aide d’un enregistrement A DNS
+## Définition d’un cookie à l’aide de votre propre serveur
 
-Plusieurs méthodes peuvent être utilisées pour définir un cookie de manière à empêcher qu’il ne soit limité en raison des stratégies de navigateur :
+Lors de la définition d’un cookie à l’aide d’un serveur que vous détenez, différentes méthodes peuvent être utilisées pour empêcher que le cookie ne soit limité en raison des stratégies de navigateur :
 
 * Génération de cookies à l’aide de langages de script côté serveur
 * Définir des cookies en réponse à une requête d’API envoyée à un sous-domaine ou à un autre point de terminaison du site
 * Génération de cookies à l’aide d’un CMS
 * Génération de cookies à l’aide d’un réseau de diffusion de contenu
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >Cookies définis à l’aide des `document.cookie` ne sera presque jamais protégée des stratégies de navigateur qui limitent les durées des cookies.
 
-## Quand définir le cookie
+### Quand définir le cookie
 
 Dans l’idéal, le cookie FPID doit être défini avant d’adresser toute requête au réseau Edge. Cependant, dans les cas où cela n’est pas possible, un ECID est toujours généré à l’aide de méthodes existantes et agit comme identifiant Principal tant que le cookie existe.
 
 En supposant que l’ECID soit finalement affecté par une stratégie de suppression du navigateur, mais que le FPID ne l’est pas, le FPID deviendra l’identifiant Principal lors de la prochaine visite et sera utilisé pour amorcer l’ECID à chaque visite ultérieure.
 
-## Définition de l’expiration du cookie
+### Définition de l’expiration du cookie
 
 La définition de l’expiration d’un cookie doit être soigneusement étudiée lorsque vous implémentez la fonctionnalité FPID. Lorsque vous prenez cette décision, vous devez prendre en compte les pays ou régions dans lesquels votre organisation opère, ainsi que les lois et politiques de chacune de ces régions.
 
