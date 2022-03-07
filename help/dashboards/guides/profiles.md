@@ -4,9 +4,9 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 8571d86e1ce9dc894e54fe72dea75b9f8fe84f0b
+source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '2324'
 ht-degree: 5%
 
 ---
@@ -43,6 +43,26 @@ Vous pouvez modifier l’aspect de la variable [!UICONTROL Profils] tableau de b
 
 Reportez-vous à la section [modification des tableaux de bord](../customize/modify.md) et [Présentation de la bibliothèque de widgets](../customize/widget-library.md) pour en savoir plus.
 
+## (Version bêta) Informations sur l’efficacité des profils {#profile-efficiency-insights}
+
+>[!IMPORTANT]
+>
+>La fonctionnalité d’aperçu de l’efficacité des profils est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+
+Le [!UICONTROL Efficacité] cet onglet fournit des mesures sur la qualité et l’exhaustivité des données de votre profil. Il détaille l’utilisation des widgets d’efficacité de profil. Ces widgets illustrent en un coup d’oeil la composition de vos profils, les tendances d’exhaustivité au fil du temps et les évaluations de la qualité des données de votre profil.
+
+[Le tableau de bord de l’efficacité des profils.](../images/profiles/attributes-quality-assessment.png)
+
+Voir [section widgets d’efficacité du profil](#profile-efficacy-widgets) pour plus d’informations sur les widgets actuellement disponibles.
+
+La mise en page de ce tableau de bord peut également être personnalisée en sélectionnant [**[!UICONTROL Modifier le tableau de bord]**](../customize/modify.md) de la [!UICONTROL Présentation] .
+
+## Parcourir les profils {#browse-profiles}
+
+Le [!UICONTROL Parcourir] Cet onglet vous permet de rechercher et d’afficher les profils en lecture seule ingérés dans votre organisation IMS. Vous y trouverez des informations importantes appartenant au profil concernant leurs préférences, les événements passés, les interactions et les segments.
+
+Pour en savoir plus sur les fonctionnalités d’affichage des profils fournies dans l’interface utilisateur de Platform, consultez la documentation sur [navigation dans les profils dans Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+
 ## Stratégies de fusion {#merge-policies}
 
 Les mesures affichées dans la [!UICONTROL Profils] Les tableaux de bord sont basés sur les stratégies de fusion appliquées à vos données Real-time Customer Profile. Lorsque les données sont rassemblées à partir de plusieurs sources pour créer le profil client, il est possible que les données contiennent des valeurs en conflit (par exemple, un jeu de données peut répertorier un client comme &quot;unique&quot;, tandis qu’un autre jeu de données peut le répertorier comme &quot;marié&quot;). La tâche de la stratégie de fusion consiste à déterminer les données à prioriser et à afficher dans le cadre du profil.
@@ -56,6 +76,14 @@ Le tableau de bord sélectionne automatiquement une stratégie de fusion à affi
 >Le menu déroulant affiche uniquement les stratégies de fusion liées à la classe XDM Individual Profile. Toutefois, si votre organisation a créé plusieurs stratégies de fusion, vous devrez peut-être faire défiler la liste complète des stratégies de fusion disponibles.
 
 ![](../images/profiles/select-merge-policy.png)
+
+## Schémas d’union
+
+Le [!UICONTROL Schéma d’union] Le tableau de bord affiche le schéma d’union pour une classe XDM spécifique. En sélectionnant la variable [!UICONTROL **Classe**] dans la liste déroulante, vous pouvez afficher les schémas d’union pour différentes classes XDM.
+
+Les schémas d’union sont composés de plusieurs schémas qui partagent la même classe et qui ont été activés pour Profile. Ils vous permettent de voir en une seule vue, une fusion de chaque champ contenu dans chaque schéma qui partage la même classe.
+
+Pour en savoir plus sur l’interface utilisateur du schéma d’union, consultez le guide de l’interface utilisateur du schéma d’union . [affichage des schémas d’union dans l’interface utilisateur de Platform](../../profile/ui/union-schema.md#view-union-schemas).
 
 ## Widgets et mesures
 
@@ -134,6 +162,59 @@ Pour plus d’informations sur les fragments de profil, commencez par lire la se
 Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
 
 ![](../images/profiles/identity-overlap.png)
+
+## (Version bêta) Widgets d’efficacité des profils {#profile-efficacy-widgets}
+
+>[!IMPORTANT]
+>
+>Les widgets d’efficacité du profil sont actuellement en version bêta et ne sont pas disponibles pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+
+Adobe fournit plusieurs widgets pour évaluer l’exhaustivité des profils ingérés disponibles pour votre analyse de données. Chacun des widgets d’efficacité de profil peut être filtré par stratégie de fusion. Pour modifier le filtre de stratégie de fusion, sélectionnez la variable[!UICONTROL Profils utilisant une stratégie de fusion] et sélectionnez la stratégie appropriée dans la liste disponible.
+
+Pour en savoir plus sur chacun des widgets d’efficacité de profil, sélectionnez le nom d’un widget dans la liste suivante :
+
+* [[!UICONTROL Évaluation de la qualité des attributs]](#attribute-quality-assessment)
+* [[!UICONTROL Complétude du profil]](#profile-completeness)
+* [[!UICONTROL Tendance d’achèvement du profil]](#profile-completeness-trend)
+
+### (Version bêta) [!UICONTROL Évaluation de la qualité des attributs] {#attribute-quality-assessment}
+
+Ce widget affiche l’exhaustivité et la cardinalité de chaque attribut de profil depuis la date du dernier traitement. Ces informations sont présentées sous la forme d’un tableau de quatre colonnes où chaque ligne du tableau représente un attribut unique.
+
+| Colonne | Description |
+|---|---|
+| Attribut | Nom de l’attribut. |
+| Profils | Le nombre de profils qui possèdent cet attribut et qui sont remplis par des valeurs non nulles. |
+| Complétude | Ce pourcentage est déterminé par le nombre total de profils qui possèdent cet attribut et qui sont renseignés avec des valeurs non nulles. Le nombre est calculé en divisant le nombre total de profils par le nombre total de valeurs non vides dans les profils pour cet attribut. |
+| Cardinalité | Le nombre total de **unique** valeurs non nulles de cet attribut. Elle est mesurée sur tous les profils. |
+
+![Le widget d’évaluation de la qualité des attributs](../images/profiles/attributes-quality-assessment.png)
+
+### (Version bêta) [!UICONTROL Profils par exhaustivité] {#profile-completeness}
+
+Ce widget crée un graphique circulaire d’exhaustivité du profil depuis la date du dernier traitement. L’exhaustivité d’un profil est mesurée par le pourcentage d’attributs remplis avec des valeurs non nulles parmi tous les attributs observés.
+
+Ce widget affiche la proportion de profils présentant une exhaustivité élevée, moyenne ou faible. Par défaut, trois niveaux d’exhaustivité sont configurés :
+
+* Haute exhaustivité : Les profils comportent plus de 70 % d’attributs renseignés.
+* Paramètre d’exhaustivité moyenne : Les profils comportent moins de 70 % et plus de 30 % d’attributs renseignés.
+* Faible exhaustivité : Les attributs des profils sont remplis à moins de 30 %.
+
+![Les profils par widget d’exhaustivité](../images/profiles/profiles-by-completeness.png)
+
+### (Version bêta) [!UICONTROL Tendance d’achèvement du profil] {#profile-completeness-trend}
+
+Ce widget crée un graphique en colonnes empilé afin de représenter la tendance de l’exhaustivité des profils au fil du temps. La complexité est mesurée par le pourcentage d’attributs qui sont remplis avec des valeurs non nulles parmi tous les attributs observés. Elle classe l’exhaustivité du profil comme une exhaustivité élevée, moyenne ou faible depuis la date du dernier traitement.
+
+L’axe X représente le temps, l’axe Y le nombre de profils et les couleurs les trois niveaux d’exhaustivité du profil.
+
+Les trois niveaux d&#39;exhaustivité sont les suivants :
+
+* Haute exhaustivité : Les profils comportent plus de 70 % d’attributs renseignés.
+* Paramètre d’exhaustivité moyenne : Les profils comportent moins de 70 % et plus de 30 % d’attributs renseignés.
+* Faible exhaustivité : Les attributs des profils sont remplis à moins de 30 %.
+
+![Widget de tendance d’achèvement des profils](../images/profiles/profiles-completeness-trend.png)
 
 ## Étapes suivantes
 
