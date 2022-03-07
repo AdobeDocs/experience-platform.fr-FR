@@ -5,10 +5,10 @@ seo-title: Frequently asked questions
 description: Réponses aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform
 seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 69fc8e8ec3211495056be73c2e49c6aecfc569ea
+source-git-commit: b2636377eda6740dceb9bc07fbcc082b85ff3c94
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 10%
+source-wordcount: '864'
+ht-degree: 9%
 
 ---
 
@@ -40,7 +40,7 @@ Avant d’envoyer vos segments ciblés à [!DNL Facebook], assurez-vous de respe
 * Le **Adobe Experience Cloud** votre compte professionnel doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Voir [Ajout de partenaires à votre compte Business Manager](https://www.facebook.com/business/help/1717412048538897) pour plus d’informations, voir la documentation de Facebook .
    >[!IMPORTANT]
    >
-   > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. Ceci est obligatoire pour l’intégration de la [!DNL Adobe Experience Platform].
+   > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. Ceci est obligatoire pour l’intégration de la [!DNL Adobe Experience Platform].
 * Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, où `accountID` est votre [!DNL Facebook Ad Account ID].
 
 **Dois-je ajouter des applications ou des pixels à mon [!DNL Facebook] compte publicitaire ?**
@@ -78,6 +78,12 @@ Pour obtenir des explications détaillées sur les exigences de correspondance d
 **Puis-je créer plusieurs destinations Facebook dans l’interface utilisateur de Platform pour des comptes Facebook distincts ?**
 
 Oui. Dans Experience Platform, une destination Facebook correspond à 1:1 pour un compte publicitaire dans Facebook. Vous pouvez créer une destination Facebook distincte pour chaque compte publicitaire Facebook de votre société. Suivez la [tutoriel sur la connexion à destination](/help/destinations/ui/connect-destination.md) et connectez-vous à un compte Facebook distinct pour chaque nouvelle destination Facebook dans l’interface utilisateur de Platform. Le nombre de comptes publicitaires Facebook auxquels vous pouvez vous connecter est illimité.
+
+## Correspondance client Google {#google-customer-match}
+
+**Lors de l’exportation de segments vers la correspondance client Google, pourquoi vois-je des nombres supplémentaires annexés à la fin des noms de segment dans l’interface de Google ?**
+
+Google exige que les noms de segment soient uniques. Les chiffres que vous voyez sont [Horodatages UNIX](https://www.unixtimestamp.com/) et ils sont ajoutés afin de conserver les noms de segment uniques, si vous avez mappé le même segment à plusieurs destinations Google.
 
 ## Audiences mappées linkedIn {#linkedin}
 
