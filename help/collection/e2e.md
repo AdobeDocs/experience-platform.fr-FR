@@ -2,7 +2,7 @@
 title: Présentation complète de la collecte de données
 description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide des technologies de collecte de données fournies par Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: d326267cacf8d678937e8c959de8acbfbbb88c93
+source-git-commit: a1369c0d7af5808d7ff830ce017e686f7697181e
 workflow-type: tm+mt
 source-wordcount: '2618'
 ht-degree: 100%
@@ -103,7 +103,7 @@ Dans l’interface utilisateur de la collecte de données, sélectionnez **[!UIC
 
 Les exigences de configuration d’un flux de données dépendent des produits et fonctionnalités auxquels vous envoyez des données. Pour plus d’informations sur les options de configuration de chaque produit, consultez la [présentation des flux de données](../edge/fundamentals/datastreams.md).
 
-## Installation et configuration du SDK Mobile
+## Installation et configuration du SDK Mobile {#install}
 
 Une fois que vous avez créé un schéma et un flux de données, l’étape suivante consiste à installer et à configurer le SDK Web Platform pour commencer à envoyer des données au réseau Edge.
 
