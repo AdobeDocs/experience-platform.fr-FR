@@ -2,16 +2,20 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 534d87aed98359b979fe06d40f9b9a2daee5308c
+source-git-commit: b714a5cf0f4bdf2c0f010664bfef96c5b6641c22
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '732'
 ht-degree: 30%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : 23 février 2022**
+**Date de lancement : 7 mars 2022**
+
+>[!NOTE]
+>
+>Cette version a été déplacée de la date d’origine du 23 février au 7 mars.
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
