@@ -2,21 +2,20 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 3ae4d0f0a92c96b15c605c6654693fd6d7e94ba8
+source-git-commit: d407d6bedbe0eb9b4dde229d990160c114fad472
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '502'
 ht-degree: 41%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de mise à jour : 23 février 2022**
+**Date de publication : 23 février 2022**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [Collecte de données](#data-collection)
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
 - [Sources](#sources)
 
@@ -33,18 +32,6 @@ Platform fournit une suite de technologies qui vous permet de collecter des donn
 | Identifiants d’appareils propriétaires | Vous pouvez désormais envoyer vos propres ID d’appareil au réseau Adobe Experience Platform Edge lors de la collecte de données client à l’aide du SDK Web Platform, ce qui vous permet de contourner les restrictions récentes du navigateur sur la durée de vie des cookies tiers. Consultez le guide sur la [identifiants d’appareils propriétaires](../../edge/identity/first-party-device-ids.md) pour plus d’informations. |
 
 Pour plus d’informations sur la collecte de données dans Platform, voir [présentation de la collecte de données](../../collection/home.md).
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM). 
-
-**Nouvelle fonctionnalité**
-
-| Fonctionnalité | Description |
-| --- | --- |
-| [!DNL Data Prep] Prise en charge du connecteur source Adobe Analytics | Le connecteur source Adobe Analytics prend désormais en charge les fonctionnalités de préparation de données, ce qui vous permet de mapper vos données de suite de rapports Analytics à un schéma XDM cible lors de la création d’un flux de données. Voir le tutoriel sur [création d’un connecteur source Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) pour plus d’informations. |
-
-Pour plus d’informations sur [!DNL Data Prep], consultez la [[!DNL Data Prep] présentation](../../data-prep/home.md).
 
 ## [!DNL Identity Service] {#identity}
 
