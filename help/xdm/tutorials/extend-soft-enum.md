@@ -1,9 +1,10 @@
 ---
 title: Étendre un champ d’énumération souple
 description: Découvrez comment étendre un champ d’énumération souple dans l’API Schema Registry.
-source-git-commit: 2d85db789e6e6a28402bb68122a3b5cfe9d0c5dc
+exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
+source-git-commit: a26c8d43ff7874bcedd2adb3d6da995986198c96
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '531'
 ht-degree: 1%
 
 ---
@@ -197,4 +198,4 @@ Après avoir appliqué la modification, le registre des schémas répond avec ce
 
 ## Étapes suivantes
 
-Ce guide explique comment étendre les énumérations dans l’API Schema Registry. Pour plus d’informations sur la définition de différents types de champ dans l’API, consultez le guide sur [Contraintes de type de champ XDM](../schema/field-constraints.md#define-fields).
+Ce guide explique comment étendre les énumérations dans l’API Schema Registry. Consultez le guide sur la [définition de champs personnalisés dans l’API](./custom-fields-api.md) pour plus d’informations sur la création de différents types de champ.

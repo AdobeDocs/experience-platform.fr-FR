@@ -5,16 +5,16 @@ title: Prise en main de l’API Schema Registry
 description: Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels vers l’API Schema Registry.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: a26c8d43ff7874bcedd2adb3d6da995986198c96
 workflow-type: tm+mt
-source-wordcount: '1370'
-ht-degree: 45%
+source-wordcount: '1342'
+ht-degree: 46%
 
 ---
 
 # Prise en main de l’API [!DNL Schema Registry]
 
-L’API [!DNL Schema Registry] vous permet de créer et de gérer diverses ressources du modèle de données d’expérience (XDM). Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels à l’API [!DNL Schema Registry].
+Le [!DNL Schema Registry] L’API vous permet de créer et de gérer diverses ressources du modèle de données d’expérience (XDM). Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels à l’API [!DNL Schema Registry].
 
 ## Conditions préalables
 
@@ -22,32 +22,32 @@ L’utilisation du guide de développement nécessite une compréhension pratiqu
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Notions de base de la composition du schéma](../schema/composition.md) : en savoir plus sur les blocs de création de base des schémas XDM.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une  [!DNL Platform] instance unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une seule [!DNL Platform] dans des environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-XDM utilise le formatage du schéma JSON pour décrire et valider la structure des données d’expérience client ingérées. Il est donc vivement recommandé de consulter la [documentation officielle du schéma JSON](https://json-schema.org/) pour mieux comprendre cette technologie sous-jacente.
+XDM utilise le formatage du schéma JSON pour décrire et valider la structure des données d’expérience client ingérées. Il est donc vivement recommandé de consulter la section [documentation officielle du schéma JSON](https://json-schema.org/) pour une meilleure compréhension de cette technologie sous-jacente.
 
 ## Lecture d’exemples d’appels API
 
-La documentation de l’API [!DNL Schema Registry] inclut des exemples d’appels d’API expliquant comment formater vos requêtes. Il s&#39;agit notamment de chemins d&#39;accès, d&#39;en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
+La documentation de l’API [!DNL Schema Registry] inclut des exemples d’appels d’API expliquant comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
 
 ## Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Schema Registry], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la variable [!DNL Schema Registry], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les environnements de test dans [!DNL Platform], consultez la [documentation sur les environnements de test](../../sandboxes/home.md).
+>Pour plus d’informations sur les environnements de test dans [!DNL Platform], reportez-vous à la section [documentation sandbox](../../sandboxes/home.md).
 
-Toutes les requêtes de recherche (GET) envoyées à [!DNL Schema Registry] nécessitent un en-tête `Accept` supplémentaire, dont la valeur détermine le format des informations renvoyées par l’API. Voir la section [En-tête Accept](#accept) ci-dessous pour plus d’informations.
+Toutes les requêtes de recherche (GET) envoyées à la variable [!DNL Schema Registry] nécessitent un `Accept` dont la valeur détermine le format des informations renvoyées par l’API. Voir la section [En-tête Accept](#accept) ci-dessous pour plus d’informations.
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
@@ -76,7 +76,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie des informations concernant l’utilisation de [!DNL Schema Registry] par votre organisation. Cela inclut un attribut `tenantId`, dont la valeur est votre `TENANT_ID`.
+Une réponse réussie renvoie des informations concernant l’utilisation de la variable [!DNL Schema Registry]. Cela inclut un attribut `tenantId`, dont la valeur est votre `TENANT_ID`.
 
 ```JSON
 {
@@ -155,13 +155,13 @@ Une réponse réussie renvoie des informations concernant l’utilisation de [!D
 
 ## Comprendre le `CONTAINER_ID` {#container}
 
-Les appels à l’API [!DNL Schema Registry] nécessitent l’utilisation d’une balise `CONTAINER_ID`. Il existe deux conteneurs sur lesquels les appels API peuvent être effectués : le conteneur `global` et le conteneur `tenant`.
+Appels à la fonction [!DNL Schema Registry] L’API requiert l’utilisation d’un `CONTAINER_ID`. Il existe deux conteneurs sur lesquels les appels API peuvent être effectués : la valeur `global` et le conteneur `tenant` conteneur.
 
 ### Conteneur mondial
 
-Le conteneur `global` contient tous les Adobes standard et les classes fournies par les partenaires [!DNL Experience Platform], les groupes de champs de schéma, les types de données et les schémas. Vous pouvez uniquement effectuer des requêtes de liste et de recherche (GET) sur le conteneur `global`.
+Le `global` Le conteneur contient tous les Adobes standard et [!DNL Experience Platform] classes fournies par les partenaires, groupes de champs de schéma, types de données et schémas. Vous ne pouvez exécuter que des requêtes de liste et de recherche (GET) sur la variable `global` conteneur.
 
-Voici un exemple d’appel qui utilise le conteneur `global` :
+Exemple d’appel qui utilise la variable `global` se présente comme suit :
 
 ```http
 GET /global/classes
@@ -169,19 +169,19 @@ GET /global/classes
 
 ### Conteneur client
 
-À ne pas confondre avec votre `TENANT_ID` unique, le conteneur `tenant` contient toutes les classes, tous les groupes de champs, tous les types de données, tous les schémas et tous les descripteurs définis par une organisation IMS. Ils sont spécifiques à chaque organisation, ce qui signifie qu’ils ne sont pas visibles ou gérables par d’autres organisations IMS. Vous pouvez effectuer toutes les opérations CRUD (GET, POST, PUT, PATCH, DELETE) sur les ressources que vous créez dans le conteneur `tenant`.
+À ne pas confondre avec votre `TENANT_ID`, la variable `tenant` conteneur contient toutes les classes, groupes de champs, types de données, schémas et descripteurs définis par une organisation IMS. Ils sont spécifiques à chaque organisation, ce qui signifie qu’ils ne sont pas visibles ou gérables par d’autres organisations IMS. Vous pouvez effectuer toutes les opérations CRUD (GET, POST, PUT, PATCH, DELETE) par rapport aux ressources que vous créez dans la variable `tenant` conteneur.
 
-Voici un exemple d’appel qui utilise le conteneur `tenant` :
+Exemple d’appel qui utilise la variable `tenant` se présente comme suit :
 
 ```http
 POST /tenant/fieldgroups
 ```
 
-Lorsque vous créez une classe, un groupe de champs, un schéma ou un type de données dans le conteneur `tenant`, celui-ci est enregistré dans le conteneur [!DNL Schema Registry] et se voit attribuer un URI `$id` qui inclut votre `TENANT_ID`. Cet `$id` est utilisé sur l’ensemble de l’API pour faire référence à des ressources spécifiques. Des exemples de valeurs `$id` sont fournis à la section suivante.
+Lorsque vous créez une classe, un groupe de champs, un schéma ou un type de données dans la variable `tenant` , il est enregistré dans le conteneur [!DNL Schema Registry] et affecté une `$id` URI qui inclut votre `TENANT_ID`. Cet `$id` est utilisé sur l’ensemble de l’API pour faire référence à des ressources spécifiques. Des exemples de valeurs `$id` sont fournis à la section suivante.
 
 ## Identification des ressources {#resource-identification}
 
-Les ressources XDM sont identifiées par un attribut `$id` sous la forme d’un URI, comme dans les exemples suivants :
+Les ressources XDM sont identifiées par un `$id` sous la forme d’un URI, comme dans les exemples suivants :
 
 * `https://ns.adobe.com/xdm/context/profile`
 * `https://ns.adobe.com/{TENANT_ID}/schemas/7442343-abs2343-21232421`
@@ -191,16 +191,16 @@ Pour rendre l’URI plus REST-friendly, les schémas possèdent également un en
 * `_xdm.context.profile`
 * `_{TENANT_ID}.schemas.7442343-abs2343-21232421`
 
-Les appels à l’API [!DNL Schema Registry] prennent en charge soit l’URI `$id` encodé par l’URL, soit le `meta:altId` (format de notation par points). La bonne pratique est d’utiliser l’URI `$id` encodé par l’URL lorsque vous passez un appel REST à l’API, comme :
+Appels à la fonction [!DNL Schema Registry] L’API prend en charge l’un des `$id` URI ou `meta:altId` (format de notation par points). La bonne pratique est d’utiliser l’URI `$id` encodé par l’URL lorsque vous passez un appel REST à l’API, comme :
 
 * `https%3A%2F%2Fns.adobe.com%2Fxdm%2Fcontext%2Fprofile`
 * `https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F7442343-abs2343-21232421`
 
 ## En-tête Accept {#accept}
 
-Lors des opérations de liste et de recherche (GET) dans l’API [!DNL Schema Registry], un en-tête `Accept` est nécessaire pour déterminer le format des données renvoyées par l’API. Lors de la recherche de ressources spécifiques, un numéro de version doit également être inclus dans l’en-tête `Accept`.
+Lors de l’exécution d’opérations de liste et de recherche (GET) dans la variable [!DNL Schema Registry] API, une `Accept` Un en-tête est requis pour déterminer le format des données renvoyées par l’API. Lors de la recherche de ressources spécifiques, un numéro de version doit également être inclus dans la variable `Accept` en-tête .
 
-Le tableau suivant répertorie les valeurs d’en-tête `Accept` compatibles, y compris celles qui comportent des numéros de version, ainsi que les descriptions de ce que l’API renverra lorsqu’elles sont utilisées.
+Le tableau suivant répertorie les `Accept` valeurs d’en-tête, y compris celles avec des numéros de version, ainsi que des descriptions de ce que l’API renverra lorsqu’elles sont utilisées.
 
 | Accept | Description |
 | ------- | ------------ |
@@ -216,13 +216,13 @@ Le tableau suivant répertorie les valeurs d’en-tête `Accept` compatibles, y 
 
 >[!NOTE]
 >
->Platform ne prend actuellement en charge qu’une seule version majeure pour chaque schéma (`1`). Par conséquent, la valeur de `version` doit toujours être `1` lors de l’exécution de requêtes de recherche afin de renvoyer la dernière version mineure du schéma. Pour plus d’informations sur le contrôle de version des schémas, reportez-vous à la sous-section ci-dessous.
+>Platform ne prend actuellement en charge qu’une seule version majeure pour chaque schéma (`1`). Par conséquent, la valeur de `version` must always `1` lors de l’exécution de requêtes de recherche afin de renvoyer la dernière version mineure du schéma. Pour plus d’informations sur le contrôle de version des schémas, reportez-vous à la sous-section ci-dessous.
 
 ### Contrôle de version des schémas {#versioning}
 
-Les versions de schéma sont référencées par des en-têtes `Accept` dans l’API Schema Registry et dans les propriétés `schemaRef.contentType` dans les payloads de l’API du service Platform en aval.
+Les versions des schémas sont référencées par `Accept` en-têtes dans l’API Schema Registry et dans `schemaRef.contentType` propriétés dans les payloads de l’API du service Platform en aval.
 
-Actuellement, Platform ne prend en charge qu’une seule version majeure (`1`) pour chaque schéma. Selon les [règles d’évolution du schéma](../schema/composition.md#evolution), chaque mise à jour d’un schéma doit être non destructive, ce qui signifie que de nouvelles versions mineures d’un schéma (`1.2`, `1.3`, etc.) sont toujours rétrocompatibles avec les versions mineures précédentes. Par conséquent, lors de la spécification de `version=1`, le registre des schémas renvoie toujours la **dernière** version majeure `1` d’un schéma , ce qui signifie que les versions mineures précédentes ne sont pas renvoyées.
+Actuellement, Platform ne prend en charge qu’une seule version majeure (`1`) pour chaque schéma. Selon les [règles d’évolution des schémas](../schema/composition.md#evolution), chaque mise à jour d’un schéma doit être non destructive, ce qui signifie que de nouvelles versions mineures d’un schéma (`1.2`, `1.3`, etc.) sont toujours rétrocompatibles avec les versions mineures précédentes. Par conséquent, lors de la spécification de `version=1`, le registre des schémas renvoie toujours la variable **dernier** version majeure `1` d’un schéma , ce qui signifie que les versions mineures précédentes ne sont pas renvoyées.
 
 >[!NOTE]
 >
@@ -230,15 +230,12 @@ Actuellement, Platform ne prend en charge qu’une seule version majeure (`1`) p
 >
 >* Les données ont été ingérées dans le jeu de données.
 >* Le jeu de données a été activé pour une utilisation dans Real-time Customer Profile (même si aucune donnée n’a été ingérée).
-
 >
->Si le schéma n’a pas été associé à un jeu de données qui répond à l’un des critères ci-dessus, toute modification peut lui être apportée. Cependant, dans tous les cas, le composant `version` reste à `1`.
+>Si le schéma n’a pas été associé à un jeu de données qui répond à l’un des critères ci-dessus, toute modification peut lui être apportée. Cependant, dans tous les cas, la variable `version` Le composant reste à l’emplacement `1`.
 
 ## Contraintes de champ XDM et bonnes pratiques
 
-Les champs d’un schéma sont répertoriés dans son objet `properties`. Chaque champ est lui-même un objet et contient des attributs pour décrire et contraindre les données que le champ peut contenir.
-
-Vous trouverez plus d’informations sur la définition des types de champ dans l’API dans le [guide des contraintes de champ](../schema/field-constraints.md) de ce guide, y compris des exemples de code et des contraintes facultatives pour les types de données les plus couramment utilisés.
+Les champs d’un schéma sont répertoriés dans son objet `properties`. Chaque champ est lui-même un objet et contient des attributs pour décrire et contraindre les données que le champ peut contenir. Reportez-vous au guide sur la [définition de champs personnalisés dans l’API](../tutorials/custom-fields-api.md) pour les exemples de code et les contraintes facultatives pour les types de données les plus couramment utilisés.
 
 Le champ d’exemple suivant illustre un champ XDM formaté correctement avec de plus amples détails sur les contraintes de dénomination et les bonnes pratiques fournies ci-dessous. Ces pratiques peuvent également s’appliquer lorsque vous définissez les autres ressources pouvant contenir des attributs similaires.
 
@@ -262,10 +259,8 @@ Le champ d’exemple suivant illustre un champ XDM formaté correctement avec de
 * Le champ nécessite un `type`.
    * La définition de certains types peut nécessiter un `format` facultatif.
    * Lorsqu’une mise en forme spécifique des données est requise, vous pouvez ajouter des `examples` sous la forme d’un tableau.
-   * Il est également possible de définir le type de champ à l’aide d’un type de données dans le registre. Pour plus d’informations, reportez-vous à la section [Création d’un type de données](./data-types.md#create) du guide de point de terminaison des types de données .
+   * Il est également possible de définir le type de champ à l’aide d’un type de données dans le registre. Voir la section sur [création d’un type de données](./data-types.md#create) pour plus d’informations, reportez-vous au guide de point de terminaison des types de données .
 * Le `description` explique le champ et des informations pertinentes concernant les données du champ. Il doit être écrit en phrases complètes dans une langue claire afin que toute personne accédant au schéma puisse comprendre l’intention du champ.
-
-Consultez le document sur les [contraintes de champ](../schema/field-constraints.md) pour plus d’informations sur la manière de définir différents types de champ dans l’API.
 
 ## Étapes suivantes
 
