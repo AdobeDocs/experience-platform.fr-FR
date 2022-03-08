@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: b714a5cf0f4bdf2c0f010664bfef96c5b6641c22
+source-git-commit: 366656346c25cd5206b36c7ff2b9942c5027de17
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 30%
+source-wordcount: '1018'
+ht-degree: 26%
 
 ---
 
@@ -20,9 +20,10 @@ ht-degree: 30%
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [[!DNL Dashboards]](#dashboards)
-- [Collecte de données](#data-collection)
+- [[!DNL Data collection]](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Identity Service]](#identity)
-- [Sources](#sources)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -49,6 +50,16 @@ Platform fournit une suite de technologies qui vous permet de collecter des donn
 | Identifiants d’appareils propriétaires | Vous pouvez désormais envoyer vos propres ID d’appareil au réseau Adobe Experience Platform Edge lors de la collecte de données client à l’aide du SDK Web Platform, ce qui vous permet de contourner les restrictions récentes du navigateur sur la durée de vie des cookies tiers. Consultez le guide sur la [identifiants d’appareils propriétaires](../../edge/identity/first-party-device-ids.md) pour plus d’informations. |
 
 Pour plus d’informations sur la collecte de données dans Platform, voir [présentation de la collecte de données](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ----------- | ----------- |
+| (Version bêta) Prise en charge des Destinations SDK pour les destinations basées sur des fichiers | [Prise en charge des Destinations SDK pour les destinations basées sur des fichiers](../../destinations/destination-sdk/file-based-destination-configuration.md) est actuellement en version bêta privée et n’est disponible que pour un certain nombre de partenaires et de clients. Les fonctionnalités et la documentation associée peuvent faire l’objet de modifications avant la mise à disposition d’une version générale.<br><br>Contactez votre représentant de compte d’Adobe pour savoir comment accéder à la fonctionnalité. Les représentants du compte interne de l’Adobe doivent contacter les équipes produit et ingénieur des destinations Experience Platform pour discuter des cas d’utilisation pris en charge. <br><br> Lors de la phase bêta de la prise en charge des Destinations SDK pour les destinations basées sur des fichiers, les partenaires bêta et les clients peuvent utiliser le [Destination SDK Experience Platform](/help/destinations/destination-sdk/overview.md) pour créer des destinations privées afin de bénéficier des fonctionnalités suivantes : <ul><li>Créez une destination basée sur des fichiers (par lots) via Amazon S3, les serveurs SFTP, Azure Blob, Azure Data Lake Storage, Data Landing Zone de stockage.</li><li>Configurez et définissez les options de planification et de fréquence d’exportation des fichiers par défaut.</li><li>Configurez et définissez des options pour formater vos fichiers CSV exportés (délimiteurs, caractères d’échappement et autres options).</li><li>Possibilité de définir et de modifier des en-têtes de fichier personnalisés.</li><li>Capacité à recevoir des notifications d’événement sur l’exportation de fichiers et de segments.</li><li>Possibilité d’exporter des types de fichiers supplémentaires tels que CSV, TSV, JSON, Parquet.</li></ul>  <br>Pour commencer à utiliser la nouvelle fonctionnalité, lisez [(Version bêta) Utilisez la Destination SDK pour configurer une destination basée sur des fichiers](../../destinations/destination-sdk/file-based-destination-configuration.md). <br><br> La fonctionnalité de création privée ou de production *diffusion en continu* les destinations à l’aide de Destination SDK sont déjà disponibles pour tous les clients et partenaires Experience Platform. Lisez le guide sur la façon de [utiliser la Destination SDK pour configurer une destination de diffusion en continu ;](/help/destinations/destination-sdk/configure-destination-instructions.md) pour plus d’informations. |
 
 ## [!DNL Identity Service] {#identity}
 
