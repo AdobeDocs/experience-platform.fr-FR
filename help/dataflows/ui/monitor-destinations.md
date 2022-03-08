@@ -6,9 +6,9 @@ title: Surveillance des flux de données pour les destinations dans l’interfac
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 387e10038f61a7444a16f4e6270a62082446c09d
+source-git-commit: 042a739593b291cdd7193437906a16dc889a3b4b
 workflow-type: tm+mt
-source-wordcount: '3269'
+source-wordcount: '3358'
 ht-degree: 2%
 
 ---
@@ -61,7 +61,7 @@ Pour plus d’informations sur les statuts, voir le tableau suivant :
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="Identités activées"
->abstract="Nombre d’identités de profil individuelles activées avec succès vers la destination sélectionnée."
+>abstract="Nombre d’identités de profil individuelles activées avec succès vers la destination sélectionnée. Cette mesure inclut les identités qui sont créées, mises à jour et supprimées des segments exportés."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -82,7 +82,7 @@ Les identités représentent les différentes facettes d’un profil. Par exempl
 
 Une liste des exécutions individuelles et de leurs mesures spécifiques s’affiche, ainsi que les totaux suivants pour les identités :
 
-- **[!UICONTROL Identités activées]**: Nombre total d’identités de profil qui ont été créées ou mises à jour pour l’activation.
+- **[!UICONTROL Identités activées]**: Nombre total d’identités de profil activées vers la destination sélectionnée. Cette mesure inclut les identités qui sont créées, mises à jour et supprimées des segments exportés.
 - **[!UICONTROL Identités exclues]**: Nombre total d’identités de profil qui sont ignorées pour activation en fonction des attributs manquants et de la violation du consentement.
 - **[!UICONTROL Identités en échec]**: Nombre total d’identités de profil qui ne sont pas activées vers la destination en raison d’erreurs.
 
@@ -95,7 +95,7 @@ Chaque exécution de flux de données individuelle affiche les détails suivants
    - Pour **[!UICONTROL terminé]** s’exécute, la mesure de temps de traitement affiche toujours une heure.
    - Pour les exécutions de flux de données qui se trouvent toujours dans une **[!UICONTROL traitement]** , la fenêtre permettant de capturer toutes les mesures reste ouverte pendant plus d’une heure, afin de traiter toutes les mesures qui correspondent à l’exécution du flux de données. Par exemple, une exécution de flux de données démarrée à 9h30 peut rester en état de traitement pendant une heure et demie pour capturer et traiter toutes les mesures. Ensuite, lorsque la fenêtre de traitement se ferme et que l’état du flux de données s’exécute, la fonction **terminé**, le temps de traitement affiché est remplacé par une heure.
 - **[!UICONTROL Profils reçus]**: Nombre total de profils reçus dans le flux de données.
-- **[!UICONTROL Identités activées]**: Nombre total d’identités de profil qui ont été activées avec succès vers la destination sélectionnée.
+- **[!UICONTROL Identités activées]**: Nombre total d’identités de profil qui ont été activées avec succès vers la destination sélectionnée dans le cadre de l’exécution du flux de données. Cette mesure inclut les identités qui sont créées, mises à jour et supprimées des segments exportés.
 - **[!UICONTROL Identités exclues]**: Nombre total d’identités de profil qui sont exclues de l’activation en fonction d’attributs manquants et de la violation du consentement.
 - **[!UICONTROL Identités en échec]** Nombre total d’identités de profil qui ne sont pas activées vers la destination en raison d’erreurs.
 - **[!UICONTROL Taux d&#39;activation]**: Pourcentage d’identités reçues qui ont été activées ou ignorées avec succès. La formule suivante illustre le mode de calcul de cette valeur :
@@ -133,7 +133,7 @@ La page Détails affiche également une liste des identités qui ont échoué et
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="Identités activées"
->abstract="Nombre d’identités de profil individuelles activées avec succès vers la destination sélectionnée."
+>abstract="Nombre d’identités de profil individuelles activées avec succès vers la destination sélectionnée. Cette mesure inclut les identités qui sont créées, mises à jour et supprimées des segments exportés."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -144,7 +144,7 @@ La page Détails affiche également une liste des identités qui ont échoué et
 
 Pour les destinations par lot, la variable [!UICONTROL Exécutions de flux de données] fournit des données de mesure sur vos exécutions de flux de données. Une liste des exécutions individuelles et de leurs mesures spécifiques s’affiche, ainsi que les totaux suivants pour les identités :
 
-- **[!UICONTROL Identités activées]**: Nombre d’identités de profil individuelles activées avec succès vers la destination sélectionnée.
+- **[!UICONTROL Identités activées]**: Nombre total d’identités de profil activées vers la destination sélectionnée. Cette mesure inclut les identités qui sont créées, mises à jour et supprimées des segments exportés.
 - **[!UICONTROL Identités exclues]**: Le nombre d’identités de profil individuelles exclues de l’activation pour la destination sélectionnée, en fonction des attributs manquants et de la violation du consentement.
 
 ![Le flux de données s’exécute en vue des destinations par lots](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
@@ -154,7 +154,7 @@ Chaque exécution de flux de données individuelle affiche les détails suivants
 - **[!UICONTROL Démarrage de l’exécution du flux de données]**: Heure à laquelle le flux de données a commencé.
 - **[!UICONTROL Temps de traitement]**: Le temps nécessaire au traitement du flux de données.
 - **[!UICONTROL Profils reçus]**: Nombre total de profils reçus dans le flux de données. Cette valeur est mise à jour toutes les 60 minutes.
-- **[!UICONTROL Identités activées]**: Nombre total d’identités de profil qui ont été activées avec succès vers la destination sélectionnée.
+- **[!UICONTROL Identités activées]**: Nombre total d’identités de profil qui ont été activées avec succès vers la destination sélectionnée dans le cadre de l’exécution du flux de données. Cette mesure inclut les identités qui sont créées, mises à jour et supprimées des segments exportés.
 - **[!UICONTROL Identités exclues]**: Nombre total d’identités de profil qui sont exclues de l’activation en fonction d’attributs manquants et de la violation du consentement.
 - **[!UICONTROL État]**: Représente l’état dans lequel se trouve le flux de données. Il peut s’agir de l’un des trois états suivants : [!UICONTROL Succès], [!UICONTROL En échec], et [!UICONTROL Traitement]. [!UICONTROL Succès] signifie que le flux de données est principal et qu’il exporte des données selon le planning indiqué. [!UICONTROL En échec] signifie que l’activation des données a été suspendue en raison d’erreurs. [!UICONTROL Traitement] signifie que le flux de données n’est pas encore principal et qu’il est généralement rencontré lors de la création d’un nouveau flux de données.
 
