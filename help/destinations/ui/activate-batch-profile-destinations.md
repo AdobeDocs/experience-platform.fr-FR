@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil de lot.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: 6c64e8400c85865aab4e8cfb9e86850562ba97aa
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2178'
 ht-degree: 7%
 
 ---
@@ -51,7 +51,7 @@ Utilisez les cases à cocher situées à gauche des noms de segment pour sélect
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="Planning"
->abstract="Définissez le type d&#39;export de fichier (fichiers complets ou incrémentiels) et la fréquence d&#39;export."
+>abstract="Utilisez l’icône en forme de crayon pour définir le type d’export de fichier (fichiers complets ou incrémentiels) et la fréquence d’export."
 >additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="En savoir plus dans la documentation"
 
 [!DNL Adobe Experience Platform] exporte des données pour les destinations de marketing par e-mail et de stockage dans le cloud sous la forme de [!DNL CSV] fichiers . Dans le **[!UICONTROL Planification]** , vous pouvez configurer le planning et les noms des fichiers pour chaque segment que vous exportez. La configuration du planning est obligatoire, mais la configuration du nom de fichier est facultative.
@@ -133,7 +133,6 @@ Sélectionner **[!UICONTROL Exportation de fichiers incrémentiels]** pour décl
 >id="platform_destinations_activate_filename"
 >title="Configuration du nom de fichier"
 >abstract="Pour les destinations basées sur des fichiers, un nom de fichier unique est généré par segment. Utilisez l’éditeur de nom de fichier pour créer et modifier un nom de fichier unique ou conserver le nom par défaut."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#file-names" text="En savoir plus dans la documentation"
 
 Les noms de fichier par défaut sont composés du nom de destination, de l’identifiant de segment et d’un indicateur de date et d’heure. Vous pouvez, par exemple, modifier les noms des fichiers exportés afin de faire la distinction entre les différentes campagnes ou d’ajouter le temps d’exportation des données aux fichiers.
 
