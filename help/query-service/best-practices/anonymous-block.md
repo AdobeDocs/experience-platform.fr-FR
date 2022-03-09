@@ -1,15 +1,15 @@
 ---
-title: Exemples de requêtes de bloc anonymes
+title: Bloc anonyme dans Query Service
 description: Le bloc anonyme est une syntaxe SQL supportée par Adobe Experience Platform Query Service, qui permet d'exécuter efficacement une séquence de requêtes.
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 83b9aad78bcbf6e40d3059607a3779b6f1a2083f
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '491'
 ht-degree: 1%
 
 ---
 
-# Exemples de requêtes pour bloc anonyme
+# Bloc anonyme dans Query Service
 
 Adobe Experience Platform Query Service prend en charge les blocs anonymes. La fonction de bloc anonyme vous permet d’enchaîner une ou plusieurs instructions SQL exécutées en séquence. Ils permettent également de gérer les exceptions.
 
@@ -60,4 +60,4 @@ $$;
 
 En lisant ce document, vous avez maintenant une compréhension claire des blocs anonymes et de leur structure. [Pour plus d’informations sur l’exécution des requêtes](./writing-queries.md), veuillez lire le guide sur l’exécution de requêtes dans Query Service.
 
-Pour plus d’exemples de requêtes pouvant être utilisées dans Query Service, veuillez lire les guides sur [Exemples de requêtes Adobe Analytics](./adobe-analytics.md), [Exemples de requêtes Adobe Target](./adobe-target.md)ou [Exemples de requêtes ExperienceEvent](./experience-event-queries.md).
+Vous devez également en savoir plus sur [la manière dont le bloc anonyme est utilisé avec le modèle de conception de charge incrémentielle ;](./incremental-load.md) pour augmenter l’efficacité des requêtes.

@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez SQL standard pour créer des requêtes de données dans le lac de données de Platform.
 feature: Queries
-source-git-commit: 7dd0f69b51ebda5e43fc0e832be249ed2a0eebe1
+source-git-commit: c3baf586f5e11e085114b1f26422d191b1067281
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 95%
+source-wordcount: '151'
+ht-degree: 96%
 
 ---
 
@@ -32,12 +32,13 @@ ht-degree: 95%
    - [Directives générales pour l’exécution des requêtes](best-practices/writing-queries.md)
    - [Conseils pour l’organisation des ressources de données](./best-practices/organize-data-assets.md)
    - [Utilisation de structures de données imbriquées](best-practices/nested-data-structures.md)
-   - [Dédoublonnage des données](best-practices/deduplication.md)
-   - [Exemples de requêtes dʼévénements dʼexpérience](best-practices/experience-event-queries.md)
-   - [Exemples de requêtes Adobe Analytics](best-practices/adobe-analytics.md)
-   - [Exemples de requêtes Adobe Target](best-practices/adobe-target.md)
    - [Exemples de requêtes en blocs anonymes](best-practices/anonymous-block.md)
    - [Chargement incrémentiel](best-practices/incremental-load.md)
+   - [Dédoublonnage des données](best-practices/deduplication.md)
+- Exemples de requêtes {#sample-queries}
+   - [Exemples de requêtes dʼévénements dʼexpérience](sample-queries/experience-event.md)
+   - [Exemples de requêtes Adobe Analytics](sample-queries/adobe-analytics.md)
+   - [Exemples de requêtes Adobe Target](sample-queries/adobe-target.md)
 - Référence SQL {#sql}
    - [Présentation de SQL](sql/overview.md)
    - [Syntaxe SQL](sql/syntax.md)

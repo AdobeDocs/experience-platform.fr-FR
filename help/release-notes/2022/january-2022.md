@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 6d360721a598ff3fa82169aea608263a09c1f05f
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
 source-wordcount: '1341'
 ht-degree: 100%
@@ -16,8 +16,8 @@ ht-degree: 100%
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [Alertes](#alerts)
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Dashboards]](#dashboards)
+- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
 - [Query Service](#query-service)
 - [Sandbox](#sandboxes)

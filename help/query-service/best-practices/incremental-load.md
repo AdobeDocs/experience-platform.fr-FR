@@ -1,15 +1,15 @@
 ---
-title: Exemples de requêtes de chargement incrémentiel
+title: Chargement incrémentiel dans Query Service
 description: La fonction de chargement incrémentiel utilise des fonctions de blocage et d’instantané anonymes afin de fournir une solution en temps quasi réel pour déplacer les données du lac de données vers votre entrepôt de données, tout en ignorant les données correspondantes.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: e5a79db157524d014c9a07d2bf5907a5544e7b77
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '688'
 ht-degree: 2%
 
 ---
 
-# Exemples de requêtes de chargement de données incrémentielles
+# Chargement incrémentiel dans Query Service
 
 Le modèle de conception de charge incrémentale est une solution de gestion des données. Le modèle ne traite que les informations du jeu de données qui ont été créées ou modifiées depuis la dernière exécution du chargement.
 
