@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez SQL standard pour créer des requêtes de données dans le lac de données de Platform.
 feature: Queries
-source-git-commit: c3baf586f5e11e085114b1f26422d191b1067281
+source-git-commit: 341b34c9acd7b3e19369ec30c4ba643c0cf1b829
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 96%
+source-wordcount: '149'
+ht-degree: 94%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 96%
    - [Directives générales pour l’exécution des requêtes](best-practices/writing-queries.md)
    - [Conseils pour l’organisation des ressources de données](./best-practices/organize-data-assets.md)
    - [Utilisation de structures de données imbriquées](best-practices/nested-data-structures.md)
-   - [Exemples de requêtes en blocs anonymes](best-practices/anonymous-block.md)
+   - [Bloc anonyme](best-practices/anonymous-block.md)
    - [Chargement incrémentiel](best-practices/incremental-load.md)
    - [Dédoublonnage des données](best-practices/deduplication.md)
 - Exemples de requêtes {#sample-queries}

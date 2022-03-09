@@ -4,7 +4,7 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
+source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 5%
@@ -43,11 +43,11 @@ Vous pouvez modifier l’aspect de la variable [!UICONTROL Profils] tableau de b
 
 Reportez-vous à la section [modification des tableaux de bord](../customize/modify.md) et [Présentation de la bibliothèque de widgets](../customize/widget-library.md) pour en savoir plus.
 
-## (Version bêta) Informations sur l’efficacité des profils {#profile-efficiency-insights}
+## (Version bêta) Informations sur l’efficacité des profils {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
->La fonctionnalité d’aperçu de l’efficacité des profils est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+>La fonctionnalité d’informations sur l’efficacité des profils est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
 
 Le [!UICONTROL Efficacité] cet onglet fournit des mesures sur la qualité et l’exhaustivité des données de votre profil. Il détaille l’utilisation des widgets d’efficacité de profil. Ces widgets illustrent en un coup d’oeil la composition de vos profils, les tendances d’exhaustivité au fil du temps et les évaluations de la qualité des données de votre profil.
 
