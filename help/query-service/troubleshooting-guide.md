@@ -5,9 +5,9 @@ title: Guide de dépannage de Query Service
 topic-legacy: troubleshooting
 description: Ce document contient des informations sur les codes d’erreur courants que vous rencontrez et les causes possibles.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: 38d0c34e7af2466fa005c8adaf3bd9e1d9fd78e1
 workflow-type: tm+mt
-source-wordcount: '3293'
+source-wordcount: '3292'
 ht-degree: 5%
 
 ---
@@ -489,8 +489,7 @@ FROM <table_name>
 
 ## Outils tiers {#third-party-tools}
 
-+++Réponse Cette section comprend des informations sur l’utilisation d’outils tiers tels que PSQL et Power BI.
-+++
+Cette section contient des informations sur l’utilisation d’outils tiers tels que PSQL et Power BI.
 
 ### Puis-je connecter Query Service à un outil tiers ?
 
