@@ -3,10 +3,10 @@ title: Configuration du flux de données pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer les flux de données. '
 keywords: configuration;datastreams;datastreamId;edge;datastream id;paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;ID de conteneur de synchronisation;sandbox;flux de données;jeu de données d’événement;cible;code client;jeton de propriété;ID d’environnement cible;destinations de cookie;destinations d’URL;ID de suite de rapports de paramètres Analytics;ID de blocage
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c2378c5da73c36e5889d2c83b18194ff239fce96
+source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
 workflow-type: tm+mt
-source-wordcount: '2045'
-ht-degree: 2%
+source-wordcount: '1940'
+ht-degree: 3%
 
 ---
 
@@ -107,14 +107,6 @@ Une fois que le nombre de champs requis est nul et que vous êtes satisfait de v
 Après avoir configuré un nouveau flux de données ou sélectionné un flux existant à afficher, la page de détails de ce flux de données s’affiche. Vous trouverez ici des informations supplémentaires sur la banque de données, y compris son identifiant.
 
 ![Page de détails d’un flux de données créé](../images/datastreams/view-details.png)
-
-Lorsqu’un flux de données est créé, trois environnements associés sont automatiquement créés avec des paramètres identiques. Ces trois environnements : `dev`, `stage`, et `prod`, qui correspondent à la variable [environnements par défaut pour les balises](../../tags/ui/publishing/environments.md). Lorsque vous créez une bibliothèque de balises dans une `dev` , la bibliothèque utilise automatiquement la variable `dev` de la banque de données. Vous pouvez modifier librement les paramètres dans des environnements individuels en fonction de vos besoins.
-
-Dans les implémentations du SDK, une `edgeConfigId` est un identifiant composite qui spécifie le flux de données et l’environnement particulier dans ce flux de données. Par exemple, pour spécifier la variable `stage` environnement pour un flux de données avec un identifiant `1c86778b-cdba-4684-9903-750e52912ad1`, utilisez le `edgeConfigId` `1c86778b-cdba-4684-9903-750e52912ad1:stage`.
-
->[!IMPORTANT]
->
->Si aucun environnement n’est présent dans l’ID composite, l’environnement de production (`prod`) est utilisée.
 
 À partir de l’écran des détails de la chaîne de données, vous pouvez [ajouter des services](#add-services) pour activer les fonctionnalités des produits Adobe Experience Cloud auxquels vous avez accès.
 
