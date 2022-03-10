@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension Service d’identités d’Adobe Experience Cloud
 description: Dernières notes de mise à jour pour lʼextension de balise Service dʼidentités dʼAdobe Experience Cloud dans Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 1d3abede47c97c9a4f3b18ae25c890c309e942fd
-workflow-type: ht
-source-wordcount: '521'
-ht-degree: 100%
+source-git-commit: 04dfe55fec06d08a0caef7aee5bf8d85c6056149
+workflow-type: tm+mt
+source-wordcount: '614'
+ht-degree: 86%
 
 ---
 
@@ -17,13 +17,28 @@ ht-degree: 100%
 
 Pour les notes de mise à jour du Service d’identités d’Experience Cloud lui-même et pas uniquement de l’extension Adobe Experience Platform Launch, veuillez consulter : [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr)
 
-## 3 novembre 2021
+## 9 mars 2022
 
-### Extension 5.2.1 d’Experience Cloud ID
+### Extension 5.4.0 d’Experience Cloud ID
 
 #### **Fonctionnalités**
 
-* Ce patch contient un correctif permettant d’écrire des cookies à partir d’un iFrame avec l’attribut `SameSite=None` dans le navigateur Google Chrome.
+* Cette version contient la dernière version 5.4.0 du visiteur, qui comprend les mises à jour suivantes :
+
+   * Possibilité de configurer la durée de vie de la variable `s_ecid` cookie utilisant la configuration cookieLifetime
+   * Mise à jour d’un problème de navigateur Firefox qui se produit lorsqu’une page est chargée dans un iFrame enfant
+
+## 10 octobre 2021
+
+### Extension 5.3.1 d’Experience Cloud ID
+
+#### **Fonctionnalités**
+
+* Cette version contient la dernière version 5.3.0 du visiteur, qui comporte les nouvelles mises à jour suivantes :
+
+   * Mise à jour de l’algorithme pour générer l’ECID local
+   * Dernier accord préalable avec `Secure` et `SameSite` indicateurs du cookie de confidentialité
+   * Correction d’un problème de navigateur Firefox lorsqu’une page est chargée dans un iFrame enfant.
 
 ## 12 janvier 2021
 
@@ -32,6 +47,14 @@ Pour les notes de mise à jour du Service d’identités d’Experience Cloud l
 #### **Fonctionnalités**
 
 * Mise à jour du correctif VisitorJS 5.2.0 avec un correctif pour lʼélément de données ECID qui ne pouvait pas être mis à jour lors de la réception du consentement.
+
+## 3 novembre 2020
+
+### Extension 5.2.1 d’Experience Cloud ID
+
+#### **Fonctionnalités**
+
+* Ce patch contient un correctif permettant d’écrire des cookies à partir d’un iFrame avec l’attribut `SameSite=None` dans le navigateur Google Chrome.
 
 ## 27 octobre 2020
 
