@@ -4,10 +4,10 @@ user-guide-title: Aide sur les balises
 breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
-workflow-type: ht
-source-wordcount: '382'
-ht-degree: 100%
+source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
+workflow-type: tm+mt
+source-wordcount: '386'
+ht-degree: 98%
 
 ---
 
@@ -44,6 +44,7 @@ ht-degree: 100%
    * [Bibliothèques](./ui/publishing/libraries.md)
    * [Bibliothèques auto-hébergées](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Republication de bibliothèque](./ui/publishing/republish.md)
+   * [Prise en charge du réseau de diffusion de contenu Premium (bêta)](./ui/publishing/premium-cdn.md)
 * Informations côté client {#client-side}
    * [Présentation](./ui/client-side/overview.md)
    * [Déploiement asynchrone](./ui/client-side/asynchronous-deployment.md)
@@ -173,7 +174,7 @@ ht-degree: 100%
       * [Configurations d’application](./api/endpoints/app-configurations.md)
       * [Événements d’audit](./api/endpoints/audit-events.md)
       * [Rappels](./api/endpoints/callbacks.md)
-      * [Notes](./api/endpoints/notes.md)
+      * [Remarques](./api/endpoints/notes.md)
       * [Profile](./api/endpoints/profile.md)
       * [Recherche](./api/endpoints/search.md)
       * [Secrets](./api/endpoints/secrets.md)

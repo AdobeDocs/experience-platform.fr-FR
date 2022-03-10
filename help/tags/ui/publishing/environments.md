@@ -1,8 +1,8 @@
 ---
 title: Environnements
-description: Découvrez le concept des environnements de balises et leur fonctionnement dans Adobe Experience Platform.
+description: Découvrez le concept des environnements de balises et leur fonctionnement dans Adobe Experience Platform.
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 100%
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les environnements de balises définissent plusieurs aspects clés des versions de bibliothèque que vous déployez sur votre site Web ou application :
 
@@ -43,7 +43,7 @@ Il peut y avoir différents artefacts dans chaque environnement. Cela vous perme
 >
 >Chaque environnement ne peut être affecté qu’à une seule version de bibliothèque à la fois. Cependant, il est prévu qu’un seul environnement contienne de nombreuses versions différents au fur et à mesure que vous les utilisez dans le workflow de publication, en réaffectant les versions entre les environnements si nécessaire.
 
-## Installation
+## Installation {#installation}
 
 Chaque environnement comporte un ensemble d’instructions utilisées pour la connexion à votre application. Pour les propriétés web, ces instructions fournissent des codes incorporés. Pour les propriétés mobiles, ces instructions fournissent le code nécessaire pour instancier les bibliothèques que vous utilisez et récupérer la configuration au moment de l’exécution.
 
@@ -75,7 +75,7 @@ Pour plus d’informations, consultez la présentation sur les [hôtes](./hosts/
 
 ## Configuration web
 
-Les paramètres de l’environnement affecté déterminent les éléments suivants pour les propriétés Web :
+Les paramètres de l’environnement affecté déterminent les éléments suivants pour les propriétés Web :
 
 * **Hôte** : emplacement du serveur sur lequel vous souhaitez déployer votre version.
 * **Paramètre d’archivage** : indique si le système doit générer un ensemble de fichiers déployable ou les compresser dans un format d’archive.
