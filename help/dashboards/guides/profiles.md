@@ -4,9 +4,9 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
+source-git-commit: 5d4d4a984ef858865e4ca5427ce042b879f2c981
 workflow-type: tm+mt
-source-wordcount: '2324'
+source-wordcount: '2329'
 ht-degree: 5%
 
 ---
@@ -169,7 +169,7 @@ Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation d
 >
 >Les widgets d’efficacité du profil sont actuellement en version bêta et ne sont pas disponibles pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
 
-Adobe fournit plusieurs widgets pour évaluer l’exhaustivité des profils ingérés disponibles pour votre analyse de données. Chacun des widgets d’efficacité de profil peut être filtré par stratégie de fusion. Pour modifier le filtre de stratégie de fusion, sélectionnez la variable[!UICONTROL Profils utilisant une stratégie de fusion] et sélectionnez la stratégie appropriée dans la liste disponible.
+Adobe fournit plusieurs widgets pour évaluer l’exhaustivité des profils ingérés disponibles pour votre analyse des données. Chacun des widgets d’efficacité de profil peut être filtré par stratégie de fusion. Pour modifier le filtre de stratégie de fusion, sélectionnez la variable[!UICONTROL Profils utilisant une stratégie de fusion] et sélectionnez la stratégie appropriée dans la liste disponible.
 
 Pour en savoir plus sur chacun des widgets d’efficacité de profil, sélectionnez le nom d’un widget dans la liste suivante :
 
@@ -196,9 +196,9 @@ Ce widget crée un graphique circulaire d’exhaustivité du profil depuis la da
 
 Ce widget affiche la proportion de profils présentant une exhaustivité élevée, moyenne ou faible. Par défaut, trois niveaux d’exhaustivité sont configurés :
 
-* Haute exhaustivité : Les profils comportent plus de 70 % d’attributs renseignés.
-* Paramètre d’exhaustivité moyenne : Les profils comportent moins de 70 % et plus de 30 % d’attributs renseignés.
-* Faible exhaustivité : Les attributs des profils sont remplis à moins de 30 %.
+* Haute exhaustivité : Les profils comportent plus de 70 % des attributs renseignés.
+* Paramètre d’exhaustivité moyenne : Les profils comportent moins de 70 % et plus de 30 % des attributs renseignés.
+* Faible exhaustivité : Les profils comportent moins de 30 % des attributs renseignés.
 
 ![Les profils par widget d’exhaustivité](../images/profiles/profiles-by-completeness.png)
 
@@ -210,9 +210,9 @@ L’axe X représente le temps, l’axe Y le nombre de profils et les couleurs l
 
 Les trois niveaux d&#39;exhaustivité sont les suivants :
 
-* Haute exhaustivité : Les profils comportent plus de 70 % d’attributs renseignés.
-* Paramètre d’exhaustivité moyenne : Les profils comportent moins de 70 % et plus de 30 % d’attributs renseignés.
-* Faible exhaustivité : Les attributs des profils sont remplis à moins de 30 %.
+* Haute exhaustivité : Les profils comportent plus de 70 % des attributs renseignés.
+* Paramètre d’exhaustivité moyenne : Les profils comportent moins de 70 % et plus de 30 % des attributs renseignés.
+* Faible exhaustivité : Les profils comportent moins de 30 % des attributs renseignés.
 
 ![Widget de tendance d’achèvement des profils](../images/profiles/profiles-completeness-trend.png)
 
