@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur du créateur de segments
 topic-legacy: ui guide
 description: Le créateur de segments de l’interface utilisateur de Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données Profile. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6f4d250750d36c516a9a5730b5ced91e47d3bf05
+source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
 workflow-type: tm+mt
-source-wordcount: '2371'
-ht-degree: 39%
+source-wordcount: '2457'
+ht-degree: 37%
 
 ---
 
@@ -92,7 +92,7 @@ Une fois les suites de rapports mappées, vous pouvez utiliser ces nouveaux cham
 
 ### Audiences
 
-L’onglet **[!UICONTROL Audiences]** répertorie toutes les audiences importées de sources externes, telles qu’Adobe Audience Manager, ainsi que les audiences créées dans [!DNL Experience Platform].
+L’onglet **[!UICONTROL Audiences]** répertorie toutes les audiences importées de sources externes, telles qu’Adobe Audience Manager, ainsi que les audiences créées dans [!DNL Experience Platform].
 
 Sur le **[!UICONTROL Audiences]** vous pouvez voir toutes les sources disponibles sous la forme d’un groupe de dossiers. Lorsque vous sélectionnez les dossiers, les sous-dossiers et audiences disponibles s’affichent. De plus, vous pouvez sélectionner l’icône de dossier (comme illustré dans l’image située à l’extrême droite) afin d’afficher la structure des dossiers (une coche indique le dossier dans lequel vous vous trouvez actuellement) et de parcourir facilement les dossiers en sélectionnant le nom d’un dossier dans l’arborescence.
 
@@ -113,6 +113,14 @@ Pour ajouter une nouvelle règle à votre définition de segment, faites glisser
 >[!IMPORTANT]
 >
 >Les dernières modifications apportées à Adobe Experience Platform ont mis à jour l’utilisation de la variable `OR` et `AND` opérateurs logiques entre les événements. Ces mises à jour n’auront aucune incidence sur les segments existants. Cependant, toutes les mises à jour ultérieures des segments existants et des nouvelles créations de segments seront affectées par ces modifications. Veuillez lire la [mise à jour des constantes de temps](./segment-refactoring.md) pour plus d’informations.
+
+Lors de la sélection d’une valeur pour l’attribut, une liste de valeurs d’énumération peut être affichée pour l’attribut.
+
+![](../images/ui/segment-builder/enum-list.png)
+
+Si vous sélectionnez une valeur dans cette liste d’énumérations, elle est entourée d’une bordure pleine. Toutefois, pour les champs qui utilisent `meta:enum` (soft) , vous pouvez également sélectionner une valeur qui est **not** dans la liste des énumérations. Si vous créez votre propre valeur, elle est entourée d’une bordure en pointillés, avec un avertissement indiquant que cette valeur ne figure pas dans la liste d’énumération.
+
+![](../images/ui/segment-builder/enum-warning.png)
 
 ### Ajout d’audiences
 
@@ -138,7 +146,7 @@ L’affichage du code fournit un bouton qui vous permet de copier la valeur du s
 
 ![](../images/ui/segment-builder/copy-code.png)
 
-### Fonctions d&#39;agrégation
+### Fonctions d’agrégation
 
 Une agrégation dans [!DNL Segment Builder] est un calcul effectué sur un groupe d’attributs XDM dont le type de données est un nombre (double ou entier). Les quatre fonctions d’agrégation prises en charge dans le créateur de segments sont SUM, MOYENNE, MIN et MAX.
 
@@ -194,7 +202,7 @@ Une fois que vous avez sélectionné **[!UICONTROL Conteneur d’annulation]** l
 
 ## Stratégies de fusion
 
-[!DNL Experience Platform] permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. Lorsque vous rassemblez ces données, les stratégies de fusion sont les règles qui [!DNL Platform] utilise pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer un profil.
+[!DNL Experience Platform] vous permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. Lorsque vous rassemblez ces données, les stratégies de fusion sont les règles qui [!DNL Platform] utilise pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer un profil.
 
 Vous pouvez sélectionner une stratégie de fusion qui correspond à votre objectif marketing pour cette audience ou utiliser la stratégie de fusion par défaut fournie par [!DNL Platform]. Vous pouvez créer plusieurs stratégies de fusion propres à votre organisation, y compris créer votre propre stratégie de fusion par défaut. Pour obtenir des instructions détaillées sur la création de stratégies de fusion pour votre organisation, commencez par lire la section [présentation des stratégies de fusion](../../profile/merge-policies/overview.md).
 
@@ -218,7 +226,7 @@ Au fur et à mesure que vous continuez à créer votre définition de segment, v
 
 ## Étapes suivantes {#next-steps}
 
-Le créateur de segments fournit un processus riche qui vous permet d’isoler les audiences commercialisables de [!DNL Real-time Customer Profile] data. Après avoir lu ce guide, vous devriez maintenant pouvoir :
+Le créateur de segments fournit un processus riche qui vous permet d’isoler les audiences commercialisables des [!DNL Real-time Customer Profile] data. Après avoir lu ce guide, vous devriez maintenant pouvoir :
 
 - créer des définitions de segment en utilisant une combinaison d’attributs, d’événements et d’audiences existants comme blocs de création ;
 - utiliser les conteneurs et les canevas du créateur de règles pour contrôler l’ordre d’exécution des règles de segmentation ;
