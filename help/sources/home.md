@@ -5,7 +5,7 @@ title: Présentation des connecteurs source
 topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7254c84f1a7f4f45a0098e27515a7a01cae395db
+source-git-commit: 5be496cec28ab99c057834005aa1f014cea7406c
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 56%
@@ -24,7 +24,7 @@ Experience Platform vous permet de centraliser les données que vous collectez 
 
 Les sources dans Experience Platform sont regroupées dans les catégories suivantes :
 
-### Applications Adobe
+### Applications Adobe {#adobe-applications}
 
 Experience Platform permet d’ingérer des données à partir d’autres applications Adobe, notamment Adobe Analytics et Adobe Audience Manager. Consultez les documents connexes suivants pour plus d’informations :
 
@@ -38,13 +38,13 @@ Experience Platform permet d’ingérer des données à partir d’autres applic
 - [[!DNL Marketo Engage] présentation du connecteur](connectors/adobe-applications/marketo/marketo.md)
 - [Créez un [!DNL Marketo Engage] connexion source dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Advertising
+### Advertising {#advertising}
 
 Experience Platform prend en charge l’ingestion de données à partir d’un système de publicité tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) connector
 
-### Stockage dans le cloud
+### Stockage dans le cloud {#cloud-storage}
 
 Les sources de stockage dans le cloud peuvent introduire vos propres données dans Platform sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée au workflow des sources à l’aide de l’interface utilisateur. Consultez les documents connexes suivants pour plus d’informations :
 
@@ -62,7 +62,7 @@ Les sources de stockage dans le cloud peuvent introduire vos propres données da
 - [[!DNL Oracle Object Storage] connector](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
 
-### Gestion de la relation client (CRM)
+### Gestion de la relation client (CRM) {#crm}
 
 Les systèmes de gestion de la relation client (CRM) fournissent des données qui peuvent aider à établir des relations avec la clientèle, qui à leur tour, favorisent la fidélisation client. Experience Platform prend en charge l’ingestion de données CRM à partir de [!DNL Microsoft Dynamics 365] et [!DNL Salesforce]. Consultez les documents connexes suivants pour plus d’informations :
 
@@ -71,14 +71,14 @@ Les systèmes de gestion de la relation client (CRM) fournissent des données qu
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
-### Succès des clients
+### Succès des clients {#customer-success}
 
 Experience Platform prend en charge l’ingestion de données provenant d’une application de succès client tierce. Consultez les documents connexes suivants pour plus d’informations :
 
 - [[!DNL Salesforce Service Cloud] connector](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] connector](connectors/customer-success/servicenow.md)
 
-### Base de données
+### Base de données {#database}
 
 Experience Platform prend en charge l’ingestion de données provenant d’une base de données tierce. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
@@ -101,19 +101,19 @@ Experience Platform prend en charge l’ingestion de données provenant d’une
 - [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
 - [[!DNL Snowflake] connector](connectors/databases/snowflake.md)
 
-### eCommerce
+### eCommerce {#ecommerce}
 
 Experience Platform prend en charge l’ingestion de données à partir d’un système eCommerce tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
-### Système local
+### Système local {#local-system}
 
 Experience Platform prend en charge l’ingestion de données à partir de votre système local. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [Chargement de fichier local](connectors/local-system/local-file-upload.md)
 
-### Automatisation du marketing
+### Automatisation du marketing {#marketing-automation}
 
 Experience Platform prend en charge l’ingestion de données provenant d’un système tiers d’automatisation du marketing. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
@@ -121,19 +121,19 @@ Experience Platform prend en charge l’ingestion de données provenant d’un 
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
-### Paiements
+### Paiements {#payments}
 
 Experience Platform prend en charge l’ingestion de données provenant d’un système de paiement tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL PayPal] connector](connectors/payments/paypal.md)
 
-### Diffusion en continu
+### Diffusion en continu {#streaming}
 
 Experience Platform prend en charge l’ingestion de données à partir de sources de diffusion en continu. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
 
-### Protocoles
+### Protocoles {#protocols}
 
 Experience Platform prend en charge l’ingestion de données à partir d’un système de protocoles tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 

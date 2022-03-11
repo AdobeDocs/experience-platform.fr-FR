@@ -1,151 +1,133 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;configurer le flux de données;connecteur de succès client
 solution: Experience Platform
-title: Configuration d’un flux de données pour une connexion à la source de succès client dans l’interface utilisateur
+title: Création d’un flux de données à l’aide d’une source de succès client dans l’interface utilisateur
 topic-legacy: overview
 type: Tutorial
-description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers une [!DNL Platform] jeu de données. Ce tutoriel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte de succès client.
+description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes à suivre pour créer un flux de données pour une source de succès client à l’aide de l’interface utilisateur de Platform.
 exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
 workflow-type: tm+mt
-source-wordcount: '1487'
-ht-degree: 4%
+source-wordcount: '1397'
+ht-degree: 11%
 
 ---
 
-# Configuration d’un flux de données pour une connexion réussie des clients dans l’interface utilisateur
+# Création d’un flux de données à l’aide d’une source de succès client dans l’interface utilisateur
 
-Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers une [!DNL Platform] jeu de données. Ce tutoriel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte de succès client.
-
-## Prise en main
-
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
-
-- [[!DNL Experience Data Model (XDM)] Système](../../../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Experience Platform] organise les données d’expérience client.
-   - [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   - [Tutoriel de l’éditeur de schémas](../../../../xdm/tutorials/create-schema-ui.md): Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-- [[!DNL Real-time Customer Profile]](../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-
-En outre, ce tutoriel nécessite que vous ayez déjà créé un compte de succès client. Vous trouverez une liste des tutoriels relatifs à la création de différents connecteurs de succès client dans l’interface utilisateur de la section [Présentation des connecteurs source](../../../home.md).
-
-## Sélectionner des données
-
-Après avoir créé votre connecteur de succès client, la variable **[!UICONTROL Sélectionner des données]** s’affiche, fournissant ainsi une interface interactive vous permettant d’explorer votre hiérarchie de fichiers.
-
-- La moitié gauche de l’interface est un navigateur de répertoires qui affiche les fichiers et répertoires de votre serveur.
-- La moitié droite de l&#39;interface permet de prévisualiser jusqu&#39;à 100 lignes de données à partir d&#39;un fichier compatible.
-
-Vous pouvez utiliser la variable **[!UICONTROL Rechercher]** en haut de la page pour identifier rapidement les données source que vous prévoyez d’utiliser.
+Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données dans Adobe Experience Platform. Ce tutoriel décrit les étapes à suivre pour créer un flux de données pour une source de succès client à l’aide de l’interface utilisateur de Platform.
 
 >[!NOTE]
 >
->L’option de données de source de recherche est disponible pour tous les connecteurs source tabulaires, à l’exception des connecteurs Analytics, Classifications, Hubs d’événements et Kinesis.
+>Pour créer un flux de données, vous devez déjà disposer d’un compte authentifié avec une source de succès client. Vous trouverez une liste des tutoriels relatifs à la création de différents comptes de source de succès client dans l’interface utilisateur de la section [présentation des sources](../../../home.md#customer-success).
 
-Une fois que vous avez trouvé les données source, sélectionnez le répertoire, puis cliquez sur **[!UICONTROL Suivant]**.
+## Prise en main
 
-![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
+Ce tutoriel nécessite une compréhension pratique des composants suivants de Platform :
 
-## Mappage des champs de données à un schéma XDM
+* [Sources](../../../home.md): Platform permet d’ingérer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
+* [[!DNL Experience Data Model (XDM)] Système](../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+   * [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
+   * [Tutoriel sur l’éditeur de schémas](../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
+* [[!DNL Real-time Customer Profile]](../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Data Prep]](../../../../data-prep/home.md): Permet aux ingénieurs de données de mapper, de transformer et de valider des données vers et depuis le modèle de données d’expérience (XDM).
 
-Le **[!UICONTROL Mappage]** s’affiche, fournissant une interface interactive pour mapper les données source à une [!DNL Platform] jeu de données.
+## Ajout de données
 
-Sélectionnez un jeu de données dans lequel ingérer les données entrantes. Vous pouvez utiliser un jeu de données existant ou en créer un nouveau.
+Après avoir créé votre compte de source de succès client, la variable **[!UICONTROL Ajouter des données]** s’affiche, fournissant une interface vous permettant d’explorer la hiérarchie des tables de votre compte source de succès client.
 
-### Utilisation d’un jeu de données existant
+* La moitié gauche de l’interface est un navigateur qui affiche la liste des tableaux de données contenus dans votre compte. L’interface comprend également une option de recherche qui vous permet d’identifier rapidement les données source que vous prévoyez d’utiliser.
+* La moitié droite de l’interface est un panneau d’aperçu qui vous permet de prévisualiser jusqu’à 100 lignes de données.
 
-Pour ingérer des données dans un jeu de données existant, sélectionnez **[!UICONTROL Utilisation d’un jeu de données existant]**, puis cliquez sur l’icône du jeu de données.
-
-![use-existing-dataset](../../../images/tutorials/dataflow/customer-success/use-existing-dataset.png)
-
-Le **[!UICONTROL Sélectionner un jeu de données]** s’affiche. Recherchez le jeu de données que vous souhaitez utiliser, sélectionnez-le, puis cliquez sur **[!UICONTROL Continuer]**.
-
-![select-existing-dataset](../../../images/tutorials/dataflow/customer-success/select-dataset.png)
-
-### Utilisation d’un nouveau jeu de données
-
-Pour ingérer des données dans un nouveau jeu de données, sélectionnez **[!UICONTROL Création d’un jeu de données]** et saisissez un nom et une description pour le jeu de données dans les champs fournis.
-
-Vous pouvez joindre un champ de schéma en saisissant un nom de schéma dans la variable **[!UICONTROL Sélectionner un schéma]** barre de recherche. Vous pouvez également sélectionner l’icône déroulante pour afficher la liste des schémas existants. Vous pouvez également sélectionner **[!UICONTROL Recherche avancée]** pour accéder à l’écran des schémas existants, y compris leurs détails respectifs.
-
-Au cours de cette étape, vous pouvez activer votre jeu de données pour [!DNL Real-time Customer Profile] et créer une vision globale des attributs et des comportements d’une entité. Les données de tous les jeux de données activés seront incluses dans [!DNL Profile] les modifications et sont appliquées lorsque vous enregistrez votre flux de données.
-
-Activez/désactivez la variable **[!UICONTROL Jeu de données de profil]** pour activer votre jeu de données cible [!DNL Profile].
-
-![create-new-dataset](../../../images/tutorials/dataflow/crm/new-dataset.png)
-
-Le **[!UICONTROL Sélectionner un schéma]** s’affiche. Sélectionnez le schéma que vous souhaitez appliquer au nouveau jeu de données, puis cliquez sur **[!UICONTROL Terminé]**.
-
-![select-schema](../../../images/tutorials/dataflow/customer-success/select-schema.png)
-
-Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs calculées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../data-prep/ui/mapping.md).
-
->[!TIP]
+>[!NOTE]
 >
->Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
+>L’option de données de source de recherche est disponible pour toutes les sources basées sur un tableau, à l’exception d’Adobe Analytics, [!DNL Amazon Kinesis], et [!DNL Azure Event Hubs].
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+Une fois que vous avez trouvé les données sources, sélectionnez le tableau, puis sélectionnez **[!UICONTROL Suivant]**.
 
-Sélectionner **[!UICONTROL Aperçu des données]** pour afficher les résultats de mappage de 100 lignes maximum de données d’exemple du jeu de données sélectionné.
-
-Lors de la prévisualisation, la colonne d’identité est considérée comme le premier champ, car il s’agit des informations clés nécessaires à la validation des résultats du mapping.
-
-![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
-
-Une fois les données source mappées, sélectionnez **[!UICONTROL Fermer]**.
-
-## Planification des exécutions d’ingestion
-
-Le **[!UICONTROL Planification]** s’affiche, ce qui vous permet de configurer un planning d’ingestion pour ingérer automatiquement les données source sélectionnées à l’aide des mappages configurés. Le tableau suivant décrit les différents champs configurables pour la planification :
-
-| Champ | Description |
-| --- | --- |
-| Fréquence | Les fréquences sélectionnées incluent `Once`, `Minute`, `Hour`, `Day`, et `Week`. |
-| Intervalle | Entier qui définit l’intervalle pour la fréquence sélectionnée. |
-| Heure de début | Horodatage UTC indiquant quand la toute première ingestion est configurée pour se produire. |
-| Renvoi | Valeur boolean qui détermine les données ingérées initialement. If **[!UICONTROL Renvoi]** est activée, tous les fichiers actuels du chemin spécifié seront ingérés lors de la première ingestion planifiée. If **[!UICONTROL Renvoi]** est désactivé, seuls les fichiers chargés entre la première exécution de l’ingestion et l’heure de début seront ingérés. Les fichiers chargés avant l’heure de début ne seront pas ingérés. |
-| Colonne delta | Une option avec un ensemble filtré de champs de schéma source de type, date ou heure. Ce champ sert à différencier les données nouvelles des données existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. |
-
-Les flux de données sont conçus pour ingérer automatiquement des données selon un calendrier précis. Sélectionnez tout d’abord la fréquence d’ingestion. Définissez ensuite l’intervalle pour désigner la période entre deux exécutions de flux. La valeur de l’intervalle doit être un entier non nul et doit être définie sur supérieur ou égal à 15.
-
-Pour définir l’heure de début de l’ingestion, ajustez la date et l’heure affichées dans la zone d’heure de début. Vous pouvez également sélectionner l’icône de calendrier pour modifier la valeur de l’heure de début. L’heure de début doit être supérieure ou égale à l’heure UTC actuelle.
-
-Sélectionner **[!UICONTROL Chargement des données incrémentielles par]** pour affecter la colonne delta. Ce champ établit une distinction entre les données nouvelles et existantes.
-
-![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
-
-### Configuration d’un flux de données d’ingestion unique
-
-Pour configurer l’ingestion unique, sélectionnez la flèche de liste déroulante Fréquence et choisissez **[!UICONTROL Une fois]**.
-
->[!TIP]
->
->**[!UICONTROL Intervalle]** et **[!UICONTROL Renvoi]** ne sont pas visibles lors d’une ingestion unique.
-
-Une fois que vous avez fourni les valeurs appropriées au planning, sélectionnez **[!UICONTROL Suivant]**.
-
-![](../../../images/tutorials/dataflow/databases/schedule-once.png)
+![select-data](../../../images/tutorials/dataflow/table-based/select-data.png)
 
 ## Fournir des détails sur les flux de données
 
-Le **[!UICONTROL Détails du flux de données]** s’affiche, ce qui vous permet de nommer et de décrire brièvement votre nouveau flux de données.
+Le [!UICONTROL Détails du flux de données] vous permet de choisir si vous souhaitez utiliser un jeu de données existant ou un nouveau jeu de données. Au cours de ce processus, vous pouvez également configurer les paramètres de [!UICONTROL Jeu de données de profil], [!UICONTROL Diagnostics d’erreur], [!UICONTROL Ingestion partielle], et [!UICONTROL Alertes].
 
-Au cours de ce processus, vous pouvez également activer **[!UICONTROL Ingestion partielle]** et **[!UICONTROL Diagnostics d’erreur]**. Activation **[!UICONTROL Ingestion partielle]** permet d’ingérer des données contenant des erreurs jusqu’à un certain seuil. Une fois **[!UICONTROL Ingestion partielle]** est activé, faites glisser le **[!UICONTROL Seuil d’erreur %]** composez pour ajuster le seuil d’erreur du lot. Vous pouvez également régler manuellement le seuil en sélectionnant la zone de saisie. Pour plus d’informations, voir [Présentation de l’ingestion par lots partielle](../../../../ingestion/batch-ingestion/partial.md).
+![dataflow-detail](../../../images/tutorials/dataflow/table-based/dataflow-detail.png)
 
-Indiquez des valeurs pour le flux de données et sélectionnez **[!UICONTROL Suivant]**.
+### Utilisation d’un jeu de données existant
 
-![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
+Pour ingérer des données dans un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]**. Vous pouvez soit récupérer un jeu de données existant à l’aide de l’option de [!UICONTROL Recherche avancée], soit en faisant défiler la liste des jeux de données existants dans le menu déroulant. Une fois que vous avez sélectionné un jeu de données, indiquez un nom et une description pour votre flux de données.
+
+![existing-dataset](../../../images/tutorials/dataflow/table-based/existing-dataset.png)
+
+### Utilisation d’un nouveau jeu de données
+
+Pour ingérer un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]** puis fournissez un nom de jeu de données de sortie et une description facultative. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL Recherche avancée] ou en faisant défiler la liste des schémas existants dans le menu déroulant. Une fois que vous avez sélectionné un schéma, indiquez un nom et une description pour votre flux de données.
+
+![new-dataset](../../../images/tutorials/dataflow/table-based/new-dataset.png)
+
+### Activer [!DNL Profile] et diagnostics d’erreur
+
+Sélectionnez ensuite le **[!UICONTROL Jeu de données de profil]** bascule pour activer votre jeu de données [!DNL Profile]. Cela vous permet de créer une vue holistique des attributs et des comportements d’une entité. Données de tous [!DNL Profile]Les jeux de données activés seront inclus dans [!DNL Profile] les modifications et sont appliquées lorsque vous enregistrez votre flux de données.
+
+Le [!UICONTROL diagnostic d’erreur] permet de générer un message d’erreur détaillé pour tout enregistrement erroné survenant dans votre flux de données, tandis que l’[!UICONTROL ingestion partielle] vous permet d’ingérer des données contenant des erreurs, jusqu’à un certain seuil que vous définissez manuellement. Pour plus d’informations, consultez la [présentation de l’ingestion par lots partiels](../../../../ingestion/batch-ingestion/partial.md).
+
+![profile-and-errors](../../../images/tutorials/dataflow/table-based/profile-and-errors.png)
+
+### Activation des alertes
+
+Vous pouvez activer les alertes pour recevoir des notifications sur l’état de votre flux de données. Sélectionnez une alerte dans la liste pour vous abonner afin de recevoir des notifications sur l’état de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de sources à l’aide de l’interface utilisateur](../alerts.md).
+
+Lorsque vous avez terminé de fournir des détails à votre flux de données, sélectionnez **[!UICONTROL Suivant]**.
+
+![alertes](../../../images/tutorials/dataflow/table-based/alerts.png)
+
+## Mappage des champs de données à un schéma XDM
+
+Le [!UICONTROL Mappage] s’affiche, vous fournissant une interface pour mapper les champs source de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
+
+Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs calculées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../data-prep/ui/mapping.md).
+
+Une fois le mappage de vos données source réussi, sélectionnez **[!UICONTROL Suivant]**.
+
+![mapping](../../../images/tutorials/dataflow/table-based/mapping.png)
+
+## Planification des exécutions d’ingestion
+
+Le [!UICONTROL Planification] s’affiche, ce qui vous permet de configurer un planning d’ingestion pour ingérer automatiquement les données source sélectionnées à l’aide des mappages configurés. Par défaut, la planification est définie sur `Once`. Pour régler la fréquence d’ingestion, sélectionnez **[!UICONTROL Fréquence]** puis sélectionnez une option dans le menu déroulant.
+
+>[!TIP]
+>
+>L’intervalle et le renvoi ne sont pas visibles lors d’une ingestion unique.
+
+![scheduling](../../../images/tutorials/dataflow/table-based/scheduling.png)
+
+Si vous définissez votre fréquence d’ingestion sur `Minute`, `Hour`, `Day`ou `Week`, vous devez ensuite définir un intervalle pour établir une période définie entre chaque ingestion. Par exemple, une fréquence d’ingestion définie sur `Day` et un intervalle défini sur `15` signifie que votre flux de données est planifié pour ingérer des données tous les 15 jours.
+
+Au cours de cette étape, vous pouvez également activer **renvoyer** et définissez une colonne pour l’ingestion incrémentielle des données. Le renvoi est utilisé pour ingérer des données historiques, tandis que la colonne que vous définissez pour l’ingestion incrémentielle permet de différencier les nouvelles données des données existantes.
+
+Consultez le tableau ci-dessous pour plus d’informations sur les configurations de planification.
+
+| Champ | Description |
+| --- | --- |
+| Fréquence | Fréquence d’ingestion. Les fréquences sélectionnées incluent `Once`, `Minute`, `Hour`, `Day`, et `Week`. |
+| Intervalle | Entier qui définit l’intervalle pour la fréquence sélectionnée. La valeur de l’intervalle doit être un entier non nul et doit être définie sur supérieur ou égal à 15. |
+| Heure de début | Horodatage UTC indiquant quand la toute première ingestion est configurée pour se produire. L’heure de début doit être supérieure ou égale à l’heure UTC actuelle. |
+| Renvoi | Valeur boolean qui détermine les données ingérées initialement. Si le renvoi est activé, tous les fichiers actuels du chemin spécifié seront ingérés lors de la première ingestion planifiée. Si le renvoi est désactivé, seuls les fichiers chargés entre la première exécution de l’ingestion et l’heure de début seront ingérés. Les fichiers chargés avant l’heure de début ne seront pas ingérés. |
+| Chargement des données incrémentielles par | Une option avec un ensemble filtré de champs de schéma source de type, date ou heure. Ce champ sert à différencier les données nouvelles des données existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. |
+
+![renvoyer](../../../images/tutorials/dataflow/table-based/backfill.png)
 
 ## Vérification du flux de données
 
 Le **[!UICONTROL Réviser]** s’affiche, ce qui vous permet de consulter votre nouveau flux de données avant qu’il ne soit créé. Les détails sont regroupés dans les catégories suivantes :
 
-- **[!UICONTROL Détails de la connexion]**: Affiche le type de source, le chemin d’accès approprié du fichier source choisi et la quantité de colonnes qu’il contient.
-- **[!UICONTROL Détails du mappage]**: Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
-- **[!UICONTROL Détails de la planification]**: Affiche la période, la fréquence et l’intervalle principaux du planning d’ingestion.
+* **[!UICONTROL Connexion]**: Affiche le type de source, le chemin d’accès approprié du fichier source choisi et la quantité de colonnes qu’il contient.
+* **[!UICONTROL Attribution de champs de jeu de données et de mappage]**: Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
+* **[!UICONTROL Planification]**: Affiche la période, la fréquence et l’intervalle principaux du planning d’ingestion.
 
-Une fois que vous avez examiné votre flux de données, cliquez sur **[!UICONTROL Terminer]** et accorder un certain temps pour la création du flux de données.
+Une fois que vous avez examiné votre flux de données, sélectionnez **[!UICONTROL Terminer]** et accorder un certain temps pour la création du flux de données.
 
-![review](../../../images/tutorials/dataflow/customer-success/review.png)
+![review](../../../images/tutorials/dataflow/table-based/review.png)
 
 ## Surveillance de votre flux de données
 
@@ -157,27 +139,14 @@ Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui 
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé un flux de données pour importer des données d’une source de succès client et vous avez obtenu des informations sur la surveillance des jeux de données. Les données entrantes peuvent désormais être utilisées par en aval. [!DNL Platform] des services tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, consultez les documents suivants :
+En suivant ce tutoriel, vous avez créé un flux de données pour importer les données de votre source de succès client vers Platform. Les données entrantes peuvent désormais être utilisées par en aval. [!DNL Platform] des services tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, consultez les documents suivants :
 
-- [Présentation de Real-time Customer Profile](../../../../profile/home.md)
-- [Présentation de Data Science Workspace](../../../../data-science-workspace/home.md)
+* [Présentation de [!DNL Real-time Customer Profile]](../../../../profile/home.md)
+* [Présentation de [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
 
-## Annexe
 
-Les sections suivantes apportent des informations supplémentaires sur l’utilisation des connecteurs source.
-
-### Désactivation d’un flux de données
-
-Lorsqu’un flux de données est créé, il devient immédiatement principal et ingère des données selon le planning qu’il a été donné. Vous pouvez désactiver un principal flux de données à tout moment en suivant les instructions ci-dessous.
-
-Dans le **[!UICONTROL Authentification]** sélectionnez le nom du compte associé au flux de données que vous souhaitez désactiver.
-
-![](../../../images/tutorials/dataflow/customer-success/monitor.png)
-
-Le **[!UICONTROL Activité Source]** s’affiche. Sélectionnez le flux de données principal dans la liste pour ouvrir son **[!UICONTROL Propriétés]** sur le côté droit de l’écran, qui contient une **[!UICONTROL Activé]** bouton bascule . Cliquez sur le bouton bascule pour désactiver le flux de données. Le même bouton peut être utilisé pour réactiver un flux de données une fois qu’il a été désactivé.
-
-![disable](../../../images/tutorials/dataflow/customer-success/disable.png)
-
-### Activer les données entrantes pour [!DNL Profile] population
-
-Les données entrantes provenant de votre connecteur source peuvent être utilisées pour enrichir et remplir vos [!DNL Real-time Customer Profile] data. Pour plus d’informations sur le remplissage de votre [!DNL Real-time Customer Profile] data, consultez le tutoriel sur [Population du profil](../profile.md).
+>[!WARNING]
+>
+> L’interface utilisateur de Platform affichée dans la vidéo suivante est obsolète. Reportez-vous à la documentation ci-dessus pour connaître les dernières captures d’écran et fonctionnalités de l’interface utilisateur.
+>
+>[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
