@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: e03f680bfa2ee4c1e79e7ee22724702ac3721a84
+source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
 workflow-type: tm+mt
 source-wordcount: '724'
-ht-degree: 43%
+ht-degree: 44%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 43%
    * [Affichage des détails de destination](./ui/destination-details-page.md)
    * [Mise à jour des comptes de destination](./ui/update-accounts.md)
    * [Suppression de comptes de destination](./ui/delete-destination-account.md)
-   * [Modification des flux d’activation](./ui/edit-activation.md)
+   * [Modification des flux de données d’activation](./ui/edit-activation.md)
    * [Suppression de destinations](./ui/delete-destinations.md)
    * [Surveillance des flux de données](./ui/monitor-dataflows.md)
 * Catalogue des destinations {#catalog}
@@ -124,7 +124,7 @@ ht-degree: 43%
       * [Extension Adobe Target](./catalog/personalization/adobe-target.md)
       * [Extension Adobe Target v2](./catalog/personalization/adobe-target-v2.md)
       * [Extension Beemray](./catalog/personalization/beemray.md)
-      * [Connexion à la personnalisation personnalisée](./catalog/personalization/custom-personalization.md)
+      * [Connexion de personnalisation personnalisée](./catalog/personalization/custom-personalization.md)
       * [Extension D&amp;B Visitor Intelligence](./catalog/personalization/dnb.md)
       * [Extension du service Experience Cloud ID](./catalog/personalization/adobe-ecid.md)
       * [Extension Gainsight](./catalog/personalization/gainsight.md)

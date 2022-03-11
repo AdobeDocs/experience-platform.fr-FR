@@ -1,38 +1,45 @@
 ---
 keywords: modifier l’activation, modifier la destination, modifier la destination
-title: Modification des flux d’activation
+title: Modification des flux de données d’activation
 type: Tutorial
-seo-title: Edit activation flows
-description: Suivez les étapes de cet article pour modifier un flux d’activation existant dans Adobe Experience Platform.
-seo-description: Follow the steps in this article to edit an existing activation flow in Adobe Experience Platform.
+seo-title: Edit activation dataflows
+description: Suivez les étapes de cet article pour modifier un flux de données d’activation existant dans Adobe Experience Platform.
+seo-description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
+source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 1%
+source-wordcount: '313'
+ht-degree: 0%
 
 ---
 
-# Modification des flux d’activation {#edit-activation-flows}
+# Modification des flux de données d’activation {#edit-activation-flows}
 
-Pour modifier les flux d’activation existants dans Adobe Experience Platform, procédez comme suit :
+Dans Adobe Experience Platform, vous pouvez modifier divers composants des flux de données d’activation existants vers les destinations, tels que les segments et les attributs de profil exportés, la fréquence d’exportation, si le flux de données d’activation est activé ou désactivé, etc.
 
-1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur pour afficher vos destinations existantes.
+Suivez les étapes ci-dessous pour modifier les flux de données d’activation existants :
+
+1. Connectez-vous au [Interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionner **[!UICONTROL Parcourir]** dans l’en-tête supérieur pour afficher vos flux de données de destination existants.
 
    ![Parcourir les destinations](../assets/ui/edit-activation/browse-destinations.png)
 
-2. Sélectionnez l’icône de filtre ![Icône de filtre](../assets/ui/edit-activation/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
+2. Icône Sélectionner le filtre ![Icône Filtre](../assets/ui/edit-activation/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
 
    ![Filtrage des destinations](../assets/ui/edit-activation/filter-destinations.png)
 
-3. Sélectionnez le nom de la destination que vous souhaitez modifier.
+3. Sélectionnez le nom du flux de données de destination que vous souhaitez modifier.
 
    ![Sélectionner la destination](../assets/ui/edit-activation/destination-select.png)
 
-4. La page **[!UICONTROL Flux de données s’exécute]** pour la destination s’affiche, affichant ses commandes disponibles. Sélectionnez **[!UICONTROL Activer]** dans le rail de droite pour modifier les segments à envoyer à la destination.
+4. Le **[!UICONTROL Exécutions de flux de données]** pour la destination s’affiche, affichant ses commandes disponibles. À ce stade, vous pouvez modifier plusieurs composants du flux de données de destination :
 
-   De plus, vous pouvez modifier le nom et la description de la destination.
+   * Sélectionner **[!UICONTROL Activation des segments]** dans le rail de droite pour modifier les segments ou attributs de profil à envoyer à la destination. Cette action vous conduit au workflow d’activation, qui varie en fonction du type de destination. Pour plus d’informations, consultez les guides sur :
+      * [activation des données d’audience pour segmenter les destinations de diffusion en continu](./activate-segment-streaming-destinations.md) (par exemple, Facebook ou Twitter) ;
+      * [activation des données d’audience vers des destinations basées sur un profil de lot](./activate-batch-profile-destinations.md) (par exemple, Amazon S3 ou Oracle Eloqua) ;
+      * [activation des données d’audience vers des destinations basées sur un profil de diffusion en continu](./activate-streaming-profile-destinations.md) (par exemple, API HTTP ou Amazon Kinesis).
+   * De plus, vous pouvez modifier le nom et la description du flux de données de destination.
+   * Vous pouvez utiliser la variable **[!UICONTROL Activé]/[!UICONTROL Désactivé]** pour démarrer et suspendre toutes les exportations de données vers la destination.
 
    ![Détails de la destination](../assets/ui/edit-activation/destination-details.png)
 
-5. Pour plus d’informations sur l’activation de nouveaux segments vers vos destinations, voir [Aperçu de l’activation](activation-overview.md) .
+5. Voir [Présentation de l’activation](activation-overview.md) pour plus d’informations sur l’activation de nouveaux segments vers vos destinations.
