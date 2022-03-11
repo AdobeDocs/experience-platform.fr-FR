@@ -1,9 +1,10 @@
 ---
 title: Prise en charge du réseau de diffusion de contenu Premium pour les balises
 description: Découvrez la fonctionnalité premium CDN pour les balises et comment elle peut être utilisée pour diffuser votre contenu dans plusieurs zones géographiques.
-source-git-commit: 530fc1ad3f389ffb5d77ddf6aa0b0b3208f1d532
+exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
+source-git-commit: 3843b08a3a047200f02c1ceb17a64a196d4a0287
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -20,21 +21,13 @@ Pour en tenir compte, les balises dans Experience Platform fournissent une fonct
 
 La prise en charge Premium du réseau de diffusion de contenu est une fonctionnalité payante qui doit être achetée par votre organisation pour l’activer et l’utiliser. Ce guide explique comment configurer et utiliser cette fonctionnalité dans l’interface utilisateur de la collecte de données une fois qu’elle a été achetée.
 
-## Activation du réseau de diffusion de contenu Premium pour une entreprise
+## Activation du réseau de diffusion de contenu Premium pour votre organisation
 
-Le réseau de diffusion de contenu Premium est activé au niveau de l’entreprise, ce qui signifie que vous devez disposer des autorisations de modification de l’entreprise pour activer la fonctionnalité.
-
-Dans l’interface utilisateur de la collecte de données, accédez à **[!UICONTROL Balises]** > **[!UICONTROL Entreprises]**. À partir de là, sélectionnez la société pour laquelle vous souhaitez activer la fonction, puis sélectionnez **[!UICONTROL Configurer]** .
-
-![Sélectionner une entreprise à configurer](../../images/ui/publishing/premium-cdn/configure-property.png)
-
-Dans la boîte de dialogue de configuration qui s’affiche, sélectionnez l’option pour **[!UICONTROL Réseau de diffusion de contenu Premium activé]** avant de sélectionner **[!UICONTROL Enregistrer]** pour confirmer vos modifications.
-
-![Activation de l’option premium CDN](../../images/ui/publishing/premium-cdn/enable-premium-cdn.png)
+Le réseau de diffusion de contenu Premium est activé au niveau de l’entreprise. Une fois que votre organisation a acheté la fonction de réseau de diffusion de contenu Premium, un administrateur d’Adobe l’activera pour votre entreprise dans l’interface utilisateur de la collecte de données.
 
 ## Reconstruire et installer des bibliothèques de balises avec des codes incorporés mis à jour
 
-L’activation de la fonction de réseau de diffusion de contenu premium ne signifie pas que vos ressources de balise sont immédiatement répliquées et prêtes à être utilisées dans les nouvelles régions. Cela signifie uniquement que vous pouvez maintenant choisir le moment auquel vous abonner à cette fonctionnalité.
+Une fois que le réseau de diffusion de contenu Premium est activé, cela ne signifie pas que vos ressources de balise sont immédiatement répliquées et prêtes à être utilisées dans les nouvelles régions. Cela signifie uniquement que vous pouvez maintenant choisir le moment auquel vous abonner à cette fonctionnalité.
 
 >[!IMPORTANT]
 >
