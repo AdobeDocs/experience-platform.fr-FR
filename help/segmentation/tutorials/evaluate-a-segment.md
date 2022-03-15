@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Suivez ce tutoriel pour savoir comment évaluer les segments et accéder aux résultats des segments à l’aide de l’API Adobe Experience Platform Segmentation Service.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
+source-git-commit: 885ebbcae223229f4614acd5b50266ea11bcf906
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 64%
@@ -28,7 +28,7 @@ Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe 
 
 ### En-têtes requis
 
-Ce tutoriel exige aussi que vous ayez terminé le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis) pour passer des appels à des API [!DNL Platform] Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Ce tutoriel exige aussi que vous ayez terminé le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer des appels à des API [!DNL Platform] Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
@@ -153,7 +153,7 @@ Les étapes suivantes sont requises pour exporter votre audience :
 - [Contrôle de la progression de l’exportation](#monitor-export-progress) : vérifiez la progression actuelle du processus d’exportation.
 - [Lecture des données d’audience](#next-steps) : récupérez les profils individuels XDM obtenus représentant les membres de votre audience.
 
-### Création d’un jeu de données cible
+### Création d’un jeu de données cible {#create-dataset}
 
 Lors de l’exportation d’une audience, un jeu de données cible doit d’abord être créé. Il est important que le jeu de données soit correctement configuré pour garantir la réussite de l’exportation.
 
