@@ -3,14 +3,24 @@ title: Notes de mise à jour du SDK web Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK Web Adobe Experience Platform.
 keywords: SDK Web Adobe Experience Platform;SDK Web Platform;SDK Web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: a768cde86215ed9aad19e45362c6185276456703
+source-git-commit: 3d8e21f76b23bac3ee88702c19cf6d6a6e25a3ae
 workflow-type: tm+mt
-source-wordcount: '852'
-ht-degree: 3%
+source-wordcount: '976'
+ht-degree: 2%
 
 ---
 
 # Notes de mise à jour
+
+## Version 2.9.0 - 10 mars 2022
+
+* Ajout de la prise en charge du suivi [!DNL control (default)] Expériences Adobe Target.
+* Optimisation des événements view-change pour les applications d’une seule page. La notification d’affichage est désormais incluse avec l’événement view-change lors de la génération d’expériences personnalisées.
+* Suppression de l’avertissement de la console lorsqu’il n’y en avait pas `eventType` est présente.
+* Correction d’un problème en raison duquel la variable `propositions` n’est renvoyée que par une `sendEvent` lorsque des expériences ont été demandées ou extraites du cache. Le `propositions` sera désormais toujours définie comme un tableau.
+* Correction d’un problème en raison duquel les conteneurs masqués n’étaient pas affichés lorsqu’une erreur était renvoyée depuis Adobe Experience Edge.
+* Correction d’un problème en raison duquel les événements d’interaction n’étaient pas comptabilisés dans Adobe Target. Ce problème a été corrigé en ajoutant le nom de la vue au fichier XDM sur web.webPageDetails.viewName.
+* Correction des liens rompus de la documentation dans les messages de la console.
 
 ## Version 2.8.0 - 19 janvier 2022
 
