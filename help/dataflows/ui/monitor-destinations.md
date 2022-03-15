@@ -6,9 +6,9 @@ title: Surveillance des flux de données pour les destinations dans l’interfac
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 0a6813d5d614d86940b042e03d2ab4f083644600
+source-git-commit: a076e9815050b10c0db5001a15371761710a3c28
 workflow-type: tm+mt
-source-wordcount: '3338'
+source-wordcount: '3365'
 ht-degree: 2%
 
 ---
@@ -194,6 +194,10 @@ Les mesures suivantes sont disponibles pour les tâches de segmentation :
 >id="platform_monitoring_activation"
 >title="Activation"
 >abstract="La vue d’activation de destination contient des informations sur l’état d’activation du segment et des mesures provenant de Real-time Customer Profile pour générer des identités uniques."
+
+>[!NOTE]
+>
+>La fonctionnalité de surveillance des destinations est actuellement prise en charge pour toutes les destinations dans Experience Platform. *Sauf* la valeur [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Centre d’événements Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), et [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
 
 Pour accéder au [!UICONTROL Surveillance] tableau de bord, sélectionnez **[!UICONTROL Surveillance]** (![icône de surveillance](../assets/ui/monitor-destinations/monitoring-icon.png)) dans le volet de navigation de gauche. Une fois sur le [!UICONTROL Surveillance] page, sélectionnez [!UICONTROL Destinations]. Le [!UICONTROL Surveillance] Le tableau de bord contient des mesures et des informations sur les tâches d’exécution de destination.
 

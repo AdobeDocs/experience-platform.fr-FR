@@ -4,9 +4,9 @@ title: Affichage des détails de destination
 description: 'La page de détails d’une destination individuelle fournit un aperçu des détails de destination. Les détails de la destination incluent le nom de destination, l’identifiant, les segments mappés à la destination et les contrôles permettant de modifier l’activation et d’activer et désactiver le flux de données. '
 seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 6d81973554f30642cafff54330140c606ab5499d
+source-git-commit: a129085f034665a6398bbf0ccfe2f1dc8acbdd8a
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '708'
 ht-degree: 6%
 
 ---
@@ -76,6 +76,10 @@ Vous pouvez utiliser la variable **[!UICONTROL Activé]/[!UICONTROL Désactivé]
 ## [!UICONTROL Exécutions de flux de données] {#dataflow-runs}
 
 Le [!UICONTROL Exécutions de flux de données] fournit des données de mesure sur vos flux de données s’exécutent sur des destinations par lot et en flux continu. Voir [Surveiller les flux de données](monitor-dataflows.md) pour plus d’informations et de définitions de mesures.
+
+>[!NOTE]
+>
+>La fonctionnalité de surveillance des destinations est actuellement prise en charge pour toutes les destinations dans Experience Platform. *Sauf* la valeur [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Centre d’événements Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), et [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
 
 ![Vue des exécutions du flux de données](../assets/ui/details-page/dataflow-runs.png)
 
