@@ -7,26 +7,38 @@ topic-legacy: Getting started
 description: Trouvez des réponses aux erreurs courantes de Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 896dda631cd4182f278de0607bea442d8366fe8c
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
 
 # Dépannage des erreurs de Customer AI
 
-Customer AI affiche des erreurs lorsque la formation, la notation et la configuration des modèles échouent. Dans la section **[!UICONTROL Instances de service]** , une colonne pour **[!UICONTROL DERNIER ÉTAT D’EXÉCUTION]** affiche l’un des messages suivants : **[!UICONTROL Succès]**, **[!UICONTROL Problème d’entraînement]** et **[!UICONTROL Échec]**.
+Customer AI affiche des erreurs lorsque la formation, la notation et la configuration des modèles échouent. Dans le **[!UICONTROL Instances de service]** , une colonne pour **[!UICONTROL DERNIÈRE EXÉCUTION]** affiche l’un des messages suivants : **[!UICONTROL Succès]**, **[!UICONTROL Problème de formation]**, et **[!UICONTROL En échec]**.
 
 ![état de la dernière exécution](./images/errors/last-run-status.png)
 
-Dans le cas où **[!UICONTROL Échec]** ou **[!UICONTROL Problème d’entraînement]** s’affiche, vous pouvez sélectionner l’état d’exécution pour ouvrir un panneau latéral. Le panneau latéral contient vos **[!UICONTROL états Dernière exécution]** et **[!UICONTROL détails de la dernière exécution]**. **[!UICONTROL Les]** détails de la dernière exécution contiennent des informations sur les raisons de l’échec de l’exécution. Dans le cas où Customer AI ne peut pas fournir de détails sur votre erreur, contactez l’assistance avec le code d’erreur fourni.
+Dans le cas où **[!UICONTROL En échec]** ou **[!UICONTROL Problème de formation]** s’affiche, vous pouvez sélectionner l’état d’exécution pour ouvrir un panneau latéral. Le panneau latéral contient votre **[!UICONTROL État de la dernière exécution]** et **[!UICONTROL Détails de la dernière exécution]**. **[!UICONTROL Détails de la dernière exécution]** contient des informations sur les raisons de l’échec de l’exécution. Dans le cas où Customer AI ne peut pas fournir de détails sur votre erreur, contactez l’assistance avec le code d’erreur fourni.
 
 <img src="./images/errors/last-run-details.png" width="300" /><br />
 
+## Impossible d’accéder à Customer AI dans Chrome incognito
+
+Les erreurs de chargement en mode incognito de Google Chrome sont présentes en raison des mises à jour apportées aux paramètres de sécurité du mode incognito de Google. Le problème est en cours de traitement avec Chrome pour faire d’experience.adobe.com un domaine de confiance.
+
+<img src="./images/errors/error.PNG" width="500" /><br />
+
+### Correctif recommandé
+
+Pour résoudre ce problème, vous devez ajouter experience.adobe.com en tant que site pouvant toujours utiliser des cookies. Commencez par accéder à **chrome://settings/cookies**. Faites ensuite défiler l’écran jusqu’à la **Comportements personnalisés** , puis sélectionnez **Ajouter** en regard de &quot;sites pouvant toujours utiliser des cookies&quot;. Dans la fenêtre contextuelle qui s’affiche, effectuez un copier-coller `[*.]experience.adobe.com` sélectionnez ensuite le **Inclusion de cookies tiers** sur ce site. Une fois l’opération terminée, sélectionnez **Ajouter** et rechargez Customer AI dans incognito.
+
+![correctif recommandé](./images/errors/cookies2.gif)
+
 ## La qualité du modèle est médiocre
 
-Si vous recevez l’erreur &quot;[!UICONTROL La qualité du modèle est médiocre. Nous vous recommandons de créer une application avec la configuration modifiée ]&quot;. Suivez les étapes recommandées ci-dessous pour résoudre les problèmes.
+Si vous recevez l’erreur &quot;[!UICONTROL La qualité du modèle est médiocre. Nous vous recommandons de créer une application avec la configuration modifiée.]&quot;. Suivez les étapes recommandées ci-dessous pour résoudre les problèmes.
 
 <img src="./images/errors/model-quality.png" width="300" /><br />
 
@@ -37,10 +49,10 @@ Si vous recevez l’erreur &quot;[!UICONTROL La qualité du modèle est médiocr
 Commencez par vérifier l’exactitude de vos données. Il est important que vos données contiennent les champs nécessaires à votre résultat prédictif.
 
 - Vérifiez si votre jeu de données comporte les dates les plus récentes. Customer AI suppose toujours que les données sont à jour lorsque le modèle est déclenché.
-- Recherchez les données manquantes dans la fenêtre de prédiction et d’éligibilité que vous avez définie. Vos données doivent être complètes sans intervalle. Assurez-vous également que votre jeu de données respecte les [exigences de données historiques de Customer AI](./input-output.md#data-requirements).
+- Recherchez les données manquantes dans la fenêtre de prédiction et d’éligibilité que vous avez définie. Vos données doivent être complètes sans intervalle. Assurez-vous également que votre jeu de données respecte la variable [Exigences en matière de données historiques Customer AI](./input-output.md#data-requirements).
 - Recherchez les données manquantes dans les propriétés de champ de schéma dans le commerce, l’application, le web et la recherche.
 
-Si vos données ne semblent pas poser problème, essayez de modifier la condition de population éligible pour limiter le modèle à certains profils (par exemple, il existe `_experience.analytics.customDimensions.eVars.eVar142` dans les 56 derniers jours). Cela limite la population et la taille des données utilisées dans la fenêtre d&#39;apprentissage.
+Si vos données ne semblent pas poser problème, essayez de modifier la condition d&#39;éligibilité de la population pour restreindre le modèle à certains profils (par exemple, `_experience.analytics.customDimensions.eVars.eVar142` existe dans les 56 derniers jours). Cela limite la population et la taille des données utilisées dans la fenêtre d&#39;apprentissage.
 
 Si la limitation de la population éligible n’a pas fonctionné ou n’est pas possible, modifiez votre fenêtre de prédiction.
 

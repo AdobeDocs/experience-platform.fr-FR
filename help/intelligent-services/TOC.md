@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Aide d’Intelligent Services
 breadcrumb-title: Guide des services intelligents
 user-guide-description: Utilisez les services intelligents d’IA pour générer des scores, découvrir des insights et créer des segments à partir des données de vos événements marketing.
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
-workflow-type: ht
-source-wordcount: '121'
+source-git-commit: 43405e50d0c418a8ee988f4d10b187cc4941c5ea
+workflow-type: tm+mt
+source-wordcount: '123'
 ht-degree: 100%
 
 ---
@@ -24,6 +24,7 @@ ht-degree: 100%
    - [Découvrez des informations](attribution-ai/discover-insights.md)
    - [Téléchargez des scores](attribution-ai/download-scores.md)
    - [Analysez des scores à lʼaide de Query Service](attribution-ai/aai-query-service.md)
+   - [Résolution des problèmes](attribution-ai/troubleshooting.md)
 - IA dédiée au contenu et au commerce (bêta) {#content-commerce-ai}
    - [Présentation](content-commerce-ai/overview.md)
    - [Prise en main](content-commerce-ai/getting-started.md)
