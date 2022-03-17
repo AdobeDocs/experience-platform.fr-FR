@@ -3,9 +3,9 @@ title: Configuration du flux de données pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer les flux de données. '
 keywords: configuration;datastreams;datastreamId;edge;datastream id;paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;ID de conteneur de synchronisation;sandbox;flux de données;jeu de données d’événement;cible;code client;jeton de propriété;ID d’environnement cible;destinations de cookie;destinations d’URL;ID de suite de rapports de paramètres Analytics;ID de blocage
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
+source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1944'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ Ce document décrit les étapes de configuration d’un flux de données dans l�
 
 >[!NOTE]
 >
->Votre entreprise doit être configurée pour cette fonctionnalité afin d’y accéder dans l’interface utilisateur. Si vous n’y avez pas accès, contactez votre responsable du succès client pour qu’il soit mis en liste autorisée.
+>Votre entreprise doit être configurée pour cette fonctionnalité afin d’y accéder dans l’interface utilisateur. Si vous n’y avez pas accès, veuillez remplir les champs suivants : [formulaire](http://adobe.ly/websdkaccess) et nous vous accorderons l&#39;accès nécessaire.
 
 ## Accédez au [!UICONTROL Datastreams] workspace
 
