@@ -3,7 +3,7 @@ keywords: Amazon S3;destination S3;s3;amazon s3
 title: Connexion à Amazon S3
 description: Créez une connexion sortante active à votre stockage Amazon Web Services (AWS) S3 pour exporter périodiquement des fichiers de données CSV de Adobe Experience Platform vers vos propres compartiments S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%
@@ -39,20 +39,17 @@ Pour vous connecter à cette destination, procédez comme décrit dans la sectio
 >id="platform_destinations_connect_s3_bucket"
 >title="Nom du compartiment"
 >abstract="Doit comporter entre 3 et 63 caractères. Doit commencer et se terminer par une lettre ou un numéro. Ne doit contenir que des lettres minuscules, des chiffres ou des tirets ( - ). Ne doit pas être formaté en tant qu’adresse IP (par exemple, 192.100.1.1)."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"
 >title="Chemin du dossier"
 >abstract="Doit contenir uniquement les caractères A-Z, a-z, 0-9 et peut contenir les caractères spéciaux suivants : `/!-_.'()"^[]+$%.*"`. Pour créer un dossier par fichier de segment, insérez la macro /%SEGMENT_NAME% ou /%SEGMENT_ID% ou /%SEGMENT_NAME%/%SEGMENT_ID% dans le champ de texte. Les macros ne peuvent être insérées qu’à la fin du chemin du dossier. Affichez des exemples de macro dans la documentation."
->text="Learn more in documentation"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=en#use-macros" text="Utilisez les macros pour créer un dossier à l’emplacement de stockage"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
 >title="Clé publique RSA"
 >abstract="Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que chaîne codée Base64."
->text="Learn more in documentation"
 
 while [configuration](../../ui/connect-destination.md) Pour cette destination, vous devez fournir les informations suivantes :
 

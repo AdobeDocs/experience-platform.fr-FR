@@ -3,10 +3,10 @@ keywords: Azure Blob;destination Blob;s3;destination blob Azure
 title: Connexion Azure Blob
 description: Créez une connexion sortante active à votre stockage Azure Blob pour exporter périodiquement des fichiers de données CSV à partir de Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 16%
+source-wordcount: '503'
+ht-degree: 15%
 
 ---
 
@@ -49,6 +49,11 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 Pour vous connecter à cette destination, procédez comme décrit dans la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
 ### Paramètres de connexion {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_blob_rsa"
+>title="Clé publique RSA"
+>abstract="Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que chaîne codée Base64."
 
 while [configuration](../../ui/connect-destination.md) Pour cette destination, vous devez fournir les informations suivantes :
 
