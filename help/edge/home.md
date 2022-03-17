@@ -3,10 +3,10 @@ title: Présentation du SDK Web Adobe Experience Platform
 description: Découvrez comment utiliser le SDK Web de Adobe Experience Platform pour intégrer des fonctionnalités de Platform à votre site web.
 keywords: SDK Web Adobe Experience Platform;SDK Web Platform;SDK Web;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;sdk Web;SDK;SDK Web;Launch;lancement
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 1048f19e2395f63fac8c4218ed92a546b8071a93
+source-git-commit: 71857ffc5e671f4d9a0502fb95d89d30fdec1f15
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 13%
+source-wordcount: '622'
+ht-degree: 17%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 13%
 
 Le SDK Web de Adobe Experience Platform est une bibliothèque JavaScript côté client qui permet aux clients de Adobe Experience Cloud d’interagir avec les différents services du [!DNL Experience Cloud] via Adobe Experience Platform Edge Network. Outre la bibliothèque JavaScript, il existe une [extension de balise](./extension/web-sdk-extension-configuration.md) pour obtenir de l’aide sur les configurations de votre SDK Web.
 
-**Pour obtenir un guide détaillé sur la configuration du SDK Web avec des balises et l’envoi de données aux solutions, consultez notre [Tutoriel sur la mise en oeuvre de Adobe Experience Cloud avec le SDK Web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=en)**
+**Pour obtenir un guide détaillé sur la configuration du SDK Web avec des balises et l’envoi de données aux solutions, consultez notre [Tutoriel sur la mise en oeuvre de Adobe Experience Cloud avec le SDK Web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=fr)**
 
 ## Experience Edge
 
@@ -62,9 +62,4 @@ La vidéo suivante présente Adobe Experience Platform [!DNL Web SDK] et Adobe E
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-Ce produit évolue et se développe constamment pour prendre en charge de plus en plus de cas d’utilisation. Pour connaître la dernière version, reportez-vous à la section [page des cas d’utilisation pris en charge](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html). Cette page répertorie les cas d’utilisation actuellement pris en charge, avec des liens vers d’autres informations lorsque disponibles.
-
-* **Cas D’Utilisation Non Encore Pris En Charge :** Il s’agit de cas d’utilisation sur notre feuille de route qui seront pris en charge à l’avenir.
-* **Cas D’Utilisation En Cours :** Il s’agit des cas d’utilisation sur lesquels l’équipe travaille actuellement pour la mise à jour.
-* **Cas d’utilisation pris en charge :** Il s’agit des cas d’utilisation pris en charge et qui fonctionnent aujourd’hui.
-* **Cas d’utilisation que nous ne prendrons pas en charge :** Il s’agit des cas d’utilisation que nous avons pris la décision de ne pas prendre en charge.
+Ce produit évolue et se développe constamment pour prendre en charge de plus en plus de cas d’utilisation. Pour connaître les dernières nouveautés et connaître les fonctionnalités actuellement prises en charge, reportez-vous à la section [page des cas d’utilisation pris en charge](https://github.com/orgs/adobe/projects/18/views/1).
