@@ -4,10 +4,10 @@ description: Découvrez comment configurer le SDK Web de Adobe Experience Platfo
 seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: configure;configuration;SDK;edge;SDK Web;configure;edgeConfigId;contexte;web;périphérique;environnement;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;paramètres du sdk web;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinations;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
+source-git-commit: 4d0f1b3e064bd7b24e17ff0fafb50d930b128968
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 40%
+source-wordcount: '860'
+ht-degree: 39%
 
 ---
 
@@ -17,7 +17,7 @@ La configuration du SDK est effectuée à l’aide de la commande `configure`.
 
 >[!IMPORTANT]
 >
->`configure` est  ** toujours la première commande appelée.
+>`configure` is *always* la première commande appelée.
 
 ```javascript
 alloy("configure", {
@@ -72,9 +72,19 @@ Indique si le débogage est activé. La définition de cette configuration sur l
 
 ### `edgeDomain` {#edge-domain}
 
-Renseignez ce champ avec votre domaine propriétaire. Pour plus d’informations, consultez la [documentation](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=fr).
+Renseignez ce champ avec votre domaine propriétaire. Pour plus d’informations, reportez-vous à la section [documentation](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=fr).
 
 Le domaine est similaire à `data.{customerdomain.com}` pour un site web à l’adresse www.{customerdomain.com}.
+
+### `edgeBasePath` {#edge-base-path}
+
+Chemin d’accès après le edgeDomain utilisé pour communiquer et interagir avec les services Adobe.  Souvent, cela ne change que si vous n’utilisez pas l’environnement de production par défaut.
+
+| **Type** | **Obligatoire** | **Valeur par défaut** |
+| -------- | ------------ | ----------------- |
+| Chaîne | Non | ee |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### `orgId`
 
@@ -84,7 +94,7 @@ Le domaine est similaire à `data.{customerdomain.com}` pour un site web à l’
 
 {style=&quot;table-layout:auto&quot;}
 
-ID d’organisation [!DNL Experience Cloud] que vous avez attribué. Lors de la configuration de plusieurs instances dans une page, vous devez configurer un `orgId` différent pour chaque instance.
+Votre [!DNL Experience Cloud] ID d’organisation. Lors de la configuration de plusieurs instances dans une page, vous devez configurer un `orgId` différent pour chaque instance.
 
 ## Collecte de données
 
@@ -106,7 +116,7 @@ Indique si les données associées aux clics sur les liens sont automatiquement 
 
 {style=&quot;table-layout:auto&quot;}
 
-Configurez un rappel appelé pour chaque événement juste avant son envoi. Un objet avec le champ `xdm` est envoyé dans le rappel. Pour modifier ce qui est envoyé, modifiez l’objet `xdm` . Dans le rappel, les données de l’objet `xdm` sont déjà transmises dans la commande d’événement et les informations collectées automatiquement. Pour plus d’informations sur le minutage de ce rappel et pour obtenir un exemple, voir [Modification globale des événements](tracking-events.md#modifying-events-globally).
+Configurez un rappel appelé pour chaque événement juste avant son envoi. Un objet avec le champ `xdm` est envoyé dans le rappel. Pour modifier ce qui est envoyé, modifiez la variable `xdm` . Dans le rappel, la variable `xdm` contient déjà les données transmises dans la commande d’événement et les informations collectées automatiquement. Pour plus d’informations sur le minutage de ce rappel et pour obtenir un exemple, voir [Modification globale des événements](tracking-events.md#modifying-events-globally).
 
 ## Options de confidentialité
 
@@ -118,7 +128,7 @@ Configurez un rappel appelé pour chaque événement juste avant son envoi. Un o
 
 {style=&quot;table-layout:auto&quot;}
 
-Définit le consentement par défaut de l’utilisateur. Utilisez ce paramètre lorsqu’aucune préférence de consentement n’est déjà enregistrée pour l’utilisateur. Les autres valeurs valides sont `"pending"` et `"out"`. Cette valeur par défaut n’est pas conservée dans le profil de l’utilisateur. Le profil de l’utilisateur n’est mis à jour que lors de l’appel de `setConsent`.
+Définit le consentement par défaut de l’utilisateur. Utilisez ce paramètre lorsqu’aucune préférence de consentement n’est déjà enregistrée pour l’utilisateur. Les autres valeurs valides sont `"pending"` et `"out"`. Cette valeur par défaut n’est pas conservée dans le profil de l’utilisateur. Le profil de l’utilisateur n’est mis à jour que lorsque `setConsent` est appelée.
 * `"in"`: Lorsque ce paramètre est défini ou qu’aucune valeur n’est fournie, le travail se poursuit sans préférences de consentement de l’utilisateur.
 * `"pending"`: Lorsque ce paramètre est défini, le travail est mis en file d’attente jusqu’à ce que l’utilisateur fournisse les préférences de consentement.
 * `"out"`: Lorsque ce paramètre est défini, le travail est ignoré jusqu’à ce que l’utilisateur fournisse les préférences de consentement.
@@ -136,7 +146,7 @@ Une fois les préférences de l’utilisateur fournies, le travail se poursuit o
 
 Permet de créer une définition de style CSS qui masque les zones de contenu de votre page web pendant le chargement du contenu personnalisé à partir du serveur. Si cette option n’est pas fournie, le SDK ne tente pas de masquer les zones de contenu pendant le chargement du contenu personnalisé, ce qui peut entraîner un &quot;scintillement&quot;.
 
-Par exemple, si un élément de votre page web possède l’identifiant `container`, dont vous souhaitez masquer le contenu par défaut lorsque le contenu personnalisé est chargé à partir du serveur, utilisez le style de masquage préalable suivant :
+Par exemple, si un élément de votre page web comporte un identifiant de `container`, dont vous souhaitez masquer le contenu par défaut lorsque le contenu personnalisé est chargé à partir du serveur, utilisez le style de prémasquage suivant :
 
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
@@ -152,7 +162,7 @@ Par exemple, si un élément de votre page web possède l’identifiant `contain
 
 {style=&quot;table-layout:auto&quot;}
 
-Active les destinations de cookie [!DNL Audience Manager], ce qui permet de définir des cookies en fonction de la qualification du segment.
+Active [!DNL Audience Manager] destinations de cookie, qui permet de définir des cookies en fonction de la qualification des segments.
 
 ### `urlDestinationsEnabled`
 
@@ -162,7 +172,7 @@ Active les destinations de cookie [!DNL Audience Manager], ce qui permet de déf
 
 {style=&quot;table-layout:auto&quot;}
 
-Active les destinations d’URL [!DNL Audience Manager], ce qui permet de déclencher des URL en fonction de la qualification des segments.
+Active [!DNL Audience Manager] Destinations d’URL, qui permettent de déclencher des URL en fonction de la qualification des segments.
 
 ## Options d’identité
 
