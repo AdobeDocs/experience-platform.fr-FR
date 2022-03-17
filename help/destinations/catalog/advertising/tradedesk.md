@@ -3,10 +3,10 @@ keywords: la publicité; le bureau de commerce; pupitre publicitaire
 title: La connexion au bureau de commerce
 description: Le bureau commercial est une plateforme en libre-service permettant aux acheteurs de publicités d’exécuter le reciblage et d’exécuter des campagnes numériques ciblées sur l’affichage, la vidéo et les sources d’inventaire mobiles.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 2%
+source-wordcount: '552'
+ht-degree: 4%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 Pour envoyer des données de profil à [!DNL Trade Desk], vous devez d’abord vous connecter à la destination.
 
-## Cas d’utilisation {#use-cases}
+## Cas dʼutilisation {#use-cases}
 
 En tant que marketeur, je souhaite pouvoir utiliser des segments reposant sur [!DNL Trade Desk IDs] ou des identifiants d’appareil pour créer un reciblage ou des campagnes numériques ciblées.
 
@@ -34,9 +34,18 @@ En tant que marketeur, je souhaite pouvoir utiliser des segments reposant sur [!
 | IDFA | [!DNL Apple ID for Advertisers] |
 | ID de bureau commercial | Identifiant publicitaire sur la plateforme Trade Desk |
 
-## Type d&#39;export {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**[!DNL Segment export]** : vous exportez tous les membres d’un segment (audience) vers la destination.
+## Type et fréquence d&#39;export {#export-type-frequency}
+
+Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
+
+| Élément | Type | Notes |
+---------|----------|---------|
+| Type d&#39;export | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) vers la destination. |
+| Fréquence des exports | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont &quot;toujours sur&quot; des connexions basées sur l’API. Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Conditions préalables {#prerequisites}
 

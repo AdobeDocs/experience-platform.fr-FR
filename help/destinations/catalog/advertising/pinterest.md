@@ -2,10 +2,10 @@
 title: Connexion à la liste des clients pinterest
 description: Créez des audiences à partir des listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 90aa0d16851443255dd4828e9f28330a89a12692
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 5%
+source-wordcount: '578'
+ht-degree: 6%
 
 ---
 
@@ -39,9 +39,16 @@ Dans le [étape de mappage](/help/destinations/ui/activate-segment-streaming-des
 
 {style=&quot;table-layout:auto&quot;}
 
-## Type d&#39;export {#export-type}
+## Type et fréquence d&#39;export {#export-type-frequency}
 
-**Exportation de segments** : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination de liste de clients Pinterest.
+Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
+
+| Élément | Type | Notes |
+---------|----------|---------|
+| Type d&#39;export | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination de liste de clients Pinterest. |
+| Fréquence des exports | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont &quot;toujours sur&quot; des connexions basées sur l’API. Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Cas d’utilisation {#use-cases}
 

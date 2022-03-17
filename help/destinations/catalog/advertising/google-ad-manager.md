@@ -3,10 +3,10 @@ keywords: gestionnaire de publicités Google;publicité Google;double-clic;Doubl
 title: Connexion à Google Ad Manager
 description: Google Ad Manager, anciennement appelé DoubleClick for Publishers ou DoubleClick AdX, est une plateforme de service publicitaire de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, par le biais de vidéos et dans des applications mobiles.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 24%
+source-wordcount: '718'
+ht-degree: 23%
 
 ---
 
@@ -37,15 +37,24 @@ Notez les détails suivants qui sont spécifiques à [!DNL Google Ad Manager] de
 | MAID | Microsoft Advertising ID. Cet identifiant identifie de manière unique les périphériques exécutant Windows 10. |  |
 | Identifiant Amazon Fire TV | Cet identifiant identifie de manière unique les téléviseurs Amazon Fire. |  |
 
-## Type d&#39;export {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**Exportation de segments** : vous exportez tous les membres d’un segment (audience) vers la destination Google.
+## Type et fréquence d&#39;export {#export-type-frequency}
 
-## Conditions préalables
+Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
+
+| Élément | Type | Notes |
+---------|----------|---------|
+| Type d&#39;export | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) vers la destination Google. |
+| Fréquence des exports | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont &quot;toujours sur&quot; des connexions basées sur l’API. Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Conditions préalables {#prerequisites}
 
 Si vous souhaitez créer votre première destination avec [!DNL Google Ad Manager] et n’ont pas activé la variable [Fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) dans le service d’ID Experience Cloud par le passé (avec Audience Manager ou d’autres applications), veuillez contacter Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez déjà configuré [!DNL Google] intégrations dans Audience Manager, les synchronisations d’ID que vous avez configurées sont transférées à Platform.
 
-## Liste autorisée
+### Liste autorisée {#allow-listing}
 
 >[!NOTE]
 >
@@ -82,6 +91,6 @@ while [configuration](../../ui/connect-destination.md) Pour cette destination, v
 
 Voir [Activation des données d’audience vers des destinations d’exportation de segments par flux](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
-## Données exportées
+## Données exportées {#exported-data}
 
 Pour vérifier si les données ont bien été exportées vers la variable [!DNL Google Ad Manager] destination, vérifiez votre [!DNL Google Ad Manager] compte . Si l’activation a réussi, les audiences sont renseignées dans votre compte.

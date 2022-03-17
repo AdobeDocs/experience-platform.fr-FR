@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinations d’e-mail;destination de réponse d’orac
 title: Oracle de la connexion Responsys
 description: Responsys est un outil de marketing par e-mail d’entreprise proposé par Oracle dans le cadre de campagnes marketing sur plusieurs canaux. Il permet de personnaliser les interactions entre e-mails, terminaux mobiles, écrans et réseaux sociaux.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '522'
 ht-degree: 20%
 
 ---
@@ -18,9 +18,16 @@ ht-degree: 20%
 
 Pour envoyer des données de segment à [!DNL Oracle Responsys], vous devez d’abord [se connecter à la destination](#connect-destination) dans Adobe Experience Platform, puis [configurer un import de données](#import-data-into-responsys) de votre emplacement de stockage dans [!DNL Oracle Responsys].
 
-## Type d&#39;export {#export-type}
+## Type et fréquence d&#39;export {#export-type-frequency}
 
-**Basé sur les profils** - vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), selon le choix effectué dans l’écran de sélection des attributs de la variable [workflow d&#39;activation d&#39;audience](../../ui/activate-batch-profile-destinations.md#select-attributes).
+Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
+
+| Élément | Type | Notes |
+---------|----------|---------|
+| Type d&#39;export | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil de la fonction [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Fréquence des exports | **[!UICONTROL Lot]** | Les destinations de lot exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur [destinations basées sur des fichiers de lots](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## LISTE AUTORISÉE d’adresses IP {#allow-list}
 

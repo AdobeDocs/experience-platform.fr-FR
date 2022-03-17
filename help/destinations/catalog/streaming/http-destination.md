@@ -3,9 +3,9 @@ keywords: diffusion en continu;
 title: Connexion via l’API HTTP
 description: La destination d’API HTTP dans Adobe Experience Platform vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1376'
 ht-degree: 3%
 
 ---
@@ -27,6 +27,17 @@ Pour envoyer des données de profil aux points de terminaison HTTP, vous devez d
 La destination HTTP est destinée aux clients qui doivent exporter les données de profil XDM et les segments d’audience vers des points de terminaison HTTP génériques.
 
 Les points de terminaison HTTP peuvent être les systèmes des clients ou des solutions tierces.
+
+## Type et fréquence d&#39;export {#export-type-frequency}
+
+Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
+
+| Élément | Type | Notes |
+---------|----------|---------|
+| Type d&#39;export | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil de la fonction [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Fréquence des exports | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont &quot;toujours sur&quot; des connexions basées sur l’API. Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Conditions préalables {#prerequisites}
 

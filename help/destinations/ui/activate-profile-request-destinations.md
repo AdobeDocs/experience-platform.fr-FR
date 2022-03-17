@@ -1,15 +1,15 @@
 ---
 keywords: activation des destinations de requête de profil;activation des données;destinations de requête de profil
-title: Activation des données d’audience vers les destinations de requête de profil (version bêta)
+title: Activation des données d’audience vers les destinations de requête de profil
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de requête de profil.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: d0660f29df93659990d80353f86dcbf856afb733
+source-git-commit: 388a061c87cfe9acda177ed71ed9f6017c8c2f4c
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 8%
+source-wordcount: '434'
+ht-degree: 9%
 
 ---
 
@@ -79,6 +79,12 @@ Si aucune violation de stratégie n’a été détectée, sélectionnez **[!UICO
 
 ![Révision](../assets/ui/activate-profile-request-destinations/review.png)
 
-## Vérification de l’activation des segments {#verify}
+<!--
 
-Vérifiez les [documentation sur la surveillance des destinations](../../dataflows/ui/monitor-destinations.md) pour obtenir des informations détaillées sur la manière de surveiller le flux de données vers vos destinations.
+Commenting out this part since destination monitoring is not available currently for the Adobe Target and Custom Personalization destinations.
+
+## Verify segment activation {#verify}
+
+Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
+
+-->

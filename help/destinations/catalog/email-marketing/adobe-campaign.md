@@ -1,26 +1,33 @@
 ---
 keywords: e-mail;e-mail;destinations d’e-mail;adobe campaign;campagne
 title: Connexion Adobe Campaign
-description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
+description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '764'
 ht-degree: 16%
 
 ---
 
-# Connexion Adobe Campaign
+# Adobe Campaign connection
 
 ## Présentation {#overview}
 
-Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne. Voir [Prise en main du Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html?lang=fr) pour plus d’informations.
+Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne. Voir [Prise en main du Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html?lang=fr) pour plus d’informations.
 
 Pour envoyer des données de segment à Adobe Campaign, vous devez d’abord [connecter la destination](#connect-destination) dans Adobe Experience Platform, puis [configurer un import de données](#import-data-into-campaign) de votre emplacement de stockage dans Adobe Campaign.
 
-## Type d&#39;export {#export-type}
+## Type et fréquence d&#39;export {#export-type-frequency}
 
-**Basé sur les profils** - vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : l’adresse électronique, le numéro de téléphone, le nom de famille), selon le choix effectué dans la variable **[!UICONTROL Sélectionner des attributs]** de la [workflow d&#39;activation d&#39;audience](../../ui/activate-batch-profile-destinations.md#select-attributes).
+Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
+
+| Élément | Type | Notes |
+---------|----------|---------|
+| Type d&#39;export | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil de la fonction [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Fréquence des exports | **[!UICONTROL Lot]** | Les destinations de lot exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur [destinations basées sur des fichiers de lots](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## LISTE AUTORISÉE d’adresses IP {#allow-list}
 
@@ -69,7 +76,7 @@ Lors de l’activation des segments vers cette destination, Adobe vous recommand
 
 Pour [!DNL Adobe Campaign] destinations, [!DNL Platform] crée une `.csv` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [vérification de l’activation des segments](../../ui/activate-batch-profile-destinations.md#verify) dans le tutoriel sur l’activation des segments.
 
-## Configurer l’importation des données dans Adobe Campaign {#import-data-into-campaign}
+## Configurer l’importation des données dans Adobe Campaign {#import-data-into-campaign}
 
 >[!IMPORTANT]
 >

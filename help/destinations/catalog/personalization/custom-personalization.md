@@ -1,16 +1,16 @@
 ---
 keywords: personnalisation personnalisée ; destination; destination personnalisée de la plateforme d’expérience ;
-title: Connexion à la personnalisation personnalisée
+title: Connexion de personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer des informations de segment à partir de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance au segment du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
+source-git-commit: 95d287f3eac08064da35aea7c4cb22ea901c7324
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 6%
+source-wordcount: '678'
+ht-degree: 7%
 
 ---
 
-# Connexion à la personnalisation personnalisée {#custom-personalization-connection}
+# Connexion de personnalisation personnalisée {#custom-personalization-connection}
 
 ## Présentation {#overview}
 
@@ -24,7 +24,7 @@ Cette intégration est optimisée par la fonction [SDK Web Adobe Experience Plat
 >
 >Avant de créer une connexion de personnalisation personnalisée, lisez le guide sur la façon de [configuration des destinations de personnalisation pour la personnalisation de la même page et de la page suivante](../../ui/configure-personalization-destinations.md). Ce guide vous guide tout au long des étapes de configuration requises pour les cas d’utilisation de la personnalisation de la même page et de la page suivante, sur plusieurs composants Experience Platform.
 
-## Type d&#39;export {#export-type}
+## Type et fréquence d&#39;export {#export-type-frequency}
 
 **Requête de profil** - vous demandez tous les segments mappés dans la destination de personnalisation personnalisée pour un profil unique. Différentes destinations de personnalisation personnalisées peuvent être configurées pour différentes [Adobe des flux de données de collecte de données](../../../edge/fundamentals/datastreams.md).
 

@@ -3,10 +3,10 @@ keywords: 'la publicité; bing; '
 title: Connexion à Microsoft Bing
 description: Avec la destination de connexion Microsoft Bing, vous pouvez exécuter le reciblage et l’audience des campagnes numériques ciblées dans Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 1%
+source-wordcount: '464'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ Le [!DNL Microsoft Bing] la destination vous aide à envoyer des données de pro
 
 Pour envoyer des données de profil à [!DNL Microsoft Bing], vous devez d’abord vous connecter à la destination.
 
-## Cas d’utilisation {#use-cases}
+## Cas dʼutilisation {#use-cases}
 
 En tant que marketeur, je souhaite pouvoir utiliser des segments reposant sur [!DNL Microsoft Advertising IDs] pour cibler les utilisateurs via des publicités display à l’échelle de [!DNL Microsoft Advertising] canaux.
 
@@ -30,9 +30,20 @@ En tant que marketeur, je souhaite pouvoir utiliser des segments reposant sur [!
 |---|---|
 | MAID | Microsoft Advertising ID |
 
-## Type d&#39;export {#export-type}
+{style=&quot;table-layout:auto&quot;}
+
+## Type et fréquence d&#39;export {#export-type-frequency}
 
 **[!DNL Segment Export]** : vous exportez tous les membres d’un segment (audience) vers le [!DNL Microsoft Bing] destination.
+
+Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
+
+| Élément | Type | Notes |
+---------|----------|---------|
+| Type d&#39;export | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) vers le [!DNL Microsoft Bing] destination. |
+| Fréquence des exports | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont &quot;toujours sur&quot; des connexions basées sur l’API. Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Conditions préalables {#prerequisites}
 

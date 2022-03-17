@@ -3,10 +3,10 @@ keywords: personnalisation de la cible ; destination; destination de la cible de
 title: Connexion Adobe Target
 description: Adobe Target est une application qui fournit des fonctionnalités de personnalisation et d’expérimentation optimisées par l’IA en temps réel dans toutes les interactions client entrantes entre sites web, applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 8%
+source-wordcount: '530'
+ht-degree: 11%
 
 ---
 
@@ -26,9 +26,16 @@ Cette intégration est optimisée par la fonction [SDK Web Adobe Experience Plat
 >
 >Avant de créer un [!DNL Adobe Target] connexion, lisez le guide sur la façon de [configuration des destinations de personnalisation pour la personnalisation de la même page et de la page suivante](../../ui/configure-personalization-destinations.md). Ce guide vous guide tout au long des étapes de configuration requises pour les cas d’utilisation de la personnalisation de la même page et de la page suivante, sur plusieurs composants Experience Platform.
 
-## Type d&#39;export {#export-type}
+## Type et fréquence d&#39;export {#export-type-frequency}
 
-**Requête de profil** - vous demandez tous les segments mappés dans la destination Adobe Target pour un profil unique.
+Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
+
+| Élément | Type | Notes |
+---------|----------|---------|
+| Type d&#39;export | **[!DNL Profile request]** | Vous demandez tous les segments mappés dans la destination Adobe Target pour un seul profil. |
+| Fréquence des exports | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont &quot;toujours sur&quot; des connexions basées sur l’API. Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Cas dʼutilisation {#use-cases}
 

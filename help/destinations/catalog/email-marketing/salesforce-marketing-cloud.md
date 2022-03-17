@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinations d’e-mail;Salesforce;destination Salesforc
 title: Connexion au Marketing Cloud Salesforce
 seo-description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '506'
 ht-degree: 18%
 
 ---
@@ -18,9 +18,16 @@ ht-degree: 18%
 
 Pour envoyer des données de segment à [!DNL Salesforce Marketing Cloud], vous devez d’abord [connecter la destination](#connect-destination) dans Platform, puis [configurer un import de données](#import-data-into-salesforce) de votre emplacement de stockage dans [!DNL Salesforce Marketing Cloud].
 
-## Type d&#39;export {#export-type}
+## Type et fréquence d&#39;export {#export-type-frequency}
 
-**Basé sur les profils** - vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), selon le choix effectué dans l’écran de sélection des attributs de la variable [workflow d&#39;activation d&#39;audience](../../ui/activate-batch-profile-destinations.md#select-attributes).
+Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
+
+| Élément | Type | Notes |
+---------|----------|---------|
+| Type d&#39;export | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil de la fonction [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Fréquence des exports | **[!UICONTROL Lot]** | Les destinations de lot exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur [destinations basées sur des fichiers de lots](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## LISTE AUTORISÉE d’adresses IP {#allow-list}
 
