@@ -6,10 +6,11 @@ topic-legacy: tutorial
 description: Ce document décrit les étapes à suivre pour utiliser l’interface web GitHub afin de créer de la documentation et d’envoyer une requête de tirage (PR).
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
+source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 3%
+source-wordcount: '624'
+ht-degree: 2%
 
 ---
 
@@ -35,7 +36,11 @@ Une fois le branchement terminé, sélectionnez **master** et saisissez le nom d
 
 ![create-branch](../assets/create-branch.png)
 
-Dans la structure de dossiers GitHub de votre référentiel dupliqué, accédez à `experience-platform.en/help/sources/tutorials/api/create/` puis sélectionnez la catégorie appropriée à votre source dans la liste. Par exemple, si vous créez de la documentation pour une nouvelle source de stockage dans le cloud, sélectionnez **espace de stockage dans le cloud**.
+Dans la structure de dossiers GitHub de votre référentiel dupliqué, accédez à [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) puis sélectionnez la catégorie appropriée à votre source dans la liste. Par exemple, si vous créez de la documentation pour une nouvelle source de stockage dans le cloud, sélectionnez **espace de stockage dans le cloud**.
+
+>[!TIP]
+>
+>Si vous créez une documentation pour l’interface utilisateur, accédez à [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) et sélectionnez la catégorie appropriée à votre source. Pour ajouter vos images, accédez à [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) ajoutez ensuite vos captures d’écran à la `sdk` dossier.
 
 ![espace de stockage dans le cloud](../assets/cloud-storage.png)
 

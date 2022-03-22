@@ -6,9 +6,10 @@ topic-legacy: overview
 description: La dernière étape avant que votre nouvelle source puisse être mise en ligne dans Adobe Experience Platform consiste à documenter votre nouvelle source.
 hide: true
 hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
+source-git-commit: e732a43f7ac578d7fde41c48d2c819899fabb0be
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -44,7 +45,10 @@ Les éléments suivants sont requis pour pouvoir commencer à documenter votre n
 
 Vous pouvez utiliser un champ prérempli [modèle de documentation](./template.md) pour faciliter la création de la documentation pour votre source. Vous trouverez ci-dessous des instructions sur la manière de modifier le modèle et d’ouvrir une requête d’extraction. La documentation envoyée pour votre nouvelle source sera révisée et publiée par l’équipe de documentation d’Adobe.
 
-Vous pouvez également télécharger la variable [modèle de documentation ici](../assets/template.zip).
+Vous pouvez également télécharger les modèles de documentation ci-dessous :
+
+* [Modèle de documentation d’API](../assets/template.zip)
+* [Modèle de documentation de l’interface utilisateur](../assets/ui-template.zip)
 
 ## Créer une page source
 
