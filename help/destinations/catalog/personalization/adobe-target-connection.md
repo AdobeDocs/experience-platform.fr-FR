@@ -3,7 +3,7 @@ keywords: personnalisation de la cible ; destination; destination de la cible de
 title: Connexion Adobe Target
 description: Adobe Target est une application qui fournit des fonctionnalités de personnalisation et d’expérimentation optimisées par l’IA en temps réel dans toutes les interactions client entrantes entre sites web, applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 05217dead7e1365d6dcc0cc7ae4078628514d1d5
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 11%
@@ -49,7 +49,7 @@ Une société de location et de vente d’habitations souhaite personnaliser sa 
 >id="platform_destinations_target_datastream"
 >title="À propos des identifiants de flux de données"
 >abstract="Cette option détermine dans quel jeu de données de collecte de données les segments seront inclus dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Vous devez configurer un flux de données avant de pouvoir configurer votre destination."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Découvrez comment configurer un flux de données."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Découvrez comment configurer un flux de données"
 
 Pour vous connecter à cette destination, procédez comme décrit dans la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
