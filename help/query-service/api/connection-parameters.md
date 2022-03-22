@@ -5,22 +5,22 @@ title: Point de terminaison de l’API des paramètres de connexion
 topic-legacy: connection parameters
 description: Vous pouvez récupérer vos paramètres de connexion pour utiliser le service interactif en envoyant une requête GET au point de terminaison /connection_parameters .
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: cff95575530e0db00d34ff1ea4c90e5422b6562d
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 38%
+source-wordcount: '130'
+ht-degree: 28%
 
 ---
 
 # Point d’entrée des paramètres de connexion
 
-## Exemples d’appels API
+## Exemple d’appel API
 
-Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commencer à lancer des appels à l’API [!DNL Query Service]. Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide de l’API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+La section suivante vous guide tout au long de l’appel API que vous pouvez effectuer à l’aide de la variable [!DNL Query Service] API. L’appel inclut le format général de l’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
 ### Demande de paramètres de connexion
 
-Vous pouvez récupérer vos paramètres de connexion en effectuant une requête de GET sur le point de terminaison `/connection_parameters`. Pour plus d’informations sur les clients utilisant des paramètres de connexion pour se connecter via le service interactif, consultez la documentation sur les [clients de Query Service](../clients/overview.md).
+Vous pouvez récupérer vos paramètres de connexion en envoyant une requête de GET à la variable `/connection_parameters` point de terminaison . Pour plus d’informations sur les clients utilisant des paramètres de connexion pour se connecter via le service interactif, consultez la documentation sur les [clients de Query Service](../clients/overview.md).
 
 **Format d’API**
 
