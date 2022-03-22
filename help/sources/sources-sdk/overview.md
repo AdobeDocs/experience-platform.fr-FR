@@ -6,9 +6,10 @@ topic-legacy: overview
 description: Le SDK Sources de Adobe Experience Platform est un ensemble d’API de configuration qui vous permettent d’intégrer une source basée sur l’API REST à l’aide de l’API Flow Service pour importer vos données dans Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 3d510876cfdd8ac3045dae8df6fcf6045de2538b
+exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
+source-git-commit: ce902e461c748e30e0307558da894a4dbdd212a4
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '544'
 ht-degree: 8%
 
 ---
@@ -33,7 +34,7 @@ La documentation du SDK Sources fournit des instructions pour vous permettre d�
 
 ## Présentation des sources
 
-Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+ Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Pour plus d’informations sur les sources et pour obtenir la liste des différentes sources actuellement prises en charge sur Platform, voir le [présentation des sources](../home.md).
 
@@ -62,7 +63,7 @@ Le processus étape par étape de configuration de votre source dans Experience 
    * Consultez le guide sur la [configuration des spécifications source](./config/sourcespec.md);
    * Consultez le guide sur la [configuration de vos spécifications d’exploration](./config/explorespec.md);
 * Pour commencer à documenter votre source, reportez-vous à la section [Présentation de la création de la documentation pour le SDK Sources](./documentation/doc-overview.md)
-   * Vous pouvez utiliser [modèle de documentation sources](./documentation/template.md) pour structurer votre documentation ;
+   * Vous pouvez utiliser [modèle de documentation de l’API sources](./documentation/template.md) pour structurer la documentation de votre API ;
+   * Vous pouvez utiliser [modèle de documentation de l’interface utilisateur de sources](./documentation/ui-template.md) pour structurer la documentation de votre interface utilisateur ;
    * Consultez le guide sur la [utilisation de l’interface web GitHub](./documentation/github.md) pour savoir comment créer de la documentation à l’aide de GitHub ;
    * Consultez le guide sur la [utilisation d’un éditeur de texte](./documentation/text-editor.md) pour savoir comment créer de la documentation à l’aide de votre ordinateur local.
-

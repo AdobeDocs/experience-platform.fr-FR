@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: da3d0399bae9953cd74bd0ac6d6e16b64796a578
+source-git-commit: c74676836d4690568665f16445c0dcf91496daf6
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '750'
 ht-degree: 19%
 
 ---
@@ -277,7 +277,8 @@ ht-degree: 19%
    - [Document de votre source dans Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
    - [Utilisation de l’interface web GitHub pour créer une page de documentation sur les sources](sources-sdk/documentation/github.md)
    - [Utilisation d’un éditeur de texte dans votre environnement local pour créer une page de documentation sur les sources](sources-sdk/documentation/text-editor.md)
-   - [Modèle de libre-service de documentation](sources-sdk/documentation/template.md)
+   - [Modèle d’API en libre-service de documentation](sources-sdk/documentation/template.md)
+   - [Modèle d’interface utilisateur en libre-service de la documentation](sources-sdk/documentation/ui-template.md)
 - [Notifications d’exécution de flux](notifications.md)
 - [LISTE AUTORISÉE d’adresses IP](ip-address-allow-list.md)
 - [Questions fréquentes](./troubleshooting.md)
