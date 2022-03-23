@@ -5,18 +5,18 @@ title: Exemples de requêtes pour les données Adobe Target
 topic-legacy: queries
 description: Les données issues d’Adobe Target sont transformées en schéma de modèle de données d’expérience et ingérées dans Experience Platform en tant que jeux de données. Ce document contient des exemples de requêtes pour utiliser Query Service avec vos jeux de données Adobe Target.
 exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
-source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
+source-git-commit: 76847d8286776a554e55209fa1b334c98b02d76b
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 51%
+source-wordcount: '324'
+ht-degree: 52%
 
 ---
 
 # Exemples de requêtes pour les données d’Adobe Target
 
-Les données d’Adobe Target sont transformées en schéma XDM d’événement d’expérience et ingérées dans Adobe Experience Platform en tant que jeux de données pour vous. Il existe de nombreux cas d’utilisation de Adobe Experience Platform Query Service avec ces données, et les exemples de requêtes suivants doivent fonctionner avec vos jeux de données Adobe Target.
+Les données ingérées à partir d’Adobe Target sont transformées en schéma XDM d’événement d’expérience et ingérées dans Adobe Experience Platform en tant que jeux de données. Adobe Experience Platform Query Service facilite de nombreux cas d’utilisation de ces données. Les exemples de requêtes suivants doivent fonctionner avec vos jeux de données Adobe Target.
 
-Dans Experience Platform, le nom du jeu de données créé automatiquement est &quot;Adobe Target Experience Events&quot;. Lors de l’utilisation de ce jeu de données avec des requêtes, vous devez utiliser le nom `adobe_target_experience_events`.
+Dans Experience Platform, le nom d’un jeu de données créé automatiquement est &quot;Événements d’expérience Adobe Target&quot;. Lors de l’utilisation de ce jeu de données avec des requêtes, utilisez le nom `adobe_target_experience_events`.
 
 ## Mappage de champs XDM partiels de haut niveau
 
