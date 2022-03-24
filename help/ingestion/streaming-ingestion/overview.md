@@ -5,28 +5,28 @@ title: Présentation de l’ingestion par flux
 topic-legacy: overview
 description: L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données de périphériques côté client et côté serveur vers Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 57555011ce5cf8b3f80b1d1d849cb179f4801f02
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 22%
+source-wordcount: '348'
+ht-degree: 17%
 
 ---
 
 # Présentation de l’ingestion par flux
 
-L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données de périphériques côté client et côté serveur vers [!DNL Experience Platform].
+L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer des données depuis des périphériques côté client et côté serveur vers [!DNL Experience Platform] en temps réel.
 
 ## Que pouvez-vous faire avec l’ingestion par flux ?
 
-Adobe Experience Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes en générant une [!DNL Real-time Customer Profile] pour chacun de vos clients. L’ingestion par flux joue un rôle clé dans la création de ces profils en vous permettant de fournir des données [!DNL Profile] dans [!DNL Data Lake] avec le moins de latence possible.
+Adobe Experience Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes en générant une [!DNL Real-time Customer Profile] pour chacun de vos clients. L’ingestion par flux joue un rôle clé dans la création de ces profils en vous permettant de diffuser des [!DNL Profile] dans la variable [!DNL Data Lake] avec le moins de latence possible.
 
 La vidéo suivante est conçue pour vous aider à comprendre l’ingestion par flux et décrit les concepts ci-dessus.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
-### Diffusion des enregistrements de profil et [!DNL ExperienceEvents]
+### Diffusion en continu des enregistrements de profil et [!DNL ExperienceEvents]
 
-Grâce à l’ingestion par flux, les utilisateurs peuvent diffuser en quelques secondes des enregistrements de profil et [!DNL ExperienceEvents] vers [!DNL Platform] pour faciliter la personnalisation en temps réel. Toutes les données envoyées aux API d’ingestion par flux sont automatiquement conservées dans la balise [!DNL Data Lake].
+Grâce à l’ingestion par flux, les utilisateurs peuvent diffuser en continu des enregistrements de profil et des [!DNL ExperienceEvents] to [!DNL Platform] en secondes pour faciliter la personnalisation en temps réel. Toutes les données envoyées aux API d’ingestion par flux sont automatiquement conservées dans la variable [!DNL Data Lake].
 
 Pour plus d’informations, consultez le [guide de création d’une connexion en continu](../tutorials/create-streaming-connection.md).
 
@@ -34,15 +34,28 @@ Pour plus d’informations, consultez le [guide de création d’une connexion e
 
 Une fois que vous êtes certain que vos données sont propres, vous pouvez activer vos jeux de données pour [!DNL Real-time Customer Profile] et [!DNL Identity Service].
 
-Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL Profile] et [!DNL Identity Service], consultez le [guide de configuration d’un jeu de données](../../profile/tutorials/dataset-configuration.md).
+Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL Profile] et [!DNL Identity Service], veuillez lire la [configuration d’un guide de jeu de données](../../profile/tutorials/dataset-configuration.md).
 
-## Quelle est la latence attendue de l’ingestion par flux sur [!DNL Platform] ?
+## Quelle est la latence attendue sur l’ingestion par flux ? [!DNL Platform]?
 
 | Destination | Latence attendue |
 | --------- | ---------------- |
 | Real-time Customer Profile | &lt; 1 minute |
 | Lac de données | &lt; 60 minutes |
 
-## Extension Adobe Experience Platform
+## Instructions de requête par seconde (RPS) sur l’ingestion par flux
 
-Vous pouvez utiliser l’extension Adobe Experience Platform pour créer une connexion en continu. L’extension [!DNL Experience Platform] fournit des actions pour envoyer des balises formatées dans [!DNL Experience Data Model] (XDM) pour l’ingestion en temps réel vers [!DNL Experience Platform]. Pour plus d’informations, consultez la documentation de [l’extension Experience Platform](../../tags/extensions/web/sdk/overview.md).
+Le tableau ci-dessous présente des conseils sur les limites de requête par seconde pour l’ingestion par flux.
+
+| Limite RPS | Notes |
+| --- | --- |
+| 1 000 demandes par seconde | Ils peuvent contenir plusieurs messages lors de l’utilisation de `/collection/batch` point de terminaison . |
+| 1 000 messages individuels par seconde | Les messages peuvent être regroupés en moins de requêtes réelles lors de l’utilisation de la variable `/collection/batch` point de terminaison . |
+
+>[!IMPORTANT]
+>
+>La limite appliquée devient **60 demandes par minute** lors de l’utilisation de la validation synchrone, car elle est destinée à des fins de débogage.
+
+## Extension Adobe Experience Platform
+
+Vous pouvez utiliser l’extension Adobe Experience Platform pour créer une connexion en continu. Le [!DNL Experience Platform] L’extension fournit des actions pour envoyer des balises formatées dans [!DNL Experience Data Model] (XDM) pour l’ingestion en temps réel vers [!DNL Experience Platform]. Pour plus d’informations, consultez la documentation de [l’extension Experience Platform](../../tags/extensions/web/sdk/overview.md).
