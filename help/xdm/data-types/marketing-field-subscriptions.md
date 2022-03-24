@@ -4,9 +4,9 @@ title: Champ Générique De Préférences Marketing Avec Type De Données D’Ab
 topic-legacy: overview
 description: Ce document présente un aperçu du champ de préférences marketing générique avec le type de données XDM Abonnements .
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
+source-git-commit: bccf97d85421fcb2f8fe153ad0ddbef4975b6f7e
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '900'
 ht-degree: 2%
 
 ---
@@ -59,29 +59,31 @@ Certaines entreprises permettent aux clients de souscrire à différents abonnem
 Le fichier JSON suivant représente un exemple de champ marketing pour un canal marketing d’appel téléphonique qui contient une `subscriptions` carte. Chaque clé dans la variable `subscriptions` représente un abonnement individuel au canal marketing. De même, chaque abonnement contient une valeur d’opt-in (`val`).
 
 ```json
-"phone-marketing-field": {
+"email-marketing-field": {
   "val": "y",
   "time": "2019-01-01T15:52:25+00:00",
   "subscriptions": {
     "loyalty-offers": {
       "val": "y",
       "type": "sales",
+      "topics": ["discounts", "early-access"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2019-01-01T15:52:25+00:00",
           "source": "website"
         }
       }
     },
-    "overdrawn-account": {
+    "newsletters": {
       "val": "y",
-      "type": "issues",
+      "type": "advertising",
+      "topics": ["hardware"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2021-01-01T08:32:53+07:00",
           "source": "website"
         },
-        "301-555-1527": {
+        "tparan@example.com": {
           "time": "2020-02-03T07:54:21+07:00",
           "source": "call center"
         }
@@ -93,7 +95,9 @@ Le fichier JSON suivant représente un exemple de champ marketing pour un canal 
 
 | Propriété | Description |
 | --- | --- |
+| `val` | Le [valeur de consentement](#val) pour l’abonnement. |
 | `type` | Type d’abonnement. Il peut s’agir de n’importe quelle chaîne descriptive, à condition qu’elle contienne 15 caractères ou moins. |
+| `topics` | Tableau de chaînes représentant les centres d’intérêt auxquels un client s’est abonné, qui peut être utilisé pour lui envoyer du contenu pertinent. |
 | `subscribers` | Champ facultatif de type map qui représente un ensemble d’identifiants (tels que les adresses électroniques ou les numéros de téléphone) abonnés à un abonnement particulier. Chaque clé de cet objet représente l’identifiant en question et contient deux sous-propriétés : <ul><li>`time`: Horodatage ISO 8601 du moment où l’identité s’est abonnée, le cas échéant.</li><li>`source`: Source d’où provient l’abonné. Il peut s’agir de n’importe quelle chaîne descriptive, à condition qu’elle contienne 15 caractères ou moins.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
