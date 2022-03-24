@@ -5,9 +5,9 @@ title: Guide de dépannage de Query Service
 topic-legacy: troubleshooting
 description: Ce document contient des informations sur les codes d’erreur courants que vous rencontrez et les causes possibles.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 38d0c34e7af2466fa005c8adaf3bd9e1d9fd78e1
+source-git-commit: a6924a1018d5dd4e3f03b3d8b6375cacb450a4f5
 workflow-type: tm+mt
-source-wordcount: '3292'
+source-wordcount: '3413'
 ht-degree: 5%
 
 ---
@@ -19,8 +19,10 @@ Ce document fournit des réponses aux questions fréquentes sur Query Service et
 La liste suivante de réponses aux questions fréquentes est divisée en plusieurs catégories :
 
 - [General (Général)](#general)
-- [Exportation de données](#exporting-data)
+- [Exportation des données](#exporting-data)
 - [Outils tiers](#third-party-tools)
+- [Erreurs de l’API PostgreSQL](#postgresql-api-errors)
+- [Erreurs de l’API REST](#rest-api-errors)
 
 ## Questions générales sur Query Service {#general}
 
@@ -38,7 +40,7 @@ Cette section contient des informations sur les performances, les limites et les
 
 ### Puis-je utiliser Postman pour l’API Query Service ?
 
-+++Répondez Oui, vous pouvez visualiser et interagir avec tous les services d’API Adobe à l’aide de Postman (une application tierce gratuite). Regardez la [Guide de configuration Postman](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires pour l’utilisation avec Postman. Consultez la documentation officielle pour [conseils sur le démarrage, l’exécution et le partage de collections Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Répondez Oui, vous pouvez visualiser et interagir avec tous les services d’API Adobe à l’aide de Postman (une application tierce gratuite). Regardez la [Guide de configuration de Postman](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires pour une utilisation avec Postman. Consultez la documentation officielle pour [conseils sur le démarrage, l’exécution et le partage de collections Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe-t-il une limite au nombre maximum de lignes renvoyées par une requête via l’interface utilisateur ?
@@ -434,38 +436,9 @@ WHERE T2.ID IS NULL
 
 +++
 
-## Erreurs de l’API REST
-
-| Code d’état HTTP | Description | Causes possibles |
-|------------------|-----------------------|----------------------------|
-| 400 | Mauvaise requête | Requête malformée ou illégale |
-| 401 | Échec de l’authentification | Jeton d’authentification non valide |
-| 500 | Erreur interne du serveur | Échec du système interne |
-
-## Erreurs de l’API PostgreSQL
-
-| Code erreur | État de la connexion | Description | Cause possible |
-|------------|---------------------------|-------------|----------------|
-| **08P01** | S/O | Type de message non pris en charge | Type de message non pris en charge |
-| **28P01** | Démarrage - authentification | Mot de passe non valide | Jeton d’authentification non valide |
-| **28000** | Démarrage - authentification | Type d’autorisation non valide | Type d’autorisation non valide. Doit être `AuthenticationCleartextPassword`. |
-| **42P12** | Démarrage - authentification | Aucune table trouvée | Aucune table n’a été trouvée pour utilisation |
-| **42601** | Requête | Erreur de syntaxe | Erreur de syntaxe ou de commande non valide |
-| **42P01** | Requête | Table introuvable | La table spécifiée dans la requête est introuvable |
-| **42P07** | Requête | La table existe | Il existe déjà une table portant le même nom (CREATE TABLE) |
-| **53400** | Requête | LIMIT dépasse la valeur maximale | L’utilisateur a spécifié une clause LIMIT supérieure à 100 000 |
-| **53400** | Requête | Délai d’expiration de la déclaration | La déclaration soumise en direct a duré plus de 10 minutes au maximum |
-| **58000** | Requête | Erreur système | Échec du système interne |
-| **0A000** | Requête/Commande | Non pris en charge | La fonctionnalité de la requête/commande n’est pas prise en charge |
-| **42501** | Requête DROP TABLE | Table de dépôt non créée par Query Service | La table en cours de suppression n’a pas été créée par Query Service à l’aide de l’événement `CREATE TABLE` statement |
-| **42501** | Requête DROP TABLE | Tableau non créé par l’utilisateur authentifié | La table en cours de suppression n’a pas été créée par l’utilisateur actuellement connecté. |
-| **42P01** | Requête DROP TABLE | Table introuvable | La table spécifiée dans la requête est introuvable. |
-| **42P12** | Requête DROP TABLE | Aucune table trouvée pour `dbName`: veuillez consulter la section `dbName` | Aucune table n’a été trouvée dans la base de données actuelle |
-
-## Exportation de données {#exporting-data}
+## Exportation des données {#exporting-data}
 
 Cette section fournit des informations sur l&#39;export des données et des limites.
-
 
 ### Existe-t-il un moyen d’extraire des données de Query Service après le traitement des requêtes et d’enregistrer les résultats dans un fichier CSV ?
 
@@ -524,3 +497,51 @@ L’ajout de la couche de serveur de cache a pour but de mettre en cache les don
 
 +++Réponse Non, la connectivité pgAdmin n’est pas prise en charge. A [liste des clients tiers disponibles et instructions sur la manière de les connecter à Query Service](./clients/overview.md) se trouve dans la documentation .
 +++
+
+## Erreurs de l’API PostgreSQL {#postgresql-api-errors}
+
+Le tableau suivant fournit les codes d’erreur PSQL et leurs causes possibles.
+
+| Code erreur | État de la connexion | Description | Cause possible |
+|------------|---------------------------|-------------|----------------|
+| **08P01** | S/O | Type de message non pris en charge | Type de message non pris en charge |
+| **28P01** | Démarrage - authentification | Mot de passe non valide | Jeton d’authentification non valide |
+| **28000** | Démarrage - authentification | Type d’autorisation non valide | Type d’autorisation non valide. Doit être `AuthenticationCleartextPassword`. |
+| **42P12** | Démarrage - authentification | Aucune table trouvée | Aucune table n’a été trouvée pour utilisation |
+| **42601** | Requête | Erreur de syntaxe | Erreur de syntaxe ou de commande non valide |
+| **42P01** | Requête | Table introuvable | La table spécifiée dans la requête est introuvable |
+| **42P07** | Requête | La table existe | Il existe déjà une table portant le même nom (CREATE TABLE) |
+| **53400** | Requête | LIMIT dépasse la valeur maximale | L’utilisateur a spécifié une clause LIMIT supérieure à 100 000 |
+| **53400** | Requête | Délai d’expiration de la déclaration | La déclaration soumise en direct a duré plus de 10 minutes au maximum |
+| **58000** | Requête | Erreur système | Échec du système interne |
+| **0A000** | Requête/Commande | Non pris en charge | La fonctionnalité de la requête/commande n’est pas prise en charge |
+| **42501** | Requête DROP TABLE | Table de dépôt non créée par Query Service | La table en cours de suppression n’a pas été créée par Query Service à l’aide de l’événement `CREATE TABLE` statement |
+| **42501** | Requête DROP TABLE | Tableau non créé par l’utilisateur authentifié | La table en cours de suppression n’a pas été créée par l’utilisateur actuellement connecté. |
+| **42P01** | Requête DROP TABLE | Table introuvable | La table spécifiée dans la requête est introuvable. |
+| **42P12** | Requête DROP TABLE | Aucune table trouvée pour `dbName`: veuillez consulter la section `dbName` | Aucune table n’a été trouvée dans la base de données actuelle |
+
+### Pourquoi ai-je reçu un code d’erreur 58000 lors de l’utilisation de la méthode history_meta() sur ma table ?
+
++++Répondez Au `history_meta()` est utilisée pour accéder à un instantané d’un jeu de données. Auparavant, si vous deviez exécuter une requête sur un jeu de données vide dans Azure Data Lake Storage (ADLS), vous receviez un code d’erreur 58000 indiquant que le jeu de données n’existe pas. Un exemple de l’ancienne erreur système s’affiche ci-dessous.
+
+```shell
+ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]
+```
+
+Cette erreur s’est produite car il n’y avait aucune valeur renvoyée pour la requête. Ce comportement a maintenant été corrigé afin de renvoyer le message suivant :
+
+```text
+Query complete in {timeframe}. 0 rows returned. 
+```
+
++++
+
+## Erreurs de l’API REST {#rest-api-errors}
+
+Le tableau suivant fournit des codes d’erreur HTTP et leurs causes possibles.
+
+| Code d’état HTTP | Description | Causes possibles |
+|------------------|-----------------------|----------------------------|
+| 400 | Mauvaise requête | Requête malformée ou illégale |
+| 401 | Échec de l’authentification | Jeton d’authentification non valide |
+| 500 | Erreur interne du serveur | Échec du système interne |
