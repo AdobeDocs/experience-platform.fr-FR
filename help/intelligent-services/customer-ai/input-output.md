@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;prise en main;service clientèle;rubriques les plus consultées;entrée de l’assistance client;sortie de l’assistance client
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Entrée et sortie dans Customer AI
 topic-legacy: Getting started
 description: En savoir plus sur les événements, les entrées et les sorties requis utilisés par Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 16%
@@ -88,7 +88,7 @@ Pour afficher un groupe de champs dans l’interface utilisateur de Platform, s�
 |  | applicationInstalls | <li> application.installs.value </li> <li> application.name </li> |
 |  | applicationLaunches | <li> application.launches.value </li> <li> application.name </li> |
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
-| [!UICONTROL Détails de la recherche] | de recherches | search.keywords |
+| [!UICONTROL Détails de la recherche] | recherche | search.keywords |
 
 En outre, Customer AI peut utiliser les données d’abonnement pour créer de meilleurs modèles d’attrition. Les données d’abonnement sont nécessaires pour chaque profil à l’aide de la variable [[!UICONTROL Abonnement]](../../xdm/data-types/subscription.md) format de type de données. La plupart des champs sont facultatifs, cependant, pour un modèle d’attrition optimal, il est vivement recommandé de fournir des données pour autant de champs que possible, par exemple : `startDate`, `endDate`, ainsi que tout autre détail pertinent.
 
@@ -144,7 +144,7 @@ Les types d’événements répertoriés ci-dessous sont requis pour une sortie 
 - checkouts
 - achats
 - webVisit
-- de recherches
+- recherche
 
 **Types d’événements standard recommandés supplémentaires :**
 
@@ -162,7 +162,7 @@ Les types d’événements répertoriés ci-dessous sont requis pour une sortie 
 - checkouts
 - achats
 - webVisit
-- de recherches
+- recherche
 
 Dans cet exemple, `order`, `checkouts`, et `purchases` sont utilisés pour indiquer qu’un abonnement a été acheté et son type.
 
@@ -184,7 +184,7 @@ Les types d’événements répertoriés ci-dessous sont requis pour une sortie 
 - checkouts
 - achats
 - webVisit
-- de recherches
+- recherche
 
 **Types d’événements standard recommandés supplémentaires :**
 
@@ -202,7 +202,7 @@ Les types d’événements répertoriés ci-dessous sont requis pour une sortie 
 - checkouts
 - achats
 - webVisit
-- de recherches
+- recherche
 
 **Types d’événements standard recommandés supplémentaires :**
 
@@ -217,7 +217,7 @@ L’un des éléments restants [types d’événement](#standard-events) peut ê
 Les types d’événements répertoriés ci-dessous sont requis pour une sortie optimale de Customer AI avec cet objectif de prédiction particulier. Il est possible d’exclure un événement obligatoire en fonction de votre objectif de prédiction. Toutefois, l’exclusion de plusieurs événements peut entraîner des résultats médiocres.
 
 - webVisit
-- de recherches
+- recherche
 
 En outre, pour un modèle précis, il est conseillé d’utiliser certaines des propriétés disponibles dans la variable [type de données d&#39;abonnement](../../xdm/data-types/subscription.md).
 

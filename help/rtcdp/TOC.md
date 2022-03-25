@@ -1,11 +1,11 @@
 ---
 product: adobe experience platform
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Guide Real-time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
-source-git-commit: 69833137498fedd87e99ca4255b8f1ace0921ff9
-workflow-type: ht
+source-git-commit: c0ea64691ad5f901bca9729ff6d742ffd423f1e5
+workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 100%
 

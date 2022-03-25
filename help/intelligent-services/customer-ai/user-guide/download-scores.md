@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;télécharger des scores;service clientèle;rubriques les plus consultées;exportation;téléchargement de l’assistance client;scores de l’assistance client
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Scores de téléchargement dans Customer AI
 topic-legacy: Downloading scores
 description: Customer AI vous permet de télécharger des scores au format de fichier Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 87%
@@ -21,7 +21,7 @@ Ce document sert de guide pour télécharger des scores dans Customer AI.
 
 Customer AI vous permet de télécharger des scores au format de fichier Parquet. Pour suivre ce tutoriel, vous devez avoir terminé de lire la section consacrée au téléchargement de scores Customer AI dans le [guide de prise en main](../getting-started.md).
 
-De plus, pour accéder aux scores dans Customer AI, vous devez disposer d’une instance de service avec un état d’exécution réussi disponible. Pour créer une instance de service, consultez la page [Configuration d’une instance Customer AI](./configure.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
+De plus, pour accéder aux scores dans Customer AI, vous devez disposer d’une instance de service avec un état d’exécution réussi disponible. Pour créer une instance de service, rendez-vous sur la page [Configuration d’une instance Customer AI](./configure.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
 
 Actuellement, il existe deux manières de télécharger les scores Customer AI :
 
@@ -64,7 +64,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant un objet d’identifiant de lot de Dans cet exemple, la valeur clé de l’objet renvoyé est l’identifiant de lot `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
+Une réponse réussie renvoie un payload contenant un objet d’identifiant de lot de Dans cet exemple, la valeur clé de l’objet renvoyé est l’identifiant de lot. `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
 
 ```json
 {

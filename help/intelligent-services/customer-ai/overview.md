@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;présentation;service clientèle;rubriques les plus consultées;présentation client
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Présentation de Customer AI
 topic-legacy: Customer AI Overview
 description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
 landing-page-description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 85%
@@ -52,4 +52,4 @@ Customer AI analyse les données d’événement d’expérience existantes pour
 
 ## Étapes suivantes
 
-Vous pouvez commencer par suivre le [guide de prise en main](./getting-started.md). Ce guide vous guide tout au long des étapes nécessaires à la configuration de toutes les conditions préalables requises pour Customer AI. Si vous disposez déjà de toutes vos informations d’identification et données, consultez la section [configuration d’une instance Customer AI](./user-guide/configure.md). Elle décrit les étapes à suivre pour utiliser Customer AI.
+Vous pouvez commencer par suivre le [guide de prise en main](./getting-started.md). Ce guide vous guide tout au long des étapes nécessaires à la configuration de toutes les conditions préalables requises pour Customer AI. Si toutes vos informations d’identification et vos données sont déjà prêtes, rendez-vous sur la page  [configuration d’une instance Customer AI](./user-guide/configure.md). Elle décrit les étapes à suivre pour utiliser Customer AI.

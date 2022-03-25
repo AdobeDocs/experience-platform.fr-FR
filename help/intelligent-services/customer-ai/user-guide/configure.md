@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;guide de l’utilisateur;service clientèle;rubriques les plus consultées;configurer une instance;créer une instance ;
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Configuration d’une instance Customer AI
 topic-legacy: Instance creation
 description: Intelligent Services fournit Customer AI en tant que service Adobe Sensei simple d’emploi pouvant être configuré pour de multiples cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: f7fde9ed299e6bdb6e63279be1126b91fc90d3f3
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '2608'
 ht-degree: 11%
@@ -62,7 +62,7 @@ Vous trouverez ci-dessous des informations importantes sur les valeurs que vous 
 
 Indiquez les valeurs requises, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
-## Sélectionner des données {#select-data}
+## Choix des données {#select-data}
 
 Par conception, Customer AI utilise les données Adobe Analytics, Adobe Audience Manager, Experience Event et Consumer Experience Event pour calculer les scores de propension. Lors de la sélection d’un jeu de données, seuls les jeux compatibles avec Customer AI sont répertoriés. Pour sélectionner un jeu de données, sélectionnez (**+**) en regard du nom du jeu de données ou cochez la case pour ajouter plusieurs jeux de données à la fois. Utilisez l’option de recherche pour trouver rapidement les jeux de données qui vous intéressent.
 
