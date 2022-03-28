@@ -6,41 +6,41 @@ topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des informations sur un lot en échec à l’aide des API Data Ingestion.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 99f99ad78853236868550d880576b82da2af8878
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '647'
 ht-degree: 83%
 
 ---
 
 # Récupération des lots en échec à l’aide de l’API Data Access
 
-Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. Vous pouvez utiliser soit l’ingestion par lots, qui vous permet d’insérer leurs données à l’aide de différents types de fichiers (tels que les fichiers CSV), soit l’ingestion par flux, qui vous permet d’insérer leurs données dans [!DNL Platform] à l’aide de points de terminaison en continu en temps réel.
+Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. Vous pouvez utiliser soit l’ingestion par lots, qui vous permet d’insérer leurs données à l’aide de différents types de fichiers (tels que des fichiers CSV), soit l’ingestion par flux, qui vous permet d’insérer leurs données dans [!DNL Platform] utilisation de points de terminaison de diffusion en continu en temps réel.
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des informations sur un lot en échec à l’aide des API [!DNL Data Ingestion].
+Ce tutoriel décrit les étapes à suivre pour récupérer des informations sur un lot en échec à l’aide de [!DNL Data Ingestion] API.
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 - [[!DNL Data Ingestion]](../home.md) : méthodes par lesquelles les données peuvent être envoyées à [!DNL Experience Platform].
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key : `{API_KEY}`
-- x-gw-ims-org-id : `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Schema Registry], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la variable [!DNL Schema Registry], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
-- x-sandbox-name : `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ Toutes les ressources de [!DNL Experience Platform], y compris celles appartenan
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
-- Content-Type: `application/json`
+- `Content-Type: application/json`
 
 ### Échantillon de lot en échec
 
@@ -94,13 +94,13 @@ GET /batches/{BATCH_ID}/failed
 **Requête**
 
 ```shell
-curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed" \
-  -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "Cache-Control: no-cache" \
-  -H "Content-Type: application/json" \
-  -H "x-api-key: {API_KEY}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
-  -H "x-sandbox-name: {SANDBOX_NAME}
+curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
