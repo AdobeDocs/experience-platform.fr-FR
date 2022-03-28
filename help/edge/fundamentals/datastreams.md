@@ -3,16 +3,16 @@ title: Configuration du flux de données pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer les flux de données. '
 keywords: configuration;datastreams;datastreamId;edge;datastream id;paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;ID de conteneur de synchronisation;sandbox;flux de données;jeu de données d’événement;cible;code client;jeton de propriété;ID d’environnement cible;destinations de cookie;destinations d’URL;ID de suite de rapports de paramètres Analytics;ID de blocage
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
+source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
 workflow-type: tm+mt
-source-wordcount: '1944'
-ht-degree: 3%
+source-wordcount: '2004'
+ht-degree: 2%
 
 ---
 
 # Configuration d’un flux de données
 
-Un flux de données représente la configuration côté serveur lors de l’implémentation des SDK Web et Mobile Adobe Experience Platform. Lorsque la variable [configuration, commande](configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme la variable `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une demande est envoyée au réseau Edge Adobe Experience Platform, la variable `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans avoir à modifier le code de votre site web.
+Un flux de données représente la configuration côté serveur lors de l’implémentation des SDK Web et Mobile de Adobe Experience Platform. Lorsque la variable [configuration, commande](configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme la variable `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une demande est envoyée au réseau Edge Adobe Experience Platform, la variable `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans avoir à modifier le code de votre site web.
 
 Ce document décrit les étapes de configuration d’un flux de données dans l’interface utilisateur de la collecte de données.
 
@@ -50,13 +50,23 @@ Si vous configurez ce flux de données à utiliser dans Experience Platform et q
 
 ![Configuration de base pour un flux de données](../images/datastreams/configure.png)
 
+Sélectionner **[!UICONTROL Options avancées]** pour afficher des contrôles supplémentaires pour configurer le flux de données.
+
+![Options de configuration avancées](../images/datastreams/advanced-options.png)
+
+| Paramètre | Description |
+| --- | --- |
+| [!UICONTROL Emplacement géographique] | Détermine si des recherches GPS se produisent en fonction de l’adresse IP de l’utilisateur. Le paramètre par défaut **[!UICONTROL Aucun]** désactive les recherches GPS, tandis que la variable **[!UICONTROL Ville]** fournit les coordonnées GPS à deux décimales. |
+| [!UICONTROL Cookie d’identifiant propriétaire] | Lorsqu’il est activé, ce paramètre indique au réseau Edge de faire référence à un cookie spécifié lors de la recherche d’un [identifiant d’appareil propriétaire](../identity/first-party-device-ids.md), plutôt que de rechercher cette valeur dans la carte des identités.<br><br>Lors de l’activation de ce paramètre, vous devez indiquer le nom du cookie dans lequel l’ID doit être stocké. |
+| [!UICONTROL Synchronisation des identifiants tiers] | Les synchronisations des identifiants peuvent être regroupées en conteneurs afin de permettre l’exécution de différentes synchronisations des identifiants à différents moments. Lorsqu’il est activé, ce paramètre vous permet de spécifier le conteneur des synchronisations des identifiants à exécuter pour ce flux de données. |
+
 Le reste de cette section se concentre sur les étapes de mappage des données à un schéma d’événement Platform sélectionné. Si vous utilisez le SDK Mobile ou si vous ne configurez pas votre flux de données pour Platform, sélectionnez **[!UICONTROL Enregistrer]** avant de passer à la section suivante sur [ajout de services à la banque de données](#add-services).
 
 ### Préparation de données pour la collecte de données {#data-prep}
 
 >[!IMPORTANT]
 >
->La préparation des données pour la collecte de données n’est actuellement pas prise en charge pour les mises en oeuvre du SDK Mobile.
+>La préparation des données pour la collecte de données n’est actuellement pas prise en charge pour les implémentations du SDK Mobile.
 
 Data Prep est un service Experience Platform qui vous permet de mapper, de transformer et de valider des données vers et depuis le modèle de données d’expérience (XDM). Lors de la configuration d’un flux de données activé par Platform, vous pouvez utiliser les fonctionnalités de préparation de données pour mapper vos données source à XDM lors de leur envoi à Platform Edge Network.
 
@@ -199,16 +209,6 @@ Ce service contrôle si et comment les données sont envoyées à [transfert d�
 >[!NOTE]
 >
 >Vous pouvez sélectionner **[!UICONTROL Saisie manuelle des identifiants]** pour saisir les noms des propriétés et des environnements au lieu d’utiliser les menus déroulants.
-
-### [!UICONTROL Synchronisation des identifiants tiers] paramètres
-
-La section ID tiers est la seule section toujours active. Deux paramètres sont disponibles : &quot;[!UICONTROL Synchronisation des identifiants tiers activée]&quot; et &quot;[!UICONTROL ID de conteneur de synchronisation des identifiants tiers]&quot;.
-
-![Section Synchronisation des identifiants tiers de l’interface utilisateur de configuration](../images/datastreams/third-party-id-sync-config.png)
-
-| Paramètre | Description |
-| --- | --- |
-| [!UICONTROL ID de conteneur de synchronisation des identifiants tiers] | Les synchronisations des identifiants peuvent être regroupées en conteneurs afin de permettre l’exécution de différentes synchronisations des identifiants à différents moments. Cela contrôle le conteneur des synchronisations des identifiants exécuté pour ce flux de données. |
 
 ## Étapes suivantes
 
