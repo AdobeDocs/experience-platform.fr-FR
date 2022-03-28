@@ -3,22 +3,22 @@ title: Configuration du flux de données pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer les flux de données. '
 keywords: configuration;datastreams;datastreamId;edge;datastream id;paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;ID de conteneur de synchronisation;sandbox;flux de données;jeu de données d’événement;cible;code client;jeton de propriété;ID d’environnement cible;destinations de cookie;destinations d’URL;ID de suite de rapports de paramètres Analytics;ID de blocage
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
+source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '1995'
 ht-degree: 2%
 
 ---
 
 # Configuration d’un flux de données
 
-Un flux de données représente la configuration côté serveur lors de l’implémentation des SDK Web et Mobile de Adobe Experience Platform. Lorsque la variable [configuration, commande](configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme la variable `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une demande est envoyée au réseau Edge Adobe Experience Platform, la variable `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans avoir à modifier le code de votre site web.
+Un flux de données représente la configuration côté serveur lors de l’implémentation des SDK Web et Mobile Adobe Experience Platform. Lorsque la variable [configuration, commande](configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme la variable `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une demande est envoyée au réseau Edge Adobe Experience Platform, la variable `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans avoir à modifier le code de votre site web.
 
 Ce document décrit les étapes de configuration d’un flux de données dans l’interface utilisateur de la collecte de données.
 
 >[!NOTE]
 >
->Votre entreprise doit être configurée pour cette fonctionnalité afin d’y accéder dans l’interface utilisateur. Si vous n’y avez pas accès, veuillez remplir les champs suivants : [formulaire](http://adobe.ly/websdkaccess) et nous vous accorderons l&#39;accès nécessaire.
+>Votre entreprise doit être configurée pour cette fonctionnalité afin d’y accéder dans l’interface utilisateur. Veuillez remplir les champs suivants : [formulaire](https://adobe.ly/websdkaccess) pour demander l’accès nécessaire.
 
 ## Accédez au [!UICONTROL Datastreams] workspace
 
