@@ -5,9 +5,9 @@ title: Création d’un jeu de données à l’aide d’API
 topic-legacy: datasets
 description: Ce document décrit les étapes générales pour créer un jeu de données à l’aide des API d’Adobe Experience Platform et pour renseigner le jeu de données à l’aide d’un fichier.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1304'
 ht-degree: 85%
 
 ---
@@ -28,11 +28,11 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -214,7 +214,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Ce tutoriel utilise la méthode [Apache Parquet](https://parquet.apache.org/documentation/latest/) format de fichier pour tous ses exemples. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md)
+>Ce tutoriel utilise la méthode [Apache Parquet](https://parquet.apache.org/docs/) format de fichier pour tous ses exemples. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md)
 
 **Réponse**
 

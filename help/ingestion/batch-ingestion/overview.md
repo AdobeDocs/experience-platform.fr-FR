@@ -5,10 +5,10 @@ title: Présentation de l’API Batch Ingestion
 topic-legacy: overview
 description: L’API Adobe Experience Platform Data Ingestion vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être les données de profil d’un fichier plat dans un système CRM (par exemple un fichier Parquet) ou les données conformes à un schéma connu dans le registre Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 73%
+source-wordcount: '1387'
+ht-degree: 72%
 
 ---
 
@@ -151,7 +151,7 @@ Vous pouvez charger des fichiers à l’aide de l’API Small File Upload. Toute
 
 >[!INFO]
 >
->Les exemples ci-dessous utilisent la méthode [Apache Parquet](https://parquet.apache.org/documentation/latest/) format de fichier. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](api-overview.md).
+>Les exemples ci-dessous utilisent la méthode [Apache Parquet](https://parquet.apache.org/docs/) format de fichier. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](api-overview.md).
 
 ### Chargement de petits fichiers
 

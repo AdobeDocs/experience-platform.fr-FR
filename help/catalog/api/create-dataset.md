@@ -5,16 +5,16 @@ title: Création d’un jeu de données dans l’API
 topic-legacy: developer guide
 description: Ce document explique comment créer un objet de jeu de données dans l’API Catalog Service.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 53%
+source-wordcount: '253'
+ht-degree: 52%
 
 ---
 
 # Création d’un jeu de données dans l’API
 
-Pour créer un jeu de données à l’aide de l’API [!DNL Catalog], vous devez connaître la valeur `$id` du schéma [!DNL Experience Data Model] (XDM) sur lequel le jeu de données sera basé. Une fois que vous disposez de l’identifiant de schéma, vous pouvez créer un jeu de données en envoyant une requête de POST au point de terminaison `/datasets` dans l’API [!DNL Catalog].
+Pour créer un jeu de données à l’aide de la variable [!DNL Catalog] API, vous devez connaître la variable `$id` de la variable [!DNL Experience Data Model] Schéma (XDM) sur lequel le jeu de données sera basé. Une fois que vous disposez de l’identifiant de schéma, vous pouvez créer un jeu de données en envoyant une requête de POST à la variable `/datasets` du point de terminaison [!DNL Catalog] API.
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Cet exemple utilise le format de fichier [Apache Parquet](https://parquet.apache.org/documentation/latest/) pour sa propriété `containerFormat`. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md).
+>Cet exemple utilise la méthode [Apache Parquet](https://parquet.apache.org/docs/) format de fichier pour son `containerFormat` . Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md).
 
 **Réponse**
 

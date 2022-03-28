@@ -5,9 +5,9 @@ title: Scores de téléchargement dans Attribution AI
 topic-legacy: Downloading scores
 description: Ce document sert de guide pour télécharger des scores pour Attribution AI.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1052'
 ht-degree: 69%
 
 ---
@@ -18,13 +18,13 @@ Ce document sert de guide pour télécharger des scores pour Attribution AI.
 
 ## Prise en main
 
-Attribution AI vous permet de télécharger des scores au format de fichier Parquet. Pour suivre ce tutoriel, vous devez avoir lu et terminé la section consacrée au téléchargement des scores Attribution AI dans le guide [Prise en main](./getting-started.md) .
+Attribution AI vous permet de télécharger des scores au format de fichier Parquet. Ce tutoriel nécessite que vous ayez lu et terminé la section Téléchargement des scores Attribution AI dans la section [prise en main](./getting-started.md) guide.
 
-De plus, pour accéder aux scores pour Attribution AI, vous devez disposer d’une instance de service avec un état d’exécution réussi disponible. Pour créer une instance de service, consultez le [guide de l’utilisateur Attribution AI](./user-guide.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
+De plus, pour accéder aux scores pour Attribution AI, vous devez disposer d’une instance de service avec un état d’exécution réussi disponible. Pour créer une instance de service, rendez-vous sur la page [Guide d’utilisation d’Attribution AI](./user-guide.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
 
 ## Chercher l’identifiant de votre jeu de données {#dataset-id}
 
-Dans votre instance de service pour les insights Attribution AI, cliquez sur la liste déroulante *Autres actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL Accéder aux scores]**.
+Dans votre instance de service pour obtenir des informations Attribution AI, cliquez sur le bouton *Autres actions* dans la barre de navigation supérieure droite, puis sélectionnez **[!UICONTROL Accéder aux scores]**.
 
 ![actions supplémentaires](./images/download-scores/more-actions.png)
 
@@ -34,7 +34,7 @@ Une boîte de dialogue s’affiche. Elle contient un lien vers la documentation 
 
 ## Récupération de votre identifiant de lot {#retrieve-your-batch-id}
 
-En utilisant l’identifiant du jeu de données de l’étape précédente, vous devez appeler l’API Catalog pour récupérer un identifiant de lot. Des paramètres de requête supplémentaires sont utilisés pour cet appel API afin de renvoyer le dernier lot réussi au lieu d’une liste de lots appartenant à votre organisation. Pour renvoyer des lots supplémentaires, augmentez le nombre du paramètre de requête `limit` au montant souhaité que vous souhaitez voir renvoyé. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../catalog/api/filter-data.md).
+En utilisant l’identifiant du jeu de données de l’étape précédente, vous devez appeler l’API Catalog pour récupérer un identifiant de lot. Des paramètres de requête supplémentaires sont utilisés pour cet appel API afin de renvoyer le dernier lot réussi au lieu d’une liste de lots appartenant à votre organisation. Pour renvoyer des lots supplémentaires, augmentez le nombre de la variable `limit` paramètre de requête correspondant au montant souhaité que vous souhaitez voir renvoyé. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../catalog/api/filter-data.md).
 
 **Format d’API**
 
@@ -58,11 +58,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant un objet d’identifiant de lot de Dans cet exemple, la valeur de clé de l’objet renvoyé est l’identifiant de lot `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
+Une réponse réussie renvoie un payload contenant un objet d’identifiant de lot de Dans cet exemple, la valeur de clé de l’objet renvoyé est l’identifiant de lot. `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
 
 >[!NOTE]
 >
-> L’objet `tags` de la réponse suivante a été modifié pour être lisible.
+> La réponse suivante a déclenché la `tags` pour une meilleure lisibilité.
 
 ```json
 {
@@ -260,11 +260,11 @@ La réponse télécharge le fichier que vous avez demandé dans votre répertoir
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-Les scores téléchargés seront au format Parquet et auront besoin d’un lecteur [!DNL Spark]-shell ou Parquet pour afficher les scores. Pour l’affichage des scores bruts, vous pouvez utiliser les [outils Apache Parquet](https://parquet.apache.org/documentation/latest/). Les outils parquet peuvent analyser les données avec [!DNL Spark].
+Les scores téléchargés seront au format Parquet et devront être [!DNL Spark]Lecteur -shell ou Parquet pour afficher les scores. Pour l’affichage des scores bruts, vous pouvez utiliser [Outils Apache Parquet](https://parquet.apache.org/docs/). Les outils parquet peuvent analyser les données à l’aide de [!DNL Spark].
 
 ## Étapes suivantes
 
-Ce document décrit les étapes requises pour télécharger des scores Attribution AI. Pour plus d’informations sur les résultats du score, consultez la [documentation sur l’entrée et la sortie de l’Attribution AI](./input-output.md) .
+Ce document décrit les étapes requises pour télécharger des scores Attribution AI. Pour plus d’informations sur les résultats du score, consultez la [Entrée et sortie de l’Attribution AI](./input-output.md) documentation.
 
 ## Accès aux scores à l’aide de Snowflake
 
