@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 44%
+source-wordcount: '733'
+ht-degree: 43%
 
 ---
 
@@ -96,7 +96,7 @@ ht-degree: 44%
       * [Connexion Azure Blob](./catalog/cloud-storage/azure-blob.md)
       * [(Version bêta) Connexion à Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
       * [Connexion SFTP](./catalog/cloud-storage/sftp.md)
-      * [LISTE AUTORISÉE d’adresses IP](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [LISTE AUTORISÉE des adresses IP pour les destinations de stockage dans le cloud](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinations de la plateforme de gestion des données {#data-management}
       * [Présentation des destinations Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Extension Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
@@ -138,6 +138,7 @@ ht-degree: 44%
       * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
    * Destinations de diffusion en continu {#streaming}
       * [ (Version bêta) Connexion à l’API HTTP](./catalog/streaming/http-destination.md)
+      * [LISTE AUTORISÉE d’adresses IP pour les destinations de diffusion en continu](./catalog/streaming/ip-address-allow-list.md)
    * Destinations d’enquête {#survey}
       * [Présentation des destinations d’enquête](./catalog/survey/overview.md)
       * [Destination de l’extension Foresee](./catalog/survey/foresee.md)

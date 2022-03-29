@@ -3,9 +3,9 @@ keywords: diffusion en continu;
 title: Connexion via l’API HTTP
 description: La destination d’API HTTP dans Adobe Experience Platform vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c2e726a7e66267bf8f301014ae30dedd7472c693
+source-git-commit: 7acacc4a5ddd10f47da59837ad7dab2615d41789
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1384'
 ht-degree: 3%
 
 ---
@@ -61,8 +61,11 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-
 Vous pouvez également utiliser [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) pour configurer une intégration et envoyer des données de profil Experience Platform à un point de terminaison HTTP.
+
+## LISTE AUTORISÉE d’adresses IP {#ip-address-allowlist}
+
+Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste d’adresses IP statiques que vous pouvez placer sur la liste autorisée pour la destination de l’API HTTP. Voir [LISTE AUTORISÉE d’adresses IP pour les destinations de diffusion en continu](/help/destinations/catalog/streaming/ip-address-allow-list.md) pour obtenir la liste complète des adresses IP à placer sur la liste autorisée.
 
 ## Connexion à la destination {#connect-destination}
 
@@ -97,10 +100,6 @@ Voir [Activation des données d’audience vers des destinations d’exportation
 ### Attributs de destination {#attributes}
 
 Dans le [[!UICONTROL Sélectionner des attributs]](../../ui/activate-streaming-profile-destinations.md#select-attributes) , Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination.
-
-## Considérations sur les produits {#product-considerations}
-
-Experience Platform ne diffuse pas les données vers les points de terminaison HTTP par le biais d’un ensemble fixe d’adresses IP statiques. Par conséquent, Adobe ne peut pas fournir de liste d’adresses IP statiques que vous pouvez placer sur la liste autorisée pour la destination de l’API HTTP.
 
 ## Comportement d’exportation de profils {#profile-export-behavior}
 
