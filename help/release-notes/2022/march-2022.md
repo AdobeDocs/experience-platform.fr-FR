@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
-source-git-commit: 04d35137a301492794ab8c0c67183cf5c76f2105
+source-git-commit: 4bead30e4bb13461cf42374cb93f3d67520a14ec
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 30%
+source-wordcount: '882'
+ht-degree: 31%
 
 ---
 
@@ -20,9 +20,9 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 - [Alertes](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [Modèle de données d’expérience (XDM)](#xdm)
 - [[!DNL Query Service]](#query-service)
 - [Sources](#sources)
+<!-- - [Experience Data Model (XDM)](#xdm) -->
 
 ## Journaux d’audit {#audit-logs}
 
@@ -70,6 +70,8 @@ Le tableau de bord Profils affiche un instantané des données d’attribut (enr
 | Profils non segmentés par widget Identité | Ce widget classe le nombre total de profils non segmentés en fonction de leur identifiant unique. Les données sont visualisées dans un graphique à barres. Voir [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets) pour plus d’informations. |
 | Widget de profils d’identité unique | Ce widget fournit un comptage des profils de votre organisation qui n’ont qu’un seul type d’ID qui crée leur identité, soit un email, soit un ECID. Voir [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets) pour plus d’informations. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Pour plus d’informations sur les tableaux de bord des profils, reportez-vous à la section [Présentation des tableaux de bord des profils](../../dashboards/guides/profiles.md).
 
 ### Tableaux de bord des destinations
@@ -82,19 +84,21 @@ Le tableau de bord Destinations affiche un instantané des destinations que votr
 | --- | --- |
 | Widget de comptage des destinations | Le widget fournit le nombre total de points de terminaison disponibles où une audience peut être activée et diffusée dans le système. Ce nombre inclut les destinations principales et inactives. Voir [documentation du widget standard des destinations](../../dashboards/guides/destinations.md#standard-widgets) pour plus d’informations. |
 
-Pour plus d’informations sur les tableaux de bord des destinations dans Platform, reportez-vous à la section [Présentation des tableaux de bord des destinations](../../dashboards/guides/destinations.md).
-
-## Modèle de données d’expérience (XDM) {#xdm}
-
-Le modèle de données d’expérience (XDM) est une spécification open source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
-
-| Fonctionnalité | Description |
-| --- | --- |
-| Ajout ou suppression de champs standard individuels pour un schéma | L’interface utilisateur de l’éditeur de schémas vous permet désormais d’ajouter des parties de groupes de champs standard à vos schémas, offrant ainsi plus de flexibilité aux champs que vous choisissez d’inclure sans avoir à créer de ressources personnalisées à partir de zéro.<br><br>Vous pouvez désormais également définir des champs personnalisés ad hoc directement dans la structure du schéma et les affecter à un nouveau groupe de champs personnalisés ou existant sans avoir à créer ni à modifier au préalable le groupe de champs.<br><br>Consultez le guide sur la [création et modification de schémas dans l’interface utilisateur](../../xdm/ui/resources/schemas.md) pour plus d’informations sur ces nouveaux workflows. |
-
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur XDM dans Platform, voir [Présentation du système XDM](../../xdm/home.md).
+Pour plus d’informations sur les tableaux de bord des destinations dans Platform, reportez-vous à la section [Présentation des tableaux de bord des destinations](../../dashboards/guides/destinations.md).
+
+<!-- ## Experience Data Model (XDM) {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
 
 ## Query Service {#query-service}
 
@@ -105,6 +109,8 @@ Pour plus d’informations sur XDM dans Platform, voir [Présentation du systèm
 | Fonctionnalité | Description |
 | --- | --- |
 | `table_exists` | La nouvelle commande de fonctionnalité permet de confirmer si un tableau existe actuellement dans le système. La commande renvoie une valeur booléenne : `true` si le tableau **does** existent et `false` si le tableau fonctionne **not** existent. Voir [Documentation sur la syntaxe SQL](../../query-service/sql/syntax.md) pour plus d’informations. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Pour plus d’informations sur les fonctionnalités disponibles, reportez-vous à la section [Présentation de Query Service](../../query-service/home.md).
 
