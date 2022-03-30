@@ -4,9 +4,9 @@ title: Tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 86041e3165d4ea9cb55717f24b002afa084ff420
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1709'
 ht-degree: 3%
 
 ---
@@ -55,6 +55,7 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 * [[!UICONTROL Segments non mappés par identité]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segments mappés par identité]](#mapped-segments-by-identity)
 * [[!UICONTROL Audiences courantes]](#common-audiences)
+* [[!UICONTROL Nombre de destinations]](#destinations-count)
 
 ### [!UICONTROL Destinations les plus utilisées] {#most-used-destinations}
 
@@ -151,6 +152,14 @@ Si le nombre de profils mappés de votre segment ne correspond pas à l’écart
 Si un segment dans la variable [!UICONTROL Santé de l’audience mappée] vous devez vous reporter au graphique de tendance de la taille de l’audience et localiser le segment anormal. La tendance peut fournir des informations supplémentaires sur l’intégrité de votre segment.
 
 ![Le widget d’intégrité de l’audience mappé.](../images/destinations/mapped-audience-health.png)
+
+### [!UICONTROL Nombre de destinations] (#destinations-count)
+
+Le [!UICONTROL Nombre de destinations] fournit le nombre total de points de terminaison disponibles où une audience peut être activée et diffusée dans le système. Ce nombre inclut les destinations principales et inactives.
+
+Sous le nombre total, sélectionnez **[!UICONTROL Destinations]** pour accéder à l’onglet de navigation des destinations. Cette page répertorie toutes les destinations avec lesquelles vous avez établi une connexion à ce jour.
+
+![Le widget Nombre de destinations .](../images/destinations/destinations-count.png)
 
 ## Étapes suivantes
 
