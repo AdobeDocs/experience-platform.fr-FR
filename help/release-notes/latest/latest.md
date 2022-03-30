@@ -2,89 +2,133 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 366656346c25cd5206b36c7ff2b9942c5027de17
+source-git-commit: 6ae54c1f3f06c8daaf7c0d36beb4d5884bc258eb
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 26%
+source-wordcount: '882'
+ht-degree: 31%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de lancement : 7 mars 2022**
+**Date de lancement : 30 mars 2022**
 
->[!NOTE]
->
->Cette version a été déplacée de la date d’origine du 23 février au 7 mars.
+Nouvelles fonctionnalités d’Adobe Experience Platform :
+
+- [Journaux d’audit](#audit-logs)
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [Alertes](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [[!DNL Data collection]](#data-collection)
-- [[!DNL Destinations]](#destinations)
-- [[!DNL Identity Service]](#identity)
-- [[!DNL Sources]](#sources)
+- [[!DNL Query Service]](#query-service)
+- [Sources](#sources)
+<!-- - [Experience Data Model (XDM)](#xdm) -->
 
-## [!DNL Dashboards] {#dashboards}
+## Journaux d’audit {#audit-logs}
 
-Adobe Experience Platform fournit plusieurs [!DNL dashboards] grâce à laquelle vous pouvez afficher des informations importantes sur les données de votre organisation, telles qu’elles sont capturées lors d’instantanés quotidiens.
-
-**Fonctionnalités mises à jour**
-
-| Fonctionnalité | Description |
-| --- | --- |
-| Nouveaux widgets de destinations standard | Les widgets standard suivants vous permettent de visualiser différentes mesures liées à vos destinations.<ul><li>Segments récemment activés par destination. Ce widget affiche les cinq segments les plus récemment activés par ordre décroissant en fonction de la destination choisie.</li><li>Tendance de la taille de l’audience. Ce widget illustre la relation entre le nombre de profils sur une période donnée pour un segment qui a été mappé à ce compte de destination.</li><li>Segments non mappés par identité. Ce widget répertorie les cinq premiers segments non mappés classés par nombre d’identités décroissant pour une destination et une identité données.</li><li>Segments mappés par identité. Ce widget répertorie les cinq premiers segments mappés. Les segments sont classés de haut en bas en fonction de leur nombre respectif d’ID source correspondant à l’ID de destination sélectionné dans le menu déroulant du widget.</li><li>Audiences courantes. Ce widget fournit une liste des cinq premiers segments activés sur le compte de destination choisi en haut de la page, ainsi que la destination sélectionnée dans la liste déroulante du widget.</li></ul> Pour plus d’informations sur les widgets standard disponibles, voir la section [documentation du tableau de bord des destinations .](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
-
-Pour plus d’informations sur les [!DNL Dashboards], consultez la [[!DNL Dashboards] présentation](../../dashboards/home.md).
-
-## Collecte de données {#data-collection}
-
-Platform fournit une suite de technologies qui vous permet de collecter des données d’expérience client côté client et de les envoyer au réseau Adobe Experience Platform Edge où elles peuvent être enrichies, transformées et distribuées vers des destinations Adobe ou non Adobe.
+Experience Platform vous permet de contrôler l’activité des utilisateurs pour divers services et fonctionnalités. Les journaux d’audit fournissent des informations sur qui a effectué quoi et quand.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Amélioration du workflow de l’interface utilisateur pour la configuration des flux de données | Le workflow de création d’un nouveau flux de données dans l’interface utilisateur de collecte de données a été mis à jour. Lors de l’ajout de services à un flux de données, seuls les services auxquels vous avez accès seront inclus dans la liste des options. Consultez le guide sur la [configuration d’un flux de données](../../edge/fundamentals/datastreams.md) pour plus d’informations. |
-| Préparation de données pour la collecte de données | Si vous utilisez le SDK Web de Adobe Experience Platform, vous pouvez désormais tirer parti des fonctionnalités de préparation des données pour mapper vos données au modèle de données d’expérience (XDM) côté serveur. Voir la section sur [Préparation de données pour la collecte de données](../../edge/fundamentals/datastreams.md#data-prep) dans le guide datastreams pour plus d’informations. |
-| Identifiants d’appareils propriétaires | Vous pouvez désormais envoyer vos propres ID d’appareil au réseau Adobe Experience Platform Edge lors de la collecte de données client à l’aide du SDK Web Platform, ce qui vous permet de contourner les restrictions récentes du navigateur sur la durée de vie des cookies tiers. Consultez le guide sur la [identifiants d’appareils propriétaires](../../edge/identity/first-party-device-ids.md) pour plus d’informations. |
+| Logs d’audit pour le jeu de données, le schéma, la classe, le groupe de champs, le type de données, le sandbox, la destination, le segment, la stratégie de fusion, l’attribut calculé, le profil de produit et le compte (Adobe). | Il s’agit des ressources enregistrées par les journaux d’audit. Si la fonction est activée, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux. |
+| Exportation des journaux d’audit | Les journaux d’audit peuvent être téléchargés en tant que `CSV` ou `JSON` fichier . Les fichiers générés sont enregistrés directement sur votre machine. |
 
-Pour plus d’informations sur la collecte de données dans Platform, voir [présentation de la collecte de données](../../collection/home.md).
+{style=&quot;table-layout:auto&quot;}
 
-## [!DNL Destinations] {#destinations}
+Pour plus d’informations sur les journaux d’audit dans Platform, reportez-vous à la section [aperçu des journaux d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+## Alertes {#alerts}
 
-**Fonctionnalités nouvelles ou mises à jour**
-
-| Fonctionnalité | Description |
-| ----------- | ----------- |
-| (Version bêta) Prise en charge des Destinations SDK pour les destinations basées sur des fichiers | [Prise en charge des Destinations SDK pour les destinations basées sur des fichiers](../../destinations/destination-sdk/file-based-destination-configuration.md) est actuellement en version bêta privée et n’est disponible que pour un certain nombre de partenaires et de clients. Les fonctionnalités et la documentation associée peuvent faire l’objet de modifications avant la mise à disposition d’une version générale.<br><br>Contactez votre représentant de compte d’Adobe pour savoir comment accéder à la fonctionnalité. Les représentants du compte interne de l’Adobe doivent contacter les équipes produit et ingénieur des destinations Experience Platform pour discuter des cas d’utilisation pris en charge. <br><br> Lors de la phase bêta de la prise en charge des Destinations SDK pour les destinations basées sur des fichiers, les partenaires bêta et les clients peuvent utiliser le [Destination SDK Experience Platform](/help/destinations/destination-sdk/overview.md) pour créer des destinations privées afin de bénéficier des fonctionnalités suivantes : <ul><li>Créez une destination basée sur des fichiers (par lots) via Amazon S3, les serveurs SFTP, Azure Blob, Azure Data Lake Storage, Data Landing Zone de stockage.</li><li>Configurez et définissez les options de planification et de fréquence d’exportation des fichiers par défaut.</li><li>Configurez et définissez des options pour formater vos fichiers CSV exportés (délimiteurs, caractères d’échappement et autres options).</li><li>Possibilité de définir et de modifier des en-têtes de fichier personnalisés.</li><li>Capacité à recevoir des notifications d’événement sur l’exportation de fichiers et de segments.</li><li>Possibilité d’exporter des types de fichiers supplémentaires tels que CSV, TSV, JSON, Parquet.</li></ul>  <br>Pour commencer à utiliser la nouvelle fonctionnalité, lisez [(Version bêta) Utilisez la Destination SDK pour configurer une destination basée sur des fichiers](../../destinations/destination-sdk/file-based-destination-configuration.md). <br><br> La fonctionnalité de création privée ou de production *diffusion en continu* les destinations à l’aide de Destination SDK sont déjà disponibles pour tous les clients et partenaires Experience Platform. Lisez le guide sur la façon de [utiliser la Destination SDK pour configurer une destination de diffusion en continu ;](/help/destinations/destination-sdk/configure-destination-instructions.md) pour plus d’informations. |
-
-## [!DNL Identity Service] {#identity}
-
-Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
-
-Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leur comportement en rapprochant des identités entre les appareils et les systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités de Platform. Vous pouvez vous abonner à différentes règles d’alerte à l’aide de l’onglet [!UICONTROL Alertes] dans l’interface utilisateur de Platform. Vous pouvez aussi choisir de recevoir les messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Nouvelle autorisation pour `view-identity-graph` | Vous pouvez désormais utiliser la variable `view-identity-graph` autorisation de contrôler si les utilisateurs de votre entreprise peuvent afficher des données de graphique d’identités. Les utilisateurs ne disposant pas de cette autorisation ne pourront pas accéder à la visionneuse de graphiques d’identités dans l’interface utilisateur ou lors de l’accès à [!DNL Identity Service] API qui renvoient des identités. Voir [présentation du contrôle d’accès](../../access-control/home.md) pour plus d’informations sur les autorisations. |
+| Nouvelles règles d’alerte | Deux nouvelles règles d’alerte sont désormais disponibles pour les sources liées à l’ingestion de données. Consultez la présentation des [règles d’alerte](../../observability/alerts/rules.md) pour obtenir la liste mise à jour des types d’alerte. |
 
-Pour des informations plus générales sur le [!DNL Identity Service], reportez-vous à la [présentation du service d’identités](../../identity-service/home.md).
+{style=&quot;table-layout:auto&quot;}
+
+Pour plus d’informations sur les alertes dans Platform, consultez l’[aperçu des alertes](../../observability/alerts/overview.md).
+
+## Tableaux de bord {#dashboards}
+
+Adobe Experience Platform fournit plusieurs [!DNL dashboards] grâce à laquelle vous pouvez afficher des informations importantes sur les données de votre organisation, telles qu’elles sont capturées lors d’instantanés quotidiens.
+
+### Tableaux de bord de profil
+
+Le tableau de bord Profils affiche un instantané des données d’attribut (enregistrement) dont votre organisation dispose dans la banque de profils en Experience Platform.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Widget Profils non segmentés | Le widget fournit le nombre total de tous les profils qui ne sont associés à aucun segment. Le nombre généré est précis à partir du dernier instantané et représente l’opportunité d’activation du profil à l’échelle de votre organisation. Voir [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets) pour plus d’informations. |
+| Widget de tendance Profils non segmentés | Ce widget fournit une représentation graphique linéaire pour le nombre de profils qui ne sont associés à aucun segment sur une période donnée. La tendance peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. Voir [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets) pour plus d’informations. |
+| Profils non segmentés par widget Identité | Ce widget classe le nombre total de profils non segmentés en fonction de leur identifiant unique. Les données sont visualisées dans un graphique à barres. Voir [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets) pour plus d’informations. |
+| Widget de profils d’identité unique | Ce widget fournit un comptage des profils de votre organisation qui n’ont qu’un seul type d’ID qui crée leur identité, soit un email, soit un ECID. Voir [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets) pour plus d’informations. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour plus d’informations sur les tableaux de bord des profils, reportez-vous à la section [Présentation des tableaux de bord des profils](../../dashboards/guides/profiles.md).
+
+### Tableaux de bord des destinations
+
+Le tableau de bord Destinations affiche un instantané des destinations que votre entreprise a activées dans Experience Platform.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Widget de comptage des destinations | Le widget fournit le nombre total de points de terminaison disponibles où une audience peut être activée et diffusée dans le système. Ce nombre inclut les destinations principales et inactives. Voir [documentation du widget standard des destinations](../../dashboards/guides/destinations.md#standard-widgets) pour plus d’informations. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour plus d’informations sur les tableaux de bord des destinations dans Platform, reportez-vous à la section [Présentation des tableaux de bord des destinations](../../dashboards/guides/destinations.md).
+
+<!-- ## Experience Data Model (XDM) {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
+
+## Query Service {#query-service}
+
+[!DNL Query Service] vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans Data Science Workspace ou pour l’ingestion dans Real-time Customer Profile.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| `table_exists` | La nouvelle commande de fonctionnalité permet de confirmer si un tableau existe actuellement dans le système. La commande renvoie une valeur booléenne : `true` si le tableau **does** existent et `false` si le tableau fonctionne **not** existent. Voir [Documentation sur la syntaxe SQL](../../query-service/sql/syntax.md) pour plus d’informations. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour plus d’informations sur les fonctionnalités disponibles, reportez-vous à la section [Présentation de Query Service](../../query-service/home.md).
 
 ## Sources {#sources}
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services CRM et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer l’ingestion des données tout au long de l’opération.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Sources bêta passant à la version générale | Les sources suivantes ont été promues de la version bêta à la version générale : <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Zoho CRM]](../../sources/connectors/crm/zoho.md)</li></ul> |
+| Nouvelles sources désormais disponibles pour l’utilisation B2B | Vous pouvez désormais utiliser toutes les sources disponibles sur Platform pour les cas d’utilisation B2B. Voir [catalogue de sources](../../sources/home.md) pour obtenir une liste complète des sources disponibles. |
+| Disponibilité générale des nouvelles [!DNL Oracle Eloqua] source | Vous pouvez désormais utiliser la variable [!DNL Oracle Eloqua] pour ingérer facilement des données à partir de vos [!DNL Oracle Eloqua] instance (compte, campagne, contacts) vers Platform. Consultez la documentation relative à [création d’un [!DNL Oracle Eloqua] connexion source](../../sources/connectors/marketing-automation/oracle-eloqua.md) pour plus d’informations. |
+| Améliorations de l’API pour [!DNL Data Landing Zone] | Le [!DNL Data Landing Zone] La source prend désormais en charge la détection automatique des propriétés de fichier lors de l’utilisation de la fonction [!DNL Flow Service] API. Consultez la documentation relative à [création d’un [!DNL Data Landing Zone] connexion source](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) pour plus d’informations. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

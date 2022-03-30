@@ -1,7 +1,7 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
-source-git-commit: 4bead30e4bb13461cf42374cb93f3d67520a14ec
+source-git-commit: 004835ab8af8f187c3e6af036429072e8de19024
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 31%
@@ -125,7 +125,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 | Fonctionnalité | Description |
 | --- | --- |
 | Nouvelles sources désormais disponibles pour l’utilisation B2B | Vous pouvez désormais utiliser toutes les sources disponibles sur Platform pour les cas d’utilisation B2B. Voir [catalogue de sources](../../sources/home.md) pour obtenir une liste complète des sources disponibles. |
-| Disponibilité générale des nouvelles [!DNL Oracle Eloqua] source | Vous pouvez désormais utiliser la variable [!DNL Oracle Eloqua] pour ingérer facilement des données à partir de vos [!DNL Oracle Eloqua] instance (compte, campagne, contacts) vers Platform. Consultez la documentation relative à [création d’un [!DNL Oracle Eloqua] connexion source](../../sources/connectors/oracle-eloqua.md) pour plus d’informations. |
+| Disponibilité générale des nouvelles [!DNL Oracle Eloqua] source | Vous pouvez désormais utiliser la variable [!DNL Oracle Eloqua] pour ingérer facilement des données à partir de vos [!DNL Oracle Eloqua] instance (compte, campagne, contacts) vers Platform. Consultez la documentation relative à [création d’un [!DNL Oracle Eloqua] connexion source](../../sources/connectors/marketing-automation/oracle-eloqua.md) pour plus d’informations. |
 | Améliorations de l’API pour [!DNL Data Landing Zone] | Le [!DNL Data Landing Zone] La source prend désormais en charge la détection automatique des propriétés de fichier lors de l’utilisation de la fonction [!DNL Flow Service] API. Consultez la documentation relative à [création d’un [!DNL Data Landing Zone] connexion source](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) pour plus d’informations. |
 
 {style=&quot;table-layout:auto&quot;}
