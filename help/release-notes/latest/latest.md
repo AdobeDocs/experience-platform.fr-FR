@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6ae54c1f3f06c8daaf7c0d36beb4d5884bc258eb
+source-git-commit: 13e10956519199ae1872685ba6a6eff8b5d73e21
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 31%
+source-wordcount: '1059'
+ht-degree: 25%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 31%
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 
 - [Journaux d’audit](#audit-logs)
+- [Comptes associés dans Real-Time CDP B2B Edition](#related-accounts)
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
@@ -39,6 +40,22 @@ Experience Platform vous permet de contrôler l’activité des utilisateurs pou
 {style=&quot;table-layout:auto&quot;}
 
 Pour plus d’informations sur les journaux d’audit dans Platform, reportez-vous à la section [aperçu des journaux d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
+
+## Comptes associés dans Real-Time CDP B2B Edition {#related-accounts}
+
+>[!NOTE]
+>
+>La fonctionnalité Comptes associés est disponible uniquement pour les clients de l’édition Real-Time CDP B2B.
+
+Les entreprises B2B disposent souvent de leurs informations sur leurs clients stockées dans plusieurs systèmes, chacune d&#39;entre elles ne contenant que des données partielles, voire conflictuelles, pour la même entité commerciale au monde réel. Cela crée un énorme défi : parvenir à une vue exacte de ses clients, réduisant ainsi l’efficacité et l’efficience de leurs efforts de marketing et de vente B2B. Avec la publication des comptes connexes, [!DNL Real-time CDP B2B] affiche désormais la liste des comptes similaires au compte que vous parcourez. Vous pouvez inclure les comptes associés dans vos définitions de segment pour élargir votre portée ou appliquer des critères plus larges dans vos segments.
+
+Pour en savoir plus sur cette fonctionnalité, consultez les pages de documentation suivantes :
+
+- [Comptes associés dans la présentation de Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [Onglet Comptes associés dans le guide d’interface utilisateur du profil de compte](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [Utilisation des comptes associés dans les définitions de segment](../../rtcdp/segmentation/b2b.md#related-account)
+
+Pour en savoir plus sur l’édition B2B de la plateforme CDP en temps réel, voir [aperçu](../../rtcdp/overview.md).
 
 ## Alertes {#alerts}
 
