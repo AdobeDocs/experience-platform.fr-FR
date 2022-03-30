@@ -5,9 +5,9 @@ title: Définition des champs XDM dans l’interface utilisateur
 description: Découvrez comment définir des champs XDM dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 08002616450259aded0cc53046472f10ce0a9bb9
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1331'
 ht-degree: 5%
 
 ---
@@ -26,30 +26,25 @@ Bien que ce guide ne soit pas obligatoire, il est recommandé de suivre égaleme
 
 Pour définir de nouveaux champs XDM dans l’interface utilisateur, vous devez d’abord ouvrir un schéma dans le [!DNL Schema Editor]. Selon les schémas actuellement disponibles dans la variable [!DNL Schema Library], vous pouvez choisir de [créer un nouveau schéma](../resources/schemas.md#create) ou [sélectionner un schéma existant à modifier ;](../resources/schemas.md#edit).
 
-Une fois que vous avez [!DNL Schema Editor] ouvert, des contrôles pour ajouter ou modifier des champs s’affichent dans la zone de travail. Ces commandes s’affichent en regard du nom du schéma, ainsi que des champs de type objet qui ont été définis sous la classe ou le groupe de champs sélectionné.
+Une fois que vous avez [!DNL Schema Editor] ouvrez, utilisez le rail de gauche pour sélectionner la classe ou le groupe de champs pour lequel vous souhaitez définir des champs. Si la ressource est une ressource personnalisée définie par votre organisation, les contrôles permettant d’ajouter ou de modifier des champs s’affichent dans la zone de travail. Ces commandes s’affichent en regard du nom du schéma, ainsi que des champs de type objet qui ont été définis sous la classe ou le groupe de champs sélectionné.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
->[!WARNING]
+>[!NOTE]
 >
->Si vous tentez d’ajouter un champ à un objet fourni par un groupe de champs standard, ce groupe sera converti en groupe de champs personnalisé et le groupe de champs d’origine ne sera plus disponible. Voir la section sur [ajout de champs aux groupes de champs standard](../resources/schemas.md#custom-fields-for-standard-groups) pour plus d’informations, voir le guide de l’interface utilisateur des schémas .
+>Si la classe ou le groupe de champs que vous sélectionnez est une ressource principale fournie par Adobe, il ne peut pas être modifié et les contrôles affichés ci-dessus n’apparaîtront donc pas. Si le schéma auquel vous souhaitez ajouter des champs est basé sur une classe XDM principale et ne contient aucun groupe de champs personnalisé, vous pouvez [créer un groupe de champs](../resources/field-groups.md#create) à ajouter au schéma à la place.
 
 Pour ajouter un nouveau champ à la ressource, sélectionnez l’option **plus (+)** en regard du nom du schéma dans la zone de travail ou du champ de type objet sous lequel vous souhaitez définir le champ.
 
 ![](../../images/ui/fields/overview/plus-icon.png)
 
-Selon que vous ajoutez directement un champ à un schéma ou à sa classe constituante et à ses groupes de champs, les étapes requises pour ajouter le champ varient. Le reste de ce document se concentre sur la configuration des propriétés d’un champ, quel que soit l’endroit où ce champ apparaît dans le schéma. Pour plus d’informations sur les différentes manières d’ajouter des champs à un schéma, reportez-vous aux sections suivantes du guide de l’interface utilisateur des schémas :
+## Définition d’un champ pour une ressource {#define}
 
-* [Ajouter des champs aux groupes de champs](../resources/schemas.md#add-fields)
-* [Ajout direct de champs à un schéma](../resources/schemas.md#add-individual-fields)
-
-## Définition des propriétés d’un champ {#define}
-
-Après avoir sélectionné la variable **plus (+)** , une **[!UICONTROL Nouveau champ]** apparaît dans la zone de travail, située dans un espace de noms d’objet associé à votre identifiant de tenant unique (comme illustré ci-dessous `_tenantId` dans l’exemple ci-dessous). Tous les champs personnalisés ajoutés à un schéma sont automatiquement placés dans cet espace de noms afin d’éviter tout conflit avec d’autres champs provenant de classes et de groupes de champs fournis par l’Adobe.
+Après avoir sélectionné la variable **plus (+)** , une **[!UICONTROL Nouveau champ]** apparaît dans la zone de travail, située dans un objet de niveau racine et dont l’espace de noms correspond à votre identifiant de tenant unique (comme illustré ci-dessous). `_tenantId` dans l’exemple ci-dessous). Tous les champs ajoutés à un schéma par le biais de classes personnalisées et de groupes de champs sont automatiquement placés dans cet espace de noms afin d’éviter tout conflit avec d’autres champs provenant de classes et de groupes de champs fournis par l’Adobe.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
-Dans le rail de droite sous **[!UICONTROL Propriétés du champ]**, vous pouvez configurer les détails du nouveau champ. Les informations suivantes sont requises pour chaque champ :
+Dans le rail de droite sous **[!UICONTROL Propriétés du champ]**, vous pouvez configurer les détails des nouveaux champs. Les informations suivantes sont requises pour chaque champ :
 
 | Propriété du champ | Description |
 | --- | --- |
