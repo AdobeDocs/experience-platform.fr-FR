@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform permet de fournir des expériences personnalisées à vos clients en temps réel.
-source-git-commit: c53482763a98946543907ea96df1a1080ce78beb
+source-git-commit: 520405601dccc649b983da2b8f999f3862dd140b
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 98%
+source-wordcount: '235'
+ht-degree: 97%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 98%
          * [Présentation](./governance-privacy-security/consent/iab/overview.md)
          * [Configuration d’un jeu de données pour capturer les données de consentement et de préférence](./governance-privacy-security/consent/iab/dataset.md)
       * [Intégrer le SDK Web de Platform pour traiter les données de consentement et de préférence](./governance-privacy-security/consent/sdk.md)
-   * Journaux d’audit (Beta) {#audit-logs}
+   * Journaux d’audit {#audit-logs}
       * [Présentation](./governance-privacy-security/audit-logs/overview.md)
 * [Tableau de bord d’utilisation de la licence](license-usage-dashboard.md)
 * [Guide de dépannage](troubleshooting.md)
