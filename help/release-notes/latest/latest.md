@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 13e10956519199ae1872685ba6a6eff8b5d73e21
+source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 25%
@@ -53,7 +53,7 @@ Pour en savoir plus sur cette fonctionnalité, consultez les pages de documentat
 
 - [Comptes associés dans la présentation de Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
 - [Onglet Comptes associés dans le guide d’interface utilisateur du profil de compte](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [Utilisation des comptes associés dans les définitions de segment](../../rtcdp/segmentation/b2b.md#related-account)
+- [Utilisation des comptes associés dans les définitions de segment](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 Pour en savoir plus sur l’édition B2B de la plateforme CDP en temps réel, voir [aperçu](../../rtcdp/overview.md).
 
