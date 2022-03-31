@@ -5,10 +5,10 @@ title: Syntaxe SQL dans Query Service
 topic-legacy: syntax
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 9493909d606ba858deab5a15f1ffcc8ec9257972
+source-git-commit: 5468097c61d42a7b565520051b955329e493d51f
 workflow-type: tm+mt
-source-wordcount: '2448'
-ht-degree: 10%
+source-wordcount: '2596'
+ht-degree: 9%
 
 ---
 
@@ -261,9 +261,17 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 | ------ | ------ |
 | `IF EXISTS` | Si cette valeur est spécifiée, aucune exception n’est générée si la table **not** existent. |
 
+## CRÉER UNE BASE DE DONNÉES
+
+Le `CREATE DATABASE` crée une base de données ADLS.
+
+```sql
+CREATE DATABASE [IF NOT EXISTS] db_name
+```
+
 ## DROP DABASE
 
-Le `DROP DATABASE` supprime une base de données existante.
+Le `DROP DATABASE` supprime la base de données d’une instance.
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -666,6 +674,7 @@ COPY query
 
 Le `ALTER TABLE` vous permet d&#39;ajouter ou de déposer des contraintes de clé Principale ou étrangère, ainsi que d&#39;ajouter des colonnes dans le tableau.
 
+
 #### AJOUTER OU DÉPOSER UNE CONTRAINTE
 
 Les requêtes SQL suivantes montrent des exemples d’ajout ou de suppression de contraintes dans un tableau.
@@ -704,6 +713,34 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
+#### AJOUT D’UN SCHÉMA
+
+La requête SQL suivante montre un exemple d&#39;ajout d&#39;une table à une base de données/un schéma.
+
+```sql
+ALTER TABLE table_name ADD SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> Il n’est pas possible d’ajouter des tableaux et des vues ADLS aux bases de données/schémas DWH.
+
+
+#### SUPPRESSION DU SCHÉMA
+
+La requête SQL suivante illustre un exemple de suppression d’une table d’une base de données/d’un schéma.
+
+```sql
+ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> Les tables et vues DWH ne peuvent pas être supprimées des bases de données/schémas DWH liés physiquement.
+
+
+**Paramètres**
+
 | Paramètres | Description |
 | ------ | ------ |
 | `table_name` | Nom de la table que vous modifiez. |
@@ -738,4 +775,43 @@ SHOW FOREIGN KEYS
 ------------------+---------------------+----------+---------------------+----------------------+-----------
  table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
  table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+```
+
+
+### AFFICHER LES GROUPES DE DONNÉES
+
+Le `SHOW DATAGROUPS` renvoie une table de toutes les bases de données associées. Pour chaque base de données, le tableau comprend le schéma, le type de groupe, le type enfant, le nom enfant et l’ID enfant.
+
+```sql
+SHOW DATAGROUPS
+```
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                       |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   adls_db     | adls_scheema      | ADLS      | Data Lake Table      | adls_table1                                        | 6149ff6e45cfa318a76ba6d3
+   adls_db     | adls_scheema      | ADLS      | Data Warehouse Table | _table_demo1                                       | 22df56cf-0790-4034-bd54-d26d55ca6b21
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view1                                         | c2e7ddac-d41c-40c5-a7dd-acd41c80c5e9
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view4                                         | b280c564-df7e-405f-80c5-64df7ea05fc3
+```
+
+
+### AFFICHER LES GROUPES DE DONNÉES POUR LE tableau
+
+Le `SHOW DATAGROUPS FOR` La commande &#39;table_name&#39; renvoie une table de toutes les bases de données associées contenant le paramètre comme son enfant. Pour chaque base de données, le tableau comprend le schéma, le type de groupe, le type enfant, le nom enfant et l’ID enfant.
+
+```sql
+SHOW DATAGROUPS FOR 'table_name'
+```
+
+**Paramètres**
+
+- `table_name`: Nom de la table pour laquelle vous souhaitez trouver les bases de données associées.
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   dwh_db_demo | schema2           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   dwh_db_demo | schema1           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   qsaccel     | profile_aggs      | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
 ```
