@@ -1,11 +1,11 @@
 ---
+title: (Version bêta) Connexion à l’API HTTP
 keywords: diffusion en continu;
-title: Connexion via l’API HTTP
 description: La destination d’API HTTP dans Adobe Experience Platform vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 7acacc4a5ddd10f47da59837ad7dab2615d41789
+source-git-commit: 0d58445557490a5539279f55c34183994429c632
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1382'
 ht-degree: 3%
 
 ---

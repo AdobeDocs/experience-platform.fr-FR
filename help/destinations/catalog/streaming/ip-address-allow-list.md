@@ -1,11 +1,12 @@
 ---
 keywords: Adresse IP, plage IP, destinations de liste autorisée, liste autorisée, liste autorisée des destinations de diffusion en continu
-title: 'LISTE AUTORISÉE d’adresses IP pour les destinations de diffusion en continu '
+title: LISTE AUTORISÉE d’adresses IP pour les destinations de diffusion en continu
 type: Documentation
-description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée afin d’exporter en toute sécurité des données d’Experience Platform vers votre point d’entrée API REST HTTP.
-source-git-commit: 508435ebe7ba762d204408118703fa6469616118
+description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée afin d’exporter en toute sécurité des données d’Experience Platform vers votre point de terminaison API REST HTTP, Amazon Kinesis ou votre instance Azure Event Hubs.
+exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
+source-git-commit: 8ea871d3ba66b9ee1a864a6319cde21f518f4534
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
