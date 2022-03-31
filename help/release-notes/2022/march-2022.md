@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
+source-git-commit: d8983f08821b9157edd64fdba1f42a8ac9d38a3d
 workflow-type: tm+mt
-source-wordcount: '1059'
-ht-degree: 25%
+source-wordcount: '1156'
+ht-degree: 24%
 
 ---
 
@@ -91,6 +91,18 @@ Le tableau de bord Profils affiche un instantané des données d’attribut (enr
 {style=&quot;table-layout:auto&quot;}
 
 Pour plus d’informations sur les tableaux de bord des profils, reportez-vous à la section [Présentation des tableaux de bord des profils](../../dashboards/guides/profiles.md).
+
+## Collecte de données {#data-collection}
+
+Platform fournit une suite de technologies qui vous permet de collecter des données d’expérience client côté client et de les envoyer au réseau Adobe Experience Platform Edge où elles peuvent être enrichies, transformées et distribuées vers des destinations Adobe ou non Adobe.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Paramètres globaux de flux de données | Vous pouvez désormais configurer plusieurs nouveaux paramètres globaux lors de la configuration d’un flux de données : géolocalisation, cookie d’identifiant propriétaire et synchronisation des identifiants tiers. Voir la section sur [configuration d’un flux de données](../../edge/fundamentals/datastreams.md#configure) pour plus d’informations, voir le guide de l’interface utilisateur des flux de données . |
+
+Pour plus d’informations sur la collecte de données dans Platform, voir [présentation de la collecte de données](../../collection/home.md).
 
 ### Tableaux de bord des destinations
 
