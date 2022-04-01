@@ -1,18 +1,18 @@
 ---
-title: Configuration du flux de données pour le SDK Web Experience Platform
-description: 'Découvrez comment configurer les flux de données. '
-keywords: configuration;datastreams;datastreamId;edge;datastream id;paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;ID de conteneur de synchronisation;sandbox;flux de données;jeu de données d’événement;cible;code client;jeton de propriété;ID d’environnement cible;destinations de cookie;destinations d’URL;ID de suite de rapports de paramètres Analytics;ID de blocage
+title: Configuration d’un flux de données
+description: Connectez votre intégration SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
+keywords: configuration;jeux de données;datastreamId;edge;datastream id;paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;ID de conteneur de synchronisation;sandbox;flux de données;jeu de données d’événement;cible;code client;jeton de propriété;ID d’environnement cible;destinations de cookie;destinations d’URL;ID de suite de rapports de paramètres Analytics;prépréparation des données p;Mapper;XDM Mapper;Mapper sur Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
+source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '2090'
 ht-degree: 2%
 
 ---
 
 # Configuration d’un flux de données
 
-Un flux de données représente la configuration côté serveur lors de l’implémentation des SDK Web et Mobile Adobe Experience Platform. Lorsque la variable [configuration, commande](configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme la variable `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une demande est envoyée au réseau Edge Adobe Experience Platform, la variable `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans avoir à modifier le code de votre site web.
+Un flux de données représente la configuration côté serveur lors de l’implémentation des SDK Web et Mobile de Adobe Experience Platform. Lorsque la variable [configuration, commande](configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme la variable `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une demande est envoyée au réseau Edge Adobe Experience Platform, la variable `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans avoir à modifier le code de votre site web.
 
 Ce document décrit les étapes de configuration d’un flux de données dans l’interface utilisateur de la collecte de données.
 
@@ -78,13 +78,78 @@ Les sous-sections ci-dessous décrivent les étapes de base du mappage de vos do
 
 #### [!UICONTROL Choix des données]
 
-Sélectionner **[!UICONTROL Enregistrement et ajout d’un mappage]** après avoir terminé la [étape de configuration de base](#configure), et la variable **[!UICONTROL Sélectionner des données]** s’affiche. À partir de là, vous devez fournir un exemple d’objet JSON qui représente la structure des données que vous prévoyez d’envoyer à Platform. Vous pouvez sélectionner l’option pour charger l’objet sous forme de fichier ou coller l’objet brut dans la zone de texte fournie à la place.
+Sélectionner **[!UICONTROL Enregistrement et ajout d’un mappage]** après avoir terminé la [étape de configuration de base](#configure), et la variable **[!UICONTROL Sélectionner des données]** s’affiche. À partir de là, vous devez fournir un exemple d’objet JSON qui représente la structure des données que vous prévoyez d’envoyer à Platform.
+
+Vous devez construire cet objet JSON afin de pouvoir lui associer les propriétés de la couche de données que vous souhaitez capturer. Sélectionnez la section ci-dessous pour afficher un exemple d’objet JSON correctement formaté.
+
++++Exemple de fichier JSON
+
+```json
+{
+  "data": {
+    "eventMergeId": "cce1b53c-571f-4f36-b3c1-153d85be6602",
+    "eventType": "view:load",
+    "timestamp": "2021-09-30T14:50:09.604Z",
+    "web": {
+      "webPageDetails": {
+        "siteSection": "Product section",
+        "server": "example.com",
+        "name": "product home",
+        "URL": "https://www.example.com"
+      },
+      "webReferrer": {
+        "URL": "https://www.adobe.com/index2.html",
+        "type": "external"
+      }
+    },
+    "commerce": {
+      "purchase": 1,
+      "order": {
+        "orderID": "1234"
+      }
+    },
+    "product": [
+      {
+        "productInfo": {
+          "productID": "123"
+        }
+      },
+      {
+        "productInfo": {
+          "productID": "1234"
+        }
+      }
+    ],
+    "reservation": {
+      "id": "anc45123xlm",
+      "name": "Embassy Suits",
+      "SKU": "12345-L",
+      "skuVariant": "12345-LG-R",
+      "priceTotal": "112.99",
+      "currencyCode": "USD",
+      "adults": 2,
+      "children": 3,
+      "productAddMethod": "PDP",
+      "_namespace": {
+        "test": 1,
+        "priceTotal": "112.99",
+        "category": "Overnight Stay"
+      },
+      "freeCancellation": false,
+      "cancellationFee": 20,
+      "refundable": true
+    }
+  }
+}
+```
+
++++
 
 >[!IMPORTANT]
 >
 >L’objet JSON doit comporter un noeud racine unique. `data` afin de réussir la validation.
 
-Si le fichier JSON est valide, un schéma d’aperçu s’affiche dans le panneau de droite. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Vous pouvez sélectionner l’option pour charger l’objet sous forme de fichier ou coller l’objet brut dans la zone de texte fournie à la place. Si le fichier JSON est valide, un schéma d’aperçu s’affiche dans le panneau de droite. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Exemple JSON de données entrantes attendues](../images/datastreams/select-data.png)
 
@@ -105,6 +170,12 @@ Sélectionnez ensuite l’icône de schéma (![Icône Schéma](../images/datastr
 La page de mappage réapparaît avec le mappage des champs terminé affiché. Le **[!UICONTROL Mappage de la progression]** mises à jour de section pour refléter le nombre total de champs qui ont été mappés avec succès.
 
 ![Champ mappé avec succès avec la progression reflétée](../images/datastreams/field-mapped.png)
+
+>[!TIP]
+>
+>Si vous souhaitez mapper un tableau d’objets (dans le champ source) à un tableau d’objets différents (dans le champ cible), ajoutez `[*]` après le nom du tableau dans les chemins d’accès aux champs source et de destination, comme illustré ci-dessous.
+>
+>![Mappage d’objet Array](../images/datastreams/array-object-mapping.png)
 
 Continuez à suivre les étapes ci-dessus pour mapper le reste des champs au schéma cible. Bien que vous n’ayez pas à mapper tous les champs source disponibles, les champs du schéma cible définis selon les besoins doivent être mappés pour terminer cette étape. Le **[!UICONTROL Champs obligatoires]** Le compteur indique le nombre de champs requis qui ne sont pas encore mappés dans la configuration actuelle.
 
