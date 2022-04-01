@@ -5,10 +5,10 @@ title: 'Évaluation des événements en temps quasi réel avec la segmentation p
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation par flux avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 4b9c72b4acb9c419afc1725235a9d7865181736b
+source-git-commit: 58c58048538eaf5977b1a5905fab44307bb433a9
 workflow-type: tm+mt
-source-wordcount: '1834'
-ht-degree: 34%
+source-wordcount: '1896'
+ht-degree: 33%
 
 ---
 
@@ -24,7 +24,9 @@ Segmentation par flux sur [!DNL Adobe Experience Platform] permet aux clients d�
 
 >[!NOTE]
 >
->La segmentation par flux ne peut être utilisée que pour évaluer les données diffusées dans Platform. En d’autres termes, les données ingérées par l’ingestion par lots ne seront pas évaluées par la segmentation par flux et seront évaluées avec la tâche segmentée planifiée de nuit.
+>La segmentation par flux fonctionne sur toutes les données ingérées à l’aide d’une source de diffusion en continu. Les segments ingérés à l’aide d’une source par lots seront évalués de nuit, même s’ils sont qualifiés pour la segmentation par flux.
+>
+>En outre, les segments évalués avec la segmentation par flux peuvent dériver entre l’adhésion idéale et l’adhésion réelle si le segment est basé sur un autre segment évalué à l’aide de la segmentation par lots. Si, par exemple, le segment A est basé sur le segment B et le segment B est évalué à l’aide de la segmentation par lots, puisque le segment B n’est mis à jour que toutes les 24 heures, le segment A s’éloigne davantage des données réelles jusqu’à ce qu’il se resynchronise avec la mise à jour du segment B.
 
 ## Prise en main
 

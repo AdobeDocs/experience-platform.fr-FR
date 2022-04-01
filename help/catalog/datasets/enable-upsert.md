@@ -4,7 +4,7 @@ title: Activation d’un jeu de données pour les mises à jour de profil à l�
 type: Tutorial
 description: Ce tutoriel vous explique comment utiliser les API Adobe Experience Platform pour activer un jeu de données avec des fonctionnalités "d’insertion" afin d’effectuer des mises à jour des données de Real-time Customer Profile.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: d463dabbb9dc099394081b803df619129c0cb416
+source-git-commit: 58c58048538eaf5977b1a5905fab44307bb433a9
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 35%
@@ -19,7 +19,7 @@ Ce tutoriel décrit le processus d’activation d’un jeu de données avec des 
 
 Ce tutoriel nécessite une compréhension pratique de plusieurs services Adobe Experience Platform impliqués dans la gestion des jeux de données activés pour Profile. Avant de commencer ce tutoriel, veuillez consulter la documentation relative à ces [!DNL Platform] services :
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Catalog Service]](../../catalog/home.md): Une API RESTful qui vous permet de créer des jeux de données et de les configurer pour [!DNL Real-time Customer Profile] et [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 - [Ingestion par lots](../../ingestion/batch-ingestion/overview.md)
@@ -215,7 +215,7 @@ curl -X PATCH \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] },
+        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] }
       ]'
 ```
 
