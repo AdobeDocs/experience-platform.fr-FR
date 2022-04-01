@@ -3,9 +3,9 @@ title: API du serveur réseau Edge
 description: Découvrez ce qu’est l’API Adobe Experience Platform Edge Network Server et comment l’utiliser.
 seo-description: Learn what the Adobe Experience Platform Edge Network Server API is and how you can use it.
 keywords: collecte de données;collection;réseau Adobe Experience Platform Edge;api serveur;
-source-git-commit: 92b3a7bff576f72edc8628a850a2cdb9b43cb1c4
+source-git-commit: 4145e22519c1df2d5c010e563b81642a6f647cdc
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Le [!DNL Server API] prend en charge la collecte de données interactives et par
 1. Le point de terminaison interactif prend en charge la communication avec les services Adobe Experience Platform et Adobe Experience Cloud qui prennent en charge la segmentation avancée, la personnalisation et d’autres cas d’utilisation marketing.
 2. Le point de terminaison de lot permet d’envoyer les requêtes par lots lorsque les données doivent être intégrées sans recevoir de réponse des applications en cours d’appel.
 
-Le [!DNL Server API] prend en charge le type de requêtes suivant : Le [!DNL Server API] prend en charge les requêtes authentifiées via [Adobe I/O](https://developer.adobe.com/), à l’aide de la nouvelle `server.adobedc.net` point de terminaison .
+Le [!DNL Server API] prend en charge le type de requêtes suivant :
 
 * Demandes authentifiées via [Adobe I/O](https://developer.adobe.com/), à l’aide de la nouvelle `server.adobedc.net` point de terminaison .
 * Requêtes non authentifiées via le `edge.adobedc.net` point de terminaison .
