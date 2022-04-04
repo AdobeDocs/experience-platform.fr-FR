@@ -1,11 +1,11 @@
 ---
 keywords: Experience Cloud;prise en main;forum sur le contenu et le commerce;rubriques les plus consultées;services intelligents;cai
-solution: Experience Cloud, Intelligent Services, Experience Platform
+solution: Experience Platform
 title: Présentation de Content and Commerce AI
 topic-legacy: Content and Commerce AI
 description: Content and Commerce AI est un ensemble de services d’IA qui vous permet d’extraire des fonctionnalités intelligentes de votre contenu, d’organiser, de rationaliser le flux de contenu et de proposer à vos clients des expériences plus percutantes et personnalisées.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Le contenu est un composant essentiel de ces expériences. Pour mieux répondre 
 
 | Type de contenu | Fonctionnalités | Présentation des fonctionnalités |
 | --- | --- | --- |
-| Texte | - Extraction de mot-clé et d’entité <br> - Classifications personnalisées | - Extrayez automatiquement les mots-clés et les balises des documents d’entreprise et des pages web à l’aide d’un service d’IA prêt à l’emploi. <br> - étiquetez automatiquement les documents ou les pages web d’une entreprise selon une taxonomie d’entreprise à l’aide d’un service basé sur des modèles d’IA personnalisés. |
+| Texte | - Extraction des mots-clés et des entités <br>- Classificateurs personnalisés | - Extrayez automatiquement les mots-clés et les balises des documents d’entreprise et des pages web à l’aide d’un service d’IA prêt à l’emploi. <br> - étiquetez automatiquement les documents ou les pages web d’une entreprise selon une taxonomie d’entreprise à l’aide d’un service basé sur des modèles d’IA personnalisés. |
 | Images | - Recommandations visuelles <br> - Extraction des couleurs | - Proposer des recommandations de produits visuellement similaires aux consommateurs, optimisées par un modèle d’IA développé sur des fonctionnalités de produits intuitives (conception, couleur, forme). <br> : extrait précisément les couleurs dominantes (libellés et valeurs hexadécimales) et leur pondération à partir d’une image de produit. |
 
 ## Présentation de Content and Commerce AI
