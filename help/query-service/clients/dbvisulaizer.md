@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Connexion de DbVisualizer à Query Service
 topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter DbVisualizer à Adobe Experience Platform Query Service.
-source-git-commit: e9653341756a2067e27ca0d0658c54fc93db7505
+source-git-commit: 69e105b2c52a668ba708847795d4c92813aad0db
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 1%
+source-wordcount: '701'
+ht-degree: 0%
 
 ---
 
 # Connexion [!DNL DbVisualizer] to [!DNL Query Service] {#connect-dbvisualizer}
 
-Ce document décrit les étapes de connexion. [!DNL DbVisualizer] Bureau avec Adobe Experience Platform [!DNL Query Service].
+Ce document décrit les étapes à suivre pour connecter la variable [!DNL DbVisualizer] outil de base de données avec Adobe Experience Platform [!DNL Query Service].
 
 ## Prise en main
 
-Ce guide nécessite que vous ayez déjà accès à la fonction [!DNL DbVisualizer] de l’appli de bureau et connaissent comment naviguer dans son interface. Pour télécharger le [!DNL DbVisualizer] Application de bureau ou pour plus d’informations, voir [officiel [!DNL DbVisualizer] documentation](https://www.dbvis.com/download/).
+Ce guide nécessite que vous ayez déjà accès à la fonction [!DNL DbVisualizer] de l’appli de bureau et connaissent comment naviguer dans son interface. Pour télécharger le [!DNL DbVisualizer] pour plus d’informations, voir [officiel [!DNL DbVisualizer] documentation](https://www.dbvis.com/download/).
 
 >[!NOTE]
 >
@@ -94,4 +94,4 @@ Saisissez votre identifiant utilisateur et votre mot de passe, puis sélectionne
 
 ## Étapes suivantes
 
-Maintenant que vous êtes connecté [!DNL DbVisualizer] avec [!DNL Query Service], vous pouvez utiliser [!DNL DbVisualizer] pour écrire des requêtes. Pour plus d’informations sur la manière d’écrire et d’exécuter des requêtes, veuillez lire le guide sur l’exécution des requêtes.
+Maintenant que vous êtes connecté [!DNL DbVisualizer] avec [!DNL Query Service], vous pouvez utiliser [!DNL DbVisualizer] pour écrire des requêtes. Pour plus d’informations sur la manière d’écrire et d’exécuter des requêtes, veuillez lire la section [guide sur l&#39;exécution des requêtes](../best-practices/writing-queries.md).
