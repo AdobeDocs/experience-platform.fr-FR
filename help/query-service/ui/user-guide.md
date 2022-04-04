@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;éditeur de requêtes
 solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 topic-legacy: query editor
-description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service qui vous permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur de l’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
+description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service qui vous permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur de l’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 7eaa808ecc644fdb9bc6b3fe1347c7651d54a33b
+source-git-commit: 5e0db96b833cabd0330b1073a2ab14d4528c68b4
 workflow-type: tm+mt
 source-wordcount: '1572'
 ht-degree: 42%
@@ -14,9 +14,9 @@ ht-degree: 42%
 
 # Guide de l’interface utilisateur du [!DNL Query Editor]
 
-[!DNL Query Editor] est un outil interactif fourni par Adobe . Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. [!DNL Query Service][!DNL Experience Platform] [!DNL Query Editor] prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans [!DNL Experience Platform].
+[!DNL Query Editor] est un outil interactif fourni par Adobe . Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. [!DNL Query Service][!DNL Experience Platform] [!DNL Query Editor] prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans [!DNL Experience Platform].
 
-Pour plus d’informations sur les concepts et les fonctionnalités de [!DNL Query Service], consultez la [Présentation de Query Service](../home.md). Pour en savoir plus sur la navigation dans l’interface utilisateur de Query Service sur [!DNL Platform], consultez la [Présentation de l’interface utilisateur de Query Service](./overview.md).
+Pour plus d’informations sur les concepts et les fonctionnalités de [!DNL Query Service], reportez-vous à la section [Présentation de Query Service](../home.md). Pour en savoir plus sur la navigation dans l’interface utilisateur de Query Service sur [!DNL Platform], reportez-vous à la section [Présentation de l’interface utilisateur de Query Service](./overview.md).
 
 ## Prise en main
 
@@ -24,25 +24,25 @@ Pour plus d’informations sur les concepts et les fonctionnalités de [!DNL Que
 
 ### Connexion à [!DNL Query Service]
 
-[!DNL Query Editor] prend quelques secondes pour l’initialisation et la connexion à  [!DNL Query Service] lorsqu’elle est ouverte. La console vous indique qu’il est connecté, comme illustré ci-dessous. Si vous tentez d’exécuter une requête avant que l’éditeur ne soit connecté, l’exécution est retardée jusqu’à ce que la connexion soit établie.
+[!DNL Query Editor] prend quelques secondes pour l’initialisation et la connexion à [!DNL Query Service] lorsqu’il est ouvert. La console vous indique qu’il est connecté, comme illustré ci-dessous. Si vous tentez d’exécuter une requête avant que l’éditeur ne soit connecté, l’exécution est retardée jusqu’à ce que la connexion soit établie.
 
 ![Image](../images/ui/query-editor/connect.png)
 
 ### Exécution des requêtes à partir de [!DNL Query Editor]
 
-Les requêtes exécutées à partir de [!DNL Query Editor] s’exécutent de manière interactive. Cela signifie que la requête sera annulée si vous fermez le navigateur ou quittez l’éditeur. Cela concerne également les requêtes visant à générer des jeux de données à partir de sorties de requête.
+Requêtes exécutées depuis [!DNL Query Editor] s’exécuter de manière interactive. Cela signifie que la requête sera annulée si vous fermez le navigateur ou quittez l’éditeur. Cela concerne également les requêtes visant à générer des jeux de données à partir de sorties de requête.
 
-## Création de requête à l’aide de [!DNL Query Editor]
+## Création de requêtes à l’aide de [!DNL Query Editor]
 
-[!DNL Query Editor] vous permet d’écrire, d’exécuter et d’enregistrer des requêtes pour les données d’expérience client. Toutes les requêtes exécutées dans [!DNL Query Editor], ou enregistrées, sont disponibles pour tous les utilisateurs de votre organisation ayant accès à [!DNL Query Service].
+Utilisation [!DNL Query Editor], vous pouvez écrire, exécuter et enregistrer des requêtes pour les données d’expérience client. Toutes les requêtes exécutées dans [!DNL Query Editor], ou enregistrés, sont disponibles pour tous les utilisateurs de votre entreprise ayant accès à [!DNL Query Service].
 
 ### Accéder à [!DNL Query Editor]
 
-Dans l’interface utilisateur [!DNL Experience Platform], sélectionnez **[!UICONTROL Requêtes]** dans le menu de navigation de gauche pour ouvrir l’espace de travail [!DNL Query Service]. Sélectionnez ensuite **[!UICONTROL Créer une requête]** en haut à droite de l’écran pour commencer à écrire des requêtes. Ce lien est disponible à partir de n’importe quelle page de l’espace de travail [!DNL Query Service].
+Dans le [!DNL Experience Platform] Interface utilisateur, sélectionnez **[!UICONTROL Requêtes]** dans le menu de navigation de gauche pour ouvrir la [!DNL Query Service] workspace. Ensuite, sélectionnez **[!UICONTROL Créer une requête]** en haut à droite de l’écran pour commencer à écrire des requêtes. Ce lien est disponible à partir de n’importe quelle page de la [!DNL Query Service] workspace.
 
 ![Image](../images/ui/query-editor/create-query.png)
 
-### Rédaction de requêtes
+### Rédaction de requêtes {#writing-queries}
 
 [!UICONTROL Query Editor est organisé de façon à rendre l’écriture de requête aussi facile que possible. ] La capture d’écran ci-dessous présente l’affichage de l’éditeur dans l’interface utilisateur. Le bouton **Lire** et le champ d’entrée SQL sont mis en surbrillance.
 
@@ -76,7 +76,7 @@ Lorsque des erreurs sont détectées, vous pouvez afficher les messages d’erre
 
 ### Détails de la requête
 
-Lorsque vous affichez une requête dans [!DNL Query Editor], le panneau **[!UICONTROL Détails de la requête]** fournit des outils pour gérer la requête sélectionnée.
+Lorsque vous affichez une requête dans [!DNL Query Editor], la variable **[!UICONTROL Détails de la requête]** fournit des outils pour gérer la requête sélectionnée.
 
 ![Image](../images/ui/query-editor/query-details.png)
 
@@ -88,43 +88,43 @@ Ce panneau présente également des métadonnées utiles, telles que la dernièr
 
 >[!NOTE]
 >
-> Vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée. De plus, **not** pourra ajouter un planning à une requête paramétrée.
+> Vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée. De plus, vous pouvez **not** peut ajouter un planning à une requête paramétrée.
 
 Pour ajouter un planning à une requête, sélectionnez **[!UICONTROL Ajouter un planning]**.
 
 ![Image](../images/ui/query-editor/add-schedule.png)
 
-La page **[!UICONTROL Détails de la planification]** s’affiche. Sur cette page, vous pouvez choisir la fréquence de la requête planifiée, les dates d’exécution de la requête planifiée, ainsi que le jeu de données vers lequel exporter la requête.
+Le **[!UICONTROL Détails de la planification]** s’affiche. Sur cette page, vous pouvez choisir la fréquence de la requête planifiée, les dates d’exécution de la requête planifiée, ainsi que le jeu de données vers lequel exporter la requête.
 
 ![Image](../images/ui/query-editor/schedule-details.png)
 
-Vous pouvez choisir les options suivantes pour **[!UICONTROL Fréquence]** :
+Vous pouvez choisir les options suivantes pour **[!UICONTROL Fréquence]**:
 
-- **[!UICONTROL Horaire]** : La requête planifiée s’exécute toutes les heures pour la période que vous avez sélectionnée.
-- **[!UICONTROL Quotidien]** : La requête planifiée s’exécute tous les X jours à l’heure et à la période que vous avez sélectionnée. Notez que l’heure sélectionnée est en **UTC**, et non votre fuseau horaire local.
-- **[!UICONTROL Hebdomadaire]** : La requête sélectionnée s’exécute les jours de la semaine, de l’heure et de la période que vous avez sélectionnée. Notez que l’heure sélectionnée est en **UTC**, et non votre fuseau horaire local.
-- **[!UICONTROL Mensuel]** : La requête sélectionnée s’exécute tous les mois au jour, à l’heure et à la période que vous avez sélectionnée. Notez que l’heure sélectionnée est en **UTC**, et non votre fuseau horaire local.
-- **[!UICONTROL Annuel]** : La requête sélectionnée s’exécute chaque année au jour, au mois, à l’heure et à la période que vous avez sélectionnée. Notez que l’heure sélectionnée est en **UTC**, et non votre fuseau horaire local.
+- **[!UICONTROL Horaire]**: La requête planifiée s’exécute toutes les heures pour la période que vous avez sélectionnée.
+- **[!UICONTROL Quotidien]**: La requête planifiée s’exécute tous les X jours à l’heure et à la période que vous avez sélectionnée. Notez que l’heure sélectionnée est indiquée dans **UTC**, et non votre fuseau horaire local.
+- **[!UICONTROL Hebdomadaire]**: La requête sélectionnée s’exécute les jours de la semaine, de l’heure et de la période que vous avez sélectionnée. Notez que l’heure sélectionnée est indiquée dans **UTC**, et non votre fuseau horaire local.
+- **[!UICONTROL Mensuel]**: La requête sélectionnée s’exécute tous les mois au jour, à l’heure et à la période que vous avez sélectionnée. Notez que l’heure sélectionnée est indiquée dans **UTC**, et non votre fuseau horaire local.
+- **[!UICONTROL Annuel]**: La requête sélectionnée s’exécute chaque année au jour, au mois, à l’heure et à la période que vous avez sélectionnée. Notez que l’heure sélectionnée est indiquée dans **UTC**, et non votre fuseau horaire local.
 
 Pour le jeu de données, vous avez la possibilité d’utiliser un jeu de données existant ou de créer un nouveau jeu de données.
 
 >[!IMPORTANT]
 >
-> Puisque vous utilisez un jeu de données existant ou que vous créez un jeu de données, vous n’avez pas besoin d’inclure **** `INSERT INTO` ou `CREATE TABLE AS SELECT` dans la requête, puisque les jeux de données sont déjà définis. L’inclusion de `INSERT INTO` ou `CREATE TABLE AS SELECT` dans vos requêtes planifiées entraînera une erreur.
+> Puisque vous utilisez un jeu de données existant ou que vous en créez, vous procédez comme suit : **not** Vous devez inclure : `INSERT INTO` ou `CREATE TABLE AS SELECT` dans le cadre de la requête, puisque les jeux de données sont déjà définis. Y compris l’une ou l’autre `INSERT INTO` ou `CREATE TABLE AS SELECT` dans le cadre de vos requêtes planifiées, une erreur se produira.
 
-Après avoir confirmé tous ces détails, sélectionnez **[!UICONTROL Enregistrer]** pour créer une planification.
+Après avoir confirmé tous ces détails, sélectionnez **[!UICONTROL Enregistrer]** pour créer un planning.
 
-La page des détails de la requête réapparaît et affiche désormais les détails du planning que vous venez de créer, y compris l’identifiant du planning, le planning lui-même et le jeu de données de sortie du planning. Vous pouvez utiliser l’ID de planning pour rechercher plus d’informations sur les exécutions de la requête planifiée elle-même. Pour en savoir plus, consultez le [guide des points de terminaison d’exécution de requête planifiée](../api/runs-scheduled-queries.md).
+La page des détails de la requête réapparaît et affiche désormais les détails du planning que vous venez de créer, y compris l’identifiant du planning, le planning lui-même et le jeu de données de sortie du planning. Vous pouvez utiliser l’ID de planning pour rechercher plus d’informations sur les exécutions de la requête planifiée elle-même. Pour en savoir plus, veuillez lire le [guide des points de fin d’exécution de requête planifiée](../api/runs-scheduled-queries.md).
 
 >[!NOTE]
 >
-> Vous pouvez uniquement planifier **un modèle de requête** à l’aide de l’interface utilisateur. Si vous souhaitez ajouter des plannings supplémentaires à un modèle de requête, vous devez utiliser l’API . Si un planning a déjà été ajouté à l’aide de l’API, **et** ne seront pas ajoutés à l’aide de l’interface utilisateur. Si plusieurs planifications sont déjà jointes à un modèle de requête, seule la planification la plus ancienne s’affiche. Pour savoir comment ajouter des plannings à l’aide de l’API, consultez le [guide du point de terminaison des requêtes planifiées](../api/scheduled-queries.md).
+> Vous pouvez uniquement planifier **one** modèle de requête à l’aide de l’interface utilisateur. Si vous souhaitez ajouter des plannings supplémentaires à un modèle de requête, vous devez utiliser l’API . Si un planning a déjà été ajouté à l’aide de l’API, vous serez **not** vous pouvez ajouter des plannings supplémentaires à l’aide de l’interface utilisateur. Si plusieurs planifications sont déjà jointes à un modèle de requête, seule la planification la plus ancienne s’affiche. Pour savoir comment ajouter des plannings à l’aide de l’API, veuillez lire le [guide de point de terminaison des requêtes planifiées](../api/scheduled-queries.md).
 >
 > En outre, vous devez actualiser la page si vous souhaitez vous assurer que vous disposez de l’état le plus récent pour le planning que vous consultez.
 
 #### Suppression d’un planning
 
-Vous pouvez supprimer un planning en sélectionnant **[!UICONTROL Supprimer un planning]**.
+Vous pouvez supprimer un planning en sélectionnant **[!UICONTROL Suppression d’un planning]**.
 
 ![Image](../images/ui/query-editor/delete-schedule.png)
 
@@ -138,17 +138,17 @@ Vous pouvez supprimer un planning en sélectionnant **[!UICONTROL Supprimer un p
 
 ### Accès aux requêtes précédentes
 
-Toutes les requêtes exécutées à partir de [!DNL Query Editor] sont capturées dans la table Journal. Vous pouvez utiliser la fonctionnalité de recherche dans l’onglet **[!UICONTROL Journal]** pour rechercher des exécutions de requête. Les requêtes enregistrées sont répertoriées dans l’onglet **[!UICONTROL Parcourir]**.
+Toutes les requêtes exécutées depuis [!DNL Query Editor] sont capturés dans le tableau Journal. Vous pouvez utiliser la fonctionnalité de recherche dans l’onglet **[!UICONTROL Journal]** pour rechercher des exécutions de requête. Les requêtes enregistrées sont répertoriées dans l’onglet **[!UICONTROL Parcourir]**.
 
 Pour plus d’informations, reportez-vous à la [Présentation de l’interface utilisateur de Query Service](./overview.md).
 
 >[!NOTE]
 >
->Les requêtes non exécutées ne sont pas enregistrées dans le journal. Pour que la requête soit disponible dans [!DNL Query Service], elle doit être exécutée ou enregistrée dans [!DNL Query Editor].
+>Les requêtes non exécutées ne sont pas enregistrées dans le journal. Pour que la requête soit disponible dans [!DNL Query Service], il doit être exécuté ou enregistré dans [!DNL Query Editor].
 
 ## Exécution de requête à l’aide de Query Editor
 
-Pour exécuter une requête dans [!DNL Query Editor], vous pouvez saisir du code SQL dans l’éditeur ou charger une requête précédente à partir de l’onglet **[!UICONTROL Journal]** ou **[!UICONTROL Parcourir]** et sélectionner **Lire**. L’état de l’exécution de la requête s’affiche dans l’onglet **[!UICONTROL Console]** ci-dessous et les données de sortie s’affichent dans l’onglet **[!UICONTROL Résultats]**.
+Pour exécuter une requête dans [!DNL Query Editor], vous pouvez saisir du code SQL dans l’éditeur ou charger une requête précédente à partir de la fonction **[!UICONTROL Journal]** ou **[!UICONTROL Parcourir]** et sélectionnez **Play**. L’état de l’exécution de la requête s’affiche dans l’onglet **[!UICONTROL Console]** ci-dessous et les données de sortie s’affichent dans l’onglet **[!UICONTROL Résultats]**.
 
 ### Console
 
@@ -166,7 +166,7 @@ Une fois la requête terminée, les résultats s’affichent dans l’onglet **[
 
 ![Image](../images/ui/query-editor/query-results.png)
 
-## Tutoriel vidéo Exécuter des requêtes avec [!DNL Query Service]
+## Exécuter des requêtes avec [!DNL Query Service] tutoriel vidéo
 
 La vidéo suivante montre comment exécuter des requêtes dans l’interface Adobe Experience Platform et dans un client PSQL. De plus, l’utilisation de propriétés individuelles dans un objet XDM, l’utilisation de fonctions définies par l’Adobe et l’utilisation de CREATE TABLE AS SELECT (CTAS) sont illustrées.
 
@@ -174,4 +174,4 @@ La vidéo suivante montre comment exécuter des requêtes dans l’interface Ado
 
 ## Étapes suivantes
 
-Maintenant que vous savez quelles fonctionnalités sont disponibles dans [!DNL Query Editor] et comment parcourir l’application, vous pouvez commencer à créer vos propres requêtes directement dans [!DNL Platform]. Pour plus d’informations sur l’exécution de requêtes SQL par rapport à des jeux de données dans [!DNL Data Lake], consultez le guide sur [l’exécution de requêtes](../best-practices/writing-queries.md).
+Maintenant que vous savez quelles fonctionnalités sont disponibles dans [!DNL Query Editor] et comment naviguer dans l’application, vous pouvez commencer à créer vos propres requêtes directement dans [!DNL Platform]. Pour plus d’informations sur l’exécution de requêtes SQL par rapport à des jeux de données dans [!DNL Data Lake], reportez-vous au guide sur la [exécution de requêtes](../best-practices/writing-queries.md).
