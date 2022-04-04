@@ -1,98 +1,98 @@
 ---
 keywords: SFTP;sftp
-title: SFTP connection
-description: Create a live outbound connection to your SFTP server to periodically export delimited data files from Adobe Experience Platform.
+title: Connexion SFTP
+description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 99bb5d1b76b926622ca21fa1df7c3cb9fabc4856
+source-git-commit: dbefe3e9b193ccef06b6a81919233501b6e938be
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '557'
 ht-degree: 2%
 
 ---
 
-# SFTP connection
+# Connexion SFTP
 
 ## Présentation {#overview}
 
-Create a live outbound connection to your SFTP server to periodically export delimited data files from Adobe Experience Platform.
+Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités de Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
-> [!DNL Amazon S3][!DNL Azure Blob]
+> Bien qu’Adobe prenne en charge les exportations de données vers les serveurs SFTP, les emplacements de stockage dans le cloud recommandés pour exporter des données sont les suivants : [!DNL Amazon S3] et [!DNL Azure Blob].
 
-## Export type and frequency {#export-type-frequency}
+## Type et fréquence d&#39;export {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Export type | **** | [](../../ui/activate-batch-profile-destinations.md#select-attributes) |
-| Export frequency | **[!UICONTROL Lot]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. [](/help/destinations/destination-types.md#file-based) |
+| Type d&#39;export | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil de la fonction [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Fréquence des exports | **[!UICONTROL Lot]** | Les destinations de lot exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur [destinations basées sur des fichiers de lots](/help/destinations/destination-types.md#file-based). |
 
 {style=&quot;table-layout:auto&quot;}
 
-![](../../assets/catalog/cloud-storage/sftp/catalog.png)
+![Type d’exportation SFTP basé sur un profil](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
-## Connect to the destination {#connect}
+## Connexion à la destination {#connect}
 
-[](../../ui/connect-destination.md)
+Pour vous connecter à cette destination, procédez comme décrit dans la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
 ### Paramètres de connexion {#parameters}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_rsa"
->title="RSA public key"
->abstract="Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a Base64 encoded string."
+>title="Clé publique RSA"
+>abstract="Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que chaîne codée Base64."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
->title="SSH key"
->abstract="The SSH key requires a Base64 string."
+>title="Clé SSH"
+>abstract="La clé SSH requiert une chaîne Base64."
 
-[](../../ui/connect-destination.md)
+When [connexion](../../ui/connect-destination.md) vers cette destination, vous devez fournir les informations suivantes :
 
-#### Authentication information {#authentication-information}
+#### Informations d’authentification {#authentication-information}
 
-****
+Si vous sélectionnez la variable **[!UICONTROL Authentification de base]** saisissez pour vous connecter à votre emplacement SFTP :
 
-![](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![Authentification de base de la destination SFTP](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
-* ****
-* ****
-* ****
-* **** [!DNL Base64]
-   * Exemple : `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
+* **[!UICONTROL Hôte]**: l’adresse de votre emplacement de stockage SFTP ;
+* **[!UICONTROL Nom d’utilisateur]**: Nom d’utilisateur pour se connecter à l’emplacement de stockage SFTP ;
+* **[!UICONTROL Mot de passe]**: Mot de passe pour se connecter à l’emplacement de stockage de votre SFTP.
+* **[!UICONTROL Clé de chiffrement]**: Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que [!DNL Base64] chaîne codée.
+   * Exemple: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Voir ci-dessous un exemple de clé PGP correctement formatée, avec la partie centrale raccourcie pour plus de concision.
 
-      ![](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+      ![Clé PGP](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
-****
+Si vous sélectionnez la variable **[!UICONTROL SFTP avec clé SSH]** type d’authentification pour se connecter à votre emplacement SFTP :
 
-![](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![Authentification de clé SSH de destination SFTP](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
-* ****
-* ****
-* ****
-* ****
-* **** [!DNL Base64]
-   * Exemple : `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
+* **[!UICONTROL Domaine]**: Indiquez l’adresse IP ou le nom de domaine de votre compte SFTP.
+* **[!UICONTROL Port]**: le port utilisé par votre emplacement de stockage SFTP ;
+* **[!UICONTROL Nom d’utilisateur]**: Nom d’utilisateur pour se connecter à l’emplacement de stockage SFTP ;
+* **[!UICONTROL Clé SSH]**: Clé SSH permettant de se connecter à l’emplacement de stockage de votre SFTP.
+* **[!UICONTROL Clé de chiffrement]**: Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que [!DNL Base64] chaîne codée.
+   * Exemple: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Voir ci-dessous un exemple de clé PGP correctement formatée, avec la partie centrale raccourcie pour plus de concision.
 
-      ![](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+      ![Clé PGP](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### Destination details {#destination-details}
+#### Détails de la destination {#destination-details}
 
-After establishing the authentication connection to the SFTP location, provide the following information for the destination:
+Après avoir établi la connexion d’authentification à l’emplacement SFTP, fournissez les informations suivantes pour la destination :
 
-![](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![Détails de la destination disponible pour la destination SFTP](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* ****
-* ****
-* ****
+* **[!UICONTROL Nom]**: saisissez un nom qui vous aidera à identifier cette destination dans l’interface utilisateur de l’Experience Platform ;
+* **[!UICONTROL Description]**: saisissez une description pour cette destination ;
+* **[!UICONTROL Chemin du dossier]**: saisissez le chemin d’accès au dossier dans votre emplacement SFTP où les fichiers seront exportés.
 
-## Exported data {#exported-data}
+## Données exportées {#exported-data}
 
-[!DNL SFTP]`.csv` [](../../ui/activate-batch-profile-destinations.md)
+Pour [!DNL SFTP] destinations, Platform crée une `.csv` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) dans le tutoriel sur l’activation des segments.
 
-## IP address allow list
+## LISTE AUTORISÉE d’adresses IP
 
-[](ip-address-allow-list.md)
+Voir [LISTE AUTORISÉE d’adresses IP pour les destinations de stockage dans le cloud](ip-address-allow-list.md) si vous devez ajouter des adresses IP d’Adobe à une liste autorisée.
