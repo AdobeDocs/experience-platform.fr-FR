@@ -3,16 +3,16 @@ title: Configuration d’un flux de données
 description: Connectez votre intégration SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
 keywords: configuration;jeux de données;datastreamId;edge;datastream id;paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;ID de conteneur de synchronisation;sandbox;flux de données;jeu de données d’événement;cible;code client;jeton de propriété;ID d’environnement cible;destinations de cookie;destinations d’URL;ID de suite de rapports de paramètres Analytics;prépréparation des données p;Mapper;XDM Mapper;Mapper sur Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
+source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2102'
 ht-degree: 2%
 
 ---
 
 # Configuration d’un flux de données
 
-Un flux de données représente la configuration côté serveur lors de l’implémentation des SDK Web et Mobile de Adobe Experience Platform. Lorsque la variable [configuration, commande](configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme la variable `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une demande est envoyée au réseau Edge Adobe Experience Platform, la variable `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans avoir à modifier le code de votre site web.
+Un flux de données représente la configuration côté serveur lors de l’implémentation des SDK Web et Mobile Adobe Experience Platform. Lorsque la variable [configuration, commande](configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme la variable `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une demande est envoyée au réseau Edge Adobe Experience Platform, la variable `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans avoir à modifier le code de votre site web.
 
 Ce document décrit les étapes de configuration d’un flux de données dans l’interface utilisateur de la collecte de données.
 
@@ -66,15 +66,22 @@ Le reste de cette section se concentre sur les étapes de mappage des données �
 
 >[!IMPORTANT]
 >
->La préparation des données pour la collecte de données n’est actuellement pas prise en charge pour les implémentations du SDK Mobile.
+>La préparation des données pour la collecte de données n’est actuellement pas prise en charge pour les mises en oeuvre du SDK Mobile.
 
 Data Prep est un service Experience Platform qui vous permet de mapper, de transformer et de valider des données vers et depuis le modèle de données d’expérience (XDM). Lors de la configuration d’un flux de données activé par Platform, vous pouvez utiliser les fonctionnalités de préparation de données pour mapper vos données source à XDM lors de leur envoi à Platform Edge Network.
 
-Les sous-sections ci-dessous décrivent les étapes de base du mappage de vos données dans l’interface utilisateur de la collecte de données. Pour obtenir des instructions complètes sur toutes les fonctionnalités de la préparation de données, y compris les fonctions de transformation des champs calculés, consultez la documentation suivante :
+>[!NOTE]
+>
+>Pour obtenir des instructions complètes sur toutes les fonctionnalités de la préparation de données, y compris les fonctions de transformation des champs calculés, consultez la documentation suivante :
+>
+>* [Présentation de la préparation des données](../../data-prep/home.md)
+>* [Fonctions de mappage de la préparation de données](../../data-prep/functions.md)
+>* [Gestion des formats de données avec la préparation des données](../../data-prep/data-handling.md)
 
-* [Présentation de la préparation des données](../../data-prep/home.md)
-* [Fonctions de mappage de la préparation de données](../../data-prep/functions.md)
-* [Gestion des formats de données avec la préparation des données](../../data-prep/data-handling.md)
+
+Les sous-sections ci-dessous décrivent les étapes de base du mappage de vos données dans l’interface utilisateur de la collecte de données. Pour une démonstration rapide de ces étapes, reportez-vous à la vidéo suivante :
+
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 #### [!UICONTROL Choix des données]
 
