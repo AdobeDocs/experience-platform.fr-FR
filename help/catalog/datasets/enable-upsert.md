@@ -4,16 +4,20 @@ title: Activation d’un jeu de données pour les mises à jour de profil à l�
 type: Tutorial
 description: Ce tutoriel vous explique comment utiliser les API Adobe Experience Platform pour activer un jeu de données avec des fonctionnalités "d’insertion" afin d’effectuer des mises à jour des données de Real-time Customer Profile.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 58c58048538eaf5977b1a5905fab44307bb433a9
+source-git-commit: e7bd2c699b30276dca1a2e29c19f0a885b246f48
 workflow-type: tm+mt
-source-wordcount: '965'
-ht-degree: 35%
+source-wordcount: '991'
+ht-degree: 32%
 
 ---
 
 # Activation d’un jeu de données pour les mises à jour de profil à l’aide d’API
 
 Ce tutoriel décrit le processus d’activation d’un jeu de données avec des fonctionnalités &quot;d’insertion&quot; afin d’effectuer des mises à jour des données de Real-time Customer Profile. Cela inclut les étapes de création d’un nouveau jeu de données et de configuration d’un jeu de données existant.
+
+>[!NOTE]
+>
+>Le workflow d’insertion ne fonctionne que pour l’ingestion par lots. L’ingestion par flux est **not** pris en charge.
 
 ## Prise en main
 
@@ -22,7 +26,7 @@ Ce tutoriel nécessite une compréhension pratique de plusieurs services Adobe E
 - [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Catalog Service]](../../catalog/home.md): Une API RESTful qui vous permet de créer des jeux de données et de les configurer pour [!DNL Real-time Customer Profile] et [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
-- [Ingestion par lots](../../ingestion/batch-ingestion/overview.md)
+- [Ingestion par lots](../../ingestion/batch-ingestion/overview.md): L’API Batch Ingestion vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lot.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à des API Platform.
 
@@ -102,11 +106,11 @@ Une réponse réussie affiche un tableau contenant l’identifiant du jeu de don
 
 ## Configuration d’un jeu de données existant {#configure-an-existing-dataset}
 
-Les étapes suivantes expliquent comment configurer un jeu de données activé par Profile existant pour la fonctionnalité de mise à jour (&quot;upsert&quot;).
+Les étapes suivantes expliquent comment configurer un jeu de données activé par Profile existant pour la fonctionnalité de mise à jour (insertion).
 
 >[!NOTE]
 >
->Pour configurer un jeu de données activé par Profile existant en vue de l’&quot;insertion&quot;, vous devez d’abord désactiver le jeu de données pour Profile, puis le réactiver avec le `isUpsert` balise . Si le jeu de données existant n’est pas activé pour Profile, vous pouvez passer directement aux étapes de [activation du jeu de données pour Profile et upsert](#enable-the-dataset). Si vous n’êtes pas sûr, les étapes suivantes vous montrent comment vérifier si le jeu de données est déjà activé.
+>Pour configurer un jeu de données activé par Profile existant en vue de sa mise à jour, vous devez d’abord désactiver le jeu de données pour Profile, puis le réactiver avec le `isUpsert` balise . Si le jeu de données existant n’est pas activé pour Profile, vous pouvez passer directement aux étapes de [activation du jeu de données pour Profile et upsert](#enable-the-dataset). Si vous n’êtes pas sûr, les étapes suivantes vous montrent comment vérifier si le jeu de données est déjà activé.
 
 ### Vérifiez si le jeu de données est activé pour Profile.
 
@@ -220,7 +224,8 @@ curl -X PATCH \
 ```
 
 **Réponse**
-Une requête PATCH réussie renvoie un état HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. Le `unifiedProfile` a été désactivé.
+
+Une requête de PATCH réussie renvoie un état HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. Le `unifiedProfile` a été désactivé.
 
 ```json
 [
@@ -270,4 +275,4 @@ Une requête PATCH réussie renvoie un état HTTP 200 (OK) et un tableau conten
 
 ## Étapes suivantes
 
-Votre profil et votre jeu de données activé pour le service peuvent désormais être utilisés par les workflows d’ingestion par lots et par flux pour mettre à jour les données de profil. Pour en savoir plus sur l’ingestion de données dans Adobe Experience Platform, commencez par lire le [présentation de l’ingestion des données](../../ingestion/home.md).
+Votre profil et votre jeu de données activé pour l’insertion peuvent désormais être utilisés par les workflows d’ingestion par lots pour mettre à jour les données de profil. Pour en savoir plus sur l’ingestion de données dans Adobe Experience Platform, commencez par lire le [présentation de l’ingestion des données](../../ingestion/home.md).
