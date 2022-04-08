@@ -6,10 +6,10 @@ seo-title: Activate audience data to batch profile export destinations
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil de lot.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 6c64e8400c85865aab4e8cfb9e86850562ba97aa
+source-git-commit: 98e2076832bee8e11df8834063cc0b11c1ae3164
 workflow-type: tm+mt
-source-wordcount: '2178'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -73,6 +73,16 @@ Sélectionnez la **[!UICONTROL Créer un planning]** bouton correspondant au seg
 >title="Options d’exportation de fichiers"
 >abstract="Sélectionner **Exporter les fichiers complets** pour exporter un instantané complet de tous les profils qualifiés pour le segment. Sélectionner **Exportation de fichiers incrémentiels** pour n&#39;exporter que les profils qualifiés pour le segment depuis le dernier export. <br> La première exportation de fichier incrémentielle comprend tous les profils qui remplissent les critères pour le segment, agissant comme un renvoi. Les futurs fichiers incrémentiels incluent uniquement les profils qualifiés pour le segment depuis le premier export de fichier incrémentiel."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Exportation de fichiers incrémentiels"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activationchaining_aftersegmentevaluation"
+>title="Activer après l’évaluation des segments"
+>abstract="L’activation s’exécute immédiatement une fois la tâche de segmentation quotidienne terminée. Ainsi, les profils les plus récents sont exportés. Vous devez déplacer cette fenêtre contextuelle vers la nouvelle section de chaîne d’activation pour une liaison correcte."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activationchaining_scheduled"
+>title="Activation planifiée"
+>abstract="L’activation s’exécute à une heure fixe de la journée. Vous devez déplacer cette fenêtre contextuelle vers la nouvelle section de chaîne d’activation pour une liaison correcte."
 
 Sélectionner **[!UICONTROL Exporter les fichiers complets]** pour déclencher l’exportation d’un fichier contenant un instantané complet de toutes les qualifications de profil pour le segment sélectionné.
 
