@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur de Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: b4388106caf1c6ee48c44051fe484cd595278483
+source-git-commit: a5e8b4df78d8dff58e000030d209606b46a582e8
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1168'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platform Query Service vous permet de vous connecter à des cli
 
 Vous pouvez utiliser des informations d’identification arrivant à expiration pour configurer rapidement une connexion à un client externe.
 
-![](../images/ui/credentials/expiring-credentials.png)
+![L’onglet Informations d’identification du tableau de bord Requêtes avec la section Informations d’identification arrivant à expiration est mise en surbrillance.](../images/ui/credentials/expiring-credentials.png)
 
 Le **[!UICONTROL Expiration des informations d’identification]** fournit les informations suivantes :
 
@@ -55,7 +55,7 @@ Toutes les autorisations requises sont désormais configurées dans Adobe Develo
 
 Pour créer un ensemble d’informations d’identification non arrivant à expiration, revenez à l’interface utilisateur de Platform et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Requêtes] workspace. Sélectionnez ensuite le **[!UICONTROL Informations d’identification]** suivi de **[!UICONTROL Génération des informations d’identification]**.
 
-![](../images/ui/credentials/generate-credentials.png)
+![Le tableau de bord Requêtes avec l’onglet Informations d’identification et Générer les informations d’identification sont mis en surbrillance.](../images/ui/credentials/generate-credentials.png)
 
 Une boîte de dialogue s’affiche, vous permettant de générer des informations d’identification. Pour créer des informations d’identification non expirantes, vous devez fournir les détails suivants :
 
@@ -66,11 +66,11 @@ Une boîte de dialogue s’affiche, vous permettant de générer des information
 
 Une fois que vous avez fourni tous les détails requis, sélectionnez **[!UICONTROL Génération des informations d’identification]** pour générer vos informations d’identification.
 
-![](../images/ui/credentials/create-account.png)
+![La boîte de dialogue Générer les informations d’identification est mise en surbrillance.](../images/ui/credentials/create-account.png)
 
 >[!IMPORTANT]
 >
->Une fois que la variable **[!UICONTROL Génération des informations d’identification]** est sélectionné, un fichier de configuration JSON est téléchargé sur votre ordinateur local. Puisque l’Adobe fonctionne **not** Enregistrez les informations d’identification générées, vous devez stocker le fichier téléchargé en toute sécurité et conserver un enregistrement des informations d’identification.
+>When **[!UICONTROL Génération des informations d’identification]** est sélectionné, un fichier de configuration JSON est téléchargé sur votre ordinateur local. Puisque l’Adobe fonctionne **not** Enregistrez les informations d’identification générées, vous devez stocker le fichier téléchargé en toute sécurité et conserver un enregistrement des informations d’identification.
 >
 >De plus, si les informations d’identification ne sont pas utilisées pendant 90 jours, elles seront expurgées.
 
@@ -82,7 +82,7 @@ Le fichier de configuration JSON contient des informations telles que le nom du 
 
 Après avoir enregistré vos informations d’identification générées, sélectionnez **[!UICONTROL Fermer]**. Vous pouvez maintenant voir une liste de toutes vos informations d’identification qui ne expirent pas.
 
-![](../images/ui/credentials/list-credentials.png)
+![L’onglet Informations d’identification du tableau de bord Requêtes avec la section Informations d’identification non arrivant à expiration a été développé.](../images/ui/credentials/list-credentials.png)
 
 Vous pouvez modifier ou supprimer vos informations d’identification non arrivant à expiration. Pour modifier des informations d’identification non expirantes, sélectionnez l’icône représentant un crayon (![](../images/ui/credentials/edit-icon.png)). Pour supprimer des informations d’identification non arrivant à expiration, sélectionnez l’icône de suppression (![](../images/ui/credentials/delete-icon.png)).
 
@@ -92,7 +92,7 @@ Lors de la modification d’informations d’identification non expirantes, un m
 - **[!UICONTROL Description]**: (Facultatif) Description des informations d’identification que vous générez.
 - **[!UICONTROL Affecté à]**: L’utilisateur auquel les informations d’identification seront attribuées. Cette valeur doit correspondre à l’adresse électronique de l’utilisateur qui crée les informations d’identification.
 
-![](../images/ui/credentials/update-credentials.png)
+![Boîte de dialogue Mettre à jour le compte .](../images/ui/credentials/update-credentials.png)
 
 Une fois que vous avez fourni tous les détails requis, sélectionnez **[!UICONTROL Mettre à jour le compte]** pour terminer la mise à jour de vos informations d’identification.
 
@@ -112,11 +112,11 @@ Le tableau ci-dessous décrit les paramètres généralement requis pour se conn
 
 | Paramètre | Description |
 |---|---|
-| Serveur/Hôte | Nom du serveur/hôte auquel vous vous connectez. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non arrivant à expiration et prend la forme `server.adobe.io`. La valeur se trouve sous **[!UICONTROL Hôte]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] .</ul></li> |
-| Port | port du serveur/hôte auquel vous vous connectez. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non arrivant à expiration. Elle se trouve sous **[!UICONTROL Port]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] . Exemple de valeur pour le port : `80`.</ul></li> |
-| Base de données | La base de données à laquelle vous vous connectez. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non arrivant à expiration et se trouve sous **[!UICONTROL Base]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] . Exemple de valeur pour la base de données : `prod:all`.</ul></li> |
-| Nom d’utilisateur | Nom d’utilisateur de l’utilisateur qui se connecte au client externe. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non arrivant à expiration. Il prend la forme d’une chaîne alphanumérique avant `@AdobeOrg`. Cette valeur se trouve sous **[!UICONTROL Nom d’utilisateur]**.</li></ul> |
-| Mot de passe | Mot de passe de l’utilisateur qui se connecte au client externe. <ul><li>Si vous utilisez des informations d’identification arrivant à expiration, vous pouvez le trouver sous **[!UICONTROL Mot de passe]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] .</li><li>Si vous utilisez des informations d’identification qui ne expirent pas, cette valeur correspond aux arguments concaténés de l’ID de compte technique et aux informations d’identification extraites du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{technicalAccountId}:{credential}`.</li></ul> |
+| **Serveur/hôte** | Nom du serveur/hôte auquel vous vous connectez. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non arrivant à expiration et prend la forme `server.adobe.io`. La valeur se trouve sous **[!UICONTROL Hôte]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] .</ul></li> |
+| **Port** | port du serveur/hôte auquel vous vous connectez. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non arrivant à expiration. Elle se trouve sous **[!UICONTROL Port]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] . Exemple de valeur pour le port : `80`.</ul></li> |
+| **Base de données** | La base de données à laquelle vous vous connectez. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non arrivant à expiration et se trouve sous **[!UICONTROL Base]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] . Exemple de valeur pour la base de données : `prod:all`.</ul></li> |
+| **Nom d’utilisateur** | Nom d’utilisateur de l’utilisateur qui se connecte au client externe. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non arrivant à expiration. Il prend la forme d’une chaîne alphanumérique avant `@AdobeOrg`. Cette valeur se trouve sous **[!UICONTROL Nom d’utilisateur]**.</li></ul> |
+| **Mot de passe** | Mot de passe de l’utilisateur qui se connecte au client externe. <ul><li>Si vous utilisez des informations d’identification arrivant à expiration, vous pouvez le trouver sous **[!UICONTROL Mot de passe]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] .</li><li>Si vous utilisez des informations d’identification qui ne expirent pas, cette valeur correspond aux arguments concaténés de l’ID de compte technique et aux informations d’identification extraites du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{technicalAccountId}:{credential}`.</li></ul> |
 
 ## Étapes suivantes
 
