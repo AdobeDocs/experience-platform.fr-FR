@@ -2,10 +2,10 @@
 description: Cette configuration vous permet d’indiquer des informations de base telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur Experience Platform et les identités qui peuvent être exportées vers votre destination.
 title: Options de configuration de destination de diffusion en continu pour Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 5%
+source-wordcount: '1787'
+ht-degree: 4%
 
 ---
 
@@ -98,8 +98,8 @@ Voici un exemple de configuration d’une destination fictive de diffusion en co
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
          "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000,
          "aggregationKey":{
             "includeSegmentId":true,
             "includeSegmentStatus":true,
@@ -276,6 +276,10 @@ Cette option vous permet d’effectuer les opérations suivantes :
    * Identifiant de segment;
    * État du segment ;
    * Identité ou groupes d’identités.
+
+>[!NOTE]
+>
+>Lorsque vous utilisez l’option d’agrégation configurable pour votre destination, gardez à l’esprit les valeurs minimale et maximale que vous pouvez utiliser pour les deux paramètres. `maxBatchAgeInSecs` (minimum 1 800 et maximum 3 600) et `maxNumEventsInBatch` (minimum 1 000, maximum 10 000).
 
 Pour des explications détaillées des paramètres d&#39;agrégation, reportez-vous à la section [Opérations de point d’entrée de l’API Destinations](./destination-configuration-api.md) page de référence, où chaque paramètre est décrit.
 
