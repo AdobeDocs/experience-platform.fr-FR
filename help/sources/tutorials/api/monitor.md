@@ -1,40 +1,40 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;flux de données de surveillance;api de service de flux;service de flux
 solution: Experience Platform
-title: Surveillance des flux de données à l’aide de l’API Flow Service
+title: Surveiller les flux de données à l’aide de l’API Flow Service
 topic-legacy: overview
 type: Tutorial
-description: Ce tutoriel décrit les étapes de surveillance des données d’exécution de flux pour l’exhaustivité, les erreurs et les mesures à l’aide de l’API Flow Service.
+description: Ce tutoriel décrit les étapes de surveillance de l’exhaustivité, des erreurs et des mesures relatives aux données d’exécution de flux à l’aide de l’API Flow Service.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
 source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '410'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
-# Surveillance des flux de données à l’aide de l’API Flow Service
+# Surveiller les flux de données à l’aide de l’API Flow Service
 
-Ce tutoriel décrit les étapes de surveillance de l’exécution des flux pour vérifier l’exhaustivité, les erreurs et les mesures à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes de surveillance de l’exhaustivité, des erreurs et des mesures relatives aux données d’exécution des flux à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->Ce tutoriel nécessite que vous disposiez de la valeur d’identifiant d’un flux de données valide. Si vous ne disposez pas d’un identifiant de flux de données valide, sélectionnez votre connecteur de votre choix dans la [présentation des sources](../../home.md) et suivez les étapes décrites pour créer un flux de données avant de lancer ce tutoriel.
+>Ce tutoriel nécessite que vous disposiez de la valeur d’identifiant d’un flux de données valide. Si vous ne disposez pas d’un identifiant de flux de données valide, sélectionnez le connecteur de votre choix dans la [présentation des sources](../../home.md) et suivez les étapes décrites pour créer un flux de données avant de lancer ce tutoriel.
 
 ## Prise en main
 
-Ce tutoriel nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../home.md): [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
-* [Environnements de test](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
+* [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-### Utilisation des API Platform
+### Utiliser les API Platform
 
-Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur [Prise en main des API Platform](../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide suivant : [Prise en main des API Platform](../../../landing/api-guide.md).
 
-## Surveillance des flux de données
+## Surveiller les flux de données
 
-Pour afficher l’état de votre flux de données, envoyez une requête GET à la fonction [!DNL Flow Service] API, tout en fournissant l’identifiant de flux correspondant à votre flux de données.
+Pour afficher le statut de votre flux de données, envoyez une requête GET à l’API [!DNL Flow Service] tout en fournissant l’identifiant de flux correspondant à votre flux de données.
 
 **Format d’API**
 
@@ -44,7 +44,7 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FLOW_ID}` | L’unique `id` pour le flux de données que vous souhaitez surveiller. |
+| `{FLOW_ID}` | Valeur unique `id` pour le flux de données que vous souhaitez surveiller. |
 
 **Requête**
 
@@ -225,7 +225,7 @@ Une réponse réussie renvoie des détails sur votre exécution de flux, y compr
 
 | Propriété | Description |
 | -------- | ----------- |
-| `items` | Contient un seul payload de métadonnées associé à votre exécution de flux spécifique. |
+| `items` | Contient une seule payload de métadonnées associée à votre exécution de flux spécifique. |
 | `metrics` | Définit les caractéristiques des données dans l’exécution du flux. |
 | `activities` | Définit la manière dont les données sont transformées. |
 | `durationSummary` | Définit les heures de début et de fin de l’exécution du flux. |
@@ -236,4 +236,4 @@ Une réponse réussie renvoie des détails sur votre exécution de flux, y compr
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez récupéré des mesures et des informations d’erreur sur votre flux de données à l’aide de la variable [!DNL Flow Service] API. Vous pouvez maintenant continuer à surveiller votre flux de données, en fonction de votre planning d’ingestion, pour suivre son état et ses taux d’ingestion. Pour plus d’informations sur l’exécution des mêmes tâches à l’aide de l’interface utilisateur, consultez le tutoriel sur [surveillance des flux de données à l’aide de l’interface utilisateur](../ui/monitor.md)
+En suivant ce tutoriel, vous avez récupéré des mesures et des informations relatives aux erreurs sur votre flux de données à l’aide de l’API [!DNL Flow Service]. Vous pouvez maintenant continuer à surveiller votre flux de données, en fonction de votre planning d’ingestion, pour suivre son statut et ses taux d’ingestion. Pour plus d’informations sur l’exécution des mêmes tâches à l’aide de l’interface utilisateur, consultez le tutoriel sur la [surveillance des flux de données à l’aide de l’interface utilisateur](../ui/monitor.md).
