@@ -1,42 +1,42 @@
 ---
-description: Cette page décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/credentials`.
-title: Opérations de l’API du point d’entrée des informations d’identification
+description: Cette page décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API « /authoring/credentials ».
+title: Opérations des paramètres d’identification de l’API
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
 source-git-commit: bc357e2e93b80edb5f7825bf2dee692f14bd7297
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '797'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Opérations de l’API du point d’entrée des informations d’identification {#credentials}
+# Opérations des paramètres d’identification de l’API {#credentials}
 
 >[!IMPORTANT]
 >
->**Point de terminaison de l’API**: `platform.adobe.io/data/core/activation/authoring/credentials`
+>**Point dʼentrée de l’API** : `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du `/authoring/credentials` Point d’entrée de l’API.
+Cette page répertorie et décrit toutes les opérations de l’API que vous pouvez effectuer à l’aide du point d’entrée de l’API `/authoring/credentials`.
 
-Pour une description des fonctionnalités prises en charge par ce point de terminaison, lisez :
+Pour une description des fonctionnalités prises en charge par ce point d’entrée, lisez :
 
-* [Configuration de destination de diffusion en continu](destination-configuration.md) pour la fonctionnalité que vous pouvez configurer pour les destinations de diffusion en continu.
+* [Configuration de destination de diffusion](destination-configuration.md) pour la fonctionnalité que vous pouvez configurer pour les destinations de diffusion.
 * [Configuration des destinations basées sur des fichiers](file-based-destination-configuration.md) pour les fonctionnalités que vous pouvez configurer pour les destinations basées sur des fichiers.
 
-## Quand utiliser la variable `/credentials` Point d’entrée API {#when-to-use}
+## Quand utiliser le point d’entrée de l’API `/credentials` {#when-to-use}
 
 >[!IMPORTANT]
 >
->Dans la plupart des cas, vous *ne pas* Vous devez utiliser la variable `/credentials` Point d’entrée de l’API. Au lieu de cela, vous pouvez configurer les informations d’authentification pour votre destination via le `customerAuthenticationConfigurations` des paramètres `/destinations` point de terminaison . Lecture [Configuration de l’authentification](./authentication-configuration.md#when-to-use) pour plus d’informations.
+>Dans la plupart des cas, vous ne devez *pas* utiliser le point d’entrée de l’API `/credentials`. Au lieu de cela, vous pouvez configurer les informations d’authentification pour votre destination via les paramètres `customerAuthenticationConfigurations` du point d’entrée `/destinations`. Lisez [Configuration de l’authentification](./authentication-configuration.md#when-to-use) pour plus d’informations.
 
-Utilisez ce point d’entrée API et sélectionnez `PLATFORM_AUTHENTICATION` dans le [configuration de destination](./destination-configuration.md#destination-delivery) s’il existe un système d’authentification global entre l’Adobe et votre destination et la variable [!DNL Platform] Le client n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer un objet d’identification à l’aide de la variable `/credentials` Point d’entrée de l’API.
+Utilisez ce point d’entrée d’API et sélectionnez `PLATFORM_AUTHENTICATION` dans [configuration d’une destination](./destination-configuration.md#destination-delivery) s’il existe un système d’authentification global entre Adobe et votre destination et si le client [!DNL Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer un objet d’identification à l’aide du point d’entrée de l’API `/credentials`.
 
 ## Prise en main des opérations de l’API de configuration des informations d’identification {#get-started}
 
 Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
-## Création d’une configuration d’informations d’identification {#create}
+## Créer la configuration des informations d’identification {#create}
 
-Vous pouvez créer une configuration d’informations d’identification en adressant une requête de POST à la fonction `/authoring/credentials` point de terminaison .
+Vous pouvez créer une nouvelle configuration d’information d’identification en effectuant une requête POST vers le point d’entrée `/authoring/credentials`.
 
 **Format d’API**
 
@@ -46,7 +46,7 @@ POST /authoring/credentials
 
 **Requête**
 
-La requête suivante crée une nouvelle configuration des informations d’identification, configurée par les paramètres fournis dans la payload. La payload ci-dessous inclut tous les paramètres acceptés par la fonction `/authoring/credentials` point de terminaison . Notez que vous n’avez pas à ajouter tous les paramètres à l’appel et que le modèle est personnalisable, conformément aux exigences de votre API.
+La requête suivante crée une nouvelle configuration d’information d’identification, configurée en fonction des paramètres fournis dans la payload. La payload ci-dessous inclut tous les paramètres acceptés par le point d’entrée `/authoring/credentials`. Notez que vous n’avez pas à ajouter tous les paramètres à l’appel et que le modèle est personnalisable, conformément aux exigences de votre API.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -115,32 +115,32 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 | Paramètre | Type | Description |
 | -------- | ----------- | ----------- |
-| `username` | Chaîne | Nom d’utilisateur de connexion de configuration des informations d’identification |
-| `password` | Chaîne | Mot de passe de connexion de la configuration des informations d&#39;identification |
+| `username` | Chaîne | Nom d’utilisateur pour la configuration des informations d’identification |
+| `password` | Chaîne | Mot de passe pour la configuration des informations d’identification |
 | `url` | Chaîne | URL du fournisseur d’autorisations |
-| `clientId` | Chaîne | ID client des informations d’identification client/application |
+| `clientId` | Chaîne | Identifiant client des informations d’identification client/application |
 | `clientSecret` | Chaîne | Secret client des informations d’identification client/application |
 | `accessToken` | Chaîne | Jeton d’accès fourni par le fournisseur d’autorisations |
 | `expiration` | Chaîne | Durée de vie du jeton d’accès |
-| `refreshToken` | Chaîne | Jeton d’actualisation fourni par le fournisseur d’autorisations |
+| `refreshToken` | Chaîne | Actualiser le jeton fourni par le fournisseur d’autorisations |
 | `header` | Chaîne | Tout en-tête requis pour l’autorisation |
 | `accessId` | Chaîne | Identifiant d’accès Amazon S3 |
 | `secretKey` | Chaîne | Clé secrète Amazon S3 |
 | `sshKey` | Chaîne | Clé SSH pour SFTP avec authentification SSH |
-| `tenant` | Chaîne | Client de stockage Azure Data Lake |
-| `servicePrincipalId` | Chaîne | Identifiant principal Azure Service pour Azure Data Lake Storage |
-| `servicePrincipalKey` | Chaîne | Clé principale Azure Service pour Azure Data Lake Storage |
-| `connectionString` | Chaîne | Chaîne de connexion de stockage Azure Blob |
+| `tenant` | Chaîne | Client Azure Data Lake Storage |
+| `servicePrincipalId` | Chaîne | Identifiant principal du service Azure pour Azure Data Lake Storage |
+| `servicePrincipalKey` | Chaîne | Clé principale du service Azure pour Azure Data Lake Storage |
+| `connectionString` | Chaîne | Chaîne de connexion de stockage dʼobjets Azure Blob |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration des informations d’identification que vous venez de créer.
+Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration dʼinformations dʼidentification que vous venez de créer.
 
-## Répertorier les configurations des informations d’identification {#retrieve-list}
+## Répertorier les configurations dʼinformations d’identification {#retrieve-list}
 
-Vous pouvez récupérer une liste de toutes les configurations d’identification de votre organisation IMS en adressant une demande de GET à la fonction `/authoring/credentials` point de terminaison .
+Vous pouvez obtenir une liste de toutes les configurations dʼinformations dʼidentification de votre organisation IMS en effectuant une requête GET vers le point de terminaison `/authoring/credentials`.
 
 **Format d’API**
 
@@ -151,7 +151,7 @@ GET /authoring/credentials
 
 **Requête**
 
-La requête suivante récupère la liste des configurations d’informations d’identification auxquelles vous avez accès, en fonction de la configuration de l’organisation IMS et de l’environnement de test.
+La requête suivante récupère la liste des configurations dʼinformations d’identification auxquelles vous avez accès, en fonction de lʼorganisation IMS et de la configuration de la sandbox.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -163,7 +163,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **Réponse**
 
-La réponse suivante renvoie un état HTTP 200 avec une liste des configurations d’informations d’identification auxquelles vous avez accès, en fonction de l’identifiant de l’organisation IMS et du nom de l’environnement de test que vous avez utilisés. One `instanceId` correspond au modèle pour une configuration des informations d’identification. La réponse est tronquée pour la concision.
+La réponse suivante renvoie un état HTTP 200 avec une liste des configurations dʼinformations d’identification auxquelles vous avez accès, en fonction de l’identifiant de l’organisation IMS et du nom de sandbox utilisés. Un champ `instanceId` correspond au modèle dʼune configuration dʼinformations d’identification. La réponse est tronquée à des fins de brièveté.
 
 ```json
 {
@@ -188,9 +188,9 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des configurations
     
 ```
 
-## Mise à jour d’une configuration d’informations d’identification existante {#update}
+## Mettre à jour une configuration dʼinformations d’identification existante {#update}
 
-Vous pouvez mettre à jour une configuration d’informations d’identification existante en adressant une requête de PUT à la fonction `/authoring/credentials` point de terminaison et en indiquant l’ID d’instance de la configuration des informations d’identification que vous souhaitez mettre à jour. Dans le corps de l’appel, indiquez la configuration des informations d’identification mises à jour.
+Vous pouvez mettre à jour une configuration dʼinformations d’identification existante en effectuant une requête PUT au point de terminaison `/authoring/credentials` et en fournissant lʼidentifiant de lʼinstance de la configuration dʼinformations d’identification à mettre à jour. Dans le corps de l’appel, indiquez la configuration dʼinformations d’identification mise à jour.
 
 **Format d’API**
 
@@ -201,11 +201,11 @@ PUT /authoring/credentials/{INSTANCE_ID}
 
 | Paramètre | Description |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | L’identifiant de la configuration des informations d’identification que vous souhaitez mettre à jour. |
+| `{INSTANCE_ID}` | Identifiant de la configuration dʼinformations dʼidentification que vous souhaitez mettre à jour. |
 
 **Requête**
 
-La requête suivante met à jour une configuration d’informations d’identification existante, configurée par les paramètres fournis dans la payload.
+La requête suivante met à jour une configuration dʼinformations d’identification existante, configurée par les paramètres fournis dans la payload.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/n55affa0-3747-4030-895d-1d1236bb3680 \
@@ -232,9 +232,9 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 }
 ```
 
-## Récupération d’une configuration d’informations d’identification spécifique {#get}
+## Récupérer une configuration dʼinformations d’identification spécifique {#get}
 
-Vous pouvez récupérer des informations détaillées sur une configuration d’informations d’identification spécifique en envoyant une demande de GET à la fonction `/authoring/credentials` point de terminaison et en indiquant l’ID d’instance de la configuration des informations d’identification que vous souhaitez mettre à jour.
+Vous pouvez récupérer des informations détaillées sur une configuration dʼinformations d’identification spécifique en effectuant une requête GET au point de terminaison `/authoring/credentials` et en indiquant l’identifiant de l’instance de la configuration dʼinformations d’identification à mettre à jour.
 
 **Format d’API**
 
@@ -244,7 +244,7 @@ GET /authoring/credentials/{INSTANCE_ID}
 
 | Paramètre | Description |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | L’identifiant de la configuration des informations d’identification que vous souhaitez récupérer. |
+| `{INSTANCE_ID}` | Identifiant de la configuration dʼinformations d’identification à récupérer. |
 
 **Requête**
 
@@ -258,7 +258,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la configuration des informations d’identification spécifiées.
+Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la configuration dʼinformations dʼidentification spécifiée.
 
 ```json
 {
@@ -278,9 +278,9 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaillé
 }
 ```
 
-## Suppression d’une configuration d’informations d’identification spécifique {#delete}
+## Supprimer une configuration d’informations d’identification spécifique {#delete}
 
-Vous pouvez supprimer la configuration des informations d’identification spécifiées en adressant une requête de DELETE à la fonction `/authoring/credentials` point de terminaison et en indiquant l’identifiant de la configuration des informations d’identification que vous souhaitez supprimer dans le chemin d’accès de la requête.
+Vous pouvez supprimer une configuration dʼinformations dʼidentification spécifiée en effectuant une requête DELETE vers le point de terminaison `/authoring/credentials` et en fournissant l’identifiant de la configuration dʼinformations dʼidentification à supprimer dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -290,7 +290,7 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | Le `id` de la configuration des informations d’identification que vous souhaitez supprimer. |
+| `{INSTANCE_ID}` | Champ `id` de la configuration dʼinformations dʼidentification que vous souhaitez supprimer. |
 
 **Requête**
 
@@ -308,8 +308,8 @@ Une réponse réussie renvoie un état HTTP 200 avec une réponse HTTP vide.
 
 ## Gestion des erreurs d’API
 
-Les points de terminaison de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](../../landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../landing/troubleshooting.md#api-status-codes) et [Erreurs dans l’en-tête de la requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
 
 ## Étapes suivantes
 
-Après avoir lu ce document, vous savez maintenant quand utiliser le point de terminaison des informations d’identification et comment configurer une configuration des informations d’identification à l’aide de la variable `/authoring/credentials` Point d’entrée de l’API ou `/authoring/destinations` point de terminaison . Lecture [comment utiliser la Destination SDK pour configurer votre destination](./configure-destination-instructions.md) pour comprendre où cette étape s’inscrit dans le processus de configuration de votre destination.
+Vous êtes arrivé au bout de ce document. À présent, vous savez quand utiliser le point de terminaison des informations d’identification et comment créer une configuration dʼinformations d’identification à l’aide du point de terminaison `/authoring/credentials` de l’API ou du point de terminaison `/authoring/destinations`. Poursuivez votre apprentissage dans la section [Comment utiliser Destination SDK pour configurer votre destination](./configure-destination-instructions.md) et obtenez une vue dʼensemble du processus de configuration de votre destination.
