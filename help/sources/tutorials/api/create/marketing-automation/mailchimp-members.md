@@ -1,36 +1,36 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
 solution: Experience Platform
-title: Création d’un flux de données pour les membres Mailchimp à l’aide de l’API Flow Service
+title: Créer un flux de données pour les membres Mailchimp à l’aide de l’API Flow Service
 topic-legacy: tutorial
-description: Découvrez comment connecter Adobe Experience Platform aux membres MailChimp à l’aide de l’API Flow Service.
+description: Découvrez comment connecter Adobe Experience Platform aux membres MailChimp à l’aide de l’API Flow Service.
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
 source-git-commit: fd851dea5623522e4706c6beb8bd086d466773b5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2500'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
-# Création d’un flux de données pour [!DNL Mailchimp Members] utilisation de l’API Flow Service
+# Créer un flux de données pour [!DNL Mailchimp Members] à lʼaide de l’API Flow Service
 
-Le tutoriel suivant décrit les étapes à suivre pour créer une connexion source et un flux de données à importer [!DNL Mailchimp Members] données vers Platform à l’aide de la fonction [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant vous guide à travers les étapes de création dʼune connexion source et dʼun flux de données pour importer des données [!DNL Mailchimp Members] dans Platform à l’aide de lʼ[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Conditions préalables
 
-Avant de vous connecter [!DNL Mailchimp] à Adobe Experience Platform à l’aide du code d’actualisation OAuth 2, vous devez d’abord récupérer votre jeton d’accès pour [!DNL MailChimp.] Voir [[!DNL Mailchimp] Guide OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) pour obtenir des instructions détaillées sur la recherche de votre jeton d’accès.
+Avant de connecter [!DNL Mailchimp] à Adobe Experience Platform à l’aide du code d’actualisation OAuth 2, vous devez d’abord récupérer votre jeton d’accès pour [!DNL MailChimp.]. consultez le [[!DNL Mailchimp] Guide dʼOAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) pour obtenir des instructions détaillées sur lʼobtention de votre jeton d’accès.
 
-## Création d’une connexion de base {#base-connection}
+## Créer une connexion de base {#base-connection}
 
-Une fois que vous avez récupéré votre [!DNL Mailchimp] informations d’identification d’authentification, vous pouvez maintenant lancer le processus de création de flux de données à importer. [!DNL Mailchimp Members] données vers Platform. La première étape de la création d’un flux de données consiste à créer une connexion de base.
+Une fois vos informations d’authentification [!DNL Mailchimp]récupérées, vous pouvez lancer le processus de création du flux de données pour importer les données[!DNL Mailchimp Members] dans Platform. La première étape de la création d’un flux de données consiste à créer une connexion de base.
 
-Une connexion de base conserve les informations entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
+Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
-[!DNL Mailchimp] prend en charge l’authentification de base et le code d’actualisation OAuth 2. Consultez les exemples suivants pour savoir comment vous authentifier avec l’un ou l’autre des types d’authentification.
+[!DNL Mailchimp] prend en charge l’authentification de base et le code d’actualisation OAuth 2. Consultez les exemples suivants pour savoir comment vous authentifier avec l’un ou l’autre de ces types d’authentification.
 
-### Créez un [!DNL Mailchimp] connexion de base à l’aide de l’authentification de base
+### Créer une connexion de base [!DNL Mailchimp] à l’aide de l’authentification de base
 
-Pour créer une [!DNL Mailchimp] connexion de base à l’aide de l’authentification de base, effectuez une requête de POST à l’adresse `/connections` point d’entrée [!DNL Flow Service] API tout en fournissant des informations d’identification pour votre `host`, `authorizationTestUrl`, `username`, et `password`.
+Pour créer une connexion de base [!DNL Mailchimp] à l’aide de l’authentification de base, effectuez une requête POST au point dʼentrée `/connections` de l’API [!DNL Flow Service] tout en fournissant des informations d’identification pour vos `host`, `authorizationTestUrl`, `username` et `password`.
 
 **Format d’API**
 
@@ -40,7 +40,7 @@ POST /connections
 
 **Requête**
 
-La requête suivante crée une connexion de base pour [!DNL Mailchimp]:
+La requête suivante permet de créer une connexion de base pour [!DNL Mailchimp] :
 
 ```shell
 curl -X POST \
@@ -71,14 +71,14 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom de la connexion de base. Assurez-vous que le nom de votre connexion de base est descriptif, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion de base. |
-| `description` | (Facultatif) Une propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
-| `connectionSpec.id` | L’identifiant de spécification de connexion de votre source. Cet identifiant peut être récupéré une fois que votre source est enregistrée et approuvée par le biais de la variable [!DNL Flow Service] API. |
+| `name` | Nom de la connexion de base. Assurez-vous que le nom de votre connexion de base est explicite, car vous pouvez lʼutiliser pour rechercher des informations sur votre connexion de base. |
+| `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
+| `connectionSpec.id` | Identifiant de spécification de connexion de votre source. Cet identifiant peut être récupéré une fois que votre source est enregistrée et approuvée par le biais de l’API [!DNL Flow Service]. |
 | `auth.specName` | Type d’authentification que vous utilisez pour connecter votre source à Platform. |
-| `auth.params.host` | URL racine utilisée pour la connexion à [!DNL Mailchimp] API. Le format de l’URL racine est le suivant : `https://{DC}.api.mailchimp.com`où `{DC}` représente le centre de données qui correspond à votre compte. |
+| `auth.params.host` | URL racine utilisée pour la connexion à l’API [!DNL Mailchimp]. Le format de l’URL racine est le suivant : `https://{DC}.api.mailchimp.com`, où `{DC}` représente le centre de données qui correspond à votre compte. |
 | `auth.params.authorizationTestUrl` | (Facultatif) L’URL du test d’autorisation est utilisée pour valider les informations d’identification lors de la création d’une connexion de base. Si elles ne sont pas fournies, les informations d’identification sont automatiquement vérifiées à l’étape de création de la connexion source. |
-| `auth.params.username` | Le nom d’utilisateur correspondant à votre [!DNL Mailchimp] compte . Ceci est requis pour l’authentification de base. |
-| `auth.params.password` | Le mot de passe qui correspond à votre [!DNL Mailchimp] compte . Ceci est requis pour l’authentification de base. |
+| `auth.params.username` | Nom d’utilisateur correspondant à votre compte [!DNL Mailchimp]. Ceci est requis pour l’authentification de base. |
+| `auth.params.password` | Mot de passe correspondant à votre compte [!DNL Mailchimp]. Ceci est requis pour l’authentification de base. |
 
 **Réponse**
 
@@ -91,9 +91,9 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 }
 ```
 
-### Créez un [!DNL Mailchimp] connexion de base à l’aide du code d’actualisation OAuth 2
+### Créer une connexion de base [!DNL Mailchimp] à l’aide du code d’actualisation OAuth 2
 
-Pour créer une [!DNL Mailchimp] connexion de base à l’aide du code d’actualisation OAuth 2, envoyez une requête de POST au `/connections` point de terminaison tout en fournissant des informations d’identification pour votre `host`, `authorizationTestUrl`, et `accessToken`.
+Pour créer une connexion de base [!DNL Mailchimp] à l’aide du code d’actualisation OAuth 2, envoyez une requête POST au point dʼentrée `/connections` tout en fournissant les informations d’identification pour vos `host`, `authorizationTestUrl` et `accessToken`.
 
 **Format d’API**
 
@@ -103,7 +103,7 @@ POST /connections
 
 **Requête**
 
-La requête suivante crée une connexion de base pour [!DNL Mailchimp]:
+La requête suivante permet de créer une connexion de base pour [!DNL Mailchimp] :
 
 ```shell
 curl -X POST \
@@ -133,13 +133,13 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom de la connexion de base. Assurez-vous que le nom de votre connexion de base est descriptif, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion de base. |
-| `description` | (Facultatif) Une propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
-| `connectionSpec.id` | L’identifiant de spécification de connexion de votre source. Cet identifiant peut être récupéré après l’enregistrement de votre source à l’aide de la variable [!DNL Flow Service] API. |
+| `name` | Nom de la connexion de base. Assurez-vous que le nom de votre connexion de base est explicite, car vous pouvez lʼutiliser pour rechercher des informations sur votre connexion de base. |
+| `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
+| `connectionSpec.id` | Identifiant de spécification de connexion de votre source. Cet identifiant peut être récupéré une fois votre source enregistrée à lʼaide de lʼAPI [!DNL Flow Service]. |
 | `auth.specName` | Type d’authentification que vous utilisez pour authentifier votre source sur Platform. |
-| `auth.params.host` | URL racine utilisée pour la connexion à [!DNL Mailchimp] API. Le format de l’URL racine est le suivant : `https://{DC}.api.mailchimp.com`où `{DC}` représente le centre de données qui correspond à votre compte. |
+| `auth.params.host` | URL racine utilisée pour la connexion à l’API [!DNL Mailchimp]. Le format de l’URL racine est le suivant : `https://{DC}.api.mailchimp.com`, où `{DC}` représente le centre de données correspondant à votre compte. |
 | `auth.params.authorizationTestUrl` | (Facultatif) L’URL du test d’autorisation est utilisée pour valider les informations d’identification lors de la création d’une connexion de base. Si elles ne sont pas fournies, les informations d’identification sont automatiquement vérifiées à l’étape de création de la connexion source. |
-| `auth.params.accessToken` | Jeton d’accès correspondant utilisé pour authentifier votre source. Ceci est requis pour l’authentification basée sur OAuth. |
+| `auth.params.accessToken` | Jeton d’accès correspondant utilisé pour authentifier la source. Ceci est requis pour l’authentification basée sur OAuth. |
 
 **Réponse**
 
@@ -152,30 +152,30 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 }
 ```
 
-## Exploration de la source {#explore}
+## Explorer votre source {#explore}
 
-À l’aide de l’identifiant de connexion de base que vous avez généré à l’étape précédente, vous pouvez explorer les fichiers et répertoires en exécutant des requêtes GET.
+À l’aide de l’identifiant de connexion de base généré à l’étape précédente, vous pouvez explorer les fichiers et répertoires en exécutant des requêtes GET.
 
 >[!TIP]
 >
->Pour récupérer le type de format accepté pour `{SOURCE_PARAMS}`, vous devez coder l’intégralité de la variable `list_id` chaîne en base64. Par exemple : `"list_id": "10c097ca71"` encodé en base64 équivaut à `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`.
+>Pour récupérer le type de format accepté pour `{SOURCE_PARAMS}`, vous devez coder l’intégralité de la chaîne `list_id` en base64. Par exemple : `"list_id": "10c097ca71"` encodé en base64 équivaut à `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&sourceParams={SOURCE_PARAMS}
 ```
 
-Lors de l’exécution de requêtes GET pour explorer la structure et le contenu des fichiers de votre source, vous devez inclure les paramètres de requête répertoriés dans le tableau ci-dessous :
+Lors de l’exécution de requêtes GET pour explorer la structure et le contenu des fichiers de votre source, vous devez inclure les paramètres de requête répertoriés dans le tableau ci-dessous :
 
 | Paramètre | Description |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | Identifiant de connexion de base généré à l’étape précédente. |
 | `{OBJECT_TYPE}` | Type de l’objet que vous souhaitez explorer. Pour les sources REST, cette valeur est définie par défaut sur `rest`. |
 | `{OBJECT}` | Objet que vous souhaitez explorer. |
-| `{FILE_TYPE}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin du répertoire que vous souhaitez explorer. |
-| `{PREVIEW}` | Une valeur boolean qui définit si le contenu de la connexion prend en charge l’aperçu. |
-| `{SOURCE_PARAMS}` | Chaîne codée en base64 de votre `list_id`. |
+| `{FILE_TYPE}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin dʼaccès au répertoire que vous souhaitez explorer. |
+| `{PREVIEW}` | Valeur booléenne qui définit si le contenu de la connexion prend en charge la prévisualisation. |
+| `{SOURCE_PARAMS}` | Chaîne de votre `list_id` codée en base64. |
 
 **Requête**
 
@@ -325,15 +325,15 @@ Une réponse réussie renvoie la structure du fichier interrogé.
 }
 ```
 
-## Création d’une connexion source {#source-connection}
+## Créer une connexion source {#source-connection}
 
-Vous pouvez créer une connexion source en envoyant une requête de POST au [!DNL Flow Service] API. Une connexion source se compose d’un identifiant de connexion, d’un chemin d’accès au fichier de données source et d’un identifiant de spécification de connexion.
+Vous pouvez créer une connexion source en effectuant une requête POST à l’API [!DNL Flow Service]. Une connexion source se compose d’un identifiant de connexion, d’un chemin d’accès au fichier de données source et d’un identifiant de spécification de connexion.
 
-Pour créer une connexion source, vous devez également définir une valeur d&#39;énumération pour l&#39;attribut data format.
+Pour créer une connexion source, vous devez également définir une valeur d’énumération pour l’attribut du format de données.
 
-Utilisez les valeurs d’énumération suivantes pour les sources basées sur des fichiers :
+Utilisez les valeurs d’énumération suivantes pour les sources basées sur des fichiers :
 
-| Sur le format des données saisies | Valeur d’énumération |
+| Format des données | Valeur d’énumération |
 | ----------- | ---------- |
 | Délimité | `delimited` |
 | JSON | `json` |
@@ -349,7 +349,7 @@ POST /sourceConnections
 
 **Requête**
 
-La requête suivante crée une connexion source pour [!DNL Mailchimp]:
+La requête suivante crée une connexion source pour [!DNL Mailchimp] :
 
 ```shell
 curl -X POST \
@@ -378,12 +378,12 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom de la connexion source. Assurez-vous que le nom de votre connexion source est descriptif, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion source. |
-| `description` | (Facultatif) Une propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion source. |
-| `baseConnectionId` | L’identifiant de connexion de base de [!DNL Mailchimp]. Cet identifiant a été généré lors d’une étape précédente. |
-| `connectionSpec.id` | L’identifiant de spécification de connexion qui correspond à votre source. |
-| `data.format` | Le format de la variable [!DNL Mailchimp] données que vous souhaitez ingérer. |
-| `params.listId` | Également appelé ID d’audience, la variable [!DNL Mailchimp] l’identifiant de liste permet le transfert des données d’audience vers d’autres intégrations. |
+| `name` | Nom de votre connexion source. Assurez-vous que le nom de votre connexion source est descriptif, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion source. |
+| `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion source. |
+| `baseConnectionId` | Identifiant de connexion de base de [!DNL Mailchimp]. Cet identifiant a été généré lors d’une étape précédente. |
+| `connectionSpec.id` | Identifiant de spécification de connexion correspondant à votre source. |
+| `data.format` | Format des données [!DNL Mailchimp] à ingérer. |
+| `params.listId` | Également appelé identifiant de l’audience, l’identifiant de liste [!DNL Mailchimp] permet le transfert des données de l’audience vers d’autres intégrations. |
 
 **Réponse**
 
@@ -396,25 +396,25 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 }
 ```
 
-## Création d’un schéma XDM cible {#target-schema}
+## Créer un schéma XDM cible {#target-schema}
 
-Pour que les données source soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données source en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform dans lequel les données source sont contenues.
+Pour que les données sources soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform contenant les données sources.
 
-Un schéma XDM cible peut être créé en adressant une requête de POST au [API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Un schéma XDM cible peut être créé en adressant une requête POST à [l’API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, consultez le tutoriel sur [création d’un schéma à l’aide de l’API](../../../../../xdm/api/schemas.md).
+Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, consultez le tutoriel sur la [création d’un schéma à l’aide de l’API](../../../../../xdm/api/schemas.md).
 
-### Création d’un jeu de données cible {#target-dataset}
+### Créer un jeu de données cible {#target-dataset}
 
-Un jeu de données cible peut être créé en adressant une requête de POST au [API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fournissant l’identifiant du schéma cible dans la payload.
+Un jeu de données cible peut être créé en adressant une requête POST à [l’API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
 
-Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, consultez le tutoriel sur [création d’un jeu de données à l’aide de l’API](../../../../../catalog/api/create-dataset.md).
+Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, consultez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](../../../../../catalog/api/create-dataset.md).
 
 ## Créer une connexion cible {#target-connection}
 
-Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, vous devez fournir l&#39;identifiant fixe de spécification de connexion qui correspond à la variable [!DNL Data Lake]. Cet identifiant est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, vous devez fournir l’identifiant fixe de spécification de connexion qui correspond au [!DNL Data Lake]. Cet identifiant est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Vous disposez désormais des identifiants uniques d’un schéma cible d’un jeu de données cible et de l’identifiant de spécification de connexion à la variable [!DNL Data Lake]. A l&#39;aide de ces identifiants, vous pouvez créer une connexion cible à l&#39;aide de la fonction [!DNL Flow Service] API pour spécifier le jeu de données qui contiendra les données source entrantes.
+Vous disposez désormais des identifiants uniques d’un schéma cible, d’un jeu de données cible et de l’identifiant de spécification de connexion à [!DNL Data Lake]. Grâce à ces identifiants, vous pouvez créer une connexion cible à l’aide de l’API [!DNL Flow Service] pour spécifier le jeu de données qui contiendra les données source entrantes.
 
 **Format d’API**
 
@@ -424,7 +424,7 @@ POST /targetConnections
 
 **Requête**
 
-La requête suivante crée une connexion cible pour [!DNL Mailchimp]:
+La requête suivante crée une connexion cible pour [!DNL Mailchimp] :
 
 ```shell
 curl -X POST \
@@ -456,10 +456,10 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `name` | Nom de la connexion cible. Assurez-vous que le nom de votre connexion cible est descriptif, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion cible. |
-| `description` | (Facultatif) Une propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
-| `connectionSpec.id` | L’identifiant de spécification de connexion qui correspond à [!DNL Data Lake]. Cet ID fixe est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Le format de la variable [!DNL Mailchimp] données que vous souhaitez apporter à Platform. |
+| `name` | Nom de la connexion cible. Assurez-vous que le nom de votre connexion cible est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion cible. |
+| `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
+| `connectionSpec.id` | Identifiant de spécification de connexion correspondant à [!DNL Data Lake]. Cet identifiant fixe est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | Format des données [!DNL Mailchimp] que vous souhaitez importer dans Platform. |
 | `params.dataSetId` | Identifiant du jeu de données cible récupéré lors d’une étape précédente. |
 
 
@@ -474,9 +474,9 @@ Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion ci
 }
 ```
 
-## Création d’un mappage {#mapping}
+## Créer un mappage {#mapping}
 
-Pour que les données source soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible adhère. Pour ce faire, il vous suffit d’adresser une requête de POST à la variable [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) avec des mappages de données définis dans le payload de la requête.
+Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, il suffit d’adresser une requête POST à [[!DNL Data Prep] l’API](https://www.adobe.io/experience-platform-apis/references/data-prep/) avec des mappages de données définis dans la payload de la requête.
 
 **Format d’API**
 
@@ -517,10 +517,10 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `xdmSchema` | L’identifiant de la variable [schéma XDM cible](#target-schema) généré lors d’une étape précédente. |
+| `xdmSchema` | Identifiant du [schéma XDM cible](#target-schema) généré lors d’une étape précédente. |
 | `mappings.destinationXdmPath` | Chemin XDM de destination vers lequel l’attribut source est mappé. |
-| `mappings.sourceAttribute` | L’attribut source qui doit être mappé à un chemin XDM de destination. |
-| `mappings.identity` | Une valeur boolean qui indique si le jeu de mappages sera marqué pour [!DNL Identity Service]. |
+| `mappings.sourceAttribute` | Attribut source qui doit être mappé à un chemin XDM de destination. |
+| `mappings.identity` | Valeur booléenne qui indique si le jeu de mappage sera marqué pour [!DNL Identity Service]. |
 
 **Réponse**
 
@@ -537,17 +537,17 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 }
 ```
 
-## Création d’un flux {#flow}
+## Créer un flux {#flow}
 
-Le dernier pas vers l&#39;introduction [!DNL Mailchimp] data to Platform consiste à créer un flux de données. À l’heure actuelle, les valeurs requises suivantes sont préparées :
+La dernière étape pour importer des données [!DNL Mailchimp] dans Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
 
 * [ID de connexion source](#source-connection)
-* [Identifiant de connexion Target](#target-connection)
-* [ID de mappage](#mapping)
+* [ID de connexion cible](#target-connection)
+* [Identifiant de mappage](#mapping)
 
-Un flux de données est chargé de planifier et de collecter les données d’une source. Vous pouvez créer un flux de données en exécutant une requête de POST tout en fournissant les valeurs mentionnées précédemment dans le payload.
+Un flux de données est chargé de planifier et de collecter les données provenant d’une source. Vous pouvez créer un flux de données en exécutant une requête POST et en fournissant les valeurs mentionnées précédemment dans la payload.
 
-Pour planifier une ingestion, vous devez d’abord définir la valeur de l’heure de début sur la durée en secondes. Vous devez ensuite définir la valeur de fréquence sur l’une des cinq options suivantes : `once`, `minute`, `hour`, `day`ou `week`. La valeur interval désigne la période entre deux ingestion consécutives et la création d’une ingestion unique ne nécessite pas de définition d’un intervalle. Pour toutes les autres fréquences, la valeur de l’intervalle doit être égale ou supérieure à `15`.
+Pour planifier une ingestion, vous devez d’abord définir la valeur de l’heure de début en temps Unix en secondes. Vous devez ensuite définir la valeur de fréquence sur l’une des cinq options suivantes : `once`, `minute`, `hour`, `day` ou `week`. La valeur de l’intervalle désigne la période entre deux ingestions consécutives et aucun intervalle ne doit être défini pour la création d’une ingestion unique. Pour toutes les autres fréquences, la valeur de l’intervalle doit être égale ou supérieure à `15`.
 
 
 **Format d’API**
@@ -598,23 +598,23 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom de votre flux de données. Assurez-vous que le nom de votre flux de données est descriptif, car vous pouvez l’utiliser pour rechercher des informations sur votre flux de données. |
-| `description` | (Facultatif) Une propriété que vous pouvez inclure pour fournir plus d’informations sur votre flux de données. |
-| `flowSpec.id` | Identifiant de spécification de flux requis pour créer un flux de données. Cet ID fixe est : `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | La version correspondante de l’identifiant de spécification de flux. Cette valeur est définie par défaut sur `1.0`. |
-| `sourceConnectionIds` | Le [ID de connexion source](#source-connection) généré lors d’une étape précédente. |
-| `targetConnectionIds` | Le [identifiant de connexion cible](#target-connection) généré lors d’une étape précédente. |
-| `transformations` | Cette propriété contient les différentes transformations qui doivent être appliquées à vos données. Cette propriété est requise lors de l’introduction de données non conformes à XDM dans Platform. |
+| `name` | Nom du flux de données. Assurez-vous que le nom de votre flux de données est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre flux de données. |
+| `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre flux de données. |
+| `flowSpec.id` | Identifiant de spécification de flux requis pour créer un flux de données. Cet identifiant fixe est `6499120c-0b15-42dc-936e-847ea3c24d72`. |
+| `flowSpec.version` | Version correspondante de l’identifiant de spécification de flux. Ce paramètre est défini par défaut sur `1.0`. |
+| `sourceConnectionIds` | [Identifiant de connexion source](#source-connection) généré lors d’une étape précédente. |
+| `targetConnectionIds` | [Identifiant de connexion cible](#target-connection) généré lors d’une étape précédente. |
+| `transformations` | Cette propriété contient les différentes transformations qui doivent être appliquées à vos données. Cette propriété est requise lors de l’importation de données non conformes à XDM dans Platform. |
 | `transformations.name` | Nom attribué à la transformation. |
-| `transformations.params.mappingId` | Le [ID de mappage](#mapping) généré lors d’une étape précédente. |
-| `transformations.params.mappingVersion` | La version correspondante de l’ID de mappage. Cette valeur est définie par défaut sur `0`. |
-| `scheduleParams.startTime` | Heure de début désignée pour le début de la première ingestion de données. |
-| `scheduleParams.frequency` | Fréquence à laquelle le flux de données collectera les données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day`ou `week`. |
-| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un entier non nul. L’intervalle n’est pas requis lorsque la fréquence est définie sur `once` et doit être supérieur ou égal à `15` pour d’autres valeurs de fréquence. |
+| `transformations.params.mappingId` | [Identifiant de mappage](#mapping) généré lors d’une étape précédente. |
+| `transformations.params.mappingVersion` | Version correspondante de l’identifiant de mappage. Ce paramètre est défini par défaut sur `0`. |
+| `scheduleParams.startTime` | Heure de début désignée pour la première ingestion de données. |
+| `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
+| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. Un intervalle n’est pas requis lorsque la fréquence est définie sur `once` et doit être supérieur ou égal à `15` pour d’autres valeurs de fréquence. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données. Vous pouvez utiliser cet identifiant pour surveiller, mettre à jour ou supprimer votre flux de données.
+Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvellement créé. Vous pouvez utiliser cet identifiant pour surveiller, mettre à jour ou supprimer votre flux de données.
 
 ```json
 {
@@ -623,9 +623,9 @@ Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données
 }
 ```
 
-## Surveillance de votre flux de données
+## Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions de flux, l’état d’achèvement et les erreurs.
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs.
 
 **Format d’API**
 
@@ -648,7 +648,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie des détails sur votre exécution de flux, y compris des informations sur sa date de création, les connexions source et cible, ainsi que l’identifiant unique de l’exécution de flux (`id`).
+Une réponse réussie renvoie des détails concernant votre exécution de flux, y compris des informations sur sa date de création, les connexions source et cible, ainsi que l’identifiant unique de l’exécution de flux (`id`).
 
 ```json
 {
@@ -733,21 +733,21 @@ Une réponse réussie renvoie des détails sur votre exécution de flux, y compr
 
 | Propriété | Description |
 | -------- | ----------- |
-| `items` | Contient un seul payload de métadonnées associé à votre exécution de flux spécifique. |
+| `items` | Contient une seule payload de métadonnées associée à votre exécution de flux spécifique. |
 | `id` | Affiche l’identifiant correspondant à votre flux de données. |
-| `state` | Affiche l’état actuel de votre flux de données. |
-| `inheritedAttributes` | Contient les attributs qui définissent votre flux, tels que les identifiants de sa connexion de base, source et cible correspondante. |
-| `scheduleParams` | Contient des informations sur le planning d’ingestion de votre flux de données, telles que son heure de début (en heure époque), sa fréquence et son intervalle. |
+| `state` | Affiche le statut actuel de votre flux de données. |
+| `inheritedAttributes` | Contient les attributs qui définissent votre flux, tels que les identifiants des connexions de base, source et cible correspondantes. |
+| `scheduleParams` | Contient des informations sur le planning de l’ingestion de votre flux de données, telles que son heure de début (en temps Unix), sa fréquence et son intervalle. |
 | `transformations` | Contient des informations sur les propriétés de transformation appliquées à votre flux de données. |
 | `runs` | Affiche l’identifiant d’exécution correspondant à votre flux. Vous pouvez utiliser cet identifiant pour surveiller des exécutions de flux spécifiques. |
 
-## Mise à jour de votre flux de données
+## Mettre à jour votre flux de données
 
-Pour mettre à jour le planning d’exécution, le nom et la description de votre flux de données, envoyez une requête de PATCH au [!DNL Flow Service] API lors de la fourniture de votre ID de flux, de votre version et du nouveau planning que vous souhaitez utiliser.
+Pour mettre à jour le planning d’exécution, le nom et la description de votre flux de données, envoyez une requête PATCH à l’API [!DNL Flow Service] et fournissez vos identifiants de flux et de version ainsi que le nouveau planning que vous souhaitez utiliser.
 
 >[!IMPORTANT]
 >
->Le `If-Match` est requis lors de l’exécution d’une requête de PATCH. La valeur de cet en-tête est la version unique de la connexion que vous souhaitez mettre à jour.
+>L’en-tête `If-Match` est requis lors de l’exécution d’une requête PATCH. La valeur de cet en-tête est la version unique de la connexion que vous souhaitez mettre à jour.
 
 **Format d’API**
 
@@ -788,13 +788,13 @@ curl -X PATCH \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour le flux de données. Les opérations comprennent : `add`, `replace` et `remove`. |
-| `path` | Chemin d&#39;accès du paramètre à mettre à jour. |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. |
+| `path` | Chemin d’accès du paramètre à mettre à jour. |
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 
 **Réponse**
 
-Une réponse réussie renvoie votre identifiant de flux et une balise mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à la variable [!DNL Flow Service] de l’API, tout en fournissant votre ID de flux.
+Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en fournissant votre identifiant de flux.
 
 ```json
 {
@@ -803,9 +803,9 @@ Une réponse réussie renvoie votre identifiant de flux et une balise mise à jo
 }
 ```
 
-## Suppression de votre flux de données
+## Supprimer le flux de données
 
-Avec un identifiant de flux existant, vous pouvez supprimer un flux de données en adressant une requête de DELETE au [!DNL Flow Service] API.
+À lʼaide dʼun identifiant de flux existant, vous pouvez supprimer un flux de données en adressant une requête DELETE à l’API [!DNL Flow Service].
 
 **Format d’API**
 
@@ -815,7 +815,7 @@ DELETE /flows/{FLOW_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FLOW_ID}` | L’unique `id` pour le flux de données que vous souhaitez supprimer. |
+| `{FLOW_ID}` | Valeur unique `id` pour le flux de données que vous souhaitez supprimer. |
 
 **Requête**
 
@@ -830,15 +830,15 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide. Vous pouvez confirmer la suppression en tentant d’adresser une requête de recherche (GET) au flux de données. L’API renvoie une erreur HTTP 404 (Introuvable), indiquant que le flux de données a été supprimé.
+Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide. Vous pouvez confirmer la suppression en tentant d’adresser une requête de recherche (GET) au flux de données. L’API renvoie une erreur HTTP 404 (Introuvable), indiquant que le flux de données a été supprimé.
 
 ## Mettre à jour votre connexion
 
-Pour mettre à jour le nom, la description et les informations d’identification de votre connexion, envoyez une requête de PATCH au [!DNL Flow Service] API lors de la fourniture de votre ID de connexion de base, de votre version et des nouvelles informations que vous souhaitez utiliser.
+Pour mettre à jour le nom, la description et les informations d’identification de votre connexion, envoyez une requête PATCH à l’API [!DNL Flow Service] et fournissez vos identifiants de connexion de base et de version ainsi que les nouvelles informations que vous souhaitez utiliser.
 
 >[!IMPORTANT]
 >
->Le `If-Match` est requis lors de l’exécution d’une requête de PATCH. La valeur de cet en-tête est la version unique de la connexion que vous souhaitez mettre à jour.
+>L’en-tête `If-Match` est requis lors de l’exécution d’une requête PATCH. La valeur de cet en-tête est la version unique de la connexion que vous souhaitez mettre à jour.
 
 **Format d’API**
 
@@ -848,11 +848,11 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | L’unique `id` pour la connexion que vous souhaitez mettre à jour. |
+| `{BASE_CONNECTION_ID}` | Valeur unique `id` pour la connexion que vous souhaitez mettre à jour. |
 
 **Requête**
 
-La requête suivante fournit un nouveau nom et une nouvelle description, ainsi qu’un nouveau jeu d’informations d’identification, avec lequel mettre à jour votre connexion.
+La requête suivante fournit un nouveau nom, une nouvelle description et un nouveau jeu d’informations d’identification, avec lesquels vous allez mettre à jour votre connexion.
 
 ```shell
 curl -X PATCH \
@@ -886,13 +886,13 @@ curl -X PATCH \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `op` | Appel d&#39;opération utilisé pour définir l&#39;action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. |
-| `path` | Chemin d&#39;accès du paramètre à mettre à jour. |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. |
+| `path` | Chemin d’accès du paramètre à mettre à jour. |
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 
 **Réponse**
 
-Une réponse réussie renvoie votre identifiant de connexion de base et une balise mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à la variable [!DNL Flow Service] de l’API, tout en fournissant votre identifiant de connexion.
+Une réponse réussie renvoie votre identifiant de connexion de base et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en fournissant votre identifiant de connexion.
 
 ```json
 {
@@ -903,7 +903,7 @@ Une réponse réussie renvoie votre identifiant de connexion de base et une bali
 
 ## Supprimer votre connexion
 
-Une fois que vous disposez d’un identifiant de connexion de base existant, effectuez une requête de DELETE à la variable [!DNL Flow Service] API.
+Une fois que vous disposez d’un identifiant de connexion de base existant, effectuez une requête DELETE à l’API [!DNL Flow Service].
 
 **Format d’API**
 
@@ -913,7 +913,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | L’unique `id` pour la connexion de base que vous souhaitez supprimer. |
+| `{BASE_CONNECTION_ID}` | Valeur unique `id` pour la connexion de base que vous souhaitez supprimer. |
 
 **Requête**
 
