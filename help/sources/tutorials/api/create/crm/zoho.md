@@ -1,58 +1,58 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;Zoho CRM;zoho crm;Zoho;zoho
 solution: Experience Platform
-title: Création d’une connexion de base CRM Zoho à l’aide de l’API Flow Service
+title: Créez une connexion de base à Zoho CRM à l’aide de l’API Flow Service.
 topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Zoho CRM à l’aide de l’API Flow Service.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
 source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '649'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
-# Créez un [!DNL Zoho CRM] connexion de base à l’aide de [!DNL Flow Service] API
+# Créez une connexion de base à [!DNL Zoho CRM] à l’aide de l’API [!DNL Flow Service].
 
-Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
+Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Zoho CRM] en utilisant la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de base pour [!DNL Zoho CRM] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
-* [Environnements de test](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
+* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour vous connecter à [!DNL Zoho CRM] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour une connexion réussie à [!DNL Zoho CRM] à l’aide de l’API [!DNL Flow Service].
 
-### Collecte des informations d’identification requises
+### Collecter les informations d’identification requises
 
-Pour [!DNL Flow Service] pour vous connecter à [!DNL Zoho CRM], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour connecter [!DNL Flow Service] à [!DNL Zoho CRM], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
-| Credential | Description |
+| Informations d’identification | Description |
 | --- | --- |
-| `endpoint` | Le point de terminaison de [!DNL Zoho CRM] le serveur vers lequel vous effectuez votre demande. |
+| `endpoint` | Point d’entrée du serveur [!DNL Zoho CRM] vers lequel vous effectuez votre demande. |
 | `accountsUrl` | L’URL des comptes est utilisée pour générer vos jetons d’accès et d’actualisation. L’URL doit être spécifique au domaine. |
-| `clientId` | L’identifiant client qui correspond à votre [!DNL Zoho CRM] compte utilisateur. |
-| `clientSecret` | Le secret client qui correspond à votre [!DNL Zoho CRM] compte utilisateur. |
-| `accessToken` | Le jeton d’accès autorise votre accès sécurisé et temporaire à votre [!DNL Zoho CRM] compte . |
+| `clientId` | Identifiant client qui correspond à votre compte utilisateur [!DNL Zoho CRM]. |
+| `clientSecret` | Secret client qui correspond à votre compte utilisateur [!DNL Zoho CRM]. |
+| `accessToken` | Le jeton d’accès autorise votre accès sécurisé et temporaire à votre compte [!DNL Zoho CRM]. |
 | `refreshToken` | Un jeton d’actualisation est un jeton utilisé pour générer un nouveau jeton d’accès, une fois que votre jeton d’accès a expiré. |
-| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions base et source. L’identifiant de spécification de connexion pour [!DNL Zoho CRM] est : `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Zoho CRM] est `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
 
-Pour plus d’informations sur ces informations d’identification, consultez la documentation sur [[!DNL Zoho CRM] authentication](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
+Pour plus d’informations sur ces informations d’identification, consultez la documentation sur lʼ[[!DNL Zoho CRM] authentification](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 
-### Utilisation des API Platform
+### Utiliser les API Platform
 
-Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur [Prise en main des API Platform](../../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide de [Prise en main des API Platform](../../../../../landing/api-guide.md).
 
-## Création d’une connexion de base
+## Créer une connexion de base
 
-Une connexion de base conserve les informations entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
+Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
-Pour créer un identifiant de connexion de base, envoyez une requête de POST au `/connections` point de terminaison lors de la fourniture de [!DNL Zoho CRM] informations d’identification d’authentification dans le cadre des paramètres de requête.
+Pour créer un identifiant de connexion de base, envoyez une requête POST au point d’entrée `/connections` et indiquez vos informations d’authentification [!DNL Zoho CRM] dans les paramètres de la requête.
 
 **Format d’API**
 
@@ -64,9 +64,9 @@ POST /connections
 
 >[!TIP]
 >
->Votre domaine URL de compte doit correspondre à l’emplacement de domaine approprié. Vous trouverez ci-dessous les différents domaines et les URL de leurs comptes correspondants :<ul><li>États-Unis : https://accounts.zoho.com</li><li>Australie : https://accounts.zoho.com.au</li><li>Europe : https://accounts.zoho.eu</li><li>Inde : https://accounts.zoho.in</li><li>Chine : https://accounts.zoho.com.cn</li></ul>
+>Votre domaine URL de comptes doit correspondre à l’emplacement de domaine approprié. Vous trouverez ci-dessous les différents domaines et leurs URL de comptes correspondantes :<ul><li>États-Unis : https://accounts.zoho.com</li><li>Australie : https://accounts.zoho.com.au</li><li>Europe : https://accounts.zoho.eu</li><li>Inde : https://accounts.zoho.in</li><li>Chine : https://accounts.zoho.com.cn</li></ul>
 
-La requête suivante crée une connexion de base pour [!DNL Zoho CRM]:
+La requête suivante crée une connexion de base pour [!DNL Zoho CRM] :
 
 ```shell
 curl -X POST \
@@ -99,16 +99,16 @@ curl -X POST \
 
 | Paramètre | Description |
 | --- | --- |
-| `name` | Le nom de votre [!DNL Zoho CRM] connexion de base. Vous pouvez utiliser ce nom pour rechercher votre [!DNL Zoho CRM] connexion de base. |
-| `description` | Une description facultative de votre [!DNL Zoho CRM] connexion de base. |
+| `name` | Nom de votre connexion de base [!DNL Zoho CRM]. Vous pouvez utiliser ce nom pour rechercher votre connexion de base à [!DNL Zoho CRM]. |
+| `description` | Description facultative de votre connexion de base à [!DNL Zoho CRM]. |
 | `auth.specName` | Type d’authentification utilisé pour la connexion. |
-| `auth.params.endpoint` | Le point de terminaison de [!DNL Zoho CRM] le serveur vers lequel vous effectuez votre demande. |
-| `auth.params.accountsUrl` | L’URL des comptes est utilisée pour générer vos jetons d’accès et d’actualisation. L’URL doit être spécifique au domaine. |
-| `auth.params.clientId` | L’identifiant client qui correspond à votre [!DNL Zoho CRM] compte utilisateur. |
-| `auth.params.clientSecret` | Le secret client qui correspond à votre [!DNL Zoho CRM] compte utilisateur. |
-| `auth.params.accessToken` | Le jeton d’accès autorise votre accès sécurisé et temporaire à votre [!DNL Zoho CRM] compte . |
+| `auth.params.endpoint` | Point d’entrée du serveur [!DNL Zoho CRM] vers lequel vous effectuez une demande. |
+| `auth.params.accountsUrl` | L’URL de comptes est utilisée pour générer vos jetons d’accès et d’actualisation. L’URL doit être spécifique au domaine. |
+| `auth.params.clientId` | Identifiant client qui correspond à votre compte utilisateur [!DNL Zoho CRM]. |
+| `auth.params.clientSecret` | Secret client qui correspond à votre compte utilisateur [!DNL Zoho CRM]. |
+| `auth.params.accessToken` | Le jeton d’accès autorise votre accès sécurisé et temporaire à votre compte [!DNL Zoho CRM]. |
 | `auth.params.refreshToken` | Un jeton d’actualisation est un jeton utilisé pour générer un nouveau jeton d’accès, une fois que votre jeton d’accès a expiré. |
-| `connectionSpec.id` | L’identifiant de spécification de connexion pour [!DNL Zoho CRM]: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion pour [!DNL Zoho CRM] : `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
 
 **Réponse**
 
@@ -123,4 +123,4 @@ Une réponse réussie renvoie les détails de la connexion de base que vous vene
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une [!DNL Zoho CRM] connexion de base à l’aide de [!DNL Flow Service] et ont obtenu la valeur d’identifiant unique de la connexion. Vous pouvez utiliser cet identifiant dans le tutoriel suivant lorsque vous apprendrez à [exploration des systèmes CRM à l’aide de l’API Flow Service ;](../../explore/crm.md).
+Vous êtes arrivé au bout de ce tutoriel, félicitations ! Grâce à celui-ci, vous avez créé une connexion de base à [!DNL Zoho CRM] à l’aide de l’API [!DNL Flow Service] et avez obtenu la valeur d’identifiant unique de la connexion. Vous pouvez utiliser cet identifiant dans le tutoriel suivant lorsque vous apprendrez à [explorer des systèmes CRM à l’aide de l’API Flow Service](../../explore/crm.md).
