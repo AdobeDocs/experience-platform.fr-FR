@@ -1,51 +1,51 @@
 ---
-description: Cette page fournit toutes les informations que vous devez envoyer pour examiner une destination créée à l’aide de Destination SDK.
-title: Envoyer pour révision d’une destination créée dans Destination SDK
+description: Sur cette page, retrouvez toutes les informations nécessaires à lʼenvoi pour examen dʼune destination créée à l’aide de Destination SDK.
+title: Envoyer pour révision une destination créée dans Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
 source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '580'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Envoyer pour révision d’une destination créée dans Destination SDK
+# Envoyer pour révision une destination créée dans Destination SDK
 
 ## Présentation {#overview}
 
-Avant que votre destination ne puisse être publiée dans la variable [Catalogue des destinations Experience Platform](/help/destinations/catalog/overview.md), vous devez fournir à l’Adobe certaines informations sur la destination et les tests que vous avez effectués, afin de vous assurer que les utilisateurs bénéficient de la meilleure expérience possible lors de l’activation des données vers votre plateforme.
+Pour que votre destination puisse être publiée dans le [catalogue des destinations Experience Platform](/help/destinations/catalog/overview.md), vous devez fournir à Adobe certaines informations sur la destination et les tests effectués. Cela permet de sʼassurer que les utilisateurs bénéficient de la meilleure expérience possible lors de l’activation des données vers votre plateforme.
 
-Cette page répertorie toutes les informations que vous devez fournir lors de l’envoi ou de la mise à jour d’une destination que vous avez créée à l’aide de l’Adobe Experience Platform Destination SDK. Pour envoyer une destination dans Adobe Experience Platform, envoyez un courrier électronique à <aepdestsdk@adobe.com> qui inclut :
+Cette page répertorie toutes les informations dont vous avez besoin pour envoyer ou mettre à jour une destination créée à l’aide dʼAdobe Experience Platform Destination SDK. Pour envoyer une destination dans Adobe Experience Platform, adressez un e-mail à <aepdestsdk@adobe.com> et précisez les informations suivantes :
 
-* Description des cas d’utilisation résolus par votre destination. Cela n’est pas nécessaire si vous mettez à jour une configuration de destination existante.
-* Testez les résultats après avoir utilisé le point d’entrée de l’API de destination de test pour effectuer un appel HTTP vers votre destination. Partagez avec l’Adobe :
-   * Appel API effectué sur votre point de terminaison de destination.
-   * Réponse de l’API reçue de votre point de terminaison de destination.
-* Preuve que vous avez envoyé une requête de publication de destination pour votre destination à l’aide de la variable [API de publication de destination](./destination-publish-api.md).
-* (Pour les intégrations productives uniquement) une documentation PR (requête de tirage), suivant les instructions décrites dans la section [processus de documentation en libre-service](./docs-framework/documentation-instructions.md).
-* Un fichier image qui s’affichera sous forme de logo pour votre carte de destination dans le catalogue des destinations Experience Platform.
+* Une description des cas d’utilisation que votre destination résout. Cela n’est pas nécessaire si vous mettez à jour une configuration de destination existante.
+* Des résultats de test après avoir utilisé le point dʼentrée de l’API de destination de test pour effectuer un appel HTTP vers votre destination. Communiquez à Adobe les informations suivantes :
+   * Un appel API effectué vers votre point dʼentrée de destination.
+   * La réponse de l’API reçue de votre point dʼentrée de destination.
+* La preuve que vous avez envoyé une demande de publication de destination pour votre destination à l’aide de l’[API de publication de destination](./destination-publish-api.md).
+* (Pour les intégrations standardisées uniquement) Une documentation PR (demande de tirage), en suivant les instructions décrites dans le [processus de documentation en libre-service](./docs-framework/documentation-instructions.md).
+* Un fichier image qui s’affichera sous forme de logo sur votre carte de destination dans le catalogue des destinations dʼExperience Platform.
 
 >[!NOTE]
 >
->Le temps de réponse standard de l’Adobe pour passer en revue les demandes de publication de destination est de 5 jours ouvrables.
+>Le temps de réponse standard dʼAdobe pour examiner les demandes de publication de destination est de 5 jours ouvrables.
 
-Vous trouverez des informations détaillées sur chaque élément dans les sections ci-dessous :
+Vous trouverez des informations détaillées sur chaque élément dans les sections ci-dessous :
 
 ## Description du cas d’utilisation
 
-Fournissez une description des cas d’utilisation que votre destination résout pour les clients Experience Platform. Vos descriptions peuvent être similaires aux cas d’utilisation des partenaires existants :
+Fournissez une description des cas d’utilisation que votre destination résout pour les clients Experience Platform. Vos descriptions peuvent être similaires aux cas d’utilisation des partenaires existants :
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Créez des audiences à partir des listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audience spécifique en dehors des adresses électroniques dans Verizon Media (VMG). Elles peuvent rapidement créer un nouveau segment et pousser le groupe d’audience souhaité à l’aide de l’API en temps quasi réel de VMG.
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md) : créez des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou de celles qui ont déjà interagi avec votre contenu sur Pinterest.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases) : les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audience spécifique à partir dʼadresses e-mail dans Verizon Media (VMG). Ils peuvent rapidement créer un segment et envoyer le groupe d’audience souhaité à l’aide de lʼAPI en temps quasi réel de VMG.
 
 ## Résultats du test après l’utilisation de l’API de destination du test
 
-Fournir des résultats de test après avoir utilisé la méthode [API de destination du test](./test-destination.md) point de terminaison pour effectuer un appel HTTP vers votre destination. Cela inclut :
+Fournissez les résultats du test après avoir utilisé le point dʼentrée de l’[API de destination du test](./test-destination.md) pour effectuer un appel HTTP vers votre destination. Cela inclut :
 
-* La requête API complète (en-têtes et corps) effectuée sur votre point de terminaison de destination, à l’aide de l’API de test.
-* Réponse de l’API reçue de votre point de terminaison de destination.
+* La requête API complète (en-têtes et corps) effectuée sur votre point dʼentrée de destination, à l’aide de l’API de test.
+* La réponse de l’API reçue de votre point dʼentrée de destination.
 
-Par exemple, votre requête et votre réponse peuvent ressembler aux exemples ci-dessous :
+Par exemple, votre requête et votre réponse peuvent ressembler aux exemples ci-dessous :
 
 **Requête**
 
@@ -208,24 +208,24 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }
 ```
 
-## Preuve que vous avez envoyé une demande de publication de destination
+## Preuve dʼenvoi dʼune demande de publication de destination
 
-Après avoir testé votre destination, vous devez utiliser la variable [API de publication de destination](./destination-publish-api.md) pour envoyer la destination à l’Adobe pour révision et publication.
+Une fois votre destination testée, vous devez utiliser l’[API de publication de destination](./destination-publish-api.md) pour envoyer la destination à Adobe pour examen et publication.
 
-Indiquez l’identifiant de la requête de publication pour votre destination. Pour plus d’informations sur la manière de récupérer l’ID de requête de publication, consultez [Liste des requêtes de publication de destination](./destination-publish-api.md#retrieve-list).
+Indiquez l’identifiant de la demande de publication pour votre destination. Pour plus d’informations sur la manière de récupérer l’identifiant de la demande de publication, consultez la section [Liste des demandes de publication de destination](./destination-publish-api.md#retrieve-list).
 
-## Documentation de destination PR (requête de tirage) pour les intégrations productives
+## Documentation de destination PR (demande de tirage) pour les intégrations personnalisées
 
-Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI), créez une [intégration productive](./overview.md#productized-custom-integrations), utilisez le [processus de documentation en libre-service](./docs-framework/documentation-instructions.md) pour créer une page de documentation du produit pour votre destination. Dans le cadre du processus d’envoi, fournissez la demande d’extraction (PR) pour votre documentation de destination.
+Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une [intégration personnalisée](./overview.md#productized-custom-integrations), utilisez le [processus de documentation en libre-service](./docs-framework/documentation-instructions.md) pour créer une page de documentation du produit pour votre destination. Dans le cadre du processus d’envoi, indiquez la demande de tirage (PR) pour votre documentation de destination.
 
 ## Logo de votre destination
 
-Le catalogue des destinations comprend un logo pour chaque carte de destination. Dans le courrier électronique d’envoi, incluez une image avec le logo pour votre destination.
+Le catalogue des destinations comprend un logo pour chaque carte de destination. Incluez dans votre e-mail une image avec le logo de votre destination.
 
-Les exigences d’image sont les suivantes :
-* **Format**: `SVG`
-* **Taille**: moins de 2 Mo
+Les exigences relatives aux images sont les suivantes :
+* **Format** : `SVG`
+* **Taille** : moins de 2 Mo
 
-## Télécharger un exemple d’email
+## Télécharger un exemple d’e-mail
 
-[Télécharger](./assets/sample-email-submit-destination.rtf) un exemple d’email contenant toutes les informations que vous devez fournir à Adobe.
+[Téléchargez](./assets/sample-email-submit-destination.rtf) un exemple d’e-mail contenant toutes les informations que vous devez fournir à Adobe.
