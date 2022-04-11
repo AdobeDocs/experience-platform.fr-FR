@@ -4,9 +4,9 @@ title: Tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 86041e3165d4ea9cb55717f24b002afa084ff420
+source-git-commit: 32df4c5972cb32afc6021ae27dc05f77076a5984
 workflow-type: tm+mt
-source-wordcount: '1709'
+source-wordcount: '1708'
 ht-degree: 3%
 
 ---
@@ -153,7 +153,7 @@ Si un segment dans la variable [!UICONTROL Santé de l’audience mappée] vous 
 
 ![Le widget d’intégrité de l’audience mappé.](../images/destinations/mapped-audience-health.png)
 
-### [!UICONTROL Nombre de destinations] (#destinations-count)
+### [!UICONTROL Nombre de destinations] {#destinations-count}
 
 Le [!UICONTROL Nombre de destinations] fournit le nombre total de points de terminaison disponibles où une audience peut être activée et diffusée dans le système. Ce nombre inclut les destinations principales et inactives.
 
