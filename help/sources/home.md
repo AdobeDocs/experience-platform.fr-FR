@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;connecteurs source;source;sources;sources de données;source de données;connexion à la source de données
+keywords: Experience Platform;accueil;rubriques les plus consultées;connecteurs source;connecteurs source;sources;sources de données;source de données;connexion à la source de données.
 solution: Experience Platform
 title: Présentation des connecteurs source
 topic-legacy: overview
@@ -8,7 +8,7 @@ exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: 8d302a5d2907d971d0ff6b7602d18bed418d3a12
 workflow-type: tm+mt
 source-wordcount: '1006'
-ht-degree: 56%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 56%
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, les stockages dans le cloud, des bases de données, etc.
 
-[!DNL Flow Service] est utilisé pour collecter et centraliser des données client à partir de diverses sources disparates dans Platform. Le service fournit une interface utilisateur et une API RESTful qui vous permettent de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent d’authentifier vos systèmes tiers, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+[!DNL Flow Service] est utilisé pour collecter et centraliser les données client provenant de diverses sources dans Platform. Le service fournit une interface utilisateur et une API RESTful qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent d’authentifier vos systèmes tiers, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 Experience Platform vous permet de centraliser les données que vous collectez de sources disparates et d’utiliser les informations ainsi acquises pour aller plus loin.
 
@@ -26,84 +26,84 @@ Les sources dans Experience Platform sont regroupées dans les catégories suiv
 
 ### Applications Adobe {#adobe-applications}
 
-Experience Platform permet d’ingérer des données à partir d’autres applications Adobe, notamment Adobe Analytics et Adobe Audience Manager. Consultez les documents connexes suivants pour plus d’informations :
+Experience Platform permet d’ingérer des données provenant d’autres applications Adobe, notamment Adobe Analytics et Adobe Audience Manager. Pour plus d’informations, consultez les documents connexes suivants :
 
-- [Présentation du connecteur Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
-- [Création d’une connexion source Adobe Audience Manager dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Présentation de la connexion à la source de données Adobe Analytics Classifications](connectors/adobe-applications/classifications.md)
-- [Création d’une connexion à la source de données Adobe Analytics Classifications dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Présentation de la connexion à la source de données de la suite de rapports Adobe Analytics](connectors/adobe-applications/analytics.md)
-- [Création d’une connexion source Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Création d’une connexion source Attributs du client dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [[!DNL Marketo Engage] présentation du connecteur](connectors/adobe-applications/marketo/marketo.md)
-- [Créez un [!DNL Marketo Engage] connexion source dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Présentation du connecteur Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
+- [Créer une connexion source Adobe Audience Manager dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Présentation de la connexion source données de classifications Adobe Analytics](connectors/adobe-applications/classifications.md)
+- [Créer une connexion de source de données de classifications Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/classifications.md)
+- [Présentation de la connexion de source de données de la suite de rapports Adobe Analytics](connectors/adobe-applications/analytics.md)
+- [Créer une connexion source Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Créer une connexion source Attributs du client dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [Présentation du connecteur [!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
+- [Créer une connexion source  [!DNL Marketo Engage]  dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Advertising {#advertising}
+### Publicité {#advertising}
 
-Experience Platform prend en charge l’ingestion de données à partir d’un système de publicité tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Experience Platform prend en charge l’ingestion de données provenant d’un système publicitaire tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
-- [[!DNL Google AdWords]](connectors/advertising/ads.md) connector
+- Connecteur [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
 ### Stockage dans le cloud {#cloud-storage}
 
-Les sources de stockage dans le cloud peuvent introduire vos propres données dans Platform sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée au workflow des sources à l’aide de l’interface utilisateur. Consultez les documents connexes suivants pour plus d’informations :
+Les sources de stockage dans le cloud peuvent introduire vos propres données dans Platform sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. L’interface utilisateur permet d’intégrer chaque étape du processus dans le workflow des sources. Pour plus d’informations, consultez les documents connexes suivants :
 
-- [[!DNL Azure Data Lake Storage Gen2] connector](connectors/cloud-storage/adls-gen2.md)
-- [[!DNL Azure Blob] connector](connectors/cloud-storage/blob.md)
-- [[!DNL Amazon Kinesis] connector](connectors/cloud-storage/kinesis.md)
-- [[!DNL Amazon S3] connector](connectors/cloud-storage/s3.md)
-- [[!DNL Apache HDFS] connector](connectors/cloud-storage/hdfs.md)
-- [[!DNL Azure Event Hubs] connector](connectors/cloud-storage/eventhub.md)
-- [[!DNL Azure File Storage] connector](connectors/cloud-storage/azure-file-storage.md)
+- [Connecteur [!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md)
+- [Connecteur [!DNL Azure Blob]](connectors/cloud-storage/blob.md)
+- [Connecteur [!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md)
+- [Connecteur [!DNL Amazon S3]](connectors/cloud-storage/s3.md)
+- [Connecteur [!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md)
+- [Connecteur [!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md)
+- [Connecteur [!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md)
 - [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md)
-- [[!DNL FTP] connector](connectors/cloud-storage/ftp.md)
-- [[!DNL Google Cloud Storage] connector](connectors/cloud-storage/google-cloud-storage.md)
-- [[!DNL Google PubSub] connector](connectors/cloud-storage/google-pubsub.md)
-- [[!DNL Oracle Object Storage] connector](connectors/cloud-storage/oracle-object-storage.md)
-- [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
+- [Connecteur [!DNL FTP]](connectors/cloud-storage/ftp.md)
+- [Connecteur [!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md)
+- [Connecteur [!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md)
+- [Connecteur [!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md)
+- [Connecteur [!DNL SFTP]](connectors/cloud-storage/sftp.md)
 
 ### Gestion de la relation client (CRM) {#crm}
 
-Les systèmes de gestion de la relation client (CRM) fournissent des données qui peuvent aider à établir des relations avec la clientèle, qui à leur tour, favorisent la fidélisation client. Experience Platform prend en charge l’ingestion de données CRM à partir de [!DNL Microsoft Dynamics 365] et [!DNL Salesforce]. Consultez les documents connexes suivants pour plus d’informations :
+Les systèmes de gestion de la relation client (CRM) fournissent des données qui peuvent aider à établir des relations avec la clientèle, qui à leur tour, favorisent la fidélisation client. Experience Platform prend en charge l’ingestion de données de gestion de la relation client (CRM) provenant de [!DNL Microsoft Dynamics 365] et de [!DNL Salesforce]. Pour plus d’informations, consultez les documents connexes suivants :
 
-- [[!DNL Microsoft Dynamics] connector](connectors/crm/ms-dynamics.md)
-- [[!DNL Salesforce] connector](connectors/crm/salesforce.md)
+- [Connecteur [!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md)
+- [Connecteur [!DNL Salesforce]](connectors/crm/salesforce.md)
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
-### Succès des clients {#customer-success}
+### Succès client {#customer-success}
 
-Experience Platform prend en charge l’ingestion de données provenant d’une application de succès client tierce. Consultez les documents connexes suivants pour plus d’informations :
+Experience Platform prend en charge l’ingestion de données provenant d’une application de succès client tierce. Pour plus d’informations, consultez les documents connexes suivants :
 
-- [[!DNL Salesforce Service Cloud] connector](connectors/customer-success/salesforce-service-cloud.md)
-- [[!DNL ServiceNow] connector](connectors/customer-success/servicenow.md)
+- [Connecteur [!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
+- [Connecteur [!DNL ServiceNow]](connectors/customer-success/servicenow.md)
 
 ### Base de données {#database}
 
 Experience Platform prend en charge l’ingestion de données provenant d’une base de données tierce. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
-- [[!DNL Amazon Redshift] connector](connectors/databases/redshift.md)
-- [[!DNL Apache Hive on Azure HDInsights] connector](connectors/databases/hive.md)
-- [[!DNL Apache Spark on Azure HDInsights] connector](connectors/databases/spark.md)
-- [[!DNL Azure Data Explorer] connector](connectors/databases/data-explorer.md)
-- [[!DNL Azure Synapse Analytics] connector](connectors/databases/synapse-analytics.md)
-- [[!DNL Azure Table Storage] connector](connectors/databases/ats.md)
-- [[!DNL Couchbase] connector](connectors/databases/couchbase.md)
-- [[!DNL Google BigQuery] connector](connectors/databases/bigquery.md)
-- [[!DNL GreenPlum] connector](connectors/databases/greenplum.md)
-- [[!DNL HP Vertica] connector](connectors/databases/hp-vertica.md)
-- [[!DNL IBM DB2] connector](connectors/databases/ibm-db2.md)
-- [[!DNL MariaDB] connector](connectors/databases/mariadb.md)
-- [[!DNL Microsoft SQL Server] connector](connectors/databases/sql-server.md)
-- [[!DNL MySQL] connector](connectors/databases/mysql.md)
-- [[!DNL Oracle] connector](connectors/databases/oracle.md)
-- [[!DNL Phoenix] connector](connectors/databases/phoenix.md)
-- [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
-- [[!DNL Snowflake] connector](connectors/databases/snowflake.md)
+- [Connecteur [!DNL Amazon Redshift]](connectors/databases/redshift.md)
+- [Connecteur [!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md)
+- [Connecteur [!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md)
+- [Connecteur [!DNL Azure Data Explorer]](connectors/databases/data-explorer.md)
+- [Connecteur [!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md)
+- [Connecteur [!DNL Azure Table Storage]](connectors/databases/ats.md)
+- [Connecteur [!DNL Couchbase]](connectors/databases/couchbase.md)
+- [Connecteur [!DNL Google BigQuery]](connectors/databases/bigquery.md)
+- [Connecteur [!DNL GreenPlum]](connectors/databases/greenplum.md)
+- [Connecteur [!DNL HP Vertica]](connectors/databases/hp-vertica.md)
+- [Connecteur [!DNL IBM DB2]](connectors/databases/ibm-db2.md)
+- [Connecteur [!DNL MariaDB]](connectors/databases/mariadb.md)
+- [Connecteur [!DNL Microsoft SQL Server]](connectors/databases/sql-server.md)
+- [Connecteur [!DNL MySQL]](connectors/databases/mysql.md)
+- [Connecteur [!DNL Oracle]](connectors/databases/oracle.md)
+- [Connecteur [!DNL Phoenix]](connectors/databases/phoenix.md)
+- [Connecteur [!DNL PostgreSQL]](connectors/databases/postgres.md)
+- [Connecteur [!DNL Snowflake]](connectors/databases/snowflake.md)
 
 ### eCommerce {#ecommerce}
 
-Experience Platform prend en charge l’ingestion de données à partir d’un système eCommerce tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Experience Platform prend en charge l’ingestion de données provenant d’un système tiers d’eCommerce. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
@@ -111,7 +111,7 @@ Experience Platform prend en charge l’ingestion de données à partir d’un s
 
 Experience Platform prend en charge l’ingestion de données à partir de votre système local. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
-- [Chargement de fichier local](connectors/local-system/local-file-upload.md)
+- [Téléchargement de fichier local](connectors/local-system/local-file-upload.md)
 
 ### Automatisation du marketing {#marketing-automation}
 
@@ -124,9 +124,9 @@ Experience Platform prend en charge l’ingestion de données provenant d’un 
 
 ### Paiements {#payments}
 
-Experience Platform prend en charge l’ingestion de données provenant d’un système de paiement tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Experience Platform prend en charge l’ingestion de données provenant d’un système de paiement tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
-- [[!DNL PayPal] connector](connectors/payments/paypal.md)
+- [Connecteur [!DNL PayPal]](connectors/payments/paypal.md)
 
 ### Diffusion en continu {#streaming}
 
@@ -136,7 +136,7 @@ Experience Platform prend en charge l’ingestion de données à partir de sourc
 
 ### Protocoles {#protocols}
 
-Experience Platform prend en charge l’ingestion de données à partir d’un système de protocoles tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Experience Platform prend en charge l’ingestion de données provenant d’un système de protocoles tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL Generic OData]](connectors/protocols/odata.md)
 - [[!DNL Generic REST API]](connectors/protocols/generic-rest.md)
@@ -149,18 +149,18 @@ Le tableau suivant décrit le comportement de l’interface utilisateur en fonct
 
 | Niveau d’autorisation | Description |
 | ---- | ----|
-| **[!UICONTROL Afficher les sources]** activée | Accordez un accès en lecture seule aux sources dans chaque type de source dans l’onglet Catalogue , ainsi que dans les onglets Parcourir, Comptes et Flux de données . |
+| **[!UICONTROL Afficher les sources]** activée | Accordez un accès en lecture seule aux sources dans chaque type de source dans l’onglet Catalogue, ainsi que dans les onglets Parcourir, Comptes et Flux de données. |
 | **[!UICONTROL Gérer les sources]** activée | Outre les fonctions incluses dans **[!UICONTROL Afficher les sources]**, elle accorde un accès à l’option **[!UICONTROL Connecter une source]** dans **[!UICONTROL Catalogue]** et l’option **[!UICONTROL Sélectionner les données]** dans **[!UICONTROL Parcourir]**. **[!UICONTROL Gérer les sources]** vous permet également d’activer ou de désactiver **[!UICONTROL les flux de données]** et de modifier leurs planifications. |
 | **[!UICONTROL Afficher les sources]** désactivée et **[!UICONTROL Gérer les sources]** désactivée | Révoquez tous les accès aux sources. |
 
 Pour plus d’informations sur les autorisations disponibles accordées à l’aide d’Admin Console, y compris ces quatre sources, consultez la [présentation du contrôle d’accès](../access-control/home.md).
 
-## Conditions d’utilisation {#terms-and-conditions}
+## Conditions générales {#terms-and-conditions}
 
-En utilisant l’une des sources libellées bêta (&quot;Beta&quot;), Vous reconnaissez que la version bêta est fournie. ***&quot;en l’état&quot; sans aucune garantie***.
+En utilisant l’une des sources libellées comme étant en version Beta (« Beta »), vous reconnaissez que la version Beta est fournie ***« telle quelle », sans garantie d’aucune sorte***.
 
-Adobe n’a aucune obligation de gérer, corriger, mettre à jour, modifier, modifier ou prendre en charge la version bêta. Nous vous conseillons de faire preuve de prudence et de ne pas vous fier de quelque manière que ce soit au bon fonctionnement ou aux bonnes performances d’une telle version bêta et/ou du matériel d’accompagnement. La version bêta est considérée comme des informations confidentielles d’Adobe.
+Adobe n’a aucune obligation de tenir à jour, corriger, mettre à jour, modifier, remplacer ou prendre en charge cette version Beta. Il est recommandé de faire preuve de prudence et de ne pas se fier, de quelque manière que ce soit, au bon fonctionnement ou aux performances de cette version Beta et/ou des éléments qui l’accompagnent. La version Beta est considérée comme étant une information confidentielle dʼAdobe.
 
-Tout &quot;retour&quot; (informations relatives à la version bêta, y compris, mais sans s’y limiter, aux problèmes ou défauts que vous rencontrez lors de l’utilisation de la version bêta, suggestions, améliorations et recommandations) fourni par Vous à l’Adobe est affecté à l’Adobe, y compris tous les droits, titres et intérêts dans et à ces commentaires.
+Tout « commentaire » (informations relatives à la version Beta, y compris, mais sans s’y limiter, les problèmes ou défauts que vous rencontrez lors de son utilisation, les suggestions, les améliorations et les recommandations) que vous fournissez à Adobe est par la présente cédé à Adobe. Cela inclut tous les droits, titres et intérêts relatifs à ce commentaire.
 
-Envoyez des commentaires d’ouverture ou créez un ticket d’assistance pour partager vos suggestions ou signaler un bogue, recherchez une amélioration des fonctionnalités.
+Envoyez vos commentaires ou créez un ticket dʼassistance pour partager vos suggestions, signaler un bug ou demander une amélioration de fonctionnalité.

@@ -5,7 +5,7 @@ exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
 source-git-commit: 5f6b46245781051da01a8051f023df11ff4c7d51
 workflow-type: tm+mt
 source-wordcount: '1018'
-ht-degree: 26%
+ht-degree: 54%
 
 ---
 
@@ -39,17 +39,17 @@ Pour plus d’informations sur les [!DNL Dashboards], consultez la [[!DNL Dashbo
 
 ## Collecte de données {#data-collection}
 
-Platform fournit une suite de technologies qui vous permet de collecter des données d’expérience client côté client et de les envoyer au réseau Adobe Experience Platform Edge où elles peuvent être enrichies, transformées et distribuées vers des destinations Adobe ou non Adobe.
+Platform fournit un ensemble de technologies qui vous permettent de collecter des données d’expérience client à partir de sources côté client. Vous pouvez ensuite les envoyer au réseau Adobe Experience Platform Edge afin qu’elles soient enrichies, transformées et distribuées vers des destinations Adobe ou autres qu’Adobe.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Amélioration du workflow de l’interface utilisateur pour la configuration des flux de données | Le workflow de création d’un nouveau flux de données dans l’interface utilisateur de collecte de données a été mis à jour. Lors de l’ajout de services à un flux de données, seuls les services auxquels vous avez accès seront inclus dans la liste des options. Consultez le guide sur la [configuration d’un flux de données](../../edge/fundamentals/datastreams.md) pour plus d’informations. |
-| Préparation de données pour la collecte de données | Si vous utilisez le SDK Web de Adobe Experience Platform, vous pouvez désormais tirer parti des fonctionnalités de préparation des données pour mapper vos données au modèle de données d’expérience (XDM) côté serveur. Voir la section sur [Préparation de données pour la collecte de données](../../edge/fundamentals/datastreams.md#data-prep) dans le guide datastreams pour plus d’informations. |
-| Identifiants d’appareils propriétaires | Vous pouvez désormais envoyer vos propres ID d’appareil au réseau Adobe Experience Platform Edge lors de la collecte de données client à l’aide du SDK Web Platform, ce qui vous permet de contourner les restrictions récentes du navigateur sur la durée de vie des cookies tiers. Consultez le guide sur la [identifiants d’appareils propriétaires](../../edge/identity/first-party-device-ids.md) pour plus d’informations. |
+| Workflow de l’interface utilisateur amélioré pour la configuration des flux de données | Le workflow de création d’un flux de données dans l’interface utilisateur de la collecte de données a été mis à jour. Lors de l’ajout de services à un flux de données, seuls les services auxquels vous avez accès seront inclus dans la liste des options. Pour plus d’informations, consultez le guide de [configuration dʼun flux de données](../../edge/fundamentals/datastreams.md). |
+| Préparer des données pour la collecte de données | Si vous utilisez le SDK web Adobe Experience Platform, vous pouvez désormais réutiliser des fonctionnalités de préparation des données pour mapper vos données au modèle de données d’expérience (XDM) côté serveur. Pour plus d’informations, consultez la section [Préparer des données pour la collecte de données](../../edge/fundamentals/datastreams.md#data-prep) dans le guide des flux de données. |
+| Identifiants d’appareils propriétaires | Vous pouvez désormais envoyer vos propres identifiants d’appareil au réseau Adobe Experience Platform Edge lors de la collecte de données client à l’aide du SDK web Platform. Vous pouvez ainsi contourner les restrictions récentes imposées par les navigateurs sur la durée de vie des cookies tiers. Pour plus d’informations, consultez le guide des [Identifiants d’appareils propriétaires](../../edge/identity/first-party-device-ids.md). |
 
-Pour plus d’informations sur la collecte de données dans Platform, voir [présentation de la collecte de données](../../collection/home.md).
+Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -65,15 +65,15 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
 
-Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leur comportement en rapprochant des identités entre les appareils et les systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Nouvelle autorisation pour `view-identity-graph` | Vous pouvez désormais utiliser la variable `view-identity-graph` autorisation de contrôler si les utilisateurs de votre entreprise peuvent afficher des données de graphique d’identités. Les utilisateurs ne disposant pas de cette autorisation ne pourront pas accéder à la visionneuse de graphiques d’identités dans l’interface utilisateur ou lors de l’accès à [!DNL Identity Service] API qui renvoient des identités. Voir [présentation du contrôle d’accès](../../access-control/home.md) pour plus d’informations sur les autorisations. |
+| Nouvelle autorisation pour `view-identity-graph` | Vous pouvez désormais utiliser l’autorisation `view-identity-graph` pour contrôler si les utilisateurs de votre entreprise peuvent afficher des données de graphique d’identités. Les utilisateurs ne disposant pas de cette autorisation ne pourront pas accéder à la visionneuse de graphiques d’identités dans l’interface utilisateur ou lors de l’accès aux API [!DNL Identity Service] qui renvoient des identités. Pour plus d’informations sur les autorisations, consultez la [Présentation du contrôle d’accès](../../access-control/home.md). |
 
-Pour des informations plus générales sur le [!DNL Identity Service], reportez-vous à la [présentation du service d’identités](../../identity-service/home.md).
+Pour des informations plus générales sur le [!DNL Identity Service], reportez-vous à la [Présentation du service d’identités](../../identity-service/home.md).
 
 ## Sources {#sources}
 

@@ -8,28 +8,28 @@ exl-id: eedb4fe0-3aae-4e93-bf13-c095171e2d11
 source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
 workflow-type: tm+mt
 source-wordcount: '221'
-ht-degree: 14%
+ht-degree: 88%
 
 ---
 
-# [!DNL Mailchimp] connector
+# Connecteur [!DNL Mailchimp]
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
 Experience Platform prend en charge l’ingestion de données provenant d’un système tiers d’automatisation du marketing. La prise en charge des fournisseurs d’automatisation marketing inclut [!DNL Mailchimp].
 
-## LISTE AUTORISÉE d’adresses IP
+## Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou des performances peuvent se produire lors de l’utilisation de sources. Voir [LISTE AUTORISÉE d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
+Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
 
-La documentation ci-dessous fournit des informations sur la connexion. [!DNL Mailchimp] à Platform et apportez les éléments suivants : [!DNL Mailchimp Campaigns] ou [!DNL Mailchimp Members] données à l’aide d’API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur comment connecter [!DNL Mailchimp] à Platform et apporter les données [!DNL Mailchimp Campaigns] ou [!DNL Mailchimp Members] à l’aide d’API ou de l’interface utilisateur :
 
-## Connexion [!DNL Mailchimp Campaigns] vers Platform
+## Connecter [!DNL Mailchimp Campaigns] à Platform
 
-* [Créer une connexion source à importer [!DNL Mailchimp Campaigns] données vers Platform à l’aide d’API](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
+* [Créez une connexion source pour importer [!DNL Mailchimp Campaigns] les données dans Platform à l’aide d’API](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
 * [Créer une connexion source à importer [!DNL Mailchimp Campaigns] données vers Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
 
-## Connexion [!DNL Mailchimp Members] vers Platform
+## Connecter [!DNL Mailchimp Members] à Platform
 
-* [Créer une connexion source à importer [!DNL Mailchimp Members] données vers Platform à l’aide d’API](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
+* [Créez une connexion source pour importer [!DNL Mailchimp Members] les données dans Platform à l’aide d’API](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
 * [Créer une connexion source à importer [!DNL Mailchimp Members] données vers Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).

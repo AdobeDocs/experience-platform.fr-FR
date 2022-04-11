@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Guide des destinations
-user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
-description: Ce document répertorie la table des matières pour les destinations Adobe Experience Platform
+user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
 source-wordcount: '733'
-ht-degree: 43%
+ht-degree: 97%
 
 ---
 
@@ -17,28 +17,28 @@ ht-degree: 43%
 * [Présentation des destinations](./home.md)
 * [Types et catégories de destination](./destination-types.md)
 * Tutoriels sur les API {#api}
-   * [Connexion aux destinations de diffusion en continu et activation des données à l’aide de l’API Flow Service](./api/streaming-destinations.md)
-   * [Connectez-vous à l’espace de stockage par lot et aux destinations de marketing par e-mail et activez les données à l’aide de l’API Flow Service](./api/connect-activate-batch-destinations.md)
-   * [(Beta) Activation des segments d’audience vers des destinations par lots via l’API d’activation ad hoc](./api/ad-hoc-activation-api.md)
-   * [Mise à jour des flux de données de destination](./api/update-destination-dataflows.md)
-   * [Suppression de comptes de destination](./api/delete-destination-account.md)
-   * [Suppression des flux de données de destination](./api/delete-destination-dataflow.md)
+   * [Se connecter aux destinations de diffusion en continu et activer les données à l’aide de l’API Flow Service](./api/streaming-destinations.md)
+   * [Se connecter à l’espace de stockage par lots et aux destinations de marketing par e-mail et activer les données à l’aide de l’API Flow Service](./api/connect-activate-batch-destinations.md)
+   * [(Version Beta) Activer les segments d’audience vers des destinations par lots via l’API d’activation ad hoc](./api/ad-hoc-activation-api.md)
+   * [Mettre à jour les flux de données de destination](./api/update-destination-dataflows.md)
+   * [Supprimer les comptes de destination](./api/delete-destination-account.md)
+   * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
-   * [Création d’une connexion de destination](./ui/connect-destination.md)
-   * Activation des données d’audience vers les destinations{#activate}
-      * [Présentation de l’Activation](./ui/activation-overview.md)
-      * [Activation des données d’audience vers des destinations d’exportation de segments de diffusion](./ui/activate-segment-streaming-destinations.md)
-      * [Activation des données d’audience vers des destinations d’exportation de profils en continu](./ui/activate-streaming-profile-destinations.md)
-      * [Activation des données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md)
-      * [Activation des données d’audience vers les destinations de requête de profil](./ui/activate-profile-request-destinations.md)
-      * [Configuration des destinations de personnalisation pour la personnalisation de la même page et de la page suivante](./ui/configure-personalization-destinations.md)
-   * [Affichage des détails de destination](./ui/destination-details-page.md)
-   * [Mise à jour des comptes de destination](./ui/update-accounts.md)
-   * [Suppression de comptes de destination](./ui/delete-destination-account.md)
+   * [Créer une connexion de destination](./ui/connect-destination.md)
+   * Activer les données d’audience vers les destinations {#activate}
+      * [Présentation de l’activation](./ui/activation-overview.md)
+      * [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](./ui/activate-segment-streaming-destinations.md)
+      * [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](./ui/activate-streaming-profile-destinations.md)
+      * [Activer les données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md)
+      * [Activer les données d’audience vers les destinations de requête de profil](./ui/activate-profile-request-destinations.md)
+      * [Configurez des destinations de personnalisation pour la personnalisation de la même page et de la page suivante.](./ui/configure-personalization-destinations.md)
+   * [Afficher les détails de la destination](./ui/destination-details-page.md)
+   * [Mettre à jour les comptes de destination](./ui/update-accounts.md)
+   * [Supprimer les comptes de destination](./ui/delete-destination-account.md)
    * [Modification des flux de données d’activation](./ui/edit-activation.md)
-   * [Suppression de destinations](./ui/delete-destinations.md)
-   * [Surveillance des flux de données](./ui/monitor-dataflows.md)
+   * [Supprimer les destinations](./ui/delete-destinations.md)
+   * [Surveiller les flux de données](./ui/monitor-dataflows.md)
 * Catalogue des destinations {#catalog}
    * [Présentation du catalogue des destinations](./catalog/overview.md)
    * Destinations Adobe {#adobe}
@@ -47,29 +47,29 @@ ht-degree: 43%
       * [Partage de segments Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)
    * Destinations publicitaires {#advertising}
       * [Présentation des destinations publicitaires](./catalog/advertising/overview.md)
-      * [Extension Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
+      * [Extension Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
       * [Extension Awin Advertiser Conversion Tag](./catalog/advertising/awin-conversiontag.md)
-      * [Extension Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
+      * [Extension Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
       * [Extension Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
       * [Extension Branch](./catalog/advertising/branch.md)
-      * [Extension DoubleClick Floodlight (bêta)](./catalog/advertising/doubleclick-floodlight.md)
+      * [Extension DoubleClick Floodlight (Version Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extension Pixel Facebook](./catalog/advertising/facebook-pixel.md)
       * [Extension Flashtalking OneTag](./catalog/advertising/flashtalking.md)
       * [Connexion Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Extension Google Ads](./catalog/advertising/google-ads-extension.md)
-      * [Connexion à Google Ad Manager](./catalog/advertising/google-ad-manager.md)
-      * [Connexion à la correspondance client Google](./catalog/advertising/google-customer-match.md)
-      * [Connexion à Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
+      * [Connexion Google Ad Manager](./catalog/advertising/google-ad-manager.md)
+      * [Connexion à Google Customer Match](./catalog/advertising/google-customer-match.md)
+      * [Connexion Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
       * [Extension Google gtag](./catalog/advertising/gtag-advertising.md)
       * [Extension LinkedIn Insight Tag](./catalog/advertising/linkedin.md)
-      * [Connexion à Microsoft Bing](./catalog/advertising/bing.md)
+      * [Connexion Microsoft Bing](./catalog/advertising/bing.md)
       * [Extension Pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
-      * [Connexion à la liste des clients pinterest](./catalog/advertising/pinterest.md)
-      * [La connexion au bureau de commerce](./catalog/advertising/tradedesk.md)
+      * [Connexion Liste des Clients Pinterest](./catalog/advertising/pinterest.md)
+      * [Connexion Trade Desk](./catalog/advertising/tradedesk.md)
       * [Extension Twitter Universal Website Tag](./catalog/advertising/twitter-uwt.md)
-      * [Connexion à Yahoo/Verizon DataX](./catalog/advertising/datax.md)
-   * Destinations d’analyse {#analytics}
-      * [Présentation des destinations d’analyse](./catalog/analytics/overview.md)
+      * [Connexion Yahoo/Verizon DataX](./catalog/advertising/datax.md)
+   * Destinations Analytics {#analytics}
+      * [Présentation des destinations Analytics](./catalog/analytics/overview.md)
       * [Extension Adform Website Tracking](./catalog/analytics/adform.md)
       * [Extension Adobe Analytics](./catalog/analytics/adobe-analytics.md)
       * [Extension Adobe Media Analytics for Audio and Video](./catalog/analytics/adobe-video-analytics.md)
@@ -80,7 +80,7 @@ ht-degree: 43%
       * [Extension DialogTech](./catalog/analytics/dialogtech.md)
       * [Extension Google Global Site Tag](./catalog/analytics/gtag-analytics.md)
       * [Extension Google Universal Analytics](./catalog/analytics/google-universal-analytics.md)
-      * [Extension JW Player Analytics (Beta)](./catalog/analytics/jw-player-analytics.md)
+      * [Extension JW Player Analytics (version Beta)](./catalog/analytics/jw-player-analytics.md)
       * [Extension Nielsen BSDK](./catalog/analytics/nielsen-bsdk.md)
       * [Extension Nielsen IMA Handler](./catalog/analytics/nielsen-ima.md)
       * [Extension Nielsen VideoJS Player Handler](./catalog/analytics/nielsen-videojs.md)
@@ -91,33 +91,33 @@ ht-degree: 43%
       * [Extension Yext Conversion Tracking](./catalog/analytics/yext.md)
    * Destinations de stockage dans le cloud {#cloud-storage}
       * [Présentation des destinations de stockage dans le cloud](./catalog/cloud-storage/overview.md)
-      * [(Version bêta) Connexion Kinesis Amazon](./catalog/cloud-storage/amazon-kinesis.md)
-      * [Connexion à Amazon S3](./catalog/cloud-storage/amazon-s3.md)
+      * [Connexion Amazon Kinesis (version Beta)](./catalog/cloud-storage/amazon-kinesis.md)
+      * [Connexion Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Connexion Azure Blob](./catalog/cloud-storage/azure-blob.md)
-      * [(Version bêta) Connexion à Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
+      * [Connexion Azure Event Hubs (version Beta)](./catalog/cloud-storage/azure-event-hubs.md)
       * [Connexion SFTP](./catalog/cloud-storage/sftp.md)
       * [LISTE AUTORISÉE des adresses IP pour les destinations de stockage dans le cloud](./catalog/cloud-storage/ip-address-allow-list.md)
-   * Destinations de la plateforme de gestion des données {#data-management}
-      * [Présentation des destinations Data Management Platform (DMP)](./catalog/data-management/overview.md)
+   * Destinations Data Management Platform {#data-management}
+      * [Destinations Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Extension Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
-   * Destinations des emails {#email}
+   * Destinations dʼe-mail {#email}
       * [Extension Bizible](./catalog/email/bizible.md)
       * [Extension Marketo](./catalog/email/marketo.md)
       * [Extension Marketo Munchkin](./catalog/email/marketo-munchkin.md)
       * [Extension PebblePost](./catalog/email/pebblepost.md)
-   * Destinations de marketing par e-mail {#email-marketing}
-      * [Présentation des destinations du marketing par email](./catalog/email-marketing/overview.md)
+   * Destinations du marketing par e-mail {#email-marketing}
+      * [Présentation des destinations du marketing par e-mail](./catalog/email-marketing/overview.md)
       * [Connexion Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
-      * [Oracle de la connexion Eloqua](./catalog/email-marketing/oracle-eloqua.md)
-      * [Oracle de la connexion Responsys](./catalog/email-marketing/oracle-responsys.md)
-      * [Connexion au Marketing Cloud Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * Balisage des extensions {#launch-extensions}
-      * [Présentation de l’extension de balise](./catalog/launch-extensions/overview.md)
+      * [Connexion Orale Eloqua](./catalog/email-marketing/oracle-eloqua.md)
+      * [Connexion Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
+      * [Connexion Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
+   * Extensions de balises {#launch-extensions}
+      * [Présentation des extensions de balises](./catalog/launch-extensions/overview.md)
    * Destinations d’engagement mobile {#mobile-engagement}
       * [Présentation des destinations d’engagement mobile](./catalog/mobile-engagement/overview.md)
-      * [Connexion aux attributs du navire](./catalog/mobile-engagement/airship-attributes.md)
-      * [Connexion à Airship Tags](./catalog/mobile-engagement/airship-tags.md)
-      * [Connexion de frein](./catalog/mobile-engagement/braze.md)
+      * [Connexion Attributs Airship](./catalog/mobile-engagement/airship-attributes.md)
+      * [Connexion Balises Airship](./catalog/mobile-engagement/airship-tags.md)
+      * [Connexion Braze](./catalog/mobile-engagement/braze.md)
    * Destinations de personnalisation {#personalization}
       * [Présentation des destinations de personnalisation](./catalog/personalization/overview.md)
       * [Connexion Adobe Target](./catalog/personalization/adobe-target-connection.md)
@@ -130,14 +130,14 @@ ht-degree: 43%
       * [Extension Gainsight](./catalog/personalization/gainsight.md)
       * [Extension KickFire](./catalog/personalization/kickfire.md)
       * [Extension Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
-   * Destinations sociales{#social}
-      * [Présentation des destinations de réseau social](./catalog/social/overview.md)
+   * Destinations sociales {#social}
+      * [Présentation des destinations sociales](./catalog/social/overview.md)
       * [Extension Adobe Livefyre](./catalog/social/adobe-livefyre.md)
-      * [Connexion facebook](./catalog/social/facebook.md)
-      * [Connexion des audiences mappées linkedIn](./catalog/social/linkedin.md)
-      * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
+      * [Connexion Facebook](./catalog/social/facebook.md)
+      * [Connexion des audiences correspondantes linkedIn](./catalog/social/linkedin.md)
+      * [Connexion [!DNL Twitter Custom Audiences]](./catalog/social/twitter.md)
    * Destinations de diffusion en continu {#streaming}
-      * [ (Version bêta) Connexion à l’API HTTP](./catalog/streaming/http-destination.md)
+      * [ (Version Beta) Connexion API HTTP](./catalog/streaming/http-destination.md)
       * [LISTE AUTORISÉE d’adresses IP pour les destinations de diffusion en continu](./catalog/streaming/ip-address-allow-list.md)
    * Destinations d’enquête {#survey}
       * [Présentation des destinations d’enquête](./catalog/survey/overview.md)
@@ -151,44 +151,44 @@ ht-degree: 43%
       * [Extension Invoca Tags](./catalog/voice/invoca.md)
       * [Extension Medallia](./catalog/voice/medallia.md)
       * [Extension Talk URL Inbox](./catalog/voice/talkurl.md)
-* SDK Destination {#destination-sdk}
+* Destination SDK {#destination-sdk}
    * [Présentation](./destination-sdk/overview.md)
    * [Conditions préalables à l’intégration](./destination-sdk/integration-prerequisites.md)
    * [Prise en main](./destination-sdk/getting-started.md)
-   * Fonctionnalité de la Destination SDK {#functionality}
+   * Fonctionnalité de Destination SDK {#functionality}
       * [Options de configuration](./destination-sdk/configuration-options.md)
       * [Configuration de destination de diffusion en continu](./destination-sdk/destination-configuration.md)
-      * [(Version bêta) Configuration de destination basée sur des fichiers](./destination-sdk/file-based-destination-configuration.md)
-      * [Spécifications du serveur et des modèles de destinations en flux continu](./destination-sdk/server-and-template-configuration.md)
-      * [(Version bêta) Spécifications de serveur et de fichier basées sur des fichiers](./destination-sdk/server-and-file-configuration.md)
-      * [Format du message](./destination-sdk/message-format.md)
-      * [Gestion des métadonnées d’audience](./destination-sdk/audience-metadata-management.md)
+      * [(Version Beta) Configuration de destinations basées sur des fichiers](./destination-sdk/file-based-destination-configuration.md)
+      * [Spécifications de serveur et de modèle pour les destinations de diffusion en continu](./destination-sdk/server-and-template-configuration.md)
+      * [(Version Beta) Spécifications de serveur et de fichier pour les destinations basées sur les fichiers](./destination-sdk/server-and-file-configuration.md)
+      * [Format des messages](./destination-sdk/message-format.md)
+      * [Gérer les métadonnées d’audience](./destination-sdk/audience-metadata-management.md)
       * Authentification {#authentication}
          * [Configuration de l’authentification](./destination-sdk/authentication-configuration.md)
          * [Authentification OAuth 2](./destination-sdk/oauth2-authentication.md)
-      * Outils de développement {#developer-tools}
+      * Outils de développeur {#developer-tools}
          * [Créer et tester un modèle de transformation de message](./destination-sdk/create-template.md)
-         * [Test de votre configuration de destination](./destination-sdk/test-destination.md)
-   * Opérations API {#api}
-      * [Référence de l’API de Destination SDK (création de destination)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
-      * [Opérations de l’API Destinations endpoint](./destination-sdk/destination-configuration-api.md)
+         * [Tester la configuration de votre destination](./destination-sdk/test-destination.md)
+   * Opérations dʼAPI {#api}
+      * [Référence de l’API Destination SDK (création de destination)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Opérations de l’API du point d’entrée des destinations](./destination-sdk/destination-configuration-api.md)
       * [Opérations de l’API du point d’entrée du serveur de destination](./destination-sdk/destination-server-api.md)
-      * [Opérations de l’API de point d’entrée des métadonnées d’audience](./destination-sdk/audience-metadata-api.md)
-      * [Opérations de l’API du point d’entrée des informations d’identification](./destination-sdk/credentials-configuration-api.md)
-      * [Opérations de l’API de point de terminaison de publication](./destination-sdk/destination-publish-api.md)
-      * Référence sur les outils de développement {#developer-tools-reference}
-         * [Obtention d’un exemple d’opération d’API de modèle](./destination-sdk/sample-template-api.md)
-         * [Opérations de l’API de modèle de rendu](./destination-sdk/render-template-api.md)
-         * [Opérations de l’API de test de destination](./destination-sdk/destination-testing-api.md)
-         * [Exemples d’opérations API de génération de profil](./destination-sdk/sample-profile-generation-api.md)
+      * [Opérations de l’API du point d’entrée des métadonnées d’audience](./destination-sdk/audience-metadata-api.md)
+      * [Opérations des paramètres d’identification de l’API](./destination-sdk/credentials-configuration-api.md)
+      * [Opérations de l’API du point d’entrée de publication](./destination-sdk/destination-publish-api.md)
+      * Référence des outils du développeur {#developer-tools-reference}
+         * [Opérations dʼAPI pour lʼobtention du modèle](./destination-sdk/sample-template-api.md)
+         * [Opérations de l’API pour le rendu du modèle](./destination-sdk/render-template-api.md)
+         * [Opérations de l’API pour les tests de destination](./destination-sdk/destination-testing-api.md)
+         * [Opérations de l’API pour la génération d’un profil type](./destination-sdk/sample-profile-generation-api.md)
    * Guides {#guides}
-      * [Utilisation de la Destination SDK pour configurer une destination de diffusion en continu](./destination-sdk/configure-destination-instructions.md)
-      * [(Version bêta) Utilisez la Destination SDK pour configurer une destination basée sur des fichiers](./destination-sdk/configure-file-based-destination-instructions.md)
-      * [Envoyer pour révision d’une destination créée dans Destination SDK](./destination-sdk/submit-destination.md)
-   * Document de votre destination {#document-destination}
-      * [Document de votre destination dans Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
-      * [Utilisation de l’interface web GitHub pour créer une page de documentation de destination](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
-      * [Utilisation d’un éditeur de texte dans votre environnement local pour créer une page de documentation de destination](./destination-sdk/docs-framework/work-in-local-environment.md)
+      * [Utiliser Destination SDK pour configurer une destination de diffusion en continu](./destination-sdk/configure-destination-instructions.md)
+      * [(Version Beta) Utilisez Destination SDK pour configurer une destination basée sur des fichiers.](./destination-sdk/configure-file-based-destination-instructions.md)
+      * [Envoyer pour révision une destination créée dans Destination SDK](./destination-sdk/submit-destination.md)
+   * Documenter votre destination {#document-destination}
+      * [Documenter votre destination dans Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
+      * [Utiliser l’interface web GitHub pour créer une page de documentation de destination](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
+      * [Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation de destination](./destination-sdk/docs-framework/work-in-local-environment.md)
       * [Modèle de libre-service de documentation](./destination-sdk/docs-framework/self-service-template.md)
 * [Questions fréquentes](./destinations-faq.md)
-* [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)
