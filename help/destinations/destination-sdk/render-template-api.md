@@ -1,70 +1,70 @@
 ---
-description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/testing/template/render`, pour effectuer le rendu des données exportées pour votre destination, en fonction de votre modèle de transformation de messages.
-title: Opérations de l’API de modèle de rendu
+description: Cette page répertorie toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API « /authoring/testing/template/render » et fournit leur description. Effectuez le rendu des données exportées pour votre destination, en fonction de votre modèle de transformation de message.
+title: Opérations de l’API pour le rendu du modèle
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 source-git-commit: b337d65bcdfbb65da1b751645ddc649d30440dc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '806'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Opérations de l’API de modèle de rendu {#render-template-api-operations}
+# Opérations de l’API pour le rendu du modèle {#render-template-api-operations}
 
 >[!IMPORTANT]
 >
->**Point de terminaison de l’API**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
+>**Point d’entrée de l’API ** : `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
-Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du `/authoring/testing/template/render` Point de terminaison d’API, pour effectuer le rendu des profils exportés correspondant au format de destination attendu, en fonction de votre [modèle de transformation des messages](./message-format.md#using-templating). Pour une description de la fonctionnalité prise en charge par ce point de terminaison, reportez-vous à la section [créer un modèle](./create-template.md).
+Cette page répertorie toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API `/authoring/testing/template/render` et fournit leur description. Effectuez le rendu des profils exportés correspondant au format de destination attendu, en fonction de votre [modèle de transformation de message](./message-format.md#using-templating). Pour une description des fonctionnalités prises en charge par ce point d’entrée, consultez la section [Créer un modèle](./create-template.md).
 
-## Prise en main des opérations d’API de modèle de rendu {#get-started}
+## Prise en main des opérations de l’API de modèle de rendu {#get-started}
 
-Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
+Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md), qui contient des informations importantes à connaître avant d’effectuer des appels vers l’API, y compris la façon d’obtenir l’autorisation de création de destination et les en-têtes requis.
 
-## Rendre les profils exportés en fonction du modèle de transformation des messages {#render-exported-data}
+## Effectuer le rendu des profils exportés en fonction du modèle de transformation des messages {#render-exported-data}
 
-Vous pouvez effectuer le rendu des profils exportés en adressant une requête de POST au `authoring/testing/template/render` point de fin et en indiquant l’identifiant de destination de la configuration de destination et le modèle que vous avez créé à l’aide de la variable [exemple de point d’entrée de l’API de modèle](./sample-template-api.md).
+Vous pouvez effectuer le rendu des profils exportés en adressant une requête POST vers le point d’entrée `authoring/testing/template/render` et en indiquant l’identifiant de destination de la configuration de destination et le modèle que vous avez créé à l’aide du [point d’entrée de l’API du modèle type](./sample-template-api.md).
 
-Vous pouvez commencer par utiliser un modèle simple qui exporte vos profils bruts sans appliquer de transformations, puis passer à un modèle plus complexe qui applique les transformations aux profils. La syntaxe du modèle simple est la suivante : <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
+Commencez par utiliser un modèle simple qui exporte vos profils bruts sans appliquer aucune transformation, puis passez à un modèle plus complexe, qui applique des transformations aux profils. La syntaxe du modèle simple est la suivante : <br>. `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
->* L’identifiant de destination que vous devez utiliser ici est le suivant : `instanceId` qui correspond à une configuration de destination, créée à l’aide du `/destinations` point de terminaison . Reportez-vous à la section [opérations de l’API de configuration de destination](./destination-configuration-api.md#retrieve-list).
+>* L’identifiant de destination que vous devez utiliser ici est `instanceId`, qui correspond à une configuration de destination, créée à l’aide du point d’entrée `/destinations`. Reportez-vous aux [opérations de l’API de configuration de destination](./destination-configuration-api.md#retrieve-list).
 
 
-**Format d&#39;API**
+**Format d’API**
 
 
 ```http
 POST authoring/testing/template/render
 ```
 
-| Paramètre de requête | Description |
+| Paramètre de demande | Description |
 | -------- | ----------- |
 | `destinationId` | L’identifiant de la configuration de destination pour laquelle vous effectuez le rendu des profils exportés. |
-| `template` | Version du modèle avec échappement par les caractères sur laquelle vous effectuez le rendu des profils exportés. |
-| `profiles` | *Facultatif*. Vous pouvez ajouter des profils au corps de la requête. Si vous n’ajoutez aucun profil, l’Experience Platform génère et ajoute automatiquement des profils à la requête. <br> Si vous souhaitez ajouter des profils au corps de l’appel, vous pouvez en générer en utilisant la variable [Exemple d’API de génération de profil](./sample-profile-generation-api.md). |
+| `template` | Version du modèle placée dans une séquence dʼéchappement, sur la base duquel vous effectuez le rendu des profils exportés. |
+| `profiles` | *Facultatif*. Vous pouvez ajouter des profils au corps de la demande. Si vous n’ajoutez aucun profil, Experience Platform génère et ajoute automatiquement des profils à la demande. <br> Pour ajouter des profils au corps de la demande, générez-les à lʼaide de lʼ[API de génération de profil type](./sample-profile-generation-api.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
-Notez que la réponse renvoyée par le point de terminaison de l’API du modèle de rendu diffère selon la stratégie d’agrégation de destination. Si votre destination dispose d’une stratégie d’agrégation configurable, la clé d’agrégation qui détermine comment les profils sont agrégés est également renvoyée dans la réponse. En savoir plus sur [stratégies d’agrégation](./destination-configuration.md#aggregation) dans le document de configuration de destination.
+Notez que la réponse renvoyée par le point d’entrée de l’API du modèle de rendu diffère selon la stratégie d’agrégation de la destination. Si votre destination dispose d’une stratégie d’agrégation configurable, la clé d’agrégation qui détermine comment les profils sont agrégés est également renvoyée dans la réponse. Pour en savoir plus sur les [stratégies d’agrégation](./destination-configuration.md#aggregation), consultez le document de configuration de la destination.
 
 | Paramètre de réponse | Description |
 | -------- | ----------- |
-| `aggregationKey` | Représente la stratégie par laquelle les profils sont agrégés dans les exportations vers votre destination. Ce paramètre est facultatif et sera présent uniquement si la stratégie d’agrégation de destination est définie sur `CONFIGURABLE_AGGREGATION`. |
-| `profiles` | Affiche les profils fournis dans la requête ou les profils générés automatiquement si aucun profil n’a été fourni dans la requête. |
-| `output` | Profil ou profils rendus, sous la forme d’une chaîne échappée, en fonction du modèle de transformation de message fourni |
+| `aggregationKey` | Représente la stratégie selon laquelle les profils sont agrégés dans les exportations vers votre destination. Ce paramètre est facultatif et nʼest présent que si la stratégie d’agrégation de destination est définie sur `CONFIGURABLE_AGGREGATION`. |
+| `profiles` | Affiche les profils fournis dans la demande ou les profils générés automatiquement si aucun profil n’a été fourni dans la demande. |
+| `output` | Profil(s) rendu(s), sous la forme dʼune chaîne placée dans une séquence dʼéchappement, en fonction du modèle de transformation de message fourni. |
 
-Les sections ci-dessous fournissent des requêtes et des réponses détaillées pour les deux cas décrits ci-dessus.
+Les sections ci-dessous fournissent des demandes et des réponses détaillées pour les deux cas décrits ci-dessus.
 
-* [Agrégation des meilleurs efforts et profil inclus dans le corps de la requête](#best-effort)
-* [Agrégation et profils configurables inclus dans le corps de la requête](#configurable-aggregation)
+* [Agrégation des meilleurs efforts et profil inclus dans le corps de la demande.](#best-effort)
+* [Agrégation configurable et profils inclus dans le corps de la demande](#configurable-aggregation)
 
-### Rendre les profils exportés avec une agrégation des meilleurs efforts et un profil unique inclus dans le corps de la requête {#best-effort}
+### Effectuer le rendu des profils exportés avec une agrégation des meilleurs efforts et un seul profil inclus dans le corps de la demande {#best-effort}
 
 **Requête**
 
-La requête suivante effectue le rendu d’un profil exporté qui correspond au format attendu par votre destination. Dans cet exemple, l’ID de destination correspond à une configuration de destination avec une agrégation des meilleurs efforts, et un exemple de profil est inclus dans le corps de la requête.
+La demande suivante effectue le rendu d’un profil exporté qui correspond au format attendu par votre destination. Dans cet exemple, l’identifiant de destination correspond à une configuration de destination avec une agrégation des meilleurs efforts et un exemple de profil est inclus dans le corps de la requête.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -125,9 +125,9 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **Réponse**
 
-La réponse renvoie le résultat du rendu du modèle ou les erreurs rencontrées.
-Une réponse réussie renvoie un état HTTP 200 avec les détails des données exportées. Recherchez le profil exporté dans la variable `output` comme chaîne avec échappement.
-Une réponse manquée renvoie un état HTTP 400 avec des descriptions des erreurs rencontrées.
+La réponse renvoie le résultat du rendu du modèle ou toute erreur rencontrée.
+Une réponse réussie renvoie un état HTTP 200 avec les détails des données exportées. Recherchez le profil exporté dans le paramètre `output` sous forme de chaîne placée dans une séquence dʼéchappement.
+Une réponse non réussie renvoie un état HTTP 400 avec la description des erreurs rencontrées.
 
 ```json
 {
@@ -181,12 +181,12 @@ Une réponse manquée renvoie un état HTTP 400 avec des descriptions des erreur
 }    
 ```
 
-### Rendre les profils exportés avec l’agrégation configurable et les profils inclus dans le corps de la requête {#configurable-aggregation}
+### Effectuer le rendu des profils exportés avec l’agrégation configurable et les profils inclus dans le corps de la requête {#configurable-aggregation}
 
 **Requête**
 
 
-La requête suivante effectue le rendu de plusieurs profils exportés correspondant au format attendu par votre destination. Dans cet exemple, l’identifiant de destination correspond à une configuration de destination avec une agrégation configurable. Deux profils sont inclus dans le corps de la requête, chacun avec trois qualifications de segment et cinq identités. Vous pouvez générer des profils à envoyer lors de l’appel à l’aide du [exemple d’API de génération de profil](./sample-profile-generation-api.md).
+La requête suivante effectue le rendu de plusieurs profils exportés correspondant au format attendu par votre destination. Dans cet exemple, l’identifiant de destination correspond à une configuration de destination avec une agrégation configurable. Deux profils sont inclus dans le corps de la requête, chacun avec trois qualifications de segment et cinq identités. Vous pouvez générer des profils à envoyer lors de l’appel à l’aide de l’[API de génération de profil type](./sample-profile-generation-api.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -306,9 +306,9 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **Réponse**
 
-La réponse renvoie le résultat du rendu du modèle ou les erreurs rencontrées.
-Une réponse réussie renvoie un état HTTP 200 avec les détails des données exportées. Notez dans la réponse comment les profils sont agrégés en fonction de l’appartenance au segment et des identités. Recherchez les profils exportés dans le `output` comme chaîne avec échappement.
-Une réponse manquée renvoie un état HTTP 400 avec des descriptions des erreurs rencontrées.
+La réponse renvoie le résultat du rendu du modèle ou toute erreur rencontrée.
+Une réponse réussie renvoie un état HTTP 200 avec les détails des données exportées. Notez dans la réponse comment les profils sont agrégés en fonction de l’appartenance à un segment et des identités. Recherchez les profils exportés dans le paramètre `output` sous forme de chaîne placée dans une séquence dʼéchappement.
+Une réponse non réussie renvoie un état HTTP 400 avec la description des erreurs rencontrées.
 
 ```json
 {
@@ -1066,8 +1066,8 @@ Une réponse manquée renvoie un état HTTP 400 avec des descriptions des erreur
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points de terminaison de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](../../landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes dʼétat d’API](../../landing/troubleshooting.md#api-status-codes) et [Erreurs dʼen-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu ce document, vous savez maintenant comment utiliser le modèle de transformation des messages pour générer des profils exportés correspondant au format de données attendu de votre destination. Lecture [comment utiliser la Destination SDK pour configurer votre destination](./configure-destination-instructions.md) pour comprendre où cette étape s’inscrit dans le processus de configuration de votre destination.
+Vous êtes arrivé au bout de ce document, vous savez désormais comment utiliser le modèle de transformation des messages pour générer des profils exportés correspondant au format de données attendu de votre destination. Lisez [comment utiliser le Destination SDK pour configurer une destination](./configure-destination-instructions.md) et comprendre où cette étape s’inscrit dans le processus de configuration d’une destination.
