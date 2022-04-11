@@ -5,9 +5,9 @@ title: Syntaxe SQL dans Query Service
 topic-legacy: syntax
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5468097c61d42a7b565520051b955329e493d51f
+source-git-commit: 2a74d900053a868ce936d957dee008da846d6608
 workflow-type: tm+mt
-source-wordcount: '2596'
+source-wordcount: '2668'
 ht-degree: 9%
 
 ---
@@ -422,6 +422,27 @@ WHEN other THEN SELECT 'ERROR';
 END $$; 
 ```
 
+## En ligne {#inline}
+
+La fonction intégrée sépare les éléments d’un tableau de structs et génère les valeurs dans un tableau. Il ne peut être placé que dans la variable `SELECT` ou une liste `LATERAL VIEW`.
+
+Fonction intégrée **cannot** être placés dans une liste sélectionnée, là où il existe d’autres fonctions de générateur.
+
+Par défaut, les colonnes générées sont nommées &quot;col1&quot;, &quot;col2&quot;, etc. Si l’expression est `NULL` alors aucune ligne n’est générée.
+
+**Exemple**
+
+```sql
+> SELECT inline(array(struct(1, 'a'), struct(2, 'b'))), 'Spark SQL';
+```
+
+L’exemple renvoie les éléments suivants :
+
+```text
+1  a Spark SQL
+2  b Spark SQL
+```
+
 ## [!DNL Spark] Commandes SQL
 
 La sous-section ci-dessous couvre les commandes Spark SQL prises en charge par Query Service.
@@ -610,7 +631,7 @@ Vous trouverez plus d’informations sur les paramètres de requête SELECT stan
 
 | Paramètres | Description |
 | ------ | ------ |
-| `TEMPORARY` ou `TEMP` | Paramètre facultatif. Si spécifié, la table créée sera une table temporaire. |
+| `TEMPORARY` ou `TEMP`. | Paramètre facultatif. Si spécifié, la table créée sera une table temporaire. |
 | `UNLOGGED` | Paramètre facultatif. Si spécifié, la table créée sera une table non enregistrée. Vous trouverez plus d’informations sur les tables non enregistrées dans la section [Documentation PostgreSQL](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | Nom de la table à créer. |
 
