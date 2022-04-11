@@ -6,9 +6,9 @@ title: Surveillance des flux de données pour les destinations dans l’interfac
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 5254f100f59f1edb36e00d1475c2857a525fe79e
+source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
 workflow-type: tm+mt
-source-wordcount: '3365'
+source-wordcount: '3363'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 - [Flux de données](../home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
    - [Exécutions de flux de données](../../sources/notifications.md): Les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de fréquence des flux de données sélectionnés.
 - [Destinations](../../destinations/home.md): Les destinations sont des intégrations préconfigurées aux applications courantes qui permettent l’activation transparente des données de Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
-- [Environnements de test](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+- [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Surveillance des flux de données dans l’espace de travail des destinations {#monitor-dataflows-in-the-destinations-workspace}
 
@@ -114,7 +114,7 @@ La page Détails affiche également une liste des identités qui ont échoué et
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Détails de l’exécution du flux de données"
 >abstract="Les détails de l’exécution du flux de données de destination contiennent des informations sur l’état d’activation du segment et des mesures provenant de Real-time Customer Profile pour générer des identités uniques. Pour en savoir plus, consultez le guide des définitions de mesure."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=en#dataflow-runs-for-streaming-destinations" text="Exécutions de flux de données pour les destinations de diffusion en continu"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="Exécutions de flux de données pour les destinations de diffusion en continu"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"

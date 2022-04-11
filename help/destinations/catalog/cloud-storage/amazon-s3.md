@@ -1,16 +1,16 @@
 ---
 keywords: Amazon S3;destination S3;s3;amazon s3
-title: Connexion à Amazon S3
+title: Connexion Amazon S3
 description: Créez une connexion sortante active à votre stockage Amazon Web Services (AWS) S3 pour exporter périodiquement des fichiers de données CSV de Adobe Experience Platform vers vos propres compartiments S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
+source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 1%
+source-wordcount: '552'
+ht-degree: 9%
 
 ---
 
-# [!DNL Amazon S3] connection {#s3-connection}
+# Connexion [!DNL Amazon S3] {#s3-connection}
 
 ## Présentation {#overview}
 
@@ -22,16 +22,16 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d&#39;export | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil de la fonction [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil de la fonction [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
 | Fréquence des exports | **[!UICONTROL Lot]** | Les destinations de lot exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur [destinations basées sur des fichiers de lots](/help/destinations/destination-types.md#file-based). |
 
 {style=&quot;table-layout:auto&quot;}
 
 ![Type d’exportation basé sur les profils Amazon S3](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
-## Connexion à la destination {#connect}
+## Se connecter à la destination {#connect}
 
-Pour vous connecter à cette destination, procédez comme décrit dans la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
+Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
 ### Paramètres de connexion {#parameters}
 
@@ -44,14 +44,14 @@ Pour vous connecter à cette destination, procédez comme décrit dans la sectio
 >id="platform_destinations_connect_s3_folderpath"
 >title="Chemin du dossier"
 >abstract="Doit contenir uniquement les caractères A-Z, a-z, 0-9 et peut contenir les caractères spéciaux suivants : `/!-_.'()"^[]+$%.*"`. Pour créer un dossier par fichier de segment, insérez la macro /%SEGMENT_NAME% ou /%SEGMENT_ID% ou /%SEGMENT_NAME%/%SEGMENT_ID% dans le champ de texte. Les macros ne peuvent être insérées qu’à la fin du chemin du dossier. Affichez des exemples de macro dans la documentation."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=en#use-macros" text="Utilisez les macros pour créer un dossier à l’emplacement de stockage"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="Utilisez les macros pour créer un dossier à l’emplacement de stockage"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
 >title="Clé publique RSA"
 >abstract="Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Votre clé publique doit être écrite en tant que chaîne codée Base64."
 
-while [configuration](../../ui/connect-destination.md) Pour cette destination, vous devez fournir les informations suivantes :
+Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 
 * **[!DNL Amazon S3]clé d&#39;accès** et **[!DNL Amazon S3]clé secrète**: Dans [!DNL Amazon S3], générez une `access key - secret access key` pour accorder l’accès à Platform à votre [!DNL Amazon S3] compte . En savoir plus dans la section [Documentation Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Nom]**: saisissez un nom qui vous aidera à identifier cette destination.
@@ -86,7 +86,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 -->
 
-## Activation des segments vers cette destination {#activate}
+## Activer des segments vers cette destination {#activate}
 
 Voir [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
