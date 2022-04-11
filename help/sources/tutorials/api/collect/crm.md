@@ -1,56 +1,56 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;crm;CRM
 solution: Experience Platform
-title: Création d’un flux de données pour les sources CRM à l’aide de l’API Flow Service
+title: Créer un flux de données pour les sources CRM à l’aide de l’API Flow Service
 topic-legacy: overview
 type: Tutorial
-description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système CRM tiers et les introduire dans Platform à l’aide des connecteurs source et des API.
+description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système CRM tiers et les importer dans Platform à l’aide des connecteurs source et des API.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1308'
-ht-degree: 13%
+ht-degree: 100%
 
 ---
 
-# Créez un flux de données pour les sources CRM à l’aide du [!DNL Flow Service] API
+# Créer un flux de données pour les sources CRM à l’aide de l’API [!DNL Flow Service]
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source CRM et les amener dans Platform à l’aide de [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour récupérer les données d’une source CRM et les importer dans Platform à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec l’une des sources CRM suivantes sur Platform :<ul><li>[[!DNL Microsoft Dynamics]](../create/crm/ms-dynamics.md)</li><li>[[!DNL Salesforce]](../create/crm/salesforce.md)</li><li>[[!DNL Veeva CRM]](../create/crm/veeva.md)</li><li>[[!DNL Zoho CRM]](../create/crm/zoho.md)</li></ul>
+>Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide auprès de l’une des sources CRM suivantes sur Platform :<ul><li>[[!DNL Microsoft Dynamics]](../create/crm/ms-dynamics.md)</li><li>[[!DNL Salesforce]](../create/crm/salesforce.md)</li><li>[[!DNL Veeva CRM]](../create/crm/veeva.md)</li><li>[[!DNL Zoho CRM]](../create/crm/zoho.md)</li></ul>
 
 ## Prise en main
 
-Ce tutoriel nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   * [Guide de développement du registre des schémas](../../../../xdm/api/getting-started.md): Inclut des informations importantes à connaître pour effectuer avec succès des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
-* [[!DNL Catalog Service]](../../../../catalog/home.md): Le de catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans  Experience Platform.
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): L’API Batch Ingestion vous permet d’ingérer des données dans  Experience Platform sous forme de fichiers de lots.
-* [Environnements de test](../../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+   * [Guide du développeur de Schema Registry](../../../../xdm/api/getting-started.md) : inclut des informations importantes à connaître afin dʼeffectuer correctement des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
+* [[!DNL Catalog Service]](../../../../catalog/home.md) : le catalogue constitue le système d’enregistrement de l’emplacement et de la traçabilité des données dans Experience Platform.
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md) : l’API Batch Ingestion vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots.
+* [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-### Utilisation des API Platform
+### Utiliser les API Platform
 
-Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur [Prise en main des API Platform](../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide de [Prise en main des API Platform](../../../../landing/api-guide.md).
 
-## Création d’une connexion source {#source}
+## Créer une connexion source {#source}
 
-Vous pouvez créer une connexion source en envoyant une requête de POST au [!DNL Flow Service] API. Une connexion source se compose d’un identifiant de connexion, d’un chemin d’accès au fichier de données source et d’un identifiant de spécification de connexion.
+Vous pouvez créer une connexion source en effectuant une requête POST à l’API [!DNL Flow Service]. Une connexion source se compose d’un identifiant de connexion, d’un chemin d’accès au fichier de données source et d’un identifiant de spécification de connexion.
 
-Pour créer une connexion source, vous devez également définir une valeur d&#39;énumération pour l&#39;attribut data format.
+Pour créer une connexion source, vous devez également définir une valeur d’énumération pour l’attribut du format de données.
 
-Utilisez les valeurs d’énumération suivantes pour les connecteurs basés sur un fichier :
+Utilisez les valeurs d’énumération suivantes pour les connecteurs basés sur des fichiers :
 
-| Sur le format des données saisies | Valeur d’énumération |
+| Format des données | Valeur d’énumération |
 | ----------- | ---------- |
 | Délimité | `delimited` |
 | JSON | `json` |
 | Parquet | `parquet` |
 
-Pour tous les connecteurs basés sur un tableau, définissez la valeur sur `tabular`.
+Pour tous les connecteurs basés sur des tableaux, définissez la valeur sur `tabular`.
 
 **Format d’API**
 
@@ -110,9 +110,9 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `baseConnectionId` | L’identifiant de connexion unique du système CRM tiers auquel vous accédez. |
-| `params.path` | Chemin d’accès du fichier source. |
-| `connectionSpec.id` | Identifiant de spécification de connexion associé à votre système de gestion de la relation client tiers spécifique. Voir [annexe](#appendix) pour obtenir la liste des identifiants de spécification de connexion. |
+| `baseConnectionId` | Identifiant de connexion unique du système CRM tiers auquel vous accédez. |
+| `params.path` | Chemin d’accès au fichier source. |
+| `connectionSpec.id` | Identifiant de spécification de connexion associé à votre système CRM tiers spécifique. Consultez lʼ[annexe](#appendix) pour obtenir la liste des identifiants de spécification de connexion. |
 
 **Réponse**
 
@@ -125,25 +125,25 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 }
 ```
 
-## Création d’un schéma XDM cible {#target-schema}
+## Créer un schéma XDM cible {#target-schema}
 
-Pour que les données source soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données source en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform dans lequel les données source sont contenues.
+Pour que les données sources soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform contenant les données sources.
 
-Un schéma XDM cible peut être créé en adressant une requête de POST au [API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Un schéma XDM cible peut être créé en adressant une requête POST à l’ [API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, consultez le tutoriel sur [création d’un schéma à l’aide de l’API](../../../../xdm/api/schemas.md).
+Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, consultez le tutoriel [Créer un schéma à l’aide de l’API](../../../../xdm/api/schemas.md).
 
-## Création d’un jeu de données cible {#target-dataset}
+## Créer un jeu de données cible {#target-dataset}
 
-Un jeu de données cible peut être créé en adressant une requête de POST au [API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fournissant l’identifiant du schéma cible dans la payload.
+Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
 
-Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, consultez le tutoriel sur [création d’un jeu de données à l’aide de l’API](../../../../catalog/api/create-dataset.md).
+Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, consultez le tutoriel [Créer un jeu de données à l’aide de l’API](../../../../catalog/api/create-dataset.md).
 
 ## Créer une connexion cible
 
-Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, vous devez indiquer l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, vous devez indiquer l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Vous disposez désormais des identifiants uniques d’un schéma cible d’un jeu de données cible et de l’identifiant de spécification de connexion au lac de données. En utilisant la variable [!DNL Flow Service] API, vous pouvez créer une connexion cible en spécifiant ces identifiants ainsi que le jeu de données qui contiendra les données source entrantes.
+Vous disposez désormais des identifiants uniques d’un schéma cible, d’un jeu de données cible, ainsi que l’identifiant de spécification de connexion au lac de données. En utilisant l’API [!DNL Flow Service], vous pouvez créer une connexion cible en spécifiant ces identifiants ainsi que le jeu de données qui contiendra les données source entrantes.
 
 **Format d’API**
 
@@ -182,10 +182,10 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `data.schema.id` | Le `$id` du schéma XDM cible. |
-| `data.schema.version` | Version du schéma. Cette valeur doit être définie. `application/vnd.adobe.xed-full+json;version=1`, qui renvoie la dernière version mineure du schéma. |
+| `data.schema.id` | `$id` du schéma XDM cible. |
+| `data.schema.version` | La version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full+json;version=1`, qui renvoie la dernière version mineure du schéma. |
 | `params.dataSetId` | L’identifiant du jeu de données cible. |
-| `connectionSpec.id` | Identifiant de spécification de connexion utilisé pour la connexion au lac de données. Cet identifiant est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | L’identifiant de spécification de connexion utilisé pour la connexion au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
 {
@@ -194,11 +194,11 @@ curl -X POST \
 }
 ```
 
-## Création d’un mappage {#mapping}
+## Créer un mappage {#mapping}
 
-Pour que les données source soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible adhère.
+Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache.
 
-Pour créer un jeu de mappages, envoyez une requête de POST à la variable `mappingSets` point d’entrée du [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) tout en fournissant votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
+Pour créer un jeu de mappages, envoyez une requête POST au point d’entrée `mappingSets` de l’[[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) et fournissez votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
 
 **Format d’API**
 
@@ -252,7 +252,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `xdmSchema` | L’identifiant du schéma XDM cible. |
+| `xdmSchema` | Identifiant du schéma XDM cible. |
 
 **Réponse**
 
@@ -269,9 +269,9 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 }
 ```
 
-## Récupération des spécifications du flux de données {#specs}
+## Récupérer des spécifications du flux de données {#specs}
 
-Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données responsables de la collecte des données CRM.
+Un flux de données est chargé de collecter des données provenant de sources et de les importer dans Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données responsables de la collecte des données CRM.
 
 **Format d’API**
 
@@ -291,7 +291,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la spécification de flux de données responsable de l’importation des données de votre source dans Platform. La réponse inclut la spécification de flux unique. `id` requis pour créer un nouveau flux de données.
+Une réponse réussie renvoie les détails de la spécification du flux de données responsable de l’importation des données de votre source dans Platform. La réponse inclut la spécification de flux unique `id` nécessaire pour créer un flux de données.
 
 ```json
 {
@@ -520,18 +520,18 @@ Une réponse réussie renvoie les détails de la spécification de flux de donn�
 }
 ```
 
-## Création d’un flux de données
+## Créer un flux de données
 
-La dernière étape de la collecte des données CRM est de créer un flux de données. À l’heure actuelle, les valeurs requises suivantes sont préparées :
+Il ne reste plus quʼà créer un flux de données avant de procéder à la collecte des données CRM. Vous disposez à présent des valeurs requises suivantes :
 
 * [ID de connexion source](#source)
-* [Identifiant de connexion Target](#target)
-* [ID de mappage](#mapping)
-* [Identifiant de spécification du flux de données](#specs)
+* [ID de connexion cible](#target)
+* [Identifiant de mappage](#mapping)
+* [ID de spécification de flux de données](#specs)
 
-Un flux de données est chargé de planifier et de collecter les données d’une source. Vous pouvez créer un flux de données en exécutant une requête de POST tout en fournissant les valeurs mentionnées précédemment dans le payload.
+Un flux de données est chargé de planifier et de collecter les données provenant d’une source. Vous pouvez créer un flux de données en exécutant une requête POST et en fournissant les valeurs mentionnées précédemment dans la payload.
 
-Pour planifier une ingestion, vous devez d’abord définir la valeur de l’heure de début sur la durée en secondes. Vous devez ensuite définir la valeur de fréquence sur l’une des cinq options suivantes : `once`, `minute`, `hour`, `day`ou `week`. La valeur interval désigne la période entre deux ingestion consécutives et la création d’une ingestion unique ne nécessite pas de définition d’un intervalle. Pour toutes les autres fréquences, la valeur de l’intervalle doit être égale ou supérieure à `15`.
+Pour planifier une ingestion, vous devez d’abord définir la valeur de l’heure de début en temps Unix en secondes. Vous devez ensuite définir la valeur de fréquence sur l’une des cinq options suivantes : `once`, `minute`, `hour`, `day` ou `week`. La valeur de l’intervalle désigne la période entre deux ingestions consécutives et aucun intervalle ne doit être défini pour la création d’une ingestion unique. Pour toutes les autres fréquences, la valeur de l’intervalle doit être égale ou supérieure à `15`.
 
 **Format d’API**
 
@@ -589,19 +589,19 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `flowSpec.id` | Le [identifiant de spécification de flux](#specs) récupéré à l’étape précédente. |
-| `sourceConnectionIds` | Le [ID de connexion source](#source) récupéré lors d’une étape précédente. |
-| `targetConnectionIds` | Le [identifiant de connexion cible](#target-connection) récupéré lors d’une étape précédente. |
-| `transformations.params.mappingId` | Le [ID de mappage](#mapping) récupéré lors d’une étape précédente. |
-| `transformations.params.deltaColum` | Colonne désignée utilisée pour différencier les données nouvelles des données existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. Le format pris en charge pour `deltaColumn` is `yyyy-MM-dd HH:mm:ss`. Si vous utilisez Microsoft Dynamics, le format pris en charge pour `deltaColumn` is `yyyy-MM-ddTHH:mm:ssZ`. |
-| `transformations.params.mappingId` | Identifiant de mappage associé à votre base de données. |
-| `scheduleParams.startTime` | Heure de début du flux de données dans l’époque. |
-| `scheduleParams.frequency` | Fréquence à laquelle le flux de données collectera les données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day`ou `week`. |
-| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un entier non nul. L’intervalle n’est pas requis lorsque la fréquence est définie sur `once` et doit être supérieur ou égal à `15` pour d’autres valeurs de fréquence. |
+| `flowSpec.id` | [Identifiant de spécification de flux](#specs) récupéré à l’étape précédente. |
+| `sourceConnectionIds` | [Identifiant de connexion source](#source) récupéré lors d’une étape précédente. |
+| `targetConnectionIds` | [Identifiant de connexion cible](#target-connection) récupéré lors d’une étape précédente. |
+| `transformations.params.mappingId` | [Identifiant de mappage](#mapping) récupéré lors d’une étape précédente. |
+| `transformations.params.deltaColum` | Colonne désignée utilisée pour différencier les données nouvelles des données existantes. Les données incrémentielles seront ingérées en fonction de la date et de l’heure de la colonne sélectionnée. Le format pris en charge pour `deltaColumn` est `yyyy-MM-dd HH:mm:ss`. Si vous utilisez Microsoft Dynamics, le format pris en charge pour `deltaColumn` est `yyyy-MM-ddTHH:mm:ssZ`. |
+| `transformations.params.mappingId` | Identifiant de mappage associé à la base de données. |
+| `scheduleParams.startTime` | Heure de début du flux de données en temps Unix. |
+| `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
+| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. L’intervalle n’est pas nécessaire lorsque la fréquence est définie sur `once` et doit être supérieur ou égal à `15` pour les autres valeurs de fréquence. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données.
+Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvellement créé.
 
 ```json
 {
@@ -611,15 +611,15 @@ Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données
 }
 ```
 
-## Surveillance de votre flux de données
+## Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions de flux, l’état d’achèvement et les erreurs. Pour plus d’informations sur la surveillance des flux de données, consultez le tutoriel sur [surveillance des flux de données dans l’API ](../monitor.md)
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour plus d’informations sur la surveillance des flux de données, consultez le tutoriel [Surveiller les flux de données dans l’API](../monitor.md).
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé un connecteur source pour collecter des données d’un système CRM selon un calendrier précis. Les données entrantes peuvent désormais être utilisées par les services Platform en aval, tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, consultez les documents suivants :
+Vous êtes arrivé au bout de ce tutoriel, félicitations ! Grâce à celui-ci, vous avez créé un connecteur source pour collecter des données d’un système CRM à intervalles réguliers. Ces données peuvent désormais être utilisées par les services de Platform en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
-* [Présentation de Real-time Customer Profile](../../../../profile/home.md)
+* [Présentation du profil client en temps réel](../../../../profile/home.md)
 * [Présentation de Data Science Workspace](../../../../data-science-workspace/home.md)
 
 ## Annexe
@@ -628,7 +628,7 @@ La section suivante répertorie les différents connecteurs source CRM et leurs 
 
 ### Spécification de connexion
 
-| Nom du connecteur | Spécification de la connexion |
+| Nom du connecteur | Spécification de connexion |
 | -------------- | --------------- |
 | [!DNL Microsoft Dynamics] | `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 | [!DNL Salesforce] | `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` |
