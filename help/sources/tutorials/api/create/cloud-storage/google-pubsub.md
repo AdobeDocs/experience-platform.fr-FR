@@ -1,56 +1,56 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Google PubSub;google pubsub
+keywords: Experience Platform;accueil;rubriques populaires;Google PubSub;google pubsub
 solution: Experience Platform
-title: Création d’une connexion PubSub-Source Google à l’aide de l’API Flow Service
+title: Créer une connexion source Google PubSub à l’aide de l’API Flow Service
 topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à un compte Google PubSub à l’aide de l’API Flow Service.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
 source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '724'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
-# Créez un [!DNL Google PubSub] Connexion source à l’aide de l’API Flow Service
+# Créer une connexion source [!DNL Google PubSub] à l’aide de l’API Flow Service
 
-Ce tutoriel vous guide tout au long des étapes pour vous connecter. [!DNL Google PubSub] (ci-après dénommés &quot;[!DNL PubSub]&quot;) à l’Experience Platform, à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous guide tout au long des étapes de connexion de [!DNL Google PubSub] (ci-après dénommé « [!DNL PubSub] ») à Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md): Experience Platform permet d’ingérer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services Platform.
-* [Environnements de test](../../../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL PubSub] vers Platform à l’aide de [!DNL Flow Service] API.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour réussir à connecter [!DNL PubSub] à Platform à l’aide de l’API [!DNL Flow Service].
 
-### Collecte des informations d’identification requises
+### Collecter les informations d’identification requises
 
-Pour [!DNL Flow Service] pour se connecter à [!DNL PubSub], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour que [!DNL Flow Service] puisse se connecter à [!DNL PubSub], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
-| Credential | Description |
+| Informations d’identification | Description |
 | ---------- | ----------- |
-| `projectId` | ID de projet requis pour l’authentification [!DNL PubSub]. |
-| `credentials` | Informations d’identification ou clé requises pour l’authentification [!DNL PubSub]. |
-| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions cible de base et source. Le [!DNL PubSub] l’identifiant de spécification de connexion est : `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `projectId` | Identifiant de projet requis pour authentifier [!DNL PubSub]. |
+| `credentials` | Informations d’identification ou clé requises pour authentifier [!DNL PubSub]. |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base cibles et sources. L’identifiant de spécification de connexion [!DNL PubSub] est : `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
-Pour plus d’informations sur ces valeurs, voir [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) document. Pour utiliser l’authentification par compte de service, voir [[!DNL PubSub] guide de création de comptes de service](https://cloud.google.com/docs/authentication/production#create_service_account) pour savoir comment générer vos informations d’identification.
+Pour plus d’informations sur ces valeurs, voir le document d’[[!DNL PubSub] authentification](https://cloud.google.com/pubsub/docs/authentication). Pour utiliser l’authentification par compte de service, consultez le [[!DNL PubSub] Guide de création de comptes de service](https://cloud.google.com/docs/authentication/production#create_service_account) pour savoir comment générer vos informations d’identification.
 
 >[!TIP]
 >
 >Si vous utilisez l’authentification par compte de service, assurez-vous que vous avez accordé un accès utilisateur suffisant à votre compte de service et qu’il n’y a pas d’espaces blancs supplémentaires dans le fichier JSON lors de la copie et du collage de vos informations d’identification.
 
-### Utilisation des API Platform
+### Utiliser les API Platform
 
-Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur [Prise en main des API Platform](../../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur la [Prise en main des API Platform](../../../../../landing/api-guide.md).
 
-## Création d’une connexion de base
+## Créer une connexion de base
 
-La première étape de la création d’une connexion source consiste à authentifier votre [!DNL PubSub] source et générer un identifiant de connexion de base. Un identifiant de connexion de base vous permet d’explorer et de parcourir les fichiers de votre source et d’identifier les éléments spécifiques à ingérer, y compris des informations concernant leurs types et formats de données.
+La première étape de création d’une connexion source consiste à authentifier votre source [!DNL PubSub] et à générer un identifiant de connexion de base. Un identifiant de connexion de base vous permet d’explorer et de parcourir les fichiers de votre source et d’identifier les éléments spécifiques à ingérer, y compris des informations concernant leurs types et formats de données.
 
-Pour créer un identifiant de connexion de base, envoyez une requête de POST au `/connections` point de terminaison lors de la fourniture de [!DNL PubSub] informations d’identification d’authentification dans le cadre des paramètres de requête.
+Pour créer un identifiant de connexion de base, envoyez une requête POST au point d’entrée `/connections` lors de la fourniture des informations d’identification d’authentification [!DNL PubSub] dans le cadre des paramètres de requête.
 
 **Format d’API**
 
@@ -87,9 +87,9 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.projectId` | ID de projet requis pour l’authentification [!DNL PubSub]. |
-| `auth.params.credentials` | Informations d’identification ou clé requises pour l’authentification [!DNL PubSub]. |
-| `connectionSpec.id` | Le [!DNL PubSub] identifiant de spécification de connexion : `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `auth.params.projectId` | Identifiant de projet requis pour authentifier [!DNL PubSub]. |
+| `auth.params.credentials` | Informations d’identification ou clé requises pour authentifier [!DNL PubSub]. |
+| `connectionSpec.id` | L’identifiant de spécification de connexion [!DNL PubSub] : `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 **Réponse**
 
@@ -102,11 +102,11 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 }
 ```
 
-## Création d’une connexion source {#source}
+## Créer une connexion source {#source}
 
 Une connexion source crée et gère la connexion à la source externe à partir de laquelle les données sont ingérées. Une connexion source se compose d’informations telles que la source de données, le format de données et un identifiant de connexion source nécessaires à la création d’un flux de données. Une instance de connexion source est spécifique à un client et à une organisation IMS.
 
-Pour créer une connexion source, envoyez une requête de POST au `/sourceConnections` point d’entrée du [!DNL Flow Service] API.
+Pour créer une connexion source, envoyez une requête POST au point d’entrée `/sourceConnections` de l’API [!DNL Flow Service].
 
 **Format d’API**
 
@@ -145,18 +145,18 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom de la connexion source. Assurez-vous que le nom de votre connexion source est descriptif, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion source. |
+| `name` | Nom de votre connexion source. Assurez-vous que le nom de votre connexion source est descriptif, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion source. |
 | `description` | Valeur facultative que vous pouvez fournir pour inclure plus d’informations sur votre connexion source. |
-| `baseConnectionId` | L’identifiant de connexion de base de votre [!DNL PubSub] source générée à l’étape précédente. |
-| `connectionSpec.id` | L’identifiant de spécification de connexion fixe pour [!DNL PubSub]. Cet identifiant est : `70116022-a743-464a-bbfe-e226a7f8210c` |
-| `data.format` | Le format de la variable [!DNL PubSub] données que vous souhaitez ingérer. Actuellement, le seul format de données pris en charge est `json`. |
-| `params.topicId` | L’ID de rubrique définit la ressource nommée spécifique qui les messages sont envoyés par les éditeurs. |
-| `params.subscriptionId` | L’ID d’abonnement définit la ressource nommée spécifique qui représente le flux de messages d’une seule rubrique spécifique à diffuser à l’application d’abonnement. |
-| `params.dataType` | Ce paramètre définit le type des données ingérées. Les types de données pris en charge sont les suivants : `raw` et `xdm`. |
+| `baseConnectionId` | Identifiant de connexion de base de votre source [!DNL PubSub] générée à l’étape précédente. |
+| `connectionSpec.id` | Identifiant de spécification de connexion fixe pour [!DNL PubSub]. Cet ID est le suivant : `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `data.format` | Format des données [!DNL PubSub] que vous souhaitez ingérer. Actuellement, le format de données `json` est le seul à être pris en charge. |
+| `params.topicId` | L’ID de sujet définit la ressource nommée spécifique dont les messages sont envoyés par les éditeurs. |
+| `params.subscriptionId` | L’ID d’abonnement définit la ressource nommée spécifique qui représente le flux de messages d’un sujet unique spécifique à diffuser à l’application avec abonnement. |
+| `params.dataType` | Ce paramètre définit le type des données ingérées. Les types de données pris en charge sont les suivants : `raw` et `xdm`. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion source. Cet identifiant est requis dans le tutoriel suivant pour créer un flux de données.
+Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion source. Le tutoriel suivant requiert cet ID pour créer un flux de données.
 
 ```json
 {
@@ -167,4 +167,4 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une [!DNL PubSub] connexion source à l’aide de la fonction [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion source dans le tutoriel suivant pour [créez un flux de données en continu à l’aide de la fonction [!DNL Flow Service] API](../../collect/streaming.md).
+Ce tutoriel vous a permis de créer une connexion source [!DNL PubSub] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet ID de connexion source dans le tutoriel suivant pour [créer un flux de données en continu à l’aide de l’API  [!DNL Flow Service] ](../../collect/streaming.md).
