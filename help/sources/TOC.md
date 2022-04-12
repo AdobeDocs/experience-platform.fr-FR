@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: 5d03dda7a972d37697032978b6e91a39800f81c8
+source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 98%
+source-wordcount: '773'
+ht-degree: 96%
 
 ---
 
@@ -48,6 +48,8 @@ ht-degree: 98%
       - [Oracle Object Storage](connectors/cloud-storage/oracle-object-storage.md)
       - [Connecteur SFTP](connectors/cloud-storage/sftp.md)
       - [Connecteur Amazon S3 et Azure Blob](connectors/cloud-storage/blob-s3.md)
+   - Consentement et préférences {#consent}
+      - [Intégration OneTrust](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Connecteur Microsoft Dynamics](connectors/crm/ms-dynamics.md)
       - [Connecteur Salesforce](connectors/crm/salesforce.md)
@@ -109,6 +111,8 @@ ht-degree: 98%
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
+      - Consentement et préférences {#consent}
+         - [Intégration OneTrust](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
@@ -203,6 +207,8 @@ ht-degree: 98%
          - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 et Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
+      - Consentement et préférences {#consent}
+         - [Intégration OneTrust](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
@@ -250,6 +256,7 @@ ht-degree: 98%
       - [Flux de données de connexion publicitaire](tutorials/ui/dataflow/advertising.md)
       - [Flux de données de connexion à lʼespace de stockage par lots](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Flux de données de connexion à lʼespace de stockage de diffusion en continu](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+      - [Flux de données de connexion de consentement et de préférences](tutorials/ui/dataflow/consent-and-preferences.md)
       - [Flux de données de connexion CRM](tutorials/ui/dataflow/crm.md)
       - [Flux de données de connexion au succès client](tutorials/ui/dataflow/customer-success.md)
       - [Flux de données de connexion à la base de données](tutorials/ui/dataflow/databases.md)

@@ -5,10 +5,10 @@ title: Présentation des connecteurs source
 topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8d302a5d2907d971d0ff6b7602d18bed418d3a12
+source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 100%
+source-wordcount: '1032'
+ht-degree: 98%
 
 ---
 
@@ -61,6 +61,13 @@ Les sources de stockage dans le cloud peuvent introduire vos propres données da
 - [Connecteur [!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md)
 - [Connecteur [!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md)
 - [Connecteur [!DNL SFTP]](connectors/cloud-storage/sftp.md)
+
+### Consentement et préférences {#consent}
+
+Experience Platform prend en charge l’ingestion de données à partir d’une plateforme tierce de gestion des préférences et du consentement. Pour plus d’informations, consultez les documents connexes suivants :
+
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
+
 
 ### Gestion de la relation client (CRM) {#crm}
 
