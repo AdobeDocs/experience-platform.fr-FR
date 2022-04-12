@@ -1,21 +1,21 @@
 ---
-title: Test des codes incorporés à l’aide du débogeur Adobe Experience Platform
-description: Découvrez comment utiliser Platform Debugger pour tester localement différents codes incorporés pour Adobe Experience Platform sur votre site web.
+title: Test des codes incorporés à l’aide du débogeur Adobe Experience Platform
+description: Découvrez comment utiliser Platform Debugger pour tester localement différents codes incorporés pour Adobe Experience Platform sur votre site web.
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '510'
 ht-degree: 100%
 
 ---
 
-# Test des codes incorporés à l’aide du débogeur Adobe Experience Platform
+# Test des codes incorporés à l’aide du débogeur Adobe Experience Platform
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Lorsque vous apportez des modifications à vos versions de bibliothèque de balises dans Adobe Experience Platform, vous devez les tester avant de déployer la version sur votre environnement de production. Si vous ne disposez pas d’un environnement d’évaluation ou de développement dédié à votre site web, vous pouvez utiliser le débogueur Adobe Experience Platform pour tester localement différents codes incorporés dans votre site.
+Lorsque vous apportez des modifications à vos versions de bibliothèque dans Adobe Experience Platform, vous devez les tester avant de déployer la version sur votre environnement de production. Si vous ne disposez pas d’un environnement d’évaluation ou de développement dédié à votre site web, vous pouvez utiliser le débogueur Adobe Experience Platform pour tester localement différents codes incorporés dans votre site.
 
 ## Conditions préalables
 
@@ -58,4 +58,4 @@ L’onglet **[!UICONTROL Configuration]** réapparaît, indiquant que le code in
 
 ## Étapes suivantes
 
-Ce tutoriel explique comment changer localement les codes incorporés à des fins de test à l’aide du débogueur Platform. Consultez la [documentation du débogueur Platform](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html?lang=fr) pour plus d’informations sur ses différentes fonctionnalités.
+Ce tutoriel explique comment changer localement les codes incorporés à des fins de test à l’aide du débogueur Platform. Consultez la [documentation du débogueur Platform](../../../debugger/home.md) pour plus d’informations sur ses différentes fonctionnalités.
