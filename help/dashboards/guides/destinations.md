@@ -4,9 +4,9 @@ title: Tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 32df4c5972cb32afc6021ae27dc05f77076a5984
+source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1764'
 ht-degree: 3%
 
 ---
@@ -112,6 +112,10 @@ Une période pour la tendance de l’audience des 30 derniers jours, 90 jours ou
 Le deuxième menu déroulant répertorie tous les segments disponibles qui peuvent être envoyés au compte de destination choisi en haut du tableau de bord.
 
 ![Widget de tendance de taille d’audience.](../images/destinations/audience-size-trend.png)
+
+Le **[!UICONTROL Tendance de la taille de l’audience]** fournit un [!UICONTROL Sous-titres] en haut à droite du widget. Sélectionner **[!UICONTROL Sous-titres]** pour ouvrir la boîte de dialogue des sous-titres automatiques. Un modèle d’apprentissage automatique génère automatiquement des sous-titres pour décrire les tendances clés et les événements importants en analysant le graphique et les données de segment.
+
+![Boîte de dialogue de sous-titres automatiques pour le widget de tendance de taille d’audience .](../images/destinations/audience-size-trend-captions.png)
 
 ### [!UICONTROL Segments non mappés par identité] {#unmapped-segments-by-identity}
 
