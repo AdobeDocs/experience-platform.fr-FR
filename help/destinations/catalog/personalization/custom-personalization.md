@@ -3,10 +3,10 @@ keywords: personnalisation personnalisée;destination;destination personnalisée
 title: Connexion de personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer des informations de segment à partir d’Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance au segment du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 05217dead7e1365d6dcc0cc7ae4078628514d1d5
+source-git-commit: c83c7e2a74a6bf4a7a4c9c04ccebfd0296c89bce
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 99%
+source-wordcount: '912'
+ht-degree: 61%
 
 ---
 
@@ -30,17 +30,27 @@ Cette intégration est optimisée par le [SDK web Adobe Experience Platform](../
 
 ## Cas dʼutilisation {#use-cases}
 
-Cette destination partage les audiences avec les serveurs de publicités et les applications de personnalisation autres qu’Adobe, pour une utilisation en temps réel, afin de décider quelle publicité les utilisateurs doivent voir sur un site web.
+Le [!DNL Custom personalization connection] vous permet d’utiliser vos propres plateformes de partenaire de personnalisation (par exemple, [!DNL Optimizely], [!DNL Pega]), tout en exploitant les fonctionnalités Experience Platform de collecte et de segmentation des données du réseau Edge, pour offrir une expérience de personnalisation plus approfondie aux clients.
 
-### Cas d’utilisation 1
+Les cas d’utilisation décrits ci-dessous incluent à la fois la personnalisation du site et la publicité ciblée sur site.
 
-**Personnaliser une page d’accueil**
+Pour activer ces cas d’utilisation, les clients doivent disposer d’une méthode rapide et simplifiée pour récupérer les informations de segment de l’Experience Platform et envoyer ces informations à leurs systèmes désignés qu’ils ont configurés en tant que connexions de personnalisation personnalisées dans l’interface utilisateur de l’Experience Platform.
 
-Un site web de location et de vente d’habitations souhaite personnaliser sa page d’accueil en fonction des qualifications de segments dans Adobe Experience Platform. L’entreprise peut sélectionner les audiences qui doivent bénéficier d’une expérience personnalisée et les mapper à la destination de personnalisation personnalisée configurée pour son application de personnalisation autre qu’Adobe en tant que critères de ciblage.
+Il peut s’agir de plateformes de personnalisation externes, de systèmes de gestion de contenu, de serveurs de publicités et d’autres applications s’exécutant sur les propriétés web et mobiles des clients.
 
-**Publicité sur site ciblée**
+### Personnalisation de la même page {#same-page}
 
-En utilisant une destination de personnalisation personnalisée distincte pour son serveur de publicités, le même site web peut cibler la publicité sur site à l’aide d’un ensemble différent de segments d’Adobe Experience Platform en tant que critères de ciblage.
+Un utilisateur visite une page de votre site web. Le client peut utiliser les informations actuelles sur la visite de la page (par exemple, l’URL de référence, la langue du navigateur, les informations sur les produits incorporés) pour sélectionner l’action/la décision suivante (par exemple, la personnalisation), à l’aide de la connexion de personnalisation personnalisée pour les plateformes non Adobes (par exemple, [!DNL Pega], [!DNL Optimizely], etc.).
+
+### Personnalisation de la page suivante {#next-page}
+
+Un utilisateur visite la page A de votre site web. En fonction de cette interaction, l’utilisateur a rempli les critères d’un ensemble de segments. L’utilisateur clique ensuite sur un lien qui le mène de la page A à la page B. Les segments pour lesquels l’utilisateur s’était qualifié lors de l’interaction précédente sur la page A, ainsi que les mises à jour de profil déterminées par la visite actuelle du site web, seront utilisés pour alimenter l’action/la décision suivante (par exemple, quelle bannière publicitaire afficher pour le visiteur, ou, dans le cas d’un test A/B, quelle version de la page afficher).
+
+### Personnalisation de la prochaine session {#next-session}
+
+Un utilisateur visite plusieurs pages de votre site web. En fonction de ces interactions, l’utilisateur a rempli les critères d’un ensemble de segments. L’utilisateur met ensuite fin à la session de navigation actuelle.
+
+Le lendemain, l’utilisateur revient au même site web client. Les segments pour lesquels ils avaient été qualifiés lors de l’interaction précédente avec toutes les pages du site web visitées, ainsi que les mises à jour de profil déterminées par la visite du site web en cours, seront utilisés pour sélectionner l’action/la décision suivante (par exemple, la bannière publicitaire à afficher au visiteur ou, dans le cas d’un test A/B, la version de la page à afficher).
 
 ## Se connecter à la destination {#connect}
 
