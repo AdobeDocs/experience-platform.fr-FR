@@ -1,10 +1,11 @@
 ---
 title: Définition des champs XDM dans l’API Schema Registry
 description: Découvrez comment définir différents champs lors de la création de ressources XDM (Experience Data Model) personnalisées dans l’API Schema Registry.
-source-git-commit: af4c345819d3e293af4e888c9cabba6bd874583b
+exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
+source-git-commit: 536657f11a50ea493736296780dd57f41dfefeae
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 14%
+source-wordcount: '783'
+ht-degree: 13%
 
 ---
 
@@ -225,11 +226,13 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
 
 ## Création de types de mappage personnalisés {#maps}
 
-Afin de prendre en charge efficacement les données &quot;de type carte&quot; dans XDM, les objets peuvent être annotés avec un `meta:xdmType` défini sur `map` pour indiquer clairement qu’un objet doit être géré comme si l’ensemble de clés n’était pas contraint. XDM impose les restrictions suivantes à l’utilisation de cet indice de stockage :
+Afin de prendre en charge efficacement les données &quot;de type carte&quot; dans XDM, les objets peuvent être annotés avec un `meta:xdmType` défini sur `map` pour indiquer clairement qu’un objet doit être géré comme si l’ensemble de clés n’était pas contraint. Les données ingérées dans les champs de mappage doivent utiliser des clés de chaîne et uniquement des valeurs string ou integer (telles que déterminées par `additionalProperties.type`).
 
-* Les types de carte DOIVENT être de type `object`
-* Les types de carte NE DOIVENT PAS avoir de propriétés définies (en d’autres termes, ils définissent des objets &quot;vides&quot;)
-* Les types de mappage DOIVENT inclure une seule `additionalProperties` schéma qui décrit les valeurs qui peuvent être placées dans le mappage
+XDM impose les restrictions suivantes à l’utilisation de cet indice de stockage :
+
+* Les types de carte DOIVENT être de type `object`.
+* Les types de carte NE DOIVENT PAS avoir de propriétés définies (en d’autres termes, ils définissent des objets &quot;vides&quot;).
+* Les types de carte DOIVENT inclure un `additionalProperties.type` qui décrit les valeurs qui peuvent être placées dans le mappage, soit `string` ou `integer`.
 
 Assurez-vous que vous utilisez uniquement des champs de type map lorsque cela est absolument nécessaire, car ils présentent les inconvénients suivants en termes de performances :
 
