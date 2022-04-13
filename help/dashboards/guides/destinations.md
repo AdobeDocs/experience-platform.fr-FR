@@ -4,7 +4,7 @@ title: Tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
+source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 3%
@@ -51,7 +51,7 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 * [[!UICONTROL Destinations créées récemment]](#recently-created-destinations)
 * [[!UICONTROL Segments récemment activés]](#recently-activated-segments)
 * [[!UICONTROL Segments récemment activés par destination]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Tendance de la taille de l’audience]](#audience-size-trends)
+* [[!UICONTROL Tendance de la taille de l’audience]](#audience-size-trend)
 * [[!UICONTROL Segments non mappés par identité]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segments mappés par identité]](#mapped-segments-by-identity)
 * [[!UICONTROL Audiences courantes]](#common-audiences)

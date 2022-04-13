@@ -4,7 +4,7 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7ca40776747541615e1a1d717aae8d48bed27a74
+source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
 workflow-type: tm+mt
 source-wordcount: '2572'
 ht-degree: 4%
@@ -232,7 +232,7 @@ Ce widget affiche la proportion de profils présentant une exhaustivité élevé
 
 ### (Version bêta) [!UICONTROL Tendance d’achèvement du profil] {#profile-completeness-trend}
 
-Ce widget crée un graphique en colonnes empilé afin de représenter la tendance de l’exhaustivité des profils au fil du temps. La complexité est mesurée par le pourcentage d’attributs qui sont remplis avec des valeurs non nulles parmi tous les attributs observés. Elle classe l’exhaustivité du profil comme une exhaustivité élevée, moyenne ou faible depuis la date du dernier traitement.
+Ce widget crée un diagramme de surface empilé pour décrire la tendance de l’exhaustivité des profils au fil du temps. La complexité est mesurée par le pourcentage d’attributs qui sont remplis avec des valeurs non nulles parmi tous les attributs observés. Elle classe l’exhaustivité du profil comme une exhaustivité élevée, moyenne ou faible depuis la date du dernier traitement.
 
 L’axe X représente le temps, l’axe Y le nombre de profils et les couleurs les trois niveaux d’exhaustivité du profil.
 
