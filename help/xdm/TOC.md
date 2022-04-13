@@ -4,10 +4,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes des modèles de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
-source-git-commit: 2144c75eb83a5806fa2cd9c75edc8cb0e85695fd
+source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 93%
+source-wordcount: '442'
+ht-degree: 92%
 
 ---
 
@@ -171,7 +171,7 @@ ht-degree: 93%
    * [Définir une relation de schéma dans l’API](tutorials/relationship-api.md)
    * [Définir une relation de schéma dans l’édition B2B de Real-time CDP](tutorials/relationship-b2b.md)
    * [Créer un schéma ad hoc (API)](tutorials/ad-hoc.md)
-   * [Étendre un champ d’énumération souple (API)](tutorials/extend-soft-enum.md)
+   * [Ajout de valeurs suggérées à un champ (API)](tutorials/suggested-values.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)

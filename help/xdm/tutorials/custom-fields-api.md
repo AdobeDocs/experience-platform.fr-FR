@@ -2,7 +2,7 @@
 title: Définition des champs XDM dans l’API Schema Registry
 description: Découvrez comment définir différents champs lors de la création de ressources XDM (Experience Data Model) personnalisées dans l’API Schema Registry.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 536657f11a50ea493736296780dd57f41dfefeae
+source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 13%
@@ -80,7 +80,7 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
           },
           "default": "value1"
 }</pre>
-    <br>Notez que la variable <code>meta:enum</code> la valeur est <strong>not</strong> déclarer une énumération ou piloter toute validation de données par elle-même. Dans la plupart des cas, les chaînes fournies sous <code>meta:enum</code> sont également fournis sous <code>enum</code> pour s’assurer que les données sont limitées. Cependant, il existe certains cas d’utilisation où <code>meta:enum</code> est fourni sans qu’un <code>enum</code> tableau. Voir le tutoriel sur <a href="../tutorials/extend-soft-enum.md">extension d’énumérations</a> pour plus d’informations.
+    <br>Notez que la variable <code>meta:enum</code> la valeur est <strong>not</strong> déclarer une énumération ou piloter toute validation de données par elle-même. Dans la plupart des cas, les chaînes fournies sous <code>meta:enum</code> sont également fournis sous <code>enum</code> pour s’assurer que les données sont limitées. Cependant, il existe certains cas d’utilisation où <code>meta:enum</code> est fourni sans qu’un <code>enum</code> tableau. Voir le tutoriel sur <a href="../tutorials/suggested-values.md">définition des valeurs proposées</a> pour plus d’informations.
     </td>
   </tr>
   <tr>
