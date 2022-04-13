@@ -5,9 +5,9 @@ title: Syntaxe SQL dans Query Service
 topic-legacy: syntax
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 2a74d900053a868ce936d957dee008da846d6608
+source-git-commit: a5391c1ccc24845673217e15bafd1a1df33cbc18
 workflow-type: tm+mt
-source-wordcount: '2668'
+source-wordcount: '2741'
 ht-degree: 9%
 
 ---
@@ -424,11 +424,15 @@ END $$;
 
 ## En ligne {#inline}
 
-La fonction intégrée sépare les éléments d’un tableau de structs et génère les valeurs dans un tableau. Il ne peut être placé que dans la variable `SELECT` ou une liste `LATERAL VIEW`.
+Le `inline` sépare les éléments d’un tableau de structs et génère les valeurs dans un tableau. Il ne peut être placé que dans la variable `SELECT` ou une liste `LATERAL VIEW`.
 
-Fonction intégrée **cannot** être placés dans une liste sélectionnée, là où il existe d’autres fonctions de générateur.
+Le `inline` function **cannot** être placés dans une liste sélectionnée, là où il existe d’autres fonctions de générateur.
 
 Par défaut, les colonnes générées sont nommées &quot;col1&quot;, &quot;col2&quot;, etc. Si l’expression est `NULL` alors aucune ligne n’est générée.
+
+>[!TIP]
+>
+>Les noms de colonne peuvent être renommés à l’aide de la variable `RENAME` .
 
 **Exemple**
 
@@ -442,6 +446,20 @@ L’exemple renvoie les éléments suivants :
 1  a Spark SQL
 2  b Spark SQL
 ```
+
+Ce deuxième exemple illustre le concept et l&#39;application de la `inline` fonction . Le modèle de données de l’exemple est illustré dans l’image ci-dessous.
+
+![Schéma de productListItems](../images/sql/productListItems.png)
+
+**Exemple**
+
+```sql
+select inline(productListItems) from source_dataset limit 10;
+```
+
+Les valeurs provenant de la variable `source_dataset` sont utilisés pour remplir la table cible.
+
+| SKU | _experience | quantity | priceTotal | |—+—+—+— | product-id-1 | (&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;) | 5 | 10.5 | | product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;) | | | | product-id-2 | (&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;) | 6 | 40 | | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;) | 3 | 12 |
 
 ## [!DNL Spark] Commandes SQL
 
