@@ -2,9 +2,10 @@
 keywords: Experience Platform;identité;service d’identité;dépannage;garde-fous;consignes;limite;
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
-source-git-commit: b36ace84acdb13b89deb6f77a02c298acade8d8e
+exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
+source-git-commit: b07a45e5bb9cae6e147ea790ebb77cb63f8790c1
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '385'
 ht-degree: 13%
 
 ---
@@ -30,7 +31,7 @@ Le tableau suivant décrit les limites statiques appliquées aux données d’id
 
 | Barrière de sécurité | Limite | Notes |
 | --- | --- | --- |
-| Nombre d’identités dans un graphique | 150 | Le graphique d’identités ne sera pas mis à jour une fois la limite atteinte. |
+| Nombre d’identités dans un graphique | 150 | La limite est appliquée au niveau de l’environnement de test. Le graphique d’identités ne sera pas mis à jour une fois la limite atteinte. |
 | Nombre d’identités dans un enregistrement XDM | 20 | Le nombre minimum d’enregistrements XDM requis est de deux. |
 | Nombre d’espaces de noms personnalisés | Aucun | Il n’existe aucune limite au nombre d’espaces de noms personnalisés que vous pouvez créer. |
 | Nombre de graphiques | Aucun | Il n’existe aucune limite au nombre de graphiques d’identités que vous pouvez créer. |
