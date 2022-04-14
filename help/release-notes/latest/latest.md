@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 63c25b1d99e55fae92c3c5e89025ac2bbcff5b03
+source-git-commit: 3f1750d75bd69c5cf47eb593144f564564f90405
 workflow-type: tm+mt
-source-wordcount: '1158'
-ht-degree: 24%
+source-wordcount: '1193'
+ht-degree: 27%
 
 ---
 
@@ -110,15 +110,16 @@ Pour plus d’informations sur les tableaux de bord des destinations dans Platfo
 
 ## Collecte de données {#data-collection}
 
-Platform fournit une suite de technologies qui vous permet de collecter des données d’expérience client côté client et de les envoyer au réseau Adobe Experience Platform Edge où elles peuvent être enrichies, transformées et distribuées vers des destinations Adobe ou non Adobe.
+Platform fournit un ensemble de technologies qui vous permettent de collecter des données d’expérience client à partir de sources côté client. Vous pouvez ensuite les envoyer au réseau Adobe Experience Platform Edge afin qu’elles soient enrichies, transformées et distribuées vers des destinations Adobe ou autres qu’Adobe.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
 | Paramètres globaux de flux de données | Vous pouvez désormais configurer plusieurs nouveaux paramètres globaux lors de la configuration d’un flux de données : géolocalisation, cookie d’identifiant propriétaire et synchronisation des identifiants tiers. Voir la section sur [configuration d’un flux de données](../../edge/fundamentals/datastreams.md#configure) pour plus d’informations, voir le guide de l’interface utilisateur des flux de données . |
+| [API du serveur réseau Edge](../../server-api/overview.md) | L’API serveur permet aux clients d’interagir avec le réseau Edge Experience Platform à l’aide d’un nouveau point de terminaison authentifié, afin d’optimiser divers cas d’utilisation de la collecte de données, de la personnalisation, de la publicité et du marketing. |
 
-Pour plus d’informations sur la collecte de données dans Platform, voir [présentation de la collecte de données](../../collection/home.md).
+Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).
 
 <!-- ## Experience Data Model (XDM) {#xdm}
 
