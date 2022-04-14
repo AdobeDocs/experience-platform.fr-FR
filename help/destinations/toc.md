@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 9467aa3b09df04e901e158368db9b7a2a255e880
+source-git-commit: 6257e06369060d7f71e837059977817cd495f62e
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '738'
 ht-degree: 97%
 
 ---
@@ -112,6 +112,7 @@ ht-degree: 97%
       * [Connexion Orale Eloqua](./catalog/email-marketing/oracle-eloqua.md)
       * [Connexion Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [Connexion Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [Connexion à SendGrid](./catalog/email-marketing/sendgrid.md)
    * Extensions de balises {#launch-extensions}
       * [Présentation des extensions de balises](./catalog/launch-extensions/overview.md)
    * Destinations d’engagement mobile {#mobile-engagement}

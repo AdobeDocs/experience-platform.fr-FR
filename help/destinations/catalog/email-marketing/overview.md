@@ -4,10 +4,10 @@ title: Présentation des destinations du marketing par e-mail
 type: Tutorial
 description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
-workflow-type: ht
-source-wordcount: '387'
-ht-degree: 100%
+source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
+workflow-type: tm+mt
+source-wordcount: '388'
+ht-degree: 99%
 
 ---
 
@@ -27,6 +27,7 @@ Adobe Experience Platform prend en charge les destinations de marketing par e-ma
 * [Oracle Eloqua](oracle-eloqua.md)
 * [Oracle Responsys](oracle-responsys.md)
 * [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
+* [SendGrid](sendgrid.md)
 
 ## Se connecter à une nouvelle destination de marketing par e-mail {#connect-destination}
 
@@ -66,7 +67,7 @@ Consultez les articles de destination de marketing par e-mail individuels pour d
 * [Adobe Campaign](adobe-campaign.md)
 * [Oracle Eloqua](oracle-eloqua.md)
 * [Oracle Responsys](oracle-responsys.md)
-* [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
+* [Marketing Cloud Salesforce](salesforce-marketing-cloud.md)
 
 ## Activer les segments vers des destinations de marketing par e-mail {#activate}
 
