@@ -1,11 +1,11 @@
 ---
-description: Dans le cadre de Destination SDK, Adobe fournit des outils de développement pour vous aider à configurer et tester votre destination. Cette page décrit comment créer et tester un modèle de transformation de messages.
+description: Dans le cadre de la Destination SDK, Adobe fournit des outils de développement pour vous aider à configurer et tester votre destination. Cette page décrit comment créer et tester un modèle de transformation de messages.
 title: Créer et tester un modèle de transformation de message
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
+source-git-commit: 97ffaa2a53dbbf5a7be5f002e63be4ed3339f565
 workflow-type: tm+mt
-source-wordcount: '947'
-ht-degree: 0%
+source-wordcount: '960'
+ht-degree: 2%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 ## Présentation {#overview}
 
-Dans le cadre de Destination SDK, Adobe fournit des outils de développement pour vous aider à configurer et tester votre destination. Cette page décrit comment créer et tester un modèle de transformation de messages. Pour plus d’informations sur la manière de tester votre destination, reportez-vous à la section [Test de votre configuration de destination](./test-destination.md).
+Dans le cadre de la Destination SDK, Adobe fournit des outils de développement pour vous aider à configurer et tester votre destination. Cette page décrit comment créer et tester un modèle de transformation de messages. Pour plus d’informations sur la manière de tester votre destination, reportez-vous à la section [Test de votre configuration de destination](./test-destination.md).
 
 À **créer et tester un modèle de transformation de message ;** entre le schéma cible de Adobe Experience Platform et le format de message pris en charge par votre destination, utilisez la méthode *Outil de création de modèles* décrit plus loin.  En savoir plus sur la transformation des données entre le schéma source et le schéma cible dans la section [document format du message](./message-format.md#using-templating).
 
-L’illustration ci-dessous montre comment la création et le test d’un modèle de transformation de message s’insèrent dans le [workflow de configuration des destinations](./configure-destination-instructions.md) dans Destination SDK :
+L’illustration ci-dessous montre comment la création et le test d’un modèle de transformation de message s’insèrent dans le [workflow de configuration des destinations](./configure-destination-instructions.md) en Destination SDK :
 
 ![Graphique indiquant l’emplacement de l’étape de création de modèle dans le workflow de configuration de destination](./assets/create-template-step.png)
 
@@ -40,12 +40,13 @@ Avant de vous préparer à créer le modèle, procédez comme suit :
    * Utilisation `maxUsersPerRequest` avec une valeur supérieure à un si vous souhaitez qu’un appel d’API vers votre destination inclue plusieurs profils, ainsi que leurs qualifications de segments, leurs identités et leurs attributs de profil.
 2. [Création d’une configuration de destination](./destination-configuration-api.md#create) et ajoutez l’identifiant de la configuration du serveur de destination dans `destinationDelivery.destinationServerId`.
 3. [Obtention de l’identifiant de la configuration de destination](./destination-configuration-api.md#retrieve-list) que vous venez de créer, afin que vous puissiez l’utiliser dans l’outil de création de modèles.
+4. Comprendre [fonctions et filtres que vous pouvez utiliser](./supported-functions.md) dans le modèle de transformation des messages.
 
 ## Utilisation de l’exemple d’API de modèle et de l’API de modèle de rendu pour créer un modèle pour votre destination {#iterative-process}
 
 >[!TIP]
 >
->Avant de concevoir et de modifier votre modèle de transformation des messages, vous pouvez commencer par appeler le [point d’entrée de l’API de modèle de rendu](./render-template-api.md#render-exported-data) avec un modèle simple qui exporte vos profils bruts sans appliquer de transformations. La syntaxe du modèle simple est la suivante : <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
+>Avant de concevoir et de modifier votre modèle de transformation des messages, vous pouvez commencer par appeler le [point d’entrée de l’API de modèle de rendu](./render-template-api.md#render-exported-data) avec un modèle simple qui exporte vos profils bruts sans appliquer de transformations. La syntaxe du modèle simple est la suivante : <br>. `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 Le processus d’obtention et de test du modèle est itératif. Répétez les étapes ci-dessous jusqu’à ce que les profils exportés correspondent au format de données attendu de votre destination.
 

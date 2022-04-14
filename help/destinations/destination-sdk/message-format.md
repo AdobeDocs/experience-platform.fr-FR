@@ -1,15 +1,15 @@
 ---
 description: Cette page traite du format du message et de la transformation des profils dans les données exportées de Adobe Experience Platform vers les destinations.
-title: Format du message
+title: Format des messages
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: f000eadb689a99f7667c47e2bef5d2a780aa0505
 workflow-type: tm+mt
-source-wordcount: '1981'
-ht-degree: 2%
+source-wordcount: '2266'
+ht-degree: 3%
 
 ---
 
-# Format du message
+# Format des messages
 
 ## Conditions préalables - Concepts Adobe Experience Platform {#prerequisites}
 
@@ -41,18 +41,15 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**Schéma XDM source (1)**: Cet élément fait référence au schéma que les clients utilisent dans Experience Platform. Dans Experience Platform, dans la variable [étape de mappage](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) dans le workflow d’activation de destination, les clients mappent les champs de leur schéma source au schéma cible de votre destination (2).
+**Schéma XDM source (1)**: Cet élément fait référence au schéma que les clients utilisent dans Experience Platform. Dans Experience Platform, dans la variable [étape de mappage](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) Dans le workflow d’activation de destination, les clients mappent les champs de leur schéma XDM au schéma cible de votre destination (2).
 
-**Schéma XDM Target (2)**: En fonction du schéma standard JSON (3) du format attendu de votre destination, vous pouvez définir des attributs de profil et des identités dans votre schéma XDM cible. Vous pouvez le faire dans la configuration des destinations, dans la variable [schemaConfig](./destination-configuration.md#schema-configuration) et [identityNamespaces](./destination-configuration.md#identities-and-attributes) objets.
+**Schéma XDM Target (2)**: En fonction du schéma standard JSON (3) du format attendu de votre destination et des attributs que votre destination peut interpréter, vous pouvez définir des attributs de profil et des identités dans votre schéma XDM cible. Vous pouvez le faire dans la configuration des destinations, dans la variable [schemaConfig](./destination-configuration.md#schema-configuration) et [identityNamespaces](./destination-configuration.md#identities-and-attributes) objets.
 
-**Schéma standard JSON de vos attributs de profil de destination (3)**: Cet élément représente une [Schéma JSON](https://json-schema.org/learn/miscellaneous-examples.html) de tous les attributs de profil pris en charge par votre plateforme et de leurs types (par exemple : objet, chaîne, tableau). Exemples de champs que votre destination peut prendre en charge `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, etc. Vous avez besoin d’un [modèle de transformation des messages](./message-format.md#using-templating) pour adapter les données exportées depuis l’Experience Platform au format souhaité.
+**Schéma standard JSON de vos attributs de profil de destination (3)**: Cet exemple représente une [Schéma JSON](https://json-schema.org/learn/miscellaneous-examples.html) de tous les attributs de profil pris en charge par votre plateforme et de leurs types (par exemple : objet, chaîne, tableau). Exemples de champs que votre destination peut prendre en charge `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, etc. Vous avez besoin d’un [modèle de transformation des messages](./message-format.md#using-templating) pour adapter les données exportées depuis l’Experience Platform au format souhaité.
 
 En fonction des transformations de schéma décrites ci-dessus, voici comment une configuration de profil change entre le schéma XDM source et un exemple de schéma du côté partenaire :
 
 ![Exemple de message de transformations](./assets/transformations-with-examples.png)
-
-<br> 
-
 
 ## Prise en main - transformation de trois attributs de base {#getting-started}
 
@@ -87,9 +84,79 @@ Au niveau du format du message, les transformations correspondantes sont les sui
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
 
-## Utilisation d’une langue de modèle pour les transformations d’identité, d’attributs et d’appartenance aux segments {#using-templating}
+## Structure de profil dans Experience Platform {#profile-structure}
 
-Adobe utilise un langage de modèle similaire à [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) pour transformer les champs du schéma XDM en un format pris en charge par votre destination.
+Pour comprendre les exemples ci-dessous dans la page, il est important de connaître la structure d’un profil dans Experience Platform.
+
+Les profils comportent 3 sections :
+
+* `segmentMembership` (toujours présente sur un profil)
+   * cette section contient tous les segments présents sur le profil. Les segments peuvent avoir l’un des trois états suivants : `realized`, `existing`, `exited`.
+* `identityMap` (toujours présente sur un profil)
+   * cette section contient toutes les identités présentes sur le profil (email, Google GAID, Apple IDFA, etc.) et que l’utilisateur a mappées pour l’exportation dans le workflow d’activation.
+* attributs (selon la configuration de la destination, ils peuvent être présents sur le profil). Il existe également une légère différence entre les attributs prédéfinis et les attributs de forme libre :
+   * pour *Attributs de forme libre*, ils contiennent un `.value` chemin si l’attribut est présent sur le profil (voir `lastName` de l’exemple 1). S’ils ne sont pas présents sur le profil, ils ne contiendront pas la variable `.value` path (voir `firstName` de l’exemple 1).
+   * pour *attributs prédéfinis*, ils ne contiennent pas de balise `.value` chemin d’accès. Tous les attributs mappés présents sur un profil seront présents dans le mappage des attributs. Ceux qui ne sont pas présents ne seront pas présents (voir Exemple 2 - la section `firstName` n’existe pas sur le profil).
+
+Voir ci-dessous deux exemples de profils en Experience Platform :
+
+### Exemple 1 avec `segmentMembership`, `identityMap` Attributs et pour les attributs de forme libre {#example-1}
+
+```json
+{
+  "segmentMembership": {
+    "ups": {
+      "11111111-1111-1111-1111-111111111111": {
+        "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "mobileIds": [
+      {
+        "id": "e86fb215-0921-4537-bc77-969ff775752c"
+      }
+    ]
+  },
+  "attributes": {
+    "firstName": {
+    },
+    "lastName": {
+      "value": "lastName"
+    }
+  }
+}
+```
+
+### Exemple 2 avec `segmentMembership`, `identityMap` Attributs et pour les attributs prédéfinis {#example-2}
+
+```json
+{
+  "segmentMembership": {
+    "ups": {
+      "11111111-1111-1111-1111-111111111111": {
+        "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "mobileIds": [
+      {
+        "id": "e86fb215-0921-4537-bc77-969ff775752c"
+      }
+    ]
+  },
+  "attributes": {
+    "lastName": "lastName"
+  }
+}
+```
+
+## Utiliser une langue de modèle pour les transformations d’identité, d’attributs et d’appartenance aux segments {#using-templating}
+
+Utilisation d’Adobes [Modèles de saisie](https://pebbletemplates.io/), un langage de modèle similaire à [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), pour transformer les champs du schéma XDM Experience Platform en un format pris en charge par votre destination.
 
 Cette section fournit plusieurs exemples de la manière dont ces transformations sont effectuées : du schéma XDM d’entrée au modèle et de sortie dans des formats de payload acceptés par votre destination. Les exemples ci-dessous sont présentés par une complexité croissante, comme suit :
 
@@ -180,7 +247,7 @@ Profil 2 :
 }
 ```
 
-### abonnement au segment {#segment-membership}
+### Appartenance à un segment {#segment-membership}
 
 Le [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) L’attribut XDM indique les segments dont un profil est membre.
 Pour les trois valeurs différentes de la variable `status` , lisez la documentation sur [Groupe de champs Détails de l’appartenance à un segment](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
@@ -1129,12 +1196,10 @@ Le tableau ci-dessous fournit des descriptions des fonctions dans les exemples c
 | `addedSegments(listOfSegments)` | Renvoie uniquement les segments ayant un état `realized` ou `existing`. |
 | `removedSegments(listOfSegments)` | Renvoie uniquement les segments ayant un état `exited`. |
 
-<!--
+## Étapes suivantes {#next-steps}
 
-## What Adobe needs from you to set up your destination {#what-adobe-needs}
+Après avoir lu ce document, vous savez maintenant comment les données exportées hors d’Experience Platform sont transformées. Lisez ensuite les pages suivantes pour acquérir des connaissances sur la création de modèles de transformation de messages pour votre destination :
 
-Based on the transformations outlined in the sections above, Adobe needs the following information to set up your destination:
-
-* Considering *all* the fields that your platform can receive, Adobe needs the standard JSON schema that corresponds to your expected message format. Having the template allows Adobe to define transformations and to create a custom XDM schema for your company, which customers would use to export data to your destination.
-
--->
+* [Créer et tester un modèle de transformation de message](/help/destinations/destination-sdk/create-template.md)
+* [Opérations de l’API pour le rendu du modèle](/help/destinations/destination-sdk/render-template-api.md)
+* [Fonctions de transformation prises en charge dans Destination SDK](/help/destinations/destination-sdk/supported-functions.md)
