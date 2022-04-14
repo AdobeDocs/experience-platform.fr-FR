@@ -5,10 +5,10 @@ seo-title: Advertising destinations overview
 description: Connectez Adobe Experience Platform à une plateforme publicitaire tierce (par ex. DSP, réseau publicitaire, SSP) et partagez des audiences pseudonymes sur ces plateformes.
 seo-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 0911a0a08c5571161acdafa6857095e275a50600
+source-git-commit: 275c3fae8b001154a702edbf4356d6a374f9a16f
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 37%
+source-wordcount: '234'
+ht-degree: 53%
 
 ---
 
@@ -28,18 +28,19 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 
 ### Connexions
 
-* [Connexion à Google Display &amp; Video 360](google-dv360.md)
+* [(Version bêta) Connexion aux critères](criteo.md)
+* [Connexion Google Display &amp; Video 360](google-dv360.md)
 * [Connexion Google Ads](google-ads-destination.md)
-* [Connexion à Google Ad Manager](google-ad-manager.md)
-* [Connexion à la correspondance client Google](google-customer-match.md)
+* [Connexion Google Ad Manager](google-ad-manager.md)
+* [Connexion à Google Customer Match](google-customer-match.md)
 * [Connexion Microsoft Bing](bing.md)
-* [Connexion à la liste des clients pinterest](pinterest.md)
-* [La connexion au bureau de commerce](tradedesk.md)
+* [Connexion Liste des Clients Pinterest](pinterest.md)
+* [Connexion Trade Desk](tradedesk.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### Extensions
 
-* [Extension Adobe Advertising Cloud](adobe-advertising-cloud.md)
+* [Extension Adobe Advertising Cloud](adobe-advertising-cloud.md)
 * [Extension Awin Advertising Conversion Tag](awin-conversiontag.md)
 * [Extension Awin Advertising Mastertag](awin-mastertag.md)
 * [Extension Bing Ads Universal Event Tracking](bing-ads.md)
@@ -55,4 +56,4 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 
 ## Connexion à une nouvelle destination publicitaire {#connect-destination}
 
-Pour envoyer des segments vers des destinations publicitaires pour vos campagnes, Platform doit d’abord se connecter à la destination. Pour plus d’informations sur la configuration d’une nouvelle destination, consultez le [tutoriel sur la création de destination](../../ui/connect-destination.md) .
+Pour envoyer des segments vers des destinations publicitaires pour vos campagnes, Platform doit d’abord se connecter à la destination. Voir le [tutoriel sur la création de destinations](../../ui/connect-destination.md) pour des informations détaillées sur la configuration d’une nouvelle destination.

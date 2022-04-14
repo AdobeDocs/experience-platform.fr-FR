@@ -1,0 +1,129 @@
+---
+keywords: 'la publicité; les critères; '
+title: Connexion à un critère
+description: Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaque consommateur des expériences plus riches sur l’Internet libre. Grâce au jeu de données commercial le plus important du monde et à l’IA la plus performante du monde, Criteo s’assure que chaque point de contact du parcours d’achat est personnalisé pour atteindre les clients avec la bonne publicité, au bon moment.
+source-git-commit: a3263a322012a48f37cee6137054c7fcf3cdb8a2
+workflow-type: tm+mt
+source-wordcount: '749'
+ht-degree: 9%
+
+---
+
+
+# (Version bêta) Connexion aux critères
+
+## Présentation {#overview}
+
+>[!IMPORTANT]
+>
+>Cette page de documentation a été créée par Criteo. Il s’agit actuellement d’un produit bêta. Pour toute demande de mise à jour ou de mise à jour, contactez directement Criteo. [here](mailto:criteoTechnicalPartnerships@criteo.com).
+
+Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaque consommateur des expériences plus riches sur l’Internet libre. Grâce au jeu de données commercial le plus important du monde et à l’IA la plus performante du monde, Criteo s’assure que chaque point de contact du parcours d’achat est personnalisé pour atteindre les clients avec la bonne publicité, au bon moment.
+
+## Conditions préalables {#prerequisites}
+
+* Vous devez disposer d’un compte utilisateur administrateur sur [Centre de gestion des critères](https://marketing.criteo.com).
+* Vous aurez besoin de votre identifiant publicitaire Criteo (demandez à votre contact Criteo si vous ne possédez pas cet identifiant).
+* Criteo accepte uniquement les emails SHA-256 et en texte brut (à transformer en SHA-256 avant l’envoi). Veuillez ne pas envoyer d&#39;informations d&#39;identification personnelles, telles que les noms ou numéros de téléphone d&#39;un individu.
+
+![Conditions préalables](../../assets/catalog/advertising/criteo/prerequisites.png)
+
+## Identités prises en charge {#supported-identities}
+
+Criteo prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=fr#getting-started).
+
+| Identité cible | Description | Considérations |
+| --- | --- | --- |
+| `email_sha256` | Adresses électroniques hachées avec l’algorithme SHA-256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA-256. Lorsque votre champ source contient des attributs non hachés, vérifiez la variable [!UICONTROL Appliquer la transformation] pour que Platform hache automatiquement les données lors de l’activation. |
+
+## Type et fréquence d&#39;export {#export-type-frequency}
+
+Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
+
+| Élément | Type | Notes |
+| --- | --- | --- |
+| Type d’exportation | Exportation des segments | Vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la variable [!DNL Criteo] destination. |
+| Fréquence des exports | Diffusion en continu | Les destinations de diffusion en continu sont &quot;toujours sur&quot; des connexions basées sur l’API. Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur [destinations de diffusion en continu](../../destination-types.md#streaming-destinations). |
+
+## Cas dʼutilisation {#use-cases}
+
+Pour vous aider à mieux comprendre comment utiliser la variable [!DNL Criteo] destination, voici quelques objectifs que les clients Adobe Experience Platform peuvent atteindre. [!DNL Criteo]:
+
+### Cas d’utilisation 1 : Obtention du trafic
+
+Présenter à votre entreprise des offres de produits pertinentes et des créations flexibles. Grâce aux recommandations de produits intelligents, vos publicités présentent automatiquement les produits les plus susceptibles de déclencher des visites et des engagements. Le ciblage flexible vous permet de créer des audiences à partir de l’ensemble de données commerciales de Criteo ou de vos propres listes de prospects et d’Adobe de segments CDP.
+
+### Cas d’utilisation 2 : Augmenter les conversions du site web
+
+Lorsque les visiteurs quittent votre site web, rappelez-leur ce qui leur manque avec les publicités de reciblage qui augmentent les conversions en présentant des offres spéciales et des offres hyper-pertinentes, où qu’ils se rendent. Connectez votre segment CDP d’Adobe pour réengager les clients existants ou cibler les consommateurs comme vos clients les plus fidèles.
+
+## Connexion à Criteo {#connect}
+
+Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
+
+### Authentification à un critère
+
+Les étapes de connexion sont les suivantes :
+
+1. Connectez-vous à Adobe Experience Platform et connectez-vous à la destination Criteo.
+
+   ![Connexion](../../assets/catalog/advertising/criteo/connect-destination.png)
+
+1. Vous serez redirigé vers Criteo pour autoriser la connexion. Vous devrez peut-être d’abord vous connecter à l’aide de vos informations d’identification Criteo :
+
+   ![Connexion aux critères](../../assets/catalog/advertising/criteo/log-in-1.png)
+
+   ![Connexion aux critères](../../assets/catalog/advertising/criteo/log-in-2.png)
+
+   ![Connexion aux critères](../../assets/catalog/advertising/criteo/log-in-3.png)
+
+
+### Paramètres de connexion {#connection-parameters}
+
+Après vous être authentifié à la destination, veuillez renseigner les paramètres de connexion suivants.
+
+![Paramètres de connexion](../../assets/catalog/advertising/criteo/connection-parameters.png)
+
+| Champ | Description | Obligatoire |
+| --- | --- | --- |
+| Nom | Un nom qui vous aidera à reconnaître cette destination à l’avenir. Le nom que vous choisissez ici sera : [!DNL Audience] dans le Centre de gestion des critères et ne peut pas être modifié ultérieurement. | Oui |
+| Description | Description qui vous aidera à identifier cette destination ultérieurement. | Non |
+| Version de l’API | Version de l’API Criteo. Sélectionnez Aperçu. | Oui |
+| Identifiant annonceur | Identifiant de publicitaire de critère de votre organisation. Contactez votre gestionnaire de compte Criteo pour obtenir ces informations. | Oui |
+
+## Activer des segments vers cette destination {#activate-segments}
+
+Lecture [Activation des profils et des segments vers des destinations d’exportation de segments en continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+
+## Données exportées {#exported-data}
+
+Vous pouvez voir les segments exportés dans le [Centre de gestion des critères](https://marketing.criteo.com/audience-manager/dashboard).
+
+Le corps de la requête reçu par le [!DNL Criteo] La connexion ressemble à ceci :
+
+```json
+{ 
+  "data": { 
+    "type": "ContactlistWithUserAttributesAmendment", 
+    "attributes": { 
+      "operation": "add", 
+      "identifierType": "sha256email", 
+      "identifiers": [ 
+        { 
+          "identifier": "1c8494bbc4968277345133cca6ba257b9b3431b8a84833a99613cf075a62a16d", 
+          "attributes": [{ "key": "customValue", "value": "1" }] 
+        } 
+      ] 
+    } 
+  } 
+} 
+```
+
+## Utilisation et gouvernance des données {#data-usage}
+
+Toutes les destinations Adobe Experience Platform sont conformes aux politiques d’utilisation des données lors de la gestion de vos données. Pour plus d’informations sur la manière dont Adobe Experience Platform applique la gouvernance des données, reportez-vous à la section [Présentation de la gouvernance des données](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=en).
+
+## Ressources supplémentaires
+
+* [Centre d’aide de Criteo](https://help.criteo.com/kb/en)
+* [Portail de développement de critères](https://developers.criteo.com/marketing-solutions/v2022.04/reference/modifyaudienceuserswithattributes)
