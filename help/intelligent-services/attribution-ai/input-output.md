@@ -5,10 +5,10 @@ title: Entrée et sortie dans Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Le document suivant décrit les différentes entrées et sorties utilisées dans Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 3ea17aa57a5bfbc968f354b13d2ed107b2efa39b
 workflow-type: tm+mt
-source-wordcount: '2268'
-ht-degree: 15%
+source-wordcount: '2392'
+ht-degree: 14%
 
 ---
 
@@ -21,10 +21,14 @@ Le document suivant décrit les différentes entrées et sorties utilisées dans
 Attribution AI analyse les jeux de données suivants pour calculer les scores algorithmiques :
 
 - Jeux de données Adobe Analytics utilisant la variable [Connecteur source Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- Jeu de données d’événement d’expérience (EE)
-- Jeu de données d’événements d’expérience client (CEE)
+- Jeux de données d’événement d’expérience (EE) en général à partir du schéma Adobe Experience Platform
+- Jeux de données d’événements d’expérience client (CEE)
 
-Vous pouvez ajouter plusieurs jeux de données provenant de sources différentes si chacun des jeux de données partage le même type d’identité (espace de noms), tel qu’un ECID. Pour en savoir plus sur l’ajout de plusieurs jeux de données, consultez le [Guide d’utilisation d’Attribution AI](./user-guide.md#identity).
+Vous pouvez désormais ajouter plusieurs jeux de données provenant de différentes sources en fonction de la variable **identity map** (champ) si chacun des jeux de données partage le même type d’identité (espace de noms), tel qu’un ECID. Une fois que vous avez sélectionné une identité et un espace de noms, des mesures d’exhaustivité des colonnes d’identifiants s’affichent, indiquant le volume de données assemblées. Pour en savoir plus sur l’ajout de plusieurs jeux de données, consultez le [Guide d’utilisation d’Attribution AI](./user-guide.md#identity).
+
+Les informations du canal ne sont pas toujours mappées par défaut. Dans certains cas, si mediaChannel (champ) est vide, vous ne pourrez pas &quot;continuer&quot; tant que vous n’aurez pas mappé un champ à mediaChannel, car il s’agit d’une colonne obligatoire. Si le canal est détecté dans le jeu de données, il est mappé sur mediaChannel par défaut. Les autres colonnes, telles que **type de média** et **action multimédia** sont toujours facultatives.
+
+Une fois que vous avez mappé le champ de canal, passez à l’étape &quot;Définir les événements&quot; où vous pouvez sélectionner les événements de conversion, les événements de point de contact et sélectionner des champs spécifiques de jeux de données individuels.
 
 >[!IMPORTANT]
 >
@@ -34,11 +38,9 @@ Pour plus d’informations sur la configuration de la variable [!DNL Consumer Ex
 
 Toutes les colonnes du [!DNL Consumer Experience Event] (CEE) sont obligatoires pour Attribution AI.
 
->[!NOTE]
->
-> Les 9 colonnes suivantes sont obligatoires, les colonnes supplémentaires sont facultatives mais recommandées/nécessaires si vous souhaitez utiliser les mêmes données pour d’autres solutions d’Adobe telles que [!DNL Customer AI] et [!DNL Journey AI].
+Vous pouvez configurer les points de contact à l’aide des champs recommandés ci-dessous dans le schéma ou le jeu de données sélectionné.
 
-| Colonnes obligatoires | Nécessaire pour |
+| Colonnes recommandées | Nécessaire pour |
 | --- | --- |
 | Champ d’identité Principal | Point de contact/Conversion |
 | Horodatage | Point de contact/Conversion |
@@ -52,17 +54,11 @@ Toutes les colonnes du [!DNL Consumer Experience Event] (CEE) sont obligatoires 
 
 En règle générale, l’attribution est exécutée sur des colonnes de conversion telles que la commande, les achats et les passages en caisse sous &quot;commerce&quot;. Les colonnes &quot;canal&quot; et &quot;marketing&quot; servent à définir des points de contact pour Attribution AI (par exemple, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Pour des résultats et des informations optimaux, il est vivement recommandé d’inclure autant de colonnes de conversion et de points de contact que possible. De plus, vous n’êtes pas limité aux colonnes ci-dessus. Vous pouvez inclure toute autre colonne recommandée ou personnalisée comme définition de conversion ou de point de contact.
 
+Les jeux de données d’événement d’expérience (EE) n’ont pas besoin de disposer explicitement de mixins Canal et Marketing tant que les informations de canal ou de campagne relatives à la configuration d’un point de contact sont présentes dans l’un des mixins ou traversent les champs.
+
 >[!TIP]
 >
 >Si vous utilisez des données Adobe Analytics dans votre schéma CEE, les informations de point de contact pour Analytics sont généralement stockées dans `channel.typeAtSource` (par exemple, `channel.typeAtSource = 'email'`).
-
-Les colonnes ci-dessous ne sont pas obligatoires, mais il est recommandé de les inclure dans votre schéma CEE si vous disposez des informations disponibles.
-
-**Colonnes recommandées supplémentaires :**
-- web.webReferer
-- web.webInteraction
-- web.webPageDetails
-- xdm:productListItems
 
 ## Données historiques {#data-requirements}
 
@@ -158,7 +154,6 @@ Vous pouvez afficher le chemin d’accès à vos scores bruts dans l’interface
 Sélectionnez ensuite un champ dans le **[!UICONTROL Structure]** de l’interface utilisateur, la fonction **[!UICONTROL Propriétés du champ]** s’ouvre. Within **[!UICONTROL Propriétés du champ]** est le champ de chemin qui correspond à vos scores bruts.
 
 ![Sélection d’un schéma](./images/input-output/field_properties.png)
-
 
 ### Scores d’attribution agrégés {#aggregated-attribution-scores}
 

@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur Attribution AI
 topic-legacy: User guide
 description: Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ca390f8cba05148ba39a57734c5172265dcfa5ce
+source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
 workflow-type: tm+mt
-source-wordcount: '2281'
-ht-degree: 41%
+source-wordcount: '2331'
+ht-degree: 40%
 
 ---
 
@@ -54,7 +54,7 @@ Ensuite, la page de configuration d’Attribution AI s’affiche, où vous pouve
 
 ![attribution d’un nom à une instance](./images/user-guide/naming_instance.png)
 
-## Sélectionner des données {#select-data}
+## Sélectionner les données {#select-data}
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
@@ -84,7 +84,7 @@ Dans l’aperçu du jeu de données, il existe une valeur en pourcentage d’exh
 
 ### Sélection d’une identité {#identity}
 
-Pour que plusieurs jeux de données se rejoignent les uns les autres, vous devez sélectionner un type d’identité (également appelé &quot;espace de noms d’identité&quot;) et une valeur d’identité dans cet espace de noms. Si vous avez affecté plusieurs champs en tant qu’identité dans votre schéma sous le même espace de noms, toutes les valeurs d’identité attribuées apparaissent dans la liste déroulante d’identité précédée de l’espace de noms tel que `EMAIL (personalEmail.address)` ou `EMAIL (workEmail.address)`.
+Vous pouvez désormais joindre plusieurs jeux de données les uns aux autres en fonction de la carte d’identité (champ). Vous devez sélectionner un type d’identité (également appelé &quot;espace de noms d’identité&quot;) et une valeur d’identité dans cet espace de noms. Si vous avez affecté plusieurs champs en tant qu’identité dans votre schéma sous le même espace de noms, toutes les valeurs d’identité attribuées apparaissent dans la liste déroulante d’identité précédée de l’espace de noms tel que `EMAIL (personalEmail.address)` ou `EMAIL (workEmail.address)`.
 
 >[!IMPORTANT]
 >
@@ -92,11 +92,11 @@ Pour que plusieurs jeux de données se rejoignent les uns les autres, vous devez
 
 Pour sélectionner une identité, sélectionnez la valeur soulignée située dans la colonne d’identité. La fenêtre contextuelle Sélectionner une identité s’affiche.
 
-![sélectionner le même espace de noms](./images/user-guide/identity-type.png)
+![sélectionner le même espace de noms](./images/user-guide/aai-identity-map.png)
 
 Dans le cas où plusieurs identités sont disponibles dans un espace de noms, veillez à sélectionner le champ d’identité approprié à votre cas d’utilisation. Par exemple, deux identités de courrier électronique sont disponibles dans l’espace de noms de courrier électronique, un courrier électronique professionnel et un courrier électronique personnel. Selon le cas d’utilisation, un email personnel est plus susceptible d’être renseigné et plus utile dans les prédictions individuelles. Cela signifie que vous pouvez sélectionner `EMAIL (personalEmail.address)` comme votre identité.
 
-![Clé de jeu de données non sélectionnée](./images/user-guide/select-identity.png)
+![Clé de jeu de données non sélectionnée](./images/user-guide/aai-identity-namespace.png)
 
 >[!NOTE]
 >
@@ -108,7 +108,7 @@ Dans le cas où plusieurs identités sont disponibles dans un espace de noms, ve
 
 Une fois que vous avez fini de sélectionner et d’ajouter des jeux de données, la variable **Carte** l’étape de configuration s’affiche. Attribution AI exige que vous mappez le champ Canal multimédia pour chaque jeu de données sélectionné à l’étape précédente. En effet, sans le mappage du canal Media entre les jeux de données, les informations dérivées d’Attribution AI peuvent ne pas s’afficher correctement, ce qui rend la page d’informations difficile à interpréter. Bien que seul le canal Média soit requis, il est vivement recommandé de mapper certains des champs facultatifs tels que l’action Média, le nom de la campagne, le groupe Campagne et la balise Campagne. Cela permet à Attribution AI de fournir des informations plus claires et des résultats optimaux.
 
-![mapping](./images/user-guide/mapping.png)
+![mappage](./images/user-guide/mapping.png)
 
 ## Définition des événements {#define-events}
 
@@ -122,9 +122,9 @@ Il existe trois types différents de données d’entrée utilisées pour défin
 
 ### Définition des événements de conversion {#define-conversion-events}
 
-Pour définir un événement de conversion, vous devez donner un nom à l’événement et sélectionner le type d’événement en sélectionnant l’événement **Saisir le nom du champ** menu déroulant.
+Pour définir un événement de conversion, vous devez donner un nom à l’événement et sélectionner le type d’événement en sélectionnant le jeu de données et le champ dans la variable **Sélection d’un jeu de données et d’un champ** menu déroulant.
 
-![menu déroulant oui](./images/user-guide/conversion_event_2.png)
+![menu déroulant oui](./images/user-guide/define-conversion-events.png)
 
 Une fois qu’un événement est sélectionné, un nouveau menu déroulant s’affiche à sa droite. Le second menu déroulant est utilisé pour fournir davantage de contexte à votre événement grâce à l’utilisation des opérations. Pour cet événement de conversion, l’opération par défaut *exists* est utilisée.
 
@@ -133,6 +133,8 @@ Une fois qu’un événement est sélectionné, un nouveau menu déroulant s’a
 >Une chaîne sous votre *nom de conversion* est mise à jour au fur et à mesure que vous définissez votre événement.
 
 ![aucun menu déroulant](./images/user-guide/conversion_event_1.png)
+
+Vous pouvez ensuite sélectionner un jeu de données combiné généré en combinant tous les jeux de données d’entrée à l’étape précédente. Vous pouvez également sélectionner une colonne en fonction de jeux de données individuels dans la variable **Sélection d’un jeu de données et d’un champ** menu déroulant.
 
 Les boutons **[!UICONTROL Ajouter un événement]** et **[!UICONTROL Ajouter un groupe]** permettent de définir plus précisément votre conversion. En fonction de la conversion que vous définissez, vous devrez peut-être utiliser les boutons **[!UICONTROL Ajouter un événement]** et **[!UICONTROL Ajouter un groupe]** pour fournir davantage de contexte.
 
