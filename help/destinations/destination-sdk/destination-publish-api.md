@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API « authoring/destinations/publish ».
 title: Opérations de l’API du point d’entrée de publication des destinations
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 702a5b7154724faa9f5e6847b462e0ae90475571
+source-git-commit: a73a4ea93a432f60d62da5e234d8e357009b2d88
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 75%
+source-wordcount: '748'
+ht-degree: 72%
 
 ---
 
@@ -23,6 +23,7 @@ Utilisez le point d’entrée de lʼAPI de publication des destinations pour env
 
 * En tant que partenaire du Destination SDK, vous souhaitez que votre destination personnalisée soit disponible dans toutes les organisations Experience Platform, afin que tous les clients Experience Platform puissent l’utiliser ;
 * Vous souhaitez que votre destination personnalisée soit disponible dans toutes les sandbox de votre organisation Experience Platform.
+* Vous faites *toutes les mises à jour* à vos configurations. Les mises à jour de configuration ne sont répercutées dans la destination qu’après l’envoi d’une nouvelle demande de publication, qui est approuvée par l’équipe Experience Platform.
 
 ## Prise en main des opérations dʼAPI de publication de destinations {#get-started}
 
