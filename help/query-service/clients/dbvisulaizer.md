@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Connexion de DbVisualizer à Query Service
 topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter DbVisualizer à Adobe Experience Platform Query Service.
-source-git-commit: 69e105b2c52a668ba708847795d4c92813aad0db
+exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
+source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
 workflow-type: tm+mt
-source-wordcount: '701'
-ht-degree: 0%
+source-wordcount: '726'
+ht-degree: 1%
 
 ---
 
@@ -47,6 +48,10 @@ Les trois propriétés de pilote requises sont présentées dans le tableau ci-d
 | `SSL` | Cela contrôle l’utilisation des exigences SSL. You **must** utilisez la valeur &quot;1&quot; pour activer cette exigence. |
 | `user` | Le nom d’utilisateur connecté à la base de données est votre ID d’organisation. Il s’agit d’une chaîne alphanumérique se terminant par `@adobe.org` |
 
+>[!IMPORTANT]
+>
+>Voir [[!DNL Query Service] Documentation SSL](./ssl-modes.md) pour en savoir plus sur la prise en charge du protocole SSL pour les connexions tierces à Adobe Experience Platform Query Service et sur la connexion à l’aide de `verify-full` Mode SSL.
+
 ### [!DNL Query Service] informations
 
 Le `PGHOST` et `user` sont extraites de vos informations d’identification Adobe Experience Platform. Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur de Platform et sélectionnez **[!UICONTROL Requêtes]** à partir du volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour plus d’informations sur la recherche du nom de la base de données, de l’hôte, du port et des informations de connexion, consultez la section [guide des informations d’identification](../ui/credentials.md).
@@ -71,7 +76,7 @@ Dans le panneau Authentification de connexion , cochez les deux options **[!DNL 
 
 ![Panneau Authentification de connexion avec les cases à cocher Userid et Mot de passe mises en surbrillance.](../images/clients/dbvisualizer/connection-authentication.png)
 
-## Connexion à Platform
+## Connecter  à Platform
 
 Pour établir une connexion, sélectionnez la variable **[!DNL Connection]** dans l’espace de travail Connexion à la base de données et saisissez les informations d’identification de votre Experience Platform pour les paramètres suivants.
 

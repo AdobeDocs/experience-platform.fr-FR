@@ -5,22 +5,22 @@ title: Connexion de Looker à Query Service
 topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter Looker à Adobe Experience Platform Query Service.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
+source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 13%
+source-wordcount: '275'
+ht-degree: 12%
 
 ---
 
-# Connecter [!DNL Looker] à Query Service
+# Connexion [!DNL Looker] vers Query Service
 
-Ce document décrit les étapes de connexion de [!DNL Looker] à Adobe Experience Platform [!DNL Query Service].
+Ce document décrit les étapes de connexion. [!DNL Looker] avec Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> Ce guide suppose que vous avez déjà accès à [!DNL Looker] et que vous savez comment naviguer dans son interface. Vous trouverez plus d’informations sur [!DNL Looker] dans la [documentation  [!DNL Looker] officielle](https://docs.looker.com/).
+> Ce guide suppose que vous avez déjà accès à [!DNL Looker] et connaissent comment naviguer dans son interface. Plus d’informations sur [!DNL Looker] se trouve dans la variable [officiel [!DNL Looker] documentation](https://docs.looker.com/).
 
-Après vous être connecté à [!DNL Looker], sélectionnez **[!DNL Admin]**, puis **[!DNL Connections]**.
+Après vous être connecté à [!DNL Looker], sélectionnez **[!DNL Admin]**, suivie de **[!DNL Connections]**.
 
 ![](../images/clients/looker/click-admin-connections.png)
 
@@ -32,17 +32,20 @@ Sur cette page, sélectionnez **[!DNL New Connection]**.
 
 ![](../images/clients/looker/new-connection.png)
 
-- **[!DNL Name]:** nom de la connexion.
-- **[!DNL Dialect]:** dialecte utilisé pour la base de données SQL. [!DNL Query Service] utilise  **[!DNL PostgreSQL]**.
-- **[!DNL Host and Port]:** le point de terminaison hôte et son port pour  [!DNL Query Service].
-- **[!DNL Database]:** base de données qui sera utilisée.
+- **[!DNL Name]:** Nom de la connexion.
+- **[!DNL Dialect]:** Le dialecte utilisé pour la base de données SQL. [!DNL Query Service] uses **[!DNL PostgreSQL]**.
+- **[!DNL Host and Port]:** Le point de terminaison hôte et son port pour [!DNL Query Service].
+- **[!DNL Database]:** La base de données qui sera utilisée.
 - **[!DNL Username and Password]:** Les identifiants de connexion qui seront utilisés. Le nom d’utilisateur se présente sous la forme `ORG_ID@AdobeOrg`.
+- **SSL**: Activez SSL pour garantir une connexion sécurisée sur le réseau.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Pour plus d’informations sur la recherche de l’hôte et du port, du nom de la base de données et des informations de connexion, consultez le [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
+>Voir [[!DNL Query Service] Documentation SSL](./ssl-modes.md) pour en savoir plus sur la prise en charge du protocole SSL pour les connexions tierces à Adobe Experience Platform Query Service et sur la connexion à l’aide de `verify-full` Mode SSL.
 
-Après avoir saisi les détails de votre connexion, sélectionnez **[!DNL Test These Settings]** pour vous assurer que vos informations d’identification fonctionnent correctement. Si tel est le cas, un message indiquant que vous pouvez vous connecter s’affiche ci-dessous. Si votre connexion est réussie, sélectionnez **[!DNL Add Connection]** pour créer votre connexion.
+Pour plus d’informations sur la recherche de l’hôte et du port, du nom de la base de données et des informations de connexion, veuillez lire la section [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
+
+Après avoir saisi les détails de votre connexion, sélectionnez **[!DNL Test These Settings]** pour vous assurer que vos informations d’identification fonctionnent correctement. Si tel est le cas, un message indiquant que vous pouvez vous connecter s’affiche ci-dessous. Si votre connexion a réussi, sélectionnez **[!DNL Add Connection]** pour créer votre connexion.
 
 ![](../images/clients/looker/click-test-connection.png)
 

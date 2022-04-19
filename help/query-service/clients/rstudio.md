@@ -5,10 +5,10 @@ title: Connexion de RStudio à Query Service
 topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter RStudio à Adobe Experience Platform Query Service.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
+source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 12%
+source-wordcount: '387'
+ht-degree: 11%
 
 ---
 
@@ -48,9 +48,11 @@ Vous pouvez maintenant créer votre connexion à Query Service en saisissant la 
 qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
 ```
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Pour plus d’informations sur la recherche du nom de la base de données, de l’hôte, du port et des informations de connexion, consultez la section [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
+>Voir [[!DNL Query Service] Documentation SSL](./ssl-modes.md) pour en savoir plus sur la prise en charge du protocole SSL pour les connexions tierces à Adobe Experience Platform Query Service et sur la connexion à l’aide de `verify-full` Mode SSL.
+
+Pour plus d’informations sur la recherche du nom de la base de données, de l’hôte, du port et des informations de connexion, consultez la section [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
 
 ![](../images/clients/rstudio/connection-rjdbc.png)
 
