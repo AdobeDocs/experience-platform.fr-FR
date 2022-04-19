@@ -1,14 +1,14 @@
 ---
-keywords: 'la publicité; les critères; '
+keywords: la publicité; les critères;
 title: Connexion à un critère
 description: Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaque consommateur des expériences plus riches sur l’Internet libre. Grâce au jeu de données commercial le plus important du monde et à l’IA la plus performante du monde, Criteo s’assure que chaque point de contact du parcours d’achat est personnalisé pour atteindre les clients avec la bonne publicité, au bon moment.
-source-git-commit: a3263a322012a48f37cee6137054c7fcf3cdb8a2
+exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
+source-git-commit: 36da42b184450cfaf12b097f982234d628681430
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '763'
 ht-degree: 9%
 
 ---
-
 
 # (Version bêta) Connexion aux critères
 
@@ -16,7 +16,7 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par Criteo. Il s’agit actuellement d’un produit bêta. Pour toute demande de mise à jour ou de mise à jour, contactez directement Criteo. [here](mailto:criteoTechnicalPartnerships@criteo.com).
+>Cette page de documentation a été créée par Criteo. Il s’agit actuellement d’un produit bêta qui peut faire l’objet de modifications. Pour toute demande de mise à jour ou de mise à jour, contactez directement Criteo. [here](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaque consommateur des expériences plus riches sur l’Internet libre. Grâce au jeu de données commercial le plus important du monde et à l’IA la plus performante du monde, Criteo s’assure que chaque point de contact du parcours d’achat est personnalisé pour atteindre les clients avec la bonne publicité, au bon moment.
 
@@ -24,7 +24,11 @@ Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaq
 
 * Vous devez disposer d’un compte utilisateur administrateur sur [Centre de gestion des critères](https://marketing.criteo.com).
 * Vous aurez besoin de votre identifiant publicitaire Criteo (demandez à votre contact Criteo si vous ne possédez pas cet identifiant).
-* Criteo accepte uniquement les emails SHA-256 et en texte brut (à transformer en SHA-256 avant l’envoi). Veuillez ne pas envoyer d&#39;informations d&#39;identification personnelles, telles que les noms ou numéros de téléphone d&#39;un individu.
+
+## Limites {#limitations}
+
+* Criteo ne prend actuellement pas en charge la suppression d’utilisateurs des audiences.
+* Acceptation des critères uniquement [!DNL SHA-256]Emails en texte brut et hachés (à transformer en [!DNL SHA-256] avant envoi). Veuillez ne pas envoyer d&#39;informations d&#39;identification personnelles, telles que les noms ou numéros de téléphone d&#39;un individu.
 
 ![Conditions préalables](../../assets/catalog/advertising/criteo/prerequisites.png)
 
