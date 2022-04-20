@@ -1,11 +1,11 @@
 ---
 title: Guide de dépannage des balises
-description: Obtenez des réponses aux questions les plus fréquentes à propos des balises dans Adobe Experience Platform.
+description: Obtenez des réponses aux questions les plus fréquentes à propos des balises dans Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 2181ec15f2d868d1821a5f9926729d2796f2f298
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 100%
+source-wordcount: '1042'
+ht-degree: 97%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](./term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](./term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Ce document apporte des réponses aux questions fréquentes à propos des balises dans Adobe Experience Platform.
+Ce document apporte des réponses aux questions fréquentes à propos des balises dans Adobe Experience Platform.
 
-## Qu’est ce que les balises ?
+## Que sont les balises ?
 
-Les balises représentent la nouvelle génération des fonctionnalités de gestion des balises fournies par Adobe, intégrées à Adobe Experience Platform. Les balises permettent aux clients de :
+Les balises représentent la nouvelle génération des fonctionnalités de gestion des balises fournies par Adobe, intégrées à Adobe Experience Platform. Les balises permettent aux clients de :
 
 - déployer des produits web côté client grâce à des intégrations appelées *extensions*
 - fournir dynamiquement la configuration pour mettre à jour les implémentations des clients dans les applications mobiles natives
@@ -27,13 +27,13 @@ Les balises représentent la nouvelle génération des fonctionnalités de gesti
 
 Les balises sont un système de diffusion de code et de configuration avancé qui évalue les conditions et exécute des actions pour déployer les bibliothèques et produits côté client de façon efficace. Il s’agit d’une solution qui offre également une approche hautement évolutive de la gestion et de la création des intégrations et disposant d’un ensemble robuste d’API pour l’interaction programmatique.
 
-## Quel est le coût des balises ?
+## Combien coûtent les balises ?
 
 Les balises n’entraînent aucuns frais supplémentaires. C&#39;est un service disponible pour tous les clients [!DNL Adobe Experience Cloud].
 
 ## J’ai appris qu’il existe désormais des modules externes. De quoi s’agit-il ?
 
-Les balises sont intégrées à Adobe Experience Platform et sont entièrement extensibles. Les clients, les partenaires d’Adobe, les agences et les fournisseurs de technologies publicitaires et marketing peuvent créer une extension de balise qui ajoute de nouvelles fonctionnalités ou qui modifie les fonctionnalités existantes. Le système permet aux partenaires et aux clients de créer, gérer et mettre à jour leurs propres intégrations. Ce n’est qu’une façon pour Adobe d’ouvrir Adobe Experience Platform aux clients et aux partenaires afin qu’ils puissent s’en servir de base pour leurs produits et entreprises. Cela permet à tous les utilisateurs de connecter plus facilement la technologie Adobe aux technologies marketing et publicitaires d’autres fournisseurs.
+Les balises sont intégrées à Adobe Experience Platform et sont entièrement extensibles. Les clients, les partenaires d’Adobe, les agences et les fournisseurs de technologies publicitaires et marketing peuvent créer une extension de balise qui ajoute de nouvelles fonctionnalités ou qui modifie les fonctionnalités existantes. Le système permet aux partenaires et aux clients de créer, gérer et mettre à jour leurs propres intégrations. Ce n’est qu’une façon pour Adobe d’ouvrir Adobe Experience Platform aux clients et aux partenaires afin qu’ils puissent s’en servir de base pour leurs produits et entreprises. Cela permet à tous les utilisateurs de connecter plus facilement la technologie Adobe aux technologies marketing et publicitaires d’autres fournisseurs.
 
 ## Toutes les extensions tierces seront-elles disponibles immédiatement ?
 
@@ -45,7 +45,7 @@ La fonctionnalité Balises a ouvert son portail en libre-service, que les dével
 
 Nous avons de nombreux clients qui choisissent également de développer leurs propres extensions privées pour les utiliser uniquement dans leurs propres entreprises en utilisant les mêmes méthodes de développement d’extension.
 
-## Les balises sont-elle conformes aux normes de sécurité de mon entreprise ?
+## Les balises sont-elles conformes aux normes de sécurité de ma société ?
 
 Les balises sont certifiées SOC-2 et conformes à la loi Gramm-Leach-Bliley Act. Les balises offrent également la possibilité d’être auto-hébergées. Les bibliothèques JavaScript ainsi que les configurations mobiles peuvent être traitées à partir de vos propres serveurs ou du réseau CDN de votre choix. Cela permet aux équipes informatiques et de sécurité d’exécuter des tests automatisés, de vérifier les fichiers dans leur propre système de contrôle de versions et de se conformer pleinement aux processus de migration de production internes, liés à la sécurité ou autres.
 
@@ -53,25 +53,25 @@ Les balises sont certifiées SOC-2 et conformes à la loi Gramm-Leach-Bliley Act
 
 C’est maintenant le meilleur moment pour migrer vers les balises. Le processus de migration facilite la copie de vos propriétés DTM dans les balises. Nous recommandons des tests approfondis, mais nous avons automatisé autant de processus que possible (aucun changement de code incorporé sur la page, et migration automatisée des règles et des éléments de données).
 
-## Les balises prennent-elles en charge les applications monopages ainsi que mon framework préféré ?
+## Les balises prennent-elles en charge les applications monopage et mon framework préféré ?
 
 Oui. Les balises disposent de fonctionnalités permettant aux utilisateurs et aux développeurs d’extensions de disposer de davantage de flexibilité pour collecter, gérer et distribuer des données au sein d’applications monopages ou de sites et pages à utilisation lourde Ajax. Cela s’applique quelles que soient vos préférences de structure de développement, que ce soit Angular, React.js, Ember, Meteor, etc.
 
-## Les balises prennent-elles en charge les couches de données dynamiques ?
+## Les balises prennent-elles en charge les couches de données dynamiques ?
 
 Oui. Les balises incluent une extension spécialisée dans l’écoute des modifications des couches de données dynamiques.
 
-## Quels types d’événement les balises prennent-elles en charge ?
+## Quels types dʼévénements les balises prennent-elles en charge ?
 
 Les types d’événements sont disponibles via les extensions. Le nombre de types d’événement pris en charge varie en fonction de l’extension. Par exemple, l’extension YouTube inclut quatre types d’événements vidéo : play, pause, end et time played. Grâce aux extensions, les balises prennent en charge tout autre type d’événements de navigateur ou de synthèse, tel que des séquences d’activité de visiteurs spécifiques.
 
-## Les balises vont-elles accélérer (ou ralentir) mon site web ?
+## Les balises vont-elles accélérer (ou ralentir) mon site web ?
 
 Les balises sont conçues pour fournir et exécuter des technologies publicitaires et marketing sur votre site web aussi efficacement que possible en appliquant les bonnes pratiques actuelles. Il a été démontré que lorsqu’elles sont utilisées correctement, les balises améliorent les performances des sites web par rapport à d’autres méthodes offrant des fonctionnalités similaires.
 
-## Quels navigateurs les balises prennent-elles en charge ?
+## Quels navigateurs les balises prennent-elles en charge ?
 
-Prise en charge des navigateurs par les balises :
+Prise en charge des navigateurs par les balises :
 
 - [!DNL Chrome] (version la plus récente)
 - [!DNL Safari] (version la plus récente)
@@ -81,7 +81,7 @@ Prise en charge des navigateurs par les balises :
 - [!DNL iOS Safari] (version la plus récente)
 - [!DNL Android Chrome] (version la plus récente)
 
-Prise en charge du navigateur pour l’interface de l’application Balises :
+Prise en charge du navigateur pour l’interface de l’application Balises :
 
 - [!DNL Chrome] (version la plus récente)
 - [!DNL Safari] (version la plus récente)
@@ -90,9 +90,9 @@ Prise en charge du navigateur pour l’interface de l’application Balises :
 
 La plupart des clients exploitent désormais des fonctionnalités de plateforme web plus modernes dans les navigateurs actuels et génèrent de meilleures expériences utilisateur, y compris des applications d’une seule page et des sites web et pages interactifs à utilisation lourde Ajax. Comme la plupart des clients optent pour des approches plus modernes de leurs sites, ils ont besoin d’une solution comme Balises permettant ces approches.
 
-## La solution Balises fonctionne-t-elle sur les applications mobiles natives ?
+## Les balises fonctionnent-elles sur les applications mobiles natives ?
 
-Oui! Balises prend désormais en charge les propriétés et la configuration des nouveaux [SDK mobiles](https://sdkdocs.com) d’Adobe Experience Platform pour mettre en œuvre la collecte et la diffusion de données dans un environnement d’application nativement mobile. Veuillez consulter la [documentation](https://sdkdocs.com) pour en savoir plus.
+Oui! Balises prend désormais en charge les propriétés et la configuration des nouveaux [SDK mobiles](https://sdkdocs.com) d’Adobe Experience Platform pour mettre en œuvre la collecte et la diffusion de données dans un environnement d’application nativement mobile. Veuillez consulter la [documentation](https://sdkdocs.com) pour en savoir plus.
 
 ## Pourquoi l’interface utilisateur indique-t-elle qu’une erreur s’est produite lors du chargement de mon compte ?
 
@@ -106,6 +106,4 @@ Consultez le guide sur la [gestion des autorisations](./ui/administration/manage
 
 ## Et si j’ai d’autres questions ?
 
-Si vous avez d’autres questions, contactez la communauté Adobe sur la page principale de Balises via l’adresse [https://adobe.com/go/launchme](https://adobe.com/go/launchme).
-
-Balises n’est qu’un exemple parmi d’autres de la direction que prend notre plateforme : plus ouverte, plus intégrée et, comme toujours, dédiée au succès de nos clients.
+Si vous avez d’autres questions, vous pouvez poser la question suivante sur le [Page de la communauté Collecte de données Adobe Experience Platform](https://adobe.com/go/launchme) sur l’Experience League ou rejoignez le [groupe de Slack officiels pour les développeurs de balises](http://join.connectionsdevs.chat).
