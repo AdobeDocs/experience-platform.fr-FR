@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;ingestion des données;emplacement des données;Emplacement Des Données;Gestion des données;gestion des données;Traçabilité;traçabilité;lot;Lot;données ingérées
+keywords: Experience Platform;accueil;rubriques populaires;ingestion des données;emplacement des données;Emplacement Des Données;Gestion des données;gestion des données;Traçabilité;traçabilité;lot;Lot;données ingérées
 solution: Experience Platform
 title: Présentation de Data Ingestion
 topic-legacy: overview
 description: Ce document présente les trois principales manières dont les données sont ingérées dans Platform, avec des liens vers leur documentation de présentation respectives pour plus d’informations.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '461'
 ht-degree: 100%
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 # Présentation de Data Ingestion
 
-Adobe Experience Platform rassemble des données provenant de plusieurs sources afin d’aider les professionnels du marketing à mieux comprendre le comportement de leurs clients. L’ingestion des données d’Adobe Experience Platform représente les diverses méthodes que [!DNL Platform] emploie pour ingérer des données à partir de ces sources, ainsi que la manière dont ces données sont conservées dans le lac de données pour être utilisées par les services de [!DNL Platform] en aval.
+Adobe Experience Platform rassemble des données provenant de plusieurs sources afin d’aider les professionnels du marketing à mieux comprendre le comportement de leurs clients. L’ingestion des données d’Adobe Experience Platform représente les diverses méthodes que [!DNL Platform] emploie pour ingérer des données à partir de ces sources, ainsi que la manière dont ces données sont conservées dans le lac de données pour être utilisées par les services de [!DNL Platform] en aval.
 
 Ce document présente les trois principales manières dont les données sont ingérées dans [!DNL Platform], avec des liens vers leur documentation de présentation respective pour plus dʼinformations.
 
@@ -36,7 +36,7 @@ Pour plus d’informations, consultez la [présentation de l’ingestion par flu
 
 [!DNL Experience Platform] vous permet de configurer des connexions source à différents fournisseurs de données. Ces connexions vous permettent de vous authentifier auprès de vos sources données externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
-Les connexions source peuvent être configurées pour collecter les données dʼautres applications Adobe (telles quʼAdobe Analytics et Adobe Audience Manager), de sources tierces de stockage dans le cloud (telles quʼ[!DNL Azure Blob], [!DNL Amazon]S3, serveurs FTP et SFTP) et de systèmes de gestion de la relation client tiers (tels que [!DNL Microsoft Dynamics] et [!DNL Salesforce]).
+Les connexions source peuvent être configurées pour collecter les données dʼautres applications Adobe (telles quʼAdobe Analytics et Adobe Audience Manager), de sources tierces de stockage dans le cloud (telles quʼ[!DNL Azure Blob], [!DNL Amazon]S3, serveurs FTP et SFTP) et de systèmes de gestion de la relation client tiers (tels que [!DNL Microsoft Dynamics] et [!DNL Salesforce]).
 
 Pour plus d’informations, consultez la [présentation des sources](../sources/home.md).
 
