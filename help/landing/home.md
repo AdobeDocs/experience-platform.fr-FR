@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;CJA;journey analytics;customer journey analytics;orchestration des campagnes;orchestration;parcours client;parcours;journey orchestration;fonctionnalité;région
+keywords: Experience Platform;accueil;rubriques populaires;CJA;journey analytics;customer journey analytics;orchestration des campagnes;orchestration;parcours client;parcours;journey orchestration;fonctionnalité;région
 solution: Experience Platform
 title: Présentation d’Adobe Experience Platform
 topic-legacy: getting started
-description: Adobe Experience Platform permet aux entreprises de centraliser et de normaliser les données clients avant dʼappliquer la science des données et le machine learning afin dʼaméliorer considérablement la conception et la diffusion dʼexpériences riches et personnalisées.
+description: Adobe Experience Platform permet aux entreprises de centraliser et de normaliser les données clients avant dʼappliquer la science des données et le machine learning afin dʼaméliorer considérablement la conception et la diffusion dʼexpériences riches et personnalisées.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
 source-git-commit: 0e58db465b9e978d66325c4600ed78e81c03ae44
 workflow-type: ht
@@ -38,7 +38,7 @@ Adobe a créé de nombreux services applicatifs sur Experience Platform. Vous tr
 
 Démarrez rapidement et facilement avec [!DNL Platform] en suivant les tutoriels détaillés pour tout savoir, de la préparation de vos données pour lʼingestion aux algorithmes de machine learning avancés. Ces tutoriels ont été conçus pour compléter les informations contenues dans la documentation dʼ[!DNL Experience Platform]. Pour obtenir de meilleurs résultats, gardez les documents à portée de main pendant que vous suivez les tutoriels.
 
-Consultez la page dʼaccueil des [tutoriels Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=fr) pour commencer.
+Consultez la page dʼaccueil des [tutoriels Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=fr) pour commencer.
 
 ## Documents de référence et ressources
 
@@ -49,7 +49,7 @@ Consultez la page dʼaccueil des [tutoriels Experience Platform](https://experie
    Découvrez les API dʼ[!DNL Experience Platform], y compris les en-têtes, les paramètres, les exemples de requêtes et les réponses.<br/>*Ces documents sont hébergés sur Adobe I/O.*
 
 * [**Glossaire**](glossary.md)\
-   Consultez la terminologie dʼAdobe Experience Platform.
+   Consultez la terminologie dʼAdobe Experience Platform.
 
 * [**Notes de mise à jour**](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)\
    Retrouvez des informations sur la version la plus récente dʼ[!DNL Experience Platform] et consultez les versions antérieures.
