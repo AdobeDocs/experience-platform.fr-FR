@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 4f057afec285af59a48dc4e28c08cfeba28597bf
+source-git-commit: f9938aca8a5c72a53a688152ac2ab0c0abe632ce
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '745'
 ht-degree: 96%
 
 ---
@@ -194,5 +194,6 @@ ht-degree: 96%
       * [Utiliser l’interface web GitHub pour créer une page de documentation de destination](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
       * [Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation de destination](./destination-sdk/docs-framework/work-in-local-environment.md)
       * [Modèle de libre-service de documentation](./destination-sdk/docs-framework/self-service-template.md)
+      * [Bonnes pratiques de création](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Questions fréquentes](./destinations-faq.md)
 * [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)
