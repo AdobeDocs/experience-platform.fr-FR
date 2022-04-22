@@ -4,61 +4,79 @@ solution: Experience Platform
 title: Création d’une connexion source d’attributs du client dans l’interface utilisateur
 topic-legacy: overview
 type: Tutorial
-description: Découvrez comment créer une connexion source dans l’interface utilisateur pour collecter des données de profil d’attributs du client dans Adobe Experience Platform.
+description: Découvrez comment créer une connexion source dans l’interface utilisateur pour importer les données de profil des attributs du client dans Adobe Experience Platform.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b1b820c93ff1731b797f2b5e3ace7d2d6995b98b
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 6%
+source-wordcount: '623'
+ht-degree: 39%
 
 ---
 
-# Création d’une connexion source Attributs du client dans l’interface utilisateur
+# Créer une connexion source Attributs du client dans l’interface utilisateur
 
-Ce tutoriel décrit les étapes à suivre pour créer une connexion source dans l’interface utilisateur afin de collecter les données de profil des attributs du client dans Adobe Experience Platform. Pour plus d’informations sur les attributs du client, consultez la [présentation des attributs du client](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=fr).
+Ce tutoriel décrit les étapes à suivre pour créer une connexion source dans l’interface utilisateur afin d’importer les données de profil Attributs du client dans Adobe Experience Platform. Pour plus d’informations sur les attributs du client, voir [Présentation des attributs du client](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=fr).
 
 >[!IMPORTANT]
 >
->Les fonctionnalités de désactivation, d’activation et de suppression des flux de données ne sont actuellement pas prises en charge pour la source Attributs du client.
+>La source Attributs du client ne prend actuellement pas en charge l’activation ou la désactivation des flux de données.
 
-## Création d’une connexion source
-
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer une connexion.
-
-Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de la barre de recherche.
-
-Dans la catégorie [!UICONTROL Adobe d’applications] , sélectionnez **[!UICONTROL Attributs du client]**, puis **[!UICONTROL Ajouter des données]**.
+## Créer une connexion source
 
 >[!NOTE]
 >
 >Si vous avez déjà établi une connexion source pour les données de profil Attributs du client, l’option de connexion à la source est désactivée.
 
-![](../../../../images/tutorials/create/customer-attributes/catalog.png)
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Le [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer une connexion.
 
-L’écran [!UICONTROL Ajouter des données] répertorie toutes les sources de données disponibles pour les attributs du client. Pour créer une nouvelle connexion, sélectionnez une source de données dans la liste, puis **[!UICONTROL Suivant]**.
+Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également sélectionner la source de votre choix à l’aide de la barre de recherche.
+
+Sous , [!UICONTROL Adobe des applications] catégorie, sélectionnez **[!UICONTROL Attributs du client]** puis sélectionnez **[!UICONTROL Ajouter des données]**.
+
+![catalogue](../../../../images/tutorials/create/customer-attributes/catalog.png)
+
+### Sélectionner la source de données des attributs du client
+
+Le [!UICONTROL Ajouter des données] répertorie toutes les sources de données disponibles pour les attributs du client. Un seul jeu de données peut être sélectionné par connexion source Attributs du client.
 
 >[!NOTE]
 >
->Un seul jeu de données peut être sélectionné par connexion source Attributs du client.
+>Les groupes de champs, les schémas et les jeux de données sont créés d’usine dans le cadre de l’approvisionnement du flux. Ils resteront inchangés et vous devrez les supprimer manuellement, si nécessaire.
 
-![](../../../../images/tutorials/create/customer-attributes/add-data.png)
+L’évolution du schéma n’est pas prise en charge par la source des attributs du client. Si l’entrée de schéma d’une source de données d’attributs du client est modifiée, elle deviendra incompatible avec Platform. Pour pallier ce problème, vous pouvez supprimer un flux de données d’attributs du client existant, ainsi que son jeu de données, son schéma et son groupe de champs associés, puis en créer un nouveau avec le schéma et la source de données mis à jour.
 
-L’étape [!UICONTROL Détails du flux de données] s’affiche, vous permettant de nommer et de fournir une brève description de votre nouveau flux de données.
+>[!IMPORTANT]
+>
+>Bien que vous puissiez supprimer un flux de données d’attributs du client, son jeu de données correspondant restera même après la suppression du flux de données. Consultez le guide sur la [suppression d’un jeu de données](../../../../../catalog/datasets/user-guide.md) pour savoir comment supprimer manuellement un jeu de données.
 
-Au cours de ce processus, vous pouvez également activer [!UICONTROL l’ingestion partielle] et [!UICONTROL les diagnostics d’erreur]. [!UICONTROL L’] ingestion partielle permet d’ingérer des données contenant des erreurs, jusqu’à un certain seuil que vous pouvez définir, tandis que les  [!UICONTROL diagnostics d’] erreur fournissent des détails sur les données incorrectes qui sont traitées par lots séparément. Pour plus d’informations, consultez la [présentation de l’ingestion par lots partielle](../../../../../ingestion/batch-ingestion/partial.md).
+Pour créer une connexion, sélectionnez une source de données dans la liste, puis sélectionnez **[!UICONTROL Suivant]**.
 
-![](../../../../images/tutorials/create/customer-attributes/dataflow-detail.png)
+![add-data](../../../../images/tutorials/create/customer-attributes/add-data.png)
 
-L’étape [!UICONTROL Réviser] s’affiche, ce qui vous permet de passer en revue votre nouveau flux de données avant qu’il ne soit créé. Les détails sont regroupés dans les catégories suivantes :
+### Fournir des détails sur le flux de données
 
-* **[!UICONTROL Connexion]** : Affiche le type de source, le chemin d’accès approprié du fichier source choisi et le nombre de colonnes dans ce fichier source.
-* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
+Le [!UICONTROL Détails du flux de données] s’affiche, ce qui vous permet de fournir un nom et une brève description pour votre flux de données. Au cours de ce processus, vous pouvez également configurer les paramètres de [!UICONTROL Diagnostics d’erreur], [!UICONTROL Ingestion partielle], et [!UICONTROL Alertes].
 
-![](../../../../images/tutorials/create/customer-attributes/review.png)
+Le [!UICONTROL diagnostic d’erreur] permet de générer un message d’erreur détaillé pour tout enregistrement erroné survenant dans votre flux de données, tandis que l’[!UICONTROL ingestion partielle] vous permet d’ingérer des données contenant des erreurs, jusqu’à un certain seuil que vous définissez manuellement. Pour plus d’informations, consultez la [présentation de l’ingestion par lots partiels](../../../../../ingestion/batch-ingestion/partial.md).
+
+Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des sources dans l’interface utilisateur](../../alerts.md).
+
+Lorsque vous avez terminé de renseigner votre flux de données, sélectionnez **[!UICONTROL Suivant]**.
+
+![dataflow-detail](../../../../images/tutorials/create/customer-attributes/dataflow-detail.png)
+
+### Révision dataflow
+
+L’écran de [!UICONTROL Révision] s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+
+* **[!UICONTROL Connexion]**: Affiche le type de source, le chemin d’accès approprié du fichier source choisi et le nombre de colonnes dans ce fichier source.
+* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
+
+![review](../../../../images/tutorials/create/customer-attributes/review.png)
 
 ## Étapes suivantes
 
-Une fois la connexion créée, un schéma et un jeu de données cibles sont automatiquement créés pour contenir les données entrantes. Une fois l’ingestion initiale terminée, les données de profil d’attributs du client peuvent être utilisées par les services Platform en aval tels que [!DNL Real-time Customer Profile] et [!DNL Segmentation Service]. Pour plus d’informations, consultez les documents suivants :
+Une fois la connexion créée, un schéma et un jeu de données cibles sont automatiquement créés pour contenir les données entrantes. Une fois l’ingestion initiale terminée, les données de profil d’attributs du client peuvent être utilisées par les services Platform en aval, tels que [!DNL Real-time Customer Profile] et [!DNL Segmentation Service]. Consultez les documents suivants pour plus d’informations :
 
-* [Présentation d’[!DNL Real-time Customer Profile]](../../../../../profile/home.md)
-* [Présentation d’[!DNL Segmentation Service]](../../../../../segmentation/home.md)
+* [Présentation de [!DNL Real-time Customer Profile]](../../../../../profile/home.md)
+* [Présentation de [!DNL Segmentation Service]](../../../../../segmentation/home.md)
