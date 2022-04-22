@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;Marketo Engage;marketing à engager;marketing
 solution: Experience Platform
-title: Connecteur Marketo Engage
+title: Connecteur Marketo Engage
 topic-legacy: overview
 description: Ce document présente le connecteur source du Marketo Engage, y compris des informations sur son authentification, son mappage et sa latence de données.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 12%
+source-wordcount: '521'
+ht-degree: 15%
 
 ---
 
-# [!DNL Marketo Engage] connector
+# Connecteur [!DNL Marketo Engage]
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) (ci-après dénommés &quot;[!DNL Marketo]&quot;) est une solution complète pour la gestion des pistes et les spécialistes du marketing B2B qui cherchent à transformer les expériences client en s’engageant à chaque étape de parcours d’achat complexes.
 
@@ -28,9 +28,9 @@ Pour vous connecter [!DNL Marketo] sur Platform, vous devez d’abord récupére
 
 Reportez-vous aux étapes décrites dans la section [Authentification de votre connecteur source Marketo](./marketo-auth.md) pour récupérer vos informations d’identification.
 
-## Configuration du partage d’audience Adobe Experience Cloud
+## Configuration du mappage de l’organisation Adobe
 
-Avant d’établir des jeux de mappages pour [!DNL Marketo], vous devez d’abord configurer le partage d’audience Adobe Experience Cloud. Pour obtenir des instructions détaillées sur la manière de procéder, consultez le guide sur la [Configuration du partage d’audiences Adobe Experience Cloud pour [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-experience-cloud-audience-sharing.html?lang=en).
+Avant d’établir des jeux de mappages pour [!DNL Marketo], vous devez d’abord configurer le mappage de l’organisation Adobe. Pour obtenir des instructions détaillées sur la manière de procéder, consultez le guide sur la [configuration du mappage de l’organisation Adobe pour [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
 
 ## Modèle de données d’expérience (XDM)
 
@@ -52,7 +52,7 @@ Pour plus d’informations sur les règles de mappage de champs entre les [!DNL 
 * [Sociétés](../mapping/marketo.md#companies)
 * [Listes statiques](../mapping/marketo.md#static-lists)
 * [Abonnements à des listes statiques](../mapping/marketo.md#static-list-memberships)
-* [Comptes nommés](../mapping/marketo.md#named-accounts)
+* [Comptes désignés](../mapping/marketo.md#named-accounts)
 * [Opportunités](../mapping/marketo.md#opportunities)
 * [Rôles de contact d’opportunité](../mapping/marketo.md#opportunity-contact-roles)
 * [Personnes](../mapping/marketo.md#persons)
