@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform permet de fournir des expériences personnalisées à vos clients en temps réel.
-source-git-commit: 520405601dccc649b983da2b8f999f3862dd140b
+source-git-commit: ba2df1ca905bfe2d0f8868ef658b369b28eb9af3
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 97%
+source-wordcount: '245'
+ht-degree: 93%
 
 ---
 
@@ -58,7 +58,9 @@ ht-degree: 97%
       * [Intégrer le SDK Web de Platform pour traiter les données de consentement et de préférence](./governance-privacy-security/consent/sdk.md)
    * Journaux d’audit {#audit-logs}
       * [Présentation](./governance-privacy-security/audit-logs/overview.md)
-* [Tableau de bord d’utilisation de la licence](license-usage-dashboard.md)
+* Utilisation de la licence et barrières de sécurité {#license}
+   * [Bonnes pratiques relatives aux droits de licence Data Management](./license-usage-and-guardrails/data-management-best-practices.md)
+   * [Tableau de bord d’utilisation de la licence](./license-usage-and-guardrails/license-usage-dashboard.md)
 * [Guide de dépannage](troubleshooting.md)
 * [Migration du lac de données Gen2](adls2-gen2-migration.md)
 * [Glossaire](glossary.md)
