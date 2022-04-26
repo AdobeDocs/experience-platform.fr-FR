@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 06232d4b567ba1d6bed55226aaa08147510c4498
-workflow-type: ht
-source-wordcount: '1578'
-ht-degree: 100%
+source-git-commit: 2cb6803ecf56dd9a7d9614c72e3a1ff4e76ba966
+workflow-type: tm+mt
+source-wordcount: '1700'
+ht-degree: 86%
 
 ---
 
@@ -32,7 +32,7 @@ Il est important de comprendre les termes clés suivants utilisés dans ce docum
 * **Attribut standard :** les attributs standard sont tous les attributs prédéfinis par Adobe. Ils renferment la même signification pour tous les clients et sont disponibles dans les groupes de champs des données sources [!DNL Analytics] et du schéma [!DNL Analytics].
 * **Attribut personnalisé :** les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans [!DNL Analytics]. Les attributs personnalisés sont utilisés dans le cadre dʼune implémentation Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut varier d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars, consultez la [[!DNL Analytics] documentation sur les variables de conversion](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=fr).
 * **Tout attribut dans les groupes de champs personnalisés :** les attributs qui proviennent de groupes de champs créés par les clients sont tous définis par l’utilisateur et sont considérés comme des attributs ni standard ni personnalisés.
-* **Noms conviviaux :** les noms conviviaux sont des libellés fournis par l’utilisateur pour les variables personnalisées dans le cadre dʼune implémentation [!DNL Analytics]. Pour plus d’informations sur les noms conviviaux, consultez la [[!DNL Analytics] documentation sur les variables de conversion](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=fr).
+* **Noms conviviaux :** les noms conviviaux sont des libellés fournis par l’utilisateur pour les variables personnalisées dans le cadre dʼune implémentation [!DNL Analytics]. Pour plus d’informations sur les noms conviviaux, consultez la [[!DNL Analytics] documentation sur les variables de conversion](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en).
 
 ## Créer une connexion source avec Adobe Analytics
 
@@ -46,11 +46,17 @@ Dans la catégorie des **[!UICONTROL applications Adobe]**, sélectionnez **[!UI
 
 ### Sélectionner les données
 
-L’écran permettant dʼ&#x200B;**[!UICONTROL Ajouter des données à la source Analytics]** s’affiche. Sélectionnez **[!UICONTROL Suite de rapports]** pour commencer à créer une connexion source pour les données d’une suite de rapports Analytics, puis sélectionnez la suite de rapports que vous souhaitez ingérer. Les suites de rapports déjà ingérées dans cette sandbox ou dans une autre ne sont pas sélectionnables. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Le **[!UICONTROL Ajout de données à la source Analytics]** vous fournit une liste de [!DNL Analytics] données de la suite de rapports avec laquelle créer une connexion source.
+
+Une suite de rapports ne peut être ingérée qu’à l’aide d’un seul principal flux de données. Il ne peut pas être utilisé dans plusieurs flux de données. En outre, une suite de rapports doit appartenir à la même région que l’instance sandbox Platform dans laquelle la connexion source est créée. Une suite de rapports qui n’est pas sélectionnable a déjà été ingérée, que ce soit dans cet environnement de test ou dans un autre environnement de test.
+
+Plusieurs connexions entrantes peuvent être établies pour importer plusieurs suites de rapports dans le même environnement de test. Si les suites de rapports comportent des schémas différents pour les variables (comme les eVars ou les événements), elles doivent être mappées à des champs spécifiques dans les groupes de champs personnalisés et éviter les conflits de données à l’aide de [Préparation de données](../../../../../data-prep/ui/mapping.md). Les suites de rapports ne peuvent être ajoutées qu’à un seul environnement de test.
 
 >[!NOTE]
 >
->Il est possible d’établir plusieurs connexions entrantes pour importer plusieurs suites de rapports, mais une seule suite de rapports peut être utilisée à la fois avec Real-time Customer Data Platform.
+>Les données de plusieurs suites de rapports ne peuvent être activées pour Real-time Customer Data Profile que s’il n’existe aucun conflit de données, comme deux propriétés personnalisées (eVars, listes et props) ayant une signification différente, ne peuvent pas être mappées sur le même attribut dans XDM.
+
+Pour créer une [!DNL Analytics] connexion source, sélectionnez une suite de rapports, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -60,7 +66,7 @@ L’écran permettant dʼ&#x200B;**[!UICONTROL Ajouter des données à la source
 
 >[!IMPORTANT]
 >
->La prise en charge de la préparation des données pour la source [!DNL Analytics] est actuellement en version Beta. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
+>Les transformations de préparation des données peuvent ajouter une latence au flux de données global. La latence supplémentaire ajoutée varie en fonction de la complexité de la logique de transformation.
 
 Avant de pouvoir mapper vos données [!DNL Analytics] à un schéma XDM cible, vous devez d’abord déterminer si vous utilisez un schéma par défaut ou un schéma personnalisé.
 
