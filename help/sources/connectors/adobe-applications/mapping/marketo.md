@@ -5,7 +5,7 @@ title: Mappage des champs pour la source du Marketo Engage
 topic-legacy: overview
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3f4c7c5a5b792476cb46afe886af5a469edfe745
+source-git-commit: 765a56919afa3325db2e7881664e37d16eaeaac5
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 10%
