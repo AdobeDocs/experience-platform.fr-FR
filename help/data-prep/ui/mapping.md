@@ -3,10 +3,10 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv�
 title: Guide de l’interface utilisateur de la préparation des données
 description: Ce document fournit des instructions sur la manière d’utiliser les fonctions de préparation des données dans l’interface utilisateur de Platform pour mapper des fichiers CSV à un schéma XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
-workflow-type: ht
-source-wordcount: '1665'
-ht-degree: 100%
+source-git-commit: edef8843c03282774991f30220504ece97af52cf
+workflow-type: tm+mt
+source-wordcount: '1837'
+ht-degree: 90%
 
 ---
 
@@ -168,6 +168,34 @@ Le panneau **[!UICONTROL Créer un champ calculé]** sʼaffiche. La boîte de di
 Vous pouvez ajouter manuellement des champs, des fonctions et des opérateurs à lʼaide de lʼéditeur dʼexpression situé au centre. Sélectionnez lʼéditeur pour commencer à créer une expression. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** pour continuer.
 
 ![create-calculated-field](../images/ui/mapping/create-calculated-field.png)
+
+### Mappage d’importation {#import}
+
+Vous pouvez réutiliser le mappage d’un flux de données existant afin de réduire la durée de configuration manuelle de votre ingestion de données et de limiter les erreurs. Sélectionner **[!UICONTROL Mappage d’importation]** pour réutiliser un mappage existant.
+
+![import-mapping](../images/ui/mapping/import-mapping.png)
+
+Le [!UICONTROL Mappage d’importation] s’affiche, vous indiquant la liste des flux de données à choisir.
+
+Sélectionnez l’icône d’aperçu pour prévisualiser le mappage du flux de données que vous avez sélectionné.
+
+![list-mapping](../images/ui/mapping/list-mapping.png)
+
+La fenêtre d’aperçu vous permet d’examiner le mappage existant avant de l’importer dans votre flux de données. Une fois que vous avez vérifié le mappage, vous pouvez sélectionner **[!UICONTROL Précédent]** pour revenir à la liste des flux de données et inspecter un autre ensemble de mappages, vous pouvez également sélectionner **[!UICONTROL Sélectionner]** pour continuer.
+
+![prévisualisation-mapping](../images/ui/mapping/preview-mapping.png)
+
+Vous pouvez également sélectionner le mappage à importer dans la fenêtre de liste des flux de données. Sélectionnez le flux de données contenant le mappage à importer, puis sélectionnez **[!UICONTROL Sélectionner]** pour continuer.
+
+![select-mapping](../images/ui/mapping/select-mapping.png)
+
+L’interface se met à jour avec le mappage que vous avez importé.
+
+>[!NOTE]
+>
+>Tous les jeux de mappages existants que vous établissez ou que vous recommandez de mapper sont remplacés par le mappage que vous avez importé à partir d’un flux de données existant.
+
+![mapping-import](../images/ui/mapping/mapping-imported.png)
 
 Sélectionnez **[!UICONTROL Prévisualiser des données]** pour afficher les résultats de mappage de 100 lignes maximum de données d’exemple du jeu de données sélectionné.
 
