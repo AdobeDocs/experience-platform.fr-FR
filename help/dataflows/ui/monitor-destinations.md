@@ -6,9 +6,9 @@ title: Surveillance des flux de données pour les destinations dans l’interfac
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
+source-git-commit: 1bb3db196ed603a5a9ba0dcf9d54419d36a6ed51
 workflow-type: tm+mt
-source-wordcount: '3363'
+source-wordcount: '3190'
 ht-degree: 2%
 
 ---
@@ -164,29 +164,6 @@ La page de détails d’un flux de données, en plus des détails affichés dans
 La page Détails affiche également une liste des identités qui ont échoué et des identités qui ont été exclues. Les informations relatives aux identités ayant échoué et exclues s’affichent, y compris le code d’erreur et la description. Par défaut, la liste affiche les identités ayant échoué. Pour afficher les identités exclues, sélectionnez la variable **[!UICONTROL Identités exclues]** bascule.
 
 ![Enregistrements de flux de données pour les destinations par lots](../assets/ui/monitor-destinations/dataflow-records-batch.png)
-
-## Tableau de bord Surveillance des tâches de segments {#monitoring-segment-jobs-dashboard}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="Tâches de segmentation"
->abstract="La vue des tâches de segmentation contient des informations sur les tâches d’évaluation et d’exportation pour tous vos segments."
-
-Pour accéder au [!UICONTROL Tâches de segmentation] tableau de bord, sélectionnez **[!UICONTROL Surveillance]** (![icône de surveillance](../assets/ui/monitor-destinations/monitoring-icon.png)) dans le volet de navigation de gauche. Une fois sur le [!UICONTROL Surveillance] page, sélectionnez [!UICONTROL Tâches de segmentation]. Le [!UICONTROL Surveillance] Le tableau de bord contient des mesures et des informations sur les tâches d’évaluation et d’exportation de segments.
-
-![Tableau de bord de surveillance des tâches de segmentation](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
-
-Utilisez la variable [!UICONTROL Tâches de segmentation] tableau de bord pour comprendre si l’évaluation et l’exportation des profils ont lieu à temps et sans aucune exception, de sorte que les services en aval pour l’activation de la destination peuvent avoir les dernières données de profil évaluées.
-
-Les mesures suivantes sont disponibles pour les tâches de segmentation :
-
-| Mesure | Description |
----------|----------|
-| **[!UICONTROL Tâche de segment]** | Indique le nom de la tâche de segmentation. |
-| **[!UICONTROL Type]** | Indique le type de tâche de segmentation : export ou évaluation. Notez que dans les deux cas, la tâche de segmentation évalue ou exporte *all* segments appartenant à une organisation. |
-| **[!UICONTROL Démarrage de tâche]** | Date et heure de début de la tâche de segmentation. |
-| **[!UICONTROL Fin de tâche]** | Date et heure auxquelles la tâche de segmentation s’est terminée. |
-| **[!UICONTROL État]** | État de la tâche terminée : succès ou échec. |
 
 ## Tableau de bord de surveillance des destinations {#monitoring-destinations-dashboard}
 
