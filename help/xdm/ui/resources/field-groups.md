@@ -5,9 +5,9 @@ title: Création et modification de groupes de champs de schéma dans l’interf
 description: Découvrez comment créer et modifier des groupes de champs de schéma dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
+source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,11 @@ Une fois le schéma ouvert dans l’éditeur, vous pouvez commencer. [ajout de c
 
 ## Ajouter des champs à un groupe de champs {#add-fields}
 
-Pour ajouter des champs à un groupe de champs dans le [!DNL Schema Editor], sélectionnez tout d’abord le nom du groupe de champs dans le rail de gauche, puis sélectionnez la variable **plus (+)** en regard du nom du schéma dans la zone de travail.
+>[!NOTE]
+>
+>Cette section porte sur l’ajout de champs à des groupes de champs personnalisés. Pour plus d’informations sur l’ajout de champs personnalisés à des groupes de champs standard, reportez-vous à la section [guide de l’interface utilisateur des schémas](./schemas.md#custom-fields-for-standard-groups).
+
+Pour ajouter des champs à un groupe de champs personnalisé dans le [!DNL Schema Editor], sélectionnez tout d’abord le nom du groupe de champs dans le rail de gauche, puis sélectionnez la variable **plus (+)** en regard du nom du schéma dans la zone de travail.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 

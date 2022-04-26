@@ -4,9 +4,9 @@ description: Découvrez comment ajouter individuellement des champs provenant de
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
+source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Les workflows décrits dans ce document sont actuellement en version bêta et votre entreprise peut ne pas y avoir encore accès. Les fonctionnalités décrites dans cette documentation peuvent faire l’objet de modifications.
+>Les workflows décrits dans ce document bêta sont désormais disponibles en général dans Adobe Experience Platform. Pour obtenir des conseils à jour sur les workflows basés sur les champs dans l’éditeur de schémas, reportez-vous à la section [guide de l’interface utilisateur des schémas](./resources/schemas.md) au lieu de . Ce guide sera bientôt supprimé.
 
 Adobe Experience Platform fournit un ensemble robuste de [groupes de champs](../schema/composition.md#field-group) à utiliser dans les schémas de modèle de données d’expérience (XDM). La structure et la sémantique derrière ces groupes de champs sont soigneusement conçues pour répondre à un large éventail de cas d’utilisation de la segmentation et à d’autres applications en aval dans Platform. Vous pouvez également définir vos propres groupes de champs personnalisés pour répondre à des besoins professionnels uniques.
 
