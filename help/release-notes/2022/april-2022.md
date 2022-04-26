@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Avril 2022
 description: Notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
-source-git-commit: fe30444fb2d11c38433c73d88ee4c8e9a32bdff8
+source-git-commit: d09eb2e71a5ebce31aeaf8560c20f0c8595f5d19
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 21%
+source-wordcount: '1473'
+ht-degree: 30%
 
 ---
 
@@ -15,7 +15,10 @@ ht-degree: 21%
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [Flux de données](#dataflows)
+- [[!DNL Data Prep]](#data-prep)
 - [Modèle de données d’expérience (XDM)](#xdm)
+- [Édition B2B de Real-time Customer Data Platform](#B2B)
+- [Sources](#sources)
 
 ## Flux de données {#dataflows}
 
@@ -30,6 +33,19 @@ Les flux de données sont une représentation des tâches qui déplacent des don
 | Tableau de bord Segments | Vous pouvez désormais utiliser le tableau de bord de surveillance pour surveiller les flux de données des segments. Pour en savoir plus, veuillez lire le guide sur [surveillance des segments dans l’interface utilisateur](../../dataflows/ui/monitor-segments.md) |
 
 Pour des informations plus générales sur les flux de données, reportez-vous à la [présentation des flux de données](../../dataflows/home.md). Pour en savoir plus sur la segmentation, reportez-vous à la section [présentation de la segmentation](../../segmentation/home.md).
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM).
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Prise en charge de la source Adobe Analytics | La source Adobe Analytics prend désormais en charge les fonctionnalités de préparation de données, ce qui vous permet de mapper vos données de suite de rapports Analytics à un schéma XDM cible lors de la création d’un flux de données. Voir le tutoriel sur [création d’une connexion source Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) pour plus d’informations. |
+| Prise en charge de l’importation de règles de mappage existantes | Vous pouvez désormais importer des règles de mappage à partir d’un flux de données existant afin d’accélérer vos configurations de flux de données et de limiter les erreurs. Voir le tutoriel sur [importation de règles de mappage existantes](../../data-prep/ui/mapping.md) pour plus d’informations. |
+
+Pour plus d’informations sur les [!DNL Data Prep], consultez la [[!DNL Data Prep] présentation](../../data-prep/home.md).
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
@@ -86,3 +102,30 @@ XDM est une spécification open source qui fournit des structures et des défini
 
 Pour plus d’informations sur XDM dans Platform, voir [Présentation du système XDM](../../xdm/home.md).
 
+### Édition B2B de Real-time Customer Data Platform {#B2B}
+
+Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de Real-time CDP a été conçue pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux professionnels du marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Prise en charge de `isDeleted` fonctionnalité | Tous [!DNL Marketo] jeux de données, sauf `Activities` prend désormais en charge la fonction `isDeleted` mappage. Le nouveau mappage est automatiquement ajouté à vos flux de données B2B existants. Vous pouvez utiliser la variable `isDeleted` pour filtrer les enregistrements supprimés afin que vos données dans la variable [!DNL Data Lake] est cohérent avec vos données source. Voir [[!DNL Marketo] guide des champs de mappage](../../sources/connectors/adobe-applications/mapping/marketo.md) pour plus d’informations sur `isDeleted`. |
+
+Pour en savoir plus sur Real-time Customer Data Platform B2B Edition, voir [Présentation B2B](../../rtcdp/b2b-overview.md).
+
+## Sources {#sources}
+
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Prise en charge de [!DNL OneTrust Integration] | Vous pouvez désormais utiliser la variable [!DNL OneTrust Integration] source pour ingérer les données de consentement et de préférences de votre [!DNL OneTrust] compte à Platform. Consultez la documentation relative à [création d’un [!DNL OneTrust Integration] connexion source](../../sources/connectors/consent-and-preferences/onetrust.md) pour plus d’informations. |
+| Prise en charge de [!DNL Square] | Vous pouvez désormais utiliser la variable [!DNL Square] source pour ingérer des données de paiement à partir de votre [!DNL Square] compte à Platform. |
+| Prise en charge de la suppression des flux de données Attributs du client | Vous pouvez désormais supprimer les flux de données créés avec le connecteur source Attributs du client. |
+
+Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
