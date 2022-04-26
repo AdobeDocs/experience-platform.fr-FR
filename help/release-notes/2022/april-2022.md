@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Avril 2022
 description: Notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
-source-git-commit: d09eb2e71a5ebce31aeaf8560c20f0c8595f5d19
+source-git-commit: 820fba06d3460408640c816c80f05bff1de227cd
 workflow-type: tm+mt
-source-wordcount: '1473'
-ht-degree: 30%
+source-wordcount: '1999'
+ht-degree: 25%
 
 ---
 
@@ -14,11 +14,37 @@ ht-degree: 30%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [[!DNL Dashboards]](#dashboards)
 - [Flux de données](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Édition B2B de Real-time Customer Data Platform](#B2B)
 - [Sources](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+ Platform propose de nombreux tableaux de bord qui vous permettent d’afficher des informations importantes concernant les données de votre entreprise. Celles-ci sont présentées telles qu’elles sont capturées lors d’aperçus quotidiens.
+
+Les tableaux de bord fournissent des options de création de rapports préconfigurées pour les données de votre entreprise et sont directement intégrés au workflow du marketeur dans Platform. La mise à disposition de ces tableaux de bord ne nécessite pas d’assistance informatique supplémentaire. En outre, ils offrent un gain de temps et d’effort en évitant de recourir à l’exportation et au traitement des données avec une conception et une implémentation d’entreposage de données supplémentaires.
+
+Les widgets suivants sont disponibles via la bibliothèque de widgets sur leurs tableaux de bord respectifs. Consultez la documentation pour plus d’informations sur [comment ajouter des widgets par le biais de la bibliothèque de widgets](../../dashboards/customize/widget-library.md).
+
+| Fonctionnalité | Tableau de bord | Description |
+| --------------------------------------------------------- | ------------- | ----------- |
+| [!UICONTROL Profils de tendance ajoutée] | Profils | Ce widget utilise un graphique linéaire pour illustrer le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, 90 jours ou 12 mois. |
+| [!UICONTROL Audiences mappées à l’état de destination] | Profils | Ce widget affiche le nombre total d’audiences mappées et non mappées dans une seule mesure et utilise un graphique en anneau pour illustrer la différence proportionnelle entre leurs totaux. |
+| [!UICONTROL Taille des audiences] | Profils | Ce widget fournit un tableau à deux colonnes qui répertorie jusqu’à 20 segments et le nombre total d’audiences contenues dans chaque segment. La liste dépend de la stratégie de fusion appliquée et classée de haut en bas en fonction du nombre total d’audiences. |
+| [!UICONTROL Tendance du nombre de profils] | Profils | Ce widget utilise un graphique linéaire pour illustrer la tendance du nombre total de profils contenus dans le système au fil du temps. Les données peuvent être visualisées sur des périodes de 30 jours, 90 jours et 12 mois. |
+| [!UICONTROL Profils d’identité uniques par identité] | Profils | Ce widget utilise un graphique à barres pour illustrer le nombre total de profils qui sont identifiés avec un seul identifiant unique. Le widget prend en charge jusqu’à cinq des identités les plus courantes. |
+| [!UICONTROL État de la destination] | Destinations | Ce widget affiche le nombre total de destinations activées sous la forme d’une mesure unique et utilise un graphique en anneau pour illustrer la différence proportionnelle entre les destinations activées et désactivées. |
+| [!UICONTROL Destinations principales par plateforme de destination] | Destinations | Ce widget utilise un tableau à deux colonnes pour afficher la liste des plateformes de destination principales et le nombre total de destinations principales pour chaque plateforme de destination. |
+| [!UICONTROL Audiences activées sur toutes les destinations] | Destinations | Ce widget fournit le nombre total d’audiences activées sur toutes les destinations dans une seule mesure. |
+| [!UICONTROL Ordre d’activation de l’audience] | Segments | Ce widget fournit un tableau à trois colonnes qui répertorie le nom de destination, la plateforme et la date d’activation de l’audience. |
+| [!UICONTROL Tendance de la taille de l’audience] | Segments | Ce widget fournit une représentation graphique linéaire pour le nombre total de profils qui répondent aux critères d’une définition de segment sur des périodes de 30 jours, 90 jours et 12 mois. |
+| [!UICONTROL Tendance de changement de la taille de l’audience] | Segments | Ce widget fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour un segment donné et les instantanés quotidiens les plus récents. La période d’analyse des tendances peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. |
+| [!UICONTROL Tendance de la taille de l’audience par identité] | Segments | Ce widget illustre la tendance de la taille de l’audience d’un segment particulier en fonction d’un type d’identité sélectionné. La période d’analyse des tendances peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. |
+
+Consultez la documentation pour plus d’informations sur [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), et [[!DNL Segments]](../../dashboards/guides/segments.md) tableaux de bord.
 
 ## Flux de données {#dataflows}
 
