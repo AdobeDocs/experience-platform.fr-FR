@@ -6,14 +6,18 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour créer un connecteur source Marketo Engage dans l’interface utilisateur afin d’importer des données B2B dans Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: cffa2edf5746f0412bf8366c32ea777ca1974334
-workflow-type: ht
-source-wordcount: '1369'
-ht-degree: 100%
+source-git-commit: 8d88af787508f9aeaa7966409b33bf0aae488a87
+workflow-type: tm+mt
+source-wordcount: '1427'
+ht-degree: 95%
 
 ---
 
 # Créer un connecteur source [!DNL Marketo Engage] dans l’interface utilisateur
+
+>[!IMPORTANT]
+>
+>Avant de créer un [!DNL Marketo Engage] connexion source et un flux de données, vous devez d’abord vous assurer que vous disposez de [mappage de votre ID d’organisation Adobe IMS](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. De plus, vous devez vous assurer que vous avez terminé [auto-remplissage de votre [!DNL Marketo] Espaces de noms et schémas B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) avant de créer une connexion source et un flux de données.
 
 Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL Marketo Engage] (ci-après dénommé « [!DNL Marketo] ») dans l’interface utilisateur pour importer des données B2B dans Adobe Experience Platform.
 
