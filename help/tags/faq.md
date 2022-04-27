@@ -2,9 +2,9 @@
 title: Guide de dépannage des balises
 description: Obtenez des réponses aux questions les plus fréquentes à propos des balises dans Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 2181ec15f2d868d1821a5f9926729d2796f2f298
+source-git-commit: c21699af0d08d0f63562910e2174273f0a139538
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1049'
 ht-degree: 97%
 
 ---
@@ -106,4 +106,4 @@ Consultez le guide sur la [gestion des autorisations](./ui/administration/manage
 
 ## Et si j’ai d’autres questions ?
 
-Si vous avez d’autres questions, vous pouvez poser la question suivante sur le [Page de la communauté Collecte de données Adobe Experience Platform](https://adobe.com/go/launchme) sur l’Experience League ou rejoignez le [groupe de Slack officiels pour les développeurs de balises](http://join.connectionsdevs.chat).
+Si vous avez d’autres questions, vous pouvez poser la question suivante sur le [Page de la communauté Collecte de données Adobe Experience Platform](https://adobe.com/go/launchme) sur l’Experience League ou rejoignez le [groupe de Slack officiels pour les développeurs de balises](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
