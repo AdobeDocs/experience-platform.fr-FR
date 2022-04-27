@@ -2,10 +2,11 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;gestion des données;droits de licence;licences;bonnes pratiques
 title: Bonnes pratiques relatives au droit à la licence de Data Management
 description: Ce document décrit les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
-source-git-commit: 3bac35ba5f6e9cde6c1324b11220c523daa1f8cb
+exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '2603'
-ht-degree: 1%
+source-wordcount: '2586'
+ht-degree: 2%
 
 ---
 
@@ -193,7 +194,7 @@ Le tableau suivant présente la liste des fonctionnalités actuellement disponib
 | [Filtres de préparation de données Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Appliquer [!DNL Kafka] filtres pour exclure les données inutiles de l’ingestion |
 | [Filtres du connecteur source Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Application de filtres de connexion source d’Audience Manager pour exclure les données inutiles de l’ingestion |
 | [Allotion des filtres de données du SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Application de filtres d’attributs pour exclure les données inutiles de l’ingestion |
-| [Filtres de données côté serveur](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en-better-data-governance) | Appliquer [!DNL Kafka] pour exclure les données inutiles de l’ingestion.  Consultez la documentation relative à [événements et conditions](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) pour plus d’informations. |
+| [Filtres de données de transfert d’événement](../../tags/ui/event-forwarding/overview.md) | Application côté serveur [!DNL Kafka] pour exclure les données inutiles de l’ingestion.  Consultez la documentation relative à [règles de balise](../../tags/ui/managing-resources/rules.md) pour plus d’informations. |
 | [Interface utilisateur du tableau de bord de l’utilisation des licences](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Afficher un instantané des données liées aux licences de votre entreprise pour Experience Platform |
 | [API du rapport de chevauchement de jeux de données](../../profile/tutorials/dataset-overlap-report.md) | Sort les jeux de données qui contribuent le plus à votre audience adressable |
 | [API de rapport Profils inconnus](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | Produit l’impact de l’application d’une durée de vie pseudonyme pour différents seuils temporels |
