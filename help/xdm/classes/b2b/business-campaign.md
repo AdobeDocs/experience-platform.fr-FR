@@ -2,10 +2,10 @@
 title: Classe de campagne commerciale XDM
 description: Ce document présente la classe XDM Business Campaign dans le modèle de données d’expérience (XDM).
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 5%
+source-wordcount: '239'
+ht-degree: 8%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 [!UICONTROL Campagne commerciale XDM] est une classe XDM (Experience Data Model) standard qui capture les propriétés minimales requises d’une campagne d’entreprise.
 
-![](../../images/classes/b2b/business-campaign.png)
+![Structure de la classe XDM Business Campaign telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-campaign.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
@@ -31,4 +31,6 @@ ht-degree: 5%
 
 {style=&quot;table-layout:auto&quot;}
 
-Consultez le guide sur la [relations de schéma dans l’édition B2B de la plateforme CDP en temps réel](../../tutorials/relationship-b2b.md) pour découvrir comment cette classe correspond conceptuellement aux autres classes B2B et comment vous pouvez établir ces relations dans l’interface utilisateur de Adobe Experience Platform.
+Pour découvrir comment cette classe correspond conceptuellement aux autres classes B2B et comment vous pouvez établir ces relations dans l’interface utilisateur de Adobe Experience Platform, consultez le guide sur [relations de schéma dans l’édition B2B de la plateforme CDP en temps réel](../../tutorials/relationship-b2b.md)
+
+Pour les champs supplémentaires compatibles avec cette classe, voir la référence du groupe de champs pour [[!UICONTROL Détails des campagnes commerciales XDM]](../../field-groups/b2b-campaign/details.md).

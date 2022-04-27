@@ -2,10 +2,10 @@
 title: Classe de relation de personne de compte professionnel XDM
 description: Ce document présente la classe XDM Business Account Person Relation dans le modèle de données d’expérience (XDM).
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 5%
+source-wordcount: '444'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 [!UICONTROL Relation avec la personne du compte d’entreprise XDM] est une classe XDM (Experience Data Model) standard qui capture les propriétés minimales requises d’une personne associée à un compte d’entreprise.
 
-![](../../images/classes/b2b/business-account-person-relation.png)
+![Structure de la classe XDM Business Account Person Relation telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-account-person-relation.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
@@ -30,12 +30,14 @@ ht-degree: 5%
 | `accountPersonID` | Chaîne | Identifiant unique de l’entité de relation compte-personne. |
 | `currencyCode` | Chaîne | Code de devise ISO 4217 utilisé pour la relation entre le compte et la personne. |
 | `isActive` | Booléen | Indique si la relation entre le compte et la personne est principale. |
+| `isDeleted` | Booléen | Indique si cette relation compte-personne a été supprimée dans Marketo Engage.<br><br>Lors de l’utilisation de la variable [Connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tous les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` to `true`, vous pouvez utiliser ce champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
 | `isDirect` | Booléen | Indique s’il s’agit d’une relation directe entre le compte et la personne. |
 | `isPrimary` | Booléen | Indique si la personne est le contact Principal sur ce compte. |
 | `personID` | Chaîne | Identifiant unique de la personne dans la relation compte-personne. |
-| `personRole` | Chaîne | Le rôle de la personne dans la relation entre le compte et la personne. |
+| `personRoles` | Tableau de chaînes | Répertorie les rôles de la personne dans la relation compte-personne. |
 | `relationEndDate` | DateTime | Date à laquelle la relation entre le compte et la personne s’est terminée. |
 | `relationStartDate` | DateTime | Date à laquelle la relation entre le compte et la personne a commencé. |
+| `relationshipSource` | Chaîne | Source de la relation compte-personne. |
 
 {style=&quot;table-layout:auto&quot;}
 
