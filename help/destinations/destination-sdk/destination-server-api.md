@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée d’API `/authoring/destination-servers`. Les spécifications du serveur et du modèle pour votre destination peuvent être configurées dans Adobe Experience Platform Destination SDK via le point d’entrée commun `/authoring/destination-servers`.
 title: Opérations de l’API du point d’entrée du serveur de destination
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 6bdb7a3ce6e9f37070dceff8b0226bd6cd53038b
-workflow-type: ht
-source-wordcount: '1454'
-ht-degree: 100%
+source-git-commit: ce63d602e768d04ba7fdc6aded34869682ee7206
+workflow-type: tm+mt
+source-wordcount: '1382'
+ht-degree: 95%
 
 ---
 
@@ -65,11 +65,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Paramètre | Type | Description |
 | -------- | ----------- | ----------- |
-| `name` | Chaîne | *Obligatoire.* Représente un nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible pour les partenaires ou les clients. Exemple `Moviestar destination server`. |
+| `name` | Chaîne | *Obligatoire.* Représente le nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible pour les partenaires ou les clients. Par exemple, `Moviestar destination server`. |
 | `destinationServerType` | Chaîne | *Obligatoire.* Définissez sur `URL_BASED` pour les destinations de diffusion en continu. |
 | `urlBasedDestination.url.templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point d’entrée tel que : `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire du côté d’Adobe, par exemple si vous avez un point d’entrée tel que : `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point d’entrée d’API auquel Experience Platform doit se connecter. |
-| `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilisera dans les appels à votre serveur. Les options sont `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Les options sont les suivantes : `GET`, `PUT`, `POST`, `DELETE` ou `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
 | `httpTemplate.requestBody.value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec échappement par des caractères qui transforme les données des clients Platform au format attendu par votre service. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](./message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour un exemple de transformation simple, reportez-vous à la transformation [Attributs de profil](./message-format.md#attributes). </li></ul> |
 | `httpTemplate.contentType` | Chaîne | *Obligatoire.* Type de contenu que votre serveur accepte. Cette valeur est probablement `application/json`. |
@@ -82,11 +82,13 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la configu
 
 ## Créer une configuration pour un serveur de destination basé sur des fichiers {#create-file-based}
 
-### Exemple : créez une configuration pour un serveur de destination SFTP
-
 >[!IMPORTANT]
 >
 >La prise en charge des destinations basées sur des fichiers dans Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
+
+### Exemple de configuration du serveur de destination SFTP {#sftp-server-sample}
+
++++Afficher un exemple pour un [!DNL SFTP] configuration du serveur de destination
 
 Vous pouvez créer une nouvelle configuration de serveur de destination SFTP en effectuant une requête POST vers le point d’entrée `/authoring/destination-servers`.
 
@@ -192,11 +194,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
 +++
 
-+++Exemple : créez une configuration pour un serveur de destination Amazon S3
+### [!DNL Amazon S3] Exemple de configuration du serveur de destination {#s3-server-sample}
 
->[!IMPORTANT]
->
->La prise en charge des destinations basées sur des fichiers dans Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
++++Afficher un exemple pour un [!DNL Amazon S3] configuration du serveur de destination
 
 Vous pouvez créer une nouvelle configuration de serveur de destination Amazon S3 en effectuant une requête POST au point d’entrée `/authoring/destination-servers`.
 
@@ -303,16 +303,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
 +++
 
-+++Exemple : créez une configuration pour un serveur de destination Azure Blob
+### [!DNL Azure Blob] Exemple de configuration du serveur de destination {#blob-server-sample}
 
->[!IMPORTANT]
->
->La prise en charge des destinations basées sur des fichiers dans Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
++++Afficher un exemple pour un [!DNL Azure Blob] configuration du serveur de destination
 
 Vous pouvez créer une configuration de serveur de destination Azure Blob en effectuant une requête POST au point d’entrée `/authoring/destination-servers`.
 
 **Format d’API**
-
 
 ```http
 POST /authoring/destination-servers
@@ -415,16 +412,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
 +++
 
-+++Exemple : créez une configuration pour un serveur de destination Azure Data Lake Storage (ADLS)
+### [!DNL Azure Data Lake Storage] Exemple de configuration du serveur de destination {#adls-server-sample}
 
->[!IMPORTANT]
->
->La prise en charge des destinations basées sur des fichiers dans Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
++++Afficher un exemple pour un [!DNL Azure Data Lake Storage (ADLS)] configuration du serveur de destination
 
 Vous pouvez créer une nouvelle configuration de serveur de destination en effectuant une requête POST vers le point d’entrée `/authoring/destination-servers`.
 
 **Format d’API**
-
 
 ```http
 POST /authoring/destination-servers
@@ -523,18 +517,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Une réponse réussie renvoie un état HTTP 200 avec les détails de la configuration du serveur de destination que vous venez de créer.
 +++
 
-+++Exemple : créez une configuration pour un serveur de destination Data Landing Zone (DLZ)
+### [!DNL Data Landing Zone] Exemple de configuration du serveur de destination (DLZ) {#dlz-server-sample}
 
->[!IMPORTANT]
->
->La prise en charge des destinations basées sur des fichiers dans Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer.
++++Afficher un exemple pour un [!DNL Data Landing Zone (DLZ)] configuration du serveur de destination
 
-[!DNL Data Landing Zone] ([!DNL DLZ]) est une interface de stockage [!DNL Azure Blob] fournie par Adobe Experience Platform et qui vous permet d’accéder à une fonctionnalité de stockage de fichiers sécurisée basée sur le cloud pour importer des fichiers dans Platform. Voir
+[!DNL Data Landing Zone] ([!DNL DLZ]) est une interface de stockage [!DNL Azure Blob] fournie par Adobe Experience Platform et qui vous permet d’accéder à une fonctionnalité de stockage de fichiers sécurisée basée sur le cloud pour importer des fichiers dans Platform.
 
 Vous pouvez créer une nouvelle configuration de serveur de destination DLZ en effectuant une requête POST vers le point d’entrée `/authoring/destination-servers`.
 
 **Format d’API**
-
 
 ```http
 POST /authoring/destination-servers
@@ -640,7 +631,6 @@ Vous pouvez récupérer une liste de toutes les configurations de serveur de des
 
 **Format d’API**
 
-
 ```http
 GET /authoring/destination-servers
 ```
@@ -741,7 +731,6 @@ Vous pouvez mettre à jour une configuration de serveur de destination existante
 
 **Format d’API**
 
-
 ```http
 PUT /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -788,7 +777,6 @@ Vous pouvez récupérer des informations détaillées sur une configuration de s
 
 **Format d’API**
 
-
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -832,7 +820,6 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 }
 ```
 
-
 ## Supprimer une configuration de serveur de destination spécifique {#delete}
 
 Vous pouvez supprimer une configuration de serveur de destination spécifiée en effectuant une requête DELETE au point d’entrée `/authoring/destination-servers` et en fournissant l’identifiant de la configuration de serveur de destination que vous souhaitez supprimer du chemin d’accès de la requête.
@@ -863,7 +850,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une réponse HTTP vide.
 
 ## Gestion des erreurs d’API
 
-Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes dʼétat d’API](../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes dʼétat d’API](../../landing/troubleshooting.md#api-status-codes) et [Erreurs dʼen-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
 
 ## Étapes suivantes
 
