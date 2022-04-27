@@ -6,9 +6,9 @@ title: Configuration d’une instance Customer AI
 topic-legacy: Instance creation
 description: Intelligent Services fournit Customer AI en tant que service Adobe Sensei simple d’emploi pouvant être configuré pour de multiples cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: c4e1d739bf54cbebf6a04d87f92d0df4bdbc083e
 workflow-type: tm+mt
-source-wordcount: '2608'
+source-wordcount: '2618'
 ht-degree: 11%
 
 ---
@@ -62,9 +62,9 @@ Vous trouverez ci-dessous des informations importantes sur les valeurs que vous 
 
 Indiquez les valeurs requises, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
-## Choix des données {#select-data}
+## Sélectionner les données {#select-data}
 
-Par conception, Customer AI utilise les données Adobe Analytics, Adobe Audience Manager, Experience Event et Consumer Experience Event pour calculer les scores de propension. Lors de la sélection d’un jeu de données, seuls les jeux compatibles avec Customer AI sont répertoriés. Pour sélectionner un jeu de données, sélectionnez (**+**) en regard du nom du jeu de données ou cochez la case pour ajouter plusieurs jeux de données à la fois. Utilisez l’option de recherche pour trouver rapidement les jeux de données qui vous intéressent.
+Par conception, Customer AI utilise Adobe Analytics, Adobe Audience Manager, les événements d’expérience en général et les données d’événement d’expérience client pour calculer les scores de propension. Lors de la sélection d’un jeu de données, seuls les jeux compatibles avec Customer AI sont répertoriés. Pour sélectionner un jeu de données, sélectionnez (**+**) en regard du nom du jeu de données ou cochez la case pour ajouter plusieurs jeux de données à la fois. Utilisez l’option de recherche pour trouver rapidement les jeux de données qui vous intéressent.
 
 ![Sélection et recherche d’un jeu de données](../images/user-guide/configure-dataset-page.png)
 
@@ -90,7 +90,9 @@ Il existe une valeur de pourcentage d’exhaustivité du jeu de données dans l�
 
 ### Sélection d’une identité {#identity}
 
-Pour que plusieurs jeux de données se rejoignent les uns les autres, vous devez sélectionner un type d’identité (également appelé &quot;espace de noms d’identité&quot;) et une valeur d’identité dans cet espace de noms. Si vous avez affecté plusieurs champs en tant qu’identité dans votre schéma sous le même espace de noms, toutes les valeurs d’identité attribuées apparaissent dans la liste déroulante d’identité précédée de l’espace de noms tel que `EMAIL (personalEmail.address)` ou `EMAIL (workEmail.address)`.
+Vous pouvez désormais joindre plusieurs jeux de données les uns aux autres en fonction de la carte d’identité (champ). Vous devez sélectionner un type d’identité (également appelé &quot;espace de noms d’identité&quot;) et une valeur d’identité dans cet espace de noms. Si vous avez affecté plusieurs champs en tant qu’identité dans votre schéma sous le même espace de noms, toutes les valeurs d’identité attribuées apparaissent dans la liste déroulante d’identité précédée de l’espace de noms tel que `EMAIL (personalEmail.address)` ou `EMAIL (workEmail.address)`.
+
+[sélectionner le même espace de noms](../images/user-guide/cai-identity-map.png)
 
 >[!IMPORTANT]
 >
@@ -98,7 +100,8 @@ Pour que plusieurs jeux de données se rejoignent les uns les autres, vous devez
 
 Pour sélectionner une identité, sélectionnez la valeur soulignée située dans la colonne d’identité. La fenêtre contextuelle Sélectionner une identité s’affiche.
 
-![sélectionner le même espace de noms](../images/user-guide/identity-type.png)
+<!-- ![select same namespace](../images/user-guide/identity-type.png) -->
+[sélectionner le même espace de noms](../images/user-guide/cai-identity-namespace.png)
 
 Dans le cas où plusieurs identités sont disponibles dans un espace de noms, veillez à sélectionner le champ d’identité approprié à votre cas d’utilisation. Par exemple, deux identités de courrier électronique sont disponibles dans l’espace de noms de courrier électronique, un courrier électronique professionnel et un courrier électronique personnel. Selon le cas d’utilisation, un email personnel est plus susceptible d’être renseigné et plus utile dans les prédictions individuelles. Cela signifie que `EMAIL (personalEmail.address)` est sélectionné comme identité.
 
@@ -116,7 +119,8 @@ Le **[!UICONTROL Définition d’un objectif]** s’affiche et fournit un enviro
 
 Pour créer un objectif, sélectionnez **[!UICONTROL Saisir le nom du champ]** et suivi d’un champ de la liste déroulante. Sélectionnez la seconde entrée, une clause pour la condition de l’événement, puis éventuellement la valeur cible pour terminer l’événement. D’autres événements peuvent être configurés en sélectionnant **[!UICONTROL Ajouter un événement]**. Enfin, atteignez l’objectif en appliquant une période de prédiction en nombre de jours, puis sélectionnez **[!UICONTROL Suivant]**.
 
-![](../images/user-guide/define-a-goal.png)
+<!-- ![](../images/user-guide/define-a-goal.png) -->
+![](../images/user-guide/cai-define-a-goal.png)
 
 ### Se produira et ne se produira pas
 
@@ -124,7 +128,8 @@ Lors de la définition de votre objectif, vous avez la possibilité de sélectio
 
 Par exemple, si vous souhaitez configurer une application pour prédire si un client effectuera un achat, vous pouvez sélectionner **[!UICONTROL Se produit]** suivie de **[!UICONTROL Tous les]** puis saisissez **commerce.achats.id** (ou un champ similaire) et **[!UICONTROL existe]** comme opérateur.
 
-![se produit](../images/user-guide/occur.png)
+<!-- ![will occur](../images/user-guide/occur.png) -->
+![se produit](../images/user-guide/cai-will-occur.png)
 
 Cependant, il peut arriver que vous souhaitiez prédire si un événement ne se produira pas dans un certain délai. Pour configurer un objectif avec cette option, sélectionnez **[!UICONTROL Ne se produit pas]** dans la liste déroulante de niveau supérieur.
 

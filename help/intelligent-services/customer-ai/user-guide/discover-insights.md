@@ -6,10 +6,10 @@ title: Découvrez les informations sur Customer AI
 topic-legacy: Discovering insights
 description: Ce document sert de guide pour interagir avec les insights d’instance de service dans l’interface utilisateur d’Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 417b3f885f75f107d2db06331053917a76c904c4
 workflow-type: tm+mt
-source-wordcount: '1716'
-ht-degree: 37%
+source-wordcount: '2079'
+ht-degree: 31%
 
 ---
 
@@ -169,7 +169,7 @@ Pour afficher votre nouveau segment dans l’interface utilisateur de Platform, 
 
 ![Tous vos segments](../images/insights/Segments-dashboard.png)
 
-## Mesures de synthèse des performances {#performance-metrics}
+## Performance historique {#historical-performance}
 
 Le **[!UICONTROL Synthèse des performances]** affiche les taux d’attrition ou de conversion réels, séparés dans chacun des compartiments de propension notés par Customer AI.
 
@@ -192,6 +192,37 @@ La moitié inférieure de la **[!UICONTROL Synthèse des performances]** affiche
 Selon que vous prédites une perte de clientèle ou une conversion, la variable [!UICONTROL Distribution des scores] Le graphique affiche la distribution des profils générés/convertis et non pas générés/non convertis à chaque incrément.
 
 ![notation individuelle](../images/insights/scoring_tab.png)
+
+## Évaluation de modèles {#model-evaluation}
+
+Outre le suivi des résultats prévus et réels au fil du temps sur l’onglet Performances historiques , les marketeurs disposent d’encore plus de transparence sur la qualité du modèle dans l’onglet Évaluation du modèle . Vous pouvez utiliser les graphiques Effet élévateur et Gains pour déterminer les différences d’utilisation d’un modèle prédictif par rapport au ciblage aléatoire. De plus, vous pouvez déterminer le nombre de résultats positifs capturés à chaque exclusion de score. Cela s’avère utile pour la segmentation et l’alignement du retour sur investissement avec les actions marketing.
+
+### Graphique de l’effet élévateur
+
+![graphique d’effet](../images/user-guide/lift-chart.png)
+
+Le graphique de l’effet élévateur mesure l’amélioration de l’utilisation d’un modèle prédictif au lieu du ciblage aléatoire.
+
+Les indicateurs de modèle de haute qualité incluent :
+
+- Valeurs d’effet élévateur élevées dans les premiers déciles. Cela signifie que le modèle est bon pour identifier les utilisateurs ayant la plus forte propension à prendre des mesures d’intérêt.
+- Valeurs de l’effet élévateur descendant. Cela signifie que les clients ayant des scores plus élevés sont plus susceptibles d’effectuer une action d’intérêt que les personnes ayant des scores plus faibles.
+
+### Graphique des gains
+
+![graphique des gains](../images/user-guide/gains-chart.png)
+
+Le graphique des gains cumulés mesure le pourcentage de résultats positifs capturés par les scores de ciblage supérieurs à un certain seuil. Après avoir trié les clients par score de propension de haut en bas, la population est divisée en déciles : 10 groupes de taille égale. Un modèle parfait capturerait tous les résultats positifs dans les déciles à score le plus élevé. Une méthode de ciblage aléatoire de base capture les résultats positifs proportionnellement à la taille du groupe : le ciblage de 30 % des utilisateurs capturerait 30 % des résultats.
+
+Les indicateurs de modèle de haute qualité incluent :
+
+- Les gains cumulés approchent rapidement les 100 %.
+- La courbe des gains cumulés du modèle est plus proche du coin supérieur gauche du graphique.
+- Le graphique des gains cumulés peut être utilisé pour déterminer les limites de score pour la segmentation et le ciblage. Par exemple, si le modèle capture 70 % des résultats positifs dans les 2 premiers déciles de score, le ciblage des utilisateurs ayant PercentileScore > 80 devrait capturer environ 70 % des résultats positifs.
+
+### AUC (surface sous la courbe)
+
+L’AUC reflète la force de la relation entre le classement par score et l’occurrence de l’objectif prévu. Un **AUC** de 0,5 signifie que le modèle n’est pas meilleur qu’une estimation aléatoire. Un **AUC** de 1 signifie que le modèle peut parfaitement prédire qui prendra l’action appropriée.
 
 ## Étapes suivantes
 
