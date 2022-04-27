@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ea04132c5092ce62820b0af1edc95bb1e0a1a16f
+source-git-commit: 7b12a4094be3eed9b562fff2d0274a1e169913f3
 workflow-type: tm+mt
-source-wordcount: '2259'
-ht-degree: 25%
+source-wordcount: '2378'
+ht-degree: 26%
 
 ---
 
@@ -19,6 +19,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [[!DNL Dashboards]](#dashboards)
 - [Flux de données](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
+- [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Édition B2B de Real-time Customer Data Platform](#B2B)
 - [Sources](#sources)
@@ -89,6 +90,23 @@ Pour des informations plus générales sur les flux de données, reportez-vous �
 | Prise en charge de l’importation de règles de mappage existantes | Vous pouvez désormais importer des règles de mappage à partir d’un flux de données existant afin d’accélérer vos configurations de flux de données et de limiter les erreurs. Voir le tutoriel sur [importation de règles de mappage existantes](../../data-prep/ui/mapping.md) pour plus d’informations. |
 
 Pour plus d’informations sur les [!DNL Data Prep], consultez la [[!DNL Data Prep] présentation](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ----------- | ----------- |
+| [Alertes contextuelles pour les flux de données de destination](../../destinations/ui/alerts.md) | Vous pouvez désormais vous abonner à des alertes lors de la création d’un flux de données de destination, afin de recevoir des messages d’alerte concernant l’état, la réussite ou l’échec de votre exécution de flux de données. Vous pouvez choisir de recevoir des alertes dans l’interface utilisateur de l’Experience Platform ou par courrier électronique. |
+
+**Nouvelles destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | Connectez et activez des données à la plateforme publicitaire Criteo. |
+| [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | Connectez et activez les données à la plateforme Sendgrid pour les emails transactionnels et marketing. |
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
