@@ -4,10 +4,10 @@ title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 20%
+source-wordcount: '1156'
+ht-degree: 19%
 
 ---
 
@@ -94,6 +94,7 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 > * Sélectionnez les trois points dans le [!UICONTROL Nom] et utilisez la variable ![Bouton Activer les segments](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activation des segments ]**pour envoyer des segments vers cette destination.
 > * Sélectionnez les trois points dans le [!UICONTROL Nom] et utilisez la variable ![Bouton Supprimer](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Supprimer ]**à [remove](delete-destinations.md) une connexion existante à une destination.
 > * Sélectionnez les trois points dans le [!UICONTROL Nom] et utilisez la variable ![Bouton Afficher dans la surveillance](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Afficher dans la surveillance ]**pour afficher les informations d’activation de cette destination dans le [tableau de bord de surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Sélectionnez les trois points dans le [!UICONTROL Nom] et utilisez la variable ![Abonner aux alertes ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Abonner aux alertes ]**pour vous abonner aux alertes de flux de données de destination. Vous pouvez vous abonner à des alertes pour recevoir des messages concernant l’état, la réussite ou l’échec de l’exécution du flux. Voir [Abonner aux alertes de destination contextuelles](alerts.md) pour obtenir des informations détaillées sur les alertes de flux de données de destination.
 
 
 ![Onglet Parcourir](../assets/ui/workspace/browse-tab.png)
