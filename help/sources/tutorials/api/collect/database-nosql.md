@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une base de données et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 43e7ee264cd436c8c430760e50d5067c8c9ef535
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 98%
@@ -582,7 +582,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "0b090130b58b4819afc78b6dc98b484d",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],

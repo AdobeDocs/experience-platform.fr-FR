@@ -6,8 +6,8 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application de protocoles et les ingérer dans Platform à l’aide de connecteurs source et dʼAPI.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
-workflow-type: ht
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+workflow-type: tm+mt
 source-wordcount: '1276'
 ht-degree: 100%
 
@@ -142,15 +142,15 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 Pour que les données sources soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform contenant les données sources.
 
-Un schéma XDM cible peut être créé en adressant une requête POST à lʼ[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel [Créer un schéma à l’aide de l’API](../../../../xdm/api/schemas.md).
+Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel sur la [création d’un schéma à l’aide de l’API](../../../../xdm/api/schemas.md).
 
 ## Créer un jeu de données cible {#target-dataset}
 
-Un jeu de données cible peut être créé en adressant une requête POST à lʼ[API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
+Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
 
-Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel [Créer un jeu de données à l’aide de l’API](../../../../catalog/api/create-dataset.md).
+Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](../../../../catalog/api/create-dataset.md).
 
 ## Créer une connexion cible {#target-connection}
 
@@ -601,7 +601,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "7409d3017e24a3eb4a2dc21020f7a5b",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],

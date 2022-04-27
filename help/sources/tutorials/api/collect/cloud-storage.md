@@ -6,8 +6,8 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit la procédure à suivre pour récupérer des données à partir d’un stockage cloud tiers afin de les importer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
-workflow-type: ht
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+workflow-type: tm+mt
 source-wordcount: '1575'
 ht-degree: 100%
 
@@ -27,14 +27,14 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données de l’expérience client.
    - [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   - [Guide du développeur de Schema Registry](../../../../xdm/api/getting-started.md) : inclut des informations importantes à connaître afin dʼeffectuer correctement des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
-- [[!DNL Catalog Service]](../../../../catalog/home.md) : le catalogue constitue le système d’enregistrement de l’emplacement et de la traçabilité des données dans Experience Platform.
-- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md) : l’API Batch Ingestion vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots.
-- [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+   - [Guide du développeur de Schema Registry](../../../../xdm/api/getting-started.md) : inclut des informations importantes à connaître avant dʼeffectuer des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
+- [[!DNL Catalog Service]](../../../../catalog/home.md) : Catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Experience Platform.
+- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md) : l’API Batch Ingestion vous permet d’ingérer des données dans Experience Platform sous forme de fichiers séquentiels.
+- [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une seule instance de Platform en environnements virtuels distincts afin de favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ### Utiliser les API Platform
 
-Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide de [Prise en main des API Platform](../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer correctement des appels vers les API Platform, consultez le guide de [Prise en main des API Platform](../../../../landing/api-guide.md).
 
 ## Créer une connexion source {#source}
 
@@ -106,7 +106,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion source nouvellement créée. Cet identifiant est requis lors d’une étape ultérieure pour créer un flux de données.
+Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion source. Cet identifiant est requis lors d’une étape ultérieure pour créer un flux de données.
 
 ```json
 {
@@ -177,15 +177,15 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 
 Pour que les données sources soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform contenant les données sources.
 
-Un schéma XDM cible peut être créé en effectuant une requête POST auprès de l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, consultez le tutoriel pour savoir comment [créer un schéma à l’aide de l’API](../../../../xdm/api/schemas.md).
+Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel sur la [création d’un schéma à l’aide de l’API](../../../../xdm/api/schemas.md).
 
 ## Créer un jeu de données cible {#target-dataset}
 
-Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), en fournissant l’identifiant du schéma cible dans la payload.
+Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
 
-Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, consultez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](../../../../catalog/api/create-dataset.md).
+Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](../../../../catalog/api/create-dataset.md).
 
 ## Créer une connexion cible {#target-connection}
 
@@ -230,7 +230,7 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `data.schema.id` | Le `$id` du schéma XDM cible. |
+| `data.schema.id` | `$id` du schéma XDM cible. |
 | `data.schema.version` | La version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full+json;version=1`, qui renvoie la dernière version mineure du schéma. |
 | `params.dataSetId` | L’identifiant du jeu de données cible. |
 | `connectionSpec.id` | Identifiant de spécification de connexion fixe au lac de données. Cet identifiant est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
@@ -347,7 +347,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la spécification du flux de données responsable de l’importation des données de votre source dans Platform. La réponse inclut la spécification de flux unique `id` requis pour créer un nouveau flux de données.
+Une réponse réussie renvoie les détails de la spécification du flux de données responsable de l’importation des données de votre source dans Platform. La réponse inclut la valeur `id` unique de spécification de flux requise pour créer un flux de données.
 
 ```json
 {
@@ -528,7 +528,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "bf5286a9c1ad4266baca76ba3adc9366",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],
@@ -542,9 +542,9 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `flowSpec.id` | L’[identifiant de spécification de flux](#specs) récupéré à l’étape précédente. |
-| `sourceConnectionIds` | L’[identifiant de connexion source](#source) récupéré lors d’une étape précédente. |
-| `targetConnectionIds` | L’[identifiant de connexion cible](#target-connection) récupéré lors d’une étape précédente. |
+| `flowSpec.id` | [Identifiant de spécification de flux](#specs) récupéré à l’étape précédente. |
+| `sourceConnectionIds` | [Identifiant de connexion source](#source) récupéré lors d’une étape précédente. |
+| `targetConnectionIds` | [Identifiant de connexion cible](#target-connection) récupéré lors d’une étape précédente. |
 | `transformations.params.mappingId` | L’[identifiant de mappage](#mapping) récupéré lors d’une étape précédente. |
 | `scheduleParams.startTime` | Heure de début du flux de données en temps Unix. |
 | `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
@@ -552,7 +552,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données créé.
+Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvellement créé.
 
 ```json
 {

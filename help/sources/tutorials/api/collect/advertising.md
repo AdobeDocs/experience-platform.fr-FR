@@ -6,8 +6,8 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application publicitaire tierce et les ingérer dans Platform à l’aide des connecteurs source et de l’API Flow Service.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 964bdaab8a90983f1e40b33720580110ac9e40fe
-workflow-type: ht
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 100%
 
@@ -29,8 +29,8 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Guide du développeur de Schema Registry](../../../../xdm/api/getting-started.md) : inclut des informations importantes à connaître avant dʼeffectuer des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
 * [[!DNL Catalog Service]](../../../../catalog/home.md) : Catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Experience Platform.
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md) : l’API Batch Ingestion vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots.
-* [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandboxes virtuelles qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md) : l’API Batch Ingestion vous permet d’ingérer des données dans Experience Platform sous forme de fichiers séquentiels.
+* [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une seule instance de Platform en environnements virtuels distincts afin de favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ### Utiliser les API Platform
 
@@ -140,15 +140,15 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 Pour que les données sources soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform contenant les données sources.
 
-Un schéma XDM cible peut être créé en adressant une requête POST à lʼ[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel [Créer un schéma à l’aide de l’API](../../../../xdm/api/schemas.md).
+Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel sur la [création d’un schéma à l’aide de l’API](../../../../xdm/api/schemas.md).
 
 ## Créer un jeu de données cible {#target-dataset}
 
-Un jeu de données cible peut être créé en adressant une requête POST à lʼ[API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
+Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
 
-Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel [Créer un jeu de données à l’aide de l’API](../../../../catalog/api/create-dataset.md).
+Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](../../../../catalog/api/create-dataset.md).
 
 ## Créer une connexion cible {#target-connection}
 
@@ -193,10 +193,10 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `data.schema.id` | Lʼ`$id` du schéma XDM cible. |
+| `data.schema.id` | `$id` du schéma XDM cible. |
 | `data.schema.version` | La version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full+json;version=1`, qui renvoie la dernière version mineure du schéma. |
 | `params.dataSetId` | L’identifiant du jeu de données cible. |
-| `connectionSpec.id` | L’identifiant de spécification de connexion utilisé pour la connexion au lac de données. Cet identifiant est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | L’identifiant de spécification de connexion utilisé pour la connexion au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
 {
@@ -209,7 +209,7 @@ curl -X POST \
 
 Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache.
 
-Pour créer un jeu de mappage, envoyez une requête POST au point dʼentrée `mappingSets` de [[!DNL Data Prep] l’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) et indiquez dans la payload votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
+Pour créer un jeu de mappage, envoyez une requête POST au point dʼentrée `mappingSets` de lʼ[[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) et indiquez votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
 
 **Format d’API**
 
@@ -302,7 +302,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la spécification du flux de données responsable de l’importation des données de votre source dans Platform. La réponse inclut la spécification de flux unique `id` nécessaire pour créer un flux de données.
+Une réponse réussie renvoie les détails de la spécification du flux de données responsable de l’importation des données de votre source dans Platform. La réponse inclut la valeur `id` unique de spécification de flux requise pour créer un flux de données.
 
 ```json
 {
@@ -587,7 +587,7 @@ curl -X POST \
             "name": "Mapping",
             "params": {
                 "mappingId": "febec6a6785e45ea9ed594422cc483d7",
-                "mappingVersion": "0"
+                "mappingVersion": 0
                 }
             }
         ],
@@ -609,7 +609,7 @@ curl -X POST \
 | `transformations.params.mappingId` | Identifiant de mappage associé à la base de données. |
 | `scheduleParams.startTime` | Heure de début du flux de données en temps Unix. |
 | `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
-| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. L’intervalle n’est pas nécessaire lorsque la fréquence est définie sur `once` et doit être supérieur ou égal à `15` pour les autres valeurs de fréquence. |
+| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. L’intervalle n’est pas requis lorsque la fréquence est définie sur `once` et doit être supérieur ou égal à `15` pour d’autres valeurs de fréquence. |
 
 **Réponse**
 
@@ -624,7 +624,7 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 
 ## Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour plus d’informations sur la surveillance des flux de données, consultez le tutoriel [Surveiller les flux de données dans l’API](../monitor.md).
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour plus d’informations sur la surveillance des flux de données, suivez le tutoriel sur la [surveillance des flux de données dans l’API](../monitor.md).
 
 ## Étapes suivantes
 
