@@ -2,16 +2,22 @@
 title: Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
 description: Extension de balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 22ae7d206d4393719352232dc254d7669ca667bd
+source-git-commit: 54211c6166552ac86382d08da80fde3d9dad1257
 workflow-type: tm+mt
-source-wordcount: '1313'
-ht-degree: 47%
+source-wordcount: '1331'
+ht-degree: 46%
 
 ---
 
 # Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
 
 Ce document couvre les notes de mise à jour de l’extension de balise SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir la section [Notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Version 2.11.1 - 22 avril 2022
+
+* Correction de l’erreur de configuration des commandes de la version 2.11.0.
+
+Contient la version 2.10.0 de la bibliothèque SDK Web de Adobe Experience Platform.
 
 ## Version 2.11.0 - 22 avril 2022
 
