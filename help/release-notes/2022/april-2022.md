@@ -2,7 +2,7 @@
 title: Notes de mise à jour de Adobe Experience Platform - Avril 2022
 description: Notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: b3655b70a44f878a29c6a401e5957660edebeba6
+source-git-commit: e9e4e58de454abb1fc66e07d5ad4ce18398c6a44
 workflow-type: tm+mt
 source-wordcount: '2379'
 ht-degree: 26%
@@ -15,29 +15,14 @@ ht-degree: 26%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Flux de données](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
+- [[!DNL Intelligent Services]](#intelligent-services)
 - [Édition B2B de Real-time Customer Data Platform](#B2B)
 - [Sources](#sources)
-
-## [!DNL Intelligent Services] {#intelligent-services}
-
-Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données.
-
-Attribution AI et Customer AI permettent aux clients de configurer des modèles AI/ML avancés pour l’attribution marketing et la propension des clients. La fonction Jeux de données multiples permet aux clients d’importer plusieurs jeux de données au moment de la configuration du modèle sans avoir à assembler et à préparer les données à l’avance.
-
-**Fonctionnalités mises à jour**
-
-| Fonctionnalité | Description |
-| ------- | ----------- |
-| Prise en charge de jeux de données multiples | La fonction Jeux de données multiples prend désormais en charge tous les jeux de données Experience Event ainsi que la sélection de la carte des identités comme identité. Les clients peuvent sélectionner la carte des identités et les identifiants associés, à condition qu’il existe un espace de noms d’identité commun entre les jeux de données. Attribution AI prend en charge les schémas suivants : Adobe Analytics, Événement d’expérience, Événement d’expérience client. Customer AI prend en charge tous ces schémas ainsi que le schéma Adobe Audience Manager. Pour plus d’informations sur la prise en charge de jeux de données multiples dans Attribution AI et Customer AI, reportez-vous à la section [Guide d’utilisation d’Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) et [Guide d’utilisation de Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). |
-| Nouvelles mesures d’évaluation de modèle dans Customer AI | Les nouveaux graphiques Gains de Customer AI permettent aux marketeurs de déterminer la taille du groupe à cibler en fonction de leur budget et de leurs objectifs de retour sur investissement. Les nouveaux graphiques de l’effet élévateur mesurent la qualité du modèle, offrant ainsi une meilleure visibilité sur l’effet élévateur qu’ils obtiendraient par rapport au ciblage aléatoire. Pour plus d’informations, voir [découvrir des informations avec Customer AI ;](../../intelligent-services/customer-ai/user-guide/discover-insights.md) document. |
-
-Pour plus d’informations sur les [!DNL Intelligent Services], consultez la [[!DNL Intelligent Services] présentation](../../intelligent-services/home.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -162,6 +147,21 @@ XDM est une spécification open source qui fournit des structures et des défini
 {style=&quot;table-layout:auto&quot;}
 
 Pour plus d’informations sur XDM dans Platform, voir [Présentation du système XDM](../../xdm/home.md).
+
+## [!DNL Intelligent Services] {#intelligent-services}
+
+Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données.
+
+Attribution AI et Customer AI permettent aux clients de configurer des modèles AI/ML avancés pour l’attribution marketing et la propension des clients. La fonction Jeux de données multiples permet aux clients d’importer plusieurs jeux de données au moment de la configuration du modèle sans avoir à assembler et à préparer les données à l’avance.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Prise en charge de jeux de données multiples | La fonction Jeux de données multiples prend désormais en charge tous les jeux de données Experience Event ainsi que la sélection de la carte des identités comme identité. Les clients peuvent sélectionner la carte des identités et les identifiants associés, à condition qu’il existe un espace de noms d’identité commun entre les jeux de données. Attribution AI prend en charge les schémas suivants : Adobe Analytics, Événement d’expérience, Événement d’expérience client. Customer AI prend en charge tous ces schémas ainsi que le schéma Adobe Audience Manager. Pour plus d’informations sur la prise en charge de jeux de données multiples dans Attribution AI et Customer AI, reportez-vous à la section [Guide d’utilisation d’Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) et [Guide d’utilisation de Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Nouvelles mesures d’évaluation de modèle dans Customer AI | Les nouveaux graphiques Gains de Customer AI permettent aux marketeurs de déterminer la taille du groupe à cibler en fonction de leur budget et de leurs objectifs de retour sur investissement. Les nouveaux graphiques de l’effet élévateur mesurent la qualité du modèle, offrant ainsi une meilleure visibilité sur l’effet élévateur qu’ils obtiendraient par rapport au ciblage aléatoire. Pour plus d’informations, voir [découvrir des informations avec Customer AI ;](../../intelligent-services/customer-ai/user-guide/discover-insights.md) document. |
+
+Pour plus d’informations sur les [!DNL Intelligent Services], consultez la [[!DNL Intelligent Services] présentation](../../intelligent-services/home.md).
 
 ### Édition B2B de Real-time Customer Data Platform {#B2B}
 
