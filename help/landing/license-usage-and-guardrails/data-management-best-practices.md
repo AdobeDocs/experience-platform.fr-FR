@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;gestion des
 title: Bonnes pratiques relatives au droit à la licence de Data Management
 description: Ce document décrit les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
 workflow-type: tm+mt
-source-wordcount: '2586'
+source-wordcount: '2531'
 ht-degree: 2%
 
 ---
@@ -130,7 +130,8 @@ Plusieurs rapports sont disponibles pour vous aider à comprendre la composition
 
 * **API du rapport de chevauchement de jeux de données**: Expose les jeux de données qui contribuent le plus à votre audience adressable. Vous pouvez utiliser ce rapport pour identifier lequel [!DNL ExperienceEvent] jeux de données pour lesquels définir un TTL. Voir le tutoriel sur [génération du rapport de chevauchement de jeux de données](../../profile/tutorials/dataset-overlap-report.md) pour plus d’informations.
 * **API Rapport de chevauchement d’identités**: Expose les espaces de noms d’identité qui contribuent le plus à votre audience adressable. Voir le tutoriel sur [génération du rapport de chevauchement d’identités](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) pour plus d’informations.
-* **API de rapport Profils inconnus**: Expose l’impact de l’application de TTL pseudonyme pour différents seuils temporels. Vous pouvez utiliser ce rapport pour identifier le seuil TTL pseudonyme à appliquer. Voir le tutoriel sur [génération du rapport des profils inconnus](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) pour plus d’informations.
+<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+-->
 
 #### [!DNL ExperienceEvent] Jeu de données TTL {#dataset-ttl}
 
@@ -197,7 +198,6 @@ Le tableau suivant présente la liste des fonctionnalités actuellement disponib
 | [Filtres de données de transfert d’événement](../../tags/ui/event-forwarding/overview.md) | Application côté serveur [!DNL Kafka] pour exclure les données inutiles de l’ingestion.  Consultez la documentation relative à [règles de balise](../../tags/ui/managing-resources/rules.md) pour plus d’informations. |
 | [Interface utilisateur du tableau de bord de l’utilisation des licences](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Afficher un instantané des données liées aux licences de votre entreprise pour Experience Platform |
 | [API du rapport de chevauchement de jeux de données](../../profile/tutorials/dataset-overlap-report.md) | Sort les jeux de données qui contribuent le plus à votre audience adressable |
-| [API de rapport Profils inconnus](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | Produit l’impact de l’application d’une durée de vie pseudonyme pour différents seuils temporels |
 | [API Rapport de chevauchement d’identités](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Sort les espaces de noms d’identité qui contribuent le plus à votre audience adressable |
 
 {style=&quot;table-layout:auto&quot;}
