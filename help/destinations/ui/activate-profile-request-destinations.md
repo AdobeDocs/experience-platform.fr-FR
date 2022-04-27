@@ -1,19 +1,23 @@
 ---
 keywords: activation des destinations de requête de profil;activation des données;destinations de requête de profil
-title: Activation des données d’audience vers les destinations de requête de profil
+title: Activer les données d’audience vers les destinations de requête de profil
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de requête de profil.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 388a061c87cfe9acda177ed71ed9f6017c8c2f4c
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 9%
+source-wordcount: '467'
+ht-degree: 56%
 
 ---
 
-# Activation des données d’audience vers les destinations de requête de profil
+# Activer les données d’audience vers les destinations de requête de profil
+
+>[!IMPORTANT]
+> 
+>Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 ## Présentation {#overview}
 
@@ -21,35 +25,35 @@ Cet article explique le workflow requis pour activer les données d’audience d
 
 ## Conditions préalables {#prerequisites}
 
-Pour activer les données vers les destinations, vous devez avoir réussi [connecté à une destination](./connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser.
+Pour activer des données vers des destinations, vous devez avoir réussi à vous [connecter à une destination](./connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [catalogue de destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser.
 
 ### Stratégie de fusion de segments {#merge-policy}
 
 Actuellement, les destinations de requête de profil ne prennent en charge que l’activation des segments qui utilisent la variable [Stratégie de fusion principale sur périphérie](../../segmentation/ui/segment-builder.md#merge-policies) défini comme valeur par défaut.
 
-## Sélectionner votre destination {#select-destination}
+## Sélectionnez votre destination {#select-destination}
 
-1. Accédez à **[!UICONTROL Connexions > Destinations]**, puis sélectionnez la variable **[!UICONTROL Catalogue]** .
+1. Accédez à **[!UICONTROL Connexions et destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**.
 
    ![Onglet Catalogue de destinations](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Sélectionner **[!UICONTROL Activation des segments]** sur la carte correspondant à la destination vers laquelle vous souhaitez activer vos segments, comme illustré dans l’image ci-dessous.
+1. Sélectionnez **[!UICONTROL Activer des segments]** sur la vignette correspondant à la destination vers laquelle vous souhaitez activer des segments, tel qu’indiqué sur l’image ci-dessous.
 
    ![Boutons Activer](../assets/ui/activate-profile-request-destinations/activate-segments-button.png)
 
-1. Sélectionnez la connexion de destination à utiliser pour activer vos segments, puis sélectionnez **[!UICONTROL Suivant]**.
+1. Sélectionnez la connexion de destination à utiliser pour activer des segments, puis sélectionner **[!UICONTROL Suivant]**.
 
-   ![Sélectionner la destination](../assets/ui/activate-profile-request-destinations/select-destination.png)
+   ![Sélectionnez des destinations](../assets/ui/activate-profile-request-destinations/select-destination.png)
 
-1. Accédez à la section suivante pour [sélectionner vos segments ;](#select-segments).
+1. Accédez à la section suivante pour [sélectionner des segments](#select-segments).
 
-## Sélection de vos segments {#select-segments}
+## Sélectionnez vos segments {#select-segments}
 
 Utilisez les cases à cocher situées à gauche des noms de segment pour sélectionner les segments que vous souhaitez activer vers la destination, puis sélectionnez **[!UICONTROL Suivant]**.
 
-![Sélection de segments](../assets/ui/activate-profile-request-destinations/select-segments.png)
+![Sélectionnez des segments](../assets/ui/activate-profile-request-destinations/select-segments.png)
 
-## Planification de l’exportation de segments {#scheduling}
+## Planifier l’exportation de segments {#scheduling}
 
 Par défaut, la variable [!UICONTROL Planification du segment] affiche uniquement les segments que vous avez sélectionnés dans le flux d’activation actuel.
 
@@ -71,11 +75,11 @@ Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre s�
 
 >[!IMPORTANT]
 >
->Au cours de cette étape, Adobe Experience Platform recherche les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation d’une stratégie. Vous ne pouvez pas terminer le workflow d’activation du segment tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, voir [Application des stratégies](../../rtcdp/privacy/data-governance-overview.md#enforcement) dans la section documentation sur la gouvernance des données .
+>Au cours de cette étape, Adobe Experience Platform recherche les violations de la stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la stratégie. Vous ne pouvez pas terminer le processus d’activation des segments tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, voir [Application des stratégies](../../rtcdp/privacy/data-governance-overview.md#enforcement) dans la section documentation sur la gouvernance des données.
 
-![violation de la politique de données](../assets/common/data-policy-violation.png)
+![violation de la stratégie de données](../assets/common/data-policy-violation.png)
 
-Si aucune violation de stratégie n’a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer des données à la destination.
+Si aucune violation de stratégie n’a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer la sélection et commencer à envoyer des données à la destination.
 
 ![Révision](../assets/ui/activate-profile-request-destinations/review.png)
 

@@ -6,14 +6,22 @@ description: Cette section contient des instructions détaillées sur l’utilis
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: a8a8b3b9e4fdae11be95d2fa80abc0f356eff345
-workflow-type: ht
-source-wordcount: '3083'
-ht-degree: 100%
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+workflow-type: tm+mt
+source-wordcount: '3129'
+ht-degree: 98%
 
 ---
 
 # Se connecter aux destinations par lots et activer des données à l’aide de l’API Flow Service
+
+>[!IMPORTANT]
+> 
+>Pour vous connecter à une destination, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions).
+>
+>Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+>
+>Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Ce tutoriel vous explique comment utiliser l’API Flow Service pour créer un [espace de stockage par lots dans le cloud](../catalog/cloud-storage/overview.md) ou [une destination de marketing par e-mail](../catalog/email-marketing/overview.md), créer un flux de données vers la destination que vous venez de créer et exporter les données vers cette dernière au moyen de fichiers CSV.
 
@@ -335,7 +343,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++ Exemple de requête de connexion à des destinations [!DNL Azure Blob]
 
-La requête ci-dessous établit une connexion de base à des destinations [!DNL Azure Blob].
+La requête ci-dessous établit une connexion de base aux destinations [!DNL Azure Blob].
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -835,7 +843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `description` | Vous pouvez éventuellement fournir une description de la connexion cible. |
 | `baseConnectionId` | Utilisez l’identifiant de la connexion de base que vous avez créée à l’étape ci-dessus. |
 | `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour la destination par lots de votre choix. Vous avez obtenu cet identifiant à l’étape [Obtenir la liste des destinations disponibles](#get-the-list-of-available-destinations). |
-| `params` | Selon la destination à laquelle vous vous connectez, vous devez fournir différents paramètres requis à votre emplacement de stockage. Pour les connexions Amazon S3, vous devez fournir votre identifiant d’accès et votre clé secrète à votre emplacement de stockage Amazon S3. <br> Pour connaître les paramètres requis pour votre destination, effectuez un [appel GET au point d’entrée des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec) en fournissant la spécification de connexion de la destination souhaitée. Recherchez le paramètre `targetSpec.spec.required` dans la réponse. |
+| `params` | Selon la destination à laquelle vous vous connectez, vous devez fournir différents paramètres requis à votre emplacement de stockage. Pour les connexions Amazon S3, vous devez fournir votre identifiant d’accès et votre clé secrète à votre emplacement de stockage Amazon S3. <br> Pour connaître les paramètres requis pour votre destination, effectuez un [appel GET au point d’entrée des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), en précisant la spécification de connexion de la destination souhaitée. Recherchez le paramètre `targetSpec.spec.required` dans la réponse. |
 | `params.mode` | En fonction du mode pris en charge pour votre destination, vous devez fournir une valeur différente. Pour connaître les paramètres requis pour votre destination, effectuez un [appel GET au point d’entrée des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec) en fournissant la spécification de connexion de la destination souhaitée. Recherchez le paramètre `targetSpec.spec.properties.mode.enum` dans la réponse et sélectionnez le mode souhaité. |
 | `params.bucketName` | Pour les connexions S3, indiquez le nom de l’intervalle où les fichiers seront exportés. |
 | `params.path` | Pour les connexions S3, indiquez le chemin d’accès au fichier dans l’emplacement de stockage où les fichiers seront exportés. |
