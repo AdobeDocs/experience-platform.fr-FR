@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;flux de données de surveillance;api de service de flux;service de flux
 solution: Experience Platform
-title: Surveiller les flux de données à l’aide de l’API Flow Service
+title: Surveillance des flux de données de sources à l’aide de l’API du service de flux
 topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes de surveillance de l’exhaustivité, des erreurs et des mesures relatives aux données d’exécution de flux à l’aide de l’API Flow Service.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
-workflow-type: ht
-source-wordcount: '410'
-ht-degree: 100%
+source-git-commit: 9727f7b0e8eaae92c85f102e5e7bea018a2ee6de
+workflow-type: tm+mt
+source-wordcount: '412'
+ht-degree: 96%
 
 ---
 
-# Surveiller les flux de données à l’aide de l’API Flow Service
+# Surveillance des flux de données de sources à l’aide de l’API Flow Service
 
 Ce tutoriel décrit les étapes de surveillance de l’exhaustivité, des erreurs et des mesures relatives aux données d’exécution des flux à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie des détails sur votre exécution de flux, y compris des informations sur sa date de création, les connexions source et cible, ainsi que l’identifiant unique de l’exécution de flux (`id`).
+Une réponse réussie renvoie des informations concernant votre exécution de flux, notamment : la date de création, les connexions source et cible ainsi que l’identifiant unique de l’exécution de flux (`id`).
 
 ```json
 {
