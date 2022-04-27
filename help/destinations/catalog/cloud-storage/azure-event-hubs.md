@@ -1,22 +1,22 @@
 ---
 keywords: Destination du hub d’événements Azure ; hub d’événements Azure ; thub d’événements azure
-title: (Version bêta) [!DNL Azure Event Hubs] connection
+title: Connexion à Azure Event Hubs
 description: Créez une connexion sortante en temps réel avec votre [!DNL Azure Event Hubs] stockage pour diffuser des données depuis l’Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
+source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
 workflow-type: tm+mt
-source-wordcount: '1371'
-ht-degree: 4%
+source-wordcount: '1926'
+ht-degree: 2%
 
 ---
 
-# (Version bêta) [!DNL Azure Event Hubs] connection
+# Connexion [!DNL Azure Event Hubs]
 
 ## Présentation {#overview}
 
 >[!IMPORTANT]
 >
->Le [!DNL Azure Event Hubs] destination dans Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+> Cette destination n’est disponible que pour [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) clients.
 
 [!DNL Azure Event Hubs] est une plateforme de diffusion en continu de données volumineuses et un service d’ingestion d’événements. Il peut recevoir et traiter des millions d’événements par seconde. Les données envoyées à un hub d’événements peuvent être transformées et stockées à l’aide de n’importe quel fournisseur d’analyses en temps réel ou d’adaptateurs de traitement par lot/stockage.
 
@@ -51,9 +51,25 @@ Pour répondre aux exigences de sécurité et de conformité des clients, Experi
 
 ## Se connecter à la destination {#connect}
 
-Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-### Paramètres de connexion {#parameters}
+Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Lors de la connexion à cette destination, vous devez fournir les informations suivantes :
+
+### Informations d’authentification {#authentication-information}
+
+#### Authentification standard {#standard-authentication}
+
+![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails d’authentification standard Azure Event Hubs](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
+
+Si vous sélectionnez la variable **[!UICONTROL Authentification standard]** Saisissez pour vous connecter à votre point de terminaison HTTP, renseignez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]**:
+
+* **[!UICONTROL Nom de clé SAS]**: Nom de la règle d’autorisation, également appelé nom de clé SAS.
+* **[!UICONTROL Clé SAS]**: Clé Principale de l’espace de noms des centres d’événements. Le `sasPolicy` que la variable `sasKey` correspond à **gérer** droits configurés pour que la liste des centres d’événements soit renseignée. En savoir plus sur l’authentification à [!DNL Azure Event Hubs] avec les clés SAS dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Espace de noms]**: Renseignez vos [!DNL Azure Event Hubs] espace de noms. En savoir plus sur [!DNL Azure Event Hubs] espaces de noms dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+
+#### Authentification SAS (Shared Access Signature) {#sas-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
@@ -65,16 +81,32 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 >title="Inclure les horodatages de segment"
 >abstract="Basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des segments, ainsi que l’horodatage UNIX lorsque les segments ont été mappés à la destination pour activation. Affichez la documentation d’un exemple d’exportation de données avec cette option sélectionnée."
 
-Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
+![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails d’authentification standard Azure Event Hubs](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
+
+Si vous sélectionnez la variable **[!UICONTROL Authentification standard]** Saisissez pour vous connecter à votre point de terminaison HTTP, renseignez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]**:
 
 * **[!UICONTROL Nom de clé SAS]**: Nom de la règle d’autorisation, également appelé nom de clé SAS.
 * **[!UICONTROL Clé SAS]**: Clé Principale de l’espace de noms des centres d’événements. Le `sasPolicy` que la variable `sasKey` correspond à **gérer** droits configurés pour que la liste des centres d’événements soit renseignée. En savoir plus sur l’authentification à [!DNL Azure Event Hubs] avec les clés SAS dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Espace de noms]**: Renseignez vos [!DNL Azure Event Hubs] espace de noms. En savoir plus sur [!DNL Azure Event Hubs] espaces de noms dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL Espace de noms]**: Renseignez vos [!DNL Azure Event Hubs] espace de noms. En savoir plus sur [!DNL Azure Event Hubs] espaces de noms dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+
+### Détails de la destination {#destination-details}
+
+Après avoir établi la connexion d’authentification à la destination Azure Event Hubs, fournissez les informations suivantes pour la destination :
+
+![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails de destination des centres d’événements Azure](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
+
 * **[!UICONTROL Nom]**: Renseignez un nom pour la connexion à [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Fournissez une description de la connexion.  Exemples : &quot;Clients de niveau Premium&quot;, &quot;Clients intéressés par le kitesurfing&quot;.
 * **[!UICONTROL eventHubName]**: Attribuez un nom à la diffusion de [!DNL Azure Event Hubs] destination.
+* **[!UICONTROL Inclure les noms de segment]**: Basculez si vous souhaitez que l’exportation des données contienne les noms des segments que vous exportez. Pour un exemple d&#39;export de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) voir la section ci-dessous.
+* **[!UICONTROL Inclure les horodatages de segment]**: Basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des segments, ainsi que l’horodatage UNIX lorsque les segments ont été mappés à la destination pour activation. Pour un exemple d&#39;export de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) voir la section ci-dessous.
 
 ## Activer des segments vers cette destination {#activate}
+
+>[!IMPORTANT]
+> 
+>Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Voir [Activation des données d’audience vers des destinations d’exportation de profils en continu](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
@@ -107,6 +139,10 @@ Par exemple, considérez ce flux de données comme un [!DNL Azure Event Hubs] de
 Un export de profil vers la destination peut être déterminé par un profil éligible ou sortant de l’un des *trois segments mappés*. Toutefois, dans l’exportation des données, dans la variable `segmentMembership` (voir [Données exportées](#exported-data) ci-dessous), d’autres segments non mappés peuvent apparaître si ce profil particulier en fait partie. Si un profil est admissible pour le segment Client avec des voitures de Lorée, mais qu’il est également membre des segments de fans de films et de science-fiction &quot;Retour vers le futur&quot; de la visionneuse, ces deux autres segments seront également présents dans la variable `segmentMembership` de l’exportation des données, même si elles ne sont pas mappées dans le flux de données.
 
 Du point de vue des attributs de profil, toute modification apportée aux quatre attributs mappés ci-dessus déterminera une exportation de destination et l’un des quatre attributs mappés présents sur le profil sera présent dans l’exportation des données.
+
+## Renvoi de données historiques {#historical-data-backfill}
+
+Lorsque vous ajoutez un nouveau segment à une destination existante, ou lorsque vous créez une destination et lui mappez des segments, Experience Platform exporte les données historiques de qualification de segment vers la destination. Profils qualifiés pour le segment *before* le segment ajouté à la destination est exporté vers la destination dans environ une heure.
 
 ## Données exportées {#exported-data}
 
@@ -165,6 +201,52 @@ Votre exportation [!DNL Experience Platform] Les données arrivent dans votre [!
 }
 ```
 
+Vous trouverez ci-dessous d’autres exemples de données exportées, en fonction des paramètres de l’interface utilisateur que vous sélectionnez dans le flux de connexion à la destination pour le **[!UICONTROL Inclure les noms de segment]** et **[!UICONTROL Inclure les horodatages de segment]** options :
+
++++ L’exemple d’exportation de données ci-dessous inclut les noms de segment dans la variable `segmentMembership` section
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+            "name": "First name equals John"
+          }
+        }
+      }
+```
+
++++
+
++++ L’exemple d’exportation de données ci-dessous inclut des horodatages de segment dans la variable `segmentMembership` section
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+          }
+        }
+      }
+```
+
++++
+
+## Limites et stratégie de reprise {#limits-retry-policy}
+
+Dans 95 % des cas, l’Experience Platform tente d’offrir une latence de débit inférieure à 10 minutes pour les messages envoyés avec succès, avec un taux de moins de 10 000 requêtes par seconde pour chaque flux de données vers une destination HTTP.
+
+En cas d’échec des requêtes vers votre destination d’API HTTP, Experience Platform stocke les requêtes en échec et tente à deux reprises d’envoyer les requêtes à votre point de terminaison .
 
 >[!MORELIKETHIS]
 >

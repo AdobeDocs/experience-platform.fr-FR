@@ -6,9 +6,9 @@ title: Surveillance des flux de données pour les destinations dans l’interfac
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 1bb3db196ed603a5a9ba0dcf9d54419d36a6ed51
+source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
 workflow-type: tm+mt
-source-wordcount: '3190'
+source-wordcount: '3183'
 ht-degree: 2%
 
 ---
@@ -176,7 +176,7 @@ Pour accéder au [!UICONTROL Surveillance] tableau de bord, sélectionnez **[!UI
 
 >[!NOTE]
 >
->La fonctionnalité de surveillance des destinations est actuellement prise en charge pour toutes les destinations dans Experience Platform. *Sauf* la valeur [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Centre d’événements Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), et [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
+>La fonctionnalité de surveillance des destinations est actuellement prise en charge pour toutes les destinations dans Experience Platform. *Sauf* la valeur [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) et [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
 
 Utilisez la variable [!UICONTROL Destinations] tableau de bord pour obtenir une idée générale de l’état de vos flux d’activation. Commencez par obtenir des informations sur un niveau agrégé pour toutes les destinations de lot et de diffusion en continu, puis explorez les vues détaillées des flux de données, des exécutions de flux de données et des segments activés afin d’obtenir un aperçu détaillé de vos données d’activation. Les écrans du [!UICONTROL Surveillance] Le tableau de bord fournit des informations exploitables au moyen de mesures et de descriptions d’erreur afin de vous aider à résoudre les problèmes qui peuvent se produire dans vos scénarios d’activation.
 

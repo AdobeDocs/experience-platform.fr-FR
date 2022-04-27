@@ -1,17 +1,17 @@
 ---
 keywords: destinations;destination;page des détails des destinations;page des détails des destinations
-title: Affichage des détails de destination
+title: Afficher les détails de la destination
 description: 'La page de détails d’une destination individuelle fournit un aperçu des détails de destination. Les détails de la destination incluent le nom de destination, l’identifiant, les segments mappés à la destination et les contrôles permettant de modifier l’activation et d’activer et désactiver le flux de données. '
 seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a129085f034665a6398bbf0ccfe2f1dc8acbdd8a
+source-git-commit: 9928241235cac97b9b9a050256a22f9659e4092f
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 6%
+source-wordcount: '718'
+ht-degree: 7%
 
 ---
 
-# Affichage des détails de destination
+# Afficher les détails de la destination
 
 ## Présentation {#overview}
 
@@ -21,7 +21,7 @@ Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez affiche
 >
 >La page des détails des destinations fait partie de la [!UICONTROL Destinations] de l’espace de travail [!DNL Platform] [!DNL UI]. Voir [[!UICONTROL Destinations] présentation de workspace](./destinations-workspace.md) pour plus d’informations.
 
-## Affichage des détails de destination {#view-details}
+## Afficher les détails de la destination {#view-details}
 
 Suivez les étapes ci-dessous pour afficher plus de détails sur une destination existante.
 
@@ -35,7 +35,7 @@ Suivez les étapes ci-dessous pour afficher plus de détails sur une destination
 
 1. Sélectionnez le nom de la destination à afficher.
 
-   ![Sélectionner la destination](../assets/ui/details-page/destination-select.png)
+   ![Sélectionnez des destinations](../assets/ui/details-page/destination-select.png)
 
 1. La page de détails de la destination s’affiche, affichant ses commandes disponibles.
 
@@ -79,7 +79,9 @@ Le [!UICONTROL Exécutions de flux de données] fournit des données de mesure s
 
 >[!NOTE]
 >
->La fonctionnalité de surveillance des destinations est actuellement prise en charge pour toutes les destinations dans Experience Platform. *Sauf* la valeur [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Centre d’événements Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), et [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
+>* La fonctionnalité de surveillance des destinations est actuellement prise en charge pour toutes les destinations dans Experience Platform. *Sauf* la valeur [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) et [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
+>* Pour le [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Centre d’événements Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), et [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinations, les identités exclues ne sont actuellement pas affichées.
+
 
 ![Vue des exécutions du flux de données](../assets/ui/details-page/dataflow-runs.png)
 

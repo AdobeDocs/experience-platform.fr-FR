@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: d5f83f9d99789afba44e26400d0cea8a72946d7a
+source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 94%
+source-wordcount: '755'
+ht-degree: 93%
 
 ---
 
@@ -93,10 +93,10 @@ ht-degree: 94%
       * [Extension Yext Conversion Tracking](./catalog/analytics/yext.md)
    * Destinations de stockage dans le cloud {#cloud-storage}
       * [Présentation des destinations de stockage dans le cloud](./catalog/cloud-storage/overview.md)
-      * [Connexion Amazon Kinesis (version Beta)](./catalog/cloud-storage/amazon-kinesis.md)
+      * [Connexion à Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Connexion Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Connexion Azure Blob](./catalog/cloud-storage/azure-blob.md)
-      * [Connexion Azure Event Hubs (version Beta)](./catalog/cloud-storage/azure-event-hubs.md)
+      * [Connexion à Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
       * [Connexion SFTP](./catalog/cloud-storage/sftp.md)
       * [LISTE AUTORISÉE des adresses IP pour les destinations de stockage dans le cloud](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinations Data Management Platform {#data-management}
@@ -140,7 +140,7 @@ ht-degree: 94%
       * [Connexion des audiences correspondantes linkedIn](./catalog/social/linkedin.md)
       * [Connexion [!DNL Twitter Custom Audiences]](./catalog/social/twitter.md)
    * Destinations de diffusion en continu {#streaming}
-      * [ (Version Beta) Connexion API HTTP](./catalog/streaming/http-destination.md)
+      * [Connexion via l’API HTTP](./catalog/streaming/http-destination.md)
       * [LISTE AUTORISÉE d’adresses IP pour les destinations de diffusion en continu](./catalog/streaming/ip-address-allow-list.md)
    * Destinations d’enquête {#survey}
       * [Présentation des destinations d’enquête](./catalog/survey/overview.md)

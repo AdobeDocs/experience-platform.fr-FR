@@ -4,10 +4,10 @@ title: Types et catégories de destination
 seo-title: Destination types and categories
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 08c6c2716b88180b1eb290663117e6da2d8641f0
+source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
 workflow-type: tm+mt
-source-wordcount: '533'
-ht-degree: 45%
+source-wordcount: '596'
+ht-degree: 41%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 45%
 
 Lisez cette page pour comprendre les différents types et catégories de destinations Adobe Experience Platform.
 
-## Types de destinations
+## Types de destinations {#destination-types}
 
 Dans Adobe Experience Platform, nous faisons la distinction entre deux types de destinations : les connexions et les extensions. Il existe deux types de destinations de connexion : les destinations d’exportation de profils et les destinations d’exportation de segments.
 
@@ -25,16 +25,28 @@ Dans Adobe Experience Platform, nous faisons la distinction entre deux types de 
 
 **[!UICONTROL Exportation de profils]** et **[!UICONTROL Exportation de segments en flux continu]** les destinations dans Adobe Experience Platform capturent les données d’événement, les combinent à d’autres sources de données pour former la variable [Real-time Customer Profile](../profile/home.md), appliquez une segmentation et exportez des segments et des profils qualifiés vers les destinations.
 
-## Destinations d’exportation de profils
+## Destinations d’exportation de profils {#profile-export}
 
 Les destinations d’exportation de profils reçoivent des données brutes, souvent avec l’adresse électronique comme clé Principale. Experience Platform prend actuellement en charge deux types de destinations d’exportation de profils :
 
-* [Destinations d’exportation de profils en flux continu](#streaming-profile-export)
+* [Destinations d’exportation de profils en flux continu (destinations d’entreprise)](#streaming-profile-export)
 * [Destinations de lot (basées sur des fichiers)](#file-based)
 
-### Destinations d’exportation de profils en flux continu {#streaming-profile-export}
+### Destinations d’exportation de profils en flux continu (destinations d’entreprise) {#streaming-profile-export}
 
-Les destinations d’exportation de profils en flux continu reçoivent des données de segment et de profil en tant que flux de données Experience Platform. [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) et [Centre d’événements Azure](catalog/cloud-storage/azure-event-hubs.md) sont des exemples de ces destinations.
+>[!IMPORTANT]
+>
+>Les destinations d’entreprise ou les destinations d’exportation de profils en continu sont disponibles pour [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) clients uniquement.
+
+Utilisez les connecteurs de données de destination d’entreprise pour fournir des profils Real-time Customer Data Platform en temps quasi réel aux systèmes internes ou à d’autres systèmes tiers pour la synchronisation des données, l’analyse et d’autres cas d’utilisation d’enrichissement de profil.
+
+Ces destinations reçoivent des données de segment et de profil en tant que flux de données Experience Platform.
+
+Les destinations d’entreprise incluent :
+
+* [Destination de l’API HTTP](catalog/streaming/http-destination.md)
+* [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
+* [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md)
 
 ### Destinations de lot (basées sur des fichiers) {#file-based}
 
@@ -42,7 +54,7 @@ Les destinations basées sur des fichiers reçoivent `.csv` fichiers contenant d
 
 ## Destinations d’exportation de segments en flux continu {#streaming-destinations}
 
-Les destinations d’exportation de segments reçoivent des données de segment Experience Platform. Ces destinations utilisent des identifiants de segment ou d’utilisateur. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)et sont des exemples de ces destinations.
+Les destinations d’exportation de segments reçoivent des données de segment Experience Platform. Ces destinations utilisent des identifiants de segment ou d’utilisateur. Destinations publicitaires et sociales telles que [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)ou [Facebook](catalog/social/facebook.md) sont des exemples de ces destinations.
 
 ## Destinations d’exportation de profils et de segments - Présentation vidéo {#video}
 
