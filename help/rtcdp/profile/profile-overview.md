@@ -3,7 +3,7 @@ keywords: profil rtcdp;profils rtcdp;identités rtcdp;stratégies de fusion rtcd
 title: Présentation de Real-time Customer Profile dans la plateforme de données clients en temps réel
 description: Découvrez comment Real-time Customer Data Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes pour vos clients à l’aide de Real-time Customer Profile.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 0aca080d9f2c39b8f0a1197e1048d1a77d5e7bc1
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 48%
@@ -16,7 +16,7 @@ Le profil client en temps réel offre une vue d’ensemble de chaque client en c
 
 ## Profils dans [!DNL Real-time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] vous permet de proposer des expériences coordonnées et cohérentes à vos clients, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Il n’est pas simple de fournir ces expériences personnalisées de manière pertinente et en temps opportun, mais cela est possible grâce au profil client en temps réel, composant d’Adobe Experience Platform.
+[!DNL Real-time Customer Data Platform] vous permet de proposer des expériences coordonnées et cohérentes à vos clients, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Il n’est pas simple de fournir ces expériences personnalisées de manière pertinente et en temps opportun, mais cela est possible grâce au profil client en temps réel, composant d’Adobe Experience Platform.
 
 La plateforme de données clients en temps réel repose sur les Experience Platform et utilise de nombreuses fonctionnalités Experience Platform de base, notamment la création de profils. Ces vues agrégées d’un client individuel rassemblent des données provenant de vos nombreux canaux marketing et des divers systèmes actuellement utilisés par votre organisation pour stocker les données client.
 
