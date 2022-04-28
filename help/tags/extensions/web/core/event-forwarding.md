@@ -1,10 +1,10 @@
 ---
 title: Présentation de lʼextension Core Event Forwarding
-description: Découvrez lʼextension Core Event Forwarding dans Adobe Experience Platform.
+description: Découvrez lʼextension Core Event Forwarding dans Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
-workflow-type: ht
+source-git-commit: d41779c5897b748130b88d3886472c7908347389
+workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 100%
 
@@ -14,9 +14,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Lʼextension Core Event Forwarding fournit les événements, conditions et types de données par défaut pour les transferts dʼévénements dans Adobe Experience Platform.
+Lʼextension Core Event Forwarding fournit les événements, conditions et types de données par défaut pour les transferts dʼévénements dans Adobe Experience Platform.
 
 Utilisez cette référence pour obtenir des informations sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
 
@@ -26,7 +26,7 @@ Cette section décrit les types de conditions disponibles dans l’extension Cor
 
 ### Custom code
 
-Spécifiez un Custom Code qui doit exister comme condition de l’événement. Utilisez l’éditeur de code intégré pour saisir le code personnalisé. Le transfert dʼévénements dans Adobe Experience Platform prend en charge ES6.
+Spécifiez un Custom Code qui doit exister comme condition de l’événement. Utilisez l’éditeur de code intégré pour saisir le code personnalisé. Le transfert dʼévénements dans Adobe Experience Platform prend en charge ES6.
 
 1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
 1. Saisissez le Custom Code.
@@ -47,7 +47,7 @@ arc.ruleStash: Object<string, *>`
 ```
 
 ```javascript
-logger.log(context.arc.ruleStash);
+utils.logger.log(context.arc.ruleStash);
 ```
 
 `ruleStash` est un objet qui collecte chaque résultat des modules d’action.
@@ -113,7 +113,7 @@ Les opérateurs de comparaison de valeurs suivants sont disponibles :
 
 **Equal :** la condition renvoie true (vrai) si les deux valeurs sont égales à l’aide d’une comparaison non stricte (dans JavaScript, l’opérateur ==). Les valeurs peuvent être de n’importe quel type. Lorsque vous saisissez un mot tel que _true_ (vrai), _false_ (faux), _null_ (nul) ou _undefined_ (non défini) dans un champ de valeur, le mot est comparé en tant que chaîne et n’est pas converti vers son équivalent JavaScript.
 
-**Does Not Equal** : la condition renvoie true (vrai) si les deux valeurs ne sont pas égales à l’aide d’une comparaison non stricte (dans JavaScript, l’opérateur !=). Les valeurs peuvent être de n’importe quel type. Lorsque vous saisissez un mot tel que _true_ (vrai), _false_ (faux), _null_ (nul) ou _undefined_ (non défini) dans un champ de valeur, le mot est comparé en tant que chaîne et n’est pas converti vers son équivalent JavaScript.
+**Does Not Equal** (N’est pas égal à) : la condition renvoie true (vrai) si les deux valeurs ne sont pas égales à l’aide d’une comparaison non stricte (dans JavaScript, l’opérateur !=). Les valeurs peuvent être de n’importe quel type. Lorsque vous saisissez un mot tel que _true_ (vrai), _false_ (faux), _null_ (nul) ou _undefined_ (non défini) dans un champ de valeur, le mot est comparé en tant que chaîne et n’est pas converti vers son équivalent JavaScript.
 
 **Contains :** la condition renvoie true (vrai) si la première valeur contient la seconde valeur. Les nombres sont convertis en chaînes. Pour toute autre valeur qu’un nombre ou une chaîne, la condition renvoie false (faux).
 
@@ -153,9 +153,9 @@ Les opérateurs de comparaison de valeurs suivants sont disponibles :
 
 Cette section décrit les types d’actions disponibles dans l’extension Core.
 
-### Custom Code
+### Code personnalisé
 
-Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées. Le transfert dʼévénements dans Adobe Experience Platform prend en charge ES6.
+Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées. Le transfert dʼévénements dans Adobe Experience Platform prend en charge ES6.
 
 1. Nommez le code d’action.
 1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
@@ -201,9 +201,9 @@ return getDataElementValue('section').concat(getDataElementValue('pName'));
 
 #### Path
 
-Un chemin vers une paire clé-valeur sur un événement envoyé à Adobe Experience Platform Edge Network peut être référencé à l’aide du type d’élément de données Path.
+Un chemin vers une paire clé-valeur sur un événement envoyé à Adobe Experience Platform Edge Network peut être référencé à l’aide du type d’élément de données Path.
 
-Pour référencer l’objet entier d’un événement, saisissez le chemin `arc`. L’acronyme `arc` désigne Adobe Resource Context et représente le chemin de niveau supérieur pour un événement envoyé à Adobe Experience Platform Edge Network.
+Pour référencer l’objet entier d’un événement, saisissez le chemin `arc`. L’acronyme `arc` désigne Adobe Resource Context et représente le chemin de niveau supérieur pour un événement envoyé à Adobe Experience Platform Edge Network.
 
 Par exemple, étant donné que l’appel `interact` du client vers Edge Network a la demande suivante, comme vue depuis la console du navigateur :
 
