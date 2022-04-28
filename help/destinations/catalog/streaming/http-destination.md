@@ -3,7 +3,7 @@ title: Connexion via l’API HTTP
 keywords: diffusion en continu;
 description: Utilisez la destination d’API HTTP dans Adobe Experience Platform pour envoyer des données de profil à un point de terminaison HTTP tiers afin d’exécuter vos propres analyses ou d’effectuer toute autre opération nécessaire sur les données de profil exportées hors d’Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
 workflow-type: tm+mt
 source-wordcount: '2296'
 ht-degree: 3%
@@ -92,6 +92,11 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 ### Informations d’authentification {#authentication-information}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="Type d’informations d’identification client"
+>abstract="Sélectionner **Body Form Encoded** pour inclure l’ID client et le secret client dans le corps de la requête ou **Autorisation de base** pour inclure l’ID client et le secret client dans un en-tête d’autorisation. Consultez des exemples dans la documentation."
+
 #### Authentification du jeton porteur {#bearer-token-authentication}
 
 Si vous sélectionnez la variable **[!UICONTROL Jeton de porteur]** type d’authentification pour se connecter à votre point de terminaison HTTP, renseignez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]**:
@@ -121,11 +126,6 @@ Si vous sélectionnez la variable **[!UICONTROL Mot de passe OAuth 2]** type d�
 * **[!UICONTROL Mot de passe]**: Mot de passe pour accéder à votre point de terminaison HTTP.
 
 #### Authentification des informations d’identification du client OAuth 2 {#oauth-2-client-credentials-authentication}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_clientcredentialstype"
->title="Type d’informations d’identification client"
->abstract="Sélectionner **Body Form Encoded** pour inclure l’ID client et le secret client dans le corps de la requête ou **Autorisation de base** pour inclure l’ID client et le secret client dans un en-tête d’autorisation. Consultez des exemples dans la documentation."
 
 Si vous sélectionnez la variable **[!UICONTROL Informations d’identification du client OAuth 2]** type d’authentification pour se connecter à votre point de terminaison HTTP, renseignez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]**:
 
