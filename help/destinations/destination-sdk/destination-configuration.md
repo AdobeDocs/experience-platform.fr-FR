@@ -2,7 +2,7 @@
 description: Cette configuration vous permet d’indiquer des informations de base telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs d’Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur d’Experience Platform ainsi que les identités qui peuvent être exportées vers votre destination.
 title: Options de configuration de destination de diffusion en continu pour Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 98%
@@ -220,7 +220,7 @@ En savoir plus dans la section [Présentation des espaces de noms d’identité]
 |---------|----------|------|
 | `acceptsAttributes` | Booléen | Indique si votre destination accepte les attributs de profil standard. En règle générale, ces attributs apparaissent en surbrillance dans la documentation des partenaires. |
 | `acceptsCustomNamespaces` | Booléen | Indique si les clients peuvent configurer des espaces de noms personnalisés dans votre destination. |
-| `allowedAttributesTransformation` | Chaîne | *Non affiché dans l’exemple de configuration*. Utilisé, par exemple, lorsque le client [!DNL Platform] dispose d’adresses électroniques simples en tant qu’attribut et que votre plateforme accepte les e-mails hachés uniquement. Dans cet objet, vous pouvez effectuer la transformation qui doit être appliquée (par exemple, transformer l’e-mail en minuscules, puis en hachage). Pour consulter un exemple, reportez-vous à la section `requiredTransformation` dans la [référence de l’API de configuration de destination](./destination-configuration-api.md#update). |
+| `transformation` | Chaîne | *Non affiché dans l’exemple de configuration*. Utilisé, par exemple, lorsque le client [!DNL Platform] dispose d’adresses électroniques simples en tant qu’attribut et que votre plateforme accepte les e-mails hachés uniquement. Dans cet objet, vous pouvez effectuer la transformation qui doit être appliquée (par exemple, transformer l’e-mail en minuscules, puis en hachage). Pour consulter un exemple, reportez-vous à la section `requiredTransformation` dans la [référence de l’API de configuration de destination](./destination-configuration-api.md#update). |
 | `acceptedGlobalNamespaces` | - | Utilisé si votre plateforme accepte les [espaces de noms d’identité standard](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=fr#standard-namespaces) (IDFA, par exemple), afin que vous puissiez empêcher les utilisateurs de Platform de sélectionner uniquement ces espaces de noms d’identité. |
 
 {style=&quot;table-layout:auto&quot;}
