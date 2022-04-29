@@ -3,10 +3,10 @@ title: Données d’identité dans le SDK Web de Platform
 description: Découvrez comment récupérer et gérer les Adobe Experience Cloud ID (ECID) à l’aide du SDK Web de Adobe Experience Platform.
 keywords: Identité;identité propriétaire;service d’identité;identité tierce;migration des identifiants;identifiant visiteur;identité tierce;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;synchroniser les identités;syncIdentity;sendEvent;identityMap;Principal;ecid;espace de noms d’identité;idd’espace de noms;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 6fb6d1579f888720b6af9617400d512a68d06264
+source-git-commit: 85ff35e0e7f7e892de5252e8f3ad069eff83aa15
 workflow-type: tm+mt
-source-wordcount: '1327'
-ht-degree: 1%
+source-wordcount: '1334'
+ht-degree: 2%
 
 ---
 
@@ -20,9 +20,9 @@ Ce document présente la gestion des ECID à l’aide du SDK Web Platform.
 
 Le SDK Web Platform attribue et effectue le suivi des ECID à l’aide de cookies, avec plusieurs méthodes disponibles pour configurer la manière dont ces cookies sont générés.
 
-Lorsqu’un nouvel utilisateur arrive sur votre site web, le service Adobe Experience Cloud Identity tente de définir un cookie d’identification de périphérique pour cet utilisateur. Pour les nouveaux visiteurs, un ECID est généré et renvoyé dans la première réponse du réseau Adobe Experience Platform Edge. Pour les visiteurs réguliers, l’ECID est récupéré à partir de la variable `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` et ajouté à la charge utile.
+Lorsqu’un nouvel utilisateur arrive sur votre site web, le service Adobe Experience Cloud Identity tente de définir un cookie d’identification de périphérique pour cet utilisateur. Pour les nouveaux visiteurs, un ECID est généré et renvoyé dans la première réponse du réseau Adobe Experience Platform Edge. Pour les visiteurs réguliers, l’ECID est récupéré à partir de la variable `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` et ajouté à la charge utile par le réseau Edge.
 
-Une fois que le cookie contenant l’ECID a été défini, chaque requête ultérieure générée par le SDK Web Platform inclut l’ECID.
+Une fois le cookie contenant l’ECID défini, chaque requête ultérieure générée par le SDK Web inclut un ECID codé dans la variable `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` du cookie.
 
 Lors de l’utilisation de cookies pour l’identification des périphériques, vous disposez de deux options pour interagir avec le réseau Edge :
 
@@ -55,7 +55,7 @@ Si un utilisateur final consulte le site trois fois par semaine, puis ne revient
 
 ### Identifiants d’appareils propriétaires
 
-Pour tenir compte des effets de la durée de vie des cookies comme indiqué ci-dessus, vous pouvez choisir de définir et de gérer vos propres identifiants d’appareil à la place. Consultez le guide sur la [identifiants d’appareils propriétaires](./first-party-device-ids.md) pour plus d’informations.
+Pour tenir compte des effets de la durée de vie des cookies comme indiqué ci-dessus, vous pouvez choisir de définir et de gérer vos propres identifiants d’appareil à la place. Pour plus d’informations, consultez le guide des [Identifiants d’appareils propriétaires](./first-party-device-ids.md).
 
 ## Récupération de l’ECID et de la région pour l’utilisateur actuel
 
