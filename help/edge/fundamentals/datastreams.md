@@ -3,32 +3,28 @@ title: Configuration d’un flux de données
 description: Connectez votre intégration SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
 keywords: configuration;jeux de données;datastreamId;edge;datastream id;paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;ID de conteneur de synchronisation;sandbox;flux de données;jeu de données d’événement;cible;code client;jeton de propriété;ID d’environnement cible;destinations de cookie;destinations d’URL;ID de suite de rapports de paramètres Analytics;prépréparation des données p;Mapper;XDM Mapper;Mapper sur Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
+source-git-commit: 2275a32cfa9419d2ca407dd48a15f8d06354cd49
 workflow-type: tm+mt
-source-wordcount: '2102'
-ht-degree: 2%
+source-wordcount: '2081'
+ht-degree: 4%
 
 ---
 
 # Configuration d’un flux de données
 
-Un flux de données représente la configuration côté serveur lors de l’implémentation des SDK Web et Mobile Adobe Experience Platform. Lorsque la variable [configuration, commande](configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme la variable `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une demande est envoyée au réseau Edge Adobe Experience Platform, la variable `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans avoir à modifier le code de votre site web.
+Un flux de données représente la configuration côté serveur lors de l’implémentation des SDK Web et Mobile de Adobe Experience Platform. Lorsque la variable [configuration, commande](configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme la variable `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une demande est envoyée au réseau Edge Adobe Experience Platform, la variable `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans avoir à modifier le code de votre site web.
 
 Ce document décrit les étapes de configuration d’un flux de données dans l’interface utilisateur de la collecte de données.
 
 >[!NOTE]
 >
->Votre entreprise doit être configurée pour cette fonctionnalité afin d’y accéder dans l’interface utilisateur. Veuillez remplir les champs suivants : [formulaire](https://adobe.ly/websdkaccess) pour demander l’accès nécessaire.
+>Votre entreprise doit être configurée pour cette fonctionnalité afin d’y accéder dans l’interface utilisateur. Veuillez remplir les champs suivants : [formulaire](https://adobe.ly/websdkaccess) pour demander l’accès nécessaire. Pour gérer les flux de données, votre compte utilisateur doit être ajouté à un profil de produit pour les balises dans [!DNL Adobe Experience Platform].
 
 ## Accédez au [!UICONTROL Datastreams] workspace
 
 Vous pouvez créer et gérer des flux de données dans l’interface utilisateur de la collecte de données en sélectionnant **[!UICONTROL Datastreams]** dans le volet de navigation de gauche.
 
 ![Onglet Flux de données dans l’interface utilisateur de la collecte de données](../images/datastreams/datastreams-tab.png)
-
->[!NOTE]
->
->Lorsque vous pouvez accéder à la variable [!UICONTROL Datastreams] que vous utilisiez ou non les fonctionnalités de gestion des balises de Platform, vous devez disposer des autorisations de développeur pour gérer les flux de données eux-mêmes. Voir [permissions utilisateur](../../tags/ui/administration/user-permissions.md) pour plus d’informations.
 
 Le [!UICONTROL Datastreams] affiche une liste des flux de données existants, y compris leur nom convivial, leur identifiant et leur date de dernière modification. Sélectionnez le nom d’un flux de données sur [afficher ses détails et configurer des services ;](#view-details).
 
@@ -62,7 +58,7 @@ Sélectionner **[!UICONTROL Options avancées]** pour afficher des contrôles su
 
 Le reste de cette section se concentre sur les étapes de mappage des données à un schéma d’événement Platform sélectionné. Si vous utilisez le SDK Mobile ou si vous ne configurez pas votre flux de données pour Platform, sélectionnez **[!UICONTROL Enregistrer]** avant de passer à la section suivante sur [ajout de services à la banque de données](#add-services).
 
-### Préparation de données pour la collecte de données {#data-prep}
+### Préparer des données pour la collecte de données {#data-prep}
 
 >[!IMPORTANT]
 >
@@ -75,7 +71,7 @@ Data Prep est un service Experience Platform qui vous permet de mapper, de trans
 >Pour obtenir des instructions complètes sur toutes les fonctionnalités de la préparation de données, y compris les fonctions de transformation des champs calculés, consultez la documentation suivante :
 >
 >* [Présentation de la préparation des données](../../data-prep/home.md)
->* [Fonctions de mappage de la préparation de données](../../data-prep/functions.md)
+>* [Fonctions de mappage de la préparation des données](../../data-prep/functions.md)
 >* [Gestion des formats de données avec la préparation des données](../../data-prep/data-handling.md)
 
 
@@ -83,7 +79,7 @@ Les sous-sections ci-dessous décrivent les étapes de base du mappage de vos do
 
 >[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
-#### [!UICONTROL Choix des données]
+#### [!UICONTROL Sélectionner les données ]
 
 Sélectionner **[!UICONTROL Enregistrement et ajout d’un mappage]** après avoir terminé la [étape de configuration de base](#configure), et la variable **[!UICONTROL Sélectionner des données]** s’affiche. À partir de là, vous devez fournir un exemple d’objet JSON qui représente la structure des données que vous prévoyez d’envoyer à Platform.
 
