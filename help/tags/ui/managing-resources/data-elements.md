@@ -2,10 +2,10 @@
 title: Éléments de données
 description: Les éléments de données sont les blocs de construction de votre dictionnaire de données (ou mappage de données). Utilisez des éléments de données pour recueillir, organiser et diffuser des données dans les technologies marketing et publicitaires.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: af9a5118f3633c132dd88ab659f570c9136b12e1
 workflow-type: tm+mt
 source-wordcount: '1631'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les éléments de données sont les blocs de construction de votre dictionnaire de données (ou mappage de données). Utilisez des éléments de données pour recueillir, organiser et diffuser des données dans les technologies marketing et publicitaires.
 
-Un seul élément de données est une variable dont la valeur peut être mappée à des chaînes de requête, des URL, des valeurs de cookie, des variables JavaScript, etc. Vous pouvez référencer cette valeur par son nom de variable sur l’ensemble d’Adobe Experience Platform. Cette collection d’éléments de données devient le dictionnaire des données définies que vous pouvez utiliser pour créer vos règles (événements, conditions et actions). Ce dictionnaire de données est partagé entre les balises afin d’être utilisé avec toute extension ajoutée à votre propriété.
+Un seul élément de données est une variable dont la valeur peut être mappée à des chaînes de requête, des URL, des valeurs de cookie, des variables JavaScript, etc. Vous pouvez référencer cette valeur par son nom de variable dans Adobe Experience Platform. Cette collection d’éléments de données devient le dictionnaire des données définies que vous pouvez utiliser pour créer vos règles (événements, conditions et actions). Ce dictionnaire de données est partagé entre les balises afin d’être utilisé avec toute extension ajoutée à votre propriété.
 
 >[!IMPORTANT]
 >
@@ -29,7 +29,7 @@ Les éléments de données réutilisables sont efficaces et devraient être util
 
 Par exemple, si vous référencez de manière particulière les noms de page ou les ID de produit ou si vous obtenez des informations des paramètres de chaîne de requête à partir d’un lien marketing affilié ou de [!DNL AdWords], etc., vous pouvez créer un dictionnaire de données (éléments de données) en obtenant des informations de plusieurs sources et en utilisant ces données dans différentes règles de balises.
 
-En prenant l’utilisation des noms de page comme exemple, supposons que vous utilisez un schéma page-nom spécifique en référençant une couche de données, l’élément `document.title` ou une balise de titre dans le site web. Les balises dans Adobe Experience Platform vous permettent de créer un élément de données comme point unique de référence pour ce point particulier de données. Vous pouvez ensuite utiliser cet élément de données dans n’importe quelle règle qui doit référencer le nom de page. Si pour une raison quelconque, vous décidez à l’avenir de modifier la manière dont vous référencez les noms de page (vous avez par exemple référencé `document.title` et vous souhaitez à présent référencer une couche de données spécifique), il n’est pas nécessaire de modifier plusieurs règles différentes pour changer cette référence. Il suffit de modifier la référence une seule fois dans l’élément de données. Toutes les règles référençant cet élément de données sont alors automatiquement mises à jour.
+En prenant l’utilisation des noms de page comme exemple, supposons que vous utilisez un schéma page-nom spécifique en référençant une couche de données, l’élément `document.title` ou une balise de titre dans le site web. Les balises dans Adobe Experience Platform vous permettent de créer un élément de données comme point de référence unique pour ce point de données particulier. Vous pouvez ensuite utiliser cet élément de données dans n’importe quelle règle qui doit référencer le nom de page. Si pour une raison quelconque, vous décidez à l’avenir de modifier la manière dont vous référencez les noms de page (vous avez par exemple référencé `document.title` et vous souhaitez à présent référencer une couche de données spécifique), il n’est pas nécessaire de modifier plusieurs règles différentes pour changer cette référence. Il suffit de modifier la référence une seule fois dans l’élément de données. Toutes les règles référençant cet élément de données sont alors automatiquement mises à jour.
 
 >[!NOTE]
 >
@@ -97,7 +97,7 @@ Les sections suivantes décrivent les types d’éléments de données disponibl
 
 ### Cookie
 
-N’importe quel cookie de domaine disponible peut être référencé dans le champ de  nom du cookie.
+N’importe quel cookie de domaine disponible peut être référencé dans le champ de nom du cookie.
 
 #### Exemple :
 
@@ -132,11 +132,16 @@ return eventType; // if this data element is called from a "DOM Ready" event, th
 
 Vous pouvez alors les utiliser dans des scripts personnalisés à l’aide de la `_satellite` syntaxe d’objet :
 
-`_satellite.getVar('data element name', event);`
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
-Lorsque vous utilisez la notation `%..%`, il vous suffit de spécifier le nom de l’élément de données. Vous n&#39;avez pas besoin de spécifier `event`.
+Lorsque vous utilisez un pourcentage (`%`), il vous suffit de spécifier le nom de l’élément de données. Vous n&#39;avez pas besoin de spécifier `event`.
 
-`%data element name%`
+```text
+%data element name%
+```
 
 ### Attribut DOM
 
@@ -196,7 +201,7 @@ Vous pouvez sélectionner l’un des attributs de page suivants à utiliser dans
 * Référent
 * Title
 
-### Paramètre de chaîne de requête
+### Query String Parameter
 
 Spécifiez un paramètre dʼURL unique dans le champ [!UICONTROL URL Parameter].
 
