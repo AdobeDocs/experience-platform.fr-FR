@@ -2,10 +2,10 @@
 title: Référence dʼobjet satellite
 description: Découvrez lʼobjet _satellite côté client et les différentes fonctions quʼil offre dans les balises.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 47391de09bcad1dc99340caa84cdfff13e9f5237
 workflow-type: tm+mt
-source-wordcount: '1279'
-ht-degree: 100%
+source-wordcount: '1291'
+ht-degree: 95%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Ce document sert de référence à lʼobjet `_satellite` côté client et aux différentes fonctions que vous pouvez exécuter avec celui-ci.
 
@@ -49,7 +49,16 @@ var product = _satellite.getVar('product');
 
 Dans lʼexemple proposé, sʼil existe un élément de données avec un nom correspondant, la valeur de lʼélément de données sera renvoyée. S’il n’existe aucun élément de données correspondant, il vérifie alors si une variable personnalisée avec un nom correspondant a été précédemment définie à l’aide de `_satellite.setVar()`. Si une variable personnalisée correspondante est trouvée, sa valeur va être renvoyée.
 
-Remarquez que dans de nombreux champs de formulaire de lʼinterface utilisateur de collecte de données, vous pouvez utiliser la syntaxe `%%` pour référencer des variables, ce qui réduit la nécessité dʼinvoquer `_satellite.getVar()`. Par exemple, l’utilisation de %product% donne accès à la valeur de l’élément de données du produit ou de la variable personnalisée.
+>[!NOTE]
+>
+>Vous pouvez utiliser le pourcentage (`%`) pour référencer des variables pour de nombreux champs de formulaire dans l’interface utilisateur de collecte de données, ce qui réduit la nécessité d’appeler `_satellite.getVar()`. Par exemple, en utilisant `%product%` accède à la valeur de l’élément de données de produit ou de la variable personnalisée.
+
+Lorsqu’un événement déclenche une règle, vous pouvez transmettre la variable correspondante de la règle `event` dans `_satellite.getVar()` comme si :
+
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
 ## `setVar`
 
@@ -87,7 +96,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-Si l’extension [!DNL Adobe Experience Cloud ID] est installée sur la propriété, cette méthode renvoie l’instance d’identifiant visiteur. Pour plus d’informations, consultez la [documentation du service Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr).
+Si l’extension [!DNL Adobe Experience Cloud ID] est installée sur la propriété, cette méthode renvoie l’instance d’identifiant visiteur. Pour plus d’informations, consultez la [documentation du service Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr).
 
 ## `logger`
 
@@ -147,7 +156,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->Dans lʼancienne méthode [`setCookie`](#setCookie) de configuration des cookies, le troisième argument (facultatif) de cet appel de fonction était un nombre entier qui indiquait la durée de vie (TTL) du cookie en jours. Dans cette nouvelle méthode, un objet « attributes » est accepté comme troisième argument à la place. Pour définir une TTL pour un cookie à lʼaide de la nouvelle méthode, vous devez fournir une propriété `expires` dans lʼobjet « attributes » et la définir sur la valeur souhaitée. Ceci est illustré dans lʼexemple ci-dessous.
+>Dans lʼancienne méthode [`setCookie`](#setCookie) de configuration des cookies, le troisième argument (facultatif) de cet appel de fonction était un nombre entier qui indiquait la durée de vie (TTL) du cookie en jours. Dans cette nouvelle méthode, un objet « attributes » est accepté comme troisième argument à la place. Pour définir une TTL pour un cookie à lʼaide de la nouvelle méthode, vous devez fournir une propriété `expires` dans lʼobjet « attributes » et la définir sur la valeur souhaitée. Ceci est illustré dans lʼexemple ci-dessous.
 
 **Exemple**
 
@@ -433,7 +442,7 @@ Si `ruleTriggered` est appelé, `ruleCompleted` ou `ruleConditionFailed` sera ap
 
 >[!NOTE]
 >
->Un moniteur n’a pas besoin de spécifier les trois méthodes (`ruleTriggered`, `ruleCompleted` et `ruleConditionFailed`). Les balises dans Adobe Experience Platform fonctionnent avec toutes les méthodes prises en charge fournies par le moniteur.
+>Un moniteur n’a pas besoin de spécifier les trois méthodes (`ruleTriggered`, `ruleCompleted` et `ruleConditionFailed`). Les balises dans Adobe Experience Platform fonctionnent avec toutes les méthodes prises en charge fournies par le moniteur.
 
 ### Test du moniteur
 
