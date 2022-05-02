@@ -5,9 +5,9 @@ title: Guide de dépannage de Query Service
 topic-legacy: troubleshooting
 description: Ce document contient des informations sur les codes d’erreur courants que vous rencontrez et les causes possibles.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: a6924a1018d5dd4e3f03b3d8b6375cacb450a4f5
+source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
 workflow-type: tm+mt
-source-wordcount: '3413'
+source-wordcount: '3516'
 ht-degree: 5%
 
 ---
@@ -40,7 +40,7 @@ Cette section contient des informations sur les performances, les limites et les
 
 ### Puis-je utiliser Postman pour l’API Query Service ?
 
-+++Répondez Oui, vous pouvez visualiser et interagir avec tous les services d’API Adobe à l’aide de Postman (une application tierce gratuite). Regardez la [Guide de configuration de Postman](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires pour une utilisation avec Postman. Consultez la documentation officielle pour [conseils sur le démarrage, l’exécution et le partage de collections Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Répondez Oui, vous pouvez visualiser et interagir avec tous les services d’API Adobe à l’aide de Postman (une application tierce gratuite). Regardez la [Guide de configuration de Postman](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans la console Adobe Developer et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec Postman. Consultez la documentation officielle pour [conseils sur le démarrage, l’exécution et le partage de collections Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe-t-il une limite au nombre maximum de lignes renvoyées par une requête via l’interface utilisateur ?
@@ -257,6 +257,8 @@ SELECT count(1) FROM myTableName
 +++Répondez d’abord, consultez les journaux pour connaître les détails de l’erreur. La section FAQ sur [recherche d’erreurs dans les logs](#error-logs) fournit des informations supplémentaires sur la manière de procéder.
 
 Vous devez également consulter la documentation pour obtenir des conseils sur la manière d’effectuer [requêtes planifiées dans l’interface utilisateur](./ui/user-guide.md#scheduled-queries) et [l’API](./api/scheduled-queries.md).
+
+Voici une liste des considérations à prendre en compte pour les requêtes planifiées lors de l’utilisation de la variable [!DNL Query Editor]. Elles ne s’appliquent pas au [!DNL Query Service] API :<br/>Vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée.<br/>You **cannot** ajoutez un planning à une requête paramétrée.<br/>Requêtes planifiées **cannot** contiennent un bloc anonyme.<br/>Vous pouvez uniquement planifier **one** modèle de requête à l’aide de l’interface utilisateur. Si vous souhaitez ajouter des plannings supplémentaires à un modèle de requête, vous devez utiliser l’API . Si une planification a déjà été ajoutée à l’aide de l’API, vous ne pourrez pas ajouter d’autres planifications à l’aide de l’interface utilisateur.
 +++
 
 ### Que signifie l’erreur &quot;Limite de session atteinte&quot; ?
