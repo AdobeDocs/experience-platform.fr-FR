@@ -4,10 +4,10 @@ title: Tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '1764'
-ht-degree: 3%
+source-wordcount: '1962'
+ht-degree: 2%
 
 ---
 
@@ -56,6 +56,9 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 * [[!UICONTROL Segments mappés par identité]](#mapped-segments-by-identity)
 * [[!UICONTROL Audiences courantes]](#common-audiences)
 * [[!UICONTROL Nombre de destinations]](#destinations-count)
+* [[!UICONTROL État de la destination]](#destination-status)
+* [[!UICONTROL Destinations principales par plateforme de destination]](#active-destinations-by-destination-platform)
+* [[!UICONTROL Audiences activées sur toutes les destinations]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL Destinations les plus utilisées] {#most-used-destinations}
 
@@ -164,6 +167,28 @@ Le [!UICONTROL Nombre de destinations] fournit le nombre total de points de term
 Sous le nombre total, sélectionnez **[!UICONTROL Destinations]** pour accéder à l’onglet de navigation des destinations. Cette page répertorie toutes les destinations avec lesquelles vous avez établi une connexion à ce jour.
 
 ![Le widget Nombre de destinations .](../images/destinations/destinations-count.png)
+
+### [!UICONTROL État de la destination] {#destination-status}
+
+Le [!UICONTROL État de la destination] le widget affiche le nombre total de destinations activées sous la forme d’une mesure unique et utilise un graphique en anneau pour illustrer la différence proportionnelle entre les destinations activées et désactivées.
+
+Les décomptes individuels des destinations activées ou désactivées s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
+
+![Le widget d’état Destination .](../images/destinations/destination-status.png)
+
+### [!UICONTROL Destinations principales par plateforme de destination] {#active-destinations-by-destination-platform}
+
+Le widget fournit un tableau à deux colonnes qui répertorie les principales plateformes de destination et le nombre total de destinations principales pour chaque plateforme de destination. La liste des plateformes de destination est classée de haut en bas.
+
+![Les destinations Principales par widget de plateforme de destination.](../images/destinations/active-destinations-by-destination-platform.png)
+
+### [!UICONTROL Audiences activées sur toutes les destinations] {#activated-audiences-across-all-destinations}
+
+Le [!UICONTROL Audiences activées sur toutes les destinations] fournit le nombre total d’audiences activées sur toutes les destinations dans une seule mesure. Ce nombre est précis par rapport à l’instantané le plus récent.
+
+![Le widget Audiences activées sur toutes les destinations .](../images/destinations/activated-audiences-across-all-destinations.png)
+
+Sélectionner **[!UICONTROL Audiences]** pour accéder aux destinations [!UICONTROL Parcourir] . Cette page fournit une liste de toutes les destinations activées et diverses mesures pertinentes. Consultez la documentation pour [en savoir plus sur la [!UICONTROL Parcourir] tab](../../destinations/ui/destinations-workspace.md#browse).
 
 ## Étapes suivantes
 
