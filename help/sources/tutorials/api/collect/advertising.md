@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application publicitaire tierce et les ingérer dans Platform à l’aide des connecteurs source et de l’API Flow Service.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1296'
-ht-degree: 100%
+source-wordcount: '1302'
+ht-degree: 96%
 
 ---
 
@@ -19,7 +19,7 @@ Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une 
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base [!DNL Google AdWords] valide. Si vous ne disposez pas de cet identifiant, suivez les étapes de [création dʼune connexion de base à  [!DNL Google AdWords] ](../create/advertising/ads.md) avant de commencer à suivre ce tutoriel.
+>Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source publicitaire. Si vous ne disposez pas de cet identifiant, reportez-vous à la section [présentation des sources](../../../home.md#advertising) pour obtenir une liste des sources publicitaires avec lesquelles vous pouvez créer une connexion de base.
 
 ## Prise en main
 

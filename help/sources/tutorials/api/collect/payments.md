@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application de paiements et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1304'
-ht-degree: 98%
+source-wordcount: '1325'
+ht-degree: 96%
 
 ---
 
@@ -19,7 +19,7 @@ Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une 
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec l’une des sources de paiement suivantes sur Platform :<ul><li>[[!DNL PayPal]](../create/payments/paypal.md)</li><li>[[!DNL Square]](../create/payments/square.md)</li></ul>
+>Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de paiements. Si vous ne disposez pas de cet identifiant, reportez-vous à la section [présentation des sources](../../../home.md#payments) pour obtenir une liste des sources de paiement avec lesquelles vous pouvez créer une connexion de base.
 
 ## Prise en main
 

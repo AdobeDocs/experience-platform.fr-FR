@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer les données d’un système e-commerce tiers et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1260'
-ht-degree: 100%
+source-wordcount: '1266'
+ht-degree: 96%
 
 ---
 
@@ -19,7 +19,7 @@ Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une 
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base [!DNL Shopify] valide. Si vous ne disposez pas de cet identifiant, suivez les étapes de [création dʼune connexion de base à  [!DNL Shopify] ](../create/ecommerce/shopify.md) avant de commencer à suivre ce tutoriel.
+>Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de commerce électronique. Si vous ne disposez pas de cet identifiant, reportez-vous à la section [présentation des sources](../../../home.md#ecommerce) pour obtenir une liste des sources d’e-commerce avec lesquelles vous pouvez créer une connexion de base.
 
 ## Prise en main
 

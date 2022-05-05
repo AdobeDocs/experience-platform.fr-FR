@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système CRM tiers et les importer dans Platform à l’aide des connecteurs source et des API.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 100%
+source-wordcount: '1329'
+ht-degree: 96%
 
 ---
 
@@ -19,7 +19,7 @@ Ce tutoriel décrit les étapes à suivre pour récupérer les données d’une 
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide auprès de l’une des sources CRM suivantes sur Platform :<ul><li>[[!DNL Microsoft Dynamics]](../create/crm/ms-dynamics.md)</li><li>[[!DNL Salesforce]](../create/crm/salesforce.md)</li><li>[[!DNL Veeva CRM]](../create/crm/veeva.md)</li><li>[[!DNL Zoho CRM]](../create/crm/zoho.md)</li></ul>
+>Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source CRM. Si vous ne disposez pas de cet identifiant, reportez-vous à la section [présentation des sources](../../../home.md#customer-relationship-management) pour une liste de sources CRM avec lesquelles vous pouvez créer une connexion de base.
 
 ## Prise en main
 

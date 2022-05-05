@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application de protocoles et les ingérer dans Platform à l’aide de connecteurs source et dʼAPI.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1276'
-ht-degree: 100%
+source-wordcount: '1293'
+ht-degree: 96%
 
 ---
 
@@ -19,7 +19,7 @@ Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une 
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide auprès de l’une des sources de protocoles suivantes sur Platform :<ul><li>[OData générique](../create/protocols/odata.md)</li><li>[REST générique](../create/protocols/generic-rest.md)</li></ul>
+>Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de protocoles. Si vous ne disposez pas de cet identifiant, reportez-vous à la section [présentation des sources](../../../home.md#protocols) pour obtenir une liste des sources de protocoles avec lesquelles vous pouvez créer une connexion de base.
 
 ## Prise en main
 
