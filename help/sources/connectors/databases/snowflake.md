@@ -5,10 +5,10 @@ title: Présentation du connecteur source Snowflake
 topic-legacy: overview
 description: Découvrez comment connecter Snowflake à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 23%
+source-wordcount: '237'
+ht-degree: 53%
 
 ---
 
@@ -18,16 +18,16 @@ Adobe Experience Platform permet d’ingérer des données à partir de source
 
 Experience Platform prend en charge l’ingestion de données provenant d’une base de données tierce. Platform peut se connecter à différents types de bases de données comme les entrepôts relationnels, NoSQL ou de données. La prise en charge des fournisseurs de base de données inclut [!DNL Snowflake].
 
-## LISTE AUTORISÉE d’adresses IP
+## Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou des performances peuvent se produire lors de l’utilisation de sources. Voir [LISTE AUTORISÉE d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
+Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
 
-La documentation ci-dessous fournit des informations sur la connexion. [!DNL Snowflake] vers Platform à l’aide d’API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL Snowflake] à Platform à l’aide d’API ou de l’interface utilisateur :
 
 ## Connexion [!DNL Snowflake] vers Platform à l’aide d’API
 
 - [Création d’une connexion de base de Snowflake à l’aide de l’API Flow Service](../../tutorials/api/create/databases/snowflake.md)
-- [Explorer la structure et le contenu des données d’une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/explore/database-nosql.md)
+- [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 - [Création d’un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
 
 ## Connexion [!DNL Snowflake] vers Platform à l’aide de l’interface utilisateur

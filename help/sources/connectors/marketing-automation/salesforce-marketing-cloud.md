@@ -5,10 +5,10 @@ title: Présentation de la source de Marketing Cloud Salesforce
 topic-legacy: overview
 description: Découvrez comment connecter le Marketing Cloud Salesforce à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: 6876ad592e4924dc884568899662dfa9c8eecc62
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 13%
+source-wordcount: '351'
+ht-degree: 28%
 
 ---
 
@@ -33,16 +33,16 @@ Vous pouvez demander des portées en effectuant un appel à la fonction `v2/user
 
 Pour plus d’informations sur les portées, y compris une liste de leurs autorisations et comportements associés, voir ceci [[!DNL Salesforce Marketing Cloud] Document de l’API REST](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html).
 
-## LISTE AUTORISÉE d’adresses IP
+## Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou des performances peuvent se produire lors de l’utilisation de sources. Voir [LISTE AUTORISÉE d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
+Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
 
 ## Connexion [!DNL Salesforce Marketing Cloud] vers Platform à l’aide d’API
 
 La documentation ci-dessous fournit des informations sur la connexion. [!DNL Salesforce Marketing Cloud] vers Platform à l’aide d’API :
 
 * [Création d’une connexion de base de Marketing Cloud Salesforce à l’aide de l’API Flow Service](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-* [Explorer la structure et le contenu des données d’une source d’automatisation marketing à l’aide de l’API Flow Service](../../tutorials/api/explore/marketing-automation.md)
+* [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 * [Création d’un flux de données pour une source d’automatisation marketing à l’aide de l’API Flow Service](../../tutorials/api/collect/marketing-automation.md)
 
 ## Connexion [!DNL Salesforce Marketing Cloud] vers Platform à l’aide de l’interface utilisateur

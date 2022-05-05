@@ -5,22 +5,22 @@ title: Présentation du connecteur source Salesforce
 topic-legacy: overview
 description: Découvrez comment connecter Salesforce à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: bd3d3a83c030baaecccba2b1793b49ad8a6caa08
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 6%
+source-wordcount: '897'
+ht-degree: 18%
 
 ---
 
-# [!DNL Salesforce] connector
+# Connecteur [!DNL Salesforce]
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
-Experience Platform prend en charge l’ingestion de données à partir d’un système de gestion de la relation client tiers. La prise en charge des fournisseurs de gestion de la relation client inclut [!DNL Salesforce].
+Experience Platform prend en charge l’ingestion de données provenant d’un système tiers de gestion de la relation client (CRM). La prise en charge des fournisseurs de gestion de la relation client inclut [!DNL Salesforce].
 
-## LISTE AUTORISÉE d’adresses IP
+## Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou des performances peuvent se produire lors de l’utilisation de sources. Voir [LISTE AUTORISÉE d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
+Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
 
 ## Mappage des champs à partir de [!DNL Salesforce] vers XDM
 
@@ -87,13 +87,13 @@ Une requête réussie crée les espaces de noms et les schémas B2B conformémen
 
 ## Connexion [!DNL Salesforce] vers Platform à l’aide d’API
 
-La documentation ci-dessous fournit des informations sur la connexion. [!DNL Salesforce] vers Platform à l’aide d’API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL Salesforce] à Platform à l’aide d’API ou de l’interface utilisateur :
 
 - [Création d’une connexion de base Salesforce à l’aide de l’API Flow Service](../../tutorials/api/create/crm/salesforce.md)
-- [Explorer la structure et le contenu des données d’une source CRM à l’aide de l’API Flow Service](../../tutorials/api/explore/crm.md)
-- [Création d’un flux de données pour une source CRM à l’aide de l’API Flow Service](../../tutorials/api/collect/crm.md)
+- [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+- [Créer un flux de données pour une source CRM à l’aide de l’API Flow Service](../../tutorials/api/collect/crm.md)
 
 ## Connexion [!DNL Salesforce] vers Platform à l’aide de l’interface utilisateur
 
 - [Création d’une connexion source Salesforce dans l’interface utilisateur](../../tutorials/ui/create/crm/salesforce.md)
-- [Création d’un flux de données pour une connexion CRM dans l’interface utilisateur](../../tutorials/ui/dataflow/crm.md)
+- [Créer un flux de données pour une connexion CRM dans l’interface utilisateur](../../tutorials/ui/dataflow/crm.md)

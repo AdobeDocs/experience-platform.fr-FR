@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: cc966bccf28dcc915d5c19eab7614d6e80a7e67f
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '777'
-ht-degree: 96%
+source-wordcount: '780'
+ht-degree: 95%
 
 ---
 
@@ -167,6 +167,7 @@ ht-degree: 96%
       - [Explorer des données d’automatisation du marketing](tutorials/api/explore/marketing-automation.md)
       - [Explorer des données de paiement](tutorials/api/explore/payments.md)
       - [Explorer des données de protocole](tutorials/api/explore/protocols.md)
+      - [Exploration des tableaux de données](tutorials/api/explore/tabular.md)
    - Collecter des données {#collect}
       - [Collecter des données publicitaires](tutorials/api/collect/advertising.md)
       - [Collecter des données de stockage dans le cloud](tutorials/api/collect/cloud-storage.md)

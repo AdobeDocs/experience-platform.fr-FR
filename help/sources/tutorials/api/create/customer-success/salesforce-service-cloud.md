@@ -6,50 +6,50 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Salesforce Service Cloud à l’aide de l’API Flow Service.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 17055f76800deadacf435970a691cec79c9f1d17
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 11%
+source-wordcount: '473'
+ht-degree: 56%
 
 ---
 
-# Créez une connexion source [!DNL Salesforce Service Cloud] à l’aide de l’API [!DNL Flow Service]
+# Créez un [!DNL Salesforce Service Cloud] connexion source à l’aide de la fonction [!DNL Flow Service] API
 
-Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
+Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Salesforce Service Cloud] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de base pour [!DNL Salesforce Service Cloud] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md) :  [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
-* [Environnements de test](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
+* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Salesforce Service Cloud] à l’aide de l’API [!DNL Flow Service].
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Salesforce Service Cloud] en utilisant la variable [!DNL Flow Service] API.
 
-### Collecte des informations d’identification requises
+### Collecter les informations d’identification requises
 
-Pour que [!DNL Flow Service] se connecte à [!DNL Salesforce Service Cloud], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour connecter [!DNL Flow Service] à [!DNL Salesforce Service Cloud], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
-| Credential | Description |
+| Informations d’identification | Description |
 | ---------- | ----------- |
-| `username` | Nom d’utilisateur de votre compte utilisateur [!DNL Salesforce Service Cloud]. |
-| `password` | Mot de passe de votre compte [!DNL Salesforce Service Cloud]. |
-| `securityToken` | Jeton de sécurité pour votre compte [!DNL Salesforce Service Cloud]. |
-| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions base et source. L’identifiant de spécification de connexion pour [!DNL Salesforce Service Cloud] est : `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
+| `username` | Le nom d’utilisateur de votre [!DNL Salesforce Service Cloud] compte utilisateur. |
+| `password` | Le mot de passe de votre [!DNL Salesforce Service Cloud] compte . |
+| `securityToken` | Jeton de sécurité pour votre [!DNL Salesforce Service Cloud] compte . |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Salesforce Service Cloud] est `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à [ce document Salesforce Service Cloud](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
+Pour plus d’informations sur la prise en main, reportez-vous à la section [ce document Salesforce Service Cloud ;](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
 
-### Utilisation des API Platform
+### Utiliser les API Platform
 
-Pour plus d’informations sur la manière d’effectuer des appels avec succès vers les API Platform, consultez le guide de [prise en main des API Platform](../../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur la [Prise en main des API Platform](../../../../../landing/api-guide.md).
 
-## Création d’une connexion de base
+## Créer une connexion de base
 
-Une connexion de base conserve les informations entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
+Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
-Pour créer un identifiant de connexion de base, envoyez une requête de POST au point de terminaison `/connections` tout en fournissant vos informations d’authentification [!DNL Salesforce Service Cloud] dans le cadre des paramètres de requête.
+Pour créer un identifiant de connexion de base, envoyez une requête POST au point d’entrée `/connections` et indiquez vos informations d’authentification [!DNL Salesforce Service Cloud] dans les paramètres de la requête.
 
 **Format d’API**
 
@@ -59,7 +59,7 @@ POST /connections
 
 **Requête**
 
-La requête suivante crée une connexion de base pour [!DNL Salesforce Service Cloud] :
+La requête suivante permet de créer une connexion de base pour [!DNL Salesforce Service Cloud] :
 
 ```shell
 curl -X POST \
@@ -89,14 +89,14 @@ curl -X POST \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `auth.params.username` | Nom d’utilisateur associé à votre compte [!DNL Salesforce Service Cloud]. |
-| `auth.params.password` | Mot de passe associé à votre compte [!DNL Salesforce Service Cloud]. |
-| `auth.params.securityToken` | Jeton de sécurité associé à votre compte [!DNL Salesforce Service Cloud]. |
-| `connectionSpec.id` | ID de spécification de connexion [!DNL Salesforce Service Cloud] : `b66ab34-8619-49cb-96d1-39b37ede86ea` |
+| `auth.params.username` | Le nom d’utilisateur associé à votre [!DNL Salesforce Service Cloud] compte . |
+| `auth.params.password` | Le mot de passe associé à votre [!DNL Salesforce Service Cloud] compte . |
+| `auth.params.securityToken` | Jeton de sécurité associé à votre [!DNL Salesforce Service Cloud] compte . |
+| `connectionSpec.id` | Le [!DNL Salesforce Service Cloud] identifiant de spécification de connexion : `b66ab34-8619-49cb-96d1-39b37ede86ea` |
 
 **Réponse**
 
-Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant unique (`id`). Cet identifiant est nécessaire pour explorer votre système CRM à l’étape suivante.
+Une réponse réussie renvoie la connexion nouvellement créée, y compris son identifiant unique (`id`). Cet identifiant est nécessaire pour explorer votre système CRM à l’étape suivante.
 
 ```json
 {
@@ -107,4 +107,7 @@ Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant u
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une connexion [!DNL Salesforce Service Cloud] à l’aide de l’API [!DNL Flow Service] et obtenu la valeur d’identifiant unique de la connexion. Vous pouvez utiliser cet identifiant de connexion dans le tutoriel suivant lorsque vous apprendrez à [explorer les systèmes de succès client à l’aide de l’API Flow Service](../../explore/customer-success.md).
+En suivant ce tutoriel, vous avez créé une [!DNL Salesforce Service Cloud] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
+
+* [Explorez la structure et le contenu de vos tableaux de données à l’aide du [!DNL Flow Service] API](../../explore/tabular.md)
+* [Créez un flux de données pour importer les données de succès client dans Platform à l’aide de la variable [!DNL Flow Service] API](../../collect/customer-success.md)

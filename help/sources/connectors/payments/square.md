@@ -3,10 +3,11 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;carré
 solution: Experience Platform
 title: Présentation du connecteur source carré
 description: Découvrez comment connecter Square à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
-source-git-commit: cb2902455f965aced8d40859c36824710b9e695f
+exl-id: 18d33c5a-2955-4d0b-938c-52b6f72a444d
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 51%
+source-wordcount: '218'
+ht-degree: 53%
 
 ---
 
@@ -25,7 +26,7 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL S
 ## Connexion [!DNL Square] vers Platform à l’aide d’API
 
 * [Création d’une connexion de base carrée à l’aide de l’API Flow Service](../../tutorials/api/create/payments/square.md)
-* [Explorez la structure de données et le contenu d’une source de paiements à l’aide de l’API Flow Service](../../tutorials/api/explore/payments.md)
+* [Exploration des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 * [Création d’un flux de données pour une source de paiements à l’aide de l’API Flow Service](../../tutorials/api/collect/payments.md)
 
 ## Connexion [!DNL Square] vers Platform à l’aide de l’interface utilisateur

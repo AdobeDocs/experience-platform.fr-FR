@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Zoho CRM à l’aide de l’API Flow Service.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
-workflow-type: ht
-source-wordcount: '649'
-ht-degree: 100%
+source-git-commit: 17055f76800deadacf435970a691cec79c9f1d17
+workflow-type: tm+mt
+source-wordcount: '654'
+ht-degree: 92%
 
 ---
 
@@ -46,7 +46,7 @@ Pour plus d’informations sur ces informations d’identification, consultez la
 
 ### Utiliser les API Platform
 
-Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide de [Prise en main des API Platform](../../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur la [Prise en main des API Platform](../../../../../landing/api-guide.md).
 
 ## Créer une connexion de base
 
@@ -123,4 +123,7 @@ Une réponse réussie renvoie les détails de la connexion de base que vous vene
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce tutoriel, félicitations ! Grâce à celui-ci, vous avez créé une connexion de base à [!DNL Zoho CRM] à l’aide de l’API [!DNL Flow Service] et avez obtenu la valeur d’identifiant unique de la connexion. Vous pouvez utiliser cet identifiant dans le tutoriel suivant lorsque vous apprendrez à [explorer des systèmes CRM à l’aide de l’API Flow Service](../../explore/crm.md).
+En suivant ce tutoriel, vous avez créé une [!DNL Zoho] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
+
+* [Explorez la structure et le contenu de vos tableaux de données à l’aide du [!DNL Flow Service] API](../../explore/tabular.md)
+* [Créez un flux de données pour importer des données de gestion de la relation client dans Platform à l’aide du [!DNL Flow Service] API](../../collect/crm.md)
