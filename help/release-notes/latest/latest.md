@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
 workflow-type: tm+mt
 source-wordcount: '2707'
-ht-degree: 23%
+ht-degree: 24%
 
 ---
 
@@ -198,7 +198,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Prise en charge de [!DNL OneTrust Integration] | Vous pouvez désormais utiliser la variable [!DNL OneTrust Integration] source pour ingérer les données de consentement et de préférences de votre [!DNL OneTrust] compte à Platform. Consultez la documentation relative à [création d’un [!DNL OneTrust Integration] connexion source](../../sources/connectors/consent-and-preferences/onetrust.md) pour plus d’informations. |
+| Prise en charge de [!DNL OneTrust Integration] | Vous pouvez désormais utiliser la variable [!DNL OneTrust Integration] source pour ingérer les données de consentement et de préférences de votre [!DNL OneTrust] compte à Platform. Pour plus d’informations, consultez la documentation sur la [création d’une connexion source [!DNL OneTrust Integration] ](../../sources/connectors/consent-and-preferences/onetrust.md). |
 | Prise en charge de [!DNL Square] | Vous pouvez désormais utiliser la variable [!DNL Square] source pour ingérer des données de paiement à partir de votre [!DNL Square] compte à Platform. |
 | Prise en charge de la suppression des flux de données Attributs du client | Vous pouvez désormais supprimer les flux de données créés avec le connecteur source Attributs du client. |
 
