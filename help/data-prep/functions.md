@@ -5,7 +5,7 @@ title: Fonctions de mappage de prép de données
 topic-legacy: overview
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 5b40476051ceb20cd4d43f6a49b0ee984c17abc3
+source-git-commit: 14c7c3bd0bda0ab56767b9c0f5470090cf2bdb15
 workflow-type: tm+mt
 source-wordcount: '4164'
 ht-degree: 17%
@@ -136,7 +136,6 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| size_of | Renvoie la taille de l’entrée. | <ul><li>INPUT : **Obligatoire** L&#39;objet dont vous essayez de trouver la taille.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | Vérifie si un objet est vide ou non. | <ul><li>INPUT : **Obligatoire** L’objet que vous essayez de vérifier est vide.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | array_to_object | Crée une liste d’objets. | <ul><li>INPUT : **Obligatoire** Groupement de paires clé-tableau.</li></ul> | array_to_object(INPUT) | exemple de besoin | exemple de besoin |
 | to_object | Crée un objet basé sur les paires clé/valeur plate données. | <ul><li>INPUT : **Obligatoire** Liste plate de paires clé/valeur.</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
@@ -164,6 +163,7 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 | add_to_array | Ajoute des éléments à la fin du tableau. | <ul><li>ARRAY : **Obligatoire** Le tableau auquel vous ajoutez des éléments.</li><li>VALEURS : Éléments que vous souhaitez ajouter au tableau.</li></ul> | add_to_array &#x200B;(ARRAY, VALUES) | add_to_array &#x200B;([&#39;a&#39;, &#39;b&#39;], &quot;c&quot;, &quot;d&quot;) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;] |
 | join_arrays | Combine les tableaux les uns avec les autres. | <ul><li>ARRAY : **Obligatoire** Le tableau auquel vous ajoutez des éléments.</li><li>VALEURS : Les tableaux que vous souhaitez ajouter au tableau parent.</li></ul> | join_arrays &#x200B;(ARRAY, VALES) | join_arrays &#x200B;([&#39;a&#39;, &#39;b&#39;], [&quot;c&quot;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Prend une liste d’entrées et la convertit en tableau. | <ul><li>INCLUDE_NULLS : **Obligatoire** Valeur boolean indiquant s’il faut inclure ou non les valeurs nulles dans le tableau de réponse.</li><li>VALEURS : **Obligatoire** Les éléments à convertir en tableau.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
+| size_of | Renvoie la taille de l’entrée. | <ul><li>INPUT : **Obligatoire** L&#39;objet dont vous essayez de trouver la taille.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 
 {style=&quot;table-layout:auto&quot;}
 
