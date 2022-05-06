@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit la procédure à suivre pour récupérer des données à partir d’un stockage cloud tiers afin de les importer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
 workflow-type: tm+mt
-source-wordcount: '1597'
-ht-degree: 97%
+source-wordcount: '1549'
+ht-degree: 82%
 
 ---
 
@@ -38,9 +38,9 @@ Pour plus d’informations sur la manière d’effectuer correctement des appels
 
 ## Créer une connexion source {#source}
 
-Vous pouvez créer une connexion source en effectuant une requête POST à l’API [!DNL Flow Service]. Une connexion source se compose d’un identifiant de connexion, d’un chemin d’accès au fichier de données source et d’un identifiant de spécification de connexion.
+Vous pouvez créer une connexion source en envoyant une requête de POST au `sourceConnections` point d’entrée [!DNL Flow Service] l’API lors de la fourniture de votre identifiant de connexion de base, le chemin d’accès au fichier source que vous souhaitez ingérer et l’identifiant de spécification de connexion correspondant à votre source.
 
-Pour créer une connexion source, vous devez également définir une valeur d’énumération pour l’attribut du format de données.
+Lors de la création d&#39;une connexion source, vous devez également définir une valeur d&#39;énumération pour l&#39;attribut data format.
 
 Utilisez les valeurs d’énumération suivantes pour les sources basées sur des fichiers :
 
@@ -50,10 +50,7 @@ Utilisez les valeurs d’énumération suivantes pour les sources basées sur de
 | JSON | `json` |
 | Parquet | `parquet` |
 
-Pour toutes les sources basées sur des tableaux, définissez la valeur sur `tabular`.
-
-- [Créer une connexion source à l’aide de fichiers délimités personnalisés](#using-custom-delimited-files)
-- [Créer une connexion source à l’aide de fichiers compressés](#using-compressed-files)
+Pour toutes les sources basées sur un tableau, définissez la valeur sur `tabular`.
 
 **Format d’API**
 
@@ -61,13 +58,7 @@ Pour toutes les sources basées sur des tableaux, définissez la valeur sur `tab
 POST /sourceConnections
 ```
 
-### Créer une connexion source à l’aide de fichiers délimités personnalisés {#using-custom-delimited-files}
-
 **Requête**
-
-Vous pouvez ingérer un fichier délimité avec un délimiteur personnalisé en spécifiant une variable `columnDelimiter` comme propriété. Toute valeur de caractère unique est un délimiteur de colonne autorisé. Si cette valeur n’est pas fournie, une virgule `(,)` est utilisée comme valeur par défaut.
-
-L’exemple de requête suivant crée une connexion source pour un type de fichier délimité à l’aide de valeurs séparées par des tabulations.
 
 ```shell
 curl -X POST \
@@ -78,16 +69,20 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud storage source connection for delimited files",
-        "description": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "name": "Cloud Storage source connection",
+        "description: "Source connection for a cloud storage source",
+        "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
         "data": {
             "format": "delimited",
-            "columnDelimiter": "\t"
+            "properties": {
+                "columnDelimiter": "{COLUMN_DELIMITER}",
+                "encoding": "{ENCODING}"
+                "compressionType": "{COMPRESSION_TYPE}"
+            }
         },
         "params": {
-            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
-            "recursive": "true"
+            "path": "/acme/summerCampaign/account.csv",
+            "type": "file"
         },
         "connectionSpec": {
             "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -98,69 +93,14 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `baseConnectionId` | ID de connexion unique du système de stockage cloud tiers auquel vous accédez. |
-| `data.format` | Valeur d’énumération qui définit l’attribut de format des données. |
-| `data.columnDelimiter` | Vous pouvez utiliser n’importe quel délimiteur de colonne à un seul caractère pour collecter des fichiers plats. Cette propriété n’est requise que lors de l’ingestion de fichiers CSV ou TSV. |
+| `baseConnectionId` | Identifiant de connexion de base de votre source de stockage dans le cloud. |
+| `data.format` | Le format des données que vous souhaitez importer dans Platform. Les valeurs prises en charge sont les suivantes : `delimited`, `JSON`, et `parquet`. |
+| `data.properties` | (Facultatif) Ensemble de propriétés que vous pouvez appliquer à vos données lors de la création d’une connexion source. |
+| `data.properties.columnDelimiter` | (Facultatif) Un délimiteur de colonne à un seul caractère que vous pouvez spécifier lors de la collecte de fichiers plats. Toute valeur de caractère unique est un délimiteur de colonne autorisé. Si elle n’est pas fournie, une virgule (`,`) est utilisée comme valeur par défaut. **Remarque**: Le `columnDelimiter` ne peut être utilisée que lors de l’ingestion de fichiers délimités. |
+| `data.properties.encoding` | (Facultatif) Une propriété qui définit le type de codage à utiliser lors de l’ingestion de vos données vers Platform. Les types de codage pris en charge sont les suivants : `UTF-8` et `ISO-8859-1`. **Remarque**: Le `encoding` n’est disponible que lors de l’ingestion de fichiers CSV délimités. Les autres types de fichiers seront ingérés avec le codage par défaut, `UTF-8`. |
+| `data.properties.compressionType` | (Facultatif) Une propriété qui définit le type de fichier compressé pour l’ingestion. Les types de fichiers compressés pris en charge sont les suivants : `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, et `tar`. **Remarque**: Le `compressionType` ne peut être utilisée que lors de l’ingestion de fichiers JSON ou délimités. |
 | `params.path` | Chemin d’accès au fichier source auquel vous accédez. |
-| `connectionSpec.id` | ID de spécification de connexion associé à votre système de stockage cloud tiers spécifique. Consultez la section [Annexe](#appendix) pour obtenir la liste des ID de spécification de connexion. |
-
-**Réponse**
-
-Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion source. Cet identifiant est requis lors d’une étape ultérieure pour créer un flux de données.
-
-```json
-{
-    "id": "26b53912-1005-49f0-b539-12100559f0e2",
-    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
-}
-```
-
-### Créer une connexion source à l’aide de fichiers compressés {#using-compressed-files}
-
-**Requête**
-
-Vous pouvez également ingérer des fichiers délimités ou JSON compressés en spécifiant `compressionType` comme propriété. La liste des types de fichiers compressés pris en charge est la suivante :
-
-- `bzip2`
-- `gzip`
-- `deflate`
-- `zipDeflate`
-- `tarGzip`
-- `tar`
-
-L’exemple de requête suivant crée une connexion source pour un fichier délimité compressé à l’aide d’un type de fichier `gzip`.
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Cloud storage source connection for compressed files",
-        "description": "Cloud storage source connection for compressed files",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
-        "data": {
-            "format": "delimited",
-            "properties": {
-                "compressionType": "gzip"
-            }
-        },
-        "params": {
-            "path": "/compressed/files.gzip"
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-     }'
-```
-
-| Propriété | Description |
-| --- | --- |
-| `data.properties.compressionType` | Détermine le type de fichier compressé à ingérer. Cette propriété n’est requise que lors de l’ingestion de fichiers délimités ou JSON compressés. |
+| `connectionSpec.id` | Identifiant de spécification de connexion associé à votre source de stockage dans le cloud spécifique. Consultez lʼ[annexe](#appendix) pour obtenir la liste des identifiants de spécification de connexion. |
 
 **Réponse**
 
