@@ -3,7 +3,7 @@ title: Utilisation d’Adobe Target avec le SDK Web Platform
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;champ de décision;fragment de code de masquage préalable;vec;compositeur d’expérience d’après les formulaires;xdm;audiences;décisions;portée;schéma;schéma;diagramme système;diagramme
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: cdcbfdec6a232495aacaf9066d880bc9a10455d1
 workflow-type: tm+mt
 source-wordcount: '1273'
 ht-degree: 6%
@@ -88,7 +88,7 @@ Pour plus d’informations, voir [Catégories d’audiences](https://experiencel
 
 Les jetons de réponse sont principalement utilisés pour envoyer des métadonnées à des tiers tels que Google, Facebook, etc. Les jetons de réponse sont renvoyés dans la variable `meta` champ dans `propositions` -> `items`. Voici un exemple :
 
-```
+```json
 {
   "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
   "scope": "__view__",
@@ -112,7 +112,7 @@ Les jetons de réponse sont principalement utilisés pour envoyer des métadonn�
 Pour collecter les jetons de réponse, vous devez vous abonner à `alloy.sendEvent` promesse, itérer `propositions`
 et extraire les détails de `items` -> `meta`. Chaque `proposition` a une `renderAttempted` champ booléen indiquant si la variable `proposition` a été rendu ou non. Consultez l’exemple ci-dessous :
 
-```
+```js
 alloy("sendEvent",
   {
     renderDecisions: true,
@@ -183,7 +183,7 @@ Typique [!DNL Platform Web SDK] Le code utilisant cette commande ressemble à ce
 
 **`sendEvent`avec données de profil**
 
-```
+```js
 alloy("sendEvent", {
    renderDecisions: true|false,
    xdm: { // Experience Event XDM data },
@@ -193,7 +193,7 @@ alloy("sendEvent", {
 
 **Comment envoyer des attributs de profil à Adobe Target :**
 
-```
+```js
 alloy("sendEvent", {
   renderDecisions: true,
   data: {
@@ -232,7 +232,7 @@ Le tableau suivant répertorie [!DNL Recommendations] les attributs et si chacun
 
 **Comment envoyer des attributs Recommendations à Adobe Target :**
 
-```
+```js
 alloy("sendEvent", {
   renderDecisions: true,
   data: {
