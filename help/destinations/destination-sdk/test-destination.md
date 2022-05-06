@@ -1,23 +1,23 @@
 ---
-description: Dans le cadre de Destination SDK, Adobe fournit des outils de développement pour vous aider à configurer et tester votre destination. Cette page décrit comment tester votre configuration de destination.
-title: Test de votre configuration de destination
+description: Dans le cadre de la Destination SDK, Adobe fournit des outils de développement pour vous aider à configurer et tester votre destination. Cette page décrit comment tester votre configuration de destination.
+title: Tester la configuration de votre destination
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 1d191b0ce8eb3de8b14dbdc0b3a513585c18d1ea
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
-# Test de votre configuration de destination {#developer-tools}
+# Tester la configuration de votre destination {#developer-tools}
 
 ## Présentation {#overview}
 
-Dans le cadre de Destination SDK, Adobe fournit des outils de développement pour vous aider à configurer et tester votre destination. Cette page décrit comment tester votre configuration de destination. Pour plus d’informations sur la création d’un modèle de transformation de message, reportez-vous à la section [Créer et tester un modèle de transformation de message](./create-template.md).
+Dans le cadre de la Destination SDK, Adobe fournit des outils de développement pour vous aider à configurer et tester votre destination. Cette page décrit comment tester votre configuration de destination. Pour plus d’informations sur la création d’un modèle de transformation de message, reportez-vous à la section [Créer et tester un modèle de transformation de message](./create-template.md).
 
 À **tester si votre destination est configurée correctement et vérifier l’intégrité des flux de données vers votre destination configurée ;**, utilisez le *Outil de test de destination*. Grâce à cet outil, vous pouvez tester la configuration de votre destination en envoyant des messages à votre point de terminaison API REST.
 
-Illustré ci-dessous, le test de votre destination s’insère dans la variable [workflow de configuration des destinations](./configure-destination-instructions.md) dans Destination SDK :
+Illustré ci-dessous, le test de votre destination s’insère dans la variable [workflow de configuration des destinations](./configure-destination-instructions.md) en Destination SDK :
 
 ![Graphique indiquant où l’étape de test de destination correspond au workflow de configuration de destination](./assets/test-destination-step.png)
 
@@ -33,7 +33,7 @@ Avec cet outil, après avoir configuré votre destination, vous pouvez :
 * Testez si votre destination est correctement configurée ;
 * Vérifiez l’intégrité des flux de données vers la destination configurée.
 
-### Mode d’emploi {#how-to-use}
+### Utilisation {#how-to-use}
 
 >[!NOTE]
 >
@@ -60,7 +60,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '{
    "profiles":[
@@ -118,7 +118,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw ''
 ```

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Diffusion en continu de données d’enregistrement à l’aide des API d’ingestion en flux continu
 topic-legacy: tutorial
 type: Tutorial
-description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
+description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 77%
@@ -16,13 +16,13 @@ ht-degree: 77%
 
 # Diffusion en continu de données d’enregistrement à l’aide des API d’ingestion en flux continu
 
-Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API [!DNL Data Ingestion Service] Adobe Experience Platform.
+Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie de Adobe Experience Platform. [!DNL Data Ingestion Service] API.
 
 ## Prise en main
 
-Ce tutoriel nécessite une connaissance pratique de différents services d’Adobe Experience Platform. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
+Ce tutoriel nécessite une connaissance pratique de différents services d’Adobe Experience Platform. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel  [!DNL Platform] organise les données d’expérience.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience.
    - [Guide de développement du registre des schémas](../../xdm/api/getting-started.md)[!DNL Schema Registry] : guide complet abordant chacun des points de terminaison disponibles de l’API et la manière d’effectuer des appels vers ceux-ci. Cela implique de connaître votre `{TENANT_ID}`, qui apparaît dans les appels de ce tutoriel, et de savoir comment créer des schémas utilisés pour la création d’un jeu de données destiné à être ingéré.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
@@ -30,15 +30,15 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 ### Lecture d’exemples d’appels API
 
-Ce guide fournit des exemples d&#39;appels API pour démontrer comment formater vos requêtes. Il s&#39;agit notamment de chemins d&#39;accès, d&#39;en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
-- x-gw-ims-org-id : `{IMS_ORG}`
+- x-gw-ims-org-id : `{ORG_ID}`
 
 Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
@@ -52,9 +52,9 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 - Content-Type: application/json
 
-## Composition d’un schéma basé sur la classe [!DNL XDM Individual Profile]
+## Composition d’un schéma basé sur l’objet [!DNL XDM Individual Profile] class
 
-Pour créer un jeu de données, vous devez d’abord créer un nouveau schéma qui implémente la classe [!DNL XDM Individual Profile]. Pour plus d’informations sur la façon de créer des schémas, consultez le [guide de développement de l’API Schema Registry](../../xdm/api/getting-started.md).
+Pour créer un jeu de données, vous devez d’abord créer un nouveau schéma qui implémente le [!DNL XDM Individual Profile] classe . Pour plus d’informations sur la façon de créer des schémas, consultez le [guide de développement de l’API Schema Registry](../../xdm/api/getting-started.md).
 
 **Format d’API**
 
@@ -69,7 +69,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "type": "object",
@@ -138,7 +138,7 @@ Une réponse réussie renvoie un état HTTP 201 avec les détails du schéma qu
         "union"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:xdmType": "object",
     "meta:registryMetadata": {
         "repo:createDate": 1551376506996,
@@ -170,7 +170,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "@type":"xdm:descriptorIdentity",
@@ -211,7 +211,7 @@ Une réponse réussie renvoie un état HTTP 201 avec des informations sur le de
     "@id": "17aaebfa382ce8fc0a40d3e43870b6470aab894e1c368d16",
     "meta:containerId": "tenant",
     "version": "1",
-    "imsOrg": "{IMS_ORG}"
+    "imsOrg": "{ORG_ID}"
 }
 ```
 
@@ -236,7 +236,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d ' {
     "name": "Dataset name",
@@ -281,7 +281,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 | Paramètre | Description |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | La valeur `inletId` de la connexion en continu que vous avez créée précédemment. |
-| `syncValidation` | Un paramètre de requête facultatif destiné au développement. S’il est défini sur `true`, il peut être utilisé pour obtenir des commentaires immédiats afin de déterminer si la requête a bien été envoyée. Par défaut, cette valeur est définie sur `false`. Si vous définissez ce paramètre de requête sur `true`, le taux de la requête sera limité à 60 fois par minute par `CONNECTION_ID`. |
+| `syncValidation` | Un paramètre de requête facultatif destiné au développement. S’il est défini sur `true`, il peut être utilisé pour obtenir des commentaires immédiats afin de déterminer si la requête a bien été envoyée. Par défaut, cette valeur est définie sur `false`. Notez que si vous définissez ce paramètre de requête sur `true` que la demande sera limitée à 60 fois par minute `CONNECTION_ID`. |
 
 **Requête**
 
@@ -303,7 +303,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}"
     },
     "body": {
@@ -342,7 +342,7 @@ Si vous souhaitez inclure un nom source, l’exemple suivant montre comment l’
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "source": {
             "name": "Sample source name"
@@ -352,7 +352,7 @@ Si vous souhaitez inclure un nom source, l’exemple suivant montre comment l’
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails du [!DNL Profile] que vous venez de diffuser en continu.
+Une réponse réussie renvoie un état HTTP 200 avec les détails du nouveau flux en continu. [!DNL Profile].
 
 ```json
 {
@@ -374,11 +374,11 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails du [!DNL Profi
 
 ## Récupération des données d’enregistrement nouvellement ingérées
 
-Pour valider les enregistrements précédemment ingérés, vous pouvez utiliser la balise [[!DNL Profile Access API]](../../profile/api/entities.md) pour récupérer les données d&#39;enregistrement.
+Pour valider les enregistrements précédemment ingérés, vous pouvez utiliser la variable [[!DNL Profile Access API]](../../profile/api/entities.md) pour récupérer les données d’enregistrement.
 
 >[!NOTE]
 >
->Si l’ID de stratégie de fusion n’est pas défini et que `schema.name` ou `relatedSchema.name` est `_xdm.context.profile`, [!DNL Profile Access] récupère **toutes** les identités associées.
+>Si l’ID de stratégie de fusion n’est pas défini et que la variable `schema.name` ou `relatedSchema.name` is `_xdm.context.profile`, [!DNL Profile Access] va fetch **all** identités associées.
 
 **Format d’API**
 
@@ -402,7 +402,7 @@ Vous pouvez consulter les données d’enregistrement précédemment ingérées 
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -457,6 +457,6 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails des entités 
 
 ## Étapes suivantes
 
-En lisant ce document, vous comprenez maintenant comment ingérer des données d’enregistrement dans [!DNL Platform] à l’aide de connexions en continu. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. De plus, vous pouvez commencer à surveiller vos données ingérées via l’interface utilisateur [!DNL Platform]. Pour plus d’informations, consultez le guide de [surveillance de l’ingestion des données](../quality/monitor-data-ingestion.md).
+En lisant ce document, vous comprenez désormais comment ingérer des données d’enregistrement dans [!DNL Platform] à l’aide de connexions en continu. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. De plus, vous pouvez commencer à surveiller vos données ingérées par le biais de [!DNL Platform] Interface utilisateur. Pour plus d’informations, consultez le guide de [surveillance de l’ingestion des données](../quality/monitor-data-ingestion.md).
 
 Pour plus d’informations sur l’ingestion par flux en général, consultez la [présentation de l’ingestion par flux](../streaming-ingestion/overview.md).

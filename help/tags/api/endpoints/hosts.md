@@ -2,7 +2,7 @@
 title: Point d’entrée des hôtes
 description: Découvrez comment effectuer des appels au point d’entrée /hôtes dans l’API Reactor.
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 100%
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 Dans l’API Reactor, un hôte définit une destination où une [version](./builds.md) peut être diffusée.
 
-Lorsqu’une version est demandée par un utilisateur de balises dans Adobe Experience Platform, le système vérifie la bibliothèque pour déterminer dans quel [environnement](./environments.md) la bibliothèque doit être créée. Chaque environnement entretient une relation avec un hôte, indiquant où diffuser la version.
+Lorsquʼune version est demandée par un utilisateur de balises dans Adobe Experience Platform, le système vérifie la bibliothèque pour déterminer dans quel [environnement](./environments.md) celle-ci doit être créée. Chaque environnement entretient une relation avec un hôte, indiquant où diffuser la version.
 
 Un hôte appartient à une seule [propriété](./properties.md), tandis qu’une propriété peut avoir de nombreux hôtes. Une propriété doit comporter au moins un hôte avant de pouvoir publier.
 
@@ -54,7 +54,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PRd428c2a25caa4b32af61495f5809b737/hosts \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -132,7 +132,7 @@ curl -X GET \
   https://reactor.adobe.io/hosts/HT5d90148e72224224aac9bc0b01498b84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -201,7 +201,7 @@ curl -X POST \
   https://reactor.adobe.io/properties/PRb25a704c0b7c4562835ccdf96d3afd31/hosts \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -300,7 +300,7 @@ curl -X PATCH \
   https://reactor.adobe.io/hosts/HT5d90148e72224224aac9bc0b01498b84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -383,7 +383,7 @@ curl -X DELETE \
   https://reactor.adobe.io/hosts/HT5d90148e72224224aac9bc0b01498b84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Réponse**
@@ -419,7 +419,7 @@ curl -X GET \
   https://reactor.adobe.io/hosts/HT5d90148e72224224aac9bc0b01498b84/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

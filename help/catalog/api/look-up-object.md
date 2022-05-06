@@ -5,7 +5,7 @@ title: Recherche d’un objet de catalogue
 topic-legacy: developer guide
 description: Si vous connaissez l’identifiant unique d’un objet Catalog spécifique, vous pouvez exécuter une requête GET pour afficher les détails de cet objet.
 exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 71%
@@ -14,7 +14,7 @@ ht-degree: 71%
 
 # Recherche d’un objet Catalogue
 
-Si vous connaissez l’identifiant unique d’un objet [!DNL Catalog] spécifique, vous pouvez exécuter une requête de GET pour afficher les détails de cet objet.
+Si vous connaissez l’identifiant unique d’une [!DNL Catalog] , vous pouvez exécuter une requête de GET pour afficher les détails de cet objet.
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | L’identifiant de l’objet spécifique que vous souhaitez récupérer. |
 
 **Requête**
@@ -41,7 +41,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a?properties=name,description,state,tags,files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

@@ -5,24 +5,24 @@ title: Point de terminaison de l’API de gestion des environnements de test
 topic-legacy: developer guide
 description: Le point de terminaison /sandbox dans l’API Sandbox vous permet de gérer par programmation les environnements de test dans Adobe Experience Platform.
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: a43dd851a5c7ec722e792a0f43d1bb42777f0c15
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1489'
-ht-degree: 48%
+ht-degree: 51%
 
 ---
 
 # Point d’entrée de gestion des environnements de test
 
-Les environnements de test d’Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des opérations et de créer des configurations personnalisées sans affecter votre environnement de production. Le point de terminaison `/sandboxes` de l’API [!DNL Sandbox] vous permet de gérer par programmation les environnements de test dans Platform.
+Les environnements de test d’Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des opérations et de créer des configurations personnalisées sans affecter votre environnement de production. Le `/sandboxes` du point de terminaison [!DNL Sandbox] L’API vous permet de gérer par programmation les environnements de test dans Platform.
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ## Récupération d’une liste d’environnements de test {#list}
 
-Vous pouvez répertorier tous les environnements de test appartenant à votre organisation IMS (principal ou non) en effectuant une requête GET sur le point de terminaison `/sandboxes` .
+Vous pouvez répertorier tous les environnements de test appartenant à votre organisation IMS (principal ou non) en adressant une GET à la fonction `/sandboxes` point de terminaison .
 
 **Format d’API**
 
@@ -32,7 +32,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Voir la section [Paramètres de requête](./appendix.md#query) pour plus d’informations. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Voir la section sur [paramètres de requête](./appendix.md#query) pour plus d’informations. |
 
 **Requête**
 
@@ -41,7 +41,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes?&limit=4&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -131,7 +131,7 @@ Une réponse réussie renvoie une liste d’environnements de test appartenant �
 | `name` | Le nom de l’environnement de test. Cette propriété est utilisée à des fins de recherche dans les appels API. |
 | `title` | Le nom d’affichage de l’environnement de test. |
 | `state` | L’état de traitement actuel de l’environnement de test. Un environnement de test peut avoir l’un des états suivants : <br/><ul><li>`creating`: L’environnement de test a été créé, mais le système continue de le configurer.</li><li>`active`: L’environnement de test est créé et principal.</li><li>`failed`: En raison d’une erreur, le système n’a pas pu configurer l’environnement de test et est désactivé.</li><li>`deleted`: L’environnement de test a été désactivé manuellement.</li></ul> |
-| `type` | Type d’environnement de test. Les types d’environnements de test actuellement pris en charge sont `development` et `production`. |
+| `type` | Type d’environnement de test. Les types d’environnements de test actuellement pris en charge sont les suivants : `development` et `production`. |
 | `isDefault` | Une propriété booléenne indiquant si cet environnement de test est l’environnement de test de production par défaut pour l’organisation. |
 | `eTag` | L’identifiant d’une version spécifique de l’environnement de test. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que l’environnement de test est modifié. |
 
@@ -158,7 +158,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/dev-2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
 **Réponse**
@@ -194,13 +194,13 @@ Une réponse réussie renvoie les détails de l’environnement de test, y compr
 
 >[!NOTE]
 >
->Lorsqu’un nouvel environnement de test est créé, vous devez d’abord ajouter ce nouvel environnement de test à votre profil de produit dans [Adobe Admin Console](https://adminconsole.adobe.com/) avant de pouvoir commencer à utiliser le nouvel environnement de test. Pour plus d’informations sur la configuration d’un environnement de test à un profil de produit, voir la documentation sur la [gestion des autorisations pour un profil de produit](../../access-control/ui/permissions.md) .
+>Lorsqu’un nouvel environnement de test est créé, vous devez d’abord l’ajouter à votre profil de produit dans [Adobe Admin Console](https://adminconsole.adobe.com/) avant de commencer à utiliser le nouvel environnement de test. Consultez la documentation relative à [gestion des autorisations pour un profil de produit](../../access-control/ui/permissions.md) pour plus d’informations sur la configuration d’un environnement de test à un profil de produit.
 
-Vous pouvez créer un environnement de test de développement ou de production en envoyant une requête de POST au point de terminaison `/sandboxes` .
+Vous pouvez créer un environnement de test de développement ou de production en adressant une requête de POST à la variable `/sandboxes` point de terminaison .
 
 ### Création d’un environnement de test de développement
 
-Pour créer un environnement de test de développement, vous devez fournir un attribut `type` avec la valeur `development` dans le payload de la requête.
+Pour créer un environnement de test de développement, vous devez fournir un `type` avec la valeur de `development` dans le payload de la requête.
 
 **Format d’API**
 
@@ -217,7 +217,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "acme-dev",
@@ -248,11 +248,11 @@ Une réponse réussie renvoie les détails du nouvel environnement de test, indi
 
 >[!NOTE]
 >
->Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leur `state` deviendra &quot;principal&quot; ou &quot;échec&quot;.
+>Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leurs `state` deviendra &quot;principal&quot; ou &quot;échec&quot;.
 
 ### Création d’un environnement de test de production
 
-Pour créer un environnement de test de production, vous devez fournir un attribut `type` avec la valeur `production` dans le payload de la requête.
+Pour créer un environnement de test de production, vous devez fournir un `type` avec la valeur de `production` dans le payload de la requête.
 
 **Format d’API**
 
@@ -269,7 +269,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H `Accept: application/json` \
   -H 'Content-Type: application/json' \
   -d '{
@@ -301,7 +301,7 @@ Une réponse réussie renvoie les détails du nouvel environnement de test, indi
 
 >[!NOTE]
 >
->Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leur `state` deviendra &quot;principal&quot; ou &quot;échec&quot;.
+>Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leurs `state` deviendra &quot;principal&quot; ou &quot;échec&quot;.
 
 ## Mise à jour d’un environnement de test {#put}
 
@@ -323,14 +323,14 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 **Requête**
 
-La requête suivante met à jour la propriété `title` de l’environnement de test nommé &quot;acme&quot;.
+La requête suivante met à jour la variable `title` de l’environnement de test nommé &quot;acme&quot;.
 
 ```shell
 curl -X PATCH \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json'
   -d '{
     "title": "Acme Business Group prod"
@@ -364,7 +364,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | Paramètre | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | La propriété `name` de l’environnement de test que vous souhaitez réinitialiser. |
-| `validationOnly` | Paramètre facultatif qui vous permet d’effectuer une vérification avant vol sur l’opération de réinitialisation de l’environnement de test sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si l’environnement de test que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segment. |
+| `validationOnly` | Paramètre facultatif qui vous permet d’effectuer une vérification avant vol sur l’opération de réinitialisation de l’environnement de test sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si l’environnement de test que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segments. |
 
 **Requête**
 
@@ -375,7 +375,7 @@ curl -X PUT \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev?validationOnly=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json'
   -d '{
     "action": "reset"
@@ -405,7 +405,7 @@ Une réponse réussie renvoie les détails de l’environnement de test mis à j
 }
 ```
 
-L’environnement de test de production par défaut et les environnements de test de production créés par l’utilisateur ne peuvent pas être réinitialisés si le graphique d’identités qui y est hébergé est également utilisé par Adobe Analytics pour la fonction [Analyse entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=fr) ou si le graphique d’identités hébergé est également utilisé par Adobe Audience Manager pour la fonction [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr)).
+L’environnement de test de production par défaut et les environnements de test de production créés par l’utilisateur ne peuvent pas être réinitialisés si le graphique d’identités hébergé à l’intérieur est également utilisé par Adobe Analytics pour la variable [Analyses entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=fr) ou si le graphique d’identités hébergé dans est également utilisé par Adobe Audience Manager pour la variable [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr) fonction .
 
 Voici une liste d’exceptions possibles qui peuvent empêcher la réinitialisation d’un environnement de test :
 
@@ -432,7 +432,7 @@ Voici une liste d’exceptions possibles qui peuvent empêcher la réinitialisat
 }
 ```
 
-Vous pouvez procéder à la réinitialisation d’un environnement de test de production utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service] en ajoutant le paramètre `ignoreWarnings` à votre requête.
+Vous pouvez procéder à la réinitialisation d’un environnement de test de production utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service] en ajoutant la variable `ignoreWarnings` à votre requête.
 
 **Format d’API**
 
@@ -454,7 +454,7 @@ curl -X PUT \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json'
   -d '{
     "action": "reset"
@@ -497,8 +497,8 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | Paramètre | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | `name` de l’environnement de test que vous souhaitez supprimer. |
-| `validationOnly` | Paramètre facultatif qui vous permet de vérifier en amont l’opération de suppression de l’environnement de test sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si l’environnement de test que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segment. |
-| `ignoreWarnings` | Paramètre facultatif qui vous permet d’ignorer la vérification de validation et de forcer la suppression d’un environnement de test de production créé par l’utilisateur qui est utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service]. Ce paramètre ne peut pas être appliqué à un environnement de test de production par défaut. |
+| `validationOnly` | Paramètre facultatif qui vous permet de vérifier en amont l’opération de suppression de l’environnement de test sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si l’environnement de test que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segments. |
+| `ignoreWarnings` | Paramètre facultatif qui vous permet d’ignorer la vérification de validation et de forcer la suppression d’un environnement de test de production créé par l’utilisateur qui est utilisé pour le partage de segment bidirectionnel avec [!DNL Audience Manager] ou [!DNL Audience Core Service]. Ce paramètre ne peut pas être appliqué à un environnement de test de production par défaut. |
 
 **Requête**
 
@@ -509,7 +509,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Réponse**

@@ -2,8 +2,8 @@
 title: Prise en main de l’API Reactor
 description: Découvrez comment commencer à utiliser l’API Reactor, y compris les étapes de génération des informations d’identification d’accès requises.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 100%
 
@@ -15,7 +15,7 @@ Pour utiliser l’[API Reactor](https://www.adobe.io/experience-platform-apis/re
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Ce guide explique comment utiliser Adobe Developer Console pour rassembler les valeurs de chacun de ces en-têtes afin que vous puissiez commencer à lancer des appels vers l’API Reactor.
 
@@ -27,11 +27,11 @@ Avant de pouvoir générer des valeurs d’authentification pour l’API Reactor
 
 À l’aide d’Adobe Developer Console, vous devez générer les trois informations d’identification d’accès suivantes :
 
-* `{IMS_ORG}`
+* `{ORG_ID}`
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-L’identifiant de votre organisation IMS (`{IMS_ORG}`) et la clé d’API (`{API_KEY}`) peuvent être réutilisés dans les appels d’API futurs après leur génération initiale. Cependant, votre jeton d’accès (`{ACCESS_TOKEN}`) est temporaire et doit être régénéré toutes les 24 heures.
+L’identifiant de votre organisation IMS (`{ORG_ID}`) et la clé d’API (`{API_KEY}`) peuvent être réutilisés dans les appels d’API futurs après leur génération initiale. Cependant, votre jeton d’accès (`{ACCESS_TOKEN}`) est temporaire et doit être régénéré toutes les 24 heures.
 
 Les étapes de génération de ces valeurs sont décrites en détail ci-dessous.
 
@@ -70,13 +70,13 @@ Sélectionnez les profils de produit souhaités dans la liste, puis sélectionne
 Dès que l’API a été ajoutée au projet, le projet s’ouvre à nouveau sur la page de l’API Reactor Experience Platform. À partir de là, faites défiler l’écran jusqu’à la section **Compte de service (JWT)**, qui fournit les informations d’identification d’accès suivantes, requises dans tous les appels à l’API Reactor :
 
 * **ID CLIENT** : l’identifiant du client est l’identifiant requis `{API_KEY}` qui doit être fourni dans l’en-tête `x-api-key`.
-* **ID D’ORGANISATION** : l’ID d’organisation est la valeur `{IMS_ORG}` qui doit être utilisée dans l’en-tête `x-gw-ims-org-id`.
+* **ID D’ORGANISATION** : l’ID d’organisation est la valeur `{ORG_ID}` qui doit être utilisée dans l’en-tête `x-gw-ims-org-id`.
 
 ![](../images/api/getting-started/access-creds.png)
 
 ### Authentification pour chaque session
 
-Maintenant que vous disposez de vos valeurs `{API_KEY}` et `{IMS_ORG}`, l’étape finale génère une valeur `{ACCESS_TOKEN}`.
+Maintenant que vous disposez de vos valeurs `{API_KEY}` et `{ORG_ID}`, l’étape finale génère une valeur `{ACCESS_TOKEN}`.
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ Une réponse réussie renvoie un nouveau jeton d’accès, ainsi que le nombre d
 
 ## Étapes suivantes
 
-En suivant les étapes de ce tutoriel, vous devriez disposer de valeurs valides pour `{IMS_ORG}`, `{API_KEY}` et `{ACCESS_TOKEN}`. Vous pouvez désormais tester ces valeurs en les utilisant dans une simple requête cURL à l’API Reactor.
+En suivant les étapes de ce tutoriel, vous devriez disposer de valeurs valides pour `{ORG_ID}`, `{API_KEY}` et `{ACCESS_TOKEN}`. Vous pouvez désormais tester ces valeurs en les utilisant dans une simple requête cURL à l’API Reactor.
 
 Commencez par lancer un appel API pour [répertorier toutes les entreprises](./endpoints/companies.md#list).
 

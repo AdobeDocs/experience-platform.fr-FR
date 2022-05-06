@@ -5,10 +5,10 @@ title: Point de terminaison de l’API du journal d’audit
 description: Le point de terminaison /auditlog de l’API Schema Registry vous permet de récupérer une liste chronologique des modifications apportées à une ressource XDM existante.
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-source-git-commit: 7abe27d7fcc461becb0495fcd470eaea031b94bc
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '407'
-ht-degree: 7%
+ht-degree: 18%
 
 ---
 
@@ -18,7 +18,7 @@ Pour chaque ressource de modèle de données d’expérience (XDM), la variable 
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Schema Registry] ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d’appels API de ce document, ainsi que des informations importantes concernant les en-têtes requis pour réussir les appels à une API Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[[!DNL Schema Registry] API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 Le `/auditlog` Le point d’entrée fait partie des appels de procédure distants (RPC) pris en charge par la fonction [!DNL Schema Registry]. Contrairement aux autres points de terminaison dans la variable [!DNL Schema Registry] API, les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires comme `Accept` ou `Content-Type`, et n’utilisez pas d’événement `CONTAINER_ID`. Ils doivent plutôt utiliser la variable `/rpc` , comme illustré dans l’appel API ci-dessous.
 
@@ -47,7 +47,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.schemas.50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -60,7 +60,7 @@ Une réponse réussie renvoie une liste chronologique des modifications apporté
   {
     "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
     "updatedUser": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "updatedTime": "02-19-2021 05:43:56",
     "requestId": "a14NMF0jd6BIfyXaHdTDl4bC4R0r9rht",
     "clientId": "{CLIENT_ID}",
@@ -78,7 +78,7 @@ Une réponse réussie renvoie une liste chronologique des modifications apporté
   {
     "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
     "updatedUser": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "updatedTime": "02-19-2021 05:43:56",
     "requestId": "pFQbgmWrdbJrNB9GdxTSGECpXYWspu68",
     "clientId": "{CLIENT_ID}",

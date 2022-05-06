@@ -5,8 +5,8 @@ title: Créer un flux de données pour les membres Mailchimp à l’aide de l’
 topic-legacy: tutorial
 description: Découvrez comment connecter Adobe Experience Platform aux membres MailChimp à l’aide de l’API Flow Service.
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
-source-git-commit: fd851dea5623522e4706c6beb8bd086d466773b5
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '2500'
 ht-degree: 100%
 
@@ -22,7 +22,7 @@ Avant de connecter [!DNL Mailchimp] à Adobe Experience Platform à l’aide d
 
 ## Créer une connexion de base {#base-connection}
 
-Une fois vos informations d’authentification [!DNL Mailchimp]récupérées, vous pouvez lancer le processus de création du flux de données pour importer les données[!DNL Mailchimp Members] dans Platform. La première étape de la création d’un flux de données consiste à créer une connexion de base.
+Une fois vos informations d’authentification [!DNL Mailchimp] récupérées, vous pouvez lancer le processus de création du flux de données pour importer les données [!DNL Mailchimp Members] dans Platform. La première étape de la création d’un flux de données consiste à créer une connexion de base.
 
 Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
@@ -48,7 +48,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "Mailchimp base connection with basic authentication",
@@ -111,7 +111,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp base connection with OAuth 2 refresh code",
@@ -137,7 +137,7 @@ curl -X POST \
 | `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
 | `connectionSpec.id` | Identifiant de spécification de connexion de votre source. Cet identifiant peut être récupéré une fois votre source enregistrée à lʼaide de lʼAPI [!DNL Flow Service]. |
 | `auth.specName` | Type d’authentification que vous utilisez pour authentifier votre source sur Platform. |
-| `auth.params.host` | URL racine utilisée pour la connexion à l’API [!DNL Mailchimp]. Le format de l’URL racine est le suivant : `https://{DC}.api.mailchimp.com`, où `{DC}` représente le centre de données correspondant à votre compte. |
+| `auth.params.host` | URL racine utilisée pour la connexion à l’API [!DNL Mailchimp]. Le format de l’URL racine est le suivant : `https://{DC}.api.mailchimp.com`, où `{DC}` représente le centre de données qui correspond à votre compte. |
 | `auth.params.authorizationTestUrl` | (Facultatif) L’URL du test d’autorisation est utilisée pour valider les informations d’identification lors de la création d’une connexion de base. Si elles ne sont pas fournies, les informations d’identification sont automatiquement vérifiées à l’étape de création de la connexion source. |
 | `auth.params.accessToken` | Jeton d’accès correspondant utilisé pour authentifier la source. Ceci est requis pour l’authentification basée sur OAuth. |
 
@@ -184,7 +184,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/flowservice/connections/05c595e5-edc3-45c8-90bb-fcf556b57c4b/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -357,7 +357,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp source connection to ingest listId",
@@ -400,21 +400,21 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 
 Pour que les données sources soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform contenant les données sources.
 
-Un schéma XDM cible peut être créé en adressant une requête POST à [l’API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, consultez le tutoriel sur la [création d’un schéma à l’aide de l’API](../../../../../xdm/api/schemas.md).
+Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel sur la [création d’un schéma à l’aide de l’API](../../../../../xdm/api/schemas.md).
 
 ### Créer un jeu de données cible {#target-dataset}
 
-Un jeu de données cible peut être créé en adressant une requête POST à [l’API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
+Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
 
-Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, consultez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](../../../../../catalog/api/create-dataset.md).
+Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](../../../../../catalog/api/create-dataset.md).
 
 ## Créer une connexion cible {#target-connection}
 
-Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, vous devez fournir l’identifiant fixe de spécification de connexion qui correspond au [!DNL Data Lake]. Cet identifiant est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, vous devez fournir l’identifiant de spécification de connexion fixe qui correspond au [!DNL Data Lake]. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Vous disposez désormais des identifiants uniques d’un schéma cible, d’un jeu de données cible et de l’identifiant de spécification de connexion à [!DNL Data Lake]. Grâce à ces identifiants, vous pouvez créer une connexion cible à l’aide de l’API [!DNL Flow Service] pour spécifier le jeu de données qui contiendra les données source entrantes.
+Vous disposez à présent des identifiants uniques d’un schéma et d’un jeu de données cibles et de l’identifiant de spécification de connexion au [!DNL Data Lake]. À lʼaide de ces identifiants, vous pouvez créer une connexion cible à l’aide de l’API [!DNL Flow Service] pour spécifier le jeu de données qui contiendra les données source entrantes.
 
 **Format d’API**
 
@@ -432,7 +432,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp target connection",
@@ -458,7 +458,7 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nom de la connexion cible. Assurez-vous que le nom de votre connexion cible est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion cible. |
 | `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
-| `connectionSpec.id` | Identifiant de spécification de connexion correspondant à [!DNL Data Lake]. Cet identifiant fixe est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion correspondant à [!DNL Data Lake]. Cet ID fixe est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 | `data.format` | Format des données [!DNL Mailchimp] que vous souhaitez importer dans Platform. |
 | `params.dataSetId` | Identifiant du jeu de données cible récupéré lors d’une étape précédente. |
 
@@ -492,7 +492,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "version": 0,
@@ -539,7 +539,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ## Créer un flux {#flow}
 
-La dernière étape pour importer des données [!DNL Mailchimp] dans Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
+La dernière étape avant dʼimporter des données [!DNL Mailchimp] dans Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
 
 * [ID de connexion source](#source-connection)
 * [ID de connexion cible](#target-connection)
@@ -564,7 +564,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp Members dataflow",
@@ -600,9 +600,9 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom du flux de données. Assurez-vous que le nom de votre flux de données est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre flux de données. |
 | `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre flux de données. |
-| `flowSpec.id` | Identifiant de spécification de flux requis pour créer un flux de données. Cet identifiant fixe est `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | Version correspondante de l’identifiant de spécification de flux. Ce paramètre est défini par défaut sur `1.0`. |
-| `sourceConnectionIds` | [Identifiant de connexion source](#source-connection) généré lors d’une étape précédente. |
+| `flowSpec.id` | Identifiant de spécification de flux requis pour créer un flux de données. Cet ID fixe est `6499120c-0b15-42dc-936e-847ea3c24d72`. |
+| `flowSpec.version` | Version correspondante de l’identifiant de spécification de flux. Cette valeur est définie par défaut sur `1.0`. |
+| `sourceConnectionIds` | L’[identifiant de connexion source](#source-connection) généré lors d’une étape précédente. |
 | `targetConnectionIds` | [Identifiant de connexion cible](#target-connection) généré lors d’une étape précédente. |
 | `transformations` | Cette propriété contient les différentes transformations qui doivent être appliquées à vos données. Cette propriété est requise lors de l’importation de données non conformes à XDM dans Platform. |
 | `transformations.name` | Nom attribué à la transformation. |
@@ -610,7 +610,7 @@ curl -X POST \
 | `transformations.params.mappingVersion` | Version correspondante de l’identifiant de mappage. Ce paramètre est défini par défaut sur `0`. |
 | `scheduleParams.startTime` | Heure de début désignée pour la première ingestion de données. |
 | `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
-| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. Un intervalle n’est pas requis lorsque la fréquence est définie sur `once` et doit être supérieur ou égal à `15` pour d’autres valeurs de fréquence. |
+| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. L’intervalle n’est pas requis lorsque la fréquence est définie sur `once` et doit être supérieur ou égal à `15` pour d’autres valeurs de fréquence. |
 
 **Réponse**
 
@@ -642,13 +642,13 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
 
-Une réponse réussie renvoie des détails concernant votre exécution de flux, y compris des informations sur sa date de création, les connexions source et cible, ainsi que l’identifiant unique de l’exécution de flux (`id`).
+Une réponse réussie renvoie des informations concernant votre exécution de flux, notamment : la date de création, les connexions source et cible ainsi que l’identifiant unique de l’exécution de flux (`id`).
 
 ```json
 {
@@ -663,7 +663,7 @@ Une réponse réussie renvoie des détails concernant votre exécution de flux, 
             "updatedClient": "{UPDATED_CLIENT}",
             "sandboxId": "{SANDBOX_ID}",
             "sandboxName": "{SANDBOX_NAME}",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "name": "MailChimp Members dataflow",
             "description": "MailChimp Members dataflow",
             "flowSpec": {
@@ -743,7 +743,7 @@ Une réponse réussie renvoie des détails concernant votre exécution de flux, 
 
 ## Mettre à jour votre flux de données
 
-Pour mettre à jour le planning d’exécution, le nom et la description de votre flux de données, envoyez une requête PATCH à l’API [!DNL Flow Service] et fournissez vos identifiants de flux et de version ainsi que le nouveau planning que vous souhaitez utiliser.
+Pour mettre à jour le planning d’exécution, le nom et la description de votre flux de données, envoyez une requête PATCH à l’API [!DNL Flow Service] et indiquez votre ID de flux, de version et du nouveau planning que vous souhaitez utiliser.
 
 >[!IMPORTANT]
 >
@@ -764,7 +764,7 @@ curl -X PATCH \
   'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -H 'If-Match: "2e01f11d-0000-0200-0000-615649660000"' \
   -d '[
@@ -794,7 +794,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en fournissant votre identifiant de flux.
+Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en y indiquant votre identifiant de flux.
 
 ```json
 {
@@ -815,7 +815,7 @@ DELETE /flows/{FLOW_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FLOW_ID}` | Valeur unique `id` pour le flux de données que vous souhaitez supprimer. |
+| `{FLOW_ID}` | Valeur `id` unique du flux de données à supprimer. |
 
 **Requête**
 
@@ -824,17 +824,17 @@ curl -X DELETE \
   'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide. Vous pouvez confirmer la suppression en tentant d’adresser une requête de recherche (GET) au flux de données. L’API renvoie une erreur HTTP 404 (Introuvable), indiquant que le flux de données a été supprimé.
+Une réponse réussie renvoie un état HTTP 204 (pas de contenu) et un corps vide. Vous pouvez confirmer la suppression en tentant d’adresser une requête de recherche (GET) au flux de données. L’API renvoie une erreur HTTP 404 (Introuvable), indiquant que le flux de données a été supprimé.
 
 ## Mettre à jour votre connexion
 
-Pour mettre à jour le nom, la description et les informations d’identification de votre connexion, envoyez une requête PATCH à l’API [!DNL Flow Service] et fournissez vos identifiants de connexion de base et de version ainsi que les nouvelles informations que vous souhaitez utiliser.
+Pour mettre à jour le nom, la description et les informations d’identification de votre connexion, envoyez une requête PATCH à l’API [!DNL Flow Service] et indiquez votre identifiant de connexion de base et de version ainsi que les nouvelles informations que vous souhaitez utiliser.
 
 >[!IMPORTANT]
 >
@@ -848,7 +848,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | Valeur unique `id` pour la connexion que vous souhaitez mettre à jour. |
+| `{BASE_CONNECTION_ID}` | Valeur `id` unique pour la connexion que vous souhaitez mettre à jour. |
 
 **Requête**
 
@@ -859,7 +859,7 @@ curl -X PATCH \
   'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -H 'If-Match: 4000cff7-0000-0200-0000-6154bad60000' \
   -d '[
@@ -913,7 +913,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | Valeur unique `id` pour la connexion de base que vous souhaitez supprimer. |
+| `{BASE_CONNECTION_ID}` | Valeur `id` unique de la connexion de base à supprimer. |
 
 **Requête**
 
@@ -922,7 +922,7 @@ curl -X DELETE \
   'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

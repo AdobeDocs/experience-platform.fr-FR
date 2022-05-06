@@ -5,10 +5,10 @@ title: Création d’un jeu de données à l’aide d’API
 topic-legacy: datasets
 description: Ce document décrit les étapes générales pour créer un jeu de données à l’aide des API d’Adobe Experience Platform et pour renseigner le jeu de données à l’aide d’un fichier.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1304'
-ht-degree: 85%
+ht-degree: 86%
 
 ---
 
@@ -22,7 +22,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 * [Ingestion par lots](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] vous permet d’ingérer des données sous forme de fichiers de lot.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une seule [!DNL Platform] dans des environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à la fonction [!DNL Platform] API.
 
@@ -36,7 +36,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
@@ -78,7 +78,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-full+json; version=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -105,7 +105,7 @@ Le format de l’objet de réponse dépend de l’en-tête Accept envoyé dans l
         "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:immutableTags": [
         "union"
     ],
@@ -196,7 +196,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "name":"LoyaltyMembersDataset",
@@ -243,7 +243,7 @@ Le corps de requête comprend un champ « datasetId », dont la valeur `{DATAS
 ```SHELL
 curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
   -H 'accept: application/json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -260,7 +260,7 @@ Une réponse réussie renvoie un état HTTP 201 (Créé) et un objet de répons
 ```JSON
 {
     "id": "5d01230fc78a4e4f8c0c6b387b4b8d1c",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "updated": 1552694873602,
     "status": "loading",
     "created": 1552694873602,
@@ -386,7 +386,7 @@ Une réponse positive renvoie un objet avec son attribut `status` contenant la v
 ```JSON
 {
     "5b7129a879323401ef2a6486": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "created": 1534142888068,
         "createdClient": "{CREATED_CLIENT}",
         "createdUser": "{CREATED_BY}",
@@ -418,7 +418,7 @@ Une réponse négative renvoie un objet avec la valeur `"failed"` dans son attri
 ```JSON
 {
     "5b96ce65badcf701e51f075d": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "status": "failed",
         "relatedObjects": [
             {

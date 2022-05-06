@@ -5,18 +5,18 @@ title: Filtrage des données du catalogue à l’aide des paramètres de requêt
 topic-legacy: developer guide
 description: L’API Catalog Service permet de filtrer les données de réponse à l’aide de paramètres de requête de demande. En ce qui concerne le catalogue, l’une des bonnes pratiques consiste à utiliser des filtres dans tous les appels API, réduisant ainsi la charge de l’API et contribuant à améliorer les performances globales.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 87%
 
 ---
 
-# Filtrage des données [!DNL Catalog] à l’aide de paramètres de requête
+# Filtrer [!DNL Catalog] données à l’aide des paramètres de requête
 
-L’API [!DNL Catalog Service] permet de filtrer les données de réponse à l’aide de paramètres de requête de requête de requête. L’une des bonnes pratiques pour [!DNL Catalog] consiste à utiliser des filtres dans tous les appels API, car ils réduisent la charge de l’API et contribuent à améliorer les performances globales.
+Le [!DNL Catalog Service] L’API permet de filtrer les données de réponse à l’aide de paramètres de requête de requête de requête. Une partie des bonnes pratiques pour [!DNL Catalog] est d’utiliser des filtres dans tous les appels API, car ils réduisent la charge de l’API et contribuent à améliorer les performances globales.
 
-Ce document décrit les méthodes les plus courantes de filtrage des objets [!DNL Catalog] dans l’API. Il vous est recommandé de vous référer à ce document lors de la lecture du [guide de développement du catalogue](getting-started.md) pour en savoir plus sur la manière d’interagir avec l’API [!DNL Catalog] Pour plus d’informations sur [!DNL Catalog Service], consultez la [[!DNL Catalog] présentation](../home.md).
+Ce document décrit les méthodes de filtrage les plus courantes [!DNL Catalog] dans l’API. Il vous est recommandé de vous référer à ce document lors de la lecture du [guide de développement du catalogue](getting-started.md) pour en savoir plus sur la manière d’interagir avec l’API [!DNL Catalog] Pour plus d’informations générales sur [!DNL Catalog Service], reportez-vous à la section [[!DNL Catalog] aperçu](../home.md).
 
 ## Limiter les objets renvoyés
 
@@ -36,7 +36,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | Un entier indiquant le nombre d’objets à renvoyer, compris entre 1 et 100. |
 
 **Requête**
@@ -48,7 +48,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -104,9 +104,9 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | Le nom d’un attribut à inclure dans le corps de la réponse. |
-| `{OBJECT_ID}` | Identifiant unique d’un objet [!DNL Catalog] spécifique en cours de récupération. |
+| `{OBJECT_ID}` | L’identifiant unique d’une [!DNL Catalog] en cours de récupération. |
 
 **Requête**
 
@@ -117,13 +117,13 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?limit=4&properties=name,schemaRef' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
 
-Une réponse réussie renvoie une liste d’objets [!DNL Catalog] avec uniquement les propriétés demandées affichées.
+Une réponse réussie renvoie une liste de [!DNL Catalog] avec uniquement les propriétés demandées affichées.
 
 ```json
 {
@@ -157,7 +157,7 @@ En fonction de la réponse ci-dessus, vous pouvez en déduire ce qui suit :
 
 >[!NOTE]
 >
->Dans la propriété `schemaRef` de chaque jeu de données, le numéro de version indique la dernière version mineure du schéma. Pour plus d’informations, reportez-vous à la section [contrôle de version des schémas](../../xdm/api/getting-started.md#versioning) du guide de l’API XDM.
+>Dans le `schemaRef` pour chaque jeu de données, le numéro de version indique la dernière version mineure du schéma. Pour plus d’informations, reportez-vous à la section [contrôle de version des schémas](../../xdm/api/getting-started.md#versioning) du guide de l’API XDM.
 
 ## Décalage de l’index de départ de la liste de réponses
 
@@ -185,7 +185,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/catalog/dataSets?start=4&limit=2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -209,7 +209,7 @@ Quelques limites doivent être prises en compte lors de l’utilisation de balis
 * Les seuls objets Catalog qui prennent actuellement en charge les balises sont les jeux de données, les lots et les connexions.
 * Les noms de balise sont propres à votre organisation IMS.
 * Les processus Adobe peuvent se servir de balises pour certains comportements. Le préfixe standard « adobe » est ajouté au nom de ces balises. Par conséquent, vous devriez éviter cette pratique lors de la déclaration des noms de balise.
-* Les noms de balise suivants sont réservés à l’utilisation de [!DNL Experience Platform] et ne peuvent donc pas être déclarés comme nom de balise pour votre organisation :
+* Les noms de balise suivants sont réservés à l’ensemble de [!DNL Experience Platform], et ne peuvent donc pas être déclarés comme nom de balise pour votre organisation :
    * `unifiedProfile` : ce nom de balise est réservé à l’ingestion des jeux de données par [[!DNL Real-time Customer Profile]](../../profile/home.md).
    * `unifiedIdentity` : ce nom de balise est réservé à l’ingestion des jeux de données par [[!DNL Identity Service]](../../identity-service/home.md).
 
@@ -218,7 +218,7 @@ Vous trouverez ci-dessous un exemple de jeu de données contenant une propriét�
 ```json
 {
     "5be1f2ecc73c1714ceba66e2": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "tags": {
             "sampleTag": [
                 "123456"
@@ -265,7 +265,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | Le nom de la balise à utiliser pour filtrer. |
 | `{TAG_VALUE}` | La valeur de la balise à utiliser pour filtrer. Prend en charge les caractères génériques (`*`). |
 
@@ -278,7 +278,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?tags=sampleTag:123456,secondTag:* \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -290,7 +290,7 @@ Une réponse réussie renvoie une liste de jeux de données qui contiennent `sam
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 1",
             "created": 1533539550237,
             "updated": 1533539552416,
@@ -310,7 +310,7 @@ Une réponse réussie renvoie une liste de jeux de données qui contiennent `sam
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 2",
             "created": 1533539550237,
             "updated": 1533539552416,
@@ -336,7 +336,7 @@ Une réponse réussie renvoie une liste de jeux de données qui contiennent `sam
 
 ## Filtrage par période
 
-Certains points de terminaison de l’API [!DNL Catalog] comportent des paramètres de requête qui permettent des requêtes de plage, le plus souvent dans le cas de dates.
+Certains points de terminaison dans la variable [!DNL Catalog] Les API possèdent des paramètres de requête qui permettent des requêtes de plage, le plus souvent dans le cas de dates.
 
 **Format d’API**
 
@@ -357,19 +357,19 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/batches?createdAfter=1554076800000&createdBefore=1556668799000' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
 
-Une réponse réussie contient une liste d’objets [!DNL Catalog] compris dans la plage de dates spécifiée. À moins qu’une limite ne soit également spécifiée, la réponse contient 20 objets maximum.
+Une réponse réussie contient une liste de [!DNL Catalog] qui se trouvent dans la plage de dates spécifiée. À moins qu’une limite ne soit également spécifiée, la réponse contient 20 objets maximum.
 
 ```json
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 1",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -381,7 +381,7 @@ Une réponse réussie contient une liste d’objets [!DNL Catalog] compris dans 
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 2",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -425,19 +425,19 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?orderBy=name,desc:updated' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
 
-Une réponse réussie contient une liste d’objets [!DNL Catalog] triés selon le paramètre `orderBy`. À moins qu’une limite ne soit également spécifiée, la réponse contient 20 objets maximum.
+Une réponse réussie contient une liste de [!DNL Catalog] les objets triés en fonction des `orderBy` . À moins qu’une limite ne soit également spécifiée, la réponse contient 20 objets maximum.
 
 ```json
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "0405",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -449,7 +449,7 @@ Une réponse réussie contient une liste d’objets [!DNL Catalog] triés selon 
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "AAM Dataset",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -461,7 +461,7 @@ Une réponse réussie contient une liste d’objets [!DNL Catalog] triés selon 
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "AAM Dataset",
             "created": 1554028394852,
             "updated": 1554130582960,
@@ -500,7 +500,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | Le nom de la propriété dont la valeur est celle que vous souhaitez utiliser pour filtrer. |
 | `{VALUE}` | Une valeur de propriété qui détermine les résultats à inclure (ou à exclure, selon la requête). |
 
@@ -513,7 +513,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?name=exampleName,anotherName' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -525,7 +525,7 @@ Une réponse réussie contient une liste de jeux de données excluant ceux dont 
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "exampleName",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -537,7 +537,7 @@ Une réponse réussie contient une liste de jeux de données excluant ceux dont 
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "anotherName",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -576,7 +576,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | Une instruction conditionnelle qui indique la propriété pour laquelle formuler une requête et la manière dont sa valeur doit être évaluée. Vous en trouverez des exemples ci-dessous. |
 
 La valeur du paramètre `property` prend en charge plusieurs types différents d’instructions conditionnelles. Le tableau suivant décrit la syntaxe de base pour les instructions prises en charge :
@@ -606,7 +606,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/catalog/dataSets?property=version>1.0.3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -618,7 +618,7 @@ Une réponse réussie contient une liste de jeux de données dont les numéros d
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.1.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "sampleDataset",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -630,7 +630,7 @@ Une réponse réussie contient une liste de jeux de données dont les numéros d
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.6",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "exampleDataset",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -642,7 +642,7 @@ Une réponse réussie contient une liste de jeux de données dont les numéros d
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.4",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "anotherDataset",
             "created": 1554028394852,
             "updated": 1554130582960,

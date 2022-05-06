@@ -5,7 +5,7 @@ title: Guide de l’API Identity Service
 topic-legacy: API guide
 description: L’API Identity Service permet aux développeurs de gérer l’identification inter-appareils, cross-canal et en temps quasi réel de vos clients à l’aide de graphiques d’identités dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 74%
@@ -14,29 +14,29 @@ ht-degree: 74%
 
 # Guide de l’API [!DNL Identity Service]
 
-Adobe Experience Platform [!DNL Identity Service] gère l’identification inter-appareils, cross-canal et en temps quasi réel de vos clients dans ce qu’on appelle un graphique d’identités dans Adobe Experience Platform.
+Adobe Experience Platform [!DNL Identity Service] gère l’identification de vos clients sur plusieurs appareils, sur plusieurs canaux et quasiment en temps réel dans ce qu’on appelle un graphique d’identités dans Adobe Experience Platform.
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [[!DNL Identity Service]](../home.md) : résout le problème fondamental posé par la fragmentation des données de profil des clients. Pour ce faire, il rapproche les identités entre les appareils et les systèmes sur lesquels les clients interagissent avec votre marque.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
-Les sections suivantes apportent des informations supplémentaires que vous devrez connaître ou dont vous devrez disposer pour passer avec succès des appels à l’API [!DNL Identity Service].
+Les sections suivantes contiennent des informations supplémentaires que vous devrez connaître ou dont vous devrez disposer pour passer avec succès des appels à la fonction [!DNL Identity Service] API.
 
-### Lecture d&#39;exemples d&#39;appels API
+### Lecture d’exemples d’appels API
 
-Ce guide fournit des exemples d&#39;appels API pour démontrer comment formater vos requêtes. Il s&#39;agit notamment de chemins d&#39;accès, d&#39;en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
-- x-gw-ims-org-id : `{IMS_ORG}`
+- x-gw-ims-org-id : `{ORG_ID}`
 
 Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
@@ -52,9 +52,9 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ### Acheminement basé sur la région
 
-L’API [!DNL Identity Service] utilise des points de terminaison spécifiques à une région qui nécessitent l’inclusion d’une balise `{REGION}` dans le chemin de requête. Pendant la mise en service de votre organisation IMS, une région est déterminée et stockée dans votre profil d’organisation IMS. L’utilisation de la région appropriée avec chaque point de terminaison garantit que toutes les requêtes effectuées à l’aide de l’API [!DNL Identity Service] sont acheminées vers la région appropriée.
+Le [!DNL Identity Service] L’API utilise des points de terminaison spécifiques à une région qui nécessitent l’inclusion d’un `{REGION}` dans le chemin d’accès de la requête. Pendant la mise en service de votre organisation IMS, une région est déterminée et stockée dans votre profil d’organisation IMS. L’utilisation de la région appropriée avec chaque point de terminaison garantit que toutes les requêtes effectuées à l’aide de la variable [!DNL Identity Service] Les API sont acheminées vers la région appropriée.
 
-Il existe actuellement deux régions prises en charge par les API [!DNL Identity Service] : VA7 et NLD2.
+Deux régions sont actuellement prises en charge par [!DNL Identity Service] API : VA7 et NLD2.
 
 Le tableau ci-dessous présente des exemples de chemins qui utilisent les régions :
 
@@ -69,7 +69,7 @@ Le tableau ci-dessous présente des exemples de chemins qui utilisent les régio
 
 Si vous ne parvenez pas à localiser la région dans votre profil d’organisation IMS, contactez votre administrateur système pour obtenir de l’aide.
 
-## Utilisation de l’API [!DNL Identity Service]
+## En utilisant la variable [!DNL Identity Service] API
 
 Les paramètres d’identité utilisés dans ces services peuvent être exprimés de l’une des deux manières suivantes : composite ou XID.
 
@@ -79,7 +79,7 @@ Lorsqu’une identité est conservée, [!DNL Identity Service] génère et affec
 
 Pour limiter le payload dans les réponses, les API adaptent leurs réponses au type de construction d’identité utilisée. En d’autres termes, si vous transmettez un XID, vos réponses auront des XID, si vous transmettez des identités composites, la réponse suivra la structure utilisée dans la requête.
 
-Les exemples de ce document ne couvrent pas la fonctionnalité complète de l’API [!DNL Identity Service]. Pour l’API complète, voir le [guide de référence de l’API Swagger](https://www.adobe.io/experience-platform-apis/references/identity-service).
+Les exemples de ce document ne couvrent pas toutes les fonctionnalités de la fonction [!DNL Identity Service] API. Pour l’API complète, voir le [guide de référence de l’API Swagger](https://www.adobe.io/experience-platform-apis/references/identity-service).
 
 >[!NOTE]
 >

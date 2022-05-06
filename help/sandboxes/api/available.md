@@ -5,7 +5,7 @@ title: Point de terminaison de l’API Sandbox disponible
 topic-legacy: developer guide
 description: Vous pouvez répertorier les environnements de test disponibles pour l’utilisateur actuel en envoyant une requête de GET au point de terminaison des environnements de test disponibles.
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 41%
@@ -28,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Consultez le [document de l’annexe](./appendix.md#query) pour obtenir la liste des paramètres disponibles. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Voir [document de l’annexe](./appendix.md#query) pour une liste de paramètres disponibles. |
 
 **Requête**
 
@@ -37,12 +37,12 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Réponse**
 
-Une réponse réussie renvoie une liste d’environnements de test disponibles pour l’utilisateur actuel, y compris des détails tels que `name`, `title`, `state` et `type`.
+Une réponse réussie renvoie une liste d’environnements de test disponibles pour l’utilisateur actuel, y compris des détails tels que `name`, `title`, `state`, et `type`.
 
 ```json
 {

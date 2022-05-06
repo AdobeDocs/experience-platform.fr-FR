@@ -6,49 +6,49 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Azure Data Lake Storage Gen2 à l’aide de l’API Flow Service.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: f0bb779961e9387eab6a424461e35eba9ab48fe2
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '511'
-ht-degree: 6%
+ht-degree: 40%
 
 ---
 
 # Créez un [!DNL Azure Data Lake Storage Gen2] connexion de base à l’aide de [!DNL Flow Service] API
 
-Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
+Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
 Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Azure Data Lake Storage Gen2] (ci-après appelé &quot;ADLS Gen2&quot;) à l’aide de la méthode [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
+* [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Environnements de test](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour créer une connexion source ADLS Gen2 à l’aide de la variable [!DNL Flow Service] API.
 
-### Collecte des informations d’identification requises
+### Collecter les informations d’identification requises
 
 Pour [!DNL Flow Service] pour vous connecter à ADLS Gen2, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
-| Credential | Description |
+| Informations d’identification | Description |
 | ---------- | ----------- |
 | `url` | Point de terminaison d’ADLS Gen2. Le modèle de point de terminaison est le suivant : `https://<accountname>.dfs.core.windows.net`. |
 | `servicePrincipalId` | ID client de l’application. |
 | `servicePrincipalKey` | Clé de l’application. |
 | `tenant` | Les informations du client qui contiennent votre application. |
-| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions base et source. L’identifiant de spécification de connexion pour ADLS Gen2 est : `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour ADLS Gen2 est : `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
 
 Pour plus d’informations sur ces valeurs, reportez-vous à la section [ce document ADLS Gen2](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 
-### Utilisation des API Platform
+### Utiliser les API Platform
 
-Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur [Prise en main des API Platform](../../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur la [Prise en main des API Platform](../../../../../landing/api-guide.md).
 
-## Création d’une connexion de base
+## Créer une connexion de base
 
-Une connexion de base conserve les informations entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
+Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
 Pour créer un identifiant de connexion de base, envoyez une requête de POST au `/connections` point de terminaison tout en fournissant vos informations d’identification d’authentification ADLS Gen2 dans le cadre des paramètres de requête.
 
@@ -67,7 +67,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{

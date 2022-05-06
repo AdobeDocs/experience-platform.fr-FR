@@ -5,26 +5,26 @@ title: Points de terminaison de l’API d’exportation/importation
 description: Les points de terminaison /export et /import de l’API Schema Registry vous permettent de partager des ressources XDM entre les organisations IMS et les environnements de test.
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '506'
-ht-degree: 6%
+ht-degree: 14%
 
 ---
 
 # Points de fin d’exportation/importation
 
-Toutes les ressources de [!DNL Schema Library] sont contenues dans un environnement de test spécifique au sein d’une organisation IMS. Dans certains cas, vous souhaiterez peut-être partager des ressources du modèle de données d’expérience (XDM) entre les environnements de test et les organisations IMS. L’API [!DNL Schema Registry] fournit deux points de terminaison qui vous permettent de générer une payload d’exportation pour n’importe quel schéma, groupe de champs de schéma ou type de données dans le [!DNL  Schema Library], puis d’utiliser cette payload pour importer cette ressource (et toutes les ressources dépendantes) dans un environnement de test cible et une organisation IMS.
+Toutes les ressources dans la variable [!DNL Schema Library] sont contenus dans un environnement de test spécifique au sein d’une organisation IMS. Dans certains cas, vous souhaiterez peut-être partager des ressources du modèle de données d’expérience (XDM) entre les environnements de test et les organisations IMS. Le [!DNL Schema Registry] L’API fournit deux points de terminaison qui vous permettent de générer une charge d’exportation pour n’importe quel schéma, groupe de champs de schéma ou type de données dans[!DNL  Schema Library], puis utilisez cette payload pour importer cette ressource (et toutes les ressources dépendantes) dans un environnement de test cible et une organisation IMS.
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’[[!DNL Schema Registry] ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Les points d’entrée d’API utilisés dans ce guide font partie de l’[[!DNL Schema Registry] ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
-Les points de terminaison export/import font partie des appels de procédure distants (RPC) pris en charge par [!DNL Schema Registry]. Contrairement aux autres points de terminaison de l’API [!DNL Schema Registry], les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires tels que `Accept` ou `Content-Type` et n’utilisent pas de `CONTAINER_ID`. Ils doivent plutôt utiliser l’espace de noms `/rpc`, comme illustré dans les appels API ci-dessous.
+Les points de terminaison export/import font partie des appels de procédure distants (RPC) pris en charge par la fonction [!DNL Schema Registry]. Contrairement aux autres points de terminaison dans la variable [!DNL Schema Registry] API, les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires comme `Accept` ou `Content-Type`, et n’utilisez pas d’événement `CONTAINER_ID`. Ils doivent plutôt utiliser la variable `/rpc` , comme illustré dans les appels API ci-dessous.
 
 ## Récupération d’une payload d’exportation pour une ressource {#export}
 
-Pour tout schéma, groupe de champs ou type de données existant dans [!DNL Schema Library], vous pouvez générer une payload d’exportation en effectuant une requête GET sur le point de terminaison `/export`, en fournissant l’identifiant de la ressource dans le chemin d’accès.
+Pour tout schéma, groupe de champs ou type de données existant dans la variable [!DNL Schema Library], vous pouvez générer une payload d’exportation en envoyant une requête de GET à la variable `/export` point de terminaison , en indiquant l’identifiant de la ressource dans le chemin d’accès.
 
 **Format d’API**
 
@@ -34,27 +34,27 @@ GET /rpc/export/{RESOURCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{RESOURCE_ID}` | `meta:altId` ou `$id` encodé URL de la ressource XDM que vous souhaitez exporter. |
+| `{RESOURCE_ID}` | Le `meta:altId` ou encodé URL `$id` de la ressource XDM que vous souhaitez exporter. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Requête**
 
-La requête suivante récupère une payload d’exportation pour un groupe de champs `Restaurant`.
+La requête suivante récupère un payload d’exportation pour un `Restaurant` groupe de champs.
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau d’objets, qui représente la ressource XDM cible et toutes ses ressources dépendantes. Dans cet exemple, le premier objet du tableau est un type de données `Property` créé par le client et utilisé par le groupe de champs `Restaurant`, tandis que le second objet est le groupe de champs `Restaurant` lui-même. Cette payload peut ensuite être utilisée pour [importer la ressource](#import) dans un autre environnement de test ou une organisation IMS différente.
+Une réponse réussie renvoie un tableau d’objets, qui représente la ressource XDM cible et toutes ses ressources dépendantes. Dans cet exemple, le premier objet du tableau est un objet créé par le client. `Property` le type de données qui `Restaurant` le groupe de champs utilise, tandis que le second objet est le suivant : `Restaurant` groupe de champs lui-même. Cette payload peut ensuite être utilisée pour [importer la ressource](#import) dans un autre environnement de test ou organisation IMS.
 
 Notez que toutes les instances de l’identifiant du client de la ressource sont remplacées par `<XDM_TENANTID_PLACEHOLDER>`. Cela permet au registre des schémas d’appliquer automatiquement l’identifiant client correct aux ressources en fonction de l’emplacement où ils sont envoyés dans l’appel d’importation suivant.
 
@@ -198,7 +198,7 @@ Notez que toutes les instances de l’identifiant du client de la ressource sont
 
 ## Importer une ressource {#import}
 
-Une fois que vous avez [généré une payload d’exportation](#export) pour une ressource XDM, vous pouvez utiliser cette payload dans une requête de POST sur le point de terminaison `/import` pour importer cette ressource dans une organisation IMS cible et un environnement de test.
+Une fois que vous avez [génération d’une payload d’exportation](#export) pour une ressource XDM, vous pouvez utiliser cette payload dans une requête de POST à la variable `/import` point de terminaison pour importer cette ressource dans une organisation IMS et un environnement de test cible.
 
 **Format d’API**
 
@@ -208,14 +208,14 @@ POST /rpc/import
 
 **Requête**
 
-La requête suivante utilise la payload renvoyée dans l’exemple [d’exportation précédent](#export) pour importer le groupe de champs `Restaurant` dans une nouvelle organisation IMS et un nouvel environnement de test, comme déterminé par les en-têtes `x-gw-ims-org-id` et `x-sandbox-name` respectivement.
+La requête suivante utilise la charge utile renvoyée dans la précédente [exemple d&#39;export](#export) pour importer la variable `Restaurant` groupe de champs dans une nouvelle organisation IMS et un nouvel environnement de test, tel que déterminé par `x-gw-ims-org-id` et `x-sandbox-name` en-têtes, respectivement.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/rpc/import \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -427,7 +427,7 @@ Une réponse réussie renvoie une liste des ressources importées, avec les vale
             }
         ],
         "refs": [],
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:xdmType": "object",
@@ -506,7 +506,7 @@ Une réponse réussie renvoie une liste des ressources importées, avec les vale
         "refs": [
             "https://ns.adobe.com/{TENANT_ID}/datatypes/fc07162ee7ca8d18e074a3bb50c3938c76160bf6040e8495"
         ],
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:intendedToExtend": [],

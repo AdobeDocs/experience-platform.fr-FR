@@ -2,8 +2,8 @@
 description: Cette page décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point dʼentrée de l’API « /authoring/audience-templates ».
 title: Opérations de l’API du point d’entrée des métadonnées d’audience
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: afdabdebe9b82d828cb1941edb99ca2518a941a2
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 100%
 
@@ -39,7 +39,7 @@ La requête suivante crée un modèle de métadonnées d’audience configuré e
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-templates \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -223,7 +223,7 @@ La requête suivante met à jour un modèle de métadonnées d’audience exista
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-templates/bd4ec8f0-e98f-4b6a-8064-dd7adbfffec9 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -334,7 +334,7 @@ La requête suivante récupère la liste des modèles d’audience auxquels vous
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -466,7 +466,7 @@ GET /authoring/audience-templates/{INSTANCE_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates/bd4ec8f0-e98f-4b6a-8064-dd7adbfffec9 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -602,7 +602,7 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/audience-templates/bd4ec8f0-e98f-4b6a-8064-dd7adbfffec9 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
@@ -613,7 +613,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une réponse HTTP vide.
 
 ## Gestion des erreurs d’API
 
-Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état d’API](../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes dʼétat d’API](../../landing/troubleshooting.md#api-status-codes) et [Erreurs dʼen-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
 
 ## Étapes suivantes
 

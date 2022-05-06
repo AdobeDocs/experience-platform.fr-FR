@@ -5,7 +5,7 @@ title: Point de terminaison de l’API de requêtes
 topic-legacy: queries
 description: Les sections suivantes passent en revue les appels que vous pouvez effectuer à l’aide du point de terminaison /query de l’API Query Service.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 536c2998f7d320dec0cb392465677dd30c8ea622
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 94%
@@ -51,7 +51,7 @@ La requête suivante renvoie la dernière requête créée pour votre organisati
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -135,7 +135,7 @@ La requête suivante crée une requête configurée en fonction des valeurs four
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
@@ -219,7 +219,7 @@ GET /queries/{QUERY_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -294,7 +294,7 @@ Cette requête API utilise la syntaxe du correctif JSON pour son payload. Pour p
 curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json',
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;confidentialité du lac de données;espaces de noms dʼidentité;confidentialité;lac de données
+keywords: Experience Platform;accueil;rubriques populaires;confidentialité du lac de données;espaces de noms dʼidentité;confidentialité;lac de données
 solution: Experience Platform
 title: Traitement des demandes dʼaccès à des informations personnelles dans le lac de données
 topic-legacy: overview
-description: Adobe Experience Platform Privacy Service traite les demandes des clients dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts fondamentaux liés au traitement des demandes d’accès à des informations personnelles concernant les données clients stockées dans le lac de données.
+description: Adobe Experience Platform Privacy Service traite les demandes des clients dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts fondamentaux liés au traitement des demandes d’accès à des informations personnelles concernant les données clients stockées dans le lac de données.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: d8665a349c6f453d83b64317982f3544bbcde0f7
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '1380'
 ht-degree: 100%
 
@@ -14,28 +14,28 @@ ht-degree: 100%
 
 # Traitement des demandes dʼaccès à des informations personnelles dans [!DNL Data Lake]
 
-Adobe Experience Platform [!DNL Privacy Service] traite les demandes des clients dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité.
+Adobe Experience Platform [!DNL Privacy Service] traite les demandes des clients dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité.
 
 Ce document couvre les concepts fondamentaux liés au traitement des demandes dʼaccès à des informations personnelles concernant les données clients stockées dans [!DNL Data Lake].
 
 >[!NOTE]
 >
->Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour le lac de données dans Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour la banque de données du profil client en temps réel, reportez-vous au guide sur le [traitement des demandes d’accès à des informations personnelles pour le profil](../profile/privacy.md) en plus de ce tutoriel.
+>Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour le lac de données dans Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour la banque de données du profil client en temps réel, reportez-vous au guide sur le [traitement des demandes d’accès à des informations personnelles pour le profil](../profile/privacy.md) en plus de ce tutoriel.
 >
->Pour savoir comment effectuer des demandes d’accès à des informations personnelles pour d’autres applications Adobe Experience Cloud, reportez-vous à la [documentation du Privacy Service](../privacy-service/experience-cloud-apps.md).
+>Pour savoir comment effectuer des demandes d’accès à des informations personnelles pour d’autres applications Adobe Experience Cloud, reportez-vous à la [documentation du Privacy Service](../privacy-service/experience-cloud-apps.md).
 
 ## Prise en main
 
 Une connaissance concrète des services [!DNL Experience Platform] suivants est recommandée avant la lecture de ce guide :
 
-* [[!DNL Privacy Service]](../privacy-service/home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
+* [[!DNL Privacy Service]](../privacy-service/home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
 * [[!DNL Catalog Service]](home.md) : système dʼenregistrement de lʼemplacement et de la traçabilité des données dans [!DNL Experience Platform]. Fournit une API qui peut être utilisée pour mettre à jour les métadonnées des jeux de données.
 * [[!DNL Experience Data Model (XDM) System]](../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 * [[!DNL Identity Service]](../identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
 
 ## Compréhension des espaces de noms d’identité {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] rapproche les données dʼidentité client entre les systèmes et les appareils. [!DNL Identity Service] utilise les espaces de noms d’identité pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse e-mail (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
+Adobe Experience Platform [!DNL Identity Service] rapproche les données dʼidentité client entre les systèmes et les appareils. [!DNL Identity Service] utilise les espaces de noms d’identité pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse e-mail (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
 
 [!DNL Identity Service] conserve un stock d’espaces de nom d’identité définis globalement (standard) et par l’utilisateur (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
 
@@ -91,7 +91,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '
@@ -165,13 +165,13 @@ curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
     "companyContexts": [
       {
         "namespace": "imsOrgID",
-        "value": "{IMS_ORG}"
+        "value": "{ORG_ID}"
       }
     ],
     "users": [

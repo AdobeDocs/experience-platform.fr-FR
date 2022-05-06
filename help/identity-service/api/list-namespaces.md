@@ -5,7 +5,7 @@ title: Liste des espaces de noms d’identité disponibles
 topic-legacy: API guide
 description: Répertorier tous les espaces de noms disponibles.
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 44%
@@ -27,13 +27,13 @@ curl -X GET \
   'https://platform-va7.adobe.io/data/core/idnamespace/identities' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
 
-La réponse comprend un tableau d’objets, chaque objet représentant un espace de noms disponible. Les espaces de noms avec une valeur &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL false]&quot; sont des espaces de noms standard, tandis que ceux avec une valeur &quot;[!UICONTROL personnalisée]&quot; de &quot;[!UICONTROL true]&quot; sont des espaces de noms que votre organisation a créés.
+La réponse comprend un tableau d’objets, chaque objet représentant un espace de noms disponible. Espaces de noms avec &quot;[!UICONTROL custom]&quot; valeur de &quot;[!UICONTROL false]&quot; sont des espaces de noms standard, tandis que ceux dotés de &quot;[!UICONTROL custom]&quot; valeur de &quot;[!UICONTROL true]&quot; sont des espaces de noms que votre organisation a créés.
 
 >[!NOTE]
 >

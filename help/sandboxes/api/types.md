@@ -5,10 +5,10 @@ title: Point de terminaison de l’API des types Sandbox
 topic-legacy: developer guide
 description: Vous pouvez récupérer une liste des types d’environnements de test pris en charge pour votre organisation en envoyant une requête GET au point de terminaison /sandboxTypes .
 exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
-source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '162'
-ht-degree: 45%
+ht-degree: 70%
 
 ---
 
@@ -18,7 +18,7 @@ Vous pouvez récupérer une liste des types d’environnements de test pris en c
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture d’exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ## Récupération d’une liste de types d’environnements de test pris en charge
 
@@ -37,7 +37,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxTypes \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
 **Réponse**

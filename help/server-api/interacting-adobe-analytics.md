@@ -4,7 +4,7 @@ description: Découvrez comment utiliser l’API Edge Network Server pour intera
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
 keywords: la collecte de données; le point d'exutoire; les analyses; API réseau Adobe Experience Platform Edge;analytics
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 2%
@@ -25,7 +25,7 @@ Pour permettre à Adobe Analytics de recevoir des données de l’API serveur, v
 
 ## Interaction avec Adobe Analytics {#interacting-analytics}
 
-### Format d&#39;API {#format}
+### Format d’API {#format}
 
 ```http
 POST https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}
@@ -40,7 +40,7 @@ Toutes les valeurs que les utilisateurs mappent à ces champs sont automatiqueme
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}" \
 -H "Authorization: Bearer {TOKEN}" 
--H "x-gw-ims-org-id: {IMS_ORG_ID}" 
+-H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}" 
 -H "Content-Type: application/json" \
 -d '{

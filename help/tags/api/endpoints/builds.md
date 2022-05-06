@@ -2,7 +2,7 @@
 title: Point d’entrée de versions
 description: Découvrez comment effectuer des appels vers le point d’entrée /versions dans l’API Reactor.
 exl-id: 476abea0-efff-478a-b87f-ef6b91bfcca5
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 100%
@@ -11,7 +11,7 @@ ht-degree: 100%
 
 # Point d’entrée de versions
 
-Les extensions, les règles et les éléments de données sont les blocs de construction de Balises dans Adobe Experience Platform. Lorsque vous souhaitez que votre application fasse quelque chose, ces blocs de construction sont ajoutés à une [bibliothèque](./libraries.md). Pour déployer une bibliothèque sur votre application d’expérience, cette bibliothèque est compilée dans une version. Le point d’entrée `/builds` de l’API Reactor vous permet de gérer par programmation les versions de votre application d’expérience.
+Les extensions, les règles et les éléments de données sont les blocs de construction des balises dans Adobe Experience Platform. Lorsque vous souhaitez que votre application fasse quelque chose, ces blocs de construction sont ajoutés à une [bibliothèque](./libraries.md). Pour déployer une bibliothèque sur votre application d’expérience, cette bibliothèque est compilée dans une version. Le point d’entrée `/builds` de l’API Reactor vous permet de gérer par programmation les versions de votre application d’expérience.
 
 Une version est constituée du ou des fichiers chargés dans votre application web et mobile. Le contenu de chaque version varie en fonction des facteurs suivants :
 
@@ -54,7 +54,7 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LBad32d71feff844b7b5a11dd0bf030964/builds \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -167,7 +167,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BL8238895201d548718bda2d0bf2b83467 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -271,7 +271,7 @@ curl -X POST \
   https://reactor.adobe.io/libraries/LBd8eaef8283fe40738348db65a8984475/builds \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Réponse**
@@ -373,7 +373,7 @@ curl -X PATCH \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -498,7 +498,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -639,7 +639,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/extensions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -770,7 +770,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/rules \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -883,7 +883,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/library \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -996,7 +996,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

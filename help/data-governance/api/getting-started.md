@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;DULE;dule
+keywords: Experience Platform;accueil;rubriques populaires;DULE;dule
 solution: Experience Platform
 title: Prise en main de l’API Policy Service
 topic-legacy: developer guide
-description: L’API Policy Service vous permet de créer et de gérer diverses ressources liées à la gouvernance des données d’Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels à l’API Policy Service.
+description: L’API Policy Service vous permet de créer et de gérer diverses ressources liées à la gouvernance des données d’Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels à l’API Policy Service.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 100%
 
@@ -35,7 +35,7 @@ La documentation de l’API exige aussi que vous ayez suivi le [tutoriel sur l�
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Toutes les ressources d’[!DNL Experience Platform], y compris celles liées à la gouvernance des données, sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 

@@ -5,7 +5,7 @@ title: Mise à jour d’un objet de catalogue
 topic-legacy: developer guide
 description: Vous pouvez mettre à jour un objet Catalogue en incluant son identifiant dans le chemin d’accès d’une requête PATCH. Ce document couvre l’utilisation des champs et l’utilisation de la notation JSON Patch pour effectuer des opérations de PATCH sur des objets Catalog.
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 81%
@@ -14,7 +14,7 @@ ht-degree: 81%
 
 # Mise à jour d’un objet Catalogue
 
-Vous pouvez mettre à jour une partie d’un objet [!DNL Catalog] en incluant son identifiant dans le chemin d’accès d’une requête de PATCH. Ce document couvre les deux méthodes d’exécution des opérations PATCH sur les objets Catalogue :
+Vous pouvez mettre à jour une partie d’une [!DNL Catalog] en incluant son identifiant dans le chemin d’accès d’une requête de PATCH. Ce document couvre les deux méthodes d’exécution des opérations PATCH sur les objets Catalogue :
 
 * Utilisation des champs
 * Utilisation de la notation par patch JSON
@@ -35,7 +35,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Le type d’objet [!DNL Catalog] à mettre à jour. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à mettre à jour. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**
@@ -48,7 +48,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
        "name":"Updated Dataset Name",
@@ -84,7 +84,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Le type d’objet [!DNL Catalog] à mettre à jour. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à mettre à jour. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**
@@ -96,7 +96,7 @@ curl -X PATCH \
   https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json-patch+json' \
   -d '[

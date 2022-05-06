@@ -2,8 +2,8 @@
 description: Cette page décrit comment vous authentifier et commencer à utiliser Adobe Experience Platform Destination SDK. Vous y trouverez des instructions sur la manière d’obtenir des informations d’authentification Adobe I/O, un nom de sandbox et l’autorisation de contrôle d’accès de création de destinations.
 title: Prise en main de Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: d5ce6c8ccdd29b9bcf90a1c2d08085f3be4cf33f
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 100%
 
@@ -26,7 +26,7 @@ Destination SDK utilise la passerelle [Adobe I/O](https://www.adobe.io/) pour l�
 Pour réaliser des appels aux points d’entrée de l’API Destination SDK, suivez le [tutoriel sur l’authentification Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Démarrez le tutoriel à partir de l’étape « [Générer une clé API, un identifiant d’organisation IMS et un secret client](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#api-ims-secret) ». L’équipe dʼAdobe Exchange effectuera les étapes précédentes à votre place. Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans les appels à l’API Destination SDK, tel qu’indiqué ci-dessous :
 
 * `x-api-key: {API_KEY}`, également appelé identifiant client.
-* `x-gw-ims-org-id: {IMS_ORG}`, également appelé identifiant d’organisation.
+* `x-gw-ims-org-id: {ORG_ID}`, également appelé identifiant d’organisation.
 * `Authorization: Bearer {ACCESS_TOKEN}`. Le jeton d’accès a un délai d’expiration de 24 heures, exprimé en millisecondes, vous devrez donc l’actualiser. Pour actualiser le jeton d’accès, répétez les étapes décrites dans le tutoriel sur l’authentification.
 
 <!--
@@ -38,7 +38,7 @@ To obtain the `{ACCESS_TOKEN}`, you must generate a JWT token and exchange it fo
 1. Follow the instructions in the [Generate JWT section](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) in the credentials guide.
 2. Follow the instructions in [Step 3: try it](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md) in the Service account connection guide.
 
-You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-ims-org-id: {IMS_ORG}`, and `Authorization: Bearer {ACCESS_TOKEN}`.
+You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-ims-org-id: {ORG_ID}`, and `Authorization: Bearer {ACCESS_TOKEN}`.
 
 >[!NOTE]
 >

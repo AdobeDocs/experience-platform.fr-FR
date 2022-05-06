@@ -1,33 +1,34 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;service de flux;mettre à jour les flux de données de destination
 solution: Experience Platform
-title: Mise à jour des flux de données de destination à l’aide de l’API Flow Service
+title: Mettre à jour des flux de données de destination à l’aide de l’API Flow Service
 topic-legacy: overview
 type: Tutorial
 description: Ce tutoriel décrit les étapes de mise à jour d’un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des segments et des attributs à l’aide de l’API Flow Service.
-source-git-commit: 829c3516ff5e823d96281bf6d3c773f598218750
+exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2136'
-ht-degree: 14%
+ht-degree: 45%
 
 ---
 
-# Mise à jour des flux de données de destination à l’aide de l’API Flow Service
+# Mettre à jour des flux de données de destination à l’aide de l’API Flow Service
 
 Ce tutoriel décrit les étapes de mise à jour d’un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des segments et des attributs à l’aide du [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Pour plus d’informations sur la modification des flux de données de destination à l’aide de l’interface utilisateur de l’Experience Platform, reportez-vous à la section [Modification des flux d’activation](/help/destinations/ui/edit-activation.md).
 
 ## Prise en main {#get-started}
 
-Ce tutoriel nécessite que vous disposiez d’un identifiant de flux valide. Si vous ne disposez pas d’un identifiant de flux valide, sélectionnez votre destination de choix dans la [destinations](../catalog/overview.md) et suivez les étapes décrites à la section [se connecter à la destination](../ui/connect-destination.md) et [activer les données](../ui/activation-overview.md) avant de tester ce tutoriel.
+Pour suivre ce tutoriel, vous devez disposer d’un identifiant de flux valide. Si vous ne disposez pas d’un identifiant de flux valide, sélectionnez votre destination de choix dans la [destinations](../catalog/overview.md) et suivez les étapes décrites à la section [se connecter à la destination](../ui/connect-destination.md) et [activer les données](../ui/activation-overview.md) avant de tester ce tutoriel.
 
 >[!NOTE]
 >
 > Les termes *flow* et *dataflow* sont interchangeables dans ce tutoriel. Dans le contexte de ce tutoriel, ils ont le même sens.
 
-Ce tutoriel nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. ](../home.md)[!DNL Destinations] Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
-* [Environnements de test](../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour mettre à jour votre flux de données avec succès à l’aide de la variable [!DNL Flow Service] API.
 
@@ -41,7 +42,7 @@ Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutorie
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Toutes les ressources de l’Experience Platform, y compris celles appartenant à [!DNL Flow Service], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
@@ -55,9 +56,9 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 * `Content-Type: application/json`
 
-## Recherche des détails du flux de données {#look-up-dataflow-details}
+## Rechercher des détails du flux de données {#look-up-dataflow-details}
 
-La première étape de la mise à jour de votre flux de données de destination consiste à récupérer les détails du flux à l’aide de votre identifiant de flux. Vous pouvez afficher les détails actuels d’un flux de données existant en adressant une requête de GET à la fonction `/flows` point de terminaison .
+La première étape de la mise à jour de votre flux de données de destination consiste à récupérer les détails du flux à l’aide de votre identifiant de flux. Vous pouvez afficher les détails actuels d’un flux de données existant en adressant une requête GET au point d’entrée `/flows`.
 
 **Format d’API**
 
@@ -78,7 +79,7 @@ curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -99,7 +100,7 @@ Une réponse réussie renvoie les détails actuels de votre flux de données, y 
          "updatedClient":"{UPDATED_CLIENT}",
          "sandboxId":"{SANDBOX_ID}",
          "sandboxName":"prod",
-         "imsOrgId":"{IMS_ORG}",
+         "imsOrgId":"{ORG_ID}",
          "name":"2021 winter campaign",
          "description":"ACME company holiday campaign for high fidelity customers",
          "flowSpec":{
@@ -349,7 +350,7 @@ Pour mettre à jour le nom et la description de votre flux de données, envoyez 
 
 >[!IMPORTANT]
 >
->Le `If-Match` est requis lors de l’exécution d’une requête de PATCH. La valeur de cet en-tête est la version unique du flux de données que vous souhaitez mettre à jour. La valeur etag est mise à jour à chaque mise à jour réussie d’un flux de données.
+>L’en-tête `If-Match` est requis lors de l’exécution d’une requête PATCH. La valeur de cet en-tête est la version unique du flux de données que vous souhaitez mettre à jour. La valeur de la balise dʼentité est mise à jour à chaque mise à jour réussie d’un flux de données.
 
 **Format d’API**
 
@@ -366,7 +367,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -385,13 +386,13 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour le flux de données. Les opérations comprennent : `add`, `replace` et `remove`. |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. |
 | `path` | Définit la partie du flux à mettre à jour. |
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 
 **Réponse**
 
-Une réponse réussie renvoie votre identifiant de flux et une balise mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à la variable [!DNL Flow Service] de l’API, tout en fournissant votre ID de flux.
+Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en y indiquant votre identifiant de flux.
 
 ```json
 {
@@ -421,7 +422,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc/action?op=enable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -432,13 +433,13 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc/action?op=disable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
 
-Une réponse réussie renvoie votre identifiant de flux et une balise mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à la variable [!DNL Flow Service] de l’API, tout en fournissant votre ID de flux.
+Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en y indiquant votre identifiant de flux.
 
 ```json
 {
@@ -466,7 +467,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -494,21 +495,21 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour le flux de données. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter un segment à un flux de données, utilisez la variable `add` opération. |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter un segment à un flux de données, utilisez l’opération `add`. |
 | `path` | Définit la partie du flux à mettre à jour. Lors de l’ajout d’un segment à un flux de données, utilisez le chemin spécifié dans l’exemple. |
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 | `id` | Indiquez l’identifiant du segment que vous ajoutez au flux de données de destination. |
-| `name` | **(Facultatif)**. Indiquez le nom du segment que vous ajoutez au flux de données de destination. Notez que ce champ n’est pas obligatoire et que vous pouvez ajouter un segment au flux de données de destination sans fournir son nom. |
-| `filenameTemplate` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’un segment à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Ce champ détermine le format du nom de fichier des fichiers exportés vers votre destination. <br> Les options disponibles sont les suivantes : <br> <ul><li>`%DESTINATION_NAME%`: Obligatoire. Les fichiers exportés contiennent le nom de destination.</li><li>`%SEGMENT_ID%`: Obligatoire. Les fichiers exportés contiennent l’identifiant du segment exporté.</li><li>`%SEGMENT_NAME%`: **(Facultatif)**. Les fichiers exportés contiennent le nom du segment exporté.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%`: **(Facultatif)**. Sélectionnez l’une de ces deux options pour que vos fichiers incluent l’heure à laquelle ils sont générés par l’Experience Platform.</li><li>`custom-text`: **(Facultatif)**. Remplacez cet espace réservé par tout texte personnalisé que vous souhaitez ajouter à la fin de vos noms de fichier.</li></ul> <br> Pour plus d’informations sur la configuration des noms de fichier, reportez-vous à la section [configuration des noms de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) dans le tutoriel sur l’activation des destinations par lot. |
-| `exportMode` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’un segment à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous à la section [export des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [export de fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel sur l’activation des destinations par lot . |
+| `name` | **(Facultatif)**. Indiquez le nom du segment que vous ajoutez au flux de données de destination. Notez que ce champ n’est pas obligatoire et que vous pouvez ajouter un segment au flux de données de destination sans indiquer son nom. |
+| `filenameTemplate` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’un segment à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Ce champ détermine le format du nom des fichiers exportés vers votre destination. <br>Les options suivantes sont disponibles :<br> <ul><li>`%DESTINATION_NAME%` : obligatoire. Les fichiers exportés contiennent le nom de destination.</li><li>`%SEGMENT_ID%` : obligatoire. Les fichiers exportés contiennent l’identifiant du segment exporté.</li><li>`%SEGMENT_NAME%`: **(Facultatif)**. Les fichiers exportés contiennent le nom du segment exporté.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%`: **(Facultatif)**. Sélectionnez l’une de ces deux options pour que vos fichiers incluent l’heure à laquelle ils sont générés par Experience Platform.</li><li>`custom-text`: **(Facultatif)**. Remplacez cet espace réservé par tout texte personnalisé que vous souhaitez ajouter à la fin de vos noms de fichier.</li></ul> <br> Pour plus d’informations sur la configuration des noms de fichier, reportez-vous à la section [Configurer des noms de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) dans le tutoriel consacré à l’activation des destinations par lot. |
+| `exportMode` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’un segment à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. |
 | `startDate` | Sélectionnez la date à laquelle le segment doit commencer à exporter les profils vers votre destination. |
-| `frequency` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’un segment à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. <br> <ul><li>Pour le `"DAILY_FULL_EXPORT"` mode d&#39;export, vous pouvez sélectionner `ONCE` ou `DAILY`.</li><li>Pour le `"FIRST_FULL_THEN_INCREMENTAL"` mode d&#39;export, vous pouvez sélectionner `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
-| `endDate` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’un segment à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Non applicable lors de la sélection `"exportMode":"DAILY_FULL_EXPORT"` et `"frequency":"ONCE"`. <br> Définit la date à laquelle les membres du segment cessent d’être exportés vers la destination. |
+| `frequency` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’un segment à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. <br> <ul><li>Pour le mode d’exportation `"DAILY_FULL_EXPORT"`, vous pouvez sélectionner `ONCE` ou `DAILY`.</li><li>Pour le mode d’exportation `"FIRST_FULL_THEN_INCREMENTAL"`, vous pouvez sélectionner `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"` ou `"EVERY_12_HOURS"`.</li></ul> |
+| `endDate` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’un segment à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Non applicable lors de la sélection de `"exportMode":"DAILY_FULL_EXPORT"` et `"frequency":"ONCE"`. <br> Définit la date à laquelle les membres du segment cessent d’être exportés vers la destination. |
 | `startTime` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’un segment à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez l’heure à laquelle les fichiers contenant des membres du segment doivent être générés et exportés vers votre destination. |
 
 **Réponse**
 
-Une réponse réussie renvoie votre identifiant de flux et une balise mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à la variable [!DNL Flow Service] de l’API, tout en fournissant votre ID de flux.
+Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en y indiquant votre identifiant de flux.
 
 ```json
 {
@@ -536,7 +537,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -563,13 +564,13 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour le flux de données. Les opérations comprennent : `add`, `replace` et `remove`. Pour supprimer un segment d’un flux de données, utilisez la méthode `remove` opération. |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour supprimer un segment d’un flux de données, utilisez la méthode `remove` opération. |
 | `path` | Indique quel segment existant doit être supprimé du flux de données de destination, en fonction de l’index du sélecteur de segments. Pour récupérer l’ordre des segments dans un flux de données, effectuez un appel GET à la fonction `/flows` et inspecter le `transformations.segmentSelectors` . Pour supprimer le premier segment dans le flux de données, utilisez `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Réponse**
 
-Une réponse réussie renvoie votre identifiant de flux et une balise mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à la variable [!DNL Flow Service] de l’API, tout en fournissant votre ID de flux.
+Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en y indiquant votre identifiant de flux.
 
 ```json
 {
@@ -597,7 +598,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -630,7 +631,7 @@ Pour obtenir des descriptions des propriétés de la payload, reportez-vous à l
 
 **Réponse**
 
-Une réponse réussie renvoie votre identifiant de flux et une balise mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à la variable [!DNL Flow Service] de l’API, tout en fournissant votre ID de flux.
+Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en y indiquant votre identifiant de flux.
 
 ```json
 {
@@ -658,7 +659,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -677,13 +678,13 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour le flux de données. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter un attribut de profil à un flux de données, utilisez la variable `add` opération. |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter un attribut de profil à un flux de données, utilisez la variable `add` opération. |
 | `path` | Définit la partie du flux à mettre à jour. Lors de l’ajout d’un attribut de profil à un flux de données, utilisez le chemin spécifié dans l’exemple. |
 | `value.path` | La valeur de l’attribut de profil que vous ajoutez au flux de données. |
 
 **Réponse**
 
-Une réponse réussie renvoie votre identifiant de flux et une balise mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à la variable [!DNL Flow Service] de l’API, tout en fournissant votre ID de flux.
+Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en y indiquant votre identifiant de flux.
 
 ```json
 {
@@ -712,7 +713,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -731,13 +732,13 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour le flux de données. Les opérations comprennent : `add`, `replace` et `remove`. Pour supprimer un segment d’un flux de données, utilisez la méthode `remove` opération. |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour supprimer un segment d’un flux de données, utilisez la méthode `remove` opération. |
 | `path` | Indique quel attribut de profil existant doit être supprimé du flux de données de destination, en fonction de l’index du sélecteur de segments. Pour récupérer l’ordre des attributs de profil dans un flux de données, effectuez un appel GET à la fonction `/flows` et inspecter le `transformations.profileSelectors` . Pour supprimer le premier segment dans le flux de données, utilisez `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Réponse**
 
-Une réponse réussie renvoie votre identifiant de flux et une balise mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à la variable [!DNL Flow Service] de l’API, tout en fournissant votre ID de flux.
+Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en y indiquant votre identifiant de flux.
 
 ```json
 {
@@ -748,7 +749,7 @@ Une réponse réussie renvoie votre identifiant de flux et une balise mise à jo
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) et [erreurs d’en-tête de requête](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) dans le guide de dépannage de Platform.
+Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes dʼétat d’API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) et [Erreurs dʼen-tête de requête](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) dans le guide de dépannage de Platform.
 
 ## Étapes suivantes
 

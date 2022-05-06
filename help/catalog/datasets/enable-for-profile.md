@@ -4,7 +4,7 @@ title: Activation d’un jeu de données pour Profile et Identity Service à l�
 type: Tutorial
 description: Ce tutoriel vous explique comment activer un jeu de données à utiliser avec Real-time Customer Profile et Identity Service à l’aide des API Adobe Experience Platform.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: d463dabbb9dc099394081b803df619129c0cb416
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 59%
@@ -26,7 +26,7 @@ Ce tutoriel décrit le processus d’activation d’un jeu de données à utilis
 
 Ce tutoriel nécessite une compréhension pratique de plusieurs services Adobe Experience Platform impliqués dans la gestion des jeux de données activés pour Profile. Avant de commencer ce tutoriel, veuillez consulter la documentation relative à ces [!DNL Platform] services :
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Identity Service]](../../identity-service/home.md): Active [!DNL Real-time Customer Profile] en rapprochant les identités des sources de données disparates ingérées dans [!DNL Platform].
 - [[!DNL Catalog Service]](../../catalog/home.md): Une API RESTful qui vous permet de créer des jeux de données et de les configurer pour [!DNL Real-time Customer Profile] et [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
@@ -43,7 +43,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) nécessitent une `Content-Type` en-tête . La valeur correcte de cet en-tête s’affiche dans les exemples de requêtes, le cas échéant.
 
@@ -75,7 +75,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "fields":[],
@@ -130,7 +130,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -140,7 +140,7 @@ curl -X GET \
 {
     "5b020a27e7040801dedbf46e": {
         "name": "Commission Program Events DataSet",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "tags": {
             "adobe/pqs/table": [
                 "unifiedprofileingestiontesteventsdataset"
@@ -210,7 +210,7 @@ curl -X PATCH \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true"] },

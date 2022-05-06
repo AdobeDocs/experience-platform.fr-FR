@@ -5,7 +5,7 @@ title: Point de terminaison de l’API Comptes
 topic-legacy: connection parameters
 description: Vous pouvez créer un compte Query Service pour le compte persistant .
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 391b1943f1c941188b370e62ec86216367aa747f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 5%
@@ -14,15 +14,15 @@ ht-degree: 5%
 
 # Point de terminaison des comptes
 
-Dans Adobe Experience Platform Query Service, les comptes sont utilisés pour créer des informations d’identification non expirantes que vous pouvez utiliser avec des clients SQL externes. Vous pouvez utiliser le point d’entrée `/accounts` dans l’API Query Service, ce qui vous permet de créer, récupérer, modifier et supprimer par programmation vos comptes d’intégration Query Service (également appelés compte technique).
+Dans Adobe Experience Platform Query Service, les comptes sont utilisés pour créer des informations d’identification non expirantes que vous pouvez utiliser avec des clients SQL externes. Vous pouvez utiliser la variable `/accounts` point de terminaison dans l’API Query Service, qui vous permet de créer, récupérer, modifier et supprimer par programmation vos comptes d’intégration Query Service (également appelés compte technique).
 
 ## Prise en main
 
-Les points de terminaison utilisés dans ce guide font partie de l’API Query Service. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment les en-têtes requis et la manière de lire des exemples d’appels API.
+Les points de terminaison utilisés dans ce guide font partie de l’API Query Service. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
 
 ## Création d’un compte
 
-Vous pouvez créer un compte d’intégration de Query Service en envoyant une requête de POST au point de terminaison `/accounts` .
+Vous pouvez créer un compte d’intégration de Query Service en adressant une requête de POST à la fonction `/accounts` point de terminaison .
 
 **Format d’API**
 
@@ -38,7 +38,7 @@ La requête suivante crée un compte d’intégration Query Service pour votre o
 curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
@@ -52,8 +52,8 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `accountName` | **** ObligatoireNom du compte d’intégration de Query Service. |
-| `assignedToUser` | **** ObligatoireAdobe ID pour laquelle le compte d’intégration de Query Service sera créé. |
+| `accountName` | **Obligatoire** Nom du compte d’intégration de Query Service. |
+| `assignedToUser` | **Obligatoire** Adobe ID pour lequel le compte d’intégration de Query Service sera créé. |
 | `credential` | *(Facultatif)* Informations d’identification utilisées pour l’intégration de Query Service. Si elle n’est pas spécifiée, le système génère automatiquement des informations d’identification. |
 | `description` | *(Facultatif)* Description du compte d’intégration de Query Service. |
 
@@ -72,12 +72,12 @@ Une réponse réussie renvoie un état HTTP 200, avec les détails du compte d�
 | Propriété | Description |
 | -------- | ----------- |
 | `technicalAccountName` | Nom du compte d’intégration de Query Service. |
-| `technicalAccountId` | L’identifiant de votre compte d’intégration Query Service. Cela, ainsi que la balise `credential`, compose votre mot de passe pour votre compte. |
-| `credential` | Informations d’identification de votre compte d’intégration Query Service. Cela, ainsi que la balise `technicalAccountId`, compose votre mot de passe pour votre compte. |
+| `technicalAccountId` | L’identifiant de votre compte d’intégration Query Service. Cette variable, ainsi que la variable `credential`, compose votre mot de passe pour votre compte. |
+| `credential` | Informations d’identification de votre compte d’intégration Query Service. Cette variable, ainsi que la variable `technicalAccountId`, compose votre mot de passe pour votre compte. |
 
 ## Mettre à jour un compte
 
-Vous pouvez mettre à jour votre compte d’intégration Query Service en effectuant une requête de PUT sur le point de terminaison `/accounts` .
+Vous pouvez mettre à jour votre compte d’intégration de Query Service en adressant une requête de PUT au `/accounts` point de terminaison .
 
 **Format d’API**
 
@@ -95,7 +95,7 @@ POST /accounts/{ACCOUNT_ID}
 curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DFB5FDB25D90A494012 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -135,7 +135,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur votre 
 
 ## Liste de tous les comptes
 
-Vous pouvez récupérer une liste de tous les comptes d’intégration de Query Service en envoyant une requête de GET au point de terminaison `/accounts` .
+Vous pouvez récupérer une liste de tous les comptes d’intégration de Query Service en adressant une requête GET à la variable `/accounts` point de terminaison .
 
 **Format d’API**
 
@@ -148,7 +148,7 @@ GET /accounts
 ```shell
 curl -X GET https://platform.adobe.io/foundation/queryauth/accounts \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -206,7 +206,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de tous les compt
 
 ## Suppression d’un compte
 
-Vous pouvez supprimer votre compte d’intégration Query Service en effectuant une requête de DELETE sur le point de terminaison `/accounts`.
+Vous pouvez supprimer votre compte d’intégration de Query Service en adressant une requête de DELETE à la fonction `/accounts` point de terminaison .
 
 **Format d’API**
 
@@ -223,7 +223,7 @@ DELETE /accounts/{ACCOUNT_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DFB5FDB25D90A494012 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```

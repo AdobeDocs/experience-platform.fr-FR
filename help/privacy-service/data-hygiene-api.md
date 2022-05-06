@@ -1,11 +1,11 @@
 ---
 title: API Data Hygiene (Alpha)
-description: Découvrez comment corriger ou supprimer par programme les données personnelles de vos clients stockées dans Adobe Experience Platform.
+description: Découvrez comment corriger ou supprimer par programme les données personnelles de vos clients stockées dans Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: f956a8191614cc8e0eeaadaa55277abfbc5be106
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 100%
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 >
 >L’API Data Hygiene est actuellement en version Alpha. Il est possible que votre organisation n’y ait pas encore accès. Les fonctionnalités décrites dans ce document peuvent faire l’objet de modifications.
 
-L’API Data Hygiene vous permet de corriger ou de supprimer par programme les données personnelles de vos clients stockées dans Adobe Experience Platform. Contrairement à l’API Privacy Service, il n’est pas nécessaire que ces opérations soient associées aux réglementations légales en matière de confidentialité. Elles peuvent être utilisées uniquement à des fins de nettoyage et d’exactitude de vos données.
+L’API Data Hygiene vous permet de corriger ou de supprimer par programme les données personnelles de vos clients stockées dans Adobe Experience Platform. Contrairement à l’API Privacy Service, il n’est pas nécessaire que ces opérations soient associées aux réglementations légales en matière de confidentialité. Elles peuvent être utilisées uniquement à des fins de nettoyage et d’exactitude de vos données.
 
 Vous pouvez accéder à l’API via le chemin racine suivant : `https://platform.adobe.io/data/core/hygiene/`.
 
@@ -31,7 +31,7 @@ Pour effectuer des appels à l’API Data Hygiene, vous devez d’abord rassembl
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
@@ -39,7 +39,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ### Lecture d&#39;exemples d&#39;appels API
 
-Ce document fournit un exemple d’appel API pour illustrer la manière dont vous devez formater vos requêtes. Pour en savoir plus sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section relative à la [lecture d’exemples d’appels API](../landing/api-guide.md#sample-api) dans le guide de prise en main des API d’Experience Platform.
+Ce document fournit un exemple d’appel API pour illustrer la manière dont vous devez formater vos requêtes. Pour en savoir plus sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section relative à la [lecture d’exemples d’appels API](../landing/api-guide.md#sample-api) dans le guide de prise en main des API d’Experience Platform.
 
 ## Création d’une tâche de suppression
 
@@ -60,13 +60,13 @@ curl -X POST \
   https://platform.adobe.io/data/core/hygiene/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "companyContexts": [
           {
             "namespace": "imsOrgID",
-            "value": "{IMS_ORG}"
+            "value": "{ORG_ID}"
           }
         ],
         "users": [

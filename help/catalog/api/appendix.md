@@ -5,7 +5,7 @@ title: Annexe du guide de l’API Catalog Service
 topic-legacy: developer guide
 description: Ce document contient des informations supplémentaires pour vous aider à utiliser l’API Catalog dans Adobe Experience Platform.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 75%
@@ -14,11 +14,11 @@ ht-degree: 75%
 
 # [!DNL Catalog Service] Annexe du guide d’API
 
-Ce document contient des informations supplémentaires pour vous aider à travailler avec l’API [!DNL Catalog].
+Ce document contient des informations supplémentaires pour vous aider à utiliser les [!DNL Catalog] API.
 
 ## Affichage d’objets interconnectés {#view-interrelated-objects}
 
-Certains objets [!DNL Catalog] peuvent être interconnectés avec d’autres objets [!DNL Catalog]. Tout champ précédé du préfixe `@` dans les payloads de réponse indique les objets associés. Les valeurs de ces champs prennent la forme d’un URI qui peut être utilisé dans une requête GET distincte pour récupérer les objets associés qu’ils représentent.
+Certains [!DNL Catalog] les objets peuvent être interconnectés avec d’autres [!DNL Catalog] objets. Tout champ précédé du préfixe `@` dans les payloads de réponse indique les objets associés. Les valeurs de ces champs prennent la forme d’un URI qui peut être utilisé dans une requête GET distincte pour récupérer les objets associés qu’ils représentent.
 
 L’exemple de jeu de données renvoyé dans le document sur la [recherche d’un jeu de données spécifique](look-up-object.md) contient un champ `files` avec la valeur URI suivante : `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. Le contenu du champ `files` peut être visualisé en utilisant cet URI comme chemin d’accès à une nouvelle requête GET.
 
@@ -41,7 +41,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -55,7 +55,7 @@ Une réponse réussie renvoie une liste d’objets associés. Dans cet exemple, 
         "id": "7d501090-0280-11ea-a6bb-f18323b7005c-1",
         "batchId": "7d501090-0280-11ea-a6bb-f18323b7005c",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -67,7 +67,7 @@ Une réponse réussie renvoie une liste d’objets associés. Dans cet exemple, 
         "id": "148ac690-0280-11ea-8d23-8571a35dce49-1",
         "batchId": "148ac690-0280-11ea-8d23-8571a35dce49",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -79,7 +79,7 @@ Une réponse réussie renvoie une liste d’objets associés. Dans cet exemple, 
         "id": "64dd5e19-8ea4-4ddd-acd1-f43cccd8eddb-1",
         "batchId": "64dd5e19-8ea4-4ddd-acd1-f43cccd8eddb",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -92,9 +92,9 @@ Une réponse réussie renvoie une liste d’objets associés. Dans cet exemple, 
 
 ## Exécution de plusieurs requêtes dans un même appel
 
-Le point de terminaison racine de l’API [!DNL Catalog] permet d’effectuer plusieurs requêtes dans un seul appel. Le payload de requête contient un tableau d’objets représentant ce qui serait normalement des requêtes individuelles, qui sont ensuite exécutées dans l’ordre.
+Le point de terminaison racine de la propriété [!DNL Catalog] L’API permet d’effectuer plusieurs requêtes dans un seul appel. Le payload de requête contient un tableau d’objets représentant ce qui serait normalement des requêtes individuelles, qui sont ensuite exécutées dans l’ordre.
 
-Si ces demandes sont des modifications ou des ajouts à [!DNL Catalog] et que l’une des modifications échoue, toutes les modifications sont annulées.
+Si ces requêtes sont des modifications ou des ajouts à [!DNL Catalog] et que l’une des modifications échoue, toutes les modifications sont annulées.
 
 **Format d’API**
 
@@ -117,7 +117,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/catalog \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -145,13 +145,13 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `id` | L’identifiant fourni par l’utilisateur et joint à l’objet de réponse afin d’améliorer la correspondance entre requêtes et réponses. [!DNL Catalog] ne stocke pas cette valeur et la renvoie simplement dans la réponse à des fins de référence. |
-| `resource` | Chemin d’accès à la ressource par rapport à la racine de l’API [!DNL Catalog]. Le protocole et le domaine ne doivent pas faire partie de cette valeur et doivent être précédés du symbole « / ». <br/><br/> En cas d’utilisation de PATCH ou DELETE comme `method` de sous-requête, incluez l’identifiant d’objet dans le chemin d’accès à la ressource. À ne pas confondre avec la `id` fournie par l’utilisateur, le chemin d’accès à la ressource utilise l’identifiant de l’objet [!DNL Catalog] lui-même (par exemple, `resource: "/dataSets/1234567890"`). |
+| `resource` | Chemin d’accès à la ressource relatif à la racine de la propriété [!DNL Catalog] API. Le protocole et le domaine ne doivent pas faire partie de cette valeur et doivent être précédés du symbole « / ». <br/><br/> En cas d’utilisation de PATCH ou DELETE comme `method` de sous-requête, incluez l’identifiant d’objet dans le chemin d’accès à la ressource. À ne pas confondre avec l’utilisateur fourni `id`, le chemin d’accès à la ressource utilise l’identifiant de la variable [!DNL Catalog] objet lui-même (par exemple, `resource: "/dataSets/1234567890"`). |
 | `method` | Le nom de la méthode (GET, PUT, POST, PATCH ou DELETE) associée à l’action de la requête. |
 | `body` | Le document JSON normalement transmis comme payload d’une requête POST, PUT ou PATCH. Cette propriété n’est pas requise pour les requêtes GET ou DELETE. |
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau d’objets contenant l’`id` affecté à chaque requête, le code d’état HTTP de la requête individuelle et la réponse `body`. Comme les trois exemples de requêtes visaient tous à créer de nouveaux objets, la balise `body` de chaque objet est un tableau contenant uniquement l’identifiant de l’objet nouvellement créé, comme c’est le cas avec les réponses de POST les plus réussies dans [!DNL Catalog].
+Une réponse réussie renvoie un tableau d’objets contenant l’`id` affecté à chaque requête, le code d’état HTTP de la requête individuelle et la réponse `body`. Comme les trois exemples de requêtes visaient tous à créer de nouveaux objets, la variable `body` de chaque objet est un tableau contenant uniquement l’identifiant de l’objet nouvellement créé, comme le fait la norme avec les réponses de POST les plus réussies dans [!DNL Catalog].
 
 ```json
 [
@@ -192,6 +192,6 @@ Il peut arriver que vous souhaitiez valider un objet sans enregistrer les inform
 
 ## Compactage des données
 
-Compaction est un service [!DNL Experience Platform] qui fusionne les données de petits fichiers en fichiers plus volumineux sans modifier les données. Pour des raisons de performances, il est parfois bénéfique de combiner un ensemble de petits fichiers en fichiers plus volumineux afin de fournir un accès plus rapide aux données lors de l’interrogation.
+La compression est une [!DNL Experience Platform] qui fusionne les données de petits fichiers en fichiers plus volumineux sans modifier les données. Pour des raisons de performances, il est parfois bénéfique de combiner un ensemble de petits fichiers en fichiers plus volumineux afin de fournir un accès plus rapide aux données lors de l’interrogation.
 
-Lorsque les fichiers d’un lot ingéré ont été compactés, l’objet [!DNL Catalog] associé est mis à jour à des fins de surveillance.
+Lorsque les fichiers d’un lot ingéré ont été compactés, leur [!DNL Catalog] est mis à jour à des fins de surveillance.

@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;environnement de test
 solution: Experience Platform
 title: Présentation des environnements de test
 topic-legacy: overview
-description: Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique.
+description: Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1005'
 ht-degree: 60%
@@ -14,21 +14,21 @@ ht-degree: 60%
 
 # Présentation des environnements de test
 
-Adobe Experience Platform est conçu pour enrichir les applications d’expérience numérique à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience numérique en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle.
+Adobe Experience Platform est conçu pour enrichir les applications d’expérience numérique à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience numérique en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle.
 
-Pour répondre à ce besoin, Experience Platform fournit des environnements de test qui divisent une instance unique de Platform en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+Pour répondre à ce besoin, Experience Platform fournit des environnements de test qui divisent une instance unique de Platform en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Ce document présente de manière générale les environnements de test dans Experience Platform.
+Ce document présente de manière générale les environnements de test dans Experience Platform.
 
 ## Fonctionnement des environnements de test
 
-Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique. Tout le contenu et les actions réalisés dans un environnement de test sont limités à celui-ci et n’en affectent aucun autre. Deux types d’environnements de test sont pris en charge sur Experience Platform :
+Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique. Tout le contenu et les actions réalisés dans un environnement de test sont limités à celui-ci et n’en affectent aucun autre. Deux types d’environnements de test sont pris en charge sur Experience Platform :
 
-* **Environnement de test** de production : Un environnement de test de production est conçu pour être utilisé avec des profils dans votre environnement de production. Platform vous permet de créer plusieurs environnements de test de production afin de fournir les fonctionnalités appropriées aux données tout en maintenant l’isolation opérationnelle. Cette fonctionnalité vous permet de dédier des environnements de test de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Les environnements de test de production prennent en charge un volume de profils de production allant jusqu’à votre engagement [!DNL Profile] autorisé (mesuré de manière cumulée sur tous vos environnements de test de production autorisés). Vous avez le droit d’utiliser un profil de moyenne sous licence par [!DNL Profile] autorisé (mesuré de manière cumulée sur tous vos environnements de test de production autorisés).
-* **Environnement de test de développement** : Un environnement de test de développement est un environnement de test qui peut être utilisé exclusivement à des fins de développement et de test avec des profils hors production. Les environnements de test de développement prennent en charge un volume de profils hors production allant jusqu’à 10 % de votre engagement [!DNL Profile] autorisé (mesuré de manière cumulative sur tous vos environnements de test de développement autorisés). Vous avez le droit de :
+* **Environnement de test de production**: Un environnement de test de production est conçu pour être utilisé avec des profils dans votre environnement de production. Platform vous permet de créer plusieurs environnements de test de production afin de fournir les fonctionnalités appropriées aux données tout en maintenant l’isolation opérationnelle. Cette fonctionnalité vous permet de dédier des environnements de test de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Les environnements de test de production prennent en charge un volume de profils de production allant jusqu’à votre licence [!DNL Profile] engagement (mesuré de manière cumulée sur tous vos environnements de test de production autorisés). Vous avez le droit d’utiliser un profil de moyenne sous licence par autorisé [!DNL Profile] (mesuré de manière cumulée sur tous vos environnements de test de production autorisés).
+* **Environnement de test de développement**: Un environnement de test de développement est un environnement de test qui peut être utilisé exclusivement à des fins de développement et de test avec des profils hors production. Les environnements de test de développement prennent en charge un volume de profils hors production pouvant atteindre 10 % de votre licence [!DNL Profile] engagement (mesuré de manière cumulée sur tous vos environnements de test de développement autorisés). Vous avez le droit de :
    * une richesse moyenne de profil hors production de 75 kilo-octets par profil hors production autorisé (mesurée de manière cumulative sur tous vos environnements de test de développement autorisés) ;
    * une tâche de segmentation par lots par jour, par environnement de test de développement ;
-   * Une moyenne de 120 [!DNL Profile] appels API par [!DNL Profile] par an (mesurés de manière cumulée sur tous vos environnements de développement autorisés).
+   * Une moyenne de 120 [!DNL Profile] appels API, par [!DNL Profile], par an (mesuré de manière cumulée sur tous vos environnements de développement autorisés).
 
 Une instance Experience Platform prend en charge plusieurs environnements de test de production et de développement, chaque environnement de test conservant sa propre bibliothèque indépendante de ressources Platform (y compris les schémas, les jeux de données, les profils, etc.). En outre, les environnements de test de production et de développement disposent d’une fonctionnalité de réinitialisation qui supprime de l’environnement de test toutes les ressources créées par les clients. Les environnements de test de développement ne peuvent pas être convertis en environnements de test de production.
 
@@ -54,24 +54,24 @@ Pour pouvoir visualiser, créer, mettre à jour ou supprimer des environnements 
 
 Pour plus d’informations sur la gestion des rôles et des autorisations pour les environnements de test, reportez-vous à la [présentation du contrôle d’accès](../access-control/home.md).
 
-## Environnements de test dans l’interface utilisateur d’Experience Platform
+## Environnements de test dans l’interface utilisateur d’Experience Platform
 
-Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.com), les utilisateurs peuvent basculer entre les environnements de test auxquels ils ont accès en utilisant le **sélecteur d’environnement de test** en haut à gauche de l’écran.  Les utilisateurs disposant de droits d’administration pour les environnements de test ont également accès à l’onglet **[!UICONTROL Environnements de test]** dans le volet de navigation de gauche, où ils peuvent visualiser et gérer des environnements de test pour leur organisation. Pour plus d’informations sur l’utilisation des environnements de test dans l’interface utilisateur, voir le [guide d’utilisation de l’environnement de test](ui/overview.md).
+Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.com), les utilisateurs peuvent basculer entre les environnements de test auxquels ils ont accès en utilisant le **sélecteur d’environnement de test** en haut à gauche de l’écran.  Les utilisateurs disposant de droits d’administration pour les environnements de test ont également accès à l’onglet **[!UICONTROL Environnements de test]** dans le volet de navigation de gauche, où ils peuvent visualiser et gérer des environnements de test pour leur organisation. Pour plus d’informations sur l’utilisation des environnements de test dans l’interface utilisateur, voir le [guide d’utilisation de l’environnement de test](ui/overview.md).
 
-## Environnements de test dans les API Experience Platform
+## Environnements de test dans les API Experience Platform
 
-Lors d’appels aux API Experience Platform, un nom d’environnement de test doit être renseigné sous l’en-tête `x-sandbox-name`. Par exemple, lors d’un appel à [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) pour afficher tous les jeux de données dans l’environnement de test de production, le nom de l’environnement de test (&quot;prod&quot;) est fourni comme en-tête dans la requête API :
+Lors d’appels aux API Experience Platform, un nom d’environnement de test doit être renseigné sous l’en-tête `x-sandbox-name`. Par exemple, lors d’un appel à la fonction [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) pour afficher tous les jeux de données dans l’environnement de test de production, le nom de l’environnement de test (&quot;prod&quot;) est fourni en tant qu’en-tête dans la requête API :
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/catalog/dataSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: prod'
 ```
 
-Si `x-sandbox-name` n’est pas inclus dans un appel API, le système utilisera un environnement de test par défaut à la place. Toutefois, la bonne pratique consiste à inclure systématiquement cet en-tête dans tous les appels API, même lorsque vous utilisez l’environnement de test par défaut. C’est pourquoi la documentation de l’API pour Experience Platform considère `x-sandbox-name` comme un en-tête obligatoire.
+Si `x-sandbox-name` n’est pas inclus dans un appel API, le système utilisera un environnement de test par défaut à la place. Toutefois, la bonne pratique consiste à inclure systématiquement cet en-tête dans tous les appels API, même lorsque vous utilisez l’environnement de test par défaut. C’est pourquoi la documentation de l’API pour Experience Platform considère `x-sandbox-name` comme un en-tête obligatoire.
 
 ### API Sandbox
 
@@ -79,6 +79,6 @@ L’API Sandbox vous permet de gérer les environnements de test à l’aide des
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez pris connaissance des concepts fondamentaux concernant les environnements de test dans Experience Platform. Pour obtenir des instructions détaillées sur la gestion des environnements de test, reportez-vous au [guide d’utilisation](ui/overview.md) pour l’interface utilisateur ou au [guide de développement](./api/getting-started.md) pour l’API.
+En lisant ce document, vous avez pris connaissance des concepts fondamentaux concernant les environnements de test dans Experience Platform. Pour obtenir des instructions détaillées sur la gestion des environnements de test, reportez-vous au [guide d’utilisation](ui/overview.md) pour l’interface utilisateur ou au [guide de développement](./api/getting-started.md) pour l’API.
 
 Bien que les environnements de test constituent un outil précieux servant à isoler les environnements Platform pour votre équipe de développement, vous pouvez également gérer un contrôle d’accès plus granulaire à l’aide d’Adobe Admin Console. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../access-control/home.md).

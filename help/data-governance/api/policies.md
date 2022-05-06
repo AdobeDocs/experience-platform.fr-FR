@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires Application des stratégies;Application basée sur lʼAPI;gouvernance des données
+keywords: Experience Platform;accueil;rubriques populaires Application des stratégies;Application basée sur lʼAPI;gouvernance des données
 solution: Experience Platform
 title: Point d’entrée de lʼAPI Policies
 topic-legacy: developer guide
-description: Les stratégies d’utilisation des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données au sein d’Experience Platform. Le point d’entrée « /policies » est utilisé pour tous les appels API liés à lʼaffichage, la création, la mise à jour ou la suppression des stratégies dʼutilisation des données.
+description: Les stratégies d’utilisation des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données au sein d’Experience Platform. Le point d’entrée « /policies » est utilisé pour tous les appels API liés à lʼaffichage, la création, la mise à jour ou la suppression des stratégies dʼutilisation des données.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 100%
@@ -40,7 +40,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -87,7 +87,7 @@ Une réponse réussie comprend un tableau `children` qui répertorie les détail
                     }
                 ]
             },
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1550691551888,
             "createdClient": "{CLIENT_ID}",
             "createdUser": "{USER_ID}",
@@ -119,7 +119,7 @@ Une réponse réussie comprend un tableau `children` qui répertorie les détail
                     }
                 ]
             },
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1550703519823,
             "createdClient": "{CLIENT_ID}",
             "createdUser": "{USER_ID}",
@@ -168,7 +168,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -203,7 +203,7 @@ Une réponse réussie renvoie les détails de la stratégie.
             }
         ]
     },
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1550703519823,
     "createdClient": "{CLIENT_ID}",
     "createdUser": "{USER_ID}",
@@ -288,7 +288,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "Export Data to Third Party",
@@ -352,7 +352,7 @@ Une réponse réussie renvoie les détails de la nouvelle stratégie créée, y 
             }
         ]
     },
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1550691551888,
     "createdClient": "{CLIENT_ID}",
     "createdUser": "{USER_ID}",
@@ -402,7 +402,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "Export Data to Third Party",
@@ -452,7 +452,7 @@ Une réponse réussie renvoie les détails de la stratégie mise à jour.
             }
         ]
     },
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1550691551888,
     "createdClient": "{CLIENT_ID}",
     "createdUser": "{USER_ID}",
@@ -506,7 +506,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d ' [
           {
@@ -554,7 +554,7 @@ Une réponse réussie renvoie les détails de la stratégie mise à jour.
             }
         ]
     },
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1550703519823,
     "createdClient": "{CLIENT_ID}",
     "createdUser": "{USER_ID}",
@@ -595,7 +595,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6ddb56eb60ca13dbf8b9a8 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -622,7 +622,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -642,7 +642,7 @@ Une réponse réussie renvoie la liste des stratégies de base activées sous un
     "corepolicy_0007",
     "corepolicy_0008"
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "created": 1529696681413,
   "createdClient": "{CLIENT_ID}",
   "createdUser": "{USER_ID}",
@@ -680,7 +680,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "policyIds": [
@@ -708,7 +708,7 @@ Une réponse réussie renvoie la liste mise à jour des stratégies de base acti
     "corepolicy_0007",
     "corepolicy_0008"
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "created": 1529696681413,
   "createdClient": "{CLIENT_ID}",
   "createdUser": "{USER_ID}",

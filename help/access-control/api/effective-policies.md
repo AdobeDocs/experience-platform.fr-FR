@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;stratégies effectives;api contrôle dʼaccès
+keywords: Experience Platform;accueil;rubriques populaires;stratégies effectives;api contrôle dʼaccès
 solution: Experience Platform
 title: Point d’entrée de lʼAPI Effective Policies
 topic-legacy: developer guide
-description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Ce document sert de guide sur la manière dʼafficher des stratégies effectives à lʼaide de lʼAPI Access Control pour Adobe Experience Platform.
+description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Ce document sert de guide sur la manière dʼafficher des stratégies effectives à lʼaide de lʼAPI Access Control pour Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 100%
@@ -31,7 +31,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/access-control/acl/effective-policies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[

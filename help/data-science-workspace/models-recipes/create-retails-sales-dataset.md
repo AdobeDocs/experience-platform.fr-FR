@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous les autres tutoriels Data Science Workspace d’Adobe Experience Platform. Une fois que vous aurez terminé, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation IMS sur Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 71%
@@ -22,10 +22,10 @@ Ce tutoriel vous fournit les prérequis et les ressources requis pour tous les a
 
 Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 - Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
-- Autorisation d’effectuer [!DNL Experience Platform] Appels API. Suivez le tutoriel [Authentification et accès aux API Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis) afin d’obtenir les valeurs suivantes pour effectuer ce didacticiel :
+- Autorisation d’effectuer [!DNL Experience Platform] Appels API. Suivez le tutoriel [Authentification et accès aux API Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’obtenir les valeurs suivantes pour effectuer ce didacticiel :
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
-   - x-gw-ims-org-id: `{IMS_ORG}`
+   - x-gw-ims-org-id: `{ORG_ID}`
    - Client secret: `{CLIENT_SECRET}`
    - Client certificate: `{PRIVATE_KEY}`
 - Exemples de données et de fichiers source pour la [Recette des ventes au détail](../pre-built-recipes/retail-sales.md). Téléchargez les ressources requises pour ceci et d’autres [!DNL Data Science Workspace] tutoriels à partir de [Adobe du référentiel Git public](https://github.com/adobe/experience-platform-dsw-reference/).
@@ -50,7 +50,7 @@ Les jeux de données et le schéma de vente au détail sont créés automatiquem
    ```yaml
    Enterprise:
        api_key: {API_KEY}
-       org_id: {IMS_ORG}
+       org_id: {ORG_ID}
        tech_acct: {technical_account_id}
        client_secret: {CLIENT_SECRET}
        priv_key_filename: {PRIVATE_KEY}

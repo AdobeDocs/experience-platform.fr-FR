@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Pour configurer un attribut calculé, vous devez d’abord identifier le champ dans lequel la valeur d’attribut calculé sera conservée. Ce champ peut être créé à l’aide de l’API Schema Registry pour définir un schéma et un groupe de champs personnalisé qui contiendra le champ attribut calculé.
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 16%
@@ -20,11 +20,11 @@ ht-degree: 16%
 
 Pour configurer un attribut calculé, vous devez d’abord identifier le champ dans lequel la valeur d’attribut calculé sera conservée. Ce champ peut être créé à l’aide de l’API Schema Registry pour définir un schéma et un groupe de champs de schéma personnalisé qui contiendra le champ attribut calculé. Il est recommandé de créer un schéma et un groupe de champs &quot;Attributs calculés&quot; distincts dans lequel votre organisation peut ajouter tous les attributs à utiliser comme attributs calculés. Cela permet à votre organisation de séparer clairement le schéma d’attribut calculé des autres schémas utilisés pour l’ingestion de données.
 
-Le workflow de ce document explique comment utiliser l’API Schema Registry pour créer un schéma &quot;Attribut calculé&quot; activé par Profile qui référence un groupe de champs personnalisé. Ce document contient un exemple de code spécifique aux attributs calculés. Pour plus d’informations sur la définition des groupes de champs et des schémas à l’aide de l’API, reportez-vous au [guide de l’API Schema Registry](../../xdm/api/overview.md).
+Le workflow de ce document explique comment utiliser l’API Schema Registry pour créer un schéma &quot;Attribut calculé&quot; activé par Profile qui référence un groupe de champs personnalisé. Ce document contient un exemple de code spécifique aux attributs calculés. Toutefois, reportez-vous à la section [Guide de l’API Schema Registry](../../xdm/api/overview.md) pour plus d’informations sur la définition des groupes de champs et des schémas à l’aide de l’API.
 
 ## Création d’un groupe de champs Attributs calculés
 
-Pour créer un groupe de champs à l’aide de l’API Schema Registry, commencez par envoyer une requête de POST au point de terminaison `/tenant/fieldgroups` et fournissez les détails du groupe de champs dans le corps de la requête. Pour plus d’informations sur l’utilisation des groupes de champs à l’aide de l’API Schema Registry, consultez le [guide de point de terminaison de l’API des groupes de champs](../../xdm/api/field-groups.md).
+Pour créer un groupe de champs à l’aide de l’API Schema Registry, commencez par envoyer une requête de POST au `/tenant/fieldgroups` et fournissant les détails du groupe de champs dans le corps de la requête. Pour plus d’informations sur l’utilisation des groupes de champs à l’aide de l’API Schema Registry, reportez-vous à la section [guide d’entrée de l’API des groupes de champs](../../xdm/api/field-groups.md).
 
 **Format d’API**
 
@@ -39,7 +39,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
@@ -84,7 +84,7 @@ curl -X POST \
 
 **Réponse**
 
-Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau groupe de champs, y compris `$id`, `meta:altIt` et `version`. Ces valeurs sont en lecture seule et sont attribuées par le registre des schémas.
+Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse contenant les détails du nouveau groupe de champs, y compris le `$id`, `meta:altIt`, et `version`. Ces valeurs sont en lecture seule et sont attribuées par le registre des schémas.
 
 ```json
 {
@@ -120,7 +120,7 @@ Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un co
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -146,9 +146,9 @@ Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un co
 
 ## Mettre à jour le groupe de champs avec des attributs calculés supplémentaires
 
-Au fur et à mesure que davantage d’attributs calculés sont nécessaires, vous pouvez mettre à jour le groupe de champs des attributs calculés avec des attributs supplémentaires en effectuant une requête de PUT sur le point de terminaison `/tenant/fieldgroups`. Cette requête nécessite que vous incluiez l’identifiant unique du groupe de champs que vous avez créé dans le chemin d’accès et tous les nouveaux champs que vous souhaitez ajouter dans le corps.
+Au fur et à mesure que davantage d’attributs calculés sont nécessaires, vous pouvez mettre à jour le groupe de champs Attributs calculés avec des attributs supplémentaires en envoyant une requête de PUT à la variable `/tenant/fieldgroups` point de terminaison . Cette requête nécessite que vous incluiez l’identifiant unique du groupe de champs que vous avez créé dans le chemin d’accès et tous les nouveaux champs que vous souhaitez ajouter dans le corps.
 
-Pour plus d’informations sur la mise à jour d’un groupe de champs à l’aide de l’API Schema Registry, consultez le [guide de point de terminaison de l’API des groupes de champs](../../xdm/api/field-groups.md).
+Pour plus d’informations sur la mise à jour d’un groupe de champs à l’aide de l’API Schema Registry, reportez-vous à la section [guide d’entrée de l’API des groupes de champs](../../xdm/api/field-groups.md).
 
 **Format d’API**
 
@@ -158,7 +158,7 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 **Requête**
 
-Cette requête ajoute de nouveaux champs liés aux `purchaseSummary` informations.
+Cette requête ajoute de nouveaux champs liés à `purchaseSummary` informations.
 
 >[!NOTE]
 >
@@ -170,7 +170,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
@@ -285,7 +285,7 @@ Une réponse réussie renvoie les détails du groupe de champs mis à jour.
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -311,9 +311,9 @@ Une réponse réussie renvoie les détails du groupe de champs mis à jour.
 
 ## Création d’un schéma activé par Profile
 
-Pour créer un schéma à l’aide de l’API Schema Registry, commencez par envoyer une requête de POST au point de terminaison `/tenant/schemas` et fournissez les détails du schéma dans le corps de la requête. Le schéma doit également être activé pour [!DNL Profile] et s’afficher dans le cadre du schéma d’union pour la classe de schéma.
+Pour créer un schéma à l’aide de l’API Schema Registry, commencez par envoyer une requête de POST au `/tenant/schemas` et fournissant les détails du schéma dans le corps de la requête. Le schéma doit également être activé pour [!DNL Profile] et apparaissent dans le schéma d’union de la classe schema .
 
-Pour plus d’informations sur les [!DNL Profile] schémas et schémas d’union activés, consultez le [[!DNL Schema Registry] guide de l’API](../../xdm/api/overview.md) et la [documentation de base sur la composition des schémas](../../xdm/schema/composition.md).
+Pour plus d’informations sur [!DNL Profile]schémas activés et schémas d’union, veuillez consulter la section [[!DNL Schema Registry] Guide de l’API](../../xdm/api/overview.md) et le [documentation de base sur la composition des schémas](../../xdm/schema/composition.md).
 
 **Format d’API**
 
@@ -323,7 +323,7 @@ POST /tenants/schemas
 
 **Requête**
 
-La requête suivante crée un nouveau schéma qui référence la balise `computedAttributesFieldGroup` créée précédemment dans ce document (à l’aide de son identifiant unique) et est activée pour le schéma d’union Profile (à l’aide du tableau `meta:immutableTags`). Pour obtenir des instructions détaillées sur la création d’un schéma à l’aide de l’API Schema Registry, consultez le [guide de point de terminaison de l’API des schémas](../../xdm/api/schemas.md).
+La requête suivante crée un nouveau schéma qui fait référence à la variable `computedAttributesFieldGroup` créé plus tôt dans ce document (à l’aide de son identifiant unique) et est activé pour le schéma d’union Profile (à l’aide de la fonction `meta:immutableTags` ). Pour obtenir des instructions détaillées sur la création d’un schéma à l’aide de l’API Schema Registry, reportez-vous à la section [guide de point d’entrée de l’API schémas](../../xdm/api/schemas.md).
 
 ```shell
 curl -X POST \
@@ -331,7 +331,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
@@ -400,7 +400,7 @@ Une réponse réussie renvoie un état HTTP 201 (Créé) et un payload qui cont
     "https://ns.adobe.com/xdm/context/identitymap",
     "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
@@ -434,4 +434,4 @@ Une réponse réussie renvoie un état HTTP 201 (Créé) et un payload qui cont
 
 ## Étapes suivantes
 
-Maintenant que vous avez créé un schéma et un groupe de champs dans lesquels vos attributs calculés seront stockés, vous pouvez créer l’attribut calculé à l’aide du point d’entrée de l’API `/computedattributes`. Pour obtenir des instructions détaillées sur la création d’un attribut calculé dans l’API, suivez les étapes fournies dans le [guide de point d’entrée de l’API des attributs calculés](ca-api.md).
+Maintenant que vous avez créé un schéma et un groupe de champs dans lequel vos attributs calculés seront stockés, vous pouvez créer l’attribut calculé à l’aide de la variable `/computedattributes` Point d’entrée de l’API. Pour obtenir des instructions détaillées sur la création d’un attribut calculé dans l’API, suivez les étapes fournies dans la section [guide de point d’entrée de l’API des attributs calculés](ca-api.md).

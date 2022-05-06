@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;autorisations de contrôle d’accès;types de ressources de contrôle d’accès;api de contrôle d’accès
+keywords: Experience Platform;accueil;rubriques populaires;autorisations de contrôle d’accès;types de ressources de contrôle d’accès;api de contrôle d’accès
 solution: Experience Platform
 title: Point d’entrée de l’API de référence
 topic-legacy: developer guide
-description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Vous pouvez répertorier les noms de tous les types de ressources et autorisations en effectuant une requête GET au point d’entrée /acl/reference dans l’API Access Control. Ces noms peuvent ensuite être utilisés dans les appels API pour afficher des stratégies efficaces pour l’utilisateur actuel.
+description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Vous pouvez répertorier les noms de tous les types de ressources et autorisations en effectuant une requête GET au point d’entrée /acl/reference dans l’API Access Control. Ces noms peuvent ensuite être utilisés dans les appels API pour afficher des stratégies efficaces pour l’utilisateur actuel.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 100%
@@ -31,7 +31,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/access-control/acl/reference \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Réponse**

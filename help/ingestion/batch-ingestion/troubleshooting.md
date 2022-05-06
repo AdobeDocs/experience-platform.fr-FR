@@ -5,7 +5,7 @@ title: Guide de dépannage de l’ingestion par lots
 topic-legacy: troubleshooting
 description: Cette documentation vous aidera à répondre aux questions fréquentes sur les API Batch Data Ingestion d’Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 87%
@@ -47,7 +47,7 @@ Le format d’entrée doit être spécifié au moment de la création du lot dan
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
   -d '{
@@ -65,7 +65,7 @@ Pour que les données apparaissent dans le jeu de données, le lot doit être ma
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -77,7 +77,7 @@ Pour ingérer un fichier JSON à plusieurs lignes, l’indicateur `isMultiLineJs
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
   -d '{
@@ -147,7 +147,7 @@ Une fois qu’un lot a été signalé en vue d’une promotion, la progression d
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
 ```
@@ -161,7 +161,7 @@ Cette requête vous permettra d’obtenir une réponse similaire à celle-ci :
 ```json
 {
     "{BATCH_ID}":{
-        "imsOrg":"{IMS_ORG}",
+        "imsOrg":"{ORG_ID}",
         "created":1494349962314,
         "createdClient":"{API_KEY}",
         "createdUser":"{USER_ID}",

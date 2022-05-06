@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;api étiquette dʼutilisation des données;api de service de stratégie
+keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;api étiquette dʼutilisation des données;api de service de stratégie
 solution: Experience Platform
 title: 'Gestion des étiquettes dʼutilisation des données à lʼaide dʼAPI '
 topic-legacy: developer guide
-description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 100%
@@ -18,7 +18,7 @@ Ce document fournit des instructions sur la manière de gérer les étiquettes d
 
 [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) fournit plusieurs points d’entrée qui vous permettent de créer et de gérer des étiquettes dʼutilisation des données pour votre organisation.
 
-LʼAPI [!DNL Dataset Service] vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI [!DNL Catalog Service] qui gère les métadonnées du jeu de données.
+LʼAPI [!DNL Dataset Service] vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI [!DNL Catalog Service] qui gère les métadonnées du jeu de données.
 
 ## Prise en main
 
@@ -46,7 +46,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -71,7 +71,7 @@ Une réponse réussie renvoie une liste dʼétiquettes personnalisées récupér
             "category": "Custom",
             "friendlyName": "Banking Information",
             "description": "Data containing banking information for a customer.",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "sandboxName": "{SANDBOX_NAME}",
             "created": 1594396718731,
             "createdClient": "{CLIENT_ID}",
@@ -90,7 +90,7 @@ Une réponse réussie renvoie une liste dʼétiquettes personnalisées récupér
             "category": "Custom",
             "friendlyName": "Purchase History Data",
             "description": "Data containing information on past transactions",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "sandboxName": "{SANDBOX_NAME}",
             "created": 1594397415663,
             "createdClient": "{CLIENT_ID}",
@@ -132,7 +132,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L2' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -146,7 +146,7 @@ Une réponse réussie renvoie les détails de lʼétiquette personnalisée.
     "category": "Custom",
     "friendlyName": "Purchase History Data",
     "description": "Data containing information on past transactions",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "sandboxName": "{SANDBOX_NAME}",
     "created": 1594397415663,
     "createdClient": "{CLIENT_ID}",
@@ -185,7 +185,7 @@ curl -X PUT \
   'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "L3",
@@ -212,7 +212,7 @@ Une réponse réussie renvoie les détails de lʼétiquette personnalisée, avec
   "category": "Custom",
   "friendlyName": "Payment Plan",
   "description": "Data containing information on selected payment plans.",
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "sandboxName": "{SANDBOX_NAME}",
   "created": 1529696681413,
   "createdClient": "{CLIENT_ID}",
@@ -249,7 +249,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -260,7 +260,7 @@ Une réponse réussie renvoie les étiquettes dʼutilisation des données qui on
 ```json
 {
   "AEP:dataset:5abd49645591445e1ba04f87": {
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "labels": [ "C1", "C2", "C3", "I1", "I2" ],
     "optionalLabels": [
       {
@@ -309,7 +309,7 @@ curl -X POST \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -373,7 +373,7 @@ curl -X DELETE \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

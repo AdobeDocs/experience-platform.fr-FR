@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Data Landing Zone à l’aide de l’API Flow Service.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 5829b50a81741cc4883dfa8f4d7d7891b791caf5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1223'
-ht-degree: 10%
+ht-degree: 20%
 
 ---
 
@@ -21,10 +21,10 @@ Ce tutoriel vous guide tout au long des étapes de création d’un [!DNL Data L
 
 ## Prise en main
 
-Ce guide nécessite une compréhension pratique des composants suivants d’Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Environnements de test](../../../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour créer une [!DNL Data Landing Zone] connexion source à l’aide de la fonction [!DNL Flow Service] API.
 
@@ -34,7 +34,7 @@ Ce tutoriel nécessite également que vous lisiez le guide sur [Prise en main de
 
 La première étape de l’utilisation des API pour accéder à [!DNL Data Landing Zone] est d’effectuer une requête de GET à la variable `/landingzone` point d’entrée du [!DNL Connectors] API lors de la fourniture `type=user_drop_zone` dans l’en-tête de votre requête.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /connectors/landingzone?type=user_drop_zone
@@ -53,7 +53,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/connectors/landingzone?type=user_drop_zone' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' 
 ```
@@ -93,7 +93,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
 ```
@@ -122,7 +122,7 @@ La réponse suivante renvoie les informations d’identification pour votre zone
 
 Vous pouvez mettre à jour votre `SASToken` en envoyant une requête de POST à la variable `/credentials` point d’entrée du [!DNL Connectors] API.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST /connectors/landingzone/credentials?type=user_drop_zone&action=refresh
@@ -142,7 +142,7 @@ curl -X POST \
   'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
 ```
@@ -172,7 +172,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=root
 
 | Paramètre | Description |
 | --- | --- |
-| `{CONNECTION_SPEC_ID}` | L’identifiant de spécification de connexion qui correspond à [!DNL Data Landing Zone]. Cet ID fixe est : `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `{CONNECTION_SPEC_ID}` | Identifiant de spécification de connexion qui correspond à [!DNL Data Landing Zone]. Cet ID fixe est `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 
 **Requête**
 
@@ -181,7 +181,7 @@ curl -X GET \
     'http://platform.adobe.io/data/foundation/flowservice/connectionSpecs/26f526f2-58f4-4712-961d-e41bf1ccc0e8/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -227,7 +227,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | Paramètre | Description | Exemple |
 | --- | --- | --- |
-| `{CONNECTION_SPEC_ID}` | L’identifiant de spécification de connexion qui correspond à [!DNL Data Landing Zone]. Cet ID fixe est : `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `{CONNECTION_SPEC_ID}` | Identifiant de spécification de connexion qui correspond à [!DNL Data Landing Zone]. Cet ID fixe est `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 | `{OBJECT_TYPE}` | Type de l’objet auquel vous souhaitez accéder. | `file` |
 | `{OBJECT}` | Chemin et nom de l’objet auquel vous souhaitez accéder. | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | Type du fichier. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
@@ -240,7 +240,7 @@ curl -X GET \
     'http://platform.adobe.io/data/foundation/flowservice/connectionSpecs/26f526f2-58f4-4712-961d-e41bf1ccc0e8/explore?objectType=file&object=dlz-user-container/data8.csv&fileType=delimited&preview=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -341,7 +341,7 @@ curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/26f526f2-58f4-4712-961d-e41bf1ccc0e8/explore?objectType=file&object=dlz-user-container/garageWeek/file1&preview=true&determineProperties=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -447,11 +447,11 @@ Une réponse réussie renvoie la structure du fichier interrogé, y compris les 
 | `properties.columnDelimiter` | Délimiteur de colonne correspondant utilisé pour le fichier interrogé. Toute valeur de caractère unique est un délimiteur de colonne autorisé. La valeur par défaut est une virgule. `(,)`. |
 
 
-## Création d’une connexion source
+## Créer une connexion source
 
 Une connexion source crée et gère la connexion à la source externe à partir de laquelle les données sont ingérées. Une connexion source se compose d’informations telles que la source de données, le format de données et l’identifiant de connexion source nécessaires à la création d’un flux de données. Une instance de connexion source est spécifique à un client et à une organisation IMS.
 
-Pour créer une connexion source, envoyez une requête de POST au `/sourceConnections` point d’entrée du [!DNL Flow Service] API.
+Pour créer une connexion source, envoyez une requête POST au point d’entrée `/sourceConnections` de l’API [!DNL Flow Service].
 
 
 **Format d’API**
@@ -467,7 +467,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -490,11 +490,11 @@ curl -X POST \
 | `name` | Le nom de votre [!DNL Data Landing Zone] connexion source. |
 | `data.format` | Le format des données que vous souhaitez importer dans Platform. |
 | `params.path` | Le chemin d’accès au fichier que vous souhaitez apporter à Platform. |
-| `connectionSpec.id` | L’identifiant de spécification de connexion qui correspond à [!DNL Data Landing Zone]. Cet ID fixe est : `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond à [!DNL Data Landing Zone]. Cet ID fixe est `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion source. Cet identifiant est requis dans le tutoriel suivant pour créer un flux de données.
+Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion source. Le tutoriel suivant requiert cet ID pour créer un flux de données.
 
 ```json
 {

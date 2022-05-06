@@ -5,10 +5,11 @@ topic-legacy: developer guide
 description: Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide de l’API Flow Service pour le SDK Sources.
 hide: true
 hidefromtoc: true
-source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
+exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '432'
-ht-degree: 2%
+ht-degree: 22%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Le SDK Sources est actuellement en version bêta et votre entreprise n’y a peut-être pas encore accès. Les fonctionnalités décrites dans cette documentation peuvent faire l’objet de modifications.
+>Le SDK Sources est actuellement en version Beta et votre organisation n’y a peut-être pas encore accès. Les fonctionnalités décrites dans cette documentation peuvent changer.
 
 Une fois que vous avez généré un nouvel identifiant de spécification de connexion, vous devez ajouter cet identifiant à une spécification de flux afin de créer un flux de données.
 
@@ -26,7 +27,7 @@ Le document suivant décrit les étapes à suivre pour récupérer et mettre à 
 
 ## Prise en main
 
-Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d’appels API de ce document, ainsi que des informations importantes concernant les en-têtes requis pour réussir les appels à une API Experience Platform.
+Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ## Recherche d’une spécification de flux {#lookup}
 
@@ -48,7 +49,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -69,7 +70,7 @@ Une réponse réussie renvoie les détails de la spécification de flux interrog
           "updatedClient": "{UPDATED_CLIENT}",
           "sandboxId": "{SANDBOX_ID}",
           "sandboxName": "{SANDBOX_NAME}",
-          "imsOrgId": "{IMS_ORG}",
+          "imsOrgId": "{ORG_ID}",
           "name": "RestStorageToAEP",
           "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
           "version": "1.0",
@@ -237,7 +238,7 @@ Une réponse réussie renvoie les détails de la spécification de flux interrog
 }
 ```
 
-## Mise à jour d’une spécification de flux {#update}
+## Mettre à jour une spécification de flux {#update}
 
 Vous pouvez mettre à jour les champs d’une spécification de connexion par le biais d’une opération de PUT. Lors de la mise à jour d’une spécification de connexion via une requête de PUT, le corps doit inclure tous les champs requis lors de la création d’une spécification de connexion dans une requête de POST.
 
@@ -261,7 +262,7 @@ PUT -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
 `     "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
@@ -445,7 +446,7 @@ Une réponse réussie renvoie les détails de la spécification de flux interrog
     "updatedClient": "{UPDATED_CLIENT}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "{SANDBOX_NAME}",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "name": "RestStorageToAEP",
     "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
     "version": "1.0",

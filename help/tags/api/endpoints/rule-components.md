@@ -2,7 +2,7 @@
 title: Point d’entrée des composants de règle
 description: Découvrez comment effectuer des appels au point d’entrée /rule_components dans l’API Reactor.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 100%
@@ -21,9 +21,9 @@ Les composants de règle possèdent trois types de base :
 
 | Type de composant de règle | Description |
 | --- | --- |
-| Événements | Un événement correspond au déclencheur d’une règle. La règle commence lorsque l’événement se produit au moment de l’exécution sur l’appareil client. « [!UICONTROL Chargement de bibliothèque] », « [!UICONTROL Haut de page] » et « [!UICONTROL Clic] » sont des exemples d’événements. |
+| Événements | Un événement correspond au déclencheur d’une règle. La règle commence lorsque l’événement se produit au moment de l’exécution sur l’appareil client. « [!UICONTROL Chargement de bibliothèque] », « [!UICONTROL Haut de page] » et « [!UICONTROL Cliquer sur] » sont des exemples d’événements. |
 | Conditions | Une condition correspond à une évaluation déterminant si certains critères sont satisfaits avant l’exécution d’actions. Une fois qu’un événement se produit, les conditions sont évaluées. Les actions de la règle ne s’exécutent que si toutes les conditions sont remplies. |
-| Actions | Il s’agit des actions que la règle doit effectuer, telles que l’envoi d’une balise Adobe Analytics, la récupération d’un identifiant visiteur personnalisé ou le déclenchement d’une mbox spécifique. |
+| Actions | Il s’agit des actions que la règle doit effectuer, telles que l’envoi d’une balise Adobe Analytics, la récupération d’un identifiant visiteur personnalisé ou le déclenchement d’une mBox spécifique. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -62,7 +62,7 @@ curl -X GET \
   https://reactor.adobe.io/rules/RL14dc6a8c37b14b619ddb2b3ba489a1f51/rule_components \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -197,7 +197,7 @@ curl -X GET \
   https://reactor.adobe.io/rule_components/RC7be169fcfd534ffc82acc7bffdc50128 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -323,7 +323,7 @@ curl -X POST \
   https://reactor.adobe.io/rules/RLf7b4f416b2e04ae1ba857ae681fee5bc/rule_components \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -359,7 +359,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes.delegate_descriptor_id` | **(Obligatoire)** Les types de composants de règle que vous pouvez définir sont fournis par les [packages d’extension](./extension-packages.md). Lorsque vous créez un composant de règle, vous devez fournir un ID de descripteur de délégué pour indiquer le package d’extension sur lequel ce composant de règle se base, le type du composant (événement, condition ou action) ainsi que le nom du composant spécifique tel que défini par l’extension (comme l’événement « Clic » dans l’extension Core).<br><br>Pour plus d’informations, consultez le guide sur les [ID de descripteur de délégué](../guides/delegate-descriptor-ids.md). |
+| `attributes.delegate_descriptor_id` | **(Obligatoire)** Les types de composants de règle que vous pouvez définir sont fournis par les [packages d’extension](./extension-packages.md). Lorsque vous créez un composant de règle, vous devez fournir un identifiant de descripteur délégué pour indiquer le module d’extension sur lequel ce composant de règle est basé, le type du composant (événement, condition ou action) ainsi que le nom du composant spécifique tel que défini par l’extension (comme l’événement « Cliquer sur » dans l’extension Core).<br><br>Pour plus d’informations, consultez le guide sur les [ID de descripteur de délégué](../guides/delegate-descriptor-ids.md). |
 | `attributes.name` | **(Obligatoire)** Nom compréhensible pour le composant de règle. |
 | `attributes.delay_next` | Valeur booléenne qui indique s’il faut retarder les actions ultérieures. |
 | `attributes.order` | Nombre entier indiquant l’ordre de chargement du composant par type. |
@@ -496,7 +496,7 @@ curl -X PATCH \
   https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -637,7 +637,7 @@ curl -X DELETE \
   https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Réponse**
@@ -646,7 +646,7 @@ Une réponse réussie renvoie un état HTTP 204 (No Content) sans corps de répo
 
 ## Gestion des notes dʼun composant de règle {#notes}
 
-Les composants de règle sont des ressources « inscriptibles », ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource individuelle. Pour plus dʼinformations sur la gestion des notes pour les composants de règle et dʼautres ressources compatibles, consultez le [guide de point du point dʼentrée des notes](./notes.md).
+Les composants de règle sont des ressources « inscriptibles », ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource individuelle. Pour plus dʼinformations sur la gestion des notes pour les composants de règle et dʼautres ressources compatibles, consultez le [guide de point du point dʼentrée des notes](./notes.md).
 
 ## Récupération des ressources associées pour un composant de règle {#related}
 
@@ -677,7 +677,7 @@ curl -X GET \
   https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04/rules \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -781,7 +781,7 @@ curl -X GET \
   https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04/extension \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -901,7 +901,7 @@ curl -X GET \
   https://reactor.adobe.io/rule_components/RC3d0805fde85d42db8988090bc074bb44/origin \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

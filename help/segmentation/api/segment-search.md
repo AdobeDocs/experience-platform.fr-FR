@@ -4,7 +4,7 @@ title: Point de terminaison de l’API de recherche de segments
 topic-legacy: guide
 description: Dans l’API Adobe Experience Platform Segmentation Service, la recherche de segments est utilisée pour rechercher les champs contenus dans diverses sources de données et les renvoyer en temps quasi réel. Ce guide fournit des informations pour vous aider à mieux comprendre la recherche de segments et inclut des exemples d’appels API pour effectuer des actions de base à l’aide de l’API.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 45%
@@ -19,7 +19,7 @@ Ce guide fournit des informations pour vous aider à mieux comprendre la recherc
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment les en-têtes requis et la manière de lire des exemples d’appels API.
+Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
 
 Outre les en-têtes requis décrits dans la section Prise en main , toutes les requêtes envoyées au point de terminaison de recherche de segments nécessitent l’en-tête supplémentaire suivant :
 
@@ -39,7 +39,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | Paramètres | Description |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHEMA} représente la valeur de classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
-| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} représente une requête conforme à l’implémentation par Microsoft de la syntaxe de recherche  [Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. Vous trouverez une explication plus détaillée dans l’[annexe](#appendix) de ce document. |
+| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} représente une requête conforme à l’implémentation Microsoft de [Syntaxe de recherche de Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. Vous trouverez une explication plus détaillée dans la section [annexe](#appendix) de ce document. |
 
 **Requête**
 
@@ -49,7 +49,7 @@ curl -X GET \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'Content-Type: application/json' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'x-ups-search-version: 1.0' 
 ```
@@ -100,10 +100,10 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHEMA} contient la valeur de classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
 | `namespace={NAMESPACE}` | **(Obligatoire)** Où {NAMESPACE} contient l’espace de noms dans lequel vous souhaitez effectuer des recherches. |
-| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} contient une requête conforme à l’implémentation par Microsoft de la syntaxe de recherche  [Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. Vous trouverez une explication plus détaillée dans l’[annexe](#appendix) de ce document. |
+| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} contient une requête conforme à l’implémentation Microsoft de [Syntaxe de recherche de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. Vous trouverez une explication plus détaillée dans la section [annexe](#appendix) de ce document. |
 | `entityId={ENTITY_ID}` | *(Facultatif)* Limite votre recherche à dans le dossier désigné, spécifié avec {ENTITY_ID}. |
 | `limit={LIMIT}` | *(Facultatif)* Où {LIMIT} représente le nombre de résultats de recherche à renvoyer. La valeur par défaut est 50. |
-| `page={PAGE}` | *(Facultatif)* Où {PAGE} représente le numéro de page utilisé pour paginer les résultats de la requête recherchée. Veuillez noter que le numéro de la page commence à **0**. |
+| `page={PAGE}` | *(Facultatif)* Où {PAGE} représente le numéro de page utilisé pour paginer les résultats de la requête recherchée. Veuillez noter que le numéro de page commence à **0**. |
 
 
 **Requête**
@@ -114,7 +114,7 @@ curl -X GET \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'Content-Type: application/json' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'x-ups-search-version: 1.0' 
 ```
@@ -161,7 +161,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les résultats correspondan
 
 Ce point de terminaison de recherche peut être utilisé pour obtenir les informations structurelles sur l’objet de recherche demandé.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY_ID}
@@ -171,7 +171,7 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHEMA} contient la valeur de classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
 | `namespace={NAMESPACE}` | **(Obligatoire)** Où {NAMESPACE} contient l’espace de noms dans lequel vous souhaitez effectuer des recherches. |
-| `entityId={ENTITY_ID}` | **(Obligatoire)** Identifiant de l’objet de recherche sur lequel vous souhaitez obtenir les informations structurelles, spécifié avec {ENTITY_ID}. |
+| `entityId={ENTITY_ID}` | **(Obligatoire)** L’identifiant de l’objet de recherche dont vous souhaitez obtenir les informations structurelles, spécifié avec {ENTITY_ID}. |
 
 **Requête**
 
@@ -181,7 +181,7 @@ curl -X GET \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'Content-Type: application/json' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'x-ups-search-version: 1.0' 
 ```
@@ -224,9 +224,9 @@ Après avoir lu ce guide, vous comprenez mieux le fonctionnement de la recherche
 
 ## Annexe {#appendix}
 
-Les sections suivantes apportent des informations supplémentaires sur le fonctionnement des termes de recherche. Les requêtes de recherche sont écrites de la manière suivante : `s={FieldName}:{SearchExpression}`. Ainsi, par exemple, pour rechercher un segment nommé AAM ou [!DNL Platform], vous utiliserez la requête de recherche suivante : `s=segmentName:AAM%20OR%20Platform`.
+Les sections suivantes apportent des informations supplémentaires sur le fonctionnement des termes de recherche. Les requêtes de recherche sont écrites de la manière suivante : `s={FieldName}:{SearchExpression}`. Par exemple, pour rechercher un segment nommé AAM ou [!DNL Platform], vous utiliseriez la requête de recherche suivante : `s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] Pour les bonnes pratiques, l’expression de recherche doit être codée au format HTML, comme illustré ci-dessus.
+> !![NOTE] Pour les bonnes pratiques, l’expression de recherche doit être codée en HTML, comme illustré ci-dessus.
 
 ### Champs de recherche {#search-fields}
 
@@ -245,7 +245,7 @@ Le tableau suivant répertorie les champs pouvant faire l’objet d’une recher
 
 Le tableau suivant répertorie les détails du fonctionnement des requêtes de recherche lors de l’utilisation de l’API de recherche de segments.
 
->!![NOTE] Pour plus de clarté, les exemples suivants sont affichés dans un format non codé en HTML. Pour connaître les bonnes pratiques, codez HTML votre expression de recherche.
+>!![NOTE] Pour plus de clarté, les exemples suivants sont affichés dans un format codé non par HTML. Pour connaître les bonnes pratiques, HTML codez votre expression de recherche.
 
 | Exemple d’expression de recherche | Description |
 | ------------------------- | ----------- |

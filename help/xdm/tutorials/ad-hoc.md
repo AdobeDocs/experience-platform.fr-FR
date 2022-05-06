@@ -2,11 +2,11 @@
 keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;système XDM;modèle de données d’expérience;modèle de données d’expérience;modèle de données d’expérience;modèle de données;modèle de données;registre des schémas;ad hoc;ad hoc;ad hoc;ad hoc;ad hoc;ad hoc;tutoriel;créer;créer;schéma;schéma;schéma
 solution: Experience Platform
 title: Création d’un schéma ad hoc
-description: Dans des cas spécifiques, il peut être nécessaire de créer un schéma de modèle de données d’expérience (XDM) avec des champs dont l’espace de noms n’est utilisé que par un seul jeu de données. On parle alors de schéma « ad hoc ». Les schémas ad hoc sont utilisés dans plusieurs workflows d’ingestion de données pour Experience Platform, notamment dans l’ingestion de fichiers CSV et dans la création de certains types de connexions sources.
+description: Dans des cas spécifiques, il peut être nécessaire de créer un schéma de modèle de données d’expérience (XDM) avec des champs dont l’espace de noms n’est utilisé que par un seul jeu de données. On parle alors de schéma « ad hoc ». Les schémas ad hoc sont utilisés dans plusieurs workflows d’ingestion de données pour Experience Platform, notamment dans l’ingestion de fichiers CSV et dans la création de certains types de connexions sources.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 81%
@@ -15,13 +15,13 @@ ht-degree: 81%
 
 # Création d’un schéma ad hoc
 
-Dans des cas spécifiques, il peut être nécessaire de créer un schéma [!DNL Experience Data Model] (XDM) avec des champs dont l’espace de noms est utilisé uniquement par un seul jeu de données. On parle alors de schéma « ad hoc ». Les schémas ad hoc sont utilisés dans divers workflows d’ingestion de données pour [!DNL Experience Platform], y compris l’ingestion de fichiers CSV et la création de certains types de connexions source.
+Dans des cas spécifiques, il peut être nécessaire de créer une [!DNL Experience Data Model] Schéma (XDM) avec des champs dont l’espace de noms est réservé à une utilisation par un seul jeu de données. On parle alors de schéma « ad hoc ». Les schémas ad hoc sont utilisés dans divers workflows d’ingestion de données pour [!DNL Experience Platform], y compris l’ingestion de fichiers CSV et la création de certains types de connexions source.
 
 Ce document décrit les étapes générales de création d’un schéma ad hoc à l’aide de l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Il est destiné à être utilisé conjointement avec d’autres [!DNL Experience Platform] tutoriels qui nécessitent la création d’un schéma ad hoc dans le cadre de leur workflow. Chacun de ces documents fournit des informations détaillées sur la manière de configurer correctement un schéma ad hoc pour son cas d’utilisation spécifique.
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique du système [!DNL Experience Data Model] (XDM). Avant de commencer ce tutoriel, consultez la documentation XDM suivante :
+Ce tutoriel nécessite une compréhension pratique de [!DNL Experience Data Model] Système (XDM). Avant de commencer ce tutoriel, consultez la documentation XDM suivante :
 
 - [Présentation du système XDM](../home.md) : présentation de XDM et de sa mise en œuvre dans [!DNL Experience Platform].
 - [Principes de base de la composition des schémas](../schema/composition.md) : présentation des composants de base des schémas XDM.
@@ -52,7 +52,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title":"New ad-hoc class",
@@ -133,7 +133,7 @@ Une réponse réussie renvoie les détails de la nouvelle classe, en remplaçant
     ],
     "meta:containerId": "tenant",
     "meta:datasetNamespace": "_6395cbd58812a6d64c4e5344f7b9120f",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:xdmType": "object",
     "meta:registryMetadata": {
         "repo:createdDate": 1557527784822,
@@ -171,7 +171,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title":"New Schema",
@@ -212,7 +212,7 @@ Une réponse réussie renvoie les détails du schéma créé, y compris sa propr
         "https://ns.adobe.com/xdm/data/adhoc"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:xdmType": "object",
     "meta:registryMetadata": {
         "repo:createdDate": 1557528570542,
@@ -246,7 +246,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 **Requête**
 
-La requête suivante utilise l’en-tête Accept `application/vnd.adobe.xed-full+json; version=1`, qui renvoie la forme développée du schéma. Notez que lors de la récupération d’une ressource spécifique à partir de [!DNL Schema Registry], l’en-tête Accept de la requête doit inclure la version majeure de la ressource en question.
+La requête suivante utilise l’en-tête Accept `application/vnd.adobe.xed-full+json; version=1`, qui renvoie la forme développée du schéma. Notez que lors de la récupération d’une ressource spécifique à partir du [!DNL Schema Registry], l’en-tête Accept de la requête doit inclure la version majeure de la ressource en question.
 
 ```shell
 curl -X GET \
@@ -254,7 +254,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-full+json; version=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -280,7 +280,7 @@ Une réponse réussie renvoie les détails du schéma, y compris tous les champs
         "https://ns.adobe.com/xdm/data/adhoc"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:xdmType": "object",
     "properties": {
         "_6395cbd58812a6d64c4e5344f7b9120f": {
@@ -312,4 +312,4 @@ Une réponse réussie renvoie les détails du schéma, y compris tous les champs
 
 En suivant ce tutoriel, vous avez créé un schéma ad hoc. Si un autre tutoriel vous a renvoyé à ce document, vous pouvez désormais utiliser la propriété `$id` de votre schéma ad hoc pour terminer le workflow comme indiqué.
 
-Pour plus d’informations sur l’utilisation de l’API [!DNL Schema Registry], consultez le [guide de développement](../api/getting-started.md).
+Pour plus d’informations sur l’utilisation de la variable [!DNL Schema Registry] API, reportez-vous à la section [guide de développement](../api/getting-started.md).

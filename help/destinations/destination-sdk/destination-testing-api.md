@@ -1,19 +1,19 @@
 ---
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison de l’API `/authoring/testing/destinationInstance/`, afin de tester si votre destination est configurée correctement et de vérifier l’intégrité des flux de données vers votre destination configurée.
-title: Opérations de l’API de test de destination
+title: Opérations de l’API pour les tests de destination
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '646'
-ht-degree: 2%
+ht-degree: 14%
 
 ---
 
-# Opérations de l’API de test de destination {#template-api-operations}
+# Opérations de l’API pour les tests de destination {#template-api-operations}
 
 >[!IMPORTANT]
 >
->**Point de terminaison de l’API**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
+>**Point d’entrée de l’API** : `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
 
 Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du `/authoring/testing/destinationInstance/` Point de terminaison de l’API, pour tester si votre destination est configurée correctement et pour vérifier l’intégrité des flux de données vers votre destination configurée. Pour une description de la fonctionnalité prise en charge par ce point de terminaison, reportez-vous à la section [Test de votre configuration de destination](./test-destination.md).
 
@@ -31,13 +31,13 @@ Vous pouvez utiliser la variable [Exemple d’API de génération de profil](./s
 
 ## Prise en main des opérations de l’API de test de destination {#get-started}
 
-Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
+Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes requis.
 
 ## Tester la configuration de votre destination sans ajouter de profils à l’appel {#test-without-adding-profiles}
 
 Vous pouvez tester votre configuration de destination en adressant une requête de POST au `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` point de terminaison et en indiquant l’identifiant de l’instance de destination de la destination que vous testez.
 
-**Format d&#39;API**
+**Format d’API**
 
 
 ```http
@@ -58,7 +58,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -167,7 +167,7 @@ Une réponse réussie renvoie un état HTTP 200 avec la réponse de l’API prov
 
 Vous pouvez tester votre configuration de destination en adressant une requête de POST au `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` point de terminaison et en indiquant l’identifiant de l’instance de destination de la destination que vous testez.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
@@ -187,7 +187,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '{
    "profiles":[
@@ -321,7 +321,7 @@ Une réponse réussie renvoie un état HTTP 200 avec la réponse de l’API prov
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points de terminaison de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](../../landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes dʼétat d’API](../../landing/troubleshooting.md#api-status-codes) et [Erreurs dʼen-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
 
 ## Étapes suivantes
 

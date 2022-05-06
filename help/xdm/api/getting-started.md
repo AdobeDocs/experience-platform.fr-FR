@@ -5,10 +5,10 @@ title: Prise en main de l’API Schema Registry
 description: Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels vers l’API Schema Registry.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: a26c8d43ff7874bcedd2adb3d6da995986198c96
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 46%
+ht-degree: 48%
 
 ---
 
@@ -23,7 +23,7 @@ L’utilisation du guide de développement nécessite une compréhension pratiqu
 * [[!DNL Experience Data Model (XDM) System]](../home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Notions de base de la composition du schéma](../schema/composition.md) : en savoir plus sur les blocs de création de base des schémas XDM.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une seule [!DNL Platform] dans des environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 XDM utilise le formatage du schéma JSON pour décrire et valider la structure des données d’expérience client ingérées. Il est donc vivement recommandé de consulter la section [documentation officielle du schéma JSON](https://json-schema.org/) pour une meilleure compréhension de cette technologie sous-jacente.
 
@@ -37,7 +37,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la variable [!DNL Schema Registry], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
@@ -70,7 +70,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/stats \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -80,7 +80,7 @@ Une réponse réussie renvoie des informations concernant l’utilisation de la 
 
 ```JSON
 {
-  "imsOrg":"{IMS_ORG}",
+  "imsOrg":"{ORG_ID}",
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,

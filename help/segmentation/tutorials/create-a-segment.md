@@ -1,45 +1,45 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; segment ; segment ; créer un segment ; segmentation ; créer un segment ; créer un segment ; Service de segmentation ;
+keywords: Experience Platform;accueil;rubriques populaires;segment;segment;créer un segment;segmentation;créer un segment;créer un segment;service de segmentation;
 solution: Experience Platform
-title: Création d’un segment à l’aide de l’API du service de segmentation
+title: Création d’un segment à l’aide de l’API Segmentation Service
 topic-legacy: tutorial
 type: Tutorial
-description: Suivez ce tutoriel pour apprendre à développer, tester, prévisualiser et enregistrer une définition de segment à l’aide de l’API Adobe Experience Platform Segmentation Service.
+description: Suivez ce tutoriel pour découvrir comment développer, tester, prévisualiser et enregistrer une définition de segment à l’aide de l’API Adobe Experience Platform Segmentation Service.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 69%
 
 ---
 
-# Création d’un segment à l’aide de l’API du service de segmentation
+# Création d’un segment à l’aide de l’API Segmentation Service
 
-Ce document fournit un didacticiel pour le développement, le test, la prévisualisation et l’enregistrement d’une définition de segment à l’aide de la [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
+Ce document fournit un tutoriel pour le développement, le test, la prévisualisation et l’enregistrement d’une définition de segment à l’aide du [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
 Pour plus d’informations sur la création de segments à l’aide de l’interface utilisateur, consultez le [guide du créateur de segments](../ui/overview.md).
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique des différents [!DNL Adobe Experience Platform] services impliqués dans la création de segments d’audience. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
+Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe Experience Platform] services impliqués dans la création de segments d’audience. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md) : permet de créer des segments d’audience à partir de données Real-time Customer Profile.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client. Pour tirer le meilleur parti de la segmentation, assurez-vous que vos données sont assimilées en tant que profils et événements en fonction de [meilleures pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 
-Les sections suivantes fournissent des informations supplémentaires que vous devez connaître pour pouvoir appeler le [!DNL Platform] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à la fonction [!DNL Platform] API.
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
-- x-gw-ims-org-id : `{IMS_ORG}`
+- x-gw-ims-org-id : `{ORG_ID}`
 
 Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
@@ -59,11 +59,11 @@ La première étape de la segmentation consiste à définir un segment, représe
 
 Vous pouvez créer une nouvelle définition de segment en envoyant une requête POST au point de terminaison `/segment/definitions` de l’API [!DNL Segmentation] L’exemple suivant illustre la manière de formater une requête de définition, et inclut les informations requises pour qu’un segment soit défini avec succès.
 
-Pour une explication détaillée de la définition d’un segment, veuillez lire le [guide du développeur de définition de segment](../api/segment-definitions.md#create).
+Pour obtenir une explication détaillée sur la définition d’un segment, veuillez lire le [guide de développement de la définition de segment](../api/segment-definitions.md#create).
 
 ## Estimation et prévisualisation d’une audience {#estimate-and-preview-an-audience}
 
-À mesure que vous développez votre définition de segment, vous pouvez utiliser les outils d’estimation et d’aperçu au sein de [!DNL Real-time Customer Profile] pour afficher des informations de synthèse afin de vous assurer que vous isolez le public attendu. Les estimations fournissent des informations statistiques sur une définition de segment telles que la taille prévue de l’audience et l’intervalle de confiance. Les prévisualisations fournissent des listes paginées des profils admissibles pour une définition de segment, ce qui vous permet de comparer les résultats avec vos attentes.
+Au fur et à mesure que vous développez votre définition de segment, vous pouvez utiliser les outils d’estimation et de prévisualisation dans [!DNL Real-time Customer Profile] pour afficher des informations sommaires afin de vous assurer que vous isolez l’audience attendue. Les estimations fournissent des informations statistiques sur une définition de segment telles que la taille prévue de l’audience et l’intervalle de confiance. Les prévisualisations fournissent des listes paginées des profils admissibles pour une définition de segment, ce qui vous permet de comparer les résultats avec vos attentes.
 
 En estimant et en prévisualisant votre audience, vous pouvez tester et optimiser vos prédicats PQL jusqu’à ce qu’ils produisent un résultat souhaitable. Ils peuvent alors être utilisés dans une définition de segment mise à jour.
 
@@ -90,15 +90,15 @@ Les estimations durent généralement entre 10 et 15 secondes. L’estimation e
 
 Vous pouvez créer une nouvelle tâche de prévisualisation en exécutant une requête POST sur le point de terminaison `/preview`.
 
-Vous trouverez des instructions détaillées sur la création d’une tâche d’aperçu dans la section [guide des points de terminaison des aperçus et des estimations](../api/previews-and-estimates.md#create-preview).
+Vous trouverez des instructions détaillées sur la création d’une tâche de prévisualisation dans la section [guide d’aperçu et de point de fin d’estimation](../api/previews-and-estimates.md#create-preview).
 
 ### Affichage d’une estimation ou d’une prévisualisation
 
 Les processus d’estimation et de prévisualisation sont exécutés de manière asynchrone, car le temps de traitement peut différer d’une requête à une autre. Une fois qu’une requête a été lancée, vous pouvez utiliser des appels API pour récupérer (GET) l’état actuel de l’estimation ou de la prévisualisation au fur et à mesure de sa progression.
 
-Utilisation de la propriété [!DNL Segmentation Service] API, vous pouvez rechercher l’état actuel d’une tâche d’aperçu par son ID. Si l’état affiche « RESULT_READY », vous pouvez consulter les résultats. Pour consulter l&#39;état actuel d&#39;une tâche d&#39;aperçu, lisez la section sur [récupération d&#39;une section de tâche d&#39;aperçu](../api/previews-and-estimates.md#get-preview) dans le guide des points de terminaison des aperçus et des estimations. Pour connaître l&#39;état actuel d&#39;un travail d&#39;estimation, veuillez lire la section sur [récupération d&#39;une tâche d&#39;estimation](../api/previews-and-estimates.md#get-estimate) dans le guide des points de terminaison des aperçus et des estimations.
+En utilisant la variable [!DNL Segmentation Service] API, vous pouvez rechercher l’état actuel d’une tâche de prévisualisation par son identifiant. Si l’état affiche « RESULT_READY », vous pouvez consulter les résultats. Pour rechercher l’état actuel d’une tâche de prévisualisation, veuillez lire la section sur [récupération d’une section de tâche de prévisualisation](../api/previews-and-estimates.md#get-preview) dans le guide de points de fin previews and estimated . Pour rechercher l’état actuel d’une tâche d’estimation, veuillez lire la section sur [récupération d’une tâche d’estimation](../api/previews-and-estimates.md#get-estimate) dans le guide de points de fin previews and estimated .
 
 
 ## Étapes suivantes
 
-Une fois que vous avez développé, testé et enregistré votre définition de segment, vous pouvez créer une tâche de segment pour créer un public à l’aide de la [!DNL Segmentation Service] API. Consultez le tutoriel portant sur l’[évaluation et l’accès aux résultats des segments](./evaluate-a-segment.md) pour obtenir des instructions détaillées sur la manière d’y parvenir.
+Une fois que vous avez développé, testé et enregistré votre définition de segment, vous pouvez créer une tâche de segmentation pour créer une audience à l’aide de la fonction [!DNL Segmentation Service] API. Consultez le tutoriel portant sur l’[évaluation et l’accès aux résultats des segments](./evaluate-a-segment.md) pour obtenir des instructions détaillées sur la manière d’y parvenir.

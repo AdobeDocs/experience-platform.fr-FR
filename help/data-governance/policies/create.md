@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;stratégie d’utilisation des données
+keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;stratégie d’utilisation des données
 solution: Experience Platform
 title: Création d’une stratégie d’utilisation des données dans l’API
 topic-legacy: policies
 type: Tutorial
 description: L’API Policy Service vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés d’utilisation. Ce document fournit un tutoriel détaillé sur la création d’une stratégie à l’aide de l’API Policy Service.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '1217'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ Ce document fournit un tutoriel détaillé sur la création d’une stratégie �
 
 Ce tutoriel nécessite une compréhension pratique des concepts clés suivants, qui sont impliqués dans la création et l’évaluation des stratégies
 
-* [Adobe Experience Platform Data Governance](../home.md) : cadre en fonction duquel [!DNL Platform] applique la conformité d’utilisation des données.
+* [Adobe Experience Platform Data Governance](../home.md) : cadre en fonction duquel [!DNL Platform] applique la conformité d’utilisation des données.
    * [Libellés d’utilisation des données](../labels/overview.md) : les libellés d’utilisation des données sont appliqués aux champs de données XDM, spécifiant les restrictions d’accès à ces données.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 * [Environnements de test](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
@@ -61,7 +61,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -85,7 +85,7 @@ Une réponse réussie renvoie le nombre total d’actions marketing trouvées (`
         {
             "name": "sampleMarketingAction",
             "description": "Marketing Action description.",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1550714012088,
             "createdClient": "{CREATED_CLIENT}",
             "createdUser": "{CREATED_USER}",
@@ -101,7 +101,7 @@ Une réponse réussie renvoie le nombre total d’actions marketing trouvées (`
         {
             "name": "newMarketingAction",
             "description": "Another marketing action.",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1550793833224,
             "createdClient": "{CREATED_CLIENT}",
             "createdUser": "{CREATED_USER}",
@@ -147,7 +147,7 @@ curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -169,7 +169,7 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et les détails de l�
 {
     "name": "exportToThirdParty",
     "description": "Export data to a third party",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1550713341915,
     "createdClient": "{CREATED_CLIENT}",
     "createdUser": "{CREATED_USER",
@@ -240,7 +240,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "name": "Export Data to Third Party",
@@ -301,7 +301,7 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et les détails de la
             }
         ]
     },
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1565651746693,
     "createdClient": "{CREATED_CLIENT}",
     "createdUser": "{CREATED_USER",
@@ -351,7 +351,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
     {
@@ -399,7 +399,7 @@ Une réponse réussie renvoie un état HTTP 200 (OK) et les détails de la stra
             }
         ]
     },
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1565651746693,
     "createdClient": "{CREATED_CLIENT}",
     "createdUser": "{CREATED_USER}",

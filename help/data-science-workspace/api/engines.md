@@ -5,7 +5,7 @@ title: Point de terminaison de l’API Moteurs
 topic-legacy: Developer guide
 description: Les moteurs sont le fondement des modèles d’apprentissage automatique dans Data Science Workspace. Ils contiennent des algorithmes d’apprentissage automatique qui permettent de résoudre des problèmes spécifiques, des pipelines de fonctionnalités permettant de concevoir des fonctionnalités, ou les deux.
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 69%
@@ -20,7 +20,7 @@ Les moteurs sont le fondement des modèles d’apprentissage automatique dans Da
 
 >[!TIP]
 >
->Si vous ne disposez pas d’URL Docker, consultez le tutoriel [Former une recette empaquetée à partir de fichiers source](../models-recipes/package-source-files-recipe.md) pour une présentation détaillée de la création d’une URL d’hôte Docker.
+>Si vous ne disposez pas d’une URL Docker, rendez-vous sur la page [Regroupement des fichiers source dans une recette](../models-recipes/package-source-files-recipe.md) tutoriel pour une présentation détaillée de la création d’une URL d’hôte Docker.
 
 Les informations d’identification de votre registre Docker sont nécessaires pour charger un fichier de recette empaqueté, y compris l’URL de votre hôte Docker, votre nom d’utilisateur et votre mot de passe. Vous pouvez rechercher ces informations en exécutant la requête GET suivante :
 
@@ -36,7 +36,7 @@ GET /engines/dockerRegistry
 curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -73,7 +73,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -104,14 +104,14 @@ curl -X POST \
 
 **Demander PySpark/Scala**
 
-Lors de l’exécution d’une requête pour les recettes PySpark, les `executionType` et `type` sont &quot;PySpark&quot;. Lors de l’exécution d’une requête de recettes Scala, les `executionType` et `type` sont &quot;Spark&quot;. L’exemple de recette Scala suivant utilise Spark :
+Lors de l’exécution d’une requête pour des recettes PySpark, la variable `executionType` et `type` est &quot;PySpark&quot;. Lors de l’exécution d’une requête de recettes Scala, la variable `executionType` et `type` est &quot;Spark&quot;. L’exemple de recette Scala suivant utilise Spark :
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -221,7 +221,7 @@ curl -X POST \
 | `artifacts.default.image.location` | Emplacement de l’image Docker. Seul Azure ACR ou Public (non authentifié) Dockerhub est pris en charge. |
 | `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée. Il peut s’agir de &quot;Spark&quot; ou de &quot;PySpark&quot;. |
 | `artifacts.default.image.packagingType` | Type de package du moteur. Cette valeur doit être définie sur `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | Vos paramètres de fichier de configuration `pipeline.json`. |
+| `artifacts.default.defaultMLInstanceConfigs` | Votre `pipeline.json` paramètres du fichier de configuration. |
 
 **Réponse**
 
@@ -271,7 +271,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -348,7 +348,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -425,7 +425,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
     -d '{
@@ -493,7 +493,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

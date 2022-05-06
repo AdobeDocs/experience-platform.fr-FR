@@ -5,7 +5,7 @@ title: Point de terminaison de l’API de définitions de segment
 topic-legacy: developer guide
 description: Le point de terminaison des définitions de segment de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les définitions de segment pour votre organisation.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 49%
@@ -14,13 +14,13 @@ ht-degree: 49%
 
 # Point d’entrée des définitions de segment
 
-Adobe Experience Platform vous permet de créer des segments définissant un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils. Une définition de segment est un objet qui encapsule une requête écrite dans [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. Les prédicats PQL définissent les règles du segment en fonction des conditions liées à tout enregistrement ou série temporelle que vous fournissez à [!DNL Real-time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
+Adobe Experience Platform vous permet de créer des segments définissant un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils. Une définition de segment est un objet qui encapsule une requête écrite dans [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. Les prédicats PQL définissent les règles du segment en fonction des conditions liées à tout enregistrement ou série temporelle que vous fournissez. [!DNL Real-time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
 
 Ce guide fournit des informations pour vous aider à mieux comprendre les définitions de segment et inclut des exemples d’appels API pour effectuer des actions de base à l’aide de l’API.
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment les en-têtes requis et la manière de lire des exemples d’appels API.
+Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
 
 ## Obtention d’une liste de définitions de segment {#list}
 
@@ -39,7 +39,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 | Paramètre | Description | Exemple |
 | --------- | ----------- | ------- |
-| `start` | Spécifie le décalage de début pour les définitions de segment renvoyées. | `start=4` |
+| `start` | Indique le décalage de début pour les définitions de segment renvoyées. | `start=4` |
 | `limit` | Indique le nombre de définitions de segment renvoyées par page. | `limit=20` |
 | `page` | Indique à partir de quelle page commencent les résultats des définitions de segment. | `page=5` |
 | `sort` | Indique le champ d’après lequel les résultats doivent être triés. Est écrit au format suivant : `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
@@ -52,7 +52,7 @@ La requête suivante récupère les deux dernières définitions de segment publ
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -70,7 +70,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de définitions 
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -110,7 +110,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de définitions 
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "name": "test segment",
             "description": "",
             "expression": {
@@ -167,7 +167,7 @@ POST /segment/definitions
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -199,7 +199,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 >[!NOTE]
 >
->Une expression de définition de segment peut également référencer un attribut calculé. Pour en savoir plus, consultez le [guide de point d’entrée de l’API d’attribut calculé](../../profile/computed-attributes/ca-api.md)
+>Une expression de définition de segment peut également référencer un attribut calculé. Pour en savoir plus, reportez-vous à la section [guide de point d’entrée de l’API d’attribut calculé](../../profile/computed-attributes/ca-api.md)
 >
 >La fonctionnalité des attributs calculés est une version alpha et n’est pas disponible pour tous les utilisateurs. La documentation et la fonctionnalité peuvent faire l’objet de modifications.
 
@@ -215,7 +215,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la défini
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -256,7 +256,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la défini
 
 ## Récupération d’une définition de segment spécifique {#get}
 
-Vous pouvez récupérer des informations détaillées sur une définition de segment spécifique en envoyant une requête GET au point de terminaison `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez récupérer dans le chemin de requête.
+Vous pouvez récupérer des informations détaillées sur une définition de segment spécifique en envoyant une requête de GET à la fonction `/segment/definitions` point de terminaison et en fournissant l’identifiant de la définition de segment que vous souhaitez récupérer dans le chemin de requête.
 
 **Format d’API**
 
@@ -266,14 +266,14 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | La valeur `id` de la définition de segment que vous souhaitez récupérer. |
+| `{SEGMENT_ID}` | Le `id` valeur de la définition de segment que vous souhaitez récupérer. |
 
 **Requête**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -290,7 +290,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les informations détaill�
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -338,7 +338,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les informations détaill�
 
 ## Récupération en masse de définitions de segment {#bulk-get}
 
-Vous pouvez récupérer des informations détaillées sur plusieurs définitions de segment spécifiées en envoyant une requête de POST au point de terminaison `/segment/definitions/bulk-get` et en fournissant les valeurs `id` des définitions de segment dans le corps de la requête.
+Vous pouvez récupérer des informations détaillées sur plusieurs définitions de segment spécifiées en envoyant une requête de POST à la variable `/segment/definitions/bulk-get` point de terminaison et en fournissant le `id` des définitions de segment dans le corps de la requête.
 
 **Format d’API**
 
@@ -352,7 +352,7 @@ POST /segment/definitions/bulk-get
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-get \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
@@ -381,7 +381,7 @@ Une réponse réussie renvoie un état HTTP 207 avec les définitions de segment
             },
             "ttlInDays": 60,
             "profileInstanceId": "ups",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -420,7 +420,7 @@ Une réponse réussie renvoie un état HTTP 207 avec les définitions de segment
             },
             "ttlInDays": 60,
             "profileInstanceId": "ups",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -471,11 +471,11 @@ Une réponse réussie renvoie un état HTTP 207 avec les définitions de segment
 
 ## Suppression d’une définition de segment spécifique {#delete}
 
-Vous pouvez demander la suppression d’une définition de segment spécifique en envoyant une requête de DELETE au point de terminaison `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez supprimer dans le chemin d’accès de la requête.
+Vous pouvez demander la suppression d’une définition de segment spécifique en adressant une requête de DELETE à la fonction `/segment/definitions` point de terminaison et en fournissant l’identifiant de la définition de segment que vous souhaitez supprimer dans le chemin d’accès de la requête.
 
 >[!NOTE]
 >
-> **not** pourra supprimer un segment utilisé dans une activation de destination.
+> Vous aurez **not** peut supprimer un segment utilisé dans une activation de destination.
 
 **Format d’API**
 
@@ -492,7 +492,7 @@ DELETE /segment/definitions/{SEGMENT_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -503,7 +503,7 @@ Une réponse réussie renvoie un état HTTP 200 sans message.
 
 ## Mise à jour d’une définition de segment spécifique
 
-Vous pouvez mettre à jour une définition de segment spécifique en envoyant une requête de PATCH au point de terminaison `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez mettre à jour dans le chemin d’accès de la requête.
+Vous pouvez mettre à jour une définition de segment spécifique en envoyant une requête de PATCH au `/segment/definitions` point de terminaison et en fournissant l’identifiant de la définition de segment que vous souhaitez mettre à jour dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -513,7 +513,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | La valeur `id` de la définition de segment que vous souhaitez mettre à jour. |
+| `{SEGMENT_ID}` | Le `id` valeur de la définition de segment que vous souhaitez mettre à jour. |
 
 **Requête**
 
@@ -523,7 +523,7 @@ La requête suivante mettra à jour le pays de l&#39;adresse de travail des Etat
 curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -560,7 +560,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la défini
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -596,7 +596,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la défini
 
 ## Conversion de la définition de segment
 
-Vous pouvez convertir une définition de segment entre `pql/text` et `pql/json` ou `pql/json` en `pql/text` en effectuant une requête de POST vers le point de terminaison `/segment/conversion`.
+Vous pouvez convertir une définition de segment entre `pql/text` et `pql/json` ou `pql/json` to `pql/text` en envoyant une requête de POST à la variable `/segment/conversion` point de terminaison .
 
 **Format d’API**
 
@@ -606,13 +606,13 @@ POST /segment/conversion
 
 **Requête**
 
-La requête suivante remplace le format de la définition de segment `pql/text` par `pql/json`.
+La requête suivante modifie le format de la définition de segment à partir de `pql/text` to `pql/json`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -657,4 +657,4 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la définit
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous comprenez mieux le fonctionnement des définitions de segment. Pour plus d’informations sur la création d’un segment, consultez le [tutoriel sur la création d’un segment](../tutorials/create-a-segment.md) .
+Après avoir lu ce guide, vous comprenez mieux le fonctionnement des définitions de segment. Pour plus d’informations sur la création d’un segment, veuillez lire le [création d’un segment](../tutorials/create-a-segment.md) tutoriel .

@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;api de destination;activation ad hoc;activation de segments ad hoc
 solution: Experience Platform
-title: (Beta) Activation des segments d’audience vers des destinations par lots via l’API d’activation ad hoc
+title: (Version Beta) Activer les segments d’audience vers des destinations par lots via l’API d’activation ad hoc
 description: Cet article illustre le processus de bout en bout d’activation des segments d’audience par le biais de l’API d’activation ad hoc, y compris les tâches de segmentation qui ont lieu avant l’activation.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1047'
-ht-degree: 17%
+ht-degree: 20%
 
 ---
 
-# (Beta) Activation des segments d’audience vers des destinations par lots via l’API d’activation ad hoc
+# (Version Beta) Activer les segments d’audience vers des destinations par lots via l’API d’activation ad hoc
 
 >[!IMPORTANT]
 >
@@ -69,11 +69,11 @@ Avant de pouvoir appeler les API Adobe Experience Platform, assurez-vous de resp
 
 ## Étape 2 : Collecte des informations d’identification {#credentials}
 
-Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 Les ressources d’Experience Platform peuvent être isolées dans des environnements de test virtuels spécifiques. Dans les requêtes aux API Platform, vous pouvez spécifier le nom et l’identifiant de l’environnement de test dans lequel l’opération aura lieu. Il s’agit de paramètres facultatifs.
 
@@ -134,7 +134,7 @@ Une fois la tâche d’exportation de segments terminée, vous pouvez déclenche
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -d '
 {
@@ -185,4 +185,4 @@ Une réponse réussie renvoie un état HTTP 200.
 
 ## Gestion des erreurs d’API
 
-Les points de terminaison de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](../../landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes dʼétat d’API](../../landing/troubleshooting.md#api-status-codes) et [Erreurs dʼen-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.

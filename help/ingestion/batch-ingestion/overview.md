@@ -5,10 +5,10 @@ title: Présentation de l’API Batch Ingestion
 topic-legacy: overview
 description: L’API Adobe Experience Platform Data Ingestion vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être les données de profil d’un fichier plat dans un système CRM (par exemple un fichier Parquet) ou les données conformes à un schéma connu dans le registre Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1387'
-ht-degree: 72%
+ht-degree: 75%
 
 ---
 
@@ -24,7 +24,7 @@ Le diagramme suivant décrit le processus d’ingestion par lots :
 
 ## Prise en main
 
-Les points de terminaison d’API utilisés dans ce guide font partie de la variable [API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Avant de poursuivre, veuillez consulter la section [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d’appels API de ce document, ainsi que des informations importantes concernant les en-têtes requis pour réussir les appels à une API Experience Platform.
+Les points de terminaison d’API utilisés dans ce guide font partie de la variable [API Data Ingestion](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ### [!DNL Data Ingestion] conditions préalables
 
@@ -99,7 +99,7 @@ POST /batches
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "Content-Type: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -117,7 +117,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 ```JSON
 {
     "id": "{BATCH_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "updated": 0,
     "status": "loading",
     "created": 0,
@@ -172,7 +172,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 ```SHELL
 curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet" \
   -H "content-type: application/octet-stream" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
@@ -207,7 +207,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initiali
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/part1=a/part2=b/{FILE_NAME}.parquet?action=initialize" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -238,7 +238,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 ```SHELL
 curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/part1=a/part2=b/{FILE_NAME}.parquet" \
   -H "content-type: application/octet-stream" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
@@ -272,7 +272,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
--H "x-gw-ims-org-id: {IMS_ORG}" \
+-H "x-gw-ims-org-id: {ORG_ID}" \
 -H "x-sandbox-name: {SANDBOX_NAME}" \
 -H "Authorization: Bearer {ACCESS_TOKEN}" \
 -H "x-api-key: {API_KEY}"
@@ -303,7 +303,7 @@ GET /batch/{BATCH_ID}
 ```shell
 curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "x-api-key: {API_KEY}"
 ```
@@ -313,7 +313,7 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 ```JSON
 {
     "{BATCH_ID}": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "created": 1494349962314,
         "createdClient": "MCDPCatalogService",
         "createdUser": "{USER_ID}",

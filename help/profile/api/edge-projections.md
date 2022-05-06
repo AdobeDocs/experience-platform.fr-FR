@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform vous permet de proposer des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, en rendant les données appropriées facilement disponibles et mises à jour en continu au fur et à mesure des changements. Pour ce faire, il utilise des périphéries, un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications.
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1959'
 ht-degree: 86%
@@ -14,7 +14,7 @@ ht-degree: 86%
 
 # Configurations de projection Edge et points d’entrée de destinations
 
-Afin d’offrir à vos clients des expériences coordonnées, cohérentes et personnalisées sur plusieurs canaux en temps réel, les bonnes données doivent être facilement disponibles et mises à jour en continu, au fur et à mesure des changements. Adobe Experience Platform permet cet accès aux données en temps réel grâce à l’utilisation de ce que l’on appelle les périphéries. Une périphérie est un serveur réparti géographiquement qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles qu’Adobe Target et Adobe Campaign utilisent des périphéries afin d’offrir des expériences client personnalisées en temps réel. Les données sont acheminées vers une périphérie par projection, une destination de projection définissant la périphérie vers laquelle les données sont envoyées, et une configuration de projection définissant les informations spécifiques rendues disponibles dans la périphérie. Ce guide fournit des instructions détaillées sur l’utilisation de l’API [!DNL Real-time Customer Profile] pour travailler avec des projections de périphérie, y compris les destinations et les configurations.
+Afin d’offrir à vos clients des expériences coordonnées, cohérentes et personnalisées sur plusieurs canaux en temps réel, les bonnes données doivent être facilement disponibles et mises à jour en continu, au fur et à mesure des changements. Adobe Experience Platform permet cet accès aux données en temps réel grâce à l’utilisation de ce que l’on appelle les périphéries. Une périphérie est un serveur réparti géographiquement qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles qu’Adobe Target et Adobe Campaign utilisent des périphéries afin d’offrir des expériences client personnalisées en temps réel. Les données sont acheminées vers une périphérie par projection, une destination de projection définissant la périphérie vers laquelle les données sont envoyées, et une configuration de projection définissant les informations spécifiques rendues disponibles dans la périphérie. Ce guide fournit des instructions détaillées sur l’utilisation de la variable [!DNL Real-time Customer Profile] API pour travailler avec des projections de périphérie, y compris des destinations et des configurations.
 
 ## Prise en main
 
@@ -22,7 +22,7 @@ Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Real-ti
 
 >[!NOTE]
 >
->Les requêtes contenant un payload (POST, PUT, PATCH) nécessitent un en-tête `Content-Type`. Plusieurs `Content-Type` sont utilisés dans ce document. Veuillez prêter une attention particulière aux en-têtes des exemples d’appels afin de vous assurer que vous utilisez le `Content-Type` correct pour chaque requête.
+>Les requêtes contenant un payload (POST, PUT, PATCH) nécessitent un `Content-Type` en-tête . Plus d’un `Content-Type` est utilisé dans ce document. Veuillez prêter une attention particulière aux en-têtes des exemples d’appels pour vous assurer que vous utilisez les `Content-Type` pour chaque requête.
 
 ## Destinations de projection
 
@@ -45,7 +45,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/destinations \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -132,7 +132,7 @@ curl -X POST \
   https://platform.adobe.io/data/core/ups/config/destinations \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionDestination+json; version=1' \
   -d '{
@@ -201,7 +201,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/destinations/9d66c06e-c745-480c-b64c-1d5234d25f4b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -256,7 +256,7 @@ curl -X PUT \
   https://platform.adobe.io/data/core/ups/config/destinations/8b90ce19-e7dd-403a-ae24-69683a6674e7 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionDestination+json' \
   -d '{
@@ -321,7 +321,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/core/ups/config/destinations/8b90ce19-e7dd-403a-ae24-69683a6674e7 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -331,7 +331,7 @@ La requête de suppression renvoie un état HTTP 204 (Pas de contenu) et un cor
 
 ## Configurations de projection
 
-Les configurations de projection fournissent des informations concernant les données disponibles pour chaque périphérie. Plutôt que de projeter un schéma [!DNL Experience Data Model] (XDM) complet vers la périphérie, une projection fournit uniquement des données spécifiques, ou champs, du schéma. Votre organisation peut définir plus d’une configuration de projection pour chaque schéma XDM.
+Les configurations de projection fournissent des informations concernant les données disponibles pour chaque périphérie. Plutôt que de projeter un complete [!DNL Experience Data Model] (XDM) vers la périphérie, une projection fournit uniquement des données ou des champs spécifiques du schéma. Votre organisation peut définir plus d’une configuration de projection pour chaque schéma XDM.
 
 ### Liste de toutes les configurations de projection
 
@@ -356,14 +356,14 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **Requête**
 
-La requête suivante répertorie toutes les configurations de projection associées à la classe de schéma [!DNL Experience Data Model], [!DNL XDM Individual Profile]. Pour plus d’informations sur XDM et son rôle dans [!DNL Platform], commencez par lire la [présentation du système XDM](../../xdm/home.md).
+La requête suivante répertorie toutes les configurations de projection associées à la variable [!DNL Experience Data Model] classe schéma, [!DNL XDM Individual Profile]. Pour plus d’informations sur XDM et son rôle dans [!DNL Platform], veuillez commencer par lire le [Présentation du système XDM](../../xdm/home.md).
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -437,14 +437,14 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 >[!NOTE]
 >
->La requête du POST pour créer une configuration nécessite un en-tête `Content-Type` spécifique, comme illustré ci-dessous. L’utilisation d’un en-tête `Content-Type` incorrect entraîne un état HTTP 415 (Unsupported Media Type).
+>La requête du POST pour créer une configuration nécessite une `Content-Type` comme illustré ci-dessous. L’utilisation d’un en-tête `Content-Type` incorrect entraîne un état HTTP 415 (Unsupported Media Type).
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionConfig+json; version=1' \
   -d '{
@@ -649,4 +649,4 @@ Renvoie uniquement les valeurs des champs `type` et `city` pour chaque élément
 
 ## Étapes suivantes
 
-Ce guide vous a présenté les étapes impliquées afin de configurer des projections et des destinations, y compris la manière de formater correctement le paramètre `selector`. Vous pouvez désormais créer de nouvelles destinations de projection et des configurations spécifiques aux besoins de votre entreprise.
+Ce guide vous a présenté les étapes impliquées afin de configurer des projections et des destinations, y compris la manière dont formater correctement la variable `selector` . Vous pouvez désormais créer de nouvelles destinations de projection et des configurations spécifiques aux besoins de votre entreprise.

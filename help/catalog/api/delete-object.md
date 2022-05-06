@@ -5,7 +5,7 @@ title: Suppression d’un objet dans l’API
 topic-legacy: developer guide
 description: Vous pouvez supprimer un objet Catalogue en fournissant son identifiant dans le chemin d’accès d’une requête DELETE.
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 56%
@@ -14,13 +14,13 @@ ht-degree: 56%
 
 # Suppression d’un objet dans l’API
 
-Vous pouvez supprimer un objet [!DNL Catalog] en fournissant son identifiant dans le chemin d’accès d’une requête de DELETE.
+Vous pouvez supprimer une [!DNL Catalog] en indiquant son identifiant dans le chemin d’accès d’une requête de DELETE.
 
 >[!WARNING]
 >
 >Soyez très prudent lorsque vous supprimez des objets, car vous ne pouvez pas revenir en arrière et pouvez produire des modifications avec rupture ailleurs dans [!DNL Experience Platform].
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
@@ -28,11 +28,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->Le point de terminaison `DELETE /batches/{ID}` a été abandonné. Pour supprimer un lot, vous devez utiliser l’[API d’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>Le `DELETE /batches/{ID}` Le point de terminaison a été abandonné. Pour supprimer un lot, vous devez utiliser la variable [API Batch Ingestion](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à supprimer. Les objets valides sont : <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à supprimer. Les objets valides sont : <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**
@@ -44,7 +44,7 @@ curl -X DELETE \
   'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -60,4 +60,4 @@ Une réponse réussie renvoie un état HTTP 200 (OK) et un tableau contenant l�
 
 >[!NOTE]
 >
->Si aucun objet [!DNL Catalog] ne correspond à l’identifiant fourni dans votre requête, vous pouvez toujours recevoir un code d’état HTTP 200, mais le tableau de réponse sera vide.
+>Si non [!DNL Catalog] correspondent à l’identifiant fourni dans votre requête. Vous pouvez toujours recevoir un code d’état HTTP 200, mais le tableau de réponse sera vide.

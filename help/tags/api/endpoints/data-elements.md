@@ -2,7 +2,7 @@
 title: Point d’entrée des éléments de données
 description: Découvrez comment effectuer des appels au point d’entrée /data_elements dans l’API Reactor.
 exl-id: ea346682-441b-415b-af06-094158eb7c71
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1411'
 ht-degree: 100%
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 Un élément de données fonctionne comme une variable qui pointe vers une donnée importante dans votre application. Les éléments de données sont utilisés dans les configurations [règles](./rules.md) et [extension](./extensions.md). Lorsqu’une règle est déclenchée au moment de l’exécution dans un navigateur ou une application, la valeur de l’élément de données est résolue et utilisée dans la règle. Les éléments de données fonctionnent de la même manière pour les configurations d’extension.
 
-L’utilisation conjointe de plusieurs éléments de données génère un dictionnaire de données ou un mappage de données. Ce dictionnaire représente les données qu’Adobe Experience Platform connaît et peut utiliser.
+L’utilisation conjointe de plusieurs éléments de données génère un dictionnaire de données ou un mappage de données. Ce dictionnaire constitue les données connues et exploitables par Adobe Experience Platform.
 
 Un élément de données appartient exactement à une [propriété](./properties.md). Une propriété peut comporter de nombreux éléments de données.
 
@@ -50,7 +50,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -195,7 +195,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -327,7 +327,7 @@ curl -X POST \
   https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -493,7 +493,7 @@ curl -X PATCH \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -641,7 +641,7 @@ curl -X PATCH \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -791,7 +791,7 @@ curl -X DELETE \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Réponse**
@@ -800,7 +800,7 @@ Une réponse réussie renvoie un état HTTP 204 (No Content) sans corps de répo
 
 ## Gérer les notes d’un élément de données {#notes}
 
-Les éléments de données sont des ressources « remarquables », ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource individuelle. Pour plus d’informations sur la gestion des notes pour les éléments de données et d’autres ressources compatibles, reportez-vous au [guide de point d&#39;entrée des notes](./notes.md).
+Les éléments de données sont des ressources « inscriptibles », ce qui signifie que vous pouvez créer et récupérer des notes textuelles sur chaque ressource. Pour plus d’informations sur la gestion des notes pour les éléments de données et d’autres ressources compatibles, reportez-vous au [guide de point d&#39;entrée des notes](./notes.md).
 
 ## Récupérer les ressources associées pour un élément de données {#related}
 
@@ -831,7 +831,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/libraries \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -953,7 +953,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/revisions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1187,7 +1187,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/extension \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1307,7 +1307,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/origin \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1437,7 +1437,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

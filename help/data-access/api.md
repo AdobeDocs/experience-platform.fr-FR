@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;accès aux données;sdk python;sdk spark;api data access;exporter;exporter
+keywords: Experience Platform;accueil;rubriques populaires;accès aux données;sdk python;sdk spark;api data access;exporter;exporter
 solution: Experience Platform
 title: Guide de l’API Data Access
 topic-legacy: developer guide
 description: L’API Data Access prend en charge Adobe Experience Platform en fournissant aux développeurs une interface RESTful axée sur la découverte et l’accessibilité des jeux de données ingérés dans Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 85%
@@ -16,7 +16,7 @@ ht-degree: 85%
 
 L’API Data Access prend en charge Adobe Experience Platform en fournissant aux utilisateurs une interface RESTful axée sur la découverte et l’accessibilité des jeux de données ingérés dans [!DNL Experience Platform].
 
-![Data Access sur Experience Platform](images/Data_Access_Experience_Platform.png)
+![Data Access sur Experience Platform](images/Data_Access_Experience_Platform.png)
 
 ## Référence de spécification API
 
@@ -51,7 +51,7 @@ GET /batches/{BATCH_ID}/files
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/files \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -123,7 +123,7 @@ GET /files/{FILE_ID}
 curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -203,7 +203,7 @@ Lorsqu’un répertoire est renvoyé, il contient un tableau de tous les fichier
 
 ## Accès aux contenus d’un fichier
 
-L’API [!DNL Data Access] peut également être utilisée pour accéder au contenu d’un fichier. Vous pouvez ensuite l’utiliser pour télécharger les contenus vers une source externe.
+Le [!DNL Data Access] Une API peut également être utilisée pour accéder au contenu d’un fichier. Vous pouvez ensuite l’utiliser pour télécharger les contenus vers une source externe.
 
 **Format d’API**
 
@@ -221,7 +221,7 @@ GET /files/{dataSetFileId}?path={FILE_NAME}
 curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?path={FILE_NAME} \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

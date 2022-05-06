@@ -4,7 +4,7 @@ description: Découvrez comment configurer l’authentification pour l’API Ado
 seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
 keywords: la collecte de données; authentification ; API Adobe Experience Platform Edge Network ; authorization
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '628'
 ht-degree: 19%
@@ -44,7 +44,7 @@ Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutorie
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 Les ressources d’Experience Platform peuvent être isolées dans des environnements de test virtuels spécifiques. Dans les requêtes aux API Platform, vous pouvez spécifier le nom et l’identifiant de l’environnement de test dans lequel l’opération aura lieu. Il s’agit de paramètres facultatifs.
 

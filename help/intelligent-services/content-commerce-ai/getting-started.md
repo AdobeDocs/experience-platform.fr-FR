@@ -5,7 +5,7 @@ title: Prise en main de Content and Commerce AI
 topic-legacy: Getting started
 description: Content and Commerce AI utilise des API d’Adobe I/O. Pour lancer des appels aux API Adobe I/O et à l’intégration de la console I/O, vous devez d’abord suivre le tutoriel sur l’authentification.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 14%
@@ -28,11 +28,11 @@ Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 ## Création d’un environnement Postman (facultatif)
 
-Une fois que vous avez configuré votre projet et votre API dans Adobe Developer Console, vous avez la possibilité de télécharger un fichier d’environnement pour Postman. Sous **[!UICONTROL API]** dans le rail de gauche du projet, sélectionnez **[!UICONTROL IA dédiée au contenu et au commerce]**. Un nouvel onglet s’ouvre, contenant une carte intitulée &quot;[!DNL Try it out]&quot;. Sélectionner **Téléchargement pour Postman** pour télécharger un fichier JSON utilisé pour configurer votre environnement postman.
+Une fois que vous avez configuré votre projet et votre API dans la console Adobe Developer, vous avez la possibilité de télécharger un fichier d’environnement pour Postman. Sous **[!UICONTROL API]** dans le rail de gauche du projet, sélectionnez **[!UICONTROL IA dédiée au contenu et au commerce]**. Un nouvel onglet s’ouvre, contenant une carte intitulée &quot;[!DNL Try it out]&quot;. Sélectionner **Téléchargement pour Postman** pour télécharger un fichier JSON utilisé pour configurer votre environnement postman.
 
 ![téléchargement pour postman](./images/add-to-postman.png)
 

@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;formation et évaluation;Data Science Workspace;rubriques les plus consultées;API Sensei Machine Learning
 solution: Experience Platform
-title: Formation et évaluation d’un modèle à l’aide de l’API Sensei Machine Learning
+title: Formation et évaluation d’un modèle à l’aide de l’API d’apprentissage automatique de Sensei
 topic-legacy: tutorial
 type: Tutorial
-description: Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’aide d’appels d’API Sensei Machine Learning.
+description: Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’aide d’appels d’API d’apprentissage automatique Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1235'
 ht-degree: 92%
 
 ---
 
-# Formation et évaluation d’un modèle à l’aide de l’API [!DNL Sensei Machine Learning]
+# Entraînez et évaluez un modèle à l’aide de la fonction [!DNL Sensei Machine Learning] API
 
 
 Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’aide d’appels API. Reportez-vous à [ce document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) pour obtenir une liste détaillée de la documentation sur les API.
@@ -22,13 +22,13 @@ Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’a
 
 Suivez la procédure [Importer une recette empaquetée à l’aide de l’API](./import-packaged-recipe-api.md) pour créer un moteur, ce qui est nécessaire pour former et évaluer un modèle à l’aide de l’API.
 
-Suivez le [tutoriel sur l’authentification de l’API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis) pour commencer à effectuer des appels d’API.
+Suivez la [Tutoriel sur l’authentification des API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour commencer à effectuer des appels API.
 
 Grâce au tutoriel, vous devez maintenant disposer des valeurs suivantes :
 
 - `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.
-- `{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
-- `{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.
+- `{ORG_ID}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
+- `{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.
 
 - Lien vers une image Docker d’un service intelligent
 
@@ -61,13 +61,13 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d `{JSON_PAYLOAD}`
 ```
 
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
-`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{ORG_ID}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
 `{JSON_PAYLOAD}` : la configuration de notre MLInstance. Voici l’exemple utilisé dans notre tutoriel :
 
 ```JSON
@@ -125,7 +125,7 @@ curl -X POST \
 >
 > Dans la `{JSON_PAYLOAD}`, nous définissons les paramètres utilisés pour la formation et la notation dans le tableau `tasks`. `{ENGINE_ID}` représente l’identifiant du moteur que vous souhaitez utiliser et le champ `tag` est un paramètre facultatif utilisé pour identifier l’instance.
 
-La réponse contient la balise `{INSTANCE_ID}` qui représente l’instance MLInstance créée. Vous pouvez créer plusieurs MLInstances de modèle avec des configurations différentes.
+La réponse contient la variable `{INSTANCE_ID}` qui représente l’instance MLInstance créée. Vous pouvez créer plusieurs MLInstances de modèle avec des configurations différentes.
 
 **Réponse**
 
@@ -172,14 +172,14 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY' \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{ORG_ID}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
 `{JSON_PAYLOAD}` : objet d’expérience créé. Voici l’exemple utilisé dans notre tutoriel :
 
 ```JSON
@@ -227,14 +227,14 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{ORG_ID}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
 `{JSON_PAYLOAD}` : données à publier. Voici l’exemple utilisé dans notre tutoriel :
 
 ```JSON
@@ -314,15 +314,15 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experimentRun.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}'
 ```
 
 `{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience que vous souhaitez cibler. Vous pouvez le trouver dans la réponse lors de la création de votre expérience.\
-`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{ORG_ID}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
 `{JSON_PAYLOAD}` : pour créer une exécution de formation, vous devez inclure les éléments suivants dans le corps :
 
 ```JSON
@@ -384,15 +384,15 @@ L’état de l’exécution d’expérience peut être interrogé avec le `{EXPE
 curl -X GET \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs/{EXPERIMENT_RUN_ID}/status \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}'
 ```
 
 `{EXPERIMENT_ID}` : identifiant qui représente l’expérience.\
 `{EXPERIMENT_RUN_ID}` : identifiant qui représente l’exécution de l’expérience.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
-`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.
+`{ORG_ID}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.
 
 **Réponse**
 
@@ -449,12 +449,12 @@ Pour obtenir le modèle formé créé ci-dessus pendant la formation, nous faiso
 curl -X GET \
   'https://platform.adobe.io/data/sensei/models/?property=experimentRunId=={EXPERIMENT_RUN_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_RUN_ID}` : identifiant qui correspond à l’exécution d’expérience que vous souhaitez cibler. Vous pouvez le trouver dans la réponse lors de la création de votre exécution d’expérience.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
+`{ORG_ID}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
 
 La réponse représente le modèle formé qui a été créé.
 
@@ -496,12 +496,12 @@ Si vous souhaitez arrêter l’exécution d’une expérience planifiée avant s
 curl -X DELETE \
   'https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
+`{ORG_ID}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
 
 >[!NOTE]
 >

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Exemple de point d’entrée de l’API Data
 topic-legacy: sample data
 description: 'Vous pouvez utiliser le point d’entrée `/samples` dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation les donnée d’exemple de mappage. '
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '401'
 ht-degree: 100%
@@ -41,7 +41,7 @@ La requête suivante récupèrera les deux dernières données d’exemple de ma
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -100,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -143,7 +143,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: multipart/form-data' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -F 'file=@{PATH_TO_FILE}.json'
 ```
@@ -185,7 +185,7 @@ GET /samples/{SAMPLE_ID}
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -228,7 +228,7 @@ La requête suivante met à jour les données d’exemple spécifiées. Plus pr�
 curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {

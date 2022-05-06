@@ -3,7 +3,7 @@ title: Récupération du contenu de personnalisation à partir d’autres soluti
 description: Découvrez comment utiliser l’API Adobe Experience Platform Edge Network Server pour récupérer du contenu personnalisé à partir des solutions de personnalisation d’Adobe
 seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
 keywords: la personnalisation; api du serveur ; Adobe Experience Platform Edge Network ; récupérer la personnalisation
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 10%
@@ -129,7 +129,7 @@ Le contenu personnalisé récupéré des solutions de personnalisation est prés
 
 ## Récupération de contenu {#retrieve-content}
 
-### Format d&#39;API {#api-format}
+### Format d’API {#api-format}
 
 ```http
 POST /ee/v2/interact
@@ -140,7 +140,7 @@ POST /ee/v2/interact
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"
 -H "Authorization: Bearer {TOKEN}"
--H "x-gw-ims-org-id: {IMS_ORG_ID}"
+-H "x-gw-ims-org-id: {ORG_ID}"
 -H "x-api-key: {API_KEY}"
 -H "Content-Type: application/json"
 -d '{
@@ -250,7 +250,7 @@ Les notifications doivent être déclenchées lorsqu’un contenu ou une vue pr�
 
 Notifications avec la valeur appropriée `id` pour que les portées correspondantes soient déclenchées afin que la création de rapports soit correctement reflétée.
 
-### Format d&#39;API
+### Format d’API
 
 ```http
 POST /v2/collect
@@ -261,7 +261,7 @@ POST /v2/collect
 ```shell
 url -X POST "https://server.adobedc.net/v2/collect?dataStreamId={DATASTREAM_ID}" 
 -H "Authorization: Bearer {TOKEN}" 
--H "x-gw-ims-org-id: {IMS_ORG_ID}" 
+-H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}"
 -H "Content-Type: application/json"
 -d '{

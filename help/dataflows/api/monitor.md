@@ -1,49 +1,49 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;flux de données de surveillance;api de service de flux;service de flux
 solution: Experience Platform
-title: Surveillance des flux de données à l’aide de l’API Flow Service
+title: Surveiller les flux de données à l’aide de l’API Flow Service
 topic-legacy: overview
 type: Tutorial
-description: Ce tutoriel décrit les étapes de surveillance des données d’exécution de flux pour l’exhaustivité, les erreurs et les mesures à l’aide de l’API Flow Service.
+description: Ce tutoriel décrit les étapes de surveillance de l’exhaustivité, des erreurs et des mesures relatives aux données d’exécution de flux à l’aide de l’API Flow Service.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '718'
-ht-degree: 29%
+ht-degree: 60%
 
 ---
 
-# Surveillance des flux de données à l’aide de l’API Flow Service
+# Surveiller les flux de données à l’aide de l’API Flow Service
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc. En outre, Experience Platform permet l’activation des données auprès de partenaires externes.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc. En outre, Experience Platform permet l’activation des données auprès de partenaires externes.
 
 [!DNL Flow Service] sert à collecter et à centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources et destinations prises en charge sont connectables.
 
-Ce tutoriel décrit les étapes de surveillance des données d’exécution de flux pour vérifier l’exhaustivité, les erreurs et les mesures à l’aide de [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes de surveillance de l’exécution des flux pour vérifier l’exhaustivité, les erreurs et les mesures à l’aide de la variable [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
 Ce tutoriel nécessite que vous disposiez de la valeur d’identifiant d’un flux de données valide. Si vous ne disposez pas d’un identifiant de flux de données valide, sélectionnez votre connecteur de votre choix dans la [présentation des sources](../../sources/home.md) ou [présentation des destinations](../../destinations/catalog/overview.md) et suivez les étapes décrites avant de lancer ce tutoriel.
 
-Ce tutoriel nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [Destinations](../../destinations/home.md) : Les destinations sont des intégrations préconfigurées aux applications courantes qui permettent l’activation transparente des données de Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
-- [Sources](../../sources/home.md) :  [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
-- [Environnements de test](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+- [Destinations](../../destinations/home.md): Les destinations sont des intégrations préconfigurées aux applications courantes qui permettent l’activation transparente des données de Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+- [Sources ](../../sources/home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
+- [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuelles qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour surveiller correctement les exécutions de flux à l’aide de l’API [!DNL Flow Service].
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour surveiller les exécutions de flux à l’aide de la variable [!DNL Flow Service] API.
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L&#39;exemple JSON renvoyé dans les réponses de l&#39;API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, voir la section concernant la [lecture d&#39;exemples d&#39;appels d&#39;API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d&#39;abord suivre le [tutoriel d&#39;authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 Toutes les ressources qui se trouvent dans [!DNL Experience Platform], y compris celles liées à la [!DNL Flow Service], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
@@ -55,7 +55,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ## Surveiller les exécutions de flux
 
-Une fois que vous avez créé un flux de données, effectuez une demande de GET à l’API [!DNL Flow Service].
+Une fois que vous avez créé un flux de données, effectuez une requête de GET à la fonction [!DNL Flow Service] API.
 
 **Format d’API**
 
@@ -65,7 +65,7 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FLOW_ID}` | La valeur `id` unique du flux de données que vous souhaitez surveiller. |
+| `{FLOW_ID}` | Valeur unique `id` pour le flux de données que vous souhaitez surveiller. |
 
 **Requête**
 
@@ -76,13 +76,13 @@ curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==c9cef9cb-c934-4467-8ef9-cbc934546741' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
 
-Une réponse réussie renvoie des détails sur votre exécution de flux, y compris des informations sur sa date de création, les connexions source et cible, ainsi que l’identifiant unique de l’exécution de flux (`id`).
+Une réponse réussie renvoie des informations concernant votre exécution de flux, notamment : la date de création, les connexions source et cible ainsi que l’identifiant unique de l’exécution de flux (`id`).
 
 ```json
 {
@@ -97,7 +97,7 @@ Une réponse réussie renvoie des détails sur votre exécution de flux, y compr
             "updatedClient": "{UPDATED_CLIENT}",
             "sandboxId": "{SANDBOX_ID}",
             "sandboxName": "prod",
-            "imsOrgId": "{IMS_ORG_ID}",
+            "imsOrgId": "{ORG_ID}",
             "flowId": "f00c8762-df2f-432b-a7d7-38999fef5e8e",
             "etag": "\"560266dc-0000-0200-0000-5fd0d0140000\"",
             "metrics": {
@@ -189,16 +189,16 @@ Une réponse réussie renvoie des détails sur votre exécution de flux, y compr
 
 | Propriété | Description |
 | -------- | ----------- |
-| `items` | Contient un seul payload de métadonnées associé à votre exécution de flux spécifique. |
+| `items` | Contient une seule payload de métadonnées associée à votre exécution de flux spécifique. |
 | `metrics` | Caractéristiques des données dans l’exécution du flux. |
 | `activities` | Affiche la manière dont les données sont transformées. |
 | `durationSummary` | Les heures de début et de fin de l’exécution du flux. |
 | `sizeSummary` | Volume des données en octets. |
 | `recordSummary` | Nombre d’enregistrements des données. |
 | `fileSummary` | Le fichier compte les données. |
-| `fileSummary.extensions` | Contient des informations spécifiques à l’activité. Par exemple, `manifest` fait uniquement partie de l’&quot;activité de promotion&quot; et est donc inclus avec l’objet `extensions` . |
+| `fileSummary.extensions` | Contient des informations spécifiques à l’activité. Par exemple : `manifest` ne fait partie que de l’&quot;activité de promotion&quot; et est donc incluse dans la variable `extensions` . |
 | `statusSummary` | Indique si l’exécution du flux est une réussite ou un échec. |
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez récupéré des mesures et des informations d’erreur sur votre flux de données à l’aide de l’API [!DNL Flow Service]. Vous pouvez maintenant continuer à surveiller votre flux de données, en fonction de votre planning d’ingestion, pour suivre son état et ses taux d’ingestion. Pour plus d’informations sur la manière de surveiller les flux de données pour les sources, consultez le [tutoriel de surveillance des flux de données pour les sources à l’aide de l’interface utilisateur](../ui/monitor-sources.md) . Pour plus d’informations sur la manière de surveiller les flux de données pour les destinations, consultez le [tutoriel de surveillance des flux de données pour les destinations à l’aide de l’interface utilisateur](../ui/monitor-destinations.md) .
+En suivant ce tutoriel, vous avez récupéré des mesures et des informations relatives aux erreurs sur votre flux de données à l’aide de l’API [!DNL Flow Service]. Vous pouvez maintenant continuer à surveiller votre flux de données, en fonction de votre planning d’ingestion, pour suivre son statut et ses taux d’ingestion. Pour plus d’informations sur la façon de surveiller les flux de données pour les sources, veuillez lire le [surveillance des flux de données pour les sources à l’aide de l’interface utilisateur](../ui/monitor-sources.md) tutoriel . Pour plus d’informations sur la manière de surveiller les flux de données pour les destinations, veuillez lire le [surveillance des flux de données pour les destinations à l’aide de l’interface utilisateur](../ui/monitor-destinations.md) tutoriel .

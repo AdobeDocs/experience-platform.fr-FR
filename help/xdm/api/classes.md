@@ -5,10 +5,10 @@ title: Point de terminaison de l’API Classes
 description: Le point de terminaison /classes de l’API Schema Registry vous permet de gérer par programmation les classes XDM dans votre application d’expérience.
 topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
-source-git-commit: 74ef1b3abb90ab3ca24690c88c073083f02a2f1b
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1532'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
@@ -16,8 +16,8 @@ ht-degree: 22%
 
 Tous les schémas de modèle de données d’expérience (XDM) doivent être basés sur une classe . Une classe détermine la structure de base des propriétés communes que tous les schémas basés sur cette classe doivent contenir, ainsi que les groupes de champs de schéma pouvant être utilisés dans ces schémas. En outre, une classe de schéma détermine les aspects comportementaux des données qu’un schéma contiendra, dont il existe deux types :
 
-* **[!UICONTROL Enregistrement]**: Fournit des informations sur les attributs d’un objet. Un sujet peut être une organisation ou un individu.
-* **[!UICONTROL Série temporelle]**: Fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un sujet enregistré.
+* **[!UICONTROL Enregistrement]** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
+* **[!UICONTROL Série temporelle]** : fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un sujet enregistré.
 
 >[!NOTE]
 >
@@ -60,7 +60,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -140,7 +140,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -225,7 +225,7 @@ Une réponse réussie renvoie les détails de la classe. Les champs renvoyés d�
       "meta:xdmType":"object"
     }
   ],
-  "imsOrg":"{IMS_ORG}",
+  "imsOrg":"{ORG_ID}",
   "meta:extensible":true,
   "meta:abstract":true,
   "meta:extends":[
@@ -275,7 +275,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title":"Property",
@@ -374,7 +374,7 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et un payload contena
     "https://ns.adobe.com/xdm/data/record"
   ],
   "meta:containerId": "tenant",
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:altId": "_{TENANT_ID}.classes.19e1d8b5098a7a76e2c10a81cbc99590",
   "meta:xdmType": "object",
   "$id": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -421,7 +421,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title": "Property",
@@ -513,7 +513,7 @@ Une réponse réussie renvoie les détails de la classe mise à jour.
     "https://ns.adobe.com/xdm/data/record"
   ],
   "meta:containerId": "tenant",
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:altId": "_{TENANT_ID}.classes.19e1d8b5098a7a76e2c10a81cbc99590",
   "meta:xdmType": "object",
   "$id": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -559,7 +559,7 @@ curl -X PATCH \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/classes/_{TENANT_ID}.classes.19e1d8b5098a7a76e2c10a81cbc99590 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '[
@@ -619,7 +619,7 @@ La réponse montre que les deux opérations ont été réalisées avec succès. 
     "https://ns.adobe.com/xdm/data/record"
   ],
   "meta:containerId": "tenant",
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:altId": "_{TENANT_ID}.classes.19e1d8b5098a7a76e2c10a81cbc99590",
   "meta:xdmType": "object",
   "$id": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -657,7 +657,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/classes/_{TENANT_ID}.classes.d5cc04eb8d50190001287e4c869ebe67 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

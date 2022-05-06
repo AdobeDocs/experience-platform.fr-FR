@@ -1,21 +1,21 @@
 ---
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point de terminaison API `/authoring/sample-profiles`, afin de générer des exemples de profils à utiliser dans les tests de destination.
-title: Exemples d’opérations API de génération de profil
+title: Opérations de l’API pour la génération d’un profil type
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '971'
-ht-degree: 3%
+ht-degree: 15%
 
 ---
 
-# Exemples d’opérations API de génération de profil {#sample-profile-api-operations}
+# Opérations de l’API pour la génération d’un profil type {#sample-profile-api-operations}
 
 >[!IMPORTANT]
 >
->**Point de terminaison de l’API**: `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
+>**Point d’entrée de l’API** : `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
 
-Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du `/authoring/sample-profiles` Point d’entrée de l’API.
+Cette page répertorie et décrit toutes les opérations de l’API que vous pouvez effectuer à l’aide du point d’entrée de l’API `/authoring/sample-profiles`.
 
 ## Génération de différents types de profils pour différentes API {#different-profiles-different-apis}
 
@@ -32,7 +32,7 @@ Notez que les finalités pour lesquelles les exemples de profils peuvent être u
 
 ## Prise en main d’exemples d’opérations de l’API de génération de profil {#get-started}
 
-Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
+Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes requis.
 
 ## Générer des exemples de profils en fonction du schéma source à utiliser lors du test de votre destination {#generate-sample-profiles-source-schema}
 
@@ -50,7 +50,7 @@ Pour obtenir l’identifiant d’une instance de destination, vous devez d’abo
    >![Image de l’interface utilisateur comment obtenir l’ID d’instance de destination](./assets/get-destination-instance-id.png)
 
 
-**Format d&#39;API**
+**Format d’API**
 
 
 ```http
@@ -75,7 +75,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -198,10 +198,10 @@ Vous pouvez générer des exemples de profils en fonction du schéma cible en ad
 
 >[!TIP]
 >
->* L’identifiant de destination que vous devez utiliser ici est le suivant : `instanceId` qui correspond à une configuration de destination, créée à l’aide du `/destinations` point de terminaison . Reportez-vous à la section [référence de l’API de configuration de destination](./destination-configuration-api.md#retrieve-list).
+>* L’identifiant de destination que vous devez utiliser ici est `instanceId`, qui correspond à une configuration de destination, créée à l’aide du point d’entrée `/destinations`. Reportez-vous à la section [référence de l’API de configuration de destination](./destination-configuration-api.md#retrieve-list).
 
 
-**Format d&#39;API**
+**Format d’API**
 
 
 ```http
@@ -225,7 +225,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -375,7 +375,7 @@ Une réponse réussie renvoie un état HTTP 200 avec le nombre spécifié de pro
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points de terminaison de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](../../landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes dʼétat d’API](../../landing/troubleshooting.md#api-status-codes) et [Erreurs dʼen-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
 
 ## Étapes suivantes
 

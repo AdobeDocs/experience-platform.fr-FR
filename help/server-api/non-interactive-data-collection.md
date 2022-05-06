@@ -4,7 +4,7 @@ description: Découvrez comment l’API Adobe Experience Platform Edge Network S
 seo-description: Learn how the Adobe Experience Platform Edge Network Server API performs non-interactive data collection
 keywords: collecte de données;collection;réseau adobe experience platform edge;api;collecte de données non interactives
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 5%
@@ -34,7 +34,7 @@ Each event should include the corresponding `XDM` content that needs to be colle
 
 ## Exemple d’appel API non interactif {#example}
 
-### Format d&#39;API {#api-format}
+### Format d’API {#api-format}
 
 ```http
 POST /ee/v2/collect
@@ -45,7 +45,7 @@ POST /ee/v2/collect
 ```shell
 curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_ID}" 
 -H "Authorization: Bearer {TOKEN}" 
--H "x-gw-ims-org-id: {IMS_ORG_ID}" 
+-H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}" 
 -H "Content-Type: application/json" 
 -d '{
