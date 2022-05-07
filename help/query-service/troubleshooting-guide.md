@@ -5,7 +5,7 @@ title: Guide de dépannage de Query Service
 topic-legacy: troubleshooting
 description: Ce document contient des informations sur les codes d’erreur courants que vous rencontrez et les causes possibles.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
+source-git-commit: 31a95a107b4d1c7aef87455833d6d4dc2a5a360d
 workflow-type: tm+mt
 source-wordcount: '3516'
 ht-degree: 5%
@@ -40,7 +40,7 @@ Cette section contient des informations sur les performances, les limites et les
 
 ### Puis-je utiliser Postman pour l’API Query Service ?
 
-+++Répondez Oui, vous pouvez visualiser et interagir avec tous les services d’API Adobe à l’aide de Postman (une application tierce gratuite). Regardez la [Guide de configuration de Postman](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans la console Adobe Developer et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec Postman. Consultez la documentation officielle pour [conseils sur le démarrage, l’exécution et le partage de collections Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Répondez Oui, vous pouvez visualiser et interagir avec tous les services d’API Adobe à l’aide de Postman (une application tierce gratuite). Regardez la [Guide de configuration de Postman](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires pour l’utilisation avec Postman. Consultez la documentation officielle pour [conseils sur le démarrage, l’exécution et le partage de collections Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe-t-il une limite au nombre maximum de lignes renvoyées par une requête via l’interface utilisateur ?
@@ -442,7 +442,7 @@ WHERE T2.ID IS NULL
 
 Cette section fournit des informations sur l&#39;export des données et des limites.
 
-### Existe-t-il un moyen d’extraire des données de Query Service après le traitement des requêtes et d’enregistrer les résultats dans un fichier CSV ?
+### Existe-t-il un moyen d’extraire des données de Query Service après le traitement des requêtes et d’enregistrer les résultats dans un fichier CSV ? {#export-csv}
 
 +++Répondez Oui. Les données peuvent être extraites de Query Service et il existe également la possibilité de stocker les résultats au format CSV via une commande SQL.
 
