@@ -2,10 +2,11 @@
 keywords: Experience Platform;accueil;rubriques populaires;Salesforce;Salesforce;mappage de champ;mappage de champ;mappage;marketing;B2B;b2b
 title: Champs de mappage Salesforce
 description: Les tableaux ci-dessous contiennent les mappages entre les champs source Salesforce et leurs champs XDM correspondants.
-source-git-commit: d0efc8ffab33029c9c3ff69456b634b4ef737b1a
+exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
+source-git-commit: d96c1db480957e8b0cbff01171ae11d8eaa801be
 workflow-type: tm+mt
 source-wordcount: '279'
-ht-degree: 10%
+ht-degree: 13%
 
 ---
 
@@ -180,7 +181,7 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 | `Amount` | `opportunityAmount.amount` |
 | `CampaignId` | `campaignKey.sourceID` |
 | `iif(CampaignId != null && CampaignId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(CampaignId,"@${CRM_ORG_ID}.Salesforce")), null)` | `campaignKey` |
-| `CloseDate` | `actualCloseDate` / `expectedCloseDate` |
+| `CloseDate` | `expectedCloseDate` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Description` | `opportunityDescription` |
 | `ExpectedRevenue` | `expectedRevenue.amount` |
@@ -279,4 +280,4 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez découvert la relation de mappage entre [!DNL Salesforce] champs source et leurs champs XDM correspondants. Consultez la documentation relative à [création d’un [!DNL Salesforce] connexion source](../../../connectors/crm/salesforce.md) pour plus d’informations.
+En lisant ce document, vous avez découvert la relation de mappage entre [!DNL Salesforce] champs source et leurs champs XDM correspondants. Pour plus d’informations, consultez la documentation sur la [création d’une connexion source [!DNL Salesforce] ](../../../connectors/crm/salesforce.md).
