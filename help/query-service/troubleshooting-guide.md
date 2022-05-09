@@ -3,11 +3,11 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;service de 
 solution: Experience Platform
 title: Guide de dépannage de Query Service
 topic-legacy: troubleshooting
-description: Ce document contient des informations sur les codes d’erreur courants que vous rencontrez et les causes possibles.
+description: Ce document contient des questions courantes et des réponses relatives à Query Service. Les rubriques incluent, l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 31a95a107b4d1c7aef87455833d6d4dc2a5a360d
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '3516'
+source-wordcount: '3522'
 ht-degree: 5%
 
 ---
@@ -40,7 +40,7 @@ Cette section contient des informations sur les performances, les limites et les
 
 ### Puis-je utiliser Postman pour l’API Query Service ?
 
-+++Répondez Oui, vous pouvez visualiser et interagir avec tous les services d’API Adobe à l’aide de Postman (une application tierce gratuite). Regardez la [Guide de configuration de Postman](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires pour l’utilisation avec Postman. Consultez la documentation officielle pour [conseils sur le démarrage, l’exécution et le partage de collections Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Répondez Oui, vous pouvez visualiser et interagir avec tous les services d’API Adobe à l’aide de Postman (une application tierce gratuite). Regardez la [Guide de configuration de Postman](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans la console Adobe Developer et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec Postman. Consultez la documentation officielle pour [conseils sur le démarrage, l’exécution et le partage de collections Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe-t-il une limite au nombre maximum de lignes renvoyées par une requête via l’interface utilisateur ?

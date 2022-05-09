@@ -5,10 +5,10 @@ title: Syntaxe SQL dans Query Service
 topic-legacy: syntax
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: a5391c1ccc24845673217e15bafd1a1df33cbc18
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '2741'
-ht-degree: 9%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -392,7 +392,7 @@ Consultez le guide sur la [organisation logique des ressources de données](../b
 
 ## La table existe
 
-Le `table_exists` La commande SQL permet de confirmer si une table existe actuellement dans le système. La commande renvoie une valeur booléenne : `true` si le tableau **does** existent et `false` si le tableau fonctionne **not** existent.
+Le `table_exists` La commande SQL permet de confirmer si une table existe actuellement dans le système. La commande renvoie une valeur booléenne : `true` si le tableau **existe** et `false` si le tableau **n’existe pas.**
 
 En validant l’existence d’un tableau avant d’exécuter les instructions, la variable `table_exists` Cette fonctionnalité simplifie le processus d’écriture d’un bloc anonyme pour couvrir à la fois les `CREATE` et `INSERT INTO` cas d’utilisation.
 
@@ -459,7 +459,12 @@ select inline(productListItems) from source_dataset limit 10;
 
 Les valeurs provenant de la variable `source_dataset` sont utilisés pour remplir la table cible.
 
-| SKU | _experience | quantity | priceTotal | |—+—+—+— | product-id-1 | (&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;) | 5 | 10.5 | | product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;) | | | | product-id-2 | (&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;) | 6 | 40 | | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;) | 3 | 12 |
+| SKU | _experience | quantity | priceTotal |
+|---------------------|-----------------------------------|----------|--------------|
+| product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;) | 5 | 10,5 |
+| product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;) |  |  |
+| product-id-2 | (&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;)&quot;) | 6 | 40 |
+| product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;) | 3 | 12 |
 
 ## [!DNL Spark] Commandes SQL
 
