@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
-title: Présentation des tableaux de bord dʼExperience Platform
+title: Présentation des tableaux de bord
 type: Documentation
 description: Explorez de nombreux tableaux de bord dans Adobe Experience Platform pour afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors des captures instantanées quotidiennes.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
-workflow-type: ht
-source-wordcount: '309'
-ht-degree: 100%
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

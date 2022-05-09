@@ -4,7 +4,7 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
 source-wordcount: '2976'
 ht-degree: 4%
@@ -185,7 +185,7 @@ Le [!UICONTROL Profils d’identité uniques] Le widget fournit un décompte des
 
 ### [!UICONTROL Profils non segmentés] {#unsegmented-profiles}
 
-Le [!UICONTROL Profils non segmentés] fournit le nombre total de tous les profils qui ne sont associés à aucun segment. Le nombre généré est précis à partir du dernier instantané et représente l’opportunité d’activation du profil à l’échelle de votre organisation. Elle indique également la possibilité d’effacer les profils qui ne fournissent pas un retour sur investissement adéquat.
+Le [!UICONTROL Profils non segmentés] fournit le nombre total de tous les profils qui ne sont associés à aucun segment. Le nombre, généré à partir du dernier instantané, est précis et souligne l’opportunité d’activation de profils dans votre entreprise. Elle indique également la possibilité d’effacer les profils qui ne fournissent pas un retour sur investissement adéquat.
 
 ![Le widget Profils non segmentés .](../images/profiles/unsegmented-profiles.png)
 
