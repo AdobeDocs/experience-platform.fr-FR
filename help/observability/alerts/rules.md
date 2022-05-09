@@ -4,10 +4,10 @@ title: Règles d’alerte standard
 description: Ce document couvre les règles d’alerte prédéfinies fournies par Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: f1098f5992068173f35cb1c53924a82df6996acb
+source-git-commit: 67aef7ca2ad4061003af8d91fb29339397d8af01
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 94%
+source-wordcount: '811'
+ht-degree: 92%
 
 ---
 
@@ -29,6 +29,7 @@ Les règles d’alerte suivantes sont spécifiques à l’[Ingestion des donnée
 | Retards, échecs et erreurs de l’exécution du flux de sources | Retard d’ingestion | Cette alerte se déclenche lorsqu’une exécution de flux d’ingestion par lots dure plus de 150 minutes. |
 | Retards, échecs et erreurs de l’exécution du flux de sources | Absence d’ingestion | Cette alerte vous envoie un message si l’ingestion est retardée de plus de sept heures et qu’aucune donnée n’est ingérée dans Platform. |
 | Retards, échecs et erreurs de l’exécution du flux de sources | Échec de l’ingestion | Cette alerte se déclenche lorsque le rapport entre les enregistrements en échec et tous les enregistrements dépasse un seuil de 0,5 %. |
+| Retards, échecs et erreurs de l’exécution du flux de sources | Le taux de saut de page dépasse le seuil | Cette alerte se déclenche lorsque le rapport entre les identifiants ignorés et les identifiants totaux dépasse un seuil. |
 
 {style=&quot;table-layout:auto&quot;}
 
