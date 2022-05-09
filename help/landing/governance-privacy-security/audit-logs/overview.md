@@ -1,11 +1,11 @@
 ---
 title: Présentation des journaux d’audit
-description: Découvrez comment les journaux d’audit vous permettent de voir qui a effectué les actions dans Adobe Experience Platform.
+description: Découvrez comment les journaux d’audit vous permettent de savoir qui a effectué quelles actions dans Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
+source-git-commit: ba190bdd1856b2d89fa28679eb7f09c258ddd17c
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 8%
+source-wordcount: '767'
+ht-degree: 13%
 
 ---
 
@@ -35,6 +35,8 @@ Le tableau suivant décrit les actions sur lesquelles les ressources sont enregi
 | [Attribut calculé](../../../profile/computed-attributes/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Profil de produit](../../../access-control/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Compte (Adobe)](../../../access-control/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Modèle de requête](../../../access-control/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Requête planifiée](../../../access-control/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 
 ## Accès aux journaux d’audit
 
