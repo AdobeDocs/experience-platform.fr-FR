@@ -3,9 +3,9 @@ keywords: la publicité; les critères;
 title: Connexion à un critère
 description: Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaque consommateur des expériences plus riches sur l’Internet libre. Grâce au jeu de données commercial le plus important du monde et à l’IA la plus performante du monde, Criteo s’assure que chaque point de contact du parcours d’achat est personnalisé pour atteindre les clients avec la bonne publicité, au bon moment.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: add177efd3fdd0a39dc33c5add59375f8e918c1e
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '820'
 ht-degree: 8%
 
 ---
@@ -138,4 +138,4 @@ Toutes les destinations Adobe Experience Platform sont conformes aux politiques 
 ## Ressources supplémentaires
 
 * [Centre d’aide de Criteo](https://help.criteo.com/kb/en)
-* [Portail de développement de critères](https://developers.criteo.com/marketing-solutions/v2022.04/reference/modifyaudienceuserswithattributes)
+* [Portail de développement de critères](https://developers.criteo.com)
