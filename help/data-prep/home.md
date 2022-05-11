@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;mapper csv;mapper le fichier csv;mapper le fichier csv à xdm;mapper csv à xdm;guide de lʼui;mappeur;mappage;data prep;préparation des données;préparer des données;
+keywords: Experience Platform;accueil;rubriques populaires;mapper csv;mapper le fichier csv;mapper le fichier csv à xdm;mapper csv à xdm;guide de lʼui;mappeur;mappage;data prep;préparation des données;préparer des données;
 solution: Experience Platform
 title: Présentation de Data Prep
 topic-legacy: overview
-description: Ce document présente Data Prep dans Adobe Experience Platform.
+description: Ce document présente Data Prep dans Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
+source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 100%
+source-wordcount: '594'
+ht-degree: 92%
 
 ---
 
@@ -51,6 +51,10 @@ Pour en savoir plus sur les jeux de mappages, y compris sur l’utilisation des 
 
 La préparation des données peut gérer de manière robuste différents formats de données ingérés dans Platform. Pour en savoir plus sur la façon dont la préparation de données gère les différents types de données, consultez la [présentation de la gestion des formats de données](./data-handling.md).
 
+## Envoi de mises à jour de lignes partielles à l’aide de [!DNL Data Prep]
+
+Diffusion en continu des upserts dans [!DNL Data Prep] vous permet d’envoyer des mises à jour de ligne partielles à [!DNL Profile Service] lors de la création et de l’établissement de nouveaux liens d’identité avec une seule requête API. Pour en savoir plus sur la diffusion en continu de upserts dans [!DNL Data Prep], voir le document sur [envoi de mises à jour de lignes partielles ;](./upserts.md).
+
 ## Étapes suivantes
 
-Ce document présentait les principes de base de Data Prep dans Adobe Experience Platform. Pour en savoir plus sur les différentes fonctions de mappage, consultez le [guide des fonctions de mappage](./functions.md). Pour en savoir plus sur la façon dont la préparation de données gère les différents types de données, consultez le [guide de la gestion des formats de données](./data-handling.md#dates). Pour savoir comment utiliser l’API Data Prep, consultez le [guide de développement de la préparation des données](api/overview.md).
+Ce document présentait les principes de base de Data Prep dans Adobe Experience Platform. Pour en savoir plus sur les différentes fonctions de mappage, consultez le [guide des fonctions de mappage](./functions.md). Pour en savoir plus sur la façon dont la préparation de données gère les différents types de données, consultez le [guide de la gestion des formats de données](./data-handling.md#dates). Pour savoir comment utiliser l’API Data Prep, consultez le [guide de développement de la préparation des données](api/overview.md).
