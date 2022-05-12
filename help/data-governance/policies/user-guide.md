@@ -5,10 +5,10 @@ title: Gestion des stratégies d’utilisation des données dans l’interface u
 topic-legacy: policies
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente les actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur de l’Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 8feb9fbdead75ca7b9ed7e5dcd3a0aab6f328ad5
+source-git-commit: 1c0685e7acb594829795674f859f76f229ecee61
 workflow-type: tm+mt
-source-wordcount: '1295'
-ht-degree: 53%
+source-wordcount: '1331'
+ht-degree: 51%
 
 ---
 
@@ -131,6 +131,10 @@ Vous pouvez continuer à ajouter et à ajuster des conditions et des attributs d
 La stratégie de consentement est maintenant créée et son état est défini sur [!UICONTROL Désactivé] par défaut. Pour activer immédiatement la stratégie, sélectionnez l’option **[!UICONTROL État]** bascule dans le rail de droite.
 
 ![](../images/policies/enable-consent-policy.png)
+
+#### Vérification de l’application des stratégies
+
+Après avoir créé et activé une stratégie de consentement, vous pouvez prévisualiser l’impact de cette stratégie sur vos audiences consentantes lors de l’activation de segments vers les destinations. Voir la section sur [évaluation des stratégies de consentement](../enforcement/auto-enforcement.md#consent-policy-evaluation) pour plus d’informations.
 
 ## Activation ou désactivation d’une stratégie {#enable}
 
