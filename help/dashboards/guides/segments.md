@@ -4,10 +4,10 @@ title: Tableau de bord Segments
 description: 'Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments que votre entreprise a créés. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 5%
+source-wordcount: '1491'
+ht-degree: 4%
 
 ---
 
@@ -77,6 +77,12 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 
 ### [!UICONTROL Taille de l’audience] {#audience-size}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesize"
+>title="Taille de l’audience"
+>abstract="Ce widget affiche le nombre total de profils fusionnés dans le segment sélectionné. Ce nombre dépend de la stratégie de fusion appliquée à vos données et est correct au moment de l’instantané le plus récent."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="En savoir plus dans la documentation"
+
 Le **[!UICONTROL Taille de l’audience]** widget affiche le nombre total de profils fusionnés dans le segment sélectionné au moment de la prise de vue instantanée. Ce nombre est le résultat de l’application de la stratégie de fusion de segments à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu du segment.
 
 Pour plus d’informations sur les fragments et les profils fusionnés, commencez par lire la section [Présentation de Real-time Customer Profile](../../profile/home.md).
@@ -85,9 +91,15 @@ Pour plus d’informations sur les fragments et les profils fusionnés, commence
 
 ### [!UICONTROL Superposition des identités] {#identity-overlap}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_identityoverlap"
+>title="Superposition des identités"
+>abstract="Ce widget affiche le chevauchement des profils de votre segment contenant les deux identités sélectionnées. Les cercles affichent la taille relative de chaque identité. Le nombre de profils contenant les deux espaces de noms est représenté par le chevauchement entre les cercles."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="En savoir plus dans la documentation"
+
 Le **[!UICONTROL Superposition des identités]** Ce widget affiche un diagramme de Venn, ou un diagramme de jeu, qui montre le chevauchement des profils de votre segment contenant plusieurs identités.
 
-Après avoir utilisé les menus déroulants du widget pour sélectionner les identités à comparer, les cercles s’affichent avec la taille relative de chaque identité, le nombre de profils contenant les deux espaces de noms étant représenté par la taille du chevauchement entre les cercles.
+Utilisez les menus déroulants du widget pour sélectionner les identités à comparer. Les cercles affichent la taille relative de chaque identité choisie, le nombre de profils contenant les deux espaces de noms étant représenté par la taille du chevauchement entre les cercles.
 
 Si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités seront associées à ce client individuel. Par conséquent, il est probable que votre organisation dispose de plusieurs profils contenant des fragments provenant de plusieurs identités.
 
@@ -97,7 +109,13 @@ Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation d
 
 ### [!UICONTROL Profils par identité] {#profiles-by-identity}
 
-Le **[!UICONTROL Profils par identité]** widget affiche la ventilation des identités pour tous les profils fusionnés du segment sélectionné. Le nombre total de profils par identité peut être supérieur au nombre total de profils dans le segment, car plusieurs identités peuvent y être associées pour un profil. En d’autres termes, le fait de cumuler les valeurs affichées pour chaque identité peut être supérieur à la taille totale de l’audience dans le segment, car si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités peuvent être associées à ce client individuel.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_profilesbyidentity"
+>title="Profils par identité"
+>abstract="Ce widget affiche la ventilation des identités pour chaque profil fusionné du segment sélectionné."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="En savoir plus dans la documentation"
+
+Le **[!UICONTROL Profils par identité]** widget affiche la ventilation des identités pour chaque profil fusionné du segment sélectionné. Le nombre total de profils par identité peut être supérieur au nombre total de profils dans le segment, car plusieurs identités peuvent y être associées pour un profil. En d’autres termes, le fait de cumuler les valeurs affichées pour chaque identité peut être supérieur à la taille totale de l’audience dans le segment, car si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités peuvent être associées à ce client individuel.
 
 Sélectionner **[!UICONTROL Sous-titres]** pour ouvrir la boîte de dialogue des sous-titres automatiques.
 
@@ -115,9 +133,23 @@ Le [!UICONTROL Ordre d’activation de l’audience] Le widget fournit un tablea
 
 ### [!UICONTROL Tendance de la taille de l’audience] {#audience-size-trend}
 
-Le [!UICONTROL Tendance de la taille de l’audience] Le widget fournit une représentation graphique linéaire pour le nombre total de profils qui répondent aux critères de **any** définition de segment sur une période donnée. La tendance de la taille de l’audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. La taille de l’audience est répercutée sur l’axe des ordonnées et l’heure sur l’axe des abscisses.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesizetrend"
+>title="Tendance de la taille de l’audience"
+>abstract="Ce widget fournit des informations sur le nombre total de profils qui répondent aux critères de **any** définition de segment, telle qu’elle est capturée lors de l’instantané quotidien, pendant les 30 derniers jours, 90 jours ou 12 mois."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="En savoir plus dans la documentation"
 
-![Le widget de tendance Taille de l’audience .](../images/segments/audience-size-trend.png)
+Le **[!UICONTROL Tendance de la taille de l’audience]** Le widget fournit une représentation graphique linéaire pour le nombre total de profils qui répondent aux critères de **any** définition de segment sur une période donnée. La tendance de la taille de l’audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. La taille de l’audience est répercutée sur l’axe des ordonnées et l’heure sur l’axe des abscisses.
+
+Ce widget inclut également le [!UICONTROL Sous-titres] fonction dans laquelle un modèle d’apprentissage automatique analyse les données de graphique et de segment et génère automatiquement des sous-titres pour décrire les tendances clés et les événements importants. Sélectionner **[!UICONTROL Sous-titres]** pour ouvrir la boîte de dialogue des sous-titres automatiques.
+
+![La présentation des segments affiche le widget de tendance de taille d’audience .](../images/segments/audience-size-trend-captions.png)
+
+La boîte de dialogue de sous-titres automatiques s’ouvre, vous permettant d’obtenir des informations sur vos données.
+
+![Boîte de dialogue de sous-titres automatiques pour le widget de tendance de taille d’audience .](../images/segments/audience-size-trend-automatic-captions-dialog.png)
+
+Pour en savoir plus sur l’évaluation des segments et sur la manière dont les profils sont qualifiés et sortent des segments, reportez-vous à la section [Documentation de Segmentation Service](../../segmentation/home.md).
 
 ### [!UICONTROL Tendance de changement de la taille de l’audience] {#audience-size-change-trend}
 

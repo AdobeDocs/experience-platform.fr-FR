@@ -4,9 +4,9 @@ title: Tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '2538'
 ht-degree: 2%
 
 ---
@@ -55,12 +55,19 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 * [[!UICONTROL Segments non mappés par identité]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segments mappés par identité]](#mapped-segments-by-identity)
 * [[!UICONTROL Audiences courantes]](#common-audiences)
+* [[!UICONTROL Santé de l’audience mappée]](#mapped-audience-health)
 * [[!UICONTROL Nombre de destinations]](#destinations-count)
 * [[!UICONTROL État de la destination]](#destination-status)
 * [[!UICONTROL Destinations principales par plateforme de destination]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Audiences activées sur toutes les destinations]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL Destinations les plus utilisées] {#most-used-destinations}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mostuseddestinations"
+>title="Destinations les plus utilisées"
+>abstract="Ce widget affiche les destinations les plus principales de votre entreprise en fonction du nombre de segments mappés. Ces chiffres sont précis au moment de la dernière capture instantanée. Ce classement fournit des informations sur les destinations actuellement les plus utilisées tout en mettant en évidence celles qui peuvent être sous-utilisées."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#most-used-destinations" text="En savoir plus dans la documentation"
 
 Le **[!UICONTROL Destinations les plus utilisées]** widget affiche les principales destinations de votre entreprise en fonction du nombre de segments mappés, à partir du dernier instantané. Ce classement permet de savoir quelles destinations sont utilisées, tout en présentant éventuellement celles qui peuvent être sous-utilisées.
 
@@ -74,6 +81,12 @@ Si vous sélectionnez le nom d’une destination dans la liste affichée sur le 
 
 ### [!UICONTROL Destinations créées récemment] {#recently-created-destinations}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlycreateddestinations"
+>title="Destinations créées récemment"
+>abstract="Ce widget affiche la liste des destinations configurées le plus récemment au sein de votre entreprise."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-created-destinations" text="En savoir plus dans la documentation"
+
 Le **[!UICONTROL Destinations créées récemment]** vous permet d’afficher la liste des destinations configurées le plus récemment par votre entreprise.
 
 La date de création affichée est exacte par rapport au dernier instantané quotidien. En d’autres termes, si vous créez une destination, elle n’apparaîtra pas dans la liste tant que l’instantané suivant n’aura pas été pris.
@@ -86,7 +99,13 @@ Pour en savoir plus sur la configuration de types de destinations spécifiques, 
 
 ### [!UICONTROL Segments récemment activés] {#recently-activated-segments}
 
-Le **[!UICONTROL Segments récemment activés]** fournit une liste des segments mappés le plus récemment à une destination. Cette liste fournit un instantané des segments et des destinations utilisés activement dans le système et peut vous aider à résoudre les problèmes de mappages erronés.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlyactivatedsegments"
+>title="Segments récemment activés"
+>abstract="Ce widget fournit une liste des segments mappés le plus récemment à une destination. Cette liste fournit un instantané des segments et des destinations activement utilisés dans le système et peut vous aider à résoudre les problèmes de mappages erronés."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments" text="En savoir plus dans la documentation"
+
+Le **[!UICONTROL Segments récemment activés]** fournit une liste des segments mappés le plus récemment à une destination. Cette liste fournit un instantané des segments et des destinations activement utilisés dans le système et peut vous aider à résoudre les problèmes de mappages erronés.
 
 La date mise à jour affichée affiche la dernière fois que le segment a été activé vers la destination et est précis par rapport au dernier instantané quotidien. En d’autres termes, si vous activez un segment vers la destination, la date mise à jour ne changera pas tant que l’instantané suivant n’aura pas été pris.
 
@@ -98,6 +117,12 @@ Pour plus d’informations sur l’utilisation des segments dans Experience Plat
 
 ### [!UICONTROL Segments récemment activés par destination] {#recently-activated-segments-by-destination}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
+>title="Segments récemment activés par destination"
+>abstract="Ce widget affiche les cinq segments les plus récemment activés dans l’ordre décroissant en fonction de la destination choisie dans la liste déroulante d’aperçu."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments-by-destination" text="En savoir plus dans la documentation"
+
 Le **[!UICONTROL Segments récemment activés par destination]** le widget affiche les cinq segments les plus récemment activés dans l’ordre décroissant en fonction de la destination choisie dans la liste déroulante d’aperçu. Elle est similaire au [!UICONTROL Segments récemment activés] widget, mais les données affichées **only** s’applique à la destination sélectionnée.
 
 Ce widget contient deux mesures : le nom du segment et la date de la dernière activation du segment vers la destination. Les données affichées sont correctes à partir du dernier instantané quotidien.
@@ -107,6 +132,12 @@ Vous pouvez afficher les détails d’un segment en le sélectionnant dans la li
 ![Segments récemment activés par widget de destination.](../images/destinations/recently-activated-segments-by-destination.png)
 
 ### [!UICONTROL Tendance de la taille de l’audience] {#audience-size-trend}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_audiencesizetrend"
+>title="Tendance de la taille de l’audience"
+>abstract="Ce widget illustre le nombre de profils contenus dans le segment, qui est envoyé quotidiennement au compte de destination. Le premier menu déroulant adapte la période à la tendance de l’audience. Le deuxième menu déroulant de widget sélectionne le segment à analyser. La destination est choisie dans la liste déroulante de présentation."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#audience-size-trend" text="En savoir plus dans la documentation"
 
 Le **[!UICONTROL Tendance de la taille de l’audience]** Le widget illustre la relation entre le nombre de profils sur une période donnée pour un segment qui a été mappé à ce compte de destination. Le widget utilise un graphique linéaire pour illustrer le nombre de profils contenus dans le segment, qui sont envoyés quotidiennement au compte de destination.
 
@@ -122,6 +153,12 @@ Le **[!UICONTROL Tendance de la taille de l’audience]** fournit un [!UICONTROL
 
 ### [!UICONTROL Segments non mappés par identité] {#unmapped-segments-by-identity}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
+>title="Segments non mappés par identité"
+>abstract="Ce widget répertorie les cinq premiers **non mappé** segments classés par nombre d’identités décroissant pour une destination et une identité données. Les ID de filtre répertoriés dans la liste déroulante du widget changent en fonction du compte de destination sélectionné en haut de la page d’aperçu."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#unmapped-segments-by-identity" text="En savoir plus dans la documentation"
+
 Le **[!UICONTROL Segments non mappés par identité]** Le widget répertorie les cinq premiers **non mappé** segments classés par nombre d’identités décroissant pour une destination et une identité données. Il met en évidence les segments qui sont les plus bénéfiques à mapper sur le compte de destination choisi en fonction de l’identifiant choisi.
 
 La liste déroulante Identifiant de destination filtre vos segments disponibles. Les ID de filtre répertoriés dans la liste déroulante changent en fonction du compte de destination sélectionné en haut de la page d’aperçu.
@@ -132,13 +169,25 @@ La colonne Identités comptabilise le nombre d’identifiants source dans le seg
 
 ### [!UICONTROL Segments mappés par identité] {#mapped-segments-by-identity}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mappedsegmentsbyidentity"
+>title="Segments mappés par identité"
+>abstract="Ce widget fournit les cinq premières listes de **mappé** segments. La liste est classée de haut en bas en fonction du nombre d’ID source contenus dans les segments. L’ID de destination à comptabiliser est sélectionné dans le menu déroulant sous le titre du widget. Les identifiants de destination disponibles dans la liste déroulante de widgets dépendent de la destination choisie en haut du tableau de bord de la présentation."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-segments-by-identity" text="En savoir plus dans la documentation"
+
 Ce widget fournit les cinq premières listes de **mappé** segments. La liste est classée de haut en bas en fonction du nombre d’ID source contenus dans les segments. L’ID de destination à comptabiliser est sélectionné dans le menu déroulant sous le titre du widget. Les identifiants de destination disponibles dans la liste déroulante du widget changent en fonction du filtre du compte de destination sélectionné en haut du tableau de bord de la présentation.
 
 ![Le widget Segments mappés par identité .](../images/destinations/mapped-segments-by-identity.png)
 
 Le **[!UICONTROL Segments mappés par identité]** le widget met en évidence en un coup d’oeil la probabilité de réussir le ciblage des opportunités de profil pour une campagne au sein de la destination choisie. Une campagne ciblée efficace ne dépend pas du nombre de profils envoyés à la destination, mais plutôt du nombre d’identifiants sources qui sont susceptibles d’être associés aux identifiants de destination pour fournir des données utiles et exploitables.
 
-### Audiences courantes
+### Audiences courantes {#common-audiences}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_commonaudiences"
+>title="Audiences courantes"
+>abstract="Ce widget fournit une liste des cinq premiers segments activés sur le compte de destination choisi en haut de la page, ainsi que la destination sélectionnée dans la liste déroulante du widget. La liste des segments est classée en fonction de leur date d’activation récente. Le segment le plus récemment activé s’affiche en haut de l’écran."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#common-audiences" text="En savoir plus dans la documentation"
 
 Le **[!UICONTROL Audiences courantes]** fournit une liste des cinq premiers segments activés dans le compte de destination choisi en haut de la page, ainsi que la destination sélectionnée dans la liste déroulante du widget. La liste des segments est classée en fonction de leur date d’activation récente. Le segment le plus récemment activé s’affiche en haut de l’écran.
 
@@ -146,7 +195,13 @@ Le [!UICONTROL TAILLE DE L’AUDIENCE] indique le nombre total de profils de cha
 
 ![Le widget Audiences courantes .](../images/destinations/common-audiences.png)
 
-### Santé de l’audience mappée
+### Santé de l’audience mappée {#mapped-audience-health}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mappedaudiencehealth"
+>title="Santé de l’audience mappée"
+>abstract="Ce widget fournit une liste de 20 segments mappés au maximum dont le nombre total de profils s’écarte d’un facteur d’écart type au moins par rapport à la taille moyenne d’audience de 30 jours mappée à cette destination. Il fournit une mesure calculée pour la dispersion des tailles d’audience par rapport à la moyenne au cours des 30 derniers jours. Les tailles d’audience sont triées de haut en bas."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-audience-health" text="En savoir plus dans la documentation"
 
 Le widget fournit une liste de 20 segments mappés au maximum dont le nombre total de profils, à partir du dernier instantané quotidien, s’écarte d’un facteur d’écart type au moins par rapport à la taille moyenne d’audience de 30 jours mappée à cette destination.
 
@@ -161,6 +216,12 @@ Si un segment dans la variable [!UICONTROL Santé de l’audience mappée] vous 
 ![Le widget d’intégrité de l’audience mappé.](../images/destinations/mapped-audience-health.png)
 
 ### [!UICONTROL Nombre de destinations] {#destinations-count}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_destinationscount"
+>title="Nombre de destinations"
+>abstract="Ce widget fournit le nombre total de points de terminaison disponibles où une audience peut être activée et diffusée dans le système. Ce nombre inclut les destinations principales et inactives."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#destinations-count" text="En savoir plus dans la documentation"
 
 Le [!UICONTROL Nombre de destinations] fournit le nombre total de points de terminaison disponibles où une audience peut être activée et diffusée dans le système. Ce nombre inclut les destinations principales et inactives.
 
