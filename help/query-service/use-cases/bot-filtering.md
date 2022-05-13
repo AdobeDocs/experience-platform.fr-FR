@@ -1,14 +1,15 @@
 ---
 title: Filtrage des robots dans Query Service avec apprentissage automatique
 description: Ce document fournit une vue d’ensemble de l’utilisation de Query Service et de l’apprentissage automatique pour déterminer l’activité des robots et filtrer leurs actions sur le véritable trafic des visiteurs du site Web en ligne.
-source-git-commit: 7b223b4917e6bdb3f4a05238cbaf66261d80660e
+exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
+source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '873'
 ht-degree: 6%
 
 ---
 
-# Filtrage des robots dans [!DNL Query Service] avec machine learning
+# Filtrage des robots [!DNL Query Service] avec machine learning
 
 L’activité des robots peut avoir un impact sur les mesures d’analyse et endommager l’intégrité des données. Adobe Experience Platform [!DNL Query Service] peut être utilisé pour maintenir la qualité des données par le biais du processus de filtrage des robots.
 
@@ -164,6 +165,6 @@ L’exemple de modèle a déterminé avec une grande précision que tous les vis
 
 ## Étapes suivantes
 
-En lisant ce document, vous comprenez mieux comment utiliser Query Service et l’apprentissage automatique pour déterminer et filtrer l’activité des robots.
+En lisant ce document, vous comprenez mieux comment utiliser [!DNL Query Service] et l’apprentissage automatique pour déterminer et filtrer l’activité des robots.
 
-Autres documents présentant les avantages de [!DNL Query Service] les informations sur les activités stratégiques de votre entreprise sont l’exemple de cas d’utilisation de la navigation abandonnée.
+Autres documents présentant les avantages de [!DNL Query Service] Les informations stratégiques de votre entreprise sont les suivantes : [cas d’utilisation du navigateur abandonné](./abandoned-browse.md) par exemple.

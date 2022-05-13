@@ -2,9 +2,9 @@
 title: Intégration du journal d’audit de Query Service
 description: Les journaux d’audit de Query Service conservent des enregistrements pour diverses actions de l’utilisateur afin de former un journal d’audit pour la résolution des problèmes ou le respect des politiques de gestion des données d’entreprise et des exigences réglementaires. Ce tutoriel présente un aperçu des fonctionnalités de journal d’audit spécifiques à Query Service.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 861283cb8ea99b91480bf776ff0c53de52f464ad
+source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '815'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Catégories de journal d’audit fournies par [!DNL Query Service] sont les suiv
 |---|---|
 | [!UICONTROL Requête planifiée] | Cette catégorie vous permet de contrôler les plannings qui ont été créés, mis à jour ou supprimés dans [!DNL Query Service]. |
 | [!UICONTROL Modèle de requête] | Cette catégorie permet de contrôler les différentes actions (création, mise à jour et suppression) effectuées sur un modèle de requête. |
-| [!UICONTROL Requête] | Cette catégorie permet de contrôler les exécutions de requête. |
+<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
 
 ## Effectuez une [!DNL Query Service] journal d’audit {#perform-an-audit-log}
 
@@ -35,7 +35,7 @@ Pour effectuer un audit pour [!DNL Query Service] activités, sélectionnez **[!
 
 ![Le tableau de bord du journal d’audit de l’interface utilisateur de Platform avec &quot;Audits&quot; dans le volet de navigation de gauche et les contrôles de filtre mis en surbrillance.](../images/audit-log/filter-controls.png)
 
-Dans la [!UICONTROL Audits] tableau de bord [!UICONTROL Journal d’activité] vous pouvez filtrer toutes les actions de Platform enregistrées selon l’une des options [!DNL Query Service] catégories. Les résultats du journal peuvent être filtrés davantage en fonction de la période pendant laquelle ils ont été exécutés, de l’action/de la fonction entreprise ou de l’utilisateur ayant déclenché la requête. Consultez la documentation du journal d’audit pour [instructions complètes sur la manière de filtrer les journaux en fonction de la catégorie, de l’action, de l’utilisateur et de l’état](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
+Dans la [!UICONTROL Audits] tableau de bord [!UICONTROL Journal d’activité] , vous pouvez filtrer toutes les actions de Platform enregistrées selon l’une des [!DNL Query Service] catégories. Les résultats du journal peuvent être filtrés davantage en fonction de la période pendant laquelle ils ont été exécutés, de l’action/de la fonction entreprise ou de l’utilisateur ayant déclenché la requête. Consultez la documentation du journal d’audit pour [instructions complètes sur la manière de filtrer les journaux en fonction de la catégorie, de l’action, de l’utilisateur et de l’état](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
 
 Les données du journal d’audit renvoyées contiennent les informations suivantes sur toutes les requêtes qui répondent aux critères de filtrage de votre choix.
 
