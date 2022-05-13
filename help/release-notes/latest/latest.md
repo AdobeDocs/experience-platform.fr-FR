@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
+source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
 workflow-type: tm+mt
-source-wordcount: '2707'
-ht-degree: 24%
+source-wordcount: '2804'
+ht-degree: 23%
 
 ---
 
@@ -32,8 +32,10 @@ Les tableaux de bord fournissent des options de création de rapports préconfig
 
 Les widgets suivants sont disponibles via la bibliothèque de widgets sur leurs tableaux de bord respectifs. Consultez la documentation pour plus d’informations sur [comment ajouter des widgets par le biais de la bibliothèque de widgets](../../dashboards/customize/widget-library.md).
 
-| Fonctionnalité | Tableau de bord | Description |
-| --------------------------------------------------------- | ------------- | ----------- |
+**Nouveaux widgets**
+
+| Widget | Tableau de bord | Description |
+| ------ | --------- | ----------- |
 | [!UICONTROL Profils de tendance ajoutée] | Profils | Ce widget utilise un graphique linéaire pour illustrer le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, 90 jours ou 12 mois. |
 | [!UICONTROL Audiences mappées à l’état de destination] | Profils | Ce widget affiche le nombre total d’audiences mappées et non mappées dans une seule mesure et utilise un graphique en anneau pour illustrer la différence proportionnelle entre leurs totaux. |
 | [!UICONTROL Taille des audiences] | Profils | Ce widget fournit un tableau à deux colonnes qui répertorie jusqu’à 20 segments et le nombre total d’audiences contenues dans chaque segment. La liste dépend de la stratégie de fusion appliquée et classée de haut en bas en fonction du nombre total d’audiences. |
@@ -46,6 +48,14 @@ Les widgets suivants sont disponibles via la bibliothèque de widgets sur leurs 
 | [!UICONTROL Tendance de la taille de l’audience] | Segments | Ce widget fournit une représentation graphique linéaire pour le nombre total de profils qui répondent aux critères d’une définition de segment sur des périodes de 30 jours, 90 jours et 12 mois. |
 | [!UICONTROL Tendance de changement de la taille de l’audience] | Segments | Ce widget fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour un segment donné et les instantanés quotidiens les plus récents. La période d’analyse des tendances peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. |
 | [!UICONTROL Tendance de la taille de l’audience par identité] | Segments | Ce widget illustre la tendance de la taille de l’audience d’un segment particulier en fonction d’un type d’identité sélectionné. La période d’analyse des tendances peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. |
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Tableau de bord | Description |
+| ------- | --------- | ----------- |
+| Nettoyage de l’appartenance aux segments de profil orphelins | Profils et utilisation de la licence | Le service de profil supprime désormais tous les jours les membres restants du segment afin d’offrir une représentation plus précise de vos profils dans votre système. Ce nettoyage se produit une fois tous les fragments de profil d’un profil donné supprimés. Cela peut indiquer une baisse de la mesure &quot;Audience adressable&quot; dans le tableau de bord de l’utilisation des licences et une baisse de la mesure &quot;Nombre de profils&quot; dans le tableau de bord du profil, car ces mesures incluaient des fragments de segment laissés avant cette version. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Consultez la documentation pour plus d’informations sur [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), et [[!DNL Segments]](../../dashboards/guides/segments.md) tableaux de bord.
 

@@ -2,9 +2,9 @@
 title: Notes de mise à jour de Adobe Experience Platform - Avril 2022
 description: Notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 1f5c21e09e471ac0d6f1d98e219e06e571ede89f
+source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
 workflow-type: tm+mt
-source-wordcount: '2802'
+source-wordcount: '2805'
 ht-degree: 23%
 
 ---
@@ -49,11 +49,13 @@ Les widgets suivants sont disponibles via la bibliothèque de widgets sur leurs 
 | [!UICONTROL Tendance de changement de la taille de l’audience] | Segments | Ce widget fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour un segment donné et les instantanés quotidiens les plus récents. La période d’analyse des tendances peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. |
 | [!UICONTROL Tendance de la taille de l’audience par identité] | Segments | Ce widget illustre la tendance de la taille de l’audience d’un segment particulier en fonction d’un type d’identité sélectionné. La période d’analyse des tendances peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. |
 
-**Nouvelles fonctionnalités**
+**Nouvelles fonctionnalités** {#new-features}
 
 | Fonctionnalité | Tableau de bord | Description |
 | ------- | --------- | ----------- |
 | Nettoyage de l’appartenance aux segments de profil orphelins | Profils et utilisation de la licence | Le service de profil supprime désormais tous les jours les membres restants du segment afin d’offrir une représentation plus précise de vos profils dans votre système. Ce nettoyage se produit une fois tous les fragments de profil d’un profil donné supprimés. Cela peut indiquer une baisse de la mesure &quot;Audience adressable&quot; dans le tableau de bord de l’utilisation des licences et une baisse de la mesure &quot;Nombre de profils&quot; dans le tableau de bord du profil, car ces mesures incluaient des fragments de segment laissés avant cette version. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Consultez la documentation pour plus d’informations sur [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), et [[!DNL Segments]](../../dashboards/guides/segments.md) tableaux de bord.
 
