@@ -6,10 +6,10 @@ title: Surveillance des flux de données pour les sources dans l’interface uti
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: ed88ebe7822f60ace2babd7d5a04d2d92d83cf49
 workflow-type: tm+mt
-source-wordcount: '1862'
-ht-degree: 9%
+source-wordcount: '1069'
+ht-degree: 17%
 
 ---
 
@@ -31,10 +31,10 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 * [Flux de données](../home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
    * [Exécutions de flux de données](../../sources/notifications.md): Les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de fréquence des flux de données sélectionnés.
-* [Sources](../../sources/home.md): Experience Platform permet d’ingérer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services Platform.
-* [Identity Service](../../identity-service/home.md) : profitez d’une meilleure compréhension de vos clients et de leurs comportements en rapprochant des identités entre appareils et systèmes.
+* [Sources](../../sources/home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Service d’identités](../../identity-service/home.md) : obtenez une meilleure compréhension des clients individuels et de leurs comportements en reliant les identités entre les appareils et les systèmes.
 * [Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Environnements de test](../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandboxes](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuelles qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ## Vue de surveillance agrégée {#aggregated-monitoring-view}
 
@@ -88,7 +88,7 @@ Pour afficher tous les flux de données existants dans toutes les sources, séle
 
 Vous pouvez également entrer une source dans la barre de recherche pour isoler une source unique. Une fois votre source identifiée, sélectionnez l’icône de filtre ![filter](../assets/ui/monitor-sources/filter.png) en regard de pour afficher la liste de ses principaux flux de données.
 
-![de recherches](../assets/ui/monitor-sources/search.png)
+![recherche](../assets/ui/monitor-sources/search.png)
 
 Une liste de flux de données s’affiche. Pour réduire la liste et vous concentrer sur les flux de données contenant des erreurs, sélectionnez **[!UICONTROL Afficher uniquement les échecs]**.
 
@@ -130,102 +130,9 @@ Vous pouvez utiliser le système de chemin de navigation dans l’en-tête supé
 
 ![chemin de navigation](../assets/ui/monitor-sources/breadcrumbs.png)
 
-## Surveillance inter-services {#cross-service-monitoring}
-
-La partie supérieure du tableau de bord contient une représentation du flux d’ingestion du niveau source au [!DNL Identity Service]et à [!DNL Profile]. Chaque cellule comprend un marqueur de point qui indique la présence d’erreurs qui se sont produites à ce stade de l’ingestion. Un point vert signifie une ingestion sans erreur, tandis qu’un point rouge signifie qu’une erreur s’est produite à ce stade particulier de l’ingestion.
-
-![suivi inter-services](../assets/ui/monitor-sources/cross-service-monitoring.png)
-
-Dans la page des flux de données, recherchez un flux de données réussi et sélectionnez l’icône de filtre. ![filter](../assets/ui/monitor-sources/filter.png) à côté de celle-ci, pour afficher les informations d’exécution de son flux de données.
-
-![dataflow-success](../assets/ui/monitor-sources/dataflow-success.png)
-
-Le [!UICONTROL Ingestion source] contient des informations qui confirment la réussite de l’ingestion de votre flux de données. À partir de là, vous pouvez commencer à surveiller le parcours de votre flux de données du niveau source, jusqu’à [!DNL Identity Service], puis à [!DNL Profile].
-
-Sélectionner **[!UICONTROL Identités]** pour afficher l’ingestion dans la variable [!UICONTROL Identités] scène.
-
-![sources](../assets/ui/monitor-sources/sources.png)
-
-### [!DNL Identity] mesures {#identity-metrics}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_identity_processing"
->title="Traitement des identités"
->abstract="La vue de traitement des identités contient des informations sur les enregistrements ingérés dans le service Identity, notamment le nombre d’identités ajoutées, les graphiques créés et les graphiques mis à jour. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_identity"
->title="Détails de l’exécution du flux de données"
->abstract="La page Détails de l’exécution du flux de données affiche plus d’informations sur votre exécution du flux de données d’identité, y compris son identifiant de l’organisation IMS et son identifiant d’exécution du flux de données."
-
-Le [!UICONTROL Traitement des identités] contient des informations sur les enregistrements ingérés dans [!DNL Identity Service], notamment le nombre d’identités ajoutées, les graphiques créés et les graphiques mis à jour.
-
-Icône Sélectionner le filtre ![filter](../assets/ui/monitor-sources/filter.png) en regard de l’heure de début d’exécution du flux de données pour afficher plus d’informations sur votre [!DNL Identity] dataflow s’exécute.
-
-![identités](../assets/ui/monitor-sources/identities.png)
-
-| Mesures d’identité | Description |
-| ---------------- | ----------- |
-| [!UICONTROL Enregistrements reçus] | Le nombre d&#39;enregistrements reçus de [!DNL Data Lake]. |
-| [!UICONTROL Enregistrements échoués] | Nombre d’enregistrements qui n’ont pas été ingérés dans Platform en raison d’erreurs dans les données. |
-| [!UICONTROL Enregistrements ignorés] | Nombre d’enregistrements ingérés, mais pas dans [!DNL Identity Service] car il n’y avait qu’un seul identifiant dans la ligne d’enregistrement. |
-| [!UICONTROL Enregistrements ingérés] | Nombre d’enregistrements ingérés dans [!DNL Identity Service]. |
-| [!UICONTROL Total enregistrements] | Comptage total de tous les enregistrements, y compris les enregistrements en échec, les enregistrements ignorés, [!DNL Identities] ajout et duplication d’enregistrements. |
-| [!UICONTROL Identités ajoutées] | Nombre de nouveaux identifiants nets ajoutés à [!DNL Identity Service]. |
-| [!UICONTROL Graphiques créés] | Nombre de nouveaux graphiques d’identités nets créés dans [!DNL Identity Service]. |
-| [!UICONTROL Graphiques mis à jour] | Nombre de graphiques d’identités existants mis à jour avec de nouvelles périphéries. |
-| [!UICONTROL Exécutions de flux de données en échec] | Nombre d’exécutions de flux de données ayant échoué. |
-| [!UICONTROL Durée du traitement] | Horodatage du début de l’ingestion jusqu’à la fin. |
-| [!UICONTROL État] | Définit l’état global d’un flux de données. Les valeurs d’état possibles sont les suivantes : <ul><li>`Success`: Indique qu’un flux de données est principal et ingère des données selon le planning selon lequel il a été fourni.</li><li>`Failed`: Indique que le processus d’activation d’un flux de données a été interrompu en raison d’erreurs. </li><li>`Processing`: Indique que le flux de données n’est pas encore principal. Cet état est souvent rencontré immédiatement après la création d’un nouveau flux de données.</li></ul> |
-
-Le [!UICONTROL Détails de l’exécution du flux de données] affiche plus d’informations sur votre [!DNL Identity] l’exécution du flux de données, y compris son identifiant d’organisation IMS et son identifiant d’exécution du flux de données. Cette page affiche également le code d’erreur et le message d’erreur correspondants fournis par [!DNL Identity Service], en cas d’erreur dans le processus d’ingestion.
-
-Sélectionner **[!UICONTROL Exécutez le démarrage : 2/14/2021, 21 h 47]** pour revenir à la page précédente.
-
-![identities-dataflow-run](../assets/ui/monitor-sources/identities-dataflow-run.png)
-
-Dans la [!UICONTROL Traitement des identités] page, sélectionnez **[!UICONTROL Profils]** pour afficher l’état de l’ingestion des enregistrements dans la variable [!UICONTROL Profils] scène.
-
-![select-profiles](../assets/ui/monitor-sources/select-profiles.png)
-
-### [!DNL Profile] mesures {#profile-metrics}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_profile_processing"
->title="Traitement des profils"
->abstract="La vue Traitement des profils contient des informations sur les enregistrements ingérés dans le service Profile, notamment le nombre de fragments de profil créés, de fragments de profil mis à jour et le nombre total de fragments de profil."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_profile"
->title="Détails de l’exécution du flux de données"
->abstract="La page Détails de l’exécution du flux de données affiche plus d’informations sur votre exécution du flux de données Profile, y compris son identifiant de l’organisation IMS et son identifiant d’exécution du flux de données."
-
-Le [!UICONTROL Traitement des profils] contient des informations sur les enregistrements ingérés dans [!DNL Profile], notamment le nombre de fragments de profil créés, de fragments de profil mis à jour et le nombre total de fragments de profil.
-
-Icône Sélectionner le filtre ![filter](../assets/ui/monitor-sources/filter.png) en regard de l’heure de début d’exécution du flux de données pour afficher plus d’informations sur votre [!DNL Profile] dataflow s’exécute.
-
-![profils](../assets/ui/monitor-sources/profiles.png)
-
-| Mesures de profil | Description |
-| --------------- | ----------- |
-| [!UICONTROL Enregistrements reçus] | Le nombre d&#39;enregistrements reçus de [!DNL Data Lake]. |
-| [!UICONTROL Enregistrements échoués ] | Nombre d’enregistrements ingérés, mais pas dans [!DNL Profile] en raison d’erreurs. |
-| [!UICONTROL Fragments de profil ajoutés] | Nombre de nouvelles nettes [!DNL Profile] fragments ajoutés. |
-| [!UICONTROL Fragments de profil mis à jour] | Le nombre de [!DNL Profile] fragments mis à jour |
-| [!UICONTROL Fragments de profil totaux] | Le nombre total d&#39;enregistrements écrits dans [!DNL Profile], y compris toutes les [!DNL Profile] fragments mis à jour et nouveaux [!DNL Profile] fragments créés. |
-| [!UICONTROL Exécutions de flux de données en échec] | Nombre d’exécutions de flux de données ayant échoué. |
-| [!UICONTROL Durée du traitement] | Horodatage du début de l’ingestion jusqu’à la fin. |
-| [!UICONTROL État] | Définit l’état global d’un flux de données. Les valeurs d’état possibles sont les suivantes : <ul><li>`Success`: Indique qu’un flux de données est principal et ingère des données selon le planning selon lequel il a été fourni.</li><li>`Failed`: Indique que le processus d’activation d’un flux de données a été interrompu en raison d’erreurs. </li><li>`Processing`: Indique que le flux de données n’est pas encore principal. Cet état est souvent rencontré immédiatement après la création d’un nouveau flux de données.</li></ul> |
-
-Le [!UICONTROL Détails de l’exécution du flux de données] affiche plus d’informations sur votre [!DNL Profile] l’exécution du flux de données, y compris son identifiant d’organisation IMS et son identifiant d’exécution du flux de données. Cette page affiche également le code d’erreur et le message d’erreur correspondants fournis par [!DNL Profile], en cas d’erreur dans le processus d’ingestion.
-
-![profiles-dataflow-run](../assets/ui/monitor-sources/profiles-dataflow-run.png)
-
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez suivi avec succès le flux de données d’ingestion du niveau source à [!DNL Identity Service]et à [!DNL Profile], à l’aide de la fonction **[!UICONTROL Surveillance]** tableau de bord. Vous avez également identifié des erreurs qui ont contribué à l’échec des flux de données pendant le processus d’ingestion. Pour plus d’informations, consultez les documents suivants :
+En suivant ce tutoriel, vous avez suivi avec succès le flux de données d’ingestion au niveau de la source à l’aide de la variable **[!UICONTROL Surveillance]** tableau de bord. Vous avez également identifié des erreurs qui ont contribué à l’échec des flux de données pendant le processus d’ingestion. Consultez les documents suivants pour plus d’informations :
 
-* [Présentation de Real-time Customer Profile](../../profile/home.md)
-* [Présentation de Data Science Workspace](../../data-science-workspace/home.md)
+* [Surveillance des identités dans les flux de données](./monitor-identities.md)
+* [Surveillance des profils dans les flux de données](./monitor-profiles.md)
