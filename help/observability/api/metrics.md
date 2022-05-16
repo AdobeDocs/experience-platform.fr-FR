@@ -5,10 +5,10 @@ title: Point de terminaison de l’API de mesures
 topic-legacy: developer guide
 description: Découvrez comment récupérer les mesures d’observabilité dans Experience Platform à l’aide de l’API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: dc7deab2c9fe1a1fa151731fceeb3c239dd18878
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 45%
+source-wordcount: '1409'
+ht-degree: 29%
 
 ---
 
@@ -201,23 +201,12 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Da
 
 | Mesure d’insights | Description | Paramètre de requête d’identifiant |
 | ---- | ---- | ---- |
-| timeseries.ingestion.dataset.new.count | Nombre total de jeux de données créés. | N/A |
 | timeseries.ingestion.dataset.size | Taille cumulée de toutes les données ingérées pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.ingestion.dataset.dailysize | Taille des données ingérées quotidiennement pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.ingestion.dataset.batchfailed.count | Nombre de lots échoués pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.ingestion.dataset.batchsuccess.count | Nombre de lots ingérés pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.ingestion.dataset.recordsuccess.count | Nombre d’enregistrements ingérés pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| **timeseries.data.collection.validation.total.messages.rate** | Nombre total de messages pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| **timeseries.data.collection.validation.valid.messages.rate** | Nombre total de messages valides pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| **timeseries.data.collection.validation.invalid.messages.rate** | Nombre total de messages non valides pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| **timeseries.data.collection.validation.category.type.count** | Nombre total de messages « type » non valides pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| **timeseries.data.collection.validation.category.range.count** | Nombre total de messages « plage » non valides pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| **timeseries.data.collection.validation.category.format.count** | Nombre total de messages « format » non valides pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| **timeseries.data.collection.validation.category.pattern.count** | Nombre total de messages « modèle » non valides pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | **timeseries.data.collection.validation.category.presence.count** | Nombre total de messages « présence » non valides pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| **timeseries.data.collection.validation.category.enum.count** | Nombre total de messages « énumération » non valides pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| **timeseries.data.collection.validation.category.unclassified.count** | Nombre total de messages « non classé » non valides pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| **timeseries.data.collection.validation.category.unknown.count** | Nombre total de messages « inconnu » non valides pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | **timeseries.data.collection.inlet.total.messages.received** | Nombre total de messages reçus pour un inlet de données ou tous les inlets de données. | Inlet ID |
 | **timeseries.data.collection.inlet.total.messages.size.received** | Taille totale des données reçues pour un inlet de données ou tous les inlets de données. | Inlet ID |
 | **timeseries.data.collection.inlet.success** | Nombre total d’appels HTTP réussis à un inlet de données ou tous les inlets de données. | Inlet ID |
@@ -233,40 +222,11 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Id
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Nombre d’enregistrements écrits dans leur source de données par [!DNL Identity Service], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.identity.dataset.recordfailed.count | Nombre d’enregistrements échoués par [!DNL Identity Service], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| timeseries.identity.dataset.namespacecode.recordsuccess.count | Nombre d’enregistrements d’identité correctement ingérés pour un espace de noms. | Identifiant d’espace de noms (**obligatoire**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Nombre d’enregistrements d’identité échoués par un espace de noms. | Identifiant d’espace de noms (**obligatoire**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | Nombre d’enregistrements d’identité ignorés par un espace de noms. | Identifiant d’espace de noms (**obligatoire**) |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités de votre organisation IMS. | N/A |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités pour un espace de noms. | Identifiant d’espace de noms (**obligatoire**) |
-| timeseries.identity.graph.imsorg.numidgraphs.count | Nombre d’identités de graphique uniques stockées dans le graphique d’identités de votre organisation IMS. | N/A |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités de votre organisation IMS pour une force de graphique spécifique (« inconnu », « faible » ou « fort »). | Force de graphique (**obligatoire**) |
-
-{style=&quot;table-layout:auto&quot;}
-
-#### [!DNL Privacy Service] {#privacy}
-
-Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Privacy Service].
-
-| Mesure d’insights | Description | Paramètre de requête d’identifiant |
-| ---- | ---- | ---- |
-| timeseries.gdpr.jobs.totaljobs.count | Nombre total de tâches créées issues du RGPD. | ENV (**obligatoire**) |
-| timeseries.gdpr.jobs.completedjobs.count | Nombre total de tâches terminées issues du RGPD. | ENV (**obligatoire**) |
-| timeseries.gdpr.jobs.errorjobs.count | Nombre total de tâches d’erreur issues du RGPD. | ENV (**obligatoire**) |
-
-{style=&quot;table-layout:auto&quot;}
-
-#### [!DNL Query Service] {#query}
-
-Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Query Service].
-
-| Mesure d’insights | Description | Paramètre de requête d’identifiant |
-| ---- | ---- | ---- |
-| timeseries.queryservice.query.scheduleonce.count | Nombre total de requêtes planifiées non périodiques. | N/A |
-| timeseries.queryservice.query.scheduledrecurring.count | Nombre total de requêtes planifiées périodiques. | N/A |
-| timeseries.queryservice.query.batchquery.count | Nombre total de requêtes en lot exécutées. | N/A |
-| timeseries.queryservice.query.scheduledquery.count | Nombre total de requêtes planifiées exécutées. | N/A |
-| timeseries.queryservice.query.interactivequery.count | Nombre total de requêtes interactives exécutées. | N/A |
-| timeseries.queryservice.query.batchfrompsqlquery.count | Nombre total de requêtes en lot exécutées à partir de PSQL. | S.O. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -278,18 +238,7 @@ Le tableau suivant décrit les mesures pour [!DNL Real-time Customer Profile].
 | ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | Nombre d&#39;enregistrements lus à partir du [!DNL Data Lake] par [!DNL Profile], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.profiles.dataset.recordsuccess.count | Nombre d’enregistrements écrits dans leur source de données par [!DNL Profile], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| timeseries.profiles.dataset.recordfailed.count | Nombre d’enregistrements échoués par [!DNL Profile], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.profiles.dataset.batchsuccess.count | Nombre [!DNL Profile] lots ingérés pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| timeseries.profiles.dataset.batchfailed.count | Nombre [!DNL Profile] les lots ont échoué pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| platform.ups.ingest.streaming.request.m1_rate | Taux de requêtes entrantes. | Organisation IMS (**Obligatoire**) |
-| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | Taux de réussite d’ingestion. | Organisation IMS (**Obligatoire**) |
-| platform.ups.ingest.streaming.records.created.m15_rate | Taux de nouveaux enregistrements ingérés pour un jeu de données. | Identifiant du jeu de données (**Obligatoire**) |
-| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Taux d’enregistrements horodatés en désordre de requête de création pour un jeu de données. | Identifiant du jeu de données (**Obligatoire**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Horodatage de la dernière requête d’enregistrement de création pour un jeu de données. | Identifiant du jeu de données (**Obligatoire**) |
-| platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate | Taux d’enregistrements horodatés en désordre de requête de mise à jour pour un jeu de données. | Identifiant du jeu de données (**Obligatoire**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Horodatage de la dernière requête d’enregistrement de mise à jour pour un jeu de données. | Identifiant du jeu de données (**Obligatoire**) |
-| platform.ups.ingest.streaming.record.size.m1_rate | Taille moyenne des enregistrements. | Organisation IMS (**Obligatoire**) |
-| platform.ups.ingest.streaming.records.updated.m15_rate | Taux de requêtes de mise à jour pour les enregistrements ingérés pour un jeu de données. | Identifiant du jeu de données (**Obligatoire**) |
 
 {style=&quot;table-layout:auto&quot;}
 
