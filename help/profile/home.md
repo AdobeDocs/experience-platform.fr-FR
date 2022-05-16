@@ -4,10 +4,10 @@ title: Présentation du profil client en temps réel
 topic-legacy: guide
 description: Real-time Customer Profile fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
-workflow-type: ht
-source-wordcount: '1888'
-ht-degree: 100%
+source-git-commit: d2182b48e21de059f12ad8923bb3b420ed87bcfc
+workflow-type: tm+mt
+source-wordcount: '2046'
+ht-degree: 92%
 
 ---
 
@@ -19,11 +19,24 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 La relation entre Real-time Customer Profile et les autres services dans Experience Platform est mise en évidence dans le schéma suivant :
 
-![](images/profile-overview/profile-in-platform.png)
+![La relation entre Real-time Customer Profile et les autres services dans Adobe Experience Platform. Ce diagramme montre que Profile est l’un des composants principaux de Adobe Experience Platform.](images/profile-overview/profile-in-platform.png)
 
 ## Présentation des profils
 
 Le [!DNL Real-time Customer Profile] fusionne les données de divers systèmes d’entreprise, puis fournit un accès à ces données sous la forme de profils client avec des événements de série temporelle associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux. Les sections suivantes mettent en avant certains concepts de base que vous devez connaître afin de créer et de gérer efficacement des profils au sein de Platform.
+
+### Composition de l’entité de profil
+
+Un profil client en temps réel est composé d’une entité principale, appelée **Principale entité**, et diverses entités annexes. L’entité Principale est composée des caractéristiques, des comportements et des appartenances aux segments d’un profil. D’autres entités permettent au moteur de segmentation d’utiliser des données en dehors de l’entité Principale du profil, et incluent les éléments suivants :
+
+- **Entité dimensionnelle**: L’entité utilisée pour simplifier le processus de modélisation des données pour les informations partagées entre les événements ou les enregistrements de profil. On parle également d’entité de recherche ou d’entité de classification.
+- **Entité B2B**: Entités qui décrivent la relation du profil avec les comptes et opportunités d’entreprise à entreprise.
+
+![Diagramme expliquant la composition de l’entité de profil.](./images/profile-overview/profile-entity-composition.png)
+
+>[!IMPORTANT]
+>
+>Comme les entités dimensionnelles et B2B n’existent qu’en dehors de l’entité Principale, elles ne sont utilisées que pour la segmentation par lots.
 
 ### Banque de données de profil
 
@@ -115,9 +128,9 @@ La gouvernance des données est constituée d’une série de stratégies et de 
 
 En ce qui concerne l’accès aux données, la gouvernance des données joue un rôle essentiel dans [!DNL Experience Platform], et ce, à différents niveaux :
 
-* Application de libellés d’utilisation des données
-* Stratégies d’accès aux données
-* Contrôle de l’accès aux données pour les actions marketing
+- Application de libellés d’utilisation des données
+- Stratégies d’accès aux données
+- Contrôle de l’accès aux données pour les actions marketing
 
 La gouvernance des données est gérée sur plusieurs points. Il s’agit notamment de choisir les données à ingérer dans [!DNL Platform] et celles qui seront accessibles après l’ingestion pour une action marketing donnée. Pour plus d’informations, commencez par lire la [présentation de la gouvernance des données](../data-governance/home.md).
 
