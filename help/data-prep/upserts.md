@@ -2,9 +2,10 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;prép de données;préparation de données;diffusion en continu;insertion en continu;insertion en continu
 title: Envoi De Mises À Jour De Ligne Partielles Au Service De Profil À L’Aide De La Préparation De Données
 description: Ce document fournit des informations sur la manière d’envoyer des mises à jour de lignes partielles au service Profile à l’aide de la préparation de données.
-source-git-commit: 26059af9f899b4ccf5701899c9ac8111d56488e8
+exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
+source-git-commit: 67049cf220379bfa5b64f530f26045ea21077be0
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1155'
 ht-degree: 9%
 
 ---
@@ -241,6 +242,14 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
   }
  }'
 ```
+
+## Limites connues et considérations clés
+
+Vous trouverez ci-dessous une liste des limites connues à prendre en compte lors de la diffusion en continu de upserts avec [!DNL Data Prep]:
+
+* La méthode de mise à jour en continu ne doit être utilisée que lors de l’envoi de mises à jour de lignes partielles à [!DNL Profile Service]. Les mises à jour des lignes partielles sont **not** consommé par le lac de données.
+* La méthode de diffusion en continu upserts ne prend pas en charge la mise à jour, le remplacement et la suppression des identités. Les identités ne peuvent être ajoutées qu’à l’aide de la variable `identity: create` opération.
+* Actuellement, la méthode de mise en service par flux ne prend en charge que les attributs à valeur unique primitifs (tels que les entiers, les dates, les horodatages et les chaînes) et les objets. La méthode de serveur de diffusion en continu ne prend pas en charge le remplacement, l’ajout ou le remplacement d’attributs de tableau et d’index de tableau spécifiques.
 
 ## Étapes suivantes
 
