@@ -1,11 +1,11 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
-description: Dernières notes de mise à jour pour Adobe Experience Platform.
+title: Notes de mise à jour de Adobe Experience Platform, novembre 2021
+description: Les notes de mise à jour de novembre 2021 pour Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: c02f6ace461e6964b0005d07caee9026dca47e63
-workflow-type: ht
-source-wordcount: '798'
-ht-degree: 100%
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+workflow-type: tm+mt
+source-wordcount: '799'
+ht-degree: 99%
 
 ---
 

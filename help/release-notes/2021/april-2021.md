@@ -1,14 +1,14 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour d’Experience Platform du 21 avril 2021.
+title: Notes de mise à jour d’Adobe Experience Platform Avril 2021
+description: Notes de mise à jour d’avril 2021 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 100%
+source-wordcount: '888'
+ht-degree: 99%
 
 ---
 
@@ -51,7 +51,7 @@ Intelligent Services permet aux analystes et spécialistes du marketing d’exp
 
 ### Customer AI
 
-Customer AI disponible dans la plateforme de données clients en temps réel est utilisé pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème de machine learning ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
+L’IA dédiée aux clients, disponible dans la plateforme de données clients en temps réel, est utilisée pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème de machine learning ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
@@ -63,7 +63,7 @@ Pour plus d’informations sur les jeux de données pris en charge, consultez la
 
 ### Attribution AI
 
-Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client.
+L’IA dédiée à l’attribution est utilisée pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
@@ -87,9 +87,9 @@ Pour plus d’informations sur [!DNL Segmentation Service], consultez la [prése
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |

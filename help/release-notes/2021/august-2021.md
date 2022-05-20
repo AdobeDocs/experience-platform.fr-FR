@@ -1,14 +1,14 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour dʼExperience Platform du 25 août 2021.
+title: Notes de mise à jour de Adobe Experience Platform - Août 2021
+description: Notes de mise à jour d’août 2021 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
 exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
-source-git-commit: e9d5f24bec8cd2793ce30245b46c1d912bf17cc7
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 100%
+source-wordcount: '712'
+ht-degree: 98%
 
 ---
 
@@ -25,7 +25,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## Destinations {#destinations}
 
-Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
 **Nouvelles destinations**
 
@@ -35,14 +35,14 @@ Les destinations sont des intégrations préconfigurées à des plateformes de d
 | [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md) | La destination Balises Airship, auparavant en version Beta, est désormais disponible pour tous. |
 | [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) | La destination Braze, auparavant en version Beta, est désormais disponible pour tous. |
 | [[!DNL Pinterest Customer List]](../../destinations/catalog/advertising/pinterest.md) | Grâce à la destination Liste de clients Pinterest, vous pouvez créer des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest. |
-| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | Ciblez vos abonnés et clients existants sur Twitter et créez des campagnes de remarketing pertinentes en activant vos audiences créées dans Adobe Experience Platform. |
+| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | Ciblez vos abonnés et clients existants sur Twitter et créez des campagnes de remarketing pertinentes en activant vos audiences créées dans Adobe Experience Platform. |
 | [[!DNL Verizon Media/Yahoo DataX]](../../destinations/catalog/advertising/datax.md) | DataX, une infrastructure globale appartenant à Verizon Media/Yahoo, permet dʼhéberger différents composants et dʼéchanger des données avec les partenaires externes de Verizon Media/Yahoo, de manière sécurisée, automatisée et évolutive. |
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Le SDK Destination Adobe Experience Platform est un ensemble dʼAPI de configuration permettant de configurer des modèles dʼintégration de destination, afin quʼExperience Platform puisse envoyer des données dʼaudience et de profil à votre point dʼentrée, selon les formats de données et dʼauthentification choisis. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via lʼAPI pour des mises à jour supplémentaires. |
+| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Le SDK Destination Adobe Experience Platform est un ensemble dʼAPI de configuration permettant de configurer des modèles dʼintégration de destination, afin quʼExperience Platform puisse envoyer des données dʼaudience et de profil à votre point dʼentrée, selon les formats de données et dʼauthentification choisis. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via lʼAPI pour des mises à jour supplémentaires. |
 | [Améliorations de lʼutilisation des destinations](../../destinations/ui/activation-overview.md) | Les améliorations apportées aux destinations afin de faciliter leur utilisation permettent aux spécialistes du marketing dʼactiver facilement des segments vers des destinations existantes. |
 
 Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
@@ -61,19 +61,19 @@ Pour plus dʼinformations sur ce service, voir la [présentation dʼObservabilit
 
 ## Real-time Customer Profile {#profile}
 
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le Profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le Profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Parcourir les profils par stratégie de fusion ou identité | Lors de lʼexploration des profils dans Experience Platform, vous pouvez désormais naviguer par stratégie de fusion pour prévisualiser 20 profils dʼexemple en fonction de la stratégie de fusion sélectionnée. Vous pouvez également naviguer par identité afin de rechercher un profil spécifique à lʼaide dʼun espace de noms dʼidentité et dʼune valeur dʼidentité associée. Pour plus dʼinformations, consultez le [guide dʼinterface utilisateur du profil client en temps réel](../../profile/ui/user-guide.md). |
+| Parcourir les profils par stratégie de fusion ou identité | Lors de lʼexploration des profils dans Experience Platform, vous pouvez désormais naviguer par stratégie de fusion pour prévisualiser 20 profils dʼexemple en fonction de la stratégie de fusion sélectionnée. Vous pouvez également naviguer par identité afin de rechercher un profil spécifique à lʼaide dʼun espace de noms dʼidentité et dʼune valeur dʼidentité associée. Pour plus dʼinformations, consultez le [guide dʼinterface utilisateur du profil client en temps réel](../../profile/ui/user-guide.md). |
 
 Pour en savoir plus sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à lʼutilisation des données de profil, consultez la [présentation du profil client en temps réel](../../profile/home.md).
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |

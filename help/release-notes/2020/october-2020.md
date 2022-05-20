@@ -1,13 +1,13 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour des Experience Platform - Octobre 2020
+title: Notes de mise à jour de Adobe Experience Platform - Octobre 2020
+description: Notes de mise à jour d’octobre 2020 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1016'
 ht-degree: 25%
 
 ---
@@ -30,21 +30,21 @@ La préparation des données permet aux ingénieurs de données de mapper, trans
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| fonction `is_set` | La fonction `is_set` permet de vérifier la présence d&#39;un attribut dans les données source. `is_set` peut être utilisé conjointement avec  `is_empty` pour vérifier la présence de l’attribut et la présence de la valeur dans l’attribut. |
-| fonction `get_values` | La fonction `get_values` permet d’obtenir les valeurs de la carte d’entrée pour n’importe quelle clé donnée. |
+| fonction `is_set` | Le `is_set` permet de vérifier la présence d’un attribut dans les données source. `is_set` peut être utilisé conjointement avec `is_empty` pour vérifier à la fois la présence de l’attribut et la présence de la valeur dans l’attribut . |
+| Fonction `get_values` | Le `get_values` vous permet d’obtenir les valeurs de la carte d’entrée pour une clé donnée. |
 
-Pour plus d’informations, consultez la [présentation de la préparation des données](../../data-prep/home.md).
+Pour plus d’informations, veuillez lire la [Aperçu de la préparation des données](../../data-prep/home.md).
 
 ## Real-time Customer Profile {#profile}
 
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Avec [!DNL Real-time Customer Profile], vous pouvez obtenir une vue d’ensemble de chaque client qui combine des données provenant de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. [!DNL Profile] vous permet de consolider vos données client disparates en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Avec [!DNL Real-time Customer Profile], vous pouvez obtenir une vue d’ensemble de chaque client qui combine des données provenant de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. [!DNL Profile] vous permet de consolider vos données client disparates en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Ajout d’API d’aperçu de profil | L’API d’aperçu du profil (`/previewsamplestatus`) permet désormais d’afficher une ventilation du nombre total de fragments de profil dans votre organisation IMS, ainsi que d’afficher la distribution des fragments de profil entre les espaces de noms d’identité. |
+| Ajout d’API d’aperçu de profil | API d’aperçu de profil (`/previewsamplestatus`) permet désormais d’afficher la ventilation du nombre total de fragments de profil dans votre organisation IMS, ainsi que la distribution des fragments de profil entre les espaces de noms d’identité. |
 | Mises à jour des vues des schémas d’union | Dans l’interface utilisateur de l’Experience Platform, les utilisateurs peuvent trouver plus facilement des informations concernant tous les schémas et jeux de données contribuant au schéma d’union, ainsi que des attributs de clé de surface tels que les champs d’identité et de relation. Ces mises à jour améliorent la possibilité de dépanner et de valider que les profils sont correctement configurés, que les identités sont correctement regroupées et que les données ont été ingérées avec succès. |
 
-Pour plus d’informations sur [!DNL Real-time Customer Profile], y compris des tutoriels et des bonnes pratiques concernant l’utilisation des données [!DNL Profile], consultez la [présentation de Real-time Customer Profile](../../profile/home.md).
+Pour plus d’informations sur [!DNL Real-time Customer Profile], y compris des tutoriels et des bonnes pratiques pour travailler avec [!DNL Profile] data, veuillez lire la [Présentation de Real-time Customer Profile](../../profile/home.md).
 
 ## Segmentation Service {#segmentation}
 
@@ -62,7 +62,7 @@ Pour plus d’informations sur [!DNL Segmentation Service], consultez la [prése
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide de [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
 
 [!DNL Experience Platform] fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
@@ -70,8 +70,8 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge de l’authentification SSH pour SFTP | Vous pouvez connecter votre compte SFTP à [!DNL Platform] à l’aide des clés SSH d’ouverture RSA/DSA. Pour plus d’informations, consultez la [présentation SFTP](../../sources/connectors/cloud-storage/sftp.md) . |
-| Améliorations de l’expérience utilisateur | Vous pouvez activer votre jeu de données pour [!DNL Profile] pendant le processus d’ingestion des données. Pour plus d’informations, consultez le [workflow de flux de données de stockage dans le cloud](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) . |
+| Prise en charge de l’authentification SSH pour SFTP | Vous pouvez connecter votre compte SFTP à [!DNL Platform] à l’aide des clés SSH RSA/DSA Open. Voir [Présentation SFTP](../../sources/connectors/cloud-storage/sftp.md) pour plus d’informations. |
+| Améliorations de l’expérience utilisateur | Vous pouvez activer votre jeu de données pour [!DNL Profile] pendant le processus d’ingestion des données. Voir [workflow de flux de données de stockage dans le cloud](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) tutoriel pour plus d’informations. |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
 

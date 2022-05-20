@@ -1,11 +1,11 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
-description: Dernières notes de mise à jour pour Adobe Experience Platform.
+title: Notes de mise à jour de Adobe Experience Platform, janvier 2022
+description: Notes de mise à jour de janvier 2022 pour Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '1341'
-ht-degree: 100%
+source-wordcount: '1342'
+ht-degree: 98%
 
 ---
 
@@ -59,7 +59,7 @@ Pour plus d’informations sur les [!DNL Dashboards], consultez la [[!DNL Dashbo
 | --- | --- |
 | Expérience de mappage consolidée | La nouvelle interface de mappage, disponible dans l’interface utilisateur de Platform, vous offre une expérience de mappage cohérente qui vous permet de tirer parti des recommandations intelligentes sur les mappages, de configurer manuellement les règles de mappage et de déboguer toute erreur survenant dans vos jeux de mappage. Pour plus d’informations, consultez le [[!DNL Data Prep] guide de l’interface utilisateur](../../data-prep/ui/mapping.md). |
 
-Pour plus d’informations sur [!DNL Data Prep], consultez la [[!DNL Data Prep] présentation](../../data-prep/home.md).
+Pour plus d’informations sur la [!DNL Data Prep], consultez [[!DNL Data Prep] la présentation](../../data-prep/home.md).
 
 ## [!DNL Destinations] {#destinations}
 

@@ -1,11 +1,11 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
-description: Dernières notes de mise à jour pour Adobe Experience Platform.
+title: Notes de mise à jour de Adobe Experience Platform - Mars 2022
+description: Notes de mise à jour de mars 2022 pour Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 3f1750d75bd69c5cf47eb593144f564564f90405
+source-git-commit: 9a506fcecc94ba20906133e60e4ff54fbe0403a3
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 27%
+source-wordcount: '1194'
+ht-degree: 98%
 
 ---
 
@@ -26,38 +26,36 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [[!DNL Query Service]](#query-service)
 - [Sources](#sources)
 
-<!-- - [Experience Data Model (XDM)](#xdm) -->
-
 ## Journaux d’audit {#audit-logs}
 
-Experience Platform vous permet de contrôler l’activité des utilisateurs pour divers services et fonctionnalités. Les journaux d’audit fournissent des informations sur qui a effectué quoi et quand.
+Experience Platform vous permet d’auditer l’activité des utilisateurs pour plusieurs services et fonctionnalités. Les journaux d’audit fournissent des informations sur ce qui a été fait, par qui et à quel moment.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Logs d’audit pour le jeu de données, le schéma, la classe, le groupe de champs, le type de données, le sandbox, la destination, le segment, la stratégie de fusion, l’attribut calculé, le profil de produit et le compte (Adobe). | Il s’agit des ressources enregistrées par les journaux d’audit. Si la fonction est activée, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux. |
-| Exportation des journaux d’audit | Les journaux d’audit peuvent être téléchargés en tant que `CSV` ou `JSON` fichier . Les fichiers générés sont enregistrés directement sur votre machine. |
+| Journaux d’audit pour jeu de données, schéma, classe, groupe de champs, type de données, sandbox, destination, segment, stratégie de fusion, attribut calculé, profil de produit et compte (Adobe) | Ces éléments sont les ressources enregistrées par les journaux d’audit. Si la fonction est activée, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux. |
+| Exportation des journaux d’audit | Les journaux d’audit peuvent être téléchargés en tant que fichier `CSV` ou `JSON`. Les fichiers générés sont directement enregistrés sur votre machine. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur les journaux d’audit dans Platform, reportez-vous à la section [aperçu des journaux d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
+Pour plus d’informations sur les journaux d’audit dans Platform, consultez la [présentation des journaux d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Comptes associés dans Real-Time CDP B2B Edition {#related-accounts}
 
 >[!NOTE]
 >
->La fonctionnalité Comptes associés est disponible uniquement pour les clients de l’édition Real-Time CDP B2B.
+>La fonctionnalité Comptes associés est disponible uniquement pour les clients de Real-Time CDP B2B Edition.
 
-Les entreprises B2B disposent souvent de leurs informations sur leurs clients stockées dans plusieurs systèmes, chacune d&#39;entre elles ne contenant que des données partielles, voire conflictuelles, pour la même entité commerciale au monde réel. Cela crée un énorme défi : parvenir à une vue exacte de ses clients, réduisant ainsi l’efficacité et l’efficience de leurs efforts de marketing et de vente B2B. Avec la publication des comptes connexes, [!DNL Real-time CDP B2B] affiche désormais la liste des comptes similaires au compte que vous parcourez. Vous pouvez inclure les comptes associés dans vos définitions de segment pour élargir votre portée ou appliquer des critères plus larges dans vos segments.
+Les entreprises B2B ont souvent leurs informations client stockées dans plusieurs systèmes, chacun ne contenant que des données partielles, voire conflictuelles, pour la même entité commerciale physique. Il est donc très difficile d’avoir une visualisation précise de leurs clients, ce qui réduit l’efficacité et l’efficience de leurs efforts de marketing et de vente B2B. Grâce à la fonctionnalité Comptes associés, [!DNL Real-time CDP B2B] vous montre désormais une liste de comptes similaires au compte que vous être en train de parcourir. Vous pouvez inclure les comptes associés dans vos définitions de segment pour élargir votre portée ou appliquer des critères plus larges dans vos segments.
 
-Pour en savoir plus sur cette fonctionnalité, consultez les pages de documentation suivantes :
+Pour en savoir plus sur cette fonctionnalité, consultez les pages de documentation suivantes :
 
-- [Comptes associés dans la présentation de Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
-- [Onglet Comptes associés dans le guide d’interface utilisateur du profil de compte](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [Utilisation des comptes associés dans les définitions de segment](../../rtcdp/segmentation/b2b.md#related-accounts)
+- [Présentation des comptes associés dans Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [Section « Comptes associés » du guide de l’interface utilisateur du profil de compte](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [Comment utiliser les comptes associés dans les définitions de segment ?](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-Pour en savoir plus sur l’édition B2B de la plateforme CDP en temps réel, voir [aperçu](../../rtcdp/overview.md).
+Pour en savoir plus sur Real-time CDP B2B Edition, consultez la [présentation](../../rtcdp/overview.md).
 
 ## Alertes {#alerts}
 
@@ -67,7 +65,7 @@ Experience Platform vous permet de vous abonner à des alertes basées sur des 
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Nouvelles règles d’alerte | Deux nouvelles règles d’alerte sont désormais disponibles pour les sources liées à l’ingestion de données. Consultez la présentation des [règles d’alerte](../../observability/alerts/rules.md) pour obtenir la liste mise à jour des types d’alerte. |
+| Nouvelles règles d’alerte | Deux nouvelles règles d’alerte sont désormais disponibles pour les sources liées à l’ingestion des données. Consultez la présentation des [règles d’alerte](../../observability/alerts/rules.md) pour obtenir la liste mise à jour des types d’alerte. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -75,38 +73,38 @@ Pour plus d’informations sur les alertes dans Platform, consultez l’[aperçu
 
 ## Tableaux de bord {#dashboards}
 
-Adobe Experience Platform fournit plusieurs [!DNL dashboards] grâce à laquelle vous pouvez afficher des informations importantes sur les données de votre organisation, telles qu’elles sont capturées lors d’instantanés quotidiens.
+Adobe Experience Platform fournit de nombreux [!DNL dashboards] grâce auxquels vous pouvez afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
 
-### Tableaux de bord de profil
+### Tableaux de bord du profil
 
-Le tableau de bord Profils affiche un instantané des données d’attribut (enregistrement) dont votre organisation dispose dans la banque de profils en Experience Platform.
+Le tableau de bord des profils affiche un instantané des données d’attribut (d’enregistrement) dont votre entreprise dispose dans la banque de profils d’Experience Platform.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Widget Profils non segmentés | Le widget fournit le nombre total de tous les profils qui ne sont associés à aucun segment. Le nombre généré est précis à partir du dernier instantané et représente l’opportunité d’activation du profil à l’échelle de votre organisation. Voir [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets) pour plus d’informations. |
-| Widget de tendance Profils non segmentés | Ce widget fournit une représentation graphique linéaire pour le nombre de profils qui ne sont associés à aucun segment sur une période donnée. La tendance peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. Voir [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets) pour plus d’informations. |
-| Profils non segmentés par widget Identité | Ce widget classe le nombre total de profils non segmentés en fonction de leur identifiant unique. Les données sont visualisées dans un graphique à barres. Voir [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets) pour plus d’informations. |
-| Widget de profils d’identité unique | Ce widget fournit un comptage des profils de votre organisation qui n’ont qu’un seul type d’ID qui crée leur identité, soit un email, soit un ECID. Voir [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets) pour plus d’informations. |
+| Widget profils non segmentés | Le widget fournit le nombre total de profils qui ne sont associés à aucun segment. Le nombre, généré à partir du dernier instantané, est précis et souligne l’opportunité d’activation de profils dans votre entreprise. Pour plus d’informations, consultez la [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets). |
+| Widget tendance des profils non segmentés | Ce widget fournit une représentation graphique linéaire du nombre de profils qui ne sont associés à aucun segment sur une période donnée. La tendance peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. Pour plus d’informations, consultez la [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets). |
+| Widget profils non segmentés par identité | Ce widget classe le nombre total de profils non segmentés en fonction de leur identifiant unique. Les données sont représentées dans un histogramme. Pour plus d’informations, consultez la [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets). |
+| Widget profils à identité unique | Ce widget fournit le nombre de profils de votre entreprise qui n’ont qu’un seul type d’identifiant qui crée leur identité, soit un email, soit un ECID (identifiant Experience Cloud). Pour plus d’informations, consultez la [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets). |
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur les tableaux de bord des profils, reportez-vous à la section [Présentation des tableaux de bord des profils](../../dashboards/guides/profiles.md).
+Pour plus d’informations sur les tableaux de bord des profils, consultez la [présentation des tableaux de bord des profils](../../dashboards/guides/profiles.md).
 
 ### Tableaux de bord des destinations
 
-Le tableau de bord Destinations affiche un instantané des destinations que votre entreprise a activées dans Experience Platform.
+Le tableau de bord des destinations affiche un instantané des destinations activées par votre entreprise dans Experience Platform.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Widget de comptage des destinations | Le widget fournit le nombre total de points de terminaison disponibles où une audience peut être activée et diffusée dans le système. Ce nombre inclut les destinations principales et inactives. Voir [documentation du widget standard des destinations](../../dashboards/guides/destinations.md#standard-widgets) pour plus d’informations. |
+| Widget de comptage des destinations | Le widget fournit le nombre total de points d’entrée disponibles où une audience peut être activée et diffusée dans le système. Ce nombre inclut les destinations principales et inactives. Pour plus d’informations, consultez la [documentation du widget standard des destinations](../../dashboards/guides/destinations.md#standard-widgets). |
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur les tableaux de bord des destinations dans Platform, reportez-vous à la section [Présentation des tableaux de bord des destinations](../../dashboards/guides/destinations.md).
+Pour plus d’informations sur les tableaux de bord des destinations dans Platform, consultez la [présentation des tableaux de bord des destinations](../../dashboards/guides/destinations.md).
 
 ## Collecte de données {#data-collection}
 
@@ -116,22 +114,10 @@ Platform fournit un ensemble de technologies qui vous permettent de collecter de
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Paramètres globaux de flux de données | Vous pouvez désormais configurer plusieurs nouveaux paramètres globaux lors de la configuration d’un flux de données : géolocalisation, cookie d’identifiant propriétaire et synchronisation des identifiants tiers. Voir la section sur [configuration d’un flux de données](../../edge/fundamentals/datastreams.md#configure) pour plus d’informations, voir le guide de l’interface utilisateur des flux de données . |
-| [API du serveur réseau Edge](../../server-api/overview.md) | L’API serveur permet aux clients d’interagir avec le réseau Edge Experience Platform à l’aide d’un nouveau point de terminaison authentifié, afin d’optimiser divers cas d’utilisation de la collecte de données, de la personnalisation, de la publicité et du marketing. |
+| Paramètres globaux de flux de données | Vous pouvez désormais configurer plusieurs nouveaux paramètres globaux lors de la configuration d’un flux de données : géolocalisation, cookie des identifiants internes et synchronisation des identifiants tiers. Pour plus d’informations, consultez la section sur la [configuration d’un flux de données](../../edge/fundamentals/datastreams.md#configure) du guide de l’interface utilisateur des flux de données. |
+| [API d’Edge Network Server](../../server-api/overview.md) | Le serveur API permet aux clients d’interagir avec Edge Experience Platform Network à l’aide d’un nouveau point d’entrée authentifié, afin d’alimenter plusieurs cas d’utilisation de la collecte de données, de la personnalisation, de la publicité et du marketing. |
 
 Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).
-
-<!-- ## Experience Data Model (XDM) {#xdm}
-
-Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
-
-| Feature | Description |
-| --- | --- |
-| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
-
-{style="table-layout:auto"}
-
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
 
 ## Query Service {#query-service}
 
@@ -141,25 +127,25 @@ For more information on XDM in Platform, see the [XDM System overview](../../xdm
 
 | Fonctionnalité | Description |
 | --- | --- |
-| `table_exists` | La nouvelle commande de fonctionnalité permet de confirmer si un tableau existe actuellement dans le système. La commande renvoie une valeur booléenne : `true` si le tableau **does** existent et `false` si le tableau fonctionne **not** existent. Voir [Documentation sur la syntaxe SQL](../../query-service/sql/syntax.md) pour plus d’informations. |
+| `table_exists` | La commande de la nouvelle fonctionnalité sert à confirmer si un tableau existe actuellement dans le système ou non. La commande renvoie une valeur booléenne : `true` si le tableau **existe** et `false` si le tableau **n’existe pas**. Pour plus d’informations, consultez la [documentation sur la syntaxe SQL](../../query-service/sql/syntax.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations sur les fonctionnalités disponibles, reportez-vous à la section [Présentation de Query Service](../../query-service/home.md).
+Pour plus d’informations sur les fonctionnalités disponibles, consultez la section [présentation de Query Service](../../query-service/home.md).
 
 ## Sources {#sources}
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services CRM et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer l’ingestion des données tout au long de l’opération.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client (CRM) et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer entièrement l’ingestion des données.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Nouvelles sources désormais disponibles pour l’utilisation B2B | Vous pouvez désormais utiliser toutes les sources disponibles sur Platform pour les cas d’utilisation B2B. Voir [catalogue de sources](../../sources/home.md) pour obtenir une liste complète des sources disponibles. |
-| Disponibilité générale des nouvelles [!DNL Oracle Eloqua] source | Vous pouvez désormais utiliser la variable [!DNL Oracle Eloqua] pour ingérer facilement des données à partir de vos [!DNL Oracle Eloqua] instance (compte, campagne, contacts) vers Platform. Consultez la documentation relative à [création d’un [!DNL Oracle Eloqua] connexion source](../../sources/connectors/marketing-automation/oracle-eloqua.md) pour plus d’informations. |
-| Améliorations de l’API pour [!DNL Data Landing Zone] | Le [!DNL Data Landing Zone] La source prend désormais en charge la détection automatique des propriétés de fichier lors de l’utilisation de la fonction [!DNL Flow Service] API. Consultez la documentation relative à [création d’un [!DNL Data Landing Zone] connexion source](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) pour plus d’informations. |
+| Nouvelles sources désormais disponibles pour l’utilisation B2B | Vous pouvez désormais utiliser toutes les sources disponibles sur Platform pour les cas d’utilisation B2B. Pour obtenir une liste complète des sources disponibles, consultez le [catalogue des sources](../../sources/home.md). |
+| Disponibilité générale de la nouvelle source [!DNL Oracle Eloqua] | Vous pouvez désormais utiliser la source [!DNL Oracle Eloqua] pour ingérer facilement des données à partir de votre instance [!DNL Oracle Eloqua] (compte, campagne, contacts) vers Platform. Pour plus d’informations, consultez la documentation sur la [création d’une connexion source  [!DNL Oracle Eloqua] ](../../sources/connectors/marketing-automation/oracle-eloqua.md). |
+| Améliorations de l’API pour [!DNL Data Landing Zone] | La source [!DNL Data Landing Zone] prend désormais en charge la détection automatique des propriétés de fichier lors de l’utilisation de l’API [!DNL Flow Service]. Pour plus d’informations, consultez la documentation sur la [création d’une connexion source [!DNL Data Landing Zone] ](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). |
 
 {style=&quot;table-layout:auto&quot;}
 

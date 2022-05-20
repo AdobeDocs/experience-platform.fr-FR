@@ -1,15 +1,15 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour d’Experience Platform, 8 avril 2020
+title: Notes de mise à jour de Adobe Experience Platform - Avril 2020
+description: Notes de mise à jour d’avril 2020 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
 keywords: notes de mise à jour;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 65%
+source-wordcount: '983'
+ht-degree: 63%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 65%
 
 **Date de publication : 8 avril 2020**
 
-Nouvelles fonctionnalités d’Adobe Experience Platform :
+Nouvelles fonctionnalités d’Adobe Experience Platform :
 * [[!DNL Intelligent Services]](#intelligent)
 
 Mises à jour des fonctionnalités existantes :
@@ -29,7 +29,7 @@ Mises à jour des fonctionnalités existantes :
 
 ## [!DNL Intelligent Services] {#intelligent}
 
-[!DNL Intelligent Services] permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données. De plus, les spécialistes du marketing peuvent activer les prédictions dans Adobe Experience Cloud, Adobe Experience Platform et les applications tierces.
+[!DNL Intelligent Services] permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données. De plus, les spécialistes du marketing peuvent activer les prédictions dans Adobe Experience Cloud, Adobe Experience Platform et les applications tierces.
 
 **Fonctionnalités clés**
 
@@ -48,14 +48,14 @@ Pour plus d’informations sur [!DNL Intelligent Services] et ce qu’il a à of
 
 La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Experience Platform]. Le [!DNL Experience Data Model] (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
-XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences numériques. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences numériques. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
 | Informations d’affichage de remplacement automatique | Le [!DNL Schema Registry] applique automatiquement les valeurs de titre et de description personnalisées configurées dans la variable `alternateDisplayInfo` descripteur. |
-| Restrictions des champs scalaires | Le [!DNL Schema Registry] n’autorise pas plus de 6 000 champs scalaires dans un seul schéma. |
+| Restrictions des champs scalaires | Le [!DNL Schema Registry] ne permet pas plus de 6 000 champs scalaires dans un seul schéma. |
 | Révision des performances | Le [!DNL Schema Registry] a été remanié afin de répondre aux exigences des [!DNL Experience Platform] meilleur. |
 
 **Corrections de bogues**
@@ -68,7 +68,7 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 
 ## Gouvernance des données {#governance}
 
-Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans la [!DNL Experience Platform] à différents niveaux, notamment le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
+Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans la [!DNL Experience Platform] à différents niveaux, notamment le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
 
 La prise en main de la gouvernance des données nécessite une compréhension approfondie des réglementations, des obligations contractuelles et des politiques d’entreprise qui s’appliquent aux données clients. À partir de là, les données peuvent être classifiées en appliquant les libellés d’utilisation des données appropriés, et leur utilisation peut être contrôlée via la définition des stratégies d’utilisation des données.
 
@@ -98,7 +98,7 @@ La plateforme CDP en temps réel prend désormais en charge l’activation des d
 | Documentation | Description |
 |--- | ---|
 | [Types et catégories de destination](../../destinations/destination-types.md) | Cet article explique la différence entre les connexions et les extensions dans l’interface de la plateforme de données clients en temps réel et recommande le moment auquel utiliser chacune de ces destinations. |
-| [Extensions d’Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | Cette page explique ce qui suit : [!DNL Launch] Les extensions sont , répertorie les cas d’utilisation et des liens vers la documentation pour chaque [!DNL Launch] dans la plateforme de données clients en temps réel. |
+| [Extensions d’Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | Cette page explique ce qui suit : [!DNL Launch] Les extensions sont , répertorie les cas d’utilisation et des liens vers la documentation pour chaque [!DNL Launch] dans la plateforme de données clients en temps réel. |
 
 Pour plus d’informations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
 
@@ -111,7 +111,7 @@ Les nouvelles réglementations légales et organisationnelles donnent aux utilis
 | Fonctionnalité | Description |
 | --- | --- |
 | Respect de la loi PDPA | Désormais, les demandes d’accès à des informations personnelles peuvent être créées et suivies en vertu de la loi sur la protection des données à caractère personnel (PDPA) en Thaïlande. Lors de l’envoi de demandes d’accès à des informations personnelles dans l’API, le tableau `regulation` accepte la valeur « pdpa_tha ». |
-| Types d’espaces de noms dans l’interface utilisateur | Vous pouvez désormais spécifier différents types d’espaces de noms dans le créateur de requêtes de la variable [!DNL Privacy Service] Interface utilisateur. Pour plus d’informations, voir le [guide d’utilisation](../../privacy-service/ui/user-guide.md). |
+| Types d’espaces de noms dans l’interface utilisateur | Vous pouvez désormais spécifier différents types d’espaces de noms dans le créateur de requêtes dans la variable [!DNL Privacy Service] Interface utilisateur. Pour plus d’informations, voir le [guide d’utilisation](../../privacy-service/ui/user-guide.md). |
 | Abandon de l’ancien point de terminaison | L’ancien point de terminaison de l’API (`data/privacy/gdpr`) a été abandonné. |
 
 Problèmes connus

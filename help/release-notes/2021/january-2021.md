@@ -1,18 +1,18 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour d’Experience Platform, 27 janvier 2021
+title: Notes de mise à jour de Adobe Experience Platform, janvier 2021
+description: Notes de mise à jour de janvier 2021 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '713'
-ht-degree: 100%
+source-wordcount: '717'
+ht-degree: 98%
 
 ---
 
-# Notes de mise à jour d’Adobe Experience Platform
+# Notes de mise à jour d’Adobe Experience Platform
 
 **Date de publication : 27 janvier 2021**
 
@@ -37,7 +37,7 @@ Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation]
 
 ## Destinations {#destinations}
 
-Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
 **Nouvelles destinations**
 
@@ -55,28 +55,28 @@ Pour en savoir plus, consultez la [présentation des destinations](../../destina
 
 ## Real-time Customer Profile {#profile}
 
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le [!DNL Profile] vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le [!DNL Profile] vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Suppression d’un jeu de données du magasin de profils | Lorsque vous supprimez un jeu de données du lac de données d’Experience Platform, ce jeu est automatiquement supprimé du magasin de profils. Vous n’avez plus besoin d’utiliser le point d’entrée de l’API des tâches du système de profils pour effectuer une demande de suppression permettant de supprimer explicitement le jeu de données du magasin de profils. Pour plus d’informations, consultez le [guide relatif au point d’entrée de l’API du système de profils](../../profile/api/profile-system-jobs.md). |
+| Suppression d’un jeu de données du magasin de profils | Lorsque vous supprimez un jeu de données du lac de données d’Experience Platform, ce jeu est automatiquement supprimé du magasin de profils. Vous n’avez plus besoin d’utiliser le point d’entrée de l’API des tâches du système de profils pour effectuer une demande de suppression permettant de supprimer explicitement le jeu de données du magasin de profils. Pour plus d’informations, consultez le [guide relatif au point d’entrée de l’API du système de profils](../../profile/api/profile-system-jobs.md). |
 | Estimation du nombre d’espaces de noms d’ID pour un segment donné | Pour l’estimation du nombre de profils, l’API de prévisualisation indique désormais :<ul><li>Le nombre total de profils estimés dans un segment pour un espace de noms donné.</li><li>Le nombre total de profils estimés dans le schéma d’union des profils pour un espace de noms donné.</li></ul>Pour en savoir plus, consultez le [guide relatif au point d’entrée de l’API de prévisualisation du profil](../../profile/api/preview-sample-status.md). |
 
 Pour plus d’informations sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données de [!DNL Profile], consultez la [présentation du profil client en temps réel](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Améliorations du connecteur source Adobe Audience Manager | Vous pouvez désormais filtrer et sélectionner des segments propriétaires individuels depuis Audience Manager pour les ingérer dans Platform, ainsi que filtrer les caractéristiques propriétaires. Pour plus d’informations, consultez le tutoriel sur la [création d’un connecteur source Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
+| Améliorations du connecteur source Adobe Audience Manager | Vous pouvez désormais filtrer et sélectionner des segments propriétaires individuels depuis Audience Manager pour les ingérer dans Platform, ainsi que filtrer les caractéristiques propriétaires. Pour plus d’informations, consultez le tutoriel sur la [création d’un connecteur source Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
 | Améliorations du connecteur source [!DNL Google BigQuery] | Vous pouvez désormais ingérer des fichiers de plus de 10 Go lors d’une seule exécution de flux à l’aide du connecteur source [!DNL BigQuery]. Pour plus d’informations, consultez la présentation du connecteur source [[!DNL BigQuery] ](../../sources/connectors/databases/bigquery.md). |
 | Prise en charge de types de données complexes pour le stockage sur le cloud | Vous pouvez désormais ingérer des types de données complexes, tels que des tableaux dans des fichiers JSON, lors de l’utilisation d’un connecteur source d’espace de stockage. Pour plus d’informations, consultez les tutoriels sur la création d’un flux de données d’espace de stockage [dans l’interface utilisateur](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) ou [à l’aide de  [!DNL Flow Service] l’API ](../../sources/tutorials/api/collect/cloud-storage.md). |
 | Prise en charge de l’authentification basée sur la clé de service principale pour la source [!DNL Microsoft Dynamics] | Vous pouvez désormais vous authentifier auprès de votre compte [!DNL Dynamics] à l’aide d’une clé de service principale. Cela représente une alternative à l’authentification par mot de passe. Pour plus d’informations, consultez la présentation du connecteur source [[!DNL Dynamics] ](../../sources/connectors/crm/ms-dynamics.md). |

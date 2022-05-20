@@ -1,13 +1,13 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour d’Experience Platform, 11 novembre 2020
+title: Notes de mise à jour de Adobe Experience Platform, novembre 2020
+description: Les notes de mise à jour de novembre 2020 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '2180'
+source-wordcount: '2184'
 ht-degree: 27%
 
 ---
@@ -139,7 +139,7 @@ Intelligent Services permet aux analystes et spécialistes du marketing d’expl
 
 Pour plus d’informations, veuillez lire la section sur [ajout de champs d’identité à un jeu de données](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) dans le guide de préparation des données d’Intelligent Services.
 
-### Attribution AI
+### IA dédiée à l’attribution
 
 Dans le cadre d’Intelligent Services, Attribution AI est un service d’attribution algorithmique à plusieurs canaux qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés.
 
@@ -161,7 +161,7 @@ Dans le cadre d’Intelligent Services, Attribution AI est un service d’attrib
 
 Pour plus d’informations, veuillez lire la [Présentation d’Attribution AI](../../intelligent-services/attribution-ai/overview.md).
 
-### Customer AI
+### IA dédiée aux clients
 
 En tant que composant des services intelligents, Customer AI permet aux professionnel du marketing de générer des prédictions client au niveau individuel avec des explications. À l’aide de facteurs d’influence, Customer AI peut vous indiquer ce qu’un client est susceptible de faire et pourquoi. De plus, les professionnels du marketing peuvent tirer parti des prédictions et des informations de Customer AI pour personnaliser les expériences client en diffusant les offres et les messages les plus appropriés.
 

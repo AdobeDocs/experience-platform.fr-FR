@@ -1,11 +1,11 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
-description: Dernières notes de mise à jour pour Adobe Experience Platform.
+title: Notes de mise à jour de Adobe Experience Platform - Septembre 2021
+description: Notes de mise à jour de septembre 2021 pour Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
-workflow-type: ht
-source-wordcount: '376'
-ht-degree: 100%
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+workflow-type: tm+mt
+source-wordcount: '377'
+ht-degree: 96%
 
 ---
 
@@ -21,7 +21,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## Ingestion de données {#ingestion}
 
-Adobe Experience Platform Data Ingestion représente les diverses méthodes que Platform emploie pour ingérer des données à partir de multiples sources, ainsi que la manière dont ces données sont conservées dans le lac de données pour être utilisées par les services de Platform en aval.
+Adobe Experience Platform Data Ingestion représente les diverses méthodes que Platform emploie pour ingérer des données à partir de multiples sources, ainsi que la manière dont ces données sont conservées dans le lac de données pour être utilisées par les services de Platform en aval.
 
 **Nouvelles fonctionnalités**
 
@@ -45,9 +45,9 @@ Pour en savoir plus sur [!DNL Data Prep], consultez la présentation de [[!DNL D
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 | Fonctionnalité | Description |
 | --- | --- |

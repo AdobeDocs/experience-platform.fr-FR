@@ -1,15 +1,15 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour d’Experience Platform, 11 mars 2020
+title: Notes de mise à jour de Adobe Experience Platform - Mars 2020
+description: Notes de mise à jour de mars 2020 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
 keywords: notes de mise à jour;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '851'
-ht-degree: 71%
+source-wordcount: '855'
+ht-degree: 70%
 
 ---
 
@@ -29,7 +29,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 [!DNL Experience Platform] permet aux entreprises de rassembler des données issues de plusieurs systèmes d’entreprise afin de mieux permettre aux spécialistes du marketing d’identifier, de comprendre et d’impliquer les clients. [!DNL Experience Platform] comprend une infrastructure de gouvernance des données de bout en bout pour garantir une utilisation appropriée des données dans [!DNL Platform] et lors du partage entre les systèmes.
 
-Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans la [!DNL Experience Platform] à différents niveaux, notamment le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
+Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans la [!DNL Experience Platform] à différents niveaux, notamment le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
 
 **Nouvelles fonctionnalités**
 
@@ -51,13 +51,13 @@ Pour plus d’informations sur la gouvernance des données, consultez la [prése
 
 ## Ingestion des données {#ingestion}
 
-Adobe Experience Platform fournit un ensemble riche de fonctionnalités permettant d’ingérer n’importe quel type et n’importe quelle latence de données. Adobe Experience Platform [!DNL Data Ingestion] fournit plusieurs alternatives pour l’ingestion de données, notamment des API par lots, des API de diffusion en continu, des connecteurs d’Adobe natifs, des partenaires d’intégration de données ou l’interface utilisateur de Adobe Experience Platform.
+Adobe Experience Platform fournit un ensemble riche de fonctionnalités permettant d’ingérer n’importe quel type et n’importe quelle latence de données. Adobe Experience Platform [!DNL Data Ingestion] fournit plusieurs alternatives pour l’ingestion de données, notamment des API par lots, des API de diffusion en continu, des connecteurs d’Adobe natifs, des partenaires d’intégration de données ou l’interface utilisateur de Adobe Experience Platform.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 |------- | -----------|
-| Ingestion par lots partielle | L’ingestion par lots partielle permet d’ingérer des données contenant des erreurs jusqu’à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent ingérer toutes leurs données correctes dans Adobe Experience Platform, alors que toutes leurs données incorrectes sont traitées par lots séparément. Des détails sont ajoutés aux lots infructueux pour expliquer pourquoi ils n’ont pas été validés. Vous trouverez plus d’informations sur l’ingestion par lots partielle dans la [documentation de l’ingestion par lots partielle](../../ingestion/batch-ingestion/partial.md). |
+| Ingestion par lots partielle | L’ingestion par lots partielle permet d’ingérer des données contenant des erreurs jusqu’à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent ingérer toutes leurs données correctes dans Adobe Experience Platform, alors que toutes leurs données incorrectes sont traitées par lots séparément. Des détails sont ajoutés aux lots infructueux pour expliquer pourquoi ils n’ont pas été validés. Vous trouverez plus d’informations sur l’ingestion par lots partielle dans la [documentation de l’ingestion par lots partielle](../../ingestion/batch-ingestion/partial.md). |
 
 **Problèmes connus**
 
@@ -72,7 +72,7 @@ Dans [Real-time Customer Data Platform](../../rtcdp/overview.md), les destinatio
 
 **Nouvelles destinations**
 
-De nouvelles destinations vous permettent d’activer vos données Adobe Experience Platform. Voir ci-dessous pour plus de détails :
+De nouvelles destinations vous permettent d’activer vos données Adobe Experience Platform. Voir ci-dessous pour plus de détails :
 
 | Destination | Description |
 |--- | ---|
@@ -85,7 +85,7 @@ Pour en savoir plus, consultez la [présentation des destinations](../../destina
 
 Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
 
-Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
 
 **Nouvelles fonctionnalités**
 
@@ -109,8 +109,8 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Signaux obsolètes du connecteur d’Adobe Audience Manager | Les données au niveau du signal d’Audience Manager ne seront plus envoyées. Notez que l’adhésion aux segments pour les Caractéristiques et les Segments sera toujours incluse. Suite à ce changement, les jeux de données entrants ne seront plus générés. |
-| Jeux de données renommés | Les jeux de données générés par le connecteur d’Audience Manager ont des noms et des descriptions à jour. |
+| Signaux obsolètes du connecteur d’Adobe Audience Manager | Les données au niveau du signal d’Audience Manager ne seront plus envoyées. Notez que l’adhésion aux segments pour les Caractéristiques et les Segments sera toujours incluse. Suite à ce changement, les jeux de données entrants ne seront plus générés. |
+| Jeux de données renommés | Les jeux de données générés par le connecteur d’Audience Manager ont des noms et des descriptions à jour. |
 | Activer [!DNL Profile] bascule dans Audience Manager | [!DNL Profile] la bascule peut être activée ou désactivée pour convertir le jeu de données en [!DNL Real-time Customer Profile]. La bascule est activée par défaut. |
 | Prise en charge de l’interface utilisateur pour les systèmes de stockage dans le cloud | Nouveau connecteur source pour [!DNL Azure Data Lake Storage Gen2] dans l’interface utilisateur. |
 | Prise en charge de l’interface utilisateur pour les systèmes de gestion de la relation client | Nouveau connecteur source pour [!DNL HubSpot], [!DNL Salesforce Service Cloud], et [!DNL ServiceNow] dans l’interface utilisateur. |
