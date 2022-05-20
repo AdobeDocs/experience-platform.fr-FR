@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;api étiquette dʼutilisation des données;api service de stratégie;étiquettes dʼutilisation des données prises en charge;étiquettes contrat;étiquettes identité;étiquettes sensibles
+keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;api étiquette dʼutilisation des données;api service de stratégie;étiquettes dʼutilisation des données prises en charge;étiquettes contrat;étiquettes identité;étiquettes sensibles
 solution: Experience Platform
 title: Glossaire des étiquettes dʼutilisation des données
 topic-legacy: labels
-description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
+description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
-source-wordcount: '1984'
-ht-degree: 100%
+source-git-commit: 15b0c2fb2565ada489c5a8811b946efc4319696b
+workflow-type: tm+mt
+source-wordcount: '2053'
+ht-degree: 96%
 
 ---
 
 # Glossaire des étiquettes dʼutilisation des données
 
-Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Adobe Experience Platform Data Governance fournit de multiples étiquettes dʼutilisation des données de base prêtes à lʼemploi que vous pouvez utiliser pour commencer à classer vos données.
+Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Adobe Experience Platform Data Governance fournit de multiples étiquettes dʼutilisation des données de base prêtes à lʼemploi que vous pouvez utiliser pour commencer à classer vos données.
 
 Ce document décrit les étiquettes dʼutilisation des données de base actuellement fournies par [!DNL Experience Platform]. Vous trouverez plus d’informations sur la gouvernance des données dans la [présentation de la gouvernance des données](../home.md).
 
@@ -22,9 +22,9 @@ Ce document décrit les étiquettes dʼutilisation des données de base actuelle
 
 Les étiquettes Contrat « C » sont utilisées pour catégoriser des données qui possèdent des obligations contractuelles ou qui sont liées aux politiques de gouvernance des données de votre organisation.
 
-| Étiquette | Définition |
+| Libellé | Définition |
 | --- | --- |
-| **C1** | Les données ne peuvent être exportées depuis Adobe Experience Cloud que sous une forme agrégée, sans inclure d’identifiants individuels ou d’appareil. [Plus d’informations...](#c1) |
+| **C1** | Les données ne peuvent être exportées depuis Adobe Experience Cloud que sous une forme agrégée, sans inclure d’identifiants individuels ou d’appareil. [Plus d’informations...](#c1) |
 | **C2** | Les données ne peuvent pas être exportées vers un tiers. [Plus d’informations...](#c2) |
 | **C3** | Les données ne peuvent être combinées ou autrement utilisées avec des informations directement identifiables. [Plus d’informations...](#c3) |
 | **C4** | Les données ne peuvent pas être utilisées pour cibler des publicités ou du contenu, que ce soit sur site ou entre sites. [Plus d’informations...](#c4) |
@@ -40,7 +40,7 @@ Les étiquettes Contrat « C » sont utilisées pour catégoriser des données
 
 Les étiquettes Identité « I » sont utilisées pour catégoriser des données pouvant identifier ou contacter une personne en particulier.
 
-| Étiquette | Définition |
+| Libellé | Définition |
 | --- | --- |
 | **I1** | Données directement identifiables qui permettent d’identifier ou de contacter une personne spécifique, plutôt qu’un appareil. |
 | **I2** | Données indirectement identifiables pouvant être utilisées en combinaison avec toute autre donnée pour identifier ou contacter une personne spécifique. |
@@ -51,10 +51,12 @@ Les étiquettes Sensibles « S » sont utilisées pour catégoriser les donné
 
 Différents types de données géographiques peuvent être considérés comme sensibles. Toutefois, cette catégorie ne se limite pas aux données géographiques.
 
-| Étiquette | Définition |
+| Libellé | Définition |
 | --- | --- |
 | **S1** | Données spécifiant la latitude et la longitude pouvant être utilisées pour déterminer l’emplacement précis d’un appareil. |
 | **S2** | Données pouvant être utilisées pour déterminer une zone de géobarrière au sens large. |
+| **PSPD** | Les données personnelles sensibles autorisées (PSPD) se rapportent à des données que vous êtes contractuellement autorisé par Adobe à télécharger et qui sont considérées comme &quot;sensibles&quot;, &quot;catégorie spéciale de données&quot; ou comme un terme similaire utilisé par les lois applicables. Cela exclut spécifiquement les informations sur la santé protégée (IPS) et d’autres données sur la santé réglementées. |
+| **RHD** | Données qui font référence à des informations sur la santé protégée ou des informations sur un patient que vous êtes contractuellement autorisé par l’Adobe à télécharger. |
 
 ## Annexe
 
@@ -66,7 +68,7 @@ Les sections suivantes contiennent des informations détaillées sur la mise en 
 
 #### C1 {#c1}
 
-Certaines données ne peuvent être exportées depuis Adobe Experience Cloud que sous une forme agrégée, sans inclure d’identifiants individuels ou d’appareil. Par exemple, les données provenant des réseaux sociaux.
+Certaines données ne peuvent être exportées depuis Adobe Experience Cloud que sous une forme agrégée, sans inclure d’identifiants individuels ou d’appareil. Par exemple, les données provenant des réseaux sociaux.
 
 #### C2 {#c2}
 
@@ -130,4 +132,4 @@ Certaines stratégies dʼutilisation des données limitent lʼutilisation de don
 
 #### C11 {#c11}
 
-La correspondance de segments d’Adobe Experience Platform vous permet de faire correspondre des segments propriétaires avec des préférences de confidentialité et de consentement, ce qui facilite la création enrichie de profils utilisateurs et les insights en aval. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de la correspondance de segment et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow Correspondance de segment.
+La correspondance de segments d’Adobe Experience Platform vous permet de faire correspondre des segments propriétaires avec des préférences de confidentialité et de consentement, ce qui facilite la création enrichie de profils utilisateurs et les insights en aval. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de la correspondance de segment et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow Correspondance de segment.
