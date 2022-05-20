@@ -5,10 +5,10 @@ title: Guide de dépannage d’Identity Service
 topic-legacy: troubleshooting
 description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Identity Service, ainsi qu’un guide de dépannage pour les erreurs courantes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 80530705f5f8d30294ad31e00d8956257ee2c085
+source-git-commit: 3d308d18c926cabdf0bd4b52c0623d8ec9428ee8
 workflow-type: tm+mt
-source-wordcount: '2236'
-ht-degree: 82%
+source-wordcount: '2180'
+ht-degree: 80%
 
 ---
 
@@ -90,13 +90,7 @@ Les identités sont référencées dans les appels API par leur identité compos
 
 ## Comment Identity Service gère-t-il les données personnelles identifiables (PII) ?
 
-Identity Service crée un hachage cryptographique solide à sens unique des PII avant de traiter les valeurs persistantes. Les données d’identité des espace de noms « Téléphone » et « E-mail » sont automatiquement hachées en SHA-256, et les valeurs « E-mail » automatiquement converties en minuscules avant le hachage.
-
-## Dois-je chiffrer toutes les données personnelles identifiables avant de les envoyer à Platform ?
-
-Vous n’avez pas besoin de chiffrer manuellement les données personnelles identifiables avant de les importer dans Platform. En attribuant le libellé d’utilisation des données `I1` à tous les champs de données applicables, Platform convertit automatiquement ces champs en valeurs d’identifiant hachées lors de l’ingestion.
-
-Pour savoir comment appliquer et gérer les libellés d’utilisation des données, voir le [tutoriel sur les libellés d’utilisation des données](../data-governance/labels/user-guide.md).
+Identity Service dispose d’espaces de noms standard pour prendre en charge l’ingestion de valeurs d’identité hachées pour les numéros de téléphone et les courriers électroniques. Cependant, vous êtes responsable du hachage des valeurs. Pour en savoir plus sur le hachage de données ingérées dans Platform, voir la section [[!DNL Data Prep] guide des fonctions de mappage](../data-prep/functions.md#hashing).
 
 ## Y a-t-il des considérations à prendre en compte lors du hachage des identités basées sur les données personnelles identifiables ?
 

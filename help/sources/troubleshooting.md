@@ -5,16 +5,16 @@ title: Résolution des problèmes liés aux sources
 topic-legacy: troubleshooting
 description: Ce document répond aux questions les plus fréquemment posées sur les sources dans Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 5f42c6ade63244c5c0bca2d6f879e43014474a83
+source-git-commit: b55097b6e7cd49166f68d0c86b788cd36ebdebab
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 1%
+source-wordcount: '748'
+ht-degree: 18%
 
 ---
 
-# (Version bêta) Guide de dépannage des sources
+# Guide de dépannage des sources
 
-Ce document répond aux questions les plus fréquemment posées sur les sources dans Adobe Experience Platform. Pour toute question ou dépannage concernant d’autres services [!DNL Platform], y compris ceux rencontrés sur toutes les API [!DNL Platform], reportez-vous au [guide de dépannage Experience Platform](../landing/troubleshooting.md).
+Ce document répond aux questions les plus fréquemment posées sur les sources dans Adobe Experience Platform. Pour les questions et le dépannage liés à d’autres [!DNL Platform] les services, y compris ceux qui sont rencontrés dans tous les [!DNL Platform] API, reportez-vous à la section [Guide de dépannage des Experience Platform](../landing/troubleshooting.md).
 
 ## Questions fréquentes
 
@@ -41,11 +41,11 @@ Actuellement, les types de fichiers pris en charge sont les fichiers délimités
 Vous trouverez ci-dessous une liste des contraintes que vous devez tenir compte des fichiers dans les sources.
 
 - Les noms des composants de répertoire et de fichier ne doivent pas dépasser 255 caractères.
-- Les noms de répertoire et de fichier ne peuvent pas se terminer par une barre oblique (`/`). S’il est fourni, il sera automatiquement supprimé.
-- Les caractères d’URL réservés suivants doivent être correctement précédés d’une séquence d’échappement : `! ' ( ) ; @ & = + $ , % # [ ]`
-- Les caractères suivants ne sont pas autorisés : `" \ / : | < > * ?`.
-- Caractères de chemin d’URL interdits. Les points de code tels que `\uE000`, bien qu’ils soient valides dans les noms de fichier NTFS, ne sont pas des caractères Unicode valides. En outre, certains caractères ASCII ou Unicode, tels que les caractères de contrôle (0x00 à 0x1F, \u0081, etc.), ne sont pas non plus autorisés. Pour les règles régissant les chaînes Unicode en HTTP/1.1, voir [RFC 2616, Section 2.2 : Règles de base](https://www.ietf.org/rfc/rfc2616.txt) et [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- Les noms de fichier suivants ne sont pas autorisés : LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caractère point (..) et deux caractères de point (.).
+- Les noms de répertoire et de fichier ne peuvent pas se terminer par une barre oblique (`/`). Elle sera le cas échéant automatiquement supprimée.
+- Les caractères d’URL réservés suivants doivent être des caractères d’échappement : `! ' ( ) ; @ & = + $ , % # [ ]`
+- Les caractères suivants ne sont pas autorisés : `" \ / : | < > * ?`.
+- Caractères de chemin d’URL illégaux interdits. Les points de code tels que `\uE000`, bien que valides dans les noms de fichier NTFS, ne sont pas des caractères Unicode valides. En outre, certains caractères ASCII ou Unicode, tels que les caractères de contrôle (0x00 à 0x1F, \u0081, etc.), ne sont pas non plus autorisés. Pour les règles régissant les chaînes Unicode en HTTP/1.1, voir [RFC 2616, section 2.2 : règles de base](https://www.ietf.org/rfc/rfc2616.txt) et [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Les noms de fichier suivants ne sont pas autorisés : LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, point (.) et deux points (..).
 - Le nombre maximal de fichiers par lot est de 1 500, avec une taille de lot maximale de 100 Go.
 - Le nombre maximal de propriétés ou de champs par ligne est de 10 000.
 - Le nombre maximal de lots pouvant être envoyés par utilisateur, par minute, est de 138.
@@ -56,11 +56,11 @@ Les types de données pris en charge sont les entiers, les chaînes, les valeurs
 
 ### Quels formats de date et d’heure sont pris en charge ?
 
-Les sources prennent en charge un large éventail de formats de date et heure lors de l’ingestion de données. Vous trouverez plus d’informations sur les formats de date et d’heure pris en charge dans la section dates du [guide de gestion des formats de données](../data-prep/data-handling.md#dates) de la documentation relative à la préparation des données.
+Les sources prennent en charge un large éventail de formats de date et heure lors de l’ingestion de données. Vous trouverez plus d’informations sur les formats de date et d’heure pris en charge dans la section dates du [guide de gestion des formats de données](../data-prep/data-handling.md#dates) dans la documentation relative à la préparation des données.
 
 ### Comment formater des tableaux dans des fichiers CSV, JSON et Parquet ?
 
-Les fichiers JSON et Parquet prennent en charge de manière native les tableaux. Pour les structures plates, telles que les fichiers CSV, les tableaux ne sont pas pris en charge. Cependant, les chaînes comportant plusieurs valeurs peuvent être divisées en un tableau à l’aide de fonctions de préparation de données telles que l’explosion et la jointure. Vous trouverez plus d’informations sur ces fonctions de prép de données dans le [guide des fonctions de prép de données](../data-prep/functions.md#string)
+Les fichiers JSON et Parquet prennent en charge de manière native les tableaux. Pour les structures plates, telles que les fichiers CSV, les tableaux ne sont pas pris en charge. Cependant, les chaînes comportant plusieurs valeurs peuvent être divisées en un tableau à l’aide de fonctions de préparation de données telles que l’explosion et la jointure. Vous trouverez plus d’informations sur ces fonctions de préparation de données dans la section [guide des fonctions de préparation de données](../data-prep/functions.md#string)
 
 ### Quelles sources prennent en charge l’ingestion partielle ?
 
@@ -68,7 +68,7 @@ Toutes les sources d’ingestion par lots prennent en charge l’ingestion parti
 
 ### Quand dois-je utiliser l’ingestion partielle ?
 
-L’ingestion partielle doit être utilisée si **et que** ne présente pas de contraintes, par exemple si le fichier entier est ingéré dans Platform. Vous pouvez également utiliser l’ingestion partielle si vous n’avez pas envie d’ingérer des données susceptibles de contenir des erreurs.
+L’ingestion partielle doit être utilisée si vous le faites **not** ont des contraintes, telles que l’ingestion de l’intégralité du fichier dans Platform. Vous pouvez également utiliser l’ingestion partielle si vous n’avez pas envie d’ingérer des données susceptibles de contenir des erreurs.
 
 ### Quel est le seuil d’erreur d’ingestion partielle type ?
 
@@ -76,4 +76,4 @@ Il n’existe pas de &quot;seuil d’erreur type&quot; pour l’ingestion partie
 
 ### Combien de temps faut-il pour qu’un état d’exécution de flux soit mis à jour après la création d’un nouveau flux de données ?
 
-Les exécutions de flux ne sont pas générées instantanément et peuvent prendre entre deux et trois minutes pour se mettre à jour après la `startTime` désignée. La vérification de l’état d’une exécution de flux immédiatement après la création d’un nouveau flux de données ne renvoie pas d’informations sur la `lastRunDetails` de l’exécution de flux, car elle ne s’est pas encore produite. Il est recommandé d’autoriser le flux de données à générer quelques minutes avant de vérifier l’état de l’exécution du flux.
+Les exécutions de flux ne sont pas générées instantanément et peuvent prendre entre deux et trois minutes pour se mettre à jour après avoir été désignées. `startTime`. La vérification de l’état d’une exécution de flux, immédiatement après la création d’un nouveau flux de données ne renvoie pas d’informations sur l’exécution de flux de `lastRunDetails` comme cela ne s&#39;est pas encore produit. Il est recommandé d’autoriser le flux de données à générer quelques minutes avant de vérifier l’état de l’exécution du flux.
