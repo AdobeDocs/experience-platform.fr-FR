@@ -5,16 +5,16 @@ title: Présentation de la correspondance de segment
 topic-legacy: overview
 description: La correspondance de segment est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs ou plus de Platform d’échanger des données de segment de manière sécurisée, gérée et respectueuse de la confidentialité.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 50795be308649052037be62153109eadab02c9a1
+source-git-commit: 1c2b9862facfe9fbce59246c882e6373f3e2c3ef
 workflow-type: tm+mt
-source-wordcount: '1968'
-ht-degree: 5%
+source-wordcount: '1994'
+ht-degree: 6%
 
 ---
 
 # Présentation de [!DNL Segment Match]
 
-Adobe Experience Platform Segment Match est un service de partage de segments qui permet à plusieurs utilisateurs de Platform d’échanger des données de segment de manière sécurisée, gérée et respectueuse de la confidentialité. [!DNL Segment Match] utilise des normes de confidentialité de Platform et des identifiants personnels tels que des emails hachés, des numéros de téléphone hachés et des identifiants d’appareil comme les IDFA et les GAID.
+Adobe Experience Platform Segment Match est un service de partage de segments qui permet à plusieurs utilisateurs de Platform d’échanger des données de segment de manière sécurisée, gérée et respectueuse de la confidentialité. [!DNL Segment Match] utilise les normes de confidentialité de Platform et les identifiants personnels tels que les e-mails hachés, les numéros de téléphone hachés et les identifiants d’appareils comme les IDFA et les GAID.
 
 Avec [!DNL Segment Match] vous pouvez :
 
@@ -114,7 +114,13 @@ Pour connecter un partenaire à l’aide de leur [!UICONTROL identifiant de conn
 
 ![connect-partner.png](./images/connect-partner.png)
 
-### Création d’un flux
+### Création d’un flux {#create-feed}
+
+>[!CONTEXTUALHELP]
+>id="platform_segment_match_marketing"
+>title="Cas d’utilisation de marketing limités"
+>abstract="Les cas d’utilisation de marketing limité aident vos partenaires à s’assurer que les segments partagés sont correctement utilisés selon vos restrictions de gouvernance des données."
+>text="Learn more in documentation"
 
 A **flux** est un groupe de données (segments), les règles permettant d’exposer ou d’utiliser ces données, ainsi que les configurations qui déterminent la manière dont vos données sont comparées aux données de vos partenaires. Un flux peut être géré indépendamment et échangé avec d’autres utilisateurs de Platform par l’intermédiaire de [!DNL Segment Match].
 
@@ -132,7 +138,7 @@ La configuration de base d’un flux comprend un nom, une description et des con
 * [!UICONTROL Exporter vers un tiers]
 * [!UICONTROL Publicité sur site]
 * [!UICONTROL Personnalisation Onsite]
-* [!UICONTROL Correspondance de segments]
+* [!UICONTROL Segment Match]
 * [!UICONTROL Personnalisation d’une seule identité]
 
 Enfin, sélectionnez les espaces de noms d’identité appropriés pour votre flux. Pour plus d’informations sur les espaces de noms spécifiques pris en charge par [!DNL Segment Match], reportez-vous à la section [données d’identité et table des espaces de noms](#namespaces). Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
