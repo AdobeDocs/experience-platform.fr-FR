@@ -7,10 +7,10 @@ topic-legacy: Customer AI Overview
 description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
 landing-page-description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: fccb5e6193d9c456d0035ef5c7d2adf5ffe883a4
 workflow-type: tm+mt
 source-wordcount: '554'
-ht-degree: 85%
+ht-degree: 84%
 
 ---
 
@@ -46,7 +46,7 @@ La vidéo suivante est conçue pour vous aider à comprendre Customer AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
-## Comment fonctionne-t-il ?
+## Fonctionnement
 
 Customer AI analyse les données d’événement d’expérience existantes pour le client afin de prévoir les taux d’attrition ou de conversion. Adobe sait que les définitions de l’attrition et de la conversion ne sont pas uniformes dans tous les cas d’utilisation. Pour cette raison, il est possible de définir des objectifs personnalisés comme ensemble de conditions. L’utilisateur peut configurer l’objectif prévu tant que l’événement d’intérêt est présent dans les données d’événement d’expérience client saisies.
 

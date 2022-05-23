@@ -6,9 +6,9 @@ title: Entrée et sortie dans Customer AI
 topic-legacy: Getting started
 description: En savoir plus sur les événements, les entrées et les sorties requis utilisés par Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 0f408f217dd168b9c94b8dbbd7dc3c6edb06488c
 workflow-type: tm+mt
-source-wordcount: '3054'
+source-wordcount: '3096'
 ht-degree: 16%
 
 ---
@@ -72,7 +72,7 @@ Pour afficher un groupe de champs dans l’interface utilisateur de Platform, s�
 
 | Groupe de champs | Type d’événement | Chemin du champ XDM |
 | --- | --- | --- |
-| [!UICONTROL Détails du commerce] | ordre | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
+| [!UICONTROL Informations commerciales] | ordre | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
 |  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li> |
 |  | checkouts | <li> commerce.checkouts.value </li> <li> productListItems.SKU </li> |
 |  | purchases | <li> commerce.purchases.value </li> <li> productListItems.SKU </li> |
@@ -264,6 +264,10 @@ Lorsque vous configurez une nouvelle instance d’IA dédiée aux clients, `audi
 ## Données de sortie de Customer AI
 
 Customer AI génère plusieurs attributs pour les profils individuels supposés éligibles. Il existe deux façons d’utiliser le score (sortie) en fonction de ce que vous avez mis en service. Si vous disposez d’un jeu de données activé pour Real-time Customer Profile, vous pouvez utiliser les informations de Real-time Customer Profile dans la variable [Créateur de segments](../../segmentation/ui/segment-builder.md). Si vous ne disposez pas d’un jeu de données activé pour Profile, vous pouvez [Téléchargez la sortie de Customer AI](./user-guide/download-scores.md) jeu de données disponible sur le lac de données.
+
+Vous trouverez le jeu de données de sortie sous **Jeux de données** dans Platform. Tous les jeux de données de sortie de Customer AI commencent par le nom . **Scores Customer AI - Name_of_app** tandis que tous les schémas de sortie de Customer AI commencent par le nom **Schéma Customer AI - Name_of_app**.
+
+![cai-schema-name-of-app](./images/user-guide/cai-schema-name-of-app.png)
 
 >[!NOTE]
 >
