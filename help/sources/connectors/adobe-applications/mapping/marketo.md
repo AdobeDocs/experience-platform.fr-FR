@@ -5,9 +5,9 @@ title: Mappage des champs pour la source du Marketo Engage
 topic-legacy: overview
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: b68e69314af819daa93e1e6a777f1edeca359164
+source-git-commit: 1d2f485a91a8ad2c5b2bea9816c05b7bc26ae8e7
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '634'
 ht-degree: 9%
 
 ---
@@ -18,7 +18,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf [!DNL
 
 >[!TIP]
 >
->Tous [!DNL Marketo] jeux de données, sauf `Activities` prise en charge désormais `isDeleted`. Vos flux de données existants incluront automatiquement `isDeleted`, mais n’ingère que l’indicateur pour les données nouvellement ingérées. Si vous souhaitez appliquer l’indicateur à toutes vos données historiques, vous devez arrêter vos flux de données existants et les recréer avec le nouveau mappage. Notez que si vous supprimez `isDeleted`, vous n’aurez plus accès à la fonctionnalité. Il est essentiel que le mappage soit conservé une fois qu’il est automatiquement renseigné.
+>Tous [!DNL Marketo] jeux de données, sauf `Activities` prise en charge désormais `isDeleted`. Vos flux de données existants incluront automatiquement `isDeleted`, mais n’ingère que l’indicateur pour les données nouvellement ingérées. Si vous souhaitez appliquer l’indicateur à toutes vos données historiques, vous devez arrêter vos flux de données existants et les recréer avec le nouveau mappage. Veuillez noter que si vous supprimez `isDeleted`, vous n’aurez plus accès à la fonctionnalité. Il est essentiel que le mappage soit conservé une fois qu’il est automatiquement renseigné.
 
 ## Activités {#activities}
 
@@ -383,6 +383,8 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf [!DNL
 | `email` | `workEmail.address` |
 | `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | Il s’agit d’un champ calculé. |
 | `marketoIsDeleted` | `isDeleted` |
+| `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `b2b.convertedContactKey` | Il s’agit d’un champ calculé. |
+| `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `personComponents.sourceConvertedContactKey` | Il s’agit d’un champ calculé. |
 
 {style=&quot;table-layout:auto&quot;}
 
