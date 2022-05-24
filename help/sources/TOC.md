@@ -4,23 +4,24 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: be3967e7045e159736952e369a55df322afd9fec
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 95%
+source-wordcount: '777'
+ht-degree: 93%
 
 ---
 
 
-# Connecteurs source {#sources}
+# Sources {#sources}
 
-- [Présentation des connecteurs source](home.md)
+- [Présentation des sources](home.md)
 - Connecteurs source disponibles {#connectors}
    - Applications Adobe {#adobe-applications}
-      - [Connecteur source Analytics Classifications](connectors/adobe-applications/classifications.md)
-      - [Connecteur source Analytics](connectors/adobe-applications/analytics.md)
-      - [Connecteur source Audience Manager](connectors/adobe-applications/audience-manager.md)
-      - [Connecteur source des attributs du client](connectors/adobe-applications/customer-attributes.md)
+      - [Source des classifications Analytics](connectors/adobe-applications/classifications.md)
+      - [Source Analytics](connectors/adobe-applications/analytics.md)
+      - [Source de l’Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Source des attributs du client](connectors/adobe-applications/customer-attributes.md)
+      - [Source de collecte de données](connectors/adobe-applications/data-collection.md)
       - Mappages de champs {#mapping}
          - [Mappages de champs Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Mappages de champs Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
