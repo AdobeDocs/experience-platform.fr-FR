@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
 workflow-type: tm+mt
 source-wordcount: '2916'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Les widgets suivants sont disponibles via la bibliothèque de widgets dans leurs
 
 | Fonctionnalité | Tableau de bord | Description |
 | ------- | --------- | ----------- |
-| Nettoyage de l’appartenance aux segments de profil orphelins | Profils et utilisation de la licence | Le service de profil supprime désormais tous les jours les membres restants du segment afin d’offrir une représentation plus précise de vos profils dans votre système. Ce nettoyage se produit une fois tous les fragments de profil d’un profil donné supprimés. Cela peut indiquer une baisse de la mesure &quot;Audience adressable&quot; dans le tableau de bord de l’utilisation des licences et une baisse de la mesure &quot;Nombre de profils&quot; dans le tableau de bord du profil, car ces mesures incluaient des fragments de segment laissés avant cette version. |
+| Nettoyage de l’appartenance aux segments de profils orphelins | Profils et utilisation de la licence | Le service de profil supprime désormais tous les jours les membres de segments restants, ce qui permet d’obtenir une représentation plus précise de vos profils dans votre système. Ce nettoyage intervient après la suppression de tous les fragments de profil d’un profil donné. En conséquence, les deux mesures suivantes peuvent afficher des chiffres inférieurs : « Audience adressable » dans le tableau de bord de l’utilisation des licences et « Nombre de profils » dans le tableau de bord des profils. En effet, ces mesures incluaient des fragments de segment restants avant la publication de cette version. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -173,7 +173,7 @@ Pour plus d’informations sur XDM dans Platform, consultez la [présentation du
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Les services AI/ML permettent aux analystes et aux spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données.
+Les services d’IA/ML permettent aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données.
 
 ### IA dédiée à l’attribution
 
@@ -183,9 +183,9 @@ L’IA dédiée à l’attribution est utilisée pour attribuer des crédits aux
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge de jeux de données multiples | La fonctionnalité de jeux de données multiples prend désormais en charge tous les jeux de données d’événement d’expérience, ainsi que la sélection du mappage d’identité comme identité. Les clients peuvent sélectionner le mappage d’identité et les ID associés, à condition que les jeux de données disposent d’un espace de noms d’identité commun. L’IA dédiée à l’attribution prend en charge les schémas suivants : Adobe Analytics, événement d’expérience, événement d’expérience de client. Pour plus d’informations sur la prise en charge de jeux de données multiples dans Attribution AI, reportez-vous à la section [Guide d’utilisation d’Attribution AI](../../intelligent-services/attribution-ai/user-guide.md). |
+| Prise en charge de jeux de données multiples | La fonctionnalité de jeux de données multiples prend désormais en charge tous les jeux de données d’événement d’expérience, ainsi que la sélection du mappage d’identité comme identité. Les clients peuvent sélectionner le mappage d’identité et les ID associés, à condition que les jeux de données disposent d’un espace de noms d’identité commun. L’IA dédiée à l’attribution prend en charge les schémas suivants : Adobe Analytics, événement d’expérience, événement d’expérience de client. Pour plus d’informations sur la prise en charge de jeux de données multiples dans l’IA dédiée à l’attribution, consultez le [guide d’utilisation de l’IA dédiée à l’attribution](../../intelligent-services/attribution-ai/user-guide.md). |
 
-Pour plus d’informations sur la [!DNL Intelligent Services], consultez [[!DNL Intelligent Services] la présentation](../../intelligent-services/home.md).
+Pour plus d’informations sur les [!DNL Intelligent Services], consultez la [[!DNL Intelligent Services] présentation](../../intelligent-services/home.md).
 
 ### IA dédiée aux clients
 
@@ -195,7 +195,7 @@ L’IA dédiée aux clients disponible dans Real-time Customer Data Platform 
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge de jeux de données multiples | La fonctionnalité de jeux de données multiples prend désormais en charge tous les jeux de données d’événement d’expérience, ainsi que la sélection du mappage d’identité comme identité. Les clients peuvent sélectionner le mappage d’identité et les ID associés, à condition que les jeux de données disposent d’un espace de noms d’identité commun. Customer AI prend en charge les schémas suivants : Adobe Analytics, Experience Event, Consumer Experience Event et le schéma Adobe Audience Manager. Pour plus d’informations sur la prise en charge de jeux de données multiples dans Customer AI, reportez-vous à la section [Guide d’utilisation de Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Prise en charge de jeux de données multiples | La fonctionnalité de jeux de données multiples prend désormais en charge tous les jeux de données d’événement d’expérience, ainsi que la sélection du mappage d’identité comme identité. Les clients peuvent sélectionner le mappage d’identité et les ID associés, à condition que les jeux de données disposent d’un espace de noms d’identité commun. L’IA dédiée aux clients prend en charge les schémas suivants : Adobe Analytics, Événement d’experience, Événement d’experience consommateur et le schéma Adobe Audience Manager. Pour plus d’informations sur la prise en charge de jeux de données multiples dans l’IA dédiée aux clients, consultez le [guide d’utilisation de l’IA dédiée aux clients](../../intelligent-services/customer-ai/user-guide/configure.md). |
 | Nouvelles mesures d’évaluation de modèle dans l’IA dédiée aux clients | Les nouveaux graphiques de gains dans l’IA dédiée aux clients permettent aux professionnels du marketing de déterminer la taille du groupe à cibler en fonction de leur budget et de leurs objectifs de retour sur investissement. Les nouveaux graphiques de courbe d’élévation évaluent la qualité du modèle, offrant ainsi une meilleure visibilité sur la courbe d’élévation obtenue par rapport à un ciblage aléatoire. Pour plus d’informations, consultez le document [découvrir des informations avec l’IA dédiée aux clients](../../intelligent-services/customer-ai/user-guide/discover-insights.md). |
 
 Pour plus d’informations sur les [!DNL Intelligent Services], consultez [[!DNL Intelligent Services] la présentation](../../intelligent-services/home.md).
@@ -222,7 +222,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Prise en charge de [!DNL OneTrust Integration] | Vous pouvez désormais utiliser la source [!DNL OneTrust Integration] pour ingérer les données de consentement et de préférences du compte [!DNL OneTrust] vers Platform. Pour plus d’informations, consultez la documentation sur la [création d’une [!DNL OneTrust Integration] connexion source](../../sources/connectors/consent-and-preferences/onetrust.md). |
+| Prise en charge de [!DNL OneTrust Integration] | Vous pouvez désormais utiliser la source [!DNL OneTrust Integration] pour ingérer les données de consentement et de préférences du compte [!DNL OneTrust] vers Platform. Pour plus d’informations, consultez la documentation sur la [création d’une  [!DNL OneTrust Integration]  connexion source](../../sources/connectors/consent-and-preferences/onetrust.md). |
 | Prise en charge de [!DNL Square] | Vous pouvez désormais utiliser la source [!DNL Square] pour ingérer les données des paiements à partir du compte [!DNL Square] vers Platform. |
 | Prise en charge de la suppression des flux de données d’attributs du client | Vous pouvez désormais supprimer les flux de données créés à l’aide du connecteur source d’attributs du client. |
 
