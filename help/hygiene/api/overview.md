@@ -2,7 +2,9 @@
 title: Guide de l’API d’hygiène des données
 description: Découvrez comment corriger ou supprimer par programme les données personnelles de vos clients stockées dans Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+hide: true
+hidefromtoc: true
+source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 29%

@@ -4,7 +4,7 @@ user-guide-title: Aide sur l’hygiène des données
 breadcrumb-title: Guide d’hygiène des données
 user-guide-description: Gérez les demandes de données des clients afin de respecter les réglementations légales en matière de confidentialité, telles que le RGPD et le CCPA.
 feature: Privacy
-source-git-commit: b119cc56701a0e6038a31e032b7134fb5d0fbbad
+source-git-commit: adce89e5601daf18fe9cacb704a787472262db41
 workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 3%
@@ -12,7 +12,7 @@ ht-degree: 3%
 ---
 
 
-# Hygiène des données {#hygiene}
+# Assurance des données {#hygiene}
 
 * [Présentation de l’hygiène des données](./home.md)
 * Interface utilisateur de l’hygiène des données {#ui}
