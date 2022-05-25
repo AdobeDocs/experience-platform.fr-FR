@@ -5,9 +5,9 @@ title: Application automatique des stratégies
 topic-legacy: guide
 description: Ce document présente l’application automatique des stratégies d’utilisation de données lors de l’activation de segments vers des destinations dans Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 679b9eb621baff99342fb55c0a13a60f5ef256bd
+source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1700'
 ht-degree: 66%
 
 ---
@@ -106,11 +106,11 @@ Sélectionnez **[!UICONTROL Mode Liste]** pour afficher la parenté des données
 
 ![](../images/enforcement/list-view.png)
 
-### Évaluation des stratégies de consentement (bêta) {#consent-policy-evaluation}
+### Évaluation des stratégies de consentement {#consent-policy-evaluation}
 
 >[!IMPORTANT]
 >
->Les stratégies de consentement sont actuellement en version bêta et votre entreprise peut ne pas y avoir encore accès.
+>Actuellement, les politiques de consentement ne sont disponibles que pour les organisations qui ont acheté Adobe Shield pour les soins de santé.
 
 Si vous avez [création de stratégies de consentement](../policies/user-guide.md#consent-policy) et activent un segment vers une destination, vous pouvez voir comment vos stratégies de consentement affectent le pourcentage de profils inclus dans l’activation.
 
