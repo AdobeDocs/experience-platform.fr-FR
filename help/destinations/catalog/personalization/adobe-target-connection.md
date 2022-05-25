@@ -67,7 +67,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 * **Nom** : renseignez le nom de votre choix pour cette destination.
 * **Description** : saisissez une description pour votre destination. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination. Ce champ est facultatif.
-* **Identifiant du flux de données**: Cela détermine dans quel flux de données de collecte de données les segments seront inclus. Le menu déroulant affiche uniquement les flux de données pour lesquels la destination Target est activée. Voir [configuration d’un flux de données](../../../edge/fundamentals/datastreams.md#target) pour obtenir des informations détaillées sur la configuration d’un flux de données pour Adobe Target.
+* **Identifiant du flux de données**: Cela détermine dans quel flux de données de collecte de données les segments seront inclus. Le menu déroulant affiche uniquement les flux de données pour lesquels la destination Target est activée. Voir [configuration d’un flux de données](../../../edge/datastreams/overview.md#target) pour obtenir des informations détaillées sur la configuration d’un flux de données pour Adobe Target.
    * **[!UICONTROL Aucun]**: Sélectionnez cette option si vous devez configurer la personnalisation Adobe Target mais que vous ne pouvez pas mettre en oeuvre le [SDK Web Experience Platform](../../../edge/home.md). Lorsque vous utilisez cette option, les segments exportés d’Experience Platform vers Target ne prennent en charge que la personnalisation de la prochaine session et la segmentation Edge est désactivée. Pour plus d’informations, consultez le tableau ci-dessous.
 
 | Aucun flux de données sélectionné | Envoi de données sélectionné |
