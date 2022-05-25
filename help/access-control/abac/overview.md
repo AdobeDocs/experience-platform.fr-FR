@@ -5,9 +5,9 @@ description: Ce document fournit des informations sur le contrôle d’accès ba
 hide: true
 hidefromtoc: true
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 4ac69f614d878cd3c3b9f47e41dedbc6f09288ac
+source-git-commit: 70c0ba81c682fd512c24265f12d1fef6ca14b34e
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1575'
 ht-degree: 23%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 23%
 
 >[!IMPORTANT]
 >
->Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform une fois qu’elle sera entièrement publiée.
+>Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée pour les clients de santé basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform une fois qu’elle sera entièrement publiée.
 
-Le contrôle d’accès basé sur les attributs permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction des attributs. Les attributs peuvent être une valeur existante, comme la géolocalisation ou le service d’une personne. Les attributs peuvent également être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma.
+Le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. Un administrateur définit des stratégies d’accès qui incluent des attributs pour gérer les autorisations d’accès des utilisateurs.
 
 Cette fonctionnalité vous permet d’étiqueter les champs de schéma du modèle de données d’expérience (XDM) avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. En parallèle, les administrateurs peuvent utiliser l’interface d’administration des utilisateurs et des rôles pour définir des stratégies d’accès autour des champs de schéma XDM et mieux gérer l’accès attribué aux utilisateurs ou groupes d’utilisateurs (utilisateurs internes, externes ou tiers). En outre, le contrôle d’accès basé sur les attributs permet aux administrateurs de gérer l’accès à des segments spécifiques.
 
-Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD) et aux informations d’identification personnelle (PII) sur l’ensemble des workflows et ressources de Platform. Les administrateurs peuvent définir des rôles utilisateur spécifiques qui ont accès uniquement à des champs spécifiques, ainsi qu’à des données spécifiques qui correspondent à ces champs.
+Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre entreprise peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD) et aux informations d’identification personnelle (PII) sur l’ensemble des workflows et ressources de Platform. Les administrateurs peuvent définir des rôles utilisateur ayant accès uniquement à des champs et données spécifiques qui correspondent à ces champs.
 
 ## Terminologie du contrôle d’accès en fonction des attributs
 
@@ -30,7 +30,7 @@ Le contrôle d’accès basé sur les attributs implique les composants suivants
 
 | Terminologie | Définition |
 | --- | --- |
-| Attributs | Les attributs sont les identifiants qui indiquent la corrélation entre un utilisateur et les ressources Platform auxquelles il a accès. Les attributs peuvent être une valeur existante, comme la géolocalisation ou le service d’une personne. Les attributs peuvent également être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. |
+| Attributs | Les attributs sont les identifiants qui indiquent la corrélation entre un utilisateur et les ressources Platform auxquelles il a accès. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. Un administrateur définit des stratégies d’accès qui incluent des attributs pour gérer les autorisations d’accès des utilisateurs. |
 | Libellés | Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans  Platform, ou dès que les données sont disponibles pour une utilisation dans Platform. |
 | Autorisations | Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités  Platform, telles que la création d’environnements de test, la définition de schémas et la gestion des jeux de données. |
 | Jeux d’autorisations | Les jeux d’autorisations représentent un groupe d’autorisations qu’un administrateur peut appliquer à un rôle. Un administrateur peut attribuer des jeux d’autorisations à un rôle au lieu d’affecter des autorisations individuelles. Vous pouvez ainsi créer des rôles personnalisés à partir d’un rôle prédéfini contenant un groupe d’autorisations. |
@@ -46,11 +46,13 @@ Le contrôle d’accès basé sur les attributs implique les composants suivants
 >
 >Une fois que votre organisation a activé le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des profils de produit dans Adobe Admin Console, pour gérer les autorisations des utilisateurs, fonctionnalités, libellés et autres ressources de votre organisation.
 
-Les autorisations sont la zone de l’Experience Cloud dans laquelle les administrateurs peuvent définir des rôles utilisateur et des stratégies d’accès afin de gérer les autorisations d’accès pour les fonctionnalités et les objets au sein d’une application de produit. Grâce aux autorisations, vous pouvez créer et gérer des rôles, ainsi que attribuer les autorisations de ressources souhaitées pour ces rôles. Les autorisations vous permettent également de gérer les libellés, les environnements de test et les utilisateurs associés à un rôle spécifique. Pour plus d’informations, voir le guide Autorisations .
+Les autorisations sont la zone de l’Experience Cloud dans laquelle les administrateurs peuvent définir des rôles utilisateur et des stratégies d’accès afin de gérer les autorisations d’accès pour les fonctionnalités et les objets au sein d’une application de produit.
+
+Grâce aux autorisations, vous pouvez créer et gérer des rôles, ainsi que attribuer les autorisations de ressources souhaitées pour ces rôles. Les autorisations vous permettent également de gérer les libellés, les environnements de test et les utilisateurs associés à un rôle spécifique. Pour plus d’informations, voir [Guide des autorisations](ui/browse.md).
 
 ## API de contrôle d’accès basé sur les attributs
 
-L’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les rôles, les stratégies et les produits dans Platform à l’aide des API.
+L’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les rôles, les stratégies et les produits dans Platform à l’aide des API. Pour plus d’informations, consultez le guide sur [utilisation de l’API pour gérer les configurations de contrôle d’accès basées sur des attributs](api/overview.md).
 
 ## Contrôle d’accès basé sur les attributs dans Adobe Experience Platform
 
