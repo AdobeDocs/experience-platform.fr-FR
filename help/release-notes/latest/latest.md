@@ -2,16 +2,16 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
+source-git-commit: 73aaf93e4d11c9e6dd20dfaaf64501eda9220ef8
 workflow-type: tm+mt
-source-wordcount: '2916'
-ht-degree: 100%
+source-wordcount: '2613'
+ht-degree: 96%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : 27 avril 2022**
+**Date de mise à jour : 25 mai 2022**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
@@ -19,7 +19,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [[!DNL Dashboards]](#dashboards)
 - [Flux de données](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
-- [Destinations](#destinations)
+- [[!DNL Destinations]](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Édition B2B de Real-time Customer Data Platform](#B2B)
 - [Sources](#sources)
@@ -94,27 +94,9 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | ----------- | ----------- |
-| Connecteurs de destination d’entreprise avancés | Trois connecteurs de destination d’entreprise sont désormais disponibles : [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md) et [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> La disponibilité générale des connecteurs de destination d’entreprise comprend toutes les fonctionnalités proposées précédemment dans la phase Beta, et bien plus encore : <ul><li>Nouvelles fonctionnalités d’authentification, notamment la [Signature d’accès partagé dans Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) et d’autres [types d’authentification](../../destinations/catalog/streaming/http-destination.md#authentication-information) (jetons du porteur, OAuth 2) dans la destination de l’API HTTP</li><li>[Renvoi de données de profil historiques](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (envoi de profils historiques qualifiés pour le segment lors de sa première activation)</li><li>Les mesures de l’exécution du flux de données sont désormais prises en charge pour ces destinations</li><li>[Métadonnées de segment supplémentaires](../../destinations/catalog/streaming/http-destination.md#destination-details) incluses dans la charge utile de données, y compris les noms de segment et les dates et heures de segment</li><li>Prise en charge d’[adresses IP statiques](/help/destinations/catalog/streaming/ip-address-allow-list.md) pour les clients qui doivent placer Experience Platform sur la liste autorisée</li></ul> |
-| Alertes dans le contexte pour les flux de données de destination | Vous pouvez désormais vous [abonner aux alertes](../../destinations/ui/alerts.md) lors de la création d’un flux de données de destination, pour recevoir des messages d’alerte concernant le statut, le succès ou l’échec de l’exécution du flux de données. Vous pouvez choisir de recevoir des alertes dans l’interface utilisateur d’Experience Platform ou par e-mail. |
+| Exporter les dernières qualifications de profil [après l’évaluation quotidienne des segments](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Vous pouvez désormais planifier une exportation de fichier complète, une fois ou quotidiennement, avec les dernières qualifications de profil, une fois l’évaluation quotidienne du segment terminée. |
+| Identifiant de suivi de données facultatif pour [Destinations Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) | Pour activer la personnalisation Adobe Target pour les utilisateurs qui ne peuvent pas mettre en oeuvre le SDK Web Experience Platform, la sélection de l’identifiant de la banque de données est désormais facultative lors de la configuration des destinations Adobe Target. Lorsque vous n’utilisez pas de flux de données, les segments exportés d’Experience Platform vers Target ne prennent en charge que la personnalisation de session suivante, tandis que la segmentation Edge est désactivée, ainsi que toutes les [cas d’utilisation](../../destinations/ui/configure-personalization-destinations.md) qui dépendent de la segmentation edge. |
 
-### Processus de publication des connecteurs de destination d’entreprise avancés {#release-process-enterprise-destinations}
-
-Pour les destinations Amazon Kinesis, Azure Event Hubs et de l’API HTTP, au cours du processus de publication (à compter du 27 avril), le catalogue des destinations affiche à la fois l’ancienne carte de destination Beta, ainsi que la nouvelle carte de destination mise à disposition générale. Les flux de données configurés par les clients utilisant les destinations Beta sont migrés au cours des deux prochains jours vers la version mise à disposition générale de la même destination. Cette migration doit être terminée d’ici la fin de la journée du vendredi 29 avril. Les destinations Beta restent visibles pendant cette courte période et sont libellées comme **Obsolètes**.
-
-Si vous avez utilisé ces destinations dans la phase Beta, notez les points suivants :
-
-- Si vous avez déjà utilisé la phase Beta pour l’une de ces trois destinations, aucune action n’est nécessaire. Tous les flux de données configurés dans le cadre de la phase Beta restent fonctionnels et sont migrés vers la version mise à disposition générale.
-- Si vous souhaitez configurer ces destinations à partir du 27 avril, utilisez la nouvelle version mise à disposition générale des destinations.
-- Les cartes Beta marquées comme obsolètes sont supprimées une fois l’opération de publication terminée, prévue pour la fin de la journée du vendredi 29 avril. L’équipe d’ingénieurs d’Experience Platform surveille de près la réussite de l’opération de publication.
-
-**Nouvelles destinations**
-
-| Destination | Description |
-| ----------- | ----------- |
-| [!DNL Criteo] | Connectez-vous et activez les données sur la plateforme publicitaire [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md). |
-| [!DNL Sendgrid] | Connectez-vous et activez les données sur la plateforme [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) pour accéder aux e-mails transactionnels et marketing. |
-
-Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
