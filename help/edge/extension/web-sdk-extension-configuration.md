@@ -2,7 +2,7 @@
 title: Configuration de l’extension du SDK Web Adobe Experience Platform
 description: Comment configurer l’extension de balise du SDK Web Adobe Experience Platform dans l’interface utilisateur de la collecte de données.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 1f9454148ed4ee95f0d86f03c4bcf8c917d0aeea
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 6%
@@ -51,7 +51,7 @@ Le [!UICONTROL Domaine Edge] est le domaine à partir duquel l’extension Adobe
 
 Lorsqu’une demande est envoyée au réseau Adobe Experience Platform Edge, un identifiant de flux de données est utilisé pour référencer la configuration côté serveur. Vous pouvez mettre à jour la configuration sans avoir à apporter de modifications au code sur votre site web.
 
-Consultez le guide sur la [datastreams](../fundamentals/datastreams.md) pour plus d’informations.
+Consultez le guide sur la [datastreams](../datastreams/overview.md) pour plus d’informations.
 
 
 ## [!UICONTROL Confidentialité]
@@ -75,7 +75,7 @@ Utilisez Out ou Pending (En attente) si vous avez besoin du consentement explici
 
 ### [!UICONTROL Migration de l’ECID depuis VisitorAPI]
 
-Cette option est activée par défaut. Lorsque cette fonction est activée, le SDK peut lire les cookies AMCV et s_ecid et définir le cookie AMCV utilisé par Visitor.js. Cette fonctionnalité est importante lors de la migration vers le SDK Web de Adobe Experience Platform, car certaines pages peuvent toujours utiliser Visitor.js. Il permet au SDK de continuer à utiliser le même ECID afin que les utilisateurs ne soient pas identifiés comme deux utilisateurs distincts.
+Cette option est affichée par défaut. Lorsque cette fonction est activée, le SDK peut lire les cookies AMCV et s_ecid et définir le cookie AMCV utilisé par Visitor.js. Cette fonctionnalité est importante lors de la migration vers le SDK Web de Adobe Experience Platform, car certaines pages peuvent toujours utiliser Visitor.js. Il permet au SDK de continuer à utiliser le même ECID afin que les utilisateurs ne soient pas identifiés comme deux utilisateurs distincts.
 
 ### [!UICONTROL Utilisation de cookies tiers]
 

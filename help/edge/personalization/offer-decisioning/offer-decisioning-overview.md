@@ -3,10 +3,10 @@ title: Utilisation d’Offer Decisioning avec le SDK Web Platform
 description: Le SDK Web de Adobe Experience Platform peut diffuser et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API Offer Decisioning.
 keywords: offer decisioning;prise de décision;SDK Web;SDK Web Platform;offres personnalisées;diffuser des offres;diffusion d’offres;personnalisation des offres ;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: b0cc2343a502e180267d86bca4a699c02f2d6f3d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '870'
-ht-degree: 8%
+ht-degree: 20%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 8%
 >
 >L’utilisation d’Offer Decisioning dans le SDK Web de Adobe Experience Platform est disponible en accès anticipé pour certains utilisateurs. Cette fonctionnalité n’est pas disponible pour toutes les organisations IMS.
 
-Adobe Experience Platform [!DNL Web SDK] peut diffuser et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur (IU) ou des API d’Offer decisioning.
+Adobe Experience Platform [!DNL Web SDK] peut diffuser et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets connexes en utilisant l’interface utilisateur (UI) ou les API d’Offer Decisioning.
 
 ## Conditions préalables
 
@@ -53,7 +53,7 @@ Il est important de comprendre la terminologie suivante lorsque vous utilisez Of
 
    ![](assets/decision-scope-copy.png)
 
-* **Datastreams :** Pour plus d’informations, veuillez lire la [datastreams](../../fundamentals/datastreams.md) documentation.
+* **Datastreams :** Pour plus d’informations, veuillez lire la [datastreams](../../datastreams/overview.md) documentation.
 
 * **Identité**: Pour plus d’informations, veuillez lire cette documentation décrivant comment [Le SDK Web Platform utilise Identity Service](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ Il est important de comprendre la terminologie suivante lorsque vous utilisez Of
 
 Pour activer l’Offer decisioning, procédez comme suit :
 
-1. Adobe Experience Platform activé dans votre [datastream](../../fundamentals/datastreams.md) et cochez la case &quot;Offer decisioning&quot;
+1. Adobe Experience Platform activé dans votre [datastream](../../datastreams/overview.md) et cochez la case &quot;Offer decisioning&quot;
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
@@ -83,15 +83,15 @@ Pour activer l’Offer decisioning, procédez comme suit :
          ```
    * Installation du SDK par le biais de balises
 
-      1. [Création d’une propriété de balise](../../../tags/ui/administration/companies-and-properties.md)
-      1. [Ajout du code incorporé de ](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. Installez et configurez l’extension SDK Web Platform avec le Datastream que vous avez créé en sélectionnant la configuration dans la liste déroulante &quot;Datastream&quot;. Consultez la documentation relative à [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
+      1. [Créer une propriété de balise](../../../tags/ui/administration/companies-and-properties.md)
+      1. [Ajouter du code incorporé](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. Installez et configurez l’extension SDK Web Platform avec le Datastream que vous avez créé en sélectionnant la configuration dans la liste déroulante &quot;Datastream&quot;. Consultez la documentation relative aux [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. Créez les [Éléments de données](../../../tags/ui/managing-resources/data-elements.md). Au minimum, vous devez créer une carte d’identité SDK Web Platform et un élément de données XDM d’objet SDK Web Platform.
+      1. Créez les [Éléments de données](../../../tags/ui/managing-resources/data-elements.md) nécessaires. Au minimum, vous devez créer un mappage d’identité SDK web Platform et un élément de données objet XDM du SDK web Platform.
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
@@ -102,7 +102,7 @@ Pour activer l’Offer decisioning, procédez comme suit :
          * Ajoutez une action Envoyer l’événement du SDK Web Platform et ajoutez le `decisionScopes` à la configuration de cette action.
 
             ![send-event-action-décisionScopes](./assets/send-event-action-decisionScopes.png)
-      1. [Création et publication d’une bibliothèque](../../../tags/ui/publishing/libraries.md) contenant toutes les règles, éléments de données et extensions que vous avez configurés appropriés.
+      1. [](../../../tags/ui/publishing/libraries.md)Créez et publiez une bibliothèque contenant toutes les règles, éléments de données et extensions pertinents que vous avez configurés
 
 
 
@@ -332,4 +332,4 @@ Pour activer l’Offer decisioning, procédez comme suit :
 
 ## Limites
 
-Certaines contraintes d’offre ne sont actuellement pas prises en charge avec les workflows Experience Edge mobiles, par exemple la limitation. La valeur du champ de limitation indique le nombre de fois où une offre peut être présentée à tous les utilisateurs. Pour plus d’informations, voir [Documentation sur les règles d’éligibilité et les contraintes d’offres](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Certaines contraintes d’offre ne sont actuellement pas prises en charge avec les workflows Experience Edge mobiles, comme les limitations, par exemple. La valeur du champ Limitation indique le nombre de fois où une offre peut être présentée à tous les utilisateurs. Pour plus d’informations, voir [Documentation sur les règles d’éligibilité et les contraintes d’offres](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).

@@ -2,7 +2,7 @@
 title: Notes de mise à jour de Adobe Experience Platform - Février 2022
 description: Notes de mise à jour de février 2022 pour Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 3a031c84138d36a5e23b2f80a44ada06e1a52184
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 53%
@@ -35,7 +35,7 @@ Adobe Experience Platform fournit plusieurs [!DNL dashboards] grâce à laquelle
 | --- | --- |
 | Nouveaux widgets de destinations standard | Les widgets standard suivants vous permettent de visualiser différentes mesures liées à vos destinations.<ul><li>Segments récemment activés par destination. Ce widget affiche les cinq segments les plus récemment activés par ordre décroissant en fonction de la destination choisie.</li><li>Tendance de la taille de l’audience. Ce widget illustre la relation entre le nombre de profils sur une période donnée pour un segment qui a été mappé à ce compte de destination.</li><li>Segments non mappés par identité. Ce widget répertorie les cinq premiers segments non mappés classés par nombre d’identités décroissant pour une destination et une identité données.</li><li>Segments mappés par identité. Ce widget répertorie les cinq premiers segments mappés. Les segments sont classés de haut en bas en fonction de leur nombre respectif d’ID source correspondant à l’ID de destination sélectionné dans le menu déroulant du widget.</li><li>Audiences courantes. Ce widget fournit une liste des cinq premiers segments activés sur le compte de destination choisi en haut de la page, ainsi que la destination sélectionnée dans la liste déroulante du widget.</li></ul> Pour plus d’informations sur les widgets standard disponibles, voir la section [documentation du tableau de bord des destinations .](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
 
-Pour plus d’informations sur la [!DNL Dashboards], consultez [[!DNL Dashboards] la présentation](../../dashboards/home.md).
+Pour plus d’informations sur les [!DNL Dashboards], consultez la [[!DNL Dashboards] présentation](../../dashboards/home.md).
 
 ## Collecte de données {#data-collection}
 
@@ -45,8 +45,8 @@ Platform fournit un ensemble de technologies qui vous permettent de collecter de
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Workflow de l’interface utilisateur amélioré pour la configuration des flux de données | Le workflow de création d’un flux de données dans l’interface utilisateur de la collecte de données a été mis à jour. Lors de l’ajout de services à un flux de données, seuls les services auxquels vous avez accès seront inclus dans la liste des options. Pour plus d’informations, consultez le guide de [configuration dʼun flux de données](../../edge/fundamentals/datastreams.md). |
-| Préparer des données pour la collecte de données | Si vous utilisez le SDK web Adobe Experience Platform, vous pouvez désormais réutiliser des fonctionnalités de préparation des données pour mapper vos données au modèle de données d’expérience (XDM) côté serveur. Pour plus d’informations, consultez la section [Préparer des données pour la collecte de données](../../edge/fundamentals/datastreams.md#data-prep) dans le guide des flux de données. |
+| Workflow de l’interface utilisateur amélioré pour la configuration des flux de données | Le workflow de création d’un flux de données dans l’interface utilisateur de la collecte de données a été mis à jour. Lors de l’ajout de services à un flux de données, seuls les services auxquels vous avez accès seront inclus dans la liste des options. Pour plus d’informations, consultez le guide de [configuration dʼun flux de données](../../edge/datastreams/overview.md). |
+| Préparer des données pour la collecte de données | Si vous utilisez le SDK web Adobe Experience Platform, vous pouvez désormais réutiliser des fonctionnalités de préparation des données pour mapper vos données au modèle de données d’expérience (XDM) côté serveur. Pour plus d’informations, consultez la section [Préparer des données pour la collecte de données](../../edge/datastreams/data-prep.md) dans le guide des flux de données. |
 | Identifiants d’appareils propriétaires | Vous pouvez désormais envoyer vos propres identifiants d’appareil au réseau Adobe Experience Platform Edge lors de la collecte de données client à l’aide du SDK web Platform. Vous pouvez ainsi contourner les restrictions récentes imposées par les navigateurs sur la durée de vie des cookies tiers. Pour plus d’informations, consultez le guide des [Identifiants d’appareils propriétaires](../../edge/identity/first-party-device-ids.md). |
 
 Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).

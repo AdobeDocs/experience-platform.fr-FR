@@ -4,7 +4,8 @@ description: Découvrez comment activer la journalisation côté client pour Ado
 seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;a4t;journalisation;sdk web;expérience;plateforme;
-source-git-commit: a2214465001f90d19d88c0622c154e7a4ae3bb03
+exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 5%
@@ -39,7 +40,7 @@ Les sous-sections suivantes expliquent comment activer la journalisation côté 
 
 ### Activation de la journalisation côté client d’Analytics {#enable-analytics-client-side-logging}
 
-Pour que la journalisation côté client Analytics soit activée pour votre mise en oeuvre, vous devez désactiver la configuration Adobe Analytics dans votre [datastream](../../../fundamentals/datastreams.md).
+Pour que la journalisation côté client Analytics soit activée pour votre mise en oeuvre, vous devez désactiver la configuration Adobe Analytics dans votre [datastream](../../../datastreams/overview.md).
 
 ![Configuration de la banque de données Analytics désactivée](../assets/disable-analytics-datastream.png)
 

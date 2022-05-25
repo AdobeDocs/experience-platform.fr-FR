@@ -4,7 +4,7 @@ description: Découvrez comment utiliser l’API Edge Network Server pour intera
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Experience Platform
 keywords: la collecte de données; le point d'exutoire; les analyses; API réseau Adobe Experience Platform Edge, aep
 exl-id: c49e40b7-9653-40f1-9db5-8941b20de8a3
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 ## Présentation {#overview}
 
-Pour activer la collecte de données Experience Platform, vous devez d’abord [configuration de votre flux de données](../edge/fundamentals/datastreams.md) pour transférer des événements dans des jeux de données Experience Platform.
+Pour activer la collecte de données Experience Platform, vous devez d’abord [configuration de votre flux de données](../edge/datastreams/overview.md) pour transférer des événements dans des jeux de données Experience Platform.
 
 Une fois configurée, la configuration du flux de données doit inclure des paramètres pour `com_adobe_experience_platform`, comme illustré dans l’exemple ci-dessous :
 

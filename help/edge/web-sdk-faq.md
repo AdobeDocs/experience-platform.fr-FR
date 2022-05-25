@@ -2,7 +2,7 @@
 title: FAQ sur le SDK Web Adobe Experience Platform
 description: Obtenez des réponses aux questions fréquentes sur le SDK Web de Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: e19c70883785ff338623ea2e6433562a792b3841
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1855'
 ht-degree: 2%
@@ -82,7 +82,7 @@ Alloy est le nom de code du SDK Web de Adobe Experience Platform. Il est utilis�
 
 ## Les clients doivent-ils acheter Adobe Experience Platform pour utiliser la variable [!DNL Web SDK]?
 
-Non. Tout client Adobe Digital Experience peut utiliser le SDK Web de Adobe Experience Platform gratuitement. Pour utiliser le SDK Web, votre organisation doit disposer des privilèges d’accès nécessaires pour cette fonctionnalité. Si vous souhaitez y accéder, veuillez renseigner les informations suivantes : [formulaire](https://adobe.ly/websdkaccess) et Adobe vous donne accès au [Interface utilisateur des flux de données](fundamentals/datastreams.md) et l’interface utilisateur de Adobe Experience Platform (si nécessaire).
+Non. Tout client Adobe Digital Experience peut utiliser le SDK Web de Adobe Experience Platform gratuitement. Pour utiliser le SDK Web, votre organisation doit disposer des privilèges d’accès nécessaires pour cette fonctionnalité. Si vous souhaitez y accéder, veuillez renseigner les informations suivantes : [formulaire](https://adobe.ly/websdkaccess) et Adobe vous donne accès au [Interface utilisateur des flux de données](datastreams/overview.md) et l’interface utilisateur de Adobe Experience Platform (si nécessaire).
 
 Les clients qui souhaitent utiliser la variable [!DNL Web SDK] aura accès à la création de schémas, de jeux de données et d’espaces de noms d’identité dans l’interface utilisateur de Adobe Experience Platform.
 

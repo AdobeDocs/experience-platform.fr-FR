@@ -5,9 +5,9 @@ user-guide-title: Aide du SDK web d’Adobe Experience Platform
 breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Web SDK
-source-git-commit: 7eb89d44bdb6e3c6e6aede0a1ce20c02b19284fd
+source-git-commit: 1a53d98d8a0b47b96d54e79d93f2ece2d4b587a6
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '178'
 ht-degree: 83%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 83%
 * [Présentation du SDK web de Platform](home.md)
 * Notions fondamentales {#fundamentals}
    * [Conditions préalables](fundamentals/prerequisite.md)
-   * [Configuration d’un flux de données](fundamentals/datastreams.md)
    * [Installation du SDK](fundamentals/installing-the-sdk.md)
    * [Configuration du SDK](fundamentals/configuring-the-sdk.md)
    * [Exécution des commandes](fundamentals/executing-commands.md)
@@ -27,6 +26,9 @@ ht-degree: 83%
    * [Configuration d’un fichier CSP](fundamentals/configuring-a-csp.md)
    * [Interaction avec plusieurs propriétés](fundamentals/interacting-with-multiple-properties.md)
    * [Cas d’utilisation pris en charge](fundamentals/supported-use-cases.md)
+* Flux de données {#datastreams}
+   * [Présentation](./datastreams/overview.md)
+   * [Préparer des données pour la collecte de données](./datastreams/data-prep.md)
 * Identité {#identity}
    * [Présentation](identity/overview.md)
    * [Identifiants d’appareils propriétaires](identity/first-party-device-ids.md)

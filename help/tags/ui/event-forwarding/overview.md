@@ -3,7 +3,7 @@ title: Présentation du transfert dʼévénements
 description: Découvrez Adobe Experience Platform, qui vous permet dʼutiliser Platform Edge Network afin dʼexécuter des tâches sans modifier votre implémentation de balises.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 100%
@@ -77,7 +77,7 @@ La valeur de **[!UICONTROL Chemin]** pour l’élément de données doit suivre 
 
 ### Règles {#rules}
 
-La création de règles dans les propriétés de transfert d’événement fonctionne de la même manière que les balises. La principale différence réside dans le fait que vous ne pouvez pas sélectionner d’événements en tant que composants de règle. À la place, une règle de transfert d’événement traite tous les événements qu’elle reçoit du [flux de données](../../../edge/fundamentals/datastreams.md) et transfère ces événements vers les destinations si certaines conditions sont remplies.
+La création de règles dans les propriétés de transfert d’événement fonctionne de la même manière que les balises. La principale différence réside dans le fait que vous ne pouvez pas sélectionner d’événements en tant que composants de règle. À la place, une règle de transfert d’événement traite tous les événements qu’elle reçoit du [flux de données](../../../edge/datastreams/overview.md) et transfère ces événements vers les destinations si certaines conditions sont remplies.
 
 ![Règles de transfert d’événement dans l’interface utilisateur de la collecte de données](../../images/ui/event-forwarding/overview/rules.png)
 

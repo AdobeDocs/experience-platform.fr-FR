@@ -6,8 +6,8 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Découvrez comment configurer des destinations de personnalisation pour la personnalisation de la même page et de la page suivante.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
-workflow-type: ht
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 100%
 
@@ -37,7 +37,7 @@ Lors de la configuration du flux de données, sous **[!UICONTROL Adobe Experien
 
 ![Configurer le flux de données](../assets/ui/configure-personalization-destinations/datastream-config.png)
 
-Pour plus d’informations sur la configuration d’un flux de données, suivez les instructions décrites dans la section [Documentation du SDK web Platform](../../edge/fundamentals/datastreams.md).
+Pour plus d’informations sur la configuration d’un flux de données, suivez les instructions décrites dans la section [Documentation du SDK web Platform](../../edge/datastreams/overview.md).
 
 ## Étape 2 : configurer votre destination de personnalisation {#configure-destination}
 

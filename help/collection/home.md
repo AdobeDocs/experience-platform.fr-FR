@@ -5,7 +5,7 @@ title: Présentation de la collecte de données
 topic-legacy: overview
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 1322ef78683e62130b56c5b6a22b8699e57a31cf
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 95%
@@ -26,7 +26,7 @@ Les technologies de collecte de données fournies par Experience Platform se co
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=fr)
 * [Balises](../tags/home.md)
-* [Flux de données](../edge/fundamentals/datastreams.md)
+* [Flux de données](../edge/datastreams/overview.md)
 * [Transfert d’événement](../tags/ui/event-forwarding/overview.md)
 * [SDK web Adobe Experience Platform](../edge/home.md)
 * [ SDK Mobile Adobe Experience Platform](https://aep-sdks.gitbook.io/docs/)
@@ -46,7 +46,7 @@ La compression de ces bibliothèques accélère la collecte de données et conso
 
 ## Réseau et flux de données Platform Edge {#edge}
 
-Le réseau Platform Edge est un réseau de serveurs distribué dans le monde entier. Rapide et fiable, il est capable de recevoir et de traiter des données à très grande échelle. Grâce aux balises, vous pouvez mettre en place des [flux de données](../edge/fundamentals/datastreams.md) pour des produits comme Adobe Target, Adobe Audience Manager et Adobe Analytics. Ces configurations vous permettent d‘activer les produits en question côté serveur sans modifier le code côté client.
+Le réseau Platform Edge est un réseau de serveurs distribué dans le monde entier. Rapide et fiable, il est capable de recevoir et de traiter des données à très grande échelle. Grâce aux balises, vous pouvez mettre en place des [flux de données](../edge/datastreams/overview.md) pour des produits comme Adobe Target, Adobe Audience Manager et Adobe Analytics. Ces configurations vous permettent d‘activer les produits en question côté serveur sans modifier le code côté client.
 
 ![Solutions de flux de données et d’Adobe](./images/home/adobe-solutions.png)
 

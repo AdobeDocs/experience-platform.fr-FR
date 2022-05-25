@@ -3,7 +3,7 @@ title: Utilisation d’Adobe Target avec le SDK Web Platform
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;champ de décision;fragment de code de masquage préalable;vec;compositeur d’expérience d’après les formulaires;xdm;audiences;décisions;portée;schéma;schéma;diagramme système;diagramme
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: cdcbfdec6a232495aacaf9066d880bc9a10455d1
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1273'
 ht-degree: 6%
@@ -25,7 +25,7 @@ Les fonctionnalités suivantes ont été testées et sont actuellement prises en
 * [Activités Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Activités de ciblage d’expérience](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Tests multivariés (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
-* [Les activités Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
+* activités de [recommandations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [Création de rapports d’impression et de conversion Target natifs](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [Prise en charge du compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
@@ -49,7 +49,7 @@ Le diagramme suivant vous aide à comprendre le workflow de [!DNL Target] et [!D
 
 Pour activer [!DNL Target], procédez comme suit :
 
-1. Activer [!DNL Target] dans votre [datastream](../../fundamentals/datastreams.md) avec le code client approprié.
+1. Activer [!DNL Target] dans votre [datastream](../../datastreams/overview.md) avec le code client approprié.
 1. Ajoutez la variable `renderDecisions` à vos événements.
 
 Vous pouvez ensuite, éventuellement, ajouter les options suivantes :

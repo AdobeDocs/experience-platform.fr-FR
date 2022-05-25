@@ -4,13 +4,13 @@ description: Découvrez comment contrôler la collecte de données Adobe Analyti
 seo-title: Adobe Analytics for Target (A4T) Logging in the Platform Web SDK
 seo-description: Learn how to control the collection of Adobe Analytics for Target (A4T) data using the Experience Platform Web SDK.
 keywords: a4t;journalisation;analytics;sdk;sdk web;
-source-git-commit: a2214465001f90d19d88c0622c154e7a4ae3bb03
+exl-id: f1c90ccd-48a9-4668-b2ac-eacd5bec0b91
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '284'
 ht-degree: 2%
 
 ---
-
 
 # Connexion à Adobe Analytics for Target (A4T) dans le SDK Web de Platform
 
@@ -29,7 +29,7 @@ Le SDK Web de Adobe Experience Platform prend en charge deux types de journalisa
 | Journalisation Analytics côté serveur | Tous les accès Analytics envoyés par l’intermédiaire du réseau Edge sont augmentés avec les détails de Target côté serveur, sans avoir à passer par le processus d’assemblage d’accès. |
 | Journalisation des analyses côté client | Les données Target sont renvoyées côté client, ce qui vous permet d’augmenter et d’envoyer manuellement les données à Analytics à l’aide de la variable [API d’insertion de données](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
 
-La méthode de journalisation est déterminée par l’activation ou non d’Adobe Analytics sur votre [datastream](../../../fundamentals/datastreams.md):
+La méthode de journalisation est déterminée par l’activation ou non d’Adobe Analytics sur votre [datastream](../../../datastreams/overview.md):
 
 ![Flux de décision de la méthode de journalisation](../assets/analytics-logging.png)
 
