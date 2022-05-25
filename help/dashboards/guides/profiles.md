@@ -4,10 +4,10 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '3535'
-ht-degree: 5%
+source-wordcount: '3761'
+ht-degree: 7%
 
 ---
 
@@ -99,17 +99,19 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 
 * [[!UICONTROL Nombre de profils]](#profile-count)
 * [[!UICONTROL Profils ajoutés]](#profiles-added)
-* [[!UICONTROL Profils de tendance ajoutée]](#profiles-added-trend)
+* [[!UICONTROL Tendance des profils ajoutés]](#profiles-added-trend)
 * [[!UICONTROL Profils par identité]](#profiles-by-identity)
 * [[!UICONTROL Superposition des identités]](#identity-overlap)
 * [[!UICONTROL Profils d’identité uniques]](#single-identity-profiles)
 * [[!UICONTROL Profils non segmentés]](#unsegmented-profiles)
 * [[!UICONTROL Tendance des profils non segmentés]](#unsegmented-profiles-trend)
 * [[!UICONTROL Profils non segmentés par identité]](#unsegmented-profiles-by-identity)
-* [[!UICONTROL Audiences mappées à l’état de destination]](#audiences-mapped-to-destination-status)
+* [[!UICONTROL Audiences mappées au statut de destination]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Taille des audiences]](#audiences-size)
 * [[!UICONTROL Tendance du nombre de profils]](#profile-count-trend)
 * [[!UICONTROL Profils d’identité uniques par identité]](#single-identity-profiles-by-identity)
+* [[!UICONTROL Chevauchement d’audience par stratégie de fusion]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL Les profils comptabilisent les tendances de changement par identité]](#profiles-count-change-trend-by-identity)
 
 ### [!UICONTROL Nombre de profils] {#profile-count}
 
@@ -149,11 +151,11 @@ Le **[!UICONTROL Profils ajoutés]** widget affiche le nombre total de profils f
 
 ![](../images/profiles/profiles-added.png)
 
-### [!UICONTROL Profils de tendance ajoutée] {#profiles-added-trend}
+### [!UICONTROL Tendance des profils ajoutés] {#profiles-added-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
->title="Profils de tendance ajoutée"
+>title="Profils tendance ajoutée"
 >abstract="Ce widget affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30, 90 ou 12 derniers jours. Le nombre dépend également de la stratégie de fusion sélectionnée appliquée à vos données de profil."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-count-trend" text="En savoir plus dans la documentation"
 
@@ -257,7 +259,7 @@ Le [!UICONTROL Profils non segmentés par identité] widget classe le nombre tot
 
 ![Le widget Profils non segmentés par identité .](../images/profiles/unsegmented-profiles-by-identity.png)
 
-### [!UICONTROL Audiences mappées à l’état de destination] {#audiences-mapped-to-destination-status}
+### [!UICONTROL Audiences mappées au statut de destination] {#audiences-mapped-to-destination-status}
 
 Le [!UICONTROL Audiences mappées à l’état de destination] le widget affiche le nombre total d’audiences mappées et non mappées dans une seule mesure et utilise un graphique en anneau pour illustrer la différence proportionnelle entre leurs totaux. Les nombres calculés dépendent de la stratégie de fusion choisie.
 
@@ -279,17 +281,36 @@ Pour plus d’informations sur la variable [[!UICONTROL Segments] [!UICONTROL  P
 
 ### [!UICONTROL Tendance du nombre de profils] {#profile-count-trend}
 
-Le [!UICONTROL Tendance du nombre de profils] widget utilise un graphique linéaire pour illustrer la tendance du nombre total de profils contenus dans le système au fil du temps. Ce nombre total inclut tous les profils importés dans le système depuis le dernier instantané quotidien. Les données peuvent être visualisées sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget.
+Le [!UICONTROL Tendance du nombre de profils] widget utilise un graphique linéaire pour illustrer la tendance du nombre total de profils contenus dans le système au fil du temps. Ce nombre total inclut tous les profils importés dans le système depuis le dernier instantané quotidien. Les données peuvent être consultées sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget.
 
 ![Le widget de tendance du nombre de profils.](../images/profiles/profile-count-trend.png)
 
 ### [!UICONTROL Profils d’identité uniques par identité] {#single-identity-profiles-by-identity}
 
-Ce widget utilise un graphique à barres pour illustrer le nombre total de profils qui sont identifiés avec un seul identifiant unique. Le widget prend en charge jusqu’à cinq des identités les plus courantes.
+Ce widget utilise un graphique à barres pour illustrer le nombre total de profils qui sont identifiés à l’aide d’un identifiant unique. Le widget prend en charge jusqu’à cinq des identités les plus courantes.
 
 Pointez sur des barres individuelles pour afficher une boîte de dialogue détaillant le nombre total de profils pour une identité.
 
 ![Profils d’identité unique par widget d’identité.](../images/profiles/single-identity-profiles-by-identity.png)
+
+### [!UICONTROL Chevauchement d’audience par stratégie de fusion] {#audience-overlap-by-merge-policy}
+
+Ce widget utilise un diagramme de Venn pour afficher le chevauchement de deux segments sélectionnés. La stratégie de fusion est sélectionnée dans la liste déroulante d’aperçu située en haut de la page et les segments à analyser sont sélectionnés dans deux menus déroulants du widget. Le nombre total de profils contenus dans la définition de segment pertinente peut être affiché en passant la souris sur un cercle ou l’intersection.
+
+Comme le widget affiche le croisement visuel des définitions de segment, vous pouvez optimiser votre stratégie de segmentation en étudiant les similarités entre vos définitions de segment.
+
+![Le tableau de bord Profils de l’interface utilisateur de Platform avec la liste déroulante Stratégie de fusion et les listes déroulantes de segments du widget sont mises en surbrillance.](../images/profiles/audience-overlap-by-merge-policy.png)
+
+### [!UICONTROL Les profils comptabilisent les tendances de changement par identité] {#profiles-count-change-trend-by-identity}
+
+<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
+
+Ce widget filtre le nombre de profils en fonction d’une identité source sélectionnée et d’une stratégie de fusion, puis illustre le changement de nombre pour diverses périodes à l’aide d’un graphique linéaire. La stratégie de fusion est sélectionnée dans la liste déroulante d’aperçu située en haut de la page. L’identité source et la période sont sélectionnées dans les menus déroulants du widget. La tendance peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois.
+
+Ce widget vous aide à gérer vos besoins d’activation de destination en présentant le modèle de croissance des profils filtrés par une identité requise.
+
+![Les profils comptabilisent la tendance de changement par widget d’identité.](../images/profiles/profiles-count-change-trend-by-identity.png)
+
 
 ## (Version bêta) Widgets d’efficacité des profils {#profile-efficacy-widgets}
 

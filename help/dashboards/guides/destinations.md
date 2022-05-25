@@ -4,10 +4,10 @@ title: Tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '2538'
-ht-degree: 2%
+source-wordcount: '2671'
+ht-degree: 3%
 
 ---
 
@@ -57,9 +57,10 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 * [[!UICONTROL Audiences courantes]](#common-audiences)
 * [[!UICONTROL Santé de l’audience mappée]](#mapped-audience-health)
 * [[!UICONTROL Nombre de destinations]](#destinations-count)
-* [[!UICONTROL État de la destination]](#destination-status)
-* [[!UICONTROL Destinations principales par plateforme de destination]](#active-destinations-by-destination-platform)
+* [[!UICONTROL Statut de destination]](#destination-status)
+* [[!UICONTROL Destinations actives par plateforme de destination]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Audiences activées sur toutes les destinations]](#activated-audiences-across-all-destinations)
+* [[!UICONTROL Audiences activées]](#activated-audiences)
 
 ### [!UICONTROL Destinations les plus utilisées] {#most-used-destinations}
 
@@ -229,7 +230,7 @@ Sous le nombre total, sélectionnez **[!UICONTROL Destinations]** pour accéder 
 
 ![Le widget Nombre de destinations .](../images/destinations/destinations-count.png)
 
-### [!UICONTROL État de la destination] {#destination-status}
+### [!UICONTROL Statut de destination] {#destination-status}
 
 Le [!UICONTROL État de la destination] le widget affiche le nombre total de destinations activées sous la forme d’une mesure unique et utilise un graphique en anneau pour illustrer la différence proportionnelle entre les destinations activées et désactivées.
 
@@ -237,7 +238,7 @@ Les décomptes individuels des destinations activées ou désactivées s’affic
 
 ![Le widget d’état Destination .](../images/destinations/destination-status.png)
 
-### [!UICONTROL Destinations principales par plateforme de destination] {#active-destinations-by-destination-platform}
+### [!UICONTROL Destinations actives par plateforme de destination] {#active-destinations-by-destination-platform}
 
 Le widget fournit un tableau à deux colonnes qui répertorie les principales plateformes de destination et le nombre total de destinations principales pour chaque plateforme de destination. La liste des plateformes de destination est classée de haut en bas.
 
@@ -250,6 +251,18 @@ Le [!UICONTROL Audiences activées sur toutes les destinations] fournit le nombr
 ![Le widget Audiences activées sur toutes les destinations .](../images/destinations/activated-audiences-across-all-destinations.png)
 
 Sélectionner **[!UICONTROL Audiences]** pour accéder aux destinations [!UICONTROL Parcourir] . Cette page fournit une liste de toutes les destinations activées et diverses mesures pertinentes. Consultez la documentation pour [en savoir plus sur la [!UICONTROL Parcourir] tab](../../destinations/ui/destinations-workspace.md#browse).
+
+### [!UICONTROL Audiences activées] {#activated-audiences}
+
+Ce widget fournit une mesure unique pour le nombre total d’audiences activées vers une destination.
+
+![Le widget Audiences activées .](../images/destinations/activated-audiences.png)
+
+Sélectionner **[!UICONTROL Audiences]** pour accéder à la page de détails du tableau de bord des destinations. Le [!UICONTROL Données d’activation] Cet onglet affiche la liste des segments qui ont été mappés à la destination, y compris leur date de début et de fin (le cas échéant), ainsi que d’autres informations pertinentes pour l’exportation des données, telles que le type d’exportation, la planification et la fréquence. Pour afficher les détails d’un segment particulier, sélectionnez son nom dans la liste.
+
+![La page de détails du tableau de bord des destinations avec l’onglet Données d’activation en surbrillance.](../images/destinations/activation-data-tab.png)
+
+Ce widget vous aide à comprendre la valeur de vos destinations en fonction du nombre d’audiences activées en un coup d’oeil. Il permet également d’accéder facilement à des informations plus détaillées pour une analyse plus approfondie.
 
 ## Étapes suivantes
 

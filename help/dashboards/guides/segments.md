@@ -4,14 +4,14 @@ title: Tableau de bord Segments
 description: 'Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments que votre entreprise a créés. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 63a7857c2b88e81de3df7d925daf15bf631ff84c
 workflow-type: tm+mt
-source-wordcount: '1491'
-ht-degree: 4%
+source-wordcount: '1576'
+ht-degree: 9%
 
 ---
 
-# Tableau de bord Segments {#segment-dashboard}
+# Tableau de bord de segments {#segment-dashboard}
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos segments, telles qu’elles sont capturées lors d’un instantané quotidien. Ce guide explique comment accéder au tableau de bord des segments et l’utiliser dans l’interface utilisateur. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
@@ -74,6 +74,7 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 * [[!UICONTROL Tendance de la taille de l’audience]](#audience-size-trend)
 * [[!UICONTROL Tendance de changement de la taille de l’audience]](#audience-size-change-trend)
 * [[!UICONTROL Tendance de la taille de l’audience par identité]](#audience-size-trend-by-identity)
+* [[!UICONTROL Supervision de l’audience]](#audience-overlap)
 
 ### [!UICONTROL Taille de l’audience] {#audience-size}
 
@@ -153,15 +154,23 @@ Pour en savoir plus sur l’évaluation des segments et sur la manière dont les
 
 ### [!UICONTROL Tendance de changement de la taille de l’audience] {#audience-size-change-trend}
 
-Ce widget fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour un segment donné et les instantanés quotidiens les plus récents. Le segment choisi pour l’analyse est sélectionné dans la liste déroulante d’aperçu. La période d’analyse des tendances peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. La taille de l’audience est répercutée sur l’axe des ordonnées et l’heure sur l’axe des abscisses.
+Ce widget fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour un segment donné et les aperçus quotidiens les plus récents. Le segment choisi pour l’analyse est sélectionné dans la liste déroulante d’aperçu. La période d’analyse des tendances peut être consultée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. La taille de l’audience est répercutée sur l’axe des ordonnées et l’heure sur l’axe des abscisses.
 
 ![Le widget de tendance de changement de la taille de l’audience .](../images/segments/audience-size-change-trend.png)
 
 ### [!UICONTROL Tendance de la taille de l’audience par identité] {#audience-size-trend-by-identity}
 
-Ce widget illustre la tendance de taille de l’audience d’un segment particulier en fonction du type d’identité sélectionné dans le menu déroulant du widget. Le segment utilisé pour l’analyse est sélectionné dans la liste déroulante d’aperçu. La période d’analyse des tendances peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget.
+Ce widget illustre la tendance de taille de l’audience d’un segment particulier en fonction du type d’identité sélectionné dans le menu déroulant du widget. Le segment utilisé pour l’analyse est sélectionné dans la liste déroulante d’aperçu. La période d’analyse des tendances peut être consultée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget.
 
 ![Tendance de la taille d’audience par widget d’identité.](../images/segments/audience-size-trend-by-identity.png)
+
+### [!UICONTROL Supervision de l’audience] {#audience-overlap}
+
+Ce widget représente le nombre de profils de deux segments qui répondent aux critères des deux définitions de segment. Les segments utilisés pour la comparaison sont sélectionnés dans les menus déroulants du widget. Le nombre total de profils contenus dans la définition de segment pertinente peut être affiché en passant la souris sur un cercle ou l’intersection du diagramme de Venn.
+
+Ce widget vous permet d’optimiser votre stratégie de segmentation en visualisant les similitudes dans les résultats de vos définitions de segment.
+
+![Le widget de chevauchement d’audience.](../images/segments/audience-overlap.png)
 
 ## Étapes suivantes
 
