@@ -4,8 +4,8 @@ description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 73aaf93e4d11c9e6dd20dfaaf64501eda9220ef8
 workflow-type: tm+mt
-source-wordcount: '2613'
-ht-degree: 96%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
