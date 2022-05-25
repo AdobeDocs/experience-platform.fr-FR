@@ -2,10 +2,10 @@
 title: Présentation des journaux d’audit
 description: Découvrez comment les journaux d’audit vous permettent de savoir qui a effectué quelles actions dans Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: ba190bdd1856b2d89fa28679eb7f09c258ddd17c
+source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 13%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,20 +23,28 @@ Le tableau suivant décrit les actions sur lesquelles les ressources sont enregi
 
 | Ressource | Actions |
 | --- | --- |
-| [Jeu de données](../../../catalog/datasets/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Activer pour [Real-time Customer Profile](../../../profile/home.md)</li><li>Désactiver pour Profile</li></ul> |
-| [Schéma](../../../xdm/schema/composition.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Activation pour Profile</li></ul> |
+| [Stratégie de contrôle d’accès (contrôle d’accès basé sur les attributs)](../../../access-control/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Compte (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Journaux d’audit](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exporter</li></ul> |
 | [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
-| [Groupe de champs](../../../xdm/schema/composition.md#field-group) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
-| [Type de données](../../../xdm/schema/composition.md#data-type) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
-| [Environnement de test](../../../sandboxes/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Réinitialiser</li><li>Supprimer</li></ul> |
-| [Destination](../../../destinations/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Activer</li><li>Désactiver</li><li>Activation du jeu de données</li><li>Suppression de jeux de données</li><li>Activation de profil</li><li>Suppression de profils</li></ul> |
-| [Segment](../../../segmentation/home.md) | <ul><li>Créez</li><li>Supprimer</li><li>Activation de segment</li><li>Suppression de segment</li></ul> |
-| [Stratégie de fusion](../../../profile/merge-policies/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Attribut calculé](../../../profile/computed-attributes/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Jeu de données](../../../catalog/datasets/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Activer pour [Real-time Customer Profile](../../../profile/home.md)</li><li>Désactiver pour Profile</li><li>Ajout de données</li><li>Supprimer le lot</li></ul> |
+| [Types de données](../../../xdm/schema/composition.md#data-type) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Destination](../../../destinations/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Activer</li><li>Désactiver</li><li>Activation du jeu de données</li><li>Suppression de jeux de données</li><li>Activation de profil</li><li>Suppression de profils</li></ul> |
+| [Groupe de champs](../../../xdm/schema/composition.md#field-group) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Graphique d’identités](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Affichage</li></ul> |
+| [Espace de noms d’identité](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Créez</li><li>Mise à jour </li></ul> |
+| [Stratégie de fusion](../../../profile/merge-policies/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Profil de produit](../../../access-control/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
-| [Compte (Adobe)](../../../access-control/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
-| [Modèle de requête](../../../access-control/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
-| [Requête planifiée](../../../access-control/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Requête](../../../query-service/ui/overview.md) | <ul><li>Exécuter</li></ul> |
+| [Modèle de requête](../../../query-service/ui/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Rôle (contrôle d’accès basé sur les attributs)](../../../access-control/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Ajouter un utilisateur</li><li>Supprimer un utilisateur</li></ul> |
+| [Environnement de test](../../../sandboxes/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Réinitialiser</li><li>Supprimer</li></ul> |
+| [Requête planifiée](../../../query-service/ui/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Schéma](../../../xdm/schema/composition.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Activation pour Profile</li></ul> |
+| [Segment](../../../segmentation/home.md) | <ul><li>Créez</li><li>Supprimer</li><li>Activation de segment</li><li>Suppression de segment</li></ul> |
+| [Flux de données source](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Activer</li><li>Désactiver</li><li>Activation du jeu de données</li><li>Suppression du jeu de données</li><li>Activité de profil</li><li>Suppression de profil</li></ul> |
+| [Ordre de travail](../../../hygiene/home.md) | <ul><li>Créez</li></ul> |
 
 ## Accès aux journaux d’audit
 
@@ -50,7 +58,7 @@ Vous pouvez afficher les journaux d’audit pour différentes fonctionnalités d
 
 ![Tableau de bord des journaux d’audit](../../images/audit-logs/audits.png)
 
-Les journaux d’audit sont conservés pendant 365 jours, après quoi ils seront supprimés du système. Par conséquent, vous ne pouvez revenir que pendant une période maximale de 365 jours.
+Les journaux d’audit sont conservés pendant 365 jours, après quoi ils seront supprimés du système. Par conséquent, vous ne pouvez revenir en arrière que pendant une période maximale de 365 jours. Si vous avez besoin de données de plus de 365 jours, vous devez exporter les journaux à un rythme régulier afin de répondre aux exigences de votre stratégie interne.
 
 Sélectionnez un événement dans la liste pour afficher ses détails dans le rail de droite.
 
