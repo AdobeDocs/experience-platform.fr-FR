@@ -5,7 +5,7 @@ title: Présentation des connecteurs source
 topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 365e36351bf18864c677f53dffbc30b47f29b074
+source-git-commit: cae2c80c5e0fc7aaece948599e781b32d67989bb
 workflow-type: tm+mt
 source-wordcount: '1000'
 ht-degree: 99%
@@ -85,6 +85,7 @@ Experience Platform prend en charge l’ingestion de données provenant d’une
 
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow]](connectors/customer-success/servicenow.md)
+- [[!DNL Zendesk]](connectors/customer-success/zendesk.md)
 
 ### Base de données {#database}
 
