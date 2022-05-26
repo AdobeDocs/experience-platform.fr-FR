@@ -5,10 +5,10 @@ title: Présentation des connecteurs source
 topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: cae2c80c5e0fc7aaece948599e781b32d67989bb
+source-git-commit: 7ffc2ed09b58cc6b6118ef2115666aae092c202c
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 99%
+source-wordcount: '1001'
+ht-degree: 98%
 
 ---
 
@@ -28,22 +28,22 @@ Les sources dans Experience Platform sont regroupées dans les catégories suiv
 
 Experience Platform permet d’ingérer des données provenant d’autres applications Adobe, notamment Adobe Analytics et Adobe Audience Manager. Pour plus d’informations, consultez les documents connexes suivants :
 
-- [Présentation du connecteur Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
+- [Présentation de la source Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
 - [Créer une connexion source Adobe Audience Manager dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Présentation de la connexion source données de classifications Adobe Analytics](connectors/adobe-applications/classifications.md)
 - [Créer une connexion de source de données de classifications Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Présentation de la connexion de source de données de la suite de rapports Adobe Analytics](connectors/adobe-applications/analytics.md)
 - [Créer une connexion source Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Adobe de la collecte de données](connectors/adobe-applications/data-collection.md)
+- [Présentation de la source de collecte de données Adobe](connectors/adobe-applications/data-collection.md)
 - [Créer une connexion source Attributs du client dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [Présentation du connecteur [!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
+- [[!DNL Marketo Engage] présentation de la source](connectors/adobe-applications/marketo/marketo.md)
 - [Créer une connexion source  [!DNL Marketo Engage]  dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Publicité {#advertising}
 
 Experience Platform prend en charge l’ingestion de données provenant d’un système publicitaire tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
-- Connecteur [[!DNL Google AdWords]](connectors/advertising/ads.md)
+- [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
 ### Stockage dans le cloud {#cloud-storage}
 
