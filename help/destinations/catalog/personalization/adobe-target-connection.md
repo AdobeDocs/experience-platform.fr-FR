@@ -3,7 +3,7 @@ keywords: personnalisation cible;destination;destination cible Experience Platfo
 title: Connexion Adobe Target
 description: Adobe Target est une application qui permet la personnalisation et l’expérimentation en temps réel, grâce à l’IA, au niveau de toutes les interactions avec les clients entrants sur les sites web, les applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 0868d81bcd1968b3223c79abb5a7bb8f279a4130
+source-git-commit: 46e732dfc630ad1875a57289a6e6cf9c964b9547
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 45%
@@ -51,7 +51,7 @@ Une société de location et de vente d’habitations souhaite personnaliser sa 
 >id="platform_destinations_target_datastream"
 >title="À propos des identifiants de flux de données"
 >abstract="Cette option détermine dans quel jeu de données de collecte de données les segments seront inclus. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration Target est activée. Pour utiliser la segmentation Edge, vous devez sélectionner un identifiant de flux de données. Si vous sélectionnez Aucun, tous les cas d’utilisation qui utilisent la segmentation Edge sont désactivés."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="En savoir plus sur la sélection des flux de données."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="En savoir plus sur la sélection des flux de données"
 
 >[!IMPORTANT]
 > 
