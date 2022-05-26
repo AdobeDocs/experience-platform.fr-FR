@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 37d073266bf9293ad3a9e85c193acd1e2e47fa2a
+source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
 workflow-type: tm+mt
 source-wordcount: '1553'
-ht-degree: 32%
+ht-degree: 33%
 
 ---
 
@@ -71,9 +71,11 @@ Experience Platform vous permet d’auditer l’activité des utilisateurs pour 
 
 **Fonctionnalités mises à jour**
 
-| Fonctionnalité | Nom | Description | | — | — | — | | Ressources ajoutées | <ul><li> Stratégie de contrôle d’accès </li><li> Rôle </li><li> Journaux d’audit </li><li> Ordre de travail </li><li> Espace de noms d’identité </li><li> Graphique d’identités </li><li> Requête </li><li> Jeu de données </li><li> Flux de données source </li></ul> | Les ressources du journal d’audit sont enregistrées automatiquement au fur et à mesure que l’activité se produit. Si la fonction est activée, vous n’avez pas besoin d’activer manuellement la collecte des journaux. |
+| Fonctionnalité | Nom | Description |
+| --- | --- | --- |
+| Ressources ajoutées | <ul><li> Stratégie de contrôle d’accès </li><li> Rôle </li><li> Journaux d’audit </li><li> Ordre de travail </li><li> Espace de noms d’identité </li><li> Graphique d’identités </li><li> Requête </li><li> Jeu de données </li><li> Flux de données source </li></ul> | Les ressources du journal d’audit sont automatiquement enregistrées au fur et à mesure que l’activité se produit. Si la fonction est activée, vous n’avez pas besoin d’activer manuellement la collecte des journaux. |
 
-
+{style=&quot;table-layout:auto&quot;}
 
 Pour plus d’informations sur les journaux d’audit dans Platform, consultez la [présentation des journaux d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
 
