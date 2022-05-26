@@ -5,10 +5,10 @@ title: Syntaxe SQL dans Query Service
 topic-legacy: syntax
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f509b468e7779b822eda96033a2c55cc3a12893d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3050'
+ht-degree: 9%
 
 ---
 
@@ -447,7 +447,7 @@ L’exemple renvoie les éléments suivants :
 2  b Spark SQL
 ```
 
-Ce deuxième exemple illustre le concept et l&#39;application de la `inline` fonction . Le modèle de données de l’exemple est illustré dans l’image ci-dessous.
+Ce deuxième exemple illustre le concept et l&#39;application de la méthode `inline` fonction . Le modèle de données de l’exemple est illustré dans l’image ci-dessous.
 
 ![Schéma de productListItems](../images/sql/productListItems.png)
 
@@ -714,7 +714,7 @@ COPY query
 >
 >Le chemin de sortie complet sera : `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
-### ALTER TABLE
+### ALTER TABLE {#alter-table}
 
 Le `ALTER TABLE` vous permet d&#39;ajouter ou de déposer des contraintes de clé Principale ou étrangère, ainsi que d&#39;ajouter des colonnes dans le tableau.
 
@@ -747,6 +747,26 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name
 >
 >Le schéma de la table doit être unique et ne pas être partagé entre plusieurs tables. En outre, l’espace de noms est obligatoire pour les Principales contraintes de clé.
 
+#### Ajout ou suppression d’identités Principales et secondaires
+
+Le `ALTER TABLE` vous permet d’ajouter ou de supprimer des contraintes pour les colonnes des tables d’identités Principales et secondaires directement via SQL.
+
+Les exemples suivants ajoutent une identité Principale et une identité secondaire en ajoutant des contraintes.
+
+```sql
+ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
+ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
+```
+
+Les identités peuvent également être supprimées en supprimant des contraintes, comme illustré dans l’exemple ci-dessous.
+
+```sql
+ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
+ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
+```
+
+Pour plus d’informations, consultez le document sur la définition des identités dans des jeux de données ad hoc .
+
 #### AJOUTER UNE COLONNE
 
 Les requêtes SQL suivantes présentent des exemples d’ajout de colonnes à un tableau.
@@ -756,6 +776,23 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
+
+##### Types de données pris en charge
+
+Le tableau suivant répertorie les types de données acceptés pour l’ajout de colonnes à un tableau avec [!DNL Postgres SQL], XDM et la variable [!DNL Accelerated Database Recovery] (MARC) dans Azure SQL.
+
+| --- | Client PSQL | XDM | MARC | Description |
+|---|---|---|---|---|
+| 1 | `bigint` | `int8` | `bigint` | Type de données numérique utilisé pour stocker des entiers volumineux allant de -9 223 372 036 854 775 807 à 9 223 372 036 854 775 807 en 8 octets. |
+| 2 | `integer` | `int4` | `integer` | Type de données numérique utilisé pour stocker des entiers compris entre -2 147 483 648 et 2 147 483 647 en 4 octets. |
+| 3 | `smallint` | `int2` | `smallint` | Type de données numérique utilisé pour stocker des entiers compris entre -32 768 et 215-1 32 767 en 2 octets. |
+| 4 | `tinyint` | `int1` | `tinyint` | Type de données numérique utilisé pour stocker des entiers compris entre 0 et 255 sur 1 octet. |
+| 5 | `varchar(len)` | `string` | `varchar(len)` | Type de données de caractère de taille variable. `varchar` est mieux utilisée lorsque les tailles des entrées de données de colonne varient considérablement. |
+| 6 | `double` | `float8` | `double precision` | `FLOAT8` et `FLOAT` sont des synonymes valides pour `DOUBLE PRECISION`. `double precision` est un type de données à virgule flottante. Les valeurs de points flottants sont stockées dans 8 octets. |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` est un synonyme valide pour `double precision`.`double precision` est un type de données à virgule flottante. Les valeurs de points flottants sont stockées dans 8 octets. |
+| 8 | `date` | `date` | `date` | Le `date` Les types de données sont des valeurs de date de calendrier stockées sur 4 octets, sans informations d’horodatage. La plage de dates valides va de 01-01-0001 à 12-31-9999. |
+| 9 | `datetime` | `datetime` | `datetime` | Type de données utilisé pour stocker un instant dans le temps exprimé sous la forme d’une date et d’une heure calendaires. `datetime` inclut les qualificateurs de : année, mois, jour, heure, seconde et fraction. A `datetime` La déclaration peut inclure n’importe quel sous-ensemble de ces unités temporelles qui sont jointes dans cette séquence, ou même ne comprendre qu’une seule unité temporelle. |
+| 10 | `char(len)` | `string` | `char(len)` | Le `char(len)` Le mot-clé est utilisé pour indiquer que l’élément est un caractère de longueur fixe. |
 
 #### AJOUT D’UN SCHÉMA
 
