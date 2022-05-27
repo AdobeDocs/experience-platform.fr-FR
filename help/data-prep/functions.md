@@ -5,10 +5,10 @@ title: Fonctions de mappage de prép de données
 topic-legacy: overview
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 87bdffece94404ae49fcc2b4afbe44db0864cafb
+source-git-commit: ddc1750502281bfd7432336e707a35b8139ff069
 workflow-type: tm+mt
-source-wordcount: '4175'
-ht-degree: 17%
+source-wordcount: '4298'
+ht-degree: 16%
 
 ---
 
@@ -164,6 +164,8 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 | join_arrays | Combine les tableaux les uns avec les autres. | <ul><li>ARRAY : **Obligatoire** Le tableau auquel vous ajoutez des éléments.</li><li>VALEURS : Les tableaux que vous souhaitez ajouter au tableau parent.</li></ul> | join_arrays &#x200B;(ARRAY, VALES) | join_arrays &#x200B;([&#39;a&#39;, &#39;b&#39;], [&quot;c&quot;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Prend une liste d’entrées et la convertit en tableau. | <ul><li>INCLUDE_NULLS : **Obligatoire** Valeur boolean indiquant s’il faut inclure ou non les valeurs nulles dans le tableau de réponse.</li><li>VALEURS : **Obligatoire** Les éléments à convertir en tableau.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | Renvoie la taille de l’entrée. | <ul><li>INPUT : **Obligatoire** L&#39;objet dont vous essayez de trouver la taille.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
+| upsert_array_append | Cette fonction est utilisée pour ajouter tous les éléments du tableau d’entrée entier à la fin du tableau dans Profile. Cette fonction est **only** applicable pendant les mises à jour. Si elle est utilisée dans le contexte d’insertions, cette fonction renvoie l’entrée telle quelle. | <ul><li>ARRAY : **Obligatoire** Tableau à ajouter au tableau dans le profil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123 456] |
+| upsert_array_replace | Cette fonction est utilisée pour remplacer des éléments d’un tableau. Cette fonction est **only** applicable pendant les mises à jour. Si elle est utilisée dans le contexte d’insertions, cette fonction renvoie l’entrée telle quelle. | <ul><li>ARRAY : **Obligatoire** Tableau à remplacer dans le profil.</li><li>INDEX : **Facultatif** Position à partir de laquelle le remplacement doit avoir lieu.</li></li> | upsert_array_replace(ARRAY, INDEX) | `upsert_array_replace([123, 456], 1)` | [123 456] |
 
 {style=&quot;table-layout:auto&quot;}
 
