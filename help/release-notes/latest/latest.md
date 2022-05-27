@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
+source-git-commit: d8f62bdaa0d043fa2c27b25ae2a6f5979076314e
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 33%
+source-wordcount: '1593'
+ht-degree: 32%
 
 ---
 
@@ -136,6 +136,7 @@ Experience Platform fournit une suite de technologies qui vous permet de collect
 | Importation des règles de mappage des jeux de données | Lors de la configuration de la préparation des données pour la collecte de données, vous pouvez [importer les règles de mappage d’un flux de données existant ;](../../edge/datastreams/data-prep.md#import-mapping) au lieu de configurer manuellement chaque mappage de champ. |
 | Prise en charge du mappage de l’équipe de données pour le SDK Mobile | Vous pouvez désormais configurer la préparation des données pour la collecte de données dans les flux de données destinés à être utilisés avec le SDK Mobile Experience Platform. |
 | Prise en charge du mappage de l’équipe de données pour les objets XDM | Mappage d’objets XDM en plus des objets de couche de données lors de [configuration de la préparation des données pour la collecte de données](../../edge/datastreams/data-prep.md#select-data). |
+| Intégration aux flux de données | Utilisez le catalogue de sources dans Platform pour accéder à vos données sur Platform Edge Network, y compris la préparation des données pour la collecte de données et la prise en charge améliorée des avertissements relatifs à la préparation des données. Voir [Présentation de la source de collecte de données Adobe](../../sources/connectors/adobe-applications/data-collection.md) pour plus d’informations. |
 
 Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).
 
@@ -238,7 +239,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 | Fonctionnalité | Description |
 | --- | --- |
 | Version bêta de [!DNL Zendesk] source | Utilisez la variable [!DNL Zendesk] source pour ingérer des données d’utilisateur, d’agent et d’organisation à partir de votre [!DNL Zendesk] instance pour [!DNL Profile] enrichissement. Voir [[!DNL Zendesk] présentation de la source](../../sources/connectors/customer-success/zendesk.md) pour plus d’informations. |
-| Prise en charge de la collecte de données d’Adobe | Utilisez le catalogue de sources pour accéder à vos données Experience Edge de collecte de données, y compris la préparation des données pour la collecte de données et la prise en charge améliorée des avertissements de données depuis Data Prep. Voir [Présentation de la source de collecte de données Adobe](../../sources/connectors/adobe-applications/data-collection.md) pour plus d’informations. |
+| Prise en charge de la collecte de données d’Adobe | Utilisez le catalogue de sources dans Platform pour accéder à vos données sur Platform Edge Network, y compris la préparation des données pour la collecte de données et la prise en charge améliorée des avertissements relatifs à la préparation des données. Voir [Présentation de la source de collecte de données Adobe](../../sources/connectors/adobe-applications/data-collection.md) pour plus d’informations. |
 | Prise en charge de l’ingestion de fichiers avec `ISO-8859-1` encoding | Utilisez la variable `encoding` paramètre à ingérer `ISO-8859-1` fichiers codés avec une source de stockage dans le cloud vers Platform à l’aide de la méthode [!DNL Flow Service] API. Consultez le guide sur la [création d’une connexion source de stockage dans le cloud](../../sources/tutorials/api/collect/cloud-storage.md) pour plus d’informations. |
 
 {style=&quot;table-layout:auto&quot;}
