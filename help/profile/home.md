@@ -5,9 +5,9 @@ topic-legacy: guide
 description: Real-time Customer Profile fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: d2182b48e21de059f12ad8923bb3b420ed87bcfc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2046'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 La relation entre Real-time Customer Profile et les autres services dans Experience Platform est mise en évidence dans le schéma suivant :
 
-![La relation entre Real-time Customer Profile et les autres services dans Adobe Experience Platform. Ce diagramme montre que Profile est l’un des composants principaux de Adobe Experience Platform.](images/profile-overview/profile-in-platform.png)
+![La relation entre le profil client en temps réel et les autres services d’Adobe Experience Platform. Ce diagramme montre que Profil est l’un des principaux composants d’Adobe Experience Platform.](images/profile-overview/profile-in-platform.png)
 
 ## Présentation des profils
 
@@ -27,16 +27,16 @@ Le [!DNL Real-time Customer Profile] fusionne les données de divers systèmes d
 
 ### Composition de l’entité de profil
 
-Un profil client en temps réel est composé d’une entité principale, appelée **Principale entité**, et diverses entités annexes. L’entité Principale est composée des caractéristiques, des comportements et des appartenances aux segments d’un profil. D’autres entités permettent au moteur de segmentation d’utiliser des données en dehors de l’entité Principale du profil, et incluent les éléments suivants :
+Un profil client en temps réel est composé d’une entité principale, appelée l’**entité principale**, et de diverses entités annexes. L’entité principale est composée de caractéristiques, de comportements et d’appartenances aux segments d’un profil. D’autres entités permettent au moteur de segmentation d’utiliser des données en dehors de l’entité principale du profil, et incluent les éléments suivants :
 
-- **Entité dimensionnelle**: L’entité utilisée pour simplifier le processus de modélisation des données pour les informations partagées entre les événements ou les enregistrements de profil. On parle également d’entité de recherche ou d’entité de classification.
-- **Entité B2B**: Entités qui décrivent la relation du profil avec les comptes et opportunités d’entreprise à entreprise.
+- **Entité dimensionnelle** : l’entité utilisée pour simplifier le processus de modélisation des données pour les informations partagées entre les événements ou les enregistrements de profil. On parle également d’entité de recherche ou d’entité de classification.
+- **Entité B2B** : entités qui décrivent la relation du profil avec les comptes et opportunités business-to-business.
 
-![Diagramme expliquant la composition de l’entité de profil.](./images/profile-overview/profile-entity-composition.png)
+![Un diagramme expliquant la composition de l’entité de profil.](./images/profile-overview/profile-entity-composition.png)
 
 >[!IMPORTANT]
 >
->Comme les entités dimensionnelles et B2B n’existent qu’en dehors de l’entité Principale, elles ne sont utilisées que pour la segmentation par lots.
+>Étant donné que les entités dimensionnelles et B2B n’existent qu’en dehors de l’entité principale, elles sont uniquement utilisées pour la segmentation par lots.
 
 ### Banque de données de profil
 
