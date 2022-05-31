@@ -5,10 +5,10 @@ title: Gestion des formats de données avec la préparation des données
 topic-legacy: overview
 description: Ce document donne un aperçu de la manière dont différents types de données sont traités dans la préparation des données.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
-workflow-type: ht
-source-wordcount: '568'
-ht-degree: 100%
+source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 98%
 
 ---
 
@@ -106,3 +106,7 @@ Le tableau suivant indique les lettres de modèle définies pour les chaînes de
 | V | Identifiant de fuseau horaire | Texte | Amérique/Los_Angeles |
 | O | Décalage du fuseau horaire | Texte | GMT+8 |
 | Q/q | Trimestre de l’année | Nombre/Texte | 3; 03; T3; 3e trimestre |
+
+## Cartes {#maps}
+
+Les mappages ne sont actuellement pas pris en charge dans [!DNL Data Prep].
