@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
+source-git-commit: d01875bcb89d887ca4f4dbb9e7fe6179446faa3c
 workflow-type: tm+mt
-source-wordcount: '755'
-ht-degree: 93%
+source-wordcount: '759'
+ht-degree: 92%
 
 ---
 
@@ -48,6 +48,7 @@ ht-degree: 93%
       * [Partage de segments Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)
    * Destinations publicitaires {#advertising}
       * [Présentation des destinations publicitaires](./catalog/advertising/overview.md)
+      * [Connexion Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Extension Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
       * [Extension Awin Advertiser Conversion Tag](./catalog/advertising/awin-conversiontag.md)
       * [Extension Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
