@@ -4,9 +4,9 @@ description: Découvrez comment afficher et gérer les tâches d’hygiène des 
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 hide: true
 hidefromtoc: true
-source-git-commit: e539ee73b04230ac6e3dc4801ce0f8446bec8de6
+source-git-commit: 41fee3bacb441c2f773382de215eba8bfac9f9df
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '546'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 >id="platform_hygiene_workorders"
 >title="ID de l’ordre de travail"
 >abstract="Lorsqu’une demande d’hygiène des données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. En d’autres termes, un ordre de travail représente un processus spécifique d’hygiène des données, qui inclut son état actuel et d’autres détails connexes. Chaque ordre de travail se voit automatiquement attribuer son propre identifiant unique lors de sa création."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/browse.html" text="Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène des données ."
+>text="See the data hygiene UI guide to learn more."
 
 >[!IMPORTANT]
 >
