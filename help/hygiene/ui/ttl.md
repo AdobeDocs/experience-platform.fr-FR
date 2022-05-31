@@ -2,11 +2,9 @@
 title: Gestion des TTL de jeux de données
 description: Découvrez comment planifier une heure d’activation (TTL) pour un jeu de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
@@ -27,13 +25,11 @@ Pour créer une requête, sélectionnez **[!UICONTROL Créer une requête]** de 
 
 ![Image montrant le [!UICONTROL Créer une requête] bouton sélectionné](../images/ui/ttl/create-request-button.png)
 
-La boîte de dialogue de création de requête s’affiche. Sous , **[!UICONTROL Action]** , sélectionnez **[!UICONTROL Jeu de données]** pour mettre à jour les commandes disponibles pour la planification TTL.
-
-![Image montrant le [!UICONTROL Jeu de données] option sélectionnée](../images/ui/ttl/create-request-button.png)
+<!-- The request creation dialog appears. Under the **[!UICONTROL Action]** section, select **[!UICONTROL Dataset]** to update the available controls for TTL scheduling-->
 
 ### Sélection d’une date et d’un jeu de données
 
-Sous , **[!UICONTROL Action]** , sélectionnez une date à laquelle le jeu de données doit être supprimé. Vous pouvez saisir la date manuellement (au format `mm/dd/yyyy`) ou sélectionnez l’icône de calendrier (![Image de l&#39;icône du calendrier](../images/ui/ttl/calendar-icon.png)) pour sélectionner la date dans une boîte de dialogue.
+La boîte de dialogue de création de requête s’affiche. Sous , **[!UICONTROL Action]** , sélectionnez une date à laquelle le jeu de données doit être supprimé. Vous pouvez saisir la date manuellement (au format `mm/dd/yyyy`) ou sélectionnez l’icône de calendrier (![Image de l&#39;icône du calendrier](../images/ui/ttl/calendar-icon.png)) pour sélectionner la date dans une boîte de dialogue.
 
 ![Image montrant une date d’expiration définie pour le délai d’activation](../images/ui/ttl/select-date.png)
 
@@ -49,11 +45,11 @@ Ensuite, sous **[!UICONTROL Détails du jeu de données]**, sélectionnez l’ic
 
 Une fois que vous avez sélectionné un jeu de données et une date TTL, sélectionnez **[!UICONTROL Envoyer]**.
 
-![Image montrant le [!UICONTROL Envoyer] bouton sélectionné](../images/ui/ttl/select-dataset.png)
+![Image montrant le [!UICONTROL Envoyer] bouton sélectionné](../images/ui/ttl/submit.png)
 
 Vous êtes invité à confirmer la date à laquelle le jeu de données sera supprimé. Sélectionner **[!UICONTROL Envoyer]** pour continuer.
 
-Une fois la demande envoyée, un ordre de travail est créé et s’affiche sur la page [!UICONTROL Consommateur] de l’onglet [!UICONTROL Hygiène des données] workspace. À partir de là, vous pouvez surveiller l’état de l’ordre de travail lors du traitement de la requête.
+Une fois la demande envoyée, un ordre de travail est créé et s’affiche sur l’onglet principal de la [!UICONTROL Hygiène des données] workspace. À partir de là, vous pouvez surveiller l’état de l’ordre de travail lors du traitement de la requête.
 
 ## Modification ou annulation d’un TTL
 
@@ -63,6 +59,4 @@ Sur la page des détails de la durée de vie, le rail de droite affiche les comm
 
 ## Étapes suivantes
 
-Ce document explique comment planifier des TTL de jeux de données dans l’interface utilisateur Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches d’hygiène des données dans l’interface utilisateur, reportez-vous à la section [Présentation de l’interface utilisateur de l’hygiène des données](./overview.md).
-
-Pour savoir comment planifier des TTL de jeux de données à l’aide de l’API Data Hygiene, reportez-vous à la section [guide de point d’entrée TTL du jeu de données](../api/ttl.md).
+Ce document explique comment planifier des TTL de jeux de données dans l’interface utilisateur Experience Platform. Pour savoir comment planifier des TTL de jeux de données à l’aide de l’API Data Hygiene, reportez-vous à la section [guide de point d’entrée TTL du jeu de données](../api/ttl.md).

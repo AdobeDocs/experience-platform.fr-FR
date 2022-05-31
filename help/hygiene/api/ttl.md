@@ -2,9 +2,7 @@
 title: Point de terminaison de l’API TTL (Dataset Time-to-Live)
 description: Le point d’entrée /ttl de l’API Data Hygiene vous permet de planifier par programmation les TTL du jeu de données dans Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
 source-wordcount: '1315'
 ht-degree: 7%

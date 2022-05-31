@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b557946252cd2afc07159caad939ec3a11d35e28
+source-git-commit: c318d64f6dc09094855ec20d998a7c41d837211f
 workflow-type: tm+mt
-source-wordcount: '2389'
+source-wordcount: '2375'
 ht-degree: 27%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 27%
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 
-- [Contrôle d’accès basé sur les attributs](#abac) —>
+- [Contrôle d’accès basé sur les attributs](#abac)
 - [Assurance des données](#hygiene)
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
@@ -60,8 +60,9 @@ Experience Platform fournit une suite de fonctionnalités d’hygiène des donn�
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Suppression de clients | [Suppression des enregistrements de consommateurs](../../hygiene/ui/delete-consumer.md) du lac de données et de la banque de profils en fonction de Principales données d’identité. |
 | Durée de vie (TTL) des jeux de données | [Planification des TTL](../../hygiene/ui/ttl.md) pour les jeux de données Platform. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Pour plus d’informations sur les journaux d’audit dans Platform, reportez-vous à la section [présentation de l’hygiène des données](../../hygiene/home.md).
 

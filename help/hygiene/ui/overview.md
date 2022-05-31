@@ -2,11 +2,9 @@
 title: Guide de l’interface utilisateur de l’hygiène des données
 description: Découvrez comment gérer les tâches d’hygiène des données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
@@ -25,8 +23,7 @@ Pour accéder à l’espace de travail, sélectionnez **[!UICONTROL Hygiène des
 
 ![Image montrant le [!UICONTROL Hygiène des données] espace de travail dans l’interface utilisateur de Platform](../images/ui/overview/home.png)
 
-À partir de là, vous pouvez parcourir les ordres de travail existants et créer de nouvelles demandes d’hygiène des données. Pour en savoir plus, consultez les sections suivantes de ce guide :
+À partir de là, vous pouvez parcourir les ordres de travail existants et configurer de nouvelles opérations d’hygiène des données. Pour en savoir plus, consultez les sections suivantes de ce guide :
 
 * [Parcourir les ordres de travail existants](./browse.md)
-* [Suppression des données des consommateurs](./delete-consumer.md)
 * [Gestion du temps d’activation (TTL) des jeux de données](./ttl.md)

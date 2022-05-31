@@ -2,12 +2,10 @@
 title: Guide de l’API d’hygiène des données
 description: Découvrez comment corriger ou supprimer par programme les données personnelles de vos clients stockées dans Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 29%
+source-wordcount: '309'
+ht-degree: 33%
 
 ---
 
@@ -41,9 +39,9 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 Ce document fournit un exemple d’appel API pour illustrer la manière dont vous devez formater vos requêtes. Pour en savoir plus sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section relative à la [lecture d’exemples d’appels API](../../landing/api-guide.md#sample-api) dans le guide de prise en main des API d’Experience Platform.
 
-## Ordre de travail
+<!-- ## Work orders
 
-Un ordre de travail est une représentation d’une tâche d’hygiène des données qui supprime les identités des consommateurs d’un jeu de données spécifique ou de tous les jeux de données. Voir [guide de point de terminaison des commandes de travail](./workorder.md) pour plus d’informations sur l’utilisation des commandes de travail dans l’API.
+A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
 ## Durée de vie (TTL) des jeux de données
 
