@@ -3,10 +3,10 @@ keywords: la publicité; les critères;
 title: Connexion à un critère
 description: Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaque consommateur des expériences plus riches sur l’Internet libre. Grâce au jeu de données commercial le plus important du monde et à l’IA la plus performante du monde, Criteo s’assure que chaque point de contact du parcours d’achat est personnalisé pour atteindre les clients avec la bonne publicité, au bon moment.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: add177efd3fdd0a39dc33c5add59375f8e918c1e
+source-git-commit: 07974f92c741d74e6d0289120538655379d3ca35
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 8%
+source-wordcount: '942'
+ht-degree: 7%
 
 ---
 
@@ -24,11 +24,13 @@ Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaq
 
 * Vous devez disposer d’un compte utilisateur administrateur sur [Centre de gestion des critères](https://marketing.criteo.com).
 * Vous aurez besoin de votre identifiant publicitaire Criteo (demandez à votre contact Criteo si vous ne possédez pas cet identifiant).
+* Vous devrez fournir [!DNL GUM caller ID], au cas où vous souhaitez utiliser [!DNL GUM ID] comme identifiant.
 
 ## Limites {#limitations}
 
 * Criteo ne prend actuellement pas en charge la suppression d’utilisateurs des audiences.
-* Acceptation des critères uniquement [!DNL SHA-256]Emails en texte brut et hachés (à transformer en [!DNL SHA-256] avant envoi). Veuillez ne pas envoyer d&#39;informations d&#39;identification personnelles, telles que les noms ou numéros de téléphone d&#39;un individu.
+* Acceptation des critères uniquement [!DNL SHA-256]Emails en texte brut et hachés (à transformer en [!DNL SHA-256] avant envoi). Veuillez ne pas envoyer d&#39;informations d&#39;identification personnelles, telles que le nom ou les numéros de téléphone d&#39;un individu.
+* Le critère nécessite qu’au moins un identifiant soit fourni par le client. Elle établit des priorités. [!DNL GUM ID] comme identifiant sur un email haché, car il contribue à un meilleur taux de correspondance.
 
 ![Conditions préalables](../../assets/catalog/advertising/criteo/prerequisites.png)
 
@@ -39,6 +41,7 @@ Criteo prend en charge l’activation des identités décrites dans le tableau c
 | Identité cible | Description | Considérations |
 | --- | --- | --- |
 | `email_sha256` | Adresses électroniques hachées avec l’algorithme SHA-256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA-256. Lorsque votre champ source contient des attributs non hachés, vérifiez la variable [!UICONTROL Appliquer la transformation] pour que Platform hache automatiquement les données lors de l’activation. |
+| `gum_id` | Criteo [!DNL GUM] identifiant de cookie | [!DNL GUM IDs] permettre aux clients de gérer une correspondance entre leur système d’identification utilisateur et l’identification utilisateur de Criteo ([!DNL UID]). Si le type d’identifiant est `GUM`, un paramètre supplémentaire, [!DNL GUM Caller ID], doit également être inclus. Contactez votre équipe de compte Criteo pour connaître les [!DNL GUM Caller ID] ou pour obtenir plus d’informations à ce sujet `GUM` synchronisation, si nécessaire. |
 
 ## Type et fréquence d&#39;export {#export-type-frequency}
 
@@ -98,6 +101,7 @@ Après vous être authentifié à la destination, veuillez renseigner les param�
 | Description | Description qui vous aidera à identifier cette destination ultérieurement. | Non |
 | Version de l’API | Version de l’API Criteo. Sélectionnez Aperçu. | Oui |
 | Identifiant annonceur | Identifiant de publicitaire de critère de votre organisation. Contactez votre gestionnaire de compte Criteo pour obtenir ces informations. | Oui |
+| Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] de votre organisation. Contactez votre équipe de compte Criteo pour connaître les [!DNL GUM Caller ID] ou pour obtenir plus d’informations à ce sujet [!DNL GUM] synchronisation, si nécessaire. | Oui, chaque fois que [!DNL GUM ID] est fourni comme identifiant |
 
 ## Activer des segments vers cette destination {#activate-segments}
 
@@ -114,21 +118,29 @@ Vous pouvez voir les segments exportés dans le [Centre de gestion des critères
 Le corps de la requête reçu par le [!DNL Criteo] La connexion ressemble à ceci :
 
 ```json
-{ 
-  "data": { 
-    "type": "ContactlistWithUserAttributesAmendment", 
-    "attributes": { 
-      "operation": "add", 
-      "identifierType": "sha256email", 
-      "identifiers": [ 
-        { 
-          "identifier": "1c8494bbc4968277345133cca6ba257b9b3431b8a84833a99613cf075a62a16d", 
-          "attributes": [{ "key": "customValue", "value": "1" }] 
-        } 
-      ] 
-    } 
-  } 
-} 
+{
+  "data": {
+    "type": "ContactlistWithUserAttributesAmendment",
+    "attributes": {
+      "operation": "add",
+      "identifierType": "gum",
+      "gumCallerId": "123",
+      "identifiers": [
+        {
+          "identifier": "456",
+          "attributes": [
+            { "key": "ctoid_GumCaller", "value": "123" },
+            { "key": "ctoid_Gum", "value": "456" },
+            {
+              "key": "ctoid_HashedEmail",
+              "value": "98833030dc03751f2b2c1a0017078975fdae951aa6908668b3ec422040f2d4be"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
 ```
 
 ## Utilisation et gouvernance des données {#data-usage}
