@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: 3c80f3b297e7119067480739e206064bb2ace22c
+source-git-commit: b21e735b5c6c310b485700ef619302e3e3086763
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 93%
+source-wordcount: '785'
+ht-degree: 92%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 93%
          - [Mappages de champs Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mappages de champs cibles](connectors/adobe-applications/mapping/target.md)
          - [Mappages de champs Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
+         - [Mappages de champs Microsoft Dynamics](connectors/adobe-applications/mapping/dynamics.md)
          - [Mappages de champs Salesforce](connectors/adobe-applications/mapping/salesforce.md)
       - Marketo {#marketo}
          - [Connecteur Marketo Engage](connectors/adobe-applications/marketo/marketo.md)

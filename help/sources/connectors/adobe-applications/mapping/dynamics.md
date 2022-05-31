@@ -1,0 +1,266 @@
+---
+keywords: Experience Platform;accueil;rubriques populaires;Salesforce;Salesforce;mappage de champ;mappage de champ;mappage;marketing;B2B;b2b
+title: Champs de mappage Microsoft Dynamics
+description: Les tableaux ci-dessous contiennent les mappages entre les champs source Microsoft Dynamics et leurs champs XDM correspondants.
+source-git-commit: 607c739df61912bea6c48e00118569dde49abc8a
+workflow-type: tm+mt
+source-wordcount: '565'
+ht-degree: 7%
+
+---
+
+# [!DNL Microsoft Dynamics] mappages de champs
+
+Les tableaux ci-dessous contiennent les mappages entre les [!DNL Microsoft Dynamics] champs source et leurs champs XDM correspondants.
+
+## Contacts {#contacts}
+
+| Champ source | Champ XDM cible | Notes |
+| --- | --- | --- |
+| `address1_addressid` | `workAddress._id` |
+| `address1_city` | `workAddress.city` |
+| `address1_country` | `workAddress.country` |
+| `address1_county` | `workAddress.stateProvince` |
+| `address1_latitude` | `workAddress._schema.latitude` |
+| `address1_line1` | `workAddress.street1` |
+| `address1_line2` | `workAddress.street2` |
+| `address1_line3` | `workAddress.street3` |
+| `address1_longitude` | `workAddress._schema.longitude` |
+| `address1_postalcode` | `workAddress.postalCode` |
+| `address1_postofficebox` | `workAddress.postOfficeBox` |
+| `address1_stateorprovince` | `workAddress.state` |
+| `assistantname` | `extendedWorkDetails.assistantDetails.name.fullName` |
+| `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` |
+| `birthdate` | `person.birthDate` |
+| `"Dynamics"` | `b2b.personKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `contactid` | `b2b.personKey.sourceID` |
+| `concat(contactid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
+| `department` | `extendedWorkDetails.departments` |
+| `fullname` | `person.name.fullName` |
+| `suffix` | `person.name.suffix` |
+| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey", concat(parentcustomerid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourceAccountKey` |
+| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey",  concat(parentcustomerid, "@${CRM_ORG_ID}.Dynamics")), null)` | `b2b.accountKey` |
+| `createdon` | `extSourceSystemAudit.createdDate` |
+| `emailaddress1` | `workEmail.address` | Identifiant Secondaire. |
+| `emailaddress2` | `personalEmail.address` |
+| `emailaddress1` | `personComponents.workEmail.address` |
+| `firstname` | `person.name.firstName` |
+| `fullname` | `person.name.fullName` |
+| `jobtitle` | `extendedWorkDetails.jobTitle` |
+| `middlename` | `person.name.middleName` |
+| `mobilephone` | `mobilePhone.number` |
+| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
+| `salutation` | `person.name.courtesyTitle` |
+| `telephone1` | `workPhone.number` |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Prospects {#leads}
+
+| Champ source | Champ XDM cible | Remarques |
+| --- | --- | --- |
+| `address1_addressid` | `workAddress._id` |
+| `address1_city` | `workAddress.city` |
+| `address1_country` | `workAddress.country` |
+| `address1_county` | `workAddress.stateProvince` |
+| `address1_latitude` | `workAddress._schema.latitude` |
+| `address1_line1` | `workAddress.street1` |
+| `address1_line2` | `workAddress.street2` |
+| `address1_line3` | `workAddress.street3` |
+| `address1_longitude` | `workAddress._schema.longitude` |
+| `address1_postalcode` | `workAddress.postalCode` |
+| `address1_postofficebox` | `workAddress.postOfficeBox` |
+| `address1_stateorprovince` | `workAddress.state` |
+| `telephone1` | `workPhone.number` |
+| `mobilephone` | `mobilePhone.number` |
+| `createdon` | `extSourceSystemAudit.createdDate` |
+| `emailaddress1` | `workEmail.address` | Identifiant Secondaire |
+| `emailaddress2` | `personalEmail.address` |
+| `emailaddress1` | `personComponents.workEmail.address` |
+| `fax` | `faxPhone.number` |
+| `firstname` | `person.name.firstName` |
+| `fullname` | `person.name.fullName` |
+| `jobtitle` | `extendedWorkDetails.jobTitle` |
+| `lastname` | `person.name.lastName` |
+| `"Dynamics"` | `b2b.personKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `leadid` | `b2b.personKey.sourceID` |
+| `concat(leadid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `iif(leadid != null && leadid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", leadid, "sourceKey", concat(leadid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
+| `middlename` | `person.name.middleName` |
+| `mobilephone` | `mobilePhone.number` |
+| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
+| `salutation` | `person.name.courtesyTitle` |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Comptes {#accounts}
+
+| Champ source | Champ XDM cible | Remarques |
+| --- | --- | --- |
+| `"Dynamics"` | `accountKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `accountid` | `accountKey.sourceID` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `accountnumber` | `accountNumber` |
+| `accountratingcode` | `accountOrganization.rating` |
+| `address1_addressid` | `accountPhysicalAddress._id` |
+| `address1_city` | `accountPhysicalAddress.city` |
+| `address1_country` | `accountPhysicalAddress.country` |
+| `address1_county` | `accountPhysicalAddress.region` |
+| `address1_latitude` | `accountPhysicalAddress._schema.latitude` |
+| `address1_line1` | `accountPhysicalAddress.street1` |
+| `address1_line2` | `accountPhysicalAddress.street2` |
+| `address1_line3` | `accountPhysicalAddress.street3` |
+| `address1_longitude` | `accountPhysicalAddress._schema.longitude` |
+| `address1_name` | `accountPhysicalAddress.label` |
+| `address1_postalcode` | `accountPhysicalAddress.postalCode` |
+| `address1_postofficebox` | `accountPhysicalAddress.postOfficeBox` |
+| `address1_stateorprovince` | `accountPhysicalAddress.state` |
+| `createdon` | `extSourceSystemAudit.createdDate` |
+| `description` | `accountDescription` |
+| `fax` | `accountFax.number` |
+| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
+| `name` | `accountName` |
+| `numberofemployees` | `accountOrganization.numberOfEmployees` |
+| `revenue` | `accountOrganization.annualRevenue.amount` |
+| `sic` | `accountOrganization.SICCode` |
+| `telephone1` | `accountPhone.number` |
+| `tickersymbol` | `accountOrganization.tickerSymbol` |
+| `websiteurl` | `accountOrganization.website` |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Opportunités {#opportunities}
+
+| Champ source | Champ XDM cible | Remarques |
+| --- | --- | --- |
+| `name` | `opportunityName` |
+| `"Dynamics"` | `opportunityKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `iif(parentaccountid != null && parentaccountid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", parentaccountid, "sourceKey", concat(parentaccountid, "@${CRM_ORG_ID}.Dynamics")), null)` | `accountKey` |
+| `actualclosedate` | `actualCloseDate` |
+| `actualvalue` | `opportunityAmount.amount` |
+| `iif(campaignid != null && campaignid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", campaignid, "sourceKey", concat(campaignid,"@${CRM_ORG_ID}.Dynamics")), null)` | `campaignKey` |
+| `closeprobability` | `probabilityPercentage` |
+| `createdon` | `extSourceSystemAudit.createdDate` |
+| `description` | `opportunityDescription` |
+| `estimatedclosedate` | `expectedCloseDate` |
+| `estimatedvalue` | `expectedRevenue.amount` |
+| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
+| `opportunityid` | `opportunityKey.sourceID` |
+| `concat(opportunityid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityKey.sourceKey` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `salesstage` | `opportunityStage` |
+| `stepname` | `nextStep` |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Rôles de contact d’opportunité {#opportunity-contact-roles}
+
+| Champ source | Champ XDM cible | Remarques |
+| --- | --- | --- |
+| `"Dynamics"` | `opportunityPersonKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `connectionid` | `opportunityPersonKey.sourceID` |
+| `concat(connectionid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityPersonKey.sourceKey` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `createdon` | `extSourceSystemAudit.createdDate` |
+| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
+| `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
+| `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
+| `connectionrole1.name` | `personRole` |
+| `record1objecttypecode` | *Un groupe de champs personnalisé doit être défini comme schéma cible.* Voir la section de l’annexe pour connaître les étapes de [comment mapper un champ source de type liste de sélection à un schéma XDM cible](#picklist-type-fields) pour plus d’informations. | Pour obtenir la liste des valeurs possibles et , ainsi que les libellés du `record1objecttypecode` champ source, voir [[!DNL Microsoft Dynamics] document de référence d’entité de connexion](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
+| `record2objecttypecode` | *Un groupe de champs personnalisé doit être défini comme schéma cible.* Voir la section de l’annexe pour connaître les étapes de [comment mapper un champ source de type liste de sélection à un schéma XDM cible](#picklist-type-fields) pour plus d’informations. | Pour obtenir la liste des valeurs possibles et , ainsi que les libellés du `record2objecttypecode` champ source, voir [[!DNL Microsoft Dynamics] document de référence d’entité de connexion](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Campagnes {#campaigns}
+
+| Champ source | Champ XDM cible | Remarques |
+| --- | --- | --- |
+| `campaignid` | `campaignKey.sourceID` |
+| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `concat(campaignid,"@${CRM_ORG_ID}.Dynamics")` | `campaignKey.sourceKey` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `"Dynamics"` | `campaignKey.sourceType` |
+| `iif(campaignid != null && campaignid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", campaignid, "sourceKey", concat(campaignid,"@${CRM_ORG_ID}.Dynamics")), null)` | `extSourceSystemAudit.externalKey` | Le `extSourceSystemAudit.externalKey` est l’identité secondaire. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `createdon` | `extSourceSystemAudit.createdDate` |
+| `modifiedby` | `extSourceSystemAudit.lastUpdatedBy` |
+| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
+| `description` | `campaignDescription` |
+| `name` | `campaignName` |
+| `totalactualcost` | `actualCost.amount` |
+| `budgetedcost` | `budgetedCost.amount` |
+| `expectedrevenue` | `expectedRevenue.amount` |
+| `actualend` | `campaignEndDate` |
+| `actualstart` | `campaignStartDate` |
+| `expectedresponse` | `expectedResponse` |
+| `utcconversiontimezonecode` | `timeZone` |
+| `utcconversiontimezonecode` | `timezoneName` |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Liste marketing {#marketing-list}
+
+| Champ source | Champ XDM cible | Remarques |
+| --- | --- | --- |
+| `"Dynamics"` | `marketingListKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `marketingListKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `description` | `marketingListDescription` |
+| `listname` | `marketingListName` |
+| `listid` | `marketingListKey.sourceID` |
+| `concat(listid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListKey.sourceKey` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
+| `createdon` | `extSourceSystemAudit.createdDate` |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Membres de la liste marketing {#marketing-list-members}
+
+| Champ source | Champ XDM cible | Remarques |
+| --- | --- | --- |
+| `"Dynamics"` | `marketingListMemberKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
+| `listmemberid` | `marketingListMemberKey.sourceID` |
+| `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Identité Principal. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacé. |
+| `iif(listid != null && listid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", listid, "sourceKey", concat(listid,"@${CRM_ORG_ID}.Dynamics")), null)` | `marketingListKey` |
+| `createdon` | `extSourceSystemAudit.createdDate` |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Annexe
+
+Les sections ci-dessous fournissent des informations supplémentaires que vous pouvez utiliser lors de la configuration de mappages B2B pour vos [!DNL Microsoft] Source Dynamics.
+
+### Champs de type Liste de sélection {#picklist-type-fields}
+
+Vous pouvez utiliser [champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) pour mapper un champ source de type liste de sélections à partir de [!DNL Microsoft Dynamics] à un champ XDM cible.
+
+Par exemple, la variable `genderCode` comprend deux options :
+
+| Valeur | Libellé |
+| --- | --- |
+| 1 | `male` |
+| 2 | `female` |
+
+Vous pouvez utiliser les options suivantes pour mapper la variable `genderCode` champ source vers `person.gender` champ cible :
+
+#### Utilisation d’un opérateur logique
+
+| Champ source | Champ XDM cible |
+| --- | --- |
+| `decode(genderCode, "1", "male", "2", "female", "default")` | `person.gender` |
+
+Dans ce scénario, la valeur correspond à la clé, si elle figure dans les options, ou `default`, si `default` est présent et la clé est introuvable. La valeur correspond à `null` si options est `null` ou il n’y a pas de `default` et la clé est introuvable.
+
+#### Utiliser un champ calculé
+
+| Champ source | Champ XDM cible |
+| --- | --- |
+| `iif(gendercode.equals("1"),"male",iif(gendercode.equals("2"),"female",null))` | `person.gender` |
+
+>[!TIP]
+>
+>Une itération imbriquée de l’opération ci-dessus serait similaire à : `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
+
+Pour plus d’informations, voir [document sur les opérateurs logiques dans [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
