@@ -3,10 +3,8 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;api;contrô
 solution: Experience Platform
 title: Point de terminaison de l’API Rôles
 description: Le point de terminaison /rôles de l’API de contrôle d’accès basé sur les attributs vous permet de gérer les rôles par programmation dans Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '1614'
 ht-degree: 10%
