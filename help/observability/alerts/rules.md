@@ -4,7 +4,7 @@ title: Règles d’alerte standard
 description: Ce document couvre les règles d’alerte prédéfinies fournies par Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 67aef7ca2ad4061003af8d91fb29339397d8af01
+source-git-commit: c0559fc55531e2b0c2938294742397b43e9e0445
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 92%
@@ -29,7 +29,6 @@ Les règles d’alerte suivantes sont spécifiques à l’[Ingestion des donnée
 | Retards, échecs et erreurs de l’exécution du flux de sources | Retard d’ingestion | Cette alerte se déclenche lorsqu’une exécution de flux d’ingestion par lots dure plus de 150 minutes. |
 | Retards, échecs et erreurs de l’exécution du flux de sources | Absence d’ingestion | Cette alerte vous envoie un message si l’ingestion est retardée de plus de sept heures et qu’aucune donnée n’est ingérée dans Platform. |
 | Retards, échecs et erreurs de l’exécution du flux de sources | Échec de l’ingestion | Cette alerte se déclenche lorsque le rapport entre les enregistrements en échec et tous les enregistrements dépasse un seuil de 0,5 %. |
-| Retards, échecs et erreurs de l’exécution du flux de sources | Le taux de saut de page dépasse le seuil | Cette alerte se déclenche lorsque le rapport entre les identifiants ignorés et les identifiants totaux dépasse un seuil. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -83,6 +82,7 @@ Les règles d’alerte suivantes sont spécifiques aux [destinations](../../dest
 | Informations relatives à l’exécution du flux de destinations | Succès de l’exécution du flux de destinations | Cette alerte se déclenche lorsqu’un segment est activé avec succès vers une destination. |
 | Délais, échecs et erreurs de l’exécution du flux de destinations | Retard de l’exécution du flux de destinations | Cette alerte se déclenche lorsqu’une exécution de flux de destinations dure plus de 150 minutes pour activer un segment. |
 | Délais, échecs et erreurs de l’exécution du flux de destinations | Échec de l’exécution du flux de destinations | Cette alerte se déclenche lorsqu’une erreur se produit lors de l’activation d’un segment vers une destination. |
+| Délais, échecs et erreurs de l’exécution du flux de destinations | Le taux de saut de page dépasse le seuil | Cette alerte se déclenche lorsque le rapport entre les identifiants ignorés et le nombre total d’identifiants dépasse un seuil. |
 
 {style=&quot;table-layout:auto&quot;}
 
