@@ -5,10 +5,10 @@ title: Présentation de Data Prep
 topic-legacy: overview
 description: Ce document présente Data Prep dans Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
+source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 92%
+source-wordcount: '715'
+ht-degree: 76%
 
 ---
 
@@ -54,6 +54,14 @@ La préparation des données peut gérer de manière robuste différents formats
 ## Envoi de mises à jour de lignes partielles à l’aide de [!DNL Data Prep]
 
 Diffusion en continu des upserts dans [!DNL Data Prep] vous permet d’envoyer des mises à jour de ligne partielles à [!DNL Profile Service] lors de la création et de l’établissement de nouveaux liens d’identité avec une seule requête API. Pour en savoir plus sur la diffusion en continu de upserts dans [!DNL Data Prep], voir le document sur [envoi de mises à jour de lignes partielles ;](./upserts.md).
+
+## Contrôle d’accès basé sur les attributs dans [!DNL Data Prep]
+
+Le contrôle d’accès basé sur les attributs dans Adobe Experience Platform permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.
+
+Le contrôle d’accès basé sur les attributs permet de n’associer que les attributs auxquels vous avez accès. Les attributs auxquels vous n’avez pas accès ne peuvent pas être utilisés dans les mappages de pass-through et les champs calculés. Par conséquent, si vous n’avez pas accès à un champ obligatoire, vous ne pouvez pas enregistrer un mappage. De plus, vous ne pouvez pas mapper des objets ou des tableaux d’objets si vous n’avez accès à aucun des attributs enfants. Cependant, vous pouvez mapper d’autres éléments dans le tableau d’objets ou d’objets individuellement.
+
+Voir [contrôle d’accès basé sur les attributs - Aperçu](../access-control/abac/overview.md) pour plus d’informations.
 
 ## Étapes suivantes
 
