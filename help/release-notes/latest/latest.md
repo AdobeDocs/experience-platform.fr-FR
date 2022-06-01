@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c318d64f6dc09094855ec20d998a7c41d837211f
+source-git-commit: 1dc97fa33fa8cb46184e11d311ef8246199b4f03
 workflow-type: tm+mt
-source-wordcount: '2375'
-ht-degree: 27%
+source-wordcount: '2409'
+ht-degree: 26%
 
 ---
 
@@ -254,6 +254,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 | --- | --- |
 | Contrôle d’accès basé sur les attributs dans les sources | Vous pouvez désormais gérer et contrôler l’accès à des champs et attributs sources individuels lors de l’ingestion. **Remarque**: Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée pour les clients de santé basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform une fois qu’elle sera entièrement publiée. |
 | Version bêta de [!DNL Zendesk] source | Utilisez la variable [!DNL Zendesk] source pour ingérer des données d’utilisateur, d’agent et d’organisation à partir de votre [!DNL Zendesk] instance pour [!DNL Profile] enrichissement. Voir [[!DNL Zendesk] présentation de la source](../../sources/connectors/customer-success/zendesk.md) pour plus d’informations. |
+| Disponibilité générale de B2B [!DNL Microsoft Dynamics] source | Vous pouvez désormais utiliser la variable [!DNL Microsoft Dynamics] source pour ingérer des objets B2B tels que des comptes, des opportunités, des campagnes, des listes marketing et des membres de listes marketing. Voir [[!DNL Microsoft Dynamics] présentation de la source](../../sources/connectors/crm/ms-dynamics.md) pour plus d’informations. |
 | Prise en charge de la collecte de données d’Adobe | Utilisez le catalogue de sources dans Platform pour accéder à vos données sur Platform Edge Network, y compris la préparation des données pour la collecte de données et la prise en charge améliorée des avertissements relatifs à la préparation des données. Voir [Présentation de la source de collecte de données Adobe](../../sources/connectors/adobe-applications/data-collection.md) pour plus d’informations. |
 | Prise en charge de l’ingestion de fichiers avec `ISO-8859-1` encoding | Utilisez la variable `encoding` paramètre à ingérer `ISO-8859-1` fichiers codés avec une source de stockage dans le cloud vers Platform à l’aide de la méthode [!DNL Flow Service] API. Consultez le guide sur la [création d’une connexion source de stockage dans le cloud](../../sources/tutorials/api/collect/cloud-storage.md) pour plus d’informations. |
 
