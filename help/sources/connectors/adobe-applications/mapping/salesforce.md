@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques populaires;Salesforce;Salesforce
 title: Champs de mappage Salesforce
 description: Les tableaux ci-dessous contiennent les mappages entre les champs source Salesforce et leurs champs XDM correspondants.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: d96c1db480957e8b0cbff01171ae11d8eaa801be
+source-git-commit: 93b6782bbb9ec25c720633a38c41cb70c251f017
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 13%
@@ -67,6 +67,7 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 | `ReportsToId` | `extendedWorkDetails.reportsToID` |
 | `Salutation` | `person.name.courtesyTitle` |
 | `Title` | `extendedWorkDetails.jobTitle` |
+| `"Contact"` | `b2b.personType` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -75,8 +76,6 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 | Champ source | Chemin du champ XDM cible | Remarques |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
-| `ConvertedContactId` | `b2b.convertedContactID` |
-| `ConvertedContactId` | `personComponents.sourceConvertedContactID` |
 | `ConvertedDate` | `b2b.convertedDate` |
 | `Country` | `workAddress.country` |
 | `Email` | `workEmail.address` | Identité Secondaire. |
@@ -113,6 +112,16 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 | `Suffix` | `person.name.suffix` |
 | `Company` | `b2b.companyName` |
 | `Website` | `b2b.companyWebsite` |
+| `ConvertedContactId` | `b2b.convertedContactKey.sourceID` |
+| `"Salesforce"` | `b2b.convertedContactKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `b2b.convertedContactKey.sourceInstanceID` |
+| `concat(ConvertedContactId,\"@${CRM_ORG_ID}.Salesforce\")` | `b2b.convertedContactKey.sourceKey` |
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `"Lead"` | `b2b.personType` |
+| `ConvertedContactId` | `personComponents.sourceConvertedContactKey.sourceID` |
+| `"Salesforce"` | `personComponents.sourceConvertedContactKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `personComponents.sourceConvertedContactKey.sourceInstanceID` |
+| `concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourceConvertedContactKey.sourceKey` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -152,7 +161,6 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 | `ParentId` | `accountParentKey.sourceID` |
 | `iif(ParentId != null && ParentId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ParentId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountParentKey` |
 | `Phone` | `accountPhone.number` |
-| `Rating` | `accountOrganization.rating` |
 | `ShippingCity` | `accountShippingAddress.city` |
 | `ShippingCountry` | `accountShippingAddress.country` |
 | `ShippingLatitude` | `accountShippingAddress._schema.latitude` |
@@ -166,6 +174,7 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 | `TickerSymbol` | `accountOrganization.tickerSymbol` |
 | `Tradestyle` | `accountTradeStyle` | fonctionnalité data.com |
 | `Type` | `accountType` |
+| `Website` | `accountOrganization.website` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -203,6 +212,7 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 | `StageName` | `opportunityStage` |
 | `TotalOpportunityQuantity` | `opportunityQuantity` |
 | `Type` | `opportunityType` |
+| `CurrencyIsoCode` | `opportunityAmount.currencyCode` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -255,6 +265,7 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastViewedDate` | `extSourceSystemAudit.lastViewedDate` |
 | `LastReferencedDate` | `extSourceSystemAudit.lastReferencedDate` |
+| `CurrencyIsoCode` | `actualCost.currencyCode` |
 
 ## membre de la campagne {#campaign-member}
 
@@ -277,7 +288,8 @@ Les tableaux ci-dessous contiennent les mappages entre les [!DNL Salesforce] cha
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `FirstRespondedDate` | `firstRespondedDate` |
+| `Type` | `b2b.personType` |
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez découvert la relation de mappage entre [!DNL Salesforce] champs source et leurs champs XDM correspondants. Pour plus d’informations, consultez la documentation sur la [création d’une connexion source [!DNL Salesforce] ](../../../connectors/crm/salesforce.md).
+En lisant ce document, vous avez découvert la relation de mappage entre [!DNL Salesforce] champs source et leurs champs XDM correspondants. Pour plus d’informations, consultez la documentation sur la [création d’une  [!DNL Salesforce]  connexion source](../../../connectors/crm/salesforce.md).
