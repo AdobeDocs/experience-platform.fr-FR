@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires
+keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
 title: Présentation de la gouvernance, de la confidentialité et de la sécurité
 topic-legacy: overview
 description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance vos données d’expérience collectées afin de respecter vos pratiques commerciales, vos obligations légales et votre processus de développement.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '855'
 ht-degree: 18%
 
 ---
@@ -28,25 +28,25 @@ Les services peuvent être classés en trois domaines :
 
 La gouvernance des données est un concept essentiel qui est étroitement lié à chaque capacité en Experience Platform. La gouvernance des données représente votre capacité à contrôler et à comprendre vos données tout au long de leur parcours via Platform. Cela implique de maintenir la qualité des données, la liaison des données, le catalogage des données, etc.
 
-### Gouvernance des données d’Adobe Experience Platform {#data-governance}
+### Gouvernance des données d’Adobe Experience Platform {#data-governance}
 
 En tant que service Platform, la gouvernance des données de Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Il joue un rôle clé dans Experience Platform à différents niveaux, notamment l’étiquetage de l’utilisation des données, les stratégies d’utilisation des données, l’application des stratégies et la traçabilité des données.
 
-Pour plus d’informations, consultez la [Présentation de la gouvernance des données](../../data-governance/home.md) .
+Voir [Présentation de la gouvernance des données](../../data-governance/home.md) pour plus d’informations.
 
 ### Catalogue et jeux de données {#catalog}
 
-Le service de catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
+Le service de catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans  Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 
 Le catalogue classe les données ingérées dans des jeux de données, chaque jeu de données contenant des métadonnées qui peuvent être utilisées pour étiqueter et catégoriser les données qu’il contient.
 
-Pour plus d’informations sur le service, consultez la [présentation du service de catalogue](../../catalog/home.md) . Pour savoir comment gérer des jeux de données dans Experience Platform, consultez la [présentation des jeux de données](../../catalog/datasets/overview.md).
+Voir [Présentation du service de catalogue](../../catalog/home.md) pour plus d’informations sur le service. Pour savoir comment gérer des jeux de données dans Experience Platform, reportez-vous à la section [présentation des jeux de données](../../catalog/datasets/overview.md).
 
 ## Confidentialité    {#privacy}
 
 La confidentialité est un problème critique pour votre entreprise, vos législateurs et vos clients. Comme les données personnelles collectées auprès de vos clients sont au coeur de presque tous les workflows Experience Platform, Platform fournit des services pour soutenir ces initiatives.
 
-### Adobe Experience Platform Privacy Service {#privacy-service}
+### Adobe Experience Platform Privacy Service  {#privacy-service}
 
 Les réglementations légales relatives à la confidentialité, telles que le Règlement général sur la protection des données (RGPD) de l’Union européenne et la Loi sur la protection de la vie privée des consommateurs de Californie (CCPA), donnent aux citoyens de leur juridiction le droit d’accéder aux données personnelles que vous collectez et de les stocker et de les supprimer.
 
@@ -58,13 +58,17 @@ Pour plus d’informations, consultez la [Présentation de Privacy Service.](../
 
 De nombreuses réglementations juridiques relatives à la confidentialité ont introduit des exigences de consentement principal et spécifique en ce qui concerne la collecte de données, la personnalisation et d’autres cas d’utilisation marketing. Pour répondre à ces exigences, Experience Platform vous permet de capturer les informations de consentement dans des profils client individuels et d’utiliser ces préférences comme facteur déterminant dans la manière dont les données de chaque client sont utilisées dans les workflows Platform en aval.
 
-Pour savoir comment traiter les données de consentement et de préférence des clients à l’aide de la norme Adobe, consultez la présentation sur le [traitement du consentement dans Experience Platform](./consent/adobe/overview.md).
+Pour savoir comment traiter les données de consentement et de préférence des clients à l’aide de la norme Adobe, consultez la présentation sur [traitement du consentement dans Experience Platform](./consent/adobe/overview.md).
 
-Pour plus d’informations sur le traitement des données de consentement des clients conformément au Transparency and Consent Framework (TCF) 2.0 de l’IAB, consultez la présentation sur la [prise en charge du TCF 2.0 de l’IAB dans Platform](./consent/iab/overview.md).
+Pour plus d’informations sur le traitement des données de consentement des clients conformément au Transparency and Consent Framework (TCF) 2.0 de l’IAB, consultez la présentation sur [Prise en charge du TCF 2.0 de l’IAB dans Platform](./consent/iab/overview.md).
 
 ## Sécurité {#security}
 
 L’intégrité et la sécurité de vos données sont indispensables à votre entreprise et ce risque nécessite des capacités de sécurité de pointe. Pour relever ce défi, Platform fournit plusieurs outils pour vous aider à protéger vos opérations de données.
+
+### Cryptage des données
+
+Toutes les données de Platform sont chiffrées en transit et au repos. Consultez le document sur [cryptage des données dans Platform](./encryption.md) pour plus d’informations.
 
 ### Contrôle d&#39;accès {#access-control}
 
@@ -74,7 +78,7 @@ Pour plus d’informations, consultez la [présentation du contrôle d’accès]
 
 ### Environnements de test {#sandboxes}
 
-Experience Platform est conçu pour enrichir les applications d’expérience numérique à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience numérique en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle.
+Experience Platform est conçu pour enrichir les applications d’expérience numérique à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience numérique en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle.
 
 Pour répondre aux besoins de flexibilité en matière de développement, Experience Platform fournit des environnements de test qui divisent une instance de plateforme unique en environnements virtuels distincts pour vous aider à développer vos applications d’expérience numérique en fonction de votre propre cycle de vie de développement.
 
