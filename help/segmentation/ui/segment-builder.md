@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur du créateur de segments
 topic-legacy: ui guide
 description: Le créateur de segments de l’interface utilisateur de Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données Profile. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '2457'
-ht-degree: 37%
+source-wordcount: '2612'
+ht-degree: 36%
 
 ---
 
@@ -18,9 +18,14 @@ ht-degree: 37%
 
 ![](../images/ui/segment-builder/segment-builder.png)
 
-## Blocs de création de définitions de segment
+## Blocs de création de définitions de segment {#building-blocks}
 
-Les blocs de création de base des définitions de segment sont les attributs et les événements. En outre, les attributs et les événements contenus dans les audiences existantes peuvent également être utilisés comme composants pour de nouvelles définitions.
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_fields"
+>title="Champs"
+>abstract="Les trois types de champ qui constituent un segment sont les attributs, les événements et les audiences. Les attributs vous permettent d’utiliser des attributs de profil appartenant à la classe XDM Individual Profile, les événements vous permettent de créer une audience basée sur des actions ou des événements qui ont lieu à l’aide des éléments de données XDM ExperienceEvent et les audiences vous permettent d’utiliser des audiences importées à partir de sources externes."
+
+Les blocs de création de base des définitions de segment sont les attributs et les événements. En outre, les attributs et les événements contenus dans les audiences existantes peuvent être utilisés comme composants pour de nouvelles définitions.
 
 Vous pouvez voir ces blocs de création dans la variable **[!UICONTROL Champs]** sur le côté gauche de la [!DNL Segment Builder] workspace. **[!UICONTROL Champs]** contient un onglet pour chacun des blocs de création principaux : &quot;[!UICONTROL Attributs]&quot;, &quot;[!UICONTROL Événements]&quot;, et &quot;[!UICONTROL Audiences]&quot;.
 
@@ -210,7 +215,19 @@ Pour sélectionner une stratégie de fusion pour votre définition de segment, c
 
 ![](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Propriétés du segment
+## Propriétés du segment {#segment-properties}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_segmentproperties"
+>title="Propriétés du segment"
+>abstract="La section Propriétés du segment affiche une estimation de la taille du segment résultant, indiquant le nombre de profils qualifiés par rapport au nombre total de profils. Cela vous permet d’ajuster votre définition de segment selon les besoins avant de créer l’audience elle-même."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_refreshestimate"
+>title="Actualiser les estimations"
+>abstract="Vous pouvez actualiser les estimations de votre segment pour afficher immédiatement un aperçu du nombre de profils admissibles pour le segment proposé. Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="En savoir plus dans la documentation"
+
 
 Lors de la création d’une définition de segment, la section **[!UICONTROL Propriétés du segment]** située dans la partie droite de l’espace de travail affiche une estimation de la taille du segment obtenu, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 

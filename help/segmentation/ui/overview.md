@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur de Segmentation Service
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: ce3d5e3db28d39b8d7d5a984700dd681c650ac94
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 22%
+source-wordcount: '1746'
+ht-degree: 21%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 22%
 L’utilisation des définitions de segment nécessite une compréhension des différentes [!DNL Experience Platform] services impliqués dans la segmentation. Avant de lire ce guide d’utilisation, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] permet de diviser les données stockées dans [!DNL Experience Platform] qui se rapporte aux individus (tels que les clients, les prospects, les utilisateurs ou les organisations) en groupes plus petits.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Permet la création de profils client en rapprochant des identités de sources de données disparates ingérées dans [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 
@@ -37,7 +37,7 @@ Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UIC
 >
 >Si votre entreprise est une nouvelle entreprise de Platform et qu’elle ne dispose pas encore de jeux de données Profile principaux ni de stratégies de fusion créés, la variable [!UICONTROL Segments] tableau de bord n’est pas visible. Au lieu de cela, la variable [!UICONTROL Présentation] affiche des liens et de la documentation pour vous aider à commencer à utiliser les segments.
 
-### [!UICONTROL Segments] tableau de bord {#segments-dashboard}
+### [!UICONTROL Tableau de bord de segments] {#segments-dashboard}
 
 Le **[!UICONTROL Segments]** le tableau de bord décrit les mesures clés liées aux données de segment de votre entreprise.
 
@@ -46,6 +46,16 @@ Pour en savoir plus, rendez-vous sur la page [guide du tableau de bord des segme
 ![](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Parcourir {#browse}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_churncolumnname"
+>title="Churn"
+>abstract="L’attrition représente le pourcentage de profils qui changent dans une définition de segment par rapport à la dernière exécution de la tâche de segmentation."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_evaluationmethodcolumnname"
+>title="Méthode d’évaluation"
+>abstract="Les méthodes d’évaluation des segments incluent le traitement par lot, la diffusion en continu et la périphérie."
 
 Sélectionnez la **[!UICONTROL Parcourir]** pour afficher une liste de toutes les définitions de segment pour votre organisation IMS.
 
@@ -65,7 +75,7 @@ La ventilation présente un graphique à barres indiquant le pourcentage de prof
 
 L’attrition représente le pourcentage de profils qui changent dans une définition de segment par rapport à la dernière exécution de la tâche de segmentation, tandis que le nombre de profils représente le nombre total de profils qui remplissent les critères pour le segment.
 
-La méthode d’évaluation peut être soit par flux, soit par lot. Les segments par flux sont constamment évalués au fur et à mesure que les données entrent dans le système. Les segments par lot sont évalués selon un planning établi.
+La méthode d’évaluation peut être soit par flux, soit par lot, soit par périphérie. Les segments par flux sont constamment évalués au fur et à mesure que les données entrent dans le système. Les segments par lot sont évalués selon un planning établi. Les segments Edge sont évalués en temps réel, ce qui permet d’utiliser les mêmes cas de personnalisation de page et de page suivante.
 
 ![](../images/ui/overview/segment-browse-segments.png)
 
@@ -145,13 +155,13 @@ Informations plus détaillées sur chaque [!DNL Profile] peut être consulté en
 
 ![](../images/ui/overview/segment-details-profiles.png)
 
-## Création d’un segment {#create-segment}
+## Créer un segment {#create-segment}
 
 Sélection **[!UICONTROL Créer un segment]** dans le coin supérieur droit s’ouvre sur la [!DNL Segment Builder] espace de travail dans lequel vous pouvez commencer à créer une définition de segment.
 
 ![](../images/ui/overview/segment-browse-create.png)
 
-### [!DNL Segment Builder] espace de travail
+### [!DNL Segment Builder] un espace de travail
 
 [!DNL Segment Builder] fournit un espace de travail riche qui vous permet d’interagir avec [!DNL Profile] éléments de données. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 
