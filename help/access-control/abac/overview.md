@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1576'
 ht-degree: 23%
 
 ---
@@ -113,7 +113,7 @@ Le modèle de données d’expérience (XDM) est une spécification open source 
 
 Avec le contrôle d’accès basé sur les attributs, vous pouvez :
 
-* Appliquez des attributs aux groupes de champs et aux classes ou . Cela permet à plusieurs schémas avec les mêmes groupes ou classes de champs d’avoir des champs balisés avec les mêmes attributs, selon les configurations au niveau du groupe de champs ou de la classe ;
+* [Application des libellés d’utilisation des données aux groupes et classes de champs](../../xdm/tutorials/labels.md). Cela permet à plusieurs schémas avec les mêmes groupes ou classes de champs d’avoir des champs balisés avec les mêmes attributs, selon les configurations au niveau du groupe de champs ou de la classe ;
 * Configurez l’accès des utilisateurs à des champs de schéma XDM spécifiques en fonction des jeux d’autorisations appliqués aux rôles affectés aux utilisateurs.
 
 Pour plus d’informations sur XDM, reportez-vous à la section [Présentation de XDM](../../xdm/home.md).

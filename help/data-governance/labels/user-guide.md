@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;libellé d’utilisation des données;policy service;guide de l’utilisateur des libellés d’utilisation des données
+keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;libellé d’utilisation des données;policy service;guide de l’utilisateur des libellés d’utilisation des données
 solution: Experience Platform
 title: Gestion des libellés d’utilisation des données dans l’interface utilisateur
 topic-legacy: labels
-description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
+description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
-source-wordcount: '1140'
-ht-degree: 100%
+source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
+workflow-type: tm+mt
+source-wordcount: '1186'
+ht-degree: 95%
 
 ---
 
@@ -18,7 +18,7 @@ Ce guide d’utilisation détaille la procédure d’utilisation des libellés d
 
 ## Gestion des libellés au niveau du jeu de données
 
-Pour gérer les libellés d’utilisation des données au niveau du jeu de données, vous devez sélectionner un jeu de données existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Jeux de données]**. Cette page répertorie tous les jeux de données créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque jeu de données.
+Pour gérer les libellés d’utilisation des données au niveau du jeu de données, vous devez sélectionner un jeu de données existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Jeux de données]**. Cette page répertorie tous les jeux de données créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque jeu de données.
 
 ![Onglet Jeu de données dans Data Workspace](../images/labels/datasets-tab.png)
 
@@ -74,7 +74,7 @@ L’option **[!UICONTROL Afficher les libellés hérités]** est activée par d�
 
 ![Masquer les libellés hérités](../images/labels/inherited-labels.png)
 
-## Gestion des libellés au niveau du champ
+## Gestion des libellés au niveau du champ du jeu de données
 
 En poursuivant le processus d’[ajout et de modification des libellés d’utilisation des données au niveau du jeu de données](#add-labels), vous pouvez également gérer les libellés au niveau du champ dans l’espace de travail **[!UICONTROL Gouvernance des données]** pour ce jeu de données.
 
@@ -99,6 +99,12 @@ Vous pouvez répéter ces étapes pour continuer à ajouter et à modifier des l
 ![Sélectionnez plusieurs champs pour appliquer simultanément des libellés au niveau du champ.](../images/labels/multiple-fields.png)
 
 Il est important de se rappeler que l’héritage se déplace uniquement du niveau supérieur vers le niveau inférieur (jeu de données → champs), ce qui signifie que les libellés appliqués au niveau du champ ne sont pas propagés à d’autres champs ou jeux de données.
+
+## Gestion des libellés au niveau du schéma
+
+Vous pouvez ajouter des libellés directement à un ou plusieurs champs de ce schéma. Tous les champs appliqués au niveau du schéma se propageront à tous les jeux de données en fonction de ce schéma.
+
+Voir le tutoriel sur [gestion des libellés au niveau du schéma](../../xdm/tutorials/labels.md) pour plus d’informations.
 
 ## Gestion des libellés personnalisés
 
