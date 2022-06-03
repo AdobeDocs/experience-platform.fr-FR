@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '392'
 ht-degree: 98%
 
 ---
@@ -119,6 +119,9 @@ ht-degree: 98%
       * [!DNL BrightCove] suivi vidéo {#brightcove}
          * [Présentation](./extensions/web/brightcove/overview.md)
          * [Notes de mise à jour](./extensions/web/brightcove/release-notes.md)
+      * Couche de données Google {#google-data-layer}
+         * [Présentation](./extensions/web/google-data-layer/overview.md)
+         * [Notes de mise à jour](./extensions/web/google-data-layer/release-notes.md)
       * [!DNL YouTube] Extension de suivi vidéo {#youtube}
          * [Présentation](./extensions/web/youtube/overview.md)
          * [Notes de mise à jour](./extensions/web/youtube/release-notes.md)
