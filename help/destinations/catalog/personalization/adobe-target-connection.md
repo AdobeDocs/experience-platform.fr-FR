@@ -3,10 +3,10 @@ keywords: personnalisation cible;destination;destination cible Experience Platfo
 title: Connexion Adobe Target
 description: Adobe Target est une application qui permet la personnalisation et l’expérimentation en temps réel, grâce à l’IA, au niveau de toutes les interactions avec les clients entrants sur les sites web, les applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 46e732dfc630ad1875a57289a6e6cf9c964b9547
+source-git-commit: 12e2c1a32f08b6942d6e4aefc35a53bae8387d7e
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 45%
+source-wordcount: '846'
+ht-degree: 38%
 
 ---
 
@@ -16,9 +16,11 @@ ht-degree: 45%
 
 Adobe Target est une application qui permet la personnalisation et l’expérimentation en temps réel, grâce à l’IA, au niveau de toutes les interactions avec les clients entrants sur les sites web, les applications mobiles, etc.
 
-Adobe Target est une connexion de personnalisation dans Adobe Experience Platform.
+Adobe Target est une connexion de personnalisation dans le catalogue des destinations Adobe Experience Platform.
 
 ## Conditions préalables {#prerequisites}
+
+### Identifiant du flux de données {#datastream-id}
 
 Lors de la configuration de la connexion Adobe Target à [utilisation d’un identifiant de flux de données](#parameters), vous devez avoir la variable [SDK Web Adobe Experience Platform](../../../edge/home.md) implémenté.
 
@@ -27,6 +29,15 @@ La configuration de la connexion Adobe Target sans utiliser d’identifiant de f
 >[!IMPORTANT]
 >
 >Avant de créer une connexion [!DNL Adobe Target], lisez le guide sur la façon de [configurer des destinations de personnalisation pour la personnalisation de la même page et de la page suivante](../../ui/configure-personalization-destinations.md). Ce guide vous fait parcourir toutes les étapes de configuration requises pour les cas d’utilisation de la personnalisation de la même page et de la page suivante, sur plusieurs composants Experience Platform. La personnalisation de la même page et de la page suivante nécessite l’utilisation d’un identifiant de flux de données lors de la configuration de la connexion Adobe Target.
+
+### Conditions préalables dans Adobe Target {#prerequisites-in-adobe-target}
+
+Dans Adobe Target, assurez-vous que votre utilisateur dispose des éléments suivants :
+
+* L’accès au [espace de travail par défaut](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#default-workspace);
+* Le **Approbateur** [rôle](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#roles-and-permissions).
+
+En savoir plus sur l’octroi d’autorisations pour [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) et [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
 
 ## Type et fréquence d&#39;export {#export-type-frequency}
 
