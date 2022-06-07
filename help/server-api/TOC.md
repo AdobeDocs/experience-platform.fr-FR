@@ -5,10 +5,10 @@ user-guide-title: Documentation de l’API du serveur réseau Edge
 breadcrumb-title: Documentation de l’API du serveur réseau Edge
 user-guide-description: Découvrez ce qu’est l’API du serveur réseau Edge et comment l’utiliser.
 feature: Data Collection
-source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
+source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 58%
+source-wordcount: '65'
+ht-degree: 56%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 58%
 
 
 * [Présentation](overview.md)
+* [Protections des performances](guardrails.md)
 * [Authentification](authentication.md)
 * Collecte de données {#data-collection}
    * [Collecte de données à événement unique](interactive-data-collection.md)

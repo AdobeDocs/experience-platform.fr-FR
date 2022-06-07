@@ -1,47 +1,31 @@
 ---
-title: Accords et cibles au niveau du service
-description: Découvrez comment configurer l’authentification pour l’API Edge Network Server
-seo-description: Learn how to configure authentication for the Edge Network Server API
+title: Protections des performances
+description: Découvrez comment utiliser l’API du serveur dans des barrières de sécurité de performances optimales
 keywords: collecte de données;collection;réseau Edge;api;sla;slt;niveaux de service
-hide: true
-hidefromtoc: true
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '435'
 ht-degree: 2%
 
 ---
 
 
-# Barrières de sécurité
+# Protections des performances
 
 ## Présentation {#overview}
 
-Adobe fera appel à des efforts raisonnables sur le plan commercial pour [!DNL Server API] disponibles dans un pourcentage de disponibilité mensuel d’au moins 99,9 % pour chaque région, au cours d’un cycle de facturation mensuel.
+Les barrières de performance définissent les limites d’utilisation liées à vos cas d’utilisation de l’API de serveur. Le dépassement des barrières de performance décrites dans cet article peut entraîner une dégradation des performances.
+
+Adobe n’est pas responsable de la dégradation des performances provoquée par le dépassement des limites d’utilisation. Les clients qui dépassent systématiquement les barrières de performance peuvent demander une capacité de traitement supplémentaire afin d’éviter une dégradation des performances.
 
 ## Définitions
 
 * **Disponibilité** est calculé pour chaque intervalle de cinq minutes sous la forme du pourcentage de requêtes traitées par le réseau Edge Experience Adobe Experience Platform qui n’échouent pas avec des erreurs et se rapportent uniquement aux API réseau Edge Adobe Experience Platform configurées. Si un client n’a effectué aucune requête au cours d’un intervalle de cinq minutes donné, cet intervalle est considéré comme 100 % disponible.
 * **Pourcentage de disponibilité mensuelle** pour une région donnée est calculée en moyenne de la disponibilité pour tous les intervalles de cinq minutes d’un mois.
 * Un **amont** est un service derrière le réseau Adobe Edge, activé pour un flux de données spécifique, tel que le transfert côté serveur Adobe, la segmentation Adobe Edge ou Adobe Target.
-* A **requête** envoyée à l’API du serveur est définie comme une ou plusieurs unités de requête.
 * A **unité de requête** correspond à un fragment de 8 Ko d’une requête et un en amont configuré pour un flux de données.
+* A **requête** est un message unique envoyé par une application détenue par le client à la variable [!DNL Server API]. Une requête peut contenir une ou plusieurs unités de requête.
 * Un **error** est une requête qui échoue en raison d’un réseau Adobe Experience Platform Edge [erreur de service interne](error-handling.md).
-
-## Cibles internes
-
-Les équipes d’ingénierie d’Adobe déploient des procédures de surveillance, de télésurveillance et d’évolutivité en temps réel proches des cibles suivantes :
-
-* Moins de 1 % des requêtes HTTP renvoient `5xx` erreurs dans les cinq dernières minutes
-* Moins de 1 % des connexions en amont renvoient une erreur au cours des cinq dernières minutes.
-* Toute capacité de tenant est doublée en moins de 10 minutes à partir du moment où une limite est atteinte.
-
-## Exclusions du contrat de niveau de service
-
-L’engagement au niveau de service décrit ci-dessus ne s’applique pas aux problèmes d’indisponibilité ou de performance causés par les événements suivants :
-
-* Facteurs échappant à notre contrôle raisonnable, y compris l’accès à Internet ou les problèmes connexes au-delà de l’infrastructure d’Adobe.
-* Toute utilisation abusive de la variable [!DNL Server API], comme défini par les limites décrites ci-dessous.
 
 ## Limites de service
 
@@ -66,7 +50,7 @@ Le tableau ci-dessous présente les valeurs limites par défaut. Si vous avez be
 
 | Point d’entrée | Demandes d’unités par seconde |
 | --- | --- |
-| `/v2/interact` | 4 000 |
+| `/v2/interact` | 4000 |
 | `/v2/collect` | 6 000 |
 
 
@@ -80,4 +64,3 @@ Le tableau ci-dessous présente les valeurs limites par défaut. Si vous avez be
 >[!NOTE]
 >
 >En fonction de la charge utile elle-même, les formats binaires sont généralement 20 à 40 % plus compacts, ce qui vous permet de transmettre plus de données que vous ne le feriez avec le format JSON en texte brut. Contactez votre représentant de l’assistance clientèle si vous avez besoin d’une capacité supérieure pour vos flux de données.
-
