@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation du connecteur source Zendesk
 description: Découvrez comment connecter Zendesk à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 61b694ca5fbd3548243663b3f1bff06aaca72434
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 35%
@@ -33,7 +33,7 @@ Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’
 
 Cette section décrit les étapes préalables à l’authentification [!DNL Zendesk] compte .
 
-* La première étape de l’authentification [!DNL Zendesk] afin de vous assurer que vous avez [!DNL Zendesk] compte d’assistance. Si vous n’en avez pas déjà un, la fonction [[!DNL Zendesk]page d&#39;inscription](https://www.zendesk.com/register/) pour enregistrer et créer votre compte Zendesk.
+* La première étape de l’authentification [!DNL Zendesk] afin de vous assurer que vous avez [!DNL Zendesk] compte d’assistance. Si vous n’en avez pas déjà un, la fonction [[!DNL Zendesk] page d&#39;inscription](https://www.zendesk.com/register/) pour enregistrer et créer votre compte Zendesk.
 * Une fois que vous êtes enregistré, accédez à la [[!DNL Zendesk] site web](https://www.zendesk.com/login/) et fournissez vos **subdomain**.
 * Ensuite, sélectionnez **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
 * Enfin, récupérez votre jeton API à partir de la fonction **[!DNL API token]** .
