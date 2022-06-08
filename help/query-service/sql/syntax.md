@@ -5,9 +5,9 @@ title: Syntaxe SQL dans Query Service
 topic-legacy: syntax
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 7016c0ce1ca8be5cecb7c09d01e9fd2e48e551de
+source-git-commit: 17a90bb716bd64c9fb9b383a5ffa49598e978288
 workflow-type: tm+mt
-source-wordcount: '3050'
+source-wordcount: '3042'
 ht-degree: 9%
 
 ---
@@ -724,28 +724,34 @@ Le `ALTER TABLE` vous permet d&#39;ajouter ou de déposer des contraintes de cl�
 Les requêtes SQL suivantes montrent des exemples d’ajout ou de suppression de contraintes dans un tableau.
 
 ```sql
-ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
+ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
-ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY column_name NAMESPACE namespace
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT IDENTITY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY IDENTITY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 ```
 
 | Paramètres | Description |
 | ------ | ------ |
 | `table_name` | Nom de la table que vous modifiez. |
-| `constraint_name` | Nom de la contrainte que vous souhaitez ajouter ou supprimer. |
 | `column_name` | Nom de la colonne à laquelle vous ajoutez une contrainte. |
 | `referenced_table_name` | Nom de la table référencée par la clé étrangère. |
 | `primary_column_name` | Nom de la colonne référencée par la clé étrangère. |
 
+
 >[!NOTE]
 >
->Le schéma de la table doit être unique et ne pas être partagé entre plusieurs tables. En outre, l’espace de noms est obligatoire pour les Principales contraintes de clé.
+>Le schéma de la table doit être unique et ne pas être partagé entre plusieurs tables. En outre, l’espace de noms est obligatoire pour les contraintes de clé Principale, d’identité Principale et d’identité.
 
 #### Ajout ou suppression d’identités Principales et secondaires
 
