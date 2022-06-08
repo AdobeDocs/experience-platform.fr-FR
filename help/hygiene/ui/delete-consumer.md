@@ -4,9 +4,9 @@ description: Découvrez comment supprimer des enregistrements de consommateurs d
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
+source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1110'
 ht-degree: 3%
 
 ---
@@ -62,12 +62,12 @@ Si vous souhaitez supprimer des données de consommateur de tous les jeux de don
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Identité Principal"
->abstract="Une identité Principale est un attribut qui lie un enregistrement au profil d’un consommateur dans Experience Platform. Le champ d’identité Principal d’un jeu de données est défini par le schéma sur lequel le jeu de données est basé. Dans cette colonne, vous devez indiquer le type (ou l’espace de noms) de l’identité Principale du consommateur, par exemple &quot;email&quot; pour les adresses électroniques et &quot;ecid&quot; pour les identifiants Experience Cloud. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène des données."
+>abstract="Une identité Principale est un attribut qui lie un enregistrement au profil d’un consommateur dans Experience Platform. Le champ d’identité Principal d’un jeu de données est défini par le schéma sur lequel le jeu de données est basé. Dans cette colonne, vous devez indiquer le type (ou l’espace de noms) de l’identité Principale du consommateur, telle que `email` pour les adresses électroniques et `ecid` pour les identifiants Experience Cloud. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène des données."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valeur d’identité"
->abstract="Dans cette colonne, vous devez indiquer la valeur de l’identité Principale du consommateur, qui doit correspondre au type d’identité fourni dans la colonne de gauche. Si le type d’identité Principal est &quot;email&quot;, la valeur doit correspondre à l’adresse électronique du consommateur. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène des données."
+>abstract="Dans cette colonne, vous devez indiquer la valeur de l’identité Principale du consommateur, qui doit correspondre au type d’identité fourni dans la colonne de gauche. Si le type d’identité Principal est `email`, la valeur doit correspondre à l’adresse électronique du consommateur. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène des données."
 
 Lors de la suppression de données de consommateurs, vous devez fournir des informations d’identité afin que le système puisse déterminer les enregistrements à supprimer. Pour tout jeu de données de Platform, les enregistrements sont supprimés en fonction de la variable **Principale identité** champ défini par le schéma du jeu de données.
 
@@ -138,7 +138,7 @@ Vous êtes invité à confirmer la liste des identités dont vous souhaitez supp
 
 ![Image de la boîte de dialogue de confirmation](../images/ui/delete-consumer/confirm-request.png)
 
-Une fois la demande envoyée, un ordre de travail est créé et s’affiche sur la page [!UICONTROL Consommateur] de l’onglet [!UICONTROL Hygiène des données] workspace. À partir de là, vous pouvez surveiller l’état de l’ordre de travail lors du traitement de la requête. La plupart des commandes de travail de suppression des clients prennent plusieurs jours.
+Une fois la demande envoyée, un ordre de travail est créé et s’affiche sur la page [!UICONTROL Consommateur] de l’onglet [!UICONTROL Hygiène des données] workspace. À partir de là, vous pouvez surveiller l’état de l’ordre de travail lors du traitement de la requête. La plupart des commandes de travail de suppression des consommateurs dureront plusieurs jours.
 
 ## Étapes suivantes
 
