@@ -4,7 +4,7 @@ description: Découvrez comment supprimer des enregistrements de consommateurs d
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 3%
@@ -57,7 +57,7 @@ Si vous souhaitez supprimer des données de consommateur de tous les jeux de don
 >
 >En sélectionnant le **[!UICONTROL Tous les jeux de données]** peut entraîner un temps de suppression plus long et ne pas entraîner une suppression d’enregistrement exacte.
 
-## Fournir des identités aux consommateurs {#identities}
+## Fournir des identités aux consommateurs {#provide-consumer-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
@@ -138,7 +138,7 @@ Vous êtes invité à confirmer la liste des identités dont vous souhaitez supp
 
 ![Image de la boîte de dialogue de confirmation](../images/ui/delete-consumer/confirm-request.png)
 
-Une fois la demande envoyée, un ordre de travail est créé et s’affiche sur la page [!UICONTROL Consommateur] de l’onglet [!UICONTROL Hygiène des données] workspace. À partir de là, vous pouvez surveiller l’état de l’ordre de travail lors du traitement de la requête. La plupart des commandes de travail de suppression des consommateurs dureront plusieurs jours.
+Une fois la demande envoyée, un ordre de travail est créé et s’affiche sur la page [!UICONTROL Consommateur] de l’onglet [!UICONTROL Hygiène des données] workspace. À partir de là, vous pouvez surveiller l’état de l’ordre de travail lors du traitement de la requête. La plupart des commandes de travail de suppression des clients prennent plusieurs jours.
 
 ## Étapes suivantes
 
