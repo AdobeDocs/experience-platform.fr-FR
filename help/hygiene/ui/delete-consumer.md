@@ -4,9 +4,9 @@ description: Découvrez comment supprimer des enregistrements de consommateurs d
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
+source-git-commit: d17c53066d77652e46471ba4c696fde682eb3bab
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1091'
 ht-degree: 3%
 
 ---
@@ -138,10 +138,16 @@ Vous êtes invité à confirmer la liste des identités dont vous souhaitez supp
 
 ![Image de la boîte de dialogue de confirmation](../images/ui/delete-consumer/confirm-request.png)
 
-Une fois la demande envoyée, un ordre de travail est créé et s’affiche sur la page [!UICONTROL Consommateur] de l’onglet [!UICONTROL Hygiène des données] workspace. À partir de là, vous pouvez surveiller l’état de l’ordre de travail lors du traitement de la requête. La plupart des commandes de travail de suppression des consommateurs dureront plusieurs jours.
+Une fois la demande envoyée, un ordre de travail est créé et s’affiche sur la page [!UICONTROL Consommateur] de l’onglet [!UICONTROL Hygiène des données] workspace. À partir de là, vous pouvez surveiller l’état de l’ordre de travail lors du traitement de la requête. La plupart des commandes de travail de suppression des clients prennent plusieurs jours.
 
 ## Étapes suivantes
 
 Ce document explique comment supprimer des enregistrements de consommateurs dans l’interface utilisateur de l’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches d’hygiène des données dans l’interface utilisateur, reportez-vous à la section [Présentation de l’interface utilisateur de l’hygiène des données](./overview.md).
 
-Pour savoir comment supprimer des enregistrements de consommateurs à l’aide de l’API Data Hygiene, reportez-vous à la section [guide de point de terminaison des commandes de travail](../api/workorder.md).
+<!--
+
+Paragraph below should be commented out until workorder.md will be added to the TOC.
+
+To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
+
+-->
