@@ -2,13 +2,13 @@
 title: Protections des performances
 description: Découvrez comment utiliser l’API du serveur dans des barrières de sécurité de performances optimales
 keywords: collecte de données;collection;réseau Edge;api;sla;slt;niveaux de service
-source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
+exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
+source-git-commit: 6f0eb81f9709cf4fcaea94334449117c4ed76107
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '426'
 ht-degree: 2%
 
 ---
-
 
 # Protections des performances
 
@@ -20,12 +20,12 @@ Adobe n’est pas responsable de la dégradation des performances provoquée par
 
 ## Définitions
 
-* **Disponibilité** est calculé pour chaque intervalle de cinq minutes sous la forme du pourcentage de requêtes traitées par le réseau Edge Experience Adobe Experience Platform qui n’échouent pas avec des erreurs et se rapportent uniquement aux API réseau Edge Adobe Experience Platform configurées. Si un client n’a effectué aucune requête au cours d’un intervalle de cinq minutes donné, cet intervalle est considéré comme 100 % disponible.
+* **Disponibilité** est calculé pour chaque intervalle de cinq minutes en tant que pourcentage des requêtes traitées par le réseau Edge Experience Platform qui ne échouent pas en erreur et se rapportent uniquement aux API réseau Edge configurées. Si un client n’a effectué aucune requête au cours d’un intervalle de cinq minutes donné, cet intervalle est considéré comme 100 % disponible.
 * **Pourcentage de disponibilité mensuelle** pour une région donnée est calculée en moyenne de la disponibilité pour tous les intervalles de cinq minutes d’un mois.
-* Un **amont** est un service derrière le réseau Adobe Edge, activé pour un flux de données spécifique, tel que le transfert côté serveur Adobe, la segmentation Adobe Edge ou Adobe Target.
+* Un **amont** est un service derrière le réseau Edge, activé pour un flux de données spécifique, tel que le transfert côté serveur Adobe, la segmentation Adobe Edge ou Adobe Target.
 * A **unité de requête** correspond à un fragment de 8 Ko d’une requête et un en amont configuré pour un flux de données.
 * A **requête** est un message unique envoyé par une application détenue par le client à la variable [!DNL Server API]. Une requête peut contenir une ou plusieurs unités de requête.
-* Un **error** est une requête qui échoue en raison d’un réseau Adobe Experience Platform Edge [erreur de service interne](error-handling.md).
+* Un **error** est une requête qui échoue en raison d’un réseau Edge [erreur de service interne](error-handling.md).
 
 ## Limites de service
 
