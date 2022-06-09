@@ -3,10 +3,10 @@ title: Présentation des flux de données
 description: Connectez votre intégration SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
 keywords: configuration;jeux de données;datastreamId;edge;datastream id;paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;ID de conteneur de synchronisation;sandbox;flux de données;jeu de données d’événement;cible;code client;jeton de propriété;ID d’environnement cible;destinations de cookie;destinations d’URL;ID de suite de rapports de paramètres Analytics;prépréparation des données p;Mapper;XDM Mapper;Mapper sur Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: fe66cbd61d546da8fb6621ef78b3565126cb193d
+source-git-commit: e0c39c20ce536b057367da2854901e33a3f67dd6
 workflow-type: tm+mt
-source-wordcount: '1686'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -53,6 +53,7 @@ Sélectionner **[!UICONTROL Options avancées]** pour afficher des contrôles su
 | [!UICONTROL Emplacement géographique] | Détermine si des recherches GPS se produisent en fonction de l’adresse IP de l’utilisateur. Le paramètre par défaut **[!UICONTROL Aucun]** désactive les recherches GPS, tandis que la variable **[!UICONTROL Ville]** fournit les coordonnées GPS à deux décimales. |
 | [!UICONTROL Cookie d’identifiant propriétaire] | Lorsqu’il est activé, ce paramètre indique au réseau Edge de faire référence à un cookie spécifié lors de la recherche d’un [identifiant d’appareil propriétaire](../identity/first-party-device-ids.md), plutôt que de rechercher cette valeur dans la carte des identités.<br><br>Lors de l’activation de ce paramètre, vous devez indiquer le nom du cookie dans lequel l’ID doit être stocké. |
 | [!UICONTROL Synchronisation des identifiants tiers] | Les synchronisations des identifiants peuvent être regroupées en conteneurs afin de permettre l’exécution de différentes synchronisations des identifiants à différents moments. Lorsqu’il est activé, ce paramètre vous permet de spécifier le conteneur des synchronisations des identifiants à exécuter pour ce flux de données. |
+| [!UICONTROL Type d’accès] | Définit le type d’authentification que la variable [!DNL Edge Network] accepte pour le flux de données. <ul><li>**[!UICONTROL Authentification mixte]**: Lorsque cette option est sélectionnée, le réseau Edge accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK Web ou [SDK Mobile](https://aep-sdks.gitbook.io/docs/), ainsi que la variable [API du serveur](../../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]**: Lorsque cette option est sélectionnée, le réseau Edge accepte uniquement les demandes authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API du serveur et que vous souhaitez empêcher le traitement des requêtes non authentifiées par la variable [!DNL Edge Network]. </li></ul> |
 
 À partir de là, si vous configurez votre flux de données pour Experience Platform, suivez le tutoriel sur [Préparation de données pour la collecte de données](./data-prep.md) pour mapper vos données à un schéma d’événement Platform avant de revenir à ce guide. Sinon, sélectionnez **[!UICONTROL Enregistrer]** et passez à la section suivante.
 
