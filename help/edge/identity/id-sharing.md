@@ -2,13 +2,13 @@
 title: Partage d’identifiants entre appareils mobiles et domaines
 description: Découvrez comment conserver les identifiants visiteur des propriétés mobiles aux propriétés web et entre les domaines
 keywords: Identité;mobile;id;partage;domaine;interdomaines;sdk;plateforme;
-source-git-commit: 55e28f749741c653a230b42fabf5a047ba8c7d01
+exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
+source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
-
 
 # Partage d’identifiants entre appareils mobiles et domaines
 
@@ -32,9 +32,11 @@ Un détaillant de technologie souhaite améliorer la création de rapports sur l
 
 ## Conditions préalables {#prerequisites}
 
-Pour utiliser le partage d’identifiants entre appareils mobiles et sur plusieurs domaines, vous devez mettre à jour vers [!DNL Web SDK] version 2.11.0 ou ultérieure.
+Pour utiliser le partage d’identifiants entre appareils mobiles et sur plusieurs domaines, vous devez utiliser [!DNL Web SDK] version 2.11.0 ou ultérieure.
 
 Pour les implémentations mobiles d’Edge Network, cette fonctionnalité est prise en charge dans la [Identité pour le réseau Edge](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) à partir de la version 1.1.0 (iOS et Android).
+
+Cette fonctionnalité est également compatible avec [!DNL VisitorAPI.js] version 1.7.0 ou ultérieure.
 
 ## Partage des identifiants de mobile à web {#mobile-to-web}
 
