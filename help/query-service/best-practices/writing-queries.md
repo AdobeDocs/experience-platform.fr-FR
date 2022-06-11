@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: Ce document présente les détails importants à connaître lors de l’écriture de requêtes dans Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 7016c0ce1ca8be5cecb7c09d01e9fd2e48e551de
+source-git-commit: 13e2248845734d985331653a17599f48aec0ebde
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 48%
@@ -318,4 +318,8 @@ Query Service normalise les données persistantes dans Adobe Experience Platform
 
 La lecture de ce document vous a permis de vous initier à certaines considérations importantes lors de la rédaction d’une requête avec [!DNL Query Service]. Pour plus d’informations sur l’utilisation de la syntaxe SQL pour la rédaction de vos propres requêtes, veuillez lire la [documentation sur la syntaxe SQL](../sql/syntax.md).
 
-Pour plus d’exemples de requêtes pouvant être utilisées dans Query Service, veuillez lire les guides sur [Exemples de requêtes Adobe Analytics](../sample-queries/adobe-analytics.md), [Exemples de requêtes Adobe Target](../sample-queries/adobe-target.md)ou [Exemples de requêtes ExperienceEvent](../sample-queries/experience-event.md).
+Pour plus d’exemples de requêtes pouvant être utilisées dans Query Service, veuillez lire la documentation de cas d’utilisation suivante :
+
+- [Analytics insights](../use-cases/analytics-insights.md)
+- [Analyse des activités avec Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
+- [Exemples de requêtes ExperienceEvent](../sample-queries/experience-event.md).
