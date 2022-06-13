@@ -3,14 +3,32 @@ title: Notes de mise à jour du SDK web Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK Web Adobe Experience Platform.
 keywords: SDK Web Adobe Experience Platform;SDK Web Platform;SDK Web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 29852bc8f17de6db04805f4738f383f2dc7c1406
+source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1169'
 ht-degree: 2%
 
 ---
 
+
 # Notes de mise à jour
+
+Ce document couvre les notes de mise à jour du SDK Web de Adobe Experience Platform.
+Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK Web, reportez-vous à la section [Notes de mise à jour de l’extension de balise SDK Web](extension/web-sdk-ext-release-notes.md).
+
+## Version 2.11.0 - 13 juin 2022
+
+**Nouvelles fonctionnalités**
+
+* Vous pouvez désormais diffuser des expériences personnalisées plus précisément, en partageant les identifiants visiteur entre les applications mobiles et le contenu web mobile, ainsi qu’entre les domaines. Voir [documentation dédiée](identity/id-sharing.md) pour en savoir plus.
+* Vous pouvez désormais générer ou exécuter un tableau de propositions à partir de [!DNL Adobe Target] dans des applications d’une seule page, sans incrémenter les mesures d’analyse. Cela réduit les erreurs de création de rapports et augmente la précision des analyses. Voir [documentation dédiée](personalization/rendering-personalization-content.md#applypropositions) pour en savoir plus.
+* Ajout d’informations supplémentaires au `getLibraryInfo` , y compris les commandes disponibles et la configuration finale de l&#39;instance.
+
+**Correctifs et améliorations**
+
+* Mise à jour des paramètres de cookie pour utiliser `sameSite="none"` et `secure` indicateur sur [!DNL HTTPS] pages.
+* Correction d’un problème en raison duquel le contenu personnalisé n’était pas correctement appliqué lors de l’utilisation de la variable `eq` pseudo-sélecteur.
+* Correction d’un problème en raison duquel `localTimezoneOffset` peut échouer lors de la validation de l’Experience Platform.
 
 ## Version 2.10.1 - 3 mai 2022
 

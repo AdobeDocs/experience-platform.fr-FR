@@ -2,16 +2,27 @@
 title: Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
 description: Extension de balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 18f7e32c8922b254d68655aeb2b633c12a97d2a7
+source-git-commit: 83f7fca5d8a3fd2a57d39c155153caa70d89d353
 workflow-type: tm+mt
-source-wordcount: '1343'
-ht-degree: 46%
+source-wordcount: '1398'
+ht-degree: 44%
 
 ---
+
 
 # Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
 
 Ce document couvre les notes de mise à jour de l’extension de balise SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir la section [Notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Version 2.12.0 - 13 juin 2022
+
+* Mise à jour de la `identityMap` élément de données pour renseigner les options d’espace de noms en fonction des environnements de test définis par les paramètres d’extension.
+* Ajout **[!UICONTROL Redirection vers une identité]** pour permettre le partage d’identités inter-domaines.
+* Ajout de liens vers la documentation au `sendEvent` action.
+* Mise à niveau de la bibliothèque de l’interface utilisateur React Spectrum.
+* Plusieurs améliorations de l’interface utilisateur.
+
+Contient la version 2.11.0 de la bibliothèque SDK Web de Adobe Experience Platform.
 
 ## Version 2.11.2 - 3 mai 2022
 
