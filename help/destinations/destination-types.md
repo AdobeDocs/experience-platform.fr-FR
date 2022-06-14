@@ -4,10 +4,10 @@ title: Types et catégories de destination
 seo-title: Destination types and categories
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
+source-git-commit: 2252c6e8bd5f0ada717d67f005b7f6ddd0b238ab
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 41%
+source-wordcount: '642'
+ht-degree: 38%
 
 ---
 
@@ -23,7 +23,7 @@ Dans Adobe Experience Platform, nous faisons la distinction entre deux types de 
 
 ## Connexions {#connections}
 
-**[!UICONTROL Exportation de profils]** et **[!UICONTROL Exportation de segments en flux continu]** les destinations dans Adobe Experience Platform capturent les données d’événement, les combinent à d’autres sources de données pour former la variable [Real-time Customer Profile](../profile/home.md), appliquez une segmentation et exportez des segments et des profils qualifiés vers les destinations.
+**[!UICONTROL Exportation de profils]**, **[!UICONTROL Exportation de segments en flux continu]**, et **[!DNL Edge Personalization]** les destinations dans Adobe Experience Platform capturent les données d’événement, les combinent à d’autres sources de données pour former la variable [Real-time Customer Profile](../profile/home.md), appliquez une segmentation et exportez des segments et des profils qualifiés vers les destinations.
 
 ## Destinations d’exportation de profils {#profile-export}
 
@@ -55,6 +55,12 @@ Les destinations basées sur des fichiers reçoivent `.csv` fichiers contenant d
 ## Destinations d’exportation de segments en flux continu {#streaming-destinations}
 
 Les destinations d’exportation de segments reçoivent des données de segment Experience Platform. Ces destinations utilisent des identifiants de segment ou d’utilisateur. Destinations publicitaires et sociales telles que [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)ou [Facebook](catalog/social/facebook.md) sont des exemples de ces destinations.
+
+## Destinations de personnalisation Edge {#edge-personalization-destinations}
+
+Destinations de personnalisation Edge dans Experience Platform : [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) et le [Destination de personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md). En utilisant ces destinations, vous pouvez activer des cas d’utilisation de personnalisation de la même page et de la page suivante pour vos clients.
+
+En savoir plus sur la manière de procéder [configuration des destinations de personnalisation pour la personnalisation de la même page et de la page suivante](/help/destinations/ui/configure-personalization-destinations.md).
 
 ## Destinations d’exportation de profils et de segments - Présentation vidéo {#video}
 
