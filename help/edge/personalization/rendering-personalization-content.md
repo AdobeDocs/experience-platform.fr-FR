@@ -3,10 +3,10 @@ title: Rendu de contenu personnalisé à l’aide du SDK Web de Adobe Experience
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web de Adobe Experience Platform.
 keywords: personnalisation;renderDecisions;sendEvent;décisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 6ba563db7fd31084813426ffbb0c35be9d7fe4bb
+source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 3%
+source-wordcount: '924'
+ht-degree: 2%
 
 ---
 
@@ -296,3 +296,94 @@ alloy("sendEvent", {
 ### Gestion du scintillement
 
 Le SDK fournit des fonctionnalités pour les éléments suivants : [gérer le scintillement](../personalization/manage-flicker.md) pendant le processus de personnalisation.
+
+## Rendu des propositions dans des applications d’une seule page sans incrémenter de mesures {#applypropositions}
+
+Le `applyPropositions` vous permet de générer ou d’exécuter un tableau de propositions à partir de [!DNL Target] dans des applications d’une seule page, sans incrémenter la variable [!DNL Analytics] et [!DNL Target] mesures. Cela augmente la précision des rapports.
+
+>[!IMPORTANT]
+>
+>Si des propositions pour la `__view__` étaient rendues au chargement de la page, leurs `renderAttempted` L’indicateur sera défini sur `true`. Le `applyPropositions` ne restituera pas à nouveau la variable `__view__` propositions d’étendue qui ont la variable `renderAttempted: true` Indicateur.
+
+### Cas d’utilisation 1 : Rendre les propositions de vue d’application d’une seule page
+
+Le cas d’utilisation décrit dans l’exemple ci-dessous restitue à nouveau les propositions d’affichage de panier récupérées et rendues précédemment sans envoyer de notifications d’affichage.
+
+Dans l’exemple ci-dessous, la variable `sendEvent` est déclenchée lors d’un changement d’affichage et enregistre l’objet résultant dans une constante.
+
+Ensuite, lorsque l’affichage ou un composant est mis à jour, la variable `applyPropositions` est appelée, avec les propositions de la précédente `sendEvent` pour réafficher les propositions d’affichage.
+
+```js
+var cartPropositions = alloy("sendEvent", {
+    renderDecisions: true,
+    xdm: {
+        web: {
+            webPageDetails: {
+                viewName: "cart"
+            }
+        }
+    }
+}).then(function(result) {
+    var propositions = result.propositions;
+
+    // Collect response tokens, etc.
+    return propositions;
+});
+
+// Call applyPropositions to re-render the view propositions from the previous sendEvent command.
+alloy("applyPropositions", {
+    propositions: cartPropositions
+});
+```
+
+### Cas d’utilisation 2 : Propositions de rendu qui ne comportent pas de sélecteur
+
+Ce cas pratique s’applique aux offres d’activité créées à l’aide de la méthode [!DNL Target Form-based Experience Composer].
+
+Vous devez fournir le sélecteur, l’action et la portée dans la variable `applyPropositions` appelez .
+
+Pris en charge `actionTypes` sont :
+
+* `setHtml`
+* `replaceHtml`
+* `appendHtml`
+
+```js
+// Retrieve propositions for salutation and discount scopes
+alloy("sendEvent", {
+    decisionScopes: ["salutation", "discount"]
+}).then(function(result) {
+    var retrievedPropositions = result.propositions;
+    // Render propositions on the page by providing additional metadata
+
+    return alloy("applyPropositions", {
+        propositions: retrievedPropositions,
+        metadata: {
+            salutation: {
+                selector: "#first-form-based-offer",
+                actionType: "setHtml"
+            },
+            discount: {
+                selector: "#second-form-based-offer",
+                actionType: "replaceHtml"
+            }
+        }
+    }).then(function(applyPropositionsResult) {
+        var renderedPropositions = applyPropositionsResult.propositions;
+
+        // Send the display notifications via sendEvent command
+        alloy("sendEvent", {
+            xdm: {
+                eventType: "decisioning.propositionDisplay",
+                _experience: {
+                    decisioning: {
+                        propositions: renderedPropositions
+                    }
+                }
+            }
+        });
+    });
+});
+```
+
+Si vous ne fournissez aucune métadonnée pour la portée d’une décision, les propositions associées ne seront pas générées.
