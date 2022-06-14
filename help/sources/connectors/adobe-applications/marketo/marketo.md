@@ -5,10 +5,10 @@ title: Connecteur Marketo Engage
 topic-legacy: overview
 description: Ce document présente le connecteur source du Marketo Engage, y compris des informations sur son authentification, son mappage et sa latence de données.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
+source-git-commit: 1ecdd5f058a5996b4a3d12ba62c5f352633cd75a
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 15%
+source-wordcount: '578'
+ht-degree: 14%
 
 ---
 
@@ -31,6 +31,10 @@ Reportez-vous aux étapes décrites dans la section [Authentification de votre c
 ## Configuration du mappage de l’organisation Adobe
 
 Avant d’établir des jeux de mappages pour [!DNL Marketo], vous devez d’abord configurer le mappage de l’organisation Adobe. Pour obtenir des instructions détaillées sur la manière de procéder, consultez le guide sur la [configuration du mappage de l’organisation Adobe pour [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+
+## Configuration des espaces de noms B2B et de l’utilitaire de génération automatique de schéma
+
+Ensuite, utilisez l’espace de noms B2B et l’utilitaire de génération automatique de schéma pour configurer votre console de développement Platform et votre environnement Postman. Cela vous permet de renseigner automatiquement vos espaces de noms et schémas B2B. Pour obtenir des instructions détaillées, consultez le guide sur la [configuration des espaces de noms B2B et de l’utilitaire de génération automatique de schéma](./marketo-namespaces.md)
 
 ## Modèle de données d’expérience (XDM)
 
