@@ -5,10 +5,10 @@ title: Mappage des champs pour la source du Marketo Engage
 topic-legacy: overview
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 1d2f485a91a8ad2c5b2bea9816c05b7bc26ae8e7
+source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 9%
+source-wordcount: '713'
+ht-degree: 8%
 
 ---
 
@@ -21,6 +21,8 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf [!DNL
 >Tous [!DNL Marketo] jeux de données, sauf `Activities` prise en charge désormais `isDeleted`. Vos flux de données existants incluront automatiquement `isDeleted`, mais n’ingère que l’indicateur pour les données nouvellement ingérées. Si vous souhaitez appliquer l’indicateur à toutes vos données historiques, vous devez arrêter vos flux de données existants et les recréer avec le nouveau mappage. Veuillez noter que si vous supprimez `isDeleted`, vous n’aurez plus accès à la fonctionnalité. Il est essentiel que le mappage soit conservé une fois qu’il est automatiquement renseigné.
 
 ## Activités {#activities}
+
+Le [!DNL Marketo] source prend désormais en charge les activités standard supplémentaires. Pour utiliser des activités standard, vous devez mettre à jour votre schéma à l’aide du [utilitaire de génération automatique de schéma](../marketo/marketo-namespaces.md) car si vous créez des `activities` le flux de données sans mettre à jour votre schéma, les modèles de mappage échouent, car les nouveaux champs cibles ne seront pas présents dans votre schéma. Si vous choisissez de ne pas mettre à jour votre schéma, vous pouvez toujours créer un nouveau flux de données et ignorer les erreurs. Toutefois, les champs nouveaux ou mis à jour ne seront pas ingérés dans Platform.
 
 | Jeu de données source | Champ cible XDM | Notes |
 | -------------- | ---------------- | ----- |
