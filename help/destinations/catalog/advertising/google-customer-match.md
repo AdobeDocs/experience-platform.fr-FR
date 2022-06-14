@@ -3,9 +3,9 @@ keywords: correspondance client Google;correspondance client Google;correspondan
 title: Connexion à Google Customer Match
 description: La correspondance client Google vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et interagir avec eux dans les propriétés détenues et exploitées de Google, telles que la recherche, le shopping, Gmail et YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: 23828fcbb1257fa093c1e114ee4c2fcb2162d9d6
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1715'
 ht-degree: 4%
 
 ---
@@ -135,7 +135,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 * **[!UICONTROL Nom]**: fournir un nom pour cette connexion de destination ;
 * **[!UICONTROL Description]**: fournir une description pour cette connexion de destination ;
-* **[!UICONTROL Identifiant de compte]**: votre ID client Google. Le format de l’ID est xxx-xxx-xxxx.
+* **[!UICONTROL Identifiant de compte]**: your [Identifiant client Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en). Le format de l’ID est xxx-xxx-xxxx. Si vous utilisez la variable [!DNL Google Ads Manager Account (My Client Center)], n’utilisez pas votre ID de compte de gestionnaire. Utilisez la variable [Identifiant client Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en) au lieu de .
 
 >[!IMPORTANT]
 >
