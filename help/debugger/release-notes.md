@@ -1,17 +1,29 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform Debugger
-description: Notes de mise à jour les plus récentes pour Adobe Experience Platform Debugger.
+description: Dernières notes de mise à jour pour Adobe Experience Platform Debugger.
 keywords: debugger;extension Experience Platform Debugger;chrome;extension;notes de mise à jour
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: 9c4f16c84b78403e5baf02595a38093341eefa67
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 0%
+source-wordcount: '351'
+ht-degree: 2%
 
 ---
 
 # Notes de mise à jour de Adobe Experience Platform Debugger
+
+## Version 1.3.2 - 9 juin 2022
+
+* Ajout d’un avatar par défaut lorsque l’utilisateur est connecté.
+* Ajout d’un surlignage de la syntaxe aux objets JSON dans les journaux.
+
+## Version 1.3.1 - 24 mai 2022
+
+* Mise à jour des dépendances.
+* Correction d’un problème d’Analytics en raison duquel les accès de post-traitement ne pouvaient pas être activés.
+* Correction d’un problème en raison duquel le débogueur se joignait à la fenêtre de connexion de l’Adobe.
+* Correction d’un problème d’AT.js en raison duquel les messages du journal ne s’affichaient pas dans Debugger.
 
 ## Version 1.3.0 - 28 janvier 2022
 
