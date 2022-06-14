@@ -5,9 +5,9 @@ title: Présentation de la gouvernance des données
 topic-legacy: overview
 description: La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans Experience Platform à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’utilisation des données et le contrôle de l’utilisation des données lors d’activités marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1431'
 ht-degree: 92%
 
 ---
@@ -81,7 +81,7 @@ Un exemple d’action marketing peut être le souhait d’exporter un jeu de don
 Deux types de stratégies sont disponibles :
 
 * **[!UICONTROL Politique de gouvernance des données]**: Restreindre l’activation des données en fonction de l’action marketing en cours et des libellés d’utilisation des données transportés par les données en question.
-* **[!UICONTROL Stratégie de consentement] (Version bêta)**: Filtrer les profils pouvant être activés sur [destinations](../destinations/home.md) selon le consentement ou les préférences de vos clients.
+* **[!UICONTROL Stratégie de consentement]**: Filtrer les profils pouvant être activés sur [destinations](../destinations/home.md) selon le consentement ou les préférences de vos clients.
 
 Une fois que les libellés d’utilisation des données ont été appliqués, les gestionnaires de données peuvent créer des stratégies à l’aide de l’API [!DNL Policy Service] ou de l’interface utilisateur d’[!DNL Experience Platform]. Pour plus d’informations sur les stratégies d’utilisation des données et les actions marketing, consultez la [présentation des stratégies](./policies/overview.md).
 

@@ -5,9 +5,9 @@ title: Présentation des stratégies dʼutilisation des données
 topic-legacy: policies
 description: Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1121'
 ht-degree: 92%
 
 ---
@@ -19,7 +19,7 @@ Des stratégies d’utilisation des données doivent être mises en œuvre pour 
 Deux types de stratégies sont disponibles :
 
 * **[!UICONTROL Politique de gouvernance des données]**: Restreindre l’activation des données en fonction de l’action marketing en cours et des libellés d’utilisation des données transportés par les données en question.
-* **[!UICONTROL Stratégie de consentement] (Version bêta)**: Filtrer les profils pouvant être activés sur [destinations](../../destinations/home.md) en fonction du consentement ou des préférences de vos clients
+* **[!UICONTROL Stratégie de consentement]**: Filtrer les profils pouvant être activés sur [destinations](../../destinations/home.md) en fonction du consentement ou des préférences de vos clients
 
 Ce document fournit une présentation de haut niveau des stratégies dʼutilisation des données et fournit des liens vers la documentation supplémentaire sur lʼutilisation des stratégies dans lʼUI ou lʼAPI.
 

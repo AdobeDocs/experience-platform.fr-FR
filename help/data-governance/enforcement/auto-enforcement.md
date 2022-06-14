@@ -5,9 +5,9 @@ title: Application automatique des stratégies
 topic-legacy: guide
 description: Ce document présente l’application automatique des stratégies d’utilisation de données lors de l’activation de segments vers des destinations dans Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1696'
 ht-degree: 66%
 
 ---
@@ -35,7 +35,7 @@ Lorsqu’un segment est activé pour la première fois, [!DNL Policy Service] re
 
 * Les libellés d’utilisation des données ont été appliquées aux champs et aux jeux de données du segment à activer.
 * Objectif marketing de la destination.
-* (Version bêta) Profils qui ont consenti à être inclus dans l’activation du segment, en fonction des stratégies de consentement que vous avez configurées.
+* Profils qui ont consenti à être inclus dans l’activation du segment, en fonction des stratégies de consentement configurées.
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ Chaque étape de la chronologie ci-dessus représente une entité pouvant contri
 
 | Étape relative à la parenté des données | Rôle dans l’application des stratégies |
 | --- | --- |
-| Jeu de données | Les jeux de données contiennent des libellés d’utilisation des données (appliquées au niveau du jeu de données ou du champ) qui définissent les cas d’utilisation pour lesquels l’intégralité du jeu de données ou des champs spécifiques peuvent être utilisés. Des violations de stratégie se produisent si un jeu de données ou un champ contenant certains libellés est utilisé à des fins limitées par une stratégie.<br><br>Tous les attributs de consentement collectés auprès de vos clients sont également stockés dans des jeux de données. Si vous avez accès aux stratégies de consentement (actuellement en version bêta), tous les profils qui ne répondent pas aux exigences d’attribut de consentement de vos stratégies seront exclus des segments qui sont activés vers une destination. |
+| Jeu de données | Les jeux de données contiennent des libellés d’utilisation des données (appliquées au niveau du jeu de données ou du champ) qui définissent les cas d’utilisation pour lesquels l’intégralité du jeu de données ou des champs spécifiques peuvent être utilisés. Des violations de stratégie se produisent si un jeu de données ou un champ contenant certains libellés est utilisé à des fins limitées par une stratégie.<br><br>Tous les attributs de consentement collectés auprès de vos clients sont également stockés dans des jeux de données. Si vous avez accès aux stratégies de consentement, tous les profils qui ne répondent pas aux exigences d’attribut de consentement de vos stratégies seront exclus des segments qui sont activés vers une destination. |
 | Stratégie de fusion | Les stratégies de fusion sont les règles utilisées par Platform pour déterminer le classement par priorité des données lors de la fusion de fragments provenant de plusieurs jeux de données. Des violations de stratégie se produisent si vos stratégies de fusion sont configurées de telle sorte que les jeux de données dotés de libellés limités sont activés pour une destination. Pour plus d’informations, consultez la [présentation des stratégies de fusion](../../profile/merge-policies/overview.md). |
 | Segment | Les règles de segment définissent les attributs à inclure dans les profils clients. En fonction des champs inclus dans une définition de segment, le segment hérite des libellés d’utilisation appliqués pour ces champs. Des violations de stratégie se produisent si vous activez un segment dont les libellés hérités sont limités par les stratégies applicables de la destination cible, en fonction de son cas d’utilisation marketing. |
 | Destination | Lors de la configuration d’une destination, une action marketing (parfois appelée cas d’utilisation marketing) peut être définie. Ce cas pratique correspond à une action marketing définie dans une stratégie. En d’autres termes, l’action marketing que vous définissez pour une destination détermine les stratégies d’utilisation des données et de consentement applicables à cette destination.<br><br>Des violations de stratégie d’utilisation des données se produisent si vous activez un segment dont les libellés d’utilisation sont limités pour l’action marketing de la destination cible.<br><br>(Version bêta) Lorsqu’un segment est activé, tous les profils qui ne contiennent pas les attributs de consentement requis pour l’action marketing (tels que définis par vos stratégies de consentement) sont exclus de l’audience activée. |
