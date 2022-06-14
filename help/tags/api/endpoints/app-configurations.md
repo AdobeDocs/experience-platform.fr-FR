@@ -2,10 +2,10 @@
 title: Point d’entrée des configurations d’application
 description: Découvrez comment effectuer des appels vers le point d’entrée /app_configurations dans l’API Reactor.
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
 workflow-type: tm+mt
 source-wordcount: '586'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -189,6 +189,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
@@ -257,12 +258,12 @@ Une réponse réussie renvoie les détails de la configuration d’application q
 
 ## Mise à jour d’une configuration d’application
 
-Vous pouvez mettre à jour une configuration d’application en incluant son identifiant dans le chemin d’accès d’une requête PUT.
+Vous pouvez mettre à jour une configuration d’application en incluant son identifiant dans le chemin d’accès d’une requête de PATCH.
 
 **Format d’API**
 
 ```http
-PUT /app_configurations/{APP_CONFIGURATION_ID}
+PATCH /app_configurations/{APP_CONFIGURATION_ID}
 ```
 
 | Paramètre | Description |
@@ -276,12 +277,13 @@ PUT /app_configurations/{APP_CONFIGURATION_ID}
 La requête suivante met à jour le `app_id` pour une configuration d’application existante.
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/app_configurations/AC40c339ab80d24c958b90d67b698602eb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
@@ -361,7 +363,9 @@ curl -X DELETE \
   https://reactor.adobe.io/app_configurations/AC40c339ab80d24c958b90d67b698602eb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H "Content-Type: application/vnd.api+json" \
+  -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **Réponse**
