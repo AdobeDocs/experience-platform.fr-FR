@@ -5,10 +5,10 @@ title: Principes de base de la composition des schémas
 topic-legacy: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 997a3cdd6301adc2c52b6b397307c1dd1d194d7c
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '3838'
-ht-degree: 28%
+source-wordcount: '3881'
+ht-degree: 27%
 
 ---
 
@@ -50,6 +50,12 @@ Tous les schémas XDM décrivent des données pouvant être catégorisées en ta
 Les schémas d’enregistrement et de série temporelle contiennent tous deux une carte des identités (`xdm:identityMap`). Ce champ contient la représentation de l’identité d’un sujet tiré des champs marqués comme « Identité » décrit à la section suivante.
 
 ### [!UICONTROL Identité] {#identity}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_identities"
+>title="Identités dans les schémas"
+>abstract="Les identités sont des champs clés d’un schéma qui peuvent être utilisés pour identifier un objet, comme une adresse électronique ou un identifiant marketing. Ces champs sont utilisés pour créer le graphique d’identités pour chaque individu et créer des profils client."
+>text="See the documentation for more information on identities in schemas."
 
 Les schémas sont utilisés pour ingérer des données dans [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’une entité individuelle. Il est donc important, lors de la réflexion sur les schémas, de réfléchir aux identités des clients et aux champs qui peuvent être utilisés pour identifier un sujet, quel que soit l’origine des données.
 

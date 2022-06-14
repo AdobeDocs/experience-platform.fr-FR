@@ -5,9 +5,9 @@ title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les principes de base de la création et de l’édition de schémas dans l’interface utilisateur de l’Experience Platform.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: e0148480ce8d4179771f1c10fb6b921baf6a24d1
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '2844'
+source-wordcount: '2895'
 ht-degree: 0%
 
 ---
@@ -221,6 +221,12 @@ Après avoir appliqué vos modifications, le nouveau champ s’affiche sous l’
 ![Champ ajouté à l’objet standard](../../images/ui/resources/schemas/added-to-standard-object.png)
 
 ## Activation d’un schéma pour Real-time Customer Profile {#profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_enableforprofile"
+>title="Activation d’un schéma pour Profile"
+>abstract="Lorsqu’un schéma est activé pour Profile, tous les jeux de données créés à partir de ce schéma participent à Real-time Customer Profile, qui fusionne les données de sources disparates pour créer une vue d’ensemble complète de chaque client. Une fois qu’un schéma est utilisé pour ingérer des données dans Profile, il ne peut pas être désactivé."
+>text="See the documentation for more information on enabling a schema for Profile."
 
 [Real-time Customer Profile](../../../profile/home.md) fusionne les données provenant de sources disparates afin de créer une vue complète de chaque client. Si vous souhaitez que les données capturées par un schéma participent à ce processus, vous devez activer le schéma à utiliser dans [!DNL Profile].
 

@@ -5,14 +5,20 @@ title: Glossaire des étiquettes dʼutilisation des données
 topic-legacy: labels
 description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 15b0c2fb2565ada489c5a8811b946efc4319696b
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '2053'
-ht-degree: 96%
+source-wordcount: '2083'
+ht-degree: 95%
 
 ---
 
 # Glossaire des étiquettes dʼutilisation des données
+
+>[!CONTEXTUALHELP]
+>id="platform_policies_labeltype"
+>title="Types d’étiquettes"
+>abstract="Il existe plusieurs catégories de libellés d’utilisation des données. Les étiquettes définies par l’Adobe comprennent les étiquettes de contrat, les étiquettes d’identité et les étiquettes sensibles. Les libellés définis par votre organisation sont classés comme des libellés personnalisés."
+>text="See the data usage labels glossary for more information on these label types."
 
 Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Adobe Experience Platform Data Governance fournit de multiples étiquettes dʼutilisation des données de base prêtes à lʼemploi que vous pouvez utiliser pour commencer à classer vos données.
 
