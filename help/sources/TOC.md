@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: b21e735b5c6c310b485700ef619302e3e3086763
+source-git-commit: 6f7611b120046fffc1b7c15bd657d699f4b4a588
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '795'
 ht-degree: 92%
 
 ---
@@ -35,6 +35,8 @@ ht-degree: 92%
          - [Espaces de noms et schémas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Publicité {#advertising}
       - [Connecteur Google AdWords](connectors/advertising/ads.md)
+   - Analytics {#analytics}
+      - [Connecteur Mixpanel](connectors/analytics/mixpanel.md)
    - Stockage dans le cloud {#cloud-storage}
       - [Connecteur Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Connecteur Amazon S3](connectors/cloud-storage/s3.md)
@@ -101,6 +103,8 @@ ht-degree: 92%
    - Créer une connexion de base {#create}
       - Publicité {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
+      - Analytics {#analytics}
+         - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
       - Stockage dans le cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -197,8 +201,10 @@ ht-degree: 92%
          - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [Attributs du client](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
-      - Publicité {#create}
+      - Publicité {#advertising}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+      - Analytics {#analytics}
+         - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - Stockage dans le cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -263,6 +269,7 @@ ht-degree: 92%
          - [API HTTP](tutorials/ui/create/streaming/http.md)
    - Configurer un flux de données {#dataflow}
       - [Flux de données de connexion publicitaire](tutorials/ui/dataflow/advertising.md)
+      - [Flux de données de connexion Analytics](tutorials/ui/dataflow/analytics.md)
       - [Flux de données de connexion à lʼespace de stockage par lots](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Flux de données de connexion à lʼespace de stockage de diffusion en continu](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [Flux de données de connexion de consentement et de préférences](tutorials/ui/dataflow/consent-and-preferences.md)
