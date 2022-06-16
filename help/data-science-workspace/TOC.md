@@ -5,9 +5,9 @@ breadcrumb-title: Guide de Data Science Workspace
 user-guide-description: Utilisez le machine learning pour développer, entraîner et évaluer des modèles et des recettes avec des ordinateurs portables équipés d’Adobe Sensei et de JupyterLab.
 feature: Data Science Workspace
 solution: Experience Platform
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: ec69c859a7b40f3d527c73405b358862ebdb92e7
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '236'
 ht-degree: 100%
 
 ---
@@ -35,11 +35,6 @@ ht-degree: 100%
    * [MLService](api/mlservices.md)
    * [Insights](api/insights.md)
    * [Annexe](api/appendix.md)
-* Machine learning en temps réel (Alpha) {#real-time-machine-learning}
-   * [Présentation](real-time-machine-learning/home.md)
-   * [Prise en main](real-time-machine-learning/getting-started.md)
-   * [Gestion des notebooks](real-time-machine-learning/rtml-authoring-notebook.md)
-   * [Guide de référence du nœud](real-time-machine-learning/node-reference.md)
 * Recettes préconfigurées {#pre-built-recipes}
    * [Recette des recommandations de produits](pre-built-recipes/product-recommendations.md)
    * [Prédiction d’achat de produit](pre-built-recipes/product-purchase-prediction.md)
