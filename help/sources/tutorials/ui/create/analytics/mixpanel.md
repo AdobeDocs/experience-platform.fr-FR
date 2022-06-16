@@ -4,9 +4,9 @@ title: (Version bêta) Création d’une connexion à la source du panneau mixte
 description: Découvrez comment créer une connexion source Mixpanel à l’aide de l’interface utilisateur de Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 2ad3737c7099319e0b14f4e843dda87a6a554d97
+source-git-commit: 8092829c95c9bc43894b73db104fdbb22363e460
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '897'
 ht-degree: 31%
 
 ---
@@ -72,7 +72,7 @@ Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fo
 >id="platform_sources_mixpanel_timezone"
 >title="Définition d’un fuseau horaire pour l’assimilation de Mixpanel"
 >abstract="Le fuseau horaire doit être identique au paramètre de fuseau horaire du profil Mixpanel , car Platform utilise le fuseau horaire du projet désigné pour ingérer les données pertinentes à partir de Mixpanel. Mixpanel adapte son fuseau horaire afin de le coordonner avec le fuseau horaire de votre projet avant d’enregistrer l’événement dans un entrepôt de données Mixpanel."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/tutorials/ui/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="En savoir plus dans la documentation."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="En savoir plus dans la documentation."
 
 Une fois la source authentifiée, indiquez l’ID de projet et le fuseau horaire, puis sélectionnez **[!UICONTROL Sélectionner]**.
 
