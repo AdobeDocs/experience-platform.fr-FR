@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: 16f61ae259f6da23cfb7aa96e685716cd623d1b2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1001'
 ht-degree: 100%
 
