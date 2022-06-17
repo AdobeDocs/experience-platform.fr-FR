@@ -1,13 +1,13 @@
 ---
-title: Point de terminaison de l’API de l’ordre de travail
-description: Le point d’entrée /workorder de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression pour les identités des consommateurs.
+title: Point d’entrée de l’API de l’ordre de travail
+description: Le point d’entrée /workorder de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression des identités des clients.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
 source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1000'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
@@ -15,17 +15,17 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Actuellement, les fonctionnalités d’hygiène des données de Adobe Experience Platform ne sont disponibles que pour les organisations qui ont acheté Adobe Shield pour les soins de santé.
+>Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Adobe Shield for Healthcare.
 
-Le `/workorder` Le point de terminaison de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression pour les identités des consommateurs dans Adobe Experience Platform.
+Le point d’entrée `/workorder` de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression des identités des clients dans Adobe Experience Platform.
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’API Data Hygiene. Avant de poursuivre, veuillez consulter la section [aperçu](./overview.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d’appels API de ce document, ainsi que des informations importantes concernant les en-têtes requis pour réussir les appels à une API Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de lʼAPI Data Hygiene. Avant de continuer, consultez la [présentation](./overview.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
-## Suppression d’identités {#delete-identities}
+## Supprimer des identités {#delete-identities}
 
-Vous pouvez supprimer une ou plusieurs identités de consommateur d’un seul jeu de données ou de tous les jeux de données en adressant une requête de POST à la variable `/workorder` point de terminaison .
+Vous pouvez supprimer une ou plusieurs identités de clients d’un seul jeu de données ou de tous les jeux de données en effectuant une requête POST au point d’entrée `/workorder`.
 
 **Format d’API**
 
@@ -35,7 +35,7 @@ POST /workorder
 
 **Requête**
 
-Selon la valeur de la variable `datasetId` fourni dans le payload de requête, l’appel API supprime les identités des consommateurs de tous les jeux de données ou d’un seul jeu de données que vous spécifiez. La requête suivante supprime trois identités de consommateur d’un jeu de données spécifique.
+En fonction de la valeur de `datasetId` fournie dans le payload de requête, l’appel API supprime les identités des clients de tous les jeux de données ou d’un seul jeu de données que vous spécifiez. La requête suivante supprime trois identités de clients d’un jeu de données spécifique.
 
 ```shell
 curl -X POST \
@@ -73,9 +73,9 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `action` | Action à effectuer. La valeur doit être définie sur `delete_identity` lors de la suppression d’identités. |
-| `datasetId` | Si vous supprimez d’un seul jeu de données, cette valeur doit correspondre à l’identifiant du jeu de données en question. Si vous supprimez de tous les jeux de données, définissez la valeur sur `ALL`.<br><br>Si vous spécifiez un seul jeu de données, une identité Principale doit être définie pour le schéma de modèle de données d’expérience (XDM) associé au jeu de données. |
-| `identities` | Un tableau contenant les identités d’au moins un utilisateur dont vous souhaitez supprimer les informations. Chaque identité se compose d’une [namespace d’identité](../../identity-service/namespaces.md) et une valeur :<ul><li>`namespace`: Contient une seule propriété string, `code`, qui représente l’espace de noms de l’identité. </li><li>`id` : la valeur de l’identité.</ul>If `datasetId` spécifie un seul jeu de données, chaque entité sous `identities` doit utiliser le même espace de noms d’identité que l’identité Principale du schéma.<br><br>If `datasetId` est défini sur `ALL`, la variable `identities` n’est limité à aucun espace de noms unique, car chaque jeu de données peut être différent. Toutefois, vos requêtes sont toujours limitées aux espaces de noms disponibles pour votre organisation, comme indiqué par [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `action` | L’action à effectuer. La valeur doit être définie sur `delete_identity` lors de la suppression des identités. |
+| `datasetId` | Si vous effectuez une suppression dans un seul jeu de données, cette valeur doit correspondre à l’identifiant du jeu de données en question. Si vous effectuez une suppression dans tous les jeux de données, définissez la valeur sur `ALL`.<br><br>Si vous spécifiez un seul jeu de données, une identité principale doit être définie pour le schéma de modèle de données d’expérience (XDM) associé au jeu de données. |
+| `identities` | Un tableau contenant les identités d’au moins un utilisateur dont vous souhaitez supprimer les informations. Chaque identité se compose d’un [espace de noms d’identité](../../identity-service/namespaces.md) et d’une valeur :<ul><li>`namespace` : contient une seule propriété de chaîne, `code`, qui représente l’espace de noms d’identité. </li><li>`id` : la valeur de l’identité.</ul>Si `datasetId` spécifie un seul jeu de données, chaque entité sous `identities` doit utiliser le même espace de noms d’identité que l’identité principale du schéma.<br><br>Si `datasetId` est défini sur `ALL`, le tableau `identities` n’est limité à aucun espace de noms unique, car chaque jeu de données peut être différent. Toutefois, les requêtes sont toujours limitées aux espaces de noms disponibles pour l’organisation, comme indiqué par le [service d’identités](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -100,22 +100,22 @@ Une réponse réussie renvoie les détails de la suppression d’identité.
 
 | Propriété | Description |
 | --- | --- |
-| `workorderId` | L’identifiant de l’ordre de suppression. Vous pouvez l’utiliser pour rechercher ultérieurement l’état de la suppression. |
-| `orgId` | ID de votre organisation. |
-| `batchId` | L’identifiant du lot auquel cette commande de suppression est associée, utilisé à des fins de débogage. Plusieurs commandes de suppression sont regroupées dans un lot qui sera traité par les services en aval. |
-| `bundleOrdinal` | L’ordre dans lequel cette commande de suppression a été reçue lorsqu’elle a été regroupée dans un lot pour traitement en aval. Utilisé à des fins de débogage. |
-| `payloadByteSize` | Taille, en octets, de la liste des identités fournies dans le payload de requête qui a créé cet ordre de suppression. |
-| `operationCount` | Nombre d’identités auxquelles cet ordre de suppression s’applique. |
-| `createdAt` | Horodatage de la création de la commande de suppression. |
-| `responseMessage` | Dernière réponse renvoyée par le système. Si une erreur se produit lors du traitement, cette valeur est une chaîne JSON contenant des informations détaillées sur les erreurs afin de vous aider à comprendre ce qui s’est passé. |
-| `status` | État actuel de l’ordre de suppression. |
+| `workorderId` | L’identifiant de l’ordre de suppression. Vous pouvez l’utiliser pour rechercher le statut de la suppression ultérieurement. |
+| `orgId` | L’identifiant de l’organisation. |
+| `batchId` | L’identifiant du lot auquel cet ordre de suppression est associé, utilisé à des fins de débogage. Plusieurs ordres de suppression sont regroupés dans un lot pour être traités par les services en aval. |
+| `bundleOrdinal` | L’ordre dans lequel cet ordre de suppression a été reçu lorsqu’il a été regroupé dans un lot pour un traitement en aval. Utilisé à des fins de débogage. |
+| `payloadByteSize` | La taille, en octets, de la liste des identités fournies dans le payload de requête à l’origine de cet ordre de suppression. |
+| `operationCount` | Le nombre d’identités auxquelles s’applique cet ordre de suppression. |
+| `createdAt` | La date et l’heure de création de l’ordre de suppression. |
+| `responseMessage` | La dernière réponse renvoyée par le système. Si une erreur se produit lors du traitement, cette valeur est une chaîne JSON contenant des informations détaillées sur les erreurs afin de vous aider à comprendre ce qui s’est passé. |
+| `status` | Le statut actuel de l’ordre de suppression. |
 | `createdBy` | L’utilisateur qui a créé l’ordre de suppression. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Répertorier les états de toutes les suppressions d’identité {#list}
+## Répertorier les statuts de toutes les suppressions d’identité {#list}
 
-Vous pouvez répertorier les états de toutes les suppressions d’identité en effectuant une requête de GET.
+Vous pouvez répertorier les statuts de toutes les suppressions d’identité en effectuant une requête GET.
 
 **Format d’API**
 
@@ -125,7 +125,7 @@ GET /workorder?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --- | --- |
-| `{QUERY_PARAMS}` | Liste des paramètres de requête facultatifs pour l’appel de liste, avec plusieurs paramètres séparés par `&` caractères. Les paramètres de requête acceptés sont les suivants :<ul><li>`data` - Une valeur booléenne qui, lorsqu’elle est définie sur `true`, inclut toutes les données de requête et de réponse supplémentaires reçues pour l’ordre de suppression. La valeur par défaut est `false`.</li><li>`start` - Horodatage du début de la période pour rechercher les commandes de suppression.</li><li>`end` - Horodatage de la fin de la période pour rechercher les commandes de suppression.</li><li>`page` - Page de réponse spécifique à renvoyer.</li><li>`limit` - Nombre d’enregistrements à afficher par page.</li></ul> |
+| `{QUERY_PARAMS}` | Une liste des paramètres de requête facultatifs pour l’appel de liste, avec plusieurs paramètres séparés par des caractères `&`. Les paramètres de requête acceptés sont les suivants :<ul><li>`data` : une valeur booléenne qui, lorsqu’elle est définie sur `true`, comprend toutes les données de requête et de réponse supplémentaires reçues pour l’ordre de suppression. La valeur par défaut est `false`.</li><li>`start` : date et heure de début du délai de recherche des ordres de suppression.</li><li>`end` : date et heure de fin du délai de recherche des ordres de suppression.</li><li>`page` : la page de réponse spécifique à renvoyer.</li><li>`limit` : le nombre d’enregistrements à afficher par page.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -142,7 +142,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de toutes les opérations de suppression, y compris leur état actuel. La réponse ci-dessous a été réduite pour gagner de l’espace.
+Une réponse réussie renvoie les détails de toutes les opérations de suppression, y compris leur statut actuel. La réponse ci-dessous a été réduite pour gagner de l’espace.
 
 ```json
 {
@@ -189,16 +189,16 @@ Une réponse réussie renvoie les détails de toutes les opérations de suppress
 
 | Propriété | Description |
 | --- | --- |
-| `results` | Contient la liste des commandes de suppression et leurs détails. Pour plus d’informations sur les propriétés d’une commande de suppression, voir l’exemple de réponse dans la section sur [recherche d’un ordre de suppression](#lookup). |
-| `total` | Nombre total de commandes de suppression trouvées en fonction des filtres actuels. |
-| `count` | Nombre total de commandes de suppression trouvées sur chaque page de la réponse. |
-| `_links` | Contient des informations de pagination pour vous aider à explorer le reste de la réponse :<ul><li>`next`: Contient une URL pour la page suivante dans la réponse.</li><li>`page`: Contient un modèle d’URL pour accéder à une autre page de la réponse ou ajuster le nombre d’éléments renvoyés sur chaque page.</li></ul> |
+| `results` | Contient la liste des ordres de suppression et les détails. Pour plus d’informations sur les propriétés d’un ordre de suppression, consultez l’exemple de réponse dans la section sur la [recherche d’un ordre de suppression](#lookup). |
+| `total` | Le nombre total d’ordres de suppression trouvés en fonction des filtres actuels. |
+| `count` | Le nombre total d’ordres de suppression trouvés sur chaque page de la réponse. |
+| `_links` | Contient des informations de pagination vous permettant de découvrir le reste de la réponse :<ul><li>`next` : contient l’URL de la page suivante dans la réponse.</li><li>`page` : contient un modèle d’URL pour accéder à une autre page de la réponse ou ajuster le nombre d’éléments renvoyés sur chaque page.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Récupération de l’état d’une suppression d’identité (#lookup)
+## Récupérer le statut d’une suppression d’identité (#lookup)
 
-Après avoir envoyé une demande à [suppression d’une identité](#delete-identities), vous pouvez vérifier son état à l’aide d’une requête de GET.
+Après avoir envoyé une requête pour [supprimer une identité](#delete-identities), vous pouvez vérifier son statut à l’aide d’une requête GET.
 
 **Format d’API**
 
@@ -225,7 +225,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’opération de suppression, y compris son état actuel.
+Une réponse réussie renvoie les détails de l’opération de suppression, y compris son statut actuel.
 
 ```json
 {
@@ -244,13 +244,13 @@ Une réponse réussie renvoie les détails de l’opération de suppression, y c
 
 | Propriété | Description |
 | --- | --- |
-| `workorderId` | L’identifiant de l’ordre de suppression. Vous pouvez l’utiliser pour rechercher ultérieurement l’état de la suppression. |
-| `orgId` | ID de votre organisation. |
-| `batchId` | L’identifiant du lot auquel cette commande de suppression est associée, utilisé à des fins de débogage. Plusieurs commandes de suppression sont regroupées dans un lot qui sera traité par les services en aval. |
-| `bundleOrdinal` | L’ordre dans lequel cette commande de suppression a été reçue lorsqu’elle a été regroupée dans un lot pour traitement en aval. Utilisé à des fins de débogage. |
-| `payloadByteSize` | Taille, en octets, de la liste des identités fournies dans le payload de requête qui a créé cet ordre de suppression. |
-| `operationCount` | Nombre d’identités auxquelles cet ordre de suppression s’applique. |
-| `createdAt` | Horodatage de la création de la commande de suppression. |
-| `responseMessage` | Dernière réponse renvoyée par le système. Si une erreur se produit lors du traitement, cette valeur est une chaîne JSON contenant des informations détaillées sur les erreurs afin de vous aider à comprendre ce qui s’est passé. |
-| `status` | État actuel de l’ordre de suppression. |
+| `workorderId` | L’identifiant de l’ordre de suppression. Vous pouvez l’utiliser pour rechercher le statut de la suppression ultérieurement. |
+| `orgId` | L’identifiant de l’organisation. |
+| `batchId` | L’identifiant du lot auquel cet ordre de suppression est associé, utilisé à des fins de débogage. Plusieurs ordres de suppression sont regroupés dans un lot pour être traités par les services en aval. |
+| `bundleOrdinal` | L’ordre dans lequel cet ordre de suppression a été reçu lorsqu’il a été regroupé dans un lot pour un traitement en aval. Utilisé à des fins de débogage. |
+| `payloadByteSize` | La taille, en octets, de la liste des identités fournies dans le payload de requête à l’origine de cet ordre de suppression. |
+| `operationCount` | Le nombre d’identités auxquelles s’applique cet ordre de suppression. |
+| `createdAt` | La date et l’heure de création de l’ordre de suppression. |
+| `responseMessage` | La dernière réponse renvoyée par le système. Si une erreur se produit lors du traitement, cette valeur est une chaîne JSON contenant des informations détaillées sur les erreurs afin de vous aider à comprendre ce qui s’est passé. |
+| `status` | Le statut actuel de l’ordre de suppression. |
 | `createdBy` | L’utilisateur qui a créé l’ordre de suppression. |
