@@ -1,62 +1,62 @@
 ---
-title: Gestion des TTL de jeux de données
-description: Découvrez comment planifier une heure d’activation (TTL) pour un jeu de données dans l’interface utilisateur de Adobe Experience Platform.
+title: Gérer des TTL de jeux de données
+description: Découvrez comment planifier une durée de vie (TTL) pour un jeu de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
 source-wordcount: '372'
-ht-degree: 0%
+ht-degree: 94%
 
 ---
 
-# Gestion des TTL de jeux de données
+# Gérer des TTL de jeux de données
 
 >[!IMPORTANT]
 >
->Actuellement, les fonctionnalités d’hygiène des données de Adobe Experience Platform ne sont disponibles que pour les organisations qui ont acheté Adobe Shield pour les soins de santé.
+>Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Adobe Shield for Healthcare.
 
-Le [[!UICONTROL Hygiène des données] workspace](./overview.md) dans l’interface utilisateur de Adobe Experience Platform, vous permet de planifier une durée de vie (TTL) pour un jeu de données.
+L’espace de travail [[!UICONTROL Nettoyage de données]](./overview.md) dans l’interface utilisateur d’Adobe Experience Platform vous permet de planifier une durée de vie (TTL) pour un jeu de données.
 
 Ce document explique comment planifier et gérer des TTL de jeux de données dans l’interface utilisateur de Platform.
 
-## Planification d’un TTL
+## Planifier une TTL
 
-Pour créer une requête, sélectionnez **[!UICONTROL Créer une requête]** de la page principale de l’espace de travail.
+Pour créer une requête, sélectionnez **[!UICONTROL Créer une requête]** dans la page principale de l’espace de travail.
 
-![Image montrant le [!UICONTROL Créer une requête] bouton sélectionné](../images/ui/ttl/create-request-button.png)
+![Image illustrant le bouton [!UICONTROL Créer une requête] sélectionné](../images/ui/ttl/create-request-button.png).
 
 <!-- The request creation dialog appears. Under the **[!UICONTROL Action]** section, select **[!UICONTROL Dataset]** to update the available controls for TTL scheduling-->
 
-### Sélection d’une date et d’un jeu de données
+### Sélectionner une date et un jeu de données
 
-La boîte de dialogue de création de requête s’affiche. Sous , **[!UICONTROL Action]** , sélectionnez une date à laquelle le jeu de données doit être supprimé. Vous pouvez saisir la date manuellement (au format `mm/dd/yyyy`) ou sélectionnez l’icône de calendrier (![Image de l&#39;icône du calendrier](../images/ui/ttl/calendar-icon.png)) pour sélectionner la date dans une boîte de dialogue.
+La boîte de dialogue de création de requête s’affiche. Sous la section **[!UICONTROL Action]**, sélectionnez une date à laquelle vous souhaitez que le jeu de données soit supprimé. Vous pouvez saisir la date manuellement (au format `mm/dd/yyyy`) ou sélectionner l’icône de calendrier (![image de l’icône de calendrier](../images/ui/ttl/calendar-icon.png)) pour sélectionner la date dans une boîte de dialogue.
 
-![Image montrant une date d’expiration définie pour le délai d’activation](../images/ui/ttl/select-date.png)
+![Image illustrant la définition d’une date d’expiration pour la TTL](../images/ui/ttl/select-date.png).
 
-Ensuite, sous **[!UICONTROL Détails du jeu de données]**, sélectionnez l’icône de base de données (![Image de l&#39;icône de la base de données](../images/ui/ttl/database-icon.png)) pour ouvrir une boîte de dialogue de sélection de jeux de données. Sélectionnez un jeu de données dans la liste auquel appliquer le délai d’activation, puis sélectionnez **[!UICONTROL Terminé]**.
+Ensuite, sous **[!UICONTROL Détails du jeu de données]**, sélectionnez l’icône de base de données (![image de l’icône de base de données](../images/ui/ttl/database-icon.png)) pour ouvrir une boîte de dialogue de sélection de jeu de données. Dans la liste, sélectionnez un jeu de données auquel appliquer la TTL, puis sélectionnez **[!UICONTROL Terminé]**.
 
-![Image montrant un jeu de données sélectionné](../images/ui/ttl/select-dataset.png)
+![Image illustrant un jeu de données sélectionné](../images/ui/ttl/select-dataset.png).
 
 >[!NOTE]
 >
->Seuls les jeux de données appartenant à l’environnement de test actif s’affichent.
+>Seuls les jeux de données appartenant au sandbox actuel s’affichent.
 
 ### Envoyer la requête
 
-Une fois que vous avez sélectionné un jeu de données et une date TTL, sélectionnez **[!UICONTROL Envoyer]**.
+Une fois que vous avez sélectionné un jeu de données et une date de TTL, sélectionnez **[!UICONTROL Envoyer]**.
 
-![Image montrant le [!UICONTROL Envoyer] bouton sélectionné](../images/ui/ttl/submit.png)
+![Image illustrant le bouton [!UICONTROL Envoyer] sélectionné](../images/ui/ttl/submit.png).
 
-Vous êtes invité à confirmer la date à laquelle le jeu de données sera supprimé. Sélectionner **[!UICONTROL Envoyer]** pour continuer.
+Vous êtes invité à confirmer la date à laquelle le jeu de données sera supprimé. Sélectionnez **[!UICONTROL Envoyer]** pour continuer.
 
-Une fois la demande envoyée, un ordre de travail est créé et s’affiche sur l’onglet principal de la [!UICONTROL Hygiène des données] workspace. À partir de là, vous pouvez surveiller l’état de l’ordre de travail lors du traitement de la requête.
+Une fois la demande envoyée, un ordre de travail est créé et s’affiche sur l’onglet principal de la [!UICONTROL Hygiène des données] workspace. Ensuite, vous pouvez surveiller le statut de l’ordre de travail lors du traitement de la requête.
 
-## Modification ou annulation d’un TTL
+## Modifier ou annuler une TTL
 
-Pour modifier ou annuler une durée de vie, sélectionnez **[!UICONTROL Jeu de données]** sur la page principale de l’espace de travail, puis sélectionnez TTL dans la liste.
+Pour modifier ou annuler une TTL, sélectionnez **[!UICONTROL Jeu de données]** dans la page principale de l’espace de travail, puis sélectionnez TTL dans la liste.
 
-Sur la page des détails de la durée de vie, le rail de droite affiche les commandes permettant de modifier ou d’annuler la suppression planifiée.
+Dans la page des détails de la TTL, le rail de droite affiche les commandes permettant de modifier ou d’annuler la suppression planifiée.
 
 ## Étapes suivantes
 
-Ce document explique comment planifier des TTL de jeux de données dans l’interface utilisateur Experience Platform. Pour savoir comment planifier des TTL de jeux de données à l’aide de l’API Data Hygiene, reportez-vous à la section [guide de point d’entrée TTL du jeu de données](../api/ttl.md).
+Ce document explique comment planifier des TTL de jeux de données dans l’interface utilisateur d’Experience Platform. Pour découvrir comment planifier des TTL de jeux de données à l’aide de l’API Data Hygiene, consultez le [Guide de point d’entrée de TTL de jeu de données](../api/ttl.md).
