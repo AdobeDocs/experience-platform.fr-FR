@@ -5,9 +5,9 @@ title: Prise en main de l’API Schema Registry
 description: Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels vers l’API Schema Registry.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1356'
 ht-degree: 48%
 
 ---
@@ -211,6 +211,7 @@ Le tableau suivant répertorie les `Accept` valeurs d’en-tête, y compris cell
 | `application/vnd.adobe.xed-notext+json; version=1` | XDM brut avec `$ref` et `allOf`. Aucun titre ni description. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | Attributs `$ref` et `allOf` résolus. Aucun titre ni description. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | Attributs `$ref` et `allOf` résolus. Les descripteurs sont inclus. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` et `allOf` résolus, contient des titres et des descriptions. Les champs obsolètes sont indiqués par un `meta:status` de `deprecated`. |
 
 {style=&quot;table-layout:auto&quot;}
 

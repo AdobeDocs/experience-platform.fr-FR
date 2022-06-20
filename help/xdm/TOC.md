@@ -4,10 +4,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes des modèles de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
-source-git-commit: ec61d4ed810029646e2ae28ffc91215eb9189f10
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 89%
+source-wordcount: '469'
+ht-degree: 87%
 
 ---
 
@@ -171,12 +171,13 @@ ht-degree: 89%
    * [Créer un schéma dans l’interface utilisateur](tutorials/create-schema-ui.md)
    * [Créer un schéma dans l’API](tutorials/create-schema-api.md)
    * [Définition de champs personnalisés dans l’API](./tutorials/custom-fields-api.md)
+   * [Ajout de valeurs suggérées à un champ (API)](tutorials/suggested-values.md)
+   * [Obsolescence d’un champ XDM](tutorials/field-deprecation.md)
    * [Définir une relation de schéma dans l’interface utilisateur](tutorials/relationship-ui.md)
    * [Définir une relation de schéma dans l’API](tutorials/relationship-api.md)
    * [Définir une relation de schéma dans l’édition B2B de Real-time CDP](tutorials/relationship-b2b.md)
    * [Gestion des libellés d’utilisation des données pour un schéma](tutorials/labels.md)
-   * [Créer un schéma ad hoc (API)](tutorials/ad-hoc.md)
-   * [Ajout de valeurs suggérées à un champ (API)](tutorials/suggested-values.md)
+   * [Création d’un schéma ad hoc](tutorials/ad-hoc.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)

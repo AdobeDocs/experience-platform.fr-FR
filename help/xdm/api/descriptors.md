@@ -5,10 +5,10 @@ title: Point de terminaison de l’API Descripteurs
 description: Le point de terminaison /descriptors de l’API Schema Registry vous permet de gérer par programmation les descripteurs XDM dans votre application d’expérience.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1626'
-ht-degree: 60%
+source-wordcount: '1836'
+ht-degree: 54%
 
 ---
 
@@ -311,7 +311,7 @@ Un descripteur d’identité signale que la variable[!UICONTROL sourceProperty]&
 
 | Propriété | Description |
 | --- | --- |
-| `@type` | Le type de descripteur en cours de définition. |
+| `@type` | Le type de descripteur en cours de définition. Pour un descripteur d’identité, cette valeur doit être définie sur `xdm:descriptorIdentity`. |
 | `xdm:sourceSchema` | L’URI `$id` du schéma dans lequel le descripteur est défini. |
 | `xdm:sourceVersion` | La version principale du schéma source. |
 | `xdm:sourceProperty` | Le chemin vers la propriété spécifique qui sera l’identité. Le chemin doit commencer et non se terminer par un « / ». N’incluez pas « properties » dans le chemin (par exemple, utilisez « /personalEmail/address » au lieu de « /properties/personalEmail/properties/address ») |
@@ -347,7 +347,7 @@ Les descripteurs de nom convivial permettent à l’utilisateur de modifier la v
 
 | Propriété | Description |
 | --- | --- |
-| `@type` | Le type de descripteur en cours de définition. |
+| `@type` | Le type de descripteur en cours de définition. Pour un descripteur de nom convivial, cette valeur doit être définie sur `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | L’URI `$id` du schéma dans lequel le descripteur est défini. |
 | `xdm:sourceVersion` | La version principale du schéma source. |
 | `xdm:sourceProperty` | Le chemin vers la propriété spécifique qui sera l’identité. Le chemin doit commencer et non se terminer par un « / ». N’incluez pas « properties » dans le chemin (par exemple, utilisez « /personalEmail/address » au lieu de « /properties/personalEmail/properties/address ») |
@@ -377,7 +377,7 @@ Les descripteurs de relation décrivent une relation entre deux schémas différ
 
 | Propriété | Description |
 | --- | --- |
-| `@type` | Le type de descripteur en cours de définition. |
+| `@type` | Le type de descripteur en cours de définition. Pour un descripteur de relation, cette valeur doit être définie sur `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | L’URI `$id` du schéma dans lequel le descripteur est défini. |
 | `xdm:sourceVersion` | La version principale du schéma source. |
 | `xdm:sourceProperty` | Chemin vers le champ du schéma source dans lequel la relation est définie. Doit commencer et non se terminer par un « / ». N’incluez pas « properties » dans le chemin (par exemple, « /personalEmail/address » au lieu de « /properties/personalEmail/properties/address »). |
@@ -386,7 +386,6 @@ Les descripteurs de relation décrivent une relation entre deux schémas différ
 | `xdm:destinationProperty` | Chemin facultatif vers un champ cible dans le schéma de destination. Si cette propriété est omise, le champ cible est déterminé par les champs qui contiennent un descripteur d’identité de référence correspondant (voir ci-dessous). |
 
 {style=&quot;table-layout:auto&quot;}
-
 
 #### Descripteur d’identité de référence
 
@@ -404,8 +403,32 @@ Les descripteurs d’identité de référence fournissent un contexte de référ
 
 | Propriété | Description |
 | --- | --- |
-| `@type` | Le type de descripteur en cours de définition. |
+| `@type` | Le type de descripteur en cours de définition. Pour un descripteur d’identité de référence, cette valeur doit être définie sur `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | L’URI `$id` du schéma dans lequel le descripteur est défini. |
 | `xdm:sourceVersion` | La version principale du schéma source. |
 | `xdm:sourceProperty` | Chemin vers le champ du schéma source dans lequel le descripteur est défini. Doit commencer et non se terminer par un « / ». N’incluez pas « properties » dans le chemin (par exemple, « /personalEmail/address » au lieu de « /properties/personalEmail/properties/address »). |
 | `xdm:identityNamespace` | Le code d’espace de noms d’identité de la propriété source. |
+
+{style=&quot;table-layout:auto&quot;}
+
+#### Descripteur de champ obsolète
+
+Vous pouvez [abandon d’un champ dans une ressource XDM personnalisée](../tutorials/field-deprecation.md#custom) en ajoutant une `meta:status` définie sur `deprecated` sur le champ en question. Toutefois, si vous souhaitez abandonner les champs fournis par les ressources XDM standard dans vos schémas, vous pouvez affecter un descripteur de champ obsolète au schéma en question pour obtenir le même effet. En utilisant la variable [correct `Accept` header](../tutorials/field-deprecation.md#verify-deprecation), vous pouvez ensuite afficher les champs standard obsolètes pour un schéma lors de sa recherche dans l’API.
+
+```json
+{
+  "@type": "xdm:descriptorDeprecated",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/c65ddf08cf2d4a2fe94bd06113bf4bc4c855e12a936410d5",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/faxPhone"
+}
+```
+
+| Propriété | Description |
+| --- | --- |
+| `@type` | Type de descripteur. Pour un descripteur d’obsolescence de champ, cette valeur doit être définie sur `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | L’URI `$id` du schéma auquel vous appliquez le descripteur. |
+| `xdm:sourceVersion` | Version du schéma auquel vous appliquez le descripteur. Doit être défini sur `1`. |
+| `xdm:sourceProperty` | Le chemin d’accès à la propriété dans le schéma auquel vous appliquez le descripteur. Si vous souhaitez appliquer le descripteur à plusieurs propriétés, vous pouvez fournir une liste de chemins sous la forme d’un tableau (par exemple, `["/firstName", "/lastName"]`). |
+
+{style=&quot;table-layout:auto&quot;}
