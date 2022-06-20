@@ -5,10 +5,10 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 1d1d070de0a62c42cdda3f021cafad731a73709b
+source-git-commit: 881d9602ff3462afb5df30f8446113a372650c8d
 workflow-type: tm+mt
-source-wordcount: '393'
-ht-degree: 98%
+source-wordcount: '394'
+ht-degree: 97%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 98%
    * [Présentation](./ui/event-forwarding/overview.md)
    * [Prise en main](./ui/event-forwarding/getting-started.md)
    * [Configuration des secrets](./ui/event-forwarding/secrets.md)
-   * [Surveillance](./ui/event-forwarding/monitoring.md)
+   * [Surveillance (bêta)](./ui/event-forwarding/monitoring.md)
 * Administration {#admin}
    * [Présentation](./ui/administration/overview.md)
    * [Sociétés et propriétés](./ui/administration/companies-and-properties.md)

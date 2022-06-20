@@ -2,10 +2,11 @@
 title: Surveillance des activités dans le transfert d’événements
 description: Découvrez comment surveiller l’utilisation, les erreurs et calculer la durée dans vos propriétés de transfert d’événement.
 feature: Event Forwarding
-source-git-commit: 4de448fb5e8ed94d23ebfbcc1bfe19bcfd36fbca
+exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
+source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 0%
+source-wordcount: '548'
+ht-degree: 1%
 
 ---
 
@@ -22,6 +23,12 @@ Le **[!UICONTROL Surveillance]** dans l’interface utilisateur de la collecte d
 ## Conditions préalables
 
 Ce guide suppose que vous avez acheté le transfert d’événement et que vous connaissez le fonctionnement du transfert d’événement. Voir [transfert d’événement - Aperçu](./overview.md) pour plus d’informations.
+
+## Vue d’ensemble des vidéos
+
+Regardez la vidéo suivante pour obtenir un aperçu général de la fonction de surveillance :
+
+>[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
 
 ## Sélection des propriétés et des environnements
 
