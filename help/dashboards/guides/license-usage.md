@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;interface utilisateur;interface utilisateur;personnalisation;tableau de bord d’utilisation des licences;tableau de bord;utilisation des licences;droits;consommation
-title: Guide de tableau de bord de l’utilisation de licence
+keywords: Experience Platform;interface utilisateur;interface utilisateur;personnalisation;tableau de bord d’utilisation de la licence;tableau de bord;utilisation des licences;droits;consommation
+title: Tableau de bord d’utilisation de la licence Guide
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: d3a1d4a65d1e5810bbc37fa9d3d230557bec39ee
 workflow-type: tm+mt
-source-wordcount: '838'
-ht-degree: 6%
+source-wordcount: '873'
+ht-degree: 17%
 
 ---
 
 # Tableau de bord d’utilisation de la licence {#license-usage-dashboard}
 
-L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation de la licence de votre entreprise, telles qu’elles sont capturées pendant un instantané quotidien. Ce guide explique comment accéder au tableau de bord de l’utilisation des licences dans l’interface utilisateur et l’utiliser. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
+L’interface utilisateur d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de l’entreprise. Celles-ci sont présentées telles qu’elles sont capturées lors d’aperçus quotidiens. Ce guide explique comment accéder au tableau de bord de l’utilisation des licences dans l’interface utilisateur et l’utiliser. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
 Pour obtenir un aperçu général de l’interface utilisateur de Platform, consultez le [Guide de l’interface utilisateur Experience Platform](../../landing/ui-guide.md).
 
@@ -79,7 +79,7 @@ Le tableau de bord de l’utilisation des licences répertorie quatre mesures cl
 * [!UICONTROL Ratio de segmentation des données analysées]
 * [!UICONTROL Stockage total consommé]
 
-La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par votre entreprise. Pour obtenir des définitions détaillées de chaque mesure, reportez-vous à la documentation appropriée Description du produit :
+La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par l’entreprise. Pour obtenir des définitions détaillées de chaque mesure, reportez-vous à la documentation appropriée Description du produit :
 
 | Licence | Description du produit |
 |---|---|
@@ -88,6 +88,7 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 | <ul><li>RT CUSTOMOMENT DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL À 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL À 50M</li></ul> | [Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>ACTIVATION AEP:OD</li><li>AEP:OD ACTIVATION PRFL À 10M</li><li>AEP:PRFL D’ACTIVATION OD JUSQU’À 50 M</li></ul> | [Activation de Adobe Experience Platform](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:INTELLIGENCE OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>Journey Optimizer SELECT:OD</li><li>Journey Optimizer PRIME : OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP RTCDP:OD PROFILE ORCHESTRATION</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >
