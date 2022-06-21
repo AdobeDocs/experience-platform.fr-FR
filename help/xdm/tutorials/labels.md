@@ -1,9 +1,10 @@
 ---
 title: Gestion des étiquettes d’utilisation des données pour un schéma
 description: Découvrez comment ajouter des libellés d’utilisation des données aux champs de schéma du modèle de données d’expérience (XDM) dans l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
+exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
+source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '711'
 ht-degree: 6%
 
 ---
@@ -20,6 +21,8 @@ Un libellé appliqué à un champ de schéma indique les stratégies d’utilisa
 
 Bien que des libellés puissent être appliqués à des jeux de données individuels (et à des champs de ces jeux de données), vous pouvez également appliquer des libellés au niveau du schéma. Lorsque des libellés sont appliqués directement à un schéma, ces libellés sont propagés à tous les jeux de données existants et futurs basés sur ce schéma.
 
+En outre, tout libellé de champ que vous ajoutez dans un schéma se propage à tous les autres schémas qui utilisent le même champ d’une classe partagée ou d’un groupe de champs. Cela permet de s’assurer que les règles d’utilisation des champs similaires sont cohérentes dans l’ensemble de votre modèle de données.
+
 Ce tutoriel décrit les étapes à suivre pour ajouter des libellés à un schéma à l’aide de l’éditeur de schémas dans l’interface utilisateur de Platform.
 
 ## Prise en main
@@ -32,7 +35,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 ## Sélectionner un schéma ou un champ auquel ajouter des libellés
 
-Les libellés ne peuvent être appliqués qu’aux schémas et ne peuvent pas être ajoutés aux composants qui constituent ces schémas (classes, groupes de champs et types de données). Pour commencer à ajouter des libellés, vous devez d’abord [sélectionner un schéma existant à modifier ;](../ui/resources/schemas.md#edit) ou [créer un nouveau schéma](../ui/resources/schemas.md#create) pour afficher sa structure dans l’éditeur de schémas.
+Pour commencer à ajouter des libellés, vous devez d’abord [sélectionner un schéma existant à modifier ;](../ui/resources/schemas.md#edit) ou [créer un nouveau schéma](../ui/resources/schemas.md#create) pour afficher sa structure dans l’éditeur de schémas.
 
 Pour modifier les libellés d’un champ, vous pouvez sélectionner le champ dans la zone de travail, puis sélectionner **[!UICONTROL Gérer l’accès]** dans le rail de droite.
 
