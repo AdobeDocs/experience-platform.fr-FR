@@ -5,14 +5,14 @@ title: Contraintes de type de champ XDM
 topic-legacy: overview
 description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels elles peuvent être mappées et comment définir vos propres types de champ dans l’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 279a1d90be82188ad6fd9d2bb9123354d0046b0d
+source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 12%
 
 ---
 
-# Contraintes de type de champ XDM
+# Contraintes des types de champs XDM
 
 Dans les schémas de modèle de données d’expérience (XDM), le type d’un champ restreint le type de données que le champ peut contenir. Ce document fournit un aperçu de chaque type de champ principal, y compris les autres formats de sérialisation auxquels ils peuvent être mappés et comment définir vos propres types de champ dans l’API afin d’appliquer différentes contraintes.
 
@@ -22,7 +22,7 @@ Avant d’utiliser ce guide, veuillez consulter la section [principes de base de
 
 Si vous prévoyez de définir vos propres types de champ dans l’API, il est vivement recommandé de commencer par la variable [Guide de développement du registre des schémas](../api/getting-started.md) pour savoir comment créer des groupes de champs et des types de données pour inclure vos champs personnalisés dans . Si vous utilisez l’interface utilisateur de l’Experience Platform pour créer vos schémas, consultez le guide sur la [définition des champs dans l’interface utilisateur](../ui/fields/overview.md) pour découvrir comment implémenter des contraintes sur les champs que vous définissez dans des groupes de champs personnalisés et des types de données.
 
-## Structure de base et exemples
+## Structure de base et exemples {#basic-types}
 
 XDM repose sur le schéma JSON. Par conséquent, les champs XDM héritent d’une syntaxe similaire lors de la définition de leur type. Comprendre comment différents types de champ sont représentés dans le schéma JSON peut aider à indiquer les contraintes de base de chaque type.
 

@@ -4,10 +4,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes des modèles de données d’expérience (XDM) et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: c57c0ff63abe35fcf0246088b12b6bc6cfc542b6
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 87%
+source-wordcount: '473'
+ht-degree: 86%
 
 ---
 
@@ -161,7 +161,9 @@ ht-degree: 87%
    * [Types de données](api/data-types.md)
    * [Descripteurs](api/descriptors.md)
    * [Unions](api/unions.md)
-   * [Exporter/Importer](api/export-import.md)
+   * [Conversion CSV en schéma](api/csv-to-schema.md)
+   * [Exporter](api/export.md)
+   * [Importer](api/import.md)
    * [Données d’exemple](api/sample-data.md)
    * [Journal d’audit](api/audit-log.md)
    * [Schémas ad hoc](api/ad-hoc.md)
