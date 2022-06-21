@@ -3,9 +3,9 @@ keywords: Experience Platform;Zendesk;sources;connecteurs;connecteurs source;sdk
 title: Création d’une connexion source Zendesk dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Zendesk à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 017f074a325b5ca1921128f6d3d9759612a8a398
+source-git-commit: f0348abd41e7d594109a04fd11ed06857cedfa53
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '797'
 ht-degree: 32%
 
 ---
@@ -97,10 +97,6 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Jeux de 
 Sélectionnez ensuite l’identifiant d’exécution du flux de données que vous souhaitez afficher pour afficher des détails spécifiques sur cette exécution.
 
 ![Page Flux de données](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
-
-Pour afficher les détails relatifs à votre schéma, sélectionnez **[!UICONTROL Gouvernance des données]**.
-
-![Schéma Zendesk](../../../../images/tutorials/create/zendesk/dataset-governance.png)
 
 Enfin, sélectionnez **[!UICONTROL Prévisualisation d’un jeu de données]** pour afficher les données qui ont été ingérées.
 
