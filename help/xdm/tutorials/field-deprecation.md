@@ -1,16 +1,18 @@
 ---
 title: Obsolescence d’un champ XDM
 description: Découvrez comment abandonner les champs de modèle de données d’expérience (XDM) dans l’API Schema Registry.
-source-git-commit: dc400dce8a77f27347e767230faf7301afc7c1fb
+source-git-commit: a1b86e6976cdb5b2bd3c2ecee933dfde337c9880
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 11%
+source-wordcount: '554'
+ht-degree: 10%
 
 ---
 
 # Obsolescence d’un champ XDM
 
-Dans le modèle de données d’expérience (XDM), vous pouvez abandonner un champ dans un schéma ou une ressource personnalisée à l’aide de la variable [API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Ce document explique comment abandonner les champs pour différentes ressources XDM.
+Dans le modèle de données d’expérience (XDM), vous pouvez abandonner un champ dans un schéma ou une ressource personnalisée à l’aide de la variable [API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). En cas d’obsolescence d’un champ, il est masqué dans les interfaces utilisateur en aval, telles que la fonction [!UICONTROL Profils] workspace et Customer Journey Analytics, mais il s’agit d’une modification constante qui n’a pas d’incidence négative sur les flux de données existants.
+
+Ce document explique comment abandonner les champs pour différentes ressources XDM.
 
 ## Prise en main
 
