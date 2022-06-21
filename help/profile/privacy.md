@@ -5,9 +5,9 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels associés au traitement des demandes d’accès à des informations personnelles pour Real-time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1686ff1684080160057462e9aa40819a60bf6b75
 workflow-type: tm+mt
-source-wordcount: '1272'
+source-wordcount: '1281'
 ht-degree: 41%
 
 ---
@@ -135,7 +135,7 @@ Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!D
 
 >[!IMPORTANT]
 >
->Bien qu’une requête de suppression réussie supprime les données d’attribut collectées pour un client (ou un ensemble de clients), la requête ne supprime pas les associations établies dans le graphique d’identités.
+>Si une requête de suppression est effectuée pour Profile (`ProfileService`), mais pas Identity Service (`identity`), la tâche résultante supprime les données d’attribut collectées pour un client (ou un ensemble de clients), mais ne supprime pas les associations établies dans le graphique d’identités.
 >
 >Par exemple, une requête de suppression qui utilise la variable `email_id` et `customer_id` supprime toutes les données d’attribut stockées sous ces ID. Cependant, toutes les données qui sont ensuite ingérées sous la même `customer_id` sera toujours associé au `email_id`, car l’association existe toujours.
 >
