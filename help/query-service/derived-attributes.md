@@ -1,7 +1,9 @@
 ---
 title: Attributs dérivés
 description: Les attributs dérivés vous permettent de calculer des attributs à un rythme normal et éventuellement de publier ces attributs dérivés dans Real-time Customer Profile en tant qu’attributs de profil. Ce document présente l’utilisation de Query Service pour créer des attributs dérivés à utiliser avec vos données de profil.
-source-git-commit: 72e157e0a6310ebf2f55205b03b60600a56e3cf6
+hide: true
+hidefromtoc: true
+source-git-commit: fc2d2e7dadb95460f5d735ba33e5f106880a0198
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 7%

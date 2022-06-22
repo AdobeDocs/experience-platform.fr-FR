@@ -4,7 +4,7 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez SQL standard pour créer des requêtes de données dans le lac de données de Platform.
 feature: Queries
-source-git-commit: d074ebaef19616f1556671f4c7307faeb954cd60
+source-git-commit: fc2d2e7dadb95460f5d735ba33e5f106880a0198
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 73%
@@ -47,10 +47,6 @@ ht-degree: 73%
 - Exemples de requêtes {#sample-queries}
    - [Exemples de requêtes dʼévénements dʼexpérience](sample-queries/experience-event.md)
    - [Exemples de requêtes Adobe Analytics](sample-queries/adobe-analytics.md)
-- Gouvernance des données {#data-governance}
-   - [Guide du journal d’audit](data-governance/audit-log-guide.md)
-   - [Identités dans les jeux de données de schémas ad hoc](data-governance/ad-hoc-schema-identities.md)
-   - [Prise en charge du contrôle d’accès basé sur les attributs pour les schémas ad hoc](./data-governance/ad-hoc-schema-labels.md)
 - Référence SQL {#sql}
    - [Présentation de SQL](sql/overview.md)
    - [Syntaxe SQL](sql/syntax.md)
@@ -69,6 +65,10 @@ ht-degree: 73%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
+- Gouvernance des données {#data-governance}
+   - [Guide du journal d’audit](data-governance/audit-log-guide.md)
+   - [Identités dans les jeux de données de schémas ad hoc](data-governance/ad-hoc-schema-identities.md)
+   - [Prise en charge du contrôle d’accès basé sur les attributs pour les schémas ad hoc](./data-governance/ad-hoc-schema-labels.md)
 - [Guide de dépannage](troubleshooting-guide.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
