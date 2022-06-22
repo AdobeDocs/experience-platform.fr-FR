@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: d01875bcb89d887ca4f4dbb9e7fe6179446faa3c
+source-git-commit: 34c408e5e4c9917be7f664f284e4b8e87898945c
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '761'
 ht-degree: 92%
 
 ---
@@ -153,6 +153,7 @@ ht-degree: 92%
       * [Présentation des destinations de voix du client](./catalog/voice/overview.md)
       * [Extension Confirmit Digital Feedback](./catalog/voice/confirmit-digital-feedback.md)
       * [Extension Invoca Tags](./catalog/voice/invoca.md)
+      * [Connexion à Medallia](./catalog/voice/medallia-connector.md)
       * [Extension Medallia](./catalog/voice/medallia.md)
       * [Extension Talk URL Inbox](./catalog/voice/talkurl.md)
 * Destination SDK {#destination-sdk}
