@@ -5,8 +5,8 @@ title: Présentation de Data Science Workspace
 topic-legacy: overview
 description: Ce guide présente les concepts clés de Data Science Workspace dans Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
-workflow-type: ht
+source-git-commit: 4119242fef46d916e90e1dfb95f7e8fb9e8902f0
+workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 100%
 
@@ -154,7 +154,7 @@ Toutes les données d’Adobe Experience Platform sont conformes au schéma XD
 Si vous ne trouvez pas immédiatement les données dont vous avez besoin, mais qu’elles existent en dehors d’Adobe Experience Platform, il est relativement simple d’ingérer des jeux de données supplémentaires, qui se transformeront également en schéma XDM normalisé.\
 Vous pouvez utiliser [!DNL Jupyter Notebook] pour simplifier le prétraitement des données, en commençant éventuellement par un modèle de notebook ou un notebook que vous avez déjà utilisé pour la propension à acheter.
 
-![](./images/home/notebook_templates.png)
+![](./images/home/notebook_templates-new.png)
 
 ### Création de la recette
 
