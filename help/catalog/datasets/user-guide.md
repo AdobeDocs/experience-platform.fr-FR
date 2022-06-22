@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur des jeux de données
 topic-legacy: datasets
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 09db4aab17b933c63968d997f33279ab9a96bdef
+source-git-commit: 6238558e8edf968df4b24c43a626b736e2478be6
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 46%
+source-wordcount: '1208'
+ht-degree: 48%
 
 ---
 
@@ -27,7 +27,13 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 * [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Veillez à la conformité aux réglementations, aux restrictions et aux politiques concernant l’utilisation des données clients.
 
-## Affichage des jeux de données
+## Affichage des jeux de données {#view-datasets}
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_negative_numbers"
+>title="Numéros négatifs dans l’activité du jeu de données"
+>abstract="Les nombres négatifs dans les enregistrements ingérés signifie qu’un utilisateur a supprimé certains lots au cours d’une période sélectionnée."
+>text="Learn more in documentation"
 
 Dans le [!DNL Experience Platform] Interface utilisateur, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir la **[!UICONTROL Jeux de données]** tableau de bord. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et l’état de l’exécution d’ingestion la plus récente.
 
@@ -59,7 +65,7 @@ Pour des méthodes plus robustes d’accès à vos données, [!DNL Experience Pl
 
 ## Création d’un jeu de données {#create}
 
-Pour créer un jeu de données, commencez par sélectionner **[!UICONTROL Création d’un jeu de données]** dans le **[!UICONTROL Jeux de données]** tableau de bord.
+Pour créer un jeu de données, commencez par sélectionner **[!UICONTROL Créer un jeu de données]** dans le tableau de bord Jeux de données.****
 
 ![](../images/datasets/user-guide/select-create.png)
 
