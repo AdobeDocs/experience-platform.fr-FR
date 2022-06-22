@@ -1,11 +1,10 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
-description: Dernières notes de mise à jour pour Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 56d43d93be7aca059a38e9428ad5680dd52ad6f9
+title: Notes de mise à jour de Adobe Experience Platform, juin 2022
+description: Notes de mise à jour de juin 2022 pour Adobe Experience Platform.
+source-git-commit: 98b9e79fadecc6e0d5ee8e86b785fd905643f725
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 49%
+source-wordcount: '639'
+ht-degree: 50%
 
 ---
 
@@ -16,6 +15,7 @@ ht-degree: 49%
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Destinations]](#destinations)
 - [Query Service](#query-service)
 - [Sources](#sources)
 
@@ -33,6 +33,20 @@ Data Science Workspace utilise l’apprentissage automatique et l’intelligence
 {style=&quot;table-layout:auto&quot;}
 
 Pour obtenir des informations plus générales sur Data Science Workspace, voir [documentation de présentation](../../data-science-workspace/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Nouvelles destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | Activez les profils pour les enquêtes et la collecte de commentaires Medallia ciblées afin de mieux comprendre les besoins et les attentes des clients. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
 
 ## Query Service {#query-service}
 
