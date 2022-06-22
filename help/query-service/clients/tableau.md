@@ -5,10 +5,10 @@ title: Connexion de Tableau à Query Service
 topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter Tableau à Adobe Experience Platform Query Service.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 0c20b19c4c34b29c46964d5d87a8646c61055b06
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 3%
+source-wordcount: '278'
+ht-degree: 2%
 
 ---
 
@@ -32,9 +32,13 @@ Vérifiez que vous avez coché la variable **[!UICONTROL SSL requis]** avant de 
 >
 >Voir [[!DNL Query Service] Documentation SSL](./ssl-modes.md) pour en savoir plus sur la prise en charge du protocole SSL pour les connexions tierces à Adobe Experience Platform Query Service et sur la connexion à l’aide de `verify-full` Mode SSL.
 
-Après avoir renseigné toutes vos informations d’identification, sélectionnez **[!DNL Sign In]** pour continuer.
-
 ![](../images/clients/tableau/sign-in.png)
+
+>[!IMPORTANT]
+>
+>Les structures de données imbriquées dans des outils de BI tiers peuvent être aplaties afin d’améliorer leur convivialité et de réduire la charge de travail requise pour récupérer, analyser, transformer et générer des rapports sur les données. Consultez la documentation relative à la[`FLATTEN` fonctionnalité](../best-practices/flatten-nested-data.md) pour savoir comment activer ce paramètre lors de la connexion à une base de données.
+
+Après avoir renseigné toutes vos informations d’identification, sélectionnez **[!DNL Sign In]** pour continuer.
 
 Vous êtes maintenant connecté à Adobe Experience Platform, avec une liste de vos tableaux affichés sur le côté.
 

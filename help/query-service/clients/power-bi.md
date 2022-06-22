@@ -5,9 +5,9 @@ title: Connexion de Power BI à Query Service
 topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter Power BI à Adobe Experience Platform Query Service.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 69f57a0e2293e438a0e5c986d888027892cc6359
+source-git-commit: 0c20b19c4c34b29c46964d5d87a8646c61055b06
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '1014'
 ht-degree: 3%
 
 ---
@@ -53,6 +53,10 @@ La boîte de dialogue Base de données PostgreSQl s’affiche, vous demandant de
 Pour le **[!DNL Server]** dans Power BI, saisissez la valeur de l’hôte figurant dans la section Informations d’identification de Query Service . Pour la production, ajoutez le port `:80` à la fin de la chaîne hôte. Par exemple : `made-up.platform-query.adobe.io:80`.
 
 Le **[!DNL Database]** peut être &quot;all&quot; ou un nom de table de jeu de données. Par exemple : `prod:all`.
+
+>[!IMPORTANT]
+>
+>Les structures de données imbriquées dans des outils de BI tiers peuvent être aplaties afin d’améliorer leur convivialité et de réduire la charge de travail requise pour récupérer, analyser, transformer et générer des rapports sur les données. Consultez la documentation relative à la[`FLATTEN` fonctionnalité](../best-practices/flatten-nested-data.md) pour savoir comment activer ce paramètre lors de la connexion à une base de données.
 
 ![Le tableau de bord du Power BI avec les champs de saisie du serveur et de la base de données mis en surbrillance.](../images/clients/power-bi/postgresql-database-dialog.png)
 

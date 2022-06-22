@@ -1,9 +1,11 @@
 ---
+keywords: Experience Platform;service de requête;service de requête;structures de données imbriquées;données imbriquées;
 title: Utilisation de structures de données imbriquées dans Query Service
 description: Ce document fournit un exemple de travail pour le traitement et la transformation des champs de données imbriqués à l’aide des instructions CTAS et INSERT INTO .
-source-git-commit: 838ee939a8438c2f09ff64044c129e20c37ea01a
+exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
+source-git-commit: b2b292dba0cf9ab9adbdff26aa61ef5a2cd5fe86
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '796'
 ht-degree: 2%
 
 ---
