@@ -3,9 +3,9 @@ title: Comparaison d’at.js au SDK Web Experience Platform
 description: Découvrez comment comparer les fonctionnalités d’at.js au SDK Web Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;champ de décision;fragment de code de masquage préalable;vec;compositeur d’expérience d’après les formulaires;xdm;audiences;décisions;portée;schéma;schéma;diagramme système;diagramme
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
+source-git-commit: 7bdf4c01ad3b361b3bc53574d4da1096757c815c
 workflow-type: tm+mt
-source-wordcount: '2269'
+source-wordcount: '2286'
 ht-degree: 7%
 
 ---
@@ -462,11 +462,22 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en)
+En savoir plus sur les `applyOffers` à partir de la commande [documentation dédiée](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en).
+
 
 ### Utilisation du SDK Web
 
-Cette fonctionnalité n’est actuellement pas prise en charge dans le SDK Web.
+Vous pouvez appliquer les activités Target à l’aide de la variable `applyPropositions` .
+
+Exemple :
+
+```javascript
+alloy("applyPropositions", {
+    propositions: [...]
+});
+```
+
+En savoir plus sur les `applyPropositions` à partir de la commande [documentation dédiée](../../personalization/rendering-personalization-content.md#applypropositions).
 
 ## Suivi des événements
 
@@ -477,7 +488,7 @@ Vous pouvez effectuer le suivi des événements à l’aide de la variable `trac
 Cette fonction déclenche une requête pour signaler les actions de l’utilisateur, telles que les clics et les conversions. Elle ne fournit pas d’activités dans la réponse.
 
 
-**Exemple 1**
+**Exemple 1**
 
 ```javascript
 adobe.target.trackEvent({ 
@@ -486,7 +497,7 @@ adobe.target.trackEvent({
 });
 ```
 
-**Exemple 2**
+**Exemple 2**
 
 ```javascript
 adobe.target.sendNotifications({ 
@@ -941,7 +952,7 @@ Cette fonctionnalité n’est pas prise en charge dans le SDK Web.
 
 ### Utilisation d’at.js
 
-**Exemple 1**
+**Exemple 1**
 
 ```javascript
 adobe.target.getOffer({
@@ -955,7 +966,7 @@ adobe.target.getOffer({
 });
 ```
 
-**Exemple 2**
+**Exemple 2**
 
 ```javascript
 adobe.target.getOffers({
@@ -998,7 +1009,7 @@ alloy("sendEvent", {
 
 ### Utilisation d’at.js
 
-**Exemple 1**
+**Exemple 1**
 
 ```javascript
 adobe.target.getOffer({
@@ -1012,7 +1023,7 @@ adobe.target.getOffer({
 });
 ```
 
-**Exemple 2**
+**Exemple 2**
 
 ```javascript
 adobe.target.getOffers({
@@ -1060,7 +1071,7 @@ alloy("sendEvent", {
 
 Il existe plusieurs façons d’envoyer at.js `mbox3rdPartyId`, à l’aide de `getOffer` ou `getOffers`:
 
-**Exemple 1**
+**Exemple 1**
 
 ```javascript
 adobe.target.getOffer({
@@ -1073,7 +1084,7 @@ adobe.target.getOffer({
 });
 ```
 
-**Exemple 2**
+**Exemple 2**
 
 ```javascript
 adobe.target.getOffers({
@@ -1147,7 +1158,7 @@ alloy("sendEvent", {
 
 Il existe deux façons de configurer les jetons de propriété à l’aide d’at.js : `targetPageParams` ou `targetPageParamsAll`. Utilisation `targetPageParams` ajoute le jeton de propriété à la propriété `target-global-mbox` appelez, mais en utilisant `targetPageParamsAll` ajoute le jeton à tous les appels cible :
 
-**Exemple 1**
+**Exemple 1**
 
 ```javascript
    window.targetPageParamsAll = function() {
@@ -1157,7 +1168,7 @@ Il existe deux façons de configurer les jetons de propriété à l’aide d’a
     };
 ```
 
-**Exemple 2**
+**Exemple 2**
 
 ```javascript
 window.targetPageParams = function() {
