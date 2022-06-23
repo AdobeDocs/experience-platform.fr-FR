@@ -6,10 +6,10 @@ description: Ce document couvre la création de destinations de diffusion en con
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
 workflow-type: tm+mt
-source-wordcount: '2049'
-ht-degree: 53%
+source-wordcount: '2241'
+ht-degree: 55%
 
 ---
 
@@ -471,10 +471,17 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-* `{DATAFLOW_ID}` : utilisez le flux de données obtenu à l’étape précédente.
-* `{ETAG}` : utilisez l’etag obtenu à l’étape précédente.
-* `{SEGMENT_ID}` : indiquez l’identifiant du segment que vous souhaitez exporter vers cette destination. Pour récupérer les identifiants des segments que vous souhaitez activer, accédez à **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, sélectionnez **[!UICONTROL API Segmentation Service]** dans le menu de navigation de gauche, puis recherchez le `GET /segment/definitions` operation **[!UICONTROL Définitions de segment]**.
-* `{PROFILE_ATTRIBUTE}`: Par exemple : `personalEmail.address` ou `person.lastName`
+| Propriété | Description |
+| --------- | ----------- |
+| `{DATAFLOW_ID}` | Dans l’URL, utilisez l’identifiant du flux de données que vous avez créé à l’étape précédente. |
+| `{ETAG}` | Obtenez la variable `{ETAG}` de la réponse de l’étape précédente, [Création d’un flux de données](#create-dataflow). Le format de réponse de l’étape précédente comporte des guillemets d’échappement. Vous devez utiliser les valeurs sans séquence d’échappement dans l’en-tête de la requête. Voir l&#39;exemple ci-dessous: <br> <ul><li>Exemple de réponse : `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valeur à utiliser dans votre requête : `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> La valeur de la balise dʼentité est mise à jour à chaque mise à jour réussie d’un flux de données. |
+| `{SEGMENT_ID}` | Indiquez l’identifiant du segment que vous souhaitez exporter vers cette destination. Pour récupérer les identifiants des segments que vous souhaitez activer, voir [récupérer une définition de segment](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) dans la référence de l’API Experience Platform. |
+| `{PROFILE_ATTRIBUTE}` | Par exemple : `"person.lastName"` |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter un segment à un flux de données, utilisez l’opération `add`. |
+| `path` | Définit la partie du flux à mettre à jour. Lors de l’ajout d’un segment à un flux de données, utilisez le chemin spécifié dans l’exemple. |
+| `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
+| `id` | Indiquez l’identifiant du segment que vous ajoutez au flux de données de destination. |
+| `name` | *Facultatif*. Indiquez le nom du segment que vous ajoutez au flux de données de destination. Notez que ce champ n’est pas obligatoire et que vous pouvez ajouter un segment au flux de données de destination sans indiquer son nom. |
 
 **Réponse**
 
@@ -597,7 +604,7 @@ La réponse renvoyée doit inclure dans le paramètre `transformations` les segm
 }
 ```
 
-## Utilisation de collections Postman pour se connecter aux destinations de diffusion en continu  {#collections}
+## Utilisation [!DNL Postman] collections pour se connecter aux destinations de diffusion en continu  {#collections}
 
 Pour vous connecter aux destinations de diffusion en continu décrites dans ce tutoriel de manière plus rationnelle, vous pouvez utiliser [[!DNL Postman]](https://www.postman.com/).
 
@@ -612,17 +619,21 @@ Cliquez sur [here](../assets/api/streaming-destination/DestinationPostmanCollect
 
 Chaque collection comprend les requêtes et variables d’environnement nécessaires, pour [!DNL AWS Kinesis], et [!DNL Azure Event Hub], respectivement.
 
-### Utilisation des collections Postman
+### Comment utiliser la variable [!DNL Postman] collections {#how-to-use-postman-collections}
 
 Pour vous connecter avec succès aux destinations à l’aide de la [!DNL Postman] collections, procédez comme suit :
 
 * Télécharger et installer [!DNL Postman];
 * [Télécharger](../assets/api/streaming-destination/DestinationPostmanCollection.zip) et décompressez les collections jointes ;
-* importer les collections de leurs dossiers correspondants dans Postman ;
+* Importez les collections de leurs dossiers correspondants dans [!DNL Postman];
 * Renseignez les variables d’environnement conformément aux instructions de cet article.
-* Exécutez la variable [!DNL API] requêtes de Postman, en fonction des instructions de cet article.
+* Exécutez la variable [!DNL API] de [!DNL Postman], en fonction des instructions de cet article.
 
-## Étapes suivantes
+## Gestion des erreurs d’API {#api-error-handling}
+
+Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
+
+## Étapes suivantes {#next-steps}
 
 En suivant ce tutoriel, vous avez réussi à connecter Platform à l’une de vos destinations de diffusion en continu préférées et à configurer un flux de données vers la destination correspondante. Les données sortantes peuvent désormais être utilisées dans la destination pour les analyses client ou toute autre opération de données que vous souhaitez peut-être effectuer. Pour plus d’informations, consultez les pages suivantes :
 

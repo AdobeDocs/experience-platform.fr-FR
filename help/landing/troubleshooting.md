@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;codes d’erreur API;code d’erreur API;API de code d’erreur;API de codes d’erreur;erreur de requête API;dépannage de l’API;erreur API
 solution: Experience Platform
-title: FAQ et guide de dépannage d’Adobe Experience Platform
+title: FAQ et guide de dépannage d’Adobe Experience Platform
 description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
 landing-page-description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: ef565383ab6abfe93eb8ed6a86216642eec11f6e
+source-git-commit: da3e93f6c10c89c173fff786604ef844f56081be
 workflow-type: tm+mt
-source-wordcount: '1758'
-ht-degree: 66%
+source-wordcount: '1851'
+ht-degree: 63%
 
 ---
 
@@ -20,7 +20,7 @@ Ce document fournit des réponses aux questions fréquentes sur Adobe Experience
 
 ## FAQ {#faq}
 
-Vous trouverez ci-dessous une liste de réponses aux questions les plus fréquemment posées à propos d’Adobe Experience Platform.
+Vous trouverez ci-dessous une liste de réponses aux questions les plus fréquemment posées à propos d’Adobe Experience Platform.
 
 ## Quels éléments ? [!DNL Experience Platform] API ? {#what-are-experience-platform-apis}
 
@@ -34,11 +34,11 @@ Pour plus d’informations sur le formatage des requêtes d’API, consultez le 
 
 ## Quelle est mon organisation IMS ?  {#what-is-my-ims-organization}
 
-Une organisation IMS est une représentation Adobe d’un client. Toutes les solutions Adobe sous licence intègrent cette organisation client. Lorsqu’une organisation IMS a droit à [!DNL Experience Platform], il peut attribuer un accès aux développeurs. L’identifiant d’organisation IMS (`x-gw-ims-org-id`) représente l’organisation pour laquelle un appel API devrait être exécuté. Il est donc nécessaire de le place en tant qu’en-tête de toutes les requêtes API. Cet identifiant est accessible par le biais du [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): dans le **Intégrations** , accédez à la **Présentation** pour toute intégration particulière afin de trouver l’identifiant sous **Informations d’identification client**. Pour une présentation détaillée de la procédure d’authentification dans [!DNL Platform], reportez-vous à la section [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#platform-apis).
+Une organisation IMS est une représentation Adobe d’un client. Toutes les solutions Adobe sous licence intègrent cette organisation client. Lorsqu’une organisation IMS a droit à [!DNL Experience Platform], il peut attribuer un accès aux développeurs. L’identifiant d’organisation IMS (`x-gw-ims-org-id`) représente l’organisation pour laquelle un appel API devrait être exécuté. Il est donc nécessaire de le place en tant qu’en-tête de toutes les requêtes API. Cet identifiant est accessible par le biais du [Console Adobe Developer](https://www.adobe.com/go/devs_console_ui): dans le **Intégrations** , accédez à la **Présentation** pour toute intégration particulière afin de trouver l’identifiant sous **Informations d’identification client**. Pour une présentation détaillée de la procédure d’authentification dans [!DNL Platform], reportez-vous à la section [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
 
 ## Où trouver ma clé API ?  {#where-can-i-find-my-api-key}
 
-Une clé API doit constituer l’en-tête de toutes les requêtes API. Elle se trouve via le [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Dans la console, sous l’onglet **Intégrations**, accédez à la section **Aperçu** pour une intégration spécifique et vous trouverez la clé sous **Informations d’identification client**. Pour une présentation détaillée de la procédure d’authentification vers [!DNL Platform], reportez-vous à la section [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en).
+Une clé API doit constituer l’en-tête de toutes les requêtes API. Elle se trouve via le [Console Adobe Developer](https://www.adobe.com/go/devs_console_ui). Dans la console, sous l’onglet **Intégrations**, accédez à la section **Aperçu** pour une intégration spécifique et vous trouverez la clé sous **Informations d’identification client**. Pour une présentation détaillée de la procédure d’authentification vers [!DNL Platform], reportez-vous à la section [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## Comment obtenir un jeton d’accès ?  {#how-do-i-get-an-access-token}
 
@@ -62,7 +62,7 @@ Pour savoir précisément quels paramètres de requête sont disponibles pour un
 
 De nombreuses opérations PATCH dans [!DNL Platform] Utilisation des API [JSON Pointer](https://tools.ietf.org/html/rfc6901) chaînes pour indiquer les propriétés JSON à mettre à jour. Elles sont généralement incluses dans les payloads des requêtes au format [JSON Patch](https://tools.ietf.org/html/rfc6902). Pour plus d’informations sur la syntaxe requise pour ces technologies, consultez le [guide de base de l’API](api-fundamentals.md).
 
-## Puis-je utiliser Postman pour appeler [!DNL Platform] API ? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
+## Puis-je utiliser Postman pour lancer des appels à [!DNL Platform] API ? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
 [Postman](https://www.postman.com/) est un outil utile pour visualiser les appels vers les API RESTful. Le [Guide de prise en main de l’API Platform](api-guide.md) contient une vidéo et des instructions pour l’importation de collections Postman. En outre, une liste des collections Postman pour chaque service est fournie.
 
@@ -109,7 +109,7 @@ Tous les appels API dans [!DNL Platform] nécessitent des en-têtes de requête 
 
 Ce message d’erreur s’affiche lorsqu’un en-tête `Authorization` est absent d’une requête API. Assurez-vous que l’en-tête d’autorisation comprend un jeton d’accès valide avant de réessayer.
 
-### Jeton OAuth non valide
+### Jeton OAuth non valide {#oauth-token-is-not-valid}
 
 ```json
 {
@@ -120,7 +120,7 @@ Ce message d’erreur s’affiche lorsqu’un en-tête `Authorization` est absen
 
 Ce message d’erreur s’affiche lorsque le jeton d’accès indiqué dans l’en-tête `Authorization` n’est pas valide. Assurez-vous que le jeton a été saisi correctement ou [générez un nouveau jeton](https://www.adobe.com/go/platform-api-authentication-en) dans la console Adobe I/O.
 
-### Clé API requise
+### Clé API requise {#api-key-is-required}
 
 ```json
 {
@@ -131,7 +131,7 @@ Ce message d’erreur s’affiche lorsque le jeton d’accès indiqué dans l’
 
 Ce message d’erreur s’affiche lorsqu’un en-tête de clé API (`x-api-key`) est absent d’une requête API. Assurez-vous que l’en-tête comprend une clé API valide avant de réessayer.
 
-### Clé API non valide
+### Clé API non valide {#api-key-is-invalid}
 
 ```json
 {
@@ -142,8 +142,7 @@ Ce message d’erreur s’affiche lorsqu’un en-tête de clé API (`x-api-key`)
 
 Ce message d’erreur s’affiche lorsque la valeur de l’en-tête de clé API indiqué (`x-api-key`) n’est pas valide. Vérifiez que vous avez correctement saisi la clé avant de réessayer. Si vous ne connaissez pas votre clé API, vous pouvez la trouver dans la [console Adobe I/O](https://console.adobe.io) : dans l’onglet **Intégrations**, accédez à la section **Aperçu** pour une intégration spécifique afin de trouver la clé API sous **Informations d’identification du client**.
 
-
-### En-tête absent
+### En-tête absent {#missing-header}
 
 ```json
 {
@@ -154,7 +153,7 @@ Ce message d’erreur s’affiche lorsque la valeur de l’en-tête de clé API 
 
 Ce message d’erreur s’affiche lorsqu’un en-tête d’organisation IMS (`x-gw-ims-org-id`) est absent d’une requête API. Assurez-vous que l’en-tête comprend l’identifiant de votre organisation IMS avant de réessayer.
 
-### Profil non valide
+### Profil non valide {#profile-is-not-valid}
 
 ```json
 {
@@ -165,7 +164,19 @@ Ce message d’erreur s’affiche lorsqu’un en-tête d’organisation IMS (`x-
 
 Ce message d’erreur s’affiche lorsque l’intégration de l’utilisateur ou de l’Adobe I/O (identifiée par la variable [jeton d’accès](#how-do-i-get-an-access-token) dans le `Authorization` en-tête) n’est pas autorisé à effectuer des appels vers [!DNL Experience Platform] API pour l’organisation IMS fournie dans la variable `x-gw-ims-org-id` en-tête . Vérifiez que vous avez indiqué le bon identifiant pour votre organisation IMS dans l’en-tête avant de réessayer. Si vous ne connaissez pas l’identifiant de votre organisation, vous pouvez le trouver dans la [console Adobe I/O](https://console.adobe.io) : dans l’onglet **Intégrations**, accédez à la section **Aperçu** pour une intégration spécifique afin de trouver l’identifiant sous **Informations d’identification du client**.
 
-### Type de contenu valide non spécifié
+### Actualiser l’erreur d’etag {#refresh-etag-error}
+
+```json
+{
+"errorMessage":"Supplied version=[\\\\\\\"a200a2a3-0000-0200-0000-123178f90000\\\\\\\"] does not match the current version on entity=[\\\\\\\"a200cdb2-0000-0200-0000-456179940000\\\\\\\"]"
+}
+```
+
+Vous pouvez recevoir une erreur d’etag si une modification a été apportée à une entité source ou de destination comme flux, connexion, connecteur source ou connexion cible par un autre appelant API. En raison de l’incohérence de la version, la modification que vous essayez d’apporter ne sera pas appliquée à la dernière version de l’entité.
+
+Pour résoudre ce problème, vous devez récupérer à nouveau l’entité, vous assurer que vos modifications sont compatibles avec la nouvelle version de l’entité, puis placer la nouvelle balise dans la balise `If-Match` et enfin effectuez l’appel API.
+
+### Type de contenu valide non spécifié {#valid-content-type-not-specified}
 
 ```json
 {
@@ -178,7 +189,7 @@ Ce message d’erreur s’affiche lorsque l’intégration de l’utilisateur ou
 
 Ce message d’erreur s’affiche lorsqu’une requête POST, PUT ou PATCH comporte un en-tête `Content-Type` non valide ou n’en comporte pas. Assurez-vous que l’en-tête est inclus dans la requête et que sa valeur est bien `application/json`.
 
-### La région de l’utilisateur est manquante
+### La région de l’utilisateur est manquante {#user-region-is-missing}
 
 ```json
 {
@@ -200,10 +211,10 @@ Voici une liste des guides de dépannage et de la documentation de référence s
 | Contrôle d&#39;accès | [API Access Control](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Guide de dépannage du contrôle d’accès](../access-control/troubleshooting-guide.md) |
 | Adobe Experience Platform Data Ingestion | [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) | [Guide de dépannage de l’ingestion par lots](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Guide de dépannage de l’ingestion par flux](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | Guide de dépannage du [[!DNL Data Science Workspace] ](../data-science-workspace/troubleshooting-guide.md) |
-| Gouvernance des données d’Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
-| Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | Guide de dépannage du [[!DNL Identity Service] ](../identity-service/troubleshooting-guide.md) |
-| Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | Guide de dépannage du [[!DNL Query Service] ](../query-service/troubleshooting-guide.md) |
-|  de segmentation d’Adobe Experience Platform | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) |
+| Gouvernance des données d’Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
+| Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | Guide de dépannage du [[!DNL Identity Service] ](../identity-service/troubleshooting-guide.md) |
+| Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | Guide de dépannage du [[!DNL Query Service] ](../query-service/troubleshooting-guide.md) |
+| Segmentation Adobe Experience Platform | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) |
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQ et guide de dépannage](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] et [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) |  |
