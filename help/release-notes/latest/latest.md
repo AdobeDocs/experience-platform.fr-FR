@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform, juin 2022
 description: Notes de mise à jour de juin 2022 pour Adobe Experience Platform.
-source-git-commit: bff266fca5762d6da123af712364ee1fc30a6784
+source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '801'
 ht-degree: 47%
 
 ---
@@ -57,7 +57,6 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | ----------- | ----------- |
-| [(Version bêta) Connexion à Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | Le [!DNL Google Ad Manager 360] La connexion active le chargement par lots pour [!DNL publisher provided identifiers] (PPID) dans [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage] <br><br>Cette destination est actuellement en version bêta et n’est disponible que pour un nombre limité de clients. Pour demander l’accès au [!DNL Google Ad Manager 360] connectez-vous, contactez votre représentant Adobe et fournissez vos [!DNL IMS Organization ID]. |
 | (Version bêta) Prise en charge des Destinations SDK pour [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) destinations basées sur des fichiers et [noms de fichiers configurables](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | Vous pouvez désormais utiliser la Destination SDK pour créer des destinations de stockage dans Google Cloud et définir des noms de fichiers personnalisés pour les fichiers exportés, au moyen de macros de nom de fichier. <br><br> La prise en charge des destinations basées sur des fichiers dans Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -66,6 +65,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
+| [(Version bêta) Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | Le [!DNL Google Ad Manager 360] La connexion active le chargement par lots pour [!DNL publisher provided identifiers] (PPID) dans [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage] <br><br>Cette destination est actuellement en version bêta et n’est disponible que pour un nombre limité de clients. Pour demander l’accès au [!DNL Google Ad Manager 360] connectez-vous, contactez votre représentant Adobe et fournissez vos [!DNL IMS Organization ID]. |
 | [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | Activez les profils pour les enquêtes et la collecte de commentaires Medallia ciblées afin de mieux comprendre les besoins et les attentes des clients. |
 
 {style=&quot;table-layout:auto&quot;}
