@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform, juin 2022
 description: Notes de mise à jour de juin 2022 pour Adobe Experience Platform.
-source-git-commit: 4edd2042234149ab8836da4fc58eb4d6084ae205
+source-git-commit: 314cd79185748e848bcb06fb21bfe4fea37a8853
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 46%
+source-wordcount: '860'
+ht-degree: 44%
 
 ---
 
@@ -58,6 +58,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Fonctionnalité | Description |
 | ----------- | ----------- |
 | (Version bêta) Prise en charge des Destinations SDK pour [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) destinations basées sur des fichiers et [noms de fichiers configurables](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | Vous pouvez désormais utiliser la Destination SDK pour créer des destinations de stockage dans Google Cloud et définir des noms de fichiers personnalisés pour les fichiers exportés, au moyen de macros de nom de fichier. <br><br> La prise en charge des destinations basées sur des fichiers dans Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer. |
+| La colonne Segment du flux de données s’exécute dans les destinations par lots | Pour les exécutions de flux de données vers des destinations par lot, l’interface utilisateur affiche désormais le nom du segment associé à chaque exécution de flux de données. En savoir plus sur [Le flux de données s’exécute dans les destinations par lots](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
 
