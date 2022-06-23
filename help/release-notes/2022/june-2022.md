@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform, juin 2022
 description: Notes de mise à jour de juin 2022 pour Adobe Experience Platform.
-source-git-commit: 71f781fafa6124237955e7979fab29e7c03f984e
+source-git-commit: bff266fca5762d6da123af712364ee1fc30a6784
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 51%
+source-wordcount: '802'
+ht-degree: 47%
 
 ---
 
@@ -52,6 +52,15 @@ Pour obtenir des informations plus générales sur Data Science Workspace, voir 
 ## [!DNL Destinations] {#destinations}
 
 Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ----------- | ----------- |
+| [(Version bêta) Connexion à Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | Le [!DNL Google Ad Manager 360] La connexion active le chargement par lots pour [!DNL publisher provided identifiers] (PPID) dans [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage] <br><br>Cette destination est actuellement en version bêta et n’est disponible que pour un nombre limité de clients. Pour demander l’accès au [!DNL Google Ad Manager 360] connectez-vous, contactez votre représentant Adobe et fournissez vos [!DNL IMS Organization ID]. |
+| (Version bêta) Prise en charge des Destinations SDK pour [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) destinations basées sur des fichiers et [noms de fichiers configurables](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | Vous pouvez désormais utiliser la Destination SDK pour créer des destinations de stockage dans Google Cloud et définir des noms de fichiers personnalisés pour les fichiers exportés, au moyen de macros de nom de fichier. <br><br> La prise en charge des destinations basées sur des fichiers dans Adobe Experience Platform Destination SDK est actuellement en version bêta. La documentation et la fonctionnalité peuvent changer. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Nouvelles destinations**
 
