@@ -1,10 +1,11 @@
 ---
 description: Cette page répertorie et décrit les étapes de configuration d’une destination basée sur des fichiers à l’aide de Destination SDK.
 title: (Version Beta) Utilisez Destination SDK pour configurer une destination basée sur des fichiers.
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
-workflow-type: ht
-source-wordcount: '477'
-ht-degree: 100%
+exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
+source-git-commit: 77c80c391ef6677f95af81ef15272380687e6789
+workflow-type: tm+mt
+source-wordcount: '480'
+ht-degree: 99%
 
 ---
 
@@ -248,7 +249,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Étape 3 : créer une configuration de métadonnées d’audience {#create-audience-metadata-configuration}
 
-Pour certaines destinations, Destination SDK exige que vous configuriez des métadonnées d’audience afin de créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Pour plus d’informations sur le moment et la manière de configurer cette configuration, consultez la section [Gestion des métadonnées d’audience](./audience-metadata-management.md).
+Pour certaines destinations, Destination SDK exige que vous configuriez des métadonnées d’audience afin de créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Pour plus d’informations sur le moment et la manière d’effectuer cette configuration, consultez la section [Gestion des métadonnées d’audience](./audience-metadata-management.md).
 
 Si vous utilisez une configuration de métadonnées d’audience, vous devez la connecter à la configuration de destination créée à l’étape 2. Ajoutez l’ID d’instance de votre configuration de métadonnées d’audience à votre configuration de destination en tant que `audienceTemplateId`.
 
@@ -259,8 +260,9 @@ Selon que vous spécifiez `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `
 * Si vous avez sélectionné `"authenticationRule": "CUSTOMER_AUTHENTICATION"` dans la configuration des destinations, reportez-vous aux sections suivantes pour connaître les types d’authentification pris en charge par Destination SDK pour les destinations basées sur des fichiers :
 
    * [Authentification Amazon S3](authentication-configuration.md#s3)
-   * [Chaîne de connexion Azure](authentication-configuration.md#blob)
-   * [Principal de service Azure](authentication-configuration.md#adls)
+   * [Azure Blob](authentication-configuration.md#blob)
+   * [Stockage du lac de données Azure](authentication-configuration.md#adls)
+   * [Google Cloud Storage](authentication-configuration.md#gcs)
    * [Authentification SFTP avec clé SSH](authentication-configuration.md#sftp-ssh)
    * [Authentification SFTP avec mot de passe](authentication-configuration.md#sftp-password)
 

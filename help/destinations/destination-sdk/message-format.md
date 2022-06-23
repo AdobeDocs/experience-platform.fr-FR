@@ -2,7 +2,7 @@
 description: Cette page traite du format du message et de la transformation des profils dans les données exportées de Adobe Experience Platform vers les destinations.
 title: Format des messages
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: f000eadb689a99f7667c47e2bef5d2a780aa0505
+source-git-commit: 6600549cf421e2adc360b75e0b463992d549b85e
 workflow-type: tm+mt
 source-wordcount: '2266'
 ht-degree: 3%
@@ -61,7 +61,7 @@ Pour démontrer le processus de transformation des profils, l’exemple ci-desso
 
 Supposons que votre plateforme puisse recevoir un format de message du type :
 
-```curl
+```shell
 POST https://YOUR_REST_API_URL/users/
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
@@ -474,7 +474,6 @@ Profil 2 :
     ]
 }
 ```
-
 
 ### Créer un modèle qui envoie des segments et des identités {#segments-and-identities}
 

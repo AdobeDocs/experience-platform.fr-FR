@@ -1,10 +1,11 @@
 ---
 description: Cette configuration vous permet d’indiquer des informations de base telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs d’Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur d’Experience Platform ainsi que les identités qui peuvent être exportées vers votre destination.
 title: (Version Beta) Options de configuration de destinations basées sur des fichiers pour Destination SDK
-source-git-commit: 5186e90b850f1e75ec358fa01bfb8a5edac29277
-workflow-type: ht
-source-wordcount: '1899'
-ht-degree: 100%
+exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
+source-git-commit: 3c8ad296ab9f0ce62743466ca8823b13c4545a9d
+workflow-type: tm+mt
+source-wordcount: '2304'
+ht-degree: 82%
 
 ---
 
@@ -278,7 +279,7 @@ Vous pouvez configurer la fonctionnalité décrite dans ce document à l’aide 
    },
    "batchConfig":{
       "allowMandatoryFieldSelection":true,
-      "allowJoinKeyFieldSelection":true,
+      "allowDedupeKeyFieldSelection":true,
       "defaultExportMode":"DAILY_FULL_EXPORT",
       "allowedExportMode":[
          "DAILY_FULL_EXPORT",
@@ -290,11 +291,20 @@ Vous pouvez configurer la fonctionnalité décrite dans ce document à l’aide 
          "EVERY_6_HOURS",
          "EVERY_8_HOURS",
          "EVERY_12_HOURS",
-         "ONCE",
-         "EVERY_HOUR"
+         "ONCE"
       ],
       "defaultFrequency":"DAILY",
-      "defaultStartTime":"00:00"
+      "defaultStartTime":"00:00",
+      "filenameConfig": {
+            "allowedFilenameAppendOptions": [
+                "SEGMENT_NAME",
+                "DATETIME",
+                "TIMESTAMP",
+                "DESTINATION_NAME",
+                "SANDBOX_NAME"
+            ],
+            "defaultFilename": "{{DESTINATION_NAME}}_{{SEGMENT_ID}}"
+      }
    },
    "backfillHistoricalProfileData":true
 }
@@ -324,7 +334,7 @@ Cette section de la configuration des destinations génère la page [Configurer 
 
 Selon l’[option d’authentification](authentication-configuration.md##supported-authentication-types) que vous indiquez dans le champ `authType`, la page Experience Platform est générée pour les utilisateurs comme suit :
 
-### Authentification Amazon S3
+### Authentification Amazon S3 {#s3}
 
 Lorsque vous configurez le type d’authentification Amazon S3, les utilisateurs doivent saisir les informations d’identification S3.
 
@@ -352,7 +362,7 @@ Lorsque vous configurez le SFTP avec le type d’authentification par clé SSH, 
 
 Utilisez cette section pour demander aux utilisateurs de renseigner des champs personnalisés, spécifiques à votre destination, lors de la connexion à la destination dans l’interface utilisateur d’Experience Platform.
 
-Dans l’exemple ci-dessous, `customerDataFields` exige des utilisateurs qu’ils saisissent un nom pour leur destination et qu’ils fournissent un nom de compartiment [!DNL Amazon S3] et un chemin d’accès au dossier, ainsi qu’un type de compression et un format de fichier.
+Dans l’exemple ci-dessous, `customerDataFields` exige des utilisateurs qu’ils saisissent un nom pour leur destination et qu’ils fournissent un [!DNL Amazon S3] nom du compartiment et chemin du dossier, ainsi qu’un type de compression, un format de fichier et plusieurs autres options d’exportation de fichiers.
 
 ```json
  "customerDataFields":[
@@ -571,8 +581,8 @@ Cette section fait référence aux éléments de l’interface utilisateur dans 
 
 | Paramètre | Type | Description |
 |---------|----------|------|
-| `documentationLink` | Chaîne | Fait référence à la page de documentation du [catalogue des destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=fr#catalog) pour votre destination. Utilisez `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, où `YOURDESTINATION` est le nom de votre destination. Pour une destination appelée Moviestar, cela donne `http://www.adobe.com/go/destinations-moviestar-en`. |
-| `category` | Chaîne | Fait référence à la catégorie affectée à votre destination dans Adobe Experience Platform. Pour plus d’informations, reportez-vous à la section [Catégories de destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=fr). Utilisez l’une des valeurs suivantes : `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
+| `documentationLink` | Chaîne | Fait référence à la page de documentation du [Catalogue des destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=fr#catalog) pour votre destination. Utilisez `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, où `YOURDESTINATION` est le nom de votre destination. Par exemple, pour une destination appelée Moviestar, procédez comme suit : `http://www.adobe.com/go/destinations-moviestar-en` |
+| `category` | Chaîne | Fait référence à la catégorie affectée à votre destination dans Adobe Experience Platform. Pour plus d’informations, consultez la section [Catégories de destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=fr). Utilisez l’une des valeurs suivantes :`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `iconUrl` | Chaîne | URL dans laquelle vous avez hébergé l’icône à afficher dans la carte du catalogue des destinations. |
 | `connectionType` | Chaîne | Type de connexion en fonction de la destination. Valeurs prises en charge : <ul><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li></ul> |
 | `flowRunsSupported` | Booléen | Indique si la connexion de destination est incluse dans l’[interface utilisateur d’exécution de flux](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard). Lorsque vous définissez ce paramètre sur `true` : <ul><li>La **[!UICONTROL date d’exécution du dernier flux de données]** et **[!UICONTROL le statut d’exécution du dernier flux de données]** s’affichent dans la page de navigation de destination.</li><li>Les onglets **[!UICONTROL Exécution du flux de données]** et **[!UICONTROL Données d’activation]** s’affichent dans la page d’affichage de destination.</li></ul> |
@@ -602,8 +612,8 @@ Cette section fait référence aux éléments de l’interface utilisateur dans 
 
 | Paramètre | Type | Description |
 |---------|----------|------|
-| `authenticationRule` | Chaîne | Indique comment les clients [!DNL Platform] se connectent à votre destination. Les valeurs acceptées sont les suivantes : `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION` ou `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si les clients Platform se connectent à votre système par l’une des méthodes suivantes : <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre Adobe et votre destination et que le client [!DNL Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer un objet d’identification à l’aide de la configuration des [Informations d’identification](./credentials-configuration-api.md). </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
-| `destinationServerId` | Chaîne | `instanceId` de la [configuration du serveur de destination](./destination-server-api.md) utilisée pour cette destination. |
+| `authenticationRule` | Chaîne | Indique comment les clients [!DNL Platform] se connectent à votre destination. Les valeurs acceptées sont les suivantes : `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION` ou `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si les clients Platform se connectent à votre système par l’une des méthodes suivantes : <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre Adobe et votre destination et que le client [!DNL Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer des informations d’identification à l’aide de la configuration des [Informations d’identification](./credentials-configuration-api.md). </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
+| `destinationServerId` | Chaîne | L’`instanceId` de la [configuration du serveur de destination](./destination-server-api.md) utilisé pour cette destination. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -649,12 +659,13 @@ Utilisez les paramètres de la section `schemaConfig` pour activer l’étape de
       "profileRequired":true,
       "segmentRequired":true,
       "identityRequired":true
+}
 ```
 
 | Paramètre | Type | Description |
 |---------|----------|------|
 | `profileFields` | Tableau | Lorsque vous ajoutez des champs `profileFields` prédéfinis, les utilisateurs Experience Platform ont la possibilité de mapper les attributs Platform aux attributs prédéfinis de votre destination. |
-| `profileRequired` | Booléen | Utilisez `true` si les utilisateurs doivent être en mesure de mapper les attributs de profil d’Experience Platform aux attributs personnalisés du côté de votre destination, comme illustré dans l’exemple de configuration ci-dessus. |
+| `profileRequired` | Booléen | Utilisez `true` si les utilisateurs doivent être en mesure de mapper les attributs de profil d’Experience Platform aux attributs personnalisés du côté de votre destination, tel qu’indiqué dans l’exemple de configuration ci-dessus. |
 | `segmentRequired` | Booléen | Utilisez toujours `segmentRequired:true`. |
 | `identityRequired` | Booléen | Utilisez `true` si les utilisateurs doivent être en mesure de mapper des espaces de noms d’identité d’Experience Platform à votre schéma souhaité. |
 
@@ -684,11 +695,11 @@ Utilisez les paramètres de la section `dynamicSchemaConfig` pour définir votre
 
 | Paramètre | Type | Description |
 |---------|----------|------|
-| `profileRequired` | Booléen | Utilisez `true` si les utilisateurs doivent être en mesure de mapper les attributs de profil d’Experience Platform aux attributs personnalisés du côté de votre destination, comme illustré dans l’exemple de configuration ci-dessus. |
-| `segmentRequired` | Booléen | Utilisez `segmentRequired:true`. |
+| `profileRequired` | Booléen | Utilisez `true` si les utilisateurs doivent être en mesure de mapper les attributs de profil d’Experience Platform aux attributs personnalisés du côté de votre destination, tel qu’indiqué dans l’exemple de configuration ci-dessus. |
+| `segmentRequired` | Booléen | Utilisez toujours `segmentRequired:true`. |
 | `identityRequired` | Booléen | Utilisez `true` si les utilisateurs doivent être en mesure de mapper des espaces de noms d’identité Experience Platform à votre schéma souhaité. |
 | `destinationServerId` | Chaîne | Valeur `instanceId` de la [configuration du serveur de destination](./destination-server-api.md) utilisée pour cette destination. |
-| `authenticationRule` | Chaîne | Indique comment les clients [!DNL Platform] se connectent à votre destination. Les valeurs acceptées sont les suivantes : `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION` ou `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si les clients Platform se connectent à votre système par l’une des méthodes suivantes : <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre Adobe et votre destination et que le client [!DNL Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer un objet d’identification à l’aide de la configuration des [Informations d’identification](./credentials-configuration-api.md). </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
+| `authenticationRule` | Chaîne | Indique comment les clients [!DNL Platform] se connectent à votre destination. Les valeurs acceptées sont les suivantes : `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION` ou `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si les clients Platform se connectent à votre système par l’une des méthodes suivantes : <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre Adobe et votre destination et que le client [!DNL Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer des informations d’identification à l’aide de la configuration des [Informations d’identification](./credentials-configuration-api.md). </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
 | `value` | Chaîne | Nom du schéma à afficher dans l’interface utilisateur d’Experience Platform, à l’étape de mappage. |
 | `responseFormat` | Chaîne | Toujours définie sur `SCHEMA` lors de la définition d’un schéma personnalisé. |
 
@@ -696,7 +707,7 @@ Utilisez les paramètres de la section `dynamicSchemaConfig` pour définir votre
 
 ## Identités et attributs {#identities-and-attributes}
 
-Les paramètres de cette section déterminent les identités acceptées par votre destination. Cette configuration renseigne également les identités et les attributs cibles à l’[étape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) de l’interface utilisateur d’Experience Platform, où les utilisateurs mappent les identités et les attributs de leurs schémas XDM au schéma de votre destination.
+Les paramètres de cette section déterminent les identités acceptées par votre destination. Cette configuration renseigne également les identités et les attributs cibles dans l’[étape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) de l’interface utilisateur dʼExperience Platform, où les utilisateurs mappent les identités et les attributs de leurs schémas XDM au schéma de votre destination.
 
 
 ```json
@@ -712,7 +723,7 @@ Les paramètres de cette section déterminent les identités acceptées par votr
     },
 ```
 
-Vous devez indiquer les identités [!DNL Platform] que les clients peuvent exporter vers votre destination. Voici quelques exemples : [!DNL Experience Cloud ID], e-mail haché, identifiant d’appareil ([!DNL IDFA], [!DNL GAID]). Ces valeurs sont les suivantes : [!DNL Platform] espaces de noms d’identité que les clients peuvent mapper aux espaces de noms d’identité de votre destination. Vous pouvez également indiquer si les clients peuvent mapper des espaces de noms personnalisés à des identités prises en charge par votre destination.
+Vous devez indiquer quelles identités [!DNL Platform] les clients peuvent exporter vers votre destination. Voici quelques exemples : [!DNL Experience Cloud ID], e-mail haché, identifiant de l’appareil ([!DNL IDFA], [!DNL GAID]). Ces valeurs sont les suivantes : espaces de noms d’identité [!DNL Platform] que les clients peuvent mapper aux espaces de noms d’identité de votre destination. Vous pouvez également indiquer si les clients peuvent mapper des espaces de noms personnalisés à des identités prises en charge par votre destination.
 
 Les espaces de noms d’identité ne nécessitent pas de correspondance 1-1 entre [!DNL Platform] et votre destination.
 Par exemple, les clients peuvent mapper un espace de noms [!DNL Platform] [!DNL IDFA] à un espace de noms [!DNL IDFA] de votre destination ou mapper le même espace de noms [!DNL Platform] [!DNL IDFA] à un espace de noms [!DNL Customer ID] de votre destination.
@@ -722,37 +733,96 @@ Par exemple, les clients peuvent mapper un espace de noms [!DNL Platform] [!DNL 
 Cette section fait référence aux paramètres d’exportation de fichiers dans la configuration ci-dessus qu’Adobe doit utiliser pour votre destination dans l’interface utilisateur d’Adobe Experience Platform.
 
 ```json
- "batchConfig":{
-      "allowMandatoryFieldSelection":true,
-      "allowDedupeKeyFieldSelection":true,
-      "defaultExportMode":"DAILY_FULL_EXPORT",
-      "allowedExportMode":[
-         "DAILY_FULL_EXPORT",
-         "FIRST_FULL_THEN_INCREMENTAL"
+"batchConfig":{
+   "allowMandatoryFieldSelection":true,
+   "allowDedupeKeyFieldSelection":true,
+   "defaultExportMode":"DAILY_FULL_EXPORT",
+   "allowedExportMode":[
+      "DAILY_FULL_EXPORT",
+      "FIRST_FULL_THEN_INCREMENTAL"
+   ],
+   "allowedScheduleFrequency":[
+      "DAILY",
+      "EVERY_3_HOURS",
+      "EVERY_6_HOURS",
+      "EVERY_8_HOURS",
+      "EVERY_12_HOURS",
+      "ONCE"
+   ],
+   "defaultFrequency":"DAILY",
+   "defaultStartTime":"00:00",
+   "filenameConfig":{
+      "allowedFilenameAppendOptions":[
+         "SEGMENT_NAME",
+         "DESTINATION_INSTANCE_ID",
+         "DESTINATION_INSTANCE_NAME",
+         "ORGANIZATION_NAME",
+         "SANDBOX_NAME",
+         "DATETIME",
+         "CUSTOM_TEXT"
       ],
-      "allowedScheduleFrequency":[
-         "DAILY",
-         "EVERY_3_HOURS",
-         "EVERY_6_HOURS",
-         "EVERY_8_HOURS",
-         "EVERY_12_HOURS",
-         "ONCE",
-         "EVERY_HOUR"
+      "defaultFilenameAppendOptions":[
+         "SEGMENT_ID",
+         "DATETIME"
       ],
-      "defaultFrequency":"DAILY",
-      "defaultStartTime":"00:00"
+      "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
    }
+}
 ```
 
 | Paramètre | Type | Description |
 |---------|----------|------|
 | `allowMandatoryFieldSelection` | Booléen | Définissez cette valeur sur `true` afin de permettre aux clients de spécifier les attributs de profil obligatoires. La valeur par défaut est `false`. Pour plus d’informations, consultez la section [Attributs obligatoires](../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
 | `allowDedupeKeyFieldSelection` | Booléen | Définissez cette valeur sur `true` afin de permettre aux clients de spécifier des clés de déduplication. La valeur par défaut est `false`. Pour plus d’informations, consultez la section [Clés de déduplication](../ui/activate-batch-profile-destinations.md#deduplication-keys). |
-| `defaultExportMode` | Énumération | Définit le mode d’exportation de fichier par défaut. Valeurs prises en charge :<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul><br> La valeur par défaut est `DAILY_FULL_EXPORT`. Pour plus d’informations sur la planification des exportations de fichiers, consultez la [documentation sur l’activation par lots](../ui/activate-batch-profile-destinations.md#scheduling). |
+| `defaultExportMode` | Énumération | Définit le mode d’exportation de fichier par défaut. Valeurs prises en charge :<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> La valeur par défaut est `DAILY_FULL_EXPORT`. Pour plus d’informations sur la planification des exportations de fichiers, consultez la [documentation sur l’activation par lots](../ui/activate-batch-profile-destinations.md#scheduling). |
 | `allowedExportModes` | Liste | Définit les modes d’exportation de fichiers disponibles pour les clients. Valeurs prises en charge :<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
 | `allowedScheduleFrequency` | Liste | Définit la fréquence d’exportation des fichiers disponible pour les clients. Valeurs prises en charge :<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
-| `defaultFrequency` | Énumération | Définit la fréquence d’exportation des fichiers par défaut. Les valeurs prises en charge sont les suivantes :<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> <br> La valeur par défaut est `DAILY`. |
+| `defaultFrequency` | Énumération | Définit la fréquence d’exportation des fichiers par défaut. Les valeurs prises en charge sont les suivantes :<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> La valeur par défaut est `DAILY`. |
 | `defaultStartTime` | Chaîne | Définit l’heure de début par défaut de l’exportation du fichier. Utilise le format de fichier de 24 heures. La valeur par défaut est « 00:00 ». |
+| `filenameConfig.allowedFilenameAppendOptions` | Chaîne | *Obligatoire*. Liste des macros de nom de fichier disponibles à l’intention des utilisateurs. Cela détermine les éléments qui sont ajoutés aux noms de fichier exportés (ID de segment, nom de l’organisation, date et heure de l’exportation, etc.). Lorsque vous définissez `defaultFilename`, veillez à éviter la duplication des macros. <br><br>Valeurs prises en charge : <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Quel que soit l’ordre dans lequel vous définissez les macros, l’interface utilisateur de l’Experience Platform les affiche toujours dans l’ordre présenté ici. <br><br> If `defaultFilename` est vide, la variable `allowedFilenameAppendOptions` La liste doit contenir au moins une macro. |
+| `filenameConfig.defaultFilenameAppendOptions` | Chaîne | *Obligatoire*. Macros de nom de fichier par défaut présélectionnées que les utilisateurs peuvent décocher.<br><br> Les macros de cette liste sont un sous-ensemble de celles définies dans la variable `allowedFilenameAppendOptions`. |
+| `filenameConfig.defaultFilename` | Chaîne | *Facultatif*. Définit les macros de nom de fichier par défaut pour les fichiers exportés. Ils ne peuvent pas être remplacés par les utilisateurs. <br><br>Toute macro définie par `allowedFilenameAppendOptions` sera annexé après l’événement `defaultFilename` macros. <br><br>If `defaultFilename` est vide, vous devez définir au moins une macro dans `allowedFilenameAppendOptions`. |
+
+
+### Configuration du nom de fichier {#file-name-configuration}
+
+Utilisez les macros de configuration des noms de fichier pour définir les noms de fichier exportés à inclure. Les macros du tableau ci-dessous décrivent les éléments figurant dans l’interface utilisateur de la fonction [configuration du nom de fichier](../ui/activate-batch-profile-destinations.md#file-names) écran.
+
+En règle générale, vous devez toujours inclure la variable `SEGMENT_ID` macro dans les noms de fichiers exportés. Les identifiants de segment sont uniques. Par conséquent, leur inclusion dans le nom de fichier est la meilleure manière de s’assurer que les noms de fichier sont également uniques.
+
+| Macro | Libellé de l’interface utilisateur | Description | Exemple |
+|---|---|---|---|
+| `DESTINATION` | [!UICONTROL Destination] | Nom de la destination dans l’interface utilisateur. | Amazon S3 |
+| `SEGMENT_ID` | [!UICONTROL Identifiant de segment] | Identifiant de segment unique généré par Platform | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL Nom du segment] | Nom de segment défini par l’utilisateur | abonné VIP |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL ID de destination] | Identifiant unique généré par Platform de l’instance de destination. | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_NAME` | [!UICONTROL Nom de la destination] | Nom défini par l’utilisateur de l’instance de destination. | Ma destination publicitaire 2022 |
+| `ORGANIZATION_NAME` | [!UICONTROL Nom de l’organisation] | Nom de l’organisation du client dans Adobe Experience Platform. | Mon nom d’organisation |
+| `SANDBOX_NAME` | [!UICONTROL Nom du sandbox] | Nom de l’environnement de test utilisé par le client. | prod |
+| `DATETIME` / `TIMESTAMP` | [!UICONTROL Date et heure] | `DATETIME` et `TIMESTAMP` les deux définissent le moment où le fichier a été généré, mais dans des formats différents. <br><br><ul><li>`DATETIME` utilise le format suivant : YYYYMMDD_HHMMSS.</li><li>`TIMESTAMP` utilise le format Unix à 10 chiffres. </li></ul> `DATETIME` et `TIMESTAMP` s’excluent mutuellement et ne peuvent pas être utilisés simultanément. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
+| `CUSTOM_TEXT` | [!UICONTROL Texte personnalisé] | Texte personnalisé défini par l’utilisateur à inclure dans le nom du fichier. Ne peut pas être utilisé dans `defaultFilename`. | My_Custom_Text |
+| `TIMESTAMP` | [!UICONTROL Date et heure] | Horodatage à 10 chiffres de l’heure de génération du fichier, au format Unix. | 1652131584 |
+
+
+![Image de l’interface utilisateur affichant l’écran de configuration du nom de fichier avec les macros présélectionnées](assets/file-name-configuration.png)
+
+L’exemple illustré dans l’image ci-dessus utilise la configuration de macro de nom de fichier suivante :
+
+```json
+"filenameConfig":{
+   "allowedFilenameAppendOptions":[
+      "CUSTOM_TEXT",
+      "SEGMENT_ID",
+      "DATETIME"
+   ],
+   "defaultFilenameAppendOptions":[
+      "SEGMENT_ID",
+      "DATETIME"
+   ],
+   "defaultFilename": "%DESTINATION%"
+}
+```
+
 
 ## Qualifications des profils historiques {#profile-backfill}
 
@@ -770,5 +840,5 @@ Vous pouvez utiliser le paramètre `backfillHistoricalProfileData` dans la confi
 
 Certains de vos paramètres de destination doivent être configurés via le [serveur de destination](./server-and-file-configuration.md) ou la [configuration des métadonnées d’audience](./audience-metadata-management.md). La configuration de destination décrite ici connecte tous ces paramètres en référençant les deux autres configurations comme suit :
 
-* Utilisez la variable `destinationServerId` pour référencer le serveur de destination et la configuration du modèle définis pour votre destination.
-* Utilisez la variable `audienceMetadataId` pour référencer la configuration des métadonnées d’audience définie pour votre destination.
+* Utilisez la variable `destinationServerId` pour référencer la configuration du serveur de destination et du modèle pour votre destination.
+* Utilisez la variable `audienceMetadataId` pour référencer la configuration des métadonnées d’audience pour votre destination.

@@ -2,7 +2,7 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API « /authoring/destinations ».
 title: Opérations de point d’entrée de l’API Destinations
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
 workflow-type: tm+mt
 source-wordcount: '2537'
 ht-degree: 98%
@@ -35,7 +35,7 @@ POST /authoring/destinations
 
 La requête suivante crée une destination de diffusion en continu, configurée en fonction des paramètres fournis dans la payload. Le payload ci-dessous inclut tous les paramètres pour les destinations de diffusion en continu acceptées par le point d’entrée `/authoring/destinations`. Notez que vous n’avez pas à ajouter tous les paramètres à l’appel et que le modèle est personnalisable, conformément aux exigences de votre API.
 
-```json
+```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
@@ -200,7 +200,14 @@ POST /authoring/destinations
 
 La requête suivante crée une configuration de destination basée sur des fichiers [!DNL Amazon S3], configurée en fonction des paramètres fournis dans la payload. La payload ci-dessous inclut tous les paramètres des destinations basées sur des fichiers acceptés par le point d’entrée `/authoring/destinations`. Notez que vous n’avez pas à ajouter tous les paramètres à l’appel et que le modèle est personnalisable, conformément aux exigences de votre API.
 
-```json
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
 {
         "name": "S3 Destination with CSV Options",
         "description": "S3 Destination with CSV Options",
