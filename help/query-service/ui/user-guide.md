@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur de Query Editor
 topic-legacy: query editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service qui vous permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur de l’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '1599'
-ht-degree: 38%
+source-wordcount: '1625'
+ht-degree: 37%
 
 ---
 
@@ -135,6 +135,10 @@ Vous pouvez supprimer un planning en sélectionnant **[!UICONTROL Suppression d�
 ### Enregistrement des requêtes {#saving-queries}
 
 [!DNL Query Editor] dispose d’une fonction d’enregistrement qui vous permet d’enregistrer une requête et d’y revenir ultérieurement. Pour enregistrer une requête, sélectionnez **[!UICONTROL Enregistrer]** dans le coin supérieur droit de [!DNL Query Editor]. Avant de pouvoir enregistrer une requête, vous devez lui donner un nom à l’aide du panneau **[!UICONTROL Détails]**.
+
+>[!NOTE]
+>
+>Les requêtes nommées et enregistrées dans à l’aide de l’éditeur de requêtes sont disponibles sous forme de modèles dans le tableau de bord Requête . [!UICONTROL Parcourir] . Voir [documentation sur les modèles](./query-templates.md) pour plus d’informations.
 
 ### Accès aux requêtes précédentes {#previous-queries}
 

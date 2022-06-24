@@ -3,11 +3,11 @@ keywords: Experience Platform;accueil;rubriques populaires;service de requête;m
 solution: Experience Platform
 title: Point de terminaison de l’API de modèles de requête
 topic-legacy: query templates
-description: La documentation suivante décrit les différents appels d’API que vous pouvez effectuer à l’aide de modèles de requête pour l’API Query Service.
+description: Ce guide décrit les différents appels d’API de modèle de requête que vous pouvez effectuer à l’aide de l’API Query Service.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '668'
 ht-degree: 89%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 89%
 
 ## Exemples d’appels API
 
-Maintenant que vous comprenez les en-têtes à utiliser, vous êtes prêt à commencer à lancer des appels au [!DNL Query Service] API. Les sections suivantes décrivent les différents appels API que vous pouvez effectuer à l’aide de la variable [!DNL Query Service] API. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide du [!DNL Query Service] API. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+
+Voir [Documentation sur les modèles de requête d’interface utilisateur](../ui/query-templates.md) pour plus d’informations sur la création de modèles via l’interface utilisateur de l’Experience Platform.
 
 ### Récupération d’une liste de modèles de requête
 
