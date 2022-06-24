@@ -1,10 +1,11 @@
 ---
 title: Modèle CSV vers point de terminaison de l’API de conversion de schéma
 description: Le point d’entrée de schéma /rpc/csv2 dans l’API Schema Registry vous permet d’utiliser des modèles CSV pour créer automatiquement des schémas de modèle de données d’expérience (XDM).
-source-git-commit: 3860724b97987e555e12807c47f65fe040912d69
+exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
+source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 11%
+source-wordcount: '857'
+ht-degree: 7%
 
 ---
 
@@ -14,7 +15,7 @@ Le `/rpc/csv2schema` du point de terminaison [!DNL Schema Registry] L’API vous
 
 ## Prise en main
 
-Le `/rpc/csv2schema` Le point de terminaison fait partie de la variable [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le `/rpc/csv2schema` Le point de terminaison fait partie de la variable [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d’appels API de ce document, ainsi que des informations importantes concernant les en-têtes requis pour réussir les appels à une API Adobe Experience Platform.
 
 Le `/rpc/csv2schema` Le point d’entrée fait partie des appels de procédure distants (RPC) pris en charge par la fonction [!DNL Schema Registry]. Contrairement aux autres points de terminaison dans la variable [!DNL Schema Registry] API, les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires comme `Accept` ou `Content-Type`, et n’utilisez pas d’événement `CONTAINER_ID`. Ils doivent plutôt utiliser la variable `/rpc` , comme illustré dans les appels API ci-dessous.
 
