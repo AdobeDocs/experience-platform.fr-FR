@@ -3,7 +3,7 @@ title: Exécution des commandes du SDK Web Adobe Experience Platform
 description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
 keywords: exécuter des commandes;commandName;Promesses;getLibraryInfo;objets de réponse;consentement;
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
-source-git-commit: ca3ee230d510dfb9de400b6f573a612ec33c8f7a
+source-git-commit: f3344c9c9b151996d94e40ea85f2b0cf9c9a6235
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 71%
@@ -13,7 +13,7 @@ ht-degree: 71%
 # Exécution des commandes
 
 
-Une fois le code de base implémenté sur votre page web, vous pouvez commencer à exécuter des commandes à l’aide du SDK. Il n’est pas nécessaire d’attendre que le fichier externe (`alloy.js`) soit chargé à partir du serveur avant d’exécuter les commandes. Si le chargement du SDK n’est pas terminé, les commandes sont mises en file d’attente et traitées dès que possible par le SDK.
+Une fois le code de base implémenté sur votre page web, vous pouvez commencer à exécuter des commandes à l’aide du SDK. Il n’est pas nécessaire d’attendre le fichier externe (`alloy.js`) à charger à partir du serveur avant d&#39;exécuter les commandes. Si le chargement du SDK n’est pas terminé, les commandes sont mises en file d’attente et traitées dès que possible par le SDK.
 
 Les commandes sont exécutées à l’aide de la syntaxe ci-après.
 
@@ -65,12 +65,14 @@ alloy("commandName", options)
 
 ### Objets de réponse
 
-Toutes les promesses renvoyées par les commandes sont résolues avec un objet `result`. L’objet result contient des données en fonction de la commande et du consentement de l’utilisateur. Par exemple, les informations sur la bibliothèque sont transmises en tant que propriété de l’objet de résultats dans la commande suivante.
+Toutes les promesses renvoyées à partir des commandes sont résolues avec une `result` . L’objet result contient des données en fonction de la commande et du consentement de l’utilisateur. Par exemple, les informations sur la bibliothèque sont transmises en tant que propriété de l’objet de résultats dans la commande suivante.
 
 ```js
 alloy("getLibraryInfo")
   .then(function(result) {
     console.log(result.libraryInfo.version);
+    console.log(result.libraryInfo.commands);
+    console.log(result.libraryInfo.configs);
   });
 ```
 

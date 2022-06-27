@@ -3,10 +3,10 @@ title: Débogage dans le SDK Web de Adobe Experience Platform
 description: Découvrez comment activer/désactiver les fonctionnalités de débogage dans le SDK Web Experience Platform.
 keywords: débogage du sdk web;débogage;configurer;commande de configuration;commande de débogage;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: d0d7fe42827579c502be9de29d36f24c94259b5f
+source-git-commit: c1e6b1519bc40e7d36bd83dc49e442d3d5583fed
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 65%
+source-wordcount: '515'
+ht-degree: 62%
 
 ---
 
@@ -19,7 +19,7 @@ Le débogage est désactivé par défaut, mais peut être activé de quatre mani
 * Commande `configure`
 * Commande `setDebug`
 * Paramètre de chaîne de requête
-* Activation/désactivation du débogage dans Adobe Experience Platform Debugger. Adobe Experience Platform est un outil puissant qui examine vos pages web et vous aide à déboguer les problèmes d’implémentation avec vos produits Experience Cloud. Adobe Experience Platform Debugger est disponible sous la forme d’une extension [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) et [Firefox](https://addons.mozilla.org/fr/firefox/addon/adobe-experience-platform-dbg/). Le débogage peut être activé à partir de l’onglet de configuration de la section SDK Web AEP.
+* Activation/désactivation du débogage dans Adobe Experience Platform Debugger. Adobe Experience Platform est un outil puissant qui examine vos pages web et vous aide à déboguer les problèmes d’implémentation avec vos produits Experience Cloud. Adobe Experience Platform Debugger est disponible sous la forme d’un [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) et [Firefox](https://addons.mozilla.org/fr/firefox/addon/adobe-experience-platform-dbg/) extension . Le débogage peut être activé à partir de l’onglet de configuration de la section SDK Web AEP.
 
 ![](../images/enable-debugging.png)
 
@@ -76,9 +76,13 @@ Il est souvent utile d’accéder à certains détails de la bibliothèque que v
 ```js
 alloy("getLibraryInfo").then(function(result) {
   console.log(result.libraryInfo.version);
+  console.log(result.libraryInfo.commands);
+  console.log(result.libraryInfo.configs);
 });
 ```
 
 Actuellement, l’objet `libraryInfo` fourni contient les propriétés suivantes :
 
-* `version` Il s’agit de la version de la bibliothèque chargée. Par exemple, si la version de la bibliothèque chargée est 1.0.0, la valeur est `1.0.0`. Lorsque la bibliothèque est exécutée dans l’extension de balise (appelée &quot;SDK Web AEP&quot;), la version est la version de la bibliothèque et la version de l’extension de balise associée à un signe &quot;+&quot;. Par exemple, si la version de la bibliothèque est 1.0.0 et la version de l’extension de balise est 1.2.0, la valeur est `1.0.0+1.2.0`.
+* `version`: Il s’agit de la version de la bibliothèque chargée. Par exemple, si la version de la bibliothèque chargée est 1.0.0, la valeur est `1.0.0`. Lorsque la bibliothèque est exécutée dans l’extension de balise (appelée &quot;SDK Web AEP&quot;), la version est la version de la bibliothèque et la version de l’extension de balise associée à un signe &quot;+&quot;. Par exemple, si la version de la bibliothèque est 1.0.0 et que la version de l’extension de balise est 1.2.0, la valeur sera `1.0.0+1.2.0`.
+* `commands`: Il s’agit de toutes les commandes disponibles prises en charge par la bibliothèque chargée.
+* `configs`: Il s’agit de toutes les configurations actuelles de la bibliothèque chargée.
