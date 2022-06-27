@@ -3,7 +3,7 @@ title: Présentation du transfert dʼévénements
 description: Découvrez Adobe Experience Platform, qui vous permet dʼutiliser Platform Edge Network afin dʼexécuter des tâches sans modifier votre implémentation de balises.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: b445e25ebda39e1604b926dc40d8ed52ad2e9b54
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 100%
@@ -67,7 +67,7 @@ Les types d’éléments de données disponibles dans le transfert d’événeme
 
 Bien que les éléments de données eux-mêmes soient créés et configurés de la même manière dans le transfert d’événement que pour les balises, il existe d’importantes différences de syntaxe concernant la manière dont ils référencent des données à partir de Platform Edge Network.
 
-#### Référencement des données de Platform Edge Network {#edge}
+#### Référencement des données de Platform Edge Network {#data-element-path}
 
 Pour référencer des données à partir de Platform Edge Network, vous devez créer un élément de données qui fournit un chemin d’accès valide à ces données. Lors de la création de l’élément de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Core]** comme extension et **[!UICONTROL Chemin]** comme type.
 

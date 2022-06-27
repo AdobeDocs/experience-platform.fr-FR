@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 881d9602ff3462afb5df30f8446113a372650c8d
+source-git-commit: 2cabd8d8fa44f942f9bfce914fd2910a4ddbb973
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '396'
 ht-degree: 97%
 
 ---
@@ -107,6 +107,9 @@ ht-degree: 97%
       * Adobe Target v2 {#target-v2}
          * [Présentation](./extensions/web/target-v2/overview.md)
          * [Notes de mise à jour](./extensions/web/target-v2/release-notes.md)
+      * [!DNL BrightCove] suivi vidéo {#brightcove}
+         * [Présentation](./extensions/web/brightcove/overview.md)
+         * [Notes de mise à jour](./extensions/web/brightcove/release-notes.md)
       * Plugins Analytics courants {#plugins}
          * [Présentation](./extensions/web/plugins/overview.md)
          * [Notes de mise à jour](./extensions/web/plugins/release-notes.md)
@@ -114,12 +117,11 @@ ht-degree: 97%
          * [Présentation](./extensions/web/core/overview.md)
          * [Transfert d’événement](./extensions/web/core/event-forwarding.md)
          * [Notes de mise à jour](./extensions/web/core/release-notes.md)
+      * [!DNL Mailchimp] Edge {#mailchimp-edge}
+         * [Aperçu](./extensions/web/mailchimp/overview.md)
       * [!DNL Marketo Munchkin] {#marketo}
          * [Présentation](./extensions/web/marketo/overview.md)
          * [Notes de mise à jour](./extensions/web/marketo/release-notes.md)
-      * [!DNL BrightCove] suivi vidéo {#brightcove}
-         * [Présentation](./extensions/web/brightcove/overview.md)
-         * [Notes de mise à jour](./extensions/web/brightcove/release-notes.md)
       * Couche de données Google {#google-data-layer}
          * [Présentation](./extensions/web/google-data-layer/overview.md)
          * [Notes de mise à jour](./extensions/web/google-data-layer/release-notes.md)
