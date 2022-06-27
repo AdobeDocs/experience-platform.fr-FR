@@ -2,10 +2,10 @@
 description: Cette page traite du format du message et de la transformation des profils dans les données exportées de Adobe Experience Platform vers les destinations.
 title: Format des messages
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 6600549cf421e2adc360b75e0b463992d549b85e
+source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
 workflow-type: tm+mt
-source-wordcount: '2266'
-ht-degree: 3%
+source-wordcount: '2272'
+ht-degree: 4%
 
 ---
 
@@ -83,6 +83,8 @@ Au niveau du format du message, les transformations correspondantes sont les sui
 | `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Structure de profil dans Experience Platform {#profile-structure}
 
@@ -1194,6 +1196,8 @@ Le tableau ci-dessous fournit des descriptions des fonctions dans les exemples c
 | `destination.segmentNames` | Mappage des noms de segment dans l’espace de noms Adobe Experience Platform aux noms de segment dans le système du partenaire. |
 | `addedSegments(listOfSegments)` | Renvoie uniquement les segments ayant un état `realized` ou `existing`. |
 | `removedSegments(listOfSegments)` | Renvoie uniquement les segments ayant un état `exited`. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Étapes suivantes {#next-steps}
 
