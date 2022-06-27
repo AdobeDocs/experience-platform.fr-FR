@@ -1,13 +1,13 @@
 ---
-title: API du serveur réseau Edge
-description: Découvrez ce qu’est l’API Edge Network Server et comment l’utiliser.
+title: Présentation de l’API du serveur réseau Edge
+description: Découvrez ce qu’est l’API du serveur réseau Edge et comment l’utiliser.
 seo-description: Learn what the Edge Network Server API is and how you can use it.
 keywords: collecte de données;collection;réseau Adobe Experience Platform Edge;api serveur;
 exl-id: 46bd8798-d7f9-405b-9ca8-856ad4aa688c
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 0%
+source-wordcount: '271'
+ht-degree: 5%
 
 ---
 

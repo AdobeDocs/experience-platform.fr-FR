@@ -1,12 +1,10 @@
 ---
 title: Collecte de données non interactive
-description: Découvrez comment l’API Adobe Experience Platform Edge Network Server effectue une collecte de données non interactive
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API performs non-interactive data collection
-keywords: collecte de données;collection;réseau adobe experience platform edge;api;collecte de données non interactives
+description: Découvrez comment l’API Adobe Experience Platform Edge Network Server effectue la collecte de données non interactives.
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '217'
 ht-degree: 5%
 
 ---
@@ -20,17 +18,6 @@ Les points de terminaison de collecte de données d’événement non interactif
 L’envoi d’événements par lots est recommandé lorsque les événements d’utilisateur final sont placés en file d’attente localement pendant une courte période (par exemple, lorsqu’il n’y a aucune connexion réseau).
 
 Les événements de lot ne doivent pas nécessairement appartenir au même utilisateur final, ce qui signifie que les événements peuvent contenir différentes identités dans leur `identityMap` .
-
-
-<!-- However, when an `ECID` identity is sent via a cookie or metadata (in Edge Network accepted format), the Edge Network will read it and associate it with each event in the batch.
-
-Each event should include the corresponding `XDM` content that needs to be collected.
-
->[!NOTE]
->
->[Experience Edge Identity Protocol](visitor-identification.md#experience-edge-identity-protocol) (`ECID` generation) is not applicable for data collection requests, meaning that events sent to this API should already have at least one identity associated to them. For server datastreams (calls to `server.adobedc.net`), the API requires that each event contains an identity **explicitly set as primary**. For device datastreams, the Edge Network will attempt to set the `ECID` as primary, when it is present, and no other primary identity is explicitly set.
-
--->
 
 ## Exemple d’appel API non interactif {#example}
 
