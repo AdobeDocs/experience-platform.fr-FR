@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination de diffusion en continu à l’aide de Destination SDK.
 title: Utiliser Destination SDK pour configurer une destination de diffusion en continu
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 100%
+source-wordcount: '752'
+ht-degree: 91%
 
 ---
 
@@ -174,8 +174,16 @@ Dans le cadre du processus de test de votre destination, vous devez utiliser l�
 
 ## Étape 7 : publier votre destination {#publish-destination}
 
+>[!NOTE]
+>
+>Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
+
 Une fois votre destination configurée et testée, utilisez l’[API de publication de destination](./destination-publish-api.md) afin d’envoyer votre configuration à Adobe pour révision.
 
 ## Étape 8 : documenter votre destination {#document-destination}
+
+>[!NOTE]
+>
+>Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
 
 Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une [intégration personnalisée](./overview.md#productized-custom-integrations), utilisez le [processus de documentation en libre-service](./docs-framework/documentation-instructions.md) pour créer une page de documentation du produit pour votre destination dans le [Catalogue des destinations Experience Platform](/help/destinations/catalog/overview.md).

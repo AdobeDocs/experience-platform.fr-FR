@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination basée sur des fichiers à l’aide de Destination SDK.
 title: (Version Beta) Utilisez Destination SDK pour configurer une destination basée sur des fichiers.
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 77c80c391ef6677f95af81ef15272380687e6789
+source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 99%
+source-wordcount: '544'
+ht-degree: 87%
 
 ---
 
@@ -280,8 +280,16 @@ As part of the process to test your destination, you must use the Experience Pla
 
 ## Étape 5 : publier la destination {#publish-destination}
 
+>[!NOTE]
+>
+>Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
+
 Une fois la destination configurée et testée, utilisez l’[API de publication de destinations](./destination-publish-api.md) pour envoyer votre configuration à Adobe pour révision.
 
 ## Étape 6 : documenter la destination {#document-destination}
+
+>[!NOTE]
+>
+>Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
 
 Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une [intégration personnalisée](./overview.md#productized-custom-integrations), utilisez le [processus de documentation en libre-service](./docs-framework/documentation-instructions.md) pour créer une page de documentation du produit pour votre destination dans le [Catalogue des destinations Experience Platform](/help/destinations/catalog/overview.md).
