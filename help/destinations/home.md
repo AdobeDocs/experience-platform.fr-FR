@@ -1,22 +1,20 @@
 ---
 keywords: destinations;adobe experience platform;plateforme;présentation des destinations;activer les données;activer;activer
 title: Présentation des destinations
-seo-title: Destinations overview
-description: Découvrez comment activer les données Adobe Experience Platform vers des destinations pour les campagnes marketing cross-canal, les e-mails, la publicité ciblée, etc.
-seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: c93e23d334ffe3cbee049f120a7b6c5e7e69d0ea
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 42%
+source-wordcount: '489'
+ht-degree: 47%
 
 ---
 
-# Présentation du [!DNL Destinations] {#overview}
+# Présentation de [!DNL Destinations] {#overview}
 
 ![Bannière de présentation des destinations](./assets/overview/destinations-overview-banner.png)
 
-Les **[!DNL Destinations]** sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+Les **[!DNL Destinations]** sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
 ## Destinations et sources {#destinations-and-sources}
 
@@ -64,10 +62,10 @@ Pour plus d’informations sur la sélection d’actions marketing dans le proce
 * [Destinations publicitaires - Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
 * [Destinations de stockage dans le cloud](./catalog/cloud-storage/overview.md)
 * [Destinations de marketing par e-mail ](./catalog/email-marketing/overview.md)
-* [Destinations sociales](./catalog/social/overview.md)
+* [Destinations sociales ](./catalog/social/overview.md)
 
 Pour plus d’informations sur les violations de stratégie de données dans le processus d’activation des segments, voir l’étape Révision dans les guides suivants :
 
-* [Activation des données d’audience vers des destinations d’exportation de segments de diffusion](./ui/activate-segment-streaming-destinations.md#review)
-* [Activation des données d’audience vers des destinations d’exportation de profils en continu](./ui/activate-streaming-profile-destinations.md#review)
-* [Activation des données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md#review)
+* [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](./ui/activate-segment-streaming-destinations.md#review)
+* [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](./ui/activate-streaming-profile-destinations.md#review)
+* [Activer les données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md#review)

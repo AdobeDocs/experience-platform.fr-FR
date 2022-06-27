@@ -2,11 +2,9 @@
 keywords: activation des destinations de requête de profil;activation des données;destinations de requête de profil
 title: Activer les données d’audience vers les destinations de requête de profil
 type: Tutorial
-seo-title: Activate audience data to profile request destinations
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de requête de profil.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 56%

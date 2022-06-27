@@ -2,9 +2,8 @@
 keywords: destinations;destination;page des détails des destinations;page des détails des destinations
 title: Afficher les détails de la destination
 description: 'La page de détails d’une destination individuelle fournit un aperçu des détails de destination. Les détails de la destination incluent le nom de destination, l’identifiant, les segments mappés à la destination et les contrôles permettant de modifier l’activation et d’activer et désactiver le flux de données. '
-seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9928241235cac97b9b9a050256a22f9659e4092f
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 7%
@@ -56,7 +55,7 @@ Le tableau suivant couvre les contrôles et les détails fournis par le rail de 
 | [!UICONTROL Nom de la destination] | Ce champ peut être modifié afin de mettre à jour le nom de la destination. |
 | [!UICONTROL Description] | Ce champ peut être modifié pour mettre à jour ou ajouter une description facultative à la destination. |
 | [!UICONTROL Destination] | Représente la plateforme de destination vers laquelle les audiences sont envoyées. Voir [destinations](../catalog/overview.md) pour plus d’informations. |
-| [!UICONTROL État] | Indique si la destination est activée ou désactivée. |
+| [!UICONTROL Statut] | Indique si la destination est activée ou désactivée. |
 | [!UICONTROL Actions marketing] | Indique les actions marketing (cas d’utilisation) qui s’appliquent à cette destination à des fins de gouvernance des données. |
 | [!UICONTROL Catégorie] | Indique le type de destination. Voir [destinations](../catalog/overview.md) pour plus d’informations. |
 | [!UICONTROL Type de connexion] | Indique le formulaire par lequel vos audiences sont envoyées vers la destination. Les valeurs possibles sont les suivantes : [!UICONTROL Cookie] et [!UICONTROL Basé sur les profils]. |

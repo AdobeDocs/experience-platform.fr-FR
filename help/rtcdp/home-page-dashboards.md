@@ -1,11 +1,9 @@
 ---
 keywords: présentation des mesures ; Présentation des mesures rtcdp
 title: Page d’accueil et tableaux de bord de la plateforme de données client en temps réel
-seo-title: Real-time Customer Data Platform Home Page and Dashboards
-description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
-seo-description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform
+description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 74%
@@ -14,7 +12,7 @@ ht-degree: 74%
 
 # [!DNL Real-time Customer Data Platform] page d’accueil et tableaux de bord
 
-La page d’accueil de la plateforme de données clients en temps réel (CDP), qui comprend un tableau de bord de mesures, s’affiche lorsque vous vous connectez à la plateforme de données clients en temps réel.
+La page d’accueil de Real-time Customer Data Platform (plateforme de données clients en temps réel), qui comprend un tableau de bord de mesures, s’affiche lorsque vous vous connectez à la plateforme de données clients en temps réel.
 
 La page d’accueil n’est qu’un des emplacements où les cartes de mesures apparaissent. La plateforme CDP en temps réel fournit des cartes de mesure tout au long de votre expérience. Ces mesures indiquent les données, les profils et les audiences de segments du système.
 
@@ -43,13 +41,13 @@ D’autres mesures, par exemple pour les profils et les segments, sont disponibl
 
 ### Jeux de données
 
-Le compteur **[!UICONTROL Jeux de données]** indique le nombre de jeux de données dans le système et la quantité de données dans [!DNL Platform]. Ce compteur est mis à jour lors de la création d’un jeu de données.
+Le **[!UICONTROL Jeux de données]** Le compteur affiche le nombre de jeux de données dans le système et la quantité de données dans [!DNL Platform]. Ce compteur est mis à jour lors de la création d’un jeu de données.
 
 Pour plus d’informations sur les jeux de données, consultez la [présentation des jeux de données](../catalog/datasets/overview.md).
 
 ### Profils
 
-Le **[!UICONTROL nombre de profils]** indique le nombre total de personnes avec des profils dans la balise [!DNL Real-time Customer Profile]. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
+Le **[!UICONTROL Profils]** count affiche le nombre total de personnes avec des profils dans la variable [!DNL Real-time Customer Profile]. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
 
 Ce compte utilise la [stratégie de fusion](profile/merge-policies.md) par défaut telle que définie dans la configuration de la stratégie de fusion du profil unifié.
 
@@ -107,7 +105,7 @@ The number of failed profile records is updated hourly. -->
 
 La carte **[!UICONTROL Jeux de données récents]** montre les cinq jeux de données créés le plus récemment dans l’entreprise. Cette liste est mise à jour lors de la création d’un jeu de données.
 
-Sélectionnez un jeu de données pour afficher les détails de cet élément ou **[!UICONTROL Afficher tout]** pour afficher la liste des jeux de données. À partir de là, vous pouvez sélectionner une source spécifique pour plus de détails.
+Sélectionnez un jeu de données pour afficher les détails de cet élément, ou **[!UICONTROL Afficher tout]** pour afficher la liste des jeux de données. À partir de là, vous pouvez sélectionner une source spécifique pour plus de détails.
 
 Pour plus d’informations sur les jeux de données, consultez la [présentation des jeux de données](../catalog/datasets/overview.md).
 
@@ -115,7 +113,7 @@ Pour plus d’informations sur les jeux de données, consultez la [présentation
 
 La carte de mesure **[!UICONTROL Sources récentes]** montre les cinq sources créées le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’une source.
 
-Sélectionnez une source pour afficher les détails de cet élément ou **[!UICONTROL Afficher tout]** pour afficher la liste des sources. À partir de là, vous pouvez sélectionner une source spécifique pour plus de détails.
+Sélectionnez une source pour afficher les détails de cet élément, ou **[!UICONTROL Afficher tout]** pour afficher la liste des sources. À partir de là, vous pouvez sélectionner une source spécifique pour plus de détails.
 
 Pour plus d’informations sur les sources, consultez [Présentation des sources](sources/sources-overview.md).
 
@@ -123,7 +121,7 @@ Pour plus d’informations sur les sources, consultez [Présentation des sources
 
 La carte de mesure **[!UICONTROL Segments récents]** montre les cinq segments créés le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’un segment.
 
-Sélectionnez un segment pour afficher les détails de cet élément ou **[!UICONTROL Afficher tout]** pour afficher les informations sur d’autres segments.
+Sélectionnez un segment pour afficher les détails de cet élément, ou **[!UICONTROL Afficher tout]** pour afficher des informations sur d’autres segments.
 
 Pour plus d’informations sur les segments, consultez [Présentation de Segmentation Service](segmentation/segmentation-overview.md).
 
@@ -131,6 +129,6 @@ Pour plus d’informations sur les segments, consultez [Présentation de Segment
 
 La carte de mesure **[!UICONTROL Destinations récentes]** montre les cinq destinations créées le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’une destination.
 
-Sélectionnez une destination pour afficher les détails de cet élément ou **[!UICONTROL Afficher tout]** pour afficher les informations sur d’autres destinations.
+Sélectionnez une destination pour afficher les détails de cet élément, ou **[!UICONTROL Afficher tout]** pour afficher des informations sur d’autres destinations.
 
 Pour plus d’informations sur les destinations, consultez [Présentation des destinations](destinations/overview.md).
