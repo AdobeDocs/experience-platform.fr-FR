@@ -5,19 +5,19 @@ title: Présentation du connecteur source Azure Event Hub
 topic-legacy: overview
 description: Découvrez comment connecter Azure Event Hubs à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: b64054859cbd88687dd05b0c65e51d0b2ef2a7b3
+source-git-commit: 9415b4add3784cc6f81794060464b7ff63497a96
 workflow-type: tm+mt
 source-wordcount: '534'
-ht-degree: 4%
+ht-degree: 19%
 
 ---
 
 
-# [!DNL Azure Event Hubs] connector
+# Connecteur [!DNL Azure Event Hubs]
 
 Adobe Experience Platform fournit une connectivité native pour les fournisseurs cloud tels qu’AWS, [!DNL Google Cloud Platform], et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans Platform.
 
-Les sources de stockage dans le cloud peuvent introduire vos propres données dans Platform sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le workflow Sources . Platform vous permet d’importer des données depuis [!DNL Event Hubs] en temps réel.
+Les sources de stockage dans le cloud peuvent introduire vos propres données dans Platform sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. Platform vous permet d’importer des données depuis [!DNL Event Hubs] en temps réel.
 
 ## Mise à l’échelle avec [!DNL Event Hubs]
 
@@ -59,7 +59,7 @@ Vous pouvez configurer un réseau virtuel pour vous connecter. [!DNL Event Hubs]
 
 Consultez la liste ci-dessous pour différentes régions des sous-réseaux Platform :
 
-### VA7 : Amérique du Nord
+### VA7 : Amérique du Nord
 
 ```json
 {
@@ -78,7 +78,7 @@ Consultez la liste ci-dessous pour différentes régions des sous-réseaux Platf
 }
 ```
 
-### NLD2 : Europe
+### NLD2 : Europe
 
 ```json
 {
@@ -87,8 +87,8 @@ Consultez la liste ci-dessous pour différentes régions des sous-réseaux Platf
     "virtualNetworkRules": [
       {
         "subnet": {
-          "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_va7_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
-        },
+            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
+        }, 
         "ignoreMissingVnetServiceEndpoint": true
       },
     ],
@@ -97,7 +97,7 @@ Consultez la liste ci-dessous pour différentes régions des sous-réseaux Platf
 }
 ```
 
-### AUS5 : Australie
+### AUS5 : Australie
 
 ```json
 {
@@ -118,16 +118,16 @@ Consultez la liste ci-dessous pour différentes régions des sous-réseaux Platf
 
 Voir ce qui suit : [[!DNL Event Hubs] document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) pour plus d’informations sur les ensembles de règles réseau.
 
-## Connexion [!DNL Event Hubs] vers Platform
+## Connecter [!DNL Event Hubs] à Platform
 
-La documentation ci-dessous fournit des informations sur la connexion. [!DNL Event Hubs] vers Platform à l’aide d’API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL Event Hubs] à Platform à l’aide d’API ou de l’interface utilisateur :
 
-### Utilisation des API
+### Utiliser les API
 
 * [Création d’une connexion source Event Hubs à l’aide de l’API Flow Service](../../tutorials/api/create/cloud-storage/eventhub.md)
-* [Collecte de données en continu à l’aide de l’API Flow Service](../../tutorials/api/collect/streaming.md)
+* [Collecter des données en continu à l’aide de l’API Flow Service](../../tutorials/api/collect/streaming.md)
 
-### Utilisation de l’interface utilisateur
+### Utiliser l’interface utilisateur
 
 * [Création d’une connexion source aux centres d’événements dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/eventhub.md)
-* [Configuration d’un flux de données pour une connexion de stockage dans le cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+* [Configurer un flux de données pour une connexion de stockage dans le cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
