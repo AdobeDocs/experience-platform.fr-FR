@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur de la segmentation par flux
 topic-legacy: ui guide
 description: La segmentation par flux sur Adobe Experience Platform vous permet d’effectuer une segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation par flux, la qualification de segment se produit désormais lorsque les données entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées au fur et à mesure que les données sont transmises à Platform, ce qui signifie que l’adhésion au segment sera conservée à jour sans exécuter les tâches de segmentation planifiées.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 0e08b034eb9193dda72693cf842e3cd78cf44694
+source-git-commit: 4022eb62e791282bb519f9604b6edf903d69239f
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Segmentation par flux sur [!DNL Adobe Experience Platform] permet aux clients d�
 
 >[!NOTE]
 >
->La segmentation par flux fonctionne sur toutes les données ingérées à l’aide d’une source de diffusion en continu. Les segments ingérés à l’aide d’une source par lots seront évalués de nuit, même s’ils sont qualifiés pour la segmentation par flux.
+>La segmentation par flux fonctionne sur toutes les données ingérées à l’aide d’une source de diffusion en continu. Les données ingérées à l’aide d’une source par lots seront évaluées de nuit, même si elles sont admissibles pour la segmentation par flux.
 >
 >En outre, les segments évalués avec la segmentation par flux peuvent dériver entre l’adhésion idéale et l’adhésion réelle si le segment est basé sur un autre segment évalué à l’aide de la segmentation par lots. Si, par exemple, le segment A est basé sur le segment B et le segment B est évalué à l’aide de la segmentation par lots, puisque le segment B n’est mis à jour que toutes les 24 heures, le segment A s’éloigne davantage des données réelles jusqu’à ce qu’il se resynchronise avec la mise à jour du segment B.
 
@@ -95,13 +95,13 @@ Pour en savoir plus sur l’utilisation de l’interface utilisateur de Adobe Ex
 
 La section suivante répertorie les questions fréquentes sur la segmentation par flux :
 
-### La segmentation par flux est-elle &quot;non-qualification&quot; également effectuée en temps réel ?
+### La segmentation par flux &quot;non-qualification&quot; se produit-elle également en temps réel ?
 
 Pour la plupart des instances, l’inqualification de la segmentation par flux se produit en temps réel. Toutefois, les segments en flux continu qui utilisent des segments le font **not** non admissible en temps réel, mais non admissible après 24 heures.
 
 ### Sur quelles données la segmentation par flux fonctionne-t-elle ?
 
-La segmentation par flux fonctionne sur toutes les données ingérées à l’aide d’une source de diffusion en continu. Les segments ingérés à l’aide d’une source par lots seront évalués de nuit, même s’ils sont qualifiés pour la segmentation par flux.
+La segmentation par flux fonctionne sur toutes les données ingérées à l’aide d’une source de diffusion en continu. Les segments ingérés à l’aide d’une source par lots seront évalués de nuit, même s’ils sont qualifiés pour la segmentation par flux. Les événements diffusés dans le système avec un horodatage de plus de 24 heures seront traités dans la tâche par lots suivante.
 
 ### Comment les segments sont-ils définis comme segmentation par lots ou par flux ?
 
