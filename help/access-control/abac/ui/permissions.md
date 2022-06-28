@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Gestion des autorisations de rôle du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la configuration des autorisations pour un rôle dans l’interface Autorisations de Adobe Experience Cloud.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée pour les clients de santé basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform une fois qu’elle sera entièrement publiée.
+
+>[!IMPORTANT]
+>
+>Le contrôle d’accès utilise un ID utilisateur (un ID unique interne attribué à un utilisateur) pour accorder des autorisations. Lorsqu’une organisation est migrée d’Adobe ID vers Business ID, toutes les autorisations définies pour ses utilisateurs seront perdues car l’ID utilisateur change et le contrôle d’accès utilisera l’ID utilisateur nouvellement généré. Si votre entreprise est migrée vers un identifiant professionnel, contactez votre représentant d’Adobe pour migrer votre identifiant utilisateur d’Adobe ID vers un identifiant professionnel.
 
 Les autorisations sont la zone de l’Experience Cloud dans laquelle les administrateurs peuvent définir des rôles utilisateur et des stratégies d’accès afin de gérer les autorisations d’accès pour les fonctionnalités et les objets au sein d’une application de produit.
 
@@ -30,7 +34,7 @@ Sélectionnez l’icône d’entonnoir (![Icône Filtrer](../../images/icon.png)
 
 Les filtres suivants sont disponibles pour les rôles dans l’interface utilisateur :
 
-| Filtrer | Description |
+| Filtre | Description |
 | --- | --- |
 | [!UICONTROL Créé entre] | Sélectionnez une date de début et/ou une date de fin pour définir une période en fonction de laquelle filtrer les résultats. |
 | [!UICONTROL Créé par] | Filtrez par créateur de rôles en sélectionnant un utilisateur dans la liste déroulante. |
