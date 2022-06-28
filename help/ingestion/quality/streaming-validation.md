@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: 'L’ingestion par flux vous permet de charger vos données vers Adobe Experience Platform à l’aide de points de terminaison en continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.'
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 958bd461be0eb3ed59b44759407bed40a3edc00a
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 85%
+source-wordcount: '917'
+ht-degree: 83%
 
 ---
 
@@ -59,6 +59,10 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 - Format
 
 ## Validation synchrone
+
+>[!WARNING]
+>
+>Le `syncValidation` Le paramètre de requête n’est disponible que pour le point de fin de message unique et ne peut pas être utilisé pour le point de fin de lot.
 
 La validation synchrone est une méthode de validation qui fournit des commentaires immédiats sur les raisons de l’échec d’une ingestion. Toutefois, en cas d’échec, les enregistrements dont la validation échoue sont ignorés et le système empêche leur envoi en aval. Par conséquent, la validation synchrone ne doit être utilisée que pendant le processus de développement. Lors d’une validation synchrone, les appelants sont informés du résultat de la validation et en cas d’échec, des raisons de cet échec.
 
