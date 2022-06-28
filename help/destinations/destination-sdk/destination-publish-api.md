@@ -2,14 +2,18 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API « authoring/destinations/publish ».
 title: Opérations de l’API du point d’entrée de publication des destinations
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1fb0fde2054528679235268ae96e3b7e78de80ef
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 72%
+source-wordcount: '779'
+ht-degree: 67%
 
 ---
 
 # Opérations de l’API du point d’entrée de publication des destinations {#publish-destination}
+
+>[!IMPORTANT]
+>
+>Vous ne devez utiliser ce point de terminaison d’API que si vous envoyez une destination productisée (publique), à utiliser par d’autres clients Experience Platform. Si vous créez une destination privée pour votre propre utilisation, vous n’avez pas besoin d’envoyer officiellement la destination à l’aide de l’API de publication.
 
 >[!IMPORTANT]
 >
@@ -22,8 +26,9 @@ Une fois votre destination configurée et testée, vous pouvez l’envoyer à Ad
 Utilisez le point d’entrée de lʼAPI de publication des destinations pour envoyer une demande de publication dans les cas suivants :
 
 * En tant que partenaire du Destination SDK, vous souhaitez que votre destination personnalisée soit disponible dans toutes les organisations Experience Platform, afin que tous les clients Experience Platform puissent l’utiliser ;
-* Vous souhaitez que votre destination personnalisée soit disponible dans toutes les sandbox de votre organisation Experience Platform.
 * Vous faites *toutes les mises à jour* à vos configurations. Les mises à jour de configuration ne sont répercutées dans la destination qu’après l’envoi d’une nouvelle demande de publication, qui est approuvée par l’équipe Experience Platform.
+
+<!-- * You want to make your custom destination available in your own Experience Platform organization, across all sandboxes. -->
 
 ## Prise en main des opérations dʼAPI de publication de destinations {#get-started}
 
