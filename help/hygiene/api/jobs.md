@@ -1,20 +1,25 @@
 ---
 title: Suppression d’enregistrements de consommateurs à l’aide de l’API Data Hygiene
-description: Découvrez comment corriger ou supprimer par programme les données personnelles de vos clients stockées dans Adobe Experience Platform.
+description: Découvrez comment corriger ou supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 9057d424d63217a3cef7ad2237a65700d9159323
+exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
+source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 92%
+source-wordcount: '505'
+ht-degree: 85%
 
 ---
 
 # Suppression des enregistrements de consommateurs à l’aide de l’API Data Hygiene
 
+>[!IMPORTANT]
+>
+>L’API Data Hygiene est actuellement en version bêta. Les fonctionnalités décrites dans ce document peuvent faire l’objet de modifications.
+
 L’API Data Hygiene vous permet de corriger ou de supprimer par programme les données personnelles de vos clients stockées dans Adobe Experience Platform.
 
-Vous pouvez accéder à l’API via le chemin racine suivant : `https://platform.adobe.io/data/core/hygiene/`.
+Vous pouvez accéder à l’API par le même chemin racine que la variable [API Privacy Service](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
 
 ## Prise en main
 
@@ -32,7 +37,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 * `Content-Type: application/json`
 
-### Lecture d&#39;exemples d&#39;appels API
+### Lecture d’exemples d’appels API
 
 Ce document fournit un exemple d’appel API pour illustrer la manière dont vous devez formater vos requêtes. Pour en savoir plus sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section relative à la [lecture d’exemples d’appels API](../../landing/api-guide.md#sample-api) dans le guide de prise en main des API d’Experience Platform.
 
@@ -52,7 +57,7 @@ La structure de la payload de la requête est similaire à celle d’une [requê
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/core/hygiene/jobs \
+  https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
