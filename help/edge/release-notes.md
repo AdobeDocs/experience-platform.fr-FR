@@ -3,9 +3,9 @@ title: Notes de mise à jour du SDK web Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK Web Adobe Experience Platform.
 keywords: SDK Web Adobe Experience Platform;SDK Web Platform;SDK Web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
+source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1227'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,11 @@ ht-degree: 2%
 
 Ce document couvre les notes de mise à jour du SDK Web de Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK Web, reportez-vous à la section [Notes de mise à jour de l’extension de balise SDK Web](extension/web-sdk-ext-release-notes.md).
+
+## Version 2.12.0 - 29 juin 2022
+
+* Modifiez les requêtes sur le réseau Edge pour utiliser la variable `cluster` indicateur d’emplacement du cookie dans le cadre de l’URL. Cela permet de s’assurer que les utilisateurs qui changent de position (par exemple, via un VPN ou qui conduisent avec des périphériques mobiles, etc.) en milieu de session atteignent le même niveau et disposent du même profil de personnalisation.
+* Restreindre les fonctions configurées dans la réponse de commande getLibraryInfo .
 
 ## Version 2.11.0 - 13 juin 2022
 
