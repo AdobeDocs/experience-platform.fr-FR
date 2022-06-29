@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur de la segmentation par flux
 topic-legacy: ui guide
 description: La segmentation par flux sur Adobe Experience Platform vous permet d’effectuer une segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation par flux, la qualification de segment se produit désormais lorsque les données entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées au fur et à mesure que les données sont transmises à Platform, ce qui signifie que l’adhésion au segment sera conservée à jour sans exécuter les tâches de segmentation planifiées.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 4022eb62e791282bb519f9604b6edf903d69239f
+source-git-commit: f6825869805733d2c3838f0cad0bca0f4baf7f16
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -67,9 +67,9 @@ Après avoir créé un segment activé dans le flux, vous pouvez afficher les d�
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Plus précisément, les détails sur la variable **[!UICONTROL taille totale de l&#39;audience qualifiée]** s’affichent. Le **[!UICONTROL Taille totale de l’audience qualifiée]** affiche le nombre total d’audiences qualifiées de la dernière exécution de la tâche de segmentation terminée. Si une tâche de segmentation n’a pas été effectuée au cours des dernières 24 heures, le nombre d’audiences sera prélevé dans une estimation à la place.
+Plus précisément, la variable **[!UICONTROL Total qualifié]** mesure s’affiche, qui indique le nombre total d’audiences qualifiées, en fonction des évaluations de lot et de diffusion en continu pour ce segment.
 
-Un graphique linéaire se trouve en dessous du nombre de segments qui ont été qualifiés et disqualifiés au cours des dernières 24 heures. La liste déroulante peut être ajustée afin d’afficher les dernières 24 heures, la semaine dernière ou les 30 derniers jours.
+Un graphique linéaire se trouve en dessous, qui indique le nombre de nouvelles audiences qui ont été mises à jour au cours des dernières 24 heures à l’aide de la méthode d’évaluation par flux. La liste déroulante peut être ajustée afin d’afficher les dernières 24 heures, la semaine dernière ou les 30 derniers jours. Le **[!UICONTROL Nouvelle audience mise à jour]** est basée sur le changement de la taille de l’audience au cours de la période sélectionnée, tel qu’évalué par la segmentation par flux. Cette mesure n’inclut pas l’audience totale qualifiée issue de l’évaluation par lots de segments quotidiens.
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Un graphique linéaire se trouve en dessous du nombre de segments qui ont été 
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
-Vous trouverez des informations supplémentaires sur la dernière évaluation de segment en sélectionnant la bulle d’informations.
+Vous trouverez des informations supplémentaires sur l’évaluation du dernier segment en sélectionnant la bulle d’informations en regard de **[!UICONTROL Total qualifié]**.
 
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
