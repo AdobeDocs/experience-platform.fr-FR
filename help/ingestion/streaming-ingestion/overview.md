@@ -5,9 +5,9 @@ title: Présentation de l’ingestion par flux
 topic-legacy: overview
 description: L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données de périphériques côté client et côté serveur vers Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 968f2635330fb0fa8a55b17b30bd8557f7d70335
+source-git-commit: 3ec4bfcb185459ec644ce1826e2a970cb6294538
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '348'
 ht-degree: 17%
 
 ---
@@ -40,7 +40,7 @@ Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL 
 
 | Destination | Latence attendue |
 | --------- | ---------------- |
-| Real-time Customer Profile | &lt; 15 minutes, au 95e percentile |
+| Real-time Customer Profile | &lt; 1 minute |
 | Lac de données | &lt; 60 minutes |
 
 ## Instructions de requête par seconde (RPS) sur l’ingestion par flux
