@@ -2,7 +2,7 @@
 title: Notes de mise à jour de Adobe Experience Platform - Février 2022
 description: Notes de mise à jour de février 2022 pour Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 3a031c84138d36a5e23b2f80a44ada06e1a52184
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 53%
@@ -49,7 +49,7 @@ Platform fournit un ensemble de technologies qui vous permettent de collecter de
 | Préparer des données pour la collecte de données | Si vous utilisez le SDK web Adobe Experience Platform, vous pouvez désormais réutiliser des fonctionnalités de préparation des données pour mapper vos données au modèle de données d’expérience (XDM) côté serveur. Pour plus d’informations, consultez la section [Préparer des données pour la collecte de données](../../edge/datastreams/data-prep.md) dans le guide des flux de données. |
 | Identifiants d’appareils propriétaires | Vous pouvez désormais envoyer vos propres identifiants d’appareil au réseau Adobe Experience Platform Edge lors de la collecte de données client à l’aide du SDK web Platform. Vous pouvez ainsi contourner les restrictions récentes imposées par les navigateurs sur la durée de vie des cookies tiers. Pour plus d’informations, consultez le guide des [Identifiants d’appareils propriétaires](../../edge/identity/first-party-device-ids.md). |
 
-Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).
+Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../rtcdp-connections/home.md).
 
 ## [!DNL Destinations] {#destinations}
 

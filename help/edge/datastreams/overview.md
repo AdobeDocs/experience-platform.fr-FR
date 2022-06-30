@@ -3,7 +3,7 @@ title: Présentation des flux de données
 description: Connectez votre intégration SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
 keywords: configuration;flux de données;datastreamId;edge;identifiant de flux de données;Paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;Identifiant de conteneur de synchronisation d’identifiant;Sandbox;Diffusion d’entrée;Jeu de données d’événement;cible;code client;Jeton de propriété;Identifiant d’environnement cible;Destinations de cookie;Destinations d’url;identifiant de suite de rapports de blocs de paramètres Analytics;Préparation des données pour la collecte de données;Préparation des données;Mappeur;Mappeur XDM;Mappeur sur Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: e0c39c20ce536b057367da2854901e33a3f67dd6
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '1774'
 ht-degree: 100%
@@ -179,4 +179,4 @@ La page principale de l’espace de travail [!UICONTROL Flux de données] réapp
 
 ## Étapes suivantes
 
-Ce guide explique comment gérer les flux de données dans l’interface utilisateur de collecte de données. Pour plus d’informations sur l’installation et la configuration du SDK web après la configuration d’un flux de données, consultez le [Guide E2E de collecte de données](../../collection/e2e.md#install).
+Ce guide explique comment gérer les flux de données dans l’interface utilisateur de collecte de données. Pour plus d’informations sur l’installation et la configuration du SDK web après la configuration d’un flux de données, consultez le [Guide E2E de collecte de données](../../rtcdp-connections/e2e.md#install).

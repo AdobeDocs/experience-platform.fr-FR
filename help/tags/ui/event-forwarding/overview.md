@@ -3,7 +3,7 @@ title: Présentation du transfert dʼévénements
 description: Découvrez Adobe Experience Platform, qui vous permet dʼutiliser Platform Edge Network afin dʼexécuter des tâches sans modifier votre implémentation de balises.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: b445e25ebda39e1604b926dc40d8ed52ad2e9b54
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 100%
@@ -20,11 +20,11 @@ Le transfert d’événement dans Adobe Experience Platform vous permet d’en
 
 Ce document présente une vue détaillée du transfert d’événement dans Platform.
 
-![Transfert d’événement dans l’écosystème de collecte de données](../../../collection/images/home/event-forwarding.png)
+![Transfert d’événement dans l’écosystème de collecte de données](../../../rtcdp-connections/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->Pour plus d’informations sur la façon dont le transfert d’événement s’insère dans l’écosystème de collecte de données de Platform, voir la section [présentation de la collecte de données](../../../collection/home.md).
+>Pour plus d’informations sur la façon dont le transfert d’événement s’insère dans l’écosystème de collecte de données de Platform, voir la section [présentation de la collecte de données](../../../rtcdp-connections/home.md).
 
 Le transfert d’événement associé au [SDK Web](../../../edge/home.md) et [SDK Mobile](https://aep-sdks.gitbook.io/docs/) Adobe Experience Platform offre les avantages suivants :
 

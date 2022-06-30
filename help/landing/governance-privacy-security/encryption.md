@@ -3,7 +3,7 @@ title: Chiffrement des données dans Adobe Experience Platform
 topic-legacy: data protection
 description: Découvrez comment les données sont chiffrées en transit et au repos dans Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: ed897f512648797a31c20ba6d4f77aeaea62f200
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 6%
@@ -24,7 +24,7 @@ Toutes les données en transit entre Platform et tout composant externe sont eff
 
 En règle générale, les données sont introduites dans Platform de trois façons :
 
-* [Collecte de données](../../collection/home.md) Les fonctionnalités permettent aux sites web et aux applications mobiles d’envoyer des données à Platform Edge Network pour l’évaluation et la préparation à l’ingestion.
+* [Collecte de données](../../rtcdp-connections/home.md) Les fonctionnalités permettent aux sites web et aux applications mobiles d’envoyer des données à Platform Edge Network pour l’évaluation et la préparation à l’ingestion.
 * [Connecteurs source](../../sources/home.md) diffuser des données directement vers Platform à partir d’applications Adobe Experience Cloud et d’autres sources de données d’entreprise ;
 * Les outils ETL (extraction, transformation, chargement) non Adobes envoient des données à la variable [API d’ingestion par lots](../../ingestion/batch-ingestion/overview.md) pour la consommation.
 
