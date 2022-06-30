@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 'L’ingestion par flux vous permet de charger vos données vers Adobe Experience Platform à l’aide de points de terminaison en continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.'
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: 958bd461be0eb3ed59b44759407bed40a3edc00a
+source-git-commit: ec8eb0e805f7127dd8712fc3fe08057d1d8c10c1
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 83%
@@ -60,13 +60,13 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ## Validation synchrone
 
->[!WARNING]
->
->Le `syncValidation` Le paramètre de requête n’est disponible que pour le point de fin de message unique et ne peut pas être utilisé pour le point de fin de lot.
-
 La validation synchrone est une méthode de validation qui fournit des commentaires immédiats sur les raisons de l’échec d’une ingestion. Toutefois, en cas d’échec, les enregistrements dont la validation échoue sont ignorés et le système empêche leur envoi en aval. Par conséquent, la validation synchrone ne doit être utilisée que pendant le processus de développement. Lors d’une validation synchrone, les appelants sont informés du résultat de la validation et en cas d’échec, des raisons de cet échec.
 
 La validation synchrone n’est pas activée par défaut. Pour l’activer, vous devez transmettre le paramètre de requête facultatif `syncValidation=true` lorsque vous effectuez des appels API. De plus, la validation synchrone est actuellement disponible uniquement si le point de terminaison de votre flux se trouve sur le centre de données VA7.
+
+>[!NOTE]
+>
+>Le `syncValidation` Le paramètre de requête n’est disponible que pour le point de fin de message unique et ne peut pas être utilisé pour le point de fin de lot.
 
 Si un message échoue au cours de la validation synchrone, le message ne sera pas écrit vers la file d’attente de sortie, qui fournit des commentaires immédiats pour les utilisateurs.
 
