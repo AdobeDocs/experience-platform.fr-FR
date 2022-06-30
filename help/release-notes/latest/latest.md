@@ -4,8 +4,8 @@ description: Notes de mise à jour de juin 2022 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 3b0ae00e97eddc342e5a502f4ebf08d2fa90259f
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 47%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

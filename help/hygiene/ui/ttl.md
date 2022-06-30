@@ -4,8 +4,8 @@ description: Découvrez comment planifier une durée de vie (TTL) pour un jeu de
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 94%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +49,7 @@ Une fois que vous avez sélectionné un jeu de données et une date de TTL, sél
 
 Vous êtes invité à confirmer la date à laquelle le jeu de données sera supprimé. Sélectionnez **[!UICONTROL Envoyer]** pour continuer.
 
-Une fois la demande envoyée, un ordre de travail est créé et s’affiche sur l’onglet principal de la [!UICONTROL Hygiène des données] workspace. Ensuite, vous pouvez surveiller le statut de l’ordre de travail lors du traitement de la requête.
+Une fois la requête soumise, un ordre de travail est créé et s’affiche dans l’onglet principal de l’espace de travail [!UICONTROL Hygiène des données]. Ensuite, vous pouvez surveiller le statut de l’ordre de travail lors du traitement de la requête.
 
 ## Modifier ou annuler une TTL
 

@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: c24aa700eb425770266bbee5c187e2e87b15a9ac
 workflow-type: tm+mt
 source-wordcount: '413'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 86%
 >
 >Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Adobe Shield for Healthcare.
 
-Lorsqu’une demande de nettoyage de données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. Un ordre de travail représente un processus d’hygiène des données spécifique, tel qu’une heure d’activation planifiée (TTL) d’un jeu de données, qui inclut son état actuel et d’autres détails connexes.
+Lorsqu’une demande de nettoyage de données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. Un ordre de travail représente un processus spécifique d’hygiène des données, tel qu’une durée de vie planifiée (TTL) d’un jeu de données, qui comprend son statut actuel et d’autres détails connexes.
 
 Ce guide explique comment afficher et gérer les ordres de travail existants dans l’interface utilisateur d’Adobe Experience Platform.
 
@@ -42,7 +42,7 @@ Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](../
 | Filtre | Description |
 | --- | --- |
 | [!UICONTROL Statut] | Filtre basé sur le statut actuel de l’ordre de travail. |
-| [!UICONTROL Date de création] | Filtrez selon la date à laquelle la requête TTL du jeu de données a été effectuée. |
+| [!UICONTROL Date de création] | Filtre basé sur la date à laquelle la demande relative à la durée de vie du jeu de données a été effectuée. |
 | [!UICONTROL Date de suppression] | Filtre basé sur la date de suppression planifiée par la TTL. |
 | [!UICONTROL Date de mise à jour] | Filtre basé sur la date de la dernière mise à jour de la TTL du jeu de données. Les créations et les expirations de TTL sont comptées comme des mises à jour. |
 
@@ -76,4 +76,4 @@ La page de détails d’une TTL de jeu de données fournit des informations sur 
 
 ## Étapes suivantes
 
-Ce guide explique comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur de Platform. Pour plus d’informations sur la création de vos propres ordres de travail, consultez le guide sur [planification de la durée de vie (TTL) d’un jeu de données](./ttl.md).
+Ce guide explique comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur de Platform. Pour plus d’informations sur la création de vos propres ordres de travail, consultez le guide sur la [planification de la durée de vie (TTL) d’un jeu de données](./ttl.md).

@@ -6,7 +6,7 @@ exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: e0c39c20ce536b057367da2854901e33a3f67dd6
 workflow-type: tm+mt
 source-wordcount: '1774'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Sélectionnez **[!UICONTROL Options avancées]** pour afficher des commandes sup
 | [!UICONTROL Géolocalisation] | Détermine si les recherches GPS sont effectuées en fonction de l’adresse IP de l’utilisateur. Le paramètre par défaut **[!UICONTROL Aucun]** désactive les recherches GPS, tandis que le paramètre **[!UICONTROL Ville]** fournit les coordonnées GPS à deux décimales. |
 | [!UICONTROL Cookie interne d’identifiant] | Lorsqu’il est activé, ce paramètre indique à Edge Network de se référer à un cookie spécifié lors de la recherche d’un [identifiant d’appareil interne](../identity/first-party-device-ids.md), plutôt que de rechercher cette valeur dans le mappage d’identité.<br><br>Lors de l’activation de ce paramètre, vous devez indiquer le nom du cookie dans lequel l’identifiant doit être stocké. |
 | [!UICONTROL Synchronisation des identifiants tiers] | Les synchronisations des identifiants peuvent être regroupées en conteneurs afin de permettre l’exécution de différentes synchronisations d’identifiant à différents moments. Lorsqu’il est activé, ce paramètre vous permet de spécifier le conteneur des synchronisations d’identifiant à exécuter pour ce flux de données. |
-| [!UICONTROL Type d’accès] | Définit le type d’authentification que la variable [!DNL Edge Network] accepte pour le flux de données. <ul><li>**[!UICONTROL Authentification mixte]**: Lorsque cette option est sélectionnée, le réseau Edge accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK Web ou [SDK Mobile](https://aep-sdks.gitbook.io/docs/), ainsi que la variable [API du serveur](../../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]**: Lorsque cette option est sélectionnée, le réseau Edge accepte uniquement les demandes authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API du serveur et que vous souhaitez empêcher le traitement des requêtes non authentifiées par la variable [!DNL Edge Network]. </li></ul> |
+| [!UICONTROL Type d’accès] | Définit le type d’authentification que le [!DNL Edge Network] accepte pour le train de données. <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est activée, le réseau Edge accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK web ou le [SDK mobile](https://aep-sdks.gitbook.io/docs/), ainsi que l’[API Server](../../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est activée, le réseau Edge accepte uniquement les demandes authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API Server et que vous souhaitez empêcher le traitement des demandes non authentifiées par le [!DNL Edge Network]. </li></ul> |
 
 Ensuite, si vous configurez le flux de données d’Experience Platform, suivez le tutoriel sur la [Préparation des données pour la collecte de données](./data-prep.md) afin de mapper les données à un schéma d’événement de Platform avant de revenir à ce guide. Sinon, sélectionnez **[!UICONTROL Enregistrer]** et passez à la section suivante.
 

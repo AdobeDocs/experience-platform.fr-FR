@@ -6,21 +6,21 @@ user-guide-description: Gérez les demandes de données des clients afin de resp
 feature: Privacy
 source-git-commit: 6b665648e547eee65deb90465e85aeadbba135b4
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 94%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# Nettoyage de données {#hygiene}
+# Hygiène des données {#hygiene}
 
 * [Présentation du nettoyage de données](./home.md)
 * Interface utilisateur de nettoyage de données {#ui}
    * [Présentation](./ui/overview.md)
    * [Parcourir les ordres de travail existants](./ui/browse.md)
-   * [Gestion de la durée de vie (TTL) des jeux de données](./ui/ttl.md)
+   * [Gérer la durée de vie (TTL) des jeux de données](./ui/ttl.md)
    * [Supprimer des enregistrements de clients](./ui/delete-consumer.md)
 * API Data Hygiene {#api}
    * [Présentation](./api/overview.md)
    * [Durée de vie (TTL) du jeu de données](./api/ttl.md)
-   * [Tâches de suppression des clients](./api/jobs.md)
+   * [Tâches de suppression de consommateurs](./api/jobs.md)

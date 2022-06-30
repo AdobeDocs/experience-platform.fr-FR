@@ -4,8 +4,8 @@ description: Découvrez comment gérer les tâches de nettoyage de données dans
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 91%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ Pour accéder à l’espace de travail, sélectionnez **[!UICONTROL Nettoyage de
 
 ![Image illustrant l’espace de travail [!UICONTROL Nettoyage de données] dans l’interface utilisateur de Platform](../images/ui/overview/home.png).
 
-À partir de là, vous pouvez parcourir les ordres de travail existants et configurer de nouvelles opérations d’hygiène des données. Pour en savoir plus, consultez les sections suivantes de ce guide :
+Ensuite, vous pouvez parcourir les ordres de travail existants et configurer de nouvelles opérations d’hygiène de données. Pour en savoir plus, consultez les sections suivantes de ce guide :
 
 * [Parcourir les ordres de travail existants](./browse.md)
-* [Gestion de la durée de vie (TTL) des jeux de données](./ttl.md)
+* [Gérer la durée de vie (TTL) des jeux de données](./ttl.md)
