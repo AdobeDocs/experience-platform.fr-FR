@@ -2,10 +2,10 @@
 title: Notes de mise à jour de Adobe Experience Platform, juin 2022
 description: Notes de mise à jour de juin 2022 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6eadd71984814548522da32ae6d88a49c3ba704f
+source-git-commit: 3b0ae00e97eddc342e5a502f4ebf08d2fa90259f
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 43%
+source-wordcount: '1036'
+ht-degree: 47%
 
 ---
 
@@ -15,10 +15,25 @@ ht-degree: 43%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [[!DNL Data Collection]](#data-collection)
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
 - [Query Service](#query-service)
 - [Sources](#sources)
+
+## Collecte de données {#data-collection}
+
+Platform fournit un ensemble de technologies qui vous permettent de collecter des données d’expérience client à partir de sources côté client. Vous pouvez ensuite les envoyer au réseau Adobe Experience Platform Edge afin qu’elles soient enrichies, transformées et distribuées vers des destinations Adobe ou autres qu’Adobe.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| [Configuration du type d’accès pour les flux de données](../../edge/datastreams/overview.md#create) | Lors de la création d’un flux de données, vous pouvez désormais sélectionner le type de requêtes que vous souhaitez que le réseau Edge accepte : <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est activée, le réseau Edge accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK web ou le [SDK mobile](https://aep-sdks.gitbook.io/docs/), ainsi que l’[API Server](../../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est activée, le réseau Edge accepte uniquement les demandes authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API Server et que vous souhaitez empêcher le traitement des demandes non authentifiées par le [!DNL Edge Network]. </li></ul> |
+| [Propositions de rendu](../../edge/personalization/rendering-personalization-content.md#applypropositions) dans les applications d’une seule page sans incrémenter de mesures. | Le nouveau `applyPropositions` vous permet de générer ou d’exécuter un tableau de propositions à partir de [!DNL Target] dans des applications d’une seule page, sans incrémenter la variable [!DNL Analytics] et [!DNL Target] mesures. Cela augmente la précision des rapports. |
+| [Partage d’identifiants entre appareils mobiles et domaines](../../edge/identity/id-sharing.md) | Le SDK Web de Adobe Experience Platform prend désormais en charge les fonctionnalités de partage des identifiants visiteur qui vous permettent de diffuser des expériences personnalisées plus précisément, entre les applications mobiles et le contenu web mobile, et entre les domaines. |
+
+Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
