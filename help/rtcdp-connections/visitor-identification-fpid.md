@@ -4,16 +4,14 @@ description: Découvrez comment identifier de manière cohérente les visiteurs 
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
 keywords: réseau Edge;passerelle;api;visiteur;identification;fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
 
 # Identification des visiteurs via FPID
-
-## Présentation
 
 [!DNL First-party IDs] (`FPIDs`) sont des identifiants d’appareil générés, gérés et stockés par les clients. Cela permet aux clients de contrôler l’identification des appareils utilisateur. Par envoi `FPIDs`, le réseau Edge ne génère pas de toute nouvelle `ECID` pour une requête qui n’en contient pas.
 
@@ -35,7 +33,7 @@ Le `ECID` obtenu de cette manière peut être récupéré via un `identity.fetch
 }
 ```
 
-Pour les requêtes qui contiennent à la fois une `FPID` et un `ECID`, la variable `ECID` déjà présent dans la requête est prioritaire par rapport à celui qui peut être généré à partir de `FPID`. Par conséquent, le réseau Edge utilise la variable `ECID` déjà fourni et ne le calculera pas à partir de `FPID`.
+Pour les requêtes qui contiennent à la fois une `FPID` et un `ECID`, la variable `ECID` déjà présent dans la requête est prioritaire par rapport à celui qui peut être généré à partir de `FPID`. En d’autres termes, le réseau Edge utilise la variable `ECID` déjà fourni et la variable `FPID` est ignorée. Une nouvelle `ECID` n’est généré que lorsqu’une `FPID` est fourni seul.
 
 En termes d’identifiants d’appareil, la variable `server` datastreams doit utiliser `FPID` comme identifiant d’appareil. Autres identités (c’est-à-dire `EMAIL`) peut également être fourni dans le corps de la requête, mais le réseau Edge exige qu’une identité Principale soit explicitement fournie. L’identité Principal est l’identité de base dans laquelle les données de profil seront stockées.
 
