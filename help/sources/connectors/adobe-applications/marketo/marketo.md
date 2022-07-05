@@ -5,10 +5,10 @@ title: Connecteur Marketo Engage
 topic-legacy: overview
 description: Ce document présente le connecteur source du Marketo Engage, y compris des informations sur son authentification, son mappage et sa latence de données.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 1ecdd5f058a5996b4a3d12ba62c5f352633cd75a
+source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 14%
+source-wordcount: '601'
+ht-degree: 13%
 
 ---
 
@@ -19,6 +19,10 @@ Adobe Experience Platform permet d’ingérer des données à partir de source
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) (ci-après dénommés &quot;[!DNL Marketo]&quot;) est une solution complète pour la gestion des pistes et les spécialistes du marketing B2B qui cherchent à transformer les expériences client en s’engageant à chaque étape de parcours d’achat complexes.
 
 Avec le [!DNL Marketo] connecteur source, vous pouvez importer des données B2B à partir de [!DNL Marketo] à Platform et tenir ces données à jour à l’aide d’applications connectées à Platform.
+
+>[!IMPORTANT]
+>
+>Vous devez avoir accès à [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) pour que le Marketo Engage puisse participer à [Real-time Customer Profile](../../../../profile/home.md).
 
 Ce document présente la [!DNL Marketo] connecteur source, y compris des informations sur l’authentification du connecteur, comment mapper [!DNL Marketo] des champs vers le modèle de données d’expérience (XDM) et la latence des données du connecteur.
 
