@@ -1,16 +1,17 @@
 ---
 title: Classe de produits
 description: Ce document présente la classe Product dans le modèle de données d’expérience (XDM).
-source-git-commit: c0437b8f9d93c46dbec991a33a893a5b9e0cdf2c
+exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
+source-git-commit: fdd68e5a94d841992a6f8abe10f3cffe0ebb6794
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 15%
+source-wordcount: '215'
+ht-degree: 21%
 
 ---
 
 # [!UICONTROL Produit] class
 
-Dans le modèle de données d’expérience (XDM), la variable [!UICONTROL Produit] capture l’ensemble minimal de propriétés qui définissent un produit.
+Dans le modèle de données d’expérience (XDM), la variable [!UICONTROL Produit] capture l’ensemble minimal de propriétés qui définissent un produit de vente au détail.
 
 ![](../images/classes/product.png)
 
@@ -29,7 +30,7 @@ Dans le modèle de données d’expérience (XDM), la variable [!UICONTROL Produ
 
 ## Groupes de champs compatibles {#field-groups}
 
-Adobe fournit plusieurs groupes de champs standard à utiliser avec le [!DNL XDM Individual Profile] classe . Voici une liste de certains groupes de champs couramment utilisés pour la classe :
+Adobe fournit plusieurs groupes de champs standard à utiliser avec le [!UICONTROL Produit] classe . Voici une liste de groupes de champs couramment utilisés pour la classe :
 
 * [[!UICONTROL Catalogue de produits]](../field-groups/product/product-catalog.md)
 * [[!UICONTROL Catégorie de produits]](../field-groups/product/product-category.md)
