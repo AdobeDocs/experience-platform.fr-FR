@@ -1,15 +1,14 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;système XDM;modèle de données d’expérience;modèle de données d’expérience;modèle de données d’expérience;modèle de données;modèle de données;registre des schémas;schéma;schémas;schémas;schémas;schémas;relation;relation;descripteur de relation;descripteur de relation;identité de référence;identité de référence;
-solution: Experience Platform
 title: Définition d’une relation entre deux schémas à l’aide de l’API Schema Registry
 description: Ce document fournit un tutoriel indiquant comment définir une relation un-à-un entre deux schémas définis par votre organisation à l’aide de l’API Schema Registry.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 42%
+source-wordcount: '1367'
+ht-degree: 37%
 
 ---
 
@@ -110,13 +109,13 @@ Enregistrez les valeurs `$id` des deux schémas entre lesquels que vous souhaite
 
 ## Définition d’un champ de référence pour le schéma source
 
-Dans le [!DNL Schema Registry], les descripteurs de relation fonctionnent de la même manière que les clés étrangères dans les tables de base de données relationnelle : un champ du schéma source fait office de référence au champ d’identité Principal d’un schéma de destination. Si votre schéma source n’a pas de champ prévu à cet effet, vous devrez peut-être créer un groupe de champs de schéma avec le nouveau champ et l’ajouter au schéma. Ce nouveau champ doit comporter un `type` valeur de &quot;[!DNL string]&quot;.
+Dans le [!DNL Schema Registry], les descripteurs de relation fonctionnent de la même manière que les clés étrangères dans les tables de base de données relationnelle : un champ du schéma source fait office de référence au champ d’identité Principal d’un schéma de destination. Si votre schéma source n’a pas de champ prévu à cet effet, vous devrez peut-être créer un groupe de champs de schéma avec le nouveau champ et l’ajouter au schéma. Ce nouveau champ doit comporter un `type` valeur de `string`.
 
 >[!IMPORTANT]
 >
->Contrairement au schéma de destination, le schéma source ne peut pas utiliser son identité Principale comme champ de référence.
+>Le schéma source ne peut pas utiliser son identité Principale comme champ de référence.
 
-Dans ce tutoriel, le schéma de destination &quot;[!DNL Hotels]&quot; contient une `hotelId` qui sert d’identité Principale au schéma et qui servira donc également de champ de référence. Cependant, le schéma source &quot;[!DNL Loyalty Members]&quot; ne comporte pas de champ dédié à utiliser comme référence et doit se voir attribuer un nouveau groupe de champs qui ajoute un nouveau champ au schéma : `favoriteHotel`.
+Dans ce tutoriel, le schéma de destination &quot;[!DNL Hotels]&quot; contient une `hotelId` qui sert d’identité Principale au schéma. Cependant, le schéma source &quot;[!DNL Loyalty Members]&quot; ne dispose pas d’un champ dédié à utiliser comme référence à `hotelId`, et par conséquent, un groupe de champs personnalisé doit être créé pour ajouter un nouveau champ au schéma : `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -344,9 +343,9 @@ Une réponse réussie renvoie les détails du schéma mis à jour, qui inclut d�
 
 ## Création d’un descripteur d’identité de référence {#reference-identity}
 
-Un descripteur d’identité de référence doit être appliqué aux champs du schéma s’ils sont utilisés comme référence par d’autres schémas dans une relation. Depuis la variable `favoriteHotel` champ dans &quot;[!DNL Loyalty Members]&quot; fait référence à la variable `hotelId` champ dans &quot;[!DNL Hotels]&quot;, `hotelId` doit se voir attribuer un descripteur d’identité de référence.
+Un descripteur d’identité de référence doit être appliqué aux champs de schéma s’ils sont utilisés comme référence à un autre schéma dans une relation. Depuis la variable `favoriteHotel` champ dans &quot;[!DNL Loyalty Members]&quot; fait référence à la variable `hotelId` champ dans &quot;[!DNL Hotels]&quot;, `favoriteHotel` doit se voir attribuer un descripteur d’identité de référence.
 
-Créez un descripteur de référence pour le schéma de destination en envoyant une requête POST au point de terminaison `/tenant/descriptors`.
+Créez un descripteur de référence pour le schéma source en adressant une requête de POST à la fonction `/tenant/descriptors` point de terminaison .
 
 **Format d’API**
 
@@ -356,7 +355,7 @@ POST /tenant/descriptors
 
 **Requête**
 
-La requête suivante crée un descripteur de référence pour la variable `hotelId` champ dans le schéma de destination &quot;[!DNL Hotels]&quot;.
+La requête suivante crée un descripteur de référence pour la variable `favoriteHotel` champ du schéma source &quot;[!DNL Loyalty Members]&quot;.
 
 ```shell
 curl -X POST \
@@ -368,33 +367,33 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
 | Paramètre | Description |
 | --- | --- |
-| `@type` | Le type de descripteur en cours de définition. Pour les descripteurs de référence, la valeur doit être &quot;xdm:descriptorReferenceIdentity&quot;. |
-| `xdm:sourceSchema` | L’URL `$id` du schéma de destination. |
-| `xdm:sourceVersion` | Le numéro de version du schéma de destination. |
-| `sourceProperty` | Le chemin d’accès au champ d’identité principale du schéma de destination. |
-| `xdm:identityNamespace` | L’espace de noms d’identité du champ de référence. Il doit s’agir du même espace de noms utilisé lors de la définition du champ comme identité Principale du schéma. Pour plus d’informations, voir [Présentation des espaces de noms d’identité](../../identity-service/home.md). |
+| `@type` | Le type de descripteur en cours de définition. Pour les descripteurs de référence, la valeur doit être `xdm:descriptorReferenceIdentity`. |
+| `xdm:sourceSchema` | L’URL `$id` du schéma source. |
+| `xdm:sourceVersion` | Le numéro de version du schéma source. |
+| `sourceProperty` | Le chemin d’accès au champ dans le schéma source qui sera utilisé pour faire référence à l’identité Principale du schéma de destination. |
+| `xdm:identityNamespace` | L’espace de noms d’identité du champ de référence. Il doit s’agir du même espace de noms que l’identité Principale du schéma de destination. Pour plus d’informations, voir [Présentation des espaces de noms d’identité](../../identity-service/home.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du descripteur d’identité que vous venez de créer pour le schéma de destination.
+Une réponse réussie renvoie les détails du nouveau descripteur de référence pour le champ source.
 
 ```json
 {
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
@@ -403,7 +402,7 @@ Une réponse réussie renvoie les détails du descripteur d’identité que vous
 
 ## Création d’un descripteur de relation {#create-descriptor}
 
-Les descripteurs de relation établissent une relation un-à-un entre un schéma source et un schéma de destination. Une fois que vous avez défini un descripteur de référence pour le schéma de destination, vous pouvez créer un descripteur de relation en envoyant une requête de POST à la fonction `/tenant/descriptors` point de terminaison .
+Les descripteurs de relation établissent une relation un-à-un entre un schéma source et un schéma de destination. Une fois que vous avez défini un descripteur d’identité de référence pour le champ approprié dans le schéma source, vous pouvez créer un descripteur de relation en adressant une requête de POST au `/tenant/descriptors` point de terminaison .
 
 **Format d’API**
 
@@ -413,7 +412,7 @@ POST /tenant/descriptors
 
 **Requête**
 
-La requête suivante crée un descripteur de relation, avec &quot;[!DNL Loyalty Members]&quot; comme schéma source et &quot;[!DNL Legacy Loyalty Members]&quot; comme schéma de destination.
+La requête suivante crée un descripteur de relation, avec &quot;[!DNL Loyalty Members]&quot; comme schéma source et &quot;[!DNL Hotels]&quot; comme schéma de destination.
 
 ```shell
 curl -X POST \
@@ -436,13 +435,13 @@ curl -X POST \
 
 | Paramètre | Description |
 | --- | --- |
-| `@type` | Le type de descripteur à créer. Le `@type` La valeur des descripteurs de relation est &quot;xdm:descriptorOneToOne&quot;. |
+| `@type` | Le type de descripteur à créer. La valeur `@type` des descripteurs de relation est `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | L’URL `$id` du schéma source. |
 | `xdm:sourceVersion` | Le numéro de version du schéma source. |
 | `xdm:sourceProperty` | Le chemin d’accès au champ de référence dans le schéma source. |
 | `xdm:destinationSchema` | L’URL `$id` du schéma de destination. |
 | `xdm:destinationVersion` | Le numéro de version du schéma de destination. |
-| `xdm:destinationProperty` | Le chemin d’accès au champ de référence dans le schéma de destination. |
+| `xdm:destinationProperty` | Le chemin d’accès au champ d’identité Principal dans le schéma de destination. |
 
 {style=&quot;table-layout:auto&quot;}
 

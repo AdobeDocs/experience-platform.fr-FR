@@ -5,10 +5,10 @@ title: Point de terminaison de l’API Descripteurs
 description: Le point de terminaison /descriptors de l’API Schema Registry vous permet de gérer par programmation les descripteurs XDM dans votre application d’expérience.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
 workflow-type: tm+mt
-source-wordcount: '1836'
-ht-degree: 54%
+source-wordcount: '1839'
+ht-degree: 51%
 
 ---
 
@@ -389,7 +389,7 @@ Les descripteurs de relation décrivent une relation entre deux schémas différ
 
 #### Descripteur d’identité de référence
 
-Les descripteurs d’identité de référence fournissent un contexte de référence à l’identité Principale d’un champ de schéma, ce qui permet de le référencer par des champs dans d’autres schémas. Les champs doivent déjà disposer d’un libellé de descripteur d’identité avant qu’un descripteur de référence puisse leur être appliqué.
+Les descripteurs d’identité de référence fournissent un contexte de référence à l’identité Principale d’un champ de schéma, ce qui permet de le référencer par des champs dans d’autres schémas. Un champ d’identité Principal doit déjà être défini pour le schéma de destination avant qu’il ne puisse être référencé par d’autres schémas via ce descripteur.
 
 ```json
 {
@@ -406,7 +406,7 @@ Les descripteurs d’identité de référence fournissent un contexte de référ
 | `@type` | Le type de descripteur en cours de définition. Pour un descripteur d’identité de référence, cette valeur doit être définie sur `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | L’URI `$id` du schéma dans lequel le descripteur est défini. |
 | `xdm:sourceVersion` | La version principale du schéma source. |
-| `xdm:sourceProperty` | Chemin vers le champ du schéma source dans lequel le descripteur est défini. Doit commencer et non se terminer par un « / ». N’incluez pas « properties » dans le chemin (par exemple, « /personalEmail/address » au lieu de « /properties/personalEmail/properties/address »). |
+| `xdm:sourceProperty` | Chemin d’accès au champ du schéma source qui sera utilisé pour faire référence au schéma de destination. Doit commencer et non se terminer par un « / ». N’incluez pas &quot;properties&quot; dans le chemin (par exemple, `/personalEmail/address` au lieu de `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | Le code d’espace de noms d’identité de la propriété source. |
 
 {style=&quot;table-layout:auto&quot;}
