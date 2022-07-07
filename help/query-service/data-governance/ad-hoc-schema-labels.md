@@ -1,10 +1,11 @@
 ---
 title: Prise en charge du contrôle d’accès basé sur les attributs pour les schémas ad hoc
 description: Un guide pour restreindre l’accès aux champs de données dans les schémas ad hoc générés via Adobe Experience Platform Query Service.
-source-git-commit: 3d908face315c7aa2ad8f6350fb1fe0d3446d428
+exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
+source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
 workflow-type: tm+mt
 source-wordcount: '1037'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -27,7 +28,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Système de modèle de données d’expérience (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
    * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=fr): Découvrez comment créer et gérer des schémas et d’autres ressources dans l’interface utilisateur de Platform.
 * [[!DNL Data Governance]](../../data-governance/home.md): Découvrez comment [!DNL Data Governance] vous permet de gérer les données client et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données.
-* [Contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md): Le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ de schéma ad hoc ou ordinaire. Un administrateur définit des stratégies d’accès qui incluent des attributs pour gérer les autorisations d’accès des utilisateurs.
+* [Contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md): Le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ de schéma ad hoc ou ordinaire. Un administrateur définit des stratégies d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
 
 ## Création d’un schéma ad hoc
 
@@ -41,7 +42,7 @@ Pour ajouter une étiquette de données, accédez à [!UICONTROL Schémas] ongle
 
 ## Découvrez les schémas ad hoc dans l’inventaire des schémas de l’interface utilisateur de Platform
 
-Pour activer l’affichage des schémas ad hoc dans l’interface utilisateur de Platform, sélectionnez l’icône de filtre (../images/data-governance/filter.png) à gauche du champ de recherche, puis sélectionnez **[!UICONTROL Affichage des schémas ad hoc] dans le rail de gauche qui s’affiche.
+Pour activer l’affichage des schémas ad hoc dans l’interface utilisateur de Platform, sélectionnez l’icône de filtre (![Une icône de filtre.](../images/data-governance/filter.png)) à gauche du champ de recherche, puis sélectionnez **[!UICONTROL Affichage des schémas ad hoc] dans le rail de gauche qui s’affiche.
 
 ![Le tableau de bord du schéma filtre les options du rail de gauche avec la bascule &quot;Afficher le schéma ad hoc&quot; activée.](../images/data-governance/adhoc-schema-toggle.png)
 
