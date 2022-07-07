@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1022'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -47,7 +47,7 @@ Experience Platform prend en charge l’ingestion de données provenant d’un s
 
 ### Analytics {#analytics}
 
-Experience Platform prend en charge l’ingestion de données à partir d’une plateforme d’analyse tierce. Pour plus d’informations, consultez les documents connexes suivants :
+Experience Platform prend en charge l’ingestion de données provenant d’un système Analytics tiers. Pour plus d’informations, consultez les documents connexes suivants :
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
 
