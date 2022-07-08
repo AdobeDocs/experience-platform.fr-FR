@@ -5,10 +5,10 @@ title: Principes de base de la composition des schémas
 topic-legacy: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
 workflow-type: tm+mt
-source-wordcount: '3881'
-ht-degree: 27%
+source-wordcount: '3992'
+ht-degree: 26%
 
 ---
 
@@ -131,19 +131,27 @@ Le tableau suivant répertorie les modifications prises en charge lors de la mod
 
 | Modifications prises en charge | Modifications entraînant une rupture (non prises en charge) |
 | --- | --- |
-| <ul><li>Ajouter de nouveaux champs à la ressource</li><li>Rendre un champ obligatoire facultatif</li><li>Introduire de nouveaux champs obligatoires*</li><li>Modification du nom d’affichage et de la description de la ressource</li><li>Activation du schéma pour participer à Profile</li></ul> | <ul><li>Supprimer des champs définis précédemment</li><li>Renommer ou redéfinir des champs existants</li><li>Supprimer ou limiter des valeurs de champ précédemment prises en charge</li><li>Déplacement de champs existants vers un autre emplacement de l’arborescence</li><li>Suppression du schéma</li><li>Désactivation de la participation du schéma dans Profile</li></ul> |
+| <ul><li>Ajouter de nouveaux champs à la ressource</li><li>Rendre un champ obligatoire facultatif</li><li>Présentation des nouveaux champs obligatoires*</li><li>Modification du nom d’affichage et de la description de la ressource</li><li>Activation du schéma pour participer à Profile</li></ul> | <ul><li>Supprimer des champs définis précédemment</li><li>Renommer ou redéfinir des champs existants</li><li>Supprimer ou limiter des valeurs de champ précédemment prises en charge</li><li>Déplacement de champs existants vers un autre emplacement de l’arborescence</li><li>Suppression du schéma</li><li>Désactivation de la participation du schéma dans Profile</li></ul> |
 
-\**Reportez-vous à la section [sous-section](#post-ingestion-required-fields) pour des considérations importantes concernant la définition de nouveaux champs obligatoires.*
+\**Reportez-vous à la section ci-dessous pour obtenir des informations importantes concernant [définition de nouveaux champs obligatoires](#post-ingestion-required-fields).*
 
-#### Définition des champs comme obligatoires après ingestion {#post-ingestion-required-fields}
+### Champs obligatoires
+
+Les champs de schéma individuels peuvent être [marqué comme requis](../ui/fields/required.md), ce qui signifie que tout enregistrement ingéré doit contenir des données dans ces champs pour passer la validation. Par exemple, la définition d’un champ d’identité Principal de schéma selon les besoins peut vous aider à vous assurer que tous les enregistrements ingérés participeront à Real-time Customer Profile, tout en définissant un champ d’horodatage selon les besoins, ce qui garantit que tous les événements de série temporelle sont préservés chronologiquement.
+
+>[!IMPORTANT]
+>
+>Qu’un champ de schéma soit obligatoire ou non, Platform n’accepte pas `null` ou des valeurs vides pour tout champ ingéré. S’il n’existe aucune valeur pour un champ particulier dans un enregistrement ou un événement, la clé de ce champ doit être exclue de la charge utile d’ingestion.
+
+#### Définition des champs requis après l’ingestion {#post-ingestion-required-fields}
 
 Si un champ a été utilisé pour ingérer des données et qu’il n’a pas été initialement défini comme requis, il peut avoir une valeur nulle pour certains enregistrements. Si vous définissez ce champ comme étant obligatoire après l’ingestion, tous les enregistrements ultérieurs doivent contenir une valeur pour ce champ, même si les enregistrements historiques peuvent être nuls.
 
-Lorsque vous définissez un champ facultatif comme obligatoire, gardez à l’esprit les points suivants :
+Lorsque vous définissez un champ précédemment facultatif selon les besoins, tenez compte des points suivants :
 
 1. Si vous interrogez des données historiques et écrivez les résultats dans un nouveau jeu de données, certaines lignes échouent car elles contiennent des valeurs nulles pour le champ requis.
 1. Si le champ participe à [Real-time Customer Profile](../../profile/home.md) et si vous exportez des données avant de les définir selon les besoins, la valeur peut être nulle pour certains profils.
-1. Vous pouvez utiliser l’API Schema Registry pour afficher un fichier de modification horodaté pour toutes les ressources XDM dans Platform, y compris les nouveaux champs obligatoires. Consultez le guide sur la [point d’entrée du journal d’audit](../api/audit-log.md) pour plus d’informations.
+1. Vous pouvez utiliser l’API Schema Registry pour afficher un journal des modifications horodaté pour toutes les ressources XDM dans Platform, y compris les nouveaux champs obligatoires. Consultez le guide sur la [point d’entrée du journal d’audit](../api/audit-log.md) pour plus d’informations.
 
 ### Schémas et ingestion de données
 

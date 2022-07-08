@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;api;API;XDM
 title: Définition des champs obligatoires dans l’interface utilisateur
 description: Découvrez comment définir un champ XDM obligatoire dans l’interface utilisateur de l’Experience Platform.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: 1d04bf56c51506f84c5156e6d2ed6c9f58f15235
+source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,11 @@ ht-degree: 0%
 
 Dans le modèle de données d’expérience (XDM), un champ obligatoire indique qu’il doit recevoir une valeur valide pour qu’un enregistrement ou un événement de série temporelle particulier soit accepté lors de l’ingestion des données. Les cas d’utilisation courants pour les champs obligatoires incluent les informations d’identité de l’utilisateur et les horodatages.
 
-Lorsque vous [définissez un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform, vous pouvez le définir comme un champ obligatoire en cochant la case **[!UICONTROL Obligatoire]** dans le rail de droite. Sélectionnez **[!UICONTROL Appliquer]** pour appliquer la modification au schéma.
+>[!IMPORTANT]
+>
+>Qu’un champ de schéma soit obligatoire ou non, Platform n’accepte pas `null` ou des valeurs vides pour tout champ ingéré. S’il n’existe aucune valeur pour un champ particulier dans un enregistrement ou un événement, la clé de ce champ doit être exclue de la charge utile d’ingestion.
+
+When [définition d’un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform, vous pouvez définir ce champ comme champ obligatoire en sélectionnant l’option **[!UICONTROL Obligatoire]** dans le rail de droite. Sélectionner **[!UICONTROL Appliquer]** pour appliquer la modification au schéma.
 
 ![Case à cocher obligatoire](../../images/ui/fields/required/root.png)
 
@@ -24,7 +28,7 @@ Si le champ est un attribut de niveau racine sous l’objet ID du client, son ch
 
 Toutefois, si un champ obligatoire est imbriqué dans un objet qui n’est pas marqué comme obligatoire, le champ imbriqué n’apparaît pas sous **[!UICONTROL Champs obligatoires]** dans le rail de gauche.
 
-Dans l’exemple ci-dessous, le champ `loyaltyId` est défini selon les besoins, mais pas son objet parent `loyalty`. Dans ce cas, aucune erreur de validation ne se produirait si `loyalty` était exclu lors de l’ingestion de données, même si le champ enfant `loyaltyId` est marqué comme obligatoire. En d’autres termes, bien que `loyalty` soit facultatif, il doit contenir un champ `loyaltyId` dans l’événement qu’il est inclus.
+Dans l’exemple ci-dessous, la variable `loyaltyId` est défini selon les besoins, mais son objet parent `loyalty` ne l’est pas. Dans ce cas, aucune erreur de validation ne se produirait si `loyalty` a été exclu lors de l’ingestion de données, même si le champ enfant `loyaltyId` est marqué comme requis. En d’autres termes, `loyalty` est facultatif ; il doit contenir un `loyaltyId` dans l’événement qu’il est inclus.
 
 ![Champ obligatoire imbriqué](../../images/ui/fields/required/nested.png)
 
@@ -34,4 +38,4 @@ Si vous souhaitez qu’un champ imbriqué soit toujours requis dans un schéma, 
 
 ## Étapes suivantes
 
-Ce guide explique comment définir un champ obligatoire dans l’interface utilisateur. Consultez la présentation sur la [définition des champs dans l’interface utilisateur](./overview.md#special) pour savoir comment définir d’autres types de champs XDM dans la [!DNL Schema Editor].
+Ce guide explique comment définir un champ obligatoire dans l’interface utilisateur. Consultez la présentation sur [définition des champs dans l’interface utilisateur](./overview.md#special) pour savoir comment définir d’autres types de champ XDM dans [!DNL Schema Editor].
