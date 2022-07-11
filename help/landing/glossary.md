@@ -5,9 +5,9 @@ title: Glossaire Adobe Experience Platform
 topic-legacy: getting started
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
+source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
 workflow-type: tm+mt
-source-wordcount: '7385'
+source-wordcount: '7428'
 ht-degree: 12%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 12%
 
 **Identifiant de lot**: Un identifiant de lot est un identifiant généré par l’Adobe pour un lot de données.
 
-**Ingestion par lots**: L’ingestion par lots vous permet d’ingérer des données dans Experience Platform en tant que fichiers de lot. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique.
+**Ingestion par lots**: L’ingestion par lots vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lot. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique.
 
 **Segmentation par lots**: La segmentation par lots est une alternative à un processus continu de sélection de données et déplace toutes les données de profil à la fois via des définitions de segment pour produire les audiences correspondantes. Une fois créé, ce segment est enregistré et stocké afin de pouvoir être exporté en vue de son utilisation.
 
@@ -257,6 +257,8 @@ ht-degree: 12%
 **Géofence**: Une géobarrière est une limite géographique virtuelle, définie par la technologie GPS ou RFID, qui permet à un logiciel de déclencher une réponse lorsqu’un appareil mobile entre ou quitte une zone particulière.
 
 **RGPD (Règlement général sur la protection des données)**: Le Règlement général sur la protection des données (RGPD) est un cadre juridique qui définit des lignes directrices pour la collecte et le traitement des informations personnelles des individus au sein de l’Union européenne (UE). Le RGPD énonce les principes de la gestion des données et les droits des individus et couvre toutes les entreprises qui traitent les données des citoyens de l’UE.
+
+**Barrières de sécurité**: Les barrières de sécurité sont des seuils qui fournissent des conseils pour l’utilisation des données et du système, l’optimisation des performances et la prévention des erreurs ou des résultats inattendus dans Adobe Experience Platform. Les barrières de sécurité peuvent faire référence à l’utilisation ou la consommation de données et de traitement par rapport à vos droits de licence.
 
 ## H
 
