@@ -3,10 +3,10 @@ keywords: Destination du hub d’événements Azure ; hub d’événements Azure
 title: Connexion à Azure Event Hubs
 description: Créez une connexion sortante en temps réel avec votre [!DNL Azure Event Hubs] stockage pour diffuser des données depuis l’Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1926'
-ht-degree: 2%
+source-wordcount: '2002'
+ht-degree: 3%
 
 ---
 
@@ -80,7 +80,7 @@ Si vous sélectionnez la variable **[!UICONTROL Authentification standard]** Sai
 * **[!UICONTROL Espace de noms]**: Renseignez vos [!DNL Azure Event Hubs] espace de noms. En savoir plus sur [!DNL Azure Event Hubs] espaces de noms dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 * **[!UICONTROL Espace de noms]**: Renseignez vos [!DNL Azure Event Hubs] espace de noms. En savoir plus sur [!DNL Azure Event Hubs] espaces de noms dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
-### Détails de la destination {#destination-details}
+### Renseignement des détails de destination {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
@@ -92,7 +92,7 @@ Si vous sélectionnez la variable **[!UICONTROL Authentification standard]** Sai
 >title="Inclure les horodatages de segment"
 >abstract="Basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des segments, ainsi que l’horodatage UNIX lorsque les segments ont été mappés à la destination pour activation. Affichez la documentation d’un exemple d’exportation de données avec cette option sélectionnée."
 
-Après avoir établi la connexion d’authentification à la destination Azure Event Hubs, fournissez les informations suivantes pour la destination :
+Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
 ![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails de destination des centres d’événements Azure](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
 
@@ -101,6 +101,12 @@ Après avoir établi la connexion d’authentification à la destination Azure E
 * **[!UICONTROL eventHubName]**: Attribuez un nom à la diffusion de [!DNL Azure Event Hubs] destination.
 * **[!UICONTROL Inclure les noms de segment]**: Basculez si vous souhaitez que l’exportation des données contienne les noms des segments que vous exportez. Pour un exemple d&#39;export de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) voir la section ci-dessous.
 * **[!UICONTROL Inclure les horodatages de segment]**: Basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des segments, ainsi que l’horodatage UNIX lorsque les segments ont été mappés à la destination pour activation. Pour un exemple d&#39;export de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) voir la section ci-dessous.
+
+### Activer les alertes {#enable-alerts}
+
+Vous pouvez activer les alertes pour recevoir des notifications sur l’état du flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+
+Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des segments vers cette destination {#activate}
 

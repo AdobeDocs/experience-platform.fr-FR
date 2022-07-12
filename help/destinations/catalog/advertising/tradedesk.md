@@ -3,10 +3,10 @@ keywords: la publicité; le bureau de commerce; pupitre publicitaire
 title: Connexion Trade Desk
 description: Le bureau commercial est une plateforme en libre-service permettant aux acheteurs de publicités d’exécuter le reciblage et d’exécuter des campagnes numériques ciblées sur l’affichage, la vidéo et les sources d’inventaire mobiles.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 10%
+source-wordcount: '676'
+ht-degree: 12%
 
 ---
 
@@ -75,6 +75,12 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
    * **[!UICONTROL Amérique du Nord Est]**
    * **[!UICONTROL Amérique du Nord Ouest]**
    * **[!UICONTROL Amérique latine]**
+
+### Activer les alertes {#enable-alerts}
+
+Vous pouvez activer les alertes pour recevoir des notifications sur l’état du flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+
+Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des segments vers cette destination {#activate}
 

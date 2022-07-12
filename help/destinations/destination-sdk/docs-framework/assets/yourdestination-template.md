@@ -1,25 +1,19 @@
 ---
-title: Modèle de libre-service de documentation // Remplacer par le nom de votre destination
+title: Modèle en libre-service // Remplacer par le nom de la destination
 description: Utilisez ce modèle pour créer une documentation publique pour votre destination dans le catalogue Adobe Experience Platform. // Remplacer par le paragraphe dans la section Aperçu
-exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '1382'
-ht-degree: 7%
+source-wordcount: '1341'
+ht-degree: 6%
 
 ---
+
 
 # Connexion à YourDestination {#your-destination}
 
 *Lorsque vous parcourez ce modèle, remplacez ou supprimez tous les paragraphes en italique (en commençant par celui-ci).*
 
 *Commencez par mettre à jour les métadonnées (titre et description) en haut de la page. Veuillez ignorer toutes les instances d&#39;UICONTROL sur cette page. Il s’agit d’une balise qui aide nos processus de traduction automatique à traduire correctement la page dans les multiples langues prises en charge. Nous ajouterons des balises à votre documentation après l’avoir envoyée.*
-
->[!IMPORTANT]
->
->* Renseignez toutes les sections de ce modèle, dans l&#39;ordre dans lequel elles sont décrites dans le modèle.
->* Ce modèle est rarement mis à jour, en fonction des commentaires des partenaires. Avant de commencer à créer de la documentation pour votre destination, assurez-vous d’avoir téléchargé la [dernière version du modèle](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
-
 
 ## Présentation {#overview}
 
@@ -33,13 +27,13 @@ ht-degree: 7%
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable *YourDestination* destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
-### Cas d’utilisation #1 {#use-case-1}
+### Cas d’utilisation #1
 
 *Pour les plateformes de messagerie mobile :*
 
 *Une plate-forme de location et de vente d’habitations souhaite envoyer des notifications mobiles aux appareils Android et iOS des clients afin de leur faire savoir qu’il y a 100 listes mises à jour dans la zone où ils ont déjà recherché une location.*
 
-### Cas d’utilisation #2 {#use-case-2}
+### Cas d’utilisation #2
 
 *Pour les plateformes de réseaux sociaux :*
 
@@ -102,7 +96,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-![Exemple de capture d’écran montrant comment s’authentifier à la destination](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![Ajoutez un lien ici à un ou plusieurs exemples de captures d’écran qui montrent aux utilisateurs comment s’authentifier sur votre destination.](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
 
 * **[!UICONTROL Jeton de porteur]**: Renseignez le jeton porteur pour vous authentifier à la destination.
 
@@ -112,7 +106,7 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-![Exemple de capture d’écran montrant comment remplir les détails de votre destination](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Ajoutez un lien ici à un ou plusieurs exemples de captures d’écran qui montrent aux utilisateurs comment remplir les détails de votre destination](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 * **[!UICONTROL Nom]**: Un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]**: Description qui vous aidera à identifier cette destination ultérieurement.
@@ -130,7 +124,7 @@ Lorsque vous avez terminé de fournir des détails sur votre connexion de destin
 > 
 >Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Lecture [Activation des profils et des segments vers des destinations d’exportation de segments en continu](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Lecture [Activation des profils et des segments vers des destinations d’exportation de segments en continu](../../ui/activate/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
 ## Données exportées / Validation de l’exportation des données {#exported-data}
 
@@ -176,7 +170,7 @@ Lecture [Activation des profils et des segments vers des destinations d’export
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [Présentation de la gouvernance des données](/help/data-governance/home.md).
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, voir [Présentation de la gouvernance des données](/help/data-governance/home.md).
 
 ## Ressources supplémentaires {#additional-resources}
 

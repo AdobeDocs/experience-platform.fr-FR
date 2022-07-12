@@ -3,10 +3,10 @@ keywords: la publicité; les critères;
 title: Connexion à un critère
 description: Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaque consommateur des expériences plus riches sur l’Internet libre. Grâce au jeu de données commercial le plus important du monde et à l’IA la plus performante du monde, Criteo s’assure que chaque point de contact du parcours d’achat est personnalisé pour atteindre les clients avec la bonne publicité, au bon moment.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 07974f92c741d74e6d0289120538655379d3ca35
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 7%
+source-wordcount: '1005'
+ht-degree: 8%
 
 ---
 
@@ -102,6 +102,12 @@ Après vous être authentifié à la destination, veuillez renseigner les param�
 | Version de l’API | Version de l’API Criteo. Sélectionnez Aperçu. | Oui |
 | Identifiant annonceur | Identifiant de publicitaire de critère de votre organisation. Contactez votre gestionnaire de compte Criteo pour obtenir ces informations. | Oui |
 | Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] de votre organisation. Contactez votre équipe de compte Criteo pour connaître les [!DNL GUM Caller ID] ou pour obtenir plus d’informations à ce sujet [!DNL GUM] synchronisation, si nécessaire. | Oui, chaque fois que [!DNL GUM ID] est fourni comme identifiant |
+
+### Activer les alertes {#enable-alerts}
+
+Vous pouvez activer les alertes pour recevoir des notifications sur l’état du flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+
+Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des segments vers cette destination {#activate-segments}
 

@@ -3,10 +3,10 @@ keywords: 'la publicité; bing; '
 title: Connexion Microsoft Bing
 description: Avec la destination de connexion Microsoft Bing, vous pouvez exécuter le reciblage et l’audience des campagnes numériques ciblées dans Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: cffd689363e71f27a554df31beaf763f9bad37f4
+source-git-commit: 812688043a7da943832b5798de0f433928634998
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 11%
+source-wordcount: '633'
+ht-degree: 12%
 
 ---
 
@@ -70,6 +70,12 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 * **[!UICONTROL Nom]**: Un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]**: Description qui vous aidera à identifier cette destination ultérieurement.
 * **[!UICONTROL Identifiant de compte]**: Votre [!DNL Bing Ads CID].
+
+### Activer les alertes {#enable-alerts}
+
+Vous pouvez activer les alertes pour recevoir des notifications sur l’état du flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+
+Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des segments vers cette destination {#activate}
 

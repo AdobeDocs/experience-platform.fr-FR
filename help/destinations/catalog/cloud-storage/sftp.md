@@ -3,10 +3,10 @@ keywords: SFTP;sftp
 title: Connexion SFTP
 description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 715533352e84573f60f012504988595af6146e2f
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '671'
-ht-degree: 7%
+source-wordcount: '673'
+ht-degree: 6%
 
 ---
 
@@ -39,9 +39,9 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 > 
 >Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
+Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
-### Paramètres de connexion {#parameters}
+### Informations d’authentification {#authentication-information}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_rsa"
@@ -51,11 +51,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="Clé SSH privée"
->abstract="La clé SSH privée doit être formatée en tant que chaîne codée en Base64 et ne doit pas être protégée par un mot de passe. "
-
-When [connexion](../../ui/connect-destination.md) vers cette destination, vous devez fournir les informations suivantes :
-
-#### Informations d’authentification {#authentication-information}
+>abstract="La clé SSH privée doit être formatée en tant que chaîne codée en Base64 et ne doit pas être protégée par un mot de passe."
 
 Si vous sélectionnez la variable **[!UICONTROL Authentification de base]** saisissez pour vous connecter à votre emplacement SFTP :
 
@@ -83,7 +79,7 @@ Si vous sélectionnez la variable **[!UICONTROL SFTP avec clé SSH]** type d’a
 
       ![Clé PGP](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### Détails de la destination {#destination-details}
+### Détails de la destination {#destination-details}
 
 Après avoir établi la connexion d’authentification à l’emplacement SFTP, fournissez les informations suivantes pour la destination :
 

@@ -3,10 +3,10 @@ title: Connexion via l’API HTTP
 keywords: diffusion en continu;
 description: Utilisez la destination d’API HTTP dans Adobe Experience Platform pour envoyer des données de profil à un point de terminaison HTTP tiers afin d’exécuter vos propres analyses ou d’effectuer toute autre opération nécessaire sur les données de profil exportées hors d’Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '2296'
-ht-degree: 3%
+source-wordcount: '2374'
+ht-degree: 4%
 
 ---
 
@@ -138,7 +138,7 @@ Si vous sélectionnez la variable **[!UICONTROL Informations d’identification 
    * **[!UICONTROL Body Form Encoded]**: Dans ce cas, la variable [!DNL client ID] et [!DNL client secret] sont inclus *dans le corps de la requête* envoyé à votre destination. Pour consulter un exemple, reportez-vous à la section [Types d’authentification pris en charge](#supported-authentication-types) .
    * **[!UICONTROL Autorisation de base]**: Dans ce cas, la variable [!DNL client ID] et [!DNL client secret] sont inclus *dans un `Authorization` header* après avoir été codé en base64 et envoyé à votre destination. Pour consulter un exemple, reportez-vous à la section [Types d’authentification pris en charge](#supported-authentication-types) .
 
-### Détails de la destination {#destination-details}
+### Renseignement des détails de destination {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
@@ -165,7 +165,7 @@ Si vous sélectionnez la variable **[!UICONTROL Informations d’identification 
 >title="Paramètres de requête"
 >abstract="Vous pouvez éventuellement ajouter des paramètres de requête à l’URL du point de terminaison HTTP. Mettez en forme les paramètres de requête que vous utilisez comme suit : `parameter1=value&parameter2=value`."
 
-Après avoir établi la connexion d’authentification au point de terminaison HTTP, fournissez les informations suivantes pour la destination :
+Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
 ![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails de destination HTTP](../../assets/catalog/http/http-api-destination-details.png)
 
@@ -176,6 +176,12 @@ Après avoir établi la connexion d’authentification au point de terminaison H
 * **[!UICONTROL Paramètres de requête]**: Vous pouvez éventuellement ajouter des paramètres de requête à l’URL du point de terminaison HTTP. Mettez en forme les paramètres de requête que vous utilisez comme suit : `parameter1=value&parameter2=value`.
 * **[!UICONTROL Inclure les noms de segment]**: Basculez si vous souhaitez que l’exportation des données contienne les noms des segments que vous exportez. Pour un exemple d&#39;export de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) voir la section ci-dessous.
 * **[!UICONTROL Inclure les horodatages de segment]**: Basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des segments, ainsi que l’horodatage UNIX lorsque les segments ont été mappés à la destination pour activation. Pour un exemple d&#39;export de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) voir la section ci-dessous.
+
+### Activer les alertes {#enable-alerts}
+
+Vous pouvez activer les alertes pour recevoir des notifications sur l’état du flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+
+Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des segments vers cette destination {#activate}
 

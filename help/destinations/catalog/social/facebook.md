@@ -3,9 +3,9 @@ keywords: Connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils de vos campagnes Facebook pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1713'
+source-wordcount: '1867'
 ht-degree: 9%
 
 ---
@@ -90,7 +90,6 @@ Il existe deux méthodes pour activer les numéros de téléphone dans [!DNL Fac
 >
 >Numéros de téléphone ingérés dans la variable `Phone` L’espace de noms ne peut pas être activé dans [!DNL Facebook].
 
-
 ## Exigences en matière de hachage des emails {#email-hashing-requirements}
 
 Vous pouvez hacher les adresses électroniques avant de les ingérer dans Adobe Experience Platform ou utiliser les adresses électroniques en clair dans Experience Platform et disposer des [!DNL Platform] hachez-les lors de l’activation.
@@ -124,7 +123,7 @@ Avant d’utiliser la variable `Extern_ID` espace de noms auquel envoyer des don
 > 
 >Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
+Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 La vidéo ci-dessous présente également les étapes de configuration d’une [!DNL Facebook] destination et activation des segments.
 
@@ -134,13 +133,31 @@ La vidéo ci-dessous présente également les étapes de configuration d’une [
 >
 >L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous à la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
-### Paramètres de connexion {#parameters}
+### Authentification à la destination {#authenticate}
 
-Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
+1. Recherchez la destination Facebook dans le catalogue des destinations et sélectionnez **[!UICONTROL Configuration]**.
+2. Sélectionner **[!UICONTROL Se connecter à la destination]**.
+   ![Authentification à Facebook](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+3. Saisissez vos informations d’identification Facebook et sélectionnez **Connexion**.
+
+### Renseignement des détails de destination {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_facebook_accountid"
+>title="Identifiant de compte"
+>abstract="Identifiant de votre compte publicitaire Facebook. Cet identifiant se trouve dans votre compte Facebook Ads Manager. Lors de la saisie de cet identifiant, faites-le toujours précéder de `act_`."
+
+Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
 * **[!UICONTROL Nom]**: Un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]**: Description qui vous aidera à identifier cette destination ultérieurement.
-* **[!UICONTROL Identifiant de compte]**: your [!DNL Facebook Ad Account ID]. Vous pouvez trouver cet identifiant dans votre [!DNL Facebook Ads Manager] compte . Lors de la saisie de cet identifiant, faites-le toujours précéder de `act_`.
+* **[!UICONTROL Identifiant de compte]**: Votre [!DNL Facebook Ad Account ID]. Vous pouvez trouver cet identifiant dans votre [!DNL Facebook Ads Manager] compte . Lors de la saisie de cet identifiant, faites-le toujours précéder de `act_`.
+
+### Activer les alertes {#enable-alerts}
+
+Vous pouvez activer les alertes pour recevoir des notifications sur l’état du flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+
+Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des segments vers cette destination {#activate}
 

@@ -2,10 +2,10 @@
 title: Connexion Adobe Advertising Cloud DSP
 description: Adobe Advertising Cloud DSP est une destination intégrée pour la variable [!DNL Adobe Real-time Customer Data Profile], ce qui vous permet de partager des segments propriétaires authentifiés avec des annonceurs et des utilisateurs approuvés pour l’activation de la campagne.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 2b8c9d81b7d9eddbbed3119a496e9c8d37e6c415
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '954'
-ht-degree: 4%
+source-wordcount: '1026'
+ht-degree: 8%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 ## Présentation {#overview}
 
-Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) la destination vous permet de partager des segments propriétaires authentifiés avec des annonceurs et des utilisateurs approuvés pour l’activation de la campagne avec DSP. Pour en savoir plus sur l’intégration de Real-Time CDP avec DSP, voir [À propos de l’activation de segments authentifiés à partir des sources d’audience](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+La destination Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) vous permet de partager des segments propriétaires authentifiés avec des annonceurs et des utilisateurs approuvés pour l’activation de la campagne avec DSP. Pour en savoir plus sur l’intégration de Real-Time CDP avec DSP, voir [À propos de l’activation de segments authentifiés à partir des sources d’audience](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
 
 >[!IMPORTANT]
 >
@@ -78,12 +78,18 @@ Pour vous connecter à la destination, indiquez le paramètre suivant dans la va
 
 ### Renseignement des détails de destination {#destination-details}
 
-Pour configurer les détails de la destination, renseignez les champs requis du [!UICONTROL Détails de la destination] , puis sélectionnez **[!UICONTROL Suivant]**.
+Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
 * **[!UICONTROL Nom]**: Un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]**: Description qui vous aidera à identifier cette destination ultérieurement.
 
 ![Champs des détails de la destination](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
+
+### Activer les alertes {#enable-alerts}
+
+Vous pouvez activer les alertes pour recevoir des notifications sur l’état du flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+
+Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des segments vers cette destination {#activate}
 

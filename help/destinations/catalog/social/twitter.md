@@ -2,10 +2,10 @@
 title: Connexion à des audiences personnalisées twitter
 description: Ciblez vos abonnés et clients existants sur Twitter et créez des campagnes de remarketing pertinentes en activant vos audiences créées dans Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '669'
-ht-degree: 21%
+source-wordcount: '812'
+ht-degree: 18%
 
 ---
 
@@ -58,15 +58,33 @@ Ciblez vos abonnés et clients existants dans Twitter et créez des campagnes de
 > 
 >Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
+Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
-### Paramètres de connexion {#parameters}
+### Authentification à la destination {#authenticate}
 
-Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
+1. Recherchez le [!DNL Twitter Custom Audiences] destination dans le catalogue des destinations et sélectionnez **[!UICONTROL Configuration]**.
+2. Sélectionner **[!UICONTROL Se connecter à la destination]**.
+   ![Authentification à LinkedIn](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
+3. Saisissez vos informations d’identification Twitter et sélectionnez **Connexion**.
+
+### Renseignement des détails de destination {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_twitter_accountid"
+>title="Identifiant de compte"
+>abstract="Identifiant de compte Twitter Ads. Vous pouvez le trouver dans vos paramètres Twitter Ads."
+
+Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
 * **[!UICONTROL Nom]**: Un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]**: Description qui vous aidera à identifier cette destination ultérieurement.
 * **[!UICONTROL Identifiant de compte]**: Votre [!DNL Twitter Ads] ID de compte. Vous pouvez le trouver dans votre [!DNL Twitter Ads] paramètres.
+
+### Activer les alertes {#enable-alerts}
+
+Vous pouvez activer les alertes pour recevoir des notifications sur l’état du flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+
+Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des segments vers cette destination {#activate}
 
