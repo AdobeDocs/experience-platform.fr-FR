@@ -3,10 +3,10 @@ keywords: destinations publicitaires;destinations;destinations de plateforme
 title: Présentation des destinations publicitaires
 description: Connectez Adobe Experience Platform à une plateforme publicitaire tierce (par ex. DSP, réseau publicitaire, SSP) et partagez des audiences pseudonymes sur ces plateformes.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 52%
+source-wordcount: '243'
+ht-degree: 51%
 
 ---
 
@@ -34,6 +34,7 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 * [Connexion à Google Customer Match](google-customer-match.md)
 * [Connexion Microsoft Bing](bing.md)
 * [Connexion Liste des Clients Pinterest](pinterest.md)
+* [(Version bêta) Connexion à Snapchat Ads](snap-inc.md)
 * [Connexion Trade Desk](tradedesk.md)
 * [Yahoo/Verizon DataX](datax.md)
 

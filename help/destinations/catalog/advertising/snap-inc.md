@@ -1,0 +1,128 @@
+---
+title: (Version bêta) Connexion d’accrochage Inc
+description: Découvrez comment vous connecter à la plateforme d’annonces instantanées et exporter vos segments d’audience depuis Experience Platform.
+source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+workflow-type: tm+mt
+source-wordcount: '949'
+ht-degree: 5%
+
+---
+
+
+# (Version bêta) Accrocher Inc
+
+## Présentation {#overview}
+
+[Annonces instantanées](https://forbusiness.snapchat.com/) sont faites pour chaque entreprise, quelle que soit sa taille ou son industrie. Faites partie des conversations quotidiennes des Snapchatters avec des publicités numériques en plein écran qui inspirent l&#39;action des personnes qui comptent le plus pour votre entreprise.
+
+>[!IMPORTANT]
+>
+>Cette page de documentation a été créée par la fonction *Accrocher à* l&#39;équipe. Il s’agit actuellement d’un produit bêta qui peut faire l’objet de modifications. Pour toute demande de mise à jour ou de renseignements, contactez-les directement à l’adresse *dev-support@snap.com*
+
+## Cas dʼutilisation {#use-cases}
+
+Cette destination permet aux marketeurs d’importer dans Snapchat Ads des segments d’utilisateurs créés dans Experience Platform et de les utiliser pour cibler leurs publicités.
+
+## Conditions préalables {#prerequisites}
+
+Pour utiliser cette destination, vous devez disposer d’un compte Snapchat Ads. Reportez-vous à cette documentation pour plus d’informations sur la façon d’en créer une :
+
+[Prise en main de Snapchat Advertising](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
+
+## Limites {#limitations}
+
+* La fonction d’accrochage automatique ne prend pas en charge plusieurs identités pour un segment d’audience donné. Mappez une seule identité lors de l’activation d’un segment.
+* La fonction d’accrochage Inc ne prend pas en charge le changement de nom des segments. Pour renommer un segment, vous devez le désactiver, le renommer, puis l’activer.
+* Il n’est pas possible de définir une période de rétention pour les membres d’un segment d’audience. Tous les membres conservent leur durée de vie et seront dans le segment jusqu’à ce qu’ils soient supprimés.
+
+## Identités prises en charge {#supported-identities}
+
+Le *Accrocher à* destination prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur [identités](/help/identity-service/namespaces.md).
+
+Tous les identifiants envoyés à la variable *Accrocher à* destination doit être hachée au format SHA-256. Pour hacher les identifiants en texte brut avant de les envoyer à la destination, cochez la case **[!UICONTROL Appliquer la transformation]** lors du mappage des identifiants de cible pour la destination.
+
+>[!WARNING]
+> 
+> Les identifiants non hachés ne seront pas acceptés par la destination de la fonction d’accrochage publicitaire et leur envoi pourrait entraîner des erreurs.
+
+
+>[!IMPORTANT]
+> 
+> La destination de la fonction d’accrochage Inc ne prend pas en charge plusieurs identités. Veuillez sélectionner une seule identité.
+
+| Identité cible | Description | Considérations |
+|---|---|---|
+| Adresse e-mail | Adresse électronique hachée SHA-256 | Mappage des adresses électroniques dans le champ d’identité cible *emailAddress*. |
+| Numéro de téléphone | Numéro de téléphone haché SHA-256 | Mappage des adresses électroniques dans le champ d’identité cible *phoneNumber*. |
+| GAID | Identifiant publicitaire Google haché SHA-256 | Mappage des identifiants publicitaires Google dans le champ d’identité cible *gaid*. |
+| IDFA | Identifiant publicitaire Apple haché SHA-256 | Mappage des identifiants publicitaires Apple dans le champ d’identité cible *idfa*. |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Type et fréquence d&#39;export {#export-type-frequency}
+
+Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
+
+| Élément | Type | Notes |
+---------|----------|---------|
+| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la variable *YOURDESTINATION* destination. |
+| Fréquence des exports | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont &quot;toujours sur&quot; des connexions basées sur l’API. Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Connexion à la fonction d’accrochage {#connect}
+
+>[!IMPORTANT]
+> 
+>Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+
+### Authentification à la destination {#authenticate}
+
+Pour vous authentifier à la destination, procédez comme suit :
+
+1. Recherchez le *Accrocher à* à partir du catalogue de destinations Adobe Experience Platform et sélectionnez **Configuration**.
+2. Sélectionner **[!UICONTROL Se connecter à la destination]**. Vous serez redirigé vers l’écran suivant :
+   ![Écran d’authentification 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
+3. Saisissez vos informations d’identification Snapchat et sélectionnez **Connexion**.
+4. Vous verrez apparaître les données Snapchat auxquelles Adobe Experience Platform aura accès. Sélectionner **Continuer** pour poursuivre le processus de connexion.
+
+![Écran d’authentification 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
+
+Après avoir sélectionné Continuer, attendez que vous soyez redirigé vers Adobe Experience Platform.
+
+### Renseignement des détails de destination {#destination-details}
+
+![Détails de la destination](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
+
+Pour configurer les détails de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Suivant]**.
+
+* **[!UICONTROL Nom]**: Un nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Description]**: Description qui vous aidera à identifier cette destination ultérieurement.
+* **[!UICONTROL Identifiant de compte]**: Identifiant du compte publicitaire associé au compte publicitaire dans lequel vous souhaitez importer vos segments. Pour plus d’informations sur la façon de le trouver, reportez-vous à la section [cette documentation sur le Centre d’aide aux entreprises Snapchat](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+
+>[!IMPORTANT]
+> 
+>La saisie d’un ID de compte de publicité Snapchat incorrect ou non valide entraîne l’échec de l’activation du segment. Vérifiez deux fois que vous avez saisi l’identifiant de compte publicitaire approprié.
+
+## Activer des segments vers cette destination {#activate}
+
+>[!IMPORTANT]
+> 
+>Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+
+Lecture [Activation des profils et des segments vers des destinations d’exportation de segments en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+
+## Validation de l’exportation des données {#exported-data}
+
+Après l’activation des segments dans la variable *Accrocher à* , vous pourrez voir les segments dans le Gestionnaire d’accrochage publicitaire du [**Audiences** section](https://businesshelp.snapchat.com/s/article/audience-sharing). Pour accéder à cette section, procédez comme suit :
+
+1. Connectez-vous au [Gestionnaire d’accrochage publicitaire](https://ads.snapchat.com/)
+2. Sélectionner **Audiences** dans le menu déroulant du coin supérieur gauche de l’écran. Les segments que vous avez activés dans Adobe Experience Platform s’affichent dans la bibliothèque d’audiences :
+
+![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
+
+Veuillez noter que lorsqu’un segment d’Adobe est activé pour la première fois sur la fonction de gestion dynamique des balises, il s’affiche initialement comme une audience vide. Cela est dû au fait que Adobe Experience Platform n’exporte pas les données de membre vers la fonction d’accrochage Inc jusqu’à ce qu’elle évalue le segment. Pour plus d’informations sur la manière dont les segments sont évalués dans Experience Platform, reportez-vous à la section [Présentation de Segmentation Service](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+
+## Utilisation et gouvernance des données {#data-usage-governance}
+
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux stratégies d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, voir [Présentation de la gouvernance des données](/help/data-governance/home.md).
