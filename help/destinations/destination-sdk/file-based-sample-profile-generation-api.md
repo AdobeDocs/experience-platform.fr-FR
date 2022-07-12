@@ -1,9 +1,9 @@
 ---
 description: Cette page explique comment utiliser le point d’entrée de l’API /sample-profiles depuis Destination SDK pour générer des profils d’exemple basés sur un schéma source. Vous pouvez utiliser ces exemples de profils pour tester votre configuration de destination basée sur des fichiers.
 title: Générer des exemples de profils en fonction d’un schéma source
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '674'
 ht-degree: 13%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 13%
 
 La première étape du test de votre destination basée sur les fichiers consiste à utiliser la variable `/sample-profiles` point d’entrée pour générer un exemple de profil en fonction de votre schéma source existant.
 
-Les exemples de profils sont destinés à vous aider à comprendre la structure JSON d’un profil. En outre, ils vous fournissent un Backbone que vous pouvez personnaliser avec vos propres données de profil, pour d’autres tests de destination.
+Les exemples de profils peuvent vous aider à comprendre la structure JSON d’un profil. En outre, ils vous donnent une valeur par défaut que vous pouvez personnaliser avec vos propres données de profil, pour d’autres tests de destination.
 
 ## Prise en main {#getting-started}
 
@@ -51,7 +51,7 @@ GET /authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&c
 La requête suivante génère un exemple de profil en fonction du schéma source défini dans l’instance de destination avec le `destinationInstanceId`.
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&count=2' \
+curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}' \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \

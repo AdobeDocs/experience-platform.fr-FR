@@ -1,9 +1,9 @@
 ---
 description: Cette page explique comment utiliser le point de terminaison /authoring/testing/template/render pour visualiser à quoi ressembleraient les champs de données clients modélisés définis dans votre configuration de destination.
 title: Validation des champs de client modélisés
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 20%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 Une réponse réussie renvoie une `HTTP 200 OK` et le corps comprend des valeurs générées de manière aléatoire pour vos champs modélisés.
 
-Cette réponse est destinée à vous aider à valider la structure correcte des champs de données du client, tels que les noms des compartiments ou les chemins d’accès aux dossiers.
+Cette réponse peut vous aider à valider la structure correcte des champs de données du client, tels que les noms des compartiments ou les chemins d’accès aux dossiers.
 
 
 ```json

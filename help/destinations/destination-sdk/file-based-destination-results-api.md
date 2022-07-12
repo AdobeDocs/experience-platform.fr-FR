@@ -1,7 +1,7 @@
 ---
 description: Cette page explique comment utiliser le point d’entrée de l’API /testing/destinationInstance pour afficher les détails complets de vos résultats de test. Ce point de terminaison API renvoie le même résultat que celui obtenu lors de l’utilisation de l’API Flow Service pour surveiller les flux de données.
 title: Affichage des résultats détaillés de l’activation
-source-git-commit: 5b62203113dd55dad8adeb96cbcc2d46b3420c3a
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 15%

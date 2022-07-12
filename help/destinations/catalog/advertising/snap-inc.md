@@ -1,10 +1,10 @@
 ---
 title: (Version bêta) Connexion d’accrochage Inc
 description: Découvrez comment vous connecter à la plateforme d’annonces instantanées et exporter vos segments d’audience depuis Experience Platform.
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '949'
-ht-degree: 5%
+source-wordcount: '1012'
+ht-degree: 6%
 
 ---
 
@@ -103,6 +103,12 @@ Pour configurer les détails de la destination, renseignez les champs requis et 
 >[!IMPORTANT]
 > 
 >La saisie d’un ID de compte de publicité Snapchat incorrect ou non valide entraîne l’échec de l’activation du segment. Vérifiez deux fois que vous avez saisi l’identifiant de compte publicitaire approprié.
+
+### Activer les alertes {#enable-alerts}
+
+Vous pouvez activer les alertes pour recevoir des notifications sur l’état du flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+
+Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des segments vers cette destination {#activate}
 
