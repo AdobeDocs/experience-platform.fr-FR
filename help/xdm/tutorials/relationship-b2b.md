@@ -2,22 +2,28 @@
 title: Définition d’une relation entre deux schémas dans Real-time Customer Data Platform B2B Edition
 description: Découvrez comment définir une relation multiple-à-un entre deux schémas dans l’édition B2B de Real-time Customer Data Platform.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: b9ec275df738e006d3fec2cdd64b0ed6577dbff8
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1351'
 ht-degree: 7%
 
 ---
 
-# Définition d’une relation entre deux schémas dans Real-time Customer Data Platform B2B Edition
+# Définition d’une relation multiple-à-un entre deux schémas dans Real-time Customer Data Platform B2B Edition
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_reference_schema"
+>title="Schéma de référence"
+>abstract="Sélectionnez le schéma avec lequel vous souhaitez établir une relation. Selon la classe du schéma, il peut également exister des relations existantes avec d’autres entités dans le contexte B2B."
+>text="See the documentation to learn how B2B schema classes relate to each other."
 
 >[!NOTE]
 >
->Si vous n’utilisez pas Real-time Customer Data Platform B2B Edition, consultez le guide sur [création d’une relation non-B2B](./relationship-ui.md) au lieu de .
+>Si vous n’utilisez pas l’édition B2B de Real-time Customer Data Platform ou si vous souhaitez créer une relation un-à-un, consultez le guide sur [création d’une relation un-à-un](./relationship-ui.md) au lieu de .
 
 Real-time Customer Data Platform Édition B2B fournit plusieurs classes de modèle de données d’expérience (XDM) qui capturent les entités de données B2B fondamentales, y compris [comptes](../classes/b2b/business-account.md), [opportunités](../classes/b2b/business-opportunity.md), [campagnes](../classes/b2b/business-campaign.md), etc. En créant des schémas basés sur ces classes et en les activant pour une utilisation dans [Real-time Customer Profile](../../profile/home.md), vous pouvez fusionner des données provenant de sources disparates dans une représentation unifiée appelée schéma d’union.
 
-Cependant, les schémas d’union ne peuvent contenir que des champs capturés par des schémas qui partagent la même classe. C’est là que les relations de schéma entrent en jeu. En implémentant des relations dans vos schémas B2B, vous pouvez décrire la manière dont ces entités commerciales se relient les unes aux autres et peut inclure des attributs provenant de plusieurs classes dans les cas d’utilisation de la segmentation en aval.
+Toutefois, les schémas d’union ne peuvent contenir que des champs capturés par des schémas qui partagent la même classe. C’est là que les relations de schéma entrent en jeu. En implémentant des relations dans vos schémas B2B, vous pouvez décrire la manière dont ces entités commerciales se relient les unes aux autres et peut inclure des attributs provenant de plusieurs classes dans les cas d’utilisation de la segmentation en aval.
 
 Le diagramme suivant illustre la manière dont les différentes classes B2B peuvent se relier les unes aux autres dans une mise en oeuvre de base :
 
@@ -45,7 +51,13 @@ Les relations de schéma sont représentées par un champ dédié dans un **sch�
 
 ### Comprendre les identités dans les relations B2B
 
-Pour établir une relation, les deux schémas doivent avoir défini des identités Principales et être activés pour [!DNL Real-time Customer Profile]. Lors de la définition d’une identité Principale pour une entité B2B, gardez à l’esprit que les identifiants d’entité basés sur des chaînes peuvent se chevaucher si vous les collectez sur différents systèmes ou emplacements, ce qui peut entraîner des conflits de données dans Platform.
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_identity_namespace"
+>title="Espace de noms d’identité de référence"
+>abstract="L’espace de noms (type) du champ d’identité Principal du schéma de référence. Le schéma de référence doit disposer d’un champ d’identité Principal établi pour pouvoir participer à une relation."
+>text="See the documentation to learn more about identities in B2B relationships."
+
+Pour établir une relation, le schéma de destination doit avoir une identité Principale définie. Lors de la définition d’une identité Principale pour une entité B2B, gardez à l’esprit que les identifiants d’entité basés sur des chaînes peuvent se chevaucher si vous les collectez sur différents systèmes ou emplacements, ce qui peut entraîner des conflits de données dans Platform.
 
 Pour ce faire, toutes les classes B2B standard contiennent des champs &quot;clés&quot; conformes à la [[!UICONTROL Source B2B] type de données](../data-types/b2b-source.md). Ce type de données fournit des champs pour un identifiant de chaîne pour l’entité B2B, ainsi que d’autres informations contextuelles sur la source de l’identifiant. Un de ces champs, `sourceKey`, concatène les valeurs des autres champs du type de données afin de produire un identifiant totalement unique pour l’entité. Ce champ doit toujours être utilisé comme identité Principale pour les schémas d’entité B2B.
 
@@ -60,6 +72,7 @@ Pour ce faire, toutes les classes B2B standard contiennent des champs &quot;clé
 ### [!DNL Opportunities] schema
 
 Le schéma source &quot;[!DNL Opportunities]&quot; est basé sur la variable [!UICONTROL Opportunités commerciales XDM] classe . Un des champs fournis par la classe, `opportunityKey`, sert d’identifiant au schéma. Plus précisément, la variable `sourceKey` sous le champ `opportunityKey` est défini comme identité Principale du schéma sous un espace de noms personnalisé appelé [!DNL B2B Opportunity].
+
 Comme vous pouvez le voir sous **[!UICONTROL Propriétés du schéma]**, ce schéma a été activé pour une utilisation dans [!DNL Real-time Customer Profile].
 
 ![Schéma d’opportunités](../images/tutorials/relationship-b2b/opportunities.png)
@@ -72,11 +85,23 @@ Le schéma de destination &quot;[!DNL Accounts]&quot; est basé sur la variable 
 
 ## Définition d’un champ de relation pour le schéma source {#relationship-field}
 
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_relationship_name_current"
+>title="Nom de la relation à partir du schéma actuel"
+>abstract="Libellé décrivant la relation entre le schéma actuel et le schéma de référence (par exemple, &quot;Compte associé&quot;). Ce libellé est utilisé dans Profile et Segmentation pour donner un contexte aux données des entités B2B associées."
+>text="See the documentation to learn more about building B2B schema relationships."
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_relationship_name_reference"
+>title="Nom de la relation à partir du schéma de référence"
+>abstract="Libellé qui décrit la relation entre le schéma de référence et le schéma actuel (par exemple, &quot;Opportunités liées&quot;). Ce libellé est utilisé dans Profile et Segmentation pour donner un contexte aux données des entités B2B associées."
+>text="See the documentation to learn more about building B2B schema relationships."
+
 Pour définir une relation entre deux schémas, le schéma source doit disposer d’un champ dédié qui référence l’identité Principale du schéma de destination. Les classes B2B standard incluent des champs source clés dédiés pour les entités commerciales les plus courantes. Par exemple, la variable [!UICONTROL Opportunités commerciales XDM] contient les champs de clé source pour un compte associé (`accountKey`) et une campagne associée (`campaignKey`). Cependant, vous pouvez également ajouter d’autres [!UICONTROL Source B2B] des champs du schéma à l’aide de groupes de champs personnalisés si vous avez besoin de plus que les composants par défaut.
 
 >[!NOTE]
 >
->Actuellement, seules les relations multiples-à-un peuvent être définies d’un schéma source à un schéma de destination. Pour les relations de type &quot;un à plusieurs&quot;, vous devez définir le champ de relation dans le schéma qui représente le &quot;plusieurs&quot;.
+>Actuellement, seules les relations de type &quot;plusieurs à un&quot; et &quot;un à un&quot; peuvent être définies d’un schéma source à un schéma de destination. Pour les relations de type &quot;un à plusieurs&quot;, vous devez définir le champ de relation dans le schéma qui représente le &quot;plusieurs&quot;.
 
 Pour définir un champ de relation, sélectionnez l’icône de flèche (![Icône Flèche](../images/tutorials/relationship-b2b/arrow.png)) en regard du champ en question dans la zone de travail. Dans le cas de la fonction [!DNL Opportunities] schéma, il s’agit de la propriété `accountKey.sourceKey` étant donné que l’objectif est d’établir une relation multiple-à-un avec un compte.
 
