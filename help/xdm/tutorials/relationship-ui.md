@@ -6,10 +6,10 @@ description: Ce document fournit un tutoriel sur la définition d’une relation
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 0ce574700ce4134cddbb990b9b2765c25112b44d
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 23%
+source-wordcount: '1172'
+ht-degree: 22%
 
 ---
 
@@ -18,30 +18,27 @@ ht-degree: 23%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
 >title="Relations de schéma"
->abstract="Les schémas appartenant à différentes classes peuvent être liés de manière contextuelle par le biais de champs de relation, ce qui vous permet de créer des règles de segmentation plus complexes."
->text="See the documentation for more information on schema relationships."
+>abstract="Les schémas appartenant à différentes classes peuvent être liés de manière contextuelle par le biais de champs de relation, ce qui vous permet de créer des règles de segmentation plus complexes. Pour plus d’informations sur les relations de schéma, consultez la documentation ."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
 >title="Schéma de référence"
->abstract="Sélectionnez le schéma avec lequel vous souhaitez établir une relation. Ce schéma peut être une classe différente du schéma actuel."
->text="See the documentation for more information on schema relationships."
+>abstract="Sélectionnez le schéma avec lequel vous souhaitez établir une relation. Ce schéma peut être une classe différente du schéma actuel. Pour plus d’informations sur les relations de schéma, consultez la documentation ."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
 >title="Espace de noms d’identité de référence"
->abstract="L’espace de noms (type) du champ d’identité Principal du schéma de référence. Le schéma de référence doit disposer d’un champ d’identité Principal établi pour pouvoir participer à une relation."
->text="See the documentation for more information on schema relationships."
-
->[!NOTE]
->
->Pour savoir comment créer une relation multiple-à-un dans Real-time Customer Data Platform B2B Edition, consultez le guide sur [création de relations B2B](./relationship-b2b.md).
+>abstract="L’espace de noms (type) du champ d’identité Principal du schéma de référence. Le schéma de référence doit disposer d’un champ d’identité Principal établi pour pouvoir participer à une relation. Pour plus d’informations sur les relations de schéma, consultez la documentation ."
 
 Comprendre les relations entre vos clients et leurs interactions avec votre marque sur divers canaux est un aspect important d’Adobe Experience Platform. Définir ces relations au sein de la structure de votre [!DNL Experience Data Model] Les schémas (XDM) vous permettent d’obtenir des informations complexes sur les données de vos clients.
 
 Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-time Customer Profile], cela s’applique uniquement aux schémas qui partagent la même classe. Pour établir une relation entre deux schémas appartenant à des classes différentes, un champ de relation dédié doit être ajouté à un schéma source, qui référence l’identité d’un schéma de destination.
 
 Ce document fournit un tutoriel sur la définition d’une relation entre deux schémas à l’aide de l’éditeur de schémas dans la variable [!DNL Experience Platform] de l’interface utilisateur. Les étapes de la définition des relations de schémas à l’aide de l’API sont décrites dans le tutoriel sur la [définition d’une relation à l’aide de l’API Schema Registry](relationship-api.md).
+
+>[!NOTE]
+>
+>Pour savoir comment créer une relation multiple-à-un dans Real-time Customer Data Platform B2B Edition, consultez le guide sur [création de relations B2B](./relationship-b2b.md).
 
 ## Prise en main
 

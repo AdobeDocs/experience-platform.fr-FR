@@ -5,9 +5,9 @@ title: Principes de base de la composition des schémas
 topic-legacy: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '3992'
+source-wordcount: '4103'
 ht-degree: 26%
 
 ---
@@ -54,8 +54,7 @@ Les schémas d’enregistrement et de série temporelle contiennent tous deux un
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identités dans les schémas"
->abstract="Les identités sont des champs clés d’un schéma qui peuvent être utilisés pour identifier un objet, comme une adresse électronique ou un identifiant marketing. Ces champs sont utilisés pour créer le graphique d’identités pour chaque individu et créer des profils client."
->text="See the documentation for more information on identities in schemas."
+>abstract="Les identités sont des champs clés d’un schéma qui peuvent être utilisés pour identifier un objet, comme une adresse électronique ou un identifiant marketing. Ces champs sont utilisés pour créer le graphique d’identités pour chaque individu et créer des profils client. Pour plus d’informations sur les identités dans les schémas, consultez la documentation ."
 
 Les schémas sont utilisés pour ingérer des données dans [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’une entité individuelle. Il est donc important, lors de la réflexion sur les schémas, de réfléchir aux identités des clients et aux champs qui peuvent être utilisés pour identifier un sujet, quel que soit l’origine des données.
 
@@ -169,6 +168,11 @@ Les schémas sont composés à l’aide de la formule suivante :
 
 ### Classe {#class}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class"
+>title="Classe"
+>abstract="Chaque schéma est basé sur une seule classe. La classe définit le comportement du schéma et les propriétés communes que tous les schémas basés sur cette classe doivent contenir. Consultez la documentation pour en savoir plus sur l’implication des classes dans la composition des schémas."
+
 La composition d’un schéma commence par l’attribution d’une classe. Les classes définissent les aspects comportementaux des données que le schéma contiendra (enregistrements ou séries temporelles). En outre, les classes décrivent le plus petit de nombres de propriétés communes que tous les schémas basés sur cette classe doivent inclure et fournir une manière de fusionner plusieurs jeux de données compatibles.
 
 La classe d’un schéma détermine les groupes de champs qui pourront être utilisés dans ce schéma. Cela est décrit plus en détail dans la section [section suivante](#field-group).
@@ -182,6 +186,11 @@ La capture d’écran suivante montre comment les classes sont représentées da
 Pour obtenir la liste la plus récente des classes XDM standard disponibles, reportez-vous à la section [référentiel XDM officiel](https://github.com/adobe/xdm/tree/master/components/classes). Vous pouvez également vous reporter au guide sur la [exploration des composants XDM](../ui/explore.md) si vous préférez afficher les ressources dans l’interface utilisateur.
 
 ### Groupe de champs {#field-group}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup"
+>title="Groupe de champs"
+>abstract="Les groupes de champs sont des composants réutilisables qui vous permettent d’étendre les schémas avec des attributs supplémentaires. La plupart des groupes de champs ne sont compatibles qu’avec certaines classes. Vous pouvez utiliser des groupes de champs standard définis par Adobe ou vous pouvez définir manuellement vos propres groupes de champs personnalisés. Consultez la documentation pour en savoir plus sur l’implication des groupes de champs dans la composition des schémas."
 
 Un groupe de champs est un composant réutilisable qui définit un ou plusieurs champs qui implémentent certaines fonctions telles que les détails personnels, les préférences d’hôtel ou l’adresse. Les groupes de champs sont destinés à être inclus dans le cadre d’un schéma qui met en oeuvre une classe compatible.
 

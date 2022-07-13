@@ -2,10 +2,10 @@
 title: Définition d’une relation entre deux schémas dans Real-time Customer Data Platform B2B Edition
 description: Découvrez comment définir une relation multiple-à-un entre deux schémas dans l’édition B2B de Real-time Customer Data Platform.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: b9ec275df738e006d3fec2cdd64b0ed6577dbff8
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 7%
+source-wordcount: '1401'
+ht-degree: 6%
 
 ---
 
@@ -14,12 +14,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="Schéma de référence"
->abstract="Sélectionnez le schéma avec lequel vous souhaitez établir une relation. Selon la classe du schéma, il peut également exister des relations existantes avec d’autres entités dans le contexte B2B."
->text="See the documentation to learn how B2B schema classes relate to each other."
-
->[!NOTE]
->
->Si vous n’utilisez pas l’édition B2B de Real-time Customer Data Platform ou si vous souhaitez créer une relation un-à-un, consultez le guide sur [création d’une relation un-à-un](./relationship-ui.md) au lieu de .
+>abstract="Sélectionnez le schéma avec lequel vous souhaitez établir une relation. Selon la classe du schéma, il peut également exister des relations existantes avec d’autres entités dans le contexte B2B. Consultez la documentation pour découvrir comment les classes de schéma B2B se connectent entre elles."
 
 Real-time Customer Data Platform Édition B2B fournit plusieurs classes de modèle de données d’expérience (XDM) qui capturent les entités de données B2B fondamentales, y compris [comptes](../classes/b2b/business-account.md), [opportunités](../classes/b2b/business-opportunity.md), [campagnes](../classes/b2b/business-campaign.md), etc. En créant des schémas basés sur ces classes et en les activant pour une utilisation dans [Real-time Customer Profile](../../profile/home.md), vous pouvez fusionner des données provenant de sources disparates dans une représentation unifiée appelée schéma d’union.
 
@@ -32,6 +27,8 @@ Le diagramme suivant illustre la manière dont les différentes classes B2B peuv
 Ce tutoriel décrit les étapes de définition d’une relation multiple-à-un entre deux schémas dans l’édition CDP B2B en temps réel.
 
 >[!NOTE]
+>
+>Si vous n’utilisez pas l’édition B2B de Real-time Customer Data Platform ou si vous souhaitez créer une relation un-à-un, consultez le guide sur [création d’une relation un-à-un](./relationship-ui.md) au lieu de .
 >
 >Ce tutoriel se concentre sur la manière d’établir manuellement des relations entre les schémas B2B dans l’interface utilisateur de Platform. Si vous importez des données à partir d’une connexion source B2B, vous pouvez utiliser un utilitaire de génération automatique pour créer les schémas, les identités et les relations requis à la place. Pour plus d’informations sur les sources, consultez la documentation sur les espaces de noms et schémas B2B . [utilisation de l’utilitaire de génération automatique](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
@@ -47,15 +44,14 @@ Ce tutoriel nécessite une compréhension pratique de [!DNL XDM System] et de l�
 
 Vous devez avoir déjà créé les deux schémas qui seront définis dans la relation. À des fins de démonstration, ce tutoriel crée une relation entre les opportunités commerciales (définies dans un &quot;[!DNL Opportunities]&quot;&quot; et leur compte d’entreprise associé (défini dans un &quot;[!DNL Accounts]&quot;).
 
-Les relations de schéma sont représentées par un champ dédié dans un **schéma source** qui fait référence au champ d’identité Principal d’un **schéma de destination**. Dans les étapes suivantes, &quot;[!DNL Opportunities]&quot; sert de schéma source, tandis que &quot;[!DNL Accounts]&quot; agit comme schéma de destination.
+Les relations de schéma sont représentées par un champ dédié dans une **schéma source** qui fait référence au champ d’identité Principal d’un **schéma de destination**. Dans les étapes suivantes, &quot;[!DNL Opportunities]&quot; sert de schéma source, tandis que &quot;[!DNL Accounts]&quot; agit comme schéma de destination.
 
 ### Comprendre les identités dans les relations B2B
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
 >title="Espace de noms d’identité de référence"
->abstract="L’espace de noms (type) du champ d’identité Principal du schéma de référence. Le schéma de référence doit disposer d’un champ d’identité Principal établi pour pouvoir participer à une relation."
->text="See the documentation to learn more about identities in B2B relationships."
+>abstract="L’espace de noms (type) du champ d’identité Principal du schéma de référence. Le schéma de référence doit disposer d’un champ d’identité Principal établi pour pouvoir participer à une relation. Consultez la documentation pour en savoir plus sur les identités dans les relations B2B."
 
 Pour établir une relation, le schéma de destination doit avoir une identité Principale définie. Lors de la définition d’une identité Principale pour une entité B2B, gardez à l’esprit que les identifiants d’entité basés sur des chaînes peuvent se chevaucher si vous les collectez sur différents systèmes ou emplacements, ce qui peut entraîner des conflits de données dans Platform.
 
@@ -88,14 +84,12 @@ Le schéma de destination &quot;[!DNL Accounts]&quot; est basé sur la variable 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"
 >title="Nom de la relation à partir du schéma actuel"
->abstract="Libellé décrivant la relation entre le schéma actuel et le schéma de référence (par exemple, &quot;Compte associé&quot;). Ce libellé est utilisé dans Profile et Segmentation pour donner un contexte aux données des entités B2B associées."
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="Libellé décrivant la relation entre le schéma actuel et le schéma de référence (par exemple, &quot;Compte associé&quot;). Ce libellé est utilisé dans Profile et Segmentation pour donner un contexte aux données des entités B2B associées. Consultez la documentation pour en savoir plus sur la création de relations de schéma B2B."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_reference"
 >title="Nom de la relation à partir du schéma de référence"
->abstract="Libellé qui décrit la relation entre le schéma de référence et le schéma actuel (par exemple, &quot;Opportunités liées&quot;). Ce libellé est utilisé dans Profile et Segmentation pour donner un contexte aux données des entités B2B associées."
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="Libellé qui décrit la relation entre le schéma de référence et le schéma actuel (par exemple, &quot;Opportunités liées&quot;). Ce libellé est utilisé dans Profile et Segmentation pour donner un contexte aux données des entités B2B associées. Consultez la documentation pour en savoir plus sur la création de relations de schéma B2B."
 
 Pour définir une relation entre deux schémas, le schéma source doit disposer d’un champ dédié qui référence l’identité Principale du schéma de destination. Les classes B2B standard incluent des champs source clés dédiés pour les entités commerciales les plus courantes. Par exemple, la variable [!UICONTROL Opportunités commerciales XDM] contient les champs de clé source pour un compte associé (`accountKey`) et une campagne associée (`campaignKey`). Cependant, vous pouvez également ajouter d’autres [!UICONTROL Source B2B] des champs du schéma à l’aide de groupes de champs personnalisés si vous avez besoin de plus que les composants par défaut.
 
