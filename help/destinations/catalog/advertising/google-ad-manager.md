@@ -3,10 +3,10 @@ keywords: gestionnaire de publicités Google;publicité Google;double-clic;Doubl
 title: Connexion Google Ad Manager
 description: Google Ad Manager, anciennement appelé DoubleClick for Publishers ou DoubleClick AdX, est une plateforme de service publicitaire de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, par le biais de vidéos et dans des applications mobiles.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 0c5d3ae2f43b0eeb6c86f535e37a906b7c414600
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 27%
+source-wordcount: '873'
+ht-degree: 25%
 
 ---
 
@@ -64,8 +64,8 @@ Avant de créer la variable [!DNL Google Ad Manager] destination dans Platform, 
 
 * **Identifiant de compte**: Identifiant de compte de l’Adobe avec Google. ID de compte : 87933855.
 * **ID de client**: Identifiant du compte client de l’Adobe avec Google. ID de client : 89690775.
-* **Identifiant réseau** : il s’agit de votre compte avec [!DNL Google Ad Manager]
-* **Identifiant du lien d’audience** : il s’agit de votre compte avec [!DNL Google Ad Manager]
+* **Code réseau**: C&#39;est votre [!DNL Google Ad Manager] identifiant réseau, trouvé sous **[!UICONTROL Admin > Paramètres globaux]** dans l’interface de Google, ainsi que dans l’URL.
+* **Identifiant du lien d’audience**: Il s’agit d’un identifiant spécifique associé à votre [!DNL Google Ad Manager] réseau (et non votre [!DNL Network code]), également trouvé sous **[!UICONTROL Admin > Paramètres globaux]** dans l’interface de Google.
 * Votre type de compte. DFP de Google ou AdX buyer.
 
 ## Se connecter à la destination {#connect}

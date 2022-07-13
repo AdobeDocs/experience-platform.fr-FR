@@ -1,10 +1,11 @@
 ---
 title: (Version bêta) [!DNL Google Ad Manager 360] connection
 description: Google Ad Manager 360 est une plateforme de service publicitaire de Google qui permet aux éditeurs de gérer l’affichage des publicités sur leurs sites web, par le biais de vidéos et dans des applications mobiles.
-source-git-commit: 60ae86ed6e741bd7739086105bfe70952841d454
+exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
+source-git-commit: 4f57574bc17f43406df800358c7320372eb197d0
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 15%
+source-wordcount: '888'
+ht-degree: 12%
 
 ---
 
@@ -18,7 +19,7 @@ Pour plus d’informations sur le fonctionnement des identifiants fournis par l�
 
 >[!IMPORTANT]
 >
->Cette destination est actuellement en version bêta et n’est disponible que pour un nombre limité de clients. Pour demander l’accès au [!DNL Google Ad Manager 360] connectez-vous, contactez votre représentant Adobe et fournissez vos [!DNL IMS Organization ID].
+>Cette destination est actuellement en version bêta et n’est disponible que pour un nombre limité de clients. Pour demander l’accès à la connexion [!DNL Google Ad Manager 360], contactez votre représentant Adobe et fournissez vos [!DNL IMS Organization ID].
 
 Le [!DNL Google Ad Manager 360] exports de destination [!DNL CSV] dans vos fichiers [!DNL Google Cloud Storage] du compartiment. Une fois que vous avez exporté la variable [!DNL CSV] fichiers, vous devez les importer dans vos [!DNL Google Ad Manager 360] compte .
 
@@ -44,7 +45,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil de la fonction [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma applicables (votre PPID, par exemple), tels que choisis dans l’écran de sélection des attributs de profil de la fonction [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Fréquence des exports | **[!UICONTROL Lot]** | Les destinations de lot exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur [destinations basées sur des fichiers de lots](/help/destinations/destination-types.md#file-based). |
 
 {style=&quot;table-layout:auto&quot;}
@@ -57,12 +58,14 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 >
 >La liste autorisée est obligatoire avant de configurer votre première [!DNL Google Ad Manager] destination dans Platform. Assurez-vous que le processus de liste autorisée décrit ci-dessous a été terminé par [!DNL Google] avant de créer une destination.
 
-Avant de créer la variable [!DNL Google Ad Manager 360] destination dans Platform, vous devez contacter [!DNL Google] pour que l’Adobe soit placé sur la liste des fournisseurs de données autorisés et pour que votre compte soit ajouté à la liste autorisée. Contact [!DNL Google] et fournissez les informations suivantes :
+>[!IMPORTANT]
+>
+>Google a simplifié le processus de connexion des plateformes de gestion de l’audience externe à Google Ad Manager 360. Vous pouvez désormais passer par le processus de liaison à Google Ad Manager 360 en libre-service. Lecture [Segments des plateformes de gestion des données](https://support.google.com/admanager/answer/3289669?hl=en) dans la documentation de Google. Vous devriez avoir à portée de main les identifiants répertoriés ci-dessous.
 
 * **Identifiant de compte**: Identifiant de compte de l’Adobe avec Google. ID de compte : 87933855.
 * **ID de client**: Identifiant du compte client de l’Adobe avec Google. ID de client : 89690775.
-* **Identifiant réseau** : il s’agit de votre compte avec [!DNL Google Ad Manager]
-* **Identifiant du lien d’audience** : il s’agit de votre compte avec [!DNL Google Ad Manager]
+* **Code réseau**: C&#39;est votre [!DNL Google Ad Manager] identifiant réseau, trouvé sous **[!UICONTROL Admin > Paramètres globaux]** dans l’interface de Google, ainsi que dans l’URL.
+* **Identifiant du lien d’audience**: Il s’agit d’un identifiant spécifique associé à votre [!DNL Google Ad Manager] réseau (et non votre [!DNL Network code]), également trouvé sous **[!UICONTROL Admin > Paramètres globaux]** dans l’interface de Google.
 * Votre type de compte. DFP de Google ou AdX buyer.
 
 ## Se connecter à la destination {#connect}
@@ -71,16 +74,31 @@ Avant de créer la variable [!DNL Google Ad Manager 360] destination dans Platfo
 > 
 >Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
+Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
-### Paramètres de connexion {#parameters}
+### Authentification à la destination {#authenticate}
 
-Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
+Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
+
+* **[!UICONTROL Accès à l’ID de clé]**: Chaîne alphanumérique de 61 caractères utilisée pour authentifier votre [!DNL Google Cloud Storage] compte à Platform.
+* **[!UICONTROL Clé d’accès secrète]**: Chaîne codée en base 64 caractères de 40 caractères utilisée pour authentifier votre [!DNL Google Cloud Storage] compte à Platform.
+
+Pour plus d’informations sur ces valeurs, voir [Clés HMAC de stockage dans le cloud Google](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. Pour savoir comment générer votre propre identifiant de clé d’accès et votre clé d’accès secrète, reportez-vous à la section [[!DNL Google Cloud Storage] présentation de la source](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
+
+### Renseignement des détails de destination {#destination-details}
+
+Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
-* **[!UICONTROL Nom du compartiment]**: saisissez le nom du [!DNL Google Cloud Storage] compartiment à utiliser par cette destination.
-* **[!UICONTROL Chemin du dossier]**: saisissez le chemin d’accès au dossier de destination qui hébergera les fichiers exportés.
+* **[!UICONTROL Nom du compartiment]**: Saisissez le nom du [!DNL Google Cloud Storage] compartiment à utiliser par cette destination.
+* **[!UICONTROL Chemin du dossier]**: Entrez le chemin d’accès au dossier de destination qui hébergera les fichiers exportés.
+
+### Activer les alertes {#enable-alerts}
+
+Vous pouvez activer les alertes pour recevoir des notifications sur l’état du flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+
+Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des segments vers cette destination {#activate}
 
