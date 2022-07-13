@@ -5,9 +5,9 @@ title: Présentation d’Identity Namespace
 topic-legacy: overview
 description: Les espaces de noms d’identité sont des composants du Service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name@email.com" comme adresse électronique ou "443522" comme identifiant CRM numérique.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3a9e97b472482d6a7f6df5f2a59f2f75635be181
+source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
 workflow-type: tm+mt
-source-wordcount: '1598'
+source-wordcount: '1627'
 ht-degree: 20%
 
 ---
@@ -32,7 +32,13 @@ Par exemple, deux fragments de profil peuvent contenir des identifiants Principa
 
 ![](images/identity-service-stitching.png)
 
-### Types d’identité
+### Types d’identité {#identity-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_create_namespace"
+>title="Définition du type d’identité"
+>abstract="Le type d’identité contrôle si les données sont stockées ou non dans le graphique d’identités. Les identifiants autres que les personnes ne seront pas stockés et tous les autres types d’identité le seront."
+>text="Learn more in documentation"
 
 Les données peuvent être identifiées par plusieurs types d’identité différents. Le type d’identité est spécifié au moment de la création de l’espace de noms d’identité et contrôle la conservation ou non des données dans le graphique d’identités, ainsi que toutes les instructions spéciales concernant la manière dont ces données doivent être traitées. Tous les types d’identité sauf **Identifiant de non-personne** procédez de la même manière que pour associer un espace de noms et sa valeur d’identifiant correspondante à un cluster de graphiques d’identités. Les données ne sont pas regroupées lors de l’utilisation de **Identifiant de non-personne**.
 
@@ -70,14 +76,14 @@ Les espaces de noms standard suivants sont fournis pour être utilisés par tout
 | Téléphone (E.164) | Espace de noms qui représente les numéros de téléphone bruts qui doivent être hachés au format E.164. Le format E.164 comprend un signe plus (`+`), un numéro de téléphone international, un numéro de téléphone local et un numéro de téléphone. Par exemple : `(+)(country code)(area code)(phone number)`. |
 | Téléphone (SHA256) | Espace de noms qui représente les numéros de téléphone qui doivent être hachés à l’aide de SHA256. Vous devez supprimer les symboles, les lettres et les zéros de début. Vous devez également ajouter le code d’appel de pays comme préfixe. |
 | Téléphone (SHA256_E.164) | Espace de noms qui représente les numéros de téléphone bruts qui doivent être hachés au format SHA256 et E.164. |
-| TNTID | Espace de noms représentant Adobe Target. Consultez le document suivant sur [Cible](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) pour plus d’informations. |
+| TNTID | Espace de noms représentant Adobe Target. Consultez le document suivant sur [Cible](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=fr) pour plus d’informations. |
 | Windows AID | Espace de noms qui représente un identifiant Windows Advertising. Consultez le document suivant sur [Identifiant Windows Advertising](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) pour plus d’informations. |
 
 ### Affichage des espaces de noms d’identité
 
 Pour afficher les espaces de noms d’identité dans l’interface utilisateur, sélectionnez **[!UICONTROL Identités]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Parcourir]**.
 
-![parcourir](./images/browse.png)
+![navigation](./images/browse.png)
 
 Une liste d’espaces de noms d’identité s’affiche dans l’interface principale de la page, affichant des informations sur leur nom, les symboles d’identité, la date de dernière mise à jour et s’il s’agit d’un espace de noms standard ou personnalisé. Le rail de droite contient des informations sur [!UICONTROL Force du graphique d’identités].
 
