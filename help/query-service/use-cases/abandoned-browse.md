@@ -4,7 +4,7 @@ title: Exemple de cas d’utilisation pour Adobe Experience Platform Query Servi
 topic-legacy: tutorial
 description: Exemple de bout en bout montrant la versatilité et les avantages de Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 06655e930e447b48089891ca930da89854b8320b
+source-git-commit: 6f6256b5601ce5c230ef334a9ce71325b43fda45
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 Ce document et la présentation vidéo qui l’accompagne fournissent un workflow de haut niveau de bout en bout qui montre comment Adobe Experience Platform [!DNL Query Service] tire parti des informations commerciales stratégiques de votre entreprise. En prenant l’exemple d’un cas pratique d’abandon de navigation, ce guide illustre les concepts clés suivants :
 
-* L’importance essentielle du traitement des données pour optimiser le potentiel de Adobe Experience Platform
+* L’importance essentielle du traitement des données pour maximiser le potentiel de Adobe Experience Platform.
 * Méthodes pour créer la requête en fonction de votre architecture de données existante.
 * Assurez-vous de la qualité des données en fonction de vos besoins et des méthodes permettant d’atténuer tout manque.
 * Processus de planification de l’exécution d’une requête à une fréquence définie en vue de son utilisation en aval dans la segmentation et les destinations pour la personnalisation.
