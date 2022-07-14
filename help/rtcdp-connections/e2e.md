@@ -1,19 +1,19 @@
 ---
-title: Présentation de la connexion Real-time Customer Data Platform de bout en bout
-description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide des connexions Real-time Customer Data Platform.
+title: Présentation complète de Real-Time Customer Data Platform Connections
+description: Présentation détaillée de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide de Real-Time Customer Data Platform Connections.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
 source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2612'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
-# Présentation de bout en bout des connexions Real-time Customer Data Platform
+# Présentation complète de Real-Time Customer Data Platform Connections
 
-Les connexions Real-time Customer Data Platform (RTCDP) collectent et transfèrent vos données vers d’autres produits Adobe et destinations tierces. Pour envoyer des données d’événement de votre application au réseau Adobe Experience Platform Edge, il est important de comprendre ces technologies de base et de bien les configurer afin de fournir vos données aux destinations dont vous avez besoin, lorsque vous en avez besoin.
+Real-Time Customer Data Platform (RTCDP) Connections collecte et transfère vos données vers d’autres produits Adobe et d’autres destinations tierces. Pour envoyer des données d’événement de votre application à Adobe Experience Platform Edge Network, il est important de comprendre ces technologies de base et de bien les configurer afin de fournir vos données aux destinations dont vous avez besoin, lorsque vous en avez besoin.
 
-Ce guide fournit un tutoriel général sur la manière d’envoyer un événement par le biais du réseau Edge à l’aide des connexions RTCDP. Plus précisément, le tutoriel décrit les étapes à suivre pour installer et configurer l’extension de balise SDK Web Adobe Experience Platform dans l’interface utilisateur de collecte de données (anciennement Adobe Experience Platform Launch).
+Ce guide fournit un tutoriel détaillé sur la manière d’envoyer un événement par Edge Network à l’aide de RTCDP Connections. Plus précisément, le tutoriel décrit les étapes à suivre pour installer et configurer l’extension de balise SDK Web Adobe Experience Platform dans l’interface utilisateur de collecte de données (anciennement Adobe Experience Platform Launch).
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Reportez-vous à la [présentation de l’interface utilisateur du contrôle d�
 
 ## Résumé du processus
 
-Le processus de configuration des connexions RTCDP pour votre site web peut être résumé comme suit :
+La configuration de RTCDP Connections pour votre site Web peut se résumer de la manière suivante :
 
 1. [Créez un schéma](#schema) afin de déterminer la structure de vos données lors de leur envoi au réseau Edge.
 1. [Créez un flux de données](#datastream) pour configurer les destinations vers lesquelles vos données doivent être envoyées.
@@ -69,7 +69,7 @@ Utilisez la barre de recherche pour affiner la liste afin de faciliter la recher
 
 La zone de travail des schémas s’affiche ; il s’agit d’une arborescence de votre schéma XDM comprenant les champs fournis par le groupe de champs SDK Web.
 
-![Structure d&#39;un schéma](./images/e2e/schema-structure.png)
+![Structure d’un schéma](./images/e2e/schema-structure.png)
 
 Sélectionnez le champ racine dans l’arborescence pour ouvrir les **[!UICONTROL propriétés du schéma]** dans le rail de droite, où vous pouvez fournir un nom et une description facultative du schéma.
 
@@ -131,7 +131,7 @@ Sélectionnez **[!UICONTROL Balises]** dans le volet de navigation de gauche pou
 
 Si vous créez une propriété, nommez-la de manière descriptive et définissez [!UICONTROL Plateforme] sur **[!UICONTROL Web]**. Indiquez le domaine complet de la propriété Web, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-![Création d&#39;une propriété](./images/e2e/create-property.png)
+![Création d’une propriété](./images/e2e/create-property.png)
 
 La page d’aperçu de la propriété s’affiche. À partir de là, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Catalogue]**. Recherchez la liste du SDK Web Platform (éventuellement à l’aide de la barre de recherche pour limiter les résultats) et sélectionnez **[!UICONTROL Installer]**.
 
