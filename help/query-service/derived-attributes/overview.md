@@ -1,10 +1,8 @@
 ---
 title: Attributs dérivés
 description: Les attributs dérivés offrent un moyen pratique de générer des attributs de votre choix qui peuvent être actualisés à n’importe quel rythme régulier et éventuellement publiés dans vos données Real-time Customer Profile. Ce document présente l’utilisation de Query Service pour créer des attributs dérivés à utiliser avec vos données de profil.
-hide: true
-hidefromtoc: true
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
-source-git-commit: ae11d6f622c42d08373b7454ef920a80abaf2425
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%

@@ -1,9 +1,7 @@
 ---
 title: 'Cas d’utilisation des attributs dérivés basés sur des déciles '
 description: Ce guide décrit les étapes requises pour utiliser Query Service afin de créer des attributs dérivés basés sur des déciles à utiliser avec vos données de profil.
-hide: true
-hidefromtoc: true
-source-git-commit: 4f44e66ee7537e038628a5beb6b3b3bd0760ff1b
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 3%
