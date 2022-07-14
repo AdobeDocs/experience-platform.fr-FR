@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;collecte de données;launch;sdk web
+keywords: Experience Platform;accueil;rubriques populaires;collecte de données;lancement;sdk web
 solution: Experience Platform
-title: Présentation des connexions Real-time Customer Data Platform
+title: Présentation de Real-Time Customer Data Platform Connections
 topic-legacy: overview
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '472'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
-# Présentation des connexions Real-time Customer Data Platform
+# Présentation de Real-Time Customer Data Platform Connections
 
-Les connexions Real-time Customer Data Platform (RTCDP) fournissent une suite de technologies qui vous permettent de collecter des données d’expérience client à partir de sources côté client et de les envoyer en quelques secondes au réseau Adobe Experience Platform Edge où elles peuvent être enrichies, transformées et distribuées vers des destinations d’Adobe ou non-Adobe.
+Real-Time Customer Data Platform (RTCDP) Connections fournit un ensemble de technologies vous permettant de collecter des données d’expérience client à partir des sources côté client. Vous pouvez ensuite les envoyer à Adobe Experience Platform Edge Network afin qu’elles soient enrichies, transformées et distribuées vers des destinations Adobe ou autres qu’Adobe en quelques secondes.
 
-Les connexions RTCDP sont prises en charge pour les sources côté client suivantes :
+RTCDP Connections est pris en charge pour les sources côté client suivantes :
 
 * Applications web
 * Applications mobiles natives
 * Applications OTT (over-the-top)
 
-Les connexions RTCDP se concentrent sur la capacité de découverte et l’accessibilité des jeux de données ingérés, notamment :
+RTCDP Connections se concentre sur la capacité de découverte et l’accessibilité des jeux de données ingérés, ce qui comprend :
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=fr)
 * [Balises](../tags/home.md)
@@ -34,7 +34,7 @@ Les connexions RTCDP se concentrent sur la capacité de découverte et l’acces
 * [Modèle de données d’expérience (XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
-Ce guide présente de manière approfondie les connexions RTCDP et comment envoyer des données aux produits Adobe Experience Cloud et aux applications non Adobes par le biais de Platform Edge Network.
+Ce guide fournit une présentation générale de RTCDP Connections ainsi que la manière dont il procède pour envoyer des données aux produits Adobe Experience Cloud et aux applications autres qu’Adobe par Platform Edge Network.
 
 ## Balises, SDK Web et SDK Mobile
 
@@ -62,12 +62,12 @@ Le réseau Platform Edge est un réseau de serveurs distribué dans le monde en
 
 >[!NOTE]
 >
->Le transfert d’événement est une fonctionnalité payante qui n’est incluse que dans l’offre Connexions Real-time Customer Data Platform .
+>Le transfert d’événement est une fonctionnalité payante uniquement incluse dans l’offre Real-Time Customer Data Platform Connections.
 
 ## Étapes suivantes
 
-Ce document fournit un aperçu général du fonctionnement des connexions RTCDP afin d’automatiser le processus d’envoi des données d’expérience client collectées aux produits Adobe et aux destinations tierces.
+Ce document fournit une présentation détaillée de la manière dont RTCDP Connections fonctionne pour automatiser le processus d’envoi de vos données d’expérience client collectées à des produits Adobe et à des destinations tierces.
 
-![Structure de collecte de données](./images/home/collection.png)
+![Framework de collecte de données](./images/home/collection.png)
 
-Pour plus d’informations sur le workflow général impliqué dans l’envoi des données d’événement par le biais du réseau Edge, reportez-vous à la section [aperçu de bout en bout](./e2e.md).
+Pour plus d’informations sur le workflow général impliqué dans l’envoi des données d’événement via Edge Network, reportez-vous à la section [Présentation complète](./e2e.md).
