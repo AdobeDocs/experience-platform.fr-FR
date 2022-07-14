@@ -2,7 +2,7 @@
 title: Prise en charge du contrôle d’accès basé sur les attributs pour les schémas ad hoc
 description: Un guide pour restreindre l’accès aux champs de données dans les schémas ad hoc générés via Adobe Experience Platform Query Service.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
+source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 8%
@@ -40,7 +40,7 @@ Pour ajouter une étiquette de données, accédez à [!UICONTROL Schémas] ongle
 >
 >Les schémas ad hoc ne sont pas affichés par défaut dans l’inventaire des schémas.
 
-## Découvrez les schémas ad hoc dans l’inventaire des schémas de l’interface utilisateur de Platform
+## Découvrez les schémas ad hoc dans l’inventaire des schémas de l’interface utilisateur de Platform {#discover-ad-hoc-schemas}
 
 Pour activer l’affichage des schémas ad hoc dans l’interface utilisateur de Platform, sélectionnez l’icône de filtre (![Une icône de filtre.](../images/data-governance/filter.png)) à gauche du champ de recherche, puis sélectionnez **[!UICONTROL Affichage des schémas ad hoc] dans le rail de gauche qui s’affiche.
 
