@@ -3,24 +3,24 @@ keywords: Experience Platform;accueil;rubriques populaires;champs de mappage Ana
 solution: Experience Platform
 title: Mappage des champs pour le connecteur source Adobe Analytics
 topic-legacy: overview
-description: Adobe Experience Platform vous permet d’ingérer des données Adobe Analytics par le biais du connecteur de données Analytics (ADC, Analytics Data Connector). Certaines données ingérées par ADC peuvent être mappées directement des champs Analytics aux champs du modèle de données d’expérience (XDM), tandis que d’autres nécessitent des transformations et des fonctions spécifiques pour être mappées avec succès.
+description: Adobe Experience Platform vous permet d’ingérer des données Adobe Analytics par le biais de la source Analytics. Certaines données ingérées par ADC peuvent être mappées directement des champs Analytics aux champs du modèle de données d’expérience (XDM), tandis que d’autres nécessitent des transformations et des fonctions spécifiques pour être mappées avec succès.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: efe36904b0dce94a8b1f5e7a3d3f38da1038d49c
 workflow-type: tm+mt
-source-wordcount: '3405'
-ht-degree: 99%
+source-wordcount: '3401'
+ht-degree: 98%
 
 ---
 
-# Mappages des champs Analytics
+# Mappages de champs Analytics
 
-Adobe Experience Platform vous permet d’ingérer des données Adobe Analytics par le biais du connecteur de données Analytics (ADC, Analytics Data Connector). Certaines données ingérées par ADC peuvent être mappées directement des champs Analytics aux champs du modèle de données d’expérience (XDM), tandis que d’autres nécessitent des transformations et des fonctions spécifiques pour être mappées avec succès.
+Adobe Experience Platform vous permet d’ingérer des données Adobe Analytics par le biais de la source Analytics. Certaines données ingérées par ADC peuvent être mappées directement des champs Analytics aux champs du modèle de données d’expérience (XDM), tandis que d’autres nécessitent des transformations et des fonctions spécifiques pour être mappées avec succès.
 
 ![](../images/analytics-data-experience-platform.png)
 
 ## Champs de mappage direct
 
-Certains champs sont directement mappés d’Adobe Analytics au modèle de données d’expérience (XDM, Experience Data Model).
+Certains champs sont directement mappés d’Adobe Analytics au modèle de données d’expérience (XDM, Experience Data Model).
 
 Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics (*Champ Analytics*), le champ XDM correspondant (*Champ XDM*) et son type (*Type XDM*), ainsi qu’une description du champ (*Description*).
 
@@ -139,7 +139,7 @@ Ces champs ont une source unique, mais ils sont mappés à **plusieurs** emplace
 
 ## Champs de mappage générés
 
-Il est nécessaire de transformer certains champs provenant d’ADC, ce qui nécessite une logique au-delà d’une copie directe d’Adobe Analytics pour pouvoir les générer dans XDM.
+Il est nécessaire de transformer certains champs provenant d’ADC, ce qui nécessite une logique au-delà d’une copie directe d’Adobe Analytics pour pouvoir les générer dans XDM.
 
 Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics (*Champ Analytics*), le champ XDM correspondant (*Champ XDM*) et son type (*Type XDM*), ainsi qu’une description du champ (*Description*).
 
@@ -185,11 +185,11 @@ Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics
 | hitid_low | _id | chaîne | Utilisé conjointement avec hitid_high pour identifier de manière unique un accès. |
 | ip | environment.ipV4 | chaîne | Adresse IP, basée sur l’en-tête HTTP de la demande d’image. |
 | j_jscript | environment.browserDetails.javaScriptEnabled | booléen | Version de JavaScript utilisée. |
-| mcvisid_high + mcvisid_low | identityMap | objet | Identifiant visiteur Experience Cloud. |
-| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | chaîne | Identifiant visiteur Experience Cloud. |
-| mcvisid_high | endUserIDs._experience.mcid.primary | booléen | Identifiant visiteur Experience Cloud. |
-| mcvisid_high | endUserIDs._experience.mcid.namespace.code | chaîne | Identifiant visiteur Experience Cloud. |
-| mcvisid_low | identityMap | objet | Identifiant visiteur Experience Cloud. |
+| mcvisid_high + mcvisid_low | identityMap | objet | Identifiant visiteur Experience Cloud. |
+| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | chaîne | Identifiant visiteur Experience Cloud. |
+| mcvisid_high | endUserIDs._experience.mcid.primary | booléen | Identifiant visiteur Experience Cloud. |
+| mcvisid_high | endUserIDs._experience.mcid.namespace.code | chaîne | Identifiant visiteur Experience Cloud. |
+| mcvisid_low | identityMap | objet | Identifiant visiteur Experience Cloud. |
 | sdid_high + sdid_low | _experience.target.supplementalDataID | chaîne | Identifiant d’assemblage d’accès. Le champ d’analyse sdid_high et sdid_low correspond à l’identifiant de données supplémentaire utilisé pour associer deux (ou plusieurs) accès entrants. |
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | chaîne | Proximité du relais Mobile Services. |
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | entier | Nom de chapitre vidéo. |
@@ -199,7 +199,7 @@ Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics
 
 ## Champs de mappage avancé
 
-Certains champs (appelés « valeurs de publication ») nécessitent des transformations plus avancées avant de pouvoir mapper les champs Adobe Analytics au modèle de données d’expérience (XDM). L’exécution de ces transformations avancées implique l’utilisation d’Adobe Experience Platform Query Service et de fonctions prédéfinies (appelées fonctions définies par Adobe) pour la transformation en sessions, l’attribution et la déduplication.
+Certains champs (appelés « valeurs de publication ») nécessitent des transformations plus avancées avant de pouvoir mapper les champs Adobe Analytics au modèle de données d’expérience (XDM). L’exécution de ces transformations avancées implique l’utilisation d’Adobe Experience Platform Query Service et de fonctions prédéfinies (appelées fonctions définies par Adobe) pour la transformation en sessions, l’attribution et la déduplication.
 
 Pour en savoir plus sur l’exécution de ces transformations à l’aide de Query Service, consultez la documentation sur les [fonctions définies par Adobe](../../../../query-service/sql/adobe-defined-functions.md).
 
