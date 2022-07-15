@@ -4,7 +4,7 @@ title: Bonnes pratiques relatives aux droits de licence de gestion des données
 description: Ce document décrit les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2531'
 ht-degree: 100%
 
@@ -194,7 +194,7 @@ Le tableau suivant présente la liste des fonctionnalités actuellement disponib
 | Durée de vie du jeu de données [!DNL ExperienceEvent] | Appliquez une durée de vie d’expiration pour les jeux de données comportementaux dans le magasin de profils. Contactez votre représentant du service d’assistance Adobe. |
 | [Filtres de préparation de données Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Appliquez des filtres [!DNL Kafka] pour exclure les données inutiles de l’ingestion |
 | [Filtres de connecteur source Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Appliquez des filtres de connexion source Audience Manager pour exclure les données inutiles de l’ingestion. |
-| [Filtres Alloy de données du SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=fr#fundamentals) | Appliquez des filtres Alloy pour exclure les données inutiles de l’ingestion. |
+| [Filtres Alloy de données du SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Appliquez des filtres Alloy pour exclure les données inutiles de l’ingestion. |
 | [Filtres de données de transfert d’événement](../../tags/ui/event-forwarding/overview.md) | Appliquez des filtres [!DNL Kafka] côté serveur pour exclure les données inutiles de l’ingestion.  Pour plus d’informations, consultez la documentation sur les [règles de balise](../../tags/ui/managing-resources/rules.md). |
 | [Interface utilisateur du tableau de bord d’utilisation de la licence](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Affichez un instantané des données liées aux licences de l’entreprise pour Experience Platform. |
 | [API Dataset Overlap Report](../../profile/tutorials/dataset-overlap-report.md) | Génère les jeux de données qui contribuent le plus à l’audience adressable. |

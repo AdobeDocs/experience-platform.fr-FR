@@ -8,7 +8,7 @@ feature: Web SDK
 source-git-commit: 2b9edb258e647dc04faadbbaeab429cf8ac3e0ec
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 81%
+ht-degree: 84%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 81%
    * [Cas d’utilisation pris en charge](fundamentals/supported-use-cases.md)
 * Flux de données {#datastreams}
    * [Présentation](./datastreams/overview.md)
-   * [Préparer des données pour la collecte de données](./datastreams/data-prep.md)
+   * [Préparation des données pour la collecte de données](./datastreams/data-prep.md)
 * Identité {#identity}
    * [Présentation](identity/overview.md)
    * [Identifiants d’appareils propriétaires](identity/first-party-device-ids.md)

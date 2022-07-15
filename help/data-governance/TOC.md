@@ -1,6 +1,6 @@
 ---
 audience: user
-user-guide-title: Aide sur la gouvernance des données d’Adobe Experience Platform
+user-guide-title: Aide sur la gouvernance des données d’Adobe Experience Platform
 breadcrumb-title: Guide de gouvernance des données
 user-guide-description: Faites respecter les restrictions d’utilisation des données au moyen d’étiquettes, d’actions marketing et de stratégies.
 feature: Data Governance
@@ -12,7 +12,7 @@ ht-degree: 100%
 ---
 
 
-# Gouvernance des données d’Adobe Experience Platform {#data-governance}
+# Gouvernance des données d’Adobe Experience Platform {#data-governance}
 
 * [Présentation de la gouvernance des données](home.md)
 * Libellés d’utilisation des données {#labels}

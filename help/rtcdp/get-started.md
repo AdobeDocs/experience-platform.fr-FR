@@ -1,7 +1,7 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Prise en main de Real-time Customer Data Platform
-description: Utilisez ce scénario type comme exemple lors de la configuration de votre implémentation de la plateforme de données clients en temps réel.
+description: Utilisez ce scénario type comme exemple lors de la configuration de votre implémentation de Real-Time Customer Data Platform.
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 85%
 
 Ce guide de prise en main vous accompagne tout au long d’un exemple de mise en œuvre de la plateforme de données client (CDP) en temps réel Vous pouvez l’utiliser comme exemple lors de la configuration de votre propre implémentation. Bien que ce guide présente des exemples spécifiques, il fournit des liens vers des informations supplémentaires que vous pouvez utiliser lors de la création de votre configuration.
 
-Cet exemple illustre la puissance de la plateforme des données clients en temps réel d’Adobe, optimisée par Experience Platform, pour :
+Cet exemple illustre la puissance de la plateforme de données client en temps réel , optimisée par Adobe Experience Platform, pour :
 
 * ingérer des données à partir de plusieurs sources ;
 * les fusionner en une seule [!DNL real-time customer profile]
@@ -39,7 +39,7 @@ Par conséquent, Luma a adopté les objectifs suivants :
 
 Pour atteindre ces objectifs, l’équipe marketing doit être en mesure de gérer les données clients à l’échelle.
 
-Grâce à la plateforme des données clients en temps réel, optimisée par Adobe Experience Platform, l’équipe marketing de Luma peut :
+Grâce à la plateforme CDP en temps réel, optimisée par Adobe Experience Platform, l’équipe marketing de Luma peut :
 
 1. collecter des données à partir de plateformes disparates et s’assurer qu’elles sont disponibles en aval pour d’autres activités marketing ;
 1. créer une vue unique en temps réel des consommateurs, indépendamment de l’origine des données ;
@@ -79,7 +79,7 @@ Par exemple, un visiteur non identifié accède à la section Hommes du site de 
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
-Luma peut faire correspondre le comportement du visiteur à un profil utilisateur sur Adobe Experience Platform et commencer à obtenir une vue plus complète du comportement de ce consommateur.
+Luma peut faire correspondre le comportement du visiteur à un profil utilisateur sur Adobe Experience Platform et commencer à obtenir un aperçu plus riche du comportement de ce consommateur.
 
 ### Obtention d’une vue plus détaillée du client
 
@@ -108,7 +108,7 @@ Elle accède à la page d’accueil pour en parcourir d’autres.
 
 Sarah bénéficie d’une expérience de page d’accueil personnalisée diffusée dynamiquement en fonction de ses [!DNL Real-time Customer Profile] dans Adobe Experience Platform.
 
-Elle voit du contenu pertinent, grâce à la personnalisation optimisée par Adobe Sensei dans Adobe Target, qui prend en compte ses achats précédents et son intérêt pour les vêtements de course à pied. Luma adapte également le contenu du catalogue pour hommes à l’équipement de course pour hommes sur la base de ses dernières recherches.
+Elle voit le contenu pertinent, grâce à la personnalisation optimisée par Adobe Sensei dans Adobe Target, qui prend en compte ses achats précédents et son intérêt pour les vêtements et l’équipement de course à pied. Luma adapte également le contenu du catalogue pour hommes à l’équipement de course pour hommes sur la base de ses dernières recherches.
 
 Plus bas sur la page, Sarah découvre les produits phares, ainsi que de nouvelles suggestions basées sur les derniers articles consultés.
 
@@ -118,7 +118,7 @@ Ce contenu personnalisé permet à Sarah de trouver les articles qui l’intére
 
 Sarah change d’activité et quitte le site, mettant fin à sa session. Luma peut utiliser ses données dans Adobe Experience Platform pour l’inciter à revenir sur le site.
 
-La plateforme des données clients en temps réel d’Adobe, optimisée par  Experience Platform, a été conçue pour la gestion de l’expérience client. Elle permet aux entreprises :
+La plateforme de données client en temps réel , optimisée par Adobe Experience Platform, est conçue pour la gestion de l’expérience client. Elle permet aux entreprises :
 
 * de simplifier l’intégration et l’activation des données ;
 * de gérer l’utilisation des données connues et inconnues ;
@@ -246,7 +246,7 @@ Dans ce scénario, Luma souhaite recibler cette audience avec personnalisation s
 * Google, pour le display
 
    <!--* Facebook -->
-* Adobe Campaign, pour les emails
+* Adobe Campaign, pour le courrier électronique
 
 <!-- ![image](assets/luma-sched-dest.png) -->
 
@@ -284,7 +284,7 @@ Sarah consulte un site de médias sociaux sur son appareil mobile et voit une pu
 
 Plus tard dans la journée, elle ouvre sa messagerie et découvre les e-mails reciblés. Elle sélectionne un lien vers Luma dans un email.
 
-Ce lien la redirige vers la page d’accueil mobile de Luma, où elle bénéficie d’une expérience hautement personnalisée, optimisée par Adobe Target.
+Ce lien la dirige sur la page d’accueil mobile de Luma, où elle bénéficie d’une expérience hautement personnalisée optimisée par Adobe Target.
 
 * Elle est accueillie en tant que membre Bronze.
 * Elle voit le message « Cadeau ».
@@ -297,7 +297,7 @@ Grâce aux possibilités de suppression d’audience, Sarah ne sera plus ciblée
 
 ## Analyse du profil
 
-Les marketeurs de Luma utilisent Adobe Experience Platform pour analyser le segment des clients qui offrent des cadeaux dans le tableau de bord de la plateforme des données clients en temps réel. Ils observent les résultats de cette initiative au fil du temps et constatent qu’elle se développe. Les clients réagissent aux offres et dépensent plus d’argent.
+Les spécialistes marketing de Luma utilisent Adobe Experience Platform pour analyser le segment des clients qui offrent des cadeaux sur le tableau de bord de la plateforme CDP en temps réel. Ils observent les résultats de cette initiative au fil du temps et constatent qu’elle se développe. Les clients réagissent aux offres et dépensent plus d’argent.
 
 Ces informations permettent aux marketeurs de réagir à ce signal, qui a été alimenté par la disponibilité de ces données dans la plateforme des données clients et l’association de clients comme Sarah à ce segment.
 

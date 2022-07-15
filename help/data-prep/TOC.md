@@ -5,8 +5,8 @@ user-guide-description: Préparez vos données pour l’ingestion dans Adobe Ex
 feature: Data Prep
 source-git-commit: e96263847f53ea2c884c273fd7986855d4c478c1
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 96%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

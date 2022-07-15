@@ -7,7 +7,7 @@ feature: Segments
 source-git-commit: 0f20b5cfb3301bc7f7f336e14e9faa0234c05c51
 workflow-type: tm+mt
 source-wordcount: '163'
-ht-degree: 74%
+ht-degree: 76%
 
 ---
 
@@ -35,15 +35,15 @@ ht-degree: 74%
    - [Segmentation par flux](ui/streaming-segmentation.md)
    - [Segmentation par flux (Vidéo)](video/streaming-segmentation-overview.md)
    - [Refactorisation des contraintes de temps](ui/segment-refactoring.md)
-   - Correspondance de segments {#segment-match}
+   - Segment Match {#segment-match}
       - [Correspondance de segment - Aperçu](ui/segment-match/overview.md)
       - [Dépannage](ui/segment-match/troubleshooting.md)
 - [Respect du consentement](consents.md)
 - [Segmentation d’entités multiples](multi-entity-segmentation.md)
 - Langage de requête de profil {#pql}
    - [Présentation](pql/overview.md)
-   - [Fonctions booléennes ](pql/boolean-functions.md)
-   - [Fonctions de comparaison ](pql/comparison-functions.md)
+   - [Fonctions booléennes](pql/boolean-functions.md)
+   - [Fonctions de comparaison](pql/comparison-functions.md)
    - [Fonctions de tableau, de liste et d’ensemble](pql/array-functions.md)
    - [Fonctions de mappage](pql/map-functions.md)
    - [Fonctions de chaîne](pql/string-functions.md)
@@ -64,4 +64,4 @@ ht-degree: 74%
    - [Création d’un jeu de données pour exporter des données](tutorials/create-dataset-export-segment.md)
    - [Application de la conformité à l’utilisation des données pour les segments](tutorials/governance.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)

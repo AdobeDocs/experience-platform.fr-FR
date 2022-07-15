@@ -5,7 +5,7 @@ breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Visualisez les données dʼExperience Platform sur des tableaux de bord personnalisables.
 feature: Dashboards
 source-git-commit: 058f1cf5aa0ea134f276d1b3bc7064195fb252f1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 100%
 

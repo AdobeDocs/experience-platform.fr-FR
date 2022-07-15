@@ -1,9 +1,9 @@
 ---
 title: Guide de lʼAPI Reactor
-description: LʼAPI Reactor permet aux développeurs de gérer par programmation toutes les ressources des balises dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
+description: L’API Reactor permet aux développeurs de gérer toutes les ressources de balises par programme dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 100%
 
@@ -11,7 +11,7 @@ ht-degree: 100%
 
 # Guide de l’API [!DNL Reactor]
 
-LʼAPI Reactor fournit plusieurs points dʼentrée qui vous permettent de gérer par programmation toutes les ressources des balises dans Adobe Experience Platform.
+L’API Reactor fournit plusieurs points d’entrée qui vous permettent de gérer toutes les ressources de balises par programme dans Adobe Experience Platform.
 
 Ces points d’entrée sont décrits ci-dessous. Consultez les guides des différents points dʼentrée pour obtenir plus dʼinformations et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur la manière de vous authentifier auprès de lʼAPI.
 

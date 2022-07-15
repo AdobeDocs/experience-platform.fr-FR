@@ -4,12 +4,12 @@ title: Barrières de sécurité par défaut pour les données de profil client e
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: 'Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données Profile pour optimiser les performances du système. '
+description: 'Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données Profile afin d’optimiser les performances du système. '
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 source-git-commit: 8a343ad275dcfc33eb304e3fc19d375b81277448
 workflow-type: tm+mt
 source-wordcount: '1941'
-ht-degree: 47%
+ht-degree: 49%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 47%
 
 Adobe Experience Platform vous permet de proposer des expériences cross-canal personnalisées basées sur des informations comportementales et des attributs du client sous la forme de profils client en temps réel. Pour prendre en charge cette nouvelle approche des profils, Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel.
 
-Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données Profile pour optimiser les performances du système. Lors de la révision des barrières de sécurité suivantes, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
+Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données Profile afin d’optimiser les performances du système. Lors de la révision des barrières de sécurité suivantes, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
 
 >[!NOTE]
 >

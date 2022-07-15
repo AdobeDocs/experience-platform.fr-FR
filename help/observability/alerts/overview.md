@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;période
+keywords: Experience Platform;accueil;rubriques populaires;période
 title: Présentation des alertes
-description: Découvrez les alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte.
+description: Découvrez les alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
@@ -13,11 +13,11 @@ ht-degree: 100%
 
 # Présentation des alertes
 
-Adobe Experience Platform vous permet de vous abonner à des alertes basées sur des événements concernant les activités Adobe Experience Platform. Les alertes réduisent ou éliminent la nécessité d’interroger l’[[!DNL Observability Insights] API](../api/overview.md) afin de vérifier si une tâche est terminée, si un certain jalon a été atteint dans un processus ou si des erreurs se sont produites.
+Adobe Experience Platform vous permet de vous abonner à des alertes basées sur des événements concernant les activités Adobe Experience Platform. Les alertes réduisent ou éliminent la nécessité d’interroger l’[[!DNL Observability Insights] API](../api/overview.md) afin de vérifier si une tâche est terminée, si un certain jalon a été atteint dans un processus ou si des erreurs se sont produites.
 
 Lorsqu’un certain ensemble de conditions de vos opérations Platform est atteint (par exemple, un problème potentiel lorsque le système dépasse un certain seuil), Platform peut envoyer des messages d’alerte à tous les utilisateurs de votre organisation qui se sont abonnés à ces messages. Ces messages peuvent se répéter pendant un intervalle prédéfini jusqu’à ce que l’alerte ait été résolue.
 
-Ce document fournit un aperçu des alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte.
+Ce document fournit un aperçu des alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte.
 
 ## Alertes ponctuelles ou alertes répétées
 
@@ -40,7 +40,7 @@ Une alerte peut être décomposée en plusieurs éléments :
 | **Mesure** | Une [mesure](../api/metrics.md#available-metrics) d’observabilité dont la valeur déclenche l’alerte, comme le nombre d’événements d’ingestion par lots ayant échoué (`timeseries.ingestion.dataset.batchfailed.count`). |
 | **Condition** | Une condition liée à la mesure qui déclenche l’alerte si elle est résolue sur true, telle qu’une mesure de comptage dépassant un certain nombre. Cette condition peut être associée à une fenêtre temporelle prédéfinie. |
 | **Période** | (Facultatif) La condition d’une alerte peut être limitée à une période prédéfinie. Par exemple, une alerte peut se déclencher en fonction du nombre de lots ayant échoué au cours des cinq dernières minutes. |
-| **Action** | Lorsqu’une alerte est déclenchée, une action est exécutée. Plus précisément, les messages sont envoyés aux destinataires applicables par le biais d’un canal de diffusion, tel qu’un webhook préconfiguré ou l’interface utilisateur Experience Platform. |
+| **Action** | Lorsqu’une alerte est déclenchée, une action est exécutée. Plus précisément, les messages sont envoyés aux destinataires applicables par le biais d’un canal de diffusion, tel qu’un webhook préconfiguré ou l’interface utilisateur Experience Platform. |
 | **Fréquence** | (Facultatif) Une alerte peut être configurée pour répéter son action à un intervalle défini si sa condition reste vraie ou n’est pas résolue. |
 
 {style=&quot;table-layout:auto&quot;}

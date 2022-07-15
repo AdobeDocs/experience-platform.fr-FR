@@ -4,7 +4,7 @@ title: Exemple de cas d’utilisation de l’édition B2B de Real-time Customer 
 description: Cet exemple de scénario fournit une illustration de configuration pour votre implémentation de l’édition B2B de Real-time Customer Data Platform.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1134'
 ht-degree: 100%
 
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 # Exemple de cas d’utilisation de l’édition B2B de Real-time Customer Data Platform
 
-L’édition B2B de Real-time Customer Data Platform étend les offres existantes de Real-time CDP et Adobe Experience Platform pour prendre en charge les workflows et données B2B. Ce document fournit un exemple de cas d’utilisation qui illustre les avantages supplémentaires fournis par l’édition B2B. Ce sont :
+L’édition B2B de Real-time Customer Data Platform étend les offres existantes de Real-time CDP et Adobe Experience Platform pour prendre en charge les workflows et données B2B. Ce document fournit un exemple de cas d’utilisation qui illustre les avantages supplémentaires fournis par l’édition B2B. Ce sont :
 
 - Associez les données de comptes et d’utilisateurs provenant de différentes sources de données compartimentées afin de produire une vue d’ensemble offrant une meilleure compréhension des clients et permettant une segmentation plus précise. Pour plus d’informations, consultez la documentation sur la [création de relations de schémas XDM](./schemas/b2b.md) à utiliser avec des sources B2B variées.
 - Segmentez une audience sur la base d’attributs d’entités liées. Cela comprend les comptes, les opportunités, les campagnes et les listes marketing. Les segments ne sont plus limités aux attributs de personne et aux événements d’expérience. Consultez la [documentation sur la segmentation B2B](./segmentation/b2b.md) pour obtenir plus d’exemples de création d’audiences spécifiques au B2B.
@@ -58,9 +58,9 @@ Avec l’édition B2B de Real-time CDP, l’équipe marketing de Bodea peut :
 
 - Combiner les données de toutes les sources disparates (plusieurs instances Marketo et CRM, et la gestion des données principales) dans l’édition B2B de Real-time CDP.
 
-Avec l’édition B2B de RT-CDP, Bodea peut utiliser le connecteur source Marketo Engage pour importer les données B2B de Marketo 1 et Marketo 2 dans Experience Platform, et maintenir ces données à jour à l’aide des applications connectées de Platform. Pour plus d’informations, consultez la documentation du [connecteur source Marketo](../sources/connectors/adobe-applications/marketo/marketo.md).
+Avec l’édition B2B de RT-CDP, Bodea peut utiliser le connecteur source Marketo Engage pour importer les données B2B de Marketo 1 et Marketo 2 dans Experience Platform, et maintenir ces données à jour à l’aide des applications connectées de Platform. Pour plus d’informations, consultez la documentation du [connecteur source Marketo](../sources/connectors/adobe-applications/marketo/marketo.md).
 
-Les données B2B (utilisateurs, comptes, opportunités et activité) de CRM 1 sont synchronisées dans Marketo 1. De même, toutes les données B2B de CRM 2 sont synchronisées dans Marketo 2. Elles sont synchronisés dans Adobe Experience Platform via le connecteur source Marketo. Cependant, si Bodea veut importer des données supplémentaires d’un CRM dans Experience Platform, il peut utiliser les connecteurs CRM existants.
+Les données B2B (utilisateurs, comptes, opportunités et activité) de CRM 1 sont synchronisées dans Marketo 1. De même, toutes les données B2B de CRM 2 sont synchronisées dans Marketo 2. Elles sont synchronisés dans Adobe Experience Platform via le connecteur source Marketo. Cependant, si Bodea veut importer des données supplémentaires d’un CRM dans Experience Platform, il peut utiliser les connecteurs CRM existants.
 
 Pour des raisons de simplicité et dans le cadre de cet exemple, les utilisateurs sont identifiés par leurs adresses e-mail. Les données de comptes combinées pour cet exemple se présentent comme suit :
 
@@ -83,7 +83,7 @@ Pour des raisons de simplicité et dans le cadre de cet exemple, les utilisateur
 
 - Créez une audience constituée des destinataires les plus réceptifs à la nouvelle campagne marketing de Bodea. Dans cet exemple, l’édition B2B de RT-CDP aide le professionnel du marketing à identifier `p2@townsend.com` comme la cible souhaitée pour cette campagne marketing.
 
-En utilisant les destinations Marketo Engage et LinkedIn, Bodea dispose d’une solution customer experience management (CXM) de bout en bout pour son équipe marketing. L’audience créée dans Experience Platform est envoyée vers la destination Marketo, où elle apparaît sous forme de liste statique. Cette audience est ensuite automatiquement ajoutée à une campagne marketing Marketo. Simultanément, l’audience peut également être envoyée à une campagne marketing LinkedIn par l’édition B2B de RT-CDP.
+En utilisant les destinations Marketo Engage et LinkedIn, Bodea dispose d’une solution customer experience management (CXM) de bout en bout pour son équipe marketing. L’audience créée dans Experience Platform est envoyée vers la destination Marketo, où elle apparaît sous forme de liste statique. Cette audience est ensuite automatiquement ajoutée à une campagne marketing Marketo. Simultanément, l’audience peut également être envoyée à une campagne marketing LinkedIn par l’édition B2B de RT-CDP.
 
 ## Étapes suivantes
 

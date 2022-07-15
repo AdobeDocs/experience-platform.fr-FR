@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;emplacement
 solution: Experience Platform
 title: Présentation des jeux de données
 topic-legacy: datasets
-description: Ce document présente de manière générale les jeux de données dans Experience Platform.
+description: Ce document présente de manière générale les jeux de données dans Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
@@ -40,7 +40,7 @@ Pour plus d’informations, consultez la [présentation de Data Ingestion](../..
 
 ## Application de libellés d’utilisation aux jeux de données
 
-La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Le cadre de gouvernance des données vous permet d’appliquer des libellés d’utilisation pour classer les données en fonction des stratégies d’utilisation qui s’appliquent à ces données.
+La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Le cadre de gouvernance des données vous permet d’appliquer des libellés d’utilisation pour classer les données en fonction des stratégies d’utilisation qui s’appliquent à ces données.
 
 Les libellés d’utilisation des données peuvent être appliqués à des jeux de données entiers ou à des champs de jeu de données individuels. Les libellés ajoutés au niveau du jeu de données sont hérités par tous les champs du jeu de données.
 
@@ -58,8 +58,8 @@ Voici une liste des services en aval qui utilisent des jeux de données pour div
 * [[!DNL Data Access API]](../../data-access/home.md): Permet d’accéder au contenu des fichiers stockés dans les jeux de données et de le télécharger.
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md) : associe les identités des appareils et des systèmes, en liant les jeux de données en fonction des champs d’identité définis par les schémas XDM auxquels ils se conforment.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Exploitation [!DNL Identity Service] pour créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-time Customer Profile] extrait les données de la fonction [!DNL Data Lake] et conserve les profils client dans son propre entrepôt de données distinct.
-* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md)[!DNL Real-time Customer Profile] : permet de créer des segments et de générer des audiences à partir de vos données Ces audiences peuvent ensuite être exportées vers leurs propres jeux de données dans la variable [!DNL Data Lake].
-* [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md) : utilise l’apprentissage automatique et l’intelligence artificielle pour découvrir des insights dans les jeux de données volumineux.
+* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md)[!DNL Real-time Customer Profile] : permet de créer des segments et de générer des audiences à partir de vos données Ces audiences peuvent ensuite être exportées vers leurs propres jeux de données dans la variable [!DNL Data Lake].
+* [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md) : utilise l’apprentissage automatique et l’intelligence artificielle pour découvrir des insights dans les jeux de données volumineux.
 * [Adobe Experience Platform Query Service](../../query-service/home.md): Permet d’utiliser SQL standard pour interroger des données dans [!DNL Experience Platform], en associant n’importe quel jeu de données dans [!DNL Data Lake] et capturer les résultats des requêtes en tant que nouveau jeu de données à utiliser dans les rapports, [!DNL Data Science Workspace]ou [!DNL Real-time Customer Profile].
 
 ## Étapes suivantes

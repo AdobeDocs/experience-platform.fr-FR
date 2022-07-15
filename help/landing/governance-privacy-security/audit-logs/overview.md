@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
 workflow-type: tm+mt
 source-wordcount: '847'
-ht-degree: 15%
+ht-degree: 18%
 
 ---
 
@@ -17,9 +17,9 @@ En un sens simple, un journal d’audit indique : **who** performance **what** e
 
 Ce document couvre les journaux d’audit dans Platform, y compris la manière de les afficher et de les gérer dans l’interface utilisateur ou l’API.
 
-## Types d’événement capturés par les journaux d’audit {#category}
+## Types d’événements capturés par les journaux d’audit {#category}
 
-Le tableau suivant décrit les actions sur lesquelles les ressources sont enregistrées par les journaux d’audit :
+Le tableau ci-dessous présente les actions sur lesquelles les ressources sont enregistrées par les journaux d’audit:
 
 | Ressource | Actions |
 | --- | --- |
@@ -39,7 +39,7 @@ Le tableau suivant décrit les actions sur lesquelles les ressources sont enregi
 | [Requête](../../../query-service/ui/overview.md) | <ul><li>Exécuter</li></ul> |
 | [Modèle de requête](../../../query-service/ui/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Rôle (contrôle d’accès basé sur les attributs)](../../../access-control/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Ajouter un utilisateur</li><li>Supprimer un utilisateur</li></ul> |
-| [Environnement de test](../../../sandboxes/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Réinitialiser</li><li>Supprimer</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Réinitialiser</li><li>Supprimer</li></ul> |
 | [Requête planifiée](../../../query-service/ui/overview.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Schéma](../../../xdm/schema/composition.md) | <ul><li>Créez</li><li>Mise à jour </li><li>Supprimer</li><li>Activation pour Profile</li></ul> |
 | [Segment](../../../segmentation/home.md) | <ul><li>Créez</li><li>Supprimer</li><li>Activation de segment</li><li>Suppression de segment</li></ul> |
@@ -77,12 +77,12 @@ Sélectionnez l’icône d’entonnoir (![Icône Filtrer](../../images/audit-log
 
 Les filtres suivants sont disponibles pour les événements de contrôle dans l’interface utilisateur :
 
-| Filtrer | Description |
+| Filtre | Description |
 | --- | --- |
 | [!UICONTROL Catégorie] | Utiliser le menu déroulant pour filtrer les résultats affichés par [category](#category). |
 | [!UICONTROL Action] | Filtrer par action. Actuellement uniquement [!UICONTROL Créer] et [!UICONTROL Supprimer] Les actions peuvent être filtrées. |
 | [!UICONTROL Utilisateur] | Saisissez l’identifiant utilisateur complet (par exemple, `johndoe@acme.com`) pour filtrer par utilisateur. |
-| [!UICONTROL État] | Filtrez selon si l’action a été autorisée (terminée) ou refusée en raison de l’absence de [contrôle d&#39;accès](../../../access-control/home.md) autorisations. |
+| [!UICONTROL Statut] | Filtrez selon si l’action a été autorisée (terminée) ou refusée en raison de l’absence de [contrôle d&#39;accès](../../../access-control/home.md) autorisations. |
 | [!UICONTROL Date] | Sélectionnez une date de début et/ou une date de fin pour définir une période en fonction de laquelle filtrer les résultats. Les données peuvent être exportées avec une période de recherche arrière de 90 jours (par exemple, 2021-12-15 à 2022-03-15). Cela peut varier en fonction du type d’événement. |
 
 Pour supprimer un filtre, sélectionnez le &quot;X&quot; sur l’icône de pilule du filtre en question, ou sélectionnez **[!UICONTROL Effacer tout]** pour supprimer tous les filtres.
