@@ -2,14 +2,14 @@
 title: Définition d’une relation entre deux schémas dans Real-time Customer Data Platform B2B Edition
 description: Découvrez comment définir une relation multiple-à-un entre deux schémas dans l’édition B2B de Real-time Customer Data Platform.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
 workflow-type: tm+mt
 source-wordcount: '1401'
 ht-degree: 6%
 
 ---
 
-# Définition d’une relation multiple-à-un entre deux schémas dans Real-time Customer Data Platform B2B Edition
+# Définition d’une relation multiple-à-un entre deux schémas dans Real-time Customer Data Platform B2B Edition {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
@@ -44,7 +44,7 @@ Ce tutoriel nécessite une compréhension pratique de [!DNL XDM System] et de l�
 
 Vous devez avoir déjà créé les deux schémas qui seront définis dans la relation. À des fins de démonstration, ce tutoriel crée une relation entre les opportunités commerciales (définies dans un &quot;[!DNL Opportunities]&quot;&quot; et leur compte d’entreprise associé (défini dans un &quot;[!DNL Accounts]&quot;).
 
-Les relations de schéma sont représentées par un champ dédié dans une **schéma source** qui fait référence au champ d’identité Principal d’un **schéma de destination**. Dans les étapes suivantes, &quot;[!DNL Opportunities]&quot; sert de schéma source, tandis que &quot;[!DNL Accounts]&quot; agit comme schéma de destination.
+Les relations de schéma sont représentées par un champ dédié dans un **schéma source** qui fait référence au champ d’identité Principal d’un **schéma de destination**. Dans les étapes suivantes, &quot;[!DNL Opportunities]&quot; sert de schéma source, tandis que &quot;[!DNL Accounts]&quot; agit comme schéma de destination.
 
 ### Comprendre les identités dans les relations B2B
 
