@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '1794'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [[!DNL Destinations]](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Query Service](#query-service)
-- [Connexions Real-time Customer Data Platform](#data-collection)
+- [Real-Time Customer Data Platform Connections](#data-collection)
 - [Sources](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -70,21 +70,21 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Médicaments]](https://github.com/adobe/xdm/blob/master/components/classes/medication.schema.json) | Une classe de l&#39;industrie de la santé qui capture les détails d&#39;une substance utilisée pour le traitement médical, en particulier un médicament ou un médicament. |
-| Classe | [[!UICONTROL Plan]](https://github.com/adobe/xdm/blob/master/components/classes/plan.schema.json) | Classe du secteur de la santé qui capture les détails d’un plan médical, tel qu’un plan de santé ou un plan d’assurance. |
-| Classe | [[!UICONTROL Fournisseur]](https://github.com/adobe/xdm/blob/master/components/classes/provider.schema.json) | Un cours du secteur de la santé qui capture les détails d’un prestataire de soins. |
-| Classe | [[!UICONTROL Payer]](https://github.com/adobe/xdm/blob/master/components/classes/payer.schema.json) | Un cours du secteur de la santé qui capture les détails sur une compagnie d’assurance. |
-| Classe | [[!UICONTROL Calendrier des événements en direct]](https://github.com/adobe/xdm/blob/master/components/classes/live-event-schedule.json) | Classe de l’industrie du sport et du divertissement qui capture les détails d’un programme d’événement en direct, tel qu’un programme de concert itinérant ou l’horaire d’une équipe sportive. |
-| Classe | [[!UICONTROL Emplacement ]](https://github.com/adobe/xdm/blob/master/components/classes/location.json) | Classe de l’industrie du sport et du divertissement qui capture l’emplacement d’un événement en direct, comme une salle de concert ou une salle de sport. |
-| Groupe de champs | [[!UICONTROL Médicaments de santé]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) | Un groupe de champs pour la variable [!UICONTROL Médicaments] qui capture les détails sur les médicaments tels que le nom de la marque, le numéro de lot et la quantité. |
-| Groupe de champs | [[!UICONTROL Détails du plan de soins de santé]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/plan/healthcare-plan-details.schema.json) | Un groupe de champs pour la variable [!UICONTROL Plan] qui capture des détails tels que le réseau, le type et l’état principal. |
-| Groupe de champs | [[!UICONTROL Fournisseur de soins de santé]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Un groupe de champs pour la variable [!UICONTROL Fournisseur] classe qui capture les détails d’un professionnel de santé individuel ou d’un organisme d’établissements de santé autorisé à fournir des services de diagnostic et de traitement de santé. |
-| Groupe de champs | [[!UICONTROL Détails des membres du service de santé]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Un groupe de champs pour la variable [!UICONTROL XDM Individual Profile] qui capture les détails d’une personne qui a ou va recevoir un service ou des soins, tels que les coordonnées, le médecin traitant Principal et les informations sur le plan. |
-| Groupe de champs | [[!UICONTROL Détails du site]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) | Un groupe de champs pour la variable [!UICONTROL XDM ExperienceEvent] qui capture les informations collectées par les outils de sites, tels que chatbot, survey, etc. |
-| Groupe de champs | [[!UICONTROL Achat de ticket d’événement en direct]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-live-event-ticket-purchase.json) | Un groupe de champs pour la variable [!UICONTROL XDM ExperienceEvent] qui capture l’historique des achats de billets pour un événement en direct, tel qu’un concert ou un jeu sportif. |
-| Groupe de champs | [[!UICONTROL Planification d’événements sportifs et de divertissement]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/live-event-schedule/sports-entertainment-event-schedule.schema.json) | Un groupe de champs pour la variable [!UICONTROL Calendrier des événements en direct] qui capture d’autres détails sur le planning, tels que le nom de l’attraction, les heures d’ouverture des portes, etc. |
-| Groupe de champs | [[!UICONTROL Lieu d&#39;événement sportif]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/location/sports-entertainment-event-venue.schema.json) | Un groupe de champs pour la variable [!UICONTROL Emplacement] Cette classe donne des détails supplémentaires sur le lieu de l’événement, tels que la capacité de salle et les zones de marché désignées (DMA). |
-| Schéma global | (Plusieurs) | De nouveaux schémas globaux sont disponibles pour les mesures de destinations pour les statistiques RTCDP. Voir ce qui suit : [requête d’extraction](https://github.com/adobe/xdm/pull/1560) pour plus d’informations. |
+| Classe | [[!UICONTROL Médicaments]](https://github.com/adobe/xdm/blob/master/components/classes/medication.schema.json) | Classe du secteur de la santé qui recueille les informations sur une substance utilisée pour un traitement médical, en particulier un médicament. |
+| Classe | [[!UICONTROL Plan]](https://github.com/adobe/xdm/blob/master/components/classes/plan.schema.json) | Classe du secteur de la santé qui recueille les informations sur un régime médical tel qu’un régime de santé ou un régime d’assurance. |
+| Classe | [[!UICONTROL Prestataire]](https://github.com/adobe/xdm/blob/master/components/classes/provider.schema.json) | Classe du secteur de la santé qui recueille les informations sur un prestataire de soins de santé. |
+| Classe | [[!UICONTROL Débiteur]](https://github.com/adobe/xdm/blob/master/components/classes/payer.schema.json) | Classe du secteur de la santé qui recueille les informations sur une compagnie d’assurance. |
+| Classe | [[!UICONTROL Planning des événements en direct]](https://github.com/adobe/xdm/blob/master/components/classes/live-event-schedule.json) | Classe du secteur du sport et du divertissement qui recueille les informations sur un planning d’événements en direct, tel que le planning d’un concert itinérant ou d’une équipe sportive. |
+| Classe | [[!UICONTROL Emplacement]](https://github.com/adobe/xdm/blob/master/components/classes/location.json) | Classe de l’industrie du sport et du divertissement qui recueille les informations sur le lieu d’un événement en direct, telles qu’une salle de concert ou une salle de sport. |
+| Groupe de champs | [[!UICONTROL Médicaments]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) | Un groupe de champs pour la classe [!UICONTROL Médicaments] qui recueille les informations sur les médicaments telles que le nom de la marque, le numéro de lot et la quantité. |
+| Groupe de champs | [[!UICONTROL Informations relatives au plan de soins de santé]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/plan/healthcare-plan-details.schema.json) | Un groupe de champs pour la classe [!UICONTROL Plan] qui recueille les informations telles que le réseau, le type et le statut principal. |
+| Groupe de champs | [[!UICONTROL Prestataire de soins de santé]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Un groupe de champs pour la classe [!UICONTROL Prestataire] qui recueille les informations sur un professionnel de santé individuel ou un organisme de soins de santé autorisé à fournir des diagnostics et des traitements médicaux. |
+| Groupe de champs | [[!UICONTROL Informations sur les membres du service de santé]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Un groupe de champs pour la classe [!UICONTROL Profile individuel XDM] qui recueille les informations sur une personne qui a reçu ou qui bénéficiera d’un service ou de soins, telles que les coordonnées, le médecin traitant principal et les informations sur le plan. |
+| Groupe de champs | [[!UICONTROL Informations sur l’outil de site]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) | Un groupe de champs pour la classe [!UICONTROL XDM ExperienceEvent] qui recueille les informations collectées par les outils de sites, tels que le chatbot, le questionnaire, etc. |
+| Groupe de champs | [[!UICONTROL Achat de billets d’événement en direct]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-live-event-ticket-purchase.json) | Un groupe de champs pour la classe [!UICONTROL XDM ExperienceEvent] qui recueille l’historique des achats des billets pour un événement en direct, tel qu’un concert ou un jeu de sport. |
+| Groupe de champs | [[!UICONTROL Planning d’événements sportifs et de divertissement]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/live-event-schedule/sports-entertainment-event-schedule.schema.json) | Un groupe de champs pour la classe [!UICONTROL Planning des événements en direct] qui recueille d’autres informations relatives au planning, telles que le nom de l’événement, les heures d’ouverture des portes, etc. |
+| Groupe de champs | [[!UICONTROL Lieu de l’événement sportif]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/location/sports-entertainment-event-venue.schema.json) | Un groupe de champs pour la classe [!UICONTROL Lieu] qui recueille des informations supplémentaires sur le lieu de l’événement, telles que la capacité de la salle et les zones de marché désignées (DMA). |
+| Schéma global | (Plusieurs) | De nouveaux schémas globaux sont disponibles pour les mesures de destinations des insights RTCDP. Voir la [requête de stratégie pull](https://github.com/adobe/xdm/pull/1560) pour plus d’informations. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -93,10 +93,10 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Type de composant | Nom | Description de la mise à jour |
 | --- | --- | --- |
 | Comportement | [[!UICONTROL Schéma de série temporelle]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | Ajout d’un type d’événement de mise à jour des états du média. |
-| Groupe de champs | [[!UICONTROL Réservation de logement]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json) | Ajout d’une propriété de passage en caisse. |
-| Type de données | [[!UICONTROL Informations sur les médias]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Ajout de champs state-start et state-end. |
-| Extension | [[!UICONTROL Événement de changement de Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Ajout de deux champs utilisés pour stocker les attributs afin d’identifier l’utilisateur et l’heure d’un événement de création. |
-| Extension | [[!UICONTROL Adobe CJM ExperienceEvent - Détails de l’interaction du message]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/message-interaction.schema.json) | Ajout d’informations d’abonnement, de consentement, d’e-mail personnalisé et de données supplémentaires dans l’objet de page d’entrée. |
+| Groupe de champs | [[!UICONTROL Réservation de logement]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json) | Ajout d’une propriété de passage en caisse pour le logement. |
+| Type de données | [[!UICONTROL Informations sur les médias]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Ajout de champs de début des états et de fin des états. |
+| Extension | [[!UICONTROL Événement de changement de Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Ajout de deux champs utilisés pour le stockage des attributs permettant d’identifier l’utilisateur et l’heure d’un événement de création. |
+| Extension | [[!UICONTROL Adobe CJM ExperienceEvent - informations sur l’interaction du message]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/message-interaction.schema.json) | Ajout d’informations relatives à l’abonnement, au consentement, aux e-mails personnalisés et aux données supplémentaires dans l’objet de page de destination. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -119,17 +119,17 @@ Pour plus d’informations sur Query Service, consultez la section [présentatio
 
 ## Connexions Real-time Customer Data Platform {#data-collection}
 
-Real-time Customer Data Platform Connections fournit une suite de technologies qui vous permet de collecter des données d’expérience client côté client et de les envoyer au réseau Adobe Experience Platform Edge où elles peuvent être enrichies, transformées et distribuées vers des destinations d’Adobe ou non Adobe.
+Real-Time Customer Data Platform Connections permet d’accéder à un ensemble de technologies qui vous permettent de collecter des données de l’expérience client côté client et de les envoyer à Adobe Experience Platform Edge Network où elles peuvent être enrichies, transformées et distribuées vers des destinations Adobe ou non.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [Configuration du type d’accès pour les flux de données](../../edge/datastreams/overview.md#create) | Lors de la création d’un flux de données, vous pouvez désormais sélectionner le type de requêtes que vous souhaitez que le réseau Edge accepte : <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est activée, le réseau Edge accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK web ou le [SDK mobile](https://aep-sdks.gitbook.io/docs/), ainsi que l’[API Server](../../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est activée, le réseau Edge accepte uniquement les demandes authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API Server et que vous souhaitez empêcher le traitement des demandes non authentifiées par le [!DNL Edge Network]. </li></ul> |
+| [Configuration du type d’accès pour les flux de données](../../edge/datastreams/overview.md#create) | Lors de la création d’un flux de données, vous pouvez désormais sélectionner le type de requêtes que vous souhaitez que Edge Network accepte : <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est activée, Edge Network accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK web ou le [SDK mobile](https://aep-sdks.gitbook.io/docs/), ainsi que l’[API Server](../../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est activée, Edge Network accepte uniquement les demandes authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API Server et que vous souhaitez empêcher le traitement des demandes non authentifiées par le [!DNL Edge Network]. </li></ul> |
 | [Propositions de rendu](../../edge/personalization/rendering-personalization-content.md#applypropositions) dans les applications d’une seule page sans incrémenter de mesures. | La nouvelle commande `applyPropositions` vous permet de générer ou d’exécuter un tableau de propositions à partir de [!DNL Target] dans des applications d’une seule page, sans incrémenter les mesures [!DNL Analytics] et [!DNL Target]. Cela augmente la précision des rapports. |
 | [Partage d’identifiants entre appareils mobiles et domaines](../../edge/identity/id-sharing.md) | Le SDK Web d’Adobe Experience Platform prend désormais en charge les fonctionnalités de partage des identifiants visiteur qui vous permettent de diffuser des expériences personnalisées plus précisément, entre les applications mobiles et le contenu web mobile, et entre les domaines. |
 
-Pour plus d’informations, reportez-vous à la section [Présentation des connexions Real-Time CDP](../../rtcdp-connections/home.md).
+Pour plus d’informations, reportez-vous à la section [Présentation de Real-Time CDP Connections](../../rtcdp-connections/home.md).
 
 ## Sources {#sources}
 
