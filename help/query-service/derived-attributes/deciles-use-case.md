@@ -1,7 +1,8 @@
 ---
-title: 'Cas d’utilisation des attributs dérivés basés sur des déciles '
+title: Cas d’utilisation des attributs dérivés basés sur des déciles
 description: Ce guide décrit les étapes requises pour utiliser Query Service afin de créer des attributs dérivés basés sur des déciles à utiliser avec vos données de profil.
-source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
+exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
+source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 3%
@@ -299,4 +300,3 @@ Exécutez la requête pour renseigner le jeu de données de décile. Vous pouvez
 ## Étapes suivantes
 
 L’exemple de cas d’utilisation fourni ci-dessus met en évidence les étapes à suivre pour rendre les attributs de décile disponibles dans Real-time Customer Profile. Cela permet à Segmentation Service, soit par le biais d’une interface utilisateur, soit via une API RESTful, de générer des audiences en fonction de ces compartiments déciles. Voir [Présentation de Segmentation Service](../../segmentation/home.md) pour plus d’informations sur la création, l’évaluation et l’accès aux segments.
-
