@@ -5,9 +5,9 @@ title: Postman dans Adobe Experience Platform
 topic-legacy: api guide
 description: Ce document décrit les étapes à suivre pour configurer un environnement Postman, importer des collections Postman et une liste des collections disponibles pour chaque service Platform.
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: d06c3bc51909b464b9eed2a2f0df04ca531010b3
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '545'
 ht-degree: 1%
 
 ---
@@ -52,9 +52,9 @@ Pour en savoir plus sur l’interface utilisateur de Postman et ses fonctionnali
 
 >[!WARNING]
 >
->Comme indiqué dans la collection Postman de génération de jetons d’accès Adobe I/O, les méthodes de génération signalées sont adaptées à **utilisation hors production**. La signature locale charge une bibliothèque JavaScript à partir d’un hôte tiers et la signature à distance envoie la clé privée à un service Web détenu et exploité par Adobe. Bien qu’Adobe ne stocke pas cette clé privée, les clés de production ne doivent jamais être partagées avec personne.
+>Comme indiqué dans la collection Postman Identity Management Service (IMS), les méthodes de génération signalées sont adaptées à **utilisation hors production**. La signature locale charge une bibliothèque JavaScript à partir d’un hôte tiers et la signature à distance envoie la clé privée à un service Web détenu et exploité par Adobe. Bien qu’Adobe ne stocke pas cette clé privée, les clés de production ne doivent jamais être partagées avec personne.
 
-La vidéo ci-dessous utilise le [Collecte de génération de jeton d’accès Adobe I/O](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) qui peut être téléchargé à partir du référentiel GitHub public.
+La vidéo ci-dessous utilise le [Collection Postman Identity Management Service (IMS)](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) qui peut être téléchargé à partir du référentiel GitHub public.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
