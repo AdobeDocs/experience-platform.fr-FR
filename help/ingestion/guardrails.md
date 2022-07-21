@@ -2,9 +2,10 @@
 keywords: Experience Platform;dépannage;garde-fous;conseils ;
 title: Barrières de sécurité pour l’ingestion des données
 description: Ce document fournit des conseils sur les barrières de sécurité pour l’ingestion de données dans Adobe Experience Platform
-source-git-commit: 3f558c9c11945cc9af51c42f7ed872101521259f
+exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
+source-git-commit: 4fd26078017ae13e22ebb02f98335094c8e0581b
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
@@ -32,7 +33,7 @@ Le tableau suivant décrit les barrières de sécurité à prendre en compte lor
 | Type d’ingestion | Instructions | Remarques |
 | --- | --- | --- |
 | Ingestion par flux | <ul><li>La taille d’enregistrement maximale est de 1 Mo, la taille recommandée étant de 10 Ko.</li><li>Vous pouvez traiter 2 000 requêtes par seconde dans Profile en moins d’une minute.</li><li>Vous pouvez traiter jusqu’à 2 000 demandes par seconde pour le lac de données en moins de 15 minutes.</li></ul> | Utilisez l’API d’ingestion par lots si vous avez besoin d’un débit de données plus élevé. |
-| Sources de diffusion en continu | <ul><li>La taille d’enregistrement maximale est de 1 Mo, la taille recommandée étant de 10 Ko.</li><li>Les sources en flux continu prennent en charge entre 4 000 et 5 000 requêtes par seconde lors de la création d’une nouvelle connexion source.</li><li>Vous pouvez traiter entre 4 000 et 5 000 demandes par seconde dans un lac de données.</li></ul> | Sources de diffusion en continu, telles que [!DNL Kafka], [!DNL Azure Event Hubs], et [!DNL Amazon Kinesis] n’utilisez pas la variable [!DNL Data Collection Core Service] itinéraire (DCCS) et peut avoir différentes limites de débit. Voir [présentation des sources](../sources/home.md) pour un catalogue de sources que vous pouvez utiliser pour l’ingestion de données. |
+| Sources de diffusion en continu | <ul><li>La taille d’enregistrement maximale est de 1 Mo, la taille recommandée étant de 10 Ko.</li><li>Les sources en flux continu prennent en charge entre 4 000 et 5 000 requêtes par seconde lors de la création d’une nouvelle connexion source. **Remarque**: Il peut s’écouler jusqu’à 30 minutes avant que les données en flux continu ne soient complètement traitées dans le lac de données.</li><li>Vous pouvez traiter entre 4 000 et 5 000 demandes par seconde dans un lac de données. **Remarque**: Il peut s’écouler jusqu’à 30 minutes avant que les données en flux continu ne soient complètement traitées dans le lac de données.</li></ul> | Sources de diffusion en continu, telles que [!DNL Kafka], [!DNL Azure Event Hubs], et [!DNL Amazon Kinesis] n’utilisez pas la variable [!DNL Data Collection Core Service] itinéraire (DCCS) et peut avoir différentes limites de débit. Voir [présentation des sources](../sources/home.md) pour un catalogue de sources que vous pouvez utiliser pour l’ingestion de données. |
 
 ## Étapes suivantes
 
