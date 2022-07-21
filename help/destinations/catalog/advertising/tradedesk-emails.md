@@ -1,9 +1,9 @@
 ---
 title: (Version bêta) Bureau commercial - Connexion CRM
 description: Activez les profils dans votre compte de bureau Commerce pour le ciblage et la suppression des audiences en fonction des données CRM.
-source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
+source-git-commit: b186a1a4b7417503ffa08a66136411ccff495510
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1041'
 ht-degree: 10%
 
 ---
@@ -33,7 +33,7 @@ Ce document est conçu pour vous aider à activer les profils dans votre [!DNL T
 
 Avant d’activer des segments dans [!DNL The Trade Desk], vous devez contacter votre [!DNL The Trade Desk] gestionnaire de compte pour signer le contrat d’intégration CRM. [!DNL The Trade Desk] donnera ensuite l’autorisation et partagera votre identifiant publicitaire pour configurer votre destination.
 
-## Exigences de correspondance des identifiants (#id-matching-requirements)
+## Exigences de correspondance des identifiants {#id-matching-requirements}
 
 Selon le type d’ID que vous ingérez dans Adobe Experience Platform, vous devez respecter les exigences correspondantes. Veuillez lire la [Présentation d’Identity Namespace](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=fr) pour plus d’informations.
 
@@ -50,7 +50,7 @@ Adobe Experience Platform prend en charge le texte brut et les adresses électro
 
 {style=&quot;table-layout:auto&quot;}
 
-## Exigences en matière de hachage des emails (#hashing-requirements)
+## Exigences en matière de hachage des emails {#hashing-requirements}
 
 Vous pouvez hacher des adresses électroniques avant de les ingérer dans Adobe Experience Platform ou utiliser des adresses électroniques brutes.
 
@@ -77,11 +77,11 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ## Se connecter à la destination {#connect}
 
-### Authentification à la destination (#authenticate)
+### Authentification à la destination {#authenticate}
 
 [!DNL The Trade Desk] La destination CRM est un chargement de fichier par lots quotidien qui ne nécessite pas d’authentification de l’utilisateur.
 
-### Renseignez les détails de la destination (#fill-in-details)
+### Renseignement des détails de destination {#fill-in-details}
 
 Avant de pouvoir envoyer ou activer des données d’audience vers une destination, vous devez configurer une connexion à votre propre plateforme de destination. Pendant la [configuration](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) de cette destination, vous devez fournir les informations suivantes :
 
@@ -120,7 +120,7 @@ Sélection des champs cibles :
 * Sélectionnez la `Email` espace de noms comme identité cible lorsque votre espace de noms ou votre attribut source est `Email`.
 * Sélectionnez la `Email_LC_SHA256` espace de noms comme identité cible lorsque votre espace de noms ou votre attribut source est `Email_LC_SHA256`.
 
-## Validation de l’exportation des données (#validate)
+## Validation de l’exportation des données {#validate}
 
 Pour vérifier que les données sont correctement exportées depuis l’Experience Platform et vers [!DNL The Trade Desk], recherchez les segments sous la mosaïque de données Adobe 1PD dans [!DNL The Trade Desk] Plateforme de gestion des données (DMP). Vous trouverez ci-dessous les étapes à suivre pour trouver l’identifiant correspondant dans la variable [!DNL Trade Desk] Interface utilisateur :
 
