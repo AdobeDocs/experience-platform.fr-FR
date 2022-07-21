@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
 workflow-type: tm+mt
-source-wordcount: '818'
-ht-degree: 86%
+source-wordcount: '823'
+ht-degree: 85%
 
 ---
 
@@ -72,6 +72,7 @@ ht-degree: 86%
       * [Connexion Liste des Clients Pinterest](./catalog/advertising/pinterest.md)
       * [(Version bêta) Connexion à Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [Connexion Trade Desk](./catalog/advertising/tradedesk.md)
+      * [La connexion CRM du centre commercial](./catalog/advertising/tradedesk-emails.md)
       * [Extension Twitter Universal Website Tag](./catalog/advertising/twitter-uwt.md)
       * [Connexion Yahoo/Verizon DataX](./catalog/advertising/datax.md)
    * Destinations Analytics {#analytics}
