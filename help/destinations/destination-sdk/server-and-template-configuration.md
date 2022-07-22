@@ -2,8 +2,8 @@
 description: Les spécifications du serveur et du modèle peuvent être configurées dans Adobe Experience Platform Destination SDK via le point d’entrée commun « /authoring/destination-servers ».
 title: Options de configuration des spécifications de serveur et de modèle dans Destination SDK
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
-workflow-type: ht
+source-git-commit: a08201c4bc71b0e37202133836e9347ed4d3cd6b
+workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 100%
 
@@ -54,7 +54,7 @@ La spécification des modèles vous permet de configurer le format du message ex
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.endpointRegion}}/items"
       }
    },
    "httpTemplate":{

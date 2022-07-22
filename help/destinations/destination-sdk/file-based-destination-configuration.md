@@ -2,10 +2,10 @@
 description: Cette configuration vous permet d’indiquer des informations de base telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs d’Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur d’Experience Platform ainsi que les identités qui peuvent être exportées vers votre destination.
 title: (Version Beta) Options de configuration de destinations basées sur des fichiers pour Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
 workflow-type: tm+mt
-source-wordcount: '2330'
-ht-degree: 81%
+source-wordcount: '2389'
+ht-degree: 79%
 
 ---
 
@@ -369,6 +369,8 @@ Lorsque vous configurez le SFTP avec le type d’authentification par clé SSH, 
 Utilisez cette section pour demander aux utilisateurs de renseigner des champs personnalisés, spécifiques à votre destination, lors de la connexion à la destination dans l’interface utilisateur d’Experience Platform.
 
 Dans l’exemple ci-dessous, `customerDataFields` exige des utilisateurs qu’ils saisissent un nom pour leur destination et qu’ils fournissent un [!DNL Amazon S3] nom du compartiment et chemin du dossier, ainsi qu’un type de compression, un format de fichier et plusieurs autres options d’exportation de fichiers.
+
+Vous pouvez accéder aux entrées client des champs de données client et les utiliser dans un modèle. Utilisation de la macro `{{customerData.name}}`. Par exemple, si vous demandez aux utilisateurs de saisir un champ de compartiment Amazon S3, avec le nom `bucket`, vous pouvez y accéder dans un modèle à l’aide de la macro . `{{customerData.bucket}}`. Afficher un exemple d’utilisation d’un champ de données client dans la variable [configuration du serveur de destination](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
 
 ```json
  "customerDataFields":[
