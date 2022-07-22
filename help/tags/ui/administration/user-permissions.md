@@ -2,10 +2,10 @@
 title: Autorisations d’utilisateur relatives aux balises
 description: Découvrez les différents types d’autorisations relatives aux balises disponibles et quelques stratégies d’implémentation de base pour différents cas d’utilisation commerciale.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
 workflow-type: tm+mt
-source-wordcount: '1307'
-ht-degree: 100%
+source-wordcount: '1311'
+ht-degree: 96%
 
 ---
 
@@ -13,15 +13,15 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Les autorisations d’utilisateur relatives aux balises dans Adobe Experience Platform sont attribuées aux utilisateurs via Adobe Admin Console. Plutôt que d’être attribuées à chaque utilisateur, les autorisations sont configurées séparément en différents jeux, sous forme de profils de produit. Les utilisateurs sont ensuite affectés à ces profils de produit afin d’obtenir les autorisations pour lesquelles ces derniers ont été configurés.
+Les autorisations d’utilisateur relatives aux balises dans Adobe Experience Platform sont attribuées aux utilisateurs via Adobe Admin Console. Plutôt que d’être attribuées à chaque utilisateur, les autorisations sont configurées séparément en différents jeux, sous forme de profils de produit. Les utilisateurs sont ensuite affectés à ces profils de produit afin d’obtenir les autorisations pour lesquelles ces derniers ont été configurés.
 
 Ce guide présente un aperçu des différents types d’autorisations relatives aux balises disponibles, des fonctionnalités auxquelles elles donnent accès et de quelques stratégies d’implémentation de base pour différents cas d’utilisation commerciale.
 
 >[!NOTE]
 >
->Pour connaître la procédure de configuration des autorisations d’utilisateurs à l’aide d’Admin Console, reportez-vous au tutoriel sur la [gestion des autorisations relatives aux balises](./manage-permissions.md).
+>Pour savoir comment configurer des autorisations pour les utilisateurs utilisant Admin Console, reportez-vous au tutoriel sur [gestion des autorisations pour la collecte de données](../../../rtcdp-connections/permissions.md).
 
 ## Types d’autorisations
 
@@ -68,7 +68,7 @@ Les droits d’entreprise s’appliquent aux autorisations qui s’appliquent à
 | --- | --- |
 | **Gérer les propriétés** | Ce droit autorise les actions suivantes :<ul><li>Création de propriétés</li><li>Modification des métadonnées et des paramètres au niveau de la propriété</li><li>Suppression des propriétés</li></ul>Les administrateurs assument généralement ce rôle. Pour plus dʼinformations, voir la [documentation sur les propriétés](companies-and-properties.md). |
 | **Développer des extensions** | Permet de créer et de modifier des packages dʼextensions dont lʼentreprise dispose, y compris les versions privées et les demandes de version publique. |
-| **Gérer les configurations d&#39;application** | Cette option nʼest disponible que si vous disposez dʼune licence pour Adobe Journey Optimizer ou pour une autre solution qui accorde lʼaccès aux messages push et dans lʼapplication mobile.  Cela permet de gérer les applications dont Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service de notification push Apple. |
+| **Gérer les configurations d&#39;application** | Cette option nʼest disponible que si vous disposez dʼune licence pour Adobe Journey Optimizer ou pour une autre solution qui accorde lʼaccès aux messages push et dans lʼapplication mobile.  Cela permet de gérer les applications dont Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service de notification push Apple. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -121,4 +121,4 @@ Le tableau suivant fournit quelques exemples des types de rôles que vous pouvez
 
 ## Étapes suivantes
 
-Ce document fournit un aperçu des autorisations disponibles pour les balises dans Experience Platform. Pour obtenir des instructions sur la manière de configurer des profils de produit pour les balises dans Adobe Admin Console, consultez le guide sur la [gestion des autorisations utilisateur](./manage-permissions.md).
+Ce document fournit un aperçu des autorisations disponibles pour les balises dans Experience Platform. Pour obtenir des instructions sur la configuration des profils de produit pour les balises dans Adobe Admin Console, consultez le guide sur [gestion des autorisations utilisateur pour la collecte de données](../../../rtcdp-connections/permissions.md).

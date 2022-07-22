@@ -2,10 +2,10 @@
 title: Présentation complète de Real-Time Customer Data Platform Connections
 description: Présentation détaillée de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide de Real-Time Customer Data Platform Connections.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
-workflow-type: ht
-source-wordcount: '2612'
-ht-degree: 100%
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+workflow-type: tm+mt
+source-wordcount: '2613'
+ht-degree: 99%
 
 ---
 
@@ -26,7 +26,7 @@ Ce tutoriel utilise l’interface utilisateur de collecte de données pour crée
 * Développer
 * Gérer les extensions
 
-Consultez le guide sur la [gestion des autorisations pour les balises](../tags/ui/administration/manage-permissions.md) pour savoir comment accorder l’accès aux propriétés et aux droits de propriété.
+Consultez le guide sur la [gestion des autorisations pour la collecte de données](./permissions.md) pour savoir comment accorder l’accès aux propriétés et aux droits de propriété.
 
 Pour utiliser les différents produits de collecte de données mentionnés dans ce guide, vous devez également avoir accès aux flux de données et la possibilité de créer et de gérer des schémas. Si vous avez besoin d’accéder à l’une de ces fonctionnalités, contactez votre CSM qui vous aidera à obtenir l’accès nécessaire. Si vous n’avez pas acheté Adobe Experience Platform, Adobe vous donnera l’accès nécessaire pour utiliser le SDK sans frais supplémentaires.
 
@@ -41,15 +41,15 @@ Reportez-vous à la [présentation de l’interface utilisateur du contrôle d�
 
 La configuration de RTCDP Connections pour votre site Web peut se résumer de la manière suivante :
 
-1. [Créez un schéma](#schema) afin de déterminer la structure de vos données lors de leur envoi au réseau Edge.
+1. [Créez un schéma](#schema) afin de déterminer la structure de vos données lors de leur envoi à Edge Network.
 1. [Créez un flux de données](#datastream) pour configurer les destinations vers lesquelles vos données doivent être envoyées.
 1. [Installez et configurez le SDK Web](#sdk) de façon à envoyer des données aux flux de données lorsque certains événements se produisent sur votre site Web.
 
-Une fois que vous avez la possibilité d’envoyer des données au réseau Edge, vous pouvez également [configurer le transfert d’événement](#event-forwarding) si votre entreprise dispose d’une licence pour ce transfert.
+Une fois que vous avez la possibilité d’envoyer des données à Edge Network, vous pouvez également [configurer le transfert d’événement](#event-forwarding) si votre entreprise dispose d’une licence pour ce transfert.
 
 ## Création d’un schéma {#schema}
 
-[Le modèle de données d’expérience (XDM)](../xdm/home.md) est une spécification open source qui fournit des structures et des définitions communes pour les données sous la forme de schémas. En d’autres termes, XDM constitue un moyen de structurer et de mettre en forme vos données d’une manière exploitable par le réseau Edge et d’autres applications Adobe Experience Cloud.
+[Le modèle de données d’expérience (XDM)](../xdm/home.md) est une spécification open source qui fournit des structures et des définitions communes pour les données sous la forme de schémas. En d’autres termes, XDM constitue un moyen de structurer et de mettre en forme vos données d’une manière exploitable par Edge Network et d’autres applications Adobe Experience Cloud.
 
 La première étape de la configuration de vos opérations de collecte de données consiste à créer un schéma XDM pour représenter vos données. À une étape ultérieure de ce tutoriel, vous allez mapper les données que vous souhaitez envoyer à la structure de ce schéma.
 
@@ -83,7 +83,7 @@ Si vous souhaitez ajouter d’autres champs au schéma, vous pouvez le faire en 
 >
 >Pour obtenir des instructions détaillées sur la recherche de différents groupes de champs en fonction de vos cas d’utilisation, consultez le guide sur l’[ajout de groupes de champs](../xdm/ui/resources/schemas.md#add-field-groups) dans la documentation XDM.
 >
->La bonne pratique consiste à ajouter uniquement des champs pour les données que vous prévoyez d’envoyer par le biais du réseau Edge. Une fois que vous avez ajouté des champs à un schéma et que vous l’avez enregistré, seules des modifications supplémentaires peuvent être apportées au schéma par la suite. Pour plus d’informations, reportez-vous à la section [règles d’évolution des schémas](../xdm/schema/composition.md#evolution).
+>La bonne pratique consiste à ajouter uniquement des champs pour les données que vous prévoyez d’envoyer par le biais de Edge Network. Une fois que vous avez ajouté des champs à un schéma et que vous l’avez enregistré, seules des modifications supplémentaires peuvent être apportées au schéma par la suite. Pour plus d’informations, reportez-vous à la section [règles d’évolution des schémas](../xdm/schema/composition.md#evolution).
 
 Une fois que vous avez ajouté les champs dont vous avez besoin, sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer le schéma.
 
@@ -91,7 +91,7 @@ Une fois que vous avez ajouté les champs dont vous avez besoin, sélectionnez *
 
 ## Création dʼun flux de données {#datastream}
 
-Un flux de données est une configuration qui indique au réseau Edge où vous souhaitez que vos données soient envoyées. Plus précisément, un flux de données indique à quels produits Experience Cloud vous souhaitez envoyer les données et comment vous souhaitez que les données soient traitées et stockées dans chaque produit.
+Un flux de données est une configuration qui indique à Edge Network où vous souhaitez que vos données soient envoyées. Plus précisément, un flux de données indique à quels produits Experience Cloud vous souhaitez envoyer les données et comment vous souhaitez que les données soient traitées et stockées dans chaque produit.
 
 >[!NOTE]
 >
@@ -105,7 +105,7 @@ Les exigences de configuration d’un flux de données dépendent des produits e
 
 ## Installation et configuration du SDK Mobile {#install}
 
-Une fois que vous avez créé un schéma et un flux de données, l’étape suivante consiste à installer et à configurer le SDK Web Platform pour commencer à envoyer des données au réseau Edge.
+Une fois que vous avez créé un schéma et un flux de données, l’étape suivante consiste à installer et à configurer le SDK Web Platform pour commencer à envoyer des données à Edge Network.
 
 >[!NOTE]
 >
@@ -120,7 +120,7 @@ Le processus peut se résumer comme suit :
 
 1. [Installez le SDK Web d’Adobe Experience Platform sur une propriété de balise](#install-sdk) pour accéder à ses fonctionnalités.
 1. [Créez un élément de données d’objet XDM](#data-element) pour mapper les variables de votre site Web à la structure du schéma XDM que vous avez créé précédemment.
-1. [Créez une règle](#rule) pour indiquer au SDK quand il doit envoyer des données au réseau Edge.
+1. [Créez une règle](#rule) pour indiquer au SDK quand il doit envoyer des données à Edge Network.
 1. [Créez et installez une bibliothèque](#library) pour mettre en œuvre la règle sur votre site Web.
 
 ### Installation du SDK sur une propriété de balise {#install-sdk}
@@ -147,7 +147,7 @@ Toutefois, avant de pouvoir installer le SDK, vous devez sélectionner un flux d
 
 ### Création d’un élément de données XDM {#data-element}
 
-Pour que le SDK envoie des données au réseau Edge, il faut que ces données soient mappées au schéma XDM que vous avez créé lors d’une [étape précédente](#schema). Ce mappage est effectué via l’utilisation d’un élément de données.
+Pour que le SDK envoie des données à EdgeNetwork, il faut que ces données soient mappées au schéma XDM que vous avez créé lors d’une [étape précédente](#schema). Ce mappage est effectué via l’utilisation d’un élément de données.
 
 Dans l’interface utilisateur, sélectionnez **[!UICONTROL Éléments de données]**, puis sélectionnez **[!UICONTROL Créer un élément de données]**.
 
@@ -222,7 +222,7 @@ Dans le cas contraire, l’étape suivante consiste à ajouter une action que la
 
 ![Ajouter une action](./images/e2e/add-action.png)
 
-La page de configuration d’action s’affiche. Pour obtenir la règle permettant d’envoyer des données au réseau Edge, sélectionnez **[!UICONTROL SDK Web Adobe Experience Platform]** pour l’extension et **[!UICONTROL Envoyer l’événement]** pour le type d’action.
+La page de configuration d’action s’affiche. Pour obtenir la règle permettant d’envoyer des données à Edge Network, sélectionnez **[!UICONTROL SDK Web Adobe Experience Platform]** pour l’extension et **[!UICONTROL Envoyer l’événement]** pour le type d’action.
 
 ![Type d’action](./images/e2e/action-type.png)
 
@@ -256,7 +256,7 @@ Une fois l’environnement installé sur votre site Web, vous pouvez [tester vot
 >
 >Le transfert d’événement est disponible uniquement pour les organisations ayant reçu une licence associée.
 
-Une fois que vous avez configuré le SDK pour envoyer des données au réseau Edge, vous pouvez configurer le transfert d’événement de façon à indiquer au réseau Edge où vous souhaitez que ces données soient diffusées.
+Une fois que vous avez configuré le SDK pour envoyer à Edge Network, vous pouvez configurer le transfert d’événement de façon à indiquer à Edge Network où vous souhaitez que ces données soient diffusées.
 
 Pour utiliser le transfert d’événement, vous devez d’abord créer une propriété de transfert d’événement. Sélectionnez **[!UICONTROL Transfert d’événement]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Nouvelle propriété]**. Attribuez un nom à la propriété avant de sélectionner **[!UICONTROL Enregistrer]**.
 
@@ -272,4 +272,4 @@ Une fois la génération terminée, l’étape finale consiste à mettre à jour
 
 ## Étapes suivantes
 
-Ce guide fournit un aperçu général de bout en bout de la marche à suivre pour envoyer des données au réseau Edge à l’aide du SDK Web Platform. Pour plus d’informations sur les différents composants et services impliqués, reportez-vous à la documentation associée à ce guide.
+Ce guide fournit un aperçu général de bout en bout de la marche à suivre pour envoyer des données à Edge Network à l’aide du SDK Web Platform. Pour plus d’informations sur les différents composants et services impliqués, reportez-vous à la documentation associée à ce guide.

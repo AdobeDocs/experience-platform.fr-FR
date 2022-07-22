@@ -2,7 +2,7 @@
 title: Guide de dépannage des balises
 description: Obtenez des réponses aux questions les plus fréquentes à propos des balises dans Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: c21699af0d08d0f63562910e2174273f0a139538
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 97%
@@ -96,13 +96,13 @@ Oui! Balises prend désormais en charge les propriétés et la configuration des
 
 ## Pourquoi l’interface utilisateur indique-t-elle qu’une erreur s’est produite lors du chargement de mon compte ?
 
-Si vous recevez un message indiquant qu’une erreur s’est produite lors du chargement de votre compte, cela signifie que votre compte n’appartient à aucun profil de produit pour les balises. Consultez le guide sur la [gestion des autorisations](./ui/administration/manage-permissions.md) pour savoir comment configurer un profil de produit dans Adobe Admin Console de manière à octroyer l’accès à l’interface utilisateur de la collecte de données.
+Si vous recevez un message indiquant qu’une erreur s’est produite lors du chargement de votre compte, cela signifie que votre compte n’appartient à aucun profil de produit pour les balises. Consultez le guide sur la [gestion des autorisations](../rtcdp-connections/permissions.md) pour savoir comment configurer un profil de produit dans Adobe Admin Console de manière à octroyer l’accès à l’interface utilisateur de la collecte de données.
 
 ## Pourquoi m’est-il impossible d’ajouter des propriétés dans l’interface utilisateur ?
 
 Si vous ne pouvez pas créer de propriété lorsque vous êtes connecté à l’interface utilisateur de la collecte de données, cela signifie que votre compte n’appartient pas à un profil de produit disposant du droit Gérer les propriétés.
 
-Consultez le guide sur la [gestion des autorisations](./ui/administration/manage-permissions.md) pour savoir comment configurer un profil de produit dans Adobe Admin Console de manière à octroyer le droit Gérer les propriétés. Pour plus d’informations sur les différents droits relatifs aux balises, consultez la présentation des [autorisations d’utilisateur pour les balises](./ui/administration/user-permissions.md).
+Consultez le guide sur la [gestion des autorisations](../rtcdp-connections/permissions.md) pour savoir comment configurer un profil de produit dans Adobe Admin Console de manière à octroyer le droit Gérer les propriétés. Pour plus d’informations sur les différents droits relatifs aux balises, consultez la présentation des [autorisations d’utilisateur pour les balises](./ui/administration/user-permissions.md).
 
 ## Et si j’ai d’autres questions ?
 
