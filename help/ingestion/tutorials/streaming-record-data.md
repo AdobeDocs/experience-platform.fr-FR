@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: cedc53b78ea8eb8f3e93178b60ebe49b90c11650
 workflow-type: tm+mt
-source-wordcount: '1190'
-ht-degree: 77%
+source-wordcount: '1025'
+ht-degree: 73%
 
 ---
 
@@ -26,31 +26,9 @@ Ce tutoriel nécessite une connaissance pratique de différents services d’Ado
    - [Guide de développement du registre des schémas](../../xdm/api/getting-started.md)[!DNL Schema Registry] : guide complet abordant chacun des points de terminaison disponibles de l’API et la manière d’effectuer des appels vers ceux-ci. Cela implique de connaître votre `{TENANT_ID}`, qui apparaît dans les appels de ce tutoriel, et de savoir comment créer des schémas utilisés pour la création d’un jeu de données destiné à être ingéré.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à des API d’ingestion par flux.
+### Utiliser les API Platform
 
-### Lecture d’exemples d’appels API
-
-Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
-
-### Collecte des valeurs des en-têtes requis
-
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
-
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key : `{API_KEY}`
-- x-gw-ims-org-id : `{ORG_ID}`
-
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
-
-- x-sandbox-name : `{SANDBOX_NAME}`
-
->[!NOTE]
->
->Pour plus d’informations sur les environnements de test dans [!DNL Platform], consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
-
-Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
-
-- Content-Type: application/json
+Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../landing/api-guide.md).
 
 ## Composition d’un schéma basé sur l’objet [!DNL XDM Individual Profile] class
 
@@ -304,7 +282,8 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{ORG_ID}",
-        "datasetId": "{DATASET_ID}"
+        "datasetId": "{DATASET_ID}",
+        "flowId": "{FLOW_ID}",
     },
     "body": {
         "xdmMeta": {
