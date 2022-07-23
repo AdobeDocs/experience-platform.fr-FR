@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 4956b940dfd25f55eaf67296f2cb31db65fac079
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 100%
+source-wordcount: '1864'
+ht-degree: 93%
 
 ---
 
@@ -17,9 +17,9 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
+- [[Collecte de données]](#data-collection)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Query Service](#query-service)
-- [Real-Time Customer Data Platform Connections](#data-collection)
 - [Sources](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -61,6 +61,23 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 {style=&quot;table-layout:auto&quot;}
 
 Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
+
+## Collecte de données {#data-collection}
+
+Adobe Experience Platform fournit une suite de technologies qui vous permet de collecter des données d’expérience client côté client et de les envoyer au réseau Adobe Experience Platform Edge où elles peuvent être enrichies, transformées et distribuées vers des destinations d’Adobe ou non Adobe.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| [Configuration du type d’accès pour les flux de données](../../edge/datastreams/overview.md#create) | Lors de la création d’un flux de données, vous pouvez désormais sélectionner le type de requêtes que vous souhaitez que Edge Network accepte : <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est activée, Edge Network accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK web ou le [SDK mobile](https://aep-sdks.gitbook.io/docs/), ainsi que l’[API Server](../../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est activée, Edge Network accepte uniquement les demandes authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API Server et que vous souhaitez empêcher le traitement des demandes non authentifiées par le [!DNL Edge Network]. </li></ul> |
+| [Propositions de rendu](../../edge/personalization/rendering-personalization-content.md#applypropositions) dans les applications d’une seule page sans incrémenter de mesures. | La nouvelle commande `applyPropositions` vous permet de générer ou d’exécuter un tableau de propositions à partir de [!DNL Target] dans des applications d’une seule page, sans incrémenter les mesures [!DNL Analytics] et [!DNL Target]. Cela augmente la précision des rapports. |
+| [Partage d’identifiants entre appareils mobiles et domaines](../../edge/identity/id-sharing.md) | Le SDK Web d’Adobe Experience Platform prend désormais en charge les fonctionnalités de partage des identifiants visiteur qui vous permettent de diffuser des expériences personnalisées plus précisément, entre les applications mobiles et le contenu web mobile, et entre les domaines. |
+| [Extension de balise de la couche de données Google](../../tags/extensions/web/google-data-layer/overview.md) | L’extension de couche de données Google vous permet d’utiliser une couche de données Google dans votre implémentation de balises. |
+| [Extension de transfert d’événement Conversions améliorées de Google Ads](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) | L’extension Conversions améliorées de Google Ads vous permet d’améliorer vos conversions Google Ads en temps réel. |
+| [Extension de transfert d’événement Mailchimp](../../tags/extensions/web/mailchimp/overview.md) | L’extension de transfert d’événement Mailchimp envoie des événements à l’API marketing Mailchimp qui peut déclencher des courriers électroniques pour les campagnes marketing, les parcours ou les transactions Mailchimp. |
+
+Pour plus d’informations, reportez-vous à la section [présentation de la collecte de données](../../rtcdp-connections/home.md).
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
@@ -116,20 +133,6 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 {style=&quot;table-layout:auto&quot;}
 
 Pour plus d’informations sur Query Service, consultez la section [présentation de Query Service](../../query-service/home.md).
-
-## Connexions Real-time Customer Data Platform {#data-collection}
-
-Real-Time Customer Data Platform Connections permet d’accéder à un ensemble de technologies qui vous permettent de collecter des données de l’expérience client côté client et de les envoyer à Adobe Experience Platform Edge Network où elles peuvent être enrichies, transformées et distribuées vers des destinations Adobe ou non.
-
-**Nouvelles fonctionnalités**
-
-| Fonctionnalité | Description |
-| --- | --- |
-| [Configuration du type d’accès pour les flux de données](../../edge/datastreams/overview.md#create) | Lors de la création d’un flux de données, vous pouvez désormais sélectionner le type de requêtes que vous souhaitez que Edge Network accepte : <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est activée, Edge Network accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK web ou le [SDK mobile](https://aep-sdks.gitbook.io/docs/), ainsi que l’[API Server](../../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est activée, Edge Network accepte uniquement les demandes authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API Server et que vous souhaitez empêcher le traitement des demandes non authentifiées par le [!DNL Edge Network]. </li></ul> |
-| [Propositions de rendu](../../edge/personalization/rendering-personalization-content.md#applypropositions) dans les applications d’une seule page sans incrémenter de mesures. | La nouvelle commande `applyPropositions` vous permet de générer ou d’exécuter un tableau de propositions à partir de [!DNL Target] dans des applications d’une seule page, sans incrémenter les mesures [!DNL Analytics] et [!DNL Target]. Cela augmente la précision des rapports. |
-| [Partage d’identifiants entre appareils mobiles et domaines](../../edge/identity/id-sharing.md) | Le SDK Web d’Adobe Experience Platform prend désormais en charge les fonctionnalités de partage des identifiants visiteur qui vous permettent de diffuser des expériences personnalisées plus précisément, entre les applications mobiles et le contenu web mobile, et entre les domaines. |
-
-Pour plus d’informations, reportez-vous à la section [Présentation de Real-Time CDP Connections](../../rtcdp-connections/home.md).
 
 ## Sources {#sources}
 
