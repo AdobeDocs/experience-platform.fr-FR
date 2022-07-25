@@ -2,7 +2,7 @@
 title: Notes de mise à jour de Adobe Experience Platform - Mars 2022
 description: Notes de mise à jour de mars 2022 pour Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 98%
@@ -117,7 +117,7 @@ Platform fournit un ensemble de technologies qui vous permettent de collecter de
 | Paramètres globaux de flux de données | Vous pouvez désormais configurer plusieurs nouveaux paramètres globaux lors de la configuration d’un flux de données : géolocalisation, cookie des identifiants internes et synchronisation des identifiants tiers. Pour plus d’informations, consultez la section sur la [configuration d’un flux de données](../../edge/datastreams/overview.md#create) du guide de l’interface utilisateur des flux de données. |
 | [API d’Edge Network Server](../../server-api/overview.md) | Le serveur API permet aux clients d’interagir avec Edge Experience Platform Network à l’aide d’un nouveau point d’entrée authentifié, afin d’alimenter plusieurs cas d’utilisation de la collecte de données, de la personnalisation, de la publicité et du marketing. |
 
-Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../rtcdp-connections/home.md).
+Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).
 
 ## Query Service {#query-service}
 

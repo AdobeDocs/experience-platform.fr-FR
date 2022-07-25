@@ -2,7 +2,7 @@
 title: Autorisations d’utilisateur relatives aux balises
 description: Découvrez les différents types d’autorisations relatives aux balises disponibles et quelques stratégies d’implémentation de base pour différents cas d’utilisation commerciale.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 96%
@@ -21,7 +21,7 @@ Ce guide présente un aperçu des différents types d’autorisations relatives 
 
 >[!NOTE]
 >
->Pour savoir comment configurer des autorisations pour les utilisateurs utilisant Admin Console, reportez-vous au tutoriel sur [gestion des autorisations pour la collecte de données](../../../rtcdp-connections/permissions.md).
+>Pour savoir comment configurer des autorisations pour les utilisateurs utilisant Admin Console, reportez-vous au tutoriel sur [gestion des autorisations pour la collecte de données](../../../collection/permissions.md).
 
 ## Types d’autorisations
 
@@ -121,4 +121,4 @@ Le tableau suivant fournit quelques exemples des types de rôles que vous pouvez
 
 ## Étapes suivantes
 
-Ce document fournit un aperçu des autorisations disponibles pour les balises dans Experience Platform. Pour obtenir des instructions sur la configuration des profils de produit pour les balises dans Adobe Admin Console, consultez le guide sur [gestion des autorisations utilisateur pour la collecte de données](../../../rtcdp-connections/permissions.md).
+Ce document fournit un aperçu des autorisations disponibles pour les balises dans Experience Platform. Pour obtenir des instructions sur la configuration des profils de produit pour les balises dans Adobe Admin Console, consultez le guide sur [gestion des autorisations utilisateur pour la collecte de données](../../../collection/permissions.md).

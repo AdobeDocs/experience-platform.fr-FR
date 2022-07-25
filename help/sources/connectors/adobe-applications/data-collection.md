@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;sources;sou
 title: Adobe de la collecte de données
 description: Ce document présente la source de collecte de données d’Adobe.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 52%
@@ -28,12 +28,12 @@ Sous , [!UICONTROL Adobe des applications] catégorie, sélectionnez **[!UICONTR
 
 L’interface utilisateur de collecte de données s’affiche sur la page **[!UICONTROL Datastreams]** .
 
-Un flux de données est une configuration qui indique au réseau Edge où vous souhaitez que vos données soient envoyées. Plus précisément, un flux de données indique à quels produits Experience Cloud vous souhaitez envoyer les données et comment vous souhaitez que les données soient traitées et stockées dans chaque produit.
+Un flux de données est une configuration qui indique à Edge Network où vous souhaitez que vos données soient envoyées. Plus précisément, un flux de données indique à quels produits Experience Cloud vous souhaitez envoyer les données et comment vous souhaitez que les données soient traitées et stockées dans chaque produit.
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-Pour obtenir des instructions complètes sur l’utilisation de l’interface utilisateur de collecte de données, reportez-vous à la section [présentation de la collecte de données de bout en bout](../../../rtcdp-connections/e2e.md).
+Pour obtenir des instructions complètes sur l’utilisation de l’interface utilisateur de collecte de données, reportez-vous à la section [présentation de la collecte de données de bout en bout](../../../collection/e2e.md).
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez appris à accéder à l’interface utilisateur de la collecte de données à l’aide de l’espace de travail des sources. Pour plus d’informations sur la collecte de données, voir [Présentation de la collecte de données](../../../rtcdp-connections/e2e.md).
+En lisant ce document, vous avez appris à accéder à l’interface utilisateur de la collecte de données à l’aide de l’espace de travail des sources. Pour plus d’informations sur la collecte de données, voir [Présentation de la collecte de données](../../../collection/e2e.md).
