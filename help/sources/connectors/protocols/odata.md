@@ -1,22 +1,18 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;OData;odata;oData;Generic OData;odata générique
 solution: Experience Platform
-title: Présentation générique du connecteur source OData
+title: Présentation générique de la source OData
 topic-legacy: overview
 description: Découvrez comment connecter Generic OData à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 51%
+source-wordcount: '221'
+ht-degree: 55%
 
 ---
 
-# (Version bêta) [!DNL Generic OData] connector
-
->[!NOTE]
->
->Le [!DNL Generic OData] Le connecteur est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs bêta-étiquetés.
+# [!DNL Generic OData] source
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
