@@ -4,7 +4,7 @@ description: Connectez votre intégration SDK Experience Platform côté client 
 keywords: configuration;flux de données;datastreamId;edge;identifiant de flux de données;Paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;Identifiant de conteneur de synchronisation d’identifiant;Sandbox;Diffusion d’entrée;Jeu de données d’événement;cible;code client;Jeton de propriété;Identifiant d’environnement cible;Destinations de cookie;Destinations d’url;identifiant de suite de rapports de blocs de paramètres Analytics;Préparation des données pour la collecte de données;Préparation des données;Mappeur;Mappeur XDM;Mappeur sur Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1774'
 ht-degree: 100%
 
