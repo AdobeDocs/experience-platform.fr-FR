@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;prép de do
 title: Envoi De Mises À Jour De Ligne Partielles Au Service De Profil À L’Aide De La Préparation De Données
 description: Ce document fournit des informations sur la manière d’envoyer des mises à jour de lignes partielles au service Profile à l’aide de la préparation de données.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 0f1b9cdde3452afdf8cf045cf0a6660ee0ce56cf
+source-git-commit: cc3ecbd8544839246d54f72b894ad27e850c0c90
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1188'
 ht-degree: 9%
 
 ---
@@ -249,7 +249,7 @@ Vous trouverez ci-dessous une liste des limites connues à prendre en compte lor
 
 * La méthode de mise à jour en continu ne doit être utilisée que lors de l’envoi de mises à jour de lignes partielles à [!DNL Profile Service]. Les mises à jour des lignes partielles sont **not** consommé par le lac de données.
 * La méthode de diffusion en continu upserts ne prend pas en charge la mise à jour, le remplacement et la suppression des identités. De nouvelles identités sont créées si elles n’existent pas. D’où `identity` doit toujours être définie pour créer. Si une identité existe déjà, l’opération est un &quot;no-op&quot;.
-* Actuellement, la méthode de mise en service par flux ne prend en charge que les attributs à valeur unique primitifs (tels que les entiers, les dates, les horodatages et les chaînes) et les objets. La méthode de serveur de diffusion en continu ne prend pas en charge le remplacement, l’ajout ou le remplacement d’attributs de tableau et d’index de tableau spécifiques.
+* Actuellement, la méthode de mise en service par flux ne prend en charge que les attributs à valeur unique primitifs (tels que les entiers, les dates, les horodatages et les chaînes) et les objets.
 * La méthode des upserts de diffusion en continu ne prend actuellement pas en charge [SDK Web Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=fr) et [SDK Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/).
 
 ## Étapes suivantes
