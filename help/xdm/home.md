@@ -6,9 +6,9 @@ topic-legacy: overview
 description: La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. Le modèle de données d’expérience (XDM), optimisé par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2087'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -54,7 +54,7 @@ Pour plus d’informations sur la gestion et l’interaction avec les schémas d
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Comportements des données"
->abstract="Les données destinées à Experience Platform sont regroupées en trois types de comportements : enregistrement, série temporelle et ad hoc. Les schémas d’enregistrement fournissent des informations sur les attributs d’un objet, tandis que les schémas de série temporelle capturent un instantané du système au moment où une action a été effectuée. Les schémas ad hoc capturent les champs qui sont des espaces de noms, à des fins d’utilisation par un jeu de données unique. Pour plus d’informations sur le comportement des données dans Platform, consultez la documentation ."
+>abstract="Les données destinées à Experience Platform sont regroupées en trois types de comportements : enregistrement, série temporelle et ad hoc. Les schémas d’enregistrement fournissent des informations sur les attributs d’un objet, tandis que les schémas de série temporelle capturent un instantané du système au moment où une action a été effectuée. Les schémas ad hoc capturent les champs qui sont des espaces de noms, à des fins d’utilisation par un jeu de données unique. Pour plus d’informations sur le comportement des données dans Platform, consultez la documentation."
 
 Les données pouvant être utilisées dans Experience Platform sont regroupées selon trois types de comportements :
 
