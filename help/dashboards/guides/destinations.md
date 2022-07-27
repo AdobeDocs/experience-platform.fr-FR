@@ -4,7 +4,7 @@ title: Tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 54020785166b735fcd4dbe052ce1e738a70a30df
+source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
 source-wordcount: '2726'
 ht-degree: 3%
@@ -41,7 +41,7 @@ Vous pouvez modifier l’aspect du tableau de bord des destinations en sélectio
 
 Reportez-vous à la section [modification des tableaux de bord](../customize/modify.md) et [Présentation de la bibliothèque de widgets](../customize/widget-library.md) pour en savoir plus.
 
-## Widgets standard
+## Widgets standard {#standard-widgets}
 
 Adobe fournit plusieurs widgets standard que vous pouvez utiliser pour visualiser différentes mesures liées à vos destinations et évaluer l’exhaustivité des segments disponibles pour votre analyse des données. Vous pouvez également créer des widgets personnalisés à partager avec votre organisation à l’aide de la variable [!UICONTROL Bibliothèque de widgets]. Pour en savoir plus sur la création de widgets personnalisés, commencez par lire le [Présentation de la bibliothèque de widgets](../customize/widget-library.md).
 

@@ -4,9 +4,9 @@ title: Tableau de bord Segments
 description: 'Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments que votre entreprise a créés. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2d84a9a7caf080abd51e846f39e4090cb4aa05c7
+source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1575'
 ht-degree: 11%
 
 ---
@@ -57,11 +57,11 @@ Pour choisir un autre segment, sélectionnez la liste déroulante en regard du n
 
 Le tableau de bord des segments est constitué de widgets, qui sont des mesures en lecture seule fournissant des informations importantes sur le segment sélectionné.
 
-La date et l’heure de la &quot;dernière mise à jour&quot; d’un widget indique le moment où le dernier instantané des données a été pris. La date et l’heure de l’instantané sont indiquées en UTC ; il ne se trouve pas dans le fuseau horaire de l’utilisateur individuel ou de l’organisation IMS.
+La date et l’heure de la &quot;dernière mise à jour&quot; d’un widget indique le moment où le dernier instantané des données a été pris. La date et l’heure de l’instantané sont indiquées en UTC ; il ne se trouve pas dans le fuseau horaire de l’utilisateur ou de l’organisation.
 
 ![](../images/segments/widget-timestamp.png)
 
-## Widgets standard
+## Widgets standard {#standard-widgets}
 
 Adobe fournit plusieurs widgets standard que vous pouvez utiliser pour visualiser différentes mesures liées à vos segments. Vous pouvez également créer des widgets personnalisés à partager avec votre organisation à l’aide de la variable [!UICONTROL Bibliothèque de widgets]. Pour en savoir plus sur la création de widgets personnalisés, commencez par lire le [Présentation de la bibliothèque de widgets](../customize/widget-library.md).
 

@@ -4,9 +4,9 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: bc1516d5453134ffb18fa682fd70b1f3581d5e18
+source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
-source-wordcount: '3816'
+source-wordcount: '3814'
 ht-degree: 8%
 
 ---
@@ -59,7 +59,7 @@ La mise en page de ce tableau de bord peut également être personnalisée en s�
 
 ## Parcourir les profils {#browse-profiles}
 
-Le [!UICONTROL Parcourir] Cet onglet vous permet de rechercher et d’afficher les profils en lecture seule ingérés dans votre organisation IMS. Vous y trouverez des informations importantes appartenant au profil concernant leurs préférences, les événements passés, les interactions et les segments.
+Le [!UICONTROL Parcourir] vous permet de rechercher et d’afficher les profils en lecture seule ingérés dans votre organisation. Vous y trouverez des informations importantes appartenant au profil concernant leurs préférences, les événements passés, les interactions et les segments.
 
 Pour en savoir plus sur les fonctionnalités d’affichage des profils fournies dans l’interface utilisateur de Platform, consultez la documentation sur [navigation dans les profils dans Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
@@ -89,9 +89,9 @@ Pour en savoir plus sur l’interface utilisateur du schéma d’union, consulte
 
 Le tableau de bord est composé de widgets, qui sont des mesures en lecture seule fournissant des informations importantes sur vos données de profil.
 
-La date et l’heure de la &quot;dernière mise à jour&quot; d’un widget indique le moment où le dernier instantané des données a été pris. La date et l’heure de l’instantané sont indiquées en UTC ; il ne se trouve pas dans le fuseau horaire de l’utilisateur individuel ou de l’organisation IMS.
+La date et l’heure de la &quot;dernière mise à jour&quot; d’un widget indique le moment où le dernier instantané des données a été pris. La date et l’heure de l’instantané sont indiquées en UTC ; il ne se trouve pas dans le fuseau horaire de l’utilisateur ou de l’organisation.
 
-## Widgets standard
+## Widgets standard {#standard-widgets}
 
 Adobe fournit plusieurs widgets standard que vous pouvez utiliser pour visualiser différentes mesures liées à vos données de profil. Vous pouvez également créer des widgets personnalisés à partager avec votre organisation à l’aide de la variable [!UICONTROL Bibliothèque de widgets]. Pour en savoir plus sur la création de widgets personnalisés, commencez par lire le [Présentation de la bibliothèque de widgets](../customize/widget-library.md).
 
