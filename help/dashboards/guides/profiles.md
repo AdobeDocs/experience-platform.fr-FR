@@ -4,9 +4,9 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: a1a5a34ed0f46223b1eae3df75ff65f27041503e
 workflow-type: tm+mt
-source-wordcount: '3814'
+source-wordcount: '3875'
 ht-degree: 8%
 
 ---
@@ -98,8 +98,10 @@ Adobe fournit plusieurs widgets standard que vous pouvez utiliser pour visualise
 Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez le nom d’un widget dans la liste suivante :
 
 * [[!UICONTROL Nombre de profils]](#profile-count)
-* [[!UICONTROL Profils ajoutés]](#profiles-added)
-* [[!UICONTROL Tendance des profils ajoutés]](#profiles-added-trend)
+* [[!UICONTROL Tendance du nombre de profils]](#profile-count-trend)
+* [[!UICONTROL Modification du nombre de profils]](#profile-count-change)
+* [[!UICONTROL Tendance du nombre de changements de profils]](#profiles-count-change-trend)
+* [[!UICONTROL Tendance de changement du nombre de profils par d’identité]](#profiles-count-change-trend-by-identity)
 * [[!UICONTROL Profils par identité]](#profiles-by-identity)
 * [[!UICONTROL Superposition des identités]](#identity-overlap)
 * [[!UICONTROL Profils d’identité uniques]](#single-identity-profiles)
@@ -109,10 +111,8 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 * [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences mappées au statut de destination]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Taille des audiences]](#audiences-size)
-* [[!UICONTROL Tendance du nombre de profils]](#profile-count-trend)
 * [[!UICONTROL Profils d’identité uniques par identité]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Chevauchements d’audience par de stratégie de fusion]](#audience-overlap-by-merge-policy)
-* [[!UICONTROL Tendance de changement du nombre de profils par d’identité]](#profiles-count-change-trend-by-identity)
 
 ### [!UICONTROL Nombre de profils] {#profile-count}
 
@@ -120,7 +120,7 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 >id="platform_dashboards_profiles_profilecount"
 >title="Nombre de profils"
 >abstract="Ce widget affiche le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Le nombre dépend de la stratégie de fusion sélectionnée appliquée à vos données de profil."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count" text="En savoir plus dans la documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="En savoir plus dans la documentation"
 
 Le **[!UICONTROL Nombre de profils]** widget affiche le nombre total de profils fusionnés dans la banque de profils au moment de la prise de vue instantanée. Ce nombre est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
 
@@ -134,43 +134,57 @@ Voir [section sur les stratégies de fusion plus tôt dans ce document](#merge-p
 
 ![](../images/profiles/profile-count.png)
 
-### [!UICONTROL Profils ajoutés] {#profiles-added}
+### [!UICONTROL Tendance du nombre de profils] {#profile-count-trend}
 
-<!-- This CONTEXTUALHELP was commented out because this widget name will change. Details in https://jira.corp.adobe.com/browse/PLAT-120313  -->
+Le [!UICONTROL Tendance du nombre de profils] widget utilise un graphique linéaire pour illustrer la tendance du nombre total de profils contenus dans le système au fil du temps. Ce nombre total inclut tous les profils importés dans le système depuis le dernier instantané quotidien. Les données peuvent être consultées sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget.
 
-<!-- >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_profilesadded"
->title="Profiles added"
->abstract="This widget displays the total number of merged profiles **added** to the Profile Store at the time of the last snapshot. The number depends on the selected merge policy being applied to your Profile data."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-added" text="Learn more from documentation" -->
+![Le widget de tendance du nombre de profils.](../images/profiles/profile-count-trend.png)
 
-Le **[!UICONTROL Profils ajoutés]** widget affiche le nombre total de profils fusionnés ajoutés à la banque de profils au moment de la dernière capture instantanée. Ce nombre est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu. Vous pouvez utiliser le sélecteur de liste déroulante pour afficher les profils ajoutés au cours des 30, 90 ou 12 derniers jours.
+### [!UICONTROL Modification du nombre de profils] {#profile-count-change}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_profilescountchange"
+>title="Modification du nombre de profils"
+>abstract="Ce widget affiche le nombre total de profils fusionnés **ajouté** à la banque de profils au moment de la dernière capture instantanée. Le nombre dépend de la stratégie de fusion sélectionnée appliquée à vos données de profil."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="En savoir plus dans la documentation"
+
+Le **[!UICONTROL Modification du nombre de profils]** widget affiche le nombre de profils fusionnés ajoutés à la banque de profils depuis l’instantané précédent. Ce nombre est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu. Vous pouvez utiliser le sélecteur de liste déroulante pour afficher le nombre de profils ajoutés au cours des 30, 90 ou 12 derniers jours.
 
 >[!NOTE]
 >
->Le [!UICONTROL Profils ajoutés] widget reflète le nombre de profils ajoutés **after** la configuration initiale de l’ingestion des profils et de la banque de profils. En d’autres termes, si votre entreprise a configuré la banque de profils et ingéré 4 000 000 le jour 1, le tableau de bord sera disponible dans les 24 heures, mais la variable [!UICONTROL Profils ajoutés] est défini sur 0. Cela permet d’éviter un pic associé à l’ingestion initiale des profils dans le système. Au cours des 30 prochains jours, votre entreprise assimilera 1 000 000 profils supplémentaires dans la banque de profils. Une fois l’instantané suivant pris, la variable [!UICONTROL Profils ajoutés] Le widget affiche un total de 1 000 000 profils ajoutés, tandis que la variable [!UICONTROL Nombre de profils] le widget afficherait 5 000 000 profils au total.
+>Le [!UICONTROL Modification du nombre de profils] widget reflète le nombre de profils ajoutés **after** la configuration initiale de l’ingestion des profils et de la banque de profils. En d’autres termes, si votre entreprise a configuré la banque de profils et ingéré 4 000 000 le jour 1, le tableau de bord sera disponible dans les 24 heures, mais la variable [!UICONTROL Modification du nombre de profils] est défini sur 0. Cela permet d’éviter un pic associé à l’ingestion initiale des profils dans le système. Au cours des 30 prochains jours, votre entreprise assimilera 1 000 000 profils supplémentaires dans la banque de profils. Une fois l’instantané suivant pris, la variable [!UICONTROL Modification du nombre de profils] Le widget affiche un total de 1 000 000 profils ajoutés, tandis que la variable [!UICONTROL Nombre de profils] le widget afficherait 5 000 000 profils au total.
 
-![](../images/profiles/profiles-added.png)
+![Le tableau de bord Profils de l’interface utilisateur de Platform avec le widget de modification du nombre de profils mis en surbrillance.](../images/profiles/profile-count-change.png)
 
-### [!UICONTROL Tendance des profils ajoutés] {#profiles-added-trend}
+### [!UICONTROL Tendance du nombre de changements de profils] {#profiles-count-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
->title="Profils tendance ajoutée"
->abstract="Ce widget affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30, 90 ou 12 derniers jours. Le nombre dépend également de la stratégie de fusion sélectionnée appliquée à vos données de profil."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-count-trend" text="En savoir plus dans la documentation"
+>title="Tendance du nombre de changements de profils"
+>abstract="Ce widget affiche le nombre de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30, 90 ou 12 derniers jours. Le nombre dépend également de la stratégie de fusion sélectionnée appliquée à vos données de profil."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="En savoir plus dans la documentation"
 
-Le **[!UICONTROL Profils de tendance ajoutée]** widget affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30, 90 ou 12 derniers jours. Ce nombre est mis à jour chaque jour lorsque l’instantané est pris. Par conséquent, si vous deviez ingérer des profils dans Platform, le nombre de profils ne serait pas reflété tant que l’instantané suivant n’a pas été pris. Le nombre de profils ajoutés est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
+Le **[!UICONTROL Tendance du nombre de changements de profils]** widget affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30, 90 ou 12 derniers jours. Ce nombre est mis à jour chaque jour lorsque l’instantané est pris. Par conséquent, si vous deviez ingérer des profils dans Platform, le nombre de profils ne serait pas reflété tant que l’instantané suivant n’a pas été pris. Le nombre de profils ajoutés est le résultat de l’application de la stratégie de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
 
 Voir [section sur les stratégies de fusion plus tôt dans ce document](#merge-policies) pour en savoir plus.
 
-Le **[!UICONTROL Profils de tendance ajoutée]** widget affiche un bouton &quot;légendes&quot; en haut à droite du widget. Sélectionner **[!UICONTROL Sous-titres]** pour ouvrir la boîte de dialogue des sous-titres automatiques.
+Le **[!UICONTROL Tendance du nombre de changements de profils]** widget affiche un bouton &quot;légendes&quot; en haut à droite du widget. Sélectionner **[!UICONTROL Sous-titres]** pour ouvrir la boîte de dialogue des sous-titres automatiques.
 
-![L’onglet Aperçu du profil affiche le widget de tendance Profils ajoutés avec le bouton de sous-titres en surbrillance.](../images/profiles/profiles-added-trend-captions.png)
+![L’onglet Aperçu du profil affiche le widget de tendance de changement du nombre de profils avec le bouton de sous-titres en surbrillance.](../images/profiles/profiles-count-change-trend-captions.png)
 
 Un modèle d’apprentissage automatique génère automatiquement des sous-titres pour décrire les tendances clés et les événements importants en analysant le graphique et les données.
 
-![La boîte de dialogue de sous-titres automatiques du widget de tendance Profils a été ajoutée.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![La boîte de dialogue de sous-titres automatiques du widget de tendance de changement de compte de profils .](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+
+### [!UICONTROL Tendance de changement du nombre de profils par d’identité] {#profiles-count-change-trend-by-identity}
+
+<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
+
+Ce widget filtre le nombre de profils en fonction d’une identité source sélectionnée et d’une stratégie de fusion, puis illustre le changement de nombre pour diverses périodes à l’aide d’un graphique linéaire. La stratégie de fusion est sélectionnée dans la liste déroulante d’aperçu située en haut de la page. L’identité source et la période sont sélectionnées dans les menus déroulants du widget. La tendance peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois.
+
+Ce widget vous aide à gérer vos besoins d’activation de destination en présentant le modèle de croissance des profils filtrés par une identité requise.
+
+![Les profils comptabilisent la tendance de changement par widget d’identité.](../images/profiles/profiles-count-change-trend-by-identity.png)
 
 ### [!UICONTROL Profils par identité] {#profiles-by-identity}
 
@@ -178,7 +192,7 @@ Un modèle d’apprentissage automatique génère automatiquement des sous-titre
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="Profils par identité"
 >abstract="Ce widget affiche la ventilation de tous les profils fusionnés dans votre banque de profils par identités."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-by-identity" text="En savoir plus dans la documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="En savoir plus dans la documentation"
 
 Le **[!UICONTROL Profils par identité]** widget affiche la ventilation des identités pour tous les profils fusionnés de votre banque de profils. Le nombre total de profils par identité (c’est-à-dire en additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur au nombre total de profils fusionnés, car plusieurs espaces de noms peuvent être associés à un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
 
@@ -200,7 +214,7 @@ Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation d
 >id="platform_dashboards_profiles_identityoverlap"
 >title="Superposition des identités"
 >abstract="Ce widget utilise un diagramme de Venn pour afficher le chevauchement des profils de votre banque de profils qui contiennent les deux identités sélectionnées."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#identity-overlap" text="En savoir plus dans la documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="En savoir plus dans la documentation"
 
 Le **[!UICONTROL Superposition des identités]** Le widget utilise un diagramme de Venn, ou un diagramme de définition, pour afficher le chevauchement des profils de votre banque de profils qui contiennent les deux identités sélectionnées.
 
@@ -218,7 +232,7 @@ Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation d
 >id="platform_dashboards_profiles_singleidentityprofiles"
 >title="Profils d’identité uniques"
 >abstract="Ce widget fournit un comptage des profils de votre organisation qui n’ont qu’un seul type d’ID qui crée leur identité. Ce type d’identifiant peut être un email ou un ECID."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#single-identity-profiles" text="En savoir plus dans la documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="En savoir plus dans la documentation"
 
 Le [!UICONTROL Profils d’identité uniques] Le widget fournit un décompte des profils de votre organisation qui ne disposent que d’un seul type d’ID qui crée leur identité. Ce type d’identifiant peut être un email ou un ECID. Le nombre de profils est généré à partir des données contenues dans l’instantané le plus récent.
 
@@ -230,7 +244,7 @@ Le [!UICONTROL Profils d’identité uniques] Le widget fournit un décompte des
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Profils non segmentés"
 >abstract="Ce widget fournit le nombre total de tous les profils qui ne sont associés à aucun segment et représente l’opportunité d’activation des profils à l’échelle de votre organisation."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles" text="En savoir plus dans la documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="En savoir plus dans la documentation"
 
 Le [!UICONTROL Profils non segmentés] fournit le nombre total de tous les profils qui ne sont associés à aucun segment. Le nombre, généré à partir du dernier instantané, est précis et souligne l’opportunité d’activation de profils dans votre entreprise. Elle indique également la possibilité d’effacer les profils qui ne fournissent pas un retour sur investissement adéquat.
 
@@ -254,7 +268,7 @@ Le [!UICONTROL Tendance des profils non segmentés] Le widget fournit une repré
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
 >title="Profils non segmentés par identité"
 >abstract="Ce widget classe le nombre total de profils non segmentés en fonction de leur identifiant unique."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-by-identity" text="En savoir plus dans la documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="En savoir plus dans la documentation"
 
 Le [!UICONTROL Profils non segmentés par identité] widget classe le nombre total de profils non segmentés en fonction de leur identifiant unique. Les données sont visualisées dans un graphique à barres afin de faciliter la comparaison.
 
@@ -306,12 +320,6 @@ Pour afficher des informations complètes sur un segment, sélectionnez un nom d
 
 Pour plus d’informations sur la variable [[!UICONTROL Segments] [!UICONTROL  Parcourir] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
 
-### [!UICONTROL Tendance du nombre de profils] {#profile-count-trend}
-
-Le [!UICONTROL Tendance du nombre de profils] widget utilise un graphique linéaire pour illustrer la tendance du nombre total de profils contenus dans le système au fil du temps. Ce nombre total inclut tous les profils importés dans le système depuis le dernier instantané quotidien. Les données peuvent être consultées sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget.
-
-![Le widget de tendance du nombre de profils.](../images/profiles/profile-count-trend.png)
-
 ### [!UICONTROL Profils d’identité uniques par identité] {#single-identity-profiles-by-identity}
 
 Ce widget utilise un graphique à barres pour illustrer le nombre total de profils qui sont identifiés à l’aide d’un identifiant unique. Le widget prend en charge jusqu’à cinq des identités les plus courantes.
@@ -327,16 +335,6 @@ Ce widget utilise un diagramme de Venn pour afficher le chevauchement de deux se
 Comme le widget affiche le croisement visuel des définitions de segment, vous pouvez optimiser votre stratégie de segmentation en étudiant les similarités entre vos définitions de segment.
 
 ![Le tableau de bord Profils de l’interface utilisateur de Platform avec la liste déroulante Stratégie de fusion et les listes déroulantes de segments du widget sont mises en surbrillance.](../images/profiles/audience-overlap-by-merge-policy.png)
-
-### [!UICONTROL Tendance de changement du nombre de profils par d’identité] {#profiles-count-change-trend-by-identity}
-
-<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
-
-Ce widget filtre le nombre de profils en fonction d’une identité source sélectionnée et d’une stratégie de fusion, puis illustre le changement de nombre pour diverses périodes à l’aide d’un graphique linéaire. La stratégie de fusion est sélectionnée dans la liste déroulante d’aperçu située en haut de la page. L’identité source et la période sont sélectionnées dans les menus déroulants du widget. La tendance peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois.
-
-Ce widget vous aide à gérer vos besoins d’activation de destination en présentant le modèle de croissance des profils filtrés par une identité requise.
-
-![Les profils comptabilisent la tendance de changement par widget d’identité.](../images/profiles/profiles-count-change-trend-by-identity.png)
 
 
 ## (Version bêta) Widgets d’efficacité des profils {#profile-efficacy-widgets}
@@ -359,7 +357,7 @@ Pour en savoir plus sur chacun des widgets d’efficacité de profil, sélection
 >id="platform_dashboards_profiles_attributesqualityassessment"
 >title="Évaluation de la qualité des attributs"
 >abstract="Ce widget affiche l’exhaustivité et la cardinalité de tous les profils en fonction de leurs attributs. Chaque ligne décrit un attribut. Le **Profils** indique le nombre de profils qui possèdent cet attribut et qui sont remplis avec des valeurs non nulles. Le **Complétude** Le pourcentage est déterminé par le nombre total de profils qui possèdent cet attribut et qui sont remplis de valeurs non nulles divisées par le nombre total de valeurs non vides dans les profils pour cet attribut. **Cardinalité** fournit le nombre total de valeurs non nulles uniques de cet attribut pour tous les attributs."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#attributes-quality-assessment" text="En savoir plus dans la documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="En savoir plus dans la documentation"
 
 Le [!UICONTROL Évaluation de la qualité des attributs] widget affiche l’exhaustivité et la cardinalité de tous les profils en fonction de leurs attributs. Les données sont exactes jusqu’à la date du dernier traitement. Ces informations sont présentées sous la forme d’un tableau de quatre colonnes où chaque ligne du tableau représente un attribut unique.
 
@@ -378,7 +376,7 @@ Le [!UICONTROL Évaluation de la qualité des attributs] widget affiche l’exha
 >id="platform_dashboards_profiles_profilesbycompleteness"
 >title="Profils par exhaustivité"
 >abstract="Le graphique en anneau affiche le pourcentage des attributs de profil remplis de valeurs non nulles parmi tous les attributs observés. Il illustre la proportion de profils présentant une exhaustivité élevée, moyenne ou faible. Les profils d’exhaustivité élevée ont plus de 70 % de leurs attributs remplis. Les profils d’exhaustivité moyenne disposent de 30 à 70 % de leurs attributs renseignés. Les profils d’exhaustivité basse ont moins de 30 % de leurs attributs renseignés."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness" text="En savoir plus dans la documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="En savoir plus dans la documentation"
 
 Le [!UICONTROL Profils par exhaustivité] crée un graphique en anneau d’exhaustivité du profil depuis la date du dernier traitement. L’exhaustivité d’un profil est mesurée par le pourcentage d’attributs remplis avec des valeurs non nulles parmi tous les attributs observés.
 
@@ -396,7 +394,7 @@ Ce widget affiche la proportion de profils présentant une exhaustivité élevé
 >id="platform_dashboards_profiles_profilescompletenesstrend"
 >title="Tendance d’achèvement des profils"
 >abstract="Ce widget crée un diagramme de surface empilé pour décrire la tendance de l’exhaustivité des profils au fil du temps. La complexité est mesurée par le pourcentage d’attributs remplis avec des valeurs non nulles parmi tous les attributs observés."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness-trend" text="En savoir plus dans la documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="En savoir plus dans la documentation"
 
 Ce widget crée un diagramme de surface empilé pour décrire la tendance de l’exhaustivité des profils au fil du temps. La complexité est mesurée par le pourcentage d’attributs remplis avec des valeurs non nulles parmi tous les attributs observés. Elle classe l’exhaustivité du profil comme une exhaustivité élevée, moyenne ou faible depuis la date du dernier traitement.
 
