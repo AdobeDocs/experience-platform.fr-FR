@@ -4,10 +4,10 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: bc1516d5453134ffb18fa682fd70b1f3581d5e18
 workflow-type: tm+mt
-source-wordcount: '3761'
-ht-degree: 7%
+source-wordcount: '3816'
+ht-degree: 8%
 
 ---
 
@@ -106,12 +106,13 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 * [[!UICONTROL Profils non segmentés]](#unsegmented-profiles)
 * [[!UICONTROL Tendance des profils non segmentés]](#unsegmented-profiles-trend)
 * [[!UICONTROL Profils non segmentés par identité]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences mappées au statut de destination]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Taille des audiences]](#audiences-size)
 * [[!UICONTROL Tendance du nombre de profils]](#profile-count-trend)
 * [[!UICONTROL Profils d’identité uniques par identité]](#single-identity-profiles-by-identity)
-* [[!UICONTROL Chevauchement d’audience par stratégie de fusion]](#audience-overlap-by-merge-policy)
-* [[!UICONTROL Les profils comptabilisent les tendances de changement par identité]](#profiles-count-change-trend-by-identity)
+* [[!UICONTROL Chevauchements d’audience par de stratégie de fusion]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL Tendance de changement du nombre de profils par d’identité]](#profiles-count-change-trend-by-identity)
 
 ### [!UICONTROL Nombre de profils] {#profile-count}
 
@@ -259,6 +260,32 @@ Le [!UICONTROL Profils non segmentés par identité] widget classe le nombre tot
 
 ![Le widget Profils non segmentés par identité .](../images/profiles/unsegmented-profiles-by-identity.png)
 
+### [!UICONTROL Audiences] {#audiences}
+
+Ce widget fournit le nombre total de segments prêts à être activés, en fonction de la stratégie de fusion choisie appliquée aux données de votre profil.
+
+Sélectionner **[!UICONTROL Audiences]** pour accéder au [!UICONTROL Segments] tableau de bord [!UICONTROL Parcourir] . De là, vous pouvez voir une liste de toutes les définitions de segment pour votre organisation.
+
+![Le widget Audiences .](../images/profiles/audiences.png)
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-115291 -->
+
+<!-- * [[!UICONTROL Audiences change trend]](#audiences-change-trend) -->
+<!-- ### [!UICONTROL Audiences change trend] {#audiences-change-trend}
+
+This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.  
+
+The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences. -->
+
+<!-- ![The Audiences change trend widget.]() -->
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
+<!-- ![The Audiences overlap report widget.]() -->
+<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
+
 ### [!UICONTROL Audiences mappées au statut de destination] {#audiences-mapped-to-destination-status}
 
 Le [!UICONTROL Audiences mappées à l’état de destination] le widget affiche le nombre total d’audiences mappées et non mappées dans une seule mesure et utilise un graphique en anneau pour illustrer la différence proportionnelle entre leurs totaux. Les nombres calculés dépendent de la stratégie de fusion choisie.
@@ -293,7 +320,7 @@ Pointez sur des barres individuelles pour afficher une boîte de dialogue détai
 
 ![Profils d’identité unique par widget d’identité.](../images/profiles/single-identity-profiles-by-identity.png)
 
-### [!UICONTROL Chevauchement d’audience par stratégie de fusion] {#audience-overlap-by-merge-policy}
+### [!UICONTROL Chevauchements d’audience par de stratégie de fusion] {#audience-overlap-by-merge-policy}
 
 Ce widget utilise un diagramme de Venn pour afficher le chevauchement de deux segments sélectionnés. La stratégie de fusion est sélectionnée dans la liste déroulante d’aperçu située en haut de la page et les segments à analyser sont sélectionnés dans deux menus déroulants du widget. Le nombre total de profils contenus dans la définition de segment pertinente peut être affiché en passant la souris sur un cercle ou l’intersection.
 
@@ -301,7 +328,7 @@ Comme le widget affiche le croisement visuel des définitions de segment, vous p
 
 ![Le tableau de bord Profils de l’interface utilisateur de Platform avec la liste déroulante Stratégie de fusion et les listes déroulantes de segments du widget sont mises en surbrillance.](../images/profiles/audience-overlap-by-merge-policy.png)
 
-### [!UICONTROL Les profils comptabilisent les tendances de changement par identité] {#profiles-count-change-trend-by-identity}
+### [!UICONTROL Tendance de changement du nombre de profils par d’identité] {#profiles-count-change-trend-by-identity}
 
 <!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
 

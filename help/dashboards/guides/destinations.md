@@ -4,9 +4,9 @@ title: Tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: 54020785166b735fcd4dbe052ce1e738a70a30df
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2726'
 ht-degree: 3%
 
 ---
@@ -55,6 +55,7 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 * [[!UICONTROL Segments non mappés par identité]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segments mappés par identité]](#mapped-segments-by-identity)
 * [[!UICONTROL Audiences courantes]](#common-audiences)
+* [[!UICONTROL Audiences mappées]](#mapped-audiences)
 * [[!UICONTROL Santé de l’audience mappée]](#mapped-audience-health)
 * [[!UICONTROL Nombre de destinations]](#destinations-count)
 * [[!UICONTROL Statut de destination]](#destination-status)
@@ -195,6 +196,14 @@ Le **[!UICONTROL Audiences courantes]** fournit une liste des cinq premiers segm
 Le [!UICONTROL TAILLE DE L’AUDIENCE] indique le nombre total de profils de chaque segment répertorié.
 
 ![Le widget Audiences courantes .](../images/destinations/common-audiences.png)
+
+### Audiences mappées {#mapped-audiences}
+
+Le [!UICONTROL Audiences mappées] widget affiche le nombre total d’audiences mappées qui peuvent être activées vers la destination sélectionnée en haut de la page.
+
+Sélectionner **[!UICONTROL Segments]** pour accéder au tableau de bord Segments [!UICONTROL Parcourir] . Cet espace de travail affiche une liste de toutes les définitions de segment pour votre organisation.
+
+![Le widget Audiences mappées .](../images/destinations/mapped-audiences.png)
 
 ### Santé de l’audience mappée {#mapped-audience-health}
 

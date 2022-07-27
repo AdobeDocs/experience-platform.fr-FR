@@ -4,10 +4,10 @@ title: Tableau de bord Segments
 description: 'Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments que votre entreprise a créés. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 63a7857c2b88e81de3df7d925daf15bf631ff84c
+source-git-commit: 2d84a9a7caf080abd51e846f39e4090cb4aa05c7
 workflow-type: tm+mt
 source-wordcount: '1576'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
@@ -168,9 +168,18 @@ Ce widget illustre la tendance de taille de l’audience d’un segment particul
 
 Ce widget représente le nombre de profils de deux segments qui répondent aux critères des deux définitions de segment. Les segments utilisés pour la comparaison sont sélectionnés dans les menus déroulants du widget. Le nombre total de profils contenus dans la définition de segment pertinente peut être affiché en passant la souris sur un cercle ou l’intersection du diagramme de Venn.
 
-Ce widget vous permet d’optimiser votre stratégie de segmentation en visualisant les similitudes dans les résultats de vos définitions de segment.
+Ce widget vous permet d’optimiser la stratégie de segmentation en consultant les similitudes dans les résultats des définitions de segment.
 
 ![Le widget de chevauchement d’audience.](../images/segments/audience-overlap.png)
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+
+<!-- ![The Audience overlap report widget.]() -->
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 
 ## Étapes suivantes
 
