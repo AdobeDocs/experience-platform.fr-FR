@@ -5,9 +5,9 @@ seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;a4t;journalisation;sdk web;expérience;plateforme;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: de420d3bbf35968fdff59b403a0f2b18110f3c17
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1155'
 ht-degree: 5%
 
 ---
@@ -136,7 +136,7 @@ Voici un exemple d’une `interact` réponse lorsque la journalisation côté cl
 }
 ```
 
-Les propositions pour les activités du compositeur d’expérience d’après les formulaires peuvent contenir à la fois du contenu et des éléments de mesure de clic sous la même proposition. Par conséquent, au lieu d’avoir un seul jeton d’analyse pour l’affichage du contenu dans `scopeDetails.characteristics.analyticsToken` , un jeton d’analyse des clics et un jeton d’affichage peuvent être spécifiés sous `scopeDetails.characteristics.analyticsTokens` , dans `display` et `click` propriétés, en conséquence.
+Les propositions pour les activités du compositeur d’expérience d’après les formulaires peuvent contenir à la fois du contenu et des éléments de mesure de clic sous la même proposition. Par conséquent, au lieu d’avoir un seul jeton d’analyse pour l’affichage du contenu dans `scopeDetails.characteristics.analyticsToken` , un jeton d’analyse des clics et un jeton d’affichage peuvent être spécifiés dans la propriété `scopeDetails.characteristics.analyticsDisplayToken` et `scopeDetails.characteristics.analyticsClickToken` propriétés, en conséquence.
 
 ```json
 {
@@ -162,14 +162,10 @@ Les propositions pour les activités du compositeur d’expérience d’après l
               }
             ],
             "characteristics": {
-              "eventTokens": {
-                "display": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
-                "click": "E0gb6q1+WyFW3FMbbQJmrg=="
-              },
-              "analyticsTokens": {
-                "display": "434689:0:0|2,434689:0:0|1",
-                "click": "434689:0:0|32767"
-              }
+               "displayToken": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
+               "clickToken": "E0gb6q1+WyFW3FMbbQJmrg==",
+               "analyticsDisplayToken": "434689:0:0|2,434689:0:0|1", 
+               "analyticsClickToken": "434689:0:0|32767"
             }
           },
           "items": [
@@ -208,11 +204,11 @@ Les propositions pour les activités du compositeur d’expérience d’après l
 }
 ```
 
-Toutes les valeurs de `scopeDetails.characteristics.analyticsToken`, ainsi que `scopeDetails.characteristics.analyticsTokens.display` (pour le contenu affiché) et `scopeDetails.characteristics.analyticsTokens.click` (pour les mesures des clics) sont les payloads A4T qui doivent être collectées et incluses comme `tnta` dans la balise [API d’insertion de données](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) appelez .
+Toutes les valeurs de `scopeDetails.characteristics.analyticsToken`, ainsi que `scopeDetails.characteristics.analyticsDisplayToken` (pour le contenu affiché) et `scopeDetails.characteristics.analyticsClickToken` (pour les mesures des clics) sont les payloads A4T qui doivent être collectées et incluses comme `tnta` dans la balise [API d’insertion de données](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) appelez .
 
 >[!IMPORTANT]
 >
->Notez que certains `analyticsToken`/`analyticsTokens` Les propriétés peuvent contenir plusieurs jetons, concaténés en une seule chaîne délimitée par des virgules.
+>Le `analyticsToken`, `analyticsDisplayToken`, `analyticsClickToken` Les propriétés peuvent contenir plusieurs jetons, concaténés en une seule chaîne délimitée par des virgules.
 >
 >Dans les exemples d’implémentation fournis dans la section suivante, plusieurs jetons Analytics sont collectés de manière itérative. Pour concaténer un tableau de jetons Analytics, utilisez une fonction similaire à celle-ci :
 >
@@ -344,13 +340,10 @@ alloy("sendEvent", {
         }
       ],
       "characteristics": {
-        "eventTokens": {
-          "display": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
-          "click": "Tagb6q1+WyFW3FMbbQJrtg=="
-        },
-        "analyticsTokens": {
-          "display": "434688:0:0|2,434688:0:0|1",
-          "click": "434688:0:0|32767"
+          "displayToken": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
+          "clickToken": "Tagb6q1+WyFW3FMbbQJrtg==",
+          "analyticsDisplayTokens": "434688:0:0|2,434688:0:0|1",
+          "analyticsClickTokens": "434688:0:0|32767"
         }
       }
     },
@@ -392,8 +385,8 @@ function getDisplayAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.display;
+  if (characteristics.analyticsDisplayToken) {
+    return characteristics.analyticsDisplayToken;
   }
   return characteristics.analyticsToken;
 }
@@ -420,8 +413,8 @@ function getClickAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.click;
+  if (characteristics.analyticsClickToken) {
+    return characteristics.analyticsClickToken;
   }
   return characteristics.analyticsToken;
 }
