@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 93ac391370ddd1fe596b8515bd520fb870a10a3c
+source-git-commit: 45a69586dbe492a9cfe64383adc44be62854154a
 workflow-type: tm+mt
-source-wordcount: '1913'
-ht-degree: 31%
+source-wordcount: '1884'
+ht-degree: 32%
 
 ---
 
@@ -95,11 +95,14 @@ Pour plus d’informations, reportez-vous à la section [présentation de la col
 | Fonctionnalité | Description |
 | --- | --- |
 | Améliorations apportées aux [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendations est désormais plus intelligent et plus rapide. Les nouvelles vérifications de validation réduisent de manière significative les erreurs de mappage les plus courantes, réduisant ainsi le temps jusqu’à la valeur. |
-| Prise en charge hiérarchique des ressources en flux continu | Vous pouvez désormais utiliser des fonctions. `upsert_array_append` et `upsert_array_replace` pour mettre à jour des tableaux et des objets lors de la diffusion en continu de upserts vers Profile. Voir [[!DNL Data Prep] guide des fonctions de mappage](../../data-prep/functions.md) pour plus d’informations. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Pour en savoir plus sur [!DNL Data Prep], reportez-vous à la section [[!DNL Data Prep] aperçu](../../data-prep/home.md).
+
+<!--
+| Hierarchical support for streaming upsets | You can now use functions `upsert_array_append` and `upsert_array_replace` to update arrays and objects when streaming upserts to Profile. See the [[!DNL Data Prep] mapping functions guide](../../data-prep/functions.md) for more information. |
+-->
 
 ## [!DNL Destinations] {#destinations}
 
