@@ -3,10 +3,10 @@ keywords: profil rtcdp;profils rtcdp;identités rtcdp;stratégies de fusion rtcd
 title: Guide de l’interface utilisateur des profils de compte
 description: Grâce aux profils de compte, l’édition B2B de Real-time Customer Data Platform vous permet d’unifier les informations de compte provenant de plusieurs sources. Ce guide fournit des détails sur l’interaction avec les profils de compte dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 55af435c4819193fa3f18a85543bc1fad423bb4d
+source-git-commit: 5a13059c7ddd3f78ef2147533c95d9bd59c5c449
 workflow-type: tm+mt
-source-wordcount: '1426'
-ht-degree: 84%
+source-wordcount: '1479'
+ht-degree: 81%
 
 ---
 
@@ -19,6 +19,14 @@ ht-degree: 84%
 Les profils de compte vous permettent d’unifier les informations de compte provenant de plusieurs sources. Cette vue unifiée d’un compte rassemble les données de vos nombreux canaux marketing et des différents systèmes actuellement utilisés par votre organisation pour stocker les informations du compte client. Ce document fournit un guide sur l’interaction avec les profils de compte à l’aide des fonctionnalités Real-time CDP, B2B Edition disponibles dans l’interface utilisateur d’Adobe Experience Platform.
 
 Pour en savoir plus sur la manière dont les profils de compte sont créés dans le cadre du workflow B2B, reportez-vous au [tutoriel de bout en bout](../b2b-tutorial.md).
+
+## Présentation des profils de compte (#account-profiles-overview)
+
+Pour une présentation du profil de compte, commencez par sélectionner **[!UICONTROL Profils]** under [!UICONTROL Comptes] dans le volet de navigation de gauche. Sous , [!UICONTROL Présentation] , le tableau de bord affiche un graphique ou un graphique affichant des widgets dans un seul point d’entrée.
+
+![Onglet Aperçu](images/b2b-account-profile-overview.png)
+
+Pour en savoir plus sur le tableau de bord des profils de compte, reportez-vous à la section [Tableau de bord Profils de compte](../../dashboards/guides/account-profiles.md) documentation.
 
 ## Parcourir les profils de compte {#browse-account-profiles}
 
