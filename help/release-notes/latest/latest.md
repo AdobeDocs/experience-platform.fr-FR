@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc910ec906e2d59f3a35b81377f7c97b7cafbabe
+source-git-commit: 93ac391370ddd1fe596b8515bd520fb870a10a3c
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 30%
+source-wordcount: '1913'
+ht-degree: 31%
 
 ---
 
@@ -18,7 +18,9 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Tableaux de bord](#dashboards)
 - [Collecte de données](#collection)
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
+
 <!-- - [Real-time Customer Data Platform B2B Edition](#b2b) -->
 - [Real-time Customer Profile](#profile)
 - [Sources](#sources)
@@ -98,6 +100,29 @@ Pour plus d’informations, reportez-vous à la section [présentation de la col
 {style=&quot;table-layout:auto&quot;}
 
 Pour en savoir plus sur [!DNL Data Prep], reportez-vous à la section [[!DNL Data Prep] aperçu](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ----------- | ----------- |
+| [Exporter le fichier maintenant (bêta)](../../destinations/ui/export-file-now.md) | Exportez un fichier complet sans interrompre le planning d’exportation actuel d’un segment précédemment planifié. Cet export s’effectue en plus des exports précédemment planifiés et ne modifie pas la fréquence d’exportation du segment. <br> L’exportation du fichier est déclenchée immédiatement et récupère les derniers résultats des exécutions de segmentation des Experience Platform. <br> <br>Contactez votre représentant d’Adobe pour accéder à cette fonctionnalité. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Nouvelles destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [(Version Bêta) Le [!DNL Trade Desk] - Connexion CRM](../../destinations/catalog/advertising/tradedesk-emails.md) | Utilisation [!DNL The Trade Desk] Destination CRM pour l’activation des profils vers votre [!DNL Trade Desk] compte pour le ciblage et la suppression des audiences en fonction des données CRM. <br><br>Cette destination est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer. |
+| [(version bêta) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | Cette destination permet aux marketeurs d’importer dans Snapchat Ads des segments d’utilisateurs créés dans Experience Platform et de les utiliser pour cibler leurs publicités. <br><br>Cette destination est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
