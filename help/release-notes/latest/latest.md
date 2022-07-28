@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 45a69586dbe492a9cfe64383adc44be62854154a
+source-git-commit: 4876df90e7e715c89e0614a9e1e81c3e7091bccb
 workflow-type: tm+mt
-source-wordcount: '1884'
-ht-degree: 32%
+source-wordcount: '2085'
+ht-degree: 29%
 
 ---
 
@@ -120,8 +120,12 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| [(Version Bêta) Le [!DNL Trade Desk] - Connexion CRM](../../destinations/catalog/advertising/tradedesk-emails.md) | Utilisation [!DNL The Trade Desk] Destination CRM pour l’activation des profils vers votre [!DNL Trade Desk] compte pour le ciblage et la suppression des audiences en fonction des données CRM. <br><br>Cette destination est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer. |
+| [Marketo V2](../../destinations/catalog/adobe/marketo-engage.md) | La mise à jour de la destination du Marketo Engage vous permet de rationaliser le processus de création de liste statique avec l’automatisation et de permettre aux utilisateurs d’importer des champs supplémentaires sur leurs pistes. Pour plus d’informations sur les améliorations apportées à Marketo V2, voir ci-dessous : <br><ul><li>Dans le **[!UICONTROL Planification du segment]** dans Marketo V1, vous devez ajouter manuellement une **ID de mappage** pour exporter des données vers Marketo. Cette étape manuelle n’est plus requise dans Marketo V2.</li><li>Dans le **[!UICONTROL Mappage]** au cours de l’étape du processus d’activation, dans Marketo V1, vous avez pu mapper les champs XDM à seulement trois champs cibles dans Marketo : `firstName`, `lastName`, et `companyName`. Avec la version Marketo V2, vous pouvez désormais mapper des champs XDM à de nombreux autres champs dans Marketo. Pour plus d’informations, reportez-vous à la section [attributs pris en charge dans Marketo V2](../../destinations/catalog/adobe/marketo-engage.md#supported-attributes).  </li></ul> |
+| [Pega Customer Decision Hub](../../destinations/catalog/personalization/pega.md) | Utilisez les informations d’attribut de profil et d’appartenance à un segment de Adobe Experience Platform dans Pega Customer Decision Hub comme prédicteurs dans les modèles adaptatifs et contribuez à la prise de décision la plus appropriée. |
+| [(API) Marketing Cloud Salesforce](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) | Cette destination permet aux marketeurs d’importer dans Snapchat Ads des segments d’utilisateurs créés dans Experience Platform et de les utiliser pour cibler leurs publicités. |
+| [Salesforce CRM](../../destinations/catalog/crm/salesforce.md) | Mettre à jour les coordonnées dans le Marketing Cloud Salesforce avec les informations de profil et de segment dans l’Experience Platform |
 | [(version bêta) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | Cette destination permet aux marketeurs d’importer dans Snapchat Ads des segments d’utilisateurs créés dans Experience Platform et de les utiliser pour cibler leurs publicités. <br><br>Cette destination est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer. |
+| [(Version Bêta) Le [!DNL Trade Desk] - Connexion CRM](../../destinations/catalog/advertising/tradedesk-emails.md) | Utilisation [!DNL The Trade Desk] Destination CRM pour l’activation des profils vers votre [!DNL Trade Desk] compte pour le ciblage et la suppression des audiences en fonction des données CRM. <br><br>Cette destination est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer. |
 
 {style=&quot;table-layout:auto&quot;}
 
