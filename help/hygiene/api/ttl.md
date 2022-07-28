@@ -2,10 +2,10 @@
 title: Point d’entrée de l’API Dataset Time-to-Live (TTL)
 description: Le point d’entrée /ttl de l’API Data Hygiene vous permet de planifier par programmation les TTL de jeux de données dans Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1315'
-ht-degree: 100%
+source-wordcount: '1313'
+ht-degree: 98%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Adobe Shield for Healthcare.
+>Actuellement, seules les organisations qui ont acheté Healthcare Shield disposent des capacités d’hygiène des données dans Adobe Experience Platform.
 
 Le point d’entrée `/ttl` de l’API Data Hygiene vous permet de planifier des protocoles de durée de vie (TTL) pour les jeux de données dans Adobe Experience Platform.
 
