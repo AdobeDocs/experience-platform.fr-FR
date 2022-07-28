@@ -3,9 +3,9 @@ keywords: profil rtcdp;profils rtcdp;identités rtcdp;stratégies de fusion rtcd
 title: Guide de l’interface utilisateur des profils de compte
 description: Grâce aux profils de compte, l’édition B2B de Real-time Customer Data Platform vous permet d’unifier les informations de compte provenant de plusieurs sources. Ce guide fournit des détails sur l’interaction avec les profils de compte dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9963c78bff8d48816982bc79af9239f1a7b5e90a
+source-git-commit: e94753236623343dcd739ff65c18248c1112f361
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1479'
 ht-degree: 81%
 
 ---
@@ -22,11 +22,11 @@ Pour en savoir plus sur la manière dont les profils de compte sont créés dans
 
 ## Présentation des profils de compte {#account-profiles-overview}
 
-Pour une présentation du profil de compte, commencez par sélectionner **[!UICONTROL Profils]** under [!UICONTROL Comptes] dans le volet de navigation de gauche. Sous , [!UICONTROL Présentation] , le tableau de bord affiche un graphique ou un graphique affichant des widgets dans un seul point d’entrée.
+Sélectionner **[!UICONTROL Profils]** under [!UICONTROL Comptes] dans le volet de navigation de gauche pour afficher la présentation des profils de compte. Sous , [!UICONTROL Présentation] , le tableau de bord affiche un graphique ou un graphique affichant des widgets dans un seul point d’entrée.
 
-![Onglet Aperçu](images/b2b-account-profile-overview.png)
+![Onglet Aperçu affichant des widgets](images/b2b-account-profile-overview.png)
 
-Pour en savoir plus sur le tableau de bord des profils de compte, reportez-vous à la section [Tableau de bord Profils de compte](../../dashboards/guides/account-profiles.md) documentation.
+Consultez la documentation sur le [[!UICONTROL Profils de compte]] ((../../dashboards/guides/account-profiles.md) tableau de bord pour en savoir plus.
 
 ## Parcourir les profils de compte {#browse-account-profiles}
 
