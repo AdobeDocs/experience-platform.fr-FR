@@ -2,22 +2,44 @@
 title: Destination Marketo Engage
 description: Marketo Engage est la seule solution de gestion de l’expérience client de bout en bout (CXM) pour le marketing, la publicité, les analyses et le commerce. Il vous permet d’automatiser et de gérer les activités, de la gestion de la relation client à la gestion de la relation client en passant par le marketing basé sur les comptes et l’attribution des recettes.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: 6dc4a93b46d6111637e0024da574d605e0d2b986
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 16%
+source-wordcount: '740'
+ht-degree: 11%
 
 ---
 
 # Destination du Marketo Engage {#beta-marketo-engage-destination}
 
+## Journal des modifications de destination {#changelog}
+
+>[!IMPORTANT]
+>
+>Avec la publication de la [connecteur de destination Marketo V2 amélioré](/help/release-notes/2022/july-2022.md#destinations), vous voyez maintenant deux cartes Marketo dans le catalogue des destinations.
+>* Si vous activez déjà les données de la variable **[!UICONTROL Marketo V1]** destination : Créez de nouveaux flux de données pour la variable **[!UICONTROL Marketo V2]** destination et suppression des flux de données existants dans **[!UICONTROL Marketo V1]** destination d’ici février 2023. À compter de cette date, la variable **[!UICONTROL Marketo V1]** la carte de destination sera supprimée.
+>* Si vous n’avez pas encore créé de flux de données pour la variable **[!UICONTROL Marketo V1]** destination, veuillez utiliser la nouvelle **[!UICONTROL Marketo V2]** pour vous connecter à Marketo et exporter des données vers cette application.
+
+
+![Image des deux cartes de destination Marketo dans une vue côte à côte.](/help/destinations/assets/catalog/adobe/marketo-side-by-side-view.png)
+
+Les améliorations apportées à la destination Marketo V2 sont les suivantes :
+
+* Dans le **[!UICONTROL Planification du segment]** dans Marketo V1, vous devez ajouter manuellement une **ID de mappage** pour exporter des données vers Marketo. Cette étape manuelle n’est plus requise dans Marketo V2.
+* Dans le **[!UICONTROL Mappage]** au cours de l’étape du processus d’activation, dans Marketo V1, vous avez pu mapper les champs XDM à seulement trois champs cibles dans Marketo : `firstName`, `lastName`, et `companyName`. Avec la version Marketo V2, vous pouvez désormais mapper des champs XDM à de nombreux autres champs dans Marketo. Pour plus d’informations, reportez-vous à la section [attributs pris en charge](#supported-attributes) voir la section ci-dessous.
+
 ## Présentation {#overview}
 
-Marketo Engage est la seule solution de gestion de l’expérience client de bout en bout (CXM) pour le marketing, la publicité, les analyses et le commerce. Il vous permet d’automatiser et de gérer les activités, de la gestion de la relation client à la gestion de la relation client en passant par le marketing basé sur les comptes et l’attribution des recettes.
+[!DNL Marketo Engage] est la seule solution de gestion de l’expérience client de bout en bout (CXM) pour le marketing, la publicité, l’analyse et le commerce. Il vous permet d’automatiser et de gérer les activités, de la gestion de la relation client à la gestion de la relation client en passant par le marketing basé sur les comptes et l’attribution des recettes.
 
 La Destination   permet aux marketeurs de pousser les segments créés dans Adobe Experience Platform vers Marketo où ils apparaîtront sous forme de listes statiques.
 
-## Identités prises en charge {#supported-identities}
+## Identités et attributs pris en charge {#supported-identities-attributes}
+
+>[!NOTE]
+>
+>Dans le [étape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) du workflow d’activation de destination, il s’agit de *mandatory* pour mapper les identités et *facultatif* pour mapper des attributs. Le mappage d’un e-mail et/ou d’un ECID à partir de l’onglet Espace de noms d’identité est la chose la plus importante à faire pour s’assurer que la personne correspond dans Marketo. Mapping Email garantit le taux de correspondance le plus élevé.
+
+### Identités prises en charge {#supported-identities}
 
 | Identité cible | Description |
 |---|---|
@@ -26,9 +48,9 @@ La Destination   permet aux marketeurs de pousser les segments créés dans Adob
 
 {style=&quot;table-layout:auto&quot;}
 
->[!NOTE]
->
->Dans le [étape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) du workflow d’activation de destination, il s’agit de *mandatory* pour mapper les identités et *facultatif* pour mapper des attributs. Le mappage d’un e-mail et/ou d’un ECID à partir de l’onglet Espace de noms d’identité est la chose la plus importante à faire pour s’assurer que la personne correspond dans Marketo. Mapping Email garantit le taux de correspondance le plus élevé.
+### Attributs pris en charge {#supported-attributes}
+
+Vous pouvez mapper des attributs d’Experience Platform à n’importe quel attribut auquel votre organisation a accès dans Marketo. Dans Marketo, vous pouvez utiliser la variable [Description de la requête API](https://developers.marketo.com/rest-api/lead-database/leads/#describe) pour récupérer les champs d’attribut auxquels votre organisation a accès.
 
 ## Type et fréquence d&#39;export {#export-type-frequency}
 
@@ -36,7 +58,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (email, ECID) utilisés dans la destination du Marketo Engage. |
+| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (email, ECID) utilisés dans la variable [!DNL Marketo Engage] destination. |
 | Fréquence des exports | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont &quot;toujours sur&quot; des connexions basées sur l’API. Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
