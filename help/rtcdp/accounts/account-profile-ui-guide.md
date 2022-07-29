@@ -3,9 +3,9 @@ keywords: profil rtcdp;profils rtcdp;identités rtcdp;stratégies de fusion rtcd
 title: Guide de l’interface utilisateur des profils de compte
 description: Grâce aux profils de compte, l’édition B2B de Real-time Customer Data Platform vous permet d’unifier les informations de compte provenant de plusieurs sources. Ce guide fournit des détails sur l’interaction avec les profils de compte dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: e94753236623343dcd739ff65c18248c1112f361
+source-git-commit: 604d2e100981b2c92d4cfac6862d78511791aa91
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1476'
 ht-degree: 81%
 
 ---
@@ -26,7 +26,7 @@ Sélectionner **[!UICONTROL Profils]** under [!UICONTROL Comptes] dans le volet 
 
 ![Onglet Aperçu affichant des widgets](images/b2b-account-profile-overview.png)
 
-Consultez la documentation sur le [[!UICONTROL Profils de compte]] ((../../dashboards/guides/account-profiles.md) tableau de bord pour en savoir plus.
+Consultez la documentation relative à la [[!UICONTROL Profils de compte]](../../dashboards/guides/account-profiles.md) tableau de bord pour en savoir plus.
 
 ## Parcourir les profils de compte {#browse-account-profiles}
 
