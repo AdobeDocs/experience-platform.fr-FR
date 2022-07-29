@@ -1,11 +1,11 @@
 ---
 title: Hôtes SFTP
-description: Découvrez comment configurer les balises dans Adobe Experience Platform pour diffuser des versions de bibliothèque sur un serveur SFTP sécurisé et auto-hébergé.
+description: Découvrez comment configurer les balises dans Adobe Experience Platform pour diffuser des versions de bibliothèque sur un serveur SFTP sécurisé et auto-hébergé.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: a0f22bad4a18936ba7c59d3747f8dd34f3de5ca4
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 100%
+source-wordcount: '821'
+ht-degree: 40%
 
 ---
 
@@ -13,18 +13,35 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Si vous ne souhaitez pas qu’Adobe gère vos bibliothèques hébergées, vous avez la possibilité de laisser Adobe Experience Platform placer les versions sur un serveur SFTP sécurisé que vous hébergez.
+Adobe Experience Platform vous permet de fournir des versions de bibliothèque de balises à un serveur SFTP sécurisé que vous hébergez, ce qui vous permet de mieux contrôler la manière dont vos versions sont stockées et gérées. Ce guide explique comment configurer un hôte SFTP pour une propriété de balise dans l’interface utilisateur de la collecte de données.
+
+>[!NOTE]
+>
+>Vous pouvez également choisir d’utiliser un hôte géré par Adobe à la place. Consultez le guide sur la [Hôtes gérés par Adobe](./managed-by-adobe-host.md) pour plus d’informations.
+>
+>Pour plus d’informations sur les avantages et les limites des bibliothèques d’auto-hébergement, voir [Guide d’auto-hébergement](./self-hosting-libraries.md).
+
+## Configuration d’une clé d’accès pour votre serveur {#access-key}
 
 Platform se connecte à votre serveur SFTP à l’aide d’une clé chiffrée. Pour configurer cette méthode correctement, quelques manipulations sont nécessaires :
 
-1. Une paire de clés publique/privée doit être installée sur votre serveur SFTP. Vous pouvez générer ces clés sur votre serveur ou les générer ailleurs et les installer sur votre serveur. Pour plus d’informations, consultez la documentation GitHub concernant la [génération de clés SSH](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key).
-1. La clé privée est utilisée pour chiffrer la clé GPG publique. Vous devrez fournir votre clé privée pendant le processus de création de l’hôte SFTP. Pour obtenir des instructions sur le chiffrement des clés GPG publiques, consultez la section [Chiffrement de valeurs](https://developer.adobelaunch.com/api/guides/encrypting_values/) dans la documentation de l’API Reactor. Utilisez la clé GPG de l’environnement de production, sauf si vous savez que vous avez besoin d’une clé spécifique. Enfin, vous pouvez chiffrer votre clé privée depuis n’importe quel ordinateur. Il n’est donc pas nécessaire d’installer GPG sur votre serveur pour réaliser cette manipulation.
-1. Vous devrez peut-être approuver les adresses IP utilisées dans le pare-feu de votre entreprise pour permettre à Platform d’atteindre votre serveur SFTP et de s’y connecter. Ces adresses IP sont les suivantes :
-   * `184.72.239.68`
-   * `23.20.85.113`
-   * `54.226.193.184`
+### Création d’une paire de clés publique/privée
+
+Une paire de clés publique/privée doit être installée sur votre serveur SFTP. Vous pouvez générer ces clés sur votre serveur ou les générer ailleurs et les installer sur votre serveur. Pour plus d’informations, consultez la documentation GitHub concernant la [génération de clés SSH](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key).
+
+### Chiffrer vos clés
+
+La clé privée est utilisée pour chiffrer la clé publique. Vous devrez fournir votre clé privée pendant le processus de création de l’hôte SFTP. Voir la section sur [cryptage des valeurs](../../../api/guides/encrypting-values.md) dans le guide de l’API Reactor pour obtenir des instructions sur le chiffrement des clés publiques. Utilisez la clé GPG de l’environnement de production, sauf si vous savez que vous avez besoin d’une clé spécifique. Enfin, vous pouvez chiffrer votre clé privée depuis n’importe quel ordinateur. Il n’est donc pas nécessaire d’installer GPG sur votre serveur pour réaliser cette manipulation.
+
+### Placer sur la liste autorisée les adresses IP de la plateforme
+
+Vous devrez peut-être approuver un ensemble d’adresses IP à utiliser dans le pare-feu de votre entreprise pour permettre à Platform d’atteindre votre serveur SFTP et de s’y connecter. Ces adresses IP sont les suivantes :
+
+* `184.72.239.68`
+* `23.20.85.113`
+* `54.226.193.184`
 
 >[!NOTE]
 >
@@ -32,30 +49,37 @@ Platform se connecte à votre serveur SFTP à l’aide d’une clé chiffrée. P
 
 Pour plus d’informations détaillées, reportez-vous à l’article Medium suivant sur la [configuration de serveurs SFTP pour la diffusion d’une version](https://medium.com/launch-by-adobe/configuring-an-sftp-server-for-use-with-adobe-launch-bc626027e5a6).
 
-## Création d’un hôte SFTP
+## Création d’un hôte SFTP {#create}
 
-1. Ouvrez l’onglet [!UICONTROL Hôtes].
-1. Créez l’hôte.
-1. Donnez un nom à votre hôte.
-1. Choisissez **[!UICONTROL SFTP]** comme type d’hôte.
-1. Saisissez l’hôte, le chemin, le port, le nom d’utilisateur et la clé privée chiffrée.
+Dans l’interface utilisateur de la collecte de données, sélectionnez **[!UICONTROL Hôtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Ajouter un hôte]**.
 
-   Le port doit être l’un des ports suivants :
+![Image montrant le bouton Ajouter l’hôte sélectionné dans l’interface utilisateur](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 
-   * 21
-   * 22
-   * 80
-   * 200-299
-   * 443
-   * 2000-2999
-   * 4343
-   * 8080
-   * 8888
+La boîte de dialogue de création d’hôte s’affiche. Attribuez un nom à l’hôte et sous **[!UICONTROL Type]**, sélectionnez **[!UICONTROL SFTP]**.
 
-   >[!NOTE]
-   >
-   >En règle générale, Adobe limite le nombre de ports pouvant être utilisés pour le trafic sortant. Les ports sélectionnés sont généralement autorisés par le biais des pare-feu d’entreprise, en plus d’inclure certaines plages pour la flexibilité.
+![Image montrant l&#39;option d&#39;hébergement SFTP sélectionnée](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
 
-1. Sélectionnez **[!UICONTROL Enregistrer]**.
+### Configuration de l’hôte SFTP {#configure}
 
-Cliquer sur **[!UICONTROL Enregistrer]** entraîne le test de la connexion et de la capacité de diffusion des fichiers sur votre serveur SFTP. Platform crée un dossier, crée un fichier dans ce dossier, vérifie que le fichier est bien là, puis supprime le tout. Si le compte utilisateur de votre serveur SFTP (celui associé au certificat sécurisé que vous avez fourni à Platform ) ne dispose pas des autorisations nécessaires pour effectuer cette action, l’hôte passe en état « Failed » (Échec).
+La boîte de dialogue se développe afin d’inclure des options de configuration supplémentaires pour l’hôte SFTP. Ces informations sont expliquées ci-dessous.
+
+![Image montrant les détails requis pour une connexion d’hôte SFTP](../../../images/ui/publishing/sftp-hosts/host-details.png)
+
+| Champ de configuration | Description |
+| --- | --- |
+| [!UICONTROL Ne pas utiliser de liens symboliques] | Par défaut, tous les hôtes SFTP utilisent des liens symboliques (liens symboliques) pour référencer la bibliothèque. [builds](../builds.md) qui sont enregistrés sur le serveur. Cependant, tous les serveurs ne prennent pas en charge l’utilisation de liens symboliques. Lorsque cette option est sélectionnée, l’hôte utilise une opération de copie pour mettre à jour les ressources de création directement au lieu d’utiliser des liens symboliques. |
+| [!UICONTROL URL du serveur SFTP] | Chemin d’accès de base de l’URL pour votre serveur. |
+| [!UICONTROL Path] | Chemin d’accès à l’URL du serveur de base pour cet hôte. |
+| [!UICONTROL Port] | Le port doit être l’un des ports suivants :<ul><li>`21`</li><li>`22`</li><li>`80`</li><li>`200-299`</li><li>`443`</li><li>`2000-2999`</li><li>`4343`</li><li>`8080`</li><li>`8888`</li></ul>En règle générale, Adobe limite le nombre de ports pouvant être utilisés pour le trafic sortant. Les ports sélectionnés sont généralement autorisés par le biais des pare-feu d’entreprise et incluent certaines plages pour plus de flexibilité. |
+| [!UICONTROL Nom d’utilisateur] | Nom d’utilisateur à utiliser lors de l’accès au serveur. |
+| [!UICONTROL Clé privée chiffrée] | La clé privée chiffrée que vous avez créée dans une [étape précédente](#access-key). |
+
+Sélectionner **[!UICONTROL Enregistrer]** pour créer l’hôte avec la configuration sélectionnée.
+
+![Image montrant l’hôte SFTP en cours d’enregistrement](../../../images/ui/publishing/sftp-hosts/save-host.png)
+
+Cliquer sur **[!UICONTROL Enregistrer]** entraîne le test de la connexion et de la capacité de diffusion des fichiers sur votre serveur SFTP. Platform crée un dossier, écrit un fichier dans ce dossier, vérifie que le fichier est bien là, puis procède au nettoyage. Si le compte utilisateur de votre serveur SFTP (celui associé au certificat sécurisé que vous avez fourni à Platform) ne dispose pas des autorisations nécessaires pour effectuer cette action, l’hôte passe en état &quot;Échec&quot;.
+
+## Étapes suivantes
+
+Ce guide explique comment configurer un serveur SFTP auto-hébergé à utiliser dans des balises . Une fois l’hôte établi, vous pouvez l’associer à un ou plusieurs de vos [environnements](../environments.md) pour publier des bibliothèques de balises. Pour plus d’informations sur le processus général d’activation des fonctionnalités de balise sur vos propriétés web ou mobiles, voir la section [présentation de la publication](../overview.md).
