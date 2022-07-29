@@ -3,10 +3,10 @@ keywords: gestionnaire de publicités Google;publicité Google;double-clic;Doubl
 title: Connexion Google Ad Manager
 description: Google Ad Manager, anciennement appelé DoubleClick for Publishers ou DoubleClick AdX, est une plateforme de service publicitaire de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, par le biais de vidéos et dans des applications mobiles.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: aed15e0abfd51a8a08290e78302239792f86535a
+source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 23%
+source-wordcount: '856'
+ht-degree: 22%
 
 ---
 
@@ -85,7 +85,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 * **[!UICONTROL Type de compte]** : sélectionnez une option, en fonction de votre compte avec Google :
    * Utilisez `DFP by Google` pour for Publishers[!DNL DoubleClick]
    * Utilisation `AdX buyer` pour [!DNL Google AdX]
-* **[!UICONTROL Identifiant de compte]** : renseignez votre identifiant de compte avec [!DNL Google]. Il peut s’agir de votre code réseau ou de votre ID de lien d’audience. En règle générale, il s’agit d’un identifiant à huit chiffres.
+* **[!UICONTROL Identifiant de compte]**: Renseignez votre ID de lien d’audience avec [!DNL Google].
 
 >[!NOTE]
 >
