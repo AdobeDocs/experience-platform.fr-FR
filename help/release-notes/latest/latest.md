@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
 workflow-type: tm+mt
 source-wordcount: '2114'
-ht-degree: 28%
+ht-degree: 31%
 
 ---
 
@@ -74,7 +74,7 @@ Pour en savoir plus sur le tableau de bord des destinations, voir [Présentation
 
 ## Collecte de données {#collection}
 
-Adobe Experience Platform fournit une suite de technologies qui vous permet de collecter des données d’expérience client côté client et de les envoyer au réseau Adobe Experience Platform Edge où elles peuvent être enrichies, transformées et distribuées vers des destinations d’Adobe ou non Adobe.
+Adobe Experience Platform fournit une suite de technologies qui vous permettent de collecter des données d’expérience client côté client. Vous pouvez ensuite les envoyer à Adobe Experience Platform Edge Network pour les enrichir, les transformer et les distribuer vers des destinations Adobe ou autres qu’Adobe.
 
 **Nouvelles fonctionnalités**
 
@@ -84,7 +84,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permet de c
 
 {style=&quot;table-layout:auto&quot;}
 
-Pour plus d’informations, reportez-vous à la section [présentation de la collecte de données](../../collection/home.md).
+Pour plus d’informations, consultez la [présentation de la collecte des données](../../collection/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
