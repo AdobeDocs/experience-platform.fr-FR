@@ -4,9 +4,9 @@ title: Tableau de bord Segments
 description: 'Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments que votre entreprise a créés. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1597'
 ht-degree: 11%
 
 ---
@@ -57,9 +57,9 @@ Pour choisir un autre segment, sélectionnez la liste déroulante en regard du n
 
 Le tableau de bord des segments est constitué de widgets, qui sont des mesures en lecture seule fournissant des informations importantes sur le segment sélectionné.
 
-La date et l’heure de la &quot;dernière mise à jour&quot; d’un widget indique le moment où le dernier instantané des données a été pris. La date et l’heure de l’instantané sont indiquées en UTC ; il ne se trouve pas dans le fuseau horaire de l’utilisateur ou de l’organisation.
+La date et l’heure de l’instantané le plus récent s’affichent en haut de la [!UICONTROL Présentation] en regard de la liste déroulante des segments. Toutes les données du widget sont exactes à cette date et cette heure. L’horodatage de l’instantané est fourni en UTC ; il ne se trouve pas dans le fuseau horaire de l’utilisateur ou de l’organisation.
 
-![](../images/segments/widget-timestamp.png)
+![Onglet Aperçu des segments avec un horodatage de widget mis en surbrillance.](../images/segments/widget-timestamp.png)
 
 ## Widgets standard {#standard-widgets}
 
@@ -68,13 +68,13 @@ Adobe fournit plusieurs widgets standard que vous pouvez utiliser pour visualise
 Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez le nom d’un widget dans la liste suivante :
 
 * [[!UICONTROL Taille de l’audience]](#audience-size)
-* [[!UICONTROL Superposition des identités]](#identity-overlap)
-* [[!UICONTROL Profils par identité]](#profiles-by-identity)
 * [[!UICONTROL Ordre d’activation de l’audience]](#audience-activation-order)
 * [[!UICONTROL Tendance de la taille de l’audience]](#audience-size-trend)
 * [[!UICONTROL Tendance de changement de la taille de l’audience]](#audience-size-change-trend)
 * [[!UICONTROL Tendance de la taille de l’audience par identité]](#audience-size-trend-by-identity)
 * [[!UICONTROL Supervision de l’audience]](#audience-overlap)
+* [[!UICONTROL Superposition des identités]](#identity-overlap)
+* [[!UICONTROL Profils par identité]](#profiles-by-identity)
 
 ### [!UICONTROL Taille de l’audience] {#audience-size}
 
@@ -89,6 +89,61 @@ Le **[!UICONTROL Taille de l’audience]** widget affiche le nombre total de pro
 Pour plus d’informations sur les fragments et les profils fusionnés, commencez par lire la section [Présentation de Real-time Customer Profile](../../profile/home.md).
 
 ![](../images/segments/audience-size.png)
+
+### [!UICONTROL Tendance de la taille de l’audience] {#audience-size-trend}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesizetrend"
+>title="Tendance de la taille de l’audience"
+>abstract="Ce widget fournit des informations sur le nombre total de profils qui répondent aux critères de **any** définition de segment, telle qu’elle est capturée lors de l’instantané quotidien, pendant les 30 derniers jours, 90 jours ou 12 mois."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="En savoir plus dans la documentation"
+
+Le **[!UICONTROL Tendance de la taille de l’audience]** Le widget fournit une représentation graphique linéaire pour le nombre total de profils qui répondent aux critères de **any** définition de segment sur une période donnée. La tendance de la taille de l’audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. La taille de l’audience est répercutée sur l’axe des ordonnées et l’heure sur l’axe des abscisses.
+
+Ce widget inclut également le [!UICONTROL Sous-titres] fonction dans laquelle un modèle d’apprentissage automatique analyse les données de graphique et de segment et génère automatiquement des sous-titres pour décrire les tendances clés et les événements importants. Sélectionner **[!UICONTROL Sous-titres]** pour ouvrir la boîte de dialogue des sous-titres automatiques.
+
+![La présentation des segments affiche le widget de tendance de taille d’audience .](../images/segments/audience-size-trend-captions.png)
+
+La boîte de dialogue de sous-titres automatiques s’ouvre, vous permettant d’obtenir des informations sur vos données.
+
+![Boîte de dialogue de sous-titres automatiques pour le widget de tendance de taille d’audience .](../images/segments/audience-size-trend-automatic-captions-dialog.png)
+
+Pour en savoir plus sur l’évaluation des segments et sur la manière dont les profils sont qualifiés et sortent des segments, reportez-vous à la section [Documentation de Segmentation Service](../../segmentation/home.md).
+
+### [!UICONTROL Tendance de changement de la taille de l’audience] {#audience-size-change-trend}
+
+Ce widget fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour un segment donné et les aperçus quotidiens les plus récents. Le segment choisi pour l’analyse est sélectionné dans la liste déroulante d’aperçu. La période d’analyse des tendances peut être consultée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. La taille de l’audience est répercutée sur l’axe des ordonnées et l’heure sur l’axe des abscisses.
+
+![Le widget de tendance de changement de la taille de l’audience .](../images/segments/audience-size-change-trend.png)
+
+### [!UICONTROL Tendance de la taille de l’audience par identité] {#audience-size-trend-by-identity}
+
+Ce widget illustre la tendance de taille de l’audience d’un segment particulier en fonction du type d’identité sélectionné dans le menu déroulant du widget. Le segment utilisé pour l’analyse est sélectionné dans la liste déroulante d’aperçu. La période d’analyse des tendances peut être consultée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget.
+
+![Tendance de la taille d’audience par widget d’identité.](../images/segments/audience-size-trend-by-identity.png)
+
+### [!UICONTROL Ordre d’activation de l’audience] {#audience-activation-order}
+
+Le [!UICONTROL Ordre d’activation de l’audience] Le widget fournit un tableau à trois colonnes qui répertorie la variable [!UICONTROL nom de la destination], la variable [!UICONTROL platform]et l’activation [!UICONTROL date] de l’audience. La liste est classée de haut en bas en fonction de la récence et peut contenir jusqu’à 10 lignes.
+
+![Le widget Commande d’activation de l’audience .](../images/segments/audience-activation-order.png)
+
+### [!UICONTROL Supervision de l’audience] {#audience-overlap}
+
+Ce widget représente le nombre de profils de deux segments qui répondent aux critères des deux définitions de segment. Les segments utilisés pour la comparaison sont sélectionnés dans les menus déroulants du widget. Le nombre total de profils contenus dans la définition de segment pertinente peut être affiché en passant la souris sur un cercle ou l’intersection du diagramme de Venn.
+
+Ce widget vous permet d’optimiser la stratégie de segmentation en consultant les similitudes dans les résultats des définitions de segment.
+
+![Le widget de chevauchement d’audience.](../images/segments/audience-overlap.png)
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+
+<!-- ![The Audience overlap report widget.]() -->
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 
 ### [!UICONTROL Superposition des identités] {#identity-overlap}
 
@@ -125,61 +180,6 @@ Sélectionner **[!UICONTROL Sous-titres]** pour ouvrir la boîte de dialogue des
 Un modèle d’apprentissage automatique génère automatiquement des informations sur les données en analysant la distribution globale et les dimensions clés des données.
 
 Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
-
-### [!UICONTROL Ordre d’activation de l’audience] {#audience-activation-order}
-
-Le [!UICONTROL Ordre d’activation de l’audience] Le widget fournit un tableau à trois colonnes qui répertorie la variable [!UICONTROL nom de la destination], la variable [!UICONTROL platform]et l’activation [!UICONTROL date] de l’audience. La liste est classée de haut en bas en fonction de la récence et peut contenir jusqu’à 10 lignes.
-
-![Le widget Commande d’activation de l’audience .](../images/segments/audience-activation-order.png)
-
-### [!UICONTROL Tendance de la taille de l’audience] {#audience-size-trend}
-
->[!CONTEXTUALHELP]
->id="platform_dashboards_segments_audiencesizetrend"
->title="Tendance de la taille de l’audience"
->abstract="Ce widget fournit des informations sur le nombre total de profils qui répondent aux critères de **any** définition de segment, telle qu’elle est capturée lors de l’instantané quotidien, pendant les 30 derniers jours, 90 jours ou 12 mois."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="En savoir plus dans la documentation"
-
-Le **[!UICONTROL Tendance de la taille de l’audience]** Le widget fournit une représentation graphique linéaire pour le nombre total de profils qui répondent aux critères de **any** définition de segment sur une période donnée. La tendance de la taille de l’audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. La taille de l’audience est répercutée sur l’axe des ordonnées et l’heure sur l’axe des abscisses.
-
-Ce widget inclut également le [!UICONTROL Sous-titres] fonction dans laquelle un modèle d’apprentissage automatique analyse les données de graphique et de segment et génère automatiquement des sous-titres pour décrire les tendances clés et les événements importants. Sélectionner **[!UICONTROL Sous-titres]** pour ouvrir la boîte de dialogue des sous-titres automatiques.
-
-![La présentation des segments affiche le widget de tendance de taille d’audience .](../images/segments/audience-size-trend-captions.png)
-
-La boîte de dialogue de sous-titres automatiques s’ouvre, vous permettant d’obtenir des informations sur vos données.
-
-![Boîte de dialogue de sous-titres automatiques pour le widget de tendance de taille d’audience .](../images/segments/audience-size-trend-automatic-captions-dialog.png)
-
-Pour en savoir plus sur l’évaluation des segments et sur la manière dont les profils sont qualifiés et sortent des segments, reportez-vous à la section [Documentation de Segmentation Service](../../segmentation/home.md).
-
-### [!UICONTROL Tendance de changement de la taille de l’audience] {#audience-size-change-trend}
-
-Ce widget fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour un segment donné et les aperçus quotidiens les plus récents. Le segment choisi pour l’analyse est sélectionné dans la liste déroulante d’aperçu. La période d’analyse des tendances peut être consultée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. La taille de l’audience est répercutée sur l’axe des ordonnées et l’heure sur l’axe des abscisses.
-
-![Le widget de tendance de changement de la taille de l’audience .](../images/segments/audience-size-change-trend.png)
-
-### [!UICONTROL Tendance de la taille de l’audience par identité] {#audience-size-trend-by-identity}
-
-Ce widget illustre la tendance de taille de l’audience d’un segment particulier en fonction du type d’identité sélectionné dans le menu déroulant du widget. Le segment utilisé pour l’analyse est sélectionné dans la liste déroulante d’aperçu. La période d’analyse des tendances peut être consultée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget.
-
-![Tendance de la taille d’audience par widget d’identité.](../images/segments/audience-size-trend-by-identity.png)
-
-### [!UICONTROL Supervision de l’audience] {#audience-overlap}
-
-Ce widget représente le nombre de profils de deux segments qui répondent aux critères des deux définitions de segment. Les segments utilisés pour la comparaison sont sélectionnés dans les menus déroulants du widget. Le nombre total de profils contenus dans la définition de segment pertinente peut être affiché en passant la souris sur un cercle ou l’intersection du diagramme de Venn.
-
-Ce widget vous permet d’optimiser la stratégie de segmentation en consultant les similitudes dans les résultats des définitions de segment.
-
-![Le widget de chevauchement d’audience.](../images/segments/audience-overlap.png)
-
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
-
-<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
-
-<!-- ![The Audience overlap report widget.]() -->
-
-<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 
 ## Étapes suivantes
 

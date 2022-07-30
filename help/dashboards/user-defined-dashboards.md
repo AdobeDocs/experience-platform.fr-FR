@@ -1,7 +1,8 @@
 ---
 title: Tableaux de bord définis par l’utilisateur
 description: Découvrez comment créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser des mesures clés.
-source-git-commit: 47e74a0cabbf40df3a45e835ca3a1e9a36fb4532
+exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
+source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
 workflow-type: tm+mt
 source-wordcount: '883'
 ht-degree: 0%
@@ -56,7 +57,7 @@ Le [!UICONTROL Sélectionner des données] s’affiche. Sélectionnez un modèle
 >
 >Actuellement, les tableaux de bord définis par l’utilisateur ne prennent en charge que le modèle de données de profil. D’autres options seront prises en charge.
 
-![Boîte de dialogue de sélection des données.](./images/user-defined-dashboards/select-data-dialog.png)
+![La boîte de dialogue Sélectionner les données .](./images/user-defined-dashboards/select-data-dialog.png)
 
 La liste d’aperçu fournit des détails sur les tables contenues dans le modèle de données. Le tableau ci-dessous fournit une description des champs de la colonne et de leurs valeurs potentielles.
 
@@ -68,9 +69,9 @@ La liste d’aperçu fournit des détails sur les tables contenues dans le modè
 
 Sélectionner **[!UICONTROL Suivant]** pour confirmer votre choix du modèle de données. La vue suivante affiche la liste des tableaux disponibles dans le rail de gauche. Sélectionnez un tableau pour afficher une ventilation complète des données contenues dans le tableau sélectionné.
 
-Le [!UICONTROL Aperçu] contient des onglets pour [!UICONTROL Exemples d’enregistrements] et [!UICONTROL Attributs].The [!UICONTROL Exemples d’enregistrements] fournit un sous-ensemble des enregistrements de la table sélectionnée dans une vue tabulée. Le [!UICONTROL Attributs] fournit le nom de l’attribut, le type de données et la table source pour chaque attribut associé au tableau sélectionné.
+Le [!UICONTROL Aperçu] contient des onglets pour [!UICONTROL Exemples d’enregistrements] et [!UICONTROL Attributs]. Le [!UICONTROL Exemples d’enregistrements] fournit un sous-ensemble des enregistrements de la table sélectionnée dans une vue tabulée. Le [!UICONTROL Attributs] fournit le nom de l’attribut, le type de données et la table source pour chaque attribut associé au tableau sélectionné.
 
-Sélectionnez un tableau dans la liste disponible dans le rail de gauche pour fournir des données à votre widget et sélectionnez [!UICONTROL Sélectionner] pour revenir au compositeur de widget.
+Sélectionnez un tableau dans la liste disponible dans le rail de gauche pour fournir des données à votre widget et sélectionnez **[!UICONTROL Sélectionner]** pour revenir au compositeur de widget.
 
 ![La boîte de dialogue de sélection des données avec la sélection mise en surbrillance.](./images/user-defined-dashboards/select-a-table.png)
 
@@ -117,7 +118,3 @@ Les widgets peuvent être réorganisés et redimensionnés dans cet espace de tr
 En lisant ce document, vous comprenez mieux comment créer un tableau de bord personnalisé et comment créer, modifier et mettre à jour des widgets personnalisés pour ce tableau de bord.
 
 Pour découvrir les mesures et visualisations préconfigurées disponibles pour la variable [profils](./guides/profiles.md#standard-widgets), [segments](./guides/segments.md#standard-widgets), et [destinations](./guides/destinations.md#standard-widgets) pour les tableaux de bord, consultez la liste des widgets standard dans leur documentation respective.
-
-
-
-

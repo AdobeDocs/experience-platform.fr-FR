@@ -4,9 +4,9 @@ title: Tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '2726'
+source-wordcount: '2791'
 ht-degree: 3%
 
 ---
@@ -29,11 +29,13 @@ Le [!UICONTROL Destinations] Le tableau de bord affiche un instantané des desti
 
 Pour accéder au tableau de bord des destinations dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Destinations]** dans le rail de gauche, puis sélectionnez l’option **[!UICONTROL Présentation]** pour afficher le tableau de bord.
 
+La date et l’heure de l’instantané le plus récent s’affichent en haut de la [!UICONTROL Présentation] en regard de la liste déroulante de destination. Toutes les données du widget sont exactes à cette date et cette heure. L’horodatage de l’instantané est fourni en UTC ; il ne se trouve pas dans le fuseau horaire de l’utilisateur ou de l’organisation.
+
 >[!NOTE]
 >
 >Si votre entreprise est une nouvelle société qui n’a pas encore de destinations principales, la variable [!UICONTROL Destinations] tableau de bord et [!UICONTROL Présentation] ne sont pas visibles. À la place, sélectionnez [!UICONTROL Destinations] dans le volet de navigation de gauche affiche le [!UICONTROL Catalogue] . Pour en savoir plus sur la variable [!UICONTROL Catalogue] , voir [[!UICONTROL Destinations] guide de workspace](../../destinations/ui/destinations-workspace.md).
 
-![](../images/destinations/dashboard-overview.png)
+![Présentation des destinations de l’interface utilisateur de Platform avec l’instantané le plus récent en surbrillance.](../images/destinations/snapshot-timestamp.png)
 
 ### Modification du tableau de bord des destinations
 

@@ -4,7 +4,7 @@ title: Comment obtenir et octroyer des autorisations dʼaccès pour les tableaux
 type: Documentation
 description: Octroyez aux utilisateurs la possibilité dʼafficher, de modifier et de mettre à jour les tableaux de bord Experience Platform à lʼaide dʼAdobe Admin Console.
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: 052e365c6127961363b7b5333cb0f4f82ab5479a
+source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 32%
@@ -56,7 +56,7 @@ La matrice de contrôle d’accès suivante présente une répartition des autor
 | [!DNL Dashboards] [!DNL Inventory] <br/>(onglet Parcourir ) | ACTIVÉ | S.O. | S.O. | S.O. |
 | [!DNL Dashboards] [!DNL Integrations] tab <br/>(utilisé pour installer Power BI) | ACTIVÉ | **Au moins une** | S.O. | S.O. |
 | Bouton d’installation et workflow de Power BI | ACTIVÉ | S/O | **OBLIGATOIRE** | S/O |
-| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] des tableaux de bord.<br/>Possibilité de modifier des schémas de widget d’ajouter de nouveaux attributs pour la personnalisation de widgets | **Gestion du tableau de bord standard REQUIS** | **REQUIS (pour chaque tableau de bord respectif)** | S.O. | S.O. |
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] tableaux de bord.<br/>Possibilité de modifier des schémas de widget d’ajouter de nouveaux attributs pour la personnalisation de widgets | **Gestion du tableau de bord standard REQUIS** | **REQUIS (pour chaque tableau de bord respectif)** | S.O. | S.O. |
 | [!DNL License Usage Dashboard] | S.O. | S.O. | S.O. | ACTIVÉ |
 
 {style=&quot;table-layout:auto&quot;}

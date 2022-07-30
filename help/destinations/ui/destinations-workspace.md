@@ -3,9 +3,9 @@ keywords: plateforme;destinations;espace de travail des destinations;espace de t
 title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de cinq sections : Aperçu, Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 802a15212f51db2c616860ed0fd2c3f1cf2d3777
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1162'
 ht-degree: 19%
 
 ---
@@ -26,7 +26,7 @@ Le **[!UICONTROL Présentation]** affiche le [!UICONTROL Destinations] tableau d
 >
 >Si votre entreprise est une nouvelle société qui n’a pas encore de destinations principales, la variable [!UICONTROL Destinations] tableau de bord et [!UICONTROL Présentation] ne sont pas visibles. À la place, sélectionnez [!UICONTROL Destinations] dans le volet de navigation de gauche affiche le [[!UICONTROL Catalogue] tab](#catalog).
 
-![](../../dashboards/images/destinations/dashboard-overview.png)
+![Onglet Aperçu du tableau de bord des destinations .](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catalogue] {#catalog}
 

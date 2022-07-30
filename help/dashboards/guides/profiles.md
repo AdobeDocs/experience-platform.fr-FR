@@ -4,10 +4,10 @@ title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a1a5a34ed0f46223b1eae3df75ff65f27041503e
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '3875'
-ht-degree: 8%
+source-wordcount: '3901'
+ht-degree: 7%
 
 ---
 
@@ -89,7 +89,9 @@ Pour en savoir plus sur l’interface utilisateur du schéma d’union, consulte
 
 Le tableau de bord est composé de widgets, qui sont des mesures en lecture seule fournissant des informations importantes sur vos données de profil.
 
-La date et l’heure de la &quot;dernière mise à jour&quot; d’un widget indique le moment où le dernier instantané des données a été pris. La date et l’heure de l’instantané sont indiquées en UTC ; il ne se trouve pas dans le fuseau horaire de l’utilisateur ou de l’organisation.
+La date et l’heure de l’instantané le plus récent s’affichent en haut de la [!UICONTROL Présentation] en regard du menu déroulant Stratégie de fusion. Toutes les données du widget sont exactes à cette date et cette heure. L’horodatage de l’instantané est fourni en UTC ; il ne se trouve pas dans le fuseau horaire de l’utilisateur ou de l’organisation.
+
+![Onglet Aperçu du tableau de bord Profils avec l’horodatage instantané le plus récent en surbrillance.](../images/profiles/snapshot-timestamp.png)
 
 ## Widgets standard {#standard-widgets}
 
@@ -105,13 +107,13 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 * [[!UICONTROL Profils par identité]](#profiles-by-identity)
 * [[!UICONTROL Superposition des identités]](#identity-overlap)
 * [[!UICONTROL Profils d’identité uniques]](#single-identity-profiles)
+* [[!UICONTROL Profils d’identité uniques par identité]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Profils non segmentés]](#unsegmented-profiles)
 * [[!UICONTROL Tendance des profils non segmentés]](#unsegmented-profiles-trend)
 * [[!UICONTROL Profils non segmentés par identité]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences mappées au statut de destination]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Taille des audiences]](#audiences-size)
-* [[!UICONTROL Profils d’identité uniques par identité]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Chevauchements d’audience par de stratégie de fusion]](#audience-overlap-by-merge-policy)
 
 ### [!UICONTROL Nombre de profils] {#profile-count}
@@ -238,6 +240,14 @@ Le [!UICONTROL Profils d’identité uniques] Le widget fournit un décompte des
 
 ![Widget Profils d’identité unique.](../images/profiles/single-identity-profiles.png)
 
+### [!UICONTROL Profils d’identité uniques par identité] {#single-identity-profiles-by-identity}
+
+Ce widget utilise un graphique à barres pour illustrer le nombre total de profils qui sont identifiés à l’aide d’un identifiant unique. Le widget prend en charge jusqu’à cinq des identités les plus courantes.
+
+Pointez sur des barres individuelles pour afficher une boîte de dialogue détaillant le nombre total de profils pour une identité.
+
+![Profils d’identité unique par widget d’identité.](../images/profiles/single-identity-profiles-by-identity.png)
+
 ### [!UICONTROL Profils non segmentés] {#unsegmented-profiles}
 
 >[!CONTEXTUALHELP]
@@ -319,14 +329,6 @@ Pour afficher des informations complètes sur un segment, sélectionnez un nom d
 ![Le widget Taille des audiences avec un nom de segment et affiche le texte de tous les segments mis en surbrillance.](../images/profiles/audiences-size-view-all-segments.png)
 
 Pour plus d’informations sur la variable [[!UICONTROL Segments] [!UICONTROL  Parcourir] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
-
-### [!UICONTROL Profils d’identité uniques par identité] {#single-identity-profiles-by-identity}
-
-Ce widget utilise un graphique à barres pour illustrer le nombre total de profils qui sont identifiés à l’aide d’un identifiant unique. Le widget prend en charge jusqu’à cinq des identités les plus courantes.
-
-Pointez sur des barres individuelles pour afficher une boîte de dialogue détaillant le nombre total de profils pour une identité.
-
-![Profils d’identité unique par widget d’identité.](../images/profiles/single-identity-profiles-by-identity.png)
 
 ### [!UICONTROL Chevauchements d’audience par de stratégie de fusion] {#audience-overlap-by-merge-policy}
 
