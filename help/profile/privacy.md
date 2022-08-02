@@ -5,10 +5,10 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels associés au traitement des demandes d’accès à des informations personnelles pour Real-time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 1686ff1684080160057462e9aa40819a60bf6b75
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1281'
-ht-degree: 41%
+source-wordcount: '1312'
+ht-degree: 40%
 
 ---
 
@@ -46,9 +46,7 @@ Les sections ci-dessous décrivent comment effectuer des demandes d’accès à 
 
 >[!IMPORTANT]
 >
->Privacy Service ne peut traiter que [!DNL Profile] données utilisant une stratégie de fusion qui n’effectue pas de combinaison d’identités. Si vous utilisez l’interface utilisateur pour confirmer que vos demandes d’accès à des informations personnelles sont en cours de traitement, assurez-vous que vous utilisez une stratégie avec &quot;[!DNL None]&quot; comme son [!UICONTROL Combinaison d’identifiants] type. En d’autres termes, vous ne pouvez pas utiliser une stratégie de fusion dans laquelle [!UICONTROL Combinaison d’identifiants] est défini sur &quot;[!UICONTROL Graphique privé]&quot;.
->
->![Le groupement d’identifiants de la stratégie de fusion est défini sur Aucun.](./images/privacy/no-id-stitch.png)
+>Privacy Service ne peut traiter que [!DNL Profile] données utilisant une stratégie de fusion qui n’effectue pas de combinaison d’identités. Voir la section sur [limites des stratégies de fusion](#merge-policy-limitations) pour plus d’informations.
 >
 >Il est également important de noter que le temps nécessaire à l’exécution d’une demande d’accès à des informations personnelles ne peut pas être garanti. Si des modifications se produisent dans votre [!DNL Profile] pendant le traitement d’une demande, il n’est pas non plus garanti que ces enregistrements soient ou non traités.
 
@@ -60,7 +58,11 @@ Lors de la création de requêtes de tâche dans l’API, les identifiants fourn
 >
 >Vous devrez peut-être fournir plusieurs identifiants pour chaque client, en fonction du graphique d’identités et de la manière dont vos fragments de profil sont distribués dans les jeux de données Platform. Voir la section suivante [fragments de profil](#fragments) pour plus d’informations.
 
-En outre, le tableau `include` de la payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. Lors de l’envoi de requêtes à la variable [!DNL Data Lake], le tableau doit inclure la valeur &quot;ProfileService&quot;.
+En outre, le tableau `include` de la payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. Pour supprimer les données de profil associées à une identité, le tableau doit inclure la valeur `ProfileService`. Pour supprimer les associations de graphiques d’identités du client, le tableau doit inclure la valeur `identity`.
+
+>[!NOTE]
+>
+>Voir la section sur [demandes de profil et demandes d’identité](#profile-v-identity) plus loin dans ce document pour plus d’informations sur les effets de l’utilisation de `ProfileService` et `identity` dans le `include` tableau.
 
 La requête suivante crée une tâche de confidentialité pour les données d’un seul client dans la variable [!DNL Profile] magasin. Deux valeurs d’identité sont fournies pour le client dans la variable `userIDs` tableau ; une utilisant la norme `Email` espace de noms d’identité, et l’autre à l’aide d’un espace de noms personnalisé `Customer_ID` espace de noms. Elle inclut également la valeur de produit pour [!DNL Profile] (`ProfileService`) dans la variable `include` tableau :
 
@@ -96,7 +98,7 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["ProfileService"],
+    "include": ["ProfileService","identity"],
     "expandIds": false,
     "priority": "normal",
     "regulation": "ccpa"
@@ -129,22 +131,25 @@ L’un des jeux de données utilise `customer_id` comme identifiant Principal, a
 
 Pour vous assurer que vos demandes d’accès à des informations personnelles traitent tous les attributs du client pertinents, vous devez fournir les Principales valeurs d’identité pour tous les jeux de données applicables où ces attributs peuvent être stockés (jusqu’à neuf identifiants par client). Consultez la section sur les champs d’identité dans la [principes de base de la composition des schémas](../xdm/schema/composition.md#identity) pour plus d’informations sur les champs généralement marqués comme identités.
 
-## Traitement des demandes de suppression
+## Traitement des demandes de suppression {#delete}
 
 Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!DNL Privacy Service], [!DNL Platform] envoie une confirmation à [!DNL Privacy Service] pour confirmer que la requête a été reçue et que les données concernées ont été marquées pour suppression. Les enregistrements sont ensuite supprimés de la variable [!DNL Data Lake] ou [!DNL Profile] une fois la tâche de confidentialité terminée. Bien que la tâche de suppression soit toujours en cours de traitement, les données sont supprimées en douceur et ne sont donc pas accessibles par les [!DNL Platform] service. Reportez-vous à la section [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) pour plus d’informations sur les états des tâches de suivi.
 
->[!IMPORTANT]
->
->Si une requête de suppression est effectuée pour Profile (`ProfileService`), mais pas Identity Service (`identity`), la tâche résultante supprime les données d’attribut collectées pour un client (ou un ensemble de clients), mais ne supprime pas les associations établies dans le graphique d’identités.
->
->Par exemple, une requête de suppression qui utilise la variable `email_id` et `customer_id` supprime toutes les données d’attribut stockées sous ces ID. Cependant, toutes les données qui sont ensuite ingérées sous la même `customer_id` sera toujours associé au `email_id`, car l’association existe toujours.
->
->En outre, Privacy Service ne peut traiter que [!DNL Profile] données utilisant une stratégie de fusion qui n’effectue pas de combinaison d’identités. Si vous utilisez l’interface utilisateur pour confirmer que vos demandes d’accès à des informations personnelles sont en cours de traitement, assurez-vous que vous utilisez une stratégie avec &quot;[!DNL None]&quot; comme son [!UICONTROL Combinaison d’identifiants] type. En d’autres termes, vous ne pouvez pas utiliser une stratégie de fusion dans laquelle [!UICONTROL Combinaison d’identifiants] est défini sur &quot;[!UICONTROL Graphique privé]&quot;.
->
->![Le groupement d’identifiants de la stratégie de fusion est défini sur Aucun.](./images/privacy/no-id-stitch.png)
-
 Dans les prochaines versions, [!DNL Platform] enverra une confirmation à [!DNL Privacy Service] une fois les données supprimées de manière irréversible.
 
+### Requêtes de profil et requêtes d’identité {#profile-v-identity}
+
+Si une requête de suppression est effectuée pour Profile (`ProfileService`), mais pas Identity Service (`identity`), la tâche résultante supprime les données d’attribut collectées pour un client (ou un ensemble de clients), mais ne supprime pas les associations établies dans le graphique d’identités.
+
+Par exemple, une requête de suppression qui utilise la variable `email_id` et `customer_id` supprime toutes les données d’attribut stockées sous ces ID. Cependant, toutes les données qui sont ensuite ingérées sous la même `customer_id` sera toujours associé au `email_id`, car l’association existe toujours.
+
+Pour supprimer le profil et toutes les associations d’identité pour un client donné, veillez à inclure Profile et Identity Service en tant que produits cibles dans vos demandes de suppression.
+
+### Limites des stratégies de fusion {#merge-policy-limitations}
+
+Privacy Service ne peut traiter que [!DNL Profile] données utilisant une stratégie de fusion qui n’effectue pas de combinaison d’identités. Si vous utilisez l’interface utilisateur pour confirmer que vos demandes d’accès à des informations personnelles sont en cours de traitement, assurez-vous que vous utilisez une stratégie avec **[!DNL None]** comme son [!UICONTROL Combinaison d’identifiants] type. En d’autres termes, vous ne pouvez pas utiliser une stratégie de fusion dans laquelle [!UICONTROL Combinaison d’identifiants] est défini sur [!UICONTROL Graphique privé].
+>![Le groupement d’identifiants de la stratégie de fusion est défini sur Aucun.](./images/privacy/no-id-stitch.png)
+>
 ## Étapes suivantes
 
 En lisant ce document, vous avez découvert les concepts importants liés au traitement des demandes d’accès à des informations personnelles dans [!DNL Experience Platform]. Il est recommandé de continuer la lecture de la documentation fournie dans ce guide afin de mieux comprendre comment gérer les données d’identité et créer des tâches concernant la confidentialité.

@@ -5,10 +5,10 @@ title: Traitement des demandes dʼaccès à des informations personnelles dans l
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service traite les demandes des clients dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts fondamentaux liés au traitement des demandes d’accès à des informations personnelles concernant les données clients stockées dans le lac de données.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 100%
+source-wordcount: '1388'
+ht-degree: 97%
 
 ---
 
@@ -148,9 +148,9 @@ La section suivante décrit comment réaliser des demandes dʼaccès à des info
 
 ### Utilisation de l’interface utilisateur
 
-Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à bien sélectionner **[!UICONTROL AEP]** et/ou **[!UICONTROL Profile]** sous **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées respectivement dans [!DNL Data Lake] ou dans [!DNL Real-time Customer Profile].
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Lac de données AEP]** under **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées dans la variable [!DNL Data Lake].
 
-<img src="images/privacy/product-value.png" width="450"><br>
+![Image montrant le produit du lac de données sélectionné dans la boîte de dialogue de création de demande d’accès à des informations personnelles](./images/privacy/product-value.png)
 
 ### Utilisation de l’API
 
