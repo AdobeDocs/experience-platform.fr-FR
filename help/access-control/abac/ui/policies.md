@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Contrôle d’accès basé sur les attributs Création d’une stratégie
 description: Ce document fournit des informations sur la gestion des stratégies par le biais de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 97b4b98a2f14e36e8e8c71bd2ab9631782bc333f
 workflow-type: tm+mt
 source-wordcount: '692'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée pour les clients de santé basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform une fois qu’elle sera entièrement publiée.
+>Le contrôle d’accès basé sur les attributs est actuellement disponible pour un nombre restreint d’utilisateurs, qui sont actifs dans le secteur de la santé et basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform dès son déploiement à grande échelle.
 
 Les politiques sont des déclarations qui réunissent des attributs pour établir des actions permises et non admissibles. Les stratégies peuvent être locales ou globales et peuvent remplacer d’autres stratégies.
 
@@ -42,7 +42,7 @@ Sélectionnez l’icône Plus pour **Ajouter une expression de correspondance** 
 
 Dans la liste déroulante, sélectionnez la variable **Ressource**.
 
-![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown.png)
+![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown-1.png)
 
 Ensuite, sélectionnez la variable **Correspond à**.
 
