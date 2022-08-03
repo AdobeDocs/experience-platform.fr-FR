@@ -3,18 +3,23 @@ description: Utilisez la variable [!UICONTROL Enrichissement du profil] tableau 
 solution: Experience Platform
 title: Surveillance des tâches d’enrichissement de profil
 type: Tutorial
-source-git-commit: f3389ef2c2bd9ff52ecde2a4f5fd55e5b86783fc
+exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
+source-git-commit: 6811e3032abe569b1f00d757553eb6862e4e3354
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '636'
+ht-degree: 4%
 
 ---
 
-# Surveillance des tâches d’enrichissement de profil dans l’interface utilisateur
+# Surveillance des tâches d’enrichissement de profil dans l’interface utilisateur (#monitor-profile-enrichment)
 
 Utilisez la variable [!UICONTROL Enrichissement du profil] tableau de bord pour comprendre si les tâches d’enrichissement de profil ont été exécutées et terminées avec succès et pour afficher les mesures de base afin d’évaluer l’efficacité des enrichissements.
 
-Dans le [Interface utilisateur de Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Surveillance] tableau de bord. Dans le sélecteur de mode, sélectionnez **Flux B2B** pour afficher les éléments du tableau de bord spécifiques à [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  Le [!UICONTROL Surveillance] Le tableau de bord comprend les mesures de base de la dernière exécution réussie et l’état de la tâche quotidienne jusqu’à 90 jours auparavant. Le [!UICONTROL Comptes associés] Le tableau de bord affiche les mesures de base et l’état de la tâche quotidienne spécifiques à la variable [Comptes associés](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) enrichissement de profil.
+Dans le [Interface utilisateur de Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Surveillance] tableau de bord. Dans le sélecteur de mode, sélectionnez **Flux B2B** pour afficher les éléments du tableau de bord spécifiques à [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  Le [!UICONTROL Surveillance] Le tableau de bord comprend les mesures de base de la dernière exécution réussie et l’état de la tâche quotidienne jusqu’à 90 jours auparavant.
+
+## Enrichissement du profil des comptes associés (#related-accounts)
+
+Le [!UICONTROL Comptes associés] Le tableau de bord affiche les mesures de base et l’état de la tâche quotidienne spécifique à l’ [Comptes associés](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) enrichissement de profil.
 
 ![Une indication visuelle de la façon d’accéder à l’écran de surveillance des tâches d’enrichissement de profil dans l’interface utilisateur Experience Platform.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
@@ -23,15 +28,33 @@ Les données de la variable **[!UICONTROL Mesures]** La carte comprend les mesur
 Les mesures suivantes sont disponibles pour les tâches d’enrichissement de profil de comptes connexes :
 
 | Mesure | Description |
----------|----------|
+| --------- | ---------- |
 | **[!UICONTROL Profils de compte totaux]** | Indique le nombre total de profils de compte auxquels votre entreprise a accès. |
-| **[!UICONTROL Groupes de comptes]** | Indique le nombre de groupes de comptes organisés en grappe par la tâche d’apprentissage automatique Comptes associés. |
+| **[!UICONTROL Groupes de comptes]** | Indique le nombre de groupes de comptes organisés en grappe par la tâche d’apprentissage automatique des comptes associés. |
 | **[!UICONTROL Groupes à compte unique]** | Indique le nombre de comptes qui ne sont pas regroupés avec d’autres comptes. |
 | **[!UICONTROL Taille de groupe la plus grande]** | Indique la taille du groupe de comptes associé le plus grand. La taille maximale autorisée pour le groupe est de 30. |
 | **[!UICONTROL Taille médiane du groupe]** | Indique la taille médiane des groupes de comptes associés dans votre organisation. |
-| **[!UICONTROL Dernière exécution réussie]** | Indique la date et l’heure de la dernière exécution de la tâche Comptes associés réussie. |
-| **[!UICONTROL État]** | Indique l’état (réussite, échec ou traitement) de la tâche Comptes associés. |
+| **[!UICONTROL Dernière exécution réussie]** | Indique la date et l’heure de la dernière tâche de comptes associés réussie. |
+| **[!UICONTROL Statut]** | Indique l’état (réussite, échec ou traitement) de la tâche de comptes associée. |
 | **[!UICONTROL Message]** | Indique un message d’erreur ou d’avertissement pour une tâche particulière. |
+
+## Enrichissement du profil correspondant au compte (#lead-to-account-matching)
+
+Le [!UICONTROL Correspondance de piste avec le compte] Le tableau de bord affiche les mesures de base et l’état d’exécution quotidienne des tâches spécifique à la variable [Correspondance de piste avec le compte](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) enrichissement de profil.
+
+![Conduire à l’enrichissement du profil correspondant au compte](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
+
+Les mesures suivantes sont disponibles pour les tâches d’enrichissement de profil correspondant à un compte :
+
+| Mesure | Description |
+| --------- | ---------- |
+| **[!UICONTROL Nombre total de personnes disposant d’un compte]** | Indique le nombre total de personnes associées à un compte. |
+| **[!UICONTROL Comptes totaux]** | Indique le nombre total de comptes. |
+| **[!UICONTROL Personnes existantes avec comptes]** | Indique le nombre de personnes déjà associées à un compte à partir des sources de données. |
+| **[!UICONTROL Personnes correspondantes]** | Indique le nombre de personnes qui ont été associées à un compte. |
+| **[!UICONTROL Personnes inégalées]** | Indique le nombre de personnes qui n’ont pas été associées à un compte. |
+| **[!UICONTROL Dernière exécution réussie]** | Indique la date et l’heure de la dernière exécution de la tâche de correspondance de compte réussie. |
+| **[!UICONTROL Statut]** | Indique l’état (réussite, échec ou traitement) de la tâche de correspondance de compte. |
 
 ## Contrôles de l’interface utilisateur {#ui-controls}
 
@@ -51,7 +74,8 @@ Utilisez la variable **[!UICONTROL Afficher uniquement les échecs]** bascule po
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous pouvez désormais contrôler et comprendre les mesures des tâches d’enrichissement de profil de comptes associés. Pour plus d’informations, consultez les documents suivants :
+En suivant ce tutoriel, vous pouvez désormais contrôler et comprendre les mesures des tâches d’enrichissement de profil. Consultez les documents suivants pour plus d’informations :
 
 * [Comptes associés dans la plateforme CDP B2B en temps réel](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
-* [Onglet Comptes associés dans le guide d’interface utilisateur du profil de compte](/help/rtcdp/accounts/account-profile-ui-guide.md)
+* [Section « Comptes associés » du guide de l’interface utilisateur du profil de compte](/help/rtcdp/accounts/account-profile-ui-guide.md)
+* [Conduire à la correspondance de comptes dans la plateforme CDP B2B en temps réel](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)

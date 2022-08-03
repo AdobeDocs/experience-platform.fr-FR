@@ -3,10 +3,10 @@ keywords: profil rtcdp;profils rtcdp;identités rtcdp;stratégies de fusion rtcd
 title: Guide de l’interface utilisateur des profils de compte
 description: Grâce aux profils de compte, l’édition B2B de Real-time Customer Data Platform vous permet d’unifier les informations de compte provenant de plusieurs sources. Ce guide fournit des détails sur l’interaction avec les profils de compte dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 604d2e100981b2c92d4cfac6862d78511791aa91
+source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 81%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -27,6 +27,26 @@ Sélectionner **[!UICONTROL Profils]** under [!UICONTROL Comptes] dans le volet 
 ![Onglet Aperçu affichant des widgets](images/b2b-account-profile-overview.png)
 
 Consultez la documentation relative à la [[!UICONTROL Profils de compte]](../../dashboards/guides/account-profiles.md) tableau de bord pour en savoir plus.
+
+## Configurer la correspondance de pistes vers les comptes {#configure-lead-to-account-matching}
+
+>[!IMPORTANT]
+>
+> Seuls les administrateurs de l’IA B2B peuvent activer, désactiver et configurer le prospect vers le service de correspondance de compte. Lors de la désactivation du service, les résultats correspondants seront supprimés dans les 24 heures.
+
+Pour configurer la correspondance de pistes et de comptes, sélectionnez **[!UICONTROL Profils]** under [!UICONTROL Comptes] dans le volet de navigation de gauche. Sur le **[!UICONTROL Présentation]** onglet, sélectionnez **[!UICONTROL Paramètres]** en haut à droite.
+
+![Sélectionner les paramètres](images/b2b-configuring-accounts-profile.png)
+
+Le **[!UICONTROL Paramètres du compte]** s’ouvre. À partir de là, sélectionnez la variable **[!UICONTROL Activation de la mise en correspondance de pistes/comptes]** pour activer la fonction. Utilisez le menu déroulant pour sélectionner **[!UICONTROL Quotidien]** pour le **[!UICONTROL Correspondance de cadence]** . Enfin, sélectionnez la **[!UICONTROL Critères de correspondance]** options suivies de **[!UICONTROL Enregistrer]** pour confirmer vos paramètres et revenir au **[!UICONTROL Profils de compte]** écran.
+
+>[!NOTE]
+>
+> L&#39;adresse ne peut pas être utilisée comme seul critère correspondant. Un ou plusieurs autres critères correspondants doivent être sélectionnés.
+
+![Configuration des paramètres du compte](images/b2b-configuring-account-settings.png)
+
+Pour en savoir plus sur la mise en correspondance des prospects avec les comptes, reportez-vous à la section [Présentation de la correspondance de comptes dans la plateforme CDP B2B en temps réel](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## Parcourir les profils de compte {#browse-account-profiles}
 
