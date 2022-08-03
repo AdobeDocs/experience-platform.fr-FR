@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4ba6ef979945ccd7decf4816c3410f2468b596ed
+source-git-commit: 5c40235b388c20f5a28a7d8535d5cf2b6d9cb40c
 workflow-type: tm+mt
-source-wordcount: '2330'
+source-wordcount: '2325'
 ht-degree: 31%
 
 ---
@@ -15,15 +15,14 @@ ht-degree: 31%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [Notes de mise à jour d’Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Tableaux de bord](#dashboards)
-   - [Collecte de données](#data-collection)
-   - [[!DNL Data Prep]](#data-prep)
-   - [[!DNL Destinations]](#destinations)
-   - [Modèle de données d’expérience (XDM)](#xdm)
-   - [Édition B2B de Real-time Customer Data Platform](#b2b)
-   - [Real-time Customer Profile](#profile)
-   - [Sources](#sources)
+- [Tableaux de bord](#dashboards)
+- [Collecte de données](#data-collection)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
+- [Modèle de données d’expérience (XDM)](#xdm)
+- [Édition B2B de Real-time Customer Data Platform](#b2b)
+- [Real-time Customer Profile](#profile)
+- [Sources](#sources)
 
 ## Tableaux de bord {#dashboards}
 
