@@ -7,7 +7,7 @@ feature: Identities
 source-git-commit: ae51c9bd07944f26be2809a6d15f9d9e8c2fd5a1
 workflow-type: tm+mt
 source-wordcount: '108'
-ht-degree: 90%
+ht-degree: 94%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 90%
 
 - [Présentation d’Identity Service](home.md)
 - [Présentation des espaces de noms d’identité](namespaces.md)
-- [Barrières de sécurité pour les données d’identité](guardrails.md)
+- [Barrières de sécurité pour les données Identity ](guardrails.md)
 - API Identity Service {#api}
    - [Prise en main](api/getting-started.md)
    - [Étiquetage d’un champ comme identité](api/label-identities.md)
