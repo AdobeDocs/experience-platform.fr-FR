@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Surveillance des tâches d’enrichissement de profil
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 6811e3032abe569b1f00d757553eb6862e4e3354
+source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '634'
 ht-degree: 4%
 
 ---
 
-# Surveillance des tâches d’enrichissement de profil dans l’interface utilisateur (#monitor-profile-enrichment)
+# Surveillance des tâches d’enrichissement de profil dans l’interface utilisateur {#monitor-profile-enrichment}
 
 Utilisez la variable [!UICONTROL Enrichissement du profil] tableau de bord pour comprendre si les tâches d’enrichissement de profil ont été exécutées et terminées avec succès et pour afficher les mesures de base afin d’évaluer l’efficacité des enrichissements.
 
@@ -38,7 +38,7 @@ Les mesures suivantes sont disponibles pour les tâches d’enrichissement de pr
 | **[!UICONTROL Statut]** | Indique l’état (réussite, échec ou traitement) de la tâche de comptes associée. |
 | **[!UICONTROL Message]** | Indique un message d’erreur ou d’avertissement pour une tâche particulière. |
 
-## Enrichissement du profil correspondant au compte (#lead-to-account-matching)
+## Conduire à l’enrichissement du profil correspondant au compte {#lead-to-account-matching}
 
 Le [!UICONTROL Correspondance de piste avec le compte] Le tableau de bord affiche les mesures de base et l’état d’exécution quotidienne des tâches spécifique à la variable [Correspondance de piste avec le compte](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) enrichissement de profil.
 
