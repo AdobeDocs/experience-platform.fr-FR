@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Surveillance des tâches d’enrichissement de profil
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
+source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '633'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ Utilisez la variable [!UICONTROL Enrichissement du profil] tableau de bord pour 
 
 Dans le [Interface utilisateur de Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Surveillance] tableau de bord. Dans le sélecteur de mode, sélectionnez **Flux B2B** pour afficher les éléments du tableau de bord spécifiques à [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  Le [!UICONTROL Surveillance] Le tableau de bord comprend les mesures de base de la dernière exécution réussie et l’état de la tâche quotidienne jusqu’à 90 jours auparavant.
 
-## Enrichissement du profil des comptes associés (#related-accounts)
+## Enrichissement du profil de comptes associés {#related-accounts}
 
 Le [!UICONTROL Comptes associés] Le tableau de bord affiche les mesures de base et l’état de la tâche quotidienne spécifique à l’ [Comptes associés](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) enrichissement de profil.
 
