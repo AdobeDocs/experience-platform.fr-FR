@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 72ca4f0c22d5e37ffa079940ed20e219445a0bf1
+source-git-commit: 4ba6ef979945ccd7decf4816c3410f2468b596ed
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2330'
 ht-degree: 31%
 
 ---
@@ -16,17 +16,14 @@ ht-degree: 31%
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [Notes de mise à jour d’Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Tableaux de bord {#dashboards}](#dashboards-dashboards)
-      - [Tableaux de bord Profils de compte](#account-profiles-dashboards)
-      - [Tableaux de bord de profil](#profile-dashboards)
-      - [Tableaux de bord des destinations](#destinations-dashboards)
-   - [Collecte de données {#collection}](#data-collection-collection)
-   - [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
-   - [[!DNL Destinations] {#destinations}](#dnl-destinations-destinations)
-   - [Modèle de données d’expérience (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-   - [Édition B2B de Real-time Customer Data Platform {#b2b}](#real-time-customer-data-platform-b2b-edition-b2b)
-   - [Real-time Customer Profile {#profile}](#real-time-customer-profile-profile)
-   - [Sources {#sources}](#sources-sources)
+   - [Tableaux de bord](#dashboards)
+   - [Collecte de données](#data-collection)
+   - [[!DNL Data Prep]](#data-prep)
+   - [[!DNL Destinations]](#destinations)
+   - [Modèle de données d’expérience (XDM)](#xdm)
+   - [Édition B2B de Real-time Customer Data Platform](#b2b)
+   - [Real-time Customer Profile](#profile)
+   - [Sources](#sources)
 
 ## Tableaux de bord {#dashboards}
 
@@ -187,7 +184,7 @@ Pour plus d’informations, voir le document sur [mener à la correspondance des
 
 Pour obtenir un guide sur la surveillance de l’enrichissement des profils, consultez le document sur [surveillance de l’enrichissement des profils dans l’interface utilisateur](../../dataflows/ui/b2b/monitor-profile-enrichment.md).
 
-Pour plus d’informations sur l’utilisation des comptes associés dans les définitions de segment, consultez le guide sur [Cas d’utilisation de la segmentation pour Real-time Customer Data Platform B2B Edition](../../rtcdp/segmentation/b2b.md#related-accounts).
+Pour plus d’informations sur la configuration de la correspondance de pistes avec les comptes, voir [Guide de l’interface utilisateur du profil de compte](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).
 
 Pour en savoir plus sur l’édition B2B de la plateforme CDP en temps réel, voir [Présentation de la plateforme CDP B2B en temps réel](../../rtcdp/overview.md).
 
