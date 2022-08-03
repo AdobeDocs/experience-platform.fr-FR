@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
+source-git-commit: 72ca4f0c22d5e37ffa079940ed20e219445a0bf1
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2347'
 ht-degree: 31%
 
 ---
@@ -15,15 +15,18 @@ ht-degree: 31%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [Tableaux de bord](#dashboards)
-- [Collecte de données](#collection)
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
-- [Modèle de données d’expérience (XDM)](#xdm)
-
-<!-- - [Real-time Customer Data Platform B2B Edition](#b2b) -->
-- [Real-time Customer Profile](#profile)
-- [Sources](#sources)
+- [Notes de mise à jour d’Adobe Experience Platform](#adobe-experience-platform-release-notes)
+   - [Tableaux de bord {#dashboards}](#dashboards-dashboards)
+      - [Tableaux de bord Profils de compte](#account-profiles-dashboards)
+      - [Tableaux de bord de profil](#profile-dashboards)
+      - [Tableaux de bord des destinations](#destinations-dashboards)
+   - [Collecte de données {#collection}](#data-collection-collection)
+   - [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
+   - [[!DNL Destinations] {#destinations}](#dnl-destinations-destinations)
+   - [Modèle de données d’expérience (XDM) {#xdm}](#experience-data-model-xdm-xdm)
+   - [Édition B2B de Real-time Customer Data Platform {#b2b}](#real-time-customer-data-platform-b2b-edition-b2b)
+   - [Real-time Customer Profile {#profile}](#real-time-customer-profile-profile)
+   - [Sources {#sources}](#sources-sources)
 
 ## Tableaux de bord {#dashboards}
 
@@ -170,16 +173,23 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
 
-<!-- ## Real-time Customer Data Platform B2B Edition {#b2b}
+## Édition B2B de Real-time Customer Data Platform {#b2b}
 
-Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
+Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de Real-time CDP a été conçue pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux professionnels du marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
 
-| Feature | Description |
-| Lead to account matching | Lead to account matching allows you to use Real-time CDP B2B edition to match known person profiles to account profiles so that these profiles can be segmented and targeted with B2B context data like account, opportunity (and add something else like don't use etc. to the description). For more information, see the document on [lead to account matching](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md). For a guide on how to monitor profile enrichment, see the document on [monitoring profile enrichment in the UI](../../dataflows/ui/b2b/monitor-profile-enrichment.md). For instructions on how to use related accounts in segment definitions, see the guide on [Segmentation use cases for Real-time Customer Data Platform B2B Edition](../../rtcdp/segmentation/b2b.md#related-accounts)."|
+**Nouvelles fonctionnalités**
 
-{style="table-layout:auto"}
+| Fonctionnalité | Description |
+| --- | --- |
+| Correspondance de piste avec le compte | La mise en correspondance de pistes/comptes permet de joindre des profils de personnes connus à des profils de compte. Vous pouvez ensuite segmenter et cibler des données dans un contexte B2B tel que des comptes ou des opportunités. Les tâches exécutées quotidiennement utilisent des facteurs déterministes et probabilistes pour faire correspondre des profils de personnes qui ne sont déjà associés à aucun compte à un compte qui correspond le mieux. Vous pouvez ensuite décider d’inclure de telles correspondances dans vos définitions de segment. |
 
-To learn more about Real-time CDP B2B Edition, see the [Real-time CDP B2B overview](../../rtcdp/overview.md). -->
+Pour plus d’informations, voir le document sur [mener à la correspondance des comptes](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+
+Pour obtenir un guide sur la surveillance de l’enrichissement des profils, consultez le document sur [surveillance de l’enrichissement des profils dans l’interface utilisateur](../../dataflows/ui/b2b/monitor-profile-enrichment.md).
+
+Pour plus d’informations sur l’utilisation des comptes associés dans les définitions de segment, consultez le guide sur [Cas d’utilisation de la segmentation pour Real-time Customer Data Platform B2B Edition](../../rtcdp/segmentation/b2b.md#related-accounts).
+
+Pour en savoir plus sur l’édition B2B de la plateforme CDP en temps réel, voir [Présentation de la plateforme CDP B2B en temps réel](../../rtcdp/overview.md).
 
 ## Real-time Customer Profile {#profile}
 
