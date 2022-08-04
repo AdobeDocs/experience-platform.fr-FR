@@ -5,10 +5,10 @@ title: Présentation de Data Prep
 topic-legacy: overview
 description: Ce document présente Data Prep dans Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
+source-git-commit: 7042c6f5e3061fee7183b1befa447333f116c125
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 76%
+source-wordcount: '780'
+ht-degree: 72%
 
 ---
 
@@ -39,7 +39,11 @@ Pour en savoir plus sur les différentes fonctions de mappage, consultez le [gui
 
 Les champs calculés permettent de créer des valeurs en fonction des attributs du schéma d’entrée. Ces valeurs peuvent ensuite être affectées à des attributs dans le schéma cible. Vous pouvez également leur fournir un nom et une description pour en faciliter la référence.
 
-Pour en savoir plus sur les champs calculés, consultez le [guide des champs calculés](./functions.md#calculated-fields).
+Pour en savoir plus sur les champs calculés, consultez le [ des champs calculés](./functions.md#calculated-fields).
+
+### Échapper les caractères spéciaux
+
+Vous pouvez échapper les caractères spéciaux d’un champ à l’aide de la fonction `${...}`. Toutefois, les fichiers JSON contenant des champs avec un point (`.`) ne sont pas pris en charge par ce mécanisme. Lors de l’interaction avec des hiérarchies, si un attribut enfant comporte un point (`.`), vous devez utiliser une barre oblique inverse (`\`) pour échapper les caractères spéciaux. Par exemple : `address` est un objet qui contient l’attribut . `street.name`, il peut alors être appelé `address.street\.name` au lieu de `address.street.name`.
 
 ## Jeu de mappages
 
@@ -59,7 +63,7 @@ Diffusion en continu des upserts dans [!DNL Data Prep] vous permet d’envoyer d
 
 Le contrôle d’accès basé sur les attributs dans Adobe Experience Platform permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.
 
-Le contrôle d’accès basé sur les attributs permet de n’associer que les attributs auxquels vous avez accès. Les attributs auxquels vous n’avez pas accès ne peuvent pas être utilisés dans les mappages de pass-through et les champs calculés. Par conséquent, si vous n’avez pas accès à un champ obligatoire, vous ne pouvez pas enregistrer un mappage. De plus, vous ne pouvez pas mapper des objets ou des tableaux d’objets si vous n’avez accès à aucun des attributs enfants. Cependant, vous pouvez mapper d’autres éléments dans le tableau d’objets ou d’objets individuellement.
+Le contrôle d’accès basé sur les attributs permet de n’associer que les attributs auxquels vous avez accès. Les attributs auxquels vous n’avez pas accès ne peuvent être utilisés dans les mappages directs et les champs calculés. Par conséquent, si vous n’avez pas accès à un champ obligatoire, vous ne pouvez pas enregistrer un mappage. De plus, vous ne pouvez pas mapper des objets ou des tableaux d’objets si vous n’avez accès à aucun des attributs enfants. Cependant, vous pouvez mapper d’autres éléments dans le tableau d’objets ou d’objets individuellement.
 
 Voir [contrôle d’accès basé sur les attributs - Aperçu](../access-control/abac/overview.md) pour plus d’informations.
 
