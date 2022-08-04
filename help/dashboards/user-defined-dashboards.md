@@ -2,9 +2,9 @@
 title: Tableaux de bord définis par l’utilisateur
 description: Découvrez comment créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser des mesures clés.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
+source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,19 @@ ht-degree: 0%
 
 Les tableaux de bord Adobe Experience Platform vous permettent d’accélérer les insights et de personnaliser la visualisation par le biais de la fonctionnalité de tableaux de bord définis par l’utilisateur. Cette fonctionnalité vous permet de créer et de gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser les mesures clés pertinentes pour votre entreprise.
 
-## Prise en main
+<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
-Pour afficher les tableaux de bord dans Adobe Experience Platform, les autorisations appropriées doivent être activées. Veuillez lire la [Documentation sur les autorisations des tableaux de bord](./permissions.md#available-permissions) pour savoir comment accorder aux utilisateurs la possibilité d’afficher, de modifier et de mettre à jour des tableaux de bord Experience Platform à l’aide de Adobe Admin Console. Si vous ne disposez pas de droits d’administrateur pour votre entreprise, contactez votre administrateur de produit pour obtenir les autorisations requises.
+## Getting started
+
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
 ## Créer des tableaux de bord personnalisés
 
 Pour créer un tableau de bord personnalisé, accédez d’abord à l’inventaire du tableau de bord. Sélectionner **[!UICONTROL Tableaux de bord]** dans le volet de navigation de gauche de l’interface utilisateur de Platform, suivi de **[!UICONTROL Créer un tableau de bord]**.
 
-Pour en savoir plus sur les tableaux de bord préconfigurés disponibles, voir [Présentation de l’inventaire des tableaux de bord](./inventory.md).
+![L’inventaire des tableaux de bord avec les tableaux de bord dans le volet de navigation de gauche et &quot;Créer un tableau de bord&quot; est mis en surbrillance.](./images/user-defined-dashboards/create-dashboard.png)
 
->[!NOTE]
->
->En ajoutant un tableau de bord personnalisé, la liste des tableaux de bord préconfigurés est supprimée de l’inventaire des tableaux de bord. L’inventaire des tableaux de bord se compose uniquement de tableaux de bord définis par l’utilisateur.
-
-![Inventaire du tableau de bord en surbrillance &quot;Créer un tableau de bord&quot;.](./images/user-defined-dashboards/create-dashboard.png)
+Avant d’ajouter un tableau de bord personnalisé, l’inventaire des tableaux de bord est vide et affiche le message &quot;Aucun tableau de bord trouvé&quot;.  (Jeton récupéré) s’affiche.  Une fois créés, tous vos tableaux de bord définis par l’utilisateur sont répertoriés dans l’inventaire des tableaux de bord.
 
 Le [!UICONTROL Créer un tableau de bord] s’affiche. Saisissez un nom explicite et convivial pour la collection de widgets que vous souhaitez créer, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
@@ -85,9 +83,9 @@ Le modèle de données et le tableau actuellement sélectionné sont affichés d
 >
 >Vous pouvez modifier le modèle de données sélectionné en cliquant sur l’icône représentant un crayon (![Icône Crayon.](./images/user-defined-dashboards/edit-icon.png)) dans le rail de gauche.
 
-Sélectionnez les ellipses (`...`) en regard d’un nom d’attribut pour ajouter un attribut à l’axe X ou Y.
+Sélectionnez l’icône d’ajout (./images/user-defined-dashboards/add-icon.png) en regard d’un nom d’attribut pour ajouter un attribut à l’axe X ou Y.
 
-![Le compositeur de widgets avec la liste déroulante ellipses mise en surbrillance pour ajouter des attributs à un axe de widget.](./images/user-defined-dashboards/attributes-dropdown.png)
+![Le compositeur de widgets avec la liste déroulante d’icône d’ajout mise en surbrillance pour ajouter des attributs à un axe de widget.](./images/user-defined-dashboards/attributes-dropdown.png)
 
 Sélectionnez ensuite le type de graphique ou de graphique dans le [!UICONTROL Marques] pour générer une visualisation d’aperçu des paramètres actuels de votre widget. Dans le [!UICONTROL Propriétés] sur le côté droit de l’écran, saisissez un nom pour le widget dans le champ [!UICONTROL Titre du widget] Champ de texte.
 
