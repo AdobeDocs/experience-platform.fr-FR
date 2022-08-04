@@ -3,24 +3,24 @@ keywords: Experience Platform;accueil;rubriques populaires;confidentialité du 
 solution: Experience Platform
 title: Traitement des demandes dʼaccès à des informations personnelles dans le lac de données
 topic-legacy: overview
-description: Adobe Experience Platform Privacy Service traite les demandes des clients dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts fondamentaux liés au traitement des demandes d’accès à des informations personnelles concernant les données clients stockées dans le lac de données.
+description: Adobe Experience Platform Privacy Service traite les demandes des clients dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour les données clients stockées dans le lac de données.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
+source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 97%
+source-wordcount: '1428'
+ht-degree: 77%
 
 ---
 
-# Traitement des demandes dʼaccès à des informations personnelles dans [!DNL Data Lake]
+# Traitement des demandes d’accès à des informations personnelles dans le lac de données
 
 Adobe Experience Platform [!DNL Privacy Service] traite les demandes des clients dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité.
 
-Ce document couvre les concepts fondamentaux liés au traitement des demandes dʼaccès à des informations personnelles concernant les données clients stockées dans [!DNL Data Lake].
+Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour les données clients stockées dans le lac de données.
 
 >[!NOTE]
 >
->Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour le lac de données dans Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour la banque de données du profil client en temps réel, reportez-vous au guide sur le [traitement des demandes d’accès à des informations personnelles pour le profil](../profile/privacy.md) en plus de ce tutoriel.
+>Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour le lac de données en Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour la banque de données du profil client en temps réel, reportez-vous au guide sur le [traitement des demandes d’accès à des informations personnelles pour le profil](../profile/privacy.md) en plus de ce tutoriel.
 >
 >Pour savoir comment effectuer des demandes d’accès à des informations personnelles pour d’autres applications Adobe Experience Cloud, reportez-vous à la [documentation du Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -43,7 +43,7 @@ Pour plus dʼinformations sur les espaces de noms dʼidentité dans [!DNL Experi
 
 ## Ajouter des données dʼidentité aux jeux de données
 
-Lors de la création de demandes dʼaccès à des informations personnelles pour [!DNL Data Lake], des valeurs dʼidentité valides (et leurs espaces de noms associés) doivent être fournies pour chaque client individuel afin de localiser ses données et de les traiter en conséquence. Par conséquent, tous les jeux de données qui font lʼobjet de demandes dʼaccès à des informations personnelles doivent contenir un descripteur dʼidentité dans leur schéma XDM associé.
+Lors de la création de demandes d’accès à des informations personnelles pour le lac de données, des valeurs d’identité valides (et leurs espaces de noms associés) doivent être fournies pour chaque client afin de localiser ses données et de les traiter en conséquence. Par conséquent, tous les jeux de données qui font lʼobjet de demandes dʼaccès à des informations personnelles doivent contenir un descripteur dʼidentité dans leur schéma XDM associé.
 
 >[!NOTE]
 >
@@ -138,27 +138,27 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et les détails du no
 
 >[!NOTE]
 >
->Cette section explique la manière de formater les demandes dʼaccès à des informations personnelles destinées à [!DNL Data Lake]. Il est vivement recommandé de consulter la documentation de lʼ[[!DNL Privacy Service] interface utilisateur](../privacy-service/ui/overview.md) ou de lʼ[[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) pour obtenir des instructions complètes sur la manière dʼenvoyer une tâche concernant la confidentialité, y compris sur la manière de formater correctement les données dʼidentité utilisateur envoyées dans les payloads de requête.
+>Cette section explique comment formater les demandes d’accès à des informations personnelles pour le lac de données. Il est vivement recommandé de consulter la documentation de lʼ[[!DNL Privacy Service] interface utilisateur](../privacy-service/ui/overview.md) ou de lʼ[[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) pour obtenir des instructions complètes sur la manière dʼenvoyer une tâche concernant la confidentialité, y compris sur la manière de formater correctement les données dʼidentité utilisateur envoyées dans les payloads de requête.
 
-La section suivante décrit comment réaliser des demandes dʼaccès à des informations personnelles pour [!DNL Data Lake] à lʼaide de lʼinterface utilisateur ou de lʼAPI [!DNL Privacy Service].
+La section suivante explique comment effectuer des demandes d’accès à des informations personnelles pour le lac de données à l’aide de la variable [!DNL Privacy Service] Interface utilisateur ou API.
 
 >[!IMPORTANT]
 >
->Le délai de traitement dʼune demande dʼaccès à des informations personnelles ne peut être garanti. Si des modifications se produisent dans le lac de données tandis quʼune requête est en cours de traitement, il nʼest pas non plus possible de garantir que ces données enregistrées seront traitées ou non.
+>Le délai de traitement dʼune demande dʼaccès à des informations personnelles ne peut être garanti. Si des modifications se produisent dans le lac de données alors qu’une demande est toujours en cours de traitement, le fait que ces enregistrements soient traités ou non ne peut pas non plus être garanti.
 
-### Utilisation de l’interface utilisateur
+### Utiliser l’interface utilisateur
 
-Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Lac de données AEP]** under **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées dans la variable [!DNL Data Lake].
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Lac de données AEP]** under **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées dans le lac de données.
 
-![Image montrant le produit du lac de données sélectionné dans la boîte de dialogue de création de demande d’accès à des informations personnelles](./images/privacy/product-value.png)
+![Image montrant le produit de lac de données sélectionné dans la boîte de dialogue de création de demande d’accès à des informations personnelles](./images/privacy/product-value.png)
 
 ### Utilisation de l’API
 
-Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. Les identifiants [!DNL Data Lake] doivent utiliser `unregistered` pour leur valeur `type` et ue valeur `namespace` correspondant à lʼun des [libellés de confidentialité](#privacy-labels) ajoutés aux jeux de données applicables. 
+Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. Les identifiants du lac de données doivent utiliser `unregistered` pour leur `type` et une `namespace` qui correspond à l’une des valeurs [étiquettes de confidentialité](#privacy-labels) qui ont été ajoutés aux jeux de données applicables.
 
-En outre, le tableau `include` du payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. Lorsque vous réalisez des requêtes vers [!DNL Data Lake], le tableau doit inclure la valeur `aepDataLake`.
+En outre, le tableau `include` de la payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. Lors de l’envoi de requêtes au lac de données, le tableau doit inclure la valeur `aepDataLake`.
 
-La requête suivante crée une nouvelle tâche concernant la confidentialité destinée à [!DNL Data Lake], à lʼaide de lʼespace de noms `email_label` non enregistré. Elle inclut également la valeur du produit pour [!DNL Data Lake] dans le tableau `include` :
+La requête suivante crée une nouvelle tâche de confidentialité pour le lac de données, en utilisant le paramètre non enregistré `email_label` espace de noms. Elle inclut également la valeur du produit pour le lac de données dans la variable `include` tableau :
 
 ```shell
 curl -X POST \
@@ -205,19 +205,19 @@ curl -X POST \
 
 ## Traitement des demandes de suppression
 
-Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!DNL Privacy Service], [!DNL Platform] envoie une confirmation à [!DNL Privacy Service] pour confirmer que la requête a été reçue et que les données concernées ont été marquées pour suppression. Les données enregistrées sont ensuite retirées de [!DNL Data Lake] dans les sept jours. Pendant cette période de sept jours, les données subissent une suppression réversible, elles ne sont donc accessibles par aucun service [!DNL Platform].
+Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!DNL Privacy Service], [!DNL Platform] envoie une confirmation à [!DNL Privacy Service] pour confirmer que la requête a été reçue et que les données concernées ont été marquées pour suppression. Les enregistrements sont ensuite retirés du lac de données dans les sept jours. Pendant cette période de sept jours, les données subissent une suppression réversible, elles ne sont donc accessibles par aucun service [!DNL Platform].
 
-Dans les prochaines versions, [!DNL Platform] enverra une confirmation à [!DNL Privacy Service] une fois les données supprimées de manière irréversible.
+Si vous avez également inclus `ProfileService` ou `identity` dans la demande d’accès à des informations personnelles, les données qui lui sont associées sont traitées séparément. Voir la section sur [traitement des requêtes de suppression pour Profile](../profile/privacy.md#delete) pour plus d’informations.
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez découvert les concepts importants liés au traitement des demandes dʼaccès à des informations personnelles destinées à [!DNL Data Lake]. Il est recommandé de continuer la lecture de la documentation fournie dans ce guide afin de mieux comprendre comment gérer les données d’identité et créer des tâches concernant la confidentialité.
+En lisant ce document, vous avez découvert les concepts importants liés au traitement des demandes d’accès à des informations personnelles pour le lac de données. Il est recommandé de continuer la lecture de la documentation fournie dans ce guide afin de mieux comprendre comment gérer les données d’identité et créer des tâches concernant la confidentialité.
 
 Consultez le document à propos du [traitement des requêtes de confidentialité pour Real-time Customer ](../profile/privacy.md) afin de connaître les étapes du traitement des demandes d’accès à des informations personnelles pour la banque de [!DNL Profile] profils.
 
 ## Annexe
 
-La section suivante contient des informations supplémentaires concernant le traitement des demandes dʼaccès à des informations personnelles dans [!DNL Data Lake].
+La section suivante contient des informations supplémentaires sur le traitement des demandes d’accès à des informations personnelles dans le lac de données.
 
 ### Étiquetage des champs imbriqués de type map {#nested-maps}
 

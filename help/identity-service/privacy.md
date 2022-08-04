@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires
 title: Traitement des demandes d’accès à des informations personnelles dans Identity Service
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels associés au traitement des demandes d’accès à des informations personnelles pour Identity Service.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
-workflow-type: ht
-source-wordcount: '722'
-ht-degree: 100%
+source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
+workflow-type: tm+mt
+source-wordcount: '1038'
+ht-degree: 65%
 
 ---
 
@@ -18,7 +18,7 @@ Ce document couvre les concepts essentiels associés au traitement des demandes 
 
 >[!NOTE]
 >
->Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour la banque de données d’identité dans Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour le lac de données de Platform ou [!DNL Real-time Customer Profile], reportez-vous au guide sur le [traitement des demandes d’accès à des informations personnelles dans le lac de données](../catalog/privacy.md) et au guide sur le [traitement des demandes d’accès à des informations personnelles pour Profile](../profile/privacy.md) en plus de ce tutoriel.
+>Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour la banque de données d’identité dans Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour le lac de données de Platform ou [!DNL Real-time Customer Profile], reportez-vous au guide sur la [traitement des demandes d’accès à des informations personnelles dans le lac de données](../catalog/privacy.md) et au guide sur [traitement des demandes d’accès à des informations personnelles pour Profile](../profile/privacy.md) en plus de ce tutoriel.
 >
 >Pour savoir comment effectuer des demandes d’accès à des informations personnelles pour d’autres applications Adobe Experience Cloud, reportez-vous à la [documentation du Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -105,6 +105,17 @@ Lors de la création de requêtes de tâche dans l’interface utilisateur, veil
 ## Traitement des demandes de suppression
 
 Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!DNL Privacy Service], [!DNL Platform] envoie une confirmation à [!DNL Privacy Service] pour confirmer que la requête a été reçue et que les données concernées ont été marquées pour suppression. La suppression de l’identité individuelle est basée sur l’espace de noms et/ou la valeur d’identifiant fournis. En outre, la suppression a lieu pour toutes les sandbox associées à une organisation IMS donnée.
+
+Selon que vous avez également inclus ou non Real-time Customer Profile (`ProfileService`) et le lac de données (`aepDataLake`) en tant que produits dans votre demande d’accès à des informations personnelles (`identity`), différents ensembles de données liés à l’identité sont supprimés du système à des moments potentiellement différents :
+
+| Produits inclus | Effets |
+| --- | --- |
+| `identity` only | Le graphique d’identités associé à l’identité fournie est immédiatement supprimé dès que Platform envoie la confirmation que la demande de suppression a été reçue. Le profil construit à partir de ce graphique d’identités reste, mais ne sera pas mis à jour lorsque de nouvelles données seront ingérées, car les associations d’identités sont désormais supprimées. Les données associées au profil restent également dans le lac de données. |
+| `identity` et `ProfileService` | Le graphique d’identités et son profil associé sont immédiatement supprimés dès que Platform envoie la confirmation que la demande de suppression a été reçue. Les données associées au profil restent dans le lac de données. |
+| `identity` et `aepDataLake` | Le graphique d’identités associé à l’identité fournie est immédiatement supprimé dès que Platform envoie la confirmation que la demande de suppression a été reçue. Le profil construit à partir de ce graphique d’identités reste, mais ne sera pas mis à jour lorsque de nouvelles données seront ingérées, car les associations d’identités sont désormais supprimées.<br><br>Lorsque le produit du lac de données répond que la demande a été reçue et qu’il est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles à aucun [!DNL Platform] service. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
+| `identity`, `ProfileService`, et `aepDataLake` | Le graphique d’identités et son profil associé sont immédiatement supprimés dès que Platform envoie la confirmation que la demande de suppression a été reçue.<br><br>Lorsque le produit du lac de données répond que la demande a été reçue et qu’il est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles à aucun [!DNL Platform] service. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
+
+Reportez-vous à la section [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) pour plus d’informations sur les états des tâches de suivi.
 
 ## Étapes suivantes
 

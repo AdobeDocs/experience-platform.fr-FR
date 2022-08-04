@@ -5,10 +5,10 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels associés au traitement des demandes d’accès à des informations personnelles pour Real-time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
+source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
 workflow-type: tm+mt
-source-wordcount: '1312'
-ht-degree: 40%
+source-wordcount: '1563'
+ht-degree: 31%
 
 ---
 
@@ -109,9 +109,9 @@ curl -X POST \
 >
 >Platform traite les demandes d’accès à des informations personnelles dans toutes les [sandbox](../sandboxes/home.md) appartenant à votre organisation. Par conséquent, tout en-tête `x-sandbox-name` inclus dans la demande est ignoré par le système. 
 
-### Utilisation de l’interface utilisateur
+### Utiliser l’interface utilisateur
 
-Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à bien sélectionner **[!UICONTROL AEP]** et/ou **[!UICONTROL Profile]** sous **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées respectivement dans [!DNL Data Lake] ou dans [!DNL Real-time Customer Profile].
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Lac de données AEP]** et/ou **[!UICONTROL Profil]** under **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées dans le lac de données ou [!DNL Real-time Customer Profile], respectivement.
 
 ![Une requête de tâche d’accès en cours de création dans l’interface utilisateur, avec l’option Profil sélectionnée sous Produits](./images/privacy/product-value.png)
 
@@ -133,9 +133,18 @@ Pour vous assurer que vos demandes d’accès à des informations personnelles t
 
 ## Traitement des demandes de suppression {#delete}
 
-Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!DNL Privacy Service], [!DNL Platform] envoie une confirmation à [!DNL Privacy Service] pour confirmer que la requête a été reçue et que les données concernées ont été marquées pour suppression. Les enregistrements sont ensuite supprimés de la variable [!DNL Data Lake] ou [!DNL Profile] une fois la tâche de confidentialité terminée. Bien que la tâche de suppression soit toujours en cours de traitement, les données sont supprimées en douceur et ne sont donc pas accessibles par les [!DNL Platform] service. Reportez-vous à la section [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) pour plus d’informations sur les états des tâches de suivi.
+Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!DNL Privacy Service], [!DNL Platform] envoie une confirmation à [!DNL Privacy Service] pour confirmer que la requête a été reçue et que les données concernées ont été marquées pour suppression. Les enregistrements sont ensuite supprimés une fois la tâche de confidentialité terminée.
 
-Dans les prochaines versions, [!DNL Platform] enverra une confirmation à [!DNL Privacy Service] une fois les données supprimées de manière irréversible.
+Selon que vous avez également inclus ou non Identity Service (`identity`) et le lac de données (`aepDataLake`) en tant que produits dans votre demande d’accès à des informations personnelles pour Profile (`ProfileService`), différents ensembles de données liés au profil sont supprimés du système à des moments potentiellement différents :
+
+| Produits inclus | Effets |
+| --- | --- |
+| `ProfileService` only | Le profil est immédiatement supprimé dès que Platform envoie la confirmation que la demande de suppression a été reçue. Cependant, le graphique d’identités du profil reste inchangé et le profil peut éventuellement être reconstitué lorsque de nouvelles données avec les mêmes identités sont ingérées. Les données associées au profil restent également dans le lac de données. |
+| `ProfileService` et `identity` | Le profil et son graphique d’identités associé sont immédiatement supprimés dès que Platform envoie la confirmation que la demande de suppression a été reçue. Les données associées au profil restent dans le lac de données. |
+| `ProfileService` et `aepDataLake` | Le profil est immédiatement supprimé dès que Platform envoie la confirmation que la demande de suppression a été reçue. Cependant, le graphique d’identités du profil reste inchangé et le profil peut éventuellement être reconstitué lorsque de nouvelles données avec les mêmes identités sont ingérées.<br><br>Lorsque le produit du lac de données répond que la demande a été reçue et qu’il est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles à aucun [!DNL Platform] service. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
+| `ProfileService`, `identity`, et `aepDataLake` | Le profil et son graphique d’identités associé sont immédiatement supprimés dès que Platform envoie la confirmation que la demande de suppression a été reçue.<br><br>Lorsque le produit du lac de données répond que la demande a été reçue et qu’il est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles à aucun [!DNL Platform] service. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
+
+Reportez-vous à la section [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) pour plus d’informations sur les états des tâches de suivi.
 
 ### Requêtes de profil et requêtes d’identité {#profile-v-identity}
 
