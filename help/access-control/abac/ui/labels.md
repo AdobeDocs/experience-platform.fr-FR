@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Gestion des étiquettes de contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la gestion des libellés par le biais de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 3d7b3471c363c036c41171789b7dcbed5489f2ee
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 23%
+source-wordcount: '184'
+ht-degree: 38%
 
 ---
 
@@ -14,11 +14,15 @@ ht-degree: 23%
 
 >[!IMPORTANT]
 >
->Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée pour les clients de santé basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform une fois qu’elle sera entièrement publiée.
+>Le contrôle d’accès basé sur les attributs est actuellement disponible pour un nombre restreint d’utilisateurs, qui sont actifs dans le secteur de la santé et basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform dès son déploiement à grande échelle.
 
 Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans  Platform, ou dès que les données sont disponibles pour une utilisation dans Platform.
 
 ## Créer un nouveau libellé
+
+>[!NOTE]
+>
+>Vous devez disposer des droits d’administration pour créer un libellé personnalisé. Actuellement, la suppression des étiquettes n’est pas prise en charge.
 
 Pour créer un nouveau libellé, sélectionnez le **[!UICONTROL Étiquettes]** dans la barre latérale et sélectionnez **[!UICONTROL Créer une étiquette]**.
 
