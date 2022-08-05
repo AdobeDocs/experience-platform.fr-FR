@@ -3,9 +3,9 @@ keywords: la publicité; les critères;
 title: Connexion à un critère
 description: Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaque consommateur des expériences plus riches sur l’Internet libre. Grâce au jeu de données commercial le plus important du monde et à l’IA la plus performante du monde, Criteo s’assure que chaque point de contact du parcours d’achat est personnalisé pour atteindre les clients avec la bonne publicité, au bon moment.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1007'
 ht-degree: 8%
 
 ---
@@ -28,7 +28,6 @@ Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaq
 
 ## Limites {#limitations}
 
-* Criteo ne prend actuellement pas en charge la suppression d’utilisateurs des audiences.
 * Acceptation des critères uniquement [!DNL SHA-256]Emails en texte brut et hachés (à transformer en [!DNL SHA-256] avant envoi). Veuillez ne pas envoyer d&#39;informations d&#39;identification personnelles, telles que le nom ou les numéros de téléphone d&#39;un individu.
 * Le critère nécessite qu’au moins un identifiant soit fourni par le client. Elle établit des priorités. [!DNL GUM ID] comme identifiant sur un email haché, car il contribue à un meilleur taux de correspondance.
 
@@ -41,7 +40,7 @@ Criteo prend en charge l’activation des identités décrites dans le tableau c
 | Identité cible | Description | Considérations |
 | --- | --- | --- |
 | `email_sha256` | Adresses électroniques hachées avec l’algorithme SHA-256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA-256. Lorsque votre champ source contient des attributs non hachés, vérifiez la variable [!UICONTROL Appliquer la transformation] pour que Platform hache automatiquement les données lors de l’activation. |
-| `gum_id` | Criteo [!DNL GUM] identifiant de cookie | [!DNL GUM IDs] permettre aux clients de gérer une correspondance entre leur système d’identification utilisateur et l’identification utilisateur de Criteo ([!DNL UID]). Si le type d’identifiant est `GUM`, un paramètre supplémentaire, [!DNL GUM Caller ID], doit également être inclus. Contactez votre équipe de compte Criteo pour connaître les [!DNL GUM Caller ID] ou pour obtenir plus d’informations à ce sujet `GUM` synchronisation, si nécessaire. |
+| `gum_id` | Criteo [!DNL GUM] identifiant de cookie | [!DNL GUM IDs] permettre aux clients de gérer une correspondance entre leur système d’identification utilisateur et l’identification utilisateur de Criteo ([!DNL UID]). Si le type d’identifiant est `gum_id`, un paramètre supplémentaire, [!DNL GUM Caller ID], doit également être inclus. Contactez votre équipe de compte Criteo pour connaître les [!DNL GUM Caller ID] ou pour obtenir plus d’informations à ce sujet [!DNL GUM ID] synchronisation, si nécessaire. |
 
 ## Type et fréquence d&#39;export {#export-type-frequency}
 
@@ -99,7 +98,6 @@ Après vous être authentifié à la destination, veuillez renseigner les param�
 | --- | --- | --- |
 | Nom | Un nom qui vous aidera à reconnaître cette destination à l’avenir. Le nom que vous choisissez ici sera : [!DNL Audience] dans le Centre de gestion des critères et ne peut pas être modifié ultérieurement. | Oui |
 | Description | Description qui vous aidera à identifier cette destination ultérieurement. | Non |
-| Version de l’API | Version de l’API Criteo. Sélectionnez Aperçu. | Oui |
 | Identifiant annonceur | Identifiant de publicitaire de critère de votre organisation. Contactez votre gestionnaire de compte Criteo pour obtenir ces informations. | Oui |
 | Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] de votre organisation. Contactez votre équipe de compte Criteo pour connaître les [!DNL GUM Caller ID] ou pour obtenir plus d’informations à ce sujet [!DNL GUM] synchronisation, si nécessaire. | Oui, chaque fois que [!DNL GUM ID] est fourni comme identifiant |
 
@@ -121,7 +119,7 @@ Lecture [Activation des profils et des segments vers des destinations d’export
 
 Vous pouvez voir les segments exportés dans le [Centre de gestion des critères](https://marketing.criteo.com/audience-manager/dashboard).
 
-Le corps de la requête reçu par le [!DNL Criteo] La connexion ressemble à ceci :
+Le corps de la requête d’ajout d’un profil utilisateur reçu par le [!DNL Criteo] La connexion ressemble à ceci :
 
 ```json
 {
@@ -129,6 +127,34 @@ Le corps de la requête reçu par le [!DNL Criteo] La connexion ressemble à cec
     "type": "ContactlistWithUserAttributesAmendment",
     "attributes": {
       "operation": "add",
+      "identifierType": "gum",
+      "gumCallerId": "123",
+      "identifiers": [
+        {
+          "identifier": "456",
+          "attributes": [
+            { "key": "ctoid_GumCaller", "value": "123" },
+            { "key": "ctoid_Gum", "value": "456" },
+            {
+              "key": "ctoid_HashedEmail",
+              "value": "98833030dc03751f2b2c1a0017078975fdae951aa6908668b3ec422040f2d4be"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+Le corps de requête de suppression du profil utilisateur reçu par le [!DNL Criteo] La connexion ressemble à ceci :
+
+```json
+{
+  "data": {
+    "type": "ContactlistWithUserAttributesAmendment",
+    "attributes": {
+      "operation": "remove",
       "identifierType": "gum",
       "gumCallerId": "123",
       "identifiers": [
