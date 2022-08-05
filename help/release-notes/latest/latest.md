@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5c40235b388c20f5a28a7d8535d5cf2b6d9cb40c
+source-git-commit: c4cd691eeae9e27dd7616dc19672dc5d08b8cec7
 workflow-type: tm+mt
-source-wordcount: '2325'
+source-wordcount: '2327'
 ht-degree: 31%
 
 ---
@@ -177,7 +177,7 @@ Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Correspondance de piste avec le compte | La mise en correspondance de pistes/comptes permet de joindre des profils de personnes connus à des profils de compte. Vous pouvez ensuite segmenter et cibler des données dans un contexte B2B tel que des comptes ou des opportunités. Les tâches exécutées quotidiennement utilisent des facteurs déterministes et probabilistes pour faire correspondre des profils de personnes qui ne sont déjà associés à aucun compte à un compte qui correspond le mieux. Vous pouvez ensuite décider d’inclure de telles correspondances dans vos définitions de segment. |
+| Correspondance de piste avec le compte | La mise en correspondance des pistes et des comptes permet de joindre des profils de personnes connus à des profils de compte. Vous pouvez ensuite segmenter et cibler des données dans un contexte B2B tel que des comptes ou des opportunités. Les tâches exécutées quotidiennement utilisent des facteurs déterministes et probabilistes pour faire correspondre des profils de personnes qui ne sont déjà associés à aucun compte à un compte qui correspond le mieux. Vous pouvez ensuite décider d’inclure de telles correspondances dans vos définitions de segment. |
 
 Pour plus d’informations, voir le document sur [mener à la correspondance des comptes](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
