@@ -4,10 +4,10 @@ title: Activer les données d’audience vers des destinations d’exportation d
 type: Tutorial
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des segments vers des destinations basées sur un profil en continu.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: af761155bc510d96cea2b0bd475ee4a3bc4abe16
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 74%
+source-wordcount: '645'
+ht-degree: 60%
 
 ---
 
@@ -29,15 +29,15 @@ Pour activer des données vers des destinations, vous devez avoir réussi à vou
 
 1. Accédez à **[!UICONTROL Connexions et destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**.
 
-   ![Onglet Catalogue de destinations](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+   ![Image montrant l’onglet Catalogue de destinations.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
 1. Sélectionnez **[!UICONTROL Activer des segments]** sur la vignette correspondant à la destination vers laquelle vous souhaitez activer des segments, tel qu’indiqué sur l’image ci-dessous.
 
-   ![Bouton Activer des segments](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+   ![Image mettant en surbrillance le contrôle Activer les segments dans l’onglet Catalogue de destinations .](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
 
 1. Sélectionnez la connexion de destination à utiliser pour activer des segments, puis sélectionner **[!UICONTROL Suivant]**.
 
-   ![Sélectionnez des destinations](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+   ![Image montrant une sélection de deux destinations auxquelles vous pouvez vous connecter.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. Accédez à la section suivante pour [sélectionner des segments](#select-segments).
 
@@ -45,11 +45,11 @@ Pour activer des données vers des destinations, vous devez avoir réussi à vou
 
 Utilisez les cases à cocher situées à gauche des noms de segment pour sélectionner les segments que vous souhaitez activer vers la destination, puis sélectionnez **[!UICONTROL Suivant]**.
 
-![Sélectionnez des segments](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
+![Image mettant en surbrillance la sélection des cases à cocher à l’étape Sélection de segments du workflow d’activation.](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
 
 ## Sélectionner des attributs de profil {#select-attributes}
 
-Sélectionnez les attributs de profil à envoyer à la destination cible.
+Dans le **[!UICONTROL Mappage]** sélectionnez les attributs de profil à envoyer à la destination cible.
 
 >[!NOTE]
 >
@@ -59,19 +59,19 @@ Les exportations de fichiers varient comme suit, selon que `segmentMembership.st
 * Si le champ `segmentMembership.status` est sélectionné, les fichiers exportés incluent les membres **[!UICONTROL actifs]** dans l’instantané complet initial ainsi que les membres **[!UICONTROL actifs]** et **[!UICONTROL expirés]** dans les exportations incrémentielles suivantes.
 * Si le champ `segmentMembership.status` n’est pas sélectionné, les fichiers exportés incluent uniquement les membres **[!UICONTROL actifs]** dans l’instantané complet initial et dans les exportations incrémentielles suivantes.
 
-![attributs recommandés](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
+![Image montrant les attributs préremplis et recommandés dans l’étape de mappage.](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
 
 1. Sur la page **[!UICONTROL Sélectionner des attributs]**, sélectionnez **[!UICONTROL Ajouter un nouveau champ]**.
 
-   ![Ajouter un nouveau mappage](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
+   ![Image mettant en surbrillance le contrôle Ajouter un nouveau champ dans l’étape de mappage.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
 1. Sélectionnez la flèche située à droite de l’entrée **[!UICONTROL Champ de schéma]**.
 
-   ![Sélectionner le champ source](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
+   ![Image mettant en surbrillance la manière de sélectionner un champ source dans l’étape de mappage.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
 1. Sur la page **[!UICONTROL Sélectionner un champ]**, sélectionnez les attributs XDM à envoyer à la destination puis choisissez **[!UICONTROL Sélectionner]**.
 
-   ![Sélectionner la page du champ source](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![Image montrant une sélection de champs XDM que vous pouvez sélectionner comme champs source.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
 
 1. Pour ajouter d’autres mappages, répétez les étapes 1 à 3, puis sélectionnez **[!UICONTROL Suivant]**.
@@ -84,11 +84,11 @@ Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre s�
 >
 >Au cours de cette étape, Adobe Experience Platform recherche les violations de la stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la stratégie. Vous ne pouvez pas terminer le processus d’activation des segments tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, voir [Application des stratégies](../../rtcdp/privacy/data-governance-overview.md#enforcement) dans la section documentation sur la gouvernance des données.
 
-![violation de la stratégie de données](../assets/common/data-policy-violation.png)
+![Image montrant une violation de la politique de données lors de l’étape de révision.](../assets/common/data-policy-violation.png)
 
 Si aucune violation de stratégie n’a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer la sélection et commencer à envoyer des données à la destination.
 
-![Révision](../assets/ui/activate-streaming-profile-destinations/review.png)
+![Image montrant l’étape de révision du workflow d’activation.](../assets/ui/activate-streaming-profile-destinations/review.png)
 
 ## Vérifier l’activation des segments {#verify}
 
