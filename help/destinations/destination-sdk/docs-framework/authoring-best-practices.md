@@ -1,9 +1,10 @@
 ---
 title: Bonnes pratiques de création
 description: Découvrez les règles et conseils à suivre lors de la création de votre page de documentation de destination, afin de vous assurer qu’elle respecte les normes de qualité de la documentation Adobe Experience Platform.
-source-git-commit: 35e5c388e9572a3b27ec4bce55e766725936eda4
+exl-id: b12059f1-6635-41cd-acc5-6ff471111164
+source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -21,9 +22,18 @@ Cette page décrit les règles que vous devez suivre lorsque [création de votre
 * Dans la documentation Experience Platform, les auteurs Adobe utilisent **mise en forme gras** pour faire référence aux commandes de l’interface utilisateur, comme suit :
    * Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis sélectionnez la variable **[!UICONTROL Catalogue]** . Consultez un exemple de la manière dont les commandes de l’interface utilisateur sont documentées dans une [tutoriel sur les destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
 
+## Style d’écriture
+
+>[!IMPORTANT]
+>
+>Lecture [Rédaction de conseils pour la documentation Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) avant de commencer à créer la page de documentation de destination.
+
+* Gardez vos phrases courtes et arrivez au point rapidement. Si votre phrase comporte plus de 20 mots ou utilise plusieurs virgules, envisagez de la diviser en phrases distinctes. Les phrases de plus de 20 mots peuvent être particulièrement difficiles pour les lecteurs.
+* Ne sois pas trop poli. Évitez d’utiliser &quot;s’il vous plaît&quot; ou &quot;faites bien...&quot;. dans la documentation technique.
+
 ## Liaison {#linking}
 
-Veuillez suivre le modèle de documentation fourni et ne pas modifier les liens existants dans le modèle. Lorsque vous incluez de nouveaux liens, lisez [utilisation de liens dans la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) dans le guide du contributeur.
+Suivez le modèle de documentation fourni et ne modifiez pas les liens existants dans le modèle. Lorsque vous incluez de nouveaux liens, lisez [utilisation de liens dans la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) dans le guide du contributeur.
 
 ## Indications de marque {#branding}
 
