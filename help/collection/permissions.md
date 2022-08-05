@@ -2,10 +2,10 @@
 title: Gestion des autorisations pour la collecte de données dans Experience Platform
 description: Présentation générale de la gestion des autorisations et du contrôle de l’accès aux fonctionnalités de collecte de données dans Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 58b8446d6a20ac797ac004b19bdbfdb10f692647
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 10%
+source-wordcount: '1311'
+ht-degree: 9%
 
 ---
 
@@ -70,19 +70,36 @@ Les autorisations de la collecte de données Adobe Experience Platform contrôle
 >
 >Pour plus d’informations sur la façon dont ces autorisations affectent les fonctionnalités des balises, y compris les stratégies d’administration pour les scénarios courants, consultez la documentation sur les balises sur [permissions utilisateur](../tags/ui/administration/user-permissions.md).
 
-## Gestion des autorisations pour la collecte de données Adobe Experience Platform {#manage}
+## Gestion des autorisations {#manage}
 
->[!IMPORTANT]
->
->Cette section décrit uniquement comment gérer les autorisations du produit Collecte de données Adobe Experience Platform dans Admin Console. Toutefois, les étapes de gestion des autorisations sous le produit Adobe Experience Platform sont similaires.
->
->Voir [guide de l’interface utilisateur du contrôle d’accès](../access-control/ui/overview.md) pour obtenir des instructions détaillées sur la gestion des autorisations de Platform. Selon les SKU du produit auxquels votre entreprise a accès, il se peut que vous ne disposiez pas de toutes les autorisations.
+Comme indiqué dans la section précédente, les autorisations pour la collecte de données sont gérées par deux désignations de produit en Admin Console : **Adobe Experience Platform** et **Collecte de données Adobe Experience Platform**.
 
-Pour gérer les autorisations relatives à la collecte de données, connectez-vous à [Admin Console](https://adminconsole.adobe.com/) et sélectionnez **[!UICONTROL Produits]** dans la barre de navigation supérieure. À partir de là, sélectionnez la carte pour **[!UICONTROL Collecte de données Adobe Experience Platform]**.
+Pour gérer ces autorisations, connectez-vous à [Admin Console](https://adminconsole.adobe.com/) et sélectionnez **[!UICONTROL Produits]** dans la barre de navigation supérieure. À partir de là, sélectionnez la carte de produit pour les autorisations que vous souhaitez configurer. Reportez-vous aux sous-sections ci-dessous pour savoir comment gérer les autorisations pertinentes sous chaque produit en Admin Console :
+
+* [Autorisations Adobe Experience Platform](#manage-platform)
+* [Autorisations de collecte de données Adobe Experience Platform](#manage-collection)
+
+### Gestion des autorisations sous Adobe Experience Platform {#manage-platform}
+
+Dans la **[!UICONTROL Produits]** vue dans Admin Console, sélectionnez **[!UICONTROL Collecte de données Adobe Experience Platform]**. Sélectionnez le profil de produit pour lequel vous souhaitez modifier les autorisations, puis accédez à la **[!UICONTROL Autorisations]** .
+
+Pour accéder aux fonctionnalités de collecte de données, vous devez activer toutes les autorisations de la variable **[!UICONTROL Environnements de test]**, **[!UICONTROL Modélisation des données]**, **[!UICONTROL Identity Management]**, et **[!UICONTROL Collecte de données]** catégories.
+
+![Image montrant la carte de produit de la collecte de données en Admin Console](./images/permissions/platform-permission-card.png)
+
+Voir [guide de l’interface utilisateur du contrôle d’accès](../access-control/ui/overview.md) pour obtenir des instructions détaillées sur la gestion des autorisations de Platform.
+
+>[!NOTE]
+>
+>Selon les SKU du produit auxquels votre entreprise a accès, vous ne disposez peut-être pas de toutes les autorisations de Platform.
+
+### Gestion des autorisations sous Collecte de données Adobe Experience Platform {#manage-collection}
+
+Dans la **[!UICONTROL Produits]** vue dans Admin Console, sélectionnez **[!UICONTROL Collecte de données Adobe Experience Platform]**.
 
 ![Image montrant la carte de produit de la collecte de données en Admin Console](./images/permissions/data-collection-card.png)
 
-### Sélection ou création d’un profil de produit
+#### Sélection ou création d’un profil de produit
 
 L’écran suivant affiche une liste des profils de produit disponibles pour la collecte de données sous votre organisation, le profil par défaut étant **[!DNL Default Data Collection All Access]**. Si vous le souhaitez, vous pouvez modifier le profil de produit par défaut ou sélectionner **[!UICONTROL Nouveau profil]** pour en créer un. Si votre organisation compte plusieurs rôles ou groupes d’utilisateurs nécessitant différents niveaux d’accès, vous devez créer un profil de produit distinct pour chacun d’eux.
 
@@ -92,7 +109,7 @@ Après avoir sélectionné ou créé un profil de produit, vous pouvez utiliser 
 
 ![Image montrant l’onglet Autorisations d’un Admin Console de profil de produit](./images/permissions/edit-permission-categories.png)
 
-### Modifier les autorisations pour le profil de produit {#edit-permissions}
+#### Modifier les autorisations pour le profil de produit {#edit-permissions}
 
 Lors de l’édition des autorisations d’un profil, les autorisations disponibles sont répertoriées dans la colonne de gauche tandis que celles qui sont incluses dans le profil sont répertoriées dans la colonne de droite. Sélectionnez les autorisations répertoriées pour les déplacer entre les colonnes.
 
@@ -110,7 +127,7 @@ La vue Profil de produit réapparaît avec les autorisations ajoutées reflété
 
 ![Image montrant les autorisations ajoutées pour le profil de produit](./images/permissions/permissions-added.png)
 
-### Affecter des utilisateurs au profil de produits {#assign-users}
+#### Affecter des utilisateurs au profil de produits {#assign-users}
 
 Pour affecter des utilisateurs au profil de produit (et leur accorder les autorisations configurées du profil), sélectionnez la variable **[!UICONTROL Utilisateurs]** , suivie de **[!UICONTROL Ajouter un utilisateur]**.
 
