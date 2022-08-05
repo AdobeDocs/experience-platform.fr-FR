@@ -5,7 +5,7 @@ title: Fonctions de mappage de prép de données
 topic-legacy: overview
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
+source-git-commit: a48072d2c418588a05397e991c1a2e17eee4c028
 workflow-type: tm+mt
 source-wordcount: '4286'
 ht-degree: 16%
@@ -25,7 +25,7 @@ Si un nom de champ ne respecte pas cette convention, il doit être encadré de `
 En outre, si un nom de champ est **any** des mots-clés réservés suivants, il doit être encapsulé avec `${}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
 ```
 
 Les données des sous-champs sont accessibles à l’aide de la notation par points. Par exemple, si une variable `name` pour accéder à l’objet `firstName` champ, utiliser `name.firstName`.
