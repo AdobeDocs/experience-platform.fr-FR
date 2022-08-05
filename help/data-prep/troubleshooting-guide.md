@@ -4,9 +4,9 @@ title: Guide de dépannage de Data Prep
 topic-legacy: troubleshooting
 description: Ce document répond aux questions les plus fréquemment posées sur Adobe Experience Platform Data Prep.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: 4bb21ce5861419964b80a827269e40ef3e6483f8
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '342'
 ht-degree: 2%
 
 ---
@@ -30,3 +30,7 @@ Toutes les lignes non valides, même sans erreur de transformation, seront égal
 ### Comment échapper des caractères spéciaux dans un champ ?
 
 Vous pouvez échapper les caractères spéciaux d’un champ à l’aide de la fonction `${...}`. Toutefois, les fichiers JSON contenant des champs avec un point (`.`) ne sont pas pris en charge par ce mécanisme. Lors de l’interaction avec des hiérarchies, si un attribut enfant comporte un point (`.`), vous devez utiliser une barre oblique inverse (`\`) pour échapper les caractères spéciaux. Par exemple : `address` est un objet qui contient l’attribut . `street.name`, il peut alors être appelé `address.street\.name` au lieu de `address.street.name`.
+
+### Quelle est la longueur maximale des champs calculés ?
+
+La longueur maximale des champs calculés est de 4 096 caractères.

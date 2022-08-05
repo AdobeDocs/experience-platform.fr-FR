@@ -3,9 +3,9 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv�
 title: Guide de l’interface utilisateur de la préparation des données
 description: Ce document fournit des instructions sur la manière d’utiliser les fonctions de préparation des données dans l’interface utilisateur de Platform pour mapper des fichiers CSV à un schéma XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: edef8843c03282774991f30220504ece97af52cf
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1845'
 ht-degree: 90%
 
 ---
@@ -149,7 +149,7 @@ Lorsque vous avez terminé, sélectionnez l’icône de schéma pour fermer l’
 
 #### Les champs calculés {#calculated-fields}
 
-Les champs calculés permettent de créer des valeurs en fonction des attributs du schéma d’entrée. Ces valeurs peuvent ensuite être affectées à des attributs dans le schéma cible. Vous pouvez également leur fournir un nom et une description pour en faciliter la référence.
+Les champs calculés permettent de créer des valeurs en fonction des attributs du schéma d’entrée. Ces valeurs peuvent ensuite être affectées à des attributs dans le schéma cible. Vous pouvez également leur fournir un nom et une description pour en faciliter la référence. La longueur maximale des champs calculés est de 4 096 caractères.
 
 Pour créer un champ calculé, sélectionnez **[!UICONTROL Nouveau type de champ]**, puis **[!UICONTROL Ajouter un champ calculé]**.
 
