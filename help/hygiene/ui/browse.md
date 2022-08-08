@@ -3,9 +3,9 @@ title: Parcourir les ordres de travail relatifs au nettoyage de données
 description: Découvrez comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '411'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 95%
 
 >[!IMPORTANT]
 >
->Actuellement, seules les organisations qui ont acheté Healthcare Shield disposent des capacités d’hygiène des données dans Adobe Experience Platform.
+>Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Healthcare Shield.
 
-Lorsqu’une demande de nettoyage de données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. Un ordre de travail représente un processus spécifique d’hygiène des données, tel qu’une durée de vie planifiée (TTL) d’un jeu de données, qui comprend son statut actuel et d’autres détails connexes.
+Lorsqu’une demande de nettoyage de données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. Un ordre de travail représente un processus spécifique d’nettoyage de données, tel qu’une durée de vie planifiée (TTL) d’un jeu de données, qui comprend son statut actuel et d’autres détails connexes.
 
 Ce guide explique comment afficher et gérer les ordres de travail existants dans l’interface utilisateur d’Adobe Experience Platform.
 
@@ -29,7 +29,7 @@ Ce guide explique comment afficher et gérer les ordres de travail existants dan
 
 Lorsque vous accédez pour la première fois à l’espace de travail **[!UICONTROL Nettoyage de données]** dans l’interface utilisateur, une liste des ordres de travail existants et les détails de base s’affichent.
 
-![Image illustrant l’espace de travail [!UICONTROL Nettoyage de données] dans l’interface utilisateur de Platform](../images/ui/browse/work-order-list.png).
+![Image illustrant l’espace de travail [!UICONTROL Nettoyage de données] dans l’interface utilisateur de Platform](../images/ui/browse/work-order-list.png)
 
 <!-- The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer deletion tasks, and **[!UICONTROL Dataset]** to view a list of time-to-live (TTL) schedules for datasets.
 
@@ -37,7 +37,7 @@ Lorsque vous accédez pour la première fois à l’espace de travail **[!UICONT
 
 Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](../images/ui/browse/funnel-icon.png)) pour consulter une liste de filtres pour les ordres de travail affichés.
 
-![Image des filtres d’ordres de travail affichés](../images/ui/browse/filters.png).
+![Image des filtres d’ordres de travail affichés](../images/ui/browse/filters.png)
 
 | Filtre | Description |
 | --- | --- |
@@ -52,7 +52,7 @@ Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](../
 
 Sélectionnez l’identifiant d’un ordre de travail répertorié pour en afficher les détails.
 
-![Image illustrant l’identifiant de l’ordre de travail sélectionné](../images/ui/browse/select-work-order.png).
+![Image illustrant l’identifiant de l’ordre de travail sélectionné](../images/ui/browse/select-work-order.png)
 
 <!-- Depending on the type of work order selected, different information and controls are provided. These are covered in the sections below.
 
@@ -72,7 +72,7 @@ The details of a consumer delete request are read-only, displaying its basic att
 
 La page de détails d’une TTL de jeu de données fournit des informations sur les attributs de base, notamment la date d’expiration prévue pour les jours restants avant la suppression. Dans le rail de droite, vous pouvez utiliser des commandes pour modifier ou annuler la TTL.
 
-![Image illustrant la page de détails d’un ordre de travail de TTL de jeu de données](../images/ui/browse/ttl-details.png).
+![Image illustrant la page de détails d’un ordre de travail de TTL de jeu de données](../images/ui/browse/ttl-details.png)
 
 ## Étapes suivantes
 
