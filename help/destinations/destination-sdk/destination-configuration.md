@@ -2,7 +2,7 @@
 description: Cette configuration vous permet d’indiquer des informations de base telles que votre nom de destination, votre catégorie, votre description, votre logo, etc. Les paramètres de cette configuration déterminent également comment les utilisateurs d’Experience Platform s’authentifient pour votre destination, comment ils apparaissent dans l’interface utilisateur d’Experience Platform ainsi que les identités qui peuvent être exportées vers votre destination.
 title: Options de configuration de destination de diffusion en continu pour Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
 source-wordcount: '1888'
 ht-degree: 92%
@@ -285,7 +285,7 @@ Cette option vous permet d’effectuer les opérations suivantes :
 
 >[!NOTE]
 >
->Lorsque vous utilisez l’option d’agrégation configurable pour votre destination, gardez à l’esprit les valeurs minimale et maximale que vous pouvez utiliser pour les deux paramètres. `maxBatchAgeInSecs` (minimum 1 800 et maximum 3 600) et `maxNumEventsInBatch` (minimum 1 000, maximum 10 000).
+>Lorsque vous utilisez l’option d’agrégation configurable pour votre destination, gardez à l’esprit les valeurs minimale et maximale que vous pouvez utiliser pour les deux paramètres. `maxBatchAgeInSecs` (1 800 au minimum et 3 600 au maximum) et `maxNumEventsInBatch` (minimum 1 000, maximum 10 000).
 
 Pour des explications détaillées des paramètres d’agrégation, reportez-vous à la page de référence [Opérations de point d’entrée de l’API Destinations](./destination-configuration-api.md), où chaque paramètre est décrit.
 

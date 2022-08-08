@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API « /authoring/destinations ».
 title: Opérations de point d’entrée de l’API Destinations
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '2571'
-ht-degree: 96%
+source-wordcount: '2572'
+ht-degree: 95%
 
 ---
 
@@ -171,7 +171,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | Nombre entier | Experience Platform peut agréger plusieurs profils exportés en un seul appel HTTP. Indiquez le nombre maximal de profils que votre point d’entrée doit recevoir dans un seul appel HTTP. Notez qu’il s’agit d’une agrégation des meilleurs efforts. Par exemple, si vous spécifiez la valeur 100, Platform peut envoyer n’importe quel nombre de profils inférieur à 100 lors d’un appel. <br> Si votre serveur n’accepte pas plusieurs utilisateurs par demande, définissez cette valeur sur 1. |
 | `aggregation.bestEffortAggregation.splitUserById` | Booléen | Utilisez cet indicateur si l’appel à la destination doit être partagé par identité. Définissez cet indicateur sur `true` si votre serveur n’accepte qu’une seule identité par appel, pour un espace de noms donné. |
 | `aggregation.configurableAggregation.splitUserById` | Booléen | Consultez le paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Utilisez cet indicateur si l’appel à la destination doit être partagé par identité. Définissez cet indicateur sur `true` si votre serveur n’accepte qu’une seule identité par appel, pour un espace de noms donné. |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Nombre entier | <ul><li>*Valeur minimale :1800*</li><li>*Valeur maximale : 3600*</li><li>Consultez le paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Configurez une valeur comprise entre les valeurs minimales et maximales acceptées. Associé à `maxNumEventsInBatch`, ce paramètre détermine la durée pendant laquelle l’Experience Platform doit attendre d’envoyer un appel API à votre point de terminaison . <br> Par exemple, si vous utilisez la valeur maximale pour les deux paramètres, Experience Platform attend 3 600 secondes OU jusqu’à ce qu’il y ait 10 000 profils qualifiés avant d’effectuer l’appel API, selon ce qui se produit en premier. </li></ul> |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Nombre entier | <ul><li>*Valeur minimale :1800*</li><li>*Valeur maximale : 3600*</li><li>Consultez le paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Configurez une valeur comprise entre les valeurs minimales et maximales acceptées. Associé à `maxNumEventsInBatch`, ce paramètre détermine la durée pendant laquelle l’Experience Platform doit attendre d’envoyer un appel API à votre point de terminaison . <br> Par exemple, si vous utilisez la valeur maximale pour les deux paramètres, Experience Platform patiente 3 600 secondes OU jusqu’à ce qu’il y ait 10 000 profils qualifiés avant d’effectuer l’appel API, selon ce qui se produit en premier. </li></ul> |
 | `aggregation.configurableAggregation.maxNumEventsInBatch` | Nombre entier | <ul><li>*Valeur minimale :1000*</li><li>*Valeur maximale : 10 000*</li><li>Consultez le paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Configurez une valeur comprise entre les valeurs minimales et maximales acceptées. Pour une description de ce paramètre, voir `maxBatchAgeInSecs` juste au-dessus.</li></ul> |
 | `aggregation.configurableAggregation.aggregationKey` | Booléen | Consultez le paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Permet d’agréger les profils exportés mappés à la destination en fonction des paramètres ci-dessous : <br> <ul><li>identifiant du segment</li><li> statut du segment </li><li> espace de noms d’identité </li></ul> |
 | `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Booléen | Consultez le paramètre dans l’exemple de configuration [ici](./destination-configuration.md#example-configuration). Définissez ce paramètre sur `true` si vous souhaitez regrouper les profils exportés vers votre destination par identifiant de segment. |
