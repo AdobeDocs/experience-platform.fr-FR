@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: ff00dcda3bbccd731c91fdf475b37221edb659db
+source-git-commit: fd3114a4578637dcf99232245f8d2cec64de14b5
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 75%
+source-wordcount: '943'
+ht-degree: 74%
 
 ---
 
@@ -210,6 +210,7 @@ ht-degree: 75%
          * [(Version bêta) Configuration d’une destination Amazon S3 avec nom de fichier personnalisé et options de mise en forme](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
          * [(Version bêta) Configuration d’une destination de stockage Azure Blob avec des options de mise en forme de fichier personnalisées et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
          * [(Version bêta) Configuration d’une destination Azure Data Lake Storage avec des options de formatage de fichier personnalisées et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [(Version bêta) Configuration d’une destination de zone d’entrée de données (DLZ) avec des options de formatage de fichier personnalisées et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [(Version bêta) Configuration d’une destination SFTP avec des options de formatage de fichier prédéfinies et une configuration de nom de fichier personnalisée](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * Référence {#reference}
       * [Limitation de débit et stratégie de reprise pour les destinations de diffusion en continu](./destination-sdk/rate-limiting-retry-policy.md)
