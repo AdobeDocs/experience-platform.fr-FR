@@ -5,9 +5,9 @@ exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
 source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '998'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 98%
 
 >[!IMPORTANT]
 >
->Actuellement, seules les organisations qui ont acheté Healthcare Shield disposent des capacités d’hygiène des données dans Adobe Experience Platform.
+>Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Healthcare Shield.
 
 Le point d’entrée `/workorder` de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression des identités des clients dans Adobe Experience Platform.
 
