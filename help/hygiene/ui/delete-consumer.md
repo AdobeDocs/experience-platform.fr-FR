@@ -5,9 +5,9 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
 source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1089'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 98%
 
 >[!IMPORTANT]
 >
->Actuellement, seules les organisations qui ont acheté Healthcare Shield disposent des capacités d’hygiène des données dans Adobe Experience Platform.
+>Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Healthcare Shield.
 
 L’espace de travail [[!UICONTROL Nettoyage de données]](./overview.md) dans l’interface utilisateur d’Adobe Experience Platform, vous permet de supprimer les enregistrements des clients qui utilisent le service d’identités et le profil client en temps réel.
 
@@ -35,11 +35,11 @@ Pour plus d’informations sur les identités dans Platform, consultez la docume
 
 Pour lancer le processus, sélectionnez **[!UICONTROL Créer une requête]** dans la page principale de l’espace de travail.
 
-![Image illustrant le bouton [!UICONTROL Créer une requête] sélectionné](../images/ui/delete-consumer/create-request-button.png).
+![Image illustrant le bouton [!UICONTROL Créer une requête] sélectionné](../images/ui/delete-consumer/create-request-button.png)
 
 La boîte de dialogue de création de requête s’affiche. Par défaut, l’option **[!UICONTROL Consommateur]** est sélectionnée sous la section **[!UICONTROL Action]**. Conservez la sélection de cette option.
 
-![Image illustrant l’option Client sélectionnée dans la boîte de dialogue de création](../images/ui/delete-consumer/consumer-action.png).
+![Image illustrant l’option Client sélectionnée dans la boîte de dialogue de création](../images/ui/delete-consumer/consumer-action.png)
 
 ## Sélectionner des jeux de données
 
@@ -47,11 +47,11 @@ Sous la section **[!UICONTROL Détails du client]**, l’étape suivante consist
 
 Si vous choisissez **[!UICONTROL Sélectionner un jeu de données]**, sélectionnez l’icône de base de données (![image de l’icône de base de données](../images/ui/delete-consumer/database-icon.png)). Une boîte de dialogue s’affiche et vous permet de sélectionner le jeu de données souhaité dans la liste.
 
-![Image illustrant la boîte de dialogue de sélection du jeu de données](../images/ui/delete-consumer/select-dataset.png).
+![Image illustrant la boîte de dialogue de sélection du jeu de données](../images/ui/delete-consumer/select-dataset.png)
 
 Si vous souhaitez supprimer des données client de tous les jeux de données, sélectionnez **[!UICONTROL Tous les jeux de données]**.
 
-![Image illustrant l’option [!UICONTROL Tous les jeux de données] sélectionnée](../images/ui/delete-consumer/all-datasets.png).
+![Image illustrant l’option [!UICONTROL Tous les jeux de données] sélectionnée](../images/ui/delete-consumer/all-datasets.png)
 
 >[!NOTE]
 >
@@ -77,7 +77,7 @@ Comme tous les champs d’identité de Platform, une identité principale se com
 >
 >Si vous ne connaissez pas l’identité principale d’un jeu de données spécifique, vous pouvez la trouver dans l’interface utilisateur de Platform. Dans l’espace de travail **[!UICONTROL Jeux de données]**, sélectionnez le jeu de données en question dans la liste. Sur la page des détails du jeu de données, passez la souris sur le nom du schéma du jeu de données dans le rail de droite. L’identité principale s’affiche avec le nom et la description du schéma.
 >
->![Image illustrant l’identité principale d’un jeu de données surligné dans l’interface utilisateur](../images/ui/delete-consumer/dataset-primary-identity.png).
+>![Image illustrant l’identité principale d’un jeu de données surligné dans l’interface utilisateur](../images/ui/delete-consumer/dataset-primary-identity.png)
 
 Si vous supprimez des enregistrements de clients d’un seul jeu de données, toutes les identités que vous fournissez doivent avoir le même type, car un jeu de données ne peut avoir qu’une seule identité principale. Si vous effectuez une suppression dans tous les jeux de données, vous pouvez inclure plusieurs types d’identité, car différents jeux de données peuvent avoir différentes identités principales.
 
@@ -90,7 +90,7 @@ Deux options permettent de fournir des identités de clients lors de la suppress
 
 Pour charger un fichier JSON, vous pouvez le faire glisser et le déposer dans la zone prévue à cet effet ou sélectionner **[!UICONTROL Choisir les fichiers]** pour parcourir et sélectionner les fichiers dans votre répertoire local.
 
-![Image illustrant les méthodes de chargement de fichiers JSON dans l’interface utilisateur](../images/ui/delete-consumer/upload-json.png).
+![Image illustrant les méthodes de chargement de fichiers JSON dans l’interface utilisateur](../images/ui/delete-consumer/upload-json.png)
 
 Le fichier JSON doit être formaté sous la forme d’un tableau d’objets, chaque objet représentant une identité de client.
 
@@ -118,25 +118,25 @@ Une fois le fichier chargé, vous pouvez continuer à [envoyer la requête](#sub
 
 Pour saisir les identités manuellement, sélectionnez **[!UICONTROL Ajouter une identité]**.
 
-![Image illustrant le bouton [!UICONTROL Ajouter une identité] sélectionné](../images/ui/delete-consumer/add-identity.png).
+![Image illustrant le bouton [!UICONTROL Ajouter une identité] sélectionné](../images/ui/delete-consumer/add-identity.png)
 
 Des commandes s’affichent pour vous permettre de saisir une par une les identités des clients. Sous **[!UICONTROL Identité principale]**, utilisez le menu déroulant pour sélectionner le type d’identité. Sous **[!UICONTROL Valeur de l’identité]**, fournissez la valeur de l’identité principale pour le client.
 
-![Image illustrant un champ d’identité ajouté manuellement](../images/ui/delete-consumer/identity-added.png).
+![Image illustrant un champ d’identité ajouté manuellement](../images/ui/delete-consumer/identity-added.png)
 
 Pour ajouter d’autres identités, cliquez sur l’icône plus (![image de l’icône plus](../images/ui/delete-consumer/plus-icon.png)) en regard de l’une des lignes ou sélectionnez **[!UICONTROL Ajouter une identité]**.
 
-![Image illustrant comment ajouter d’autres identités à la requête](../images/ui/delete-consumer/more-identities.png).
+![Image illustrant comment ajouter d’autres identités à la requête](../images/ui/delete-consumer/more-identities.png)
 
 ## Envoyer la requête (#submit)
 
 Une fois que vous avez terminé d’ajouter des identités à la requête, sélectionnez **[!UICONTROL Envoyer]**.
 
-![Image illustrant le bouton [!UICONTROL Envoyer] sélectionné](../images/ui/delete-consumer/submit.png).
+![Image illustrant le bouton [!UICONTROL Envoyer] sélectionné](../images/ui/delete-consumer/submit.png)
 
 Vous êtes invité à confirmer la liste des identités dont vous souhaitez supprimer les données. Sélectionnez **[!UICONTROL Envoyer]** pour confirmer votre sélection.
 
-![Image illustrant la boîte de dialogue de confirmation](../images/ui/delete-consumer/confirm-request.png).
+![Image illustrant la boîte de dialogue de confirmation](../images/ui/delete-consumer/confirm-request.png)
 
 Une fois la requête soumise, un ordre de travail est créé et s’affiche dans l’onglet [!UICONTROL Consommateur] de l’espace de travail [!UICONTROL Nettoyage de données]. Ensuite, vous pouvez surveiller le statut de l’ordre de travail lors du traitement de la requête. La majorité des ordres de travail de suppression des clients prennent plusieurs jours.
 
