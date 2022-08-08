@@ -3,9 +3,9 @@ title: Gérer des TTL de jeux de données
 description: Découvrez comment planifier une durée de vie (TTL) pour un jeu de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '370'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 95%
 
 >[!IMPORTANT]
 >
->Actuellement, seules les organisations qui ont acheté Healthcare Shield disposent des capacités d’hygiène des données dans Adobe Experience Platform.
+>Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Healthcare Shield.
 
 L’espace de travail [[!UICONTROL Nettoyage de données]](./overview.md) dans l’interface utilisateur d’Adobe Experience Platform vous permet de planifier une durée de vie (TTL) pour un jeu de données.
 
@@ -23,7 +23,7 @@ Ce document explique comment planifier et gérer des TTL de jeux de données dan
 
 Pour créer une requête, sélectionnez **[!UICONTROL Créer une requête]** dans la page principale de l’espace de travail.
 
-![Image illustrant le bouton [!UICONTROL Créer une requête] sélectionné](../images/ui/ttl/create-request-button.png).
+![Image illustrant le bouton [!UICONTROL Créer une requête] sélectionné](../images/ui/ttl/create-request-button.png)
 
 <!-- The request creation dialog appears. Under the **[!UICONTROL Action]** section, select **[!UICONTROL Dataset]** to update the available controls for TTL scheduling-->
 
@@ -31,11 +31,11 @@ Pour créer une requête, sélectionnez **[!UICONTROL Créer une requête]** dan
 
 La boîte de dialogue de création de requête s’affiche. Sous la section **[!UICONTROL Action]**, sélectionnez une date à laquelle vous souhaitez que le jeu de données soit supprimé. Vous pouvez saisir la date manuellement (au format `mm/dd/yyyy`) ou sélectionner l’icône de calendrier (![image de l’icône de calendrier](../images/ui/ttl/calendar-icon.png)) pour sélectionner la date dans une boîte de dialogue.
 
-![Image illustrant la définition d’une date d’expiration pour la TTL](../images/ui/ttl/select-date.png).
+![Image illustrant la définition d’une date d’expiration pour la TTL](../images/ui/ttl/select-date.png)
 
 Ensuite, sous **[!UICONTROL Détails du jeu de données]**, sélectionnez l’icône de base de données (![image de l’icône de base de données](../images/ui/ttl/database-icon.png)) pour ouvrir une boîte de dialogue de sélection de jeu de données. Dans la liste, sélectionnez un jeu de données auquel appliquer la TTL, puis sélectionnez **[!UICONTROL Terminé]**.
 
-![Image illustrant un jeu de données sélectionné](../images/ui/ttl/select-dataset.png).
+![Image illustrant un jeu de données sélectionné](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
 >
@@ -45,11 +45,11 @@ Ensuite, sous **[!UICONTROL Détails du jeu de données]**, sélectionnez l’ic
 
 Une fois que vous avez sélectionné un jeu de données et une date de TTL, sélectionnez **[!UICONTROL Envoyer]**.
 
-![Image illustrant le bouton [!UICONTROL Envoyer] sélectionné](../images/ui/ttl/submit.png).
+![Image illustrant le bouton [!UICONTROL Envoyer] sélectionné](../images/ui/ttl/submit.png)
 
 Vous êtes invité à confirmer la date à laquelle le jeu de données sera supprimé. Sélectionnez **[!UICONTROL Envoyer]** pour continuer.
 
-Une fois la requête soumise, un ordre de travail est créé et s’affiche dans l’onglet principal de l’espace de travail [!UICONTROL Hygiène des données]. Ensuite, vous pouvez surveiller le statut de l’ordre de travail lors du traitement de la requête.
+Une fois la requête soumise, un ordre de travail est créé et s’affiche dans l’onglet principal de l’espace de travail [!UICONTROL Nettoyage de données]. Ensuite, vous pouvez surveiller le statut de l’ordre de travail lors du traitement de la requête.
 
 ## Modifier ou annuler une TTL
 
