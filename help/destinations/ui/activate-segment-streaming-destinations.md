@@ -4,9 +4,9 @@ title: Activer les données d’audience vers des destinations d’exportation d
 type: Tutorial
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de diffusion en continu de segments.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '811'
 ht-degree: 36%
 
 ---
@@ -83,7 +83,6 @@ Certaines destinations de diffusion en continu de segments nécessitent que vous
 >id="platform_destinations_activate_applytransformation"
 >title="Appliquer la transformation"
 >abstract="Cochez cette option lorsque vous utilisez des champs source non hachés afin que Adobe Experience Platform les hache automatiquement lors de l’activation."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html#apply-transformation" text="En savoir plus dans la documentation."
 
 Lorsque vous mappez des attributs source non hachés avec des attributs cibles que la destination s’attend à être hachée (par exemple : `email_lc_sha256` ou `phone_sha256`), cochez la variable **Appliquer la transformation** pour que Adobe Experience Platform hache automatiquement les attributs source lors de l’activation.
 
@@ -95,7 +94,6 @@ Lorsque vous mappez des attributs source non hachés avec des attributs cibles q
 >id="platform_destinations_activate_enddate"
 >title="Date de fin"
 >abstract="L’ajout d’une date de fin pour la planification des segments n’est pas disponible."
->additional-url="https://www.adobe.com/go/destinations-activate-segment-scheduling-en" text="En savoir plus dans la documentation."
 
 Par défaut, la variable [!UICONTROL Planification du segment] affiche uniquement les segments que vous avez sélectionnés dans le flux d’activation actuel.
 

@@ -3,9 +3,9 @@ keywords: Connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils de vos campagnes Facebook pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '1867'
+source-wordcount: '1859'
 ht-degree: 9%
 
 ---
@@ -165,7 +165,6 @@ Lorsque vous avez terminé de fournir des détails sur votre connexion de destin
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origine de l’audience"
 >abstract="Choisissez la manière dont les données client du segment ont été collectées à l’origine. Les données s’affichent dans Facebook lorsqu’un utilisateur est ciblé par le segment."
->additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="En savoir plus dans la documentation."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

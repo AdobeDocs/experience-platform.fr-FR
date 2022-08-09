@@ -4,9 +4,9 @@ title: Activer les données d’audience vers des destinations d’exportation d
 type: Tutorial
 description: Comment activer les données d’audience disponibles dans Adobe Experience Platform en envoyant des segments vers des destinations de profils par lots.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '2544'
+source-wordcount: '2520'
 ht-degree: 81%
 
 ---
@@ -54,7 +54,6 @@ Utilisez les cases à cocher situées à gauche des noms de segment pour sélect
 >id="platform_destinations_activate_schedule"
 >title="Planning"
 >abstract="Utilisez l’icône en forme de crayon pour définir le type d’export de fichier (fichiers complets ou incrémentiels) et la fréquence d’export."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=fr" text="En savoir plus dans la documentation."
 
 [!DNL Adobe Experience Platform] exporte des données pour les destinations de marketing par e-mail et d’espace de stockage dans le cloud sous forme de fichiers [!DNL CSV]. Sur la page **[!UICONTROL Planification]**, vous pouvez configurer le planning et les noms des fichiers pour chaque segment que vous exportez. La configuration du planning est obligatoire, mais la configuration du nom de fichier est facultative.
 
@@ -221,7 +220,6 @@ Les exportations de fichiers varient comme suit, selon que `segmentMembership.st
 >id="platform_destinations_activate_mandatorykey"
 >title="À propos des attributs obligatoires"
 >abstract="Sélectionnez les attributs de schéma XDM que tous les profils exportés doivent inclure. Les profils sans clé obligatoire ne sont pas exportés vers la destination. Si vous ne sélectionnez pas de clé obligatoire, tous les profils qualifiés sont exportés, quels que soient leurs attributs."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=fr#mandatory-attributes" text="En savoir plus dans la documentation."
 
 Un attribut obligatoire est une case à cocher activée par l’utilisateur qui garantit que tous les enregistrements de profil contiennent l’attribut sélectionné. Par exemple : tous les profils exportés contiennent une adresse e-mail.
 
@@ -237,7 +235,6 @@ Il est recommandé que l’un des attributs soit un [identifiant unique](../../d
 >id="platform_destinations_activate_deduplicationkey"
 >title="À propos des clés de déduplication"
 >abstract="Éliminez plusieurs occurrences du même profil dans les fichiers dʼexportation en sélectionnant une clé de déduplication. Sélectionnez un seul espace de noms ou jusquʼà deux attributs de schéma XDM comme clé de déduplication. Si vous ne sélectionnez pas de clé de déduplication, il se peut que des entrées de profil soient dupliquées dans les fichiers d’exportation."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=fr#deduplication-keys" text="En savoir plus dans la documentation."
 
 Une clé de déduplication est une clé primaire définie par l’utilisateur qui détermine l’identité par laquelle les utilisateurs souhaitent dédupliquer leurs profils.
 
