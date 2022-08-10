@@ -2,10 +2,10 @@
 title: Parcourir les ordres de travail relatifs au nettoyage de données
 description: Découvrez comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: e57b5ec6c6234d4d1fe22f8d03c70d6bd9c02f0f
+source-git-commit: 525e2520bb6140b00cfb7e68579eb2d0288ad9b1
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 78%
+source-wordcount: '485'
+ht-degree: 77%
 
 ---
 
@@ -41,7 +41,7 @@ Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](../
 
 | Filtre | Description |
 | --- | --- |
-| [!UICONTROL Statut] | Filtre basé sur le statut actuel de l’ordre de travail:<ul><li>**[!UICONTROL Terminé]**: La tâche est terminée.</li><li>**[!UICONTROL En attente]**: La tâche a été créée mais n’a pas encore été exécutée. A [requête TTL (dataset time-to-live)](./ttl.md) suppose que cet état est antérieur à la date de suppression planifiée. Une fois la date de suppression atteinte, l’état est mis à jour vers [!UICONTROL Exécution] sauf si la tâche est annulée au préalable.</li><li>**[!UICONTROL Exécution]**: La tâche a commencé et est en cours de traitement.</li><li>**[!UICONTROL Annulé]**: La tâche a été annulée dans le cadre d’une demande d’utilisateur manuelle.</li></ul> |
+| [!UICONTROL Statut] | Filtre basé sur le statut actuel de l’ordre de travail:<ul><li>**[!UICONTROL Terminé]**: La tâche est terminée.</li><li>**[!UICONTROL En attente]**: La tâche a été créée mais n’a pas encore été exécutée. A [requête TTL (dataset time-to-live)](./ttl.md) suppose que cet état est antérieur à la date de suppression planifiée. Une fois la date de suppression atteinte, l’état est mis à jour vers [!UICONTROL Exécution] sauf si la tâche est annulée au préalable.</li><li>**[!UICONTROL Exécution]**: La demande TTL a commencé et est en cours de traitement.</li><li>**[!UICONTROL Annulé]**: La tâche a été annulée dans le cadre d’une demande d’utilisateur manuelle.</li></ul> |
 | [!UICONTROL Date de création] | Filtre basé sur le moment où l’ordre de travail a été passé. |
 | [!UICONTROL Date d’expiration] | Filtrez les requêtes TTL en fonction de la date de suppression planifiée pour le jeu de données en question. |
 | [!UICONTROL Date de mise à jour] | Filtrez les requêtes TTL en fonction de la date de la dernière mise à jour de l’ordre de travail. Les créations et les expirations de TTL sont comptées comme des mises à jour. |
