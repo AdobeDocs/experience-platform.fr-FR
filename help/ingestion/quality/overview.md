@@ -5,16 +5,16 @@ title: Qualité des données
 topic-legacy: overview
 description: Le document suivant résume les comportements de vérification et de validation pris en charge pour l’ingestion par lots et par flux dans Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7857b9a82dc1b5e12c9f8d757f6967b926124ec4
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 76%
+source-wordcount: '425'
+ht-degree: 57%
 
 ---
 
-# Qualité des données dans Adobe Experience Platform
+# Qualité des données dans Adobe Experience Platform
 
-Adobe Experience Platform fournit des garanties bien définies d’exhaustivité, d’exactitude et de cohérence pour toute donnée transférée par ingestion par lots ou par flux. Le document suivant présente un résumé des contrôles et des comportements de validation pris en charge pour l’ingestion par lots et par flux dans [!DNL Experience Platform].
+Adobe Experience Platform fournit des garanties bien définies d’exhaustivité, d’exactitude et de cohérence pour toute donnée transférée par ingestion par lots ou par flux. Le document suivant présente un résumé des contrôles et des comportements de validation pris en charge pour l’ingestion par lots et par flux dans [!DNL Experience Platform].
 
 ## Vérifications prises en charge
 
@@ -29,7 +29,7 @@ Adobe Experience Platform fournit des garanties bien définies d’exhaustivité
 
 ## Comportements de validation pris en charge
 
-L’ingestion par lots et par flux empêche les données en échec de se rendre en aval en déplaçant les données incorrectes pour la récupération et l’analyse dans [!DNL Data Lake]. L’ingestion de données fournit les validations suivantes pour l’ingestion par lots et par flux.
+L’ingestion par lots et par flux empêche les données en échec de se rendre en aval en déplaçant les données incorrectes pour récupération et analyse dans [!DNL Data Lake]. L’ingestion de données fournit les validations suivantes pour l’ingestion par lots et par flux.
 
 ### Ingestion par lots
 
@@ -55,4 +55,15 @@ Les validations suivantes sont effectuées pour l’ingestion par flux :
 | Jeu de données | Vérifie que le jeu de données est spécifié, activé et n’a pas été supprimé. |
 | En-tête | Vérifie que l’en-tête est spécifié et valide. |
 
-Vous trouverez plus d’informations sur la façon dont [!DNL Platform] surveille et valide les données dans la [documentation sur la surveillance des flux de données](./monitor-data-ingestion.md).
+Informations supplémentaires sur la manière dont [!DNL Platform] Les analyses et les validations des données sont disponibles dans la variable [documentation sur la surveillance des flux de données](./monitor-data-ingestion.md).
+
+## Validation de la valeur d’identité
+
+Le tableau suivant décrit les règles existantes que vous devez suivre pour garantir une validation réussie de votre valeur d’identité.
+
+| Espace de noms | Règle de validation | Comportement du système en cas de violation de la règle |
+| --- | --- | --- |
+| ECID | <ul><li>La valeur d’identité d’un ECID doit comporter exactement 38 caractères.</li><li>La valeur d’identité d’un ECID ne doit être composée que de nombres.</li></ul> | <ul><li>Si la valeur d’identité d’ECID ne comporte pas exactement 38 caractères, l’enregistrement est ignoré.</li><li>Si la valeur d’identité d’ECID contient des caractères non numériques, l’enregistrement est ignoré.</li></ul> |
+| Non ECID | La valeur d’identité ne peut pas dépasser 1 024 caractères. | Si la valeur d’identité dépasse 1 024 caractères, l’enregistrement est ignoré. |
+
+Pour plus d’informations sur [!DNL Identity Service] barrières de sécurité, voir [[!DNL Identity Service] Présentation des barrières de sécurité](../../identity-service/guardrails.md).
