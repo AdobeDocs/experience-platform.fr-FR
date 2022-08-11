@@ -2,7 +2,7 @@
 title: Notes de mise à jour de l’extension des modules externes courants Analytics
 description: Dernières notes de mise à jour pour l’extension des balises de modules externes d’analyses courants dans Adobe Experience Platform.
 exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
-source-git-commit: 1be361f9cd70b0424542af64a994da0b21d6b5dc
+source-git-commit: c0aa12e9d50e3d1a05a8692a153242f2e6c044ca
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 97%
@@ -17,7 +17,7 @@ ht-degree: 97%
 
 #### Fonctionnalités
 
-Les modules qui définissent des cookies utilisent désormais l’indicateur sécurisé
+* Les modules qui définissent des cookies utilisent désormais l’indicateur sécurisé
 
 ## mercredi 23 juin 2021
 
