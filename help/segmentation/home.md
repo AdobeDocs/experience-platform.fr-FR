@@ -5,10 +5,10 @@ title: Présentation de Segmentation Service
 topic-legacy: overview
 description: Découvrez Adobe Experience Platform Segmentation Service et le rôle qu’il occupe dans l’écosystème de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 3130d9731a53c01fb7bc15265e044191ceae47f6
-workflow-type: ht
-source-wordcount: '1507'
-ht-degree: 100%
+source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
+workflow-type: tm+mt
+source-wordcount: '1630'
+ht-degree: 94%
 
 ---
 
@@ -46,25 +46,47 @@ Pour plus d’informations sur la création de définitions de segment à l’ai
 >
 >En outre, si la durée de vie (TTL) est activée sur le jeu de données, cela peut affecter l’adhésion du segment créé. Pour plus d’informations sur la durée de vie et son impact sur la segmentation, consultez le [guide Profile Service TTL](../profile/apply-ttl.md).
 
-## Évaluation de segments
+## Évaluation de segments {#evaluate-segments}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation"
+>title="Méthodes d’évaluation"
+>abstract="Platform prend actuellement en charge trois méthodes d’évaluation des segments : segmentation par flux, segmentation par lots et segmentation Edge."
 
 Platform prend actuellement en charge trois méthodes d’évaluation des segments : segmentation par flux, segmentation par lots et segmentation Edge.
 
-### Segmentation par flux
+### Segmentation par flux {#streaming}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_streaming"
+>title="Évaluation par flux"
+>abstract="Platform prend actuellement en charge trois méthodes d’évaluation des segments : segmentation par flux, segmentation par lots et segmentation Edge."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Évaluation des événements en temps quasi réel à l’aide de la segmentation par flux"
 
 La segmentation par flux est un processus continu de sélection des données qui met à jour vos segments en réponse à l’activité des utilisateurs. Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données d’entrée [!DNL Real-time Customer Profile]. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui vous permet de vous assurer que votre ciblage d’audience reste pertinent.
 
 Pour plus d’informations sur la segmentation par flux, consultez la [documentation sur la segmentation par flux](./api/streaming-segmentation.md).
 
-### Segmentation par lots
+### Segmentation par lots {#batch}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_batch"
+>title="Évaluation par lots"
+>abstract="Au lieu d’un processus en continu de sélection de données, la segmentation par lots déplace toutes les données de profil à la fois dans les définitions de segment afin de produire des audiences correspondantes. Une fois créé, le segment est enregistré et stocké afin que vous puissiez l’exporter pour l’utiliser."
 
 Au lieu d’un processus en continu de sélection de données, la segmentation par lots déplace toutes les données de profil à la fois dans les définitions de segment afin de produire des audiences correspondantes. Une fois créé, ce segment est enregistré et stocké afin que vous puissiez l’exporter pour l’utiliser.
 
 Les segments par lot sont automatiquement évalués toutes les 24 heures. Si vous souhaitez évaluer un segment par lot à la demande, vous pouvez utiliser une tâche de segmentation. Pour en savoir plus sur les tâches de segmentation, consultez la [documentation sur les tâches de segmentation](./api/segment-jobs.md).
 
-### Segmentation Edge
+### Segmentation Edge {#edge}
 
-La segmentation Edge permet d’évaluer les segments dans Platform instantanément sur Experience Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_edge"
+>title="Évaluation Edge"
+>abstract="La segmentation Edge permet d’évaluer instantanément les segments dans Platform sur Experience Edge, en activant les cas d’utilisation de la personnalisation de la même page et de la page suivante."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Guide de l’interface utilisateur de segmentation Edge"
+
+La segmentation Edge permet d’évaluer instantanément les segments dans Platform. [sur Experience Edge](../edge/home.md), activation des cas d’utilisation de la personnalisation de la même page et de la page suivante.
 
 Pour en savoir plus sur la segmentation Edge, consultez la [documentation API](./api/edge-segmentation.md) ou la [documentation de l’interface utilisateur](./ui/edge-segmentation.md).
 
