@@ -3,9 +3,9 @@ title: Conditions préalables requises pour l’utilisation du SDK Web de Adobe 
 description: Découvrez les conditions préalables requises pour utiliser le SDK Web de Adobe Experience Platform.
 keywords: Domaine propriétaire;CNAME;schéma;créer un schéma;launch;extension du sdk web aep;extension;ID de configuration;outil de configuration;élément de données;créer un élément de données;objet XDM;sendEvent;envoyer un événement;
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: 1ff52944be6e9475f57c62793b0e4c671ff8786b
+source-git-commit: 853c0a662592939c280c7e7ede8235d1b6155b2f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -25,14 +25,4 @@ Pour utiliser le SDK Web de Adobe Experience Platform, vous devez d’abord :
 
 ## Gestion des autorisations pour le SDK Web Adobe Experience Platform
 
-Pour commencer à utiliser Adobe Experience Platform, vous devez disposer des droits [permissions](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=fr) pour créer vos schémas et gérer les identités. Les autorisations minimales requises sont disponibles dans la catégorie Modélisation des données et identités .
-
-![](../images/AEP-permission-categories.png)
-
-Dans la catégorie Modélisation des données , accordez aux utilisateurs les autorisations Manage Schemas (Gérer les schémas) et View Schemas (Afficher les schémas).
-
-![](../images/data-modeling-permissions.png)
-
-Dans la catégorie Identity Management , accordez aux utilisateurs les autorisations Manage Identity Namespaces (Gérer les espaces de noms d’identité) et View Identity Namespaces (Afficher les espaces de noms d’identité).
-
-![](../images/identity-management-permissions.png)
+Pour commencer à utiliser le SDK Web de Adobe Experience Platform, vous devez configurer les autorisations appropriées. Pour en savoir plus sur la configuration de votre configuration, consultez notre documentation sur [gestion des autorisations de collecte de données](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
