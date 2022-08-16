@@ -5,9 +5,9 @@ title: 'Évaluation des événements en temps quasi réel avec la segmentation p
 topic-legacy: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation par flux avec l’API Adobe Experience Platform Segmentation Service.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 81659da18d4fa8b733200998c27c25ec356ca264
+source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1873'
 ht-degree: 33%
 
 ---
@@ -418,7 +418,7 @@ Pour savoir comment effectuer des actions similaires et utiliser des segments à
 
 La section suivante répertorie les questions fréquentes sur la segmentation par flux :
 
-### La segmentation par flux est-elle &quot;non-qualification&quot; également effectuée en temps réel ?
+### La segmentation par flux &quot;non-qualification&quot; se produit-elle également en temps réel ?
 
 Pour la plupart des instances, l’inqualification de la segmentation par flux se produit en temps réel. Toutefois, les segments en flux continu qui utilisent des segments le font **not** non admissible en temps réel, mais non admissible après 24 heures.
 
@@ -429,10 +429,6 @@ La segmentation par flux fonctionne sur toutes les données ingérées à l’ai
 ### Comment les segments sont-ils définis comme segmentation par lots ou par flux ?
 
 Un segment est défini comme une segmentation par lot ou par flux basée sur une combinaison de type de requête et de durée d’historique des événements. Vous trouverez une liste des segments qui seront évalués en tant que segment en continu dans la variable [section types de requête de segmentation par flux](#query-types).
-
-### Un utilisateur peut-il définir un segment sous la forme d’une segmentation par lots ou par flux ?
-
-Actuellement, l’utilisateur ne peut pas définir si un segment est évalué à l’aide de l’ingestion par lots ou par flux, car le système détermine automatiquement la méthode avec laquelle le segment sera évalué.
 
 ### Pourquoi le nombre de segments &quot;total qualifié&quot; continue-t-il à augmenter alors que le nombre sous &quot;X derniers jours&quot; reste à zéro dans la section de détails du segment ?
 
