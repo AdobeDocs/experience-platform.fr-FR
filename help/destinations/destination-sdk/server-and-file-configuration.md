@@ -2,9 +2,9 @@
 description: Les spécifications de configuration du serveur et des fichiers pour les destinations basées sur des fichiers peuvent être configurées dans Adobe Experience Platform Destination SDK via le point dʼentrée « /destination-servers ».
 title: (Version Beta) Options de configuration pour les spécifications de serveur de destination basées sur des fichiers
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 7a72c190d28d63c7bcd1bf12d8a52efc4589b848
+source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '899'
 ht-degree: 90%
 
 ---
@@ -284,10 +284,6 @@ Cette section décrit les paramètres de formatage de fichier pour les fichiers 
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         },
         "maxFileRowCount":5000000
@@ -310,7 +306,6 @@ Cette section décrit les paramètres de formatage de fichier pour les fichiers 
 | `csvOptions.timestampFormat.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit la chaîne qui indique un format d’horodatage. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit un caractère unique utilisé pour l’échappement du caractère de guillemet. | `\` lorsque les caractères d’échappement et de guillemet sont différents. `\0` lorsque les caractères d’échappement et de guillemet sont identiques. |
 | `csvOptions.emptyValue.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit la représentation sous forme de chaîne d’une valeur vide. | `""` |
-| `csvOptions.lineSep.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit le séparateur de ligne à utiliser pour l’écriture. Longueur maximale : 1 caractère. | `\n` |
 | `maxFileRowCount` | Facultatif | Nombre maximal de lignes que le fichier exporté peut contenir. Configurez ce paramètre en fonction des exigences de taille de fichier de la plateforme de destination. | S.O. |
 
 {style=&quot;table-layout:auto&quot;}

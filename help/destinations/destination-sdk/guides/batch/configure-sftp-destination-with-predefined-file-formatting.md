@@ -1,7 +1,8 @@
 ---
 description: Découvrez comment utiliser la Destination SDK pour configurer une destination SFTP avec des options de formatage de fichier prédéfinies et une configuration de nom de fichier personnalisée.
 title: (Version bêta) Configurez une destination SFTP avec des options de formatage de fichier prédéfinies et une configuration de nom de fichier personnalisée.
-source-git-commit: 7198d8529f64e5a724cbd9c95714b66aa62a29d2
+exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
+source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
 workflow-type: tm+mt
 source-wordcount: '766'
 ht-degree: 10%
@@ -118,10 +119,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }
