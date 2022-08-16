@@ -1,45 +1,52 @@
 ---
-title: Notes de mise à jour de l’extension Adobe Target
-description: Dernières notes de mise à jour pour lʼextension de balise Adobe Target dans Adobe Experience Platform.
+title: Notes de mise à jour de l’extension Adobe Target
+description: Dernières notes de mise à jour pour lʼextension de balise Adobe Target dans Adobe Experience Platform.
 exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 130db749ef84840532588a8a27e40cb277c13066
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 100%
+source-wordcount: '520'
+ht-degree: 98%
 
 ---
 
-# Notes de mise à jour d’Adobe Target
+# Notes de mise à jour d’Adobe Target
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+
+## 16 septembre 2021
+
+### Extension Adobe Target 0.11.4
+
+* Mise à jour vers at.js v1.8.3
+* Ajout `SameSite=None` et `Secure` attributs lors de la définition des cookies
 
 ## 24 juillet 2020
 
-### Extension Adobe Target 0.11.3
+### Extension Adobe Target 0.11.3
 
 * Correction d’un bug en cas d’échec de l’extension si un script ou un code ajoute la propriété `default` à la `window` ou au `document`.
 
 ## 15 juin 2020
 
-### Extension Adobe Target 0.11.2
+### Extension Adobe Target 0.11.2
 
 * Correction d’un problème lors de l’utilisation du remplacement CNAME et Edge, en raison duquel at.js 1.x pouvait créer un domaine de serveur incorrect, entraînant ainsi l’échec de la demande de Target.
 
 ## 25 mars 2020
 
-### Extension Adobe Target 0.11.1
+### Extension Adobe Target 0.11.1
 
 * Mise à jour d’at.js vers la version 1.8.1.
 * Correction d’un problème qui entraînait un mauvais traitement des paramètres et des paramètres de chargement des pages.
 
 ## 10 octobre 2019
 
-### Extension Adobe Target 0.11.0
+### Extension Adobe Target 0.11.0
 
 * Mise à jour d’at.js vers la version 1.8.
-* Amélioration des performances pour les intégrations entre la bibliothèque d’Experience Cloud ID (ECID) version 4.4 et at.js version 1.8.
+* Amélioration des performances pour les intégrations entre la bibliothèque d’Experience Cloud ID (ECID) version 4.4 et at.js version 1.8.
 * Auparavant, la bibliothèque ECID effectuait deux appels de blocage avant qu’at.js puisse récupérer des expériences. Cela a été réduit à un seul appel, ce qui améliore considérablement les performances.
 
 >[!NOTE]
@@ -47,9 +54,9 @@ ht-degree: 100%
 
 ## 31 juillet 2019
 
-### Extension Adobe Target 0.10.1
+### Extension Adobe Target 0.10.1
 
-* Correctif pour les paramètres qui gèrent lʼextension de balise pour Adobe Target
+* Correctif pour les paramètres qui gèrent l’extension de balise pour Adobe Target
 
 ## 4 mai 2019
 
@@ -59,19 +66,19 @@ ht-degree: 100%
 
 ## 14 mars 2019
 
-### Extension Adobe Target 0.9.3
+### Extension Adobe Target 0.9.3
 
 * Version d’extension mise à jour pour utiliser at.js 1.7.1.
 
 ## 20 février 2019
 
-### Extension Adobe Target 0.9.2
+### Extension Adobe Target 0.9.2
 
 * Correction des conditions de concurrence entre les extensions Target et Analytics.
 
 ## 12 février 2019
 
-### Extension Adobe Target 0.9.1
+### Extension Adobe Target 0.9.1
 
 #### **Fonctionnalités**
 
@@ -79,52 +86,52 @@ ht-degree: 100%
 
 ## 23 janvier 2019
 
-### Extension Adobe Target 0.8.4
+### Extension Adobe Target 0.8.4
 
 * Mise à jour du fichier at.js vers la version 1.6.4.
 * Migration de l’interface utilisateur de l’extension vers Adobe Spectrum.
 
 ## 15 novembre 2018
 
-### Extension Adobe Target 0.8.2
+### Extension Adobe Target 0.8.2
 
 * Mise à jour du fichier at.js vers la version 1.6.3.
 
 ## 24 octobre 2018
 
-### Extension Adobe Target 0.8.1
+### Extension Adobe Target 0.8.1
 
 * Mise à jour du fichier at.js vers la version 1.6.2.
 
 ## 23 août 2018
 
-### Extension Adobe Target 0.8.0
+### Extension Adobe Target 0.8.0
 
 * Mise à jour du fichier at.js vers la version 1.6.0.
 
 ## 10 août 2018
 
-### Extension Adobe Target 0.7.2
+### Extension Adobe Target 0.7.2
 
 * Modifications mineures
 * Mise à jour de la propriété `exchangeUrl` dans le fichier `extension.json`.
 
 ## 1er août 2018
 
-### Extension Adobe Target 0.7.1
+### Extension Adobe Target 0.7.1
 
 * Corrections mineures.
 
 ## 18 juin 2018
 
-### Extension Adobe Target 0.7.0
+### Extension Adobe Target 0.7.0
 
 * Mise à jour du fichier at.js vers la version 1.5.0.
-* Correction d’un problème en raison duquel Media Optimizer générait une erreur de référence NULL dans IE 11.
+* Correction d’un problème en raison duquel Adobe Media Optimizer générait une erreur de référence NULL dans IE 11.
 
 ## 15 juin 2018
 
-### Extension Adobe Target 0.6.0
+### Extension Adobe Target 0.6.0
 
 #### **Fonctionnalités**
 
@@ -132,7 +139,7 @@ ht-degree: 100%
 
 ## 22 février 2018
 
-### Extension Adobe Target 0.4.1
+### Extension Adobe Target 0.4.1
 
 #### **Fonctionnalités**
 
@@ -145,7 +152,7 @@ ht-degree: 100%
 
 ## 8 février 2018
 
-### Extension Adobe Target 0.4.0
+### Extension Adobe Target 0.4.0
 
 #### **Fonctionnalités**
 
