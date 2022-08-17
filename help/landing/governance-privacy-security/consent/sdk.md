@@ -3,10 +3,10 @@ title: Traiter les données de consentement du client à l’aide du SDK Web de 
 topic-legacy: getting started
 description: Découvrez comment intégrer le SDK Web de Adobe Experience Platform pour traiter les données de consentement des clients dans Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 79bc41c713425e14bb3c12646b9b71b2c630618b
 workflow-type: tm+mt
-source-wordcount: '1330'
-ht-degree: 1%
+source-wordcount: '1375'
+ht-degree: 2%
 
 ---
 
@@ -45,7 +45,7 @@ Après avoir créé un nouveau flux de données ou sélectionné un flux existan
 
 | Champ de flux de données | Valeur |
 | --- | --- |
-| [!UICONTROL Environnement de test] | Nom de la plateforme [sandbox](../../../sandboxes/home.md) qui contient la connexion en continu et les jeux de données requis pour configurer le flux de données. |
+| [!UICONTROL Sandbox] | Nom de la plateforme [sandbox](../../../sandboxes/home.md) qui contient la connexion en continu et les jeux de données requis pour configurer le flux de données. |
 | [!UICONTROL Inlet de diffusion en continu] | Une connexion en continu valide pour l’Experience Platform. Voir le tutoriel sur [création d’une connexion en continu](../../../ingestion/tutorials/create-streaming-connection-ui.md) si vous n’avez pas d’inlet de diffusion en continu existant. |
 | [!UICONTROL Jeu de données d’événement] | Un [!DNL XDM ExperienceEvent] jeu de données que vous prévoyez d’envoyer des données d’événement à à l’aide du SDK. Bien que vous soyez tenu de fournir un jeu de données d’événement pour créer un flux de données Platform, notez que les données de consentement envoyées par le biais d’événements ne sont pas honorées dans les workflows d’application en aval. |
 | [!UICONTROL Jeu de données de profil] | Le [!DNL Profile]Jeu de données activé avec les champs de consentement du client que vous avez créés [previous](#prerequisites). |
@@ -98,14 +98,19 @@ Une fois que vous avez terminé de configurer l’extension, elle peut être int
 
 Une fois que vous avez intégré l’extension SDK à votre site web, vous pouvez commencer à utiliser le SDK Web Platform. `setConsent` pour envoyer des données de consentement à Platform.
 
->[!IMPORTANT]
->
->Le `setConsent` ne met à jour que les données directement dans la banque de profils et n’envoie aucune donnée vers le lac de données.
+Le `setConsent` exécute deux actions :
+
+1. Met à jour les attributs de profil de l’utilisateur directement dans la banque de profils. Cela n’envoie aucune donnée au lac de données.
+1. Crée une [Événement d’expérience](../../../xdm/classes/experienceevent.md) qui enregistre un compte horodaté de l’événement de modification du consentement. Ces données sont envoyées directement au lac de données et peuvent être utilisées pour suivre les changements de préférences de consentement au fil du temps.
+
+### Quand appeler `setConsent`
 
 Il existe deux scénarios où `setConsent` doit être appelé sur votre site :
 
 1. Lorsque le consentement est chargé sur la page (en d’autres termes, à chaque chargement de page)
 1. Dans le cadre d’un crochet de CMP ou d’un écouteur d’événement qui détecte les modifications apportées aux paramètres de consentement
+
+### `setConsent` syntaxe
 
 >[!NOTE]
 >
