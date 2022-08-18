@@ -2,10 +2,10 @@
 title: Parcourir les ordres de travail relatifs au nettoyage de données
 description: Découvrez comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 525e2520bb6140b00cfb7e68579eb2d0288ad9b1
+source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 77%
+source-wordcount: '481'
+ht-degree: 56%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 77%
 >
 >Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Healthcare Shield.
 
-Lorsqu’une demande de nettoyage de données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. Un ordre de travail représente un processus spécifique d’nettoyage de données, tel qu’une durée de vie planifiée (TTL) d’un jeu de données, qui comprend son statut actuel et d’autres détails connexes.
+Lorsqu’une demande de nettoyage de données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. Un ordre de travail représente un processus d’hygiène des données spécifique, tel qu’une expiration planifiée du jeu de données, qui inclut son état actuel et d’autres détails connexes.
 
 Ce guide explique comment afficher et gérer les ordres de travail existants dans l’interface utilisateur d’Adobe Experience Platform.
 
@@ -31,7 +31,7 @@ Lorsque vous accédez pour la première fois à l’espace de travail **[!UICONT
 
 ![Image illustrant l’espace de travail [!UICONTROL Nettoyage de données] dans l’interface utilisateur de Platform](../images/ui/browse/work-order-list.png)
 
-<!-- The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer deletion tasks, and **[!UICONTROL Dataset]** to view a list of time-to-live (TTL) schedules for datasets.
+<!-- The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer deletion tasks, and **[!UICONTROL Dataset]** to view a list of scheduled dataset expirations.
 
 ![Image showing the [!UICONTROL Dataset] tab](../images/ui/browse/dataset-tab.png) -->
 
@@ -41,10 +41,10 @@ Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](../
 
 | Filtre | Description |
 | --- | --- |
-| [!UICONTROL Statut] | Filtre basé sur le statut actuel de l’ordre de travail:<ul><li>**[!UICONTROL Terminé]**: La tâche est terminée.</li><li>**[!UICONTROL En attente]**: La tâche a été créée mais n’a pas encore été exécutée. A [requête TTL (dataset time-to-live)](./ttl.md) suppose que cet état est antérieur à la date de suppression planifiée. Une fois la date de suppression atteinte, l’état est mis à jour vers [!UICONTROL Exécution] sauf si la tâche est annulée au préalable.</li><li>**[!UICONTROL Exécution]**: La demande TTL a commencé et est en cours de traitement.</li><li>**[!UICONTROL Annulé]**: La tâche a été annulée dans le cadre d’une demande d’utilisateur manuelle.</li></ul> |
+| [!UICONTROL Statut] | Filtre basé sur le statut actuel de l’ordre de travail:<ul><li>**[!UICONTROL Terminé]**: La tâche est terminée.</li><li>**[!UICONTROL En attente]**: La tâche a été créée mais n’a pas encore été exécutée. A [demande d’expiration du jeu de données](./dataset-expiration.md) suppose que cet état est antérieur à la date de suppression planifiée. Une fois la date de suppression atteinte, l’état est mis à jour vers [!UICONTROL Exécution] sauf si la tâche est annulée au préalable.</li><li>**[!UICONTROL Exécution]**: La demande d’expiration du jeu de données a commencé et est en cours de traitement.</li><li>**[!UICONTROL Annulé]**: La tâche a été annulée dans le cadre d’une demande d’utilisateur manuelle.</li></ul> |
 | [!UICONTROL Date de création] | Filtre basé sur le moment où l’ordre de travail a été passé. |
-| [!UICONTROL Date d’expiration] | Filtrez les requêtes TTL en fonction de la date de suppression planifiée pour le jeu de données en question. |
-| [!UICONTROL Date de mise à jour] | Filtrez les requêtes TTL en fonction de la date de la dernière mise à jour de l’ordre de travail. Les créations et les expirations de TTL sont comptées comme des mises à jour. |
+| [!UICONTROL Date d’expiration] | Filtrez les demandes d’expiration de jeu de données en fonction de la date de suppression planifiée du jeu de données en question. |
+| [!UICONTROL Date de mise à jour] | Filtrez les demandes d’expiration de jeu de données en fonction de la date de la dernière mise à jour de l’ordre de travail. Les créations et expirations sont comptabilisées comme des mises à jour. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -68,12 +68,12 @@ The details of a consumer delete request are read-only, displaying its basic att
 
 ![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
 
-### Dataset TTL details -->
+### Dataset expiration details -->
 
-La page de détails d’une TTL de jeu de données fournit des informations sur les attributs de base, notamment la date d’expiration prévue pour les jours restants avant la suppression. Dans le rail de droite, vous pouvez utiliser des commandes pour modifier ou annuler la TTL.
+La page de détails de l’expiration d’un jeu de données fournit des informations sur ses attributs de base, y compris la date d’expiration planifiée les jours restants avant la suppression. Dans le rail de droite, vous pouvez utiliser des commandes pour modifier ou annuler l’expiration.
 
-![Image illustrant la page de détails d’un ordre de travail de TTL de jeu de données](../images/ui/browse/ttl-details.png)
+![Image montrant la page de détails d’un ordre de travail d’expiration de jeu de données](../images/ui/browse/ttl-details.png)
 
 ## Étapes suivantes
 
-Ce guide explique comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur de Platform. Pour plus d’informations sur la création de vos propres ordres de travail, consultez le guide sur la [planification de la durée de vie (TTL) d’un jeu de données](./ttl.md).
+Ce guide explique comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur de Platform. Pour plus d’informations sur la création de vos propres ordres de travail, consultez le guide sur [planification de l’expiration d’un jeu de données](./dataset-expiration.md).

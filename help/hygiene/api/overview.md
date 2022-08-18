@@ -2,10 +2,10 @@
 title: Guide de l’API Data Hygiene
 description: Découvrez comment corriger ou supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
-workflow-type: ht
-source-wordcount: '307'
-ht-degree: 100%
+source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 75%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 >
 >Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Healthcare Shield.
 
-L’API Data Hygiene vous permet de corriger ou de supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform, ainsi que de planifier des protocoles de durée de vie (TTL) pour les jeux de données. Ce guide décrit les étapes préalables requises pour utiliser l’API et contient des liens vers une documentation plus spécifique aux points d’entrée.
+L’API Data Hygiene vous permet de corriger ou de supprimer par programmation les données personnelles stockées de vos clients dans Adobe Experience Platform, ainsi que de planifier des dates d’expiration pour les jeux de données. Ce guide décrit les étapes préalables requises pour utiliser l’API et contient des liens vers une documentation plus spécifique aux points d’entrée.
 
 ## Prise en main
 
@@ -43,9 +43,9 @@ Ce document fournit un exemple d’appel API pour illustrer la manière dont vou
 
 A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
-## Durée de vie (TTL) des jeux de données
+## Expiration des jeux de données
 
-Une TTL de jeu de données correspond à une action « supprimer un jeu de données » différée. En créant une TTL, vous spécifiez une heure ultérieure à laquelle ce jeu de données doit être supprimé. Consultez le [Guide de point d’entrée de TTL de jeu de données](./ttl.md) pour plus d’informations sur la planification des TTL de jeux de données dans l’API.
+Une expiration de jeu de données est une action &quot;supprimer un jeu de données&quot; différée dans le temps. En créant une expiration de jeu de données, vous spécifiez une heure ultérieure à laquelle ce jeu de données doit être supprimé. Voir [guide de point d’expiration du jeu de données](./dataset-expiration.md) pour plus d’informations sur la planification de l’expiration des jeux de données dans l’API.
 
 ## Étapes suivantes
 

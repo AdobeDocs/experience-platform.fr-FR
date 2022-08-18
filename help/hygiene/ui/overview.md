@@ -2,10 +2,10 @@
 title: Guide de l’interface utilisateur de nettoyage de données
 description: Découvrez comment gérer les tâches de nettoyage de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
-workflow-type: ht
-source-wordcount: '158'
-ht-degree: 100%
+source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+workflow-type: tm+mt
+source-wordcount: '151'
+ht-degree: 79%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 >
 >Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Healthcare Shield.
 
-L’espace de travail **[!UICONTROL Nettoyage de données]** de l’interface utilisateur d’Adobe Experience Platform vous permet de créer et de surveiller diverses tâches de nettoyage de données, notamment la suppression des identités des clients et la planification des protocoles de durée de vie (TTL) des jeux de données.
+Le **[!UICONTROL Hygiène des données]** workspace de l’interface utilisateur de Adobe Experience Platform vous permet de créer et de surveiller diverses tâches d’hygiène des données, notamment la suppression des identités des consommateurs et la planification de l’expiration des jeux de données.
 
 Ce guide explique comment gérer les tâches de nettoyage de données dans l’interface utilisateur de Platform. Pour plus d’informations sur l’exécution de ces tâches à l’aide d’appels API, consultez le [Guide de l’API Data Hygiene](../api/overview.md).
 
@@ -26,4 +26,4 @@ Pour accéder à l’espace de travail, sélectionnez **[!UICONTROL Nettoyage de
 Ensuite, vous pouvez parcourir les ordres de travail existants et configurer de nouvelles opérations d’nettoyage de données. Pour en savoir plus, consultez les sections suivantes de ce guide :
 
 * [Parcourir les ordres de travail existants](./browse.md)
-* [Gérer la durée de vie (TTL) des jeux de données](./ttl.md)
+* [Gestion des expirations de jeux de données](./dataset-expiration.md)
