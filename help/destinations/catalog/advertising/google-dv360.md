@@ -3,10 +3,10 @@ keywords: DoubleClick Bid Manager;gestionnaire d’offres DoubleClick;DoubleClic
 title: Connexion Google Display & Video 360
 description: Display & Video 360, anciennement appelé DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et des campagnes numériques ciblées dans des sources d’inventaire Display, Video et Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 37%
+source-wordcount: '942'
+ht-degree: 36%
 
 ---
 
@@ -56,7 +56,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!NOTE]
 >
->Placer sur la liste autorisée est obligatoire avant de configurer votre premier [!DNL Google Display & Video 360] destination dans Platform. Assurez-vous que le processus de liste autorisée décrit ci-dessous a été terminé par Google avant de créer une destination.
+>Placer sur la liste autorisée est obligatoire avant de configurer votre premier [!DNL Google Display & Video 360] destination dans Platform. Assurez-vous que le processus de liste autorisée décrit ci-dessous a été terminé par [!DNL Google] avant de créer une destination.
+>L’exception à cette règle est pour [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr) clients. Si vous avez déjà créé une connexion à cette destination Google en Audience Manager, il n’est pas nécessaire de passer de nouveau le processus de liste autorisée et vous pouvez passer aux étapes suivantes.
 
 Avant de créer la variable [!DNL Google Display & Video 360] dans Platform, vous devez contacter Google pour demander que l’Adobe soit ajouté à la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contactez Google et fournissez les informations suivantes :
 
