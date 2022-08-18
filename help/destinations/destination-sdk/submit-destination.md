@@ -2,7 +2,7 @@
 description: Cette page fournit toutes les informations dont vous avez besoin pour soumettre une révision d’une destination productisée créée à l’aide de Destination SDK.
 title: Envoyer pour révision une destination productisée créée en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
+source-git-commit: 50f205a5ddd9ec264d7390911fef45dc595ca6a1
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 75%
@@ -15,7 +15,14 @@ ht-degree: 75%
 
 >[!IMPORTANT]
 >
->Le processus documenté ici n’est nécessaire que pour les partenaires qui envoient des destinations productisées (publiques). Si vous créez une destination privée pour votre propre usage, vous n’avez pas besoin de produire et de partager ces matériaux avec Adobe.
+>* Le processus documenté ici n’est nécessaire que pour les partenaires qui envoient des destinations productisées (publiques). Si vous créez une destination privée pour votre propre usage, vous n’avez pas besoin de produire et de partager ces matériaux avec Adobe.
+>
+>* Le temps de réponse standard de l’Adobe pour passer en revue les demandes de publication de destination est de cinq jours ouvrables.
+>
+>* Si l’équipe d’Adobe vous demande d’apporter des mises à jour à vos configurations après votre envoi initial, vous devez envoyer une autre demande de publication de destination après avoir effectué les mises à jour.
+>
+>* Même une fois votre destination publiée dans le catalogue des Experience Platform, si vous devez apporter des mises à jour à vos configurations, vous devez envoyer une nouvelle demande de publication de destination pour que les mises à jour soient répercutées dans les configurations.
+
 
 Pour que votre destination puisse être publiée dans le [catalogue des destinations Experience Platform](/help/destinations/catalog/overview.md), vous devez fournir à Adobe certaines informations sur la destination et les tests effectués. Cela permet de sʼassurer que les utilisateurs bénéficient de la meilleure expérience possible lors de l’activation des données vers votre plateforme.
 
@@ -28,15 +35,6 @@ Cette page répertorie toutes les informations dont vous avez besoin pour envoye
 * La preuve que vous avez envoyé une demande de publication de destination pour votre destination à l’aide de l’[API de publication de destination](./destination-publish-api.md).
 * Une requête de tirage de documentation, suivant les instructions décrites dans la section [processus de documentation en libre-service](./docs-framework/documentation-instructions.md).
 * Un fichier image qui s’affichera sous forme de logo sur votre carte de destination dans le catalogue des destinations dʼExperience Platform.
-
->[!IMPORTANT]
->
->* Le temps de réponse standard de l’Adobe pour passer en revue les demandes de publication de destination est de cinq jours ouvrables.
->
->* Si l’équipe d’Adobe vous demande d’apporter des mises à jour à vos configurations après votre envoi initial, vous devez envoyer une autre demande de publication de destination après avoir effectué les mises à jour.
->
->* Même une fois votre destination publiée dans le catalogue des Experience Platform, si vous devez apporter des mises à jour à vos configurations, vous devez envoyer une nouvelle demande de publication de destination pour que les mises à jour soient répercutées dans les configurations.
-
 
 Vous trouverez des informations détaillées sur chaque élément dans les sections ci-dessous :
 

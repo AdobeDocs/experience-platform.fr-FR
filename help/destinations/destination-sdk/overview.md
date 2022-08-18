@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK est un ensemble dʼAPI de configuration permettant de configurer des modèles dʼintégration de destination, afin quʼExperience Platform puisse envoyer des données d’audience et de profil à votre point d’entrée, selon les formats de données et d’authentification choisis. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via lʼAPI pour des mises à jour supplémentaires.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
+source-git-commit: 179d5697e1b8d14f613a512f51bcea3575b7a832
 workflow-type: tm+mt
-source-wordcount: '704'
-ht-degree: 96%
+source-wordcount: '740'
+ht-degree: 88%
 
 ---
 
@@ -74,11 +74,11 @@ Pour configurer votre destination dans Experience Platform, procédez comme sui
 
 1. Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI), consultez la section ci-dessus relative à l’obtention des informations d’accès. Les clients [Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) peuvent passer cette étape.
 2. [Faites la demande dʼune sandbox Experience Platform](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) et activez l’autorisation de création de destination.
-3. [Créez votre intégration](./configure-destination-instructions.md) en suivant la documentation du produit.
-4. [Testez votre intégration](./test-destination.md) en suivant la documentation du produit.
-5. [Envoyer votre intégration](./submit-destination.md) pour la révision d’Adobe (le temps de réponse standard est de cinq jours ouvrables).
-6. Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une [intégration personnalisée](./overview.md#productized-custom-integrations), utilisez le [processus de documentation en libre-service](./docs-framework/documentation-instructions.md) pour créer une page de documentation du produit sur Experience League pour votre destination.
-7. Une fois votre intégration approuvée par Adobe, elle apparaît dans le [catalogue Experience Platform](/help/destinations/catalog/overview.md).
+3. Créez votre intégration. Suivez les instructions de la documentation du produit pour configurer [destinations de diffusion en continu](./configure-destination-instructions.md) ou [Destinations basées sur des fichiers (version bêta)](./configure-file-based-destination-instructions.md).
+4. Testez votre intégration. Suivez les instructions de la documentation du produit pour tester [destinations de diffusion en continu](./test-destination.md) ou [Destinations basées sur des fichiers (version bêta)](./file-based-destination-testing-overview.md).
+5. Si vous êtes un logiciel de développement logiciel ou si vous créez une [intégration productive](./overview.md#productized-custom-integrations), [soumettre votre intégration](./submit-destination.md) pour la révision d’Adobe (le temps de réponse standard est de cinq jours ouvrables).
+6. Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une intégration personnalisée, utilisez le [processus de documentation en libre-service](./docs-framework/documentation-instructions.md) pour créer une page de documentation du produit sur Experience League pour votre destination.
+7. Pour les intégrations productives, une fois approuvées par Adobe, votre intégration s’affichera dans la variable [Catalogue des Experience Platform](/help/destinations/catalog/overview.md).
 8. Pour mettre à jour votre intégration, vous devez effectuer la même procédure.
 
 ## Référence {#reference}
