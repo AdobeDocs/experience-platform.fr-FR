@@ -4,10 +4,10 @@ solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Guide Real-time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
-source-git-commit: 375f0c8a221540553b05aa1d5fb188a31e43f3e8
+source-git-commit: 03c2a8b427d2bd916c87000b63de16950a9e05bf
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '205'
+ht-degree: 86%
 
 ---
 
@@ -47,7 +47,10 @@ ht-degree: 0%
    * [Parcourir les profils](profile/profile-browse.md)
 * Services d’intelligence artificielle/ML de la plateforme CDP B2B en temps réel {#b2b-cdp-ai-ml}
    * [Comptes associés](b2b-ai-ml-services/related-accounts.md)
-   * [Correspondance de piste avec le compte](b2b-ai-ml-services/lead-to-account-matching.md)
+   * [Correspondance du prospect et du compte](b2b-ai-ml-services/lead-to-account-matching.md)
+   * Score prédictif de piste et de compte {#predictive-lead-and-account-scoring-intro}
+      * [Aperçu de la notation prédictive des pistes et des comptes](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+      * [Gestion de la notation prédictive des pistes et des comptes](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Schémas {#schemas}
    * [Présentation des schémas](schemas/overview.md)
    * [Schémas dans l’édition B2B de Real-time CDP](schemas/b2b.md)

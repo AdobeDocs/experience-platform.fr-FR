@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Surveillance des tâches d’enrichissement de profil
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '768'
 ht-degree: 4%
 
 ---
@@ -56,6 +56,23 @@ Les mesures suivantes sont disponibles pour les tâches d’enrichissement de pr
 | **[!UICONTROL Dernière exécution réussie]** | Indique la date et l’heure de la dernière exécution de la tâche de correspondance de compte réussie. |
 | **[!UICONTROL Statut]** | Indique l’état (réussite, échec ou traitement) de la tâche de correspondance de compte. |
 
+## Enrichissement prédictif du profil de piste et de notation de compte {#predictive-lead-to-account-scoring}
+
+Le [!UICONTROL Score prédictif de piste et de compte] Le tableau de bord affiche les mesures de base et l’état d’exécution quotidienne des tâches spécifique à la variable [Score prédictif de piste et de compte](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) enrichissement de profil.
+
+![Enrichissement prédictif du profil de piste et de notation de compte](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+
+Les mesures suivantes sont disponibles pour les tâches d’enrichissement de profil de score de piste et de compte prédictives :
+
+| Mesure | Description |
+| --------- | ---------- |
+| **[!UICONTROL Démarrage de tâche]** | Indique la date et l’heure de début de l’exécution de la tâche de notation de compte et de piste prédictive. |
+| **[!UICONTROL Durée du traitement]** | Temps total nécessaire à la réalisation de la tâche. |
+| **[!UICONTROL Nom de la note]** | Nom du score de la tâche. |
+| **[!UICONTROL Type de profil]** | Type de score : <ul><li>Personne</li><li>Compte</li></ul>. |
+| **[!UICONTROL Type de tâche]** | Type de la tâche :<ul><li>Notation</li><li>Formation</li>. |
+| **[!UICONTROL Statut]** | Indique l’état (réussite, échec ou traitement) de la tâche de notation de compte et de piste prédictive. |
+
 ## Contrôles de l’interface utilisateur {#ui-controls}
 
 Cette section décrit les différentes options de l’interface utilisateur (IU) de l’interface de surveillance, qui vous permettent de filtrer les mesures affichées sur la page.
@@ -79,3 +96,4 @@ En suivant ce tutoriel, vous pouvez désormais contrôler et comprendre les mesu
 * [Comptes associés dans la plateforme CDP B2B en temps réel](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Section « Comptes associés » du guide de l’interface utilisateur du profil de compte](/help/rtcdp/accounts/account-profile-ui-guide.md)
 * [Conduire à la correspondance de comptes dans la plateforme CDP B2B en temps réel](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Score prédictif de piste et de compte dans la plateforme CDP B2B en temps réel](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

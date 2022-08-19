@@ -2,9 +2,9 @@
 title: Cas d’utilisation de la segmentation pour l’édition B2B de la plateforme CDP en temps réel
 description: Présentation des différents cas d’utilisation de la plateforme CDP B2B en temps réel disponibles.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 6a108a0bfde3c8f44c1a1221b06581f0f69b5203
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1275'
 ht-degree: 1%
 
 ---
@@ -105,6 +105,12 @@ Recherchez toutes les personnes qui sont un &quot;décideur&quot; d’une opport
 Recherchez toutes les personnes qui travaillent dans un service Ressources humaines (HR) et qui sont liées à n’importe quel compte. *ou l’un des comptes associés du compte ;* qui a au moins une opportunité ouverte pour le montant donné (1 million de dollars) ou plus. Ce segment nécessite un lien entre la variable [!UICONTROL XDM Individual Profile] Classe, [!UICONTROL Compte d’entreprise XDM] et [!UICONTROL Opportunités commerciales XDM] classe .
 
 ![Interface utilisateur affichant la segmentation pour les comptes associés](../assets/segmentation/segmentation-related-accounts.png)
+
+### Exemple 9 : Utilisation de scores de piste et/ou de scores de compte pour qualifier le profil {#account-scoring}
+
+Recherchez tous les profils dont le score de piste est supérieur à 80.
+
+![Interface utilisateur affichant la segmentation pour la notation prédictive de piste et de compte](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
 
 ## Étapes suivantes {#next-steps}
 
