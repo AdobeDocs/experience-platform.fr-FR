@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c4cd691eeae9e27dd7616dc19672dc5d08b8cec7
+source-git-commit: a82381d6133fe793fc0f4be38b6e064684581afb
 workflow-type: tm+mt
-source-wordcount: '2327'
-ht-degree: 100%
+source-wordcount: '2436'
+ht-degree: 95%
 
 ---
 
@@ -177,15 +177,10 @@ Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Correspondance du prospect et du compte | La correspondance des prospects et des comptes permet d’associer des profils de personnes connus à des profils de compte. Vous pouvez ensuite segmenter et cibler des données dans un contexte B2B tel que des comptes ou des opportunités. Les tâches exécutées quotidiennement utilisent des facteurs déterministes et probabilistes qui permettent de faire correspondre des profils de personnes qui ne sont pas encore associés à aucun compte à un compte qui correspond mieux. Vous pouvez ensuite décider d’inclure de telles correspondances dans vos définitions de segment. |
+| Correspondance du prospect et du compte | La correspondance des prospects et des comptes permet d’associer des profils de personnes connus à des profils de compte. Vous pouvez ensuite segmenter et cibler des données dans un contexte B2B tel que des comptes ou des opportunités. Les tâches exécutées quotidiennement utilisent des facteurs déterministes et probabilistes qui permettent de faire correspondre des profils de personnes qui ne sont pas encore associés à aucun compte à un compte qui correspond mieux. Vous pouvez ensuite décider d’inclure de telles correspondances dans vos définitions de segment.. <br><br>Pour plus d’informations, consultez le document sur la [correspondance des prospects et des comptes](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md). Pour plus d’informations sur la configuration de la correspondance des prospects et des comptes, consultez le [Guide de l’interface utilisateur du profil de compte](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).</li> |
+| Score prédictif de piste et de compte | La notation prédictive des pistes et des comptes utilise une méthode d’apprentissage automatique basée sur l’arborescence (amplification aléatoire de la forêt/des gradients) qui implique l’apprentissage et la prédiction des événements d’étape d’opportunité et l’agrégation des activités de personne au niveau du compte pour produire les scores du compte. Les principaux facteurs d’influence sont également disponibles au niveau des agrégats et des unités afin d’aider les spécialistes du marketing B2B à mieux comprendre les éléments qui ont motivé les scores. <br><br>Pour plus d’informations, voir le document sur [score prédictif de piste et de compte](../../rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md). Pour plus d’informations sur la gestion de vos scores, consultez le guide sur [gestion de la notation prédictive des pistes et des comptes dans Real-time Customer Data Platform, édition B2B.](../../rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) |
 
-Pour plus d’informations, consultez le document sur la [correspondance des prospects et des comptes](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
-
-Pour obtenir un guide sur la surveillance de l’enrichissement des profils, consultez le document sur la [surveillance de l’enrichissement des profils dans l’interface utilisateur](../../dataflows/ui/b2b/monitor-profile-enrichment.md).
-
-Pour plus d’informations sur la configuration de la correspondance des prospects et des comptes, consultez le [Guide de l’interface utilisateur du profil de compte](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).
-
-Pour en savoir plus sur l’édition de Real-time CDP B2B, consultez la [présentation de Real-time CDP B2B](../../rtcdp/overview.md).
+Pour obtenir un guide sur la surveillance de l’enrichissement des profils, consultez le document sur la [surveillance de l’enrichissement des profils dans l’interface utilisateur](../../dataflows/ui/b2b/monitor-profile-enrichment.md). Pour en savoir plus sur l’édition de Real-time CDP B2B, consultez la [présentation de Real-time CDP B2B](../../rtcdp/overview.md).
 
 ## Profil client en temps réel {#profile}
 
