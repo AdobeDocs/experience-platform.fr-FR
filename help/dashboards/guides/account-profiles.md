@@ -1,11 +1,11 @@
 ---
-title: Tableau de bord des profils de compte
+title: Guide du tableau de bord des profils de compte
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de compte B2B de votre entreprise.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8de94d38fd1d2c001935180851d6877dfe2a8941
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '822'
-ht-degree: 4%
+source-wordcount: '823'
+ht-degree: 9%
 
 ---
 
@@ -61,12 +61,12 @@ Adobe fournit des widgets standard que vous pouvez utiliser pour visualiser diff
 
 Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez le nom d’un widget dans la liste suivante :
 
-* [Total des comptes par secteur](#total-accounts-by-industry)
+* [ du nombre total de comptes par secteur](#total-accounts-by-industry)
 * [Profils de compte ajoutés](#account-profiles-added)
 
-### Total des comptes par secteur {#total-accounts-by-industry}
+###  du nombre total de comptes par secteur {#total-accounts-by-industry}
 
-Ce widget affiche le nombre total de comptes dans une seule mesure et utilise un graphique en anneau pour illustrer les tailles proportionnelles des comptes pour les secteurs qui constituent le nombre global. La clé fournit des informations de codage en couleur pour les différents secteurs qui composent le graphique en anneau.
+Ce widget affiche le nombre total de comptes dans une seule mesure. Un graphique en anneau permet en outre d’illustrer la proportion de comptes pour chaque secteur constituant le nombre global. La clé fournit des informations de codage en couleur pour les différents secteurs qui composent le graphique en anneau.
 
 Les décomptes individuels des différentes industries s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
 

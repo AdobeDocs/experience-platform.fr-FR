@@ -1,23 +1,27 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;api;contrôle d’accès basé sur les attributs;contrôle d’accès basé sur les attributs
 solution: Experience Platform
-title: Point d’entrée de lʼAPI Policies
+title: Point de terminaison de l’API Access Control Policies
 description: Le point de terminaison /policies de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les stratégies dans Adobe Experience Platform.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1413'
-ht-degree: 11%
+source-wordcount: '1443'
+ht-degree: 12%
 
 ---
 
-# Point d’entrée des stratégies
+# Point de terminaison des stratégies de contrôle d’accès
 
 >[!IMPORTANT]
 >
->Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée pour les clients de santé basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform une fois qu’elle sera entièrement publiée.
+>Le contrôle d’accès basé sur les attributs est actuellement disponible pour un nombre restreint d’utilisateurs, qui sont actifs dans le secteur de la santé et basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Real-time Customer Data Platform dès son déploiement à grande échelle.
 
-Les politiques sont des déclarations qui réunissent des attributs pour établir des actions permises et non admissibles. Les stratégies peuvent être locales ou globales et peuvent remplacer d’autres stratégies. Le `/policies` Le point de terminaison de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les stratégies, y compris des informations sur les règles qui les régissent, ainsi que leurs conditions d’objet respectives.
+Les politiques de contrôle d&#39;accès sont des déclarations qui rassemblent les attributs pour établir les actions permises et non autorisées. Ces politiques peuvent être locales ou globales et peuvent remplacer d’autres politiques. Le `/policies` Le point de terminaison de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les stratégies, y compris des informations sur les règles qui les régissent, ainsi que leurs conditions d’objet respectives.
+
+>[!IMPORTANT]
+>
+>Ce point de terminaison ne doit pas être confondu avec la variable `/policies` du point de terminaison [API de gouvernance des données](../../../data-governance/api/policies.md), qui permet de gérer les stratégies d’utilisation des données.
 
 ## Prise en main
 

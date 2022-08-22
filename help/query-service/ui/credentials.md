@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;requête;éditeur de requêtes;éditeur de requêtes;éditeur de requêtes;éditeur de requêtes
 solution: Experience Platform
-title: Guide de l’interface utilisateur de Query Service
+title: Guide des informations d’identification de Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: a5e8b4df78d8dff58e000030d209606b46a582e8
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 2%
@@ -49,7 +49,7 @@ Avant de pouvoir générer des informations d’identification non arrivant à e
 
 Pour en savoir plus sur l’affectation d’autorisations, consultez la documentation sur [contrôle d&#39;accès](../../access-control/home.md).
 
-Toutes les autorisations requises sont désormais configurées dans Adobe Developer Console pour que l’utilisateur puisse utiliser la fonction des informations d’identification arrivant à expiration.
+Toutes les autorisations requises sont maintenant configurées dans la console Adobe Developer pour que l’utilisateur puisse utiliser la fonction des informations d’identification arrivant à expiration.
 
 ### Génération des informations d’identification
 

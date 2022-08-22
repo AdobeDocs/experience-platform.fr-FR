@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires Application des stratégies;Application basée sur lʼAPI;gouvernance des données
 solution: Experience Platform
-title: Point d’entrée de lʼAPI Policies
+title: Point de terminaison de l’API des stratégies d’utilisation des données
 topic-legacy: developer guide
 description: Les stratégies d’utilisation des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données au sein d’Experience Platform. Le point d’entrée « /policies » est utilisé pour tous les appels API liés à lʼaffichage, la création, la mise à jour ou la suppression des stratégies dʼutilisation des données.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1813'
-ht-degree: 100%
+source-wordcount: '1840'
+ht-degree: 98%
 
 ---
 
-# Point d’entrée des stratégies
+# Point de terminaison des stratégies d’utilisation des données
 
 Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’[!DNL Experience Platform]. Le point d’entrée `/policies` dans [!DNL Policy Service API] vous permet de gérer par programme les stratégies dʼutilisation des données pour votre entreprise.
+
+>[!IMPORTANT]
+>
+>Ce point de terminaison ne doit pas être confondu avec la variable `/policies` du point de terminaison [API Access Control](../../access-control/abac/api/policies.md), qui permet de gérer les stratégies de contrôle d’accès.
 
 ## Prise en main
 

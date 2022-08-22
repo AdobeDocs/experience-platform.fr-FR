@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
-title: Point de terminaison de l’API des tâches d’exportation
+title: Point de terminaison de l’API des tâches d’exportation de profils
 topic-legacy: guide
 type: Documentation
 description: Real-time Customer Profile vous permet de créer une vue unique de clients individuels dans Adobe Experience Platform en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1519'
 ht-degree: 68%
 
 ---
 
-# Point de terminaison des tâches d’exportation
+# Point de terminaison des tâches d’exportation de profils
 
 [!DNL Real-time Customer Profile] vous permet d’établir une vue unique des clients individuels en rassemblant des données issues de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur. Par exemple, les segments d’audience provenant de [!DNL Profile] Les données peuvent être exportées pour activation et les attributs de profil peuvent être exportés pour création de rapports.
 
