@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: fd3114a4578637dcf99232245f8d2cec64de14b5
+source-git-commit: 7f6c949851888645a70f15f091397be0b96c76d7
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '945'
 ht-degree: 74%
 
 ---
@@ -106,6 +106,7 @@ ht-degree: 74%
       * [LISTE AUTORISÉE des adresses IP pour les destinations de stockage dans le cloud](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinations de gestion de la relation client {#crm}
       * [Connexion CRM Salesforce](./catalog/crm/salesforce.md)
+      * [Connexion sortante](catalog/crm/outreach.md)
    * Destinations Data Management Platform {#data-management}
       * [Destinations Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Extension Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
