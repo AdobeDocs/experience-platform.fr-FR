@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: 6ae0560607c1e5f80ddfe752e59850f438794351
+source-git-commit: 9d615d70ce37c6dad683e9082db02697b9882ab3
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '804'
 ht-degree: 91%
 
 ---
@@ -189,6 +189,7 @@ ht-degree: 91%
       - [Collecter des données de paiement](tutorials/api/collect/payments.md)
       - [Collecter des données de protocole](tutorials/api/collect/protocols.md)
       - [Collecter des données de diffusion en continu](tutorials/api/collect/streaming.md)
+   - [Ingestion à la demande](tutorials/api/on-demand-ingestion.md)
    - [Surveiller les flux de données](tutorials/api/monitor.md)
    - [Mettre à jour des comptes](tutorials/api/update.md)
    - [Mettre à jour des flux de données](tutorials/api/update-dataflows.md)
