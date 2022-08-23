@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Août 2022
 description: Notes de mise à jour d’août 2022 pour Adobe Experience Platform.
-source-git-commit: 5e7ceda9ed126a2c003fb51302393631e0425cd2
+source-git-commit: 2a507b4fe5b7c9dc523ceb5b2f39becf9e574ed9
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 62%
+source-wordcount: '317'
+ht-degree: 49%
 
 ---
 
@@ -14,7 +14,22 @@ ht-degree: 62%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [Préparation de données](#data-prep)
 - [Sources](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM). 
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Prise en charge de l’ingestion d’enregistrements avec des avertissements | La préparation des données localisera désormais les avertissements (erreurs non critiques) dans les champs et permettra d’ingérer le reste de la ligne. Toutes les erreurs de transformation du mappeur sont désormais signalées comme avertissements et les lignes partiellement ingérées sont considérées comme réussies, avec un avertissement.  La surveillance est également prise en charge sur les enregistrements avec des avertissements et des informations de diagnostic. Actuellement, l’ingestion partielle des enregistrements avec avertissements n’est disponible que pour la diffusion en continu des données. Consultez la documentation sur [ingestion d’enregistrements avec des avertissements](../../sources/tutorials/ui/monitor-streaming.md) pour plus d’informations. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour en savoir plus sur [!DNL Data Prep], consultez la présentation de [[!DNL Data Prep] ](../../data-prep/home.md).
 
 ## Sources {#sources}
 
