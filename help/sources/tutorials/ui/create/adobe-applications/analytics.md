@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 2cb6803ecf56dd9a7d9614c72e3a1ff4e76ba966
+source-git-commit: 1d77ad44c7123f32301257c238299b7c16e2c92b
 workflow-type: tm+mt
-source-wordcount: '1700'
-ht-degree: 86%
+source-wordcount: '2182'
+ht-degree: 69%
 
 ---
 
@@ -151,6 +151,82 @@ La documentation suivante fournit d’autres ressources sur la compréhension de
 * [Présentation de la préparation des données](../../../../../data-prep/home.md)
 * [Fonctions de mappage de la préparation des données](../../../../../data-prep/functions.md)
 * [Ajouter des champs calculés](../../../../../data-prep/ui/mapping.md#calculated-fields)
+
+### Filtrage pour [!DNL Profile Service] (Version bêta)
+
+>[!IMPORTANT]
+>
+>Prise en charge du filtrage [!DNL Analytics] Les données sont actuellement en version bêta et ne sont pas disponibles pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+
+Une fois que vous avez terminé les mappages pour vos [!DNL Analytics] données de la suite de rapports, vous pouvez appliquer des règles et des conditions de filtrage pour inclure ou exclure de manière sélective les données de l’ingestion au [!DNL Profile Service]. La prise en charge du filtrage n’est disponible que pour [!DNL Analytics] Les données et les données ne sont filtrées que lors de la saisie de [!DNL Profile.] Toutes les données sont ingérées dans le lac de données.
+
+#### Filtrage au niveau de la ligne
+
+Vous pouvez filtrer les données pour [!DNL Profile] ingestion au niveau des lignes et des colonnes. Le filtrage au niveau des lignes vous permet de définir des critères tels que chaîne contenant, égal à, commence ou se termine par. Vous pouvez également utiliser le filtrage au niveau des lignes pour joindre des conditions à l’aide de `AND` ainsi que `OR`et annuler les conditions à l’aide de `NOT`.
+
+Pour filtrer votre [!DNL Analytics] données au niveau de la ligne, sélectionnez **[!UICONTROL Filtre de lignes]**.
+
+![row-filter](../../../../images/tutorials/create/analytics/row-filter.png)
+
+Utilisez le rail de gauche pour parcourir la hiérarchie de schémas et sélectionnez l’attribut de schéma de votre choix pour approfondir l’analyse d’un schéma particulier.
+
+![rail gauche](../../../../images/tutorials/create/analytics/left-rail.png)
+
+Une fois que vous avez identifié l’attribut que vous souhaitez configurer, sélectionnez-le et faites glisser l’attribut du rail de gauche vers le panneau de filtrage.
+
+![filter-panel](../../../../images/tutorials/create/analytics/filtering-panel.png)
+
+Pour configurer différentes conditions, sélectionnez **[!UICONTROL est égal à]** puis sélectionnez une condition dans la fenêtre déroulante qui s’affiche.
+
+La liste des conditions configurables inclut :
+
+* [!UICONTROL est égal à]
+* [!UICONTROL n’est pas égal à]
+* [!UICONTROL commence par]
+* [!UICONTROL se termine par]
+* [!UICONTROL ne se termine pas par]
+* [!UICONTROL contient]
+* [!UICONTROL ne contient pas]
+* [!UICONTROL existe]
+* [!UICONTROL n’existe pas]
+
+![conditions](../../../../images/tutorials/create/analytics/conditions.png)
+
+Saisissez ensuite les valeurs à inclure en fonction de l’attribut que vous avez sélectionné. Dans l’exemple ci-dessous, [!DNL Apple] et [!DNL Google] sont sélectionnés pour l’ingestion dans le cadre de la fonction **[!UICONTROL Fabricant]** attribut.
+
+![include-manufacturer](../../../../images/tutorials/create/analytics/include-manufacturer.png)
+
+Pour préciser davantage vos conditions de filtrage, ajoutez un autre attribut du schéma, puis ajoutez des valeurs basées sur cet attribut. Dans l’exemple ci-dessous, la variable **[!UICONTROL Modèle]** est ajouté et des modèles tels que [!DNL iPhone 13] et [!DNL Google Pixel 6] sont filtrées pour l’ingestion.
+
+![include-model](../../../../images/tutorials/create/analytics/include-model.png)
+
+Pour ajouter un nouveau conteneur, sélectionnez les ellipses (`...`) en haut à droite de l’interface de filtrage, puis sélectionnez **[!UICONTROL Ajouter un conteneur]**.
+
+![add-container](../../../../images/tutorials/create/analytics/add-container.png)
+
+Une fois qu’un nouveau conteneur est ajouté, sélectionnez **[!UICONTROL Inclure]** puis sélectionnez **[!UICONTROL Exclure]** dans la fenêtre déroulante qui s’affiche.
+
+![exclusion](../../../../images/tutorials/create/analytics/exclude.png)
+
+Suivez la même procédure en faisant glisser les attributs de schéma et en ajoutant les valeurs correspondantes que vous souhaitez exclure du filtrage. Dans l’exemple ci-dessous, la variable [!DNL iPhone 12], [!DNL iPhone 12 mini], et [!DNL Google Pixel 5] sont tous filtrés à partir de l’exclusion de la variable **[!UICONTROL Modèle]** , paysage est exclu de la variable **[!UICONTROL Orientation de l’écran]**, et numéro de modèle [!DNL A1633] est exclu de **[!UICONTROL Numéro de modèle]**.
+
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+
+![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
+
+#### Filtrage au niveau des colonnes
+
+Sélectionner **[!UICONTROL Filtre Colonnes]** à partir de l’en-tête pour appliquer un filtrage au niveau des colonnes.
+
+![column-filter](../../../../images/tutorials/create/analytics/column-filter.png)
+
+La page se met à jour dans une arborescence de schéma interactive, affichant vos attributs de schéma au niveau de la colonne. À partir de là, vous pouvez sélectionner les colonnes de données que vous souhaitez exclure de [!DNL Profile] ingestion. Vous pouvez également développer une colonne et sélectionner des attributs spécifiques à exclure.
+
+Par défaut, tous les [!DNL Analytics] accéder à [!DNL Profile] et ce processus permet d’exclure des branches de données XDM [!DNL Profile] ingestion.
+
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+
+![colonnes sélectionnées](../../../../images/tutorials/create/analytics/columns-selected.png)
 
 ### Fournir des détails sur le flux de données
 
