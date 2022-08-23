@@ -4,9 +4,9 @@ title: Guide du tableau de bord des segments
 description: 'Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments que votre entreprise a créés. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
 workflow-type: tm+mt
-source-wordcount: '1598'
+source-wordcount: '1550'
 ht-degree: 11%
 
 ---
@@ -82,7 +82,6 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 >id="platform_dashboards_segments_audiencesize"
 >title="Taille de l’audience"
 >abstract="Ce widget affiche le nombre total de profils fusionnés dans le segment sélectionné. Ce nombre dépend de la stratégie de fusion appliquée à vos données et est correct au moment de l’instantané le plus récent."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="En savoir plus dans la documentation"
 
 Le **[!UICONTROL Taille de l’audience]** widget affiche le nombre total de profils fusionnés dans le segment sélectionné au moment de la prise de vue instantanée. Ce nombre est le résultat de l’application de la stratégie de fusion de segments à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu du segment.
 
@@ -96,7 +95,6 @@ Pour plus d’informations sur les fragments et les profils fusionnés, commence
 >id="platform_dashboards_segments_audiencesizetrend"
 >title="Tendance de la taille de l’audience"
 >abstract="Ce widget fournit des informations sur le nombre total de profils qui répondent aux critères de **any** définition de segment, telle qu’elle est capturée lors de l’instantané quotidien, pendant les 30 derniers jours, 90 jours ou 12 mois."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="En savoir plus dans la documentation"
 
 Le **[!UICONTROL Tendance de la taille de l’audience]** Le widget fournit une représentation graphique linéaire pour le nombre total de profils qui répondent aux critères de **any** définition de segment sur une période donnée. La tendance de la taille de l’audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. La taille de l’audience est répercutée sur l’axe des ordonnées et l’heure sur l’axe des abscisses.
 
@@ -151,7 +149,6 @@ Ce widget vous permet d’optimiser la stratégie de segmentation en consultant 
 >id="platform_dashboards_segments_identityoverlap"
 >title="Superposition des identités"
 >abstract="Ce widget affiche le chevauchement des profils de votre segment contenant les deux identités sélectionnées. Les cercles affichent la taille relative de chaque identité. Le nombre de profils contenant les deux espaces de noms est représenté par le chevauchement entre les cercles."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="En savoir plus dans la documentation"
 
 Le **[!UICONTROL Superposition des identités]** Ce widget affiche un diagramme de Venn, ou un diagramme de jeu, qui montre le chevauchement des profils de votre segment contenant plusieurs identités.
 
@@ -169,7 +166,6 @@ Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation d
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="Profils par identité"
 >abstract="Ce widget affiche la ventilation des identités pour chaque profil fusionné du segment sélectionné."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="En savoir plus dans la documentation"
 
 Le **[!UICONTROL Profils par identité]** widget affiche la ventilation des identités pour chaque profil fusionné du segment sélectionné. Le nombre total de profils par identité peut être supérieur au nombre total de profils dans le segment, car plusieurs identités peuvent y être associées pour un profil. En d’autres termes, le fait de cumuler les valeurs affichées pour chaque identité peut être supérieur à la taille totale de l’audience dans le segment, car si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités peuvent être associées à ce client individuel.
 
