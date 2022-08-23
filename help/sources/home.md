@@ -5,8 +5,8 @@ title: Présentation des connecteurs source
 topic-legacy: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
-workflow-type: ht
+source-git-commit: 6ae0560607c1e5f80ddfe752e59850f438794351
+workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 100%
 
@@ -114,6 +114,7 @@ Experience Platform prend en charge l’ingestion de données provenant d’une
 - [[!DNL Phoenix]](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md)
 - [[!DNL Snowflake]](connectors/databases/snowflake.md)
+- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md)
 
 ### eCommerce {#ecommerce}
 
