@@ -2,13 +2,13 @@
 keywords: e-mail;e-mail;destinations d’e-mail;salesforce;api salesforce destination marketing cloud
 title: (API) Connexion au Marketing Cloud Salesforce
 description: La destination de Marketing Cloud Salesforce (anciennement connue sous le nom d’ExactTarget) vous permet d’exporter les données de votre compte et de les activer dans le Marketing Cloud Salesforce pour répondre aux besoins de votre entreprise.
-source-git-commit: ce7b28ce31c652965a6eaad81348e330bd38e9ac
+exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
+source-git-commit: 2dda77c3d9a02b53a02128e835abf77ab97ad033
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1906'
 ht-degree: 6%
 
 ---
-
 
 # Connexion [!DNL (API) Salesforce Marketing Cloud]
 
@@ -24,7 +24,7 @@ Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) 
 
 Le Marketing Cloud Salesforce utilise OAuth 2 avec les informations d’identification du client comme mécanisme d’authentification pour communiquer avec l’API REST Salesforce. Les instructions d’authentification à votre instance Salesforce sont présentées ci-dessous, dans la section [Authentification à la destination](#authenticate) .
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination de Marketing Cloud Salesforce, voici un exemple de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
@@ -48,7 +48,7 @@ Accédez à Salesforce [essai](https://www.salesforce.com/in/form/signup/freetri
 
 #### Créer un champ personnalisé dans Salesforce {#prerequisites-custom-field}
 
-Création de l’attribut personnalisé de type `Text Area Long` l’Experience Platform utilisé pour mettre à jour l’état du segment dans le Marketing Cloud Salesforce.
+Vous devez créer un attribut personnalisé de type `Text Area Long`, que l’Experience Platform utilisera pour mettre à jour l’état du segment dans le Marketing Cloud Salesforce. Dans le workflow d’ activation des segments vers la destination, dans la variable **[Planification du segment](#schedule-segment-export-example)** vous utiliserez l’attribut personnalisé comme identifiant de mappage pour chaque segment que vous activez.
 
 Reportez-vous à la documentation du Marketing Cloud Salesforce pour [créer des champs personnalisés](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) si vous avez besoin de conseils supplémentaires.
 
@@ -72,6 +72,8 @@ Notez les éléments ci-dessous avant de vous authentifier à la destination de 
 | --- | --- | --- |
 | <ul><li>Préfixe de Marketing Cloud Salesforce</li></ul> | Voir [Préfixe de domaine de Marketing Cloud Salesforce](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) pour plus d’informations. | <ul><li>Si votre domaine est tel que ci-dessous, vous avez besoin de la valeur mise en surbrillance.<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.accuracy.target.com</i></li></ul> |
 | <ul><li>Identifiant client</li><li>Secret client</li></ul> | Reportez-vous à la section [Documentation de Salesforce](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) si vous avez besoin de conseils supplémentaires. | <ul><li>r23kxxxxxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxxxT4xxxxxxxxxx</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Identités prises en charge {#supported-identities}
 
@@ -140,18 +142,18 @@ Lecture [Activation des profils et des segments vers des destinations d’export
 
 ### Considérations sur le mappage et exemple {#mapping-considerations-example}
 
-Pour envoyer correctement les données d’audience de Adobe Experience Platform vers la destination de Marketing Cloud Salesforce, vous devez passer par l’étape de mappage des champs. Le mappage consiste à créer un lien entre vos champs de schéma de modèle de données d’expérience (XDM) dans votre compte Platform et leurs équivalents de la destination cible. Pour mapper correctement vos champs XDM aux champs de destination de Marketing Cloud Salesforce, procédez comme suit :
+Pour envoyer correctement les données d’audience de Adobe Experience Platform vers la destination de Marketing Cloud Salesforce, vous devez passer par l’étape de mappage des champs. Le mappage consiste à créer un lien entre vos champs de schéma de modèle de données d’expérience (XDM) dans votre compte Platform et leurs équivalents de la destination cible. Pour mapper correctement vos champs XDM aux champs de destination du Marketing Cloud Salesforce, procédez comme suit.
 
-La liste des mappages d’attributs qui peuvent être configurés pour la variable [API REST Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) est indiqué ci-dessous. La destination utilise la variable [API REST des définitions d’ensemble d’attributs de recherche Salesforce](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) pour récupérer les attributs définis dans Salesforce pour vos contacts et spécifiques à votre compte.
+Liste des mappages d’attributs pouvant être configurés pour la variable [API REST Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) est indiqué ci-dessous. La destination utilise la variable [API REST des définitions d’ensemble d’attributs de recherche Salesforce](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) pour récupérer les attributs définis dans Salesforce pour vos contacts et spécifiques à votre compte.
 
 >[!IMPORTANT]
 > 
 > Bien que les noms d’attribut soient conformes à votre compte Salesforce, les mappages pour `contactKey` et `personalEmail.address` sont obligatoires.
 
-1. À l’étape Mappage , cliquez sur **[!UICONTROL Ajouter un nouveau mappage]**, une nouvelle ligne de mappage s’affiche à l’écran.
+1. À l’étape Mappage , cliquez sur **[!UICONTROL Ajouter un nouveau mappage]**. Vous pouvez désormais voir une nouvelle ligne de mappage sur l’écran.
    ![Ajouter un nouveau mappage](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 
-1. Dans la fenêtre de sélection du champ source, lors de la sélection du champ source, choisissez la variable **[!UICONTROL Sélectionner des attributs]** et ajoutez les mappages souhaités.
+1. Dans la fenêtre de sélection du champ source, lors de la sélection du champ source, choisissez la **[!UICONTROL Sélectionner des attributs]** et ajoutez les mappages souhaités.
    ![Mappage des sources](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/source-mapping.png)
 
 1. Dans la fenêtre de sélection du champ cible , sélectionnez le champ cible et choisissez l&#39;option **[!UICONTROL Sélectionner un espace de noms d’identité]** et ajoutez les mappages souhaités.
@@ -172,7 +174,7 @@ La liste des mappages d’attributs qui peuvent être configurés pour la variab
 
 ### Planification de l’exportation de segments et exemple {#schedule-segment-export-example}
 
-Lors de l’exécution de la variable [Planification de l’exportation de segments](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) vous devez mapper manuellement les segments Platform à l’attribut personnalisé dans Salesforce.
+Lors de l’exécution de la variable [Planification de l’exportation de segments](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) , vous devez mapper manuellement les segments Platform à l’attribut personnalisé dans Salesforce.
 
 Pour ce faire, sélectionnez chaque segment, puis saisissez l’attribut personnalisé correspondant à partir de Salesforce dans la variable **[!UICONTROL ID de mappage]** champ .
 
@@ -233,4 +235,3 @@ Lors de la vérification d’une exécution de flux de données, si le message d
 * Reportez-vous à la section [Tarifs de l&#39;engagement Marketing Cloud Salesforce](https://www.salesforce.com/editions-pricing/marketing-cloud/email/) page à *Téléchargement du graphique de comparaison de l’édition complète* en pdf qui détaille les limites imposées par votre plan.
 * Le [Présentation des API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html) détails de la page des limites supplémentaires.
 * Un élément de la base de connaissances rassemblant ces détails est disponible [here](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits#:~:text=Day%2FHour%2FMinute%20Limit&amp;text=We%20recommend%20a%20limit%20of,per%20minute%20for%20SOAP%20calls.&amp;text=As%20has%20been%20added%20in,interaction%20with%20the%20REST%2DAPI).
-
