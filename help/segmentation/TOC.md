@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des segments et générez des audiences à partir de vos données de profil client en temps réel.
 feature: Segments
-source-git-commit: 0f20b5cfb3301bc7f7f336e14e9faa0234c05c51
+source-git-commit: b70b4302c95cbf4301b036feea799537fa633490
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '164'
 ht-degree: 76%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 76%
 - API Segmentation {#api}
    - [Présentation](api/overview.md)
    - [Prise en main](api/getting-started.md)
+   - [Audiences](api/audiences.md)
    - [Segmentation Edge](api/edge-segmentation.md)
    - [Tâches d’exportation](api/export-jobs.md)
    - [Aperçus et estimations](api/previews-and-estimates.md)
@@ -48,7 +49,7 @@ ht-degree: 76%
    - [Fonctions de mappage](pql/map-functions.md)
    - [Fonctions de chaîne](pql/string-functions.md)
    - [Fonctions d’objet](pql/object-functions.md)
-   - [Fonctions arithmétiques ](pql/arithmetic-functions.md)
+   - [Fonctions arithmétiques](pql/arithmetic-functions.md)
    - [Fonctions d’agrégation](pql/aggregation-functions.md)
    - [Fonctions de date et d’heure](pql/datetime-functions.md)
    - [Fonctions de filtre](pql/filter-functions.md)

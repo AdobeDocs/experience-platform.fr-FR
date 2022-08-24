@@ -5,10 +5,10 @@ title: Point de terminaison de l’API Schedules
 topic-legacy: developer guide
 description: Les planifications sont un outil qui peut être utilisé pour exécuter automatiquement des tâches de segmentation par lots une fois par jour.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 604d1d02156b441ab3978ff976e02191bbdc311f
+source-git-commit: 84026b447eea00955bc9e6482b81ae1aad3c312e
 workflow-type: tm+mt
-source-wordcount: '2013'
-ht-degree: 24%
+source-wordcount: '2011'
+ht-degree: 23%
 
 ---
 
@@ -22,7 +22,7 @@ Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL 
 
 ## Obtention d’une liste de plannings {#retrieve-list}
 
-Vous pouvez obtenir une liste de tous les plannings de votre organisation IMS en faisant une requête GET au point de terminaison `/config/schedules`.
+Vous pouvez récupérer une liste de tous les plannings de votre organisation en envoyant une requête de GET au `/config/schedules` point de terminaison .
 
 **Format d’API**
 
@@ -41,7 +41,7 @@ GET /config/schedules?limit={LIMIT}
 
 **Requête**
 
-La requête suivante récupérera les dix derniers plannings publiés dans votre organisation IMS.
+La requête suivante récupère les dix derniers plannings publiés au sein de votre organisation.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
