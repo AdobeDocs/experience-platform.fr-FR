@@ -4,13 +4,11 @@ solution: Experience Platform
 title: Utilisation de l’interface web GitHub pour créer une page de documentation sur les sources
 topic-legacy: tutorial
 description: Ce document décrit les étapes à suivre pour utiliser l’interface web GitHub afin de créer de la documentation et d’envoyer une requête de tirage (PR).
-hide: true
-hidefromtoc: true
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
 source-wordcount: '624'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -36,19 +34,19 @@ Une fois le branchement terminé, sélectionnez **master** et saisissez le nom d
 
 ![create-branch](../assets/create-branch.png)
 
-Dans la structure de dossiers GitHub de votre référentiel dupliqué, accédez à [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) puis sélectionnez la catégorie appropriée à votre source dans la liste. Par exemple, si vous créez de la documentation pour une nouvelle source de stockage dans le cloud, sélectionnez **espace de stockage dans le cloud**.
+Dans la structure de dossiers GitHub de votre référentiel dupliqué, accédez à [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) puis sélectionnez la catégorie appropriée à votre source dans la liste. Par exemple, si vous créez de la documentation pour une nouvelle source de gestion de la relation client, sélectionnez **crm**.
 
 >[!TIP]
 >
 >Si vous créez une documentation pour l’interface utilisateur, accédez à [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) et sélectionnez la catégorie appropriée à votre source. Pour ajouter vos images, accédez à [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) ajoutez ensuite vos captures d’écran à la `sdk` dossier.
 
-![espace de stockage dans le cloud](../assets/cloud-storage.png)
+![crm](../assets/crm.png)
 
-Un dossier de sources de stockage dans le cloud existantes s’affiche. Pour ajouter la documentation d’une nouvelle source, sélectionnez **Ajouter un fichier** puis sélectionnez **Créer un fichier** dans le menu déroulant qui s’affiche.
+Un dossier de sources CRM existantes s’affiche. Pour ajouter la documentation d’une nouvelle source, sélectionnez **Ajouter un fichier** puis sélectionnez **Créer un fichier** dans le menu déroulant qui s’affiche.
 
 ![create-new-file](../assets/create-new-file.png)
 
-Nommez votre fichier source. `YOURSOURCE.md` où YOURSOURCE est le nom de votre source dans Platform. Par exemple, si votre société est [!DNL Mailchimp], alors votre nom de fichier doit être `mailchimp.md`.
+Nommez votre fichier source. `YOURSOURCE.md` où YOURSOURCE est le nom de votre source dans Platform. Par exemple, si votre société est CRM ACME, votre nom de fichier doit être : `acme-crm.md`.
 
 ![git-interface](../assets/git-interface.png)
 

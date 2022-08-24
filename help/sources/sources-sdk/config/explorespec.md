@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
-title: Configuration des spécifications d’exploration pour le SDK Sources
+title: Configuration des spécifications d’exploration pour les sources en libre-service (SDK par lots)
 topic-legacy: overview
-description: Ce document présente les configurations que vous devez préparer pour utiliser le SDK Sources.
-hide: true
-hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+description: Ce document présente les configurations que vous devez préparer pour utiliser les sources en libre-service (SDK par lots).
+exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 2%
+source-wordcount: '258'
+ht-degree: 7%
 
 ---
 
-
-# Configuration des spécifications d’exploration pour le SDK Sources
+# Configuration des spécifications d’exploration pour les sources en libre-service (SDK par lots)
 
 Explorer les spécifications définit les paramètres requis pour explorer et inspecter les objets contenus dans votre source. Explorer les spécifications définit également le format de réponse renvoyé lorsque des objets sont explorés et inspectés.
 
@@ -87,4 +85,4 @@ Explorer les spécifications définit les paramètres requis pour explorer et in
 
 ## Étapes suivantes
 
-Une fois vos spécifications d’exploration renseignées, vous pouvez créer une spécification de connexion complète à l’aide de la variable [!DNL Flow Service] API. Voir la [[!DNL Sources SDK] Guide de l’API](../api/api-overview.md) pour plus d’informations.
+Une fois vos spécifications d’exploration renseignées, vous pouvez créer une spécification de connexion complète à l’aide de la variable [!DNL Flow Service] API. Voir la [Guide de l’API des sources en libre-service (SDK par lots)](../api/api-overview.md) pour plus d’informations.

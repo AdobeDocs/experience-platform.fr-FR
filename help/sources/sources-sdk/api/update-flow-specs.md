@@ -1,29 +1,23 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
-title: Mise à jour des spécifications de flux à l’aide de l’API Flow Service (bêta)
+title: Mise à jour des spécifications de flux à l’aide de l’API Flow Service
 topic-legacy: developer guide
-description: Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide de l’API Flow Service pour le SDK Sources.
-hide: true
-hidefromtoc: true
+description: Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide de l’API Flow Service pour les sources en libre-service (SDK par lots).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 22%
+source-wordcount: '408'
+ht-degree: 17%
 
 ---
 
-# Mise à jour des spécifications de flux à l’aide de [!DNL Flow Service] API (bêta)
-
->[!IMPORTANT]
->
->Le SDK Sources est actuellement en version Beta et votre organisation n’y a peut-être pas encore accès. Les fonctionnalités décrites dans cette documentation peuvent changer.
+# Mise à jour des spécifications de flux à l’aide de [!DNL Flow Service] API
 
 Une fois que vous avez généré un nouvel identifiant de spécification de connexion, vous devez ajouter cet identifiant à une spécification de flux afin de créer un flux de données.
 
 Les spécifications de flux contiennent des informations qui définissent un flux, notamment les identifiants de connexion source et cible pris en charge, les spécifications de transformation nécessaires à l’application aux données et les paramètres de planification requis pour générer un flux. Vous pouvez modifier les spécifications de flux en utilisant la méthode `/flowSpecs` point de terminaison .
 
-Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide du [!DNL Flow Service] API pour le SDK Sources.
+Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide du [!DNL Flow Service] API pour les sources en libre-service (SDK par lots).
 
 ## Prise en main
 

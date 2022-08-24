@@ -1,28 +1,23 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
-title: Options de configuration dans le SDK Sources
+title: Options de configuration dans les sources en libre-service (SDK par lots)
 topic-legacy: overview
-description: Ce document présente les configurations que vous devez préparer pour utiliser le SDK Sources.
-hide: true
-hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+description: Ce document présente les configurations que vous devez préparer pour utiliser les sources en libre-service (SDK par lots).
+exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 1%
+source-wordcount: '297'
+ht-degree: 23%
 
 ---
 
-# Options de configuration dans le SDK Sources
+# Options de configuration dans les sources en libre-service (SDK par lots)
 
->[!IMPORTANT]
->
->Le SDK Sources est actuellement en version bêta et votre entreprise n’y a peut-être pas encore accès. Les fonctionnalités décrites dans cette documentation peuvent faire l’objet de modifications.
-
-Ce document présente les configurations que vous devez préparer pour utiliser le SDK Sources.
+Ce document présente les configurations que vous devez préparer pour utiliser les sources en libre-service (SDK par lots).
 
 ## Spécification de connexion
 
-Les spécifications de connexion renvoient les propriétés du connecteur d’une source. Elles incluent des spécifications d’authentification liées à la création des connexions de base et source, ainsi qu’un identifiant de spécification de connexion fixe affecté à une source particulière. Les spécifications de connexion sont indépendantes de l’organisation du client et IMS. Une spécification de connexion type contient des informations de base sur une source donnée, ainsi que trois sections distinctes : `authSpec`, `sourceSpec`, et `exploreSpec`.
+Les spécifications de connexion renvoient les propriétés du connecteur d’une source. Elles incluent des spécifications d’authentification liées à la création des connexions de base et source, ainsi qu’un identifiant de spécification de connexion fixe affecté à une source particulière. Les spécifications de connexion sont indépendantes du client et de l’organisation. Une spécification de connexion type contient des informations de base sur une source donnée, ainsi que trois sections distinctes : `authSpec`, `sourceSpec`, et `exploreSpec`.
 
 | Spécification | Description |
 | --- | --- |
@@ -34,12 +29,10 @@ Les spécifications de connexion renvoient les propriétés du connecteur d’un
 
 ## Renseigner les valeurs des spécifications de connexion
 
-Une spécification de connexion peut être divisée en trois parties distinctes : les spécifications d’authentification, les spécifications source et les spécifications d’exploration.
+Une spécification de connexion peut être divisée en trois parties distinctes : les spécifications d’authentification, les spécifications de la source et les spécifications d’exploration.
 
-Consultez les documents suivants pour obtenir des instructions sur la façon de renseigner les valeurs de chaque partie d’une spécification de connexion :
+Consultez les documents suivants pour obtenir des instructions sur la façon de renseigner les valeurs de chaque partie d’une spécification de connexion :
 
-* [Configuration de votre spécification d’authentification](./authspec.md)
-* [Configuration de votre spécification source](./sourcespec.md)
-* [Configuration de votre spécification d’exploration](./explorespec.md)
-
-
+* [Configurer votre spécification d’authentification](./authspec.md)
+* [Configurer votre spécification de source](./sourcespec.md)
+* [Configurer votre spécification d’exploration](./explorespec.md)

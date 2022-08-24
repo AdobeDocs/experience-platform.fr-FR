@@ -2,12 +2,11 @@
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
 title: Modèle de documentation en libre-service pour l’interface utilisateur
 description: Découvrez comment créer une connexion source YOURSOURCE à l’aide de l’interface utilisateur de Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
+exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
 source-wordcount: '722'
-ht-degree: 1%
+ht-degree: 22%
 
 ---
 
@@ -36,11 +35,11 @@ Ce tutoriel décrit les étapes à suivre pour créer une *VOTRE SOURCE* connect
 * *toute spécification de compte de votre côté ;*
 * *comment obtenir les informations d’authentification pour se connecter à votre plateforme*
 
-### Collecte des informations d’identification requises
+### Collecter les informations d’identification requises
 
 Pour vous connecter *VOTRE SOURCE* Pour Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
-| Credential | Description | Exemple |
+| Informations d’identification | Description | Exemple |
 | --- | --- | --- |
 | *identifiant un* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
 | *credential two* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
@@ -50,7 +49,7 @@ Pour plus d’informations sur ces informations d’identification, voir *VOTRE 
 
 ## Connectez-vous à *VOTRE SOURCE* account
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au [!UICONTROL Sources] workspace. Le [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
@@ -72,15 +71,15 @@ Pour utiliser un compte existant, sélectionnez la variable *VOTRE SOURCE* compt
 
 ### Nouveau compte
 
-Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion à la source]** puis accorder un certain temps pour établir la nouvelle connexion.
+Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification . Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion à la source]**, puis patientez quelques instants le temps que la nouvelle connexion sʼétablisse.
 
-![new](../assets/ui/new.png)
+![nouveau](../assets/ui/new.png)
 
 ## Étapes suivantes
 
 *Les workflows pour les étapes restantes de la création d’un flux de données sont modulaires. Si vous souhaitez effectuer des appels spécifiques concernant votre source, reportez-vous à la section Ressources supplémentaires ci-dessous.*
 
-En suivant ce tutoriel, vous avez établi une connexion à votre *VOTRE SOURCE* compte . Vous pouvez maintenant passer au tutoriel suivant et [configuration d’un flux de données pour importer des données dans Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+En suivant ce tutoriel, vous avez établi une connexion à votre *VOTRE SOURCE* compte . Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Ressources supplémentaires
 

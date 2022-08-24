@@ -1,69 +1,63 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
 solution: Experience Platform
-title: Présentation du SDK des sources (version bêta)
+title: Présentation des sources en libre-service (SDK par lots)
 topic-legacy: overview
-description: Le SDK Sources de Adobe Experience Platform est un ensemble d’API de configuration qui vous permettent d’intégrer une source basée sur l’API REST à l’aide de l’API Flow Service pour importer vos données dans Experience Platform.
-hide: true
-hidefromtoc: true
+description: Les sources en libre-service Adobe Experience Platform (SDK par lots) sont un ensemble d’API de configuration qui vous permettent d’intégrer une source basée sur l’API REST à l’aide de l’API Flow Service pour importer vos données dans Experience Platform.
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
-source-git-commit: ce902e461c748e30e0307558da894a4dbdd212a4
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 8%
+source-wordcount: '596'
+ht-degree: 7%
 
 ---
 
-# Présentation du SDK des sources (version bêta)
+# Présentation des sources en libre-service (SDK par lots)
 
->[!IMPORTANT]
->
->Le SDK Sources est actuellement en version bêta et votre entreprise n’y a peut-être pas encore accès. Les fonctionnalités décrites dans cette documentation peuvent faire l’objet de modifications.
+Les sources en libre-service Adobe Experience Platform (SDK par lots) sont une structure qui vous permet d’intégrer une source basée sur l’API REST au catalogue des sources Experience Platform à l’aide du [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Les sources en libre-service (SDK par lots) fournissent un ensemble d’API de configuration pour créer votre propre source et importer vos données de lot dans Experience Platform.
 
-Le SDK Sources de Adobe Experience Platform est un ensemble d’API de configuration qui vous permettent d’intégrer une source basée sur l’API REST à l’aide du [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) pour importer vos données dans Experience Platform.
+Avec les sources en libre-service (SDK par lots), vous pouvez :
 
-Avec le SDK Sources, vous pouvez :
-
-* Configurez une nouvelle source dans le catalogue de Platform, avec les fonctionnalités de création, de lecture, de mise à jour et de suppression à l’aide de la [!DNL Flow Service] API.
+* Configurez et intégrez une nouvelle source au catalogue de l’Experience Platform à l’aide du [!DNL Flow Service] API.
 * Définissez les spécifications de votre source, y compris les informations relatives aux types d’authentification pris en charge et la manière dont les données de ressource sont récupérées.
 * Créez une documentation destinée aux utilisateurs pour votre nouvelle source.
 
-La documentation du SDK Sources fournit des instructions pour vous permettre d’utiliser le SDK Sources de Adobe Experience Platform pour configurer, tester et publier une intégration de source basée sur l’API REST avec Platform, et faire en sorte que votre source soit intégrée au catalogue de sources en constante augmentation.
+La documentation des sources en libre-service fournit des instructions pour configurer, tester et publier une intégration de source basée sur l’API REST avec Experience Platform et faire en sorte que votre source soit intégrée au catalogue de sources en constante augmentation.
 
 ![catalogue](./assets/catalog.png)
 
 ## Présentation des sources
 
- Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide de services Experience Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Pour plus d’informations sur les sources et pour obtenir la liste des différentes sources actuellement prises en charge sur Platform, voir le [présentation des sources](../home.md).
+Pour plus d’informations sur les sources et pour obtenir la liste des différentes sources actuellement prises en charge par Experience Platform, voir la section [présentation des sources](../home.md).
 
 ## Création d’une source
 
-Grâce au SDK Sources, vous pouvez intégrer votre propre source basée sur l’API REST et importer vos données dans Platform avec [!DNL Flow Service]. Le SDK Sources vous permet d’intégrer une nouvelle source à Platform en créant et en envoyant une nouvelle spécification de connexion via le [!DNL Flow Service] API.
+Grâce aux sources en libre-service, vous pouvez intégrer votre propre source basée sur l’API REST et importer vos données dans Experience Platform avec [!DNL Flow Service]. Vous pouvez intégrer une source au catalogue de sources Experience Platform en créant, en configurant et en envoyant une nouvelle spécification de connexion via le [!DNL Flow Service] API.
 
-Consultez le guide sur la [création d’une nouvelle spécification de connexion](./api/api-overview.md) pour plus d’informations sur la manière d’intégrer une nouvelle source à Platform.
+Consultez le guide sur la [création d’une nouvelle spécification de connexion](./api/api-overview.md) pour plus d’informations sur l’intégration d’une nouvelle source à Experience Platform.
 
 ## Document de votre source
 
 Une fois votre source créée, reportez-vous à la section [guide de documentation](./documentation/doc-overview.md) pour obtenir des instructions sur la manière de documenter votre source via le [!DNL GitHub] ou par l’intermédiaire de votre propre éditeur de texte.
 
-## Processus de haut niveau
+## Aperçu général de la configuration
 
 Le processus étape par étape de configuration de votre source dans Experience Platform est décrit ci-dessous :
 
-* Lisez le [Guide de l’API du SDK Sources](./api/api-overview.md);
-   * Lisez le [guide de prise en main](./api/getting-started.md);
-   * Suivez le tutoriel sur [création d’une nouvelle spécification de connexion](./api/create.md);
-   * Suivez le tutoriel sur [mise à jour de la spécification de connexion](./api/update-connection-specs.md);
+* Lisez le [Guide de l’API des sources en libre-service (SDK par lots)](./api/api-overview.md).
+   * Lisez le [guide de prise en main](./api/getting-started.md).
+   * Suivez le tutoriel sur [création d’une nouvelle spécification de connexion](./api/create.md).
+   * Suivez le tutoriel sur [mise à jour de la spécification de connexion](./api/update-connection-specs.md).
    * Suivez le tutoriel sur [Ajout de votre nouvel identifiant de spécification de connexion à une spécification de flux](./api/update-flow-specs.md)
    * [Envoyer votre nouvelle source](./api/submit.md).
-* Pour une meilleure compréhension de la structure et des propriétés d’une spécification de connexion, consultez le guide sur [options de configuration du SDK Sources](./config/config.md);
-   * Consultez le guide sur la [configuration de vos spécifications d’authentification](./config/authspec.md);
-   * Consultez le guide sur la [configuration des spécifications source](./config/sourcespec.md);
-   * Consultez le guide sur la [configuration de vos spécifications d’exploration](./config/explorespec.md);
-* Pour commencer à documenter votre source, reportez-vous à la section [Présentation de la création de la documentation pour le SDK Sources](./documentation/doc-overview.md)
-   * Vous pouvez utiliser [modèle de documentation de l’API sources](./documentation/template.md) pour structurer la documentation de votre API ;
-   * Vous pouvez utiliser [modèle de documentation de l’interface utilisateur de sources](./documentation/ui-template.md) pour structurer la documentation de votre interface utilisateur ;
-   * Consultez le guide sur la [utilisation de l’interface web GitHub](./documentation/github.md) pour savoir comment créer de la documentation à l’aide de GitHub ;
+* Pour une meilleure compréhension de la structure et des propriétés d’une spécification de connexion, consultez le guide sur [options de configuration pour les sources en libre-service (SDK par lots)](./config/config.md).
+   * Lisez le guide sur [configuration de vos spécifications d’authentification](./config/authspec.md) pour mieux comprendre les différents types d’authentification que vous pouvez utiliser pour votre source.
+   * Lisez le guide sur [configuration des spécifications source](./config/sourcespec.md) pour plus d’informations sur les différents types de pagination, les formats de planification et les schémas personnalisés qui peuvent être configurés pour votre source.
+   * Lisez le guide sur [configuration de vos spécifications d’exploration](./config/explorespec.md) pour plus d’informations sur la manière de définir les paramètres requis pour l’exploration et l’inspection des objets contenus dans votre source.
+* Pour commencer à documenter votre source, lisez le [Présentation de la création de documentation pour les sources en libre-service](./documentation/doc-overview.md)
+   * Vous pouvez utiliser [modèle de documentation de l’API sources](./documentation/template.md) pour structurer la documentation de votre API.
+   * Vous pouvez utiliser [modèle de documentation de l’interface utilisateur de sources](./documentation/ui-template.md) pour structurer la documentation de votre interface utilisateur.
+   * Consultez le guide sur la [utilisation de l’interface web GitHub](./documentation/github.md) pour savoir comment créer de la documentation à l’aide de GitHub.
    * Consultez le guide sur la [utilisation d’un éditeur de texte](./documentation/text-editor.md) pour savoir comment créer de la documentation à l’aide de votre ordinateur local.

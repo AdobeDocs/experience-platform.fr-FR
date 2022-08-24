@@ -1,30 +1,24 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
 solution: Experience Platform
-title: Prise en main du SDK de sources (version bêta)
+title: Prise en main des sources en libre-service (SDK par lots)
 topic-legacy: developer guide
-description: Ce document présente les informations prérequises que vous devez connaître avant de tenter de créer une source à l’aide du SDK Sources.
-hide: true
-hidefromtoc: true
+description: Ce document présente les informations prérequises que vous devez connaître avant de tenter de créer une source à l’aide de sources en libre-service (SDK par lots).
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 57%
+source-wordcount: '387'
+ht-degree: 52%
 
 ---
 
-# Prise en main du SDK de sources (version bêta)
+# Prise en main des sources en libre-service (SDK par lots)
 
->[!IMPORTANT]
->
->Le SDK Sources est actuellement en version Beta et votre organisation n’y a peut-être pas encore accès. Les fonctionnalités décrites dans cette documentation peuvent changer.
-
-Le SDK Sources vous permet d’intégrer votre propre source REST pour importer des données dans Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels au [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Les sources en libre-service (SDK par lots) vous permettent d’intégrer votre propre source REST pour importer des données par lots dans Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels au [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Conditions préalables
 
-Pour utiliser le SDK Sources, vous devez vous assurer que vous avez accès à un environnement de test d’organisation IMS fourni avec les sources Adobe Experience Platform.
+Pour utiliser des sources en libre-service (SDK par lots), vous devez vous assurer que vous avez accès à un environnement de test d’organisation IMS fourni avec des sources Adobe Experience Platform.
 
 Ce guide nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
 
@@ -33,7 +27,7 @@ Ce guide nécessite également une compréhension pratique des composants suivan
 
 ## Lecture d’exemples d’appels API
 
-Le SDK Sources et [!DNL Flow Service] La documentation des API fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
+Les sources en libre-service (SDK par lots) et [!DNL Flow Service] La documentation des API fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
 
 ## Collecte des valeurs des en-têtes requis
 
@@ -57,4 +51,4 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ## Étapes suivantes
 
-Pour commencer à créer une source avec le SDK Sources, consultez le tutoriel sur [création d’une source](./create.md).
+Pour commencer à créer une source avec des sources en libre-service (SDK par lots), consultez le tutoriel sur [création d’une source](./create.md).

@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
-title: Mise à jour d’une spécification de connexion à l’aide de l’API Flow Service (bêta)
+title: Mise à jour d’une spécification de connexion à l’aide de l’API Flow Service
 topic-legacy: developer guide
 description: Vous pouvez mettre à jour les propriétés d’une spécification de connexion par le biais d’une opération de PUT.
-hide: true
-hidefromtoc: true
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '118'
 ht-degree: 14%
 
 ---
 
-# Mise à jour d’une spécification de connexion à l’aide de l’API Flow Service (bêta)
+# Mise à jour d’une spécification de connexion à l’aide de l’API Flow Service
 
 Vous pouvez mettre à jour les propriétés d’une spécification de connexion par le biais d’une opération de PUT. Lors de la mise à jour d’une spécification de connexion via une requête de PUT, le corps doit inclure tous les champs requis lors de la création d’une spécification de connexion dans une requête de POST.
 

@@ -4,21 +4,15 @@ solution: Experience Platform
 title: Document source
 topic-legacy: overview
 description: La dernière étape avant que votre nouvelle source puisse être mise en ligne dans Adobe Experience Platform consiste à documenter votre nouvelle source.
-hide: true
-hidefromtoc: true
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: e732a43f7ac578d7fde41c48d2c819899fabb0be
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 0%
+source-wordcount: '411'
+ht-degree: 3%
 
 ---
 
 # Document de votre source
-
->[!IMPORTANT]
->
->Le SDK Sources est actuellement en version bêta et votre entreprise n’y a peut-être pas encore accès. Les fonctionnalités décrites dans cette documentation peuvent faire l’objet de modifications.
 
 La dernière étape avant de pouvoir définir votre nouvelle source en direct dans Adobe Experience Platform consiste à documenter votre nouvelle source.
 

@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
-title: Configuration des spécifications d’authentification pour le SDK Sources
+title: Configuration des spécifications d’authentification pour les sources en libre-service (SDK par lots)
 topic-legacy: overview
-description: Ce document présente les configurations que vous devez préparer pour utiliser le SDK Sources.
-hide: true
-hidefromtoc: true
+description: Ce document présente les configurations que vous devez préparer pour utiliser les sources en libre-service (SDK par lots).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: a3bfd3b87343ca1dd2d122f4f82926082965578c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 2%
+source-wordcount: '535'
+ht-degree: 5%
 
 ---
 
-# Configuration des spécifications d’authentification pour le SDK Sources
+# Configuration des spécifications d’authentification pour les sources en libre-service (SDK par lots)
 
 Les spécifications d’authentification définissent la manière dont les utilisateurs de Adobe Experience Platform peuvent se connecter à votre source.
 
@@ -21,7 +19,7 @@ Le `authSpec` contient des informations sur les paramètres d’authentification
 
 ## Spécifications d’authentification
 
-Actuellement, [!DNL Sources SDK] prend en charge les codes d’actualisation OAuth 2 et l’authentification de base. Consultez les tableaux ci-dessous pour obtenir des conseils sur l’utilisation d’un code d’actualisation OAuth 2 et l’authentification de base.
+Les sources en libre-service (SDK par lots) prennent en charge les codes d’actualisation OAuth 2 et l’authentification de base. Consultez les tableaux ci-dessous pour obtenir des conseils sur l’utilisation d’un code d’actualisation OAuth 2 et l’authentification de base.
 
 ### Code d’actualisation OAuth 2
 
@@ -36,10 +34,6 @@ Un code d’actualisation OAuth 2 permet un accès sécurisé à une application
     "type": "object",
     "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path."
-      },
       "authorizationTestUrl": {
         "description": "Authorization test url to validate accessToken.",
         "type": "string"

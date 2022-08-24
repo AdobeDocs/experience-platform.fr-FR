@@ -4,10 +4,8 @@ solution: Experience Platform
 title: Modèle de libre-service de documentation
 topic-legacy: tutorial
 description: Découvrez comment connecter Adobe Experience Platform à YOURSOURCE à l’aide de l’API Flow Service.
-hide: true
-hidefromtoc: true
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
 source-wordcount: '2296'
 ht-degree: 75%

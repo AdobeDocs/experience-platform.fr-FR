@@ -4,16 +4,15 @@ solution: Experience Platform
 title: Utilisation d’un éditeur de texte dans votre environnement local pour créer une page de documentation sur les sources
 topic-legacy: tutorial
 description: Ce document décrit les étapes à suivre pour utiliser votre environnement local afin de créer de la documentation pour votre source et d’envoyer une requête de tirage (PR).
-hide: true
-hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 3%
+source-wordcount: '650'
+ht-degree: 8%
 
 ---
 
-# Utilisation d’un éditeur de texte dans votre environnement local pour créer une page de documentation sur les sources
+# Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation sur les sources
 
 Ce document décrit les étapes à suivre pour utiliser votre environnement local afin de créer de la documentation pour votre source et d’envoyer une requête de tirage (PR).
 
@@ -71,7 +70,7 @@ Ensuite, saisissez `Adobe Markdown Authoring` dans la barre de recherche, puis s
 
 ![install](../assets/install.png)
 
-Lorsque votre ordinateur local est prêt, téléchargez le fichier [modèle de documentation sources](../assets/template.zip) et extrayez le fichier vers `experience-platform.en/help/sources/tutorials/api/create/...` avec [`...`] représentant la catégorie de votre choix. Par exemple, si vous créez une source de stockage dans le cloud, sélectionnez le dossier de stockage dans le cloud.
+Lorsque votre ordinateur local est prêt, téléchargez le fichier [modèle de documentation sources](../assets/template.zip) et extrayez le fichier vers `experience-platform.en/help/sources/tutorials/api/create/...` avec [`...`] représentant la catégorie de votre choix. Par exemple, si vous créez une source de base de données, sélectionnez le dossier de base de données.
 
 Enfin, suivez les instructions décrites dans le modèle et modifiez-le avec les informations pertinentes concernant votre source.
 

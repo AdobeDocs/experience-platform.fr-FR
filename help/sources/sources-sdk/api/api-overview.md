@@ -1,28 +1,23 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
-title: Guide de l’API du SDK Sources (version bêta)
+title: Guide de l’API des sources en libre-service (SDK par lots)
 topic-legacy: overview
 description: Ce document présente le processus de création d’une source, ainsi que les étapes de récupération, d’écriture et d’envoi d’une nouvelle spécification de connexion à l’aide de l’API Flow Service.
-hide: true
-hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 5%
+source-wordcount: '488'
+ht-degree: 11%
 
 ---
 
-# Guide de l’API du SDK Sources (version bêta)
-
->[!IMPORTANT]
->
->Le SDK Sources est actuellement en version bêta et votre entreprise n’y a peut-être pas encore accès. Les fonctionnalités décrites dans cette documentation peuvent faire l’objet de modifications.
+# Guide de l’API des sources en libre-service (SDK par lots)
 
 Ce document présente le processus de création d’une source, ainsi que les étapes d’écriture et d’envoi d’une nouvelle spécification de connexion à l’aide de la fonction [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-[!DNL Flow Service] est utilisé pour collecter et centraliser des données client à partir de diverses sources disparates dans Platform. Le service fournit une interface utilisateur et une API RESTful qui vous permettent de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent d’authentifier vos systèmes tiers, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+[!DNL Flow Service] est utilisé pour collecter et centraliser les données client provenant de diverses sources dans Platform. Le service fournit une interface utilisateur et une API RESTful qui vous permettent de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent d’authentifier vos systèmes tiers, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
-Le [!DNL Flow Service] L’API fournit plusieurs points de terminaison qui vous permettent de gérer par programmation les spécifications de connexion et de flux pour une nouvelle source que vous intégrez via le SDK Sources.
+Le [!DNL Flow Service] L’API fournit plusieurs points de terminaison qui vous permettent de gérer par programmation les spécifications de connexion et de flux pour une nouvelle source que vous intégrez par le biais de sources en libre-service (SDK par lot).
 
 ## Création d’une spécification de connexion
 
@@ -50,4 +45,4 @@ Pour envoyer votre source pour l’intégration à Experience Platform, vous dev
 
 ## Étapes suivantes
 
-Pour commencer à utiliser la variable [!DNL Flow Service] API et créer une source via le SDK Sources, lisez la section [guide de prise en main](./getting-started.md) sélectionnez ensuite l’un des guides de point de fin pour savoir comment utiliser des points de fin spécifiques.
+Pour commencer à utiliser la variable [!DNL Flow Service] API et créer une source via des sources en libre-service (SDK par lot), lisez la section [guide de prise en main](./getting-started.md) sélectionnez ensuite l’un des guides de point de fin pour savoir comment utiliser des points de fin spécifiques.
