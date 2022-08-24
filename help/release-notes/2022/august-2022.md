@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Août 2022
 description: Notes de mise à jour d’août 2022 pour Adobe Experience Platform.
-source-git-commit: 925991d58c3cdd84e13b12a095e9681b8f4b254b
+source-git-commit: 5967dee9c8b1c05ebd103998021e02a47ac3982c
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 35%
+source-wordcount: '1246'
+ht-degree: 43%
 
 ---
 
@@ -16,6 +16,8 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 - [Préparation de données](#data-prep)
 - [Modèle de données d’expérience (XDM)](#xdm)
+- [Profil client en temps réel](#profile)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -63,6 +65,30 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 {style=&quot;table-layout:auto&quot;}
 
 Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
+
+## Profil client en temps réel {#profile}
+
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Profil client en temps réel offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le Profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Nettoyage des attributs de périphérie du profil orphelins | Pour toutes les organisations, le service de profil supprime désormais quotidiennement les attributs de périphérie restants de la région d’activité des utilisateurs afin d’offrir une représentation plus précise de vos profils dans votre système. Ce nettoyage se produit une fois que tous les fragments de profil d’un profil donné sont supprimés et doit avoir une incidence sur les profils fusionnés à partir des jeux de données où `com_adobe_aep_profile_region_dataset` est marqué comme `true`. Des mesures inférieures pourraient alors s’afficher dans « Audience adressable » dans le tableau de bord de l’utilisation des licences et « Nombre de profils » dans le tableau de bord des profils. En effet, ces mesures incluaient des fragments d’attributs restants avant cette mise à jour. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour en savoir plus sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à lʼutilisation des données de profil, consultez la [présentation du profil client en temps réel](../../profile/home.md).
+
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Prise en charge de 4 000 segments | Toutes les organisations disposant de Platform peuvent désormais prendre en charge jusqu’à 4 000 définitions de segment. Pour plus d’informations sur l’impact de cette modification sur les API de tâche de segmentation, consultez la section [guide de point de fin de tâche de segmentation](../../segmentation/api/segment-jobs.md) |
+
+Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md).
 
 ## Sources {#sources}
 
