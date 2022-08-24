@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Août 2022
 description: Notes de mise à jour d’août 2022 pour Adobe Experience Platform.
-source-git-commit: c3452dda554b3c7750ad1166cef598d51d739e02
+source-git-commit: 208dbba4c2ed4abb51b90073eeee0663e2b2f35f
 workflow-type: tm+mt
-source-wordcount: '1348'
-ht-degree: 41%
+source-wordcount: '1861'
+ht-degree: 36%
 
 ---
 
@@ -14,12 +14,50 @@ ht-degree: 41%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Préparation de données](#data-prep)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Profil client en temps réel](#profile)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+Les services d’IA/ML permettent aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Cela permet aux analystes marketing de configurer des modèles spécifiques aux besoins d’une entreprise à l’aide de configurations au niveau de l’entreprise sans avoir besoin d’expertise en science des données.
+
+### IA dédiée à l’attribution
+
+L’IA dédiée à l’attribution est utilisée pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Prise en charge de la confidentialité | <li> Attribution AI prend désormais en charge la définition des rôles utilisateur et des stratégies d’accès pour gérer les [permissions](../../help/access-control/abac/ui/permissions.md) pour les fonctions et les objets au sein d’une application de produit. </li><li>Les ressources du journal d’audit sont automatiquement enregistrées lorsque l’activité se produit.</li> <li> Via [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), les administrateurs peuvent contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction de certains attributs, qui peuvent être des métadonnées ajoutées à un objet, comme des libellés. Les administrateurs peuvent également définir des rôles utilisateur ayant accès à des champs et des données spécifiques qui correspondent à ces champs.</li> <li>[Hygiène des données](../../help/hygiene/home.md) Les fonctionnalités d’Attribution AI vous permettent d’utiliser uniquement des données mises à jour pour une formation et une notation supplémentaires. De même, lorsque vous demandez la suppression de données, Attribution AI s’abstient d’utiliser les données supprimées.</li><li>Attribution AI exploite les jeux de données Platform. Pour faciliter la conformité au RGPD, vous pouvez utiliser Adobe Experience Platform Privacy Service pour configurer des protocoles afin d’honorer les demandes des clients d’accès et de suppression de leurs données dans le lac de données, Identity Service et Real-time Customer Profile. Toutes les données sont cryptées en transit et au repos.</li> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Remarque**: Attribution AI ne sera disponible pour les clients de Healthcare Shield qu’à la fin du 4e trimestre 2022.
+
+Pour plus d’informations sur Attribution AI, reportez-vous à la section [Attribution AI](../../intelligent-services/attribution-ai/overview.md) aperçu.
+
+### IA dédiée aux clients
+
+L’IA dédiée aux clients disponible dans Real-time Customer Data Platform est utilisée pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Prise en charge de la confidentialité | <li> Customer AI prend désormais en charge la définition des rôles utilisateur et des stratégies d’accès pour gérer les [permissions](../../help/access-control/abac/ui/permissions.md) pour les fonctions et les objets au sein d’une application de produit. </li><li>Les ressources du journal d’audit sont automatiquement enregistrées lorsque l’activité se produit.</li> <li> Via [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), les administrateurs peuvent contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction de certains attributs. Ces attributs peuvent être des métadonnées ajoutées à un objet, comme des libellés. Les administrateurs peuvent également définir des rôles utilisateur ayant accès uniquement à des champs et données spécifiques qui correspondent à ces champs.</li> <li>[Hygiène des données](../../help/hygiene/home.md) Les fonctionnalités de Customer AI vous permettent d’utiliser uniquement des données mises à jour pour une formation et une notation supplémentaires. De même, lorsque vous demandez la suppression de données, Customer AI s’abstient d’utiliser les données supprimées.</li><li>Customer AI exploite des jeux de données Platform. Pour faciliter la conformité au RGPD, vous pouvez utiliser Adobe Experience Platform Privacy Service pour configurer des protocoles afin d’honorer les demandes des clients d’accès et de suppression de leurs données dans le lac de données, Identity Service et Real-time Customer Profile. Toutes les données sont cryptées en transit et au repos.</li> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Remarque**: Customer AI ne sera disponible pour les clients de Healthcare Shield qu’à la fin du 4e trimestre 2022.
+
+Pour plus d’informations sur Customer AI, voir [Customer AI](../../intelligent-services/customer-ai/overview.md) aperçu.
 
 ## [!DNL Dashboards] {#dashboards}
 
