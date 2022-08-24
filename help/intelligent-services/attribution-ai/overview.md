@@ -6,7 +6,7 @@ topic-legacy: Attribution AI
 description: Attribution AI est utilisé pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client. Les impressions de publicités affichées, les envois de courriers électroniques, les ouvertures de courriers électroniques ainsi que les clics de référencement payants sont autant d’exemples de points de contact.
 landing-page-description: L’IA dédiée à l’attribution est utilisée pour attribuer des crédits aux points de contact qui génèrent des événements de conversion. Il peut aider les spécialistes du marketing à quantifier l’impact publicitaire de chaque point de contact marketing sur le parcours client.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: a71da02b7cef5870bc9ca689a47c25098b2297b8
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 90%
@@ -43,7 +43,7 @@ Attribution AI peut fournir une assistance pour les cas d’utilisation suivants
 
 ### Fonctionnalités supplémentaires
 
-Attribution AI offre également l’intégration à d’autres solutions Adobe telles que [!DNL Adobe Analytics]. Vous pouvez ainsi utiliser ces solutions pour vous servir du modèle algorithmique personnalisable afin d’évaluer les performances du média et de fournir des informations analytiques.
+Attribution AI offre également l’intégration à d’autres solutions Adobe telles que [!DNL Customer Journey Analytics]. Vous pouvez ainsi utiliser ces solutions pour vous servir du modèle algorithmique personnalisable afin d’évaluer les performances du média et de fournir des informations analytiques.
 
 ## Étapes suivantes
 

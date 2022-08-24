@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur Attribution AI
 topic-legacy: User guide
 description: Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
+source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
 workflow-type: tm+mt
-source-wordcount: '2331'
-ht-degree: 40%
+source-wordcount: '2716'
+ht-degree: 37%
 
 ---
 
@@ -261,6 +261,36 @@ Pour vous assurer d’obtenir le modèle le plus précis possible, il est import
 Une fois la fenêtre de formation sélectionnée, sélectionnez **[!UICONTROL Terminer]** dans le coin supérieur droit. Prévoyez un certain temps pour le traitement des données. Une fois cette opération terminée, une boîte de dialogue s’affiche, confirmant que la configuration de l’instance est terminée. Sélectionner **[!UICONTROL Ok]** pour être redirigé vers le **[!UICONTROL Instances de service]** où vous pouvez voir votre instance de service.
 
 ![configuration terminée](./images/user-guide/instance_setup_complete.png)
+
+### Contrôle d’accès basé sur attribut
+
+>[!IMPORTANT]
+>
+>Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée uniquement.
+
+[Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.](../../../help/access-control/abac/overview.md) Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. Un administrateur définit des stratégies d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
+
+Cette fonctionnalité vous permet d’étiqueter les champs de schéma du modèle de données d’expérience (XDM) avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. En parallèle, les administrateurs peuvent utiliser l’interface d’administration des utilisateurs et des rôles pour définir des stratégies d’accès autour des champs de schéma XDM et mieux gérer l’accès attribué aux utilisateurs ou groupes d’utilisateurs (utilisateurs internes, externes ou tiers). Enfin, le contrôle d’accès basé sur les attributs permet aux administrateurs de gérer l’accès à des segments spécifiques.
+
+Grâce au contrôle d’accès basé sur les attributs, les administrateurs peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD) et aux informations d’identification personnelle (PII) sur l’ensemble des workflows et ressources de Platform. Les administrateurs peuvent définir des rôles utilisateur ayant accès uniquement à des champs et données spécifiques qui correspondent à ces champs.
+
+En raison du contrôle d’accès basé sur les attributs, certains champs et certaines fonctionnalités peuvent avoir un accès limité et ne pas être disponibles pour certaines instances de service Attribution AI. Par exemple, &quot;Identité&quot;, &quot;Définition de score&quot; et &quot;Cloner&quot;.
+
+En haut de l’espace de travail Attribution AI **page insights**, les détails affichés dans la barre latérale ont un accès restreint.
+
+![Espace de travail Attribution AI avec les champs restreints du schéma mis en surbrillance.](./images/user-guide/access-restricted.png)
+
+Si vous sélectionnez des jeux de données avec des schémas restreints sur la variable **[!UICONTROL Workflow Créer une instance]** , un signe d’avertissement s’affiche en regard du nom du jeu de données avec le message : [!UICONTROL Les informations restreintes sont exclues].
+
+![Espace de travail Attribution AI avec les champs restreints des jeux de données sélectionnés avec les résultats de schémas restreints mis en surbrillance.](./images/user-guide/restricted-info-excluded.png)
+
+Lorsque vous prévisualisez des jeux de données avec un schéma limité sur l’objet **[!UICONTROL Workflow Créer une instance]** , un avertissement s’affiche pour vous informer que [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans l’aperçu du jeu de données.]
+
+![Espace de travail Attribution AI avec les champs restreints des résultats du schéma prévisualisé mis en surbrillance.](./images/user-guide/restricted-dataset-preview.png)
+
+Après avoir créé une instance contenant des informations restreintes, passez à la **[!UICONTROL Définition d’un objectif]** , un avertissement s’affiche en haut de l’écran : [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans la configuration.]
+
+![Espace de travail Attribution AI avec les champs restreints des résultats de l’instance mis en surbrillance.](./images/user-guide/information-not-displayed.png)
 
 ## Étapes suivantes
 

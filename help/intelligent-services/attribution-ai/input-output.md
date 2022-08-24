@@ -5,10 +5,10 @@ title: Entrée et sortie dans Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Le document suivant décrit les différentes entrées et sorties utilisées dans Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 3ea17aa57a5bfbc968f354b13d2ed107b2efa39b
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '2392'
-ht-degree: 14%
+source-wordcount: '2476'
+ht-degree: 13%
 
 ---
 
@@ -234,6 +234,12 @@ Le tableau ci-dessous associe les scores agrégés aux scores bruts. Si vous sou
 | action | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
 | campaign_group | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
 | campaign_name | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignName |
+
+>[!IMPORTANT]
+>
+> - Attribution AI utilise uniquement des données mises à jour pour la formation et la notation ultérieures. De même, lorsque vous demandez la suppression de données, Attribution AI s’abstient d’utiliser les données supprimées.
+> - Pour faciliter la conformité au RGPD dans Attribution AI, vous pouvez utiliser Adobe Experience Platform Privacy Service pour configurer des protocoles afin d’honorer les demandes des clients d’accès et de suppression de leurs données dans le lac de données, Identity Service et Real-time Customer Profile.
+> - Toutes les données sont cryptées en transit et au repos. Consultez la documentation pour en savoir plus sur [cryptage des données](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## Étapes suivantes {#next-steps}

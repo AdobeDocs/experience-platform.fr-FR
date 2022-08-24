@@ -6,10 +6,10 @@ title: Entrée et sortie dans Customer AI
 topic-legacy: Getting started
 description: En savoir plus sur les événements, les entrées et les sorties requis utilisés par Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '3096'
-ht-degree: 16%
+source-wordcount: '3180'
+ht-degree: 15%
 
 ---
 
@@ -283,6 +283,13 @@ Le tableau ci-dessous décrit les différents attributs trouvés dans les sortie
 | Type de propension | Le type de propension sélectionné. |
 | Date de la note | Date à laquelle la notation a eu lieu. |
 | Facteurs d’influence | Raisons prévues de la probabilité de conversion ou d’attrition d’un profil. Les facteurs se composent des attributs suivants :<ul><li>Code : le profil ou l’attribut comportemental qui influencent positivement le score prévu d’un profil. </li><li>Valeur : la valeur du profil ou de l’attribut comportemental.</li><li>Importance : indique le poids que le profil ou l’attribut comportemental a sur le score prévu (faible, moyen, élevé)</li></ul> |
+
+>[!NOTE]
+>
+> - Customer AI utilise uniquement des données mises à jour pour suivre une formation et une notation plus poussées. De même, lorsque vous demandez la suppression de données, Customer AI s’abstient d’utiliser les données supprimées.
+> - Pour faciliter la conformité au RGPD dans Customer AI, vous pouvez utiliser Adobe Experience Platform Privacy Service pour configurer des protocoles afin de répondre aux demandes des clients d’accès et de suppression de leurs données dans le lac de données, Identity Service et Real-time Customer Profile.
+> - Toutes les données sont cryptées en transit et au repos. Consultez la documentation pour en savoir plus sur [cryptage des données](../../../help/landing/governance-privacy-security/encryption.md)
+
 
 ## Étapes suivantes {#next-steps}
 

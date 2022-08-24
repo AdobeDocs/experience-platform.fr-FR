@@ -4,20 +4,21 @@ solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Configuration d’une instance Customer AI
 topic-legacy: Instance creation
-description: Intelligent Services fournit Customer AI en tant que service Adobe Sensei simple d’emploi pouvant être configuré pour de multiples cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
+description: Les services AI/ML fournissent Customer AI en tant que service Adobe Sensei simple d’utilisation pouvant être configuré pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: c4e1d739bf54cbebf6a04d87f92d0df4bdbc083e
+source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
 workflow-type: tm+mt
-source-wordcount: '2618'
+source-wordcount: '3088'
 ht-degree: 11%
 
 ---
 
+
 # Configuration d’une instance Customer AI
 
-Dans le cadre d’Intelligent Services, Customer AI vous permet de générer des scores de propension personnalisés sans avoir à vous soucier de l’apprentissage automatique.
+Dans le cadre des services AI/ML, Customer AI vous permet de générer des scores de propension personnalisés sans avoir à vous soucier de l’apprentissage automatique.
 
-Intelligent Services fournit Customer AI en tant que service Adobe Sensei simple d’emploi pouvant être configuré pour de multiples cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
+Les services AI/ML fournissent Customer AI en tant que service Adobe Sensei simple d’utilisation pouvant être configuré pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 
 ## Création d’une instance {#set-up-your-instance}
 
@@ -191,6 +192,18 @@ Vous pouvez définir des champs de jeu de données Profile importants (avec horo
 
 ![ajout d’un attribut de profil personnalisé](../images/user-guide/profile-attributes.png)
 
+#### Sélection d’attributs de profil à partir de l’exportation de l’instantané de profil
+
+Vous pouvez également choisir d’inclure les attributs de profil de l’exportation instantanée quotidienne de Profile. Ces attributs sont synchronisés avec l’exportation de l’instantané de profil et affichent la valeur la plus récente disponible.
+
+>[!WARNING]
+>
+> Veillez à ne pas sélectionner un attribut de profil mis à jour en raison de l’objectif de prédiction ou fortement corrélé avec l’objectif de prédiction. Cela entraîne une fuite de données et un surexploitation du modèle. Un exemple d’attribut de ce type est `total_purchases_in_the_last_3_months` qui prévoit la conversion des achats.
+
+>[!NOTE]
+>
+>La prise en charge de l’utilisation des attributs de profil à partir de l’exportation instantanée UPS est disponible dans l’interface utilisateur sur demande.
+
 ### Ajout d’un exemple d’événement personnalisé {#custom-event}
 
 Dans l’exemple suivant, un événement personnalisé et un attribut de profil sont ajoutés à une instance Customer AI. L’objectif de l’instance Customer AI est de prévoir la probabilité qu’un client achète un autre produit Luma dans les 60 prochains jours. Normalement, les données de produit sont liées à un SKU de produit. Dans ce cas, le SKU est `prd1013`. Une fois le modèle Customer AI formé/noté, ce SKU peut être lié à un événement et affiché comme facteur d’influence pour un compartiment de propension.
@@ -234,6 +247,38 @@ Si l’instance est créée avec succès, une opération de prédiction se décl
 >Selon le volume des données d’entrée, les opérations de prédiction peuvent durer jusqu’à 24 heures.
 
 En suivant cette section, vous avez configuré une instance de Customer AI et exécuté une opération de prédiction. Une fois l’exécution terminée, les insights notés renseignent automatiquement les profils avec les scores prévus si le bouton bascule du profil est activé. Veuillez patienter jusqu’à 24 heures avant de passer à la section suivante de ce tutoriel.
+
+### Contrôle d’accès basé sur attribut
+
+>[!IMPORTANT]
+>
+>Le contrôle d’accès basé sur les attributs est actuellement disponible dans une version limitée uniquement.
+
+[Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.](../../../access-control/abac/overview.md) Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. Un administrateur définit des stratégies d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
+
+Cette fonctionnalité vous permet d’étiqueter les champs de schéma du modèle de données d’expérience (XDM) avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. En parallèle, les administrateurs peuvent utiliser l’interface d’administration des utilisateurs et des rôles pour définir des stratégies d’accès autour des champs de schéma XDM et mieux gérer l’accès attribué aux utilisateurs ou groupes d’utilisateurs (utilisateurs internes, externes ou tiers). Enfin, le contrôle d’accès basé sur les attributs permet aux administrateurs de gérer l’accès à des segments spécifiques.
+
+Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD) et aux informations d’identification personnelle (PII) sur l’ensemble des workflows et ressources de Platform. Les administrateurs peuvent définir des rôles d’utilisateur qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.
+
+En raison du contrôle d’accès basé sur les attributs, certains champs et certaines fonctionnalités ont un accès limité et ne sont pas disponibles pour certaines instances de service Customer AI. Par exemple, &quot;Identité&quot;, &quot;Définition de score&quot; et &quot;Cloner&quot;.
+
+![L’espace de travail Customer AI avec les champs restreints de l’instance de service est mis en surbrillance.](../images/user-guide/unavailable-functionalities.png)
+
+En haut de l’espace de travail de Customer AI **page insights**, notez que les détails de la barre latérale, de la définition de score, de l’identité et des attributs de profil affichent tous &quot;Accès limité&quot;.
+
+![Espace de travail Customer AI avec les champs restreints du schéma mis en surbrillance.](../images/user-guide/access-restricted.png)
+
+<!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
+
+![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
+
+Lorsque vous prévisualisez des jeux de données avec un schéma limité sur l’objet **[!UICONTROL Workflow Créer une instance]** , un avertissement s’affiche pour vous informer que [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans l’aperçu du jeu de données.]
+
+![L’espace de travail Customer AI avec les champs restreints des jeux de données d’aperçu avec les résultats de schéma limités mis en surbrillance.](../images/user-guide/restricted-dataset-preview.png)
+
+Après avoir créé une instance contenant des informations restreintes, passez à la **[!UICONTROL Définition d’un objectif]** , un avertissement s’affiche en haut de l’écran : [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans la configuration.]
+
+![L’espace de travail Customer AI avec les champs restreints de l’instance de service est mis en surbrillance.](../images/user-guide/information-not-displayed.png)
 
 ## Étapes suivantes {#next-steps}
 
