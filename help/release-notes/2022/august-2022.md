@@ -1,10 +1,11 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Août 2022
 description: Notes de mise à jour d’août 2022 pour Adobe Experience Platform.
-source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
+exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
+source-git-commit: 30aa5db39d63c238a3f70e48f6a88e8885b1f3ee
 workflow-type: tm+mt
-source-wordcount: '1811'
-ht-degree: 34%
+source-wordcount: '1963'
+ht-degree: 35%
 
 ---
 
@@ -14,10 +15,10 @@ ht-degree: 34%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
-- [Préparation de données](#data-prep)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Profil client en temps réel](#profile)
 - [Segmentation Service](#segmentation)
@@ -35,7 +36,7 @@ L’IA dédiée à l’attribution est utilisée pour attribuer des crédits aux
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge de la confidentialité | <li> Attribution AI prend désormais en charge la définition des rôles utilisateur et des stratégies d’accès pour gérer les [permissions](../../help/access-control/abac/ui/permissions.md) pour les fonctions et les objets au sein d’une application de produit. </li><li>Les ressources du journal d’audit sont automatiquement enregistrées lorsque l’activité se produit.</li> <li> Via [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), les administrateurs peuvent contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction de certains attributs, qui peuvent être des métadonnées ajoutées à un objet, comme des libellés. Les administrateurs peuvent également définir des rôles utilisateur ayant accès à des champs et des données spécifiques qui correspondent à ces champs.</li> <li>[Hygiène des données](../../help/hygiene/home.md) Les fonctionnalités d’Attribution AI vous permettent d’utiliser uniquement des données mises à jour pour une formation et une notation supplémentaires. De même, lorsque vous demandez la suppression de données, Attribution AI s’abstient d’utiliser les données supprimées.</li><li>Attribution AI exploite les jeux de données Platform. Pour faciliter la conformité au RGPD, vous pouvez utiliser Adobe Experience Platform Privacy Service pour configurer des protocoles afin d’honorer les demandes des clients d’accès et de suppression de leurs données dans le lac de données, Identity Service et Real-time Customer Profile. Toutes les données sont cryptées en transit et au repos.</li> |
+| Prise en charge de la confidentialité | <li>Attribution AI prend désormais en charge la définition des rôles utilisateur et des stratégies d’accès pour gérer les [permissions](../../../help/access-control/abac/ui/permissions.md) pour les fonctions et les objets au sein d’une application de produit.</li><li>Les ressources du journal d’audit sont automatiquement enregistrées lorsque l’activité se produit.</li><li>Via [contrôle d’accès basé sur les attributs](../../../help/access-control/abac/overview.md), les administrateurs peuvent contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction de certains attributs, qui peuvent être des métadonnées ajoutées à un objet, comme des libellés. Les administrateurs peuvent également définir des rôles utilisateur ayant accès à des champs et des données spécifiques qui correspondent à ces champs.</li><li>[Hygiène des données](../../../help/hygiene/home.md) Les fonctionnalités d’Attribution AI vous permettent d’utiliser uniquement des données mises à jour pour une formation et une notation supplémentaires. De même, lorsque vous demandez la suppression de données, Attribution AI s’abstient d’utiliser les données supprimées.</li><li>Attribution AI exploite les jeux de données Platform. Pour faciliter la conformité au RGPD, vous pouvez utiliser Adobe Experience Platform Privacy Service pour configurer des protocoles afin d’honorer les demandes des clients d’accès et de suppression de leurs données dans le lac de données, Identity Service et Real-time Customer Profile. Toutes les données sont cryptées en transit et au repos.</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -51,7 +52,7 @@ L’IA dédiée aux clients disponible dans Real-time Customer Data Platform 
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge de la confidentialité | <li> Customer AI prend désormais en charge la définition des rôles utilisateur et des stratégies d’accès pour gérer les [permissions](../../help/access-control/abac/ui/permissions.md) pour les fonctions et les objets au sein d’une application de produit. </li><li>Les ressources du journal d’audit sont automatiquement enregistrées lorsque l’activité se produit.</li> <li> Via [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), les administrateurs peuvent contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction de certains attributs. Ces attributs peuvent être des métadonnées ajoutées à un objet, comme des libellés. Les administrateurs peuvent également définir des rôles utilisateur ayant accès uniquement à des champs et données spécifiques qui correspondent à ces champs.</li> <li>[Hygiène des données](../../help/hygiene/home.md) Les fonctionnalités de Customer AI vous permettent d’utiliser uniquement des données mises à jour pour une formation et une notation supplémentaires. De même, lorsque vous demandez la suppression de données, Customer AI s’abstient d’utiliser les données supprimées.</li><li>Customer AI exploite des jeux de données Platform. Pour faciliter la conformité au RGPD, vous pouvez utiliser Adobe Experience Platform Privacy Service pour configurer des protocoles afin d’honorer les demandes des clients d’accès et de suppression de leurs données dans le lac de données, Identity Service et Real-time Customer Profile. Toutes les données sont cryptées en transit et au repos.</li> |
+| Prise en charge de la confidentialité | <li>Customer AI prend désormais en charge la définition des rôles utilisateur et des stratégies d’accès pour gérer les [permissions](../../../help/access-control/abac/ui/permissions.md) pour les fonctions et les objets au sein d’une application de produit.</li><li>Les ressources du journal d’audit sont automatiquement enregistrées lorsque l’activité se produit.</li><li> Via [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), les administrateurs peuvent contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction de certains attributs. Ces attributs peuvent être des métadonnées ajoutées à un objet, comme des libellés. Les administrateurs peuvent également définir des rôles utilisateur ayant accès uniquement à des champs et données spécifiques qui correspondent à ces champs.</li><li>[Hygiène des données](../../../help/hygiene/home.md) Les fonctionnalités de Customer AI vous permettent d’utiliser uniquement des données mises à jour pour une formation et une notation supplémentaires. De même, lorsque vous demandez la suppression de données, Customer AI s’abstient d’utiliser les données supprimées.</li><li>Customer AI exploite des jeux de données Platform. Pour faciliter la conformité au RGPD, vous pouvez utiliser Adobe Experience Platform Privacy Service pour configurer des protocoles afin d’honorer les demandes des clients d’accès et de suppression de leurs données dans le lac de données, Identity Service et Real-time Customer Profile. Toutes les données sont cryptées en transit et au repos.</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -84,6 +85,32 @@ Pour plus d’informations sur les [!DNL Dashboards], consultez la [[!DNL Dashbo
 {style=&quot;table-layout:auto&quot;}
 
 Pour en savoir plus sur [!DNL Data Prep], consultez la présentation de [[!DNL Data Prep] ](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+<!--
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+|  ||
+
+{style="table-layout:auto"}
+
+-->
+
+**Nouvelles destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) est une plateforme d’exécution des ventes qui possède le plus grand nombre de données d’interaction entre vendeurs et acheteurs B2B au monde et qui investit de manière significative dans des technologies d’IA propriétaires afin de traduire les données de vente en informations. [!DNL Outreach] aide les entreprises à automatiser l’engagement commercial et à agir sur la base de l’intelligence du chiffre d’affaires afin d’améliorer leur efficacité, leur prévisibilité et leur croissance. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
@@ -123,6 +150,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
+| Limite des stratégies de fusion | Platform appliquera désormais une limite stricte de **cinq** stratégies de fusion par environnement de test. Si votre environnement de test comporte actuellement plus de cinq stratégies de fusion, vous allez **not** être en mesure de créer de nouvelles stratégies de fusion jusqu’à ce que l’environnement de test comporte moins de cinq stratégies de fusion. |
 | Nettoyage des attributs de périphérie du profil orphelins | Pour toutes les organisations, le service de profil supprime désormais quotidiennement les attributs de périphérie restants de la région d’activité des utilisateurs afin d’offrir une représentation plus précise de vos profils dans votre système. Ce nettoyage se produit une fois que tous les fragments de profil d’un profil donné sont supprimés et doit avoir une incidence sur les profils fusionnés à partir des jeux de données où `com_adobe_aep_profile_region_dataset` est marqué comme `true`. Cela peut indiquer une baisse de la mesure &quot;Audience adressable&quot; dans le tableau de bord de l’utilisation des licences et une baisse de la mesure &quot;Nombre de profils&quot; dans le tableau de bord du profil, car ces mesures incluaient des fragments d’attribut de périphérie résiduels avant cette version. |
 
 {style=&quot;table-layout:auto&quot;}

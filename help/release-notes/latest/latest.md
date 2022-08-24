@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Dernières notes de mise à jour pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
+source-git-commit: 70bc3d8743dfa6c14e8a5c467775faa0c3c5a767
 workflow-type: tm+mt
-source-wordcount: '1810'
-ht-degree: 35%
+source-wordcount: '1962'
+ht-degree: 36%
 
 ---
 
@@ -17,7 +17,8 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
-- [Préparation de données](#data-prep)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Profil client en temps réel](#profile)
 - [Segmentation Service](#segmentation)
@@ -85,6 +86,32 @@ Pour plus d’informations sur les [!DNL Dashboards], consultez la [[!DNL Dashbo
 
 Pour en savoir plus sur [!DNL Data Prep], consultez la présentation de [[!DNL Data Prep] ](../../data-prep/home.md).
 
+## [!DNL Destinations] {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+<!--
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+|  ||
+
+{style="table-layout:auto"}
+
+-->
+
+**Nouvelles destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) est une plateforme d’exécution des ventes qui possède le plus grand nombre de données d’interaction entre vendeurs et acheteurs B2B au monde et qui investit de manière significative dans des technologies d’IA propriétaires afin de traduire les données de vente en informations. [!DNL Outreach] aide les entreprises à automatiser l’engagement commercial et à agir sur la base de l’intelligence du chiffre d’affaires afin d’améliorer leur efficacité, leur prévisibilité et leur croissance. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
+
 ## Modèle de données d’expérience (XDM) {#xdm}
 
 XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
@@ -123,6 +150,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
+| Limite des stratégies de fusion | Platform appliquera désormais une limite stricte de **cinq** stratégies de fusion par environnement de test. Si votre environnement de test comporte actuellement plus de cinq stratégies de fusion, vous allez **not** être en mesure de créer de nouvelles stratégies de fusion jusqu’à ce que l’environnement de test comporte moins de cinq stratégies de fusion. |
 | Nettoyage des attributs de périphérie du profil orphelins | Pour toutes les organisations, le service de profil supprime désormais quotidiennement les attributs de périphérie restants de la région d’activité des utilisateurs afin d’offrir une représentation plus précise de vos profils dans votre système. Ce nettoyage se produit une fois que tous les fragments de profil d’un profil donné sont supprimés et doit avoir une incidence sur les profils fusionnés à partir des jeux de données où `com_adobe_aep_profile_region_dataset` est marqué comme `true`. Cela peut indiquer une baisse de la mesure &quot;Audience adressable&quot; dans le tableau de bord de l’utilisation des licences et une baisse de la mesure &quot;Nombre de profils&quot; dans le tableau de bord du profil, car ces mesures incluaient des fragments d’attribut de périphérie résiduels avant cette version. |
 
 {style=&quot;table-layout:auto&quot;}

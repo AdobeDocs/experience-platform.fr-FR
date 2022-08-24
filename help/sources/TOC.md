@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: 9d615d70ce37c6dad683e9082db02697b9882ab3
+source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 91%
+source-wordcount: '820'
+ht-degree: 88%
 
 ---
 
@@ -292,23 +292,26 @@ ht-degree: 91%
    - [Supprimer des comptes](tutorials/ui/delete-accounts.md)
    - [Supprimer des flux de données](tutorials/ui/delete.md)
    - [S’abonner aux alertes sur les sources](tutorials/ui/alerts.md)
-- SDK Sources {#sdk}
+- Sources en libre-service (SDK par lots) {#sdk}
    - [Présentation](sources-sdk/overview.md)
-   - [Options de configuration](sources-sdk/config/config.md)
-   - [Configurer la spécification d’authentification](sources-sdk/config/authspec.md)
-   - [Configurer la spécification source](sources-sdk/config/sourcespec.md)
-   - [Configurer la spécification d’exploration](sources-sdk/config/explorespec.md)
-   - [Présentation de l’API SDK Sources](sources-sdk/api/api-overview.md)
-   - [Prise en main](sources-sdk/api/getting-started.md)
-   - [Créer une spécification de connexion](sources-sdk/api/create.md)
-   - [Mettre à jour une spécification de connexion](sources-sdk/api/update-connection-specs.md)
-   - [Mettre à jour une spécification de flux](sources-sdk/api/update-flow-specs.md)
-   - [Envoyer votre source](sources-sdk/api/submit.md)
-   - [Documenter une source dans Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
-   - [Utiliser l’interface web GitHub pour créer une page de documentation sur les sources](sources-sdk/documentation/github.md)
-   - [Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation sur les sources](sources-sdk/documentation/text-editor.md)
-   - [Modèle d’API en libre-service de documentation](sources-sdk/documentation/template.md)
-   - [Modèle d’interface utilisateur en libre-service de la documentation](sources-sdk/documentation/ui-template.md)
+   - Configuration de votre spécification de connexion {#config}
+      - [Options de configuration](sources-sdk/config/config.md)
+      - [Configurer la spécification d’authentification](sources-sdk/config/authspec.md)
+      - [Configurer la spécification source](sources-sdk/config/sourcespec.md)
+      - [Configurer la spécification d’exploration](sources-sdk/config/explorespec.md)
+   - Guide de l’API des sources en libre-service (SDK par lots) {#self-serve-api}
+      - [Présentation de l’API Sources en libre-service (SDK par lot)](sources-sdk/api/api-overview.md)
+      - [Prise en main](sources-sdk/api/getting-started.md)
+      - [Créer une spécification de connexion](sources-sdk/api/create.md)
+      - [Mettre à jour une spécification de connexion](sources-sdk/api/update-connection-specs.md)
+      - [Mettre à jour une spécification de flux](sources-sdk/api/update-flow-specs.md)
+      - [Envoyer votre source](sources-sdk/api/submit.md)
+   - Guide de documentation {#documentation}
+      - [Documenter une source dans Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
+      - [Utiliser l’interface web GitHub pour créer une page de documentation sur les sources](sources-sdk/documentation/github.md)
+      - [Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation sur les sources](sources-sdk/documentation/text-editor.md)
+      - [Modèle d’API en libre-service de documentation](sources-sdk/documentation/template.md)
+      - [Modèle d’interface utilisateur en libre-service de la documentation](sources-sdk/documentation/ui-template.md)
 - [Notifications d’exécution de flux](notifications.md)
 - [Liste autorisée d’adresses IP](ip-address-allow-list.md)
 - [Questions fréquentes](./troubleshooting.md)
