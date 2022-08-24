@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 'Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données Profile afin d’optimiser les performances du système. '
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8a343ad275dcfc33eb304e3fc19d375b81277448
+source-git-commit: e3813691af6477a0afbb47ed0fd53d5bb3834fd0
 workflow-type: tm+mt
 source-wordcount: '1941'
 ht-degree: 49%
@@ -109,9 +109,9 @@ Les barrières de sécurité décrites dans cette section font référence au no
 
 | Barrière de sécurité | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Segments par environnement de test | 10 000 | Soft | Une organisation peut avoir plus de 10,000 segments au total, à condition qu’il y ait moins de 10,000 segments dans chaque sandbox individuelle. Toute tentative de création de segments supplémentaires peut affecter les performances du système. |
+| Segments par environnement de test | 4000 | Soft | Une organisation peut avoir plus de 4000 segments au total, à condition qu’il y ait moins de 4000 segments dans chaque sandbox individuelle. Toute tentative de création de segments supplémentaires peut affecter les performances du système. |
 | Segments de diffusion en continu par environnement de test | 500 | Soft | Une organisation peut avoir plus de 500 segments en flux continu au total, à condition qu’il y ait moins de 500 segments en flux continu dans chaque environnement de test individuel. Toute tentative de création de segments de diffusion en continu supplémentaires peut affecter les performances du système. |
-| Segments par lot par environnement de test | 10 000 | Soft | Une organisation peut avoir plus de 10 000 segments par lot au total, à condition qu’il y ait moins de 10 000 segments par lot dans chaque environnement de test individuel. Toute tentative de création de segments par lot supplémentaires peut affecter les performances du système. |
+| Segments par lot par environnement de test | 4 000 | Soft | Une organisation peut avoir plus de 4 000 segments par lot au total, à condition qu’il y ait moins de 4 000 segments par lot dans chaque environnement de test individuel. Toute tentative de création de segments par lot supplémentaires peut affecter les performances du système. |
 
 {style=&quot;table-layout:auto&quot;}
 
