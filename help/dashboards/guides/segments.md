@@ -4,10 +4,10 @@ title: Guide du tableau de bord des segments
 description: 'Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments que votre entreprise a créés. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 11%
+source-wordcount: '1665'
+ht-degree: 10%
 
 ---
 
@@ -75,6 +75,7 @@ Pour en savoir plus sur chacun des widgets standard disponibles, sélectionnez l
 * [[!UICONTROL Supervision de l’audience]](#audience-overlap)
 * [[!UICONTROL Superposition des identités]](#identity-overlap)
 * [[!UICONTROL Profils par identité]](#profiles-by-identity)
+* [[!UICONTROL Activations planifiées]](#scheduled-activations)
 
 ### [!UICONTROL Taille de l’audience] {#audience-size}
 
@@ -176,6 +177,14 @@ Sélectionner **[!UICONTROL Sous-titres]** pour ouvrir la boîte de dialogue des
 Un modèle d’apprentissage automatique génère automatiquement des informations sur les données en analysant la distribution globale et les dimensions clés des données.
 
 Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
+
+### Activations planifiées {#scheduled-activations}
+
+Le [!UICONTROL Activations planifiées] Le widget offre une vue tabulée des destinations activées le plus récemment. Le tableau comprend la plateforme de destination, le nom de votre flux d’activation vers cette destination et les dates de début et de fin de l’activation pour le segment sélectionné. Si aucune date de fin n’est fournie pour l’activation, elle s’affiche sous la forme [!UICONTROL En cours]. Le segment à analyser est sélectionné dans la liste déroulante en haut de la page.
+
+Le widget vous permet de découvrir en un coup d’oeil où et quand l’audience est activée et rend les activations en double ou inutiles plus transparentes. Ces informations cumulées indiquent également les endroits où les activations ont été laissées de côté.
+
+![Le widget Activations planifiées .](../images/segments/scheduled-activations.png)
 
 ## Étapes suivantes
 
