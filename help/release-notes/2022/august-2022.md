@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de Adobe Experience Platform - Août 2022
 description: Notes de mise à jour d’août 2022 pour Adobe Experience Platform.
-source-git-commit: 5967dee9c8b1c05ebd103998021e02a47ac3982c
+source-git-commit: c3452dda554b3c7750ad1166cef598d51d739e02
 workflow-type: tm+mt
-source-wordcount: '1246'
-ht-degree: 43%
+source-wordcount: '1348'
+ht-degree: 41%
 
 ---
 
@@ -14,15 +14,28 @@ ht-degree: 43%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [[!DNL Dashboards]](#dashboards)
 - [Préparation de données](#data-prep)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Profil client en temps réel](#profile)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform fournit plusieurs [!DNL dashboards] grâce à laquelle vous pouvez afficher des informations importantes sur les données de votre organisation, telles qu’elles sont capturées lors d’instantanés quotidiens.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Widget d’activations planifiées | Le [!UICONTROL Activations planifiées] Le widget offre une vue tabulée des destinations activées le plus récemment. Pour chaque segment, il inclut le nom, la plateforme de destination et les dates de début et de fin de l’activation. Ce widget vous permet de découvrir en un coup d’oeil où et quand l’audience est activée et rend les activations en double ou inutiles plus transparentes. Ces informations cumulées indiquent également les endroits où les activations ont été laissées de côté. |
+
+Pour plus d’informations sur les [!DNL Dashboards], consultez la [[!DNL Dashboards] présentation](../../dashboards/home.md).
+
 ## [!DNL Data Prep] {#data-prep}
 
-[!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM). 
+[!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM).
 
 **Fonctionnalités mises à jour**
 
