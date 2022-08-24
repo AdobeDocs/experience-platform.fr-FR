@@ -5,18 +5,14 @@ title: Présentation du connecteur source Google BigQuery
 topic-legacy: overview
 description: Découvrez comment connecter Google BigQuery à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 7a62dcf1e9712d3c0c0d148b953e50dc11c91f1b
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 34%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# (Version bêta) [!DNL Google BigQuery] connector
-
->[!NOTE]
->
->Le [!DNL Google BigQuery] est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs bêta-étiquetés.
+# [!DNL Google BigQuery]
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
@@ -40,6 +36,7 @@ Pour se connecter [!DNL Google BigQuery] Pour Platform, vous devez générer des
 | `clientID` | L’ID client représente la moitié de votre [!DNL Google BigQuery] Informations d’identification OAuth 2.0. |
 | `clientSecret` | Le secret client est l’autre moitié de votre [!DNL Google BigQuery] Informations d’identification OAuth 2.0. |
 | `refreshToken` | Le jeton d’actualisation vous permet d’obtenir de nouveaux jetons d’accès pour votre API. Les jetons d’accès ont des durées de vie limitées et peuvent expirer au cours du projet. Vous pouvez utiliser le jeton d’actualisation pour vous authentifier et demander des jetons d’accès ultérieurs pour votre projet, si nécessaire. |
+| `largeResultsDataSetId` | La variable  [!DNL Google BigQuery] identifiant du jeu de données requis pour activer la prise en charge des jeux de résultats volumineux. |
 
 Pour obtenir des instructions détaillées sur la génération des informations d’identification OAuth 2.0 pour [!DNL Google] API, voir [[!DNL Google] Guide d’authentification OAuth 2.0](https://developers.google.com/identity/protocols/oauth2).
 
