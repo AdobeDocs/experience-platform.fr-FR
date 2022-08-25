@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur Attribution AI
 topic-legacy: User guide
 description: Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
+source-git-commit: 67b4c49de6ebb9986f735390a0657d908b07e039
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2705'
 ht-degree: 37%
 
 ---
@@ -262,7 +262,7 @@ Une fois la fenêtre de formation sélectionnée, sélectionnez **[!UICONTROL Te
 
 ![configuration terminée](./images/user-guide/instance_setup_complete.png)
 
-### Contrôle d’accès basé sur attribut
+## Contrôle d’accès basé sur attribut
 
 >[!IMPORTANT]
 >
@@ -278,15 +278,15 @@ En raison du contrôle d’accès basé sur les attributs, certains champs et ce
 
 En haut de l’espace de travail Attribution AI **page insights**, les détails affichés dans la barre latérale ont un accès restreint.
 
-![Espace de travail Attribution AI avec les champs restreints du schéma mis en surbrillance.](./images/user-guide/access-restricted.png)
+![Espace de travail Attribution AI avec les champs de schéma restreints mis en surbrillance.](./images/user-guide/access-restricted.png)
 
 Si vous sélectionnez des jeux de données avec des schémas restreints sur la variable **[!UICONTROL Workflow Créer une instance]** , un signe d’avertissement s’affiche en regard du nom du jeu de données avec le message : [!UICONTROL Les informations restreintes sont exclues].
 
-![Espace de travail Attribution AI avec les champs restreints des jeux de données sélectionnés avec les résultats de schémas restreints mis en surbrillance.](./images/user-guide/restricted-info-excluded.png)
+![Espace de travail Attribution AI avec les champs de jeu de données restreint mis en surbrillance.](./images/user-guide/restricted-info-excluded.png)
 
 Lorsque vous prévisualisez des jeux de données avec un schéma limité sur l’objet **[!UICONTROL Workflow Créer une instance]** , un avertissement s’affiche pour vous informer que [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans l’aperçu du jeu de données.]
 
-![Espace de travail Attribution AI avec les champs restreints des résultats du schéma prévisualisé mis en surbrillance.](./images/user-guide/restricted-dataset-preview.png)
+![L’espace de travail Attribution AI avec les résultats des champs de schéma prévisualisés restreints est mis en surbrillance.](./images/user-guide/restricted-dataset-preview.png)
 
 Après avoir créé une instance contenant des informations restreintes, passez à la **[!UICONTROL Définition d’un objectif]** , un avertissement s’affiche en haut de l’écran : [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans la configuration.]
 

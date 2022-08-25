@@ -6,9 +6,9 @@ title: Prise en main de Customer AI
 topic-legacy: Getting started
 description: Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
+source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '652'
 ht-degree: 67%
 
 ---
@@ -48,7 +48,7 @@ Dans Experience Platform, toutes les ressources sont isolées dans des environn
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md) dans le guide de dépannage d’Experience Platform.
 
-## Autorisations
+## RGPD et cryptage {#gdpr-and-encryption}
 
 Lors de l’utilisation du contrôle d’accès, la variable **Affichage de Customer AI** et **Gestion de Customer AI** Les privilèges permettent d’accéder à différentes fonctionnalités de Customer AI. Le **Gestion de Customer AI** permission vous permet de **create**,**update**, **delete**, **enable** ou **disable** une instance pendant **Affichage de Customer AI** vous permet de le lire ou de le visualiser. Le **create**, **update** et **delete** Les actions sont enregistrées par les journaux d’audit.
 
