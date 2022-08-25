@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
 workflow-type: tm+mt
 source-wordcount: '481'
-ht-degree: 56%
+ht-degree: 68%
 
 ---
 
@@ -41,8 +41,8 @@ Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](../
 
 | Filtre | Description |
 | --- | --- |
-| [!UICONTROL Statut] | Filtre basé sur le statut actuel de l’ordre de travail:<ul><li>**[!UICONTROL Terminé]**: La tâche est terminée.</li><li>**[!UICONTROL En attente]**: La tâche a été créée mais n’a pas encore été exécutée. A [demande d’expiration du jeu de données](./dataset-expiration.md) suppose que cet état est antérieur à la date de suppression planifiée. Une fois la date de suppression atteinte, l’état est mis à jour vers [!UICONTROL Exécution] sauf si la tâche est annulée au préalable.</li><li>**[!UICONTROL Exécution]**: La demande d’expiration du jeu de données a commencé et est en cours de traitement.</li><li>**[!UICONTROL Annulé]**: La tâche a été annulée dans le cadre d’une demande d’utilisateur manuelle.</li></ul> |
-| [!UICONTROL Date de création] | Filtre basé sur le moment où l’ordre de travail a été passé. |
+| [!UICONTROL Statut] | Filtre basé sur le statut actuel de l’ordre de travail :<ul><li>**[!UICONTROL Terminé]** : le traitement est terminé.</li><li>**[!UICONTROL En attente]** : le traitement a été créé mais n’a pas encore été exécuté. A [demande d’expiration du jeu de données](./dataset-expiration.md) suppose que cet état est antérieur à la date de suppression planifiée. Une fois la date de suppression atteinte, le statut est mis à jour vers [!UICONTROL Exécution], sauf si le traitement est annulé au préalable.</li><li>**[!UICONTROL Exécution]**: La demande d’expiration du jeu de données a commencé et est en cours de traitement.</li><li>**[!UICONTROL Annulé]** : le traitement a été annulé dans le cadre d’une demande d’utilisateur manuelle.</li></ul> |
+| [!UICONTROL Date de création] | Filtre basé sur le moment où l’ordre de travail a été effectué. |
 | [!UICONTROL Date d’expiration] | Filtrez les demandes d’expiration de jeu de données en fonction de la date de suppression planifiée du jeu de données en question. |
 | [!UICONTROL Date de mise à jour] | Filtrez les demandes d’expiration de jeu de données en fonction de la date de la dernière mise à jour de l’ordre de travail. Les créations et expirations sont comptabilisées comme des mises à jour. |
 

@@ -8,7 +8,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
 workflow-type: tm+mt
 source-wordcount: '1632'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -55,9 +55,9 @@ Pour plus d’informations sur la création de définitions de segment à l’ai
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
->title="Évaluation par flux"
+>title="Évaluation par diffusion en continu"
 >abstract="La segmentation par flux est un processus continu de sélection des données qui met à jour vos segments en réponse à l’activité des utilisateurs."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Évaluation des événements en temps quasi réel à l’aide de la segmentation par flux"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=fr" text="Évaluer les événements en temps quasi réel grâce à la segmentation par flux"
 
 Platform prend actuellement en charge trois méthodes d’évaluation des segments : segmentation par flux, segmentation par lots et segmentation Edge.
 
@@ -83,10 +83,10 @@ Les segments par lot sont automatiquement évalués toutes les 24 heures. Si vo
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Évaluation Edge"
->abstract="La segmentation Edge permet d’évaluer instantanément les segments dans Platform sur Experience Edge, en activant les cas d’utilisation de la personnalisation de la même page et de la page suivante."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Guide de l’interface utilisateur de segmentation Edge"
+>abstract="La segmentation Edge permet d’évaluer les segments dans Platform instantanément sur Experience Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=fr" text="Guide de l’interface utilisateur de segmentation Edge"
 
-La segmentation Edge permet d’évaluer instantanément les segments dans Platform. [sur Experience Edge](../edge/home.md), activation des cas d’utilisation de la personnalisation de la même page et de la page suivante.
+La segmentation Edge permet d’évaluer les segments dans Platform instantanément sur [Experience Edge](../edge/home.md), en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 
 Pour en savoir plus sur la segmentation Edge, consultez la [documentation API](./api/edge-segmentation.md) ou la [documentation de l’interface utilisateur](./ui/edge-segmentation.md).
 
