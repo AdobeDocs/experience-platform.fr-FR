@@ -3,14 +3,33 @@ keywords: personnalisation personnalisée;destination;destination personnalisée
 title: Connexion de personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer des informations de segment à partir d’Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance au segment du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 55%
+source-wordcount: '1305'
+ht-degree: 44%
 
 ---
 
 # Connexion de personnalisation personnalisée {#custom-personalization-connection}
+
+## Journal des modifications de destination {#changelog}
+
+Avec la version bêta de la version améliorée de **[!UICONTROL Personnalisation personnalisée]** connecteur de destination, vous pouvez voir deux **[!UICONTROL Personnalisation personnalisée]** cartes dans le catalogue des destinations.
+
+Le **[!UICONTROL Personnalisation Personnalisée Avec Attributs]** Le connecteur est actuellement en version bêta et disponible uniquement pour un nombre restreint de clients. En plus des fonctionnalités fournies par la fonction **[!UICONTROL Personnalisation personnalisée]**, la variable **[!UICONTROL Personnalisation Personnalisée Avec Attributs]** Le connecteur ajoute une valeur facultative [étape de mappage](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) au workflow d’activation, qui vous permet de mapper les attributs de profil à votre destination de personnalisation personnalisée, en activant la personnalisation de même page et de page suivante basée sur les attributs.
+
+>[!IMPORTANT]
+>
+>Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, la variable **[!UICONTROL Personnalisation Personnalisée Avec Attributs]** La destination requiert que vous utilisiez la variable [API du serveur réseau Edge](/help/server-api/overview.md) pour la collecte de données. De plus, tous les appels de l’API du serveur doivent être effectués dans une [contexte authentifié](../../../server-api/authentication.md).
+>
+>Si vous utilisez déjà le SDK Web ou le SDK mobile pour votre intégration, vous pouvez récupérer les attributs via l’API serveur de deux manières :
+>
+> * Ajoutez une intégration côté serveur qui récupère les attributs via l’API serveur.
+> * Mettez à jour votre configuration côté client avec un code JavaScript personnalisé pour récupérer les attributs via l’API serveur.
+>
+> Si vous ne respectez pas les exigences ci-dessus, la personnalisation sera basée uniquement sur l’appartenance à un segment, identique à l’expérience proposée par la variable **[!UICONTROL Personnalisation personnalisée]** connecteur.
+
+![Image des deux cartes de destination de personnalisation personnalisée dans une vue côte à côte.](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
 
 ## Présentation {#overview}
 
@@ -30,7 +49,7 @@ Cette intégration est optimisée par le [SDK web Adobe Experience Platform](../
 
 ## Cas dʼutilisation {#use-cases}
 
-Le [!DNL Custom personalization connection] vous permet d’utiliser vos propres plateformes de partenaire de personnalisation (par exemple, [!DNL Optimizely], [!DNL Pega]), tout en exploitant les fonctionnalités Experience Platform de collecte et de segmentation des données du réseau Edge, pour offrir une expérience de personnalisation plus approfondie aux clients.
+Le [!DNL Custom Personalization Connection] vous permet d’utiliser vos propres plateformes de partenaire de personnalisation (par exemple, [!DNL Optimizely], [!DNL Pega]), ainsi que les systèmes propriétaires (par exemple, les systèmes de gestion de contenu intégrés), tout en tirant parti des fonctionnalités Experience Platform de collecte de données et de segmentation du réseau Edge, pour offrir une expérience de personnalisation plus approfondie aux clients.
 
 Les cas d’utilisation décrits ci-dessous incluent à la fois la personnalisation du site et la publicité ciblée sur site.
 
@@ -134,11 +153,11 @@ alloy("sendEvent", {
     if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == "adServerAlias")
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -149,6 +168,37 @@ alloy("sendEvent", {
   });
 ```
 
+### Exemple de réponse pour [!UICONTROL Personnalisation Personnalisée Avec Attributs]
+
+Lors de l’utilisation de **[!UICONTROL Personnalisation Personnalisée Avec Attributs]**, la réponse de l’API ressemblera à l’exemple ci-dessous.
+
+La différence entre **[!UICONTROL Personnalisation Personnalisée Avec Attributs]** et **[!UICONTROL Personnalisation personnalisée]** est l’inclusion de la variable `attributes` dans la réponse de l’API.
+
+```json
+[
+    {
+        "type": "profileLookup",
+        "destinationId": "7bb4cb8d-8c2e-4450-871d-b7824f547130",
+        "alias": "personalizationAlias",
+        "attributes": {
+             "countryCode": {
+                   "value" : "DE"
+              },
+             "membershipStatus": {
+                   "value" : "PREMIUM"
+              }
+         },         
+        "segments": [
+            {
+                "id": "399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            },
+            {
+                "id": "499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            }
+        ]
+    }
+]
+```
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
