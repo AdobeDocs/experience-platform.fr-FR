@@ -5,7 +5,7 @@ title: Connexion de DbVisualizer à Query Service
 topic-legacy: connect
 description: Ce document décrit les étapes à suivre pour connecter DbVisualizer à Adobe Experience Platform Query Service.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 9c272cc5b879e38f6b6113542ec7bdfd4f11fa8a
 workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 1%
@@ -45,7 +45,7 @@ Les trois propriétés de pilote requises sont présentées dans le tableau ci-d
 | Propriété | Description |
 | ------ | ------ |
 | `PGHOST` | Le nom d’hôte de la variable [!DNL PostgreSQL] serveur. Cette valeur est votre Experience Platform [!UICONTROL Hôte] informations d’identification. |
-| `SSL` | Cela contrôle l’utilisation des exigences SSL. You **must** utilisez la valeur &quot;1&quot; pour activer cette exigence. |
+| `SSL` | Cela contrôle l’utilisation des exigences SSL. You **must** utiliser la valeur `require` pour activer cette exigence. |
 | `user` | Le nom d’utilisateur connecté à la base de données est votre ID d’organisation. Il s’agit d’une chaîne alphanumérique se terminant par `@adobe.org` |
 
 >[!IMPORTANT]
