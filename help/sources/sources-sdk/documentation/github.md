@@ -5,7 +5,7 @@ title: Utilisation de l’interface web GitHub pour créer une page de documenta
 topic-legacy: tutorial
 description: Ce document décrit les étapes à suivre pour utiliser l’interface web GitHub afin de créer de la documentation et d’envoyer une requête de tirage (PR).
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 4%
@@ -52,7 +52,7 @@ Nommez votre fichier source. `YOURSOURCE.md` où YOURSOURCE est le nom de votre 
 
 ## Créez la page de documentation de votre source.
 
-Pour commencer à documenter votre nouvelle source, collez le contenu de la [modèle de documentation sources](./template.md) dans l’éditeur web GitHub. Vous pouvez également télécharger le modèle. [here](../assets/template.zip).
+Pour commencer à documenter votre nouvelle source, collez le contenu de la [modèle de documentation sources](./template.md) dans l’éditeur web GitHub. Vous pouvez également télécharger le modèle. [here](../assets/api-template.zip).
 
 Une fois le modèle copié dans l’interface de l’éditeur web GitHub, suivez les instructions décrites dans le modèle et modifiez les valeurs contenant les informations pertinentes pour votre source.
 
