@@ -3,10 +3,10 @@ title: Utilisation d’Adobe Analytics avec le SDK Web Platform
 description: Découvrez comment envoyer des données à Adobe Analytics avec le SDK Web de Adobe Experience Platform.
 keywords: adobe analytics;analytics;données mappées;variables mappées;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
+source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '306'
+ht-degree: 34%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Edge Network] mappe automatiquement de nombreuse
 
 ## Données mappées manuellement
 
-Toutes les données non automatiquement mappées par le réseau Edge sont accessibles via des règles de traitement. Les données sont aplaties à l’aide d’une notation par points et disponibles en tant que contextData.
+Toute donnée qui n’est pas automatiquement mappée par la variable [!DNL Edge Network] sont accessibles via les règles de traitement. Les données sont aplaties à l’aide d’une notation par points et disponibles en tant que contextData.
 
 Si vous aviez un schéma qui ressemblait à celui-ci.
 
@@ -71,3 +71,7 @@ a.x.arrayofobjects.1.obj2key //objval1
 Voici un exemple de règle de traitement qui utiliserait ces données.
 
 ![Interface des règles de traitement](./assets/edge_analytics_processing_rules.png)
+
+>[!NOTE]
+>
+>Avec la collecte Experience Edge, tous les événements sont envoyés à Analytics ainsi qu’à tous les autres services que vous avez configurés pour votre flux de données. Par exemple, si Analytics et Target sont tous deux configurés en tant que services et que vous effectuez des appels distincts pour la personnalisation et pour Analytics, les deux événements seront envoyés à Analytics ainsi qu’à Target. Ces événements seront enregistrés dans les rapports Analytics et peuvent affecter des mesures telles que le taux de rebond.
