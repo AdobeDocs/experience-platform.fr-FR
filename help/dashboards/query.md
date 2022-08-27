@@ -4,10 +4,10 @@ title: Exploration, vérification et traitement des jeux de données de tableau 
 type: Documentation
 description: Découvrez comment utiliser Query Service pour explorer et traiter des jeux de données bruts alimentant les tableaux de bord de profils, de segments et de destinations dans Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: fe2d9e60dd641e1f03f7dde72e64e2892ae7c1a2
+source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 56%
+source-wordcount: '951'
+ht-degree: 50%
 
 ---
 
@@ -83,6 +83,16 @@ La convention d’affectation des noms de ce jeu de données est **DIM_Destinati
 Pour comprendre le schéma complet du jeu de données de destination DIM, vous pouvez prévisualiser et explorer le schéma [à l’aide de la visionneuse de jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur d’Experience Platform.
 
 ![](images/query/destinations-metadata.png)
+
+## (Version bêta) Rapports sur les insights de la plateforme de données clients (CDP)
+
+>[!IMPORTANT]
+>
+>La fonctionnalité Modèles de données de statistiques CDP est en version bêta. Ses fonctionnalités et sa documentation peuvent faire l’objet de modifications.
+
+La fonction Modèles de données de statistiques CDP expose le code SQL qui alimente les informations pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQl afin de créer des rapports CDP pour vos cas d’utilisation de marketing et d’ICP.
+
+Les rapports CDP fournissent des informations sur vos données de profil et sur leurs relations avec les segments et les destinations. Consultez la documentation du modèle de données de statistiques de la plateforme de données clients pour obtenir des informations détaillées sur la manière de procéder. [appliquer les modèles de données d’insights de la plateforme de données clients à vos cas d’utilisation d’IPC spécifiques ;](./cdp-insights-data-model.md).
 
 ## Exemples de requêtes
 
