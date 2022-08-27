@@ -5,9 +5,9 @@ title: Entrée et sortie dans Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Le document suivant décrit les différentes entrées et sorties utilisées dans Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
+source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
 workflow-type: tm+mt
-source-wordcount: '2450'
+source-wordcount: '2491'
 ht-degree: 13%
 
 ---
@@ -237,8 +237,9 @@ Le tableau ci-dessous associe les scores agrégés aux scores bruts. Si vous sou
 
 >[!IMPORTANT]
 >
-> - Pour faciliter la conformité au RGPD dans Attribution AI, vous pouvez utiliser Adobe Experience Platform Privacy Service pour configurer des protocoles afin d’honorer les demandes des clients d’accès et de suppression de leurs données dans le lac de données, Identity Service et Real-time Customer Profile.
-> - Toutes les données sont cryptées en transit et au repos. Consultez la documentation pour en savoir plus sur [cryptage des données](../../../help/landing/governance-privacy-security/encryption.md)
+> - Attribution AI utilise uniquement des données mises à jour pour la formation et la notation ultérieures. De même, lorsque vous demandez la suppression de données, Customer AI s’abstient d’utiliser les données supprimées.
+> - Attribution AI exploite les jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser le Privacy Service Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, Identity Service et Real-time Customer Profile.
+> - Tous les jeux de données que nous utilisons pour l’entrée/la sortie des modèles suivront les directives de Platform. Le chiffrement des données de plateforme s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur [cryptage des données](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## Étapes suivantes {#next-steps}
