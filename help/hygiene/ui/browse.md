@@ -2,10 +2,10 @@
 title: Parcourir les ordres de travail relatifs au nettoyage de données
 description: Découvrez comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 0b7196b195fc5ee8abb45ccb93f1fcc9a000a603
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 68%
+source-wordcount: '517'
+ht-degree: 64%
 
 ---
 
@@ -49,6 +49,11 @@ Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](../
 {style=&quot;table-layout:auto&quot;}
 
 ## Afficher les détails d’un ordre de travail
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_statusbyservice"
+>title="État par service"
+>abstract="Les demandes d’hygiène des données sont traitées indépendamment par plusieurs services Experience Platform. Cette section décrit l’état actuel du traitement de la requête pour chaque service respectif. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène des données."
 
 Sélectionnez l’identifiant d’un ordre de travail répertorié pour en afficher les détails.
 
