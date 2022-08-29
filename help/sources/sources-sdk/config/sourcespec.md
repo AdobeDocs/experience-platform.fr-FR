@@ -4,7 +4,7 @@ title: Configuration des spécifications de source pour les sources en libre-ser
 topic-legacy: overview
 description: Ce document présente les configurations que vous devez préparer pour utiliser les sources en libre-service (SDK par lots).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adaa0e1a63536bc1fdf751eec477e5cda9fd20ae
 workflow-type: tm+mt
 source-wordcount: '1690'
 ht-degree: 50%
@@ -48,7 +48,8 @@ Voir [annexe](#source-spec) pour un exemple de spécification de source entière
           "properties": {
             "host": {
               "type": "string",
-              "description": "Enter resource url host path."
+              "description": "Enter resource url host path.",
+              "example": "https://{domain}.api.mailchimp.com"
             },
             "path": {
               "type": "string",
@@ -69,6 +70,7 @@ Voir [annexe](#source-spec) pour un exemple de spécification de source entière
             }
           },
           "required": [
+            "host",
             "path",
             "method"
           ]
@@ -336,6 +338,7 @@ Voici une spécification de source complétée à l’aide de [!DNL MailChimp Me
         }
       },
       "urlParams": {
+        "host": "https://{domain}.api.mailchimp.com",
         "path": "/3.0/lists/${listId}/members",
         "method": "GET"
       },

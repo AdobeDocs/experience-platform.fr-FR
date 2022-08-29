@@ -4,9 +4,9 @@ title: Configuration des spécifications d’authentification pour les sources e
 topic-legacy: overview
 description: Ce document présente les configurations que vous devez préparer pour utiliser les sources en libre-service (SDK par lots).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 25e0061cc47ec4179f3f02958eb8bda1714ea139
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '525'
 ht-degree: 5%
 
 ---
@@ -105,7 +105,6 @@ Un code d’actualisation OAuth 2 permet un accès sécurisé à une application
       }
     },
     "required": [
-      "host",
       "accessToken"
     ]
   }
@@ -137,7 +136,7 @@ Un code d’actualisation OAuth 2 permet un accès sécurisé à une application
 
 ### Authentification de base
 
-L’authentification de base est un type d’authentification qui vous permet d’accéder à votre application à l’aide d’une combinaison de l’URL hôte de votre application, du nom d’utilisateur de votre compte et du mot de passe de votre compte.
+L’authentification de base est un type d’authentification qui vous permet d’accéder à votre application en combinant le nom d’utilisateur de votre compte et le mot de passe de votre compte.
 
 ```json
 {
@@ -148,10 +147,6 @@ L’authentification de base est un type d’authentification qui vous permet d�
     "type": "object",
     "description": "defines auth params required for connecting to rest service.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path"
-      },
       "username": {
         "description": "Username to connect rest endpoint.",
         "type": "string"
@@ -163,7 +158,6 @@ L’authentification de base est un type d’authentification qui vous permet d�
       }
     },
     "required": [
-      "host",
       "username",
       "password"
     ]
@@ -180,10 +174,9 @@ L’authentification de base est un type d’authentification qui vous permet d�
 | `authSpec.spec.type` | Définit le type de données du schéma. | `object` |
 | `authSpec.spec.description` | Affiche des informations supplémentaires spécifiques à votre type d’authentification. |
 | `authSpec.spec.properties` | Contient des informations sur les informations d’identification utilisées pour l’authentification. |
-| `authSpec.spec.properties.host` | L’URL hôte de votre application. |
 | `authSpec.spec.properties.username` | Nom d’utilisateur du compte associé à votre application. |
 | `authSpec.spec.properties.password` | Mot de passe du compte associé à votre application. |
-| `authSpec.spec.required` | Spécifie les champs requis en tant que valeurs obligatoires à saisir dans Platform. | `host` |
+| `authSpec.spec.required` | Spécifie les champs requis en tant que valeurs obligatoires à saisir dans Platform. | `username` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -201,10 +194,6 @@ Voici un exemple de spécification d’authentification terminée à l’aide d�
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path"
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -216,7 +205,6 @@ Voici un exemple de spécification d’authentification terminée à l’aide d�
           }
         },
         "required": [
-          "host",
           "accessToken"
         ]
       }
@@ -229,10 +217,6 @@ Voici un exemple de spécification d’authentification terminée à l’aide d�
         "type": "object",
         "description": "defines auth params required for connecting to rest service.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "username": {
             "description": "Username to connect mailChimp endpoint.",
             "type": "string"
@@ -244,7 +228,6 @@ Voici un exemple de spécification d’authentification terminée à l’aide d�
           }
         },
         "required": [
-          "host",
           "username",
           "password"
         ]
