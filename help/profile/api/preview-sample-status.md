@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;aperçu;exemple
 title: Aperçu de l’exemple d’état (aperçu du profil), point de terminaison de l’API
-description: À l’aide de l’exemple de point de terminaison d’état de la prévisualisation, qui fait partie de l’API Real-time Customer Profile, vous pouvez prévisualiser le dernier échantillon réussi de vos données de profil, répertorier la distribution du profil par jeu de données et par identité, et générer des rapports montrant le chevauchement des jeux de données, le chevauchement des identités et les profils inconnus.
+description: L’aperçu de l’exemple de point de terminaison d’état de l’API Real-time Customer Profile vous permet de prévisualiser le dernier échantillon réussi de vos données de profil, de répertorier la distribution du profil par jeu de données et par identité, et de générer des rapports montrant le chevauchement des jeux de données, le chevauchement d’identités et les profils désassemblés.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 8a17648757b342bd8026382918ca41c469210b51
 workflow-type: tm+mt
-source-wordcount: '2882'
+source-wordcount: '2875'
 ht-degree: 5%
 
 ---
@@ -465,25 +465,25 @@ Ce rapport fournit les informations suivantes :
 * Il y a 24 profils composés de `AAID` et `ECID` espaces de noms d’identité.
 * Il existe 6 565 profils qui incluent uniquement une `ECID` identité.
 
-## Générer le rapport des profils inconnus
+## Générer le rapport des profils désassemblés
 
-Vous pouvez mieux connaître la composition de la banque de profils de votre entreprise grâce au rapport Profils inconnus . Un &quot;profil inconnu&quot; fait référence à tout profil qui est à la fois désassemblé et inactif pour une période donnée. Un profil &quot;désassemblé&quot; est un profil qui ne contient qu’un fragment de profil, tandis qu’un profil &quot;inactif&quot; est un profil qui n’a pas ajouté de nouveaux événements pendant la période spécifiée. Le rapport Profils inconnus fournit une ventilation des profils pour une période de 7, 30, 60, 90 et 120 jours.
+Vous pouvez bénéficier d’une meilleure visibilité sur la composition de la banque de profils de votre entreprise via le rapport de profils désassemblés. Un profil &quot;désassemblé&quot; est un profil qui ne contient qu’un fragment de profil. Un profil &quot;inconnu&quot; est un profil associé à des espaces de noms d’identité pseudonymes tels que `ECID` et `AAID`. Les profils inconnus sont inactifs, ce qui signifie qu’ils n’ont pas ajouté de nouveaux événements pour la période spécifiée. Le rapport Profils désassemblés fournit une ventilation des profils pour une période de 7, 30, 60, 90 et 120 jours.
 
-Vous pouvez générer le rapport des profils inconnus en adressant une requête de GET au `/previewsamplestatus/report/unknownProfiles` point de terminaison .
+Vous pouvez générer le rapport des profils désassemblés en adressant une requête de GET au `/previewsamplestatus/report/unstitchedProfiles` point de terminaison .
 
 **Format d’API**
 
 ```http
-GET /previewsamplestatus/report/unknownProfiles
+GET /previewsamplestatus/report/unstitchedProfiles
 ```
 
 **Requête**
 
-La requête suivante renvoie le rapport des profils inconnus.
+La requête suivante renvoie le rapport des profils désassemblés.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unstitchedProfiles \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -491,18 +491,18 @@ curl -X GET \
 
 **Réponse**
 
-Une requête réussie renvoie un état HTTP 200 (OK) et le rapport des profils inconnus.
+Une requête réussie renvoie un état HTTP 200 (OK) et le rapport des profils désassemblés.
 
 >[!NOTE]
 >
->Pour les besoins de ce guide, le rapport a été tronqué afin d’inclure uniquement `"120days"` et`7days`&quot; des périodes. Le rapport Profils inconnus complet fournit une répartition des profils pour une période de 7, 30, 60, 90 et 120 jours.
+>Pour les besoins de ce guide, le rapport a été tronqué afin d’inclure uniquement `"120days"` et`7days`&quot; des périodes. Le rapport Profils désassemblés complet fournit une ventilation des profils pour une période de 7, 30, 60, 90 et 120 jours.
 
 ```json
 {
   "data": {
       "totalNumberOfProfiles": 63606,
       "totalNumberOfEvents": 130977,
-      "unknownProfiles": {
+      "unstitchedProfiles": {
           "120days": {
               "countOfProfiles": 1644,
               "eventsAssociated": 26824,
@@ -547,16 +547,16 @@ Une requête réussie renvoie un état HTTP 200 (OK) et le rapport des profils i
 
 | Propriété | Description |
 |---|---|
-| `data` | Le `data` contient les informations renvoyées pour le rapport des profils inconnus. |
-| `totalNumberOfProfiles` | Nombre total de profils uniques dans la banque de profils. Cela équivaut au nombre d’audiences adressables. Il inclut des profils connus et inconnus. |
+| `data` | Le `data` contient les informations renvoyées pour le rapport des profils désassemblés. |
+| `totalNumberOfProfiles` | Nombre total de profils uniques dans la banque de profils. Cela équivaut au nombre d’audiences adressables. Il comprend les profils connus et désassemblés. |
 | `totalNumberOfEvents` | Nombre total d’ExperienceEvents dans le magasin de profils. |
-| `unknownProfiles` | Objet contenant une ventilation des profils inconnus (désassemblés et inactifs) par période. Le rapport Profils inconnus fournit une ventilation des profils pour les périodes de 7, 30, 60, 90 et 120 jours. |
-| `countOfProfiles` | Le nombre de profils inconnus pour la période ou le nombre de profils inconnus pour l’espace de noms. |
+| `unstitchedProfiles` | Objet contenant une ventilation des profils désassemblés par période. Le rapport Profils désassemblés fournit une ventilation des profils pour des périodes de 7, 30, 60, 90 et 120 jours. |
+| `countOfProfiles` | Le nombre de profils désassemblés pour la période ou le nombre de profils désassemblés pour l’espace de noms. |
 | `eventsAssociated` | Nombre d’ExperienceEvents pour la période ou nombre d’événements pour l’espace de noms. |
-| `nsDistribution` | Objet contenant des espaces de noms d’identité individuels avec la distribution de profils et d’événements inconnus pour chaque espace de noms. Remarque : Ajouter ensemble le total `countOfProfiles` pour chaque espace de noms d’identité dans la variable `nsDistribution` est égal à `countOfProfiles` pour la période. Il en va de même pour `eventsAssociated` par espace de noms et le total `eventsAssociated` par période. |
+| `nsDistribution` | Objet contenant des espaces de noms d’identité individuels avec la distribution de profils et d’événements désassemblés pour chaque espace de noms. Remarque : Ajouter ensemble le total `countOfProfiles` pour chaque espace de noms d’identité dans la variable `nsDistribution` est égal à `countOfProfiles` pour la période. Il en va de même pour `eventsAssociated` par espace de noms et le total `eventsAssociated` par période. |
 | `reportTimestamp` | Horodatage du rapport. |
 
-### Interprétation du rapport des profils inconnus
+### Interprétation du rapport des profils désassemblés
 
 Les résultats du rapport peuvent fournir des informations sur le nombre de profils désassemblés et inactifs de votre organisation dans son magasin de profils.
 
@@ -586,9 +586,9 @@ Examinez l’extrait suivant de la `data` objet :
 Ce rapport fournit les informations suivantes :
 
 * Il existe 1 782 profils qui ne contiennent qu’un fragment de profil et n’ont aucun nouvel événement au cours des sept derniers jours.
-* 29 151 ExperienceEvents sont associés aux 1 782 profils inconnus.
-* Il existe 1 734 profils inconnus contenant un fragment de profil unique à partir de l’espace de noms d’identité d’ECID.
-* 28 591 événements sont associés aux 1 734 profils inconnus qui contiennent un fragment de profil unique à partir de l’espace de noms d’identité d’ECID.
+* 29 151 ExperienceEvents sont associés aux 1 782 profils désassemblés.
+* Il existe 1 734 profils désassemblés contenant un fragment de profil unique de l’espace de noms d’identité d’ECID.
+* 28 591 événements sont associés aux 1 734 profils désassemblés qui contiennent un fragment de profil unique de l’espace de noms d’identité d’ECID.
 
 ## Étapes suivantes
 
