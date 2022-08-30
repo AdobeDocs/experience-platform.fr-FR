@@ -2,9 +2,9 @@
 title: FAQ sur le SDK Web Adobe Experience Platform
 description: Obtenez des réponses aux questions fréquentes sur le SDK Web de Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 95305c0a5df71295e1321eb4c8c28baa66c5d94d
+source-git-commit: 720960b7d63c30707f823fdfafc2299289ea0a11
 workflow-type: tm+mt
-source-wordcount: '1955'
+source-wordcount: '1935'
 ht-degree: 2%
 
 ---
@@ -82,9 +82,9 @@ Alloy est le nom de code du SDK Web de Adobe Experience Platform. Il est utilis�
 
 ## Les clients doivent-ils acheter Adobe Experience Platform pour utiliser la variable [!DNL Web SDK]?
 
-Non. Tout client Adobe Digital Experience peut utiliser le SDK Web de Adobe Experience Platform gratuitement. Pour utiliser le SDK Web, votre organisation doit disposer des privilèges d’accès nécessaires pour cette fonctionnalité. Si vous souhaitez y accéder, veuillez renseigner les informations suivantes : [formulaire](https://adobe.ly/websdkaccess) et Adobe vous donne accès au [Interface utilisateur des flux de données](datastreams/overview.md) et l’interface utilisateur de Adobe Experience Platform (si nécessaire).
+Non. Tout client Adobe Digital Experience peut utiliser le SDK Web de Adobe Experience Platform gratuitement. Les clients qui souhaitent utiliser la variable [!DNL Web SDK] Vous devrez configurer les autorisations appropriées pour créer des schémas, des jeux de données, des espaces de noms d’identité et des flux de données dans l’interface utilisateur de la collecte de données Adobe Experience Platform.
 
-Les clients qui souhaitent utiliser la variable [!DNL Web SDK] aura accès à la création de schémas, de jeux de données et d’espaces de noms d’identité dans l’interface utilisateur de Adobe Experience Platform.
+Pour plus d’informations sur la configuration de ces autorisations, consultez notre documentation sur [gestion des autorisations de collecte de données](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
 
 ## Qui doit utiliser le SDK Web ?
 

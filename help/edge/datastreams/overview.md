@@ -3,9 +3,9 @@ title: Présentation des flux de données
 description: Connectez votre intégration SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
 keywords: configuration;flux de données;datastreamId;edge;identifiant de flux de données;Paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;Identifiant de conteneur de synchronisation d’identifiant;Sandbox;Diffusion d’entrée;Jeu de données d’événement;cible;code client;Jeton de propriété;Identifiant d’environnement cible;Destinations de cookie;Destinations d’url;identifiant de suite de rapports de blocs de paramètres Analytics;Préparation des données pour la collecte de données;Préparation des données;Mappeur;Mappeur XDM;Mappeur sur Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 45f5d23a671c8e015ca26e0d5025685255c2fc35
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1728'
 ht-degree: 100%
 
 ---
@@ -15,10 +15,6 @@ ht-degree: 100%
 Un flux de données représente la configuration côté serveur lors de la mise en œuvre des SDK web et mobile d’Adobe Experience Platform. Lorsque la [commande de configuration](../fundamentals/configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée à Adobe Experience Platform Edge Network, `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans devoir modifier le code du site web.
 
 Ce document décrit les étapes de configuration d’un flux de données dans l’interface utilisateur de collecte de données.
-
->[!NOTE]
->
->L’organisation doit être dotée de cette fonctionnalité pour pouvoir y accéder dans l’interface utilisateur. Veuillez remplir le [formulaire](https://adobe.ly/websdkaccess) suivant pour demander l’accès nécessaire. Pour gérer les flux de données, votre compte utilisateur doit être ajouté à un profil de produit pour les balises dans [!DNL Adobe Experience Platform].
 
 ## Accéder à l’espace de travail [!UICONTROL Flux de données]
 
