@@ -4,9 +4,9 @@ title: Guide du tableau de bord des segments
 description: 'Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments que votre entreprise a créés. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
+source-git-commit: 70fb980b276d256e0f7170b6e49527bca59adfe9
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1681'
 ht-degree: 10%
 
 ---
@@ -48,6 +48,10 @@ Reportez-vous à la section [modification des tableaux de bord](../customize/mod
 Le tableau de bord sélectionne automatiquement un segment à afficher. Vous pouvez toutefois le modifier à l’aide du menu déroulant ou du sélecteur de segments.
 
 Pour choisir un autre segment, sélectionnez la liste déroulante en regard du nom du segment ou utilisez le sélecteur de segments pour ouvrir la boîte de dialogue de sélection de segment.
+
+>[!IMPORTANT]
+>
+>Seuls les segments dont le nombre de profils est supérieur à zéro s’affichent dans la liste des segments sélectionnables.
 
 ![](../images/segments/change-segment.png)
 
