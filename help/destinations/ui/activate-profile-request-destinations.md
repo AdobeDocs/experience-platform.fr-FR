@@ -4,10 +4,10 @@ title: Activer les données d’audience vers les destinations de requête de pr
 type: Tutorial
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en mappant les segments aux destinations de requête de profil.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 26e7a3e78a4513aa69cdfbed7902509609e114cc
+source-git-commit: cda4591021c5b0a0bd6f43765d72b5867ec59aea
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 32%
+source-wordcount: '772'
+ht-degree: 28%
 
 ---
 
@@ -65,9 +65,23 @@ L’ajout d’attributs est facultatif. Vous pouvez toujours passer à l’étap
 
 ![Image montrant l’étape de mappage avec un attribut sélectionné](../assets/ui/activate-profile-request-destinations/mapping-step.png)
 
-Pour ajouter des attributs, sélectionnez la variable **[!UICONTROL Ajouter un nouveau champ]** contrôlez et recherchez ou accédez au champ d’attribut XDM souhaité, comme illustré ci-dessous.
+### Sélectionner les attributs source {#select-source-attributes}
 
-![Enregistrement d’écran montrant comment sélectionner un attribut XDM à l’étape de mappage](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+Pour ajouter des attributs source, sélectionnez l’option **[!UICONTROL Ajouter un nouveau champ]** du contrôle **[!UICONTROL Champ source]** et recherchez ou accédez au champ d’attribut XDM de votre choix, comme illustré ci-dessous.
+
+![Enregistrement d’écran montrant comment sélectionner un attribut cible dans l’étape de mappage](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+
+### Sélectionner les attributs de cible {#select-target-attributes}
+
+>[!NOTE]
+>
+>Certaines destinations exigent que vous sélectionniez uniquement les attributs source, tandis que d’autres requièrent les attributs source et cible.
+>
+>Actuellement, la variable [Adobe Target V2](../catalog/personalization/adobe-target-connection.md) La destination nécessite uniquement des attributs source, tandis que [Personnalisation personnalisée avec des attributs](../catalog/personalization/custom-personalization.md) nécessite les attributs source et cible.
+
+Pour ajouter des attributs de cible, sélectionnez la variable **[!UICONTROL Ajouter un nouveau champ]** du contrôle **[!UICONTROL Champ cible]** et saisissez le nom de l’attribut personnalisé auquel vous souhaitez mapper l’attribut source.
+
+![Enregistrement d’écran montrant comment sélectionner un attribut XDM à l’étape de mappage](../assets/ui/activate-profile-request-destinations/mapping-step-select-target-attribute.gif)
 
 ## Planifier l’exportation de segments {#scheduling}
 
