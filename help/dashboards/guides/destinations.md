@@ -4,9 +4,9 @@ title: Guide du tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2716'
 ht-degree: 3%
 
 ---
@@ -215,6 +215,10 @@ Toutes les tailles d’audience du système sont triées de la taille élevée �
 Si le nombre de profils mappés de votre segment ne correspond pas à l’écart-type par rapport à la taille de profil mappée moyenne au cours des 30 derniers jours, cela indique une anomalie du système et doit être étudié.
 
 Si un segment dans la variable [!UICONTROL Santé de l’audience mappée] vous devez vous reporter au graphique de tendance de la taille de l’audience et localiser le segment anormal. La tendance peut fournir des informations supplémentaires sur l’intégrité de votre segment.
+
+>[!NOTE]
+>
+>La taille par défaut du widget d’intégrité de l’audience mappée peut bloquer les informations du tableau. Modifiez la taille du widget pour améliorer la lisibilité de vos noms de segment et titres de colonnes mappés. Pour plus d’informations sur la modification des tableaux de bord, reportez-vous à la documentation de modification des tableaux de bord . [redimensionnement d’un widget](../customize/modify.md).
 
 ![Le widget d’intégrité de l’audience mappé.](../images/destinations/mapped-audience-health.png)
 
