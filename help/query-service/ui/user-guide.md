@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur de Query Editor
 topic-legacy: query editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service qui vous permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur de l’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
+source-git-commit: b393311a4ddcfaab3f8ea2ccd517e0e3b32a268a
 workflow-type: tm+mt
-source-wordcount: '1625'
-ht-degree: 37%
+source-wordcount: '1882'
+ht-degree: 32%
 
 ---
 
@@ -62,7 +62,37 @@ Pour réduire le temps de développement, nous vous recommandons de développer 
 
 - **Saisie automatique de tableau et de champ :** commencez à saisir le nom du tableau auquel vous souhaitez appliquer `SELECT`, puis utilisez les touches fléchées pour accéder au tableau recherché et appuyez sur **Entrée**. Une fois le tableau sélectionné, la saisie automatique reconnaît les champs de ce tableau.
 
-![Image](../images/ui/query-editor/tables-auto.png)
+![Interface de ligne de commande de l’éditeur de requêtes qui affiche les suggestions de liste déroulante.](../images/ui/query-editor/tables-auto.png)
+
+### (Version bêta) Bascule de configuration de l’interface utilisateur à saisie automatique {#auto-complete}
+
+>[!IMPORTANT]
+>
+>Le basculement de configuration de l’interface utilisateur à saisie automatique est en version bêta. Ses fonctionnalités et sa documentation peuvent faire l’objet de modifications.
+
+Le [!DNL Query Editor] suggère automatiquement des mots-clés SQL potentiels ainsi que des détails de tableau ou de colonne pour la requête au fur et à mesure que vous l’écrivez. La fonction de saisie automatique est activée par défaut et peut être désactivée ou activée à tout moment en sélectionnant l’option [!UICONTROL Saisie automatique de la syntaxe] basculez sur le coin supérieur droit de l’éditeur de requêtes.
+
+Le paramètre de configuration de saisie automatique est défini par utilisateur et mémorisé pour les connexions consécutives de cet utilisateur.
+
+![Éditeur de requêtes avec la bascule de saisie automatique de la syntaxe mise en surbrillance.](../images/ui/query-editor/auto-complete-toggle.png)
+
+La désactivation de cette fonction empêche le traitement de plusieurs commandes de métadonnées et fournit des recommandations qui profitent généralement à la vitesse de l’auteur lors de la modification des requêtes.
+
+Lorsque vous utilisez le bouton d’activation/désactivation pour activer la fonction de saisie semi-automatique, les suggestions recommandées pour les noms de tableau et de colonne ainsi que les mots-clés SQL deviennent disponibles après une courte pause. Un message de réussite dans la console sous l’éditeur de requêtes indique que la fonctionnalité est principale.
+
+Si vous désactivez la fonction de saisie semi-automatique, une actualisation de page est nécessaire pour que cette dernière soit appliquée. Une boîte de dialogue de confirmation s’affiche avec trois options lorsque vous désactivez la fonction [!UICONTROL Saisie automatique de la syntaxe] bascule :
+
+- [!UICONTROL Annuler]
+- [!UICONTROL Enregistrer les modifications et actualiser]
+- [!UICONTROL Actualiser sans enregistrer les modifications]
+
+>[!IMPORTANT]
+>
+>Si vous écrivez ou modifiez une requête lors de la désactivation de cette fonction, vous devez enregistrer les modifications apportées à votre requête avant d’actualiser la page, sinon toute progression sera perdue.
+
+![Boîte de dialogue de confirmation permettant de désactiver la fonction de saisie semi-automatique.](../images/ui/query-editor/confirmation-dialog.png)
+
+Sélectionnez l’option appropriée pour désactiver la fonction de saisie semi-automatique.
 
 ### Détection des erreurs {#error-detection}
 
