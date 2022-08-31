@@ -2,10 +2,10 @@
 title: Parcourir les ordres de travail relatifs au nettoyage de données
 description: Découvrez comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 80f9f0c64f2af2c7ceea59bddab9a5d6b57bc882
+source-git-commit: f246a014de7869b627a677ac82e98d4556065010
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '616'
+ht-degree: 55%
 
 ---
 
@@ -55,25 +55,29 @@ Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](../
 >title="État par service"
 >abstract="Les demandes d’hygiène des données sont traitées indépendamment par plusieurs services Experience Platform. Cette section décrit l’état actuel du traitement de la requête pour chaque service respectif. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène des données."
 
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_numberofidentities"
+>title="Nombre d’identités"
+>abstract="Nombre d’identités qui ont été demandées pour être supprimées dans le cadre de cet ordre de travail. Les identités incluses dans le nombre peuvent ne pas nécessairement exister dans les jeux de données affectés. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène des données."
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_responsemessages"
+>title="Réponse de suppression du client"
+>abstract="Lorsqu’un processus de suppression d’un client reçoit une réponse du système, ces messages s’affichent sous le **[!UICONTROL Résultat]** . Si un problème se produit alors qu’une commande est en cours de traitement, tous les messages d’erreur pertinents s’affichent dans cette section pour vous aider à résoudre le problème. Pour en savoir plus, consultez le guide de l’interface utilisateur de nettoyage de données."
+
 Sélectionnez l’identifiant d’un ordre de travail répertorié pour en afficher les détails.
 
 ![Image illustrant l’identifiant de l’ordre de travail sélectionné](../images/ui/browse/select-work-order.png)
 
 <!-- Depending on the type of work order selected, different information and controls are provided. These are covered in the sections below.
 
-### Consumer delete details
-
->[!CONTEXTUALHELP]
->id="platform_hygiene_responsemessages"
->title="Consumer delete response"
->abstract="When a consumer deletion process receives a response from the system, these messages are displayed under the **[!UICONTROL Result]** section. If a problem occurs while a work order is processing, any relevant error messages will appear in this section to help you troubleshoot the issue. To learn more, see the data hygiene UI guide."
-
+### Consumer delete details {#consumer-delete}
 
 The details of a consumer delete request are read-only, displaying its basic attributes such as its current status and the time elapsed since the request was made.
 
 ![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
 
-### Dataset expiration details -->
+### Dataset expiration details {#dataset-expiration} -->
 
 La page de détails de l’expiration d’un jeu de données fournit des informations sur ses attributs de base, y compris la date d’expiration planifiée les jours restants avant la suppression. Dans le rail de droite, vous pouvez utiliser des commandes pour modifier ou annuler l’expiration.
 
