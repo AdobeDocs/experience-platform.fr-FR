@@ -5,10 +5,10 @@ title: Gestion des libellés d’utilisation des données dans l’interface uti
 topic-legacy: labels
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 95%
+source-wordcount: '1229'
+ht-degree: 92%
 
 ---
 
@@ -106,7 +106,12 @@ Vous pouvez ajouter des libellés directement à un ou plusieurs champs de ce sc
 
 Voir le tutoriel sur [gestion des libellés au niveau du schéma](../../xdm/tutorials/labels.md) pour plus d’informations.
 
-## Gestion des libellés personnalisés
+## Gestion des libellés personnalisés {#manage-custom-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_createlabels"
+>title="Créer des étiquettes"
+>abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Platform fournit un ensemble standard de libellés que vous pouvez utiliser, mais vous pouvez également créer des libellés personnalisés spécifiques à votre organisation."
 
 Vous pouvez créer vos propres libellés d’utilisation personnalisés dans l’espace de travail **[!UICONTROL Stratégies]** de l’interface utilisateur [!DNL Experience Platform]. Sélectionnez **[!UICONTROL Stratégies]** dans le volet de navigation de gauche, puis cliquez sur **[!UICONTROL Libellés]** pour afficher une liste des libellés existants. À partir de là, cliquez sur **[!UICONTROL Créer un libellé]**.
 
