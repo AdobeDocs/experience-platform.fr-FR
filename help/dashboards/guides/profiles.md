@@ -4,9 +4,9 @@ title: Guide du tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
 workflow-type: tm+mt
-source-wordcount: '3769'
+source-wordcount: '3788'
 ht-degree: 8%
 
 ---
@@ -171,9 +171,9 @@ Le **[!UICONTROL Tendance du nombre de changements de profils]** widget affiche 
 
 ![L’onglet Aperçu du profil affiche le widget de tendance de changement du nombre de profils avec le bouton de sous-titres en surbrillance.](../images/profiles/profiles-count-change-trend-captions.png)
 
-Un modèle d’apprentissage automatique génère automatiquement des sous-titres pour décrire les tendances clés et les événements importants en analysant le graphique et les données.
+Un modèle d’apprentissage automatique génère automatiquement des sous-titres pour décrire les tendances clés et les événements importants en analysant le graphique et les données. Les annotations sont ajoutées au graphique en fonction des légendes. Sélectionnez une légende pour mettre l’accent sur l’annotation correspondante.
 
-![La boîte de dialogue de sous-titres automatiques du widget de tendance de changement de compte de profils .](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![La boîte de dialogue de sous-titres automatiques du widget de tendance de changement de compte de profils .](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
 
 ### [!UICONTROL Tendance de changement du nombre de profils par d’identité] {#profiles-count-change-trend-by-identity}
 
