@@ -56,7 +56,7 @@ Pour plus d’informations sur la création de définitions de segment à l’ai
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="Évaluation par diffusion en continu"
->abstract="La segmentation par flux est un processus continu de sélection des données qui met à jour vos segments en réponse à l’activité des utilisateurs."
+>abstract="La segmentation par diffusion en continu est un processus continu de sélection des données qui met à jour vos segments en réponse à l’activité des utilisateurs."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=fr" text="Évaluer les événements en temps quasi réel grâce à la segmentation par flux"
 
 Platform prend actuellement en charge trois méthodes d’évaluation des segments : segmentation par flux, segmentation par lots et segmentation Edge.

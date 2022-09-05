@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: f246a014de7869b627a677ac82e98d4556065010
 workflow-type: tm+mt
 source-wordcount: '616'
-ht-degree: 55%
+ht-degree: 79%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 55%
 >
 >Actuellement, les fonctionnalités de nettoyage de données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Healthcare Shield.
 
-Lorsqu’une demande de nettoyage de données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. Un ordre de travail représente un processus d’hygiène des données spécifique, tel qu’une expiration planifiée du jeu de données, qui inclut son état actuel et d’autres détails connexes.
+Lorsqu’une demande de nettoyage de données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. Un ordre de travail représente un processus spécifique de nettoyage de données (par exemple, l’expiration planifiée d’un jeu de données), qui comprend le statut actuel et d’autres détails connexes.
 
 Ce guide explique comment afficher et gérer les ordres de travail existants dans l’interface utilisateur d’Adobe Experience Platform.
 
@@ -41,10 +41,10 @@ Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](../
 
 | Filtre | Description |
 | --- | --- |
-| [!UICONTROL Statut] | Filtre basé sur le statut actuel de l’ordre de travail :<ul><li>**[!UICONTROL Terminé]** : le traitement est terminé.</li><li>**[!UICONTROL En attente]** : le traitement a été créé mais n’a pas encore été exécuté. A [demande d’expiration du jeu de données](./dataset-expiration.md) suppose que cet état est antérieur à la date de suppression planifiée. Une fois la date de suppression atteinte, le statut est mis à jour vers [!UICONTROL Exécution], sauf si le traitement est annulé au préalable.</li><li>**[!UICONTROL Exécution]**: La demande d’expiration du jeu de données a commencé et est en cours de traitement.</li><li>**[!UICONTROL Annulé]** : le traitement a été annulé dans le cadre d’une demande d’utilisateur manuelle.</li></ul> |
+| [!UICONTROL Statut] | Filtre basé sur le statut actuel de l’ordre de travail :<ul><li>**[!UICONTROL Terminé]** : le traitement est terminé.</li><li>**[!UICONTROL En attente]** : le traitement a été créé mais n’a pas encore été exécuté. Une [demande relative à l’expiration du jeu de données](./dataset-expiration.md) suppose que ce statut est antérieur à la date de suppression planifiée. Une fois la date de suppression atteinte, le statut est mis à jour vers [!UICONTROL Exécution], sauf si le traitement est annulé au préalable.</li><li>**[!UICONTROL Exécution]** : la demande relative à l’expiration du jeu de données a commencé et est en cours de traitement.</li><li>**[!UICONTROL Annulé]** : le traitement a été annulé dans le cadre d’une demande d’utilisateur manuelle.</li></ul> |
 | [!UICONTROL Date de création] | Filtre basé sur le moment où l’ordre de travail a été effectué. |
-| [!UICONTROL Date d’expiration] | Filtrez les demandes d’expiration de jeu de données en fonction de la date de suppression planifiée du jeu de données en question. |
-| [!UICONTROL Date de mise à jour] | Filtrez les demandes d’expiration de jeu de données en fonction de la date de la dernière mise à jour de l’ordre de travail. Les créations et expirations sont comptabilisées comme des mises à jour. |
+| [!UICONTROL Date d’expiration] | Filtrez les demandes relatives à l’expiration du jeu de données en fonction de la date de suppression planifiée pour le jeu de données en question. |
+| [!UICONTROL Date de mise à jour] | Filtrez les demandes relatives à l’expiration du jeu de données en fonction de la date de la dernière mise à jour de l’ordre de travail. Les créations et les expirations sont comptées comme des mises à jour. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -79,10 +79,10 @@ The details of a consumer delete request are read-only, displaying its basic att
 
 ### Dataset expiration details {#dataset-expiration} -->
 
-La page de détails de l’expiration d’un jeu de données fournit des informations sur ses attributs de base, y compris la date d’expiration planifiée les jours restants avant la suppression. Dans le rail de droite, vous pouvez utiliser des commandes pour modifier ou annuler l’expiration.
+La page de détails d’une expiration de jeu de données fournit des informations sur les attributs de base, notamment la date d’expiration prévue pour les jours restants avant la suppression. Dans le rail de droite, vous pouvez utiliser des commandes pour modifier ou annuler l’expiration.
 
-![Image montrant la page de détails d’un ordre de travail d’expiration de jeu de données](../images/ui/browse/ttl-details.png)
+![Image illustrant la page de détails d’un ordre de travail d’expiration de jeu de données](../images/ui/browse/ttl-details.png)
 
 ## Étapes suivantes
 
-Ce guide explique comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur de Platform. Pour plus d’informations sur la création de vos propres ordres de travail, consultez le guide sur [planification de l’expiration d’un jeu de données](./dataset-expiration.md).
+Ce guide explique comment afficher et gérer les ordres de travail de nettoyage de données existants dans l’interface utilisateur de Platform. Pour plus d’informations sur la création de vos propres ordres de travail, consultez le guide sur la [planification de l’expiration d’un jeu de données](./dataset-expiration.md).
