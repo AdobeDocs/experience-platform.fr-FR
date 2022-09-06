@@ -3,10 +3,10 @@ title: Présentation des flux de données
 description: Connectez votre intégration SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
 keywords: configuration;flux de données;datastreamId;edge;identifiant de flux de données;Paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;Identifiant de conteneur de synchronisation d’identifiant;Sandbox;Diffusion d’entrée;Jeu de données d’événement;cible;code client;Jeton de propriété;Identifiant d’environnement cible;Destinations de cookie;Destinations d’url;identifiant de suite de rapports de blocs de paramètres Analytics;Préparation des données pour la collecte de données;Préparation des données;Mappeur;Mappeur XDM;Mappeur sur Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 45f5d23a671c8e015ca26e0d5025685255c2fc35
-workflow-type: ht
-source-wordcount: '1728'
-ht-degree: 100%
+source-git-commit: 3690a32f32c6cfa25120e9af44fe559122e779a0
+workflow-type: tm+mt
+source-wordcount: '1729'
+ht-degree: 98%
 
 ---
 
@@ -117,12 +117,12 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Experien
 ![Bloc de paramètres d’Adobe Experience Platform](../images/datastreams/overview/platform-config.png)
 
 | Paramètre | Description |
-| --- | --- |
+|---| --- |
 | [!UICONTROL Jeu de données d’événement] | **(Obligatoire)** Sélectionnez le jeu de données de Platform vers lequel les données d’événement client seront diffusées. Ce schéma doit utiliser la [classe XDM ExperienceEvent](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL Jeu de données de profil] | Sélectionnez le jeu de données de Platform auquel les données d’attribut du client seront envoyées. Ce schéma doit utiliser la [classe XDM Individual Profile](../../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Cochez cette case pour activer Offer Decisioning pour une mise en œuvre du SDK web de Platform. Consultez le guide sur l’[utilisation d’Offer Decisioning avec le SDK web de Platform](../personalization/offer-decisioning/offer-decisioning-overview.md) pour plus d’informations sur la mise en œuvre. Pour plus d’informations sur les fonctionnalités d’Offer Decisioning, consultez la [Documentation d’Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=fr). |
 | [!UICONTROL Segmentation Edge] | Cochez cette case pour activer la [segmentation Edge](../../segmentation/ui/edge-segmentation.md) de ce flux de données. Lorsque le SDK envoie des données par le biais d’un flux de données compatible avec la segmentation Edge, toutes les adhésions au segment mises à jour pour le profil en question sont renvoyées dans la réponse.<br><br>Cette option peut être utilisée conjointement avec [!UICONTROL Destinations de personnalisation] pour les [cas d’utilisation de la personnalisation de page suivante](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL Destinations de personnalisation] | Utilisée conjointement avec la case à cocher [!UICONTROL Segmentation Edge], cette option permet au flux de données de se connecter à des moteurs de personnalisation tels qu’Adobe Target. Consultez la documentation des destinations pour obtenir des instructions spécifiques sur la [configuration des destinations de personnalisation](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Destinations de personnalisation] | Lorsque vous activez cette fonction après avoir activé la variable [!UICONTROL Segmentation Edge] , cette option permet à la banque de données de se connecter aux destinations de personnalisation, telles que [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Consultez la documentation des destinations pour obtenir des instructions spécifiques sur la [configuration des destinations de personnalisation](../../destinations/ui/configure-personalization-destinations.md). |
 
 ### Paramètres d’Adobe Target {#target}
 
