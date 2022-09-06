@@ -1,10 +1,11 @@
 ---
 title: Secrets dans l’API Reactor
 description: Découvrez les principes de base de la configuration des secrets dans l’API Reactor en vue d’une utilisation dans le transfert d’événements.
-source-git-commit: 6822199c3ecf4414893a8b8dfc650e3da40a6470
-workflow-type: ht
-source-wordcount: '1115'
-ht-degree: 100%
+exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
+source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
+workflow-type: tm+mt
+source-wordcount: '1241'
+ht-degree: 87%
 
 ---
 
@@ -18,7 +19,7 @@ Actuellement, trois types de secrets pris en charge sont identifiés dans le nom
 | --- | --- |
 | `token` | Chaîne unique de caractères représentant une valeur de jeton dʼauthentification connue et comprise par les deux systèmes. |
 | `simple-http` | Contient deux attributs de chaîne pour un nom dʼutilisateur et un mot de passe, respectivement. |
-| `oauth2` | Contient plusieurs attributs pour la prise en charge de la spécification d’authentification [OAuth](https://datatracker.ietf.org/doc/html/rfc6749). Le transfert d’événements vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous selon un intervalle spécifié. |
+| `oauth2-client_credentials` | Contient plusieurs attributs pour la prise en charge de la spécification d’authentification [OAuth](https://datatracker.ietf.org/doc/html/rfc6749). Le transfert d’événements vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous selon un intervalle spécifié. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -26,9 +27,14 @@ Ce guide fournit un aperçu général de la configuration des secrets pour une u
 
 ## Informations d’identification
 
-Chaque secret contient un attribut `credentials` qui rassemble ses valeurs d’identification respectives. Chaque type de secret possède des attributs obligatoires différents, comme illustré dans les sections ci-dessous.
+Chaque secret contient un attribut `credentials` qui rassemble ses valeurs d’identification respectives. When [création d’un secret dans l’API](../endpoints/secrets.md#create), chaque type de secret possède des attributs obligatoires différents, comme illustré dans les sections ci-dessous :
 
-### `token`
+* [`token`](#token)
+* [`simple-http`](#simple-http)
+* [`oauth2-client_credentials`](#oauth2-client_credentials)
+* [`oauth2-google`](#oauth2-google)
+
+### `token` {#token}
 
 Les secrets disposant d’une valeur `type_of` de `token` ne requièrent qu’un seul attribut sous `credentials` :
 
@@ -40,7 +46,7 @@ Les secrets disposant d’une valeur `type_of` de `token` ne requièrent qu’un
 
 Le jeton est stocké en tant que valeur statique, et par conséquent les propriétés `expires_at` et `refresh_at` du secret sont définies sur `null` lorsque le secret est créé.
 
-### `simple-http`
+### `simple-http` {#simple-http}
 
 Les secrets disposant d’une valeur `type_of` de `simple-http` nécessitent les attributs suivants sous `credentials` :
 
@@ -53,23 +59,19 @@ Les secrets disposant d’une valeur `type_of` de `simple-http` nécessitent les
 
 Lorsque le secret est créé, les deux attributs sont échangés avec un encodage BASE64 de `username:password`. Après l’échange, les propriétés `expires_at` et `refresh_at` du secret sont définies sur `null`.
 
-### `oauth2`
+### `oauth2-client_credentials` {#oauth2-client_credentials}
 
->[!NOTE]
->
->Actuellement, seul [le type d’octroi des informations d’identification client](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) est pris en charge pour les secrets OAuth.
-
-Les secrets ayant une valeur `type_of` de `oauth2` nécessitent les attributs suivants sous `credentials` :
+Les secrets disposant d’une valeur `type_of` de `oauth2-client_credentials` nécessitent les attributs suivants sous `credentials` :
 
 | Attribut Credential | Type de données | Description |
 | --- | --- | --- |
 | `client_id` | Chaîne | Identifiant client de l’intégration OAuth. |
 | `client_secret` | Chaîne | Secret client pour l’intégration OAuth. Cette valeur n’est pas incluse dans la réponse de l’API. |
-| `authorization_url` | Chaîne | URL d’autorisation de l’intégration OAuth. |
+| `token_url` | Chaîne | URL d’autorisation de l’intégration OAuth. |
 | `refresh_offset` | Entier | *(Facultatif)* Valeur, en secondes, pour le décalage de l’opération d’actualisation. Si cet attribut est omis lors de la création du secret, la valeur est définie sur `14400` (quatre heures) par défaut. |
 | `options` | Objet | *(Facultatif)* Spécifie les options supplémentaires pour l’intégration OAuth :<ul><li>`scope` : une chaîne qui représente la portée [OAuth 2.0](https://oauth.net/2/scope/) pour les informations d’identification.</li><li>`audience` : une chaîne qui représente un [jeton d’accès Auth0](https://auth0.com/docs/protocols/protocol-oauth2).</li></ul> |
 
-Lorsqu’un secret `oauth2` est créé ou mis à jour, `client_id` et `client_secret` (et éventuellement `options`) sont échangés dans une requête POST contre `authorization_url`, selon le flux d’informations d’identification du client du protocole OAuth.
+Lorsqu’un secret `oauth2-client_credentials` est créé ou mis à jour, `client_id` et `client_secret` (et éventuellement `options`) sont échangés dans une requête POST contre `token_url`, selon le flux d’informations d’identification du client du protocole OAuth.
 
 >[!NOTE]
 >
@@ -89,13 +91,29 @@ Si l’échange réussit, l’attribut status du secret est défini sur `succeed
 
 Si l’échange échoue pour une raison quelconque, l’attribut `status_details` dans l’objet `meta` est mis à jour avec les informations pertinentes.
 
-### Actualisation d’un secret `oauth2`
+#### Actualisation d’un secret `oauth2-client_credentials`
 
-Si un secret `oauth2` a été affecté à un environnement et que son statut est `succeeded` (les informations d’identification ont été échangées avec succès), un nouvel échange est automatiquement effectué sur `refresh_at`.
+Si un secret `oauth2-client_credentials` a été affecté à un environnement et que son statut est `succeeded` (les informations d’identification ont été échangées avec succès), un nouvel échange est automatiquement effectué sur `refresh_at`.
 
 Si l’échange réussit, l’attribut `refresh_status` dans l’objet `meta` est défini sur `succeeded` tandis que `expires_at`, `refresh_at` et `activated_at` sont mis à jour en conséquence.
 
 En cas d’échec de l’échange, l’opération est tentée trois fois de plus ; la dernière tentative a lieu au plus tard deux heures avant l’expiration du jeton d’accès. Si toutes les tentatives échouent, l’attribut `refresh_status_details` de l’objet `meta` est mis à jour avec les détails pertinents.
+
+### `oauth2-google` {#oauth2-google}
+
+Secrets avec un `type_of` valeur de `oauth2-google` nécessite l’attribut suivant sous `credentials`:
+
+| Attribut Credential | Type de données | Description |
+| --- | --- | --- |
+| `scopes` | Tableau | Répertorie les portées du produit Google pour l’authentification. Les portées suivantes sont prises en charge :<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Pub/Sous-programme Google](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
+
+Après avoir créé la variable `oauth2-google` secret, la réponse comprend une `meta.token_url` . Vous devez copier et coller cette URL dans un navigateur pour terminer le flux d’authentification Google.
+
+#### Réautoriser `oauth2-google` secret
+
+L’URL d’autorisation d’un `oauth2-google` Le secret expire une heure après la création du secret (comme indiqué par `meta.token_url_expires_at`). Au-delà, le secret doit être réautorisé afin de renouveler le processus d&#39;authentification.
+
+Reportez-vous à la section [guide de point de fin secrets](../endpoints/secrets.md#reauthorize) pour plus d’informations sur la manière dont réautoriser une `oauth2-google` secret en adressant une demande de PATCH à l’API Reactor.
 
 ## Relation entre les environnements
 
@@ -107,13 +125,13 @@ Un secret ne peut être associé qu’à un seul environnement. Une fois la rela
 >
 >La seule exception à cette règle est la suppression de l’environnement en question. Dans ce cas, la relation est effacée et le secret peut être affecté à un autre environnement.
 
-Une fois les informations d’identification d’un secret échangées, pour qu’un secret soit associé à un environnement, l’artefact d’échange (la chaîne de jeton pour `token`, la chaîne codée Base64 pour `simple-http` ou le jeton d’accès pour `oauth2`) est enregistré en toute sécurité dans l’environnement.
+Une fois les informations d’identification d’un secret échangées, pour qu’un secret soit associé à un environnement, l’artefact d’échange (la chaîne de jeton pour `token`, la chaîne codée Base64 pour `simple-http` ou le jeton d’accès pour `oauth2-client_credentials`) est enregistré en toute sécurité dans l’environnement.
 
 Une fois l’artefact d’échange enregistré dans l’environnement, l’attribut `activated_at` du secret est défini sur l’heure UTC actuelle et peut alors être référencé à l’aide d’un élément de données. Voir la [section suivante](#referencing-secrets) pour plus d’informations sur la référence aux secrets.
 
 ## Référencer des secrets {#referencing-secrets}
 
-Pour référencer un secret, vous devez créer un élément de données de type « [!UICONTROL Secret] » (fourni par l’extension [[!UICONTROL Core]](../../extensions/web/core/overview.md)) sur une propriété de transfert d’événements. Lors de la configuration de cet élément de données, vous êtes invité à indiquer le secret à utiliser pour chaque environnement. Vous pouvez ensuite créer des règles qui référencent un élément de données secret, comme dans l’en-tête d’un appel HTTP.
+Pour référencer un secret, vous devez créer un élément de données de type « [!UICONTROL Secret] » (fourni par l’extension [[!UICONTROL Core]](../../extensions/web/core/overview.md)) sur une propriété de transfert d’événements. Lors de la configuration de cet élément de données, vous êtes invité à indiquer le secret à utiliser pour chaque environnement. Vous pouvez ensuite créer des règles qui référencent un élément de données secret, comme dans l’en-tête d’un appel HTTP.
 
 ![Élément de données secret](../../images/api/guides/secrets/data-element.png)
 
