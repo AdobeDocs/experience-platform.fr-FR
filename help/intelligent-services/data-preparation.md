@@ -5,10 +5,10 @@ title: Préparation des données à utiliser dans les services intelligents
 topic-legacy: Intelligent Services
 description: Pour que les services intelligents découvrent des informations à partir de vos données d’événements marketing, les données doivent être enrichies sémantiquement et conservées dans une structure standard. Pour ce faire, les services intelligents utilisent des schémas de modèle de données d’expérience (XDM).
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '2919'
-ht-degree: 1%
+source-wordcount: '2936'
+ht-degree: 2%
 
 ---
 
@@ -111,11 +111,15 @@ Bien que l’utilisation de tous les champs clés soit fortement recommandée, d
 * [xdm:timestamp](#timestamp)
 * [xdm:channel](#channel) (obligatoire uniquement pour Attribution AI)
 
-#### Identité Principal {#identity}
+#### Identité principale {#identity}
 
 L’un des champs de votre schéma doit être défini comme un champ d’identité Principal, qui permet d’activer [!DNL Intelligent Services] pour lier chaque instance de données de série temporelle à une personne.
 
 Vous devez déterminer le meilleur champ à utiliser comme identité Principale en fonction de la source et de la nature de vos données. Un champ d’identité doit inclure une **namespace d’identité** qui indique le type de données d’identité attendu par le champ comme valeur. Certaines valeurs d’espace de noms valides sont les suivantes :
+
+>[!NOTE]
+>
+>L’identifiant Experience Cloud (ECID) est également connu sous le nom de MCID et continue à être utilisé dans les espaces de noms.
 
 * &quot;adresse e-mail&quot;
 * &quot;phone&quot;
@@ -181,7 +185,7 @@ Le tableau suivant fournit des exemples de canaux marketing mappés à la variab
 | Recherche payante | https:/<span>/ns.adobe.com/xdm/channel-types/search | paid | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | earned | clics |
 | Afficher  | https:/<span>/ns.adobe.com/xdm/channel-types/display | paid | clics |
-| Adresse e-mail | https:/<span>/ns.adobe.com/xdm/channel-types/email | paid | clics |
+| E-mail | https:/<span>/ns.adobe.com/xdm/channel-types/email | paid | clics |
 | Référent interne | https:/<span>/ns.adobe.com/xdm/channel-types/direct | owned | clics |
 | Afficher la vue publicitaire | https:/<span>/ns.adobe.com/xdm/channel-types/display | paid | impressions |
 | Redirection du code QR | https:/<span>/ns.adobe.com/xdm/channel-types/direct | owned | clics |
@@ -326,8 +330,8 @@ Cette section décrit le processus de mappage et d’ingestion de données dans 
 
 Lorsque vous êtes prêt à commencer à préparer vos données pour l’ingestion, la première étape consiste à créer un nouveau schéma XDM qui utilise le groupe de champs CEE. Les tutoriels suivants décrivent le processus de création d’un nouveau schéma dans l’interface utilisateur ou l’API :
 
-* [Création d’un schéma dans l’interface utilisateur](../xdm/tutorials/create-schema-ui.md)
-* [Création d’un schéma dans l’API](../xdm/tutorials/create-schema-api.md)
+* [Créer un schéma dans l’interface utilisateur](../xdm/tutorials/create-schema-ui.md)
+* [Créer un schéma dans l’API](../xdm/tutorials/create-schema-api.md)
 
 >[!IMPORTANT]
 >

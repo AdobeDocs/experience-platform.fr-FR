@@ -2,9 +2,9 @@
 title: Filtrage des robots dans Query Service avec apprentissage automatique
 description: Ce document fournit une vue d’ensemble de l’utilisation de Query Service et de l’apprentissage automatique pour déterminer l’activité des robots et filtrer leurs actions sur le véritable trafic des visiteurs du site Web en ligne.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
-source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
+source-git-commit: 8a7c04ebe8fe372dbf686fddc92867e938a93614
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '899'
 ht-degree: 6%
 
 ---
@@ -29,8 +29,12 @@ Cet exemple utilise [!DNL Jupyter Notebook] en tant qu’environnement de dével
 
 Les deux attributs utilisés pour extraire les données pour la détection des robots sont les suivants :
 
-* ID de Marketing Cloud (MCID) : Il fournit un identifiant universel et permanent qui identifie vos visiteurs dans toutes les solutions d’Adobe.
+* Identifiant visiteur Experience Cloud (ECID, également appelé MCID) : Il fournit un identifiant universel et permanent qui identifie vos visiteurs dans toutes les solutions d’Adobe.
 * Horodatage : Vous obtenez ainsi l’heure et la date au format UTC auxquelles une activité s’est produite sur le site web.
+
+>[!NOTE]
+>
+>L’utilisation de `mcid` se trouve toujours dans les références d’espace de noms à l’identifiant visiteur Experience Cloud, comme illustré dans l’exemple ci-dessous.
 
 L’instruction SQL suivante fournit un exemple initial pour identifier l’activité des robots. L’instruction suppose que si un visiteur effectue 50 clics en une minute, l’utilisateur est un robot.
 
@@ -45,7 +49,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-L’expression filtre les MCID de tous les visiteurs qui atteignent le seuil, mais ne résout pas les pics de trafic d’autres intervalles.
+L’expression filtre les ECID (`mcid`) de tous les visiteurs qui atteignent le seuil, mais qui ne résolvent pas les pics de trafic à partir d’autres intervalles.
 
 ## Amélioration de la détection des robots grâce à l’apprentissage automatique
 
@@ -53,7 +57,7 @@ L’instruction SQL initiale peut être affinée afin de devenir une requête d�
 
 L’exemple d’instruction est développé d’une minute avec jusqu’à 60 clics, afin d’inclure des périodes de cinq minutes et de 30 minutes avec des nombres de clics de 300 et de 1 800 respectivement.
 
-L’exemple d’instruction collecte le nombre maximal de clics pour chaque MCID au cours des différentes durées. L’instruction initiale a été développée pour inclure des périodes d’une minute (60 secondes), de 5 minutes (300 secondes) et d’une heure (1 800 secondes).
+L’exemple d’instruction collecte le nombre maximal de clics pour chaque ECID (`mcid`) sur les différentes durées. L’instruction initiale a été développée pour inclure des périodes d’une minute (60 secondes), de 5 minutes (300 secondes) et d’une heure (1 800 secondes).
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 
@@ -167,4 +171,4 @@ L’exemple de modèle a déterminé avec une grande précision que tous les vis
 
 En lisant ce document, vous comprenez mieux comment utiliser [!DNL Query Service] et l’apprentissage automatique pour déterminer et filtrer l’activité des robots.
 
-Autres documents présentant les avantages de [!DNL Query Service] Les informations stratégiques de votre entreprise sont les suivantes : [cas d’utilisation du navigateur abandonné](./abandoned-browse.md) par exemple.
+Autres documents présentant les avantages de [!DNL Query Service] Pour consulter les informations stratégiques de votre entreprise, reportez-vous à la section [cas d’utilisation du navigateur abandonné](./abandoned-browse.md) par exemple.

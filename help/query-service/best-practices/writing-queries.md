@@ -6,10 +6,10 @@ topic-legacy: queries
 type: Tutorial
 description: Ce document présente les détails importants à connaître lors de l’écriture de requêtes dans Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 13e2248845734d985331653a17599f48aec0ebde
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 48%
+source-wordcount: '1048'
+ht-degree: 47%
 
 ---
 
@@ -48,6 +48,10 @@ Requêtes envoyées via [!DNL Query Service] Les API sont exécutées de manièr
 ## Accès à un champ spécifique dans un objet
 
 Pour accéder à un champ dans un objet de votre requête, vous pouvez utiliser soit la notation par points (`.`), soit la notation par crochets (`[]`). L’instruction SQL suivante utilise la notation par points pour parcourir l’objet `endUserIds` jusqu’à l’objet `mcid`.
+
+>[!NOTE]
+>
+>L’identifiant Experience Cloud (ECID) est également connu sous le nom de MCID et continue à être utilisé dans les espaces de noms.
 
 ```sql
 SELECT endUserIds._experience.mcid

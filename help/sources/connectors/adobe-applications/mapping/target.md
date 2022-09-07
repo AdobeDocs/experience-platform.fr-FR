@@ -5,16 +5,16 @@ title: Mappage des données d’événement Adobe Target avec XDM
 topic-legacy: overview
 description: Découvrez comment mapper des champs d’événement Adobe Target à un schéma de modèle de données d’expérience (XDM) pour une utilisation dans Adobe Experience Platform.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 91%
+source-wordcount: '482'
+ht-degree: 87%
 
 ---
 
 # Mappages des champs de mapping de ciblage
 
-Adobe Experience Platform vous permet d’ingérer des données Adobe Target par le biais du connecteur source cible. Lors de l’utilisation du connecteur, toutes les données des champs cibles doivent être mappées avec les champs de [modèle de données d’expérience (XDM)](../../../../xdm/home.md) associés à la classe XDM ExperienceEvent.
+Adobe Experience Platform vous permet d’ingérer des données Adobe Target par le biais du connecteur source cible. Lors de l’utilisation du connecteur, toutes les données des champs cibles doivent être mappées avec les champs de [modèle de données d’expérience (XDM)](../../../../xdm/home.md) associés à la classe XDM ExperienceEvent.
 
 Le tableau suivant décrit les champs d’un schéma d’événement d’expérience (*champ XDM ExperienceEvent*) et les champs cibles correspondants auxquels ils doivent être mappés (*champ de requête cible*). Des notes supplémentaires pour certains mappages sont également fournies.
 
@@ -33,7 +33,7 @@ Le tableau suivant décrit les champs d’un schéma d’événement d’expéri
 | **`channel`** | `context.channel` | Fonctionne uniquement avec la diffusion de l’affichage. « web » et « mobile » sont les options disponibles, « web » étant la valeur par défaut. |
 | **`endUserIds`** |
 | `endUserIds.experience.tntId` | `tntId/mboxPC` |
-| `endUserIds.experience.mcId` | `marketingCloudVisitorId` |
+| `endUserIds.experience.mcId` | `marketingCloudVisitorId` | L’identifiant Experience Cloud (ECID) est également connu sous le nom de MCID et continue à être utilisé dans les espaces de noms. |
 | **`environment`** |
 | `environment.browserDetails.userAgent` | `mboxRequest.userAgent` |
 | `environment.browserDetails.viewPortHeight` | `mboxRequest.browserHeight` |

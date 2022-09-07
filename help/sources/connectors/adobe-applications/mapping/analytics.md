@@ -5,10 +5,10 @@ title: Mappage des champs pour le connecteur source Adobe Analytics
 topic-legacy: overview
 description: Adobe Experience Platform vous permet d’ingérer des données Adobe Analytics par le biais de la source Analytics. Certaines données ingérées par ADC peuvent être mappées directement des champs Analytics aux champs du modèle de données d’expérience (XDM), tandis que d’autres nécessitent des transformations et des fonctions spécifiques pour être mappées avec succès.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: efe36904b0dce94a8b1f5e7a3d3f38da1038d49c
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '3401'
-ht-degree: 98%
+source-wordcount: '3431'
+ht-degree: 97%
 
 ---
 
@@ -186,9 +186,9 @@ Le tableau suivant comprend des colonnes qui indiquent le nom du champ Analytics
 | ip | environment.ipV4 | chaîne | Adresse IP, basée sur l’en-tête HTTP de la demande d’image. |
 | j_jscript | environment.browserDetails.javaScriptEnabled | booléen | Version de JavaScript utilisée. |
 | mcvisid_high + mcvisid_low | identityMap | objet | Identifiant visiteur Experience Cloud. |
-| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | chaîne | Identifiant visiteur Experience Cloud. |
-| mcvisid_high | endUserIDs._experience.mcid.primary | booléen | Identifiant visiteur Experience Cloud. |
-| mcvisid_high | endUserIDs._experience.mcid.namespace.code | chaîne | Identifiant visiteur Experience Cloud. |
+| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | chaîne | L’identifiant Experience Cloud (ECID) est également connu sous le nom de MCID et parfois utilisé dans les espaces de noms. |
+| mcvisid_high | endUserIDs._experience.mcid.primary | booléen | L’identifiant Experience Cloud (ECID) est également connu sous le nom de MCID et parfois utilisé dans les espaces de noms. |
+| mcvisid_high | endUserIDs._experience.mcid.namespace.code | chaîne | L’identifiant Experience Cloud (ECID) est également connu sous le nom de MCID et parfois utilisé dans les espaces de noms. |
 | mcvisid_low | identityMap | objet | Identifiant visiteur Experience Cloud. |
 | sdid_high + sdid_low | _experience.target.supplementalDataID | chaîne | Identifiant d’assemblage d’accès. Le champ d’analyse sdid_high et sdid_low correspond à l’identifiant de données supplémentaire utilisé pour associer deux (ou plusieurs) accès entrants. |
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | chaîne | Proximité du relais Mobile Services. |

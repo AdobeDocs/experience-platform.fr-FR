@@ -5,9 +5,9 @@ title: Entrée et sortie dans Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Le document suivant décrit les différentes entrées et sorties utilisées dans Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '2491'
+source-wordcount: '2504'
 ht-degree: 13%
 
 ---
@@ -138,7 +138,7 @@ Le tableau suivant décrit les champs de schéma dans l’exemple de sortie de s
 | commerce_order_purchaseCity (chaîne) | True | Colonne de jeu de données Score supplémentaire. <br> **Exemple :** city : San Jose |
 | customerProfile (Object) | False | Détails d’identité de l’utilisateur utilisé pour créer le modèle. |
 | identity (Object) | False | Contient les détails de l’utilisateur utilisé pour créer le modèle, tels que `id` et `namespace`. |
-| id (String) | True | Identifiant de l’utilisateur, tel que l’identifiant de cookie ou AAID ou MCID, etc. <br> **Exemple :** 17348762725408656344688320891369597404 |
+| id (String) | True | Identifiant de l’utilisateur, tel que l’identifiant de cookie, l’identifiant Adobe Analytics (AAID), ou l’identifiant Experience Cloud (ECID, également appelé MCID ou identifiant visiteur), etc. <br> **Exemple :** 17348762725408656344688320891369597404 |
 | namespace (chaîne) | True | Espace de noms d’identité utilisé pour créer les chemins d’accès et, par conséquent, le modèle. <br> **Exemple :** aaid |
 | touchpointsDetail (tableau d’objets) | True | La liste des détails du point de contact qui mènent à la conversion ordonnée par | occurrence de point de contact ou horodatage. |
 | touchpointName (chaîne) | True | Nom du point de contact qui a été configuré lors de la configuration. <br> **Exemple :** PAID_SEARCH_CLICK |
@@ -238,7 +238,7 @@ Le tableau ci-dessous associe les scores agrégés aux scores bruts. Si vous sou
 >[!IMPORTANT]
 >
 > - Attribution AI utilise uniquement des données mises à jour pour la formation et la notation ultérieures. De même, lorsque vous demandez la suppression de données, Customer AI s’abstient d’utiliser les données supprimées.
-> - Attribution AI exploite les jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser le Privacy Service Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, Identity Service et Real-time Customer Profile.
+> - L’IA dédiée à l’attribution utilise les jeux de données Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser le Privacy Service Platform pour soumettre les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, Identity Service et Real-time Customer Profile.
 > - Tous les jeux de données que nous utilisons pour l’entrée/la sortie des modèles suivront les directives de Platform. Le chiffrement des données de plateforme s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur [cryptage des données](../../../help/landing/governance-privacy-security/encryption.md)
 
 

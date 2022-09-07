@@ -1,9 +1,10 @@
 ---
 title: Analyse des attributs
 description: Ce document explique comment utiliser Query Service pour créer une technique de mesure de l’efficacité marketing basée sur le modèle d’attribution marketing Première touche et Dernière touche.
-source-git-commit: 870626f25b1aabdcb5739bbb1ab85bdad44df195
+exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1419'
 ht-degree: 13%
 
 ---
@@ -68,6 +69,10 @@ Les résultats des requêtes d’attribution sont fournis dans l’une ou l’au
 L’attribution Première touche attribue 100 % de la responsabilité d’un résultat réussi au canal initial rencontré par le client. Cet exemple SQL permet de mettre en évidence l’interaction qui a conduit à une série d’actions client ultérieure.
 
 La requête ci-dessous renvoie la valeur d’attribution Première touche et les détails du canal dans la cible. [!DNL Experience Event] jeu de données. Elle renvoie également une `struct` pour le canal sélectionné avec la valeur Première touche, l’horodatage et l’attribution pour chaque ligne.
+
+>[!NOTE]
+>
+>L’identifiant Experience Cloud (ECID) est également connu sous le nom de MCID et continue à être utilisé dans les espaces de noms.
 
 **Syntaxe de la requête**
 
