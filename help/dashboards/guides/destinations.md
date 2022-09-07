@@ -4,9 +4,9 @@ title: Guide du tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations principales de votre entreprise.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
+source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2829'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,7 @@ Le [!UICONTROL Destinations] Le tableau de bord affiche un instantané des desti
 >
 >Les modifications ou mises à jour apportées aux données depuis la prise dʼun instantané ne seront pas reflétées dans le tableau de bord avant la prise de lʼinstantané suivant.
 
-## Exploration du tableau de bord des destinations
+## Explorez les [!UICONTROL Destinations] tableau de bord {#explore}
 
 Pour accéder au tableau de bord des destinations dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Destinations]** dans le rail de gauche, puis sélectionnez l’option **[!UICONTROL Présentation]** pour afficher le tableau de bord.
 
@@ -37,11 +37,19 @@ La date et l’heure de l’instantané le plus récent s’affichent en haut de
 
 ![Présentation des destinations de l’interface utilisateur de Platform avec l’instantané le plus récent en surbrillance.](../images/destinations/snapshot-timestamp.png)
 
-### Modification du tableau de bord des destinations
+### Modifiez le [!UICONTROL Destinations] tableau de bord {#modify}
 
-Vous pouvez modifier l’aspect du tableau de bord des destinations en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Cela vous permet de déplacer, d’ajouter et de supprimer des widgets du tableau de bord, ainsi que d’accéder au **[!UICONTROL Bibliothèque de widgets]** pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
+Sélectionner **[!UICONTROL Modifier le tableau de bord]** pour modifier l’aspect du tableau de bord des destinations. Cela vous permet de déplacer, d’ajouter et de supprimer des widgets du tableau de bord, ainsi que d’accéder à la bibliothèque de widgets. Dans la bibliothèque de widgets, vous pouvez explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
 
 Reportez-vous à la section [modification des tableaux de bord](../customize/modify.md) et [Présentation de la bibliothèque de widgets](../customize/widget-library.md) pour en savoir plus.
+
+### Ajout de widgets {#add-widget}
+
+Sélectionner **[!UICONTROL Ajouter un widget]** pour accéder à la bibliothèque de widgets et voir la liste des widgets disponibles à ajouter à votre tableau de bord.
+
+![Le tableau de bord Destinations - Aperçu avec le widget Ajouter en surbrillance.](../images/destinations/destinations-overview-add-widget.png)
+
+Dans la bibliothèque de widgets, vous pouvez parcourir la sélection de widgets de segment standard et personnalisés. Pour plus d’informations sur l’ajout de widgets, consultez la documentation de la bibliothèque de widgets sur la manière d’ajouter des widgets. [ajout d’un widget](../customize/widget-library.md#add-widgets).
 
 ## Widgets standard {#standard-widgets}
 
@@ -80,7 +88,7 @@ Le nombre de segments mappés affichés dans la colonne du nombre de segments es
 
 Si vous sélectionnez le nom d’une destination dans la liste affichée sur le widget, vous accédez aux détails de destination tels que liés à partir de la variable **[!UICONTROL Parcourir]** . Vous pouvez également sélectionner **[!UICONTROL Afficher tout]** pour accéder au **[!UICONTROL Parcourir]** puis sélectionnez le nom d’une destination pour en afficher les détails.
 
-![](../images/destinations/most-used-destinations.png)
+![Onglet Aperçu du tableau de bord Destinations avec le widget Destinations les plus utilisées en surbrillance.](../images/destinations/most-used-destinations.png)
 
 ### [!UICONTROL Destinations créées récemment] {#recently-created-destinations}
 
@@ -97,7 +105,7 @@ Si vous sélectionnez le nom d’une destination dans la liste affichée sur le 
 
 Pour en savoir plus sur la configuration de types de destinations spécifiques, consultez la page [documentation sur les destinations](../../destinations/home.md).
 
-![](../images/destinations/recently-created-destinations.png)
+![L’onglet Aperçu du tableau de bord Destinations avec le widget Destinations récemment créées en surbrillance.](../images/destinations/recently-created-destinations.png)
 
 ### [!UICONTROL Segments récemment activés] {#recently-activated-segments}
 
@@ -114,7 +122,7 @@ Si vous sélectionnez le nom d’un segment dans la liste affichée sur le widge
 
 Pour plus d’informations sur l’utilisation des segments dans Experience Platform, commencez par lire le [Présentation de Segmentation Service](../../segmentation/home.md).
 
-![](../images/destinations/recently-activated-segments.png)
+![Onglet Aperçu du tableau de bord Destinations avec le widget Segments récemment activés en surbrillance.](../images/destinations/recently-activated-segments.png)
 
 ### [!UICONTROL Segments récemment activés par destination] {#recently-activated-segments-by-destination}
 
@@ -129,7 +137,7 @@ Ce widget contient deux mesures : le nom du segment et la date de la dernière a
 
 Vous pouvez afficher les détails d’un segment en le sélectionnant dans la liste affichée.
 
-![Segments récemment activés par widget de destination.](../images/destinations/recently-activated-segments-by-destination.png)
+![Le widget Segments récemment activés par destination .](../images/destinations/recently-activated-segments-by-destination.png)
 
 ### [!UICONTROL Tendance de la taille de l’audience] {#audience-size-trend}
 
@@ -144,7 +152,7 @@ Une période pour la tendance de l’audience des 30 derniers jours, 90 jours ou
 
 Le deuxième menu déroulant répertorie tous les segments disponibles qui peuvent être envoyés au compte de destination choisi en haut du tableau de bord.
 
-![Widget de tendance de taille d’audience.](../images/destinations/audience-size-trend.png)
+![Le widget de tendance Taille de l’audience .](../images/destinations/audience-size-trend.png)
 
 Le **[!UICONTROL Tendance de la taille de l’audience]** fournit un [!UICONTROL Sous-titres] en haut à droite du widget. Sélectionner **[!UICONTROL Sous-titres]** pour ouvrir la boîte de dialogue des sous-titres automatiques. Un modèle d’apprentissage automatique génère automatiquement des sous-titres pour décrire les tendances clés et les événements importants en analysant le graphique et les données de segment.
 

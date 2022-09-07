@@ -4,9 +4,9 @@ title: Guide du tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
+source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
 workflow-type: tm+mt
-source-wordcount: '3788'
+source-wordcount: '3859'
 ht-degree: 8%
 
 ---
@@ -43,6 +43,14 @@ Vous pouvez modifier l’aspect de la variable [!UICONTROL Profils] tableau de b
 
 Reportez-vous à la section [modification des tableaux de bord](../customize/modify.md) et [Présentation de la bibliothèque de widgets](../customize/widget-library.md) pour en savoir plus.
 
+### Ajout de widgets {#add-widget}
+
+Sélectionner **[!UICONTROL Ajouter un widget]** pour accéder à la bibliothèque de widgets et voir la liste des widgets disponibles à ajouter à votre tableau de bord.
+
+![La présentation du tableau de bord Profils avec l’ajout de widget mis en surbrillance.](../images/profiles/profiles-overview-add-widget.png)
+
+Dans la bibliothèque de widgets, vous pouvez parcourir la sélection de widgets de segment standard et personnalisés. Pour plus d’informations sur l’ajout de widgets, consultez la documentation de la bibliothèque de widgets sur la manière d’ajouter des widgets. [ajout d’un widget](../customize/widget-library.md#add-widgets).
+
 ## (Version bêta) Informations sur l’efficacité des profils {#profile-efficacy-insights}
 
 >[!IMPORTANT]
@@ -73,9 +81,9 @@ Le tableau de bord sélectionne automatiquement une stratégie de fusion à util
 
 >[!NOTE]
 >
->Le menu déroulant affiche uniquement les stratégies de fusion liées à la classe XDM Individual Profile. Cependant, si votre organisation a créé plusieurs stratégies de fusion, il se peut que vous deviez faire défiler l’écran pour afficher la liste complète des stratégies de fusion disponibles.
+>Le menu déroulant affiche uniquement les stratégies de fusion qui utilisent la variable `_xdm.context.profile` schéma. Cependant, si votre organisation a créé plusieurs stratégies de fusion, vous devrez peut-être faire défiler la liste complète des stratégies de fusion disponibles.
 
-![](../images/profiles/select-merge-policy.png)
+![Onglet Aperçu des profils avec le menu déroulant Stratégie de fusion en surbrillance.](../images/profiles/select-merge-policy.png)
 
 ## Schémas d’union
 

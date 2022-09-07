@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;profil;segment;segments;segmentation;interface utilisateur;interface utilisateur;personnalisation;tableau de bord des segments;tableau de bord
 title: Guide du tableau de bord des segments
-description: 'Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments que votre entreprise a créés. '
+description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les segments que votre entreprise a créés.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 70fb980b276d256e0f7170b6e49527bca59adfe9
+source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
 workflow-type: tm+mt
-source-wordcount: '1681'
-ht-degree: 10%
+source-wordcount: '1791'
+ht-degree: 11%
 
 ---
 
-# Tableau de bord de segments {#segment-dashboard}
+# [!UICONTROL Tableau de bord de segments] {#segment-dashboard}
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos segments, telles qu’elles sont capturées lors d’un instantané quotidien. Ce guide explique comment accéder au tableau de bord des segments et l’utiliser dans l’interface utilisateur. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
 Pour un aperçu de toutes les fonctionnalités du service de segmentation Adobe Experience Platform dans l’interface utilisateur de Platform, consultez le [Guide de l’interface utilisateur de Segmentation Service](../../segmentation/ui/overview.md).
 
-## Données du tableau de bord de segment
+## [!UICONTROL Segments] données du tableau de bord
 
 Le tableau de bord des segments affiche un instantané des données d’attribut (enregistrement) dont votre organisation dispose dans la banque de profils en Experience Platform. L’instantané n’inclut aucune donnée d’événement (série temporelle).
 
@@ -27,7 +27,7 @@ Les données d’attribut de l’instantané affichent les données exactement t
 >
 >Les modifications ou mises à jour apportées aux données depuis la prise dʼun instantané ne seront pas reflétées dans le tableau de bord avant la prise de lʼinstantané suivant.
 
-## Exploration du tableau de bord des segments
+## Explorez les [!UICONTROL Segments] tableau de bord {#explore}
 
 Pour accéder au [!UICONTROL Segments] Tableau de bord dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Segments]** dans le rail de gauche, puis sélectionnez l’option **[!UICONTROL Présentation]** pour afficher le tableau de bord.
 
@@ -35,13 +35,21 @@ Pour accéder au [!UICONTROL Segments] Tableau de bord dans l’interface utilis
 >
 >Si votre entreprise est une nouvelle entreprise de Platform et qu’elle ne dispose pas encore de jeux de données Profile principaux ni de stratégies de fusion créés, la variable [!UICONTROL Segments] tableau de bord n’est pas visible. Au lieu de cela, la variable [!UICONTROL Présentation] affiche des liens et de la documentation pour vous aider à commencer à utiliser la segmentation.
 
-![](../images/segments/dashboard-overview.png)
+![Onglet Aperçu du tableau de bord Segments .](../images/segments/dashboard-overview.png)
 
-### Modification de la variable [!UICONTROL Segments] tableau de bord
+### Modifiez le [!UICONTROL Segments] tableau de bord {#modify}
 
 Vous pouvez modifier l’aspect de la variable [!UICONTROL Segments] tableau de bord en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Cela vous permet de déplacer, d’ajouter et de supprimer des widgets du tableau de bord, ainsi que d’accéder au **[!UICONTROL Bibliothèque de widgets]** pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
 
 Reportez-vous à la section [modification des tableaux de bord](../customize/modify.md) et [Présentation de la bibliothèque de widgets](../customize/widget-library.md) pour en savoir plus.
+
+### Ajout de widgets {#add-widget}
+
+Sélectionner **[!UICONTROL Ajouter un widget]** pour accéder à la bibliothèque de widgets et voir la liste des widgets disponibles à ajouter à votre tableau de bord.
+
+![Aperçu du tableau de bord Segments avec le widget Ajouter en surbrillance.](../images/segments/segments-overview-add-widget.png)
+
+Dans la bibliothèque de widgets, vous pouvez parcourir la sélection de widgets de segment standard et personnalisés. Pour plus d’informations sur l’ajout de widgets, consultez la documentation de la bibliothèque de widgets sur la manière d’ajouter des widgets. [ajout d’un widget](../customize/widget-library.md#add-widgets).
 
 ## Sélection d’un segment
 
@@ -53,15 +61,15 @@ Pour choisir un autre segment, sélectionnez la liste déroulante en regard du n
 >
 >Seuls les segments dont le nombre de profils est supérieur à zéro s’affichent dans la liste des segments sélectionnables.
 
-![](../images/segments/change-segment.png)
+![Aperçu du tableau de bord Segments avec le menu déroulant de segments global en surbrillance.](../images/segments/change-segment.png)
 
-![](../images/segments/select-segment-dialog.png)
+![La boîte de dialogue Sélectionner un segment qui affiche tous les segments disponibles.](../images/segments/select-segment-dialog.png)
 
 ## Widgets et mesures
 
 Le tableau de bord des segments est constitué de widgets, qui sont des mesures en lecture seule fournissant des informations importantes sur le segment sélectionné.
 
-La date et l’heure de l’instantané le plus récent s’affichent en haut de la [!UICONTROL Présentation] en regard de la liste déroulante des segments. Toutes les données du widget sont exactes à cette date et cette heure. L’horodatage de l’instantané est fourni en UTC ; il ne se trouve pas dans le fuseau horaire de l’utilisateur ou de l’organisation.
+La date et l’heure de l’instantané le plus récent sont affichées en haut de la [!UICONTROL Présentation] en regard de la liste déroulante des segments. Toutes les données du widget sont exactes à cette date et cette heure. L’horodatage de l’instantané est fourni en UTC ; il ne se trouve pas dans le fuseau horaire de l’utilisateur ou de l’organisation.
 
 ![Onglet Aperçu des segments avec un horodatage de widget mis en surbrillance.](../images/segments/widget-timestamp.png)
 
@@ -92,7 +100,7 @@ Le **[!UICONTROL Taille de l’audience]** widget affiche le nombre total de pro
 
 Pour plus d’informations sur les fragments et les profils fusionnés, commencez par lire la section [Présentation de Real-time Customer Profile](../../profile/home.md).
 
-![](../images/segments/audience-size.png)
+![Aperçu du tableau de bord Segments avec le widget Taille de l’audience en surbrillance.](../images/segments/audience-size.png)
 
 ### [!UICONTROL Tendance de la taille de l’audience] {#audience-size-trend}
 
@@ -105,7 +113,7 @@ Le **[!UICONTROL Tendance de la taille de l’audience]** Le widget fournit une 
 
 Ce widget inclut également le [!UICONTROL Sous-titres] fonction dans laquelle un modèle d’apprentissage automatique analyse les données de graphique et de segment et génère automatiquement des sous-titres pour décrire les tendances clés et les événements importants. Sélectionner **[!UICONTROL Sous-titres]** pour ouvrir la boîte de dialogue des sous-titres automatiques.
 
-![La présentation des segments affiche le widget de tendance de taille d’audience .](../images/segments/audience-size-trend-captions.png)
+![La présentation Segments affiche le widget de tendance de taille d’audience .](../images/segments/audience-size-trend-captions.png)
 
 La boîte de dialogue de sous-titres automatiques s’ouvre, vous permettant d’obtenir des informations sur vos données.
 
@@ -163,7 +171,7 @@ Si un client interagit avec votre marque sur plusieurs canaux, plusieurs identit
 
 Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
 
-![](../images/segments/identity-overlap.png)
+![Le tableau de bord Segments présente un aperçu du widget de chevauchement des identités en surbrillance.](../images/segments/identity-overlap.png)
 
 ### [!UICONTROL Profils par identité] {#profiles-by-identity}
 
@@ -176,7 +184,7 @@ Le **[!UICONTROL Profils par identité]** widget affiche la ventilation des iden
 
 Sélectionner **[!UICONTROL Sous-titres]** pour ouvrir la boîte de dialogue des sous-titres automatiques.
 
-![Les profils par légendes d’identité, boîte de dialogue.](../images/segments/profiles-by-identity.png)
+![La boîte de dialogue Profils par légendes d’identité .](../images/segments/profiles-by-identity.png)
 
 Un modèle d’apprentissage automatique génère automatiquement des informations sur les données en analysant la distribution globale et les dimensions clés des données.
 
@@ -184,7 +192,7 @@ Pour en savoir plus sur les identités, rendez-vous sur la page [Documentation d
 
 ### Activations planifiées {#scheduled-activations}
 
-Le [!UICONTROL Activations planifiées] Le widget offre une vue tabulée des destinations activées le plus récemment. Le tableau comprend la plateforme de destination, le nom de votre flux d’activation vers cette destination et les dates de début et de fin de l’activation pour le segment sélectionné. Si aucune date de fin n’est fournie pour l’activation, elle s’affiche sous la forme [!UICONTROL En cours]. Le segment à analyser est sélectionné dans la liste déroulante en haut de la page.
+Le widget d’[!UICONTROL activations planifiées] offre une vue tabulée des destinations activées le plus récemment. Le tableau comprend la plateforme de destination, le nom de votre flux d’activation vers cette destination et les dates de début et de fin de l’activation pour le segment sélectionné. Si aucune date de fin n’est fournie pour l’activation, elle s’affiche sous la forme [!UICONTROL En cours]. Le segment à analyser est sélectionné dans la liste déroulante en haut de la page.
 
 Le widget vous permet de découvrir en un coup d’oeil où et quand l’audience est activée et rend les activations en double ou inutiles plus transparentes. Ces informations cumulées indiquent également les endroits où les activations ont été laissées de côté.
 
