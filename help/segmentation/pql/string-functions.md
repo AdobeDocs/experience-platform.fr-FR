@@ -5,18 +5,18 @@ title: Fonctions de chaîne PQL
 topic-legacy: developer guide
 description: Le langage de requête de profil (PQL) offre des fonctions pour faciliter l’interaction avec les chaînes.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1c9ed96cdbd9e670bd1f05467e33e8dab5bc2121
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 94%
+source-wordcount: '840'
+ht-degree: 88%
 
 ---
 
 # Fonctions de chaîne
 
-[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l’interaction avec des chaînes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
+[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l’interaction avec des chaînes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
 
-## Like
+## Comme
 
 La fonction `like` permet de déterminer si une chaîne correspond à un modèle donné.
 
@@ -105,7 +105,7 @@ La fonction `endsWith` permet de déterminer si une chaîne se termine par une s
 
 **Exemple**
 
-La requête PQL suivante détermine si l’adresse électronique de la personne se termine par « .com » en respectant la casse.
+La requête PQL suivante détermine si l’adresse e-mail de la personne se termine par « .com » en respectant la casse.
 
 ```sql
 person.emailAddress.endsWith(".com")
@@ -129,7 +129,7 @@ La fonction `doesNotEndWith` permet de déterminer si une chaîne ne se termine 
 
 **Exemple**
 
-La requête PQL suivante détermine si l’adresse électronique de la personne ne se termine pas par « .com » en respectant la casse.
+La requête PQL suivante détermine si l’adresse e-mail de la personne ne se termine pas par « .com » en respectant la casse.
 
 ```sql
 person.emailAddress.doesNotEndWith(".com")
@@ -153,7 +153,7 @@ La fonction `contains` permet de déterminer si une chaîne contient une sous-ch
 
 **Exemple**
 
-La requête PQL suivante détermine si l’adresse électronique de la personne contient la chaîne « 2010@gm » en respectant la casse.
+La requête PQL suivante détermine si l’adresse e-mail de la personne contient la chaîne « 2010@gm » en respectant la casse.
 
 ```sql
 person.emailAddress.contains("2010@gm")
@@ -177,7 +177,7 @@ La fonction `doesNotContain` permet de déterminer si une chaîne ne contient pa
 
 **Exemple**
 
-La requête PQL suivante détermine si l’adresse électronique de la personne ne contient pas la chaîne « 2010@gm » en respectant la casse.
+La requête PQL suivante détermine si l’adresse e-mail de la personne ne contient pas la chaîne « 2010@gm » en respectant la casse.
 
 ```sql
 person.emailAddress.doesNotContain("2010@gm")
@@ -247,7 +247,11 @@ La requête PQL suivante détermine si le nom de la personne commence par « Jo
 person.name.matches("(?i)^John")
 ```
 
-## Regular expression group
+>[!NOTE]
+>
+>Si vous utilisez des fonctions d’expression régulière telles que `\w`, vous **must** permet d’échapper la barre oblique inverse. Donc, au lieu d&#39;écrire simplement `\w`, vous devez inclure une barre oblique inverse supplémentaire et écrire. `\\w`.
+
+## Groupe d’expressions régulières
 
 La fonction `regexGroup` est utilisée pour extraire des informations spécifiques en fonction de l&#39;expression régulière fournie.
 
@@ -259,11 +263,15 @@ La fonction `regexGroup` est utilisée pour extraire des informations spécifiqu
 
 **Exemple**
 
-La requête PQL suivante est utilisée pour extraire le nom de domaine d’une adresse électronique.
+La requête PQL suivante est utilisée pour extraire le nom de domaine d’une adresse e-mail.
 
 ```sql
-emailAddress.regexGroup("@(\w+)", 1)
+emailAddress.regexGroup("@(\\w+)", 1)
 ```
+
+>[!NOTE]
+>
+>Si vous utilisez des fonctions d’expression régulière telles que `\w`, vous **must** permet d’échapper la barre oblique inverse. Donc, au lieu d&#39;écrire simplement `\w`, vous devez inclure une barre oblique inverse supplémentaire et écrire. `\\w`.
 
 ## Étapes suivantes
 
