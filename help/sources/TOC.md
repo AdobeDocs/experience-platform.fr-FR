@@ -4,7 +4,7 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 feature: Sources
-source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
+source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 88%
@@ -34,7 +34,7 @@ ht-degree: 88%
          - [Guide d’authentification Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Espaces de noms et schémas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Publicité {#advertising}
-      - [Connecteur Google AdWords](connectors/advertising/ads.md)
+      - [Connecteur Google Ads](connectors/advertising/ads.md)
    - Analytics {#analytics}
       - [Connecteur Mixpanel](connectors/analytics/mixpanel.md)
    - Stockage dans le cloud {#cloud-storage}
@@ -103,7 +103,7 @@ ht-degree: 88%
 - Tutoriels sur les API {#api-tutorials}
    - Créer une connexion de base {#create}
       - Publicité {#advertising}
-         - [Google AdWords](tutorials/api/create/advertising/ads.md)
+         - [Google Ads](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
       - Stockage dans le cloud {#cloud-storage}
@@ -205,7 +205,7 @@ ht-degree: 88%
          - [Attributs du client](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Publicité {#advertising}
-         - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+         - [Publicités Google](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - Stockage dans le cloud {#cloud-storage}
