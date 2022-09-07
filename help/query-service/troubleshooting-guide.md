@@ -5,10 +5,10 @@ title: Guide de dépannage de Query Service
 topic-legacy: troubleshooting
 description: Ce document contient des questions courantes et des réponses relatives à Query Service. Les rubriques incluent, l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
 workflow-type: tm+mt
-source-wordcount: '3522'
-ht-degree: 5%
+source-wordcount: '3755'
+ht-degree: 4%
 
 ---
 
@@ -252,6 +252,16 @@ SELECT count(1) FROM myTableName
 +++Réponse Query Service fournit plusieurs fonctions d’assistance SQL intégrées pour étendre les fonctionnalités SQL. Consultez le document pour obtenir la liste complète des [Fonctions SQL prises en charge par Query Service](./sql/spark-sql-functions.md).
 +++
 
+### Sont tous natifs [!DNL Spark SQL] fonctions prises en charge ou sont limitées à l’élément wrapper uniquement [!DNL Spark SQL] fonctions fournies par Adobe ?
+
++++Réponse Jusqu’à présent, pas tous open source [!DNL Spark SQL] les fonctions ont été testées sur les données du lac de données. Une fois testés et confirmés, ils seront ajoutés à la liste prise en charge. Reportez-vous à la section [liste des [!DNL Spark SQL] fonctions](./sql/spark-sql-functions.md) pour rechercher une fonction spécifique.
++++
+
+### Les utilisateurs peuvent-ils définir leurs propres fonctions définies par l’utilisateur (UDF) qui peuvent être utilisées dans d’autres requêtes ?
+
++++Réponse Pour des raisons de sécurité des données, la définition personnalisée des champs définis par l’utilisateur n’est pas autorisée.
++++
+
 ### Que dois-je faire si ma requête planifiée échoue ?
 
 +++Répondez d’abord, consultez les journaux pour connaître les détails de l’erreur. La section FAQ sur [recherche d’erreurs dans les logs](#error-logs) fournit des informations supplémentaires sur la manière de procéder.
@@ -438,6 +448,11 @@ WHERE T2.ID IS NULL
 
 +++
 
+### Puis-je créer un jeu de données à l’aide d’une requête CTAS avec un nom de soulignement double comme celui affiché dans l’interface utilisateur ? Par exemple : `test_table_001`.
+
++++Réponse Non, il s’agit d’une limitation intentionnelle entre les Experience Platform qui s’applique à tous les services Adobe, y compris Query Service. Un nom comportant deux traits de soulignement est acceptable en tant que schéma et nom de jeu de données, mais le nom de table du jeu de données ne peut contenir qu’un seul trait de soulignement.
++++
+
 ## Exportation des données {#exporting-data}
 
 Cette section fournit des informations sur l&#39;export des données et des limites.
@@ -462,6 +477,25 @@ FROM <table_name>
 +++Réponse Non. Actuellement, aucune fonctionnalité n’est disponible pour l’extraction des données ingérées.
 +++
 
+### Pourquoi le connecteur de données Analytics ne renvoie-t-il pas de données ?
+
++++Réponse Une cause courante de ce problème est l’interrogation des données de série temporelle sans filtre temporel. Par exemple :
+
+```sql
+SELECT * FROM prod_table LIMIT 1;
+```
+
+Doit être écrit comme suit :
+
+```sql
+SELECT * FROM prod_table
+WHERE
+timestamp >= to_timestamp('2022-07-22')
+and timestamp < to_timestamp('2022-07-23');
+```
+
++++
+
 ## Outils tiers {#third-party-tools}
 
 Cette section contient des informations sur l’utilisation d’outils tiers tels que PSQL et Power BI.
@@ -473,7 +507,13 @@ Cette section contient des informations sur l’utilisation d’outils tiers tel
 
 ### Existe-t-il un moyen de connecter Query Service une fois pour une utilisation continue avec un outil tiers ?
 
-+++Réponse Oui, les clients de bureau tiers peuvent être connectés à Query Service par le biais d’une configuration unique d’informations d’identification qui n’expirent pas. Les informations d’identification non arrivant à expiration peuvent être générées par un utilisateur autorisé et les recevront dans un fichier JSON téléchargé sur son ordinateur local. Complet [conseils sur la création et le téléchargement d’informations d’identification non expirantes](./ui/credentials.md#non-expiring-credentials) se trouve dans la documentation .
++++Réponse Oui, les clients de bureau tiers peuvent être connectés à Query Service par le biais d’une configuration unique d’informations d’identification qui n’expirent pas. Les informations d’identification non arrivant à expiration peuvent être générées par un utilisateur autorisé et reçues dans un fichier JSON automatiquement téléchargé sur son ordinateur local. Complet [conseils sur la création et le téléchargement d’informations d’identification non expirantes](./ui/credentials.md#non-expiring-credentials) se trouve dans la documentation .
++++
+
+### Pourquoi mes informations d’identification non arrivant à expiration ne fonctionnent-elles pas ?
+
++++Réponse La valeur des informations d’identification non expirantes est les arguments concaténés du `technicalAccountID` et le `credential` extrait du fichier de configuration JSON. La valeur du mot de passe se présente comme suit : `{{technicalAccountId}:{credential}}`.
+Consultez la documentation pour plus d’informations sur la manière de [connexion à des clients externes avec des informations d’identification](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
 +++
 
 ### Quel type d’éditeurs SQL tiers puis-je me connecter à Query Service Editor ?
