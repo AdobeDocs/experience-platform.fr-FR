@@ -4,11 +4,11 @@ title: Barrières de sécurité par défaut pour les données de profil client e
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: 'Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données Profile afin d’optimiser les performances du système. '
+description: Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données Profile afin d’optimiser les performances du système.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: e3813691af6477a0afbb47ed0fd53d5bb3834fd0
+source-git-commit: 1b98a04f92833f5c906ec0081b35144cd47d77bc
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1950'
 ht-degree: 49%
 
 ---
@@ -139,7 +139,7 @@ Dans ce document, plusieurs barrières de sécurité font référence à des &qu
 
 ### Stratégies de fusion {#merge-policies}
 
-Lorsque vous rassemblez des données provenant de plusieurs sources, les stratégies de fusion sont les règles utilisées par Platform pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer cette vue unifiée. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Platform, ils sont fusionnés afin de créer un profil unique pour ce client. Lorsque les données provenant de plusieurs sources entrent en conflit, la stratégie de fusion détermine les informations à inclure dans le profil de l’individu. Pour en savoir plus sur les stratégies de fusion, commencez par lire la [présentation des stratégies de fusion](merge-policies/overview.md).
+Lorsque vous rassemblez des données provenant de plusieurs sources, les stratégies de fusion sont les règles utilisées par Platform pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer cette vue unifiée. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Platform, ils sont fusionnés afin de créer un profil unique pour ce client. Lorsque les données provenant de plusieurs sources entrent en conflit, la stratégie de fusion détermine les informations à inclure dans le profil de l’individu. Au maximum cinq (5) stratégies de fusion sont autorisées par organisation. Pour en savoir plus sur les stratégies de fusion, consultez la section [présentation des stratégies de fusion](merge-policies/overview.md).
 
 ### Jeux de données de suite de rapports Adobe Analytics dans Platform {#aa-datasets}
 

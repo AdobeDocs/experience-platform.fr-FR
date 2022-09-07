@@ -1,39 +1,39 @@
 ---
-keywords: Experience Platform;profil;profil client en temps réel;stratégies de fusion;IU;interface utilisateur;horodatage ordonné;priorité du jeu de données
+keywords: Experience Platform;profil;profil client en temps réel;stratégies de fusion;IU;interface utilisateur;horodatage ordonné;priorité du jeu de données
 title: Présentation des stratégies de fusion
 type: Documentation
-description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer cette vue unifiée.
+description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer cette vue unifiée.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 965993bece32eeb0db6e7a9eab3131816a9de5cd
 workflow-type: tm+mt
-source-wordcount: '1252'
-ht-degree: 100%
+source-wordcount: '1265'
+ht-degree: 97%
 
 ---
 
 # Présentation des stratégies de fusion
 
-Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par [!DNL Platform] pour déterminer la priorité des données et les données qui seront combinées pour créer cette vue unifiée.
+Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par [!DNL Platform] pour déterminer la priorité des données et les données qui seront combinées pour créer cette vue unifiée.
 
-À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation dans l’interface utilisateur. Ce document présente les stratégies de fusion et le rôle qu’elles jouent dans Experience Platform.
+À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation dans l’interface utilisateur. Ce document présente les stratégies de fusion et le rôle qu’elles jouent dans Experience Platform.
 
 ## Prise en main
 
 Ce guide nécessite une compréhension pratique de plusieurs fonctions [!DNL Experience Platform] importantes. Avant de suivre ce guide et d’utiliser des stratégies de fusion, consultez la documentation des services suivants :
 
 * [Real-time Customer Profile](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): permet d’obtenir un profil client en temps réel en rassemblant des identités de sources de données disparates ingérées dans [!DNL Platform].
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): permet d’obtenir un profil client en temps réel en rassemblant des identités de sources de données disparates ingérées dans [!DNL Platform].
 * [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience client.
 
 ## Comprendre les stratégies de fusion
 
-Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète et unifiée de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée.
+Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète et unifiée de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée.
 
 Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Platform, ils sont fusionnés afin de créer un profil unique pour ce client.
 
 Lorsque les données provenant de plusieurs sources entrent en conflit (par exemple, si un fragment classe le client comme étant « célibataire » tandis qu’un autre le classe comme étant « marié »), la stratégie de fusion détermine les informations qui doivent passer en priorité et être incluses dans le profil de l’individu.
 
-Les stratégies de fusion sont réservées à votre organisation IMS, ce qui vous permet de créer différentes stratégies afin de fusionner les schémas selon vos besoins. Vous pouvez également spécifier une stratégie de fusion par défaut qui sera utilisée si elle n’est pas explicitement fournie. Pour en savoir plus, consultez la section [Stratégies de fusion par défaut](#default-merge-policy) plus loin dans ce document.
+Les stratégies de fusion sont réservées à votre organisation, ce qui vous permet de créer différentes stratégies pour fusionner les schémas de la manière spécifique dont vous avez besoin. Vous pouvez également spécifier une stratégie de fusion par défaut qui sera utilisée si elle n’est pas explicitement fournie. Pour en savoir plus, consultez la section [Stratégies de fusion par défaut](#default-merge-policy) plus loin dans ce document. Notez qu’un maximum de cinq stratégies de fusion est autorisé par organisation.
 
 ## Méthodes de fusion {#merge-methods}
 
@@ -54,7 +54,7 @@ Pour créer une stratégie de fusion à l’aide de la **[!UICONTROL priorité d
 
 ### Horodatage ordonné {#timestamp-ordered}
 
-Lorsque des enregistrements de profil sont intégrés dans Experience Platform, un horodatage système est obtenu au moment de l’intégration et ajouté à l’enregistrement. Lorsque **[!UICONTROL Horodatage ordonné]** est sélectionné comme méthode de fusion pour une stratégie de fusion, les profils sont fusionnés en fonction de l’horodatage système. En d’autres termes, la fusion est effectuée en fonction de l’horodatage du moment où l’enregistrement a été intégré à Platform.
+Lorsque des enregistrements de profil sont intégrés dans Experience Platform, un horodatage système est obtenu au moment de l’intégration et ajouté à l’enregistrement. Lorsque **[!UICONTROL Horodatage ordonné]** est sélectionné comme méthode de fusion pour une stratégie de fusion, les profils sont fusionnés en fonction de l’horodatage système. En d’autres termes, la fusion est effectuée en fonction de l’horodatage du moment où l’enregistrement a été intégré à Platform.
 
 ## Combinaison d’identités {#id-stitching}
 
@@ -67,7 +67,7 @@ Pour en savoir plus sur les identités et leur rôle dans la génération de pro
 
 ## Stratégie de fusion par défaut {#default-merge-policy}
 
-Une organisation peut créer une stratégie de fusion par défaut à utiliser lors de la fusion de fragments de profils. Cela permet aux utilisateurs de sélectionner facilement la stratégie par défaut lors de l’exécution d’actions dans Experience Platform, telles que l’affichage des profils client ou la création de segments. Dans la plupart des cas, à moins qu’une autre stratégie de fusion ne soit spécifiée, la stratégie de fusion par défaut est utilisée.
+Une organisation peut créer une stratégie de fusion par défaut à utiliser lors de la fusion de fragments de profils. Cela permet aux utilisateurs de sélectionner facilement la stratégie par défaut lors de l’exécution d’actions dans Experience Platform, telles que l’affichage des profils client ou la création de segments. Dans la plupart des cas, à moins qu’une autre stratégie de fusion ne soit spécifiée, la stratégie de fusion par défaut est utilisée.
 
 Chaque organisation peut créer plusieurs stratégies de fusion liées à une seule classe de schéma XDM. Toutefois, une seule stratégie de fusion par défaut peut être choisie pour chaque classe. Par exemple, votre organisation peut avoir une stratégie de fusion par défaut associée à la classe [!DNL XDM Individual Profile] et une stratégie de fusion par défaut différente pour une classe Inventaire de produits personnalisée.
 
@@ -79,4 +79,4 @@ Si vous créez une stratégie de fusion et la définissez comme stratégie par d
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous savez maintenant ce que sont les stratégies de fusion et le rôle qu’elles jouent dans Experience Platform. Pour commencer à utiliser des stratégies de fusion dans l’interface utilisateur d’Experience Platform, reportez-vous au [guide de l’interface utilisateur des stratégies de fusion](ui-guide.md). Pour utiliser des stratégies de fusion à l’aide de l’API, consultez le [guide de point d’entrée de l’API des stratégies de fusion](../api/merge-policies.md).
+Après avoir lu ce guide, vous savez maintenant ce que sont les stratégies de fusion et le rôle qu’elles jouent dans Experience Platform. Pour commencer à utiliser des stratégies de fusion dans l’interface utilisateur d’Experience Platform, reportez-vous au [guide de l’interface utilisateur des stratégies de fusion](ui-guide.md). Pour utiliser des stratégies de fusion à l’aide de l’API, consultez le [guide de point d’entrée de l’API des stratégies de fusion](../api/merge-policies.md).
