@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: ae30ac2fe1c6366c987748e198b9dc3530bc512a
+source-git-commit: 7ad0015dbea0b74673ed0ed2c8c2159065f47ba7
 workflow-type: tm+mt
-source-wordcount: '2211'
-ht-degree: 65%
+source-wordcount: '2243'
+ht-degree: 64%
 
 ---
 
@@ -165,6 +165,10 @@ La documentation suivante fournit d’autres ressources sur la compréhension de
 Une fois que vous avez terminé les mappages pour vos [!DNL Analytics] données de la suite de rapports, vous pouvez appliquer des règles et des conditions de filtrage pour inclure ou exclure de manière sélective les données de l’ingestion au [!DNL Profile Service]. La prise en charge du filtrage n’est disponible que pour [!DNL Analytics] Les données et les données ne sont filtrées que lors de la saisie de [!DNL Profile.] Toutes les données sont ingérées dans le lac de données.
 
 #### Filtrage au niveau de la ligne
+
+>[!IMPORTANT]
+>
+>Utilisez le filtrage au niveau des lignes pour appliquer des conditions et dicter les données à **inclusion pour l’ingestion de profils**. Utilisez le filtrage au niveau des colonnes pour sélectionner les colonnes de données à sélectionner. **exclusion de l’ingestion de profils**.
 
 Vous pouvez filtrer les données pour [!DNL Profile] ingestion au niveau des lignes et des colonnes. Le filtrage au niveau des lignes vous permet de définir des critères tels que chaîne contenant, égal à, commence ou se termine par. Vous pouvez également utiliser le filtrage au niveau des lignes pour joindre des conditions à l’aide de `AND` ainsi que `OR`et annuler les conditions à l’aide de `NOT`.
 
