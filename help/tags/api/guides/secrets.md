@@ -2,7 +2,7 @@
 title: Secrets dans l’API Reactor
 description: Découvrez les principes de base de la configuration des secrets dans l’API Reactor en vue d’une utilisation dans le transfert d’événements.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
+source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 87%
@@ -107,11 +107,11 @@ Secrets avec un `type_of` valeur de `oauth2-google` nécessite l’attribut suiv
 | --- | --- | --- |
 | `scopes` | Tableau | Répertorie les portées du produit Google pour l’authentification. Les portées suivantes sont prises en charge :<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Pub/Sous-programme Google](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
-Après avoir créé la variable `oauth2-google` secret, la réponse comprend une `meta.token_url` . Vous devez copier et coller cette URL dans un navigateur pour terminer le flux d’authentification Google.
+Après avoir créé la variable `oauth2-google` secret, la réponse comprend une `meta.authorization_url` . Vous devez copier et coller cette URL dans un navigateur pour terminer le flux d’authentification Google.
 
 #### Réautoriser `oauth2-google` secret
 
-L’URL d’autorisation d’un `oauth2-google` Le secret expire une heure après la création du secret (comme indiqué par `meta.token_url_expires_at`). Au-delà, le secret doit être réautorisé afin de renouveler le processus d&#39;authentification.
+L’URL d’autorisation d’un `oauth2-google` Le secret expire une heure après la création du secret (comme indiqué par `meta.authorization_url_expires_at`). Au-delà, le secret doit être réautorisé afin de renouveler le processus d&#39;authentification.
 
 Reportez-vous à la section [guide de point de fin secrets](../endpoints/secrets.md#reauthorize) pour plus d’informations sur la manière dont réautoriser une `oauth2-google` secret en adressant une demande de PATCH à l’API Reactor.
 
