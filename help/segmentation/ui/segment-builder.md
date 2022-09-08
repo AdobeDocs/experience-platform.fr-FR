@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur du créateur de segments
 topic-legacy: ui guide
 description: Le créateur de segments de l’interface utilisateur de Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données Profile. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dd87f9e5787961442ca7d7b4c761d2e7ca724994
+source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
 workflow-type: tm+mt
-source-wordcount: '3081'
+source-wordcount: '3082'
 ht-degree: 30%
 
 ---
@@ -43,7 +43,7 @@ L’onglet **[!UICONTROL Événements]** vous permet de créer une audience bas�
 
 En plus de pouvoir rechercher [!DNL ExperienceEvent] , vous pouvez également rechercher des types d’événements. Les types d’événement utilisent la même logique de codage que [!DNL ExperienceEvents], sans que vous ayez à effectuer une recherche dans le [!DNL XDM ExperienceEvent] recherche de l’événement correct. Par exemple, l’utilisation de la barre de recherche pour rechercher &quot;panier&quot; renvoie les types d’événement &quot;[!UICONTROL AddCart]&quot; et &quot;[!UICONTROL RemoveCart]&quot;, qui sont deux actions de panier très couramment utilisées lors de la création de définitions de segment.
 
-Vous pouvez rechercher n’importe quel type de composant en tapant son nom dans la barre de recherche, qui utilise la [syntaxe de recherche Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Les résultats de la recherche commencent à s’afficher au fur et à mesure que des mots entiers sont saisis. Par exemple, pour créer une règle basée sur le champ XDM `ExperienceEvent.commerce.productViews`, commencez à saisir « product views » dans le champ de recherche. Une fois le mot « product » saisi, les résultats de la recherche commencent à s’afficher. Chaque résultat inclut la hiérarchie d’objets à laquelle il appartient.
+Vous pouvez rechercher n’importe quel type de composant en tapant son nom dans la barre de recherche, qui utilise la [syntaxe de recherche Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Les résultats de la recherche commencent à s’afficher au fur et à mesure que des mots entiers sont saisis. Par exemple, pour créer une règle basée sur le champ XDM `ExperienceEvent.commerce.productViews`, commencez à saisir &quot;product views&quot; dans le champ de recherche. Une fois le mot « product » saisi, les résultats de la recherche commencent à s’afficher. Chaque résultat inclut la hiérarchie d’objets à laquelle il appartient.
 
 >[!NOTE]
 >
@@ -226,7 +226,7 @@ Pour sélectionner une stratégie de fusion pour votre définition de segment, c
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Actualiser les estimations"
 >abstract="Vous pouvez actualiser les estimations de votre segment pour afficher immédiatement un aperçu du nombre de profils admissibles pour le segment proposé. Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="En savoir plus dans la documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Estimation et prévisualisation d’une audience"
 
 Lors de la création d’une définition de segment, la section **[!UICONTROL Propriétés du segment]** située dans la partie droite de l’espace de travail affiche une estimation de la taille du segment obtenu, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 
