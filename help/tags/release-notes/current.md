@@ -1,75 +1,25 @@
 ---
-title: Notes de mise à jour relatives aux balises
-description: Dernières notes de mise à jour pour les balises dans Adobe Experience Platform.
+title: Notes de mise à jour relatives aux balises et au transfert d’événements
+description: Notes de mise à jour les plus récentes concernant le transfert de balises et d’événements dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: af424089c0afdaae76b312137afc5cbd28e82856
 workflow-type: tm+mt
-source-wordcount: '666'
-ht-degree: 98%
+source-wordcount: '138'
+ht-degree: 13%
 
 ---
 
-# Notes de mise à jour pour les balises dans Adobe Experience Platform
+# Notes de mise à jour relatives aux balises et au transfert d’événement
 
->[!NOTE]
->
->Adobe Experience Platform Launch devient une suite de technologies destinées à la collecte de données dans Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+## 27 juillet 2022
 
-## 15 novembre 2021
+* L’accès aux balises et aux fonctionnalités de transfert d’événement est désormais géré via Adobe Admin Console sous la carte pour la collecte de données Adobe Experience Platform. Pour en savoir plus, consultez le guide des [autorisations relatives à la collecte de données](../../collection/permissions.md).
+* Prise en charge d’Internet Explorer 10 et 11 [obsolète](../ie-deprecation.md).
 
-**Acceptation du code ES6 dans les balises** - Les extensions et le code personnalisé contenant du code ES6 peuvent désormais être utilisés dans les balises. Dans le catalogue d’extensions, un libellé ES6+ apparaît dans la carte de chaque extension contenant du code ES6. IE10 et IE11 ne prennent pas en charge le code ES6. Avant d’utiliser du code ES6 dans vos bibliothèques de balises, faites preuve de diligence raisonnable.
+## 22 juin 2022
 
-**Utilisation de Terser comme compresseur JavaScript** - Uglifier a été remplacé par Terser. À partir de cette version, toutes les bibliothèques de balises sont minifiées par Terser.
+De nouvelles extensions ont été publiées :
 
-## 21 octobre 2021
-
-**Envoi de données vers des points d’entrée authentifiés dans le transfert d’événements** - En utilisant des secrets, vous pouvez envoyer des données aux points d’entrée qui requièrent les protocoles d’authentification suivants :
-
-* **[!UICONTROL Jeton]** - chaîne unique de caractères représentant une valeur de jeton d’authentification.
-* **[!UICONTROL HTTP simple]** - contient deux attributs de chaîne (string) pour un nom d’utilisateur et un mot de passe.
-* **[!UICONTROL OAuth2]** - contient plusieurs attributs pour la prise en charge de la spécification [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749).
-
-Pour plus d’informations, voir les guides sur [la gestion des secrets dans l’interface utilisateur de collecte de données](../ui/event-forwarding/secrets.md) ou [la gestion des secrets dans l’API Reactor](../api/guides/secrets.md).
-
-## 19 juillet 2021
-
-**Ajustements du droit « Gérer les propriétés »** - le droit Gérer les propriétés rencontrait un problème qui permettait à un utilisateur de créer une propriété, mais ne lui permettait pas de la voir une fois créée (comme indiqué dans le [fil de la communauté](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176?profile.language=fr)). Un correctif est disponible et les autorisations sont désormais appliquées comme décrit dans l’article.
-
->[!NOTE]
->
->Si vous attribuez le nouveau droit « Modifier la propriété » à un groupe d’utilisateurs, l’interface utilisateur ne se met pas à jour pour activer les champs dans l’écran de configuration des propriétés. Un correctif sera implémenté dans une prochaine version pour résoudre ce problème.
-
-## 17 mai 2021
-
-**Amélioration de la gestion des modifications non enregistrées** - avant, lorsque vous quittiez une vue de paramètres (extensions, éléments de données et composants de règle), une invite vous demandait si vous souhaitiez ignorer vos modifications. Cependant, la logique employée pour ce processus n’était pas optimale, si bien que la plupart du temps, il vous était demandé d’enregistrer vos modifications même si vous n’en aviez pas effectué. Cela a été corrigé. Désormais, vous ne devriez voir cette invite que lorsque vous avez réellement apporté des modifications.
-
-## 10 mai 2021
-
-**Publication simplifiée** - la création dans l’environnement d’évaluation n’est plus nécessaire. Si vous disposez des droits appropriés, vous pouvez ignorer entièrement l’étape soumission et publier directement à partir de l’étape de développement, à condition que la version soit correctement créée et qu’il n’y ait pas d’autres bibliothèques en amont.
-
-## 22 avril 2021
-
-**Collecte de données dans Adobe Experience Platform** - l’envoi de données à Adobe ne consiste pas seulement à déployer des balises sur votre site ou une configuration sur votre application. L’utilisation des SDK Experience Platform et du réseau Edge nécessite l’accès à d’autres fonctionnalités de Platform. Auparavant, cela nécessitait une connexion à divers outils. Désormais, ils sont réunis en un seul endroit.
-
-La collecte de données dans Platform est constituée de six fonctionnalités. En outre, votre navigation nouvellement rationalisée ne contient que les éléments accessibles par votre société et votre compte utilisateur. Certains noms de fonctionnalités ont également été mis à jour pour correspondre aux modèles de nommage d’Experience Platform.
-
-* Client (anciennement accessible en tant que côté client)
-* Flux de données (anciennement accessible en tant que configurations Edge)
-* Serveur (anciennement accessible en tant que côté serveur)
-* Configurations d’application
-* Schémas
-* Identités
-
-Retrouvez d’autres mises à jour au fur et à mesure de l’évolution d’Experience Platform et de la collecte de données.
-
-## 18 février 2021
-
-* Mise à jour de l’interface utilisateur de la collecte de données vers react-spectrum v3
-* Mise à jour des cartes d’extension vers les derniers modèles Spectrum
-* Augmentation de la taille des champs de nom dans l’ensemble de l’application
-
-## 13 janvier 2021
-
-**Disponibilité générale : transfert d’événements** - Envoyez les données au niveau de l’événement à Adobe Experience Platform Edge Network, puis utilisez le transfert d’événements pour transformer, enrichir et envoyer ces données à un point d’entrée autre qu’Adobe à l’aide des serveurs Adobe, et non du client, avec une faible latence.
-
-Pour plus d’informations, consultez la [présentation du transfert d’événements](../ui/event-forwarding/overview.md) et le [guide de prise en main](../ui/event-forwarding/getting-started.md).
+* [Extension de balise de la couche de données Google](../extensions/web/google-data-layer/overview.md): Permet d’utiliser une couche de données Google dans l’implémentation de vos balises.
+* [Extension de transfert d’événement Conversions améliorées de Google Ads](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html): Permet d’améliorer les conversions Google Ads en temps réel.
+* [Extension de transfert d’événement Mailchimp](../extensions/web/mailchimp/overview.md): Envoie des événements à l’API marketing Mailchimp qui peuvent déclencher des courriers électroniques pour des campagnes, des parcours ou des transactions marketing Mailchimp.

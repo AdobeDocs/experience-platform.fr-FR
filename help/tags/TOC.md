@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: d9787b6d093037a2d346ac3bd2f37220ace43ad2
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '402'
 ht-degree: 96%
 
 ---
@@ -199,6 +199,7 @@ ht-degree: 96%
 * [Obsolescence de la prise en charge d’Internet Explorer 10 et 11](./ie-deprecation.md)
 * Notes de mise à jour {#release-notes}
    * [Plus récent](./release-notes/current.md)
+   * [Notes de mise à jour 2021](./release-notes/2021.md)
    * [Notes de mise à jour 2020](./release-notes/2020.md)
    * [Notes de mise à jour 2019](./release-notes/2019.md)
    * [Notes de mise à jour 2018](./release-notes/2018.md)
