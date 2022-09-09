@@ -2,9 +2,9 @@
 title: Modèle de libre-service de documentation // Remplacer par le nom de votre destination
 description: Utilisez ce modèle pour créer une documentation publique pour votre destination dans le catalogue Adobe Experience Platform. // Remplacer par le paragraphe dans la section Aperçu
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 788c02622b5176b41eb6da70bed0994d4824c984
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1452'
 ht-degree: 7%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 7%
 >
 >Cette page de documentation a été créée par la fonction *YourDestination* l&#39;équipe. Pour toute demande de mise à jour ou de renseignements, contactez-les directement à l’adresse *Ajouter un lien ou une adresse électronique où vous pouvez accéder pour obtenir des mises à jour, par exemple `support@YourDestination.com`.*
 
-## Cas dʼutilisation {#use-cases}
+## Cas d&#39;utilisation {#use-cases}
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable *YourDestination* destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
@@ -131,6 +131,13 @@ Lorsque vous avez terminé de fournir des détails sur votre connexion de destin
 >Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez le [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Lecture [Activation des profils et des segments vers des destinations d’exportation de segments en continu](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+
+### Mise en correspondance des attributs et des identités {#map}
+
+*Ajoutez des informations sur les mappages pris en charge entre les champs source et cible dans l’étape Mappage du workflow d’activation. Votre destination peut prendre en charge l’exportation d’attributs de profil, d’espaces de noms d’identité ou des deux. Certains champs peuvent être obligatoires. Les attributs Target peuvent être prédéfinis ou personnalisés. Appelez les avertissements importants et utilisez des exemples, de préférence avec des captures d’écran. Voici deux exemples de pages de destination que vous pouvez utiliser comme référence :*
+
+* *[Pega](/help/destinations/catalog/personalization/pega.md#mapping-example)*
+* *[Medallia](/help/destinations/catalog/voice/medallia-connector.md#map)*
 
 ## Données exportées / Validation de l’exportation des données {#exported-data}
 

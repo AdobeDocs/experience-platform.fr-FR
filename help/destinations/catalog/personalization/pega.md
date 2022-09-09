@@ -2,7 +2,7 @@
 title: Connexion à Pega Customer Decision Hub
 description: Utilisez la destination Pega Customer Decision Hub dans Adobe Experience Platform pour envoyer les attributs de profil et les données d’adhésion au segment à Pega Customer Decision Hub pour la prise de décision la plus appropriée.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 144aa80beeb13fde7ca339692774e3d20256f49c
+source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 7%
@@ -21,7 +21,7 @@ Appartenance au segment de profil à partir de Adobe Experience Platform, lorsqu
 >
 >Cette page de documentation a été créée par Pegasystems. Pour toute demande d&#39;information ou de mise à jour, veuillez contacter directement Pega. [here](mailto:support@pega.com).
 
-## Cas dʼutilisation
+## Cas d&#39;utilisation
 
 Pour vous aider à mieux comprendre comment et à quel moment utiliser la variable [!DNL Customer Decision Hub] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
@@ -102,7 +102,7 @@ Voir [Activation des données d’audience vers des destinations d’exportation
 
 Dans le [[!UICONTROL Sélectionner des attributs]](../../ui/activate-streaming-profile-destinations.md#select-attributes) , Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination.
 
-### Exemple de mappage : activation des mises à jour de profil dans [!DNL Pega Customer Decision Hub]
+### Exemple de mappage : activation des mises à jour de profil dans [!DNL Pega Customer Decision Hub] {#mapping-example}
 
 Vous trouverez ci-dessous un exemple de mappage d’identité correct lors de l’exportation de profils vers [!DNL Pega Customer Decision Hub].
 
