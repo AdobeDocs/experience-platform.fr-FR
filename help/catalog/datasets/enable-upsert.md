@@ -4,10 +4,10 @@ title: Activation d’un jeu de données pour les mises à jour de profil à l�
 type: Tutorial
 description: Ce tutoriel vous explique comment utiliser les API Adobe Experience Platform pour activer un jeu de données avec des fonctionnalités "d’insertion" afin d’effectuer des mises à jour des données de Real-time Customer Profile.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: b0ba7578cc8e790c70cba4cc55c683582b685843
+source-git-commit: 5bd3e43e6b307cc1527e8734936c051fb4fc89c4
 workflow-type: tm+mt
-source-wordcount: '994'
-ht-degree: 32%
+source-wordcount: '1015'
+ht-degree: 28%
 
 ---
 
@@ -126,14 +126,13 @@ GET /dataSets/{DATASET_ID}
 ```
 
 | Paramètre | Description |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | Identifiant du jeu de données à examiner. |
 
 **Requête**
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -196,11 +195,11 @@ Sous , `tags` , vous pouvez voir que `unifiedProfile` est présent avec la valeu
 
 ### Désactivation du jeu de données pour Profile
 
-Pour configurer un jeu de données activé par Profile pour les mises à jour, vous devez d’abord désactiver la variable `unifiedProfile` puis réactivez-la à côté de la balise `isUpsert` balise . Cette opération s’effectue à l’aide de deux demandes de PATCH, une pour la désactivation et une pour la réactivation.
+Pour configurer un jeu de données activé par Profile pour les mises à jour, vous devez d’abord désactiver la variable `unifiedProfile` et `unifiedIdentity` puis réactivez-les avec les balises `isUpsert` balise . Cette opération s’effectue à l’aide de deux demandes de PATCH, une pour la désactivation et une pour la réactivation.
 
 >[!WARNING]
 >
->Les données ingérées dans le jeu de données alors qu’il est désactivé ne seront pas ingérées dans le magasin de profils. Il est recommandé d’éviter d’ingérer des données dans le jeu de données jusqu’à ce qu’il ait été réactivé pour Profile.
+>Les données ingérées dans le jeu de données alors qu’il est désactivé ne seront pas ingérées dans le magasin de profils. Vous devez éviter d’ingérer des données dans le jeu de données jusqu’à ce qu’il ait été réactivé pour Profile.
 
 **Format d’API**
 
@@ -209,29 +208,37 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 | Paramètre | Description |
-|---|---|
-| `{DATASET_ID}` | Identifiant du jeu de données à mettre à jour. |
+| --------- | ----------- |
+| `{DATASET_ID}` | L’identifiant du jeu de données que vous souhaitez mettre à jour. |
 
 **Requête**
 
-Le premier corps de requête de PATCH comprend une `path` to `unifiedProfile` définition de la variable `value` to `enabled:false` afin de désactiver la balise.
+Le premier corps de requête de PATCH comprend une `path` to `unifiedProfile` et un `path` to `unifiedIdentity`, en définissant la variable `value` to `enabled:false` pour ces deux chemins afin de désactiver les balises.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] }
+        { 
+            "op": "replace", 
+            "path": "/tags/unifiedProfile", 
+            "value": ["enabled:false"] 
+        },
+        {
+            "op": "replace",
+            "path": "/tags/unifiedIdentity",
+            "value": ["enabled:false"]
+        }
       ]'
 ```
 
 **Réponse**
 
-Une requête de PATCH réussie renvoie un état HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. Le `unifiedProfile` a été désactivé.
+Une requête de PATCH réussie renvoie un état HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. Le `unifiedProfile` et `unifiedIdentity` Les balises ont désormais été désactivées.
 
 ```json
 [
@@ -250,28 +257,42 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 | Paramètre | Description |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | Identifiant du jeu de données à mettre à jour. |
 
 **Requête**
 
-Le corps de la requête comprend un `path` to `unifiedProfile` définition de la variable `value` pour inclure la variable `enabled` et `isUpsert` balises, toutes deux définies sur `true`.
+Le corps de la requête comprend un `path` to `unifiedProfile` définition de la variable `value` pour inclure la variable `enabled` et `isUpsert` balises, toutes deux définies sur `true`, et a `path` to `unifiedIdentity` définition de la variable `value` pour inclure la variable `enabled` balise définie sur `true`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true","isUpsert:true"] },
+        { 
+            "op": "add", 
+            "path": "/tags/unifiedProfile", 
+            "value": [
+                "enabled:true",
+                "isUpsert:true"
+            ] 
+        },
+        {
+            "op": "add",
+            "path": "/tags/unifiedIdentity",
+            "value": [
+                "enabled:true"
+            ]
+        }
       ]'
 ```
 
 **Réponse**
-Une requête PATCH réussie renvoie un état HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. Le `unifiedProfile` a été activée et configurée pour les mises à jour d’attributs.
+
+Une requête de PATCH réussie renvoie un état HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. Le `unifiedProfile` et `unifiedIdentity` ont été activés et configurés pour les mises à jour d’attributs.
 
 ```json
 [
