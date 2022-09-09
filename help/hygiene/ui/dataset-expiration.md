@@ -2,10 +2,10 @@
 title: Gérer les expirations de jeux de données
 description: Découvrez comment planifier l’expiration d’un jeu de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 769c872d67141b4973b29a492e72c23491e2d1ae
-workflow-type: ht
-source-wordcount: '408'
-ht-degree: 100%
+source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
+workflow-type: tm+mt
+source-wordcount: '438'
+ht-degree: 93%
 
 ---
 
@@ -16,6 +16,10 @@ ht-degree: 100%
 >Actuellement, les fonctionnalités d’hygiène des données d’Adobe Experience Platform sont uniquement disponibles pour les organisations qui ont acheté Healthcare Shield.
 
 L’espace de travail [[!UICONTROL Hygiène des données]](./overview.md) dans l’interface utilisateur d’Adobe Experience Platform vous permet de planifier l’expiration d’un jeu de données. Lorsqu’un jeu de données atteint sa date d’expiration, le lac de données, le service d’identités et le profil client en temps réel lancent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Une fois les données supprimées des trois services, l’expiration est marquée comme étant terminée.
+
+>[!WARNING]
+>
+>Si un jeu de données est défini pour expirer, vous devez modifier manuellement les flux de données susceptibles d’ingérer des données dans ce jeu de données afin que vos flux de données en aval ne soient pas affectés négativement.
 
 Ce document explique comment planifier et gérer des expirations de jeux de données dans l’interface utilisateur de Platform.
 

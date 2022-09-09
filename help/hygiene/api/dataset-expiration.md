@@ -2,10 +2,10 @@
 title: Point d’entrée de l’API d’expiration du jeu de données
 description: Le point d’entrée /ttl de l’API Data Hygiene vous permet de planifier par programmation l’expiration des jeux de données dans Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
-workflow-type: ht
-source-wordcount: '1375'
-ht-degree: 100%
+source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
+workflow-type: tm+mt
+source-wordcount: '1405'
+ht-degree: 97%
 
 ---
 
@@ -26,6 +26,10 @@ L’expiration d’un jeu de données n’est rien d’autre qu’une opération
 Avant que la suppression du jeu de données ne soit réellement lancée, vous pouvez annuler l’expiration ou modifier son heure de déclenchement. Après l’annulation de l’expiration d’un jeu de données, vous pouvez la rouvrir en définissant une nouvelle expiration.
 
 Une fois que la suppression du jeu de données est lancée, sa tâche d’expiration est marquée comme étant `executing` et ne peut plus être modifiée. Le jeu de données lui-même peut être récupéré pendant un maximum de sept jours, mais uniquement par le biais d’un processus manuel initié par une demande de service Adobe. Lorsque la requête est exécutée, le lac de données, le service d’identités et le profil client en temps réel lancent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Une fois les données supprimées des trois services, la tâche d’expiration est marquée comme étant `executed`.
+
+>[!WARNING]
+>
+>Si un jeu de données est défini pour expirer, vous devez modifier manuellement les flux de données susceptibles d’ingérer des données dans ce jeu de données afin que vos flux de données en aval ne soient pas affectés négativement.
 
 ## Prise en main
 
