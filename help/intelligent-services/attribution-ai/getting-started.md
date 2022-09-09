@@ -5,10 +5,10 @@ title: Prise en main dans Attribution AI
 topic-legacy: Getting started
 description: Les guides ci-dessous nécessitent une compréhension des différents services impliqués dans l’utilisation d’Attribution AI. Avant de commencer les tutoriels, veuillez consulter les documents suivants.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
+source-git-commit: a14f857f87482e1468211152976530c718d56e38
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 65%
+source-wordcount: '619'
+ht-degree: 66%
 
 ---
 
@@ -52,7 +52,7 @@ Dans Experience Platform, toutes les ressources sont isolées dans des environn
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md) dans le guide de dépannage d’Experience Platform.
 
-## ## RGPD et cryptage {#gdpr-and-encryption}
+## Contrôle d&#39;accès {#access-control}
 
 Lors de l’utilisation du contrôle d’accès en fonction du rôle, la variable **Afficher Attribution AI** et **Gestion d’Attribution AI** Les privilèges donnent accès à différentes fonctionnalités d’Attribution AI. Le **Gestion d’Attribution AI** vous permet de **create**, **clone**, **edit**, **delete**, **enable** ou **disable** une instance pendant **Afficher Attribution AI** vous permet de **read** ou **view** c&#39;est le cas. Le **create**, **edit** et **delete** Les actions sont enregistrées par les journaux d’audit.
 
