@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: f246a014de7869b627a677ac82e98d4556065010
 workflow-type: tm+mt
 source-wordcount: '616'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -52,18 +52,18 @@ Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](../
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
->title="État par service"
->abstract="Les demandes d’hygiène des données sont traitées indépendamment par plusieurs services Experience Platform. Cette section décrit l’état actuel du traitement de la requête pour chaque service respectif. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène des données."
+>title="Statut par service"
+>abstract="Les demandes liées à l’hygiène des données sont traitées indépendamment par plusieurs services d’Experience Platform. Cette section décrit le statut actuel du traitement de la requête pour chaque service respectif. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Nombre d’identités"
->abstract="Nombre d’identités qui ont été demandées pour être supprimées dans le cadre de cet ordre de travail. Les identités incluses dans le nombre peuvent ne pas nécessairement exister dans les jeux de données affectés. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène des données."
+>abstract="Nombre d’identités qui ont été demandées à être supprimées dans le cadre de cet ordre de travail. Les identités incluses dans le nombre n’existent pas nécessairement dans les jeux de données affectés. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Réponse de suppression du client"
->abstract="Lorsqu’un processus de suppression d’un client reçoit une réponse du système, ces messages s’affichent sous le **[!UICONTROL Résultat]** . Si un problème se produit alors qu’une commande est en cours de traitement, tous les messages d’erreur pertinents s’affichent dans cette section pour vous aider à résoudre le problème. Pour en savoir plus, consultez le guide de l’interface utilisateur de nettoyage de données."
+>abstract="Lorsqu’un processus de suppression d’un client reçoit une réponse du système, ces messages s’affichent sous la section **[!UICONTROL Résultat]**. Si un problème se produit alors qu’un ordre de travail est en cours de traitement, tous les messages d’erreur pertinents s’affichent dans cette section pour vous aider à résoudre le problème. Pour en savoir plus, consultez le guide de l’interface utilisateur de l’hygiène de données."
 
 Sélectionnez l’identifiant d’un ordre de travail répertorié pour en afficher les détails.
 
