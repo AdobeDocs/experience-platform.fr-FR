@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 7f6c949851888645a70f15f091397be0b96c76d7
+source-git-commit: 9336545ce77406ca8b1a04d9b9c0ce7752aa9ce5
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 74%
+source-wordcount: '950'
+ht-degree: 73%
 
 ---
 
@@ -118,6 +118,7 @@ ht-degree: 74%
    * Destinations du marketing par e-mail {#email-marketing}
       * [Présentation des destinations du marketing par e-mail](./catalog/email-marketing/overview.md)
       * [Connexion Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
+      * [Connexion à Adobe Campaign Managed Services](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Connexion Orale Eloqua](./catalog/email-marketing/oracle-eloqua.md)
       * [Connexion Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Connexion au Marketing Cloud Salesforce](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
