@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: (Version bêta) Création d’une connexion à la source du panneau mixte dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Mixpanel à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
+source-git-commit: bee13becb59e3277921549e6db027ce864bba28b
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 31%
+source-wordcount: '874'
+ht-degree: 32%
 
 ---
 
@@ -33,7 +33,6 @@ Pour connecter [!DNL Mixpanel] à Platform, vous devez fournir des valeurs pour 
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| Hôte | Le [!DNL Mixpanel] point d’entrée de l’API d’exportation des données brutes. Voir [!DNL Raw Data Export API] dans la section [Documentation de référence sur l’API Mixpanel](https://developer.mixpanel.com/reference/overview) pour plus d’informations. | `https://data.mixpanel.com` |
 | Nom d’utilisateur | Le nom d’utilisateur du compte de service qui correspond à votre [!DNL Mixpanel] compte . Voir [[!DNL Mixpanel] documentation sur les comptes de service](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) pour plus d’informations. | `Test8.6d4ee7.mp-service-account` |
 | Mot de passe | mot de passe du compte de service qui correspond à votre [!DNL Mixpanel] compte . | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
 | Identifiant du projet | Votre [!DNL Mixpanel] ID de projet. Cet identifiant est nécessaire pour créer une connexion source. Voir [[!DNL Mixpanel] documentation sur les paramètres du projet](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) et le [[!DNL Mixpanel] guide de création et de gestion des projets](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) pour plus d’informations. | `2384945` |

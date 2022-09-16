@@ -5,10 +5,10 @@ title: Créez une connexion source aux membres MailChimp à l’aide de l’inte
 topic-legacy: tutorial
 description: Découvrez comment connecter Adobe Experience Platform aux membres MailChimp à l’aide de l’interface utilisateur de Platform.
 exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
-source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
+source-git-commit: 430b544835956ec0b212fb44d48beaae46afdd2e
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -33,7 +33,7 @@ La source [!DNL Mailchimp Members] prend en charge le code d’actualisation OAu
 
 | Informations d’identification | Description |
 | --- | --- |
-| Hôte | URL racine utilisée pour la connexion à l’API Mailchimp. Le format de l’URL racine est `https://{DC}.api.mailchimp.com`, où `{DC}` représente le centre de données qui correspond à votre compte. |
+| Domaine | URL racine utilisée pour la connexion à l’API Mailchimp. Le format de l’URL racine est `https://{DC}.api.mailchimp.com`, où `{DC}` représente le centre de données qui correspond à votre compte. |
 | URL du test d’autorisation | L’URL du test d’autorisation est utilisée pour valider les informations d’identification lors de la connexion de [!DNL Mailchimp] à Platform. Si ce n’est pas le cas, les informations d’identification sont automatiquement vérifiées à l’étape de création de la connexion source. |
 | Jeton d’accès | Jeton d’accès correspondant utilisé pour authentifier la source. Ceci est requis pour l’authentification basée sur OAuth. |
 
@@ -43,7 +43,7 @@ Pour plus d’informations sur l’utilisation d’OAuth 2 pour authentifier le
 
 | Informations d’identification | Description |
 | --- | --- |
-| Hôte | URL racine utilisée pour la connexion à l’API Mailchimp. Le format de l’URL racine est `https://{DC}.api.mailchimp.com`, où `{DC}` représente le centre de données qui correspond à votre compte. |
+| Domaine | URL racine utilisée pour la connexion à l’API Mailchimp. Le format de l’URL racine est `https://{DC}.api.mailchimp.com`, où `{DC}` représente le centre de données qui correspond à votre compte. |
 | Nom d’utilisateur | Nom d’utilisateur correspondant à votre compte Mailchimp. Ceci est requis pour l’authentification de base. |
 | Mot de passe | Mot de passe correspondant à votre compte Mailchimp. Ceci est requis pour l’authentification de base. |
 
@@ -74,13 +74,13 @@ Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fo
 
 #### S’authentifier à l’aide d’OAuth 2
 
-Pour utiliser OAuth 2, sélectionnez [!UICONTROL Code d’actualisation OAuth 2], indiquez les valeurs de votre hôte, de l’URL du test d’autorisation et du jeton d’accès, puis sélectionnez **[!UICONTROL Se connecter à la source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
+Pour utiliser OAuth 2, sélectionnez [!UICONTROL Actualisation du code OAuth 2], indiquez les valeurs de votre domaine, de l’URL de test d’autorisation et du jeton d’accès, puis sélectionnez **[!UICONTROL Connexion à la source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![oauth](../../../../images/tutorials/create/mailchimp-members/oauth.png)
 
 #### S’authentifier à l’aide de l’authentification de base
 
-Pour utiliser l’authentification de base, sélectionnez [!UICONTROL Authentification de base], indiquez les valeurs de votre hôte, de votre nom d’utilisateur et de votre mot de passe, puis sélectionnez **[!UICONTROL Connexion à la source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
+Pour utiliser l’authentification de base, sélectionnez [!UICONTROL Authentification de base], indiquez les valeurs de votre domaine, de votre nom d’utilisateur et de votre mot de passe, puis sélectionnez **[!UICONTROL Connexion à la source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![De base](../../../../images/tutorials/create/mailchimp-members/basic.png)
 

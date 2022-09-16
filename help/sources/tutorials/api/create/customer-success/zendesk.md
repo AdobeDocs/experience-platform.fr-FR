@@ -5,10 +5,10 @@ title: Création d’un flux de données pour Zendesk à l’aide de l’API Flo
 topic-legacy: tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Zendesk à l’aide de l’API Flow Service.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
 workflow-type: tm+mt
-source-wordcount: '1977'
-ht-degree: 65%
+source-wordcount: '1996'
+ht-degree: 64%
 
 ---
 
@@ -35,6 +35,7 @@ Pour accéder à [!DNL Zendesk] sur Platform, vous devez fournir des valeurs pou
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
+| `subdomain` | Domaine unique associé à votre compte. | `https://yoursubdomain.zendesk.com` |
 | `accessToken` | Jeton d’API Zendesk. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 Pour plus d’informations sur l’authentification [!DNL Zendesk] source, voir [[!DNL Zendesk] présentation de la source](../../../../connectors/customer-success/zendesk.md).
@@ -77,6 +78,7 @@ curl -X POST \
         "auth": {
             "specName": "OAuth2 Refresh Code",
             "params": {
+                "subdomain": "{SUBDOMAIN}",
                 "accessToken": "{ACCESS_TOKEN}"
             }
         }
@@ -90,6 +92,7 @@ curl -X POST \
 | `connectionSpec.id` | Identifiant de spécification de connexion de votre source. Cet identifiant peut être récupéré une fois que votre source est enregistrée et approuvée par le biais de l’API [!DNL Flow Service]. |
 | `auth.specName` | Type d’authentification que vous utilisez pour authentifier votre source sur Platform. |
 | `auth.params.` | Contient les informations d’identification requises pour authentifier votre source. |
+| `auth.params.subdomain` | Domaine unique associé à votre compte. Le format du sous-domaine est `https://yoursubdomain.zendesk.com`. |
 | `auth.params.accessToken` | Jeton d’accès correspondant utilisé pour authentifier la source. Ceci est requis pour l’authentification basée sur OAuth. |
 
 **Réponse**
