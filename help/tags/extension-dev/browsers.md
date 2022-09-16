@@ -2,9 +2,9 @@
 title: Navigateurs pris en charge
 description: Liste des navigateurs compatibles avec lʼexécution dʼune balise Adobe Experience Platform.
 exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 32aa453ca40c0500da0fec8957db978c319a3dbe
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '142'
 ht-degree: 100%
 
 ---
@@ -20,7 +20,6 @@ Lʼexécution des balises dans Adobe Experience Platform (diffusée sur les si
 - Chrome (dernière version)
 - Safari (dernière version)
 - Firefox (dernière version)
-- IE (10 et ultérieure)
 - Edge (dernière version)
 - iOS Safari (dernière version)
 - Android Chrome (dernière version)
